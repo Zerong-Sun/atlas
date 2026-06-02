@@ -1,0 +1,13 @@
+{
+  "name": "atlas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Atlas (诸象) — cross-tradition divination app",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev -w @atlas/mobile",
+    "test": "npm run test --workspaces --if-present",
+    "corpus:validate": "npm run validate -w @atlas/corpus-scripts"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@atlas/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "echo \"Expo app scaffold — run npx create-expo-app in Phase 1\"",
+    "lint": "echo \"lint pending\""
+  }
+}

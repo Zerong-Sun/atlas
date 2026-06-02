@@ -1,0 +1,28 @@
+version: corpus_v0_1
+language: zh
+sources:
+  - id: yijing_64
+    title: 周易六十四卦
+    tradition: iching
+    source_type: public_domain
+    license_note: 公版原文 + 自研白话
+  - id: bazi_rules
+    title: 八字基础规则库
+    tradition: bazi
+    source_type: self_authored
+    license_note: 自研结构化规则
+  - id: tarot_78
+    title: 塔罗牌义
+    tradition: tarot
+    source_type: self_authored
+    license_note: 自研牌义与阵位语义
+  - id: western_astro
+    title: 西洋占星短语库
+    tradition: western
+    source_type: self_authored
+    license_note: 自研行星宫位短语
+  - id: dream_symbols
+    title: 占梦象征库
+    tradition: dream
+    source_type: self_authored
+    license_note: 自研象征与荣格简表
