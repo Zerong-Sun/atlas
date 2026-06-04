@@ -1,0 +1,16 @@
+{
+  "corpus_version": "corpus_v0_1",
+  "validated_at": "2026-06-04T18:27:06.639Z",
+  "passed": true,
+  "stats": {
+    "chunk_count": 1979,
+    "copyright_coverage": 1979,
+    "empty_required": 0,
+    "unknown_source_id": 0,
+    "duplicate_ids": 0,
+    "public_domain_missing_original": 0,
+    "copyright_coverage_pct": 100
+  },
+  "errors": [],
+  "warnings": []
+}

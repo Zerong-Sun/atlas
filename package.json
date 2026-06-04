@@ -5,9 +5,17 @@
   "description": "Atlas (诸象) — cross-tradition divination app",
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "dev": "npm run dev -w @atlas/mobile",
+    "dev": "npm run dev:web",
+    "dev:mobile": "npm run dev -w @atlas/mobile",
+    "dev:web": "npm run dev -w @atlas/web",
+    "build:web": "npm run build -w @atlas/web",
+    "lint": "npm run lint --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "corpus:validate": "npm run validate -w @atlas/corpus-scripts"
+    "corpus:generate": "npm run generate -w @atlas/corpus-scripts",
+    "corpus:validate": "npm run validate -w @atlas/corpus-scripts",
+    "corpus:ingest": "npm run ingest -w @atlas/corpus-scripts",
+    "corpus:ingest:dry-run": "npm run ingest:dry-run -w @atlas/corpus-scripts",
+    "corpus:publish": "npm run publish -w @atlas/corpus-scripts"
   },
   "engines": { "node": ">=20" }
 }

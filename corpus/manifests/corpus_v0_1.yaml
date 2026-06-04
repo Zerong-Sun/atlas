@@ -1,28 +1,86 @@
 version: corpus_v0_1
 language: zh
+min_chunks: 500
+required_copyright_fields:
+  - source_type
+  - license_note
 sources:
   - id: yijing_64
     title: 周易六十四卦
     tradition: iching
     source_type: public_domain
-    license_note: 公版原文 + 自研白话
+    license_note: 公版《周易》原文节选 + 自研白话与注释
+    source_url: https://ctext.org/book-of-changes
+    verbatim_allowed: true
+  - id: yijing_yaoci
+    title: 周易六十四卦爻辞
+    tradition: iching
+    source_type: public_domain
+    license_note: 公版《周易》爻辞原文 + 自研白话（结构化参考 open-iching）
+    source_url: https://ctext.org/book-of-changes
+    verbatim_allowed: true
+  - id: liuyao_rules
+    title: 六爻纳甲规则摘要
+    tradition: iching
+    source_type: self_authored
+    license_note: 自研六爻规则摘要，概念源于传统易占
+    verbatim_allowed: false
+  - id: ziping_zhenquan
+    title: 子平真诠
+    tradition: bazi
+    source_type: public_domain
+    license_note: 公版《子平真诠》原文节选 + 自研白话与注释
+    source_url: https://ctext.org
+    verbatim_allowed: true
+  - id: ditiansui
+    title: 滴天髓
+    tradition: bazi
+    source_type: public_domain
+    license_note: 公版《滴天髓》原文节选 + 自研白话与注释
+    source_url: https://ctext.org
+    verbatim_allowed: true
+  - id: yuanhai_ziping
+    title: 渊海子平
+    tradition: bazi
+    source_type: public_domain
+    license_note: 公版《渊海子平》天干篇等原文节选 + 自研白话
+    source_url: https://ctext.org
+    verbatim_allowed: true
   - id: bazi_rules
     title: 八字基础规则库
     tradition: bazi
     source_type: self_authored
-    license_note: 自研结构化规则
+    license_note: 自研结构化规则片段，非逐字古籍引用
+    verbatim_allowed: false
   - id: tarot_78
     title: 塔罗牌义
     tradition: tarot
     source_type: self_authored
-    license_note: 自研牌义与阵位语义
+    license_note: 自研牌义与三牌阵位置语义
+    verbatim_allowed: false
   - id: western_astro
     title: 西洋占星短语库
     tradition: western
     source_type: self_authored
-    license_note: 自研行星宫位短语
+    license_note: 自研行星宫位相位短语
+    verbatim_allowed: false
+  - id: tetrabiblos
+    title: 托勒密《占星四书》
+    tradition: western
+    source_type: public_domain
+    license_note: 公版 Tetrabiblos 英译节选 + 自研中文释义
+    source_url: https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ptolemy/Tetrabiblos/home.html
+    verbatim_allowed: true
   - id: dream_symbols
     title: 占梦象征库
     tradition: dream
     source_type: self_authored
-    license_note: 自研象征与荣格简表
+    license_note: 自研象征、荣格简表与伊斯兰精神反思话术
+    verbatim_allowed: false
+  - id: zhougong_meng
+    title: 周公解梦意象
+    tradition: dream
+    source_type: public_domain
+    license_note: 传统梦书类公版意象综编 + 自研白话象征解释
+    source_url: https://ctext.org
+    verbatim_allowed: true
