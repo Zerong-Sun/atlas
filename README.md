@@ -3,6 +3,7 @@
 跨文化命理与占梦 AI 对照解读 App — 多体系对照 + 古籍依据 + 可追溯引用。
 
 - 产品 PRD：[docs/prd/诸象.md](docs/prd/诸象.md)
+- 架构说明：[docs/architecture.md](docs/architecture.md)
 - 实施计划：见项目 Wiki / 本地 `docs/plan.md`
 
 ## Monorepo 结构
