@@ -1,6 +1,5 @@
 node_modules/
 .npm-cache/
-.npm-cache/
 .env
 .env.*
 !.env.example
@@ -8,6 +7,8 @@ apps/mobile/.expo/
 supabase/.branches
 supabase/.temp
 .DS_Store
+**/.DS_Store
+*.tsbuildinfo
 dist/
 build/
 corpus/.cache/
