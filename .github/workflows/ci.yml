@@ -13,4 +13,11 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
+      - run: npm run corpus:generate
       - run: npm run corpus:validate
+      - run: npm run lint -w @atlas/web
+      - run: npm run build -w @atlas/web
+      - run: npm run test -w @atlas/web
+      - run: npm run test -w @atlas/engines
+      - run: npm run test -w @atlas/orchestrator
+      - run: npm run corpus:ingest:dry-run

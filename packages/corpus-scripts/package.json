@@ -3,5 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": { "validate": "node src/validate-manifest.mjs" }
+  "scripts": {
+    "generate": "node src/generate-seeds.mjs",
+    "validate": "node src/validate-manifest.mjs",
+    "ingest": "node src/ingest-seeds.mjs",
+    "ingest:dry-run": "node src/ingest-seeds.mjs --dry-run",
+    "publish": "node src/publish-corpus.mjs"
+  }
 }

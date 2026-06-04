@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "@atlas/engines": "../../../packages/engines/src/index.ts",
+    "@atlas/shared-types": "../../../packages/shared-types/src/index.ts",
+    "@atlas/orchestrator": "../../../packages/orchestrator/src/index.ts",
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.49.1"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "deno.unstable"]
+  }
+}
