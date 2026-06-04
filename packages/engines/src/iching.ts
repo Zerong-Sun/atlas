@@ -73,6 +73,10 @@ function seededInt(seed: string, max: number): number {
   return h[0] % max;
 }
 
+function hexagramLines(number: number): Array<"yang" | "yin"> {
+  return Array.from({ length: 6 }, (_, index) => ((number >> index) & 1 ? "yang" : "yin"));
+}
+
 export function castIChing(seed: string): Record<string, unknown> {
   const primary = seededInt(seed, 64) + 1;
   const changing = seededInt(seed + "change", 64) + 1;
@@ -80,8 +84,8 @@ export function castIChing(seed: string): Record<string, unknown> {
   const changeHex = HEXAGRAMS[changing];
 
   return {
-    primary: { number: primary, ...hex },
-    changing: { number: changing, ...changeHex },
+    primary: { number: primary, lines: hexagramLines(primary), ...hex },
+    changing: { number: changing, lines: hexagramLines(changing), ...changeHex },
     method: "time_number",
     summary: `本卦${hex.name}，变卦${changeHex.name}`,
   };

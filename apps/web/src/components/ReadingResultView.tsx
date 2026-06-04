@@ -60,6 +60,10 @@ export function ReadingResultView({ report }: Props) {
             <BaziStructuredView facts={activeFacts} />
           ) : activeTradition === "western" && activeFacts ? (
             <WesternChartView facts={activeFacts} />
+          ) : activeTradition === "tarot" && activeFacts ? (
+            <TarotStructuredView facts={activeFacts} content={activeContent} />
+          ) : activeTradition === "iching" && activeFacts ? (
+            <IChingStructuredView facts={activeFacts} content={activeContent} />
           ) : (
             <p>{activeContent}</p>
           )}
@@ -301,6 +305,92 @@ export function ReadingResultView({ report }: Props) {
           width: var(--value);
           background: ${colors.gold};
         }
+        .tarot-detail, .iching-detail {
+          display: flex;
+          flex-direction: column;
+          gap: ${spacing.lg}px;
+          margin-top: ${spacing.sm}px;
+        }
+        .tarot-spread {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: ${spacing.md}px;
+        }
+        .tarot-card {
+          min-height: 240px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: ${spacing.md}px;
+          padding: ${spacing.lg}px ${spacing.md}px;
+          border: 1px solid ${colors.goldDim};
+          border-radius: ${radius.md}px;
+          background:
+            linear-gradient(180deg, ${colors.goldDim}18, transparent 42%),
+            ${colors.surfaceElevated};
+        }
+        .tarot-card.reversed {
+          border-style: dashed;
+          background:
+            linear-gradient(0deg, ${colors.goldDim}18, transparent 42%),
+            ${colors.surfaceElevated};
+        }
+        .tarot-card span, .hex-card span { color: ${colors.gold}; font-size: 12px; font-weight: 700; }
+        .tarot-card strong { font-size: 22px; }
+        .tarot-card em { color: ${colors.textMuted}; font-style: normal; font-size: 12px; }
+        .keyword-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: ${spacing.xs}px;
+        }
+        .keyword-row i {
+          padding: 4px 8px;
+          border-radius: ${radius.full}px;
+          background: ${colors.goldDim}20;
+          color: ${colors.textSecondary};
+          font-size: 12px;
+          font-style: normal;
+        }
+        .iching-flow {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr);
+          gap: ${spacing.md}px;
+          align-items: center;
+        }
+        .hex-card {
+          padding: ${spacing.md}px;
+          border: 1px solid ${colors.border};
+          border-radius: ${radius.sm}px;
+          background: ${colors.surfaceElevated};
+        }
+        .hex-card h4 { margin: ${spacing.xs}px 0 ${spacing.md}px; font-size: 22px; }
+        .hex-lines {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 8px;
+          margin: ${spacing.md}px 0;
+        }
+        .hex-line {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          height: 10px;
+        }
+        .hex-line.yin { grid-template-columns: 1fr 1fr; }
+        .hex-line i {
+          display: block;
+          border-radius: ${radius.full}px;
+          background: ${colors.gold};
+        }
+        .hex-arrow {
+          width: 44px;
+          height: 44px;
+          display: grid;
+          place-items: center;
+          border: 1px solid ${colors.goldDim};
+          border-radius: 50%;
+          color: ${colors.gold};
+        }
         @media (max-width: 720px) {
           .bazi-grid, .bazi-list { grid-template-columns: 1fr 1fr; }
           .year-row { grid-template-columns: 1fr 1fr; }
@@ -308,6 +398,8 @@ export function ReadingResultView({ report }: Props) {
           .astro-layout { grid-template-columns: 1fr; }
           .planet-dot { transform: rotate(var(--angle)) translateY(-82px) rotate(calc(-1 * var(--angle))); }
           .balance-grid { grid-template-columns: 1fr 1fr; }
+          .tarot-spread, .iching-flow { grid-template-columns: 1fr; }
+          .hex-arrow { margin: 0 auto; transform: rotate(90deg); }
         }
       `}</style>
     </div>
@@ -492,6 +584,81 @@ function BalanceGrid({ data, keys, total }: { data: Record<string, unknown>; key
         );
       })}
     </div>
+  );
+}
+
+function TarotStructuredView({ facts, content }: { facts: Record<string, unknown>; content: string }) {
+  const cards = getArray(facts.cards);
+
+  return (
+    <div className="tarot-detail">
+      <div className="bazi-summary">
+        <strong>{String(facts.summary ?? "三张牌阵")}</strong>
+        <span>{content}</span>
+      </div>
+
+      <div className="tarot-spread">
+        {cards.map((card, index) => {
+          const keywords = Array.isArray(card.keywords) ? card.keywords : [];
+          return (
+            <article
+              key={`${String(card.position)}-${String(card.name)}-${index}`}
+              className={`tarot-card${card.reversed ? " reversed" : ""}`}
+            >
+              <span>{String(card.position ?? `第${index + 1}张`)}</span>
+              <strong>{String(card.name ?? "未知牌")}</strong>
+              <em>{card.reversed ? "逆位" : "正位"}</em>
+              <div className="keyword-row">
+                {keywords.map((keyword) => (
+                  <i key={String(keyword)}>{String(keyword)}</i>
+                ))}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function IChingStructuredView({ facts, content }: { facts: Record<string, unknown>; content: string }) {
+  const primary = getRecord(facts.primary);
+  const changing = getRecord(facts.changing);
+
+  return (
+    <div className="iching-detail">
+      <div className="bazi-summary">
+        <strong>{String(facts.summary ?? "易经卦象")}</strong>
+        <span>{content}</span>
+      </div>
+
+      <div className="iching-flow">
+        <HexagramCard title="本卦" hexagram={primary} />
+        <div className="hex-arrow" aria-hidden="true">→</div>
+        <HexagramCard title="变卦" hexagram={changing} />
+      </div>
+    </div>
+  );
+}
+
+function HexagramCard({ title, hexagram }: { title: string; hexagram: Record<string, unknown> }) {
+  const lines = Array.isArray(hexagram.lines) ? hexagram.lines : [];
+
+  return (
+    <article className="hex-card">
+      <span>{title} · 第{String(hexagram.number ?? "?")}卦</span>
+      <h4>{String(hexagram.name ?? "未定")}</h4>
+      <div className="hex-lines" aria-label={`${title}六爻`}>
+        {lines.map((line, index) => (
+          <div key={`${String(line)}-${index}`} className={`hex-line ${String(line)}`}>
+            <i />
+            {line === "yin" && <i />}
+          </div>
+        ))}
+      </div>
+      <p>{String(hexagram.judgment ?? "")}</p>
+      <p className="muted">{String(hexagram.image ?? "")}</p>
+    </article>
   );
 }
 
