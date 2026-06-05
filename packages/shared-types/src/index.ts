@@ -84,6 +84,54 @@ export interface DreamEntryInput {
   symbols: string[];
 }
 
+/** Method module ids (separate from Tradition reading pipeline) */
+export type MethodId =
+  | "ziwei"
+  | "liuyao"
+  | "fengshui"
+  | "lenormand"
+  | "lot"
+  | "western";
+
+export type LotTemple = "guanyin" | "guandi" | "mazu" | "mixed";
+
+export type LenormandSpread = "three" | "five" | "nine";
+
+export interface LiuyaoInput {
+  seed?: string;
+  timestamp?: string;
+  /** Pre-cast lines: 6=老阳, 7=少阳, 8=少阴, 9=老阴 */
+  lines?: number[];
+  questionCategory?: "career" | "love" | "finance" | "health" | "general";
+}
+
+export interface FengshuiInput {
+  /** Sitting direction in degrees (0=north, 90=east) */
+  sittingDegree?: number;
+  /** 24-mountain name e.g. 子山午向 */
+  sittingMountain?: string;
+  birthYear?: number;
+  timestamp?: string;
+}
+
+export interface LenormandInput {
+  seed?: string;
+  spread?: LenormandSpread;
+  question?: string;
+}
+
+export interface LotInput {
+  seed?: string;
+  temple?: LotTemple;
+}
+
+export interface ZiweiInput {
+  birthDate?: string;
+  birthTime?: string;
+  gender?: "male" | "female";
+  calendar?: "solar" | "lunar";
+}
+
 /** Server-resolved day color (keyed by userId+date seed) */
 export interface DailyBriefDayColor {
   id: string;
@@ -108,6 +156,74 @@ export interface DailyBrief {
   dayColor?: DailyBriefDayColor;
   /** Server-generated archive metadata */
   slip?: DailyBriefSlip;
+}
+
+/** Rule matching & interpret DTOs (三术专库接入) */
+export type QimenJuMethod = "chaibu" | "zhirun";
+
+export interface MatchedRuleEvidence {
+  label: string;
+  detail: string;
+}
+
+export interface MatchedRule {
+  id: string;
+  name: string;
+  confidence: number;
+  evidence: MatchedRuleEvidence[];
+  libraryRef?: string;
+  category?: string;
+  level?: string;
+  meaning?: string;
+  actionHint?: string;
+}
+
+export interface TimingWindow {
+  label: string;
+  range: string;
+  basis: string;
+}
+
+export interface DirectionAdvice {
+  palace: string;
+  direction: string;
+  spatial: string;
+  action: string;
+  people: string;
+  timing: string;
+}
+
+export interface QimenInterpretResult {
+  matchedPatterns: MatchedRule[];
+  relations: MatchedRule[];
+  timingWindows: TimingWindow[];
+  directionAdvice?: DirectionAdvice;
+  usefulGod?: string;
+  summary: string;
+}
+
+export interface BaziInterpretResult {
+  matchedCombos: MatchedRule[];
+  matchedPatterns: MatchedRule[];
+  activeDeities: MatchedRule[];
+  luckInteractions: MatchedRule[];
+  classicHits: MatchedRule[];
+  summary: string;
+}
+
+export interface TarotInterpretResult {
+  pairMatches: MatchedRule[];
+  scenarioSections: Array<{ title: string; content: string }>;
+  cardReadings: Array<{
+    cardId: string;
+    name: string;
+    position: string;
+    reversed: boolean;
+    upright: string;
+    reversalLayer?: string;
+    reversalDetail?: string;
+  }>;
+  summary: string;
 }
 
 export const READING_SECTION_ORDER: ReadingSectionType[] = [

@@ -10,6 +10,12 @@ const DreamPage = lazy(() => import("@/pages/DreamPage").then((m) => ({ default:
 const MethodsPage = lazy(() => import("@/pages/MethodsPage").then((m) => ({ default: m.MethodsPage })));
 const BaziPage = lazy(() => import("@/pages/BaziPage").then((m) => ({ default: m.BaziPage })));
 const TarotPage = lazy(() => import("@/pages/TarotPage").then((m) => ({ default: m.TarotPage })));
+const LenormandPage = lazy(() => import("@/pages/LenormandPage").then((m) => ({ default: m.LenormandPage })));
+const LotPage = lazy(() => import("@/pages/LotPage").then((m) => ({ default: m.LotPage })));
+const LiuyaoPage = lazy(() => import("@/pages/LiuyaoPage").then((m) => ({ default: m.LiuyaoPage })));
+const WesternPage = lazy(() => import("@/pages/WesternPage").then((m) => ({ default: m.WesternPage })));
+const FengshuiPage = lazy(() => import("@/pages/FengshuiPage").then((m) => ({ default: m.FengshuiPage })));
+const ZiweiPage = lazy(() => import("@/pages/ZiweiPage").then((m) => ({ default: m.ZiweiPage })));
 const MethodModulePage = lazy(() =>
   import("@/pages/MethodModulePage").then((m) => ({ default: m.MethodModulePage }))
 );
@@ -89,6 +95,12 @@ function AppRoutes() {
             <Route path="/methods" element={<MethodsPage />} />
             <Route path="/methods/bazi" element={<BaziPage />} />
             <Route path="/methods/tarot" element={<TarotPage />} />
+            <Route path="/methods/lenormand" element={<LenormandPage />} />
+            <Route path="/methods/lot" element={<LotPage />} />
+            <Route path="/methods/liuyao" element={<LiuyaoPage />} />
+            <Route path="/methods/western" element={<WesternPage />} />
+            <Route path="/methods/fengshui" element={<FengshuiPage />} />
+            <Route path="/methods/ziwei" element={<ZiweiPage />} />
             <Route path="/methods/:methodId" element={<MethodModulePage />} />
             <Route path="/dream" element={<DreamPage />} />
             <Route path="/profile" element={<ProfilePage />} />

@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { DreamInterpretation } from "@/lib/api/dreams";
+import { matchDreamSymbols, searchDreamSymbols } from "@/data/dreamSymbolsLibrary";
 import { Button } from "@/components/ui/Button";
 import { colors, radius, spacing } from "@/theme/tokens";
 
 const EMOTIONS = ["平静", "焦虑", "喜悦", "恐惧", "困惑", "期待"];
-const SYMBOLS = ["水", "门", "路", "飞行", "坠落", "动物", "亲人", "光"];
 
 type Props = {
   onSubmit: (text: string, emotions: string[], symbols: string[]) => void;
@@ -16,9 +16,18 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
   const [text, setText] = useState("");
   const [emotions, setEmotions] = useState<string[]>([]);
   const [symbols, setSymbols] = useState<string[]>([]);
+  const [query, setQuery] = useState("");
+
+  const autoMatched = useMemo(() => matchDreamSymbols(text), [text]);
+  const suggestions = useMemo(() => searchDreamSymbols(query), [query]);
 
   const toggle = (list: string[], set: (v: string[]) => void, item: string) => {
     set(list.includes(item) ? list.filter((x) => x !== item) : [...list, item]);
+  };
+
+  const addSymbol = (symbol: string) => {
+    if (!symbols.includes(symbol)) setSymbols((prev) => [...prev, symbol]);
+    setQuery("");
   };
 
   return (
@@ -30,18 +39,51 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
         onChange={(e) => setText(e.target.value)}
         rows={4}
       />
+      {autoMatched.length > 0 && (
+        <div className="dream-autocomplete">
+          <span className="label">库中匹配符号</span>
+          <div className="chips">
+            {autoMatched.slice(0, 8).map((s) => (
+              <button key={s.symbol} type="button" className="chip selected" onClick={() => addSymbol(s.symbol)}>
+                {s.symbol}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       <ChipRow
         label="情绪"
         items={EMOTIONS}
         selected={emotions}
         onToggle={(i) => toggle(emotions, setEmotions, i)}
       />
-      <ChipRow
-        label="符号"
-        items={SYMBOLS}
-        selected={symbols}
-        onToggle={(i) => toggle(symbols, setSymbols, i)}
-      />
+      <div className="chip-section">
+        <span className="label">符号（可搜索添加）</span>
+        <input
+          className="symbol-search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="输入梦象，如 水、门、飞行…"
+        />
+        {suggestions.length > 0 && (
+          <div className="chips">
+            {suggestions.map((s) => (
+              <button key={s.symbol} type="button" className="chip" onClick={() => addSymbol(s.symbol)}>
+                {s.symbol}
+              </button>
+            ))}
+          </div>
+        )}
+        {symbols.length > 0 && (
+          <div className="chips">
+            {symbols.map((s) => (
+              <button key={s} type="button" className="chip selected" onClick={() => toggle(symbols, setSymbols, s)}>
+                {s} ×
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
       <Button
         title="生成多视角解释"
         onClick={() => onSubmit(text.trim(), emotions, symbols)}
@@ -63,7 +105,7 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
       <style>{`
         .dream-capture { display: flex; flex-direction: column; gap: ${spacing.md}px; }
         .dream-capture h2 { margin: 0; font-size: 20px; }
-        .dream-capture textarea {
+        .dream-capture textarea, .symbol-search {
           width: 100%;
           background: ${colors.surface};
           border: 1px solid ${colors.border};
@@ -72,7 +114,8 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
           color: ${colors.text};
           resize: vertical;
         }
-        .chip-section .label {
+        .symbol-search { resize: none; }
+        .chip-section .label, .dream-autocomplete .label {
           display: block;
           font-size: 12px;
           font-weight: 600;

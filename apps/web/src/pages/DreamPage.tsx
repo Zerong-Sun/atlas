@@ -3,12 +3,7 @@ import { DreamCapture } from "@/components/DreamCapture";
 import { Page } from "@/components/ui/Page";
 import { createDreamEntry, fetchDreamTrend, type DreamInterpretation } from "@/lib/api/dreams";
 
-const DREAM_SCHOOLS = [
-  { title: "中国梦占", body: "以物象、人物、方位、吉凶语汇为主，适合保留古籍和民俗解释的原始味道。" },
-  { title: "荣格象征", body: "把梦看作潜意识材料，重点分析阴影、原型和补偿机制。" },
-  { title: "精神反思", body: "不做绝对预言，转为情绪、压力、关系与行动建议，适合 LLM 稳定输出。" },
-  { title: "民俗对照", body: "把周公解梦、地方说法、禁忌和口传象征并列，显示相同符号的不同解释。" },
-];
+import { DREAM_SCHOOLS } from "@/data/dreamSchoolsLibrary";
 
 export function DreamPage() {
   const [loading, setLoading] = useState(false);
@@ -67,9 +62,9 @@ export function DreamPage() {
 
       <section className="dream-schools" aria-label="占梦流派">
         {DREAM_SCHOOLS.map((school) => (
-          <article key={school.title}>
+          <article key={school.id}>
             <span>{school.title}</span>
-            <p>{school.body}</p>
+            <p>{school.summary}</p>
           </article>
         ))}
       </section>
