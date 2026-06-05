@@ -66,7 +66,7 @@ export class MimoGateway {
     )
       .replace(/\/chat\/completions\/?$/, "")
       .replace(/\/$/, "");
-    this.model = cfg.MIMO_MODEL ?? cfg.LLM_MODEL ?? cfg.OPENAI_MODEL ?? "mimo-v2-flash";
+    this.model = cfg.MIMO_MODEL ?? cfg.LLM_MODEL ?? cfg.OPENAI_MODEL ?? "mimo-v2.5";
   }
 
   isConfigured(): boolean {

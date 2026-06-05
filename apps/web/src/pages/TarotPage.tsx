@@ -1,52 +1,37 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type CSSProperties } from "react";
+import {
+  TAROT_DECK,
+  buildTarotCombination,
+  getCardMeaning,
+  getTarotDeck,
+  type TarotCard,
+  type TarotSuit,
+} from "@/data/tarotDeck";
 import { Page } from "@/components/ui/Page";
 
 type DeckMode = "major" | "full";
 type SpreadMode = "three" | "decision" | "mirror";
+type DrawPhase = "idle" | "shuffling" | "drawing" | "revealed";
 
-type Card = {
-  name: string;
-  suit?: string;
-  keywords: string[];
-};
-
-type DrawnCard = Card & {
+type DrawnCard = TarotCard & {
   position: string;
   reversed: boolean;
 };
 
-const MAJOR: Card[] = [
-  { name: "愚者", keywords: ["开始", "冒险", "信任"] },
-  { name: "魔术师", keywords: ["意志", "行动", "资源"] },
-  { name: "女祭司", keywords: ["直觉", "潜意识", "等待"] },
-  { name: "皇后", keywords: ["滋养", "创造", "丰盛"] },
-  { name: "皇帝", keywords: ["结构", "边界", "稳定"] },
-  { name: "教皇", keywords: ["传统", "学习", "信念"] },
-  { name: "恋人", keywords: ["选择", "关系", "价值"] },
-  { name: "战车", keywords: ["推进", "掌控", "决心"] },
-  { name: "力量", keywords: ["勇气", "耐心", "柔韧"] },
-  { name: "隐者", keywords: ["内省", "独处", "洞见"] },
-  { name: "命运之轮", keywords: ["周期", "转机", "变化"] },
-  { name: "正义", keywords: ["公平", "判断", "因果"] },
-  { name: "倒吊人", keywords: ["暂停", "换位", "放下"] },
-  { name: "死神", keywords: ["结束", "转化", "新生"] },
-  { name: "节制", keywords: ["平衡", "调和", "修复"] },
-  { name: "恶魔", keywords: ["束缚", "欲望", "阴影"] },
-  { name: "塔", keywords: ["突变", "揭示", "重建"] },
-  { name: "星星", keywords: ["希望", "疗愈", "指引"] },
-  { name: "月亮", keywords: ["迷雾", "不安", "想象"] },
-  { name: "太阳", keywords: ["清晰", "活力", "成功"] },
-  { name: "审判", keywords: ["觉醒", "复盘", "召唤"] },
-  { name: "世界", keywords: ["完成", "整合", "抵达"] },
-];
+type PlaceholderCard = {
+  position: string;
+  placeholder: true;
+};
 
-const MINOR: Card[] = ["权杖", "圣杯", "宝剑", "星币"].flatMap((suit) =>
-  ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "侍从", "骑士", "王后", "国王"].map((rank) => ({
-    name: `${suit}${rank}`,
-    suit,
-    keywords: suitKeywords(suit, rank),
-  }))
-);
+type HistoryItem = {
+  id: string;
+  time: string;
+  spread: string;
+  question: string;
+  summary: string;
+};
+
+type SuitFilter = "all" | TarotSuit;
 
 const SPREADS: Record<SpreadMode, { label: string; positions: string[]; note: string }> = {
   three: {
@@ -71,29 +56,115 @@ export function TarotPage() {
   const [mode, setMode] = useState<DeckMode>("major");
   const [spreadMode, setSpreadMode] = useState<SpreadMode>("three");
   const [cards, setCards] = useState<DrawnCard[]>([]);
+  const [phase, setPhase] = useState<DrawPhase>("idle");
   const [lastDraw, setLastDraw] = useState("");
+  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [copyState, setCopyState] = useState("");
+  const [libraryQuery, setLibraryQuery] = useState("");
+  const [suitFilter, setSuitFilter] = useState<SuitFilter>("all");
 
-  const combo = useMemo(() => buildComboReading(cards), [cards]);
   const spread = SPREADS[spreadMode];
+  const combo = useMemo(() => buildTarotCombination(cards), [cards]);
+  const selectedDeck = useMemo(() => getTarotDeck(mode), [mode]);
+  const isBusy = phase === "shuffling" || phase === "drawing";
+  const dailyCard = useMemo(() => getDailyCard(), []);
+  const readingText = useMemo(() => buildReadingText(question, spread.label, cards, combo), [cards, combo, question, spread.label]);
+  const libraryCards = useMemo(() => {
+    const q = libraryQuery.trim().toLowerCase();
+    return TAROT_DECK.filter((card) => {
+      const matchesSuit = suitFilter === "all" || card.suit === suitFilter;
+      const text = [card.name, card.nameEn, card.rank, card.element, ...card.keywords, ...card.reversedKeywords].join(" ").toLowerCase();
+      return matchesSuit && (!q || text.includes(q));
+    }).slice(0, 16);
+  }, [libraryQuery, suitFilter]);
+  const visibleCards: Array<DrawnCard | PlaceholderCard> = cards.length
+    ? cards
+    : spread.positions.map((position) => ({ position, placeholder: true }));
 
   const draw = () => {
-    const deck = [...MAJOR, ...(mode === "full" ? MINOR : [])];
-    const next: DrawnCard[] = [];
-    for (const position of spread.positions) {
-      const index = Math.floor(Math.random() * deck.length);
-      const card = deck.splice(index, 1)[0];
-      next.push({ ...card, position, reversed: Math.random() > 0.72 });
+    if (isBusy) return;
+    setCards([]);
+    setPhase("shuffling");
+
+    window.setTimeout(() => {
+      const deck = [...selectedDeck];
+      const next: DrawnCard[] = [];
+      for (const position of spread.positions) {
+        const index = Math.floor(Math.random() * deck.length);
+        const card = deck.splice(index, 1)[0];
+        next.push({ ...card, position, reversed: Math.random() > 0.72 });
+      }
+      setCards(next);
+      setPhase("drawing");
+      const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
+      setLastDraw(time);
+      setHistory((items) => [
+        {
+          id: `${Date.now()}`,
+          time,
+          spread: spread.label,
+          question: question.trim() || "当下趋势",
+          summary: next.map((card) => `${card.position}:${card.name}${card.reversed ? "逆" : "正"}`).join(" / "),
+        },
+        ...items,
+      ].slice(0, 6));
+      window.setTimeout(() => setPhase("revealed"), 680);
+    }, 820);
+  };
+
+  const resetSpread = (nextSpread: SpreadMode) => {
+    setSpreadMode(nextSpread);
+    setCards([]);
+    setPhase("idle");
+  };
+
+  const copyReading = async () => {
+    if (!cards.length) return;
+    try {
+      await navigator.clipboard.writeText(readingText);
+      setCopyState("已复制");
+    } catch {
+      setCopyState("复制失败");
     }
-    setCards(next);
-    setLastDraw(new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }));
+    window.setTimeout(() => setCopyState(""), 1400);
   };
 
   return (
     <Page wide className="tarot-page">
       <section className="method-detail-hero tarot-hero">
-        <p className="method-kicker">TAROT SPREAD</p>
+        <p className="method-kicker">RIDER-WAITE-SMITH TAROT</p>
         <h1>塔罗抽卡</h1>
-        <p>塔罗不需要和八字绑在一起。这里专注抽卡、牌面解释、牌阵位置和组合语义。</p>
+        <p>使用经典 Rider-Waite-Smith 公共域卡面。先洗牌，再抽牌，最后翻开牌面并生成单牌与组合解释。</p>
+      </section>
+
+      <section className="tarot-utility-grid" aria-label="塔罗辅助功能">
+        <article className="daily-tarot-card">
+          <div>
+            <span>DAILY CARD</span>
+            <h2>今日一牌 · {dailyCard.name}</h2>
+            <p>{dailyCard.upright}</p>
+          </div>
+          <img src={dailyCard.image} alt={`今日一牌 ${dailyCard.name}`} loading="lazy" />
+        </article>
+        <article className="tarot-history-panel">
+          <div className="section-heading">
+            <p>READING LOG</p>
+            <h2>抽牌历史</h2>
+          </div>
+          {history.length === 0 ? (
+            <p className="history-empty">抽牌后会在这里保留最近 6 次记录，方便复盘。</p>
+          ) : (
+            <div className="tarot-history-list">
+              {history.map((item) => (
+                <button key={item.id} type="button">
+                  <span>{item.time} · {item.spread}</span>
+                  <strong>{item.question}</strong>
+                  <em>{item.summary}</em>
+                </button>
+              ))}
+            </div>
+          )}
+        </article>
       </section>
 
       <section className="tarot-console">
@@ -107,7 +178,7 @@ export function TarotPage() {
               大阿卡那
             </button>
             <button type="button" className={mode === "full" ? "active" : ""} onClick={() => setMode("full")}>
-              全牌组
+              全牌组 78
             </button>
           </div>
           <div className="spread-toggle" role="group" aria-label="牌阵选择">
@@ -116,31 +187,63 @@ export function TarotPage() {
                 key={key}
                 type="button"
                 className={spreadMode === key ? "active" : ""}
-                onClick={() => {
-                  setSpreadMode(key);
-                  setCards([]);
-                }}
+                onClick={() => resetSpread(key)}
               >
                 {item.label}
               </button>
             ))}
           </div>
           <p className="spread-note">{spread.note}</p>
-          <button type="button" className="draw-button" onClick={draw}>
-            {cards.length ? "重新抽牌" : "开始抽牌"}
+          <button type="button" className="draw-button" onClick={draw} disabled={isBusy}>
+            {phase === "shuffling" ? "洗牌中..." : phase === "drawing" ? "抽牌中..." : cards.length ? "重新洗牌抽取" : "洗牌并抽牌"}
           </button>
           {lastDraw && <p className="last-draw">上次抽牌 {lastDraw}</p>}
         </div>
 
-        <div className="tarot-spread" aria-live="polite">
-          {(cards.length ? cards : spread.positions.map((position) => ({ name: "牌背", position, reversed: false, keywords: ["等待抽取"] }))).map((card, index) => (
-            <article className={cards.length ? "spread-card" : "spread-card is-back"} key={`${card.position}-${index}`}>
-              <span>{card.position}</span>
-              <strong>{card.name}</strong>
-              <i>{cards.length ? (card.reversed ? "逆位" : "正位") : "未翻开"}</i>
-              <p>{card.keywords.join(" / ")}</p>
-            </article>
-          ))}
+        <div className={`tarot-table tarot-table--${phase}`} aria-live="polite">
+          <DeckAnimation phase={phase} />
+          <div className="tarot-spread" style={{ "--spread-count": spread.positions.length } as CSSProperties}>
+            {visibleCards.map((card, index) => (
+              !("placeholder" in card) ? (
+                <article
+                  className={`spread-card${phase === "revealed" ? " is-revealed" : ""}${card.reversed ? " is-reversed" : ""}`}
+                  key={`${card.position}-${card.id}`}
+                  style={{ "--i": index } as CSSProperties}
+                >
+                  <div className="spread-card__inner">
+                    <div className="spread-card__back">
+                      <span>{card.position}</span>
+                      <strong>抽取中</strong>
+                    </div>
+                    <div className="spread-card__face">
+                      <img src={card.image} alt={`${card.name} ${card.reversed ? "逆位" : "正位"}`} loading="lazy" />
+                    </div>
+                  </div>
+                  <div className="spread-card__meta">
+                    <span>{card.position}</span>
+                    <strong>{card.name}</strong>
+                    <i>{card.nameEn} · {card.reversed ? "逆位" : "正位"}</i>
+                    <p>{(card.reversed ? card.reversedKeywords : card.keywords).join(" / ")}</p>
+                  </div>
+                </article>
+              ) : (
+                <article className="spread-card spread-card--placeholder" key={`${card.position}-${index}`}>
+                  <div className="spread-card__inner">
+                    <div className="spread-card__back">
+                      <span>{card.position}</span>
+                      <strong>待抽取</strong>
+                    </div>
+                  </div>
+                  <div className="spread-card__meta">
+                    <span>{card.position}</span>
+                    <strong>牌背</strong>
+                    <i>等待洗牌</i>
+                    <p>点击抽牌后显示 Rider-Waite-Smith 经典牌面。</p>
+                  </div>
+                </article>
+              )
+            ))}
+          </div>
         </div>
       </section>
 
@@ -149,6 +252,12 @@ export function TarotPage() {
           <p>INTERPRETATION</p>
           <h2>牌面与组合解释</h2>
         </div>
+        {cards.length > 0 && (
+          <div className="tarot-reading-actions">
+            <button type="button" onClick={copyReading}>复制本次解读</button>
+            {copyState && <span>{copyState}</span>}
+          </div>
+        )}
         <div className="reading-grid">
           <article>
             <span>问题焦点</span>
@@ -160,27 +269,88 @@ export function TarotPage() {
           </article>
           <article>
             <span>指点</span>
-            <p>先把“发生了什么”和“我希望什么”分开。若出现逆位，它更像提醒：能量不是没有，而是被卡在表达方式里。</p>
+            <p>先看核心位置，再看逆位是否指出阻滞。组合解释不把牌义硬拼在一起，而是看大阿卡那比例、元素分布和牌阵位置。</p>
           </article>
+        </div>
+      </section>
+
+      {cards.length > 0 && (
+        <section className="tarot-card-library" aria-label="本次抽到的单牌解释">
+          {cards.map((card) => (
+            <article key={`meaning-${card.position}-${card.id}`} className={card.reversed ? "is-reversed" : ""}>
+              <img src={card.image} alt={card.name} loading="lazy" />
+              <div>
+                <span>{card.position} · {card.reversed ? "逆位" : "正位"}</span>
+                <h3>{card.name}</h3>
+                <p>{getCardMeaning(card, card.reversed)}</p>
+                <em>{card.advice}</em>
+              </div>
+            </article>
+          ))}
+        </section>
+      )}
+
+      <section className="tarot-library-browser" aria-label="塔罗牌库检索">
+        <div className="section-heading">
+          <p>CARD LIBRARY</p>
+          <h2>塔罗牌库检索</h2>
+        </div>
+        <div className="tarot-library-controls">
+          <label>
+            <span>搜索牌名 / 关键词</span>
+            <input value={libraryQuery} onChange={(event) => setLibraryQuery(event.target.value)} placeholder="例如：恋人、冲突、水、完成..." />
+          </label>
+          <select value={suitFilter} onChange={(event) => setSuitFilter(event.target.value as SuitFilter)} aria-label="牌组筛选">
+            <option value="all">全部牌组</option>
+            <option value="major">大阿卡那</option>
+            <option value="wands">权杖</option>
+            <option value="cups">圣杯</option>
+            <option value="swords">宝剑</option>
+            <option value="pentacles">星币</option>
+          </select>
+        </div>
+        <div className="tarot-library-grid">
+          {libraryCards.map((card) => (
+            <article key={card.id}>
+              <img src={card.image} alt={card.name} loading="lazy" />
+              <div>
+                <span>{card.nameEn}</span>
+                <strong>{card.name}</strong>
+                <p>{card.keywords.join(" / ")}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </Page>
   );
 }
 
-function suitKeywords(suit: string, rank: string) {
-  const suitMap: Record<string, string[]> = {
-    权杖: ["行动", "热情", "推进"],
-    圣杯: ["情感", "关系", "感受"],
-    宝剑: ["判断", "冲突", "思考"],
-    星币: ["现实", "资源", "稳定"],
-  };
-  return [rank, ...(suitMap[suit] ?? [])];
+function DeckAnimation({ phase }: { phase: DrawPhase }) {
+  return (
+    <div className="deck-animation" aria-hidden>
+      {Array.from({ length: 9 }, (_, index) => (
+        <span key={index} style={{ "--i": index } as CSSProperties} />
+      ))}
+      <strong>{phase === "shuffling" ? "SHUFFLING" : phase === "drawing" ? "DRAWING" : "DECK"}</strong>
+    </div>
+  );
 }
 
-function buildComboReading(cards: DrawnCard[]) {
-  if (cards.length === 0) return "抽牌后会在这里生成这组牌的整体脉络。";
-  const names = cards.map((card) => `${card.name}${card.reversed ? "逆位" : ""}`).join("、");
-  const keywords = Array.from(new Set(cards.flatMap((card) => card.keywords))).slice(0, 6).join("、");
-  return `${names}连在一起，主题落在${keywords}。先看第二张牌作为核心，再让第一张解释成因，第三张给行动方向。`;
+function getDailyCard() {
+  const dateKey = new Date().toISOString().slice(0, 10);
+  const seed = Array.from(dateKey).reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  return TAROT_DECK[seed % TAROT_DECK.length];
+}
+
+function buildReadingText(question: string, spread: string, cards: DrawnCard[], combo: string) {
+  const lines = [
+    `问题：${question.trim() || "当下趋势"}`,
+    `牌阵：${spread}`,
+    "",
+    ...cards.map((card) => `${card.position}：${card.name}${card.reversed ? "（逆位）" : "（正位）"} - ${getCardMeaning(card, card.reversed)}`),
+    "",
+    `组合解释：${combo}`,
+  ];
+  return lines.join("\n");
 }
