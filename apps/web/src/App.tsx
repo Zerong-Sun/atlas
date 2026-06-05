@@ -7,7 +7,11 @@ import { colors } from "@/theme/tokens";
 const TodayPage = lazy(() => import("@/pages/TodayPage").then((m) => ({ default: m.TodayPage })));
 const AskPage = lazy(() => import("@/pages/AskPage").then((m) => ({ default: m.AskPage })));
 const DreamPage = lazy(() => import("@/pages/DreamPage").then((m) => ({ default: m.DreamPage })));
+const MethodsPage = lazy(() => import("@/pages/MethodsPage").then((m) => ({ default: m.MethodsPage })));
+const BaziPage = lazy(() => import("@/pages/BaziPage").then((m) => ({ default: m.BaziPage })));
+const TarotPage = lazy(() => import("@/pages/TarotPage").then((m) => ({ default: m.TarotPage })));
 const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ default: m.ProfilePage })));
+const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
 const ReadingPage = lazy(() => import("@/pages/ReadingPage").then((m) => ({ default: m.ReadingPage })));
 const InterestsPage = lazy(() =>
@@ -30,10 +34,18 @@ function BootScreen() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: ${colors.ink};
+          background: linear-gradient(180deg, ${colors.mist}22 0%, ${colors.night} 45%);
           color: ${colors.gold};
           font-size: 24px;
           letter-spacing: 0.2em;
+          animation: boot-fade 0.5s ease forwards;
+        }
+        @keyframes boot-fade {
+          from { background: linear-gradient(180deg, ${colors.mist}55 0%, ${colors.nightElevated} 100%); }
+          to { background: ${colors.night}; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .boot { animation: none; background: ${colors.night}; }
         }
       `}</style>
     </div>
@@ -71,8 +83,12 @@ function AppRoutes() {
             <Route path="/" element={<TodayPage />} />
             <Route path="/today" element={<TodayPage />} />
             <Route path="/ask" element={<AskPage />} />
+            <Route path="/methods" element={<MethodsPage />} />
+            <Route path="/methods/bazi" element={<BaziPage />} />
+            <Route path="/methods/tarot" element={<TarotPage />} />
             <Route path="/dream" element={<DreamPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/settings" element={<SettingsPage />} />
             <Route path="/library" element={<LibraryPage />} />
           </Route>
 

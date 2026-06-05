@@ -5,11 +5,23 @@ type Props = {
   children: ReactNode;
   title?: string;
   wide?: boolean;
+  /** Transparent background for today color field */
+  transparent?: boolean;
+  className?: string;
 };
 
-export function Page({ children, title, wide }: Props) {
+export function Page({ children, title, wide, transparent, className }: Props) {
+  const classes = [
+    "page",
+    wide && "wide",
+    transparent && "page--transparent",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <main id="main-content" className={`page${wide ? " wide" : ""}`}>
+    <main id="main-content" className={classes}>
       {title && <h1 className="page-title">{title}</h1>}
       {children}
       <style>{`
@@ -18,6 +30,9 @@ export function Page({ children, title, wide }: Props) {
           margin: 0 auto;
           padding: ${spacing.lg}px ${spacing.md}px ${spacing.xxl}px;
           min-height: calc(100vh - 64px);
+        }
+        .page--transparent {
+          background: transparent;
         }
         .page-title {
           font-size: 28px;

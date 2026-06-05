@@ -84,6 +84,19 @@ export interface DreamEntryInput {
   symbols: string[];
 }
 
+/** Server-resolved day color (keyed by userId+date seed) */
+export interface DailyBriefDayColor {
+  id: string;
+  nameEn: string;
+  a: string;
+  b: string;
+}
+
+/** Server-generated slip metadata */
+export interface DailyBriefSlip {
+  entryId: string;
+}
+
 export interface DailyBrief {
   date: string;
   theme: string;
@@ -91,6 +104,10 @@ export interface DailyBrief {
   classicQuote: CitationSnapshot | null;
   suitable: string[];
   avoid: string[];
+  /** Resolved server-side from userId+date seed. Falls back to client derivation if absent. */
+  dayColor?: DailyBriefDayColor;
+  /** Server-generated archive metadata */
+  slip?: DailyBriefSlip;
 }
 
 export const READING_SECTION_ORDER: ReadingSectionType[] = [

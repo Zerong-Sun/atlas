@@ -1,0 +1,1233 @@
+/* Non-today pages — night/mist consistent styling */
+
+/* ── Page shell ── */
+.page {
+  --page-card-bg: var(--color-surface);
+  --page-card-border: var(--color-border);
+  --page-card-hover: var(--color-surface-elevated);
+}
+
+/* ── Consistent section headers ── */
+.page-section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--spacing-md);
+}
+
+.page-section-label__mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.page-section-label__zh {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+/* ── Form fields ── */
+.input,
+.textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-gold-dim);
+  box-shadow: 0 0 0 2px rgba(196, 165, 116, 0.15);
+}
+
+/* ── Field label (forms) ── */
+.field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* ── Search bar ── */
+.search {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search:focus {
+  outline: none;
+  border-color: var(--color-gold-dim);
+}
+
+/* ── Symbol bar (Dream page) ── */
+.symbol-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr 2rem;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.symbol-row span {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.symbol-row i {
+  display: block;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-gold-dim), var(--color-gold));
+  opacity: 0.85;
+}
+
+.symbol-row strong {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+/* ── Tradition tabs / badge row ── */
+.badges,
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ── Template grid (Ask page) ── */
+.template-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.template-grid button {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.template-grid button:hover {
+  border-color: var(--color-gold-dim);
+  background: var(--color-surface-elevated);
+}
+
+.template-grid button strong {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.template-grid button span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+/* ── Onboarding chip grid ── */
+.grid.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.chip {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.chip:hover {
+  border-color: var(--color-gold-dim);
+}
+
+.chip.on {
+  border-color: var(--color-gold);
+  background: var(--color-surface-elevated);
+  color: var(--color-gold);
+}
+
+/* ── Portrait / profile cards ── */
+.portrait-card {
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.portrait-card .label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.portrait-card p {
+  font-family: var(--font-serif);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ── History / library list items ── */
+.history-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.18s ease;
+}
+
+.history-item:hover {
+  border-color: var(--color-gold-dim);
+}
+
+/* ── Reading page ── */
+.reading-result .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+}
+
+.reading-result h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reading-result .summary .serif {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* ── Trend section (Dream page) ── */
+.trend h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.trend .muted {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+/* ── Hint text ── */
+.hint {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* ── Open note ── */
+.open-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  border: 1px solid rgba(196, 165, 116, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  display: inline-block;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ── Edit / toggle link ── */
+.edit-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: color 0.18s;
+}
+
+.edit-link:hover {
+  color: var(--color-gold);
+}
+
+/* ── Divination method system ── */
+.methods-page,
+.bazi-page,
+.tarot-page {
+  position: relative;
+}
+
+.method-directory-hero,
+.method-detail-hero {
+  padding: clamp(24px, 5vw, 48px) 0 var(--spacing-xl);
+  max-width: 760px;
+}
+
+.method-kicker,
+.section-heading p {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.method-directory-hero h1,
+.method-detail-hero h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--color-text);
+}
+
+.method-directory-hero p:last-child,
+.method-detail-hero p:last-child {
+  max-width: 620px;
+  margin: var(--spacing-md) 0 0;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.method-section {
+  margin-top: var(--spacing-xl);
+}
+
+.method-control-panel {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-md);
+  align-items: stretch;
+  margin-bottom: var(--spacing-xl);
+}
+
+.method-stats,
+.method-filters {
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+  padding: var(--spacing-md);
+}
+
+.method-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.method-stats div {
+  min-height: 72px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid rgba(196, 165, 116, 0.16);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.42);
+}
+
+.method-stats strong {
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.method-stats span,
+.method-search span {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.method-filters {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.method-search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.method-search input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.72);
+  color: var(--color-text);
+  padding: 0 var(--spacing-md);
+  font: inherit;
+}
+
+.method-status-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.method-status-tabs button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.42);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.method-status-tabs button.active,
+.method-status-tabs button:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.empty-note {
+  margin: var(--spacing-md) 0 0;
+  color: var(--color-text-muted);
+}
+
+.section-heading {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--color-text);
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.method-grid--featured {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.method-card {
+  min-height: 188px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.24);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(145deg, rgba(196, 165, 116, 0.12), transparent 42%),
+    rgba(17, 24, 39, 0.76);
+  color: var(--color-text);
+  text-decoration: none;
+  animation: method-rise 0.45s ease both;
+  animation-delay: calc(var(--i, 0) * 35ms);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-gold);
+  background:
+    linear-gradient(145deg, rgba(196, 165, 116, 0.18), rgba(126, 178, 183, 0.08) 62%),
+    rgba(17, 24, 39, 0.86);
+}
+
+.method-card.is-locked {
+  opacity: 0.68;
+}
+
+.method-card--compact {
+  min-height: 158px;
+}
+
+.method-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.method-card__top span,
+.method-card__top i {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.method-card strong {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.method-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  font-size: 0.925rem;
+}
+
+.method-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.method-card__tags span {
+  padding: 3px 8px;
+  border: 1px solid rgba(154, 171, 184, 0.24);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+/* ── Bazi page ── */
+.bazi-profile-strip,
+.bazi-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.bazi-profile-strip button {
+  min-width: 120px;
+  min-height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.bazi-profile-strip button.active,
+.bazi-profile-strip button:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.bazi-profile-strip button span,
+.bazi-steps span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.bazi-profile-strip button strong {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.bazi-add-profile strong {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.bazi-steps {
+  counter-reset: step;
+}
+
+.bazi-steps span {
+  counter-increment: step;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.bazi-steps span::before {
+  content: counter(step);
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(154, 171, 184, 0.14);
+  color: var(--color-text-secondary);
+}
+
+.bazi-steps span.done {
+  border-color: rgba(196, 165, 116, 0.32);
+  color: var(--color-gold);
+}
+
+.bazi-workbench,
+.tarot-console,
+.bazi-panel,
+.classic-card,
+.annual-card,
+.tarot-reading article {
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+}
+
+.bazi-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.bazi-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.bazi-form label,
+.tarot-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.bazi-form span,
+.tarot-controls span,
+.bazi-summary span,
+.classic-card span,
+.tarot-reading article span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.bazi-form input,
+.tarot-controls textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.72);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.bazi-form input {
+  min-height: 44px;
+  padding: 0 var(--spacing-md);
+}
+
+.bazi-summary {
+  padding: var(--spacing-md);
+  border-left: 1px solid rgba(196, 165, 116, 0.26);
+}
+
+.bazi-summary strong {
+  display: block;
+  margin-top: var(--spacing-xs);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+}
+
+.bazi-summary p,
+.classic-card p,
+.annual-card p,
+.tarot-reading article p {
+  margin: var(--spacing-sm) 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.pillar-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.pillar-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.28);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(196, 165, 116, 0.2), transparent 48%),
+    rgba(17, 24, 39, 0.74);
+}
+
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(196, 165, 116, 0.12);
+  border-radius: calc(var(--radius-md) - 2px);
+  pointer-events: none;
+}
+
+.pillar-card span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+}
+
+.pillar-card strong {
+  display: block;
+  margin: var(--spacing-sm) 0 var(--spacing-md);
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.pillar-card dl {
+  display: grid;
+  gap: var(--spacing-xs);
+  margin: 0;
+}
+
+.pillar-card div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.pillar-card dt,
+.pillar-card dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.bazi-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.bazi-panel {
+  padding: var(--spacing-md);
+}
+
+.term-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.term-cloud button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.55);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.term-cloud button.active,
+.term-cloud button:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.term-reading {
+  min-height: 54px;
+  margin: var(--spacing-md) 0 0;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.element-bars {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.element-row {
+  display: grid;
+  grid-template-columns: 32px 1fr 88px;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.element-row span,
+.element-row strong {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.element-row i {
+  display: block;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-gold), rgba(126, 178, 183, 0.85));
+}
+
+.classic-list,
+.annual-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.classic-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.classic-card {
+  padding: var(--spacing-md);
+}
+
+.classic-card blockquote {
+  margin: var(--spacing-sm) 0 0;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.annual-section,
+.classic-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.annual-list {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.annual-card {
+  padding: var(--spacing-md);
+}
+
+.annual-card.current {
+  border-color: var(--color-gold);
+  background: rgba(196, 165, 116, 0.12);
+}
+
+.annual-card span {
+  color: var(--color-gold);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.annual-card strong {
+  display: block;
+  margin-top: var(--spacing-xs);
+  font-family: var(--font-serif);
+}
+
+/* ── Tarot page ── */
+.tarot-hero {
+  max-width: 680px;
+}
+
+.tarot-console {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.tarot-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.tarot-controls textarea {
+  min-height: 132px;
+  padding: var(--spacing-md);
+  resize: vertical;
+}
+
+.deck-toggle,
+.spread-toggle {
+  display: grid;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.45);
+}
+
+.deck-toggle {
+  grid-template-columns: 1fr 1fr;
+}
+
+.spread-toggle {
+  grid-template-columns: 1fr;
+}
+
+.deck-toggle button,
+.spread-toggle button,
+.draw-button {
+  min-height: 42px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font: inherit;
+}
+
+.deck-toggle button.active,
+.deck-toggle button:hover,
+.spread-toggle button.active,
+.spread-toggle button:hover {
+  border-color: rgba(196, 165, 116, 0.32);
+  color: var(--color-gold);
+  background: rgba(196, 165, 116, 0.1);
+}
+
+.spread-note,
+.last-draw {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.last-draw {
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.draw-button {
+  border-color: var(--color-gold-dim);
+  color: var(--color-gold);
+  background: rgba(196, 165, 116, 0.12);
+  font-weight: 600;
+}
+
+.tarot-spread {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  align-items: stretch;
+}
+
+.spread-card {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.32);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(196, 165, 116, 0.18), transparent 38%),
+    repeating-linear-gradient(135deg, rgba(232, 237, 242, 0.04) 0 1px, transparent 1px 11px),
+    rgba(17, 24, 39, 0.9);
+  animation: card-flip-in 0.45s ease both;
+}
+
+.spread-card.is-back {
+  border-style: dashed;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(196, 165, 116, 0.2), transparent 34%),
+    repeating-linear-gradient(135deg, rgba(232, 237, 242, 0.06) 0 1px, transparent 1px 10px),
+    rgba(17, 24, 39, 0.9);
+}
+
+.spread-card span,
+.spread-card i {
+  color: var(--color-gold);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  font-style: normal;
+}
+
+.spread-card strong {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.spread-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.tarot-reading article {
+  padding: var(--spacing-md);
+}
+
+/* ── Dream page ── */
+.dream-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.dream-main,
+.dream-protocol,
+.dream-schools article {
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+  padding: var(--spacing-md);
+}
+
+.dream-protocol ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.dream-schools {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.dream-schools span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+}
+
+.dream-schools p {
+  margin: var(--spacing-sm) 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/* ── Settings page ── */
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.settings-panel {
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+  padding: var(--spacing-md);
+}
+
+.settings-field,
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  min-height: 52px;
+  border-bottom: 1px solid rgba(154, 171, 184, 0.12);
+}
+
+.settings-field span,
+.settings-toggle span {
+  color: var(--color-text);
+}
+
+.settings-field select {
+  min-width: 160px;
+  min-height: 38px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.72);
+  color: var(--color-text);
+  padding: 0 10px;
+}
+
+.settings-toggle input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-gold);
+}
+
+.settings-rules {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.settings-wide-panel {
+  margin-top: var(--spacing-md);
+}
+
+.settings-roadmap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.settings-roadmap span {
+  padding: 10px 12px;
+  border: 1px solid rgba(196, 165, 116, 0.18);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  background: rgba(11, 16, 32, 0.36);
+}
+
+@keyframes method-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-flip-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotateY(12deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .method-grid,
+  .method-grid--featured,
+  .pillar-board,
+  .annual-list,
+  .reading-grid,
+  .settings-roadmap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .method-control-panel,
+  .bazi-workbench,
+  .bazi-two-col,
+  .tarot-console,
+  .dream-layout,
+  .dream-schools,
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bazi-summary {
+    border-left: 0;
+    border-top: 1px solid rgba(196, 165, 116, 0.26);
+  }
+}
+
+@media (max-width: 640px) {
+  .method-grid,
+  .method-grid--featured,
+  .bazi-form,
+  .pillar-board,
+  .classic-list,
+  .annual-list,
+  .tarot-spread,
+  .reading-grid,
+  .settings-roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .method-card {
+    min-height: 148px;
+  }
+
+  .spread-card {
+    min-height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .method-card,
+  .spread-card {
+    animation: none;
+  }
+
+  .method-card,
+  .method-card:hover {
+    transform: none;
+  }
+}

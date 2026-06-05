@@ -6,6 +6,7 @@ import type {
   Tradition,
   UserProfile,
 } from "@atlas/shared-types";
+import { buildEntryId, resolveDayColor } from "@/theme/tokens";
 
 export const MOCK_PROFILE: UserProfile = {
   userId: "local-mock-user",
@@ -168,18 +169,24 @@ function buildMockStructuredFacts(traditions: Tradition[]): StructuredFacts[] {
     .filter((item): item is StructuredFacts => Boolean(item.facts));
 }
 
+const _mockDate = new Date().toISOString().slice(0, 10);
+const _mockDayColor = resolveDayColor(_mockDate);
+const _mockEntryId = buildEntryId(_mockDate);
+
 export const MOCK_DAILY_BRIEF: DailyBrief = {
-  date: new Date().toISOString().slice(0, 10),
-  theme: "静观蓄势",
+  date: _mockDate,
+  theme: "静观蓄势，待机而动",
   traditionSummaries: {
-    bazi: "流日金水相生，宜文书、策划类事务。",
-    western: "月亮进入天蝎，情绪深度增加，适合内省。",
-    tarot: "今日牌意偏「隐士」——独处可得洞见。",
-    iching: "日卦示「渐」，循序渐进为佳。",
+    bazi: "流日庚金得令，金水相生旺势渐显。宜文书、策划、整理档案类事务；午时后行动效率更佳，避免辰时冲动决策。",
+    western: "月亮入天蝎，情感深潜期——表层平静之下暗流涌动。适合独自梳理长期目标，与亲近之人深谈胜过泛泛社交。",
+    tarot: "今日抽得「隐士」正位：向内探寻，积累洞见，暂缓向外输出。独处时间是能量，非消耗。",
+    iching: "日卦呈「渐」（风山渐）：鸿渐于陆，征吉。循序渐进，不可急功，步步为营即是胜道。",
   },
-  classicQuote: MOCK_CITATIONS[0],
-  suitable: ["阅读", "复盘", "整理档案"],
-  avoid: ["冲动签约", "情绪化决断"],
+  classicQuote: MOCK_CITATIONS[0]!,
+  suitable: ["阅读与复盘", "整理计划文档", "与信任之人深谈", "学习新技能"],
+  avoid: ["冲动签约或承诺", "情绪化决断", "多线程同步启动"],
+  dayColor: { id: _mockDayColor.id, nameEn: _mockDayColor.nameEn, a: _mockDayColor.a, b: _mockDayColor.b },
+  slip: { entryId: _mockEntryId },
 };
 
 export const MOCK_LIBRARY_ENTRIES = [
