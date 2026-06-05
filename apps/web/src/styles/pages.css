@@ -667,12 +667,60 @@
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.method-module-form button:hover {
+.method-module-form button:hover,
+.method-module-modes button.active {
   transform: translateY(-2px);
   border-color: var(--color-gold);
   background:
     linear-gradient(135deg, rgba(196, 165, 116, 0.34), rgba(126, 178, 183, 0.22)),
     rgba(11, 16, 32, 0.9);
+}
+
+.method-module-samples {
+  display: grid;
+  gap: 8px;
+}
+
+.method-module-samples button {
+  min-height: 38px;
+  text-align: left;
+  padding: 8px 10px;
+  border-color: rgba(154, 171, 184, 0.22);
+  background: rgba(11, 16, 32, 0.42);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.method-module-modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.method-module-modes button {
+  min-height: 108px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 12px;
+  border-color: rgba(154, 171, 184, 0.18);
+  background: rgba(11, 16, 32, 0.46);
+}
+
+.method-module-modes button strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.method-module-modes button span {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .method-module-visual {
@@ -751,6 +799,33 @@
   line-height: 1.65;
 }
 
+.method-module-pattern {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.36);
+}
+
+.method-module-pattern span,
+.method-module-advice span,
+.method-module-library article span {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.method-module-pattern strong {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
 .method-module-result {
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
@@ -778,6 +853,84 @@
   line-height: 1.65;
 }
 
+.method-module-draw {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.method-module-draw article {
+  min-height: 150px;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.22);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(160deg, rgba(196, 165, 116, 0.12), rgba(126, 178, 183, 0.06)),
+    rgba(11, 16, 32, 0.46);
+}
+
+.method-module-draw article span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.method-module-draw article strong {
+  display: block;
+  margin: var(--spacing-sm) 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+}
+
+.method-module-draw article p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.method-module-draw article em {
+  display: block;
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.method-module-axis-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.method-module-axis-grid article {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(126, 178, 183, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(126, 178, 183, 0.05);
+}
+
+.method-module-axis-grid article span {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.method-module-axis-grid article p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
 .method-module-section-grid,
 .method-module-system {
   display: grid;
@@ -796,6 +949,20 @@
   margin: var(--spacing-sm) 0 0;
   color: var(--color-text-secondary);
   line-height: 1.7;
+}
+
+.method-module-advice {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(126, 178, 183, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(126, 178, 183, 0.06);
+}
+
+.method-module-advice p {
+  margin: 8px 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
 }
 
 .method-module-system {
@@ -824,6 +991,252 @@
   margin-bottom: var(--spacing-xl);
 }
 
+.method-module-library {
+  margin: var(--spacing-xl) 0;
+}
+
+.method-module-library__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.method-module-library article {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.58);
+}
+
+.method-module-library article p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.method-module-library article em {
+  display: block;
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.method-deep-library {
+  margin: var(--spacing-xl) 0;
+}
+
+.method-deep-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.method-deep-mode-strip,
+.method-deep-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.method-deep-mode-strip span,
+.method-deep-output span {
+  padding: 8px 10px;
+  border: 1px solid rgba(196, 165, 116, 0.22);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.42);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.method-deep-symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.method-deep-symbol-grid article {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.58);
+}
+
+.method-deep-symbol-grid span {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.method-deep-symbol-grid strong {
+  display: block;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+}
+
+.method-deep-symbol-grid p,
+.method-deep-symbol-grid em {
+  display: block;
+  margin: 8px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.qimen-deep-library {
+  margin: var(--spacing-xl) 0;
+}
+
+.qimen-reference-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.qimen-reference-layout--bottom {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+  margin-top: var(--spacing-md);
+}
+
+.qimen-reference-panel,
+.qimen-classic-notes article {
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.66);
+  padding: var(--spacing-md);
+}
+
+.qimen-reference-panel--wide {
+  min-width: 0;
+}
+
+.qimen-reference-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.qimen-reference-tabs button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(196, 165, 116, 0.24);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 32, 0.42);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.qimen-reference-tabs button.active,
+.qimen-reference-tabs button:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.qimen-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.qimen-entry-grid article,
+.qimen-question-list article,
+.qimen-relation-grid article {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.15);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.38);
+}
+
+.qimen-entry-grid span,
+.qimen-panel-label,
+.qimen-relation-grid span,
+.qimen-classic-notes article span {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.qimen-entry-grid strong,
+.qimen-question-list strong,
+.qimen-relation-grid strong,
+.qimen-classic-notes article strong {
+  display: block;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+}
+
+.qimen-entry-grid p,
+.qimen-question-list p,
+.qimen-relation-grid p,
+.qimen-classic-notes article p {
+  margin: var(--spacing-sm) 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.qimen-entry-grid em,
+.qimen-question-list em,
+.qimen-classic-notes article em,
+.qimen-classic-notes article small,
+.qimen-question-list small {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.qimen-question-list {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.qimen-steps {
+  margin: var(--spacing-sm) 0 0;
+  padding-left: 22px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.qimen-relation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.qimen-classic-notes {
+  margin-top: var(--spacing-xl);
+}
+
+.qimen-classic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.qimen-classic-notes article small {
+  color: rgba(196, 165, 116, 0.78);
+}
+
 /* ── Bazi page ── */
 .bazi-profile-strip,
 .bazi-steps {
@@ -837,16 +1250,16 @@
   min-width: 120px;
   min-height: 58px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 8px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: rgba(17, 24, 39, 0.72);
   color: var(--color-text-secondary);
   cursor: pointer;
+  position: relative;
 }
 
 .bazi-profile-strip button.active,
@@ -865,6 +1278,24 @@
 .bazi-profile-strip button strong {
   font-family: var(--font-serif);
   font-size: 1rem;
+}
+
+.bazi-profile-remove {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.bazi-profile-strip button:hover .bazi-profile-remove {
+  opacity: 1;
+}
+
+.bazi-profile-remove:hover {
+  color: #f87171;
 }
 
 .bazi-add-profile strong {
@@ -1161,6 +1592,385 @@
   display: block;
   margin-top: var(--spacing-xs);
   font-family: var(--font-serif);
+}
+
+/* ── Bazi: form actions ── */
+.bazi-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bazi-compute-btn {
+  min-height: 46px;
+  padding: 0 32px;
+  border: 1px solid rgba(196, 165, 116, 0.58);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(196, 165, 116, 0.24), rgba(126, 178, 183, 0.16)),
+    rgba(11, 16, 32, 0.84);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.bazi-compute-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: var(--color-gold);
+  background:
+    linear-gradient(135deg, rgba(196, 165, 116, 0.34), rgba(126, 178, 183, 0.22)),
+    rgba(11, 16, 32, 0.9);
+}
+
+.bazi-compute-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Bazi: pattern & strength panels ── */
+.bazi-panel-full {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  border: 1px solid rgba(154, 171, 184, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.72);
+}
+
+.bazi-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.bazi-panel-content strong {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-text);
+}
+
+.pattern-name {
+  color: var(--color-gold) !important;
+  font-size: 1.5rem !important;
+}
+
+.pattern-advice {
+  padding: var(--spacing-sm);
+  border-left: 2px solid rgba(196, 165, 116, 0.3);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-top: var(--spacing-xs);
+}
+
+.strength-factors {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--spacing-sm);
+}
+
+.strength-factors p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-left: var(--spacing-sm);
+  border-left: 1px solid rgba(154, 171, 184, 0.14);
+}
+
+/* ── Bazi: element enhancements ── */
+.element-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.element-interpretations {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.element-note {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-left: 3px solid var(--color-gold);
+  background: rgba(11, 16, 32, 0.42);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.element-note span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
+.element-note p {
+  margin: 4px 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.climate-note {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid rgba(126, 178, 183, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(126, 178, 183, 0.06);
+}
+
+.climate-note span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
+.climate-note p {
+  margin: 4px 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/* ── Bazi: combinations ── */
+.combo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.combo-item {
+  padding: 8px 14px;
+  border: 1px solid rgba(196, 165, 116, 0.24);
+  border-radius: var(--radius-sm);
+  background: rgba(196, 165, 116, 0.08);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* ── Bazi: deity cards ── */
+.deity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.deity-card {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.42);
+}
+
+.deity-card.deity-吉 {
+  border-color: rgba(74, 222, 128, 0.24);
+}
+
+.deity-card.deity-凶 {
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+.deity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.deity-header strong {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.deity-header span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.deity-吉 .deity-header span {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.deity-凶 .deity-header span {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.deity-中性 .deity-header span {
+  color: var(--color-text-muted);
+  background: rgba(154, 171, 184, 0.1);
+}
+
+.deity-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 0.875rem;
+}
+
+/* ── Bazi: personality ── */
+.personality-archetype {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.personality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.personality-grid > div {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.34);
+}
+
+.personality-grid span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.personality-grid p {
+  margin: 0 0 4px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.personality-advice {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(126, 178, 183, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(126, 178, 183, 0.06);
+}
+
+.personality-advice span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.personality-advice p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ── Bazi: life aspects ── */
+.aspect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.aspect-card {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.34);
+}
+
+.aspect-card span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.aspect-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 0.875rem;
+}
+
+/* ── Bazi: major luck cycles ── */
+.luck-cycle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.luck-card {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(11, 16, 32, 0.42);
+}
+
+.luck-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(196, 165, 116, 0.14);
+}
+
+.luck-card-header span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.luck-card-header strong {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-gold);
+}
+
+.luck-card dl {
+  display: grid;
+  gap: 4px;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.luck-card div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.luck-card dt,
+.luck-card dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+}
+
+.luck-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  font-size: 0.8125rem;
 }
 
 /* ── Tarot page ── */
@@ -1869,7 +2679,18 @@
   .reading-grid,
   .settings-roadmap,
   .method-module-section-grid,
-  .method-module-system {
+  .method-module-system,
+  .method-module-draw,
+  .method-module-axis-grid,
+  .method-module-library__grid,
+  .qimen-entry-grid,
+  .qimen-classic-grid,
+  .qimen-relation-grid,
+  .method-deep-overview,
+  .method-deep-symbol-grid,
+  .personality-grid,
+  .aspect-grid,
+  .luck-cycle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1882,6 +2703,11 @@
   .dream-layout,
   .dream-schools,
   .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qimen-reference-layout,
+  .qimen-reference-layout--bottom {
     grid-template-columns: 1fr;
   }
 
@@ -1903,7 +2729,19 @@
   .tarot-library-grid,
   .settings-roadmap,
   .method-module-section-grid,
-  .method-module-system {
+  .method-module-system,
+  .method-module-modes,
+  .method-module-draw,
+  .method-module-axis-grid,
+  .method-module-library__grid,
+  .qimen-entry-grid,
+  .qimen-classic-grid,
+  .qimen-relation-grid,
+  .method-deep-overview,
+  .method-deep-symbol-grid,
+  .personality-grid,
+  .aspect-grid,
+  .luck-cycle-grid {
     grid-template-columns: 1fr;
   }
 

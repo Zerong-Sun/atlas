@@ -1,6 +1,6 @@
 /** Shared DTOs for Atlas (诸象) */
 
-export type Tradition = "bazi" | "western" | "tarot" | "iching" | "dream";
+export type Tradition = "bazi" | "western" | "tarot" | "iching" | "qimen" | "dream";
 
 export interface StructuredFacts {
   tradition: Tradition;

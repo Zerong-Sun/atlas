@@ -7,6 +7,13 @@ import {
   type TarotCard,
   type TarotSuit,
 } from "@/data/tarotDeck";
+import {
+  TAROT_PAIR_RULES,
+  TAROT_REVERSAL_LAYERS,
+  TAROT_SENSE_RECORD_FIELDS,
+  TAROT_SPREAD_LIBRARY,
+  getScenarioLens,
+} from "@/data/tarotAdvancedLibrary";
 import { Page } from "@/components/ui/Page";
 
 type DeckMode = "major" | "full";
@@ -68,6 +75,7 @@ export function TarotPage() {
   const selectedDeck = useMemo(() => getTarotDeck(mode), [mode]);
   const isBusy = phase === "shuffling" || phase === "drawing";
   const dailyCard = useMemo(() => getDailyCard(), []);
+  const scenarioLens = useMemo(() => getScenarioLens(question), [question]);
   const readingText = useMemo(() => buildReadingText(question, spread.label, cards, combo), [cards, combo, question, spread.label]);
   const libraryCards = useMemo(() => {
     const q = libraryQuery.trim().toLowerCase();
@@ -319,6 +327,51 @@ export function TarotPage() {
                 <p>{card.keywords.join(" / ")}</p>
               </div>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="tarot-library-browser" aria-label="塔罗高级解释库">
+        <div className="section-heading">
+          <p>ADVANCED TAROT</p>
+          <h2>牌阵、组合与场景解释库</h2>
+        </div>
+        <div className="method-module-section-grid">
+          <article>
+            <span>{scenarioLens.scenario}场景</span>
+            <p>{scenarioLens.focus}</p>
+            <em>{scenarioLens.majorArcanaKey}</em>
+          </article>
+          {TAROT_REVERSAL_LAYERS.slice(0, 3).map((layer) => (
+            <article key={layer.layer}>
+              <span>逆位 · {layer.layer}</span>
+              <p>{layer.cue}</p>
+              <em>{layer.reading}</em>
+            </article>
+          ))}
+        </div>
+        <div className="method-module-library__grid">
+          {TAROT_SPREAD_LIBRARY.slice(0, 8).map((item) => (
+            <article key={item.id}>
+              <span>{item.topic} / {item.difficulty}</span>
+              <strong>{item.name}</strong>
+              <p>{item.positions.join(" / ")}</p>
+              <em>{item.readingKey}</em>
+            </article>
+          ))}
+        </div>
+        <div className="method-module-section-grid">
+          {TAROT_PAIR_RULES.slice(0, 4).map((rule) => (
+            <article key={rule.id}>
+              <span>{rule.theme}</span>
+              <p>{rule.cards.join(" + ")}：{rule.meaning}</p>
+              <em>{rule.caution}</em>
+            </article>
+          ))}
+        </div>
+        <div className="method-module-inputs" aria-label="牌感记录字段">
+          {TAROT_SENSE_RECORD_FIELDS.map((field) => (
+            <span key={field.field}>{field.field}：{field.prompt}</span>
           ))}
         </div>
       </section>

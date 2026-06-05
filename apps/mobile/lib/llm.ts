@@ -3,7 +3,7 @@
  */
 
 const MIMO_BASE_URL = "https://token-plan-cn.xiaomimimo.com/v1";
-const MIMO_API_KEY = "tp-c0m4kgymh0j7hampgxe9c5py0pou5ipjmm63pzqn2qkspmpk";
+const MIMO_API_KEY = process.env.EXPO_PUBLIC_MIMO_API_KEY;
 const MIMO_MODEL = "mimo-v2.5";
 
 export interface LlmMessage {
@@ -23,6 +23,11 @@ export interface LlmCompletionResult {
 }
 
 export async function llmComplete(options: LlmCompletionOptions): Promise<LlmCompletionResult> {
+  if (!MIMO_API_KEY) {
+    console.warn("[llm] missing Mimo API key");
+    return { content: "", degraded: true };
+  }
+
   try {
     const res = await fetch(`${MIMO_BASE_URL}/chat/completions`, {
       method: "POST",

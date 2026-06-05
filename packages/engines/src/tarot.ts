@@ -1,5 +1,3 @@
-import { createHash } from "node:crypto";
-
 export const MAJOR_ARCANA = [
   { id: 0, name: "愚者", keywords: ["开始", "冒险", "天真"] },
   { id: 1, name: "魔术师", keywords: ["意志", "技能", "专注"] },
@@ -28,13 +26,20 @@ export const MAJOR_ARCANA = [
 const POSITIONS = ["过去/成因", "现在/核心", "趋势/建议"];
 
 function seededRandom(seed: string): () => number {
-  let h = createHash("sha256").update(seed).digest();
-  let i = 0;
+  let state = hashSeed(seed);
   return () => {
-    if (i >= h.length) h = createHash("sha256").update(h).digest();
-    const v = h[i++] / 255;
-    return v;
+    state = (state * 1664525 + 1013904223) >>> 0;
+    return state / 0xffffffff;
   };
+}
+
+function hashSeed(seed: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < seed.length; index += 1) {
+    hash ^= seed.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
 }
 
 export function drawTarotSpread(seed: string): Record<string, unknown> {
