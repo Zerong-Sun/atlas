@@ -47,6 +47,13 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
 
       {result && (
         <View style={styles.results}>
+          {result.degraded && (
+            <View style={styles.degraded}>
+              <Text variant="caption" style={{ color: colors.textSecondary }}>
+                当前显示基础模板解读；LLM 服务暂时不可用，请稍后重试。
+              </Text>
+            </View>
+          )}
           <InterpretBlock title="中国梦占" body={result.chinese} />
           <InterpretBlock title="荣格简释" body={result.jungian} />
           <InterpretBlock title="精神反思" body={result.reflection} highlight />
@@ -120,6 +127,13 @@ const styles = StyleSheet.create({
   },
   chipSelected: { borderColor: colors.gold, color: colors.gold },
   results: { marginTop: spacing.lg, gap: spacing.md },
+  degraded: {
+    padding: spacing.sm,
+    paddingHorizontal: spacing.md,
+    borderWidth: 1,
+    borderColor: colors.goldDim,
+    borderRadius: radius.md,
+  },
   interpret: {
     padding: spacing.md,
     backgroundColor: colors.surface,

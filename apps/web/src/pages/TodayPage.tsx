@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import type { DailyBrief } from "@atlas/shared-types";
 import { DailyBriefView } from "@/components/DailyBriefView";
+import { DailyColorField, todayIsoDate } from "@/components/DailyColorField";
+import { TodayHero } from "@/components/today/TodayHero";
+import { TodayLoadingSkeleton } from "@/components/today/TodayLoadingSkeleton";
+import { TodayQuickActions } from "@/components/today/TodayQuickActions";
 import { Page } from "@/components/ui/Page";
 import { fetchDailyBrief } from "@/lib/api/daily";
-import { colors } from "@/theme/tokens";
 
 export function TodayPage() {
   const [brief, setBrief] = useState<DailyBrief | null>(null);
@@ -17,26 +20,39 @@ export function TodayPage() {
       .finally(() => setLoading(false));
   }, []);
 
+  const shellDate = brief?.date ?? todayIsoDate();
+
   if (loading) {
     return (
-      <Page>
-        <p className="loader" role="status">
-          加载今日简报…
-        </p>
-        <style>{`.loader { margin-top: 80px; text-align: center; color: ${colors.gold}; }`}</style>
-      </Page>
+      <DailyColorField date={shellDate} static>
+        <Page transparent className="today-page">
+          <TodayLoadingSkeleton />
+        </Page>
+      </DailyColorField>
     );
   }
 
   if (error) {
     return (
-      <Page>
-        <p className="error-banner" role="alert">
-          {error}
-        </p>
-      </Page>
+      <DailyColorField date={shellDate} static>
+        <Page transparent className="today-page">
+          <p className="error-banner" role="alert">
+            {error}
+          </p>
+        </Page>
+      </DailyColorField>
     );
   }
 
-  return <Page>{brief && <DailyBriefView brief={brief} />}</Page>;
+  if (!brief) return null;
+
+  return (
+    <DailyColorField date={brief.date} serverDayColor={brief.dayColor}>
+      <Page transparent className="today-page">
+        <TodayHero brief={brief} />
+        <DailyBriefView brief={brief} />
+        <TodayQuickActions />
+      </Page>
+    </DailyColorField>
+  );
 }

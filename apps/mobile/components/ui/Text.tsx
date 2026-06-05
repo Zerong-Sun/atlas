@@ -1,5 +1,5 @@
 import { Text as RNText, StyleSheet, type TextProps } from "react-native";
-import { colors, typography } from "@/constants/theme";
+import { colors, textVariants, typography } from "@/constants/theme";
 
 type Variant = "title" | "heading" | "body" | "caption" | "label" | "serif";
 
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
 });
 
 const variantStyles = StyleSheet.create({
-  title: { ...typography.title, color: colors.parchment, fontFamily: typography.serif },
-  heading: { ...typography.heading, color: colors.text },
-  body: { ...typography.body, color: colors.text },
-  caption: { ...typography.caption, color: colors.textSecondary },
-  label: { ...typography.label, color: colors.goldDim, textTransform: "uppercase" },
-  serif: { fontSize: 18, lineHeight: 28, color: colors.parchment, fontFamily: typography.serif },
+  title: { ...textVariants.title, color: colors.mist, fontFamily: typography.serif },
+  heading: { ...textVariants.heading, color: colors.text },
+  body: { ...textVariants.body, color: colors.text },
+  caption: { ...textVariants.caption, color: colors.textSecondary },
+  label: { ...textVariants.label, color: colors.goldDim, textTransform: "uppercase" },
+  serif: { fontSize: 18, lineHeight: 28, color: colors.mist, fontFamily: typography.serif },
 });

@@ -1,5 +1,3 @@
-import { createHash } from "node:crypto";
-
 /** 64 hexagrams — names and brief judgments (self-authored summaries for MVP) */
 export const HEXAGRAMS: Record<number, { name: string; judgment: string; image: string }> = {
   1: { name: "乾", judgment: "元亨利贞。", image: "天行健，君子以自强不息。" },
@@ -69,8 +67,20 @@ export const HEXAGRAMS: Record<number, { name: string; judgment: string; image: 
 };
 
 function seededInt(seed: string, max: number): number {
-  const h = createHash("sha256").update(seed).digest();
-  return h[0] % max;
+  return hashSeed(seed) % max;
+}
+
+function hashSeed(seed: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < seed.length; index += 1) {
+    hash ^= seed.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function hexagramLines(number: number): Array<"yang" | "yin"> {
+  return Array.from({ length: 6 }, (_, index) => ((number >> index) & 1 ? "yang" : "yin"));
 }
 
 export function castIChing(seed: string): Record<string, unknown> {
@@ -80,8 +90,8 @@ export function castIChing(seed: string): Record<string, unknown> {
   const changeHex = HEXAGRAMS[changing];
 
   return {
-    primary: { number: primary, ...hex },
-    changing: { number: changing, ...changeHex },
+    primary: { number: primary, lines: hexagramLines(primary), ...hex },
+    changing: { number: changing, lines: hexagramLines(changing), ...changeHex },
     method: "time_number",
     summary: `本卦${hex.name}，变卦${changeHex.name}`,
   };

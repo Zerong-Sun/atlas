@@ -1,16 +1,23 @@
-/** Dark「高级图书馆」design tokens — shared web + mobile */
+/** Shared tokens — library base + morning-mist / stargazer shell */
 export const colors = {
   ink: "#0D0D0F",
-  surface: "#16141A",
-  surfaceElevated: "#1E1C24",
+  night: "#0B1020",
+  nightElevated: "#141B2E",
+  mist: "#E8EDF2",
+  mistMuted: "#9AABB8",
+  surface: "#141B2E",
+  surfaceElevated: "#1C2438",
   parchment: "#E8E0D4",
   parchmentMuted: "#B8AFA0",
   gold: "#C4A574",
   goldDim: "#8A7350",
-  text: "#F5F0E8",
-  textSecondary: "#A39E94",
-  textMuted: "#6B665E",
-  border: "#2A272F",
+  slipBorder: "#C4A574",
+  slipShadow: "rgba(11, 16, 32, 0.35)",
+  text: "#E8EDF2",
+  textOnLight: "#141B2E",
+  textSecondary: "#9AABB8",
+  textMuted: "#6B7A88",
+  border: "#2A3548",
   consensus: "#4A7C6F",
   consensusBg: "#1A2E28",
   divergence: "#8B6B4A",
@@ -36,7 +43,7 @@ export const radius = {
 } as const;
 
 export const typography = {
-  serif: "Georgia, 'Noto Serif SC', serif",
-  sans: "system-ui, -apple-system, 'Segoe UI', sans-serif",
-  mono: "ui-monospace, 'Courier New', monospace",
+  serif: "'Noto Serif SC', Georgia, 'Songti SC', serif",
+  sans: "system-ui, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif",
+  mono: "'IBM Plex Mono', ui-monospace, 'JetBrains Mono', monospace",
 } as const;

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
+import type { DailyBrief } from "@atlas/shared-types";
 import { DailyBriefView } from "@/components/DailyBriefView";
+import { DailyColorField } from "@/components/DailyColorField";
 import { Screen } from "@/components/ui/Screen";
 import { fetchDailyBrief } from "@/lib/api/daily";
 import { track } from "@/lib/analytics";
-import type { DailyBrief } from "@atlas/shared-types";
 import { colors } from "@/constants/theme";
 
 export default function TodayScreen() {
@@ -26,10 +27,16 @@ export default function TodayScreen() {
     );
   }
 
+  if (!brief) {
+    return <Screen scroll />;
+  }
+
   return (
-    <Screen scroll>
-      {brief && <DailyBriefView brief={brief} />}
-    </Screen>
+    <DailyColorField date={brief.date}>
+      <Screen scroll transparent>
+        <DailyBriefView brief={brief} />
+      </Screen>
+    </DailyColorField>
   );
 }
 

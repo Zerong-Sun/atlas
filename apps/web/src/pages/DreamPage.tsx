@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import { DreamCapture } from "@/components/DreamCapture";
 import { Page } from "@/components/ui/Page";
 import { createDreamEntry, fetchDreamTrend, type DreamInterpretation } from "@/lib/api/dreams";
-import { colors, radius, spacing } from "@/theme/tokens";
+
+const DREAM_SCHOOLS = [
+  { title: "中国梦占", body: "以物象、人物、方位、吉凶语汇为主，适合保留古籍和民俗解释的原始味道。" },
+  { title: "荣格象征", body: "把梦看作潜意识材料，重点分析阴影、原型和补偿机制。" },
+  { title: "精神反思", body: "不做绝对预言，转为情绪、压力、关系与行动建议，适合 LLM 稳定输出。" },
+  { title: "民俗对照", body: "把周公解梦、地方说法、禁忌和口传象征并列，显示相同符号的不同解释。" },
+];
 
 export function DreamPage() {
   const [loading, setLoading] = useState(false);
@@ -29,18 +35,54 @@ export function DreamPage() {
   };
 
   return (
-    <Page>
+    <Page wide className="dream-page">
       {error && (
         <p className="error-banner" role="alert">
           {error}
         </p>
       )}
-      <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
+      <section className="method-detail-hero">
+        <p className="method-kicker">DREAM ORACLE</p>
+        <h1>占梦</h1>
+        <p>梦境解释需要多视角并列：古法可以保留神秘性，LLM 输出则需要明确边界，避免恐吓、绝对化和医学化判断。</p>
+      </section>
+
+      <section className="dream-layout">
+        <div className="dream-main">
+          <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
+        </div>
+        <aside className="dream-protocol">
+          <div className="section-heading">
+            <p>PROMPT LIMITS</p>
+            <h2>解梦模型约束</h2>
+          </div>
+          <ul>
+            <li>先复述梦中关键符号，不添加用户未说的信息。</li>
+            <li>同一符号至少给出两种解释，并标注不确定性。</li>
+            <li>输出行动建议，避免断言灾祸、疾病、投资或关系结局。</li>
+            <li>保留古籍口吻，但最终落到可执行的自我反思。</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section className="dream-schools" aria-label="占梦流派">
+        {DREAM_SCHOOLS.map((school) => (
+          <article key={school.title}>
+            <span>{school.title}</span>
+            <p>{school.body}</p>
+          </article>
+        ))}
+      </section>
+
       {trend && (
-        <section className="trend">
-          <h3>七日趋势</h3>
+        <section className="trend" style={{ marginTop: "var(--spacing-xxl)" }}>
+          <h3 style={{ margin: "0 0 var(--spacing-md)" }}>七日趋势</h3>
           <p className="muted">{trend.summary}</p>
-          <div className="symbol-bars" aria-label="七日梦境符号频次">
+          <div
+            className="symbol-bars"
+            aria-label="七日梦境符号频次"
+            style={{ display: "flex", flexDirection: "column", gap: "var(--spacing-sm)", marginTop: "var(--spacing-md)" }}
+          >
             {trend.topSymbols.map((s) => (
               <div key={s.symbol} className="symbol-row">
                 <span>{s.symbol}</span>
@@ -51,29 +93,6 @@ export function DreamPage() {
           </div>
         </section>
       )}
-      <style>{`
-        .trend { margin-top: ${spacing.xxl}px; }
-        .trend h3 { font-size: 20px; margin: 0 0 ${spacing.md}px; }
-        .trend .muted { color: ${colors.textSecondary}; line-height: 1.5; }
-        .symbol-bars { display: flex; flex-direction: column; gap: ${spacing.sm}px; margin-top: ${spacing.md}px; }
-        .symbol-row {
-          display: grid;
-          grid-template-columns: 56px 1fr 32px;
-          gap: ${spacing.sm}px;
-          align-items: center;
-          padding: ${spacing.sm}px;
-          background: ${colors.surface};
-          border-radius: ${radius.md}px;
-        }
-        .symbol-row span { color: ${colors.gold}; font-weight: 600; }
-        .symbol-row i {
-          display: block;
-          height: 8px;
-          border-radius: ${radius.full}px;
-          background: ${colors.goldDim};
-        }
-        .symbol-row strong { color: ${colors.textSecondary}; text-align: right; }
-      `}</style>
     </Page>
   );
 }

@@ -52,7 +52,7 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
         <div className="results">
           {result.degraded && (
             <p className="degraded" role="status">
-              当前显示基础模板解读；配置服务端 LLM 后会生成更具体的专业解析。
+              当前显示基础模板解读；LLM 服务暂时不可用，请稍后重试以获取专业解析。
             </p>
           )}
           <InterpretBlock title="中国梦占" body={result.chinese} />

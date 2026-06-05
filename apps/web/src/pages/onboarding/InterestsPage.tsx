@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/Button";
 import { Page } from "@/components/ui/Page";
 import { setInterests } from "@/lib/storage";
 import { INTEREST_OPTIONS } from "@/theme/traditions";
-import { colors, radius, spacing } from "@/theme/tokens";
 
 export function InterestsPage() {
   const navigate = useNavigate();
@@ -21,8 +20,11 @@ export function InterestsPage() {
 
   return (
     <Page title="你想探索什么？">
-      <p className="hint">可多选，帮助我们推荐体系与内容</p>
-      <div className="grid">
+      <p className="hint" style={{ margin: "-1rem 0 1.5rem" }}>可多选，帮助我们推荐体系与内容</p>
+      <div
+        className="interests-grid"
+        style={{ display: "flex", flexWrap: "wrap", gap: "var(--spacing-sm)", marginBottom: "var(--spacing-xl)" }}
+      >
         {INTEREST_OPTIONS.map((opt) => (
           <button
             key={opt.id}
@@ -35,23 +37,6 @@ export function InterestsPage() {
         ))}
       </div>
       <Button title="下一步" onClick={next} disabled={selected.length === 0} />
-      <style>{`
-        .hint { color: ${colors.textMuted}; margin: -${spacing.md}px 0 ${spacing.lg}px; }
-        .grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: ${spacing.sm}px;
-          margin-bottom: ${spacing.xl}px;
-        }
-        .chip {
-          padding: ${spacing.md}px ${spacing.lg}px;
-          border-radius: ${radius.md}px;
-          border: 1px solid ${colors.border};
-          background: ${colors.surface};
-          color: ${colors.text};
-        }
-        .chip.on { border-color: ${colors.gold}; background: ${colors.surfaceElevated}; }
-      `}</style>
     </Page>
   );
 }

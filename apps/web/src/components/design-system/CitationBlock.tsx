@@ -5,9 +5,10 @@ import { track } from "@/lib/analytics";
 type Props = {
   citation: CitationSnapshot;
   defaultExpanded?: boolean;
+  variant?: "default" | "onDay";
 };
 
-export function CitationBlock({ citation, defaultExpanded = false }: Props) {
+export function CitationBlock({ citation, defaultExpanded = false, variant = "default" }: Props) {
   const [expanded, setExpanded] = useState(defaultExpanded);
 
   const toggle = () => {
@@ -16,14 +17,17 @@ export function CitationBlock({ citation, defaultExpanded = false }: Props) {
     if (next) track("citation_expand", { chunkId: citation.chunkId });
   };
 
+  const rootClass =
+    variant === "onDay" ? "citation-block citation-block--on-day" : "citation-block card";
+
   return (
-    <article className="citation-block card">
+    <article className={rootClass}>
       <button type="button" className="citation-block__header" onClick={toggle} aria-expanded={expanded}>
         <span className="label">古籍依据</span>
         <span className="caption">{expanded ? "收起" : "展开"}</span>
       </button>
       <blockquote className="citation-block__original serif">{citation.original}</blockquote>
-      {expanded && (
+      <div className={`citation-block__expand${expanded ? " open" : ""}`}>
         <div className="citation-block__sections stack">
           <Section title="白话" content={citation.translationZh} />
           {citation.annotationZh ? <Section title="注释" content={citation.annotationZh} muted /> : null}
@@ -31,7 +35,7 @@ export function CitationBlock({ citation, defaultExpanded = false }: Props) {
             <Section title="本次应用" content={citation.application} highlight />
           ) : null}
         </div>
-      )}
+      </div>
     </article>
   );
 }
