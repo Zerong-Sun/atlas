@@ -5,9 +5,10 @@ import { colors, spacing } from "@/constants/theme";
 type Props = ViewProps & {
   scroll?: boolean;
   padded?: boolean;
+  transparent?: boolean;
 };
 
-export function Screen({ children, scroll, padded = true, style, ...rest }: Props) {
+export function Screen({ children, scroll, padded = true, transparent = false, style, ...rest }: Props) {
   const content = (
     <View style={[padded && styles.padded, style]} {...rest}>
       {children}
@@ -15,7 +16,7 @@ export function Screen({ children, scroll, padded = true, style, ...rest }: Prop
   );
 
   return (
-    <SafeAreaView style={styles.safe} edges={["top"]}>
+    <SafeAreaView style={[styles.safe, transparent && styles.safeTransparent]} edges={["top"]}>
       {scroll ? (
         <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
           {content}
@@ -29,6 +30,7 @@ export function Screen({ children, scroll, padded = true, style, ...rest }: Prop
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.ink },
+  safeTransparent: { backgroundColor: "transparent" },
   scroll: { flexGrow: 1, paddingBottom: spacing.xxl },
   padded: { paddingHorizontal: spacing.md, paddingTop: spacing.md },
 });

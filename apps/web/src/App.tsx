@@ -10,6 +10,9 @@ const DreamPage = lazy(() => import("@/pages/DreamPage").then((m) => ({ default:
 const MethodsPage = lazy(() => import("@/pages/MethodsPage").then((m) => ({ default: m.MethodsPage })));
 const BaziPage = lazy(() => import("@/pages/BaziPage").then((m) => ({ default: m.BaziPage })));
 const TarotPage = lazy(() => import("@/pages/TarotPage").then((m) => ({ default: m.TarotPage })));
+const MethodModulePage = lazy(() =>
+  import("@/pages/MethodModulePage").then((m) => ({ default: m.MethodModulePage }))
+);
 const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ default: m.ProfilePage })));
 const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
@@ -86,6 +89,7 @@ function AppRoutes() {
             <Route path="/methods" element={<MethodsPage />} />
             <Route path="/methods/bazi" element={<BaziPage />} />
             <Route path="/methods/tarot" element={<TarotPage />} />
+            <Route path="/methods/:methodId" element={<MethodModulePage />} />
             <Route path="/dream" element={<DreamPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />

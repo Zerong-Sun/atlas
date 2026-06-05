@@ -91,8 +91,8 @@ export function MainLayout() {
           background: transparent;
         }
         .shell > header,
-        .shell > nav,
-        .shell > *:not(style) {
+        .shell > main,
+        .shell > nav {
           position: relative;
           z-index: 2;
         }
@@ -150,6 +150,9 @@ export function MainLayout() {
           justify-content: space-around;
           padding: ${spacing.sm}px 0 calc(${spacing.sm}px + env(safe-area-inset-bottom));
           z-index: 20;
+        }
+        .shell > .bottom-nav {
+          position: fixed;
         }
         .nav-link {
           flex: 1;

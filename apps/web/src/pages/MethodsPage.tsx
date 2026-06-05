@@ -133,7 +133,7 @@ function MethodCard({ title, subtitle, tradition, status, route, tags, compact, 
     </>
   );
 
-  const className = `method-card${compact ? " method-card--compact" : ""}${status === "ready" ? "" : " is-locked"}`;
+  const className = `method-card${compact ? " method-card--compact" : ""}${status === "planned" ? " is-locked" : ""}`;
   const style = { "--i": index } as CSSProperties;
 
   if (route) {
