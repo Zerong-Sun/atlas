@@ -3,7 +3,6 @@ import type { Tradition } from "@atlas/shared-types";
 import { TraditionBadge } from "@/components/design-system";
 import { Button } from "@/components/ui/Button";
 import { READING_TRADITIONS, TRADITION_LABELS } from "@/theme/traditions";
-import { colors, radius, spacing } from "@/theme/tokens";
 
 type Props = {
   onSubmit: (question: string, traditions: Tradition[]) => void;
@@ -54,8 +53,8 @@ export function AskComposer({ onSubmit, loading }: Props) {
 
   return (
     <div className="ask-composer">
-      <h2>同题多算</h2>
-      <p className="hint">选择任意体系组合，对照解读（全功能开放）</p>
+      <h2 className="ask-composer__title">同题多算</h2>
+      <p className="hint" style={{ margin: 0 }}>选择任意体系组合，对照解读（全功能开放）</p>
 
       <div className="template-grid" aria-label="常用问题模板">
         {QUESTION_TEMPLATES.map((template) => (
@@ -67,13 +66,14 @@ export function AskComposer({ onSubmit, loading }: Props) {
       </div>
 
       <textarea
+        className="ask-composer__textarea"
         placeholder="写下你的问题…"
         value={text}
         onChange={(e) => setText(e.target.value)}
         rows={5}
       />
 
-      <span className="label">选择体系</span>
+      <span className="field-label">选择体系</span>
       <div className="badges">
         {READING_TRADITIONS.map((t) => (
           <TraditionBadge
@@ -85,7 +85,7 @@ export function AskComposer({ onSubmit, loading }: Props) {
         ))}
       </div>
       {selected.length > 0 && (
-        <p className="hint">
+        <p className="hint" style={{ margin: 0 }}>
           已选 {selected.length} 个：{selected.map((t) => TRADITION_LABELS[t]).join("、")}
         </p>
       )}
@@ -98,55 +98,41 @@ export function AskComposer({ onSubmit, loading }: Props) {
       />
 
       <style>{`
-        .ask-composer { display: flex; flex-direction: column; gap: ${spacing.md}px; }
-        .ask-composer h2 { margin: 0; font-size: 20px; }
-        .ask-composer .hint { margin: 0; font-size: 13px; color: ${colors.textMuted}; }
+        .ask-composer { display: flex; flex-direction: column; gap: var(--spacing-md); }
+        .ask-composer__title {
+          margin: 0;
+          font-family: var(--font-serif);
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--color-text);
+        }
         .template-grid {
           display: grid;
           grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: ${spacing.sm}px;
-        }
-        .template-grid button {
-          min-height: 88px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: ${spacing.sm}px;
-          padding: ${spacing.md}px;
-          border: 1px solid ${colors.border};
-          border-radius: ${radius.sm}px;
-          background: ${colors.surfaceElevated};
-          color: ${colors.text};
-          text-align: left;
-        }
-        .template-grid button:hover {
-          border-color: ${colors.goldDim};
-          background: ${colors.goldDim}16;
-        }
-        .template-grid strong { font-size: 14px; color: ${colors.gold}; }
-        .template-grid span { font-size: 12px; color: ${colors.textMuted}; line-height: 1.35; }
-        .ask-composer .label {
-          font-size: 12px;
-          font-weight: 600;
-          letter-spacing: 0.05em;
-          color: ${colors.gold};
-        }
-        .ask-composer textarea {
-          width: 100%;
-          background: ${colors.surface};
-          border: 1px solid ${colors.border};
-          border-radius: ${radius.md}px;
-          padding: ${spacing.md}px;
-          color: ${colors.text};
-          resize: vertical;
-        }
-        .ask-composer .badges {
-          display: flex;
-          flex-wrap: wrap;
-          gap: ${spacing.sm}px;
+          gap: var(--spacing-sm);
         }
         @media (max-width: 760px) {
           .template-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .ask-composer__textarea {
+          width: 100%;
+          box-sizing: border-box;
+          background: var(--color-surface);
+          border: 1px solid var(--color-border);
+          border-radius: var(--radius-md);
+          padding: var(--spacing-md);
+          color: var(--color-text);
+          font-family: var(--font-sans);
+          font-size: 1rem;
+          line-height: 1.6;
+          resize: vertical;
+          transition: border-color 0.2s ease;
+        }
+        .ask-composer__textarea::placeholder { color: var(--color-text-muted); }
+        .ask-composer__textarea:focus {
+          outline: none;
+          border-color: var(--color-gold-dim);
+          box-shadow: 0 0 0 2px rgba(196, 165, 116, 0.12);
         }
       `}</style>
     </div>

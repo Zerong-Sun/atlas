@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 import { Page } from "@/components/ui/Page";
 import { useApp } from "@/context/AppContext";
-import { colors, radius, spacing } from "@/theme/tokens";
 
 export function ProfileOnboardingPage() {
   const navigate = useNavigate();
@@ -26,29 +25,39 @@ export function ProfileOnboardingPage() {
 
   return (
     <Page title="创建出生档案">
-      <p className="hint">用于排盘与个性化（全功能开放，无额度限制）</p>
+      <p className="hint" style={{ margin: "-1rem 0 1.5rem" }}>用于排盘与个性化（全功能开放，无额度限制）</p>
       <Field label="姓名" value={displayName} onChange={setDisplayName} placeholder="您的称呼（可选）" />
       <Field label="出生日期 (YYYY-MM-DD)" value={birthDate} onChange={setBirthDate} />
       <Field label="出生时间 (HH:mm)" value={birthTime} onChange={setBirthTime} />
       <Field label="出生地点" value={birthPlace} onChange={setBirthPlace} />
       <Button title="生成画像摘要" onClick={next} />
       <style>{`
-        .hint { color: ${colors.textMuted}; margin: -${spacing.md}px 0 ${spacing.lg}px; }
-        .field { margin-bottom: ${spacing.md}px; }
-        .field label {
+        .onb-field { margin-bottom: var(--spacing-md); }
+        .onb-field label {
           display: block;
-          font-size: 12px;
-          font-weight: 600;
-          color: ${colors.gold};
-          margin-bottom: ${spacing.xs}px;
+          font-family: var(--font-mono);
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--color-gold);
+          margin-bottom: var(--spacing-xs);
         }
-        .field input {
+        .onb-field input {
           width: 100%;
-          background: ${colors.surface};
-          border: 1px solid ${colors.border};
-          border-radius: ${radius.md}px;
-          padding: ${spacing.md}px;
-          color: ${colors.text};
+          box-sizing: border-box;
+          background: var(--color-surface);
+          border: 1px solid var(--color-border);
+          border-radius: var(--radius-md);
+          padding: var(--spacing-md);
+          color: var(--color-text);
+          font-family: var(--font-sans);
+          font-size: 1rem;
+          transition: border-color 0.2s ease;
+        }
+        .onb-field input:focus {
+          outline: none;
+          border-color: var(--color-gold-dim);
+          box-shadow: 0 0 0 2px rgba(196, 165, 116, 0.12);
         }
       `}</style>
     </Page>
@@ -67,7 +76,7 @@ function Field({
   placeholder?: string;
 }) {
   return (
-    <div className="field">
+    <div className="onb-field">
       <label>{label}</label>
       <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} />
     </div>

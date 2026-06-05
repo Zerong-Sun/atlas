@@ -1,18 +1,28 @@
-import { Tabs } from "expo-router";
+import { Tabs, usePathname } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "@/constants/theme";
 
 export default function TabLayout() {
+  const pathname = usePathname();
+  const isToday = pathname === "/" || pathname === "/index" || pathname === "(tabs)";
+
+  const glassStyle = {
+    backgroundColor: "rgba(11, 16, 32, 0.58)",
+    borderTopColor: "rgba(196, 165, 116, 0.22)",
+  };
+
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: colors.surface,
-          borderTopColor: colors.border,
-        },
+        tabBarStyle: isToday
+          ? glassStyle
+          : {
+              backgroundColor: colors.surface,
+              borderTopColor: colors.border,
+            },
         tabBarActiveTintColor: colors.gold,
-        tabBarInactiveTintColor: colors.textMuted,
+        tabBarInactiveTintColor: isToday ? colors.mistMuted : colors.textMuted,
       }}
     >
       <Tabs.Screen

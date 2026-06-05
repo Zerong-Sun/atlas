@@ -7,7 +7,16 @@ export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "src") },
   },
-  server: { port: 5173 },
+  server: {
+    port: 5173,
+    proxy: {
+      "/api/llm": {
+        target: "https://token-plan-cn.xiaomimimo.com/v1",
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api\/llm/, ""),
+      },
+    },
+  },
   build: {
     rollupOptions: {
       output: {
