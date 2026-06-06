@@ -1,8 +1,9 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getMethod } from "@/data/divinationMethods";
-import { getMethodDeepLibrary, type MethodDeepLibrary } from "@/data/methodDeepLibraries";
+import { getMethodDeepLibrary } from "@/data/methodDeepLibraries";
 import { getMethodReferenceLibrary } from "@/data/methodReferenceLibraries";
+import { buildQimenReferenceLibrary } from "@/data/methodReferenceLibraries/qimenAdapter";
 import { getMethodModuleKit, type MethodModuleKit } from "@/data/methodModuleKits";
 import { getMethodModule, type MethodModule } from "@/data/methodModules";
 import {
@@ -11,7 +12,7 @@ import {
   type OperationMode,
   type OperationSymbol,
 } from "@/data/methodOperationLibraries";
-import { getQimenLibrary, type QimenEntry } from "@/data/qimenLibrary";
+import { MethodDeepLibraryPanel } from "@/components/MethodDeepLibraryPanel";
 import { MethodReferenceLibraryPanel } from "@/components/MethodReferenceLibraryPanel";
 import { Page } from "@/components/ui/Page";
 
@@ -32,7 +33,6 @@ export function MethodModulePage() {
   const module = getMethodModule(methodId);
   const kit = getMethodModuleKit(methodId);
   const deepLibrary = getMethodDeepLibrary(methodId);
-  const referenceLibrary = getMethodReferenceLibrary(methodId);
   const operationLibrary = getMethodOperationLibrary(methodId);
   const method = getMethod(methodId ?? "");
   const [context, setContext] = useState("");
@@ -43,14 +43,21 @@ export function MethodModulePage() {
 
   const visualMarks = useMemo(() => module?.coreSymbols.slice(0, 5) ?? [], [module]);
 
-  if (!module || !method || !kit || !operationLibrary || !deepLibrary) {
+  if (!module || !method || !kit || !operationLibrary) {
+    return <Navigate to="/methods" replace />;
+  }
+
+  const referenceLibrary =
+    getMethodReferenceLibrary(methodId) ?? (module.id === "qimen" ? buildQimenReferenceLibrary() : undefined);
+
+  if (!deepLibrary && !referenceLibrary) {
     return <Navigate to="/methods" replace />;
   }
 
   const currentMode = operationLibrary.modes.find((mode) => mode.id === modeId) ?? operationLibrary.modes[0];
   const currentSubjectType = subjectType ?? operationLibrary.subjectTypes[0];
   const currentWindow = predictionWindow ?? operationLibrary.predictionWindows[0];
-  const qimenLibrary = module.id === "qimen" ? getQimenLibrary() : null;
+
   return (
     <Page wide className="method-module-page">
       <section className="method-detail-hero method-module-hero">
@@ -206,11 +213,9 @@ export function MethodModulePage() {
         <ModuleList title="安全边界" items={operationLibrary.guardrails} accent />
       </section>
 
-      {qimenLibrary && <QimenDeepLibrary library={qimenLibrary} />}
-
       {referenceLibrary && <MethodReferenceLibraryPanel library={referenceLibrary} />}
 
-      <MethodDeepLibraryPanel library={deepLibrary} />
+      {deepLibrary && <MethodDeepLibraryPanel library={deepLibrary} />}
 
       <section className="method-module-library" aria-label={`${module.title}符号词典`}>
         <div className="section-heading">
@@ -232,216 +237,6 @@ export function MethodModulePage() {
         返回占法列表
       </Link>
     </Page>
-  );
-}
-
-function MethodDeepLibraryPanel({ library }: { library: MethodDeepLibrary }) {
-  const grouped = library.categories
-    .map((category) => ({
-      category,
-      symbols: library.symbols.filter((symbol) => symbol.group === category),
-    }))
-    .filter((group) => group.symbols.length > 0);
-  const symbolSections =
-    grouped.length > 0 ? grouped : [{ category: "符号", symbols: library.symbols }];
-
-  return (
-    <section className="method-deep-library" aria-label={`${library.title}深库`}>
-      <div className="section-heading">
-        <p>DEEP LIBRARY</p>
-        <h2>{library.title}</h2>
-      </div>
-      <div className="method-deep-overview">
-        <ModuleList title="分类" items={library.categories} />
-        <ModuleList title="断法规则" items={library.rules} />
-        <ModuleList title="预测维度" items={library.predictionAxes} />
-      </div>
-      <div className="method-deep-mode-strip">
-        {library.modes.map((mode) => <span key={mode}>{mode}</span>)}
-      </div>
-      {symbolSections.map((section) => (
-        <div key={section.category} className="method-deep-symbol-section">
-          <h3>{section.category}</h3>
-          <div className="method-deep-symbol-grid">
-            {section.symbols.map((symbol) => (
-              <article key={`${section.category}-${symbol.name}-${symbol.group}`}>
-                <span>{symbol.group}</span>
-                <strong>{symbol.name}</strong>
-                <p>{symbol.meaning}</p>
-                <em>{symbol.use}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-      ))}
-      <div className="method-deep-output">
-        {library.outputs.map((output) => <span key={output}>{output}</span>)}
-      </div>
-    </section>
-  );
-}
-
-function QimenDeepLibrary({ library }: { library: ReturnType<typeof getQimenLibrary> }) {
-  const [activeGroup, setActiveGroup] = useState<"doors" | "stars" | "gods" | "stems" | "palaces">("doors");
-  const groups: Array<{ id: typeof activeGroup; label: string; items: QimenEntry[] }> = [
-    { id: "doors", label: "八门", items: library.doors },
-    { id: "stars", label: "九星", items: library.stars },
-    { id: "gods", label: "八神", items: library.gods },
-    { id: "stems", label: "三奇六仪", items: library.stems },
-    { id: "palaces", label: "九宫", items: library.palaces },
-  ];
-  const currentGroup = groups.find((group) => group.id === activeGroup) ?? groups[0];
-
-  return (
-    <section className="qimen-deep-library" aria-label="奇门遁甲深度资料库">
-      <div className="section-heading">
-        <p>QIMEN REFERENCE</p>
-        <h2>奇门遁甲分析库</h2>
-      </div>
-
-      <div className="qimen-reference-layout">
-        <div className="qimen-reference-panel qimen-reference-panel--wide">
-          <div className="qimen-reference-tabs" role="tablist" aria-label="奇门元素分类">
-            {groups.map((group) => (
-              <button
-                key={group.id}
-                type="button"
-                role="tab"
-                aria-selected={group.id === activeGroup}
-                className={group.id === activeGroup ? "active" : ""}
-                onClick={() => setActiveGroup(group.id)}
-              >
-                {group.label}
-              </button>
-            ))}
-          </div>
-          <div className="qimen-entry-grid">
-            {currentGroup.items.map((entry) => (
-              <article key={entry.name}>
-                <span>{entry.nature}</span>
-                <strong>{entry.name}</strong>
-                <p>{entry.meaning}</p>
-                <em>{entry.usage}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <aside className="qimen-reference-panel">
-          <span className="qimen-panel-label">问事取用</span>
-          <div className="qimen-question-list">
-            {library.questionTypes.map((question) => (
-              <article key={question.type}>
-                <strong>{question.type}</strong>
-                <p>{question.focus}</p>
-                <small>用神：{question.usefulGod}</small>
-                <em>{question.readingKey}</em>
-              </article>
-            ))}
-          </div>
-        </aside>
-      </div>
-
-      <div className="qimen-reference-layout qimen-reference-layout--bottom">
-        <div className="qimen-reference-panel">
-          <span className="qimen-panel-label">断盘流程</span>
-          <ol className="qimen-steps">
-            {library.analysisSteps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-        </div>
-
-        <div className="qimen-reference-panel">
-          <span className="qimen-panel-label">关系与格局</span>
-          <div className="qimen-relation-grid">
-            {library.relations.map((relation) => (
-              <article key={relation.name}>
-                <strong>{relation.name}</strong>
-                <span>{relation.nature}</span>
-                <p>{relation.meaning}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="qimen-reference-layout qimen-reference-layout--bottom">
-        <div className="qimen-reference-panel qimen-reference-panel--wide">
-          <span className="qimen-panel-label">完整格局库</span>
-          <div className="qimen-relation-grid">
-            {library.patterns.map((pattern) => (
-              <article key={pattern.id}>
-                <strong>{pattern.name}</strong>
-                <span>{pattern.category} / {pattern.level}</span>
-                <p>{pattern.formation}</p>
-                <em>{pattern.actionHint}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div className="qimen-reference-panel">
-          <span className="qimen-panel-label">符使与遁局</span>
-          <div className="qimen-question-list">
-            {[...library.zhiFuZhiShiRules, ...library.dunRules].map((rule) => (
-              <article key={rule.title}>
-                <strong>{rule.title}</strong>
-                <p>{rule.steps.join(" / ")}</p>
-                <em>{rule.note}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="qimen-reference-layout qimen-reference-layout--bottom">
-        <div className="qimen-reference-panel">
-          <span className="qimen-panel-label">应期判断</span>
-          <div className="qimen-question-list">
-            {library.timingRules.map((rule) => (
-              <article key={rule.title}>
-                <strong>{rule.title}</strong>
-                <p>{rule.steps.join(" / ")}</p>
-                <em>{rule.note}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div className="qimen-reference-panel qimen-reference-panel--wide">
-          <span className="qimen-panel-label">方位转译库</span>
-          <div className="qimen-relation-grid">
-            {library.directionTranslations.map((item) => (
-              <article key={item.palace}>
-                <strong>{item.palace}</strong>
-                <span>{item.direction} / {item.element}</span>
-                <p>{item.action}</p>
-                <em>{item.spatial}；{item.timing}</em>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="qimen-classic-notes">
-        <div className="section-heading">
-          <p>CLASSIC DIGEST</p>
-          <h2>典籍拆解</h2>
-        </div>
-        <div className="qimen-classic-grid">
-          {library.classicNotes.map((note) => (
-            <article key={`${note.source}-${note.principle}`}>
-              <span>{note.source}</span>
-              <strong>{note.principle}</strong>
-              <p>{note.paraphrase}</p>
-              <em>{note.application}</em>
-              <small>{note.caution}</small>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 

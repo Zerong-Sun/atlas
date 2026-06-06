@@ -18,13 +18,21 @@ export function groupDeepSymbols(
   symbols: DeepSymbol[],
   groups: Array<{ id: string; label: string; groups: string[] }>
 ): Array<{ id: string; label: string; items: ReferenceEntry[] }> {
-  return groups
+  const assignedGroups = new Set(groups.flatMap((group) => group.groups));
+  const result = groups
     .map(({ id, label, groups: groupNames }) => ({
       id,
       label,
       items: symbolsToEntries(symbols.filter((symbol) => groupNames.includes(symbol.group))),
     }))
     .filter((group) => group.items.length > 0);
+
+  const orphans = symbols.filter((symbol) => !assignedGroups.has(symbol.group));
+  if (orphans.length > 0) {
+    result.push({ id: "other", label: "其他", items: symbolsToEntries(orphans) });
+  }
+
+  return result;
 }
 
 export function pattern(

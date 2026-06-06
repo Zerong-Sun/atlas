@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { MethodReferenceLibrary } from "@/data/methodReferenceLibraries/types";
 
 type Props = {
@@ -8,6 +8,10 @@ type Props = {
 export function MethodReferenceLibraryPanel({ library }: Props) {
   const [activeGroupId, setActiveGroupId] = useState(library.symbolGroups[0]?.id ?? "");
   const currentGroup = library.symbolGroups.find((group) => group.id === activeGroupId) ?? library.symbolGroups[0];
+
+  useEffect(() => {
+    setActiveGroupId(library.symbolGroups[0]?.id ?? "");
+  }, [library.id, library.symbolGroups]);
 
   return (
     <section className="qimen-deep-library method-reference-library" aria-label={`${library.title}深度资料库`}>
@@ -35,7 +39,7 @@ export function MethodReferenceLibraryPanel({ library }: Props) {
             </div>
             <div className="qimen-entry-grid">
               {currentGroup.items.map((entry) => (
-                <article key={entry.name}>
+                <article key={`${currentGroup.id}-${entry.name}`}>
                   <span>{entry.nature}</span>
                   <strong>{entry.name}</strong>
                   <p>{entry.meaning}</p>
@@ -105,6 +109,8 @@ export function MethodReferenceLibraryPanel({ library }: Props) {
                   </span>
                   <p>{item.formation}</p>
                   <p>{item.meaning}</p>
+                  {item.applications && <p>{item.applications}</p>}
+                  {item.cautions && <small>{item.cautions}</small>}
                   <em>{item.actionHint}</em>
                 </article>
               ))}

@@ -27,7 +27,8 @@ function parseSymbols(sym: string): DeepSymbol[] {
     .map((item) => {
       const [name, group, meaning, use] = item.split("/");
       return { name, group, meaning, use };
-    });
+    })
+    .filter((symbol) => symbol.name && symbol.group && symbol.meaning && symbol.use);
 }
 
 export function rawToMethodDeepLibrary(raw: DeepLibraryRaw, id: string): MethodDeepLibrary {
@@ -48,6 +49,9 @@ export const METHOD_DEEP_LIBRARIES: MethodDeepLibrary[] = DEEP_LIBRARY_ENTRIES.m
   rawToMethodDeepLibrary(raw, id)
 );
 
+const METHOD_DEEP_LIBRARY_MAP = new Map(METHOD_DEEP_LIBRARIES.map((library) => [library.id, library]));
+
 export function getMethodDeepLibrary(id: string | undefined) {
-  return METHOD_DEEP_LIBRARIES.find((library) => library.id === id);
+  if (!id) return undefined;
+  return METHOD_DEEP_LIBRARY_MAP.get(id);
 }

@@ -39,6 +39,9 @@ export const METHOD_REFERENCE_LIBRARIES: MethodReferenceLibrary[] = [
   SCRYING_REFERENCE,
 ];
 
+const METHOD_REFERENCE_LIBRARY_MAP = new Map(METHOD_REFERENCE_LIBRARIES.map((library) => [library.id, library]));
+
 export function getMethodReferenceLibrary(id: string | undefined) {
-  return METHOD_REFERENCE_LIBRARIES.find((library) => library.id === id);
+  if (!id) return undefined;
+  return METHOD_REFERENCE_LIBRARY_MAP.get(id);
 }
