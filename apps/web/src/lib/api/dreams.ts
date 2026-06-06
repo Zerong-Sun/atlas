@@ -1,4 +1,6 @@
 import type { DreamEntryInput } from "@atlas/shared-types";
+import { buildDreamContextPrompt, DREAM_INTERPRETER_SKILL } from "@/data/dreamPromptLibrary";
+import { matchDreamSymbols } from "@/data/dreamSymbolsLibrary";
 import { MOCK_DREAM_TREND } from "../mock/data";
 import { llmComplete } from "./llm";
 
@@ -16,26 +18,6 @@ const DREAM_TEMPLATES = {
   jungian: "象征可能指向阴影整合与个体化进程，可关注梦中重复意象。",
   reflection: "可作为精神反思的契机，宜以感恩与自省回顾梦境带来的感受（非预言）。",
 };
-
-const DREAM_INTERPRETER_SKILL = `你是「诸象」的专业梦境解析师，只能回答梦境解析相关内容。
-
-工作边界：
-- 只解析用户提供的梦境、情绪与意象，不回答与梦境无关的问题。
-- 不宣称梦境是确定预言，不给医疗、法律、投资等专业结论。
-- 不恐吓用户，不制造宿命论；把梦视为心理、文化与精神反思材料。
-- 如果梦境涉及创伤、持续噩梦、自伤或现实危险，温和建议寻求现实支持或专业帮助。
-
-输出风格：
-- 中文，专业、克制、具体。
-- 结合用户梦中意象、情绪和符号，不空泛套话。
-- 返回严格 JSON，不要 Markdown，不要额外解释。
-
-JSON schema:
-{
-  "chinese": "传统梦占/文化象征视角，120字以内",
-  "jungian": "荣格/心理象征视角，120字以内",
-  "reflection": "现实反思与可执行建议，120字以内"
-}`;
 
 function sanitizeText(value: unknown, fallback: string): string {
   if (typeof value !== "string") return fallback;
@@ -55,15 +37,18 @@ function fallbackInterpretation(): DreamInterpretation {
 }
 
 async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretation> {
+  const matched = matchDreamSymbols(input.text);
+  const symbolContext = buildDreamContextPrompt(matched);
   const res = await llmComplete({
     messages: [
-      { role: "system", content: DREAM_INTERPRETER_SKILL },
+      { role: "system", content: DREAM_INTERPRETER_SKILL + symbolContext },
       {
         role: "user",
         content: JSON.stringify({
           dream: input.text,
           emotions: input.emotions ?? [],
           symbols: input.symbols ?? [],
+          libraryMatches: matched.map((s) => s.symbol),
         }),
       },
     ],

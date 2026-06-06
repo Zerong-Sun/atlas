@@ -1,10 +1,40 @@
 import type { ReadingReport } from "@atlas/shared-types";
 
+export interface TarotDrawHistoryItem {
+  id: string;
+  time: string;
+  question: string;
+  spread: string;
+  spreadId: string;
+  scenario?: string;
+  cards: Array<{ name: string; position: string; reversed: boolean }>;
+}
+
+export interface TarotSenseRecord {
+  cardId: string;
+  cardName: string;
+  fields: Record<string, string>;
+  updatedAt: string;
+}
+
+export interface QimenBoardHistoryItem {
+  id: string;
+  time: string;
+  question: string;
+  juMethod: "chaibu" | "zhirun";
+  dun: string;
+  ju: number;
+  summary: string;
+}
+
 const KEYS = {
   onboarding: "atlas:onboarding_done",
   profile: "atlas:local_profile",
   interests: "atlas:interests",
   readings: "atlas:reading_history",
+  tarotDrawHistory: "atlas:tarot_draw_history",
+  tarotSenseRecords: "atlas:tarot_sense_records",
+  qimenBoardHistory: "atlas:qimen_board_history",
 } as const;
 
 export async function getOnboardingDone(): Promise<boolean> {
@@ -58,4 +88,41 @@ export function appendReadingHistory(report: ReadingReport): void {
   const prev = getReadingHistory();
   const next = [report, ...prev.filter((r) => r.readingId !== report.readingId)].slice(0, 100);
   localStorage.setItem(KEYS.readings, JSON.stringify(next));
+}
+
+function readJson<T>(key: string, fallback: T): T {
+  const raw = localStorage.getItem(key);
+  if (!raw) return fallback;
+  try {
+    return JSON.parse(raw) as T;
+  } catch {
+    return fallback;
+  }
+}
+
+export function getTarotDrawHistory(): TarotDrawHistoryItem[] {
+  return readJson(KEYS.tarotDrawHistory, []);
+}
+
+export function appendTarotDrawHistory(item: TarotDrawHistoryItem): void {
+  const next = [item, ...getTarotDrawHistory().filter((h) => h.id !== item.id)].slice(0, 50);
+  localStorage.setItem(KEYS.tarotDrawHistory, JSON.stringify(next));
+}
+
+export function getTarotSenseRecords(): Record<string, TarotSenseRecord> {
+  return readJson(KEYS.tarotSenseRecords, {});
+}
+
+export function saveTarotSenseRecord(record: TarotSenseRecord): void {
+  const prev = getTarotSenseRecords();
+  localStorage.setItem(KEYS.tarotSenseRecords, JSON.stringify({ ...prev, [record.cardId]: record }));
+}
+
+export function getQimenBoardHistory(): QimenBoardHistoryItem[] {
+  return readJson(KEYS.qimenBoardHistory, []);
+}
+
+export function appendQimenBoardHistory(item: QimenBoardHistoryItem): void {
+  const next = [item, ...getQimenBoardHistory().filter((h) => h.id !== item.id)].slice(0, 10);
+  localStorage.setItem(KEYS.qimenBoardHistory, JSON.stringify(next));
 }

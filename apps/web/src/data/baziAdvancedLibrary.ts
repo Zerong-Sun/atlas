@@ -16,6 +16,17 @@ export const BAZI_TEN_GOD_COMBINATIONS: BaziRuleEntry[] = [
   { id: "bi-jie-duo-cai", name: "比劫夺财", condition: "比肩劫财旺而财星弱或受冲。", meaning: "竞争、分利、人情消耗财务资源。", use: "合伙、借贷、分账、团队利益。", caution: "身弱见比劫也可能是帮扶，不能一概为凶。" },
   { id: "shang-guan-jian-guan", name: "伤官见官", condition: "伤官与正官并见且无印财通关。", meaning: "表达、反叛、技术锋芒冲撞规则权威。", use: "职场冲突、合同争议、考试纪律。", caution: "若有印制伤或财通关，可转为改革能力。" },
   { id: "cai-xing-huai-yin", name: "财星坏印", condition: "财星旺而克印，印星为用。", meaning: "现实利益、消费或关系压力削弱学习与保护。", use: "学业、证照、母系支持、健康恢复。", caution: "印为忌时，财坏印反可推动现实化。" },
+  { id: "shi-shang-sheng-cai", name: "食伤生财", condition: "食伤有气并生财星。", meaning: "产出通道畅通，利于转化收益。", use: "创作、经营、销售。", caution: "食伤过旺则分散。" },
+  { id: "sha-zhuo-ruo", name: "财滋弱杀", condition: "财星生七杀，杀旺身弱。", meaning: "资源喂养压力，竞争加剧。", use: "风险岗位、竞赛。", caution: "需印或食伤化解。" },
+  { id: "guan-yin-xiang-sheng", name: "官印双全", condition: "官星与印星并透，相生有情。", meaning: "规则与资质互相支撑。", use: "体制、考试、管理。", caution: "过旺则保守。" },
+  { id: "cai-guan-shuang-mei", name: "财官双美", condition: "财星生官，官星有根，日主能任。", meaning: "资源与职位同步提升。", use: "升职、经营、婚姻稳定。", caution: "身弱不任。" },
+  { id: "shang-guan-sheng-cai", name: "伤官生财", condition: "伤官泄秀生财。", meaning: "才华变现路径清晰。", use: "创意、技术、内容。", caution: "伤官见官需防冲突。" },
+  { id: "yin-zhuo-shen", name: "印绶护身", condition: "印星旺而生日主，身弱得扶。", meaning: "学习、贵人、恢复力增强。", use: "考试、疗愈、研究。", caution: "印旺无泄则迟滞。" },
+  { id: "jie-cai-yang-guan", name: "劫财阳刃", condition: "劫财与羊刃并见。", meaning: "竞争、冲动与分利并存。", use: "合伙、竞技。", caution: "注意安全与冲动。" },
+  { id: "shi-shen-zhi-sha", name: "食神制杀", condition: "食神制化七杀。", meaning: "以技能、表达化解压力。", use: "攻坚、管理、技术。", caution: "制化不足则压力仍在。" },
+  { id: "cai-ku-lian-xing", name: "财库连星", condition: "财星入库且岁运引动。", meaning: "资源沉淀或延迟到账。", use: "资产、库存、长期收益。", caution: "冲库则波动。" },
+  { id: "kong-wang-tian-yi", name: "空亡天乙", condition: "天乙所临逢空亡。", meaning: "贵力减弱，需主动求助。", use: "困难事项。", caution: "填实可转。" },
+  { id: "tao-hua-yi-ma", name: "桃花驿马", condition: "桃花与驿马同见。", meaning: "迁动中带人缘与曝光。", use: "出差、异地关系。", caution: "防烂桃花。" },
 ];
 
 export const BAZI_PATTERN_DETAILS: BaziRuleEntry[] = [

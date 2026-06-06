@@ -1052,6 +1052,18 @@
   font-size: 12px;
 }
 
+.method-deep-symbol-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.method-deep-symbol-section h3 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
 .method-deep-symbol-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2786,6 +2798,272 @@
   }
 }
 
+/* ── Seven-method pages (charts) ── */
+.lenormand-page,
+.lot-page,
+.liuyao-page,
+.western-page,
+.fengshui-page,
+.ziwei-page {
+  position: relative;
+}
+
+.method-workbench {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 560px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.method-workbench label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.method-workbench textarea,
+.method-workbench input,
+.method-workbench select {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.chip-row .chip,
+.method-workbench .chip {
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.chip-row .chip.active,
+.method-workbench .chip.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.primary-btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gold-dim);
+  background: rgba(201, 169, 98, 0.12);
+  color: var(--color-gold);
+  cursor: pointer;
+}
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.reading-grid article {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.reading-grid article.hi,
+.palace-grid__cell--hi,
+.card-spread__card--hi {
+  border-color: var(--color-gold-dim);
+}
+
+.reading-grid span {
+  display: block;
+  font-size: 11px;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.combo-panel {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.summary-line {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-gold);
+}
+
+.palace-grid {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+}
+
+.palace-grid__cell {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  min-height: 72px;
+  font-size: 12px;
+}
+
+button.palace-grid__cell {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+button.palace-grid__cell:hover {
+  border-color: var(--color-gold-dim);
+}
+
+.palace-grid__cell--selected {
+  border-color: var(--color-gold);
+  box-shadow: inset 0 0 0 1px var(--color-gold-dim);
+}
+
+.palace-grid__cell strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.hex-lines-chart ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hex-line {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xs) 0;
+}
+
+.hex-line--moving .hex-line__bar {
+  color: var(--color-gold);
+}
+
+.hex-line__bar {
+  font-family: var(--font-mono);
+  min-width: 48px;
+}
+
+.hex-line__meta em {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+.natal-wheel {
+  margin: 0 auto;
+}
+
+.western-chart-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.card-spread {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.card-spread__card {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.compass-rose-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.compass-rose__input {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.lot-shake--active {
+  animation: lot-shake 0.4s ease infinite;
+}
+
+@keyframes lot-shake {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.sign-scroll {
+  max-width: 640px;
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-gold-dim);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.6);
+}
+
+.sign-scroll__poem p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.sign-scroll__advice {
+  margin-top: var(--spacing-md);
+  padding-left: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.ziwei-sidebar {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.fengshui-workbench {
+  max-width: 720px;
+}
+
+.checkbox-row {
+  flex-direction: row !important;
+  align-items: center;
+  gap: var(--spacing-sm) !important;
+}
+
+@media (max-width: 768px) {
+  .western-chart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .method-card,
   .spread-card,
@@ -2803,5 +3081,9 @@
   .tarot-spread,
   .deck-animation {
     transition: none;
+  }
+
+  .lot-shake--active {
+    animation: none;
   }
 }

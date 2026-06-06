@@ -59,6 +59,13 @@ export const TAROT_PAIR_RULES: TarotPairRule[] = [
   { id: "moon-seven-cups", cards: ["月亮", "圣杯七"], theme: "迷雾与幻想", meaning: "情绪投射和多重想象增强，需要事实校准。", caution: "避免在信息不足时做终局承诺。" },
   { id: "swords-three-cups-three", cards: ["宝剑三", "圣杯三"], theme: "伤害与群体", meaning: "社交、第三方或朋友圈信息可能牵动伤痛。", caution: "勿急于传播未经确认的说法。" },
   { id: "pentacles-ace-pentacles-ten", cards: ["星币一", "星币十"], theme: "种子到家业", meaning: "新资源有长期沉淀潜力，适合从小投入做结构。", caution: "初始机会仍需预算、合同和耐心。" },
+  { id: "chariot-justice", cards: ["战车", "正义"], theme: "推进与判断", meaning: "意志与规则共同决定方向。", caution: "硬冲可能忽视公平。" },
+  { id: "hermit-star", cards: ["隐者", "星星"], theme: "内省与希望", meaning: "独处后愿景更清晰。", caution: "希望需落地为行动。" },
+  { id: "lovers-temperance", cards: ["恋人", "节制"], theme: "选择与调和", meaning: "关系需要价值与节奏平衡。", caution: "避免只谈感觉不谈边界。" },
+  { id: "sun-world", cards: ["太阳", "世界"], theme: "清晰与完成", meaning: "可见成果与阶段完成。", caution: "完成不等于无需收尾。" },
+  { id: "wands-knight-pentacles-king", cards: ["权杖骑士", "星币国王"], theme: "行动与资源", meaning: "冲劲需要资源与结构承接。", caution: "勿只动不蓄。" },
+  { id: "cups-queen-swords-king", cards: ["圣杯王后", "宝剑国王"], theme: "情感与规则", meaning: "感受与判断需要对话。", caution: "勿用规则压感受。" },
+  { id: "pentacles-five-pentacles-ten", cards: ["星币五", "星币十"], theme: "匮乏与家业", meaning: "从 scarcity 走向结构需时间。", caution: "勿因短期匮乏放弃长期。" },
 ];
 
 export const TAROT_REVERSAL_LAYERS: TarotReversalLayer[] = [

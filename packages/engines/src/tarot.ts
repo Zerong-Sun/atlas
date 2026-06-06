@@ -1,70 +1,107 @@
-export const MAJOR_ARCANA = [
-  { id: 0, name: "愚者", keywords: ["开始", "冒险", "天真"] },
-  { id: 1, name: "魔术师", keywords: ["意志", "技能", "专注"] },
-  { id: 2, name: "女祭司", keywords: ["直觉", "潜意识", "神秘"] },
-  { id: 3, name: "皇后", keywords: ["丰饶", "滋养", "创造"] },
-  { id: 4, name: "皇帝", keywords: ["结构", "权威", "稳定"] },
-  { id: 5, name: "教皇", keywords: ["传统", "教导", "信念"] },
-  { id: 6, name: "恋人", keywords: ["选择", "关系", "价值"] },
-  { id: 7, name: "战车", keywords: ["前进", "控制", "胜利"] },
-  { id: 8, name: "力量", keywords: ["勇气", "耐心", "内在力量"] },
-  { id: 9, name: "隐者", keywords: ["内省", "独处", "智慧"] },
-  { id: 10, name: "命运之轮", keywords: ["周期", "转变", "机遇"] },
-  { id: 11, name: "正义", keywords: ["公平", "因果", "决定"] },
-  { id: 12, name: "倒吊人", keywords: ["暂停", "换位", "牺牲"] },
-  { id: 13, name: "死神", keywords: ["结束", "转化", "新生"] },
-  { id: 14, name: "节制", keywords: ["平衡", "调和", "耐心"] },
-  { id: 15, name: "恶魔", keywords: ["束缚", "欲望", "阴影"] },
-  { id: 16, name: "塔", keywords: ["突变", "觉醒", "崩塌"] },
-  { id: 17, name: "星星", keywords: ["希望", "灵感", "疗愈"] },
-  { id: 18, name: "月亮", keywords: ["幻觉", "不安", "潜意识"] },
-  { id: 19, name: "太阳", keywords: ["成功", "活力", "清晰"] },
-  { id: 20, name: "审判", keywords: ["觉醒", "评估", "召唤"] },
-  { id: 21, name: "世界", keywords: ["完成", "整合", "成就"] },
-];
+import { createRng, shuffleWithSeed } from "./seed.js";
+import {
+  TAROT_DECK,
+  getSpread,
+} from "./tarot-deck.js";
+import { pickReversalLayer, buildTarotCombination, type DrawnTarotCard } from "./tarot-interpret.js";
 
-const POSITIONS = ["过去/成因", "现在/核心", "趋势/建议"];
+export type { TarotDeckCard, TarotSpreadDefinition } from "./tarot-deck.js";
+export { TAROT_DECK, TAROT_SPREADS, getSpread, getCardByName } from "./tarot-deck.js";
+export {
+  interpretTarot,
+  matchPairRules,
+  TAROT_PAIR_RULES,
+  buildTarotCombination,
+} from "./tarot-interpret.js";
 
-function seededRandom(seed: string): () => number {
-  let state = hashSeed(seed);
-  return () => {
-    state = (state * 1664525 + 1013904223) >>> 0;
-    return state / 0xffffffff;
-  };
+export interface DrawnTarotCardResult {
+  id: string;
+  name: string;
+  arcana: string;
+  suit: string;
+  element: string;
+  reversed: boolean;
+  position: string;
+  keywords: string[];
+  upright: string;
+  reversedMeaning: string;
+  reversalLayer?: string;
 }
 
-function hashSeed(seed: string): number {
-  let hash = 2166136261;
-  for (let index = 0; index < seed.length; index += 1) {
-    hash ^= seed.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
+export interface TarotSpreadResult {
+  spreadId: string;
+  spread: string;
+  cards: DrawnTarotCardResult[];
+  summary: string;
 }
 
-export function drawTarotSpread(seed: string): Record<string, unknown> {
-  const rand = seededRandom(seed);
-  const deck = [...MAJOR_ARCANA];
-  const drawn: Array<{ card: typeof MAJOR_ARCANA[0]; reversed: boolean; position: string }> = [];
+export interface DrawTarotOptions {
+  seed?: string;
+  spreadId?: string;
+  includeMinor?: boolean;
+  reversalRate?: number;
+}
 
-  for (let i = 0; i < 3; i++) {
-    const idx = Math.floor(rand() * deck.length);
-    const card = deck.splice(idx, 1)[0];
-    drawn.push({
-      card,
-      reversed: rand() > 0.7,
-      position: POSITIONS[i],
-    });
-  }
+/** @deprecated use drawTarotSpread with options */
+export const MAJOR_ARCANA = TAROT_DECK.filter((c) => c.arcana === "major").map((c, id) => ({
+  id,
+  name: c.name,
+  keywords: c.keywords,
+}));
 
-  return {
-    spread: "three_card",
-    cards: drawn.map((d) => ({
-      name: d.card.name,
-      reversed: d.reversed,
-      position: d.position,
-      keywords: d.card.keywords,
-    })),
-    summary: drawn.map((d) => `${d.position}：${d.card.name}${d.reversed ? "（逆位）" : ""}`).join("；"),
+export function drawTarotSpread(options: DrawTarotOptions): TarotSpreadResult;
+export function drawTarotSpread(seed: string): Record<string, unknown>;
+export function drawTarotSpread(seedOrOptions?: string | DrawTarotOptions): TarotSpreadResult | Record<string, unknown> {
+  const opts: DrawTarotOptions =
+    typeof seedOrOptions === "string" ? { seed: seedOrOptions } : seedOrOptions ?? {};
+  const seed = opts.seed ?? String(Date.now());
+  const spread = getSpread(opts.spreadId ?? "three-timeline");
+  const pool = opts.includeMinor === false
+    ? TAROT_DECK.filter((c) => c.arcana === "major")
+    : TAROT_DECK;
+  const rng = createRng(seed);
+  const shuffled = shuffleWithSeed(pool, seed);
+  const reversalRate = opts.reversalRate ?? 0.3;
+
+  const drawnCards: DrawnTarotCard[] = spread.positions.map((position, i) => {
+    const card = shuffled[i]!;
+    const reversed = rng() < reversalRate;
+    return { ...card, reversed, position };
+  });
+
+  const result: TarotSpreadResult = {
+    spreadId: spread.id,
+    spread: spread.name,
+    cards: drawnCards.map((card) => {
+      const layer = card.reversed ? pickReversalLayer(card, rng()) : undefined;
+      return {
+        id: card.id,
+        name: card.name,
+        arcana: card.arcana,
+        suit: card.suit,
+        element: card.element,
+        reversed: card.reversed,
+        position: card.position,
+        keywords: card.reversed ? card.reversedKeywords : card.keywords,
+        upright: card.upright,
+        reversedMeaning: card.reversedMeaning,
+        reversalLayer: layer,
+      };
+    }),
+    summary: buildTarotCombination(drawnCards),
   };
+
+  if (typeof seedOrOptions === "string" && !opts.spreadId) {
+    return {
+      spread: result.spreadId,
+      cards: result.cards.map((c) => ({
+        name: c.name,
+        reversed: c.reversed,
+        position: c.position,
+        keywords: c.keywords,
+      })),
+      summary: result.summary,
+    };
+  }
+  return result;
 }

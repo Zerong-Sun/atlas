@@ -1,3 +1,6 @@
+import { DEEP_LIBRARY_ENTRIES } from "./deepLibraries";
+import type { DeepLibraryRaw } from "./deepLibraries/types";
+
 export type DeepSymbol = { name: string; group: string; meaning: string; use: string };
 export type MethodDeepLibrary = {
   id: string;
@@ -13,111 +16,42 @@ export type MethodDeepLibrary = {
 
 const BASE_GUARDS = ["趋势表达，不作绝对预言", "重大事项需结合现实专业意见", "同一问题避免短期反复强算", "输出必须给出条件、风险和复盘点"];
 
-const RAW: Record<string, { title: string; cat: string; sym: string; rules: string; modes: string; axes: string; out: string }> = {
-  ziwei: {
-    title: "紫微斗数深库",
-    cat: "十二宫位|十四主星|辅佐煞曜|四化飞星|大限流年",
-    sym: "命宫/宫位/人格主轴/看一生核心课题;身宫/宫位/行动落点/看现实发力处;财帛宫/宫位/财务模式/看收入与风险;官禄宫/宫位/事业路径/看职业结构;夫妻宫/宫位/亲密关系/看伴侣互动;紫微/主星/统御权威/看领导与资源;天府/主星/库藏稳定/看守成与资产;武曲/主星/财务执行/看硬资源;天机/主星/谋略变动/看策划与转向;太阳/主星/外放照明/看名声与父性;太阴/主星/积累滋养/看内在与资产;廉贞/主星/规则欲望/看诱因与边界;贪狼/主星/社交欲望/看才艺桃花;巨门/主星/口舌研究/看争议与表达;天相/主星/协调印绶/看贵人与服务;天梁/主星/庇护延寿/看长辈与化解;七杀/主星/决断破局/看压力改革;破军/主星/破旧立新/看剧烈变化;化禄/四化/资源流入/看收益机会;化权/四化/权责上升/看掌控压力;化科/四化/名誉文书/看信用背书;化忌/四化/卡点执念/看风险债务;大限/周期/十年阶段/看长期主题;流年/周期/年度触发/看当年事件",
-    rules: "先定命身宫;看三方四正;主星定性辅星修饰;四化定触发;大限看阶段流年看事件;吉凶星同宫需权重合判;宫位互涉不孤断;建议落到经营策略",
-    modes: "本命总盘|事业财帛|关系婚恋|大限流年|四化追踪|宫位对照",
-    axes: "主轴|资源|关系|事业|风险|时间",
-    out: "命盘总览|宫位重点|星曜组合|四化触发|阶段预测|行动建议",
-  },
-  liuyao: {
-    title: "纳甲六爻深库",
-    cat: "六亲|六神|世应|用神|动变空破",
-    sym: "世爻/定位/问者自身/看主体状态;应爻/定位/对方环境/看外部回应;用神/核心/事项主象/看成败关键;父母/六亲/文书保护/看合同证件;官鬼/六亲/压力规则/看责任风险;妻财/六亲/资源收益/看财务机会;子孙/六亲/释放产出/看缓解结果;兄弟/六亲/竞争消耗/看分利阻力;青龙/六神/喜庆贵人/看顺势助力;朱雀/六神/口舌文书/看沟通信息;勾陈/六神/牵制旧事/看拖延纠缠;腾蛇/六神/虚惊缠绕/看疑虑幻象;白虎/六神/冲突损伤/看硬风险;玄武/六神/隐情欺瞒/看暗线漏洞;动爻/变化/触发转折/看行动点;变爻/结果/发展方向/看后续趋势;旬空/状态/暂不落实/看虚信等待;月建/时令/当月权重/看旺衰;日辰/时点/当日作用/看冲合;伏神/隐藏/未显因素/看暗中资源;飞神/表层/覆盖因素/看外显阻隔;六合/关系/和合牵连/看合作黏性;六冲/关系/冲散变动/看破局离散;入墓/状态/收束入库/看迟滞封存",
-    rules: "一事一占;先定用神;世应看内外;月日定旺衰;动变看触发;空破墓绝降权;六神只作情境修饰;输出需区分成败与应期",
-    modes: "铜钱起卦|数字起卦|事业问事|关系问事|财务问事|失物寻人",
-    axes: "用神|世应|旺衰|动变|风险|应期",
-    out: "卦盘定位|用神状态|世应互动|动变路径|结果倾向|行动边界",
-  },
-  meihua: {
-    title: "梅花易数深库",
-    cat: "体用|互变|外应|五行生克|时空取数",
-    sym: "体卦/定位/自身主轴/看主体承受力;用卦/定位/对象事件/看外部力量;互卦/过程/中段结构/看隐藏变化;变卦/结果/下一阶段/看转化方向;乾/卦象/刚健主动/看主导推进;坤/卦象/承载配合/看资源支持;震/卦象/启动突发/看快速变化;巽/卦象/渗透沟通/看谈判传播;坎/卦象/险陷流动/看风险暗线;离/卦象/显明依附/看证据曝光;艮/卦象/停止边界/看卡点暂停;兑/卦象/交流喜悦/看口舌承诺;生/关系/资源扶持/看顺势;克/关系/压力制约/看阻力;泄/关系/消耗输出/看成本;比和/关系/同气相助/看稳定;外应/现场/偶发象意/校准取象;年月日时/数源/时空结构/定卦依据;动爻/变化/转折点/看关键节点;错卦/反面/对照阴影/看盲点;综卦/反观/角色换位/看对方视角;五行/系统/木火土金水/看流通;数象/取数/数字映射/看事件编码;物象/取象/现场物件/看环境提示",
-    rules: "先明取数来源;体为己用为事;生克定顺逆;互卦看过程;变卦看结局;外应只作校准;不可过度解释偶然;建议转成选择策略",
-    modes: "时间取数|数字取卦|外应取象|选择判断|关系趋势|短期预测",
-    axes: "体用|生克|过程|结果|外应|行动",
-    out: "取象来源|体用关系|互变过程|外应校准|趋势判断|取舍建议",
-  },
-  western: {
-    title: "西方占星深库",
-    cat: "行星|星座|宫位|相位|行运",
-    sym: "太阳/行星/核心意志/看身份目标;月亮/行星/情绪需求/看安全感;水星/行星/思维沟通/看学习谈判;金星/行星/关系价值/看吸引选择;火星/行星/行动冲突/看推进竞争;木星/行星/扩张信念/看机会成长;土星/行星/限制责任/看压力结构;天王星/行星/突变自由/看突破不稳;海王星/行星/理想迷雾/看灵感混淆;冥王星/行星/深层转化/看权力执念;上升/轴点/外显入口/看行动风格;中天/轴点/事业名望/看公开定位;一宫/宫位/自我身体/看个人状态;二宫/宫位/资源价值/看财务安全;七宫/宫位/合作伴侣/看关系镜像;十宫/宫位/事业成就/看社会目标;合相/相位/能量融合/看主题强化;刑相/相位/摩擦压力/看成长冲突;拱相/相位/顺流天赋/看自然助力;冲相/相位/对立拉扯/看关系投射;行运土星/行运/责任考验/看延迟成形;行运木星/行运/扩张窗口/看机会;水逆/行运/沟通回溯/看修正;月相/周期/情绪节律/看短期节奏",
-    rules: "行星定主题;星座定表达;宫位定场域;相位定关系;行运定时间触发;本命不等于事件;重视容许度;建议给现实练习",
-    modes: "本命盘|行运盘|关系合盘|事业定位|月相周期|相位压力",
-    axes: "人格|关系|事业|资源|压力|时机",
-    out: "星盘摘要|核心配置|相位动力|行运窗口|风险机会|整合建议",
-  },
-  vedic: {
-    title: "吠陀占星深库",
-    cat: "行星|宫位|星宿|Dasha|分盘",
-    sym: "月亮/核心/心智情绪/看内在习惯;上升/定位/人生场域/看行动入口;太阳/行星/灵魂权威/看身份目标;火星/行星/勇气冲突/看竞争行动;水星/行星/商业沟通/看学习交易;木星/行星/智慧扩张/看保护成长;金星/行星/关系享受/看和合美感;土星/行星/业力责任/看延迟训练;Rahu/节点/欲望突破/看非传统机会;Ketu/节点/分离释放/看放下灵性;一宫/宫位/身体自我/看生命入口;七宫/宫位/婚姻合作/看伴侣关系;十宫/宫位/事业行动/看社会职责;十二宫/宫位/隐退消耗/看释放远方;Nakshatra/星宿/月亮细分/看心理脚本;Mahadasha/周期/大运主线/看阶段主题;Antardasha/周期/小运触发/看具体窗口;Navamsa/分盘/婚姻法性/看成熟潜力;Dashamsha/分盘/职业细分/看事业呈现;Yogakaraka/组合/功能吉星/看关键助力;Debility/尊卑/落陷削弱/看修正点;Exaltation/尊卑/擢升增强/看优势;Drishti/相望/行星视线/看远程影响;Transit/转运/当前触发/看短期变化",
-    rules: "月亮和上升并看;Dasha先于流年;尊卑决定表达强弱;宫主星连接生活领域;分盘用于细化不单断;节点提示执着与释放;文化术语需解释;输出避免宿命化",
-    modes: "Rashi本命|Dasha周期|Nakshatra心理|关系分盘|事业分盘|转运观察",
-    axes: "心智|业力|事业|关系|财富|时机",
-    out: "命盘主线|周期阶段|宫位关联|业力主题|现实策略|调和建议",
-  },
-};
-
-const IDS = ["numerology","runes","geomancy","lot","jiaobei","xiangmian","palmistry","fengshui","astrodice","lenormand","oracle","coffee","scrying"] as const;
-
-for (const id of IDS) {
-  RAW[id] = makeGeneric(id);
-}
-
-export const METHOD_DEEP_LIBRARIES: MethodDeepLibrary[] = Object.entries(RAW).map(([id, data]) => ({
-  id,
-  title: data.title,
-  categories: split(data.cat),
-  symbols: split(data.sym).map((item) => {
-    const [name, group, meaning, use] = item.split("/");
-    return { name, group, meaning, use };
-  }),
-  rules: split(data.rules),
-  modes: split(data.modes),
-  predictionAxes: split(data.axes),
-  outputs: split(data.out),
-  guardrails: BASE_GUARDS,
-}));
-
-function split(value: string) {
+function splitPipe(value: string) {
   return value.split("|").filter(Boolean);
 }
 
-function makeGeneric(id: string) {
-  const names: Record<string, [string, string, string]> = {
-    numerology: ["数字命理深库", "核心数字|姓名数字|周期数字|挑战数字|整合数字", "生命路径数,命运数,灵魂冲动数,个性数,个人年,个人月,挑战数,成熟数"],
-    runes: ["卢恩符文深库", "符文原义|正逆位|阵位|组合关系|保护边界", "Fehu,Uruz,Raidho,Kenaz,Gebo,Wunjo,Hagalaz,Algiz"],
-    geomancy: ["地占术深库", "十六图形|四母四女|十二宫|见证人|审判图", "Via,Populus,Fortuna Major,Fortuna Minor,Puer,Puella,Albus,Rubeus"],
-    lot: ["抽签签诗深库", "签号|签诗|典故|解曰|事项分类", "上签,中签,下签,签诗,典故,解曰,应期,事项"],
-    jiaobei: ["杯筊深库", "杯象|问句|连续确认|次数限制|复盘", "圣杯,笑杯,阴杯,三圣杯,问句,请示对象,次数限制,记录"],
-    xiangmian: ["面相深库", "三停|五官|十二宫|气色|纹路", "上停,中停,下停,眼神,眉形,鼻相,口相,气色"],
-    palmistry: ["手相深库", "主线|副线|掌丘|左右手|阶段变化", "生命线,智慧线,感情线,事业线,太阳线,金星丘,木星丘,月丘"],
-    fengshui: ["风水深库", "方位|九宫|五行|动线|使用目的", "明堂,财位,气口,动线,五行,采光,靠山,水火"],
-    astrodice: ["占星骰子深库", "行星骰|星座骰|宫位骰|组合语法|追问", "太阳,月亮,水星,金星,火星,土星,第七宫,第十宫"],
-    lenormand: ["雷诺曼深库", "三十六牌|中心牌|相邻组合|九宫格|指示牌", "骑士,船,钥匙,蛇,心,云,山,十字"],
-    oracle: ["神谕卡深库", "主题卡|情绪映射|肯定语|练习|日记", "边界,信任,整合,休息,勇气,清理,倾听,扎根"],
-    coffee: ["咖啡渣占卜深库", "图案|位置|浓淡|组合|叙事", "鸟,路,山,心形,钥匙,圆环,树,鱼"],
-    scrying: ["水晶凝视深库", "颜色|形状|情绪|重复意象|现实校准", "蓝光,雾,门,螺旋,水面,火花,影子,桥"],
-  };
-  const [title, cat, csv] = names[id];
-  const layers = ["本义", "组合", "预测"];
-  const sym = csv.split(",").flatMap((n, i) =>
-    layers.map((layer) => `${n}·${layer}/${layer}/用于识别第${i + 1}类象意的${layer}层/预测时定位趋势、阻力或行动入口`)
-  ).join("|");
+function parseSymbols(sym: string): DeepSymbol[] {
+  return sym
+    .split(";")
+    .filter(Boolean)
+    .map((item) => {
+      const [name, group, meaning, use] = item.split("/");
+      return { name, group, meaning, use };
+    })
+    .filter((symbol) => symbol.name && symbol.group && symbol.meaning && symbol.use);
+}
+
+export function rawToMethodDeepLibrary(raw: DeepLibraryRaw, id: string): MethodDeepLibrary {
   return {
-    title,
-    cat,
-    sym,
-    rules: "限定事项|选择窗口|确定主象|交叉验证|识别风险|生成预测|给出行动|设置复盘",
-    modes: "快速判断|正式预测|关系分析|事业分析|风险复盘|长期观察",
-    axes: "主象|阻力|资源|时机|行动|复盘",
-    out: "核心判断|符号解释|趋势预测|风险边界|行动建议|复盘点",
+    id,
+    title: raw.title,
+    categories: splitPipe(raw.cat),
+    symbols: parseSymbols(raw.sym),
+    rules: splitPipe(raw.rules),
+    modes: splitPipe(raw.modes),
+    predictionAxes: splitPipe(raw.axes),
+    outputs: splitPipe(raw.out),
+    guardrails: BASE_GUARDS,
   };
 }
 
+export const METHOD_DEEP_LIBRARIES: MethodDeepLibrary[] = DEEP_LIBRARY_ENTRIES.map(({ id, raw }) =>
+  rawToMethodDeepLibrary(raw, id)
+);
+
+const METHOD_DEEP_LIBRARY_MAP = new Map(METHOD_DEEP_LIBRARIES.map((library) => [library.id, library]));
+
 export function getMethodDeepLibrary(id: string | undefined) {
-  return METHOD_DEEP_LIBRARIES.find((library) => library.id === id);
+  if (!id) return undefined;
+  return METHOD_DEEP_LIBRARY_MAP.get(id);
 }

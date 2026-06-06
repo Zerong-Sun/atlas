@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
+import { drawTarotSpread } from "@atlas/engines";
 import { Button } from "@/components/ui/Button";
 import { colors, radius, spacing } from "@/theme/tokens";
 
 type TarotCard = {
-  id: number;
+  id: string;
   name: string;
   keywords: string[];
 };
@@ -21,31 +22,6 @@ type Props = {
   loading?: boolean;
 };
 
-const DECK: TarotCard[] = [
-  { id: 0, name: "愚者", keywords: ["开始", "冒险", "信任"] },
-  { id: 1, name: "魔术师", keywords: ["意志", "行动", "资源"] },
-  { id: 2, name: "女祭司", keywords: ["直觉", "潜意识", "等待"] },
-  { id: 3, name: "皇后", keywords: ["滋养", "创造", "丰盛"] },
-  { id: 4, name: "皇帝", keywords: ["结构", "边界", "稳定"] },
-  { id: 5, name: "教皇", keywords: ["传统", "学习", "信念"] },
-  { id: 6, name: "恋人", keywords: ["选择", "关系", "价值"] },
-  { id: 7, name: "战车", keywords: ["推进", "掌控", "决心"] },
-  { id: 8, name: "力量", keywords: ["勇气", "耐心", "柔韧"] },
-  { id: 9, name: "隐者", keywords: ["内省", "独处", "洞见"] },
-  { id: 10, name: "命运之轮", keywords: ["周期", "转机", "变化"] },
-  { id: 11, name: "正义", keywords: ["公平", "判断", "因果"] },
-  { id: 12, name: "倒吊人", keywords: ["暂停", "换位", "放下"] },
-  { id: 13, name: "死神", keywords: ["结束", "转化", "新生"] },
-  { id: 14, name: "节制", keywords: ["平衡", "调和", "修复"] },
-  { id: 15, name: "恶魔", keywords: ["束缚", "欲望", "阴影"] },
-  { id: 16, name: "塔", keywords: ["突变", "揭示", "重建"] },
-  { id: 17, name: "星星", keywords: ["希望", "疗愈", "指引"] },
-  { id: 18, name: "月亮", keywords: ["迷雾", "不安", "想象"] },
-  { id: 19, name: "太阳", keywords: ["清晰", "活力", "成功"] },
-  { id: 20, name: "审判", keywords: ["觉醒", "复盘", "召唤"] },
-  { id: 21, name: "世界", keywords: ["完成", "整合", "抵达"] },
-];
-
 const POSITIONS = ["过去/成因", "现在/核心", "趋势/建议"];
 
 export function TarotDrawPanel({ onUseSpread, loading }: Props) {
@@ -55,13 +31,13 @@ export function TarotDrawPanel({ onUseSpread, loading }: Props) {
   const spreadText = useMemo(() => formatSpread(drawn), [drawn]);
 
   const drawCards = () => {
-    const deck = [...DECK];
-    const next: DrawnCard[] = [];
-    for (const position of POSITIONS) {
-      const index = Math.floor(Math.random() * deck.length);
-      const card = deck.splice(index, 1)[0];
-      next.push({ card, position, reversed: Math.random() > 0.72 });
-    }
+    const seed = `${Date.now()}-${question}`;
+    const result = drawTarotSpread({ seed, spreadId: "three-timeline", includeMinor: false });
+    const next: DrawnCard[] = result.cards.map((c) => ({
+      card: { id: c.id, name: c.name, keywords: c.keywords },
+      position: c.position,
+      reversed: c.reversed,
+    }));
     setDrawn(next);
   };
 

@@ -29,10 +29,10 @@ describe("computeWestern", () => {
     });
     const planetList = r.planetList as Array<{ label: string; longitude: number; house: number }>;
     const elementBalance = r.elementBalance as Record<string, number>;
-    assert.equal(planetList.length, 7);
+    assert.equal(planetList.length, 10);
     assert.ok(planetList.every((p) => p.longitude >= 0 && p.longitude < 360));
     assert.ok(planetList.every((p) => p.house >= 1 && p.house <= 12));
-    assert.equal(Object.values(elementBalance).reduce((sum, count) => sum + count, 0), 7);
+    assert.equal(Object.values(elementBalance).reduce((sum, count) => sum + count, 0), 10);
   });
 
   it("requires birth date", () => {

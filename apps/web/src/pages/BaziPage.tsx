@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
-import { computeBazi, type BaziResult } from "@atlas/engines";
+import { computeBazi, interpretBazi, type BaziResult } from "@atlas/engines";
+import type { MatchedRule } from "@atlas/shared-types";
 import { Page } from "@/components/ui/Page";
 import {
   BAZI_CLASSIC_CONDITION_MAP,
@@ -43,6 +44,8 @@ export function BaziPage() {
   const [birthDate, setBirthDate] = useState("");
   const [birthTime, setBirthTime] = useState("");
   const [birthPlace, setBirthPlace] = useState("");
+  const [gender, setGender] = useState<"male" | "female">("male");
+  const [selectedYear, setSelectedYear] = useState<number>(() => new Date().getFullYear());
   const [hasComputed, setHasComputed] = useState(false);
 
   const result = useMemo<BaziResult | null>(() => {
@@ -51,12 +54,18 @@ export function BaziPage() {
       return computeBazi({
         birthDate,
         birthTime,
+        gender,
         timestamp: new Date().toISOString(),
       });
     } catch {
       return null;
     }
-  }, [birthDate, birthTime]);
+  }, [birthDate, birthTime, gender]);
+
+  const interpretation = useMemo(() => {
+    if (!result || result.error) return null;
+    return interpretBazi(result, { selectedYear });
+  }, [result, selectedYear]);
 
   const selectProfile = useCallback((id: string) => {
     const profile = profiles.find((item) => item.id === id);
@@ -166,6 +175,13 @@ export function BaziPage() {
           <label>
             <span>出生时间</span>
             <input type="time" value={birthTime} onChange={(e) => setBirthTime(e.target.value)} />
+          </label>
+          <label>
+            <span>性别</span>
+            <select value={gender} onChange={(e) => setGender(e.target.value as "male" | "female")}>
+              <option value="male">男</option>
+              <option value="female">女</option>
+            </select>
           </label>
           <label>
             <span>出生地点</span>
@@ -395,11 +411,16 @@ export function BaziPage() {
             </div>
             <div className="annual-list">
               {result.annualFortunes.map((item) => (
-                <article className={item.isCurrent ? "annual-card current" : "annual-card"} key={item.year}>
+                <button
+                  type="button"
+                  className={item.year === selectedYear ? "annual-card current" : "annual-card"}
+                  key={item.year}
+                  onClick={() => setSelectedYear(item.year)}
+                >
                   <span>{item.year}</span>
                   <strong>{item.pillar} · {item.tenGod}</strong>
                   <p>{item.note}</p>
-                </article>
+                </button>
               ))}
             </div>
           </section>
@@ -423,10 +444,82 @@ export function BaziPage() {
             </section>
           )}
 
+          {interpretation && (
+            <>
+              <section className="bazi-panel bazi-panel-full">
+                <div className="section-heading">
+                  <p>MATCHED RULES</p>
+                  <h2>命中十神组合 · {selectedYear}岁运</h2>
+                </div>
+                <p className="muted">{interpretation.summary}</p>
+                <div className="aspect-grid">
+                  {interpretation.matchedCombos.map((rule: MatchedRule) => (
+                    <article className="aspect-card" key={rule.id}>
+                      <span>{rule.name}</span>
+                      <p>{rule.meaning}</p>
+                      {rule.evidence.map((e: MatchedRule["evidence"][number]) => <em key={e.detail}>{e.label}: {e.detail}</em>)}
+                    </article>
+                  ))}
+                </div>
+                <div className="aspect-grid">
+                  {interpretation.matchedPatterns.map((rule: MatchedRule) => (
+                    <article className="aspect-card" key={rule.id}>
+                      <span>{rule.name}</span>
+                      <p>{rule.meaning}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="bazi-panel bazi-panel-full">
+                <div className="section-heading">
+                  <p>ACTIVE SHA</p>
+                  <h2>命局神煞</h2>
+                </div>
+                <div className="deity-grid">
+                  {interpretation.activeDeities.map((rule: MatchedRule) => (
+                    <article className="deity-card deity-neutral" key={rule.id}>
+                      <div className="deity-header">
+                        <strong>{rule.name}</strong>
+                        <span>{rule.level}</span>
+                      </div>
+                      <p>{rule.meaning}</p>
+                    </article>
+                  ))}
+                </div>
+                <div className="aspect-grid">
+                  {interpretation.luckInteractions.map((rule: MatchedRule) => (
+                    <article className="aspect-card" key={rule.id}>
+                      <span>{rule.name}</span>
+                      <p>{rule.meaning}</p>
+                      {rule.evidence.map((e: MatchedRule["evidence"][number]) => <em key={e.detail}>{e.detail}</em>)}
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="classic-section">
+                <div className="section-heading">
+                  <p>CLASSIC HITS</p>
+                  <h2>古籍条文命中</h2>
+                </div>
+                <div className="classic-list">
+                  {interpretation.classicHits.map((rule: MatchedRule) => (
+                    <article className="classic-card" key={rule.id}>
+                      <span>{rule.name}</span>
+                      <p>{rule.meaning}</p>
+                      {rule.evidence[0] && <blockquote>{rule.evidence[0].detail}</blockquote>}
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </>
+          )}
+
           <section className="bazi-panel bazi-panel-full">
             <div className="section-heading">
-              <p>RULE LIBRARY</p>
-              <h2>十神组合与格局细分</h2>
+              <p>REFERENCE</p>
+              <h2>专库参考（全量）</h2>
             </div>
             <div className="aspect-grid">
               {BAZI_TEN_GOD_COMBINATIONS.slice(0, 4).map((rule) => (
