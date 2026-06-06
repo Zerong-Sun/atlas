@@ -2,6 +2,7 @@ import { useMemo, useState, type CSSProperties } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getMethod } from "@/data/divinationMethods";
 import { getMethodDeepLibrary, type MethodDeepLibrary } from "@/data/methodDeepLibraries";
+import { getMethodReferenceLibrary } from "@/data/methodReferenceLibraries";
 import { getMethodModuleKit, type MethodModuleKit } from "@/data/methodModuleKits";
 import { getMethodModule, type MethodModule } from "@/data/methodModules";
 import {
@@ -11,6 +12,7 @@ import {
   type OperationSymbol,
 } from "@/data/methodOperationLibraries";
 import { getQimenLibrary, type QimenEntry } from "@/data/qimenLibrary";
+import { MethodReferenceLibraryPanel } from "@/components/MethodReferenceLibraryPanel";
 import { Page } from "@/components/ui/Page";
 
 type DraftReading = {
@@ -30,6 +32,7 @@ export function MethodModulePage() {
   const module = getMethodModule(methodId);
   const kit = getMethodModuleKit(methodId);
   const deepLibrary = getMethodDeepLibrary(methodId);
+  const referenceLibrary = getMethodReferenceLibrary(methodId);
   const operationLibrary = getMethodOperationLibrary(methodId);
   const method = getMethod(methodId ?? "");
   const [context, setContext] = useState("");
@@ -48,7 +51,6 @@ export function MethodModulePage() {
   const currentSubjectType = subjectType ?? operationLibrary.subjectTypes[0];
   const currentWindow = predictionWindow ?? operationLibrary.predictionWindows[0];
   const qimenLibrary = module.id === "qimen" ? getQimenLibrary() : null;
-
   return (
     <Page wide className="method-module-page">
       <section className="method-detail-hero method-module-hero">
@@ -206,6 +208,8 @@ export function MethodModulePage() {
 
       {qimenLibrary && <QimenDeepLibrary library={qimenLibrary} />}
 
+      {referenceLibrary && <MethodReferenceLibraryPanel library={referenceLibrary} />}
+
       <MethodDeepLibraryPanel library={deepLibrary} />
 
       <section className="method-module-library" aria-label={`${module.title}符号词典`}>
@@ -232,11 +236,14 @@ export function MethodModulePage() {
 }
 
 function MethodDeepLibraryPanel({ library }: { library: MethodDeepLibrary }) {
-  const grouped = library.categories.map((category) => ({
-    category,
-    symbols: library.symbols.filter((symbol) => symbol.group === category || symbol.name.includes(category)).slice(0, 12),
-  }));
-  const fallbackSymbols = library.symbols.slice(0, 24);
+  const grouped = library.categories
+    .map((category) => ({
+      category,
+      symbols: library.symbols.filter((symbol) => symbol.group === category),
+    }))
+    .filter((group) => group.symbols.length > 0);
+  const symbolSections =
+    grouped.length > 0 ? grouped : [{ category: "符号", symbols: library.symbols }];
 
   return (
     <section className="method-deep-library" aria-label={`${library.title}深库`}>
@@ -252,16 +259,21 @@ function MethodDeepLibraryPanel({ library }: { library: MethodDeepLibrary }) {
       <div className="method-deep-mode-strip">
         {library.modes.map((mode) => <span key={mode}>{mode}</span>)}
       </div>
-      <div className="method-deep-symbol-grid">
-        {(grouped.some((group) => group.symbols.length > 0) ? grouped.flatMap((group) => group.symbols) : fallbackSymbols).map((symbol) => (
-          <article key={`${symbol.name}-${symbol.group}`}>
-            <span>{symbol.group}</span>
-            <strong>{symbol.name}</strong>
-            <p>{symbol.meaning}</p>
-            <em>{symbol.use}</em>
-          </article>
-        ))}
-      </div>
+      {symbolSections.map((section) => (
+        <div key={section.category} className="method-deep-symbol-section">
+          <h3>{section.category}</h3>
+          <div className="method-deep-symbol-grid">
+            {section.symbols.map((symbol) => (
+              <article key={`${section.category}-${symbol.name}-${symbol.group}`}>
+                <span>{symbol.group}</span>
+                <strong>{symbol.name}</strong>
+                <p>{symbol.meaning}</p>
+                <em>{symbol.use}</em>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
       <div className="method-deep-output">
         {library.outputs.map((output) => <span key={output}>{output}</span>)}
       </div>

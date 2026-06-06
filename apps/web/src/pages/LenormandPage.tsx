@@ -26,13 +26,17 @@ export function LenormandPage() {
   }, [result]);
 
   const draw = () => {
-    setResult(
-      drawLenormand({
-        spread,
-        question: question.trim() || undefined,
-        seed: `${Date.now()}-${question}`,
-      })
-    );
+    try {
+      setResult(
+        drawLenormand({
+          spread,
+          question: question.trim() || undefined,
+          seed: `${Date.now()}-${question}-${spread}`,
+        })
+      );
+    } catch (err) {
+      console.error("[lenormand]", err);
+    }
   };
 
   return (
@@ -50,7 +54,15 @@ export function LenormandPage() {
         </label>
         <div className="chip-row">
           {(Object.keys(SPREADS) as Spread[]).map((s) => (
-            <button key={s} type="button" className={spread === s ? "chip active" : "chip"} onClick={() => setSpread(s)}>
+            <button
+              key={s}
+              type="button"
+              className={spread === s ? "chip active" : "chip"}
+              onClick={() => {
+                setSpread(s);
+                setResult(null);
+              }}
+            >
               {SPREADS[s]}
             </button>
           ))}
@@ -64,8 +76,8 @@ export function LenormandPage() {
         <section className="lenormand-result">
           <CardSpread
             columns={spread === "nine" ? 3 : spread === "five" ? 3 : 3}
-            cards={result.cards.map((c) => ({
-              id: c.id,
+            cards={result.cards.map((c, i) => ({
+              id: `${c.id}-${i}`,
               name: c.name,
               position: c.position,
               highlight: c.name === result.centerTheme,
@@ -74,10 +86,13 @@ export function LenormandPage() {
           {result.centerTheme && <p className="muted">中心主题：{result.centerTheme}</p>}
           <div className="reading-grid">
             {readings.map(({ card, meaning }) => (
-              <article key={card.id}>
+              <article key={`${card.id}-${card.position}`}>
                 <span>{card.position}</span>
                 <strong>{card.name}</strong>
                 <p>{meaning}</p>
+                {card.keywords.length > 0 && (
+                  <p className="muted">{card.keywords.join(" · ")}</p>
+                )}
               </article>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 import { computeBazi } from "./bazi.js";
+import { interpretBazi } from "./bazi-interpret.js";
 
 describe("computeBazi", () => {
   it("golden: fixed birth returns expected pillars", () => {
@@ -39,5 +40,21 @@ describe("computeBazi", () => {
     assert.ok(classics.length > 0);
     assert.ok(classics[0].fullText.length > 0);
     assert.ok(classics[0].analysis.length > 0);
+  });
+
+  it("respects gender for major luck direction", () => {
+    const male = computeBazi({ birthDate: "1990-05-15", birthTime: "08:30", gender: "male" });
+    const female = computeBazi({ birthDate: "1990-05-15", birthTime: "08:30", gender: "female" });
+    const maleLuck = male.majorLuck as Array<{ pillar: string }>;
+    const femaleLuck = female.majorLuck as Array<{ pillar: string }>;
+    assert.notDeepEqual(maleLuck.map((m) => m.pillar), femaleLuck.map((f) => f.pillar));
+  });
+
+  it("interpretBazi returns matched rules", () => {
+    const chart = computeBazi({ birthDate: "1990-05-15", birthTime: "08:30", gender: "male" });
+    const interp = interpretBazi(chart, { selectedYear: 2026 });
+    assert.ok(interp.matchedPatterns.length > 0);
+    assert.ok(interp.activeDeities.length > 0);
+    assert.ok(interp.summary.length > 0);
   });
 });

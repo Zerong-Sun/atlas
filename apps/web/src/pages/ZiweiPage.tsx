@@ -8,7 +8,7 @@ export function ZiweiPage() {
   const [birthDate, setBirthDate] = useState("");
   const [birthTime, setBirthTime] = useState("12:00");
   const [gender, setGender] = useState<"male" | "female">("male");
-  const [selectedPalace] = useState<number | null>(null);
+  const [selectedPalace, setSelectedPalace] = useState<number | null>(null);
   const [computed, setComputed] = useState(false);
 
   const result = useMemo<ZiweiResult | null>(() => {
@@ -48,15 +48,38 @@ export function ZiweiPage() {
       <section className="method-workbench">
         <label>
           <span>出生日期</span>
-          <input type="date" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
+          <input
+            type="date"
+            value={birthDate}
+            onChange={(e) => {
+              setBirthDate(e.target.value);
+              setComputed(false);
+              setSelectedPalace(null);
+            }}
+          />
         </label>
         <label>
           <span>出生时辰</span>
-          <input type="time" value={birthTime} onChange={(e) => setBirthTime(e.target.value)} />
+          <input
+            type="time"
+            value={birthTime}
+            onChange={(e) => {
+              setBirthTime(e.target.value);
+              setComputed(false);
+              setSelectedPalace(null);
+            }}
+          />
         </label>
         <label>
           <span>性别</span>
-          <select value={gender} onChange={(e) => setGender(e.target.value as "male" | "female")}>
+          <select
+            value={gender}
+            onChange={(e) => {
+              setGender(e.target.value as "male" | "female");
+              setComputed(false);
+              setSelectedPalace(null);
+            }}
+          >
             <option value="male">男</option>
             <option value="female">女</option>
           </select>
@@ -75,6 +98,8 @@ export function ZiweiPage() {
             columns={4}
             ariaLabel="紫微十二宫命盘"
             className="ziwei-grid"
+            selectedKey={selectedPalace != null ? String(selectedPalace) : undefined}
+            onCellClick={(key) => setSelectedPalace(Number(key))}
           />
           {activePalace && (
             <aside className="ziwei-sidebar">

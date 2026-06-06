@@ -313,6 +313,40 @@ function calcDeities(pillars: Record<string, string>): Deity[] {
     });
   }
 
+  /* 羊刃 */
+  const YANGREN: Record<string, string> = { 甲: "卯", 丙: "午", 庚: "酉", 壬: "子" };
+  if (allBranches.includes(YANGREN[dayMaster] ?? "")) {
+    result.push({ name: "羊刃", type: "凶", meaning: "主强势、执行、锋利与风险并存，忌再逢冲刑。" });
+  }
+
+  /* 劫煞 */
+  const JIESHA: Record<string, string> = {
+    子: "巳", 丑: "寅", 寅: "亥", 卯: "申", 辰: "巳", 巳: "寅",
+    午: "亥", 未: "申", 申: "巳", 酉: "寅", 戌: "亥", 亥: "申",
+  };
+  if (allBranches.includes(JIESHA[dayBranch] ?? "")) {
+    result.push({ name: "劫煞", type: "凶", meaning: "主突发阻碍、损失风险，出行与合作需谨慎。" });
+  }
+
+  /* 亡神 */
+  const WANGSHEN: Record<string, string> = {
+    子: "亥", 丑: "申", 寅: "巳", 卯: "寅", 辰: "亥", 巳: "申",
+    午: "巳", 未: "寅", 申: "亥", 酉: "申", 戌: "巳", 亥: "寅",
+  };
+  if (allBranches.includes(WANGSHEN[dayBranch] ?? "")) {
+    result.push({ name: "亡神", type: "凶", meaning: "主心神不宁、计划落空，宜核实信息。" });
+  }
+
+  /* 孤辰寡宿 */
+  const GUCHEN: Record<string, string> = { 寅: "巳", 卯: "巳", 辰: "巳", 巳: "申", 午: "申", 未: "申", 申: "亥", 酉: "亥", 戌: "亥", 亥: "寅", 子: "寅", 丑: "寅" };
+  const GUASU: Record<string, string> = { 寅: "丑", 卯: "丑", 辰: "丑", 巳: "辰", 午: "辰", 未: "辰", 申: "未", 酉: "未", 戌: "未", 亥: "戌", 子: "戌", 丑: "戌" };
+  if (allBranches.includes(GUCHEN[yearBranch] ?? "")) {
+    result.push({ name: "孤辰", type: "中性", meaning: "主独立、距离感，关系题中可能表现为疏离。" });
+  }
+  if (allBranches.includes(GUASU[yearBranch] ?? "")) {
+    result.push({ name: "寡宿", type: "中性", meaning: "主寡静、自处，宜主动建立连接。" });
+  }
+
   /* 空亡 */
   const KONGWANG = calcKongWang(pillars.day);
   const kwHits = allBranches.filter((b) => KONGWANG.includes(b));
@@ -851,7 +885,7 @@ export function computeBazi(input: EngineInput): BaziResult {
   const dmElement = stemElement[dayMaster];
   const climate = climateNeeds(dmElement, pillars.month.charAt(1));
   const deities = calcDeities(pillars);
-  const majorLuck = buildMajorLuckCycles(pillars, "male");
+  const majorLuck = buildMajorLuckCycles(pillars, input.gender ?? "male");
   const annualFortunes = buildAnnualFortunes(dayMaster, currentYear);
   const personality = buildPersonalityAnalysis(dayMaster, strength, elements);
   const aspects = buildLifeAspects(dayMaster, strength);

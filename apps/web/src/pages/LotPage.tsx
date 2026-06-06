@@ -44,13 +44,22 @@ export function LotPage() {
       <section className="method-workbench">
         <div className="chip-row">
           {temples.map((t) => (
-            <button key={t} type="button" className={temple === t ? "chip active" : "chip"} onClick={() => setTemple(t)}>
+            <button
+              key={t}
+              type="button"
+              className={temple === t ? "chip active" : "chip"}
+              onClick={() => {
+                setTemple(t);
+                setPhase("idle");
+                setResult(null);
+              }}
+            >
               {LOT_TEMPLE_LABELS[t]}
             </button>
           ))}
         </div>
         <button type="button" className={`primary-btn lot-shake ${phase === "shaking" ? "lot-shake--active" : ""}`} onClick={draw} disabled={phase === "shaking"}>
-          {phase === "shaking" ? "摇签中…" : "摇签"}
+          {phase === "shaking" ? "摇签中…" : phase === "revealed" ? "再摇一签" : "摇签"}
         </button>
       </section>
 

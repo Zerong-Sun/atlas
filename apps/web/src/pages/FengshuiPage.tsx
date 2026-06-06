@@ -42,10 +42,26 @@ export function FengshuiPage() {
       </section>
 
       <section className="method-workbench fengshui-workbench">
-        <CompassRose degree={sittingDegree} onDegreeChange={setSittingDegree} />
+        <CompassRose
+          degree={sittingDegree}
+          onDegreeChange={(deg) => {
+            setSittingDegree(deg);
+            setComputed(false);
+          }}
+        />
         <label>
           <span>出生年（可选，命卦）</span>
-          <input type="number" min={1920} max={2030} value={birthYear} onChange={(e) => setBirthYear(e.target.value)} placeholder="1990" />
+          <input
+            type="number"
+            min={1920}
+            max={2030}
+            value={birthYear}
+            onChange={(e) => {
+              setBirthYear(e.target.value);
+              setComputed(false);
+            }}
+            placeholder="1990"
+          />
         </label>
         <button type="button" className="primary-btn" onClick={() => setComputed(true)}>
           排飞星盘
@@ -55,6 +71,7 @@ export function FengshuiPage() {
       {result && (
         <section className="fengshui-result">
           <p className="summary-line">{result.summary}</p>
+          <p className="muted">坐向 {result.sittingMountain} · 向 {result.facingMountain} · 第 {result.period} 运</p>
           {result.mingGua && (
             <p className="muted">命卦 {result.mingGua.gua} · {result.mingGua.group}</p>
           )}

@@ -19,6 +19,7 @@ const ZiweiPage = lazy(() => import("@/pages/ZiweiPage").then((m) => ({ default:
 const MethodModulePage = lazy(() =>
   import("@/pages/MethodModulePage").then((m) => ({ default: m.MethodModulePage }))
 );
+const QimenPage = lazy(() => import("@/pages/QimenPage").then((m) => ({ default: m.QimenPage })));
 const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ default: m.ProfilePage })));
 const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
@@ -101,6 +102,7 @@ function AppRoutes() {
             <Route path="/methods/western" element={<WesternPage />} />
             <Route path="/methods/fengshui" element={<FengshuiPage />} />
             <Route path="/methods/ziwei" element={<ZiweiPage />} />
+            <Route path="/methods/qimen" element={<QimenPage />} />
             <Route path="/methods/:methodId" element={<MethodModulePage />} />
             <Route path="/dream" element={<DreamPage />} />
             <Route path="/profile" element={<ProfilePage />} />

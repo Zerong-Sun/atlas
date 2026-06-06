@@ -9,6 +9,7 @@ export function WesternPage() {
   const [birthTime, setBirthTime] = useState("12:00");
   const [showTransits, setShowTransits] = useState(false);
   const [computed, setComputed] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const result = useMemo<WesternResult | null>(() => {
     if (!birthDate || !computed) return null;
@@ -21,6 +22,22 @@ export function WesternPage() {
     return r as WesternResult;
   }, [birthDate, birthTime, computed, showTransits]);
 
+  const generate = () => {
+    if (!birthDate) return;
+    setError(null);
+    const r = computeWestern({
+      birthDate,
+      birthTime,
+      timestamp: showTransits ? new Date().toISOString() : undefined,
+    });
+    if ("error" in r) {
+      setError("请填写有效的出生日期后再生成星盘。");
+      setComputed(false);
+      return;
+    }
+    setComputed(true);
+  };
+
   return (
     <Page wide className="western-page">
       <section className="method-detail-hero">
@@ -32,17 +49,39 @@ export function WesternPage() {
       <section className="method-workbench">
         <label>
           <span>出生日期</span>
-          <input type="date" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
+          <input
+            type="date"
+            value={birthDate}
+            onChange={(e) => {
+              setBirthDate(e.target.value);
+              setComputed(false);
+            }}
+          />
         </label>
         <label>
           <span>出生时间</span>
-          <input type="time" value={birthTime} onChange={(e) => setBirthTime(e.target.value)} />
+          <input
+            type="time"
+            value={birthTime}
+            onChange={(e) => {
+              setBirthTime(e.target.value);
+              setComputed(false);
+            }}
+          />
         </label>
         <label className="checkbox-row">
-          <input type="checkbox" checked={showTransits} onChange={(e) => setShowTransits(e.target.checked)} />
+          <input
+            type="checkbox"
+            checked={showTransits}
+            onChange={(e) => {
+              setShowTransits(e.target.checked);
+              if (computed) setComputed(false);
+            }}
+          />
           <span>包含当前行运与次限推运</span>
         </label>
-        <button type="button" className="primary-btn" onClick={() => setComputed(true)} disabled={!birthDate}>
+        {error && <p className="error-banner" role="alert">{error}</p>}
+        <button type="button" className="primary-btn" onClick={generate} disabled={!birthDate}>
           生成星盘
         </button>
       </section>
@@ -70,7 +109,7 @@ export function WesternPage() {
           </div>
           <div className="reading-grid">
             <h3>宫位</h3>
-            {result.houses.slice(0, 6).map((h) => (
+            {result.houses.map((h) => (
               <article key={h.number}>
                 <span>{h.name}</span>
                 <strong>{h.sign}</strong>

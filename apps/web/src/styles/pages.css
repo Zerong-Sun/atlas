@@ -1052,6 +1052,18 @@
   font-size: 12px;
 }
 
+.method-deep-symbol-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.method-deep-symbol-section h3 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
 .method-deep-symbol-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2906,6 +2918,24 @@
   border-radius: var(--radius-sm);
   min-height: 72px;
   font-size: 12px;
+}
+
+button.palace-grid__cell {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+button.palace-grid__cell:hover {
+  border-color: var(--color-gold-dim);
+}
+
+.palace-grid__cell--selected {
+  border-color: var(--color-gold);
+  box-shadow: inset 0 0 0 1px var(--color-gold-dim);
 }
 
 .palace-grid__cell strong {

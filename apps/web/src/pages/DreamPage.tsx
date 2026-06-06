@@ -12,7 +12,9 @@ export function DreamPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchDreamTrend().catch(() => setError("梦境趋势加载失败。"));
+    fetchDreamTrend()
+      .then(setTrend)
+      .catch(() => setError("梦境趋势加载失败。"));
   }, []);
 
   const handleSubmit = async (text: string, emotions: string[], symbols: string[]) => {

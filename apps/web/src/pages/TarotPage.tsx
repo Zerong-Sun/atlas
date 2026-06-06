@@ -1,9 +1,9 @@
 import { useMemo, useState, type CSSProperties } from "react";
+import { drawTarotSpread, interpretTarot, normalizeTarotCardName, toInterpretTarotCards } from "@atlas/engines";
 import {
   TAROT_DECK,
   buildTarotCombination,
   getCardMeaning,
-  getTarotDeck,
   type TarotCard,
   type TarotSuit,
 } from "@/data/tarotDeck";
@@ -14,10 +14,17 @@ import {
   TAROT_SPREAD_LIBRARY,
   getScenarioLens,
 } from "@/data/tarotAdvancedLibrary";
+import {
+  appendTarotDrawHistory,
+  getTarotDrawHistory,
+  getTarotSenseRecords,
+  saveTarotSenseRecord,
+  type TarotDrawHistoryItem,
+} from "@/lib/storage";
+import type { MatchedRule } from "@atlas/shared-types";
 import { Page } from "@/components/ui/Page";
 
 type DeckMode = "major" | "full";
-type SpreadMode = "three" | "decision" | "mirror";
 type DrawPhase = "idle" | "shuffling" | "drawing" | "revealed";
 
 type DrawnCard = TarotCard & {
@@ -30,53 +37,33 @@ type PlaceholderCard = {
   placeholder: true;
 };
 
-type HistoryItem = {
-  id: string;
-  time: string;
-  spread: string;
-  question: string;
-  summary: string;
-};
+type HistoryItem = TarotDrawHistoryItem;
 
 type SuitFilter = "all" | TarotSuit;
 
-const SPREADS: Record<SpreadMode, { label: string; positions: string[]; note: string }> = {
-  three: {
-    label: "三牌阵",
-    positions: ["成因", "核心", "建议"],
-    note: "适合快速看一件事的来龙去脉。",
-  },
-  decision: {
-    label: "抉择阵",
-    positions: ["方案 A", "方案 B", "隐藏条件", "建议"],
-    note: "适合两个选择之间的比较。",
-  },
-  mirror: {
-    label: "关系镜像",
-    positions: ["我方状态", "对方状态", "关系张力", "下一步"],
-    note: "适合关系、合作与互动议题。",
-  },
-};
+const SPREAD_MAP = Object.fromEntries(TAROT_SPREAD_LIBRARY.map((s) => [s.id, s]));
 
 export function TarotPage() {
   const [question, setQuestion] = useState("");
   const [mode, setMode] = useState<DeckMode>("major");
-  const [spreadMode, setSpreadMode] = useState<SpreadMode>("three");
+  const [spreadId, setSpreadId] = useState("three-timeline");
   const [cards, setCards] = useState<DrawnCard[]>([]);
+  const [interpretation, setInterpretation] = useState<ReturnType<typeof interpretTarot> | null>(null);
   const [phase, setPhase] = useState<DrawPhase>("idle");
   const [lastDraw, setLastDraw] = useState("");
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [history, setHistory] = useState<HistoryItem[]>(() => getTarotDrawHistory());
+  const [senseCardId, setSenseCardId] = useState("");
+  const [senseFields, setSenseFields] = useState<Record<string, string>>({});
   const [copyState, setCopyState] = useState("");
   const [libraryQuery, setLibraryQuery] = useState("");
   const [suitFilter, setSuitFilter] = useState<SuitFilter>("all");
 
-  const spread = SPREADS[spreadMode];
+  const spread = SPREAD_MAP[spreadId] ?? TAROT_SPREAD_LIBRARY[1]!;
   const combo = useMemo(() => buildTarotCombination(cards), [cards]);
-  const selectedDeck = useMemo(() => getTarotDeck(mode), [mode]);
   const isBusy = phase === "shuffling" || phase === "drawing";
   const dailyCard = useMemo(() => getDailyCard(), []);
   const scenarioLens = useMemo(() => getScenarioLens(question), [question]);
-  const readingText = useMemo(() => buildReadingText(question, spread.label, cards, combo), [cards, combo, question, spread.label]);
+  const readingText = useMemo(() => buildReadingText(question, spread.name, cards, combo, interpretation), [cards, combo, question, spread.name, interpretation]);
   const libraryCards = useMemo(() => {
     const q = libraryQuery.trim().toLowerCase();
     return TAROT_DECK.filter((card) => {
@@ -92,37 +79,44 @@ export function TarotPage() {
   const draw = () => {
     if (isBusy) return;
     setCards([]);
+    setInterpretation(null);
     setPhase("shuffling");
 
     window.setTimeout(() => {
-      const deck = [...selectedDeck];
-      const next: DrawnCard[] = [];
-      for (const position of spread.positions) {
-        const index = Math.floor(Math.random() * deck.length);
-        const card = deck.splice(index, 1)[0];
-        next.push({ ...card, position, reversed: Math.random() > 0.72 });
-      }
+      const seed = `${Date.now()}-${question}-${spreadId}`;
+      const result = drawTarotSpread({
+        seed,
+        spreadId,
+        includeMinor: mode === "full",
+      });
+      const next: DrawnCard[] = result.cards.map((drawn) => {
+        const full = resolveTarotCard(drawn.name);
+        return { ...full, position: drawn.position, reversed: drawn.reversed };
+      });
+      const interp = interpretTarot(toInterpretTarotCards(result.cards), { question });
       setCards(next);
+      setInterpretation(interp);
       setPhase("drawing");
       const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
       setLastDraw(time);
-      setHistory((items) => [
-        {
-          id: `${Date.now()}`,
-          time,
-          spread: spread.label,
-          question: question.trim() || "当下趋势",
-          summary: next.map((card) => `${card.position}:${card.name}${card.reversed ? "逆" : "正"}`).join(" / "),
-        },
-        ...items,
-      ].slice(0, 6));
+      const item: HistoryItem = {
+        id: `${Date.now()}`,
+        time,
+        spread: spread.name,
+        spreadId,
+        question: question.trim() || "当下趋势",
+        cards: next.map((c) => ({ name: c.name, position: c.position, reversed: c.reversed })),
+      };
+      appendTarotDrawHistory(item);
+      setHistory(getTarotDrawHistory());
       window.setTimeout(() => setPhase("revealed"), 680);
     }, 820);
   };
 
-  const resetSpread = (nextSpread: SpreadMode) => {
-    setSpreadMode(nextSpread);
+  const resetSpread = (nextSpreadId: string) => {
+    setSpreadId(nextSpreadId);
     setCards([]);
+    setInterpretation(null);
     setPhase("idle");
   };
 
@@ -167,7 +161,7 @@ export function TarotPage() {
                 <button key={item.id} type="button">
                   <span>{item.time} · {item.spread}</span>
                   <strong>{item.question}</strong>
-                  <em>{item.summary}</em>
+                  <em>{item.cards.map((c) => `${c.position}:${c.name}${c.reversed ? "逆" : "正"}`).join(" / ")}</em>
                 </button>
               ))}
             </div>
@@ -190,18 +184,18 @@ export function TarotPage() {
             </button>
           </div>
           <div className="spread-toggle" role="group" aria-label="牌阵选择">
-            {(Object.entries(SPREADS) as Array<[SpreadMode, (typeof SPREADS)[SpreadMode]]>).map(([key, item]) => (
+            {TAROT_SPREAD_LIBRARY.map((item) => (
               <button
-                key={key}
+                key={item.id}
                 type="button"
-                className={spreadMode === key ? "active" : ""}
-                onClick={() => resetSpread(key)}
+                className={spreadId === item.id ? "active" : ""}
+                onClick={() => resetSpread(item.id)}
               >
-                {item.label}
+                {item.name}
               </button>
             ))}
           </div>
-          <p className="spread-note">{spread.note}</p>
+          <p className="spread-note">{spread.useCase}</p>
           <button type="button" className="draw-button" onClick={draw} disabled={isBusy}>
             {phase === "shuffling" ? "洗牌中..." : phase === "drawing" ? "抽牌中..." : cards.length ? "重新洗牌抽取" : "洗牌并抽牌"}
           </button>
@@ -273,8 +267,20 @@ export function TarotPage() {
           </article>
           <article>
             <span>组合语义</span>
-            <p>{combo}</p>
+            <p>{interpretation?.summary ?? combo}</p>
           </article>
+          {interpretation && interpretation.pairMatches.length > 0 && (
+            <article>
+              <span>组合规则命中</span>
+              <p>{interpretation.pairMatches.map((p: MatchedRule) => `${p.name}：${p.meaning}`).join("；")}</p>
+            </article>
+          )}
+          {interpretation && interpretation.scenarioSections.length > 0 && (
+            <article>
+              <span>{scenarioLens.scenario}场景解读</span>
+              <p>{interpretation.scenarioSections.map((s: { title: string; content: string }) => `${s.title}：${s.content}`).join(" ")}</p>
+            </article>
+          )}
           <article>
             <span>指点</span>
             <p>先看核心位置，再看逆位是否指出阻滞。组合解释不把牌义硬拼在一起，而是看大阿卡那比例、元素分布和牌阵位置。</p>
@@ -291,6 +297,9 @@ export function TarotPage() {
                 <span>{card.position} · {card.reversed ? "逆位" : "正位"}</span>
                 <h3>{card.name}</h3>
                 <p>{getCardMeaning(card, card.reversed)}</p>
+                {card.reversed && interpretation?.cardReadings.find((r: { name: string; reversalDetail?: string }) => r.name === card.name)?.reversalDetail && (
+                  <small>{interpretation.cardReadings.find((r: { name: string; reversalDetail?: string }) => r.name === card.name)?.reversalDetail}</small>
+                )}
                 <em>{card.advice}</em>
               </div>
             </article>
@@ -369,14 +378,53 @@ export function TarotPage() {
             </article>
           ))}
         </div>
-        <div className="method-module-inputs" aria-label="牌感记录字段">
+        <div className="method-module-inputs" aria-label="牌感记录">
+          <label>
+            <span>选择牌</span>
+            <select value={senseCardId} onChange={(e) => setSenseCardId(e.target.value)}>
+              <option value="">—</option>
+              {cards.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+            </select>
+          </label>
           {TAROT_SENSE_RECORD_FIELDS.map((field) => (
-            <span key={field.field}>{field.field}：{field.prompt}</span>
+            <label key={field.field}>
+              <span>{field.field}</span>
+              <input
+                value={senseFields[field.field] ?? ""}
+                onChange={(e) => setSenseFields((prev) => ({ ...prev, [field.field]: e.target.value }))}
+                placeholder={field.prompt}
+              />
+            </label>
           ))}
+          <button
+            type="button"
+            disabled={!senseCardId}
+            onClick={() => {
+              const card = cards.find((c) => c.id === senseCardId);
+              if (!card) return;
+              saveTarotSenseRecord({
+                cardId: card.id,
+                cardName: card.name,
+                fields: senseFields,
+                updatedAt: new Date().toISOString(),
+              });
+            }}
+          >
+            保存牌感
+          </button>
+          {senseCardId && getTarotSenseRecords()[senseCardId] && (
+            <p className="muted">已保存该牌的牌感记录</p>
+          )}
         </div>
       </section>
     </Page>
   );
+}
+
+const deckByName = Object.fromEntries(TAROT_DECK.map((c) => [c.name, c]));
+
+function resolveTarotCard(name: string): TarotCard {
+  return deckByName[normalizeTarotCardName(name)] ?? TAROT_DECK[0]!;
 }
 
 function DeckAnimation({ phase }: { phase: DrawPhase }) {
@@ -396,14 +444,23 @@ function getDailyCard() {
   return TAROT_DECK[seed % TAROT_DECK.length];
 }
 
-function buildReadingText(question: string, spread: string, cards: DrawnCard[], combo: string) {
+function buildReadingText(
+  question: string,
+  spread: string,
+  cards: DrawnCard[],
+  combo: string,
+  interpretation: ReturnType<typeof interpretTarot> | null,
+) {
   const lines = [
     `问题：${question.trim() || "当下趋势"}`,
     `牌阵：${spread}`,
     "",
     ...cards.map((card) => `${card.position}：${card.name}${card.reversed ? "（逆位）" : "（正位）"} - ${getCardMeaning(card, card.reversed)}`),
     "",
-    `组合解释：${combo}`,
+    `组合解释：${interpretation?.summary ?? combo}`,
   ];
+  if (interpretation?.pairMatches.length) {
+    lines.push("", "组合规则：", ...interpretation.pairMatches.map((p: MatchedRule) => p.meaning ?? ""));
+  }
   return lines.join("\n");
 }

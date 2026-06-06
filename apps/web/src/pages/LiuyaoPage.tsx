@@ -74,6 +74,11 @@ export function LiuyaoPage() {
         <p className="muted">{LIUYAO_USEFUL_GOD[subjectType]?.note}</p>
         <div className="coin-cast">
           <p>第 {Math.min(castStep + 1, 6)} 爻 / 6（点击铜钱起卦）</p>
+          {coinLines.length > 0 && (
+            <p className="muted coin-cast__progress">
+              已得：{coinLines.map((v) => (v === 6 ? "老阳" : v === 7 ? "少阳" : v === 8 ? "少阴" : "老阴")).join(" · ")}
+            </p>
+          )}
           <button type="button" className="primary-btn" onClick={throwCoins} disabled={castStep >= 6}>
             🪙 掷铜钱
           </button>

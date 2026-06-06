@@ -16,6 +16,8 @@ declare module "lunar-javascript" {
         getDayInGanZhi(): string;
         getTimeInGanZhi(): string;
         getYearShengXiao(): string;
+        getJieQi(): string | null;
+        getPrevJieQi(): { getName(): string } | null;
         toString(): string;
       };
     };

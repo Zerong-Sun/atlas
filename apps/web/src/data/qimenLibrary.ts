@@ -30,6 +30,7 @@ export type QimenPattern = {
   applications: string;
   cautions: string;
   actionHint: string;
+  predicate?: { type: string; heaven?: string; earth?: string; door?: string; palace?: string };
 };
 
 export type QimenRule = {
@@ -157,7 +158,12 @@ export const QIMEN_PATTERNS: QimenPattern[] = [
   { id: "men-po", name: "门迫", category: "关系结构", level: "凶", formation: "门五行克落宫五行。", meaning: "行动方式压迫环境，费力且容易被迫。", applications: "项目推进、沟通、出行择方需重点降权。", cautions: "吉门受迫仍吉力打折。", actionHint: "换方法、换入口、换方位。" },
   { id: "ji-xing", name: "击刑", category: "关系结构", level: "凶", formation: "宫位、干支触发自刑或刑伤结构。", meaning: "内耗、急躁、失序、局部损伤。", applications: "防操作失误、团队内耗、身体损伤。", cautions: "小事可表现为烦躁和返工。", actionHint: "先定规则、流程和边界。" },
   { id: "ru-mu", name: "入墓", category: "关系结构", level: "平", formation: "用神或关键干落墓库之宫。", meaning: "力量收藏，行动迟滞；问财可为入库。", applications: "财物、档案、库存、旧案、身体恢复。", cautions: "须分收藏与困住。", actionHint: "找钥匙：权限、凭证、时间点或开启条件。" },
-  { id: "kong-wang", name: "空亡", category: "关系结构", level: "凶", formation: "用神落旬空。", meaning: "信息未实、资源未到、承诺悬空。", applications: "问消息、合同、到款、关系确认要谨慎。", cautions: "冲实、填实之时可转实。", actionHint: "等待确认，不用空消息做最终决策。" },
+  { id: "kong-wang", name: "空亡", category: "关系结构", level: "凶", formation: "用神落旬空。", meaning: "信息未实、资源未到、承诺悬空。", applications: "问消息、合同、到款、关系确认要谨慎。", cautions: "冲实、填实之时可转实。", actionHint: "等待确认，不用空消息做最终决策。", predicate: { type: "kongWang" } },
+  { id: "yi-qi-de-shi", name: "乙奇得使", category: "门奇吉格", level: "吉", formation: "乙奇临值使门。", meaning: "柔性资源被行动入口承接。", applications: "利协商、文书、关系修复。", cautions: "须看用神相关。", actionHint: "走私下沟通渠道。", predicate: { type: "stemOnDoor", heaven: "乙", earth: "" } },
+  { id: "bing-qi-de-shi", name: "丙奇得使", category: "门奇吉格", level: "吉", formation: "丙奇临值使门。", meaning: "曝光与突破被行动入口承接。", applications: "利发布、面试、宣传。", cautions: "火土过燥则虚热。", actionHint: "把亮点落成具体材料。", predicate: { type: "stemOnDoor", heaven: "丙", earth: "" } },
+  { id: "geng-jia-shi-gan", name: "庚加时干", category: "庚格", level: "凶", formation: "天盘庚加地盘时干。", meaning: "阻力在时机与执行层面显现。", applications: "防延期、审批卡顿。", cautions: "可换时间或角色。", actionHint: "改走流程与第三人沟通。", predicate: { type: "stemCombo", heaven: "庚", earth: "时" } },
+  { id: "kai-men-qian", name: "开门临乾", category: "门宫格", level: "吉", formation: "开门落乾六宫。", meaning: "事业、规则、上级通道打开。", applications: "利见贵、审批、公开项目。", cautions: "需看门迫与空亡。", actionHint: "走正式、高层路线。", predicate: { type: "doorAtPalace", door: "开门", palace: "乾六" } },
+  { id: "sheng-men-kun", name: "生门临坤", category: "门宫格", level: "吉", formation: "生门落坤二宫。", meaning: "财路与落地平台相合。", applications: "利经营、置业、协作。", cautions: "推进偏慢。", actionHint: "先稳基础再扩张。", predicate: { type: "doorAtPalace", door: "生门", palace: "坤二" } },
 ];
 
 export const QIMEN_ZHIFU_ZHISHI_RULES: QimenRule[] = [

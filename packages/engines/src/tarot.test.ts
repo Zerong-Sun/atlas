@@ -18,9 +18,16 @@ describe("drawTarotSpread", () => {
   it("golden: known seed yields fixed spread", () => {
     const r = drawTarotSpread("reading-golden-v1");
     const cards = r.cards as Array<{ name: string; position: string }>;
+    assert.equal(cards.length, 3);
     assert.deepEqual(
       cards.map((c) => c.name),
-      ["死神", "节制", "正义"]
+      ["太阳", "圣杯四", "圣杯国王"],
     );
+  });
+
+  it("supports spread selection", () => {
+    const r = drawTarotSpread({ seed: "spread-test", spreadId: "one-card" });
+    assert.equal(r.cards.length, 1);
+    assert.equal(r.spreadId, "one-card");
   });
 });

@@ -1,5 +1,10 @@
-import Astronomy from "astronomy-engine";
+import * as AstronomyModule from "astronomy-engine";
 import type { EngineInput } from "./index.js";
+
+/** CJS default in Node tests; named exports in Vite/Rollup ESM. */
+const Astronomy = (
+  (AstronomyModule as { default?: typeof AstronomyModule }).default ?? AstronomyModule
+) as typeof AstronomyModule;
 
 const SIGNS = [
   "白羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座",
