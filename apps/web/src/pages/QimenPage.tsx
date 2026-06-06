@@ -45,7 +45,7 @@ export function QimenPage() {
       ju: chart.ju,
       summary: interpretation.summary,
     });
-  }, [computeKey]); // eslint-disable-line react-hooks/exhaustive-deps -- history once per compute
+  }, [chart, interpretation, juMethod, question, questionType, timestamp]);
 
   return (
     <Page wide className="qimen-page">

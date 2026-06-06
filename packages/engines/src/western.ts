@@ -1,4 +1,5 @@
 import * as AstronomyModule from "astronomy-engine";
+import type { Body } from "astronomy-engine";
 import type { EngineInput } from "./index.js";
 
 /** CJS default in Node tests; named exports in Vite/Rollup ESM. */
@@ -93,15 +94,18 @@ function toJulianDate(y: number, m: number, d: number, hour: number, minute: num
   return new Date(Date.UTC(y, m - 1, d, hour - 8, minute));
 }
 
-function eclipticLongitude(body: Astronomy.Body, time: InstanceType<typeof Astronomy.AstroTime>, observer: InstanceType<typeof Astronomy.Observer>): number {
+type AstroTime = ReturnType<typeof Astronomy.MakeTime>;
+type AstroObserver = InstanceType<typeof Astronomy.Observer>;
+
+function eclipticLongitude(body: Body, time: AstroTime, observer: AstroObserver): number {
   const eq = Astronomy.Equator(body, time, observer, true, true);
   const lon = eq.ra * 15;
   return ((lon % 360) + 360) % 360;
 }
 
 function computeAscMc(
-  time: InstanceType<typeof Astronomy.AstroTime>,
-  observer: InstanceType<typeof Astronomy.Observer>
+  time: AstroTime,
+  observer: AstroObserver
 ): { asc: number; mc: number } {
   const gst = Astronomy.SiderealTime(time);
   const lst = (gst + observer.longitude / 15) % 24;

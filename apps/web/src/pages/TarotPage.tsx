@@ -421,7 +421,9 @@ export function TarotPage() {
   );
 }
 
-const deckByName = Object.fromEntries(TAROT_DECK.map((c) => [c.name, c]));
+const deckByName: Record<string, TarotCard> = Object.fromEntries(
+  TAROT_DECK.map((card) => [normalizeTarotCardName(card.name), card])
+);
 
 function resolveTarotCard(name: string): TarotCard {
   return deckByName[normalizeTarotCardName(name)] ?? TAROT_DECK[0]!;
