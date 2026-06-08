@@ -6,6 +6,8 @@
 
 > 核心不是「告诉你命运是什么」，而是把不同文明的象征系统放在同一张桌上，让用户看见解释、依据与差异。
 
+**在线体验（无需自行部署）：** [https://zhuxiang.vercel.app](https://zhuxiang.vercel.app)
+
 ## 特性
 
 - **多体系对照** — 同一输入并行调用多个学派，保留差异而非强行合并
@@ -50,6 +52,8 @@ atlas/
 - **npm**（workspace monorepo）
 
 ## 快速开始
+
+直接使用 [在线版](https://zhuxiang.vercel.app) 即可体验；以下为本地开发与贡献者指引。
 
 ### 1. 安装依赖
 
