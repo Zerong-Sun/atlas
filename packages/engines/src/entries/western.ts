@@ -1,1 +1,1 @@
-export { computeWestern, type WesternResult } from "../western.js";
+export { computeWestern, type WesternResult } from "../western.ts";

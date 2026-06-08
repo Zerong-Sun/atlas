@@ -1,1 +1,1 @@
-export { castLiuyao, type LiuyaoResult } from "../liuyao.js";
+export { castLiuyao, type LiuyaoResult } from "../liuyao.ts";

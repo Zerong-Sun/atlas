@@ -1,24 +1,24 @@
 import type { StructuredFacts, Tradition } from "@atlas/shared-types";
-import { computeBazi, type BaziResult } from "./bazi.js";
+import { computeBazi, type BaziResult } from "./bazi.ts";
 import {
   computeBaziCompatibility,
   type BaziCompatibilityInput,
   type BaziCompatibilityResult,
   type RelationshipContext,
-} from "./bazi-compatibility.js";
-import { computeWestern, type WesternResult } from "./western.js";
-import { drawTarotSpread, type TarotSpreadResult, type DrawnTarotCardResult } from "./tarot.js";
-import { interpretTarot } from "./tarot-interpret.js";
-import { toInterpretTarotCards } from "./tarot-adapters.js";
-import { castIChing } from "./iching.js";
-import { computeQimen, type QimenResult, type QimenPalace } from "./qimen.js";
-import { interpretQimen } from "./qimen-interpret.js";
-import { interpretBazi } from "./bazi-interpret.js";
-import { drawLenormand, type LenormandResult } from "./lenormand.js";
-import { drawLot, type LotResult } from "./lot.js";
-import { castLiuyao, type LiuyaoResult } from "./liuyao.js";
-import { computeFengshui, type FengshuiResult } from "./fengshui.js";
-import { computeZiwei, type ZiweiResult } from "./ziwei.js";
+} from "./bazi-compatibility.ts";
+import { computeWestern, type WesternResult } from "./western.ts";
+import { drawTarotSpread, type TarotSpreadResult, type DrawnTarotCardResult } from "./tarot.ts";
+import { interpretTarot } from "./tarot-interpret.ts";
+import { toInterpretTarotCards } from "./tarot-adapters.ts";
+import { castIChing } from "./iching.ts";
+import { computeQimen, type QimenResult, type QimenPalace } from "./qimen.ts";
+import { interpretQimen } from "./qimen-interpret.ts";
+import { interpretBazi } from "./bazi-interpret.ts";
+import { drawLenormand, type LenormandResult } from "./lenormand.ts";
+import { drawLot, type LotResult } from "./lot.ts";
+import { castLiuyao, type LiuyaoResult } from "./liuyao.ts";
+import { computeFengshui, type FengshuiResult } from "./fengshui.ts";
+import { computeZiwei, type ZiweiResult } from "./ziwei.ts";
 
 export {
   computeBazi,
@@ -50,14 +50,14 @@ export {
   type TarotSpreadResult,
   type DrawnTarotCardResult,
 };
-export { toInterpretTarotCards } from "./tarot-adapters.js";
-export { normalizeTarotCardName, tarotNamesMatch, TAROT_NAME_ALIASES } from "./tarot-names.js";
-export { TAROT_DECK, TAROT_SPREADS, TAROT_PAIR_RULES, buildTarotCombination } from "./tarot.js";
-export { matchRules, type RuleWithPredicate, type RulePredicate } from "./rule-match.js";
-export { BAZI_CLASSICS_LIBRARY, selectBaziClassics, type BaziClassicEntry } from "./bazi-classics.js";
-export { LENORMAND_CARDS } from "./lenormand.js";
-export { registerLotSigns, getLotSigns, type LotSign } from "./lot.js";
-export { MOUNTAINS_24, FLYING_STARS } from "./fengshui.js";
+export { toInterpretTarotCards } from "./tarot-adapters.ts";
+export { normalizeTarotCardName, tarotNamesMatch, TAROT_NAME_ALIASES } from "./tarot-names.ts";
+export { TAROT_DECK, TAROT_SPREADS, TAROT_PAIR_RULES, buildTarotCombination } from "./tarot.ts";
+export { matchRules, type RuleWithPredicate, type RulePredicate } from "./rule-match.ts";
+export { BAZI_CLASSICS_LIBRARY, selectBaziClassics, type BaziClassicEntry } from "./bazi-classics.ts";
+export { LENORMAND_CARDS } from "./lenormand.ts";
+export { registerLotSigns, getLotSigns, type LotSign } from "./lot.ts";
+export { MOUNTAINS_24, FLYING_STARS } from "./fengshui.ts";
 
 export interface EngineInput {
   birthDate?: string;

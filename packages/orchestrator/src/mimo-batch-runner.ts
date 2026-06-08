@@ -1,4 +1,4 @@
-import { MimoGateway, type MimoMessage } from "./mimo-gateway.js";
+import { MimoGateway, type MimoMessage } from "./mimo-gateway.ts";
 
 export interface MimoBatchTask {
   id: string;

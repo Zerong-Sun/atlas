@@ -1,5 +1,5 @@
 import type { LenormandInput, LenormandSpread } from "@atlas/shared-types";
-import { shuffleWithSeed } from "./seed.js";
+import { shuffleWithSeed } from "./seed.ts";
 
 export const LENORMAND_CARDS = [
   { id: 1, name: "骑士", keywords: ["行动", "消息", "改变"] },

@@ -1,6 +1,6 @@
 import * as AstronomyModule from "astronomy-engine";
 import type { Body } from "astronomy-engine";
-import type { EngineInput } from "./index.js";
+import type { EngineInput } from "./index.ts";
 
 /** Node tests use CJS default; Vite/Rollup use named ESM exports on the namespace. */
 const Astronomy = (

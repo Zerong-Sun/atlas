@@ -1,5 +1,5 @@
 import type { SourceChunkRef, Tradition } from "@atlas/shared-types";
-import { SEED_CORPUS_FALLBACK } from "./seed-corpus-fallback.js";
+import { SEED_CORPUS_FALLBACK } from "./seed-corpus-fallback.ts";
 
 export interface ChunkRecord {
   chunkId: string;

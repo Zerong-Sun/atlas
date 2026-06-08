@@ -1,4 +1,4 @@
-import { computeBazi, type BaziResult } from "./bazi.js";
+import { computeBazi, type BaziResult } from "./bazi.ts";
 import {
   detectBranchRelations,
   detectStemRelation,
@@ -6,7 +6,7 @@ import {
   getElementRelation,
   type BranchRelationTone,
   type Element,
-} from "./bazi-branch-relations.js";
+} from "./bazi-branch-relations.ts";
 
 export type RelationshipContext = "romance" | "friendship" | "family" | "business" | "general";
 

@@ -1,1 +1,1 @@
-export { drawLot, getLotSigns, registerLotSigns, type LotResult, type LotSign } from "../lot.js";
+export { drawLot, getLotSigns, registerLotSigns, type LotResult, type LotSign } from "../lot.ts";

@@ -1,4 +1,4 @@
-import type { ChunkRecord } from "./hybrid-retrieval.js";
+import type { ChunkRecord } from "./hybrid-retrieval.ts";
 
 /** Expanded offline corpus when DB is empty — sourced from corpus_v0_1 seed structure. */
 export const SEED_CORPUS_FALLBACK: ChunkRecord[] = [

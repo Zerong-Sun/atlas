@@ -1,6 +1,6 @@
 import type { BaziInterpretResult, MatchedRule, MatchedRuleEvidence } from "@atlas/shared-types";
-import type { BaziResult } from "./bazi.js";
-import { selectBaziClassics } from "./bazi-classics.js";
+import type { BaziResult } from "./bazi.ts";
+import { selectBaziClassics } from "./bazi-classics.ts";
 
 type BaziCtx = {
   result: BaziResult;

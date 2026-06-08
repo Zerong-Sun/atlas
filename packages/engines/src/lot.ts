@@ -1,5 +1,5 @@
 import type { LotInput, LotTemple } from "@atlas/shared-types";
-import { createRng } from "./seed.js";
+import { createRng } from "./seed.ts";
 
 export type LotGrade = "上签" | "中签" | "下签";
 export type LotCategory = "career" | "love" | "health" | "general";

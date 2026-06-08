@@ -9,10 +9,10 @@ import type {
   UserProfile,
 } from "@atlas/shared-types";
 import { READING_SECTION_ORDER } from "@atlas/shared-types";
-import { CitationVerifier, type VerifiableCitation } from "./citation-verifier.js";
-import { HybridRetrieval, type ChunkRecord } from "./hybrid-retrieval.js";
-import { MimoGateway } from "./mimo-gateway.js";
-import { SafetyPolicy } from "./safety-policy.js";
+import { CitationVerifier, type VerifiableCitation } from "./citation-verifier.ts";
+import { HybridRetrieval, type ChunkRecord } from "./hybrid-retrieval.ts";
+import { MimoGateway } from "./mimo-gateway.ts";
+import { SafetyPolicy } from "./safety-policy.ts";
 
 const TRADITION_LABELS: Record<Tradition, string> = {
   bazi: "八字",

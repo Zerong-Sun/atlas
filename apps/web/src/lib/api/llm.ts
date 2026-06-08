@@ -34,6 +34,37 @@ export interface LlmConnectionTestResult {
   message: string;
 }
 
+type LlmChoice = {
+  message?: {
+    content?: string | null;
+    reasoning_content?: string | null;
+  };
+  finish_reason?: string | null;
+};
+
+type LlmCompletionResponse = {
+  model?: string;
+  choices?: LlmChoice[];
+  error?: { message?: string };
+};
+
+function extractChoiceContent(choice?: LlmChoice): string {
+  const message = choice?.message;
+  if (!message) return "";
+  return (message.content?.trim() || message.reasoning_content?.trim() || "");
+}
+
+/** DeepSeek V4 defaults to thinking mode; disable for short probes and structured output. */
+function deepSeekRequestExtras(config: { model: string; baseUrl: string }): Record<string, unknown> {
+  try {
+    const host = new URL(normalizeLlmBaseUrl(config.baseUrl)).hostname;
+    const isDeepSeek = host === "api.deepseek.com" || config.model.startsWith("deepseek-");
+    return isDeepSeek ? { thinking: { type: "disabled" } } : {};
+  } catch {
+    return config.model.startsWith("deepseek-") ? { thinking: { type: "disabled" } } : {};
+  }
+}
+
 function devEnvApiKey(): string {
   return import.meta.env.DEV ? (import.meta.env.VITE_LLM_API_KEY ?? "") : "";
 }
@@ -101,6 +132,7 @@ export async function llmComplete(options: LlmCompletionOptions): Promise<LlmCom
         messages: options.messages,
         max_tokens: options.maxTokens ?? 700,
         ...(options.responseFormat === "json" ? { response_format: { type: "json_object" } } : {}),
+        ...deepSeekRequestExtras(config),
       },
       config,
     );
@@ -110,10 +142,8 @@ export async function llmComplete(options: LlmCompletionOptions): Promise<LlmCom
       return { content: "", degraded: true };
     }
 
-    const data = (await res.json()) as {
-      choices?: Array<{ message?: { content?: string } }>;
-    };
-    const content = data.choices?.[0]?.message?.content ?? "";
+    const data = (await res.json()) as LlmCompletionResponse;
+    const content = extractChoiceContent(data.choices?.[0]);
     return { content, degraded: !content };
   } catch (e) {
     console.warn("[llm] request error:", e);
@@ -133,8 +163,9 @@ export async function testLlmConnection(
     const res = await llmFetch(
       {
         model: config.model,
-        messages: [{ role: "user", content: "ping" }],
-        max_tokens: 5,
+        messages: [{ role: "user", content: "Reply with exactly: pong" }],
+        max_tokens: 64,
+        ...deepSeekRequestExtras(config),
       },
       config,
     );
@@ -144,12 +175,27 @@ export async function testLlmConnection(
       return { ok: false, message: friendlyLlmError(res.status) };
     }
 
-    const data = (await res.json()) as {
-      choices?: Array<{ message?: { content?: string } }>;
-    };
-    const content = data.choices?.[0]?.message?.content ?? "";
+    const data = (await res.json()) as LlmCompletionResponse;
+    const choice = data.choices?.[0];
+    const content = extractChoiceContent(choice);
     if (!content) {
-      return { ok: false, message: "已连接但模型未返回内容，请检查模型名称。" };
+      const finishReason = choice?.finish_reason;
+      if (finishReason === "length") {
+        return {
+          ok: false,
+          message:
+            "模型有响应但输出被截断。若使用 thinking 模型，请改用 deepseek-chat，或换更大的 max_tokens。",
+        };
+      }
+      const upstreamError = data.error?.message;
+      if (upstreamError) {
+        return { ok: false, message: upstreamError };
+      }
+      return {
+        ok: false,
+        message:
+          "已连接但模型未返回内容。DeepSeek V4 默认开启 thinking 模式，请确认模型为 deepseek-v4-flash 或 deepseek-chat，Base URL 为 https://api.deepseek.com/v1。",
+      };
     }
 
     return { ok: true, message: "连接成功，LLM 可用。" };

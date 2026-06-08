@@ -1,1 +1,1 @@
-export { computeFengshui, type FengshuiResult } from "../fengshui.js";
+export { computeFengshui, type FengshuiResult } from "../fengshui.ts";

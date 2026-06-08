@@ -1,6 +1,6 @@
 import type { TarotInterpretResult, MatchedRule } from "@atlas/shared-types";
-import type { TarotDeckCard } from "./tarot-deck.js";
-import { normalizeTarotCardName, tarotNamesMatch } from "./tarot-names.js";
+import type { TarotDeckCard } from "./tarot-deck.ts";
+import { normalizeTarotCardName, tarotNamesMatch } from "./tarot-names.ts";
 
 export type DrawnTarotCard = TarotDeckCard & {
   reversed: boolean;

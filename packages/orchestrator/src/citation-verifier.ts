@@ -1,5 +1,5 @@
 import type { CitationSnapshot } from "@atlas/shared-types";
-import type { ChunkRecord } from "./hybrid-retrieval.js";
+import type { ChunkRecord } from "./hybrid-retrieval.ts";
 
 export interface VerifiableCitation {
   chunkId: string;

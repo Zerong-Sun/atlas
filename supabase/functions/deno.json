@@ -1,9 +1,12 @@
 {
   "imports": {
-    "@atlas/engines": "../../../packages/engines/src/index.ts",
-    "@atlas/shared-types": "../../../packages/shared-types/src/index.ts",
-    "@atlas/orchestrator": "../../../packages/orchestrator/src/index.ts",
-    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.49.1"
+    "@atlas/engines": "../../packages/engines/src/index.ts",
+    "@atlas/shared-types": "../../packages/shared-types/src/index.ts",
+    "@atlas/orchestrator": "../../packages/orchestrator/src/index.ts",
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.49.1",
+    "lunar-javascript": "npm:lunar-javascript@1.7.7",
+    "astronomy-engine": "npm:astronomy-engine@2.1.19",
+    "iztro": "npm:iztro@2.5.8"
   },
   "compilerOptions": {
     "lib": ["deno.window", "deno.unstable"]

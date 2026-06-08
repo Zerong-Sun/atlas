@@ -1,6 +1,6 @@
 import { Solar } from "lunar-javascript";
 import type { LiuyaoInput } from "@atlas/shared-types";
-import { createRng } from "./seed.js";
+import { createRng } from "./seed.ts";
 
 /** 6=老阳(动), 7=少阳, 8=少阴, 9=老阴(动) */
 export type YaoValue = 6 | 7 | 8 | 9;

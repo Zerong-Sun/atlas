@@ -1,6 +1,6 @@
 import type { QimenInterpretResult, MatchedRule, MatchedRuleEvidence, TimingWindow, DirectionAdvice } from "@atlas/shared-types";
-import type { QimenResult, QimenPalace } from "./qimen.js";
-import { matchRules, type RuleWithPredicate, type RulePredicate } from "./rule-match.js";
+import type { QimenResult, QimenPalace } from "./qimen.ts";
+import { matchRules, type RuleWithPredicate, type RulePredicate } from "./rule-match.ts";
 
 export type QimenPatternRule = RuleWithPredicate & {
   category: string;

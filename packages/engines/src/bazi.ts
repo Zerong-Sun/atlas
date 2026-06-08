@@ -1,7 +1,7 @@
 import { Solar } from "lunar-javascript";
-import type { EngineInput } from "./index.js";
-import { selectBaziClassics } from "./bazi-classics.js";
-import { detectCombinationsInChart } from "./bazi-branch-relations.js";
+import type { EngineInput } from "./index.ts";
+import { selectBaziClassics } from "./bazi-classics.ts";
+import { detectCombinationsInChart } from "./bazi-branch-relations.ts";
 
 /* ── Constants ── */
 export const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];

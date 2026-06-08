@@ -1,1 +1,1 @@
-export { computeZiwei, type ZiweiResult } from "../ziwei.js";
+export { computeZiwei, type ZiweiResult } from "../ziwei.ts";

@@ -1,5 +1,5 @@
-import type { DrawnTarotCardResult } from "./tarot.js";
-import type { DrawnTarotCard } from "./tarot-interpret.js";
+import type { DrawnTarotCardResult } from "./tarot.ts";
+import type { DrawnTarotCard } from "./tarot-interpret.ts";
 
 /** Map engine draw results to interpretTarot input. */
 export function toInterpretTarotCards(cards: DrawnTarotCardResult[]): DrawnTarotCard[] {

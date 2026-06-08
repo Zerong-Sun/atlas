@@ -1,5 +1,4 @@
-[project]
-id = "atlas-local"
+project_id = "ogeovdvdsijhmaimhwcn"
 
 [api]
 enabled = true
@@ -7,7 +6,7 @@ port = 54321
 
 [db]
 port = 54322
-major_version = 15
+major_version = 17
 
 [studio]
 enabled = true
@@ -15,8 +14,42 @@ port = 54323
 
 [auth]
 enabled = true
-site_url = "http://localhost:8081"
-additional_redirect_urls = ["exp://localhost:8081"]
+site_url = "https://untitled-xi-one.vercel.app"
+additional_redirect_urls = [
+  "https://untitled-xi-one.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:8081",
+  "exp://localhost:8081",
+]
 
-[functions]
+[functions.create-reading]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.create-dream]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.interpret-dream]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.daily-brief]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.get-library]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.library-list]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.list-readings]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.profile]
+import_map = "./functions/deno.json"
 verify_jwt = true

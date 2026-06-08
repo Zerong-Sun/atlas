@@ -1,18 +1,18 @@
-import { createRng, shuffleWithSeed } from "./seed.js";
+import { createRng, shuffleWithSeed } from "./seed.ts";
 import {
   TAROT_DECK,
   getSpread,
-} from "./tarot-deck.js";
-import { pickReversalLayer, buildTarotCombination, type DrawnTarotCard } from "./tarot-interpret.js";
+} from "./tarot-deck.ts";
+import { pickReversalLayer, buildTarotCombination, type DrawnTarotCard } from "./tarot-interpret.ts";
 
-export type { TarotDeckCard, TarotSpreadDefinition } from "./tarot-deck.js";
-export { TAROT_DECK, TAROT_SPREADS, getSpread, getCardByName } from "./tarot-deck.js";
+export type { TarotDeckCard, TarotSpreadDefinition } from "./tarot-deck.ts";
+export { TAROT_DECK, TAROT_SPREADS, getSpread, getCardByName } from "./tarot-deck.ts";
 export {
   interpretTarot,
   matchPairRules,
   TAROT_PAIR_RULES,
   buildTarotCombination,
-} from "./tarot-interpret.js";
+} from "./tarot-interpret.ts";
 
 export interface DrawnTarotCardResult {
   id: string;
