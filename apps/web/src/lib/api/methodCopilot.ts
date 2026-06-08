@@ -1,5 +1,6 @@
 import { getMethodCopilotAnalysisSkill, getMethodCopilotConfig } from "@/data/methodCopilotPrompts";
 import type { MethodCopilotReportSnapshot } from "@/lib/methodReportSnapshot";
+import { isLlmConfigured } from "@/lib/llmSettings";
 import { llmComplete, type LlmMessage } from "./llm";
 
 export type MethodCopilotReply = {
@@ -29,8 +30,11 @@ function sanitizeText(value: unknown, fallback: string, maxLen = 1200): string {
 
 function fallbackReply(methodId: string | null, question: string): MethodCopilotReply {
   const config = getMethodCopilotConfig(methodId);
+  const answer = isLlmConfigured()
+    ? `解说请求失败，暂时无法针对「${question.slice(0, 40)}」生成 ${config.title} 回复。请稍后重试，或在设置中重新测试 LLM 连接。`
+    : `侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」（会自动保存），占梦与解说才会生效。`;
   return {
-    answer: `当前未连接解说服务，无法针对「${question.slice(0, 40)}」生成 ${config.title} 专业回复。你可在页面下方的符号词典、参考库中查阅；或在设置中配置 LLM API 后使用侧栏解说。`,
+    answer,
     diagram: "",
     relatedTerms: config.quickPrompts.slice(0, 2),
     degraded: true,
@@ -171,10 +175,10 @@ ${report.body}
   });
 
   if (res.degraded || !res.content) {
-    return {
-      ...fallbackReply(effectiveMethodId, trimmed),
-      answer: `当前未连接解说服务，无法解析「${report.title}」。请在设置中配置 LLM API 后重试。`,
-    };
+    const answer = isLlmConfigured()
+      ? `解说请求失败，暂时无法解析「${report.title}」。请稍后重试，或在设置中重新测试 LLM 连接。`
+      : `侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」（会自动保存）。`;
+    return { ...fallbackReply(effectiveMethodId, trimmed), answer };
   }
 
   return parseReply(res.content, effectiveMethodId, trimmed, 4000);

@@ -93,6 +93,17 @@ export function SettingsPage() {
   };
 
   const handleTestLlm = async () => {
+    const validationError = validateLlmSettings({
+      apiKey: llmApiKey,
+      baseUrl: llmBaseUrl,
+      model: llmModel,
+    });
+    if (validationError) {
+      setLlmTestState("error");
+      setLlmTestMessage(validationError);
+      return;
+    }
+
     setLlmTestState("testing");
     setLlmTestMessage("正在测试连接…");
     const result = await testLlmConnection({
@@ -100,8 +111,25 @@ export function SettingsPage() {
       baseUrl: llmBaseUrl,
       model: llmModel,
     });
-    setLlmTestState(result.ok ? "success" : "error");
-    setLlmTestMessage(result.message);
+    if (!result.ok) {
+      setLlmTestState("error");
+      setLlmTestMessage(result.message);
+      return;
+    }
+
+    try {
+      saveLlmSettings({
+        apiKey: llmApiKey,
+        baseUrl: llmBaseUrl,
+        model: llmModel,
+      });
+      setLlmConfigured(true);
+      setLlmTestState("success");
+      setLlmTestMessage("连接成功，配置已保存，占梦与侧栏解说可用。");
+    } catch (error) {
+      setLlmTestState("error");
+      setLlmTestMessage(error instanceof Error ? error.message : "连接成功但保存失败，请手动点击「保存」。");
+    }
   };
 
   const handleClearLlm = () => {
