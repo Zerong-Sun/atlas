@@ -1,4 +1,4 @@
-import type { QimenPalace } from "@atlas/engines";
+import type { QimenPalace } from "@atlas/engines/qimen";
 import { PalaceGrid, type PalaceCell } from "./PalaceGrid";
 
 /** 洛书序 3×3：巽4 离9 坤2 / 震3 中5 兑7 / 艮8 坎1 乾6 */

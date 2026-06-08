@@ -1,5 +1,5 @@
 import { useMemo, useState, type CSSProperties } from "react";
-import { drawTarotSpread, interpretTarot, normalizeTarotCardName, toInterpretTarotCards } from "@atlas/engines";
+import { drawTarotSpread, interpretTarot, normalizeTarotCardName, toInterpretTarotCards } from "@atlas/engines/tarot";
 import {
   TAROT_DECK,
   buildTarotCombination,
@@ -22,7 +22,12 @@ import {
   type TarotDrawHistoryItem,
 } from "@/lib/storage";
 import type { MatchedRule } from "@atlas/shared-types";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildTarotReportSnapshot } from "@/lib/methodReportSnapshot";
+import { playMethodSound } from "@/lib/methodSounds";
 
 type DeckMode = "major" | "full";
 type DrawPhase = "idle" | "shuffling" | "drawing" | "revealed";
@@ -78,6 +83,7 @@ export function TarotPage() {
 
   const draw = () => {
     if (isBusy) return;
+    playMethodSound("tarot", "action");
     setCards([]);
     setInterpretation(null);
     setPhase("shuffling");
@@ -109,7 +115,10 @@ export function TarotPage() {
       };
       appendTarotDrawHistory(item);
       setHistory(getTarotDrawHistory());
-      window.setTimeout(() => setPhase("revealed"), 680);
+      window.setTimeout(() => {
+        setPhase("revealed");
+        playMethodSound("tarot", "complete");
+      }, 680);
     }, 820);
   };
 
@@ -119,6 +128,18 @@ export function TarotPage() {
     setInterpretation(null);
     setPhase("idle");
   };
+
+  const copilotReport = useMemo(() => {
+    if (phase !== "revealed" || !cards.length) return null;
+    return buildTarotReportSnapshot({
+      question,
+      spreadName: spread.name,
+      cards,
+      combo,
+      interpretation,
+    });
+  }, [phase, cards, question, spread.name, combo, interpretation]);
+  useRegisterMethodCopilotReport(copilotReport);
 
   const copyReading = async () => {
     if (!cards.length) return;
@@ -133,11 +154,13 @@ export function TarotPage() {
 
   return (
     <Page wide className="tarot-page">
-      <section className="method-detail-hero tarot-hero">
-        <p className="method-kicker">RIDER-WAITE-SMITH TAROT</p>
-        <h1>塔罗抽卡</h1>
-        <p>使用经典 Rider-Waite-Smith 公共域卡面。先洗牌，再抽牌，最后翻开牌面并生成单牌与组合解释。</p>
-      </section>
+      <MethodHero
+        methodId="tarot"
+        kicker="RIDER-WAITE-SMITH TAROT"
+        title="塔罗抽卡"
+        description="使用经典 Rider-Waite-Smith 公共域卡面。先洗牌，再抽牌，最后翻开牌面并生成单牌与组合解释。"
+        className="tarot-hero"
+      />
 
       <section className="tarot-utility-grid" aria-label="塔罗辅助功能">
         <article className="daily-tarot-card">
@@ -254,6 +277,11 @@ export function TarotPage() {
           <p>INTERPRETATION</p>
           <h2>牌面与组合解释</h2>
         </div>
+        {phase === "revealed" && cards.length > 0 && (
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
+        )}
         {cards.length > 0 && (
           <div className="tarot-reading-actions">
             <button type="button" onClick={copyReading}>复制本次解读</button>

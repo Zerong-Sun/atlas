@@ -1,8 +1,12 @@
 import { useMemo, useState } from "react";
-import { computeFengshui, type FengshuiResult } from "@atlas/engines";
+import { computeFengshui, type FengshuiResult } from "@atlas/engines/fengshui";
 import { CompassRose } from "@/components/charts/CompassRose";
 import { PalaceGrid } from "@/components/charts/PalaceGrid";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildFengshuiReportSnapshot } from "@/lib/methodReportSnapshot";
 import { FENGSHUI_STARS } from "@/data/fengshuiLibrary";
 
 export function FengshuiPage() {
@@ -17,6 +21,9 @@ export function FengshuiPage() {
       birthYear: birthYear ? Number(birthYear) : undefined,
     });
   }, [sittingDegree, birthYear, computed]);
+
+  const copilotReport = useMemo(() => (result ? buildFengshuiReportSnapshot(result) : null), [result]);
+  useRegisterMethodCopilotReport(copilotReport);
 
   const gridCells = useMemo(() => {
     if (!result) return [];
@@ -35,11 +42,12 @@ export function FengshuiPage() {
 
   return (
     <Page wide className="fengshui-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">FENG SHUI</p>
-        <h1>风水罗盘</h1>
-        <p>坐向、玄空九宫飞星与流年重点。解读为空间象征参考，重大决策请结合建筑规范。</p>
-      </section>
+      <MethodHero
+        methodId="fengshui"
+        kicker="FENG SHUI"
+        title="风水罗盘"
+        description="坐向、玄空九宫飞星与流年重点。解读为空间象征参考，重大决策请结合建筑规范。"
+      />
 
       <section className="method-workbench fengshui-workbench">
         <CompassRose
@@ -70,6 +78,9 @@ export function FengshuiPage() {
 
       {result && (
         <section className="fengshui-result">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <p className="summary-line">{result.summary}</p>
           <p className="muted">坐向 {result.sittingMountain} · 向 {result.facingMountain} · 第 {result.period} 运</p>
           {result.mingGua && (

@@ -6,8 +6,19 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./bazi": "./src/entries/bazi.ts",
+    "./ziwei": "./src/entries/ziwei.ts",
+    "./western": "./src/entries/western.ts",
+    "./tarot": "./src/entries/tarot.ts",
+    "./qimen": "./src/entries/qimen.ts",
+    "./liuyao": "./src/entries/liuyao.ts",
+    "./lenormand": "./src/entries/lenormand.ts",
+    "./lot": "./src/entries/lot.ts",
+    "./fengshui": "./src/entries/fengshui.ts",
+    "./types": "./src/entries/types.ts"
   },
+  "sideEffects": false,
   "scripts": {
     "test": "node --import tsx --test src/**/*.test.ts"
   },

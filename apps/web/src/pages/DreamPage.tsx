@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DreamCapture } from "@/components/DreamCapture";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import { createDreamEntry, fetchDreamTrend, type DreamInterpretation } from "@/lib/api/dreams";
+import { buildDreamReportSnapshot } from "@/lib/methodReportSnapshot";
 
 import { DREAM_SCHOOLS } from "@/data/dreamSchoolsLibrary";
 
 export function DreamPage() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<DreamInterpretation | null>(null);
+  const [lastDreamText, setLastDreamText] = useState("");
   const [trend, setTrend] = useState<Awaited<ReturnType<typeof fetchDreamTrend>> | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,9 +22,16 @@ export function DreamPage() {
       .catch(() => setError("梦境趋势加载失败。"));
   }, []);
 
+  const copilotReport = useMemo(
+    () => (result ? buildDreamReportSnapshot(lastDreamText, result) : null),
+    [result, lastDreamText],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
+
   const handleSubmit = async (text: string, emotions: string[], symbols: string[]) => {
     setLoading(true);
     setError(null);
+    setLastDreamText(text);
     try {
       const interp = await createDreamEntry({ text, emotions, symbols });
       setResult(interp);
@@ -38,28 +50,20 @@ export function DreamPage() {
           {error}
         </p>
       )}
-      <section className="method-detail-hero">
-        <p className="method-kicker">DREAM ORACLE</p>
-        <h1>占梦</h1>
-        <p>梦境解释需要多视角并列：古法可以保留神秘性，LLM 输出则需要明确边界，避免恐吓、绝对化和医学化判断。</p>
-      </section>
+      <MethodHero
+        methodId="dream"
+        kicker="DREAM ORACLE"
+        title="占梦"
+        description="梦境解释需要多视角并列：古法可以保留神秘性，解读则明确边界，避免恐吓、绝对化和医学化判断。"
+      />
 
       <section className="dream-layout">
-        <div className="dream-main">
-          <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
-        </div>
-        <aside className="dream-protocol">
-          <div className="section-heading">
-            <p>PROMPT LIMITS</p>
-            <h2>解梦模型约束</h2>
+        {result && (
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
           </div>
-          <ul>
-            <li>先复述梦中关键符号，不添加用户未说的信息。</li>
-            <li>同一符号至少给出两种解释，并标注不确定性。</li>
-            <li>输出行动建议，避免断言灾祸、疾病、投资或关系结局。</li>
-            <li>保留古籍口吻，但最终落到可执行的自我反思。</li>
-          </ul>
-        </aside>
+        )}
+        <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
       </section>
 
       <section className="dream-schools" aria-label="占梦流派">

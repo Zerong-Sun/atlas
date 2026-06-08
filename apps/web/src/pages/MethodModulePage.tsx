@@ -12,9 +12,13 @@ import {
   type OperationMode,
   type OperationSymbol,
 } from "@/data/methodOperationLibraries";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
 import { MethodDeepLibraryPanel } from "@/components/MethodDeepLibraryPanel";
+import { MethodHero } from "@/components/MethodHero";
 import { MethodReferenceLibraryPanel } from "@/components/MethodReferenceLibraryPanel";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildModuleDraftSnapshot } from "@/lib/methodReportSnapshot";
 
 type DraftReading = {
   context: string;
@@ -43,6 +47,15 @@ export function MethodModulePage() {
 
   const visualMarks = useMemo(() => module?.coreSymbols.slice(0, 5) ?? [], [module]);
 
+  const copilotReport = useMemo(
+    () =>
+      draft && methodId
+        ? buildModuleDraftSnapshot(methodId, module?.title ?? method?.title ?? methodId, draft)
+        : null,
+    [draft, methodId, module?.title, method?.title],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
+
   if (!module || !method || !kit || !operationLibrary) {
     return <Navigate to="/methods" replace />;
   }
@@ -60,11 +73,13 @@ export function MethodModulePage() {
 
   return (
     <Page wide className="method-module-page">
-      <section className="method-detail-hero method-module-hero">
-        <p className="method-kicker">{module.kicker}</p>
-        <h1>{module.title}</h1>
-        <p>{module.summary}</p>
-      </section>
+      <MethodHero
+        methodId={method.id}
+        kicker={module.kicker}
+        title={module.title}
+        description={module.summary}
+        className="method-module-hero"
+      />
 
       <section className="method-module-workbench" aria-label={`${module.title}模块工作台`}>
         <form
@@ -163,6 +178,9 @@ export function MethodModulePage() {
           <div className="section-heading">
             <p>GENERATED OUTLINE</p>
             <h2>本次预测结果</h2>
+          </div>
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
           </div>
           <div className="method-module-result__summary">
             <span>{draft.subjectType} / {draft.predictionWindow}</span>

@@ -1,5 +1,11 @@
 import type { StructuredFacts, Tradition } from "@atlas/shared-types";
 import { computeBazi, type BaziResult } from "./bazi.js";
+import {
+  computeBaziCompatibility,
+  type BaziCompatibilityInput,
+  type BaziCompatibilityResult,
+  type RelationshipContext,
+} from "./bazi-compatibility.js";
 import { computeWestern, type WesternResult } from "./western.js";
 import { drawTarotSpread, type TarotSpreadResult, type DrawnTarotCardResult } from "./tarot.js";
 import { interpretTarot } from "./tarot-interpret.js";
@@ -16,6 +22,7 @@ import { computeZiwei, type ZiweiResult } from "./ziwei.js";
 
 export {
   computeBazi,
+  computeBaziCompatibility,
   computeWestern,
   drawTarotSpread,
   castIChing,
@@ -29,6 +36,9 @@ export {
   computeFengshui,
   computeZiwei,
   type BaziResult,
+  type BaziCompatibilityResult,
+  type RelationshipContext,
+  type BaziCompatibilityInput,
   type QimenResult,
   type QimenPalace,
   type WesternResult,

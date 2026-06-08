@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { drawTarotSpread } from "@atlas/engines";
+import { drawTarotSpread } from "@atlas/engines/tarot";
 import { Button } from "@/components/ui/Button";
 import { colors, radius, spacing } from "@/theme/tokens";
 

@@ -69,8 +69,9 @@ export class ReadingOrchestrator {
     };
 
     const facts = runEngines(traditions, engineInput);
-    const retrieval = input.corpus
-      ? new HybridRetrieval(input.corpus).retrieve({
+    const retrievalCorpus = input.corpus && input.corpus.length > 0 ? input.corpus : undefined;
+    const retrieval = retrievalCorpus
+      ? new HybridRetrieval(retrievalCorpus).retrieve({
           question: input.question.text,
           traditions,
         })

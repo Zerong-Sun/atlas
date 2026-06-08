@@ -9,6 +9,9 @@ const AskPage = lazy(() => import("@/pages/AskPage").then((m) => ({ default: m.A
 const DreamPage = lazy(() => import("@/pages/DreamPage").then((m) => ({ default: m.DreamPage })));
 const MethodsPage = lazy(() => import("@/pages/MethodsPage").then((m) => ({ default: m.MethodsPage })));
 const BaziPage = lazy(() => import("@/pages/BaziPage").then((m) => ({ default: m.BaziPage })));
+const BaziRelationshipPage = lazy(() =>
+  import("@/pages/BaziRelationshipPage").then((m) => ({ default: m.BaziRelationshipPage }))
+);
 const TarotPage = lazy(() => import("@/pages/TarotPage").then((m) => ({ default: m.TarotPage })));
 const LenormandPage = lazy(() => import("@/pages/LenormandPage").then((m) => ({ default: m.LenormandPage })));
 const LotPage = lazy(() => import("@/pages/LotPage").then((m) => ({ default: m.LotPage })));
@@ -95,6 +98,7 @@ function AppRoutes() {
             <Route path="/ask" element={<AskPage />} />
             <Route path="/methods" element={<MethodsPage />} />
             <Route path="/methods/bazi" element={<BaziPage />} />
+            <Route path="/methods/bazi-relationship" element={<BaziRelationshipPage />} />
             <Route path="/methods/tarot" element={<TarotPage />} />
             <Route path="/methods/lenormand" element={<LenormandPage />} />
             <Route path="/methods/lot" element={<LotPage />} />
@@ -108,9 +112,8 @@ function AppRoutes() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/library" element={<LibraryPage />} />
+            <Route path="/reading/:id" element={<ReadingPage />} />
           </Route>
-
-          <Route path="/reading/:id" element={<ReadingPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

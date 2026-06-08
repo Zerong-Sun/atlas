@@ -1,7 +1,11 @@
 import { useCallback, useMemo, useState } from "react";
-import { computeBazi, interpretBazi, type BaziResult } from "@atlas/engines";
+import { computeBazi, interpretBazi, type BaziResult } from "@atlas/engines/bazi";
 import type { MatchedRule } from "@atlas/shared-types";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildBaziReportSnapshot } from "@/lib/methodReportSnapshot";
 import {
   BAZI_CLASSIC_CONDITION_MAP,
   BAZI_LUCK_INTERACTIONS,
@@ -121,14 +125,20 @@ export function BaziPage() {
   const filled = Boolean(birthDate && birthTime);
   const showResults = hasComputed && filled && result && !result.error;
 
+  const copilotReport = useMemo(
+    () => (showResults && result ? buildBaziReportSnapshot(result, interpretation, name) : null),
+    [showResults, result, interpretation, name],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
+
   return (
     <Page wide className="bazi-page">
-      {/* ── Hero ── */}
-      <section className="method-detail-hero">
-        <p className="method-kicker">BAZI CHART</p>
-        <h1>八字命盘</h1>
-        <p>输入出生日期与时间，生成四柱八字、十神、藏干、五行分析、神煞、格局、大运流年与性格解读。</p>
-      </section>
+      <MethodHero
+        methodId="bazi"
+        kicker="BAZI CHART"
+        title="八字命盘"
+        description="输入出生日期与时间，生成四柱八字、十神、藏干、五行分析、神煞、格局、大运流年与性格解读。"
+      />
 
       {/* ── Profile strip ── */}
       <section className="bazi-profile-strip" aria-label="档案切换">
@@ -214,6 +224,9 @@ export function BaziPage() {
       {/* ── Results: only shown after compute ── */}
       {showResults && (
         <>
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           {/* ── Four Pillars ── */}
           <section className="pillar-board" aria-label="四柱">
             {result.pillarList.map((pillar) => (

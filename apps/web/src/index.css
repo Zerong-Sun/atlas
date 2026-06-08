@@ -1,6 +1,8 @@
 @import "@atlas/theme/tokens.css";
 @import "./styles/pages.css";
 @import "./styles/today.css";
+@import "./styles/method-experience.css";
+@import "./styles/method-copilot.css";
 
 :root {
   --radius-md: 10px;

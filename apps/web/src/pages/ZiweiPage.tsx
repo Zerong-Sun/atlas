@@ -1,7 +1,11 @@
 import { useMemo, useState } from "react";
-import { computeZiwei, type ZiweiResult } from "@atlas/engines";
+import { computeZiwei, type ZiweiResult } from "@atlas/engines/ziwei";
 import { PalaceGrid } from "@/components/charts/PalaceGrid";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildZiweiReportSnapshot } from "@/lib/methodReportSnapshot";
 import { getPalaceReading, getStarReading, ZIWEI_MUTAGEN } from "@/data/ziweiLibrary";
 
 export function ZiweiPage() {
@@ -37,13 +41,20 @@ export function ZiweiPage() {
 
   const activePalace = selectedPalace != null ? result?.palaces[selectedPalace] : result?.palaces.find((p) => p.isSoul);
 
+  const copilotReport = useMemo(
+    () => (result?.palaces.length ? buildZiweiReportSnapshot(result) : null),
+    [result],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
+
   return (
     <Page wide className="ziwei-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">ZI WEI DOU SHU</p>
-        <h1>紫微斗数</h1>
-        <p>十二宫、主星辅星、四化与大限流年。三合派排盘，供趋势反思而非宿命断言。</p>
-      </section>
+      <MethodHero
+        methodId="ziwei"
+        kicker="ZI WEI DOU SHU"
+        title="紫微斗数"
+        description="十二宫、主星辅星、四化与大限流年。三合派排盘，供趋势反思而非宿命断言。"
+      />
 
       <section className="method-workbench">
         <label>
@@ -91,6 +102,9 @@ export function ZiweiPage() {
 
       {result && result.palaces.length > 0 && (
         <section className="ziwei-result">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <p className="summary-line">{result.summary}</p>
           <p className="muted">{result.lunarDate} · {result.chineseDate} · {result.fiveElementsClass}</p>
           <PalaceGrid

@@ -1,4 +1,10 @@
-import { invokeFunction, invokeFunctionGet, isSupabaseConfigured } from "../supabase";
+import {
+  getEdgeAuthHeaders,
+  invokeFunction,
+  invokeFunctionGet,
+  isSupabaseConfigured,
+  supabaseUrl,
+} from "../supabase";
 
 /** Deployed Supabase Edge Function slugs (see apps/mobile/lib/api.ts) */
 export const EDGE_PATHS = {
@@ -33,15 +39,14 @@ export async function callEdge<T>(
   }
 
   if (method === "PATCH") {
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? "";
-    const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
+    const headers = await getEdgeAuthHeaders();
+    if (!headers) return null;
     try {
       const res = await fetch(`${supabaseUrl}/functions/v1/${path}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${supabaseAnonKey}`,
-          apikey: supabaseAnonKey,
+          ...headers,
         },
         body: JSON.stringify(opts?.body ?? {}),
       });

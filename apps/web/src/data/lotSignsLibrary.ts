@@ -1,4 +1,4 @@
-import type { LotSign } from "@atlas/engines";
+import type { LotSign } from "@atlas/engines/lot";
 
 export type { LotSign };
 
