@@ -27,14 +27,8 @@ const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ defa
 const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
 const ReadingPage = lazy(() => import("@/pages/ReadingPage").then((m) => ({ default: m.ReadingPage })));
-const InterestsPage = lazy(() =>
-  import("@/pages/onboarding/InterestsPage").then((m) => ({ default: m.InterestsPage }))
-);
-const ProfileOnboardingPage = lazy(() =>
-  import("@/pages/onboarding/ProfileOnboardingPage").then((m) => ({ default: m.ProfileOnboardingPage }))
-);
-const PortraitPage = lazy(() =>
-  import("@/pages/onboarding/PortraitPage").then((m) => ({ default: m.PortraitPage }))
+const WelcomePage = lazy(() =>
+  import("@/pages/onboarding/WelcomePage").then((m) => ({ default: m.WelcomePage }))
 );
 
 function BootScreen() {
@@ -73,7 +67,7 @@ function OnboardingGuard({ children }: { children: ReactNode }) {
   if (!ready) return <BootScreen />;
 
   if (!onboardingDone && !inOnboarding) {
-    return <Navigate to="/onboarding/interests" replace />;
+    return <Navigate to="/onboarding/welcome" replace />;
   }
 
   if (onboardingDone && inOnboarding) {
@@ -88,9 +82,8 @@ function AppRoutes() {
     <OnboardingGuard>
       <Suspense fallback={<BootScreen />}>
         <Routes>
-          <Route path="/onboarding/interests" element={<InterestsPage />} />
-          <Route path="/onboarding/profile" element={<ProfileOnboardingPage />} />
-          <Route path="/onboarding/portrait" element={<PortraitPage />} />
+          <Route path="/onboarding/welcome" element={<WelcomePage />} />
+          <Route path="/onboarding/*" element={<Navigate to="/onboarding/welcome" replace />} />
 
           <Route element={<MainLayout />}>
             <Route path="/" element={<TodayPage />} />
