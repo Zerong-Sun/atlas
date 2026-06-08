@@ -10,11 +10,14 @@ import {
   isAnalysisQuestion,
   type MethodCopilotTurn,
 } from "@/lib/api/methodCopilot";
+import { useCopilotResize } from "@/hooks/useCopilotResize";
 import { isMethodCopilotRoute, methodIdFromPathname } from "@/lib/methodFromRoute";
 
 export function MethodCopilot() {
   const { pathname } = useLocation();
   const { open, setOpen, report, pendingAction, clearPendingAction } = useMethodCopilot();
+  const { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset } =
+    useCopilotResize(open);
   const methodId = methodIdFromPathname(pathname);
   const config = getMethodCopilotConfig(methodId);
   const experience = getMethodExperience(methodId ?? "methods");
@@ -100,6 +103,11 @@ export function MethodCopilot() {
     ? `正在结合本次报告生成 ${config.title} 解析…`
     : `正在整理 ${config.title} 语境下的解释…`;
 
+  const asideStyle: Record<string, string> = {
+    ...methodExperienceStyle(experience),
+    "--copilot-width": `${width}px`,
+  };
+
   return (
     <>
       {!open && (
@@ -116,10 +124,32 @@ export function MethodCopilot() {
       )}
 
       <aside
-        className={`method-copilot${open ? " is-open" : ""}`}
-        style={methodExperienceStyle(experience)}
+        className={[
+          "method-copilot",
+          open ? "is-open" : "",
+          resizing ? "is-resizing" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        style={asideStyle}
         aria-label={`${config.title}解说侧栏`}
       >
+        <div
+          className="method-copilot__resize-handle"
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="调整侧栏宽度"
+          aria-valuemin={280}
+          aria-valuemax={560}
+          aria-valuenow={width}
+          onPointerDown={onResizeStart}
+          onPointerMove={onResizeMove}
+          onPointerUp={onResizeEnd}
+          onPointerCancel={onResizeEnd}
+          onDoubleClick={onResizeReset}
+          title="拖拽调整宽度，双击恢复默认"
+        />
+
         <header className="method-copilot__head">
           <div>
             <p className="method-copilot__kicker">COPILOT</p>

@@ -1,18 +1,28 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import type { DreamInterpretation } from "@/lib/api/dreams";
 import { matchDreamSymbols, searchDreamSymbols } from "@/data/dreamSymbolsLibrary";
 import { Button } from "@/components/ui/Button";
-import { colors, radius, spacing } from "@/theme/tokens";
 
 const EMOTIONS = ["平静", "焦虑", "喜悦", "恐惧", "困惑", "期待"];
+
+const INTERPRET_BLOCKS: Array<{
+  key: keyof Pick<DreamInterpretation, "chinese" | "jungian" | "reflection">;
+  title: string;
+  primary?: boolean;
+}> = [
+  { key: "chinese", title: "中国梦占" },
+  { key: "jungian", title: "荣格简释" },
+  { key: "reflection", title: "精神反思", primary: true },
+];
 
 type Props = {
   onSubmit: (text: string, emotions: string[], symbols: string[]) => void;
   loading?: boolean;
   result?: DreamInterpretation | null;
+  resultActions?: ReactNode;
 };
 
-export function DreamCapture({ onSubmit, loading, result }: Props) {
+export function DreamCapture({ onSubmit, loading, result, resultActions }: Props) {
   const [text, setText] = useState("");
   const [emotions, setEmotions] = useState<string[]>([]);
   const [symbols, setSymbols] = useState<string[]>([]);
@@ -20,6 +30,7 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
 
   const autoMatched = useMemo(() => matchDreamSymbols(text), [text]);
   const suggestions = useMemo(() => searchDreamSymbols(query), [query]);
+  const charCount = text.trim().length;
 
   const toggle = (list: string[], set: (v: string[]) => void, item: string) => {
     set(list.includes(item) ? list.filter((x) => x !== item) : [...list, item]);
@@ -32,38 +43,54 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
 
   return (
     <div className="dream-capture">
-      <h2>记录梦境</h2>
+      <div className="dream-capture__head">
+        <h2>记录梦境</h2>
+        <p className="dream-capture__hint" aria-live="polite">
+          {charCount > 0 ? `${charCount} 字` : "醒来即记，细节越具体越好"}
+        </p>
+      </div>
+
       <textarea
-        placeholder="描述你的梦…"
+        placeholder="描述场景、人物、情绪与转折…例如：梦见自己在浑浊的水里找不到出口，感到焦虑。"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        rows={4}
+        rows={5}
+        aria-label="梦境描述"
       />
+
       {autoMatched.length > 0 && (
         <div className="dream-autocomplete">
-          <span className="label">库中匹配符号</span>
+          <span className="label">库中匹配符号 · 点击添加</span>
           <div className="chips">
             {autoMatched.slice(0, 8).map((s) => (
-              <button key={s.symbol} type="button" className="chip selected" onClick={() => addSymbol(s.symbol)}>
+              <button
+                key={s.symbol}
+                type="button"
+                className={`chip${symbols.includes(s.symbol) ? " selected" : ""}`}
+                onClick={() => addSymbol(s.symbol)}
+              >
                 {s.symbol}
               </button>
             ))}
           </div>
         </div>
       )}
+
       <ChipRow
-        label="情绪"
+        label="醒来时的情绪"
         items={EMOTIONS}
         selected={emotions}
         onToggle={(i) => toggle(emotions, setEmotions, i)}
       />
+
       <div className="chip-section">
-        <span className="label">符号（可搜索添加）</span>
+        <span className="label">梦中符号（可搜索）</span>
         <input
           className="symbol-search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="输入梦象，如 水、门、飞行…"
+          placeholder="水、门、飞行、牙齿…"
+          aria-label="搜索梦中符号"
         />
         {suggestions.length > 0 && (
           <div className="chips">
@@ -84,79 +111,32 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
           </div>
         )}
       </div>
+
       <Button
         title="生成多视角解释"
         onClick={() => onSubmit(text.trim(), emotions, symbols)}
         loading={loading}
         disabled={!text.trim()}
       />
+
       {result && (
-        <div className="results">
+        <section className="dream-results" aria-label="梦境解读">
+          <div className="dream-results__head">
+            <h3>多视角解读</h3>
+            {resultActions}
+          </div>
           {result.degraded && (
-            <p className="degraded" role="status">
+            <p className="dream-degraded" role="status">
               当前显示基础模板解读；LLM 服务暂时不可用，请稍后重试以获取专业解析。
             </p>
           )}
-          <InterpretBlock title="中国梦占" body={result.chinese} />
-          <InterpretBlock title="荣格简释" body={result.jungian} />
-          <InterpretBlock title="精神反思" body={result.reflection} highlight />
-        </div>
+          <div className="dream-interpret-grid">
+            {INTERPRET_BLOCKS.map(({ key, title, primary }) => (
+              <InterpretBlock key={key} title={title} body={result[key]} primary={primary} />
+            ))}
+          </div>
+        </section>
       )}
-      <style>{`
-        .dream-capture { display: flex; flex-direction: column; gap: ${spacing.md}px; }
-        .dream-capture h2 { margin: 0; font-size: 20px; }
-        .dream-capture textarea, .symbol-search {
-          width: 100%;
-          background: ${colors.surface};
-          border: 1px solid ${colors.border};
-          border-radius: ${radius.md}px;
-          padding: ${spacing.md}px;
-          color: ${colors.text};
-          resize: vertical;
-        }
-        .symbol-search { resize: none; }
-        .chip-section .label, .dream-autocomplete .label {
-          display: block;
-          font-size: 12px;
-          font-weight: 600;
-          color: ${colors.gold};
-          margin-bottom: ${spacing.sm}px;
-        }
-        .chips { display: flex; flex-wrap: wrap; gap: ${spacing.sm}px; }
-        .chip {
-          padding: ${spacing.xs}px ${spacing.sm}px;
-          border-radius: ${radius.full}px;
-          border: 1px solid ${colors.border};
-          background: ${colors.surface};
-          font-size: 13px;
-          color: ${colors.textSecondary};
-          cursor: pointer;
-        }
-        .chip.selected { border-color: ${colors.gold}; color: ${colors.gold}; }
-        .results { display: flex; flex-direction: column; gap: ${spacing.md}px; margin-top: ${spacing.lg}px; }
-        .degraded {
-          margin: 0;
-          padding: ${spacing.sm}px ${spacing.md}px;
-          border: 1px solid ${colors.goldDim};
-          border-radius: ${radius.md}px;
-          color: ${colors.textSecondary};
-          font-size: 13px;
-        }
-        .interpret {
-          padding: ${spacing.md}px;
-          background: ${colors.surface};
-          border-radius: ${radius.md}px;
-        }
-        .interpret.highlight { border: 1px solid ${colors.goldDim}; }
-        .interpret .label {
-          display: block;
-          font-size: 12px;
-          font-weight: 600;
-          color: ${colors.gold};
-          margin-bottom: ${spacing.sm}px;
-        }
-        .interpret p { margin: 0; line-height: 1.5; }
-      `}</style>
     </div>
   );
 }
@@ -191,11 +171,11 @@ function ChipRow({
   );
 }
 
-function InterpretBlock({ title, body, highlight }: { title: string; body: string; highlight?: boolean }) {
+function InterpretBlock({ title, body, primary }: { title: string; body: string; primary?: boolean }) {
   return (
-    <div className={`interpret${highlight ? " highlight" : ""}`}>
+    <article className={`dream-interpret${primary ? " dream-interpret--primary" : ""}`}>
       <span className="label">{title}</span>
       <p>{body}</p>
-    </div>
+    </article>
   );
 }

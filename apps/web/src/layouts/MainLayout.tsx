@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type CSSProperties } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { CosmicBackdrop } from "@/components/CosmicBackdrop";
 const MethodCopilot = lazy(() =>
@@ -25,7 +25,7 @@ function MainLayoutShell() {
   const { pathname } = useLocation();
   const today = isTodayRoute(pathname);
   const copilotRoute = isMethodCopilotRoute(pathname);
-  const { open: copilotOpen, openCopilot } = useMethodCopilot();
+  const { open: copilotOpen, openCopilot, width: copilotWidth } = useMethodCopilot();
   const copilotMethodId = methodIdFromPathname(pathname);
   const copilotExperience = getMethodExperience(copilotMethodId ?? "methods");
 
@@ -38,6 +38,9 @@ function MainLayoutShell() {
       ]
         .filter(Boolean)
         .join(" ")}
+      style={
+        copilotRoute ? ({ "--copilot-width": `${copilotWidth}px` } as CSSProperties) : undefined
+      }
     >
       <CosmicBackdrop />
       <a href="#main-content" className="skip-link">

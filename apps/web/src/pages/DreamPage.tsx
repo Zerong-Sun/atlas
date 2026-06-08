@@ -8,8 +8,18 @@ import { createDreamEntry, fetchDreamTrend, type DreamInterpretation } from "@/l
 import { buildDreamReportSnapshot } from "@/lib/methodReportSnapshot";
 
 import { DREAM_SCHOOLS } from "@/data/dreamSchoolsLibrary";
+import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
+
+const DREAM_PROTOCOL = [
+  "一事一梦：每次只解读一个完整梦境，避免混杂多个片段。",
+  "标注情绪与符号：醒来时的感受与关键物象会显著影响解读方向。",
+  "多视角并列：古法、象征与反思并存，不作唯一结论。",
+  "明确边界：不断言灾祸日期，不替代医学或法律判断。",
+  "倾向建议：输出可执行的反思问题，而非恐吓式预言。",
+];
 
 export function DreamPage() {
+  const dreamStyle = methodExperienceStyle(getMethodExperience("dream"));
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<DreamInterpretation | null>(null);
   const [lastDreamText, setLastDreamText] = useState("");
@@ -45,6 +55,7 @@ export function DreamPage() {
 
   return (
     <Page wide className="dream-page">
+      <div style={dreamStyle}>
       {error && (
         <p className="error-banner" role="alert">
           {error}
@@ -58,32 +69,31 @@ export function DreamPage() {
       />
 
       <section className="dream-layout">
-        {result && (
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
-        )}
-        <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
+        <div className="dream-main">
+          <DreamCapture
+            onSubmit={handleSubmit}
+            loading={loading}
+            result={result}
+            resultActions={result ? <MethodCopilotTrigger variant="analyze" /> : undefined}
+          />
+        </div>
+
+        <aside className="dream-protocol" aria-label="解梦协议">
+          <h3>解梦协议</h3>
+          <p>占梦是高频自省入口，以下原则贯穿每次解读。</p>
+          <ul>
+            {DREAM_PROTOCOL.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </aside>
       </section>
 
-      <section className="dream-schools" aria-label="占梦流派">
-        {DREAM_SCHOOLS.map((school) => (
-          <article key={school.id}>
-            <span>{school.title}</span>
-            <p>{school.summary}</p>
-          </article>
-        ))}
-      </section>
-
-      {trend && (
-        <section className="trend" style={{ marginTop: "var(--spacing-xxl)" }}>
-          <h3 style={{ margin: "0 0 var(--spacing-md)" }}>七日趋势</h3>
+      {trend && trend.topSymbols.length > 0 && (
+        <section className="dream-trend" aria-label="七日梦境趋势">
+          <h3>七日趋势</h3>
           <p className="muted">{trend.summary}</p>
-          <div
-            className="symbol-bars"
-            aria-label="七日梦境符号频次"
-            style={{ display: "flex", flexDirection: "column", gap: "var(--spacing-sm)", marginTop: "var(--spacing-md)" }}
-          >
+          <div className="symbol-bars" aria-label="七日梦境符号频次">
             {trend.topSymbols.map((s) => (
               <div key={s.symbol} className="symbol-row">
                 <span>{s.symbol}</span>
@@ -94,6 +104,27 @@ export function DreamPage() {
           </div>
         </section>
       )}
+
+      <section className="dream-section-head" aria-labelledby="dream-schools-title">
+        <h2 id="dream-schools-title">解读流派</h2>
+        <p>四种视角并列输出，展示同一梦境的不同读法与边界。</p>
+      </section>
+
+      <section className="dream-schools" aria-label="占梦流派">
+        {DREAM_SCHOOLS.map((school) => (
+          <article key={school.id}>
+            <span>{school.id.toUpperCase()}</span>
+            <h4>{school.title}</h4>
+            <p>{school.summary}</p>
+            <ul>
+              {school.taboos.slice(0, 2).map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </section>
+      </div>
     </Page>
   );
 }
