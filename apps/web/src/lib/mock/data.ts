@@ -126,7 +126,7 @@ function buildMockStructuredFacts(traditions: Tradition[]): StructuredFacts[] {
           title: "三命通会",
           chapter: "论日主",
           fullText: "庚金带煞，刚健为体，得火炼而成器，得水润而有声。",
-          analysis: "演示解析：金重时不宜硬冲，需借火炼其形、借水开其用。",
+          analysis: "综合解析：金重时不宜硬冲，需借火炼其形、借水开其用。",
         },
       ],
     },

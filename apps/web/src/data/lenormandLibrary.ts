@@ -1,4 +1,4 @@
-import { LENORMAND_CARDS } from "@atlas/engines";
+import { LENORMAND_CARDS } from "@atlas/engines/lenormand";
 
 export const LENORMAND_MEANINGS = LENORMAND_CARDS.map((c) => ({
   ...c,

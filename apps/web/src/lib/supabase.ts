@@ -1,4 +1,4 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { createClient, type Session, type SupabaseClient } from "@supabase/supabase-js";
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? "";
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
@@ -20,6 +20,42 @@ export function getSupabase(): SupabaseClient | null {
     });
   }
   return client;
+}
+
+export async function getAuthSession(): Promise<Session | null> {
+  const supabase = getSupabase();
+  if (!supabase) return null;
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  return session;
+}
+
+export async function ensureAuthSession(): Promise<boolean> {
+  const supabase = getSupabase();
+  if (!supabase) return false;
+
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  if (session) return true;
+
+  const { error } = await supabase.auth.signInAnonymously();
+  if (error) {
+    console.warn("[auth] anonymous sign-in failed:", error.message);
+    return false;
+  }
+  return true;
+}
+
+export async function getEdgeAuthHeaders(): Promise<Record<string, string> | null> {
+  if (!isSupabaseConfigured) return null;
+  const session = await getAuthSession();
+  const token = session?.access_token ?? supabaseAnonKey;
+  return {
+    Authorization: `Bearer ${token}`,
+    apikey: supabaseAnonKey,
+  };
 }
 
 export async function invokeFunction<T>(
@@ -47,19 +83,15 @@ export async function invokeFunctionGet<T>(
   const supabase = getSupabase();
   if (!supabase) return null;
 
+  const headers = await getEdgeAuthHeaders();
+  if (!headers) return null;
+
   const qs = params ? `?${new URLSearchParams(params).toString()}` : "";
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-  const token = session?.access_token ?? supabaseAnonKey;
 
   try {
     const res = await fetch(`${supabaseUrl}/functions/v1/${name}${qs}`, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        apikey: supabaseAnonKey,
-      },
+      headers,
     });
     if (!res.ok) {
       console.warn(`[edge] GET ${name}:`, res.status);

@@ -1,7 +1,12 @@
 import { useMemo, useState } from "react";
-import { drawLot, registerLotSigns } from "@atlas/engines";
+import { drawLot, registerLotSigns } from "@atlas/engines/lot";
 import type { LotTemple } from "@atlas/shared-types";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildLotReportSnapshot } from "@/lib/methodReportSnapshot";
+import { playMethodSound } from "@/lib/methodSounds";
 import { LOT_SIGNS, LOT_TEMPLE_LABELS } from "@/data/lotSignsLibrary";
 
 registerLotSigns(LOT_SIGNS);
@@ -17,13 +22,21 @@ export function LotPage() {
 
   const draw = () => {
     if (phase === "shaking") return;
+    playMethodSound("lot", "action");
     setPhase("shaking");
     setResult(null);
     window.setTimeout(() => {
       setResult(drawLot({ temple, seed: `${Date.now()}-${temple}` }, LOT_SIGNS));
       setPhase("revealed");
+      playMethodSound("lot", "complete");
     }, 1200);
   };
+
+  const copilotReport = useMemo(
+    () => (result && phase === "revealed" ? buildLotReportSnapshot(result) : null),
+    [result, phase],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
 
   const categories = useMemo(() => {
     if (!result) return [];
@@ -35,11 +48,12 @@ export function LotPage() {
 
   return (
     <Page wide className="lot-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">TEMPLE LOTS</p>
-        <h1>抽签签诗</h1>
-        <p>观音、关帝、妈祖三庙签诗，摇签得号，读诗反思。签文为倾向提示，非必然预言。</p>
-      </section>
+      <MethodHero
+        methodId="lot"
+        kicker="TEMPLE LOTS"
+        title="抽签签诗"
+        description="观音、关帝、妈祖三庙签诗，摇签得号，读诗反思。签文为倾向提示，非必然预言。"
+      />
 
       <section className="method-workbench">
         <div className="chip-row">
@@ -65,6 +79,9 @@ export function LotPage() {
 
       {result && phase === "revealed" && (
         <section className="sign-scroll" aria-label="签诗结果">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <div className="sign-scroll__head">
             <span>{LOT_TEMPLE_LABELS[result.sign.temple]}</span>
             <strong>第 {result.sign.number} 签 · {result.sign.grade}</strong>

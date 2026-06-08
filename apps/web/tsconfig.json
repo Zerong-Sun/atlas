@@ -16,7 +16,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "paths": { "@/*": ["src/*"] }
+    "paths": {
+      "@/*": ["src/*"],
+      "@atlas/llm-defaults": ["../../lib/llm-defaults.ts"]
+    }
   },
   "include": ["src"]
 }

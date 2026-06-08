@@ -1,0 +1,201 @@
+/* ── Method experience: cards, heroes, motion ── */
+
+.method-card--experience {
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.method-card--experience .method-card__visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 85% 15%, color-mix(in srgb, var(--method-accent) 35%, transparent), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 10% 90%, color-mix(in srgb, var(--method-accent-secondary) 25%, transparent), transparent 50%),
+    linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(11, 16, 32, 0.88));
+}
+
+.method-card--experience .method-card__glyph {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1;
+  opacity: 0.12;
+  color: var(--method-accent);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.method-card--experience:hover .method-card__glyph {
+  opacity: 0.22;
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.method-card--experience .method-card__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  height: 100%;
+  min-height: 200px;
+}
+
+.method-card--experience.method-motion--shuffle:hover .method-card__visual {
+  animation: method-shuffle-bg 0.6s ease;
+}
+
+.method-card--experience.method-motion--orbit:hover .method-card__visual {
+  animation: method-orbit-bg 1.2s linear;
+}
+
+.method-card--experience.method-motion--ripple:hover .method-card__visual {
+  animation: method-ripple-bg 0.8s ease;
+}
+
+.method-card--experience.method-motion--flip:hover .method-card__glyph {
+  animation: method-flip-glyph 0.5s ease;
+}
+
+.method-card--experience.method-motion--smoke:hover .method-card__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--method-accent) 20%, transparent), transparent 60%);
+  animation: method-smoke-rise 1.4s ease forwards;
+}
+
+/* Hero */
+.method-experience-hero {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-lg) var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--method-accent) 30%, transparent);
+  min-height: 140px;
+}
+
+.method-experience-hero__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 70% at 70% 20%, color-mix(in srgb, var(--method-accent) 28%, transparent), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 15% 80%, color-mix(in srgb, var(--method-accent-secondary) 22%, transparent), transparent 50%),
+    linear-gradient(160deg, rgba(17, 24, 39, 0.95), rgba(11, 16, 32, 0.98));
+}
+
+.method-experience-hero__glyph {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 12vw, 7rem);
+  opacity: 0.15;
+  color: var(--method-accent);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.method-experience-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.method-experience-hero h1 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.method-experience-hero p:last-child {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.method-motion--orbit .method-experience-hero__glyph {
+  animation: method-orbit-glyph 8s linear infinite;
+}
+
+.method-motion--shuffle .method-experience-hero__glyph {
+  animation: method-shuffle-glyph 3s ease-in-out infinite;
+}
+
+.method-motion--ripple .method-experience-hero__backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, color-mix(in srgb, var(--method-accent) 15%, transparent) 0%, transparent 70%);
+  animation: method-ripple-pulse 2.5s ease-in-out infinite;
+}
+
+.method-motion--smoke .method-experience-hero__backdrop::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 60%;
+  background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--method-accent) 18%, transparent), transparent 70%);
+  animation: method-smoke-rise 4s ease-in-out infinite;
+}
+
+@keyframes method-shuffle-bg {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@keyframes method-orbit-bg {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(15deg); }
+}
+
+@keyframes method-ripple-bg {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+@keyframes method-flip-glyph {
+  0% { transform: rotateY(0); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes method-smoke-rise {
+  0% { opacity: 0.3; transform: translateY(10px); }
+  50% { opacity: 0.6; transform: translateY(-8px); }
+  100% { opacity: 0.2; transform: translateY(-16px); }
+}
+
+@keyframes method-orbit-glyph {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
+@keyframes method-shuffle-glyph {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  33% { transform: translateY(-52%) translateX(-6px); }
+  66% { transform: translateY(-48%) translateX(6px); }
+}
+
+@keyframes method-ripple-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.08); opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .method-card--experience:hover .method-card__visual,
+  .method-card--experience:hover .method-card__glyph,
+  .method-motion--orbit .method-experience-hero__glyph,
+  .method-motion--shuffle .method-experience-hero__glyph,
+  .method-motion--ripple .method-experience-hero__backdrop::after,
+  .method-motion--smoke .method-experience-hero__backdrop::before,
+  .method-card--experience.method-motion--smoke:hover .method-card__visual::after {
+    animation: none !important;
+  }
+}

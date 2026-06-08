@@ -1,6 +1,7 @@
 import { Solar } from "lunar-javascript";
 import type { EngineInput } from "./index.js";
 import { selectBaziClassics } from "./bazi-classics.js";
+import { detectCombinationsInChart } from "./bazi-branch-relations.js";
 
 /* ── Constants ── */
 export const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
@@ -43,28 +44,6 @@ const HIDDEN_STEMS: Record<string, string[]> = {
   酉: ["辛"],
   戌: ["戊", "辛", "丁"],
   亥: ["壬", "甲"],
-};
-
-/* ── Branch combinations (六合) ── */
-const BRANCH_SIX_COMBOS: Record<string, { partner: string; element: Element }> = {
-  子: { partner: "丑", element: "土" },
-  丑: { partner: "子", element: "土" },
-  寅: { partner: "亥", element: "木" },
-  亥: { partner: "寅", element: "木" },
-  卯: { partner: "戌", element: "火" },
-  戌: { partner: "卯", element: "火" },
-  辰: { partner: "酉", element: "金" },
-  酉: { partner: "辰", element: "金" },
-  巳: { partner: "申", element: "水" },
-  申: { partner: "巳", element: "水" },
-  午: { partner: "未", element: "土" },
-  未: { partner: "午", element: "土" },
-};
-
-/* ── Branch clashes (六冲) ── */
-const BRANCH_CLASHES: Record<string, string> = {
-  子: "午", 丑: "未", 寅: "申", 卯: "酉", 辰: "戌", 巳: "亥",
-  午: "子", 未: "丑", 申: "寅", 酉: "卯", 戌: "辰", 亥: "巳",
 };
 
 /* ── Day Master personality descriptions ── */
@@ -890,7 +869,7 @@ export function computeBazi(input: EngineInput): BaziResult {
   const personality = buildPersonalityAnalysis(dayMaster, strength, elements);
   const aspects = buildLifeAspects(dayMaster, strength);
   const classics = selectBaziClassics(["总论", "月令", "五行", "日主", "格局"]);
-  const combinations = detectCombinations(pillars);
+  const combinations = detectCombinationsInChart(pillars);
 
   const lunarMonth = lunar.getMonth();
   const lunarDay = lunar.getDay();
@@ -918,29 +897,6 @@ export function computeBazi(input: EngineInput): BaziResult {
     classics,
     combinations,
   };
-}
-
-/* ── Detect branch combinations in the chart ── */
-function detectCombinations(pillars: Record<string, string>): string[] {
-  const branches = [pillars.year.charAt(1), pillars.month.charAt(1), pillars.day.charAt(1), pillars.hour.charAt(1)];
-  const labels = ["年支", "月支", "日支", "时支"];
-  const found: string[] = [];
-
-  for (let i = 0; i < branches.length; i++) {
-    for (let j = i + 1; j < branches.length; j++) {
-      const a = branches[i];
-      const b = branches[j];
-      const combo = BRANCH_SIX_COMBOS[a];
-      if (combo && combo.partner === b) {
-        found.push(`${labels[i]}${a}与${labels[j]}${b}六合，化${combo.element}`);
-      }
-      if (BRANCH_CLASHES[a] === b) {
-        found.push(`${labels[i]}${a}与${labels[j]}${b}相冲`);
-      }
-    }
-  }
-
-  return found;
 }
 
 function countElements(pillars: Record<string, string>): Record<string, number> {

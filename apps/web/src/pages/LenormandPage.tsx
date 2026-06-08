@@ -1,7 +1,12 @@
 import { useMemo, useState } from "react";
-import { drawLenormand, type LenormandResult } from "@atlas/engines";
+import { drawLenormand, type LenormandResult } from "@atlas/engines/lenormand";
 import { CardSpread } from "@/components/charts/CardSpread";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildLenormandReportSnapshot } from "@/lib/methodReportSnapshot";
+import { playMethodSound } from "@/lib/methodSounds";
 import { getLenormandCard, lookupLenormandPair } from "@/data/lenormandLibrary";
 
 type Spread = "three" | "five" | "nine";
@@ -25,7 +30,14 @@ export function LenormandPage() {
     }));
   }, [result]);
 
+  const copilotReport = useMemo(() => {
+    if (!result) return null;
+    return buildLenormandReportSnapshot(question, SPREADS[spread], result, readings);
+  }, [result, question, spread, readings]);
+  useRegisterMethodCopilotReport(copilotReport);
+
   const draw = () => {
+    playMethodSound("lenormand", "action");
     try {
       setResult(
         drawLenormand({
@@ -34,6 +46,7 @@ export function LenormandPage() {
           seed: `${Date.now()}-${question}-${spread}`,
         })
       );
+      playMethodSound("lenormand", "complete");
     } catch (err) {
       console.error("[lenormand]", err);
     }
@@ -41,11 +54,12 @@ export function LenormandPage() {
 
   return (
     <Page wide className="lenormand-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">LENORMAND</p>
-        <h1>雷诺曼牌</h1>
-        <p>三十六张符号牌，以名词与相邻组合说话。中心牌定主题，旁牌定修饰。</p>
-      </section>
+      <MethodHero
+        methodId="lenormand"
+        kicker="LENORMAND"
+        title="雷诺曼牌"
+        description="三十六张符号牌，以名词与相邻组合说话。中心牌定主题，旁牌定修饰。"
+      />
 
       <section className="method-workbench">
         <label>
@@ -74,6 +88,9 @@ export function LenormandPage() {
 
       {result && (
         <section className="lenormand-result">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <CardSpread
             columns={spread === "nine" ? 3 : spread === "five" ? 3 : 3}
             cards={result.cards.map((c, i) => ({

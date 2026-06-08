@@ -1,8 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { computeQimen, interpretQimen } from "@atlas/engines";
+import { computeQimen, interpretQimen } from "@atlas/engines/qimen";
 import type { MatchedRule, QimenJuMethod, TimingWindow } from "@atlas/shared-types";
 import { QimenBoard } from "@/components/charts/QimenBoard";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildQimenReportSnapshot } from "@/lib/methodReportSnapshot";
 import {
   QIMEN_QUESTION_TYPES,
   QIMEN_DUN_RULES,
@@ -34,6 +38,15 @@ export function QimenPage() {
 
   const handleCompute = () => setComputeKey((k) => k + 1);
 
+  const copilotReport = useMemo(
+    () =>
+      chart && interpretation
+        ? buildQimenReportSnapshot(question, questionType, chart, interpretation)
+        : null,
+    [chart, interpretation, question, questionType],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
+
   useEffect(() => {
     if (!chart || !interpretation) return;
     appendQimenBoardHistory({
@@ -49,11 +62,12 @@ export function QimenPage() {
 
   return (
     <Page wide className="qimen-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">QIMEN DUNJIA</p>
-        <h1>奇门遁甲</h1>
-        <p>时家奇门排盘：定局、取用神、识格局、看应期。拆补/置闰双口径可切换。</p>
-      </section>
+      <MethodHero
+        methodId="qimen"
+        kicker="QIMEN DUNJIA"
+        title="奇门遁甲"
+        description="时家奇门排盘：定局、取用神、识格局、看应期。拆补/置闰双口径可切换。"
+      />
 
       <section className="method-workbench">
         <label>
@@ -98,6 +112,9 @@ export function QimenPage() {
 
       {chart && interpretation && (
         <>
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <section className="method-result-summary">
             <div className="section-heading">
               <p>CHART</p>

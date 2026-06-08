@@ -14,4 +14,5 @@ export {
   type RetrievalQuery,
   type RetrievalResult,
 } from "./hybrid-retrieval.js";
+export { SEED_CORPUS_FALLBACK, mapSeedChunk } from "./seed-corpus-fallback.js";
 export { SafetyPolicy, type SafetyResult } from "./safety-policy.js";

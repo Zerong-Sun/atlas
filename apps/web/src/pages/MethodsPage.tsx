@@ -1,6 +1,8 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import { DIVINATION_METHODS, type MethodStatus } from "@/data/divinationMethods";
+import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
+import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 import { Page } from "@/components/ui/Page";
 
 type StatusFilter = "all" | MethodStatus;
@@ -116,37 +118,61 @@ type MethodCardProps = (typeof DIVINATION_METHODS)[number] & {
   index: number;
 };
 
-function MethodCard({ title, subtitle, tradition, status, route, tags, compact, index }: MethodCardProps) {
-  const content = (
+function MethodCard({ id, title, subtitle, tradition, status, route, tags, compact, index }: MethodCardProps) {
+  const experience = getMethodExperience(id);
+  const cardStyle = {
+    ...methodExperienceStyle(experience),
+    "--i": index,
+  } as CSSProperties;
+
+  const body = (
     <>
-      <div className="method-card__top">
-        <span>{tradition}</span>
-        <i>{STATUS_LABEL[status]}</i>
+      <div className="method-card__visual" aria-hidden />
+      <div className="method-card__glyph" aria-hidden>
+        {experience.glyph}
       </div>
-      <strong>{title}</strong>
-      <p>{subtitle}</p>
-      <div className="method-card__tags">
-        {tags.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
+      <div className="method-card__body">
+        <div className="method-card__top">
+          <span>{tradition}</span>
+          <i>{STATUS_LABEL[status]}</i>
+        </div>
+        <strong>{title}</strong>
+        <p>{subtitle}</p>
+        <div className="method-card__tags">
+          {tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
       </div>
     </>
   );
 
-  const className = `method-card${compact ? " method-card--compact" : ""}${status === "planned" ? " is-locked" : ""}`;
-  const style = { "--i": index } as CSSProperties;
+  const className = [
+    "method-card",
+    "method-card--experience",
+    `method-motion--${experience.motion}`,
+    compact ? "method-card--compact" : "",
+    status === "planned" ? "is-locked" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const handleEnter = () => {
+    unlockAudio();
+    playMethodSound(id, "enter");
+  };
 
   if (route) {
     return (
-      <Link to={route} className={className} style={style}>
-        {content}
+      <Link to={route} className={className} style={cardStyle} onMouseEnter={handleEnter}>
+        {body}
       </Link>
     );
   }
 
   return (
-    <article className={className} style={style} aria-disabled="true">
-      {content}
+    <article className={className} style={cardStyle} aria-disabled="true">
+      {body}
     </article>
   );
 }

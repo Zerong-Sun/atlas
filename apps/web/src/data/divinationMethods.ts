@@ -21,6 +21,15 @@ export const DIVINATION_METHODS: DivinationMethod[] = [
     tags: ["四柱", "十神", "流年"],
   },
   {
+    id: "bazi-relationship",
+    title: "八字缘合",
+    subtitle: "两人四柱交叉，看五行互补、日支互动与相处模式。",
+    tradition: "术数",
+    route: "/methods/bazi-relationship",
+    status: "ready",
+    tags: ["合盘", "双人", "互动"],
+  },
+  {
     id: "tarot",
     title: "塔罗抽卡",
     subtitle: "三张牌阵、大阿卡那/全牌组选择，生成牌面与组合解释。",

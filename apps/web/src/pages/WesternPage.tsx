@@ -1,7 +1,11 @@
 import { useMemo, useState } from "react";
-import { computeWestern, type WesternResult } from "@atlas/engines";
+import { computeWestern, type WesternResult } from "@atlas/engines/western";
 import { NatalWheel } from "@/components/charts/NatalWheel";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildWesternReportSnapshot } from "@/lib/methodReportSnapshot";
 import { getAspectReading, getHouseReading, WESTERN_PLANET_IN_SIGN } from "@/data/westernAdvancedLibrary";
 
 export function WesternPage() {
@@ -22,6 +26,9 @@ export function WesternPage() {
     return r as WesternResult;
   }, [birthDate, birthTime, computed, showTransits]);
 
+  const copilotReport = useMemo(() => (result ? buildWesternReportSnapshot(result) : null), [result]);
+  useRegisterMethodCopilotReport(copilotReport);
+
   const generate = () => {
     if (!birthDate) return;
     setError(null);
@@ -40,11 +47,12 @@ export function WesternPage() {
 
   return (
     <Page wide className="western-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">WESTERN ASTROLOGY</p>
-        <h1>西洋占星</h1>
-        <p>本命盘、Whole Sign 宫位、相位与行运推运。符号框架用于自我认识，非科学必然性。</p>
-      </section>
+      <MethodHero
+        methodId="western"
+        kicker="WESTERN ASTROLOGY"
+        title="西洋占星"
+        description="本命盘、Whole Sign 宫位、相位与行运推运。符号框架用于自我认识，非科学必然性。"
+      />
 
       <section className="method-workbench">
         <label>
@@ -88,6 +96,9 @@ export function WesternPage() {
 
       {result && (
         <section className="western-result">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <p className="summary-line">{result.summary}</p>
           <div className="western-chart-layout">
             <NatalWheel

@@ -1,7 +1,12 @@
 import { useMemo, useState } from "react";
-import { castLiuyao, type LiuyaoResult } from "@atlas/engines";
+import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
 import { HexagramLines } from "@/components/charts/HexagramLines";
+import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
+import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildLiuyaoReportSnapshot } from "@/lib/methodReportSnapshot";
+import { playMethodSound } from "@/lib/methodSounds";
 import { LIUYAO_RELATIVES, LIUYAO_STRENGTH, LIUYAO_USEFUL_GOD } from "@/data/liuyaoLibrary";
 
 type CastStep = number;
@@ -16,6 +21,7 @@ export function LiuyaoPage() {
 
   const throwCoins = () => {
     if (castStep >= 6) return;
+    playMethodSound("liuyao", "action");
     const rng = Math.random();
     const sum = Math.floor(rng * 4) + 6;
     const next = [...coinLines, sum];
@@ -31,6 +37,7 @@ export function LiuyaoPage() {
           seed: `${Date.now()}-${question}`,
         })
       );
+      playMethodSound("liuyao", "complete");
     }
   };
 
@@ -38,6 +45,12 @@ export function LiuyaoPage() {
     setCoinLines([]);
     setResult(null);
   };
+
+  const copilotReport = useMemo(
+    () => (result ? buildLiuyaoReportSnapshot(question, subjectType, result) : null),
+    [result, question, subjectType],
+  );
+  useRegisterMethodCopilotReport(copilotReport);
 
   const hexLines = useMemo(() => {
     if (!result) return [];
@@ -52,11 +65,12 @@ export function LiuyaoPage() {
 
   return (
     <Page wide className="liuyao-page">
-      <section className="method-detail-hero">
-        <p className="method-kicker">LIUYAO</p>
-        <h1>纳甲六爻</h1>
-        <p>铜钱起卦，定世应、纳甲、六亲与用神旺衰。一事一占，先定用神再看动变。</p>
-      </section>
+      <MethodHero
+        methodId="liuyao"
+        kicker="LIUYAO"
+        title="纳甲六爻"
+        description="铜钱起卦，定世应、纳甲、六亲与用神旺衰。一事一占，先定用神再看动变。"
+      />
 
       <section className="method-workbench">
         <label>
@@ -90,6 +104,9 @@ export function LiuyaoPage() {
 
       {result && (
         <section className="liuyao-result">
+          <div className="method-result-actions">
+            <MethodCopilotTrigger variant="analyze" />
+          </div>
           <header>
             <h2>{result.primaryName}卦 → {result.changedName}卦</h2>
             <p>{result.palace}宫 · 世{result.worldLine} 应{result.responseLine} · 用神{result.usefulGod}</p>

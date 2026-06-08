@@ -1,4 +1,4 @@
-import { MimoGateway, ReadingOrchestrator } from "@atlas/orchestrator";
+import { MimoGateway, ReadingOrchestrator, SEED_CORPUS_FALLBACK } from "@atlas/orchestrator";
 import type { QuestionInput, Tradition } from "@atlas/shared-types";
 import { handleOptions, jsonResponse } from "../_shared/cors.ts";
 import { loadProfile } from "../_shared/profile.ts";
@@ -38,7 +38,8 @@ Deno.serve(async (req) => {
     if (qErr) return jsonResponse({ error: qErr.message }, 400);
 
     const profile = await loadProfile(client, userId);
-    const corpus = await loadCorpusChunks(client, traditions);
+    const corpus = await loadCorpusChunks(client, traditions, { query: body.text, limit: 500 });
+    const corpusRecords = corpus.length > 0 ? corpus : SEED_CORPUS_FALLBACK;
     const orch = new ReadingOrchestrator({
       mimo: new MimoGateway({
         MIMO_API_KEY: Deno.env.get("MIMO_API_KEY"),
@@ -51,7 +52,7 @@ Deno.serve(async (req) => {
       questionId: questionRow.id,
       question: { text: body.text, category: body.category, traditions },
       profile,
-      corpus: corpus.length > 0 ? corpus : undefined,
+      corpus: corpusRecords,
     });
     const latencyMs = Date.now() - started;
 

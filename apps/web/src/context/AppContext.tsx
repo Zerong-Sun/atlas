@@ -9,6 +9,7 @@ import {
 } from "react";
 import type { UserProfile } from "@atlas/shared-types";
 import { fetchProfile, updateProfile } from "@/lib/api/profile";
+import { ensureAuthSession, isSupabaseConfigured } from "@/lib/supabase";
 import { getLocalProfile, getOnboardingDone, setLocalProfile, setOnboardingDone } from "@/lib/storage";
 import { track } from "@/lib/analytics";
 
@@ -37,6 +38,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     track("app_open");
     (async () => {
+      if (isSupabaseConfigured) {
+        await ensureAuthSession();
+      }
       const done = await getOnboardingDone();
       setDone(done);
       await refreshProfile();

@@ -1,6 +1,12 @@
+import { lazy, Suspense } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { CosmicBackdrop } from "@/components/CosmicBackdrop";
-import { useMockApi } from "@/lib/api/client";
+const MethodCopilot = lazy(() =>
+  import("@/components/MethodCopilot").then((m) => ({ default: m.MethodCopilot })),
+);
+import { MethodCopilotProvider, useMethodCopilot } from "@/context/MethodCopilotContext";
+import { getMethodExperience } from "@/data/methodExperiences";
+import { isMethodCopilotRoute, methodIdFromPathname } from "@/lib/methodFromRoute";
 import { colors, spacing } from "@/theme/tokens";
 
 const NAV = [
@@ -15,13 +21,24 @@ function isTodayRoute(pathname: string) {
   return pathname === "/" || pathname === "/today";
 }
 
-export function MainLayout() {
-  const mock = useMockApi();
+function MainLayoutShell() {
   const { pathname } = useLocation();
   const today = isTodayRoute(pathname);
+  const copilotRoute = isMethodCopilotRoute(pathname);
+  const { open: copilotOpen, openCopilot } = useMethodCopilot();
+  const copilotMethodId = methodIdFromPathname(pathname);
+  const copilotExperience = getMethodExperience(copilotMethodId ?? "methods");
 
   return (
-    <div className={`shell${today ? " shell--today" : " shell--mist"}`}>
+    <div
+      className={[
+        "shell",
+        today ? "shell--today" : "shell--mist",
+        copilotRoute && copilotOpen ? "shell--copilot-open" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <CosmicBackdrop />
       <a href="#main-content" className="skip-link">
         跳到主内容
@@ -29,12 +46,27 @@ export function MainLayout() {
       <header className="topbar">
         <span className="brand">诸象 Atlas</span>
         <div className="topbar-end">
+          {copilotRoute && (
+            <button
+              type="button"
+              className="method-copilot-topbar-btn"
+              onClick={() => openCopilot()}
+              aria-label="打开占法解说"
+            >
+              {copilotExperience.glyph} 解说
+            </button>
+          )}
           {today && <span className="obs-log-label">OBSERVATION LOG</span>}
-          {mock && <span className="mock-badge">{today ? "演示" : "演示模式"}</span>}
         </div>
       </header>
 
       <Outlet />
+
+      {copilotRoute ? (
+        <Suspense fallback={null}>
+          <MethodCopilot />
+        </Suspense>
+      ) : null}
 
       <nav className="bottom-nav" aria-label="主导航">
         {NAV.map(({ to, icon, label, ...rest }) => (
@@ -134,13 +166,6 @@ export function MainLayout() {
           letter-spacing: 0.12em;
           color: ${colors.mistMuted};
         }
-        .mock-badge {
-          font-size: 11px;
-          padding: 2px 8px;
-          border-radius: 999px;
-          border: 1px solid ${colors.goldDim};
-          color: ${colors.gold};
-        }
         .bottom-nav {
           position: fixed;
           bottom: 0;
@@ -189,5 +214,13 @@ export function MainLayout() {
         }
       `}</style>
     </div>
+  );
+}
+
+export function MainLayout() {
+  return (
+    <MethodCopilotProvider>
+      <MainLayoutShell />
+    </MethodCopilotProvider>
   );
 }
