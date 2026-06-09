@@ -91,7 +91,7 @@ export function LenormandPage() {
         methodId="lenormand"
         kicker="LENORMAND"
         title="雷诺曼牌"
-        description="三十六张符号牌，以名词与相邻组合说话。内置 Ch. Didot c.1890 经典牌面，中心牌定主题，旁牌定修饰。"
+        description="三十六张符号牌，以名词与相邻组合说话。内置 Dondorf 经典牌面（完整单张扫描），中心牌定主题，旁牌定修饰。"
       />
 
       <section className="method-workbench">

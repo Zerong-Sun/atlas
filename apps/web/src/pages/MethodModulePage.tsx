@@ -35,7 +35,7 @@ export function MethodModulePage({ methodId: methodIdProp }: MethodModulePagePro
   const [draft, setDraft] = useState<ModuleDraftReading | null>(null);
 
   const visualMarks = useMemo(() => module?.coreSymbols.slice(0, 5) ?? [], [module]);
-  const isWorkbench = method?.status === "preview" || methodId === "iching";
+  const isWorkbench = methodId === "iching";
 
   const copilotReport = useMemo(
     () =>

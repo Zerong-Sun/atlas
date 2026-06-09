@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = function (api) {
   api.cache(true);
   return {
@@ -7,7 +9,10 @@ module.exports = function (api) {
         "module-resolver",
         {
           root: ["."],
-          alias: { "@": "." },
+          alias: {
+            "@": ".",
+            "@atlas/llm-defaults": path.resolve(__dirname, "../../lib/llm-defaults.ts"),
+          },
         },
       ],
     ],

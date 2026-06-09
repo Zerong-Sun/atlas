@@ -5,8 +5,11 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "typeRoots": ["./node_modules/@types"],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@atlas/llm-defaults": ["../../lib/llm-defaults.ts"],
+      "react": ["./node_modules/@types/react/index.d.ts"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]

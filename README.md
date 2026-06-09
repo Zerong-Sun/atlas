@@ -80,10 +80,12 @@ npm run build:web
 
 ```bash
 npm run dev:mobile
-# 或根目录 npm run dev（默认等同 dev:web）
+# 或 cd apps/mobile && npx expo start
 ```
 
 在终端按 `i`（iOS 模拟器）、`a`（Android）或 Expo Go 扫码。详见 [apps/mobile/README.md](apps/mobile/README.md)。
+
+> 请勿在仓库根目录运行 `npx expo start`——会误把 monorepo 根目录当作 Expo 项目，报 `Unable to resolve ../../App`。
 
 ### 4. 环境变量
 

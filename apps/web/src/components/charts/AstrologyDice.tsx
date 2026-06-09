@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import type { AstroHouse, AstroPlanet, AstroSign } from "@atlas/engines/astrodice";
+import { AstroIcon } from "@/components/charts/AstroIcon";
 
 export type AstrodicePhase = "idle" | "rolling" | "settled";
 
@@ -12,20 +13,25 @@ type AstrologyDiceProps = {
 
 type DieProps = {
   label: string;
-  symbol: string;
+  kind: "planet" | "sign" | "house";
+  iconId?: string;
   name: string;
   phase: AstrodicePhase;
   index: number;
 };
 
-function Die({ label, symbol, name, phase, index }: DieProps) {
+function Die({ label, kind, iconId, name, phase, index }: DieProps) {
   const rolling = phase === "rolling";
   return (
     <div className={`astrodice-die astrodice-die--${phase}`} style={{ "--die-i": index } as CSSProperties}>
       <span className="astrodice-die__label">{label}</span>
       <div className="astrodice-die__cube">
         <div className="astrodice-die__face astrodice-die__face--front">
-          <em>{rolling ? "…" : symbol}</em>
+          {iconId ? (
+            <AstroIcon kind={kind} id={iconId} rolling={rolling} />
+          ) : (
+            <span className="astrodice-icon astrodice-icon--placeholder">—</span>
+          )}
           <strong>{rolling ? "滚动" : name}</strong>
         </div>
       </div>
@@ -41,21 +47,24 @@ export function AstrologyDice({ phase, planet, sign, house }: AstrologyDiceProps
       <div className="astrodice-dice-row">
         <Die
           label="行星"
-          symbol={settled && planet ? planet.symbol : "☉"}
+          kind="planet"
+          iconId={settled && planet ? planet.id : phase === "idle" ? "sun" : undefined}
           name={settled && planet ? planet.name : "—"}
           phase={phase}
           index={0}
         />
         <Die
           label="星座"
-          symbol={settled && sign ? sign.symbol : "♈"}
+          kind="sign"
+          iconId={settled && sign ? sign.id : phase === "idle" ? "aries" : undefined}
           name={settled && sign ? sign.name : "—"}
           phase={phase}
           index={1}
         />
         <Die
           label="宫位"
-          symbol={settled && house ? house.symbol : "Ⅰ"}
+          kind="house"
+          iconId={settled && house ? house.id : phase === "idle" ? "1" : undefined}
           name={settled && house ? house.name : "—"}
           phase={phase}
           index={2}

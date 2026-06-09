@@ -27,6 +27,15 @@ const MethodModulePage = lazy(() =>
   import("@/pages/MethodModulePage").then((m) => ({ default: m.MethodModulePage }))
 );
 const QimenPage = lazy(() => import("@/pages/QimenPage").then((m) => ({ default: m.QimenPage })));
+const MeihuaPage = lazy(() => import("@/pages/MeihuaPage").then((m) => ({ default: m.MeihuaPage })));
+const VedicPage = lazy(() => import("@/pages/VedicPage").then((m) => ({ default: m.VedicPage })));
+const NumerologyPage = lazy(() => import("@/pages/NumerologyPage").then((m) => ({ default: m.NumerologyPage })));
+const GeomancyPage = lazy(() => import("@/pages/GeomancyPage").then((m) => ({ default: m.GeomancyPage })));
+const XiangmianPage = lazy(() => import("@/pages/XiangmianPage").then((m) => ({ default: m.XiangmianPage })));
+const PalmistryPage = lazy(() => import("@/pages/PalmistryPage").then((m) => ({ default: m.PalmistryPage })));
+const OraclePage = lazy(() => import("@/pages/OraclePage").then((m) => ({ default: m.OraclePage })));
+const CoffeePage = lazy(() => import("@/pages/CoffeePage").then((m) => ({ default: m.CoffeePage })));
+const ScryingPage = lazy(() => import("@/pages/ScryingPage").then((m) => ({ default: m.ScryingPage })));
 const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ default: m.ProfilePage })));
 const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
@@ -124,6 +133,15 @@ function AppRoutes() {
             <Route path="/methods/fengshui" element={<FengshuiPage />} />
             <Route path="/methods/ziwei" element={<ZiweiPage />} />
             <Route path="/methods/qimen" element={<QimenPage />} />
+            <Route path="/methods/meihua" element={<MeihuaPage />} />
+            <Route path="/methods/vedic" element={<VedicPage />} />
+            <Route path="/methods/numerology" element={<NumerologyPage />} />
+            <Route path="/methods/geomancy" element={<GeomancyPage />} />
+            <Route path="/methods/xiangmian" element={<XiangmianPage />} />
+            <Route path="/methods/palmistry" element={<PalmistryPage />} />
+            <Route path="/methods/oracle" element={<OraclePage />} />
+            <Route path="/methods/coffee" element={<CoffeePage />} />
+            <Route path="/methods/scrying" element={<ScryingPage />} />
             <Route path="/methods/:methodId" element={<MethodModulePage />} />
             <Route path="/dream" element={<DreamPage />} />
             <Route path="/profile" element={<ProfilePage />} />

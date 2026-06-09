@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, View } from "react-native";
 import type { DailyBrief } from "@atlas/shared-types";
 import { DailyBriefView } from "@/components/DailyBriefView";
 import { DailyColorField } from "@/components/DailyColorField";
+import { TodayQuickActions } from "@/components/TodayQuickActions";
 import { Screen } from "@/components/ui/Screen";
 import { fetchDailyBrief } from "@/lib/api/daily";
 import { track } from "@/lib/analytics";
@@ -35,6 +36,7 @@ export default function TodayScreen() {
     <DailyColorField date={brief.date}>
       <Screen scroll transparent>
         <DailyBriefView brief={brief} />
+        <TodayQuickActions />
       </Screen>
     </DailyColorField>
   );

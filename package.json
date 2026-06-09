@@ -6,7 +6,7 @@
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "dev": "npm run dev:web",
-    "dev:mobile": "npm run dev -w @atlas/mobile",
+    "dev:mobile": "npm --prefix apps/mobile run start",
     "dev:web": "npm run dev -w @atlas/web",
     "build:web": "npm run build -w @atlas/web",
     "lint": "npm run lint --workspaces --if-present",
@@ -19,5 +19,20 @@
     "corpus:embed": "npm run embed -w @atlas/corpus-scripts",
     "corpus:embed:dry-run": "npm run embed:dry-run -w @atlas/corpus-scripts"
   },
-  "engines": { "node": ">=20" }
+  "engines": { "node": ">=20.19.4" },
+  "overrides": {
+    "@atlas/web": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "@types/react": "^18.3.12"
+    },
+    "@atlas/mobile": {
+      "react": "19.1.0",
+      "@types/react": "~19.1.2"
+    },
+    "@expo/vector-icons": {
+      "react-native": "0.81.5",
+      "@types/react": "~19.1.2"
+    }
+  }
 }

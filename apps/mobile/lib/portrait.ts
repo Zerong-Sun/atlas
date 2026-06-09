@@ -1,4 +1,4 @@
-import { buildPortraitTraditions } from "@atlas/orchestrator";
+import { buildPortraitTraditions } from "@atlas/orchestrator/portrait-service";
 import type { PortraitSummary, UserProfile } from "@atlas/shared-types";
 import { llmComplete } from "./llm";
 

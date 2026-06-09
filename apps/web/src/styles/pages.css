@@ -3524,8 +3524,9 @@ button.palace-grid__cell:hover {
 .lenormand-table .spread-card__face img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
+  background: rgba(8, 12, 20, 0.35);
 }
 
 /* 五牌阵十字布局（宽屏）：核心居中，上下左右为修饰位 */
@@ -3791,10 +3792,54 @@ button.palace-grid__cell:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
 }
 
-.astrodice-die__face em {
+.astrodice-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.astrodice-icon--die {
+  width: 52px;
+  height: 52px;
+}
+
+.astrodice-icon--inline {
+  width: 22px;
+  height: 22px;
+  vertical-align: -0.2em;
+}
+
+.astrodice-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.astrodice-icon--planet img {
+  filter: invert(1) brightness(1.12) sepia(0.15) saturate(1.4) hue-rotate(5deg);
+}
+
+.astrodice-icon--sign img,
+.astrodice-icon--house img {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(18%) saturate(620%) hue-rotate(358deg)
+    brightness(95%) contrast(90%);
+}
+
+.astrodice-icon--rolling,
+.astrodice-icon--placeholder {
   font-size: 2rem;
   font-style: normal;
-  line-height: 1;
+  width: 52px;
+  height: 52px;
+}
+
+.astrodice-result-card__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .astrodice-die__face strong {
@@ -4150,5 +4195,200 @@ button.palace-grid__cell:hover {
   .bazi-relationship-person,
   .bazi-relationship-mini-pillars {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* —— New method pages (oracle / geomancy / meihua / …) —— */
+
+.method-workbench__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.card-draw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.oracle-card-face {
+  font-size: 1.25rem;
+  color: var(--color-gold);
+}
+
+.oracle-affirmation {
+  padding: var(--spacing-md);
+  border-left: 2px solid var(--color-gold-dim);
+  margin-bottom: var(--spacing-sm);
+}
+
+.method-history {
+  margin: var(--spacing-xl) 0;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.method-history h2 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+.method-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.method-history li {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.35);
+}
+
+.geomancy-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  min-width: 72px;
+}
+
+.geomancy-figure figcaption {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.geomancy-figure__row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  min-height: 14px;
+}
+
+.geomancy-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+.geomancy-dot--pair {
+  width: 6px;
+  height: 6px;
+}
+
+.geomancy-result__mothers,
+.geomancy-result__witnesses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.geomancy-result__witnesses {
+  align-items: flex-end;
+}
+
+.geomancy-figure__caption {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 140px;
+}
+
+.meihua-result__layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.meihua-summary {
+  margin-top: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+.coffee-cup {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  gap: var(--spacing-sm);
+  max-width: 280px;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: 50% 50% 40% 40% / 30% 30% 70% 70%;
+  background: rgba(17, 24, 39, 0.45);
+}
+
+.coffee-cup__zone {
+  text-align: center;
+  padding: var(--spacing-xs);
+}
+
+.coffee-cup__zone span {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.coffee-cup__zone strong {
+  color: var(--color-gold);
+}
+
+.numerology-summary {
+  font-size: 1.05rem;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.numerology-numbers {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+.numerology-numbers__orb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-dim);
+  background: rgba(201, 169, 98, 0.08);
+}
+
+.numerology-numbers__orb span {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.numerology-numbers__orb strong {
+  font-size: 1.75rem;
+  color: var(--color-gold);
+}
+
+@media (max-width: 720px) {
+  .meihua-result__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .method-workbench__row {
+    grid-template-columns: 1fr;
   }
 }

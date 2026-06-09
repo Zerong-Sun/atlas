@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Pressable, ScrollView, StyleSheet, View } from "react-native";
 import type { ReadingReport, Tradition } from "@atlas/shared-types";
 import { TRADITION_LABELS } from "@/constants/traditions";
@@ -10,12 +10,15 @@ import {
   TraditionBadge,
 } from "@/components/design-system";
 import { Text } from "@/components/ui/Text";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 
 type Props = {
   report: ReadingReport;
+  headerExtra?: ReactNode;
 };
 
-export function ReadingResultView({ report }: Props) {
+export function ReadingResultView({ report, headerExtra }: Props) {
+  const { prefs } = useUiPrefs();
   const [activeTradition, setActiveTradition] = useState<Tradition | null>(
     report.traditions[0] ?? null
   );
@@ -29,6 +32,7 @@ export function ReadingResultView({ report }: Props) {
 
   return (
     <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
+      {headerExtra}
       {summary && (
         <View style={styles.summaryBox}>
           <Text variant="label">结论摘要</Text>
@@ -62,7 +66,7 @@ export function ReadingResultView({ report }: Props) {
         古籍依据
       </Text>
       {report.citations.map((c) => (
-        <CitationBlock key={c.chunkId} citation={c} />
+        <CitationBlock key={c.chunkId} citation={c} defaultExpanded={prefs.classicMode} />
       ))}
 
       {advice && (

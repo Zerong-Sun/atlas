@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, TextInput, View } from "react-native";
 import type { DreamInterpretation } from "@/lib/api/dreams";
+import { LlmSetupHint } from "@/components/LlmSetupHint";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 import { colors, radius, spacing } from "@/constants/theme";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
@@ -18,6 +20,7 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
   const [text, setText] = useState("");
   const [emotions, setEmotions] = useState<string[]>([]);
   const [symbols, setSymbols] = useState<string[]>([]);
+  const { prefs } = useUiPrefs();
 
   const toggle = (list: string[], set: (v: string[]) => void, item: string) => {
     set(list.includes(item) ? list.filter((x) => x !== item) : [...list, item]);
@@ -38,6 +41,12 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
       <ChipRow label="情绪" items={EMOTIONS} selected={emotions} onToggle={(i) => toggle(emotions, setEmotions, i)} />
       <ChipRow label="符号" items={SYMBOLS} selected={symbols} onToggle={(i) => toggle(symbols, setSymbols, i)} />
 
+      {prefs.safeMode && (
+        <Text variant="caption" style={styles.safeNote}>
+          梦境解读仅供自我反思，不构成诊断或预言；持续困扰请咨询专业人士。
+        </Text>
+      )}
+
       <Button
         title="生成多视角解释"
         onPress={() => onSubmit(text.trim(), emotions, symbols)}
@@ -50,8 +59,9 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
           {result.degraded && (
             <View style={styles.degraded}>
               <Text variant="caption" style={{ color: colors.textSecondary }}>
-                当前显示基础模板解读；LLM 服务暂时不可用，请稍后重试。
+                当前显示基础模板解读；配置 LLM 后可获得专业解析。
               </Text>
+              <LlmSetupHint message="前往设置 → LLM 连接，填写 API Key 并测试连接。" />
             </View>
           )}
           <InterpretBlock title="中国梦占" body={result.chinese} />
@@ -126,6 +136,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   chipSelected: { borderColor: colors.gold, color: colors.gold },
+  safeNote: { color: colors.textSecondary, lineHeight: 18 },
   results: { marginTop: spacing.lg, gap: spacing.md },
   degraded: {
     padding: spacing.sm,

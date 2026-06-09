@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { rollAstrodice, type AstrodiceResult } from "@atlas/engines/astrodice";
+import { AstroIcon } from "@/components/charts/AstroIcon";
 import { AstrologyDice, type AstrodicePhase } from "@/components/charts/AstrologyDice";
 import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
 import { MethodHero } from "@/components/MethodHero";
@@ -72,17 +73,23 @@ export function AstrodicePage() {
           </article>
           <div className="reading-grid">
             <article>
-              <span>行星 · {result.planet.symbol}</span>
+              <span className="astrodice-result-card__label">
+                行星 <AstroIcon kind="planet" id={result.planet.id} size="inline" />
+              </span>
               <strong>{result.planet.name}</strong>
               <p>{result.planet.meaning}</p>
             </article>
             <article>
-              <span>星座 · {result.sign.symbol}</span>
+              <span className="astrodice-result-card__label">
+                星座 <AstroIcon kind="sign" id={result.sign.id} size="inline" />
+              </span>
               <strong>{result.sign.name}</strong>
               <p>{result.sign.meaning}</p>
             </article>
             <article>
-              <span>宫位 · {result.house.symbol}</span>
+              <span className="astrodice-result-card__label">
+                宫位 <AstroIcon kind="house" id={result.house.id} size="inline" />
+              </span>
               <strong>{result.house.name}</strong>
               <p>{result.house.meaning}</p>
             </article>

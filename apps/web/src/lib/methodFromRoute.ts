@@ -1,4 +1,4 @@
-import { getMethod, isPreviewWorkbench } from "@/data/divinationMethods";
+import { getMethod } from "@/data/divinationMethods";
 
 /** Resolve active divination method id from the current route pathname. */
 export function methodIdFromPathname(pathname: string): string | null {
@@ -13,9 +13,7 @@ export function methodIdFromPathname(pathname: string): string | null {
 }
 
 export function isMethodWorkbenchRoute(pathname: string): boolean {
-  if (pathname.endsWith("/workbench")) return true;
-  const methodId = methodIdFromPathname(pathname);
-  return Boolean(methodId && isPreviewWorkbench(methodId));
+  return pathname.endsWith("/workbench");
 }
 
 export function isMethodCopilotRoute(pathname: string): boolean {

@@ -1,3 +1,4 @@
+export { EDGE_PATHS, type EdgePath } from "./edge-paths.ts";
 export {
   mapDreamEntryRow,
   aggregateDreamTrend,

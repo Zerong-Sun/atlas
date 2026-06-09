@@ -11,6 +11,10 @@
     "publish": "node src/publish-corpus.mjs",
     "embed": "node src/embed-chunks.mjs",
     "embed:dry-run": "node src/embed-chunks.mjs --dry-run",
-    "fetch-lenormand": "node src/fetch-lenormand-assets.mjs"
+    "fetch-lenormand": "node src/fetch-lenormand-classic.mjs",
+    "fetch-lenormand:game-of-hope": "node src/fetch-lenormand-game-of-hope.mjs",
+    "fetch-lenormand:didot": "node src/fetch-lenormand-assets.mjs",
+    "fetch-lenormand:bm": "node src/fetch-lenormand-bm-dondorf.mjs",
+    "fetch-astrodice": "node src/fetch-astrodice-icons.mjs"
   }
 }

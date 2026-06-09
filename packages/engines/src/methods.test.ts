@@ -4,6 +4,15 @@ import { drawLenormand } from "./lenormand.js";
 import { throwJiaobei, throwJiaobeiSession } from "./jiaobei.js";
 import { drawRunes } from "./runes.js";
 import { rollAstrodice } from "./astrodice.js";
+import { drawOracle } from "./oracle.js";
+import { readCoffeeGrounds } from "./coffee.js";
+import { castScryingVision } from "./scrying.js";
+import { computeNumerology } from "./numerology.js";
+import { castGeomancy } from "./geomancy.js";
+import { castMeihua } from "./meihua.js";
+import { computeVedic } from "./vedic.js";
+import { readXiangmian } from "./xiangmian.js";
+import { readPalmistry } from "./palmistry.js";
 import { drawLot, registerLotSigns } from "./lot.js";
 import { castLiuyao } from "./liuyao.js";
 import { computeFengshui } from "./fengshui.js";
@@ -102,5 +111,83 @@ describe("computeZiwei", () => {
     const r = computeZiwei({ birthDate: "1990-05-15", birthTime: "08:30", gender: "male" });
     assert.equal(r.palaces.length, 12);
     assert.ok(r.summary.includes("命宫"));
+  });
+});
+
+describe("drawOracle", () => {
+  it("returns deterministic spread for fixed seed", () => {
+    const a = drawOracle({ seed: "oracle-seed", spread: "three" });
+    const b = drawOracle({ seed: "oracle-seed", spread: "three" });
+    assert.equal(a.cards.map((c) => c.id).join(","), b.cards.map((c) => c.id).join(","));
+    assert.equal(a.cards.length, 3);
+  });
+});
+
+describe("readCoffeeGrounds", () => {
+  it("returns deterministic zones for fixed seed", () => {
+    const a = readCoffeeGrounds({ seed: "coffee-seed" });
+    const b = readCoffeeGrounds({ seed: "coffee-seed" });
+    assert.deepEqual(a.zones.map((z) => z.symbol.id), b.zones.map((z) => z.symbol.id));
+  });
+});
+
+describe("castScryingVision", () => {
+  it("returns deterministic vision for fixed seed", () => {
+    const a = castScryingVision({ seed: "scry-seed", crystalId: "quartz" });
+    const b = castScryingVision({ seed: "scry-seed", crystalId: "quartz" });
+    assert.equal(a.color.name, b.color.name);
+    assert.equal(a.shape.name, b.shape.name);
+  });
+});
+
+describe("computeNumerology", () => {
+  it("computes core numbers", () => {
+    const r = computeNumerology({ birthDate: "1990-06-15", name: "Alex" });
+    assert.ok(r.lifePath >= 1);
+    assert.ok(r.destiny >= 1);
+    assert.ok(r.summary.includes("生命路径"));
+  });
+});
+
+describe("castGeomancy", () => {
+  it("returns deterministic chart for fixed seed", () => {
+    const a = castGeomancy({ seed: "geomancy-seed" });
+    const b = castGeomancy({ seed: "geomancy-seed" });
+    assert.equal(a.judge.key, b.judge.key);
+    assert.equal(a.mothers.length, 4);
+  });
+});
+
+describe("castMeihua", () => {
+  it("returns deterministic trigrams for fixed input", () => {
+    const a = castMeihua({ seed: "meihua", mode: "number", numbers: [5, 8] });
+    const b = castMeihua({ seed: "meihua", mode: "number", numbers: [5, 8] });
+    assert.equal(a.upper.name, b.upper.name);
+    assert.equal(a.lower.name, b.lower.name);
+  });
+});
+
+describe("computeVedic", () => {
+  it("returns moon sign and nakshatra", () => {
+    const r = computeVedic({ birthDate: "1990-06-15", birthTime: "12:00" });
+    assert.ok(r.moonSign);
+    assert.ok(r.moonNakshatra.name);
+    assert.ok(r.summary.includes("月亮"));
+  });
+});
+
+describe("readXiangmian", () => {
+  it("maps observations to readings", () => {
+    const r = readXiangmian({ observations: ["上停-饱满"] });
+    assert.equal(r.readings.length, 1);
+    assert.ok(r.summary);
+  });
+});
+
+describe("readPalmistry", () => {
+  it("maps observations to readings", () => {
+    const r = readPalmistry({ hand: "right", observations: ["生命线-深长"] });
+    assert.equal(r.readings.length, 1);
+    assert.ok(r.summary);
   });
 });

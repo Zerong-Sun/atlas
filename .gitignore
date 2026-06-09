@@ -3,6 +3,7 @@ node_modules/
 .env
 .env.*
 !.env.example
+.expo/
 apps/mobile/.expo/
 supabase/.branches
 supabase/.temp
@@ -12,6 +13,7 @@ supabase/.temp
 dist/
 build/
 corpus/.cache/
+packages/corpus-scripts/.cache/
 corpus/raw/
 __pycache__/
 .venv/

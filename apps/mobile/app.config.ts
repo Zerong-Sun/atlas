@@ -1,4 +1,8 @@
+import path from "node:path";
+import dotenv from "dotenv";
 import type { ExpoConfig } from "expo/config";
+
+dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 const config: ExpoConfig = {
   name: "诸象 Atlas",
@@ -7,6 +11,7 @@ const config: ExpoConfig = {
   orientation: "portrait",
   scheme: "atlas",
   userInterfaceStyle: "dark",
+  newArchEnabled: true,
   splash: {
     resizeMode: "contain",
     backgroundColor: "#0D0D0F",

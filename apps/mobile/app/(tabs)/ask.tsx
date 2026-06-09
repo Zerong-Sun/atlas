@@ -16,7 +16,7 @@ export default function AskScreen() {
     try {
       const report = await createReading({ text, traditions });
       track("reading_complete", { readingId: report.readingId });
-      router.push({ pathname: "/reading/[id]", params: { id: report.readingId, data: JSON.stringify(report) } });
+      router.push({ pathname: "/reading/[id]", params: { id: report.readingId } });
     } finally {
       setLoading(false);
     }

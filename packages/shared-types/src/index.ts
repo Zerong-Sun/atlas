@@ -146,6 +146,66 @@ export interface AstrodiceInput {
   question?: string;
 }
 
+export type OracleSpread = "single" | "three";
+
+export interface OracleInput {
+  seed?: string;
+  question?: string;
+  spread?: OracleSpread;
+  theme?: string;
+}
+
+export interface CoffeeInput {
+  seed?: string;
+  question?: string;
+}
+
+export interface ScryingInput {
+  seed?: string;
+  question?: string;
+  crystalId?: string;
+}
+
+export interface NumerologyInput {
+  birthDate?: string;
+  name?: string;
+  referenceYear?: number;
+}
+
+export interface GeomancyInput {
+  seed?: string;
+  question?: string;
+  mothers?: boolean[][];
+}
+
+export type MeihuaMode = "number" | "time";
+
+export interface MeihuaInput {
+  seed?: string;
+  question?: string;
+  mode?: MeihuaMode;
+  numbers?: number[];
+  timestamp?: string;
+}
+
+export interface VedicInput {
+  birthDate?: string;
+  birthTime?: string;
+  birthLat?: number;
+  birthLng?: number;
+}
+
+export interface XiangmianInput {
+  question?: string;
+  observations?: string[];
+}
+
+export interface PalmistryInput {
+  question?: string;
+  hand?: "left" | "right" | "both";
+  observations?: string[];
+}
+
 export interface LotInput {
   seed?: string;
   temple?: LotTemple;
