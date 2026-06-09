@@ -39,7 +39,7 @@ export const METHOD_EXPERIENCES: Record<string, MethodExperience> = {
   western: exp("western", "☉", "#4A6FA5", "#7EB2B7", "orbit"),
   vedic: exp("vedic", "ॐ", "#8B6914", "#C4A574", "orbit"),
   numerology: exp("numerology", "∞", "#5A7A9A", "#8BA8C4", "orbit"),
-  runes: exp("runes", "ᚠ", "#6B5A4A", "#9A8A7A", "static"),
+  runes: exp("runes", "ᚠ", "#6B5A4A", "#9A8A7A", "flip"),
   geomancy: exp("geomancy", "土", "#7A6B4A", "#A8926E", "flip"),
   lot: exp("lot", "签", "#8B4A4A", "#C47A7A", "flip"),
   jiaobei: exp("jiaobei", "筊", "#6B5040", "#9A7868", "flip"),

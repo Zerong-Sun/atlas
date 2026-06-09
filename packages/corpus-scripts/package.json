@@ -10,6 +10,7 @@
     "ingest:dry-run": "node src/ingest-seeds.mjs --dry-run",
     "publish": "node src/publish-corpus.mjs",
     "embed": "node src/embed-chunks.mjs",
-    "embed:dry-run": "node src/embed-chunks.mjs --dry-run"
+    "embed:dry-run": "node src/embed-chunks.mjs --dry-run",
+    "fetch-lenormand": "node src/fetch-lenormand-assets.mjs"
   }
 }

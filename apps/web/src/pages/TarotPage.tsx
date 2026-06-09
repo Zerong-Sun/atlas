@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties } from "react";
+import { useMemo, useState } from "react";
 import { drawTarotSpread, interpretTarot, normalizeTarotCardName, toInterpretTarotCards } from "@atlas/engines/tarot";
 import {
   TAROT_DECK,
@@ -28,9 +28,11 @@ import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import { buildTarotReportSnapshot } from "@/lib/methodReportSnapshot";
 import { playMethodSound } from "@/lib/methodSounds";
+import { CardDrawTable } from "@/components/charts/CardDrawTable";
+import { FlipCard } from "@/components/charts/FlipCard";
+import { useCardDrawPhase } from "@/hooks/useCardDrawPhase";
 
 type DeckMode = "major" | "full";
-type DrawPhase = "idle" | "shuffling" | "drawing" | "revealed";
 
 type DrawnCard = TarotCard & {
   position: string;
@@ -54,7 +56,7 @@ export function TarotPage() {
   const [spreadId, setSpreadId] = useState("three-timeline");
   const [cards, setCards] = useState<DrawnCard[]>([]);
   const [interpretation, setInterpretation] = useState<ReturnType<typeof interpretTarot> | null>(null);
-  const [phase, setPhase] = useState<DrawPhase>("idle");
+  const { phase, isBusy, runDraw, resetPhase } = useCardDrawPhase();
   const [lastDraw, setLastDraw] = useState("");
   const [lastDrawId, setLastDrawId] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryItem[]>(() => getTarotDrawHistory());
@@ -66,7 +68,6 @@ export function TarotPage() {
 
   const spread = SPREAD_MAP[spreadId] ?? TAROT_SPREAD_LIBRARY[1]!;
   const combo = useMemo(() => buildTarotCombination(cards), [cards]);
-  const isBusy = phase === "shuffling" || phase === "drawing";
   const dailyCard = useMemo(() => getDailyCard(), []);
   const scenarioLens = useMemo(() => getScenarioLens(question), [question]);
   const readingText = useMemo(() => buildReadingText(question, spread.name, cards, combo, interpretation), [cards, combo, question, spread.name, interpretation]);
@@ -83,53 +84,48 @@ export function TarotPage() {
     : spread.positions.map((position) => ({ position, placeholder: true }));
 
   const draw = () => {
-    if (isBusy) return;
     playMethodSound("tarot", "action");
     setCards([]);
     setInterpretation(null);
-    setPhase("shuffling");
-
-    window.setTimeout(() => {
-      const seed = `${Date.now()}-${question}-${spreadId}`;
-      const result = drawTarotSpread({
-        seed,
-        spreadId,
-        includeMinor: mode === "full",
-      });
-      const next: DrawnCard[] = result.cards.map((drawn) => {
-        const full = resolveTarotCard(drawn.name);
-        return { ...full, position: drawn.position, reversed: drawn.reversed };
-      });
-      const interp = interpretTarot(toInterpretTarotCards(result.cards), { question });
-      setCards(next);
-      setInterpretation(interp);
-      setPhase("drawing");
-      const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
-      const drawId = `${Date.now()}`;
-      setLastDraw(time);
-      setLastDrawId(drawId);
-      const item: HistoryItem = {
-        id: drawId,
-        time,
-        spread: spread.name,
-        spreadId,
-        question: question.trim() || "当下趋势",
-        cards: next.map((c) => ({ name: c.name, position: c.position, reversed: c.reversed })),
-      };
-      appendTarotDrawHistory(item);
-      setHistory(getTarotDrawHistory());
-      window.setTimeout(() => {
-        setPhase("revealed");
-        playMethodSound("tarot", "complete");
-      }, 680);
-    }, 820);
+    runDraw({
+      onShuffleComplete: () => {
+        const seed = `${Date.now()}-${question}-${spreadId}`;
+        const result = drawTarotSpread({
+          seed,
+          spreadId,
+          includeMinor: mode === "full",
+        });
+        const next: DrawnCard[] = result.cards.map((drawn) => {
+          const full = resolveTarotCard(drawn.name);
+          return { ...full, position: drawn.position, reversed: drawn.reversed };
+        });
+        const interp = interpretTarot(toInterpretTarotCards(result.cards), { question });
+        setCards(next);
+        setInterpretation(interp);
+        const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
+        const drawId = `${Date.now()}`;
+        setLastDraw(time);
+        setLastDrawId(drawId);
+        const item: HistoryItem = {
+          id: drawId,
+          time,
+          spread: spread.name,
+          spreadId,
+          question: question.trim() || "当下趋势",
+          cards: next.map((c) => ({ name: c.name, position: c.position, reversed: c.reversed })),
+        };
+        appendTarotDrawHistory(item);
+        setHistory(getTarotDrawHistory());
+      },
+      onRevealed: () => playMethodSound("tarot", "complete"),
+    });
   };
 
   const resetSpread = (nextSpreadId: string) => {
     setSpreadId(nextSpreadId);
     setCards([]);
     setInterpretation(null);
-    setPhase("idle");
+    resetPhase();
   };
 
   const copilotReport = useMemo(() => {
@@ -229,51 +225,49 @@ export function TarotPage() {
           {lastDraw && <p className="last-draw">上次抽牌 {lastDraw}</p>}
         </div>
 
-        <div className={`tarot-table tarot-table--${phase}`} aria-live="polite">
-          <DeckAnimation phase={phase} />
-          <div className="tarot-spread" style={{ "--spread-count": spread.positions.length } as CSSProperties}>
-            {visibleCards.map((card, index) => (
-              !("placeholder" in card) ? (
-                <article
-                  className={`spread-card${phase === "revealed" ? " is-revealed" : ""}${card.reversed ? " is-reversed" : ""}`}
-                  key={`${card.position}-${card.id}`}
-                  style={{ "--i": index } as CSSProperties}
-                >
-                  <div className="spread-card__inner">
-                    <div className="spread-card__back">
-                      <span>{card.position}</span>
-                      <strong>抽取中</strong>
-                    </div>
-                    <div className="spread-card__face">
-                      <img src={card.image} alt={`${card.name} ${card.reversed ? "逆位" : "正位"}`} loading="lazy" />
-                    </div>
-                  </div>
-                  <div className="spread-card__meta">
+        <CardDrawTable phase={phase} spreadCount={spread.positions.length}>
+          {visibleCards.map((card, index) =>
+            !("placeholder" in card) ? (
+              <FlipCard
+                key={`${card.position}-${card.id}`}
+                position={card.position}
+                revealed={phase === "revealed"}
+                reversed={card.reversed}
+                index={index}
+                face={
+                  <img src={card.image} alt={`${card.name} ${card.reversed ? "逆位" : "正位"}`} loading="lazy" />
+                }
+                meta={
+                  <>
                     <span>{card.position}</span>
                     <strong>{card.name}</strong>
-                    <i>{card.nameEn} · {card.reversed ? "逆位" : "正位"}</i>
+                    <i>
+                      {card.nameEn} · {card.reversed ? "逆位" : "正位"}
+                    </i>
                     <p>{(card.reversed ? card.reversedKeywords : card.keywords).join(" / ")}</p>
-                  </div>
-                </article>
-              ) : (
-                <article className="spread-card spread-card--placeholder" key={`${card.position}-${index}`}>
-                  <div className="spread-card__inner">
-                    <div className="spread-card__back">
-                      <span>{card.position}</span>
-                      <strong>待抽取</strong>
-                    </div>
-                  </div>
-                  <div className="spread-card__meta">
+                  </>
+                }
+              />
+            ) : (
+              <FlipCard
+                key={`${card.position}-${index}`}
+                position={card.position}
+                revealed={false}
+                index={index}
+                placeholder
+                placeholderHint="等待洗牌"
+                meta={
+                  <>
                     <span>{card.position}</span>
                     <strong>牌背</strong>
                     <i>等待洗牌</i>
                     <p>点击抽牌后显示 Rider-Waite-Smith 经典牌面。</p>
-                  </div>
-                </article>
-              )
-            ))}
-          </div>
-        </div>
+                  </>
+                }
+              />
+            )
+          )}
+        </CardDrawTable>
       </section>
 
       <section className="tarot-reading">
@@ -459,17 +453,6 @@ const deckByName: Record<string, TarotCard> = Object.fromEntries(
 
 function resolveTarotCard(name: string): TarotCard {
   return deckByName[normalizeTarotCardName(name)] ?? TAROT_DECK[0]!;
-}
-
-function DeckAnimation({ phase }: { phase: DrawPhase }) {
-  return (
-    <div className="deck-animation" aria-hidden>
-      {Array.from({ length: 9 }, (_, index) => (
-        <span key={index} style={{ "--i": index } as CSSProperties} />
-      ))}
-      <strong>{phase === "shuffling" ? "SHUFFLING" : phase === "drawing" ? "DRAWING" : "DECK"}</strong>
-    </div>
-  );
 }
 
 function getDailyCard() {

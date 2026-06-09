@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { computeZiwei, type ZiweiResult } from "@atlas/engines/ziwei";
 import { PalaceGrid } from "@/components/charts/PalaceGrid";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -102,9 +102,7 @@ export function ZiweiPage() {
 
       {result && result.palaces.length > 0 && (
         <section className="ziwei-result">
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <p className="summary-line">{result.summary}</p>
           <p className="muted">{result.lunarDate} · {result.chineseDate} · {result.fiveElementsClass}</p>
           <PalaceGrid

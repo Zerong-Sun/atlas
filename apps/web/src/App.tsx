@@ -14,6 +14,9 @@ const BaziRelationshipPage = lazy(() =>
 );
 const TarotPage = lazy(() => import("@/pages/TarotPage").then((m) => ({ default: m.TarotPage })));
 const LenormandPage = lazy(() => import("@/pages/LenormandPage").then((m) => ({ default: m.LenormandPage })));
+const JiaobeiPage = lazy(() => import("@/pages/JiaobeiPage").then((m) => ({ default: m.JiaobeiPage })));
+const RunesPage = lazy(() => import("@/pages/RunesPage").then((m) => ({ default: m.RunesPage })));
+const AstrodicePage = lazy(() => import("@/pages/AstrodicePage").then((m) => ({ default: m.AstrodicePage })));
 const LotPage = lazy(() => import("@/pages/LotPage").then((m) => ({ default: m.LotPage })));
 const LiuyaoPage = lazy(() => import("@/pages/LiuyaoPage").then((m) => ({ default: m.LiuyaoPage })));
 const IchingPage = lazy(() => import("@/pages/IchingPage").then((m) => ({ default: m.IchingPage })));
@@ -110,9 +113,13 @@ function AppRoutes() {
             <Route path="/methods/bazi-relationship" element={<BaziRelationshipPage />} />
             <Route path="/methods/tarot" element={<TarotPage />} />
             <Route path="/methods/lenormand" element={<LenormandPage />} />
+            <Route path="/methods/jiaobei" element={<JiaobeiPage />} />
+            <Route path="/methods/runes" element={<RunesPage />} />
+            <Route path="/methods/astrodice" element={<AstrodicePage />} />
             <Route path="/methods/lot" element={<LotPage />} />
             <Route path="/methods/liuyao" element={<LiuyaoPage />} />
             <Route path="/methods/iching" element={<IchingPage />} />
+            <Route path="/methods/iching/workbench" element={<MethodModulePage methodId="iching" />} />
             <Route path="/methods/western" element={<WesternPage />} />
             <Route path="/methods/fengshui" element={<FengshuiPage />} />
             <Route path="/methods/ziwei" element={<ZiweiPage />} />

@@ -4,36 +4,25 @@ import { getMethod } from "@/data/divinationMethods";
 import { getMethodDeepLibrary } from "@/data/methodDeepLibraries";
 import { getMethodReferenceLibrary } from "@/data/methodReferenceLibraries";
 import { buildQimenReferenceLibrary } from "@/data/methodReferenceLibraries/qimenAdapter";
-import { getMethodModuleKit, type MethodModuleKit } from "@/data/methodModuleKits";
-import { getMethodModule, type MethodModule } from "@/data/methodModules";
-import {
-  getMethodOperationLibrary,
-  type MethodOperationLibrary,
-  type OperationMode,
-  type OperationSymbol,
-} from "@/data/methodOperationLibraries";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { getMethodModuleKit } from "@/data/methodModuleKits";
+import { getMethodModule } from "@/data/methodModules";
+import { getMethodOperationLibrary } from "@/data/methodOperationLibraries";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodDeepLibraryPanel } from "@/components/MethodDeepLibraryPanel";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodReferenceLibraryPanel } from "@/components/MethodReferenceLibraryPanel";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { buildDraft, type ModuleDraftReading } from "@/lib/methodModuleDraft";
 import { buildModuleDraftSnapshot } from "@/lib/methodReportSnapshot";
 
-type DraftReading = {
-  context: string;
-  subjectType: string;
-  predictionWindow: string;
-  mode: OperationMode;
-  pattern: string;
-  selectedSymbols: OperationSymbol[];
-  sections: Array<{ title: string; body: string }>;
-  axes: Array<{ axis: string; reading: string }>;
-  advice: string[];
+type MethodModulePageProps = {
+  methodId?: string;
 };
 
-export function MethodModulePage() {
-  const { methodId } = useParams();
+export function MethodModulePage({ methodId: methodIdProp }: MethodModulePageProps) {
+  const { methodId: routeMethodId } = useParams();
+  const methodId = methodIdProp ?? routeMethodId;
   const module = getMethodModule(methodId);
   const kit = getMethodModuleKit(methodId);
   const deepLibrary = getMethodDeepLibrary(methodId);
@@ -43,9 +32,10 @@ export function MethodModulePage() {
   const [subjectType, setSubjectType] = useState<string | null>(null);
   const [predictionWindow, setPredictionWindow] = useState<string | null>(null);
   const [modeId, setModeId] = useState<string | null>(null);
-  const [draft, setDraft] = useState<DraftReading | null>(null);
+  const [draft, setDraft] = useState<ModuleDraftReading | null>(null);
 
   const visualMarks = useMemo(() => module?.coreSymbols.slice(0, 5) ?? [], [module]);
+  const isWorkbench = method?.status === "preview" || methodId === "iching";
 
   const copilotReport = useMemo(
     () =>
@@ -70,6 +60,7 @@ export function MethodModulePage() {
   const currentMode = operationLibrary.modes.find((mode) => mode.id === modeId) ?? operationLibrary.modes[0];
   const currentSubjectType = subjectType ?? operationLibrary.subjectTypes[0];
   const currentWindow = predictionWindow ?? operationLibrary.predictionWindows[0];
+  const submitLabel = isWorkbench ? "生成预测草稿" : module.primaryAction;
 
   return (
     <Page wide className="method-module-page">
@@ -80,6 +71,12 @@ export function MethodModulePage() {
         description={module.summary}
         className="method-module-hero"
       />
+
+      {isWorkbench && (
+        <aside className="method-preview-banner" role="note">
+          本页为参考文库 + 模板草稿：按输入 hash 选取象征并填句，非真实起卦、排盘或投掷。结果用于整理思路与对照术语，不作确定性预言。
+        </aside>
+      )}
 
       <section className="method-module-workbench" aria-label={`${module.title}模块工作台`}>
         <form
@@ -103,6 +100,24 @@ export function MethodModulePage() {
               placeholder="输入你要分析的真实事项、已知条件、时间地点或关键人物。"
             />
           </label>
+
+          {kit.sampleQuestions.length > 0 && (
+            <div className="method-sample-questions" aria-label="示例问句">
+              <span>示例问句</span>
+              <div className="method-sample-questions__chips">
+                {kit.sampleQuestions.map((question) => (
+                  <button
+                    key={question}
+                    type="button"
+                    className="method-sample-questions__chip"
+                    onClick={() => setContext(question)}
+                  >
+                    {question}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           <label>
             <span>事项类型</span>
@@ -149,7 +164,7 @@ export function MethodModulePage() {
             ))}
           </div>
 
-          <button type="submit">{module.primaryAction}</button>
+          <button type="submit">{submitLabel}</button>
         </form>
 
         <aside className="method-module-visual" aria-label="模块视觉结构">
@@ -176,12 +191,10 @@ export function MethodModulePage() {
       {draft && (
         <section className="method-module-result" aria-live="polite">
           <div className="section-heading">
-            <p>GENERATED OUTLINE</p>
+            <p>模板草稿</p>
             <h2>本次预测结果</h2>
           </div>
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <div className="method-module-result__summary">
             <span>{draft.subjectType} / {draft.predictionWindow}</span>
             <strong>{draft.context}</strong>
@@ -269,64 +282,4 @@ function ModuleList({ title, items, accent }: { title: string; items: string[]; 
       </ul>
     </article>
   );
-}
-
-function buildDraft(
-  module: MethodModule,
-  kit: MethodModuleKit,
-  operationLibrary: MethodOperationLibrary,
-  context: string,
-  subjectType: string,
-  predictionWindow: string,
-  mode: OperationMode
-): DraftReading {
-  const cleanContext = context.trim() || `${subjectType} / ${predictionWindow} / ${mode.label}`;
-  const selectedSymbols = pickSymbols(
-    operationLibrary.symbolBank,
-    `${module.id}:${cleanContext}:${subjectType}:${predictionWindow}:${mode.id}`,
-    3
-  );
-
-  return {
-    context: cleanContext,
-    subjectType,
-    predictionWindow,
-    mode,
-    pattern: kit.samplePattern,
-    selectedSymbols,
-    advice: operationLibrary.guardrails,
-    axes: operationLibrary.predictionAxes.map((axis, index) => {
-      const symbol = selectedSymbols[index % selectedSymbols.length];
-      return {
-        axis,
-        reading: `${symbol.name} 指向「${symbol.predictionUse}」。在 ${predictionWindow} 内，先按「${subjectType}」校验现实条件，再决定推进、等待或换路径。`,
-      };
-    }),
-    sections: operationLibrary.outputSections.map((section, index) => {
-      const symbol = selectedSymbols[index % selectedSymbols.length];
-      return {
-        title: section,
-        body: `以「${symbol.name}」为主象，按「${mode.label}」处理「${subjectType}」：${symbol.meaning} ${kit.samplePattern}`,
-      };
-    }),
-  };
-}
-
-function pickSymbols(entries: OperationSymbol[], seed: string, count: number) {
-  const scored = entries.map((entry, index) => ({
-    entry,
-    score: hashText(`${seed}:${entry.name}:${index}`),
-  }));
-  return scored
-    .sort((left, right) => left.score - right.score)
-    .slice(0, count)
-    .map((item) => item.entry);
-}
-
-function hashText(value: string) {
-  let hash = 0;
-  for (let index = 0; index < value.length; index += 1) {
-    hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
-  }
-  return hash;
 }

@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { castIChing } from "@atlas/engines";
 import { HexagramLines } from "@/components/charts/HexagramLines";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -82,6 +83,11 @@ export function IchingPage() {
         description="铜钱起卦，取本卦与变卦，对照卦辞、象辞理解事项趋势。问题宜具体，一事一占。"
       />
 
+      <p className="iching-workbench-link">
+        <Link to="/methods/iching/workbench">参考文库模板工作台 →</Link>
+        <span> 对照卦辞象辞与八卦取象，按输入生成模板草稿（非真实演卦）。</span>
+      </p>
+
       <section className="method-workbench">
         <label>
           <span>所问事项</span>
@@ -107,9 +113,7 @@ export function IchingPage() {
 
       {result && (
         <section className="iching-result">
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <header>
             <h2>
               本卦 {result.primary.name}（{result.primary.number}）→ 变卦 {result.changing.name}（{result.changing.number}）

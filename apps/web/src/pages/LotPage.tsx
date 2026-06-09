@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { drawLot, registerLotSigns } from "@atlas/engines/lot";
 import type { LotTemple } from "@atlas/shared-types";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -79,9 +79,7 @@ export function LotPage() {
 
       {result && phase === "revealed" && (
         <section className="sign-scroll" aria-label="签诗结果">
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <div className="sign-scroll__head">
             <span>{LOT_TEMPLE_LABELS[result.sign.temple]}</span>
             <strong>第 {result.sign.number} 签 · {result.sign.grade}</strong>

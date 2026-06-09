@@ -285,7 +285,7 @@ export const ICHING_REFERENCE: MethodReferenceLibrary = {
         {
           title: "易经卦象（本页）",
           subtitle: "preview",
-          body: "本卦、动爻、变卦、卦辞爻辞与八卦取象；工作台按输入生成模板化 draft。",
+          body: "本卦、动爻、变卦、卦辞爻辞与八卦取象；工作台按输入生成模板化 draft。入口：/methods/iching/workbench",
           hint: "经典易学视角",
         },
         {

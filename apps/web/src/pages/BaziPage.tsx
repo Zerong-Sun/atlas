@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { computeBazi, interpretBazi, type BaziResult } from "@atlas/engines/bazi";
 import type { MatchedRule } from "@atlas/shared-types";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -224,9 +224,7 @@ export function BaziPage() {
       {/* ── Results: only shown after compute ── */}
       {showResults && (
         <>
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           {/* ── Four Pillars ── */}
           <section className="pillar-board" aria-label="四柱">
             {result.pillarList.map((pillar) => (

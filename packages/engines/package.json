@@ -14,6 +14,9 @@
     "./qimen": "./src/entries/qimen.ts",
     "./liuyao": "./src/entries/liuyao.ts",
     "./lenormand": "./src/entries/lenormand.ts",
+    "./jiaobei": "./src/entries/jiaobei.ts",
+    "./runes": "./src/entries/runes.ts",
+    "./astrodice": "./src/entries/astrodice.ts",
     "./lot": "./src/entries/lot.ts",
     "./fengshui": "./src/entries/fengshui.ts",
     "./types": "./src/entries/types.ts"

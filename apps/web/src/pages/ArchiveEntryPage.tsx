@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArchiveInterpretationView } from "@/components/ArchiveInterpretationView";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import {
@@ -49,9 +49,9 @@ export function ArchiveEntryPage() {
         {archiveEntryLabel(entry)} · {new Date(entry.createdAt).toLocaleString("zh-CN")}
       </p>
 
-      <div className="method-result-actions">
-        <MethodCopilotTrigger variant="analyze" label={hasArchiveInterpretation(entry) ? "继续 AI 解析" : "AI 解析报告"} />
-      </div>
+      <MethodResultActions
+        label={hasArchiveInterpretation(entry) ? "继续 AI 解析" : "AI 解析报告"}
+      />
 
       <section className="archive-entry-report" aria-label="占卜报告">
         <h3>报告</h3>

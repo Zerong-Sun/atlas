@@ -313,6 +313,69 @@
   position: relative;
 }
 
+.method-preview-banner {
+  margin: 0 0 var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 35%, transparent);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-gold) 8%, var(--color-surface));
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.method-sample-questions {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.method-sample-questions > span {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.method-sample-questions__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.method-sample-questions__chip {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface-elevated);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.method-sample-questions__chip:hover {
+  border-color: color-mix(in srgb, var(--color-gold) 50%, var(--color-border));
+  background: color-mix(in srgb, var(--color-gold) 6%, var(--color-surface-elevated));
+}
+
+.iching-workbench-link {
+  margin: 0 0 var(--spacing-lg);
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.iching-workbench-link a {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+.iching-workbench-link a:hover {
+  text-decoration: underline;
+}
+
 .method-directory-hero,
 .method-detail-hero {
   padding: clamp(24px, 5vw, 48px) 0 var(--spacing-xl);
@@ -3447,11 +3510,333 @@ button.palace-grid__cell:hover {
   }
 }
 
+/* ── Lenormand visuals ── */
+.lenormand-table-section {
+  margin: var(--spacing-lg) 0;
+}
+
+.spread-card--highlight {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.lenormand-table .spread-card__face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* 五牌阵十字布局（宽屏）：核心居中，上下左右为修饰位 */
+@media (min-width: 900px) {
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      ". top ."
+      "left center right"
+      ". bottom .";
+    gap: var(--spacing-md);
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross .spread-card:nth-child(1) {
+    grid-area: center;
+  }
+
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross .spread-card:nth-child(2) {
+    grid-area: top;
+  }
+
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross .spread-card:nth-child(3) {
+    grid-area: bottom;
+  }
+
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross .spread-card:nth-child(4) {
+    grid-area: left;
+  }
+
+  .lenormand-table--five-cross .tarot-spread--lenormand-five-cross .spread-card:nth-child(5) {
+    grid-area: right;
+  }
+}
+
+.lenormand-fallback-face {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+}
+
+/* ── Jiaobei (掷筊) ── */
+.jiaobei-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.jiaobei-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-height: 220px;
+  padding: var(--spacing-xl);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.jiaobei-cups {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.jiaobei-cup {
+  width: min(140px, 28vw);
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.jiaobei-cup__label {
+  fill: rgba(232, 237, 242, 0.92);
+  font-family: var(--font-serif);
+  font-size: 18px;
+}
+
+.jiaobei-cup--hidden {
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.jiaobei-stage--tossing .jiaobei-cups {
+  animation: jiaobei-toss 0.9s ease-in-out;
+}
+
+@keyframes jiaobei-toss {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-48px) rotate(-18deg); }
+  50% { transform: translateY(-8px) rotate(12deg); }
+  75% { transform: translateY(-20px) rotate(-8deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.jiaobei-outcome {
+  text-align: center;
+}
+
+.jiaobei-outcome strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+.jiaobei-history ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0 0;
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.jiaobei-history li {
+  display: grid;
+  gap: 4px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.55);
+}
+
+.jiaobei-confirm {
+  color: var(--color-gold);
+}
+
+.jiaobei-warn {
+  color: #c47a7a;
+}
+
+.jiaobei-question--revise textarea {
+  border-color: rgba(196, 165, 116, 0.65);
+  box-shadow: 0 0 0 1px rgba(196, 165, 116, 0.25);
+}
+
+.jiaobei-revision-panel {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(196, 165, 116, 0.35);
+  border-radius: var(--radius-md);
+  background: rgba(196, 165, 116, 0.08);
+}
+
+.jiaobei-revision-panel strong {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+}
+
+.jiaobei-revision-panel p {
+  margin: 0 0 var(--spacing-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.jiaobei-revision-tips {
+  margin: 0 0 var(--spacing-md);
+  padding-left: 1.2rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.runes-table-section {
+  margin: var(--spacing-lg) 0;
+}
+
+/* ── Runes (卢恩符文) ── */
+.rune-stone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(154, 171, 184, 0.18), transparent 45%),
+    linear-gradient(145deg, #3d4554 0%, #252b36 55%, #1a1f28 100%);
+}
+
+.rune-stone__glyph {
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  line-height: 1;
+  color: rgba(196, 220, 255, 0.95);
+  text-shadow: 0 0 18px rgba(126, 178, 183, 0.45);
+}
+
+.rune-stone em {
+  margin-top: var(--spacing-sm);
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+}
+
+.spread-card.is-reversed .rune-stone__glyph {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* ── Astrodice (占星骰子) ── */
+.astrodice-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  border: 1px solid rgba(154, 171, 184, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.astrodice-dice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: center;
+}
+
+.astrodice-die {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.astrodice-die__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+}
+
+.astrodice-die__cube {
+  width: 96px;
+  height: 96px;
+  perspective: 400px;
+}
+
+.astrodice-die__face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid rgba(196, 165, 116, 0.38);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(138, 168, 196, 0.25), transparent 50%),
+    rgba(17, 24, 39, 0.92);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
+}
+
+.astrodice-die__face em {
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+.astrodice-die__face strong {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.astrodice-die--rolling .astrodice-die__cube {
+  animation: astrodice-roll 1.2s ease-in-out;
+  animation-delay: calc(var(--die-i, 0) * 80ms);
+}
+
+@keyframes astrodice-roll {
+  0% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
+  30% { transform: rotateX(180deg) rotateY(90deg) translateY(-24px); }
+  60% { transform: rotateX(360deg) rotateY(270deg) translateY(-8px); }
+  100% { transform: rotateX(540deg) rotateY(360deg) translateY(0); }
+}
+
+.astrodice-syntax {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-left: 2px solid var(--color-gold-dim);
+}
+
+.astrodice-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .method-card,
   .spread-card,
   .deck-animation span,
-  .method-module-orbit i {
+  .method-module-orbit i,
+  .jiaobei-stage--tossing .jiaobei-cups,
+  .astrodice-die--rolling .astrodice-die__cube {
     animation: none;
   }
 

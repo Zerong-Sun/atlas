@@ -4,7 +4,7 @@ import {
   type BaziCompatibilityResult,
   type RelationshipContext,
 } from "@atlas/engines/bazi";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -268,9 +268,7 @@ export function BaziRelationshipPage() {
 
       {showResults && (
         <>
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <section className="bazi-relationship-boards">
             <MiniPillarBoard title={personA.name || "甲"} result={result.personA} />
             <MiniPillarBoard title={personB.name || "乙"} result={result.personB} />

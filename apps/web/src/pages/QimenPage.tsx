@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { computeQimen, interpretQimen } from "@atlas/engines/qimen";
 import type { MatchedRule, QimenJuMethod, TimingWindow } from "@atlas/shared-types";
 import { QimenBoard } from "@/components/charts/QimenBoard";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -112,9 +112,7 @@ export function QimenPage() {
 
       {chart && interpretation && (
         <>
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <section className="method-result-summary">
             <div className="section-heading">
               <p>CHART</p>
