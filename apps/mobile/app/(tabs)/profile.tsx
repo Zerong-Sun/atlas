@@ -20,6 +20,7 @@ export default function ProfileScreen() {
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "");
   const [birthPlace, setBirthPlace] = useState(profile?.birthPlace ?? "");
+  const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function ProfileScreen() {
       setBirthDate(profile.birthDate ?? "");
       setBirthTime(profile.birthTime ?? "");
       setBirthPlace(profile.birthPlace ?? "");
+      setGender(profile.gender ?? "male");
     }
   }, [profile]);
 
@@ -44,7 +46,7 @@ export default function ProfileScreen() {
   const saveBirth = async () => {
     setSaving(true);
     try {
-      await saveProfile({ birthDate, birthTime, birthPlace });
+      await saveProfile({ birthDate, birthTime, birthPlace, gender });
       setEditing(false);
       track("profile_update");
     } finally {
@@ -78,6 +80,23 @@ export default function ProfileScreen() {
             <Field label="出生日期" value={birthDate} onChangeText={setBirthDate} placeholder="YYYY-MM-DD" />
             <Field label="出生时间" value={birthTime} onChangeText={setBirthTime} placeholder="HH:mm" />
             <Field label="出生地点" value={birthPlace} onChangeText={setBirthPlace} placeholder="城市" />
+            <Text variant="caption" muted>
+              性别（用于排盘）
+            </Text>
+            <View style={styles.genderRow}>
+              <Pressable
+                style={[styles.genderChip, gender === "male" && styles.genderChipOn]}
+                onPress={() => setGender("male")}
+              >
+                <Text variant="body">男</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.genderChip, gender === "female" && styles.genderChipOn]}
+                onPress={() => setGender("female")}
+              >
+                <Text variant="body">女</Text>
+              </Pressable>
+            </View>
             <Button title="保存" onPress={saveBirth} loading={saving} />
           </View>
         ) : (
@@ -87,6 +106,7 @@ export default function ProfileScreen() {
             </Text>
             <Text variant="caption" muted>
               {profile?.birthPlace ?? "未设置地点"}
+              {profile?.gender ? ` · ${profile.gender === "male" ? "男" : "女"}` : ""}
             </Text>
           </>
         )}
@@ -197,4 +217,15 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
     gap: spacing.xs,
   },
+  genderRow: { flexDirection: "row", gap: spacing.sm },
+  genderChip: {
+    flex: 1,
+    paddingVertical: spacing.md,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    alignItems: "center",
+  },
+  genderChipOn: { borderColor: colors.gold, backgroundColor: colors.surfaceElevated },
 });

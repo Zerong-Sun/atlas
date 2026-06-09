@@ -7,9 +7,16 @@
  * - daily-brief
  * - library-list → get-library (GET)
  */
+import {
+  aggregateDreamTrend,
+  mapDreamEntryRow,
+  type DreamInterpretation,
+  type DreamTrend,
+} from "@atlas/api-core";
 import type {
   DailyBrief,
   DreamEntryInput,
+  PortraitSummary,
   QuestionInput,
   ReadingReport,
   Tradition,
@@ -18,42 +25,37 @@ import type {
 import {
   buildMockReading,
   MOCK_DAILY_BRIEF,
-  MOCK_DREAM_TREND,
   MOCK_LIBRARY_ENTRIES,
-  MOCK_PORTRAIT,
   MOCK_PROFILE,
   MOCK_READING_HISTORY,
 } from "./mock/data";
+import { generatePortraitLocal } from "./portrait";
 import { llmComplete } from "./llm";
+import {
+  appendDreamHistory,
+  appendReadingHistory,
+  getDreamHistory,
+  getReadingHistory,
+} from "./storage";
 import { invokeFunction, invokeFunctionGet, isSupabaseConfigured } from "./supabase";
 
 export const EDGE = {
   createReading: "create-reading",
   listReadings: "list-readings",
   interpretDream: "create-dream",
+  listDreams: "list-dreams",
+  dreamTrend: "dream-trend",
   dailyBrief: "daily-brief",
   libraryList: "get-library",
   profile: "profile",
+  generatePortrait: "generate-portrait",
 } as const;
 
 export function useMockApi(): boolean {
   return !isSupabaseConfigured;
 }
 
-export interface DreamInterpretation {
-  entryId: string;
-  chinese: string;
-  jungian: string;
-  reflection: string;
-  degraded?: boolean;
-  createdAt: string;
-}
-
-export interface DreamTrend {
-  periodDays: number;
-  topSymbols: { symbol: string; count: number }[];
-  summary: string;
-}
+export type { DreamInterpretation, DreamTrend };
 
 export interface LibraryEntry {
   id: string;
@@ -87,10 +89,13 @@ export type ProfileUpdateInput = Partial<
     | "birthLat"
     | "birthLng"
     | "timezone"
+    | "gender"
+    | "interests"
     | "disabledTraditions"
     | "onboardingCompleted"
+    | "portraitSummary"
   >
-> & { interests?: string[] };
+>;
 
 function delay(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
@@ -110,22 +115,29 @@ function mapLibraryResponse(data: LibraryApiResponse): LibraryEntry[] {
 export async function createReading(input: QuestionInput): Promise<ReadingReport> {
   if (useMockApi()) {
     await delay(800);
-    return buildMockReading(input.text, input.traditions);
+    const report = buildMockReading(input.text, input.traditions);
+    await appendReadingHistory(report);
+    return report;
   }
   const data = await invokeFunction<ReadingReport>(EDGE.createReading, {
     text: input.text,
     category: input.category,
     traditions: input.traditions,
   });
-  return data ?? buildMockReading(input.text, input.traditions);
+  const report = data ?? buildMockReading(input.text, input.traditions);
+  await appendReadingHistory(report);
+  return report;
 }
 
-/** Local / future: reading history — mock when no list endpoint */
 export async function listReadings(): Promise<ReadingReport[]> {
-  if (useMockApi()) return [...MOCK_READING_HISTORY];
+  if (useMockApi()) {
+    const local = await getReadingHistory();
+    return local.length > 0 ? local : [...MOCK_READING_HISTORY];
+  }
   const data = await invokeFunctionGet<ListReadingsResponse>(EDGE.listReadings);
   if (data?.readings?.length) return data.readings;
-  return [...MOCK_READING_HISTORY];
+  const local = await getReadingHistory();
+  return local.length > 0 ? local : [...MOCK_READING_HISTORY];
 }
 
 const DREAM_TEMPLATES = {
@@ -160,8 +172,7 @@ function sanitizeText(value: unknown, fallback: string): string {
   return text.length > 0 ? text.slice(0, 240) : fallback;
 }
 
-/** Direct LLM dream interpretation */
-export async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretation> {
+async function interpretDreamLocal(input: DreamEntryInput): Promise<DreamInterpretation> {
   const res = await llmComplete({
     messages: [
       { role: "system", content: DREAM_INTERPRETER_SKILL },
@@ -213,10 +224,40 @@ export async function interpretDream(input: DreamEntryInput): Promise<DreamInter
   }
 }
 
-/** Seven-day dream trend — mock until edge endpoint exists */
-export async function fetchDreamTrend(): Promise<DreamTrend> {
-  if (useMockApi()) return { ...MOCK_DREAM_TREND };
-  return { ...MOCK_DREAM_TREND };
+export async function createDreamEntry(input: DreamEntryInput): Promise<DreamInterpretation> {
+  if (useMockApi()) {
+    const entry = await interpretDreamLocal(input);
+    await appendDreamHistory(entry);
+    return entry;
+  }
+  const data = await invokeFunction<DreamInterpretation>(EDGE.interpretDream, input as Record<string, unknown>);
+  const entry = data ? mapDreamEntryRow(data) : await interpretDreamLocal(input);
+  await appendDreamHistory(entry);
+  return entry;
+}
+
+export async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretation> {
+  return createDreamEntry(input);
+}
+
+type ListDreamsResponse = { dreams?: DreamInterpretation[] };
+
+export async function listDreams(limit = 20): Promise<DreamInterpretation[]> {
+  if (useMockApi()) {
+    const local = await getDreamHistory();
+    return local.slice(0, limit);
+  }
+  const data = await invokeFunctionGet<ListDreamsResponse>(EDGE.listDreams, { limit: String(limit) });
+  if (data?.dreams?.length) return data.dreams.map(mapDreamEntryRow);
+  return (await getDreamHistory()).slice(0, limit);
+}
+
+export async function fetchDreamTrend(periodDays = 7): Promise<DreamTrend> {
+  if (useMockApi()) {
+    return aggregateDreamTrend(await getDreamHistory(), periodDays);
+  }
+  const data = await invokeFunctionGet<DreamTrend>(EDGE.dreamTrend, { days: String(periodDays) });
+  return data ?? aggregateDreamTrend(await getDreamHistory(), periodDays);
 }
 
 /** POST daily-brief */

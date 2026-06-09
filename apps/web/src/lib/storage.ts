@@ -1,3 +1,4 @@
+import type { DreamInterpretation } from "@atlas/api-core";
 import type { ReadingReport } from "@atlas/shared-types";
 
 export interface TarotDrawHistoryItem {
@@ -32,6 +33,7 @@ const KEYS = {
   profile: "atlas:local_profile",
   interests: "atlas:interests",
   readings: "atlas:reading_history",
+  dreams: "atlas:dream_history",
   tarotDrawHistory: "atlas:tarot_draw_history",
   tarotSenseRecords: "atlas:tarot_sense_records",
   qimenBoardHistory: "atlas:qimen_board_history",
@@ -125,4 +127,13 @@ export function getQimenBoardHistory(): QimenBoardHistoryItem[] {
 export function appendQimenBoardHistory(item: QimenBoardHistoryItem): void {
   const next = [item, ...getQimenBoardHistory().filter((h) => h.id !== item.id)].slice(0, 10);
   localStorage.setItem(KEYS.qimenBoardHistory, JSON.stringify(next));
+}
+
+export function getDreamHistory(): DreamInterpretation[] {
+  return readJson<DreamInterpretation[]>(KEYS.dreams, []);
+}
+
+export function appendDreamHistory(entry: DreamInterpretation): void {
+  const next = [entry, ...getDreamHistory().filter((d) => d.entryId !== entry.entryId)].slice(0, 100);
+  localStorage.setItem(KEYS.dreams, JSON.stringify(next));
 }

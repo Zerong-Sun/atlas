@@ -1,10 +1,10 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DreamCapture } from "@/components/DreamCapture";
 import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
-import { createDreamEntry, type DreamInterpretation } from "@/lib/api/dreams";
+import { createDreamEntry, fetchDreamTrend, type DreamInterpretation } from "@/lib/api/dreams";
 import { buildDreamReportSnapshot } from "@/lib/methodReportSnapshot";
 
 import { DREAM_SCHOOLS } from "@/data/dreamSchoolsLibrary";
@@ -16,6 +16,11 @@ export function DreamPage() {
   const [result, setResult] = useState<DreamInterpretation | null>(null);
   const [lastDreamText, setLastDreamText] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [trend, setTrend] = useState<Awaited<ReturnType<typeof fetchDreamTrend>> | null>(null);
+
+  useEffect(() => {
+    fetchDreamTrend().then(setTrend);
+  }, []);
 
   const copilotReport = useMemo(
     () => (result ? buildDreamReportSnapshot(lastDreamText, result) : null),
@@ -30,6 +35,7 @@ export function DreamPage() {
     try {
       const interp = await createDreamEntry({ text, emotions, symbols });
       setResult(interp);
+      setTrend(await fetchDreamTrend());
     } catch {
       setError("梦境解读失败，请稍后重试。");
     } finally {
@@ -60,6 +66,20 @@ export function DreamPage() {
           resultActions={result ? <MethodCopilotTrigger variant="analyze" /> : undefined}
         />
       </section>
+
+      {trend && (
+        <section className="dream-trend" aria-label="七日梦境趋势">
+          <h2>七日趋势</h2>
+          <p className="muted">{trend.summary}</p>
+          <div className="dream-trend__symbols">
+            {trend.topSymbols.map((s) => (
+              <span key={s.symbol} className="chip">
+                {s.symbol} ×{s.count}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="dream-section-head" aria-labelledby="dream-schools-title">
         <h2 id="dream-schools-title">解读流派</h2>

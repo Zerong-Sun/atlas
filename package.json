@@ -15,7 +15,9 @@
     "corpus:validate": "npm run validate -w @atlas/corpus-scripts",
     "corpus:ingest": "npm run ingest -w @atlas/corpus-scripts",
     "corpus:ingest:dry-run": "npm run ingest:dry-run -w @atlas/corpus-scripts",
-    "corpus:publish": "npm run publish -w @atlas/corpus-scripts"
+    "corpus:publish": "npm run publish -w @atlas/corpus-scripts",
+    "corpus:embed": "npm run embed -w @atlas/corpus-scripts",
+    "corpus:embed:dry-run": "npm run embed:dry-run -w @atlas/corpus-scripts"
   },
   "engines": { "node": ">=20" }
 }

@@ -5,12 +5,14 @@ import { INTEREST_OPTIONS } from "@/constants/traditions";
 import { Screen } from "@/components/ui/Screen";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
+import { useApp } from "@/context/AppContext";
 import { setInterests } from "@/lib/storage";
 import { track } from "@/lib/analytics";
 import { colors, radius, spacing } from "@/constants/theme";
 
 export default function InterestsScreen() {
   const router = useRouter();
+  const { saveProfile } = useApp();
   const [selected, setSelected] = useState<string[]>([]);
 
   useEffect(() => {
@@ -23,6 +25,7 @@ export default function InterestsScreen() {
 
   const next = async () => {
     await setInterests(selected);
+    await saveProfile({ interests: selected });
     track("onboarding_interests", { count: selected.length });
     router.push("/onboarding/profile");
   };

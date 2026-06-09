@@ -24,6 +24,7 @@ export function ProfilePage() {
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "");
   const [birthPlace, setBirthPlace] = useState(profile?.birthPlace ?? "");
+  const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -38,6 +39,7 @@ export function ProfilePage() {
       setBirthDate(profile.birthDate ?? "");
       setBirthTime(profile.birthTime ?? "");
       setBirthPlace(profile.birthPlace ?? "");
+      setGender(profile.gender ?? "male");
     }
   }, [profile]);
 
@@ -51,7 +53,7 @@ export function ProfilePage() {
   const saveProfileFields = async () => {
     setSaving(true);
     try {
-      await saveProfile({ displayName, birthDate, birthTime, birthPlace });
+      await saveProfile({ displayName, birthDate, birthTime, birthPlace, gender });
       setEditing(false);
       track("profile_update");
     } finally {
@@ -74,6 +76,25 @@ export function ProfilePage() {
             <Field label="出生日期" value={birthDate} onChange={setBirthDate} placeholder="YYYY-MM-DD" />
             <Field label="出生时间" value={birthTime} onChange={setBirthTime} placeholder="HH:mm" />
             <Field label="出生地点" value={birthPlace} onChange={setBirthPlace} placeholder="城市" />
+            <div className="field">
+              <label>性别（用于排盘）</label>
+              <div style={{ display: "flex", gap: spacing.sm }}>
+                <button
+                  type="button"
+                  className={`gender-chip${gender === "male" ? " on" : ""}`}
+                  onClick={() => setGender("male")}
+                >
+                  男
+                </button>
+                <button
+                  type="button"
+                  className={`gender-chip${gender === "female" ? " on" : ""}`}
+                  onClick={() => setGender("female")}
+                >
+                  女
+                </button>
+              </div>
+            </div>
             <Button title="保存" onClick={saveProfileFields} loading={saving} />
           </div>
         ) : (
@@ -82,7 +103,10 @@ export function ProfilePage() {
             <p>
               {profile?.birthDate ?? "—"} {profile?.birthTime ?? ""}
             </p>
-            <p className="muted">{profile?.birthPlace ?? "未设置地点"}</p>
+            <p className="muted">
+              {profile?.birthPlace ?? "未设置地点"}
+              {profile?.gender ? ` · ${profile.gender === "male" ? "男" : "女"}` : ""}
+            </p>
           </>
         )}
       </div>
@@ -225,6 +249,19 @@ export function ProfilePage() {
           border-radius: ${radius.md}px;
           padding: ${spacing.md}px;
           color: ${colors.text};
+        }
+        .gender-chip {
+          flex: 1;
+          padding: ${spacing.sm}px ${spacing.md}px;
+          border: 1px solid ${colors.border};
+          border-radius: ${radius.md}px;
+          background: ${colors.surface};
+          color: ${colors.text};
+          cursor: pointer;
+        }
+        .gender-chip.on {
+          border-color: ${colors.gold};
+          color: ${colors.gold};
         }
       `}</style>
     </Page>

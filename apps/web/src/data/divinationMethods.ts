@@ -47,7 +47,7 @@ export const DIVINATION_METHODS: DivinationMethod[] = [
     status: "ready",
     tags: ["多流派", "符号", "LLM"],
   },
-  { id: "iching", title: "周易六爻", subtitle: "起卦、变爻、卦辞爻辞与事类断语。", tradition: "易", route: "/methods/iching", status: "preview", tags: ["本卦", "变卦"] },
+  { id: "iching", title: "周易六十四卦", subtitle: "铜钱起卦，本卦、变卦与卦辞象辞对照解读。", tradition: "易", route: "/methods/iching", status: "ready", tags: ["本卦", "变卦"] },
   { id: "qimen", title: "奇门遁甲", subtitle: "局盘、九宫、八门、九星、神煞与时空取象。", tradition: "术数", route: "/methods/qimen", status: "ready", tags: ["九宫", "八门"] },
   { id: "ziwei", title: "紫微斗数", subtitle: "命盘十二宫、主星辅星与大限流年。", tradition: "术数", route: "/methods/ziwei", status: "ready", tags: ["十二宫", "大限"] },
   { id: "liuyao", title: "纳甲六爻", subtitle: "铜钱起卦、世应六亲、用神旺衰。", tradition: "易", route: "/methods/liuyao", status: "ready", tags: ["用神", "世应"] },

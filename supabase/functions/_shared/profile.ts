@@ -1,5 +1,21 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { Tradition, UserProfile } from "@atlas/shared-types";
+import type { PortraitSummary, Tradition, UserProfile } from "@atlas/shared-types";
+
+function mapPortraitSummary(raw: unknown): PortraitSummary | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const o = raw as Record<string, unknown>;
+  const traditions =
+    o.traditions && typeof o.traditions === "object"
+      ? (o.traditions as PortraitSummary["traditions"])
+      : undefined;
+  if (!traditions || Object.keys(traditions).length === 0) return undefined;
+  return {
+    traditions,
+    consensus: typeof o.consensus === "string" ? o.consensus : undefined,
+    divergence: typeof o.divergence === "string" ? o.divergence : undefined,
+    generatedAt: typeof o.generatedAt === "string" ? o.generatedAt : undefined,
+  };
+}
 
 export async function loadProfile(
   client: SupabaseClient,
@@ -16,8 +32,11 @@ export async function loadProfile(
     birthLat: data.birth_lat ?? undefined,
     birthLng: data.birth_lng ?? undefined,
     timezone: data.timezone ?? undefined,
+    gender: data.gender === "male" || data.gender === "female" ? data.gender : undefined,
+    interests: Array.isArray(data.interests) ? (data.interests as string[]) : undefined,
     disabledTraditions: (data.disabled_traditions ?? []) as Tradition[],
     onboardingCompleted: data.onboarding_completed ?? false,
     corpusVersionPin: data.corpus_version_pin ?? undefined,
+    portraitSummary: mapPortraitSummary(data.portrait_summary),
   };
 }

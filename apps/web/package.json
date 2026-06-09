@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@atlas/engines": "*",
+    "@atlas/api-core": "*",
+    "@atlas/orchestrator": "*",
     "@atlas/theme": "*",
     "@atlas/shared-types": "*",
     "@supabase/supabase-js": "^2.49.1",

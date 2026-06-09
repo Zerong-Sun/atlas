@@ -15,6 +15,8 @@ export const MOCK_PROFILE: UserProfile = {
   birthLat: 39.9,
   birthLng: 116.4,
   timezone: "Asia/Shanghai",
+  gender: "male",
+  interests: ["compare", "classic"],
   disabledTraditions: [],
   onboardingCompleted: true,
   corpusVersionPin: "corpus_v0_1",

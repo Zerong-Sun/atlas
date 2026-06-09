@@ -2,19 +2,22 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 import { Page } from "@/components/ui/Page";
+import { useApp } from "@/context/AppContext";
 import { setInterests } from "@/lib/storage";
 import { INTEREST_OPTIONS } from "@/theme/traditions";
 
 export function InterestsPage() {
   const navigate = useNavigate();
+  const { saveProfile } = useApp();
   const [selected, setSelected] = useState<string[]>([]);
 
   const toggle = (id: string) => {
     setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   };
 
-  const next = () => {
-    setInterests(selected);
+  const next = async () => {
+    await setInterests(selected);
+    await saveProfile({ interests: selected });
     navigate("/onboarding/profile");
   };
 
@@ -36,7 +39,7 @@ export function InterestsPage() {
           </button>
         ))}
       </div>
-      <Button title="下一步" onClick={next} disabled={selected.length === 0} />
+      <Button title="下一步" onClick={() => void next()} disabled={selected.length === 0} />
     </Page>
   );
 }

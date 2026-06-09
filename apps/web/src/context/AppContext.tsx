@@ -10,7 +10,13 @@ import {
 import type { UserProfile } from "@atlas/shared-types";
 import { fetchProfile, updateProfile } from "@/lib/api/profile";
 import { ensureAuthSession, isSupabaseConfigured } from "@/lib/supabase";
-import { getLocalProfile, getOnboardingDone, setLocalProfile, setOnboardingDone } from "@/lib/storage";
+import {
+  getInterests,
+  getLocalProfile,
+  getOnboardingDone,
+  setLocalProfile,
+  setOnboardingDone,
+} from "@/lib/storage";
 import { track } from "@/lib/analytics";
 
 type AppState = {
@@ -32,7 +38,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const refreshProfile = useCallback(async () => {
     const local = await getLocalProfile();
     const remote = await fetchProfile();
-    setProfile({ ...remote, ...(local as Partial<UserProfile>) });
+    const storedInterests = await getInterests();
+    const merged: UserProfile = {
+      ...remote,
+      ...(local as Partial<UserProfile>),
+      interests:
+        (local as Partial<UserProfile>).interests ??
+        remote.interests ??
+        (storedInterests.length > 0 ? storedInterests : undefined),
+    };
+    setProfile(merged);
+    if (storedInterests.length > 0 && !remote.interests?.length && isSupabaseConfigured) {
+      await updateProfile({ interests: storedInterests });
+    }
   }, []);
 
   useEffect(() => {

@@ -11,6 +11,7 @@ export function ProfileOnboardingPage() {
   const [birthDate, setBirthDate] = useState("1990-01-01");
   const [birthTime, setBirthTime] = useState("12:00");
   const [birthPlace, setBirthPlace] = useState("北京");
+  const [gender, setGender] = useState<"male" | "female">("male");
 
   const next = async () => {
     await saveProfile({
@@ -18,6 +19,7 @@ export function ProfileOnboardingPage() {
       birthDate,
       birthTime,
       birthPlace,
+      gender,
       timezone: "Asia/Shanghai",
     });
     navigate("/onboarding/portrait");
@@ -30,6 +32,25 @@ export function ProfileOnboardingPage() {
       <Field label="出生日期 (YYYY-MM-DD)" value={birthDate} onChange={setBirthDate} />
       <Field label="出生时间 (HH:mm)" value={birthTime} onChange={setBirthTime} />
       <Field label="出生地点" value={birthPlace} onChange={setBirthPlace} />
+      <div className="onb-field">
+        <label>性别（用于排盘）</label>
+        <div style={{ display: "flex", gap: "var(--spacing-sm)" }}>
+          <button
+            type="button"
+            className={`chip${gender === "male" ? " on" : ""}`}
+            onClick={() => setGender("male")}
+          >
+            男
+          </button>
+          <button
+            type="button"
+            className={`chip${gender === "female" ? " on" : ""}`}
+            onClick={() => setGender("female")}
+          >
+            女
+          </button>
+        </div>
+      </div>
       <Button title="生成画像摘要" onClick={next} />
       <style>{`
         .onb-field { margin-bottom: var(--spacing-md); }

@@ -1,6 +1,7 @@
 import type { DreamEntryInput } from "@atlas/shared-types";
 import { MimoGateway } from "@atlas/orchestrator";
 import { handleOptions, jsonResponse } from "../_shared/cors.ts";
+import { mapDreamEntryRow } from "../_shared/dream.ts";
 import { requireUser } from "../_shared/supabase.ts";
 
 const DREAM_TEMPLATES = {
@@ -138,7 +139,7 @@ Deno.serve(async (req) => {
       .single();
 
     if (error) return jsonResponse({ error: error.message }, 400);
-    return jsonResponse(data);
+    return jsonResponse(mapDreamEntryRow(data));
   } catch (e) {
     if (e instanceof Response) return e;
     return jsonResponse({ error: String(e) }, 500);

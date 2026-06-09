@@ -1,17 +1,17 @@
+import {
+  aggregateDreamTrend,
+  mapDreamEntryRow,
+  type DreamInterpretation,
+  type DreamTrend,
+} from "@atlas/api-core";
 import type { DreamEntryInput } from "@atlas/shared-types";
 import { buildDreamContextPrompt, DREAM_INTERPRETER_SKILL } from "@/data/dreamPromptLibrary";
 import { matchDreamSymbols } from "@/data/dreamSymbolsLibrary";
-import { MOCK_DREAM_TREND } from "../mock/data";
+import { appendDreamHistory, getDreamHistory } from "../storage";
+import { callEdge, EDGE_PATHS, useMockApi } from "./client";
 import { llmComplete } from "./llm";
 
-export interface DreamInterpretation {
-  entryId: string;
-  chinese: string;
-  jungian: string;
-  reflection: string;
-  degraded?: boolean;
-  createdAt: string;
-}
+export type { DreamInterpretation, DreamTrend };
 
 const DREAM_TEMPLATES = {
   chinese: "从传统梦占视角，此梦象多与近期心绪与未竟之事相关，宜静观数日。",
@@ -25,9 +25,12 @@ function sanitizeText(value: unknown, fallback: string): string {
   return text.length > 0 ? text.slice(0, 240) : fallback;
 }
 
-function fallbackInterpretation(): DreamInterpretation {
+function fallbackInterpretation(input?: DreamEntryInput): DreamInterpretation {
   return {
     entryId: `dream-${Date.now()}`,
+    text: input?.text,
+    emotions: input?.emotions ?? [],
+    symbols: input?.symbols ?? [],
     chinese: DREAM_TEMPLATES.chinese,
     jungian: DREAM_TEMPLATES.jungian,
     reflection: DREAM_TEMPLATES.reflection,
@@ -36,7 +39,7 @@ function fallbackInterpretation(): DreamInterpretation {
   };
 }
 
-async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretation> {
+async function interpretDreamLocal(input: DreamEntryInput): Promise<DreamInterpretation> {
   const matched = matchDreamSymbols(input.text);
   const symbolContext = buildDreamContextPrompt(matched);
   const res = await llmComplete({
@@ -56,7 +59,7 @@ async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretati
     maxTokens: 700,
   });
 
-  if (res.degraded || !res.content) return fallbackInterpretation();
+  if (res.degraded || !res.content) return fallbackInterpretation(input);
 
   try {
     const parsed = JSON.parse(res.content) as {
@@ -68,6 +71,9 @@ async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretati
     const reflection = sanitizeText(parsed.reflection ?? parsed.islamic, DREAM_TEMPLATES.reflection);
     return {
       entryId: `dream-${Date.now()}`,
+      text: input.text,
+      emotions: input.emotions ?? [],
+      symbols: input.symbols ?? [],
       chinese: sanitizeText(parsed.chinese, DREAM_TEMPLATES.chinese),
       jungian: sanitizeText(parsed.jungian, DREAM_TEMPLATES.jungian),
       reflection,
@@ -75,14 +81,44 @@ async function interpretDream(input: DreamEntryInput): Promise<DreamInterpretati
       createdAt: new Date().toISOString(),
     };
   } catch {
-    return fallbackInterpretation();
+    return fallbackInterpretation(input);
   }
 }
 
 export async function createDreamEntry(input: DreamEntryInput): Promise<DreamInterpretation> {
-  return interpretDream(input);
+  if (useMockApi()) {
+    const entry = await interpretDreamLocal(input);
+    appendDreamHistory(entry);
+    return entry;
+  }
+
+  const data = await callEdge<DreamInterpretation>(EDGE_PATHS.interpretDream, {
+    body: input as unknown as Record<string, unknown>,
+  });
+  const entry = data ? mapDreamEntryRow(data) : await interpretDreamLocal(input);
+  appendDreamHistory(entry);
+  return entry;
 }
 
-export async function fetchDreamTrend(): Promise<typeof MOCK_DREAM_TREND> {
-  return { ...MOCK_DREAM_TREND };
+type ListDreamsResponse = { dreams?: DreamInterpretation[] };
+
+export async function listDreams(limit = 20): Promise<DreamInterpretation[]> {
+  if (useMockApi()) return getDreamHistory().slice(0, limit);
+  const data = await callEdge<ListDreamsResponse>(EDGE_PATHS.listDreams, {
+    method: "GET",
+    query: { limit: String(limit) },
+  });
+  if (data?.dreams?.length) return data.dreams.map(mapDreamEntryRow);
+  return getDreamHistory().slice(0, limit);
+}
+
+export async function fetchDreamTrend(periodDays = 7): Promise<DreamTrend> {
+  if (useMockApi()) {
+    return aggregateDreamTrend(getDreamHistory(), periodDays);
+  }
+  const data = await callEdge<DreamTrend>(EDGE_PATHS.dreamTrend, {
+    method: "GET",
+    query: { days: String(periodDays) },
+  });
+  return data ?? aggregateDreamTrend(getDreamHistory(), periodDays);
 }

@@ -1,23 +1,27 @@
-import type { UserProfile } from "@atlas/shared-types";
+import type { PortraitSummary, UserProfile } from "@atlas/shared-types";
 import { handleOptions, jsonResponse } from "../_shared/cors.ts";
 import { loadProfile } from "../_shared/profile.ts";
 import { requireUser } from "../_shared/supabase.ts";
 
-function toRow(userId: string, body: Partial<UserProfile>) {
-  return {
+function toRow(userId: string, body: Partial<UserProfile> & { interests?: string[] }) {
+  const row: Record<string, unknown> = {
     user_id: userId,
-    display_name: body.displayName ?? null,
-    birth_date: body.birthDate ?? null,
-    birth_time: body.birthTime ?? null,
-    birth_place: body.birthPlace ?? null,
-    birth_lat: body.birthLat ?? null,
-    birth_lng: body.birthLng ?? null,
-    timezone: body.timezone ?? "Asia/Shanghai",
-    disabled_traditions: body.disabledTraditions ?? [],
-    onboarding_completed: body.onboardingCompleted ?? false,
-    corpus_version_pin: body.corpusVersionPin ?? null,
     updated_at: new Date().toISOString(),
   };
+  if (body.displayName !== undefined) row.display_name = body.displayName ?? null;
+  if (body.birthDate !== undefined) row.birth_date = body.birthDate ?? null;
+  if (body.birthTime !== undefined) row.birth_time = body.birthTime ?? null;
+  if (body.birthPlace !== undefined) row.birth_place = body.birthPlace ?? null;
+  if (body.birthLat !== undefined) row.birth_lat = body.birthLat ?? null;
+  if (body.birthLng !== undefined) row.birth_lng = body.birthLng ?? null;
+  if (body.timezone !== undefined) row.timezone = body.timezone ?? "Asia/Shanghai";
+  if (body.gender !== undefined) row.gender = body.gender ?? null;
+  if (body.interests !== undefined) row.interests = body.interests ?? [];
+  if (body.disabledTraditions !== undefined) row.disabled_traditions = body.disabledTraditions ?? [];
+  if (body.onboardingCompleted !== undefined) row.onboarding_completed = body.onboardingCompleted ?? false;
+  if (body.corpusVersionPin !== undefined) row.corpus_version_pin = body.corpusVersionPin ?? null;
+  if (body.portraitSummary !== undefined) row.portrait_summary = body.portraitSummary ?? null;
+  return row;
 }
 
 Deno.serve(async (req) => {

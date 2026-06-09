@@ -1,5 +1,6 @@
-import type { UserProfile } from "@atlas/shared-types";
-import { MOCK_PROFILE, MOCK_PORTRAIT } from "../mock/data";
+import type { PortraitSummary, UserProfile } from "@atlas/shared-types";
+import { MOCK_PROFILE } from "../mock/data";
+import { generatePortraitLocal } from "../portrait";
 import { callEdge, EDGE_PATHS, useMockApi } from "./client";
 
 export type ProfileUpdateInput = Partial<
@@ -12,10 +13,13 @@ export type ProfileUpdateInput = Partial<
     | "birthLat"
     | "birthLng"
     | "timezone"
+    | "gender"
+    | "interests"
     | "disabledTraditions"
     | "onboardingCompleted"
+    | "portraitSummary"
   >
-> & { interests?: string[] };
+>;
 
 export async function fetchProfile(): Promise<UserProfile> {
   if (useMockApi()) return { ...MOCK_PROFILE };
@@ -38,7 +42,20 @@ export async function updateProfile(input: ProfileUpdateInput): Promise<UserProf
   return data ?? { ...MOCK_PROFILE, ...input };
 }
 
-export async function fetchPortraitSummary(): Promise<Record<string, string>> {
-  if (useMockApi()) return { ...MOCK_PORTRAIT };
-  return { ...MOCK_PORTRAIT };
+export async function generatePortrait(profile?: UserProfile): Promise<PortraitSummary> {
+  const base = profile ?? (await fetchProfile());
+  if (useMockApi()) {
+    return generatePortraitLocal(base);
+  }
+  const data = await callEdge<PortraitSummary>(EDGE_PATHS.generatePortrait, { method: "POST" });
+  if (data?.traditions && Object.keys(data.traditions).length > 0) return data;
+  return generatePortraitLocal(base);
+}
+
+export async function fetchPortraitSummary(profile?: UserProfile): Promise<PortraitSummary> {
+  const base = profile ?? (await fetchProfile());
+  if (base.portraitSummary?.traditions && Object.keys(base.portraitSummary.traditions).length > 0) {
+    return base.portraitSummary;
+  }
+  return generatePortrait(base);
 }

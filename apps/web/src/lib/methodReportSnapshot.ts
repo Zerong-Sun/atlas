@@ -202,6 +202,37 @@ export function buildTarotReportSnapshot(input: {
   };
 }
 
+type IChingSnapshot = {
+  primary: { name: string; number: number; judgment: string; image: string };
+  changing: { name: string; number: number; judgment: string };
+  summary: string;
+};
+
+export function buildIchingReportSnapshot(
+  question: string,
+  result: IChingSnapshot,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `所问：${question || "未填写"}`,
+      result.summary,
+      `本卦 ${result.primary.name}：${result.primary.judgment}`,
+      `象曰：${result.primary.image}`,
+      `变卦 ${result.changing.name}：${result.changing.judgment}`,
+    ),
+  );
+
+  return {
+    entryId: entryId("iching", [result.primary.number, result.changing.number]),
+    source: "method",
+    methodId: "iching",
+    title: `周易 · ${result.primary.name}卦`,
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
 export function buildLiuyaoReportSnapshot(
   question: string,
   subjectType: string,

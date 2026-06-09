@@ -3,6 +3,7 @@ import { ASTRODICE_DEEP } from "./astrodice";
 import { COFFEE_DEEP } from "./coffee";
 import { FENGSHUI_DEEP } from "./fengshui";
 import { GEOMANCY_DEEP } from "./geomancy";
+import { ICHING_DEEP } from "./iching";
 import { JIAOBEI_DEEP } from "./jiaobei";
 import { LIUYAO_DEEP } from "./liuyao";
 import { LENORMAND_DEEP } from "./lenormand";
@@ -21,6 +22,7 @@ import { ZIWEI_DEEP } from "./ziwei";
 export const DEEP_LIBRARY_ENTRIES: Array<{ id: string; raw: DeepLibraryRaw }> = [
   { id: "ziwei", raw: ZIWEI_DEEP },
   { id: "liuyao", raw: LIUYAO_DEEP },
+  { id: "iching", raw: ICHING_DEEP },
   { id: "meihua", raw: MEIHUA_DEEP },
   { id: "western", raw: WESTERN_DEEP },
   { id: "vedic", raw: VEDIC_DEEP },

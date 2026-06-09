@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CosmicBackdrop } from "@/components/CosmicBackdrop";
-import { useApp } from "@/context/AppContext";
 import { colors, spacing } from "@/theme/tokens";
 
 const AUTO_ENTER_MS = 4200;
 
 export function WelcomePage() {
   const navigate = useNavigate();
-  const { completeOnboarding } = useApp();
   const [leaving, setLeaving] = useState(false);
 
-  const enter = async () => {
+  const enter = () => {
     if (leaving) return;
     setLeaving(true);
-    await completeOnboarding();
-    navigate("/", { replace: true });
+    navigate("/onboarding/interests", { replace: true });
   };
 
   useEffect(() => {
@@ -36,8 +33,8 @@ export function WelcomePage() {
         <p className="welcome__hint">
           今日页查看每日简报 · 底部导航进入占法、解梦与档案 · 提问即可获得多体系对照解读
         </p>
-        <button type="button" className="welcome__enter" onClick={() => void enter()} disabled={leaving}>
-          {leaving ? "进入中…" : "进入今日"}
+        <button type="button" className="welcome__enter" onClick={enter} disabled={leaving}>
+          {leaving ? "进入中…" : "开始引导"}
         </button>
       </div>
       <style>{`

@@ -58,6 +58,15 @@ export interface ReadingReport {
   createdAt: string;
 }
 
+export type PortraitGender = "male" | "female";
+
+export interface PortraitSummary {
+  traditions: Partial<Record<Tradition, string>>;
+  consensus?: string;
+  divergence?: string;
+  generatedAt?: string;
+}
+
 export interface UserProfile {
   userId: string;
   displayName?: string;
@@ -67,9 +76,12 @@ export interface UserProfile {
   birthLat?: number;
   birthLng?: number;
   timezone?: string;
+  gender?: PortraitGender;
+  interests?: string[];
   disabledTraditions: Tradition[];
   onboardingCompleted: boolean;
   corpusVersionPin?: string;
+  portraitSummary?: PortraitSummary;
 }
 
 export interface QuestionInput {

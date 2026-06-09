@@ -3,6 +3,7 @@ import { ASTRODICE_REFERENCE } from "./astrodice";
 import { COFFEE_REFERENCE } from "./coffee";
 import { FENGSHUI_REFERENCE } from "./fengshui";
 import { GEOMANCY_REFERENCE } from "./geomancy";
+import { ICHING_REFERENCE } from "./iching";
 import { JIAOBEI_REFERENCE } from "./jiaobei";
 import { LIUYAO_REFERENCE } from "./liuyao";
 import { LENORMAND_REFERENCE } from "./lenormand";
@@ -21,6 +22,7 @@ import { ZIWEI_REFERENCE } from "./ziwei";
 export const METHOD_REFERENCE_LIBRARIES: MethodReferenceLibrary[] = [
   ZIWEI_REFERENCE,
   LIUYAO_REFERENCE,
+  ICHING_REFERENCE,
   MEIHUA_REFERENCE,
   WESTERN_REFERENCE,
   VEDIC_REFERENCE,

@@ -16,3 +16,4 @@ export {
 } from "./hybrid-retrieval.ts";
 export { SEED_CORPUS_FALLBACK, mapSeedChunk } from "./seed-corpus-fallback.ts";
 export { SafetyPolicy, type SafetyResult } from "./safety-policy.ts";
+export { PortraitService, buildPortraitTraditions } from "./portrait-service.ts";

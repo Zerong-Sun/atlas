@@ -64,6 +64,7 @@ export class ReadingOrchestrator {
       birthLat: input.profile?.birthLat,
       birthLng: input.profile?.birthLng,
       timezone: input.profile?.timezone,
+      gender: input.profile?.gender,
       seed,
       ...input.engineInput,
     };
