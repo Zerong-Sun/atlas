@@ -13,5 +13,6 @@ export function methodIdFromPathname(pathname: string): string | null {
 export function isMethodCopilotRoute(pathname: string): boolean {
   if (pathname === "/dream") return true;
   if (pathname.startsWith("/reading/")) return true;
+  if (pathname.startsWith("/archive/")) return true;
   return pathname.startsWith("/methods");
 }

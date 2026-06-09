@@ -14,6 +14,7 @@ import type { DreamInterpretation } from "@/lib/api/dreams";
 import { TRADITION_LABELS } from "@/theme/traditions";
 
 export type MethodCopilotReportSnapshot = {
+  entryId?: string;
   source: "method" | "reading" | "module";
   methodId: string | null;
   title: string;
@@ -21,6 +22,14 @@ export type MethodCopilotReportSnapshot = {
   body: string;
   generatedAt?: string;
 };
+
+function entryId(prefix: string, parts: Array<string | number | undefined | null>): string {
+  const seed = parts
+    .filter((part) => part != null && part !== "")
+    .map(String)
+    .join("-");
+  return seed ? `${prefix}-${seed}` : `${prefix}-${Date.now()}`;
+}
 
 const MAX_BODY = 7000;
 
@@ -89,13 +98,15 @@ export function buildBaziReportSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("bazi", [result.pillarList.map((pillar) => pillar.value).join("")]),
     source: "method",
     methodId: "bazi",
     title,
     summary: result.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -138,13 +149,19 @@ export function buildBaziRelationshipSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("bazi-rel", [
+      result.personA.dayMaster,
+      result.personB.dayMaster,
+      result.relationshipType,
+    ]),
     source: "method",
     methodId: "bazi-relationship",
     title: `八字缘合 · ${personAName} & ${personBName}`,
     summary: result.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -154,6 +171,7 @@ export function buildTarotReportSnapshot(input: {
   cards: Array<{ position: string; name: string; reversed: boolean }>;
   combo: string;
   interpretation: { summary?: string; pairMatches?: Array<{ meaning?: string }> } | null;
+  drawId?: string;
 }): MethodCopilotReportSnapshot {
   const cardLines = input.cards.map(
     (c) => `${c.position}：${c.name}${c.reversed ? "（逆位）" : "（正位）"}`,
@@ -172,13 +190,15 @@ export function buildTarotReportSnapshot(input: {
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: input.drawId ?? entryId("tarot", [input.cards.map((card) => card.name).join("+")]),
     source: "method",
     methodId: "tarot",
     title: "塔罗牌阵",
     summary: input.interpretation?.summary ?? input.combo,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -203,12 +223,13 @@ export function buildLiuyaoReportSnapshot(
   );
 
   return {
+    entryId: entryId("liuyao", [result.timestamp]),
     source: "method",
     methodId: "liuyao",
     title: `六爻 · ${result.primaryName}卦`,
     summary: `${result.primaryName} → ${result.changedName}，用神${result.usefulGod}`,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt: result.timestamp,
   };
 }
 
@@ -229,13 +250,15 @@ export function buildZiweiReportSnapshot(result: ZiweiResult): MethodCopilotRepo
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("ziwei", [result.chineseDate, result.lunarDate]),
     source: "method",
     methodId: "ziwei",
     title: "紫微斗数命盘",
     summary: result.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -273,13 +296,15 @@ export function buildQimenReportSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("qimen", [chart.dun, chart.ju, chart.pillars.day, chart.pillars.hour]),
     source: "method",
     methodId: "qimen",
     title: `奇门遁甲 · ${chart.dun}${chart.ju}局`,
     summary: interpretation.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -307,13 +332,15 @@ export function buildWesternReportSnapshot(result: WesternResult): MethodCopilot
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("western", [result.planetList.map((planet) => `${planet.label}${planet.sign}`).join("+")]),
     source: "method",
     methodId: "western",
     title: "西洋占星本命盘",
     summary: result.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -331,13 +358,15 @@ export function buildFengshuiReportSnapshot(result: FengshuiResult): MethodCopil
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("fengshui", [result.sittingMountain, result.facingMountain, result.period]),
     source: "method",
     methodId: "fengshui",
     title: "风水飞星盘",
     summary: result.summary,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -358,13 +387,15 @@ export function buildLenormandReportSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("lenormand", [spread, readings.map((reading) => reading.card.name).join("+")]),
     source: "method",
     methodId: "lenormand",
     title: "雷诺曼牌阵",
     summary: result.centerTheme,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -386,13 +417,15 @@ export function buildLotReportSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("lot", [sign.number, sign.title]),
     source: "method",
     methodId: "lot",
     title: `签诗 · 第${sign.number}签`,
     summary: sign.plainReading,
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -411,6 +444,7 @@ export function buildDreamReportSnapshot(
   );
 
   return {
+    entryId: result.entryId,
     source: "method",
     methodId: "dream",
     title: "占梦解读",
@@ -456,13 +490,15 @@ export function buildModuleDraftSnapshot(
     ),
   );
 
+  const generatedAt = new Date().toISOString();
   return {
+    entryId: entryId("module", [methodId, draft.context.slice(0, 48), draft.predictionWindow]),
     source: "module",
     methodId,
     title: `${moduleTitle} · 预测草稿`,
     summary: draft.context.slice(0, 120),
     body,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -494,6 +530,7 @@ export function buildReadingReportSnapshot(report: ReadingReport): MethodCopilot
   const traditionsLabel = report.traditions.map((t) => TRADITION_LABELS[t] ?? t).join(" · ");
 
   return {
+    entryId: report.readingId,
     source: "reading",
     methodId: report.traditions[0] ?? null,
     title: `对照报告 · ${traditionsLabel}`,

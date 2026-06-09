@@ -56,6 +56,7 @@ export function TarotPage() {
   const [interpretation, setInterpretation] = useState<ReturnType<typeof interpretTarot> | null>(null);
   const [phase, setPhase] = useState<DrawPhase>("idle");
   const [lastDraw, setLastDraw] = useState("");
+  const [lastDrawId, setLastDrawId] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryItem[]>(() => getTarotDrawHistory());
   const [senseCardId, setSenseCardId] = useState("");
   const [senseFields, setSenseFields] = useState<Record<string, string>>({});
@@ -104,9 +105,11 @@ export function TarotPage() {
       setInterpretation(interp);
       setPhase("drawing");
       const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
+      const drawId = `${Date.now()}`;
       setLastDraw(time);
+      setLastDrawId(drawId);
       const item: HistoryItem = {
-        id: `${Date.now()}`,
+        id: drawId,
         time,
         spread: spread.name,
         spreadId,
@@ -137,8 +140,9 @@ export function TarotPage() {
       cards,
       combo,
       interpretation,
+      drawId: lastDrawId ?? undefined,
     });
-  }, [phase, cards, question, spread.name, combo, interpretation]);
+  }, [phase, cards, question, spread.name, combo, interpretation, lastDrawId]);
   useRegisterMethodCopilotReport(copilotReport);
 
   const copyReading = async () => {

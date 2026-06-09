@@ -27,6 +27,9 @@ const ProfilePage = lazy(() => import("@/pages/ProfilePage").then((m) => ({ defa
 const SettingsPage = lazy(() => import("@/pages/SettingsPage").then((m) => ({ default: m.SettingsPage })));
 const LibraryPage = lazy(() => import("@/pages/LibraryPage").then((m) => ({ default: m.LibraryPage })));
 const ReadingPage = lazy(() => import("@/pages/ReadingPage").then((m) => ({ default: m.ReadingPage })));
+const ArchiveEntryPage = lazy(() =>
+  import("@/pages/ArchiveEntryPage").then((m) => ({ default: m.ArchiveEntryPage }))
+);
 const WelcomePage = lazy(() =>
   import("@/pages/onboarding/WelcomePage").then((m) => ({ default: m.WelcomePage }))
 );
@@ -106,6 +109,7 @@ function AppRoutes() {
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/library" element={<LibraryPage />} />
             <Route path="/reading/:id" element={<ReadingPage />} />
+            <Route path="/archive/:id" element={<ArchiveEntryPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

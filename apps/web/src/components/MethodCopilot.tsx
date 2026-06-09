@@ -10,6 +10,7 @@ import {
   isAnalysisQuestion,
   type MethodCopilotTurn,
 } from "@/lib/api/methodCopilot";
+import { getArchiveEntry, resolveArchiveEntryId, saveArchiveInterpretation } from "@/lib/archive";
 import { useCopilotResize } from "@/hooks/useCopilotResize";
 import { isMethodCopilotRoute, methodIdFromPathname } from "@/lib/methodFromRoute";
 
@@ -18,7 +19,7 @@ export function MethodCopilot() {
   const { open, setOpen, report, pendingAction, clearPendingAction } = useMethodCopilot();
   const { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset } =
     useCopilotResize(open);
-  const methodId = methodIdFromPathname(pathname);
+  const methodId = report?.methodId ?? methodIdFromPathname(pathname);
   const config = getMethodCopilotConfig(methodId);
   const experience = getMethodExperience(methodId ?? "methods");
   const quickPrompts = getMethodCopilotPromptsWithReport(methodId, Boolean(report));
@@ -28,6 +29,7 @@ export function MethodCopilot() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const prevMethodRef = useRef(methodId);
   const pendingHandledRef = useRef(false);
+  const loadedEntryIdRef = useRef<string | null>(null);
 
   const visible = isMethodCopilotRoute(pathname);
 
@@ -35,13 +37,35 @@ export function MethodCopilot() {
     if (prevMethodRef.current !== methodId) {
       setTurns([]);
       setInput("");
+      loadedEntryIdRef.current = null;
       prevMethodRef.current = methodId;
     }
   }, [methodId]);
 
   useEffect(() => {
+    if (!report) {
+      loadedEntryIdRef.current = null;
+      setTurns([]);
+      return;
+    }
+    const entryId = resolveArchiveEntryId(report);
+    if (loadedEntryIdRef.current === entryId) return;
+    loadedEntryIdRef.current = entryId;
+    const entry = getArchiveEntry(entryId);
+    setTurns(entry?.interpretation ?? []);
+  }, [report]);
+
+  useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [turns, loading]);
+
+  const persistInterpretation = useCallback(
+    (nextTurns: MethodCopilotTurn[]) => {
+      if (!report) return;
+      saveArchiveInterpretation(resolveArchiveEntryId(report), nextTurns);
+    },
+    [report],
+  );
 
   const submit = useCallback(
     async (text: string) => {
@@ -50,16 +74,18 @@ export function MethodCopilot() {
       setInput("");
       setLoading(true);
       const userTurn: MethodCopilotTurn = { role: "user", content: question };
-      setTurns((prev) => [...prev, userTurn]);
+      const turnsWithUser = [...turns, userTurn];
+      setTurns(turnsWithUser);
+      persistInterpretation(turnsWithUser);
       const useAnalysis = report && isAnalysisQuestion(question, true);
       try {
         const reply = useAnalysis
           ? await askMethodCopilotAnalysis(methodId, question, turns, report)
           : await askMethodCopilot(methodId, question, turns);
-        setTurns((prev) => [
-          ...prev,
+        const turnsWithReply = [
+          ...turnsWithUser,
           {
-            role: "assistant",
+            role: "assistant" as const,
             content: reply.answer,
             diagram: reply.diagram || undefined,
             relatedTerms: reply.relatedTerms,
@@ -67,21 +93,25 @@ export function MethodCopilot() {
             highlights: reply.highlights,
             degraded: reply.degraded,
           },
-        ]);
+        ];
+        setTurns(turnsWithReply);
+        persistInterpretation(turnsWithReply);
       } catch {
-        setTurns((prev) => [
-          ...prev,
+        const turnsWithError = [
+          ...turnsWithUser,
           {
-            role: "assistant",
+            role: "assistant" as const,
             content: "请求失败，请检查网络或 LLM 配置后重试。",
             degraded: true,
           },
-        ]);
+        ];
+        setTurns(turnsWithError);
+        persistInterpretation(turnsWithError);
       } finally {
         setLoading(false);
       }
     },
-    [loading, methodId, report, turns],
+    [loading, methodId, persistInterpretation, report, turns],
   );
 
   useEffect(() => {

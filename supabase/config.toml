@@ -14,9 +14,10 @@ port = 54323
 
 [auth]
 enabled = true
-site_url = "https://untitled-xi-one.vercel.app"
+site_url = "https://zhuxiang.vercel.app"
 additional_redirect_urls = [
-  "https://untitled-xi-one.vercel.app",
+  "https://zhuxiang.vercel.app",
+  "https://zhuxiang-kongde-s-projects.vercel.app",
   "http://localhost:5173",
   "http://localhost:8081",
   "exp://localhost:8081",

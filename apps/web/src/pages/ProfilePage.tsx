@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { ReadingReport, Tradition } from "@atlas/shared-types";
+import type { Tradition } from "@atlas/shared-types";
 import { Button } from "@/components/ui/Button";
 import { Page } from "@/components/ui/Page";
 import { useApp } from "@/context/AppContext";
 import { listReadings } from "@/lib/api/readings";
+import {
+  archiveEntryLabel,
+  archiveEntryPath,
+  hasArchiveInterpretation,
+  listArchiveEntriesWithReadings,
+  type ArchiveEntry,
+} from "@/lib/archive";
 import { track } from "@/lib/analytics";
 import { READING_TRADITIONS, TRADITION_LABELS } from "@/theme/traditions";
 import { colors, radius, spacing } from "@/theme/tokens";
 
 export function ProfilePage() {
   const { profile, saveProfile } = useApp();
-  const [history, setHistory] = useState<ReadingReport[]>([]);
+  const [history, setHistory] = useState<ArchiveEntry[]>([]);
   const [editing, setEditing] = useState(false);
   const [displayName, setDisplayName] = useState(profile?.displayName ?? "");
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
@@ -20,7 +27,9 @@ export function ProfilePage() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    listReadings().then(setHistory);
+    listReadings().then((readings) => {
+      setHistory(listArchiveEntriesWithReadings(readings));
+    });
   }, []);
 
   useEffect(() => {
@@ -33,7 +42,6 @@ export function ProfilePage() {
   }, [profile]);
 
   const disabled = profile?.disabledTraditions ?? [];
-  const historyStats = getHistoryStats(history);
 
   const toggleTradition = async (t: Tradition) => {
     const next = disabled.includes(t) ? disabled.filter((x) => x !== t) : [...disabled, t];
@@ -92,34 +100,24 @@ export function ProfilePage() {
         </label>
       ))}
 
-      <h3>历史报告</h3>
+      <h3>占卜记录</h3>
       {history.length > 0 && (
-        <section className="history-visual" aria-label="历史报告体系分布">
-          <div className="history-ring">
-            <strong>{history.length}</strong>
-            <span>报告</span>
-          </div>
-          <div className="history-bars">
-            {READING_TRADITIONS.map((t) => (
-              <div key={t} className="history-bar">
-                <span>{TRADITION_LABELS[t]}</span>
-                <i style={{ width: `${barWidth(historyStats[t], history.length)}%` }} />
-                <em>{historyStats[t]}</em>
-              </div>
-            ))}
-          </div>
-        </section>
+        <p className="hint">共 {history.length} 条记录，含提问对照与各占法结果</p>
       )}
       {history.length === 0 ? (
-        <p className="muted">暂无记录，去「提问」生成第一份对照报告</p>
+        <p className="muted">暂无记录。完成一次提问、占法或占梦后，报告会出现在这里。</p>
       ) : (
-        history.map((r) => (
-          <Link key={r.readingId} to={`/reading/${r.readingId}`} state={{ report: r }} className="history-item">
-            <p>
-              {r.sections.find((s) => s.type === "summary")?.content.slice(0, 40) ?? "对照报告"}
-            </p>
+        history.map((entry) => (
+          <Link
+            key={entry.id}
+            to={archiveEntryPath(entry)}
+            state={entry.readingReport ? { report: entry.readingReport } : undefined}
+            className="history-item"
+          >
+            <p>{entry.title}</p>
             <span className="muted">
-              {new Date(r.createdAt).toLocaleDateString("zh-CN")} · {r.traditions.length} 体系
+              {new Date(entry.createdAt).toLocaleDateString("zh-CN")} · {archiveEntryLabel(entry)}
+              {hasArchiveInterpretation(entry) ? " · 含解读" : ""}
             </span>
           </Link>
         ))
@@ -231,21 +229,6 @@ export function ProfilePage() {
       `}</style>
     </Page>
   );
-}
-
-function getHistoryStats(history: ReadingReport[]): Record<Tradition, number> {
-  const stats = Object.fromEntries(READING_TRADITIONS.map((t) => [t, 0])) as Record<Tradition, number>;
-  for (const report of history) {
-    for (const tradition of report.traditions) {
-      if (tradition in stats) stats[tradition] += 1;
-    }
-  }
-  return stats;
-}
-
-function barWidth(value: number, total: number): number {
-  if (total <= 0 || value <= 0) return 6;
-  return Math.max(10, Math.round((value / total) * 100));
 }
 
 function Field({
