@@ -30,8 +30,12 @@ export class HybridRetrieval {
 
   retrieve(query: RetrievalQuery): RetrievalResult {
     const topK = query.topK ?? 8;
-    const traditions = new Set(query.traditions.filter((t) => t !== "dream"));
-    const filtered = this.corpus.filter((c) => traditions.has(c.tradition as Tradition));
+    const traditions = new Set(
+      query.traditions.filter((t): t is Exclude<Tradition, "dream"> => t !== "dream")
+    );
+    const filtered = this.corpus.filter((c) =>
+      traditions.has(c.tradition as Exclude<Tradition, "dream">)
+    );
 
     const terms = tokenize(query.question);
     const keywordScores = new Map<string, number>();

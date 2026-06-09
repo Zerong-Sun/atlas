@@ -31,10 +31,6 @@ verify_jwt = true
 import_map = "./functions/deno.json"
 verify_jwt = true
 
-[functions.interpret-dream]
-import_map = "./functions/deno.json"
-verify_jwt = true
-
 [functions.daily-brief]
 import_map = "./functions/deno.json"
 verify_jwt = true
@@ -52,5 +48,17 @@ import_map = "./functions/deno.json"
 verify_jwt = true
 
 [functions.profile]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.generate-portrait]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.list-dreams]
+import_map = "./functions/deno.json"
+verify_jwt = true
+
+[functions.dream-trend]
 import_map = "./functions/deno.json"
 verify_jwt = true

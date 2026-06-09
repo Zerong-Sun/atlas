@@ -8,6 +8,8 @@
     "validate": "node src/validate-manifest.mjs",
     "ingest": "node src/ingest-seeds.mjs",
     "ingest:dry-run": "node src/ingest-seeds.mjs --dry-run",
-    "publish": "node src/publish-corpus.mjs"
+    "publish": "node src/publish-corpus.mjs",
+    "embed": "node src/embed-chunks.mjs",
+    "embed:dry-run": "node src/embed-chunks.mjs --dry-run"
   }
 }

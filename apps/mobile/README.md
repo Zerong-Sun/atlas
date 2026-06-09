@@ -62,7 +62,10 @@ Edge Functions (with mock fallback):
 | Client export | Edge function |
 |---------------|---------------|
 | `createReading` | `create-reading` |
-| `interpretDream` | `create-dream` |
+| `createDreamEntry` | `create-dream` |
+| `listDreams` | `list-dreams` (GET) |
+| `fetchDreamTrend` | `dream-trend` (GET) |
+| `generatePortrait` / `fetchPortraitSummary` | `generate-portrait` |
 | `fetchDailyBrief` | `daily-brief` |
 | `listLibrary` | `get-library` (GET) |
 | `fetchProfile` / `updateProfile` | `profile` |

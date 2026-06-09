@@ -94,6 +94,86 @@ export async function searchCorpusByEmbedding(
   }) => mapRow(row));
 }
 
+async function fetchQueryEmbedding(text: string): Promise<number[] | null> {
+  const key = Deno.env.get("OPENAI_API_KEY") ?? Deno.env.get("LLM_API_KEY");
+  const base =
+    Deno.env.get("OPENAI_BASE_URL") ??
+    Deno.env.get("LLM_API_BASE_URL") ??
+    "https://api.openai.com/v1";
+  if (!key || !text.trim()) return null;
+  try {
+    const res = await fetch(`${base.replace(/\/$/, "")}/embeddings`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: Deno.env.get("EMBEDDING_MODEL") ?? "text-embedding-3-small",
+        input: text.slice(0, 2000),
+      }),
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { data?: Array<{ embedding?: number[] }> };
+    return data.data?.[0]?.embedding ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Hybrid keyword + vector retrieval with RRF merge. Falls back to keyword-only. */
+export async function retrieveCorpusChunks(
+  client: SupabaseClient,
+  traditions: Tradition[],
+  opts?: { query?: string; limit?: number }
+): Promise<ChunkRecord[]> {
+  const query = opts?.query ?? "";
+  const limit = opts?.limit ?? 80;
+  const keywordChunks = await loadCorpusChunks(client, traditions, { query, limit });
+  if (!query.trim()) return keywordChunks;
+
+  const embedding = await fetchQueryEmbedding(query);
+  const vectorChunks = embedding
+    ? await searchCorpusByEmbedding(client, traditions, embedding, 24)
+    : [];
+
+  const byId = new Map<string, ChunkRecord>();
+  for (const chunk of [...keywordChunks, ...vectorChunks]) {
+    byId.set(chunk.chunkId, chunk);
+  }
+  const records = [...byId.values()];
+  const terms = tokenize(query);
+
+  const keywordScores = new Map<string, number>();
+  for (const chunk of records) {
+    const score = scoreChunk(chunk, terms);
+    if (score > 0) keywordScores.set(chunk.chunkId, score);
+  }
+
+  const vectorScores = new Map<string, number>();
+  vectorChunks.forEach((chunk, rank) => {
+    vectorScores.set(chunk.chunkId, vectorChunks.length - rank);
+  });
+
+  const rrf = new Map<string, number>();
+  const mergeRanked = (scores: Map<string, number>, k = 60) => {
+    const ranked = [...scores.entries()].sort((a, b) => b[1] - a[1]);
+    ranked.forEach(([id, _score], rank) => {
+      rrf.set(id, (rrf.get(id) ?? 0) + 1 / (k + rank + 1));
+    });
+  };
+  mergeRanked(keywordScores);
+  mergeRanked(vectorScores);
+
+  const merged = [...rrf.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([id]) => byId.get(id)!)
+    .filter(Boolean)
+    .slice(0, Math.min(limit, 80));
+
+  return merged.length > 0 ? merged : keywordChunks;
+}
+
 /** Deterministic pick from corpus rows using a seed string. */
 export function pickChunkBySeed(chunks: ChunkRecord[], seed: string): ChunkRecord | null {
   if (chunks.length === 0) return null;

@@ -124,8 +124,10 @@ VITE_LLM_MODEL=deepseek-v4-flash
 | `npm run corpus:validate` | 校验清单、版权覆盖与 chunk 数量 |
 | `npm run corpus:ingest:dry-run` | 生成入库 SQL（不写入数据库） |
 | `npm run corpus:publish` | 生成 → 校验 → dry-run（CI 同款） |
+| `npm run corpus:embed` | 为已入库 chunk 生成 embedding SQL |
+| `npm run corpus:embed:dry-run` | 校验 embedding 维度（CI 同款） |
 
-语料入库（完整 RAG 时）：`npm run corpus:ingest`。未入库时 Edge Function 会 fallback 到种子语料。
+语料入库（完整 RAG 时）：`npm run corpus:ingest` → `npm run corpus:embed` → 在 Supabase 执行 `corpus/.cache/embed.sql` 并创建 IVFFlat 索引。未入库时 Edge Function 会 fallback 到种子语料。
 
 ## 运行时架构
 
@@ -139,15 +141,15 @@ apps/web 或 apps/mobile
 
 Edge Functions 对外返回 camelCase DTO（`@atlas/shared-types`）；数据库层保持 snake_case，在 API 边界完成映射。客户端在 Supabase 未配置或请求失败时可 fallback 到本地 mock。
 
-主要 Edge Functions：`create-reading`、`list-readings`、`create-dream`、`interpret-dream`、`daily-brief`、`get-library`、`profile`。
+主要 Edge Functions：`create-reading`、`list-readings`、`create-dream`、`list-dreams`、`dream-trend`、`generate-portrait`、`daily-brief`、`get-library`、`profile`。
 
 ## CI
 
 `main` 分支 push / PR 触发 [`.github/workflows/ci.yml`](.github/workflows/ci.yml)：
 
-- 语料 generate + validate + ingest dry-run
+- 语料 generate + validate + ingest dry-run + embed dry-run
 - Web lint、build、test
-- `engines` 与 `orchestrator` 单元测试
+- `engines`、`orchestrator` 与 `api-core` 单元测试
 
 ## 部署
 

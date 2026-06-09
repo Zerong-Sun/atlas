@@ -9,6 +9,8 @@
  */
 import {
   aggregateDreamTrend,
+  buildDreamFallbackInterpretation,
+  DREAM_FALLBACK_TEMPLATES,
   mapDreamEntryRow,
   type DreamInterpretation,
   type DreamTrend,
@@ -140,12 +142,6 @@ export async function listReadings(): Promise<ReadingReport[]> {
   return local.length > 0 ? local : [...MOCK_READING_HISTORY];
 }
 
-const DREAM_TEMPLATES = {
-  chinese: "从传统梦占视角，此梦象多与近期心绪与未竟之事相关，宜静观数日。",
-  jungian: "象征可能指向阴影整合与个体化进程，可关注梦中重复意象。",
-  reflection: "可作为精神反思的契机，宜以感恩与自省回顾梦境带来的感受（非预言）。",
-};
-
 const DREAM_INTERPRETER_SKILL = `你是「诸象」的专业梦境解析师，只能回答梦境解析相关内容。
 
 工作边界：
@@ -190,12 +186,7 @@ async function interpretDreamLocal(input: DreamEntryInput): Promise<DreamInterpr
   });
 
   if (res.degraded || !res.content) {
-    return {
-      entryId: `dream-${Date.now()}`,
-      ...DREAM_TEMPLATES,
-      degraded: true,
-      createdAt: new Date().toISOString(),
-    };
+    return buildDreamFallbackInterpretation(input);
   }
 
   try {
@@ -205,22 +196,23 @@ async function interpretDreamLocal(input: DreamEntryInput): Promise<DreamInterpr
       reflection?: unknown;
       islamic?: unknown;
     };
-    const reflection = sanitizeText(parsed.reflection ?? parsed.islamic, DREAM_TEMPLATES.reflection);
+    const reflection = sanitizeText(
+      parsed.reflection ?? parsed.islamic,
+      DREAM_FALLBACK_TEMPLATES.reflection
+    );
     return {
       entryId: `dream-${Date.now()}`,
-      chinese: sanitizeText(parsed.chinese, DREAM_TEMPLATES.chinese),
-      jungian: sanitizeText(parsed.jungian, DREAM_TEMPLATES.jungian),
+      text: input.text,
+      emotions: input.emotions ?? [],
+      symbols: input.symbols ?? [],
+      chinese: sanitizeText(parsed.chinese, DREAM_FALLBACK_TEMPLATES.chinese),
+      jungian: sanitizeText(parsed.jungian, DREAM_FALLBACK_TEMPLATES.jungian),
       reflection,
       degraded: false,
       createdAt: new Date().toISOString(),
     };
   } catch {
-    return {
-      entryId: `dream-${Date.now()}`,
-      ...DREAM_TEMPLATES,
-      degraded: true,
-      createdAt: new Date().toISOString(),
-    };
+    return buildDreamFallbackInterpretation(input);
   }
 }
 
@@ -230,7 +222,10 @@ export async function createDreamEntry(input: DreamEntryInput): Promise<DreamInt
     await appendDreamHistory(entry);
     return entry;
   }
-  const data = await invokeFunction<DreamInterpretation>(EDGE.interpretDream, input as Record<string, unknown>);
+  const data = await invokeFunction<DreamInterpretation>(
+    EDGE.interpretDream,
+    input as unknown as Record<string, unknown>
+  );
   const entry = data ? mapDreamEntryRow(data) : await interpretDreamLocal(input);
   await appendDreamHistory(entry);
   return entry;
@@ -320,7 +315,18 @@ export async function updateProfile(input: ProfileUpdateInput): Promise<UserProf
   return data ?? { ...MOCK_PROFILE, ...input };
 }
 
-export async function fetchPortraitSummary(): Promise<Record<string, string>> {
-  if (useMockApi()) return { ...MOCK_PORTRAIT };
-  return { ...MOCK_PORTRAIT };
+export async function generatePortrait(profile?: UserProfile): Promise<PortraitSummary> {
+  const base = profile ?? (await fetchProfile());
+  if (useMockApi()) return generatePortraitLocal(base);
+  const data = await invokeFunction<PortraitSummary>(EDGE.generatePortrait, {});
+  if (data?.traditions && Object.keys(data.traditions).length > 0) return data;
+  return generatePortraitLocal(base);
+}
+
+export async function fetchPortraitSummary(profile?: UserProfile): Promise<PortraitSummary> {
+  const base = profile ?? (await fetchProfile());
+  if (base.portraitSummary?.traditions && Object.keys(base.portraitSummary.traditions).length > 0) {
+    return base.portraitSummary;
+  }
+  return generatePortrait(base);
 }

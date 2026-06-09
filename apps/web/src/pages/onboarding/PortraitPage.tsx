@@ -34,10 +34,24 @@ export function PortraitPage() {
     navigate("/ask", { replace: true });
   };
 
+  const retryPortrait = () => {
+    if (!profile?.birthDate) return;
+    setLoading(true);
+    setError(null);
+    fetchPortraitSummary(profile)
+      .then(async (summary) => {
+        setPortrait(summary);
+        await saveProfile({ portraitSummary: summary });
+      })
+      .catch(() => setError("画像生成失败，请稍后重试。"))
+      .finally(() => setLoading(false));
+  };
+
   if (loading) {
     return (
-      <Page>
-        <p style={{ color: "var(--color-gold)", marginTop: 80, textAlign: "center", fontFamily: "var(--font-mono)" }}>
+      <Page title="多体系画像">
+        <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>引导 3 / 3</p>
+        <p className="portrait-loading" role="status" aria-live="polite">
           正在生成多体系画像…
         </p>
       </Page>
@@ -47,17 +61,22 @@ export function PortraitPage() {
   if (error) {
     return (
       <Page title="多体系画像">
+        <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>引导 3 / 3</p>
         <p className="error-banner" role="alert">
           {error}
         </p>
-        <Button title="返回填写档案" onClick={() => navigate("/onboarding/profile")} />
+        <div style={{ display: "flex", gap: "var(--spacing-sm)", flexWrap: "wrap" }}>
+          <Button title="重试生成" onClick={retryPortrait} />
+          <Button title="返回填写档案" onClick={() => navigate("/onboarding/profile")} />
+        </div>
       </Page>
     );
   }
 
   return (
     <Page title="多体系画像">
-      <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>
+      <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>引导 3 / 3</p>
+      <p className="hint" style={{ margin: "0 0 0.5rem" }}>
         基于你的出生档案生成
       </p>
       <p className="open-note">全部功能已开放，无需订阅或付费解锁</p>

@@ -2,7 +2,7 @@ import { MimoGateway, ReadingOrchestrator, SEED_CORPUS_FALLBACK } from "@atlas/o
 import type { QuestionInput, Tradition } from "@atlas/shared-types";
 import { handleOptions, jsonResponse } from "../_shared/cors.ts";
 import { loadProfile } from "../_shared/profile.ts";
-import { loadCorpusChunks } from "../_shared/retrieval.ts";
+import { retrieveCorpusChunks } from "../_shared/retrieval.ts";
 import { requireUser } from "../_shared/supabase.ts";
 
 async function rollbackReading(client: Awaited<ReturnType<typeof requireUser>>["client"], readingId: string) {
@@ -38,7 +38,7 @@ Deno.serve(async (req) => {
     if (qErr) return jsonResponse({ error: qErr.message }, 400);
 
     const profile = await loadProfile(client, userId);
-    const corpus = await loadCorpusChunks(client, traditions, { query: body.text, limit: 500 });
+    const corpus = await retrieveCorpusChunks(client, traditions, { query: body.text, limit: 80 });
     const corpusRecords = corpus.length > 0 ? corpus : SEED_CORPUS_FALLBACK;
     const orch = new ReadingOrchestrator({
       mimo: new MimoGateway({

@@ -5,6 +5,11 @@ import {
   drawTarotSpread,
   type EngineInput,
 } from "@atlas/engines";
+type WesternEngineResult = {
+  planets: { Sun?: { sign?: string }; Moon?: { sign?: string } };
+  ascendant?: { sign?: string };
+  summary: string;
+};
 import type { PortraitSummary, Tradition, UserProfile } from "@atlas/shared-types";
 import { MimoGateway } from "./mimo-gateway.ts";
 
@@ -26,31 +31,39 @@ function engineInputFromProfile(profile: UserProfile): EngineInput {
   };
 }
 
+function appendUniqueClause(base: string, extra?: string): string {
+  const clause = extra?.trim();
+  if (!clause || base.includes(clause)) return base;
+  return `${base}。${clause}`;
+}
+
 function summarizeBazi(profile: UserProfile): string | undefined {
   if (!profile.birthDate) return undefined;
   const chart = computeBazi(engineInputFromProfile(profile));
   if (chart.error || !chart.dayMaster) return undefined;
   const strength = chart.strength?.level ?? "中和";
   const pattern = chart.pattern?.name ? `，格局偏${chart.pattern.name}` : "";
-  return `日主${chart.dayMaster}（${chart.dayMasterElement}），${strength}${pattern}。${chart.personality?.archetype ?? ""}`.slice(
-    0,
-    120
-  );
+  const base = `日主${chart.dayMaster}（${chart.dayMasterElement}），${strength}${pattern}`;
+  const trait =
+    chart.personality?.traits?.[0] ??
+    chart.personality?.strengths?.[0] ??
+    chart.personality?.advice;
+  return appendUniqueClause(base, trait).slice(0, 120);
 }
 
 function summarizeWestern(profile: UserProfile): string | undefined {
   if (!profile.birthDate) return undefined;
-  const result = computeWestern(engineInputFromProfile(profile));
-  if ("error" in result) return undefined;
-  const sun = result.planets.Sun?.sign;
-  const moon = result.planets.Moon?.sign;
-  const asc = result.ascendant?.sign;
-  if (!sun) return result.summary?.slice(0, 120);
-  return `太阳${sun}${moon ? `、月亮${moon}` : ""}${asc ? `、上升${asc}` : ""}。${result.summary ?? ""}`.slice(0, 120);
+  const raw = computeWestern(engineInputFromProfile(profile));
+  if ("error" in raw) return undefined;
+  const result = raw as WesternEngineResult;
+  return result.summary.slice(0, 120);
 }
 
 function summarizeIching(profile: UserProfile): string | undefined {
-  const hex = castIChing(portraitSeed(profile));
+  const hex = castIChing(portraitSeed(profile)) as {
+    summary: string;
+    primary: { judgment: string };
+  };
   return `${hex.summary}。${hex.primary.judgment}`.slice(0, 120);
 }
 
