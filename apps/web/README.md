@@ -78,7 +78,9 @@ supabase secrets set \
 ```bash
 supabase functions deploy create-reading
 supabase functions deploy create-dream
-supabase functions deploy interpret-dream
+supabase functions deploy list-dreams
+supabase functions deploy dream-trend
+supabase functions deploy generate-portrait
 supabase functions deploy daily-brief
 supabase functions deploy get-library
 supabase functions deploy list-readings
@@ -95,9 +97,11 @@ supabase functions deploy profile
 
 ```bash
 npm run corpus:ingest
+npm run corpus:embed
+# 在 Supabase SQL Editor 执行 corpus/.cache/embed.sql，并按 migration 注释创建 IVFFlat 索引
 ```
 
-未入库时 Edge Function 会 fallback 到种子语料。
+未入库时 Edge Function 会 fallback 到种子语料；无 embedding 时检索退化为关键词匹配。
 
 ## Edge Functions 映射
 
@@ -105,6 +109,9 @@ npm run corpus:ingest
 |-----------|----------------|
 | `create-reading` | `create-reading` |
 | `interpretDream` → `create-dream` | `create-dream` |
+| `listDreams` | `list-dreams` (GET) |
+| `dreamTrend` | `dream-trend` (GET) |
+| `generatePortrait` | `generate-portrait` |
 | `daily-brief` | `daily-brief` |
 | `libraryList` → `get-library` | `get-library` (GET) |
 | `profile` | `profile` |

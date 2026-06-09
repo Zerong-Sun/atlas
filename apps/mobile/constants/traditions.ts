@@ -5,6 +5,7 @@ export const TRADITION_LABELS: Record<Tradition, string> = {
   western: "西洋占星",
   tarot: "塔罗",
   iching: "周易",
+  qimen: "奇门遁甲",
   dream: "占梦",
 };
 
@@ -15,6 +16,7 @@ export const TRADITION_COLORS: Record<Tradition, string> = {
   western: "#4A6FA5",
   tarot: "#7B4A8B",
   iching: "#4A7C6F",
+  qimen: "#5C4A6F",
   dream: "#6B5B95",
 };
 

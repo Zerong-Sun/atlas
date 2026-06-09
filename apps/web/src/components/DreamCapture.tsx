@@ -114,7 +114,12 @@ export function DreamCapture({ onSubmit, loading, result, resultActions }: Props
 
       <Button
         title="生成多视角解释"
-        onClick={() => onSubmit(text.trim(), emotions, symbols)}
+        onClick={() => {
+          const mergedSymbols = [
+            ...new Set([...symbols, ...autoMatched.map((entry) => entry.symbol)]),
+          ];
+          onSubmit(text.trim(), emotions, mergedSymbols);
+        }}
         loading={loading}
         disabled={!text.trim()}
       />

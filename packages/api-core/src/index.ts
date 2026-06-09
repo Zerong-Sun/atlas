@@ -4,3 +4,8 @@ export {
   type DreamInterpretation,
   type DreamTrend,
 } from "./mappers/dream.ts";
+export {
+  DREAM_FALLBACK_TEMPLATES,
+  MOCK_DREAM_TREND,
+  buildDreamFallbackInterpretation,
+} from "./mock/dream.ts";

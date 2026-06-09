@@ -226,12 +226,4 @@ export const MOCK_READING_HISTORY: ReadingReport[] = [
   buildMockReading("近期职业方向如何抉择？", ["bazi", "western", "iching"]),
 ];
 
-export const MOCK_DREAM_TREND = {
-  periodDays: 7,
-  topSymbols: [
-    { symbol: "水", count: 3 },
-    { symbol: "门", count: 2 },
-    { symbol: "路", count: 2 },
-  ],
-  summary: "近七日梦境重复「水」「门」意象，或指向情绪流动与抉择关口。",
-};
+export { MOCK_DREAM_TREND } from "@atlas/api-core";

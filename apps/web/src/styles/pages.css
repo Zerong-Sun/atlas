@@ -193,6 +193,34 @@
   margin: 0;
 }
 
+.portrait-loading {
+  margin: 4rem auto 0;
+  max-width: 20rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  animation: portrait-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes portrait-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-loading {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* ── History / library list items ── */
 .history-item {
   background: var(--color-surface);

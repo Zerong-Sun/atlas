@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { castIChing } from "@atlas/engines/iching";
+import { castIChing } from "@atlas/engines";
 import { HexagramLines } from "@/components/charts/HexagramLines";
 import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
 import { MethodHero } from "@/components/MethodHero";
@@ -38,7 +38,7 @@ export function IchingPage() {
     setCoinLines(next);
     if (next.length === 6) {
       const seed = `${Date.now()}-${question}-${next.join("")}`;
-      const raw = castIChing(seed) as IChingResult;
+      const raw = castIChing(seed) as unknown as IChingResult;
       setResult(raw);
       playMethodSound("iching", "complete");
     }

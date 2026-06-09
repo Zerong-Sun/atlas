@@ -23,7 +23,8 @@ export function InterestsPage() {
 
   return (
     <Page title="你想探索什么？">
-      <p className="hint" style={{ margin: "-1rem 0 1.5rem" }}>可多选，帮助我们推荐体系与内容</p>
+      <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>引导 1 / 3</p>
+      <p className="hint" style={{ margin: "0 0 1.5rem" }}>可多选，帮助我们推荐体系与内容</p>
       <div
         className="interests-grid"
         style={{ display: "flex", flexWrap: "wrap", gap: "var(--spacing-sm)", marginBottom: "var(--spacing-xl)" }}

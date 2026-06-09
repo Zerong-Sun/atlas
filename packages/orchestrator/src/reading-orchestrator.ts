@@ -19,6 +19,7 @@ const TRADITION_LABELS: Record<Tradition, string> = {
   western: "西洋占星",
   tarot: "塔罗",
   iching: "周易",
+  qimen: "奇门遁甲",
   dream: "占梦",
 };
 
@@ -72,10 +73,15 @@ export class ReadingOrchestrator {
     const facts = runEngines(traditions, engineInput);
     const retrievalCorpus = input.corpus && input.corpus.length > 0 ? input.corpus : undefined;
     const retrieval = retrievalCorpus
-      ? new HybridRetrieval(retrievalCorpus).retrieve({
-          question: input.question.text,
-          traditions,
-        })
+      ? {
+          chunks: retrievalCorpus.slice(0, 8).map((c, index) => ({
+            chunkId: c.chunkId,
+            sourceId: c.sourceId,
+            tradition: c.tradition as Tradition,
+            relevance: Math.max(0.2, 1 - index * 0.08),
+          })),
+          records: retrievalCorpus.slice(0, 8),
+        }
       : this.retrieval.retrieve({ question: input.question.text, traditions });
 
     const allowedIds = new Set(retrieval.chunks.map((c) => c.chunkId));

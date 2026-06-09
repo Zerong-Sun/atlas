@@ -27,7 +27,8 @@ export function ProfileOnboardingPage() {
 
   return (
     <Page title="创建出生档案">
-      <p className="hint" style={{ margin: "-1rem 0 1.5rem" }}>用于排盘与个性化（全功能开放，无额度限制）</p>
+      <p className="hint" style={{ margin: "-1rem 0 0.5rem" }}>引导 2 / 3</p>
+      <p className="hint" style={{ margin: "0 0 1.5rem" }}>用于排盘与个性化（全功能开放，无额度限制）</p>
       <Field label="姓名" value={displayName} onChange={setDisplayName} placeholder="您的称呼（可选）" />
       <Field label="出生日期 (YYYY-MM-DD)" value={birthDate} onChange={setBirthDate} />
       <Field label="出生时间 (HH:mm)" value={birthTime} onChange={setBirthTime} />

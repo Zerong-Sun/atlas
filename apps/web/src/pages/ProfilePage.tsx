@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { Tradition } from "@atlas/shared-types";
+import type { PortraitSummary, Tradition } from "@atlas/shared-types";
 import { Button } from "@/components/ui/Button";
 import { Page } from "@/components/ui/Page";
 import { useApp } from "@/context/AppContext";
+import { generatePortrait } from "@/lib/api/profile";
 import { listReadings } from "@/lib/api/readings";
 import {
   archiveEntryLabel,
@@ -26,6 +27,8 @@ export function ProfilePage() {
   const [birthPlace, setBirthPlace] = useState(profile?.birthPlace ?? "");
   const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [saving, setSaving] = useState(false);
+  const [portraitLoading, setPortraitLoading] = useState(false);
+  const [portrait, setPortrait] = useState<PortraitSummary | null>(profile?.portraitSummary ?? null);
 
   useEffect(() => {
     listReadings().then((readings) => {
@@ -40,8 +43,21 @@ export function ProfilePage() {
       setBirthTime(profile.birthTime ?? "");
       setBirthPlace(profile.birthPlace ?? "");
       setGender(profile.gender ?? "male");
+      setPortrait(profile.portraitSummary ?? null);
     }
   }, [profile]);
+
+  const regeneratePortrait = async () => {
+    if (!profile?.birthDate) return;
+    setPortraitLoading(true);
+    try {
+      const summary = await generatePortrait(profile);
+      setPortrait(summary);
+      await saveProfile({ portraitSummary: summary });
+    } finally {
+      setPortraitLoading(false);
+    }
+  };
 
   const disabled = profile?.disabledTraditions ?? [];
 
@@ -110,6 +126,21 @@ export function ProfilePage() {
           </>
         )}
       </div>
+
+      <h3>多体系画像</h3>
+      {portrait?.consensus && <p className="hint">{portrait.consensus}</p>}
+      {portrait?.traditions &&
+        Object.entries(portrait.traditions).map(([key, value]) => (
+          <div key={key} className="portrait-snippet">
+            <span className="label">{TRADITION_LABELS[key as Tradition] ?? key}</span>
+            <p className="muted">{value}</p>
+          </div>
+        ))}
+      <Button
+        title={portraitLoading ? "生成中…" : "重新生成画像"}
+        onClick={regeneratePortrait}
+        loading={portraitLoading}
+      />
 
       <h3>体系偏好</h3>
       <p className="hint">关闭的体系不会出现在默认选择中</p>
@@ -234,6 +265,14 @@ export function ProfilePage() {
         .history-bar em { color: ${colors.textMuted}; font-style: normal; text-align: right; }
         .history-item p { margin: 0 0 ${spacing.xs}px; }
         .muted { color: ${colors.textMuted}; font-size: 13px; }
+        .portrait-snippet {
+          padding: ${spacing.sm}px ${spacing.md}px;
+          background: ${colors.surface};
+          border-radius: ${radius.md}px;
+          margin-bottom: ${spacing.sm}px;
+        }
+        .portrait-snippet .label { font-size: 12px; color: ${colors.gold}; }
+        .portrait-snippet p { margin: 4px 0 0; font-size: 13px; }
         .field { margin-bottom: ${spacing.md}px; }
         .field label {
           display: block;
