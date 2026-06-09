@@ -1,6 +1,6 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import { DIVINATION_METHODS, isPreviewWorkbench, type MethodStatus } from "@/data/divinationMethods";
+import { DIVINATION_METHODS, type MethodStatus } from "@/data/divinationMethods";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 import { Page } from "@/components/ui/Page";
@@ -129,9 +129,6 @@ function MethodCard({ id, title, subtitle, tradition, status, route, tags, compa
     ...methodExperienceStyle(experience),
     "--i": index,
   } as CSSProperties;
-  const displaySubtitle =
-    isPreviewWorkbench(id) ? `${subtitle} 参考文库 · 模板草稿。` : subtitle;
-
   const body = (
     <>
       <div className="method-card__visual" aria-hidden />
@@ -144,7 +141,7 @@ function MethodCard({ id, title, subtitle, tradition, status, route, tags, compa
           <i>{STATUS_LABEL[status]}</i>
         </div>
         <strong>{title}</strong>
-        <p>{displaySubtitle}</p>
+        <p>{subtitle}</p>
         <div className="method-card__tags">
           {tags.map((tag) => (
             <span key={tag}>{tag}</span>

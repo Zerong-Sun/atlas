@@ -1,11 +1,14 @@
-import { useMemo, useRef, useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { useMemo, useState } from "react";
+import { Image, Pressable, StyleSheet, View } from "react-native";
 import { drawLenormand, type LenormandResult } from "@atlas/engines/lenormand";
 import type { LenormandSpread } from "@atlas/shared-types";
 import { buildLenormandReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { useCardDrawPhase } from "@/hooks/useCardDrawPhase";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
+import { getLenormandCardImageSource } from "@/lib/lenormandDeck";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -18,14 +21,12 @@ const SPREADS: Record<LenormandSpread, string> = {
   nine: "九宫格",
 };
 
-type Phase = "idle" | "shuffling" | "revealed";
-
 export function LenormandScreen() {
   const [question, setQuestion] = useState("");
   const [spread, setSpread] = useState<LenormandSpread>("three");
   const [result, setResult] = useState<LenormandResult | null>(null);
-  const [phase, setPhase] = useState<Phase>("idle");
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { phase, isBusy, runDraw, resetPhase } = useCardDrawPhase();
+  const { prefs } = useUiPrefs();
 
   const readings = useMemo(() => {
     if (!result) return [];
@@ -42,21 +43,21 @@ export function LenormandScreen() {
   useRegisterMethodCopilotReport(copilotReport);
 
   const draw = () => {
-    if (phase === "shuffling") return;
-    if (timerRef.current) clearTimeout(timerRef.current);
-    setPhase("shuffling");
+    if (isBusy) return;
     setResult(null);
-
-    timerRef.current = setTimeout(() => {
-      setResult(
-        drawLenormand({
-          spread,
-          question: question.trim() || undefined,
-          seed: `${Date.now()}-${question}-${spread}`,
-        }),
-      );
-      setPhase("revealed");
-    }, 1000);
+    runDraw({
+      shuffleMs: prefs.mysticMotion ? 1000 : 0,
+      revealMs: prefs.mysticMotion ? 400 : 0,
+      onShuffleComplete: () => {
+        setResult(
+          drawLenormand({
+            spread,
+            question: question.trim() || undefined,
+            seed: `${Date.now()}-${question}-${spread}`,
+          }),
+        );
+      },
+    });
   };
 
   const buttonTitle =
@@ -88,7 +89,11 @@ export function LenormandScreen() {
             <Pressable
               key={s}
               style={[styles.chip, spread === s && styles.chipActive]}
-              onPress={() => { setSpread(s); setResult(null); setPhase("idle"); }}
+              onPress={() => {
+                setSpread(s);
+                setResult(null);
+                resetPhase();
+              }}
             >
               <Text variant="caption" style={spread === s ? styles.chipTextActive : undefined}>
                 {SPREADS[s]}
@@ -97,7 +102,7 @@ export function LenormandScreen() {
           ))}
         </View>
 
-        <Button title={buttonTitle} onPress={draw} disabled={phase === "shuffling"} />
+        <Button title={buttonTitle} onPress={draw} disabled={isBusy} />
       </View>
 
       {result && phase === "revealed" && (
@@ -109,14 +114,27 @@ export function LenormandScreen() {
 
           <View style={styles.section}>
             <Text variant="label">牌面</Text>
-            {readings.map(({ card, meaning }) => (
-              <View key={card.position} style={styles.cardRow}>
-                <Text variant="body">
-                  {card.position}：{card.name}
-                </Text>
-                <Text variant="caption" muted>{meaning}</Text>
-              </View>
-            ))}
+            <View style={styles.cardGrid}>
+              {readings.map(({ card, meaning }) => {
+                const imageSource = getLenormandCardImageSource(card.id);
+                return (
+                  <View key={card.position} style={styles.cardTile}>
+                    {imageSource ? (
+                      <Image source={imageSource} style={styles.cardImage} resizeMode="cover" />
+                    ) : null}
+                    <Text variant="caption" muted>
+                      {card.position}
+                    </Text>
+                    <Text variant="body" numberOfLines={1}>
+                      {card.name}
+                    </Text>
+                    <Text variant="caption" muted numberOfLines={2}>
+                      {meaning}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
           </View>
 
           {result.pairs.length > 0 && (
@@ -159,5 +177,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   section: { gap: spacing.xs },
-  cardRow: { gap: 2, paddingVertical: spacing.xs },
+  cardGrid: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginTop: spacing.sm },
+  cardTile: {
+    width: "30%",
+    minWidth: 96,
+    gap: spacing.xs,
+    alignItems: "center",
+  },
+  cardImage: {
+    width: "100%",
+    aspectRatio: 2 / 3,
+    borderRadius: radius.sm,
+    backgroundColor: colors.surfaceElevated,
+  },
 });

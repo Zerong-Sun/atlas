@@ -568,6 +568,232 @@ export function buildDreamReportSnapshot(
   };
 }
 
+export function buildOracleReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/oracle").OracleResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      result.theme ? `主题：${result.theme}` : "",
+      "",
+      ...result.cards.map((c) => `【${c.position}】${c.name}：${c.meaning}\n肯定语：${c.affirmation}`),
+      "",
+      result.summary,
+    ),
+  );
+  return {
+    entryId: entryId("oracle", [result.spread, result.cards.map((c) => c.id).join("+")]),
+    source: "method",
+    methodId: "oracle",
+    title: "神谕卡",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildCoffeeReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/coffee").CoffeeResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      "",
+      ...result.zones.map((z) => z.reading),
+      "",
+      result.narrative,
+    ),
+  );
+  return {
+    entryId: entryId("coffee", [result.zones.map((z) => z.symbol.id).join("+")]),
+    source: "method",
+    methodId: "coffee",
+    title: "咖啡渣占卜",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildScryingReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/scrying").ScryingResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      `水晶：${result.crystal.name} — ${result.crystal.meaning}`,
+      `颜色：${result.color.name} — ${result.color.meaning}`,
+      `形状：${result.shape.name} — ${result.shape.meaning}`,
+      `意象：${result.image.name} — ${result.image.meaning}`,
+      "",
+      result.meditation,
+    ),
+  );
+  return {
+    entryId: entryId("scrying", [result.crystal.id, result.color.name, result.shape.name]),
+    source: "method",
+    methodId: "scrying",
+    title: "水晶凝视",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildNumerologyReportSnapshot(
+  result: import("@atlas/engines/numerology").NumerologyResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `姓名：${result.name} · 生日：${result.birthDate}`,
+      `生命路径 ${result.lifePath}：${result.lifePathMeaning}`,
+      `命运数 ${result.destiny}：${result.destinyMeaning}`,
+      `个人年 ${result.personalYear}：${result.personalYearMeaning}`,
+      "",
+      result.summary,
+    ),
+  );
+  return {
+    entryId: entryId("numerology", [result.birthDate, result.name, result.personalYear]),
+    source: "method",
+    methodId: "numerology",
+    title: "数字命理",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildGeomancyReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/geomancy").GeomancyResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      "",
+      `四母：${result.mothers.map((m) => m.name).join("、")}`,
+      `审判图：${result.judge.name} — ${result.judge.meaning}`,
+      `左见证：${result.witnesses[0]!.name} · 右见证：${result.witnesses[1]!.name}`,
+      "",
+      result.summary,
+    ),
+  );
+  return {
+    entryId: entryId("geomancy", [result.judge.key, result.seed.slice(0, 12)]),
+    source: "method",
+    methodId: "geomancy",
+    title: "土占 Geomancy",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildMeihuaReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/meihua").MeihuaResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      `上卦 ${result.upper.name}（${result.upper.element}）· 下卦 ${result.lower.name}（${result.lower.element}）`,
+      `体 ${result.body.name} · 用 ${result.use.name}`,
+      `体用关系：${result.relation}`,
+      `互卦 ${result.mutualLower.name}${result.mutualUpper.name} · 变卦 ${result.changing.name}`,
+      "",
+      result.summary,
+    ),
+  );
+  return {
+    entryId: entryId("meihua", [result.upper.name, result.lower.name, result.changing.name]),
+    source: "method",
+    methodId: "meihua",
+    title: "梅花易数",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildVedicReportSnapshot(
+  result: import("@atlas/engines/vedic").VedicResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `出生：${result.birthDate} ${result.birthTime}`,
+      `月亮星座：${result.moonSign}`,
+      `月宿：${result.moonNakshatra.label} 第${result.moonNakshatra.pada}足`,
+      `上升：${result.ascendantSign}`,
+      `大运主星：${result.mahadashaLabel}`,
+      "",
+      result.note,
+      result.summary,
+    ),
+  );
+  return {
+    entryId: entryId("vedic", [result.birthDate, result.birthTime]),
+    source: "method",
+    methodId: "vedic",
+    title: "印度占星",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildXiangmianReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/xiangmian").XiangmianResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "整体气象"}`,
+      "",
+      ...result.readings.map((r) => `${r.observation}：${r.meaning}（${r.predictionUse}）`),
+      "",
+      ...result.advice.map((a) => `· ${a}`),
+    ),
+  );
+  return {
+    entryId: entryId("xiangmian", [result.readings.map((r) => r.observation).join("+")]),
+    source: "method",
+    methodId: "xiangmian",
+    title: "面相",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildPalmistryReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/palmistry").PalmistryResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "掌纹主题"}`,
+      `手别：${result.hand}`,
+      "",
+      ...result.readings.map((r) => `${r.observation}：${r.meaning}（${r.predictionUse}）`),
+      "",
+      ...result.advice.map((a) => `· ${a}`),
+    ),
+  );
+  return {
+    entryId: entryId("palmistry", [result.hand, result.readings.map((r) => r.observation).join("+")]),
+    source: "method",
+    methodId: "palmistry",
+    title: "手相",
+    summary: result.summary,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
 export type ModuleDraftReading = {
   context: string;
   subjectType: string;

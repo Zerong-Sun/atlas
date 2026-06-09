@@ -1,14 +1,18 @@
 import { Stack, useLocalSearchParams } from "expo-router";
-import { View, StyleSheet } from "react-native";
+import { Suspense, useMemo } from "react";
+import { ActivityIndicator, View, StyleSheet } from "react-native";
 import { getMethod } from "@atlas/method-data";
-import { METHOD_SCREENS } from "@/screens/methods";
+import { getLazyMethodScreen, isKnownMethodScreen } from "@/screens/methods";
 import { Text } from "@/components/ui/Text";
 import { colors, spacing } from "@/constants/theme";
 
 export default function MethodDetailScreen() {
   const { methodId } = useLocalSearchParams<{ methodId: string }>();
   const method = methodId ? getMethod(methodId) : undefined;
-  const Screen = methodId ? METHOD_SCREENS[methodId] : undefined;
+  const Screen = useMemo(
+    () => (methodId && isKnownMethodScreen(methodId) ? getLazyMethodScreen(methodId) : undefined),
+    [methodId],
+  );
 
   if (!methodId || !Screen) {
     return (
@@ -23,11 +27,20 @@ export default function MethodDetailScreen() {
   return (
     <>
       <Stack.Screen options={{ title: method?.title ?? methodId, headerShown: true }} />
-      <Screen />
+      <Suspense
+        fallback={
+          <View style={styles.loading}>
+            <ActivityIndicator color={colors.gold} />
+          </View>
+        }
+      >
+        <Screen />
+      </Suspense>
     </>
   );
 }
 
 const styles = StyleSheet.create({
   missing: { flex: 1, backgroundColor: colors.ink, padding: spacing.lg, justifyContent: "center" },
+  loading: { flex: 1, backgroundColor: colors.ink, alignItems: "center", justifyContent: "center" },
 });

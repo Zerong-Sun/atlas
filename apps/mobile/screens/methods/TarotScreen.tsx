@@ -14,6 +14,7 @@ import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
 import { TextInput } from "@/components/ui/TextInput";
 import { useCardDrawPhase } from "@/hooks/useCardDrawPhase";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import { spacing, radius, colors } from "@/constants/theme";
 
@@ -22,13 +23,15 @@ export function TarotScreen() {
   const [spreadResult, setSpreadResult] = useState<TarotSpreadResult | null>(null);
   const [interpretation, setInterpretation] = useState<ReturnType<typeof interpretTarot> | null>(null);
   const { phase, isBusy, runDraw } = useCardDrawPhase();
+  const { prefs } = useUiPrefs();
 
   const draw = () => {
     if (isBusy) return;
     setSpreadResult(null);
     setInterpretation(null);
     runDraw({
-      shuffleMs: 1000,
+      shuffleMs: prefs.mysticMotion ? 1000 : 0,
+      revealMs: prefs.mysticMotion ? 400 : 0,
       onShuffleComplete: () => {
         const seed = `${Date.now()}-${question}-three-timeline`;
         const result = drawTarotSpread({

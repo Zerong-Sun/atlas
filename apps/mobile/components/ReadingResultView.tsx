@@ -10,6 +10,7 @@ import {
   TraditionBadge,
 } from "@/components/design-system";
 import { Text } from "@/components/ui/Text";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 
 type Props = {
   report: ReadingReport;
@@ -17,6 +18,7 @@ type Props = {
 };
 
 export function ReadingResultView({ report, headerExtra }: Props) {
+  const { prefs } = useUiPrefs();
   const [activeTradition, setActiveTradition] = useState<Tradition | null>(
     report.traditions[0] ?? null
   );
@@ -64,7 +66,7 @@ export function ReadingResultView({ report, headerExtra }: Props) {
         古籍依据
       </Text>
       {report.citations.map((c) => (
-        <CitationBlock key={c.chunkId} citation={c} />
+        <CitationBlock key={c.chunkId} citation={c} defaultExpanded={prefs.classicMode} />
       ))}
 
       {advice && (

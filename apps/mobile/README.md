@@ -4,9 +4,9 @@ Expo + React Native app with **expo-router** and six tabs: 今日 / 提问 / 占
 
 ## Prerequisites
 
-- Node.js ≥ 20
+- Node.js ≥ 20.19.4
 - npm (monorepo root install)
-- [Expo Go](https://expo.dev/go) on a device, or iOS Simulator / Android emulator
+- [Expo Go](https://expo.dev/go) **SDK 54** on a device, or iOS Simulator / Android emulator
 
 ## Environment variables
 
@@ -16,7 +16,10 @@ Set in repo root `.env` (see `.env.example`):
 |----------|---------|
 | `EXPO_PUBLIC_SUPABASE_URL` | Supabase project URL |
 | `EXPO_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
-| `EXPO_PUBLIC_MIMO_API_KEY` | Optional fallback LLM key (dev) |
+| `EXPO_PUBLIC_LLM_API_KEY` | Optional dev LLM key (DeepSeek etc.) |
+| `EXPO_PUBLIC_MIMO_API_KEY` | Optional fallback LLM key (Xiaomi Mimo) |
+
+Env files are loaded from the **repo root** `.env` (see `.env.example`). For production use, prefer **设置 → LLM 连接** (BYOK stored on device).
 
 Without Supabase, the app runs in **mock mode**. For占梦与 Method Copilot，推荐在 **设置 → LLM 连接** 配置 BYOK（仅存本机 AsyncStorage）。
 
@@ -27,7 +30,18 @@ npm install
 npm run dev:mobile
 ```
 
-Then press `i` (iOS simulator), `a` (Android), or scan the QR code with Expo Go.
+或进入本目录启动：
+
+```bash
+cd apps/mobile
+npx expo start
+```
+
+**不要**在 monorepo 根目录（`untitled/`）直接运行 `npx expo start`，否则会加载默认 `AppEntry` 并报 `Unable to resolve ../../App`。
+
+Then press `i` (iOS simulator), `a` (Android), or scan the QR code with **Expo Go SDK 54**.
+
+> This project uses **Expo SDK 54** (React Native 0.81, React 19). The App Store version of Expo Go matches the latest SDK; older Expo Go builds will report a version mismatch.
 
 ## Scripts
 

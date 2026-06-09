@@ -22,6 +22,15 @@ import { computeZiwei, type ZiweiResult } from "./ziwei.ts";
 import { throwJiaobei, throwJiaobeiSession, type JiaobeiThrow, type JiaobeiSession } from "./jiaobei.ts";
 import { drawRunes, type RunesResult } from "./runes.ts";
 import { rollAstrodice, type AstrodiceResult } from "./astrodice.ts";
+import { drawOracle, type OracleResult } from "./oracle.ts";
+import { readCoffeeGrounds, type CoffeeResult } from "./coffee.ts";
+import { castScryingVision, type ScryingResult } from "./scrying.ts";
+import { computeNumerology, type NumerologyResult } from "./numerology.ts";
+import { castGeomancy, type GeomancyResult } from "./geomancy.ts";
+import { castMeihua, type MeihuaResult } from "./meihua.ts";
+import { computeVedic, type VedicResult } from "./vedic.ts";
+import { readXiangmian, type XiangmianResult } from "./xiangmian.ts";
+import { readPalmistry, type PalmistryResult } from "./palmistry.ts";
 
 export {
   computeBazi,
@@ -42,6 +51,15 @@ export {
   throwJiaobeiSession,
   drawRunes,
   rollAstrodice,
+  drawOracle,
+  readCoffeeGrounds,
+  castScryingVision,
+  computeNumerology,
+  castGeomancy,
+  castMeihua,
+  computeVedic,
+  readXiangmian,
+  readPalmistry,
   type BaziResult,
   type BaziCompatibilityResult,
   type RelationshipContext,
@@ -60,6 +78,15 @@ export {
   type JiaobeiSession,
   type RunesResult,
   type AstrodiceResult,
+  type OracleResult,
+  type CoffeeResult,
+  type ScryingResult,
+  type NumerologyResult,
+  type GeomancyResult,
+  type MeihuaResult,
+  type VedicResult,
+  type XiangmianResult,
+  type PalmistryResult,
 };
 export { toInterpretTarotCards } from "./tarot-adapters.ts";
 export { normalizeTarotCardName, tarotNamesMatch, TAROT_NAME_ALIASES } from "./tarot-names.ts";

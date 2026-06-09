@@ -1,2 +1,3 @@
 /// <reference types="expo/types" />
-/// <reference path="../../packages/engines/src/lunar-javascript.d.ts" />
+
+// NOTE: This file should not be edited and should be in your git ignore

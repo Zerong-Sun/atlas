@@ -9,12 +9,13 @@
 
 Refresh: `npm run fetch-lenormand` in `packages/corpus-scripts`.
 
-## Alternate decks (sheet-cropped, may clip edges)
+## Alternate decks
 
-| Deck | Command | Directory |
-|------|---------|-----------|
-| Game of Hope 1799 | `npm run fetch-lenormand:game-of-hope` | `game-of-hope-1799/` |
-| Ch. Didot c.1890 (Yale IIIF) | `npm run fetch-lenormand:didot` | `didot-1890/` |
+| Deck | Command | Directory | Notes |
+|------|---------|-----------|-------|
+| British Museum Dondorf 1896,0501.308 | `npm run fetch-lenormand:bm` | `bm-dondorf-308/` | From 2 BM Commons photos; **CC BY-NC-SA 4.0** |
+| Game of Hope 1799 | `npm run fetch-lenormand:game-of-hope` | `game-of-hope-1799/` | Sheet-cropped, may clip edges |
+| Ch. Didot c.1890 (Yale IIIF) | `npm run fetch-lenormand:didot` | `didot-1890/` | Sheet-cropped, may clip edges |
 
 ## Card numbering
 

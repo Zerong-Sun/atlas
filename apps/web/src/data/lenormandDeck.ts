@@ -39,7 +39,11 @@ export const LENORMAND_CARD_SLUGS = [
   "cross",
 ] as const;
 
-const ASSET_BASE = "/assets/lenormand/didot-1890";
+/**
+ * Card face directory. Alternates: `bm-dondorf-308` (British Museum, NC license),
+ * `game-of-hope-1799`, `didot-1890`. See public/assets/lenormand/ATTRIBUTION.md.
+ */
+const ASSET_BASE = "/assets/lenormand/classic-dondorf";
 
 export function getLenormandCardImage(id: number): string {
   const slug = LENORMAND_CARD_SLUGS[id - 1] ?? "rider";

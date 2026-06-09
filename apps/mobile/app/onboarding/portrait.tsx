@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { TRADITION_LABELS } from "@/constants/traditions";
 import type { PortraitSummary, Tradition } from "@atlas/shared-types";
+import { LlmSetupHint } from "@/components/LlmSetupHint";
 import { Screen } from "@/components/ui/Screen";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
 import { useApp } from "@/context/AppContext";
 import { fetchPortraitSummary } from "@/lib/api/profile";
+import { isLlmConfigured } from "@/lib/llmSettings";
 import { track } from "@/lib/analytics";
 import { colors, radius, spacing } from "@/constants/theme";
 
@@ -17,6 +19,11 @@ export default function PortraitScreen() {
   const [portrait, setPortrait] = useState<PortraitSummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [llmReady, setLlmReady] = useState(false);
+
+  useEffect(() => {
+    void isLlmConfigured().then(setLlmReady);
+  }, []);
 
   useEffect(() => {
     if (!profile?.birthDate) {
@@ -71,6 +78,9 @@ export default function PortraitScreen() {
       <Text variant="caption" style={styles.openNote}>
         全部功能已开放，无需订阅或付费解锁
       </Text>
+      {!llmReady && (
+        <LlmSetupHint message="未配置 LLM 时，共同主题与分歧分析使用内置模板；配置后可获得 AI 综合解读。" />
+      )}
       {portrait?.consensus && (
         <View style={[styles.card, styles.consensus]}>
           <Text variant="label">共同主题</Text>

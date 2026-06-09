@@ -1,32 +1,26 @@
-import { Stack, useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, View, StyleSheet } from "react-native";
 import type { ReadingReport } from "@atlas/shared-types";
 import { buildReadingReportSnapshot } from "@atlas/method-core";
 import { ReadingResultView } from "@/components/ReadingResultView";
 import { MethodResultActions } from "@/components/MethodResultActions";
+import { Button } from "@/components/ui/Button";
+import { Text } from "@/components/ui/Text";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import { listReadings } from "@/lib/api/readings";
 import { getReadingHistory } from "@/lib/storage";
 import { colors, spacing } from "@/constants/theme";
 
 export default function ReadingResultScreen() {
-  const { id, data } = useLocalSearchParams<{ id: string; data?: string }>();
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const router = useRouter();
   const [report, setReport] = useState<ReadingReport | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      if (data) {
-        try {
-          const parsed = JSON.parse(data) as ReadingReport;
-          if (!cancelled) setReport(parsed);
-          return;
-        } catch {
-          /* fall through */
-        }
-      }
       const remote = await listReadings();
       const found = remote.find((r) => r.readingId === id);
       if (found) {
@@ -42,7 +36,7 @@ export default function ReadingResultScreen() {
     return () => {
       cancelled = true;
     };
-  }, [id, data]);
+  }, [id]);
 
   const copilotReport = useMemo(() => (report ? buildReadingReportSnapshot(report) : null), [report]);
   useRegisterMethodCopilotReport(copilotReport, report ? { readingReport: report } : undefined);
@@ -55,7 +49,26 @@ export default function ReadingResultScreen() {
     );
   }
 
-  if (!report) return null;
+  if (!report) {
+    return (
+      <>
+        <Stack.Screen
+          options={{
+            headerShown: true,
+            title: "对照报告",
+            headerStyle: { backgroundColor: colors.ink },
+            headerTintColor: colors.gold,
+          }}
+        />
+        <View style={styles.center}>
+          <Text variant="body" muted style={styles.emptyText}>
+            未找到该对照报告，可能已被清除或尚未同步。
+          </Text>
+          <Button title="返回" variant="ghost" onPress={() => router.back()} />
+        </View>
+      </>
+    );
+  }
 
   return (
     <>
@@ -76,5 +89,13 @@ export default function ReadingResultScreen() {
 }
 
 const styles = StyleSheet.create({
-  center: { flex: 1, backgroundColor: colors.ink, alignItems: "center", justifyContent: "center", padding: spacing.lg },
+  center: {
+    flex: 1,
+    backgroundColor: colors.ink,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: spacing.lg,
+    gap: spacing.md,
+  },
+  emptyText: { textAlign: "center" },
 });

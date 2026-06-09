@@ -1,52 +1,19 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  DEFAULT_LLM_BASE_URL,
+  DEFAULT_LLM_MODEL,
+  isAllowedLlmBaseUrl,
+  normalizeLlmBaseUrl,
+} from "@atlas/llm-defaults";
 
 const STORAGE_KEY = "atlas.llm.settings";
 
-export const DEFAULT_LLM_BASE_URL = "https://api.deepseek.com/v1";
-export const DEFAULT_LLM_MODEL = "deepseek-v4-flash";
-
-const ALLOWED_LLM_HOSTS = new Set([
-  "api.deepseek.com",
-  "api.openai.com",
-  "openrouter.ai",
-  "api.together.xyz",
-  "api.groq.com",
-  "api.mistral.ai",
-  "api.anthropic.com",
-  "generativelanguage.googleapis.com",
-  "token-plan-cn.xiaomimimo.com",
-]);
-
-const PRIVATE_HOST_PATTERNS = [
-  /^localhost$/i,
-  /^127\./,
-  /^10\./,
-  /^192\.168\./,
-  /^172\.(1[6-9]|2\d|3[01])\./,
-  /^169\.254\./,
-  /^0\./,
-];
+export { DEFAULT_LLM_BASE_URL, DEFAULT_LLM_MODEL, isAllowedLlmBaseUrl };
 
 export interface LlmSettings {
   apiKey: string;
   baseUrl: string;
   model: string;
-}
-
-function normalizeLlmBaseUrl(url: string): string {
-  return url.trim().replace(/\/$/, "");
-}
-
-export function isAllowedLlmBaseUrl(url: string): boolean {
-  try {
-    const parsed = new URL(normalizeLlmBaseUrl(url));
-    if (parsed.protocol !== "https:") return false;
-    if (PRIVATE_HOST_PATTERNS.some((pattern) => pattern.test(parsed.hostname))) return false;
-    if (parsed.hostname.endsWith(".local")) return false;
-    return ALLOWED_LLM_HOSTS.has(parsed.hostname);
-  } catch {
-    return false;
-  }
 }
 
 export function validateLlmSettings(settings: Partial<LlmSettings>): string | null {
@@ -108,5 +75,5 @@ export async function clearLlmSettings(): Promise<void> {
 export async function isLlmConfigured(): Promise<boolean> {
   const stored = await getLlmSettings();
   if (stored?.apiKey) return true;
-  return Boolean(process.env.EXPO_PUBLIC_MIMO_API_KEY);
+  return Boolean(process.env.EXPO_PUBLIC_LLM_API_KEY || process.env.EXPO_PUBLIC_MIMO_API_KEY);
 }

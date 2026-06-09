@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { StyleSheet, Switch, TextInput, View } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 import { useMockApi } from "@/lib/api/client";
 import { testLlmConnection } from "@/lib/llm";
 import {
@@ -17,14 +17,6 @@ import {
 } from "@/lib/llmSettings";
 import { colors, radius, spacing } from "@/constants/theme";
 
-const PREFS_KEY = "atlas.ui.prefs";
-
-type UiPrefs = {
-  mysticMotion: boolean;
-  classicMode: boolean;
-  safeMode: boolean;
-};
-
 const MODEL_RULES = [
   "不把占卜输出包装成确定事实。",
   "涉及健康、法律、投资时必须提示寻求专业意见。",
@@ -34,9 +26,7 @@ const MODEL_RULES = [
 
 export default function SettingsScreen() {
   const supabaseNotConfigured = useMockApi();
-  const [mysticMotion, setMysticMotion] = useState(true);
-  const [classicMode, setClassicMode] = useState(true);
-  const [safeMode, setSafeMode] = useState(true);
+  const { prefs, updatePrefs } = useUiPrefs();
   const [llmApiKey, setLlmApiKey] = useState("");
   const [llmBaseUrl, setLlmBaseUrl] = useState(DEFAULT_LLM_BASE_URL);
   const [llmModel, setLlmModel] = useState(DEFAULT_LLM_MODEL);
@@ -52,22 +42,7 @@ export default function SettingsScreen() {
       setLlmModel(stored.model);
     });
     void isLlmConfigured().then(setLlmConfigured);
-    void AsyncStorage.getItem(PREFS_KEY).then((raw) => {
-      if (!raw) return;
-      try {
-        const prefs = JSON.parse(raw) as UiPrefs;
-        setMysticMotion(prefs.mysticMotion ?? true);
-        setClassicMode(prefs.classicMode ?? true);
-        setSafeMode(prefs.safeMode ?? true);
-      } catch {
-        /* ignore */
-      }
-    });
   }, []);
-
-  const persistPrefs = async (next: UiPrefs) => {
-    await AsyncStorage.setItem(PREFS_KEY, JSON.stringify(next));
-  };
 
   const handleSaveLlm = async () => {
     const error = validateLlmSettings({ apiKey: llmApiKey, baseUrl: llmBaseUrl, model: llmModel });
@@ -118,27 +93,18 @@ export default function SettingsScreen() {
         <Text variant="heading">体验偏好</Text>
         <ToggleRow
           label="神秘动效"
-          value={mysticMotion}
-          onChange={(v) => {
-            setMysticMotion(v);
-            void persistPrefs({ mysticMotion: v, classicMode, safeMode });
-          }}
+          value={prefs.mysticMotion}
+          onChange={(v) => void updatePrefs({ mysticMotion: v })}
         />
         <ToggleRow
           label="优先显示古文解释"
-          value={classicMode}
-          onChange={(v) => {
-            setClassicMode(v);
-            void persistPrefs({ mysticMotion, classicMode: v, safeMode });
-          }}
+          value={prefs.classicMode}
+          onChange={(v) => void updatePrefs({ classicMode: v })}
         />
         <ToggleRow
           label="启用安全边界提示"
-          value={safeMode}
-          onChange={(v) => {
-            setSafeMode(v);
-            void persistPrefs({ mysticMotion, classicMode, safeMode: v });
-          }}
+          value={prefs.safeMode}
+          onChange={(v) => void updatePrefs({ safeMode: v })}
         />
       </View>
 

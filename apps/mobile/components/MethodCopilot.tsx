@@ -16,6 +16,7 @@ import {
   getMethodCopilotPromptsWithReport,
 } from "@atlas/method-core";
 import { useMethodCopilot } from "@/context/MethodCopilotContext";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 import {
   askMethodCopilot,
   askMethodCopilotAnalysis,
@@ -29,6 +30,7 @@ import { colors, radius, spacing } from "@/constants/theme";
 
 export function MethodCopilot() {
   const { open, setOpen, report, pendingAction, clearPendingAction } = useMethodCopilot();
+  const { prefs } = useUiPrefs();
   const methodId = report?.methodId ?? null;
   const config = getMethodCopilotConfig(methodId);
   const quickPrompts = getMethodCopilotPromptsWithReport(methodId, Boolean(report));
@@ -117,6 +119,11 @@ export function MethodCopilot() {
         <Text variant="caption" muted style={styles.subtitle}>
           {config.subtitle}
         </Text>
+        {prefs.safeMode && (
+          <Text variant="caption" style={styles.safeNote}>
+            解读仅供反思，不构成医疗、法律或投资建议。涉及重大决策请咨询专业人士。
+          </Text>
+        )}
 
         <ScrollView ref={scrollRef} style={styles.scroll} contentContainerStyle={styles.scrollContent}>
           {turns.map((turn, i) => (
@@ -172,6 +179,12 @@ const styles = StyleSheet.create({
   },
   close: { color: colors.gold },
   subtitle: { paddingHorizontal: spacing.lg, marginTop: spacing.xs, marginBottom: spacing.md },
+  safeNote: {
+    paddingHorizontal: spacing.lg,
+    marginBottom: spacing.sm,
+    color: colors.gold,
+    lineHeight: 18,
+  },
   scroll: { flex: 1 },
   scrollContent: { padding: spacing.lg, gap: spacing.sm },
   bubble: { padding: spacing.md, borderRadius: radius.md, maxWidth: "92%" },

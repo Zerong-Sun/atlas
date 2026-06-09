@@ -121,10 +121,10 @@ npm run corpus:embed
 - `/onboarding/*` — 引导（兴趣 → 出生档案 → 画像）
 - `/today` — 今日简报
 - `/ask` — 提问对照
-- `/methods` — 占法目录（`ready` 为真实演算页，`preview` 为参考预览工作台）
-- `/methods/:methodId` — 参考预览工作台（梅花、卢恩、杯筊等 12 种）：参考文库 + hash 模板草稿，非真实起卦
-- `/methods/iching` — 周易铜钱演卦（真实 `castIChing`）
-- `/methods/iching/workbench` — 周易参考文库模板工作台（非真实演卦）
+- `/methods` — 占法目录（均为真实演算页或结构化规则引擎）
+- `/methods/meihua`、`/methods/vedic`、`/methods/numerology`、`/methods/geomancy`、`/methods/xiangmian`、`/methods/palmistry`、`/methods/oracle`、`/methods/coffee`、`/methods/scrying` — 原参考预览占法，现已接入 `@atlas/engines`
+- `/methods/iching` — 周易铜钱演卦（`castIChing`）
+- `/methods/iching/workbench` — 周易参考文库模板工作台（模板草稿，非演卦）
 - `/dream` — 梦境记录
 - `/profile` — 档案与历史
 - `/library` — 书库浏览

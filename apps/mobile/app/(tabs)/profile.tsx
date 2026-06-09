@@ -1,13 +1,14 @@
 import { useRouter } from "expo-router";
-import { useEffect, useState } from "react";
-import { Pressable, StyleSheet, Switch, TextInput, View } from "react-native";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { FlatList, Pressable, StyleSheet, Switch, TextInput, View } from "react-native";
 import type { ReadingReport, Tradition } from "@atlas/shared-types";
 import { READING_TRADITIONS, TRADITION_LABELS } from "@/constants/traditions";
+import { HistoryListItem } from "@/components/HistoryListItem";
 import { Screen } from "@/components/ui/Screen";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
 import { useApp } from "@/context/AppContext";
-import { listReadings } from "@/lib/api";
+import { listReadings } from "@/lib/api/readings";
 import { archiveEntryLabel, listArchiveEntries, type ArchiveEntry } from "@/lib/archive";
 import { track } from "@/lib/analytics";
 import { colors, radius, spacing } from "@/theme/tokens";
@@ -18,7 +19,6 @@ export default function ProfileScreen() {
   const [history, setHistory] = useState<ReadingReport[]>([]);
   const [archive, setArchive] = useState<ArchiveEntry[]>([]);
   const [editing, setEditing] = useState(false);
-  const [displayName, setDisplayName] = useState(profile?.displayName ?? "");
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "");
   const [birthPlace, setBirthPlace] = useState(profile?.birthPlace ?? "");
@@ -41,12 +41,15 @@ export default function ProfileScreen() {
 
   const disabled = profile?.disabledTraditions ?? [];
 
-  const toggleTradition = async (t: Tradition) => {
-    const next = disabled.includes(t) ? disabled.filter((x) => x !== t) : [...disabled, t];
-    await saveProfile({ disabledTraditions: next });
-  };
+  const toggleTradition = useCallback(
+    async (t: Tradition) => {
+      const next = disabled.includes(t) ? disabled.filter((x) => x !== t) : [...disabled, t];
+      await saveProfile({ disabledTraditions: next });
+    },
+    [disabled, saveProfile],
+  );
 
-  const saveBirth = async () => {
+  const saveBirth = useCallback(async () => {
     setSaving(true);
     try {
       await saveProfile({ birthDate, birthTime, birthPlace, gender });
@@ -55,30 +58,139 @@ export default function ProfileScreen() {
     } finally {
       setSaving(false);
     }
-  };
+  }, [birthDate, birthTime, birthPlace, gender, saveProfile]);
 
-  const openReading = (report: ReadingReport) => {
-    track("history_open", { readingId: report.readingId });
-    router.push({
-      pathname: "/reading/[id]",
-      params: { id: report.readingId, data: JSON.stringify(report) },
-    });
-  };
+  const openReading = useCallback(
+    (report: ReadingReport) => {
+      track("history_open", { readingId: report.readingId });
+      router.push({
+        pathname: "/reading/[id]",
+        params: { id: report.readingId },
+      });
+    },
+    [router],
+  );
 
-  const openArchive = (entry: ArchiveEntry) => {
-    if (entry.readingReport) {
-      openReading(entry.readingReport);
-      return;
-    }
-    if (entry.source === "reading") {
-      router.push({ pathname: "/reading/[id]", params: { id: entry.id } });
-      return;
-    }
-    router.push({ pathname: "/archive/[id]", params: { id: entry.id } });
-  };
+  const openArchive = useCallback(
+    (entry: ArchiveEntry) => {
+      if (entry.readingReport) {
+        openReading(entry.readingReport);
+        return;
+      }
+      if (entry.source === "reading") {
+        router.push({ pathname: "/reading/[id]", params: { id: entry.id } });
+        return;
+      }
+      router.push({ pathname: "/archive/[id]", params: { id: entry.id } });
+    },
+    [openReading, router],
+  );
+
+  const listHeader = useMemo(
+    () => (
+      <ProfileHeader
+        profile={profile}
+        editing={editing}
+        setEditing={setEditing}
+        birthDate={birthDate}
+        setBirthDate={setBirthDate}
+        birthTime={birthTime}
+        setBirthTime={setBirthTime}
+        birthPlace={birthPlace}
+        setBirthPlace={setBirthPlace}
+        gender={gender}
+        setGender={setGender}
+        saving={saving}
+        saveBirth={saveBirth}
+        disabled={disabled}
+        toggleTradition={toggleTradition}
+        archive={archive}
+        openArchive={openArchive}
+        router={router}
+      />
+    ),
+    [
+      profile,
+      editing,
+      birthDate,
+      birthTime,
+      birthPlace,
+      gender,
+      saving,
+      saveBirth,
+      disabled,
+      toggleTradition,
+      archive,
+      openArchive,
+      router,
+    ],
+  );
 
   return (
-    <Screen scroll>
+    <Screen scroll={false} padded={false}>
+      <FlatList
+        data={history}
+        keyExtractor={(item) => item.readingId}
+        contentContainerStyle={styles.listContent}
+        ListHeaderComponent={listHeader}
+        ListEmptyComponent={
+          <Text variant="body" muted style={styles.emptyHistory}>
+            暂无记录，去「提问」生成第一份对照报告
+          </Text>
+        }
+        renderItem={({ item: r }) => (
+          <HistoryListItem
+            title={r.sections.find((s) => s.type === "summary")?.content.slice(0, 40) ?? "对照报告"}
+            subtitle={`${new Date(r.createdAt).toLocaleDateString("zh-CN")} · ${r.traditions.length} 体系`}
+            onPress={() => openReading(r)}
+          />
+        )}
+      />
+    </Screen>
+  );
+}
+
+function ProfileHeader({
+  profile,
+  editing,
+  setEditing,
+  birthDate,
+  setBirthDate,
+  birthTime,
+  setBirthTime,
+  birthPlace,
+  setBirthPlace,
+  gender,
+  setGender,
+  saving,
+  saveBirth,
+  disabled,
+  toggleTradition,
+  archive,
+  openArchive,
+  router,
+}: {
+  profile: ReturnType<typeof useApp>["profile"];
+  editing: boolean;
+  setEditing: (fn: (e: boolean) => boolean) => void;
+  birthDate: string;
+  setBirthDate: (v: string) => void;
+  birthTime: string;
+  setBirthTime: (v: string) => void;
+  birthPlace: string;
+  setBirthPlace: (v: string) => void;
+  gender: "male" | "female";
+  setGender: (v: "male" | "female") => void;
+  saving: boolean;
+  saveBirth: () => void;
+  disabled: Tradition[];
+  toggleTradition: (t: Tradition) => void;
+  archive: ArchiveEntry[];
+  openArchive: (entry: ArchiveEntry) => void;
+  router: ReturnType<typeof useRouter>;
+}) {
+  return (
+    <View style={styles.header}>
       <Text variant="title">档案</Text>
 
       <View style={styles.card}>
@@ -161,37 +273,19 @@ export default function ProfileScreen() {
         </Text>
       ) : (
         archive.slice(0, 10).map((entry) => (
-          <Pressable key={entry.id} style={styles.historyItem} onPress={() => openArchive(entry)}>
-            <Text variant="body" numberOfLines={1}>
-              {entry.title}
-            </Text>
-            <Text variant="caption" muted>
-              {archiveEntryLabel(entry)} · {new Date(entry.createdAt).toLocaleDateString("zh-CN")}
-            </Text>
-          </Pressable>
+          <HistoryListItem
+            key={entry.id}
+            title={entry.title}
+            subtitle={`${archiveEntryLabel(entry)} · ${new Date(entry.createdAt).toLocaleDateString("zh-CN")}`}
+            onPress={() => openArchive(entry)}
+          />
         ))
       )}
 
       <Text variant="heading" style={styles.section}>
         历史报告
       </Text>
-      {history.length === 0 ? (
-        <Text variant="body" muted>
-          暂无记录，去「提问」生成第一份对照报告
-        </Text>
-      ) : (
-        history.map((r) => (
-          <Pressable key={r.readingId} style={styles.historyItem} onPress={() => openReading(r)}>
-            <Text variant="body" numberOfLines={1}>
-              {r.sections.find((s) => s.type === "summary")?.content.slice(0, 40) ?? "对照报告"}
-            </Text>
-            <Text variant="caption" muted>
-              {new Date(r.createdAt).toLocaleDateString("zh-CN")} · {r.traditions.length} 体系
-            </Text>
-          </Pressable>
-        ))
-      )}
-    </Screen>
+    </View>
   );
 }
 
@@ -223,6 +317,13 @@ function Field({
 }
 
 const styles = StyleSheet.create({
+  listContent: {
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xxl,
+  },
+  header: { gap: 0 },
+  emptyHistory: { marginTop: spacing.sm },
   card: {
     marginTop: spacing.lg,
     padding: spacing.md,
@@ -258,13 +359,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: spacing.xl,
     marginBottom: spacing.sm,
-  },
-  historyItem: {
-    padding: spacing.md,
-    backgroundColor: colors.surface,
-    borderRadius: radius.md,
-    marginTop: spacing.sm,
-    gap: spacing.xs,
   },
   genderRow: { flexDirection: "row", gap: spacing.sm },
   genderChip: {

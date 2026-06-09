@@ -1,12 +1,31 @@
 # Lenormand Card Attribution
 
-## Source
+## Active deck: Classic Dondorf (individual scans)
 
-- **Deck**: Wahrsagekarten der berühmten Kartenlegerin Lenormand
-- **Publisher**: Ch. Didot, Paris, c. 1890
-- **Collection**: Yale University Library, Beinecke Rare Book and Manuscript Library, Cary Collection of Playing Cards
-- **Call number**: PLAYING CARDS GEN 1152
-- **Catalog**: https://collections.library.yale.edu/catalog/10994633
+- **Style**: 19th-century German Petit Lenormand (Dondorf / Wahrsagekarten tradition)
+- **Format**: 36 separate card JPEGs (350×550), no sheet cropping
+- **Digitization**: [taluowa.com](https://www.taluowa.com) — URL list in [look-fate/tarot-lab](https://github.com/look-fate/tarot-lab) (`Script/simple-lenormand.txt`)
+- **Underlying art**: Public domain (19th-century card designs)
+
+Refresh: `npm run fetch-lenormand` in `packages/corpus-scripts`.
+
+## Alternate decks
+
+| Deck | Command | Directory | Notes |
+|------|---------|-----------|-------|
+| British Museum Dondorf 1896,0501.308 | `npm run fetch-lenormand:bm` | `bm-dondorf-308/` | Extracted from 2 BM Commons photos; **CC BY-NC-SA 4.0** |
+| Game of Hope 1799 | `npm run fetch-lenormand:game-of-hope` | `game-of-hope-1799/` | Sheet-cropped, may clip edges |
+| Ch. Didot c.1890 (Yale IIIF) | `npm run fetch-lenormand:didot` | `didot-1890/` | Sheet-cropped, may clip edges |
+
+### British Museum deck (bm-dondorf-308)
+
+- **Museum object**: [1896,0501.308](https://www.britishmuseum.org/collection/object/P_1896-0501-308) — complete pack of 36 Mlle. Lenormand fortune-telling cards, B. Dondorf chromolithograph
+- **Source photos** (Wikimedia Commons):
+  - [Print, playing-card (BM 1896,0501.308)](https://commons.wikimedia.org/wiki/File:Print,_playing-card_(BM_1896,0501.308).jpg)
+  - [Print, playing-card (BM 1896,0501.308 1)](https://commons.wikimedia.org/wiki/File:Print,_playing-card_(BM_1896,0501.308_1).jpg)
+- **Extraction**: OpenCV template matching against reference faces; cards are cropped from scattered layouts (not individual BM catalogue files)
+- **Photo license**: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — British Museum — **non-commercial use**
+- **Card art**: Public domain (19th century)
 
 ## Card numbering
 
@@ -53,4 +72,4 @@ Standard Petit Lenormand order (1–36):
 
 ## License note
 
-The underlying 19th-century card artwork is in the public domain. Digitized images were obtained via Yale Library IIIF for non-commercial educational use. Verify rights for your deployment context.
+Historic Lenormand artwork is public domain. Hosted scans are used for non-commercial educational divination UI. Verify rights for your deployment — especially the BM deck (NC license on photographs).

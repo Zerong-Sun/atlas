@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { FlatList, Pressable, StyleSheet, View } from "react-native";
 import { buildDreamReportSnapshot } from "@atlas/method-core";
 import { DreamCapture } from "@/components/DreamCapture";
 import { MethodResultActions } from "@/components/MethodResultActions";
@@ -30,7 +30,7 @@ export default function DreamScreen() {
   }, [result, dreamText]);
   useRegisterMethodCopilotReport(copilotReport);
 
-  const handleSubmit = async (text: string, emotions: string[], symbols: string[]) => {
+  const handleSubmit = useCallback(async (text: string, emotions: string[], symbols: string[]) => {
     setLoading(true);
     setDreamText(text);
     try {
@@ -43,34 +43,33 @@ export default function DreamScreen() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const openArchive = (entry: DreamInterpretation) => {
-    router.push({ pathname: "/archive/[id]", params: { id: entry.entryId } });
-  };
+  const openArchive = useCallback(
+    (entry: DreamInterpretation) => {
+      router.push({ pathname: "/archive/[id]", params: { id: entry.entryId } });
+    },
+    [router],
+  );
 
-  return (
-    <Screen scroll>
-      <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
-      {result ? <MethodResultActions methodId="dream" /> : null}
+  const listHeader = useMemo(
+    () => (
+      <View>
+        <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
+        {result ? <MethodResultActions methodId="dream" /> : null}
+        {history.length > 0 && (
+          <Text variant="heading" style={styles.historyTitle}>
+            梦境历史
+          </Text>
+        )}
+      </View>
+    ),
+    [handleSubmit, loading, result, history.length],
+  );
 
-      {history.length > 0 && (
-        <View style={styles.history}>
-          <Text variant="heading">梦境历史</Text>
-          {history.map((entry) => (
-            <Pressable key={entry.entryId} style={styles.historyItem} onPress={() => openArchive(entry)}>
-              <Text variant="body" numberOfLines={2}>
-                {entry.chinese}
-              </Text>
-              <Text variant="caption" muted>
-                {new Date(entry.createdAt).toLocaleString("zh-CN")}
-              </Text>
-            </Pressable>
-          ))}
-        </View>
-      )}
-
-      {trend && (
+  const listFooter = useMemo(
+    () =>
+      trend ? (
         <View style={styles.trend}>
           <Text variant="heading">七日趋势</Text>
           <Text variant="body" muted>
@@ -86,18 +85,47 @@ export default function DreamScreen() {
             ))}
           </View>
         </View>
-      )}
+      ) : null,
+    [trend],
+  );
+
+  return (
+    <Screen scroll={false} padded={false}>
+      <FlatList
+        data={history}
+        keyExtractor={(item) => item.entryId}
+        contentContainerStyle={styles.listContent}
+        ListHeaderComponent={listHeader}
+        ListFooterComponent={listFooter}
+        renderItem={({ item }) => (
+          <Pressable style={styles.historyItem} onPress={() => openArchive(item)}>
+            <Text variant="body" numberOfLines={2}>
+              {item.chinese}
+            </Text>
+            <Text variant="caption" muted>
+              {new Date(item.createdAt).toLocaleString("zh-CN")}
+            </Text>
+          </Pressable>
+        )}
+      />
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  history: { marginTop: spacing.xl, gap: spacing.sm },
+  listContent: {
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xxl,
+    gap: spacing.sm,
+  },
+  historyTitle: { marginTop: spacing.xl, marginBottom: spacing.sm },
   historyItem: {
     padding: spacing.md,
     backgroundColor: colors.surface,
     borderRadius: radius.md,
     gap: spacing.xs,
+    marginBottom: spacing.sm,
   },
   trend: { marginTop: spacing.xxl, gap: spacing.md },
   symbols: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm },
