@@ -12,7 +12,7 @@ import {
 } from "@/lib/api/methodCopilot";
 import { getArchiveEntry, resolveArchiveEntryId, saveArchiveInterpretation } from "@/lib/archive";
 import { useCopilotResize } from "@/hooks/useCopilotResize";
-import { isMethodCopilotRoute, methodIdFromPathname } from "@/lib/methodFromRoute";
+import { isMethodCopilotRoute, isMethodWorkbenchRoute, methodIdFromPathname } from "@/lib/methodFromRoute";
 
 export function MethodCopilot() {
   const { pathname } = useLocation();
@@ -20,9 +20,12 @@ export function MethodCopilot() {
   const { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset } =
     useCopilotResize(open);
   const methodId = report?.methodId ?? methodIdFromPathname(pathname);
-  const config = getMethodCopilotConfig(methodId);
+  const copilotContext = {
+    workbench: isMethodWorkbenchRoute(pathname) || report?.source === "module",
+  };
+  const config = getMethodCopilotConfig(methodId, copilotContext);
   const experience = getMethodExperience(methodId ?? "methods");
-  const quickPrompts = getMethodCopilotPromptsWithReport(methodId, Boolean(report));
+  const quickPrompts = getMethodCopilotPromptsWithReport(methodId, Boolean(report), copilotContext);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [turns, setTurns] = useState<MethodCopilotTurn[]>([]);
@@ -80,8 +83,8 @@ export function MethodCopilot() {
       const useAnalysis = report && isAnalysisQuestion(question, true);
       try {
         const reply = useAnalysis
-          ? await askMethodCopilotAnalysis(methodId, question, turns, report)
-          : await askMethodCopilot(methodId, question, turns);
+          ? await askMethodCopilotAnalysis(methodId, question, turns, report, copilotContext)
+          : await askMethodCopilot(methodId, question, turns, copilotContext);
         const turnsWithReply = [
           ...turnsWithUser,
           {
@@ -111,7 +114,7 @@ export function MethodCopilot() {
         setLoading(false);
       }
     },
-    [loading, methodId, persistInterpretation, report, turns],
+    [copilotContext, loading, methodId, persistInterpretation, report, turns],
   );
 
   useEffect(() => {

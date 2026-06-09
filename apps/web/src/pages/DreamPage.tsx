@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { DreamCapture } from "@/components/DreamCapture";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -63,7 +63,7 @@ export function DreamPage() {
           onSubmit={handleSubmit}
           loading={loading}
           result={result}
-          resultActions={result ? <MethodCopilotTrigger variant="analyze" /> : undefined}
+          resultActions={result ? <MethodResultActions /> : undefined}
         />
       </section>
 

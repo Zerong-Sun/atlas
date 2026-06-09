@@ -19,6 +19,9 @@ import { drawLot, type LotResult } from "./lot.ts";
 import { castLiuyao, type LiuyaoResult } from "./liuyao.ts";
 import { computeFengshui, type FengshuiResult } from "./fengshui.ts";
 import { computeZiwei, type ZiweiResult } from "./ziwei.ts";
+import { throwJiaobei, throwJiaobeiSession, type JiaobeiThrow, type JiaobeiSession } from "./jiaobei.ts";
+import { drawRunes, type RunesResult } from "./runes.ts";
+import { rollAstrodice, type AstrodiceResult } from "./astrodice.ts";
 
 export {
   computeBazi,
@@ -35,6 +38,10 @@ export {
   castLiuyao,
   computeFengshui,
   computeZiwei,
+  throwJiaobei,
+  throwJiaobeiSession,
+  drawRunes,
+  rollAstrodice,
   type BaziResult,
   type BaziCompatibilityResult,
   type RelationshipContext,
@@ -49,6 +56,10 @@ export {
   type ZiweiResult,
   type TarotSpreadResult,
   type DrawnTarotCardResult,
+  type JiaobeiThrow,
+  type JiaobeiSession,
+  type RunesResult,
+  type AstrodiceResult,
 };
 export { toInterpretTarotCards } from "./tarot-adapters.ts";
 export { normalizeTarotCardName, tarotNamesMatch, TAROT_NAME_ALIASES } from "./tarot-names.ts";

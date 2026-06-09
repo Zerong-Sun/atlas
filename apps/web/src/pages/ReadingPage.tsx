@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import type { ReadingReport } from "@atlas/shared-types";
 import { ArchiveInterpretationView } from "@/components/ArchiveInterpretationView";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { ReadingResultView } from "@/components/ReadingResultView";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -39,12 +39,9 @@ export function ReadingPage() {
 
   return (
     <Page title="对照报告" wide>
-      <div className="method-result-actions">
-        <MethodCopilotTrigger
-          variant="analyze"
-          label={archiveEntry && hasArchiveInterpretation(archiveEntry) ? "继续 AI 解析" : "AI 解析对照报告"}
-        />
-      </div>
+      <MethodResultActions
+        label={archiveEntry && hasArchiveInterpretation(archiveEntry) ? "继续 AI 解析" : "AI 解析对照报告"}
+      />
       <ReadingResultView report={report} />
       {archiveEntry?.interpretation && <ArchiveInterpretationView turns={archiveEntry.interpretation} />}
     </Page>

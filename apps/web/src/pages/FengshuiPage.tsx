@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { computeFengshui, type FengshuiResult } from "@atlas/engines/fengshui";
 import { CompassRose } from "@/components/charts/CompassRose";
 import { PalaceGrid } from "@/components/charts/PalaceGrid";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -78,9 +78,7 @@ export function FengshuiPage() {
 
       {result && (
         <section className="fengshui-result">
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <p className="summary-line">{result.summary}</p>
           <p className="muted">坐向 {result.sittingMountain} · 向 {result.facingMountain} · 第 {result.period} 运</p>
           {result.mingGua && (

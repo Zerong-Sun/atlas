@@ -430,6 +430,89 @@ export function buildLenormandReportSnapshot(
   };
 }
 
+export function buildJiaobeiReportSnapshot(
+  question: string,
+  throws: Array<{ throwIndex: number; outcome: import("@atlas/engines/jiaobei").JiaobeiOutcome; cups: [string, string] }>,
+): MethodCopilotReportSnapshot {
+  const label = (outcome: import("@atlas/engines/jiaobei").JiaobeiOutcome) => {
+    const map = { holy: "圣杯", laugh: "笑杯", yin: "阴杯" } as const;
+    return map[outcome];
+  };
+  const body = truncate(
+    lines(
+      `问句：${question.trim() || "未指定"}`,
+      `掷筊次数：${throws.length}`,
+      "",
+      ...throws.map(
+        (t) =>
+          `第 ${t.throwIndex} 掷 · ${label(t.outcome)}（${t.cups[0] === "yang" ? "阳" : "阴"} / ${t.cups[1] === "yang" ? "阳" : "阴"}）`,
+      ),
+    ),
+  );
+  const last = throws[throws.length - 1];
+  return {
+    entryId: entryId("jiaobei", [throws.length, last?.outcome]),
+    source: "method",
+    methodId: "jiaobei",
+    title: "掷筊问卦",
+    summary: last ? label(last.outcome) : undefined,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildRunesReportSnapshot(
+  question: string,
+  spread: string,
+  result: import("@atlas/engines/runes").RunesResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      `阵式：${spread}`,
+      "",
+      ...result.runes.map(
+        (r) => `${r.position} ${r.glyph} ${r.nameZh}（${r.name}）${r.reversed ? "逆位" : "正位"}：${r.keywords.join("、")}`,
+      ),
+    ),
+  );
+  return {
+    entryId: entryId("runes", [spread, result.runes.map((r) => r.id).join("+")]),
+    source: "method",
+    methodId: "runes",
+    title: "卢恩符文",
+    summary: result.runes.map((r) => r.nameZh).join(" · "),
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export function buildAstrodiceReportSnapshot(
+  question: string,
+  result: import("@atlas/engines/astrodice").AstrodiceResult,
+): MethodCopilotReportSnapshot {
+  const body = truncate(
+    lines(
+      `问题：${question.trim() || "一般事项"}`,
+      "",
+      result.syntaxLine,
+      "",
+      `行星：${result.planet.name} — ${result.planet.meaning}`,
+      `星座：${result.sign.name} — ${result.sign.meaning}`,
+      `宫位：${result.house.name} — ${result.house.meaning}`,
+    ),
+  );
+  return {
+    entryId: entryId("astrodice", [result.planet.id, result.sign.id, result.house.id]),
+    source: "method",
+    methodId: "astrodice",
+    title: "占星骰子",
+    summary: `${result.planet.name} · ${result.sign.name} · ${result.house.name}`,
+    body,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
 export function buildLotReportSnapshot(
   result: ReturnType<typeof import("@atlas/engines").drawLot>,
 ): MethodCopilotReportSnapshot {

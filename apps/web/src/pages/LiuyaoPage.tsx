@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
 import { HexagramLines } from "@/components/charts/HexagramLines";
-import { MethodCopilotTrigger } from "@/components/MethodCopilotTrigger";
+import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
 import { Page } from "@/components/ui/Page";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
@@ -104,9 +104,7 @@ export function LiuyaoPage() {
 
       {result && (
         <section className="liuyao-result">
-          <div className="method-result-actions">
-            <MethodCopilotTrigger variant="analyze" />
-          </div>
+          <MethodResultActions />
           <header>
             <h2>{result.primaryName}卦 → {result.changedName}卦</h2>
             <p>{result.palace}宫 · 世{result.worldLine} 应{result.responseLine} · 用神{result.usefulGod}</p>

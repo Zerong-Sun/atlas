@@ -132,6 +132,20 @@ export interface LenormandInput {
   question?: string;
 }
 
+export type RuneSpread = "single" | "three" | "nine";
+
+export interface RunesInput {
+  seed?: string;
+  spread?: RuneSpread;
+  question?: string;
+  allowReversed?: boolean;
+}
+
+export interface AstrodiceInput {
+  seed?: string;
+  question?: string;
+}
+
 export interface LotInput {
   seed?: string;
   temple?: LotTemple;

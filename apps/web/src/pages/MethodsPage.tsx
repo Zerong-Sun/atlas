@@ -1,6 +1,6 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import { DIVINATION_METHODS, type MethodStatus } from "@/data/divinationMethods";
+import { DIVINATION_METHODS, isPreviewWorkbench, type MethodStatus } from "@/data/divinationMethods";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 import { Page } from "@/components/ui/Page";
@@ -9,7 +9,7 @@ type StatusFilter = "all" | MethodStatus;
 
 const STATUS_LABEL: Record<MethodStatus, string> = {
   ready: "可用",
-  preview: "预览",
+  preview: "参考预览",
   planned: "待开发",
 };
 
@@ -43,7 +43,7 @@ export function MethodsPage() {
       <section className="method-control-panel" aria-label="占法筛选">
         <div className="method-stats" aria-label="占法开发状态">
           <Stat label="可用" value={readyCount} />
-          <Stat label="预览" value={previewCount} />
+          <Stat label="参考预览" value={previewCount} />
           <Stat label="待开发" value={plannedCount} />
         </div>
         <div className="method-filters">
@@ -58,7 +58,7 @@ export function MethodsPage() {
           <div className="method-status-tabs" role="tablist" aria-label="状态筛选">
             <FilterButton current={status} value="all" onChange={setStatus}>全部</FilterButton>
             <FilterButton current={status} value="ready" onChange={setStatus}>可用</FilterButton>
-            <FilterButton current={status} value="preview" onChange={setStatus}>预览</FilterButton>
+            <FilterButton current={status} value="preview" onChange={setStatus}>参考预览</FilterButton>
             <FilterButton current={status} value="planned" onChange={setStatus}>待开发</FilterButton>
           </div>
         </div>
@@ -71,7 +71,12 @@ export function MethodsPage() {
         </div>
         <div className="method-grid">
           {filtered.map((method, index) => (
-            <MethodCard key={method.id} index={index} compact={method.status !== "ready"} {...method} />
+            <MethodCard
+              key={method.id}
+              index={index}
+              compact={method.status === "planned"}
+              {...method}
+            />
           ))}
         </div>
         {filtered.length === 0 && <p className="empty-note">没有匹配的占法。换一个关键词试试。</p>}
@@ -124,6 +129,8 @@ function MethodCard({ id, title, subtitle, tradition, status, route, tags, compa
     ...methodExperienceStyle(experience),
     "--i": index,
   } as CSSProperties;
+  const displaySubtitle =
+    isPreviewWorkbench(id) ? `${subtitle} 参考文库 · 模板草稿。` : subtitle;
 
   const body = (
     <>
@@ -137,7 +144,7 @@ function MethodCard({ id, title, subtitle, tradition, status, route, tags, compa
           <i>{STATUS_LABEL[status]}</i>
         </div>
         <strong>{title}</strong>
-        <p>{subtitle}</p>
+        <p>{displaySubtitle}</p>
         <div className="method-card__tags">
           {tags.map((tag) => (
             <span key={tag}>{tag}</span>

@@ -1,4 +1,8 @@
-import { getMethodCopilotAnalysisSkill, getMethodCopilotConfig } from "@/data/methodCopilotPrompts";
+import {
+  getMethodCopilotAnalysisSkill,
+  getMethodCopilotConfig,
+  type MethodCopilotContext,
+} from "@/data/methodCopilotPrompts";
 import type { MethodCopilotReportSnapshot } from "@/lib/methodReportSnapshot";
 import { isLlmConfigured } from "@/lib/llmSettings";
 import { llmComplete, type LlmMessage } from "./llm";
@@ -28,8 +32,12 @@ function sanitizeText(value: unknown, fallback: string, maxLen = 1200): string {
   return text.length > 0 ? text.slice(0, maxLen) : fallback;
 }
 
-function fallbackReply(methodId: string | null, question: string): MethodCopilotReply {
-  const config = getMethodCopilotConfig(methodId);
+function fallbackReply(
+  methodId: string | null,
+  question: string,
+  context?: MethodCopilotContext,
+): MethodCopilotReply {
+  const config = getMethodCopilotConfig(methodId, context);
   const answer = isLlmConfigured()
     ? `解说请求失败，暂时无法针对「${question.slice(0, 40)}」生成 ${config.title} 回复。请稍后重试，或在设置中重新测试 LLM 连接。`
     : `侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」（会自动保存），占梦与解说才会生效。`;
@@ -66,6 +74,7 @@ function parseReply(
   methodId: string | null,
   question: string,
   maxAnswerLen: number,
+  context?: MethodCopilotContext,
 ): MethodCopilotReply {
   try {
     const parsed = JSON.parse(content) as {
@@ -97,7 +106,7 @@ function parseReply(
     };
   } catch {
     return {
-      answer: sanitizeText(content, fallbackReply(methodId, question).answer, maxAnswerLen),
+      answer: sanitizeText(content, fallbackReply(methodId, question, context).answer, maxAnswerLen),
       diagram: "",
       relatedTerms: [],
       degraded: false,
@@ -109,13 +118,14 @@ export async function askMethodCopilot(
   methodId: string | null,
   question: string,
   history: MethodCopilotTurn[] = [],
+  context?: MethodCopilotContext,
 ): Promise<MethodCopilotReply> {
   const trimmed = question.trim();
   if (!trimmed) {
     return { answer: "请输入你想了解的术语或情况。", diagram: "", relatedTerms: [] };
   }
 
-  const config = getMethodCopilotConfig(methodId);
+  const config = getMethodCopilotConfig(methodId, context);
   const messages: LlmMessage[] = [
     { role: "system", content: config.systemSkill },
     ...history.slice(-6).map((turn) => ({
@@ -132,10 +142,10 @@ export async function askMethodCopilot(
   });
 
   if (res.degraded || !res.content) {
-    return fallbackReply(methodId, trimmed);
+    return fallbackReply(methodId, trimmed, context);
   }
 
-  return parseReply(res.content, methodId, trimmed, 1200);
+  return parseReply(res.content, methodId, trimmed, 1200, context);
 }
 
 export async function askMethodCopilotAnalysis(
@@ -143,6 +153,7 @@ export async function askMethodCopilotAnalysis(
   question: string,
   history: MethodCopilotTurn[] = [],
   report: MethodCopilotReportSnapshot,
+  context?: MethodCopilotContext,
 ): Promise<MethodCopilotReply> {
   const trimmed = question.trim();
   if (!trimmed) {
@@ -150,7 +161,10 @@ export async function askMethodCopilotAnalysis(
   }
 
   const effectiveMethodId = methodId ?? report.methodId;
-  const systemSkill = getMethodCopilotAnalysisSkill(effectiveMethodId);
+  const analysisContext: MethodCopilotContext = {
+    workbench: context?.workbench ?? report.source === "module",
+  };
+  const systemSkill = getMethodCopilotAnalysisSkill(effectiveMethodId, analysisContext);
   const reportBlock = `【当前页面报告】
 标题：${report.title}
 ${report.summary ? `摘要：${report.summary}\n` : ""}
@@ -178,10 +192,10 @@ ${report.body}
     const answer = isLlmConfigured()
       ? `解说请求失败，暂时无法解析「${report.title}」。请稍后重试，或在设置中重新测试 LLM 连接。`
       : `侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」（会自动保存）。`;
-    return { ...fallbackReply(effectiveMethodId, trimmed), answer };
+    return { ...fallbackReply(effectiveMethodId, trimmed, analysisContext), answer };
   }
 
-  return parseReply(res.content, effectiveMethodId, trimmed, 4000);
+  return parseReply(res.content, effectiveMethodId, trimmed, 4000, analysisContext);
 }
 
 export function isAnalysisQuestion(question: string, hasReport: boolean): boolean {
