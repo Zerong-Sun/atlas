@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@atlas/engines": "*",
+    "@atlas/method-data": "*",
+    "@atlas/method-core": "*",
     "@atlas/api-core": "*",
     "@atlas/orchestrator": "*",
     "@atlas/theme": "*",

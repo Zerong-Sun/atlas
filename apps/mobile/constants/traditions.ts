@@ -9,7 +9,7 @@ export const TRADITION_LABELS: Record<Tradition, string> = {
   dream: "占梦",
 };
 
-export const READING_TRADITIONS: Tradition[] = ["bazi", "western", "tarot", "iching"];
+export const READING_TRADITIONS: Tradition[] = ["bazi", "western", "tarot", "iching", "qimen"];
 
 export const TRADITION_COLORS: Record<Tradition, string> = {
   bazi: "#8B4513",

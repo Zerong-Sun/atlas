@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
 import { useApp } from "@/context/AppContext";
 import { listReadings } from "@/lib/api";
+import { archiveEntryLabel, listArchiveEntries, type ArchiveEntry } from "@/lib/archive";
 import { track } from "@/lib/analytics";
 import { colors, radius, spacing } from "@/theme/tokens";
 
@@ -15,6 +16,7 @@ export default function ProfileScreen() {
   const { profile, saveProfile } = useApp();
   const router = useRouter();
   const [history, setHistory] = useState<ReadingReport[]>([]);
+  const [archive, setArchive] = useState<ArchiveEntry[]>([]);
   const [editing, setEditing] = useState(false);
   const [displayName, setDisplayName] = useState(profile?.displayName ?? "");
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
@@ -24,7 +26,8 @@ export default function ProfileScreen() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    listReadings().then(setHistory);
+    void listReadings().then(setHistory);
+    void listArchiveEntries().then(setArchive);
   }, []);
 
   useEffect(() => {
@@ -60,6 +63,18 @@ export default function ProfileScreen() {
       pathname: "/reading/[id]",
       params: { id: report.readingId, data: JSON.stringify(report) },
     });
+  };
+
+  const openArchive = (entry: ArchiveEntry) => {
+    if (entry.readingReport) {
+      openReading(entry.readingReport);
+      return;
+    }
+    if (entry.source === "reading") {
+      router.push({ pathname: "/reading/[id]", params: { id: entry.id } });
+      return;
+    }
+    router.push({ pathname: "/archive/[id]", params: { id: entry.id } });
   };
 
   return (
@@ -129,6 +144,33 @@ export default function ProfileScreen() {
           />
         </View>
       ))}
+
+      <Pressable style={styles.linkRow} onPress={() => router.push("/library")}>
+        <Text variant="heading">书库</Text>
+        <Text variant="caption" style={styles.editLink}>
+          浏览术语
+        </Text>
+      </Pressable>
+
+      <Text variant="heading" style={styles.section}>
+        归档记录
+      </Text>
+      {archive.length === 0 ? (
+        <Text variant="body" muted>
+          完成占法或提问后，结果会自动归档
+        </Text>
+      ) : (
+        archive.slice(0, 10).map((entry) => (
+          <Pressable key={entry.id} style={styles.historyItem} onPress={() => openArchive(entry)}>
+            <Text variant="body" numberOfLines={1}>
+              {entry.title}
+            </Text>
+            <Text variant="caption" muted>
+              {archiveEntryLabel(entry)} · {new Date(entry.createdAt).toLocaleDateString("zh-CN")}
+            </Text>
+          </Pressable>
+        ))
+      )}
 
       <Text variant="heading" style={styles.section}>
         历史报告
@@ -209,6 +251,13 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
+  },
+  linkRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: spacing.xl,
+    marginBottom: spacing.sm,
   },
   historyItem: {
     padding: spacing.md,

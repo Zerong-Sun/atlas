@@ -15,6 +15,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarLabelStyle: { fontSize: 11 },
         tabBarStyle: isToday
           ? glassStyle
           : {
@@ -40,6 +41,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="methods"
+        options={{
+          title: "占法",
+          tabBarIcon: ({ color, size }) => <Ionicons name="sparkles-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="dream"
         options={{
           title: "梦境",
@@ -54,12 +62,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="library"
+        name="settings"
         options={{
-          title: "书库",
-          tabBarIcon: ({ color, size }) => <Ionicons name="library-outline" size={size} color={color} />,
+          title: "设置",
+          tabBarIcon: ({ color, size }) => <Ionicons name="settings-outline" size={size} color={color} />,
         }}
       />
+      <Tabs.Screen name="library" options={{ href: null }} />
     </Tabs>
   );
 }

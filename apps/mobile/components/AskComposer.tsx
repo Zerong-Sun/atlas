@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, TextInput, View } from "react-native";
 import type { Tradition } from "@atlas/shared-types";
 import { READING_TRADITIONS, TRADITION_LABELS } from "@/constants/traditions";
@@ -6,6 +6,7 @@ import { colors, radius, spacing } from "@/constants/theme";
 import { TraditionBadge } from "@/components/design-system";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
+import { useApp } from "@/context/AppContext";
 
 type Props = {
   onSubmit: (question: string, traditions: Tradition[]) => void;
@@ -13,12 +14,19 @@ type Props = {
 };
 
 export function AskComposer({ onSubmit, loading }: Props) {
+  const { profile } = useApp();
+  const disabled = profile?.disabledTraditions ?? [];
+  const available = READING_TRADITIONS.filter((t) => !disabled.includes(t));
   const [text, setText] = useState("");
-  const [selected, setSelected] = useState<Tradition[]>([...READING_TRADITIONS]);
+  const [selected, setSelected] = useState<Tradition[]>([...available]);
+
+  useEffect(() => {
+    setSelected((prev) => prev.filter((t) => !disabled.includes(t)));
+  }, [disabled.join(",")]);
 
   const toggle = (t: Tradition) => {
     setSelected((prev) =>
-      prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]
+      prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t],
     );
   };
 
@@ -50,7 +58,7 @@ export function AskComposer({ onSubmit, loading }: Props) {
         选择体系
       </Text>
       <View style={styles.badges}>
-        {READING_TRADITIONS.map((t) => (
+        {available.map((t) => (
           <Pressable key={t} onPress={() => toggle(t)}>
             <TraditionBadge tradition={t} selected={selected.includes(t)} />
           </Pressable>
