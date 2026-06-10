@@ -3,6 +3,7 @@ import type { ReadingReport } from "@atlas/shared-types";
 import { getMethod } from "@atlas/method-data";
 import type { MethodCopilotTurn } from "@atlas/method-core";
 import type { MethodCopilotReportSnapshot } from "@atlas/method-core";
+import type { MethodReadingPayload } from "./methodReadings";
 import { getReadingHistory } from "./storage";
 
 export type ArchiveEntry = {
@@ -15,6 +16,7 @@ export type ArchiveEntry = {
   createdAt: string;
   readingReport?: ReadingReport;
   interpretation?: MethodCopilotTurn[];
+  payload?: MethodReadingPayload;
 };
 
 const ARCHIVE_KEY = "atlas:archive";
@@ -41,7 +43,7 @@ export function resolveArchiveEntryId(snapshot: MethodCopilotReportSnapshot): st
 
 export async function upsertArchiveFromSnapshot(
   snapshot: MethodCopilotReportSnapshot,
-  extras?: { readingReport?: ReadingReport },
+  extras?: { readingReport?: ReadingReport; payload?: MethodReadingPayload },
 ): Promise<ArchiveEntry> {
   const id = resolveArchiveEntryId(snapshot);
   const prev = await readArchiveStore();
@@ -56,6 +58,7 @@ export async function upsertArchiveFromSnapshot(
     createdAt: snapshot.generatedAt ?? new Date().toISOString(),
     readingReport: extras?.readingReport ?? existing?.readingReport,
     interpretation: existing?.interpretation,
+    payload: extras?.payload ?? existing?.payload,
   };
   const next = [entry, ...prev.filter((item) => item.id !== id)];
   await writeArchiveStore(next);

@@ -41,7 +41,7 @@ export async function updateProfile(input: ProfileUpdateInput): Promise<UserProf
 
 export async function generatePortrait(profile?: UserProfile): Promise<PortraitSummary> {
   const base = profile ?? (await fetchProfile());
-  const { generatePortraitLocal } = await import("../portrait");
+  const { generatePortraitLocal } = await import("./portrait");
   if (useMockApi()) return generatePortraitLocal(base);
   const data = await invokeFunction<PortraitSummary>(EDGE.generatePortrait, {});
   if (data?.traditions && Object.keys(data.traditions).length > 0) return data;

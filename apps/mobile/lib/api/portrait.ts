@@ -1,6 +1,6 @@
 import { buildPortraitTraditions } from "@atlas/orchestrator/portrait-service";
 import type { PortraitSummary, UserProfile } from "@atlas/shared-types";
-import { llmComplete } from "./llm";
+import { llmComplete } from "../llm";
 
 const FALLBACK_CONSENSUS =
   "多数体系都指向：先厘清内在节奏，再在现实选择上留有余地；不宜把单一符号当作定论。";

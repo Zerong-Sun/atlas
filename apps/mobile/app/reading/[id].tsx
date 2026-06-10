@@ -5,8 +5,7 @@ import type { ReadingReport } from "@atlas/shared-types";
 import { buildReadingReportSnapshot } from "@atlas/method-core";
 import { ReadingResultView } from "@/components/ReadingResultView";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { Button } from "@/components/ui/Button";
-import { Text } from "@/components/ui/Text";
+import { EmptyState } from "@/components/EmptyState";
 import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
 import { listReadings } from "@/lib/api/readings";
 import { getReadingHistory } from "@/lib/storage";
@@ -60,12 +59,7 @@ export default function ReadingResultScreen() {
             headerTintColor: colors.gold,
           }}
         />
-        <View style={styles.center}>
-          <Text variant="body" muted style={styles.emptyText}>
-            未找到该对照报告，可能已被清除或尚未同步。
-          </Text>
-          <Button title="返回" variant="ghost" onPress={() => router.back()} />
-        </View>
+        <EmptyState message="未找到该对照报告，可能已被清除或尚未同步。" onAction={() => router.back()} />
       </>
     );
   }
@@ -97,5 +91,4 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     gap: spacing.md,
   },
-  emptyText: { textAlign: "center" },
 });

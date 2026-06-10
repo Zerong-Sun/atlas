@@ -49,6 +49,56 @@ Then press `i` (iOS simulator), `a` (Android), or scan the QR code with **Expo G
 |--------|-------------|
 | `npm run dev:mobile` | Start Metro / Expo |
 | `npm run lint` | Typecheck (`tsc --noEmit`) |
+| `npm run build:mobile:ios` | EAS 云端打 iOS 包（TestFlight / App Store） |
+| `npm run submit:mobile:ios` | 提交最新 iOS 包到 App Store Connect |
+
+## TestFlight 内测（iOS）
+
+前置：**Apple Developer 会员（中国区 ¥688/年）**、**Expo 账号**（免费）。
+
+### 1. 一次性准备
+
+```bash
+npm install -g eas-cli
+eas login
+cd apps/mobile
+eas init          # 关联 Expo 项目（首次）
+```
+
+在 [App Store Connect](https://appstoreconnect.apple.com) 新建 App，Bundle ID 填 `com.atlas.app`（须与 `app.config.ts` 一致）。
+
+### 2. 配置构建环境变量（云端打包用）
+
+本地 `.env` 不会上传到 EAS，需单独设置：
+
+```bash
+cd apps/mobile
+eas env:create --environment production --name EXPO_PUBLIC_SUPABASE_URL --value "https://..."
+eas env:create --environment production --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "eyJ..."
+```
+
+### 3. 打 iOS 包
+
+在仓库根目录：
+
+```bash
+npm run build:mobile:ios
+```
+
+首次会引导配置 **Apple 签名证书**（选让 EAS 自动管理即可）。构建完成后在 [expo.dev](https://expo.dev) 控制台可看到 `.ipa`。
+
+### 4. 提交 TestFlight
+
+```bash
+npm run submit:mobile:ios
+```
+
+按提示登录 Apple ID、选择 App Store Connect 里的 App。提交后在 App Store Connect → **TestFlight** 添加内测员邮箱，对方用 iPhone 安装 TestFlight App 即可下载。
+
+### 图标
+
+App 图标：`assets/icon.png`（1024×1024）。修改后重新 `build:mobile:ios` 即可。
+| `npm test` (in `apps/mobile`) | Unit tests (`storage`, `uiPrefs`, `lenormandDeck`) |
 
 ## Screen map
 

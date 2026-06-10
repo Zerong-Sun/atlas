@@ -9,7 +9,9 @@
     "lint": "tsc --noEmit",
     "test": "node --import tsx --test $(find lib -name '*.test.ts' -print | tr '\\n' ' ')",
     "android": "expo start --android",
-    "ios": "expo start --ios"
+    "ios": "expo start --ios",
+    "build:ios": "eas build --platform ios --profile production",
+    "submit:ios": "eas submit --platform ios --profile production --latest"
   },
   "dependencies": {
     "@atlas/api-core": "*",
@@ -40,6 +42,7 @@
     "@babel/core": "^7.26.0",
     "@types/react": "~19.1.2",
     "babel-plugin-module-resolver": "^5.0.2",
+    "dotenv": "^16.4.7",
     "typescript": "~5.9.2"
   }
 }

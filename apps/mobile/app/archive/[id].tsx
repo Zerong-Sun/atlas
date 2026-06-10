@@ -1,21 +1,29 @@
 import { Stack, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ActivityIndicator, ScrollView, StyleSheet, View } from "react-native";
 import { buildReadingReportSnapshot } from "@atlas/method-core";
+import { EmptyState } from "@/components/EmptyState";
 import { MethodResultActions } from "@/components/MethodResultActions";
 import { ReadingResultView } from "@/components/ReadingResultView";
 import { Text } from "@/components/ui/Text";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { MethodReplayRouter } from "@/components/replay/MethodReplayRouter";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
 import { archiveEntryLabel, getArchiveEntry, type ArchiveEntry } from "@/lib/archive";
 import { colors, radius, spacing } from "@/constants/theme";
 
 export default function ArchiveEntryScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const [entry, setEntry] = useState<ArchiveEntry | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!id) return;
-    void getArchiveEntry(id).then(setEntry);
+    if (!id) {
+      setLoading(false);
+      return;
+    }
+    void getArchiveEntry(id)
+      .then(setEntry)
+      .finally(() => setLoading(false));
   }, [id]);
 
   const copilotReport = useMemo(() => {
@@ -32,9 +40,29 @@ export default function ArchiveEntryScreen() {
     };
   }, [entry]);
 
-  useRegisterMethodCopilotReport(copilotReport, entry?.readingReport ? { readingReport: entry.readingReport } : undefined);
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    ready: Boolean(copilotReport),
+    readingReport: entry?.readingReport,
+    entryId: entry?.id,
+  });
 
-  if (!entry) return null;
+  if (loading) {
+    return (
+      <View style={styles.center}>
+        <ActivityIndicator color={colors.gold} />
+      </View>
+    );
+  }
+
+  if (!entry) {
+    return (
+      <>
+        <Stack.Screen options={{ title: "归档详情" }} />
+        <EmptyState message="未找到该归档记录，可能已被清除。" />
+      </>
+    );
+  }
 
   return (
     <>
@@ -48,6 +76,7 @@ export default function ArchiveEntryScreen() {
           </Text>
           {entry.summary ? <Text variant="heading">{entry.summary}</Text> : null}
           <MethodResultActions methodId={entry.methodId ?? undefined} />
+          {entry.payload ? <MethodReplayRouter entry={entry} /> : null}
           <View style={styles.body}>
             <Text variant="body">{entry.body}</Text>
           </View>
@@ -64,6 +93,12 @@ export default function ArchiveEntryScreen() {
 }
 
 const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    backgroundColor: colors.ink,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   scroll: { flex: 1, backgroundColor: colors.ink },
   content: { padding: spacing.lg, gap: spacing.md },
   body: {
