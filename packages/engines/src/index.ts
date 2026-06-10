@@ -28,7 +28,7 @@ import { castScryingVision, type ScryingResult } from "./scrying.ts";
 import { computeNumerology, type NumerologyResult } from "./numerology.ts";
 import { castGeomancy, type GeomancyResult } from "./geomancy.ts";
 import { castMeihua, type MeihuaResult } from "./meihua.ts";
-import { computeVedic, type VedicResult } from "./vedic.ts";
+import { buildVedicChart, type VedicResult } from "./vedic.ts";
 import { readXiangmian, type XiangmianResult } from "./xiangmian.ts";
 import { readPalmistry, type PalmistryResult } from "./palmistry.ts";
 
@@ -57,7 +57,7 @@ export {
   computeNumerology,
   castGeomancy,
   castMeihua,
-  computeVedic,
+  buildVedicChart,
   readXiangmian,
   readPalmistry,
   type BaziResult,

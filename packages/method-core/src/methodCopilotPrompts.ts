@@ -70,7 +70,7 @@ const METHOD_SKILLS: Record<string, Omit<MethodCopilotConfig, "title" | "subtitl
     quickPrompts: ["本卦变卦区别", "八卦取象怎么用？", "与纳甲六爻有何不同？", "模板草稿怎么读？"],
     systemSkill: `当前体系：易经卦象参考工作台（本卦、动爻、变卦、卦辞爻辞、八卦取象）。
 重点解释：八卦、卦体结构、动变逻辑、卦辞爻辞在占断中的角色。
-${WORKBENCH_BOUNDARY} 纳甲世应六亲见「纳甲六爻」。`,
+${WORKBENCH_BOUNDARY} 不替代 /methods/iching 铜钱演卦；纳甲世应六亲见「纳甲六爻」。`,
   },
   meihua: {
     quickPrompts: ["体用生克怎么看？", "外应是什么？", "互卦变卦区别", "数字取卦怎么用？"],
@@ -78,9 +78,9 @@ ${WORKBENCH_BOUNDARY} 纳甲世应六亲见「纳甲六爻」。`,
 重点解释：体卦用卦、互卦变卦、生克比和、外应取象与错综卦。`,
   },
   vedic: {
-    quickPrompts: ["Dasha 是什么？", "Nakshatra 怎么看？", "Rahu Ketu 指什么？", "与西洋占星有何不同？"],
-    systemSkill: `当前体系：吠陀占星（Rashi 盘、Dasha 周期、Nakshatra、宫位与行星尊卑）。
-重点解释：月亮星座、上升、南北交、Dasha 阶段主题与转运思路。MVP 以月亮星宿与简化大运为主。`,
+    quickPrompts: ["Dasha 是什么？", "Nakshatra 怎么看？", "Rahu Ketu 指什么？", "Whole Sign 宫位怎么读？"],
+    systemSkill: `当前体系：吠陀占星（Lahiri 恒星黄道、Whole Sign 十二宫、九星、Vimshottari Dasha）。
+重点解释：月亮星座与月宿、上升 Lagna、罗睺计都、大运/小运剩余年限与宫位主题。不含 Navamsa 分盘与 Drishti。`,
   },
   numerology: {
     quickPrompts: ["生命路径数是什么？", "命运数和灵魂冲动数区别", "个人年怎么算？", "挑战数怎么看？"],
@@ -203,9 +203,9 @@ const ANALYSIS_FOCUS: Record<string, string> = {
   dream: "重点：梦中符号、多流派视角差异、自省而非预言。",
   liuyao: "重点：用神旺衰、世应、动变与世应关系。",
   iching: "重点：本卦变卦、爻位与爻辞在事项中的角色。",
-  "iching-workbench": "重点：模板草稿中的主象、预测维度与参考文库对照；提醒非真实演卦。",
+  "iching-workbench": "重点：模板草稿中的主象、预测维度与参考文库对照；明确非铜钱演卦，真实演卦见周易页、事件占见六爻。",
   meihua: "重点：体用生克、互变、外应与取数来源。",
-  vedic: "重点：Dasha 阶段、月宿、宫位主题与业力表述。",
+  vedic: "重点：Lahiri 恒星黄道、Whole Sign 宫位、九星落宫、Vimshottari 大运/小运剩余年限与月宿主题。",
   numerology: "重点：核心数字、周期数与挑战练习。",
   runes: "重点：符文本义、阵位与组合保护边界。",
   geomancy: "重点：图形落宫、见证关系与审判倾向。",

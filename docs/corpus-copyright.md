@@ -38,6 +38,14 @@ npm run corpus:validate
 - 第三方授权内容（MVP 暂未使用）。
 - 须含明确 `license_note` 与 `source_url`。
 
+## 第三方计算组件
+
+| 组件 | 用途 | 许可 |
+| --- | --- | --- |
+| [Swiss Ephemeris](https://www.astro.com/swisseph/) via `@swisseph/browser` / `@swisseph/node` | Web / Node 吠陀星历（Lahiri 恒星黄道） | AGPL-3.0 |
+
+产品分发前须评估 AGPL 合规；默认使用内置 Moshier 星历（浏览器 ~250KB WASM），不加载 CDN 全精度文件。
+
 ## 展示层区分
 
 UI 与报告须区分以下层级（见 [compliance.md](compliance.md)）：

@@ -10,7 +10,7 @@ import { castScryingVision } from "./scrying.js";
 import { computeNumerology } from "./numerology.js";
 import { castGeomancy } from "./geomancy.js";
 import { castMeihua } from "./meihua.js";
-import { computeVedic } from "./vedic.js";
+import { computeVedic } from "./vedic/ephemeris.node.js";
 import { readXiangmian } from "./xiangmian.js";
 import { readPalmistry } from "./palmistry.js";
 import { drawLot, registerLotSigns } from "./lot.js";
@@ -155,6 +155,23 @@ describe("castGeomancy", () => {
     const b = castGeomancy({ seed: "geomancy-seed" });
     assert.equal(a.judge.key, b.judge.key);
     assert.equal(a.mothers.length, 4);
+  });
+
+  it("accepts hand-pointed mothers", () => {
+    const mothers = [
+      [true, true, false, true],
+      [false, true, true, false],
+      [true, false, false, false],
+      [false, false, false, false],
+    ];
+    const a = castGeomancy({ mothers });
+    const b = castGeomancy({ mothers });
+    assert.deepEqual(
+      a.mothers.map((m) => m.key),
+      b.mothers.map((m) => m.key),
+    );
+    assert.equal(a.daughters.length, 4);
+    assert.equal(a.seed, "manual:1101-0110-1000-0000");
   });
 });
 

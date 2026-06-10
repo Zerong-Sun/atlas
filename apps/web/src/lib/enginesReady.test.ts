@@ -6,7 +6,7 @@ import { castMeihua } from "@atlas/engines/meihua";
 import { drawOracle } from "@atlas/engines/oracle";
 import { readPalmistry } from "@atlas/engines/palmistry";
 import { castScryingVision } from "@atlas/engines/scrying";
-import { computeVedic } from "@atlas/engines/vedic";
+import { buildVedicChart } from "@atlas/engines/vedic";
 import { readXiangmian } from "@atlas/engines/xiangmian";
 
 const READY_ENGINE_IDS = [
@@ -65,10 +65,24 @@ describe("ready method engines", () => {
     expect(a.lower.name).toBe(b.lower.name);
   });
 
-  it("vedic returns moon sign", () => {
-    const r = computeVedic({ birthDate: "1990-06-15", birthTime: "12:00" });
+  it("vedic chart builder returns grahas and houses", () => {
+    const r = buildVedicChart(
+      {
+        julianDay: 2451063.5,
+        ayanamsa: 23.72,
+        ascendantLongitude: 147,
+        midheavenLongitude: 57,
+        grahaLongitudes: {
+          Sun: 60, Moon: 317, Mars: 10, Mercury: 45, Jupiter: 200,
+          Venus: 80, Saturn: 270, Rahu: 286, Ketu: 106,
+        },
+      },
+      { birthDate: "1990-06-15", birthTime: "12:00" },
+    );
     expect(r.moonSign).toBeTruthy();
     expect(r.moonNakshatra.name).toBeTruthy();
+    expect(r.grahas).toHaveLength(9);
+    expect(r.houses).toHaveLength(12);
   });
 
   it("xiangmian reads observations", () => {

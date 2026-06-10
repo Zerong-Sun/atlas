@@ -157,6 +157,17 @@ Edge Functions 对外返回 camelCase DTO（`@atlas/shared-types`）；数据库
 
 Web 推荐 [Vercel](apps/web/README.md#vercel推荐)（根目录 `vercel.json` 指定构建 `apps/web/dist`）。Supabase 迁移与 Functions 部署步骤见 [apps/web/README.md](apps/web/README.md#supabase-云端配置)。
 
+## 占法实现状态（Web）
+
+| 占法 | 状态 |
+|------|------|
+| 吠陀 | Swiss Ephemeris（Lahiri）、Whole Sign 十二宫、Vimshottari 大运 |
+| 土占 | 手点四母图（默认）+ 一键随机 |
+| 面相 / 手相 | 结构化观察表单（非 CV）；图片上传为后续 epic |
+| 周易 | `/methods/iching` 铜钱演卦；`/methods/iching/workbench` 模板草稿（非演卦）；`/methods/liuyao` 纳甲六爻 |
+
 ## 许可
 
 专有项目。古籍语料遵循各条目 `source_type` 与 `license_note` 字段标注；详见 [docs/corpus-copyright.md](docs/corpus-copyright.md)。
+
+吠陀星历计算使用 [@swisseph/browser](https://www.npmjs.com/package/@swisseph/browser) / [@swisseph/node](https://www.npmjs.com/package/@swisseph/node)（AGPL-3.0），详见语料版权文档中的第三方组件说明。

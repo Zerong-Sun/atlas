@@ -35,6 +35,7 @@
     "test": "node --import tsx --test $(find src -name '*.test.ts' -print | tr '\\n' ' ')"
   },
   "devDependencies": {
+    "@swisseph/node": "^1.2.2",
     "tsx": "^4.22.4"
   },
   "dependencies": {

@@ -83,10 +83,16 @@ export function IchingPage() {
         description="铜钱起卦，取本卦与变卦，对照卦辞、象辞理解事项趋势。问题宜具体，一事一占。"
       />
 
-      <p className="iching-workbench-link">
-        <Link to="/methods/iching/workbench">参考文库模板工作台 →</Link>
-        <span> 对照卦辞象辞与八卦取象，按输入生成模板草稿（非真实演卦）。</span>
-      </p>
+      <aside className="method-preview-banner iching-workbench-link" role="note">
+        本页为真实铜钱演卦。事件占断、纳甲世应六亲请用
+        {" "}
+        <Link to="/methods/liuyao">纳甲六爻</Link>
+        。
+        {" "}
+        <Link to="/methods/iching/workbench">参考文库模板工作台</Link>
+        {" "}
+        仅按输入 hash 拼装象征草稿，非演卦，用于对照术语与整理思路。
+      </aside>
 
       <section className="method-workbench">
         <label>

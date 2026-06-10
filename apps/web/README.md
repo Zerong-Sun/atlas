@@ -122,9 +122,13 @@ npm run corpus:embed
 - `/today` — 今日简报
 - `/ask` — 提问对照
 - `/methods` — 占法目录（均为真实演算页或结构化规则引擎）
-- `/methods/meihua`、`/methods/vedic`、`/methods/numerology`、`/methods/geomancy`、`/methods/xiangmian`、`/methods/palmistry`、`/methods/oracle`、`/methods/coffee`、`/methods/scrying` — 原参考预览占法，现已接入 `@atlas/engines`
-- `/methods/iching` — 周易铜钱演卦（`castIChing`）
-- `/methods/iching/workbench` — 周易参考文库模板工作台（模板草稿，非演卦）
+- `/methods/meihua`、`/methods/numerology`、`/methods/oracle`、`/methods/coffee`、`/methods/scrying` — 接入 `@atlas/engines`
+- `/methods/vedic` — 吠陀星盘（Swiss Ephemeris / Lahiri、Whole Sign 十二宫、Vimshottari 大运）
+- `/methods/geomancy` — 土占（默认手点四母图，可切换一键随机）
+- `/methods/xiangmian`、`/methods/palmistry` — 结构化观察表单（非图像识别）；图片上传为后续 epic
+- `/methods/iching` — 周易铜钱演卦（真实 `castIChing`）
+- `/methods/iching/workbench` — 周易参考文库模板工作台（hash 模板草稿，**非演卦**）
+- `/methods/liuyao` — 纳甲六爻事件占（世应、六亲、用神）
 - `/dream` — 梦境记录
 - `/profile` — 档案与历史
 - `/library` — 书库浏览

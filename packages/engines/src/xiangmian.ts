@@ -12,6 +12,8 @@ const OBSERVATIONS: Record<string, { meaning: string; predictionUse: string }> =
   "气色-暗沉": { meaning: "需要休整", predictionUse: "减少硬推" },
   "眉形-平顺": { meaning: "意志与关系协调", predictionUse: "适合协商" },
   "口相-收敛": { meaning: "表达谨慎", predictionUse: "承诺前多确认" },
+  "鼻相-匀称": { meaning: "财库与自信感均衡", predictionUse: "宜稳健经营" },
+  "耳相-贴脑": { meaning: "纳谏与信息吸收", predictionUse: "多听少断" },
 };
 
 export interface XiangmianReading {

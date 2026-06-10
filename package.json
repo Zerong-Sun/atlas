@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "npm run dev:web",
     "dev:mobile": "npm --prefix apps/mobile run start",
+    "build:mobile:ios": "npm --prefix apps/mobile run build:ios",
+    "submit:mobile:ios": "npm --prefix apps/mobile run submit:ios",
     "dev:web": "npm run dev -w @atlas/web",
     "build:web": "npm run build -w @atlas/web",
     "lint": "npm run lint --workspaces --if-present",

@@ -191,8 +191,11 @@ export interface MeihuaInput {
 export interface VedicInput {
   birthDate?: string;
   birthTime?: string;
+  birthPlace?: string;
   birthLat?: number;
   birthLng?: number;
+  /** Hours east of UTC (e.g. 8 for China Standard Time) */
+  timezone?: number;
 }
 
 export interface XiangmianInput {

@@ -58,12 +58,23 @@ export interface GeomancyResult {
   question?: string;
 }
 
+function seedFromMothers(mothers: boolean[][]): string {
+  const body = mothers
+    .map((rows) => rows.map((dot) => (dot ? "1" : "0")).join(""))
+    .join("-");
+  return `manual:${body}`;
+}
+
 export function castGeomancy(input: GeomancyInput = {}): GeomancyResult {
-  const seed = input.seed ?? new Date().toISOString();
+  const hasManualMothers = input.mothers?.length === 4;
+  const seed = hasManualMothers
+    ? seedFromMothers(input.mothers!)
+    : (input.seed ?? new Date().toISOString());
   const rng = createRng(`${seed}:geomancy`);
 
-  const mothers = (input.mothers?.length === 4
-    ? input.mothers.map((lines) => figureFromLines(lines as GeomancyFigure))
+  const manualMothers = hasManualMothers ? input.mothers! : null;
+  const mothers = (manualMothers
+    ? manualMothers.map((lines) => figureFromLines(lines as GeomancyFigure))
     : Array.from({ length: 4 }, () => figureFromLines(randomFigure(rng))));
 
   const daughters = Array.from({ length: 4 }, (_, row) => {

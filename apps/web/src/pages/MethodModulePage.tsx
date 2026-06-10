@@ -74,7 +74,9 @@ export function MethodModulePage({ methodId: methodIdProp }: MethodModulePagePro
 
       {isWorkbench && (
         <aside className="method-preview-banner" role="note">
-          本页为参考文库 + 模板草稿：按输入 hash 选取象征并填句，非真实起卦、排盘或投掷。结果用于整理思路与对照术语，不作确定性预言。
+          本页为易经参考文库 + 模板草稿：按输入 hash 选取象征并填句，非真实铜钱演卦。
+          真实演卦请用 <Link to="/methods/iching">周易六十四卦</Link>；纳甲世应六亲请用 <Link to="/methods/liuyao">纳甲六爻</Link>。
+          结果用于整理思路与对照术语，不作确定性预言。
         </aside>
       )}
 
