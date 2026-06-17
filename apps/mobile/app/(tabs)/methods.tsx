@@ -1,13 +1,20 @@
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, TextInput, View } from "react-native";
-import { getMethodExperience, getReadyMethods, type DivinationMethod } from "@atlas/method-data";
+import {
+  getLocalizedMethodName,
+  getMethodExperience,
+  getReadyMethods,
+  type DivinationMethod,
+} from "@atlas/method-data";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
+import { useUiPrefs } from "@/hooks/useUiPrefs";
 import { colors, radius, spacing } from "@/constants/theme";
 
 export default function MethodsScreen() {
   const router = useRouter();
+  const { prefs } = useUiPrefs();
   const [query, setQuery] = useState("");
   const methods = getReadyMethods();
 
@@ -43,15 +50,24 @@ export default function MethodsScreen() {
           </View>
         }
         renderItem={({ item: method }) => (
-          <MethodCard method={method} onPress={() => router.push(`/methods/${method.id}`)} />
+          <MethodCard method={method} locale={prefs.locale} onPress={() => router.push(`/methods/${method.id}`)} />
         )}
       />
     </Screen>
   );
 }
 
-function MethodCard({ method, onPress }: { method: DivinationMethod; onPress: () => void }) {
+function MethodCard({
+  method,
+  locale,
+  onPress,
+}: {
+  method: DivinationMethod;
+  locale: Parameters<typeof getLocalizedMethodName>[1];
+  onPress: () => void;
+}) {
   const exp = getMethodExperience(method.id);
+  const localizedName = getLocalizedMethodName(method.id, locale);
   return (
     <Pressable
       style={[styles.card, { borderColor: exp.accentColor }]}
@@ -59,9 +75,20 @@ function MethodCard({ method, onPress }: { method: DivinationMethod; onPress: ()
     >
       <Text style={[styles.glyph, { color: exp.accentColor }]}>{exp.glyph}</Text>
       <View style={styles.cardBody}>
-        <Text variant="heading">{method.title}</Text>
+        <Text variant="heading">{localizedName ?? method.title}</Text>
+        {localizedName && localizedName !== method.title ? (
+          <Text variant="caption" gold>
+            {method.title}
+          </Text>
+        ) : null}
+        <Text variant="caption" gold>
+          {method.tradition} · {method.civilization}
+        </Text>
         <Text variant="caption" muted numberOfLines={2}>
           {method.subtitle}
+        </Text>
+        <Text variant="caption" muted numberOfLines={2}>
+          {method.questionStyle}
         </Text>
         <View style={styles.tags}>
           {method.tags.slice(0, 3).map((tag) => (

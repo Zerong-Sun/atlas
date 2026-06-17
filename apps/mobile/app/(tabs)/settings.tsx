@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
-import { StyleSheet, Switch, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, Switch, TextInput, View } from "react-native";
+import {
+  CULTURAL_LENS_OPTIONS,
+  LOCALE_OPTIONS,
+  TERMINOLOGY_OPTIONS,
+  type AtlasLocale,
+  type CulturalLens,
+  type TerminologyMode,
+} from "@atlas/method-data";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
@@ -109,6 +117,43 @@ export default function SettingsScreen() {
       </View>
 
       <View style={styles.panel}>
+        <Text variant="heading">语言与文化适配</Text>
+        <Text variant="caption" muted>
+          控制术语翻译、文化语境和解释口吻。八字可按 Four Pillars / Ba Zi 这类双语方式显示。
+        </Text>
+        <Text variant="label">界面语言</Text>
+        <ChoiceRow
+          value={prefs.locale}
+          options={LOCALE_OPTIONS.map((option) => ({
+            id: option.id,
+            label: option.nativeLabel,
+            detail: option.description,
+          }))}
+          onChange={(locale) => void updatePrefs({ locale: locale as AtlasLocale })}
+        />
+        <Text variant="label">文化视角</Text>
+        <ChoiceRow
+          value={prefs.culturalLens}
+          options={CULTURAL_LENS_OPTIONS.map((option) => ({
+            id: option.id,
+            label: option.label,
+            detail: option.description,
+          }))}
+          onChange={(culturalLens) => void updatePrefs({ culturalLens: culturalLens as CulturalLens })}
+        />
+        <Text variant="label">术语策略</Text>
+        <ChoiceRow
+          value={prefs.terminology}
+          options={TERMINOLOGY_OPTIONS.map((option) => ({
+            id: option.id,
+            label: option.label,
+            detail: option.description,
+          }))}
+          onChange={(terminology) => void updatePrefs({ terminology: terminology as TerminologyMode })}
+        />
+      </View>
+
+      <View style={styles.panel}>
         <Text variant="heading">数据同步</Text>
         <Text variant="body" muted>
           {supabaseNotConfigured
@@ -171,6 +216,40 @@ function ToggleRow({
   );
 }
 
+function ChoiceRow({
+  value,
+  options,
+  onChange,
+}: {
+  value: string;
+  options: Array<{ id: string; label: string; detail: string }>;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <View style={styles.choiceWrap}>
+      {options.map((option) => {
+        const selected = value === option.id;
+        return (
+          <Pressable
+            key={option.id}
+            style={[styles.choice, selected && styles.choiceOn]}
+            onPress={() => onChange(option.id)}
+          >
+            <Text variant="body" style={selected ? styles.choiceTextOn : undefined}>
+              {option.label}
+            </Text>
+            {selected ? (
+              <Text variant="caption" muted>
+                {option.detail}
+              </Text>
+            ) : null}
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
 function Field({
   label,
   value,
@@ -218,6 +297,17 @@ const styles = StyleSheet.create({
     color: colors.text,
   },
   actions: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginTop: spacing.md },
+  choiceWrap: { gap: spacing.sm },
+  choice: {
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    padding: spacing.sm,
+    backgroundColor: colors.surfaceElevated,
+    gap: spacing.xs,
+  },
+  choiceOn: { borderColor: colors.gold },
+  choiceTextOn: { color: colors.gold },
   msg: { color: colors.gold, marginTop: spacing.sm },
   rule: { marginTop: spacing.xs },
 });

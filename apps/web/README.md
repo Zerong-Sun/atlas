@@ -1,6 +1,6 @@
 # Atlas Web（诸象）
 
-Vite + React 单页应用，与 `apps/mobile` 共享 `@atlas/shared-types` 与 Supabase Edge Functions 契约。
+Vite + React 单页应用，与 `apps/mobile` 共享 `@atlas/shared-types`、`@atlas/method-data` 与 Supabase Edge Functions 契约。Web 是完整工作台入口，负责展示全球占法目录、文化语境说明、语言 / 术语偏好和深度报告。
 
 ## 本地运行
 
@@ -134,6 +134,7 @@ npm run corpus:embed
 - `/library` — 书库浏览
 - `/reading/:id` — 对照报告详情
 - `/settings` — 偏好与 LLM 连接
+- `/settings` — 偏好、语言文化适配与 LLM 连接
 
 全功能开放，无付费墙或额度 UI（见 `docs/access.md`）。
 

@@ -139,11 +139,25 @@ export function DreamCapture({ onSubmit, loading, result, resultActions }: Props
             {INTERPRET_BLOCKS.map(({ key, title, primary }) => (
               <InterpretBlock key={key} title={title} body={result[key]} primary={primary} />
             ))}
+            <InterpretBlock
+              title="民俗征兆"
+              body={buildFolkDreamView(symbols, emotions)}
+            />
+            <InterpretBlock
+              title="伊斯兰友好视角"
+              body="此视角不把梦包装成确定预言。更适合记录梦后感受、祈祷/静思后的行动倾向，并把重大决定交还给现实证据、伦理判断与可信赖的人际商量。"
+            />
           </div>
         </section>
       )}
     </div>
   );
+}
+
+function buildFolkDreamView(symbols: string[], emotions: string[]): string {
+  const symbolText = symbols.length ? `梦里反复出现「${symbols.slice(0, 4).join("、")}」` : "梦里最醒目的场景";
+  const emotionText = emotions.length ? `醒来后残留「${emotions.join("、")}」` : "醒来后的身体感";
+  return `${symbolText}，可先按民俗象征看作生活中的提醒；${emotionText}，说明重点不只在事件本身，也在你如何承接它。建议记录三天内的相似征兆，但不要把它当成必然预言。`;
 }
 
 function ChipRow({

@@ -6,8 +6,11 @@
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "dev": "npm run dev:web",
-    "dev:mobile": "npm --prefix apps/mobile run start",
+    "dev:mobile": "npm --prefix apps/mobile run start --",
+    "dev:mobile:tunnel": "npm --prefix apps/mobile run start -- --tunnel",
+    "dev:mobile:lan": "npm --prefix apps/mobile run start -- --lan",
     "build:mobile:ios": "npm --prefix apps/mobile run build:ios",
+    "build:mobile:android": "npm --prefix apps/mobile run build:android",
     "submit:mobile:ios": "npm --prefix apps/mobile run submit:ios",
     "dev:web": "npm run dev -w @atlas/web",
     "build:web": "npm run build -w @atlas/web",

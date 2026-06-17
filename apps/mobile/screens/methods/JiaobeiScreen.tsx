@@ -8,7 +8,8 @@ import {
 import { buildJiaobeiReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -27,6 +28,7 @@ export function JiaobeiScreen() {
   const [throws, setThrows] = useState<JiaobeiThrow[]>([]);
   const [current, setCurrent] = useState<JiaobeiThrow | null>(null);
   const [revisionMode, setRevisionMode] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const lastOutcome = throws[throws.length - 1]?.outcome;
@@ -40,10 +42,21 @@ export function JiaobeiScreen() {
     if (!throws.length || phase !== "landed") return null;
     return buildJiaobeiReportSnapshot(question, throws);
   }, [throws, question, phase]);
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!throws.length || phase !== "landed") return null;
+    return { methodId: "jiaobei" as const, question: question.trim() || undefined, result: { throws } };
+  }, [throws, question, phase]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: phase === "landed" && throws.length > 0,
+    entryId: entryId ?? undefined,
+  });
 
   const toss = () => {
     if (!canThrow) return;
+    if (!entryId) setEntryId(buildMethodReadingEntryId("jiaobei"));
     if (timerRef.current) clearTimeout(timerRef.current);
     setPhase("tossing");
     setCurrent(null);

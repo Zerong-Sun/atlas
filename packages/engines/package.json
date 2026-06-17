@@ -8,6 +8,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./bazi": "./src/entries/bazi.ts",
+    "./iching": "./src/entries/iching.ts",
     "./ziwei": "./src/entries/ziwei.ts",
     "./western": "./src/entries/western.ts",
     "./tarot": "./src/entries/tarot.ts",

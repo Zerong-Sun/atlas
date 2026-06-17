@@ -66,11 +66,22 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
           )}
           <InterpretBlock title="中国梦占" body={result.chinese} />
           <InterpretBlock title="荣格简释" body={result.jungian} />
+          <InterpretBlock title="民俗征兆" body={buildFolkDreamView(symbols, emotions)} />
+          <InterpretBlock
+            title="伊斯兰友好视角"
+            body="不把梦当成确定预言；更适合记录梦后感受、祈祷或静思后的行动倾向，并把重大决定交还给现实证据与可信赖的人际商量。"
+          />
           <InterpretBlock title="精神反思" body={result.reflection} highlight />
         </View>
       )}
     </View>
   );
+}
+
+function buildFolkDreamView(symbols: string[], emotions: string[]): string {
+  const symbolText = symbols.length ? `「${symbols.slice(0, 4).join("、")}」` : "最醒目的场景";
+  const emotionText = emotions.length ? `醒来后的${emotions.join("、")}` : "醒来后的身体感";
+  return `${symbolText}可作为生活征兆来记录；${emotionText}说明重点也在你如何承接它。连续记录三天，但不要把它当成必然预言。`;
 }
 
 function ChipRow({

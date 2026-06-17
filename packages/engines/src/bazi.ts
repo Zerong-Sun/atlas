@@ -1,5 +1,5 @@
 import { Solar } from "lunar-javascript";
-import type { EngineInput } from "./index.ts";
+import type { EngineInput } from "./engine-input.ts";
 import { selectBaziClassics } from "./bazi-classics.ts";
 import { detectCombinationsInChart } from "./bazi-branch-relations.ts";
 

@@ -31,6 +31,8 @@ export function TarotReplay({ payload }: { payload: MethodReadingPayload }) {
     return <Text variant="body" muted>无法还原牌面数据。</Text>;
   }
 
+  const compact = cards.length > 5;
+
   return (
     <View style={styles.wrap}>
       {data.spreadResult?.spread ? <Text variant="heading">{data.spreadResult.spread}</Text> : null}
@@ -53,6 +55,7 @@ export function TarotReplay({ payload }: { payload: MethodReadingPayload }) {
             revealed
             reversed={card.reversed}
             index={index}
+            compact={compact}
             imageUri={card.image}
             cardName={card.name}
             meta={

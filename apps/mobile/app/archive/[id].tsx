@@ -9,6 +9,7 @@ import { Text } from "@/components/ui/Text";
 import { MethodReplayRouter } from "@/components/replay/MethodReplayRouter";
 import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
 import { archiveEntryLabel, getArchiveEntry, type ArchiveEntry } from "@/lib/archive";
+import { hasRichReplay } from "@/lib/methodReadings";
 import { colors, radius, spacing } from "@/constants/theme";
 
 export default function ArchiveEntryScreen() {
@@ -45,6 +46,7 @@ export default function ArchiveEntryScreen() {
     ready: Boolean(copilotReport),
     readingReport: entry?.readingReport,
     entryId: entry?.id,
+    persist: false,
   });
 
   if (loading) {
@@ -77,9 +79,11 @@ export default function ArchiveEntryScreen() {
           {entry.summary ? <Text variant="heading">{entry.summary}</Text> : null}
           <MethodResultActions methodId={entry.methodId ?? undefined} />
           {entry.payload ? <MethodReplayRouter entry={entry} /> : null}
-          <View style={styles.body}>
-            <Text variant="body">{entry.body}</Text>
-          </View>
+          {!hasRichReplay(entry) ? (
+            <View style={styles.body}>
+              <Text variant="body">{entry.body}</Text>
+            </View>
+          ) : null}
           {entry.interpretation?.map((turn, i) => (
             <View key={i} style={styles.turn}>
               <Text variant="label">{turn.role === "user" ? "问" : "答"}</Text>

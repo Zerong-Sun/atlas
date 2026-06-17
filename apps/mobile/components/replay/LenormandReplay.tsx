@@ -14,6 +14,7 @@ type LenormandPayloadResult = {
 export function LenormandReplay({ payload }: { payload: MethodReadingPayload }) {
   const data = payload.result as LenormandPayloadResult;
   const cards = data.cards ?? [];
+  const compact = cards.length > 5;
 
   if (!cards.length) {
     return <Text variant="body" muted>无法还原牌面数据。</Text>;
@@ -37,6 +38,7 @@ export function LenormandReplay({ payload }: { payload: MethodReadingPayload }) 
               position={card.position}
               revealed
               index={index}
+              compact={compact}
               imageSource={imageSource}
               cardName={card.name}
               meta={

@@ -4,7 +4,8 @@ import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
 import { buildLiuyaoReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -85,6 +86,7 @@ export function LiuyaoScreen() {
   const [subjectType, setSubjectType] = useState("事业申请");
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<LiuyaoResult | null>(null);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const castStep = coinLines.length;
 
@@ -101,6 +103,7 @@ export function LiuyaoScreen() {
         失物寻人: "general",
         健康状态: "health",
       };
+      setEntryId(buildMethodReadingEntryId("liuyao"));
       setResult(
         castLiuyao({
           lines: next,
@@ -114,13 +117,30 @@ export function LiuyaoScreen() {
   const reset = () => {
     setCoinLines([]);
     setResult(null);
+    setEntryId(null);
   };
 
   const copilotReport = useMemo(
     () => (result ? buildLiuyaoReportSnapshot(question, subjectType, result) : null),
     [result, question, subjectType],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+
+  const payload = useMemo(() => {
+    if (!result) return null;
+    return {
+      methodId: "liuyao" as const,
+      question: question.trim() || undefined,
+      inputs: { subjectType },
+      result,
+    };
+  }, [result, question, subjectType]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const hexLines = useMemo<HexLine[]>(() => {
     if (!result) return [];

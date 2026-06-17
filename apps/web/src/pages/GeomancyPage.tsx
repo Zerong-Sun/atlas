@@ -190,6 +190,11 @@ export function GeomancyPage() {
               />
               <GeomancyFigure name={`右见证 · ${result.witnesses[1]!.name}`} lines={result.witnesses[1]!.lines} />
             </div>
+            <div className="combo-panel">
+              <h3>法庭图读法</h3>
+              <p>四母代表问题的原始材料，四女代表材料的派生流向；左右见证分别提示过程与外部佐证，审判图是最终收束。</p>
+              <p>十二宫用于把图形放回现实领域：一宫看自身，七宫看对方，十宫看事业与公开结果，四宫看根基与结局。</p>
+            </div>
           </div>
           <div className="reading-grid">
             {result.houses.map((h) => (

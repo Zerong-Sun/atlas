@@ -1,6 +1,6 @@
 # 诸象 Atlas — Mobile (Expo)
 
-Expo + React Native app with **expo-router** and six tabs: 今日 / 提问 / 占法 / 梦境 / 档案 / 设置。
+Expo + React Native app with **expo-router** and six tabs: 今日 / 提问 / 占法 / 梦境 / 档案 / 设置。Mobile 端用于随手提问、抽取、记录和复盘，并与 Web 共享占法文化元数据和语言 / 文化偏好。
 
 ## Prerequisites
 
@@ -108,11 +108,11 @@ app/
 ├── (tabs)/
 │   ├── index.tsx            # 今日 — DailyBrief + 快捷入口
 │   ├── ask.tsx              # 提问 — 多体系对照（含奇门）
-│   ├── methods.tsx          # 占法目录（15 种 ready）
+│   ├── methods.tsx          # 占法目录（23 种 ready，含文化来源与提问方式）
 │   ├── dream.tsx            # 梦境 — 解析 + 历史 + 趋势
 │   ├── profile.tsx          # 档案 — 出生信息、归档、书库入口
-│   └── settings.tsx         # 设置 — BYOK LLM、体验偏好
-├── methods/[methodId].tsx   # 14 种独立占法页（引擎本地计算）
+│   └── settings.tsx         # 设置 — BYOK LLM、体验偏好、语言文化适配
+├── methods/[methodId].tsx   # 独立占法页 + 通用移动占法工作台（引擎本地计算）
 ├── library.tsx              # 书库（二级）
 ├── archive/[id].tsx         # 归档详情
 ├── reading/[id].tsx         # 对照报告
@@ -121,7 +121,7 @@ app/
 
 ## Shared packages
 
-- `@atlas/method-data` — 占法目录、体验元数据、签库
+- `@atlas/method-data` — 占法目录、文明来源、跨语言别名、体验元数据、签库
 - `@atlas/method-core` — 报告快照、Copilot 提示、分享格式化
 - `@atlas/engines` — 八字、塔罗、奇门等确定性计算
 

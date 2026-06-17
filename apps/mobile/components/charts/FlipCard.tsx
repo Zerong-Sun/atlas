@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { ViewStyle } from "react-native";
 import { Animated, Image, StyleSheet, View, type ImageSourcePropType } from "react-native";
 import { Text } from "@/components/ui/Text";
 import { colors, radius, spacing } from "@/constants/theme";
@@ -16,6 +17,7 @@ export type FlipCardProps = {
   cardName?: string;
   face?: ReactNode;
   meta?: ReactNode;
+  compact?: boolean;
 };
 
 export function CardFacePlaceholder({ name, position }: { name?: string; position?: string }) {
@@ -36,16 +38,19 @@ function CardFace({
   imageSource,
   cardName,
   position,
-  reversed,
 }: {
   imageUri?: string;
   imageSource?: ImageSourcePropType;
   cardName?: string;
   position: string;
-  reversed?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
   const source = imageSource ?? (imageUri ? { uri: imageUri } : undefined);
+  const sourceKey = imageUri ?? (typeof imageSource === "number" ? String(imageSource) : imageUri);
+
+  useEffect(() => {
+    setFailed(false);
+  }, [sourceKey]);
 
   if (!source || failed) {
     return <CardFacePlaceholder name={cardName} position={position} />;
@@ -54,7 +59,7 @@ function CardFace({
   return (
     <Image
       source={source}
-      style={[styles.faceImage, reversed && styles.reversed]}
+      style={styles.faceImage}
       resizeMode="cover"
       onError={() => setFailed(true)}
     />
@@ -74,7 +79,9 @@ export function FlipCard({
   cardName,
   face,
   meta,
+  compact = false,
 }: FlipCardProps) {
+  const tileStyle: ViewStyle = compact ? styles.tileCompact : styles.tile;
   const opacity = useRef(new Animated.Value(revealed ? 1 : 0)).current;
 
   useEffect(() => {
@@ -87,7 +94,7 @@ export function FlipCard({
 
   if (placeholder) {
     return (
-      <View style={[styles.tile, { marginTop: index > 0 ? 0 : 0 }]}>
+      <View style={tileStyle}>
         <View style={[styles.card, styles.placeholderCard]}>
           <Text variant="caption" muted>
             {position}
@@ -110,7 +117,7 @@ export function FlipCard({
   }
 
   return (
-    <View style={styles.tile}>
+    <View style={tileStyle}>
       <View style={styles.cardStack}>
         <View style={[styles.card, styles.cardBack, revealed && styles.cardBackHidden]}>
           <Text variant="caption" muted>
@@ -126,7 +133,6 @@ export function FlipCard({
               imageSource={imageSource}
               cardName={cardName}
               position={position}
-              reversed={reversed}
             />
           )}
         </Animated.View>
@@ -156,6 +162,12 @@ const styles = StyleSheet.create({
   tile: {
     width: "30%",
     minWidth: 96,
+    gap: spacing.xs,
+    alignItems: "center",
+  },
+  tileCompact: {
+    width: "22%",
+    minWidth: 72,
     gap: spacing.xs,
     alignItems: "center",
   },
@@ -199,9 +211,6 @@ const styles = StyleSheet.create({
   faceImage: {
     width: "100%",
     height: "100%",
-  },
-  reversed: {
-    transform: [{ rotate: "180deg" }],
   },
   reversedTile: {
     transform: [{ rotate: "180deg" }],

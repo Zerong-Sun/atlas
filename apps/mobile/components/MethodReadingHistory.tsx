@@ -1,5 +1,5 @@
-import { useRouter } from "expo-router";
-import { useCallback, useEffect, useState } from "react";
+import { useFocusEffect, useRouter } from "expo-router";
+import { useCallback, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 import { listMethodReadings, methodReadingPreview, type MethodReadingRecord } from "@/lib/methodReadings";
 import { Text } from "@/components/ui/Text";
@@ -17,12 +17,14 @@ export function MethodReadingHistory({ methodId, limit = 6, title = "占卜记�
 
   const load = useCallback(async () => {
     const entries = await listMethodReadings({ methodId, limit });
-    setItems(entries.filter((entry) => entry.payload || entry.source === "method" || entry.source === "module"));
+    setItems(entries);
   }, [methodId, limit]);
 
-  useEffect(() => {
-    void load();
-  }, [load]);
+  useFocusEffect(
+    useCallback(() => {
+      void load();
+    }, [load]),
+  );
 
   const open = (entry: MethodReadingRecord) => {
     router.push({ pathname: "/archive/[id]", params: { id: entry.id } });

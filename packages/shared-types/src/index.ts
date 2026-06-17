@@ -107,7 +107,7 @@ export type MethodId =
 
 export type LotTemple = "guanyin" | "guandi" | "mazu" | "mixed";
 
-export type LenormandSpread = "three" | "five" | "nine";
+export type LenormandSpread = "three" | "five" | "nine" | "grand";
 
 export interface LiuyaoInput {
   seed?: string;

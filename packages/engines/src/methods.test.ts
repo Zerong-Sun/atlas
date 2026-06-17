@@ -25,6 +25,16 @@ describe("drawLenormand", () => {
     assert.equal(a.cards.map((c) => c.id).join(","), b.cards.map((c) => c.id).join(","));
     assert.equal(a.cards.length, 3);
   });
+
+  it("draws a 36-card Grand Tableau with grid coordinates", () => {
+    const result = drawLenormand({ seed: "grand-tableau", spread: "grand" });
+    assert.equal(result.cards.length, 36);
+    assert.equal(result.cards.every((card) => card.gridRow != null && card.gridCol != null), true);
+    assert.deepEqual(
+      result.cards.slice(32).map((card) => [card.gridRow, card.gridCol]),
+      [[4, 2], [4, 3], [4, 4], [4, 5]],
+    );
+  });
 });
 
 describe("throwJiaobei", () => {

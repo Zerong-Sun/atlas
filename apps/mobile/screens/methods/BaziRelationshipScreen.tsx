@@ -8,7 +8,8 @@ import {
 import { buildBaziRelationshipSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
@@ -54,6 +55,7 @@ export function BaziRelationshipScreen() {
   });
   const [relationshipType, setRelationshipType] = useState<RelationshipContext>("romance");
   const [hasComputed, setHasComputed] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const filled = Boolean(
     personA.birthDate && personA.birthTime && personB.birthDate && personB.birthTime,
@@ -81,10 +83,27 @@ export function BaziRelationshipScreen() {
         : null,
     [showResults, result, personA.name, personB.name],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!showResults || !result) return null;
+    return {
+      methodId: "bazi-relationship" as const,
+      inputs: { personA, personB, relationshipType },
+      result,
+    };
+  }, [showResults, result, personA, personB, relationshipType]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: showResults,
+    entryId: entryId ?? undefined,
+  });
 
   const compute = () => {
-    if (filled) setHasComputed(true);
+    if (filled) {
+      setEntryId(buildMethodReadingEntryId("bazi-relationship"));
+      setHasComputed(true);
+    }
   };
 
   return (

@@ -587,6 +587,14 @@
   font-size: 1.2rem;
 }
 
+.method-card strong + em {
+  display: block;
+  color: var(--color-gold);
+  font-style: normal;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
 .method-card p {
   margin: 0;
   color: var(--color-text-secondary);
@@ -3527,6 +3535,32 @@ button.palace-grid__cell:hover {
   object-fit: contain;
   object-position: center center;
   background: rgba(8, 12, 20, 0.35);
+}
+
+.lenormand-table--grand .deck-animation {
+  transform: scale(0.78);
+  transform-origin: center top;
+}
+
+.lenormand-table--grand .tarot-spread--lenormand-grand {
+  grid-template-columns: repeat(8, minmax(58px, 1fr));
+  gap: 8px;
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+.lenormand-table--grand .spread-card {
+  min-width: 0;
+}
+
+.lenormand-table--grand .spread-card__meta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .lenormand-table--grand .tarot-spread--lenormand-grand {
+    grid-template-columns: repeat(4, minmax(56px, 1fr));
+  }
 }
 
 /* 五牌阵十字布局（宽屏）：核心居中，上下左右为修饰位 */

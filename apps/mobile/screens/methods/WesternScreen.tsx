@@ -4,7 +4,8 @@ import { computeWestern, type WesternResult } from "@atlas/engines/western";
 import { buildWesternReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
@@ -18,6 +19,7 @@ export function WesternScreen() {
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "12:00");
   const [showTransits, setShowTransits] = useState(false);
   const [computed, setComputed] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const result = useMemo<WesternResult | null>(() => {
@@ -35,7 +37,21 @@ export function WesternScreen() {
     () => (result ? buildWesternReportSnapshot(result) : null),
     [result],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result) return null;
+    return {
+      methodId: "western" as const,
+      inputs: { birthDate, birthTime, showTransits },
+      result,
+    };
+  }, [result, birthDate, birthTime, showTransits]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const generate = () => {
     if (!birthDate) return;
@@ -50,6 +66,7 @@ export function WesternScreen() {
       setComputed(false);
       return;
     }
+    setEntryId(buildMethodReadingEntryId("western"));
     setComputed(true);
   };
 

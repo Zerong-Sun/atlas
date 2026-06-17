@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, View } from "react-native";
 import {
   drawTarotSpread,
   interpretTarot,
@@ -47,6 +47,7 @@ export function TarotScreen() {
   const { prefs } = useUiPrefs();
 
   const spread = TAROT_SPREADS.find((s) => s.id === spreadId) ?? TAROT_SPREADS[1]!;
+  const compactCards = spread.positions.length > 5;
 
   const draw = () => {
     if (isBusy) return;
@@ -91,7 +92,7 @@ export function TarotScreen() {
 
   const visibleCards: Array<DrawnCard | PlaceholderCard> = cards.length
     ? cards
-    : spread.positions.map((position) => ({ position, placeholder: true }));
+    : spread.positions.map((position: string) => ({ position, placeholder: true }));
 
   const copilotReport = useMemo(() => {
     if (!spreadResult || phase !== "revealed" || !cards.length) return null;
@@ -184,7 +185,7 @@ export function TarotScreen() {
         </View>
 
         <Text variant="label">牌阵</Text>
-        <View style={styles.chipRow}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chipRow}>
           {TAROT_SPREADS.map((item) => (
             <Pressable
               key={item.id}
@@ -196,7 +197,7 @@ export function TarotScreen() {
               </Text>
             </Pressable>
           ))}
-        </View>
+        </ScrollView>
 
         <Button title={buttonTitle} onPress={draw} disabled={isBusy} />
       </View>
@@ -212,6 +213,7 @@ export function TarotScreen() {
                 revealed={phase === "revealed"}
                 reversed={card.reversed}
                 index={index}
+                compact={compactCards}
                 imageUri={card.image}
                 cardName={card.name}
                 meta={
@@ -234,6 +236,7 @@ export function TarotScreen() {
                 position={card.position}
                 revealed={false}
                 index={index}
+                compact={compactCards}
                 placeholder
                 placeholderHint="等待洗牌"
               />

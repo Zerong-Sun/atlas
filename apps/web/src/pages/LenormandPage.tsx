@@ -12,24 +12,27 @@ import { playMethodSound } from "@/lib/methodSounds";
 import { getLenormandDeckCardByName } from "@/data/lenormandDeck";
 import { getLenormandCard, lookupLenormandPair } from "@/data/lenormandLibrary";
 
-type Spread = "three" | "five" | "nine";
+type Spread = "three" | "five" | "nine" | "grand";
 
 const SPREADS: Record<Spread, string> = {
   three: "三牌阵",
   five: "五牌阵",
   nine: "九宫格",
+  grand: "大牌阵",
 };
 
 const SPREAD_COLUMNS: Record<Spread, number> = {
   three: 3,
   five: 3,
   nine: 3,
+  grand: 8,
 };
 
 const POSITIONS: Record<Spread, string[]> = {
   three: ["过去/背景", "核心主题", "趋势/建议"],
   five: ["核心", "上方影响", "下方基础", "左方过去", "右方趋势"],
   nine: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grand: Array.from({ length: 36 }, (_, index) => `${index + 1}`),
 };
 
 export function LenormandPage() {
@@ -124,8 +127,20 @@ export function LenormandPage() {
         <CardDrawTable
           phase={phase}
           spreadCount={spread === "five" ? 3 : SPREAD_COLUMNS[spread]}
-          spreadClassName={spread === "five" ? "tarot-spread--lenormand-five-cross" : undefined}
-          className={spread === "five" ? "lenormand-table lenormand-table--five-cross" : "lenormand-table"}
+          spreadClassName={
+            spread === "five"
+              ? "tarot-spread--lenormand-five-cross"
+              : spread === "grand"
+                ? "tarot-spread--lenormand-grand"
+                : undefined
+          }
+          className={
+            spread === "five"
+              ? "lenormand-table lenormand-table--five-cross"
+              : spread === "grand"
+                ? "lenormand-table lenormand-table--grand"
+                : "lenormand-table"
+          }
           deckLabels={{ idle: "LENORMAND", shuffling: "SHUFFLING", drawing: "DRAWING" }}
         >
           {visibleCards.map((card, index) =>
@@ -193,6 +208,12 @@ export function LenormandPage() {
               </article>
             ))}
           </div>
+          {spread === "grand" && (
+            <div className="combo-panel">
+              <h3>大牌阵读法</h3>
+              <p>前四行是事件场，底部四张是命运角；先定位人物牌，再观察同列、同行与近邻牌。</p>
+            </div>
+          )}
           {result.pairs.length > 0 && (
             <div className="combo-panel">
               <h3>组合语法</h3>

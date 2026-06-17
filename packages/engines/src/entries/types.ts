@@ -1,3 +1,4 @@
+export type { EngineInput } from "../engine-input.ts";
 export type { BaziResult } from "../bazi.ts";
 export type { BaziCompatibilityResult, RelationshipContext } from "../bazi-compatibility.ts";
 export type { WesternResult } from "../western.ts";

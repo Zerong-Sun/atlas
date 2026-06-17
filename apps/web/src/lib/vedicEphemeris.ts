@@ -6,16 +6,32 @@ import {
   type VedicResult,
 } from "@atlas/engines/vedic";
 import type { VedicInput } from "@atlas/shared-types";
-import { SwissEphemeris, Planet, LunarPoint, CalculationFlag, HouseSystem } from "@swisseph/browser";
+import { SwissEphemeris } from "@swisseph/browser";
 
-const GRAHA_PLANETS: Array<{ key: VedicGrahaKey; body: Planet }> = [
-  { key: "Sun", body: Planet.Sun },
-  { key: "Moon", body: Planet.Moon },
-  { key: "Mars", body: Planet.Mars },
-  { key: "Mercury", body: Planet.Mercury },
-  { key: "Jupiter", body: Planet.Jupiter },
-  { key: "Venus", body: Planet.Venus },
-  { key: "Saturn", body: Planet.Saturn },
+const PLANET = {
+  Sun: 0,
+  Moon: 1,
+  Mercury: 2,
+  Venus: 3,
+  Mars: 4,
+  Jupiter: 5,
+  Saturn: 6,
+  MeanNode: 10,
+} as const;
+
+const MOSHIER_EPHEMERIS_FLAG = 4;
+type SwissHouseSystem = Parameters<SwissEphemeris["calculateHouses"]>[3];
+
+const WHOLE_SIGN_HOUSE_SYSTEM = "W" as SwissHouseSystem;
+
+const GRAHA_PLANETS: Array<{ key: VedicGrahaKey; body: number }> = [
+  { key: "Sun", body: PLANET.Sun },
+  { key: "Moon", body: PLANET.Moon },
+  { key: "Mars", body: PLANET.Mars },
+  { key: "Mercury", body: PLANET.Mercury },
+  { key: "Jupiter", body: PLANET.Jupiter },
+  { key: "Venus", body: PLANET.Venus },
+  { key: "Saturn", body: PLANET.Saturn },
 ];
 
 let swePromise: Promise<SwissEphemeris> | null = null;
@@ -56,8 +72,8 @@ export async function computeVedicAsync(input: VedicInput = {}): Promise<VedicRe
   const birth = resolveBirth(input);
 
   const jd = swe.julianDay(birth.year, birth.month ?? 1, birth.day ?? 1, birth.utcHour);
-  const flags = CalculationFlag.MoshierEphemeris;
-  const houses = swe.calculateHouses(jd, birth.birthLat, birth.birthLng, HouseSystem.WholeSign);
+  const flags = MOSHIER_EPHEMERIS_FLAG;
+  const houses = swe.calculateHouses(jd, birth.birthLat, birth.birthLng, WHOLE_SIGN_HOUSE_SYSTEM);
 
   const siderealGrahas = {} as Record<VedicGrahaKey, number>;
   for (const { key, body } of GRAHA_PLANETS) {
@@ -65,7 +81,7 @@ export async function computeVedicAsync(input: VedicInput = {}): Promise<VedicRe
     siderealGrahas[key] = toSiderealLongitude(pos.longitude, jd);
   }
 
-  const rahu = swe.calculatePosition(jd, LunarPoint.MeanNode, flags);
+  const rahu = swe.calculatePosition(jd, PLANET.MeanNode, flags);
   siderealGrahas.Rahu = toSiderealLongitude(rahu.longitude, jd);
   siderealGrahas.Ketu = (siderealGrahas.Rahu + 180) % 360;
 

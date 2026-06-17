@@ -5,7 +5,8 @@ import type { QimenJuMethod } from "@atlas/shared-types";
 import { buildQimenReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -35,6 +36,7 @@ export function QimenScreen() {
   const [juMethod, setJuMethod] = useState<QimenJuMethod>("chaibu");
   const [timestamp, setTimestamp] = useState(() => formatTimestampInput(new Date()));
   const [computeKey, setComputeKey] = useState(0);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const chart = useMemo(() => {
     if (computeKey === 0) return null;
@@ -58,7 +60,22 @@ export function QimenScreen() {
         : null,
     [chart, interpretation, question, questionType],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!chart || !interpretation) return null;
+    return {
+      methodId: "qimen" as const,
+      question: question.trim() || undefined,
+      inputs: { questionType, predictionWindow, juMethod, timestamp },
+      result: { chart, interpretation },
+    };
+  }, [chart, interpretation, question, questionType, predictionWindow, juMethod, timestamp]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(chart && interpretation),
+    entryId: entryId ?? undefined,
+  });
 
   return (
     <Screen scroll>
@@ -129,7 +146,13 @@ export function QimenScreen() {
           ))}
         </View>
 
-        <Button title="起局排盘" onPress={() => setComputeKey((k) => k + 1)} />
+        <Button
+          title="起局排盘"
+          onPress={() => {
+            setEntryId(buildMethodReadingEntryId("qimen"));
+            setComputeKey((k) => k + 1);
+          }}
+        />
       </View>
 
       {chart && interpretation && (

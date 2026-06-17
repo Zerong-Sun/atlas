@@ -13,6 +13,15 @@ import {
 } from "@/lib/llmSettings";
 import { getAuthSession } from "@/lib/supabase";
 import { isRitualSoundsEnabled, setRitualSoundsEnabled } from "@/lib/methodSounds";
+import {
+  CULTURAL_LENS_OPTIONS,
+  LOCALE_OPTIONS,
+  TERMINOLOGY_OPTIONS,
+  type AtlasLocale,
+  type CulturalLens,
+  type TerminologyMode,
+} from "@atlas/method-data";
+import { getCulturalPrefs, saveCulturalPrefs } from "@/lib/culturalPrefs";
 
 const MODEL_RULES = [
   "不把占卜输出包装成确定事实。",
@@ -31,6 +40,9 @@ export function SettingsPage() {
   const [safeMode, setSafeMode] = useState(true);
   const [ritualSounds, setRitualSounds] = useState(() => isRitualSoundsEnabled());
   const [defaultMethod, setDefaultMethod] = useState("bazi");
+  const [locale, setLocale] = useState<AtlasLocale>(() => getCulturalPrefs().locale);
+  const [culturalLens, setCulturalLens] = useState<CulturalLens>(() => getCulturalPrefs().culturalLens);
+  const [terminology, setTerminology] = useState<TerminologyMode>(() => getCulturalPrefs().terminology);
 
   const [llmApiKey, setLlmApiKey] = useState("");
   const [llmBaseUrl, setLlmBaseUrl] = useState(DEFAULT_LLM_BASE_URL);
@@ -42,6 +54,10 @@ export function SettingsPage() {
   useEffect(() => {
     setRitualSoundsEnabled(ritualSounds);
   }, [ritualSounds]);
+
+  useEffect(() => {
+    saveCulturalPrefs({ locale, culturalLens, terminology });
+  }, [locale, culturalLens, terminology]);
 
   useEffect(() => {
     const stored = getLlmSettingsForForm();
@@ -169,6 +185,56 @@ export function SettingsPage() {
           <Toggle label="仪式音效" checked={ritualSounds} onChange={setRitualSounds} />
           <Toggle label="优先显示古文解释" checked={classicMode} onChange={setClassicMode} />
           <Toggle label="启用安全边界提示" checked={safeMode} onChange={setSafeMode} />
+        </div>
+
+        <div className="settings-panel settings-panel--stacked">
+          <div className="section-heading">
+            <p>CULTURE</p>
+            <h2>语言与文化适配</h2>
+          </div>
+          <p className="settings-sync-status">
+            这里控制术语怎么被翻译、解释站在哪种文化语境里。比如八字可显示为「Four Pillars / Ba Zi」，而不是只直译成
+            fortune telling。
+          </p>
+          <label className="settings-field settings-field--stacked">
+            <span>界面语言</span>
+            <select value={locale} onChange={(event) => setLocale(event.target.value as AtlasLocale)}>
+              {LOCALE_OPTIONS.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.nativeLabel} · {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="settings-sync-status">
+            {LOCALE_OPTIONS.find((option) => option.id === locale)?.description}
+          </p>
+          <label className="settings-field settings-field--stacked">
+            <span>文化视角</span>
+            <select value={culturalLens} onChange={(event) => setCulturalLens(event.target.value as CulturalLens)}>
+              {CULTURAL_LENS_OPTIONS.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="settings-sync-status">
+            {CULTURAL_LENS_OPTIONS.find((option) => option.id === culturalLens)?.description}
+          </p>
+          <label className="settings-field settings-field--stacked">
+            <span>术语策略</span>
+            <select value={terminology} onChange={(event) => setTerminology(event.target.value as TerminologyMode)}>
+              {TERMINOLOGY_OPTIONS.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="settings-sync-status">
+            {TERMINOLOGY_OPTIONS.find((option) => option.id === terminology)?.description}
+          </p>
         </div>
 
         <div className="settings-panel">

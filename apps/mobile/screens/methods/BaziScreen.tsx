@@ -4,7 +4,8 @@ import { computeBazi, interpretBazi, type BaziResult } from "@atlas/engines/bazi
 import { buildBaziReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
@@ -20,6 +21,7 @@ export function BaziScreen() {
   const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [selectedYear, setSelectedYear] = useState(String(new Date().getFullYear()));
   const [hasComputed, setHasComputed] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const filled = Boolean(birthDate && birthTime);
 
@@ -49,10 +51,27 @@ export function BaziScreen() {
     () => (showResults && result ? buildBaziReportSnapshot(result, interpretation, name) : null),
     [showResults, result, interpretation, name],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!showResults || !result) return null;
+    return {
+      methodId: "bazi" as const,
+      inputs: { name, birthDate, birthTime, gender, selectedYear },
+      result: { result, interpretation },
+    };
+  }, [showResults, result, interpretation, name, birthDate, birthTime, gender, selectedYear]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: showResults,
+    entryId: entryId ?? undefined,
+  });
 
   const compute = () => {
-    if (filled) setHasComputed(true);
+    if (filled) {
+      setEntryId(buildMethodReadingEntryId("bazi"));
+      setHasComputed(true);
+    }
   };
 
   return (

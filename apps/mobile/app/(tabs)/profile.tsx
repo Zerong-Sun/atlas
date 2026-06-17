@@ -1,4 +1,4 @@
-import { useRouter } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, Switch, TextInput, View } from "react-native";
 import type { ReadingReport, Tradition } from "@atlas/shared-types";
@@ -26,10 +26,16 @@ export default function ProfileScreen() {
   const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => {
+  const refreshHistory = useCallback(() => {
     void listReadings().then(setHistory);
     void listMethodReadings().then(setMethodReadings);
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      refreshHistory();
+    }, [refreshHistory]),
+  );
 
   useEffect(() => {
     if (profile) {
@@ -167,7 +173,7 @@ function ProfileHeader({
   saveBirth,
   disabled,
   toggleTradition,
-  archive,
+  methodReadings,
   openArchive,
   router,
 }: {

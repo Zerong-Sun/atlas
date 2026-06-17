@@ -11,7 +11,6 @@ const config: ExpoConfig = {
   orientation: "portrait",
   scheme: "atlas",
   userInterfaceStyle: "dark",
-  newArchEnabled: true,
   icon: "./assets/icon.png",
   splash: {
     image: "./assets/icon.png",
