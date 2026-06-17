@@ -5,7 +5,8 @@ import type { RuneSpread } from "@atlas/shared-types";
 import { buildRunesReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -36,6 +37,7 @@ export function RunesScreen() {
   const [spread, setSpread] = useState<RuneSpread>("three");
   const [result, setResult] = useState<RunesResult | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
+  const [entryId, setEntryId] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const positions = SPREAD_POSITIONS[spread];
 
@@ -43,7 +45,22 @@ export function RunesScreen() {
     if (!result || phase !== "revealed") return null;
     return buildRunesReportSnapshot(question, SPREADS[spread], result);
   }, [result, question, spread, phase]);
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result || phase !== "revealed") return null;
+    return {
+      methodId: "runes" as const,
+      question: question.trim() || undefined,
+      inputs: { spread },
+      result,
+    };
+  }, [result, phase, question, spread]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: phase === "revealed" && Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const clearTimers = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -53,6 +70,7 @@ export function RunesScreen() {
     clearTimers();
     setPhase("shuffling");
     setResult(null);
+    setEntryId(buildMethodReadingEntryId("runes"));
 
     timerRef.current = setTimeout(() => {
       setResult(

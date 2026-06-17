@@ -676,6 +676,8 @@ export function buildGeomancyReportSnapshot(
       `问题：${question.trim() || "一般事项"}`,
       "",
       `四母：${result.mothers.map((m) => m.name).join("、")}`,
+      `用神宫：第${result.significator.house}宫 ${result.significator.label} · ${result.significator.figure.name}`,
+      result.significator.reading,
       `审判图：${result.judge.name} — ${result.judge.meaning}`,
       `左见证：${result.witnesses[0]!.name} · 右见证：${result.witnesses[1]!.name}`,
       "",
@@ -722,20 +724,27 @@ export function buildMeihuaReportSnapshot(
 export function buildVedicReportSnapshot(
   result: import("@atlas/engines/vedic").VedicResult,
 ): MethodCopilotReportSnapshot {
+  const grahaLines = result.grahas.map(
+    (g) => `${g.label}：${g.sign} ${g.degree}° · ${g.houseName}`,
+  );
   const body = truncate(
     lines(
-      `出生：${result.birthDate} ${result.birthTime}`,
+      `出生：${result.birthDate} ${result.birthTime}${result.birthPlace ? ` · ${result.birthPlace}` : ""}`,
       `月亮星座：${result.moonSign}`,
       `月宿：${result.moonNakshatra.label} 第${result.moonNakshatra.pada}足`,
-      `上升：${result.ascendantSign}`,
-      `大运主星：${result.mahadashaLabel}`,
+      `上升 Lagna：${result.ascendantSign} ${result.ascendantDegree}°`,
+      `大运：${result.mahadashaLabel}（余约 ${result.mahadashaRemainingYears} 年）`,
+      `小运：${result.antardashaLabel}（余约 ${result.antardashaRemainingYears} 年）`,
+      "",
+      "九星落宫：",
+      ...grahaLines,
       "",
       result.note,
       result.summary,
     ),
   );
   return {
-    entryId: entryId("vedic", [result.birthDate, result.birthTime]),
+    entryId: entryId("vedic", [result.birthDate, result.birthTime, result.birthPlace ?? ""]),
     source: "method",
     methodId: "vedic",
     title: "印度占星",

@@ -107,7 +107,7 @@ export type MethodId =
 
 export type LotTemple = "guanyin" | "guandi" | "mazu" | "mixed";
 
-export type LenormandSpread = "three" | "five" | "nine";
+export type LenormandSpread = "three" | "five" | "nine" | "grand";
 
 export interface LiuyaoInput {
   seed?: string;
@@ -176,6 +176,7 @@ export interface GeomancyInput {
   seed?: string;
   question?: string;
   mothers?: boolean[][];
+  questionType?: "general" | "self" | "relationship" | "career" | "home" | "money" | "travel" | "health" | "study";
 }
 
 export type MeihuaMode = "number" | "time";
@@ -191,8 +192,11 @@ export interface MeihuaInput {
 export interface VedicInput {
   birthDate?: string;
   birthTime?: string;
+  birthPlace?: string;
   birthLat?: number;
   birthLng?: number;
+  /** Hours east of UTC (e.g. 8 for China Standard Time) */
+  timezone?: number;
 }
 
 export interface XiangmianInput {

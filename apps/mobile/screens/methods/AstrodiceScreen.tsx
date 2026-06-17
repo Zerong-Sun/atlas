@@ -4,7 +4,8 @@ import { rollAstrodice, type AstrodiceResult } from "@atlas/engines/astrodice";
 import { buildAstrodiceReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -17,19 +18,31 @@ export function AstrodiceScreen() {
   const [phase, setPhase] = useState<Phase>("idle");
   const [result, setResult] = useState<AstrodiceResult | null>(null);
   const [history, setHistory] = useState<AstrodiceResult[]>([]);
+  const [entryId, setEntryId] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const copilotReport = useMemo(() => {
     if (!result || phase !== "settled") return null;
     return buildAstrodiceReportSnapshot(question, result);
   }, [result, question, phase]);
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result || phase !== "settled") return null;
+    return { methodId: "astrodice" as const, question: question.trim() || undefined, result };
+  }, [result, question, phase]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: phase === "settled" && Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const roll = () => {
     if (phase === "rolling") return;
     if (timerRef.current) clearTimeout(timerRef.current);
     setPhase("rolling");
     setResult(null);
+    setEntryId(buildMethodReadingEntryId("astrodice"));
 
     timerRef.current = setTimeout(() => {
       const next = rollAstrodice({

@@ -12,6 +12,8 @@ const LINE_OBSERVATIONS: Record<string, { meaning: string; predictionUse: string
   "金星丘-饱满": { meaning: "亲密与活力需求强", predictionUse: "照护连接感" },
   "木星丘-突出": { meaning: "野心与领导欲", predictionUse: "设定可见目标" },
   "月丘-发达": { meaning: "想象与迁移倾向", predictionUse: "给直觉留空间" },
+  "婚姻线-清晰": { meaning: "亲密关系脉络分明", predictionUse: "重视边界与承诺" },
+  "太阳线-明显": { meaning: "公众表达与认可需求", predictionUse: "把作品外显" },
 };
 
 export interface PalmistryReading {

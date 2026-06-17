@@ -18,6 +18,15 @@ const METHOD_SCREEN_LOADERS: Record<string, MethodLoader> = {
   western: () => import("./WesternScreen").then((m) => ({ default: m.WesternScreen })),
   ziwei: () => import("./ZiweiScreen").then((m) => ({ default: m.ZiweiScreen })),
   qimen: () => import("./QimenScreen").then((m) => ({ default: m.QimenScreen })),
+  meihua: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  vedic: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  numerology: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  geomancy: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  xiangmian: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  palmistry: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  oracle: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  coffee: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
+  scrying: () => import("./GenericMethodScreen").then((m) => ({ default: m.GenericMethodScreen })),
 };
 
 const lazyCache = new Map<string, LazyExoticComponent<ComponentType>>();

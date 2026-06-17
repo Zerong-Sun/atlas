@@ -69,11 +69,17 @@ const SPREAD_POSITIONS: Record<LenormandSpread, string[]> = {
   three: ["过去/背景", "核心主题", "趋势/建议"],
   five: ["核心", "上方影响", "下方基础", "左方过去", "右方趋势"],
   nine: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grand: Array.from({ length: 36 }, (_, index) => `${index + 1}`),
 };
 
 const NINE_GRID: Array<[number, number]> = [
   [0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2],
 ];
+
+const GRAND_GRID: Array<[number, number]> = Array.from({ length: 36 }, (_, index) => {
+  if (index < 32) return [Math.floor(index / 8), index % 8];
+  return [4, index - 32 + 2];
+});
 
 const COMBO_RULES: Record<string, string> = {
   "骑士+心": "情感方面将有新消息或行动到来。",
@@ -128,11 +134,17 @@ export function drawLenormand(input: LenormandInput = {}): LenormandResult {
       const [row, col] = NINE_GRID[i]!;
       return { ...base, gridRow: row, gridCol: col };
     }
+    if (spread === "grand") {
+      const [row, col] = GRAND_GRID[i]!;
+      return { ...base, gridRow: row, gridCol: col };
+    }
     return base;
   });
 
   const centerTheme =
-    spread === "nine"
+    spread === "grand"
+      ? cards.find((c) => c.name === "男人" || c.name === "女人")?.name ?? cards[0]?.name
+      : spread === "nine"
       ? cards.find((c) => c.gridRow === 1 && c.gridCol === 1)?.name
       : spread === "three"
         ? cards[1]?.name

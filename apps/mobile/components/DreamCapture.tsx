@@ -66,11 +66,36 @@ export function DreamCapture({ onSubmit, loading, result }: Props) {
           )}
           <InterpretBlock title="中国梦占" body={result.chinese} />
           <InterpretBlock title="荣格简释" body={result.jungian} />
+          <InterpretBlock title="民俗征兆" body={buildFolkDreamView(symbols, emotions)} />
+          <InterpretBlock title="文化适配" body={buildCulturalDreamView(prefs.culturalLens, prefs.locale)} />
           <InterpretBlock title="精神反思" body={result.reflection} highlight />
         </View>
       )}
     </View>
   );
+}
+
+function buildCulturalDreamView(
+  lens: ReturnType<typeof useUiPrefs>["prefs"]["culturalLens"],
+  locale: ReturnType<typeof useUiPrefs>["prefs"]["locale"],
+): string {
+  const localeNote = locale === "en-US"
+    ? "Keep the original symbol beside the translation so cultural meaning is not flattened."
+    : locale === "ja-JP"
+      ? "可把梦中征兆和日常礼俗、季节感并读，但避免把它说成唯一答案。"
+      : locale === "ko-KR"
+        ? "可结合家族、礼俗与日常关系阅读梦象，同时保留现实判断。"
+        : "保留原文化术语，再用现代白话解释，避免把不同传统硬翻成同一种说法。";
+  if (lens === "native") return `本土语境优先尊重梦占传统内部的说法；${localeNote}`;
+  if (lens === "academic") return `研究注释把梦当作民俗、心理和叙事材料并读，并标出不确定性；${localeNote}`;
+  if (lens === "diaspora") return `跨文化入门会先解释符号背景，再提示它在日常生活中的感受对应；${localeNote}`;
+  return `文明对照会并列民俗征兆、心理投射与伦理行动，不急着合成单一结论；${localeNote}`;
+}
+
+function buildFolkDreamView(symbols: string[], emotions: string[]): string {
+  const symbolText = symbols.length ? `「${symbols.slice(0, 4).join("、")}」` : "最醒目的场景";
+  const emotionText = emotions.length ? `醒来后的${emotions.join("、")}` : "醒来后的身体感";
+  return `${symbolText}可作为生活征兆来记录；${emotionText}说明重点也在你如何承接它。连续记录三天，但不要把它当成必然预言。`;
 }
 
 function ChipRow({

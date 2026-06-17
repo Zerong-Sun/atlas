@@ -4,7 +4,8 @@ import { computeZiwei, type ZiweiResult } from "@atlas/engines/ziwei";
 import { buildZiweiReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
@@ -18,6 +19,7 @@ export function ZiweiScreen() {
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "12:00");
   const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [computed, setComputed] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const result = useMemo<ZiweiResult | null>(() => {
     if (!birthDate || !computed) return null;
@@ -28,7 +30,21 @@ export function ZiweiScreen() {
     () => (result?.palaces.length ? buildZiweiReportSnapshot(result) : null),
     [result],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result?.palaces.length) return null;
+    return {
+      methodId: "ziwei" as const,
+      inputs: { birthDate, birthTime, gender },
+      result,
+    };
+  }, [result, birthDate, birthTime, gender]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(result?.palaces.length),
+    entryId: entryId ?? undefined,
+  });
 
   return (
     <Screen scroll>
@@ -56,7 +72,14 @@ export function ZiweiScreen() {
             </Pressable>
           ))}
         </View>
-        <Button title="排紫微命盘" onPress={() => setComputed(true)} disabled={!birthDate} />
+        <Button
+          title="排紫微命盘"
+          onPress={() => {
+            setEntryId(buildMethodReadingEntryId("ziwei"));
+            setComputed(true);
+          }}
+          disabled={!birthDate}
+        />
       </View>
 
       {result && result.palaces.length > 0 && (

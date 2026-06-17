@@ -26,9 +26,9 @@ import { drawOracle, type OracleResult } from "./oracle.ts";
 import { readCoffeeGrounds, type CoffeeResult } from "./coffee.ts";
 import { castScryingVision, type ScryingResult } from "./scrying.ts";
 import { computeNumerology, type NumerologyResult } from "./numerology.ts";
-import { castGeomancy, type GeomancyResult } from "./geomancy.ts";
+import { castGeomancy, type GeomancyQuestionType, type GeomancyResult } from "./geomancy.ts";
 import { castMeihua, type MeihuaResult } from "./meihua.ts";
-import { computeVedic, type VedicResult } from "./vedic.ts";
+import { buildVedicChart, type VedicResult } from "./vedic.ts";
 import { readXiangmian, type XiangmianResult } from "./xiangmian.ts";
 import { readPalmistry, type PalmistryResult } from "./palmistry.ts";
 
@@ -57,7 +57,7 @@ export {
   computeNumerology,
   castGeomancy,
   castMeihua,
-  computeVedic,
+  buildVedicChart,
   readXiangmian,
   readPalmistry,
   type BaziResult,
@@ -82,6 +82,7 @@ export {
   type CoffeeResult,
   type ScryingResult,
   type NumerologyResult,
+  type GeomancyQuestionType,
   type GeomancyResult,
   type MeihuaResult,
   type VedicResult,
@@ -97,29 +98,8 @@ export { LENORMAND_CARDS } from "./lenormand.ts";
 export { registerLotSigns, getLotSigns, type LotSign } from "./lot.ts";
 export { MOUNTAINS_24, FLYING_STARS } from "./fengshui.ts";
 
-export interface EngineInput {
-  birthDate?: string;
-  birthTime?: string;
-  birthLat?: number;
-  birthLng?: number;
-  timezone?: string;
-  seed?: string;
-  timestamp?: string;
-  gender?: "male" | "female";
-  sittingDegree?: number;
-  sittingMountain?: string;
-  birthYear?: number;
-  lines?: number[];
-  questionCategory?: "career" | "love" | "finance" | "health" | "general";
-  spread?: "three" | "five" | "nine";
-  temple?: "guanyin" | "guandi" | "mazu" | "mixed";
-  question?: string;
-  juMethod?: "chaibu" | "zhirun";
-  spreadId?: string;
-  tarotScenario?: "关系" | "事业" | "财务" | "心理" | "通用";
-  qimenQuestionType?: string;
-  predictionWindow?: "时" | "日" | "旬" | "月";
-}
+export type { EngineInput } from "./engine-input.ts";
+import type { EngineInput } from "./engine-input.ts";
 
 export function runEngine(
   tradition: Tradition,

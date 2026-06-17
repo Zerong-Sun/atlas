@@ -1,10 +1,9 @@
 import * as AstronomyModule from "astronomy-engine";
 import type { Body } from "astronomy-engine";
-import type { EngineInput } from "./index.ts";
+import type { EngineInput } from "./engine-input.ts";
 
-/** Node tests use CJS default; Vite/Rollup use named ESM exports on the namespace. */
 const Astronomy = (
-  (AstronomyModule as { default?: typeof AstronomyModule }).default ?? AstronomyModule
+  "MakeTime" in AstronomyModule ? AstronomyModule : Object.values(AstronomyModule)[0]
 ) as typeof AstronomyModule;
 
 const SIGNS = [

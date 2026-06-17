@@ -6,7 +6,8 @@ import { LOT_SIGNS, LOT_TEMPLE_LABELS } from "@atlas/method-data";
 import { buildLotReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -29,6 +30,7 @@ export function LotScreen() {
   const [temple, setTemple] = useState<LotTemple>("mixed");
   const [phase, setPhase] = useState<Phase>("idle");
   const [result, setResult] = useState<ReturnType<typeof drawLot> | null>(null);
+  const [entryId, setEntryId] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const draw = () => {
@@ -36,6 +38,7 @@ export function LotScreen() {
     if (timerRef.current) clearTimeout(timerRef.current);
     setPhase("shaking");
     setResult(null);
+    setEntryId(buildMethodReadingEntryId("lot"));
     timerRef.current = setTimeout(() => {
       setResult(drawLot({ temple, seed: `${Date.now()}-${temple}` }, LOT_SIGNS));
       setPhase("revealed");
@@ -53,7 +56,17 @@ export function LotScreen() {
     () => (result && phase === "revealed" ? buildLotReportSnapshot(result) : null),
     [result, phase],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result || phase !== "revealed") return null;
+    return { methodId: "lot" as const, inputs: { temple }, result };
+  }, [result, phase, temple]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: phase === "revealed" && Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const categories = useMemo(() => {
     if (!result) return [];

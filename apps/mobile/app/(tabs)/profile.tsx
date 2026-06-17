@@ -1,4 +1,4 @@
-import { useRouter } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, Switch, TextInput, View } from "react-native";
 import type { ReadingReport, Tradition } from "@atlas/shared-types";
@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
 import { useApp } from "@/context/AppContext";
 import { listReadings } from "@/lib/api/readings";
-import { archiveEntryLabel, listArchiveEntries, type ArchiveEntry } from "@/lib/archive";
+import { archiveEntryLabel, type ArchiveEntry } from "@/lib/archive";
+import { listMethodReadings, methodReadingPreview, type MethodReadingRecord } from "@/lib/methodReadings";
 import { track } from "@/lib/analytics";
 import { colors, radius, spacing } from "@/theme/tokens";
 
@@ -17,7 +18,7 @@ export default function ProfileScreen() {
   const { profile, saveProfile } = useApp();
   const router = useRouter();
   const [history, setHistory] = useState<ReadingReport[]>([]);
-  const [archive, setArchive] = useState<ArchiveEntry[]>([]);
+  const [methodReadings, setMethodReadings] = useState<MethodReadingRecord[]>([]);
   const [editing, setEditing] = useState(false);
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "");
@@ -25,10 +26,16 @@ export default function ProfileScreen() {
   const [gender, setGender] = useState<"male" | "female">(profile?.gender ?? "male");
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => {
+  const refreshHistory = useCallback(() => {
     void listReadings().then(setHistory);
-    void listArchiveEntries().then(setArchive);
+    void listMethodReadings().then(setMethodReadings);
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      refreshHistory();
+    }, [refreshHistory]),
+  );
 
   useEffect(() => {
     if (profile) {
@@ -104,7 +111,7 @@ export default function ProfileScreen() {
         saveBirth={saveBirth}
         disabled={disabled}
         toggleTradition={toggleTradition}
-        archive={archive}
+        methodReadings={methodReadings}
         openArchive={openArchive}
         router={router}
       />
@@ -120,7 +127,7 @@ export default function ProfileScreen() {
       saveBirth,
       disabled,
       toggleTradition,
-      archive,
+      methodReadings,
       openArchive,
       router,
     ],
@@ -132,6 +139,8 @@ export default function ProfileScreen() {
         data={history}
         keyExtractor={(item) => item.readingId}
         contentContainerStyle={styles.listContent}
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="handled"
         ListHeaderComponent={listHeader}
         ListEmptyComponent={
           <Text variant="body" muted style={styles.emptyHistory}>
@@ -166,7 +175,7 @@ function ProfileHeader({
   saveBirth,
   disabled,
   toggleTradition,
-  archive,
+  methodReadings,
   openArchive,
   router,
 }: {
@@ -185,7 +194,7 @@ function ProfileHeader({
   saveBirth: () => void;
   disabled: Tradition[];
   toggleTradition: (t: Tradition) => void;
-  archive: ArchiveEntry[];
+  methodReadings: MethodReadingRecord[];
   openArchive: (entry: ArchiveEntry) => void;
   router: ReturnType<typeof useRouter>;
 }) {
@@ -267,15 +276,15 @@ function ProfileHeader({
       <Text variant="heading" style={styles.section}>
         归档记录
       </Text>
-      {archive.length === 0 ? (
+      {methodReadings.length === 0 ? (
         <Text variant="body" muted>
-          完成占法或提问后，结果会自动归档
+          完成占法后，结果会自动保存在本机
         </Text>
       ) : (
-        archive.slice(0, 10).map((entry) => (
+        methodReadings.map((entry) => (
           <HistoryListItem
             key={entry.id}
-            title={entry.title}
+            title={methodReadingPreview(entry)}
             subtitle={`${archiveEntryLabel(entry)} · ${new Date(entry.createdAt).toLocaleDateString("zh-CN")}`}
             onPress={() => openArchive(entry)}
           />

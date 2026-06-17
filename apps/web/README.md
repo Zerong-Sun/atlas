@@ -1,6 +1,6 @@
 # Atlas Web（诸象）
 
-Vite + React 单页应用，与 `apps/mobile` 共享 `@atlas/shared-types` 与 Supabase Edge Functions 契约。
+Vite + React 单页应用，与 `apps/mobile` 共享 `@atlas/shared-types`、`@atlas/method-data` 与 Supabase Edge Functions 契约。Web 是完整工作台入口，负责展示全球占法目录、文化语境说明、语言 / 术语偏好和深度报告。
 
 ## 本地运行
 
@@ -122,14 +122,19 @@ npm run corpus:embed
 - `/today` — 今日简报
 - `/ask` — 提问对照
 - `/methods` — 占法目录（均为真实演算页或结构化规则引擎）
-- `/methods/meihua`、`/methods/vedic`、`/methods/numerology`、`/methods/geomancy`、`/methods/xiangmian`、`/methods/palmistry`、`/methods/oracle`、`/methods/coffee`、`/methods/scrying` — 原参考预览占法，现已接入 `@atlas/engines`
-- `/methods/iching` — 周易铜钱演卦（`castIChing`）
-- `/methods/iching/workbench` — 周易参考文库模板工作台（模板草稿，非演卦）
+- `/methods/meihua`、`/methods/numerology`、`/methods/oracle`、`/methods/coffee`、`/methods/scrying` — 接入 `@atlas/engines`
+- `/methods/vedic` — 吠陀星盘（Swiss Ephemeris / Lahiri、Whole Sign 十二宫、Vimshottari 大运）
+- `/methods/geomancy` — 土占（默认手点四母图，可切换一键随机）
+- `/methods/xiangmian`、`/methods/palmistry` — 结构化观察表单（非图像识别）；图片上传为后续 epic
+- `/methods/iching` — 周易铜钱演卦（真实 `castIChing`）
+- `/methods/iching/workbench` — 周易参考文库模板工作台（hash 模板草稿，**非演卦**）
+- `/methods/liuyao` — 纳甲六爻事件占（世应、六亲、用神）
 - `/dream` — 梦境记录
 - `/profile` — 档案与历史
 - `/library` — 书库浏览
 - `/reading/:id` — 对照报告详情
 - `/settings` — 偏好与 LLM 连接
+- `/settings` — 偏好、语言文化适配与 LLM 连接
 
 全功能开放，无付费墙或额度 UI（见 `docs/access.md`）。
 

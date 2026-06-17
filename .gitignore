@@ -5,6 +5,8 @@ node_modules/
 !.env.example
 .expo/
 apps/mobile/.expo/
+.playwright-cli/
+.vscode/
 supabase/.branches
 supabase/.temp
 .DS_Store

@@ -11,17 +11,24 @@ const config: ExpoConfig = {
   orientation: "portrait",
   scheme: "atlas",
   userInterfaceStyle: "dark",
-  newArchEnabled: true,
+  icon: "./assets/icon.png",
   splash: {
+    image: "./assets/icon.png",
     resizeMode: "contain",
     backgroundColor: "#0D0D0F",
   },
   ios: {
     supportsTablet: true,
     bundleIdentifier: "com.atlas.app",
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+    },
   },
   android: {
-    adaptiveIcon: { backgroundColor: "#0D0D0F" },
+    adaptiveIcon: {
+      foregroundImage: "./assets/icon.png",
+      backgroundColor: "#0D0D0F",
+    },
     package: "com.atlas.app",
   },
   plugins: ["expo-router"],

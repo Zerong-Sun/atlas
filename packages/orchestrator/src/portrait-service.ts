@@ -1,10 +1,9 @@
-import {
-  castIChing,
-  computeBazi,
-  computeWestern,
-  drawTarotSpread,
-  type EngineInput,
-} from "@atlas/engines";
+import { computeBazi } from "@atlas/engines/bazi";
+import { castIChing } from "@atlas/engines/iching";
+import { drawTarotSpread } from "@atlas/engines/tarot";
+import { computeWestern } from "@atlas/engines/western";
+
+type EngineInput = Parameters<typeof computeBazi>[0];
 type WesternEngineResult = {
   planets: { Sun?: { sign?: string }; Moon?: { sign?: string } };
   ascendant?: { sign?: string };

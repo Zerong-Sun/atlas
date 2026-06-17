@@ -6,6 +6,7 @@ const monorepoRoot = path.resolve(projectRoot, "../..");
 
 const config = getDefaultConfig(projectRoot);
 
+// Required for workspace packages (@atlas/*) and root lib/llm-defaults.ts alias.
 config.watchFolders = [...(config.watchFolders ?? []), monorepoRoot];
 config.resolver.nodeModulesPaths = [
   path.resolve(projectRoot, "node_modules"),

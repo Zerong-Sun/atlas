@@ -17,6 +17,19 @@ export {
   type MethodMotion,
 } from "./methodExperiences.ts";
 export { LOT_SIGNS, LOT_TEMPLE_LABELS, type LotSign } from "./lotSignsLibrary.ts";
+export {
+  CULTURAL_LENS_OPTIONS,
+  CULTURAL_METHOD_GROUPS,
+  DEFAULT_CULTURAL_PROFILE,
+  LOCALE_OPTIONS,
+  METHOD_CULTURAL_ALIASES,
+  TERMINOLOGY_OPTIONS,
+  getLocalizedMethodName,
+  type AtlasLocale,
+  type CulturalLens,
+  type CulturalProfile,
+  type TerminologyMode,
+} from "./culturalProfiles.ts";
 
 export const READY_METHOD_IDS = [
   "bazi",
@@ -33,6 +46,15 @@ export const READY_METHOD_IDS = [
   "fengshui",
   "astrodice",
   "lenormand",
+  "meihua",
+  "vedic",
+  "numerology",
+  "geomancy",
+  "xiangmian",
+  "palmistry",
+  "oracle",
+  "coffee",
+  "scrying",
 ] as const;
 
 export function getReadyMethods() {

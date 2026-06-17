@@ -23,6 +23,15 @@ type AppState = {
 
 const AppContext = createContext<AppState | null>(null);
 
+const STARTUP_TIMEOUT_MS = 8_000;
+
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T | null> {
+  return Promise.race([
+    promise,
+    new Promise<null>((resolve) => setTimeout(() => resolve(null), ms)),
+  ]);
+}
+
 export function AppProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [onboardingDone, setDone] = useState(false);
@@ -36,27 +45,42 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     (async () => {
-      track("app_open");
-      const done = await getOnboardingDone();
-      setDone(done);
-      await refreshProfile();
-      setReady(true);
+      try {
+        track("app_open");
+        const done = await getOnboardingDone();
+        setDone(done);
+        const local = await getLocalProfile();
+        if (local) setProfile((prev) => ({ ...prev, ...local }) as UserProfile);
+        await withTimeout(refreshProfile(), STARTUP_TIMEOUT_MS);
+      } catch (e) {
+        console.warn("[app] startup failed:", e);
+      } finally {
+        setReady(true);
+      }
     })();
   }, [refreshProfile]);
 
   const completeOnboarding = useCallback(async () => {
     await setOnboardingDone(true);
     setDone(true);
-    await updateProfile({ onboardingCompleted: true });
+    try {
+      await updateProfile({ onboardingCompleted: true });
+    } catch (e) {
+      console.warn("[app] onboarding sync failed:", e);
+    }
     track("onboarding_complete");
-    await refreshProfile();
+    await withTimeout(refreshProfile(), STARTUP_TIMEOUT_MS);
   }, [refreshProfile]);
 
   const saveProfile = useCallback(
     async (partial: Partial<UserProfile>) => {
       await setLocalProfile(partial);
-      setProfile((p) => (p ? { ...p, ...partial } : null));
-      await updateProfile(partial);
+      setProfile((p) => ({ ...(p ?? {}), ...partial }) as UserProfile);
+      try {
+        await updateProfile(partial);
+      } catch (e) {
+        console.warn("[app] profile sync failed:", e);
+      }
     },
     []
   );

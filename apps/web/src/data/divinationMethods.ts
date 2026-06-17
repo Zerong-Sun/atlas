@@ -1,4 +1,5 @@
 export {
+  getLocalizedMethodName,
   DIVINATION_METHODS,
   PREVIEW_WORKBENCH_IDS,
   getMethod,

@@ -1,14 +1,17 @@
 import { useMemo, useState } from "react";
-import { Image, Pressable, StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { drawLenormand, type LenormandResult } from "@atlas/engines/lenormand";
 import type { LenormandSpread } from "@atlas/shared-types";
 import { buildLenormandReportSnapshot } from "@atlas/method-core";
+import { CardDrawTable, FlipCard } from "@/components/charts/FlipCard";
 import { MethodHero } from "@/components/MethodHero";
+import { MethodReadingHistory } from "@/components/MethodReadingHistory";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
 import { useCardDrawPhase } from "@/hooks/useCardDrawPhase";
 import { useUiPrefs } from "@/hooks/useUiPrefs";
 import { getLenormandCardImageSource } from "@/lib/lenormandDeck";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -19,12 +22,14 @@ const SPREADS: Record<LenormandSpread, string> = {
   three: "三牌阵",
   five: "五牌阵",
   nine: "九宫格",
+  grand: "大牌阵",
 };
 
 export function LenormandScreen() {
   const [question, setQuestion] = useState("");
   const [spread, setSpread] = useState<LenormandSpread>("three");
   const [result, setResult] = useState<LenormandResult | null>(null);
+  const [entryId, setEntryId] = useState<string | null>(null);
   const { phase, isBusy, runDraw, resetPhase } = useCardDrawPhase();
   const { prefs } = useUiPrefs();
 
@@ -40,15 +45,33 @@ export function LenormandScreen() {
     if (!result || phase !== "revealed") return null;
     return buildLenormandReportSnapshot(question, SPREADS[spread], result, readings);
   }, [result, question, spread, readings, phase]);
-  useRegisterMethodCopilotReport(copilotReport);
+
+  const payload = useMemo(() => {
+    if (!result || phase !== "revealed") return null;
+    return {
+      methodId: "lenormand" as const,
+      question: question.trim() || undefined,
+      inputs: { spread },
+      result,
+    };
+  }, [result, phase, question, spread]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: phase === "revealed" && Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const draw = () => {
     if (isBusy) return;
     setResult(null);
+    setEntryId(null);
     runDraw({
       shuffleMs: prefs.mysticMotion ? 1000 : 0,
       revealMs: prefs.mysticMotion ? 400 : 0,
       onShuffleComplete: () => {
+        setEntryId(buildMethodReadingEntryId("lenormand"));
         setResult(
           drawLenormand({
             spread,
@@ -62,6 +85,15 @@ export function LenormandScreen() {
 
   const buttonTitle =
     phase === "shuffling" ? "洗牌中…" : phase === "revealed" ? "再抽一牌阵" : "抽牌";
+
+  const placeholderPositions =
+    spread === "three"
+      ? ["1", "2", "3"]
+      : spread === "five"
+        ? ["1", "2", "3", "4", "5"]
+        : spread === "nine"
+          ? ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+          : Array.from({ length: 36 }, (_, index) => `${index + 1}`);
 
   return (
     <Screen scroll>
@@ -92,6 +124,7 @@ export function LenormandScreen() {
               onPress={() => {
                 setSpread(s);
                 setResult(null);
+                setEntryId(null);
                 resetPhase();
               }}
             >
@@ -105,37 +138,56 @@ export function LenormandScreen() {
         <Button title={buttonTitle} onPress={draw} disabled={isBusy} />
       </View>
 
+      <View style={styles.spreadSection}>
+        <Text variant="label">牌面</Text>
+        <CardDrawTable>
+          {result
+            ? readings.map(({ card, meaning }, index) => {
+                const imageSource = getLenormandCardImageSource(card.id);
+                return (
+                  <FlipCard
+                    key={card.position}
+                    position={card.position}
+                    revealed={phase === "revealed"}
+                    index={index}
+                    compact={readings.length > 5}
+                    imageSource={imageSource}
+                    cardName={card.name}
+                    meta={
+                      <View style={styles.cardMeta}>
+                        <Text variant="caption" muted>
+                          {card.position}
+                        </Text>
+                        <Text variant="body" numberOfLines={1}>
+                          {card.name}
+                        </Text>
+                        <Text variant="caption" muted numberOfLines={2}>
+                          {meaning}
+                        </Text>
+                      </View>
+                    }
+                  />
+                );
+              })
+            : placeholderPositions.map((position, index) => (
+                <FlipCard
+                  key={position}
+                  position={position}
+                  revealed={false}
+                  index={index}
+                  placeholder
+                  placeholderHint="等待洗牌"
+                />
+              ))}
+        </CardDrawTable>
+      </View>
+
       {result && phase === "revealed" && (
         <View style={styles.result}>
           <MethodResultActions />
           {result.centerTheme && (
             <Text variant="heading">中心主题：{result.centerTheme}</Text>
           )}
-
-          <View style={styles.section}>
-            <Text variant="label">牌面</Text>
-            <View style={styles.cardGrid}>
-              {readings.map(({ card, meaning }) => {
-                const imageSource = getLenormandCardImageSource(card.id);
-                return (
-                  <View key={card.position} style={styles.cardTile}>
-                    {imageSource ? (
-                      <Image source={imageSource} style={styles.cardImage} resizeMode="cover" />
-                    ) : null}
-                    <Text variant="caption" muted>
-                      {card.position}
-                    </Text>
-                    <Text variant="body" numberOfLines={1}>
-                      {card.name}
-                    </Text>
-                    <Text variant="caption" muted numberOfLines={2}>
-                      {meaning}
-                    </Text>
-                  </View>
-                );
-              })}
-            </View>
-          </View>
 
           {result.pairs.length > 0 && (
             <View style={styles.section}>
@@ -147,8 +199,18 @@ export function LenormandScreen() {
               ))}
             </View>
           )}
+          {spread === "grand" && (
+            <View style={styles.section}>
+              <Text variant="label">大牌阵读法</Text>
+              <Text variant="body" muted>
+                先定位人物牌，再看同列、同行与近邻。底部四张作为命运角，提示难以直接控制的背景力量。
+              </Text>
+            </View>
+          )}
         </View>
       )}
+
+      <MethodReadingHistory methodId="lenormand" />
     </Screen>
   );
 }
@@ -167,6 +229,8 @@ const styles = StyleSheet.create({
   },
   chipActive: { borderColor: colors.gold, backgroundColor: colors.surfaceElevated },
   chipTextActive: { color: colors.gold },
+  spreadSection: { marginTop: spacing.lg, gap: spacing.xs },
+  cardMeta: { alignItems: "center", gap: 2, width: "100%" },
   result: {
     marginTop: spacing.xl,
     gap: spacing.md,
@@ -177,17 +241,4 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   section: { gap: spacing.xs },
-  cardGrid: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginTop: spacing.sm },
-  cardTile: {
-    width: "30%",
-    minWidth: 96,
-    gap: spacing.xs,
-    alignItems: "center",
-  },
-  cardImage: {
-    width: "100%",
-    aspectRatio: 2 / 3,
-    borderRadius: radius.sm,
-    backgroundColor: colors.surfaceElevated,
-  },
 });

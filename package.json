@@ -6,7 +6,12 @@
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "dev": "npm run dev:web",
-    "dev:mobile": "npm --prefix apps/mobile run start",
+    "dev:mobile": "cd apps/mobile && npx expo start",
+    "dev:mobile:tunnel": "cd apps/mobile && npx expo start --tunnel",
+    "dev:mobile:lan": "cd apps/mobile && npx expo start --lan",
+    "build:mobile:ios": "cd apps/mobile && npm run build:ios",
+    "build:mobile:android": "cd apps/mobile && npm run build:android",
+    "submit:mobile:ios": "cd apps/mobile && npm run submit:ios",
     "dev:web": "npm run dev -w @atlas/web",
     "build:web": "npm run build -w @atlas/web",
     "lint": "npm run lint --workspaces --if-present",

@@ -95,6 +95,8 @@ export default function DreamScreen() {
         data={history}
         keyExtractor={(item) => item.entryId}
         contentContainerStyle={styles.listContent}
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="handled"
         ListHeaderComponent={listHeader}
         ListFooterComponent={listFooter}
         renderItem={({ item }) => (

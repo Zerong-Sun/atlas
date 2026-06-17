@@ -4,7 +4,8 @@ import { castIChing } from "@atlas/engines";
 import { buildIchingReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
 import { Text } from "@/components/ui/Text";
@@ -66,6 +67,7 @@ export function IchingScreen() {
   const [question, setQuestion] = useState("");
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<IChingResult | null>(null);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const castStep = coinLines.length;
 
@@ -77,6 +79,7 @@ export function IchingScreen() {
     if (next.length === 6) {
       const seed = `${Date.now()}-${question}-${next.join("")}`;
       const raw = castIChing(seed) as unknown as IChingResult;
+      setEntryId(buildMethodReadingEntryId("iching"));
       setResult(raw);
     }
   };
@@ -84,13 +87,25 @@ export function IchingScreen() {
   const reset = () => {
     setCoinLines([]);
     setResult(null);
+    setEntryId(null);
   };
 
   const copilotReport = useMemo(
     () => (result ? buildIchingReportSnapshot(question, result) : null),
     [result, question],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+
+  const payload = useMemo(() => {
+    if (!result) return null;
+    return { methodId: "iching" as const, question: question.trim() || undefined, result };
+  }, [result, question]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   const primaryLines = useMemo<HexLine[]>(() => {
     if (!result) return [];

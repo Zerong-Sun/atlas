@@ -4,7 +4,8 @@ import { computeFengshui, type FengshuiResult } from "@atlas/engines/fengshui";
 import { buildFengshuiReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
-import { useRegisterMethodCopilotReport } from "@/hooks/useRegisterMethodCopilotReport";
+import { usePersistMethodReading } from "@/hooks/usePersistMethodReading";
+import { buildMethodReadingEntryId } from "@/lib/methodReadings";
 import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Screen } from "@/components/ui/Screen";
@@ -23,6 +24,7 @@ export function FengshuiScreen() {
   const [sittingDegree, setSittingDegree] = useState("0");
   const [birthYear, setBirthYear] = useState(birthYearFromProfile(profile?.birthDate));
   const [computed, setComputed] = useState(false);
+  const [entryId, setEntryId] = useState<string | null>(null);
 
   const degree = Number(sittingDegree);
   const validDegree = Number.isFinite(degree) ? ((degree % 360) + 360) % 360 : 0;
@@ -39,7 +41,21 @@ export function FengshuiScreen() {
     () => (result ? buildFengshuiReportSnapshot(result) : null),
     [result],
   );
-  useRegisterMethodCopilotReport(copilotReport);
+  const payload = useMemo(() => {
+    if (!result) return null;
+    return {
+      methodId: "fengshui" as const,
+      inputs: { sittingDegree: validDegree, birthYear },
+      result,
+    };
+  }, [result, validDegree, birthYear]);
+
+  usePersistMethodReading({
+    snapshot: copilotReport,
+    payload,
+    ready: Boolean(result),
+    entryId: entryId ?? undefined,
+  });
 
   return (
     <Screen scroll>
@@ -71,7 +87,13 @@ export function FengshuiScreen() {
             placeholder="1990"
           />
         </View>
-        <Button title="排飞星盘" onPress={() => setComputed(true)} />
+        <Button
+          title="排飞星盘"
+          onPress={() => {
+            setEntryId(buildMethodReadingEntryId("fengshui"));
+            setComputed(true);
+          }}
+        />
       </View>
 
       {result && (

@@ -1,9 +1,10 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import { DIVINATION_METHODS, type MethodStatus } from "@/data/divinationMethods";
+import { DIVINATION_METHODS, getLocalizedMethodName, type MethodStatus } from "@/data/divinationMethods";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 import { Page } from "@/components/ui/Page";
+import { getCulturalPrefs } from "@/lib/culturalPrefs";
 
 type StatusFilter = "all" | MethodStatus;
 
@@ -16,6 +17,7 @@ const STATUS_LABEL: Record<MethodStatus, string> = {
 export function MethodsPage() {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<StatusFilter>("all");
+  const culturalPrefs = useMemo(() => getCulturalPrefs(), []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -74,6 +76,7 @@ export function MethodsPage() {
             <MethodCard
               key={method.id}
               index={index}
+              locale={culturalPrefs.locale}
               compact={method.status === "planned"}
               {...method}
             />
@@ -121,10 +124,26 @@ function FilterButton({
 type MethodCardProps = (typeof DIVINATION_METHODS)[number] & {
   compact?: boolean;
   index: number;
+  locale: ReturnType<typeof getCulturalPrefs>["locale"];
 };
 
-function MethodCard({ id, title, subtitle, tradition, status, route, tags, compact, index }: MethodCardProps) {
+function MethodCard({
+  id,
+  title,
+  subtitle,
+  tradition,
+  civilization,
+  culturalNote,
+  questionStyle,
+  status,
+  route,
+  tags,
+  compact,
+  index,
+  locale,
+}: MethodCardProps) {
   const experience = getMethodExperience(id);
+  const localizedName = getLocalizedMethodName(id, locale);
   const cardStyle = {
     ...methodExperienceStyle(experience),
     "--i": index,
@@ -137,11 +156,14 @@ function MethodCard({ id, title, subtitle, tradition, status, route, tags, compa
       </div>
       <div className="method-card__body">
         <div className="method-card__top">
-          <span>{tradition}</span>
+          <span>{tradition} · {civilization}</span>
           <i>{STATUS_LABEL[status]}</i>
         </div>
-        <strong>{title}</strong>
+        <strong>{localizedName ?? title}</strong>
+        {localizedName && localizedName !== title ? <em>{title}</em> : null}
         <p>{subtitle}</p>
+        <p>{culturalNote}</p>
+        <p>{questionStyle}</p>
         <div className="method-card__tags">
           {tags.map((tag) => (
             <span key={tag}>{tag}</span>

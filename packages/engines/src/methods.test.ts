@@ -10,7 +10,7 @@ import { castScryingVision } from "./scrying.js";
 import { computeNumerology } from "./numerology.js";
 import { castGeomancy } from "./geomancy.js";
 import { castMeihua } from "./meihua.js";
-import { computeVedic } from "./vedic.js";
+import { computeVedic } from "./vedic/ephemeris.node.js";
 import { readXiangmian } from "./xiangmian.js";
 import { readPalmistry } from "./palmistry.js";
 import { drawLot, registerLotSigns } from "./lot.js";
@@ -24,6 +24,16 @@ describe("drawLenormand", () => {
     const b = drawLenormand({ seed: "test-seed", spread: "three" });
     assert.equal(a.cards.map((c) => c.id).join(","), b.cards.map((c) => c.id).join(","));
     assert.equal(a.cards.length, 3);
+  });
+
+  it("draws a 36-card Grand Tableau with grid coordinates", () => {
+    const result = drawLenormand({ seed: "grand-tableau", spread: "grand" });
+    assert.equal(result.cards.length, 36);
+    assert.equal(result.cards.every((card) => card.gridRow != null && card.gridCol != null), true);
+    assert.deepEqual(
+      result.cards.slice(32).map((card) => [card.gridRow, card.gridCol]),
+      [[4, 2], [4, 3], [4, 4], [4, 5]],
+    );
   });
 });
 
@@ -155,6 +165,32 @@ describe("castGeomancy", () => {
     const b = castGeomancy({ seed: "geomancy-seed" });
     assert.equal(a.judge.key, b.judge.key);
     assert.equal(a.mothers.length, 4);
+  });
+
+  it("accepts hand-pointed mothers", () => {
+    const mothers = [
+      [true, true, false, true],
+      [false, true, true, false],
+      [true, false, false, false],
+      [false, false, false, false],
+    ];
+    const a = castGeomancy({ mothers });
+    const b = castGeomancy({ mothers });
+    assert.deepEqual(
+      a.mothers.map((m) => m.key),
+      b.mothers.map((m) => m.key),
+    );
+    assert.equal(a.daughters.length, 4);
+    assert.equal(a.seed, "manual:1101-0110-1000-0000");
+  });
+
+  it("selects a significator house from the question type", () => {
+    const career = castGeomancy({ seed: "geomancy-career", questionType: "career" });
+    const relationship = castGeomancy({ seed: "geomancy-career", questionType: "relationship" });
+    assert.equal(career.significator.house, 10);
+    assert.equal(career.significator.figure.key, career.houses[9]!.figure.key);
+    assert.equal(relationship.significator.house, 7);
+    assert.ok(career.summary.includes("用神宫第10宫"));
   });
 });
 
