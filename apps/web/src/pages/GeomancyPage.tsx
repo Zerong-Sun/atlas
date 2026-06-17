@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { castGeomancy, type GeomancyResult } from "@atlas/engines/geomancy";
+import { castGeomancy, type GeomancyQuestionType, type GeomancyResult } from "@atlas/engines/geomancy";
 import {
   createEmptyMothers,
   GeomancyMotherBuilder,
@@ -21,9 +21,21 @@ import { playMethodSound } from "@/lib/methodSounds";
 
 type CastMode = "tap" | "random";
 
+const QUESTION_TYPES: Array<{ id: GeomancyQuestionType; label: string; hint: string }> = [
+  { id: "general", label: "综合", hint: "一宫起看" },
+  { id: "career", label: "事业", hint: "十宫" },
+  { id: "relationship", label: "关系", hint: "七宫" },
+  { id: "money", label: "金钱", hint: "二宫" },
+  { id: "home", label: "家庭", hint: "四宫" },
+  { id: "health", label: "健康", hint: "六宫" },
+  { id: "travel", label: "远行", hint: "九宫" },
+  { id: "study", label: "学习", hint: "九宫" },
+];
+
 export function GeomancyPage() {
   const [question, setQuestion] = useState("");
   const [mode, setMode] = useState<CastMode>("tap");
+  const [questionType, setQuestionType] = useState<GeomancyQuestionType>("general");
   const [mothers, setMothers] = useState<MotherRowState[][]>(createEmptyMothers);
   const [activeMother, setActiveMother] = useState(0);
   const [result, setResult] = useState<GeomancyResult | null>(null);
@@ -52,6 +64,7 @@ export function GeomancyPage() {
     const next = castGeomancy({
       mothers: mothersToBooleanMatrix(mothers),
       question: question.trim() || undefined,
+      questionType,
     });
     setResult(next);
     push(next);
@@ -61,8 +74,8 @@ export function GeomancyPage() {
 
   const castRandom = () => {
     playMethodSound("geomancy", "action");
-    const seed = buildMethodSeed("geomancy", [question, history.length]);
-    const next = castGeomancy({ seed, question: question.trim() || undefined });
+    const seed = buildMethodSeed("geomancy", [question, questionType, history.length]);
+    const next = castGeomancy({ seed, question: question.trim() || undefined, questionType });
     setResult(next);
     push(next);
     playMethodSound("geomancy", "complete");
@@ -113,6 +126,20 @@ export function GeomancyPage() {
           >
             一键随机
           </button>
+        </div>
+
+        <div className="geomancy-question-types" role="group" aria-label="问题类型">
+          {QUESTION_TYPES.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={questionType === item.id ? "chip active" : "chip"}
+              onClick={() => setQuestionType(item.id)}
+            >
+              <span>{item.label}</span>
+              <small>{item.hint}</small>
+            </button>
+          ))}
         </div>
 
         {mode === "tap" && (
@@ -195,10 +222,17 @@ export function GeomancyPage() {
               <p>四母代表问题的原始材料，四女代表材料的派生流向；左右见证分别提示过程与外部佐证，审判图是最终收束。</p>
               <p>十二宫用于把图形放回现实领域：一宫看自身，七宫看对方，十宫看事业与公开结果，四宫看根基与结局。</p>
             </div>
+            <div className="combo-panel combo-panel--focus">
+              <h3>用神宫 · 第{result.significator.house}宫</h3>
+              <p>
+                <strong>{result.significator.label}：{result.significator.figure.name}</strong>
+              </p>
+              <p>{result.significator.reading}</p>
+            </div>
           </div>
           <div className="reading-grid">
             {result.houses.map((h) => (
-              <article key={h.house}>
+              <article key={h.house} className={h.house === result.significator.house ? "is-focus" : undefined}>
                 <span>第{h.house}宫</span>
                 <strong>{h.figure.name}</strong>
                 <p>{h.figure.meaning}</p>

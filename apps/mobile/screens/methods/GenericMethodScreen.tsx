@@ -11,6 +11,7 @@ import {
   readPalmistry,
   readXiangmian,
   type GeomancyResult,
+  type GeomancyQuestionType,
   type MeihuaResult,
   type NumerologyResult,
   type OracleResult,
@@ -70,6 +71,7 @@ type Draft = {
   observations: string[];
   hand: "left" | "right" | "both";
   crystalId: string;
+  geomancyQuestionType: GeomancyQuestionType;
 };
 
 type GenericResult =
@@ -95,6 +97,7 @@ const DEFAULT_DRAFT: Draft = {
   observations: [],
   hand: "right",
   crystalId: "quartz",
+  geomancyQuestionType: "general",
 };
 
 const OBSERVATIONS: Record<"xiangmian" | "palmistry", string[]> = {
@@ -108,6 +111,17 @@ const CRYSTALS = [
   { id: "obsidian", label: "黑曜石" },
   { id: "rose", label: "粉晶" },
   { id: "citrine", label: "黄水晶" },
+];
+
+const GEOMANCY_QUESTION_TYPES: Array<[GeomancyQuestionType, string]> = [
+  ["general", "综合"],
+  ["career", "事业"],
+  ["relationship", "关系"],
+  ["money", "金钱"],
+  ["home", "家庭"],
+  ["health", "健康"],
+  ["travel", "远行"],
+  ["study", "学习"],
 ];
 
 function isGenericMethodId(value: string): value is GenericMethodId {
@@ -169,7 +183,7 @@ function buildResult(methodId: GenericMethodId, draft: Draft): GenericResult {
     case "numerology":
       return computeNumerology({ birthDate: draft.birthDate, name: draft.name.trim() || "Seeker" });
     case "geomancy":
-      return castGeomancy({ seed, question });
+      return castGeomancy({ seed, question, questionType: draft.geomancyQuestionType });
     case "xiangmian":
       return readXiangmian({ question, observations: draft.observations.length ? draft.observations : OBSERVATIONS.xiangmian.slice(0, 2) });
     case "palmistry":
@@ -234,6 +248,11 @@ function summaryRows(methodId: GenericMethodId, result: GenericResult): Array<{ 
     case "geomancy": {
       const r = result as GeomancyResult;
       return [
+        {
+          label: `用神宫 · 第${r.significator.house}宫`,
+          value: r.significator.figure.name,
+          detail: r.significator.reading,
+        },
         { label: "审判图", value: r.judge.name, detail: r.judge.meaning },
         { label: "左见证", value: r.witnesses[0]?.name ?? "—", detail: r.witnesses[0]?.meaning },
         { label: "右见证", value: r.witnesses[1]?.name ?? "—", detail: r.witnesses[1]?.meaning },
@@ -418,6 +437,17 @@ export function GenericMethodScreen() {
           <ChipRow items={CRYSTALS.map((c) => [c.id, c.label])} value={draft.crystalId} onChange={(crystalId) => updateDraft({ crystalId })} />
         ) : null}
 
+        {methodId === "geomancy" ? (
+          <>
+            <Text variant="label">问题类型</Text>
+            <ChipRow
+              items={GEOMANCY_QUESTION_TYPES}
+              value={draft.geomancyQuestionType}
+              onChange={(geomancyQuestionType) => updateDraft({ geomancyQuestionType: geomancyQuestionType as GeomancyQuestionType })}
+            />
+          </>
+        ) : null}
+
         {methodId === "palmistry" ? (
           <ChipRow
             items={[
@@ -479,7 +509,7 @@ export function GenericMethodScreen() {
           ) : null}
           {methodId === "geomancy" ? (
             <Text variant="caption" muted style={styles.note}>
-              法庭图读法：四母是原始材料，见证人提示过程和外部佐证，审判图是最终收束；十二宫用于映射自身、对方、事业与结局。
+              法庭图读法：先看用神宫对应的现实领域，再用左右见证判断过程和外部佐证，审判图是最终收束。
             </Text>
           ) : null}
         </View>
@@ -521,7 +551,12 @@ function MethodResultVisual({ methodId, result }: { methodId: GenericMethodId; r
   if (methodId === "geomancy") {
     const r = result as GeomancyResult;
     return (
-      <View style={styles.visualPanel}>
+      <View style={[styles.visualPanel, styles.geomancyPanel]}>
+        <View style={styles.geomancyFocus}>
+          <Text variant="caption" gold numberOfLines={1}>第{r.significator.house}宫</Text>
+          <Text variant="body" numberOfLines={1}>{r.significator.figure.name}</Text>
+          <Text variant="caption" muted numberOfLines={2}>{r.significator.label}</Text>
+        </View>
         {[...r.mothers.slice(0, 2), ...r.witnesses, r.judge].map((figure) => (
           <View key={`${figure.key}-${figure.name}`} style={styles.geomancyFigure}>
             <Text variant="caption" gold numberOfLines={1}>{figure.name}</Text>
@@ -729,6 +764,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.goldDim,
     backgroundColor: colors.surface,
+  },
+  geomancyPanel: { flexWrap: "wrap" },
+  geomancyFocus: {
+    width: 92,
+    gap: 2,
+    padding: spacing.sm,
+    borderWidth: 1,
+    borderColor: colors.goldDim,
+    borderRadius: radius.sm,
+    backgroundColor: colors.surfaceElevated,
   },
   visualText: { flex: 1, gap: spacing.xs },
   hexStack: { width: 96, gap: 7 },

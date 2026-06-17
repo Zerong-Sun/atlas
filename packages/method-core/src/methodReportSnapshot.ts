@@ -676,6 +676,8 @@ export function buildGeomancyReportSnapshot(
       `问题：${question.trim() || "一般事项"}`,
       "",
       `四母：${result.mothers.map((m) => m.name).join("、")}`,
+      `用神宫：第${result.significator.house}宫 ${result.significator.label} · ${result.significator.figure.name}`,
+      result.significator.reading,
       `审判图：${result.judge.name} — ${result.judge.meaning}`,
       `左见证：${result.witnesses[0]!.name} · 右见证：${result.witnesses[1]!.name}`,
       "",

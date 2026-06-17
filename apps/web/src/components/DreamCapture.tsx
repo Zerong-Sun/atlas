@@ -2,6 +2,7 @@ import { useMemo, useState, type ReactNode } from "react";
 import type { DreamInterpretation } from "@/lib/api/dreams";
 import { matchDreamSymbols, searchDreamSymbols } from "@/data/dreamSymbolsLibrary";
 import { Button } from "@/components/ui/Button";
+import { getCulturalPrefs } from "@/lib/culturalPrefs";
 
 const EMOTIONS = ["平静", "焦虑", "喜悦", "恐惧", "困惑", "期待"];
 
@@ -27,6 +28,7 @@ export function DreamCapture({ onSubmit, loading, result, resultActions }: Props
   const [emotions, setEmotions] = useState<string[]>([]);
   const [symbols, setSymbols] = useState<string[]>([]);
   const [query, setQuery] = useState("");
+  const culturalPrefs = useMemo(() => getCulturalPrefs(), []);
 
   const autoMatched = useMemo(() => matchDreamSymbols(text), [text]);
   const suggestions = useMemo(() => searchDreamSymbols(query), [query]);
@@ -144,14 +146,28 @@ export function DreamCapture({ onSubmit, loading, result, resultActions }: Props
               body={buildFolkDreamView(symbols, emotions)}
             />
             <InterpretBlock
-              title="伊斯兰友好视角"
-              body="此视角不把梦包装成确定预言。更适合记录梦后感受、祈祷/静思后的行动倾向，并把重大决定交还给现实证据、伦理判断与可信赖的人际商量。"
+              title="文化适配"
+              body={buildCulturalDreamView(culturalPrefs.culturalLens, culturalPrefs.locale)}
             />
           </div>
         </section>
       )}
     </div>
   );
+}
+
+function buildCulturalDreamView(lens: ReturnType<typeof getCulturalPrefs>["culturalLens"], locale: ReturnType<typeof getCulturalPrefs>["locale"]): string {
+  const localeNote = locale === "en-US"
+    ? "When translating dream terms, keep the original symbol beside the explanation so cultural meaning is not flattened."
+    : locale === "ja-JP"
+      ? "可把梦中征兆和日常礼俗、季节感并读，但避免把它说成唯一答案。"
+      : locale === "ko-KR"
+        ? "可结合家族、礼俗与日常关系阅读梦象，同时保留现实判断。"
+        : "可保留原文化术语，再用现代白话解释，避免把不同传统硬翻成同一种说法。";
+  if (lens === "native") return `本土语境会优先尊重梦占传统内部的说法；${localeNote}`;
+  if (lens === "academic") return `研究注释会把梦当作民俗、心理和叙事材料并读，标出不确定性；${localeNote}`;
+  if (lens === "diaspora") return `跨文化入门会先解释符号背景，再提示它在日常生活里可能对应的感受；${localeNote}`;
+  return `文明对照会并列民俗征兆、心理投射与伦理行动，不急着合成单一结论；${localeNote}`;
 }
 
 function buildFolkDreamView(symbols: string[], emotions: string[]): string {

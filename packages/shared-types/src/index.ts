@@ -176,6 +176,7 @@ export interface GeomancyInput {
   seed?: string;
   question?: string;
   mothers?: boolean[][];
+  questionType?: "general" | "self" | "relationship" | "career" | "home" | "money" | "travel" | "health" | "study";
 }
 
 export type MeihuaMode = "number" | "time";

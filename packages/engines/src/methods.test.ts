@@ -183,6 +183,15 @@ describe("castGeomancy", () => {
     assert.equal(a.daughters.length, 4);
     assert.equal(a.seed, "manual:1101-0110-1000-0000");
   });
+
+  it("selects a significator house from the question type", () => {
+    const career = castGeomancy({ seed: "geomancy-career", questionType: "career" });
+    const relationship = castGeomancy({ seed: "geomancy-career", questionType: "relationship" });
+    assert.equal(career.significator.house, 10);
+    assert.equal(career.significator.figure.key, career.houses[9]!.figure.key);
+    assert.equal(relationship.significator.house, 7);
+    assert.ok(career.summary.includes("用神宫第10宫"));
+  });
 });
 
 describe("castMeihua", () => {

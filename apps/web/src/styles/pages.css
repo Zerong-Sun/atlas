@@ -4323,6 +4323,25 @@ button.palace-grid__cell:hover {
   height: 6px;
 }
 
+.geomancy-question-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.geomancy-question-types .chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 86px;
+}
+
+.geomancy-question-types small {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
 .geomancy-result__mothers,
 .geomancy-result__witnesses {
   display: flex;
@@ -4334,6 +4353,16 @@ button.palace-grid__cell:hover {
 
 .geomancy-result__witnesses {
   align-items: flex-end;
+}
+
+.combo-panel--focus {
+  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.reading-grid article.is-focus {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.16);
 }
 
 .geomancy-figure__caption {

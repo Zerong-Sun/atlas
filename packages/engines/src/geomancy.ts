@@ -4,6 +4,7 @@ import { createRng } from "./seed.ts";
 /** true = one dot (active), false = two dots (passive) */
 export type GeomancyLine = boolean;
 export type GeomancyFigure = [GeomancyLine, GeomancyLine, GeomancyLine, GeomancyLine];
+export type GeomancyQuestionType = NonNullable<GeomancyInput["questionType"]>;
 
 export const GEOMANCY_FIGURES: Record<string, { name: string; meaning: string; lines: GeomancyFigure }> = {
   via: { name: "Via", meaning: "道路变化，移动与不稳定", lines: [true, true, true, true] },
@@ -25,6 +26,20 @@ export const GEOMANCY_FIGURES: Record<string, { name: string; meaning: string; l
 };
 
 const FIGURE_KEYS = Object.keys(GEOMANCY_FIGURES);
+const SIGNIFICATOR_HOUSES: Record<
+  GeomancyQuestionType,
+  { house: number; label: string; focus: string }
+> = {
+  general: { house: 1, label: "一般事项", focus: "先看提问者自身状态，再以审判图收束。" },
+  self: { house: 1, label: "自身与状态", focus: "观察身体感受、主动性与当下处境。" },
+  money: { house: 2, label: "金钱与资源", focus: "观察收入、资产、物品与资源流入流出。" },
+  home: { house: 4, label: "家庭与根基", focus: "观察住处、根基、土地、家人和事情的结局。" },
+  health: { house: 6, label: "健康与日常", focus: "观察日常负担、修复节奏与需要照看的细节。" },
+  relationship: { house: 7, label: "关系与对方", focus: "观察伴侣、合作方、对手与一对一互动。" },
+  travel: { house: 9, label: "远行与远方", focus: "观察远行、跨文化事务、学习与愿景扩展。" },
+  study: { house: 9, label: "学习与信念", focus: "观察高阶学习、考试方向、导师与理解框架。" },
+  career: { house: 10, label: "事业与公开结果", focus: "观察职业路径、名望、负责人和外部可见成果。" },
+};
 
 function figureKey(lines: GeomancyFigure): string {
   const key = FIGURE_KEYS.find((k) =>
@@ -53,6 +68,14 @@ export interface GeomancyResult {
   witnesses: ReturnType<typeof figureFromLines>[];
   judge: ReturnType<typeof figureFromLines>;
   houses: Array<{ house: number; figure: ReturnType<typeof figureFromLines> }>;
+  significator: {
+    questionType: GeomancyQuestionType;
+    house: number;
+    label: string;
+    focus: string;
+    figure: ReturnType<typeof figureFromLines>;
+    reading: string;
+  };
   summary: string;
   seed: string;
   question?: string;
@@ -96,8 +119,19 @@ export function castGeomancy(input: GeomancyInput = {}): GeomancyResult {
 
   const houseFigures = [mothers[0]!, mothers[1]!, nieces[0]!, mothers[2]!, mothers[3]!, nieces[1]!, daughters[0]!, daughters[1]!, daughters[2]!, daughters[3]!, witnesses[0]!, judge];
   const houses = houseFigures.map((figure, index) => ({ house: index + 1, figure }));
+  const questionType = input.questionType ?? "general";
+  const significatorHouse = SIGNIFICATOR_HOUSES[questionType];
+  const significatorFigure = houses[significatorHouse.house - 1]!.figure;
+  const significator = {
+    questionType,
+    house: significatorHouse.house,
+    label: significatorHouse.label,
+    focus: significatorHouse.focus,
+    figure: significatorFigure,
+    reading: `用神宫第${significatorHouse.house}宫 ${significatorFigure.name}：${significatorFigure.meaning}。${significatorHouse.focus}`,
+  };
 
-  const summary = `审判图 ${judge.name}：${judge.meaning}。左见证 ${witnesses[0]!.name}，右见证 ${witnesses[1]!.name}。`;
+  const summary = `用神宫第${significator.house}宫 ${significator.figure.name}；审判图 ${judge.name}：${judge.meaning}。左见证 ${witnesses[0]!.name}，右见证 ${witnesses[1]!.name}。`;
 
   return {
     mothers,
@@ -106,6 +140,7 @@ export function castGeomancy(input: GeomancyInput = {}): GeomancyResult {
     witnesses,
     judge,
     houses,
+    significator,
     summary,
     seed,
     question: input.question,

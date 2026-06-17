@@ -26,7 +26,7 @@ import { drawOracle, type OracleResult } from "./oracle.ts";
 import { readCoffeeGrounds, type CoffeeResult } from "./coffee.ts";
 import { castScryingVision, type ScryingResult } from "./scrying.ts";
 import { computeNumerology, type NumerologyResult } from "./numerology.ts";
-import { castGeomancy, type GeomancyResult } from "./geomancy.ts";
+import { castGeomancy, type GeomancyQuestionType, type GeomancyResult } from "./geomancy.ts";
 import { castMeihua, type MeihuaResult } from "./meihua.ts";
 import { buildVedicChart, type VedicResult } from "./vedic.ts";
 import { readXiangmian, type XiangmianResult } from "./xiangmian.ts";
@@ -82,6 +82,7 @@ export {
   type CoffeeResult,
   type ScryingResult,
   type NumerologyResult,
+  type GeomancyQuestionType,
   type GeomancyResult,
   type MeihuaResult,
   type VedicResult,
