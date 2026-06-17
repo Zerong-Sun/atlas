@@ -10,6 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import {
   DEFAULT_ANALYSIS_PROMPT,
   getMethodCopilotConfig,
@@ -104,73 +105,84 @@ export function MethodCopilot() {
 
   return (
     <Modal visible={open} animationType="slide" presentationStyle="pageSheet" onRequestClose={() => setOpen(false)}>
-      <KeyboardAvoidingView
-        style={styles.container}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
-      >
-        <View style={styles.header}>
-          <Text variant="heading">{config.title}</Text>
-          <Pressable onPress={() => setOpen(false)}>
-            <Text variant="label" style={styles.close}>
-              关闭
-            </Text>
-          </Pressable>
-        </View>
-        <Text variant="caption" muted style={styles.subtitle}>
-          {config.subtitle}
-        </Text>
-        {prefs.safeMode && (
-          <Text variant="caption" style={styles.safeNote}>
-            解读仅供反思，不构成医疗、法律或投资建议。涉及重大决策请咨询专业人士。
-          </Text>
-        )}
-
-        <ScrollView ref={scrollRef} style={styles.scroll} contentContainerStyle={styles.scrollContent}>
-          {turns.map((turn, i) => (
-            <View
-              key={`${turn.role}-${i}`}
-              style={[styles.bubble, turn.role === "user" ? styles.userBubble : styles.assistantBubble]}
-            >
-              <Text variant="body">{turn.content}</Text>
-              {turn.sections?.map((section) => (
-                <View key={section.title} style={styles.section}>
-                  <Text variant="label">{section.title}</Text>
-                  <Text variant="body" muted>
-                    {section.content}
-                  </Text>
-                </View>
-              ))}
-            </View>
-          ))}
-          {loading ? <ActivityIndicator color={colors.gold} style={styles.loader} /> : null}
-        </ScrollView>
-
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.prompts}>
-          {quickPrompts.map((prompt) => (
-            <Pressable key={prompt} style={styles.chip} onPress={() => void submit(prompt)}>
-              <Text variant="caption">{prompt}</Text>
+      <SafeAreaView style={styles.safe} edges={["top", "bottom"]}>
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : undefined}>
+          <View style={styles.header}>
+            <Text variant="heading">{config.title}</Text>
+            <Pressable onPress={() => setOpen(false)}>
+              <Text variant="label" style={styles.close}>
+                关闭
+              </Text>
             </Pressable>
-          ))}
-        </ScrollView>
+          </View>
+          <Text variant="caption" muted style={styles.subtitle}>
+            {config.subtitle}
+          </Text>
+          {prefs.safeMode && (
+            <Text variant="caption" style={styles.safeNote}>
+              解读仅供反思，不构成医疗、法律或投资建议。涉及重大决策请咨询专业人士。
+            </Text>
+          )}
 
-        <View style={styles.inputRow}>
-          <TextInput
-            style={styles.input}
-            value={input}
-            onChangeText={setInput}
-            placeholder="提问…"
-            placeholderTextColor={colors.textMuted}
-            multiline
-          />
-          <Button title="发送" onPress={() => void submit(input)} disabled={loading || !input.trim()} />
-        </View>
-      </KeyboardAvoidingView>
+          <ScrollView
+            ref={scrollRef}
+            style={styles.scroll}
+            contentContainerStyle={styles.scrollContent}
+            keyboardDismissMode={Platform.OS === "ios" ? "interactive" : "on-drag"}
+            keyboardShouldPersistTaps="handled"
+          >
+            {turns.map((turn, i) => (
+              <View
+                key={`${turn.role}-${i}`}
+                style={[styles.bubble, turn.role === "user" ? styles.userBubble : styles.assistantBubble]}
+              >
+                <Text variant="body">{turn.content}</Text>
+                {turn.sections?.map((section) => (
+                  <View key={section.title} style={styles.section}>
+                    <Text variant="label">{section.title}</Text>
+                    <Text variant="body" muted>
+                      {section.content}
+                    </Text>
+                  </View>
+                ))}
+              </View>
+            ))}
+            {loading ? <ActivityIndicator color={colors.gold} style={styles.loader} /> : null}
+          </ScrollView>
+
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            keyboardShouldPersistTaps="handled"
+            style={styles.prompts}
+          >
+            {quickPrompts.map((prompt) => (
+              <Pressable key={prompt} style={styles.chip} onPress={() => void submit(prompt)}>
+                <Text variant="caption">{prompt}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
+
+          <View style={styles.inputRow}>
+            <TextInput
+              style={styles.input}
+              value={input}
+              onChangeText={setInput}
+              placeholder="提问…"
+              placeholderTextColor={colors.textMuted}
+              multiline
+            />
+            <Button title="发送" onPress={() => void submit(input)} disabled={loading || !input.trim()} />
+          </View>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </Modal>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.ink, paddingTop: spacing.lg },
+  safe: { flex: 1, backgroundColor: colors.ink },
+  container: { flex: 1, backgroundColor: colors.ink },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",

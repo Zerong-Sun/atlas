@@ -139,6 +139,8 @@ export default function ProfileScreen() {
         data={history}
         keyExtractor={(item) => item.readingId}
         contentContainerStyle={styles.listContent}
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="handled"
         ListHeaderComponent={listHeader}
         ListEmptyComponent={
           <Text variant="body" muted style={styles.emptyHistory}>

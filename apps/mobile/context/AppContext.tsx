@@ -49,6 +49,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         track("app_open");
         const done = await getOnboardingDone();
         setDone(done);
+        const local = await getLocalProfile();
+        if (local) setProfile((prev) => ({ ...prev, ...local }) as UserProfile);
         await withTimeout(refreshProfile(), STARTUP_TIMEOUT_MS);
       } catch (e) {
         console.warn("[app] startup failed:", e);
@@ -61,16 +63,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const completeOnboarding = useCallback(async () => {
     await setOnboardingDone(true);
     setDone(true);
-    await updateProfile({ onboardingCompleted: true });
+    try {
+      await updateProfile({ onboardingCompleted: true });
+    } catch (e) {
+      console.warn("[app] onboarding sync failed:", e);
+    }
     track("onboarding_complete");
-    await refreshProfile();
+    await withTimeout(refreshProfile(), STARTUP_TIMEOUT_MS);
   }, [refreshProfile]);
 
   const saveProfile = useCallback(
     async (partial: Partial<UserProfile>) => {
       await setLocalProfile(partial);
-      setProfile((p) => (p ? { ...p, ...partial } : null));
-      await updateProfile(partial);
+      setProfile((p) => ({ ...(p ?? {}), ...partial }) as UserProfile);
+      try {
+        await updateProfile(partial);
+      } catch (e) {
+        console.warn("[app] profile sync failed:", e);
+      }
     },
     []
   );

@@ -38,6 +38,7 @@ npx expo start
 ```
 
 **不要**在 monorepo 根目录（`untitled/`）直接运行 `npx expo start`，否则会加载默认 `AppEntry` 并报 `Unable to resolve ../../App`。
+根目录脚本 `npm run dev:mobile` 已经会先切到 `apps/mobile`，适合直接给 Expo Go 扫码。
 
 Then press `i` (iOS simulator), `a` (Android), or scan the QR code with **Expo Go SDK 54**.
 

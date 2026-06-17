@@ -86,7 +86,7 @@ npm run dev:mobile
 # 或 cd apps/mobile && npx expo start
 ```
 
-在终端按 `i`（iOS 模拟器）、`a`（Android）或 Expo Go 扫码。详见 [apps/mobile/README.md](apps/mobile/README.md)。
+在终端按 `i`（iOS 模拟器）、`a`（Android）或 Expo Go 扫码。请使用 `npm run dev:mobile` 或先 `cd apps/mobile`；不要在仓库根目录直接运行 `npx expo start`。详见 [apps/mobile/README.md](apps/mobile/README.md)。
 
 > 请勿在仓库根目录运行 `npx expo start`——会误把 monorepo 根目录当作 Expo 项目，报 `Unable to resolve ../../App`。
 
