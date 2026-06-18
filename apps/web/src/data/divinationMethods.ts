@@ -1,6 +1,10 @@
 export {
   getLocalizedMethodName,
   getMethodCognition,
+  explainCausalityModel,
+  explainUncertaintyMode,
+  formatCausalityModel,
+  formatUncertaintyMode,
   CULTURAL_METHOD_GROUPS,
   DIVINATION_METHODS,
   PREVIEW_WORKBENCH_IDS,

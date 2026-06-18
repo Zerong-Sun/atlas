@@ -12,6 +12,50 @@ export type MethodCognition = {
   misuseBoundary: string;
 };
 
+const CAUSALITY_LABELS: Record<CausalityModel, string> = {
+  "birth-structure": "出生结构与阶段周期",
+  "time-position": "时位、处境与变化条件",
+  "celestial-cycle": "天体周期与人生节律",
+  "symbolic-projection": "图像符号与心理投射",
+  "ritual-confirmation": "礼俗仪式与确认机制",
+  "folk-association": "日常痕迹与民俗联想",
+  "spatial-flow": "时空方位与资源布局",
+  "textual-admonition": "文本劝诫与典故修辞",
+};
+
+const CAUSALITY_EXPLANATIONS: Record<CausalityModel, string> = {
+  "birth-structure": "出生时刻形成长期结构，后续周期触发变化。",
+  "time-position": "当前处境、位置、时机与行动关系共同构成判断。",
+  "celestial-cycle": "天体周期被用来描述阶段压力、身份转向和人生节律。",
+  "symbolic-projection": "抽取到的图像和符号让心理动力与情境关系显形。",
+  "ritual-confirmation": "通过礼俗、仪式或确认机制帮助行动定心。",
+  "folk-association": "从日常痕迹、梦境、身体观察或民俗联想进入解释。",
+  "spatial-flow": "时间、空间、方位和资源分布共同影响行动策略。",
+  "textual-admonition": "用文本、典故和劝诫修辞把问题转成行动提醒。",
+};
+
+const UNCERTAINTY_LABELS: Record<UncertaintyMode, string> = {
+  trend: "趋势倾向",
+  timing: "宜动宜守与时机条件",
+  "yes-no": "是非确认",
+  "psychological-mirroring": "心理显影",
+  admonition: "劝诫提示",
+  "event-narrative": "事件叙事",
+  "strategic-positioning": "策略布局",
+  reflection: "反思练习",
+};
+
+const UNCERTAINTY_EXPLANATIONS: Record<UncertaintyMode, string> = {
+  trend: "给出阶段倾向，而不是保证单一事件。",
+  timing: "判断宜动、宜守，以及变化需要满足的条件。",
+  "yes-no": "把问题收束为可、不可、未明或需要重问。",
+  "psychological-mirroring": "照见心理动力、盲点和下一步姿态。",
+  admonition: "以劝诫、等待或修正方向回应不确定性。",
+  "event-narrative": "把现实线索组织成近期事件叙事。",
+  "strategic-positioning": "把不确定性转成时机、方位、资源和阻力的布局。",
+  reflection: "作为文化探索和自我反思材料。",
+};
+
 const profile = (
   questionGrammar: string,
   causalityModel: CausalityModel,
@@ -303,4 +347,20 @@ export const METHOD_COGNITION: Record<string, MethodCognition> = {
 
 export function getMethodCognition(methodId: string): MethodCognition | undefined {
   return METHOD_COGNITION[methodId];
+}
+
+export function formatCausalityModel(model: CausalityModel): string {
+  return CAUSALITY_LABELS[model];
+}
+
+export function explainCausalityModel(model: CausalityModel): string {
+  return CAUSALITY_EXPLANATIONS[model];
+}
+
+export function formatUncertaintyMode(mode: UncertaintyMode): string {
+  return UNCERTAINTY_LABELS[mode];
+}
+
+export function explainUncertaintyMode(mode: UncertaintyMode): string {
+  return UNCERTAINTY_EXPLANATIONS[mode];
 }

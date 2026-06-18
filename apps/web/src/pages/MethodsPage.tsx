@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import {
   CULTURAL_METHOD_GROUPS,
   DIVINATION_METHODS,
+  formatCausalityModel,
+  formatUncertaintyMode,
   getMethodCognition,
   getLocalizedMethodName,
   type CausalityModel,
@@ -34,16 +36,17 @@ export function MethodsPage() {
     const q = query.trim().toLowerCase();
     return DIVINATION_METHODS.filter((method) => {
       const matchesStatus = status === "all" || method.status === status;
+      const cognition = getMethodCognition(method.id);
       const searchable = [
         method.title,
         method.subtitle,
         method.tradition,
         method.civilization,
         method.questionStyle,
-        getMethodCognition(method.id)?.questionGrammar,
-        getMethodCognition(method.id)?.causalityModel,
-        getMethodCognition(method.id)?.uncertaintyMode,
-        ...(getMethodCognition(method.id)?.bestFor ?? []),
+        cognition?.questionGrammar,
+        cognition?.causalityModel,
+        cognition?.uncertaintyMode,
+        ...(cognition?.bestFor ?? []),
         ...method.tags,
       ]
         .filter(Boolean)
@@ -385,11 +388,11 @@ function buildMethodGroups(methods: typeof DIVINATION_METHODS, mode: GroupMode):
   }
 
   if (mode === "causality") {
-    return groupByCognition(methods, "causalityModel", CAUSALITY_LABELS, "CAUSALITY");
+    return groupByCognition(methods, "causalityModel", (value) => formatCausalityModel(value as CausalityModel), "CAUSALITY");
   }
 
   if (mode === "uncertainty") {
-    return groupByCognition(methods, "uncertaintyMode", UNCERTAINTY_LABELS, "UNCERTAINTY");
+    return groupByCognition(methods, "uncertaintyMode", (value) => formatUncertaintyMode(value as UncertaintyMode), "UNCERTAINTY");
   }
 
   return QUESTION_DOMAIN_ORDER.map((domain) => ({
@@ -404,7 +407,7 @@ function buildMethodGroups(methods: typeof DIVINATION_METHODS, mode: GroupMode):
 function groupByCognition<K extends "causalityModel" | "uncertaintyMode">(
   methods: typeof DIVINATION_METHODS,
   key: K,
-  labels: Partial<Record<string, string>>,
+  formatLabel: (value: CausalityModel | UncertaintyMode) => string,
   kicker: string
 ): MethodGroup[] {
   const map = new Map<string, typeof DIVINATION_METHODS>();
@@ -414,7 +417,7 @@ function groupByCognition<K extends "causalityModel" | "uncertaintyMode">(
   }
   return Array.from(map.entries()).map(([id, groupedMethods]) => ({
     id,
-    title: labels[id] ?? id,
+    title: formatLabel(id as CausalityModel | UncertaintyMode),
     kicker,
     methods: groupedMethods,
   }));
@@ -422,35 +425,13 @@ function groupByCognition<K extends "causalityModel" | "uncertaintyMode">(
 
 function formatCausality(model?: CausalityModel): string {
   if (!model) return "以象征、文本或用户叙事建立解释框架。";
-  return CAUSALITY_LABELS[model] ?? model;
+  return formatCausalityModel(model);
 }
 
 function formatUncertainty(mode?: UncertaintyMode): string {
   if (!mode) return "提供反思材料，而不是确定性承诺。";
-  return UNCERTAINTY_LABELS[mode] ?? mode;
+  return formatUncertaintyMode(mode);
 }
-
-const CAUSALITY_LABELS: Partial<Record<CausalityModel, string>> = {
-  "birth-structure": "出生结构与阶段周期",
-  "time-position": "时位、处境与变化条件",
-  "celestial-cycle": "天体周期与人生节律",
-  "symbolic-projection": "图像符号与心理投射",
-  "ritual-confirmation": "礼俗仪式与确认机制",
-  "folk-association": "日常痕迹与民俗联想",
-  "spatial-flow": "时空方位与资源布局",
-  "textual-admonition": "文本劝诫与典故修辞",
-};
-
-const UNCERTAINTY_LABELS: Partial<Record<UncertaintyMode, string>> = {
-  trend: "趋势倾向",
-  timing: "宜动宜守与时机条件",
-  "yes-no": "是非确认",
-  "psychological-mirroring": "心理显影",
-  admonition: "劝诫提示",
-  "event-narrative": "事件叙事",
-  "strategic-positioning": "策略布局",
-  reflection: "反思练习",
-};
 
 const QUESTION_DOMAIN_ORDER: QuestionDomain[] = [
   "life-structure",

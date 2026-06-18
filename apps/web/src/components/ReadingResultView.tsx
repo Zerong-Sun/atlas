@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { CSSProperties } from "react";
 import {
   classifyQuestion,
+  explainCausalityModel,
+  explainUncertaintyMode,
   formatQuestionDomain,
   formatTimeHorizon,
   getMethodCulturalProfile,
@@ -540,11 +542,11 @@ function CulturalComparisonMatrix({ traditions }: { traditions: Tradition[] }) {
                 </div>
                 <div>
                   <dt>如何理解因果</dt>
-                  <dd>{CAUSALITY_LABELS[profile.causalityModel] ?? profile.causalityModel}</dd>
+                  <dd>{explainCausalityModel(profile.causalityModel)}</dd>
                 </div>
                 <div>
                   <dt>如何处理不确定性</dt>
-                  <dd>{UNCERTAINTY_LABELS[profile.uncertaintyMode] ?? profile.uncertaintyMode}</dd>
+                  <dd>{explainUncertaintyMode(profile.uncertaintyMode)}</dd>
                 </div>
               </dl>
             </article>
@@ -560,22 +562,6 @@ const COMPARATIVE_METHOD_IDS: ComparativeMethodId[] = ["bazi", "western", "tarot
 function isComparativeMethodId(value: Tradition): value is ComparativeMethodId {
   return COMPARATIVE_METHOD_IDS.includes(value as ComparativeMethodId);
 }
-
-const CAUSALITY_LABELS: Record<string, string> = {
-  "birth-structure": "出生时刻形成长期结构，后续周期触发变化。",
-  "time-position": "当前处境、位置、时机与行动关系共同构成判断。",
-  "celestial-cycle": "天体周期被用来描述阶段压力、身份转向和人生节律。",
-  "symbolic-projection": "抽取到的图像和符号让心理动力与情境关系显形。",
-  "spatial-flow": "时间、空间、方位和资源分布共同影响行动策略。",
-};
-
-const UNCERTAINTY_LABELS: Record<string, string> = {
-  trend: "给出阶段倾向，而不是保证单一事件。",
-  timing: "判断宜动、宜守，以及变化需要满足的条件。",
-  "psychological-mirroring": "照见心理动力、盲点和下一步姿态。",
-  "strategic-positioning": "把不确定性转成时机、方位、资源和阻力的布局。",
-  reflection: "作为文化探索和自我反思材料。",
-};
 
 function getTraditionContent(content: string | undefined, tradition: Tradition | null): string {
   if (!content || !tradition) return "暂无该体系的结构化解读。";

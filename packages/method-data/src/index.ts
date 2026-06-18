@@ -21,6 +21,7 @@ export {
   getMethodCulturalProfile,
   translateQuestionForMethod,
   translateQuestionForMethods,
+  type MethodCulturalProfile,
 } from "./questionFrames.ts";
 export type {
   ComparativeMethodId,
@@ -39,6 +40,10 @@ export {
 } from "./methodExperiences.ts";
 export {
   METHOD_COGNITION,
+  explainCausalityModel,
+  explainUncertaintyMode,
+  formatCausalityModel,
+  formatUncertaintyMode,
   getMethodCognition,
   type MethodCognition,
 } from "./methodCognition.ts";

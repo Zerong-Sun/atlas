@@ -1,4 +1,10 @@
-import { DIVINATION_METHODS, type QuestionDomain } from "./divinationMethods.ts";
+import {
+  DIVINATION_METHODS,
+  type CausalityModel,
+  type EvidenceStyle,
+  type QuestionDomain,
+  type UncertaintyMode,
+} from "./divinationMethods.ts";
 import { getMethodCognition } from "./methodCognition.ts";
 import type {
   ComparativeMethodId,
@@ -36,6 +42,18 @@ const PRESSURE_LABELS: Record<DecisionPressure, string> = {
   low: "低",
   medium: "中",
   high: "高",
+};
+
+export type MethodCulturalProfile = {
+  questionGrammar: string;
+  causalityModel: CausalityModel;
+  uncertaintyMode: UncertaintyMode;
+  evidenceStyle: EvidenceStyle[];
+  bestFor: QuestionDomain[];
+  weakFor: QuestionDomain[];
+  requiredInputs: string[];
+  optionalInputs: string[];
+  misuseBoundary: string;
 };
 
 export function classifyQuestion(rawText: string): QuestionFrame {
@@ -110,7 +128,7 @@ export function formatDecisionPressure(pressure: DecisionPressure): string {
   return PRESSURE_LABELS[pressure];
 }
 
-export function getMethodCulturalProfile(methodId: string) {
+export function getMethodCulturalProfile(methodId: string): MethodCulturalProfile {
   const method = DIVINATION_METHODS.find((item) => item.id === methodId);
   const cognition = getMethodCognition(methodId);
   return {
