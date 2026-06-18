@@ -1,5 +1,13 @@
 import { useState } from "react";
 import type { CSSProperties } from "react";
+import {
+  classifyQuestion,
+  formatQuestionDomain,
+  formatTimeHorizon,
+  getMethodCulturalProfile,
+  translateQuestionForMethods,
+  type ComparativeMethodId,
+} from "@atlas/method-data";
 import type { ReadingReport, Tradition } from "@atlas/shared-types";
 import {
   CitationBlock,
@@ -18,6 +26,8 @@ export function ReadingResultView({ report }: Props) {
   );
 
   const summary = report.sections.find((s) => s.type === "summary");
+  const question = report.sections.find((s) => s.type === "question_restate")?.content ?? "";
+  const questionFrame = report.questionFrame ?? classifyQuestion(question);
   const advice = report.sections.find((s) => s.type === "advice");
   const cautions = report.sections.find((s) => s.type === "cautions");
   const traditionSections = report.sections.filter((s) => s.type === "tradition_analysis");
@@ -27,9 +37,25 @@ export function ReadingResultView({ report }: Props) {
     (traditionSections[0]?.metadata?.[activeTradition ?? ""] as Record<string, unknown> | undefined);
   const activeContent =
     activeSection?.content ?? getTraditionContent(traditionSections[0]?.content, activeTradition);
+  const comparableTraditions = report.traditions.filter(isComparativeMethodId);
+  const questionTranslations =
+    report.questionTranslations?.filter((item) => comparableTraditions.includes(item.methodId)) ??
+    translateQuestionForMethods(question || "本次问题", comparableTraditions);
 
   return (
     <div className="reading-result">
+      {question && (
+        <section className="question-frame-card">
+          <span className="label">问题如何被放上桌</span>
+          <h3>{question}</h3>
+          <p>
+            这不是单纯寻找“准答案”的问题；本次先把它识别为
+            {questionFrame.domains.map(formatQuestionDomain).join("、")}，时间尺度为
+            {formatTimeHorizon(questionFrame.timeHorizon)}，再交给不同体系按自己的方式处理。
+          </p>
+        </section>
+      )}
+
       {summary && (
         <section className="summary">
           <span className="label">结论摘要</span>
@@ -41,6 +67,23 @@ export function ReadingResultView({ report }: Props) {
         <ConsensusCard content={report.consensus} />
         <DivergenceCard content={report.divergence} />
       </div>
+
+      {questionTranslations.length > 0 && (
+        <section className="translation-readout" aria-labelledby="translation-readout-title">
+          <span className="label">同一个问题如何被翻译</span>
+          <h3 id="translation-readout-title">每个体系先改变问题的形状</h3>
+          <div className="translation-readout__grid">
+            {questionTranslations.map((item) => (
+              <article key={item.methodId}>
+                <strong>{TRADITION_LABELS[item.methodId]}</strong>
+                <p>{item.rationale}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <CulturalComparisonMatrix traditions={report.traditions} />
 
       <h3>各体系解读</h3>
       <div className="tabs">
@@ -93,6 +136,67 @@ export function ReadingResultView({ report }: Props) {
         .reading-result { display: flex; flex-direction: column; gap: ${spacing.md}px; }
         .reading-result .hero { margin: ${spacing.md}px 0; }
         .reading-result h3 { font-size: 20px; margin: ${spacing.lg}px 0 ${spacing.sm}px; }
+        .question-frame-card,
+        .translation-readout,
+        .comparison-matrix {
+          padding: ${spacing.md}px;
+          border: 1px solid ${colors.border};
+          border-radius: ${radius.md}px;
+          background: ${colors.surface};
+        }
+        .question-frame-card h3,
+        .translation-readout h3,
+        .comparison-matrix h3 {
+          margin: ${spacing.xs}px 0;
+        }
+        .question-frame-card p {
+          margin: ${spacing.sm}px 0 0;
+          color: ${colors.textSecondary};
+          line-height: 1.6;
+        }
+        .translation-readout__grid,
+        .comparison-matrix__grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: ${spacing.sm}px;
+          margin-top: ${spacing.md}px;
+        }
+        .translation-readout article,
+        .comparison-row {
+          padding: ${spacing.md}px;
+          border: 1px solid ${colors.border};
+          border-radius: ${radius.sm}px;
+          background: ${colors.surfaceElevated};
+        }
+        .translation-readout article strong,
+        .comparison-row strong {
+          color: ${colors.gold};
+        }
+        .translation-readout article p {
+          margin: ${spacing.xs}px 0 0;
+          color: ${colors.textSecondary};
+          line-height: 1.5;
+        }
+        .comparison-row {
+          display: grid;
+          grid-template-columns: 92px 1fr;
+          gap: ${spacing.sm}px;
+        }
+        .comparison-row dl {
+          display: grid;
+          gap: ${spacing.sm}px;
+          margin: 0;
+        }
+        .comparison-row dt {
+          color: ${colors.gold};
+          font-size: 12px;
+          font-weight: 700;
+        }
+        .comparison-row dd {
+          margin: ${spacing.xs}px 0 0;
+          color: ${colors.textSecondary};
+          line-height: 1.45;
+        }
         .reading-result .summary {
           padding-bottom: ${spacing.md}px;
           border-bottom: 1px solid ${colors.border};
@@ -401,10 +505,77 @@ export function ReadingResultView({ report }: Props) {
           .tarot-spread, .iching-flow { grid-template-columns: 1fr; }
           .hex-arrow { margin: 0 auto; transform: rotate(90deg); }
         }
+        @media (max-width: 760px) {
+          .translation-readout__grid,
+          .comparison-matrix__grid {
+            grid-template-columns: 1fr;
+          }
+          .comparison-row {
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
     </div>
   );
 }
+
+function CulturalComparisonMatrix({ traditions }: { traditions: Tradition[] }) {
+  const comparable = traditions.filter(isComparativeMethodId);
+  if (comparable.length === 0) return null;
+
+  return (
+    <section className="comparison-matrix" aria-labelledby="comparison-matrix-title">
+      <span className="label">三层对照</span>
+      <h3 id="comparison-matrix-title">提问方式、因果模型与不确定性处理</h3>
+      <div className="comparison-matrix__grid">
+        {comparable.map((tradition) => {
+          const profile = getMethodCulturalProfile(tradition);
+          return (
+            <article key={tradition} className="comparison-row">
+              <strong>{TRADITION_LABELS[tradition]}</strong>
+              <dl>
+                <div>
+                  <dt>如何提问</dt>
+                  <dd>{profile.questionGrammar}</dd>
+                </div>
+                <div>
+                  <dt>如何理解因果</dt>
+                  <dd>{CAUSALITY_LABELS[profile.causalityModel] ?? profile.causalityModel}</dd>
+                </div>
+                <div>
+                  <dt>如何处理不确定性</dt>
+                  <dd>{UNCERTAINTY_LABELS[profile.uncertaintyMode] ?? profile.uncertaintyMode}</dd>
+                </div>
+              </dl>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+const COMPARATIVE_METHOD_IDS: ComparativeMethodId[] = ["bazi", "western", "tarot", "iching"];
+
+function isComparativeMethodId(value: Tradition): value is ComparativeMethodId {
+  return COMPARATIVE_METHOD_IDS.includes(value as ComparativeMethodId);
+}
+
+const CAUSALITY_LABELS: Record<string, string> = {
+  "birth-structure": "出生时刻形成长期结构，后续周期触发变化。",
+  "time-position": "当前处境、位置、时机与行动关系共同构成判断。",
+  "celestial-cycle": "天体周期被用来描述阶段压力、身份转向和人生节律。",
+  "symbolic-projection": "抽取到的图像和符号让心理动力与情境关系显形。",
+  "spatial-flow": "时间、空间、方位和资源分布共同影响行动策略。",
+};
+
+const UNCERTAINTY_LABELS: Record<string, string> = {
+  trend: "给出阶段倾向，而不是保证单一事件。",
+  timing: "判断宜动、宜守，以及变化需要满足的条件。",
+  "psychological-mirroring": "照见心理动力、盲点和下一步姿态。",
+  "strategic-positioning": "把不确定性转成时机、方位、资源和阻力的布局。",
+  reflection: "作为文化探索和自我反思材料。",
+};
 
 function getTraditionContent(content: string | undefined, tradition: Tradition | null): string {
   if (!content || !tradition) return "暂无该体系的结构化解读。";

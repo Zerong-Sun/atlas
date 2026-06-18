@@ -23,6 +23,7 @@
 | 文档 | 说明 |
 |------|------|
 | [产品 PRD](docs/prd/诸象.md) | 定位、用户、功能与体验原则 |
+| [主体验重构](docs/main-experience-refactor.md) | 从“占法工具箱”转向“文明象征系统对照台”的产品与实施蓝图 |
 | [架构说明](docs/architecture.md) | 运行时边界、API 形态与数据一致性 |
 | [访问策略](docs/access.md) | MVP 无付费墙、无额度限制 |
 | [实施计划](docs/plan.md) | 里程碑与任务拆解 |

@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@atlas/engines": "*",
+    "@atlas/method-data": "*",
     "@atlas/shared-types": "*"
   }
 }

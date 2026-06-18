@@ -2,9 +2,9 @@ import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 
 const ACTIONS = [
-  { to: "/methods", icon: "✦", title: "选择占法", subtitle: "八字 / 塔罗 / 易经 / 更多" },
-  { to: "/methods/bazi", icon: "◇", title: "测八字", subtitle: "四柱、十神、流年与古文" },
-  { to: "/methods/tarot", icon: "▵", title: "塔罗抽卡", subtitle: "三牌阵与组合解释" },
+  { to: "/ask", icon: "✦", title: "进入对照台", subtitle: "把同一个问题交给多种文明视角" },
+  { to: "/methods", icon: "◇", title: "象征系统", subtitle: "按提问方式、因果模型和边界浏览" },
+  { to: "/methods/tarot", icon: "▵", title: "塔罗抽卡", subtitle: "图像、心理与叙事反思" },
   { to: "/dream", icon: "☽", title: "解梦", subtitle: "输入梦境，生成专业解析" },
 ] as const;
 

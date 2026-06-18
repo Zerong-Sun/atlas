@@ -31,7 +31,7 @@ export function WelcomePage() {
           融合全球命理、占卜、占梦与古籍证据的 AI 对照解读。
         </h1>
         <p className="welcome__hint">
-          今日页查看每日简报 · 底部导航进入占法、解梦与档案 · 提问即可获得多体系对照解读
+          今日页查看每日之问 · 底部导航进入象征系统、解梦与档案 · 提问即可获得多体系对照解读
         </p>
         <button type="button" className="welcome__enter" onClick={enter} disabled={leaving}>
           {leaving ? "进入中…" : "开始引导"}

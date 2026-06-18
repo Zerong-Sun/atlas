@@ -1,6 +1,12 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import { DIVINATION_METHODS, getLocalizedMethodName, type MethodStatus } from "@/data/divinationMethods";
+import {
+  DIVINATION_METHODS,
+  getLocalizedMethodName,
+  type CausalityModel,
+  type MethodStatus,
+  type UncertaintyMode,
+} from "@/data/divinationMethods";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 import { Page } from "@/components/ui/Page";
@@ -23,7 +29,20 @@ export function MethodsPage() {
     const q = query.trim().toLowerCase();
     return DIVINATION_METHODS.filter((method) => {
       const matchesStatus = status === "all" || method.status === status;
-      const searchable = [method.title, method.subtitle, method.tradition, ...method.tags].join(" ").toLowerCase();
+      const searchable = [
+        method.title,
+        method.subtitle,
+        method.tradition,
+        method.civilization,
+        method.questionStyle,
+        method.questionGrammar,
+        method.causalityModel,
+        method.uncertaintyMode,
+        ...method.tags,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
       return matchesStatus && (!q || searchable.includes(q));
     });
   }, [query, status]);
@@ -35,26 +54,26 @@ export function MethodsPage() {
   return (
     <Page wide className="methods-page">
       <section className="method-directory-hero">
-        <p className="method-kicker">METHOD INDEX</p>
-        <h1>选择一种占法</h1>
+        <p className="method-kicker">SYMBOL SYSTEMS</p>
+        <h1>象征系统图书馆</h1>
         <p>
-          今日只是入口。八字、塔罗、占梦与后续所有占卜方法彼此并列，像一组可不断扩展的仪式工具。
+          这里不是工具货架，而是不同文明处理不确定性的索引：它们如何提问、如何理解因果、如何给出边界。
         </p>
       </section>
 
-      <section className="method-control-panel" aria-label="占法筛选">
-        <div className="method-stats" aria-label="占法开发状态">
+      <section className="method-control-panel" aria-label="象征系统筛选">
+        <div className="method-stats" aria-label="象征系统开发状态">
           <Stat label="可用" value={readyCount} />
           <Stat label="参考预览" value={previewCount} />
           <Stat label="待开发" value={plannedCount} />
         </div>
         <div className="method-filters">
           <label className="method-search">
-            <span>搜索占法</span>
+            <span>搜索系统</span>
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="输入八字、塔罗、星占、卡牌..."
+              placeholder="输入八字、时机、心理、天体周期、礼俗确认..."
             />
           </label>
           <div className="method-status-tabs" role="tablist" aria-label="状态筛选">
@@ -69,7 +88,7 @@ export function MethodsPage() {
       <section className="method-section" aria-labelledby="method-results">
         <div className="section-heading">
           <p>{status === "all" ? "ALL METHODS" : status.toUpperCase()}</p>
-          <h2 id="method-results">{filtered.length} 种占法</h2>
+          <h2 id="method-results">{filtered.length} 种象征系统</h2>
         </div>
         <div className="method-grid">
           {filtered.map((method, index) => (
@@ -82,8 +101,41 @@ export function MethodsPage() {
             />
           ))}
         </div>
-        {filtered.length === 0 && <p className="empty-note">没有匹配的占法。换一个关键词试试。</p>}
+        {filtered.length === 0 && <p className="empty-note">没有匹配的系统。换一个关键词试试。</p>}
       </section>
+      <style>{`
+        .method-cognition {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: var(--spacing-xs);
+          margin-top: var(--spacing-sm);
+        }
+        .method-cognition div {
+          padding: var(--spacing-sm);
+          border: 1px solid var(--color-border);
+          border-radius: var(--radius-sm);
+          background: var(--color-surface-elevated);
+        }
+        .method-cognition span {
+          display: block;
+          color: var(--color-gold);
+          font-size: 0.72rem;
+          font-weight: 700;
+        }
+        .method-cognition p {
+          margin: var(--spacing-xs) 0 0;
+          color: var(--color-text-secondary);
+          font-size: 0.78rem;
+          line-height: 1.45;
+        }
+        .method-boundary {
+          border-left: 2px solid var(--color-gold-dim);
+          padding-left: var(--spacing-sm);
+        }
+        @media (max-width: 760px) {
+          .method-cognition { grid-template-columns: 1fr; }
+        }
+      `}</style>
     </Page>
   );
 }
@@ -135,6 +187,10 @@ function MethodCard({
   civilization,
   culturalNote,
   questionStyle,
+  questionGrammar,
+  causalityModel,
+  uncertaintyMode,
+  misuseBoundary,
   status,
   route,
   tags,
@@ -164,6 +220,21 @@ function MethodCard({
         <p>{subtitle}</p>
         <p>{culturalNote}</p>
         <p>{questionStyle}</p>
+        <div className="method-cognition" aria-label={`${title} 的认知方式`}>
+          <div>
+            <span>如何提问</span>
+            <p>{questionGrammar ?? questionStyle}</p>
+          </div>
+          <div>
+            <span>因果模型</span>
+            <p>{formatCausality(causalityModel)}</p>
+          </div>
+          <div>
+            <span>不确定性</span>
+            <p>{formatUncertainty(uncertaintyMode)}</p>
+          </div>
+        </div>
+        <p className="method-boundary">{misuseBoundary ?? "适合作为文化探索与自我反思，不替代专业建议。"}</p>
         <div className="method-card__tags">
           {tags.map((tag) => (
             <span key={tag}>{tag}</span>
@@ -202,3 +273,35 @@ function MethodCard({
     </article>
   );
 }
+
+function formatCausality(model?: CausalityModel): string {
+  if (!model) return "以象征、文本或用户叙事建立解释框架。";
+  return CAUSALITY_LABELS[model] ?? model;
+}
+
+function formatUncertainty(mode?: UncertaintyMode): string {
+  if (!mode) return "提供反思材料，而不是确定性承诺。";
+  return UNCERTAINTY_LABELS[mode] ?? mode;
+}
+
+const CAUSALITY_LABELS: Partial<Record<CausalityModel, string>> = {
+  "birth-structure": "出生结构与阶段周期",
+  "time-position": "时位、处境与变化条件",
+  "celestial-cycle": "天体周期与人生节律",
+  "symbolic-projection": "图像符号与心理投射",
+  "ritual-confirmation": "礼俗仪式与确认机制",
+  "folk-association": "日常痕迹与民俗联想",
+  "spatial-flow": "时空方位与资源布局",
+  "textual-admonition": "文本劝诫与典故修辞",
+};
+
+const UNCERTAINTY_LABELS: Partial<Record<UncertaintyMode, string>> = {
+  trend: "趋势倾向",
+  timing: "宜动宜守与时机条件",
+  "yes-no": "是非确认",
+  "psychological-mirroring": "心理显影",
+  admonition: "劝诫提示",
+  "event-narrative": "事件叙事",
+  "strategic-positioning": "策略布局",
+  reflection: "反思练习",
+};

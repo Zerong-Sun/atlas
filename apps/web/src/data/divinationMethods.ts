@@ -4,7 +4,11 @@ export {
   PREVIEW_WORKBENCH_IDS,
   getMethod,
   isPreviewWorkbench,
+  type CausalityModel,
   type DivinationMethod,
+  type EvidenceStyle,
   type MethodStatus,
   type PreviewWorkbenchId,
+  type QuestionDomain,
+  type UncertaintyMode,
 } from "@atlas/method-data";

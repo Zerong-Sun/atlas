@@ -6,6 +6,8 @@
 
 访问策略：**全功能开放**，无付费墙与免费额度（见 [access.md](access.md)）。
 
+主体验重构方向见 [main-experience-refactor.md](main-experience-refactor.md)：当前优先级不是继续堆叠更多占法，而是把产品主流程从“选择一种占法”改为“把同一个问题放到不同文明的象征系统桌面上”。
+
 ## 当前产品方向
 
 《诸象》要从“多体系占卜 App”升级为“全球文明预测方法与象征系统对照台”。Web 与 Mobile 要同时具备：

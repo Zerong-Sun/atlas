@@ -1,4 +1,9 @@
 import { runEngines, type EngineInput } from "@atlas/engines";
+import {
+  classifyQuestion,
+  translateQuestionForMethods,
+  type ComparativeMethodId,
+} from "@atlas/method-data";
 import type {
   CitationSnapshot,
   QuestionInput,
@@ -56,6 +61,11 @@ export class ReadingOrchestrator {
     const traceId = crypto.randomUUID();
     const readingId = input.readingId ?? crypto.randomUUID();
     const traditions = input.question.traditions.filter((t) => t !== "dream");
+    const questionFrame = classifyQuestion(input.question.text);
+    const questionTranslations = translateQuestionForMethods(
+      input.question.text,
+      traditions.filter(isComparativeMethodId)
+    );
     const safety = this.safety.evaluate(input.question);
 
     const seed = readingId;
@@ -129,6 +139,8 @@ export class ReadingOrchestrator {
       sections,
       citations: finalCitations,
       structuredFacts: facts,
+      questionFrame,
+      questionTranslations,
       consensus: phaseB.consensus,
       divergence: phaseB.divergence,
       degraded,
@@ -353,6 +365,10 @@ export class ReadingOrchestrator {
 
     return READING_SECTION_ORDER.map((type) => byType[type]!).filter(Boolean);
   }
+}
+
+function isComparativeMethodId(tradition: Tradition): tradition is ComparativeMethodId {
+  return ["bazi", "western", "tarot", "iching"].includes(tradition);
 }
 
 function templateTraditionSummary(f: StructuredFacts): string {

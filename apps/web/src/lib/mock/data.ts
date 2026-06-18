@@ -6,6 +6,7 @@ import type {
   Tradition,
   UserProfile,
 } from "@atlas/shared-types";
+import { classifyQuestion, translateQuestionForMethods, type ComparativeMethodId } from "@atlas/method-data";
 import { buildEntryId, resolveDayColor } from "@/theme/tokens";
 
 export const MOCK_PROFILE: UserProfile = {
@@ -52,6 +53,7 @@ const MOCK_CITATIONS: CitationSnapshot[] = [
 export function buildMockReading(questionText: string, traditions: Tradition[]): ReadingReport {
   const readingId = `mock-${Date.now()}`;
   const readingTraditions = traditions.filter((t) => t !== "dream");
+  const comparativeTraditions = readingTraditions.filter(isComparativeMethodId);
   return {
     readingId,
     questionId: `q-${readingId}`,
@@ -62,6 +64,11 @@ export function buildMockReading(questionText: string, traditions: Tradition[]):
         title: "结论摘要",
         content:
           "多体系对照显示：短期宜观察、中期可布局。核心张力在于「进取」与「守成」的平衡。",
+      },
+      {
+        type: "question_restate",
+        title: "问题重述",
+        content: questionText,
       },
       {
         type: "advice",
@@ -83,6 +90,8 @@ export function buildMockReading(questionText: string, traditions: Tradition[]):
     ],
     citations: MOCK_CITATIONS,
     structuredFacts: buildMockStructuredFacts(readingTraditions),
+    questionFrame: classifyQuestion(questionText),
+    questionTranslations: translateQuestionForMethods(questionText, comparativeTraditions),
     consensus:
       "八字与周易均强调「守正待时」；西洋占星与塔罗则提示「信息仍在汇聚」，不宜仓促定论。",
     divergence:
@@ -91,6 +100,10 @@ export function buildMockReading(questionText: string, traditions: Tradition[]):
     traceId: `trace-${readingId}`,
     createdAt: new Date().toISOString(),
   };
+}
+
+function isComparativeMethodId(tradition: Tradition): tradition is ComparativeMethodId {
+  return ["bazi", "western", "tarot", "iching"].includes(tradition);
 }
 
 function buildMockStructuredFacts(traditions: Tradition[]): StructuredFacts[] {

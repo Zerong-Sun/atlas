@@ -2,6 +2,42 @@
 
 export type Tradition = "bazi" | "western" | "tarot" | "iching" | "qimen" | "dream";
 
+export type ComparativeMethodId = Extract<Tradition, "bazi" | "western" | "tarot" | "iching">;
+
+export type QuestionDomain =
+  | "life-structure"
+  | "career"
+  | "relationship"
+  | "specific-event"
+  | "timing"
+  | "inner-state"
+  | "dream"
+  | "space"
+  | "daily-guidance";
+
+export type TimeHorizon = "immediate" | "weeks" | "months" | "year" | "life-stage" | "unknown";
+export type DecisionPressure = "low" | "medium" | "high";
+export type Sensitivity = "medical" | "legal" | "financial" | "relationship" | "mental-health" | "none";
+
+export interface QuestionFrame {
+  rawText: string;
+  domains: QuestionDomain[];
+  timeHorizon: TimeHorizon;
+  decisionPressure: DecisionPressure;
+  sensitivity: Sensitivity[];
+  needsBirthData: boolean;
+  needsLocation: boolean;
+  recommendedMethodIds: ComparativeMethodId[];
+  discouragedMethodIds: string[];
+}
+
+export interface QuestionTranslation {
+  methodId: ComparativeMethodId;
+  methodTitle: string;
+  translatedQuestion: string;
+  rationale: string;
+}
+
 export interface StructuredFacts {
   tradition: Tradition;
   computedAt: string;
@@ -51,6 +87,8 @@ export interface ReadingReport {
   sections: ReadingSection[];
   citations: CitationSnapshot[];
   structuredFacts?: StructuredFacts[];
+  questionFrame?: QuestionFrame;
+  questionTranslations?: QuestionTranslation[];
   consensus: string;
   divergence: string;
   degraded: boolean;

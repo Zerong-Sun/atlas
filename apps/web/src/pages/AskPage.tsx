@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import type { Tradition } from "@atlas/shared-types";
 import { AskComposer } from "@/components/AskComposer";
 import { TarotDrawPanel } from "@/components/TarotDrawPanel";
@@ -8,6 +8,7 @@ import { createReading } from "@/lib/api/readings";
 
 export function AskPage() {
   const navigate = useNavigate();
+  const [params] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -31,8 +32,8 @@ export function AskPage() {
           {error}
         </p>
       )}
+      <AskComposer onSubmit={handleSubmit} loading={loading} initialQuestion={params.get("q") ?? ""} />
       <TarotDrawPanel onUseSpread={(question) => handleSubmit(question, ["tarot"])} loading={loading} />
-      <AskComposer onSubmit={handleSubmit} loading={loading} />
     </Page>
   );
 }

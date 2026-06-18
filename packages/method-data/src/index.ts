@@ -6,9 +6,30 @@ export {
   getMethod,
   isPreviewWorkbench,
   type DivinationMethod,
+  type CausalityModel,
+  type EvidenceStyle,
   type MethodStatus,
   type PreviewWorkbenchId,
+  type QuestionDomain,
+  type UncertaintyMode,
 } from "./divinationMethods.ts";
+export {
+  classifyQuestion,
+  formatDecisionPressure,
+  formatQuestionDomain,
+  formatTimeHorizon,
+  getMethodCulturalProfile,
+  translateQuestionForMethod,
+  translateQuestionForMethods,
+} from "./questionFrames.ts";
+export type {
+  ComparativeMethodId,
+  DecisionPressure,
+  QuestionFrame,
+  QuestionTranslation,
+  Sensitivity,
+  TimeHorizon,
+} from "@atlas/shared-types";
 export {
   METHOD_EXPERIENCES,
   getMethodExperience,

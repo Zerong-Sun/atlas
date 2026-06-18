@@ -1,5 +1,46 @@
 export type MethodStatus = "ready" | "preview" | "planned";
 
+export type CausalityModel =
+  | "birth-structure"
+  | "time-position"
+  | "celestial-cycle"
+  | "symbolic-projection"
+  | "ritual-confirmation"
+  | "folk-association"
+  | "spatial-flow"
+  | "textual-admonition";
+
+export type UncertaintyMode =
+  | "trend"
+  | "timing"
+  | "yes-no"
+  | "psychological-mirroring"
+  | "admonition"
+  | "event-narrative"
+  | "strategic-positioning"
+  | "reflection";
+
+export type EvidenceStyle =
+  | "calculated-chart"
+  | "cast-symbol"
+  | "drawn-card"
+  | "classic-text"
+  | "ritual-result"
+  | "observed-sign"
+  | "dream-symbol"
+  | "user-narrative";
+
+export type QuestionDomain =
+  | "life-structure"
+  | "career"
+  | "relationship"
+  | "specific-event"
+  | "timing"
+  | "inner-state"
+  | "dream"
+  | "space"
+  | "daily-guidance";
+
 export type DivinationMethod = {
   id: string;
   title: string;
@@ -8,6 +49,15 @@ export type DivinationMethod = {
   civilization: string;
   culturalNote: string;
   questionStyle: string;
+  questionGrammar?: string;
+  causalityModel?: CausalityModel;
+  uncertaintyMode?: UncertaintyMode;
+  evidenceStyle?: EvidenceStyle[];
+  bestFor?: QuestionDomain[];
+  weakFor?: QuestionDomain[];
+  requiredInputs?: string[];
+  optionalInputs?: string[];
+  misuseBoundary?: string;
   aliases?: Partial<Record<"zh-CN" | "zh-TW" | "en-US" | "ja-JP" | "ko-KR", string>>;
   route?: string;
   status: MethodStatus;
@@ -23,6 +73,15 @@ export const DIVINATION_METHODS: DivinationMethod[] = [
     civilization: "中国 / 东亚",
     culturalNote: "把出生时刻视作天地气机的截面，重视结构、五行流动与长期周期。",
     questionStyle: "适合问人生结构、阶段节律、关系角色与长期选择。",
+    questionGrammar: "这件事是否符合你的长期命局结构和当前大运流年节律？",
+    causalityModel: "birth-structure",
+    uncertaintyMode: "trend",
+    evidenceStyle: ["calculated-chart", "classic-text"],
+    bestFor: ["life-structure", "career", "relationship"],
+    weakFor: ["specific-event", "timing", "daily-guidance"],
+    requiredInputs: ["birthDate", "birthTime", "birthPlace"],
+    optionalInputs: ["gender", "currentLocation"],
+    misuseBoundary: "不适合回答即时是非、具体号码或短期随机事件。",
     aliases: { "en-US": "Four Pillars / Ba Zi", "ja-JP": "四柱推命 / 八字", "ko-KR": "사주명리 / 팔자" },
     route: "/methods/bazi",
     status: "ready",
@@ -49,6 +108,15 @@ export const DIVINATION_METHODS: DivinationMethod[] = [
     civilization: "欧洲 / 现代西方神秘学",
     culturalNote: "用图像、叙事和牌阵让当下心理与情境显形，偏重短期反思。",
     questionStyle: "适合问选择、关系动态、心理状态与下一步行动。",
+    questionGrammar: "这件事中有哪些心理动力、盲点和下一步行动姿态？",
+    causalityModel: "symbolic-projection",
+    uncertaintyMode: "psychological-mirroring",
+    evidenceStyle: ["drawn-card", "user-narrative"],
+    bestFor: ["relationship", "inner-state", "specific-event", "daily-guidance"],
+    weakFor: ["life-structure", "space"],
+    requiredInputs: ["questionText", "spread"],
+    optionalInputs: ["deck", "reversalPolicy"],
+    misuseBoundary: "不适合要求绝对预测、医学诊断或替用户做不可逆决定。",
     aliases: { "en-US": "Tarot", "ja-JP": "タロット", "ko-KR": "타로" },
     route: "/methods/tarot",
     status: "ready",
@@ -67,12 +135,12 @@ export const DIVINATION_METHODS: DivinationMethod[] = [
     status: "ready",
     tags: ["多流派", "符号", "LLM"],
   },
-  { id: "iching", title: "周易六十四卦", subtitle: "铜钱起卦，本卦、变卦与卦辞象辞对照解读。", tradition: "易", civilization: "中国 / 儒道经典传统", culturalNote: "把变化视为阴阳消长与时位关系，重视时机、位置和守正。", questionStyle: "适合问转折、取舍、行动时机与处境结构。", aliases: { "en-US": "I Ching / Book of Changes" }, route: "/methods/iching", status: "ready", tags: ["本卦", "变卦"] },
-  { id: "qimen", title: "奇门遁甲", subtitle: "局盘、九宫、八门、九星、神煞与时空取象。", tradition: "术数", civilization: "中国 / 时空术数", culturalNote: "把空间、时间、方位和行动策略合成一张局盘，偏重择时与布局。", questionStyle: "适合问行动路径、竞争、出行、谈判和局势判断。", aliases: { "en-US": "Qi Men Dun Jia" }, route: "/methods/qimen", status: "ready", tags: ["九宫", "八门"] },
+  { id: "iching", title: "周易六十四卦", subtitle: "铜钱起卦，本卦、变卦与卦辞象辞对照解读。", tradition: "易", civilization: "中国 / 儒道经典传统", culturalNote: "把变化视为阴阳消长与时位关系，重视时机、位置和守正。", questionStyle: "适合问转折、取舍、行动时机与处境结构。", questionGrammar: "此时此位是否宜动？变化需要满足什么条件？", causalityModel: "time-position", uncertaintyMode: "timing", evidenceStyle: ["cast-symbol", "classic-text"], bestFor: ["specific-event", "timing", "career", "relationship"], weakFor: ["life-structure"], requiredInputs: ["questionText", "castingMethod"], optionalInputs: ["context"], misuseBoundary: "不适合无限重复追问同一问题，也不应替代现实调查。", aliases: { "en-US": "I Ching / Book of Changes" }, route: "/methods/iching", status: "ready", tags: ["本卦", "变卦"] },
+  { id: "qimen", title: "奇门遁甲", subtitle: "局盘、九宫、八门、九星、神煞与时空取象。", tradition: "术数", civilization: "中国 / 时空术数", culturalNote: "把空间、时间、方位和行动策略合成一张局盘，偏重择时与布局。", questionStyle: "适合问行动路径、竞争、出行、谈判和局势判断。", questionGrammar: "此行动在当前时空局势中，资源、阻力、方向和时机如何分布？", causalityModel: "spatial-flow", uncertaintyMode: "strategic-positioning", evidenceStyle: ["calculated-chart", "observed-sign"], bestFor: ["timing", "specific-event", "career", "space"], weakFor: ["inner-state", "dream"], requiredInputs: ["questionText", "currentTime", "currentLocation"], optionalInputs: ["direction", "actorRole"], misuseBoundary: "不适合脱离现实信息做高风险决策，也不适合泛泛人生画像。", aliases: { "en-US": "Qi Men Dun Jia" }, route: "/methods/qimen", status: "ready", tags: ["九宫", "八门"] },
   { id: "ziwei", title: "紫微斗数", subtitle: "命盘十二宫、主星辅星与大限流年。", tradition: "术数", civilization: "中国 / 星曜命盘", culturalNote: "以宫位与星曜叙述人生领域，像一张分宫的人生地图。", questionStyle: "适合问人生领域分布、阶段主题、关系与事业结构。", aliases: { "en-US": "Zi Wei Dou Shu" }, route: "/methods/ziwei", status: "ready", tags: ["十二宫", "大限"] },
   { id: "liuyao", title: "纳甲六爻", subtitle: "铜钱起卦、世应六亲、用神旺衰。", tradition: "易", civilization: "中国 / 易占实践", culturalNote: "把具体问题拆成世应、六亲、用神和动变，重视可验证事件。", questionStyle: "适合问具体事件、得失、应期、关系互动与短中期走向。", route: "/methods/liuyao", status: "ready", tags: ["用神", "世应"] },
   { id: "meihua", title: "梅花易数", subtitle: "时空取数、体用生克与外应判断。", tradition: "易", civilization: "中国 / 象数易", culturalNote: "从偶然数字、时间和外应进入卦象，强调灵活取象。", questionStyle: "适合问突然出现的征兆、即时判断和轻量事件。", route: "/methods/meihua", status: "ready", tags: ["体用", "外应"] },
-  { id: "western", title: "西洋占星", subtitle: "本命盘、行运、相位与宫位解释。", tradition: "星占", civilization: "希腊化 / 欧洲 / 现代心理占星", culturalNote: "用行星、宫位和相位描述人格动力与周期，现代语境常连接心理语言。", questionStyle: "适合问自我理解、关系模式、职业方向和阶段压力。", aliases: { "en-US": "Western Astrology" }, route: "/methods/western", status: "ready", tags: ["本命盘", "行运"] },
+  { id: "western", title: "西洋占星", subtitle: "本命盘、行运、相位与宫位解释。", tradition: "星占", civilization: "希腊化 / 欧洲 / 现代心理占星", culturalNote: "用行星、宫位和相位描述人格动力与周期，现代语境常连接心理语言。", questionStyle: "适合问自我理解、关系模式、职业方向和阶段压力。", questionGrammar: "近期行运正在触发哪些人生领域、责任压力与身份转向？", causalityModel: "celestial-cycle", uncertaintyMode: "trend", evidenceStyle: ["calculated-chart", "user-narrative"], bestFor: ["life-structure", "career", "relationship", "inner-state"], weakFor: ["specific-event", "daily-guidance"], requiredInputs: ["birthDate", "birthTime", "birthPlace"], optionalInputs: ["currentLocation", "transitDate"], misuseBoundary: "不适合把行运解释成单一事件保证，也不适合替代心理或医疗建议。", aliases: { "en-US": "Western Astrology" }, route: "/methods/western", status: "ready", tags: ["本命盘", "行运"] },
   { id: "vedic", title: "印度占星", subtitle: "吠陀星盘、Dasha、Nakshatra 与转运。", tradition: "星占", civilization: "印度 / Jyotisha", culturalNote: "强调恒星黄道、月宿和 Dasha 周期，时间感比心理描述更强。", questionStyle: "适合问人生阶段、业力主题、婚姻事业时机与长期周期。", aliases: { "en-US": "Vedic Astrology / Jyotisha" }, route: "/methods/vedic", status: "ready", tags: ["Dasha", "月宿"] },
   { id: "numerology", title: "数字命理", subtitle: "姓名数、生命灵数与周期主题。", tradition: "数术", civilization: "希腊-犹太-现代新灵性", culturalNote: "把姓名与生日转成数字节律，适合跨语言入门但需说明拼写口径。", questionStyle: "适合问人格主题、年度主题、名字象征和轻量自我反思。", route: "/methods/numerology", status: "ready", tags: ["姓名数", "周期"] },
   { id: "runes", title: "卢恩符文", subtitle: "单符、三符与九符阵列解释。", tradition: "符文", civilization: "北欧 / 日耳曼符号传统", culturalNote: "以刻符、声音和神话意象进入判断，质感更像铭刻与誓言。", questionStyle: "适合问意志、挑战、保护、行动姿态和内在力量。", aliases: { "en-US": "Elder Futhark Runes" }, route: "/methods/runes", status: "ready", tags: ["符文", "阵列"] },

@@ -28,5 +28,12 @@ describe("ReadingOrchestrator", () => {
     assert.ok(report.divergence);
     assert.equal(report.degraded, true);
     assert.equal(report.traditions.length, 3);
+    assert.ok(report.questionFrame);
+    assert.deepEqual(report.questionFrame.domains, ["career", "specific-event", "life-structure"]);
+    assert.equal(report.questionTranslations?.length, 3);
+    assert.deepEqual(
+      report.questionTranslations?.map((item) => item.methodId),
+      ["bazi", "tarot", "iching"]
+    );
   });
 });

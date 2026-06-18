@@ -11,7 +11,7 @@ import { colors, spacing } from "@/theme/tokens";
 
 const NAV = [
   { to: "/", icon: "◐", label: "今日", end: true },
-  { to: "/methods", icon: "✦", label: "占法" },
+  { to: "/methods", icon: "✦", label: "系统" },
   { to: "/dream", icon: "☽", label: "解梦" },
   { to: "/profile", icon: "◎", label: "档案" },
   { to: "/settings", icon: "⚙", label: "设置" },
@@ -54,7 +54,7 @@ function MainLayoutShell() {
               type="button"
               className="method-copilot-topbar-btn"
               onClick={() => openCopilot()}
-              aria-label="打开占法解说"
+              aria-label="打开象征系统解说"
             >
               {copilotExperience.glyph} 解说
             </button>

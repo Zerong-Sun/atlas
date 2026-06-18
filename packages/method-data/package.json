@@ -9,6 +9,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@atlas/engines": "*"
+    "@atlas/engines": "*",
+    "@atlas/shared-types": "*"
   }
 }
