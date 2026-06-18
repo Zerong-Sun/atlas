@@ -1,4 +1,5 @@
 import { DIVINATION_METHODS, type QuestionDomain } from "./divinationMethods.ts";
+import { getMethodCognition } from "./methodCognition.ts";
 import type {
   ComparativeMethodId,
   DecisionPressure,
@@ -76,7 +77,8 @@ export function translateQuestionForMethods(rawText: string, methodIds: Comparat
 
 export function translateQuestionForMethod(rawText: string, methodId: ComparativeMethodId): QuestionTranslation {
   const method = DIVINATION_METHODS.find((item) => item.id === methodId);
-  const fallback = method?.questionGrammar ?? "这个传统会如何把你的问题转成可解释的象征结构？";
+  const cognition = getMethodCognition(methodId);
+  const fallback = cognition?.questionGrammar ?? method?.questionGrammar ?? "这个传统会如何把你的问题转成可解释的象征结构？";
   const question = rawText.trim();
   const translatedQuestion = methodId === "bazi"
     ? `当前议题是否符合我的长期结构、阶段节律与大运流年触发？原问题：${question}`
@@ -92,7 +94,7 @@ export function translateQuestionForMethod(rawText: string, methodId: Comparativ
     methodId,
     methodTitle: method?.title ?? methodId,
     translatedQuestion,
-    rationale: method?.questionGrammar ?? fallback,
+    rationale: cognition?.questionGrammar ?? method?.questionGrammar ?? fallback,
   };
 }
 
@@ -110,12 +112,17 @@ export function formatDecisionPressure(pressure: DecisionPressure): string {
 
 export function getMethodCulturalProfile(methodId: string) {
   const method = DIVINATION_METHODS.find((item) => item.id === methodId);
+  const cognition = getMethodCognition(methodId);
   return {
-    questionGrammar: method?.questionGrammar ?? method?.questionStyle ?? "这个系统会先把问题转成自身可处理的象征格式。",
-    causalityModel: method?.causalityModel ?? "symbolic-projection",
-    uncertaintyMode: method?.uncertaintyMode ?? "reflection",
-    evidenceStyle: method?.evidenceStyle ?? ["user-narrative"],
-    misuseBoundary: method?.misuseBoundary ?? "适合作为文化探索与自我反思，不替代专业建议。",
+    questionGrammar: cognition?.questionGrammar ?? method?.questionGrammar ?? method?.questionStyle ?? "这个系统会先把问题转成自身可处理的象征格式。",
+    causalityModel: cognition?.causalityModel ?? method?.causalityModel ?? "symbolic-projection",
+    uncertaintyMode: cognition?.uncertaintyMode ?? method?.uncertaintyMode ?? "reflection",
+    evidenceStyle: cognition?.evidenceStyle ?? method?.evidenceStyle ?? ["user-narrative"],
+    bestFor: cognition?.bestFor ?? method?.bestFor ?? [],
+    weakFor: cognition?.weakFor ?? method?.weakFor ?? [],
+    requiredInputs: cognition?.requiredInputs ?? method?.requiredInputs ?? ["questionText"],
+    optionalInputs: cognition?.optionalInputs ?? method?.optionalInputs ?? ["context"],
+    misuseBoundary: cognition?.misuseBoundary ?? method?.misuseBoundary ?? "适合作为文化探索与自我反思，不替代专业建议。",
   };
 }
 

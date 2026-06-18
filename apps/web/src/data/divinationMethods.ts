@@ -1,5 +1,7 @@
 export {
   getLocalizedMethodName,
+  getMethodCognition,
+  CULTURAL_METHOD_GROUPS,
   DIVINATION_METHODS,
   PREVIEW_WORKBENCH_IDS,
   getMethod,

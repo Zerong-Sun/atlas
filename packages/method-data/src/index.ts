@@ -37,6 +37,11 @@ export {
   type MethodExperience,
   type MethodMotion,
 } from "./methodExperiences.ts";
+export {
+  METHOD_COGNITION,
+  getMethodCognition,
+  type MethodCognition,
+} from "./methodCognition.ts";
 export { LOT_SIGNS, LOT_TEMPLE_LABELS, type LotSign } from "./lotSignsLibrary.ts";
 export {
   CULTURAL_LENS_OPTIONS,

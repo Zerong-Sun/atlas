@@ -8,6 +8,12 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "scripts": {
+    "test": "node --import tsx --test $(find src -name '*.test.ts' -print | tr '\\n' ' ')"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.4"
+  },
   "dependencies": {
     "@atlas/engines": "*",
     "@atlas/shared-types": "*"
