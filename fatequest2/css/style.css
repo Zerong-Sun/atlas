@@ -1,0 +1,458 @@
+/* ============ FateQuest 灵游 — celestial theme ============ */
+:root {
+  --bg: #0b0b1e;
+  --bg2: #14142e;
+  --card: rgba(255,255,255,0.055);
+  --card-hi: rgba(255,255,255,0.10);
+  --line: rgba(255,255,255,0.12);
+  --text: #eeeaf6;
+  --dim: #9d97b5;
+  --gold: #f0c75e;
+  --gold-deep: #d4a017;
+  --accent: #8fa8ff;
+  /* tradition colors (inherited from Atlas) */
+  --c-tarot: #9b6bb3;
+  --c-iching: #4a7c6f;
+  --c-bazi: #b0713a;
+  --c-western: #4a6fa5;
+  --c-runes: #7d8a97;
+  --c-dream: #6b5b95;
+  --c-astrodice: #3f7fae;
+  --c-jiaobei: #b3494f;
+  --c-meihua: #c96f8f;
+  --c-locked: #3a3a55;
+  --radius: 18px;
+  --tabbar-h: 62px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans SC", "Segoe UI", Roboto, sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+#stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.fx    { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
+
+.app {
+  position: relative; z-index: 1;
+  max-width: 560px; margin: 0 auto;
+  padding: 20px 18px calc(var(--tabbar-h) + 28px);
+  min-height: 100dvh;
+}
+
+/* ---------- typography ---------- */
+h1 { font-size: 1.7rem; letter-spacing: .04em; }
+h2 { font-size: 1.25rem; margin-bottom: 4px; }
+h3 { font-size: 1.02rem; }
+.dim   { color: var(--dim); font-size: .86rem; line-height: 1.55; }
+.gold  { color: var(--gold); }
+.small { font-size: .78rem; }
+.center{ text-align: center; }
+
+/* ---------- header / hud ---------- */
+.hud { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.hud .title { flex: 1; }
+.hud .title .sub { color: var(--dim); font-size: .78rem; letter-spacing: .12em; }
+.pill {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 12px; font-size: .8rem;
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.pill b { color: var(--gold); }
+
+.xpbar { height: 7px; background: var(--card); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
+.xpbar i {
+  display: block; height: 100%; border-radius: 99px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  transition: width .7s cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---------- cards & grid ---------- */
+.panel {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 16px; margin-bottom: 14px;
+  backdrop-filter: blur(8px);
+}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.realm {
+  position: relative; overflow: hidden; cursor: pointer;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 16px 14px 14px;
+  transition: transform .18s, background .18s, box-shadow .18s;
+  animation: rise .5s backwards;
+}
+.realm:hover { transform: translateY(-3px); background: var(--card-hi); }
+.realm:active { transform: scale(.97); }
+.realm::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: var(--rc, var(--gold));
+}
+.realm .ric {
+  width: 46px; height: 46px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 10px;
+  background: color-mix(in srgb, var(--rc, #888) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--rc, #888) 45%, transparent);
+}
+.realm .rt { font-weight: 700; margin-bottom: 2px; }
+.realm .rs { color: var(--dim); font-size: .74rem; line-height: 1.45; }
+.realm .rciv {
+  position: absolute; top: 12px; right: 12px; font-size: .66rem;
+  color: var(--dim); border: 1px solid var(--line);
+  padding: 2px 8px; border-radius: 99px;
+}
+.realm.locked { opacity: .55; filter: saturate(.4); }
+.realm.locked .ric { background: var(--c-locked); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 700; font-size: .95rem;
+  color: #241a05; background: linear-gradient(180deg, #ffe9a0, var(--gold));
+  border: none; border-radius: 999px; padding: 13px 30px; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(240,199,94,.25);
+  transition: transform .12s, box-shadow .12s, opacity .2s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: scale(.96); }
+.btn:disabled { opacity: .4; pointer-events: none; }
+.btn.ghost {
+  background: transparent; color: var(--text);
+  border: 1px solid var(--line); box-shadow: none; font-weight: 500;
+}
+.btn.block { width: 100%; }
+.btn.sm { padding: 8px 18px; font-size: .82rem; }
+
+.back {
+  background: none; border: none; color: var(--dim); font: inherit;
+  font-size: .9rem; cursor: pointer; padding: 6px 0; margin-bottom: 6px;
+}
+.back:hover { color: var(--text); }
+
+/* ---------- inputs ---------- */
+input, select, textarea {
+  font: inherit; color: var(--text);
+  background: rgba(255,255,255,.07); border: 1px solid var(--line);
+  border-radius: 12px; padding: 11px 13px; width: 100%;
+  outline: none; transition: border-color .2s;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+select option { background: var(--bg2); }
+label.f { display: block; margin-bottom: 12px; font-size: .84rem; color: var(--dim); }
+label.f input, label.f select, label.f textarea { margin-top: 6px; }
+
+/* ---------- tabbar ---------- */
+.tabbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex; justify-content: center; gap: 8px;
+  background: rgba(11,11,30,.82); backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+}
+.tab {
+  flex: 0 1 130px; background: none; border: none; cursor: pointer;
+  color: var(--dim); font: inherit; font-size: .72rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  transition: color .2s;
+}
+.tab .tab-ic { font-size: 1.25rem; }
+.tab.active { color: var(--gold); }
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: calc(var(--tabbar-h) + 24px); z-index: 70;
+  transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+  background: rgba(20,20,46,.95); border: 1px solid var(--gold);
+  color: var(--text); border-radius: 999px; padding: 10px 22px; font-size: .86rem;
+  transition: all .3s cubic-bezier(.2,.8,.2,1); white-space: nowrap;
+}
+.toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+/* ============ ritual pieces ============ */
+
+/* --- tarot cards --- */
+.fan { display: flex; justify-content: center; margin: 22px 0; min-height: 150px; flex-wrap: wrap; gap: 6px; }
+.tcard {
+  width: 78px; height: 126px; perspective: 700px; cursor: pointer;
+  margin: 0 -14px; transition: transform .25s;
+}
+.fan .tcard:hover { transform: translateY(-14px); z-index: 2; }
+.tcard .inner {
+  position: relative; width: 100%; height: 100%;
+  transform-style: preserve-3d; transition: transform .65s cubic-bezier(.3,.7,.3,1);
+}
+.tcard.flipped .inner { transform: rotateY(180deg); }
+.tface {
+  position: absolute; inset: 0; backface-visibility: hidden;
+  border-radius: 10px; border: 1px solid var(--line);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; padding: 6px; text-align: center;
+}
+.tback {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(240,199,94,.35) 0 8%, transparent 9%),
+    repeating-linear-gradient(45deg, #2b2050 0 8px, #241a44 8px 16px);
+}
+.tback::after { content: "✦"; color: var(--gold); font-size: 20px; }
+.tfront { background: linear-gradient(160deg, #33265c, #1c1440); transform: rotateY(180deg); }
+.tfront .sym { font-size: 30px; }
+.tfront .nm { font-size: .62rem; line-height: 1.3; color: var(--gold); }
+.tcard.rev .tfront .sym { transform: rotate(180deg); }
+.slot3 { display: flex; gap: 12px; justify-content: center; margin: 18px 0; }
+.slot3 .tcard { margin: 0; cursor: default; }
+.slotlab { text-align: center; font-size: .7rem; color: var(--dim); margin-top: 6px; }
+
+/* --- coins (I-Ching) --- */
+.coins { display: flex; gap: 18px; justify-content: center; margin: 20px 0; height: 64px; }
+.coin {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffe9a0, var(--gold-deep));
+  border: 2px solid #8a6a10; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  color: #5c4408; font-weight: 800; font-size: 1rem;
+}
+.coin::after {
+  content: ""; position: absolute; width: 18px; height: 18px;
+  background: var(--bg); border-radius: 3px;
+}
+.coin span { position: relative; z-index: 1; color: var(--gold); font-size: .78rem; }
+.coin.toss { animation: toss .7s cubic-bezier(.3,.6,.4,1); }
+@keyframes toss {
+  0%   { transform: translateY(0) rotateX(0); }
+  45%  { transform: translateY(-56px) rotateX(540deg); }
+  100% { transform: translateY(0) rotateX(1080deg); }
+}
+
+/* --- hexagram lines --- */
+.hexlines { display: flex; flex-direction: column-reverse; gap: 8px; align-items: center; margin: 16px 0; }
+.hline { display: flex; gap: 10px; height: 12px; animation: rise .4s backwards; position: relative; }
+.hline i { width: 70px; height: 12px; border-radius: 3px; background: var(--gold); display: block; }
+.hline.yin i { width: 30px; }
+.hline .mv {
+  position: absolute; right: -26px; top: -2px; color: var(--c-meihua); font-size: .8rem;
+}
+.hexname { font-size: 1.5rem; margin-top: 6px; }
+
+/* --- runes --- */
+.bag {
+  width: 110px; height: 120px; margin: 18px auto; cursor: pointer;
+  border-radius: 18px 18px 48px 48px;
+  background: linear-gradient(170deg, #5d4a7c, #372a52);
+  border: 1px solid var(--line); position: relative;
+  display: flex; align-items: center; justify-content: center; font-size: 34px;
+  transition: transform .15s;
+}
+.bag::before {
+  content: ""; position: absolute; top: 10px; left: 14px; right: 14px; height: 8px;
+  border-radius: 99px; background: #241a44; border: 1px solid var(--line);
+}
+.bag:active, .bag.shake { animation: shake .5s; }
+@keyframes shake {
+  0%,100% { transform: rotate(0); }
+  20% { transform: rotate(-9deg); } 40% { transform: rotate(8deg); }
+  60% { transform: rotate(-6deg); } 80% { transform: rotate(4deg); }
+}
+.runerow { display: flex; gap: 14px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.rune {
+  width: 74px; height: 92px; border-radius: 12px;
+  background: linear-gradient(160deg, #6e7883, #454d58);
+  border: 1px solid #808a95; box-shadow: inset 0 2px 6px rgba(255,255,255,.15);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  animation: pop .45s backwards;
+}
+.rune .rg { font-size: 30px; color: #f4efe4; text-shadow: 0 0 10px rgba(240,199,94,.6); }
+.rune .rn { font-size: .62rem; color: #cdd4da; }
+@keyframes pop { from { opacity: 0; transform: scale(.4) rotate(-14deg); } }
+
+/* --- dice --- */
+.dicerow { display: flex; gap: 16px; justify-content: center; margin: 20px 0; }
+.die {
+  width: 74px; height: 74px; border-radius: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  background: linear-gradient(160deg, #2c3f68, #1a2440);
+  border: 1px solid var(--accent); font-size: 26px;
+}
+.die small { font-size: .6rem; color: var(--dim); }
+.die.roll { animation: roll .8s cubic-bezier(.3,.6,.4,1); }
+@keyframes roll {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(380deg) scale(1.18) translateY(-18px); }
+  100% { transform: rotate(720deg) scale(1); }
+}
+
+/* --- jiaobei moon blocks --- */
+.blocks { display: flex; gap: 26px; justify-content: center; margin: 24px 0; height: 74px; }
+.block {
+  width: 64px; height: 64px; position: relative;
+}
+.block i {
+  position: absolute; inset: 0; border-radius: 50% 50% 8px 8px;
+  background: linear-gradient(160deg, #d0574f, #8e2f2c);
+  border: 1px solid #e8837b;
+}
+.block.flat i { background: linear-gradient(160deg, #f2b9a9, #c9776b); }
+.block.toss { animation: btoss .75s cubic-bezier(.3,.6,.4,1); }
+@keyframes btoss {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-64px) rotate(340deg); }
+  100% { transform: translateY(0) rotate(720deg); }
+}
+
+/* --- bazi pillars --- */
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0; }
+.pillar {
+  text-align: center; padding: 12px 6px; border-radius: 14px;
+  background: var(--card); border: 1px solid var(--line);
+  animation: rise .5s backwards;
+}
+.pillar .pl { font-size: .68rem; color: var(--dim); margin-bottom: 8px; }
+.pillar .ch { font-size: 1.5rem; line-height: 1.35; font-weight: 700; }
+.elem-木 { color: #7ecb6b; } .elem-火 { color: #ff7a6b; } .elem-土 { color: #d9a05b; }
+.elem-金 { color: #e8e4d8; } .elem-水 { color: #7db4e8; }
+.ebars { margin: 14px 0 4px; }
+.ebar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: .8rem; }
+.ebar .lab { width: 56px; }
+.ebar .tr { flex: 1; height: 9px; background: var(--card); border-radius: 99px; overflow: hidden; }
+.ebar .tr i { display: block; height: 100%; border-radius: 99px; transition: width .8s ease; }
+
+/* --- zodiac --- */
+.constellation {
+  width: 150px; height: 150px; margin: 14px auto; border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, rgba(143,168,255,.22), transparent 70%);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 60px; animation: glowpulse 3s infinite;
+}
+@keyframes glowpulse {
+  0%,100% { box-shadow: 0 0 22px rgba(143,168,255,.18); }
+  50% { box-shadow: 0 0 44px rgba(143,168,255,.45); }
+}
+
+/* --- fortune lot cylinder --- */
+.cylinder {
+  width: 100px; height: 130px; margin: 18px auto; cursor: pointer;
+  background: linear-gradient(180deg, #8a5a2b, #5c3a18);
+  border-radius: 10px 10px 16px 16px; position: relative;
+  border: 1px solid #a9743d;
+  display: flex; align-items: flex-start; justify-content: center;
+}
+.cylinder::before {
+  content: ""; position: absolute; top: -6px; left: -4px; right: -4px; height: 14px;
+  background: #6e4820; border-radius: 99px; border: 1px solid #a9743d;
+}
+.cylinder .sticks {
+  display: flex; gap: 5px; margin-top: -26px;
+}
+.cylinder .sticks i {
+  width: 7px; height: 44px; background: linear-gradient(180deg, #e8cf9a, #c9a45f);
+  border-radius: 3px 3px 0 0; display: block;
+}
+.cylinder .sticks i:nth-child(2) { height: 54px; }
+.cylinder .sticks i:nth-child(4) { height: 50px; }
+.cylinder.shake { animation: shake .6s infinite; }
+.lotcard {
+  border: 1px dashed var(--gold); border-radius: 12px; padding: 16px;
+  background: rgba(240,199,94,.06); margin-top: 12px; animation: rise .5s;
+}
+.lotgrade { font-size: 1.3rem; color: var(--gold); }
+
+/* --- dream --- */
+.symchips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.chip {
+  border: 1px solid var(--c-dream); color: var(--text); border-radius: 999px;
+  padding: 5px 13px; font-size: .8rem; background: rgba(107,91,149,.2);
+  animation: pop .4s backwards;
+}
+
+/* --- codex --- */
+.codextabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.codexgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 8px; }
+.citem {
+  aspect-ratio: 3/4; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--card); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px; padding: 4px; text-align: center;
+}
+.citem .ci { font-size: 22px; }
+.citem .cn { font-size: .58rem; color: var(--dim); line-height: 1.25; }
+.citem.miss { opacity: .3; filter: grayscale(1); }
+.citem.got { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+
+/* --- results --- */
+.result { animation: rise .5s; }
+.reading {
+  border-left: 3px solid var(--gold); padding: 4px 0 4px 14px; margin: 12px 0;
+  font-size: .92rem; line-height: 1.7;
+}
+.xp-note { text-align: center; color: var(--gold); font-size: .84rem; margin-top: 10px; animation: pop .5s; }
+
+/* --- achievements --- */
+.achv { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.achv:last-child { border-bottom: none; }
+.achv .ai { font-size: 22px; width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; background: var(--card); }
+.achv.off { opacity: .38; }
+
+.footer-note { text-align: center; color: var(--dim); font-size: .68rem; margin-top: 26px; line-height: 1.6; }
+
+/* ============ journey mode 占途 ============ */
+.jres { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.jres .pill.gold { border-color: var(--gold); color: var(--gold); }
+
+.jmap { width: 100%; height: auto; display: block; margin: 6px 0 12px; }
+.jparch {
+  fill: #f0e2c4; opacity: 0.06;
+  stroke: var(--gold); stroke-opacity: 0.35; stroke-width: 1.5;
+}
+.jrl { font-size: 13px; opacity: 0.65; font-weight: 700; letter-spacing: 2px; }
+.jdeco path, .jdeco circle { fill: none; stroke: rgba(255,255,255,0.22); stroke-width: 1.6; }
+.jroute {
+  fill: none; stroke: rgba(255,255,255,0.28); stroke-width: 2;
+  stroke-dasharray: 5 7; stroke-linecap: round;
+}
+.jroute-done {
+  fill: none; stroke: var(--gold); stroke-width: 2.5;
+  stroke-dasharray: 5 7; stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(240,199,94,.6));
+}
+.jn circle { fill: var(--bg2); stroke-width: 2; }
+.jn.done circle { stroke: var(--gold); fill: rgba(240,199,94,.22); }
+.jn.cur circle { stroke: #fff; fill: var(--gold); animation: jpulse 1.6s infinite; }
+.jn.lock circle { stroke: rgba(255,255,255,0.25); }
+.jn .jni { text-anchor: middle; font-size: 12px; font-weight: 800; fill: #fff; }
+.jn.cur .jni { fill: #241a05; }
+.jn.lock .jni { fill: rgba(255,255,255,0.4); }
+.jn .jnl {
+  text-anchor: middle; font-size: 12px; fill: var(--text);
+  paint-order: stroke; stroke: rgba(11,11,30,0.8); stroke-width: 3px;
+}
+.jn.lock .jnl { fill: var(--dim); }
+@keyframes jpulse {
+  0%,100% { filter: drop-shadow(0 0 3px rgba(240,199,94,.5)); }
+  50% { filter: drop-shadow(0 0 12px rgba(240,199,94,.95)); }
+}
+.jnode-panel { border-left: 3px solid var(--rc, var(--gold)); animation: rise .4s; }
+.jreg { font-size: .7rem; letter-spacing: 2px; font-weight: 700; margin-bottom: 2px; }
+.jmethods { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+/* home banner */
+.jbanner {
+  position: relative; overflow: hidden; cursor: pointer;
+  border: 1px solid rgba(240,199,94,.4);
+  background: linear-gradient(120deg, rgba(240,199,94,.12), rgba(74,111,165,.12));
+}
+.jbanner:hover { background: linear-gradient(120deg, rgba(240,199,94,.2), rgba(74,111,165,.18)); }
+
+@media (max-width: 400px) {
+  .grid { gap: 9px; }
+  .tcard { width: 68px; height: 110px; }
+}
