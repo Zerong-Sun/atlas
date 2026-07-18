@@ -13,10 +13,12 @@
 </head>
 <body>
 <canvas id="stars"></canvas>
+<div id="tint"></div>
 
 <div id="app" class="app">
   <!-- Screens rendered by js/app.js -->
 </div>
+<canvas id="weather"></canvas>
 
 <nav id="tabbar" class="tabbar">
   <button data-nav="home"   class="tab active"><span class="tab-ic">✦</span><span class="tab-t" data-i18n="nav.home"></span></button>
@@ -35,9 +37,13 @@
 <script src="js/engines.js"></script>
 <script src="js/state.js"></script>
 <script src="js/fx.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/atmo.js"></script>
 <script src="js/app.js"></script>
 <script src="js/data-journey.js"></script>
 <script src="js/journey.js"></script>
+<script src="js/data-tower.js"></script>
+<script src="js/tower.js"></script>
 <script>
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js").catch(() => {});

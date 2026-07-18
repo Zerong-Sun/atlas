@@ -180,3 +180,32 @@ FQ.drawLot = function () {
   }
   return FQ.LOTS[3];
 };
+
+/* ---------- 2.0 core: omens & fate-bargaining (GDD §3) ----------
+   Rituals PRE-COMMIT their outcome; the omen leaks a truthful hint with
+   probability `acc` (an untruthful omen reads as "unclear", never inverted —
+   informative but honest). Stardust re-commits the pending outcome. */
+FQ.omenFor = function (quality, acc) {
+  acc = acc === undefined ? 0.72 : acc;
+  return Math.random() < acc ? quality : 0; /* -1 ill / 0 unclear / +1 fair */
+};
+/* omen line HTML for a method + shown quality (-1/0/1) */
+FQ.omenHTML = function (method, shown) {
+  const q = shown > 0 ? "good" : shown < 0 ? "ill" : "veiled";
+  const ic = shown > 0 ? "🕯️" : shown < 0 ? "🌫️" : "🌒";
+  return `<div class="omen ${q}">${ic} ${FQ.t("omen." + method + "." + q)}</div>`;
+};
+
+FQ.weightedPick = function (arr, wfn, rng) {
+  const r = rng || Math.random;
+  let total = 0;
+  const ws = arr.map(x => { const w = Math.max(0, wfn(x)); total += w; return w; });
+  if (total <= 0) return arr[0];
+  let x = r() * total;
+  for (let i = 0; i < arr.length; i++) { x -= ws[i]; if (x <= 0) return arr[i]; }
+  return arr[arr.length - 1];
+};
+FQ.ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+FQ.buzz = function (pattern) {
+  try { navigator.vibrate && navigator.vibrate(pattern); } catch (e) {}
+};

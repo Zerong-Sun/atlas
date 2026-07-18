@@ -36,7 +36,7 @@ FQ.hudHTML = function () {
     <div>
       <span class="pill">${FQ.t("lv.prefix")}${FQ.level() + 1} · <b>${FQ.esc(FQ.levelTitle())}</b></span>
       <div class="xpbar"><i id="xpbar-i" style="width:${pct}%"></i></div>
-      <div class="small dim center">${FQ.state.xp} ✧</div>
+      <div class="small dim center">${FQ.state.xp} ✧ · ✨ ${FQ.state.stardust}</div>
     </div>
   </div>`;
 };
@@ -114,6 +114,14 @@ FQ.SCREENS = {
           <div class="dim small">${FQ.t("journey.tag")}</div>
         </div>
         <span class="pill">${jdone ? "✓" : jprog + "/8"}</span>
+      </div>
+      <div class="panel jbanner" onclick="FQ.nav('tower')" style="display:flex;align-items:center;gap:14px">
+        <div style="font-size:30px">🗼</div>
+        <div style="flex:1">
+          <h3 class="gold">${FQ.t("tw.name")}</h3>
+          <div class="dim small">${FQ.t("tw.tag")}</div>
+        </div>
+        <span class="pill">${FQ.state.tower.run ? "▶ " + FQ.state.tower.run.layer + "/12" : (FQ.state.tower.best ? "⭐" + FQ.state.tower.best : "NEW")}</span>
       </div>
       <div class="panel" style="display:flex;align-items:center;gap:14px">
         <div style="font-size:30px">🏮</div>
@@ -362,6 +370,7 @@ FQ.SCREENS = {
 FQ.doDaily = function () {
   if (!FQ.dailyAvailable()) { FQ.toast(FQ.t("home.daily.done")); return; }
   const cyl = document.getElementById("cyl");
+  FQ.AU.play("shake");
   cyl.classList.add("shake");
   setTimeout(() => {
     cyl.classList.remove("shake");
@@ -385,6 +394,7 @@ FQ.tarotPick = function (i) {
   const el = document.getElementById("fan-" + i);
   if (!t || t.flipped >= 3 || el.classList.contains("flipped")) return;
   const pick = t.drawn[t.flipped];
+  FQ.AU.play("flip");
   const front = el.querySelector(".tfront");
   front.innerHTML = `<div class="sym">${pick.card.sym}</div>
     <div class="nm">${FQ.bi(pick.card, "zh", "en")}${pick.reversed ? FQ.t("tarot.rev") : ""}</div>`;
@@ -408,6 +418,7 @@ FQ.tarotReveal = function () {
 
 FQ.doToss = function () {
   if (FQ._cast.length >= 6) return;
+  FQ.AU.play("coin");
   const toss = FQ.tossCoins();
   document.querySelectorAll("#coins .coin").forEach((c, i) => {
     c.classList.remove("toss"); void c.offsetWidth; c.classList.add("toss");
@@ -499,6 +510,7 @@ FQ.doWestern = function () {
 
 FQ.doRunes = function () {
   const bag = document.getElementById("bag");
+  FQ.AU.play("shake");
   bag.classList.add("shake");
   setTimeout(() => {
     bag.classList.remove("shake");
@@ -540,6 +552,7 @@ FQ.doDream = function () {
 };
 
 FQ.doDice = function () {
+  FQ.AU.play("dice");
   const roll = FQ.rollAstroDice();
   ["d1", "d2", "d3"].forEach(id => {
     const el = document.getElementById(id);
@@ -558,6 +571,7 @@ FQ.doDice = function () {
 };
 
 FQ.doJiaobei = function () {
+  FQ.AU.play("wood");
   const { blocks, res } = FQ.throwJiaobei();
   ["b1", "b2"].forEach((id, i) => {
     const el = document.getElementById(id);
@@ -594,6 +608,7 @@ FQ.doReset = function () {
   FQ.load();
   document.querySelectorAll(".tab").forEach(b =>
     b.addEventListener("click", () => FQ.nav(b.dataset.nav)));
+  document.addEventListener("pointerdown", () => FQ.AU && FQ.AU.unlock(), { once: true });
   FQ.applyStaticI18n();
   FQ.nav("home");
 })();

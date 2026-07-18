@@ -1,4 +1,4 @@
-/* Gamification: XP, levels, streaks, collection, achievements — localStorage persisted */
+/* Gamification: XP, levels, streaks, collection, achievements, stardust — localStorage persisted */
 window.FQ = window.FQ || {};
 
 FQ.LEVELS = [0, 60, 160, 320, 560, 900, 1400]; /* xp thresholds per title */
@@ -10,15 +10,22 @@ const DEFAULT_STATE = {
   methodsTried: [],
   col: { tarot: [], hex: [], rune: [] },
   achv: [],
+  /* 2.0 — stardust (改运资源, cross-mode, GDD §3.2/§8) */
+  stardust: 3, dustDay: null, dustToday: 0,
+  mute: false,
+  /* 2.0 — tower meta progress (GDD §5.4) */
+  tower: { runs: 0, wins: 0, best: 0, resTotal: 0,
+           unlockedArch: ["tarot"], unlockedSyms: [], run: null },
   journey: null
 };
 
 FQ.load = function () {
   try {
-    const raw = localStorage.getItem("fatequest");
-    FQ.state = raw ? Object.assign({}, DEFAULT_STATE, JSON.parse(raw)) : { ...DEFAULT_STATE };
-  } catch (e) { FQ.state = { ...DEFAULT_STATE }; }
+    const raw = localStorage.getItem("fatequest2");
+    FQ.state = raw ? Object.assign({}, DEFAULT_STATE, JSON.parse(raw)) : JSON.parse(JSON.stringify(DEFAULT_STATE));
+  } catch (e) { FQ.state = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
   FQ.state.col = Object.assign({ tarot: [], hex: [], rune: [] }, FQ.state.col);
+  FQ.state.tower = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE.tower)), FQ.state.tower);
   if (FQ.state.lang) FQ.lang = FQ.state.lang;
   else FQ.lang = (navigator.language || "zh").startsWith("zh") ? "zh" : "en";
   /* visit tracking */
@@ -30,10 +37,10 @@ FQ.load = function () {
   FQ.save();
 };
 FQ.save = function () {
-  try { localStorage.setItem("fatequest", JSON.stringify(FQ.state)); } catch (e) {}
+  try { localStorage.setItem("fatequest2", JSON.stringify(FQ.state)); } catch (e) {}
 };
 FQ.reset = function () {
-  try { localStorage.removeItem("fatequest"); } catch (e) {}
+  try { localStorage.removeItem("fatequest2"); } catch (e) {}
   FQ.load();
 };
 
@@ -63,9 +70,35 @@ FQ.gainXP = function (n) {
     setTimeout(() => {
       FQ.toast("✨ " + FQ.t("levelup", { t: FQ.levelTitle() }));
       FQ.confetti && FQ.confetti();
+      FQ.AU && FQ.AU.play("levelup");
     }, 900);
   }
   FQ.renderHUD && FQ.renderHUD();
+};
+
+/* ---- stardust 星尘 (GDD §3.2: scarce, cross-mode; never sold) ---- */
+FQ.gainDust = function (n, silent) {
+  if (n <= 0) return;
+  FQ.state.stardust += n;
+  FQ.save();
+  if (!silent) FQ.toast(FQ.t("dust.gain", { n }));
+  FQ.checkAchievements();
+  FQ.renderHUD && FQ.renderHUD();
+};
+FQ.spendDust = function (n) {
+  if (FQ.state.stardust < n) { FQ.toast(FQ.t("dust.none")); return false; }
+  FQ.state.stardust -= n;
+  FQ.save();
+  FQ.renderHUD && FQ.renderHUD();
+  return true;
+};
+/* duplicate codex encounters distill a little stardust (cap/day, GDD §8) */
+FQ.dustFromDup = function () {
+  const today = FQ.dayKey();
+  if (FQ.state.dustDay !== today) { FQ.state.dustDay = today; FQ.state.dustToday = 0; }
+  if (FQ.state.dustToday >= 5) return;
+  FQ.state.dustToday++;
+  FQ.gainDust(1, true);
 };
 
 FQ.recordReading = function (methodId, xp) {
@@ -75,10 +108,10 @@ FQ.recordReading = function (methodId, xp) {
   FQ.gainXP(xp);
 };
 
-/* collection — returns true if newly lit */
+/* collection — returns true if newly lit; duplicates distill stardust */
 FQ.collect = function (kind, key, label) {
   const arr = FQ.state.col[kind];
-  if (arr.includes(key)) return false;
+  if (arr.includes(key)) { FQ.dustFromDup(); return false; }
   arr.push(key);
   FQ.save();
   setTimeout(() => FQ.toast("📖 " + FQ.t("new.item", { t: label })), 450);
@@ -108,7 +141,14 @@ FQ.ACHIEVEMENTS = [
   { id: "streak7",   ic: "🕯️", cond: s => s.streak >= 7 },
   { id: "all6",      ic: "🧭", cond: s => s.methodsTried.length >= 6 },
   { id: "hex64",     ic: "☯",  cond: s => s.col.hex.length >= 64 },
-  { id: "marco",     ic: "🐪", cond: s => !!s.journey && (s.journey.completed || []).includes("marco") }
+  { id: "marco",     ic: "🐪", cond: s => !!s.journey && (s.journey.completed || []).includes("marco") },
+  /* 2.0 */
+  { id: "tower4",    ic: "🗼", cond: s => s.tower.best >= 4 },
+  { id: "tower12",   ic: "👑", cond: s => s.tower.wins >= 1 },
+  { id: "res10",     ic: "🌈", cond: s => s.tower.resTotal >= 10 },
+  { id: "dust50",    ic: "✨", cond: s => s.stardust >= 50 },
+  { id: "bothroads", ic: "🗺️", cond: s => !!s.journey && (s.journey.roadsTaken || []).length >= 2 },
+  { id: "chronicle", ic: "📜", cond: s => !!s.journey && (s.journey.log || []).length >= 8 }
 ];
 FQ.checkAchievements = function () {
   FQ.ACHIEVEMENTS.forEach(a => {

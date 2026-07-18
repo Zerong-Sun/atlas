@@ -456,3 +456,143 @@ label.f input, label.f select, label.f textarea { margin-top: 6px; }
   .grid { gap: 9px; }
   .tcard { width: 68px; height: 110px; }
 }
+
+/* ============ 2.0 atmosphere (GDD §7) ============ */
+#weather { position: fixed; inset: 0; z-index: 44; pointer-events: none; }
+#tint {
+  position: fixed; inset: 0; z-index: 2; pointer-events: none;
+  opacity: 0; transition: background 2s ease, opacity 2s ease;
+}
+body[data-phase="dawn"]  #tint { opacity: 1; background: linear-gradient(180deg, rgba(255,185,94,.10), rgba(255,140,90,.05)); }
+body[data-phase="noon"]  #tint { opacity: 1; background: rgba(255,252,240,.04); }
+body[data-phase="dusk"]  #tint { opacity: 1; background: linear-gradient(180deg, rgba(255,120,60,.12), rgba(120,60,120,.08)); }
+body[data-phase="night"] #tint { opacity: 1; background: linear-gradient(180deg, rgba(16,24,84,.28), rgba(8,10,40,.22)); }
+
+/* omen line (§3.1 预兆可视) */
+.omen {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .8rem; border-radius: 999px; padding: 6px 14px; margin: 8px 0;
+  border: 1px dashed var(--line); color: var(--dim); animation: rise .5s;
+}
+.omen.good { border-color: rgba(240,199,94,.65); color: var(--gold); background: rgba(240,199,94,.07); }
+.omen.ill  { border-color: rgba(140,150,190,.5); color: #aab3d6; background: rgba(90,100,150,.10); }
+
+/* typewriter */
+.typing::after { content: "▎"; color: var(--gold); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* stardust pill */
+.pill.dust b { color: #cfe0ff; }
+
+/* fail-forward choices (§3.3 结果双刃) */
+.edged { border-left: 3px solid #aab3d6; padding: 8px 12px; margin-top: 8px;
+  background: rgba(120,130,180,.08); border-radius: 0 12px 12px 0; font-size: .85rem; }
+
+/* ============ 命途塔 Tower of Fates (GDD §5) ============ */
+.archrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+.archcard {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 12px; text-align: center; animation: rise .5s backwards;
+}
+.archcard::before { content: none; }
+.archcard .ric { margin: 0 auto 8px; background: color-mix(in srgb, var(--rc, #888) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--rc, #888) 45%, transparent);
+  width: 46px; height: 46px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.archcard .btn { margin-top: 10px; }
+.archcard.locked { opacity: .6; filter: saturate(.5); }
+
+.twtrack { display: flex; gap: 5px; justify-content: center; flex-wrap: wrap; margin: 4px 0 10px; }
+.twdot {
+  width: 26px; height: 26px; border-radius: 50%; font-size: .68rem; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--card); border: 1px solid var(--line); color: var(--dim);
+}
+.twdot.done { border-color: var(--gold); color: var(--gold); background: rgba(240,199,94,.12); }
+.twdot.cur { background: var(--gold); color: #241a05; border-color: #fff; animation: jpulse 1.6s infinite; }
+
+.twevent { border-left: 3px solid var(--line); animation: rise .4s; }
+.twevent.t-scenery { border-left-color: #7ecb6b; }
+.twevent.t-parley  { border-left-color: #8fa8ff; }
+.twevent.t-peril   { border-left-color: #ff7a6b; }
+.twevent.t-wonder  { border-left-color: #f0c75e; }
+.twevent.t-caravan { border-left-color: #d9a05b; }
+.twevent.t-ordeal  { border-left-color: #b3494f; box-shadow: 0 0 24px rgba(179,73,79,.18); }
+.twtype { font-size: .68rem; letter-spacing: 2px; color: var(--dim); font-weight: 700; margin-bottom: 4px; }
+
+.twhand { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 16px 0 10px; }
+.twcard {
+  width: 96px; min-height: 128px; border-radius: 12px; cursor: pointer; position: relative;
+  border: 1px solid var(--line); animation: pop .4s backwards;
+  display: flex; align-items: stretch; justify-content: center;
+  transition: transform .16s, box-shadow .16s, border-color .16s;
+}
+.twcard:hover { transform: translateY(-4px); }
+.twcard .twcard-face {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 5px; padding: 8px 6px; text-align: center; border-radius: 12px;
+}
+.twcard.back .twcard-face {
+  background: radial-gradient(circle at 50% 32%, rgba(240,199,94,.3) 0 10%, transparent 11%),
+    repeating-linear-gradient(45deg, #2b2050 0 8px, #241a44 8px 16px);
+  color: var(--gold); font-size: 22px;
+}
+.twcard.back.sel { border-color: var(--gold); box-shadow: 0 0 16px rgba(240,199,94,.5); transform: translateY(-8px); }
+.twomen { position: absolute; top: 6px; right: 8px; font-size: .8rem; }
+.twomen.good { color: var(--gold); text-shadow: 0 0 8px rgba(240,199,94,.9); animation: glint 1.6s infinite; }
+.twomen.ill { color: #8b93b8; }
+@keyframes glint { 50% { opacity: .4; } }
+.twcard.open { cursor: default; background: linear-gradient(160deg, #33265c, #1c1440); }
+.twcard.open.civ-iching { background: linear-gradient(160deg, #274b42, #142e28); }
+.twcard.open.civ-runes  { background: linear-gradient(160deg, #4a525c, #2b3138); }
+.twcard.open.rev { border-color: #b58bd6; }
+.twcard.open.rev .twsym-g { transform: rotate(180deg); }
+.twcard.open.flippable { cursor: pointer; box-shadow: 0 0 14px rgba(240,199,94,.55); }
+.twcard.curse { opacity: .75; filter: saturate(.4); cursor: not-allowed; }
+.twcard.curse .twcard-face { background: repeating-linear-gradient(-45deg, #241a2c 0 7px, #1a1220 7px 14px); }
+.twsym-g { font-size: 26px; }
+.twsym-n { font-size: .62rem; color: var(--gold); line-height: 1.3; }
+.twsym-e { font-size: .6rem; color: var(--text); opacity: .85; line-height: 1.35; }
+.twsym-p { font-size: .6rem; color: var(--dim); }
+
+.twsym {
+  width: 86px; border-radius: 12px; border: 1px solid var(--line); cursor: pointer;
+  background: linear-gradient(160deg, #33265c, #1c1440);
+  display: inline-flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px;
+  transition: transform .15s; animation: pop .4s backwards;
+}
+.twsym:hover { transform: translateY(-3px); }
+.twsym.civ-iching { background: linear-gradient(160deg, #274b42, #142e28); }
+.twsym.civ-runes  { background: linear-gradient(160deg, #4a525c, #2b3138); }
+.twsym.curse { filter: saturate(.4); background: repeating-linear-gradient(-45deg, #241a2c 0 7px, #1a1220 7px 14px); }
+.twsymrow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.twsymrow.center-row { justify-content: center; }
+.minisym {
+  width: 30px; height: 34px; border-radius: 7px; font-size: 15px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); background: rgba(155,107,179,.18);
+}
+.minisym.civ-iching, .minisym.civ-runes { background: rgba(74,124,111,.2); }
+.minisym.civ-runes { background: rgba(125,138,151,.2); }
+.minisym.civ-tarot { background: rgba(155,107,179,.18); }
+.minisym.curse { background: rgba(60,40,70,.4); filter: saturate(.4); }
+
+.twres {
+  margin: 10px 0; padding: 10px 14px; border-radius: 12px; font-weight: 700; font-size: .9rem;
+  animation: pop .45s;
+}
+.twres.kin { background: rgba(240,199,94,.12); border: 1px solid rgba(240,199,94,.5); color: var(--gold); }
+.twres.contrast {
+  background: linear-gradient(100deg, rgba(155,107,179,.18), rgba(240,199,94,.16));
+  border: 1px solid rgba(200,160,220,.5);
+}
+.twres.none { background: var(--card); border: 1px solid var(--line); color: var(--dim); }
+.twnotes { margin-top: 8px; display: grid; gap: 6px; }
+.twnote { font-size: .74rem; font-weight: 400; color: var(--text); opacity: .9;
+  border-left: 2px solid var(--line); padding-left: 10px; line-height: 1.55; }
+
+.twoutcome { margin: 10px 0; padding: 12px 14px; border-radius: 12px;
+  background: var(--card); border: 1px solid var(--line); }
+.twlog { margin-top: 6px; font-size: .8rem; color: var(--dim); display: grid; gap: 2px; }
+.skillbtn { cursor: pointer; border-color: rgba(240,199,94,.6); color: var(--gold); background: rgba(240,199,94,.08); }
+.skillbtn.off, .pill.off { opacity: .5; cursor: pointer; }
+.twdeck { margin-top: 16px; }
