@@ -242,6 +242,24 @@ FQ.SCREENS = {
       <div id="rn-out"></div>`;
   },
 
+  /* ===== lenormand (real Dondorf scans) ===== */
+  lenormand() {
+    FQ._len = { drawn: FQ.drawLenormand(3), flipped: 0 };
+    const fan = [0, 1, 2].map(i => `
+      <div class="lencard" id="len-${i}" onclick="FQ.lenPick(${i})">
+        <div class="lface lback">✦</div>
+        <div class="lface lfront"></div>
+      </div>`).join("");
+    $app().innerHTML = `
+      ${FQ.backBtn()}
+      <h2>${FQ.t("lenormand.name")} 🃁</h2>
+      <p class="dim">${FQ.t("lenormand.desc")}</p>
+      <p class="small gold center" style="margin-top:10px">${FQ.t("lenormand.pick")}</p>
+      <div class="lenfan">${fan}</div>
+      <div id="len-out"></div>
+      <div class="footer-note">${FQ.t("lenormand.credit")}</div>`;
+  },
+
   /* ===== dream ===== */
   dream() {
     $app().innerHTML = `
@@ -291,11 +309,11 @@ FQ.SCREENS = {
   codex(tab) {
     tab = tab || "tarot";
     const c = FQ.state.col;
-    const total = FQ.TAROT.length + FQ.HEXAGRAMS.length + FQ.RUNES.length;
-    const tabs = ["tarot", "hex", "rune"].map(k => `
+    const total = FQ.TAROT.length + FQ.HEXAGRAMS.length + FQ.RUNES.length + FQ.LENORMAND.length;
+    const NCOL = { tarot: 22, hex: 64, rune: 24, len: 36 };
+    const tabs = ["tarot", "hex", "rune", "len"].map(k => `
       <button class="btn sm ${k === tab ? "" : "ghost"}" onclick="FQ.nav('codex','${k}')">
-        ${FQ.t("codex." + (k === "hex" ? "hex" : k === "rune" ? "rune" : "tarot"))}
-        (${c[k].length}/${k === "tarot" ? 22 : k === "hex" ? 64 : 24})
+        ${FQ.t("codex." + k)} (${(c[k] || []).length}/${NCOL[k]})
       </button>`).join("");
     let items = "";
     if (tab === "tarot") {
@@ -303,6 +321,13 @@ FQ.SCREENS = {
         const got = c.tarot.includes(t.id);
         return `<div class="citem ${got ? "got" : "miss"}"><div class="ci">${got ? t.sym : "❔"}</div>
           <div class="cn">${got ? FQ.bi(t, "zh", "en") : "· · ·"}</div></div>`;
+      }).join("");
+    } else if (tab === "len") {
+      items = FQ.LENORMAND.map(l => {
+        const got = (c.len || []).includes(l.n);
+        return `<div class="citem ${got ? "got" : "miss"}">${got
+          ? `<img class="lenthumb" src="assets/decks/lenormand/${l.f}.jpg" alt="">`
+          : `<div class="ci">❔</div><div class="cn">#${l.n}</div>`}</div>`;
       }).join("");
     } else if (tab === "hex") {
       items = FQ.HEXAGRAMS.map(h => {
@@ -518,6 +543,38 @@ FQ.doWestern = function () {
   FQ.recordReading("western", 10);
 };
 
+FQ.lenPick = function (i) {
+  const L = FQ._len;
+  const el = document.getElementById("len-" + i);
+  if (!L || el.classList.contains("flipped")) return;
+  const card = L.drawn[i];
+  el.querySelector(".lfront").innerHTML = `<img src="assets/decks/lenormand/${card.f}.jpg" alt="${card.en}">`;
+  el.classList.add("flipped");
+  FQ.AU.play("flip");
+  const r = el.getBoundingClientRect();
+  FQ.sparkleAt(r.left + r.width / 2, r.top + r.height / 2, "#c2a15c");
+  FQ.collect("len", card.n, FQ.bi(card, "zh", "en"));
+  L.flipped++;
+  if (L.flipped === 3) setTimeout(FQ.lenReveal, 700);
+};
+FQ.lenReveal = function () {
+  const labels = [FQ.t("lenormand.p1"), FQ.t("lenormand.p2"), FQ.t("lenormand.p3")];
+  const rows = FQ._len.drawn.map((c, i) => `
+    <div class="reading"><b class="gold">${labels[i]} · ${c.n} ${FQ.bi(c, "zh", "en")}</b><br>${FQ.bi(c, "mZh", "mEn")}</div>`).join("");
+  document.getElementById("len-out").innerHTML = `<div class="result">${rows}
+    <div class="center"><button class="btn ghost sm" onclick="FQ.nav('lenormand')">${FQ.t("common.again")}</button></div></div>`;
+  FQ.recordReading("lenormand", 12);
+};
+
+/* astrodice SVG faces (assets/astrodice/, black line art lifted to gold by CSS) */
+FQ.diceArt = function (kind, key, cls) {
+  const file = kind === "planet" ? "planets/zodiac-planet-" + key
+    : kind === "sign" ? "signs/" + key
+    : "houses/house-" + String(key).padStart(2, "0");
+  return `<img class="dice-svg ${cls || ""}" src="assets/astrodice/${file}.svg" alt=""
+    onerror="this.outerHTML=this.getAttribute('data-fb')||''" data-fb="${FQ.esc(arguments[3] || "")}">`;
+};
+
 FQ.doRunes = function () {
   const bag = document.getElementById("bag");
   FQ.AU.play("shake");
@@ -569,9 +626,9 @@ FQ.doDice = function () {
     el.classList.remove("roll"); void el.offsetWidth; el.classList.add("roll");
   });
   setTimeout(() => {
-    document.getElementById("d1").innerHTML = `${roll.planet.sym}<small>${FQ.bi(roll.planet, "zh", "en")}</small>`;
-    document.getElementById("d2").innerHTML = `${roll.sign.sym}<small>${FQ.bi(roll.sign, "zh", "en")}</small>`;
-    document.getElementById("d3").innerHTML = `${"ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ"[roll.house.n - 1]}<small>${FQ.bi(roll.house, "zh", "en")}</small>`;
+    document.getElementById("d1").innerHTML = `${FQ.diceArt("planet", roll.planet.en.toLowerCase(), "", roll.planet.sym)}<small>${FQ.bi(roll.planet, "zh", "en")}</small>`;
+    document.getElementById("d2").innerHTML = `${FQ.diceArt("sign", roll.sign.id, "", roll.sign.sym)}<small>${FQ.bi(roll.sign, "zh", "en")}</small>`;
+    document.getElementById("d3").innerHTML = `${FQ.diceArt("house", roll.house.n, "", "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ"[roll.house.n - 1])}<small>${FQ.bi(roll.house, "zh", "en")}</small>`;
     const line = FQ.lang === "zh"
       ? `${roll.planet.zh}（${roll.planet.kZh}）落在${roll.sign.zh}，照进你的${roll.house.zh}。此刻的答案，与「${roll.house.zh.replace("之宫", "")}」里的「${roll.planet.kZh}」有关。`
       : `${roll.planet.en} (${roll.planet.kEn}) in ${roll.sign.en}, lighting your house of ${roll.house.en} — the answer lives where “${roll.planet.kEn}” meets “${roll.house.en}”.`;

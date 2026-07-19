@@ -5,7 +5,7 @@ const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
   "./js/i18n.js", "./js/data-tarot.js", "./js/data-hexagrams.js",
-  "./js/data-runes.js", "./js/data-misc.js", "./js/engines.js",
+  "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-misc.js", "./js/engines.js",
   "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
   "./js/app.js", "./js/juice.js",
   "./js/data-journey.js", "./js/journey.js",

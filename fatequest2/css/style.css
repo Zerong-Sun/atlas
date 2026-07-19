@@ -31,6 +31,7 @@
   --c-astrodice: #4f93c9;
   --c-jiaobei: #cf5a52;
   --c-meihua: #d9799c;
+  --c-lenormand: #c2a15c;
   --c-locked: #3a3a55;
   --radius: 18px;
   --tabbar-h: 62px;
@@ -459,6 +460,37 @@ label.f input, label.f select, label.f textarea { margin-top: 6px; }
   animation: pop .4s backwards;
 }
 
+/* --- lenormand: real 19th-century scans --- */
+.lenfan { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 20px 0; perspective: 900px; }
+.lencard {
+  width: 96px; height: 151px; border-radius: 9px; cursor: pointer; position: relative;
+  transform-style: preserve-3d; transition: transform .6s cubic-bezier(.3,.7,.3,1);
+  animation: dealIn .45s cubic-bezier(.2,1.4,.4,1) backwards;
+}
+.lenfan .lencard:nth-child(2) { animation-delay: 90ms; }
+.lenfan .lencard:nth-child(3) { animation-delay: 180ms; }
+.lencard.flipped { transform: rotateY(180deg); }
+.lencard .lface {
+  position: absolute; inset: 0; backface-visibility: hidden; border-radius: 9px;
+  border: 2px solid #4a3c22; box-shadow: 0 8px 18px rgba(0,0,0,.5); overflow: hidden;
+}
+.lencard .lback {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(194,161,92,.5) 0 6%, transparent 7%),
+    repeating-linear-gradient(45deg, #3a2f18 0 7px, #2c2412 7px 14px);
+  display: flex; align-items: center; justify-content: center; color: var(--c-lenormand); font-size: 20px;
+}
+.lencard .lfront { transform: rotateY(180deg); background: #efe6d0; }
+.lencard .lfront img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lencard:hover { transform: translateY(-6px); }
+.lencard.flipped:hover { transform: rotateY(180deg) translateY(-6px); }
+.lenthumb { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; }
+
+/* --- astrodice SVG faces (black line art → warm light via invert) --- */
+.dice-svg { width: 42px; height: 42px; object-fit: contain; display: block; margin: 0 auto;
+  filter: invert(.92) sepia(.35) saturate(1.6) hue-rotate(-12deg) drop-shadow(0 0 6px rgba(242,193,78,.25)); }
+.dice-svg.sm { width: 30px; height: 30px; }
+
 /* --- codex --- */
 .codextabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
 .codexgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 8px; }
@@ -499,6 +531,17 @@ label.f input, label.f select, label.f textarea { margin-top: 6px; }
 .skillbtn:hover { background: rgba(242,193,78,.14); }
 .skillbtn:active { transform: scale(.94); }
 .skillbtn.off, .pill.off { opacity: .5; cursor: pointer; }
+
+/* 行纪书架 chapter shelf */
+.chshelf { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 4px; }
+.chtab {
+  font: inherit; font-size: .78rem; cursor: pointer; color: var(--dim);
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px;
+  font-family: var(--serif); letter-spacing: .04em; transition: all .2s;
+}
+.chtab.on { color: var(--gold); border-color: rgba(242,193,78,.55); background: rgba(242,193,78,.08); }
+.chtab.locked { opacity: .55; }
+.chtab:hover { border-color: var(--line-strong); }
 
 .jmapwrap { position: relative; margin: 6px 0 12px; border-radius: 14px; overflow: hidden;
   box-shadow: 0 14px 34px rgba(0,0,0,.5); }

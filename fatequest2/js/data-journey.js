@@ -445,6 +445,58 @@ FQ.CHAPTERS = [{
   }
 }];
 
+/* ============================================================
+   Chapter 2 · Ibn Battuta's Rihla — the Islamic eye on the same world.
+   LOCKED interface chapter (schema-complete skeleton per GDD §9.5):
+   route, regions and gate types are sketched so the content pipeline
+   can fill it without engine changes. Both travelogues end at Zayton —
+   the two books meet at the same harbor, seen through different eyes. */
+FQ.CHAPTERS.push({
+  id: "ibn", locked: true,
+  nameZh: "第二章 · 白图泰万里行纪", nameEn: "Ch.2 · Ibn Battuta's Rihla",
+  taglineZh: "丹吉尔 → 泉州，1325–1349", taglineEn: "Tangier → Quanzhou, 1325–1349",
+  teaseZh: "以新月之眼重看同一个世界：晨祷的钟点代替暮钟，观星台代替圣殿骑士的关文——直到刺桐港，两本游记在同一座码头相遇。",
+  teaseEn: "The same world through the crescent's eye: dawn prayers for vespers, observatories for Templar passes — until at Zayton, two travelogues meet on one quay.",
+  startCoins: 12, parDays: 46, bagSlots: 9,
+  startBag: [{ kind: "token", id: "lampoil" }],
+  nodes: [
+    { id: "ib-tangier", region: "isl", x: 60, y: 150, zh: "丹吉尔", en: "Tangier", type: "port",
+      exZh: "一三二五年，我辞别双亲，独自离开丹吉尔，此去朝觐，路远得连鸟也要歇三次。",
+      exEn: "In 1325 I left Tangier and my parents, alone, bound for the pilgrimage — a road so long the birds rest thrice.",
+      gate: { type: "diceElem", pZh: "出行前观星择日。", pEn: "Read the stars before setting out." } },
+    { id: "ib-cairo", region: "isl", x: 200, y: 200, zh: "开罗", en: "Cairo", type: "town",
+      town: { market: ["spice", "glass"], temple: "isl", teahouse: true },
+      exZh: "开罗为诸城之母，尼罗河上千帆如叶。", exEn: "Cairo, mother of cities; a thousand sails on the Nile like leaves.",
+      gate: { type: "diceHouse", pZh: "爱资哈尔的星家为你定行止。", pEn: "Al-Azhar's astronomers fix your going." } },
+    { id: "ib-mecca", region: "isl", x: 320, y: 250, zh: "麦加", en: "Mecca", type: "shrine",
+      exZh: "朝觐既毕，心却指向更远的东方。", exEn: "The pilgrimage done, the heart pointed farther east.",
+      gate: { type: "dreamChoice", pZh: "圣寺一夜，梦会指路（伊本·西林解梦传统）。", pEn: "A night's dream points the road (the Ibn Sirin tradition).", options: [] } },
+    { id: "ib-delhi", region: "con", x: 500, y: 190, zh: "德里", en: "Delhi", type: "court",
+      exZh: "苏丹以重金留客，客却夜夜梦见海。", exEn: "The Sultan pays gold to keep his guest; the guest dreams nightly of the sea.",
+      gate: { type: "coinYang", pZh: "宫廷去留，掷币问心。", pEn: "Stay or sail — toss and ask your heart." } },
+    { id: "ib-calicut", region: "mazu", x: 560, y: 300, zh: "卡利卡特", en: "Calicut", type: "port",
+      exZh: "中国大船十二帆，桅顶挂着看不懂的旗。", exEn: "Chinese junks of twelve sails, flags at the mast I could not read.",
+      gate: { type: "jiaobei", pZh: "登中国船前，随船民问一问海神。", pEn: "Before boarding, ask the sea-god with the crew." } },
+    { id: "ib-quanzhou", region: "mazu", x: 700, y: 262, zh: "泉州（刺桐）", en: "Quanzhou (Zayton)", type: "case",
+      exZh: "刺桐港中，有威尼斯人留下的账本残页——两本游记，原来到过同一座码头。",
+      exEn: "In Zayton harbor, a torn Venetian ledger page — two travelogues, it turns out, touched the same quay.",
+      gate: { type: "case" } }
+  ],
+  edges: [
+    { from: "ib-tangier", to: "ib-cairo", kind: "land", days: 6, risk: 1 },
+    { from: "ib-cairo", to: "ib-mecca", kind: "land", days: 5, risk: 1, forkId: "hejaz" },
+    { from: "ib-cairo", to: "ib-delhi", kind: "sea", days: 9, risk: 2, forkId: "hejaz" },
+    { from: "ib-mecca", to: "ib-delhi", kind: "land", days: 8, risk: 2 },
+    { from: "ib-delhi", to: "ib-calicut", kind: "land", days: 5, risk: 1 },
+    { from: "ib-calicut", to: "ib-quanzhou", kind: "sea", days: 10, risk: 2, wx: "storm" }
+  ],
+  encounters: [],
+  case: { titleZh: "刺桐再会", titleEn: "Reunion at Zayton",
+    introZh: "（第二章内容由游记管线填充——本章为接口占位。）",
+    introEn: "(Chapter 2 content arrives via the travelogue pipeline — this is the interface skeleton.)",
+    methods: [], options: [] }
+});
+
 /* journal sentence templates (§4.6) — {vars} filled by journey.js */
 FQ.JOURNAL_T = {
   depart: { zh: "第{d}日，自{a}启程，取道{k}往{b}。", en: "Day {d}. We left {a}, taking the {k} road toward {b}." },

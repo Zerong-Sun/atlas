@@ -8,7 +8,7 @@ const DEFAULT_STATE = {
   lang: null,
   streak: 0, lastDaily: null, lastVisit: null, daysVisited: 0,
   methodsTried: [],
-  col: { tarot: [], hex: [], rune: [] },
+  col: { tarot: [], hex: [], rune: [], len: [] },
   achv: [],
   /* 2.0 — stardust (改运资源, cross-mode, GDD §3.2/§8) */
   stardust: 3, dustDay: null, dustToday: 0,
@@ -24,7 +24,7 @@ FQ.load = function () {
     const raw = localStorage.getItem("fatequest2");
     FQ.state = raw ? Object.assign({}, DEFAULT_STATE, JSON.parse(raw)) : JSON.parse(JSON.stringify(DEFAULT_STATE));
   } catch (e) { FQ.state = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
-  FQ.state.col = Object.assign({ tarot: [], hex: [], rune: [] }, FQ.state.col);
+  FQ.state.col = Object.assign({ tarot: [], hex: [], rune: [], len: [] }, FQ.state.col);
   FQ.state.tower = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE.tower)), FQ.state.tower);
   if (FQ.state.lang) FQ.lang = FQ.state.lang;
   else FQ.lang = (navigator.language || "zh").startsWith("zh") ? "zh" : "en";
@@ -120,7 +120,7 @@ FQ.collect = function (kind, key, label) {
 };
 FQ.colCount = function () {
   const c = FQ.state.col;
-  return c.tarot.length + c.hex.length + c.rune.length;
+  return c.tarot.length + c.hex.length + c.rune.length + (c.len || []).length;
 };
 
 /* daily lot */

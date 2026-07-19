@@ -184,7 +184,7 @@ FQ.METHODS = [
   { id:"astrodice", ic:"🎲", color:"var(--c-astrodice)", playable:true },
   { id:"jiaobei",   ic:"🌗", color:"var(--c-jiaobei)",   playable:true },
   { id:"meihua",    ic:"🌸", color:"var(--c-meihua)",    playable:true },
+  { id:"lenormand", ic:"🃁", color:"var(--c-lenormand)", playable:true },
   { id:"ziwei",     ic:"🌌", lockKey:"locked.ziwei",     playable:false },
-  { id:"qimen",     ic:"🧭", lockKey:"locked.qimen",     playable:false },
-  { id:"lenormand", ic:"🃁", lockKey:"locked.lenormand", playable:false }
+  { id:"qimen",     ic:"🧭", lockKey:"locked.qimen",     playable:false }
 ];

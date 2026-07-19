@@ -5,7 +5,15 @@ window.FQ = window.FQ || {};
 FQ.J = {};
 
 /* ---------- state ---------- */
-FQ.J.chapter = () => FQ.CHAPTERS[0];
+FQ.J.chapter = () => FQ.CHAPTERS.find(c => c.id === FQ.state.chSel && !c.locked) || FQ.CHAPTERS[0];
+FQ.J.selectCh = function (id) {
+  const ch = FQ.CHAPTERS.find(c => c.id === id);
+  if (!ch) return;
+  if (ch.locked) { FQ.toast("🔒 " + FQ.bi(ch, "teaseZh", "teaseEn").slice(0, 40) + "…"); return; }
+  FQ.state.chSel = id;
+  FQ.save();
+  FQ.nav("journey");
+};
 FQ.J.ensure = function () {
   const ch = FQ.J.chapter();
   let j = FQ.state.journey;
@@ -147,9 +155,15 @@ FQ.SCREENS.journey = function () {
     const c = FQ.COMPANIONS[k];
     return `<span class="pill" title="${FQ.bi(c, "perkZh", "perkEn")}">${FQ.art("comp-" + k, c.ic)} ${FQ.bi(c, "zh", "en")} ♥${j.comp[k].fav}</span>`;
   }).join("");
+  const shelf = FQ.CHAPTERS.map(c => `
+    <button class="chtab ${c.id === ch.id ? "on" : ""} ${c.locked ? "locked" : ""}"
+      onclick="FQ.J.selectCh('${c.id}')" title="${FQ.bi(c, "taglineZh", "taglineEn")}">
+      ${c.locked ? "🔒 " : "📖 "}${FQ.bi(c, "nameZh", "nameEn")}
+    </button>`).join("");
   document.getElementById("app").innerHTML = `
     ${FQ.backBtn()}
     <h2>${FQ.t("journey.name")} 🐪</h2>
+    <div class="chshelf">${shelf}</div>
     <div class="dim small">${FQ.bi(ch, "nameZh", "nameEn")} · ${FQ.bi(ch, "taglineZh", "taglineEn")}</div>
     <div class="jres">
       <span class="pill">📅 <b>${j.days}</b>/${ch.parDays} ${FQ.t("common.day")}</span>
@@ -329,7 +343,12 @@ FQ.J.attempt = function () {
     html = `<div class="center result"><div style="font-size:40px" class="${p.reversed ? "revglyph" : ""}">${p.card.sym}</div>
       <b class="gold">${FQ.bi(p.card, "zh", "en")}${p.reversed ? FQ.t("tarot.rev") : ""}</b> <span class="dim small">#${p.card.id}</span></div>`;
   } else if (g.type.startsWith("dice")) {
-    html = `<div class="center result"><div style="font-size:34px">${p.sign.sym}</div>
+    html = `<div class="center result">
+      <div style="display:flex;gap:14px;justify-content:center;margin:6px 0">
+        ${FQ.diceArt("planet", p.planet.en.toLowerCase(), "", p.planet.sym)}
+        ${FQ.diceArt("sign", p.sign.id, "", p.sign.sym)}
+        ${FQ.diceArt("house", p.house.n, "", "Ⅰ")}
+      </div>
       <b class="gold">${FQ.bi(p.planet, "zh", "en")} · ${FQ.bi(p.sign, "zh", "en")} · ${"ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ"[p.house.n - 1]}</b>
       <div class="dim small">${FQ.lang === "zh" ? p.sign.elemZh + "象 · " + p.house.zh : p.sign.elemEn + " · " + p.house.en}</div></div>`;
   } else if (g.type === "coinYang") {
