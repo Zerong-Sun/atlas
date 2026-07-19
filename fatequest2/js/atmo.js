@@ -17,19 +17,16 @@ FQ.fog = (function () {
     tile = document.createElement("canvas");
     tile.width = tile.height = 256;
     const c = tile.getContext("2d");
-    /* soft blobs → cloudy value noise, two octaves */
-    for (let o = 0; o < 2; o++) {
-      const n = o === 0 ? 46 : 120, rMax = o === 0 ? 90 : 34;
-      for (let i = 0; i < n; i++) {
-        const x = Math.random() * 256, y = Math.random() * 256, r = rMax * (0.4 + Math.random() * 0.6);
-        const g = c.createRadialGradient(x, y, 0, x, y, r);
-        g.addColorStop(0, `rgba(214,220,240,${o === 0 ? 0.16 : 0.10})`);
-        g.addColorStop(1, "rgba(214,220,240,0)");
-        c.fillStyle = g;
-        [-256, 0, 256].forEach(dx => [-256, 0, 256].forEach(dy => { /* seamless wrap */
-          c.save(); c.translate(dx, dy); c.beginPath(); c.arc(x, y, r, 0, 7); c.fill(); c.restore();
-        }));
-      }
+    /* sparse soft wisps — the veil itself stays a flat dark wash */
+    for (let i = 0; i < 46; i++) {
+      const x = Math.random() * 256, y = Math.random() * 256, r = 24 + Math.random() * 52;
+      const g = c.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, "rgba(128,138,186,0.05)");
+      g.addColorStop(1, "rgba(128,138,186,0)");
+      c.fillStyle = g;
+      [-256, 0, 256].forEach(dx => [-256, 0, 256].forEach(dy => { /* seamless wrap */
+        c.save(); c.translate(dx, dy); c.beginPath(); c.arc(x, y, r, 0, 7); c.fill(); c.restore();
+      }));
     }
   }
 
@@ -38,15 +35,15 @@ FQ.fog = (function () {
     const w = cv.width, h = cv.height;
     const sx = w / 820, sy = h / 420;
     ctx.clearRect(0, 0, w, h);
-    /* base veil */
-    ctx.globalAlpha = 0.62;
-    ctx.fillStyle = "#11122a";
+    /* base veil: the unexplored world sleeps under dark ink (≈0.85) */
+    ctx.globalAlpha = 0.85;
+    ctx.fillStyle = "#0d0e22";
     ctx.fillRect(0, 0, w, h);
-    /* two drifting cloud layers */
+    /* two drifting wisp layers give the veil its slow breath */
     if (!tile) makeTile();
     const off1 = (t * WIND[0]) % 256, off1y = (t * WIND[1]) % 256;
     const off2 = (t * WIND[0] * 0.55) % 256;
-    ctx.globalAlpha = 0.85;
+    ctx.globalAlpha = 0.9;
     for (let x = -256; x < w + 256; x += 256)
       for (let y = -256; y < h + 256; y += 256) {
         ctx.drawImage(tile, x + off1, y + off1y);
@@ -92,11 +89,17 @@ FQ.fog = (function () {
     attach(canvas, holeList) {
       stop();
       cv = canvas; ctx = cv.getContext("2d");
-      const box = cv.parentElement.getBoundingClientRect();
-      cv.width = Math.max(2, Math.round(box.width));
-      cv.height = Math.max(2, Math.round(box.width * 420 / 820));
       holes = holeList.slice();
-      raf = requestAnimationFrame(draw);
+      let tries = 0;
+      const size = () => {
+        if (!cv || !cv.isConnected) return;
+        const box = cv.parentElement.getBoundingClientRect();
+        if (box.width < 4 && tries++ < 60) { raf = requestAnimationFrame(size); return; }
+        cv.width = Math.max(4, Math.round(box.width));
+        cv.height = Math.max(4, Math.round(cv.width * 420 / 820));
+        raf = requestAnimationFrame(draw);
+      };
+      size();
     },
     reveal(x, y) { reveal = { x, y, t0: performance.now() }; },
     detach: stop
@@ -190,30 +193,32 @@ FQ.typeInto = function (el, text, cps) {
   });
 };
 
-/* ============ SVG map camera (§7.1 镜头语言) ============ */
+/* ============ SVG map camera (§7.1 镜头语言) ============
+   Timer-driven (not rAF) so a backgrounded tab still completes its
+   tweens — the march must arrive even if nobody is watching. */
 FQ.cam = (function () {
-  let raf = null;
+  let timer = null;
   function boxOf(svg) { return svg.getAttribute("viewBox").split(/\s+/).map(Number); }
   function clampBox(b) {
     const w = Math.min(820, b[2]), h = Math.min(420, b[3]);
     return [Math.max(0, Math.min(820 - w, b[0])), Math.max(0, Math.min(420 - h, b[1])), w, h];
   }
   return {
-    stop() { if (raf) cancelAnimationFrame(raf); raf = null; },
+    stop() { if (timer) clearTimeout(timer); timer = null; },
     /* tween the viewBox to `to` = [x,y,w,h] */
     to(svg, to, ms) {
       return new Promise(resolve => {
         this.stop();
         const from = boxOf(svg), t0 = performance.now();
         to = clampBox(to);
-        const tick = tNow => {
+        const tick = () => {
           if (!svg.isConnected) return resolve();
-          const k = Math.min(1, (tNow - t0) / ms), e = FQ.ease(k);
+          const k = Math.min(1, (performance.now() - t0) / ms), e = FQ.ease(k);
           const b = from.map((v, i) => v + (to[i] - v) * e);
           svg.setAttribute("viewBox", b.join(" "));
-          if (k < 1) raf = requestAnimationFrame(tick); else { raf = null; resolve(); }
+          if (k < 1) timer = setTimeout(tick, 16); else { timer = null; resolve(); }
         };
-        raf = requestAnimationFrame(tick);
+        tick();
       });
     },
     /* keep a point centered at given zoom width (no tween — call per frame) */

@@ -96,7 +96,7 @@ FQ.SCREENS = {
       return `
         <div class="realm" style="--rc:${m.color};animation-delay:${i * 45}ms" onclick="FQ.nav('${m.id}')">
           <div class="rciv">${FQ.t(m.id + ".civ")}</div>
-          <div class="ric">${m.ic}</div>
+          <div class="ric">${FQ.art("realm-" + m.id, m.ic, "big")}</div>
           <div class="rt">${FQ.t(m.id + ".name")}</div>
           <div class="rs">${FQ.t(m.id + ".desc")}</div>
         </div>`;
@@ -104,19 +104,19 @@ FQ.SCREENS = {
 
     const jn = FQ.state.journey;
     const jdone = jn && (jn.completed || []).includes("marco");
-    const jprog = jn ? Math.min(jn.node, 8) : 0;
+    const jprog = jn && jn.visited ? jn.visited.length : 0;
     $app().innerHTML = `
       ${FQ.hudHTML()}
       <div class="panel jbanner" onclick="FQ.nav('journey')" style="display:flex;align-items:center;gap:14px">
-        <div style="font-size:30px">🐪</div>
+        <div style="font-size:30px">${FQ.art("mode-journey", "🐪", "big")}</div>
         <div style="flex:1">
           <h3 class="gold">${FQ.t("journey.name")}</h3>
           <div class="dim small">${FQ.t("journey.tag")}</div>
         </div>
-        <span class="pill">${jdone ? "✓" : jprog + "/8"}</span>
+        <span class="pill">${jdone ? "✓" : jprog + "/12"}</span>
       </div>
       <div class="panel jbanner" onclick="FQ.nav('tower')" style="display:flex;align-items:center;gap:14px">
-        <div style="font-size:30px">🗼</div>
+        <div style="font-size:30px">${FQ.art("mode-tower", "🗼", "big")}</div>
         <div style="flex:1">
           <h3 class="gold">${FQ.t("tw.name")}</h3>
           <div class="dim small">${FQ.t("tw.tag")}</div>
@@ -350,7 +350,17 @@ FQ.SCREENS = {
           ${FQ.t("profile.readings")}: <b class="gold">${FQ.state.readings}</b> ·
           ${FQ.t("home.streak")}: <b class="gold">${FQ.state.streak}</b> ·
           ${FQ.t("profile.days")}: <b class="gold">${FQ.state.daysVisited}</b> ·
-          ${FQ.t("codex.progress")}: <b class="gold">${FQ.colCount()}</b>
+          ${FQ.t("codex.progress")}: <b class="gold">${FQ.colCount()}</b><br>
+          ✨ <b class="gold">${FQ.state.stardust}</b> ·
+          🗼 ${FQ.t("tw.best")}: <b class="gold">${FQ.state.tower.best}/12</b> ·
+          🌈 <b class="gold">${FQ.state.tower.resTotal}</b>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>${FQ.t("profile.sound")}</h3>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <button class="btn sm ${FQ.state.mute ? "ghost" : ""}" onclick="FQ.AU.setMute(false);FQ.nav('profile')">🔔 ${FQ.t("profile.sound.on")}</button>
+          <button class="btn sm ${FQ.state.mute ? "" : "ghost"}" onclick="FQ.AU.setMute(true);FQ.nav('profile')">🔕 ${FQ.t("profile.sound.off")}</button>
         </div>
       </div>
       <div class="panel"><h3>${FQ.t("profile.achv")}</h3>${achv}</div>
@@ -603,12 +613,12 @@ FQ.doReset = function () {
   if (confirm(FQ.t("profile.reset.confirm"))) { FQ.reset(); FQ.applyStaticI18n(); FQ.nav("home"); }
 };
 
-/* ---------- boot ---------- */
-(function () {
+/* ---------- boot (after every module has registered) ---------- */
+document.addEventListener("DOMContentLoaded", function () {
   FQ.load();
   document.querySelectorAll(".tab").forEach(b =>
     b.addEventListener("click", () => FQ.nav(b.dataset.nav)));
   document.addEventListener("pointerdown", () => FQ.AU && FQ.AU.unlock(), { once: true });
   FQ.applyStaticI18n();
   FQ.nav("home");
-})();
+});

@@ -28,9 +28,9 @@ FQ.TW.symCard = function (id, opts) {
   const o = opts || {};
   return `
     <div class="twsym ${cur ? "curse" : "civ-" + s.civ} ${o.cls || ""}" ${o.on ? `onclick="${o.on}"` : ""}>
-      <div class="twsym-g">${s.sym}</div>
+      <div class="twsym-g">${FQ.art("sym-" + id, s.sym, "big")}</div>
       <div class="twsym-n">${FQ.bi(s, "zh", "en")}</div>
-      ${cur ? `<div class="twsym-p">☠</div>` : `<div class="twsym-p">⚡${s.power}</div>`}
+      ${cur ? `<div class="twsym-p">☠</div>` : `<div class="twsym-p">${s.power}</div>`}
     </div>`;
 };
 
@@ -114,7 +114,7 @@ FQ.TW.dealHand = function () {
 
 FQ.TW.openFloor = function () {
   const r = FQ.state.tower.run;
-  FQ.TW.t = { sel: [], phase: "select", flags: {}, log: [] };
+  FQ.TW.t = { sel: [], phase: "select", flags: {}, log: [], discarded: false };
   const t = FQ.TW.t;
   if (r.mods.omenHide) { t.omenHidden = true; }
   if (FQ.TW.isOrdeal(r.layer)) {
@@ -152,6 +152,31 @@ FQ.TW.toggleSel = function (i) {
   if (at >= 0) t.sel.splice(at, 1);
   else { if (t.sel.length >= 2) t.sel.shift(); t.sel.push(i); }
   FQ.AU.play("flip");
+  FQ.TW.render();
+};
+
+/* Balatro-style redraw: toss the selected cards back, draw as many (1/floor) */
+FQ.TW.discard = function () {
+  const r = FQ.state.tower.run, t = FQ.TW.t;
+  if (t.phase !== "select") return;
+  if (t.discarded) { FQ.toast(FQ.t("tw.discard.used")); return; }
+  if (!t.sel.length) { FQ.toast(FQ.t("tw.discard.none")); return; }
+  const inHand = t.hand.map(h => h.id);
+  const fresh = r.deck.filter(id => !inHand.includes(id));
+  const acc = r.mods.omenTrue > 0 ? 1 : 0.75;
+  const hidden = t.omenHidden;
+  t.sel.sort().forEach(i => {
+    if (!fresh.length) return;
+    const id = fresh.splice(FQ.rand(fresh.length), 1)[0];
+    const s = FQ.towerSym(id);
+    const rev = !FQ.towerIsCurse(id) && !!s.rv && Math.random() < 0.33;
+    const h = { id, rev, omen: 0 };
+    if (!FQ.towerIsCurse(id) && !hidden) h.omen = FQ.omenFor(rev ? -1 : 1, acc);
+    t.hand[i] = h;
+  });
+  t.sel = [];
+  t.discarded = true;
+  FQ.AU.play("card");
   FQ.TW.render();
 };
 
@@ -347,6 +372,24 @@ FQ.TW.settleBtn = function () {
   FQ.save();
   if (r.hp <= 0) return FQ.TW.settle(false);
   FQ.TW.render();
+  FQ.TW.postOutcome();
+};
+
+/* score count-up, shake on loss, floating numbers — the reveal's afterglow */
+FQ.TW.postOutcome = function () {
+  const t = FQ.TW.t;
+  const powEl = document.getElementById("twpow");
+  if (powEl) FQ.countUp(powEl, t.power, 520);
+  const panel = document.querySelector(".twoutcome");
+  const rect = panel ? panel.getBoundingClientRect() : null;
+  const px = rect ? rect.left + rect.width / 2 : innerWidth / 2;
+  const py = rect ? rect.top : innerHeight * 0.4;
+  if (t.outcome === "lose") {
+    FQ.shake();
+    FQ.popNum(FQ.t("tw.lose"), px, py, "#ff8a70");
+  } else if (t.outcome === "win") {
+    FQ.popNum("⚡" + t.power, px, py, "var(--gold-hi)");
+  }
 };
 
 /* ---------- ordeal rounds ---------- */
@@ -372,6 +415,7 @@ FQ.TW.settleOrdealRound = function (a, b, sa, sb) {
   FQ.save();
   if (r.hp <= 0) return FQ.TW.settle(false);
   FQ.TW.render();
+  FQ.TW.postOutcome();
 };
 FQ.TW.ordealMet = function () {
   const o = FQ.TW.t.ordeal, r = FQ.state.tower.run;
@@ -540,7 +584,7 @@ FQ.SCREENS.tower = function () {
     const unlocked = m.unlockedArch.includes(a.id);
     return `
     <div class="archcard ${unlocked ? "" : "locked"}" style="--rc:${a.color}">
-      <div class="ric">${a.ic}</div>
+      <div class="ric">${FQ.art("arch-" + a.id, a.ic, "big")}</div>
       <b>${FQ.bi(a, "zh", "en")}</b>
       <div class="dim small">${FQ.bi(a, "skillZh", "skillEn")}</div>
       <div class="twsymrow">${a.deck.map(id => `<span class="minisym civ-${a.id}">${FQ.towerSym(id).sym}</span>`).join("")}</div>
@@ -683,22 +727,21 @@ FQ.TW.handHTML = function () {
       ? `<span class="twomen ${h.omen > 0 ? "good" : "ill"}">${h.omen > 0 ? "✦" : "◦"}</span>` : "";
     if (isCurse) return `
       <div class="twcard curse" onclick="FQ.TW.toggleSel(${i})">
-        <div class="twcard-face"><div class="twsym-g">${s.sym}</div>
-        <div class="twsym-n">${FQ.bi(s, "zh", "en")}</div></div>
+        <div class="twcard-face"><div class="twsym-g">${FQ.art("curse-" + h.id.slice(2), s.sym, "big")}</div>
+        <div class="twsym-n">${FQ.bi(s, "zh", "en")}</div><div class="twsym-p">☠</div></div>
       </div>`;
     if (!revealed) return `
       <div class="twcard back ${selected ? "sel" : ""}" onclick="FQ.TW.toggleSel(${i})">
-        <div class="twcard-face">✦${omen}</div>
+        <div class="twcard-face">${FQ.art("card-back", "✦", "big")}${omen}</div>
       </div>`;
-    const side = h.rev ? s.rv : s.up;
     return `
       <div class="twcard open civ-${s.civ} ${h.rev ? "rev" : ""} ${t.flipMode ? "flippable" : ""}"
            onclick="${t.flipMode ? `FQ.TW.flipCard(${i})` : ""}">
         <div class="twcard-face">
-          <div class="twsym-g">${s.sym}</div>
+          <div class="twsym-g">${FQ.art("sym-" + h.id, s.sym, "big")}</div>
           <div class="twsym-n">${FQ.bi(s, "zh", "en")}${h.rev ? FQ.t("tarot.rev") : ""}</div>
           <div class="twsym-e">${h.rev ? FQ.bi(s, "rvZh", "rvEn") : FQ.bi(s, "upZh", "upEn")}</div>
-          <div class="twsym-p">⚡${s.power}</div>
+          <div class="twsym-p">${s.power}</div>
         </div>
       </div>`;
   }).join("") + `</div>`;
@@ -742,8 +785,10 @@ FQ.TW.renderEvent = function () {
     zone = `
       ${t.biteLog && t.biteLog.length ? `<div class="edged">${t.biteLog.join("<br>")}</div>` : ""}
       ${FQ.TW.handHTML()}
-      <div class="center">
+      <div class="center" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn" ${t.sel.length === 2 ? "" : "disabled"} onclick="FQ.TW.reveal()">${FQ.t("tw.play2")}</button>
+        <button class="btn ghost" ${t.discarded || !t.sel.length ? "disabled" : ""}
+          onclick="FQ.TW.discard()" title="${FQ.t("tw.discard.tip")}">🔄 ${FQ.t("tw.discard")}</button>
       </div>`;
   } else if (t.phase === "reveal") {
     zone = `${FQ.TW.handHTML()}<div class="center dim small">…</div>`;
@@ -761,9 +806,9 @@ FQ.TW.renderEvent = function () {
     zone = `
       ${t.outcome !== "reroll" && ev.type !== "wonder" ? FQ.TW.handHTML() : ""}
       ${FQ.TW.resHTML()}
-      <div class="twoutcome result">
+      <div class="twoutcome result ${t.outcome}">
         <b class="${t.outcome === "win" ? "gold" : ""}">${badge}</b>
-        ${ev.demand ? `<span class="dim small"> · ⚡${t.power} vs 🎯${t.demandShown}</span>` : ""}
+        ${ev.demand ? ` · ⚡<span class="twpow" id="twpow">0</span> <span class="dim small">vs 🎯${t.demandShown}</span>` : ""}
         <div class="twlog">${t.log.map(l => `<div>${l}</div>`).join("")}</div>
       </div>
       ${t.outcome === "reroll" ? "" : `
@@ -786,7 +831,6 @@ FQ.TW.renderEvent = function () {
       <div class="reading dim" style="font-size:.85rem">${FQ.bi(ev, "tZh", "tEn")}</div>
       ${ev.demand ? `<div class="small">🎯 ${FQ.t("tw.demand")} <b class="gold">${Math.max(0, ev.demand + depthBump + (t.biteDemand || 0))}</b>
         ${ev.risk ? ` · ⚠️ ${"▮".repeat(ev.risk)}` : ""}</div>` : ""}
-      ${r.mods.peek === null && t.flags && t.flags.peek ? "" : ""}
     </div>
     ${zone}`;
 };
@@ -835,8 +879,10 @@ FQ.TW.renderOrdeal = function () {
     zone = `
       ${t.biteLog && t.biteLog.length ? `<div class="edged">${t.biteLog.join("<br>")}</div>` : ""}
       ${FQ.TW.handHTML()}
-      <div class="center" style="display:flex;gap:8px;justify-content:center">
+      <div class="center" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn" ${t.sel.length === 2 ? "" : "disabled"} onclick="FQ.TW.reveal()">${FQ.t("tw.play2")}</button>
+        <button class="btn ghost" ${t.discarded || !t.sel.length ? "disabled" : ""}
+          onclick="FQ.TW.discard()" title="${FQ.t("tw.discard.tip")}">🔄 ${FQ.t("tw.discard")}</button>
         ${O.check === "power12" && !o.paid ? `<button class="btn ghost" onclick="FQ.TW.ordealPay()">💰10 ${FQ.t("tw.ordeal.pay")}</button>` : ""}
       </div>`;
   } else if (t.phase === "reveal") {
@@ -851,8 +897,9 @@ FQ.TW.renderOrdeal = function () {
     zone = `
       ${FQ.TW.handHTML()}
       ${FQ.TW.resHTML()}
-      <div class="twoutcome result">
-        <b class="${t.outcome === "win" ? "gold" : ""}">${t.outcome === "win" ? "✅" : "❌"} ⚡${t.power} vs 🎯${t.demandShown}</b>
+      <div class="twoutcome result ${t.outcome}">
+        <b class="${t.outcome === "win" ? "gold" : ""}">${t.outcome === "win" ? "✅" : "❌"}</b>
+        ⚡<span class="twpow" id="twpow">0</span> <span class="dim small">vs 🎯${t.demandShown}</span>
         <div class="twlog">${t.log.map(l => `<div>${l}</div>`).join("")}</div>
         ${o.met ? `<div class="gold small">${FQ.t("tw.ordeal.met")}</div>` : ""}
       </div>
