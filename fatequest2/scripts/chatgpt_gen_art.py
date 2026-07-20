@@ -347,7 +347,7 @@ async def run_batch_jobs(args: argparse.Namespace) -> int:
                 except Exception as e:
                     last_err = e
                     print(f"    retry {attempt}/{args.retries}: {e}", file=sys.stderr)
-                    if "rate-limited" in str(e).lower() or await detect_rate_limit(page):
+                    if "rate-limited" in str(e).lower() or await safe_detect_rate_limit(page):
                         await wait_out_rate_limit(page, pause_ms=args.rate_limit_ms)
                     else:
                         await page.wait_for_timeout(2000)
@@ -649,6 +649,13 @@ async def detect_rate_limit(page: Page) -> str | None:
         if m.lower() in low:
             return m
     return None
+
+
+async def safe_detect_rate_limit(page: Page) -> str | None:
+    try:
+        return await detect_rate_limit(page)
+    except Exception:
+        return None
 
 
 async def wait_out_rate_limit(page: Page, pause_ms: int = 300_000) -> None:
@@ -964,7 +971,7 @@ async def run_jobs(args: argparse.Namespace) -> int:
                 except Exception as e:
                     last_err = e
                     print(f"    retry {attempt}/{args.retries}: {e}", file=sys.stderr)
-                    if "rate-limited" in str(e).lower() or await detect_rate_limit(page):
+                    if "rate-limited" in str(e).lower() or await safe_detect_rate_limit(page):
                         await wait_out_rate_limit(page, pause_ms=args.rate_limit_ms)
                     else:
                         await page.wait_for_timeout(2000)

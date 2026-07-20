@@ -29,6 +29,7 @@ FQ.nav = function (screen, param) {
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
   document.body.classList.toggle("titled", screen === "title");
   document.body.classList.toggle("staged", FQ.STAGED.includes(screen));
+  document.body.classList.toggle("world", screen === "journey");   /* map fills the desk */
   $app().innerHTML = "";
   render(param);
   if (FQ.AU && FQ.AU.scene) {
@@ -136,13 +137,6 @@ FQ.SCREENS = {
   home() {
     const daily = FQ.dailyAvailable();
     const realms = FQ.METHODS.map((m, i) => {
-      if (!m.playable) return `
-        <div class="realm locked" style="--rc:var(--c-locked);animation-delay:${i * 45}ms"
-             onclick="FQ.toast('🔒 ${FQ.t("locked.tip")}')">
-          <div class="ric">${m.ic}</div>
-          <div class="rt">${FQ.t(m.lockKey)}</div>
-          <div class="rs">${FQ.t("locked.tip")}</div>
-        </div>`;
       /* 师承: an art you have not been taught stays dark (GDD §4.9) */
       if (!FQ.Q.knows(m.id)) {
         const M = FQ.mentorFor(m.id);

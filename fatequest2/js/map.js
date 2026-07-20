@@ -265,7 +265,8 @@ FQ.MAP.render = function (opt) {
   ].map(w => FQ.MAP.windHead(w[0], w[1], w[2], w[3])).join("");
 
   return `
-  <svg viewBox="0 0 820 420" class="jmap mappa" id="jmapsvg" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 820 420" class="jmap mappa" id="jmapsvg"
+       preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     ${FQ.MAP.defs()}
     <rect x="0" y="0" width="820" height="420" fill="url(#mp-vellum)"/>
     <g opacity=".9">
@@ -279,6 +280,9 @@ FQ.MAP.render = function (opt) {
     ${beasts}
     <g class="mp-routes">${edges}</g>
     ${nodes}
+    <!-- the travelling party rides this glyph along the route (journey.js) -->
+    <text id="jmarker" x="-40" y="-40" font-size="22" style="pointer-events:none"
+      filter="url(#mp-relief)"></text>
     ${FQ.MAP.rose(742, 336, 22)}
     ${winds}
     <g class="mp-frame">

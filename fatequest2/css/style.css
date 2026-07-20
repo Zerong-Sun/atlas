@@ -1056,6 +1056,132 @@ body[data-phase="night"] #tint { opacity: 1; background: linear-gradient(180deg,
   background: var(--grain), linear-gradient(100deg, rgba(179,64,46,.12), rgba(227,207,162,.06)); }
 .moderow.fant .mo-ic { filter: drop-shadow(0 0 6px rgba(179,64,46,.6)); }
 
+/* ============ 场景 · the dialogue stage ============ */
+.scene-layer {
+  position: fixed; inset: 0; z-index: 90; cursor: pointer; overflow: hidden;
+  animation: scFade .5s ease;
+  /* the wash a scene falls back to when its painted plate is missing */
+  background:
+    radial-gradient(90% 70% at 50% 28%, rgba(86,119,155,.3), transparent 70%),
+    linear-gradient(180deg, #16211c, #0a0f0c);
+}
+.scene-layer[data-region="isl"]  { background: radial-gradient(90% 70% at 50% 28%, rgba(77,138,112,.32), transparent 70%), linear-gradient(180deg, #17221b, #0a0f0c); }
+.scene-layer[data-region="con"]  { background: radial-gradient(90% 70% at 50% 28%, rgba(168,121,74,.3), transparent 70%), linear-gradient(180deg, #201a12, #0c0a07); }
+.scene-layer[data-region="mazu"] { background: radial-gradient(90% 70% at 50% 28%, rgba(74,138,148,.32), transparent 70%), linear-gradient(180deg, #10201f, #060d0d); }
+@keyframes scFade { from { opacity: 0; } }
+.sc-bg {
+  position: absolute; inset: -3%; background-size: cover; background-position: center;
+  animation: scDrift 26s ease-in-out infinite alternate;
+}
+@keyframes scDrift { to { transform: scale(1.07) translate(-1.5%, -1%); } }
+.sc-vig { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 40%, transparent 35%, rgba(6,10,8,.86) 100%); }
+.sc-portrait {
+  position: absolute; bottom: 20vh; width: min(38vw, 380px); max-height: 66vh;
+  display: flex; align-items: flex-end; justify-content: center;
+  animation: scEnter .7s cubic-bezier(.25,.85,.3,1) backwards;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,.7));
+}
+.sc-portrait.left { left: 4vw; } .sc-portrait.right { right: 4vw; }
+.sc-portrait img { width: 100%; height: auto; object-fit: contain; }
+.sc-fallback { display: none; font-size: 90px; opacity: .5;
+  filter: drop-shadow(0 0 30px rgba(227,207,162,.35)); }
+.sc-portrait.noart .sc-fallback { display: block; }
+.sc-portrait.noart { bottom: 30vh; width: auto; }
+@keyframes scEnter { from { opacity: 0; transform: translateY(24px); } }
+.sc-box {
+  position: absolute; left: 50%; bottom: 4vh; transform: translateX(-50%);
+  width: min(880px, 92vw); padding: 22px 26px 26px;
+  background: var(--grain), linear-gradient(180deg, rgba(12,18,15,.9), rgba(9,13,11,.96));
+  border: 1px solid var(--line-strong); border-radius: 4px;
+  box-shadow: 0 -6px 40px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05);
+  animation: scEnter .5s .1s cubic-bezier(.25,.85,.3,1) backwards;
+}
+.sc-box::before, .sc-box::after {
+  content: ""; position: absolute; width: 20px; height: 20px; pointer-events: none;
+  border-color: var(--line-strong); border-style: double;
+}
+.sc-box::before { top: 6px; left: 6px; border-width: 3px 0 0 3px; }
+.sc-box::after { bottom: 6px; right: 6px; border-width: 0 3px 3px 0; }
+.sc-name {
+  position: absolute; top: -15px; left: 26px; padding: 5px 20px;
+  font-family: var(--serif); font-size: .88rem; letter-spacing: .1em; color: #2a1c04;
+  background: var(--foil); border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
+}
+.sc-text {
+  font-family: var(--serif); font-size: 1.06rem; line-height: 2.05; color: var(--text);
+  min-height: 4.1em;
+}
+.sc-text::first-letter { color: var(--cinnabar); font-size: 1.55em; font-weight: 700; }
+.sc-next { position: absolute; right: 20px; bottom: 12px; color: var(--gold); opacity: 0; font-size: .8rem; }
+.sc-next.ready { animation: scBlink 1.4s ease-in-out infinite; }
+@keyframes scBlink { 0%,100% { opacity: .25; transform: translateY(0); } 50% { opacity: 1; transform: translateY(3px); } }
+.sc-choices { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.sc-choice {
+  font: inherit; font-family: var(--serif); font-size: .98rem; text-align: left; cursor: pointer;
+  color: var(--text); padding: 12px 18px; border-radius: 3px;
+  background: linear-gradient(100deg, rgba(227,207,162,.09), rgba(227,207,162,.03));
+  border: 1px solid var(--line); border-left: 3px solid var(--cinnabar);
+  transition: all .2s;
+}
+.sc-choice:hover { border-left-color: var(--gold); color: var(--gold-hi);
+  background: linear-gradient(100deg, rgba(227,207,162,.18), rgba(227,207,162,.06)); transform: translateX(4px); }
+.sc-choice:disabled { opacity: .38; pointer-events: none; }
+.sc-choice.dim-choice { border-left-color: var(--line); color: var(--dim); }
+.sc-skip {
+  position: absolute; top: calc(14px + env(safe-area-inset-top)); right: 16px; z-index: 3;
+  font: inherit; font-size: .74rem; color: var(--dim); cursor: pointer;
+  background: rgba(9,13,11,.7); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+}
+.sc-skip:hover { color: var(--gold); }
+body.in-scene .tabbar { display: none; }
+
+/* ============ 世界舞台 · desktop map layout ============ */
+.world-hud { position: relative; z-index: 6; }
+.doorbtn {
+  display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font: inherit;
+  color: var(--text); padding: 9px 15px 9px 11px; border-radius: 12px;
+  background: var(--grain), linear-gradient(160deg, rgba(240,228,205,.07), rgba(240,228,205,.02));
+  border: 1px solid var(--line); transition: all .2s;
+}
+.doorbtn:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.db-ic { font-size: 20px; }
+.db-t { display: flex; flex-direction: column; font-family: var(--serif); font-size: .86rem; line-height: 1.3; }
+.db-t .small { font-size: .68rem; }
+
+@media (min-width: 900px) {
+  body.world .app { max-width: none; padding: 0; min-height: 100dvh; }
+  body.world .jmapwrap {
+    position: fixed; inset: 0; z-index: 0; border-radius: 0; box-shadow: none;
+    display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(80% 80% at 50% 45%, #16211c, #070b09);
+  }
+  body.world .jmap { width: 100%; height: 100dvh; }
+  body.world .jfog { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+  body.world .world-hud {
+    position: fixed; top: 0; left: 0; z-index: 6; width: min(430px, 36vw);
+    padding: 18px 20px 14px;
+    background: linear-gradient(180deg, rgba(9,14,11,.92) 55%, transparent);
+    pointer-events: none;
+  }
+  body.world .world-hud > * { pointer-events: auto; }
+  body.world .world-hud h2 { font-size: 1.2rem; }
+  body.world .wh-tag { display: none; }
+  body.world .world-drawer {
+    position: fixed; right: 0; top: 0; bottom: 0; z-index: 6;
+    width: min(430px, 36vw); overflow-y: auto; overscroll-behavior: contain;
+    padding: 22px 20px 96px;
+    background: linear-gradient(270deg, rgba(9,14,11,.96) 72%, rgba(9,14,11,.72) 100%);
+    border-left: 1px solid var(--line);
+    scrollbar-width: thin;
+  }
+  body.world .world-drawer .panel { background: none; border: none; box-shadow: none; padding: 0; }
+  body.world .world-drawer .jnode-panel::before,
+  body.world .world-drawer .jnode-panel::after { display: none; }
+  body.world .tabbar { left: auto; right: min(430px, 36vw); transform: translateX(50%); }
+}
+
 /* ============ fullscreen level stage ============ */
 body.staged .tabbar { display: none; }
 body.staged .app { max-width: 860px; padding: 16px 16px 34px; }

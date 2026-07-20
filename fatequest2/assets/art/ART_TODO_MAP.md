@@ -77,11 +77,60 @@
 | `tr-griffin.webp` | 狮鹫载人 | 320×240 透明 |
 | `tr-serpent.webp` | 海蛇曳舟（蛇拖船） | 400×200 透明 |
 
-## F. 师父像（P2，试炼画面圆形徽章位）
+## F1. 场景背景（P0 — 对话/到站/遭遇的整屏底图）
+
+> **横构图、16:9，人物区留在左下 1/3**（对话框压底部、立绘站左侧，别把主体放那儿）。
+> 画法：抄本细密画 + 暮色光；建筑与地貌要能一眼认出是哪座城。缺图时程序用文明色晕染顶替。
+
+| 引用名 | 场景 | 内容要求 | 尺寸 |
+|---|---|---|---|
+| `scene-venice-quay.webp` | 威尼斯码头 | 泻湖、贡多拉、圣马可钟楼剪影、晨雾 | 1920×1080 不透明 |
+| `scene-acre-wall.webp` | 阿卡城墙夜哨 | 十字军城垛、火把、远处地中海、星夜 | 同上 |
+| `scene-tabriz-bazaar.webp` | 大不里士市集/观星台 | 拱廊巴扎、地毯、屋顶观星仪 | 同上 |
+| `scene-hormuz-port.webp` | 霍尔木兹港 | 热风、缝合帆船、椰枣林、码头星占摊 | 同上 |
+| `scene-kerman-dunes.webp` | 克尔曼荒漠 | 沙海、驼影、落日、半埋废驿 | 同上 |
+| `scene-herat-road.webp` | 赫拉特商道 | 驿栈、杨树列、雪山远景 | 同上 |
+| `scene-pamir-pass.webp` | 帕米尔垭口 | 雪线、经幡、牦牛、淡蓝火焰的篝火 | 同上 |
+| `scene-shangdu-palace.webp` | 上都大理石宫 | 草原、白色宫殿、金顶帐幕 | 同上 |
+| `scene-khanbaliq-hall.webp` | 大都夜宴殿 | 巨柱大殿、烛海、屏风 | 同上 |
+| `scene-hangzhou-lake.webp` | 行在西湖 | 石桥、画舫、灯火、远山 | 同上 |
+| `scene-quanzhou-harbor.webp` | 泉州刺桐港 | 帆樯如林、天妃宫飞檐、香烟 | 同上 |
+| `scene-voyage-sea.webp` | 归航海上 | 四桅巨舶甲板、风暴将至的云 | 同上 |
+| `scene-region-chr.webp` | 基督之境·途中 | 通用路景：欧洲丘陵、修道院远影 | 同上 |
+| `scene-region-isl.webp` | 新月之境·途中 | 通用路景：商道、驼队、宣礼塔远影 | 同上 |
+| `scene-region-con.webp` | 儒道之境·途中 | 通用路景：山道、驿亭、飞檐远影 | 同上 |
+| `scene-region-mazu.webp` | 妈祖之海·途中 | 通用海景：浪、帆、海鸟 | 同上 |
+
+## F2. NPC 立绘（P1 — 对话场景左侧人物）
+
+> **半身立绘、朝右、透明底**；底部可被对话框压住 15%。抄本插画笔法，不要写实。
 
 | 引用名 | 人物 | 尺寸 |
 |---|---|---|
-| `mentor-tarot.webp` | 威尼斯制牌人老马蒂欧 | 400×400 透明，圆形构图 |
+| `npc-market-chr.webp` | 威尼斯布商乔凡尼 | 900×1300 透明 |
+| `npc-market-isl.webp` | 香料贩优素福 | 同上 |
+| `npc-market-con.webp` | 丝行掌柜周三 | 同上 |
+| `npc-market-mazu.webp` | 船货牙人阿海 | 同上 |
+| `npc-temple-chr.webp` | 执事修士 | 同上 |
+| `npc-temple-isl.webp` | 清真寺看守阿卜杜勒 | 同上 |
+| `npc-temple-con.webp` | 道观知客 | 同上 |
+| `npc-temple-mazu.webp` | 天妃宫庙祝 | 同上 |
+| `npc-tea-chr.webp` | 酒馆老板娘 | 同上 |
+| `npc-tea-isl.webp` | 驿栈茶博士 | 同上 |
+| `npc-tea-con.webp` | 野店说书人 | 同上 |
+| `npc-tea-mazu.webp` | 码头茶棚阿婆 | 同上 |
+| `npc-inn-chr.webp` | 客栈掌柜 | 同上 |
+| `npc-inn-isl.webp` | 驿栈主人 | 同上 |
+| `npc-inn-con.webp` | 行馆管事 | 同上 |
+| `npc-inn-mazu.webp` | 船家客栈老板 | 同上 |
+
+## F. 师父像（P1，对话立绘 + 试炼徽章位）
+
+> 同为半身立绘，规格同 F2（900×1300 透明）；文件名如下。
+
+| 引用名 | 人物 | 尺寸 |
+|---|---|---|
+| `mentor-tarot.webp` | 威尼斯制牌人老马蒂欧 | 900×1300 透明 |
 | `mentor-lenormand.webp` | 牌铺女儿卡特琳娜 | 同上 |
 | `mentor-runes.webp` | 瓦良格卫兵哈拉尔 | 同上 |
 | `mentor-astrodice.webp` | 星家帖必烈 | 同上 |

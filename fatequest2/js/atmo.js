@@ -94,10 +94,15 @@ FQ.fog = (function () {
       let tries = 0;
       const size = () => {
         if (!cv || !cv.isConnected) return;
-        const box = cv.parentElement.getBoundingClientRect();
+        const svg = cv.parentElement.querySelector("svg");
+        const box = (svg || cv.parentElement).getBoundingClientRect();
         if (box.width < 4 && tries++ < 60) { raf = requestAnimationFrame(size); return; }
-        cv.width = Math.max(4, Math.round(box.width));
-        cv.height = Math.max(4, Math.round(cv.width * 420 / 820));
+        /* match the SVG's rendered letterbox exactly, whatever the layout */
+        const k = Math.min(box.width / 820, box.height / 420) || box.width / 820;
+        cv.width = Math.max(4, Math.round(820 * k));
+        cv.height = Math.max(4, Math.round(420 * k));
+        cv.style.width = cv.width + "px";
+        cv.style.height = cv.height + "px";
         raf = requestAnimationFrame(draw);
       };
       size();

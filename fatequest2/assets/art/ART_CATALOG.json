@@ -15,8 +15,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for arch-iching.webp",
-      "bytes": 35148
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-iching.webp",
+      "bytes": 34752
     },
     {
       "file": "arch-runes.webp",
@@ -30,8 +30,8 @@
       "accent": "灰蓝 #7E8B94 + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for arch-runes.webp",
-      "bytes": 71056
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-runes.webp",
+      "bytes": 70448
     },
     {
       "file": "arch-tarot.webp",
@@ -45,8 +45,8 @@
       "accent": "茜紫 #9A6B84 + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for arch-tarot.webp",
-      "bytes": 66246
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-tarot.webp",
+      "bytes": 65690
     },
     {
       "file": "bg-nocturne.webp",
@@ -60,8 +60,8 @@
       "accent": "",
       "width": 1920,
       "height": 1080,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for bg-nocturne.webp",
-      "bytes": 161568
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for bg-nocturne.webp",
+      "bytes": 159300
     },
     {
       "file": "card-back-full.webp",
@@ -75,8 +75,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for card-back-full.webp",
-      "bytes": 130682
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for card-back-full.webp",
+      "bytes": 129068
     },
     {
       "file": "mode-journey.webp",
@@ -90,8 +90,8 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for mode-journey.webp",
-      "bytes": 67720
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-journey.webp",
+      "bytes": 66824
     },
     {
       "file": "mode-tower.webp",
@@ -105,8 +105,8 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for mode-tower.webp",
-      "bytes": 50822
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-tower.webp",
+      "bytes": 50242
     },
     {
       "file": "sym-death-full.webp",
@@ -121,7 +121,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Death/Rebirth: white butterfly from open cocoon or bone-door, no gore",
-      "bytes": 115868
+      "bytes": 113010
     },
     {
       "file": "sym-death.webp",
@@ -135,8 +135,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-death.webp",
-      "bytes": 48528
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-death.webp",
+      "bytes": 47786
     },
     {
       "file": "sym-fool-full.webp",
@@ -151,7 +151,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Fool: bundle on staff, cliff-edge step, small dog silhouette",
-      "bytes": 108904
+      "bytes": 107590
     },
     {
       "file": "sym-fool.webp",
@@ -165,8 +165,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-fool.webp",
-      "bytes": 48788
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-fool.webp",
+      "bytes": 48432
     },
     {
       "file": "sym-ge-full.webp",
@@ -181,7 +181,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Ge (Revolution): animal silhouette shedding a skin outline, transformation not gore",
-      "bytes": 95482
+      "bytes": 92890
     },
     {
       "file": "sym-ge.webp",
@@ -195,8 +195,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-ge.webp",
-      "bytes": 34506
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-ge.webp",
+      "bytes": 33972
     },
     {
       "file": "sym-gen-full.webp",
@@ -211,7 +211,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Gen (Stillness): single monumental still mountain",
-      "bytes": 98780
+      "bytes": 96188
     },
     {
       "file": "sym-gen.webp",
@@ -225,8 +225,8 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-gen.webp",
-      "bytes": 42400
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-gen.webp",
+      "bytes": 41904
     },
     {
       "file": "sym-hermit-full.webp",
@@ -241,7 +241,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Hermit: lantern whose wick is a six-pointed star, no face",
-      "bytes": 108498
+      "bytes": 107320
     },
     {
       "file": "sym-hermit.webp",
@@ -255,8 +255,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-hermit.webp",
-      "bytes": 58622
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-hermit.webp",
+      "bytes": 57538
     },
     {
       "file": "sym-jin-full.webp",
@@ -271,7 +271,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Jin (Progress): sun half-disk rising above earth line",
-      "bytes": 92946
+      "bytes": 90592
     },
     {
       "file": "sym-jin.webp",
@@ -285,8 +285,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-jin.webp",
-      "bytes": 64540
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-jin.webp",
+      "bytes": 63754
     },
     {
       "file": "sym-kan-full.webp",
@@ -301,7 +301,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kan (Abyss): deep double-abyss whirlpool as flat spiral",
-      "bytes": 100140
+      "bytes": 98128
     },
     {
       "file": "sym-kan.webp",
@@ -315,8 +315,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-kan.webp",
-      "bytes": 55632
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kan.webp",
+      "bytes": 54834
     },
     {
       "file": "sym-kun-full.webp",
@@ -331,7 +331,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kun (Receptive): broad earth vessel holding a simple offering form",
-      "bytes": 95712
+      "bytes": 92894
     },
     {
       "file": "sym-kun.webp",
@@ -345,8 +345,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-kun.webp",
-      "bytes": 26568
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kun.webp",
+      "bytes": 26364
     },
     {
       "file": "sym-li-full.webp",
@@ -361,7 +361,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Li (Radiance): twin flames as abstract bright clarity, not a realistic eye",
-      "bytes": 98390
+      "bytes": 95444
     },
     {
       "file": "sym-li.webp",
@@ -375,8 +375,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-li.webp",
-      "bytes": 39264
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-li.webp",
+      "bytes": 38844
     },
     {
       "file": "sym-moon-full.webp",
@@ -391,7 +391,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Moon: eclipse crescent, one wave line, one dew drop",
-      "bytes": 99276
+      "bytes": 97778
     },
     {
       "file": "sym-moon.webp",
@@ -405,8 +405,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-moon.webp",
-      "bytes": 35278
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-moon.webp",
+      "bytes": 34968
     },
     {
       "file": "sym-qian-full.webp",
@@ -421,7 +421,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian (Creative): six solid yang lines forming a celestial gate / sky portal",
-      "bytes": 90782
+      "bytes": 88898
     },
     {
       "file": "sym-qian.webp",
@@ -435,8 +435,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-qian.webp",
-      "bytes": 22390
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian.webp",
+      "bytes": 21978
     },
     {
       "file": "sym-qian15-full.webp",
@@ -451,7 +451,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian/Humility (hexagram 15): mountain silhouette nested low inside earth",
-      "bytes": 93186
+      "bytes": 90344
     },
     {
       "file": "sym-qian15.webp",
@@ -465,8 +465,8 @@
       "accent": "铜绿 #55806D + 陈金",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-qian15.webp",
-      "bytes": 64514
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian15.webp",
+      "bytes": 63598
     },
     {
       "file": "sym-star-full.webp",
@@ -481,7 +481,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Star: eight-pointed star pouring two streams into a pool",
-      "bytes": 107186
+      "bytes": 106402
     },
     {
       "file": "sym-star.webp",
@@ -495,8 +495,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-star.webp",
-      "bytes": 56292
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-star.webp",
+      "bytes": 55860
     },
     {
       "file": "sym-strength-full.webp",
@@ -511,7 +511,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Strength: lion head, gentle hand on muzzle, infinity mark above",
-      "bytes": 113222
+      "bytes": 112430
     },
     {
       "file": "sym-strength.webp",
@@ -525,8 +525,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-strength.webp",
-      "bytes": 74768
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-strength.webp",
+      "bytes": 73880
     },
     {
       "file": "sym-sun-full.webp",
@@ -541,7 +541,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Sun: radiant gold sun-wheel, compass-face center, no realistic face",
-      "bytes": 113244
+      "bytes": 110804
     },
     {
       "file": "sym-sun.webp",
@@ -555,8 +555,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-sun.webp",
-      "bytes": 56410
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-sun.webp",
+      "bytes": 55696
     },
     {
       "file": "sym-tarot-frame-master.webp",
@@ -571,7 +571,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "blank template card: identical border and nameplate, empty center compass watermark only (style master)",
-      "bytes": 91500
+      "bytes": 90396
     },
     {
       "file": "sym-tarot-tower-full.webp",
@@ -586,7 +586,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Tower: spire struck by lightning, crown falling",
-      "bytes": 114666
+      "bytes": 113318
     },
     {
       "file": "sym-tarot-tower.webp",
@@ -600,8 +600,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-tarot-tower.webp",
-      "bytes": 59802
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-tarot-tower.webp",
+      "bytes": 59238
     },
     {
       "file": "sym-wheel-full.webp",
@@ -616,7 +616,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Wheel of Fortune: wheel with TARO/ROTA letter ring, sword pointer",
-      "bytes": 109340
+      "bytes": 106502
     },
     {
       "file": "sym-wheel.webp",
@@ -630,8 +630,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset ? see ART_CATALOG.json for sym-wheel.webp",
-      "bytes": 47718
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-wheel.webp",
+      "bytes": 46678
     },
     {
       "file": "ui-btn-cinnabar.webp",
@@ -646,7 +646,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "rubric red accent button for rare confirm actions",
-      "bytes": 11192
+      "bytes": 10988
     },
     {
       "file": "ui-btn-disabled.webp",
@@ -661,7 +661,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "desaturated grey-green disabled state",
-      "bytes": 9030
+      "bytes": 8926
     },
     {
       "file": "ui-btn-ghost-hover.webp",
@@ -676,7 +676,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "ghost with brighter gold rim glow",
-      "bytes": 9040
+      "bytes": 8924
     },
     {
       "file": "ui-btn-ghost.webp",
@@ -691,7 +691,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "dark lacquer ghost button, thin gold border",
-      "bytes": 9444
+      "bytes": 9248
     },
     {
       "file": "ui-btn-primary-pressed.webp",
@@ -706,7 +706,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "same shape, darker, pressed-in shadow",
-      "bytes": 11628
+      "bytes": 11460
     },
     {
       "file": "ui-btn-primary.webp",
@@ -721,7 +721,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "default gold-foil primary button fill, warm gradient top-lit",
-      "bytes": 12754
+      "bytes": 12506
     },
     {
       "file": "ui-btn-round.webp",
@@ -736,7 +736,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "circular icon button, gold ring on dark fill",
-      "bytes": 10520
+      "bytes": 10368
     },
     {
       "file": "ui-btn-sm.webp",
@@ -751,7 +751,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "smaller pill proportion, compact foil button",
-      "bytes": 10396
+      "bytes": 10260
     },
     {
       "file": "ui-btn-tab-active.webp",
@@ -766,7 +766,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "short wide pill, bright gold active tab indicator strip",
-      "bytes": 9354
+      "bytes": 9044
     },
     {
       "file": "ui-btn-tab-idle.webp",
@@ -781,7 +781,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "muted idle tab chip on dark glass",
-      "bytes": 7426
+      "bytes": 7328
     }
   ]
 }

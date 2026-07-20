@@ -177,22 +177,24 @@ FQ.SCREENS.journey = function () {
       ${c.locked ? "🔒 " : "📖 "}${FQ.bi(c, "nameZh", "nameEn")}
     </button>`).join("");
   document.getElementById("app").innerHTML = `
-    ${FQ.backBtn()}
-    <h2>${FQ.t("journey.name")} 🐪</h2>
-    <div class="chshelf">${shelf}</div>
-    <div class="dim small">${FQ.bi(ch, "nameZh", "nameEn")} · ${FQ.bi(ch, "taglineZh", "taglineEn")}</div>
-    <div class="jres">
-      <span class="pill">📅 <b>${j.days}</b>/${ch.parDays} ${FQ.t("common.day")}</span>
-      <span class="pill">💰 <b>${j.coins}</b></span>
-      <span class="pill">🕯️ <b>${FQ.J.favorTotal(j)}</b></span>
-      <span class="pill dust">✨ <b>${FQ.state.stardust}</b></span>
-      <button class="pill skillbtn" onclick="FQ.nav('journeyBag')">🎒 ${FQ.J.bagCount(j)}/${ch.bagSlots}</button>
-      <button class="pill skillbtn" onclick="FQ.nav('journeyLog')">📜 ${j.log.length}</button>
-      ${completed ? `<span class="pill gold">✓ ${FQ.t("journey.done")}</span>` : ""}
+    <div class="world-hud">
+      ${FQ.backBtn()}
+      <h2>${FQ.t("journey.name")} 🐪</h2>
+      <div class="chshelf">${shelf}</div>
+      <div class="dim small wh-tag">${FQ.bi(ch, "nameZh", "nameEn")} · ${FQ.bi(ch, "taglineZh", "taglineEn")}</div>
+      <div class="jres">
+        <span class="pill">📅 <b>${j.days}</b>/${ch.parDays} ${FQ.t("common.day")}</span>
+        <span class="pill">💰 <b>${j.coins}</b></span>
+        <span class="pill">🕯️ <b>${FQ.J.favorTotal(j)}</b></span>
+        <span class="pill dust">✨ <b>${FQ.state.stardust}</b></span>
+        <button class="pill skillbtn" onclick="FQ.nav('journeyBag')">🎒 ${FQ.J.bagCount(j)}/${ch.bagSlots}</button>
+        <button class="pill skillbtn" onclick="FQ.nav('journeyLog')">📜 ${j.log.length}</button>
+        ${completed ? `<span class="pill gold">✓ ${FQ.t("journey.done")}</span>` : ""}
+      </div>
+      ${compChips ? `<div class="jres">${compChips}</div>` : ""}
     </div>
-    ${compChips ? `<div class="jres">${compChips}</div>` : ""}
     ${FQ.J.mapSVG()}
-    <div id="jpanel"></div>`;
+    <div id="jpanel" class="world-drawer"></div>`;
   FQ.J.attachFog();
   const n = FQ.J.node(j.at);
   FQ.J.ambient(n.region, null);
@@ -777,38 +779,37 @@ FQ.J.showEncounter = function (enc) {
   if (enc.w !== 99) j.flags["enc_" + enc.id] = true;
   FQ.save();
   FQ.AU.play(c.wx === "storm" ? "gale" : "step");
-  const panel = document.getElementById("jtravelpanel");
-  const choices = enc.choices.map((o, i) => {
-    let dis = "";
-    if (o.needTool && !FQ.J.hasTool(j, o.needTool)) dis = "disabled";
-    if (o.needCoins && j.coins < o.needCoins) dis = "disabled";
-    if (o.needGoods && !j.bag.some(b => b.kind === "goods")) dis = "disabled";
-    const ic = o.ritual ? "🔮 " : o.needTool ? FQ.TOOLS[o.needTool].ic + " " : "";
-    return `<button class="btn ghost block encchoice" ${dis} onclick="FQ.J.encPick(${i})">${ic}${FQ.bi(o, "zh", "en")}</button>`;
-  }).join("");
-  panel.innerHTML = `
-    <div class="panel jnode-panel encounter" style="--rc:${FQ.JOURNEY_REGIONS[FQ.J.node(c.to).region].color}">
-      <div class="jreg dim">${FQ.t("journey.enc")} · ${FQ.WX_ICON[c.wx]}</div>
-      <h3>${enc.ic} ${FQ.bi(enc, "zh", "en")}</h3>
-      <div class="reading dim" style="font-size:.85rem">${FQ.bi(enc, "tZh", "tEn")}</div>
-      <div id="jenczone">${choices}</div>
-    </div>`;
   FQ.J.curEnc = enc;
+  const region = FQ.J.node(c.to).region;
+  FQ.Scene.play({
+    bg: FQ.SCENE_BG_REGION[region], region,
+    lines: [{ who: enc.ic + " " + FQ.bi(enc, "zh", "en"), text: FQ.bi(enc, "tZh", "tEn") }],
+    choices: enc.choices.map((o, i) => {
+      let off = false;
+      if (o.needTool && !FQ.J.hasTool(j, o.needTool)) off = true;
+      if (o.needCoins && j.coins < o.needCoins) off = true;
+      if (o.needGoods && !j.bag.some(b => b.kind === "goods")) off = true;
+      const ic = o.ritual ? "🔮 " : o.needTool ? FQ.TOOLS[o.needTool].ic + " " : "";
+      return { label: ic + FQ.bi(o, "zh", "en"), off, fn: () => FQ.J.encPick(i) };
+    })
+  });
 };
 FQ.J.encPick = function (i) {
   const enc = FQ.J.curEnc;
   const o = enc.choices[i];
-  const zone = document.getElementById("jenczone");
   const c = FQ.J.travelCtx;
-  const doneBtn = `<div class="center" style="margin-top:10px">
-    <button class="btn sm" onclick="FQ.J.resumeTravel()">${FQ.t("journey.onward")}</button></div>`;
-  const finish = (line, fx, ic) => {
+  const region = FQ.J.node(c.to).region;
+  const finish = (line, fx, ic, who) => {
     const before = FQ.J.ensure().days;
     FQ.J.fx(fx || []);
     const dd = FQ.J.ensure().days - before;
     c.extraDays += dd;
     c.evLines.push({ ic: ic || enc.ic, line });
-    zone.innerHTML = `<div class="reading result">${line}</div>${doneBtn}`;
+    FQ.Scene.play({
+      bg: FQ.SCENE_BG_REGION[region], region,
+      lines: [{ who: who || null, text: line.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim() }],
+      onDone: () => FQ.J.resumeTravel()
+    });
   };
   if (!o.ritual) {
     FQ.AU.play("flip");
@@ -817,7 +818,6 @@ FQ.J.encPick = function (i) {
   }
   /* divination choice: quick rite with its own suspense beat */
   FQ.AU.play({ jiaobei: "wood", coin1: "coin", tarot1: "card", diceElem: "dice", diceAny: "dice", meihuaWater: "card" }[o.ritual.method] || "card");
-  zone.innerHTML = `<div class="center dim">…</div>`;
   setTimeout(() => {
     let pass = false, special = false, glyph = "";
     switch (o.ritual.method) {
@@ -830,8 +830,8 @@ FQ.J.encPick = function (i) {
     }
     const branch = special && o.special ? o.special : pass ? o.pass : o.fail;
     if (pass) { FQ.AU.play("chime"); FQ.buzz(15); } else FQ.AU.play(special ? "hush" : "bad");
-    const line = `<b class="gold">${glyph}</b><br>` + (special && o.special ? FQ.bi(o.special, "zh", "en") : FQ.bi(branch, "rZh", "rEn"));
-    finish(line, branch.fx, pass ? "✅" : special ? "🌒" : "•");
+    const body = special && o.special ? FQ.bi(o.special, "zh", "en") : FQ.bi(branch, "rZh", "rEn");
+    finish(body, branch.fx, pass ? "✅" : special ? "🌒" : "•", glyph);
     FQ.recordReading("journey-enc", 3);
   }, 850);
 };
@@ -855,16 +855,31 @@ FQ.J.arrive = function () {
     evs: c.evLines.map(x => ({ ic: x.ic, line: x.line.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 90) })),
     comp: Object.keys(j.comp).filter(k => j.comp[k].on)
   });
+  const firstTime = !j.flags["seen_" + c.to];
+  j.flags["seen_" + c.to] = 1;
   FQ.save();
   FQ.checkAchievements();
   FQ.J.travelCtx = null;
   FQ.gainXP(3);
-  FQ.nav("journey");
-  setTimeout(() => {
-    const n = FQ.J.node(c.to);
-    FQ.fog.reveal(n.x, n.y);
-    FQ.AU.play(c.e.kind === "sea" ? "sail" : "step");
-  }, 250);
+  const n = FQ.J.node(c.to);
+  const land = () => {
+    FQ.nav("journey");
+    setTimeout(() => {
+      FQ.fog.reveal(n.x, n.y);
+      FQ.AU.play(c.e.kind === "sea" ? "sail" : "step");
+    }, 250);
+  };
+  /* first sight of a place is narrated over its own backdrop */
+  if (firstTime) {
+    FQ.Scene.play({
+      bg: FQ.SCENE_BG[c.to], region: n.region,
+      lines: [
+        { who: FQ.bi(n, "zh", "en"), text: FQ.bi(n, "exZh", "exEn") },
+        { text: FQ.t("scene.arrive", { d: j.days, b: FQ.bi(n, "zh", "en") }) }
+      ],
+      onDone: land
+    });
+  } else land();
 };
 FQ.J.journalNote = function (ic, line) {
   const j = FQ.J.ensure();
@@ -878,11 +893,40 @@ FQ.J.townHTML = function (n) {
   const j = FQ.J.ensure();
   const t = n.town;
   const btns = [];
-  if (t.market) btns.push(`<button class="btn ghost sm" onclick="FQ.nav('journeyMarket')">🏪 ${FQ.t("journey.town.market")}</button>`);
-  if (t.temple) btns.push(`<button class="btn ghost sm" ${j.templeUsed[n.id] ? "disabled" : ""} onclick="FQ.J.temple()">⛩️ ${FQ.t("journey.town.temple")}</button>`);
-  if (t.teahouse) btns.push(`<button class="btn ghost sm" onclick="FQ.J.teahouse()">🍵 ${FQ.t("journey.town.tea")}</button>`);
-  if (t.inn) btns.push(`<button class="btn ghost sm" onclick="FQ.J.inn()">🏮 ${FQ.t("journey.town.inn")}</button>`);
+  const K = (kind, ic, key) => {
+    const k = FQ.KEEPERS[kind][n.region];
+    btns.push(`<button class="doorbtn" onclick="FQ.J.enterBuilding('${kind}')">
+      <span class="db-ic">${k ? k.ic : ic}</span>
+      <span class="db-t">${FQ.t(key)}<span class="dim small">${k ? FQ.bi(k, "zh", "en") : ""}</span></span></button>`);
+  };
+  if (t.market) K("market", "🏪", "journey.town.market");
+  if (t.temple) K("temple", "⛩️", "journey.town.temple");
+  if (t.teahouse) K("teahouse", "🍵", "journey.town.tea");
+  if (t.inn) K("inn", "🏮", "journey.town.inn");
   return btns.length ? `<div class="jtown">${btns.join("")}</div>` : "";
+};
+
+/* stepping through a town door opens an exchange, not a menu */
+FQ.J.enterBuilding = function (kind) {
+  const j = FQ.J.ensure();
+  const n = FQ.J.node(j.at);
+  const K = FQ.KEEPERS[kind][n.region];
+  const back = () => FQ.nav("journey");
+  const act = {
+    market: () => FQ.nav("journeyMarket"),
+    temple: () => FQ.J.temple(),
+    teahouse: () => FQ.J.teahouse(),
+    inn: () => FQ.J.inn()
+  }[kind];
+  const spent = kind === "temple" && j.templeUsed[n.id];
+  FQ.Scene.play({
+    bg: FQ.SCENE_BG[n.id], region: n.region,
+    lines: [{ who: FQ.bi(K, "zh", "en"), portrait: "npc-" + K.npc, ic: K.ic, text: FQ.bi(K, "lZh", "lEn") }],
+    choices: [
+      { label: FQ.bi(FQ.KEEPER_ACT[kind], "zh", "en"), fn: act, off: spent },
+      { label: FQ.bi(FQ.KEEPER_ACT.leave, "zh", "en"), fn: back, dim: true }
+    ]
+  });
 };
 FQ.J.temple = function () {
   const j = FQ.J.ensure();

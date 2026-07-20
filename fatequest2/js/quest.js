@@ -35,29 +35,37 @@ FQ.SCREENS.trial = function () {
   const M = q.mentor;
   const app = document.getElementById("app");
 
+  const place = FQ.J.node(M.at);
+  const region = place ? place.region : "chr";
   if (q.phase === "intro") {
-    app.innerHTML = `
-      <div class="trial-stage">
-        <div class="tr-place">${FQ.bi(M, "civZh", "civEn")}</div>
-        <div class="tr-portrait">${FQ.art("mentor-" + M.method, M.ic, "big")}</div>
-        <h2 class="tr-name">${FQ.bi(M, "zh", "en")}</h2>
-        <div class="tr-speech"><span id="tr-say"></span></div>
-        <div class="tr-task">◈ ${FQ.bi(M.trial, "taskZh", "taskEn")}</div>
-        <button class="btn tr-go" onclick="FQ.Q.begin()">${FQ.t("trial.begin")}</button>
-      </div>`;
-    FQ.typeInto(document.getElementById("tr-say"), FQ.bi(M, "introZh", "introEn"), 42);
+    app.innerHTML = `<div class="trial-stage work"></div>`;
+    FQ.Scene.play({
+      bg: FQ.SCENE_BG[M.at], region,
+      lines: [
+        { who: FQ.bi(M, "civZh", "civEn"), text: FQ.bi(M, "introZh", "introEn"),
+          portrait: "mentor-" + M.method, ic: M.ic },
+        { who: FQ.bi(M, "zh", "en"), portrait: "mentor-" + M.method, ic: M.ic,
+          text: "◈ " + FQ.bi(M.trial, "taskZh", "taskEn") }
+      ],
+      choices: [
+        { label: FQ.t("trial.begin"), fn: () => FQ.Q.begin() },
+        { label: FQ.t("scene.later"), dim: true, fn: () => FQ.Q.close() }
+      ]
+    });
     return;
   }
   if (q.phase === "grad") {
-    app.innerHTML = `
-      <div class="trial-stage">
-        <div class="tr-seal">✦</div>
-        <h2 class="tr-name gold">${FQ.t("trial.learned", { t: FQ.t(M.method + ".name") })}</h2>
-        <div class="tr-speech">${FQ.bi(M, "gradZh", "gradEn")}</div>
-        <div class="tr-unlock">${M.ic} ${FQ.t(M.method + ".name")} · ${FQ.t("trial.unlocked")}</div>
-        <button class="btn tr-go" onclick="FQ.Q.close()">${FQ.t("trial.done")}</button>
-      </div>`;
+    app.innerHTML = `<div class="trial-stage work"></div>`;
     FQ.confetti();
+    FQ.Scene.play({
+      bg: FQ.SCENE_BG[M.at], region,
+      lines: [
+        { who: FQ.bi(M, "zh", "en"), portrait: "mentor-" + M.method, ic: M.ic,
+          text: FQ.bi(M, "gradZh", "gradEn") },
+        { text: "✦ " + FQ.t("trial.learned", { t: FQ.t(M.method + ".name") }) + " · " + FQ.t("trial.unlocked") }
+      ],
+      choices: [{ label: FQ.t("trial.done"), fn: () => FQ.Q.close() }]
+    });
     return;
   }
   /* phase: work — the trial itself */
