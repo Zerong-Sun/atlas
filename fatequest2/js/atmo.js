@@ -21,8 +21,8 @@ FQ.fog = (function () {
     for (let i = 0; i < 46; i++) {
       const x = Math.random() * 256, y = Math.random() * 256, r = 24 + Math.random() * 52;
       const g = c.createRadialGradient(x, y, 0, x, y, r);
-      g.addColorStop(0, "rgba(128,138,186,0.05)");
-      g.addColorStop(1, "rgba(128,138,186,0)");
+      g.addColorStop(0, "rgba(224,212,184,0.045)");
+      g.addColorStop(1, "rgba(224,212,184,0)");
       c.fillStyle = g;
       [-256, 0, 256].forEach(dx => [-256, 0, 256].forEach(dy => { /* seamless wrap */
         c.save(); c.translate(dx, dy); c.beginPath(); c.arc(x, y, r, 0, 7); c.fill(); c.restore();
@@ -37,7 +37,7 @@ FQ.fog = (function () {
     ctx.clearRect(0, 0, w, h);
     /* base veil: the unexplored world sleeps under dark ink (≈0.85) */
     ctx.globalAlpha = 0.85;
-    ctx.fillStyle = "#0d0e22";
+    ctx.fillStyle = "#0a110d";
     ctx.fillRect(0, 0, w, h);
     /* two drifting wisp layers give the veil its slow breath */
     if (!tile) makeTile();

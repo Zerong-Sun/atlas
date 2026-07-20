@@ -5,10 +5,10 @@
 window.FQ = window.FQ || {};
 
 FQ.JOURNEY_REGIONS = {
-  chr:  { zh: "基督之境", en: "Christendom",     color: "#4a6fa5", climate: { clear: 5, wind: 3, fog: 1.5, storm: 0.5 } },
-  isl:  { zh: "新月之境", en: "Crescent Lands",  color: "#3f8f6b", climate: { clear: 4.5, wind: 2, sand: 2.5, fog: 0.5, storm: 0.5 } },
-  con:  { zh: "儒道之境", en: "Confucian Realm", color: "#b0713a", climate: { clear: 4, wind: 2, fog: 2, snow: 1.5, storm: 0.5 } },
-  mazu: { zh: "妈祖之海", en: "Mazu's Sea",      color: "#2e8b9a", climate: { clear: 4, wind: 2.5, storm: 2, fog: 1.5 } }
+  chr:  { zh: "基督之境", en: "Christendom",     color: "#56779b", climate: { clear: 5, wind: 3, fog: 1.5, storm: 0.5 } },
+  isl:  { zh: "新月之境", en: "Crescent Lands",  color: "#4d8a70", climate: { clear: 4.5, wind: 2, sand: 2.5, fog: 0.5, storm: 0.5 } },
+  con:  { zh: "儒道之境", en: "Confucian Realm", color: "#a8794a", climate: { clear: 4, wind: 2, fog: 2, snow: 1.5, storm: 0.5 } },
+  mazu: { zh: "妈祖之海", en: "Mazu's Sea",      color: "#4a8a94", climate: { clear: 4, wind: 2.5, storm: 2, fog: 1.5 } }
 };
 
 /* ---------- tradable goods & bag items (§4.2) ---------- */

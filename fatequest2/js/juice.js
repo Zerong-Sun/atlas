@@ -26,10 +26,10 @@ FQ.artMiss = function (img, name, parent) {
   const ctx = cv.getContext("2d");
   let t = 0, last = 0;
   const BLOBS = [
-    { r: 0.42, o: 0.55, sp: 0.05, hue: "42, 31, 77" },   /* violet ink */
-    { r: 0.55, o: 0.85, sp: -0.033, hue: "18, 48, 74" }, /* deep teal */
-    { r: 0.36, o: 0.35, sp: 0.075, hue: "66, 32, 60" },  /* plum */
-    { r: 0.62, o: 1.1, sp: 0.022, hue: "58, 44, 20" }    /* umber gold, faint */
+    { r: 0.42, o: 0.55, sp: 0.05, hue: "24, 42, 33" },   /* forest ink */
+    { r: 0.55, o: 0.85, sp: -0.033, hue: "38, 60, 76" }, /* slate sky */
+    { r: 0.36, o: 0.35, sp: 0.075, hue: "70, 60, 46" },  /* warm umber */
+    { r: 0.62, o: 1.1, sp: 0.022, hue: "88, 78, 62" }    /* cloud light, faint */
   ];
   function resize() { cv.width = innerWidth; cv.height = innerHeight; }
   addEventListener("resize", resize);
