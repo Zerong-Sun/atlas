@@ -11,6 +11,7 @@ FQ.current = { screen: "home" };
 FQ.nav = function (screen, param) {
   FQ.current = { screen, param };
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
+  document.body.classList.toggle("titled", screen === "title");
   $app().innerHTML = "";
   render(param);
   document.querySelectorAll(".tab").forEach(b => {
@@ -18,6 +19,14 @@ FQ.nav = function (screen, param) {
       (b.dataset.nav === "home" && !["codex", "profile"].includes(screen)));
   });
   window.scrollTo(0, 0);
+};
+
+/* fullscreen (best-effort; PWA standalone is already chromeless) */
+FQ.toggleFS = function () {
+  try {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen({ navigationUI: "hide" });
+  } catch (e) {}
 };
 
 FQ.applyStaticI18n = function () {
@@ -29,10 +38,11 @@ FQ.hudHTML = function () {
   const pct = Math.round(FQ.levelProgress() * 100);
   return `
   <div class="hud">
-    <div class="title">
+    <div class="title" onclick="FQ.nav('title')" style="cursor:pointer" title="Title">
       <h1>${FQ.t("app.title")} <span class="gold">✦</span></h1>
       <div class="sub">${FQ.t("app.sub")}</div>
     </div>
+    <button class="pill skillbtn" onclick="FQ.toggleFS()" title="${FQ.t("title.fs")}">⛶</button>
     <div>
       <span class="pill">${FQ.t("lv.prefix")}${FQ.level() + 1} · <b>${FQ.esc(FQ.levelTitle())}</b></span>
       <div class="xpbar"><i id="xpbar-i" style="width:${pct}%"></i></div>
@@ -81,6 +91,25 @@ FQ.collectHexCast = function (cast) {
 
 /* ---------- screens ---------- */
 FQ.SCREENS = {
+
+  /* ===== title — the game gate ===== */
+  title() {
+    const returning = FQ.state.xp > 0 || FQ.state.readings > 0;
+    $app().innerHTML = `
+      <div class="title-screen">
+        <div class="t-orn">✦ ◆ ✦</div>
+        <h1 class="t-logo">${FQ.lang === "zh" ? "灵游" : "FateQuest"}</h1>
+        <div class="t-sub">${FQ.lang === "zh" ? "FATEQUEST · 千载行纪" : "灵游 · CHRONICLES OF A THOUSAND YEARS"}</div>
+        <div class="t-tag">${FQ.t("title.tag")}</div>
+        <button class="btn t-start" onclick="FQ.startGame()">${returning ? FQ.t("title.continue") : FQ.t("title.start")}</button>
+        <div class="t-opts">
+          <button class="pill skillbtn" onclick="FQ.setLang(FQ.lang === 'zh' ? 'en' : 'zh')">🀄 ${FQ.lang === "zh" ? "EN" : "中文"}</button>
+          <button class="pill skillbtn" onclick="FQ.AU.setMute(!FQ.state.mute);FQ.nav('title')">${FQ.state.mute ? "🔕" : "🔔"}</button>
+          <button class="pill skillbtn" onclick="FQ.toggleFS()">⛶ ${FQ.t("title.fs")}</button>
+        </div>
+        <div class="t-foot">${FQ.t("footer")}</div>
+      </div>`;
+  },
 
   /* ===== home / starmap ===== */
   home() {
@@ -670,6 +699,16 @@ FQ.doReset = function () {
   if (confirm(FQ.t("profile.reset.confirm"))) { FQ.reset(); FQ.applyStaticI18n(); FQ.nav("home"); }
 };
 
+FQ.startGame = function () {
+  FQ.AU.unlock();
+  FQ.AU.play("chime");
+  /* fullscreen needs the user gesture — this click is it */
+  if (!window.matchMedia("(display-mode: standalone)").matches && !document.fullscreenElement) {
+    try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch (e) {}
+  }
+  FQ.nav("home");
+};
+
 /* ---------- boot (after every module has registered) ---------- */
 document.addEventListener("DOMContentLoaded", function () {
   FQ.load();
@@ -677,5 +716,5 @@ document.addEventListener("DOMContentLoaded", function () {
     b.addEventListener("click", () => FQ.nav(b.dataset.nav)));
   document.addEventListener("pointerdown", () => FQ.AU && FQ.AU.unlock(), { once: true });
   FQ.applyStaticI18n();
-  FQ.nav("home");
+  FQ.nav("title");
 });

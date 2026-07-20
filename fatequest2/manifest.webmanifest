@@ -3,7 +3,7 @@
   "short_name": "FateQuest",
   "description": "环游诸文明的占卜奇旅 · 占途路网 × 命途塔肉鸽 · A divination voyage: FateRoad network × Tower of Fates roguelike",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
   "background_color": "#08060f",
   "theme_color": "#08060f",

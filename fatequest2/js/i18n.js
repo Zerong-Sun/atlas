@@ -4,6 +4,8 @@ window.FQ = window.FQ || {};
 FQ.I18N = {
   "zh": {
     "app.title": "灵游", "app.sub": "FATEQUEST · 占卜奇旅",
+    "title.tag": "中世纪游记 × 诸文明占卜 · 以问为路，环游世界",
+    "title.start": "启 程", "title.continue": "继 续 旅 程", "title.fs": "全屏",
     "nav.home": "星图", "nav.codex": "图鉴", "nav.profile": "行者",
     "home.daily": "每日一签", "home.daily.done": "今日已签",
     "home.realms": "诸文明秘境", "home.streak": "连签",
@@ -163,6 +165,8 @@ FQ.I18N = {
   },
   "en": {
     "app.title": "FateQuest", "app.sub": "灵游 · A DIVINATION VOYAGE",
+    "title.tag": "Medieval travelogues × the world's divinations · ask your way around the world",
+    "title.start": "Set Forth", "title.continue": "Continue the Voyage", "title.fs": "Fullscreen",
     "nav.home": "Starmap", "nav.codex": "Codex", "nav.profile": "Voyager",
     "home.daily": "Daily Lot", "home.daily.done": "Drawn today",
     "home.realms": "Realms of Civilizations", "home.streak": "Streak",
