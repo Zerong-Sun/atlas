@@ -8,12 +8,33 @@ const $app = () => document.getElementById("app");
 FQ.current = { screen: "home" };
 
 /* ---------- navigation ---------- */
+/* which musical land & which kind of moment each screen belongs to (§7.2) */
+FQ.SCENE_OF = {
+  title: "title", home: "map", codex: "map", profile: "map", lineage: "map",
+  journey: "map", journeyTravel: "travel", journeyMarket: "town",
+  journeyBag: "map", journeyLog: "map", tower: "map", towerRun: "tower",
+  towerEnd: "map", trial: "ritual", daily: "ritual"
+};
+FQ.REGION_OF = {
+  tarot: "chr", lenormand: "chr", runes: "nor", astrodice: "isl", western: "isl",
+  iching: "con", meihua: "con", bazi: "con", dream: "con", jiaobei: "mazu",
+  title: "chr", home: "chr", daily: "con"
+};
+/* fullscreen level stages — rituals and trials take the whole screen */
+FQ.STAGED = ["trial", "towerRun", "journeyTravel", "tarot", "iching", "meihua",
+  "bazi", "western", "runes", "dream", "astrodice", "jiaobei", "lenormand", "daily"];
+
 FQ.nav = function (screen, param) {
   FQ.current = { screen, param };
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
   document.body.classList.toggle("titled", screen === "title");
+  document.body.classList.toggle("staged", FQ.STAGED.includes(screen));
   $app().innerHTML = "";
   render(param);
+  if (FQ.AU && FQ.AU.scene) {
+    FQ.AU.scene(FQ.SCENE_OF[screen] || "ritual",
+      String(screen).startsWith("journey") ? null : FQ.REGION_OF[screen]);
+  }
   document.querySelectorAll(".tab").forEach(b => {
     b.classList.toggle("active", b.dataset.nav === screen ||
       (b.dataset.nav === "home" && !["codex", "profile"].includes(screen)));
@@ -122,6 +143,22 @@ FQ.SCREENS = {
           <div class="rt">${FQ.t(m.lockKey)}</div>
           <div class="rs">${FQ.t("locked.tip")}</div>
         </div>`;
+      /* 师承: an art you have not been taught stays dark (GDD §4.9) */
+      if (!FQ.Q.knows(m.id)) {
+        const M = FQ.mentorFor(m.id);
+        const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
+        const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+        return `
+          <div class="realm unlearned" style="--rc:${m.color};animation-delay:${i * 45}ms"
+               onclick="${reached ? `FQ.Q.meet('${m.id}')` : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+            <div class="rciv">${FQ.t(m.id + ".civ")}</div>
+            <div class="ric">🔒</div>
+            <div class="rt">${FQ.t(m.id + ".name")}</div>
+            <div class="rs">${reached
+              ? `<span class="gold">${FQ.t("mentor.here")} · ${FQ.t("mentor.meet")}</span>`
+              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
+          </div>`;
+      }
       return `
         <div class="realm" style="--rc:${m.color};animation-delay:${i * 45}ms" onclick="FQ.nav('${m.id}')">
           <div class="rciv">${FQ.t(m.id + ".civ")}</div>
@@ -460,9 +497,11 @@ FQ.tarotPick = function (i) {
   const pick = t.drawn[t.flipped];
   FQ.AU.play("flip");
   const front = el.querySelector(".tfront");
-  front.innerHTML = `<div class="sym">${pick.card.sym}</div>
-    <div class="nm">${FQ.bi(pick.card, "zh", "en")}${pick.reversed ? FQ.t("tarot.rev") : ""}</div>`;
-  if (pick.reversed) el.classList.add("rev");
+  front.innerHTML = FQ.illumCard({
+    glyph: pick.card.sym, civ: "tarot", rev: pick.reversed, art: FQ.TAROT_ART[pick.card.id],
+    name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "")
+  });
+  front.classList.add("illum-face");
   el.classList.add("flipped");
   const r = el.getBoundingClientRect();
   FQ.sparkleAt(r.left + r.width / 2, r.top + r.height / 2, "#9b6bb3");

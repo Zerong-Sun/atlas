@@ -52,7 +52,7 @@ window.FQ = window.FQ || {};
     for (let i = 0; i < 70; i++) {
       parts.push({
         x: cv.width / 2 + (Math.random() - 0.5) * 160,
-        y: cv.height * 0.35,
+        y: cv.height * 0.58,
         vx: (Math.random() - 0.5) * 9,
         vy: -Math.random() * 9 - 3,
         r: 3 + Math.random() * 4,

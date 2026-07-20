@@ -58,7 +58,8 @@ FQ.J.wxToFx = wx => ({ storm: "storm", sand: "sand", snow: "snow", wind: "wind",
   const _nav = FQ.nav;
   FQ.nav = function (screen, param) {
     if (!String(screen).startsWith("journey")) {
-      FQ.AU.stopDrone();
+      /* music keeps playing — FQ.nav's scene() re-tunes it; only the
+         road's own atmosphere layers are torn down here */
       FQ.weatherFX.set(null);
       FQ.clearPhase();
       FQ.fog.detach();
@@ -217,12 +218,20 @@ FQ.J.openNode = function (id) {
   }
 
   const townHtml = isCur && n.town ? FQ.J.townHTML(n) : "";
+  /* 师承: a teacher of this place, still unmet (GDD §4.9) */
+  const mentorHtml = isCur ? FQ.Q.pendingAt(id).map(M => `
+    <button class="mentor-call" onclick="FQ.Q.meet('${M.method}')">
+      <span class="mc-ic">${FQ.art("mentor-" + M.method, M.ic, "big")}</span>
+      <span class="mc-txt"><b>${FQ.bi(M, "zh", "en")}</b>
+        <span class="dim small">${FQ.t("mentor.here")} · ${FQ.t(M.method + ".name")}</span></span>
+      <span class="mc-go">${FQ.t("mentor.meet")}</span>
+    </button>`).join("") : "";
   panel.innerHTML = `
     <div class="panel jnode-panel" style="--rc:${R.color}">
       <div class="jreg" style="color:${R.color}">${FQ.bi(R, "zh", "en")}${n.type === "side" ? " · ✧" : ""}</div>
       <h3>${FQ.bi(n, "zh", "en")}</h3>
       <div class="reading dim jexcerpt" style="font-size:.85rem"><span id="jex"></span></div>
-      ${townHtml}${body}
+      ${mentorHtml}${townHtml}${body}
     </div>`;
   const ex = document.getElementById("jex");
   const text = FQ.t("journey.excerpt") + "：" + FQ.bi(n, "exZh", "exEn");
@@ -230,7 +239,8 @@ FQ.J.openNode = function (id) {
     j.flags["ex_" + id] = 1; FQ.save();
     FQ.typeInto(ex, text, 34);
   } else ex.textContent = text;
-  if (isCur && !passed && n.gate.type !== "case" && n.gate.type !== "dreamChoice") FQ.J.newGate(n);
+  if (isCur && !passed && n.gate.type !== "case" && n.gate.type !== "dreamChoice"
+      && FQ.Q.gateOK(n.gate.type)) FQ.J.newGate(n);
   if (isCur && n.gate.onOpen && !j.flags["open_" + id]) {
     j.flags["open_" + id] = 1;
     FQ.save();
@@ -288,9 +298,23 @@ FQ.J.commit = function () {
 FQ.J.omenMethod = t => t.startsWith("tarot") ? "tarot" : t.startsWith("dice") ? "dice"
   : t === "ichingYang" || t === "coinYang" ? "iching" : t;
 FQ.J.gateHTML = function (n) {
+  /* an art you were never taught cannot be practiced — take the hard road */
+  if (!FQ.Q.gateOK(n.gate.type)) {
+    const need = FQ.Q.gateNeed(n.gate.type);
+    return `
+      <p class="small" style="margin:8px 0">${FQ.bi(n.gate, "pZh", "pEn")}</p>
+      <div class="edged">🔒 ${FQ.t("gate.need", { t: FQ.t(need + ".name") })}</div>
+      ${n.gate.edgeZh ? `<div class="center" style="margin-top:10px">
+        <button class="btn" onclick="FQ.J.takeEdgeAt('${n.id}')">🌘 ${FQ.bi(n.gate, "edgeZh", "edgeEn")}</button></div>` : ""}`;
+  }
   return `
     <p class="small" style="margin:8px 0">${FQ.bi(n.gate, "pZh", "pEn")}</p>
     <div id="jgatezone"></div>`;
+};
+/* edge road taken without ever attempting the rite */
+FQ.J.takeEdgeAt = function (id) {
+  FQ.J.g = { node: id, type: FQ.J.node(id).gate.type, tries: 0, yinStreak: 0, tebUsed: false };
+  FQ.J.takeEdge();
 };
 FQ.J.renderGate = function () {
   const zone = document.getElementById("jgatezone");

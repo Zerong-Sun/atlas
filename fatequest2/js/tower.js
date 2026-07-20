@@ -27,10 +27,9 @@ FQ.TW.symCard = function (id, opts) {
   const cur = FQ.towerIsCurse(id);
   const o = opts || {};
   return `
-    <div class="twsym ${cur ? "curse" : "civ-" + s.civ} ${o.cls || ""}" ${o.on ? `onclick="${o.on}"` : ""}>
-      <div class="twsym-g">${FQ.art("sym-" + id, s.sym, "big")}</div>
-      <div class="twsym-n">${FQ.bi(s, "zh", "en")}</div>
-      ${cur ? `<div class="twsym-p">☠</div>` : `<div class="twsym-p">${s.power}</div>`}
+    <div class="twsym illum ${cur ? "curse" : "civ-" + s.civ} ${o.cls || ""}" ${o.on ? `onclick="${o.on}"` : ""}>
+      ${FQ.illumCard({ glyph: s.sym, name: FQ.bi(s, "zh", "en"), civ: cur ? "curse" : s.civ,
+        art: cur ? null : id, power: cur ? undefined : s.power })}
     </div>`;
 };
 
@@ -117,6 +116,9 @@ FQ.TW.openFloor = function () {
   FQ.TW.t = { sel: [], phase: "select", flags: {}, log: [], discarded: false };
   const t = FQ.TW.t;
   if (r.mods.omenHide) { t.omenHidden = true; }
+  /* the ordeal floors drive the drum harder (§7.2) */
+  FQ.AU.scene(FQ.TW.isOrdeal(r.layer) ? "ordeal" : "tower",
+    { tarot: "chr", iching: "con", runes: "nor" }[r.arch]);
   if (FQ.TW.isOrdeal(r.layer)) {
     t.ordeal = {
       id: r.ordeals[[4, 8, 12].indexOf(r.layer)],
@@ -581,16 +583,22 @@ FQ.SCREENS.tower = function () {
   const run = m.run;
   const featured = FQ.TW.featured();
   const archs = FQ.TOWER_ARCH.map(a => {
-    const unlocked = m.unlockedArch.includes(a.id);
+    const taught = FQ.Q.knows(a.id);            /* 师承 gates the paths */
+    const unlocked = taught && m.unlockedArch.includes(a.id);
+    const M = FQ.mentorFor(a.id);
+    const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
     return `
     <div class="archcard ${unlocked ? "" : "locked"}" style="--rc:${a.color}">
-      <div class="ric">${FQ.art("arch-" + a.id, a.ic, "big")}</div>
+      <div class="ric">${taught ? FQ.art("arch-" + a.id, a.ic, "big") : "🔒"}</div>
       <b>${FQ.bi(a, "zh", "en")}</b>
-      <div class="dim small">${FQ.bi(a, "skillZh", "skillEn")}</div>
-      <div class="twsymrow">${a.deck.map(id => `<span class="minisym civ-${a.id}">${FQ.towerSym(id).sym}</span>`).join("")}</div>
+      <div class="dim small">${taught ? FQ.bi(a, "skillZh", "skillEn")
+        : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
+      <div class="twsymrow">${a.deck.map(id => `<span class="minisym civ-${a.id}">${taught ? FQ.towerSym(id).sym : "·"}</span>`).join("")}</div>
       ${unlocked
         ? `<button class="btn sm block" onclick="FQ.TW.start('${a.id}')">${FQ.t("tw.climb")}</button>`
-        : `<button class="btn ghost sm block" onclick="FQ.TW.unlockArch('${a.id}')">🔒 ${a.cost} ✨</button>`}
+        : taught
+          ? `<button class="btn ghost sm block" onclick="FQ.TW.unlockArch('${a.id}')">🔒 ${a.cost} ✨</button>`
+          : `<button class="btn ghost sm block" disabled>🔒</button>`}
     </div>`;
   }).join("");
   document.getElementById("app").innerHTML = `
@@ -726,23 +734,19 @@ FQ.TW.handHTML = function () {
     const omen = t.phase === "select" && !isCurse && h.omen !== 0
       ? `<span class="twomen ${h.omen > 0 ? "good" : "ill"}">${h.omen > 0 ? "✦" : "◦"}</span>` : "";
     if (isCurse) return `
-      <div class="twcard curse" onclick="FQ.TW.toggleSel(${i})">
-        <div class="twcard-face"><div class="twsym-g">${FQ.art("curse-" + h.id.slice(2), s.sym, "big")}</div>
-        <div class="twsym-n">${FQ.bi(s, "zh", "en")}</div><div class="twsym-p">☠</div></div>
+      <div class="twcard illum curse" onclick="FQ.TW.toggleSel(${i})">
+        ${FQ.illumCard({ glyph: s.sym, name: FQ.bi(s, "zh", "en"), sub: FQ.bi(s, "dZh", "dEn"), civ: "curse" })}
       </div>`;
     if (!revealed) return `
       <div class="twcard back ${selected ? "sel" : ""}" onclick="FQ.TW.toggleSel(${i})">
         <div class="twcard-face">${FQ.art("card-back", "✦", "big")}${omen}</div>
       </div>`;
     return `
-      <div class="twcard open civ-${s.civ} ${h.rev ? "rev" : ""} ${t.flipMode ? "flippable" : ""}"
+      <div class="twcard illum open civ-${s.civ} ${h.rev ? "rev" : ""} ${t.flipMode ? "flippable" : ""}"
            onclick="${t.flipMode ? `FQ.TW.flipCard(${i})` : ""}">
-        <div class="twcard-face">
-          <div class="twsym-g">${FQ.art("sym-" + h.id, s.sym, "big")}</div>
-          <div class="twsym-n">${FQ.bi(s, "zh", "en")}${h.rev ? FQ.t("tarot.rev") : ""}</div>
-          <div class="twsym-e">${h.rev ? FQ.bi(s, "rvZh", "rvEn") : FQ.bi(s, "upZh", "upEn")}</div>
-          <div class="twsym-p">${s.power}</div>
-        </div>
+        ${FQ.illumCard({ glyph: s.sym, civ: s.civ, rev: h.rev, power: s.power, art: h.id,
+          name: FQ.bi(s, "zh", "en") + (h.rev ? FQ.t("tarot.rev") : ""),
+          sub: h.rev ? FQ.bi(s, "rvZh", "rvEn") : FQ.bi(s, "upZh", "upEn") })}
       </div>`;
   }).join("") + `</div>`;
 };

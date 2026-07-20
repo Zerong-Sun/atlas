@@ -10,6 +10,8 @@ const DEFAULT_STATE = {
   methodsTried: [],
   col: { tarot: [], hex: [], rune: [], len: [] },
   achv: [],
+  /* 师承: the arts you have actually been taught (tarot is the starting kit) */
+  learned: ["tarot"], lineage: [],
   /* 2.0 — stardust (改运资源, cross-mode, GDD §3.2/§8) */
   stardust: 3, dustDay: null, dustToday: 0,
   mute: false,
@@ -25,6 +27,8 @@ FQ.load = function () {
     FQ.state = raw ? Object.assign({}, DEFAULT_STATE, JSON.parse(raw)) : JSON.parse(JSON.stringify(DEFAULT_STATE));
   } catch (e) { FQ.state = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
   FQ.state.col = Object.assign({ tarot: [], hex: [], rune: [], len: [] }, FQ.state.col);
+  if (!Array.isArray(FQ.state.learned) || !FQ.state.learned.length) FQ.state.learned = ["tarot"];
+  if (!Array.isArray(FQ.state.lineage)) FQ.state.lineage = [];
   FQ.state.tower = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE.tower)), FQ.state.tower);
   if (FQ.state.lang) FQ.lang = FQ.state.lang;
   else FQ.lang = (navigator.language || "zh").startsWith("zh") ? "zh" : "en";
@@ -148,7 +152,10 @@ FQ.ACHIEVEMENTS = [
   { id: "res10",     ic: "🌈", cond: s => s.tower.resTotal >= 10 },
   { id: "dust50",    ic: "✨", cond: s => s.stardust >= 50 },
   { id: "bothroads", ic: "🗺️", cond: s => !!s.journey && (s.journey.roadsTaken || []).length >= 2 },
-  { id: "chronicle", ic: "📜", cond: s => !!s.journey && (s.journey.log || []).length >= 8 }
+  { id: "chronicle", ic: "📜", cond: s => !!s.journey && (s.journey.log || []).length >= 8 },
+  { id: "student",   ic: "✒️", cond: s => s.learned.length >= 3 },
+  { id: "polyglot",  ic: "🕊️", cond: s => s.learned.length >= 6 },
+  { id: "lineage10", ic: "🎓", cond: s => s.learned.length >= 10 }
 ];
 FQ.checkAchievements = function () {
   FQ.ACHIEVEMENTS.forEach(a => {
