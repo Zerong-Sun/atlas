@@ -9,7 +9,7 @@ const ASSETS = [
   "./js/data-misc.js", "./js/engines.js", "./js/quest.js",
   "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
   "./js/app.js", "./js/juice.js",
-  "./js/data-journey.js", "./js/journey.js",
+  "./js/data-journey.js", "./js/map.js", "./js/journey.js",
   "./js/data-tower.js", "./js/tower.js"
 ];
 

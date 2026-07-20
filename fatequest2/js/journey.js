@@ -83,8 +83,16 @@ FQ.J.weatherFor = function (edge) {
 };
 FQ.WX_ICON = { clear: "☀️", wind: "🍃", fog: "🌫️", storm: "⛈️", sand: "🌪️", snow: "❄️" };
 
-/* ---------- map ---------- */
+/* ---------- map: the mappa mundi (js/map.js) ---------- */
 FQ.J.mapSVG = function () {
+  return `
+  <div class="jmapwrap mappa-wrap" id="jmapwrap">
+    ${FQ.MAP.render({ chapter: FQ.J.chapter(), state: FQ.J.ensure() })}
+    <canvas id="jfog" class="jfog"></canvas>
+  </div>`;
+};
+/* the 1.0 flat map, kept for reference/fallback */
+FQ.J.mapSVGLegacy = function () {
   const ch = FQ.J.chapter();
   const j = FQ.J.ensure();
   const R = FQ.JOURNEY_REGIONS;
@@ -143,7 +151,14 @@ FQ.J.attachFog = function () {
   const cv = document.getElementById("jfog");
   if (!cv) return;
   const j = FQ.J.ensure();
-  const holes = j.visited.map(id => { const n = FQ.J.node(id); return { x: n.x, y: n.y, r: 95 }; });
+  const holes = j.visited.map(id => { const n = FQ.J.node(id); return { x: n.x, y: n.y, r: 120 }; });
+  /* roads already walked stay legible between their towns */
+  j.edgesDone.forEach(k => {
+    const e = FQ.J.chapter().edges.find(x => FQ.J.edgeKey(x) === k);
+    if (!e) return;
+    const a = FQ.J.node(e.from), b = FQ.J.node(e.to);
+    for (let s = 0.25; s < 1; s += 0.25) holes.push({ x: a.x + (b.x - a.x) * s, y: a.y + (b.y - a.y) * s - 8, r: 78 });
+  });
   FQ.fog.attach(cv, holes);
 };
 
@@ -259,11 +274,59 @@ FQ.J.travelOptionsHTML = function (j) {
     const fc = j.forecast[key];
     const risk = e.risk + (j.flags.rushed ? 2 : 0);
     return `
-      <button class="btn ghost block jedge" onclick="FQ.J.travelTo('${key}')">
+      <button class="btn ghost block jedge" onclick="FQ.J.pickRoute('${key}')">
         <span style="flex:1;text-align:left">${KIND[e.kind]} ${FQ.bi(to, "zh", "en")}</span>
         <span class="dim small">${e.days}${FQ.t("common.day")} · ${"▮".repeat(Math.max(0, risk)) || "—"}${fc ? " · " + FQ.WX_ICON[fc] : ""}</span>
       </button>`;
   }).join("");
+};
+
+/* ---------- 舟车 · choosing how to travel (§4.7) ---------- */
+FQ.J.modeOK = function (t) {
+  const j = FQ.J.ensure();
+  if (!t.need) return { ok: true };
+  if (t.need.token) return { ok: FQ.J.hasToken(j, t.need.token),
+    whyZh: "需信物：" + FQ.TOKENS[t.need.token].zh, whyEn: "Needs " + FQ.TOKENS[t.need.token].en };
+  if (t.need.favor) return { ok: FQ.J.favorTotal(j) >= t.need.favor,
+    whyZh: "需护佑 " + t.need.favor, whyEn: "Needs " + t.need.favor + " blessings" };
+  if (t.need.dust) return { ok: FQ.state.stardust >= t.need.dust,
+    whyZh: "需星尘 " + t.need.dust, whyEn: "Needs " + t.need.dust + " stardust" };
+  return { ok: true };
+};
+FQ.J.modeDays = (e, t) => Math.max(1, Math.round(e.days * t.dayMul));
+FQ.J.pickRoute = function (key) {
+  const j = FQ.J.ensure();
+  const e = FQ.J.chapter().edges.find(x => FQ.J.edgeKey(x) === key);
+  if (!e) return;
+  const to = FQ.J.node(e.to);
+  const list = (e.modes ? FQ.TRANSPORT.filter(t => e.modes.includes(t.id)) : FQ.transportFor(e.kind));
+  const rows = list.map(t => {
+    const g = FQ.J.modeOK(t);
+    const days = FQ.J.modeDays(e, t);
+    const risk = Math.max(0, e.risk + t.risk + (j.flags.rushed ? 2 : 0));
+    const afford = j.coins >= t.coin;
+    const on = g.ok && afford;
+    return `
+      <button class="btn ghost block moderow ${t.fant ? "fant" : ""}" ${on ? "" : "disabled"}
+        onclick="FQ.J.travelTo('${key}','${t.id}')">
+        <span class="mo-ic">${t.ic}</span>
+        <span class="mo-txt">
+          <b>${FQ.bi(t, "zh", "en")}</b>
+          <span class="dim small">${FQ.bi(t, "nZh", "nEn")}</span>
+          ${on ? "" : `<span class="mo-lock">🔒 ${g.ok ? (FQ.lang === "zh" ? "盘缠不足" : "Not enough coin") : FQ.bi(g, "whyZh", "whyEn")}</span>`}
+        </span>
+        <span class="mo-stat">📅${days} ${t.coin ? `💰${t.coin}` : ""}<br>
+          <span class="dim">${"▮".repeat(risk) || "—"}</span></span>
+      </button>`;
+  }).join("");
+  document.getElementById("jpanel").innerHTML = `
+    <div class="panel jnode-panel" style="--rc:${FQ.JOURNEY_REGIONS[to.region].color}">
+      <div class="jreg">${FQ.t("route.title")}</div>
+      <h3>→ ${FQ.bi(to, "zh", "en")}</h3>
+      <p class="dim small">${FQ.t("route.tip")}</p>
+      ${rows}
+      <button class="btn ghost sm" style="margin-top:10px" onclick="FQ.J.openNode(FQ.state.journey.at)">← ${FQ.t("route.back")}</button>
+    </div>`;
 };
 
 /* ---------- gates with omens (§3.1) ---------- */
@@ -566,11 +629,25 @@ FQ.J.fx = function (list) {
 
 /* ---------- travel segment (§4.3 行进段) ---------- */
 FQ.J.travelCtx = null;
-FQ.J.travelTo = function (key) {
+FQ.J.travelTo = function (key, modeId) {
   const j = FQ.J.ensure();
   if (!FQ.J.gatePassed(j.at)) return;
   const e = FQ.J.chapter().edges.find(x => FQ.J.edgeKey(x) === key);
   if (!e || e.from !== j.at) return;
+  /* no mode chosen yet → let the traveler pick their conveyance first */
+  if (!modeId) return FQ.J.pickRoute(key);
+  const mode = FQ.TRANSPORT.find(t => t.id === modeId) || FQ.TRANSPORT[1];
+  if (!FQ.J.modeOK(mode).ok || j.coins < mode.coin) return;
+  /* the fare, and what the wondrous ones ask instead of coin */
+  if (mode.coin) j.coins -= mode.coin;
+  if (mode.need && mode.need.dust) FQ.spendDust(mode.need.dust);
+  if (mode.need && mode.need.favor) {
+    let owed = mode.need.favor;
+    Object.keys(j.favor).sort((a, b) => j.favor[b] - j.favor[a]).forEach(c => {
+      const take = Math.min(owed, j.favor[c]); j.favor[c] -= take; owed -= take;
+    });
+  }
+  FQ.save();
   if (e.forkId) {
     const rk = e.forkId + ":" + e.to;
     if (!j.roadsTaken.includes(rk)) j.roadsTaken.push(rk);
@@ -580,11 +657,13 @@ FQ.J.travelTo = function (key) {
   FQ.save();
   const wx = j.forecast[key] || FQ.J.weatherFor(e);
   FQ.J.travelCtx = {
-    e, key, wx, to: e.to, rushed,
+    e, key, wx, to: e.to, rushed, mode,
+    days: FQ.J.modeDays(e, mode),
     extraDays: 0, evLines: [],
     encounters: FQ.J.planEncounters(e, wx, rushed),
     idx: 0, skipped: false
   };
+  FQ.AU.play(mode.fant ? "res" : mode.kinds.includes("sea") ? "sail" : "step");
   FQ.nav("journeyTravel");
 };
 /* pick 1–2 encounters; weather may force one (§4.3 天气参与玩法) */
@@ -619,12 +698,11 @@ FQ.SCREENS.journeyTravel = function () {
   const c = FQ.J.travelCtx;
   if (!c) return FQ.nav("journey");
   const a = FQ.J.node(c.e.from), b = FQ.J.node(c.e.to);
-  const KIND = { land: "🐪", sea: "⛵", river: "🛶" };
   document.getElementById("app").innerHTML = `
     <div class="jres" style="margin-top:8px">
-      <span class="pill">${KIND[c.e.kind]} ${FQ.bi(a, "zh", "en")} → ${FQ.bi(b, "zh", "en")}</span>
+      <span class="pill">${c.mode ? c.mode.ic : "🐪"} ${FQ.bi(a, "zh", "en")} → ${FQ.bi(b, "zh", "en")}</span>
       <span class="pill">${FQ.WX_ICON[c.wx]} ${FQ.t("wx." + c.wx)}</span>
-      <span class="pill">📅 +${c.e.days}${FQ.t("common.day")}</span>
+      <span class="pill">📅 +${c.days || c.e.days}${FQ.t("common.day")}</span>
       ${c.rushed ? `<span class="pill" style="color:#ff9a8b">⚠️ ${FQ.t("journey.rushed")}</span>` : ""}
     </div>
     ${FQ.J.mapSVG()}
@@ -645,8 +723,7 @@ FQ.J.runTravel = function () {
   const marker = document.getElementById("jmarker");
   if (!c || !svg || !marker) return;
   const a = FQ.J.node(c.e.from), b = FQ.J.node(c.e.to);
-  const KIND = { land: "🐪", sea: "⛵", river: "🛶" };
-  marker.textContent = KIND[c.e.kind];
+  marker.textContent = c.mode ? c.mode.ic : "🐪";
   const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - 18;
   const posAt = t => [
     (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * mx + t * t * b.x,
@@ -764,7 +841,7 @@ FQ.J.arrive = function () {
   const j = FQ.J.ensure();
   const c = FQ.J.travelCtx;
   if (!c) return FQ.nav("journey");
-  let legDays = c.e.days + c.extraDays;
+  let legDays = (c.days || c.e.days) + c.extraDays;
   if (c.wx === "wind") legDays = Math.max(1, legDays - 1);
   const startDay = j.days - c.extraDays; /* extras were already applied by fx */
   j.days = startDay + legDays;

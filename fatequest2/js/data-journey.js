@@ -40,6 +40,54 @@ FQ.TOKENS = {
   mazucharm: { ic: "🧿", zh: "天妃香符", en: "Mazu Charm" }
 };
 
+/* ---------- 舟车 · transport (GDD §4.7) ----------
+   Everything here is what a traveler of 1271 could actually have hired —
+   plus the three beasts Marco Polo's own book insists were real. `need`
+   gates the wondrous ones; dayMul/coin/risk reshape the leg. */
+FQ.TRANSPORT = [
+  { id: "foot",    ic: "🥾", kinds: ["land"],        dayMul: 1.45, coin: 0, risk: 0,
+    zh: "徒步", en: "On foot",
+    nZh: "自己的两条腿最可靠，也最慢。", nEn: "Your own two legs: the surest hire, and the slowest." },
+  { id: "caravan", ic: "🐪", kinds: ["land"],        dayMul: 1,    coin: 2, risk: 0,
+    zh: "驼队", en: "Camel caravan",
+    nZh: "商队按站走，宿在驿栈，遇事有人商量。", nEn: "Stage by stage, caravanserai to caravanserai, with company to consult." },
+  { id: "mule",    ic: "🐴", kinds: ["land"],        dayMul: 1.15, coin: 1, risk: -1,
+    zh: "骡队", en: "Mule train",
+    nZh: "山道上骡子比马稳，比驼灵便。", nEn: "On mountain tracks a mule outfoots both horse and camel." },
+  { id: "yam",     ic: "🏇", kinds: ["land"],        dayMul: 0.55, coin: 4, risk: 1,
+    zh: "驿马（站赤）", en: "Post-horse (the yam)", need: { token: "paiza" },
+    nZh: "大汗的站赤：凭金牌换马，一日可行数百里。", nEn: "The Khan's yam: show the paiza, change horses, and eat the miles." },
+  { id: "yak",     ic: "🐂", kinds: ["land"],        dayMul: 1.2,  coin: 2, risk: -2,
+    zh: "牦牛队", en: "Yak train",
+    nZh: "过雪线唯有牦牛不惧薄气。", nEn: "Above the snowline only the yak ignores the thin air." },
+  { id: "galley",  ic: "🚣", kinds: ["sea"],         dayMul: 0.9,  coin: 3, risk: 1,
+    zh: "桨帆船", en: "Galley",
+    nZh: "地中海的桨帆船，无风也能走。", nEn: "A Mediterranean galley makes way even when the wind will not." },
+  { id: "dhow",    ic: "⛵", kinds: ["sea"],         dayMul: 1,    coin: 2, risk: 0,
+    zh: "缝合帆船", en: "Sewn dhow",
+    nZh: "船板以椰索缝合，不用一枚铁钉——波罗说他不敢乘。", nEn: "Planks sewn with coir, not one iron nail — Polo says he would not sail in one." },
+  { id: "junk",    ic: "🛳️", kinds: ["sea"],         dayMul: 0.8,  coin: 5, risk: -1,
+    zh: "中国大舶", en: "Chinese junk",
+    nZh: "四桅十二帆，舱分隔水，破一舱而不沉。", nEn: "Four masts, twelve sails, and bulkheads: one holed compartment will not sink her." },
+  { id: "barge",   ic: "🛶", kinds: ["river"],       dayMul: 1.1,  coin: 1, risk: -2,
+    zh: "运河漕船", en: "Canal barge",
+    nZh: "御河上舟楫相衔，日夜不绝。", nEn: "On the Imperial canal the boats run bow to stern, day and night." },
+  /* —— 志异之乘 · the beasts the age believed in —— */
+  { id: "roc",     ic: "🦅", kinds: ["land", "sea"], dayMul: 0.25, coin: 0, risk: 4, fant: true,
+    zh: "大鹏（鲁克鸟）", en: "The Roc", need: { favor: 3 },
+    nZh: "波罗记：其翼展三十步，能攫象升空。以护佑换一程，快得不像人间事。",
+    nEn: "Polo records wings thirty paces wide, able to lift an elephant. Trade blessings for a flight no mortal road can match." },
+  { id: "griffin", ic: "🦁", kinds: ["land"],        dayMul: 0.4,  coin: 0, risk: 3, fant: true,
+    zh: "狮鹫", en: "The Griffin", need: { dust: 2 },
+    nZh: "半鹰半狮，守着北地的金矿。以星尘买它一程，它守约。",
+    nEn: "Half eagle, half lion, warden of the northern gold. Buy passage in stardust and it keeps the bargain." },
+  { id: "serpent", ic: "🐉", kinds: ["sea"],         dayMul: 0.5,  coin: 0, risk: 3, fant: true,
+    zh: "海蛇曳舟", en: "Towed by the sea-serpent", need: { token: "mazucharm" },
+    nZh: "海图边缘画的那条蛇。船家说，敬过天妃的人，它便曳你一程。",
+    nEn: "The serpent drawn at the chart's edge. Sailors say it tows those who have honored the goddess." }
+];
+FQ.transportFor = kind => FQ.TRANSPORT.filter(t => t.kinds.includes(kind));
+
 /* ---------- companions (§4.4) ---------- */
 FQ.COMPANIONS = {
   tebrizi: {

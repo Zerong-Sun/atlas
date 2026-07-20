@@ -35,9 +35,10 @@ FQ.fog = (function () {
     const w = cv.width, h = cv.height;
     const sx = w / 820, sy = h / 420;
     ctx.clearRect(0, 0, w, h);
-    /* base veil: the unexplored world sleeps under dark ink (≈0.85) */
-    ctx.globalAlpha = 0.85;
-    ctx.fillStyle = "#0a110d";
+    /* base veil: unsurveyed country, washed over in old sepia ink —
+       thick enough to hide, thin enough that the vellum still glows */
+    ctx.globalAlpha = 0.66;
+    ctx.fillStyle = "#241c10";
     ctx.fillRect(0, 0, w, h);
     /* two drifting wisp layers give the veil its slow breath */
     if (!tile) makeTile();
@@ -54,8 +55,8 @@ FQ.fog = (function () {
     holes.forEach(hl => {
       const r = hl.r * sx;
       const g = ctx.createRadialGradient(hl.x * sx, hl.y * sy, 0, hl.x * sx, hl.y * sy, r);
-      g.addColorStop(0, "rgba(0,0,0,0.78)");   /* leaves ~0.22 haze */
-      g.addColorStop(0.7, "rgba(0,0,0,0.55)");
+      g.addColorStop(0, "rgba(0,0,0,0.97)");   /* surveyed ground reads clean */
+      g.addColorStop(0.62, "rgba(0,0,0,0.8)");
       g.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = g;
       ctx.beginPath(); ctx.arc(hl.x * sx, hl.y * sy, r, 0, 7); ctx.fill();
