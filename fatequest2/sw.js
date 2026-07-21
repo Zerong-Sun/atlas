@@ -10,7 +10,8 @@ const ASSETS = [
   "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
   "./js/app.js", "./js/juice.js",
   "./js/data-journey.js", "./js/map.js", "./js/journey.js",
-  "./js/data-tower.js", "./js/tower.js"
+  "./js/data-tower.js", "./js/tower.js",
+  "./assets/art/ART_EMOJI_MAP.json"
 ];
 
 self.addEventListener("install", e => {
