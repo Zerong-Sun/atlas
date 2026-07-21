@@ -1,0 +1,19 @@
+{
+  "start_at": "2026-07-21T14:00:00+09:00",
+  "chat_url": "https://chatgpt.com/c/6a5e702d-fef8-83ee-bbbf-c6db646d670b",
+  "rules": {
+    "max_windows": 3,
+    "poll_sec": 600,
+    "skip_batches": ["F1a"],
+    "paused": ["tarot", "iching"],
+    "submit": "one batch per tab at a time"
+  },
+  "priority": [
+    "Extra2 (delete stand-ins first)",
+    "F1 scenes (ART_PROMPTS_F1_SCENES.md) — missing only",
+    "F2 NPCs (ART_PROMPTS_F2_NPCS.md) — 26 portraits",
+    "UI (includes P1 symbols)",
+    "MAP C D E G"
+  ],
+  "command": ".venv/bin/python orchestrate_resume.py --max-windows 3 --poll-sec 600 --chat-url 'https://chatgpt.com/c/6a5e702d-fef8-83ee-bbbf-c6db646d670b' --wait-login"
+}

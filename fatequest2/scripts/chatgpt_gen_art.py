@@ -643,12 +643,45 @@ RATE_LIMIT_MARKERS = (
 
 
 async def detect_rate_limit(page: Page) -> str | None:
-    text = await page.evaluate("() => (document.body && document.body.innerText) || ''")
-    low = (text or "").lower()
-    for m in RATE_LIMIT_MARKERS:
-        if m.lower() in low:
-            return m
-    return None
+    """Detect a *visible* rate-limit modal/toast — not historical chat text."""
+    # Prefer visible dialog / alert nodes
+    hit = await page.evaluate(
+        """(markers) => {
+          const isVis = (el) => {
+            if (!el) return false;
+            const s = getComputedStyle(el);
+            if (s.display === 'none' || s.visibility === 'hidden' || s.opacity === '0') return false;
+            const r = el.getBoundingClientRect();
+            return r.width > 40 && r.height > 20;
+          };
+          const roots = [
+            ...document.querySelectorAll('[role="dialog"], [role="alertdialog"], [role="alert"], [data-testid*="modal"], [class*="toast"], [class*="Toast"]'),
+            ...document.querySelectorAll('div[class*="modal"], div[class*="Modal"]'),
+          ];
+          for (const el of roots) {
+            if (!isVis(el)) continue;
+            const t = (el.innerText || '').trim();
+            if (!t) continue;
+            const low = t.toLowerCase();
+            for (const m of markers) {
+              if (low.includes(m.toLowerCase())) return m;
+            }
+          }
+          // Fallback: short scan of fixed/sticky overlays only
+          for (const el of document.querySelectorAll('body *')) {
+            const s = getComputedStyle(el);
+            if (s.position !== 'fixed' && s.position !== 'sticky') continue;
+            if (!isVis(el)) continue;
+            const t = (el.innerText || '').slice(0, 500).toLowerCase();
+            for (const m of markers) {
+              if (t.includes(m.toLowerCase())) return m;
+            }
+          }
+          return null;
+        }""",
+        list(RATE_LIMIT_MARKERS),
+    )
+    return hit or None
 
 
 async def safe_detect_rate_limit(page: Page) -> str | None:
@@ -656,6 +689,22 @@ async def safe_detect_rate_limit(page: Page) -> str | None:
         return await detect_rate_limit(page)
     except Exception:
         return None
+
+
+async def _cooldown_sleep(page: Page, pause_ms: int) -> None:
+    """Sleep in short chunks (CDP dies on multi-minute page.wait_for_timeout)."""
+    remaining = max(0, pause_ms) / 1000
+    chunk = 30.0
+    while remaining > 0:
+        wait = min(chunk, remaining)
+        await asyncio.sleep(wait)
+        remaining -= wait
+        try:
+            await page.evaluate("() => 1")
+        except Exception:
+            pass
+        if int(remaining) % 120 < chunk:
+            print(f"    … cooldown {int(remaining)}s left", flush=True)
 
 
 async def wait_out_rate_limit(page: Page, pause_ms: int = 300_000) -> None:
@@ -672,20 +721,26 @@ async def wait_out_rate_limit(page: Page, pause_ms: int = 300_000) -> None:
                 await loc.first.click(timeout=2000)
             except Exception:
                 pass
-    await page.wait_for_timeout(pause_ms)
+    await _cooldown_sleep(page, pause_ms)
     # Refresh to a clean chat after cooldown
     try:
         await open_fresh_chat(page)
     except Exception:
-        await page.goto("https://chatgpt.com/", wait_until="domcontentloaded", timeout=120_000)
-        await page.wait_for_timeout(2000)
+        try:
+            await page.goto("https://chatgpt.com/", wait_until="domcontentloaded", timeout=120_000)
+            await page.wait_for_timeout(2000)
+        except Exception as e:
+            print(f"    post-cooldown navigation failed: {e}", flush=True)
     # Keep waiting if still limited
     for _ in range(6):
-        hit = await detect_rate_limit(page)
+        try:
+            hit = await detect_rate_limit(page)
+        except Exception:
+            hit = "page-error"
         if not hit:
             return
         print(f"    still rate-limited ({hit!r}); waiting another {pause_ms // 1000}s …", flush=True)
-        await page.wait_for_timeout(pause_ms)
+        await _cooldown_sleep(page, pause_ms)
         try:
             await open_fresh_chat(page)
         except Exception:

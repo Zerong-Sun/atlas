@@ -19,6 +19,133 @@ FQ.artMiss = function (img, name, parent) {
   parent.textContent = fb;
 };
 
+/* Emoji → manuscript icon via assets/art/ART_EMOJI_MAP.json (stem without .webp).
+   FQ.emo("✨") → art image or the emoji if unmapped / missing file. */
+FQ.EMO_MAP = null;
+FQ._emoLoading = null;
+FQ.loadEmoMap = function () {
+  if (FQ.EMO_MAP) return Promise.resolve(FQ.EMO_MAP);
+  if (FQ._emoLoading) return FQ._emoLoading;
+  FQ._emoLoading = fetch("assets/art/ART_EMOJI_MAP.json")
+    .then((r) => (r.ok ? r.json() : {}))
+    .then((m) => { FQ.EMO_MAP = m || {}; return FQ.EMO_MAP; })
+    .catch(() => { FQ.EMO_MAP = {}; return FQ.EMO_MAP; });
+  return FQ._emoLoading;
+};
+FQ.emoStem = function (emoji) {
+  const map = FQ.EMO_MAP || {};
+  if (map[emoji]) return map[emoji];
+  const bare = String(emoji || "").replace(/\uFE0F/g, "").replace(/\u200D/g, "");
+  return map[bare] || map[bare + "\uFE0F"] || null;
+};
+FQ.emo = function (emoji, cls) {
+  const stem = FQ.emoStem(emoji);
+  if (!stem) return `<span class="art ${cls || ""}">${emoji}</span>`;
+  return FQ.art(stem, emoji, cls);
+};
+/* Replace pictographs inside a plain string with <img> art slots. */
+FQ.rich = function (text, cls) {
+  if (text == null) return "";
+  const s = String(text);
+  const re = /(?:[\u{1F300}-\u{1FAFF}]|[\u2600-\u27BF]|[\u2300-\u23FF]|[\u2B00-\u2BFF]|[✦✧◆◇✓⛶❖☯])(?:\uFE0F)?/gu;
+  return s.replace(re, (m) => FQ.emo(m, cls || "inline"));
+};
+FQ.hydrateEmo = function (root) {
+  (root || document).querySelectorAll("[data-emo]").forEach((el) => {
+    const e = el.getAttribute("data-emo");
+    if (!e) return;
+    el.innerHTML = FQ.emo(e, el.getAttribute("data-emo-class") || "");
+  });
+};
+FQ.loadEmoMap().then(() => FQ.hydrateEmo());
+
+/* ---------- 图标替换 · every emoji becomes painted art ----------
+   assets/art/ART_EMOJI_MAP.json maps each emoji the UI uses to a drawn
+   icon. A MutationObserver swaps them wherever they appear, so no call
+   site has to know; if a plate is missing the img restores the emoji. */
+FQ.EMO = null;
+FQ.EMO_RE = null;
+FQ._emoBusy = false;
+/* the map points at six realm plates that were never drawn — send those
+   emoji to the nearest medallion that exists, so nothing falls back to raw */
+FQ.EMO_ALIAS = {
+  "realm-tarot": "ic-trump-01-magician",
+  "realm-western": "ic-extra-glowing-star",
+  "realm-astrodice": "ic-misc-comet",
+  "realm-jiaobei": "ic-ritual-crescent",
+  "realm-meihua": "ic-misc-seed",
+  "realm-lenormand": "ic-ritual-scroll",
+  "item-beads": "ic-ritual-pouch"
+};
+
+fetch("assets/art/ART_EMOJI_MAP.json")
+  .then(r => r.json())
+  .then(map => {
+    FQ.EMO = map;
+    /* longest first so 变体选择器 sequences win over their bare code points */
+    const keys = Object.keys(map).sort((a, b) => b.length - a.length)
+      .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    FQ.EMO_RE = new RegExp("(" + keys.join("|") + ")", "g");
+    FQ.emojify(document.body);
+    FQ.emoWatch();
+  })
+  .catch(() => {});
+
+const EMO_SKIP = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, INPUT: 1, SVG: 1, TITLE: 1, OPTION: 1 };
+FQ.emojify = function (root) {
+  if (!FQ.EMO_RE || !root) return;
+  FQ._emoBusy = true;
+  try {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(n) {
+        if (!n.nodeValue || n.nodeValue.length > 4000) return NodeFilter.FILTER_REJECT;
+        const p = n.parentNode;
+        if (!p || EMO_SKIP[p.nodeName] || p.closest("svg")) return NodeFilter.FILTER_REJECT;
+        return FQ.EMO_RE.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const hits = [];
+    let node;
+    while ((node = walker.nextNode())) hits.push(node);
+    hits.forEach(t => {
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      const s = t.nodeValue;
+      FQ.EMO_RE.lastIndex = 0;
+      let m;
+      while ((m = FQ.EMO_RE.exec(s))) {
+        if (m.index > last) frag.appendChild(document.createTextNode(s.slice(last, m.index)));
+        const img = document.createElement("img");
+        img.className = "emo";
+        img.alt = m[1];
+        img.dataset.e = m[1];
+        const file = FQ.EMO[m[1]];
+        img.src = "assets/art/" + (FQ.EMO_ALIAS[file] || file) + ".webp";
+        img.onerror = function () { this.replaceWith(document.createTextNode(this.dataset.e)); };
+        frag.appendChild(img);
+        last = m.index + m[1].length;
+      }
+      if (last < s.length) frag.appendChild(document.createTextNode(s.slice(last)));
+      t.parentNode.replaceChild(frag, t);
+    });
+  } catch (e) {}
+  FQ._emoBusy = false;
+};
+FQ.emoWatch = function () {
+  const obs = new MutationObserver(muts => {
+    if (FQ._emoBusy) return;
+    const roots = new Set();
+    muts.forEach(m => {
+      if (m.type === "childList") m.addedNodes.forEach(n => {
+        if (n.nodeType === 1) roots.add(n);
+        else if (n.nodeType === 3 && n.parentNode) roots.add(n.parentNode);
+      });
+    });
+    if (roots.size) roots.forEach(r => FQ.emojify(r));
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
+};
+
 /* ---------- illuminated card faces ----------
    A manuscript card drawn as SVG: parchment ground, double rules with
    corner fleurons, a rayed medallion for the glyph, a titled banner, and
@@ -30,6 +157,30 @@ FQ.CIV_INK = { tarot: "#9a6b84", iching: "#55806d", runes: "#7e8b94",
 /* Tarot trump → painted symbol art, where the two sets overlap */
 FQ.TAROT_ART = { 0: "fool", 8: "strength", 9: "hermit", 10: "wheel", 13: "death",
   16: "tarot-tower", 17: "star", 18: "moon", 19: "sun" };
+/* the full painted deck (assets/decks/tarot/) — all twenty-two trumps */
+FQ.TAROT_DECK = ["fool", "magician", "high-priestess", "empress", "emperor", "hierophant",
+  "lovers", "chariot", "strength", "hermit", "wheel", "justice", "hanged-man", "death",
+  "temperance", "devil", "tower", "star", "moon", "sun", "judgement", "world"];
+FQ.tarotPlate = id => FQ.TAROT_DECK[id] ? `assets/decks/tarot/tarot-${FQ.TAROT_DECK[id]}-full.webp` : null;
+/* hexagram plates 1–30 (assets/decks/iching/) */
+FQ.ICHING_DECK = ["the-creative", "the-receptive", "difficulty-at-the-beginning", "youthful-folly",
+  "waiting", "conflict", "the-army", "holding-together", "small-taming", "treading", "peace",
+  "standstill", "fellowship", "great-possession", "modesty", "enthusiasm", "following",
+  "work-on-the-decayed", "approach", "contemplation", "biting-through", "grace", "splitting-apart",
+  "return", "innocence", "great-taming", "nourishment", "great-excess", "the-abysmal", "the-clinging"];
+FQ.hexPlate = n => FQ.ICHING_DECK[n - 1]
+  ? `assets/decks/iching/iching-${String(n).padStart(2, "0")}-${FQ.ICHING_DECK[n - 1]}-full.webp` : null;
+
+/* a painted plate shown as a card, with the engraved face as its backstop */
+FQ.plateCard = function (src, o) {
+  return `
+    <div class="cf-stack has-plate">
+      ${FQ.cardFaceSVG({ glyph: o.glyph, civ: o.civ, rev: o.rev, bare: true })}
+      <img class="cf-img" src="${src}" alt=""
+        onerror="this.parentNode.classList.remove('has-plate');this.remove()">
+      <div class="cf-banner">${FQ.esc(o.name || "")}</div>
+    </div>`;
+};
 
 /* An illuminated card: painted plate when the art exists, engraved SVG when
    it doesn't; the name banner, effect strip and wax pip always sit on top. */

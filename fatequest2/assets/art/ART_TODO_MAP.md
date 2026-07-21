@@ -1,7 +1,33 @@
-# 缺少的贴图清单 · MISSING TEXTURES (地图与交通)
+# 缺少的贴图清单 · MISSING TEXTURES
 
 本文件**只列还没有的**。文件放进 `fatequest2/assets/art/`，文件名与「引用名」完全一致，格式 `.webp`。
 放进去即生效；没有的地方目前由程序化 SVG 顶着（能看，但你的画会好很多）。
+
+---
+
+## ✅ 已接入（2026-07 素材批次，不用再画）
+
+- **图标 171 个** `ic-*.webp` —— 经 `ART_EMOJI_MAP.json` 全局替换所有 emoji（导航/HUD/仪式/地点/交通/塔内/梦象/22 张大阿卡纳/怪物/特效）
+- **场景背景 16 张** `scene-*.webp` —— 12 座城 + 4 个文明通用路景，已用于到站叙事、城镇对话、途中遭遇
+- **NPC 立绘 16 张** `npc-*.webp` —— 四文明 × 市集/庙宇/茶肆/行馆守门人
+- **地图贴图 12 张** `map-*.webp` —— 羊皮纸底、海面、四文明纹样、岩山/雪山/沙丘/森林/河道/礁石
+- **UI 表面 10 张** `ui-bg-*.webp` + 按钮 10 张 `ui-btn-*` + 图标 `ui-icon-*` / 角饰 `ui-orn-*`
+- **塔罗全副 22 张** `decks/tarot/tarot-*-full.webp` —— 抽牌与图鉴直接用画作
+- **易经卦牌 30 张** `decks/iching/iching-01..30-*-full.webp` —— 起卦结果显示对应卦牌
+- **塔符号 18 + 卡背 + 流派徽记 3** `sym-*`, `card-back-full`, `arch-*`
+- 雷诺曼 36 张（`decks/lenormand/`）、星盘 34 张（`assets/astrodice/`）
+
+## ⏳ 还缺（按优先级）
+
+| 引用名 | 用途 | 内容要求 | 尺寸 |
+|---|---|---|---|
+| `mentor-tarot/lenormand/runes/astrodice/western/meihua/iching/dream/bazi/jiaobei.webp`（10 张） | 十位师父立绘 | 现暂借同文明守门人立绘顶替；各人设定见 `js/data-mentors.js` | 900×1300 透明 |
+| `realm-tarot/western/astrodice/jiaobei/meihua/lenormand.webp`（6 张） | 星图秘境图标 | `ART_EMOJI_MAP.json` 已指向这些名字但文件未出；现由近似纹章顶替 | 512×512 透明 |
+| `decks/iching/iching-31..64-*-full.webp`（34 张） | 易经卦牌下半部 | 命名沿用现有规则；缺的卦目前退回线描卦象 | 同现有卦牌 |
+| `item-beads.webp` | 行脚念珠（占具） | 现由符袋纹章顶替 | 256×256 透明 |
+| `map-city-chr/isl/con/mazu.webp`、`map-court-con.webp`、`map-shrine.webp` | 地图城塞小像 | 现由 SVG 立面顶替（见下表 C） | 256×220 透明 |
+| `map-beast-serpent/whale/roc/griffin.webp`、`map-rose.webp`、`map-wind-head.webp`、`map-cartouche.webp`、`map-border.webp` | 地图异兽与装饰 | 现由 SVG 顶替（见下表 D） | 见下表 |
+| `tr-*.webp`（12 张） | 交通小像 | 现由 `ic-travel-*` 纹章顶替，可不做 | 见下表 E |
 
 **统一风格**：13 世纪抄本地图（mappa mundi / 波特兰海图）手绘感——羊皮纸底、铁胆墨线、矿物色淡彩、可见笔触与晕染；**不要**现代矢量扁平风、不要写实照片、不要发光特效。
 **统一色**：羊皮纸 `#E9DBB8`／墨 `#4A3A1C`／赭 `#8A6234`／朱批 `#B3402E`／海青 `#3F5F6B`。
@@ -77,71 +103,74 @@
 | `tr-griffin.webp` | 狮鹫载人 | 320×240 透明 |
 | `tr-serpent.webp` | 海蛇曳舟（蛇拖船） | 400×200 透明 |
 
-## F1. 场景背景（P0 — 对话/到站/遭遇的整屏底图）
+## §F1. 场景背景 · 16 张（P0 — 对话/到站/遭遇整屏底图）
 
-> **横构图、16:9，人物区留在左下 1/3**（对话框压底部、立绘站左侧，别把主体放那儿）。
-> 画法：抄本细密画 + 暮色光；建筑与地貌要能一眼认出是哪座城。缺图时程序用文明色晕染顶替。
+> **规格**：1920×1080，16:9，不透明。  
+> **构图红线（必守）**：**左下约 1/3 必须留空**——留给对话框（压底）+ 半身立绘（站左侧）。主体建筑/地貌放在画面中右与上半；不要在左下角堆货、摊位、近景人物或高对比细节。  
+> **画法**：13 世纪抄本细密画 + 暮色/烛火光；羊皮纸矿物色；一眼能认出是哪座城。缺图时程序用文明色晕染顶替。  
+> **Prompt 表**：[`ART_PROMPTS_F1_SCENES.md`](./ART_PROMPTS_F1_SCENES.md)（先写好再上传生图）。
 
-| 引用名 | 场景 | 内容要求 | 尺寸 |
-|---|---|---|---|
-| `scene-venice-quay.webp` | 威尼斯码头 | 泻湖、贡多拉、圣马可钟楼剪影、晨雾 | 1920×1080 不透明 |
-| `scene-acre-wall.webp` | 阿卡城墙夜哨 | 十字军城垛、火把、远处地中海、星夜 | 同上 |
-| `scene-tabriz-bazaar.webp` | 大不里士市集/观星台 | 拱廊巴扎、地毯、屋顶观星仪 | 同上 |
-| `scene-hormuz-port.webp` | 霍尔木兹港 | 热风、缝合帆船、椰枣林、码头星占摊 | 同上 |
-| `scene-kerman-dunes.webp` | 克尔曼荒漠 | 沙海、驼影、落日、半埋废驿 | 同上 |
-| `scene-herat-road.webp` | 赫拉特商道 | 驿栈、杨树列、雪山远景 | 同上 |
-| `scene-pamir-pass.webp` | 帕米尔垭口 | 雪线、经幡、牦牛、淡蓝火焰的篝火 | 同上 |
-| `scene-shangdu-palace.webp` | 上都大理石宫 | 草原、白色宫殿、金顶帐幕 | 同上 |
-| `scene-khanbaliq-hall.webp` | 大都夜宴殿 | 巨柱大殿、烛海、屏风 | 同上 |
-| `scene-hangzhou-lake.webp` | 行在西湖 | 石桥、画舫、灯火、远山 | 同上 |
-| `scene-quanzhou-harbor.webp` | 泉州刺桐港 | 帆樯如林、天妃宫飞檐、香烟 | 同上 |
-| `scene-voyage-sea.webp` | 归航海上 | 四桅巨舶甲板、风暴将至的云 | 同上 |
-| `scene-region-chr.webp` | 基督之境·途中 | 通用路景：欧洲丘陵、修道院远影 | 同上 |
-| `scene-region-isl.webp` | 新月之境·途中 | 通用路景：商道、驼队、宣礼塔远影 | 同上 |
-| `scene-region-con.webp` | 儒道之境·途中 | 通用路景：山道、驿亭、飞檐远影 | 同上 |
-| `scene-region-mazu.webp` | 妈祖之海·途中 | 通用海景：浪、帆、海鸟 | 同上 |
-
-## F2. NPC 立绘（P1 — 对话场景左侧人物）
-
-> **半身立绘、朝右、透明底**；底部可被对话框压住 15%。抄本插画笔法，不要写实。
-
-| 引用名 | 人物 | 尺寸 |
+| 引用名 | 场景 | 内容要求 |
 |---|---|---|
-| `npc-market-chr.webp` | 威尼斯布商乔凡尼 | 900×1300 透明 |
-| `npc-market-isl.webp` | 香料贩优素福 | 同上 |
-| `npc-market-con.webp` | 丝行掌柜周三 | 同上 |
-| `npc-market-mazu.webp` | 船货牙人阿海 | 同上 |
-| `npc-temple-chr.webp` | 执事修士 | 同上 |
-| `npc-temple-isl.webp` | 清真寺看守阿卜杜勒 | 同上 |
-| `npc-temple-con.webp` | 道观知客 | 同上 |
-| `npc-temple-mazu.webp` | 天妃宫庙祝 | 同上 |
-| `npc-tea-chr.webp` | 酒馆老板娘 | 同上 |
-| `npc-tea-isl.webp` | 驿栈茶博士 | 同上 |
-| `npc-tea-con.webp` | 野店说书人 | 同上 |
-| `npc-tea-mazu.webp` | 码头茶棚阿婆 | 同上 |
-| `npc-inn-chr.webp` | 客栈掌柜 | 同上 |
-| `npc-inn-isl.webp` | 驿栈主人 | 同上 |
-| `npc-inn-con.webp` | 行馆管事 | 同上 |
-| `npc-inn-mazu.webp` | 船家客栈老板 | 同上 |
+| `scene-venice-quay.webp` | 威尼斯码头 | 泻湖、贡多拉、圣马可钟楼剪影、晨雾 |
+| `scene-acre-wall.webp` | 阿卡城墙夜哨 | 十字军城垛、火把、远处地中海、星夜 |
+| `scene-tabriz-bazaar.webp` | 大不里士巴扎 | 拱廊市集、地毯、屋顶观星仪 |
+| `scene-hormuz-port.webp` | 霍尔木兹港 | 热风、缝合帆船、椰枣林、码头星占摊 |
+| `scene-kerman-dunes.webp` | 克尔曼沙海 | 沙丘、驼影、落日、半埋废驿 |
+| `scene-herat-road.webp` | 赫拉特商道 | 驿栈、杨树列、雪山远景 |
+| `scene-pamir-pass.webp` | 帕米尔垭口 | 雪线、经幡、牦牛、淡蓝篝火 |
+| `scene-shangdu-palace.webp` | 上都大理石宫 | 草原、白色宫殿、金顶帐幕 |
+| `scene-khanbaliq-hall.webp` | 大都夜宴殿 | 巨柱大殿、烛海、屏风 |
+| `scene-hangzhou-lake.webp` | 西湖画舫 | 石桥、画舫、灯火、远山 |
+| `scene-quanzhou-harbor.webp` | 刺桐港 | 帆樯如林、天妃宫飞檐、香烟 |
+| `scene-voyage-sea.webp` | 归航海上 | 四桅巨舶甲板、风暴将至的云 |
+| `scene-region-chr.webp` | 基督之境·通用路景 | 欧洲丘陵、修道院远影 |
+| `scene-region-isl.webp` | 新月之境·通用路景 | 商道、驼队、宣礼塔远影 |
+| `scene-region-con.webp` | 儒道之境·通用路景 | 山道、驿亭、飞檐远影 |
+| `scene-region-mazu.webp` | 妈祖之海·通用路景 | 浪、帆、海鸟 |
 
-## F. 师父像（P1，对话立绘 + 试炼徽章位）
+## §F2. NPC 立绘 · 26 张（P1 — 对话左侧人物：16 守门人 + 10 师父）
 
-> 同为半身立绘，规格同 F2（900×1300 透明）；文件名如下。
+> **规格**：900×1300，透明底；**半身、朝右**。  
+> **构图红线**：**底部约 15% 可被对话框压住**——脚/下摆可裁进安全区，脸与肩带道具必须在上 85% 内清晰可读。  
+> **画法**：抄本插画笔法，非写实；**不画神明本尊**。  
+> **Prompt 表**：[`ART_PROMPTS_F2_NPCS.md`](./ART_PROMPTS_F2_NPCS.md)（先写好再上传生图）。
 
-| 引用名 | 人物 | 尺寸 |
-|---|---|---|
-| `mentor-tarot.webp` | 威尼斯制牌人老马蒂欧 | 900×1300 透明 |
-| `mentor-lenormand.webp` | 牌铺女儿卡特琳娜 | 同上 |
-| `mentor-runes.webp` | 瓦良格卫兵哈拉尔 | 同上 |
-| `mentor-astrodice.webp` | 星家帖必烈 | 同上 |
-| `mentor-western.webp` | 码头星占娜迪拉 | 同上 |
-| `mentor-meihua.webp` | 西行僧明远 | 同上 |
-| `mentor-iching.webp` | 太史院耶律先生 | 同上 |
-| `mentor-dream.webp` | 圆梦人撒里蛮 | 同上 |
-| `mentor-bazi.webp` | 命馆先生沈五 | 同上 |
-| `mentor-jiaobei.webp` | 天妃宫庙祝陈婆 | 同上 |
+### F2a · 守门人 16（市集 / 圣所 / 茶馆 / 客栈 × 四文明）
 
-> 人物像红线：侧写/半身、抄本插画笔法即可，**不画神明本尊**。
+| 引用名 | 人物 |
+|---|---|
+| `npc-market-chr.webp` | 威尼斯布商乔凡尼 |
+| `npc-market-isl.webp` | 香料贩优素福 |
+| `npc-market-con.webp` | 丝行掌柜周三 |
+| `npc-market-mazu.webp` | 船货牙人阿海 |
+| `npc-temple-chr.webp` | 执事修士 |
+| `npc-temple-isl.webp` | 清真寺看守阿卜杜勒 |
+| `npc-temple-con.webp` | 道观知客 |
+| `npc-temple-mazu.webp` | 天妃宫庙祝 |
+| `npc-tea-chr.webp` | 酒馆老板娘 |
+| `npc-tea-isl.webp` | 驿栈茶博士 |
+| `npc-tea-con.webp` | 野店说书人 |
+| `npc-tea-mazu.webp` | 码头茶棚阿婆 |
+| `npc-inn-chr.webp` | 客栈掌柜 |
+| `npc-inn-isl.webp` | 驿栈主人 |
+| `npc-inn-con.webp` | 行馆管事 |
+| `npc-inn-mazu.webp` | 船家客栈老板 |
+
+### F2b · 师父 10（对话立绘 + 试炼徽章位）
+
+| 引用名 | 人物 |
+|---|---|
+| `mentor-tarot.webp` | 威尼斯制牌人老马蒂欧 |
+| `mentor-lenormand.webp` | 牌铺女儿卡特琳娜 |
+| `mentor-runes.webp` | 瓦良格卫兵哈拉尔 |
+| `mentor-astrodice.webp` | 星家帖必烈 |
+| `mentor-western.webp` | 码头星占娜迪拉 |
+| `mentor-meihua.webp` | 西行僧明远 |
+| `mentor-iching.webp` | 太史院耶律先生 |
+| `mentor-dream.webp` | 圆梦人撒里蛮 |
+| `mentor-bazi.webp` | 命馆先生沈五 |
+| `mentor-jiaobei.webp` | 天妃宫庙祝陈婆 |
 
 ## G. 秘境图标（P2，星图九宫格，现用 emoji）
 

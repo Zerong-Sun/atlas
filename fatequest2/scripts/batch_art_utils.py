@@ -40,6 +40,7 @@ class BatchJob:
     source: str = ""
     mode: str = "sheet"  # sheet | separate
     output_dir: Path | None = None
+    window: str = ""  # category window id (A/B/C/…) when present
 
 
 def _parse_size_pair(text: str) -> tuple[int | None, int | None]:
@@ -124,6 +125,9 @@ def parse_batch_prompts_md(text: str, source: str = "") -> list[BatchJob]:
             rel = out_dir_m.group(1).strip().strip("/")
             output_dir = ROOT / "assets" / rel
 
+        win_m = re.search(r"\*\*Window\*\*:\s*([A-Za-z0-9]+)", block, re.I)
+        window = win_m.group(1).strip() if win_m else ""
+
         jobs.append(
             BatchJob(
                 name=title,
@@ -137,6 +141,7 @@ def parse_batch_prompts_md(text: str, source: str = "") -> list[BatchJob]:
                 source=source,
                 mode=mode,
                 output_dir=output_dir,
+                window=window,
             )
         )
     return jobs

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "iching-01-the-creative-full.webp",
+    "description": "King Wen #01 The Creative — NAMEPLATE: render Chinese hexagram name (U+4E7E) plus English \"The Creative\" in gold. HEXAGRAM FIGURE: six-line stack (line1=solid yang, line2=solid yang, line3=solid yang, line4=solid yang, line5=solid yang, line6=solid yang (top to bottom)); lower trigram Heaven ☰, upper trigram Heaven ☰; may echo unicode ䷀ as thin reference only. SCENE: Pure creative force; celestial gate of six yang lines, dragon coil silhouette in cloud.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-02-the-receptive-full.webp",
+    "description": "King Wen #02 The Receptive — NAMEPLATE: render Chinese hexagram name (U+5764) plus English \"The Receptive\" in gold. HEXAGRAM FIGURE: six-line stack (line1=broken yin, line2=broken yin, line3=broken yin, line4=broken yin, line5=broken yin, line6=broken yin (top to bottom)); lower trigram Earth ☷, upper trigram Earth ☷; may echo unicode ䷁ as thin reference only. SCENE: Receptive earth; broad plain vessel holding offering, soft hills.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-03-difficulty-at-the-beginning-full.webp",
+    "description": "King Wen #03 Difficulty at the Beginning — NAMEPLATE: render Chinese hexagram name (U+5C6F) plus English \"Difficulty at the Beginning\" in gold. HEXAGRAM FIGURE: six-line stack (line1=broken yin, line2=solid yang, line3=broken yin, line4=broken yin, line5=broken yin, line6=solid yang (top to bottom)); lower trigram Thunder ☳, upper trigram Water ☵; may echo unicode ䷂ as thin reference only. SCENE: Sprouting through stones; tender shoot amid rocky soil.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-04-youthful-folly-full.webp",
+    "description": "King Wen #04 Youthful Folly — NAMEPLATE: render Chinese hexagram name (U+8499) plus English \"Youthful Folly\" in gold. HEXAGRAM FIGURE: six-line stack (line1=solid yang, line2=broken yin, line3=broken yin, line4=broken yin, line5=solid yang, line6=broken yin (top to bottom)); lower trigram Water ☵, upper trigram Mountain ☶; may echo unicode ䷃ as thin reference only. SCENE: Spring at mountain foot; teacher and pupil silhouettes in mist.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-05-waiting-full.webp",
+    "description": "King Wen #05 Waiting — NAMEPLATE: render Chinese hexagram name (U+9700) plus English \"Waiting\" in gold. HEXAGRAM FIGURE: six-line stack (line1=broken yin, line2=solid yang, line3=broken yin, line4=solid yang, line5=solid yang, line6=solid yang (top to bottom)); lower trigram Heaven ☰, upper trigram Water ☵; may echo unicode ䷄ as thin reference only. SCENE: Clouds heaping in sky above; banquet set but untouched, patience.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-06-conflict-full.webp",
+    "description": "King Wen #06 Conflict — NAMEPLATE: render Chinese hexagram name (U+8BBC) plus English \"Conflict\" in gold. HEXAGRAM FIGURE: six-line stack (line1=solid yang, line2=solid yang, line3=solid yang, line4=broken yin, line5=solid yang, line6=broken yin (top to bottom)); lower trigram Water ☵, upper trigram Heaven ☰; may echo unicode ䷅ as thin reference only. SCENE: Heaven and water diverging; two figures back to back, tension lines.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-07-the-army-full.webp",
+    "description": "King Wen #07 The Army — NAMEPLATE: render Chinese hexagram name (U+5E08) plus English \"The Army\" in gold. HEXAGRAM FIGURE: six-line stack (line1=broken yin, line2=broken yin, line3=broken yin, line4=broken yin, line5=solid yang, line6=broken yin (top to bottom)); lower trigram Water ☵, upper trigram Earth ☷; may echo unicode ䷆ as thin reference only. SCENE: Discipline in camp; rows of spears, water stored in earth trenches.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-08-holding-together-full.webp",
+    "description": "King Wen #08 Holding Together — NAMEPLATE: render Chinese hexagram name (U+6BD4) plus English \"Holding Together\" in gold. HEXAGRAM FIGURE: six-line stack (line1=broken yin, line2=solid yang, line3=broken yin, line4=broken yin, line5=broken yin, line6=broken yin (top to bottom)); lower trigram Earth ☷, upper trigram Water ☵; may echo unicode ䷇ as thin reference only. SCENE: Water spread on earth; clasped hands over flowing stream.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-09-small-taming-full.webp",
+    "description": "King Wen #09 Small Taming — NAMEPLATE: render Chinese hexagram name (U+5C0F U+755C) plus English \"Small Taming\" in gold. HEXAGRAM FIGURE: six-line stack (line1=solid yang, line2=solid yang, line3=broken yin, line4=solid yang, line5=solid yang, line6=solid yang (top to bottom)); lower trigram Heaven ☰, upper trigram Wind ☴; may echo unicode ䷈ as thin reference only. SCENE: Dense clouds without rain; wind taming scattered clouds.",
+    "batch": "1 · Hexagrams 01–10"
+  },
+  {
+    "file": "iching-10-treading-full.webp",
+    "description": "King Wen #10 Treading — NAMEPLATE: render Chinese hexagram name (U+5C65) plus English \"Treading\" in gold. HEXAGRAM FIGURE: six-line stack (line1=solid yang, line2=solid yang, line3=solid yang, line4=broken yin, line5=solid yang, line6=solid yang (top to bottom)); lower trigram Lake ☱, upper trigram Heaven ☰; may echo unicode ䷉ as thin reference only. SCENE: Figure treading tiger tail; cautious step on narrow path.",
+    "batch": "1 · Hexagrams 01–10"
+  }
+]

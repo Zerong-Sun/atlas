@@ -87,7 +87,10 @@ FQ.hexLinesHTML = function (lines, movingIdx) {
 };
 FQ.hexResultHTML = function (cast) {
   const p = cast.primary;
+  const plate = FQ.hexPlate(p.n);
   let html = `
+    ${plate ? `<div class="hexplate">${FQ.plateCard(plate,
+      { glyph: p.lower.sym + p.upper.sym, civ: "iching", name: FQ.bi(p, "zh", "en") })}</div>` : ""}
     ${FQ.hexLinesHTML(cast.lines, cast.movingIdx)}
     <div class="center">
       <div class="hexname">${p.lower.sym}${p.upper.sym} <b class="gold">${FQ.bi(p, "zh", "en")}</b>
@@ -491,10 +494,13 @@ FQ.tarotPick = function (i) {
   const pick = t.drawn[t.flipped];
   FQ.AU.play("flip");
   const front = el.querySelector(".tfront");
-  front.innerHTML = FQ.illumCard({
-    glyph: pick.card.sym, civ: "tarot", rev: pick.reversed, art: FQ.TAROT_ART[pick.card.id],
-    name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "")
-  });
+  const plate = FQ.tarotPlate(pick.card.id);
+  front.innerHTML = plate
+    ? FQ.plateCard(plate, { glyph: pick.card.sym, civ: "tarot", rev: pick.reversed,
+        name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "") })
+    : FQ.illumCard({ glyph: pick.card.sym, civ: "tarot", rev: pick.reversed,
+        art: FQ.TAROT_ART[pick.card.id],
+        name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "") });
   front.classList.add("illum-face");
   el.classList.add("flipped");
   const r = el.getBoundingClientRect();

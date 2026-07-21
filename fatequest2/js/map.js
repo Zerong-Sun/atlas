@@ -23,6 +23,26 @@ FQ.MAP.defs = function () {
       <stop offset="0" stop-color="#a98d55" stop-opacity=".22"/>
       <stop offset="1" stop-color="#a98d55" stop-opacity="0"/>
     </radialGradient>
+    <!-- painted plates (assets/art/map-*.webp); the drawn patterns below
+         stay as the fallback when a plate is absent -->
+    <pattern id="mp-vellum-img" width="820" height="420" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-vellum.webp" width="820" height="420" preserveAspectRatio="xMidYMid slice"/>
+    </pattern>
+    <pattern id="mp-sea-img" width="82" height="58" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-sea.webp" width="82" height="58"/>
+    </pattern>
+    <pattern id="mp-orn-chr-img" width="84" height="84" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-orn-chr.webp" width="84" height="84" opacity=".55"/>
+    </pattern>
+    <pattern id="mp-orn-isl-img" width="84" height="84" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-orn-isl.webp" width="84" height="84" opacity=".55"/>
+    </pattern>
+    <pattern id="mp-orn-con-img" width="84" height="84" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-orn-con.webp" width="84" height="84" opacity=".55"/>
+    </pattern>
+    <pattern id="mp-orn-mazu-img" width="84" height="84" patternUnits="userSpaceOnUse">
+      <image href="assets/art/map-orn-mazu.webp" width="84" height="84" opacity=".55"/>
+    </pattern>
     <!-- sea: medieval scale-and-wave -->
     <pattern id="mp-sea" width="14" height="10" patternUnits="userSpaceOnUse">
       <path d="M0,8 q3.5,-6 7,0 q3.5,6 7,0" fill="none" stroke="#3f5f6b" stroke-width=".7" opacity=".5"/>
@@ -204,6 +224,7 @@ FQ.MAP.render = function (opt) {
     <g class="mp-region">
       <path d="${regionPoly[k]}" fill="${R[k].color}" fill-opacity=".13"/>
       <path d="${regionPoly[k]}" fill="url(#mp-orn-${k})"/>
+      <path d="${regionPoly[k]}" fill="url(#mp-orn-${k}-img)" opacity=".5"/>
       <path d="${regionPoly[k]}" fill="none" stroke="${R[k].color}" stroke-width="1.1"
         stroke-opacity=".45" stroke-dasharray="6 4" filter="url(#mp-inkbleed)"/>
     </g>`).join("");
@@ -212,15 +233,20 @@ FQ.MAP.render = function (opt) {
   const seas = `
     <g class="mp-sea">
       <path d="M432,240 Q622,252 794,232 L794,404 Q560,414 432,332 Z" fill="url(#mp-sea)"/>
-      <path d="M18,34 Q120,16 246,66 L256,232 Q140,262 26,222 Z" fill="none"/>
+      <path d="M432,240 Q622,252 794,232 L794,404 Q560,414 432,332 Z" fill="url(#mp-sea-img)" opacity=".8"/>
       <path d="M60,236 q220,26 200,64" fill="none" stroke="#3f5f6b" stroke-width=".8" opacity=".3"/>
     </g>`;
 
-  /* terrain, drawn in profile and lifted off the page */
+  /* terrain, drawn in profile and lifted off the page — painted plates
+     where they exist, engraved symbols where they do not */
+  const PLATE = { mtn: "map-mtn-rock", mtnSnow: "map-mtn-snow", dune: "map-dune", tree: "map-forest" };
+  const BOX = { mtn: [86, 48], dune: [84, 30], tree: [58, 40] };   /* plate aspect ratios */
   const terrain = (M.terrain || []).map(t => {
-    const w = { mtn: 46, dune: 44, tree: 15 }[t.k] * (t.s || 1);
-    const h = { mtn: 25, dune: 16, tree: 19 }[t.k] * (t.s || 1);
-    return `<use href="#mp-${t.k}" x="${t.x - w / 2}" y="${t.y - h}" width="${w}" height="${h}"/>`;
+    const [bw, bh] = BOX[t.k];
+    const w = bw * (t.s || 1), h = bh * (t.s || 1);
+    const plate = t.k === "mtn" && t.snow ? PLATE.mtnSnow : PLATE[t.k];
+    return `<image href="assets/art/${plate}.webp" x="${t.x - w / 2}" y="${t.y - h}"
+      width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
   }).join("");
 
   /* beasts */
@@ -269,6 +295,7 @@ FQ.MAP.render = function (opt) {
        preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     ${FQ.MAP.defs()}
     <rect x="0" y="0" width="820" height="420" fill="url(#mp-vellum)"/>
+    <rect x="0" y="0" width="820" height="420" fill="url(#mp-vellum-img)" opacity=".92"/>
     <g opacity=".9">
       <ellipse cx="150" cy="90" rx="120" ry="70" fill="url(#mp-stain)"/>
       <ellipse cx="640" cy="330" rx="150" ry="90" fill="url(#mp-stain)"/>
@@ -304,8 +331,8 @@ FQ.MAP.DEFAULT_ART = {
     { k: "mtn", x: 150, y: 150, s: .8 }, { k: "tree", x: 214, y: 130, s: .9 },
     { k: "dune", x: 330, y: 212, s: 1.1 }, { k: "dune", x: 392, y: 232, s: 1 },
     { k: "dune", x: 300, y: 250, s: .8 },
-    { k: "mtn", x: 470, y: 168, s: 1.35 }, { k: "mtn", x: 522, y: 152, s: 1.15 },
-    { k: "mtn", x: 428, y: 186, s: .9 },
+    { k: "mtn", x: 470, y: 168, s: 1.35, snow: true }, { k: "mtn", x: 522, y: 152, s: 1.15, snow: true },
+    { k: "mtn", x: 428, y: 186, s: .9, snow: true },
     { k: "mtn", x: 640, y: 74, s: .75 }, { k: "tree", x: 700, y: 118, s: .85 },
     { k: "tree", x: 736, y: 176, s: .9 }
   ],

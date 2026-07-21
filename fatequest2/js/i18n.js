@@ -368,6 +368,10 @@ FQ.t = function (key, vars) {
   if (vars) for (const k in vars) s = s.replace("{" + k + "}", vars[k]);
   return s;
 };
+/* Like FQ.t but swaps emoji for manuscript icons (safe for innerHTML). */
+FQ.th = function (key, vars) {
+  return FQ.rich(FQ.t(key, vars));
+};
 /* bilingual field helper: pick .zh or .en from a data object */
 FQ.bi = function (obj, zhKey, enKey) {
   return FQ.lang === "zh" ? obj[zhKey] : (obj[enKey] || obj[zhKey]);

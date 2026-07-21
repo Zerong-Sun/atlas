@@ -56,6 +56,15 @@ FQ.KEEPERS = {
   }
 };
 
+/* mentors have no plates of their own yet — each borrows the likeness of a
+   keeper of the same land and trade, so every lesson still has a face */
+FQ.MENTOR_FACE = {
+  tarot: "npc-market-chr", lenormand: "npc-market-chr", runes: "npc-inn-chr",
+  astrodice: "npc-tea-isl", western: "npc-market-isl", meihua: "npc-temple-con",
+  iching: "npc-temple-con", dream: "npc-tea-con", bazi: "npc-market-con",
+  jiaobei: "npc-temple-mazu"
+};
+
 /* what the building does, said in the keeper's own words */
 FQ.KEEPER_ACT = {
   market:   { zh: "看看货色 →", en: "Look over the goods →" },

@@ -37,14 +37,16 @@ FQ.SCREENS.trial = function () {
 
   const place = FQ.J.node(M.at);
   const region = place ? place.region : "chr";
+  /* mentors have no plates yet — borrow the local keeper's likeness */
+  const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);
   if (q.phase === "intro") {
     app.innerHTML = `<div class="trial-stage work"></div>`;
     FQ.Scene.play({
       bg: FQ.SCENE_BG[M.at], region,
       lines: [
         { who: FQ.bi(M, "civZh", "civEn"), text: FQ.bi(M, "introZh", "introEn"),
-          portrait: "mentor-" + M.method, ic: M.ic },
-        { who: FQ.bi(M, "zh", "en"), portrait: "mentor-" + M.method, ic: M.ic,
+          portrait: face, ic: M.ic },
+        { who: FQ.bi(M, "zh", "en"), portrait: face, ic: M.ic,
           text: "◈ " + FQ.bi(M.trial, "taskZh", "taskEn") }
       ],
       choices: [
@@ -60,7 +62,7 @@ FQ.SCREENS.trial = function () {
     FQ.Scene.play({
       bg: FQ.SCENE_BG[M.at], region,
       lines: [
-        { who: FQ.bi(M, "zh", "en"), portrait: "mentor-" + M.method, ic: M.ic,
+        { who: FQ.bi(M, "zh", "en"), portrait: face, ic: M.ic,
           text: FQ.bi(M, "gradZh", "gradEn") },
         { text: "✦ " + FQ.t("trial.learned", { t: FQ.t(M.method + ".name") }) + " · " + FQ.t("trial.unlocked") }
       ],
@@ -228,7 +230,7 @@ FQ.SCREENS.lineage = function () {
     const place = FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
     return `
       <div class="panel linrow ${got ? "got" : ""}">
-        <div class="lin-ic">${FQ.art("mentor-" + M.method, M.ic, "big")}</div>
+        <div class="lin-ic">${FQ.art(FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method), M.ic, "big")}</div>
         <div style="flex:1">
           <b class="${got ? "gold" : ""}">${got ? FQ.bi(M, "zh", "en") : "· · ·"}</b>
           <div class="dim small">${got

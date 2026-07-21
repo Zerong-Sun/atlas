@@ -139,9 +139,10 @@ h1, h2 {
 .pill.dust b { color: #c3d6e4; text-shadow: 0 0 8px rgba(148, 178, 205, .8); }
 
 .xpbar { height: 7px; background: rgba(255,255,255,.06); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; border: 1px solid rgba(240,214,140,.12); }
+.xpbar { background: url("../assets/art/ui-bg-xpbar-track.webp") center / 100% 100% no-repeat, rgba(255,255,255,.06); }
 .xpbar i {
   display: block; height: 100%; border-radius: 99px;
-  background: var(--foil);
+  background: url("../assets/art/ui-bg-xpbar-fill.webp") center / 100% 100% no-repeat, var(--foil);
   box-shadow: 0 0 10px rgba(227,207,162,.5);
   transition: width .7s cubic-bezier(.2,.8,.2,1);
 }
@@ -150,6 +151,8 @@ h1, h2 {
 .panel {
   position: relative;
   background:
+    linear-gradient(rgba(11,17,14,.8), rgba(11,17,14,.9)),
+    url("../assets/art/ui-bg-panel.webp") center / 100% 100% no-repeat,
     var(--grain),
     linear-gradient(172deg, rgba(244,236,255,.055), rgba(244,236,255,.025));
   border: 1px solid var(--line);
@@ -177,7 +180,12 @@ h1, h2 {
 
 .realm {
   position: relative; overflow: hidden; cursor: pointer;
-  background: var(--grain), linear-gradient(168deg, rgba(244,236,255,.06), rgba(244,236,255,.02));
+  /* the painted plate is light-toned, so a scrim rides above it to keep
+     the ink legible — the landscape still shows through as ground */
+  background:
+    linear-gradient(rgba(11,17,14,.78), rgba(11,17,14,.88)),
+    url("../assets/art/ui-bg-realm-tile.webp") center / 100% 100% no-repeat,
+    var(--grain), linear-gradient(168deg, rgba(244,236,255,.06), rgba(244,236,255,.02));
   border: 1px solid var(--line);
   border-radius: var(--radius); padding: 16px 14px 14px;
   transition: transform .25s cubic-bezier(.3,.8,.3,1), border-color .25s, box-shadow .25s;
@@ -276,7 +284,10 @@ label.f input, label.f select, label.f textarea { margin-top: 6px; }
   position: fixed; bottom: calc(10px + env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%);
   z-index: 50; height: 56px; padding: 0 8px;
   display: flex; justify-content: center; gap: 2px;
-  background: var(--grain), rgba(13, 20, 17, .84); backdrop-filter: blur(16px);
+  background:
+    url("../assets/art/ui-bg-tabbar.webp") center / 100% 100% no-repeat,
+    var(--grain), rgba(13, 20, 17, .84);
+  backdrop-filter: blur(16px);
   border: 1px solid var(--line); border-radius: 999px;
   box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
@@ -304,6 +315,27 @@ label.f input, label.f select, label.f textarea { margin-top: 6px; }
   transition: all .38s cubic-bezier(.25,.8,.3,1); white-space: nowrap;
 }
 .toast.show { transform: translate(-50%, 0) scale(1); opacity: 1; }
+
+/* ---------- painted icons standing in for emoji ---------- */
+/* the plates are framed medallions, so they need room to read */
+.emo {
+  display: inline-block; width: 1.5em; height: 1.5em; object-fit: contain;
+  vertical-align: -.42em; margin: 0 .06em;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.6));
+}
+h1 .emo, h2 .emo, h3 .emo { width: 1.1em; height: 1.1em; vertical-align: -.2em; }
+.pill .emo, .small .emo, .dim .emo, .twlog .emo { width: 1.3em; height: 1.3em; vertical-align: -.36em; }
+.reading .emo, .sc-text .emo, .jltext .emo, .twsym-e .emo, .cf-strip .emo,
+  .rs .emo, .mo-txt .small .emo { width: 1.15em; height: 1.15em; vertical-align: -.28em; }
+.tab-ic .emo { width: 1.9em; height: 1.9em; vertical-align: -.5em; filter: none; }
+.tab.active .tab-ic .emo { filter: drop-shadow(0 0 8px rgba(227,207,162,.7)); }
+.ric .emo { width: 2em; height: 2em; }
+.mc-ic .emo, .db-ic .emo, .lin-ic .emo, .mo-ic .emo { width: 1.5em; height: 1.5em; }
+.tr-portrait .emo { width: 1.5em; height: 1.5em; }
+.sc-fallback .emo { width: 1em; height: 1em; }
+.twsym-g .emo { width: 1.25em; height: 1.25em; }
+.mp-label .emo { width: 1em; height: 1em; }
+.btn .emo { width: 1.25em; height: 1.25em; vertical-align: -.3em; }
 
 /* ---------- art slots (user-supplied images with emoji fallback) ---------- */
 .art { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
@@ -912,7 +944,9 @@ body[data-phase="night"] #tint { opacity: 1; background: linear-gradient(180deg,
 .cf-stack { position: absolute; inset: 0; border-radius: 11px; overflow: hidden; }
 .cf-stack .cardface { position: absolute; inset: 0; }
 .cf-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.cf-stack.has-art .cardface { opacity: 0; }        /* painted plate wins when present */
+.cf-stack.has-art .cardface, .cf-stack.has-plate .cardface { opacity: 0; }  /* painted plate wins */
+.hexplate { width: 128px; margin: 0 auto 12px; aspect-ratio: 2/3; position: relative; }
+.hexplate .cf-stack { border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.55); }
 .cf-banner {
   position: absolute; left: 8%; right: 8%; bottom: 4.5%;
   font-family: var(--serif); font-size: .62rem; letter-spacing: .04em; text-align: center;
