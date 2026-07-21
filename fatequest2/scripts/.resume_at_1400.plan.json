@@ -1,6 +1,8 @@
 {
-  "start_at": "2026-07-21T14:00:00+09:00",
-  "chat_url": "https://chatgpt.com/c/6a5e702d-fef8-83ee-bbbf-c6db646d670b",
+  "start_at": "2026-07-22T10:45:00+09:00",
+  "armed_from": "2026-07-22T00:45:00+09:00",
+  "delay_hours": 10,
+  "chat_url": "https://chatgpt.com/c/6a5f7b8e-ece4-83ee-b76d-ec6bc3ad2305",
   "rules": {
     "max_windows": 3,
     "poll_sec": 600,
@@ -9,11 +11,10 @@
     "submit": "one batch per tab at a time"
   },
   "priority": [
-    "Extra2 (delete stand-ins first)",
-    "F1 scenes (ART_PROMPTS_F1_SCENES.md) — missing only",
-    "F2 NPCs (ART_PROMPTS_F2_NPCS.md) — 26 portraits",
-    "UI (includes P1 symbols)",
-    "MAP C D E G"
+    "F2 mentors (ART_PROMPTS_F2_NPCS.md Batch 3–4) — missing only",
+    "UI Batch 5+ (ART_PROMPTS_UI.md)",
+    "MAP C D E G (ART_PROMPTS_MAP.md)",
+    "F1/F2 gatekeepers already complete — skip existing"
   ],
-  "command": ".venv/bin/python orchestrate_resume.py --max-windows 3 --poll-sec 600 --chat-url 'https://chatgpt.com/c/6a5e702d-fef8-83ee-bbbf-c6db646d670b' --wait-login"
+  "command": ".venv/bin/python orchestrate_resume.py --max-windows 3 --poll-sec 600 --chat-url 'https://chatgpt.com/c/6a5f7b8e-ece4-83ee-b76d-ec6bc3ad2305' --wait-login"
 }

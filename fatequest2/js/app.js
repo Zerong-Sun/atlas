@@ -36,9 +36,14 @@ FQ.nav = function (screen, param) {
     FQ.AU.scene(FQ.SCENE_OF[screen] || "ritual",
       String(screen).startsWith("journey") ? null : FQ.REGION_OF[screen]);
   }
+  /* which dock lamp burns for this screen */
+  const GROUP = { journey: "journey", journeyTravel: "journey", journeyMarket: "journey",
+    journeyBag: "journey", journeyLog: "journey", home: "journey", trial: "arts",
+    tower: "tower", towerRun: "tower", towerEnd: "tower",
+    records: "records", lineage: "records", codex: "records", profile: "records" };
+  const lamp = GROUP[screen] || (FQ.METHODS.some(m => m.id === screen) || screen === "daily" ? "arts" : "journey");
   document.querySelectorAll(".tab").forEach(b => {
-    b.classList.toggle("active", b.dataset.nav === screen ||
-      (b.dataset.nav === "home" && !["codex", "profile"].includes(screen)));
+    b.classList.toggle("active", b.dataset.nav === lamp);
   });
   window.scrollTo(0, 0);
 };
@@ -136,8 +141,74 @@ FQ.SCREENS = {
       </div>`;
   },
 
-  /* ===== home / starmap ===== */
-  home() {
+  /* ===== the world is the game — home is just a doorway to it ===== */
+  home() { FQ.nav("journey"); },
+
+  /* ===== 术 · the arts you have been taught (GDD §4.9) =====
+     The fortune-telling proper lives here, and only what a teacher on the
+     road has actually given you appears. */
+  arts() {
+    const daily = FQ.dailyAvailable();
+    const known = FQ.METHODS.filter(m => FQ.Q.knows(m.id));
+    const unknown = FQ.METHODS.filter(m => !FQ.Q.knows(m.id));
+    const row = m => `
+      <button class="artrow" onclick="FQ.nav('${m.id}')">
+        <span class="ar-seal">${FQ.art("realm-" + m.id, m.ic, "big")}</span>
+        <span class="ar-txt">
+          <b>${FQ.t(m.id + ".name")}</b>
+          <span class="dim small">${FQ.t(m.id + ".desc")}</span>
+        </span>
+        <span class="ar-civ">${FQ.t(m.id + ".civ")}</span>
+      </button>`;
+    const dark = m => {
+      const M = FQ.mentorFor(m.id);
+      const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
+      const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+      return `
+        <button class="artrow dark" onclick="${reached ? `FQ.Q.meet('${m.id}')`
+          : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+          <span class="ar-seal">🔒</span>
+          <span class="ar-txt">
+            <b>${FQ.t(m.id + ".name")}</b>
+            <span class="dim small">${reached
+              ? FQ.t("mentor.here") + " · " + FQ.t("mentor.meet")
+              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</span>
+          </span>
+          <span class="ar-civ">${FQ.t(m.id + ".civ")}</span>
+        </button>`;
+    };
+    $app().innerHTML = `
+      <h2>${FQ.t("nav.arts")}</h2>
+      <p class="dim small">${FQ.t("arts.sub", { n: known.length, t: FQ.METHODS.length })}</p>
+      <button class="artrow lot" ${daily ? "" : "disabled"} onclick="FQ.nav('daily')">
+        <span class="ar-seal">🏮</span>
+        <span class="ar-txt"><b>${FQ.t("home.daily")}</b>
+          <span class="dim small">${FQ.t("home.streak")} ${FQ.state.streak} ${FQ.t("common.day")}</span></span>
+        <span class="ar-civ">${daily ? "●" : "○"}</span>
+      </button>
+      <div class="artlist">${known.map(row).join("")}</div>
+      ${unknown.length ? `<div class="arthr">${FQ.t("arts.unlearned")}</div>
+        <div class="artlist">${unknown.map(dark).join("")}</div>` : ""}
+      <div class="footer-note">${FQ.t("footer")}</div>`;
+  },
+
+  /* ===== 卷宗 · one book for lineage, codex and the voyager ===== */
+  records(tab) {
+    tab = tab || "lineage";
+    const sub = { lineage: FQ.SCREENS.lineage, codex: FQ.SCREENS.codex, profile: FQ.SCREENS.profile }[tab]
+      || FQ.SCREENS.lineage;
+    sub(tab === "codex" ? "tarot" : undefined);
+    const bar = ["lineage", "codex", "profile"].map(k => `
+      <button class="recTab ${k === tab ? "on" : ""}" onclick="FQ.nav('records','${k}')">
+        ${FQ.t("nav." + (k === "lineage" ? "lineage" : k === "codex" ? "codex" : "profile"))}
+      </button>`).join("");
+    $app().insertAdjacentHTML("afterbegin", `<div class="recbar">${bar}</div>`);
+    const back = $app().querySelector(".back");
+    if (back) back.remove();
+  },
+
+  /* ===== legacy starmap (kept for reference; no longer in the dock) ===== */
+  starmap() {
     const daily = FQ.dailyAvailable();
     const realms = FQ.METHODS.map((m, i) => {
       /* 师承: an art you have not been taught stays dark (GDD §4.9) */
@@ -745,7 +816,7 @@ FQ.startGame = function () {
   if (!window.matchMedia("(display-mode: standalone)").matches && !document.fullscreenElement) {
     try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch (e) {}
   }
-  FQ.nav("home");
+  FQ.nav("journey");   /* straight onto the road */
 };
 
 /* ---------- boot (after every module has registered) ---------- */
