@@ -19,7 +19,12 @@
       "tier": "city",
       "entryEvent": "ev-aden-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-aden-axuma",
+        "rt-aden-cambaet",
+        "rt-aden-dufar",
+        "rt-esher-aden"
+      ],
       "lore": {
         "placeId": "aden",
         "origin": "source",
@@ -60,7 +65,12 @@
       "tier": "station",
       "entryEvent": "ev-axuma-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-aden-axuma",
+        "rt-axuma-dongola",
+        "rt-axuma-mecha",
+        "rt-esher-axuma"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -85,7 +95,12 @@
       "tier": "city",
       "entryEvent": "ev-cail-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cail-coilum",
+        "rt-cail-melibar",
+        "rt-cail-samara",
+        "rt-maabar-cail"
+      ],
       "lore": {
         "placeId": "cail",
         "origin": "source",
@@ -126,7 +141,11 @@
       "tier": "city",
       "entryEvent": "ev-calatu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-calatu-camadi",
+        "rt-calatu-dufar",
+        "rt-ormus-calatu"
+      ],
       "lore": {
         "placeId": "gulf-of-calatu",
         "origin": "source",
@@ -167,7 +186,12 @@
       "tier": "town",
       "entryEvent": "ev-cambaet-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-aden-cambaet",
+        "rt-cambaet-semenat",
+        "rt-cambaet-tana",
+        "rt-delli-cambaet"
+      ],
       "lore": {
         "placeId": "kingdom-of-cambaet",
         "origin": "source",
@@ -202,7 +226,11 @@
       "tier": "town",
       "entryEvent": "ev-coilum-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cail-coilum",
+        "rt-coilum-maabar",
+        "rt-coilum-melibar"
+      ],
       "lore": {
         "placeId": "coilum",
         "origin": "source",
@@ -237,7 +265,11 @@
       "tier": "station",
       "entryEvent": "ev-dongola-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-axuma-dongola",
+        "rt-dongola-mecha",
+        "rt-dongola-medina"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -262,7 +294,11 @@
       "tier": "town",
       "entryEvent": "ev-dufar-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-aden-dufar",
+        "rt-calatu-dufar",
+        "rt-dufar-esher"
+      ],
       "lore": {
         "placeId": "dufar",
         "origin": "source",
@@ -297,7 +333,11 @@
       "tier": "city",
       "entryEvent": "ev-esher-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-dufar-esher",
+        "rt-esher-aden",
+        "rt-esher-axuma"
+      ],
       "lore": {
         "placeId": "esher",
         "origin": "source",
@@ -338,7 +378,11 @@
       "tier": "town",
       "entryEvent": "ev-maabar-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-coilum-maabar",
+        "rt-maabar-cail",
+        "rt-melibar-maabar"
+      ],
       "lore": {
         "placeId": "great-province-of-maabar",
         "origin": "source",
@@ -373,7 +417,11 @@
       "tier": "town",
       "entryEvent": "ev-mecha-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-axuma-mecha",
+        "rt-dongola-mecha",
+        "rt-mecha-medina"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -403,7 +451,12 @@
       "tier": "station",
       "entryEvent": "ev-medina-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-dongola-medina",
+        "rt-mecha-medina",
+        "rt-medina-bethleem",
+        "rt-medina-petra"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -428,7 +481,12 @@
       "tier": "city",
       "entryEvent": "ev-melibar-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cail-melibar",
+        "rt-coilum-melibar",
+        "rt-melibar-maabar",
+        "rt-tana-melibar"
+      ],
       "lore": {
         "placeId": "kingdom-of-melibar",
         "origin": "source",
@@ -469,7 +527,11 @@
       "tier": "town",
       "entryEvent": "ev-semenat-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cambaet-semenat",
+        "rt-semenat-delli",
+        "rt-semenat-tana"
+      ],
       "lore": {
         "placeId": "kingdom-of-semenat",
         "origin": "source",
@@ -504,7 +566,11 @@
       "tier": "town",
       "entryEvent": "ev-tana-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cambaet-tana",
+        "rt-semenat-tana",
+        "rt-tana-melibar"
+      ],
       "lore": {
         "placeId": "kingdom-of-tana",
         "origin": "source",

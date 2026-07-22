@@ -19,7 +19,14 @@
       "tier": "city",
       "entryEvent": "ev-chamba-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chamba-fuju",
+        "rt-chamba-pentam",
+        "rt-chamba-zayton",
+        "rt-java-major-chamba",
+        "rt-mien-chamba",
+        "rt-samara-chamba"
+      ],
       "lore": {
         "placeId": "great-country-called-chamba",
         "origin": "source",
@@ -61,7 +68,11 @@
       "tier": "town",
       "entryEvent": "ev-java-major-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-java-major-chamba",
+        "rt-java-major-samara",
+        "rt-pentam-java-major"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -92,7 +103,11 @@
       "tier": "town",
       "entryEvent": "ev-pentam-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chamba-pentam",
+        "rt-pentam-java-major",
+        "rt-samara-pentam"
+      ],
       "lore": {
         "placeId": "island-called-pentam",
         "origin": "source",

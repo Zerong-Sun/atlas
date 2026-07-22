@@ -19,7 +19,11 @@
       "tier": "town",
       "entryEvent": "ev-caracoron-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caracoron-campichu",
+        "rt-caracoron-camul",
+        "rt-caracoron-etzina"
+      ],
       "lore": {
         "placeId": "caracoron",
         "origin": "source",
@@ -59,7 +63,12 @@
         "ev-chandu-b",
         "ev-chandu-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-chandu-cacanfu",
+        "rt-chandu-cambaluc",
+        "rt-chandu-chinangli",
+        "rt-sachiu-chandu"
+      ],
       "lore": {
         "placeId": "chandu",
         "origin": "source",
@@ -103,7 +112,13 @@
       "tier": "town",
       "entryEvent": "ev-egrigaia-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cachanfu-egrigaia",
+        "rt-egrigaia-campichu",
+        "rt-egrigaia-kenjanfu",
+        "rt-egrigaia-tenduc",
+        "rt-etzina-egrigaia"
+      ],
       "lore": {
         "placeId": "egrigaia",
         "origin": "source",
@@ -139,7 +154,11 @@
       "tier": "city",
       "entryEvent": "ev-tenduc-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-egrigaia-tenduc",
+        "rt-tenduc-cacanfu",
+        "rt-tenduc-cambaluc"
+      ],
       "lore": {
         "placeId": "tenduc",
         "origin": "source",

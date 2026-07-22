@@ -152,6 +152,56 @@ for (const d of byTable.divinations ?? []) {
   if (!d.effects?.length) err("G3", recordFile.get(d.id), `${d.id}: \`effects\` must not be empty (GDD §8.2)`);
 }
 
+// ------------------------------------- G13: the three lines must be walkable
+// GDD M1 acceptance is "the three character lines can be walked end to end".
+// That is a graph property, so assert it rather than discovering it in
+// playtesting. Endpoints follow GDD §16.5.
+// `mode` matters: the maritime line must be SAILABLE, not merely reachable on
+// foot. An earlier version only checked reachability and passed while the
+// Indian Ocean was fragmented — the "sea route" was quietly walking overland
+// through the Taklamakan.
+const LINES = {
+  "polo":     { from: "tauris", to: "cambaluc", ship: false },
+  "steppe":   { from: "tauris", to: "chandu",   ship: false },
+  "maritime": { from: "ormus",  to: "zayton",   ship: true  },
+};
+{
+  const build = (shipOnly) => {
+    const a = new Map();
+    for (const r of byTable.routes ?? []) {
+      if (shipOnly && !(r.modes ?? []).includes("ship")) continue;
+      if (!a.has(r.from)) a.set(r.from, []);
+      if (!a.has(r.to)) a.set(r.to, []);
+      a.get(r.from).push(r.to);
+      a.get(r.to).push(r.from);
+    }
+    return a;
+  };
+  const graphs = { any: build(false), ship: build(true) };
+  for (const [name, spec] of Object.entries(LINES)) {
+    const { from, to } = spec;
+    const adj = spec.ship ? graphs.ship : graphs.any;
+    if (!cityIds.has(from) || !cityIds.has(to)) {
+      err("G13", "routes", `line "${name}": endpoint missing (${from} -> ${to})`);
+      continue;
+    }
+    // BFS with hop count, so we can also report an implausibly long path.
+    const seen = new Set([from]);
+    let frontier = [from], hops = 0, found = false;
+    while (frontier.length && !found) {
+      const next = [];
+      for (const n of frontier) for (const m of adj.get(n) ?? []) {
+        if (m === to) { found = true; break; }
+        if (!seen.has(m)) { seen.add(m); next.push(m); }
+      }
+      frontier = next; hops++;
+      if (hops > 60) break;
+    }
+    if (!found)
+      err("G13", "routes", `line "${name}": NO ${spec.ship ? "SAILABLE " : ""}PATH from ${from} to ${to}`);
+  }
+}
+
 // ------------------------------------------------- G12: map alignment
 if (existsSync(MAP)) {
   const geo = JSON.parse(readFileSync(MAP, "utf8"));
@@ -174,7 +224,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G8","G10","G12"];
+  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

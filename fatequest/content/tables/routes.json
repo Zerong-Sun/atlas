@@ -3,19 +3,8217 @@
   "table": "routes",
   "records": [
     {
+      "id": "rt-accon-damascus",
+      "from": "accon",
+      "to": "damascus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 130,
+      "cost": 120,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-accon-hierusalem",
+      "from": "accon",
+      "to": "hierusalem",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 129,
+      "cost": 120,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-accon-tyrus",
+      "from": "accon",
+      "to": "tyrus",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 1,
+      "distanceKm": 40,
+      "cost": 30,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-aden-axuma",
+      "from": "aden",
+      "to": "axuma",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 23,
+      "distanceKm": 699,
+      "cost": 690,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-aden-cambaet",
+      "from": "aden",
+      "to": "cambaet",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 26,
+      "distanceKm": 3104,
+      "cost": 1170,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-aden-dufar",
+      "from": "aden",
+      "to": "dufar",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 36,
+      "distanceKm": 1081,
+      "cost": 1080,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-alexandria-babylonia-cairus",
+      "from": "alexandria",
+      "to": "babylonia-cairus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 180,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-alexandria-bethleem",
+      "from": "alexandria",
+      "to": "bethleem",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 17,
+      "distanceKm": 504,
+      "cost": 510,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-alexandria-hierusalem",
+      "from": "alexandria",
+      "to": "hierusalem",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 17,
+      "distanceKm": 508,
+      "cost": 510,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-antiochia-berrhoea",
+      "from": "antiochia",
+      "to": "berrhoea",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 87,
+      "cost": 90,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-antiochia-tarsus",
+      "from": "antiochia",
+      "to": "tarsus",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 5,
+      "distanceKm": 138,
+      "cost": 150,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-antiochia-tripolis",
+      "from": "antiochia",
+      "to": "tripolis",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 198,
+      "cost": 210,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-axuma-dongola",
+      "from": "axuma",
+      "to": "dongola",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 35,
+      "distanceKm": 1041,
+      "cost": 1050,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-axuma-mecha",
+      "from": "axuma",
+      "to": "mecha",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 27,
+      "distanceKm": 819,
+      "cost": 810,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-babylonia-cairus-bethleem",
+      "from": "babylonia-cairus",
+      "to": "bethleem",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 421,
+      "cost": 420,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-babylonia-cairus-petra",
+      "from": "babylonia-cairus",
+      "to": "petra",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 406,
+      "cost": 420,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-badashan-balc",
+      "from": "badashan",
+      "to": "balc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 330,
+      "cost": 330,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-badashan-cabul",
+      "from": "badashan",
+      "to": "cabul",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 314,
+      "cost": 300,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-badashan-taican",
+      "from": "badashan",
+      "to": "taican",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 102,
+      "cost": 90,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-balc-samarcanda",
+      "from": "balc",
+      "to": "samarcanda",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 322,
+      "cost": 330,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-balc-sapurgan",
+      "from": "balc",
+      "to": "sapurgan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 103,
+      "cost": 90,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-balc-taican",
+      "from": "balc",
+      "to": "taican",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 8,
+      "distanceKm": 235,
+      "cost": 240,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-baldacum-basora",
+      "from": "baldacum",
+      "to": "basora",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 449,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-baldacum-ctesiphon",
+      "from": "baldacum",
+      "to": "ctesiphon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 32,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-baldacum-ninive",
+      "from": "baldacum",
+      "to": "ninive",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 356,
+      "cost": 360,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-baldacum-ormus",
+      "from": "baldacum",
+      "to": "ormus",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 45,
+      "distanceKm": 1351,
+      "cost": 1350,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-basora-ctesiphon",
+      "from": "basora",
+      "to": "ctesiphon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 417,
+      "cost": 420,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-basora-ispahan",
+      "from": "basora",
+      "to": "ispahan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 438,
+      "cost": 450,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-berrhoea-edessa",
+      "from": "berrhoea",
+      "to": "edessa",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 182,
+      "cost": 180,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-berrhoea-tarsus",
+      "from": "berrhoea",
+      "to": "tarsus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 215,
+      "cost": 210,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bethleem-accon",
+      "from": "bethleem",
+      "to": "accon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 136,
+      "cost": 150,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bethleem-hierusalem",
+      "from": "bethleem",
+      "to": "hierusalem",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 9,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bethleem-petra",
+      "from": "bethleem",
+      "to": "petra",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 155,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bochara-merva",
+      "from": "bochara",
+      "to": "merva",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 304,
+      "cost": 300,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bochara-samarcanda",
+      "from": "bochara",
+      "to": "samarcanda",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 218,
+      "cost": 210,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-bochara-sapurgan",
+      "from": "bochara",
+      "to": "sapurgan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 364,
+      "cost": 360,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cabul-balc",
+      "from": "cabul",
+      "to": "balc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 322,
+      "cost": 330,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cabul-taican",
+      "from": "cabul",
+      "to": "taican",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 8,
+      "distanceKm": 248,
+      "cost": 240,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cacanfu-cambaluc",
+      "from": "cacanfu",
+      "to": "cambaluc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 164,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cacanfu-chinangli",
+      "from": "cacanfu",
+      "to": "chinangli",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 69,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cacanfu-linju",
+      "from": "cacanfu",
+      "to": "linju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 131,
+      "cost": 120,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cachanfu-egrigaia",
+      "from": "cachanfu",
+      "to": "egrigaia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 18,
+      "distanceKm": 544,
+      "cost": 540,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cachanfu-kenjanfu",
+      "from": "cachanfu",
+      "to": "kenjanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 141,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cachanfu-saianfu",
+      "from": "cachanfu",
+      "to": "saianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 358,
+      "cost": 360,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caffa-constantinopolis",
+      "from": "caffa",
+      "to": "constantinopolis",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 6,
+      "distanceKm": 686,
+      "cost": 270,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caffa-tana-azov",
+      "from": "caffa",
+      "to": "tana-azov",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 13,
+      "distanceKm": 388,
+      "cost": 390,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caffa-trapezus",
+      "from": "caffa",
+      "to": "trapezus",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 5,
+      "distanceKm": 570,
+      "cost": 225,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caiju-chinghianfu",
+      "from": "caiju",
+      "to": "chinghianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 8,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caiju-sinju",
+      "from": "caiju",
+      "to": "sinju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 21,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caiju-tiju",
+      "from": "caiju",
+      "to": "tiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 59,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cail-coilum",
+      "from": "cail",
+      "to": "coilum",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 171,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cail-melibar",
+      "from": "cail",
+      "to": "melibar",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 13,
+      "distanceKm": 394,
+      "cost": 390,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cail-samara",
+      "from": "cail",
+      "to": "samara",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 16,
+      "distanceKm": 1927,
+      "cost": 720,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-calatu-camadi",
+      "from": "calatu",
+      "to": "camadi",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 23,
+      "distanceKm": 684,
+      "cost": 690,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-calatu-dufar",
+      "from": "calatu",
+      "to": "dufar",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 28,
+      "distanceKm": 839,
+      "cost": 840,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camadi-cobinan",
+      "from": "camadi",
+      "to": "cobinan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 335,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camadi-kerman",
+      "from": "camadi",
+      "to": "kerman",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 190,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camadi-ormus",
+      "from": "camadi",
+      "to": "ormus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 216,
+      "cost": 210,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cambaet-semenat",
+      "from": "cambaet",
+      "to": "semenat",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 9,
+      "distanceKm": 279,
+      "cost": 270,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cambaet-tana",
+      "from": "cambaet",
+      "to": "tana",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 12,
+      "distanceKm": 348,
+      "cost": 360,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cambaluc-chinangli",
+      "from": "cambaluc",
+      "to": "chinangli",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 182,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cambaluc-kinsay",
+      "from": "cambaluc",
+      "to": "kinsay",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 37,
+      "distanceKm": 1123,
+      "cost": 1110,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-campichu-etzina",
+      "from": "campichu",
+      "to": "etzina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 319,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camul-etzina",
+      "from": "camul",
+      "to": "etzina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 21,
+      "distanceKm": 632,
+      "cost": 630,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camul-lop",
+      "from": "camul",
+      "to": "lop",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 21,
+      "distanceKm": 617,
+      "cost": 630,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-camul-sachiu",
+      "from": "camul",
+      "to": "sachiu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 313,
+      "cost": 300,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caracoron-campichu",
+      "from": "caracoron",
+      "to": "campichu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 31,
+      "distanceKm": 939,
+      "cost": 930,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caracoron-camul",
+      "from": "caracoron",
+      "to": "camul",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 29,
+      "distanceKm": 878,
+      "cost": 870,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-caracoron-etzina",
+      "from": "caracoron",
+      "to": "etzina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 21,
+      "distanceKm": 620,
+      "cost": 630,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cascar-badashan",
+      "from": "cascar",
+      "to": "badashan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 18,
+      "distanceKm": 540,
+      "cost": 540,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cascar-cotan",
+      "from": "cascar",
+      "to": "cotan",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 432,
+      "cost": 420,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cascar-yarcan",
+      "from": "cascar",
+      "to": "yarcan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 159,
+      "cost": 150,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chamba-fuju",
+      "from": "chamba",
+      "to": "fuju",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 14,
+      "distanceKm": 1724,
+      "cost": 630,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chamba-pentam",
+      "from": "chamba",
+      "to": "pentam",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 13,
+      "distanceKm": 1506,
+      "cost": 585,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chamba-zayton",
+      "from": "chamba",
+      "to": "zayton",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 13,
+      "distanceKm": 1576,
+      "cost": 585,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chandu-cacanfu",
+      "from": "chandu",
+      "to": "cacanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 435,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chandu-cambaluc",
+      "from": "chandu",
+      "to": "cambaluc",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 9,
+      "distanceKm": 274,
+      "cost": 270,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chandu-chinangli",
+      "from": "chandu",
+      "to": "chinangli",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 454,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-charchan-cotan",
+      "from": "charchan",
+      "to": "cotan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 507,
+      "cost": 510,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-charchan-lop",
+      "from": "charchan",
+      "to": "lop",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 8,
+      "distanceKm": 248,
+      "cost": 240,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-charchan-pein",
+      "from": "charchan",
+      "to": "pein",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 370,
+      "cost": 360,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinangli-linju",
+      "from": "chinangli",
+      "to": "linju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 111,
+      "cost": 120,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinghianfu-nanghin",
+      "from": "chinghianfu",
+      "to": "nanghin",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 61,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinghianfu-sinju",
+      "from": "chinghianfu",
+      "to": "sinju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 25,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinginju-caiju",
+      "from": "chinginju",
+      "to": "caiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 73,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinginju-chinghianfu",
+      "from": "chinginju",
+      "to": "chinghianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 67,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-chinginju-suju",
+      "from": "chinginju",
+      "to": "suju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 81,
+      "cost": 90,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cobinan-kerman",
+      "from": "cobinan",
+      "to": "kerman",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 147,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cobinan-yasdi",
+      "from": "cobinan",
+      "to": "yasdi",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 189,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coigangiu-coiganju",
+      "from": "coigangiu",
+      "to": "coiganju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 14,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coigangiu-paukin",
+      "from": "coigangiu",
+      "to": "paukin",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 47,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coigangiu-tiju",
+      "from": "coigangiu",
+      "to": "tiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 97,
+      "cost": 90,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coiganju-paukin",
+      "from": "coiganju",
+      "to": "paukin",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 33,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coiganju-tiju",
+      "from": "coiganju",
+      "to": "tiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 3,
+      "distanceKm": 84,
+      "cost": 90,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coilum-maabar",
+      "from": "coilum",
+      "to": "maabar",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 412,
+      "cost": 420,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-coilum-melibar",
+      "from": "coilum",
+      "to": "melibar",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 9,
+      "distanceKm": 278,
+      "cost": 270,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-constantinopolis-ephesus",
+      "from": "constantinopolis",
+      "to": "ephesus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 369,
+      "cost": 360,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-constantinopolis-nicaea",
+      "from": "constantinopolis",
+      "to": "nicaea",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 3,
+      "distanceKm": 90,
+      "cost": 90,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-constantinopolis-smyrna",
+      "from": "constantinopolis",
+      "to": "smyrna",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 328,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cotan-lop",
+      "from": "cotan",
+      "to": "lop",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 25,
+      "distanceKm": 752,
+      "cost": 750,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cotan-pein",
+      "from": "cotan",
+      "to": "pein",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 157,
+      "cost": 150,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-cotan-yarcan",
+      "from": "cotan",
+      "to": "yarcan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 9,
+      "distanceKm": 277,
+      "cost": 270,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ctesiphon-ninive",
+      "from": "ctesiphon",
+      "to": "ninive",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 13,
+      "distanceKm": 386,
+      "cost": 390,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-damascus-tripolis",
+      "from": "damascus",
+      "to": "tripolis",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 111,
+      "cost": 120,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-damascus-tyrus",
+      "from": "damascus",
+      "to": "tyrus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 105,
+      "cost": 120,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-delli-cambaet",
+      "from": "delli",
+      "to": "cambaet",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 28,
+      "distanceKm": 843,
+      "cost": 840,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-delli-cotan",
+      "from": "delli",
+      "to": "cotan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 32,
+      "distanceKm": 974,
+      "cost": 960,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-delli-keshimur",
+      "from": "delli",
+      "to": "keshimur",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 22,
+      "distanceKm": 647,
+      "cost": 660,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-dongola-mecha",
+      "from": "dongola",
+      "to": "mecha",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 34,
+      "distanceKm": 1006,
+      "cost": 1020,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-dongola-medina",
+      "from": "dongola",
+      "to": "medina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 37,
+      "distanceKm": 1111,
+      "cost": 1110,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-dufar-esher",
+      "from": "dufar",
+      "to": "esher",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 18,
+      "distanceKm": 542,
+      "cost": 540,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-edessa-antiochia",
+      "from": "edessa",
+      "to": "antiochia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 9,
+      "distanceKm": 257,
+      "cost": 270,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-edessa-tarsus",
+      "from": "edessa",
+      "to": "tarsus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 347,
+      "cost": 360,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-egrigaia-campichu",
+      "from": "egrigaia",
+      "to": "campichu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 504,
+      "cost": 510,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-egrigaia-kenjanfu",
+      "from": "egrigaia",
+      "to": "kenjanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 521,
+      "cost": 510,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-egrigaia-tenduc",
+      "from": "egrigaia",
+      "to": "tenduc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 16,
+      "distanceKm": 470,
+      "cost": 480,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ephesus-nicaea",
+      "from": "ephesus",
+      "to": "nicaea",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 344,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ephesus-smyrna",
+      "from": "ephesus",
+      "to": "smyrna",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 56,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-esher-aden",
+      "from": "esher",
+      "to": "aden",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 18,
+      "distanceKm": 540,
+      "cost": 540,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-esher-axuma",
+      "from": "esher",
+      "to": "axuma",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 39,
+      "distanceKm": 1174,
+      "cost": 1170,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-etzina-egrigaia",
+      "from": "etzina",
+      "to": "egrigaia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 571,
+      "cost": 570,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-fuju-kinsay",
+      "from": "fuju",
+      "to": "kinsay",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 16,
+      "distanceKm": 474,
+      "cost": 480,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-fuju-tanpiju",
+      "from": "fuju",
+      "to": "tanpiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 417,
+      "cost": 420,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-fuju-zayton",
+      "from": "fuju",
+      "to": "zayton",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 151,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-hierusalem-petra",
+      "from": "hierusalem",
+      "to": "petra",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 162,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ispahan-cobinan",
+      "from": "ispahan",
+      "to": "cobinan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 456,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ispahan-yasdi",
+      "from": "ispahan",
+      "to": "yasdi",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 9,
+      "distanceKm": 267,
+      "cost": 270,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-java-major-chamba",
+      "from": "java-major",
+      "to": "chamba",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 19,
+      "distanceKm": 2237,
+      "cost": 855,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-java-major-samara",
+      "from": "java-major",
+      "to": "samara",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 61,
+      "distanceKm": 1826,
+      "cost": 1830,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kenjanfu-saianfu",
+      "from": "kenjanfu",
+      "to": "saianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 13,
+      "distanceKm": 394,
+      "cost": 390,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kerman-yasdi",
+      "from": "kerman",
+      "to": "yasdi",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 314,
+      "cost": 300,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-keshimur-badashan",
+      "from": "keshimur",
+      "to": "badashan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 509,
+      "cost": 510,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-keshimur-cabul",
+      "from": "keshimur",
+      "to": "cabul",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 519,
+      "cost": 510,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-keshimur-yarcan",
+      "from": "keshimur",
+      "to": "yarcan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 18,
+      "distanceKm": 529,
+      "cost": 540,
+      "risk": 4,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kinsay-chinginju",
+      "from": "kinsay",
+      "to": "chinginju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 172,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kinsay-suju",
+      "from": "kinsay",
+      "to": "suju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 121,
+      "cost": 120,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kinsay-tanpiju",
+      "from": "kinsay",
+      "to": "tanpiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 69,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kinsay-zayton",
+      "from": "kinsay",
+      "to": "zayton",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 21,
+      "distanceKm": 620,
+      "cost": 630,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kiovia-caffa",
+      "from": "kiovia",
+      "to": "caffa",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 23,
+      "distanceKm": 703,
+      "cost": 690,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kiovia-moscovia",
+      "from": "kiovia",
+      "to": "moscovia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 25,
+      "distanceKm": 755,
+      "cost": 750,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-kiovia-tana-azov",
+      "from": "kiovia",
+      "to": "tana-azov",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 25,
+      "distanceKm": 750,
+      "cost": 750,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-linju-sinjumatu",
+      "from": "linju",
+      "to": "sinjumatu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 213,
+      "cost": 210,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
       "id": "rt-lop-sachiu",
       "from": "lop",
       "to": "sachiu",
       "reverse": true,
-      "modes": ["caravan", "camel", "foot"],
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 570,
+      "cost": 570,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-maabar-cail",
+      "from": "maabar",
+      "to": "cail",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 10,
+      "distanceKm": 309,
+      "cost": 300,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-mecha-medina",
+      "from": "mecha",
+      "to": "medina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 340,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-medina-bethleem",
+      "from": "medina",
+      "to": "bethleem",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
       "days": 30,
+      "distanceKm": 913,
       "cost": 900,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-medina-petra",
+      "from": "medina",
+      "to": "petra",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 26,
+      "distanceKm": 770,
+      "cost": 780,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-melibar-maabar",
+      "from": "melibar",
+      "to": "maabar",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 15,
+      "distanceKm": 447,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-merva-balc",
+      "from": "merva",
+      "to": "balc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 429,
+      "cost": 420,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-merva-sapurgan",
+      "from": "merva",
+      "to": "sapurgan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 334,
+      "cost": 330,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-mien-chamba",
+      "from": "mien",
+      "to": "chamba",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 58,
+      "distanceKm": 1730,
+      "cost": 1740,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-mien-sindafu",
+      "from": "mien",
+      "to": "sindafu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 47,
+      "distanceKm": 1399,
+      "cost": 1410,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-moscovia-novogardia",
+      "from": "moscovia",
+      "to": "novogardia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 16,
+      "distanceKm": 491,
+      "cost": 480,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-moscovia-tana-azov",
+      "from": "moscovia",
+      "to": "tana-azov",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 32,
+      "distanceKm": 969,
+      "cost": 960,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-nanghin-caiju",
+      "from": "nanghin",
+      "to": "caiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 61,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-nanghin-sinju",
+      "from": "nanghin",
+      "to": "sinju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 1,
+      "distanceKm": 43,
+      "cost": 30,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-nicaea-smyrna",
+      "from": "nicaea",
+      "to": "smyrna",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 315,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ninive-tauris",
+      "from": "ninive",
+      "to": "tauris",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 338,
+      "cost": 330,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-novogardia-kiovia",
+      "from": "novogardia",
+      "to": "kiovia",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 30,
+      "distanceKm": 899,
+      "cost": 900,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-novogardia-tana-azov",
+      "from": "novogardia",
+      "to": "tana-azov",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 46,
+      "distanceKm": 1380,
+      "cost": 1380,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ormus-balc",
+      "from": "ormus",
+      "to": "balc",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 49,
+      "distanceKm": 1455,
+      "cost": 1470,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ormus-calatu",
+      "from": "ormus",
+      "to": "calatu",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 5,
+      "distanceKm": 571,
+      "cost": 225,
+      "risk": 3,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ormus-cobinan",
+      "from": "ormus",
+      "to": "cobinan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 16,
+      "distanceKm": 479,
+      "cost": 480,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-ormus-kerman",
+      "from": "ormus",
+      "to": "kerman",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 359,
+      "cost": 360,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-paukin-tiju",
+      "from": "paukin",
+      "to": "tiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 51,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-pein-yarcan",
+      "from": "pein",
+      "to": "yarcan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 14,
+      "distanceKm": 426,
+      "cost": 420,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-pentam-java-major",
+      "from": "pentam",
+      "to": "java-major",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 7,
+      "distanceKm": 851,
+      "cost": 315,
+      "risk": 3,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-petra-accon",
+      "from": "petra",
+      "to": "accon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 291,
+      "cost": 300,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sachiu-campichu",
+      "from": "sachiu",
+      "to": "campichu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 17,
+      "distanceKm": 514,
+      "cost": 510,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sachiu-chandu",
+      "from": "sachiu",
+      "to": "chandu",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 60,
+      "distanceKm": 1811,
+      "cost": 1800,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sachiu-etzina",
+      "from": "sachiu",
+      "to": "etzina",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 567,
+      "cost": 570,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-saianfu-sinjumatu",
+      "from": "saianfu",
+      "to": "sinjumatu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 560,
+      "cost": 570,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-samara-chamba",
+      "from": "samara",
+      "to": "chamba",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 59,
+      "distanceKm": 1776,
+      "cost": 1770,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-samara-mien",
+      "from": "samara",
+      "to": "mien",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 58,
+      "distanceKm": 1738,
+      "cost": 1740,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-samara-pentam",
+      "from": "samara",
+      "to": "pentam",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 38,
+      "distanceKm": 1128,
+      "cost": 1140,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-samarcanda-cascar",
+      "from": "samarcanda",
+      "to": "cascar",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 26,
+      "distanceKm": 774,
+      "cost": 780,
       "risk": 4,
-      "season": { "open": [9,10,11,12,1,2,3,4], "bonus": [10,11] },
-      "unlock": [{ "type": "guide", "value": "npc-lop-guide" }],
-      "hazards": ["sand", "bandits"],
-      "encounters": ["ev-road-desert-voices"],
-      "lore": { "storyId": "a-certain-desert", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-samarcanda-sapurgan",
+      "from": "samarcanda",
+      "to": "sapurgan",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 12,
+      "distanceKm": 349,
+      "cost": 360,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sapurgan-taican",
+      "from": "sapurgan",
+      "to": "taican",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 11,
+      "distanceKm": 337,
+      "cost": 330,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "sand",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-semenat-delli",
+      "from": "semenat",
+      "to": "delli",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 37,
+      "distanceKm": 1104,
+      "cost": 1110,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-semenat-tana",
+      "from": "semenat",
+      "to": "tana",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 3,
+      "distanceKm": 328,
+      "cost": 135,
+      "risk": 3,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-siju-coigangiu",
+      "from": "siju",
+      "to": "coigangiu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 4,
+      "distanceKm": 128,
+      "cost": 120,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-siju-coiganju",
+      "from": "siju",
+      "to": "coiganju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 142,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-siju-paukin",
+      "from": "siju",
+      "to": "paukin",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 173,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sindafu-cachanfu",
+      "from": "sindafu",
+      "to": "cachanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 25,
+      "distanceKm": 750,
+      "cost": 750,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sindafu-kenjanfu",
+      "from": "sindafu",
+      "to": "kenjanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 20,
+      "distanceKm": 614,
+      "cost": 600,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sindafu-saianfu",
+      "from": "sindafu",
+      "to": "saianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 26,
+      "distanceKm": 780,
+      "cost": 780,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sinjumatu-coigangiu",
+      "from": "sinjumatu",
+      "to": "coigangiu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 10,
+      "distanceKm": 303,
+      "cost": 300,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-sinjumatu-siju",
+      "from": "sinjumatu",
+      "to": "siju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 175,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-suju-chinghianfu",
+      "from": "suju",
+      "to": "chinghianfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 148,
+      "cost": 150,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tana-azov-trapezus",
+      "from": "tana-azov",
+      "to": "trapezus",
+      "reverse": true,
+      "kind": "coastal",
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 23,
+      "distanceKm": 679,
+      "cost": 690,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tana-melibar",
+      "from": "tana",
+      "to": "melibar",
+      "reverse": true,
+      "kind": "coastal",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "caravan",
+        "foot",
+        "ship"
+      ],
+      "days": 31,
+      "distanceKm": 933,
+      "cost": 930,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tanpiju-chinginju",
+      "from": "tanpiju",
+      "to": "chinginju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 7,
+      "distanceKm": 224,
+      "cost": 210,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tanpiju-suju",
+      "from": "tanpiju",
+      "to": "suju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 187,
+      "cost": 180,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tarsus-tripolis",
+      "from": "tarsus",
+      "to": "tripolis",
+      "reverse": true,
+      "kind": "sea",
+      "modes": [
+        "ship"
+      ],
+      "days": 2,
+      "distanceKm": 289,
+      "cost": 90,
+      "risk": 3,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tauris-baldacum",
+      "from": "tauris",
+      "to": "baldacum",
+      "reverse": true,
+      "kind": "land",
+      "trunk": true,
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 558,
+      "cost": 570,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tauris-ctesiphon",
+      "from": "tauris",
+      "to": "ctesiphon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 576,
+      "cost": 570,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tenduc-cacanfu",
+      "from": "tenduc",
+      "to": "cacanfu",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 16,
+      "distanceKm": 467,
+      "cost": 480,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tenduc-cambaluc",
+      "from": "tenduc",
+      "to": "cambaluc",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 445,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tiju-sinju",
+      "from": "tiju",
+      "to": "sinju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 2,
+      "distanceKm": 62,
+      "cost": 60,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-trapezus-berrhoea",
+      "from": "trapezus",
+      "to": "berrhoea",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 579,
+      "cost": 570,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-trapezus-edessa",
+      "from": "trapezus",
+      "to": "edessa",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 15,
+      "distanceKm": 435,
+      "cost": 450,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tripolis-accon",
+      "from": "tripolis",
+      "to": "accon",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 6,
+      "distanceKm": 182,
+      "cost": 180,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-tripolis-tyrus",
+      "from": "tripolis",
+      "to": "tyrus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 5,
+      "distanceKm": 143,
+      "cost": 150,
+      "risk": 3,
+      "season": {
+        "open": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "bonus": [
+          5,
+          6,
+          7
+        ]
+      },
+      "hazards": [
+        "snow",
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "rt-zayton-tanpiju",
+      "from": "zayton",
+      "to": "tanpiju",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 19,
+      "distanceKm": 559,
+      "cost": 570,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

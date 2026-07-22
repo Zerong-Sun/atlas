@@ -43,8 +43,8 @@ func _build_desk() -> void:
 	_desk.add_child(title)
 
 	var sub := Label.new()
-	sub.text = "\n%d 座城 · %d 条事件 · %d 种占法\n" % [
-		db.cities().size(), db.get_table("events").size(), DivinationRegistry.ids().size()]
+	sub.text = "\n%d 座城 · %d 条路线 · %d 条事件 · %d 种占法\n" % [
+		db.cities().size(), db.get_table("routes").size(), db.get_table("events").size(), DivinationRegistry.ids().size()]
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_desk.add_child(sub)
 
@@ -59,7 +59,7 @@ func _enter_map() -> void:
 
 	_map = preload("res://game/map/world_map.gd").new()
 	add_child(_map)
-	_map.setup(projection, db.cities())
+	_map.setup(projection, db.cities(), db.get_table("routes"))
 	_map.city_clicked.connect(_on_city)
 
 	_info = Label.new()

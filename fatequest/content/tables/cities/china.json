@@ -20,7 +20,13 @@
       "tier": "town",
       "entryEvent": "ev-cacanfu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cacanfu-cambaluc",
+        "rt-cacanfu-chinangli",
+        "rt-cacanfu-linju",
+        "rt-chandu-cacanfu",
+        "rt-tenduc-cacanfu"
+      ],
       "lore": {
         "placeId": "cities-of-cacanfu",
         "origin": "source",
@@ -56,7 +62,12 @@
       "tier": "town",
       "entryEvent": "ev-cachanfu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cachanfu-egrigaia",
+        "rt-cachanfu-kenjanfu",
+        "rt-cachanfu-saianfu",
+        "rt-sindafu-cachanfu"
+      ],
       "lore": {
         "placeId": "great-river-caramoran-and-the-city-of-cachanfu",
         "origin": "source",
@@ -92,7 +103,13 @@
       "tier": "town",
       "entryEvent": "ev-caiju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caiju-chinghianfu",
+        "rt-caiju-sinju",
+        "rt-caiju-tiju",
+        "rt-chinginju-caiju",
+        "rt-nanghin-caiju"
+      ],
       "lore": {
         "placeId": "caiju",
         "origin": "source",
@@ -132,7 +149,13 @@
         "ev-cambaluc-b",
         "ev-cambaluc-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-cacanfu-cambaluc",
+        "rt-cambaluc-chinangli",
+        "rt-cambaluc-kinsay",
+        "rt-chandu-cambaluc",
+        "rt-tenduc-cambaluc"
+      ],
       "lore": {
         "placeId": "cambaluc-2",
         "origin": "source",
@@ -176,7 +199,12 @@
       "tier": "city",
       "entryEvent": "ev-campichu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-campichu-etzina",
+        "rt-caracoron-campichu",
+        "rt-egrigaia-campichu",
+        "rt-sachiu-campichu"
+      ],
       "lore": {
         "placeId": "campichu",
         "origin": "source",
@@ -218,7 +246,12 @@
       "tier": "city",
       "entryEvent": "ev-chinangli-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cacanfu-chinangli",
+        "rt-cambaluc-chinangli",
+        "rt-chandu-chinangli",
+        "rt-chinangli-linju"
+      ],
       "lore": {
         "placeId": "chinangli",
         "origin": "source",
@@ -260,7 +293,13 @@
       "tier": "town",
       "entryEvent": "ev-chinghianfu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caiju-chinghianfu",
+        "rt-chinghianfu-nanghin",
+        "rt-chinghianfu-sinju",
+        "rt-chinginju-chinghianfu",
+        "rt-suju-chinghianfu"
+      ],
       "lore": {
         "placeId": "chinghianfu",
         "origin": "source",
@@ -296,7 +335,13 @@
       "tier": "town",
       "entryEvent": "ev-chinginju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chinginju-caiju",
+        "rt-chinginju-chinghianfu",
+        "rt-chinginju-suju",
+        "rt-kinsay-chinginju",
+        "rt-tanpiju-chinginju"
+      ],
       "lore": {
         "placeId": "chinginju-and-the-slaughter-of-certain-alans-there",
         "origin": "source",
@@ -332,7 +377,13 @@
       "tier": "station",
       "entryEvent": "ev-coigangiu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-coigangiu-coiganju",
+        "rt-coigangiu-paukin",
+        "rt-coigangiu-tiju",
+        "rt-siju-coigangiu",
+        "rt-sinjumatu-coigangiu"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -358,7 +409,12 @@
       "tier": "town",
       "entryEvent": "ev-coiganju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-coigangiu-coiganju",
+        "rt-coiganju-paukin",
+        "rt-coiganju-tiju",
+        "rt-siju-coiganju"
+      ],
       "lore": {
         "placeId": "coiganju",
         "origin": "source",
@@ -394,7 +450,13 @@
       "tier": "town",
       "entryEvent": "ev-etzina-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-campichu-etzina",
+        "rt-camul-etzina",
+        "rt-caracoron-etzina",
+        "rt-etzina-egrigaia",
+        "rt-sachiu-etzina"
+      ],
       "lore": {
         "placeId": "etzina",
         "origin": "source",
@@ -430,7 +492,12 @@
       "tier": "town",
       "entryEvent": "ev-fuju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chamba-fuju",
+        "rt-fuju-kinsay",
+        "rt-fuju-tanpiju",
+        "rt-fuju-zayton"
+      ],
       "lore": {
         "placeId": "greatness-of-the-city-of-fuju",
         "origin": "source",
@@ -466,7 +533,12 @@
       "tier": "city",
       "entryEvent": "ev-kenjanfu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cachanfu-kenjanfu",
+        "rt-egrigaia-kenjanfu",
+        "rt-kenjanfu-saianfu",
+        "rt-sindafu-kenjanfu"
+      ],
       "lore": {
         "placeId": "kenjanfu",
         "origin": "source",
@@ -512,7 +584,14 @@
         "ev-kinsay-b",
         "ev-kinsay-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-cambaluc-kinsay",
+        "rt-fuju-kinsay",
+        "rt-kinsay-chinginju",
+        "rt-kinsay-suju",
+        "rt-kinsay-tanpiju",
+        "rt-kinsay-zayton"
+      ],
       "lore": {
         "placeId": "great-city-of-kinsay",
         "origin": "source",
@@ -556,7 +635,11 @@
       "tier": "town",
       "entryEvent": "ev-linju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cacanfu-linju",
+        "rt-chinangli-linju",
+        "rt-linju-sinjumatu"
+      ],
       "lore": {
         "placeId": "cities-of-linju",
         "origin": "source",
@@ -592,7 +675,11 @@
       "tier": "town",
       "entryEvent": "ev-mien-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-mien-chamba",
+        "rt-mien-sindafu",
+        "rt-samara-mien"
+      ],
       "lore": {
         "placeId": "mien",
         "origin": "source",
@@ -628,7 +715,11 @@
       "tier": "town",
       "entryEvent": "ev-nanghin-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chinghianfu-nanghin",
+        "rt-nanghin-caiju",
+        "rt-nanghin-sinju"
+      ],
       "lore": {
         "placeId": "nanghin",
         "origin": "source",
@@ -664,7 +755,12 @@
       "tier": "town",
       "entryEvent": "ev-paukin-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-coigangiu-paukin",
+        "rt-coiganju-paukin",
+        "rt-paukin-tiju",
+        "rt-siju-paukin"
+      ],
       "lore": {
         "placeId": "cities-of-paukin",
         "origin": "source",
@@ -700,7 +796,12 @@
       "tier": "city",
       "entryEvent": "ev-saianfu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cachanfu-saianfu",
+        "rt-kenjanfu-saianfu",
+        "rt-saianfu-sinjumatu",
+        "rt-sindafu-saianfu"
+      ],
       "lore": {
         "placeId": "very-noble-city-of-saianfu",
         "origin": "source",
@@ -742,7 +843,12 @@
       "tier": "city",
       "entryEvent": "ev-siju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-siju-coigangiu",
+        "rt-siju-coiganju",
+        "rt-siju-paukin",
+        "rt-sinjumatu-siju"
+      ],
       "lore": {
         "placeId": "siju",
         "origin": "source",
@@ -784,7 +890,12 @@
       "tier": "town",
       "entryEvent": "ev-sindafu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-mien-sindafu",
+        "rt-sindafu-cachanfu",
+        "rt-sindafu-kenjanfu",
+        "rt-sindafu-saianfu"
+      ],
       "lore": {
         "placeId": "city-of-sindafu",
         "origin": "source",
@@ -820,7 +931,12 @@
       "tier": "city",
       "entryEvent": "ev-sinju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caiju-sinju",
+        "rt-chinghianfu-sinju",
+        "rt-nanghin-sinju",
+        "rt-tiju-sinju"
+      ],
       "lore": {
         "placeId": "sinju",
         "origin": "source",
@@ -862,7 +978,12 @@
       "tier": "town",
       "entryEvent": "ev-sinjumatu-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-linju-sinjumatu",
+        "rt-saianfu-sinjumatu",
+        "rt-sinjumatu-coigangiu",
+        "rt-sinjumatu-siju"
+      ],
       "lore": {
         "placeId": "noble-city-of-sinjumatu",
         "origin": "source",
@@ -898,7 +1019,12 @@
       "tier": "city",
       "entryEvent": "ev-suju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-chinginju-suju",
+        "rt-kinsay-suju",
+        "rt-suju-chinghianfu",
+        "rt-tanpiju-suju"
+      ],
       "lore": {
         "placeId": "suju",
         "origin": "source",
@@ -940,7 +1066,13 @@
       "tier": "city",
       "entryEvent": "ev-tanpiju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-fuju-tanpiju",
+        "rt-kinsay-tanpiju",
+        "rt-tanpiju-chinginju",
+        "rt-tanpiju-suju",
+        "rt-zayton-tanpiju"
+      ],
       "lore": {
         "placeId": "tanpiju",
         "origin": "source",
@@ -982,7 +1114,13 @@
       "tier": "town",
       "entryEvent": "ev-tiju-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caiju-tiju",
+        "rt-coigangiu-tiju",
+        "rt-coiganju-tiju",
+        "rt-paukin-tiju",
+        "rt-tiju-sinju"
+      ],
       "lore": {
         "placeId": "cities-of-tiju",
         "origin": "source",
@@ -1022,7 +1160,12 @@
         "ev-zayton-b",
         "ev-zayton-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-chamba-zayton",
+        "rt-fuju-zayton",
+        "rt-kinsay-zayton",
+        "rt-zayton-tanpiju"
+      ],
       "lore": {
         "placeId": "great-haven-of-zayton",
         "origin": "source",

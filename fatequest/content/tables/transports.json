@@ -2,8 +2,21 @@
   "contentVersion": 1,
   "table": "transports",
   "records": [
-    { "id": "foot",    "name": "transport.foot.name",    "kinds": ["land"], "dayMul": 1.4, "cost": 0,   "risk": 1, "cargo": 2 },
-    { "id": "camel",   "name": "transport.camel.name",   "kinds": ["land"], "dayMul": 1.0, "cost": 300, "risk": 0, "cargo": 6 },
-    { "id": "caravan", "name": "transport.caravan.name", "kinds": ["land"], "dayMul": 1.2, "cost": 500, "risk": -2, "cargo": 10 }
+    { "id": "foot",     "name": "transport.foot.name",     "kinds": ["land"],        "dayMul": 1.4, "cost": 0,   "risk": 1,  "cargo": 2,
+      "note": "GDD 10: slowest, cheapest, and the most likely to trigger local stories." },
+    { "id": "camel",    "name": "transport.camel.name",    "kinds": ["land"],        "dayMul": 1.0, "cost": 300, "risk": 0,  "cargo": 6 },
+    { "id": "horse",    "name": "transport.horse.name",    "kinds": ["land"],        "dayMul": 0.8, "cost": 400, "risk": 0,  "cargo": 4 },
+    { "id": "caravan",  "name": "transport.caravan.name",  "kinds": ["land"],        "dayMul": 1.2, "cost": 500, "risk": -2, "cargo": 10,
+      "note": "Safer but you must wait for one to form, or negotiate your way in." },
+    { "id": "ship",     "name": "transport.ship.name",     "kinds": ["sea"],         "dayMul": 1.0, "cost": 900, "risk": 0,  "cargo": 20,
+      "note": "Fast and high-capacity, but hostage to monsoon, storm and pirates." },
+    { "id": "riverboat","name": "transport.riverboat.name","kinds": ["river"],       "dayMul": 0.9, "cost": 350, "risk": -1, "cargo": 12 },
+    { "id": "post",     "name": "transport.post.name",     "kinds": ["land"],        "dayMul": 0.5, "cost": 1200,"risk": -2, "cargo": 1,
+      "needs": ["it-paiza"],
+      "note": "The Kaan's post road. Fastest overland, but requires the tablet of authority." },
+    { "id": "pilgrim",  "name": "transport.pilgrim.name",  "kinds": ["land"],        "dayMul": 1.3, "cost": 100, "risk": -2, "cargo": 3,
+      "note": "Cheap and safe between religious centres; the route choice is not yours." },
+    { "id": "embassy",  "name": "transport.embassy.name",  "kinds": ["land", "sea"], "dayMul": 0.7, "cost": 0,   "risk": -3, "cargo": 5,
+      "note": "Opens courts, costs freedom: you go where the mission goes." }
   ]
 }

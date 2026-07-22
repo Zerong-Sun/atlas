@@ -13,22 +13,43 @@ const TIER_STYLE := {
 
 var projection: MapProjection
 var cities: Array = []
+var routes: Array = []
 var _labels_visible := true
 var _hover: Dictionary = {}
 
 signal city_clicked(city: Dictionary)
 
 
-func setup(p: MapProjection, city_records: Array) -> void:
+func setup(p: MapProjection, city_records: Array, route_records: Array = []) -> void:
 	projection = p
 	cities = city_records
+	routes = route_records
+	_city_pos.clear()
+	for c in cities:
+		var co: Array = c.get("coord", [0, 0])
+		_city_pos[c.get("id", "")] = p.to_view(float(co[0]), float(co[1]))
 	queue_redraw()
+
+
+var _city_pos: Dictionary = {}
 
 
 func _draw() -> void:
 	if projection == null:
 		return
 	draw_rect(Rect2(projection.origin, Vector2(projection.width, projection.height)), Color("d9c9a3"))
+
+	# Routes first, so city dots sit on top of the lines.
+	for r in routes:
+		var a: Vector2 = _city_pos.get(r.get("from", ""), Vector2.ZERO)
+		var b: Vector2 = _city_pos.get(r.get("to", ""), Vector2.ZERO)
+		if a == Vector2.ZERO or b == Vector2.ZERO:
+			continue
+		var kind := String(r.get("kind", "land"))
+		var is_trunk: bool = r.get("trunk", false)
+		var col := Color("2f6f8f", 0.75) if kind == "sea" else \
+			(Color("4f7f6f", 0.6) if kind == "coastal" else Color("7a5a34", 0.45))
+		draw_line(a, b, col, 3.0 if is_trunk else 1.0)
 
 	for c in cities:
 		var coord: Array = c.get("coord", [0, 0])

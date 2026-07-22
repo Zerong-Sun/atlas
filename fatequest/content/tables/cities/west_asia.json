@@ -18,7 +18,14 @@
       "tier": "town",
       "entryEvent": "ev-accon-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-accon-damascus",
+        "rt-accon-hierusalem",
+        "rt-accon-tyrus",
+        "rt-bethleem-accon",
+        "rt-petra-accon",
+        "rt-tripolis-accon"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -47,7 +54,11 @@
       "tier": "town",
       "entryEvent": "ev-alexandria-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-alexandria-babylonia-cairus",
+        "rt-alexandria-bethleem",
+        "rt-alexandria-hierusalem"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -76,7 +87,12 @@
       "tier": "town",
       "entryEvent": "ev-antiochia-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-antiochia-berrhoea",
+        "rt-antiochia-tarsus",
+        "rt-antiochia-tripolis",
+        "rt-edessa-antiochia"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -105,7 +121,11 @@
       "tier": "town",
       "entryEvent": "ev-babylonia-cairus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-alexandria-babylonia-cairus",
+        "rt-babylonia-cairus-bethleem",
+        "rt-babylonia-cairus-petra"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -138,7 +158,13 @@
         "ev-baldacum-b",
         "ev-baldacum-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-baldacum-basora",
+        "rt-baldacum-ctesiphon",
+        "rt-baldacum-ninive",
+        "rt-baldacum-ormus",
+        "rt-tauris-baldacum"
+      ],
       "lore": {
         "placeId": "baudas",
         "origin": "source",
@@ -180,7 +206,11 @@
       "tier": "station",
       "entryEvent": "ev-basora-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-baldacum-basora",
+        "rt-basora-ctesiphon",
+        "rt-basora-ispahan"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -204,7 +234,12 @@
       "tier": "town",
       "entryEvent": "ev-berrhoea-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-antiochia-berrhoea",
+        "rt-berrhoea-edessa",
+        "rt-berrhoea-tarsus",
+        "rt-trapezus-berrhoea"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -233,7 +268,14 @@
       "tier": "station",
       "entryEvent": "ev-bethleem-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-alexandria-bethleem",
+        "rt-babylonia-cairus-bethleem",
+        "rt-bethleem-accon",
+        "rt-bethleem-hierusalem",
+        "rt-bethleem-petra",
+        "rt-medina-bethleem"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -257,7 +299,12 @@
       "tier": "station",
       "entryEvent": "ev-caffa-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caffa-constantinopolis",
+        "rt-caffa-tana-azov",
+        "rt-caffa-trapezus",
+        "rt-kiovia-caffa"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -281,7 +328,12 @@
       "tier": "city",
       "entryEvent": "ev-camadi-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-calatu-camadi",
+        "rt-camadi-cobinan",
+        "rt-camadi-kerman",
+        "rt-camadi-ormus"
+      ],
       "lore": {
         "placeId": "camadi",
         "origin": "source",
@@ -321,7 +373,13 @@
       "tier": "town",
       "entryEvent": "ev-cobinan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-camadi-cobinan",
+        "rt-cobinan-kerman",
+        "rt-cobinan-yasdi",
+        "rt-ispahan-cobinan",
+        "rt-ormus-cobinan"
+      ],
       "lore": {
         "placeId": "cobinan",
         "origin": "source",
@@ -355,7 +413,12 @@
       "tier": "town",
       "entryEvent": "ev-constantinopolis-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caffa-constantinopolis",
+        "rt-constantinopolis-ephesus",
+        "rt-constantinopolis-nicaea",
+        "rt-constantinopolis-smyrna"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -384,7 +447,12 @@
       "tier": "station",
       "entryEvent": "ev-ctesiphon-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-baldacum-ctesiphon",
+        "rt-basora-ctesiphon",
+        "rt-ctesiphon-ninive",
+        "rt-tauris-ctesiphon"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -408,7 +476,11 @@
       "tier": "town",
       "entryEvent": "ev-damascus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-accon-damascus",
+        "rt-damascus-tripolis",
+        "rt-damascus-tyrus"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -437,7 +509,12 @@
       "tier": "station",
       "entryEvent": "ev-edessa-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-berrhoea-edessa",
+        "rt-edessa-antiochia",
+        "rt-edessa-tarsus",
+        "rt-trapezus-edessa"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -461,7 +538,11 @@
       "tier": "station",
       "entryEvent": "ev-ephesus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-constantinopolis-ephesus",
+        "rt-ephesus-nicaea",
+        "rt-ephesus-smyrna"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -485,7 +566,12 @@
       "tier": "town",
       "entryEvent": "ev-hierusalem-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-accon-hierusalem",
+        "rt-alexandria-hierusalem",
+        "rt-bethleem-hierusalem",
+        "rt-hierusalem-petra"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -514,7 +600,11 @@
       "tier": "station",
       "entryEvent": "ev-ispahan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-basora-ispahan",
+        "rt-ispahan-cobinan",
+        "rt-ispahan-yasdi"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -538,7 +628,12 @@
       "tier": "city",
       "entryEvent": "ev-kerman-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-camadi-kerman",
+        "rt-cobinan-kerman",
+        "rt-kerman-yasdi",
+        "rt-ormus-kerman"
+      ],
       "lore": {
         "placeId": "kingdom-of-kerman",
         "origin": "source",
@@ -578,7 +673,12 @@
       "tier": "town",
       "entryEvent": "ev-kiovia-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-kiovia-caffa",
+        "rt-kiovia-moscovia",
+        "rt-kiovia-tana-azov",
+        "rt-novogardia-kiovia"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -607,7 +707,11 @@
       "tier": "station",
       "entryEvent": "ev-moscovia-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-kiovia-moscovia",
+        "rt-moscovia-novogardia",
+        "rt-moscovia-tana-azov"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -631,7 +735,11 @@
       "tier": "station",
       "entryEvent": "ev-nicaea-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-constantinopolis-nicaea",
+        "rt-ephesus-nicaea",
+        "rt-nicaea-smyrna"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -655,7 +763,11 @@
       "tier": "station",
       "entryEvent": "ev-ninive-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-baldacum-ninive",
+        "rt-ctesiphon-ninive",
+        "rt-ninive-tauris"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -679,7 +791,11 @@
       "tier": "station",
       "entryEvent": "ev-novogardia-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-moscovia-novogardia",
+        "rt-novogardia-kiovia",
+        "rt-novogardia-tana-azov"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -707,7 +823,14 @@
         "ev-ormus-b",
         "ev-ormus-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-baldacum-ormus",
+        "rt-camadi-ormus",
+        "rt-ormus-balc",
+        "rt-ormus-calatu",
+        "rt-ormus-cobinan",
+        "rt-ormus-kerman"
+      ],
       "lore": {
         "placeId": "descent-to-the-city-of-hormos",
         "origin": "source",
@@ -749,7 +872,13 @@
       "tier": "station",
       "entryEvent": "ev-petra-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-babylonia-cairus-petra",
+        "rt-bethleem-petra",
+        "rt-hierusalem-petra",
+        "rt-medina-petra",
+        "rt-petra-accon"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -773,7 +902,11 @@
       "tier": "station",
       "entryEvent": "ev-smyrna-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-constantinopolis-smyrna",
+        "rt-ephesus-smyrna",
+        "rt-nicaea-smyrna"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -797,7 +930,13 @@
       "tier": "station",
       "entryEvent": "ev-tana-azov-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caffa-tana-azov",
+        "rt-kiovia-tana-azov",
+        "rt-moscovia-tana-azov",
+        "rt-novogardia-tana-azov",
+        "rt-tana-azov-trapezus"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -821,7 +960,12 @@
       "tier": "station",
       "entryEvent": "ev-tarsus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-antiochia-tarsus",
+        "rt-berrhoea-tarsus",
+        "rt-edessa-tarsus",
+        "rt-tarsus-tripolis"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -849,7 +993,11 @@
         "ev-tauris-b",
         "ev-tauris-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-ninive-tauris",
+        "rt-tauris-baldacum",
+        "rt-tauris-ctesiphon"
+      ],
       "lore": {
         "placeId": "tauris",
         "origin": "source",
@@ -891,7 +1039,12 @@
       "tier": "town",
       "entryEvent": "ev-trapezus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-caffa-trapezus",
+        "rt-tana-azov-trapezus",
+        "rt-trapezus-berrhoea",
+        "rt-trapezus-edessa"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -920,7 +1073,13 @@
       "tier": "station",
       "entryEvent": "ev-tripolis-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-antiochia-tripolis",
+        "rt-damascus-tripolis",
+        "rt-tarsus-tripolis",
+        "rt-tripolis-accon",
+        "rt-tripolis-tyrus"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -944,7 +1103,11 @@
       "tier": "station",
       "entryEvent": "ev-tyrus-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-accon-tyrus",
+        "rt-damascus-tyrus",
+        "rt-tripolis-tyrus"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -968,7 +1131,11 @@
       "tier": "town",
       "entryEvent": "ev-yasdi-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cobinan-yasdi",
+        "rt-ispahan-yasdi",
+        "rt-kerman-yasdi"
+      ],
       "lore": {
         "placeId": "great-city-of-yasdi",
         "origin": "source",

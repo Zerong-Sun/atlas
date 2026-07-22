@@ -19,7 +19,13 @@
       "tier": "city",
       "entryEvent": "ev-badashan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-badashan-balc",
+        "rt-badashan-cabul",
+        "rt-badashan-taican",
+        "rt-cascar-badashan",
+        "rt-keshimur-badashan"
+      ],
       "lore": {
         "placeId": "badashan",
         "origin": "source",
@@ -65,7 +71,15 @@
         "ev-balc-b",
         "ev-balc-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-badashan-balc",
+        "rt-balc-samarcanda",
+        "rt-balc-sapurgan",
+        "rt-balc-taican",
+        "rt-cabul-balc",
+        "rt-merva-balc",
+        "rt-ormus-balc"
+      ],
       "lore": {
         "placeId": "balc",
         "origin": "source",
@@ -109,7 +123,11 @@
       "tier": "station",
       "entryEvent": "ev-bochara-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-bochara-merva",
+        "rt-bochara-samarcanda",
+        "rt-bochara-sapurgan"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -135,7 +153,12 @@
       "tier": "station",
       "entryEvent": "ev-cabul-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-badashan-cabul",
+        "rt-cabul-balc",
+        "rt-cabul-taican",
+        "rt-keshimur-cabul"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -161,7 +184,12 @@
       "tier": "city",
       "entryEvent": "ev-camul-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-camul-etzina",
+        "rt-camul-lop",
+        "rt-camul-sachiu",
+        "rt-caracoron-camul"
+      ],
       "lore": {
         "placeId": "camul",
         "origin": "source",
@@ -207,7 +235,12 @@
         "ev-cascar-b",
         "ev-cascar-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-cascar-badashan",
+        "rt-cascar-cotan",
+        "rt-cascar-yarcan",
+        "rt-samarcanda-cascar"
+      ],
       "lore": {
         "placeId": "cascar",
         "origin": "source",
@@ -251,7 +284,11 @@
       "tier": "town",
       "entryEvent": "ev-charchan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-charchan-cotan",
+        "rt-charchan-lop",
+        "rt-charchan-pein"
+      ],
       "lore": {
         "placeId": "charchan",
         "origin": "source",
@@ -291,7 +328,14 @@
         "ev-cotan-b",
         "ev-cotan-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-cascar-cotan",
+        "rt-charchan-cotan",
+        "rt-cotan-lop",
+        "rt-cotan-pein",
+        "rt-cotan-yarcan",
+        "rt-delli-cotan"
+      ],
       "lore": {
         "placeId": "a-province-called-cotan",
         "origin": "source",
@@ -335,7 +379,12 @@
       "tier": "town",
       "entryEvent": "ev-delli-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-delli-cambaet",
+        "rt-delli-cotan",
+        "rt-delli-keshimur",
+        "rt-semenat-delli"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -366,7 +415,12 @@
       "tier": "city",
       "entryEvent": "ev-keshimur-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-delli-keshimur",
+        "rt-keshimur-badashan",
+        "rt-keshimur-cabul",
+        "rt-keshimur-yarcan"
+      ],
       "lore": {
         "placeId": "keshimur",
         "origin": "source",
@@ -413,6 +467,9 @@
         "ev-lop-caravanserai"
       ],
       "exits": [
+        "rt-camul-lop",
+        "rt-charchan-lop",
+        "rt-cotan-lop",
         "rt-lop-sachiu"
       ],
       "lore": {
@@ -462,7 +519,11 @@
       "tier": "station",
       "entryEvent": "ev-merva-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-bochara-merva",
+        "rt-merva-balc",
+        "rt-merva-sapurgan"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -488,7 +549,11 @@
       "tier": "town",
       "entryEvent": "ev-pein-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-charchan-pein",
+        "rt-cotan-pein",
+        "rt-pein-yarcan"
+      ],
       "lore": {
         "placeId": "pein",
         "origin": "source",
@@ -525,7 +590,11 @@
       "entryEvent": "ev-sachiu-entry",
       "sites": [],
       "exits": [
-        "rt-lop-sachiu"
+        "rt-camul-sachiu",
+        "rt-lop-sachiu",
+        "rt-sachiu-campichu",
+        "rt-sachiu-chandu",
+        "rt-sachiu-etzina"
       ],
       "lore": {
         "origin": "authored"
@@ -567,7 +636,13 @@
       "tier": "station",
       "entryEvent": "ev-samara-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cail-samara",
+        "rt-java-major-samara",
+        "rt-samara-chamba",
+        "rt-samara-mien",
+        "rt-samara-pentam"
+      ],
       "lore": {
         "origin": "authored"
       },
@@ -597,7 +672,12 @@
         "ev-samarcanda-b",
         "ev-samarcanda-c"
       ],
-      "exits": [],
+      "exits": [
+        "rt-balc-samarcanda",
+        "rt-bochara-samarcanda",
+        "rt-samarcanda-cascar",
+        "rt-samarcanda-sapurgan"
+      ],
       "lore": {
         "placeId": "samarcan",
         "origin": "source",
@@ -641,7 +721,13 @@
       "tier": "town",
       "entryEvent": "ev-sapurgan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-balc-sapurgan",
+        "rt-bochara-sapurgan",
+        "rt-merva-sapurgan",
+        "rt-samarcanda-sapurgan",
+        "rt-sapurgan-taican"
+      ],
       "lore": {
         "placeId": "sapurgan",
         "origin": "source",
@@ -677,7 +763,12 @@
       "tier": "city",
       "entryEvent": "ev-taican-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-badashan-taican",
+        "rt-balc-taican",
+        "rt-cabul-taican",
+        "rt-sapurgan-taican"
+      ],
       "lore": {
         "placeId": "taican",
         "origin": "source",
@@ -719,7 +810,12 @@
       "tier": "town",
       "entryEvent": "ev-yarcan-entry",
       "sites": [],
-      "exits": [],
+      "exits": [
+        "rt-cascar-yarcan",
+        "rt-cotan-yarcan",
+        "rt-keshimur-yarcan",
+        "rt-pein-yarcan"
+      ],
       "lore": {
         "placeId": "yarcan",
         "origin": "source",
