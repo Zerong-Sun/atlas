@@ -2,7 +2,8 @@
 
 **环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions.**
 
-基于 [`docs/GDD.md`](docs/GDD.md)（2.0 完整策划案）实现的游戏版本：**占卜不是查看结果的按钮，而是你的移动方式、资源系统与叙事之笔。**
+当前可玩实现基于 **GDD 2.0 千载行纪**（[`docs/archive/GDD-2.0-divination.md`](docs/archive/GDD-2.0-divination.md)）：**占卜不是查看结果的按钮，而是你的移动方式、资源系统与叙事之笔。**
+[`docs/GDD.md`](docs/GDD.md) 是下一阶段《远行之书》v3.0 开放世界规划，尚未完全落地。
 视觉方向「墨金曜夜」：漆黑夜空 × 金箔宋体 × 朱砂，Balatro 式卡牌手感。
 
 ## 两大模式 Two modes
@@ -30,7 +31,8 @@ npx serve .
 ```text
 fatequest/
 ├── index.html / manifest.webmanifest / sw.js
-├── docs/GDD.md            # 2.0 策划案（本实现的蓝图）
+├── docs/GDD.md            # v3.0 《远行之书》规划（进行中）
+├── docs/archive/          # GDD 2.0 等已实现蓝图归档
 ├── assets/art/            # ← 你的美术素材放这里（见 ART_BRIEF.md，缺图自动回退 emoji）
 ├── css/style.css          # 「墨金曜夜」设计系统 + 全部动效
 ├── scripts/               # 校验 / 生成 outcomes 与 quest-story 目录

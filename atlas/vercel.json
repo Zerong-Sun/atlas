@@ -3,6 +3,9 @@
   "buildCommand": "npm run build:web",
   "outputDirectory": "apps/web/dist",
   "framework": null,
+  "git": {
+    "deploymentEnabled": false
+  },
   "rewrites": [
     {
       "source": "/((?!api/).*)",

@@ -1,7 +1,8 @@
 # Atlas（诸象）— 归档参考
 
 > **状态：短期冻结。** 本目录是完整的诸象 monorepo，供同仓库 [`fatequest/`](../fatequest/) 人工对照引擎、方法元数据与 UI；**不与 FateQuest 共享构建或运行时依赖。**  
-> 仓库主入口见根目录 [`README.md`](../README.md)。若仍部署诸象 Web，请在 Vercel 将 **Root Directory** 设为 `atlas`。
+> 仓库主入口见根目录 [`README.md`](../README.md)。  
+> **Vercel 暂关：** `vercel.json` 已设 `git.deploymentEnabled: false`；线上站点如需下线，在 [Vercel Dashboard](https://vercel.com/dashboard) 对该项目执行 Pause。项目完成后再重新接入。
 
 **面向全球文明的命理、占卜、占梦与预测方法对照应用。**
 

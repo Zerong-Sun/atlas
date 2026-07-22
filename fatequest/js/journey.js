@@ -323,6 +323,12 @@ FQ.J.modeOK = function (t) {
   return { ok: true };
 };
 FQ.J.modeDays = (e, t) => Math.max(1, Math.round(e.days * t.dayMul));
+/* the conveyance's painted plate — the same one the picker renders */
+FQ.J.modeArt = function (glyph) {
+  const stem = FQ.emoStem ? FQ.emoStem(glyph) : (FQ.EMO && FQ.EMO[glyph]);
+  if (!stem) return null;
+  return "assets/art/" + ((FQ.EMO_ALIAS && FQ.EMO_ALIAS[stem]) || stem) + ".webp";
+};
 FQ.J.pickRoute = function (key) {
   const j = FQ.J.ensure();
   const e = FQ.J.chapter().edges.find(x => FQ.J.edgeKey(x) === key);
@@ -784,7 +790,9 @@ FQ.J.travelTo = function (key, modeId) {
   /* no mode chosen yet → let the traveler pick their conveyance first */
   if (!modeId) return FQ.J.pickRoute(key);
   const mode = FQ.TRANSPORT.find(t => t.id === modeId) || FQ.TRANSPORT[1];
-  if (!FQ.J.modeOK(mode).ok || j.coins < mode.coin) return;
+  const gate = FQ.J.modeOK(mode);
+  if (!gate.ok) { FQ.toast("🔒 " + FQ.bi(gate, "whyZh", "whyEn")); return; }
+  if (j.coins < mode.coin) { FQ.toast(FQ.lang === "zh" ? "盘缠不足，另择舟车" : "Not enough coin for that fare"); return; }
   /* the fare, and what the wondrous ones ask instead of coin */
   if (mode.coin) j.coins -= mode.coin;
   if (mode.need && mode.need.dust) FQ.spendDust(mode.need.dust);
@@ -870,7 +878,24 @@ FQ.J.runTravel = function () {
   const marker = document.getElementById("jmarker");
   if (!c || !svg || !marker) return;
   const a = FQ.J.node(c.e.from), b = FQ.J.node(c.e.to);
-  marker.textContent = c.mode ? c.mode.ic : "🐪";
+  /* the party wears the very plate the conveyance list showed */
+  const img = document.getElementById("jmk-img");
+  const txt = document.getElementById("jmk-txt");
+  const glyph = c.mode ? c.mode.ic : "🐪";
+  const src = FQ.J.modeArt(glyph);
+  if (src && img) {
+    img.setAttributeNS("http://www.w3.org/1999/xlink", "href", src);
+    img.setAttribute("href", src);
+    img.style.display = "";
+    if (txt) txt.textContent = "";
+  } else if (txt) {
+    txt.textContent = glyph;
+    if (img) img.style.display = "none";
+  }
+  const place = (x, y) => {
+    if (img) { img.setAttribute("x", x - 15); img.setAttribute("y", y - 15); }
+    if (txt) { txt.setAttribute("x", x - 10); txt.setAttribute("y", y + 6); }
+  };
   const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - 18;
   const posAt = t => [
     (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * mx + t * t * b.x,
@@ -892,7 +917,7 @@ FQ.J.runTravel = function () {
       let k = from + (1 - from) * Math.min(1, (performance.now() - start) / dur);
       if (c.skipped) k = stops.length ? stops[0] : 1;
       const [x, y] = posAt(k);
-      marker.setAttribute("x", x - 10); marker.setAttribute("y", y + 6);
+      place(x, y);
       if (!c.skipped) FQ.cam.follow(svg, x, y, 340);
       if (stops.length && k >= stops[0] - 0.001) {
         FQ.J.showEncounter(c.encounters[c.idx]);

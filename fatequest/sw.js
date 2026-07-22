@@ -1,15 +1,21 @@
-/* FateQuest 2.0 service worker — network-first for the shell (dev-friendly),
+/* FateQuest service worker — network-first for the shell (dev-friendly),
    cache fallback for offline play. Art in assets/art/ is cached as it loads. */
-const CACHE = "fatequest-v1";
+const CACHE = "fatequest-v2";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
   "./js/i18n.js", "./js/data-tarot.js", "./js/data-hexagrams.js",
-  "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-mentors.js", "./js/data-scenes.js", "./js/scene.js",
-  "./js/data-misc.js", "./js/engines.js", "./js/quest.js",
-  "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
-  "./js/app.js", "./js/juice.js",
-  "./js/data-journey.js", "./js/map.js", "./js/journey.js",
+  "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-mentors.js",
+  "./js/data-scenes.js", "./js/data-misc.js",
+  "./js/data-lore.js", "./js/data-marco-lore.js", "./js/data-lore-zh-trunk.js",
+  "./js/data-quests-stories.js",
+  "./js/engines.js", "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
+  "./js/app.js", "./js/juice.js", "./js/scene.js", "./js/quest.js",
+  "./js/data-journey.js", "./js/data-journey-extra.js", "./js/data-secret-paths.js",
+  "./js/outcomes/lots-expanded.js", "./js/outcomes/outcome-keys.js",
+  "./js/outcomes/marco-chr.js", "./js/outcomes/marco-isl.js",
+  "./js/outcomes/marco-con.js", "./js/outcomes/marco-mazu.js",
+  "./js/map.js", "./js/journey.js",
   "./js/data-tower.js", "./js/tower.js",
   "./assets/art/ART_EMOJI_MAP.json"
 ];

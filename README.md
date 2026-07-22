@@ -27,4 +27,6 @@ npm install
 npm run dev:web
 ```
 
-完整文档与命令见 [`atlas/README.md`](atlas/README.md)。若继续部署诸象到 Vercel，请将项目 **Root Directory** 设为 `atlas`。
+完整文档与命令见 [`atlas/README.md`](atlas/README.md)。
+
+> **部署暂关：** Vercel 自动部署已在 `atlas/vercel.json` 关闭（`git.deploymentEnabled: false`）。项目完成后再重新接入。

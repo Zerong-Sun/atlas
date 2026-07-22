@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  validate:
+  validate-atlas:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,3 +26,16 @@ jobs:
       - run: npm run corpus:ingest:dry-run
       - run: npm run corpus:embed:dry-run
       - run: npm run test -w @atlas/api-core
+
+  validate-fatequest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fatequest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: node scripts/validate-outcomes.mjs
+      - run: node scripts/smoke-outcomes.mjs
