@@ -14,8 +14,13 @@ function loadFQ() {
   const ctx = { window, FQ: window.FQ, console };
   vm.createContext(ctx);
   const preload = "var FQ = window.FQ;\n";
-  for (const f of ["data-tarot.js", "data-hexagrams.js", "data-misc.js", "data-lore.js", "data-journey.js"]) {
-    vm.runInContext(preload + fs.readFileSync(path.join(JS, f), "utf8"), ctx);
+  for (const f of [
+    "data-tarot.js", "data-hexagrams.js", "data-misc.js", "data-lore.js",
+    "data-marco-lore.js", "data-journey.js", "data-journey-extra.js"
+  ]) {
+    const p = path.join(JS, f);
+    if (!fs.existsSync(p)) continue;
+    vm.runInContext(preload + fs.readFileSync(p, "utf8"), ctx);
     ctx.FQ = ctx.window.FQ;
   }
   return ctx.window.FQ;
@@ -263,16 +268,57 @@ function omenFor(type, key, node) {
   return { omenZh: "征兆已显。", omenEn: "The omen is clear." };
 }
 
-function storyFor(val, node, key, lore) {
-  const h = hash(node.id + key + val);
-  const lineZh = pick(STORY[val].zh, h);
-  const lineEn = pick(STORY[val].en, h);
-  const flavorZh = lore.noteZh ? lore.noteZh.slice(0, 28) : "";
-  const flavorEn = lore.noteEn ? lore.noteEn.slice(0, 50) : "";
-  return {
-    storyZh: `在${node.zh}，${lineZh}${flavorZh ? "——此地：" + flavorZh + "…" : ""}`,
-    storyEn: `At ${node.en}, ${lineEn}${flavorEn ? " — here: " + flavorEn + "…" : ""}`
-  };
+function cutAtSentence(text, maxChars) {
+  if (!text) return "";
+  const clean = String(text).replace(/\s+/g, " ").trim();
+  if (clean.length <= maxChars) return clean;
+  const slice = clean.slice(0, maxChars);
+  const m = slice.match(/^[\s\S]*?[.!?。](?=\s|$)/);
+  if (m && m[0].length > maxChars * 0.4) return m[0].trim();
+  const sp = slice.lastIndexOf(" ");
+  return (sp > 48 ? slice.slice(0, sp) : slice).trim();
+}
+
+function storyFor(val, node, key) {
+  const h = hash(node.id + "|" + key + "|" + val);
+  const beatZh = pick(STORY[val].zh, h);
+  const beatEn = pick(STORY[val].en, h);
+  const place = (typeof FQ.lorePlace === "function") ? FQ.lorePlace(node.id) : null;
+  const band = (place && place.band) || ({
+    chr: "europe", isl: "west_asia", con: "china", mazu: "maritime_asia"
+  }[node.region] || "china");
+  const pool = (typeof FQ.loreStoriesForBand === "function")
+    ? FQ.loreStoriesForBand(band)
+    : [];
+  const tale = pool.length ? pool[h % pool.length] : null;
+
+  let storyZh;
+  let storyEn;
+  let lore = null;
+
+  if (place) {
+    const zhLead = place.bodyZh || "";
+    const enBody = place.excerptEn || cutAtSentence(place.bodyEn, 720);
+    storyZh = `在${node.zh}，${beatZh}\n\n${zhLead}`;
+    storyEn = `At ${node.en}, ${beatEn}\n\n${enBody}`;
+    lore = { placeId: place.id, storyId: tale ? tale.id : null, origin: "source" };
+  } else if (tale) {
+    storyZh = `在${node.zh}，${beatZh}\n\n${tale.bodyZh || ""}`;
+    storyEn = `At ${node.en}, ${beatEn}\n\n${tale.excerptEn || cutAtSentence(tale.bodyEn, 720)}`;
+    lore = { placeId: null, storyId: tale.id, origin: "source" };
+  } else {
+    const civ = (FQ.LORE_REGION && FQ.LORE_REGION[node.region]) || {};
+    const noteZh = cutAtSentence(civ.notesZh || civ.zhDesc || "", 120);
+    const noteEn = cutAtSentence(civ.notesEn || civ.enDesc || "", 220);
+    storyZh = `在${node.zh}，${beatZh}${noteZh ? "\n\n" + noteZh : ""}`;
+    storyEn = `At ${node.en}, ${beatEn}${noteEn ? "\n\n" + noteEn : ""}`;
+    lore = { placeId: null, storyId: null, origin: "authored" };
+  }
+
+  /* Prefer attaching a full story chapter when available (complete script hook) */
+  if (tale && lore) lore.storyId = tale.id;
+
+  return { storyZh, storyEn, lore };
 }
 
 function keysFor(type) {
@@ -305,19 +351,20 @@ function keysFor(type) {
 }
 
 function buildNode(node) {
-  const lore = loreBits(node.region);
   const table = {};
   for (const key of keysFor(node.gate.type)) {
     const val = valenceFrom(key, node.gate.type);
     const omen = omenFor(node.gate.type, key, node);
-    const story = storyFor(val, node, key, lore);
-    table[key] = {
+    const story = storyFor(val, node, key);
+    const entry = {
       omenZh: omen.omenZh,
       omenEn: omen.omenEn,
       storyZh: story.storyZh,
       storyEn: story.storyEn,
       fx: fxFor(val, node, key)
     };
+    if (story.lore) entry.lore = story.lore;
+    table[key] = entry;
   }
   return table;
 }

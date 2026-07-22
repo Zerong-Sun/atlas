@@ -105,61 +105,6 @@ FQ.J.mapSVG = function () {
     <canvas id="jfog" class="jfog"></canvas>
   </div>`;
 };
-/* the 1.0 flat map, kept for reference/fallback */
-FQ.J.mapSVGLegacy = function () {
-  const ch = FQ.J.chapter();
-  const j = FQ.J.ensure();
-  const R = FQ.JOURNEY_REGIONS;
-  const regions = `
-    <path d="M20,40 Q120,20 240,70 L250,230 Q140,260 30,220 Z" fill="${R.chr.color}" opacity="0.13"/>
-    <path d="M250,70 Q340,110 420,240 L430,330 Q330,330 250,230 Z" fill="${R.isl.color}" opacity="0.13"/>
-    <path d="M420,40 Q600,20 780,60 L790,230 Q640,210 430,240 Z" fill="${R.con.color}" opacity="0.13"/>
-    <path d="M430,240 Q620,250 790,230 L790,400 Q560,410 430,330 Z" fill="${R.mazu.color}" opacity="0.15"/>
-    <text x="90" y="60" class="jrl" fill="${R.chr.color}">${FQ.bi(R.chr, "zh", "en")}</text>
-    <text x="300" y="308" class="jrl" fill="${R.isl.color}">${FQ.bi(R.isl, "zh", "en")}</text>
-    <text x="560" y="55" class="jrl" fill="${R.con.color}">${FQ.bi(R.con, "zh", "en")}</text>
-    <text x="590" y="390" class="jrl" fill="${R.mazu.color}">${FQ.bi(R.mazu, "zh", "en")}</text>`;
-  const deco = `
-    <g class="jdeco">
-      <path d="M470,120 l14,-20 14,20 M492,120 l12,-16 12,16" />
-      <path d="M120,300 q10,-8 20,0 q10,8 20,0 M150,320 q10,-8 20,0" />
-      <path d="M640,350 q10,-8 20,0 q10,8 20,0 M540,368 q10,-8 20,0" />
-      <circle cx="770" cy="330" r="20" /><path d="M770,312 v36 M752,330 h36 M757,317 l26,26 M783,317 l-26,26" />
-    </g>`;
-  /* edges */
-  const cur = j.at;
-  const nexts = FQ.J.gatePassed(cur) ? FQ.J.outEdges(cur).map(FQ.J.edgeKey) : [];
-  const edges = ch.edges.map(e => {
-    const a = FQ.J.node(e.from), b = FQ.J.node(e.to);
-    const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - 18;
-    const d = `M${a.x},${a.y} Q${mx},${my} ${b.x},${b.y}`;
-    const done = j.edgesDone.includes(FQ.J.edgeKey(e));
-    const open = nexts.includes(FQ.J.edgeKey(e));
-    return `<path d="${d}" class="${done ? "jroute-done" : open ? "jroute jroute-open" : "jroute"}"/>`;
-  }).join("");
-  /* nodes */
-  const nodes = ch.nodes.map(n => {
-    const visited = j.visited.includes(n.id);
-    const reachable = nexts.some(k => k.endsWith(">" + n.id));
-    const st = n.id === cur ? "cur" : visited ? "done" : reachable ? "next" : "lock";
-    const glyph = n.gate.type === "case" ? "❖" : visited && FQ.J.gatePassed(n.id) ? "✓" : n.type === "side" ? "✧" : "•";
-    return `
-      <g class="jn ${st}" onclick="FQ.J.tapNode('${n.id}')" style="cursor:${visited || reachable ? "pointer" : "default"}">
-        <circle cx="${n.x}" cy="${n.y}" r="12"/>
-        <text x="${n.x}" y="${n.y + 4}" class="jni">${glyph}</text>
-        <text x="${n.x}" y="${n.y - 19}" class="jnl">${FQ.bi(n, "zh", "en")}</text>
-      </g>`;
-  }).join("");
-  return `
-  <div class="jmapwrap" id="jmapwrap">
-    <svg viewBox="0 0 820 420" class="jmap" id="jmapsvg" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="4" width="812" height="412" rx="14" class="jparch"/>
-      ${regions}${deco}${edges}${nodes}
-      <text id="jmarker" x="-40" y="-40" font-size="20" style="pointer-events:none"></text>
-    </svg>
-    <canvas id="jfog" class="jfog"></canvas>
-  </div>`;
-};
 FQ.J.gatePassed = id => { const j = FQ.J.ensure(); return !!j.gates[id]; };
 FQ.J.attachFog = function () {
   const cv = document.getElementById("jfog");
@@ -203,7 +148,9 @@ FQ.SCREENS.journey = function () {
         <span class="pill">🕯️ <b>${FQ.J.favorTotal(j)}</b></span>
         <span class="pill dust">✨ <b>${FQ.state.stardust}</b></span>
         <button class="pill skillbtn" onclick="FQ.nav('journeyBag')">🎒 ${FQ.J.bagCount(j)}/${ch.bagSlots}</button>
-        <button class="pill skillbtn" onclick="FQ.nav('journeyLog')">📜 ${j.log.length}</button>
+        <button class="pill skillbtn" onclick="FQ.J.openChronicle('pages')">📜 ${j.log.length}</button>
+        <button class="pill skillbtn" onclick="FQ.J.openChronicle('quests')">❗ ${Object.keys(j.quests || {}).length}</button>
+        <button class="pill skillbtn" onclick="FQ.J.openChronicle('stories')">🗣️ ${(j.stories || []).length}</button>
         ${completed ? `<span class="pill gold">✓ ${FQ.t("journey.done")}</span>` : ""}
       </div>
       ${compChips ? `<div class="jres">${compChips}</div>` : ""}
@@ -428,7 +375,9 @@ FQ.J.commit = function () {
     case "diceHouse": pending = FQ.rollAstroDice(); quality = [1, 9, 10].includes(pending.house.n) ? 1 : -1; break;
     case "coinYang": pending = FQ.tossCoinSeq(FQ.COIN_SEQ_LEN || 4); quality = pending.yang ? 1 : -1; break;
     case "meihua": pending = FQ.meihua();
-      quality = (pending.primary.lower.id === "kan" || pending.primary.upper.id === "kan") ? 1 : 0; break;
+      /* omen quality from hex valence sets (aligned with gen-outcomes), not kan-only */
+      quality = [1, 11, 14, 19, 42, 55].includes(pending.primary.n) ? 1
+        : [23, 29, 47, 12, 6, 36].includes(pending.primary.n) ? -1 : 0; break;
     case "ichingYang": pending = [0, 0, 0, 0, 0, 0].map(() => FQ.tossCoins());
       quality = pending.filter(t => t.yang).length >= 3 ? 1 : -1; break;
     case "lot": pending = FQ.drawLot(); quality = pending.g === "下下" ? -1 : (String(pending.g).startsWith("上") ? 1 : 0); break;
@@ -552,7 +501,8 @@ FQ.J.attempt = function () {
   const oc = FQ.J.applyOutcome(n, key);
   if (oc) {
     html += `<div class="oc-omen reading">${FQ.bi(oc, "omenZh", "omenEn")}</div>`;
-    html += `<div class="oc-story">${FQ.bi(oc, "storyZh", "storyEn")}</div>`;
+    html += `<div class="oc-story reading">${FQ.esc(FQ.bi(oc, "storyZh", "storyEn")).replace(/\n/g, "<br>")}</div>`;
+    html += FQ.J.outcomeLoreHTML(oc);
     html += FQ.J.fxSummaryHTML(oc.fx || []);
   }
   FQ.AU.play("chime"); FQ.buzz(18);
@@ -605,6 +555,34 @@ FQ.J.takeEdge = function () {
 };
 
 /* ---------- outcome matrix apply ---------- */
+FQ.J.outcomeLoreHTML = function (oc) {
+  if (!oc || !oc.lore) return "";
+  const bits = [];
+  if (oc.lore.placeId) {
+    bits.push(`<button type="button" class="btn ghost sm" onclick="FQ.J.openLoreDoc('place','${oc.lore.placeId}')">📖 ${FQ.t("journey.lore.fullPlace")}</button>`);
+  }
+  if (oc.lore.storyId) {
+    bits.push(`<button type="button" class="btn ghost sm" onclick="FQ.J.openLoreDoc('story','${oc.lore.storyId}')">📜 ${FQ.t("journey.lore.fullStory")}</button>`);
+  }
+  if (!bits.length) return "";
+  return `<div class="oc-lore-btns">${bits.join(" ")}</div><div id="oclore" class="oc-lore-full" hidden></div>`;
+};
+FQ.J.openLoreDoc = function (kind, id) {
+  const box = document.getElementById("oclore");
+  if (!box) return;
+  const doc = kind === "story" ? FQ.loreStory(id) : FQ.lorePlace(id);
+  if (!doc) { FQ.toast(FQ.t("journey.lore.empty")); return; }
+  const title = FQ.bi(doc, "zh", "en") || doc.title || id;
+  const body = FQ.lang === "zh"
+    ? ((doc.bodyZh || "") + (doc.bodyEn ? "\n\n——\n\n" + doc.bodyEn : ""))
+    : (doc.bodyEn || doc.bodyZh || "");
+  const ref = doc.source && doc.source.chapterId
+    ? `<div class="dim small">Yule · ${FQ.esc(doc.source.chapterId)}</div>`
+    : "";
+  box.hidden = false;
+  box.innerHTML = `<div class="jlday">${FQ.esc(title)}</div>${ref}<div class="reading jltext">${FQ.esc(body).replace(/\n/g, "<br>")}</div>`;
+  FQ.AU && FQ.AU.play && FQ.AU.play("card");
+};
 FQ.J.applyOutcome = function (node, key) {
   const oc = FQ.resolveOutcome(node.id, key);
   if (!oc) return null;
@@ -659,7 +637,8 @@ FQ.J.dreamPick = function (oi) {
   FQ.gainXP(5);
   document.getElementById("jgatezone").innerHTML = `
     <div class="oc-omen reading">${oc ? FQ.bi(oc, "omenZh", "omenEn") : ""}</div>
-    <div class="oc-story reading">${oc ? FQ.bi(oc, "storyZh", "storyEn") : ""}</div>
+    <div class="oc-story reading">${oc ? FQ.esc(FQ.bi(oc, "storyZh", "storyEn")).replace(/\n/g, "<br>") : ""}</div>
+    ${oc ? FQ.J.outcomeLoreHTML(oc) : ""}
     ${FQ.J.fxSummaryHTML(oc && oc.fx)}
     <div class="center"><button class="btn" onclick="FQ.nav('journey')">${FQ.t("journey.travel")}</button></div>`;
 };
@@ -773,14 +752,21 @@ FQ.J.fx = function (list) {
       }
       case "story": {
         if (op.v && !j.stories.includes(op.v)) j.stories.push(op.v);
-        setTimeout(() => FQ.toast("📜 " + FQ.t("journey.story.new")), 700);
+        const S = FQ.storyOf(op.v);
+        const title = FQ.bi(S, "zh", "en");
+        FQ.J.journalNote(S.ic || "📜", title);
+        setTimeout(() => FQ.toast((S.ic || "📜") + " " + FQ.t("journey.story.new") + " · " + title), 700);
         break;
       }
       case "quest": {
         if (!j.quests) j.quests = {};
         if (op.act === "complete") j.quests[op.v] = "done";
         else j.quests[op.v] = "active";
-        setTimeout(() => FQ.toast((op.act === "complete" ? "✅ " : "❗ ") + FQ.t("journey.quest." + (op.act === "complete" ? "done" : "new"))), 800);
+        const Q = FQ.questOf(op.v);
+        const title = FQ.bi(Q, "zh", "en");
+        const done = op.act === "complete";
+        FQ.J.journalNote(done ? "✅" : "❗", title);
+        setTimeout(() => FQ.toast((done ? "✅ " : "❗ ") + FQ.t("journey.quest." + (done ? "done" : "new")) + " · " + title), 800);
         break;
       }
     }
@@ -985,7 +971,17 @@ FQ.J.encPick = function (i) {
       case "tarot1": { const d = FQ.drawTarot(1)[0]; pass = !d.reversed; glyph = d.card.sym + " " + FQ.bi(d.card, "zh", "en") + (d.reversed ? FQ.t("tarot.rev") : ""); FQ.collect("tarot", d.card.id, FQ.bi(d.card, "zh", "en")); break; }
       case "diceElem": { const r = FQ.rollAstroDice(); pass = ["土", "火"].includes(r.sign.elemZh); glyph = r.sign.sym + " " + FQ.bi(r.sign, "zh", "en"); break; }
       case "diceAny": { const r = FQ.rollAstroDice(); pass = ["木星", "金星", "太阳"].includes(r.planet.zh) || [5, 9, 10].includes(r.house.n); glyph = r.planet.sym + " " + FQ.bi(r.planet, "zh", "en"); break; }
-      case "meihuaWater": { const m = FQ.meihua(); FQ.collectHexCast(m); const ids = [m.primary.lower.id, m.primary.upper.id]; pass = ids.includes("kan") || ids.includes("gen"); glyph = m.primary.lower.sym + m.primary.upper.sym + " " + FQ.bi(m.primary, "zh", "en"); break; }
+      case "meihua":
+      case "meihuaWater": {
+        const m = FQ.meihua();
+        FQ.collectHexCast(m);
+        const ids = [m.primary.lower.id, m.primary.upper.id];
+        const need = (o.ritual.passWhen && o.ritual.passWhen.trigrams) ||
+          (o.ritual.method === "meihuaWater" ? ["kan"] : []);
+        pass = need.length ? need.some(t => ids.includes(t)) : true;
+        glyph = m.primary.lower.sym + m.primary.upper.sym + " " + FQ.bi(m.primary, "zh", "en");
+        break;
+      }
     }
     const branch = special && o.special ? o.special : pass ? o.pass : o.fail;
     if (pass) { FQ.AU.play("chime"); FQ.buzz(15); } else FQ.AU.play(special ? "hush" : "bad");
@@ -1205,29 +1201,86 @@ FQ.SCREENS.journeyBag = function () {
     <div class="baggrid">${slots}</div>`;
 };
 
-/* ---------- journal (§4.6 行者日志) ---------- */
+/* ---------- journal (§4.6 行者日志) + quest/story readback ---------- */
+FQ.J._logTab = "pages";
+FQ.J.openChronicle = function (tab) {
+  FQ.J._logTab = tab || "pages";
+  FQ.nav("journeyLog");
+};
+FQ.J.chronicleTabsHTML = function (tab) {
+  const j = FQ.J.ensure();
+  const qn = Object.keys(j.quests || {}).length;
+  const sn = (j.stories || []).length;
+  const mk = (id, label, n) =>
+    `<button class="chtab ${tab === id ? "on" : ""}" onclick="FQ.J.openChronicle('${id}')">${label}${n != null ? " · " + n : ""}</button>`;
+  return `<div class="chshelf jlog-tabs">${mk("pages", "📜 " + FQ.t("journey.log"), j.log.length)}${mk("quests", "❗ " + FQ.t("journey.quests"), qn)}${mk("stories", "🗣️ " + FQ.t("journey.stories"), sn)}</div>`;
+};
+FQ.J.questsHTML = function () {
+  const j = FQ.J.ensure();
+  const ids = Object.keys(j.quests || {});
+  if (!ids.length) return `<div class="panel dim center">${FQ.t("journey.quests.empty")}</div>`;
+  const active = ids.filter(id => j.quests[id] === "active");
+  const done = ids.filter(id => j.quests[id] === "done");
+  const render = (id, st) => {
+    const Q = FQ.questOf(id);
+    const place = Q.at && FQ.J.node(Q.at);
+    const where = place ? FQ.bi(place, "zh", "en") : "";
+    return `<div class="panel jlpage jquest ${st}">
+      <div class="jlday">${Q.ic || "❗"} ${st === "done" ? "✅ " : ""}${FQ.esc(FQ.bi(Q, "zh", "en"))}</div>
+      ${where ? `<div class="dim small">${FQ.t("journey.quests.at", { p: where })}</div>` : ""}
+      <div class="jltext reading">${FQ.esc(FQ.bi(Q, "bodyZh", "bodyEn"))}</div>
+    </div>`;
+  };
+  return [
+    active.length ? `<h3 class="small gold">${FQ.t("journey.quests.active")}</h3>` + active.map(id => render(id, "active")).join("") : "",
+    done.length ? `<h3 class="small gold">${FQ.t("journey.quests.doneList")}</h3>` + done.map(id => render(id, "done")).join("") : ""
+  ].join("");
+};
+FQ.J.storiesHTML = function () {
+  const j = FQ.J.ensure();
+  const ids = j.stories || [];
+  if (!ids.length) return `<div class="panel dim center">${FQ.t("journey.stories.empty")}</div>`;
+  return ids.slice().reverse().map((id, i) => {
+    const S = FQ.storyOf(id);
+    const civ = (FQ.JOURNEY_REGIONS && FQ.JOURNEY_REGIONS[S.civ]) || null;
+    const tag = civ ? FQ.bi(civ, "zh", "en") : (S.civ || "");
+    return `<div class="panel jlpage jstory" style="animation-delay:${i * 40}ms">
+      <div class="jlday">${S.ic || "📜"} ${FQ.esc(FQ.bi(S, "zh", "en"))}</div>
+      <div class="dim small">${FQ.esc(tag)}</div>
+      <div class="jltext reading">${FQ.esc(FQ.bi(S, "bodyZh", "bodyEn"))}</div>
+    </div>`;
+  }).join("");
+};
 FQ.SCREENS.journeyLog = function () {
   const j = FQ.J.ensure();
-  const pages = j.log.map((L, i) => {
-    const a = FQ.J.node(L.a), b = FQ.J.node(L.b);
-    const KIND = { land: { zh: "陆", en: "overland" }, sea: { zh: "海", en: "sea" }, river: { zh: "河", en: "river" } };
-    const head = FQ.tpl(FQ.JOURNAL_T.depart, { d: L.d + 1, a: FQ.bi(a, "zh", "en"), b: FQ.bi(b, "zh", "en"), k: FQ.bi(KIND[L.k], "zh", "en") });
-    const wx = FQ.bi(FQ.JOURNAL_T.wx[L.wx] || FQ.JOURNAL_T.wx.clear, "zh", "en");
-    const arr = FQ.tpl(FQ.JOURNAL_T.arrive, { n: L.n, b: FQ.bi(b, "zh", "en") });
-    const evs = (L.evs || []).map(e => `<div class="jlev">${e.ic} ${FQ.esc(e.line)}</div>`).join("");
-    return `
+  const tab = FQ.J._logTab || "pages";
+  let body = "";
+  if (tab === "quests") body = FQ.J.questsHTML();
+  else if (tab === "stories") body = FQ.J.storiesHTML();
+  else {
+    const pages = j.log.map((L, i) => {
+      const a = FQ.J.node(L.a), b = FQ.J.node(L.b);
+      const KIND = { land: { zh: "陆", en: "overland" }, sea: { zh: "海", en: "sea" }, river: { zh: "河", en: "river" } };
+      const head = FQ.tpl(FQ.JOURNAL_T.depart, { d: L.d + 1, a: FQ.bi(a, "zh", "en"), b: FQ.bi(b, "zh", "en"), k: FQ.bi(KIND[L.k], "zh", "en") });
+      const wx = FQ.bi(FQ.JOURNAL_T.wx[L.wx] || FQ.JOURNAL_T.wx.clear, "zh", "en");
+      const arr = FQ.tpl(FQ.JOURNAL_T.arrive, { n: L.n, b: FQ.bi(b, "zh", "en") });
+      const evs = (L.evs || []).map(e => `<div class="jlev">${e.ic} ${FQ.esc(e.line)}</div>`).join("");
+      return `
       <div class="panel jlpage" style="animation-delay:${i * 60}ms">
         <div class="jlday">${FQ.t("journey.log.page", { n: i + 1 })} · 📅 ${L.d + 1}–${L.d + L.n}</div>
         <div class="jltext">${head} ${wx} ${arr}</div>
         ${evs}
       </div>`;
-  }).join("");
+    }).join("");
+    body = (pages || `<div class="panel dim center">${FQ.t("journey.log.empty")}</div>`) +
+      (j.log.length ? `<button class="btn ghost block" onclick="FQ.J.shareLog()">📋 ${FQ.t("journey.log.share")}</button>` : "");
+  }
   document.getElementById("app").innerHTML = `
     <button class="back" onclick="FQ.nav('journey')">←</button>
-    <h2>📜 ${FQ.t("journey.log")}</h2>
-    <p class="dim small">${FQ.t("journey.log.tip")}</p>
-    ${pages || `<div class="panel dim center">${FQ.t("journey.log.empty")}</div>`}
-    ${j.log.length ? `<button class="btn ghost block" onclick="FQ.J.shareLog()">📋 ${FQ.t("journey.log.share")}</button>` : ""}`;
+    <h2>📜 ${FQ.t("journey.chronicle")}</h2>
+    <p class="dim small">${FQ.t("journey.chronicle.tip")}</p>
+    ${FQ.J.chronicleTabsHTML(tab)}
+    ${body}`;
 };
 FQ.J.shareLog = function () {
   const j = FQ.J.ensure();

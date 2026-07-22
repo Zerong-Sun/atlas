@@ -15,7 +15,8 @@ function load() {
   vm.createContext(ctx);
   const pre = "var FQ = window.FQ;\n";
   const files = [
-    "data-tarot.js", "data-hexagrams.js", "data-misc.js", "data-lore.js", "data-journey.js",
+    "data-tarot.js", "data-hexagrams.js", "data-misc.js", "data-lore.js", "data-marco-lore.js",
+    "data-journey.js", "data-journey-extra.js",
     "outcomes/lots-expanded.js", "outcomes/outcome-keys.js"
   ];
   for (const f of files) {

@@ -736,7 +736,8 @@ FQ.CHAPTERS = [{
       choices: [
         { zh: "雇向导绕行（−2 盘缠）", en: "Pay the guide (−2 coin)", fx: [{ op: "coins", v: -2 }],
           rZh: "小路贴着背风崖，一日便过了山。", rEn: "His path hugs the lee cliff; the mountain is behind you in a day." },
-        { zh: "梅花起卦寻径", en: "Plum Blossom for a path", ritual: { method: "meihuaWater" },
+        { zh: "梅花起卦寻径", en: "Plum Blossom for a path",
+          ritual: { method: "meihua", passWhen: { trigrams: ["kan"] } },
           pass: { fx: [], rZh: "卦中见坎！雪下有溪，沿溪谷正好穿过垭口。", rEn: "Water in the cast! A stream runs beneath the snow, and its valley threads the pass." },
           fail: { fx: [{ op: "days", v: 2 }], rZh: "卦不见水。只得等雪松动，误了两日。", rEn: "No water in the lines; you wait two days for the snow to settle." } }
       ] },
@@ -872,9 +873,10 @@ FQ.CHAPTERS = [{
       tZh: "绿洲市集上，玉商把羊脂白玉摆成一排：「西边来的客人——你识不识玉？识，我让价；不识，我照市价。」",
       tEn: "At an oasis market the jade-seller lines up mutton-fat white stones: 'Guest from the west — do you know jade? If you do, I drop the price. If not, market rate.'",
       choices: [
-        { zh: "梅花起卦辨真伪", en: "Plum Blossom to test authenticity", ritual: { method: "meihua" },
+        { zh: "梅花起卦辨真伪", en: "Plum Blossom to test authenticity",
+          ritual: { method: "meihua", passWhen: { trigrams: ["gen"] } },
           pass: { fx: [{ op: "coins", v: -2 }, { op: "goods", id: "glass", v: 1 }], rZh: "卦见艮——山中之玉。他认栽，半价出手。", rEn: "Mountain in the cast — jade of the hills. He yields at half price." },
-          fail: { fx: [{ op: "coins", v: -3 }], rZh: "卦象模糊。你仍买了一块——也许值，也许只是好看的石头。", rEn: "The cast is cloudy. You buy one anyway — worth it, or only a pretty stone." } },
+          fail: { fx: [{ op: "coins", v: -1 }], rZh: "卦中无艮。他摇头：「客官不识玉，市价不能动。」", rEn: "No Mountain. He shakes his head: 'Guest who cannot read jade pays market.'" } },
         { zh: "只看不买", en: "Look, do not buy", fx: [],
           rZh: "玉凉，心也凉。赶路要紧。", rEn: "Jade cool; heart cool. The road matters more." }
       ] }
@@ -997,10 +999,72 @@ FQ.CHAPTERS.push({
     { from: "ib-calicut", to: "ib-quanzhou", kind: "sea", days: 10, risk: 2, wx: "storm" }
   ],
   encounters: [],
-  case: { titleZh: "刺桐再会", titleEn: "Reunion at Zayton",
-    introZh: "（第二章内容由游记管线填充——本章为接口占位。）",
-    introEn: "(Chapter 2 content arrives via the travelogue pipeline — this is the interface skeleton.)",
-    methods: [], options: [] }
+  case: {
+    titleZh: "刺桐再会", titleEn: "Reunion at Zayton",
+    introZh: "你在刺桐港翻到一页威尼斯账本残纸——墨迹与你故乡的商号写法相同。港吏说，半年前有人在此换装登船西去；苏丹的使者却说，那人从未离开德里。两本游记在同一码头交叠：你要查明，那页账本是谁留下的，以及它指向一场遗失的贡礼、还是一场自愿的献祭。可借三种占法问事，每法可追问一次。",
+    introEn: "In Zayton harbor you find a torn Venetian ledger page — the merchant-mark matches your home tongue. A clerk says someone changed clothes here half a year ago and sailed west; the Sultan's envoy says that man never left Delhi. Two travelogues meet at one quay: learn who left the page, and whether it points to a lost tribute — or a willing offering. Consult three traditions; press each once further.",
+    freeClue: { ic: "📜", zh: "账本残页", en: "The Torn Ledger",
+      cZh: "残页上写着：「贡匣已封。钥匙两柄——女官一、主事一。风暴之后，匣空而漆完好。」字迹像威尼斯书记，又像有人故意模仿。",
+      cEn: "The scrap reads: 'Tribute casket sealed. Two keys — lady and steward. After the storm, casket empty, seal unbroken.' The hand looks Venetian — or like someone taught to look so.",
+      tags: ["船上", "守密"] },
+    methods: [
+      { id: "tarot", ic: "🔮", tags: ["自愿", "献祭"],
+        cZh: "塔罗再得「倒吊人」：同一牺牲母题——有人为众人交出贵重之物。",
+        cEn: "Again the Hanged Man: the same sacrifice motif — someone gave up treasure for many lives.",
+        fuZh: "追问「两本游记可会过？」——「恋人」正位：两道目光曾在同一盏船灯下相遇。",
+        fuEn: "Pressing 'did the two books meet?' — The Lovers upright: two gazes shared one ship-lantern.",
+        fuTags: ["人心"] },
+      { id: "iching", ic: "☯", tags: ["海中", "人心"],
+        cZh: "起卦得「既济」：事已成而须防终乱。珠或人，都曾「渡过」。",
+        cEn: "Ji Ji, After Completion: the crossing succeeded — yet endings still need care. Pearl or person, both have 'crossed.'",
+        fuZh: "追问变爻，之「未济」：真正的会合尚未写完——码头只是半页。",
+        fuEn: "The moving line yields Wei Ji: the true meeting is unfinished — the quay is only half a page.",
+        fuTags: ["非恶"] },
+      { id: "jiaobei", ic: "🌗", tags: ["海中", "非恶"],
+        cZh: "问天妃：「账本主人可还在刺桐？」——阴筊。再问「可已下海？」——圣筊。",
+        cEn: "Ask Mazu: 'Is the ledger's owner still in Zayton?' — Yin. 'Already at sea?' — Sheng.",
+        fuZh: "追问「此行是否为保全他人？」——圣筊连应。",
+        fuEn: "Pressing 'was it to shelter another?' — Sheng answers at once.",
+        fuTags: ["自愿"] },
+      { id: "astrodice", ic: "🎲", tags: ["守密", "船上"],
+        cZh: "水星 · 双鱼 · 第九宫：远行、译本、跨文化的讯息。有人在翻译两本书之间的沉默。",
+        cEn: "Mercury, Pisces, Ninth House: travel, translation, cross-cultural messages. Someone is translating the silence between two books.",
+        fuZh: "追问身份，木星入第一宫：来者是远行者本人，不是抄手。",
+        fuEn: "Pressing identity: Jupiter in the First — the traveler himself, not a copyist.",
+        fuTags: ["舵手"] },
+      { id: "dream", ic: "🌙", tags: ["海中", "献祭"],
+        cZh: "你梦见两艘船共一盏灯：一艘挂狮旗，一艘挂新月。灯灭时，一颗珠沉入共同的海。",
+        cEn: "You dream two ships share one lantern: lion-flag and crescent. When it dies, one pearl sinks into a shared sea.",
+        fuZh: "追问灯在何处——「在舵楼。两边的水手都认得那盏灯。」",
+        fuEn: "Where was the lantern? 'At the steering house. Sailors of both ships knew that light.'",
+        fuTags: ["舵手", "献祭"] }
+    ],
+    testimony: {
+      tebrizi: { needFavor: 2, ic: "🧿", tags: ["海中", "守密"],
+        cZh: "帖必烈摩挲残页：「星历上，两道行纪的交点只在刺桐——此处是天定的页缝。」",
+        cEn: "Tebrizi rubs the scrap: 'On the star-calendar the two itineraries meet only at Zayton — a seam heaven left in the page.'" },
+      lin: { needFavor: 2, ic: "⛵", tags: ["献祭", "人心"],
+        cZh: "林三娘问过船户：「有人用威尼斯口音买香，却把香灰倒进海里——像在还愿，不像在销赃。」",
+        cEn: "Lin asks the boat people: 'Someone with a Venetian accent bought incense and poured the ash into the sea — a vow repaid, not loot fenced.'" }
+    },
+    options: [
+      { id: "forgery", req: ["船上", "守密"],
+        zh: "账本是港吏伪造，想嫁祸远行人", en: "A harbor clerk forged the ledger to blame a traveler",
+        grade: "下下", gradeEn: "Ill", score: 0,
+        endZh: "港吏下狱，残页却对不上任何案卷。真相更远了——你只撕开了表皮。",
+        endEn: "The clerk is jailed; the scrap matches no case file. The truth retreats — you only tore the skin." },
+      { id: "same-pearl", req: ["舵手", "献祭", "自愿", "海中"],
+        zh: "两本游记写的是同一场献珠：风暴之夜，有人把贡珠投给了海", en: "Both books record the same offering: in the storm, someone gave the tribute pearl to the sea",
+        grade: "上上", gradeEn: "Supreme", score: 3,
+        endZh: "你把残页与马可章的断案笔记对读，灯与珠的意象重合。刺桐的史官记下一句：「西来客与南来客，曾在同一盏舵灯下，读懂同一次牺牲。」两本书终于在码头上合订。",
+        endEn: "You set the scrap beside Marco's case notes; lantern and pearl rhyme. Zayton's chronicler adds one line: 'A guest from the west and a guest from the south once read the same sacrifice under one steering-lamp.' The two books bind at the quay." },
+      { id: "two-hands", req: ["人心", "非恶"],
+        zh: "账本主人已离港——留下的是提醒，不是罪证", en: "The ledger's owner has sailed — what remains is a reminder, not proof of crime",
+        grade: "中平", gradeEn: "Even", score: 1,
+        endZh: "你查清了「谁曾在此」，却没查清「珠去了哪里」。码头风大，残页又皱了一些——故事还在海上。",
+        endEn: "You learn who stood here, not where the pearl went. The harbor wind wrinkles the scrap again — the story is still at sea." }
+    ]
+  }
 });
 
 /* journal sentence templates (§4.6) — {vars} filled by journey.js */

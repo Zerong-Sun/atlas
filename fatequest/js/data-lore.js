@@ -255,7 +255,13 @@ FQ.NODE_SUBREGION = {
 };
 
 FQ.loreForNode = function (nodeId) {
-  const n = (FQ.CHAPTERS && FQ.CHAPTERS[0] && FQ.CHAPTERS[0].nodes.find(x => x.id === nodeId));
+  let n = null;
+  if (FQ.CHAPTERS) {
+    for (const ch of FQ.CHAPTERS) {
+      n = (ch.nodes || []).find(x => x.id === nodeId);
+      if (n) break;
+    }
+  }
   const civ = n && FQ.LORE_REGION[n.region];
   const subKey = FQ.NODE_SUBREGION[nodeId];
   const sub = subKey && FQ.LORE_SUBREGION[subKey];

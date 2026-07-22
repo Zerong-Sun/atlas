@@ -252,16 +252,27 @@ FQ.MAP.render = function (opt) {
   /* beasts */
   const beasts = (M.beasts || []).map(b => FQ.MAP.beast(b.k, b.x, b.y, b.s || 1)).join("");
 
-  /* routes */
+  /* routes — secret (needPath) edges stay dim until unlocked, then gold-pulse */
   const cur = j.at;
   const nexts = FQ.J.gatePassed(cur) ? FQ.J.outEdges(cur).map(FQ.J.edgeKey) : [];
+  const unlocked = new Set(j.pathsUnlocked || []);
+  Object.keys(j.flags || {}).forEach(f => {
+    if (f.startsWith("path_")) unlocked.add(f.slice(5));
+  });
   const edges = ch.edges.map(e => {
     const a = FQ.J.node(e.from), b = FQ.J.node(e.to);
+    if (!a || !b) return "";
     const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - 18;
     const d = `M${a.x},${a.y} Q${mx},${my} ${b.x},${b.y}`;
     const done = j.edgesDone.includes(FQ.J.edgeKey(e));
     const open = nexts.includes(FQ.J.edgeKey(e));
-    return `<path d="${d}" class="${done ? "mp-route done" : open ? "mp-route open" : "mp-route"}"/>`;
+    const isSecret = !!e.needPath;
+    const secretOpen = isSecret && unlocked.has(e.needPath);
+    let cls = "mp-route";
+    if (done) cls += " done";
+    else if (open) cls += " open";
+    if (isSecret) cls += secretOpen || open || done ? " secret unlocked" : " secret locked";
+    return `<path d="${d}" class="${cls}" data-needpath="${e.needPath || ""}"/>`;
   }).join("");
 
   /* city vignettes */
