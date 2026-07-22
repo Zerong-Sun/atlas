@@ -58,7 +58,7 @@
 }
 ```
 
-**第一章需填约 75 条节点**（GDD §16.2），其中 `tier: metropolis` 的 **12 条主城**填全字段，其余按 `tier` 递减：`city` 免 `sites`，`town` 再免 `mentor`，`station` 只需 `id/name/band/coord/tier/exits/lore`。
+**第一章需填 102 条节点**（GDD §16.2，由 `tools/lore/build_cities.mjs` 生成），其中 `tier: metropolis` 的 **12 条主城**填全字段，其余按 `tier` 递减：`city` 免 `sites`，`town` 再免 `mentor`，`station` 只需 `id/name/band/coord/tier/exits/lore`。
 
 12 主城：大不里士、报达、忽鲁谟斯、巴里黑、撒马尔罕、喀什噶尔、于阗、罗卜、上都、大都、行在、刺桐。
 
@@ -270,7 +270,7 @@
 }
 ```
 
-**第一章需填 36 条探索点（12 主城 × 3）+ 约 75 条入城事件 + 约 40 条途中遭遇。**
+**第一章需填 36 条探索点（12 主城 × 3）+ 102 条入城事件 + 约 40 条途中遭遇。**
 
 入城事件覆盖全部节点——`station` 级只需一段短叙事，但**不可缺**：没有入城文本的节点在地图上是个哑点，会直接暴露世界的空心。
 

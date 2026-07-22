@@ -109,7 +109,11 @@ CITIES = [
     ("Ephesus", "Selçuk", 37.941, 27.341, "Asia", 3, "City of the Seven Sleepers"),
     ("Trapezus", "Trabzon", 41.005, 39.723, "Asia", 2, "Empire on the Black Sea"),
     ("Caffa", "Feodosia", 45.031, 35.382, "Europa", 3, "Genoese colony of Crimea"),
-    ("Tana", "Azov", 47.112, 39.423, "Europa", 3, "Mouth of the Tanais, Silk Road terminus"),
+    # Disambiguated 2026-07: "Tana" was two different real places — the Venetian
+    # Black Sea colony at the Tanais mouth, and Polo's Tana (Thane, in India).
+    # Both are authentic medieval names, but ids must be unique and Polo's is the
+    # one the lore references, so the Venetian one carries the qualifier.
+    ("Tana (Azov)", "Azov", 47.112, 39.423, "Europa", 3, "Mouth of the Tanais, Silk Road terminus; the Venetian La Tana"),
     # --- Levant / Holy Land / crusader states -----------------------------
     ("Accon", "Acre", 32.928, 35.082, "Asia", 2, "Chief crusader port"),
     ("Tyrus", "Tyre", 33.271, 35.194, "Asia", 3, "Phoenician sea-city"),
@@ -203,6 +207,25 @@ CITIES = [
     ("Suju", "Suzhou", 31.299, 120.585, "Asia", 2, "City of ginger and six thousand stone bridges"),
     ("Fuju", "Fuzhou", 26.075, 119.297, "Asia", 2, "Great river-city of the sugar trade"),
     ("Zayton", "Quanzhou", 24.874, 118.593, "Asia", 1, "Haven of all the ships of India; the world's great port"),
+
+    # --- The Grand Canal corridor -----------------------------------------
+    # Polo lists these in an unbroken sequence between Cambaluc and Kinsay.
+    # They are the densest stretch of city chapters in the whole book, so the
+    # trunk corridor is thin without them.
+    ("Cachanfu", "Puzhou (Yongji)", 34.865, 110.338, "Asia", 3, "City on the Caramoran, of silk and gold cloth"),
+    ("Cacanfu", "Hejian", 38.446, 116.089, "Asia", 3, "Noble city of trade and handicraft"),
+    ("Chinangli", "Cangzhou", 38.304, 116.857, "Asia", 3, "City on a great river, much shipping"),
+    ("Linju", "Lingxian", 37.333, 116.573, "Asia", 3, "City of the river country"),
+    ("Siju", "Pizhou", 34.311, 117.954, "Asia", 3, "City of great game and hunting"),
+    ("Coigangiu", "Huaiyin", 33.583, 119.028, "Asia", 3, "Salt city at the river mouth"),
+    ("Paukin", "Baoying", 33.234, 119.311, "Asia", 3, "City of silk and of the canal"),
+    ("Tiju", "Gaoyou", 32.785, 119.443, "Asia", 3, "Canal city of fish and fowl"),
+    ("Caiju", "Guazhou", 32.253, 119.400, "Asia", 3, "Where the grain fleet enters the great river"),
+    ("Sinju", "Yizheng", 32.272, 119.182, "Asia", 3, "River port of vast shipping"),
+    ("Chinghianfu", "Zhenjiang", 32.188, 119.425, "Asia", 3, "City with two Nestorian churches"),
+    ("Chinginju", "Changzhou", 31.811, 119.974, "Asia", 3, "Where the Alans were slaughtered in their sleep"),
+    ("Tanpiju", "Tonglu", 29.808, 119.687, "Asia", 3, "Fair city under the walls of Kinsay"),
+    ("Mien", "Bagan (Pagan)", 21.171, 94.860, "Asia", 3, "Kingdom of the gold and silver towers"),
 
     # --- The Indies and the southern seas ---------------------------------
     ("Chamba", "Champa (Qui Nhon)", 13.776, 109.223, "Asia", 3, "Kingdom of aloeswood and elephants"),

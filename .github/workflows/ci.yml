@@ -5,27 +5,10 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  validate-atlas:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: atlas
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - run: npm install
-      - run: npm run corpus:generate
-      - run: npm run corpus:validate
-      - run: npm run lint -w @atlas/web
-      - run: npm run build -w @atlas/web
-      - run: npm run test -w @atlas/web
-      - run: npm run test -w @atlas/engines
-      - run: npm run test -w @atlas/orchestrator
-      - run: npm run corpus:ingest:dry-run
-      - run: npm run corpus:embed:dry-run
-      - run: npm run test -w @atlas/api-core
+  # NOTE: the validate-atlas job is intentionally removed (2026-07). Atlas is
+  # frozen — front end, back end and Vercel deploys are all paused, and it is
+  # kept under atlas/ for reference only (docs/ATLAS_PORT.md). Restore this job
+  # from git history if Atlas is ever unfrozen.
 
   validate-fatequest:
     runs-on: ubuntu-latest
@@ -43,3 +26,27 @@ jobs:
       - run: node tools/validate/validate.mjs
       # Rng parity: the GDScript port must reproduce Atlas seed.ts bit-for-bit
       - run: node tools/parity/gen_rng_fixture.mjs && git diff --exit-code tools/parity/rng_fixture.json
+
+  # Kernel tests run in real Godot. Without this the .gd files are only ever
+  # checked by hand, and "the JSON validates" says nothing about whether the
+  # engine can parse the scripts.
+  godot-tests:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot (headless)
+        run: |
+          curl -fsSL -o godot.zip \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot
+          chmod +x /usr/local/bin/godot
+          godot --version
+      - name: Import project
+        working-directory: fatequest
+        run: godot --headless --import
+      - name: Run kernel test suite
+        working-directory: fatequest
+        run: godot --headless --script tests/run_tests.gd

@@ -1,0 +1,990 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "accon",
+      "name": "city.accon.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.082,
+        32.928
+      ],
+      "tier": "town",
+      "entryEvent": "ev-accon-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "alexandria",
+      "name": "city.alexandria.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        29.918,
+        31.2
+      ],
+      "tier": "town",
+      "entryEvent": "ev-alexandria-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "antiochia",
+      "name": "city.antiochia.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        36.161,
+        36.202
+      ],
+      "tier": "town",
+      "entryEvent": "ev-antiochia-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "babylonia-cairus",
+      "name": "city.babylonia-cairus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        31.236,
+        30.044
+      ],
+      "tier": "town",
+      "entryEvent": "ev-babylonia-cairus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "baldacum",
+      "name": "city.baldacum.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        44.366,
+        33.315
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-baldacum-entry",
+      "sites": [
+        "ev-baldacum-a",
+        "ev-baldacum-b",
+        "ev-baldacum-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "baudas",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c006"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-baldacum-mentor",
+      "specialty": "sp-baldacum",
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "basora",
+      "name": "city.basora.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        47.784,
+        30.508
+      ],
+      "tier": "station",
+      "entryEvent": "ev-basora-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "berrhoea",
+      "name": "city.berrhoea.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        37.134,
+        36.202
+      ],
+      "tier": "town",
+      "entryEvent": "ev-berrhoea-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "bethleem",
+      "name": "city.bethleem.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.203,
+        31.705
+      ],
+      "tier": "station",
+      "entryEvent": "ev-bethleem-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "caffa",
+      "name": "city.caffa.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.382,
+        45.031
+      ],
+      "tier": "station",
+      "entryEvent": "ev-caffa-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "camadi",
+      "name": "city.camadi.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        57.74,
+        28.675
+      ],
+      "tier": "city",
+      "entryEvent": "ev-camadi-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "camadi",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c018"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "cobinan",
+      "name": "city.cobinan.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        56.279,
+        31.409
+      ],
+      "tier": "town",
+      "entryEvent": "ev-cobinan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cobinan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c021"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "constantinopolis",
+      "name": "city.constantinopolis.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        28.978,
+        41.008
+      ],
+      "tier": "town",
+      "entryEvent": "ev-constantinopolis-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "ctesiphon",
+      "name": "city.ctesiphon.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        44.581,
+        33.093
+      ],
+      "tier": "station",
+      "entryEvent": "ev-ctesiphon-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "damascus",
+      "name": "city.damascus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        36.292,
+        33.513
+      ],
+      "tier": "town",
+      "entryEvent": "ev-damascus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "edessa",
+      "name": "city.edessa.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        38.791,
+        37.158
+      ],
+      "tier": "station",
+      "entryEvent": "ev-edessa-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "ephesus",
+      "name": "city.ephesus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        27.341,
+        37.941
+      ],
+      "tier": "station",
+      "entryEvent": "ev-ephesus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "hierusalem",
+      "name": "city.hierusalem.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.235,
+        31.778
+      ],
+      "tier": "town",
+      "entryEvent": "ev-hierusalem-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "ispahan",
+      "name": "city.ispahan.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        51.668,
+        32.654
+      ],
+      "tier": "station",
+      "entryEvent": "ev-ispahan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "kerman",
+      "name": "city.kerman.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        57.078,
+        30.284
+      ],
+      "tier": "city",
+      "entryEvent": "ev-kerman-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kingdom-of-kerman",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c017"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "kiovia",
+      "name": "city.kiovia.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        30.523,
+        50.451
+      ],
+      "tier": "town",
+      "entryEvent": "ev-kiovia-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "moscovia",
+      "name": "city.moscovia.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        37.618,
+        55.751
+      ],
+      "tier": "station",
+      "entryEvent": "ev-moscovia-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "nicaea",
+      "name": "city.nicaea.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        29.719,
+        40.428
+      ],
+      "tier": "station",
+      "entryEvent": "ev-nicaea-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "ninive",
+      "name": "city.ninive.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        43.152,
+        36.36
+      ],
+      "tier": "station",
+      "entryEvent": "ev-ninive-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "novogardia",
+      "name": "city.novogardia.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        31.271,
+        58.521
+      ],
+      "tier": "station",
+      "entryEvent": "ev-novogardia-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "ormus",
+      "name": "city.ormus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        56.461,
+        27.1
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-ormus-entry",
+      "sites": [
+        "ev-ormus-a",
+        "ev-ormus-b",
+        "ev-ormus-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "descent-to-the-city-of-hormos",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c019"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-ormus-mentor",
+      "specialty": "sp-ormus",
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "petra",
+      "name": "city.petra.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.444,
+        30.329
+      ],
+      "tier": "station",
+      "entryEvent": "ev-petra-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "smyrna",
+      "name": "city.smyrna.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        27.129,
+        38.419
+      ],
+      "tier": "station",
+      "entryEvent": "ev-smyrna-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "tana-azov",
+      "name": "city.tana-azov.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        39.423,
+        47.112
+      ],
+      "tier": "station",
+      "entryEvent": "ev-tana-azov-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "tarsus",
+      "name": "city.tarsus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        34.895,
+        36.917
+      ],
+      "tier": "station",
+      "entryEvent": "ev-tarsus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "tauris",
+      "name": "city.tauris.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        46.293,
+        38.08
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-tauris-entry",
+      "sites": [
+        "ev-tauris-a",
+        "ev-tauris-b",
+        "ev-tauris-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c011"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-tauris-mentor",
+      "specialty": "sp-tauris",
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "trapezus",
+      "name": "city.trapezus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        39.723,
+        41.005
+      ],
+      "tier": "town",
+      "entryEvent": "ev-trapezus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "tripolis",
+      "name": "city.tripolis.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.844,
+        34.436
+      ],
+      "tier": "station",
+      "entryEvent": "ev-tripolis-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "tyrus",
+      "name": "city.tyrus.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        35.194,
+        33.271
+      ],
+      "tier": "station",
+      "entryEvent": "ev-tyrus-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic"
+      ]
+    },
+    {
+      "id": "yasdi",
+      "name": "city.yasdi.name",
+      "band": "west_asia",
+      "culture": "islamic",
+      "faiths": [
+        "islam",
+        "nestorian"
+      ],
+      "coord": [
+        54.368,
+        31.898
+      ],
+      "tier": "town",
+      "entryEvent": "ev-yasdi-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "great-city-of-yasdi",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c016"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ]
+    }
+  ]
+}

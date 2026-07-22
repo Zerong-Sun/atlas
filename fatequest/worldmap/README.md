@@ -27,7 +27,7 @@ The design choice that makes this both authentic **and** usable in an engine:
 ```
 fatequest-worldmap/
 ├── data/                     ← vector data (engine + GIS ready)
-│   ├── cities.geojson       144 cities: medieval + modern name, part, tier, note
+│   ├── cities.geojson       158 cities: medieval + modern name, part, tier, note
 │   ├── cities.csv            same, as a flat table
 │   ├── mountains.geojson     26 ranges/peaks: spine, peak_m, trend, note
 │   ├── rivers.geojson        27 rivers: source→mouth polylines, medieval name
@@ -96,11 +96,16 @@ only the base tiles need internet. Controls:
 `heightmap/heightmap.png` is 16-bit grayscale, 2048×1024, covering the bbox.
 `heightmap_meta.json` gives the scale: `metres = gray / 65535 × 8000`.
 
-> The shipped heightmap is a **synthetic prototype** — real mountain ranges laid
-> as ridges over fractal lowlands, so relief matches the labelled ranges but it
-> is **not** a true DEM and has no sea mask (everything reads as land). For
-> production terrain, run `build_real_terrain.py` (below) to replace it with a
-> real clipped DEM in the identical bbox/resolution — a drop-in swap.
+>  **The shipped heightmap is now a REAL DEM** (SRTM15+ via OpenTopography,
+> fetched 2026-07). `heightmap_meta.json` reports `"type": "real-dem"`.
+> Bathymetry is clamped to 0, so the ocean reads as flat land-level rather than
+> as depth — fine for a 2D parchment map, but if you ever need a sea mask,
+> derive it from `data/land.geojson` rather than from the heightmap.
+>
+> Note the bbox (129.5M km²) exceeds OpenTopography's 125M km² per-request cap,
+> so `build_real_terrain.py` splits the request into longitude tiles and
+> mosaics them. The intermediate `_dem_raw.tif` is ~2.3 GB and is gitignored;
+> only the derived 2 MB PNG is committed.
 
 **Unity** — Terrain → *Import Raw…* → 16-bit, 2048×1024, Windows byte order.
 Set Terrain *Width/Length* to your world scale and *Height* so full-white =

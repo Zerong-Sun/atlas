@@ -16,7 +16,7 @@
  },
  "orientation_note": "Medieval maps put EAST at the top. Rotate rendering -90deg (east-up) for the authentic look.",
  "counts": {
-  "cities": 144,
+  "cities": 158,
   "mountains": 26,
   "rivers": 27,
   "seas": 20,

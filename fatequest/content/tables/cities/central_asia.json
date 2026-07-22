@@ -3,38 +3,740 @@
   "table": "cities",
   "records": [
     {
+      "id": "badashan",
+      "name": "city.badashan.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        70.579,
+        37.112
+      ],
+      "tier": "city",
+      "entryEvent": "ev-badashan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "badashan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c029"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "balc",
+      "name": "city.balc.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        66.897,
+        36.758
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-balc-entry",
+      "sites": [
+        "ev-balc-a",
+        "ev-balc-b",
+        "ev-balc-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "balc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c027"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-balc-mentor",
+      "specialty": "sp-balc",
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "bochara",
+      "name": "city.bochara.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        64.421,
+        39.767
+      ],
+      "tier": "station",
+      "entryEvent": "ev-bochara-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "cabul",
+      "name": "city.cabul.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        69.172,
+        34.528
+      ],
+      "tier": "station",
+      "entryEvent": "ev-cabul-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "camul",
+      "name": "city.camul.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        93.515,
+        42.827
+      ],
+      "tier": "city",
+      "entryEvent": "ev-camul-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "camul",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c041"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "cascar",
+      "name": "city.cascar.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        75.994,
+        39.467
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-cascar-entry",
+      "sites": [
+        "ev-cascar-a",
+        "ev-cascar-b",
+        "ev-cascar-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c033"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-cascar-mentor",
+      "specialty": "sp-cascar",
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "charchan",
+      "name": "city.charchan.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        85.533,
+        38.15
+      ],
+      "tier": "town",
+      "entryEvent": "ev-charchan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "charchan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c038"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "cotan",
+      "name": "city.cotan.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        79.927,
+        37.11
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-cotan-entry",
+      "sites": [
+        "ev-cotan-a",
+        "ev-cotan-b",
+        "ev-cotan-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c036"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-cotan-mentor",
+      "specialty": "sp-cotan",
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "delli",
+      "name": "city.delli.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        77.231,
+        28.651
+      ],
+      "tier": "town",
+      "entryEvent": "ev-delli-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "keshimur",
+      "name": "city.keshimur.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        74.797,
+        34.084
+      ],
+      "tier": "city",
+      "entryEvent": "ev-keshimur-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "keshimur",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c031"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
       "id": "lop",
       "name": "city.lop.name",
       "band": "central_asia",
       "culture": "steppe",
-      "faiths": ["buddhism", "folk"],
-      "coord": [88.167, 39.017],
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        88.167,
+        39.017
+      ],
       "tier": "metropolis",
       "entryEvent": "ev-lop-entry",
-      "sites": ["ev-lop-bazaar", "ev-lop-shrine", "ev-lop-caravanserai"],
+      "sites": [
+        "ev-lop-bazaar",
+        "ev-lop-shrine",
+        "ev-lop-caravanserai"
+      ],
+      "exits": [
+        "rt-lop-sachiu"
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c039"
+        }
+      },
+      "market": {
+        "goods": [
+          "jade",
+          "camel-felt"
+        ],
+        "currency": "silver-ingot",
+        "spread": 0.2
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless",
+          "sanctuary"
+        ]
+      },
       "mentor": "npc-lop-guide",
-      "market": { "goods": ["jade", "camel-felt"], "currency": "silver-ingot", "spread": 0.2 },
-      "shrine": { "faith": "buddhism", "services": ["bless", "sanctuary"] },
-      "exits": ["rt-lop-sachiu"],
       "specialty": "jade",
-      "calendars": ["chinese", "turkic"],
-      "lore": { "placeId": "lop", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "merva",
+      "name": "city.merva.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        62.192,
+        37.66
+      ],
+      "tier": "station",
+      "entryEvent": "ev-merva-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "pein",
+      "name": "city.pein.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        81.67,
+        36.86
+      ],
+      "tier": "town",
+      "entryEvent": "ev-pein-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "pein",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c037"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
     },
     {
       "id": "sachiu",
       "name": "city.sachiu.name",
-      "band": "china",
-      "culture": "east_asia",
-      "faiths": ["buddhism", "nestorian", "folk"],
-      "coord": [94.662, 40.142],
-      "tier": "city",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        94.662,
+        40.142
+      ],
+      "tier": "town",
       "entryEvent": "ev-sachiu-entry",
       "sites": [],
-      "market": { "goods": ["silk", "camel-felt"], "currency": "cash", "spread": 0.16 },
-      "shrine": { "faith": "buddhism", "services": ["bless", "study"] },
-      "exits": ["rt-lop-sachiu"],
-      "calendars": ["chinese"],
-      "lore": { "placeId": "sachiu", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c40" } }
+      "exits": [
+        "rt-lop-sachiu"
+      ],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [
+          "silk",
+          "camel-felt"
+        ],
+        "currency": "cash",
+        "spread": 0.16
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ],
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless",
+          "study"
+        ]
+      }
+    },
+    {
+      "id": "samara",
+      "name": "city.samara.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        95.324,
+        5.548
+      ],
+      "tier": "station",
+      "entryEvent": "ev-samara-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "samarcanda",
+      "name": "city.samarcanda.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        66.96,
+        39.654
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-samarcanda-entry",
+      "sites": [
+        "ev-samarcanda-a",
+        "ev-samarcanda-b",
+        "ev-samarcanda-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c034"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-samarcanda-mentor",
+      "specialty": "sp-samarcanda",
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "sapurgan",
+      "name": "city.sapurgan.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        65.752,
+        36.665
+      ],
+      "tier": "town",
+      "entryEvent": "ev-sapurgan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "sapurgan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c026"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "taican",
+      "name": "city.taican.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        69.535,
+        36.736
+      ],
+      "tier": "city",
+      "entryEvent": "ev-taican-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "taican",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c028"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
+    },
+    {
+      "id": "yarcan",
+      "name": "city.yarcan.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": [
+        "islam",
+        "buddhism",
+        "folk"
+      ],
+      "coord": [
+        77.243,
+        38.417
+      ],
+      "tier": "town",
+      "entryEvent": "ev-yarcan-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "yarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c035"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dirham",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "turkic"
+      ]
     }
   ]
 }

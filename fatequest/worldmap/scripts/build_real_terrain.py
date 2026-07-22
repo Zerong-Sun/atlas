@@ -31,7 +31,7 @@ Usage:
     export OPENTOPO_KEY=xxxx      # optional, enables one-call DEM subset
     python3 build_real_terrain.py --ne-scale 50m --dem opentopo
 """
-import argparse, json, os, sys
+import argparse, json, math, os, sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA = os.path.join(ROOT, "data"); HM = os.path.join(ROOT, "heightmap")
@@ -82,13 +82,69 @@ def dem_opentopo(demtype="SRTM15Plus"):
     key = os.environ.get("OPENTOPO_KEY")
     if not key:
         sys.exit("Set OPENTOPO_KEY (free at portal.opentopography.org) or use --dem file")
-    url = ("https://portal.opentopography.org/API/globaldem"
-           f"?demtype={demtype}&south={B['south']}&north={B['north']}"
-           f"&west={B['west']}&east={B['east']}&outputFormat=GTiff&API_Key={key}")
     tif = os.path.join(HM, "_dem_raw.tif")
+
+    # OpenTopography caps a single global-DEM request by AREA. The 2026-07 east
+    # extension pushed the oikoumene bbox past the SRTM15Plus cap, so the
+    # request has to be split into longitude tiles and mosaicked.
+    #
+    # We do NOT model their area formula. An earlier attempt estimated 105.9M
+    # km2 by spherical integration while the API reported 129.5M for the same
+    # box, so it decided one tile was enough and failed anyway. Instead: attempt
+    # the request, and if it refuses, parse the limit and the actual area out of
+    # its own error message and tile from those numbers. The server is the
+    # authority on its own quota.
+    import re
+
+    def fetch(w, s, e, n, dest):
+        url = ("https://portal.opentopography.org/API/globaldem"
+               f"?demtype={demtype}&south={s}&north={n}"
+               f"&west={w}&east={e}&outputFormat=GTiff&API_Key={key}")
+        r = requests.get(url, timeout=900)
+        if r.status_code != 200:
+            return r  # caller inspects
+        open(dest, "wb").write(r.content)
+        return dest
+
     print("  GET OpenTopography DEM ->", tif)
-    r = requests.get(url, timeout=600); r.raise_for_status()
-    open(tif, "wb").write(r.content)
+    first = fetch(B["west"], B["south"], B["east"], B["north"], tif)
+    if isinstance(first, str):
+        return first
+
+    body = first.text
+    m_lim = re.search(r"maximum area for \S+ is ([\d,]+)", body)
+    m_act = re.search(r"selected area is ([\d,]+)", body)
+    if not (m_lim and m_act):
+        # Some other failure (bad key, bad demtype). Surface the server's words.
+        sys.exit(f"OpenTopography {first.status_code}: {body[:300]}")
+    limit = int(m_lim.group(1).replace(",", ""))
+    actual = int(m_act.group(1).replace(",", ""))
+    tiles_n = max(2, math.ceil(actual / (limit * 0.9)))
+    print(f"  area {actual/1e6:.1f}M km2 exceeds {limit/1e6:.0f}M -> splitting into {tiles_n} tiles")
+    import rasterio
+    from rasterio.merge import merge
+    span = (B["east"] - B["west"]) / tiles_n
+    parts = []
+    for i in range(tiles_n):
+        w = B["west"] + i * span
+        e = B["west"] + (i + 1) * span if i < tiles_n - 1 else B["east"]
+        dest = os.path.join(HM, f"_dem_tile{i}.tif")
+        print(f"    tile {i+1}/{tiles_n}  lon {w:.1f}..{e:.1f}")
+        got = fetch(w, B["south"], e, dest=dest, n=B["north"])
+        if not isinstance(got, str):
+            sys.exit(f"OpenTopography {got.status_code} on tile {i+1}: {got.text[:300]}")
+        parts.append(got)
+    srcs = [rasterio.open(p) for p in parts]
+    mosaic, transform = merge(srcs)
+    meta = srcs[0].meta.copy()
+    meta.update(height=mosaic.shape[1], width=mosaic.shape[2], transform=transform)
+    with rasterio.open(tif, "w", **meta) as dst:
+        dst.write(mosaic)
+    for s_ in srcs:
+        s_.close()
+    for p in parts:
+        os.remove(p)
+    print(f"  merged {tiles_n} tiles -> {tif}")
     return tif
 
 def dem_to_heightmap(tif, W=2048, H=1024, max_elev=8000.0):

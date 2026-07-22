@@ -264,7 +264,7 @@ GDD §16.3 定了深度按 `tier` 递减，校验器必须相应分级——**�
 
 ## 7. 与地图数据的对齐
 
-`worldmap/data/cities.geojson`（144 条）与 `content/tables/cities/*.json`（约 75 条）是**两套数据**，靠 id 对齐：
+`worldmap/data/cities.geojson`（158 条）与 `content/tables/cities/*.json`（102 条）是**两套数据**，靠 id 对齐：
 
 - 地图侧权威：`coord`、`name_medieval`、`name_modern`、地形关系
 - 内容侧权威：`tier`、`sites`、`market`、`exits`、`lore`

@@ -3,50 +3,3372 @@
   "table": "events",
   "records": [
     {
+      "id": "ev-accon-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.accon.entry.title",
+      "when": {
+        "cities": [
+          "accon"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.accon.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.accon.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "accon",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-aden-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.aden.entry.title",
+      "when": {
+        "cities": [
+          "aden"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.aden.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.aden.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "aden",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-alexandria-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.alexandria.entry.title",
+      "when": {
+        "cities": [
+          "alexandria"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.alexandria.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "alexandria",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-antiochia-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.antiochia.entry.title",
+      "when": {
+        "cities": [
+          "antiochia"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.antiochia.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.antiochia.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "antiochia",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-axuma-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.axuma.entry.title",
+      "when": {
+        "cities": [
+          "axuma"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.axuma.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.axuma.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "axuma",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-babylonia-cairus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.babylonia-cairus.entry.title",
+      "when": {
+        "cities": [
+          "babylonia-cairus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.babylonia-cairus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.babylonia-cairus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "babylonia-cairus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-badashan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.badashan.entry.title",
+      "when": {
+        "cities": [
+          "badashan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.badashan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.badashan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "badashan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.balc.entry.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.balc.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.balc.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "balc",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "balc",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.baldacum.entry.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.baldacum.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.baldacum.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "baldacum",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baudas",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-basora-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.basora.entry.title",
+      "when": {
+        "cities": [
+          "basora"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.basora.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.basora.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-berrhoea-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.berrhoea.entry.title",
+      "when": {
+        "cities": [
+          "berrhoea"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.berrhoea.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.berrhoea.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "berrhoea",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-bethleem-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.bethleem.entry.title",
+      "when": {
+        "cities": [
+          "bethleem"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.bethleem.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.bethleem.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "bethleem",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-bochara-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.bochara.entry.title",
+      "when": {
+        "cities": [
+          "bochara"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.bochara.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.bochara.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "bochara",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cabul-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cabul.entry.title",
+      "when": {
+        "cities": [
+          "cabul"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.cabul.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cabul.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cabul",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cacanfu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cacanfu.entry.title",
+      "when": {
+        "cities": [
+          "cacanfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.cacanfu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cacanfu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-cacanfu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cachanfu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cachanfu.entry.title",
+      "when": {
+        "cities": [
+          "cachanfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.cachanfu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cachanfu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cachanfu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-river-caramoran-and-the-city-of-cachanfu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caffa-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.caffa.entry.title",
+      "when": {
+        "cities": [
+          "caffa"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.caffa.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.caffa.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caffa",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caiju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.caiju.entry.title",
+      "when": {
+        "cities": [
+          "caiju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.caiju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.caiju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caiju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "caiju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cail-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cail.entry.title",
+      "when": {
+        "cities": [
+          "cail"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.cail.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cail.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cail",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-calatu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.calatu.entry.title",
+      "when": {
+        "cities": [
+          "calatu"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.calatu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.calatu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "gulf-of-calatu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-camadi-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.camadi.entry.title",
+      "when": {
+        "cities": [
+          "camadi"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.camadi.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.camadi.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "camadi",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "camadi",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaet-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cambaet.entry.title",
+      "when": {
+        "cities": [
+          "cambaet"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.cambaet.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cambaet.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaet",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-cambaet",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cambaluc.entry.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.cambaluc.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cambaluc.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaluc",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaluc-2",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-campichu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.campichu.entry.title",
+      "when": {
+        "cities": [
+          "campichu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.campichu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.campichu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "campichu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "campichu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-camul-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.camul.entry.title",
+      "when": {
+        "cities": [
+          "camul"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.camul.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.camul.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "camul",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "camul",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caracoron-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.caracoron.entry.title",
+      "when": {
+        "cities": [
+          "caracoron"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.caracoron.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.caracoron.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caracoron",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "caracoron",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cascar.entry.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.cascar.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cascar.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cascar",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chamba-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.chamba.entry.title",
+      "when": {
+        "cities": [
+          "chamba"
+        ]
+      },
+      "scene": {
+        "bg": "spice-harbour",
+        "region": "maritime_asia"
+      },
+      "body": "ev.chamba.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chamba.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chamba",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-country-called-chamba",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.chandu.entry.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.chandu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chandu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-charchan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.charchan.entry.title",
+      "when": {
+        "cities": [
+          "charchan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.charchan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.charchan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "charchan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "charchan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chinangli-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.chinangli.entry.title",
+      "when": {
+        "cities": [
+          "chinangli"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.chinangli.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chinangli.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinangli",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinangli",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chinghianfu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.chinghianfu.entry.title",
+      "when": {
+        "cities": [
+          "chinghianfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.chinghianfu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chinghianfu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinghianfu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinghianfu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chinginju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.chinginju.entry.title",
+      "when": {
+        "cities": [
+          "chinginju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.chinginju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chinginju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinginju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinginju-and-the-slaughter-of-certain-alans-there",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cobinan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cobinan.entry.title",
+      "when": {
+        "cities": [
+          "cobinan"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.cobinan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cobinan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cobinan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cobinan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-coigangiu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.coigangiu.entry.title",
+      "when": {
+        "cities": [
+          "coigangiu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.coigangiu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.coigangiu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coigangiu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-coiganju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.coiganju.entry.title",
+      "when": {
+        "cities": [
+          "coiganju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.coiganju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.coiganju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coiganju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "coiganju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-coilum-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.coilum.entry.title",
+      "when": {
+        "cities": [
+          "coilum"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.coilum.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.coilum.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coilum",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "coilum",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-constantinopolis-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.constantinopolis.entry.title",
+      "when": {
+        "cities": [
+          "constantinopolis"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.constantinopolis.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.constantinopolis.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "constantinopolis",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.cotan.entry.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.cotan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cotan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cotan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ctesiphon-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.ctesiphon.entry.title",
+      "when": {
+        "cities": [
+          "ctesiphon"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ctesiphon.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ctesiphon.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ctesiphon",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-damascus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.damascus.entry.title",
+      "when": {
+        "cities": [
+          "damascus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.damascus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.damascus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "damascus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-delli-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.delli.entry.title",
+      "when": {
+        "cities": [
+          "delli"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.delli.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.delli.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "delli",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-dongola-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.dongola.entry.title",
+      "when": {
+        "cities": [
+          "dongola"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.dongola.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.dongola.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "dongola",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-dufar-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.dufar.entry.title",
+      "when": {
+        "cities": [
+          "dufar"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.dufar.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.dufar.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "dufar",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "dufar",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-edessa-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.edessa.entry.title",
+      "when": {
+        "cities": [
+          "edessa"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.edessa.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.edessa.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "edessa",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-egrigaia-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.egrigaia.entry.title",
+      "when": {
+        "cities": [
+          "egrigaia"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.egrigaia.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.egrigaia.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "egrigaia",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "egrigaia",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ephesus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.ephesus.entry.title",
+      "when": {
+        "cities": [
+          "ephesus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ephesus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ephesus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ephesus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-esher-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.esher.entry.title",
+      "when": {
+        "cities": [
+          "esher"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.esher.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.esher.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "esher",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "esher",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-etzina-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.etzina.entry.title",
+      "when": {
+        "cities": [
+          "etzina"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.etzina.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.etzina.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "etzina",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "etzina",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-fuju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.fuju.entry.title",
+      "when": {
+        "cities": [
+          "fuju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.fuju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.fuju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "fuju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "greatness-of-the-city-of-fuju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-hierusalem-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.hierusalem.entry.title",
+      "when": {
+        "cities": [
+          "hierusalem"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.hierusalem.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.hierusalem.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "hierusalem",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ispahan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.ispahan.entry.title",
+      "when": {
+        "cities": [
+          "ispahan"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ispahan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ispahan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ispahan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-java-major-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.java-major.entry.title",
+      "when": {
+        "cities": [
+          "java-major"
+        ]
+      },
+      "scene": {
+        "bg": "spice-harbour",
+        "region": "maritime_asia"
+      },
+      "body": "ev.java-major.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.java-major.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "java-major",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kenjanfu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.kenjanfu.entry.title",
+      "when": {
+        "cities": [
+          "kenjanfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.kenjanfu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kenjanfu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kenjanfu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kenjanfu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kerman-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.kerman.entry.title",
+      "when": {
+        "cities": [
+          "kerman"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.kerman.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kerman.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kerman",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-kerman",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-keshimur-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.keshimur.entry.title",
+      "when": {
+        "cities": [
+          "keshimur"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.keshimur.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.keshimur.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "keshimur",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "keshimur",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.kinsay.entry.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.kinsay.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kinsay.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-city-of-kinsay",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kiovia-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.kiovia.entry.title",
+      "when": {
+        "cities": [
+          "kiovia"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.kiovia.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kiovia.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kiovia",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-linju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.linju.entry.title",
+      "when": {
+        "cities": [
+          "linju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.linju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.linju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "linju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-linju",
+        "origin": "authored"
+      }
+    },
+    {
       "id": "ev-lop-entry",
       "kind": "entry",
       "title": "ev.lop.entry.title",
-      "when": { "cities": ["lop"] },
-      "scene": { "bg": "desert-town", "region": "central_asia" },
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
       "body": "ev.lop.entry.body",
       "once": true,
       "choices": [
         {
           "label": "ev.lop.entry.choice.rest",
           "effects": [
-            { "op": "days", "value": 1, "reason": "rest-at-lop" },
-            { "op": "reveal_map", "value": "rt-lop-sachiu", "reason": "innkeeper-mentions-the-road" }
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rest-at-lop"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-lop-sachiu",
+              "reason": "innkeeper-mentions-the-road"
+            }
           ]
         },
         {
           "label": "ev.lop.entry.choice.ask",
-          "needs": { "min_reputation": { "scope": "city", "id": "lop", "value": 0 } },
+          "needs": {
+            "min_reputation": {
+              "scope": "city",
+              "id": "lop",
+              "value": 0
+            }
+          },
           "effects": [
-            { "op": "codex", "value": "cx-desert-of-lop", "reason": "learned-the-desert-lore" },
-            { "op": "reputation", "value": 1, "scope": "city", "id": "lop", "reason": "courteous-enquiry" }
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "learned-the-desert-lore"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "lop",
+              "reason": "courteous-enquiry"
+            }
           ]
         }
       ],
-      "lore": { "placeId": "lop", "origin": "hybrid", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+      "lore": {
+        "placeId": "lop",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
+        }
+      }
+    },
+    {
+      "id": "ev-maabar-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.maabar.entry.title",
+      "when": {
+        "cities": [
+          "maabar"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.maabar.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.maabar.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "maabar",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-province-of-maabar",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-mecha-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.mecha.entry.title",
+      "when": {
+        "cities": [
+          "mecha"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.mecha.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.mecha.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mecha",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-medina-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.medina.entry.title",
+      "when": {
+        "cities": [
+          "medina"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.medina.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.medina.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "medina",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-melibar-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.melibar.entry.title",
+      "when": {
+        "cities": [
+          "melibar"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.melibar.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.melibar.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "melibar",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-melibar",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-merva-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.merva.entry.title",
+      "when": {
+        "cities": [
+          "merva"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.merva.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.merva.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "merva",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-mien-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.mien.entry.title",
+      "when": {
+        "cities": [
+          "mien"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.mien.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.mien.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mien",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "mien",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-moscovia-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.moscovia.entry.title",
+      "when": {
+        "cities": [
+          "moscovia"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.moscovia.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.moscovia.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "moscovia",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-nanghin-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.nanghin.entry.title",
+      "when": {
+        "cities": [
+          "nanghin"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.nanghin.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.nanghin.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "nanghin",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "nanghin",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-nicaea-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.nicaea.entry.title",
+      "when": {
+        "cities": [
+          "nicaea"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.nicaea.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.nicaea.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "nicaea",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ninive-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.ninive.entry.title",
+      "when": {
+        "cities": [
+          "ninive"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ninive.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ninive.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ninive",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-novogardia-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.novogardia.entry.title",
+      "when": {
+        "cities": [
+          "novogardia"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.novogardia.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.novogardia.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "novogardia",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.ormus.entry.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ormus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ormus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "descent-to-the-city-of-hormos",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-paukin-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.paukin.entry.title",
+      "when": {
+        "cities": [
+          "paukin"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.paukin.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.paukin.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "paukin",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-paukin",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-pein-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.pein.entry.title",
+      "when": {
+        "cities": [
+          "pein"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.pein.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.pein.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pein",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "pein",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-pentam-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.pentam.entry.title",
+      "when": {
+        "cities": [
+          "pentam"
+        ]
+      },
+      "scene": {
+        "bg": "spice-harbour",
+        "region": "maritime_asia"
+      },
+      "body": "ev.pentam.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.pentam.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pentam",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "island-called-pentam",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-petra-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.petra.entry.title",
+      "when": {
+        "cities": [
+          "petra"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.petra.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.petra.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "petra",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     },
     {
       "id": "ev-sachiu-entry",
       "kind": "entry",
       "title": "ev.sachiu.entry.title",
-      "when": { "cities": ["sachiu"] },
-      "scene": { "bg": "oasis-town", "region": "china" },
+      "when": {
+        "cities": [
+          "sachiu"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "china"
+      },
       "body": "ev.sachiu.entry.body",
       "once": true,
       "choices": [
         {
           "label": "ev.sachiu.entry.choice.arrive",
           "effects": [
-            { "op": "sticker", "value": "st-sachiu", "reason": "first-arrival-at-sachiu" },
-            { "op": "codex", "value": "cx-tangut-rites", "reason": "witnessed-the-burial-rites" }
+            {
+              "op": "sticker",
+              "value": "st-sachiu",
+              "reason": "first-arrival-at-sachiu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tangut-rites",
+              "reason": "witnessed-the-burial-rites"
+            }
           ]
         }
       ],
-      "lore": { "placeId": "sachiu", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c40" } }
+      "lore": {
+        "placeId": "sachiu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c40"
+        }
+      }
+    },
+    {
+      "id": "ev-saianfu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.saianfu.entry.title",
+      "when": {
+        "cities": [
+          "saianfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.saianfu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.saianfu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "very-noble-city-of-saianfu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samara-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.samara.entry.title",
+      "when": {
+        "cities": [
+          "samara"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.samara.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.samara.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samara",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.samarcanda.entry.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.samarcanda.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.samarcanda.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samarcanda",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sapurgan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.sapurgan.entry.title",
+      "when": {
+        "cities": [
+          "sapurgan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.sapurgan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.sapurgan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sapurgan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sapurgan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-semenat-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.semenat.entry.title",
+      "when": {
+        "cities": [
+          "semenat"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.semenat.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.semenat.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "semenat",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-semenat",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-siju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.siju.entry.title",
+      "when": {
+        "cities": [
+          "siju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.siju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.siju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "siju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "siju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sindafu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.sindafu.entry.title",
+      "when": {
+        "cities": [
+          "sindafu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.sindafu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.sindafu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sindafu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "city-of-sindafu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sinju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.sinju.entry.title",
+      "when": {
+        "cities": [
+          "sinju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.sinju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.sinju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sinju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sinju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sinjumatu-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.sinjumatu.entry.title",
+      "when": {
+        "cities": [
+          "sinjumatu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.sinjumatu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.sinjumatu.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sinjumatu",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "noble-city-of-sinjumatu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-smyrna-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.smyrna.entry.title",
+      "when": {
+        "cities": [
+          "smyrna"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.smyrna.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.smyrna.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "smyrna",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-suju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.suju.entry.title",
+      "when": {
+        "cities": [
+          "suju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.suju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.suju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "suju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-taican-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.taican.entry.title",
+      "when": {
+        "cities": [
+          "taican"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.taican.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.taican.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "taican",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "taican",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tana-azov-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tana-azov.entry.title",
+      "when": {
+        "cities": [
+          "tana-azov"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.tana-azov.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tana-azov.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tana-azov",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tana-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tana.entry.title",
+      "when": {
+        "cities": [
+          "tana"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.tana.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tana.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tana",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-tana",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tanpiju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tanpiju.entry.title",
+      "when": {
+        "cities": [
+          "tanpiju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.tanpiju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tanpiju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tanpiju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tanpiju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tarsus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tarsus.entry.title",
+      "when": {
+        "cities": [
+          "tarsus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.tarsus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tarsus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tarsus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tauris.entry.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.tauris.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tauris.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tauris",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tenduc-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tenduc.entry.title",
+      "when": {
+        "cities": [
+          "tenduc"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.tenduc.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tenduc.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tenduc",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tenduc",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tiju-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tiju.entry.title",
+      "when": {
+        "cities": [
+          "tiju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.tiju.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tiju.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tiju",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-tiju",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-trapezus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.trapezus.entry.title",
+      "when": {
+        "cities": [
+          "trapezus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.trapezus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.trapezus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "trapezus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tripolis-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tripolis.entry.title",
+      "when": {
+        "cities": [
+          "tripolis"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.tripolis.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tripolis.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tripolis",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tyrus-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.tyrus.entry.title",
+      "when": {
+        "cities": [
+          "tyrus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.tyrus.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tyrus.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tyrus",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-yarcan-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.yarcan.entry.title",
+      "when": {
+        "cities": [
+          "yarcan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.yarcan.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.yarcan.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yarcan",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "yarcan",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-yasdi-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.yasdi.entry.title",
+      "when": {
+        "cities": [
+          "yasdi"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.yasdi.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.yasdi.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yasdi",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-city-of-yasdi",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-entry",
+      "kind": "entry",
+      "stub": true,
+      "title": "ev.zayton.entry.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.zayton.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.entry.choice.enter",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "arrived-and-looked-about"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-haven-of-zayton",
+        "origin": "authored"
+      }
     }
   ]
 }

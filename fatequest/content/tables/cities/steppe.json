@@ -1,0 +1,168 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "caracoron",
+      "name": "city.caracoron.name",
+      "band": "steppe",
+      "culture": "steppe",
+      "faiths": [
+        "folk",
+        "nestorian",
+        "buddhism"
+      ],
+      "coord": [
+        102.832,
+        47.198
+      ],
+      "tier": "town",
+      "entryEvent": "ev-caracoron-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "caracoron",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c046"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "silver-ingot",
+        "spread": 0.22
+      },
+      "calendars": [
+        "turkic",
+        "chinese"
+      ]
+    },
+    {
+      "id": "chandu",
+      "name": "city.chandu.name",
+      "band": "steppe",
+      "culture": "steppe",
+      "faiths": [
+        "folk",
+        "nestorian",
+        "buddhism"
+      ],
+      "coord": [
+        116.183,
+        42.359
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-chandu-entry",
+      "sites": [
+        "ev-chandu-a",
+        "ev-chandu-b",
+        "ev-chandu-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c061"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "silver-ingot",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "folk",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-chandu-mentor",
+      "specialty": "sp-chandu",
+      "calendars": [
+        "turkic",
+        "chinese"
+      ]
+    },
+    {
+      "id": "egrigaia",
+      "name": "city.egrigaia.name",
+      "band": "steppe",
+      "culture": "steppe",
+      "faiths": [
+        "folk",
+        "nestorian",
+        "buddhism"
+      ],
+      "coord": [
+        106.232,
+        38.487
+      ],
+      "tier": "town",
+      "entryEvent": "ev-egrigaia-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "egrigaia",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c058"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "silver-ingot",
+        "spread": 0.22
+      },
+      "calendars": [
+        "turkic",
+        "chinese"
+      ]
+    },
+    {
+      "id": "tenduc",
+      "name": "city.tenduc.name",
+      "band": "steppe",
+      "culture": "steppe",
+      "faiths": [
+        "folk",
+        "nestorian",
+        "buddhism"
+      ],
+      "coord": [
+        111.194,
+        40.274
+      ],
+      "tier": "city",
+      "entryEvent": "ev-tenduc-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "tenduc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c059"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "silver-ingot",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "folk",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "turkic",
+        "chinese"
+      ]
+    }
+  ]
+}

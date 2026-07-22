@@ -20,3 +20,9 @@ atlas/corpus/raw/
 __pycache__/
 .venv/
 .vercel
+
+# Intermediate DEM tiles/mosaic from worldmap/scripts/build_real_terrain.py.
+# The merged raw GeoTIFF is ~2.3 GB and fully regenerable; only the derived
+# 16-bit heightmap.png (2 MB) is committed.
+fatequest/worldmap/heightmap/_dem_raw.tif
+fatequest/worldmap/heightmap/_dem_tile*.tif

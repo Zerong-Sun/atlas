@@ -1,0 +1,1052 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "cacanfu",
+      "name": "city.cacanfu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        116.089,
+        38.446
+      ],
+      "tier": "town",
+      "entryEvent": "ev-cacanfu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cities-of-cacanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c060"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "cachanfu",
+      "name": "city.cachanfu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        110.338,
+        34.865
+      ],
+      "tier": "town",
+      "entryEvent": "ev-cachanfu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "great-river-caramoran-and-the-city-of-cachanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c040"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "caiju",
+      "name": "city.caiju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.4,
+        32.253
+      ],
+      "tier": "town",
+      "entryEvent": "ev-caiju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "caiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c072"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "cambaluc",
+      "name": "city.cambaluc.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        116.407,
+        39.904
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-cambaluc-entry",
+      "sites": [
+        "ev-cambaluc-a",
+        "ev-cambaluc-b",
+        "ev-cambaluc-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "cambaluc-2",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b2-c022"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-cambaluc-mentor",
+      "specialty": "sp-cambaluc",
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "campichu",
+      "name": "city.campichu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        100.45,
+        38.933
+      ],
+      "tier": "city",
+      "entryEvent": "ev-campichu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "campichu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c044"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "chinangli",
+      "name": "city.chinangli.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        116.857,
+        38.304
+      ],
+      "tier": "city",
+      "entryEvent": "ev-chinangli-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "chinangli",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c061"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "chinghianfu",
+      "name": "city.chinghianfu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.425,
+        32.188
+      ],
+      "tier": "town",
+      "entryEvent": "ev-chinghianfu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "chinghianfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c073"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "chinginju",
+      "name": "city.chinginju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.974,
+        31.811
+      ],
+      "tier": "town",
+      "entryEvent": "ev-chinginju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "chinginju-and-the-slaughter-of-certain-alans-there",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c074"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "coigangiu",
+      "name": "city.coigangiu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.028,
+        33.583
+      ],
+      "tier": "station",
+      "entryEvent": "ev-coigangiu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "coiganju",
+      "name": "city.coiganju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.15,
+        33.502
+      ],
+      "tier": "town",
+      "entryEvent": "ev-coiganju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "coiganju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c066"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "etzina",
+      "name": "city.etzina.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        101.067,
+        41.767
+      ],
+      "tier": "town",
+      "entryEvent": "ev-etzina-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "etzina",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c045"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "fuju",
+      "name": "city.fuju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.297,
+        26.075
+      ],
+      "tier": "town",
+      "entryEvent": "ev-fuju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "greatness-of-the-city-of-fuju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c081"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "kenjanfu",
+      "name": "city.kenjanfu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        108.94,
+        34.341
+      ],
+      "tier": "city",
+      "entryEvent": "ev-kenjanfu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kenjanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c041"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "kinsay",
+      "name": "city.kinsay.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        120.155,
+        30.274
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-kinsay-entry",
+      "sites": [
+        "ev-kinsay-a",
+        "ev-kinsay-b",
+        "ev-kinsay-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "great-city-of-kinsay",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c076"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-kinsay-mentor",
+      "specialty": "sp-kinsay",
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "linju",
+      "name": "city.linju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        116.573,
+        37.333
+      ],
+      "tier": "town",
+      "entryEvent": "ev-linju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cities-of-linju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c063"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "mien",
+      "name": "city.mien.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        94.86,
+        21.171
+      ],
+      "tier": "town",
+      "entryEvent": "ev-mien-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "mien",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c054"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "nanghin",
+      "name": "city.nanghin.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        118.797,
+        32.06
+      ],
+      "tier": "town",
+      "entryEvent": "ev-nanghin-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "nanghin",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c069"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "paukin",
+      "name": "city.paukin.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.311,
+        33.234
+      ],
+      "tier": "town",
+      "entryEvent": "ev-paukin-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cities-of-paukin",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c067"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "saianfu",
+      "name": "city.saianfu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        112.122,
+        32.009
+      ],
+      "tier": "city",
+      "entryEvent": "ev-saianfu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "very-noble-city-of-saianfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c070"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "siju",
+      "name": "city.siju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        117.954,
+        34.311
+      ],
+      "tier": "city",
+      "entryEvent": "ev-siju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "siju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c064"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "sindafu",
+      "name": "city.sindafu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        104.065,
+        30.659
+      ],
+      "tier": "town",
+      "entryEvent": "ev-sindafu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "city-of-sindafu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c044"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "sinju",
+      "name": "city.sinju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.182,
+        32.272
+      ],
+      "tier": "city",
+      "entryEvent": "ev-sinju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "sinju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c071"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "sinjumatu",
+      "name": "city.sinjumatu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        116.587,
+        35.415
+      ],
+      "tier": "town",
+      "entryEvent": "ev-sinjumatu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "noble-city-of-sinjumatu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c062"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "suju",
+      "name": "city.suju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        120.585,
+        31.299
+      ],
+      "tier": "city",
+      "entryEvent": "ev-suju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "suju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c075"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "tanpiju",
+      "name": "city.tanpiju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.687,
+        29.808
+      ],
+      "tier": "city",
+      "entryEvent": "ev-tanpiju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "tanpiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c079"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "tiju",
+      "name": "city.tiju.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        119.443,
+        32.785
+      ],
+      "tier": "town",
+      "entryEvent": "ev-tiju-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cities-of-tiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c068"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.22
+      },
+      "calendars": [
+        "chinese"
+      ]
+    },
+    {
+      "id": "zayton",
+      "name": "city.zayton.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": [
+        "buddhism",
+        "daoism",
+        "folk",
+        "nestorian"
+      ],
+      "coord": [
+        118.593,
+        24.874
+      ],
+      "tier": "metropolis",
+      "entryEvent": "ev-zayton-entry",
+      "sites": [
+        "ev-zayton-a",
+        "ev-zayton-b",
+        "ev-zayton-c"
+      ],
+      "exits": [],
+      "lore": {
+        "placeId": "great-haven-of-zayton",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "cash",
+        "spread": 0.18
+      },
+      "shrine": {
+        "faith": "buddhism",
+        "services": [
+          "bless"
+        ]
+      },
+      "mentor": "npc-zayton-mentor",
+      "specialty": "sp-zayton",
+      "calendars": [
+        "chinese"
+      ]
+    }
+  ]
+}

@@ -6,45 +6,100 @@
       "id": "ev-road-desert-voices",
       "kind": "road",
       "title": "ev.road.desert_voices.title",
-      "when": { "not_flags": ["fl-heard-the-voices"] },
-      "scene": { "bg": "desert-night", "region": "central_asia" },
+      "when": {
+        "not_flags": [
+          "fl-heard-the-voices"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "central_asia"
+      },
       "body": "ev.road.desert_voices.body",
       "once": false,
       "choices": [
         {
           "label": "ev.road.desert_voices.choice.follow",
           "effects": [
-            { "op": "days", "value": 3, "reason": "led-astray-by-the-voices" },
-            { "op": "fate", "id": "travel", "value": -1, "reason": "shaken-by-the-desert" },
-            { "op": "flag", "value": "fl-heard-the-voices", "reason": "the-desert-has-spoken-once" }
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "led-astray-by-the-voices"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "shaken-by-the-desert"
+            },
+            {
+              "op": "flag",
+              "value": "fl-heard-the-voices",
+              "reason": "the-desert-has-spoken-once"
+            }
           ]
         },
         {
           "label": "ev.road.desert_voices.choice.ignore",
           "effects": [
-            { "op": "flag", "value": "fl-heard-the-voices", "reason": "the-desert-has-spoken-once" },
-            { "op": "codex", "value": "cx-desert-voices", "reason": "recorded-the-marvel" }
+            {
+              "op": "flag",
+              "value": "fl-heard-the-voices",
+              "reason": "the-desert-has-spoken-once"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-voices",
+              "reason": "recorded-the-marvel"
+            }
           ]
         },
         {
           "label": "ev.road.desert_voices.choice.divine",
-          "needs": { "learned_divination": ["iching"] },
+          "needs": {
+            "learned_divination": [
+              "iching"
+            ]
+          },
           "divination": "iching",
           "pass": {
             "effects": [
-              { "op": "reveal_map", "value": "rt-lop-sachiu", "reason": "the-hexagram-showed-the-road" },
-              { "op": "flag", "value": "fl-heard-the-voices", "reason": "the-desert-has-spoken-once" }
+              {
+                "op": "reveal_map",
+                "value": "rt-lop-sachiu",
+                "reason": "the-hexagram-showed-the-road"
+              },
+              {
+                "op": "flag",
+                "value": "fl-heard-the-voices",
+                "reason": "the-desert-has-spoken-once"
+              }
             ]
           },
           "fail": {
             "effects": [
-              { "op": "days", "value": 2, "reason": "the-reading-was-clouded" },
-              { "op": "flag", "value": "fl-heard-the-voices", "reason": "the-desert-has-spoken-once" }
+              {
+                "op": "days",
+                "value": 2,
+                "reason": "the-reading-was-clouded"
+              },
+              {
+                "op": "flag",
+                "value": "fl-heard-the-voices",
+                "reason": "the-desert-has-spoken-once"
+              }
             ]
           }
         }
       ],
-      "lore": { "storyId": "a-certain-desert", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+      "lore": {
+        "storyId": "a-certain-desert",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
+        }
+      }
     }
   ]
 }

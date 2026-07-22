@@ -1,0 +1,115 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "chamba",
+      "name": "city.chamba.name",
+      "band": "maritime_asia",
+      "culture": "indian_ocean",
+      "faiths": [
+        "islam",
+        "hindu",
+        "folk"
+      ],
+      "coord": [
+        109.223,
+        13.776
+      ],
+      "tier": "city",
+      "entryEvent": "ev-chamba-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "great-country-called-chamba",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c005"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "islamic",
+        "indian"
+      ]
+    },
+    {
+      "id": "java-major",
+      "name": "city.java-major.name",
+      "band": "maritime_asia",
+      "culture": "indian_ocean",
+      "faiths": [
+        "islam",
+        "hindu",
+        "folk"
+      ],
+      "coord": [
+        106.817,
+        -6.2
+      ],
+      "tier": "town",
+      "entryEvent": "ev-java-major-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "indian"
+      ]
+    },
+    {
+      "id": "pentam",
+      "name": "city.pentam.name",
+      "band": "maritime_asia",
+      "culture": "indian_ocean",
+      "faiths": [
+        "islam",
+        "hindu",
+        "folk"
+      ],
+      "coord": [
+        104.45,
+        1.083
+      ],
+      "tier": "town",
+      "entryEvent": "ev-pentam-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "island-called-pentam",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c008"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic",
+        "indian"
+      ]
+    }
+  ]
+}

@@ -1208,11 +1208,11 @@
    "type": "Feature",
    "id": "city-63",
    "properties": {
-    "name_medieval": "Tana",
+    "name_medieval": "Tana (Azov)",
     "name_modern": "Azov",
     "part": "Europa",
     "tier": 3,
-    "note": "Mouth of the Tanais, Silk Road terminus",
+    "note": "Mouth of the Tanais, Silk Road terminus; the Venetian La Tana",
     "is_center": false
    },
    "geometry": {
@@ -2481,6 +2481,272 @@
    "type": "Feature",
    "id": "city-130",
    "properties": {
+    "name_medieval": "Cachanfu",
+    "name_modern": "Puzhou (Yongji)",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City on the Caramoran, of silk and gold cloth",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     110.338,
+     34.865
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-131",
+   "properties": {
+    "name_medieval": "Cacanfu",
+    "name_modern": "Hejian",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Noble city of trade and handicraft",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.089,
+     38.446
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-132",
+   "properties": {
+    "name_medieval": "Chinangli",
+    "name_modern": "Cangzhou",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City on a great river, much shipping",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.857,
+     38.304
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-133",
+   "properties": {
+    "name_medieval": "Linju",
+    "name_modern": "Lingxian",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City of the river country",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.573,
+     37.333
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-134",
+   "properties": {
+    "name_medieval": "Siju",
+    "name_modern": "Pizhou",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City of great game and hunting",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.954,
+     34.311
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-135",
+   "properties": {
+    "name_medieval": "Coigangiu",
+    "name_modern": "Huaiyin",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Salt city at the river mouth",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.028,
+     33.583
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-136",
+   "properties": {
+    "name_medieval": "Paukin",
+    "name_modern": "Baoying",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City of silk and of the canal",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.311,
+     33.234
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-137",
+   "properties": {
+    "name_medieval": "Tiju",
+    "name_modern": "Gaoyou",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Canal city of fish and fowl",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.443,
+     32.785
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-138",
+   "properties": {
+    "name_medieval": "Caiju",
+    "name_modern": "Guazhou",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Where the grain fleet enters the great river",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.4,
+     32.253
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-139",
+   "properties": {
+    "name_medieval": "Sinju",
+    "name_modern": "Yizheng",
+    "part": "Asia",
+    "tier": 3,
+    "note": "River port of vast shipping",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.182,
+     32.272
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-140",
+   "properties": {
+    "name_medieval": "Chinghianfu",
+    "name_modern": "Zhenjiang",
+    "part": "Asia",
+    "tier": 3,
+    "note": "City with two Nestorian churches",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.425,
+     32.188
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-141",
+   "properties": {
+    "name_medieval": "Chinginju",
+    "name_modern": "Changzhou",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Where the Alans were slaughtered in their sleep",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.974,
+     31.811
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-142",
+   "properties": {
+    "name_medieval": "Tanpiju",
+    "name_modern": "Tonglu",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Fair city under the walls of Kinsay",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     119.687,
+     29.808
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-143",
+   "properties": {
+    "name_medieval": "Mien",
+    "name_modern": "Bagan (Pagan)",
+    "part": "Asia",
+    "tier": 3,
+    "note": "Kingdom of the gold and silver towers",
+    "is_center": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.86,
+     21.171
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "city-144",
+   "properties": {
     "name_medieval": "Chamba",
     "name_modern": "Champa (Qui Nhon)",
     "part": "Asia",
@@ -2498,7 +2764,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-131",
+   "id": "city-145",
    "properties": {
     "name_medieval": "Pentam",
     "name_modern": "Bintan",
@@ -2517,7 +2783,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-132",
+   "id": "city-146",
    "properties": {
     "name_medieval": "Java Major",
     "name_modern": "Java (Jakarta)",
@@ -2536,7 +2802,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-133",
+   "id": "city-147",
    "properties": {
     "name_medieval": "Samara",
     "name_modern": "Sumatra (Banda Aceh)",
@@ -2555,7 +2821,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-134",
+   "id": "city-148",
    "properties": {
     "name_medieval": "Maabar",
     "name_modern": "Coromandel (Nagapattinam)",
@@ -2574,7 +2840,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-135",
+   "id": "city-149",
    "properties": {
     "name_medieval": "Cail",
     "name_modern": "Kayalpattinam",
@@ -2593,7 +2859,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-136",
+   "id": "city-150",
    "properties": {
     "name_medieval": "Coilum",
     "name_modern": "Kollam (Quilon)",
@@ -2612,7 +2878,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-137",
+   "id": "city-151",
    "properties": {
     "name_medieval": "Melibar",
     "name_modern": "Malabar (Kozhikode)",
@@ -2631,7 +2897,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-138",
+   "id": "city-152",
    "properties": {
     "name_medieval": "Tana",
     "name_modern": "Thane",
@@ -2650,7 +2916,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-139",
+   "id": "city-153",
    "properties": {
     "name_medieval": "Cambaet",
     "name_modern": "Khambhat (Cambay)",
@@ -2669,7 +2935,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-140",
+   "id": "city-154",
    "properties": {
     "name_medieval": "Semenat",
     "name_modern": "Somnath",
@@ -2688,7 +2954,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-141",
+   "id": "city-155",
    "properties": {
     "name_medieval": "Dufar",
     "name_modern": "Salalah (Dhofar)",
@@ -2707,7 +2973,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-142",
+   "id": "city-156",
    "properties": {
     "name_medieval": "Esher",
     "name_modern": "Ash-Shihr",
@@ -2726,7 +2992,7 @@
   },
   {
    "type": "Feature",
-   "id": "city-143",
+   "id": "city-157",
    "properties": {
     "name_medieval": "Calatu",
     "name_modern": "Qalhat",

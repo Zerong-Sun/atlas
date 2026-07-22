@@ -3,96 +3,1278 @@
   "table": "events",
   "records": [
     {
+      "id": "ev-balc-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-balc-a.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-balc-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-balc-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-balc-b.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-balc-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-balc-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-balc-c.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-balc-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-balc-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-baldacum-a.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-baldacum-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-baldacum-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-baldacum-b.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-baldacum-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-baldacum-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-baldacum-c.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-baldacum-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-baldacum-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cambaluc-a.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-cambaluc-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cambaluc-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cambaluc-b.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-cambaluc-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cambaluc-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cambaluc-c.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-cambaluc-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cambaluc-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cascar-a.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cascar-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cascar-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cascar-b.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cascar-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cascar-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cascar-c.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cascar-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cascar-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-chandu-a.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.ev-chandu-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-chandu-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-chandu-b.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.ev-chandu-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-chandu-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-chandu-c.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "body": "ev.ev-chandu-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-chandu-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cotan-a.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cotan-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cotan-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cotan-b.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cotan-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cotan-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-cotan-c.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-cotan-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-cotan-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-kinsay-a.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-kinsay-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-kinsay-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-kinsay-b.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-kinsay-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-kinsay-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-kinsay-c.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-kinsay-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-kinsay-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
       "id": "ev-lop-bazaar",
       "kind": "site",
       "title": "ev.lop.bazaar.title",
-      "when": { "cities": ["lop"] },
-      "scene": { "bg": "desert-market", "region": "central_asia" },
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "scene": {
+        "bg": "desert-market",
+        "region": "central_asia"
+      },
       "body": "ev.lop.bazaar.body",
       "once": true,
       "choices": [
         {
           "label": "ev.lop.bazaar.choice.buy_jade",
-          "needs": { "coins": { "min": 400 } },
+          "needs": {
+            "coins": {
+              "min": 400
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -400, "reason": "bought-river-jade" },
-            { "op": "goods", "id": "jade", "value": 1, "reason": "bought-river-jade" },
-            { "op": "sticker", "value": "st-lop-jade", "reason": "first-jade-purchase" }
+            {
+              "op": "coins",
+              "value": -400,
+              "reason": "bought-river-jade"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-river-jade"
+            },
+            {
+              "op": "sticker",
+              "value": "st-lop-jade",
+              "reason": "first-jade-purchase"
+            }
           ]
         },
         {
           "label": "ev.lop.bazaar.choice.ask_prices",
           "effects": [
-            { "op": "reveal_map", "value": "sachiu", "reason": "traders-named-the-next-town" },
-            { "op": "codex", "value": "cx-jade-rivers", "reason": "learned-where-jade-is-found" }
+            {
+              "op": "reveal_map",
+              "value": "sachiu",
+              "reason": "traders-named-the-next-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-jade-rivers",
+              "reason": "learned-where-jade-is-found"
+            }
           ]
         }
       ],
-      "lore": { "placeId": "lop", "origin": "hybrid", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
-    },
-    {
-      "id": "ev-lop-shrine",
-      "kind": "site",
-      "title": "ev.lop.shrine.title",
-      "when": { "cities": ["lop"] },
-      "scene": { "bg": "cave-shrine", "region": "central_asia" },
-      "body": "ev.lop.shrine.body",
-      "once": true,
-      "choices": [
-        {
-          "label": "ev.lop.shrine.choice.offer",
-          "needs": { "coins": { "min": 50 } },
-          "effects": [
-            { "op": "coins", "value": -50, "reason": "offering-at-the-shrine" },
-            { "op": "fate", "id": "travel", "value": 1, "reason": "blessed-for-the-crossing" },
-            { "op": "reputation", "value": 1, "scope": "city", "id": "lop", "reason": "observed-the-local-rite" }
-          ]
-        },
-        {
-          "label": "ev.lop.shrine.choice.watch",
-          "effects": [
-            { "op": "codex", "value": "cx-desert-of-lop", "reason": "heard-the-monks-account" }
-          ]
+      "lore": {
+        "placeId": "lop",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
         }
-      ],
-      "lore": { "placeId": "lop", "origin": "authored" }
+      }
     },
     {
       "id": "ev-lop-caravanserai",
       "kind": "site",
       "title": "ev.lop.caravanserai.title",
-      "when": { "cities": ["lop"] },
-      "scene": { "bg": "caravanserai", "region": "central_asia" },
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "scene": {
+        "bg": "caravanserai",
+        "region": "central_asia"
+      },
       "body": "ev.lop.caravanserai.body",
       "once": true,
       "choices": [
         {
           "label": "ev.lop.caravanserai.choice.hire_guide",
-          "needs": { "coins": { "min": 200 } },
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -200, "reason": "retained-a-desert-guide" },
-            { "op": "unlock_route", "value": "rt-lop-sachiu", "reason": "guide-will-lead-the-crossing" },
-            { "op": "reveal_map", "value": "rt-lop-sachiu", "reason": "guide-described-the-stages" }
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "retained-a-desert-guide"
+            },
+            {
+              "op": "unlock_route",
+              "value": "rt-lop-sachiu",
+              "reason": "guide-will-lead-the-crossing"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-lop-sachiu",
+              "reason": "guide-described-the-stages"
+            }
           ]
         },
         {
           "label": "ev.lop.caravanserai.choice.wait_caravan",
           "effects": [
-            { "op": "days", "value": 8, "reason": "waited-for-a-caravan" },
-            { "op": "unlock_route", "value": "rt-lop-sachiu", "reason": "joined-a-departing-caravan" },
-            { "op": "coins", "value": -120, "reason": "caravan-share" }
+            {
+              "op": "days",
+              "value": 8,
+              "reason": "waited-for-a-caravan"
+            },
+            {
+              "op": "unlock_route",
+              "value": "rt-lop-sachiu",
+              "reason": "joined-a-departing-caravan"
+            },
+            {
+              "op": "coins",
+              "value": -120,
+              "reason": "caravan-share"
+            }
           ]
         },
         {
           "label": "ev.lop.caravanserai.choice.provision",
           "effects": [
-            { "op": "coins", "value": -80, "reason": "a-years-provisions" },
-            { "op": "item", "value": "it-desert-provisions", "reason": "a-years-provisions" },
-            { "op": "codex", "value": "cx-desert-of-lop", "reason": "the-rule-of-the-crossing" }
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "a-years-provisions"
+            },
+            {
+              "op": "item",
+              "value": "it-desert-provisions",
+              "reason": "a-years-provisions"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "the-rule-of-the-crossing"
+            }
           ]
         }
       ],
-      "lore": { "placeId": "lop", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+      "lore": {
+        "placeId": "lop",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
+        }
+      }
+    },
+    {
+      "id": "ev-lop-shrine",
+      "kind": "site",
+      "title": "ev.lop.shrine.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "scene": {
+        "bg": "cave-shrine",
+        "region": "central_asia"
+      },
+      "body": "ev.lop.shrine.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.shrine.choice.offer",
+          "needs": {
+            "coins": {
+              "min": 50
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -50,
+              "reason": "offering-at-the-shrine"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "blessed-for-the-crossing"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "lop",
+              "reason": "observed-the-local-rite"
+            }
+          ]
+        },
+        {
+          "label": "ev.lop.shrine.choice.watch",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "heard-the-monks-account"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-ormus-a.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-ormus-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-ormus-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-ormus-b.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-ormus-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-ormus-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-ormus-c.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-ormus-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-ormus-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-samarcanda-a.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-samarcanda-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-samarcanda-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-samarcanda-b.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-samarcanda-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-samarcanda-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-samarcanda-c.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev-samarcanda-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-samarcanda-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-tauris-a.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-tauris-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-tauris-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-tauris-b.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-tauris-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-tauris-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-tauris-c.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.ev-tauris-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-tauris-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-a",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-zayton-a.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-zayton-a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-zayton-a.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-zayton",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-b",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-zayton-b.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-zayton-b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-zayton-b.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-zayton",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-c",
+      "kind": "site",
+      "stub": true,
+      "title": "ev.ev-zayton-c.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev-zayton-c.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev-zayton-c.choice.look",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-zayton",
+              "reason": "recorded-what-was-seen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

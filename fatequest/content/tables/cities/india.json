@@ -1,0 +1,526 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "aden",
+      "name": "city.aden.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        45.03,
+        12.788
+      ],
+      "tier": "city",
+      "entryEvent": "ev-aden-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "aden",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c036"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "hindu",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "axuma",
+      "name": "city.axuma.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        38.719,
+        14.13
+      ],
+      "tier": "station",
+      "entryEvent": "ev-axuma-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "cail",
+      "name": "city.cail.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        78.123,
+        8.568
+      ],
+      "tier": "city",
+      "entryEvent": "ev-cail-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "cail",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c021"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "hindu",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "calatu",
+      "name": "city.calatu.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        59.372,
+        22.7
+      ],
+      "tier": "city",
+      "entryEvent": "ev-calatu-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "gulf-of-calatu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c039"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "hindu",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "cambaet",
+      "name": "city.cambaet.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        72.62,
+        22.313
+      ],
+      "tier": "town",
+      "entryEvent": "ev-cambaet-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kingdom-of-cambaet",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c028"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "coilum",
+      "name": "city.coilum.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        76.6,
+        8.893
+      ],
+      "tier": "town",
+      "entryEvent": "ev-coilum-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "coilum",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c022"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "dongola",
+      "name": "city.dongola.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        30.482,
+        19.17
+      ],
+      "tier": "station",
+      "entryEvent": "ev-dongola-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "dufar",
+      "name": "city.dufar.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        54.089,
+        17.019
+      ],
+      "tier": "town",
+      "entryEvent": "ev-dufar-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "dufar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c038"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "esher",
+      "name": "city.esher.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        49.601,
+        14.761
+      ],
+      "tier": "city",
+      "entryEvent": "ev-esher-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "esher",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c037"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "hindu",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "maabar",
+      "name": "city.maabar.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        79.843,
+        10.766
+      ],
+      "tier": "town",
+      "entryEvent": "ev-maabar-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "great-province-of-maabar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c016"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "mecha",
+      "name": "city.mecha.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        39.826,
+        21.423
+      ],
+      "tier": "town",
+      "entryEvent": "ev-mecha-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "medina",
+      "name": "city.medina.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        39.611,
+        24.47
+      ],
+      "tier": "station",
+      "entryEvent": "ev-medina-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "origin": "authored"
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "melibar",
+      "name": "city.melibar.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        75.78,
+        11.259
+      ],
+      "tier": "city",
+      "entryEvent": "ev-melibar-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kingdom-of-melibar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c025"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "shrine": {
+        "faith": "hindu",
+        "services": [
+          "bless"
+        ]
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "semenat",
+      "name": "city.semenat.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        70.401,
+        20.888
+      ],
+      "tier": "town",
+      "entryEvent": "ev-semenat-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kingdom-of-semenat",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c029"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    },
+    {
+      "id": "tana",
+      "name": "city.tana.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "hindu",
+        "islam",
+        "folk"
+      ],
+      "coord": [
+        72.97,
+        19.197
+      ],
+      "tier": "town",
+      "entryEvent": "ev-tana-entry",
+      "sites": [],
+      "exits": [],
+      "lore": {
+        "placeId": "kingdom-of-tana",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c027"
+        }
+      },
+      "market": {
+        "goods": [],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "indian"
+      ]
+    }
+  ]
+}
