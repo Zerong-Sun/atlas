@@ -28,7 +28,7 @@ window.FQ = window.FQ || {};
       if (s.y < -2) s.y = cv.height + 2;
       const a = 0.35 + Math.sin(s.tw) * 0.3;
       ctx.globalAlpha = Math.max(0.08, a);
-      ctx.fillStyle = "#cfd6ff";
+      ctx.fillStyle = "#e6dcc4";
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, 7);
       ctx.fill();
@@ -48,11 +48,11 @@ window.FQ = window.FQ || {};
   resize();
 
   FQ.confetti = function () {
-    const colors = ["#f0c75e", "#8fa8ff", "#ff7ab0", "#7ecb6b", "#e8e4d8"];
+    const colors = ["#e3cfa2", "#7fa3bd", "#b3402e", "#6f9683", "#efe7d5"];
     for (let i = 0; i < 70; i++) {
       parts.push({
         x: cv.width / 2 + (Math.random() - 0.5) * 160,
-        y: cv.height * 0.35,
+        y: cv.height * 0.58,
         vx: (Math.random() - 0.5) * 9,
         vy: -Math.random() * 9 - 3,
         r: 3 + Math.random() * 4,

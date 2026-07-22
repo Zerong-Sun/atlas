@@ -292,7 +292,7 @@ Generate exactly ONE 5×2 contact sheet of 10 map/journey assets (transparent ba
 Run (one window per category, sequential batches inside):
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 .venv/bin/python gen_map_prompts.py
 .venv/bin/python submit_map_windows.py --skip-existing --poll-sec 180
 ```

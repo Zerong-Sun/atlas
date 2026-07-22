@@ -12,7 +12,7 @@ These three Extra2 files are temporary copies until regenerated:
 Regen command after quota resets:
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 .venv/bin/python submit_map_windows.py --prompts-file ART_PROMPTS_EMOJI.md \
   --style emoji --windows Extra2 --skip-existing --force  # delete stand-ins first
 ```

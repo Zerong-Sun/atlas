@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Validate outcome matrices for fatequest2 (and optionally fatequest 1.0). */
+/* Validate outcome matrices for fatequest. */
 import fs from "fs";
 import path from "path";
 import vm from "vm";

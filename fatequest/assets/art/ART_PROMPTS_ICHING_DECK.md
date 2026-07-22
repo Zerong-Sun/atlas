@@ -159,7 +159,7 @@ Generate exactly 4 SEPARATE I Ching divination card face images in this single r
 *64 hexagrams · 7 batches · run:*
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 .venv/bin/python gen_iching_prompts.py
 .venv/bin/python chatgpt_gen_art.py --batch --prompts-file ART_PROMPTS_ICHING_DECK.md --skip-existing --timeout-ms 600000
 ```

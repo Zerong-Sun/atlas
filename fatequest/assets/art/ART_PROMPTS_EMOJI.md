@@ -524,7 +524,7 @@ Generate exactly ONE 3×1 contact sheet of 3 game UI icons on transparent backgr
 - **Extra2**: Batch 15
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 .venv/bin/python gen_emoji_prompts.py
 .venv/bin/python submit_map_windows.py --prompts-file ART_PROMPTS_EMOJI.md --skip-existing --poll-sec 120
 ```

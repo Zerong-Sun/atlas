@@ -497,7 +497,7 @@ def main() -> None:
     lines.append("Run (one window per category, sequential batches inside):")
     lines.append("")
     lines.append("```bash")
-    lines.append("cd fatequest2/scripts")
+    lines.append("cd fatequest/scripts")
     lines.append(".venv/bin/python gen_map_prompts.py")
     lines.append(
         ".venv/bin/python submit_map_windows.py --skip-existing --poll-sec 180"

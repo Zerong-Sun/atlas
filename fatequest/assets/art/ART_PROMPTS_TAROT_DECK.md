@@ -184,6 +184,6 @@ Generate exactly 8 SEPARATE tarot card face images in this single response (NOT 
 *78 cards · 8 batches · run:*
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 .venv/bin/python chatgpt_gen_art.py --batch --batch-separate --prompts-file ART_PROMPTS_TAROT_DECK.md --skip-existing
 ```

@@ -8,16 +8,52 @@ const $app = () => document.getElementById("app");
 FQ.current = { screen: "home" };
 
 /* ---------- navigation ---------- */
+/* which musical land & which kind of moment each screen belongs to (§7.2) */
+FQ.SCENE_OF = {
+  title: "title", home: "map", codex: "map", profile: "map", lineage: "map",
+  journey: "map", journeyTravel: "travel", journeyMarket: "town",
+  journeyBag: "map", journeyLog: "map", tower: "map", towerRun: "tower",
+  towerEnd: "map", trial: "ritual", daily: "ritual"
+};
+FQ.REGION_OF = {
+  tarot: "chr", lenormand: "chr", runes: "nor", astrodice: "isl", western: "isl",
+  iching: "con", meihua: "con", bazi: "con", dream: "con", jiaobei: "mazu",
+  title: "chr", home: "chr", daily: "con"
+};
+/* fullscreen level stages — rituals and trials take the whole screen */
+FQ.STAGED = ["trial", "towerRun", "journeyTravel", "tarot", "iching", "meihua",
+  "bazi", "western", "runes", "dream", "astrodice", "jiaobei", "lenormand", "daily"];
+
 FQ.nav = function (screen, param) {
   FQ.current = { screen, param };
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
+  document.body.classList.toggle("titled", screen === "title");
+  document.body.classList.toggle("staged", FQ.STAGED.includes(screen));
+  document.body.classList.toggle("world", screen === "journey");   /* map fills the desk */
   $app().innerHTML = "";
   render(param);
+  if (FQ.AU && FQ.AU.scene) {
+    FQ.AU.scene(FQ.SCENE_OF[screen] || "ritual",
+      String(screen).startsWith("journey") ? null : FQ.REGION_OF[screen]);
+  }
+  /* which dock lamp burns for this screen */
+  const GROUP = { journey: "journey", journeyTravel: "journey", journeyMarket: "journey",
+    journeyBag: "journey", journeyLog: "journey", home: "journey", trial: "arts",
+    tower: "tower", towerRun: "tower", towerEnd: "tower",
+    records: "records", lineage: "records", codex: "records", profile: "records" };
+  const lamp = GROUP[screen] || (FQ.METHODS.some(m => m.id === screen) || screen === "daily" ? "arts" : "journey");
   document.querySelectorAll(".tab").forEach(b => {
-    b.classList.toggle("active", b.dataset.nav === screen ||
-      (b.dataset.nav === "home" && !["codex", "profile"].includes(screen)));
+    b.classList.toggle("active", b.dataset.nav === lamp);
   });
   window.scrollTo(0, 0);
+};
+
+/* fullscreen (best-effort; PWA standalone is already chromeless) */
+FQ.toggleFS = function () {
+  try {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen({ navigationUI: "hide" });
+  } catch (e) {}
 };
 
 FQ.applyStaticI18n = function () {
@@ -29,14 +65,15 @@ FQ.hudHTML = function () {
   const pct = Math.round(FQ.levelProgress() * 100);
   return `
   <div class="hud">
-    <div class="title">
+    <div class="title" onclick="FQ.nav('title')" style="cursor:pointer" title="Title">
       <h1>${FQ.t("app.title")} <span class="gold">✦</span></h1>
       <div class="sub">${FQ.t("app.sub")}</div>
     </div>
+    <button class="pill skillbtn" onclick="FQ.toggleFS()" title="${FQ.t("title.fs")}">⛶</button>
     <div>
       <span class="pill">${FQ.t("lv.prefix")}${FQ.level() + 1} · <b>${FQ.esc(FQ.levelTitle())}</b></span>
       <div class="xpbar"><i id="xpbar-i" style="width:${pct}%"></i></div>
-      <div class="small dim center">${FQ.state.xp} ✧</div>
+      <div class="small dim center">${FQ.state.xp} ✧ · ✨ ${FQ.state.stardust}</div>
     </div>
   </div>`;
 };
@@ -55,7 +92,10 @@ FQ.hexLinesHTML = function (lines, movingIdx) {
 };
 FQ.hexResultHTML = function (cast) {
   const p = cast.primary;
+  const plate = FQ.hexPlate(p.n);
   let html = `
+    ${plate ? `<div class="hexplate">${FQ.plateCard(plate,
+      { glyph: p.lower.sym + p.upper.sym, civ: "iching", name: FQ.bi(p, "zh", "en") })}</div>` : ""}
     ${FQ.hexLinesHTML(cast.lines, cast.movingIdx)}
     <div class="center">
       <div class="hexname">${p.lower.sym}${p.upper.sym} <b class="gold">${FQ.bi(p, "zh", "en")}</b>
@@ -82,21 +122,115 @@ FQ.collectHexCast = function (cast) {
 /* ---------- screens ---------- */
 FQ.SCREENS = {
 
-  /* ===== home / starmap ===== */
-  home() {
+  /* ===== title — the game gate ===== */
+  title() {
+    const returning = FQ.state.xp > 0 || FQ.state.readings > 0;
+    $app().innerHTML = `
+      <div class="title-screen">
+        <div class="t-orn">✦ ◆ ✦</div>
+        <h1 class="t-logo">${FQ.lang === "zh" ? "灵游" : "FateQuest"}</h1>
+        <div class="t-sub">${FQ.lang === "zh" ? "FATEQUEST · 千载行纪" : "灵游 · CHRONICLES OF A THOUSAND YEARS"}</div>
+        <div class="t-tag">${FQ.t("title.tag")}</div>
+        <button class="btn t-start" onclick="FQ.startGame()">${returning ? FQ.t("title.continue") : FQ.t("title.start")}</button>
+        <div class="t-opts">
+          <button class="pill skillbtn" onclick="FQ.setLang(FQ.lang === 'zh' ? 'en' : 'zh')">🀄 ${FQ.lang === "zh" ? "EN" : "中文"}</button>
+          <button class="pill skillbtn" onclick="FQ.AU.setMute(!FQ.state.mute);FQ.nav('title')">${FQ.state.mute ? "🔕" : "🔔"}</button>
+          <button class="pill skillbtn" onclick="FQ.toggleFS()">⛶ ${FQ.t("title.fs")}</button>
+        </div>
+        <div class="t-foot">${FQ.t("footer")}</div>
+      </div>`;
+  },
+
+  /* ===== the world is the game — home is just a doorway to it ===== */
+  home() { FQ.nav("journey"); },
+
+  /* ===== 术 · the arts you have been taught (GDD §4.9) =====
+     The fortune-telling proper lives here, and only what a teacher on the
+     road has actually given you appears. */
+  arts() {
+    const daily = FQ.dailyAvailable();
+    const known = FQ.METHODS.filter(m => FQ.Q.knows(m.id));
+    const unknown = FQ.METHODS.filter(m => !FQ.Q.knows(m.id));
+    const row = m => `
+      <button class="artrow" onclick="FQ.nav('${m.id}')">
+        <span class="ar-seal">${FQ.art("realm-" + m.id, m.ic, "big")}</span>
+        <span class="ar-txt">
+          <b>${FQ.t(m.id + ".name")}</b>
+          <span class="dim small">${FQ.t(m.id + ".desc")}</span>
+        </span>
+        <span class="ar-civ">${FQ.t(m.id + ".civ")}</span>
+      </button>`;
+    const dark = m => {
+      const M = FQ.mentorFor(m.id);
+      const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
+      const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+      return `
+        <button class="artrow dark" onclick="${reached ? `FQ.Q.meet('${m.id}')`
+          : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+          <span class="ar-seal">🔒</span>
+          <span class="ar-txt">
+            <b>${FQ.t(m.id + ".name")}</b>
+            <span class="dim small">${reached
+              ? FQ.t("mentor.here") + " · " + FQ.t("mentor.meet")
+              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</span>
+          </span>
+          <span class="ar-civ">${FQ.t(m.id + ".civ")}</span>
+        </button>`;
+    };
+    $app().innerHTML = `
+      <h2>${FQ.t("nav.arts")}</h2>
+      <p class="dim small">${FQ.t("arts.sub", { n: known.length, t: FQ.METHODS.length })}</p>
+      <button class="artrow lot" ${daily ? "" : "disabled"} onclick="FQ.nav('daily')">
+        <span class="ar-seal">🏮</span>
+        <span class="ar-txt"><b>${FQ.t("home.daily")}</b>
+          <span class="dim small">${FQ.t("home.streak")} ${FQ.state.streak} ${FQ.t("common.day")}</span></span>
+        <span class="ar-civ">${daily ? "●" : "○"}</span>
+      </button>
+      <div class="artlist">${known.map(row).join("")}</div>
+      ${unknown.length ? `<div class="arthr">${FQ.t("arts.unlearned")}</div>
+        <div class="artlist">${unknown.map(dark).join("")}</div>` : ""}
+      <div class="footer-note">${FQ.t("footer")}</div>`;
+  },
+
+  /* ===== 卷宗 · one book for lineage, codex and the voyager ===== */
+  records(tab) {
+    tab = tab || "lineage";
+    const sub = { lineage: FQ.SCREENS.lineage, codex: FQ.SCREENS.codex, profile: FQ.SCREENS.profile }[tab]
+      || FQ.SCREENS.lineage;
+    sub(tab === "codex" ? "tarot" : undefined);
+    const bar = ["lineage", "codex", "profile"].map(k => `
+      <button class="recTab ${k === tab ? "on" : ""}" onclick="FQ.nav('records','${k}')">
+        ${FQ.t("nav." + (k === "lineage" ? "lineage" : k === "codex" ? "codex" : "profile"))}
+      </button>`).join("");
+    $app().insertAdjacentHTML("afterbegin", `<div class="recbar">${bar}</div>`);
+    const back = $app().querySelector(".back");
+    if (back) back.remove();
+  },
+
+  /* ===== legacy starmap (kept for reference; no longer in the dock) ===== */
+  starmap() {
     const daily = FQ.dailyAvailable();
     const realms = FQ.METHODS.map((m, i) => {
-      if (!m.playable) return `
-        <div class="realm locked" style="--rc:var(--c-locked);animation-delay:${i * 45}ms"
-             onclick="FQ.toast('🔒 ${FQ.t("locked.tip")}')">
-          <div class="ric">${m.ic}</div>
-          <div class="rt">${FQ.t(m.lockKey)}</div>
-          <div class="rs">${FQ.t("locked.tip")}</div>
-        </div>`;
+      /* 师承: an art you have not been taught stays dark (GDD §4.9) */
+      if (!FQ.Q.knows(m.id)) {
+        const M = FQ.mentorFor(m.id);
+        const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
+        const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+        return `
+          <div class="realm unlearned" style="--rc:${m.color};animation-delay:${i * 45}ms"
+               onclick="${reached ? `FQ.Q.meet('${m.id}')` : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+            <div class="rciv">${FQ.t(m.id + ".civ")}</div>
+            <div class="ric">🔒</div>
+            <div class="rt">${FQ.t(m.id + ".name")}</div>
+            <div class="rs">${reached
+              ? `<span class="gold">${FQ.t("mentor.here")} · ${FQ.t("mentor.meet")}</span>`
+              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
+          </div>`;
+      }
       return `
         <div class="realm" style="--rc:${m.color};animation-delay:${i * 45}ms" onclick="FQ.nav('${m.id}')">
           <div class="rciv">${FQ.t(m.id + ".civ")}</div>
-          <div class="ric">${m.ic}</div>
+          <div class="ric">${FQ.art("realm-" + m.id, m.ic, "big")}</div>
           <div class="rt">${FQ.t(m.id + ".name")}</div>
           <div class="rs">${FQ.t(m.id + ".desc")}</div>
         </div>`;
@@ -104,16 +238,24 @@ FQ.SCREENS = {
 
     const jn = FQ.state.journey;
     const jdone = jn && (jn.completed || []).includes("marco");
-    const jprog = jn ? Math.min(jn.node, 8) : 0;
+    const jprog = jn && jn.visited ? jn.visited.length : 0;
     $app().innerHTML = `
       ${FQ.hudHTML()}
       <div class="panel jbanner" onclick="FQ.nav('journey')" style="display:flex;align-items:center;gap:14px">
-        <div style="font-size:30px">🐪</div>
+        <div style="font-size:30px">${FQ.art("mode-journey", "🐪", "big")}</div>
         <div style="flex:1">
           <h3 class="gold">${FQ.t("journey.name")}</h3>
           <div class="dim small">${FQ.t("journey.tag")}</div>
         </div>
-        <span class="pill">${jdone ? "✓" : jprog + "/8"}</span>
+        <span class="pill">${jdone ? "✓" : jprog + "/12"}</span>
+      </div>
+      <div class="panel jbanner" onclick="FQ.nav('tower')" style="display:flex;align-items:center;gap:14px">
+        <div style="font-size:30px">${FQ.art("mode-tower", "🗼", "big")}</div>
+        <div style="flex:1">
+          <h3 class="gold">${FQ.t("tw.name")}</h3>
+          <div class="dim small">${FQ.t("tw.tag")}</div>
+        </div>
+        <span class="pill">${FQ.state.tower.run ? "▶ " + FQ.state.tower.run.layer + "/12" : (FQ.state.tower.best ? "⭐" + FQ.state.tower.best : "NEW")}</span>
       </div>
       <div class="panel" style="display:flex;align-items:center;gap:14px">
         <div style="font-size:30px">🏮</div>
@@ -234,6 +376,24 @@ FQ.SCREENS = {
       <div id="rn-out"></div>`;
   },
 
+  /* ===== lenormand (real Dondorf scans) ===== */
+  lenormand() {
+    FQ._len = { drawn: FQ.drawLenormand(3), flipped: 0 };
+    const fan = [0, 1, 2].map(i => `
+      <div class="lencard" id="len-${i}" onclick="FQ.lenPick(${i})">
+        <div class="lface lback">✦</div>
+        <div class="lface lfront"></div>
+      </div>`).join("");
+    $app().innerHTML = `
+      ${FQ.backBtn()}
+      <h2>${FQ.t("lenormand.name")} 🃁</h2>
+      <p class="dim">${FQ.t("lenormand.desc")}</p>
+      <p class="small gold center" style="margin-top:10px">${FQ.t("lenormand.pick")}</p>
+      <div class="lenfan">${fan}</div>
+      <div id="len-out"></div>
+      <div class="footer-note">${FQ.t("lenormand.credit")}</div>`;
+  },
+
   /* ===== dream ===== */
   dream() {
     $app().innerHTML = `
@@ -283,11 +443,11 @@ FQ.SCREENS = {
   codex(tab) {
     tab = tab || "tarot";
     const c = FQ.state.col;
-    const total = FQ.TAROT.length + FQ.HEXAGRAMS.length + FQ.RUNES.length;
-    const tabs = ["tarot", "hex", "rune"].map(k => `
+    const total = FQ.TAROT.length + FQ.HEXAGRAMS.length + FQ.RUNES.length + FQ.LENORMAND.length;
+    const NCOL = { tarot: 22, hex: 64, rune: 24, len: 36 };
+    const tabs = ["tarot", "hex", "rune", "len"].map(k => `
       <button class="btn sm ${k === tab ? "" : "ghost"}" onclick="FQ.nav('codex','${k}')">
-        ${FQ.t("codex." + (k === "hex" ? "hex" : k === "rune" ? "rune" : "tarot"))}
-        (${c[k].length}/${k === "tarot" ? 22 : k === "hex" ? 64 : 24})
+        ${FQ.t("codex." + k)} (${(c[k] || []).length}/${NCOL[k]})
       </button>`).join("");
     let items = "";
     if (tab === "tarot") {
@@ -295,6 +455,13 @@ FQ.SCREENS = {
         const got = c.tarot.includes(t.id);
         return `<div class="citem ${got ? "got" : "miss"}"><div class="ci">${got ? t.sym : "❔"}</div>
           <div class="cn">${got ? FQ.bi(t, "zh", "en") : "· · ·"}</div></div>`;
+      }).join("");
+    } else if (tab === "len") {
+      items = FQ.LENORMAND.map(l => {
+        const got = (c.len || []).includes(l.n);
+        return `<div class="citem ${got ? "got" : "miss"}">${got
+          ? `<img class="lenthumb" src="assets/decks/lenormand/${l.f}.jpg" alt="">`
+          : `<div class="ci">❔</div><div class="cn">#${l.n}</div>`}</div>`;
       }).join("");
     } else if (tab === "hex") {
       items = FQ.HEXAGRAMS.map(h => {
@@ -342,7 +509,17 @@ FQ.SCREENS = {
           ${FQ.t("profile.readings")}: <b class="gold">${FQ.state.readings}</b> ·
           ${FQ.t("home.streak")}: <b class="gold">${FQ.state.streak}</b> ·
           ${FQ.t("profile.days")}: <b class="gold">${FQ.state.daysVisited}</b> ·
-          ${FQ.t("codex.progress")}: <b class="gold">${FQ.colCount()}</b>
+          ${FQ.t("codex.progress")}: <b class="gold">${FQ.colCount()}</b><br>
+          ✨ <b class="gold">${FQ.state.stardust}</b> ·
+          🗼 ${FQ.t("tw.best")}: <b class="gold">${FQ.state.tower.best}/12</b> ·
+          🌈 <b class="gold">${FQ.state.tower.resTotal}</b>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>${FQ.t("profile.sound")}</h3>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <button class="btn sm ${FQ.state.mute ? "ghost" : ""}" onclick="FQ.AU.setMute(false);FQ.nav('profile')">🔔 ${FQ.t("profile.sound.on")}</button>
+          <button class="btn sm ${FQ.state.mute ? "" : "ghost"}" onclick="FQ.AU.setMute(true);FQ.nav('profile')">🔕 ${FQ.t("profile.sound.off")}</button>
         </div>
       </div>
       <div class="panel"><h3>${FQ.t("profile.achv")}</h3>${achv}</div>
@@ -362,6 +539,7 @@ FQ.SCREENS = {
 FQ.doDaily = function () {
   if (!FQ.dailyAvailable()) { FQ.toast(FQ.t("home.daily.done")); return; }
   const cyl = document.getElementById("cyl");
+  FQ.AU.play("shake");
   cyl.classList.add("shake");
   setTimeout(() => {
     cyl.classList.remove("shake");
@@ -385,10 +563,16 @@ FQ.tarotPick = function (i) {
   const el = document.getElementById("fan-" + i);
   if (!t || t.flipped >= 3 || el.classList.contains("flipped")) return;
   const pick = t.drawn[t.flipped];
+  FQ.AU.play("flip");
   const front = el.querySelector(".tfront");
-  front.innerHTML = `<div class="sym">${pick.card.sym}</div>
-    <div class="nm">${FQ.bi(pick.card, "zh", "en")}${pick.reversed ? FQ.t("tarot.rev") : ""}</div>`;
-  if (pick.reversed) el.classList.add("rev");
+  const plate = FQ.tarotPlate(pick.card.id);
+  front.innerHTML = plate
+    ? FQ.plateCard(plate, { glyph: pick.card.sym, civ: "tarot", rev: pick.reversed,
+        name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "") })
+    : FQ.illumCard({ glyph: pick.card.sym, civ: "tarot", rev: pick.reversed,
+        art: FQ.TAROT_ART[pick.card.id],
+        name: FQ.bi(pick.card, "zh", "en") + (pick.reversed ? FQ.t("tarot.rev") : "") });
+  front.classList.add("illum-face");
   el.classList.add("flipped");
   const r = el.getBoundingClientRect();
   FQ.sparkleAt(r.left + r.width / 2, r.top + r.height / 2, "#9b6bb3");
@@ -408,6 +592,7 @@ FQ.tarotReveal = function () {
 
 FQ.doToss = function () {
   if (FQ._cast.length >= 6) return;
+  FQ.AU.play("coin");
   const toss = FQ.tossCoins();
   document.querySelectorAll("#coins .coin").forEach((c, i) => {
     c.classList.remove("toss"); void c.offsetWidth; c.classList.add("toss");
@@ -497,8 +682,41 @@ FQ.doWestern = function () {
   FQ.recordReading("western", 10);
 };
 
+FQ.lenPick = function (i) {
+  const L = FQ._len;
+  const el = document.getElementById("len-" + i);
+  if (!L || el.classList.contains("flipped")) return;
+  const card = L.drawn[i];
+  el.querySelector(".lfront").innerHTML = `<img src="assets/decks/lenormand/${card.f}.jpg" alt="${card.en}">`;
+  el.classList.add("flipped");
+  FQ.AU.play("flip");
+  const r = el.getBoundingClientRect();
+  FQ.sparkleAt(r.left + r.width / 2, r.top + r.height / 2, "#c2a15c");
+  FQ.collect("len", card.n, FQ.bi(card, "zh", "en"));
+  L.flipped++;
+  if (L.flipped === 3) setTimeout(FQ.lenReveal, 700);
+};
+FQ.lenReveal = function () {
+  const labels = [FQ.t("lenormand.p1"), FQ.t("lenormand.p2"), FQ.t("lenormand.p3")];
+  const rows = FQ._len.drawn.map((c, i) => `
+    <div class="reading"><b class="gold">${labels[i]} · ${c.n} ${FQ.bi(c, "zh", "en")}</b><br>${FQ.bi(c, "mZh", "mEn")}</div>`).join("");
+  document.getElementById("len-out").innerHTML = `<div class="result">${rows}
+    <div class="center"><button class="btn ghost sm" onclick="FQ.nav('lenormand')">${FQ.t("common.again")}</button></div></div>`;
+  FQ.recordReading("lenormand", 12);
+};
+
+/* astrodice SVG faces (assets/astrodice/, black line art lifted to gold by CSS) */
+FQ.diceArt = function (kind, key, cls) {
+  const file = kind === "planet" ? "planets/zodiac-planet-" + key
+    : kind === "sign" ? "signs/" + key
+    : "houses/house-" + String(key).padStart(2, "0");
+  return `<img class="dice-svg ${cls || ""}" src="assets/astrodice/${file}.svg" alt=""
+    onerror="this.outerHTML=this.getAttribute('data-fb')||''" data-fb="${FQ.esc(arguments[3] || "")}">`;
+};
+
 FQ.doRunes = function () {
   const bag = document.getElementById("bag");
+  FQ.AU.play("shake");
   bag.classList.add("shake");
   setTimeout(() => {
     bag.classList.remove("shake");
@@ -540,15 +758,16 @@ FQ.doDream = function () {
 };
 
 FQ.doDice = function () {
+  FQ.AU.play("dice");
   const roll = FQ.rollAstroDice();
   ["d1", "d2", "d3"].forEach(id => {
     const el = document.getElementById(id);
     el.classList.remove("roll"); void el.offsetWidth; el.classList.add("roll");
   });
   setTimeout(() => {
-    document.getElementById("d1").innerHTML = `${roll.planet.sym}<small>${FQ.bi(roll.planet, "zh", "en")}</small>`;
-    document.getElementById("d2").innerHTML = `${roll.sign.sym}<small>${FQ.bi(roll.sign, "zh", "en")}</small>`;
-    document.getElementById("d3").innerHTML = `${"ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ"[roll.house.n - 1]}<small>${FQ.bi(roll.house, "zh", "en")}</small>`;
+    document.getElementById("d1").innerHTML = `${FQ.diceArt("planet", roll.planet.en.toLowerCase(), "", roll.planet.sym)}<small>${FQ.bi(roll.planet, "zh", "en")}</small>`;
+    document.getElementById("d2").innerHTML = `${FQ.diceArt("sign", roll.sign.id, "", roll.sign.sym)}<small>${FQ.bi(roll.sign, "zh", "en")}</small>`;
+    document.getElementById("d3").innerHTML = `${FQ.diceArt("house", roll.house.n, "", "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ"[roll.house.n - 1])}<small>${FQ.bi(roll.house, "zh", "en")}</small>`;
     const line = FQ.lang === "zh"
       ? `${roll.planet.zh}（${roll.planet.kZh}）落在${roll.sign.zh}，照进你的${roll.house.zh}。此刻的答案，与「${roll.house.zh.replace("之宫", "")}」里的「${roll.planet.kZh}」有关。`
       : `${roll.planet.en} (${roll.planet.kEn}) in ${roll.sign.en}, lighting your house of ${roll.house.en} — the answer lives where “${roll.planet.kEn}” meets “${roll.house.en}”.`;
@@ -558,6 +777,7 @@ FQ.doDice = function () {
 };
 
 FQ.doJiaobei = function () {
+  FQ.AU.play("wood");
   const { blocks, res } = FQ.throwJiaobei();
   ["b1", "b2"].forEach((id, i) => {
     const el = document.getElementById(id);
@@ -589,11 +809,22 @@ FQ.doReset = function () {
   if (confirm(FQ.t("profile.reset.confirm"))) { FQ.reset(); FQ.applyStaticI18n(); FQ.nav("home"); }
 };
 
-/* ---------- boot ---------- */
-(function () {
+FQ.startGame = function () {
+  FQ.AU.unlock();
+  FQ.AU.play("chime");
+  /* fullscreen needs the user gesture — this click is it */
+  if (!window.matchMedia("(display-mode: standalone)").matches && !document.fullscreenElement) {
+    try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch (e) {}
+  }
+  FQ.nav("journey");   /* straight onto the road */
+};
+
+/* ---------- boot (after every module has registered) ---------- */
+document.addEventListener("DOMContentLoaded", function () {
   FQ.load();
   document.querySelectorAll(".tab").forEach(b =>
     b.addEventListener("click", () => FQ.nav(b.dataset.nav)));
+  document.addEventListener("pointerdown", () => FQ.AU && FQ.AU.unlock(), { once: true });
   FQ.applyStaticI18n();
-  FQ.nav("home");
-})();
+  FQ.nav("title");
+});

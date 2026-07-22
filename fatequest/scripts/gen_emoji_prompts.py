@@ -408,7 +408,7 @@ def write_prompts() -> None:
         lines.append(f"- **{w}**: {', '.join(bs)}")
     lines.append("")
     lines.append("```bash")
-    lines.append("cd fatequest2/scripts")
+    lines.append("cd fatequest/scripts")
     lines.append(".venv/bin/python gen_emoji_prompts.py")
     lines.append(
         ".venv/bin/python submit_map_windows.py --prompts-file ART_PROMPTS_EMOJI.md "

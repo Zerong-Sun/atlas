@@ -2,7 +2,7 @@
 """
 Attach to a Chrome instance started with --remote-debugging-port, submit
 ART_PROMPTS.md Prompt 1 entries to ChatGPT image generation, download results,
-convert to .webp, and save under fatequest2/assets/art/ with Brief filenames.
+convert to .webp, and save under fatequest/assets/art/ with Brief filenames.
 
 Prereq:
   ./launch_chrome_debug.sh

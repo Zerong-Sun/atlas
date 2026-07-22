@@ -1,62 +1,66 @@
-# 灵游 FateQuest
+# 灵游 FateQuest 2.0 · 千载行纪
 
 **环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions.**
 
-Atlas（诸象）的游戏化姊妹作：同样的多文明占卜内核，做成轻盈、有仪式感、可收集的游戏体验。
-The gamified sibling of Atlas (诸象): the same multi-civilization divination core, reimagined as a light, ritual-rich, collectible game.
+基于 [`docs/GDD.md`](docs/GDD.md)（2.0 完整策划案）实现的游戏版本：**占卜不是查看结果的按钮，而是你的移动方式、资源系统与叙事之笔。**
+视觉方向「墨金曜夜」：漆黑夜空 × 金箔宋体 × 朱砂，Balatro 式卡牌手感。
 
-## 玩法 Gameplay
+## 两大模式 Two modes
 
-- **占途 · 千载行纪 FateRoad Chronicles** — 手绘风历史地图上重走真实古路。首章「马可·波罗东行」:威尼斯→泉州,穿越基督/新月/儒道/妈祖四大文化区,每个节点以**当地文明的占法**开门(圣殿骑士的塔罗关文、波斯商队的观星择日、殿前起卦、天妃宫掷筊…),章末断案「沉波之珠」三占法集线索、三结局评分。灵感与地理叙事底座来自 [HiSMap](https://github.com/Zerong-Sun/histravelmap)。
-  Walk Marco Polo's real route on a stylized map; each land opens with its own tradition's ritual, ending in a multi-ending case file. Geographic-narrative concept from HiSMap.
-- **9 个可玩秘境 9 playable realms** — 塔罗 Tarot · 周易 I-Ching · 八字 BaZi · 星座 Zodiac · 卢恩 Runes · 占梦 Dreams · 星辰骰 Astro Dice · 筊杯 Moon Blocks · 梅花心易 Plum Blossom（紫微 / 奇门 / 雷诺曼为待开启占位 placeholder realms）
-- **每日一签 Daily Lot** — 签到摇签，连签有加成 streak bonus
-- **灵光与称号 XP & titles** — 7 阶成长：见习星旅人 → 万象大师
-- **万象图鉴 Codex** — 22 塔罗 + 64 卦 + 24 卢恩，仪式中邂逅即点亮
-- **成就 Achievements** · 双语 中文/EN · 离线可玩 offline-ready
+- **占途 · 千载行纪 2.0（主线）** — 马可·波罗真实路线做成**路网**：两处岔路（波斯支线纳旅伴、克尔曼沙漠 vs 赫拉特商道、驿路 vs 运河）、天数与逍遥天数（par）、种子天气参与玩法（雾迷路/顺风减日/沙暴雪封）、行进段镜头跟随 + 途中遭遇卡（三选一，必有一项「以占问之」）、九格行囊与低买高卖、城镇四键（市集/庙宇/茶肆/行馆）、旅伴帖必烈与林三娘（技能/好感/偏见证词）、断案 2.0（线索标签 + 追问 + 结论需两条相合证据）、自动书写的《行纪册》。
+- **命途塔（占卜肉鸽）** — 12 层一局，命劫在 4/8/12 层，商队在 3/9 层。三流派（塔罗行者/易卜师/符文萨满），24 枚符号棋子：真实占义直接成为效果（☀️奖励×2、䷜得失皆×2、ᛁ冻结跳层……），正逆位/变爻在揭示时才见分晓。**文明共鸣**：异文明成对打出=「对照」（各×1.5 + 一则真实文化小注），同文明=「同源」（强制正位+2）。弃换、预兆闪光、塔之逆位诅咒、星尘结算与解锁。
+
+## 命运博弈三层 (GDD §3)
+
+1. **预兆可视** — 仪式前泄露半真提示（「炉烟笔直而上」）；水晶球/庙宇祈福提高准度。
+2. **星尘改运** — 全局稀缺资源：仪式重问、塔内技能、解锁符号与流派。只能玩出来，永不出售。
+3. **结果双刃** — 失败开出别的路：关卡失利可走险路（缒城/强行入漠），连得阴筊触发暗线剧情。
 
 ## 运行 Run
 
 ```bash
-# 任意静态服务器即可 any static server works
-npx serve .        # or: python3 -m http.server
-# open http://localhost:3000
+python3 ../dev-server.py     # 开发（禁缓存），或任意静态服务器
+npx serve .
+# open http://localhost:4173
 ```
 
-直接双击 `index.html` 也能玩（PWA 安装与离线缓存需 http(s)）。
-Double-clicking `index.html` also works (PWA install/offline needs http(s)).
-
-**手机安装 Install on phone:** 浏览器打开后「添加到主屏幕」即可全屏运行。
-Open in a mobile browser → "Add to Home Screen" → runs fullscreen like a native app.
-要上架商店可用 [Capacitor](https://capacitorjs.com) 原样打包此目录。
-For app stores, wrap this folder as-is with Capacitor.
+手机浏览器打开 →「添加到主屏幕」即全屏运行；离线可玩（Service Worker 网络优先）。
 
 ## 结构 Structure
 
 ```text
 fatequest/
-├── index.html            # 应用外壳 app shell
-├── manifest.webmanifest  # PWA 清单
-├── sw.js                 # 离线缓存 service worker
-├── assets/               # 图标与美术占位 icons & art placeholders
-├── css/style.css         # 主题 + 全部仪式动画 theme + ritual animations
+├── index.html / manifest.webmanifest / sw.js
+├── docs/GDD.md            # 2.0 策划案（本实现的蓝图）
+├── assets/art/            # ← 你的美术素材放这里（见 ART_BRIEF.md，缺图自动回退 emoji）
+├── css/style.css          # 「墨金曜夜」设计系统 + 全部动效
 └── js/
-    ├── i18n.js           # 双语文案 bilingual copy
-    ├── data-*.js         # 塔罗/64卦/卢恩/杂项 数据（可独立扩充）
-    ├── engines.js        # 确定性引擎：八字、纳甲、梅花、星座…
-    ├── state.js          # XP · 连签 · 图鉴 · 成就（localStorage）
-    ├── fx.js             # 星空背景 + 粒子 celebration FX
-    └── app.js            # 界面与仪式交互 screens & rituals
+    ├── i18n.js            # 中英双语文案
+    ├── data-*.js          # 塔罗/64卦/卢恩/杂项/章节路网/塔符号
+    ├── engines.js         # 确定性占卜引擎 + 预兆引擎
+    ├── state.js           # XP · 星尘 · 图鉴 · 成就（localStorage: fatequest）
+    ├── audio.js           # 全合成音效：仪式三段式 + 区域音色垫
+    ├── atmo.js            # 云雾层 · 天气粒子 · 昼夜色调 · 打字机 · 地图镜头
+    ├── juice.js           # 墨涡背景 · 卡牌跟手倾斜 · 震屏 · 计分跳数 · 素材槽
+    ├── app.js             # 壳与九秘境仪式
+    ├── journey.js         # 占途 2.0 引擎
+    └── tower.js           # 命途塔引擎
 ```
 
-## 扩展 Extend
+## GDD 覆盖对照
 
-- **新占法 new method:** 在 `data-misc.js` 的 `FQ.METHODS` 注册 → `i18n.js` 加文案 → `app.js` 加一个 screen + action。锁定占位只需 `playable:false`。
-- **换美术 art swap:** 见 `assets/PLACEHOLDERS.md`，当前视觉全部由 CSS/emoji/SVG 生成，可逐张替换为插画。
+| GDD | 状态 |
+|---|---|
+| §3 预兆/星尘/双刃 | ✅ 全局实现 |
+| §4 路网/天数/行进段/遭遇/旅伴/城镇/行囊/日志 | ✅（日志分享为复制文本，长图导出待做） |
+| §5 命途塔全套 | ✅（+弃换机制，Balatro 参照） |
+| §6 断案 2.0 | ✅ 标签/追问/证词偏见/因果计分 |
+| §7 呈现 | ✅ 雾/天气/昼夜/镜头/五拍仪式/合成音频（真实录音素材待换） |
+| §8 经济 | ✅（罗盘升级线并入占具/庙宇） |
+| §9 内容管线（FastAPI 后台） | ⏳ 未做——章节数据已按 §9.5 schema 精神组织，可平滑迁移 |
+| §11 M1/M2/M4 | ✅ 客户端部分完成；M3 属后端里程碑 |
 
 ## 说明 Notes
 
-- 八字为简化排盘（节气取常年近似日）；日柱以 1949-10-01 甲子日锚定，经测试校验。
-  BaZi uses simplified solar terms; day pillar anchored to the verified 甲子 day 1949-10-01.
-- 仅供娱乐与文明探索，不构成任何现实建议。
-  For entertainment & cultural exploration only — not real-life advice.
+- 仅供娱乐与文明探索，不构成任何现实建议。宗教意象遵循 GDD §12 红线：不拟人化神明、圣所场景保持敬畏。
+- 概率公示：预兆准度基础 72%（法器/祈福 95%）；改运只花星尘，星尘只能玩出来。

@@ -1,12 +1,17 @@
-/* FateQuest service worker — cache-first for the app shell */
-const CACHE = "fatequest-v2";
+/* FateQuest 2.0 service worker — network-first for the shell (dev-friendly),
+   cache fallback for offline play. Art in assets/art/ is cached as it loads. */
+const CACHE = "fatequest-v1";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
   "./js/i18n.js", "./js/data-tarot.js", "./js/data-hexagrams.js",
-  "./js/data-runes.js", "./js/data-misc.js", "./js/engines.js",
-  "./js/state.js", "./js/fx.js", "./js/app.js",
-  "./js/data-journey.js", "./js/journey.js"
+  "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-mentors.js", "./js/data-scenes.js", "./js/scene.js",
+  "./js/data-misc.js", "./js/engines.js", "./js/quest.js",
+  "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
+  "./js/app.js", "./js/juice.js",
+  "./js/data-journey.js", "./js/map.js", "./js/journey.js",
+  "./js/data-tower.js", "./js/tower.js",
+  "./assets/art/ART_EMOJI_MAP.json"
 ];
 
 self.addEventListener("install", e => {
@@ -20,11 +25,17 @@ self.addEventListener("activate", e => {
   );
 });
 self.addEventListener("fetch", e => {
+  if (e.request.method !== "GET") return;
+  /* network-first keeps updates flowing; the cache answers when offline */
   e.respondWith(
-    caches.match(e.request).then(hit => hit || fetch(e.request).then(res => {
-      const copy = res.clone();
-      caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {});
+    fetch(e.request).then(res => {
+      if (res.ok && new URL(e.request.url).origin === location.origin) {
+        const copy = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {});
+      }
       return res;
-    }).catch(() => caches.match("./index.html")))
+    }).catch(() =>
+      caches.match(e.request).then(hit => hit || caches.match("./index.html"))
+    )
   );
 });

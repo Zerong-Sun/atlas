@@ -5,7 +5,7 @@
 ## 一次性准备
 
 ```bash
-cd fatequest2/scripts
+cd fatequest/scripts
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-art-gen.txt
 .venv/bin/playwright install chromium   # 仅 CDP 驱动需要；不启动独立浏览器窗口
