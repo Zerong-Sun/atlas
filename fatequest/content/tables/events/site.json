@@ -1,0 +1,98 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-lop-bazaar",
+      "kind": "site",
+      "title": "ev.lop.bazaar.title",
+      "when": { "cities": ["lop"] },
+      "scene": { "bg": "desert-market", "region": "central_asia" },
+      "body": "ev.lop.bazaar.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.bazaar.choice.buy_jade",
+          "needs": { "coins": { "min": 400 } },
+          "effects": [
+            { "op": "coins", "value": -400, "reason": "bought-river-jade" },
+            { "op": "goods", "id": "jade", "value": 1, "reason": "bought-river-jade" },
+            { "op": "sticker", "value": "st-lop-jade", "reason": "first-jade-purchase" }
+          ]
+        },
+        {
+          "label": "ev.lop.bazaar.choice.ask_prices",
+          "effects": [
+            { "op": "reveal_map", "value": "sachiu", "reason": "traders-named-the-next-town" },
+            { "op": "codex", "value": "cx-jade-rivers", "reason": "learned-where-jade-is-found" }
+          ]
+        }
+      ],
+      "lore": { "placeId": "lop", "origin": "hybrid", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+    },
+    {
+      "id": "ev-lop-shrine",
+      "kind": "site",
+      "title": "ev.lop.shrine.title",
+      "when": { "cities": ["lop"] },
+      "scene": { "bg": "cave-shrine", "region": "central_asia" },
+      "body": "ev.lop.shrine.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.shrine.choice.offer",
+          "needs": { "coins": { "min": 50 } },
+          "effects": [
+            { "op": "coins", "value": -50, "reason": "offering-at-the-shrine" },
+            { "op": "fate", "id": "travel", "value": 1, "reason": "blessed-for-the-crossing" },
+            { "op": "reputation", "value": 1, "scope": "city", "id": "lop", "reason": "observed-the-local-rite" }
+          ]
+        },
+        {
+          "label": "ev.lop.shrine.choice.watch",
+          "effects": [
+            { "op": "codex", "value": "cx-desert-of-lop", "reason": "heard-the-monks-account" }
+          ]
+        }
+      ],
+      "lore": { "placeId": "lop", "origin": "authored" }
+    },
+    {
+      "id": "ev-lop-caravanserai",
+      "kind": "site",
+      "title": "ev.lop.caravanserai.title",
+      "when": { "cities": ["lop"] },
+      "scene": { "bg": "caravanserai", "region": "central_asia" },
+      "body": "ev.lop.caravanserai.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.caravanserai.choice.hire_guide",
+          "needs": { "coins": { "min": 200 } },
+          "effects": [
+            { "op": "coins", "value": -200, "reason": "retained-a-desert-guide" },
+            { "op": "unlock_route", "value": "rt-lop-sachiu", "reason": "guide-will-lead-the-crossing" },
+            { "op": "reveal_map", "value": "rt-lop-sachiu", "reason": "guide-described-the-stages" }
+          ]
+        },
+        {
+          "label": "ev.lop.caravanserai.choice.wait_caravan",
+          "effects": [
+            { "op": "days", "value": 8, "reason": "waited-for-a-caravan" },
+            { "op": "unlock_route", "value": "rt-lop-sachiu", "reason": "joined-a-departing-caravan" },
+            { "op": "coins", "value": -120, "reason": "caravan-share" }
+          ]
+        },
+        {
+          "label": "ev.lop.caravanserai.choice.provision",
+          "effects": [
+            { "op": "coins", "value": -80, "reason": "a-years-provisions" },
+            { "op": "item", "value": "it-desert-provisions", "reason": "a-years-provisions" },
+            { "op": "codex", "value": "cx-desert-of-lop", "reason": "the-rule-of-the-crossing" }
+          ]
+        }
+      ],
+      "lore": { "placeId": "lop", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "contentVersion": 1,
+  "table": "routes",
+  "records": [
+    {
+      "id": "rt-lop-sachiu",
+      "from": "lop",
+      "to": "sachiu",
+      "reverse": true,
+      "modes": ["caravan", "camel", "foot"],
+      "days": 30,
+      "cost": 900,
+      "risk": 4,
+      "season": { "open": [9,10,11,12,1,2,3,4], "bonus": [10,11] },
+      "unlock": [{ "type": "guide", "value": "npc-lop-guide" }],
+      "hazards": ["sand", "bandits"],
+      "encounters": ["ev-road-desert-voices"],
+      "lore": { "storyId": "a-certain-desert", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+    }
+  ]
+}

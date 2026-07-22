@@ -1,0 +1,40 @@
+{
+  "contentVersion": 1,
+  "table": "cities",
+  "records": [
+    {
+      "id": "lop",
+      "name": "city.lop.name",
+      "band": "central_asia",
+      "culture": "steppe",
+      "faiths": ["buddhism", "folk"],
+      "coord": [88.167, 39.017],
+      "tier": "metropolis",
+      "entryEvent": "ev-lop-entry",
+      "sites": ["ev-lop-bazaar", "ev-lop-shrine", "ev-lop-caravanserai"],
+      "mentor": "npc-lop-guide",
+      "market": { "goods": ["jade", "camel-felt"], "currency": "silver-ingot", "spread": 0.2 },
+      "shrine": { "faith": "buddhism", "services": ["bless", "sanctuary"] },
+      "exits": ["rt-lop-sachiu"],
+      "specialty": "jade",
+      "calendars": ["chinese", "turkic"],
+      "lore": { "placeId": "lop", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+    },
+    {
+      "id": "sachiu",
+      "name": "city.sachiu.name",
+      "band": "china",
+      "culture": "east_asia",
+      "faiths": ["buddhism", "nestorian", "folk"],
+      "coord": [94.662, 40.142],
+      "tier": "city",
+      "entryEvent": "ev-sachiu-entry",
+      "sites": [],
+      "market": { "goods": ["silk", "camel-felt"], "currency": "cash", "spread": 0.16 },
+      "shrine": { "faith": "buddhism", "services": ["bless", "study"] },
+      "exits": ["rt-lop-sachiu"],
+      "calendars": ["chinese"],
+      "lore": { "placeId": "sachiu", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c40" } }
+    }
+  ]
+}

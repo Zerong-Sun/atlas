@@ -1,0 +1,9 @@
+{
+  "contentVersion": 1,
+  "table": "transports",
+  "records": [
+    { "id": "foot",    "name": "transport.foot.name",    "kinds": ["land"], "dayMul": 1.4, "cost": 0,   "risk": 1, "cargo": 2 },
+    { "id": "camel",   "name": "transport.camel.name",   "kinds": ["land"], "dayMul": 1.0, "cost": 300, "risk": 0, "cargo": 6 },
+    { "id": "caravan", "name": "transport.caravan.name", "kinds": ["land"], "dayMul": 1.2, "cost": 500, "risk": -2, "cargo": 10 }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-lop-entry",
+      "kind": "entry",
+      "title": "ev.lop.entry.title",
+      "when": { "cities": ["lop"] },
+      "scene": { "bg": "desert-town", "region": "central_asia" },
+      "body": "ev.lop.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.entry.choice.rest",
+          "effects": [
+            { "op": "days", "value": 1, "reason": "rest-at-lop" },
+            { "op": "reveal_map", "value": "rt-lop-sachiu", "reason": "innkeeper-mentions-the-road" }
+          ]
+        },
+        {
+          "label": "ev.lop.entry.choice.ask",
+          "needs": { "min_reputation": { "scope": "city", "id": "lop", "value": 0 } },
+          "effects": [
+            { "op": "codex", "value": "cx-desert-of-lop", "reason": "learned-the-desert-lore" },
+            { "op": "reputation", "value": 1, "scope": "city", "id": "lop", "reason": "courteous-enquiry" }
+          ]
+        }
+      ],
+      "lore": { "placeId": "lop", "origin": "hybrid", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c39" } }
+    },
+    {
+      "id": "ev-sachiu-entry",
+      "kind": "entry",
+      "title": "ev.sachiu.entry.title",
+      "when": { "cities": ["sachiu"] },
+      "scene": { "bg": "oasis-town", "region": "china" },
+      "body": "ev.sachiu.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.sachiu.entry.choice.arrive",
+          "effects": [
+            { "op": "sticker", "value": "st-sachiu", "reason": "first-arrival-at-sachiu" },
+            { "op": "codex", "value": "cx-tangut-rites", "reason": "witnessed-the-burial-rites" }
+          ]
+        }
+      ],
+      "lore": { "placeId": "sachiu", "origin": "source", "ref": { "book": "marco-polo", "chapterId": "v1-b1-c40" } }
+    }
+  ]
+}

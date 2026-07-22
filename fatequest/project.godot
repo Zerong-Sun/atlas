@@ -1,0 +1,20 @@
+; FateQuest — 远行之书 / The Book of Far Roads
+; Godot 4. Pin an exact 4.4/4.5 stable patch before M1 (docs/ARCHITECTURE.md D1).
+
+config_version=5
+
+[application]
+config/name="FateQuest 远行之书"
+config/description="A medieval Eurasian travel open world. See docs/GDD.md."
+config/features=PackedStringArray("4.4", "GL Compatibility")
+
+[autoload]
+GameContext="*res://game/autoload/game_context.gd"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
