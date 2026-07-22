@@ -1,0 +1,14 @@
+{
+  "name": "灵游 FateQuest",
+  "short_name": "FateQuest",
+  "description": "环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b1e",
+  "theme_color": "#0b0b1e",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
