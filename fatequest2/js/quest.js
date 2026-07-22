@@ -29,6 +29,26 @@ FQ.Q.meet = function (method) {
   FQ.nav("trial");
 };
 
+/* read the mentor's full story, then return to intro choices */
+FQ.Q.showStory = function () {
+  const q = FQ.Q.cur;
+  if (!q || !q.mentor) return;
+  const M = q.mentor;
+  const place = FQ.J.node(M.at);
+  const region = place ? place.region : "chr";
+  const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);
+  FQ.Scene.play({
+    bg: FQ.SCENE_BG[M.at], region,
+    lines: [
+      { who: FQ.bi(M, "zh", "en"), text: FQ.bi(M, "storyZh", "storyEn"),
+        portrait: face, ic: M.ic }
+    ],
+    choices: [
+      { label: FQ.t("mentor.storyClose"), fn: () => { q.phase = "intro"; FQ.nav("trial"); } }
+    ]
+  });
+};
+
 FQ.SCREENS.trial = function () {
   const q = FQ.Q.cur;
   if (!q) return FQ.nav("home");
@@ -51,6 +71,7 @@ FQ.SCREENS.trial = function () {
       ],
       choices: [
         { label: FQ.t("trial.begin"), fn: () => FQ.Q.begin() },
+        { label: FQ.t("mentor.story"), dim: false, fn: () => FQ.Q.showStory() },
         { label: FQ.t("scene.later"), dim: true, fn: () => FQ.Q.close() }
       ]
     });
@@ -236,7 +257,11 @@ FQ.SCREENS.lineage = function () {
           <div class="dim small">${got
             ? FQ.t(M.method + ".name") + " · " + FQ.bi(M, "civZh", "civEn")
             : FQ.t("lineage.hint", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
-          ${got ? `<div class="lin-say">${FQ.bi(M, "gradZh", "gradEn")}</div>` : ""}
+          ${got ? `<div class="lin-say">${FQ.bi(M, "gradZh", "gradEn")}</div>
+          <details class="lin-story">
+            <summary>${FQ.t("mentor.story")}</summary>
+            <div class="lin-story-body">${FQ.bi(M, "storyZh", "storyEn")}</div>
+          </details>` : ""}
         </div>
         ${got ? `<button class="btn ghost sm" onclick="FQ.nav('${M.method}')">${FQ.t("lineage.use")}</button>` : `<span class="pill off">🔒</span>`}
       </div>`;

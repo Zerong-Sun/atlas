@@ -136,6 +136,7 @@ FQ.SCREENS = {
           <button class="pill skillbtn" onclick="FQ.setLang(FQ.lang === 'zh' ? 'en' : 'zh')">🀄 ${FQ.lang === "zh" ? "EN" : "中文"}</button>
           <button class="pill skillbtn" onclick="FQ.AU.setMute(!FQ.state.mute);FQ.nav('title')">${FQ.state.mute ? "🔕" : "🔔"}</button>
           <button class="pill skillbtn" onclick="FQ.toggleFS()">⛶ ${FQ.t("title.fs")}</button>
+          ${returning ? `<button class="pill skillbtn danger" onclick="FQ.doReset()">↺ ${FQ.t("title.reset")}</button>` : ""}
         </div>
         <div class="t-foot">${FQ.t("footer")}</div>
       </div>`;
@@ -806,7 +807,15 @@ FQ.setLang = function (l) {
   FQ.nav(FQ.current.screen, FQ.current.param);
 };
 FQ.doReset = function () {
-  if (confirm(FQ.t("profile.reset.confirm"))) { FQ.reset(); FQ.applyStaticI18n(); FQ.nav("home"); }
+  if (!confirm(FQ.t("profile.reset.confirm"))) return;
+  FQ.reset();
+  FQ.Q.cur = null;
+  FQ.J.travelCtx = null;
+  FQ.J.g = null;
+  if (FQ.Scene && FQ.Scene.cur) FQ.Scene.end();
+  FQ.applyStaticI18n();
+  FQ.toast(FQ.t("profile.reset.done"));
+  FQ.nav("title");
 };
 
 FQ.startGame = function () {

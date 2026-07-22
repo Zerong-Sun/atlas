@@ -22,20 +22,34 @@ FQ.J.ensure = function () {
       v: 2, ch: ch.id, at: ch.nodes[0].id, visited: [ch.nodes[0].id],
       edgesDone: [], roadsTaken: (j && j.roadsTaken) || [],
       days: 0, coins: ch.startCoins,
+      hp: ch.hpMax || 5, hpMax: ch.hpMax || 5,
       favor: { chr: 0, isl: 0, con: 0, mazu: 0 },
       bag: (ch.startBag || []).map(x => Object.assign({}, x)),
       comp: { tebrizi: { on: false, fav: 0 }, lin: { on: false, fav: 0 } },
       flags: {}, gates: {}, templeUsed: {}, forecast: {},
+      quests: {}, stories: [], pathsUnlocked: [],
       seed: FQ.rand(100000),
       log: [], completed: (j && j.completed) || [], ending: null, caseState: null
     };
     FQ.save();
   }
+  /* migrate older saves */
+  if (j.hp == null) { j.hp = j.hpMax || 5; j.hpMax = j.hpMax || 5; }
+  if (!j.quests) j.quests = {};
+  if (!j.stories) j.stories = [];
+  if (!j.pathsUnlocked) j.pathsUnlocked = [];
   return j;
 };
 FQ.J.node = id => FQ.J.chapter().nodes.find(n => n.id === id);
 FQ.J.edgeKey = e => e.from + ">" + e.to;
-FQ.J.outEdges = id => FQ.J.chapter().edges.filter(e => e.from === id);
+FQ.J.outEdges = id => {
+  const j = FQ.J.ensure();
+  return FQ.J.chapter().edges.filter(e => {
+    if (e.from !== id) return false;
+    if (e.needPath && !(j.pathsUnlocked || []).includes(e.needPath) && !j.flags["path_" + e.needPath]) return false;
+    return true;
+  });
+};
 FQ.J.favorTotal = j => Object.values(j.favor).reduce((s, v) => s + v, 0);
 FQ.J.bagCount = j => j.bag.length;
 FQ.J.hasTool = (j, id) => j.bag.some(b => b.kind === "tool" && b.id === id);
@@ -169,7 +183,7 @@ FQ.SCREENS.journey = function () {
   const completed = j.completed.includes(ch.id);
   const compChips = Object.keys(j.comp).filter(k => j.comp[k].on).map(k => {
     const c = FQ.COMPANIONS[k];
-    return `<span class="pill" title="${FQ.bi(c, "perkZh", "perkEn")}">${FQ.art("comp-" + k, c.ic)} ${FQ.bi(c, "zh", "en")} ♥${j.comp[k].fav}</span>`;
+    return `<button type="button" class="pill skillbtn" onclick="FQ.J.openCompanion('${k}')" title="${FQ.bi(c, "perkZh", "perkEn")}">${FQ.art("comp-" + k, c.ic)} ${FQ.bi(c, "zh", "en")} ♥${j.comp[k].fav}</button>`;
   }).join("");
   const shelf = FQ.CHAPTERS.map(c => `
     <button class="chtab ${c.id === ch.id ? "on" : ""} ${c.locked ? "locked" : ""}"
@@ -184,6 +198,7 @@ FQ.SCREENS.journey = function () {
       <div class="dim small wh-tag">${FQ.bi(ch, "nameZh", "nameEn")} · ${FQ.bi(ch, "taglineZh", "taglineEn")}</div>
       <div class="jres">
         <span class="pill">📅 <b>${j.days}</b>/${ch.parDays} ${FQ.t("common.day")}</span>
+        <span class="pill">❤️ <b>${j.hp}</b>/${j.hpMax}</span>
         <span class="pill">💰 <b>${j.coins}</b></span>
         <span class="pill">🕯️ <b>${FQ.J.favorTotal(j)}</b></span>
         <span class="pill dust">✨ <b>${FQ.state.stardust}</b></span>
@@ -248,6 +263,8 @@ FQ.J.openNode = function (id) {
       <div class="jreg" style="color:${R.color}">${FQ.bi(R, "zh", "en")}${n.type === "side" ? " · ✧" : ""}</div>
       <h3>${FQ.bi(n, "zh", "en")}</h3>
       <div class="reading dim jexcerpt" style="font-size:.85rem"><span id="jex"></span></div>
+      <button type="button" class="btn ghost sm lore-toggle" onclick="FQ.J.toggleLore('${id}')">${FQ.t("journey.localLore")}</button>
+      <div id="jlore" class="jlore" hidden></div>
       ${mentorHtml}${townHtml}${body}
     </div>`;
   const ex = document.getElementById("jex");
@@ -263,6 +280,69 @@ FQ.J.openNode = function (id) {
     FQ.save();
     FQ.J.fx(n.gate.onOpen, {});
   }
+};
+
+/* structured local lore: subregion / civilization columns + node facts */
+FQ.J.loreBlock = function (L, title) {
+  if (!L) return "";
+  const cols = [
+    ["goodsZh", "goodsEn", "journey.lore.goods"],
+    ["faithZh", "faithEn", "journey.lore.faith"],
+    ["foodZh", "foodEn", "journey.lore.food"],
+    ["dressZh", "dressEn", "journey.lore.dress"],
+    ["customZh", "customEn", "journey.lore.custom"],
+    ["pricesZh", "pricesEn", "journey.lore.prices"]
+  ];
+  const rows = cols.map(([zh, en, k]) => {
+    const t = FQ.bi(L, zh, en);
+    return t ? `<div class="lore-row"><b>${FQ.t(k)}</b><span>${t}</span></div>` : "";
+  }).join("");
+  return `<div class="lore-sec"><div class="lore-h">${title}</div>
+    <p class="lore-desc">${FQ.bi(L, "zhDesc", "enDesc")}</p>${rows}</div>`;
+};
+
+FQ.J.toggleLore = function (id) {
+  const box = document.getElementById("jlore");
+  if (!box) return;
+  if (!box.hidden && box.dataset.node === id) {
+    box.hidden = true;
+    box.innerHTML = "";
+    return;
+  }
+  const pack = FQ.loreForNode ? FQ.loreForNode(id) : null;
+  const n = FQ.J.node(id);
+  let html = "";
+  if (pack && pack.sub) {
+    html += FQ.J.loreBlock(pack.sub, FQ.bi(pack.sub, "zh", "en"));
+  }
+  if (pack && pack.civ) {
+    html += FQ.J.loreBlock(pack.civ, FQ.bi(pack.civ, "zh", "en"));
+  }
+  if (n && (n.factsZh || n.factsEn)) {
+    html += `<div class="lore-sec"><div class="lore-h">${FQ.t("journey.lore.facts")}</div>
+      <p class="lore-desc">${FQ.bi(n, "factsZh", "factsEn")}</p></div>`;
+  }
+  if (!html) html = `<p class="dim small">${FQ.t("journey.lore.empty")}</p>`;
+  box.innerHTML = html + `<button type="button" class="btn ghost sm" onclick="FQ.J.toggleLore('${id}')">${FQ.t("journey.loreClose")}</button>`;
+  box.dataset.node = id;
+  box.hidden = false;
+};
+
+FQ.J.openCompanion = function (id) {
+  const c = FQ.COMPANIONS[id];
+  const j = FQ.J.ensure();
+  if (!c || !j.comp[id] || !j.comp[id].on) return;
+  const panel = document.getElementById("jpanel");
+  if (!panel) return;
+  panel.innerHTML = `
+    <div class="panel jnode-panel companion-bio">
+      <div class="jreg">${FQ.t("companion.bio")}</div>
+      <h3>${FQ.art("comp-" + id, c.ic)} ${FQ.bi(c, "zh", "en")}</h3>
+      <div class="reading" style="font-size:.9rem;line-height:1.85">${FQ.bi(c, "bioZh", "bioEn")}</div>
+      <div class="lore-row"><b>${FQ.t("companion.perk")}</b><span>${FQ.bi(c, "perkZh", "perkEn")}</span></div>
+      <div class="lore-row"><b>${FQ.t("companion.bias")}</b><span>${FQ.bi(c, "biasZh", "biasEn")}</span></div>
+      <button type="button" class="btn ghost sm" style="margin-top:12px" onclick="FQ.J.openNode(FQ.state.journey.at)">${FQ.t("companion.bioClose")}</button>
+    </div>`;
 };
 
 /* ---------- travel options ---------- */
@@ -296,6 +376,12 @@ FQ.J.modeOK = function (t) {
   return { ok: true };
 };
 FQ.J.modeDays = (e, t) => Math.max(1, Math.round(e.days * t.dayMul));
+/* the conveyance's painted plate — the same one the picker renders */
+FQ.J.modeArt = function (glyph) {
+  const stem = FQ.emoStem ? FQ.emoStem(glyph) : (FQ.EMO && FQ.EMO[glyph]);
+  if (!stem) return null;
+  return "assets/art/" + ((FQ.EMO_ALIAS && FQ.EMO_ALIAS[stem]) || stem) + ".webp";
+};
 FQ.J.pickRoute = function (key) {
   const j = FQ.J.ensure();
   const e = FQ.J.chapter().edges.find(x => FQ.J.edgeKey(x) === key);
@@ -338,21 +424,23 @@ FQ.J.newGate = function (n) {
 };
 FQ.J.commit = function () {
   const g = FQ.J.g;
-  let pending = null, pass = false, quality = 0;
+  let pending = null, pass = true, quality = 0;
   switch (g.type) {
-    case "tarotAny": pending = FQ.drawTarot(1)[0]; pass = true; quality = pending.reversed ? 0 : 1; break;
-    case "tarotLow": pending = FQ.drawTarot(1)[0]; pass = pending.card.id <= 9; quality = pass ? 1 : -1; break;
-    case "diceFire": pending = FQ.rollAstroDice(); pass = ["火", "风"].includes(pending.sign.elemZh); quality = pass ? 1 : -1; break;
-    case "diceElem": pending = FQ.rollAstroDice(); pass = ["土", "火"].includes(pending.sign.elemZh); quality = pass ? 1 : -1; break;
-    case "diceHouse": pending = FQ.rollAstroDice(); pass = [1, 9, 10].includes(pending.house.n); quality = pass ? 1 : -1; break;
-    case "coinYang": pending = FQ.tossCoins(); pass = pending.yang; quality = pass ? 1 : -1; break;
-    case "meihua": pending = FQ.meihua(); pass = true;
+    case "tarotAny": pending = FQ.drawTarot(1)[0]; quality = pending.reversed ? 0 : 1; break;
+    case "tarotLow": pending = FQ.drawTarot(1)[0]; quality = pending.card.id <= 9 ? 1 : -1; break;
+    case "diceFire": pending = FQ.rollAstroDice(); quality = ["火", "风"].includes(pending.sign.elemZh) ? 1 : -1; break;
+    case "diceElem":
+    case "diceAny": pending = FQ.rollAstroDice(); quality = ["土", "火"].includes(pending.sign.elemZh) ? 1 : (["水"].includes(pending.sign.elemZh) ? -1 : 0); break;
+    case "diceHouse": pending = FQ.rollAstroDice(); quality = [1, 9, 10].includes(pending.house.n) ? 1 : -1; break;
+    case "coinYang": pending = FQ.tossCoinSeq(FQ.COIN_SEQ_LEN || 4); quality = pending.yang ? 1 : -1; break;
+    case "meihua": pending = FQ.meihua();
       quality = (pending.primary.lower.id === "kan" || pending.primary.upper.id === "kan") ? 1 : 0; break;
-    case "ichingYang": pending = [0, 0, 0, 0, 0, 0].map(() => FQ.tossCoins()); pass = pending.filter(t => t.yang).length >= 3; quality = pass ? 1 : -1; break;
-    case "lot": pending = FQ.drawLot(); pass = pending.g !== "下下"; quality = pass ? 1 : -1; break;
-    case "jiaobei": pending = FQ.throwJiaobei(); pass = pending.res.id === "sheng"; quality = pass ? 1 : -1; break;
+    case "ichingYang": pending = [0, 0, 0, 0, 0, 0].map(() => FQ.tossCoins());
+      quality = pending.filter(t => t.yang).length >= 3 ? 1 : -1; break;
+    case "lot": pending = FQ.drawLot(); quality = pending.g === "下下" ? -1 : (String(pending.g).startsWith("上") ? 1 : 0); break;
+    case "jiaobei": pending = FQ.throwJiaobeiSeq(3); quality = pending.seq.filter(x => x === "sheng").length >= 2 ? 1 : (pending.seq.filter(x => x === "yin").length >= 2 ? -1 : 0); break;
   }
-  g.pending = pending; g.pass = pass;
+  g.pending = pending; g.pass = pass; /* always advance after reveal; quality only colors omen */
   const j = FQ.J.ensure();
   let acc = 0.72;
   if (FQ.J.hasTool(j, "crystal") || j.flags.omenBoost) acc = 0.95;
@@ -442,16 +530,12 @@ FQ.J.attempt = function () {
       <div class="dim small">${FQ.lang === "zh" ? p.sign.elemZh + "象 · " + p.house.zh : p.sign.elemEn + " · " + p.house.en}</div></div>`;
   } else if (g.type === "coinYang") {
     html = `<div class="center result"><div style="font-size:34px">🪙</div>
-      <b class="gold">${p.yang ? (FQ.lang === "zh" ? "阳面" : "Yang — heads") : (FQ.lang === "zh" ? "阴面" : "Yin — tails")}</b></div>`;
+      <b class="gold">${(p.seq || []).join(" · ") || (p.yang ? "Y" : "N")}</b>
+      <div class="dim small">${FQ.lang === "zh" ? "四掷成象" : "Four tosses"}</div></div>`;
   } else if (g.type === "meihua") {
     FQ.collectHexCast(p);
-    const hasKan = p.primary.lower.id === "kan" || p.primary.upper.id === "kan";
-    if (hasKan) { j.coins += 2; FQ.save(); }
     html = `<div class="result">${FQ.hexLinesHTML(p.lines, p.movingIdx)}
-      <div class="center"><b class="gold">${FQ.bi(p.primary, "zh", "en")}</b>
-      <div class="small ${hasKan ? "gold" : "dim"}">${hasKan
-        ? (FQ.lang === "zh" ? "卦中见坎！寻得雪泉，盘缠 +2" : "Water found! A snow spring — +2 provisions")
-        : (FQ.lang === "zh" ? "无坎，且忍渴前行" : "No water in the lines; ride on thirsty")}</div></div></div>`;
+      <div class="center"><b class="gold">${FQ.bi(p.primary, "zh", "en")}</b></div></div>`;
   } else if (g.type === "ichingYang") {
     const cast = FQ.resolveCast(p);
     FQ.collectHexCast(cast);
@@ -463,52 +547,38 @@ FQ.J.attempt = function () {
     html = `<div class="center result"><div class="lotgrade">「${FQ.lang === "zh" ? p.g : p.gEn}」</div>
       <div class="reading" style="text-align:left">${FQ.bi(p, "zh", "en")}</div></div>`;
   } else if (g.type === "jiaobei") {
+    const seq = p.seq || [p.res.id];
     html = `<div class="center result"><div style="font-size:34px">🌗</div>
-      <b class="gold">${FQ.t(p.res.tKey)}</b></div>`;
-    if (p.res.id === "yin") g.yinStreak++; else g.yinStreak = 0;
+      <b class="gold">${seq.map(id => FQ.t("jiaobei." + id)).join(" · ")}</b></div>`;
   }
 
-  if (g.pass) {
-    FQ.AU.play("chime"); FQ.buzz(p && p.res && p.res.id === "sheng" ? [20, 40, 20] : 18);
-    j.gates[n.id] = "pass";
-    j.favor[n.region] = (j.favor[n.region] || 0) + 1;
-    j.flags.omenBoost = false;
-    if (n.gate.onPass) FQ.J.fx(n.gate.onPass, {});
-    FQ.save();
-    FQ.gainXP(5);
-    html += `<div class="xp-note">✦ ${FQ.t("journey.pass")}</div>`;
-    out.innerHTML = html;
-    FQ.sparkleAt(innerWidth / 2, innerHeight / 2);
-    document.getElementById("jgo").style.display = "none";
-    const eo = document.getElementById("jedgeopt");
-    if (eo) eo.innerHTML = `<button class="btn" onclick="FQ.nav('journey')">${FQ.t("journey.travel")}</button>`;
-  } else {
-    FQ.AU.play("bad");
-    /* jiaobei dark-thread special (§3.3 双刃: 阴筊指向暗线) */
-    const sp = n.gate.special;
-    if (sp && sp.when === "yin" && g.yinStreak >= 2 && !j.flags["sp_" + n.id]) {
-      j.flags["sp_" + n.id] = 1;
-      FQ.J.fx(sp.fx, {});
-      html += `<div class="edged">🌒 ${FQ.bi(sp, "zh", "en")}</div>`;
-      FQ.J.journalNote("🌒", FQ.bi(sp, "zh", "en"));
-    }
-    html += `<div class="center dim small" style="margin-top:8px">${FQ.t("journey.fail")}${j.coins === 0 ? " · " + FQ.t("journey.mercy") : ""}</div>`;
-    out.innerHTML = html;
-    /* tebrizi free re-roll on dice rites (§4.4 perk) */
-    const eo = document.getElementById("jedgeopt");
-    let extra = "";
-    if (g.type.startsWith("dice") && j.comp.tebrizi.on && !g.tebUsed) {
-      extra += `<button class="btn ghost sm" onclick="FQ.J.tebReroll()">🧿 ${FQ.t("journey.teb.re")}</button> `;
-    }
-    /* fail-forward edge option (§3.3) */
-    if (n.gate.edgeZh && g.tries >= 1) {
-      extra += `<button class="btn ghost sm" onclick="FQ.J.takeEdge()">🌘 ${FQ.bi(n.gate, "edgeZh", "edgeEn")}</button>`;
-    }
-    if (eo) eo.innerHTML = extra;
-    const go = document.getElementById("jgo");
-    FQ.J.commitSilent();
-    if (go) go.textContent = FQ.J.retryCost() ? FQ.t("journey.retry") : FQ.t("journey.retry.free");
+  /* Full-matrix settlement: symbol → omen + story + fx; always may continue */
+  const payload = g.type === "ichingYang" ? p : p;
+  const key = FQ.outcomeKey(g.type, payload);
+  const oc = FQ.J.applyOutcome(n, key);
+  if (oc) {
+    html += `<div class="oc-omen reading">${FQ.bi(oc, "omenZh", "omenEn")}</div>`;
+    html += `<div class="oc-story">${FQ.bi(oc, "storyZh", "storyEn")}</div>`;
+    html += FQ.J.fxSummaryHTML(oc.fx || []);
   }
+  FQ.AU.play("chime"); FQ.buzz(18);
+  if (n.gate.onPass) FQ.J.fx(n.gate.onPass, {});
+  j.favor[n.region] = (j.favor[n.region] || 0) + 1;
+  j.flags.omenBoost = false;
+  j.gates[n.id] = "pass";
+  FQ.save();
+  FQ.gainXP(5);
+  html += `<div class="xp-note">✦ ${FQ.t("journey.pass")}</div>`;
+  out.innerHTML = html;
+  FQ.sparkleAt(innerWidth / 2, innerHeight / 2);
+  const go = document.getElementById("jgo");
+  if (go) go.style.display = "none";
+  const eo = document.getElementById("jedgeopt");
+  let extra = `<button class="btn" onclick="FQ.nav('journey')">${FQ.t("journey.travel")}</button>`;
+  if (FQ.state.stardust >= 1 && g.tries < 2) {
+    extra += ` <button class="btn ghost sm" onclick="FQ.J.dustReroll()">✨ ${FQ.t("journey.dust.re")}</button>`;
+  }
+  if (eo) eo.innerHTML = extra;
 };
 /* re-commit without re-rendering the whole gate zone (keeps the reveal up) */
 FQ.J.commitSilent = function () {
@@ -540,21 +610,66 @@ FQ.J.takeEdge = function () {
   FQ.nav("journey");
 };
 
-/* dream gate (choices, not chance) */
+/* ---------- outcome matrix apply ---------- */
+FQ.J.applyOutcome = function (node, key) {
+  const oc = FQ.resolveOutcome(node.id, key);
+  if (!oc) return null;
+  FQ.J.fx(oc.fx || []);
+  FQ.J.journalNote("🔮", FQ.bi(oc, "storyZh", "storyEn"));
+  /* collapse if HP hits 0 — forced rest, not game over */
+  const j = FQ.J.ensure();
+  if (j.hp <= 0) {
+    j.hp = 1;
+    j.days += 2;
+    j.coins = Math.max(0, j.coins - 1);
+    FQ.toast(FQ.t("journey.hp.rest"));
+    FQ.J.journalNote("💤", FQ.t("journey.hp.rest"));
+  }
+  FQ.save();
+  return oc;
+};
+FQ.J.fxSummaryHTML = function (fx) {
+  if (!fx || !fx.length) return "";
+  const bits = fx.map(op => {
+    if (op.op === "hp") return (op.v > 0 ? "❤️+" : "❤️") + op.v;
+    if (op.op === "coins") return (op.v > 0 ? "💰+" : "💰") + op.v;
+    if (op.op === "days") return "📅+" + op.v;
+    if (op.op === "token") return "🧿";
+    if (op.op === "goods") return "📦";
+    if (op.op === "lose") return "💨";
+    if (op.op === "path") return "🛤️";
+    if (op.op === "story") return "📜";
+    if (op.op === "quest") return op.act === "complete" ? "✅" : "❗";
+    if (op.op === "cfavor") return "♥";
+    if (op.op === "favor") return "🕯️";
+    return op.op;
+  });
+  return `<div class="oc-fx">${bits.join(" · ")}</div>`;
+};
+
+/* dream gate (choices mapped to dream:N outcomes) */
 FQ.J.dreamPick = function (oi) {
   const j = FQ.J.ensure();
   const n = FQ.J.node(j.at);
-  const o = n.gate.options[oi];
-  FQ.J.fx(o.fx || [], {});
+  const key = "dream:" + oi;
+  let oc = FQ.resolveOutcome(n.id, key);
+  if (oc) FQ.J.applyOutcome(n, key);
+  else if (n.gate.options && n.gate.options[oi]) {
+    const o = n.gate.options[oi];
+    FQ.J.fx(o.fx || []);
+    oc = { omenZh: o.zh, omenEn: o.en, storyZh: o.rZh, storyEn: o.rEn, fx: o.fx || [] };
+  }
   j.gates[n.id] = "pass";
-  j.favor[n.region]++;
+  j.favor[n.region] = (j.favor[n.region] || 0) + 1;
   FQ.save();
   FQ.gainXP(5);
   document.getElementById("jgatezone").innerHTML = `
-    <div class="reading result">${FQ.bi(o, "rZh", "rEn")}</div>
+    <div class="oc-omen reading">${oc ? FQ.bi(oc, "omenZh", "omenEn") : ""}</div>
+    <div class="oc-story reading">${oc ? FQ.bi(oc, "storyZh", "storyEn") : ""}</div>
+    ${FQ.J.fxSummaryHTML(oc && oc.fx)}
     <div class="center"><button class="btn" onclick="FQ.nav('journey')">${FQ.t("journey.travel")}</button></div>`;
 };
-/* patch: dream gate renders options */
+/* patch: dream gate renders up to 16 outcome options */
 (function () {
   const _open = FQ.J.openNode;
   FQ.J.openNode = function (id) {
@@ -563,9 +678,22 @@ FQ.J.dreamPick = function (oi) {
     const n = FQ.J.node(id);
     if (id === j.at && !FQ.J.gatePassed(id) && n.gate.type === "dreamChoice") {
       const zone = document.getElementById("jgatezone");
-      if (zone) zone.innerHTML = n.gate.options.map((o, oi) => `
-        <button class="btn ghost block" style="margin-top:8px" onclick="FQ.J.dreamPick(${oi})">
-          ${o.sym} ${FQ.bi(o, "zh", "en")}</button>`).join("");
+      const dreams = [
+        ["🕊️", "飞越雪峰", "Flying the snow peaks"], ["✨", "井中星斗", "Stars in a well"],
+        ["🔥", "燃烧的桥", "A burning bridge"], ["📜", "无字天书", "A sky-book without words"],
+        ["🐪", "驼铃成雨", "Camel-bells as rain"], ["🪞", "镜中故人", "An old friend in glass"],
+        ["🚢", "沉船灯火", "Lamps of a sunken ship"], ["🦅", "白鹰落腕", "A white hawk on the wrist"],
+        ["🏜️", "沙中城门", "A city gate in sand"], ["🌊", "潮退露路", "Tide leaves a road"],
+        ["🥁", "鼓楼三通", "Three drum-tower beats"], ["🐴", "纸马夜奔", "Paper horses at night"],
+        ["⛵", "盐船低语", "Salt-boats whispering"], ["💎", "玉碎又圆", "Jade breaks, then rounds"],
+        ["🪨", "无名祭石", "A nameless offering-stone"], ["🏠", "归帆先到", "The home-sail arrives first"]
+      ];
+      const opts = (FQ.OUTCOMES[n.id] && Object.keys(FQ.OUTCOMES[n.id]).length >= 16)
+        ? dreams.map((d, i) => ({ sym: d[0], zh: d[1], en: d[2], i }))
+        : (n.gate.options || []).map((o, i) => Object.assign({ i }, o));
+      if (zone) zone.innerHTML = opts.map((o) => `
+        <button class="btn ghost block" style="margin-top:8px" onclick="FQ.J.dreamPick(${o.i != null ? o.i : opts.indexOf(o)})">
+          ${o.sym || "🌙"} ${FQ.bi(o, "zh", "en")}</button>`).join("");
     }
   };
 })();
@@ -624,6 +752,43 @@ FQ.J.fx = function (list) {
         j.flags.omenBoost = true;
         break;
       }
+      case "hp": {
+        j.hp = Math.min(j.hpMax || 5, Math.max(0, (j.hp || 0) + op.v));
+        break;
+      }
+      case "lose": {
+        if (op.kind === "goods") {
+          const g = j.bag.find(b => b.kind === "goods");
+          if (g) { g.n = (g.n || 1) - 1; if (g.n <= 0) j.bag.splice(j.bag.indexOf(g), 1); }
+        } else if (op.kind === "token") {
+          const ix = j.bag.findIndex(b => b.kind === "token" && (!op.id || b.id === op.id));
+          if (ix >= 0) j.bag.splice(ix, 1);
+        } else if (op.kind === "tool") {
+          const ix = j.bag.findIndex(b => b.kind === "tool" && (!op.id || b.id === op.id));
+          if (ix >= 0) j.bag.splice(ix, 1);
+        } else {
+          j.coins = Math.max(0, j.coins - 1);
+        }
+        break;
+      }
+      case "path": {
+        if (op.v && !j.pathsUnlocked.includes(op.v)) j.pathsUnlocked.push(op.v);
+        j.flags["path_" + op.v] = true;
+        setTimeout(() => FQ.toast("🛤️ " + FQ.t("journey.path.new")), 500);
+        break;
+      }
+      case "story": {
+        if (op.v && !j.stories.includes(op.v)) j.stories.push(op.v);
+        setTimeout(() => FQ.toast("📜 " + FQ.t("journey.story.new")), 700);
+        break;
+      }
+      case "quest": {
+        if (!j.quests) j.quests = {};
+        if (op.act === "complete") j.quests[op.v] = "done";
+        else j.quests[op.v] = "active";
+        setTimeout(() => FQ.toast((op.act === "complete" ? "✅ " : "❗ ") + FQ.t("journey.quest." + (op.act === "complete" ? "done" : "new"))), 800);
+        break;
+      }
     }
   });
   FQ.save();
@@ -639,7 +804,9 @@ FQ.J.travelTo = function (key, modeId) {
   /* no mode chosen yet → let the traveler pick their conveyance first */
   if (!modeId) return FQ.J.pickRoute(key);
   const mode = FQ.TRANSPORT.find(t => t.id === modeId) || FQ.TRANSPORT[1];
-  if (!FQ.J.modeOK(mode).ok || j.coins < mode.coin) return;
+  const gate = FQ.J.modeOK(mode);
+  if (!gate.ok) { FQ.toast("🔒 " + FQ.bi(gate, "whyZh", "whyEn")); return; }
+  if (j.coins < mode.coin) { FQ.toast(FQ.lang === "zh" ? "盘缠不足，另择舟车" : "Not enough coin for that fare"); return; }
   /* the fare, and what the wondrous ones ask instead of coin */
   if (mode.coin) j.coins -= mode.coin;
   if (mode.need && mode.need.dust) FQ.spendDust(mode.need.dust);
@@ -725,7 +892,24 @@ FQ.J.runTravel = function () {
   const marker = document.getElementById("jmarker");
   if (!c || !svg || !marker) return;
   const a = FQ.J.node(c.e.from), b = FQ.J.node(c.e.to);
-  marker.textContent = c.mode ? c.mode.ic : "🐪";
+  /* the party wears the very plate the conveyance list showed */
+  const img = document.getElementById("jmk-img");
+  const txt = document.getElementById("jmk-txt");
+  const glyph = c.mode ? c.mode.ic : "🐪";
+  const src = FQ.J.modeArt(glyph);
+  if (src && img) {
+    img.setAttributeNS("http://www.w3.org/1999/xlink", "href", src);
+    img.setAttribute("href", src);
+    img.style.display = "";
+    if (txt) txt.textContent = "";
+  } else if (txt) {
+    txt.textContent = glyph;
+    if (img) img.style.display = "none";
+  }
+  const place = (x, y) => {
+    if (img) { img.setAttribute("x", x - 15); img.setAttribute("y", y - 15); }
+    if (txt) { txt.setAttribute("x", x - 10); txt.setAttribute("y", y + 6); }
+  };
   const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - 18;
   const posAt = t => [
     (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * mx + t * t * b.x,
@@ -747,7 +931,7 @@ FQ.J.runTravel = function () {
       let k = from + (1 - from) * Math.min(1, (performance.now() - start) / dur);
       if (c.skipped) k = stops.length ? stops[0] : 1;
       const [x, y] = posAt(k);
-      marker.setAttribute("x", x - 10); marker.setAttribute("y", y + 6);
+      place(x, y);
       if (!c.skipped) FQ.cam.follow(svg, x, y, 340);
       if (stops.length && k >= stops[0] - 0.001) {
         FQ.J.showEncounter(c.encounters[c.idx]);

@@ -307,9 +307,13 @@ FQ.MAP.render = function (opt) {
     ${beasts}
     <g class="mp-routes">${edges}</g>
     ${nodes}
-    <!-- the travelling party rides this glyph along the route (journey.js) -->
-    <text id="jmarker" x="-40" y="-40" font-size="22" style="pointer-events:none"
-      filter="url(#mp-relief)"></text>
+    <!-- the travelling party rides here; journey.js fills it with the same
+         conveyance plate the 择舟车 list shows -->
+    <g id="jmarker" style="pointer-events:none" filter="url(#mp-relief)">
+      <image id="jmk-img" x="-40" y="-40" width="30" height="30"
+        preserveAspectRatio="xMidYMid meet" style="display:none"/>
+      <text id="jmk-txt" x="-40" y="-40" font-size="22"></text>
+    </g>
     ${FQ.MAP.rose(742, 336, 22)}
     ${winds}
     <g class="mp-frame">

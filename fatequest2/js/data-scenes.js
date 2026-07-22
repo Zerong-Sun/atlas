@@ -5,10 +5,18 @@ window.FQ = window.FQ || {};
 
 /* backdrop id per node (assets/art/scene-<id>.webp) */
 FQ.SCENE_BG = {
-  venice: "venice-quay", acre: "acre-wall", tabriz: "tabriz-bazaar",
-  hormuz: "hormuz-port", kerman: "kerman-dunes", herat: "herat-road",
-  pamir: "pamir-pass", shangdu: "shangdu-palace", khanbaliq: "khanbaliq-hall",
-  hangzhou: "hangzhou-lake", quanzhou: "quanzhou-harbor", voyage: "voyage-sea"
+  venice: "venice-quay", ayas: "region-chr", turkomania: "region-chr", acre: "acre-wall",
+  mosul: "region-isl", baghdad: "region-isl",
+  tabriz: "tabriz-bazaar", alamut: "region-isl", yezd: "region-isl", cobinan: "region-isl",
+  hormuz: "hormuz-port", kerman: "kerman-dunes", sapurgan: "region-isl",
+  balkh: "region-isl", samarkand: "region-isl", herat: "herat-road",
+  badakhshan: "region-con", pamir: "pamir-pass",
+  kashgar: "region-con", yarkand: "region-con", khotan: "region-con",
+  lop: "region-con", camul: "region-con", tangut: "region-con",
+  campichu: "region-con", suhchau: "region-con", gobi: "region-con",
+  karakorum: "region-con", shangdu: "shangdu-palace", khanbaliq: "khanbaliq-hall",
+  yangzhou: "region-con", hangzhou: "hangzhou-lake", quanzhou: "quanzhou-harbor",
+  voyage: "voyage-sea"
 };
 FQ.SCENE_BG_REGION = { chr: "region-chr", isl: "region-isl", con: "region-con", mazu: "region-mazu" };
 
