@@ -1,0 +1,26 @@
+{
+ "project": "fatequest",
+ "title": "Medieval European Known World (Oikoumene)",
+ "worldview": "mappa mundi — east-oriented, Jerusalem-centered, encircling Ocean",
+ "crs": "EPSG:4326 (WGS84 lon/lat)",
+ "bbox": {
+  "west": -20,
+  "south": -8,
+  "east": 122,
+  "north": 66
+ },
+ "center_of_world": {
+  "name": "Hierusalem/Jerusalem",
+  "lat": 31.778,
+  "lon": 35.235
+ },
+ "orientation_note": "Medieval maps put EAST at the top. Rotate rendering -90deg (east-up) for the authentic look.",
+ "counts": {
+  "cities": 158,
+  "mountains": 26,
+  "rivers": 27,
+  "seas": 20,
+  "regions": 31
+ },
+ "data_license": "Curated content CC0 / public-domain facts. Real coastline/DEM to be sourced from Natural Earth (public domain) & GEBCO/ETOPO — see scripts/build_real_terrain.py"
+}

@@ -26,3 +26,6 @@ __pycache__/
 # 16-bit heightmap.png (2 MB) is committed.
 fatequest/worldmap/heightmap/_dem_raw.tif
 fatequest/worldmap/heightmap/_dem_tile*.tif
+
+# Godot import cache
+fatequest/.godot/
