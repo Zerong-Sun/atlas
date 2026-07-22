@@ -1,0 +1,538 @@
+{
+ "type": "FeatureCollection",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "reg-0",
+   "properties": {
+    "name_medieval": "ASIA",
+    "name_modern": "Asia",
+    "kind": "part",
+    "note": "Half the world; at the top (east) of the mappa mundi, land of Paradise"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.0,
+     40.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-1",
+   "properties": {
+    "name_medieval": "EUROPA",
+    "name_modern": "Europe",
+    "kind": "part",
+    "note": "Lower-left quarter of the tripartite world"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.0,
+     50.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-2",
+   "properties": {
+    "name_medieval": "AFRICA (LIBYA)",
+    "name_modern": "Africa",
+    "kind": "part",
+    "note": "Lower-right quarter, south of the Mediterranean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.0,
+     22.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-3",
+   "properties": {
+    "name_medieval": "Hispania",
+    "name_modern": "Iberia",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.0,
+     40.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-4",
+   "properties": {
+    "name_medieval": "Gallia",
+    "name_modern": "France",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.5,
+     47.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-5",
+   "properties": {
+    "name_medieval": "Germania",
+    "name_modern": "Germany",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.0,
+     51.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-6",
+   "properties": {
+    "name_medieval": "Italia",
+    "name_modern": "Italy",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.5,
+     43.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-7",
+   "properties": {
+    "name_medieval": "Britannia",
+    "name_modern": "Britain",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0,
+     53.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-8",
+   "properties": {
+    "name_medieval": "Hibernia",
+    "name_modern": "Ireland",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.0,
+     53.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-9",
+   "properties": {
+    "name_medieval": "Scandia",
+    "name_modern": "Scandinavia",
+    "kind": "land",
+    "note": "Thule, the edge of the north"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.0,
+     62.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-10",
+   "properties": {
+    "name_medieval": "Graecia",
+    "name_modern": "Greece",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.0,
+     39.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-11",
+   "properties": {
+    "name_medieval": "Scythia",
+    "name_modern": "Scythia",
+    "kind": "land",
+    "note": "Land of Gog and Magog"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     55.0,
+     55.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-12",
+   "properties": {
+    "name_medieval": "Sarmatia",
+    "name_modern": "Sarmatia",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     52.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-13",
+   "properties": {
+    "name_medieval": "Terra Sancta",
+    "name_modern": "Holy Land",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.4,
+     31.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-14",
+   "properties": {
+    "name_medieval": "Arabia",
+    "name_modern": "Arabia",
+    "kind": "land",
+    "note": "Arabia Felix, Deserta, Petraea"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.0,
+     23.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-15",
+   "properties": {
+    "name_medieval": "Persia",
+    "name_modern": "Persia",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     53.0,
+     32.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-16",
+   "properties": {
+    "name_medieval": "India",
+    "name_modern": "India",
+    "kind": "land",
+    "note": "Land of marvels, spices and Prester John"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.0,
+     22.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-17",
+   "properties": {
+    "name_medieval": "Aegyptus",
+    "name_modern": "Egypt",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.0,
+     26.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-18",
+   "properties": {
+    "name_medieval": "Aethiopia",
+    "name_modern": "Ethiopia",
+    "kind": "land",
+    "note": "Land of the burnt-faced men"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.0,
+     10.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-19",
+   "properties": {
+    "name_medieval": "Mauretania",
+    "name_modern": "Maghreb",
+    "kind": "land",
+    "note": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.0,
+     32.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-20",
+   "properties": {
+    "name_medieval": "Aethiopia interior",
+    "name_modern": "Sub-Saharan Africa",
+    "kind": "land",
+    "note": "The unknown south, terra incognita"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.0,
+     12.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-21",
+   "properties": {
+    "name_medieval": "Paradisus",
+    "name_modern": "Earthly Paradise",
+    "kind": "land",
+    "note": "The Garden of Eden, on an island in the far-eastern Ocean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     121.3,
+     33.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-22",
+   "properties": {
+    "name_medieval": "Cathay",
+    "name_modern": "North China",
+    "kind": "land",
+    "note": "The Great Kaan's realm, north of the great river"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     113.0,
+     38.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-23",
+   "properties": {
+    "name_medieval": "Manzi",
+    "name_modern": "South China",
+    "kind": "land",
+    "note": "The southern kingdom, taken from the Sung"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.0,
+     27.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-24",
+   "properties": {
+    "name_medieval": "Tangut",
+    "name_modern": "Hexi / Gansu",
+    "kind": "land",
+    "note": "Province of idolaters on the desert road"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     99.0,
+     38.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-25",
+   "properties": {
+    "name_medieval": "Tebet",
+    "name_modern": "Tibet",
+    "kind": "land",
+    "note": "Land of great mastiffs, salt money and wild cane"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.0,
+     31.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-26",
+   "properties": {
+    "name_medieval": "Turchestan",
+    "name_modern": "Turkestan",
+    "kind": "land",
+    "note": "Great Turkey, realm of Caidu"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.0,
+     42.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-27",
+   "properties": {
+    "name_medieval": "Tartaria",
+    "name_modern": "Mongolia",
+    "kind": "land",
+    "note": "The steppe whence the Tartars came"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     105.0,
+     47.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-28",
+   "properties": {
+    "name_medieval": "India Major",
+    "name_modern": "Coromandel & the Deccan",
+    "kind": "land",
+    "note": "The greatest of the three Indies"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     78.0,
+     14.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-29",
+   "properties": {
+    "name_medieval": "India Minor",
+    "name_modern": "Indochina & the Isles",
+    "kind": "land",
+    "note": "The farther India, toward Chamba and Java"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     103.0,
+     12.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "reg-30",
+   "properties": {
+    "name_medieval": "Java",
+    "name_modern": "Java & the Spice Isles",
+    "kind": "land",
+    "note": "Whence come pepper, nutmeg, clove and galingale"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     110.0,
+     -6.5
+    ]
+   }
+  }
+ ]
+}

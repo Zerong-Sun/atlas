@@ -158,8 +158,9 @@ node fatequest/scripts/smoke-outcomes.mjs
 
 - [x] 方案 A：主干加厚 ~22 站 + `data-marco-lore.js` 全文挂载 + outcome「读游记全章」
 - [x] 方案 A 收尾：地图坐标入框 + 有 market 站补齐 `FQ.PRICES`（可玩性硬化）
-- [ ] 按方案 A 重排 MVP 十二城，改写 GDD §16
+- [x] 按方案 A 重排十二城，改写 GDD §16（2026-07；并把世界规模从 12 城扩到约 75 节点，深度按 `tier` 分章节灌注）
 - [ ] 从 136 places 中挑出主干 12 城对应章节，人工切成 36 段
+- [ ] 把 136 条按类别落到各表：44 城市 → 城市表；48 省（有治所者升城）→ 地区／城市表；14 路途地形 → 路线表 `encounters`／`hazards`；25 风俗宫廷 → 事件表 court + 图鉴；4 地标 → 探索点
 - [x] 建 `glossary.json`（`assets/data/glossary.json`，约 90 条主干用语）
 - [x] 主干站中文正文校译（`js/data-lore-zh-trunk.js` 覆盖大不里士→刺桐等；prologue 威尼斯/阿卡另附）
 - [ ] 其余 places 全量中译与 36 段细切

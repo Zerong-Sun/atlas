@@ -1,0 +1,331 @@
+{
+ "type": "FeatureCollection",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "sea-0",
+   "properties": {
+    "name_medieval": "Mare Mediterraneum",
+    "name_modern": "Mediterranean Sea",
+    "note": "Mare Nostrum / Mare Magnum"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.0,
+     35.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-1",
+   "properties": {
+    "name_medieval": "Mare Adriaticum",
+    "name_modern": "Adriatic Sea",
+    "note": "Gulf of Venice"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.0,
+     43.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-2",
+   "properties": {
+    "name_medieval": "Mare Aegaeum",
+    "name_modern": "Aegean Sea",
+    "note": "Sea of the Greek isles"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.0,
+     38.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-3",
+   "properties": {
+    "name_medieval": "Mare Tyrrhenum",
+    "name_modern": "Tyrrhenian Sea",
+    "note": "Sea west of Italy"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.0,
+     40.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-4",
+   "properties": {
+    "name_medieval": "Mare Ionium",
+    "name_modern": "Ionian Sea",
+    "note": "Between Italy and Greece"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.5,
+     38.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-5",
+   "properties": {
+    "name_medieval": "Pontus Euxinus",
+    "name_modern": "Black Sea",
+    "note": "The Hospitable Sea"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.0,
+     43.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-6",
+   "properties": {
+    "name_medieval": "Palus Maeotis",
+    "name_modern": "Sea of Azov",
+    "note": "Marsh at the mouth of the Tanais"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.0,
+     46.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-7",
+   "properties": {
+    "name_medieval": "Mare Caspium",
+    "name_modern": "Caspian Sea",
+    "note": "Often drawn as a gulf of the Ocean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     51.0,
+     41.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-8",
+   "properties": {
+    "name_medieval": "Mare Rubrum",
+    "name_modern": "Red Sea",
+    "note": "Sea crossed by Moses"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.0,
+     20.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-9",
+   "properties": {
+    "name_medieval": "Sinus Persicus",
+    "name_modern": "Persian Gulf",
+    "note": "Gulf of Persia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     51.0,
+     27.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-10",
+   "properties": {
+    "name_medieval": "Mare Indicum",
+    "name_modern": "Arabian / Indian Sea",
+    "note": "The eastern Ocean of the Indies"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.0,
+     14.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-11",
+   "properties": {
+    "name_medieval": "Oceanus Atlanticus",
+    "name_modern": "Atlantic Ocean",
+    "note": "The encircling Western Ocean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.0,
+     40.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-12",
+   "properties": {
+    "name_medieval": "Mare Germanicum",
+    "name_modern": "North Sea",
+    "note": "Sea of the Germans"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.0,
+     56.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-13",
+   "properties": {
+    "name_medieval": "Mare Balticum",
+    "name_modern": "Baltic Sea",
+    "note": "Mare Suevicum"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.0,
+     58.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-14",
+   "properties": {
+    "name_medieval": "Mare Britannicum",
+    "name_modern": "English Channel / Celtic Sea",
+    "note": "Sea of Britain"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.0,
+     49.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-15",
+   "properties": {
+    "name_medieval": "Oceanus Hyperboreus",
+    "name_modern": "Arctic (frozen) Ocean",
+    "note": "The frozen Northern Ocean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.0,
+     65.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-16",
+   "properties": {
+    "name_medieval": "Oceanus Orientalis",
+    "name_modern": "Eastern Ocean",
+    "note": "The encircling Ocean at the world's eastern edge"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     121.0,
+     30.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-17",
+   "properties": {
+    "name_medieval": "Mare Cin",
+    "name_modern": "China Sea",
+    "note": "Sea of Chin, sailed by the great junks of Manzi"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     114.0,
+     18.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-18",
+   "properties": {
+    "name_medieval": "Sinus Gangeticus",
+    "name_modern": "Bay of Bengal",
+    "note": "Gulf between the two Indies"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.0,
+     15.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "sea-19",
+   "properties": {
+    "name_medieval": "Mare Sinicum Meridionale",
+    "name_modern": "Java Sea",
+    "note": "Sea of the spice islands"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     111.0,
+     -4.0
+    ]
+   }
+  }
+ ]
+}

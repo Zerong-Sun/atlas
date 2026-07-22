@@ -1,0 +1,145 @@
+name_medieval,name_modern,lat,lon,part,tier,note
+Hierusalem,Jerusalem,31.778,35.235,Asia,1,"Umbilicus mundi — the navel of the world, center of the mappa mundi"
+Roma,Rome,41.902,12.496,Europa,1,Seat of the Papacy and the old Empire
+Constantinopolis,Istanbul,41.008,28.978,Europa,1,"New Rome, capital of the Greeks"
+Alexandria,Alexandria,31.2,29.918,Africa,1,"Great port of Egypt, seat of a Patriarch"
+Antiochia,Antakya,36.202,36.161,Asia,1,"Chief city of Syria, crusader principality"
+Babylonia (Cairus),Cairo,30.044,31.236,Africa,1,"'Babylon of Egypt', seat of the Sultan"
+Baldacum,Baghdad,33.315,44.366,Asia,1,"Baghdad, seat of the Caliph of the East"
+Damascus,Damascus,33.513,36.292,Asia,1,Great city of Syria
+Mecha,Mecca,21.423,39.826,Asia,2,Holy city of the Saracens
+Medina,Medina,24.47,39.611,Asia,3,City of the Prophet
+Parisius,Paris,48.857,2.352,Europa,1,"Capital of the Franks, great university"
+Londinium,London,51.507,-0.128,Europa,1,Chief city of the English
+Colonia,Cologne,50.938,6.96,Europa,2,"Holy city of the Rhine, relics of the Magi"
+Aquisgranum,Aachen,50.776,6.084,Europa,2,Charlemagne's imperial seat
+Venetia,Venice,45.438,12.336,Europa,1,"Queen of the Adriatic, gate to the East"
+Ianua,Genoa,44.406,8.933,Europa,2,"Maritime republic, Levant trade"
+Florentia,Florence,43.769,11.256,Europa,2,Banking city of Tuscany
+Mediolanum,Milan,45.464,9.19,Europa,2,Great city of Lombardy
+Neapolis,Naples,40.851,14.268,Europa,2,Capital of the southern kingdom
+Ravenna,Ravenna,44.418,12.203,Europa,3,Old exarchate capital
+Pisa,Pisa,43.716,10.401,Europa,3,Maritime republic of Tuscany
+Bononia,Bologna,44.494,11.343,Europa,3,Oldest university
+Panormus,Palermo,38.116,13.361,Europa,2,Capital of Sicily
+Salernum,Salerno,40.681,14.759,Europa,3,Famed medical school
+Corduba,Cordoba,37.888,-4.779,Europa,2,Great city of al-Andalus
+Toletum,Toledo,39.858,-4.024,Europa,2,City of translators
+Hispalis,Seville,37.389,-5.994,Europa,3,Andalusian port
+Granata,Granada,37.177,-3.598,Europa,3,Last Moorish emirate
+Compostella,Santiago de Compostela,42.881,-8.545,Europa,2,Pilgrimage to St James
+Olisipo,Lisbon,38.722,-9.139,Europa,3,Atlantic port of Portugal
+Caesaraugusta,Zaragoza,41.649,-0.887,Europa,3,City of the Ebro
+Barcino,Barcelona,41.385,2.173,Europa,3,Catalan sea-port
+Massilia,Marseille,43.296,5.37,Europa,3,Ancient Greek port of Gaul
+Tolosa,Toulouse,43.605,1.444,Europa,3,City of the Garonne
+Avinio,Avignon,43.949,4.806,Europa,2,Second seat of the Popes
+Remi,Reims,49.258,4.032,Europa,3,Coronation city of French kings
+Rothomagus,Rouen,49.443,1.099,Europa,3,Capital of Normandy
+Brugae,Bruges,51.209,3.224,Europa,2,Cloth and banking of Flanders
+Gandavum,Ghent,51.054,3.717,Europa,3,Flemish cloth town
+Argentoratum,Strasbourg,48.573,7.752,Europa,3,Free city of the Rhine
+Moguntia,Mainz,49.993,8.247,Europa,3,Archbishopric of the Rhine
+Treveris,Trier,49.759,6.644,Europa,3,Oldest city of Germany
+Ratisbona,Regensburg,49.019,12.098,Europa,3,Danube trade city
+Norimberga,Nuremberg,49.454,11.077,Europa,3,Imperial free city
+Lubeca,Lübeck,53.866,10.687,Europa,2,Queen of the Hanseatic League
+Hammaburg,Hamburg,53.551,9.993,Europa,3,Hanseatic Elbe port
+Vindobona,Vienna,48.208,16.373,Europa,2,Danube seat of the dukes
+Praga,Prague,50.076,14.438,Europa,2,Capital of Bohemia
+Cracovia,Kraków,50.062,19.937,Europa,2,Capital of Poland
+Kiovia,Kyiv,50.451,30.523,Europa,2,Mother of the Rus' cities
+Novogardia,Novgorod,58.521,31.271,Europa,3,Northern Rus' republic
+Moscovia,Moscow,55.751,37.618,Europa,3,Rising Rus' principality
+Cantuaria,Canterbury,51.279,1.083,Europa,3,Seat of the English Church
+Eboracum,York,53.96,-1.081,Europa,3,Northern English see
+Dublinia,Dublin,53.35,-6.26,Europa,3,Norse-Irish port
+Edinburgum,Edinburgh,55.953,-3.188,Europa,3,Seat of the Scots
+Thessalonica,Thessaloniki,40.64,22.944,Europa,2,Second city of the Greeks
+Athenae,Athens,37.984,23.728,Europa,3,Ancient seat of philosophy
+Nicaea,İznik,40.428,29.719,Asia,3,City of the great Councils
+Smyrna,İzmir,38.419,27.129,Asia,3,Aegean port
+Ephesus,Selçuk,37.941,27.341,Asia,3,City of the Seven Sleepers
+Trapezus,Trabzon,41.005,39.723,Asia,2,Empire on the Black Sea
+Caffa,Feodosia,45.031,35.382,Europa,3,Genoese colony of Crimea
+Tana,Azov,47.112,39.423,Europa,3,"Mouth of the Tanais, Silk Road terminus"
+Accon,Acre,32.928,35.082,Asia,2,Chief crusader port
+Tyrus,Tyre,33.271,35.194,Asia,3,Phoenician sea-city
+Tripolis,Tripoli (Lebanon),34.436,35.844,Asia,3,Crusader county
+Berrhoea,Aleppo,36.202,37.134,Asia,2,Great Syrian trade city
+Edessa,Şanlıurfa,37.158,38.791,Asia,3,First crusader county
+Bethleem,Bethlehem,31.705,35.203,Asia,3,Birthplace of Christ
+Petra,Petra,30.329,35.444,Asia,3,Rock city of Arabia
+Tarsus,Tarsus,36.917,34.895,Asia,3,Birthplace of St Paul
+Ninive,Mosul,36.36,43.152,Asia,3,Ancient Nineveh of the Assyrians
+Ctesiphon,Ctesiphon,33.093,44.581,Asia,3,Old Persian capital
+Basora,Basra,30.508,47.784,Asia,3,Gulf port of Mesopotamia
+Tauris,Tabriz,38.08,46.293,Asia,2,Great city of the Mongol Ilkhans
+Ispahan,Isfahan,32.654,51.668,Asia,3,City of central Persia
+Ormus,Hormuz,27.1,56.461,Asia,2,Spice-emporium of the Gulf
+Merva,Merv,37.66,62.192,Asia,3,Silk Road oasis of Khorasan
+Bochara,Bukhara,39.767,64.421,Asia,3,Learned city of Transoxiana
+Samarcanda,Samarkand,39.654,66.96,Asia,2,Capital of Tamerlane
+Cabul,Kabul,34.528,69.172,Asia,3,Gate to India
+Delli,Delhi,28.651,77.231,Asia,2,Sultanate of India
+Aden,Aden,12.788,45.03,Asia,3,Arabian gate of the Indian Ocean
+Carthago,Carthage/Tunis,36.853,10.323,Africa,2,"Old rival of Rome, now Tunis"
+Cairoan,Kairouan,35.681,10.1,Africa,3,Holy city of the Maghreb
+Tripolis Barbariae,Tripoli (Libya),32.887,13.191,Africa,3,Barbary coast port
+Fessa,Fès,34.033,-5.0,Africa,2,Learned capital of Morocco
+Marrochium,Marrakesh,31.63,-7.981,Africa,3,Almohad capital
+Ceuta,Ceuta,35.889,-5.32,Africa,3,Strait fortress
+Tingis,Tangier,35.783,-5.813,Africa,3,"Pillar of Hercules, African side"
+Tombuctu,Timbuktu,16.775,-3.009,Africa,3,Gold city beyond the sand-sea
+Dongola,Dongola,19.17,30.482,Africa,3,Christian Nubian kingdom
+Axuma,Axum,14.13,38.719,Africa,3,Realm of Prester John (Ethiopia)
+Salmantica,Salamanca,40.965,-5.664,Europa,3,University of Castile
+Conimbriga,Coimbra,40.211,-8.429,Europa,3,Portuguese see
+Yasdi,Yazd,31.898,54.368,Asia,2,City of silk-weaving on the desert road
+Kerman,Kerman,30.284,57.078,Asia,2,Kingdom of turquoise and fine steel
+Camadi,Jiroft (ruins),28.675,57.74,Asia,3,A city laid in ruins by the Carauna robbers
+Cobinan,Kuhbanan,31.409,56.279,Asia,3,Where mirrors of steel and tutty are made
+Sapurgan,Shibarghan,36.665,65.752,Asia,3,Land of the best melons in the world
+Balc,Balkh,36.758,66.897,Asia,1,"Noble and great city, once greater still"
+Taican,Taloqan,36.736,69.535,Asia,3,Market town below the mountains of salt
+Badashan,Badakhshan (Faizabad),37.112,70.579,Asia,2,Whence come the balas rubies and the lapis
+Keshimur,Srinagar,34.084,74.797,Asia,2,Province of enchanters who darken the day
+Cascar,Kashgar,39.467,75.994,Asia,1,Where the roads of the north and south divide
+Yarcan,Yarkand,38.417,77.243,Asia,3,Province of five days' journey
+Cotan,Khotan,37.11,79.927,Asia,1,"Province of jade, cotton and vineyards"
+Pein,Keriya,36.86,81.67,Asia,3,Where the rivers yield chalcedony and jasper
+Charchan,Qiemo,38.15,85.533,Asia,3,Last town before the Great Desert
+Lop,Charkhlik (Ruoqiang),39.017,88.167,Asia,1,The town at the edge of the Desert of Lop
+Sachiu,Dunhuang,40.142,94.662,Asia,2,City of Tangut where the dead are burned
+Camul,Hami,42.827,93.515,Asia,3,"Province of music, sport and famous hospitality"
+Campichu,Zhangye,38.933,100.45,Asia,2,"Chief city of Tangut, full of idol-monasteries"
+Etzina,Khara-Khoto (ruins),41.767,101.067,Asia,3,Last provisioning before forty days of desert
+Caracoron,Karakorum (ruins),47.198,102.832,Asia,2,First seat of the Tartar Kaans
+Egrigaia,Yinchuan,38.487,106.232,Asia,3,Where the finest camlets of camel-hair are made
+Tenduc,Tokto / Hohhot,40.274,111.194,Asia,3,Province said to be the land of Prester John
+Chandu,"Shangdu (Xanadu, ruins)",42.359,116.183,Asia,1,The Kaan's summer palace of marble and cane
+Cambaluc,Beijing,39.904,116.407,Asia,1,The Great Kaan's capital; seat of the paper money
+Kenjanfu,Xi'an,34.341,108.94,Asia,2,"Great and noble city, seat of a king's son"
+Sindafu,Chengdu,30.659,104.065,Asia,2,City divided by a river of bridges
+Saianfu,Xiangyang,32.009,112.122,Asia,2,Held out three years until the mangonels came
+Coiganju,Huai'an,33.502,119.15,Asia,3,"Entry to Manzi, great store of salt"
+Nanghin,Nanjing,32.06,118.797,Asia,2,Noble province of great wealth
+Sinjumatu,Jining,35.415,116.587,Asia,3,River-city of vast shipping
+Kinsay,Hangzhou,30.274,120.155,Asia,1,The City of Heaven; greatest city in the world
+Suju,Suzhou,31.299,120.585,Asia,2,City of ginger and six thousand stone bridges
+Fuju,Fuzhou,26.075,119.297,Asia,2,Great river-city of the sugar trade
+Zayton,Quanzhou,24.874,118.593,Asia,1,Haven of all the ships of India; the world's great port
+Chamba,Champa (Qui Nhon),13.776,109.223,Asia,3,Kingdom of aloeswood and elephants
+Pentam,Bintan,1.083,104.45,Asia,3,Island on the strait toward Java
+Java Major,Java (Jakarta),-6.2,106.817,Asia,2,Greatest island in the world; source of the spices
+Samara,Sumatra (Banda Aceh),5.548,95.324,Asia,3,Where the pole-star is no longer seen
+Maabar,Coromandel (Nagapattinam),10.766,79.843,Asia,2,The finest province in the world; pearl fishery
+Cail,Kayalpattinam,8.568,78.123,Asia,3,Great port for all ships from the west
+Coilum,Kollam (Quilon),8.893,76.6,Asia,3,"Whence comes the brazil, ginger and indigo"
+Melibar,Malabar (Kozhikode),11.259,75.78,Asia,2,Kingdom of pepper and of corsairs
+Tana,Thane,19.197,72.97,Asia,3,Great kingdom of incense and buckram
+Cambaet,Khambhat (Cambay),22.313,72.62,Asia,3,Kingdom of indigo and fine leather
+Semenat,Somnath,20.888,70.401,Asia,3,"Kingdom of great trade, its people idolaters"
+Dufar,Salalah (Dhofar),17.019,54.089,Asia,3,City whence the white incense is shipped
+Esher,Ash-Shihr,14.761,49.601,Asia,3,Port of frankincense and of horses for India
+Calatu,Qalhat,22.7,59.372,Asia,3,"City at the mouth of the Gulf, subject to Hormos"

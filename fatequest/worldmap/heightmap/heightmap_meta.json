@@ -1,0 +1,27 @@
+{
+  "type": "synthetic-prototype",
+  "note": "Relief derived from mountains.geojson over fractal lowlands. Replace with real DEM via scripts/build_real_terrain.py for production.",
+  "width": 2048,
+  "height": 1024,
+  "bit_depth": 16,
+  "channel": "grayscale",
+  "bbox": {
+    "west": -20.0,
+    "south": -8.0,
+    "east": 122.0,
+    "north": 66.0
+  },
+  "crs": "EPSG:4326",
+  "elevation": {
+    "grayscale_min": 0,
+    "grayscale_max": 65535,
+    "meters_min": 0.0,
+    "meters_max": 8000.0,
+    "formula_m": "meters = gray/65535 * 8000"
+  },
+  "engine_hint": {
+    "unity": "Terrain > Import Raw, 16-bit, 2048x1024, set Terrain Height = 8000 (scaled to your world units)",
+    "godot": "HeightMapShape3D / terrain addon; height scale = 8000 * your_unit",
+    "unreal": "Landscape Import Heightmap (16-bit PNG); Z scale so 65535 -> 8000 m"
+  }
+}
