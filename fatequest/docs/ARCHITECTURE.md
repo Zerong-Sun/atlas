@@ -320,8 +320,8 @@ G3–G8 是本作特有的——它们把策划案里的**设计红线变成机�
 
 1. ~~改 GDD §16~~ ✅ 已完成（2026-07）
 2. ~~worldmap 东扩~~ ✅ 已完成（2026-07）。**遗留**：`heightmap.png` 仍是合成原型（无海陆掩膜），生产地形需联网跑 `build_real_terrain.py --dem opentopo`（要 `shapely/rasterio` + OpenTopography key）
-3. **`CODE_PLAN.md`**：内核模块的类型与接口、effect 指令集的完整规格、条件求值器语法
-4. **`DATA_MODEL.md`**：八张表的 JSON Schema、id 命名规范、引用图、迁移策略
+3. ~~`CODE_PLAN.md`~~ ✅ 已完成（2026-07）
+4. ~~`DATA_MODEL.md`~~ ✅ 已完成（2026-07）
 5. **骨架落地**：Godot 工程 + `core/rng` + effect 执行器 + 一条最小可玩路径（两城一路线）
 6. **M1 验收**（GDD §16）：八张表落库、**约 75 节点**、三条线可从头走到尾
 
