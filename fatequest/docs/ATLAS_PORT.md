@@ -1,12 +1,12 @@
 # Atlas 资产移植方案 · ATLAS PORT PLAN
 
-同一 monorepo 下的 Atlas（`packages/` + `apps/web/`）已有一整套占卜引擎、方法数据库与动效规范。本文盘点可移植资产、给出分层移植策略，并指出**一处必须改造的框架差异**。
+> **归档对照说明（非构建契约）。** Atlas 已整树迁入同仓库 [`../atlas/`](../../atlas/)，短期冻结，仅供人工阅读与按需复制。本文盘点可移植资产与框架差异；**FateQuest 与 Atlas 无共享构建、无相互 import。** 需要引擎或元数据时，从 `../atlas/...` 复制进本目录后自行维护。
 
 ---
 
 ## 1. 资产盘点（实测）
 
-### 1.1 引擎 `packages/engines/` — 24 个，5,973 行 TypeScript
+### 1.1 引擎 `../atlas/packages/engines/` — 24 个，5,973 行 TypeScript
 
 | 引擎 | 行数 | 说明 |
 |---|---|---|
@@ -35,7 +35,7 @@
 
 > **结论：22/24 个引擎是零运行时依赖的纯函数，可直接移植。**
 
-### 1.2 方法数据库 `packages/method-data/` — 1,169 行
+### 1.2 方法数据库 `../atlas/packages/method-data/` — 1,169 行
 
 | 文件 | 行数 | 内容 |
 |---|---|---|
@@ -79,9 +79,9 @@ CSS 侧已有配套关键帧（**纯 CSS，零依赖，可直接复制**）：
 
 ### 1.4 其他
 
-- `packages/theme/traditions.ts` — 各传统的配色令牌
-- `apps/web/src/data/methodReferenceLibraries` — 参考文献库
-- `packages/method-core/` — 报告快照与分享（**本作不需要**，Atlas 是工具向）
+- `../atlas/packages/theme/traditions.ts` — 各传统的配色令牌
+- `../atlas/apps/web/src/data/methodReferenceLibraries` — 参考文献库
+- `../atlas/packages/method-core/` — 报告快照与分享（**本作不需要**，Atlas 是工具向）
 
 ---
 
@@ -163,14 +163,12 @@ Atlas 的 `causalityModel` / `uncertaintyMode` 恰好能**直接推导**游戏�
 | 3 | `astrodice.ts` · `jiaobei.ts` · `meihua.ts` · `runes.ts` · `tarot*.ts` · `lenormand.ts` | 已在游戏中有简化版，逐个替换 |
 | 4 | `western.ts` | **需 `astronomy-engine`（~200 KB）**，超首屏预算，改为按需加载或保留简化版 |
 
-**移植方式二选一**：
+**移植方式（无共享构建）：**
 
-- **A. 构建步骤**（推荐）：加一个 `esbuild` 脚本把 `packages/engines` 打包成 `fatequest/js/engines.bundle.js`（IIFE，挂到 `FQ.E`）。类型自动擦除，源码留在 Atlas 单点维护，两边不分叉。
-- **B. 手工转写**：把 TS 剥成 JS 放进 `js/`。省掉构建，但从此两份代码分叉，八字这种 911 行的会很快失同步。
+- 需要某引擎时，从 `../atlas/packages/engines` **人工复制**对应 TS，剥成 JS（或本地一次性转写）放进 `js/`，由 FateQuest 自行维护。
+- **不要**用 esbuild/workspace 把 Atlas 源码打成共享 bundle，也不要两边单点维护同一份源码。
 
-> **推荐 A**。游戏虽是无框架 PWA，加一个 build 步骤不影响运行时零依赖，且避免了最坏情况：两套八字算法给出不同结果。
-
-**工作量**：方案 A 约 1–2 天（含 `shared-types` 类型解耦）。
+**工作量**：按模块手工移植，八字等大文件需单独回归。
 
 ### 层三 · 元数据合并（需要判断，不能自动）
 
@@ -189,22 +187,22 @@ Atlas 的 `causalityModel` / `uncertaintyMode` 恰好能**直接推导**游戏�
 
 Atlas 有 24 种占法，MVP 只要 3 种（GDD §16）。
 
-> **移植基础设施（层一 + 层二引擎打包）覆盖全部 24 种是划算的——一次性成本。
-> 但把 24 种都接进玩法是范围灾难**：每种占法都要有师父、学习地点、结果文本、对路线的实际影响（§3 硬约束），这是 24 × 完整内容生产。
+> **对照阅读与按需复制是划算的；不要重建与 Atlas 的构建耦合。**
+> 但把 24 种都接进玩法是范围灾难：每种占法都要有师父、学习地点、结果文本、对路线的实际影响（§3 硬约束），这是 24 × 完整内容生产。
 
-**建议**：引擎与动效全量移植（反正是打包），玩法层严格按 MVP 只接 3 种，其余在 `divinations.json` 里标 `mvp: false`，随章节扩充。
+**建议**：需要时从归档复制引擎/动效到本目录；玩法层严格按 MVP 只接 3 种，其余在 `divinations.json` 里标 `mvp: false`，随章节扩充。
 
 ---
 
 ## 6. 执行清单
 
-- [ ] 复制 `method-experience.css` 关键帧 → `fatequest/css/method-motion.css`
-- [ ] 转写 `methodExperiences.ts` → `fatequest/js/data-methods.js`（24 条动效规范）
-- [ ] 转写 `lotSignsLibrary.ts` → `fatequest/js/data-lots.js`
-- [ ] 建 `scripts/build-engines.mjs`（esbuild → `js/engines.bundle.js`，IIFE 挂 `FQ.E`）
+- [ ] 从 `../atlas` 复制 `method-experience.css` 关键帧 → `fatequest/css/method-motion.css`
+- [ ] 转写 `../atlas/.../methodExperiences.ts` → `fatequest/js/data-methods.js`（24 条动效规范）
+- [ ] 转写 `../atlas/.../lotSignsLibrary.ts` → `fatequest/js/data-lots.js`
+- [ ] 需要更精确引擎时：从 `../atlas/packages/engines` 人工复制并转写进 `js/`（不建共享 esbuild）
 - [ ] 解耦 `@atlas/shared-types`：把引擎用到的类型改为 JSDoc 或就地内联
-- [ ] `western.ts` 单独分包，按需加载（避免 `astronomy-engine` 进首屏）
-- [ ] 用 Atlas 引擎替换 `js/engines.js` 中的简化实现，跑通现有仪式
+- [ ] `western.ts` 若引入，单独处理 `astronomy-engine`（避免进首屏）
+- [ ] 用移植结果替换 `js/engines.js` 中的简化实现，跑通现有仪式
 - [ ] 写 §3 的 `uncertaintyMode → question` 映射表
 - [ ] 生成 `assets/data/divinations.json`：24 条元数据 + 3 条完整游戏层字段
 - [ ] 回归：确认 `effects` 非空约束在 3 条 MVP 占法上成立

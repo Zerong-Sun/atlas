@@ -19,9 +19,8 @@
 ## 运行 Run
 
 ```bash
-python3 ../dev-server.py     # 开发（禁缓存），或任意静态服务器
 npx serve .
-# open http://localhost:4173
+# 浏览器打开提示的本地地址（常见为 http://localhost:3000）
 ```
 
 手机浏览器打开 →「添加到主屏幕」即全屏运行；离线可玩（Service Worker 网络优先）。

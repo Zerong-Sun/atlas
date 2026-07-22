@@ -7,15 +7,15 @@
 - **Digitization**: [taluowa.com](https://www.taluowa.com) — URL list in [look-fate/tarot-lab](https://github.com/look-fate/tarot-lab) (`Script/simple-lenormand.txt`)
 - **Underlying art**: Public domain (19th-century card designs)
 
-Refresh: `npm run fetch-lenormand` in `packages/corpus-scripts`.
+Assets are **vendored** under this tree (no build-time dependency on Atlas). Optional refresh scripts live in the archived monorepo at `../atlas/packages/corpus-scripts` if you ever need to re-fetch; they are not part of FateQuest’s runtime or install.
 
 ## Alternate decks
 
-| Deck | Command | Directory | Notes |
-|------|---------|-----------|-------|
-| British Museum Dondorf 1896,0501.308 | `npm run fetch-lenormand:bm` | `bm-dondorf-308/` | Extracted from 2 BM Commons photos; **CC BY-NC-SA 4.0** |
-| Game of Hope 1799 | `npm run fetch-lenormand:game-of-hope` | `game-of-hope-1799/` | Sheet-cropped, may clip edges |
-| Ch. Didot c.1890 (Yale IIIF) | `npm run fetch-lenormand:didot` | `didot-1890/` | Sheet-cropped, may clip edges |
+| Deck | Directory | Notes |
+|------|-----------|-------|
+| British Museum Dondorf 1896,0501.308 | `bm-dondorf-308/` | Extracted from 2 BM Commons photos; **CC BY-NC-SA 4.0** |
+| Game of Hope 1799 | `game-of-hope-1799/` | Sheet-cropped, may clip edges |
+| Ch. Didot c.1890 (Yale IIIF) | `didot-1890/` | Sheet-cropped, may clip edges |
 
 ### British Museum deck (bm-dondorf-308)
 

@@ -14,4 +14,4 @@
 
 - Roman-numeral badges generated for this project (currentColor, matches dice theme)
 
-Refresh assets: `npm run fetch-astrodice` in `packages/corpus-scripts`.
+Assets are **vendored** under this tree. Optional refresh scripts live in archived `../atlas/packages/corpus-scripts` (not a FateQuest dependency).
