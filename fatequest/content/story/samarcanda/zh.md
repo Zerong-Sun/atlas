@@ -83,7 +83,7 @@ stamps:
 
 ## ev.samarcanda.entry.choice.market
 
-穿过大 bāzār
+穿过大 bāzār（集市）
 
 ## ev.samarcanda.a.body
 
@@ -131,3 +131,4 @@ stamps:
 ## ev.samarcanda.entry.title
 
 撒马尔罕大城
+

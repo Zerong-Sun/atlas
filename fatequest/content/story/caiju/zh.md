@@ -2,18 +2,19 @@
 unit: caiju
 lang: zh
 source: en
-source_rev: c50abe042736
+source_rev: 2252bb569e51
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
-
 stamps:
   city.caiju.name: cceee1f1da86
+  ev.caiju.entry.body: c163159d1124
   ev.caiju.entry.choice.look: a1e5276c886b
   ev.caiju.entry.choice.pass: 96d145abaf05
+  ev.caiju.entry.title: dc274ca46216
 ---
 
 ## city.caiju.name
@@ -27,3 +28,12 @@ stamps:
 ## ev.caiju.entry.choice.pass
 
 穿城而过，不加停留
+
+## ev.caiju.entry.body
+
+瓜州乃一小城，偏东南。民臣服大汗，用交钞。城临先前所言之河。此地聚粮米甚巨，运往汗八里大城，
+供大汗朝廷之用；盖宫廷所需之粮，皆自此一带而来。驿站舟车络绎，秋日尤忙。
+
+## ev.caiju.entry.title
+
+记瓜州

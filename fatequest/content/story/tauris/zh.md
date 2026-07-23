@@ -87,7 +87,7 @@ stamps:
 
 ## ev.tauris.entry.choice.market
 
-穿过大 bāzār
+穿过大 bāzār（集市）
 
 ## ev.tauris.mentor_tarot.body
 
@@ -151,3 +151,4 @@ stamps:
 ## ev.tauris.entry.title
 
 名城大不里士
+

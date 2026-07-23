@@ -228,6 +228,7 @@
         ]
       },
       "mentor": "npc-cambaluc-mentor",
+      "mentorEvent": "ev-cambaluc-mentor-iching",
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"
@@ -1525,6 +1526,7 @@
         ]
       },
       "mentor": "npc-zayton-mentor",
+      "mentorEvent": "ev-zayton-mentor",
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"

@@ -83,7 +83,7 @@ stamps:
 
 ## ev.cascar.entry.choice.market
 
-穿过大 bāzār
+穿过大 bāzār（集市）
 
 ## ev.cascar.a.body
 
@@ -105,7 +105,7 @@ stamps:
 
 ## ev.cascar.b.title
 
-毯市
+巴扎（毯市）
 
 ## ev.cascar.c.body
 
@@ -128,3 +128,4 @@ stamps:
 ## ev.cascar.entry.title
 
 可失合儿国
+

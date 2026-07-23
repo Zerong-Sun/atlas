@@ -87,7 +87,7 @@ stamps:
 
 ## ev.baldacum.entry.choice.market
 
-穿过大 bāzār
+穿过大 bāzār（集市）
 
 ## ev.baldacum.mentor_bazi.body
 
@@ -153,3 +153,4 @@ stamps:
 ## ev.baldacum.entry.title
 
 报达大城及其陷落
+

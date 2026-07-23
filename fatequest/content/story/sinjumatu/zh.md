@@ -2,18 +2,19 @@
 unit: sinjumatu
 lang: zh
 source: en
-source_rev: 54a84841cae9
+source_rev: 97c3719c587c
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
-
 stamps:
   city.sinjumatu.name: eeaa6c848103
+  ev.sinjumatu.entry.body: 5490193ea377
   ev.sinjumatu.entry.choice.look: a1e5276c886b
   ev.sinjumatu.entry.choice.pass: 96d145abaf05
+  ev.sinjumatu.entry.title: 744551b84bf1
 ---
 
 ## city.sinjumatu.name
@@ -27,3 +28,13 @@ stamps:
 ## ev.sinjumatu.entry.choice.pass
 
 穿城而过，不加停留
+
+## ev.sinjumatu.entry.body
+
+既离Tadinfu，向南行三日，沿途不断遇见尊贵人稠之市镇村落，贸易与百工繁荣。
+境内猎物极丰，百物皆饶。三日之末至尊贵之城济宁——富而华美，贸易与百工极大。民为偶像教徒，
+臣服大汗，用交钞；城有一河，我可向你保证为之带来大利，其详情我另说。你看此河自南流至济宁。
+
+## ev.sinjumatu.entry.title
+
+记济宁

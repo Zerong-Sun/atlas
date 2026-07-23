@@ -83,7 +83,7 @@ stamps:
 
 ## ev.ormus.entry.choice.market
 
-穿过大 bāzār
+穿过大 bāzār（集市）
 
 ## ev.ormus.a.body
 
@@ -132,3 +132,4 @@ stamps:
 ## ev.ormus.entry.title
 
 下忽鲁谟斯
+

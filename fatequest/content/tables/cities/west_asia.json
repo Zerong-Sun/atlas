@@ -245,6 +245,7 @@
         ]
       },
       "mentor": "npc-baldacum-mentor",
+      "mentorEvent": "ev-baldacum-mentor-bazi",
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"
@@ -1198,6 +1199,7 @@
         ]
       },
       "mentor": "npc-tauris-mentor",
+      "mentorEvent": "ev-tauris-mentor-tarot",
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"

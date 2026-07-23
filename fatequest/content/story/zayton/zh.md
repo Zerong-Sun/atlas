@@ -230,7 +230,7 @@ stamps:
 
 ## market.zayton.item.rhubarb
 
-唐古特大黄的干根——论斤卖，价比威尼斯药铺里的肉桂还贵。
+唐古忒大黄的干根——论斤卖，价比威尼斯药铺里的肉桂还贵。
 
 ## market.zayton.item.silk
 
@@ -243,3 +243,4 @@ stamps:
 ## market.zayton.item.tea
 
 茶饼，压成砖，盖着产区印戳。码头上茶砖换胡椒，一比一。
+
