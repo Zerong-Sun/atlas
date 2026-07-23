@@ -1,0 +1,613 @@
+{
+ "type": "FeatureCollection",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "mtn-0",
+   "properties": {
+    "name_medieval": "Alpes",
+    "name_modern": "Alps",
+    "peak_m": 4808,
+    "trend": "WSW–ENE",
+    "note": "Great snow-wall guarding Italy"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      6.0,
+      45.9
+     ],
+     [
+      7.5,
+      45.9
+     ],
+     [
+      9.5,
+      46.5
+     ],
+     [
+      11.5,
+      47.0
+     ],
+     [
+      13.5,
+      47.1
+     ],
+     [
+      15.5,
+      47.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-1",
+   "properties": {
+    "name_medieval": "Pyrenaei Montes",
+    "name_modern": "Pyrenees",
+    "peak_m": 3404,
+    "trend": "W–E",
+    "note": "Wall between Gaul and Spain"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -1.6,
+      43.3
+     ],
+     [
+      0.7,
+      42.7
+     ],
+     [
+      2.9,
+      42.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-2",
+   "properties": {
+    "name_medieval": "Apenninus",
+    "name_modern": "Apennines",
+    "peak_m": 2912,
+    "trend": "NW–SE",
+    "note": "Spine of Italy"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      9.2,
+      44.3
+     ],
+     [
+      11.0,
+      43.4
+     ],
+     [
+      13.3,
+      42.6
+     ],
+     [
+      15.0,
+      41.5
+     ],
+     [
+      16.2,
+      40.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-3",
+   "properties": {
+    "name_medieval": "Carpates",
+    "name_modern": "Carpathians",
+    "peak_m": 2655,
+    "trend": "arc",
+    "note": "Bow of the Danube lands"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      18.9,
+      49.3
+     ],
+     [
+      20.5,
+      49.2
+     ],
+     [
+      22.5,
+      48.3
+     ],
+     [
+      24.5,
+      47.7
+     ],
+     [
+      25.5,
+      46.5
+     ],
+     [
+      24.6,
+      45.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-4",
+   "properties": {
+    "name_medieval": "Caucasus",
+    "name_modern": "Caucasus",
+    "peak_m": 5642,
+    "trend": "WNW–ESE",
+    "note": "Barrier of Gog and Magog, gate of Derbent"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      40.0,
+      43.5
+     ],
+     [
+      42.5,
+      43.3
+     ],
+     [
+      45.0,
+      42.8
+     ],
+     [
+      47.5,
+      41.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-5",
+   "properties": {
+    "name_medieval": "Taurus",
+    "name_modern": "Taurus",
+    "peak_m": 3756,
+    "trend": "W–E",
+    "note": "Southern wall of Anatolia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      29.5,
+      37.0
+     ],
+     [
+      32.0,
+      37.2
+     ],
+     [
+      34.5,
+      37.3
+     ],
+     [
+      37.0,
+      37.6
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-6",
+   "properties": {
+    "name_medieval": "Atlas",
+    "name_modern": "Atlas",
+    "peak_m": 4167,
+    "trend": "SW–NE",
+    "note": "Mountains of Mauretania"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -8.0,
+      31.2
+     ],
+     [
+      -5.5,
+      32.0
+     ],
+     [
+      -2.5,
+      33.2
+     ],
+     [
+      0.5,
+      34.5
+     ],
+     [
+      4.0,
+      35.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-7",
+   "properties": {
+    "name_medieval": "Haemus",
+    "name_modern": "Balkan (Stara Planina)",
+    "peak_m": 2376,
+    "trend": "W–E",
+    "note": "Range of Thrace"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      22.9,
+      42.8
+     ],
+     [
+      25.0,
+      42.8
+     ],
+     [
+      27.0,
+      42.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-8",
+   "properties": {
+    "name_medieval": "Rhodope",
+    "name_modern": "Rhodope",
+    "peak_m": 2191,
+    "trend": "W–E",
+    "note": "Border of Thrace and Macedon"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      24.0,
+      41.6
+     ],
+     [
+      25.5,
+      41.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-9",
+   "properties": {
+    "name_medieval": "Montes Cantabri",
+    "name_modern": "Cantabrian Mts",
+    "peak_m": 2650,
+    "trend": "W–E",
+    "note": "North wall of Spain"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -6.5,
+      43.1
+     ],
+     [
+      -4.0,
+      43.1
+     ],
+     [
+      -3.7,
+      43.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-10",
+   "properties": {
+    "name_medieval": "Mons Ararat",
+    "name_modern": "Mt Ararat",
+    "peak_m": 5137,
+    "trend": "peak",
+    "note": "Where Noah's Ark came to rest"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      43.9,
+      39.6
+     ],
+     [
+      44.3,
+      39.7
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-11",
+   "properties": {
+    "name_medieval": "Mons Aetna",
+    "name_modern": "Mt Etna",
+    "peak_m": 3357,
+    "trend": "peak",
+    "note": "Fire-mountain of Sicily"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.0,
+     37.75
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-12",
+   "properties": {
+    "name_medieval": "Vesuvius",
+    "name_modern": "Mt Vesuvius",
+    "peak_m": 1281,
+    "trend": "peak",
+    "note": "Burning mountain over Naples"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.43,
+     40.82
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-13",
+   "properties": {
+    "name_medieval": "Libanus",
+    "name_modern": "Mount Lebanon",
+    "peak_m": 3088,
+    "trend": "N–S",
+    "note": "Cedar range of the Holy Land"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      35.7,
+      33.4
+     ],
+     [
+      36.0,
+      34.0
+     ],
+     [
+      36.3,
+      34.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-14",
+   "properties": {
+    "name_medieval": "Mons Sinai",
+    "name_modern": "Sinai massif",
+    "peak_m": 2629,
+    "trend": "peak",
+    "note": "Mountain of the Law"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.97,
+     28.54
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-15",
+   "properties": {
+    "name_medieval": "Zagros",
+    "name_modern": "Zagros",
+    "peak_m": 4409,
+    "trend": "NW–SE",
+    "note": "Wall of Persia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      46.0,
+      35.0
+     ],
+     [
+      48.5,
+      33.0
+     ],
+     [
+      51.0,
+      31.0
+     ],
+     [
+      53.5,
+      29.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-16",
+   "properties": {
+    "name_medieval": "Montes Elburz",
+    "name_modern": "Alborz (Damavand)",
+    "peak_m": 5610,
+    "trend": "W–E",
+    "note": "Range south of the Caspian"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      50.0,
+      36.2
+     ],
+     [
+      52.1,
+      35.95
+     ],
+     [
+      54.0,
+      36.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-17",
+   "properties": {
+    "name_medieval": "Caucasus Indicus",
+    "name_modern": "Hindu Kush",
+    "peak_m": 7708,
+    "trend": "SW–NE",
+    "note": "The Indian Caucasus of Alexander"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      66.0,
+      35.0
+     ],
+     [
+      69.0,
+      35.5
+     ],
+     [
+      71.5,
+      36.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-18",
+   "properties": {
+    "name_medieval": "Imaus",
+    "name_modern": "Himalaya (western edge)",
+    "peak_m": 8000,
+    "trend": "NW–SE",
+    "note": "Great range dividing the two Scythias"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      74.0,
+      35.5
+     ],
+     [
+      77.0,
+      34.0
+     ],
+     [
+      80.0,
+      30.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-19",
+   "properties": {
+    "name_medieval": "Montes Riphaei",
+    "name_modern": "Ural (mythic north)",
+    "peak_m": 1895,
+    "trend": "N–S",
+    "note": "Mythical northern mountains, source of Boreas"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      60.0,
+      66.0
+     ],
+     [
+      59.5,
+      62.0
+     ],
+     [
+      59.0,
+      58.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "mtn-20",
+   "properties": {
+    "name_medieval": "Montes Lunae",
+    "name_modern": "Mountains of the Moon",
+    "peak_m": 5109,
+    "trend": "N–S",
+    "note": "Fabled source of the Nile, at the far south of the known world"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      29.5,
+      1.0
+     ],
+     [
+      30.0,
+      0.6
+     ],
+     [
+      30.2,
+      0.3
+     ]
+    ]
+   }
+  }
+ ]
+}

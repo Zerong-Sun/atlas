@@ -1,0 +1,15 @@
+{
+  "order": [
+    "region-chr.webp",
+    "region-isl.webp",
+    "region-con.webp",
+    "region-mazu.webp",
+    "map-parchment.webp",
+    "bg-nocturne-alt.webp",
+    "ui-bg-scroll.webp",
+    "ui-bg-ribbon.webp",
+    "ui-bg-stamp.webp",
+    "ui-bg-bookmark.webp"
+  ],
+  "source": "chatgpt-vision"
+}

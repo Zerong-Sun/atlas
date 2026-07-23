@@ -1,0 +1,670 @@
+{
+  "meta": {
+    "title": "Yingya Shenglan — Place & Story Lore",
+    "source": "Zhang Sheng, Yingya Shenglan Ji (Ming); EN machine translation of Ma Huan abridgement",
+    "language": "en",
+    "zhStatus": "pending",
+    "chapterCount": 18,
+    "placeCount": 18,
+    "storyCount": 8,
+    "missingChapterIds": []
+  },
+  "bands": [
+    {
+      "id": "maritime_asia",
+      "label": "Maritime Asia"
+    },
+    {
+      "id": "india",
+      "label": "India"
+    },
+    {
+      "id": "arabia",
+      "label": "Arabia & Hejaz"
+    },
+    {
+      "id": "east_africa",
+      "label": "East Africa"
+    },
+    {
+      "id": "west_asia",
+      "label": "West Asia"
+    }
+  ],
+  "places": [
+    {
+      "id": "champa",
+      "title": "Champa",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Champa",
+        "Zhancheng",
+        "Xinzhou"
+      ],
+      "body": "The country is located in the sea to the south, from Chenla to the west, and to the northeast of Jiaozhi. Starting from Wuhumen in Changle County, Fujian, it takes about ten days to sail southwest with a favorable wind to reach the country. There is a seaport about a hundred miles northeast of the country, called Xinzhou Port. There is a guard at the door, Wang Naisuo, and the people inside are also Buddhists. The top is decorated with three mountains of golden flowers, an exquisite crown, and the upper part is made of colorful cotton cloth. The lower part is like a cotton turban. The scarf has several turns, the feet are stretched across an elephant, or someone rides on a small cart with two yellow robes. The crown of wild rice leaves on the head of the minister is also similar to the royal crown. It is decorated with gold color. The crown is of good rank, but the upper garment is also colorful below the knees. The royal palace is grand and majestic. The neat gates have vertical carvings of wooden beasts to show the majesty of the people's houses. The height of the crotch is no more than three feet. Those who bend their bodies to enter and exit are allowed to wear purple. Only the king's white clothes are prohibited. Those who violate the law are dead. Males have unkempt hair and female vertebrae are knotted in the back. The skin is black, the upper body is bald, and the sleeves are also covered with colorful cloth under the short shirt. Both men and women are naked. The four seasons are warm and there is no frost and snow. The grass and trees are always green. They eat betel nuts and talk endlessly. As is customary in Fujian and Yue, a man first marries a woman, and then the parents marry him or her on ten days or five days after ten days.",
+      "source": {
+        "chapterIds": [
+          "yingya-c001"
+        ],
+        "chapterId": "yingya-c001",
+        "chapter": 1,
+        "chapterTitle": "Champa",
+        "zhHeading": "占城"
+      }
+    },
+    {
+      "id": "java",
+      "title": "Java",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Java",
+        "Majapahit",
+        "Tuban",
+        "Gresik",
+        "Surabaya"
+      ],
+      "body": "In ancient times, the country of Jhapo had no city walls. He first entered Du Banci and entered the Si Village. Then he entered Suluma Yici and entered the capital of Manjuboyi. The palace was built with bricks on all sides and was more than three feet high. It was more than three hundred miles square. The gate was deep and strict. The house was four feet high. The floor was covered with boards. The wooden dwellings are made of bricks. The king's head is covered with a crown of gold leaves, and the crown is inlaid with crotch. The waist is tied with brocade, and the waist is pressed down. The waist is worn with a short blade, which is not pierced. The head is not pierced. The man is walking or riding on an elephant or riding an ox. Folk men with unkempt heads, women with vertebrae, and tops are knotted. Men must have a sword on their waists. There are no old or weak, nobility or poverty. All the rich and poor must have a sword. The handle is made of iron with various colors and is decorated with gold or rhinoceros. It is often covered with a ghost face and is very elaborate. If someone offends his head and fights with each other during the gathering, he will be killed with a sword. If he escapes for more than three days, he will not be punished. If he is captured immediately, he will still be punished by the official without a whip. The crime does not matter the severity, and he will be killed with a rattan-type sword. It is not surprising that the market is easy to use Chinese copper coins, and the people who use it are called Jianban. The name of the place is also about a thousand family heads, and the two chiefs live among them. Many people from Guangdong and Zhangzhou are also from Haizhu. The water in the small pond is sweet and refreshing. The name of the holy water is passed down.",
+      "source": {
+        "chapterIds": [
+          "yingya-c002"
+        ],
+        "chapterId": "yingya-c002",
+        "chapter": 2,
+        "chapterTitle": "Java",
+        "zhHeading": "爪哇"
+      }
+    },
+    {
+      "id": "palembang",
+      "title": "Palembang (Old Port / Srivijaya)",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Palembang",
+        "Old Port",
+        "Srivijaya",
+        "Jiugang"
+      ],
+      "body": "The ancient name is Srivijaya, and it is called Banglinbangli. Java is to the east from Java, to the west to Mancic, and to the south, it is far from the mountains. It is on the northwest coast, and ships enter Dan Harbor and enter Peng's house. It is easy to enter the harbor by boat. There are many people in the country, Zhangquan, Guangdong, where people live. The fertile land is fertile and densely populated, suitable for farming. The proverb says that one season of farming, three seasons of rice harvest, the harvest is wide, there is a lot of water, and there are few people. The generals' homes are used to the water, and only then can they live on the shore. Soldiers often live on rafts tied to the rafters. The tides, customs and language of Ge Gangtong are just like those of Java. During the Hongwu Period, there was Chen Zuyi, and the Guangdong people also took their families to seek refuge here. The generals passed by Yongle Room. Zheng He, the eunuch of the imperial court, commanded the sea, and there were even Shijin people. The people of Guangzhou also complained about the ancestral righteousness in peace, and led the soldiers to capture the ancestral righteousness. Fu was executed by the official, but he still returned to the old port? He was about to be destroyed. The rewards and punishments of the female generation are all based on their customs. They are fond of gambling, such as turtles, chess, and chickens. They ask for money and tools. They also use Chinese copper coins, cloth, and silk. The hair is black, the legs are long, the brain bones are more than an inch thick, the inside is yellow and the outside is red, and the turkey is bigger than a crane. The neck is also too long, the soft red crown is sharp, the hair is like a green sheep, the legs are long, the black claws are very sharp, it can hurt the abdomen and kill people. Even if it eats charcoal, it can hit the immortal deer.",
+      "source": {
+        "chapterIds": [
+          "yingya-c003"
+        ],
+        "chapterId": "yingya-c003",
+        "chapter": 3,
+        "chapterTitle": "Palembang (Old Port / Srivijaya)",
+        "zhHeading": "旧港国"
+      }
+    },
+    {
+      "id": "siam",
+      "title": "Siam",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Siam",
+        "Ayutthaya",
+        "Xianluo"
+      ],
+      "body": "The country is surrounded by thousands of miles of steep mountains and rugged underground soil. The soil is sparse and sparse, and is rarely suitable for farming. The climate is unusual, hazy or hot. We can boat from the southwest of Zhancheng for seven days and nights to Xinmen Haikou and enter the harbor. We can reach the king's residence in a palace and a magnificent residential building. The building is densely connected with betel nut pieces and the vines are very solid. The king is sleeping in the middle with a rattan mat and a bamboo mat. The gold-handled umbrella cover is made of wild wild leaves. There are many monks and nuns in the country. There are many kinds of clothing in China. There are nunneries, fasting, and folk customs. There are many wise husbands. It is not strange for wives to sleep privately with Chinese people and sleep together. Women like this are wearing white cloth, wearing long clothes, and women are like vertebra knots. When men are twenty, their vagina must be embedded with pearls and jade. If the rich and noble are Fan Jin Shengzhu, it is beautiful. Otherwise, if the poor and lowly people get married, the monks will welcome the son-in-law to the daughter-in-law. It was pasted on the man's forehead and said, \"It's unspeakable that the market has been poor for more than three days.\" The monks and other members of the party supported the betel-nut-colored boats to send them home, and a banquet was held and a funeral was held. Flying to eat, there are abandoned in the sea, saying that the birds are buried, and they use pagodas to teach fasting. The language is similar to the customs of Guangdong, pouring water, often conquering neighboring cities and using the sea. Next to the red crow, it is bright and clear like pomegranates. There are more than two hundred miles northwest of the country. There are towns and cities with water flowing to the south. There are 600 people living in the south. There are six hundred shops with all kinds of crops. There are coptis, fragrant, brown, lotus, and lotus.",
+      "source": {
+        "chapterIds": [
+          "yingya-c004"
+        ],
+        "chapterId": "yingya-c004",
+        "chapter": 4,
+        "chapterTitle": "Siam",
+        "zhHeading": "暹罗"
+      }
+    },
+    {
+      "id": "malacca",
+      "title": "Malacca",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Malacca",
+        "Melaka",
+        "Manlajia"
+      ],
+      "body": "The old name is Wuyu. There is this mountain on the sea. It is also southeast of the sea and northwest. It is a coast with mountains. The harvest is barren and the harvest is very small. Therefore, it has not been called a country. Siam has to pay 5,000 taels of gold every year. Otherwise, it will be conquered in the seventh year of Yongle. In the seventh year of Yongle, the eunuch Zheng He was ordered to give his generals a silver seal and a crown. The king was not in service. In the pavilion, there are about twenty traders who come to gather, to gather customs, to return to Islam, to observe fasting, and to receive precepts. The king wears a white robe with fine green flowers on his head, and wears leather shoes. He rides in a sedan. Folks, men wear handkerchiefs, and women put buns on their backs. Their bodies are slightly black and short blouses are tied. The customs of the waist are simple and simple, such as the Siamese couplet, sitting on the couch, fishing and harvesting wood as a boat, and sailing across the sea. Fishing, weddings and funerals. There is a turtle and dragon in the sea off Java. Its dragon is four feet tall and has four legs. Its body is covered with scales and its armor is exposed. It has long teeth and bites them. Black tigers from the mountains are worse than ordinary tigers. They have small fur and dark flowers. Wenhu has the ability to change into human form during the day. It goes to the market in the daytime. It is like a swarm of birds. It kills the corpses of the ancient city. The Chinese ships also come to the ground. There are four doors for drum towers and night patrols. There are heavy sheds with bells inside. There are warehouses to store goods. In May, China shipped ships. Coptis fragrant bird wood is used to fight magic. This incense is made from resin dropped to the ground. When it encounters fire, the Chinese people use it as a lamp and paint boats.",
+      "source": {
+        "chapterIds": [
+          "yingya-c005"
+        ],
+        "chapterId": "yingya-c005",
+        "chapter": 5,
+        "chapterTitle": "Malacca",
+        "zhHeading": "满刺加"
+      }
+    },
+    {
+      "id": "aru",
+      "title": "Aru",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Aru",
+        "Yalu"
+      ],
+      "body": "To the south is the mountain. To the north is the sea. To the west is Sumen.\n\nIt can be reached in four days and nights by water. There is Tamsui Port to the east. The wilderness is suitable for early rice.\n\nIts grains are small. Farming and fishing customs are simple. Weddings and funerals are in the same city as Java.\n\nIt is easy to use small cotton cloth. It is mud, rice, grain, cattle, sheep, chickens and ducks. There are many cheeses.\n\nPeople from many countries also produce flying tigers such as cats and dogs. Long-haired gray meat wings such as bats are not far away. There are gold and silver incense like coptis.",
+      "source": {
+        "chapterIds": [
+          "yingya-c006"
+        ],
+        "chapterId": "yingya-c006",
+        "chapter": 6,
+        "chapterTitle": "Aru",
+        "zhHeading": "哑鲁国 【 小国也】"
+      }
+    },
+    {
+      "id": "samudra-pasai",
+      "title": "Samudra-Pasai, Nakur, and Lide",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Samudra",
+        "Pasai",
+        "Sumatra",
+        "Nakur",
+        "Lide"
+      ],
+      "body": "The one who stabbed Sumen was the ancient Xuwendana country. It was connected to mountains to the south and the sea to the east. It was connected to mountains to the east and was connected to the mountains to the west. It was a small country connected to the sea to the west of Alu. The orphan Li Fa was an important meeting place in the Western Ocean. He was also proud of the country. He could go southwest and have a favorable wind for five days and nights. There was a village by the sea. He was a barbarian who could reach the capital by boat ten miles away. There was no city wall and a big stream entered the sea at dawn and dusk. The big waves at Xihaikou have often not drowned the old ones so far? The orphan country was invaded by the Flower Face King and was defeated in the battle. The son was weak and died. His wife was angry and threatened, saying, \"If you can recover, I will be the husband of the common state. The fisherman heard about it and led the army to defeat the Flower Face King. The country relied on An and the king's wife was virtuous, so he changed the fisherman's state affairs and listened to it.\" In the seventh year of Yongle, the king came to pay tribute. In the tenth year of Shangjia, he sent envoys to his country. Jiazi led his troops to kill the king. He was also a fisherman. His son, Su Qianli, led the people to run to the tent on the steep mountain. They invaded again and wanted to recover him. In the eleventh year of Yongle, the eunuch Zheng He captured him and sent him to the capital. The old prince was grateful for the tribute. The same is true for people living in Canada. The goods traded by ships are also abundant. The money used in the market is gold and tin money, which weighs five cents. The trade is mostly made of tin. The sulfur produced in the caves is not grown in the mountains.",
+      "source": {
+        "chapterIds": [
+          "yingya-c007"
+        ],
+        "chapterId": "yingya-c007",
+        "chapter": 7,
+        "chapterTitle": "Samudra-Pasai, Nakur, and Lide",
+        "zhHeading": "苏门荅刺　那孤儿 【 小国】 黎伐国 【 亦小】"
+      }
+    },
+    {
+      "id": "lide",
+      "title": "Lide (Lifa)",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Lide",
+        "Lifa",
+        "Li Fa"
+      ],
+      "body": "The small country is also connected to the mountains to the south, to the north to the sea, to the south to the south and to the southeast to the Orphan Country. There are 1 or 2,000 residents of the Orphan Country, but one person is recommended to be the king.",
+      "source": {
+        "chapterIds": [
+          "yingya-c008"
+        ],
+        "chapterId": "yingya-c008",
+        "chapter": 8,
+        "chapterTitle": "Lide (Lifa)",
+        "zhHeading": "黎伐"
+      }
+    },
+    {
+      "id": "lambri",
+      "title": "Lambri (Nanboli)",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Lambri",
+        "Nanboli",
+        "Aceh"
+      ],
+      "body": "From the international sea to the east, Li Feng, to the northwest from Hainan, there are mountains and mountains to the south. There are only a thousand or so homes with Hui people. The customs are simple, and the king's house is four feet high. The surrounding boards are also well-shielded. There are no walls under Mijie, and the cattle and sheep are pastured. The same city uses copper coins to produce cattle, sheep, chickens, ducks, millet, few vegetables, fruits, fish and shrimps. The fragrance is really wonderful. There are also white lotus and rhinoceros. In the northwest sea, there is a flat-top giant. The mountain can be reached in half a day, and Mao Mountain and the Sea are the Western Ocean. All Li ships use this mountain as a guide. There are trees in the shallow water at the foot of the mountain, some of which are corals. Some of them are two or three feet high. Their branches are whirling and lovely. The roots can be used as molten beads. There are twenty or thirty people living in the mountain. Each of them calls himself a king. When asked who he is, he says, \"Agu Huan\". I give him the king's name. He also asks. He is so frightened that he laughs. He is from the country of Wuli. It takes three days and nights to reach the country by boat from Sumen.",
+      "source": {
+        "chapterIds": [
+          "yingya-c009"
+        ],
+        "chapterId": "yingya-c009",
+        "chapter": 9,
+        "chapterTitle": "Lambri (Nanboli)",
+        "zhHeading": "南泥里"
+      }
+    },
+    {
+      "id": "ceylon",
+      "title": "Ceylon and the Naked Isle",
+      "band": "india",
+      "placeNames": [
+        "Ceylon",
+        "Sri Lanka",
+        "Xilan",
+        "Nicobar"
+      ],
+      "body": "There are green mountains in the sea. There are three or four tall people called Suo Duman. They ride the northeast wind from the southeast of Mao Shan for three days. Everyone is living in caves, regardless of gender. They are naked like wild beasts. There is no rice. They eat taro, banana, jackfruit, etc. or fish and agarwood. If you cover your body with a naked cloth, you will get sores. In the past, when the Buddha came to the sea, he took off his clothes and bathed in the Buddha's corpse stolen by the natives. Then he covered it with a saying. It is also said that Chimaowu is here. On the 7th and 8th day, we saw the Yingge Mountain in the West Sea. On the 3 nd, we arrived at the Fotang Mountain and began to be Ceylon. Guo Bo Zhou said that Fuluoli Binhai foothills are still traces of the faint footprints that can be two feet long. The clouds spread to the Buddha's feet. There is a spring that never dries up. People dip their faces and wipe their faces, saying that the Buddha is pure. This is the absurdity of folk customs. There is also a reclining Buddha couch in the temple, decorated with eight agarwoods. The precious and precious Buddha's tooth relics are all kept in the temple. The so-called Nirvana is the place where we have traveled fifty miles northwest to the king's residence. The people in Suoli are also still free from heavy elephants. Those who are killed will be punished by death or redeemed with a gold bull's head. Every day in the palace and the people's residence, cow dung will be spread on the ground to pay homage to the Buddha. In the prosperous country of Java, the people were naked and pressed down to their waists, and their beards and beards were shaved off, leaving their hair tied with a cloth. When their father died, they had to leave their hair unshaved, and the women's spine was tied up in a bun with a white cloth on their backs.",
+      "source": {
+        "chapterIds": [
+          "yingya-c010"
+        ],
+        "chapterId": "yingya-c010",
+        "chapter": 10,
+        "chapterTitle": "Ceylon and the Naked Isle",
+        "zhHeading": "锡兰　裸形"
+      }
+    },
+    {
+      "id": "quilon",
+      "title": "Quilon (Xiaogelan)",
+      "band": "india",
+      "placeNames": [
+        "Quilon",
+        "Kollam",
+        "Xiaogelan"
+      ],
+      "body": "The mountains in the east are adjacent to the sea, and the rest of the country is close to the sea. The people of Suoli also worship pagodas, respect elephants and cows, and use them for weddings and funerals. It is the same as Ceylon.\n\nFrom the country of Ceylon, we travel to the northwest sea for six days and nights from beginning to end. There is a lot of cake for food, food, and money. It is a small country.",
+      "source": {
+        "chapterIds": [
+          "yingya-c011"
+        ],
+        "chapterId": "yingya-c011",
+        "chapter": 11,
+        "chapterTitle": "Quilon (Xiaogelan)",
+        "zhHeading": "小葛兰"
+      }
+    },
+    {
+      "id": "cochin",
+      "title": "Cochin (Kezhi)",
+      "band": "india",
+      "placeNames": [
+        "Cochin",
+        "Kochi",
+        "Kezhi"
+      ],
+      "body": "Connecting the mountains to the east, the rest of the country is on the coast. From the Gulan Kingdom, sailing to the northwest of the mountain for a day and night, even the king also locked up his head, wrapped it in yellow and white cloth, without any clothes, and tied it with silk silk. Those who are rich and wealthy are called Zhe Di, third-class Yama. Hui, the fourth class of Gequan, are called the fifth class of Papaya. Those who are fishermen and woodcutter are accustomed to wearing clothes. It is forbidden to wear long clothes when living by the seaside. Anyone who violates this is guilty of wearing a top coat. However, on the way to the south, I met people from Pizhe, and I fell down to wait for them to pass by. I then got up from the pagoda, respected the elephant and cow, and built a temple. There are those with turbid skin, such as Upasaka, who also marry their own wives. Their hair is not shaved or pruned, and they are moved and separated. There are ten or seven or eight strands hanging down from the back, and the body is coated with cow dung ash. They have no clothes, but their waists are girded with white rims. However, his wife only covered her shame with a small cloth and went with her husband to look for money and millet. The climate was as hot as summer, frost-free and snow-free. Spring rains meant that the house was being renovated and storage equipment was caught. In the summer, Lianyu City, Mo Chenghe, could not enter or leave the house until the beginning of July and the end of August. From sunny to winter, it rains again in March. As the saying goes, it rains for half the year and is sunny for half the year. It is the market that uses gold and silver money. Nine percent of the color is said to be one point and one cent in the South. Silver money is only like a snail, which is said to be four cents per fifteen pieces of gold.",
+      "source": {
+        "chapterIds": [
+          "yingya-c012"
+        ],
+        "chapterId": "yingya-c012",
+        "chapter": 12,
+        "chapterTitle": "Cochin (Kezhi)",
+        "zhHeading": "柯枝"
+      }
+    },
+    {
+      "id": "calicut",
+      "title": "Calicut (Guli)",
+      "band": "india",
+      "placeNames": [
+        "Calicut",
+        "Kozhikode",
+        "Guli"
+      ],
+      "body": "The Western Dog Kingdom is also bordered by the sea to the west and south to the Kochi Kingdom to the north. It is about 700 miles away from the sea of Hennuer Kingdom and the mountains to the far east. It is three days away from Kanbayi from the Kochi Sea to more than 100,000 miles away from China. In the fifth year of Yongle, the eunuch Zheng He and others were ordered to give the king an imperial edict to reward his generals. The king of the crown belt, the beautiful stone, Shangfu Tu, respects the elephant and the cow. There are five classes, one Hui, one south, one Zhe, one leather, one wood. The people of Wang Nanbi do not eat beef, and the general Hui people do not eat pork. The king and Hui Hui swore to fast to each other. The copper model Buddha elephant said Na'er. The Buddha Hall is surrounded by a copper tile base. After bathing the Buddha in a well, he took cow dung, mixed it with water, and spread it on the floor and walls. When the subjects got up in the morning, they also used cow dung to smear the ground and forged the ash bag of cow dung on their bodies. Every time they mixed the water with the ash, they wiped their foreheads and buttocks and worshiped the Buddha. It is also said that in the past, there was a sage who said that everyone should obey certain practices and teachings. The younger brother of Lord Li gave birth to a golden calf to tell the people of the country that this was the sacred Lord who respected him. People with experience ignored it and disobeyed the order of the cow. The gold man reaped the benefits and believed it without doubt. All state affairs are decided by the two generals, who return to the country. The people of the country also worship Islam. There are more than 20 or 30 days of worship in the mosque. On the solstice, fasting, praying, and giving thanks. At noon, men and women pray to God in the temple.",
+      "source": {
+        "chapterIds": [
+          "yingya-c013"
+        ],
+        "chapterId": "yingya-c013",
+        "chapter": 13,
+        "chapterTitle": "Calicut (Guli)",
+        "zhHeading": "古俚"
+      }
+    },
+    {
+      "id": "maldives",
+      "title": "Maldives (Liushan)",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Maldives",
+        "Liushan"
+      ],
+      "body": "Surrounded by the sea, there is only a small country like Zhouzhu. It is also said to be a small country with no city walls. It is inhabited on the mountain. To the west, there are stone gates like city gates in the sea. There are eight large places, all of which are named after the river. There are also boats. There are still more small rivers and no worries. The so-called three thousand people with weak water are all nests. They live in caves where they don’t know how to eat millet and eat fish, but they don’t have any clothes. They use leaves to cover their front and back. When the boat is traveling, if it slips into the wind, the water is weak and it drowns. Therefore, the boatmen are careful to be careful. All the countries have returned to their customs, and they follow the teachings. They are good at fishing, and they have coconut trees. The man’s skin is small. The black and white clothes are wrapped around the head, and the women's blouses are covered with big clothes, which cover their faces. Weddings and funerals are held in accordance with the sect. The climate is often hot, such as summer. There is little rice and no wheat. The money produced in the market is really fragrant. The coconut bark knots can be run through the board to form a boat, and the asphalt coating is as solid asThe fragrant scent of ambergris is as pure as silver. It is collected in Siam. It is made from kudzu, thorns, and mackerel. It can be sold to neighboring countries with money. It is called fish weaving. It is very delicate and woven.",
+      "source": {
+        "chapterIds": [
+          "yingya-c014"
+        ],
+        "chapterId": "yingya-c014",
+        "chapter": 14,
+        "chapterTitle": "Maldives (Liushan)",
+        "zhHeading": "溜山"
+      }
+    },
+    {
+      "id": "dhofar",
+      "title": "Dhofar (Zufar)",
+      "band": "arabia",
+      "placeNames": [
+        "Dhofar",
+        "Zufar",
+        "Zafar"
+      ],
+      "body": "The country is bordered by the sea, with mountains in the southeast, and mountains in the northwest. Since ancient times, it has been said that the northwest sea can be reached in ten days and nights without any city walls. People worship Islam, with a strong body, a simple language, and a simple language. Teams of camels and horses formed a line to promote the locks and locks. Folks wrapped their heads and long clothes and boots. On Sundays, the market was closed for half a day. All adults and children took baths and dressed in rich clothes. They applied rose dew or agarwood incense to their clothes and body. They also burned incense and then saluted. The incense spread all over the market. Weddings and funerals follow the Islamic climate, which is always like autumn without cold. The money used in the city weighs two cents, one inch in diameter and five cents. The copper coin weighs four cents in human form. It produces frankincense, resin, and blood knots, aloe vera, myrrh, benzoin, styrax oil, wood turtle seed, etc., to make Chinese silk porcelain. Its rice, wheat, beans, millet, wheat, cereals, melons and eggplants, cattle, sheep, horses, mules, cats, dogs, chickens and ducks, all have mountain camel, chicken, plaque neck, chicken body like a crane, three or four feet long, two fingers, hair like a camel, walking like a camel, so it is called camel, chicken, camel, one humped, some bimodal.",
+      "source": {
+        "chapterIds": [
+          "yingya-c015"
+        ],
+        "chapterId": "yingya-c015",
+        "chapter": 15,
+        "chapterTitle": "Dhofar (Zufar)",
+        "zhHeading": "祖法儿"
+      }
+    },
+    {
+      "id": "aden",
+      "title": "Aden",
+      "band": "arabia",
+      "placeNames": [
+        "Aden",
+        "Adan"
+      ],
+      "body": "The country is bordering the sea and is rich. It worships Islam. Azibi's language is tough and ruthless. He has a victorious army of seven or eight thousand horses and infantry. The neighbors are afraid of it. Since ancient times, it has been said that the country's boat can travel westward to the ninth year of Yongle. The envoy ordered his king to stay far away. That is to say, he ordered the people of his country to trade with each other. The king's crown, gold crown, yellow robe, waist, jewelery and gold belt. On Sundays, it is easy to wrap his head in white with gold and brocade. The top coat, white robe, rides in the car and marches like a train. The generals and other uniforms have different crowns and attire. Folk men will wrap their hair and robes. The clothes are made of brocade silk and fine cloth, and have boots and shoes. The women wear long clothes with beaded crowns and tassels on their ears. They have golden chests and jeweled rings on their hands and gold jeweled bracelets. They also have rings on their toes? It is said that the climate in Bulusi City is mild and easy to use. There are no leaps in the calendar. The size of the moon is determined by the moonrise. The moon is seen at night and it is January. There are also those who are good at walking. Determine a certain day in spring when the flowers and trees bloom and a certain day in autumn when the flowers and trees set. The sun and the moon are eclipsed? The winds, rains and tides of Sichuan are all observed. The houses are made of stone and the walls are covered with bricks or earth as high as four or five. The shops are full of cooked food and silk books, just like Chinese cereals. Most of them are made with molasses and are extremely delicious. Rice, wheat, melons, beans and vegetables are produced here. Vegetables and fruits include dates, pine nuts, loquats, dried grapes, walnut blossoms, red pomegranates, peaches and apricots.",
+      "source": {
+        "chapterIds": [
+          "yingya-c016"
+        ],
+        "chapterId": "yingya-c016",
+        "chapter": 16,
+        "chapterTitle": "Aden",
+        "zhHeading": "阿丹国"
+      }
+    },
+    {
+      "id": "bengal",
+      "title": "Bengal",
+      "band": "india",
+      "placeNames": [
+        "Bengal",
+        "Banggela",
+        "Sonargaon"
+      ],
+      "body": "The territory is vast, densely populated, and rich in wealth. From Sumen to the sea, we can see the mountains and the Cuilan Island, and travel 20 miles northwest to Zhejiang Port. We can then go by boat for more than 500 miles to Suona'er Port. We can go southwest for 35 miles to the state-owned city, the royal palace, and the big and small temples. They are all in the city and then back to the city. People's customs are thick. Men and women are black and white. Men are rare. All men have white cloth wrapped around their round necks and long clothes. They are still tied with colorful silk shoes. The king and generals wear crowns. They are very clean and tidy. The language list is Geslang's own family. There are also Brazilian speakers. The money used in the city is called Tuangjia, which is three coins in diameter and two centimeters in diameter. According to this power, the price of goods also has the sea said Kaoli, weddings and funerals are all Muslim, the climate is often hot like summer punishment, there are whipping sticks, official posts, official seals, moving troops, and food management troops, they are said to be thorns, yin and yang, medicine, divination, all kinds of craftsmanship, all wearing black and white flowered shirts, piercing the coral with glass. The amber is worn as a tassel, and the bracelets are made of glass. The bracelets are tied to the arms. They are good at singing and dancing, and they are good at drinking and feasting. There are those who are called root, Xiao, Lu, and Nainai. The outstanding people also blow the locks on the doors of the generals and rich houses every five drums. The drumming is the order of the family. At the end of the meal, each family must work hard to buy wine, food, and money. The remaining 100 plays are all in existence, and the tiger is tied up with iron ropes in the market and people use it to untie the rope, sit on the tiger naked in the courtyard, and beat the tiger in anger.",
+      "source": {
+        "chapterIds": [
+          "yingya-c017"
+        ],
+        "chapterId": "yingya-c017",
+        "chapter": 17,
+        "chapterTitle": "Bengal",
+        "zhHeading": "榜葛刺国"
+      }
+    },
+    {
+      "id": "hormuz",
+      "title": "Hormuz",
+      "band": "west_asia",
+      "placeNames": [
+        "Hormuz",
+        "Ormuz",
+        "Hulumosi"
+      ],
+      "body": "Hormuz stands on the shore by the mountains, a rich entrepôt where goods of many countries meet. The people are Muslim; they pray five times a day and keep the fast. Their customs are honest, their dress rich and solemn, their weddings and funerals ordered by Islamic rite. From China the voyage northwestward is reckoned at about twenty-five days. The city is populous and prosperous; merchants of many nations gather here, and the market is famous for gems, spices, horses, and fine stuffs. Stone houses and brick walls rise several stories; the streets throng with cooked foods and silk as in a Chinese city. Travelers praise the mild climate and the abundance of fruits — dates, grapes, pomegranates, peaches — and strange beasts brought as tribute, among them the giraffe and the lion.",
+      "source": {
+        "chapterIds": [
+          "yingya-c018"
+        ],
+        "chapterId": "yingya-c018",
+        "chapter": 18,
+        "chapterTitle": "Hormuz",
+        "zhHeading": "忽鲁谟厮国"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "zheng-he-chen-zuyi",
+      "title": "Zheng He Captures Chen Zuyi at Old Port",
+      "band": "maritime_asia",
+      "body": "Zheng He, the eunuch of the imperial court, commanded the sea, and there were even Shijin people. The people of Guangzhou also complained about the ancestral righteousness in peace, and led the soldiers to capture the ancestral righteousness. Fu was executed by the official, but he still returned to the old port?\n\nThe tides, customs and language of Ge Gangtong are just like those of Java. During the Hongwu Period, there was Chen Zuyi, and the Guangdong people also took their families to seek refuge here. The generals passed by Yongle Room.",
+      "source": {
+        "chapterIds": [
+          "yingya-c003"
+        ],
+        "chapterId": "yingya-c003",
+        "chapterTitle": "Zheng He Captures Chen Zuyi at Old Port"
+      },
+      "anchorPlace": "palembang"
+    },
+    {
+      "id": "zheng-he-raises-malacca",
+      "title": "Zheng He Raises Malacca to a Kingdom",
+      "band": "maritime_asia",
+      "body": "Siam has to pay 5,000 taels of gold every year. Otherwise, it will be conquered in the seventh year of Yongle. In the seventh year of Yongle, the eunuch Zheng He was ordered to give his generals a silver seal and a crown.\n\nThe customs of the waist are simple and simple, such as the Siamese couplet, sitting on the couch, fishing and harvesting wood as a boat, and sailing across the sea. Fishing, weddings and funerals. There is a turtle and dragon in the sea off Java.",
+      "source": {
+        "chapterIds": [
+          "yingya-c005"
+        ],
+        "chapterId": "yingya-c005",
+        "chapterTitle": "Zheng He Raises Malacca to a Kingdom"
+      },
+      "anchorPlace": "malacca"
+    },
+    {
+      "id": "fisherman-king-flower-face",
+      "title": "The Fisherman King and the Flower-Face War",
+      "band": "maritime_asia",
+      "body": "The son was weak and died. His wife was angry and threatened, saying, \"If you can recover, I will be the husband of the common state. The fisherman heard about it and led the army to defeat the Flower Face King.\n\nThere was no city wall and a big stream entered the sea at dawn and dusk. The big waves at Xihaikou have often not drowned the old ones so far? The orphan country was invaded by the Flower Face King and was defeated in the battle.\n\nHe was also a fisherman. His son, Su Qianli, led the people to run to the tent on the steep mountain. They invaded again and wanted to recover him.",
+      "source": {
+        "chapterIds": [
+          "yingya-c007"
+        ],
+        "chapterId": "yingya-c007",
+        "chapterTitle": "The Fisherman King and the Flower-Face War"
+      },
+      "anchorPlace": "samudra-pasai"
+    },
+    {
+      "id": "java-bamboo-spear-meeting",
+      "title": "The Bamboo-Spear Meeting of Java",
+      "band": "maritime_asia",
+      "body": "Therefore, people were at peace, customs, martial arts, and brave, and a bamboo spear meeting was established every year. It started in the tenth month of winter when Wang and his wife went out to see each other. The husband and wife each took a tower car.\n\nThey each wielded bamboo spears as strong as iron. The one who came on stage also brought his wife to the scene. The wife also wielded a three-foot stick to compete with each other.\n\nThe one who had been wounded and killed was Wang sent the winner to pay a gold note. The winner is a widower who is married. The man makes a woman and joins the family.",
+      "source": {
+        "chapterIds": [
+          "yingya-c002"
+        ],
+        "chapterId": "yingya-c002",
+        "chapterTitle": "The Bamboo-Spear Meeting of Java"
+      },
+      "anchorPlace": "java"
+    },
+    {
+      "id": "holy-water-of-tuban",
+      "title": "Holy Water at Tuban — Yuan Generals' Prayer",
+      "band": "maritime_asia",
+      "body": "The water in the small pond is sweet and refreshing. The name of the holy water is passed down. It is said that Yunyuan generals Shi Bigao and Zheng Zhapo were unable to land for many months.\n\nThe three armies were exhausted. The two generals were very thirsty for water. They prayed silently and rushed to Zhuoquan, so they rushed out to feed the army.",
+      "source": {
+        "chapterIds": [
+          "yingya-c002"
+        ],
+        "chapterId": "yingya-c002",
+        "chapterTitle": "Holy Water at Tuban — Yuan Generals' Prayer"
+      }
+    },
+    {
+      "id": "buddha-foot-ceylon",
+      "title": "Buddha's Footprint and Tooth Relic on Ceylon",
+      "band": "india",
+      "body": "This is the absurdity of folk customs. There is also a reclining Buddha couch in the temple, decorated with eight agarwoods. The precious and precious Buddha's tooth relics are all kept in the temple.\n\nOn the 7th and 8th day, we saw the Yingge Mountain in the West Sea. On the 3 nd, we arrived at the Fotang Mountain and began to be Ceylon. Guo Bo Zhou said that Fuluoli Binhai foothills are still traces of the faint footprints that can be two feet long.\n\nIn the past, when the Buddha came to the sea, he took off his clothes and bathed in the Buddha's corpse stolen by the natives. Then he covered it with a saying. It is also said that Chimaowu is here.",
+      "source": {
+        "chapterIds": [
+          "yingya-c010"
+        ],
+        "chapterId": "yingya-c010",
+        "chapterTitle": "Buddha's Footprint and Tooth Relic on Ceylon"
+      },
+      "anchorPlace": "ceylon"
+    },
+    {
+      "id": "calicut-cow-worship",
+      "title": "Cow Worship and the Gold Calf of Calicut",
+      "band": "india",
+      "body": "The Buddha Hall is surrounded by a copper tile base. After bathing the Buddha in a well, he took cow dung, mixed it with water, and spread it on the floor and walls. When the subjects got up in the morning, they also used cow dung to smear the ground and forged the ash bag of cow dung on their bodies.\n\nThe people of the country also worship Islam. There are more than 20 or 30 days of worship in the mosque. On the solstice, fasting, praying, and giving thanks.\n\nIn the fifth year of Yongle, the eunuch Zheng He and others were ordered to give the king an imperial edict to reward his generals. The king of the crown belt, the beautiful stone, Shangfu Tu, respects the elephant and the cow. There are five classes, one Hui, one south, one Zhe, one leather, one wood.",
+      "source": {
+        "chapterIds": [
+          "yingya-c013"
+        ],
+        "chapterId": "yingya-c013",
+        "chapterTitle": "Cow Worship and the Gold Calf of Calicut"
+      },
+      "anchorPlace": "calicut"
+    },
+    {
+      "id": "bengal-tiger-play",
+      "title": "The Tiger Play in the Markets of Bengal",
+      "band": "india",
+      "body": "The drumming is the order of the family. At the end of the meal, each family must work hard to buy wine, food, and money. The remaining 100 plays are all in existence, and the tiger is tied up with iron ropes in the market and people use it to untie the rope, sit on the tiger naked in the courtyard, and beat the tiger in anger.\n\nThe tiger fights and pounces on the servant tiger several times. Even if he throws his hand into the tiger's throat, the tiger will not be hurt. The play is still in the house.\n\nThe tiger must eat the tiger, work it with its meat, and the people will use money to cover the tiger play. In order to need money, there has been no money for the past twelve months. The red corn, wheat, sesame, beans, millet and rice produced by Runjue are harvested twice a year.",
+      "source": {
+        "chapterIds": [
+          "yingya-c017"
+        ],
+        "chapterId": "yingya-c017",
+        "chapterTitle": "The Tiger Play in the Markets of Bengal"
+      },
+      "anchorPlace": "bengal"
+    }
+  ],
+  "coverage": [
+    {
+      "chapterId": "yingya-c001",
+      "type": "place",
+      "entryId": "champa",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c002",
+      "type": "place",
+      "entryId": "java",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c003",
+      "type": "place",
+      "entryId": "palembang",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c004",
+      "type": "place",
+      "entryId": "siam",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c005",
+      "type": "place",
+      "entryId": "malacca",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c006",
+      "type": "place",
+      "entryId": "aru",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c007",
+      "type": "place",
+      "entryId": "samudra-pasai",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c008",
+      "type": "place",
+      "entryId": "lide",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c009",
+      "type": "place",
+      "entryId": "lambri",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c010",
+      "type": "place",
+      "entryId": "ceylon",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c011",
+      "type": "place",
+      "entryId": "quilon",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c012",
+      "type": "place",
+      "entryId": "cochin",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c013",
+      "type": "place",
+      "entryId": "calicut",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c014",
+      "type": "place",
+      "entryId": "maldives",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c015",
+      "type": "place",
+      "entryId": "dhofar",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "yingya-c016",
+      "type": "place",
+      "entryId": "aden",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "yingya-c017",
+      "type": "place",
+      "entryId": "bengal",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c018",
+      "type": "place",
+      "entryId": "hormuz",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "yingya-c003",
+      "type": "story",
+      "entryId": "zheng-he-chen-zuyi",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c005",
+      "type": "story",
+      "entryId": "zheng-he-raises-malacca",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c007",
+      "type": "story",
+      "entryId": "fisherman-king-flower-face",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c002",
+      "type": "story",
+      "entryId": "java-bamboo-spear-meeting",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c002",
+      "type": "story",
+      "entryId": "holy-water-of-tuban",
+      "band": "maritime_asia"
+    },
+    {
+      "chapterId": "yingya-c010",
+      "type": "story",
+      "entryId": "buddha-foot-ceylon",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c013",
+      "type": "story",
+      "entryId": "calicut-cow-worship",
+      "band": "india"
+    },
+    {
+      "chapterId": "yingya-c017",
+      "type": "story",
+      "entryId": "bengal-tiger-play",
+      "band": "india"
+    }
+  ]
+}

@@ -20,3 +20,4 @@ atlas/corpus/raw/
 __pycache__/
 .venv/
 .vercel
+fatequest-worldmap/heightmap/_dem_raw.tif

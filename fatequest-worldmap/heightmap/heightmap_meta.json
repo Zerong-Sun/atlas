@@ -1,0 +1,19 @@
+{
+  "type": "real-dem",
+  "source_tif": "_dem_raw.tif",
+  "width": 2048,
+  "height": 1024,
+  "bit_depth": 16,
+  "bbox": {
+    "west": -20.0,
+    "south": 0.0,
+    "east": 100.0,
+    "north": 66.0
+  },
+  "crs": "EPSG:4326",
+  "elevation": {
+    "grayscale_max": 65535,
+    "meters_max": 8000.0,
+    "formula_m": "meters = gray/65535 * 8000"
+  }
+}

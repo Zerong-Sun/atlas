@@ -7,7 +7,7 @@ Filename pattern: `{prompts_stem}--{batch-slug}.webp`
 Re-crop with:
 
 ```bash
-cd fatequest/scripts
+cd fatequest2/scripts
 .venv/bin/python crop_contact_sheet.py --all-sheets --prompts-file ART_PROMPTS_UI.md --embed-descriptions
 ```
 

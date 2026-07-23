@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "Fernão Mendes Pinto — Place & Story Lore",
+    "source": "Peregrinação EN excerpt (Cosmópolis / Menéres illustrated selection; MT from Portuguese)",
+    "language": "en",
+    "zhStatus": "pending",
+    "chapterCount": 6,
+    "placeCount": 5,
+    "storyCount": 8,
+    "missingChapterIds": []
+  },
+  "bands": [
+    {
+      "id": "europe",
+      "label": "Europe"
+    },
+    {
+      "id": "india",
+      "label": "India"
+    },
+    {
+      "id": "maritime_asia",
+      "label": "Maritime Asia"
+    },
+    {
+      "id": "china",
+      "label": "China"
+    }
+  ],
+  "places": [
+    {
+      "id": "portugal-india-embarkation",
+      "title": "From Portugal to India",
+      "band": "europe",
+      "placeNames": [
+        "From Portugal to India"
+      ],
+      "body": "established at the beginning of my early years and continued for the greatest part and best time of my life, I think that I can rightly complain about the adventure that seems to have taken particular interest and enterprise in pursuing. me and mistreat me, as if this were to be a matter of great name and great glory;because I see that, not content with placing myself in my country at the beginning of my youth, in such a state that I lived in it FE R Ã O M E � O ES P I \"' O Always in misery and poverty, and not without some upheavals and dangers in life, I also wanted to take myself to parts of India, where instead of the medicine I was going to get from them, with age, work and dangers increased.But on the other hand, when I see that from the midst of all these dangers and works God always wanted to rescue me and put me in safety, I think that I have no more reason to complain about all the past evils, as much as I have to give thanks for this one present good, because he wanted to preserve my life so that I could write this rude and crude writing that I leave as an inheritance to my children (because only for them is my intention to write it) so that they can see in it my works and dangers of lifewhich I spent in the course of twenty-one years, in which I was thirteen times captive and seventeen times sold, in the parts of India, Ethiopia, Happy Arabia, China, Tartary, M. Acaçar, Sumatra and many other provinces of that eastern archipelago at the edge of Asia, which the Chinese, Siamese, Guean and Lechian writers call in their geographies the eyelash of the world, as I hope to deal with very specifically and very broadly in the future.On the one hand, let men take reason not to be discouraged by the work of life and stop doing what they should,",
+      "source": {
+        "chapterIds": [
+          "pinto-c000"
+        ],
+        "chapterId": "pinto-c000",
+        "chapterTitle": "From Portugal to India"
+      }
+    },
+    {
+      "id": "china-coast-river",
+      "title": "A Pirate River on the China Coast",
+      "band": "china",
+      "placeNames": [
+        "A Pirate River on the China Coast"
+      ],
+      "body": "he fought with the corsair Coja Acém and what happened to him. We sailed up the river with the wind and tide that Our Lord then gave us, in less than an hour we arrived where the enemies were, who until this time had not yet sensed us;but as they were thieves and were afraid of the people of the land, due to the evils and robberies that they did there every day, they were so equipped and had such a good lookout that when they saw us they rang a bell very hastily, to the sound of which there was such a noise and revolt of people, both those on land and those on board, that there was no one to hear dE RÃ N O M E� D E S And firing all our artillery, Our Lord said that it was used so well that of the most hardworking people who were already on top of the hat at that time, most of them came down, torn to pieces, which was a good prediction of our desire. After this, our shooters, who numbered one hundred and sixty, set fire to the entire arquebus, according to the signal given to them, the decks of both junks were so empty of the crowd that had previously been seen in them, that none of the enemies dared to appear.Our two junks, then ramming the two enemies as they were, the fight broke out between everyone, so that I truly confess that I do not dare to detail what happened in it, even if I was present, because even at that time the morning was not very clear, and the T A I S P A � C A D A S D A C �I� A The revolt of the enemies and ours was so great, together with the thunder of drums, basins and bells, and with the shouts and shouts of one and the other, accompanied by many shells of artillery and arquebus, and in the earth the resounding of echoes through the hollows of the valleys and hills, that the flesh trembled with fear;and this fight lasting for about",
+      "source": {
+        "chapterIds": [
+          "pinto-c001"
+        ],
+        "chapterId": "pinto-c001",
+        "chapterTitle": "A Pirate River on the China Coast"
+      }
+    },
+    {
+      "id": "tintau-river",
+      "title": "The Tintau (Tinlau) River",
+      "band": "china",
+      "placeNames": [
+        "The Tintau"
+      ],
+      "body": "what you had on the trip After António de Faria had been in this river of Tinlau for twenty-four days, during which the injured all convalesced, he left for Liampó where he decided to spend the winter, and from there at the beginning of the summer he made the trip to the Ouãogeparu mines, as he had settled with the Ouiay Panjão that he took with him. And being as far forward as the tip of Micuy, which is at a height of twenty-six degrees, gave it a sharp contrast to the northwest, so, on the advice of the pilots, it hovered at three, so as not to lose the path it had taken;this Time took over the afternoon, with showers and seas so thick that the two rowing boats, as they could not suffer, made it almost dark on the way back from land, with the intention of entering the Xilendau river, which was a league and a half away.António de Faria, also fearing that some disaster would happen to him, moved away as quickly as he could, and marking himself with his wake, he followed them with only about five or six spans of sail, both to prevent them from slipping and because the impetus of the wind was so strong that it was not possible to stop it.And as the darkness of the night was very great, and the sky was bursting in bloom, he did not see the bass that was between the islet and the tip of the reef, and when he came over it he gave such a blow that the overkeel immediately broke in four places, with part of the keel's head beneath;and his constable then wanted to set fire to a hawk so that the other reeds could help them in that work, he did not want to consent, saying that since Our Lord was served by them ending up there, he did not want nor was it a reason that the others would also be lost there because of him, but that he asked and begged everyone to help him, to work in public with their hands and in secret to",
+      "source": {
+        "chapterIds": [
+          "pinto-c002"
+        ],
+        "chapterId": "pinto-c002",
+        "chapterTitle": "The Tintau (Tinlau) River"
+      }
+    },
+    {
+      "id": "liampo",
+      "title": "Liampó (Ningbo)",
+      "band": "china",
+      "placeNames": [
+        "Liampó"
+      ],
+      "body": "what you had on the trip After António de Faria had been in this river of Tinlau for twenty-four days, during which the injured all convalesced, he left for Liampó where he decided to spend the winter, and from there at the beginning of the summer he made the trip to the Ouãogeparu mines, as he had settled with the Ouiay Panjão that he took with him. And being as far forward as the tip of Micuy, which is at a height of twenty-six degrees, gave it a sharp contrast to the northwest, so, on the advice of the pilots, it hovered at three, so as not to lose the path it had taken;this After these words, everyone gave such a loud shout of \"Lord God, have mercy\", that there was no man who was not astonished with pain and sadness. And as the natural nature of all men is, in similar times, to work to preserve their lives, without remembering anything else, the desire that everyone had for salvation was so great that they did not seek more than the means they could have, so, forgetting all greed, they quickly tried to jettison the farm into the sea, and jumping down into the sea.hold, around a hundred men, both Portuguese, slaves and sailors, in less than an hour they were all thrown into the sea, so that they needed T A I S P A � C A D A S T E M M E � O E S They had done it to ten or twelve who were not aware of this;and when the day was very clear, Our Lord wanted us to see the junk of Mem Taborda and António Anriquez, which had been hovering all night in a dry tree, with large wooden rafts at the stern of the charachina, which his officers invented for him to be able to better support the hover, and as he saw us, he immediately came to demand us, and when he arrived at us, they threw us a lot of sticks tied to ropes, so that we could hold on to them, which we soonwe did, and in",
+      "source": {
+        "chapterIds": [
+          "pinto-c002"
+        ],
+        "chapterId": "pinto-c002",
+        "chapterTitle": "Liampó (Ningbo)"
+      }
+    },
+    {
+      "id": "nouday",
+      "title": "Nouday",
+      "band": "china",
+      "placeNames": [
+        "Nouday"
+      ],
+      "body": "Having made this resolution, it was immediately discussed how this business should be handled, and it was decided that the first thing would be to make peaceful inquiries with the mandarin, sending him to ask for those captives, and to promise him for their ransom whatever was reasonable, and that with his answer it would be determined what was to be done.And with this, a petition was immediately made according to the style in which people usually speak in the auditorium, and António de Faria sent it to the mandarin, by two of the Chinese who took over, those who seemed more respectful, and F E R Il Ã O - Let your mouth come before my feet, and after you have been heard, I will provide for you if you have justice. When António de Faria saw the mandarin's bad order, and the arrogance and disconcert of his words, he became somewhat sad and melancholic because he understood from that principle that work had to be done on freeing those captives, and discussing this matter particularly with some who were called for it, there were still some diversities of opinions, but at the end of them it came to the conclusion that he should still send him another message, in which he would more effectively ask him for the 4' his men, and that he would give him two thousand taels in silver and money for them, and unless he spoke very clearly and dissuaded him, that if he would not leave until he was not told to do so, because perhaps he was certified in this determination, fear would make him do what he had refused to do in other ways, all the more so since in the way of interest he could have surrendered.",
+      "source": {
+        "chapterIds": [
+          "pinto-c004"
+        ],
+        "chapterId": "pinto-c004",
+        "chapterTitle": "Nouday"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "prologue-embarkation",
+      "title": "Prologue — Captive Seventeen Times Sold",
+      "band": "europe",
+      "body": "When I sometimes look before my eyes at the many great troubles and misfortunes that have befallen me, I eat established at the beginning of my early years and continued for the greatest part and best time of my life, I think that I can rightly complain about the adventure that seems to have taken particular interest and enterprise in pursuing. me and mistreat me, as if this were to be a matter of great name and great glory;because I see that, not content with placing myself in my country at the beginning of my youth, in such a state that I lived in it FE R Ã O M E � O ES P I \"' O Always in misery and poverty, and not without some upheavals and dangers in life, I also wanted to take myself to parts of India, where instead of the medicine I was going to get from them, with age, work and dangers increased.But on the other hand, when I see that from the midst of all these dangers and works God always wanted to rescue me and put me in safety, I think that I have no more reason to complain about all the past evils, as much as I have to give thanks for this one present good, because he wanted to preserve my life so that I could write this rude and crude writing that I leave as an inheritance to my children (because only for them is my intention to write it) so that they can see in it my works and dangers of lifewhich I spent in the course of twenty-one years, in which I was thirteen times captive and seventeen times sold, in the parts of India, Ethiopia, Happy Arabia, China, Tartary, M.",
+      "source": {
+        "chapterIds": [
+          "pinto-c000"
+        ],
+        "chapterId": "pinto-c000",
+        "chapterTitle": "Prologue — Captive Seventeen Times Sold"
+      }
+    },
+    {
+      "id": "battle-coja-acem",
+      "title": "Battle with the Corsair Coja Acem",
+      "band": "china",
+      "body": "he fought with the corsair Coja Acém and what happened to him. We sailed up the river with the wind and tide that Our Lord then gave us, in less than an hour we arrived where the enemies were, who until this time had not yet sensed us;but as they were thieves and were afraid of the people of the land, due to the evils and robberies that they did there every day, they were so equipped and had such a good lookout that when they saw us they rang a bell very hastily, to the sound of which there was such a noise and revolt of people, both those on land and those on board, that there was no one to hear dE RÃ N O M E� D E S with them, seeing António de Faria, he immediately shouted, saying: - Go, my lords and brothers, to them, with the name of Christ, before their lorchas come to their aid!Santiago! And firing all our artillery, Our Lord said that it was used so well that of the most hardworking people who were already on top of the hat at that time, most of them came down, torn to pieces, which was a good prediction of our desire.",
+      "source": {
+        "chapterIds": [
+          "pinto-c001"
+        ],
+        "chapterId": "pinto-c001",
+        "chapterTitle": "Battle with the Corsair Coja Acem"
+      }
+    },
+    {
+      "id": "diogo-meireles-camel",
+      "title": "Diogo Meireles Fires the Camel Gun",
+      "band": "china",
+      "body": "The revolt of the enemies and ours was so great, together with the thunder of drums, basins and bells, and with the shouts and shouts of one and the other, accompanied by many shells of artillery and arquebus, and in the earth the resounding of echoes through the hollows of the valleys and hills, that the flesh trembled with fear;and this fight lasting for about a quarter of an hour, their lorchas and spears came to them from the ground with many reinforcements. Then, seeing what, a certain Diogo Meireles, who was coming in Ouiay Panjão's junk, and that his constable, none of the shots he fired hit, because he was so amazed and out of his mind that nothing hit, as he was about to fire a camel, half clouded, he pushed him so hard that he ran him down the hatch, saying: - Stay out of there, villain, you are good for nothing, because this shot at this time is for men like me, and not for those like you! And pointing the camel by his sights and square rule, which he reasonably knew, he set fire to the piece that was loaded with pillory and stone distaff, and taking The first boat that came in front, as the flagship of the four, completely separated from the stern to the bow by the gantry on the starboard side, as a result of which everything became shallow with the water, so that right there the boat sank to the bottom, without anyone being saved from it, and the ammunition was destroyed.",
+      "source": {
+        "chapterIds": [
+          "pinto-c001"
+        ],
+        "chapterId": "pinto-c001",
+        "chapterTitle": "Diogo Meireles Fires the Camel Gun"
+      }
+    },
+    {
+      "id": "storm-to-liampo",
+      "title": "Storm on the Way from Tintau to Liampó",
+      "band": "china",
+      "body": "And being as far forward as the tip of Micuy, which is at a height of twenty-six degrees, gave it a sharp contrast to the northwest, so, on the advice of the pilots, it hovered at three, so as not to lose the path it had taken;this Time took over the afternoon, with showers and seas so thick that the two rowing boats, as they could not suffer, made it almost dark on the way back from land, with the intention of entering the Xilendau river, which was a league and a half away.António de Faria, also fearing that some disaster would happen to him, moved away as quickly as he could, and marking himself with his wake, he followed them with only about five or six spans of sail, both to prevent them from slipping and because the impetus of the wind was so strong that it was not possible to stop it.And as the darkness of the night was very great, and the sky was bursting in bloom, he did not see the bass that was between the islet and the tip of the reef, and when he came over it he gave such a blow that the overkeel immediately broke in four places, with part of the keel's head beneath;and his constable then wanted to set fire to a hawk so that the other reeds could help them in that work, he did not want to consent, saying that since Our Lord was served by them ending up there, he did not want nor was it a reason that the others would also be lost there because of him, but that he asked and begged everyone to help him, to work in public with their hands and in secret to ask God for forgiveness from their T A I S H I � C A N O A S CHINA sins, and grace to amend their lives, because if they did so with all their heart, he told them that very soon they would find themselves safe and free from that work.And with that, rushing at the main mast, he made it cut near the stools of",
+      "source": {
+        "chapterIds": [
+          "pinto-c002"
+        ],
+        "chapterId": "pinto-c002",
+        "chapterTitle": "Storm on the Way from Tintau to Liampó"
+      },
+      "anchorPlace": "liampo"
+    },
+    {
+      "id": "after-the-storm",
+      "title": "After the Storm — Captives and Counsel",
+      "band": "china",
+      "body": "When that fierce storm calmed down completely, António de Faria immediately went to the other large junk that had taken Coja Acém, of which Captain Pêro da Silva de Sousa was then, and setting sail he set off with all his company, which were three junks and a lorcha or lantea, as the Chinese call it, and went to emerge in Nouday Cove, to find out news about the thirteen captives.At the end of the night, he sent two balloons equipped to spy on the port and sound the river, and see the source and the location of the land, and which ships were inside, and other things necessary for his F E RU Ã O M EU O E S HE HAS then to bother them more, but hiding with them for a large space, he asked a Christian Chinese woman who was carrying the pilot there, to wrap them up and protect them from the fear they had, so that they could answer what they asked, which she did with so many caresses that in less than an hour they told the Chinese that if the captain would let them go freely on that vessel of theirs, just as they had taken it, that they would confess the whole truth of what they saw through their eyes, and what they heard.say, and António de Faria promised to do so, and stated it in many words.",
+      "source": {
+        "chapterIds": [
+          "pinto-c003"
+        ],
+        "chapterId": "pinto-c003",
+        "chapterTitle": "After the Storm — Captives and Counsel"
+      }
+    },
+    {
+      "id": "letter-to-mandarin",
+      "title": "Letter to the Mandarin of Nouday",
+      "band": "china",
+      "body": "Having made this resolution, it was immediately discussed how this business should be handled, and it was decided that the first thing would be to make peaceful inquiries with the mandarin, sending him to ask for those captives, and to promise him for their ransom whatever was reasonable, and that with his answer it would be determined what was to be done.And with this, a petition was immediately made according to the style in which people usually speak in the auditorium, and António de Faria sent it to the mandarin, by two of the Chinese who took over, those who seemed more respectful, and F E R Il Ã O with it he sent him an odiá worth two hundred Cruzados, it seemed to him that among people of excellence that was enough to make him not want more, which was quite the opposite, as we will soon see. After the Chinese who carried the petition and the gift left, they returned the next day with the answer written on the back of the petition, which was an order that said: - Let your mouth come before my feet, and after you have been heard, I will provide for you if you have justice.",
+      "source": {
+        "chapterIds": [
+          "pinto-c004"
+        ],
+        "chapterId": "pinto-c004",
+        "chapterTitle": "Letter to the Mandarin of Nouday"
+      },
+      "anchorPlace": "nouday"
+    },
+    {
+      "id": "raid-on-nouday",
+      "title": "Raid up the River against Nouday",
+      "band": "china",
+      "body": "The next day, almost a clear morning, António de Faria sailed up the river with three junks and the lorcha, and with the four barges he had taken, and came up in six and a half fathoms close to the city walls;and calming the sails without salute or artillery boom, he set a bow flag as per the custom of the Chinese, so that with the signs of this peace there would be no greetings left to be made, even though he knew that, as this on the mandarin's part was ruined, nothing like that would be of any benefit to them.From here he returned to the F E R�Á O M E� D ES give another message with the promise of more interest in the captives, and compliments of many friendships, at which the dog was so indignant that he ordered the poor chim to be shaved and shown to the entire armada from the wall, with which António de Faria just lost the hope that some still gave him.And with this increasing anger, the soldiers told him that since he had decided to go ashore, he should not wait any longer, because it would give the enemies time to gather many people.He, considering this advice to be good, immediately embarked with all those who were determined to carry out this feat, who were already present for it, and left a message in the reeds that they would never stop shooting at the enemies and at the city, where they saw larger gatherings of people;However, this would be as long as he was not locked in with them. And disembarking below the spring, about a stone's throw away, without any opposition, he marched along the beach towards the city, where at this time there were already many people on top of the walls with a large number of silk flags, flying with many tangers and loud shouts, like people who relied more on their words.",
+      "source": {
+        "chapterIds": [
+          "pinto-c005"
+        ],
+        "chapterId": "pinto-c005",
+        "chapterTitle": "Raid up the River against Nouday"
+      },
+      "anchorPlace": "nouday"
+    },
+    {
+      "id": "corsair-prize",
+      "title": "The Corsair's Prize of Cruzados",
+      "band": "china",
+      "body": "The next day, almost a clear morning, António de Faria sailed up the river with three junks and the lorcha, and with the four barges he had taken, and came up in six and a half fathoms close to the city walls;and calming the sails without salute or artillery boom, he set a bow flag as per the custom of the Chinese, so that with the signs of this peace there would be no greetings left to be made, even though he knew that, as this on the mandarin's part was ruined, nothing like that would be of any benefit to them.From here he returned to the F E R�Á O the filling of his farms and infinite supplies, with which António de Faria ordered the reeds to be loaded, fearing that because of what he had done there, they would not want to sell it in any port wherever he went.And with this he decided, with the advice and advice of everyone, to go and winter for the remaining three months before he could make his journey, to a desert island that was fifteen leagues off the sea from Liampó, which was called Pulo Hinhor, with good water and good gold, as it seemed to him that going to Liampó could harm the trade of the Portuguese who wintered there quietly with their farms, for which determination and good purpose everyone praised him greatly.",
+      "source": {
+        "chapterIds": [
+          "pinto-c005"
+        ],
+        "chapterId": "pinto-c005",
+        "chapterTitle": "The Corsair's Prize of Cruzados"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "chapterId": "pinto-c000",
+      "type": "story",
+      "entryId": "prologue-embarkation",
+      "band": "europe"
+    },
+    {
+      "chapterId": "pinto-c000",
+      "type": "place",
+      "entryId": "portugal-india-embarkation",
+      "band": "europe"
+    },
+    {
+      "chapterId": "pinto-c001",
+      "type": "story",
+      "entryId": "battle-coja-acem",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c001",
+      "type": "place",
+      "entryId": "china-coast-river",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c001",
+      "type": "story",
+      "entryId": "diogo-meireles-camel",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c002",
+      "type": "place",
+      "entryId": "tintau-river",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c002",
+      "type": "place",
+      "entryId": "liampo",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c002",
+      "type": "story",
+      "entryId": "storm-to-liampo",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c003",
+      "type": "story",
+      "entryId": "after-the-storm",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c004",
+      "type": "place",
+      "entryId": "nouday",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c004",
+      "type": "story",
+      "entryId": "letter-to-mandarin",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c005",
+      "type": "story",
+      "entryId": "raid-on-nouday",
+      "band": "china"
+    },
+    {
+      "chapterId": "pinto-c005",
+      "type": "story",
+      "entryId": "corsair-prize",
+      "band": "china"
+    }
+  ]
+}

@@ -1,0 +1,717 @@
+{
+ "type": "FeatureCollection",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "riv-0",
+   "properties": {
+    "name_medieval": "Nilus",
+    "name_modern": "Nile",
+    "note": "River of Egypt, one of the four rivers of Paradise"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      31.5,
+      15.6
+     ],
+     [
+      32.5,
+      19.6
+     ],
+     [
+      31.2,
+      24.1
+     ],
+     [
+      31.2,
+      27.2
+     ],
+     [
+      31.1,
+      30.0
+     ],
+     [
+      31.0,
+      31.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-1",
+   "properties": {
+    "name_medieval": "Danubius",
+    "name_modern": "Danube",
+    "note": "Great river dividing the northern nations"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      8.6,
+      48.0
+     ],
+     [
+      12.1,
+      48.8
+     ],
+     [
+      16.4,
+      48.1
+     ],
+     [
+      19.0,
+      47.5
+     ],
+     [
+      21.6,
+      46.2
+     ],
+     [
+      25.4,
+      45.4
+     ],
+     [
+      28.7,
+      45.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-2",
+   "properties": {
+    "name_medieval": "Rhenus",
+    "name_modern": "Rhine",
+    "note": "Border of Gaul and Germany"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      9.5,
+      46.5
+     ],
+     [
+      7.6,
+      47.6
+     ],
+     [
+      8.2,
+      49.0
+     ],
+     [
+      6.96,
+      50.9
+     ],
+     [
+      6.1,
+      51.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-3",
+   "properties": {
+    "name_medieval": "Rhodanus",
+    "name_modern": "Rhône",
+    "note": "River of southern Gaul"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      8.1,
+      46.3
+     ],
+     [
+      5.9,
+      45.8
+     ],
+     [
+      4.8,
+      45.0
+     ],
+     [
+      4.7,
+      43.7
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-4",
+   "properties": {
+    "name_medieval": "Sequana",
+    "name_modern": "Seine",
+    "note": "River of Paris"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      4.7,
+      47.7
+     ],
+     [
+      3.0,
+      48.5
+     ],
+     [
+      2.35,
+      48.85
+     ],
+     [
+      0.7,
+      49.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-5",
+   "properties": {
+    "name_medieval": "Liger",
+    "name_modern": "Loire",
+    "note": "Long river of France"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      4.2,
+      44.9
+     ],
+     [
+      2.6,
+      47.0
+     ],
+     [
+      -0.5,
+      47.4
+     ],
+     [
+      -2.1,
+      47.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-6",
+   "properties": {
+    "name_medieval": "Garumna",
+    "name_modern": "Garonne",
+    "note": "River of Aquitaine"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      0.6,
+      42.8
+     ],
+     [
+      1.0,
+      43.9
+     ],
+     [
+      -0.6,
+      45.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-7",
+   "properties": {
+    "name_medieval": "Tiberis",
+    "name_modern": "Tiber",
+    "note": "River of Rome"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      12.0,
+      43.7
+     ],
+     [
+      12.5,
+      42.4
+     ],
+     [
+      12.5,
+      41.9
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-8",
+   "properties": {
+    "name_medieval": "Padus",
+    "name_modern": "Po",
+    "note": "Great river of Lombardy"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      7.7,
+      44.9
+     ],
+     [
+      9.7,
+      45.1
+     ],
+     [
+      11.6,
+      45.0
+     ],
+     [
+      12.3,
+      44.9
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-9",
+   "properties": {
+    "name_medieval": "Tamesis",
+    "name_modern": "Thames",
+    "note": "River of London"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -1.7,
+      51.7
+     ],
+     [
+      -0.13,
+      51.5
+     ],
+     [
+      0.7,
+      51.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-10",
+   "properties": {
+    "name_medieval": "Albis",
+    "name_modern": "Elbe",
+    "note": "River of the Saxons"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      15.5,
+      50.8
+     ],
+     [
+      13.8,
+      51.5
+     ],
+     [
+      11.6,
+      52.4
+     ],
+     [
+      9.99,
+      53.55
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-11",
+   "properties": {
+    "name_medieval": "Tagus",
+    "name_modern": "Tagus",
+    "note": "Golden river of Iberia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -1.7,
+      40.4
+     ],
+     [
+      -5.0,
+      39.9
+     ],
+     [
+      -8.0,
+      39.5
+     ],
+     [
+      -9.14,
+      38.7
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-12",
+   "properties": {
+    "name_medieval": "Iberus",
+    "name_modern": "Ebro",
+    "note": "River that named Iberia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -3.8,
+      42.9
+     ],
+     [
+      -0.9,
+      41.6
+     ],
+     [
+      0.9,
+      40.7
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-13",
+   "properties": {
+    "name_medieval": "Baetis",
+    "name_modern": "Guadalquivir",
+    "note": "River of Andalusia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -3.0,
+      38.0
+     ],
+     [
+      -5.0,
+      37.5
+     ],
+     [
+      -6.3,
+      36.9
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-14",
+   "properties": {
+    "name_medieval": "Tanais",
+    "name_modern": "Don",
+    "note": "Ancient boundary of Europe and Asia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      39.7,
+      52.0
+     ],
+     [
+      41.0,
+      49.5
+     ],
+     [
+      40.5,
+      47.5
+     ],
+     [
+      39.4,
+      47.1
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-15",
+   "properties": {
+    "name_medieval": "Borysthenes",
+    "name_modern": "Dnieper",
+    "note": "Great river of the Rus'"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      31.0,
+      54.8
+     ],
+     [
+      30.5,
+      50.4
+     ],
+     [
+      33.5,
+      48.5
+     ],
+     [
+      32.4,
+      46.6
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-16",
+   "properties": {
+    "name_medieval": "Rha",
+    "name_modern": "Volga",
+    "note": "Greatest river, flowing to the Caspian"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      35.0,
+      57.0
+     ],
+     [
+      45.0,
+      52.0
+     ],
+     [
+      47.0,
+      48.5
+     ],
+     [
+      48.0,
+      46.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-17",
+   "properties": {
+    "name_medieval": "Tigris",
+    "name_modern": "Tigris",
+    "note": "River of Mesopotamia"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      41.0,
+      37.5
+     ],
+     [
+      43.1,
+      36.3
+     ],
+     [
+      44.4,
+      33.3
+     ],
+     [
+      47.4,
+      31.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-18",
+   "properties": {
+    "name_medieval": "Euphrates",
+    "name_modern": "Euphrates",
+    "note": "Great river of the East, river of Paradise"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      38.5,
+      39.0
+     ],
+     [
+      38.8,
+      36.8
+     ],
+     [
+      40.0,
+      35.0
+     ],
+     [
+      44.6,
+      32.5
+     ],
+     [
+      47.4,
+      31.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-19",
+   "properties": {
+    "name_medieval": "Iordanes",
+    "name_modern": "Jordan",
+    "note": "River of baptism"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      35.6,
+      33.2
+     ],
+     [
+      35.57,
+      32.7
+     ],
+     [
+      35.5,
+      31.8
+     ],
+     [
+      35.45,
+      31.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-20",
+   "properties": {
+    "name_medieval": "Indus",
+    "name_modern": "Indus",
+    "note": "Eastern river of India"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.0,
+      34.0
+     ],
+     [
+      71.5,
+      31.5
+     ],
+     [
+      70.5,
+      28.0
+     ],
+     [
+      68.0,
+      25.5
+     ],
+     [
+      67.3,
+      24.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-21",
+   "properties": {
+    "name_medieval": "Ganges",
+    "name_modern": "Ganges",
+    "note": "Sacred river of the Indies, river of Paradise"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      78.0,
+      30.0
+     ],
+     [
+      80.5,
+      27.0
+     ],
+     [
+      83.0,
+      25.5
+     ],
+     [
+      87.0,
+      25.0
+     ],
+     [
+      88.5,
+      23.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "riv-22",
+   "properties": {
+    "name_medieval": "Oxus",
+    "name_modern": "Amu Darya",
+    "note": "River of Transoxiana"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      71.0,
+      37.5
+     ],
+     [
+      66.0,
+      37.5
+     ],
+     [
+      63.5,
+      40.0
+     ],
+     [
+      61.0,
+      43.0
+     ]
+    ]
+   }
+  }
+ ]
+}

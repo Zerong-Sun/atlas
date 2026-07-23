@@ -1,0 +1,963 @@
+{
+  "meta": {
+    "title": "Ibn Jubayr Travels — Place & Story Lore",
+    "source": "R. J. C. Broadhurst (1952 / Bloomsbury 2020)",
+    "language": "en",
+    "zhStatus": "pending",
+    "chapterCount": 27,
+    "placeCount": 21,
+    "storyCount": 15,
+    "missingChapterIds": []
+  },
+  "bands": [
+    {
+      "id": "europe",
+      "label": "Europe"
+    },
+    {
+      "id": "north_africa",
+      "label": "North Africa"
+    },
+    {
+      "id": "egypt",
+      "label": "Egypt & Nile"
+    },
+    {
+      "id": "arabia",
+      "label": "Arabia & Hejaz"
+    },
+    {
+      "id": "levant",
+      "label": "Levant"
+    },
+    {
+      "id": "west_asia",
+      "label": "West Asia"
+    }
+  ],
+  "places": [
+    {
+      "id": "granada",
+      "title": "Granada",
+      "band": "europe",
+      "placeNames": [
+        "Granada"
+      ],
+      "body": "Ahmad ibn hassan and Muhammad ibn Jubayr left Granada – may God preserve it – on their pilgrimage to the blessed Hejaz – may God give easement and help and reveal His beneficent works – at the first hour of Thursday the 8th of Shawwal 578 (A.H.), which fell, according to the foreigners on the 3rd of February (1183).\n\nWe passed through Jayyan (Jaen) that we might despatch some business, and left it at the first hour of Monday the 1 th of the month of Shawwal, being the 1 th of February. Our first stage from there was to the fortress of al-Qabdhaq (Alcaudete). Thence we moved to the fortress of Qabrah (Cabra), to the city of Istijah (Ecija), to the fortress of Ushunah (Osuna), to Shallabar (Jeliver), to the fortress of Arkush (Arcos), to the burgh known as the Burgh of Qashmah (Casma) which is a burgh belonging to Madinat Ibn al-Salim (Medina Sidonia), and then to the island of Tarif (Tarifa) which we reached on Monday the 2 th of the month (of Shawwal). At midday on Tuesday the (twenty) second (of February) God granted us an easy crossing of the sea to Qasr Masmudah (Alcazar). Praise be to God.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m000"
+        ],
+        "chapterId": "jubayr-m000",
+        "chapterTitle": "Granada"
+      }
+    },
+    {
+      "id": "alexandria",
+      "title": "Alexandria",
+      "band": "egypt",
+      "placeNames": [
+        "Alexandria"
+      ],
+      "body": "The first day of the month was a Sunday and the day after our arrival in Alexandria. The day of our landing, one of the first things we saw was the coming on board of the agents of the Sultan to record all that had been brought in the ship. All the Muslims in it were brought forward one by one, and their names and descriptions, together with the names of their countries, recorded. Each was questioned as to what merchandise or money he had, that he might pay zakat, without any enquiry as to what portion of it had been in their possession for a complete year and what had not. Most of them were on their way to discharge a religious duty and had nothing but the (bare) provisions for the journey. But they were compelled to pay the zakat without being questioned as to what had been possessed by them for the complete year and what had not. Ahmad ibn Hassan of our number was called down to be questioned as to the news of the west and as to the ship’s cargo. Under watch he was in turn conducted first to the Sultan, then to the Qadi, then to the officials of the Customs, and then to a group of the Sultan’s suite, and after being questioned concerning everything, and his statements recorded, he was released. The Muslims were then ordered to take their belongings, and what remained of their provisions, to the shore, where there were attendants responsible for them and for carrying to the Customs all that they had brought ashore. There they were called one by one, and the possessions of each were produced. The Customs was packed to choking. All their goods, great and small, were searched and confusedly thrown together, while hands were thrust into their waistbands in search of what might be within. The owners were then put to oath whether they had aught else not discovered. During all this, because of the confusion of hands and the excessive throng, many possessions disappeared. After this scene of abasement and shame, for which we pray God to recompense us amply, they (the pilgrims) were allowed to go.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m001"
+        ],
+        "chapterId": "jubayr-m001",
+        "chapterTitle": "Alexandria"
+      }
+    },
+    {
+      "id": "cairo-misr",
+      "title": "Cairo and Misr",
+      "band": "egypt",
+      "placeNames": [
+        "Cairo and Misr"
+      ],
+      "body": "A note on some of the features and antiquities of Alexandria First there is the fine situation of the city, and the spaciousness of its buildings. We have never seen a town with broader streets, or higher structures, or one more ancient and beautiful. Its markets also are magnificent. A remarkable thing about the construction of the city is that the buildings below the ground are like those above it and are even finer and stronger, because the waters of the Nile wind underground beneath the houses and alleyways. The wells are connected, and flow into each other. We observed many marble columns and slabs of height, amplitude, and splendour such as cannot be imagined. You will find in some of its avenues columns that climb up to and choke the skies, and whose purpose and the reason for whose erection none can tell. It was related to us that in ancient times they supported a building reserved for philosophers and the chief men of the day. God knows best, but they seem to be for the purpose of astronomical observations. One of the greatest wonders that we saw in this city was the lighthouse which Great and Glorious God had erected by the hands of those who were forced to such labour as ‘a sign to those who take warning from examining the fate of others’ (Koran XV, 75) and as a guide to voyagers, for without it they could not find the true course to Alexandria. It can be seen for more than seventy miles, and is of great antiquity. It is most strongly built in all directions and competes with the skies in height. Description of it falls short, the eyes fail to comprehend it, and words are inadequate, so vast is the spectacle. Another of the remarkable features of this city is that people are as active in their affairs at night as they are by day. It has more mosques than any other city if Islam, so much so that men’s estimates of their number vary. Some count more, some less, the former reckoning up to twelve thousand, the latter a smaller figure without being precise, although some say eight thousand.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m001"
+        ],
+        "chapterId": "jubayr-m001",
+        "chapterTitle": "Cairo and Misr"
+      }
+    },
+    {
+      "id": "upper-egypt-qus",
+      "title": "Upper Egypt to Qus",
+      "band": "egypt",
+      "placeNames": [
+        "Upper Egypt to Qus"
+      ],
+      "body": "The new moon rose on the night of Tuesday the 2 th of April while we were in Cairo. May God prosper us in our aims. On the morning of Sunday the 6th of Muharram we left Misr and ascended the Nile towards upper Egypt, making for Qus. May God, by His favour, grant us His habitual succour and generous relief. The day on which, with the help of Great and Glorious God, we sailed, fell on the first day of May. Villages and large cities followed continuously along the banks of the Nile, as we shall presently relate. One of these villages is Askun, which lies on the eastern bank of the Nile and to the left of him who ascends it. It is said that here was born Moses the Interlocutor – the blessings of God on our Prophet and on him – and here, as it is said, his mother cast him upon the waters of the Nile. On the day of our sailing, and that following, we observed, to the west of the Nile and on our right, the ancient city of Joseph the Truthful – God bless and preserve him – where is the prison in which he was confined (Gen. xxxix. 20), which is now being demolished and its stones removed to the citadel being built at Cairo; a strong and impregnable fortress. In this city are the store-houses in which Joseph – may God bless and preserve him – stored the food (Gen. xli’. 35). They are hollow, it is said. From there we moved to a place called Munyat ibn al-Khasib, a large town on the bank of the Nile, to the right of him who ascends it, with markets, baths, and all the conveniences of a town. We passed it on the night of Sunday the 1 th of Muharram, the eighth day after our sailing from Cairo, for the wind had fallen and we had been fain to stop on our way. Now were we to describe every place we happened upon on the banks of the Nile, right and left; our book would be cramped by it. We therefore intend to include only the larger and more famous places.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m002"
+        ],
+        "chapterId": "jubayr-m002",
+        "chapterTitle": "Upper Egypt to Qus"
+      }
+    },
+    {
+      "id": "aydhab",
+      "title": "Aydhab and the Red Sea Crossing",
+      "band": "egypt",
+      "placeNames": [
+        "Aydhab and the Red Sea Crossing"
+      ],
+      "body": "The new moon of this month rose on the night of Friday, the 2 th of the month of June, when we were at the end of al-Wadah and about three stages from ‘Aydhab; and on the morning of Friday we halted at the waters of ‘Ushara’, two stages from ‘Aydhab. In this place are many ‘ushar plants (Asclepias gigantea), which are like the utrujj (Citrus cedra), but have no spines. The water of this place is not especially sweet; it is in an uncased well, and we found that the sand had fallen into it and covered the water. The camel-masters sought to dig it that they might bring forth water, but failed, so that the caravan remained without it. We marched that night, the night of Saturday the 2nd of the month, and after sunrise we encamped at the waters of al-Khubayb, within sight of ‘Aydhab. Here both the caravans and the people of the country take water, which suffices for them all, for the well is large, like a huge cistern. On the evening of Saturday, we entered ‘Aydhab, a city on the shores of the Jiddah sea. It has no walls and most of its houses are booths of reeds. It has now, however, some houses, newly-built, of plaster. It is one of the most frequented ports of the world, because of the ships of India and the Yemen that sail to and from it, as well as the pilgrim ships that come and go. It is in the desert, with no vegetation and nothing to eat save what is brought to it. Yet its people, by reason of the pilgrims, enjoy many benefits, especially at the time of their passing through, since for each load of victuals that the pilgrims bring, they receive a fixed food tax, light in comparison with the former customs duties which, as we said, have been raised by Saladin. A further advantage they gain from the pilgrims is in the hiring of their jilab: ships which bring them much profit in conveying the pilgrims to Jiddah and returning them when dispersing after the discharge of their pious duty. There are no people of easy circumstances in ‘Aydhab but have a jilabah or two which bring them an ample livelihood.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m004"
+        ],
+        "chapterId": "jubayr-m004",
+        "chapterTitle": "Aydhab and the Red Sea Crossing"
+      }
+    },
+    {
+      "id": "jiddah",
+      "title": "Jiddah",
+      "band": "arabia",
+      "placeNames": [
+        "Jiddah"
+      ],
+      "body": "The new moon of this month rose on the night of Saturday, while we yet were at the aforementioned island, but its crescent was not revealed to our eyes because of the storm. The following night it was seen large and high in the sky, so we confirmed its rising on the night of Saturday 2 rd of July.41 At eventide on Sunday the second we anchored at a harbourage called Ubhur, a day’s distance from Jiddah. The position of this harbour is most uncommon, since a channel of the sea penetrates the land, which encompasses it on both sides, and ships can find therein a safe and tranquil anchorage. At dawn on Monday, we sailed from this place, by the favour of God Most High, under a light breeze – God is the disposer of all things. There is no Lord but He. When night fell we anchored near Jiddah, which was within sight. The wind raged on the morning of the Tuesday that followed, and stopped our. entering the port. The entry into it is difficult to achieve because of the many reefs and the windings. We observed the art of these captains and the mariners in the handling of their ships through the reefs. It was truly marvellous. They would enter the narrow channels and manage their way through them as a cavalier manages a horse that is light on the bridle and tractable. They came through in a wonderful manner that cannot be described. At midday of Tuesday the 4th of Rabi‘ al-Akhir, being the 2 th of July, we arrived at Jiddah, praising Great and Glorious God and thanking Him for our safety and our deliverance from the tempest we had faced those eight days of our voyage on the sea. From their divers perils God in His goodness and favour had preserved us. There had been the sudden crises of the sea, the perversity of the wind, the many reefs encountered, and the emergencies that arose from the imperfections of the sailing gear which time and again became entangled and broke when sails were raised or lowered or an anchor raised.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m005"
+        ],
+        "chapterId": "jubayr-m005",
+        "chapterTitle": "Jiddah"
+      }
+    },
+    {
+      "id": "mecca",
+      "title": "Mecca",
+      "band": "arabia",
+      "placeNames": [
+        "Mecca"
+      ],
+      "body": "The new moon rose on the night of Monday the 2 nd of August, when we had been in Mecca – may God Most High exalt it – eighteen days. The new moon of this month was the most auspicious our eyes had seen in all that had passed of our life. It rose after we had already entered the seat of the venerable enclosure, the sacred Haram of God, the dome in which is the maqam of Abraham, the place from whence the Prophet’s mission (was sent out), and the alighting place of the faithful spirit Gabriel with inspiration and revelation. May God with His power and strength inspire us to thanks for His favour and make us sensible of that amount of privilege He has made our portion, finally accepting us (into Paradise) and rewarding us with the accustomed generosity of His beneficent works, and giving us of His gracious help and support. There is no God but He. A description of the Sacred Mosque and the Ancient House The whole circuit of the upper half of the House is plated with silver, thickly gilt, which the beholder would imagine, from its thickness, to be a sheet of gold. It encompasses the four sides and covers the upper half of the walls. The ceiling of the House is covered by a veil of coloured silk. The outside of the Ka‘bah, on all its four sides, is clothed in coverings of green silk with cotton warps; and on their upper parts is a band of red silk on which is written the verse, ‘Verily the first House founded for mankind was that at Bakkah (Mecca)’ (Koran III, 96). The name of the Imam al-Nasir li Din Ilah, in depth three cubits, encircles it all. On these coverings there has been shaped remarkable designs resembling handsome pulpits, and inscriptions entertaining the name of God Most High and calling blessings on Nasir, the aforementioned ‘Abbaside (Caliph) who had ordered its instalment. With all this, there was no clash of colour. The number of covers on all four sides is thirty-four, there being eighteen on the two long sides, and sixteen on the two short sides. The Ka‘bah has five windows of ‘Iraq glass, richly stained.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m006",
+          "jubayr-m007",
+          "jubayr-m008",
+          "jubayr-m009",
+          "jubayr-m010",
+          "jubayr-m011",
+          "jubayr-m012",
+          "jubayr-m013"
+        ],
+        "chapterTitle": "Mecca"
+      }
+    },
+    {
+      "id": "medina",
+      "title": "Medina",
+      "band": "arabia",
+      "placeNames": [
+        "Medina"
+      ],
+      "body": "May God let us know its blessings, and the blessings of the year it opens, favouring us during it with His mercy and guaranteeing us His protection The new moon of this month rose on the night of Saturday as we were leaving Badr for al-Safra’, and we spent the night below its crescent in this venerated ground of Badr where God gave victory to the Muslims and vanquished the polytheists. Praise be to God for that. We alighted at al-Safra’ after the last evening prayer, and there, until noon on Saturday the 1st of the month, we tarried that the people might renew their provision of water and take some rest. From al-Safra’ to the venerated Medina is, within God’s pleasure, three days’ journey. We left it at noon on Saturday, and prolonged our march until the end of the last evening prayer. Our way had lain through a valley running continuously through mountains. The night of Sunday we rested until midnight when we again set forth and travelled until the forenoon, alighting for our midday rest at the well Dhat al-‘Alam where it is said that ‘Ali ibn Abi Talib – may God hold him in His favour – fought with the jinn (demons). It is also known as al-Rawha’, is fed by a spring, and is exceeding deep, the bucket-cord scarce reaching to the bottom. We left it after the midday prayers on Sunday and prolonged our march until after the last evening prayer, when we halted at Shi‘b ‘Ali (the Mountain Path of ‘Ali) – may God hold him in His favour. We removed thence at midnight to Turban and then to al-Bayda’, whence can be seen Medina the venerated. In the forenoon of Monday the 3rd of Muharram we encamped in the valley of al-‘Aqiq on whose side is the mosque of Dhu ’l-Hulayfah where the Apostle of God – may God bless and preserve him – assumed the ihram (pilgrim garb). Medina is five miles from this place. At Dhu ’l-Hulayfah commences the haram (sacred territory) of Medina (which extends) to the tomb of Hamzah and to Quba’. The first thing that strikes the eye is the tall white minaret of its mosque.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m014"
+        ],
+        "chapterId": "jubayr-m014",
+        "chapterTitle": "Medina"
+      }
+    },
+    {
+      "id": "kufah-najaf",
+      "title": "Kufah and Najaf",
+      "band": "west_asia",
+      "placeNames": [
+        "Kufah and Najaf"
+      ],
+      "body": "The new moon of this month appeared on the night of Monday corresponding with the 1 th of May. It rose while we were on the banks of the Euphrates outside the city of al-Hillah. We removed on the morning of Monday, and crossed a bridge over a waterway called al-Nil, a branch deriving from the Euphrates. There was a great press, and many men and animals were drowned in the water. We stood aside, resting until the host should disperse, and then crossed in safety and without harm. Praise be to God. From the city of al-Hillah the pilgrims form a chain of men in companies and groups, some going ahead, some keeping in the middle, and some lagging behind. He in haste does not halt for the leisurely, nor do those in the van await the tardy. Wherever they wish along the road they may stop to take breath and to repose, their spirits at rest from the fear of the drum beat that had caused their hearts to tremble as it urged them to rise and depart. Sometimes a sleeper would babble that he had heard the sound of the drum, and rise hastily and fearfully and then, perceiving that it was but an evil dream, return again to slumber. Among the causes of their dispersion was the many bridges they encountered on their way to Baghdad, for you can hardly walk a mile without finding a bridge over a waterway branching from the Euphrates. This is the road that has most fountains and bridges, and along most of it are the tents of the men who guard the road in the solicitude of the Caliph for the pilgrims, that they might not be accosted for begging or the like. If this throng of men had rushed headlong on to the bridges they could never have crossed them, and would have fallen in heaps upon each other. The Emir Tashtikin, whom we have mentioned before, tarried three days in al-Hillah until all the pilgrims had passed before him, and then betook himself to His Majesty the Caliph, on whose behalf he governs the province of Hillah.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m015"
+        ],
+        "chapterId": "jubayr-m015",
+        "chapterTitle": "Kufah and Najaf"
+      }
+    },
+    {
+      "id": "baghdad",
+      "title": "Baghdad",
+      "band": "west_asia",
+      "placeNames": [
+        "Baghdad"
+      ],
+      "body": "The new moon of this month appeared on the night of Monday corresponding with the 1 th of May. It rose while we were on the banks of the Euphrates outside the city of al-Hillah. We removed on the morning of Monday, and crossed a bridge over a waterway called al-Nil, a branch deriving from the Euphrates. There was a great press, and many men and animals were drowned in the water. We stood aside, resting until the host should disperse, and then crossed in safety and without harm. Praise be to God. From the city of al-Hillah the pilgrims form a chain of men in companies and groups, some going ahead, some keeping in the middle, and some lagging behind. He in haste does not halt for the leisurely, nor do those in the van await the tardy. Wherever they wish along the road they may stop to take breath and to repose, their spirits at rest from the fear of the drum beat that had caused their hearts to tremble as it urged them to rise and depart. Sometimes a sleeper would babble that he had heard the sound of the drum, and rise hastily and fearfully and then, perceiving that it was but an evil dream, return again to slumber. Among the causes of their dispersion was the many bridges they encountered on their way to Baghdad, for you can hardly walk a mile without finding a bridge over a waterway branching from the Euphrates. This is the road that has most fountains and bridges, and along most of it are the tents of the men who guard the road in the solicitude of the Caliph for the pilgrims, that they might not be accosted for begging or the like. If this throng of men had rushed headlong on to the bridges they could never have crossed them, and would have fallen in heaps upon each other. The Emir Tashtikin, whom we have mentioned before, tarried three days in al-Hillah until all the pilgrims had passed before him, and then betook himself to His Majesty the Caliph, on whose behalf he governs the province of Hillah.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m015"
+        ],
+        "chapterId": "jubayr-m015",
+        "chapterTitle": "Baghdad"
+      }
+    },
+    {
+      "id": "samarra-mosul",
+      "title": "Samarra, Takrit, and Mosul",
+      "band": "west_asia",
+      "placeNames": [
+        "Samarra, Takrit, and Mosul"
+      ],
+      "body": "‘You are not you, and the houses are not those I knew.’ Our departure from Baghdad to Mosul took place after the afternoon prayers of Monday the 1 th of Safar, which was the 2 th of May. Our stay in Baghdad had been thirteen days. We were in the company of two princesses, the princess daughter of Mas‘ud, already mentioned in this journal, and the princess mother of Mu‘izz al-Din, Lord of Mosul. With them were the pilgrims of Syria, of Mosul, and of the Persian lands adjoining Darb which are subject to the Emir Mas‘ud, father of one of these two princesses. The pilgrims of Khurasan and the lands about it journeyed with a third princess, the daughter of the King al-Daqus (see note 80). They took the road from the eastern side of Baghdad; ours to Mosul was from the western side. These two princesses were the Emirs and commanders of the troops with whom we went. May God not apply to us the saying: ‘The troops perished with their commander.’ The kingdom of her father extends over four months’ journey. The ruler of Constantinople pays him tribute. He rules his subjects with admirable equity, and (against the Christians) wages holy war unceasingly and in a manner most laudable. One of the pilgrims from our country told us that in this present year of 579 he had conquered about twenty-five Byzantine cities. His by-name is ‘Izz al-Din, but his father’s name was Mas‘ud, and he himself is more commonly known by this name, which is hereditary in that dynasty, going from father to son. One of the glories of this princess, who is named Saljuqah, is that Saladin conquered Amid, the city of her husband Nur al-Din and one of the biggest in the world, but left the city to her in honour of her father and gave her the keys. Because of this, her husband remained king. But enough for you of this affair. The King of Kings, the Giver of Life, the Self-Existent gives power to whom He wills. There is no God but He. We passed that night in one of the villages of Baghdad. When we arrived, part of the night had gone.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m015"
+        ],
+        "chapterId": "jubayr-m015",
+        "chapterTitle": "Samarra, Takrit, and Mosul"
+      }
+    },
+    {
+      "id": "nisibis-harran",
+      "title": "Nisibis, Dunaysar, and Harran",
+      "band": "west_asia",
+      "placeNames": [
+        "Nisibis, Dunaysar, and Harran"
+      ],
+      "body": "The Lord of Nasibin is Mu‘in al-Din, brother of Mu‘izz al-Din, Lord of Mosul, and both the sons of Babek. Mu‘in possesses also the city of Sinjar, which is on the right of the road to Mosul. In one of the northern angles of the venerated mosque lives the sheik Abu ’l-Yaqzan, black of body but white (pure) of heart, and one of the saints whose minds God has illuminated with faith, making them of those whose pious deeds are everlastingly remembered. He is famous for his sermons and renowned for his thaumaturgy. Emaciated by exclusive devotion to God’s service, and by asceticism, he is of those whose garments are worn from devotions and is content with what are woven with his own hand, neither does he put aside food for the morrow. God rendered us happy by meeting him, and according us the blessings of his prayers, on the evening of Tuesday, the first of the month of Rabi‘ al-Awwal. Praise be to Great and Glorious God that He gave us the favour of seeing him, and the honour of shaking his hand. May God profit us from his prayers; for He is the One who hears and who answers. There is no God but He. We lodged in Nasibin in a khan outside the city, and there passed the night of Wednesday the 2nd of Rabi‘ al-Awwal. We left in the morning in a large caravan of mules and asses with men from the Hauran and Aleppo and some others from Bilad Bakr and its surroundings, leaving behind the pilgrims of these parts on camels. Our march continued until the beginning of noon. We were ready and on guard against an attack by the Kurds who were the scourge of these parts, from Mosul to Nasibin and the city of Dunaysar, robbing on the highway and ‘striving to make mischief in the land’ (Koran V, 33 and 64). They live in inaccessible mountains fast by these lands, whose Sultan has not been helped by God to subdue them and their transgressions. Sometimes they (even) reach the gate of Nasibin, and none can repel or hinder them save Great and Glorious God.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m016"
+        ],
+        "chapterId": "jubayr-m016",
+        "chapterTitle": "Nisibis, Dunaysar, and Harran"
+      }
+    },
+    {
+      "id": "aleppo",
+      "title": "Aleppo",
+      "band": "west_asia",
+      "placeNames": [
+        "Aleppo"
+      ],
+      "body": "The Lord of Nasibin is Mu‘in al-Din, brother of Mu‘izz al-Din, Lord of Mosul, and both the sons of Babek. Mu‘in possesses also the city of Sinjar, which is on the right of the road to Mosul. In one of the northern angles of the venerated mosque lives the sheik Abu ’l-Yaqzan, black of body but white (pure) of heart, and one of the saints whose minds God has illuminated with faith, making them of those whose pious deeds are everlastingly remembered. He is famous for his sermons and renowned for his thaumaturgy. Emaciated by exclusive devotion to God’s service, and by asceticism, he is of those whose garments are worn from devotions and is content with what are woven with his own hand, neither does he put aside food for the morrow. God rendered us happy by meeting him, and according us the blessings of his prayers, on the evening of Tuesday, the first of the month of Rabi‘ al-Awwal. Praise be to Great and Glorious God that He gave us the favour of seeing him, and the honour of shaking his hand. May God profit us from his prayers; for He is the One who hears and who answers. There is no God but He. We lodged in Nasibin in a khan outside the city, and there passed the night of Wednesday the 2nd of Rabi‘ al-Awwal. We left in the morning in a large caravan of mules and asses with men from the Hauran and Aleppo and some others from Bilad Bakr and its surroundings, leaving behind the pilgrims of these parts on camels. Our march continued until the beginning of noon. We were ready and on guard against an attack by the Kurds who were the scourge of these parts, from Mosul to Nasibin and the city of Dunaysar, robbing on the highway and ‘striving to make mischief in the land’ (Koran V, 33 and 64). They live in inaccessible mountains fast by these lands, whose Sultan has not been helped by God to subdue them and their transgressions. Sometimes they (even) reach the gate of Nasibin, and none can repel or hinder them save Great and Glorious God.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m016"
+        ],
+        "chapterId": "jubayr-m016",
+        "chapterTitle": "Aleppo"
+      }
+    },
+    {
+      "id": "hamah-hims",
+      "title": "Hamah and Hims (Emessa)",
+      "band": "west_asia",
+      "placeNames": [
+        "Hamah and Hims"
+      ],
+      "body": "We departed when a third of the night had passed, and rode until after sunrise when we halted to rest at a place called Baqidin in a large khan, strongly fortified, called the Khan of the Turcomans. The khans on this road are like fortresses in their unassailableness and their fortifications. Their doors are of iron, and they present the utmost strength. We left this place and passed the night at a place called Tamanni in a khan strong in the manner already described. We bent our way at dawn on Saturday the 1 th of Rabi‘ al-Awwal, which was the last day of June. On the Friday we had seen, to the right of the road and two parasangs away, the lands of al-Ma‘arrah. They are all dark with olive, fig, and pistachio trees, and all kinds of fruits; and their luxuriant gardens and well-ordered villages stretch for a distance of two days’ journeying. It is one of the most fertile and productive regions in Islamic lands. Beyond them are the Mountains of Lebanon, of towering height and great length, extending along the sea coast. On their slopes are castles belonging to the heretical Isma‘ilites, a sect which swerved from Islam and vested divinity in a man. Their prophet was a devil in man’s disguise called Sinan, who deceived them with falsehoods and chimeras embellished for them to act upon. He bewitched them with these black arts, so that they took him as a god and worshipped him. They abased themselves before him, reaching such a state of obedience and subjection that did he order one of them to fall from the mountain top he would do so, and with alacrity that he might be pleased. God in His power allows to stray those whom He wills, and guides whom He wishes. Glory to Him to whom we turn for protection from seducement in religion, asking His protection from the straying of the heretics. There is no Lord but He, and only He should be worshipped. Mount Lebanon is the frontier between Muslim lands and those of the Franks, for beyond it lie Antioch, Latakia, and others of their cities – may God restore them to the Muslims.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m016"
+        ],
+        "chapterId": "jubayr-m016",
+        "chapterTitle": "Hamah and Hims (Emessa)"
+      }
+    },
+    {
+      "id": "damascus",
+      "title": "Damascus",
+      "band": "west_asia",
+      "placeNames": [
+        "Damascus"
+      ],
+      "body": "Renowned for its age and its past, outwardly fresh, but decrepit within, beautiful to look upon, and of medium size, it stands in a verdant plain which stretches before and behind it as far as the eye can reach. In this plain God has made to run streams of water that irrigate it, and flow in all its parts. The city is begirt with gardens, thick with trees bearing ripe fruits; and round it there bends, like a bracelet, a river with its banks beset with the gardens that cover it with their ample shade. God’s mercy upon Abu Nuwas al-Hasan ibn Hani’ when he says, ‘Nasibin was pleased with me one day and I was pleased with it (to live in). Oh that my lot in this world were Nasibin.’ Outside, the city is a natural Paradise, having the trees and plants of Andalusia, radiant with abundance and prosperity, and bright with urban splendour. But inside is the disorder of the desert, so that the gaze does not turn to it, and the eye finds no pleasant place to roam across and no sign of beauty. The river flows down to it from a spring that issues from a nearby mountain. It divides at its source, one branch taking its way through the plains and cultivations, and the other entering the city and spreading through its streets and penetrating some of its houses. One fork reaches the venerated mosque and, passing through its court, pours into two basins, one in the centre of the court and the other at its eastern gate, and (finally) reaches two fountains at the side of the mosque. Over this river has been built a bridge of hard stone that adjoins the south gate of the city. There are two colleges and one hospital in the place. The Lord of Nasibin is Mu‘in al-Din, brother of Mu‘izz al-Din, Lord of Mosul, and both the sons of Babek. Mu‘in possesses also the city of Sinjar, which is on the right of the road to Mosul.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m016",
+          "jubayr-m017",
+          "jubayr-m018"
+        ],
+        "chapterTitle": "Damascus"
+      }
+    },
+    {
+      "id": "acre",
+      "title": "Acre",
+      "band": "levant",
+      "placeNames": [
+        "Acre"
+      ],
+      "body": "The new moon rose on the night of Sunday the 9th of September according to the foreigners, while we were in Damascus – may God protect it – on the point of departure to Acre – may God restore it to us – to seek a passage by sea with some Christian merchants in the ships they had got ready for the autumn sailing which they called ‘al-salibiyah’.132 May God let us know His avouched grace, giving us of His care and protection, in His power and strength. Glory be to God, the All-Merciful, the Benefactor, the Giver of wealth and benefits. There is no God but He. We left Damascus on the evening of Thursday the 5th of the said month, which was the 1 th of September, in a large caravan of merchants travelling with their merchandise to Acre. One of the strangest things in the world is that Muslim caravans go forth to Frankish lands, while Frankish captives enter Muslim lands. In this regard, as we were leaving, we observed a singular event. When Saladin was laying siege to the fortress of Kerak, already mentioned in this diary, the Franks, having been summoned from all sides, had marched upon him in great strength and sought to arrive before he did at the place of water, and also to intercept his supplies from Muslim country. But the Sultan, leaving the fortress, led his whole force against them and arrived before them at the watering place. The Franks shunned his path, and, following a rough road on which most of their animals perished, directed themselves towards the fortress of Kerak. The Sultan had closed to them all other roads leading to their own country, and there was left to them no other but the road by the fortress through the desert. Thus, because of the circuitous route that must be followed, their supplies were distant from them. Seizing the opportunity, and taking advantage of the opening that fell to him, Saladin schemed an incursion on their country. Unexpectedly he arrived at the city of Nablus and attacked it with his soldiers and took it. He took prisoner all within it, and seized with it fortified places and villages.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m019"
+        ],
+        "chapterId": "jubayr-m019",
+        "chapterTitle": "Acre"
+      }
+    },
+    {
+      "id": "tyre",
+      "title": "Tyre (Sur)",
+      "band": "levant",
+      "placeNames": [
+        "Tyre"
+      ],
+      "body": "We left Damascus on the evening of Thursday the 5th of the said month, which was the 1 th of September, in a large caravan of merchants travelling with their merchandise to Acre. One of the strangest things in the world is that Muslim caravans go forth to Frankish lands, while Frankish captives enter Muslim lands. In this regard, as we were leaving, we observed a singular event. When Saladin was laying siege to the fortress of Kerak, already mentioned in this diary, the Franks, having been summoned from all sides, had marched upon him in great strength and sought to arrive before he did at the place of water, and also to intercept his supplies from Muslim country. But the Sultan, leaving the fortress, led his whole force against them and arrived before them at the watering place. The Franks shunned his path, and, following a rough road on which most of their animals perished, directed themselves towards the fortress of Kerak. The Sultan had closed to them all other roads leading to their own country, and there was left to them no other but the road by the fortress through the desert. Thus, because of the circuitous route that must be followed, their supplies were distant from them. Seizing the opportunity, and taking advantage of the opening that fell to him, Saladin schemed an incursion on their country. Unexpectedly he arrived at the city of Nablus and attacked it with his soldiers and took it. He took prisoner all within it, and seized with it fortified places and villages. The hands of the Muslims were filled with prisoners beyond number, both Franks and a sect of the Jews known as al-Samarah (Samaritans) descended from al-S amir i (Koran XX, 87). Large numbers were put to a speedy death, and the Muslims acquired plunder it is not possible to estimate, with all the goods, provisions, baggage, furnitures, cattle and horses, and such-like. The victorious Sultan allowed the Muslims to take what they could, and conceded it to them. Each hand held what it gained, and became rich and prosperous. The army erased all traces of the Frankish lands through which it passed, returning victorious, with booty and in safety. Many Muslim prisoners they had also freed.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m019"
+        ],
+        "chapterId": "jubayr-m019",
+        "chapterTitle": "Tyre (Sur)"
+      }
+    },
+    {
+      "id": "messina",
+      "title": "Messina",
+      "band": "europe",
+      "placeNames": [
+        "Messina"
+      ],
+      "body": "On the morning of the 1st day of this month we observed before us the Mountain of Fire, the famous volcano of Sicily, and rejoiced thereat. May God Most High reward us for what we have endured, and end (our days) with the best and most magnificent of His favours. May He animate us in all circumstances to gratitude for what He has bestowed on us. A favourable wind then moved us from that place, but on the evening of Saturday the 2nd of the month its force increased and drove the ship with such speed that in but an instant it had brought us to the mouth of the strait. Night had fallen. In this strait the sea is confined to a width of six miles and in the narrowest place to three. The sea in this strait, which runs between the mainland and the island of Sicily, pours through like the ‘bursting of the dam’ and, from the intensity of the contraction and the pressure, boils like a cauldron. Difficult indeed is its passage for ships. Our ship continued on its course, driven by a strong wind from the south, the mainland on our right and the coast of Sicily on our left. When it came to midnight on Sunday the 3rd of the blessed month (of Ramadan), and we were overlooking the city of Messina, the sudden cries of the sailors gave us the grievous knowledge that the ship had been driven by the force of the wind towards one of the shore lines and had struck it. At once the captain ordered that the sails be lowered, but the sail on the mast called the ‘ardimun’ (artimone) would not come down. All their efforts they exerted on it, but they could do naught with it, because of the strain of the wind. When they had laboured in vain, the captain cut it with a knife piece by piece, hoping to arrest the ship.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m022"
+        ],
+        "chapterId": "jubayr-m022",
+        "chapterTitle": "Messina"
+      }
+    },
+    {
+      "id": "palermo",
+      "title": "Palermo",
+      "band": "europe",
+      "placeNames": [
+        "Palermo"
+      ],
+      "body": "‘Many are taken off in death upon the threshold of their house.’ The sun then rose and small boats came out to us. Our cries had fallen on the city, and the King of Sicily, William himself, came out with some of his retinue to survey the affair. We made speed to go down to the boats, but the violence of the waves would not allow them to reach the ship. We at last descended into them at the end of the terrible storm. Our deliverance on to the shore was like that of Abu Nasr from destiny.151 Some of the chattels belonging to men had been destroyed, but ‘they took comfort that although without plunder, they had returned in safety’.152 The strangest thing that we were told was that this Rumi King, when he perceived some needy Muslims staring from the ship, having not the means to pay for their landing because the owners of the boats were asking so high a price for their rescue, enquired, this King, concerning them and, learning their story, ordered that they be given one hundred ruba‘i of his coinage in order that they might alight. All the Muslims thus were saved and cried, ‘Praise be to God, Lord of the Universe.’ The Christians took from the ship all that they had had therein. The next day the waves had shattered it and thrown it in pieces on the shore: a lesson to those who saw, and ‘a sign to those who pondered’ (Koran XV, 75). Wonder fell upon us for our deliverance; and to Great and Glorious God we renewed our thanks for His beneficent offices and gracious decrees, and for preserving us from the falling of this fate upon us on the mainland, or on one of the islands inhabited by the Rum where, even had we been saved, we should have been for ever slaves. Help us, Great and Glorious God, to render thanks for these gifts and favours, and for this merciful solicitude and compassion. All this is in His power, and it is His faculty to be kind and beneficent. There is no God but He.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m022"
+        ],
+        "chapterId": "jubayr-m022",
+        "chapterTitle": "Palermo"
+      }
+    },
+    {
+      "id": "cefalu-termini",
+      "title": "Cefalu and Termini",
+      "band": "europe",
+      "placeNames": [
+        "Cefalu and Termini"
+      ],
+      "body": "As for the great mountain in the island, known as the Jabal al-Nar (Mountain of Fire=Etna), it also presents a singular feature in that some years a fire pours from it in the manner of the ‘bursting of the dam’. It passes nothing it does not burn until, coming to the sea, it rides out on its surface and then subsides beneath it. Let us praise the Author of all things for His marvellous creations. There is no God but He. On the evening of Wednesday following the Tuesday we have chronicled, we came to the port of Shafludi (Cefalu), between which and Messina lies a day and a half’s sailing. Recollections of the town of Shafludi (Cefalu) in the island of Sicily Cefalu is a coastal town, with an ample produce from its soil and with many commodities, beset with vine and other trees, and having well-ordered markets. A community of Muslims lives there. Set over the town is a mountain, on whose large circular summit is a fortress, than which I have never seen any more formidable. They hold it in readiness for any sea attack that a fleet from the lands of the Muslims – may God render them victorious – might make upon them unawares. We sailed from Cefalu at midnight, and came to the town of Thirmah (Termini) in the early forenoon of Thursday, after an easy voyage. The two towns are five and twenty miles from each other. At Termini we changed from that ship to another which we chartered, that the sailors accompanying us might be of the country (through which we should travel). Recollections of the town of Thirmah (Termini) in the island of Sicily Better situated than the place we have just described, this town is strongly fortified, and surmounts and towers above the sea. The Muslims have a large suburb, in which are their mosques. The town has a high and impregnable fort, and in its lower part is a thermal spring which serves the citizens as baths. It enjoys an extreme fertility and abundance of victuals; indeed, the whole island in this regard is one of the most remarkable in God’s creation.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m022"
+        ],
+        "chapterId": "jubayr-m022",
+        "chapterTitle": "Cefalu and Termini"
+      }
+    },
+    {
+      "id": "trapani",
+      "title": "Trapani",
+      "band": "europe",
+      "placeNames": [
+        "Trapani"
+      ],
+      "body": "The new moon commenced on the night of Saturday the 5th of January, according to testimony given to the Hakim of Trapani to the effect that the new moon of the month of Ramadan had been seen on the night of Thursday and that the people of the capital of Sicily, already described, had begun the fast on that Thursday.167 The people therefore began their festival of the ending (of the month of fasting) after taking count from that Thursday. We prayed, on this holy feast-day, in a mosque in Trapani with a group of its inhabitants who had refrained, for a proper reason, from going to the musalla. We offered up the traveller’s prayer.168 May God restore every stranger to his homeland. The remainder of the people, with timbal and horn, went to the musalla with their magistrate. We marvelled at this, and at the Christian’s tolerance of it. Having agreed on the price of our passage in the ship going, within the will of God, to Spain, we turned our minds to provisions for the journey. But God alone can assure our help and easement, for there arrived an order from the King of Sicily stopping all ships from sailing from the shores of his island. It seems that he is preparing a fleet, and no ships may sail until the fleet has left. May God frustrate his designs, and may he not achieve his ends. The Genoese owners of the two ships hurried aboard to protect themselves from the Wali, but he relaxed as the result of a bribe the Genoese gave him, so that they remained in their ship and awaited a wind on which to sail. At this time there came from the west the sad news that the Lord of Majorca had seized Bajayah (Bougie).169 May God grant that it be not so, and give, in His grace and favour, success and quiet to the Muslims. The people of Trapani are making conjectures as to the destination of the fleet this tyrant is preparing. As to its numbers, some say there are three hundred sail, between galleys and dromonds, while others say there are more, and that a hundred ships carrying victuals are to accompany it.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m023",
+          "jubayr-m024",
+          "jubayr-m025"
+        ],
+        "chapterTitle": "Trapani"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "granada-to-alexandria",
+      "title": "Sea Voyage from Granada to Alexandria",
+      "band": "europe",
+      "body": "Ahmad ibn hassan and Muhammad ibn Jubayr left Granada – may God preserve it – on their pilgrimage to the blessed Hejaz – may God give easement and help and reveal His beneficent works – at the first hour of Thursday the 8th of Shawwal 578 (A.H.), which fell, according to the foreigners on the 3rd of February (1183). We passed through Jayyan (Jaen) that we might despatch some business, and left it at the first hour of Monday the 1 th of the month of Shawwal, being the 1 th of February. Our first stage from there was to the fortress of al-Qabdhaq (Alcaudete). Thence we moved to the fortress of Qabrah (Cabra), to the city of Istijah (Ecija), to the fortress of Ushunah (Osuna), to Shallabar (Jeliver), to the fortress of Arkush (Arcos), to the burgh known as the Burgh of Qashmah (Casma) which is a burgh belonging to Madinat Ibn al-Salim (Medina Sidonia), and then to the island of Tarif (Tarifa) which we reached on Monday the 2 th of the month (of Shawwal). At midday on Tuesday the (twenty) second (of February) God granted us an easy crossing of the sea to Qasr Masmudah (Alcazar). Praise be to God. On the morning of Wednesday the 2 th of the month, we removed to Sabtah (Ceuta) where we found a Rumi Genoese ship about to sail to al-Iskandariyah (Alexandria) by the power of Great and Glorious God, and with His help we embarked; and at midday on Thursday the 2 th of the month, or the 2 th of February, we set sail with the power and help of God Most High. There is no God but He. Our course lay along the Andalusian coast, but this we left on Thursday the 6th of Dhu ’l-Qa‘dah when we were opposite Daniyah (Denia). The morning of Friday the 7th of the month we were off the island of Yabisah (Iviza), on Saturday the island of Majorca, and on Sunday we were off Minorca.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m000"
+        ],
+        "chapterId": "jubayr-m000",
+        "chapterTitle": "Sea Voyage from Granada to Alexandria"
+      },
+      "anchorPlace": "granada"
+    },
+    {
+      "id": "saladin-welfare",
+      "title": "Saladin's Colleges, Hospitals, and Bread for Strangers",
+      "band": "egypt",
+      "body": "The first day of the month was a Sunday and the day after our arrival in Alexandria. The day of our landing, one of the first things we saw was the coming on board of the agents of the Sultan to record all that had been brought in the ship. All the Muslims in it were brought forward one by one, and their names and descriptions, together with the names of their countries, recorded. Each was questioned as to what merchandise or money he had, that he might pay zakat, without any enquiry as to what portion of it had been in their possession for a complete year and what had not. Most of them were on their way to discharge a religious duty and had nothing but the (bare) provisions for the journey. But they were compelled to pay the zakat without being questioned as to what had been possessed by them for the complete year and what had not. Ahmad ibn Hassan of our number was called down to be questioned as to the news of the west and as to the ship’s cargo. Under watch he was in turn conducted first to the Sultan, then to the Qadi, then to the officials of the Customs, and then to a group of the Sultan’s suite, and after being questioned concerning everything, and his statements recorded, he was released. The Muslims were then ordered to take their belongings, and what remained of their provisions, to the shore, where there were attendants responsible for them and for carrying to the Customs all that they had brought ashore. There they were called one by one, and the possessions of each were produced. The Customs was packed to choking. All their goods, great and small, were searched and confusedly thrown together, while hands were thrust into their waistbands in search of what might be within. The owners were then put to oath whether they had aught else not discovered. During all this, because of the confusion of hands and the excessive throng, many possessions disappeared. After this scene of abasement and shame, for which we pray God to recompense us amply, they (the pilgrims) were allowed to go.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m001"
+        ],
+        "chapterId": "jubayr-m001",
+        "chapterTitle": "Saladin's Colleges, Hospitals, and Bread for Strangers"
+      }
+    },
+    {
+      "id": "eastern-desert-caravan",
+      "title": "The Eastern Desert Caravan to the Red Sea",
+      "band": "egypt",
+      "body": "The new moon of this month rose on the night of Wednesday, the 2 th of May, while we were yet in Qus and wishful of setting forth to ‘Aydhab – may God in His grace and favour, help us in our aims. On Monday the 1 th of the month, which was the 6th of June, we took out all our baggage, provisions, and the rest, to al-Mabraz, a place in the direction of the qiblah and near to the city. It is a large space surrounded by palm-trees where the baggage of the pilgrims and merchants is collected and loaded. From here they set forth on their journey, and here is weighed that which the camel-masters must know the weight of. And so, when the evening prayers were over, we departed thence, and came to a waterpoint called al-Hajir where we passed the night. The day of Tuesday we tarried there because of the absence of some of the camel-masters at their houses which were nigh at hand. That night, the night of Wednesday, the 1 th of the month (of Safar), while we were still in Hajir, the moon suffered a full eclipse, which began at the beginning of the night, and continued for a part of it. On the morning of Wednesday we set forth, and took our midday rest at a place called Qila‘ al-Diya‘. The night we spent in a place called Mahatt al-Laqitah. This had all been through the desert in which there was no sign of cultivation. Early on Thursday we halted at a watering place called al-‘Abdayn (The Two Slaves). It is related that they died of thirst before they could reach it. The place was named after them, and here is their tomb. God’s mercy upon them. We drew water for three days and left with the dawn on Friday the 1 th of the month. We journeyed on through the desert encamping in it whenever night darkened upon us, while the caravans of ‘Aydhab and Qus came and went so that the desert was animated and safe.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m003"
+        ],
+        "chapterId": "jubayr-m003",
+        "chapterTitle": "The Eastern Desert Caravan to the Red Sea"
+      }
+    },
+    {
+      "id": "hajj-rites",
+      "title": "The Hajj Rites at Mecca",
+      "band": "arabia",
+      "body": "The place of the venerated Maqam, behind which prayers are said, faces the space between the blessed door and the ‘Iraq corner, well towards the side of the door. Over it is a wooden dome, a man’s stature or more high, angulated and sharp-edged, of excellent modelling, and having four spans from one angle to another. It was erected on the place where once was the maqam (standing-stone), and around it is a stone projection built on the edge like an oblong basin about a span deep, five paces long, and three paces wide. The maqam was put into the place we have described in the blessed House as a measure of safety. Between the maqam and the side of the House opposite it lie seventeen paces, a pace being three spans. The place of the Maqam also has a dome made of steel and placed beside the dome of Zamzam. During the months of the pilgrimage, when many men have assembled and those from ‘Iraq and Khurasan have arrived, the wooden dome is removed and the steel dome put in its place that it might better support the press of men. From the corner containing the Black Stone to the ‘Iraq corner is scarcely fifty-four spans. From the Black Stone to the ground is six spans, so that the tall man must bend to it and the short man raise himself (to kiss it). From the ‘Iraq corner to the Syrian corner is scarcely forty-eight spans, and that is through the inside of the Hijr (an adjacent enclosure); but around it from the one corner to the other is forty paces or almost one hundred and twenty spans. The tawaf (circumambulator) moves outside. (The distance from) the Syrian corner to the Yemen corner is the same as that from the Black corner to the ‘Iraq corner for they are opposite sides. From the Yemen to the Black is the same, inside the Hijr, as from the ‘Iraq to the Syrian for they are opposite sides. The place of circumambulation is paved with wide stones like marble and very beautiful, some black, some brown and some white. They are joined to each other, and reach nine paces from the House save in the part facing the Maqam.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m006",
+          "jubayr-m007",
+          "jubayr-m008",
+          "jubayr-m009",
+          "jubayr-m010",
+          "jubayr-m011",
+          "jubayr-m012",
+          "jubayr-m013"
+        ],
+        "chapterTitle": "The Hajj Rites at Mecca"
+      },
+      "anchorPlace": "mecca"
+    },
+    {
+      "id": "ramadan-in-mecca",
+      "title": "Ramadan and the Sacred Months in Mecca",
+      "band": "arabia",
+      "body": "The minarets also have singular forms, for the (lower) half is angulated at the four sides, by means of finely sculptured stones, remarkably set, and surrounded by a wooden lattice of rare workmanship. Above the lattice there rises into the air a spire that seems as the work of a turner, wholly dressed with baked bricks fitting the one into the other with an art that draws the gaze for its beauty. At the top of this spire is a globe also encircled by a wooden lattice of exactly the same pattern as the other. All these minarets have a distinct form, not one resembling the other; but all are of the type described, the lower half being angulated, and the upper columned. In the upper half of the Zamzam Dome, of the ‘Abbaside Dome which is called the ‘Place of Drinking’, and of the dome which sits obliquely to its left and is called The Jewish Dome, there is wonderful ornamental wood carving in which the artificer displayed much elegance, and at their summits are wooden balustrades of lattice-work with delicate perforations and apertures. Inside the lattice of the Zamzam Dome is a terrace in whose middle is a kind of minaret ball and on which the Zamzam muezzin makes his call to prayers. From this ball rises a slender stuccoed column with at its tip an iron vessel which in the solemn month of Ramadan they use as a lamp. On that side of the dome which faces the Ancient House are chains on which hang crystal lamps that are lit each night; and on the side to the right, which faces north, it is the same. On all its sides are three balustrades set up like doors and sustained by small glass columns than which no more beautiful work could be seen. Some were twisted like bracelets, especially on the side of the dome facing the Black Stone where the work on the column reaches the height of perfection. Round each column are three or four fillets, and below, between each fillet * * * * in which there are artistic works that are wonderful to look upon. Some of the columns are twisted like a bracelet.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m006",
+          "jubayr-m007",
+          "jubayr-m008",
+          "jubayr-m009",
+          "jubayr-m010",
+          "jubayr-m011"
+        ],
+        "chapterTitle": "Ramadan and the Sacred Months in Mecca"
+      },
+      "anchorPlace": "mecca"
+    },
+    {
+      "id": "desert-to-iraq",
+      "title": "The Pilgrim Caravan from Medina toward Iraq",
+      "band": "arabia",
+      "body": "May God dispose unto us, through this visit to the noble Prophet, an honoured dwelling in Heaven, making him our intercessor on the Day of Judgement and, by His favour, bringing us beside him in the eternal abode. This by His mercy, for He is the Forgiving, the Compassionate, the Bountiful, the Generous. We had stayed in Medina the venerated five days, the first being a Monday and the last a Friday, and in the forenoon of Saturday the 8th of Muharram, being the 2 st of April, we departed for ‘Iraq. May God bring us to our aim, and ease for us our way. At Medina we had furnished ourselves with water for three days, and on the third day of our journey, a Monday, we encamped at Wadi ’l-‘Arus. Here men provide themselves with water, digging for it into the ground to a well of sweet spring-water, from which the innumerable persons of this caravan, and the still greater number of camels, quenched their thirst. Power belongs to God. Glory to Him. From Wadi ’l-‘Arus we climbed to the land of Nejd, leaving behind us the Tihamah, and travelling across a level tract of land whose nearer parts the eyes fall short of and whose extremities they cannot reach. We inhaled the breezes of Nejd and the air that has passed into proverb, and our minds and bodies were refreshed by the coolness of those breezes and the salubrity of that air. On Tuesday the fourth day of our journey, we alighted near a watering place called ai-‘Usaylah, and on Wednesday, the fifth day, we halted at a place called Nuqrah which has wells and tanks like vast cisterns. One of these we found full of rainwater, and it was enough for the whole caravan, showing no diminishment despite the amount of water drawn. This Emir’s mode of travel with the pilgrims was to march from midnight to the early part of the forenoon, to rest until midday, and then move forward till the late evening, resuming the march at midnight. Such was his usage. The night of Thursday the 1 th of Muharram, being the sixth day on this journey, we stopped at a water-point called al-Qarurah which has tanks filled with rainwater.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m014"
+        ],
+        "chapterId": "jubayr-m014",
+        "chapterTitle": "The Pilgrim Caravan from Medina toward Iraq"
+      },
+      "anchorPlace": "medina"
+    },
+    {
+      "id": "palace-of-chosroes",
+      "title": "The Palace of Chosroes at al-Mada'in",
+      "band": "west_asia",
+      "body": "The Emir Tashtikin, whom we have mentioned before, tarried three days in al-Hillah until all the pilgrims had passed before him, and then betook himself to His Majesty the Caliph, on whose behalf he governs the province of Hillah. The conduct of this Emir, in his kindness to the pilgrims, his care of them, his watch over their van and rear, and his arrangement of the right and left wings is worthy of praise. He followed a well-directed path of firmness and foresight; and in modesty, urbanity, and cordiality, his course was felicitous. May God advantage him, and through him, the Muslims. In the afternoon of Monday we halted at a village called al-Qantarah (The Bridge) with broad and fertile lands watered by canals and shaded by the foliage of trees in fruit. It is one of the fairest and most beautiful of villages. Over a branch of the Euphrates at this place, there is a large bridge, arched so that one must climb and descend it, that gives its name to the village, which is also known as Hisn al-Bashir (The Castle of Bashir). We found that in these regions the barley is reaped at this time, which is the middle of May. We removed from this village at daybreak on Tuesday the 2nd of Safar and stopped for the midday rest at another called al-Farashah that has many inhabitants, is traversed by waters, and is enfolded by a verdant plain that is beautiful to behold. The villages of this road, from al-Hillah to Baghdad, are all of this fashion, being fair and broad. In this village there is a large khan surrounded by a high wall with small merlons. Leaving this place, we alighted in the evening at a village called Zariran, which is one of the loveliest villages of the earth, the finest to look upon, the broadest in its lands, and the widest in its boundaries, possessing also the most gardens, sweet-scented plants, and palm-groves. It has a market beside which the markets of cities fall short. Concerning the excellence of its site it is enough to tell you that the Tigris laves its eastern side and the Euphrates the west and that it lies like a bride between them.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m015"
+        ],
+        "chapterId": "jubayr-m015",
+        "chapterTitle": "The Palace of Chosroes at al-Mada'in"
+      }
+    },
+    {
+      "id": "umayyad-mosque",
+      "title": "The Umayyad Mosque of Damascus",
+      "band": "west_asia",
+      "body": "The new moon rose on Wednesday the 1 th (1 th) of July when we were in Damascus, lodging in the Dar al-Hadith (House of Religious Tradition) west of the venerated cathedral mosque. An account of the city of Damascus – may God Most High protect it. She is the paradise of the Orient, the place where dawned her gracious and radiant beauty, the seal of the lands of Islam where we have sought hospitality, and the bride of the cities we have observed. She is garnished with the flowers of sweet-scented herbs, and bedecked in the brocaded vestments of gardens. In the place of beauty she holds a sure position, and on her nuptial chair she is most richly adorned Its ground is sickened with the superfluity of water, so that it yearns even for a drought, and the hard stones almost cry out to you. ‘Urge on (your horse) with your foot; here is a cool cleansing place and a drink’ (Koran XXXVIII, 42). The gardens encircle it like the halo round the moon and contain it as it were the calyx of a flower. To the east, its green Ghutah stretches as far as the eye can see, and wherever you look on its four sides its ripe fruits hold the gaze. By Allah, they spoke truth who said: ‘If Paradise is on the earth then Damascus without a doubt is in it. If it is in the sky, then it vies with it and shares its glory.’ A description of her venerated Cathedral Mosque For beauty, perfection of construction, marvellous and sumptuous embellishment and decoration, it is one of the most celebrated mosques of the world. Its general fame in this regard renders valueless a deep description. One of the strangest things concerning it is that the spider never spins his web therein, nor do swallows ever enter it or alight thereon. (The Caliph) Al-Walid ibn ‘Abd al-Malik – may God’s mercy rest upon his soul – undertook the construction of this mosque, and sent to the king of the Rum at Constantinople ordering him to send twelve thousand craftsmen from his country, offering threats in case he should delay.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m017"
+        ],
+        "chapterId": "jubayr-m017",
+        "chapterTitle": "The Umayyad Mosque of Damascus"
+      },
+      "anchorPlace": "damascus"
+    },
+    {
+      "id": "crusader-frontier",
+      "title": "Crossing the Crusader Frontier",
+      "band": "levant",
+      "body": "The new moon rose on the night of Sunday the 9th of September according to the foreigners, while we were in Damascus – may God protect it – on the point of departure to Acre – may God restore it to us – to seek a passage by sea with some Christian merchants in the ships they had got ready for the autumn sailing which they called ‘al-salibiyah’.132 May God let us know His avouched grace, giving us of His care and protection, in His power and strength. Glory be to God, the All-Merciful, the Benefactor, the Giver of wealth and benefits. There is no God but He. We left Damascus on the evening of Thursday the 5th of the said month, which was the 1 th of September, in a large caravan of merchants travelling with their merchandise to Acre. One of the strangest things in the world is that Muslim caravans go forth to Frankish lands, while Frankish captives enter Muslim lands. In this regard, as we were leaving, we observed a singular event. When Saladin was laying siege to the fortress of Kerak, already mentioned in this diary, the Franks, having been summoned from all sides, had marched upon him in great strength and sought to arrive before he did at the place of water, and also to intercept his supplies from Muslim country. But the Sultan, leaving the fortress, led his whole force against them and arrived before them at the watering place. The Franks shunned his path, and, following a rough road on which most of their animals perished, directed themselves towards the fortress of Kerak. The Sultan had closed to them all other roads leading to their own country, and there was left to them no other but the road by the fortress through the desert. Thus, because of the circuitous route that must be followed, their supplies were distant from them. Seizing the opportunity, and taking advantage of the opening that fell to him, Saladin schemed an incursion on their country. Unexpectedly he arrived at the city of Nablus and attacked it with his soldiers and took it. He took prisoner all within it, and seized with it fortified places and villages.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m019"
+        ],
+        "chapterId": "jubayr-m019",
+        "chapterTitle": "Crossing the Crusader Frontier"
+      }
+    },
+    {
+      "id": "mediterranean-departure",
+      "title": "Departure from Acre into the Mediterranean",
+      "band": "levant",
+      "body": "The new moon rose on the night of Tuesday, corresponding with the 9th of October, while we were aboard the ship in the port of Acre, awaiting the completion of the stowing and our sailing in the name of God Most High with His favour and beneficent indulgence and by His generous will. Our stay there was prolonged twelve days, through the failure of the wind to rise. The blowing of the winds in these parts has a singular secret. It is that the east wind does not blow except in spring and autumn, and, save at those seasons, no voyages can be made and merchants will not bring their goods to Acre. The spring voyages begin in the middle of April, when the east wind blows until the end of May. It may last longer or less according to what God Most High decrees. The autumn voyages are from the middle of October, when the east wind (again) sets in motion. It lasts a shorter time than in the spring, and is for them a fleeting opportunity, for it blows for (only) fifteen days, more or less. There is no other suitable time, for the winds then vary, that from the west prevailing. Voyagers to the Maghrib, to Sicily, or to the lands of the Rum, await this east wind in these two seasons as they would await (the fulfilment of) an honest pledge. Glory to God, creating in His wisdom, and miraculous in His power. There is no God but He. During all this time that we were on the ship, we passed the nights ashore and sometimes had to search for our vessel. When therefore at daybreak of Thursday the 1 th of Rajab, the 1 th of October, the ship set sail, we, according to our habit, were ashore passing the night. The day was not fair for the Rum to prepare for the sea, and we had lost our prudence and forgotten the proverb concerning the preparation of water and provisions, Ά man should not leave his saddle’. So when we came to morning we could not see the ship, nor was there any trace of it. At once we hired a large boat with four oars and put off to follow the ship.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m020"
+        ],
+        "chapterId": "jubayr-m020",
+        "chapterTitle": "Departure from Acre into the Mediterranean"
+      },
+      "anchorPlace": "acre"
+    },
+    {
+      "id": "storm-toward-sicily",
+      "title": "Storms off Crete toward Sicily",
+      "band": "europe",
+      "body": "The new moon was obscured to us, and we reckoned that the days of Rajab were completed on the night of Thursday the 8th of November. From the time of our sailing from Acre, we had been twenty-two days on the sea, and therefore were wanting in felicity and felt only wretchedness and despair. But we hoped for the benign offices of Great and Glorious God, and for His unrevealed bounty, which by His grace and favour, is vouched unto us. The provisions of the travellers were becoming scarce, but by the charity of God in this ship they were as if in a city filled with all commodities. All they might wish to buy could be found: bread, water, and all kinds of fruit and victuals, such as pomegranate, quince, water-melon, pear, chestnut, walnut, chick-pea, broad-bean raw and cooked, onion, garlic, fig, cheese, fish and many other things it would be too long to describe. All this we saw being sold. Throughout all these days we had seen no land – may God soon dispel our cares – and two Muslims died – God have mercy on them. They were thrown into the sea. Of the (Christian) pilgrims two died also, and then were followed by many. One of them fell alive into the sea, and the waves carried him off more quickly than a flash of lightning. The captain of the ship inherited the effects of the departed Muslims and Christian pilgrims, for such is their usage for all who die at sea. There is no way for the (true) heir of the dead to gain his inheritance, and at this we were much astonished. At daybreak on Tuesday the 6th of the month, the 1 th of November, mountains appeared to us out of the sea. The west wind had mounted and blew fiercely and without intermission; then the wind blew changingly from east and west, and drove us to one of those mountains, and we anchored beside it. We asked concerning the place, and learnt that it was one of the (Eastern) Roman islands (of the Greek archipelago). There are more than three hundred and fifty of these islands and they are under the governance of the ruler of Constantinople.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m021"
+        ],
+        "chapterId": "jubayr-m021",
+        "chapterTitle": "Storms off Crete toward Sicily"
+      }
+    },
+    {
+      "id": "straits-of-messina",
+      "title": "Through the Straits of Messina",
+      "band": "europe",
+      "body": "May God in His grace and favour let us share His blessings and during it accept our prayers. There is no Lord but He The new moon rose on the night of Friday the 7th of December while we were going back and forth off the mainland (Italy). God granted us a light east wind by which we travelled gently on until we came to this place opposite the mainland. Here we observed many farms and habitations, and learnt that it was part of Calabria and belongs to the Lord of Sicily, for his territories on the mainland extend two months’ (journey) from this place. Many of the (Christian) pilgrims went ashore to escape the hunger that had smitten those on the ship, our provisions being exhausted. It is enough to tell you that we made do with a ritl (5 lb.) of dried biscuit which we divided amongst four of us and moistened with a little water. With this we were content. Every pilgrim who landed sold what remained of his provisions, and the Muslims, in sympathy with fellow travellers, bought what they could, despite the dearness which reached a dirham of pure (silver) for a biscuit. What think you of a voyage of two months on board a ship over a distance we had thought to cross in ten or fifteen days at most. The prudent was he who brought victuals for thirty days, but the rest brought enough for only twenty or fifteen. A singular circumstance of our sea journey was that while on board we had seen the new moon of three months: Rajab, Sha‘ban, and Ramadan the present month. On the morning of the 1st day of this month we observed before us the Mountain of Fire, the famous volcano of Sicily, and rejoiced thereat. May God Most High reward us for what we have endured, and end (our days) with the best and most magnificent of His favours. May He animate us in all circumstances to gratitude for what He has bestowed on us.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m022"
+        ],
+        "chapterId": "jubayr-m022",
+        "chapterTitle": "Through the Straits of Messina"
+      },
+      "anchorPlace": "messina"
+    },
+    {
+      "id": "norman-sicily-muslims",
+      "title": "Muslims under Norman Rule in Sicily",
+      "band": "europe",
+      "body": "May God in His grace and favour let us share His blessings and during it accept our prayers. There is no Lord but He The new moon rose on the night of Friday the 7th of December while we were going back and forth off the mainland (Italy). God granted us a light east wind by which we travelled gently on until we came to this place opposite the mainland. Here we observed many farms and habitations, and learnt that it was part of Calabria and belongs to the Lord of Sicily, for his territories on the mainland extend two months’ (journey) from this place. Many of the (Christian) pilgrims went ashore to escape the hunger that had smitten those on the ship, our provisions being exhausted. It is enough to tell you that we made do with a ritl (5 lb.) of dried biscuit which we divided amongst four of us and moistened with a little water. With this we were content. Every pilgrim who landed sold what remained of his provisions, and the Muslims, in sympathy with fellow travellers, bought what they could, despite the dearness which reached a dirham of pure (silver) for a biscuit. What think you of a voyage of two months on board a ship over a distance we had thought to cross in ten or fifteen days at most. The prudent was he who brought victuals for thirty days, but the rest brought enough for only twenty or fifteen. A singular circumstance of our sea journey was that while on board we had seen the new moon of three months: Rajab, Sha‘ban, and Ramadan the present month. On the morning of the 1st day of this month we observed before us the Mountain of Fire, the famous volcano of Sicily, and rejoiced thereat. May God Most High reward us for what we have endured, and end (our days) with the best and most magnificent of His favours. May He animate us in all circumstances to gratitude for what He has bestowed on us.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m022"
+        ],
+        "chapterId": "jubayr-m022",
+        "chapterTitle": "Muslims under Norman Rule in Sicily"
+      },
+      "anchorPlace": "palermo"
+    },
+    {
+      "id": "waiting-at-trapani",
+      "title": "Waiting at Trapani for a Ship Home",
+      "band": "europe",
+      "body": "The new moon commenced on the night of Saturday the 5th of January, according to testimony given to the Hakim of Trapani to the effect that the new moon of the month of Ramadan had been seen on the night of Thursday and that the people of the capital of Sicily, already described, had begun the fast on that Thursday.167 The people therefore began their festival of the ending (of the month of fasting) after taking count from that Thursday. We prayed, on this holy feast-day, in a mosque in Trapani with a group of its inhabitants who had refrained, for a proper reason, from going to the musalla. We offered up the traveller’s prayer.168 May God restore every stranger to his homeland. The remainder of the people, with timbal and horn, went to the musalla with their magistrate. We marvelled at this, and at the Christian’s tolerance of it. Having agreed on the price of our passage in the ship going, within the will of God, to Spain, we turned our minds to provisions for the journey. But God alone can assure our help and easement, for there arrived an order from the King of Sicily stopping all ships from sailing from the shores of his island. It seems that he is preparing a fleet, and no ships may sail until the fleet has left. May God frustrate his designs, and may he not achieve his ends. The Genoese owners of the two ships hurried aboard to protect themselves from the Wali, but he relaxed as the result of a bribe the Genoese gave him, so that they remained in their ship and awaited a wind on which to sail. At this time there came from the west the sad news that the Lord of Majorca had seized Bajayah (Bougie).169 May God grant that it be not so, and give, in His grace and favour, success and quiet to the Muslims. The people of Trapani are making conjectures as to the destination of the fleet this tyrant is preparing. As to its numbers, some say there are three hundred sail, between galleys and dromonds, while others say there are more, and that a hundred ships carrying victuals are to accompany it.",
+      "source": {
+        "chapterIds": [
+          "jubayr-m023",
+          "jubayr-m024"
+        ],
+        "chapterTitle": "Waiting at Trapani for a Ship Home"
+      },
+      "anchorPlace": "trapani"
+    },
+    {
+      "id": "return-to-granada",
+      "title": "Return by Sea to Granada",
+      "band": "europe",
+      "body": "God grant us His grace and favour The new moon was obscured from us, and we computed it as beginning on the night of Thursday the 4th of April. May God grant us the blessings of this year, and its favours, giving us of its benefits and preserving us from its evils, and vouchsafing our reunion with our native land. He is indeed the Listener and the Answerer. On the night of Friday following, God sent us an east wind and on it we put to sea. It was a soft and gentle wind, but it then became turbulent, and a strong wind drove along the ship at the greatest speed and smoothness. From the time of our embarking (at Trapani) we had been unceasingly snuffing at the east in our anxiety for a wind, but there came not a breeze, so that from its absence we deemed it to be a thing of fable, till God overtook us with His benevolence and benign works and sent it to us now in the month of April. May God in His grace and favour grant us safety. This wind accompanied us for about two days, during which we progressed with celerity. We passed the island of Sardinia on our right. Varying winds then played with us, and there we stayed, going the length and breadth of the sea and perceiving no land until our thoughts were agitated and we conceived that the winds would bring us to the coast of Barshlunah (Barcelona). May God destroy it. But God brought us relief, and we descried the coast of the island of Yabisah (Iviza) on the night of Saturday the 1 th of the month, although we could hardly see it from the cloud-enveloped distance. But on Saturday it appeared clearly to us, and after undergoing difficulties from the varying winds at its ingress, we entered the port and anchored. The city was four miles away. Our place of anchorage was opposite the island of Faramantirah (Formentera), which is separated four or five miles from Iviza and has many inhabited villages. We stayed in its port near two rugged mountains which confront each other and which are called al-Sheikh and al-‘Ajuz (‘The Old Man’ and ‘The Old Woman’).",
+      "source": {
+        "chapterIds": [
+          "jubayr-m026"
+        ],
+        "chapterId": "jubayr-m026",
+        "chapterTitle": "Return by Sea to Granada"
+      },
+      "anchorPlace": "granada"
+    }
+  ],
+  "coverage": [
+    {
+      "chapterId": "jubayr-m000",
+      "type": "story",
+      "entryId": "granada-to-alexandria",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m000",
+      "type": "place",
+      "entryId": "granada",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m001",
+      "type": "place",
+      "entryId": "alexandria",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m001",
+      "type": "story",
+      "entryId": "saladin-welfare",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m001",
+      "type": "place",
+      "entryId": "cairo-misr",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m002",
+      "type": "place",
+      "entryId": "upper-egypt-qus",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m003",
+      "type": "story",
+      "entryId": "eastern-desert-caravan",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m004",
+      "type": "place",
+      "entryId": "aydhab",
+      "band": "egypt"
+    },
+    {
+      "chapterId": "jubayr-m005",
+      "type": "place",
+      "entryId": "jiddah",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m006",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m007",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m008",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m009",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m010",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m011",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m012",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m013",
+      "type": "place",
+      "entryId": "mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m006",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m007",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m008",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m009",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m010",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m011",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m012",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m013",
+      "type": "story",
+      "entryId": "hajj-rites",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m006",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m007",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m008",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m009",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m010",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m011",
+      "type": "story",
+      "entryId": "ramadan-in-mecca",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m014",
+      "type": "place",
+      "entryId": "medina",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m014",
+      "type": "story",
+      "entryId": "desert-to-iraq",
+      "band": "arabia"
+    },
+    {
+      "chapterId": "jubayr-m015",
+      "type": "place",
+      "entryId": "kufah-najaf",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m015",
+      "type": "place",
+      "entryId": "baghdad",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m015",
+      "type": "place",
+      "entryId": "samarra-mosul",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m015",
+      "type": "story",
+      "entryId": "palace-of-chosroes",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m016",
+      "type": "place",
+      "entryId": "nisibis-harran",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m016",
+      "type": "place",
+      "entryId": "aleppo",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m016",
+      "type": "place",
+      "entryId": "hamah-hims",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m016",
+      "type": "place",
+      "entryId": "damascus",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m017",
+      "type": "place",
+      "entryId": "damascus",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m018",
+      "type": "place",
+      "entryId": "damascus",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m017",
+      "type": "story",
+      "entryId": "umayyad-mosque",
+      "band": "west_asia"
+    },
+    {
+      "chapterId": "jubayr-m019",
+      "type": "place",
+      "entryId": "acre",
+      "band": "levant"
+    },
+    {
+      "chapterId": "jubayr-m019",
+      "type": "place",
+      "entryId": "tyre",
+      "band": "levant"
+    },
+    {
+      "chapterId": "jubayr-m019",
+      "type": "story",
+      "entryId": "crusader-frontier",
+      "band": "levant"
+    },
+    {
+      "chapterId": "jubayr-m020",
+      "type": "story",
+      "entryId": "mediterranean-departure",
+      "band": "levant"
+    },
+    {
+      "chapterId": "jubayr-m021",
+      "type": "story",
+      "entryId": "storm-toward-sicily",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m022",
+      "type": "place",
+      "entryId": "messina",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m022",
+      "type": "place",
+      "entryId": "palermo",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m022",
+      "type": "story",
+      "entryId": "straits-of-messina",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m022",
+      "type": "story",
+      "entryId": "norman-sicily-muslims",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m022",
+      "type": "place",
+      "entryId": "cefalu-termini",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m023",
+      "type": "place",
+      "entryId": "trapani",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m024",
+      "type": "place",
+      "entryId": "trapani",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m025",
+      "type": "place",
+      "entryId": "trapani",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m023",
+      "type": "story",
+      "entryId": "waiting-at-trapani",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m024",
+      "type": "story",
+      "entryId": "waiting-at-trapani",
+      "band": "europe"
+    },
+    {
+      "chapterId": "jubayr-m026",
+      "type": "story",
+      "entryId": "return-to-granada",
+      "band": "europe"
+    }
+  ]
+}
