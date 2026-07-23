@@ -49,6 +49,9 @@ var _dialog: PanelContainer
 var _dialog_layer: Control
 var _current_event: Dictionary = {}
 var _controls: HBoxContainer
+var _market: Market
+var _market_view: PanelContainer
+var _market_layer: Control
 
 
 func _ready() -> void:
@@ -142,6 +145,7 @@ func _begin(archetype: Dictionary) -> void:
 	conditions = ConditionEvaluator.new()
 	events = EventMachine.new(db, conditions, executor)
 	travel = Travel.new(db, executor)
+	_market = Market.new(db)
 
 	state = WorldState.new()
 	state.seed = rng_seed(archetype)
@@ -272,6 +276,30 @@ func _build_map() -> void:
 	centre.add_child(_dialog)
 	_dialog.choice_taken.connect(_on_dialog_choice)
 
+	# --- market -------------------------------------------------------------
+	_market_layer = Control.new()
+	_market_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_market_layer.visible = false
+	add_child(_market_layer)
+
+	var mscrim := ColorRect.new()
+	mscrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	mscrim.color = Color(0.06, 0.05, 0.03, 0.5)
+	_market_layer.add_child(mscrim)
+
+	var mcentre := CenterContainer.new()
+	mcentre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	mcentre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_market_layer.add_child(mcentre)
+
+	_market_view = preload("res://game/screens/market_view.gd").new()
+	_market_view.setup(db, _market)
+	mcentre.add_child(_market_view)
+	_market_view.closed.connect(func():
+		_market_layer.visible = false
+		_open_city())
+	_market_view.traded.connect(_on_traded)
+
 	_build_controls()
 	_restyle_all()
 
@@ -385,6 +413,28 @@ func _on_dialog_choice(index: int) -> void:
 		_on_choice(_current_event, index)
 
 
+## Applies a market order. The screen produces effects; the executor applies
+## them; the HUD reflects them. No shortcut, or the audit trail breaks.
+func _on_traded() -> void:
+	var effects: Array = _market_view.take_pending()
+	if effects.is_empty():
+		return
+	var res := executor.execute(state, effects, {"rng": rng, "event_id": "market:" + state.city})
+	for line in res.log_lines:
+		_say("  · %s" % line)
+	if _audio_ready(): _audio.sfx("coin")
+	_refresh_hud()
+	_market_view.refresh()
+
+
+func _open_market() -> void:
+	var c := db.get_record(state.city)
+	if c.is_empty() or not c.has("market"):
+		return
+	_market_layer.visible = true
+	_market_view.open(c, state, state.jdn)
+
+
 func _open_city() -> void:
 	var c := db.get_record(state.city)
 	if c.is_empty() or (c.get("sites", []) as Array).is_empty():
@@ -409,6 +459,8 @@ func _restyle_all() -> void:
 		_dialog.restyle()
 	if _city_view and _city_view.has_method("restyle"):
 		_city_view.restyle()
+	if _market_view and _market_view.has_method("restyle"):
+		_market_view.restyle()
 	if _map:
 		_map.queue_redraw()
 	_refresh_controls()
@@ -476,6 +528,17 @@ func _show_roads() -> void:
 		sbtn.pressed.connect(_show_event.bind(sev))
 		_panel.add_child(sbtn)
 
+	var here_rec := db.get_record(state.city)
+	if here_rec.has("market"):
+		var mbtn := Button.new()
+		mbtn.text = "◈ 市集"
+		mbtn.add_theme_font_size_override("font_size", UiScale.ui())
+		mbtn.add_theme_stylebox_override("normal", Palette.button_style())
+		mbtn.add_theme_stylebox_override("hover", Palette.button_style(true))
+		mbtn.add_theme_color_override("font_color", Palette.ink())
+		mbtn.pressed.connect(_open_market)
+		_panel.add_child(mbtn)
+
 	var lbl := Label.new()
 	lbl.text = "%s 的去路：" % _city_name(state.city)
 	_panel.add_child(lbl)
@@ -508,6 +571,12 @@ func _show_roads() -> void:
 func _on_depart(route: Dictionary, mode: String) -> void:
 	if _audio_ready(): _audio.on_depart(route)
 	var trip := travel.depart(route, mode, state, rng)
+	# Spoilage and theft resolve per leg — GDD §9.2's brake is fares AND losses.
+	var losses := _market.travel_losses(state, route, int(trip["days"]), rng.fork("cargo"))
+	if not losses.is_empty():
+		var lr := executor.execute(state, losses, {"rng": rng, "event_id": "cargo-loss"})
+		for line in lr.log_lines:
+			_say("  [color=#8a4a3a]· %s[/color]" % line)
 	clock = WorldClock.new(state.jdn)
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [

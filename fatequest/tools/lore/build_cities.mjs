@@ -72,6 +72,10 @@ const LORE_TO_MAP = {
 // Band by longitude, used when a city has no lore record to inherit one from.
 function bandFor(lon, lat) {
   if (lon < 26) return "europe";
+  // NOTE: this only applies to cities with no lore record — where one exists,
+  // its band wins. Polo files the Arabian coast under his India book, so Aden
+  // and Dhofar are `india` here. That is the book's grouping, not an economic
+  // zone, and the two are not the same thing (see §economy note below).
   if (lon < 60) return lat < 25 ? "india" : "west_asia";
   if (lon < 78) return "central_asia";
   if (lon < 100) return lat > 41 ? "steppe" : "central_asia";

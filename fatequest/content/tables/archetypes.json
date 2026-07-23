@@ -20,7 +20,7 @@
         "travel": -1
       },
       "startKit": {
-        "coins": 22000,
+        "coins": 9000,
         "currency": "ducat",
         "goods": [],
         "items": [
@@ -54,7 +54,7 @@
         "wealth": -2
       },
       "startKit": {
-        "coins": 20000,
+        "coins": 8000,
         "currency": "silver-ingot",
         "goods": [],
         "items": [],
@@ -86,7 +86,7 @@
         "rapport": -1
       },
       "startKit": {
-        "coins": 46000,
+        "coins": 32000,
         "currency": "dinar",
         "goods": [],
         "items": [],

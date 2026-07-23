@@ -231,8 +231,7 @@
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"
-      ],
-      "mentorEvent": "ev-cambaluc-mentor-iching"
+      ]
     },
     {
       "id": "campichu",
@@ -1529,8 +1528,7 @@
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"
-      ],
-      "mentorEvent": "ev-zayton-mentor"
+      ]
     }
   ]
 }

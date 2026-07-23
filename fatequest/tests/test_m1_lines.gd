@@ -69,10 +69,18 @@ func _walk(db: ContentDb, arch: Dictionary, line: Dictionary) -> void:
 	if plan.is_empty():
 		return
 
+	# The traveller trades as they go. Before trade existed the purse had to
+	# prepay the whole itinerary, which is not the game GDD §9 describes: you
+	# set out with seed capital and the road pays for itself. Walking the line
+	# without trading is therefore no longer a fair test of whether it is
+	# walkable.
+	var market := Market.new(db)
+
 	var legs := 0
 	var stalled_reason := ""
 
 	for step in plan:
+		_trade_here(db, market, exec, st, clock)
 		var r: Dictionary = step["route"]
 		var m: String = step["mode"]
 		var av := travel.availability(r, st, clock.month(), m)
@@ -105,6 +113,40 @@ func _walk(db: ContentDb, arch: Dictionary, line: Dictionary) -> void:
 			line["arch"], legs, st.days_elapsed, years, st.coins / 100])
 		# A line nobody can afford is not walkable in any useful sense.
 		_ok(st.coins >= 0, "line %s: purse never went negative" % line["arch"])
+
+
+## Sell what this city wants; buy what it makes, if the hold and purse allow.
+## Deliberately simple — a player who thinks harder should do better than this,
+## and if even this keeps them solvent the line is walkable.
+func _trade_here(db: ContentDb, market: Market, exec: EffectExecutor,
+		st: WorldState, clock: WorldClock) -> void:
+	var city := db.get_record(st.city)
+	if city.is_empty() or not city.has("market"):
+		return
+
+	for gid in st.goods.keys():
+		var g := db.get_record(String(gid))
+		if g.is_empty():
+			continue
+		# Sell anywhere that is not the good's own home. Holding a cargo across
+		# leg after leg waiting for the perfect port is how a merchant runs out
+		# of money — and it also risks spoilage and theft the whole way.
+		if market.demand_tier(g, city) >= 1:
+			var lot := int(st.goods[gid])
+			for i in lot:
+				exec.execute(st, market.sell_effects(g, city, st.jdn, st.seed),
+					{"event_id": "m1-sell"})
+
+	# Spend at most half the purse on local goods, so a bad guess is survivable.
+	var budget := st.coins / 2
+	for g in market.stock(city):
+		if market.demand_tier(g, city) != 0:
+			continue
+		var chk := market.can_buy(g, city, st, st.jdn)
+		if not chk["ok"] or int(chk["price"]) > budget:
+			continue
+		exec.execute(st, market.buy_effects(g, city, st.jdn, st.seed), {"event_id": "m1-buy"})
+		budget -= int(chk["price"])
 
 
 func _dist(a: Array, b: Array) -> float:

@@ -261,7 +261,11 @@ const LINES = {
 // NOTE: until trade gives an income side (ROADMAP P4), the purse IS the whole
 // budget. Rebalance this margin when trading lands.
 {
-  const MARGIN = 1.5;
+  // With trade implemented the purse is seed capital, not a prepaid itinerary:
+  // it must cover the first legs and a first cargo, and the journey funds
+  // itself from there. Requiring the full fare up front made the merchant
+  // start with more silver than a leg of the trip could ever earn.
+  const MARGIN = 0.45;
   const tc = Object.fromEntries((byTable.transports ?? []).map((t) => [t.id, t]));
   const adj = new Map();
   for (const r of byTable.routes ?? []) {
@@ -298,7 +302,8 @@ const LINES = {
     if (fare === null) { err("G14", recordFile.get(a.id), `${a.id}: no farecheap path ${a.start} -> ${to}`); continue; }
     if (purse < fare * MARGIN)
       err("G14", recordFile.get(a.id),
-        `${a.id}: purse ${purse} < cheapest fare ${fare} x${MARGIN} = ${Math.ceil(fare * MARGIN)} (${a.start} -> ${to})`);
+        `${a.id}: purse ${purse} < seed capital ${Math.ceil(fare * MARGIN)} `
+        + `(${MARGIN} x cheapest fare ${fare}, ${a.start} -> ${to})`);
   }
 }
 

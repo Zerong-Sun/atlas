@@ -64,3 +64,6 @@ jobs:
       - name: Zayton vertical slice
         working-directory: fatequest
         run: godot --headless --script tests/smoke_zayton.gd
+      - name: Market smoke (buy through the UI)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_market.gd
