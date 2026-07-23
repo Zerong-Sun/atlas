@@ -12,6 +12,7 @@
  */
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../..", import.meta.url));
@@ -337,6 +338,55 @@ const LINES = {
   }
 }
 
+// ----------------------- G21: authored story text must be compiled and current
+// A translation whose source has since changed is worse than a missing one: it
+// reads as finished. The story/ authoring format records the source hash it was
+// made from, so drift is detectable — this gate surfaces it.
+{
+  const storyDir = join(ROOT, "content/story");
+  if (existsSync(storyDir)) {
+    for (const unit of readdirSync(storyDir)) {
+      const dir = join(storyDir, unit);
+      if (!statSync(dir).isDirectory()) continue;
+      const enPath = join(dir, "en.md");
+      if (!existsSync(enPath)) { warn("G21", `content/story/${unit}`, "no en.md source"); continue; }
+      const sections = (t) => {
+        const out = {};
+        let key = null, buf = [];
+        const body = t.replace(/^---[\s\S]*?\n---\n/, "");
+        for (const line of body.split("\n")) {
+          const h = line.match(/^##\s+(\S+)\s*$/);
+          if (h) { if (key) out[key] = buf.join("\n").trim(); key = h[1]; buf = []; }
+          else if (key !== null) buf.push(line);
+        }
+        if (key) out[key] = buf.join("\n").trim();
+        return out;
+      };
+      const en = sections(readFileSync(enPath, "utf8"));
+      for (const f of readdirSync(dir)) {
+        if (!f.endsWith(".md") || f === "en.md") continue;
+        const lang = f.slice(0, -3);
+        const text = readFileSync(join(dir, f), "utf8");
+        const stampBlock = text.match(/^stamps:\n((?: {2}.*\n)+)/m);
+        const stamps = {};
+        if (stampBlock) {
+          for (const line of stampBlock[1].split("\n")) {
+            const kv = line.trim().match(/^([\w.]+):\s*(\S+)$/);
+            if (kv) stamps[kv[1]] = kv[2];
+          }
+        }
+        const tr = sections(text);
+        for (const key of Object.keys(en)) {
+          const h = createHash("sha256").update(en[key], "utf8").digest("hex").slice(0, 12);
+          if (!(key in tr)) { warn("G21", `content/story/${unit}/${f}`, `${key}: not translated`); continue; }
+          if (stamps[key] && stamps[key] !== h)
+            err("G21", `content/story/${unit}/${f}`, `${key}: STALE — source changed since translation`);
+        }
+      }
+    }
+  }
+}
+
 // ------------------------------------------------- G12: map alignment
 if (existsSync(MAP)) {
   const geo = JSON.parse(readFileSync(MAP, "utf8"));
@@ -498,7 +548,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18","G20"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18","G21","G20"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

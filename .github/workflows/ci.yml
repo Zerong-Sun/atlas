@@ -24,6 +24,9 @@ jobs:
       - run: node scripts/validate-outcomes.mjs
       - run: node scripts/smoke-outcomes.mjs
       # Content gates G1/G2/G3/G8/G10/G12 — docs/DATA_MODEL.md §9
+      # Story text must be compiled from its authoring format, and no
+      # translation may be older than the source it was made from.
+      - run: node tools/lore/story.mjs check
       - run: node tools/validate/validate.mjs
       # Rng parity: the GDScript port must reproduce Atlas seed.ts bit-for-bit
       - run: node tools/parity/gen_rng_fixture.mjs && git diff --exit-code tools/parity/rng_fixture.json
