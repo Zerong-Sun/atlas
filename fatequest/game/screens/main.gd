@@ -32,28 +32,55 @@ func _ready() -> void:
 	DivinationBootstrap.register_all()
 
 	projection = MapProjection.from_config()
-	# Inset the drawable area. Zayton and Kinsay sit at ~120E, within a degree
-	# of the bbox edge, so a flush-to-edge projection clips the corridor's
-	# terminus and its labels straight off the screen.
-	projection.set_viewport(size.x - MARGIN * 2.0, size.y - 150.0 - MARGIN)
-	projection.origin = Vector2(MARGIN, MARGIN)
 
 	print("[boot] records: %d | cities: %d | routes: %d | methods: %s"
 		% [n, db.cities().size(), db.get_table("routes").size(), str(DivinationRegistry.ids())])
 	print("[boot] missing i18n keys: %d" % I18n.missing_keys().size())
 
+	# Control.size is still (0,0) during _ready(); absolute positions based on it
+	# shove the desk off-screen. Defer until after the full-rect layout pass.
+	call_deferred("_finish_boot")
+
+
+func _finish_boot() -> void:
+	_apply_projection()
 	_build_desk()
 
 
+func _apply_projection() -> void:
+	# Inset the drawable area. Zayton and Kinsay sit at ~120E, within a degree
+	# of the bbox edge, so a flush-to-edge projection clips the corridor's
+	# terminus and its labels straight off the screen.
+	var w := maxf(size.x, 1280.0)
+	var h := maxf(size.y, 720.0)
+	projection.set_viewport(w - MARGIN * 2.0, h - 150.0 - MARGIN)
+	projection.origin = Vector2(MARGIN, MARGIN)
+
+
 func _build_desk() -> void:
+	# Parchment plate so a blank dark window cannot be mistaken for a hang.
+	var bg := ColorRect.new()
+	bg.name = "BootBg"
+	bg.color = Color("2a241c")
+	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(bg)
+
+	var center := CenterContainer.new()
+	center.name = "BootCenter"
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(center)
+
 	_desk = VBoxContainer.new()
-	_desk.set_anchors_preset(Control.PRESET_CENTER)
-	_desk.position = size * 0.5 - Vector2(180, 90)
-	add_child(_desk)
+	_desk.alignment = BoxContainer.ALIGNMENT_CENTER
+	_desk.custom_minimum_size = Vector2(360, 0)
+	center.add_child(_desk)
 
 	var title := Label.new()
 	title.text = "远行之书\nThe Book of Far Roads"
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 28)
+	title.add_theme_color_override("font_color", Color("e8c46a"))
 	_desk.add_child(title)
 
 	var sub := Label.new()
@@ -62,6 +89,7 @@ func _build_desk() -> void:
 		db.get_table("goods").size(), db.get_table("retainers").size(),
 		DivinationRegistry.ids().size()]
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sub.add_theme_color_override("font_color", Color("cbb896"))
 	_desk.add_child(sub)
 
 	for a in db.get_table("archetypes"):
@@ -72,7 +100,13 @@ func _build_desk() -> void:
 
 
 func _begin(archetype: Dictionary) -> void:
-	_desk.queue_free()
+	var center := get_node_or_null("BootCenter")
+	if center:
+		center.queue_free()
+	var bg := get_node_or_null("BootBg")
+	if bg:
+		bg.queue_free()
+	_desk = null
 
 	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
 	rng = Rng.new("run:%s:%d" % [archetype.get("id", "x"), clock.date.jdn])
@@ -103,24 +137,30 @@ func rng_seed(a: Dictionary) -> String:
 
 
 func _build_map() -> void:
+	_apply_projection()
 	_map = preload("res://game/map/world_map.gd").new()
 	add_child(_map)
 	_map.setup(projection, db.cities(), db.get_table("routes"))
 	_map.city_clicked.connect(_on_city_clicked)
 
+	var w := maxf(size.x, 1280.0)
+	var h := maxf(size.y, 720.0)
+
 	_hud = Label.new()
-	_hud.position = Vector2(MARGIN, size.y - 140)
+	_hud.position = Vector2(MARGIN, h - 140)
+	_hud.add_theme_color_override("font_color", Color("2a1e12"))
 	add_child(_hud)
 
 	_log = RichTextLabel.new()
-	_log.position = Vector2(MARGIN, size.y - 112)
-	_log.size = Vector2(size.x * 0.5 - MARGIN, 104)
+	_log.position = Vector2(MARGIN, h - 112)
+	_log.size = Vector2(w * 0.5 - MARGIN, 104)
 	_log.bbcode_enabled = true
+	_log.add_theme_color_override("default_color", Color("2a1e12"))
 	add_child(_log)
 
 	_panel = VBoxContainer.new()
-	_panel.position = Vector2(size.x * 0.55, size.y - 140)
-	_panel.size = Vector2(size.x * 0.4, 130)
+	_panel.position = Vector2(w * 0.55, h - 140)
+	_panel.size = Vector2(w * 0.4, 130)
 	add_child(_panel)
 
 
