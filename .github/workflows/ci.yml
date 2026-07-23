@@ -79,3 +79,6 @@ jobs:
       - name: Save / load round trip
         working-directory: fatequest
         run: godot --headless --script tests/smoke_save.gd
+      - name: Retainers (hire through the UI, cargo linkage §11.7)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_party.gd

@@ -36,6 +36,5 @@ func run() -> bool:
 	var p := AudioMood.params(AudioMood.TENSION)
 	_ok(float(p["melody"]) == 0.0 and float(p["cutoff"]) < 2000.0, "tension darkens + drops melody")
 
-	if _fails == 0:
-		print("  audio mood/scene: ok")
+	print("test_audio: %s" % ("PASS" if _fails == 0 else "FAIL (%d)" % _fails))
 	return _fails == 0

@@ -585,12 +585,44 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// -------------------- G22: a retainer's hold must match the road they know
+// GDD §11.7 / AUDIT §9.1. The cargo linkage is the reason retainers exist, and
+// it only means anything if a sailor's hold is worthless on land and a porter's
+// is worthless at sea. Nothing in the schema enforces that — `cargo.condition`
+// is a free string sitting next to `roles`, and a copy-paste that gives a
+// sailor `land_only` would quietly hand the player six free land slots that no
+// test would notice. So check the two against each other here.
+{
+  const ROLE_ROAD = { porter: "land", caravaneer: "land", sailor: "sea", pilot: "sea" };
+  const OK_FOR = { land: ["land_only", "always"], sea: ["sea_only", "always"] };
+  for (const r of byTable.retainers ?? []) {
+    if (!r.cargo) continue;
+    const cond = r.cargo.condition ?? "always";
+    const slots = Number(r.cargo.slots ?? 0);
+
+    if (slots > 0 && cond === "always")
+      err("G22", `retainers:${r.id}`,
+        `cargo works on every road — a hold must be land_only or sea_only`);
+
+    // `kind` and `condition` are two spellings of the same fact; disagreement
+    // means one of them was edited and the other forgotten.
+    if (r.cargo.kind && !OK_FOR[r.cargo.kind]?.includes(cond))
+      err("G22", `retainers:${r.id}`,
+        `cargo.kind=${r.cargo.kind} but condition=${cond}`);
+
+    const road = (r.roles ?? []).map((x) => ROLE_ROAD[x]).find(Boolean);
+    if (road && !OK_FOR[road].includes(cond))
+      err("G22", `retainers:${r.id}`,
+        `roles=[${r.roles}] travel by ${road}, but cargo is ${cond}`);
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
