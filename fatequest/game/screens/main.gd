@@ -56,6 +56,7 @@ var _bag: Dictionary = {}
 var _settings: Dictionary = {}
 var _codex_layer: Control
 var _codex_view: PanelContainer
+var _archetype_id: String = ""
 
 
 func _ready() -> void:
@@ -127,6 +128,16 @@ func _build_desk() -> void:
 	sub.add_theme_color_override("font_color", Color("cbb896"))
 	_desk.add_child(sub)
 
+	if SaveGame.exists("auto") or SaveGame.exists("manual"):
+		var slot := "manual" if SaveGame.exists("manual") else "auto"
+		var head: Dictionary = SaveGame.read(slot).get("header", {})
+		var cont := Panels.styled_button("继续上次的旅程（%s · 第 %d 日）" % [
+			_city_name(String(head.get("city", ""))), int(head.get("days", 0))], Callable())
+		cont.pressed.connect(func():
+			_desk.queue_free()
+			_begin_loaded(slot))
+		_desk.add_child(cont)
+
 	for a in db.get_table("archetypes"):
 		var btn := Button.new()
 		btn.text = "%s  →  %s" % [I18n.t(a.get("name", "")), _city_name(a.get("start", ""))]
@@ -152,6 +163,7 @@ func _begin(archetype: Dictionary) -> void:
 	_market = Market.new(db)
 
 	state = WorldState.new()
+	_archetype_id = String(archetype.get("id", ""))
 	state.seed = rng_seed(archetype)
 	state.city = archetype.get("start", "tauris")
 	state.jdn = clock.date.jdn
@@ -169,6 +181,22 @@ func _begin(archetype: Dictionary) -> void:
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	if _audio_ready(): _audio.sfx("page")
 	_arrive()
+
+
+## Resume: build the same machinery a new run does, then restore the world into
+## it rather than starting one.
+func _begin_loaded(slot: String) -> void:
+	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
+	executor = EffectExecutor.new()
+	conditions = ConditionEvaluator.new()
+	events = EventMachine.new(db, conditions, executor)
+	travel = Travel.new(db, executor)
+	_market = Market.new(db)
+	state = WorldState.new()
+	rng = Rng.new("resume")
+	_build_map()
+	if not _load(slot):
+		_say("[color=#8a4a3a]读档失败[/color]")
 
 
 func rng_seed(a: Dictionary) -> String:
@@ -547,6 +575,22 @@ func _build_settings() -> void:
 	box.add_child(motion)
 
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+
+	var save_btn := Panels.styled_button("存档", Callable())
+	save_btn.pressed.connect(func():
+		var okd := _save("manual")
+		save_btn.text = "存档 ✓" if okd else "存档失败")
+	box.add_child(save_btn)
+
+	var load_btn := Panels.styled_button("读档", Callable())
+	load_btn.pressed.connect(func():
+		if _load("manual"):
+			_settings["layer"].visible = false
+		else:
+			load_btn.text = "无存档")
+	box.add_child(load_btn)
+
 	box.add_child(Panels.styled_button("合上", func(): _settings["layer"].visible = false))
 
 
@@ -579,6 +623,38 @@ func _open_city() -> void:
 	_city_view.visible = true
 	_city_view.show_city(c, state, conditions, _ctx())
 	_sync_city_status()
+
+
+## Autosave on arrival. GDD's journeys run to four hundred days; losing one to
+## a crash is the kind of thing a player does not come back from.
+func _autosave() -> void:
+	_save("auto")
+
+
+func _save(slot: String) -> bool:
+	return SaveGame.write(slot, state, clock, {"archetype": _archetype_id})
+
+
+func _load(slot: String) -> bool:
+	var doc := SaveGame.read(slot)
+	if doc.is_empty():
+		return false
+	var back := SaveGame.deserialize(doc)
+	state = back["state"]
+	clock = back["clock"]
+	_archetype_id = String((back["extra"] as Dictionary).get("archetype", _archetype_id))
+	# The RNG is reseeded from the saved seed, so a loaded world continues
+	# deterministically rather than diverging from the run that produced it.
+	rng = Rng.new(state.seed)
+	_say("[color=#4a6a4a]—— 读档：%s，第 %d 日 ——[/color]" % [_city_name(state.city), state.days_elapsed])
+	_refresh_hud()
+	_map.center_on(state.city)
+	_dialog_layer.visible = false
+	_market_layer.visible = false
+	_codex_layer.visible = false
+	_bag["layer"].visible = false
+	_open_city()
+	return true
 
 
 func _sync_city_status() -> void:

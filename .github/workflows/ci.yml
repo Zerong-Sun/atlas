@@ -76,3 +76,6 @@ jobs:
       - name: Codex browser
         working-directory: fatequest
         run: godot --headless --script tests/smoke_codex.gd
+      - name: Save / load round trip
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_save.gd
