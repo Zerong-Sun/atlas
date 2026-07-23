@@ -1,0 +1,78 @@
+{
+  "contentVersion": 1,
+  "table": "endings",
+  "records": [
+    {
+      "id": "end-returned-to-venice",
+      "layer": 2,
+      "name": "end.returned.name",
+      "conditions": { "visitedCities": 12, "flags": ["fl-reached-cambaluc"], "returnedToStart": true },
+      "epilogue": "end.returned.epilogue",
+      "variables": ["cities", "years", "start", "richestTrade"],
+      "sticker": "st-returned"
+    },
+    {
+      "id": "end-stayed-in-the-east",
+      "layer": 2,
+      "name": "end.stayed.name",
+      "conditions": { "flags": ["fl-reached-cambaluc"], "returnedToStart": false, "visitedCities": 15 },
+      "epilogue": "end.stayed.epilogue",
+      "variables": ["cities", "years", "lastCity", "faith"],
+      "sticker": "st-stayed"
+    },
+    {
+      "id": "end-witness-of-the-world",
+      "layer": 2,
+      "name": "end.witness.name",
+      "conditions": { "visitedCities": 30, "reputationBands": 4 },
+      "epilogue": "end.witness.epilogue",
+      "variables": ["cities", "years", "longestRoute"],
+      "sticker": "st-witness"
+    },
+    {
+      "id": "end-hundred-markets",
+      "layer": 3,
+      "name": "end.markets.name",
+      "conditions": { "visitedCities": 25, "netWorth": 5000000, "reputationBands": 3 },
+      "epilogue": "end.markets.epilogue",
+      "variables": ["cities", "years", "richestTrade"],
+      "sticker": "st-markets"
+    },
+    {
+      "id": "end-no-return",
+      "layer": 3,
+      "name": "end.no_return.name",
+      "conditions": { "visitedCities": 20, "returnedToStart": false, "reputationBands": 4 },
+      "epilogue": "end.no_return.epilogue",
+      "variables": ["cities", "years", "start", "lastCity"],
+      "sticker": "st-no-return"
+    },
+    {
+      "id": "end-cartographer",
+      "layer": 3,
+      "name": "end.cartographer.name",
+      "conditions": { "revealedRoutes": 60, "visitedCities": 20 },
+      "epilogue": "end.cartographer.epilogue",
+      "variables": ["cities", "years", "longestRoute"],
+      "sticker": "st-cartographer"
+    },
+    {
+      "id": "end-diviner",
+      "layer": 2,
+      "name": "end.diviner.name",
+      "conditions": { "learnedDivinations": ["iching", "bazi", "lot"], "visitedCities": 15 },
+      "epilogue": "end.diviner.epilogue",
+      "variables": ["cities", "years", "faith"],
+      "sticker": "st-diviner"
+    },
+    {
+      "id": "end-lay-down-the-pen",
+      "layer": 1,
+      "name": "end.lay_down.name",
+      "conditions": {},
+      "epilogue": "end.lay_down.epilogue",
+      "variables": ["cities", "years", "start", "lastCity", "faith", "richestTrade"],
+      "sticker": "st-lay-down"
+    }
+  ]
+}

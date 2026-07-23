@@ -58,7 +58,8 @@ for (const f of files) {
 const ids = (t) => new Set((byTable[t] ?? []).map((r) => r.id));
 const cityIds = ids("cities"), routeIds = ids("routes"),
       eventIds = ids("events"), transportIds = ids("transports"),
-      divIds = ids("divinations");
+      divIds = ids("divinations"), goodIds = ids("goods"),
+      retainerIds = ids("retainers"), endingIds = ids("endings");
 
 // ------------------------------------------------- G1: tier-graded fields
 // Graded per DATA_MODEL.md §6 — a `station` must NOT be reported for the
@@ -99,6 +100,40 @@ for (const r of byTable.routes ?? []) {
   ref(cityIds.has(r.to), "G2", f, `${r.id}.to -> "${r.to}" not found`);
   for (const m of r.modes ?? []) ref(transportIds.has(m), "G2", f, `${r.id}.modes -> "${m}" not found`);
   for (const e of r.encounters ?? []) { ref(eventIds.has(e), "G2", f, `${r.id}.encounters -> "${e}" not found`); mark(e); }
+}
+
+// G2 continued — the rest of the DATA_MODEL.md §5 reference graph. Without
+// these, "all gates pass" only means the three tables that existed first are
+// consistent, which is exactly the kind of false green that lets a broken
+// mentor or a phantom commodity ship.
+for (const c of byTable.cities ?? []) {
+  const f = recordFile.get(c.id);
+  if (c.mentor) { ref(retainerIds.has(c.mentor), "G2", f, `${c.id}.mentor -> "${c.mentor}" not found`); mark(c.mentor); }
+  if (c.specialty) { ref(goodIds.has(c.specialty), "G2", f, `${c.id}.specialty -> "${c.specialty}" not found`); mark(c.specialty); }
+  for (const g of c.market?.goods ?? []) { ref(goodIds.has(g), "G2", f, `${c.id}.market.goods -> "${g}" not found`); mark(g); }
+}
+for (const a of byTable.archetypes ?? []) {
+  const f = recordFile.get(a.id);
+  ref(cityIds.has(a.start), "G2", f, `${a.id}.start -> "${a.start}" not found`);
+  if (a.goal?.target) ref(cityIds.has(a.goal.target), "G2", f, `${a.id}.goal.target -> "${a.goal.target}" not found`);
+  for (const e of a.endings ?? []) { ref(endingIds.has(e), "G2", f, `${a.id}.endings -> "${e}" not found`); mark(e); }
+  for (const g of a.startKit?.goods ?? []) ref(goodIds.has(g), "G2", f, `${a.id}.startKit.goods -> "${g}" not found`);
+}
+for (const d of byTable.divinations ?? []) {
+  const f = recordFile.get(d.id);
+  for (const c of d.learnAt ?? []) ref(cityIds.has(c), "G2", f, `${d.id}.learnAt -> "${c}" not found`);
+  if (d.teacher) { ref(retainerIds.has(d.teacher), "G2", f, `${d.id}.teacher -> "${d.teacher}" not found`); mark(d.teacher); }
+}
+for (const r of byTable.retainers ?? []) {
+  const f = recordFile.get(r.id);
+  if (r.origin?.city) ref(cityIds.has(r.origin.city), "G2", f, `${r.id}.origin.city -> "${r.origin.city}" not found`);
+  for (const v of r.recruitAt ?? []) ref(cityIds.has(v.cityId), "G2", f, `${r.id}.recruitAt -> "${v.cityId}" not found`);
+  for (const rel of r.relations ?? []) ref(retainerIds.has(rel.retainerId), "G2", f, `${r.id}.relations -> "${rel.retainerId}" not found`);
+  if (r.questId) ref(eventIds.has(r.questId), "G2", f, `${r.id}.questId -> "${r.questId}" not found`);
+}
+for (const g of byTable.goods ?? []) {
+  const f = recordFile.get(g.id);
+  for (const e of g.events ?? []) { ref(eventIds.has(e), "G2", f, `${g.id}.events -> "${e}" not found`); mark(e); }
 }
 
 // --------------------------------- G10: every effect carries a reason

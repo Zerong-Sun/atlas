@@ -1,0 +1,4229 @@
+{
+  "contentVersion": 1,
+  "table": "retainers",
+  "records": [
+    {
+      "id": "npc-baldacum-mentor",
+      "name": "npc.npc-baldacum-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "baldacum",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "baldacum",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 21,
+        "guard": 7,
+        "trade": 11,
+        "language": 23,
+        "medicine": 1,
+        "cartography": 13,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 24,
+        "road": 23,
+        "success": 23
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-baldacum-mentor.omen",
+      "teaches": "etiquette"
+    },
+    {
+      "id": "npc-ormus-mentor",
+      "name": "npc.npc-ormus-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "ormus",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "ormus",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 21,
+        "guard": 7,
+        "trade": 11,
+        "language": 23,
+        "medicine": 1,
+        "cartography": 13,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 16,
+        "courage": 13,
+        "greed": 10,
+        "curiosity": 15,
+        "piety": 12,
+        "ambition": 11,
+        "adaptability": 14,
+        "honesty": 17
+      },
+      "fate": {
+        "company": 12,
+        "road": 11,
+        "success": 11
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-ormus-mentor.omen",
+      "teaches": "etiquette"
+    },
+    {
+      "id": "npc-tauris-mentor",
+      "name": "npc.npc-tauris-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "tauris",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "tauris",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 21,
+        "guard": 7,
+        "trade": 11,
+        "language": 23,
+        "medicine": 1,
+        "cartography": 13,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 12,
+        "courage": 9,
+        "greed": 6,
+        "curiosity": 11,
+        "piety": 8,
+        "ambition": 7,
+        "adaptability": 10,
+        "honesty": 13
+      },
+      "fate": {
+        "company": 15,
+        "road": 14,
+        "success": 14
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-tauris-mentor.omen",
+      "teaches": "etiquette"
+    },
+    {
+      "id": "npc-balc-mentor",
+      "name": "npc.npc-balc-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "balc",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "balc",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 25,
+        "guard": 11,
+        "trade": 15,
+        "language": 27,
+        "medicine": 5,
+        "cartography": 17,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 22,
+        "courage": 19,
+        "greed": 16,
+        "curiosity": 21,
+        "piety": 18,
+        "ambition": 17,
+        "adaptability": 20,
+        "honesty": 23
+      },
+      "fate": {
+        "company": 19,
+        "road": 18,
+        "success": 18
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-balc-mentor.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-cascar-mentor",
+      "name": "npc.npc-cascar-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "cascar",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cascar",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 27,
+        "guard": 13,
+        "trade": 17,
+        "language": 29,
+        "medicine": 7,
+        "cartography": 19,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 10,
+        "road": 9,
+        "success": 9
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cascar-mentor.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-cotan-mentor",
+      "name": "npc.npc-cotan-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "cotan",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cotan",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 23,
+        "guard": 9,
+        "trade": 13,
+        "language": 25,
+        "medicine": 3,
+        "cartography": 15,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 17,
+        "courage": 14,
+        "greed": 11,
+        "curiosity": 16,
+        "piety": 13,
+        "ambition": 12,
+        "adaptability": 15,
+        "honesty": 18
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cotan-mentor.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-lop-guide",
+      "name": "npc.npc-lop-guide.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "lop",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "lop",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 22,
+        "guard": 8,
+        "trade": 12,
+        "language": 24,
+        "medicine": 2,
+        "cartography": 14,
+        "faith": 4,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 22,
+        "road": 21,
+        "success": 21
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-lop-guide.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-samarcanda-mentor",
+      "name": "npc.npc-samarcanda-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "samarcanda",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "samarcanda",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 21,
+        "guard": 7,
+        "trade": 11,
+        "language": 23,
+        "medicine": 1,
+        "cartography": 13,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 25,
+        "road": 24,
+        "success": 24
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-samarcanda-mentor.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-chandu-mentor",
+      "name": "npc.npc-chandu-mentor.name",
+      "roles": [
+        "guide",
+        "interpreter"
+      ],
+      "origin": {
+        "city": "chandu",
+        "culture": "steppe",
+        "faith": "folk"
+      },
+      "languages": [
+        "turkic",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "chandu",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 26,
+        "guard": 12,
+        "trade": 16,
+        "language": 28,
+        "medicine": 6,
+        "cartography": 18,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 16,
+        "road": 15,
+        "success": 15
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-chandu-mentor.omen",
+      "teaches": "travel"
+    },
+    {
+      "id": "npc-cambaluc-mentor",
+      "name": "npc.npc-cambaluc-mentor.name",
+      "roles": [
+        "diviner"
+      ],
+      "origin": {
+        "city": "cambaluc",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cambaluc",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 9,
+        "trade": 11,
+        "language": 17,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 23,
+        "divination": 29,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 19,
+        "courage": 16,
+        "greed": 13,
+        "curiosity": 18,
+        "piety": 15,
+        "ambition": 14,
+        "adaptability": 17,
+        "honesty": 20
+      },
+      "fate": {
+        "company": 23,
+        "road": 22,
+        "success": 22
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cambaluc-mentor.omen",
+      "teaches": "divination"
+    },
+    {
+      "id": "npc-kinsay-mentor",
+      "name": "npc.npc-kinsay-mentor.name",
+      "roles": [
+        "diviner"
+      ],
+      "origin": {
+        "city": "kinsay",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "kinsay",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 10,
+        "guard": 8,
+        "trade": 10,
+        "language": 16,
+        "medicine": 6,
+        "cartography": 6,
+        "faith": 22,
+        "divination": 28,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 25,
+        "road": 24,
+        "success": 24
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-kinsay-mentor.omen",
+      "teaches": "divination"
+    },
+    {
+      "id": "npc-zayton-mentor",
+      "name": "npc.npc-zayton-mentor.name",
+      "roles": [
+        "diviner"
+      ],
+      "origin": {
+        "city": "zayton",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "zayton",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 9,
+        "trade": 11,
+        "language": 17,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 23,
+        "divination": 29,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 25,
+        "courage": 22,
+        "greed": 19,
+        "curiosity": 24,
+        "piety": 21,
+        "ambition": 20,
+        "adaptability": 23,
+        "honesty": 26
+      },
+      "fate": {
+        "company": 9,
+        "road": 8,
+        "success": 8
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-zayton-mentor.omen",
+      "teaches": "divination"
+    },
+    {
+      "id": "npc-tauris-guide",
+      "name": "npc.npc-tauris-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "tauris",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "tauris",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 26,
+        "guard": 12,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 18,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 13,
+        "courage": 10,
+        "greed": 7,
+        "curiosity": 12,
+        "piety": 9,
+        "ambition": 8,
+        "adaptability": 11,
+        "honesty": 14
+      },
+      "fate": {
+        "company": 13,
+        "road": 12,
+        "success": 12
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-tauris-guide.omen"
+    },
+    {
+      "id": "npc-tauris-interpreter",
+      "name": "npc.npc-tauris-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "tauris",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "tauris",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 9,
+        "guard": 7,
+        "trade": 15,
+        "language": 27,
+        "medicine": 5,
+        "cartography": 5,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 11,
+        "courage": 8,
+        "greed": 5,
+        "curiosity": 10,
+        "piety": 7,
+        "ambition": 6,
+        "adaptability": 9,
+        "honesty": 12
+      },
+      "fate": {
+        "company": 26,
+        "road": 25,
+        "success": 25
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-tauris-interpreter.omen"
+    },
+    {
+      "id": "npc-tauris-porter",
+      "name": "npc.npc-tauris-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "tauris",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "tauris",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 5,
+        "trade": 5,
+        "language": 5,
+        "medicine": 1,
+        "cartography": 1,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 9
+      },
+      "traits": {
+        "loyalty": 19,
+        "courage": 16,
+        "greed": 13,
+        "curiosity": 18,
+        "piety": 15,
+        "ambition": 14,
+        "adaptability": 17,
+        "honesty": 20
+      },
+      "fate": {
+        "company": 22,
+        "road": 21,
+        "success": 21
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-tauris-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-baldacum-guide",
+      "name": "npc.npc-baldacum-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "baldacum",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "baldacum",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 26,
+        "guard": 12,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 18,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 21,
+        "courage": 18,
+        "greed": 15,
+        "curiosity": 20,
+        "piety": 17,
+        "ambition": 16,
+        "adaptability": 19,
+        "honesty": 22
+      },
+      "fate": {
+        "company": 22,
+        "road": 21,
+        "success": 21
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-baldacum-guide.omen"
+    },
+    {
+      "id": "npc-baldacum-interpreter",
+      "name": "npc.npc-baldacum-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "baldacum",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "baldacum",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 9,
+        "guard": 7,
+        "trade": 15,
+        "language": 27,
+        "medicine": 5,
+        "cartography": 5,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 19,
+        "courage": 16,
+        "greed": 13,
+        "curiosity": 18,
+        "piety": 15,
+        "ambition": 14,
+        "adaptability": 17,
+        "honesty": 20
+      },
+      "fate": {
+        "company": 16,
+        "road": 15,
+        "success": 15
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-baldacum-interpreter.omen"
+    },
+    {
+      "id": "npc-baldacum-porter",
+      "name": "npc.npc-baldacum-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "baldacum",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "baldacum",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 5,
+        "trade": 5,
+        "language": 5,
+        "medicine": 1,
+        "cartography": 1,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 9
+      },
+      "traits": {
+        "loyalty": 10,
+        "courage": 7,
+        "greed": 4,
+        "curiosity": 9,
+        "piety": 6,
+        "ambition": 5,
+        "adaptability": 8,
+        "honesty": 11
+      },
+      "fate": {
+        "company": 12,
+        "road": 11,
+        "success": 11
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-baldacum-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-ormus-guide",
+      "name": "npc.npc-ormus-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "ormus",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "ormus",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 26,
+        "guard": 12,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 18,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 17,
+        "courage": 14,
+        "greed": 11,
+        "curiosity": 16,
+        "piety": 13,
+        "ambition": 12,
+        "adaptability": 15,
+        "honesty": 18
+      },
+      "fate": {
+        "company": 10,
+        "road": 9,
+        "success": 9
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-ormus-guide.omen"
+    },
+    {
+      "id": "npc-ormus-interpreter",
+      "name": "npc.npc-ormus-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "ormus",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "ormus",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 9,
+        "guard": 7,
+        "trade": 15,
+        "language": 27,
+        "medicine": 5,
+        "cartography": 5,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 15,
+        "courage": 12,
+        "greed": 9,
+        "curiosity": 14,
+        "piety": 11,
+        "ambition": 10,
+        "adaptability": 13,
+        "honesty": 16
+      },
+      "fate": {
+        "company": 23,
+        "road": 22,
+        "success": 22
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-ormus-interpreter.omen"
+    },
+    {
+      "id": "npc-ormus-porter",
+      "name": "npc.npc-ormus-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "ormus",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "ormus",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 5,
+        "trade": 5,
+        "language": 5,
+        "medicine": 1,
+        "cartography": 1,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 9
+      },
+      "traits": {
+        "loyalty": 23,
+        "courage": 20,
+        "greed": 17,
+        "curiosity": 22,
+        "piety": 19,
+        "ambition": 18,
+        "adaptability": 21,
+        "honesty": 24
+      },
+      "fate": {
+        "company": 19,
+        "road": 18,
+        "success": 18
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-ormus-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-balc-guide",
+      "name": "npc.npc-balc-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "balc",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "balc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 23,
+        "guard": 9,
+        "trade": 7,
+        "language": 7,
+        "medicine": 3,
+        "cartography": 15,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 23,
+        "courage": 20,
+        "greed": 17,
+        "curiosity": 22,
+        "piety": 19,
+        "ambition": 18,
+        "adaptability": 21,
+        "honesty": 24
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-balc-guide.omen"
+    },
+    {
+      "id": "npc-balc-interpreter",
+      "name": "npc.npc-balc-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "balc",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "balc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 6,
+        "guard": 4,
+        "trade": 12,
+        "language": 24,
+        "medicine": 2,
+        "cartography": 2,
+        "faith": 4,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 21,
+        "courage": 18,
+        "greed": 15,
+        "curiosity": 20,
+        "piety": 17,
+        "ambition": 16,
+        "adaptability": 19,
+        "honesty": 22
+      },
+      "fate": {
+        "company": 11,
+        "road": 10,
+        "success": 10
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-balc-interpreter.omen"
+    },
+    {
+      "id": "npc-balc-porter",
+      "name": "npc.npc-balc-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "balc",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "balc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 15,
+        "guard": 9,
+        "trade": 9,
+        "language": 9,
+        "medicine": 5,
+        "cartography": 5,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 13
+      },
+      "traits": {
+        "loyalty": 12,
+        "courage": 9,
+        "greed": 6,
+        "curiosity": 11,
+        "piety": 8,
+        "ambition": 7,
+        "adaptability": 10,
+        "honesty": 13
+      },
+      "fate": {
+        "company": 26,
+        "road": 25,
+        "success": 25
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-balc-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-samarcanda-guide",
+      "name": "npc.npc-samarcanda-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "samarcanda",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "samarcanda",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 26,
+        "guard": 12,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 18,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 10,
+        "courage": 7,
+        "greed": 4,
+        "curiosity": 9,
+        "piety": 6,
+        "ambition": 5,
+        "adaptability": 8,
+        "honesty": 11
+      },
+      "fate": {
+        "company": 23,
+        "road": 22,
+        "success": 22
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-samarcanda-guide.omen"
+    },
+    {
+      "id": "npc-samarcanda-interpreter",
+      "name": "npc.npc-samarcanda-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "samarcanda",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "samarcanda",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 9,
+        "guard": 7,
+        "trade": 15,
+        "language": 27,
+        "medicine": 5,
+        "cartography": 5,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 25,
+        "courage": 22,
+        "greed": 19,
+        "curiosity": 24,
+        "piety": 21,
+        "ambition": 20,
+        "adaptability": 23,
+        "honesty": 26
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-samarcanda-interpreter.omen"
+    },
+    {
+      "id": "npc-samarcanda-porter",
+      "name": "npc.npc-samarcanda-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "samarcanda",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "samarcanda",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 5,
+        "trade": 5,
+        "language": 5,
+        "medicine": 1,
+        "cartography": 1,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 9
+      },
+      "traits": {
+        "loyalty": 16,
+        "courage": 13,
+        "greed": 10,
+        "curiosity": 15,
+        "piety": 12,
+        "ambition": 11,
+        "adaptability": 14,
+        "honesty": 17
+      },
+      "fate": {
+        "company": 13,
+        "road": 12,
+        "success": 12
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-samarcanda-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-cascar-guide",
+      "name": "npc.npc-cascar-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "cascar",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cascar",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 25,
+        "guard": 11,
+        "trade": 9,
+        "language": 9,
+        "medicine": 5,
+        "cartography": 17,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 21,
+        "courage": 18,
+        "greed": 15,
+        "curiosity": 20,
+        "piety": 17,
+        "ambition": 16,
+        "adaptability": 19,
+        "honesty": 22
+      },
+      "fate": {
+        "company": 8,
+        "road": 7,
+        "success": 7
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cascar-guide.omen"
+    },
+    {
+      "id": "npc-cascar-interpreter",
+      "name": "npc.npc-cascar-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "cascar",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cascar",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 8,
+        "guard": 6,
+        "trade": 14,
+        "language": 26,
+        "medicine": 4,
+        "cartography": 4,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 19,
+        "courage": 16,
+        "greed": 13,
+        "curiosity": 18,
+        "piety": 15,
+        "ambition": 14,
+        "adaptability": 17,
+        "honesty": 20
+      },
+      "fate": {
+        "company": 21,
+        "road": 20,
+        "success": 20
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cascar-interpreter.omen"
+    },
+    {
+      "id": "npc-cascar-porter",
+      "name": "npc.npc-cascar-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "cascar",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cascar",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 17,
+        "guard": 11,
+        "trade": 11,
+        "language": 11,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 15
+      },
+      "traits": {
+        "loyalty": 10,
+        "courage": 7,
+        "greed": 4,
+        "curiosity": 9,
+        "piety": 6,
+        "ambition": 5,
+        "adaptability": 8,
+        "honesty": 11
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cascar-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-cotan-guide",
+      "name": "npc.npc-cotan-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "cotan",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cotan",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 21,
+        "guard": 7,
+        "trade": 5,
+        "language": 5,
+        "medicine": 1,
+        "cartography": 13,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 18,
+        "courage": 15,
+        "greed": 12,
+        "curiosity": 17,
+        "piety": 14,
+        "ambition": 13,
+        "adaptability": 16,
+        "honesty": 19
+      },
+      "fate": {
+        "company": 15,
+        "road": 14,
+        "success": 14
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cotan-guide.omen"
+    },
+    {
+      "id": "npc-cotan-interpreter",
+      "name": "npc.npc-cotan-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "cotan",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cotan",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 9,
+        "trade": 17,
+        "language": 29,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 16,
+        "courage": 13,
+        "greed": 10,
+        "curiosity": 15,
+        "piety": 12,
+        "ambition": 11,
+        "adaptability": 14,
+        "honesty": 17
+      },
+      "fate": {
+        "company": 9,
+        "road": 8,
+        "success": 8
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cotan-interpreter.omen"
+    },
+    {
+      "id": "npc-cotan-porter",
+      "name": "npc.npc-cotan-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "cotan",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cotan",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 13,
+        "guard": 7,
+        "trade": 7,
+        "language": 7,
+        "medicine": 3,
+        "cartography": 3,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 11
+      },
+      "traits": {
+        "loyalty": 24,
+        "courage": 21,
+        "greed": 18,
+        "curiosity": 23,
+        "piety": 20,
+        "ambition": 19,
+        "adaptability": 22,
+        "honesty": 25
+      },
+      "fate": {
+        "company": 24,
+        "road": 23,
+        "success": 23
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cotan-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-lop-interpreter",
+      "name": "npc.npc-lop-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "lop",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "lop",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 5,
+        "guard": 3,
+        "trade": 11,
+        "language": 23,
+        "medicine": 1,
+        "cartography": 1,
+        "faith": 3,
+        "divination": 0,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 18,
+        "courage": 15,
+        "greed": 12,
+        "curiosity": 17,
+        "piety": 14,
+        "ambition": 13,
+        "adaptability": 16,
+        "honesty": 19
+      },
+      "fate": {
+        "company": 16,
+        "road": 15,
+        "success": 15
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-lop-interpreter.omen"
+    },
+    {
+      "id": "npc-lop-porter",
+      "name": "npc.npc-lop-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "lop",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "lop",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 14,
+        "guard": 8,
+        "trade": 8,
+        "language": 8,
+        "medicine": 4,
+        "cartography": 4,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 12
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 12,
+        "road": 11,
+        "success": 11
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-lop-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-sachiu-guide",
+      "name": "npc.npc-sachiu-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "sachiu",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "sachiu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 27,
+        "guard": 13,
+        "trade": 11,
+        "language": 11,
+        "medicine": 7,
+        "cartography": 19,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 24,
+        "road": 23,
+        "success": 23
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-sachiu-guide.omen"
+    },
+    {
+      "id": "npc-sachiu-interpreter",
+      "name": "npc.npc-sachiu-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "sachiu",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "sachiu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 10,
+        "guard": 8,
+        "trade": 16,
+        "language": 28,
+        "medicine": 6,
+        "cartography": 6,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 2
+      },
+      "traits": {
+        "loyalty": 18,
+        "courage": 15,
+        "greed": 12,
+        "curiosity": 17,
+        "piety": 14,
+        "ambition": 13,
+        "adaptability": 16,
+        "honesty": 19
+      },
+      "fate": {
+        "company": 18,
+        "road": 17,
+        "success": 17
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-sachiu-interpreter.omen"
+    },
+    {
+      "id": "npc-sachiu-porter",
+      "name": "npc.npc-sachiu-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "sachiu",
+        "culture": "steppe",
+        "faith": "islam"
+      },
+      "languages": [
+        "persian",
+        "turkic"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "sachiu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 12,
+        "guard": 6,
+        "trade": 6,
+        "language": 6,
+        "medicine": 2,
+        "cartography": 2,
+        "faith": 4,
+        "divination": 0,
+        "cargo": 10
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 14,
+        "road": 13,
+        "success": 13
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-sachiu-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-chandu-guide",
+      "name": "npc.npc-chandu-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "chandu",
+        "culture": "steppe",
+        "faith": "folk"
+      },
+      "languages": [
+        "turkic",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "chandu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 24,
+        "guard": 10,
+        "trade": 8,
+        "language": 8,
+        "medicine": 4,
+        "cartography": 16,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 10,
+        "courage": 7,
+        "greed": 4,
+        "curiosity": 9,
+        "piety": 6,
+        "ambition": 5,
+        "adaptability": 8,
+        "honesty": 11
+      },
+      "fate": {
+        "company": 14,
+        "road": 13,
+        "success": 13
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-chandu-guide.omen"
+    },
+    {
+      "id": "npc-chandu-interpreter",
+      "name": "npc.npc-chandu-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "chandu",
+        "culture": "steppe",
+        "faith": "folk"
+      },
+      "languages": [
+        "turkic",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "chandu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 7,
+        "guard": 5,
+        "trade": 13,
+        "language": 25,
+        "medicine": 3,
+        "cartography": 3,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 25,
+        "courage": 22,
+        "greed": 19,
+        "curiosity": 24,
+        "piety": 21,
+        "ambition": 20,
+        "adaptability": 23,
+        "honesty": 26
+      },
+      "fate": {
+        "company": 8,
+        "road": 7,
+        "success": 7
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-chandu-interpreter.omen"
+    },
+    {
+      "id": "npc-chandu-porter",
+      "name": "npc.npc-chandu-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "chandu",
+        "culture": "steppe",
+        "faith": "folk"
+      },
+      "languages": [
+        "turkic",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "chandu",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 16,
+        "guard": 10,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 6,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 14
+      },
+      "traits": {
+        "loyalty": 16,
+        "courage": 13,
+        "greed": 10,
+        "curiosity": 15,
+        "piety": 12,
+        "ambition": 11,
+        "adaptability": 14,
+        "honesty": 17
+      },
+      "fate": {
+        "company": 23,
+        "road": 22,
+        "success": 22
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-chandu-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-cambaluc-guide",
+      "name": "npc.npc-cambaluc-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "cambaluc",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cambaluc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 25,
+        "guard": 11,
+        "trade": 9,
+        "language": 9,
+        "medicine": 5,
+        "cartography": 17,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 20,
+        "courage": 17,
+        "greed": 14,
+        "curiosity": 19,
+        "piety": 16,
+        "ambition": 15,
+        "adaptability": 18,
+        "honesty": 21
+      },
+      "fate": {
+        "company": 21,
+        "road": 20,
+        "success": 20
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cambaluc-guide.omen"
+    },
+    {
+      "id": "npc-cambaluc-interpreter",
+      "name": "npc.npc-cambaluc-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "cambaluc",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cambaluc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 8,
+        "guard": 6,
+        "trade": 14,
+        "language": 26,
+        "medicine": 4,
+        "cartography": 4,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 18,
+        "courage": 15,
+        "greed": 12,
+        "curiosity": 17,
+        "piety": 14,
+        "ambition": 13,
+        "adaptability": 16,
+        "honesty": 19
+      },
+      "fate": {
+        "company": 15,
+        "road": 14,
+        "success": 14
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cambaluc-interpreter.omen"
+    },
+    {
+      "id": "npc-cambaluc-porter",
+      "name": "npc.npc-cambaluc-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "cambaluc",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "cambaluc",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 17,
+        "guard": 11,
+        "trade": 11,
+        "language": 11,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 15
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 11,
+        "road": 10,
+        "success": 10
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-cambaluc-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-kinsay-guide",
+      "name": "npc.npc-kinsay-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "kinsay",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "kinsay",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 24,
+        "guard": 10,
+        "trade": 8,
+        "language": 8,
+        "medicine": 4,
+        "cartography": 16,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 21,
+        "courage": 18,
+        "greed": 15,
+        "curiosity": 20,
+        "piety": 17,
+        "ambition": 16,
+        "adaptability": 19,
+        "honesty": 22
+      },
+      "fate": {
+        "company": 23,
+        "road": 22,
+        "success": 22
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-kinsay-guide.omen"
+    },
+    {
+      "id": "npc-kinsay-interpreter",
+      "name": "npc.npc-kinsay-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "kinsay",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "kinsay",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 7,
+        "guard": 5,
+        "trade": 13,
+        "language": 25,
+        "medicine": 3,
+        "cartography": 3,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 19,
+        "courage": 16,
+        "greed": 13,
+        "curiosity": 18,
+        "piety": 15,
+        "ambition": 14,
+        "adaptability": 17,
+        "honesty": 20
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-kinsay-interpreter.omen"
+    },
+    {
+      "id": "npc-kinsay-porter",
+      "name": "npc.npc-kinsay-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "kinsay",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "kinsay",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 16,
+        "guard": 10,
+        "trade": 10,
+        "language": 10,
+        "medicine": 6,
+        "cartography": 6,
+        "faith": 8,
+        "divination": 4,
+        "cargo": 14
+      },
+      "traits": {
+        "loyalty": 10,
+        "courage": 7,
+        "greed": 4,
+        "curiosity": 9,
+        "piety": 6,
+        "ambition": 5,
+        "adaptability": 8,
+        "honesty": 11
+      },
+      "fate": {
+        "company": 13,
+        "road": 12,
+        "success": 12
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-kinsay-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-zayton-guide",
+      "name": "npc.npc-zayton-guide.name",
+      "roles": [
+        "guide"
+      ],
+      "origin": {
+        "city": "zayton",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "zayton",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 350,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 25,
+        "guard": 11,
+        "trade": 9,
+        "language": 9,
+        "medicine": 5,
+        "cartography": 17,
+        "faith": 7,
+        "divination": 3,
+        "cargo": 1
+      },
+      "traits": {
+        "loyalty": 26,
+        "courage": 23,
+        "greed": 20,
+        "curiosity": 25,
+        "piety": 22,
+        "ambition": 21,
+        "adaptability": 24,
+        "honesty": 27
+      },
+      "fate": {
+        "company": 26,
+        "road": 25,
+        "success": 25
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-zayton-guide.omen"
+    },
+    {
+      "id": "npc-zayton-interpreter",
+      "name": "npc.npc-zayton-interpreter.name",
+      "roles": [
+        "interpreter"
+      ],
+      "origin": {
+        "city": "zayton",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "zayton",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 300,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 8,
+        "guard": 6,
+        "trade": 14,
+        "language": 26,
+        "medicine": 4,
+        "cartography": 4,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 0
+      },
+      "traits": {
+        "loyalty": 24,
+        "courage": 21,
+        "greed": 18,
+        "curiosity": 23,
+        "piety": 20,
+        "ambition": 19,
+        "adaptability": 22,
+        "honesty": 25
+      },
+      "fate": {
+        "company": 20,
+        "road": 19,
+        "success": 19
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-zayton-interpreter.omen"
+    },
+    {
+      "id": "npc-zayton-porter",
+      "name": "npc.npc-zayton-porter.name",
+      "roles": [
+        "porter"
+      ],
+      "origin": {
+        "city": "zayton",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "zayton",
+          "venue": "market"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 200,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 17,
+        "guard": 11,
+        "trade": 11,
+        "language": 11,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 9,
+        "divination": 5,
+        "cargo": 15
+      },
+      "traits": {
+        "loyalty": 15,
+        "courage": 12,
+        "greed": 9,
+        "curiosity": 14,
+        "piety": 11,
+        "ambition": 10,
+        "adaptability": 13,
+        "honesty": 16
+      },
+      "fate": {
+        "company": 16,
+        "road": 15,
+        "success": 15
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-zayton-porter.omen",
+      "cargo": {
+        "kind": "land",
+        "slots": 4,
+        "condition": "land_only"
+      }
+    },
+    {
+      "id": "npc-ormus-sailor",
+      "name": "npc.npc-ormus-sailor.name",
+      "roles": [
+        "sailor"
+      ],
+      "origin": {
+        "city": "ormus",
+        "culture": "islamic",
+        "faith": "islam"
+      },
+      "languages": [
+        "arabic",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "ormus",
+          "venue": "harbour"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 400,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 20,
+        "guard": 10,
+        "trade": 8,
+        "language": 8,
+        "medicine": 4,
+        "cartography": 4,
+        "faith": 6,
+        "divination": 2,
+        "cargo": 8
+      },
+      "traits": {
+        "loyalty": 22,
+        "courage": 19,
+        "greed": 16,
+        "curiosity": 21,
+        "piety": 18,
+        "ambition": 17,
+        "adaptability": 20,
+        "honesty": 23
+      },
+      "fate": {
+        "company": 20,
+        "road": 19,
+        "success": 19
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-ormus-sailor.omen",
+      "cargo": {
+        "kind": "sea",
+        "slots": 6,
+        "condition": "sea_only"
+      }
+    },
+    {
+      "id": "npc-melibar-sailor",
+      "name": "npc.npc-melibar-sailor.name",
+      "roles": [
+        "sailor"
+      ],
+      "origin": {
+        "city": "melibar",
+        "culture": "indian_ocean",
+        "faith": "hindu"
+      },
+      "languages": [
+        "tamil",
+        "persian"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "melibar",
+          "venue": "harbour"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 400,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 18,
+        "guard": 8,
+        "trade": 6,
+        "language": 6,
+        "medicine": 2,
+        "cartography": 2,
+        "faith": 4,
+        "divination": 0,
+        "cargo": 6
+      },
+      "traits": {
+        "loyalty": 18,
+        "courage": 15,
+        "greed": 12,
+        "curiosity": 17,
+        "piety": 14,
+        "ambition": 13,
+        "adaptability": 16,
+        "honesty": 19
+      },
+      "fate": {
+        "company": 15,
+        "road": 14,
+        "success": 14
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-melibar-sailor.omen",
+      "cargo": {
+        "kind": "sea",
+        "slots": 6,
+        "condition": "sea_only"
+      }
+    },
+    {
+      "id": "npc-zayton-sailor",
+      "name": "npc.npc-zayton-sailor.name",
+      "roles": [
+        "sailor"
+      ],
+      "origin": {
+        "city": "zayton",
+        "culture": "east_asia",
+        "faith": "buddhism"
+      },
+      "languages": [
+        "chinese",
+        "mongol"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "zayton",
+          "venue": "harbour"
+        }
+      ],
+      "hireMode": [
+        "open",
+        "divined"
+      ],
+      "wage": {
+        "amount": 400,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 19,
+        "guard": 9,
+        "trade": 7,
+        "language": 7,
+        "medicine": 3,
+        "cartography": 3,
+        "faith": 5,
+        "divination": 1,
+        "cargo": 7
+      },
+      "traits": {
+        "loyalty": 14,
+        "courage": 11,
+        "greed": 8,
+        "curiosity": 13,
+        "piety": 10,
+        "ambition": 9,
+        "adaptability": 12,
+        "honesty": 15
+      },
+      "fate": {
+        "company": 17,
+        "road": 16,
+        "success": 16
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 2
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-zayton-sailor.omen",
+      "cargo": {
+        "kind": "sea",
+        "slots": 6,
+        "condition": "sea_only"
+      }
+    }
+  ]
+}

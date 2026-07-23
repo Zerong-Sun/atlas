@@ -30,7 +30,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -63,7 +75,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -97,7 +121,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -130,7 +166,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -174,7 +222,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.18
       },
@@ -185,7 +245,7 @@
         ]
       },
       "mentor": "npc-baldacum-mentor",
-      "specialty": "sp-baldacum",
+      "specialty": "damascus-steel",
       "calendars": [
         "islamic"
       ]
@@ -244,7 +304,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -343,7 +415,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -389,7 +473,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -423,7 +519,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -485,7 +593,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -576,7 +696,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -643,7 +775,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -683,7 +827,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -840,7 +996,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.18
       },
@@ -851,7 +1019,7 @@
         ]
       },
       "mentor": "npc-ormus-mentor",
-      "specialty": "sp-ormus",
+      "specialty": "damascus-steel",
       "calendars": [
         "islamic"
       ]
@@ -1007,7 +1175,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.18
       },
@@ -1018,7 +1198,7 @@
         ]
       },
       "mentor": "npc-tauris-mentor",
-      "specialty": "sp-tauris",
+      "specialty": "damascus-steel",
       "calendars": [
         "islamic"
       ]
@@ -1049,7 +1229,19 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },
@@ -1145,7 +1337,19 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "frankincense",
+          "myrrh",
+          "damascus-steel",
+          "baghdad-brocade",
+          "persian-carpet",
+          "rosewater",
+          "dates",
+          "arabian-horse",
+          "glass-lamps",
+          "paper",
+          "tabriz-pearls"
+        ],
         "currency": "dinar",
         "spread": 0.22
       },

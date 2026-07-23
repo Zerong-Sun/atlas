@@ -1,0 +1,69 @@
+{
+  "contentVersion": 1,
+  "table": "divinations",
+  "records": [
+    {
+      "id": "iching",
+      "name": "div.iching.name",
+      "culture": "east_asia",
+      "mvp": true,
+      "learnAt": ["cambaluc", "kinsay", "sachiu"],
+      "teacher": "npc-cambaluc-mentor",
+      "question": "route",
+      "inputs": ["question"],
+      "reads": ["route", "city", "year"],
+      "outputs": { "advice": "route_choice", "confidence": 0.72, "horizon": "season" },
+      "effects": [
+        { "op": "reveal_map", "value": "$subject", "reason": "iching-read-the-road" },
+        { "op": "codex", "value": "cx-hexagrams", "reason": "iching-recorded-the-hexagram" }
+      ],
+      "resultTexts": [
+        { "cond": "moving>=3", "key": "div.iching.result.many_moving" },
+        { "cond": "default", "key": "div.iching.result.still" }
+      ],
+      "cost": { "coins": 200, "time": 0, "favor": 0 },
+      "atlas": { "causalityModel": "symbolic-projection", "uncertaintyMode": "strategic-positioning", "evidenceStyle": "cast-symbol" }
+    },
+    {
+      "id": "bazi",
+      "name": "div.bazi.name",
+      "culture": "east_asia",
+      "mvp": true,
+      "learnAt": ["cambaluc", "kinsay"],
+      "teacher": "npc-kinsay-mentor",
+      "question": "person",
+      "inputs": ["birthdate"],
+      "reads": ["self", "retainer", "year"],
+      "outputs": { "advice": "long_term_fit", "confidence": 0.65, "horizon": "three_years" },
+      "effects": [
+        { "op": "reveal_birth", "value": 1, "reason": "bazi-read-the-pillars" },
+        { "op": "codex", "value": "cx-four-pillars", "reason": "bazi-recorded-the-chart" }
+      ],
+      "resultTexts": [{ "cond": "default", "key": "div.bazi.result.default" }],
+      "cost": { "coins": 400, "time": 1, "favor": 0 },
+      "atlas": { "causalityModel": "birth-structure", "uncertaintyMode": "trend", "evidenceStyle": "calculated-chart" }
+    },
+    {
+      "id": "lot",
+      "name": "div.lot.name",
+      "culture": "east_asia",
+      "mvp": true,
+      "learnAt": ["zayton", "kinsay", "lop"],
+      "teacher": "npc-zayton-mentor",
+      "question": "risk",
+      "inputs": ["question"],
+      "reads": ["route", "city"],
+      "outputs": { "advice": "yes_no_with_caution", "confidence": 0.6, "horizon": "day" },
+      "effects": [
+        { "op": "flag", "value": "fl-lot-drawn", "reason": "lot-was-drawn" },
+        { "op": "reveal_map", "value": "$subject", "reason": "lot-named-the-road" }
+      ],
+      "resultTexts": [
+        { "cond": "auspicious", "key": "div.lot.result.auspicious" },
+        { "cond": "default", "key": "div.lot.result.caution" }
+      ],
+      "cost": { "coins": 50, "time": 0, "favor": 0 },
+      "atlas": { "causalityModel": "textual-admonition", "uncertaintyMode": "admonition", "evidenceStyle": "ritual-result" }
+    }
+  ]
+}

@@ -35,7 +35,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -89,7 +100,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.18
       },
@@ -100,7 +122,7 @@
         ]
       },
       "mentor": "npc-balc-mentor",
-      "specialty": "sp-balc",
+      "specialty": "jade",
       "calendars": [
         "islamic",
         "turkic"
@@ -199,7 +221,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -250,7 +283,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.18
       },
@@ -261,7 +305,7 @@
         ]
       },
       "mentor": "npc-cascar-mentor",
-      "specialty": "sp-cascar",
+      "specialty": "jade",
       "calendars": [
         "islamic",
         "turkic"
@@ -298,7 +342,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -345,7 +400,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.18
       },
@@ -356,7 +422,7 @@
         ]
       },
       "mentor": "npc-cotan-mentor",
-      "specialty": "sp-cotan",
+      "specialty": "jade",
       "calendars": [
         "islamic",
         "turkic"
@@ -389,7 +455,18 @@
         "origin": "authored"
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -430,7 +507,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -483,7 +571,15 @@
       "market": {
         "goods": [
           "jade",
-          "camel-felt"
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
         ],
         "currency": "silver-ingot",
         "spread": 0.2
@@ -563,7 +659,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -601,8 +708,16 @@
       },
       "market": {
         "goods": [
-          "silk",
-          "camel-felt"
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
         ],
         "currency": "cash",
         "spread": 0.16
@@ -687,7 +802,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.18
       },
@@ -698,7 +824,7 @@
         ]
       },
       "mentor": "npc-samarcanda-mentor",
-      "specialty": "sp-samarcanda",
+      "specialty": "jade",
       "calendars": [
         "islamic",
         "turkic"
@@ -737,7 +863,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -778,7 +915,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },
@@ -825,7 +973,18 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "jade",
+          "camel-felt",
+          "lapis",
+          "balas-ruby",
+          "furs",
+          "salt",
+          "melons",
+          "turquoise",
+          "asbestos-cloth",
+          "cotton-cloth"
+        ],
         "currency": "dirham",
         "spread": 0.22
       },

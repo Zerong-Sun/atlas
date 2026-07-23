@@ -33,7 +33,14 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "steppe-horse",
+          "camlet",
+          "sable",
+          "koumiss",
+          "hunting-falcon",
+          "leather"
+        ],
         "currency": "silver-ingot",
         "spread": 0.22
       },
@@ -78,7 +85,14 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "steppe-horse",
+          "camlet",
+          "sable",
+          "koumiss",
+          "hunting-falcon",
+          "leather"
+        ],
         "currency": "silver-ingot",
         "spread": 0.18
       },
@@ -89,7 +103,7 @@
         ]
       },
       "mentor": "npc-chandu-mentor",
-      "specialty": "sp-chandu",
+      "specialty": "camlet",
       "calendars": [
         "turkic",
         "chinese"
@@ -128,7 +142,14 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "steppe-horse",
+          "camlet",
+          "sable",
+          "koumiss",
+          "hunting-falcon",
+          "leather"
+        ],
         "currency": "silver-ingot",
         "spread": 0.22
       },
@@ -168,7 +189,14 @@
         }
       },
       "market": {
-        "goods": [],
+        "goods": [
+          "steppe-horse",
+          "camlet",
+          "sable",
+          "koumiss",
+          "hunting-falcon",
+          "leather"
+        ],
         "currency": "silver-ingot",
         "spread": 0.22
       },

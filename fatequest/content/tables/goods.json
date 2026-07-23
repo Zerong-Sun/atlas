@@ -1,0 +1,2072 @@
+{
+  "contentVersion": 1,
+  "table": "goods",
+  "records": [
+    {
+      "id": "murano-glass",
+      "name": "good.murano-glass.name",
+      "tier": "specialty",
+      "origin": [
+        "europe"
+      ],
+      "base": [
+        14580,
+        29160
+      ],
+      "far": [
+        29160,
+        43740
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "india"
+        ],
+        "range": [
+          116640,
+          145800
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "woolen-cloth",
+      "name": "good.woolen-cloth.name",
+      "tier": "regional",
+      "origin": [
+        "europe"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "central_asia",
+          "steppe"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "olive-oil",
+      "name": "good.olive-oil.name",
+      "tier": "regional",
+      "origin": [
+        "europe"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "west_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "coral",
+      "name": "good.coral.name",
+      "tier": "regional",
+      "origin": [
+        "europe"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "india",
+          "china"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.02
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "silverware",
+      "name": "good.silverware.name",
+      "tier": "regional",
+      "origin": [
+        "europe"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "steppe",
+          "west_asia"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.02
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "frankincense",
+      "name": "good.frankincense.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "myrrh",
+      "name": "good.myrrh.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "damascus-steel",
+      "name": "good.damascus-steel.name",
+      "tier": "specialty",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        14580,
+        29160
+      ],
+      "far": [
+        29160,
+        43740
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "steppe"
+        ],
+        "range": [
+          116640,
+          145800
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "baghdad-brocade",
+      "name": "good.baghdad-brocade.name",
+      "tier": "specialty",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "persian-carpet",
+      "name": "good.persian-carpet.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "rosewater",
+      "name": "good.rosewater.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "india",
+          "china"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "dates",
+      "name": "good.dates.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "central_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "arabian-horse",
+      "name": "good.arabian-horse.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        12400,
+        24800
+      ],
+      "far": [
+        24800,
+        37200
+      ],
+      "hot": {
+        "bands": [
+          "india",
+          "china"
+        ],
+        "range": [
+          99200,
+          124000
+        ]
+      },
+      "bulk": 4,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "glass-lamps",
+      "name": "good.glass-lamps.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "india"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "paper",
+      "name": "good.paper.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "tabriz-pearls",
+      "name": "good.tabriz-pearls.name",
+      "tier": "specialty",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.04
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "jade",
+      "name": "good.jade.name",
+      "tier": "specialty",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.04
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "camel-felt",
+      "name": "good.camel-felt.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "china"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "lapis",
+      "name": "good.lapis.name",
+      "tier": "specialty",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.04
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "balas-ruby",
+      "name": "good.balas-ruby.name",
+      "tier": "specialty",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.04
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "furs",
+      "name": "good.furs.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "india"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "salt",
+      "name": "good.salt.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "india",
+          "china"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "melons",
+      "name": "good.melons.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "china"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "turquoise",
+      "name": "good.turquoise.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "india"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.02
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "asbestos-cloth",
+      "name": "good.asbestos-cloth.name",
+      "tier": "specialty",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "cotton-cloth",
+      "name": "good.cotton-cloth.name",
+      "tier": "regional",
+      "origin": [
+        "central_asia"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "steppe",
+          "china"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "steppe-horse",
+      "name": "good.steppe-horse.name",
+      "tier": "regional",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        12400,
+        24800
+      ],
+      "far": [
+        24800,
+        37200
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "india",
+          "west_asia"
+        ],
+        "range": [
+          99200,
+          124000
+        ]
+      },
+      "bulk": 4,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "camlet",
+      "name": "good.camlet.name",
+      "tier": "specialty",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        14580,
+        29160
+      ],
+      "far": [
+        29160,
+        43740
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          116640,
+          145800
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "sable",
+      "name": "good.sable.name",
+      "tier": "regional",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "koumiss",
+      "name": "good.koumiss.name",
+      "tier": "regional",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "central_asia"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "hunting-falcon",
+      "name": "good.hunting-falcon.name",
+      "tier": "specialty",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "europe"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "leather",
+      "name": "good.leather.name",
+      "tier": "regional",
+      "origin": [
+        "steppe"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "west_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "silk",
+      "name": "good.silk.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia",
+          "india"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "porcelain",
+      "name": "good.porcelain.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "india",
+          "europe"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "dehua-porcelain",
+      "name": "good.dehua-porcelain.name",
+      "tier": "specialty",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        14580,
+        29160
+      ],
+      "far": [
+        29160,
+        43740
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          116640,
+          145800
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "tea",
+      "name": "good.tea.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "steppe",
+          "central_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "lacquerware",
+      "name": "good.lacquerware.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "europe"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "rhubarb",
+      "name": "good.rhubarb.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "ginger",
+      "name": "good.ginger.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "cinnabar",
+      "name": "good.cinnabar.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "india",
+          "west_asia"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "paper-money",
+      "name": "good.paper-money.name",
+      "tier": "specialty",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "hangzhou-fan",
+      "name": "good.hangzhou-fan.name",
+      "tier": "specialty",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "sugar",
+      "name": "good.sugar.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "central_asia",
+          "steppe"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    },
+    {
+      "id": "musk",
+      "name": "good.musk.name",
+      "tier": "regional",
+      "origin": [
+        "china"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.02
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "pepper",
+      "name": "good.pepper.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china",
+          "west_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "indigo",
+      "name": "good.indigo.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "diamonds",
+      "name": "good.diamonds.name",
+      "tier": "specialty",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.04
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "muslin",
+      "name": "good.muslin.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "west_asia",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "pearls",
+      "name": "good.pearls.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.07,
+        "seizure": 0.02
+      },
+      "needs": [
+        "guarded"
+      ],
+      "events": []
+    },
+    {
+      "id": "sandalwood",
+      "name": "good.sandalwood.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "west_asia"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "turmeric",
+      "name": "good.turmeric.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "west_asia"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "brazilwood",
+      "name": "good.brazilwood.name",
+      "tier": "regional",
+      "origin": [
+        "india"
+      ],
+      "base": [
+        10800,
+        21600
+      ],
+      "far": [
+        21600,
+        32400
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "china"
+        ],
+        "range": [
+          86400,
+          108000
+        ]
+      },
+      "bulk": 2,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "cloves",
+      "name": "good.cloves.name",
+      "tier": "specialty",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia",
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "nutmeg",
+      "name": "good.nutmeg.name",
+      "tier": "specialty",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "europe",
+          "west_asia"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "aloeswood",
+      "name": "good.aloeswood.name",
+      "tier": "regional",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "west_asia"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "camphor",
+      "name": "good.camphor.name",
+      "tier": "regional",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "india"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "tin",
+      "name": "good.tin.name",
+      "tier": "regional",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "india"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "tortoiseshell",
+      "name": "good.tortoiseshell.name",
+      "tier": "regional",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        10000,
+        20000
+      ],
+      "far": [
+        20000,
+        30000
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          80000,
+          100000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "ebony",
+      "name": "good.ebony.name",
+      "tier": "regional",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        11600,
+        23200
+      ],
+      "far": [
+        23200,
+        34800
+      ],
+      "hot": {
+        "bands": [
+          "china",
+          "europe"
+        ],
+        "range": [
+          92800,
+          116000
+        ]
+      },
+      "bulk": 3,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
+    },
+    {
+      "id": "birds-nest",
+      "name": "good.birds-nest.name",
+      "tier": "specialty",
+      "origin": [
+        "maritime_asia"
+      ],
+      "base": [
+        13500,
+        27000
+      ],
+      "far": [
+        27000,
+        40500
+      ],
+      "hot": {
+        "bands": [
+          "china"
+        ],
+        "range": [
+          108000,
+          135000
+        ]
+      },
+      "bulk": 1,
+      "risk": {
+        "spoil": 0.08,
+        "theft": 0.02,
+        "seizure": 0.04
+      },
+      "needs": [
+        "cool"
+      ],
+      "events": []
+    }
+  ]
+}

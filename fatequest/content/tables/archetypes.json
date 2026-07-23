@@ -1,0 +1,45 @@
+{
+  "contentVersion": 1,
+  "table": "archetypes",
+  "records": [
+    {
+      "id": "polo",
+      "name": "arch.polo.name",
+      "obsession": "arch.polo.obsession",
+      "start": "tauris",
+      "goal": { "type": "reach", "target": "cambaluc" },
+      "faith": "latin",
+      "culture": "latin",
+      "bonus": { "rapport": 3 },
+      "malus": { "travel": -1 },
+      "startKit": { "coins": 6000, "currency": "ducat", "goods": [], "items": ["it-letter-of-introduction"], "languages": ["latin", "persian"] },
+      "endings": ["end-returned-to-venice", "end-stayed-in-the-east"]
+    },
+    {
+      "id": "steppe",
+      "name": "arch.steppe.name",
+      "obsession": "arch.steppe.obsession",
+      "start": "tauris",
+      "goal": { "type": "reach", "target": "chandu" },
+      "faith": "nestorian",
+      "culture": "steppe",
+      "bonus": { "travel": 4 },
+      "malus": { "wealth": -2 },
+      "startKit": { "coins": 4000, "currency": "silver-ingot", "goods": [], "items": [], "languages": ["turkic", "persian"] },
+      "endings": ["end-witness-of-the-world", "end-no-return"]
+    },
+    {
+      "id": "merchant",
+      "name": "arch.merchant.name",
+      "obsession": "arch.merchant.obsession",
+      "start": "ormus",
+      "goal": { "type": "network", "target": "zayton" },
+      "faith": "islam",
+      "culture": "indian_ocean",
+      "bonus": { "wealth": 4 },
+      "malus": { "rapport": -1 },
+      "startKit": { "coins": 9000, "currency": "dinar", "goods": [], "items": [], "languages": ["arabic", "persian"] },
+      "endings": ["end-hundred-markets", "end-no-return"]
+    }
+  ]
+}

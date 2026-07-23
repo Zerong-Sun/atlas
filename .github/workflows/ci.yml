@@ -50,3 +50,9 @@ jobs:
       - name: Run kernel test suite
         working-directory: fatequest
         run: godot --headless --script tests/run_tests.gd
+      - name: Boot smoke (real main scene)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_boot.gd
+      - name: Play smoke (drive the UI)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_play.gd
