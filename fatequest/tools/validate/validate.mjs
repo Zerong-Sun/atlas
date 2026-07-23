@@ -237,6 +237,56 @@ const LINES = {
   }
 }
 
+// ---------------------------- G14: every line must be AFFORDABLE, not just
+// connected. G13 proves a path exists; a path you cannot pay for is not a
+// walkable line. All three archetypes shipped under-funded once — the graph
+// was fine and the journey was impossible — so the purse is now checked
+// against the cheapest fare, with headroom for imperfect routing.
+//
+// NOTE: until trade gives an income side (ROADMAP P4), the purse IS the whole
+// budget. Rebalance this margin when trading lands.
+{
+  const MARGIN = 1.5;
+  const tc = Object.fromEntries((byTable.transports ?? []).map((t) => [t.id, t]));
+  const adj = new Map();
+  for (const r of byTable.routes ?? []) {
+    if (!adj.has(r.from)) adj.set(r.from, []);
+    if (!adj.has(r.to)) adj.set(r.to, []);
+    adj.get(r.from).push(r);
+    adj.get(r.to).push(r);
+  }
+  const other = (r, c) => (r.from === c ? r.to : r.from);
+  const cheapest = (from, to, shipOnly) => {
+    const dist = new Map([[from, 0]]);
+    const pq = [[0, from]];
+    while (pq.length) {
+      pq.sort((a, b) => a[0] - b[0]);
+      const [d, n] = pq.shift();
+      if (n === to) return d;
+      if (d > (dist.get(n) ?? Infinity)) continue;
+      for (const r of adj.get(n) ?? []) {
+        const modes = (r.modes ?? []).filter((m) => !shipOnly || m === "ship");
+        if (!modes.length) continue;
+        const fare = Math.min(...modes.map((m) => (r.cost ?? 0) + (tc[m]?.cost ?? 0)));
+        const nxt = other(r, n), nd = d + fare;
+        if (nd < (dist.get(nxt) ?? Infinity)) { dist.set(nxt, nd); pq.push([nd, nxt]); }
+      }
+    }
+    return dist.get(to) ?? null;
+  };
+  for (const a of byTable.archetypes ?? []) {
+    const to = a.goal?.target;
+    if (!a.start || !to) continue;
+    const shipOnly = a.id === "merchant";
+    const fare = cheapest(a.start, to, shipOnly);
+    const purse = a.startKit?.coins ?? 0;
+    if (fare === null) { err("G14", recordFile.get(a.id), `${a.id}: no farecheap path ${a.start} -> ${to}`); continue; }
+    if (purse < fare * MARGIN)
+      err("G14", recordFile.get(a.id),
+        `${a.id}: purse ${purse} < cheapest fare ${fare} x${MARGIN} = ${Math.ceil(fare * MARGIN)} (${a.start} -> ${to})`);
+  }
+}
+
 // ------------------------------------------------- G12: map alignment
 if (existsSync(MAP)) {
   const geo = JSON.parse(readFileSync(MAP, "utf8"));
@@ -259,7 +309,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13"];
+  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
