@@ -52,6 +52,8 @@ var _controls: HBoxContainer
 var _market: Market
 var _market_view: PanelContainer
 var _market_layer: Control
+var _bag: Dictionary = {}
+var _settings: Dictionary = {}
 
 
 func _ready() -> void:
@@ -253,6 +255,8 @@ func _build_map() -> void:
 	add_child(_city_view)
 	_city_view.site_chosen.connect(_on_site_chosen)
 	_city_view.leave_requested.connect(_close_city)
+	_city_view.market_requested.connect(_open_market)
+	_city_view.bag_requested.connect(_open_bag)
 
 	# --- event dialogue -----------------------------------------------------
 	# A full-rect CenterContainer keeps the dialog centred at any window size and
@@ -275,6 +279,12 @@ func _build_map() -> void:
 	_dialog = preload("res://game/ui/event_dialog.gd").new()
 	centre.add_child(_dialog)
 	_dialog.choice_taken.connect(_on_dialog_choice)
+	_dialog.dismissed.connect(func():
+		_dialog_layer.visible = false
+		if _city_view.visible:
+			_sync_city_status()
+		else:
+			_open_city())
 
 	# --- market -------------------------------------------------------------
 	_market_layer = Control.new()
@@ -300,6 +310,8 @@ func _build_map() -> void:
 		_open_city())
 	_market_view.traded.connect(_on_traded)
 
+	_build_bag()
+	_build_settings()
 	_build_controls()
 	_restyle_all()
 
@@ -316,15 +328,8 @@ func _build_controls() -> void:
 	bar.add_theme_constant_override("separation", 6)
 	add_child(bar)
 
-	bar.add_child(_ctl("字号 " + UiScale.label(), func():
-		UiScale.cycle()
-		_restyle_all()
-		_refresh_controls()))
-	bar.add_child(_ctl("高对比", func():
-		UiScale.high_contrast = not UiScale.high_contrast
-		UiScale.save()
-		_restyle_all()
-		_refresh_controls()))
+	bar.add_child(_ctl("行囊", _open_bag))
+	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
 	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
@@ -351,10 +356,6 @@ func _refresh_controls() -> void:
 	if _controls == null:
 		return
 	var kids := _controls.get_children()
-	if kids.size() > 0:
-		kids[0].text = "字号 " + UiScale.label()
-	if kids.size() > 1:
-		kids[1].text = "高对比" + ("✓" if UiScale.high_contrast else "")
 	for k in kids:
 		k.add_theme_font_size_override("font_size", UiScale.ui())
 		k.add_theme_stylebox_override("normal", Palette.button_style())
@@ -415,6 +416,106 @@ func _on_dialog_choice(index: int) -> void:
 
 ## Applies a market order. The screen produces effects; the executor applies
 ## them; the HUD reflects them. No shortcut, or the audit trail breaks.
+## What you are carrying, and what it is worth here. The player had no way to
+## see the hold at all outside the market screen.
+func _build_bag() -> void:
+	_bag = Panels.overlay(self, Vector2(560, 420))
+	var box: VBoxContainer = _bag["box"]
+	var title := Panels.label("行囊", UiScale.title(), Palette.ink())
+	box.add_child(title)
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	box.add_child(scroll)
+	var list := VBoxContainer.new()
+	list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	list.add_theme_constant_override("separation", 4)
+	scroll.add_child(list)
+	_bag["list"] = list
+	box.add_child(Panels.styled_button("合上", func(): _bag["layer"].visible = false))
+
+
+func _open_bag() -> void:
+	var list: VBoxContainer = _bag["list"]
+	for c in list.get_children():
+		c.queue_free()
+
+	var here := db.get_record(state.city)
+	var rows := 0
+	for gid in state.goods:
+		var g := db.get_record(String(gid))
+		if g.is_empty():
+			continue
+		var n := int(state.goods[gid])
+		var worth := _market.sell_price(g, here, state.jdn, state.seed) if here.has("market") else 0
+		var line := "%s ×%d　占 %d 格" % [I18n.t(g.get("name", "")), n, int(g.get("bulk", 1)) * n]
+		if worth > 0:
+			line += "　此地可售 %d 银" % (worth / Market.FEN)
+		list.add_child(Panels.label(line, UiScale.ui(), Palette.ink()))
+		rows += 1
+
+	for it in state.items:
+		list.add_child(Panels.label("· " + I18n.fmt("item.%s" % it), UiScale.ui(), Palette.ink()))
+		rows += 1
+
+	if rows == 0:
+		list.add_child(Panels.label("（空手上路）", UiScale.ui(), Palette.ink_soft()))
+
+	list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+	list.add_child(Panels.label("货格 %d/%d　囊中 %d 银" % [
+		_market.cargo_used(state), state.cargo_slots, state.coins / Market.FEN],
+		UiScale.ui(), Palette.ink_soft()))
+	# Learned arts and the codex belong here too — they are what the journey
+	# actually accumulates.
+	if not state.learned_divinations.is_empty():
+		var arts: Array[String] = []
+		for d in state.learned_divinations:
+			arts.append(I18n.t("div.%s.name" % d))
+		list.add_child(Panels.label("所习占法：" + "、".join(PackedStringArray(arts)),
+			UiScale.ui(), Palette.ink_soft()))
+	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
+		UiScale.ui(), Palette.ink_soft()))
+	_bag["layer"].visible = true
+
+
+## Reader settings, reachable from anywhere including the city interior.
+func _build_settings() -> void:
+	_settings = Panels.overlay(self, Vector2(440, 360))
+	var box: VBoxContainer = _settings["box"]
+	box.add_child(Panels.label("设置", UiScale.title(), Palette.ink()))
+
+	var size_btn := Panels.styled_button("字号：" + UiScale.label(), Callable())
+	size_btn.pressed.connect(func():
+		UiScale.cycle()
+		size_btn.text = "字号：" + UiScale.label()
+		_restyle_all())
+	box.add_child(size_btn)
+
+	var hc := Panels.styled_button("高对比：" + ("开" if UiScale.high_contrast else "关"), Callable())
+	hc.pressed.connect(func():
+		UiScale.high_contrast = not UiScale.high_contrast
+		UiScale.save()
+		hc.text = "高对比：" + ("开" if UiScale.high_contrast else "关")
+		_restyle_all())
+	box.add_child(hc)
+
+	var mute := Panels.styled_button("声音", Callable())
+	mute.pressed.connect(func():
+		if _audio_ready():
+			_audio.toggle_mute()
+			mute.text = "声音：" + ("静" if _audio.muted else "开"))
+	box.add_child(mute)
+
+	var motion := Panels.styled_button("减少动效：" + ("开" if Motion.reduce_motion else "关"), Callable())
+	motion.pressed.connect(func():
+		Motion.reduce_motion = not Motion.reduce_motion
+		motion.text = "减少动效：" + ("开" if Motion.reduce_motion else "关"))
+	box.add_child(motion)
+
+	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+	box.add_child(Panels.styled_button("合上", func(): _settings["layer"].visible = false))
+
+
 func _on_traded() -> void:
 	var effects: Array = _market_view.take_pending()
 	if effects.is_empty():
@@ -424,6 +525,7 @@ func _on_traded() -> void:
 		_say("  · %s" % line)
 	if _audio_ready(): _audio.sfx("coin")
 	_refresh_hud()
+	_sync_city_status()
 	_market_view.refresh()
 
 
@@ -442,6 +544,16 @@ func _open_city() -> void:
 		return
 	_city_view.visible = true
 	_city_view.show_city(c, state, conditions, _ctx())
+	_sync_city_status()
+
+
+func _sync_city_status() -> void:
+	if _city_view == null or not _city_view.has_method("set_status"):
+		return
+	var g := clock.date.to_gregorian()
+	_city_view.set_status(state.coins / Market.FEN, _market.cargo_used(state),
+		state.cargo_slots, state.days_elapsed,
+		"%d年%d月%d日" % [g["year"], g["month"], g["day"]])
 
 
 func _close_city() -> void:
@@ -501,6 +613,7 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 	_refresh_hud()
 	if _city_view.visible:
 		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())
+		_sync_city_status()
 	else:
 		_open_city()
 

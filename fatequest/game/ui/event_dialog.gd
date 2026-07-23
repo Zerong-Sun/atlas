@@ -105,8 +105,24 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 
 	for c in _choices.get_children():
 		c.queue_free()
+	var any_open := false
 	for i in choice_states.size():
+		if choice_states[i]["enabled"]:
+			any_open = true
 		_choices.add_child(_make_choice(choice_states[i], i))
+
+	# An event whose every choice is barred — no coin, no language, no art —
+	# must still be leavable. Without this the player is trapped reading the
+	# same page: the same defect the city screen had, one level down.
+	var leave := Button.new()
+	leave.text = "就此走开" if not any_open else "先不动手"
+	leave.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	leave.add_theme_font_size_override("font_size", UiScale.ui())
+	leave.add_theme_stylebox_override("normal", Palette.button_style())
+	leave.add_theme_stylebox_override("hover", Palette.button_style(true))
+	leave.add_theme_color_override("font_color", Palette.ink_soft())
+	leave.pressed.connect(func(): dismissed.emit())
+	_choices.add_child(leave)
 
 	_scroll.scroll_vertical = 0
 	visible = true

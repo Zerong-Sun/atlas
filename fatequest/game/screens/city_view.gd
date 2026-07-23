@@ -13,6 +13,8 @@ extends Control
 
 signal site_chosen(event_id: String)
 signal leave_requested()
+signal market_requested()
+signal bag_requested()
 
 const PORTRAIT_H := 300.0
 
@@ -22,6 +24,8 @@ var _bg: TextureRect
 var _figures: HBoxContainer
 var _title: Label
 var _hint: Label
+var _market_btn: Button
+var _status: Label
 
 
 func setup(p_db: ContentDb) -> void:
@@ -59,10 +63,22 @@ func _build() -> void:
 	head.add_theme_stylebox_override("panel", Palette.panel_style())
 	head.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	col.add_child(head)
+	var head_row := VBoxContainer.new()
+	head_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	head.add_child(head_row)
 	_title = Label.new()
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
-	head.add_child(_title)
+	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	head_row.add_child(_title)
+
+	# This screen hides the HUD behind it, so it repeats the numbers a player
+	# needs in order to decide anything here.
+	_status = Label.new()
+	_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_status.add_theme_font_size_override("font_size", UiScale.ui())
+	_status.add_theme_color_override("font_color", Palette.ink_soft())
+	head_row.add_child(_status)
 
 	col.add_child(_spacer())
 
@@ -72,14 +88,27 @@ func _build() -> void:
 	_figures.size_flags_vertical = Control.SIZE_SHRINK_END
 	col.add_child(_figures)
 
+	# --- foot: hint + the ways out --------------------------------------
 	var foot := PanelContainer.new()
 	foot.add_theme_stylebox_override("panel", Palette.panel_style())
 	foot.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	col.add_child(foot)
+
+	var foot_row := HBoxContainer.new()
+	foot_row.add_theme_constant_override("separation", 14)
+	foot.add_child(foot_row)
+
 	_hint = Label.new()
 	_hint.add_theme_font_size_override("font_size", UiScale.ui())
 	_hint.add_theme_color_override("font_color", Palette.ink_soft())
-	foot.add_child(_hint)
+	foot_row.add_child(_hint)
+
+	_market_btn = Panels.styled_button("市集", func(): market_requested.emit())
+	foot_row.add_child(_market_btn)
+	foot_row.add_child(Panels.styled_button("行囊", func(): bag_requested.emit()))
+	# Without this the city is a dead end. It is the single most important
+	# control on the screen.
+	foot_row.add_child(Panels.styled_button("上路 →", func(): leave_requested.emit()))
 
 
 func _spacer() -> Control:
@@ -131,8 +160,14 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 		_figures.add_child(_make_figure(ev, String(city.get("culture", "")), done, offered))
 		offered += 1
 
-	_hint.text = "点击一处走近看看 · 共 %d 处" % offered if offered > 0 \
-		else "此地已无可探之处"
+	_hint.text = ("点击一处走近看看 · 共 %d 处" % offered) if offered > 0 \
+		else "此地已看遍"
+	_market_btn.visible = city.has("market")
+
+
+## Money, hold and day, repeated here because the HUD is behind this screen.
+func set_status(coins: int, cargo_used: int, cargo_max: int, day: int, date: String) -> void:
+	_status.text = "%d 银 · 货格 %d/%d · 第 %d 日 · %s" % [coins, cargo_used, cargo_max, day, date]
 
 
 func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Control:
@@ -160,7 +195,13 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 	else:
 		btn.text = I18n.t(ev.get("title", ""))
 		btn.custom_minimum_size = Vector2(180, 90)
-	btn.pressed.connect(func(): site_chosen.emit(String(ev.get("id", ""))))
+	if done:
+		# Still readable — you can look at a place you have been — but it no
+		# longer offers choices, so it must not look like an open action.
+		btn.disabled = true
+		btn.tooltip_text = "已看过"
+	else:
+		btn.pressed.connect(func(): site_chosen.emit(String(ev.get("id", ""))))
 	box.add_child(btn)
 
 	var plate := PanelContainer.new()

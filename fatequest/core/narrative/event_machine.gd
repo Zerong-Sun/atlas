@@ -61,6 +61,13 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 		return EffectExecutor.EffectResult.new()
 	var ch: Dictionary = choices[index]
 
+	# A once-event that already fired must not resolve again. pick() filters on
+	# once_fired, but a city screen offering its sites directly bypasses pick —
+	# so re-entering an explored place re-applied its effects. Idempotent ops
+	# (codex, sticker) hid this; `coins` and `days` would have stacked.
+	if ev.get("once", false) and state.once_fired.get(ev.get("id", ""), false):
+		return EffectExecutor.EffectResult.new()
+
 	if not conditions.evaluate(ch.get("needs", null), state, ctx):
 		push_error("choice %d of %s is not available" % [index, ev.get("id", "?")])
 		return EffectExecutor.EffectResult.new()

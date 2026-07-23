@@ -70,3 +70,6 @@ jobs:
       - name: Market smoke (buy through the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_market.gd
+      - name: City navigation (no dead ends)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_citynav.gd
