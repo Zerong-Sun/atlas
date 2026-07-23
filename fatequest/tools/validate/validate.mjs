@@ -385,41 +385,44 @@ for (const e of byTable.events ?? [])
     const zh = JSON.parse(readFileSync(zhPath, "utf8"));
     const en = JSON.parse(readFileSync(enPath, "utf8"));
 
-    // Build two-tier map: place terms → strict, other terms → advisory
-    const placeTerms = new Map(); // en_lower → { zhVariants }
-    const conceptTerms = new Map(); // same structure, for warnings only
+    // Build two-tier map with pre-compiled regex patterns
+    const placeTerms = new Map(); // en_lower → { regex, zhVariants }
+    const conceptTerms = new Map();
     for (const t of glossary.terms ?? []) {
       const enLower = t.en.toLowerCase().split("/")[0].trim();
       const parts = t.zh.split(/[（(／\/）)]/).map(s => s.trim()).filter(Boolean);
-      const entry = { zhVariants: parts, zhFull: t.zh, kind: t.kind, aliases: t.aliases ?? [] };
+      const esc = enLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const entry = { regex: new RegExp("\\b" + esc + "\\b", "i"), zhVariants: parts, aliases: t.aliases ?? [] };
       const target = t.kind === "place" ? placeTerms : conceptTerms;
       target.set(enLower, entry);
       for (const a of t.aliases ?? []) {
         const aLower = a.toLowerCase().trim();
-        if (!target.has(aLower)) target.set(aLower, entry);
+        if (!target.has(aLower)) {
+          const aEsc = aLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          target.set(aLower, { regex: new RegExp("\\b" + aEsc + "\\b", "i"), zhVariants: parts, aliases: [] });
+        }
       }
     }
 
     // For each translated Chinese entry, verify glossary terms
     let g7Errors = 0, g7Warns = 0;
-    const checkTerm = (key, zhText, enText, enTerm, info, isPlace) => {
-      // Case-insensitive word-boundary match in English source
-      const esc = enTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      if (!new RegExp("\\b" + esc + "\\b", "i").test(enText)) return;
-      const variants = info.zhVariants;
-      if (!variants.length) return;
-      const found = variants.some((v) => v.length >= 2 && zhText.includes(v));
-      if (!found) {
-        if (isPlace) {
-          g7Errors++;
-          if (g7Errors <= 10)
-            err("G7", `zh.json:${key}`,
-              `place "${enTerm}" → ZH missing approved term(s) ${JSON.stringify(variants)}`);
-        } else {
-          g7Warns++;
-          if (g7Warns <= 6)
-            warn("G7", `zh.json:${key}`,
-              `term "${enTerm}" → ZH missing ${JSON.stringify(variants)} (advisory)`);
+    const checkTerms = (key, zhText, enText, terms, isPlace) => {
+      for (const [enTerm, info] of terms) {
+        if (!info.regex.test(enText)) continue;
+        const variants = info.zhVariants;
+        if (!variants.length) continue;
+        if (!variants.some((v) => v.length >= 2 && zhText.includes(v))) {
+          if (isPlace) {
+            g7Errors++;
+            if (g7Errors <= 10)
+              err("G7", `zh.json:${key}`,
+                `place "${enTerm}" → ZH missing approved term(s) ${JSON.stringify(variants)}`);
+          } else {
+            g7Warns++;
+            if (g7Warns <= 6)
+              warn("G7", `zh.json:${key}`,
+                `term "${enTerm}" → ZH missing ${JSON.stringify(variants)} (advisory)`);
+          }
         }
       }
     };
@@ -427,10 +430,8 @@ for (const e of byTable.events ?? [])
       if (!zhText || typeof zhText !== "string") continue;
       const enText = en[key];
       if (!enText || typeof enText !== "string") continue;
-      for (const [enTerm, info] of placeTerms)
-        checkTerm(key, zhText, enText, enTerm, info, true);
-      for (const [enTerm, info] of conceptTerms)
-        checkTerm(key, zhText, enText, enTerm, info, false);
+      checkTerms(key, zhText, enText, placeTerms, true);
+      checkTerms(key, zhText, enText, conceptTerms, false);
     }
     if (g7Errors > 10) err("G7", "zh.json", `...and ${g7Errors - 10} more place-term mismatches`);
     if (g7Warns > 6) warn("G7", "zh.json", `...and ${g7Warns - 6} more advisory mismatches`);
@@ -467,12 +468,31 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------------------ G20: Zayton must be translation-complete
+// Zayton is the template city for all translation (docs/L10N_PLAN.md §1).
+// If a Zayton text is missing from zh.json, the vertical slice is broken —
+// this is a hard CI error, not a warning.
+{
+  const enPath = join(ROOT, "content/i18n/en.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  if (existsSync(enPath) && existsSync(zhPath)) {
+    const en = JSON.parse(readFileSync(enPath, "utf8"));
+    const zh = JSON.parse(readFileSync(zhPath, "utf8"));
+    const zKeys = Object.keys(en).filter((k) => k.includes("zayton"));
+    const missing = zKeys.filter((k) => !zh[k]);
+    for (const k of missing)
+      err("G20", `zh.json:${k}`, `Zayton translation missing — template city must be 100%`);
+    if (zKeys.length && !missing.length)
+      warn("G20", "zh.json", `Zayton: ${zKeys.length}/${zKeys.length} translated — template city complete`);
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18","G20"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

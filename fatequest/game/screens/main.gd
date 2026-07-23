@@ -161,11 +161,24 @@ func rng_seed(a: Dictionary) -> String:
 	return "fatequest:%s" % a.get("id", "run")
 
 
+## Mountain spines for the side-elevation relief (GDD §5.3). Read from
+## content/world/ rather than worldmap/data/ because the latter is .gdignore'd
+## and therefore absent from an exported build.
+func _load_ranges() -> Array:
+	var f := FileAccess.open("res://content/world/mountains.json", FileAccess.READ)
+	if f == null:
+		return []
+	var doc = JSON.parse_string(f.get_as_text())
+	if typeof(doc) != TYPE_DICTIONARY:
+		return []
+	return ContentDb._normalize(doc).get("ranges", [])
+
+
 func _build_map() -> void:
 	_apply_projection()
 	_map = preload("res://game/map/world_map.gd").new()
 	add_child(_map)
-	_map.setup(projection, db.cities(), db.get_table("routes"))
+	_map.setup(projection, db.cities(), db.get_table("routes"), _load_ranges())
 	_map.city_clicked.connect(_on_city_clicked)
 
 	var w := maxf(size.x, 1280.0)
