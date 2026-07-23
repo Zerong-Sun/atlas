@@ -9,6 +9,7 @@ notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   参照冯承钧译本语感，不照抄句子（版权状态待确认）。
+
 stamps:
   city.zayton.name: b3ec3778ce19
   city.zayton.wonder: bf869cabc4e4
