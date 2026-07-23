@@ -1,5 +1,18 @@
 extends SceneTree
 
+## Watchdog: a script error used to leave the SceneTree spinning forever — one
+## such hang burned six hours of CI before GitHub killed it. Fail in seconds
+## instead, and say so.
+const _WATCHDOG_SEC := 60.0
+var _t0 := 0.0
+func _process(_d: float) -> bool:
+    _t0 += _d
+    if _t0 > _WATCHDOG_SEC:
+        printerr("WATCHDOG: exceeded %d s — aborting" % int(_WATCHDOG_SEC))
+        quit(1)
+    return false
+
+
 ## Boot smoke: the real main scene loads, content is present, and an archetype
 ## start puts the player somewhere valid. Kept separate from smoke_play so a
 ## boot regression is distinguishable from a gameplay one.

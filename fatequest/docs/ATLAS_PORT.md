@@ -198,14 +198,14 @@ Atlas 有 24 种占法，MVP 只要 3 种（GDD §16）。
 
 - [ ] 从 `../atlas` 复制 `method-experience.css` 关键帧 → `fatequest/css/method-motion.css`
 - [ ] 转写 `../atlas/.../methodExperiences.ts` → `fatequest/js/data-methods.js`（24 条动效规范）
-- [ ] 转写 `../atlas/.../lotSignsLibrary.ts` → `fatequest/js/data-lots.js`
-- [ ] 需要更精确引擎时：从 `../atlas/packages/engines` 人工复制并转写进 `js/`（不建共享 esbuild）
-- [ ] 解耦 `@atlas/shared-types`：把引擎用到的类型改为 JSDoc 或就地内联
-- [ ] `western.ts` 若引入，单独处理 `astronomy-engine`（避免进首屏）
-- [ ] 用移植结果替换 `js/engines.js` 中的简化实现，跑通现有仪式
-- [ ] 写 §3 的 `uncertaintyMode → question` 映射表
-- [ ] 生成 `assets/data/divinations.json`：24 条元数据 + 3 条完整游戏层字段
-- [ ] 回归：确认 `effects` 非空约束在 3 条 MVP 占法上成立
+- [x] 转写 `lotSignsLibrary` → Godot `content/tables/divination/lot_signs.json`
+- [x] 引擎手抄进 `core/divination/methods/`（MVP 四法完整；其余 soft cast）
+- [x] 解耦 `@atlas/shared-types`：GDScript 就地类型，无共享构建
+- [x] `western` / 天文库：非 MVP soft chart，未引入 `astronomy-engine`
+- [ ] 用移植结果替换遗留 `js/engines.js`（Godot 线已接 Registry）
+- [x] 写 §3 的 `uncertaintyMode → question` 映射（见 `tools/divination/build_p3_content.mjs`）
+- [x] 生成 `content/tables/divinations.json`：24 条元数据 + 4 条 MVP 完整游戏层字段
+- [x] 回归：`effects` 非空 + G3 MVP 路线向约束（`validate.mjs`）
 
 ---
 

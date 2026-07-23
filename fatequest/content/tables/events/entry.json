@@ -19,12 +19,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.accon.entry.choice.enter",
+          "label": "ev.accon.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "accon",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.accon.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "accon",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -50,12 +65,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.aden.entry.choice.enter",
+          "label": "ev.aden.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "aden",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.aden.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-aden",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.aden.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "aden",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-aden-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -82,12 +139,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.alexandria.entry.choice.enter",
+          "label": "ev.alexandria.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "alexandria",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "alexandria",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -113,12 +185,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.antiochia.entry.choice.enter",
+          "label": "ev.antiochia.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "antiochia",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.antiochia.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "antiochia",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -144,12 +231,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.axuma.entry.choice.enter",
+          "label": "ev.axuma.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "axuma",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.axuma.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "axuma",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -175,12 +277,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.babylonia-cairus.entry.choice.enter",
+          "label": "ev.babylonia-cairus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "babylonia-cairus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.babylonia-cairus.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "babylonia-cairus",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -206,12 +323,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.badashan.entry.choice.enter",
+          "label": "ev.badashan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "badashan",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.badashan.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.badashan.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "badashan",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-badashan-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -238,12 +397,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.balc.entry.choice.enter",
+          "label": "ev.balc.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "balc",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-ruins",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -270,12 +480,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.baldacum.entry.choice.enter",
+          "label": "ev.baldacum.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "baldacum",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-palace",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -302,12 +563,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.basora.entry.choice.enter",
+          "label": "ev.basora.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "basora",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.basora.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -333,12 +609,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.berrhoea.entry.choice.enter",
+          "label": "ev.berrhoea.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "berrhoea",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.berrhoea.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "berrhoea",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -364,12 +655,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.bethleem.entry.choice.enter",
+          "label": "ev.bethleem.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "bethleem",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.bethleem.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "bethleem",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -395,12 +701,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.bochara.entry.choice.enter",
+          "label": "ev.bochara.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "bochara",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.bochara.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "bochara",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -426,12 +747,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cabul.entry.choice.enter",
+          "label": "ev.cabul.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cabul",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.cabul.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cabul",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -457,12 +793,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cacanfu.entry.choice.enter",
+          "label": "ev.cacanfu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cacanfu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.cacanfu.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cacanfu",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -489,12 +845,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cachanfu.entry.choice.enter",
+          "label": "ev.cachanfu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cachanfu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.cachanfu.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cachanfu",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cachanfu",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -521,12 +897,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.caffa.entry.choice.enter",
+          "label": "ev.caffa.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "caffa",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.caffa.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "caffa",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -552,12 +943,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.caiju.entry.choice.enter",
+          "label": "ev.caiju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "caiju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.caiju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caiju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-caiju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -584,12 +995,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cail.entry.choice.enter",
+          "label": "ev.cail.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cail",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.cail.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cail",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.cail.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cail",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cail-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -616,12 +1069,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.calatu.entry.choice.enter",
+          "label": "ev.calatu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "calatu",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.calatu.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-calatu",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.calatu.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "calatu",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-calatu-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -648,12 +1143,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.camadi.entry.choice.enter",
+          "label": "ev.camadi.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "camadi",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.camadi.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-camadi",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "camadi",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.camadi.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "camadi",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-camadi-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "camadi",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -680,12 +1217,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cambaet.entry.choice.enter",
+          "label": "ev.cambaet.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cambaet",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaet.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaet",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaet",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -712,12 +1269,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cambaluc.entry.choice.enter",
+          "label": "ev.cambaluc.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "cambaluc",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-hill",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "dehua-porcelain",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -744,12 +1352,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.campichu.entry.choice.enter",
+          "label": "ev.campichu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "campichu",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.campichu.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-campichu",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "campichu",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.campichu.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "campichu",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-campichu-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "campichu",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -776,12 +1426,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.camul.entry.choice.enter",
+          "label": "ev.camul.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "camul",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.camul.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-camul",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "camul",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.camul.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "camul",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-camul-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "camul",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -808,12 +1500,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.caracoron.entry.choice.enter",
+          "label": "ev.caracoron.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "caracoron",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.caracoron.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caracoron",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-caracoron",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -840,12 +1552,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cascar.entry.choice.enter",
+          "label": "ev.cascar.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "cascar",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-garden",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -872,12 +1635,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chamba.entry.choice.enter",
+          "label": "ev.chamba.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "chamba",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.chamba.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chamba",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chamba",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.chamba.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chamba",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chamba-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chamba",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -904,12 +1709,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chandu.entry.choice.enter",
+          "label": "ev.chandu.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "chandu",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "camlet",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -936,12 +1792,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.charchan.entry.choice.enter",
+          "label": "ev.charchan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "charchan",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.charchan.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "charchan",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-charchan",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -968,12 +1844,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chinangli.entry.choice.enter",
+          "label": "ev.chinangli.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "chinangli",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinangli.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinangli",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinangli",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinangli.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinangli",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chinangli-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinangli",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -1000,12 +1918,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chinghianfu.entry.choice.enter",
+          "label": "ev.chinghianfu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "chinghianfu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinghianfu.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinghianfu",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinghianfu",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1032,12 +1970,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chinginju.entry.choice.enter",
+          "label": "ev.chinginju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "chinginju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinginju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinginju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinginju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1064,12 +2022,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cobinan.entry.choice.enter",
+          "label": "ev.cobinan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "cobinan",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.cobinan.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cobinan",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cobinan",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1096,12 +2074,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.coigangiu.entry.choice.enter",
+          "label": "ev.coigangiu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "coigangiu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.coigangiu.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coigangiu",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1127,12 +2120,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.coiganju.entry.choice.enter",
+          "label": "ev.coiganju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "coiganju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.coiganju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coiganju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-coiganju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1159,12 +2172,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.coilum.entry.choice.enter",
+          "label": "ev.coilum.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "coilum",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.coilum.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coilum",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-coilum",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1191,12 +2224,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.constantinopolis.entry.choice.enter",
+          "label": "ev.constantinopolis.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "constantinopolis",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.constantinopolis.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "constantinopolis",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1222,12 +2270,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cotan.entry.choice.enter",
+          "label": "ev.cotan.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "cotan",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-jade",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -1254,12 +2353,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ctesiphon.entry.choice.enter",
+          "label": "ev.ctesiphon.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "ctesiphon",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.ctesiphon.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "ctesiphon",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1285,12 +2399,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.damascus.entry.choice.enter",
+          "label": "ev.damascus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "damascus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.damascus.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "damascus",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1316,12 +2445,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.delli.entry.choice.enter",
+          "label": "ev.delli.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "delli",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "delli",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1347,12 +2491,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.dongola.entry.choice.enter",
+          "label": "ev.dongola.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "dongola",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.dongola.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "dongola",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1378,12 +2537,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.dufar.entry.choice.enter",
+          "label": "ev.dufar.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "dufar",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.dufar.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "dufar",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-dufar",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1410,12 +2589,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.edessa.entry.choice.enter",
+          "label": "ev.edessa.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "edessa",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.edessa.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "edessa",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1441,12 +2635,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.egrigaia.entry.choice.enter",
+          "label": "ev.egrigaia.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "egrigaia",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.egrigaia.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "egrigaia",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-egrigaia",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1473,12 +2687,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ephesus.entry.choice.enter",
+          "label": "ev.ephesus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "ephesus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.ephesus.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "ephesus",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1504,12 +2733,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.esher.entry.choice.enter",
+          "label": "ev.esher.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "esher",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.esher.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-esher",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "esher",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.esher.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "esher",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-esher-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "esher",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -1536,12 +2807,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.etzina.entry.choice.enter",
+          "label": "ev.etzina.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "etzina",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.etzina.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "etzina",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-etzina",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1568,12 +2859,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.fuju.entry.choice.enter",
+          "label": "ev.fuju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "fuju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.fuju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "fuju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fuju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1600,12 +2911,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.hierusalem.entry.choice.enter",
+          "label": "ev.hierusalem.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "hierusalem",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.hierusalem.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "hierusalem",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1631,12 +2957,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ispahan.entry.choice.enter",
+          "label": "ev.ispahan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "ispahan",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.ispahan.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "ispahan",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -1662,12 +3003,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.java-major.entry.choice.enter",
+          "label": "ev.java-major.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "java-major",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.java-major.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "java-major",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1693,12 +3049,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kenjanfu.entry.choice.enter",
+          "label": "ev.kenjanfu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "kenjanfu",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.kenjanfu.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kenjanfu",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kenjanfu",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.kenjanfu.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "kenjanfu",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kenjanfu-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kenjanfu",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -1725,12 +3123,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kerman.entry.choice.enter",
+          "label": "ev.kerman.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "kerman",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.kerman.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kerman",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kerman",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.kerman.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "kerman",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kerman-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kerman",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -1757,12 +3197,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.keshimur.entry.choice.enter",
+          "label": "ev.keshimur.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "keshimur",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.keshimur.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-keshimur",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "keshimur",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.keshimur.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "keshimur",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-keshimur-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "keshimur",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -1789,12 +3271,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kinsay.entry.choice.enter",
+          "label": "ev.kinsay.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "kinsay",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "dehua-porcelain",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -1821,12 +3354,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kiovia.entry.choice.enter",
+          "label": "ev.kiovia.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "kiovia",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.kiovia.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kiovia",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1852,12 +3400,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.linju.entry.choice.enter",
+          "label": "ev.linju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "linju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.linju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "linju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-linju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1949,12 +3517,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.maabar.entry.choice.enter",
+          "label": "ev.maabar.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "maabar",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.maabar.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "maabar",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-maabar",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -1981,12 +3569,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.mecha.entry.choice.enter",
+          "label": "ev.mecha.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "mecha",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.mecha.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mecha",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2012,12 +3615,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.medina.entry.choice.enter",
+          "label": "ev.medina.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "medina",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.medina.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "medina",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2043,12 +3661,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.melibar.entry.choice.enter",
+          "label": "ev.melibar.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "melibar",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-melibar",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "melibar",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "melibar",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-melibar-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "melibar",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2075,12 +3735,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.merva.entry.choice.enter",
+          "label": "ev.merva.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "merva",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.merva.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "merva",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2106,12 +3781,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.mien.entry.choice.enter",
+          "label": "ev.mien.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "mien",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.mien.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mien",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-mien",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2138,12 +3833,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.moscovia.entry.choice.enter",
+          "label": "ev.moscovia.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "moscovia",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.moscovia.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "moscovia",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2169,12 +3879,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.nanghin.entry.choice.enter",
+          "label": "ev.nanghin.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "nanghin",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.nanghin.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "nanghin",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-nanghin",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2201,12 +3931,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.nicaea.entry.choice.enter",
+          "label": "ev.nicaea.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "nicaea",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.nicaea.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "nicaea",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2232,12 +3977,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ninive.entry.choice.enter",
+          "label": "ev.ninive.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "ninive",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.ninive.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "ninive",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2263,12 +4023,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.novogardia.entry.choice.enter",
+          "label": "ev.novogardia.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "novogardia",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.novogardia.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "novogardia",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2294,12 +4069,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ormus.entry.choice.enter",
+          "label": "ev.ormus.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "ormus",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-wind",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -2326,12 +4152,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.paukin.entry.choice.enter",
+          "label": "ev.paukin.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "paukin",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.paukin.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "paukin",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-paukin",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2358,12 +4204,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.pein.entry.choice.enter",
+          "label": "ev.pein.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "pein",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.pein.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pein",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pein",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2390,12 +4256,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.pentam.entry.choice.enter",
+          "label": "ev.pentam.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "pentam",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.pentam.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pentam",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pentam",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2422,12 +4308,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.petra.entry.choice.enter",
+          "label": "ev.petra.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "petra",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.petra.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "petra",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2494,12 +4395,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.saianfu.entry.choice.enter",
+          "label": "ev.saianfu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "saianfu",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.saianfu.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-saianfu",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.saianfu.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "saianfu",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-saianfu-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2526,12 +4469,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.samara.entry.choice.enter",
+          "label": "ev.samara.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "samara",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.samara.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "samara",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2557,12 +4515,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.samarcanda.entry.choice.enter",
+          "label": "ev.samarcanda.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "samarcanda",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-dome",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -2589,12 +4598,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.sapurgan.entry.choice.enter",
+          "label": "ev.sapurgan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "sapurgan",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.sapurgan.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sapurgan",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sapurgan",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2621,12 +4650,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.semenat.entry.choice.enter",
+          "label": "ev.semenat.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "semenat",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.semenat.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "semenat",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-semenat",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2653,12 +4702,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.siju.entry.choice.enter",
+          "label": "ev.siju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "siju",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.siju.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-siju",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "siju",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.siju.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "siju",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-siju-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "siju",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2685,12 +4776,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.sindafu.entry.choice.enter",
+          "label": "ev.sindafu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "sindafu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.sindafu.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sindafu",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sindafu",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2717,12 +4828,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.sinju.entry.choice.enter",
+          "label": "ev.sinju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "sinju",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.sinju.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sinju",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "sinju",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.sinju.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sinju",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-sinju-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "sinju",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2749,12 +4902,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.sinjumatu.entry.choice.enter",
+          "label": "ev.sinjumatu.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "sinjumatu",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.sinjumatu.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sinjumatu",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sinjumatu",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2781,12 +4954,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.smyrna.entry.choice.enter",
+          "label": "ev.smyrna.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "smyrna",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.smyrna.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "smyrna",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2812,12 +5000,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.suju.entry.choice.enter",
+          "label": "ev.suju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "suju",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.suju.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-suju",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.suju.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "suju",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-suju-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2844,12 +5074,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.taican.entry.choice.enter",
+          "label": "ev.taican.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "taican",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.taican.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-taican",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "taican",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.taican.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "taican",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-taican-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "taican",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2876,12 +5148,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tana-azov.entry.choice.enter",
+          "label": "ev.tana-azov.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tana-azov",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tana-azov.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tana-azov",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -2907,12 +5194,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tana.entry.choice.enter",
+          "label": "ev.tana.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tana",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tana.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tana",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tana",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -2939,12 +5246,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tanpiju.entry.choice.enter",
+          "label": "ev.tanpiju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tanpiju",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.tanpiju.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tanpiju",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tanpiju",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.tanpiju.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tanpiju",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tanpiju-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tanpiju",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -2971,12 +5320,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tarsus.entry.choice.enter",
+          "label": "ev.tarsus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tarsus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tarsus.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tarsus",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -3002,12 +5366,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tauris.entry.choice.enter",
+          "label": "ev.tauris.entry.choice.customs",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-at-the-customs"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "declared-goods-and-heard-the-law"
+            },
             {
               "op": "reveal_map",
               "value": "tauris",
-              "reason": "arrived-and-looked-about"
+              "reason": "clerks-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.entry.choice.lore",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "learned-the-citys-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-view",
+              "reason": "heard-the-tale"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-to-the-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-great-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "bargained-with-the-merchants"
+            },
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "bought-local-specialty"
             }
           ]
         }
@@ -3034,12 +5449,54 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tenduc.entry.choice.enter",
+          "label": "ev.tenduc.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tenduc",
-              "reason": "arrived-and-looked-about"
+              "reason": "entered-and-left-quickly"
+            }
+          ]
+        },
+        {
+          "label": "ev.tenduc.entry.choice.market",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tenduc",
+              "reason": "heard-the-market-talk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tenduc",
+              "reason": "merchants-named-the-quarters"
+            }
+          ]
+        },
+        {
+          "label": "ev.tenduc.entry.choice.shrine",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tenduc",
+              "reason": "paid-respect-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tenduc-shrine",
+              "reason": "visited-the-shrine"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tenduc",
+              "reason": "found-the-way"
             }
           ]
         }
@@ -3066,12 +5523,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tiju.entry.choice.enter",
+          "label": "ev.tiju.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tiju",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tiju.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tiju",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tiju",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -3098,12 +5575,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.trapezus.entry.choice.enter",
+          "label": "ev.trapezus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "trapezus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.trapezus.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "trapezus",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -3129,12 +5621,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tripolis.entry.choice.enter",
+          "label": "ev.tripolis.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tripolis",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tripolis.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tripolis",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -3160,12 +5667,27 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tyrus.entry.choice.enter",
+          "label": "ev.tyrus.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "tyrus",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.tyrus.entry.choice.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-a-day-at-the-station"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tyrus",
+              "reason": "rested-and-noted-the-place"
             }
           ]
         }
@@ -3191,12 +5713,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.yarcan.entry.choice.enter",
+          "label": "ev.yarcan.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "yarcan",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.yarcan.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yarcan",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-yarcan",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }
@@ -3223,12 +5765,32 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.yasdi.entry.choice.enter",
+          "label": "ev.yasdi.entry.choice.pass",
           "effects": [
             {
               "op": "reveal_map",
               "value": "yasdi",
-              "reason": "arrived-and-looked-about"
+              "reason": "passed-through-here"
+            }
+          ]
+        },
+        {
+          "label": "ev.yasdi.entry.choice.look",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yasdi",
+              "reason": "looked-about-the-town"
+            },
+            {
+              "op": "codex",
+              "value": "cx-yasdi",
+              "reason": "heard-what-men-say-of-this-place"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-looking-about"
             }
           ]
         }

@@ -33,6 +33,7 @@ var retainers: Array = []
 var once_fired: Dictionary = {}       ## event_id -> true
 var stickers: Array[String] = []
 var codex: Array[String] = []
+var birthdate_jdn: int = -1           ## player natal day for bazi; -1 = unset
 
 
 func duplicate_state() -> WorldState:
@@ -61,6 +62,7 @@ func duplicate_state() -> WorldState:
 	s.once_fired = once_fired.duplicate(true)
 	s.stickers = stickers.duplicate()
 	s.codex = codex.duplicate()
+	s.birthdate_jdn = birthdate_jdn
 	return s
 
 

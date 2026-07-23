@@ -1,0 +1,78 @@
+{
+  "contentVersion": 1,
+  "table": "ephemeris_solar_terms",
+  "records": [
+    {
+      "id": "st-0",
+      "name": "小寒",
+      "doy": 5,
+      "monthBranch": "丑"
+    },
+    {
+      "id": "st-1",
+      "name": "立春",
+      "doy": 35,
+      "monthBranch": "寅"
+    },
+    {
+      "id": "st-2",
+      "name": "惊蛰",
+      "doy": 65,
+      "monthBranch": "卯"
+    },
+    {
+      "id": "st-3",
+      "name": "清明",
+      "doy": 95,
+      "monthBranch": "辰"
+    },
+    {
+      "id": "st-4",
+      "name": "立夏",
+      "doy": 126,
+      "monthBranch": "巳"
+    },
+    {
+      "id": "st-5",
+      "name": "芒种",
+      "doy": 157,
+      "monthBranch": "午"
+    },
+    {
+      "id": "st-6",
+      "name": "小暑",
+      "doy": 188,
+      "monthBranch": "未"
+    },
+    {
+      "id": "st-7",
+      "name": "立秋",
+      "doy": 218,
+      "monthBranch": "申"
+    },
+    {
+      "id": "st-8",
+      "name": "白露",
+      "doy": 249,
+      "monthBranch": "酉"
+    },
+    {
+      "id": "st-9",
+      "name": "寒露",
+      "doy": 279,
+      "monthBranch": "戌"
+    },
+    {
+      "id": "st-10",
+      "name": "立冬",
+      "doy": 309,
+      "monthBranch": "亥"
+    },
+    {
+      "id": "st-11",
+      "name": "大雪",
+      "doy": 340,
+      "monthBranch": "子"
+    }
+  ]
+}

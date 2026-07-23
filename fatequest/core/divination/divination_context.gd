@@ -10,6 +10,9 @@ var jdn: int = 0
 var question: String = ""      ## route|timing|person|trade|risk|identity
 var subject: String = ""       ## city id, route id, retainer id, or ""
 var birthdate_jdn: int = -1    ## for birth-structure methods; -1 = unknown
+var spread: String = ""        ## tarot/runes spread id; empty = method default
+var exit_a: String = ""        ## optional fork subject A (choice-gate)
+var exit_b: String = ""        ## optional fork subject B (choice-gate)
 
 
 func _init(p_state: WorldState = null, p_rng: Rng = null) -> void:

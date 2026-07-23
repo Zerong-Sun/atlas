@@ -3,6 +3,459 @@
   "table": "divinations",
   "records": [
     {
+      "id": "bazi",
+      "name": "div.bazi.name",
+      "culture": "east_asia",
+      "mvp": true,
+      "learnAt": [
+        "baldacum",
+        "cambaluc",
+        "kinsay"
+      ],
+      "teacher": "npc-baldacum-mentor",
+      "question": "trade",
+      "inputs": [
+        "birthdate"
+      ],
+      "reads": [
+        "self",
+        "retainer",
+        "year"
+      ],
+      "outputs": {
+        "advice": "long_term_fit",
+        "confidence": 0.65,
+        "horizon": "three_years"
+      },
+      "effects": [
+        {
+          "op": "reveal_birth",
+          "value": 1,
+          "reason": "bazi-read-the-pillars"
+        },
+        {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "bazi-named-a-season-window"
+        },
+        {
+          "op": "codex",
+          "value": "cx-four-pillars",
+          "reason": "bazi-recorded-the-chart"
+        }
+      ],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.bazi.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.bazi.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.bazi.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.bazi.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.bazi.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.bazi.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.bazi.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.bazi.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.bazi.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.bazi.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.bazi.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.bazi.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.bazi.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.bazi.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.bazi.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.bazi.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.bazi.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.bazi.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.bazi.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.bazi.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.bazi.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.bazi.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.bazi.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.bazi.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.bazi.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.bazi.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.bazi.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.bazi.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.bazi.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.bazi.result.29"
+        }
+      ],
+      "cost": {
+        "coins": 400,
+        "time": 1,
+        "favor": 0
+      },
+      "atlasEngine": "bazi",
+      "causalityModel": "birth-structure",
+      "uncertaintyMode": "trend",
+      "evidenceStyle": [
+        "calculated-chart",
+        "classic-text"
+      ],
+      "questionDomain": [
+        "life-structure",
+        "career",
+        "relationship"
+      ]
+    },
+    {
+      "id": "bazi-relationship",
+      "name": "div.bazi-relationship.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "trade",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-bazi-relationship",
+          "reason": "bazi-relationship-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "bazi-relationship",
+      "causalityModel": "birth-structure",
+      "uncertaintyMode": "trend",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "relationship"
+      ]
+    },
+    {
+      "id": "tarot",
+      "name": "div.tarot.name",
+      "culture": "latin",
+      "mvp": true,
+      "learnAt": [
+        "tauris",
+        "ormus"
+      ],
+      "teacher": "npc-tauris-mentor",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route",
+        "city",
+        "self"
+      ],
+      "outputs": {
+        "advice": "route_choice",
+        "confidence": 0.68,
+        "horizon": "season"
+      },
+      "effects": [
+        {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "tarot-read-the-fork"
+        },
+        {
+          "op": "codex",
+          "value": "cx-tarot",
+          "reason": "tarot-recorded-the-spread"
+        }
+      ],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.tarot.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.tarot.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.tarot.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.tarot.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.tarot.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.tarot.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.tarot.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.tarot.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.tarot.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.tarot.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.tarot.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.tarot.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.tarot.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.tarot.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.tarot.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.tarot.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.tarot.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.tarot.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.tarot.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.tarot.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.tarot.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.tarot.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.tarot.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.tarot.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.tarot.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.tarot.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.tarot.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.tarot.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.tarot.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.tarot.result.29"
+        }
+      ],
+      "cost": {
+        "coins": 150,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "tarot",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "psychological-mirroring",
+      "evidenceStyle": [
+        "drawn-card"
+      ],
+      "questionDomain": [
+        "relationship",
+        "inner-state",
+        "specific-event"
+      ],
+      "spreads": [
+        "one-card",
+        "three-timeline",
+        "cross",
+        "celtic-cross",
+        "relationship-mirror",
+        "choice-gate",
+        "career-map",
+        "money-flow",
+        "shadow-dialogue"
+      ]
+    },
+    {
+      "id": "dream",
+      "name": "div.dream.name",
+      "culture": "central_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "identity",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-dream",
+          "reason": "dream-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "dream",
+      "causalityModel": "folk-association",
+      "uncertaintyMode": "event-narrative",
+      "evidenceStyle": [
+        "dream-symbol"
+      ],
+      "questionDomain": [
+        "dream",
+        "inner-state"
+      ]
+    },
+    {
       "id": "iching",
       "name": "div.iching.name",
       "culture": "east_asia",
@@ -119,6 +572,46 @@
         {
           "cond": "idx_19",
           "key": "div.iching.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.iching.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.iching.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.iching.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.iching.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.iching.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.iching.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.iching.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.iching.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.iching.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.iching.result.29"
         }
       ],
       "cost": {
@@ -126,140 +619,401 @@
         "time": 0,
         "favor": 0
       },
-      "atlas": {
-        "causalityModel": "symbolic-projection",
-        "uncertaintyMode": "strategic-positioning",
-        "evidenceStyle": "cast-symbol"
-      }
+      "atlasEngine": "iching",
+      "causalityModel": "time-position",
+      "uncertaintyMode": "strategic-positioning",
+      "evidenceStyle": [
+        "cast-symbol",
+        "classic-text"
+      ],
+      "questionDomain": [
+        "specific-event",
+        "timing",
+        "career"
+      ]
     },
     {
-      "id": "bazi",
-      "name": "div.bazi.name",
+      "id": "qimen",
+      "name": "div.qimen.name",
       "culture": "east_asia",
-      "mvp": true,
-      "learnAt": [
-        "cambaluc",
-        "kinsay"
-      ],
-      "teacher": "npc-kinsay-mentor",
-      "question": "person",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "route",
       "inputs": [
-        "birthdate"
+        "question"
       ],
       "reads": [
-        "self",
-        "retainer",
-        "year"
+        "route"
       ],
       "outputs": {
-        "advice": "long_term_fit",
-        "confidence": 0.65,
-        "horizon": "three_years"
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
       },
       "effects": [
         {
-          "op": "reveal_birth",
-          "value": 1,
-          "reason": "bazi-read-the-pillars"
-        },
-        {
           "op": "codex",
-          "value": "cx-four-pillars",
-          "reason": "bazi-recorded-the-chart"
+          "value": "cx-qimen",
+          "reason": "qimen-recorded-in-codex"
         }
       ],
-      "resultTexts": [
-        {
-          "cond": "idx_0",
-          "key": "div.bazi.result.00"
-        },
-        {
-          "cond": "idx_1",
-          "key": "div.bazi.result.01"
-        },
-        {
-          "cond": "idx_2",
-          "key": "div.bazi.result.02"
-        },
-        {
-          "cond": "idx_3",
-          "key": "div.bazi.result.03"
-        },
-        {
-          "cond": "idx_4",
-          "key": "div.bazi.result.04"
-        },
-        {
-          "cond": "idx_5",
-          "key": "div.bazi.result.05"
-        },
-        {
-          "cond": "idx_6",
-          "key": "div.bazi.result.06"
-        },
-        {
-          "cond": "idx_7",
-          "key": "div.bazi.result.07"
-        },
-        {
-          "cond": "idx_8",
-          "key": "div.bazi.result.08"
-        },
-        {
-          "cond": "idx_9",
-          "key": "div.bazi.result.09"
-        },
-        {
-          "cond": "idx_10",
-          "key": "div.bazi.result.10"
-        },
-        {
-          "cond": "idx_11",
-          "key": "div.bazi.result.11"
-        },
-        {
-          "cond": "idx_12",
-          "key": "div.bazi.result.12"
-        },
-        {
-          "cond": "idx_13",
-          "key": "div.bazi.result.13"
-        },
-        {
-          "cond": "idx_14",
-          "key": "div.bazi.result.14"
-        },
-        {
-          "cond": "idx_15",
-          "key": "div.bazi.result.15"
-        },
-        {
-          "cond": "idx_16",
-          "key": "div.bazi.result.16"
-        },
-        {
-          "cond": "idx_17",
-          "key": "div.bazi.result.17"
-        },
-        {
-          "cond": "idx_18",
-          "key": "div.bazi.result.18"
-        },
-        {
-          "cond": "idx_19",
-          "key": "div.bazi.result.19"
-        }
-      ],
+      "resultTexts": [],
       "cost": {
-        "coins": 400,
-        "time": 1,
+        "coins": 0,
+        "time": 0,
         "favor": 0
       },
-      "atlas": {
-        "causalityModel": "birth-structure",
-        "uncertaintyMode": "trend",
-        "evidenceStyle": "calculated-chart"
-      }
+      "atlasEngine": "qimen",
+      "causalityModel": "spatial-flow",
+      "uncertaintyMode": "strategic-positioning",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "timing",
+        "specific-event",
+        "space"
+      ]
+    },
+    {
+      "id": "ziwei",
+      "name": "div.ziwei.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "trade",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-ziwei",
+          "reason": "ziwei-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "ziwei",
+      "causalityModel": "celestial-cycle",
+      "uncertaintyMode": "trend",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "life-structure"
+      ]
+    },
+    {
+      "id": "liuyao",
+      "name": "div.liuyao.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "timing",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-liuyao",
+          "reason": "liuyao-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "liuyao",
+      "causalityModel": "time-position",
+      "uncertaintyMode": "timing",
+      "evidenceStyle": [
+        "cast-symbol"
+      ],
+      "questionDomain": [
+        "specific-event"
+      ]
+    },
+    {
+      "id": "meihua",
+      "name": "div.meihua.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "timing",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-meihua",
+          "reason": "meihua-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "meihua",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "timing",
+      "evidenceStyle": [
+        "cast-symbol"
+      ],
+      "questionDomain": [
+        "specific-event"
+      ]
+    },
+    {
+      "id": "western",
+      "name": "div.western.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "trade",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-western",
+          "reason": "western-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "western",
+      "causalityModel": "celestial-cycle",
+      "uncertaintyMode": "trend",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "life-structure",
+        "career"
+      ]
+    },
+    {
+      "id": "vedic",
+      "name": "div.vedic.name",
+      "culture": "indian_ocean",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "timing",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-vedic",
+          "reason": "vedic-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "vedic",
+      "causalityModel": "celestial-cycle",
+      "uncertaintyMode": "timing",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "life-structure",
+        "timing"
+      ]
+    },
+    {
+      "id": "numerology",
+      "name": "div.numerology.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-numerology",
+          "reason": "numerology-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "numerology",
+      "causalityModel": "birth-structure",
+      "uncertaintyMode": "reflection",
+      "evidenceStyle": [
+        "calculated-chart"
+      ],
+      "questionDomain": [
+        "inner-state"
+      ]
+    },
+    {
+      "id": "runes",
+      "name": "div.runes.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-runes",
+          "reason": "runes-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "runes",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "psychological-mirroring",
+      "evidenceStyle": [
+        "drawn-card"
+      ],
+      "questionDomain": [
+        "inner-state",
+        "specific-event"
+      ]
+    },
+    {
+      "id": "geomancy",
+      "name": "div.geomancy.name",
+      "culture": "islamic",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "risk",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-geomancy",
+          "reason": "geomancy-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "geomancy",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "yes-no",
+      "evidenceStyle": [
+        "cast-symbol"
+      ],
+      "questionDomain": [
+        "specific-event"
+      ]
     },
     {
       "id": "lot",
@@ -377,6 +1131,46 @@
         {
           "cond": "idx_19",
           "key": "div.lot.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.lot.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.lot.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.lot.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.lot.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.lot.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.lot.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.lot.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.lot.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.lot.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.lot.result.29"
         }
       ],
       "cost": {
@@ -384,11 +1178,396 @@
         "time": 0,
         "favor": 0
       },
-      "atlas": {
-        "causalityModel": "textual-admonition",
-        "uncertaintyMode": "admonition",
-        "evidenceStyle": "ritual-result"
-      }
+      "atlasEngine": "lot",
+      "causalityModel": "textual-admonition",
+      "uncertaintyMode": "admonition",
+      "evidenceStyle": [
+        "ritual-result"
+      ],
+      "questionDomain": [
+        "specific-event",
+        "daily-guidance"
+      ]
+    },
+    {
+      "id": "jiaobei",
+      "name": "div.jiaobei.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "risk",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-jiaobei",
+          "reason": "jiaobei-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "jiaobei",
+      "causalityModel": "ritual-confirmation",
+      "uncertaintyMode": "yes-no",
+      "evidenceStyle": [
+        "ritual-result"
+      ],
+      "questionDomain": [
+        "specific-event"
+      ]
+    },
+    {
+      "id": "xiangmian",
+      "name": "div.xiangmian.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-xiangmian",
+          "reason": "xiangmian-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "xiangmian",
+      "causalityModel": "folk-association",
+      "uncertaintyMode": "reflection",
+      "evidenceStyle": [
+        "observed-sign"
+      ],
+      "questionDomain": [
+        "inner-state"
+      ]
+    },
+    {
+      "id": "palmistry",
+      "name": "div.palmistry.name",
+      "culture": "indian_ocean",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-palmistry",
+          "reason": "palmistry-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "palmistry",
+      "causalityModel": "folk-association",
+      "uncertaintyMode": "reflection",
+      "evidenceStyle": [
+        "observed-sign"
+      ],
+      "questionDomain": [
+        "inner-state"
+      ]
+    },
+    {
+      "id": "fengshui",
+      "name": "div.fengshui.name",
+      "culture": "east_asia",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "route",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-fengshui",
+          "reason": "fengshui-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "fengshui",
+      "causalityModel": "spatial-flow",
+      "uncertaintyMode": "strategic-positioning",
+      "evidenceStyle": [
+        "observed-sign"
+      ],
+      "questionDomain": [
+        "space"
+      ]
+    },
+    {
+      "id": "astrodice",
+      "name": "div.astrodice.name",
+      "culture": "islamic",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "timing",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-astrodice",
+          "reason": "astrodice-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "astrodice",
+      "causalityModel": "celestial-cycle",
+      "uncertaintyMode": "timing",
+      "evidenceStyle": [
+        "cast-symbol"
+      ],
+      "questionDomain": [
+        "daily-guidance"
+      ]
+    },
+    {
+      "id": "lenormand",
+      "name": "div.lenormand.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "identity",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-lenormand",
+          "reason": "lenormand-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "lenormand",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "event-narrative",
+      "evidenceStyle": [
+        "drawn-card"
+      ],
+      "questionDomain": [
+        "specific-event",
+        "relationship"
+      ]
+    },
+    {
+      "id": "oracle",
+      "name": "div.oracle.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-oracle",
+          "reason": "oracle-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "oracle",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "reflection",
+      "evidenceStyle": [
+        "drawn-card"
+      ],
+      "questionDomain": [
+        "inner-state",
+        "daily-guidance"
+      ]
+    },
+    {
+      "id": "coffee",
+      "name": "div.coffee.name",
+      "culture": "islamic",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "identity",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-coffee",
+          "reason": "coffee-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "coffee",
+      "causalityModel": "folk-association",
+      "uncertaintyMode": "event-narrative",
+      "evidenceStyle": [
+        "observed-sign"
+      ],
+      "questionDomain": [
+        "daily-guidance"
+      ]
+    },
+    {
+      "id": "scrying",
+      "name": "div.scrying.name",
+      "culture": "latin",
+      "mvp": false,
+      "learnAt": [],
+      "teacher": "",
+      "question": "person",
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route"
+      ],
+      "outputs": {
+        "advice": "codex_only",
+        "confidence": 0.5,
+        "horizon": "day"
+      },
+      "effects": [
+        {
+          "op": "codex",
+          "value": "cx-scrying",
+          "reason": "scrying-recorded-in-codex"
+        }
+      ],
+      "resultTexts": [],
+      "cost": {
+        "coins": 0,
+        "time": 0,
+        "favor": 0
+      },
+      "atlasEngine": "scrying",
+      "causalityModel": "symbolic-projection",
+      "uncertaintyMode": "psychological-mirroring",
+      "evidenceStyle": [
+        "observed-sign"
+      ],
+      "questionDomain": [
+        "inner-state"
+      ]
     }
   ]
 }

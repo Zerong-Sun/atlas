@@ -1,0 +1,454 @@
+{
+  "contentVersion": 1,
+  "table": "hexagrams",
+  "records": [
+    {
+      "id": "hex-0",
+      "index": 0,
+      "name": "乾",
+      "nameKey": "div.iching.hex.0",
+      "adviceKey": "div.iching.hex.0.advice"
+    },
+    {
+      "id": "hex-1",
+      "index": 1,
+      "name": "坤",
+      "nameKey": "div.iching.hex.1",
+      "adviceKey": "div.iching.hex.1.advice"
+    },
+    {
+      "id": "hex-2",
+      "index": 2,
+      "name": "屯",
+      "nameKey": "div.iching.hex.2",
+      "adviceKey": "div.iching.hex.2.advice"
+    },
+    {
+      "id": "hex-3",
+      "index": 3,
+      "name": "蒙",
+      "nameKey": "div.iching.hex.3",
+      "adviceKey": "div.iching.hex.3.advice"
+    },
+    {
+      "id": "hex-4",
+      "index": 4,
+      "name": "需",
+      "nameKey": "div.iching.hex.4",
+      "adviceKey": "div.iching.hex.4.advice"
+    },
+    {
+      "id": "hex-5",
+      "index": 5,
+      "name": "讼",
+      "nameKey": "div.iching.hex.5",
+      "adviceKey": "div.iching.hex.5.advice"
+    },
+    {
+      "id": "hex-6",
+      "index": 6,
+      "name": "师",
+      "nameKey": "div.iching.hex.6",
+      "adviceKey": "div.iching.hex.6.advice"
+    },
+    {
+      "id": "hex-7",
+      "index": 7,
+      "name": "比",
+      "nameKey": "div.iching.hex.7",
+      "adviceKey": "div.iching.hex.7.advice"
+    },
+    {
+      "id": "hex-8",
+      "index": 8,
+      "name": "小畜",
+      "nameKey": "div.iching.hex.8",
+      "adviceKey": "div.iching.hex.8.advice"
+    },
+    {
+      "id": "hex-9",
+      "index": 9,
+      "name": "履",
+      "nameKey": "div.iching.hex.9",
+      "adviceKey": "div.iching.hex.9.advice"
+    },
+    {
+      "id": "hex-10",
+      "index": 10,
+      "name": "泰",
+      "nameKey": "div.iching.hex.10",
+      "adviceKey": "div.iching.hex.10.advice"
+    },
+    {
+      "id": "hex-11",
+      "index": 11,
+      "name": "否",
+      "nameKey": "div.iching.hex.11",
+      "adviceKey": "div.iching.hex.11.advice"
+    },
+    {
+      "id": "hex-12",
+      "index": 12,
+      "name": "同人",
+      "nameKey": "div.iching.hex.12",
+      "adviceKey": "div.iching.hex.12.advice"
+    },
+    {
+      "id": "hex-13",
+      "index": 13,
+      "name": "大有",
+      "nameKey": "div.iching.hex.13",
+      "adviceKey": "div.iching.hex.13.advice"
+    },
+    {
+      "id": "hex-14",
+      "index": 14,
+      "name": "谦",
+      "nameKey": "div.iching.hex.14",
+      "adviceKey": "div.iching.hex.14.advice"
+    },
+    {
+      "id": "hex-15",
+      "index": 15,
+      "name": "豫",
+      "nameKey": "div.iching.hex.15",
+      "adviceKey": "div.iching.hex.15.advice"
+    },
+    {
+      "id": "hex-16",
+      "index": 16,
+      "name": "随",
+      "nameKey": "div.iching.hex.16",
+      "adviceKey": "div.iching.hex.16.advice"
+    },
+    {
+      "id": "hex-17",
+      "index": 17,
+      "name": "蛊",
+      "nameKey": "div.iching.hex.17",
+      "adviceKey": "div.iching.hex.17.advice"
+    },
+    {
+      "id": "hex-18",
+      "index": 18,
+      "name": "临",
+      "nameKey": "div.iching.hex.18",
+      "adviceKey": "div.iching.hex.18.advice"
+    },
+    {
+      "id": "hex-19",
+      "index": 19,
+      "name": "观",
+      "nameKey": "div.iching.hex.19",
+      "adviceKey": "div.iching.hex.19.advice"
+    },
+    {
+      "id": "hex-20",
+      "index": 20,
+      "name": "噬嗑",
+      "nameKey": "div.iching.hex.20",
+      "adviceKey": "div.iching.hex.20.advice"
+    },
+    {
+      "id": "hex-21",
+      "index": 21,
+      "name": "贲",
+      "nameKey": "div.iching.hex.21",
+      "adviceKey": "div.iching.hex.21.advice"
+    },
+    {
+      "id": "hex-22",
+      "index": 22,
+      "name": "剥",
+      "nameKey": "div.iching.hex.22",
+      "adviceKey": "div.iching.hex.22.advice"
+    },
+    {
+      "id": "hex-23",
+      "index": 23,
+      "name": "复",
+      "nameKey": "div.iching.hex.23",
+      "adviceKey": "div.iching.hex.23.advice"
+    },
+    {
+      "id": "hex-24",
+      "index": 24,
+      "name": "无妄",
+      "nameKey": "div.iching.hex.24",
+      "adviceKey": "div.iching.hex.24.advice"
+    },
+    {
+      "id": "hex-25",
+      "index": 25,
+      "name": "大畜",
+      "nameKey": "div.iching.hex.25",
+      "adviceKey": "div.iching.hex.25.advice"
+    },
+    {
+      "id": "hex-26",
+      "index": 26,
+      "name": "颐",
+      "nameKey": "div.iching.hex.26",
+      "adviceKey": "div.iching.hex.26.advice"
+    },
+    {
+      "id": "hex-27",
+      "index": 27,
+      "name": "大过",
+      "nameKey": "div.iching.hex.27",
+      "adviceKey": "div.iching.hex.27.advice"
+    },
+    {
+      "id": "hex-28",
+      "index": 28,
+      "name": "坎",
+      "nameKey": "div.iching.hex.28",
+      "adviceKey": "div.iching.hex.28.advice"
+    },
+    {
+      "id": "hex-29",
+      "index": 29,
+      "name": "离",
+      "nameKey": "div.iching.hex.29",
+      "adviceKey": "div.iching.hex.29.advice"
+    },
+    {
+      "id": "hex-30",
+      "index": 30,
+      "name": "咸",
+      "nameKey": "div.iching.hex.30",
+      "adviceKey": "div.iching.hex.30.advice"
+    },
+    {
+      "id": "hex-31",
+      "index": 31,
+      "name": "恒",
+      "nameKey": "div.iching.hex.31",
+      "adviceKey": "div.iching.hex.31.advice"
+    },
+    {
+      "id": "hex-32",
+      "index": 32,
+      "name": "遁",
+      "nameKey": "div.iching.hex.32",
+      "adviceKey": "div.iching.hex.32.advice"
+    },
+    {
+      "id": "hex-33",
+      "index": 33,
+      "name": "大壮",
+      "nameKey": "div.iching.hex.33",
+      "adviceKey": "div.iching.hex.33.advice"
+    },
+    {
+      "id": "hex-34",
+      "index": 34,
+      "name": "晋",
+      "nameKey": "div.iching.hex.34",
+      "adviceKey": "div.iching.hex.34.advice"
+    },
+    {
+      "id": "hex-35",
+      "index": 35,
+      "name": "明夷",
+      "nameKey": "div.iching.hex.35",
+      "adviceKey": "div.iching.hex.35.advice"
+    },
+    {
+      "id": "hex-36",
+      "index": 36,
+      "name": "家人",
+      "nameKey": "div.iching.hex.36",
+      "adviceKey": "div.iching.hex.36.advice"
+    },
+    {
+      "id": "hex-37",
+      "index": 37,
+      "name": "睽",
+      "nameKey": "div.iching.hex.37",
+      "adviceKey": "div.iching.hex.37.advice"
+    },
+    {
+      "id": "hex-38",
+      "index": 38,
+      "name": "蹇",
+      "nameKey": "div.iching.hex.38",
+      "adviceKey": "div.iching.hex.38.advice"
+    },
+    {
+      "id": "hex-39",
+      "index": 39,
+      "name": "解",
+      "nameKey": "div.iching.hex.39",
+      "adviceKey": "div.iching.hex.39.advice"
+    },
+    {
+      "id": "hex-40",
+      "index": 40,
+      "name": "损",
+      "nameKey": "div.iching.hex.40",
+      "adviceKey": "div.iching.hex.40.advice"
+    },
+    {
+      "id": "hex-41",
+      "index": 41,
+      "name": "益",
+      "nameKey": "div.iching.hex.41",
+      "adviceKey": "div.iching.hex.41.advice"
+    },
+    {
+      "id": "hex-42",
+      "index": 42,
+      "name": "夬",
+      "nameKey": "div.iching.hex.42",
+      "adviceKey": "div.iching.hex.42.advice"
+    },
+    {
+      "id": "hex-43",
+      "index": 43,
+      "name": "姤",
+      "nameKey": "div.iching.hex.43",
+      "adviceKey": "div.iching.hex.43.advice"
+    },
+    {
+      "id": "hex-44",
+      "index": 44,
+      "name": "萃",
+      "nameKey": "div.iching.hex.44",
+      "adviceKey": "div.iching.hex.44.advice"
+    },
+    {
+      "id": "hex-45",
+      "index": 45,
+      "name": "升",
+      "nameKey": "div.iching.hex.45",
+      "adviceKey": "div.iching.hex.45.advice"
+    },
+    {
+      "id": "hex-46",
+      "index": 46,
+      "name": "困",
+      "nameKey": "div.iching.hex.46",
+      "adviceKey": "div.iching.hex.46.advice"
+    },
+    {
+      "id": "hex-47",
+      "index": 47,
+      "name": "井",
+      "nameKey": "div.iching.hex.47",
+      "adviceKey": "div.iching.hex.47.advice"
+    },
+    {
+      "id": "hex-48",
+      "index": 48,
+      "name": "革",
+      "nameKey": "div.iching.hex.48",
+      "adviceKey": "div.iching.hex.48.advice"
+    },
+    {
+      "id": "hex-49",
+      "index": 49,
+      "name": "鼎",
+      "nameKey": "div.iching.hex.49",
+      "adviceKey": "div.iching.hex.49.advice"
+    },
+    {
+      "id": "hex-50",
+      "index": 50,
+      "name": "震",
+      "nameKey": "div.iching.hex.50",
+      "adviceKey": "div.iching.hex.50.advice"
+    },
+    {
+      "id": "hex-51",
+      "index": 51,
+      "name": "艮",
+      "nameKey": "div.iching.hex.51",
+      "adviceKey": "div.iching.hex.51.advice"
+    },
+    {
+      "id": "hex-52",
+      "index": 52,
+      "name": "渐",
+      "nameKey": "div.iching.hex.52",
+      "adviceKey": "div.iching.hex.52.advice"
+    },
+    {
+      "id": "hex-53",
+      "index": 53,
+      "name": "归妹",
+      "nameKey": "div.iching.hex.53",
+      "adviceKey": "div.iching.hex.53.advice"
+    },
+    {
+      "id": "hex-54",
+      "index": 54,
+      "name": "丰",
+      "nameKey": "div.iching.hex.54",
+      "adviceKey": "div.iching.hex.54.advice"
+    },
+    {
+      "id": "hex-55",
+      "index": 55,
+      "name": "旅",
+      "nameKey": "div.iching.hex.55",
+      "adviceKey": "div.iching.hex.55.advice"
+    },
+    {
+      "id": "hex-56",
+      "index": 56,
+      "name": "巽",
+      "nameKey": "div.iching.hex.56",
+      "adviceKey": "div.iching.hex.56.advice"
+    },
+    {
+      "id": "hex-57",
+      "index": 57,
+      "name": "兑",
+      "nameKey": "div.iching.hex.57",
+      "adviceKey": "div.iching.hex.57.advice"
+    },
+    {
+      "id": "hex-58",
+      "index": 58,
+      "name": "涣",
+      "nameKey": "div.iching.hex.58",
+      "adviceKey": "div.iching.hex.58.advice"
+    },
+    {
+      "id": "hex-59",
+      "index": 59,
+      "name": "节",
+      "nameKey": "div.iching.hex.59",
+      "adviceKey": "div.iching.hex.59.advice"
+    },
+    {
+      "id": "hex-60",
+      "index": 60,
+      "name": "中孚",
+      "nameKey": "div.iching.hex.60",
+      "adviceKey": "div.iching.hex.60.advice"
+    },
+    {
+      "id": "hex-61",
+      "index": 61,
+      "name": "小过",
+      "nameKey": "div.iching.hex.61",
+      "adviceKey": "div.iching.hex.61.advice"
+    },
+    {
+      "id": "hex-62",
+      "index": 62,
+      "name": "既济",
+      "nameKey": "div.iching.hex.62",
+      "adviceKey": "div.iching.hex.62.advice"
+    },
+    {
+      "id": "hex-63",
+      "index": 63,
+      "name": "未济",
+      "nameKey": "div.iching.hex.63",
+      "adviceKey": "div.iching.hex.63.advice"
+    }
+  ]
+}

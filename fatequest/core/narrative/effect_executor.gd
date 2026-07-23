@@ -17,6 +17,7 @@ class EffectResult extends RefCounted:
 	var rejected: Array[Dictionary] = []
 	var log_lines: Array[String] = []
 	var queued_days: int = 0
+	var reading: Dictionary = {}  ## last DivinationRegistry.cast payload, if any
 
 
 func execute(state: WorldState, effects: Array, ctx: Dictionary = {}) -> EffectResult:

@@ -65,11 +65,30 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 		push_error("choice %d of %s is not available" % [index, ev.get("id", "?")])
 		return EffectExecutor.EffectResult.new()
 
-	var effects: Array = ch.get("effects", [])
+	var effects: Array = []
+	var reading: Dictionary = {}
 
-	# A choice gated on a divination resolves pass/fail before its effects run.
+	# Cast through the open registry when a choice names a method. Authored
+	# pass/fail branches remain as narrative extras after the cast effects.
 	if ch.has("divination"):
 		var mid := String(ch["divination"])
+		if mid not in state.learned_divinations:
+			push_error("divination '%s' used but not learned" % mid)
+			return EffectExecutor.EffectResult.new()
+
+		var dctx := DivinationContext.new(state, rng.fork("divcast:%s:%s" % [ev.get("id", "?"), str(index)]))
+		dctx.jdn = state.jdn
+		dctx.subject = String(ch.get("subject", ctx.get("subject", state.city)))
+		dctx.question = String(ch.get("question", ""))
+		dctx.spread = String(ch.get("spread", ""))
+		dctx.exit_a = String(ch.get("exit_a", ctx.get("exit_a", "")))
+		dctx.exit_b = String(ch.get("exit_b", ctx.get("exit_b", "")))
+		dctx.birthdate_jdn = int(ctx.get("birthdate_jdn", state.birthdate_jdn))
+
+		reading = DivinationRegistry.cast(mid, dctx)
+		for e in reading.get("effects", []):
+			effects.append(e)
+
 		var fate_key := "rapport"
 		var conf := 0.7
 		var d := db.get_record(mid)
@@ -78,9 +97,16 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 		var chance := divination_success_chance(conf, int(state.fate.get(fate_key, 15)))
 		var roll := rng.fork("div:%s:%s" % [ev.get("id", "?"), str(index)]).next()
 		var branch: String = "pass" if roll < chance else "fail"
-		effects = ch.get(branch, {}).get("effects", [])
+		for e in ch.get(branch, {}).get("effects", []):
+			var ee: Dictionary = e.duplicate(true)
+			if String(ee.get("value", "")) == "$subject":
+				ee["value"] = dctx.subject
+			effects.append(ee)
+	else:
+		effects = ch.get("effects", [])
 
 	var res := executor.execute(state, effects, {"rng": rng, "event_id": ev.get("id", "anon")})
+	res.reading = reading
 	if ev.get("once", false):
 		state.once_fired[ev["id"]] = true
 	return res

@@ -248,7 +248,8 @@
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-baldacum-mentor-bazi"
     },
     {
       "id": "basora",
@@ -1201,7 +1202,8 @@
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-tauris-mentor-tarot"
     },
     {
       "id": "trapezus",

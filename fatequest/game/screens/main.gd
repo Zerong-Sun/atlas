@@ -8,6 +8,26 @@ const MARGIN := 48.0
 const START_JDN_Y := 1292
 const START_COINS := 500000     # fen — the kernel keeps money in integers
 
+## Resolved at runtime rather than referenced as a global identifier.
+##
+## `godot --script tests/foo.gd` does NOT register autoload globals, so a hard
+## `AudioDirector.x()` makes main.gd fail to COMPILE under headless test — which
+## is how a 6-hour CI hang happened: the scene failed to load, the test script
+## carried on against a bare Control, and the SceneTree never reached quit().
+##
+## A scene should not be untestable because one optional subsystem is absent.
+var _audio: Node = null
+
+func _audio_ready() -> bool:
+	return _audio != null and is_instance_valid(_audio)
+
+func _resolve_audio() -> void:
+	if _audio_ready():
+		return
+	var tree := get_tree()
+	if tree and tree.root:
+		_audio = tree.root.get_node_or_null("AudioDirector")
+
 var db := ContentDb.new()
 var projection: MapProjection
 
@@ -27,8 +47,10 @@ var _panel: VBoxContainer
 
 
 func _ready() -> void:
+	_resolve_audio()
 	I18n.load_lang("zh")
 	var n := db.load_all()
+	DivinationData.bind(db)
 	DivinationBootstrap.register_all()
 
 	projection = MapProjection.from_config()
@@ -130,8 +152,8 @@ func _begin(archetype: Dictionary) -> void:
 
 	_build_map()
 	_build_audio_controls()
-	AudioDirector.set_jdn(state.jdn)
-	AudioDirector.sfx("page")
+	if _audio_ready(): _audio.set_jdn(state.jdn)
+	if _audio_ready(): _audio.sfx("page")
 	_arrive()
 
 
@@ -183,11 +205,11 @@ func _say(line: String) -> void:
 ## Arrival: fire the entry event if there is one, else offer the roads.
 func _arrive() -> void:
 	_refresh_hud()
-	AudioDirector.set_jdn(state.jdn)
+	if _audio_ready(): _audio.set_jdn(state.jdn)
 	var city := db.get_record(state.city)
 	var ctx := _ctx()
 	var ev := events.pick("entry", state, rng, ctx)
-	AudioDirector.set_place(city, ev if not ev.is_empty() else {})
+	if _audio_ready(): _audio.set_place(city, ev if not ev.is_empty() else {})
 	if ev.is_empty():
 		_show_roads()
 	else:
@@ -209,9 +231,9 @@ func _clear_panel() -> void:
 
 func _show_event(ev: Dictionary) -> void:
 	_clear_panel()
-	AudioDirector.set_jdn(state.jdn)
-	AudioDirector.set_place(db.get_record(state.city), ev)
-	AudioDirector.sfx("page")
+	if _audio_ready(): _audio.set_jdn(state.jdn)
+	if _audio_ready(): _audio.set_place(db.get_record(state.city), ev)
+	if _audio_ready(): _audio.sfx("page")
 	_say("")
 	_say("[b]%s[/b]  %s" % [I18n.t(ev.get("title", "")), _origin_tag(ev)])
 	# The body is the point of the whole exercise; without it the player reads
@@ -256,9 +278,12 @@ func _origin_tag(rec: Dictionary) -> String:
 func _on_choice(ev: Dictionary, index: int) -> void:
 	var coins_before := state.coins
 	var res := events.choose(ev, index, state, rng, _ctx())
-	AudioDirector.on_effect_result(res, {}, db.get_record(state.city), coins_before)
+	if _audio_ready(): _audio.on_effect_result(res, {}, db.get_record(state.city), coins_before)
 	for line in res.log_lines:
 		_say("  · %s" % line)
+	if not res.reading.is_empty():
+		_say("")
+		_say(DivinationResultView.as_richtext(res.reading))
 	if not res.rejected.is_empty():
 		_say("  [color=#8a4a3a]· %d 项未能达成[/color]" % res.rejected.size())
 	_refresh_hud()
@@ -318,10 +343,10 @@ func _show_roads() -> void:
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
-	AudioDirector.on_depart(route)
+	if _audio_ready(): _audio.on_depart(route)
 	var trip := travel.depart(route, mode, state, rng)
 	clock = WorldClock.new(state.jdn)
-	AudioDirector.set_jdn(state.jdn)
+	if _audio_ready(): _audio.set_jdn(state.jdn)
 	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [
 		_city_name(trip["destination"]), trip["days"], trip["cost"] / 100])
 
@@ -359,12 +384,13 @@ func _build_audio_controls() -> void:
 	btn.position = Vector2(maxf(size.x, 1280.0) - MARGIN - 88.0, MARGIN)
 	btn.pressed.connect(_on_mute_pressed)
 	add_child(btn)
-	AudioDirector.mute_changed.connect(_on_mute_changed)
-	_on_mute_changed(AudioDirector.muted)
+	if _audio_ready():
+		_audio.mute_changed.connect(_on_mute_changed)
+		_on_mute_changed(_audio.muted)
 
 
 func _on_mute_pressed() -> void:
-	AudioDirector.toggle_mute()
+	if _audio_ready(): _audio.toggle_mute()
 
 
 func _on_mute_changed(is_muted: bool) -> void:

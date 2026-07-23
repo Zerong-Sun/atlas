@@ -186,8 +186,20 @@ for (const e of byTable.events ?? []) {
 }
 
 // --------------------------------------------- G3: divination effects ≠ ∅
+// MVP methods need route-facing effects + ≥30 resultTexts; non-MVP may be codex-only.
 for (const d of byTable.divinations ?? []) {
-  if (!d.effects?.length) err("G3", recordFile.get(d.id), `${d.id}: \`effects\` must not be empty (GDD §8.2)`);
+  const f = recordFile.get(d.id);
+  if (!d.effects?.length) err("G3", f, `${d.id}: \`effects\` must not be empty (GDD §8.2)`);
+  if (d.mvp) {
+    if ((d.resultTexts?.length ?? 0) < 30)
+      err("G3", f, `${d.id}: mvp requires resultTexts.length >= 30 (got ${d.resultTexts?.length ?? 0})`);
+    const routeFacing = (d.effects ?? []).some((e) =>
+      ["reveal_map", "reveal_birth", "unlock_route"].includes(e.op));
+    if (!routeFacing)
+      err("G3", f, `${d.id}: mvp requires at least one route-facing effect (reveal_map|reveal_birth|unlock_route)`);
+  } else if (!(d.effects ?? []).some((e) => e.op === "codex")) {
+    err("G3", f, `${d.id}: non-mvp should include a codex soft effect`);
+  }
 }
 
 // ------------------------------------- G13: the three lines must be walkable
@@ -359,12 +371,108 @@ for (const e of byTable.events ?? [])
   if (!referenced.has(e.id) && e.kind !== "road")
     warn("G2b", recordFile.get(e.id), `${e.id}: not referenced by any city or route (may be reserved)`);
 
+// ------------------------------------------------ G7: glossary consistency
+// Every Chinese translation must use glossary-approved terms when the
+// corresponding English source contains a glossary-tracked English term.
+// Without this gate, Zayton will be "刺桐" in one city and "泉州" in another
+// (docs/PLAN.md §4, docs/L10N_PLAN.md §4.3).
+{
+  const glossaryPath = join(ROOT, "assets/data/glossary.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const enPath = join(ROOT, "content/i18n/en.json");
+  if (existsSync(glossaryPath) && existsSync(zhPath) && existsSync(enPath)) {
+    const glossary = JSON.parse(readFileSync(glossaryPath, "utf8"));
+    const zh = JSON.parse(readFileSync(zhPath, "utf8"));
+    const en = JSON.parse(readFileSync(enPath, "utf8"));
+
+    // Build two-tier map: place terms → strict, other terms → advisory
+    const placeTerms = new Map(); // en_lower → { zhVariants }
+    const conceptTerms = new Map(); // same structure, for warnings only
+    for (const t of glossary.terms ?? []) {
+      const enLower = t.en.toLowerCase().split("/")[0].trim();
+      const parts = t.zh.split(/[（(／\/）)]/).map(s => s.trim()).filter(Boolean);
+      const entry = { zhVariants: parts, zhFull: t.zh, kind: t.kind, aliases: t.aliases ?? [] };
+      const target = t.kind === "place" ? placeTerms : conceptTerms;
+      target.set(enLower, entry);
+      for (const a of t.aliases ?? []) {
+        const aLower = a.toLowerCase().trim();
+        if (!target.has(aLower)) target.set(aLower, entry);
+      }
+    }
+
+    // For each translated Chinese entry, verify glossary terms
+    let g7Errors = 0, g7Warns = 0;
+    const checkTerm = (key, zhText, enText, enTerm, info, isPlace) => {
+      // Case-insensitive word-boundary match in English source
+      const esc = enTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      if (!new RegExp("\\b" + esc + "\\b", "i").test(enText)) return;
+      const variants = info.zhVariants;
+      if (!variants.length) return;
+      const found = variants.some((v) => v.length >= 2 && zhText.includes(v));
+      if (!found) {
+        if (isPlace) {
+          g7Errors++;
+          if (g7Errors <= 10)
+            err("G7", `zh.json:${key}`,
+              `place "${enTerm}" → ZH missing approved term(s) ${JSON.stringify(variants)}`);
+        } else {
+          g7Warns++;
+          if (g7Warns <= 6)
+            warn("G7", `zh.json:${key}`,
+              `term "${enTerm}" → ZH missing ${JSON.stringify(variants)} (advisory)`);
+        }
+      }
+    };
+    for (const [key, zhText] of Object.entries(zh)) {
+      if (!zhText || typeof zhText !== "string") continue;
+      const enText = en[key];
+      if (!enText || typeof enText !== "string") continue;
+      for (const [enTerm, info] of placeTerms)
+        checkTerm(key, zhText, enText, enTerm, info, true);
+      for (const [enTerm, info] of conceptTerms)
+        checkTerm(key, zhText, enText, enTerm, info, false);
+    }
+    if (g7Errors > 10) err("G7", "zh.json", `...and ${g7Errors - 10} more place-term mismatches`);
+    if (g7Warns > 6) warn("G7", "zh.json", `...and ${g7Warns - 6} more advisory mismatches`);
+  } else {
+    warn("G7", "i18n", "glossary.json or zh.json not found — glossary gate skipped");
+  }
+}
+
+// ------------------------------ G18: Chinese body must not be ASCII prose
+// When the fallback chain silently serves English where Chinese is missing,
+// the player sees mixed-language text. Every Chinese entry whose EN source
+// is long-form prose (.body, .desc, .wonder, .origin, .quest, .omen, .sign)
+// must actually BE Chinese — not a copy of the English.
+{
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  if (existsSync(zhPath)) {
+    const zh = JSON.parse(readFileSync(zhPath, "utf8"));
+    const LONG_SUFFIXES = [".body", ".desc", ".wonder", ".origin", ".quest", ".omen", ".sign"];
+    let g18Errors = 0;
+    for (const [key, zhText] of Object.entries(zh)) {
+      if (!zhText || typeof zhText !== "string") continue;
+      const isLong = LONG_SUFFIXES.some((s) => key.endsWith(s));
+      if (!isLong) continue;
+      // If > 60% of characters are ASCII (English), the text is untranslated
+      const ascii = [...zhText].filter((c) => c.charCodeAt(0) < 128).length;
+      const total = zhText.length;
+      if (total > 20 && ascii / total > 0.6) {
+        g18Errors++;
+        if (g18Errors <= 8)
+          err("G18", `zh.json:${key}`, `${Math.round(ascii/total*100)}% ASCII — likely untranslated English`);
+      }
+    }
+    if (g18Errors > 8) err("G18", "zh.json", `...and ${g18Errors - 8} more ASCII-leak entries`);
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14","G15","G16","G17"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

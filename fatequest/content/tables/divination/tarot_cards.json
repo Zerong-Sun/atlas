@@ -1,0 +1,1366 @@
+{
+  "contentVersion": 1,
+  "table": "tarot_cards",
+  "records": [
+    {
+      "id": "major-0",
+      "name": "愚者",
+      "nameKey": "div.tarot.card.major-0",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-0.up",
+      "reversedKey": "div.tarot.card.major-0.rev",
+      "keywords": [
+        "愚者"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-1",
+      "name": "魔术师",
+      "nameKey": "div.tarot.card.major-1",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-1.up",
+      "reversedKey": "div.tarot.card.major-1.rev",
+      "keywords": [
+        "魔术师"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-2",
+      "name": "女祭司",
+      "nameKey": "div.tarot.card.major-2",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-2.up",
+      "reversedKey": "div.tarot.card.major-2.rev",
+      "keywords": [
+        "女祭司"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-3",
+      "name": "皇后",
+      "nameKey": "div.tarot.card.major-3",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-3.up",
+      "reversedKey": "div.tarot.card.major-3.rev",
+      "keywords": [
+        "皇后"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-4",
+      "name": "皇帝",
+      "nameKey": "div.tarot.card.major-4",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-4.up",
+      "reversedKey": "div.tarot.card.major-4.rev",
+      "keywords": [
+        "皇帝"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-5",
+      "name": "教皇",
+      "nameKey": "div.tarot.card.major-5",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-5.up",
+      "reversedKey": "div.tarot.card.major-5.rev",
+      "keywords": [
+        "教皇"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-6",
+      "name": "恋人",
+      "nameKey": "div.tarot.card.major-6",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-6.up",
+      "reversedKey": "div.tarot.card.major-6.rev",
+      "keywords": [
+        "恋人"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-7",
+      "name": "战车",
+      "nameKey": "div.tarot.card.major-7",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-7.up",
+      "reversedKey": "div.tarot.card.major-7.rev",
+      "keywords": [
+        "战车"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-8",
+      "name": "力量",
+      "nameKey": "div.tarot.card.major-8",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-8.up",
+      "reversedKey": "div.tarot.card.major-8.rev",
+      "keywords": [
+        "力量"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-9",
+      "name": "隐者",
+      "nameKey": "div.tarot.card.major-9",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-9.up",
+      "reversedKey": "div.tarot.card.major-9.rev",
+      "keywords": [
+        "隐者"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-10",
+      "name": "命运之轮",
+      "nameKey": "div.tarot.card.major-10",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-10.up",
+      "reversedKey": "div.tarot.card.major-10.rev",
+      "keywords": [
+        "命运之轮"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-11",
+      "name": "正义",
+      "nameKey": "div.tarot.card.major-11",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-11.up",
+      "reversedKey": "div.tarot.card.major-11.rev",
+      "keywords": [
+        "正义"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-12",
+      "name": "倒吊人",
+      "nameKey": "div.tarot.card.major-12",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-12.up",
+      "reversedKey": "div.tarot.card.major-12.rev",
+      "keywords": [
+        "倒吊人"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-13",
+      "name": "死神",
+      "nameKey": "div.tarot.card.major-13",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-13.up",
+      "reversedKey": "div.tarot.card.major-13.rev",
+      "keywords": [
+        "死神"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-14",
+      "name": "节制",
+      "nameKey": "div.tarot.card.major-14",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-14.up",
+      "reversedKey": "div.tarot.card.major-14.rev",
+      "keywords": [
+        "节制"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-15",
+      "name": "恶魔",
+      "nameKey": "div.tarot.card.major-15",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-15.up",
+      "reversedKey": "div.tarot.card.major-15.rev",
+      "keywords": [
+        "恶魔"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-16",
+      "name": "高塔",
+      "nameKey": "div.tarot.card.major-16",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-16.up",
+      "reversedKey": "div.tarot.card.major-16.rev",
+      "keywords": [
+        "高塔"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-17",
+      "name": "星星",
+      "nameKey": "div.tarot.card.major-17",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-17.up",
+      "reversedKey": "div.tarot.card.major-17.rev",
+      "keywords": [
+        "星星"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-18",
+      "name": "月亮",
+      "nameKey": "div.tarot.card.major-18",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-18.up",
+      "reversedKey": "div.tarot.card.major-18.rev",
+      "keywords": [
+        "月亮"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-19",
+      "name": "太阳",
+      "nameKey": "div.tarot.card.major-19",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-19.up",
+      "reversedKey": "div.tarot.card.major-19.rev",
+      "keywords": [
+        "太阳"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-20",
+      "name": "审判",
+      "nameKey": "div.tarot.card.major-20",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-20.up",
+      "reversedKey": "div.tarot.card.major-20.rev",
+      "keywords": [
+        "审判"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "major-21",
+      "name": "世界",
+      "nameKey": "div.tarot.card.major-21",
+      "arcana": "major",
+      "suit": "major",
+      "element": "灵魂",
+      "uprightKey": "div.tarot.card.major-21.up",
+      "reversedKey": "div.tarot.card.major-21.rev",
+      "keywords": [
+        "世界"
+      ],
+      "reversedKeywords": [
+        "阻滞"
+      ]
+    },
+    {
+      "id": "wands-0",
+      "name": "权杖一",
+      "nameKey": "div.tarot.card.wands-0",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-0.up",
+      "reversedKey": "div.tarot.card.wands-0.rev",
+      "keywords": [
+        "一",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-1",
+      "name": "权杖二",
+      "nameKey": "div.tarot.card.wands-1",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-1.up",
+      "reversedKey": "div.tarot.card.wands-1.rev",
+      "keywords": [
+        "二",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-2",
+      "name": "权杖三",
+      "nameKey": "div.tarot.card.wands-2",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-2.up",
+      "reversedKey": "div.tarot.card.wands-2.rev",
+      "keywords": [
+        "三",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-3",
+      "name": "权杖四",
+      "nameKey": "div.tarot.card.wands-3",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-3.up",
+      "reversedKey": "div.tarot.card.wands-3.rev",
+      "keywords": [
+        "四",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-4",
+      "name": "权杖五",
+      "nameKey": "div.tarot.card.wands-4",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-4.up",
+      "reversedKey": "div.tarot.card.wands-4.rev",
+      "keywords": [
+        "五",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-5",
+      "name": "权杖六",
+      "nameKey": "div.tarot.card.wands-5",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-5.up",
+      "reversedKey": "div.tarot.card.wands-5.rev",
+      "keywords": [
+        "六",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-6",
+      "name": "权杖七",
+      "nameKey": "div.tarot.card.wands-6",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-6.up",
+      "reversedKey": "div.tarot.card.wands-6.rev",
+      "keywords": [
+        "七",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-7",
+      "name": "权杖八",
+      "nameKey": "div.tarot.card.wands-7",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-7.up",
+      "reversedKey": "div.tarot.card.wands-7.rev",
+      "keywords": [
+        "八",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-8",
+      "name": "权杖九",
+      "nameKey": "div.tarot.card.wands-8",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-8.up",
+      "reversedKey": "div.tarot.card.wands-8.rev",
+      "keywords": [
+        "九",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-9",
+      "name": "权杖十",
+      "nameKey": "div.tarot.card.wands-9",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-9.up",
+      "reversedKey": "div.tarot.card.wands-9.rev",
+      "keywords": [
+        "十",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-10",
+      "name": "权杖侍从",
+      "nameKey": "div.tarot.card.wands-10",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-10.up",
+      "reversedKey": "div.tarot.card.wands-10.rev",
+      "keywords": [
+        "侍从",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-11",
+      "name": "权杖骑士",
+      "nameKey": "div.tarot.card.wands-11",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-11.up",
+      "reversedKey": "div.tarot.card.wands-11.rev",
+      "keywords": [
+        "骑士",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-12",
+      "name": "权杖王后",
+      "nameKey": "div.tarot.card.wands-12",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-12.up",
+      "reversedKey": "div.tarot.card.wands-12.rev",
+      "keywords": [
+        "王后",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "wands-13",
+      "name": "权杖国王",
+      "nameKey": "div.tarot.card.wands-13",
+      "arcana": "minor",
+      "suit": "wands",
+      "element": "火",
+      "uprightKey": "div.tarot.card.wands-13.up",
+      "reversedKey": "div.tarot.card.wands-13.rev",
+      "keywords": [
+        "国王",
+        "权杖"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-0",
+      "name": "圣杯一",
+      "nameKey": "div.tarot.card.cups-0",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-0.up",
+      "reversedKey": "div.tarot.card.cups-0.rev",
+      "keywords": [
+        "一",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-1",
+      "name": "圣杯二",
+      "nameKey": "div.tarot.card.cups-1",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-1.up",
+      "reversedKey": "div.tarot.card.cups-1.rev",
+      "keywords": [
+        "二",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-2",
+      "name": "圣杯三",
+      "nameKey": "div.tarot.card.cups-2",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-2.up",
+      "reversedKey": "div.tarot.card.cups-2.rev",
+      "keywords": [
+        "三",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-3",
+      "name": "圣杯四",
+      "nameKey": "div.tarot.card.cups-3",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-3.up",
+      "reversedKey": "div.tarot.card.cups-3.rev",
+      "keywords": [
+        "四",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-4",
+      "name": "圣杯五",
+      "nameKey": "div.tarot.card.cups-4",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-4.up",
+      "reversedKey": "div.tarot.card.cups-4.rev",
+      "keywords": [
+        "五",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-5",
+      "name": "圣杯六",
+      "nameKey": "div.tarot.card.cups-5",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-5.up",
+      "reversedKey": "div.tarot.card.cups-5.rev",
+      "keywords": [
+        "六",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-6",
+      "name": "圣杯七",
+      "nameKey": "div.tarot.card.cups-6",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-6.up",
+      "reversedKey": "div.tarot.card.cups-6.rev",
+      "keywords": [
+        "七",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-7",
+      "name": "圣杯八",
+      "nameKey": "div.tarot.card.cups-7",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-7.up",
+      "reversedKey": "div.tarot.card.cups-7.rev",
+      "keywords": [
+        "八",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-8",
+      "name": "圣杯九",
+      "nameKey": "div.tarot.card.cups-8",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-8.up",
+      "reversedKey": "div.tarot.card.cups-8.rev",
+      "keywords": [
+        "九",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-9",
+      "name": "圣杯十",
+      "nameKey": "div.tarot.card.cups-9",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-9.up",
+      "reversedKey": "div.tarot.card.cups-9.rev",
+      "keywords": [
+        "十",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-10",
+      "name": "圣杯侍从",
+      "nameKey": "div.tarot.card.cups-10",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-10.up",
+      "reversedKey": "div.tarot.card.cups-10.rev",
+      "keywords": [
+        "侍从",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-11",
+      "name": "圣杯骑士",
+      "nameKey": "div.tarot.card.cups-11",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-11.up",
+      "reversedKey": "div.tarot.card.cups-11.rev",
+      "keywords": [
+        "骑士",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-12",
+      "name": "圣杯王后",
+      "nameKey": "div.tarot.card.cups-12",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-12.up",
+      "reversedKey": "div.tarot.card.cups-12.rev",
+      "keywords": [
+        "王后",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "cups-13",
+      "name": "圣杯国王",
+      "nameKey": "div.tarot.card.cups-13",
+      "arcana": "minor",
+      "suit": "cups",
+      "element": "水",
+      "uprightKey": "div.tarot.card.cups-13.up",
+      "reversedKey": "div.tarot.card.cups-13.rev",
+      "keywords": [
+        "国王",
+        "圣杯"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-0",
+      "name": "宝剑一",
+      "nameKey": "div.tarot.card.swords-0",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-0.up",
+      "reversedKey": "div.tarot.card.swords-0.rev",
+      "keywords": [
+        "一",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-1",
+      "name": "宝剑二",
+      "nameKey": "div.tarot.card.swords-1",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-1.up",
+      "reversedKey": "div.tarot.card.swords-1.rev",
+      "keywords": [
+        "二",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-2",
+      "name": "宝剑三",
+      "nameKey": "div.tarot.card.swords-2",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-2.up",
+      "reversedKey": "div.tarot.card.swords-2.rev",
+      "keywords": [
+        "三",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-3",
+      "name": "宝剑四",
+      "nameKey": "div.tarot.card.swords-3",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-3.up",
+      "reversedKey": "div.tarot.card.swords-3.rev",
+      "keywords": [
+        "四",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-4",
+      "name": "宝剑五",
+      "nameKey": "div.tarot.card.swords-4",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-4.up",
+      "reversedKey": "div.tarot.card.swords-4.rev",
+      "keywords": [
+        "五",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-5",
+      "name": "宝剑六",
+      "nameKey": "div.tarot.card.swords-5",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-5.up",
+      "reversedKey": "div.tarot.card.swords-5.rev",
+      "keywords": [
+        "六",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-6",
+      "name": "宝剑七",
+      "nameKey": "div.tarot.card.swords-6",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-6.up",
+      "reversedKey": "div.tarot.card.swords-6.rev",
+      "keywords": [
+        "七",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-7",
+      "name": "宝剑八",
+      "nameKey": "div.tarot.card.swords-7",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-7.up",
+      "reversedKey": "div.tarot.card.swords-7.rev",
+      "keywords": [
+        "八",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-8",
+      "name": "宝剑九",
+      "nameKey": "div.tarot.card.swords-8",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-8.up",
+      "reversedKey": "div.tarot.card.swords-8.rev",
+      "keywords": [
+        "九",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-9",
+      "name": "宝剑十",
+      "nameKey": "div.tarot.card.swords-9",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-9.up",
+      "reversedKey": "div.tarot.card.swords-9.rev",
+      "keywords": [
+        "十",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-10",
+      "name": "宝剑侍从",
+      "nameKey": "div.tarot.card.swords-10",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-10.up",
+      "reversedKey": "div.tarot.card.swords-10.rev",
+      "keywords": [
+        "侍从",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-11",
+      "name": "宝剑骑士",
+      "nameKey": "div.tarot.card.swords-11",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-11.up",
+      "reversedKey": "div.tarot.card.swords-11.rev",
+      "keywords": [
+        "骑士",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-12",
+      "name": "宝剑王后",
+      "nameKey": "div.tarot.card.swords-12",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-12.up",
+      "reversedKey": "div.tarot.card.swords-12.rev",
+      "keywords": [
+        "王后",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "swords-13",
+      "name": "宝剑国王",
+      "nameKey": "div.tarot.card.swords-13",
+      "arcana": "minor",
+      "suit": "swords",
+      "element": "风",
+      "uprightKey": "div.tarot.card.swords-13.up",
+      "reversedKey": "div.tarot.card.swords-13.rev",
+      "keywords": [
+        "国王",
+        "宝剑"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-0",
+      "name": "星币一",
+      "nameKey": "div.tarot.card.pentacles-0",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-0.up",
+      "reversedKey": "div.tarot.card.pentacles-0.rev",
+      "keywords": [
+        "一",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-1",
+      "name": "星币二",
+      "nameKey": "div.tarot.card.pentacles-1",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-1.up",
+      "reversedKey": "div.tarot.card.pentacles-1.rev",
+      "keywords": [
+        "二",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-2",
+      "name": "星币三",
+      "nameKey": "div.tarot.card.pentacles-2",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-2.up",
+      "reversedKey": "div.tarot.card.pentacles-2.rev",
+      "keywords": [
+        "三",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-3",
+      "name": "星币四",
+      "nameKey": "div.tarot.card.pentacles-3",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-3.up",
+      "reversedKey": "div.tarot.card.pentacles-3.rev",
+      "keywords": [
+        "四",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-4",
+      "name": "星币五",
+      "nameKey": "div.tarot.card.pentacles-4",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-4.up",
+      "reversedKey": "div.tarot.card.pentacles-4.rev",
+      "keywords": [
+        "五",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-5",
+      "name": "星币六",
+      "nameKey": "div.tarot.card.pentacles-5",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-5.up",
+      "reversedKey": "div.tarot.card.pentacles-5.rev",
+      "keywords": [
+        "六",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-6",
+      "name": "星币七",
+      "nameKey": "div.tarot.card.pentacles-6",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-6.up",
+      "reversedKey": "div.tarot.card.pentacles-6.rev",
+      "keywords": [
+        "七",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-7",
+      "name": "星币八",
+      "nameKey": "div.tarot.card.pentacles-7",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-7.up",
+      "reversedKey": "div.tarot.card.pentacles-7.rev",
+      "keywords": [
+        "八",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-8",
+      "name": "星币九",
+      "nameKey": "div.tarot.card.pentacles-8",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-8.up",
+      "reversedKey": "div.tarot.card.pentacles-8.rev",
+      "keywords": [
+        "九",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-9",
+      "name": "星币十",
+      "nameKey": "div.tarot.card.pentacles-9",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-9.up",
+      "reversedKey": "div.tarot.card.pentacles-9.rev",
+      "keywords": [
+        "十",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-10",
+      "name": "星币侍从",
+      "nameKey": "div.tarot.card.pentacles-10",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-10.up",
+      "reversedKey": "div.tarot.card.pentacles-10.rev",
+      "keywords": [
+        "侍从",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-11",
+      "name": "星币骑士",
+      "nameKey": "div.tarot.card.pentacles-11",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-11.up",
+      "reversedKey": "div.tarot.card.pentacles-11.rev",
+      "keywords": [
+        "骑士",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-12",
+      "name": "星币王后",
+      "nameKey": "div.tarot.card.pentacles-12",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-12.up",
+      "reversedKey": "div.tarot.card.pentacles-12.rev",
+      "keywords": [
+        "王后",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    },
+    {
+      "id": "pentacles-13",
+      "name": "星币国王",
+      "nameKey": "div.tarot.card.pentacles-13",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "element": "土",
+      "uprightKey": "div.tarot.card.pentacles-13.up",
+      "reversedKey": "div.tarot.card.pentacles-13.rev",
+      "keywords": [
+        "国王",
+        "星币"
+      ],
+      "reversedKeywords": [
+        "阻滞",
+        "失衡"
+      ]
+    }
+  ]
+}

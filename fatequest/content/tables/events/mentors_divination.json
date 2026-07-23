@@ -1,0 +1,251 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-cambaluc-mentor-iching",
+      "kind": "site",
+      "title": "ev.cambaluc.mentor_iching.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ],
+        "not_flags": [
+          "fl-learned-iching"
+        ]
+      },
+      "body": "ev.cambaluc.mentor_iching.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cambaluc.mentor_iching.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 8000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -8000,
+              "reason": "fee-to-the-chronologer"
+            },
+            {
+              "op": "days",
+              "value": 14,
+              "reason": "a-fortnight-learning-hexagrams"
+            },
+            {
+              "op": "learn_divination",
+              "value": "iching",
+              "reason": "learned-iching"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-iching",
+              "reason": "learned-iching"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.mentor_iching.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-hexagrams",
+              "reason": "heard-how-hexagrams-read-roads"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-mentor-bazi",
+      "kind": "site",
+      "title": "ev.baldacum.mentor_bazi.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ],
+        "not_flags": [
+          "fl-learned-bazi"
+        ]
+      },
+      "body": "ev.baldacum.mentor_bazi.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.baldacum.mentor_bazi.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 10000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -10000,
+              "reason": "fee-to-the-calendar-master"
+            },
+            {
+              "op": "days",
+              "value": 21,
+              "reason": "three-weeks-learning-pillars"
+            },
+            {
+              "op": "learn_divination",
+              "value": "bazi",
+              "reason": "learned-bazi"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-bazi",
+              "reason": "learned-bazi"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.mentor_bazi.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-four-pillars",
+              "reason": "heard-how-pillars-serve-travel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-mentor-tarot",
+      "kind": "site",
+      "title": "ev.tauris.mentor_tarot.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ],
+        "not_flags": [
+          "fl-learned-tarot"
+        ]
+      },
+      "body": "ev.tauris.mentor_tarot.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tauris.mentor_tarot.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 6000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -6000,
+              "reason": "silver-to-the-card-reader"
+            },
+            {
+              "op": "days",
+              "value": 10,
+              "reason": "ten-days-learning-spreads"
+            },
+            {
+              "op": "learn_divination",
+              "value": "tarot",
+              "reason": "learned-tarot"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-tarot",
+              "reason": "learned-tarot"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.mentor_tarot.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-tarot",
+              "reason": "watched-a-choice-gate"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-fork-tarot",
+      "kind": "road",
+      "title": "ev.road.fork_tarot.title",
+      "body": "ev.road.fork_tarot.body",
+      "when": {
+        "not_flags": [
+          "fl-fork-tarot-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.fork_tarot.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "tarot"
+            ]
+          },
+          "divination": "tarot",
+          "spread": "choice-gate",
+          "pass": {
+            "effects": [
+              {
+                "op": "reveal_map",
+                "value": "$subject",
+                "reason": "choice-gate-passed"
+              },
+              {
+                "op": "flag",
+                "value": "fl-fork-tarot-done",
+                "reason": "fork-read"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "cards-clouded"
+              },
+              {
+                "op": "flag",
+                "value": "fl-fork-tarot-done",
+                "reason": "fork-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.fork_tarot.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-fork-tarot-done",
+              "reason": "walked-without-cards"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

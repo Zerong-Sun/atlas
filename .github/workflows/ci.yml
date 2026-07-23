@@ -12,6 +12,7 @@ jobs:
 
   validate-fatequest:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     defaults:
       run:
         working-directory: fatequest
@@ -32,6 +33,10 @@ jobs:
   # engine can parse the scripts.
   godot-tests:
     runs-on: ubuntu-latest
+    # A hung headless test once spun for six hours before GitHub's default
+    # timeout killed it. Fail in fifteen minutes instead; the whole suite
+    # normally finishes in well under one.
+    timeout-minutes: 15
     env:
       GODOT_VERSION: "4.7.1"
     steps:

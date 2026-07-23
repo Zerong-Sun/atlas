@@ -1,0 +1,122 @@
+{
+  "contentVersion": 1,
+  "table": "tarot_spreads",
+  "records": [
+    {
+      "id": "one-card",
+      "name": "div.tarot.spread.one-card",
+      "topic": "通用",
+      "difficulty": "入门",
+      "positions": [
+        "当前主象"
+      ]
+    },
+    {
+      "id": "three-timeline",
+      "name": "div.tarot.spread.three-timeline",
+      "topic": "通用",
+      "difficulty": "入门",
+      "positions": [
+        "过去/成因",
+        "现在/核心",
+        "趋势/建议"
+      ]
+    },
+    {
+      "id": "cross",
+      "name": "div.tarot.spread.cross",
+      "topic": "通用",
+      "difficulty": "进阶",
+      "positions": [
+        "核心",
+        "阻力",
+        "显性资源",
+        "隐性资源",
+        "建议"
+      ]
+    },
+    {
+      "id": "celtic-cross",
+      "name": "div.tarot.spread.celtic-cross",
+      "topic": "通用",
+      "difficulty": "深度",
+      "positions": [
+        "现状",
+        "挑战",
+        "根源",
+        "过去",
+        "可能趋势",
+        "近未来",
+        "自我",
+        "环境",
+        "希望/恐惧",
+        "结果"
+      ]
+    },
+    {
+      "id": "relationship-mirror",
+      "name": "div.tarot.spread.relationship-mirror",
+      "topic": "关系",
+      "difficulty": "进阶",
+      "positions": [
+        "我方状态",
+        "对方状态",
+        "显性互动",
+        "隐性需求",
+        "下一步"
+      ]
+    },
+    {
+      "id": "choice-gate",
+      "name": "div.tarot.spread.choice-gate",
+      "topic": "通用",
+      "difficulty": "进阶",
+      "positions": [
+        "方案A收益",
+        "方案A代价",
+        "方案B收益",
+        "方案B代价",
+        "选择原则"
+      ]
+    },
+    {
+      "id": "career-map",
+      "name": "div.tarot.spread.career-map",
+      "topic": "事业",
+      "difficulty": "进阶",
+      "positions": [
+        "当前岗位",
+        "核心能力",
+        "外部机会",
+        "内部阻力",
+        "三十日行动"
+      ]
+    },
+    {
+      "id": "money-flow",
+      "name": "div.tarot.spread.money-flow",
+      "topic": "财务",
+      "difficulty": "进阶",
+      "positions": [
+        "收入入口",
+        "支出漏洞",
+        "资源沉淀",
+        "风险提醒",
+        "调整动作"
+      ]
+    },
+    {
+      "id": "shadow-dialogue",
+      "name": "div.tarot.spread.shadow-dialogue",
+      "topic": "心理",
+      "difficulty": "深度",
+      "positions": [
+        "我看见的自己",
+        "我回避的自己",
+        "重复模式",
+        "身体信号",
+        "整合练习"
+      ]
+    }
+  ]
+}

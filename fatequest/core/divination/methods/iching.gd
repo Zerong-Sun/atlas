@@ -82,7 +82,16 @@ func to_effects(raw: Dictionary, ctx: DivinationContext) -> Array:
 
 
 func reading_keys(raw: Dictionary, _ctx: DivinationContext) -> Array:
-	var keys: Array = ["div.iching.hex.%d" % int(raw.get("primary", 0))]
+	var primary: int = int(raw.get("primary", 0)) % 64
+	var hex: Dictionary = DivinationData.hexagram(primary)
+	var keys: Array = []
+	if not hex.is_empty():
+		keys.append(String(hex.get("nameKey", "div.iching.hex.%d" % primary)))
+		keys.append(String(hex.get("adviceKey", "")))
+	else:
+		keys.append("div.iching.hex.%d" % primary)
+	keys.append(DivinationData.result_text_key("iching", primary % 30))
 	if not (raw.get("moving", []) as Array).is_empty():
-		keys.append("div.iching.derived.%d" % int(raw.get("derived", 0)))
-	return keys
+		var derived: int = int(raw.get("derived", 0)) % 64
+		keys.append("div.iching.hex.%d" % derived)
+	return keys.filter(func(k): return String(k) != "")
