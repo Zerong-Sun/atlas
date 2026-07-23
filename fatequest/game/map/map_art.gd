@@ -84,5 +84,49 @@ static func mountain_icon(name_medieval: String, peak_m: float) -> Texture2D:
 	return tex("map-mtn-foothill")
 
 
+## Cities with their own painted scene. Falling back to a region plate loses a
+## lot, and one of those plates is mislabelled: scene-region-isl is a Chinese
+## lake with lanterns and a pleasure boat, not the Islamic world. Named scenes
+## are therefore preferred wherever one exists (see ART_REQUIREMENTS §1.1).
+const CITY_SCENE := {
+	"tauris": "scene-tabriz-bazaar",
+	"ormus": "scene-hormuz-port",
+	"chandu": "scene-shangdu-palace",
+	"cambaluc": "scene-khanbaliq-hall",
+	"kinsay": "scene-hangzhou-lake",
+	"zayton": "scene-quanzhou-harbor",
+	"accon": "scene-acre-wall",
+	"kerman": "scene-kerman-dunes",
+	"venice": "scene-venice-quay",
+	"herat": "scene-herat-road",
+}
+
+## Band plates are a safer fallback than culture plates while the region art is
+## mislabelled — they at least never claim the wrong civilisation outright.
+const BAND_SCENE := {
+	"china": "scene-region-con",
+	"maritime_asia": "scene-region-mazu",
+	"india": "scene-region-mazu",
+	"europe": "scene-region-chr",
+	"west_asia": "scene-region-chr",
+	"central_asia": "scene-region-chr",
+	"steppe": "scene-region-chr",
+}
+
+
+static func city_scene(city: Dictionary) -> Texture2D:
+	var cid := String(city.get("id", ""))
+	if CITY_SCENE.has(cid):
+		var t := tex(CITY_SCENE[cid])
+		if t != null:
+			return t
+	var explicit := String(city.get("scene", ""))
+	if explicit != "":
+		var t2 := tex(explicit)
+		if t2 != null:
+			return t2
+	return tex(BAND_SCENE.get(String(city.get("band", "")), "scene-region-chr"))
+
+
 static func wind_head(dir: String) -> Texture2D:
 	return tex("map-wind-%s" % dir)

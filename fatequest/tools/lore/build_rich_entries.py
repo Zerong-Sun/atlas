@@ -251,58 +251,206 @@ def _default_choices(city_id):
         "effects": [{"op": "reveal_map", "value": city_id, "reason": "arrived-and-looked-about"}]
     }]
 
+# ── Regional / faith-aware terminology ──────────────────────────────────
+
+CUSTOMS_BY_BAND = {
+    # China (Yuan): shìbó sī / 市舶司 — keep Chinese bureaucratic flavour
+    "china": (
+        "Declare your goods at the shìbó sī (市舶司)",
+        "到市舶司报关",
+    ),
+    # Steppe: Mongol overseer
+    "steppe": (
+        "Declare your goods to the darughachi (overseer)",
+        "向 darughachi（监守官）报税",
+    ),
+    # West Asia (Ilkhanate): tamghā-khāna
+    "west_asia": (
+        "Declare your goods at the tamghā-khāna (tax-house)",
+        "到 tamghā-khāna（税署）报关",
+    ),
+    # Central Asia (Chagatai): bājgāh
+    "central_asia": (
+        "Declare your goods at the bājgāh (toll-house)",
+        "到 bājgāh（税卡）报关",
+    ),
+    # India / maritime: fall back to tamghā (Mongol commercial tax term known on the coasts)
+    "india": (
+        "Declare your goods at the customs house",
+        "到税署报关",
+    ),
+    "maritime_asia": (
+        "Declare your goods at the harbour customs",
+        "到港务税署报关",
+    ),
+}
+
+SHRINE_BY_FAITH = {
+    "islam": (
+        "Visit the masjid (mosque)",
+        "去 masjid（清真寺）看看",
+    ),
+    "hindu": (
+        "Visit the mandir (temple)",
+        "去 mandir（神庙）看看",
+    ),
+    "buddhism": (
+        "Visit the sì (Buddhist monastery)",
+        "去佛寺看看",
+    ),
+    "daoism": (
+        "Visit the guàn (Daoist temple)",
+        "去道观看看",
+    ),
+    "nestorian": (
+        "Visit the church",
+        "去教堂看看",
+    ),
+    "folk": (
+        "Visit the sacred place",
+        "去圣所看看",
+    ),
+    "latin": (
+        "Visit the church",
+        "去教堂看看",
+    ),
+    "orthodox": (
+        "Visit the church",
+        "去教堂看看",
+    ),
+}
+
+# Special shrine labels (narrative overrides faith mapping)
+SHRINE_BY_CITY = {
+    "balc": (
+        "Visit the ātashkadeh (fire-temple of the Magi)",
+        "去 ātashkadeh（祆教火祠）看看",
+    ),
+    "zayton": (
+        "Visit the Temple of the Sea",
+        "去天妃宫看看",
+    ),
+}
+
+MARKET_BY_BAND = {
+    "china": ("Walk through the market", "穿过市集"),
+    "steppe": ("Walk through the market", "穿过市集"),
+    "west_asia": ("Walk through the bāzār", "穿过 bāzār（集市）"),
+    "central_asia": ("Walk through the bāzār", "穿过 bāzār（集市）"),
+    "india": ("Walk through the bāzār", "穿过 bāzār（集市）"),
+    "maritime_asia": ("Walk through the harbour market", "穿过港口市集"),
+}
+
+GATE_BY_BAND = {
+    "china": ("Pass through the gate without delay", "匆匆穿过城门"),
+    "steppe": ("Pass through the gate without delay", "匆匆穿过城门"),
+    "west_asia": ("Pass through the darvāzeh without delay", "匆匆穿过 darvāzeh（城门）"),
+    "central_asia": ("Pass through the darvāzeh without delay", "匆匆穿过 darvāzeh（城门）"),
+    "india": ("Pass through the darvāzā without delay", "匆匆穿过 darvāzā（城门）"),
+    "maritime_asia": ("Pass through the gate without delay", "匆匆穿过城门"),
+}
+
+
+def _customs_label(city):
+    band = city.get("band", "china")
+    return CUSTOMS_BY_BAND.get(band, CUSTOMS_BY_BAND["china"])
+
+
+def _shrine_label(city_id, city):
+    if city_id in SHRINE_BY_CITY:
+        return SHRINE_BY_CITY[city_id]
+    faith = (city.get("shrine") or {}).get("faith", "folk")
+    band = city.get("band", "")
+    # Steppe folk shrines → ovoo (sacred cairn)
+    if faith == "folk" and band == "steppe":
+        return ("Visit the ovoo (sacred cairn)", "去 ovoo（敖包）看看")
+    return SHRINE_BY_FAITH.get(faith, SHRINE_BY_FAITH["folk"])
+
+
+def _market_label(city, tier):
+    band = city.get("band", "china")
+    en, zh = MARKET_BY_BAND.get(band, MARKET_BY_BAND["china"])
+    if tier == "metropolis":
+        if band in ("west_asia", "central_asia", "india"):
+            return ("Walk the great bāzār", "穿过大 bāzār")
+        return ("Walk the great market", "穿过大市")
+    return en, zh
+
+
+def _pass_label(city, tier):
+    if tier == "station":
+        return ("Ride on without delay", "继续赶路，不作停留")
+    if tier == "town":
+        return ("Pass through without stopping", "穿城而过，不加停留")
+    band = city.get("band", "china")
+    return GATE_BY_BAND.get(band, GATE_BY_BAND["china"])
+
+
 # ── I18n text builders ──────────────────────────────────────────────────
 
 def _label_en_zh(city_id, choice_id, city):
-    """Return (en_label, zh_label) for a choice."""
+    """Return (en_label, zh_label) for a choice — region- and faith-aware."""
     tier = city.get("tier", "town")
-    name_src = city.get("lore", {}).get("placeId", "")
-    name_display = city_id.replace("-", " ").title()
 
-    en = "Pass through"
-    zh = "匆匆穿过"
+    if choice_id == "pass":
+        return _pass_label(city, tier)
+    if choice_id == "rest":
+        return ("Rest half a day by the road", "在路边歇半日")
+    if choice_id == "look":
+        return ("Rest and ask what men say of this place", "歇脚打听此地有何说头")
+    if choice_id == "market":
+        return _market_label(city, tier)
+    if choice_id == "shrine":
+        return _shrine_label(city_id, city)
+    if choice_id == "customs":
+        return _customs_label(city)
+    if choice_id == "lore":
+        return ("Ask what men say of this city", "打听这座城的来历")
 
-    templates = {
-        "pass": {
-            "station": ("Ride on without delay", "继续赶路，不作停留"),
-            "town": ("Pass through without stopping", "穿城而过，不加停留"),
-            "city": ("Pass through the gate without delay", "匆匆穿过城门"),
-            "metropolis": ("Pass through the gate without delay", "快步穿过城门"),
-        },
-        "rest": {
-            "station": ("Rest half a day by the road", "在路边歇半日"),
-            "town": ("Rest half a day by the road", "在路边歇半日"),
-        },
-        "look": {
-            "town": ("Rest and ask what men say of this place", "歇脚打听此地有何说头"),
-        },
-        "market": {
-            "city": ("Walk through the market", "穿过集市"),
-            "metropolis": ("Walk the great market", "穿过大市"),
-        },
-        "shrine": {
-            "city": ("Visit the shrine", "去庙里看看"),
-        },
-        "customs": {
-            "metropolis": ("Declare your goods with the Governor's clerks", "到府尹衙门报关"),
-        },
-        "lore": {
-            "metropolis": ("Ask what men say of this city", "打听这座城的来历"),
-        },
-    }
-
-    if choice_id in templates:
-        tmpl = templates[choice_id]
-        if tier in tmpl:
-            en, zh = tmpl[tier]
-        elif "city" in tmpl and tier == "city":
-            en, zh = tmpl["city"]
-        else:
-            en, zh = list(tmpl.values())[0]
-
-    return en, zh
+    return ("Pass through", "匆匆穿过")
 
 # ── Build choices and i18n ──────────────────────────────────────────────
+
+def relabel_all():
+    """Force-refresh entry choice i18n labels from city band/faith (no structure change)."""
+    print("Relabeling entry choice i18n from city data...")
+    cities = load_cities()
+    events = load_events()
+    i18n_en = load_i18n(I18N_EN_PATH)
+    i18n_zh = load_i18n(I18N_ZH_PATH)
+
+    updated = 0
+    for record in events["records"]:
+        m = re.match(r"ev-(.+)-entry", record["id"])
+        if not m:
+            continue
+        city_id = m.group(1)
+        city = cities.get(city_id)
+        if not city:
+            continue
+        for ch in record.get("choices", []):
+            label_key = ch.get("label", "")
+            m2 = re.match(r"ev\.(.+)\.entry\.choice\.(.+)", label_key)
+            if not m2:
+                continue
+            cid, choice_id = m2.group(1), m2.group(2)
+            if choice_id in ("arrive", "ask", "rest") and city_id in ("sachiu", "lop"):
+                # Preserve hand-authored rich labels for lop / sachiu
+                if choice_id != "rest" or city_id == "lop":
+                    if choice_id in ("ask", "arrive"):
+                        continue
+            en_label, zh_label = _label_en_zh(cid, choice_id, city)
+            if choice_id in ("pass", "rest", "look", "market", "shrine", "customs", "lore"):
+                i18n_en[label_key] = en_label
+                i18n_zh[label_key] = zh_label
+                updated += 1
+
+    i18n_en = OrderedDict(sorted(i18n_en.items()))
+    i18n_zh = OrderedDict(sorted(i18n_zh.items()))
+    save_json(I18N_EN_PATH, i18n_en)
+    save_json(I18N_ZH_PATH, i18n_zh)
+    print(f"\nDone: relabeled {updated} entry choice keys")
+
 
 def build_all():
     print("Loading data...")
@@ -396,4 +544,8 @@ def build_all():
     print(f"\nDone: upgraded {upgraded} entry events, skipped {skipped} (already rich)")
 
 if __name__ == "__main__":
-    build_all()
+    import sys
+    if "--relabel" in sys.argv:
+        relabel_all()
+    else:
+        build_all()

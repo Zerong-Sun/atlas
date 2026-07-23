@@ -41,13 +41,19 @@ var travel: Travel
 
 var _map: Node2D
 var _desk: Control
-var _hud: Label
+var _hud: Hud
 var _log: RichTextLabel
 var _panel: VBoxContainer
+var _city_view: Control
+var _dialog: PanelContainer
+var _dialog_layer: Control
+var _current_event: Dictionary = {}
+var _controls: HBoxContainer
 
 
 func _ready() -> void:
 	_resolve_audio()
+	UiScale.load_prefs()
 	I18n.load_lang("zh")
 	var n := db.load_all()
 	DivinationData.bind(db)
@@ -174,6 +180,10 @@ func _load_ranges() -> Array:
 	return ContentDb._normalize(doc).get("ranges", [])
 
 
+## Layout is entirely anchor- and container-driven. The previous版 positioned
+## every widget at a hard pixel offset computed from a 1280x720 assumption, so
+## text ran off the edge the moment the window differed or the font grew — that
+## was the cause of the overflow, and no amount of nudging numbers fixes it.
 func _build_map() -> void:
 	_apply_projection()
 	_map = preload("res://game/map/world_map.gd").new()
@@ -181,32 +191,153 @@ func _build_map() -> void:
 	_map.setup(projection, db.cities(), db.get_table("routes"), _load_ranges())
 	_map.city_clicked.connect(_on_city_clicked)
 
-	var w := maxf(size.x, 1280.0)
-	var h := maxf(size.y, 720.0)
-
-	_hud = Label.new()
-	_hud.position = Vector2(MARGIN, h - 140)
-	_hud.add_theme_color_override("font_color", Color("2a1e12"))
+	# --- HUD: the four numbers every decision is made against ---------------
+	_hud = preload("res://game/ui/hud.gd").new()
+	_hud.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	_hud.offset_left = 12
+	_hud.offset_right = -12
+	_hud.offset_top = 10
 	add_child(_hud)
+	_hud.build()
+
+	# --- journal: bottom-left, scrolls, never overlaps the panel ------------
+	var log_wrap := PanelContainer.new()
+	log_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	log_wrap.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	log_wrap.anchor_right = 0.46
+	log_wrap.offset_left = 12
+	log_wrap.offset_right = -6
+	log_wrap.offset_top = -150
+	log_wrap.offset_bottom = -12
+	add_child(log_wrap)
+
+	var log_scroll := ScrollContainer.new()
+	log_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	log_wrap.add_child(log_scroll)
 
 	_log = RichTextLabel.new()
-	_log.position = Vector2(MARGIN, h - 112)
-	_log.size = Vector2(w * 0.5 - MARGIN, 104)
 	_log.bbcode_enabled = true
-	_log.add_theme_color_override("default_color", Color("2a1e12"))
-	add_child(_log)
+	_log.fit_content = true
+	_log.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_log.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	log_scroll.add_child(_log)
+
+	# --- action panel: bottom-right, scrolls -------------------------------
+	var panel_wrap := PanelContainer.new()
+	panel_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	panel_wrap.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	panel_wrap.anchor_left = 0.48
+	panel_wrap.offset_left = 6
+	panel_wrap.offset_right = -12
+	panel_wrap.offset_top = -150
+	panel_wrap.offset_bottom = -12
+	add_child(panel_wrap)
+
+	var panel_scroll := ScrollContainer.new()
+	panel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	panel_wrap.add_child(panel_scroll)
 
 	_panel = VBoxContainer.new()
-	_panel.position = Vector2(w * 0.55, h - 140)
-	_panel.size = Vector2(w * 0.4, 130)
-	add_child(_panel)
+	_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_panel.add_theme_constant_override("separation", 5)
+	panel_scroll.add_child(_panel)
+
+	# --- city interior ------------------------------------------------------
+	_city_view = preload("res://game/screens/city_view.gd").new()
+	_city_view.visible = false
+	_city_view.setup(db)
+	add_child(_city_view)
+	_city_view.site_chosen.connect(_on_site_chosen)
+	_city_view.leave_requested.connect(_close_city)
+
+	# --- event dialogue -----------------------------------------------------
+	# A full-rect CenterContainer keeps the dialog centred at any window size and
+	# any font size, and its scrim stops clicks reaching the map underneath.
+	_dialog_layer = Control.new()
+	_dialog_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_dialog_layer.visible = false
+	add_child(_dialog_layer)
+
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Color(0.06, 0.05, 0.03, 0.45)
+	_dialog_layer.add_child(scrim)
+
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_dialog_layer.add_child(centre)
+
+	_dialog = preload("res://game/ui/event_dialog.gd").new()
+	centre.add_child(_dialog)
+	_dialog.choice_taken.connect(_on_dialog_choice)
+
+	_build_controls()
+	_restyle_all()
+
+
+## Reader controls. Text size and contrast are not preferences to bury in a
+## menu on a game made of prose — they decide whether it can be read at all.
+func _build_controls() -> void:
+	var bar := HBoxContainer.new()
+	bar.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	bar.offset_left = -430
+	bar.offset_right = -12
+	bar.offset_top = 58
+	bar.alignment = BoxContainer.ALIGNMENT_END
+	bar.add_theme_constant_override("separation", 6)
+	add_child(bar)
+
+	bar.add_child(_ctl("字号 " + UiScale.label(), func():
+		UiScale.cycle()
+		_restyle_all()
+		_refresh_controls()))
+	bar.add_child(_ctl("高对比", func():
+		UiScale.high_contrast = not UiScale.high_contrast
+		UiScale.save()
+		_restyle_all()
+		_refresh_controls()))
+	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
+	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
+	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
+	_controls = bar
+
+
+func _map_centre() -> Vector2:
+	return projection.origin + Vector2(projection.width, projection.height) * 0.5
+
+
+func _ctl(text: String, cb: Callable) -> Button:
+	var b := Button.new()
+	b.text = text
+	b.focus_mode = Control.FOCUS_NONE
+	b.add_theme_font_size_override("font_size", UiScale.ui())
+	b.add_theme_stylebox_override("normal", Palette.button_style())
+	b.add_theme_stylebox_override("hover", Palette.button_style(true))
+	b.add_theme_color_override("font_color", Palette.ink())
+	b.pressed.connect(cb)
+	return b
+
+
+func _refresh_controls() -> void:
+	if _controls == null:
+		return
+	var kids := _controls.get_children()
+	if kids.size() > 0:
+		kids[0].text = "字号 " + UiScale.label()
+	if kids.size() > 1:
+		kids[1].text = "高对比" + ("✓" if UiScale.high_contrast else "")
+	for k in kids:
+		k.add_theme_font_size_override("font_size", UiScale.ui())
+		k.add_theme_stylebox_override("normal", Palette.button_style())
+		k.add_theme_color_override("font_color", Palette.ink())
 
 
 func _refresh_hud() -> void:
-	var g := clock.date.to_gregorian()
-	_hud.text = "%s · %d年%d月%d日 · %s · 银 %d · 第 %d 日" % [
-		_city_name(state.city), g["year"], g["month"], g["day"],
-		clock.date.ganzhi_day(), state.coins / 100, state.days_elapsed]
+	var used := 0
+	for n in state.goods.values():
+		used += int(n)
+	_hud.refresh(state, clock, _city_name(state.city), used)
 	_map.set_current(state.city, state.revealed)
 
 
@@ -242,41 +373,57 @@ func _clear_panel() -> void:
 		ch.queue_free()
 
 
+func _on_site_chosen(event_id: String) -> void:
+	var ev := db.get_record(event_id)
+	if not ev.is_empty():
+		_show_event(ev)
+
+
+func _on_dialog_choice(index: int) -> void:
+	_dialog_layer.visible = false
+	if not _current_event.is_empty():
+		_on_choice(_current_event, index)
+
+
+func _open_city() -> void:
+	var c := db.get_record(state.city)
+	if c.is_empty() or (c.get("sites", []) as Array).is_empty():
+		_show_roads()
+		return
+	_city_view.visible = true
+	_city_view.show_city(c, state, conditions, _ctx())
+
+
+func _close_city() -> void:
+	_city_view.visible = false
+	_show_roads()
+
+
+func _restyle_all() -> void:
+	if _log:
+		_log.add_theme_font_size_override("normal_font_size", UiScale.body())
+		_log.add_theme_color_override("default_color", Palette.ink())
+	if _hud and _hud.has_method("restyle"):
+		_hud.restyle()
+	if _dialog and _dialog.has_method("restyle"):
+		_dialog.restyle()
+	if _city_view and _city_view.has_method("restyle"):
+		_city_view.restyle()
+	if _map:
+		_map.queue_redraw()
+	_refresh_controls()
+
+
 func _show_event(ev: Dictionary) -> void:
-	_clear_panel()
-	if _audio_ready(): _audio.set_jdn(state.jdn)
-	if _audio_ready(): _audio.set_place(db.get_record(state.city), ev)
-	if _audio_ready(): _audio.sfx("page")
-	_say("")
-	_say("[b]%s[/b]  %s" % [I18n.t(ev.get("title", "")), _origin_tag(ev)])
-	# The body is the point of the whole exercise; without it the player reads
-	# only a headline and a menu.
-	var body := I18n.t(ev.get("body", ""))
-	if body != "" and body != ev.get("body", ""):
-		_say(body)
-	if I18n.is_untranslated(String(ev.get("body", ""))):
-		_say("[color=#7a6a4a][i](尚未译出，暂显英文原文)[/i][/color]")
-
+	_current_event = ev
 	var states := events.choice_states(ev, state, _ctx())
-	for i in states.size():
-		var s: Dictionary = states[i]
-		var btn := Button.new()
-		btn.text = I18n.t(s["choice"].get("label", ""))
-		btn.disabled = not s["enabled"]
-		if not s["enabled"]:
-			# GDD §7.1: say WHY, never a bare refusal.
-			var why: Array[String] = []
-			for r in s["reasons"]:
-				why.append(I18n.fmt(String(r)))
-			btn.tooltip_text = ", ".join(PackedStringArray(why))
-			btn.text += "  (%s)" % btn.tooltip_text
-		btn.pressed.connect(_on_choice.bind(ev, i))
-		_panel.add_child(btn)
-
-	var skip := Button.new()
-	skip.text = "— 看看道路 —"
-	skip.pressed.connect(_show_roads)
-	_panel.add_child(skip)
+	var art: Texture2D = null
+	var c := db.get_record(state.city)
+	if not c.is_empty():
+		art = _city_view._portrait_for(ev, String(c.get("culture", "")))
+	_dialog_layer.visible = true
+	_dialog.show_event(ev, states, art)
+	if _audio_ready(): _audio.sfx("page")
 
 
 ## GDD §19: the player must always be able to tell source from invention.
@@ -300,7 +447,10 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 	if not res.rejected.is_empty():
 		_say("  [color=#8a4a3a]· %d 项未能达成[/color]" % res.rejected.size())
 	_refresh_hud()
-	_show_roads()
+	if _city_view.visible:
+		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())
+	else:
+		_open_city()
 
 
 func _show_roads() -> void:
@@ -394,7 +544,10 @@ func _build_audio_controls() -> void:
 	var btn := Button.new()
 	btn.name = "MuteBtn"
 	btn.text = "静音"
-	btn.position = Vector2(maxf(size.x, 1280.0) - MARGIN - 88.0, MARGIN)
+	btn.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	btn.offset_left = -96
+	btn.offset_right = -12
+	btn.offset_top = 10
 	btn.pressed.connect(_on_mute_pressed)
 	add_child(btn)
 	if _audio_ready():

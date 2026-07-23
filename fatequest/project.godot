@@ -20,10 +20,6 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 GameContext="*res://game/autoload/game_context.gd"
 AudioDirector="*res://game/audio/audio_director.gd"
 
-[audio]
-
-buses/default_bus_layout="res://default_bus_layout.tres"
-
 [display]
 
 window/size/viewport_width=1280

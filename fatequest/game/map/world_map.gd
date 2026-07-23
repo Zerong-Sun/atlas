@@ -26,6 +26,18 @@ var revealed: Dictionary = {}
 
 var _labels_visible := true
 var _city_pos: Dictionary = {}
+
+# ------------------------------------------------------------------- camera
+# Without zoom and pan a 142-degree-wide world on a 1300px strip is unreadable:
+# the Grand Canal corridor alone packs fourteen cities into ninety pixels.
+const ZOOM_MIN := 1.0
+const ZOOM_MAX := 6.0
+var zoom: float = 1.0
+var pan: Vector2 = Vector2.ZERO
+var _dragging := false
+var _drag_from := Vector2.ZERO
+var _pan_from := Vector2.ZERO
+signal view_changed
 var _fog: ColorRect
 var _mask_tex: ImageTexture
 var _mask_img: Image
@@ -139,10 +151,70 @@ func _stamp(cx: float, cy: float, radius: float) -> void:
 
 # --------------------------------------------------------------------- draw
 
+## Screen point -> map point, so hit-testing matches what is drawn.
+func to_map(screen: Vector2) -> Vector2:
+	return (screen - projection.origin - pan) / zoom + projection.origin
+
+
+func to_screen(map_p: Vector2) -> Vector2:
+	return (map_p - projection.origin) * zoom + projection.origin + pan
+
+
+func set_zoom(z: float, focus: Vector2) -> void:
+	var before := to_map(focus)
+	zoom = clampf(z, ZOOM_MIN, ZOOM_MAX)
+	# Keep the point under the cursor pinned while zooming.
+	pan = focus - projection.origin - (before - projection.origin) * zoom
+	_clamp_pan()
+	_sync_fog()
+	queue_redraw()
+	view_changed.emit()
+
+
+func nudge(delta: Vector2) -> void:
+	pan += delta
+	_clamp_pan()
+	_sync_fog()
+	queue_redraw()
+	view_changed.emit()
+
+
+## Never let the vellum pull away from the frame.
+func _clamp_pan() -> void:
+	var w: float = projection.width
+	var h: float = projection.height
+	var slack_x: float = maxf(0.0, w * zoom - w)
+	var slack_y: float = maxf(0.0, h * zoom - h)
+	pan.x = clampf(pan.x, -slack_x, 0.0)
+	pan.y = clampf(pan.y, -slack_y, 0.0)
+
+
+func center_on(city_id: String) -> void:
+	if not _city_pos.has(city_id):
+		return
+	var p: Vector2 = _city_pos[city_id]
+	var mid := projection.origin + Vector2(projection.width, projection.height) * 0.5
+	pan = mid - projection.origin - (p - projection.origin) * zoom
+	_clamp_pan()
+	_sync_fog()
+	queue_redraw()
+	view_changed.emit()
+
+
+## The fog is a child Control, so it has to follow the same transform by hand.
+func _sync_fog() -> void:
+	if _fog == null:
+		return
+	_fog.position = projection.origin + pan
+	_fog.size = Vector2(projection.width, projection.height) * zoom
+
+
 func _draw() -> void:
 	if projection == null:
 		return
-	var rect := Rect2(projection.origin, Vector2(projection.width, projection.height))
+	var o: Vector2 = projection.origin
+	draw_set_transform(o + pan - o * zoom, 0.0, Vector2(zoom, zoom))
+	var rect := Rect2(o, Vector2(projection.width, projection.height))
 
 	var vellum := MapArt.tex("map-vellum-tile")
 	if vellum != null:
@@ -154,6 +226,7 @@ func _draw() -> void:
 	_draw_routes()
 	_draw_cities()
 	_draw_wind_heads(rect)
+	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
 func _draw_mountains() -> void:
@@ -214,8 +287,9 @@ func _draw_brush_line(brush: Texture2D, a: Vector2, b: Vector2, width: float,
 	var len := d.length()
 	if len < 1.0:
 		return
-	var xf := Transform2D(d.angle(), a)
-	draw_set_transform_matrix(xf)
+	var o: Vector2 = projection.origin
+	var cam := Transform2D(0.0, Vector2(zoom, zoom), 0.0, o + pan - o * zoom)
+	draw_set_transform_matrix(cam * Transform2D(d.angle(), a))
 	var tint := Color(0.42, 0.30, 0.18, alpha)      # brown ink for land
 	if kind == "sea":
 		tint = Color(0.20, 0.38, 0.52, alpha)       # blue ink for sea lanes
@@ -223,7 +297,8 @@ func _draw_brush_line(brush: Texture2D, a: Vector2, b: Vector2, width: float,
 		tint = Color(0.28, 0.42, 0.38, alpha)
 	draw_texture_rect(brush, Rect2(Vector2(0, -width * 0.5), Vector2(len, width)),
 		false, tint)
-	draw_set_transform_matrix(Transform2D.IDENTITY)
+	var o2: Vector2 = projection.origin
+	draw_set_transform_matrix(Transform2D(0.0, Vector2(zoom, zoom), 0.0, o2 + pan - o2 * zoom))
 
 
 func _draw_cities() -> void:
@@ -254,14 +329,16 @@ func _draw_cities() -> void:
 			draw_arc(pos, 13.0, 0, TAU, 28, Color("b04a2a", 0.9), 2.0)
 
 		# Name it only once you know more than its existence.
-		if _labels_visible and k >= 2:
+		# Below tier city, only label once zoomed in — otherwise 102 names collide.
+		var label_ok := k >= 2 and (tier in ["metropolis", "city"] or zoom >= 2.2)
+		if _labels_visible and label_ok:
 			var label := I18n.t(c.get("name", ""))
 			var off := Vector2(-14, 8) if tier == "station" else Vector2(-18, 11)
 			# Cheap legibility pass: dark text over busy vellum needs a halo.
 			draw_string(font, pos + off + Vector2(1, 1), label,
-				HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(0.94, 0.90, 0.80, 0.85))
+				HORIZONTAL_ALIGNMENT_LEFT, -1, UiScale.map_label(), Color(0.97, 0.94, 0.86, 0.92))
 			draw_string(font, pos + off, label,
-				HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(0.20, 0.14, 0.08))
+				HORIZONTAL_ALIGNMENT_LEFT, -1, UiScale.map_label(), Palette.ink())
 
 
 func _draw_wind_heads(rect: Rect2) -> void:
@@ -283,17 +360,43 @@ func _draw_wind_heads(rect: Rect2) -> void:
 # -------------------------------------------------------------------- input
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var local := to_local(event.position)
-		var best: Dictionary = {}
-		var best_d := 16.0
-		for c in cities:
-			var d: float = _city_pos.get(c.get("id", ""), Vector2(-9999, -9999)).distance_to(local)
-			if d < best_d:
-				best_d = d
-				best = c
-		if not best.is_empty():
-			city_clicked.emit(best)
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_WHEEL_UP and mb.pressed:
+			set_zoom(zoom * 1.18, to_local(mb.position))
+			return
+		if mb.button_index == MOUSE_BUTTON_WHEEL_DOWN and mb.pressed:
+			set_zoom(zoom / 1.18, to_local(mb.position))
+			return
+		if mb.button_index == MOUSE_BUTTON_LEFT:
+			if mb.pressed:
+				_dragging = true
+				_drag_from = mb.position
+				_pan_from = pan
+			else:
+				_dragging = false
+				# A click that did not drag is a selection, not a pan.
+				if _drag_from.distance_to(mb.position) < 5.0:
+					_pick(to_map(to_local(mb.position)))
+	elif event is InputEventMouseMotion and _dragging:
+		pan = _pan_from + (event.position - _drag_from)
+		_clamp_pan()
+		_sync_fog()
+		queue_redraw()
+		view_changed.emit()
+
+
+func _pick(map_p: Vector2) -> void:
+	var best: Dictionary = {}
+	# Hit radius shrinks as you zoom in, so dense clusters become selectable.
+	var best_d := 18.0 / maxf(zoom, 1.0)
+	for c in cities:
+		var d: float = _city_pos.get(c.get("id", ""), Vector2(-9999, -9999)).distance_to(map_p)
+		if d < best_d:
+			best_d = d
+			best = c
+	if not best.is_empty():
+		city_clicked.emit(best)
 
 
 func toggle_labels() -> void:
