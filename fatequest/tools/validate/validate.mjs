@@ -411,7 +411,8 @@ for (const e of byTable.events ?? [])
         if (!info.regex.test(enText)) continue;
         const variants = info.zhVariants;
         if (!variants.length) continue;
-        if (!variants.some((v) => v.length >= 2 && zhText.includes(v))) {
+        // Single-character terms (e.g. "玉", "玉") must also pass the check.
+        if (!variants.some((v) => v.length >= 1 && zhText.includes(v))) {
           if (isPlace) {
             g7Errors++;
             if (g7Errors <= 10)
