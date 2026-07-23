@@ -129,6 +129,9 @@ func _begin(archetype: Dictionary) -> void:
 			state.items.append(String(it))
 
 	_build_map()
+	_build_audio_controls()
+	AudioDirector.set_jdn(state.jdn)
+	AudioDirector.sfx("page")
 	_arrive()
 
 
@@ -180,8 +183,11 @@ func _say(line: String) -> void:
 ## Arrival: fire the entry event if there is one, else offer the roads.
 func _arrive() -> void:
 	_refresh_hud()
+	AudioDirector.set_jdn(state.jdn)
+	var city := db.get_record(state.city)
 	var ctx := _ctx()
 	var ev := events.pick("entry", state, rng, ctx)
+	AudioDirector.set_place(city, ev if not ev.is_empty() else {})
 	if ev.is_empty():
 		_show_roads()
 	else:
@@ -203,6 +209,9 @@ func _clear_panel() -> void:
 
 func _show_event(ev: Dictionary) -> void:
 	_clear_panel()
+	AudioDirector.set_jdn(state.jdn)
+	AudioDirector.set_place(db.get_record(state.city), ev)
+	AudioDirector.sfx("page")
 	_say("")
 	_say("[b]%s[/b]  %s" % [I18n.t(ev.get("title", "")), _origin_tag(ev)])
 	# The body is the point of the whole exercise; without it the player reads
@@ -245,7 +254,9 @@ func _origin_tag(rec: Dictionary) -> String:
 
 
 func _on_choice(ev: Dictionary, index: int) -> void:
+	var coins_before := state.coins
 	var res := events.choose(ev, index, state, rng, _ctx())
+	AudioDirector.on_effect_result(res, {}, db.get_record(state.city), coins_before)
 	for line in res.log_lines:
 		_say("  · %s" % line)
 	if not res.rejected.is_empty():
@@ -307,8 +318,10 @@ func _show_roads() -> void:
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
+	AudioDirector.on_depart(route)
 	var trip := travel.depart(route, mode, state, rng)
 	clock = WorldClock.new(state.jdn)
+	AudioDirector.set_jdn(state.jdn)
 	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [
 		_city_name(trip["destination"]), trip["days"], trip["cost"] / 100])
 
@@ -336,3 +349,25 @@ func _on_city_clicked(c: Dictionary) -> void:
 func _city_name(cid: String) -> String:
 	var c := db.get_record(cid)
 	return I18n.t(c.get("name", cid)) if not c.is_empty() else cid
+
+
+func _build_audio_controls() -> void:
+	# A1: mute must be reachable before any sustained drone settles in.
+	var btn := Button.new()
+	btn.name = "MuteBtn"
+	btn.text = "静音"
+	btn.position = Vector2(maxf(size.x, 1280.0) - MARGIN - 88.0, MARGIN)
+	btn.pressed.connect(_on_mute_pressed)
+	add_child(btn)
+	AudioDirector.mute_changed.connect(_on_mute_changed)
+	_on_mute_changed(AudioDirector.muted)
+
+
+func _on_mute_pressed() -> void:
+	AudioDirector.toggle_mute()
+
+
+func _on_mute_changed(is_muted: bool) -> void:
+	var btn := get_node_or_null("MuteBtn") as Button
+	if btn:
+		btn.text = "取消静音" if is_muted else "静音"

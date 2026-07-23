@@ -290,6 +290,36 @@ const LINES = {
   }
 }
 
+// ------------------------- G17: every text key an event asks for must exist
+// A key generator once turned the hyphen in city ids into a dot, filing the
+// text for java-major / babylonia-cairus / tana-azov under an address nothing
+// ever looks up. The i18n fallback chain hid it: those cities silently showed
+// raw keys. Assert the addresses match instead of trusting them to.
+{
+  const enPath = join(ROOT, "content/i18n/en.json");
+  if (existsSync(enPath)) {
+    const en = JSON.parse(readFileSync(enPath, "utf8"));
+    const want = new Map();
+    for (const e of byTable.events ?? []) {
+      for (const k of [e.title, e.body]) if (k) want.set(k, e.id);
+      for (const c of e.choices ?? []) if (c.label) want.set(c.label, e.id);
+    }
+    for (const c of byTable.cities ?? []) if (c.name) want.set(c.name, c.id);
+    let missing = 0;
+    for (const [k, owner] of want) {
+      if (en[k] === undefined) {
+        missing++;
+        if (missing <= 8) err("G17", "content/i18n/en.json", `${owner} asks for "${k}" — no English text`);
+      }
+    }
+    if (missing > 8) err("G17", "content/i18n/en.json", `...and ${missing - 8} more missing keys`);
+    // Orphans are warnings: text may legitimately precede its event.
+    let orphan = 0;
+    for (const k of Object.keys(en)) if (k.startsWith("ev.") && !want.has(k)) orphan++;
+    if (orphan) warn("G17", "content/i18n/en.json", `${orphan} ev.* keys referenced by nothing`);
+  }
+}
+
 // ------------------------------------------------- G12: map alignment
 if (existsSync(MAP)) {
   const geo = JSON.parse(readFileSync(MAP, "utf8"));
@@ -334,7 +364,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14","G15","G16"];
+  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14","G15","G16","G17"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

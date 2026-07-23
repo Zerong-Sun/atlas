@@ -19,12 +19,57 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.balc.a.choice.look",
+          "label": "ev.balc.a.choice.explore",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "searched-the-ruins-of-bactra"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "walked-where-alexander-walked"
+            },
+            {
+              "op": "reveal_map",
+              "value": "samarcanda",
+              "reason": "saw-the-road-from-the-old-walls"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.a.choice.fragment",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-bactrian-fragment",
+              "reason": "picked-up-a-carved-stone"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-ruins",
+              "reason": "held-a-stone-from-bactra"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "found-a-fragment-of-the-old-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.a.choice.listen",
           "effects": [
             {
               "op": "codex",
               "value": "cx-balc",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-tale-of-alexander"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-ruins",
+              "reason": "heard-the-story-of-bactras-height"
             }
           ]
         }
@@ -55,12 +100,74 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.balc.b.choice.look",
+          "label": "ev.balc.b.choice.lapis",
+          "needs": {
+            "coins": {
+              "min": 800
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "bought-raw-lapis-lazuli"
+            },
+            {
+              "op": "goods",
+              "id": "lapis",
+              "value": 1,
+              "reason": "bought-raw-lapis-lazuli"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-lapis",
+              "reason": "first-lapis-from-badakhshan"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.b.choice.ruby",
+          "needs": {
+            "coins": {
+              "min": 4000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -4000,
+              "reason": "bought-a-balas-ruby"
+            },
+            {
+              "op": "goods",
+              "id": "balas-ruby",
+              "value": 1,
+              "reason": "bought-a-balas-ruby"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-ruby",
+              "reason": "a-stone-worth-a-ship-in-venice"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.b.choice.talk_traders",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "traders-named-the-lapis-mines"
+            },
+            {
+              "op": "reveal_map",
+              "value": "samarcanda",
+              "reason": "traders-named-the-next-great-city"
+            },
             {
               "op": "codex",
               "value": "cx-balc",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-trade-of-the-caravanserai"
             }
           ]
         }
@@ -91,12 +198,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.balc.c.choice.look",
+          "label": "ev.balc.c.choice.offering",
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "left-incense-at-the-fire-temple"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "honoured-the-ancient-flame"
+            },
             {
               "op": "codex",
               "value": "cx-balc",
-              "reason": "recorded-what-was-seen"
+              "reason": "stood-before-the-eternal-fire"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.c.choice.sleep",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "slept-at-the-tomb-of-the-magi"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "dreamed-at-the-shrine"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-magi",
+              "reason": "slept-where-the-magi-sleep"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.c.choice.chant",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-balc-magi",
+              "reason": "heard-the-ancient-hymns"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "watched-the-magi-chant-at-dawn"
             }
           ]
         }
@@ -127,12 +285,68 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.baldacum.a.choice.look",
+          "label": "ev.baldacum.a.choice.explore",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "searched-the-ruined-palace"
+            },
             {
               "op": "codex",
               "value": "cx-baldacum",
-              "reason": "recorded-what-was-seen"
+              "reason": "walked-the-caliphs-halls"
+            },
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "saw-the-tigris-road-from-the-palace"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.a.choice.treasure",
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bribes-in-the-ruins"
+            },
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "found-a-blade-in-the-treasure-rubble"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "searched-the-treasury"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.a.choice.listen",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-guards-tale"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-palace",
+              "reason": "stood-where-the-caliph-stood"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "the-guard-told-of-the-caliphs-height"
             }
           ]
         }
@@ -163,12 +377,70 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.baldacum.b.choice.look",
+          "label": "ev.baldacum.b.choice.brocade",
+          "needs": {
+            "coins": {
+              "min": 2500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -2500,
+              "reason": "bought-baghdad-brocade"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-baghdad-brocade"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-brocade",
+              "reason": "first-silk-of-baudas"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.b.choice.spices",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "spice-merchants-named-the-sea-road"
+            },
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "date-merchants-named-the-river-road"
+            },
             {
               "op": "codex",
               "value": "cx-baldacum",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-what-comes-through-baudas"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.b.choice.sherbet",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "drank-sherbet-with-the-changers"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "baldacum",
+              "reason": "kept-company-with-the-coin-changers"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "the-changers-told-of-the-trade"
             }
           ]
         }
@@ -199,12 +471,57 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.baldacum.c.choice.look",
+          "label": "ev.baldacum.c.choice.listen",
           "effects": [
             {
               "op": "codex",
               "value": "cx-baldacum",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-full-tale"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-fall",
+              "reason": "heard-the-tale-of-the-fall"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.c.choice.search",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "bribes-for-the-old-warden"
+            },
+            {
+              "op": "item",
+              "value": "it-old-coin",
+              "reason": "found-a-coin-from-before-the-fall"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "the-warden-showed-the-hidden-places"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.c.choice.record",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "writing-down-the-tale"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "preserved-the-tale-of-the-fall"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-fall",
+              "reason": "wrote-down-the-tale"
             }
           ]
         }
@@ -235,12 +552,64 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cambaluc.a.choice.look",
+          "label": "ev.cambaluc.a.choice.audience",
+          "needs": {
+            "coins": {
+              "min": 3000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -3000,
+              "reason": "gifts-for-the-kaans-court"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "band",
+              "id": "china",
+              "reason": "presented-at-the-kaans-court"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-court",
+              "reason": "stood-in-the-great-hall"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "saw-the-jade-throne"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.a.choice.admire",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-court",
+              "reason": "saw-the-palace-from-outside"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "marvelled-at-the-great-hall"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.a.choice.talk_guards",
           "effects": [
             {
               "op": "codex",
               "value": "cx-cambaluc",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-guards-accounts"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "guards-described-the-south-road"
             }
           ]
         }
@@ -271,12 +640,65 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cambaluc.b.choice.look",
+          "label": "ev.cambaluc.b.choice.silk",
+          "needs": {
+            "coins": {
+              "min": 2000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -2000,
+              "reason": "bought-silk-at-cambaluc-price"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-cambaluc-price"
+            },
             {
               "op": "codex",
               "value": "cx-cambaluc",
-              "reason": "recorded-what-was-seen"
+              "reason": "traded-in-the-twelve-suburbs"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.b.choice.count",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-the-carts-entering-the-city"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-suburbs",
+              "reason": "counted-a-thousand-cartloads"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "measured-the-commerce-of-cambaluc"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.b.choice.granary",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaluc",
+              "reason": "distributed-from-the-public-granaries"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-the-kaans-charity"
             }
           ]
         }
@@ -307,12 +729,58 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cambaluc.c.choice.look",
+          "label": "ev.cambaluc.c.choice.walk",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-green-hill"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-hill",
+              "reason": "climbed-the-mountain-of-green-jade"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "walked-among-the-transplanted-trees"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.c.choice.evening",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "sat-alone-at-sunset"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-hill",
+              "reason": "stood-where-the-kaan-stands-alone"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "saw-the-city-from-the-green-hill"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.c.choice.gardener",
           "effects": [
             {
               "op": "codex",
               "value": "cx-cambaluc",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-gardeners-tales"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "gardeners-described-the-north-road"
             }
           ]
         }
@@ -343,12 +811,62 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cascar.a.choice.look",
+          "label": "ev.cascar.a.choice.melon",
+          "needs": {
+            "coins": {
+              "min": 50
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -50,
+              "reason": "bought-a-cascar-melon"
+            },
+            {
+              "op": "item",
+              "value": "it-cascar-melon",
+              "reason": "the-sweetest-melon-in-the-world"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.a.choice.orchard",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-orchards-of-cascar"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-garden",
+              "reason": "tasted-the-garden-of-the-tarim"
+            },
             {
               "op": "codex",
               "value": "cx-cascar",
-              "reason": "recorded-what-was-seen"
+              "reason": "walked-the-oasis"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.a.choice.grapes",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bought-dried-grapes"
+            },
+            {
+              "op": "item",
+              "value": "it-cascar-raisins",
+              "reason": "bought-dried-grapes"
             }
           ]
         }
@@ -379,12 +897,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cascar.b.choice.look",
+          "label": "ev.cascar.b.choice.carpet",
+          "needs": {
+            "coins": {
+              "min": 3000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -3000,
+              "reason": "bought-a-cascar-carpet"
+            },
+            {
+              "op": "goods",
+              "id": "persian-carpet",
+              "value": 1,
+              "reason": "bought-a-cascar-carpet"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-carpet",
+              "reason": "a-carpet-that-passes-through-a-ring"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.b.choice.learn_weave",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-carpet-weavers"
+            },
             {
               "op": "codex",
               "value": "cx-cascar",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-prayers-in-the-patterns"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.b.choice.dyes",
+          "needs": {
+            "coins": {
+              "min": 150
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "bought-secret-dye-stuffs"
+            },
+            {
+              "op": "item",
+              "value": "it-carpet-dyes",
+              "reason": "bought-dyer-secrets"
             }
           ]
         }
@@ -415,12 +984,56 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cascar.c.choice.look",
+          "label": "ev.cascar.c.choice.muslim",
           "effects": [
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "band",
+              "id": "central_asia",
+              "reason": "prayed-with-the-muslim-pilgrims"
+            },
             {
               "op": "codex",
               "value": "cx-cascar",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-muslim-tale-of-the-sleepers"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.c.choice.christian",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "band",
+              "id": "central_asia",
+              "reason": "prayed-with-the-christian-pilgrims"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "heard-the-christian-tale-of-the-sleepers"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.c.choice.both",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-overnight-in-the-cave"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-sleepers",
+              "reason": "heard-the-sleepers-breathe"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "heard-both-tales-of-the-sleepers"
             }
           ]
         }
@@ -451,12 +1064,62 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chandu.a.choice.look",
+          "label": "ev.chandu.a.choice.enter",
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bribed-for-entry-to-the-palace"
+            },
             {
               "op": "codex",
               "value": "cx-chandu",
-              "reason": "recorded-what-was-seen"
+              "reason": "stood-inside-the-cane-palace"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "entered-the-kaans-summer-palace"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.a.choice.admire",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "saw-the-gilded-cane-palace"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "studied-the-cane-construction"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.a.choice.sketch",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sketched-the-palace"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "sketched-the-cane-palace"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "recorded-the-palace-in-detail"
             }
           ]
         }
@@ -487,12 +1150,62 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chandu.b.choice.look",
+          "label": "ev.chandu.b.choice.walk",
           "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-park-edge"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-park",
+              "reason": "saw-the-kaans-game-park"
+            },
             {
               "op": "codex",
               "value": "cx-chandu",
-              "reason": "recorded-what-was-seen"
+              "reason": "walked-the-sixteen-mile-wall"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.b.choice.horses",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "saw-the-white-mares"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "saw-the-sacred-herd"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.b.choice.falcon",
+          "needs": {
+            "coins": {
+              "min": 800
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "hired-a-falconer-for-a-day"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-park",
+              "reason": "hunted-with-the-kaans-falconers"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-kaans-hunting-grounds"
             }
           ]
         }
@@ -523,12 +1236,53 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.chandu.c.choice.look",
+          "label": "ev.chandu.c.choice.watch_mares",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "watched-the-sacred-mares"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "saw-the-milking-of-the-white-mares"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.c.choice.offering",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "offering-to-the-eternal-blue-sky"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "honoured-the-mongol-spirits"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.c.choice.listen",
           "effects": [
             {
               "op": "codex",
               "value": "cx-chandu",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-tale-of-genghis-khan"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "heard-the-old-mongol-rites"
             }
           ]
         }
@@ -559,12 +1313,58 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cotan.a.choice.look",
+          "label": "ev.cotan.a.choice.jade",
+          "needs": {
+            "coins": {
+              "min": 2000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -2000,
+              "reason": "bought-mutton-fat-jade"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-mutton-fat-jade"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-jade",
+              "reason": "first-piece-of-cotan-jade"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.a.choice.wade",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waded-the-jade-rivers"
+            },
             {
               "op": "codex",
               "value": "cx-cotan",
-              "reason": "recorded-what-was-seen"
+              "reason": "felt-for-jade-with-bare-feet"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.a.choice.watch",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-cotan-rivers",
+              "reason": "watched-the-jade-divers"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-where-the-jade-comes-from"
             }
           ]
         }
@@ -595,12 +1395,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cotan.b.choice.look",
+          "label": "ev.cotan.b.choice.silk",
+          "needs": {
+            "coins": {
+              "min": 1500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -1500,
+              "reason": "bought-a-bolt-of-cotan-silk"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-a-bolt-of-cotan-silk"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-silk",
+              "reason": "silk-finer-than-human-hair"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.b.choice.weave",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-silk-weavers"
+            },
             {
               "op": "codex",
               "value": "cx-cotan",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-weavers-song"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.b.choice.dyes",
+          "needs": {
+            "coins": {
+              "min": 120
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -120,
+              "reason": "bought-dye-samples"
+            },
+            {
+              "op": "item",
+              "value": "it-dye-sample",
+              "reason": "bought-dyer-secrets"
             }
           ]
         }
@@ -631,12 +1482,52 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.cotan.c.choice.look",
+          "label": "ev.cotan.c.choice.explore",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "dug-in-the-buried-city"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "saw-the-buried-monasteries"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-buddha",
+              "reason": "touched-the-buddha-dust"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.c.choice.fragment",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-buddha-fragment",
+              "reason": "collected-a-painted-fragment"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "held-a-piece-of-the-old-cotan"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.c.choice.listen_elder",
           "effects": [
             {
               "op": "codex",
               "value": "cx-cotan",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-elders-tales"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-buddha",
+              "reason": "heard-of-the-thousand-monasteries"
             }
           ]
         }
@@ -667,12 +1558,72 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kinsay.a.choice.look",
+          "label": "ev.kinsay.a.choice.boat",
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "hired-a-boat-for-the-day"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "traversed-the-canals"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-canals",
+              "reason": "crossed-the-twelve-thousand-bridges"
+            },
             {
               "op": "codex",
               "value": "cx-kinsay",
-              "reason": "recorded-what-was-seen"
+              "reason": "sailed-the-city-of-heaven"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.a.choice.walk",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-bridges"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-canals",
+              "reason": "counted-the-bridges"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "measured-the-city-built-on-water"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.a.choice.tower",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-kinsay-canals",
+              "reason": "saw-the-hundred-canals"
+            },
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "from-the-tower-you-saw-the-next-city"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "climbed-the-drum-tower"
             }
           ]
         }
@@ -703,12 +1654,78 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kinsay.b.choice.look",
+          "label": "ev.kinsay.b.choice.pepper",
+          "needs": {
+            "coins": {
+              "min": 20000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -20000,
+              "reason": "bought-pepper-at-kinsay"
+            },
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 2,
+              "reason": "bought-pepper-at-kinsay"
+            },
             {
               "op": "codex",
               "value": "cx-kinsay",
-              "reason": "recorded-what-was-seen"
+              "reason": "traded-in-the-ten-great-squares"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.b.choice.bath",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bathed-in-perfumed-water"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "bathed-and-dined-at-the-market"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-markets",
+              "reason": "bathed-in-the-ten-markets"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "lived-a-day-in-the-markets"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.b.choice.count_pepper",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-kinsay-markets",
+              "reason": "counted-the-pepper-carts"
+            },
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "merchants-named-the-sea-ports"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-daily-consumption"
             }
           ]
         }
@@ -739,12 +1756,68 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.kinsay.c.choice.look",
+          "label": "ev.kinsay.c.choice.boat",
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "hired-a-pleasure-boat"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sailed-the-west-lake"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "floated-on-the-west-lake"
+            },
             {
               "op": "codex",
               "value": "cx-kinsay",
-              "reason": "recorded-what-was-seen"
+              "reason": "saw-the-lanterns-on-the-water"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.c.choice.watch",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "watched-the-pleasure-boats"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "heard-the-pipa-on-the-lake"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.c.choice.moonlight",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 2,
+              "reason": "saw-the-lake-by-moonlight"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "watched-the-moon-on-the-west-lake"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "saw-the-most-beautiful-thing-in-the-empire"
             }
           ]
         }
@@ -993,12 +2066,64 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ormus.a.choice.look",
+          "label": "ev.ormus.a.choice.toll",
+          "needs": {
+            "coins": {
+              "min": 300
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -300,
+              "reason": "paid-the-harbor-toll"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ormus",
+              "reason": "paid-the-toll-properly"
+            },
             {
               "op": "codex",
               "value": "cx-ormus",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-port-laws"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.a.choice.pearl_diver",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "divers-named-the-next-port"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "heard-the-pearl-divers-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.a.choice.watch_ships",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-ships-from-the-fort"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-fort",
+              "reason": "stood-in-the-harbor-fort"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "counted-the-ships-at-hormos"
             }
           ]
         }
@@ -1029,12 +2154,74 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ormus.b.choice.look",
+          "label": "ev.ormus.b.choice.pepper",
+          "needs": {
+            "coins": {
+              "min": 15000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -15000,
+              "reason": "bought-pepper-at-monsoon-price"
+            },
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-monsoon-price"
+            },
             {
               "op": "codex",
               "value": "cx-ormus",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-spice-prices"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.b.choice.ginger",
+          "needs": {
+            "coins": {
+              "min": 300
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -300,
+              "reason": "bought-dried-ginger"
+            },
+            {
+              "op": "goods",
+              "id": "ginger",
+              "value": 1,
+              "reason": "bought-dried-ginger"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-spice",
+              "reason": "first-spice-from-the-indies"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.b.choice.trade_routes",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "spice-traders-named-the-ports"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cobinan",
+              "reason": "caravan-masters-named-the-inland-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-spice-routes"
             }
           ]
         }
@@ -1065,12 +2252,58 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.ormus.c.choice.look",
+          "label": "ev.ormus.c.choice.guide",
+          "needs": {
+            "coins": {
+              "min": 150
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "hired-a-guide-who-knows-the-wind"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "learned-the-wind-patterns"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "the-guide-taught-the-wind-signs"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.c.choice.wait",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "waited-out-the-wind-underground"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "endured-the-wind-of-death"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.c.choice.observe",
           "effects": [
             {
               "op": "codex",
               "value": "cx-ormus",
-              "reason": "recorded-what-was-seen"
+              "reason": "watched-how-the-people-survive"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-wind",
+              "reason": "felt-the-wind-of-death"
             }
           ]
         }
@@ -1101,12 +2334,60 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.samarcanda.a.choice.look",
+          "label": "ev.samarcanda.a.choice.madrasa",
           "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "visited-the-madrasas"
+            },
             {
               "op": "codex",
               "value": "cx-samarcanda",
-              "reason": "recorded-what-was-seen"
+              "reason": "studied-at-the-registan"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "wisdom-of-the-blue-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.a.choice.dome",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-dome",
+              "reason": "stood-beneath-the-gur-i-mir"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "saw-the-tomb-of-timur"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.a.choice.gardens",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-gardens",
+              "reason": "walked-the-canals"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "samarcanda",
+              "reason": "admired-as-a-scholar"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "walked-the-garden-city"
             }
           ]
         }
@@ -1137,12 +2418,63 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.samarcanda.b.choice.look",
+          "label": "ev.samarcanda.b.choice.paper",
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-samarcand-paper"
+            },
+            {
+              "op": "goods",
+              "id": "paper",
+              "value": 1,
+              "reason": "bought-samarcand-paper"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-paper",
+              "reason": "owned-the-worlds-best-paper"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.b.choice.learn",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-paper-makers"
+            },
             {
               "op": "codex",
               "value": "cx-samarcanda",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-the-paper-secret"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.b.choice.manuscript",
+          "needs": {
+            "coins": {
+              "min": 1000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1000,
+              "reason": "bought-a-calligrapher-manuscript"
+            },
+            {
+              "op": "item",
+              "value": "it-illuminated-manuscript",
+              "reason": "bought-a-calligrapher-manuscript"
             }
           ]
         }
@@ -1173,12 +2505,49 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.samarcanda.c.choice.look",
+          "label": "ev.samarcanda.c.choice.touch",
           "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "pressed-forehead-to-the-stone"
+            },
             {
               "op": "codex",
               "value": "cx-samarcanda",
-              "reason": "recorded-what-was-seen"
+              "reason": "felt-the-weeping-stone"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.c.choice.pray",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "prayed-for-the-road-ahead"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "prayed-at-the-great-mosque"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.c.choice.watch_pilgrims",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-stone",
+              "reason": "saw-the-pilgrims-touch-the-stone"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "heard-when-the-stone-last-wept"
             }
           ]
         }
@@ -1209,12 +2578,68 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tauris.a.choice.look",
+          "label": "ev.tauris.a.choice.merchants",
           "effects": [
+            {
+              "op": "reveal_map",
+              "value": "baldacum",
+              "reason": "foreign-merchants-named-the-roads"
+            },
+            {
+              "op": "reveal_map",
+              "value": "trapezus",
+              "reason": "foreign-merchants-named-the-roads"
+            },
             {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "recorded-what-was-seen"
+              "reason": "heard-the-merchants-talk"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.a.choice.pearls",
+          "needs": {
+            "coins": {
+              "min": 800
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "bought-a-tabriz-pearl"
+            },
+            {
+              "op": "goods",
+              "id": "tabriz-pearls",
+              "value": 1,
+              "reason": "bought-a-tabriz-pearl"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-pearl",
+              "reason": "first-persian-pearl"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.a.choice.view",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "climbed-the-hill-over-tauris"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-view",
+              "reason": "saw-the-plain-from-the-hill"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "looked-out-from-the-ilkhan-palace"
             }
           ]
         }
@@ -1245,12 +2670,72 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tauris.b.choice.look",
+          "label": "ev.tauris.b.choice.latin",
+          "needs": {
+            "language": "persian"
+          },
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "band",
+              "id": "west_asia",
+              "reason": "spoke-with-the-latin-merchants"
+            },
+            {
+              "op": "reveal_map",
+              "value": "constantinopolis",
+              "reason": "genoese-described-the-west-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "learned-the-trade-routes"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.b.choice.dragoman",
+          "needs": {
+            "coins": {
+              "min": 2000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -2000,
+              "reason": "hired-a-dragoman"
+            },
+            {
+              "op": "language",
+              "value": "persian",
+              "reason": "a-season-in-the-bazaars"
+            },
+            {
+              "op": "days",
+              "value": 20,
+              "reason": "a-season-in-the-bazaars"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "the-dragoman-named-every-quarter"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.b.choice.browse",
           "effects": [
             {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "recorded-what-was-seen"
+              "reason": "walked-the-covered-market"
+            },
+            {
+              "op": "reveal_map",
+              "value": "caffa",
+              "reason": "armenian-traders-named-the-north-road"
             }
           ]
         }
@@ -1281,12 +2766,53 @@
       "once": true,
       "choices": [
         {
-          "label": "ev.tauris.c.choice.look",
+          "label": "ev.tauris.c.choice.rest",
           "effects": [
+            {
+              "op": "days",
+              "value": 14,
+              "reason": "rested-in-the-gardens"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 2,
+              "reason": "a-fortnight-of-peace"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.c.choice.fruit",
+          "needs": {
+            "coins": {
+              "min": 120
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -120,
+              "reason": "bought-dried-apricots-and-pistachios"
+            },
+            {
+              "op": "item",
+              "value": "it-dried-fruit",
+              "reason": "provisioned-from-the-orchards"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.c.choice.wander",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-tauris-gardens",
+              "reason": "walked-the-qanats"
+            },
             {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "recorded-what-was-seen"
+              "reason": "learned-how-the-water-comes"
             }
           ]
         }

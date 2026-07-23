@@ -9,6 +9,7 @@ extends Node
 
 signal state_changed(result)
 signal day_advanced(jdn: int)
+signal event_fired(event: Dictionary)
 
 var state: WorldState
 var executor: EffectExecutor
