@@ -88,9 +88,11 @@ func _begin(archetype: Dictionary) -> void:
 	state.coins = int(archetype.get("startKit", {}).get("coins", START_COINS))
 	state.faith = archetype.get("faith", "latin")
 	for l in archetype.get("startKit", {}).get("languages", []):
-		state.languages.append(String(l))
+		if String(l) not in state.languages:
+			state.languages.append(String(l))
 	for it in archetype.get("startKit", {}).get("items", []):
-		state.items.append(String(it))
+		if String(it) not in state.items:
+			state.items.append(String(it))
 
 	_build_map()
 	_arrive()
@@ -161,7 +163,15 @@ func _clear_panel() -> void:
 
 func _show_event(ev: Dictionary) -> void:
 	_clear_panel()
+	_say("")
 	_say("[b]%s[/b]  %s" % [I18n.t(ev.get("title", "")), _origin_tag(ev)])
+	# The body is the point of the whole exercise; without it the player reads
+	# only a headline and a menu.
+	var body := I18n.t(ev.get("body", ""))
+	if body != "" and body != ev.get("body", ""):
+		_say(body)
+	if I18n.is_untranslated(String(ev.get("body", ""))):
+		_say("[color=#7a6a4a][i](尚未译出，暂显英文原文)[/i][/color]")
 
 	var states := events.choice_states(ev, state, _ctx())
 	for i in states.size():
@@ -171,7 +181,10 @@ func _show_event(ev: Dictionary) -> void:
 		btn.disabled = not s["enabled"]
 		if not s["enabled"]:
 			# GDD §7.1: say WHY, never a bare refusal.
-			btn.tooltip_text = ", ".join(PackedStringArray(s["reasons"]))
+			var why: Array[String] = []
+			for r in s["reasons"]:
+				why.append(I18n.fmt(String(r)))
+			btn.tooltip_text = ", ".join(PackedStringArray(why))
 			btn.text += "  (%s)" % btn.tooltip_text
 		btn.pressed.connect(_on_choice.bind(ev, i))
 		_panel.add_child(btn)
@@ -204,6 +217,26 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 func _show_roads() -> void:
 	_clear_panel()
 	var here := db.get_record(state.city)
+
+	# A city's own contents come first. GDD §5.2: you must do at least one thing
+	# in a place before you know how to leave it — so the sites cannot be buried
+	# under the road list.
+	var here_sites: Array = here.get("sites", []).duplicate()
+	if here.has("mentorEvent"):
+		here_sites.append(here["mentorEvent"])
+	for sid in here_sites:
+		var sev := db.get_record(String(sid))
+		if sev.is_empty():
+			continue
+		if sev.get("once", false) and state.once_fired.get(sev["id"], false):
+			continue
+		if not conditions.evaluate(sev.get("when", {}), state, _ctx()):
+			continue
+		var sbtn := Button.new()
+		sbtn.text = "◆ %s" % I18n.t(sev.get("title", ""))
+		sbtn.pressed.connect(_show_event.bind(sev))
+		_panel.add_child(sbtn)
+
 	var lbl := Label.new()
 	lbl.text = "%s 的去路：" % _city_name(state.city)
 	_panel.add_child(lbl)
@@ -219,7 +252,10 @@ func _show_roads() -> void:
 				travel.total_days(r, String(mode)), travel.total_cost(r, String(mode)) / 100]
 			btn.disabled = not av["ok"]
 			if not av["ok"]:
-				btn.tooltip_text = ", ".join(PackedStringArray(av["reasons"]))
+				var rr: Array[String] = []
+				for reason in av["reasons"]:
+					rr.append(I18n.fmt(String(reason)))
+				btn.tooltip_text = ", ".join(PackedStringArray(rr))
 			btn.pressed.connect(_on_depart.bind(r, String(mode)))
 			_panel.add_child(btn)
 			any = true

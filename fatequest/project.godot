@@ -1,21 +1,30 @@
-; FateQuest — 远行之书 / The Book of Far Roads
-; Godot 4.7.1.stable — verified: tests/run_tests.gd passes headless.
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
 
 [application]
+
 config/name="FateQuest 远行之书"
 config/description="A medieval Eurasian travel open world. See docs/GDD.md."
 run/main_scene="res://game/screens/main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]
+
 GameContext="*res://game/autoload/game_context.gd"
 
 [display]
+
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
 [rendering]
+
 renderer/rendering_method="gl_compatibility"

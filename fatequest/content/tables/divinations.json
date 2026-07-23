@@ -7,63 +7,388 @@
       "name": "div.iching.name",
       "culture": "east_asia",
       "mvp": true,
-      "learnAt": ["cambaluc", "kinsay", "sachiu"],
+      "learnAt": [
+        "cambaluc",
+        "kinsay",
+        "sachiu"
+      ],
       "teacher": "npc-cambaluc-mentor",
       "question": "route",
-      "inputs": ["question"],
-      "reads": ["route", "city", "year"],
-      "outputs": { "advice": "route_choice", "confidence": 0.72, "horizon": "season" },
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route",
+        "city",
+        "year"
+      ],
+      "outputs": {
+        "advice": "route_choice",
+        "confidence": 0.72,
+        "horizon": "season"
+      },
       "effects": [
-        { "op": "reveal_map", "value": "$subject", "reason": "iching-read-the-road" },
-        { "op": "codex", "value": "cx-hexagrams", "reason": "iching-recorded-the-hexagram" }
+        {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "iching-read-the-road"
+        },
+        {
+          "op": "codex",
+          "value": "cx-hexagrams",
+          "reason": "iching-recorded-the-hexagram"
+        }
       ],
       "resultTexts": [
-        { "cond": "moving>=3", "key": "div.iching.result.many_moving" },
-        { "cond": "default", "key": "div.iching.result.still" }
+        {
+          "cond": "idx_0",
+          "key": "div.iching.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.iching.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.iching.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.iching.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.iching.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.iching.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.iching.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.iching.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.iching.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.iching.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.iching.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.iching.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.iching.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.iching.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.iching.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.iching.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.iching.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.iching.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.iching.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.iching.result.19"
+        }
       ],
-      "cost": { "coins": 200, "time": 0, "favor": 0 },
-      "atlas": { "causalityModel": "symbolic-projection", "uncertaintyMode": "strategic-positioning", "evidenceStyle": "cast-symbol" }
+      "cost": {
+        "coins": 200,
+        "time": 0,
+        "favor": 0
+      },
+      "atlas": {
+        "causalityModel": "symbolic-projection",
+        "uncertaintyMode": "strategic-positioning",
+        "evidenceStyle": "cast-symbol"
+      }
     },
     {
       "id": "bazi",
       "name": "div.bazi.name",
       "culture": "east_asia",
       "mvp": true,
-      "learnAt": ["cambaluc", "kinsay"],
+      "learnAt": [
+        "cambaluc",
+        "kinsay"
+      ],
       "teacher": "npc-kinsay-mentor",
       "question": "person",
-      "inputs": ["birthdate"],
-      "reads": ["self", "retainer", "year"],
-      "outputs": { "advice": "long_term_fit", "confidence": 0.65, "horizon": "three_years" },
-      "effects": [
-        { "op": "reveal_birth", "value": 1, "reason": "bazi-read-the-pillars" },
-        { "op": "codex", "value": "cx-four-pillars", "reason": "bazi-recorded-the-chart" }
+      "inputs": [
+        "birthdate"
       ],
-      "resultTexts": [{ "cond": "default", "key": "div.bazi.result.default" }],
-      "cost": { "coins": 400, "time": 1, "favor": 0 },
-      "atlas": { "causalityModel": "birth-structure", "uncertaintyMode": "trend", "evidenceStyle": "calculated-chart" }
+      "reads": [
+        "self",
+        "retainer",
+        "year"
+      ],
+      "outputs": {
+        "advice": "long_term_fit",
+        "confidence": 0.65,
+        "horizon": "three_years"
+      },
+      "effects": [
+        {
+          "op": "reveal_birth",
+          "value": 1,
+          "reason": "bazi-read-the-pillars"
+        },
+        {
+          "op": "codex",
+          "value": "cx-four-pillars",
+          "reason": "bazi-recorded-the-chart"
+        }
+      ],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.bazi.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.bazi.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.bazi.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.bazi.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.bazi.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.bazi.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.bazi.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.bazi.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.bazi.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.bazi.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.bazi.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.bazi.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.bazi.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.bazi.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.bazi.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.bazi.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.bazi.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.bazi.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.bazi.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.bazi.result.19"
+        }
+      ],
+      "cost": {
+        "coins": 400,
+        "time": 1,
+        "favor": 0
+      },
+      "atlas": {
+        "causalityModel": "birth-structure",
+        "uncertaintyMode": "trend",
+        "evidenceStyle": "calculated-chart"
+      }
     },
     {
       "id": "lot",
       "name": "div.lot.name",
       "culture": "east_asia",
       "mvp": true,
-      "learnAt": ["zayton", "kinsay", "lop"],
+      "learnAt": [
+        "zayton",
+        "kinsay",
+        "lop"
+      ],
       "teacher": "npc-zayton-mentor",
       "question": "risk",
-      "inputs": ["question"],
-      "reads": ["route", "city"],
-      "outputs": { "advice": "yes_no_with_caution", "confidence": 0.6, "horizon": "day" },
+      "inputs": [
+        "question"
+      ],
+      "reads": [
+        "route",
+        "city"
+      ],
+      "outputs": {
+        "advice": "yes_no_with_caution",
+        "confidence": 0.6,
+        "horizon": "day"
+      },
       "effects": [
-        { "op": "flag", "value": "fl-lot-drawn", "reason": "lot-was-drawn" },
-        { "op": "reveal_map", "value": "$subject", "reason": "lot-named-the-road" }
+        {
+          "op": "flag",
+          "value": "fl-lot-drawn",
+          "reason": "lot-was-drawn"
+        },
+        {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "lot-named-the-road"
+        }
       ],
       "resultTexts": [
-        { "cond": "auspicious", "key": "div.lot.result.auspicious" },
-        { "cond": "default", "key": "div.lot.result.caution" }
+        {
+          "cond": "idx_0",
+          "key": "div.lot.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.lot.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.lot.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.lot.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.lot.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.lot.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.lot.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.lot.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.lot.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.lot.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.lot.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.lot.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.lot.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.lot.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.lot.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.lot.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.lot.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.lot.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.lot.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.lot.result.19"
+        }
       ],
-      "cost": { "coins": 50, "time": 0, "favor": 0 },
-      "atlas": { "causalityModel": "textual-admonition", "uncertaintyMode": "admonition", "evidenceStyle": "ritual-result" }
+      "cost": {
+        "coins": 50,
+        "time": 0,
+        "favor": 0
+      },
+      "atlas": {
+        "causalityModel": "textual-admonition",
+        "uncertaintyMode": "admonition",
+        "evidenceStyle": "ritual-result"
+      }
     }
   ]
 }

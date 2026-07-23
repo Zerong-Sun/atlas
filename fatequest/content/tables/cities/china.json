@@ -1481,9 +1481,9 @@
       "tier": "metropolis",
       "entryEvent": "ev-zayton-entry",
       "sites": [
-        "ev-zayton-a",
-        "ev-zayton-b",
-        "ev-zayton-c"
+        "ev-zayton-harbour",
+        "ev-zayton-fanfang",
+        "ev-zayton-mazu"
       ],
       "exits": [
         "rt-chamba-zayton",
@@ -1518,16 +1518,18 @@
         "spread": 0.18
       },
       "shrine": {
-        "faith": "buddhism",
+        "faith": "folk",
         "services": [
-          "bless"
+          "bless",
+          "sanctuary"
         ]
       },
       "mentor": "npc-zayton-mentor",
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"
-      ]
+      ],
+      "mentorEvent": "ev-zayton-mentor"
     }
   ]
 }

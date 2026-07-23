@@ -1,0 +1,212 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-zayton-entry",
+      "kind": "entry",
+      "title": "ev.zayton.entry.title",
+      "when": { "cities": ["zayton"] },
+      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "body": "ev.zayton.entry.body",
+      "once": true,
+      "priority": 10,
+      "choices": [
+        {
+          "label": "ev.zayton.entry.choice.customs",
+          "effects": [
+            { "op": "days", "value": 2, "reason": "waited-out-the-tithe-clerks" },
+            { "op": "codex", "value": "cx-zayton-tithe", "reason": "learned-the-kaans-duties" },
+            { "op": "reveal_map", "value": "zayton", "reason": "the-clerks-named-the-quarters" }
+          ]
+        },
+        {
+          "label": "ev.zayton.entry.choice.slip",
+          "needs": { "language": "chinese" },
+          "effects": [
+            { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "avoided-the-tithe-clerks" },
+            { "op": "flag", "value": "fl-zayton-undeclared", "reason": "entered-without-declaring" },
+            { "op": "codex", "value": "cx-zayton-tithe", "reason": "saw-what-the-tithe-costs-others" }
+          ]
+        },
+        {
+          "label": "ev.zayton.entry.choice.ask_ships",
+          "effects": [
+            { "op": "days", "value": 1, "reason": "counted-the-shipping" },
+            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "counted-the-shipping" },
+            { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-haven-of-zayton",
+        "origin": "source",
+        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+      }
+    },
+
+    {
+      "id": "ev-zayton-harbour",
+      "kind": "site",
+      "title": "ev.zayton.harbour.title",
+      "when": { "cities": ["zayton"] },
+      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "body": "ev.zayton.harbour.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.harbour.choice.pepper",
+          "needs": { "coins": { "min": 18000 } },
+          "effects": [
+            { "op": "coins", "value": -18000, "reason": "bought-pepper-at-the-quay" },
+            { "op": "goods", "id": "pepper", "value": 1, "reason": "bought-pepper-at-the-quay" },
+            { "op": "codex", "value": "cx-pepper-freight", "reason": "learned-the-freight-rates" }
+          ]
+        },
+        {
+          "label": "ev.zayton.harbour.choice.monsoon",
+          "effects": [
+            { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "pilots-named-the-monsoon-lane" },
+            { "op": "codex", "value": "cx-monsoon", "reason": "learned-the-monsoon" },
+            { "op": "days", "value": 1, "reason": "drank-with-the-pilots" }
+          ]
+        },
+        {
+          "label": "ev.zayton.harbour.choice.watch",
+          "effects": [
+            { "op": "sticker", "value": "st-zayton-haven", "reason": "stood-a-day-at-the-haven" },
+            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "stood-a-day-at-the-haven" },
+            { "op": "days", "value": 1, "reason": "stood-a-day-at-the-haven" }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-haven-of-zayton",
+        "origin": "source",
+        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+      }
+    },
+
+    {
+      "id": "ev-zayton-fanfang",
+      "kind": "site",
+      "title": "ev.zayton.fanfang.title",
+      "when": { "cities": ["zayton"] },
+      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "body": "ev.zayton.fanfang.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.fanfang.choice.persian",
+          "needs": { "language": "persian" },
+          "effects": [
+            { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "persian-traders-named-the-sea-road" },
+            { "op": "reputation", "value": 2, "scope": "band", "id": "maritime_asia", "reason": "spoke-with-the-persian-traders" },
+            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" }
+          ]
+        },
+        {
+          "label": "ev.zayton.fanfang.choice.interpreter",
+          "needs": { "coins": { "min": 3000 } },
+          "effects": [
+            { "op": "coins", "value": -3000, "reason": "paid-a-lad-to-interpret" },
+            { "op": "language", "value": "arabic", "reason": "a-season-of-listening-in-the-quarter" },
+            { "op": "days", "value": 20, "reason": "a-season-of-listening-in-the-quarter" },
+            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" }
+          ]
+        },
+        {
+          "label": "ev.zayton.fanfang.choice.silk",
+          "needs": { "coins": { "min": 12000 } },
+          "effects": [
+            { "op": "coins", "value": -12000, "reason": "bought-a-bolt-of-silk" },
+            { "op": "goods", "id": "silk", "value": 1, "reason": "bought-a-bolt-of-silk" },
+            { "op": "sticker", "value": "st-zayton-silk", "reason": "bought-a-bolt-of-silk" }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-haven-of-zayton",
+        "origin": "hybrid",
+        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+      }
+    },
+
+    {
+      "id": "ev-zayton-mazu",
+      "kind": "site",
+      "title": "ev.zayton.mazu.title",
+      "when": { "cities": ["zayton"] },
+      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "body": "ev.zayton.mazu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.mazu.choice.offer",
+          "needs": { "coins": { "min": 800 } },
+          "effects": [
+            { "op": "coins", "value": -800, "reason": "an-offering-before-sailing" },
+            { "op": "fate", "id": "travel", "value": 2, "reason": "blessed-for-the-sea-road" },
+            { "op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "observed-the-local-rite" },
+            { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+          ]
+        },
+        {
+          "label": "ev.zayton.mazu.choice.lots",
+          "needs": { "learned_divination": ["lot"] },
+          "divination": "lot",
+          "pass": {
+            "effects": [
+              { "op": "flag", "value": "fl-good-sailing-window", "reason": "the-lot-named-a-sailing-day" },
+              { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "the-lot-named-a-sailing-day" },
+              { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+            ]
+          },
+          "fail": {
+            "effects": [
+              { "op": "days", "value": 3, "reason": "the-lot-counselled-waiting" },
+              { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+            ]
+          }
+        },
+        {
+          "label": "ev.zayton.mazu.choice.watch",
+          "effects": [
+            { "op": "codex", "value": "cx-sea-goddess", "reason": "watched-the-sailors-at-prayer" },
+            { "op": "sticker", "value": "st-zayton-mazu", "reason": "watched-the-sailors-at-prayer" }
+          ]
+        }
+      ],
+      "lore": { "origin": "authored" }
+    },
+
+    {
+      "id": "ev-zayton-mentor",
+      "kind": "site",
+      "title": "ev.zayton.mentor.title",
+      "when": { "cities": ["zayton"], "not_flags": ["fl-learned-lot"] },
+      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "body": "ev.zayton.mentor.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.mentor.choice.learn",
+          "needs": { "coins": { "min": 5000 } },
+          "effects": [
+            { "op": "coins", "value": -5000, "reason": "a-gift-to-the-temple-diviner" },
+            { "op": "days", "value": 14, "reason": "a-fortnight-learning-the-lots" },
+            { "op": "learn_divination", "value": "lot", "reason": "learned-the-temple-lots" },
+            { "op": "flag", "value": "fl-learned-lot", "reason": "learned-the-temple-lots" }
+          ]
+        },
+        {
+          "label": "ev.zayton.mentor.choice.ask",
+          "effects": [
+            { "op": "codex", "value": "cx-lots", "reason": "heard-how-the-lots-are-read" }
+          ]
+        }
+      ],
+      "lore": { "origin": "authored" }
+    }
+  ]
+}

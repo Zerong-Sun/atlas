@@ -6,6 +6,7 @@
       "id": "ev-road-desert-voices",
       "kind": "road",
       "title": "ev.road.desert_voices.title",
+      "body": "ev.road.desert_voices.body",
       "when": {
         "not_flags": [
           "fl-heard-the-voices"
@@ -15,7 +16,6 @@
         "bg": "desert-night",
         "region": "central_asia"
       },
-      "body": "ev.road.desert_voices.body",
       "once": false,
       "choices": [
         {
@@ -24,18 +24,18 @@
             {
               "op": "days",
               "value": 3,
-              "reason": "led-astray-by-the-voices"
+              "reason": "led-astray"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": -1,
-              "reason": "shaken-by-the-desert"
+              "reason": "shaken"
             },
             {
               "op": "flag",
               "value": "fl-heard-the-voices",
-              "reason": "the-desert-has-spoken-once"
+              "reason": "spoken-once"
             }
           ]
         },
@@ -45,12 +45,12 @@
             {
               "op": "flag",
               "value": "fl-heard-the-voices",
-              "reason": "the-desert-has-spoken-once"
+              "reason": "spoken-once"
             },
             {
               "op": "codex",
               "value": "cx-desert-voices",
-              "reason": "recorded-the-marvel"
+              "reason": "recorded"
             }
           ]
         },
@@ -67,12 +67,12 @@
               {
                 "op": "reveal_map",
                 "value": "rt-lop-sachiu",
-                "reason": "the-hexagram-showed-the-road"
+                "reason": "hexagram-showed"
               },
               {
                 "op": "flag",
                 "value": "fl-heard-the-voices",
-                "reason": "the-desert-has-spoken-once"
+                "reason": "spoken-once"
               }
             ]
           },
@@ -81,12 +81,12 @@
               {
                 "op": "days",
                 "value": 2,
-                "reason": "the-reading-was-clouded"
+                "reason": "clouded"
               },
               {
                 "op": "flag",
                 "value": "fl-heard-the-voices",
-                "reason": "the-desert-has-spoken-once"
+                "reason": "spoken-once"
               }
             ]
           }
@@ -98,6 +98,2071 @@
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c39"
+        }
+      }
+    },
+    {
+      "id": "ev-road-00",
+      "kind": "road",
+      "title": "ev.road.00.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "body": "ev.road.00.body",
+      "choices": [
+        {
+          "label": "ev.road.00.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.00.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "of-certain-battles-that-were-fought-by-king-caidu-against-the-armies-of-",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF CERTAIN BATTLES THAT WERE FOUGHT BY KING CAIDU AGAINST THE ARMIES OF HIS UNCLE THE GREAT KAAN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-01",
+      "kind": "road",
+      "title": "ev.road.01.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.01.body",
+      "choices": [
+        {
+          "label": "ev.road.01.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.01.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "concerning-the-revolt-of-nayan-who-was-uncle-to-the-great-kaan-cublay",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "CONCERNING THE REVOLT OF NAYAN, WHO WAS UNCLE TO THE GREAT KAAN CUBLAY"
+        }
+      }
+    },
+    {
+      "id": "ev-road-02",
+      "kind": "road",
+      "title": "ev.road.02.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "west_asia"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "west_asia"
+      },
+      "body": "ev.road.02.body",
+      "choices": [
+        {
+          "label": "ev.road.02.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.02.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-old-man-used-to-train-his-assassins",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE OLD MAN USED TO TRAIN HIS ASSASSINS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-03",
+      "kind": "road",
+      "title": "ev.road.03.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "maritime_asia"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "maritime_asia"
+      },
+      "body": "ev.road.03.body",
+      "choices": [
+        {
+          "label": "ev.road.03.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.03.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "what-further-came-of-the-great-kaans-expedition-against-chipangu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "WHAT FURTHER CAME OF THE GREAT KAAN’S EXPEDITION AGAINST CHIPANGU"
+        }
+      }
+    },
+    {
+      "id": "ev-road-04",
+      "kind": "road",
+      "title": "ev.road.04.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "body": "ev.road.04.body",
+      "choices": [
+        {
+          "label": "ev.road.04.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.04.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-valiant-feats-and-victory-of-king-nogai",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "THE VALIANT FEATS AND VICTORY OF KING NOGAI"
+        }
+      }
+    },
+    {
+      "id": "ev-road-05",
+      "kind": "road",
+      "title": "ev.road.05.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "india"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "india"
+      },
+      "body": "ev.road.05.body",
+      "choices": [
+        {
+          "label": "ev.road.05.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.05.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-same-continued-the-history-of-sagamoni-borcan-and-the-beginning-of-i",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "THE SAME CONTINUED. THE HISTORY OF SAGAMONI BORCAN AND THE BEGINNING OF IDOLATRY"
+        }
+      }
+    },
+    {
+      "id": "ev-road-06",
+      "kind": "road",
+      "title": "ev.road.06.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "china"
+      },
+      "body": "ev.road.06.body",
+      "choices": [
+        {
+          "label": "ev.road.06.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.06.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "of-the-battle-that-the-great-kaan-fought-with-nayan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF THE BATTLE THAT THE GREAT KAAN FOUGHT WITH NAYAN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-07",
+      "kind": "road",
+      "title": "ev.road.07.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "india"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "india"
+      },
+      "body": "ev.road.07.body",
+      "choices": [
+        {
+          "label": "ev.road.07.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.07.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "treating-of-the-great-province-of-abash-which-is-middle-india-and-is-on-",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "TREATING OF THE GREAT PROVINCE OF ABASH WHICH IS MIDDLE INDIA, AND IS ON THE MAINLAND"
+        }
+      }
+    },
+    {
+      "id": "ev-road-08",
+      "kind": "road",
+      "title": "ev.road.08.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "china"
+      },
+      "body": "ev.road.08.body",
+      "choices": [
+        {
+          "label": "ev.road.08.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.08.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-kingdom-of-taianfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "THE KINGDOM OF TAIANFU"
+        }
+      }
+    },
+    {
+      "id": "ev-road-09",
+      "kind": "road",
+      "title": "ev.road.09.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "china"
+      },
+      "body": "ev.road.09.body",
+      "choices": [
+        {
+          "label": "ev.road.09.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.09.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "of-the-great-festival-which-the-kaan-holds-on-new-years-day",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF THE GREAT FESTIVAL WHICH THE KAAN HOLDS ON NEW YEAR’S DAY"
+        }
+      }
+    },
+    {
+      "id": "ev-road-10",
+      "kind": "road",
+      "title": "ev.road.10.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "india"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "india"
+      },
+      "body": "ev.road.10.body",
+      "choices": [
+        {
+          "label": "ev.road.10.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.10.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "continues-to-speak-of-the-province-of-maabar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "CONTINUES TO SPEAK OF THE PROVINCE OF MAABAR"
+        }
+      }
+    },
+    {
+      "id": "ev-road-11",
+      "kind": "road",
+      "title": "ev.road.11.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "body": "ev.road.11.body",
+      "choices": [
+        {
+          "label": "ev.road.11.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.11.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "chinghis-mustered-his-people-to-march-against-prester-john",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW CHINGHIS MUSTERED HIS PEOPLE TO MARCH AGAINST PRESTER JOHN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-12",
+      "kind": "road",
+      "title": "ev.road.12.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "china"
+      },
+      "body": "ev.road.12.body",
+      "choices": [
+        {
+          "label": "ev.road.12.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.12.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "concerning-the-twelve-barons-who-are-set-over-all-the-affairs-of-the-gre",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "CONCERNING THE TWELVE BARONS WHO ARE SET OVER ALL THE AFFAIRS OF THE GREAT KAAN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-13",
+      "kind": "road",
+      "title": "ev.road.13.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "india"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "india"
+      },
+      "body": "ev.road.13.body",
+      "choices": [
+        {
+          "label": "ev.road.13.choice.choice_0",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "paid-fee"
+            },
+            {
+              "op": "days",
+              "value": -3,
+              "reason": "faster"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          }
+        },
+        {
+          "label": "ev.road.13.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "deal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "discourseth-of-the-two-islands-called-male-and-female-and-why-they-are-s",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "DISCOURSETH OF THE TWO ISLANDS CALLED MALE AND FEMALE, AND WHY THEY ARE SO CALLED"
+        }
+      }
+    },
+    {
+      "id": "ev-road-14",
+      "kind": "road",
+      "title": "ev.road.14.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.14.body",
+      "choices": [
+        {
+          "label": "ev.road.14.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.14.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "rehearsal-of-the-way-the-year-of-the-great-kaan-is-distributed",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "REHEARSAL OF THE WAY THE YEAR OF THE GREAT KAAN IS DISTRIBUTED"
+        }
+      }
+    },
+    {
+      "id": "ev-road-15",
+      "kind": "road",
+      "title": "ev.road.15.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.15.body",
+      "choices": [
+        {
+          "label": "ev.road.15.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.15.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "mark-returned-from-the-mission-whereon-he-had-been-sent",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW MARK RETURNED FROM THE MISSION WHEREON HE HAD BEEN SENT"
+        }
+      }
+    },
+    {
+      "id": "ev-road-16",
+      "kind": "road",
+      "title": "ev.road.16.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "steppe"
+      },
+      "body": "ev.road.16.body",
+      "choices": [
+        {
+          "label": "ev.road.16.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "steppe"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.16.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "prester-john-marched-to-meet-chinghis",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW PRESTER JOHN MARCHED TO MEET CHINGHIS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-17",
+      "kind": "road",
+      "title": "ev.road.17.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.17.body",
+      "choices": [
+        {
+          "label": "ev.road.17.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.17.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "the-great-kaan-marched-against-nayan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE GREAT KAAN MARCHED AGAINST NAYAN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-18",
+      "kind": "road",
+      "title": "ev.road.18.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.18.body",
+      "choices": [
+        {
+          "label": "ev.road.18.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.18.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "of-the-charity-of-the-emperor-to-the-poor",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF THE CHARITY OF THE EMPEROR TO THE POOR"
+        }
+      }
+    },
+    {
+      "id": "ev-road-19",
+      "kind": "road",
+      "title": "ev.road.19.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.19.body",
+      "choices": [
+        {
+          "label": "ev.road.19.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.19.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "the-great-kaan-sent-the-two-brothers-as-his-envoys-to-the-pope",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE GREAT KAAN SENT THE TWO BROTHERS AS HIS ENVOYS TO THE POPE"
+        }
+      }
+    },
+    {
+      "id": "ev-road-20",
+      "kind": "road",
+      "title": "ev.road.20.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "china"
+      },
+      "body": "ev.road.20.body",
+      "choices": [
+        {
+          "label": "ev.road.20.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "china"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.20.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "the-emperor-goes-on-a-hunting-expedition",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE EMPEROR GOES ON A HUNTING EXPEDITION"
+        }
+      }
+    },
+    {
+      "id": "ev-road-21",
+      "kind": "road",
+      "title": "ev.road.21.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "steppe"
+      },
+      "body": "ev.road.21.body",
+      "choices": [
+        {
+          "label": "ev.road.21.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "steppe"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.21.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "argon-was-delivered-from-prison",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW ARGON WAS DELIVERED FROM PRISON"
+        }
+      }
+    },
+    {
+      "id": "ev-road-22",
+      "kind": "road",
+      "title": "ev.road.22.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "west_asia"
+        ]
+      },
+      "scene": {
+        "bg": "palace-gate",
+        "region": "west_asia"
+      },
+      "body": "ev.road.22.body",
+      "choices": [
+        {
+          "label": "ev.road.22.choice.choice_0",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "official-favour",
+              "scope": "band",
+              "id": "west_asia"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.22.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-official"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "the-two-brothers-again-departed-from-venice-on-their-way-back-to-the",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE TWO BROTHERS AGAIN DEPARTED FROM VENICE, ON THEIR WAY BACK TO THE GREAT KAAN, AND TOOK WITH THEM MARK, THE SON OF MESSER NICOLAS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-23",
+      "kind": "road",
+      "title": "ev.road.23.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.23.body",
+      "choices": [
+        {
+          "label": "ev.road.23.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-23",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.23.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "barca-and-his-army-advanced-to-meet-alau",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW BARCA AND HIS ARMY ADVANCED TO MEET ALAU"
+        }
+      }
+    },
+    {
+      "id": "ev-road-24",
+      "kind": "road",
+      "title": "ev.road.24.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.24.body",
+      "choices": [
+        {
+          "label": "ev.road.24.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-24",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.24.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "toctai-marched-against-nogai",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW TOCTAI MARCHED AGAINST NOGAI"
+        }
+      }
+    },
+    {
+      "id": "ev-road-25",
+      "kind": "road",
+      "title": "ev.road.25.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.25.body",
+      "choices": [
+        {
+          "label": "ev.road.25.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-25",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.25.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "of-the-second-message-that-toctai-sent-to-nogai-and-his-reply",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF THE SECOND MESSAGE THAT TOCTAI SENT TO NOGAI, AND HIS REPLY"
+        }
+      }
+    },
+    {
+      "id": "ev-road-26",
+      "kind": "road",
+      "title": "ev.road.26.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.26.body",
+      "choices": [
+        {
+          "label": "ev.road.26.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-26",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.26.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "toctai-and-nogai-address-their-people-and-the-next-day-join-battle",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW TOCTAI AND NOGAI ADDRESS THEIR PEOPLE, AND THE NEXT DAY JOIN BATTLE"
+        }
+      }
+    },
+    {
+      "id": "ev-road-27",
+      "kind": "road",
+      "title": "ev.road.27.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.27.body",
+      "choices": [
+        {
+          "label": "ev.road.27.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-27",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.27.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "alau-addressed-his-followers",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW ALAU ADDRESSED HIS FOLLOWERS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-28",
+      "kind": "road",
+      "title": "ev.road.28.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "body": "ev.road.28.body",
+      "choices": [
+        {
+          "label": "ev.road.28.choice.choice_0",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-28",
+              "reason": "recorded-marvel"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-wonder"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.28.choice.choice_1",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 15,
+              "reason": "told-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "of-the-great-battle-between-alau-and-barca",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "OF THE GREAT BATTLE BETWEEN ALAU AND BARCA"
+        }
+      }
+    },
+    {
+      "id": "ev-road-29",
+      "kind": "road",
+      "title": "ev.road.29.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "west_asia"
+        ]
+      },
+      "scene": {
+        "bg": "temple-interior",
+        "region": "west_asia"
+      },
+      "body": "ev.road.29.body",
+      "choices": [
+        {
+          "label": "ev.road.29.choice.choice_0",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "blessed"
+            },
+            {
+              "op": "coins",
+              "value": -20,
+              "reason": "offering"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
+        },
+        {
+          "label": "ev.road.29.choice.choice_1",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-29",
+              "reason": "observed-rite"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-christians-were-in-great-dismay-because-of-what-the-calif-had-sa",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE CHRISTIANS WERE IN GREAT DISMAY BECAUSE OF WHAT THE CALIF HAD SAID"
+        }
+      }
+    },
+    {
+      "id": "ev-road-30",
+      "kind": "road",
+      "title": "ev.road.30.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "west_asia"
+        ]
+      },
+      "scene": {
+        "bg": "temple-interior",
+        "region": "west_asia"
+      },
+      "body": "ev.road.30.body",
+      "choices": [
+        {
+          "label": "ev.road.30.choice.choice_0",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "blessed"
+            },
+            {
+              "op": "coins",
+              "value": -20,
+              "reason": "offering"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
+        },
+        {
+          "label": "ev.road.30.choice.choice_1",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-road-30",
+              "reason": "observed-rite"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-one-eyed-cobler-was-desired-to-pray-for-the-christians",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE ONE-EYED COBLER WAS DESIRED TO PRAY FOR THE CHRISTIANS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-32",
+      "kind": "road",
+      "title": "ev.road.32.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.32.body",
+      "choices": [
+        {
+          "label": "ev.road.32.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.32.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-great-kaan-conquered-the-province-of-manzi",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE GREAT KAAN CONQUERED THE PROVINCE OF MANZI"
+        }
+      }
+    },
+    {
+      "id": "ev-road-33",
+      "kind": "road",
+      "title": "ev.road.33.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.33.body",
+      "choices": [
+        {
+          "label": "ev.road.33.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.33.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "wherein-is-related-how-the-king-of-mien-and-bangala-vowed-vengeance-agai",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "WHEREIN IS RELATED HOW THE KING OF MIEN AND BANGALA VOWED VENGEANCE AGAINST THE GREAT KAAN"
+        }
+      }
+    },
+    {
+      "id": "ev-road-34",
+      "kind": "road",
+      "title": "ev.road.34.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.34.body",
+      "choices": [
+        {
+          "label": "ev.road.34.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.34.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-kaan-rewarded-the-valour-of-his-captains",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE KAAN REWARDED THE VALOUR OF HIS CAPTAINS"
+        }
+      }
+    },
+    {
+      "id": "ev-road-35",
+      "kind": "road",
+      "title": "ev.road.35.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "body": "ev.road.35.body",
+      "choices": [
+        {
+          "label": "ev.road.35.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.35.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "sundry-particulars-of-the-plain-beyond-caracoron",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "SUNDRY PARTICULARS OF THE PLAIN BEYOND CARACORON"
+        }
+      }
+    },
+    {
+      "id": "ev-road-36",
+      "kind": "road",
+      "title": "ev.road.36.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.36.body",
+      "choices": [
+        {
+          "label": "ev.road.36.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.36.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-two-brothers-and-messer-marco-took-leave-of-the-great-kaan-and-r",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE TWO BROTHERS AND MESSER MARCO TOOK LEAVE OF THE GREAT KAAN, AND RETURNED TO THEIR OWN COUNTRY"
+        }
+      }
+    },
+    {
+      "id": "ev-road-37",
+      "kind": "road",
+      "title": "ev.road.37.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.37.body",
+      "choices": [
+        {
+          "label": "ev.road.37.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.37.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "the-great-kaan-caused-nayan-to-be-put-to-death",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "HOW THE GREAT KAAN CAUSED NAYAN TO BE PUT TO DEATH"
+        }
+      }
+    },
+    {
+      "id": "ev-road-38",
+      "kind": "road",
+      "title": "ev.road.38.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "india"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "india"
+      },
+      "body": "ev.road.38.body",
+      "choices": [
+        {
+          "label": "ev.road.38.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.38.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "discoursing-of-the-place-where-lieth-the-body-of-st-thomas-the-apostle-a",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "DISCOURSING OF THE PLACE WHERE LIETH THE BODY OF ST. THOMAS THE APOSTLE; AND OF THE MIRACLES THEREOF"
+        }
+      }
+    },
+    {
+      "id": "ev-road-39",
+      "kind": "road",
+      "title": "ev.road.39.title",
+      "once": false,
+      "when": {
+        "bands": [
+          "china"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "china"
+      },
+      "body": "ev.road.39.body",
+      "choices": [
+        {
+          "label": "ev.road.39.choice.choice_0",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "faced-danger"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.39.choice.choice_1",
+          "effects": [
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "safer-road"
+            },
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "detour"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "treating-of-the-great-yearly-revenue-that-the-great-kaan-hath-from-kinsa",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "TREATING OF THE GREAT YEARLY REVENUE THAT THE GREAT KAAN HATH FROM KINSAY"
         }
       }
     }

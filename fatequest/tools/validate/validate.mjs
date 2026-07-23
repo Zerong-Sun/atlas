@@ -109,6 +109,9 @@ for (const r of byTable.routes ?? []) {
 for (const c of byTable.cities ?? []) {
   const f = recordFile.get(c.id);
   if (c.mentor) { ref(retainerIds.has(c.mentor), "G2", f, `${c.id}.mentor -> "${c.mentor}" not found`); mark(c.mentor); }
+  // How the player actually MEETS the mentor. GDD §6 counts the local mentor
+  // among a city's six things; a mentor with no encounter is unreachable.
+  if (c.mentorEvent) { ref(eventIds.has(c.mentorEvent), "G2", f, `${c.id}.mentorEvent -> "${c.mentorEvent}" not found`); mark(c.mentorEvent); }
   if (c.specialty) { ref(goodIds.has(c.specialty), "G2", f, `${c.id}.specialty -> "${c.specialty}" not found`); mark(c.specialty); }
   for (const g of c.market?.goods ?? []) { ref(goodIds.has(g), "G2", f, `${c.id}.market.goods -> "${g}" not found`); mark(g); }
 }
@@ -299,6 +302,28 @@ if (existsSync(MAP)) {
   warn("G12", "worldmap", "cities.geojson not found — map alignment skipped");
 }
 
+// ------------------------------- G15/G16: stub accounting (docs/PLAN.md §8)
+// Progress on the 133 stubs should be a number CI prints every run, not
+// something anyone tracks by memory. G16 is the hard rule: a metropolis is
+// the one tier that owes GDD §6's full six, so none of its events may be a
+// placeholder.
+{
+  const evs = byTable.events ?? [];
+  const stubs = evs.filter((e) => e.stub);
+  const metro = new Set((byTable.cities ?? []).filter((c) => c.tier === "metropolis").map((c) => c.id));
+  const metroEvents = new Set();
+  for (const c of byTable.cities ?? []) {
+    if (!metro.has(c.id)) continue;
+    if (c.entryEvent) metroEvents.add(c.entryEvent);
+    for (const s of c.sites ?? []) metroEvents.add(s);
+  }
+  const metroStubs = stubs.filter((e) => metroEvents.has(e.id));
+  const pct = evs.length ? ((evs.length - stubs.length) / evs.length * 100).toFixed(1) : "0";
+  warn("G15", "events", `${evs.length - stubs.length}/${evs.length} written (${pct}%), ${stubs.length} stubs remain`);
+  for (const e of metroStubs)
+    warn("G16", recordFile.get(e.id), `${e.id}: metropolis event is still a stub`);
+}
+
 // ------------------------------------------------ G2b: orphan detection
 for (const e of byTable.events ?? [])
   if (!referenced.has(e.id) && e.kind !== "road")
@@ -309,7 +334,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14"];
+  const gates = ["G1","G2","G2b","G3","G8","G10","G12","G13","G14","G15","G16"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

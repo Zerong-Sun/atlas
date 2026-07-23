@@ -56,3 +56,6 @@ jobs:
       - name: Play smoke (drive the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_play.gd
+      - name: Zayton vertical slice
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_zayton.gd
