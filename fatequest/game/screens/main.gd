@@ -54,6 +54,8 @@ var _market_view: PanelContainer
 var _market_layer: Control
 var _bag: Dictionary = {}
 var _settings: Dictionary = {}
+var _codex_layer: Control
+var _codex_view: PanelContainer
 
 
 func _ready() -> void:
@@ -310,6 +312,24 @@ func _build_map() -> void:
 		_open_city())
 	_market_view.traded.connect(_on_traded)
 
+	# --- codex ---------------------------------------------------------------
+	_codex_layer = Control.new()
+	_codex_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_codex_layer.visible = false
+	add_child(_codex_layer)
+	var cscrim := ColorRect.new()
+	cscrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	cscrim.color = Color(0.06, 0.05, 0.03, 0.5)
+	_codex_layer.add_child(cscrim)
+	var ccentre := CenterContainer.new()
+	ccentre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	ccentre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_codex_layer.add_child(ccentre)
+	_codex_view = preload("res://game/screens/codex_view.gd").new()
+	_codex_view.setup(db)
+	ccentre.add_child(_codex_view)
+	_codex_view.closed.connect(func(): _codex_layer.visible = false)
+
 	_build_bag()
 	_build_settings()
 	_build_controls()
@@ -329,6 +349,7 @@ func _build_controls() -> void:
 	add_child(bar)
 
 	bar.add_child(_ctl("行囊", _open_bag))
+	bar.add_child(_ctl("图鉴", _open_codex))
 	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
@@ -432,7 +453,20 @@ func _build_bag() -> void:
 	list.add_theme_constant_override("separation", 4)
 	scroll.add_child(list)
 	_bag["list"] = list
-	box.add_child(Panels.styled_button("合上", func(): _bag["layer"].visible = false))
+	var bag_row := HBoxContainer.new()
+	bag_row.add_theme_constant_override("separation", 8)
+	bag_row.add_child(Panels.styled_button("图鉴", func():
+		_bag["layer"].visible = false
+		_open_codex()))
+	var close_btn := Panels.styled_button("合上", func(): _bag["layer"].visible = false)
+	close_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	bag_row.add_child(close_btn)
+	box.add_child(bag_row)
+
+
+func _open_codex() -> void:
+	_codex_layer.visible = true
+	_codex_view.open(state)
 
 
 func _open_bag() -> void:
@@ -573,6 +607,8 @@ func _restyle_all() -> void:
 		_city_view.restyle()
 	if _market_view and _market_view.has_method("restyle"):
 		_market_view.restyle()
+	if _codex_view and _codex_view.has_method("restyle"):
+		_codex_view.restyle()
 	if _map:
 		_map.queue_redraw()
 	_refresh_controls()

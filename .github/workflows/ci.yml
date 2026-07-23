@@ -73,3 +73,6 @@ jobs:
       - name: City navigation (no dead ends)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_citynav.gd
+      - name: Codex browser
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_codex.gd
