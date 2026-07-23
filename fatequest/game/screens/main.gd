@@ -415,7 +415,9 @@ func _refresh_hud() -> void:
 	var used := 0
 	for n in state.goods.values():
 		used += int(n)
-	_hud.refresh(state, clock, _city_name(state.city), used)
+	var here := db.get_record(state.city)
+	_hud.refresh(state, clock, _city_name(state.city), used,
+		String(here.get("culture", "latin")))
 	_map.set_current(state.city, state.revealed)
 
 
@@ -632,7 +634,9 @@ func _autosave() -> void:
 
 
 func _save(slot: String) -> bool:
-	return SaveGame.write(slot, state, clock, {"archetype": _archetype_id})
+	# Wall-clock time comes from the presentation layer; the kernel never reads it.
+	return SaveGame.write(slot, state, clock, {"archetype": _archetype_id},
+		Time.get_datetime_string_from_system(true))
 
 
 func _load(slot: String) -> bool:
@@ -660,7 +664,8 @@ func _load(slot: String) -> bool:
 func _sync_city_status() -> void:
 	if _city_view == null or not _city_view.has_method("set_status"):
 		return
-	var g := clock.date.to_gregorian()
+	var c := db.get_record(state.city)
+	var g := clock.date.civil(String(c.get("culture", "latin")))
 	_city_view.set_status(state.coins / Market.FEN, _market.cargo_used(state),
 		state.cargo_slots, state.days_elapsed,
 		"%d年%d月%d日" % [g["year"], g["month"], g["day"]])

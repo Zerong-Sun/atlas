@@ -106,7 +106,14 @@ function unwrap(text) {
     .join("\n\n");
 }
 
-const hash = (s) => createHash("sha256").update(s, "utf8").digest("hex").slice(0, 12);
+/** Hash the PROSE, not its layout.
+ *
+ * Hashing raw text meant that re-wrapping a paragraph — a pure formatting
+ * change — marked every entry in the file stale. A staleness gate that fires on
+ * whitespace is a gate people learn to ignore, which is worse than not having
+ * one. Collapsing whitespace first means the hash tracks what was said. */
+const norm = (s) => String(s).replace(/\s+/g, " ").trim();
+const hash = (s) => createHash("sha256").update(norm(s), "utf8").digest("hex").slice(0, 12);
 
 // -------------------------------------------------------------------- load
 

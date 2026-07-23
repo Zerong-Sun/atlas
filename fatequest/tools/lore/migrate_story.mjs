@@ -14,9 +14,10 @@
  * unwraps it again, and a round-trip check below proves nothing is altered.
  *
  *   node tools/lore/migrate_story.mjs --unit tauris [--dry]
- *   node tools/lore/migrate_story.mjs --all
+ *   node tools/lore/migrate_story.mjs --all [--fill] [--dry]
+ *   node tools/lore/migrate_story.mjs --trunk [--fill]
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -24,31 +25,50 @@ import { createHash } from "node:crypto";
 const ROOT = fileURLToPath(new URL("../..", import.meta.url));
 const I18N = join(ROOT, "content/i18n");
 const STORY = join(ROOT, "content/story");
+const CITIES = join(ROOT, "content/tables/cities");
 
 const TRUNK = ["tauris", "baldacum", "ormus", "balc", "samarcanda", "cascar",
                "cotan", "lop", "chandu", "cambaluc", "kinsay", "zayton"];
 
+function loadCityIds() {
+  const ids = [];
+  for (const f of readdirSync(CITIES)) {
+    if (!f.endsWith(".json")) continue;
+    const data = JSON.parse(readFileSync(join(CITIES, f), "utf8"));
+    for (const r of data.records ?? []) ids.push(r.id);
+  }
+  return ids.sort();
+}
+
 const args = process.argv.slice(2);
 const dry = args.includes("--dry");
+const fill = args.includes("--fill");
 const all = args.includes("--all");
-const unitArg = args[args.indexOf("--unit") + 1];
-const units = all ? TRUNK : (unitArg ? [unitArg] : []);
+const trunkOnly = args.includes("--trunk");
+const unitIdx = args.indexOf("--unit");
+const unitArg = unitIdx >= 0 ? args[unitIdx + 1] : null;
+
+let units = [];
+if (all) units = loadCityIds();
+else if (trunkOnly) units = TRUNK;
+else if (unitArg) units = [unitArg];
+
 if (!units.length) {
-  console.error("usage: migrate_story.mjs --unit <city> | --all [--dry]");
+  console.error("usage: migrate_story.mjs --unit <city> | --all | --trunk [--fill] [--dry]");
   process.exit(1);
 }
 
 const en = JSON.parse(readFileSync(join(I18N, "en.json"), "utf8"));
 const zh = JSON.parse(readFileSync(join(I18N, "zh.json"), "utf8"));
-const hash = (s) => createHash("sha256").update(s, "utf8").digest("hex").slice(0, 12);
+// Must match story.mjs: hash the prose, not its line wrapping.
+const norm = (s) => String(s).replace(/\s+/g, " ").trim();
+const hash = (s) => createHash("sha256").update(norm(s), "utf8").digest("hex").slice(0, 12);
 
 const CJK = /[　-〿一-鿿＀-￯]/;
 
 /** Soft-wrap for readable diffs. CJK breaks anywhere; Latin breaks on spaces. */
 function wrap(text, width = 88) {
   if (!text.includes(" ") || CJK.test(text)) {
-    // CJK: break on a punctuation boundary near the target column so a line
-    // never splits a word, and never introduces a space the unwrap would keep.
     const out = [];
     let line = "";
     for (const ch of text) {
@@ -83,6 +103,27 @@ function unwrap(text) {
   }).join("\n\n");
 }
 
+/** Parse existing story md → Set of ## keys already present. */
+function existingKeys(path) {
+  if (!existsSync(path)) return new Set();
+  const keys = new Set();
+  for (const line of readFileSync(path, "utf8").split("\n")) {
+    const m = line.match(/^##\s+(\S+)\s*$/);
+    if (m) keys.add(m[1]);
+  }
+  return keys;
+}
+
+/** Strip frontmatter; return body only (or empty). */
+function bodyAfterFrontmatter(path) {
+  if (!existsSync(path)) return "";
+  const text = readFileSync(path, "utf8");
+  if (!text.startsWith("---")) return text;
+  const end = text.indexOf("\n---", 3);
+  if (end < 0) return text;
+  return text.slice(end + 4).replace(/^\n+/, "");
+}
+
 const HEAD_EN = (unit) => `---
 unit: ${unit}
 lang: en
@@ -105,12 +146,13 @@ translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
+  地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 stamps:
 ${Object.entries(stamps).map(([k, v]) => `  ${k}: ${v}`).join("\n")}
 ---
 `;
 
-let totalEn = 0, totalZh = 0, mismatches = 0;
+let totalEn = 0, totalZh = 0, mismatches = 0, filled = 0, created = 0, skipped = 0;
 
 for (const unit of units) {
   const keys = Object.keys(en).filter((k) => k.split(".").includes(unit)).sort();
@@ -119,41 +161,105 @@ for (const unit of units) {
     continue;
   }
 
-  const enBody = [];
-  const zhBody = [];
+  const dir = join(STORY, unit);
+  const enPath = join(dir, "en.md");
+  const zhPath = join(dir, "zh.md");
+  const enExists = existsSync(enPath);
+  const zhExists = existsSync(zhPath);
+
+  if (enExists && !fill) {
+    console.log(`  ${unit}: already migrated, skipping (use --fill to append missing)`);
+    skipped++;
+    continue;
+  }
+
+  const haveEn = existingKeys(enPath);
+  const haveZh = existingKeys(zhPath);
+
+  const enSections = [];
+  const zhSections = [];
   const stamps = {};
+  let enAdded = 0, zhAdded = 0;
 
   for (const k of keys) {
     const e = String(en[k]);
-    enBody.push(`## ${k}\n\n${wrap(e)}\n`);
-    // Round-trip guard: if wrapping changes the string, the migration would
-    // silently rewrite prose. Better to know now than to find it in game.
-    if (unwrap(wrap(e)) !== e) { console.log(`  ! ${k}: en round-trip differs`); mismatches++; }
+    if (!haveEn.has(k)) {
+      enSections.push(`## ${k}\n\n${wrap(e)}\n`);
+      enAdded++;
+      if (unwrap(wrap(e)) !== e) { console.log(`  ! ${k}: en round-trip differs`); mismatches++; }
+    }
 
     if (zh[k] !== undefined) {
       const c = String(zh[k]);
-      zhBody.push(`## ${k}\n\n${wrap(c)}\n`);
       stamps[k] = hash(e);
-      if (unwrap(wrap(c)) !== c) { console.log(`  ! ${k}: zh round-trip differs`); mismatches++; }
+      if (!haveZh.has(k)) {
+        zhSections.push(`## ${k}\n\n${wrap(c)}\n`);
+        zhAdded++;
+        if (unwrap(wrap(c)) !== c) { console.log(`  ! ${k}: zh round-trip differs`); mismatches++; }
+      }
     }
   }
 
-  const dir = join(STORY, unit);
+  // For --fill on existing zh: also keep stamps for keys already present
+  if (zhExists) {
+    for (const k of haveZh) {
+      if (en[k] !== undefined && stamps[k] === undefined) stamps[k] = hash(String(en[k]));
+    }
+  }
+
   if (!dry) {
     mkdirSync(dir, { recursive: true });
-    if (existsSync(join(dir, "en.md"))) {
-      console.log(`  ${unit}: already migrated, skipping`);
-      continue;
+
+    if (!enExists) {
+      writeFileSync(enPath, HEAD_EN(unit) + "\n" + enSections.join("\n"));
+      created++;
+    } else if (enSections.length) {
+      const prev = bodyAfterFrontmatter(enPath);
+      // Rebuild full file with head + old body + new sections
+      writeFileSync(enPath, HEAD_EN(unit) + "\n" + prev.trimEnd() + "\n\n" + enSections.join("\n"));
+      filled++;
     }
-    writeFileSync(join(dir, "en.md"), HEAD_EN(unit) + "\n" + enBody.join("\n"));
-    if (zhBody.length) {
-      writeFileSync(join(dir, "zh.md"), HEAD_ZH(unit, stamps) + "\n" + zhBody.join("\n"));
+
+    if (zhSections.length || (!zhExists && Object.keys(stamps).length)) {
+      if (!zhExists) {
+        // Only keys we have zh for
+        const allZh = [];
+        const allStamps = {};
+        for (const k of keys) {
+          if (zh[k] === undefined) continue;
+          allZh.push(`## ${k}\n\n${wrap(String(zh[k]))}\n`);
+          allStamps[k] = hash(String(en[k]));
+        }
+        if (allZh.length) {
+          writeFileSync(zhPath, HEAD_ZH(unit, allStamps) + "\n" + allZh.join("\n"));
+        }
+      } else if (zhSections.length) {
+        // Append missing sections; refresh stamps frontmatter
+        const prevBody = bodyAfterFrontmatter(zhPath);
+        // Merge stamps from previous file
+        const prevText = readFileSync(zhPath, "utf8");
+        const stampMatch = prevText.match(/^stamps:\n((?:  .+\n)*)/m);
+        if (stampMatch) {
+          for (const line of stampMatch[1].split("\n")) {
+            const m = line.match(/^\s+([\w.]+):\s*(\S+)/);
+            if (m) stamps[m[1]] = m[2];
+          }
+        }
+        for (const k of keys) {
+          if (zh[k] !== undefined) stamps[k] = hash(String(en[k]));
+        }
+        writeFileSync(zhPath, HEAD_ZH(unit, stamps) + "\n" + prevBody.trimEnd() + "\n\n" + zhSections.join("\n"));
+        filled++;
+      }
     }
   }
-  totalEn += keys.length;
-  totalZh += zhBody.length;
-  console.log(`  ${unit}: ${keys.length} en, ${zhBody.length} zh`);
+
+  totalEn += enAdded || (enExists ? 0 : keys.length);
+  totalZh += zhAdded;
+  const action = !enExists ? "created" : (enAdded || zhAdded ? "filled" : "noop");
+  console.log(`  ${unit}: ${action} (+${enAdded} en, +${zhAdded} zh)`);
 }
 
-console.log(`\n${dry ? "[dry] " : ""}${totalEn} en · ${totalZh} zh`
+console.log(`\n${dry ? "[dry] " : ""}created≈${created} filled≈${filled} skipped=${skipped}`
+  + ` · +${totalEn} en · +${totalZh} zh`
   + (mismatches ? `  ⚠ ${mismatches} round-trip mismatches` : "  round-trip clean"));

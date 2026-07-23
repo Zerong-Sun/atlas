@@ -27,7 +27,12 @@ static func _ensure_dir() -> void:
 		DirAccess.make_dir_recursive_absolute(DIR)
 
 
-static func serialize(state: WorldState, clock: WorldClock, extra: Dictionary = {}) -> Dictionary:
+## `saved_at` is wall-clock time — a legitimate thing for a load menu to show,
+## but the kernel has no business reading the system clock (G11). The caller
+## passes it in, so core/ stays free of real-world time and the rule keeps its
+## edge instead of gaining an exception.
+static func serialize(state: WorldState, clock: WorldClock, extra: Dictionary = {},
+		saved_at: String = "") -> Dictionary:
 	var g := clock.date.to_gregorian()
 	return {
 		"version": VERSION,
@@ -40,7 +45,7 @@ static func serialize(state: WorldState, clock: WorldClock, extra: Dictionary = 
 			"days": state.days_elapsed,
 			"coins": state.coins,
 			"archetype": extra.get("archetype", ""),
-			"saved_at": Time.get_datetime_string_from_system(true),
+			"saved_at": saved_at,
 		},
 		"state": {
 			"seed": state.seed,
@@ -138,9 +143,9 @@ static func slot_path(slot: String) -> String:
 
 
 static func write(slot: String, state: WorldState, clock: WorldClock,
-		extra: Dictionary = {}) -> bool:
+		extra: Dictionary = {}, saved_at: String = "") -> bool:
 	_ensure_dir()
-	var doc := serialize(state, clock, extra)
+	var doc := serialize(state, clock, extra, saved_at)
 	# Write to a temporary file and swap. A crash mid-write must not leave a
 	# half-written save where a good one used to be.
 	var tmp := slot_path(slot) + ".tmp"

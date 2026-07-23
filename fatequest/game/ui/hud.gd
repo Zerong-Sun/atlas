@@ -48,10 +48,14 @@ func build() -> void:
 	_cell("fate", "☯")
 
 
-func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_used: int) -> void:
+func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_used: int,
+		culture: String = "latin") -> void:
 	if _rows.is_empty():
 		build()
-	var g := clock.date.to_gregorian()
+	# The date is read in the calendar of where the traveller is standing —
+	# GDD §7.2, one internal day with several civil readings. Showing Gregorian
+	# in 1292 would misdate the world by a week.
+	var g := clock.date.civil(culture)
 	_put("place", place_name)
 	_put("date", "%d年%d月%d日 %s" % [g["year"], g["month"], g["day"], clock.date.ganzhi_day()])
 	# Money is kept in fen internally; show it the way a traveller would count.

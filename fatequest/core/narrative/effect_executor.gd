@@ -12,6 +12,11 @@ extends RefCounted
 ##   4. `days` queues clock events; it does not expand them inline (that recurses).
 
 
+## A purse ceiling far above any reachable fortune, but low enough that adding
+## to it cannot wrap a 64-bit integer.
+const COIN_MAX := 1_000_000_000_000
+
+
 class EffectResult extends RefCounted:
 	var applied: Array[Dictionary] = []
 	var rejected: Array[Dictionary] = []
@@ -71,7 +76,13 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 			var delta := int(val)
 			if delta < 0 and state.coins + delta < 0:
 				return false  # cannot go into debt; author should gate with `when`
-			state.coins += delta
+			# Clamp the top as well. Normal play never approaches it, but a save
+			# file is editable, and an overflowed purse wraps to a NEGATIVE
+			# balance — a state nothing in the game can recover from.
+			if delta > 0 and state.coins > COIN_MAX - delta:
+				state.coins = COIN_MAX
+			else:
+				state.coins += delta
 		"days":
 			var d := int(val)
 			state.days_elapsed += d

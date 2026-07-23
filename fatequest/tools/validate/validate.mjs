@@ -377,12 +377,54 @@ const LINES = {
         }
         const tr = sections(text);
         for (const key of Object.keys(en)) {
-          const h = createHash("sha256").update(en[key], "utf8").digest("hex").slice(0, 12);
+          // Normalised: a re-wrap is not a content change (see story.mjs).
+          const h = createHash("sha256")
+            .update(String(en[key]).replace(/\s+/g, " ").trim(), "utf8")
+            .digest("hex").slice(0, 12);
           if (!(key in tr)) { warn("G21", `content/story/${unit}/${f}`, `${key}: not translated`); continue; }
           if (stamps[key] && stamps[key] !== h)
             err("G21", `content/story/${unit}/${f}`, `${key}: STALE — source changed since translation`);
         }
       }
+    }
+  }
+}
+
+// ------------------- G9/G11: the kernel's architectural rules, machine-checked
+// CODE_PLAN §9 specified these gates and nothing ever implemented them, so the
+// three rules that keep the kernel deterministic and testable have been resting
+// on nobody breaking them by accident. Architectural decay is exactly what a
+// functional test cannot see.
+{
+  const kernel = join(ROOT, "core");
+  const walkGd = (dir) => {
+    if (!existsSync(dir)) return [];
+    return readdirSync(dir).flatMap((n) => {
+      const p = join(dir, n);
+      return statSync(p).isDirectory() ? walkGd(p) : (n.endsWith(".gd") ? [p] : []);
+    });
+  };
+  // Banned constructs and why. Comments and doc-comments are stripped first so
+  // a rule explained in prose does not trip its own gate.
+  const BANNED = [
+    [/\brandi\s*\(/, "randi() — use Rng (determinism)"],
+    [/\brandf\s*\(/, "randf() — use Rng (determinism)"],
+    [/\brandomize\s*\(/, "randomize() — use Rng (determinism)"],
+    [/\brandi_range\s*\(/, "randi_range() — use Rng (determinism)"],
+    [/\bTime\.get_/, "Time.get_* — wall-clock time is not world time"],
+    [/^extends\s+Node\b/m, "extends Node — the kernel must be headless"],
+  ];
+  for (const f of walkGd(kernel)) {
+    const rel = relative(ROOT, f);
+    const src = readFileSync(f, "utf8")
+      .split("\n").map((l) => l.replace(/#.*$/, "")).join("\n");
+    for (const [re, why] of BANNED) {
+      if (re.test(src)) err("G11", rel, why);
+    }
+    // G9: only the executor writes WorldState.
+    if (!rel.endsWith("effect_executor.gd")) {
+      const m = src.match(/\bstate\.(coins|goods|city|flags|codex|stickers|fate|items|languages|revealed|jdn|days_elapsed|cargo_slots|faith|once_fired|unlocked_routes|learned_divinations)\s*(=|\+=|-=)[^=]/);
+      if (m) err("G9", rel, `writes WorldState.${m[1]} directly — emit an effect instead`);
     }
   }
 }
@@ -548,7 +590,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G17","G18","G21","G20"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

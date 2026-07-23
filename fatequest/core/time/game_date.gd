@@ -28,6 +28,49 @@ static func from_gregorian(y: int, m: int, d: int) -> GameDate:
 	return GameDate.new(j)
 
 
+## The Julian calendar — what Europe actually used in 1253-1453.
+##
+## `to_gregorian()` gives the proleptic Gregorian date, which is the right
+## answer to "what would we call this day today" and the WRONG answer to "what
+## did a Venetian write on this letter". The two differ by 7 days in 1253 and 9
+## by 1453, so showing Gregorian to a Latin-world player misdates every event in
+## the game. Gregory's reform is 1582; nobody in this world has heard of it.
+func to_julian() -> Dictionary:
+	var c := jdn + 32082
+	var d := int((4 * c + 3) / 1461.0)
+	var e := c - int(1461.0 * d / 4.0)
+	var m := int((5 * e + 2) / 153.0)
+	return {
+		"day": e - int((153 * m + 2) / 5.0) + 1,
+		"month": m + 3 - 12 * int(m / 10.0),
+		"year": d - 4800 + int(m / 10.0),
+	}
+
+
+## Which civil calendar a culture reads off the same JDN (GDD §7.2).
+static func civil_for(culture: String) -> String:
+	match culture:
+		"latin", "orthodox":
+			return "julian"
+		"islamic":
+			return "islamic"
+		"east_asia", "steppe":
+			return "chinese"
+	return "julian"
+
+
+## The civil date a given culture would name for this day.
+func civil(culture: String) -> Dictionary:
+	match civil_for(culture):
+		"islamic":
+			return to_islamic()
+		"chinese":
+			var g := to_gregorian()
+			g["ganzhi"] = ganzhi_day()
+			return g
+	return to_julian()
+
+
 func to_gregorian() -> Dictionary:
 	var a := jdn + 32044
 	var b := int((4 * a + 3) / 146097.0)
