@@ -138,9 +138,43 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 		"codex":
 			if String(val) not in state.codex:
 				state.codex.append(String(val))
-		"recruit", "dismiss", "retainer_mood", "reveal_birth":
-			# Retainer system lands in M5. Accept and no-op so content authored
-			# ahead of the system does not fail validation.
+		"recruit":
+			var rid := String(val)
+			for m in state.retainers:
+				if String(m.get("id", "")) == rid:
+					return false          # already travelling with you
+			state.retainers.append({
+				"id": rid,
+				"joined_jdn": state.jdn,
+				"mood": 16,               # 0-31, like every other bar
+				"present": true,
+				"seal": 3,
+			})
+		"dismiss":
+			var rid2 := String(val)
+			var idx := -1
+			for i in state.retainers.size():
+				if String(state.retainers[i].get("id", "")) == rid2:
+					idx = i
+					break
+			if idx < 0:
+				return false
+			state.retainers.remove_at(idx)
+		"retainer_mood":
+			var rid3 := id if not id.is_empty() else String(val)
+			for m in state.retainers:
+				if String(m.get("id", "")) == rid3:
+					m["mood"] = clampi(int(m.get("mood", 16)) + int(val), 0, 31)
+					return true
+			return false
+		"reveal_birth":
+			var rid4 := id if not id.is_empty() else String(val)
+			for m in state.retainers:
+				if String(m.get("id", "")) == rid4:
+					# The seal counts DOWN toward full knowledge (GDD §11.4).
+					m["seal"] = maxi(0, int(m.get("seal", 3)) - maxi(1, int(val)))
+					return true
+			return false
 			return true
 		_:
 			push_error("Unknown effect op: %s" % op)

@@ -57,6 +57,8 @@ var _settings: Dictionary = {}
 var _codex_layer: Control
 var _codex_view: PanelContainer
 var _archetype_id: String = ""
+var _roster: Roster
+var _party: Dictionary = {}
 
 
 func _ready() -> void:
@@ -161,6 +163,7 @@ func _begin(archetype: Dictionary) -> void:
 	events = EventMachine.new(db, conditions, executor)
 	travel = Travel.new(db, executor)
 	_market = Market.new(db)
+	_roster = Roster.new(db)
 
 	state = WorldState.new()
 	_archetype_id = String(archetype.get("id", ""))
@@ -192,6 +195,7 @@ func _begin_loaded(slot: String) -> void:
 	events = EventMachine.new(db, conditions, executor)
 	travel = Travel.new(db, executor)
 	_market = Market.new(db)
+	_roster = Roster.new(db)
 	state = WorldState.new()
 	rng = Rng.new("resume")
 	_build_map()
@@ -287,6 +291,7 @@ func _build_map() -> void:
 	_city_view.leave_requested.connect(_close_city)
 	_city_view.market_requested.connect(_open_market)
 	_city_view.bag_requested.connect(_open_bag)
+	_city_view.party_requested.connect(_open_party)
 
 	# --- event dialogue -----------------------------------------------------
 	# A full-rect CenterContainer keeps the dialog centred at any window size and
@@ -358,6 +363,7 @@ func _build_map() -> void:
 	ccentre.add_child(_codex_view)
 	_codex_view.closed.connect(func(): _codex_layer.visible = false)
 
+	_build_party()
 	_build_bag()
 	_build_settings()
 	_build_controls()
@@ -378,6 +384,7 @@ func _build_controls() -> void:
 
 	bar.add_child(_ctl("行囊", _open_bag))
 	bar.add_child(_ctl("图鉴", _open_codex))
+	bar.add_child(_ctl("同行", _open_party))
 	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
@@ -492,6 +499,124 @@ func _build_bag() -> void:
 	close_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bag_row.add_child(close_btn)
 	box.add_child(bag_row)
+
+
+## The party: who travels with you, what they carry, and what leaving costs.
+func _build_party() -> void:
+	_party = Panels.overlay(self, Vector2(640, 460))
+	var box: VBoxContainer = _party["box"]
+	box.add_child(Panels.label("同行", UiScale.title(), Palette.ink()))
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	box.add_child(scroll)
+	var list := VBoxContainer.new()
+	list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	list.add_theme_constant_override("separation", 5)
+	scroll.add_child(list)
+	_party["list"] = list
+	box.add_child(Panels.styled_button("合上", func(): _party["layer"].visible = false))
+
+
+func _open_party() -> void:
+	var list: VBoxContainer = _party["list"]
+	for c in list.get_children():
+		c.queue_free()
+
+	# What the hold is on each kind of road, so the player can see the shape of
+	# the party rather than one number.
+	list.add_child(Panels.label("货格　陆路 %d　海路 %d" % [
+		_roster.effective_slots(state, "land"), _roster.effective_slots(state, "sea")],
+		UiScale.ui(), Palette.ink_soft()))
+
+	if state.retainers.is_empty():
+		list.add_child(Panels.label("你独自上路。", UiScale.body(), Palette.ink_soft()))
+	for m in state.retainers:
+		list.add_child(_party_row(m))
+
+	# Hiring pool, if this place has one.
+	var pool := _roster.candidates(state, state.city, "open")
+	if not pool.is_empty():
+		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.label("此地可雇：", UiScale.ui(), Palette.ink()))
+		for r in pool:
+			list.add_child(_hire_row(r))
+	_party["layer"].visible = true
+
+
+func _party_row(m: Dictionary) -> Control:
+	var rid := String(m.get("id", ""))
+	var rec := db.get_record(rid)
+	var panel := PanelContainer.new()
+	panel.add_theme_stylebox_override("panel", Palette.panel_style(true))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	panel.add_child(row)
+
+	var col := VBoxContainer.new()
+	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(col)
+	col.add_child(Panels.label(I18n.t(rec.get("name", rid)), UiScale.ui(), Palette.ink()))
+
+	var cargo: Dictionary = rec.get("cargo", {})
+	var carries := "—"
+	if not cargo.is_empty():
+		carries = "%s +%d 格" % [
+			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
+	col.add_child(Panels.label("月俸 %d 银　%s　情谊 %d/31　%s" % [
+		int(rec.get("wage", {}).get("amount", 0)) / Market.FEN,
+		carries, int(m.get("mood", 16)), I18n.fmt(_roster.birth_known(state, rid))],
+		UiScale.ui() - 3, Palette.ink_soft()))
+
+	# Dismissal must state the cost before it happens (GDD §11.7).
+	var of := _roster.overflow_if_leaving(state, _market, rid, "land")
+	var btn := Panels.styled_button("辞退", Callable())
+	btn.pressed.connect(func():
+		var over := int(of["over"])
+		if over > 0:
+			_say("[color=#8a4a3a]· 辞退 %s：%d 件货物无处可放，须先处置[/color]"
+				% [I18n.t(rec.get("name", rid)), over])
+			return
+		var res := executor.execute(state, _roster.dismiss_effects(rid),
+			{"rng": rng, "event_id": "dismiss"})
+		for line in res.log_lines:
+			_say("  · %s" % line)
+		_refresh_hud()
+		_open_party())
+	if int(of["over"]) > 0:
+		btn.tooltip_text = "会有 %d 件货物无处可放" % int(of["over"])
+	row.add_child(btn)
+	return panel
+
+
+func _hire_row(rec: Dictionary) -> Control:
+	var panel := PanelContainer.new()
+	panel.add_theme_stylebox_override("panel", Palette.panel_style(true))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	panel.add_child(row)
+
+	var col := VBoxContainer.new()
+	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(col)
+	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
+	var cargo: Dictionary = rec.get("cargo", {})
+	var note := "月俸 %d 银" % (int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
+	if not cargo.is_empty():
+		note += "　%s +%d 格" % [
+			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
+	col.add_child(Panels.label(note, UiScale.ui() - 3, Palette.ink_soft()))
+
+	var btn := Panels.styled_button("雇", Callable())
+	btn.pressed.connect(func():
+		var res := executor.execute(state, _roster.hire_effects(rec),
+			{"rng": rng, "event_id": "hire"})
+		for line in res.log_lines:
+			_say("  · %s" % line)
+		_refresh_hud()
+		_open_party())
+	row.add_child(btn)
+	return panel
 
 
 func _open_codex() -> void:
@@ -800,7 +925,21 @@ func _show_roads() -> void:
 
 func _on_depart(route: Dictionary, mode: String) -> void:
 	if _audio_ready(): _audio.on_depart(route)
+	# The hold on THIS road decides whether the cargo travels. A porter's mules
+	# do not help at sea, so the party's contribution is computed per leg.
+	var t_rec := db.get_record(mode)
+	var kinds: Array = t_rec.get("kinds", ["land"])
+	var mode_kind := String(kinds[0]) if not kinds.is_empty() else "land"
+
 	var trip := travel.depart(route, mode, state, rng)
+
+	# Wages fall due on the road (GDD §11). Unpaid means goodwill, not debt.
+	var wage_fx := _roster.pay_effects(state, int(trip["days"]))
+	if not wage_fx.is_empty():
+		var wr := executor.execute(state, wage_fx, {"rng": rng, "event_id": "wages"})
+		for line in wr.log_lines:
+			_say("  · %s" % line)
+
 	# Spoilage and theft resolve per leg — GDD §9.2's brake is fares AND losses.
 	var losses := _market.travel_losses(state, route, int(trip["days"]), rng.fork("cargo"))
 	if not losses.is_empty():
@@ -819,6 +958,30 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 		_refresh_hud()
 		return
 	_arrive()
+
+
+## Cargo that no longer fits has to go somewhere. It is sold at a loss rather
+## than vanishing — the player should feel the cost, not merely be told of it.
+func _shed_overflow(units: int) -> void:
+	var here := db.get_record(state.city)
+	var left := units
+	for gid in state.goods.keys():
+		if left <= 0:
+			break
+		var g := db.get_record(String(gid))
+		if g.is_empty():
+			continue
+		var bulk := maxi(1, int(g.get("bulk", 1)))
+		while left > 0 and int(state.goods.get(gid, 0)) > 0:
+			var price := 0
+			if here.has("market"):
+				price = int(_market.sell_price(g, here, state.jdn, state.seed) * 0.5)
+			executor.execute(state, [
+				{"op": "goods", "id": String(gid), "value": -1, "reason": "shed-no-room"},
+				{"op": "coins", "value": price, "reason": "shed-no-room"},
+			], {"rng": rng, "event_id": "shed"})
+			left -= bulk
+	_refresh_hud()
 
 
 func _on_city_clicked(c: Dictionary) -> void:

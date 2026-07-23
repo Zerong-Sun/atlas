@@ -15,6 +15,7 @@ signal site_chosen(event_id: String)
 signal leave_requested()
 signal market_requested()
 signal bag_requested()
+signal party_requested()
 
 const PORTRAIT_H := 300.0
 
@@ -106,6 +107,7 @@ func _build() -> void:
 	_market_btn = Panels.styled_button("市集", func(): market_requested.emit())
 	foot_row.add_child(_market_btn)
 	foot_row.add_child(Panels.styled_button("行囊", func(): bag_requested.emit()))
+	foot_row.add_child(Panels.styled_button("同行", func(): party_requested.emit()))
 	# Without this the city is a dead end. It is the single most important
 	# control on the screen.
 	foot_row.add_child(Panels.styled_button("上路 →", func(): leave_requested.emit()))
