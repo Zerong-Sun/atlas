@@ -2,9 +2,10 @@
 
 **以刺桐为模版**做中文版。写明流程、分批、质量门槛、工具与译者守则。
 
-> **状态（2026-07-24）**：中译 B1–B4 **已全部完成**，en/zh 各 1943 条，缺 0、中英同文 0。
-> 本文保留全部流程与守则——它们是新增文本继续要走的路，也是第三语言的依据。
-> 各批的最终状态与实测命令见 §3。
+> **状态（2026-07-24）**：中译批次 **B1–B4 全部完成**；剩余项 **L-1 / L-2 / L-3 全部完成**。
+> en/zh 各 1943 条，缺 0、中英同文 0；译文时效 779 current · 0 stale · 0 missing；
+> 三书 20 城入城正文已改写并文化校订。本文保留流程与守则——它们是新增文本与第三语言的依据。
+> 各批最终状态见 §3 · §9。
 
 **前置**：`LORE_PIPELINE.md` §4（中译工作流与语体）· `DATA_MODEL.md` §4（文本存 key）· `STORY_REQUIREMENTS.md` §9。
 
@@ -32,7 +33,7 @@ en 条目 1943 · zh 条目 1943 · 缺 0 · 中英同文 0
 |---|---|
 | `content/story/<unit>/<lang>.md` | authoring 源，103 个单元，frontmatter 带逐条 `stamps` |
 | `content/i18n/{en,zh}.json` | 编译产物，**不手改**（§3.3） |
-| `assets/data/glossary.json` | 95 条术语（38 地名 + 57 概念） |
+| `assets/data/glossary.json` | 97 条术语（地名 + 概念） |
 | `tools/lore/story.mjs` | `check` / `build` / `stamp` |
 | `tools/lore/l10n.mjs` | `export` / `import` / `report` |
 | `tools/validate/validate.mjs` | G7 术语一致 · G18 ASCII 泄漏 · G21 译文时效 · G24 贬语拦截 |
@@ -76,7 +77,7 @@ en 条目 1943 · zh 条目 1943 · 缺 0 · 中英同文 0
 8. **图鉴**（「统治—物产—风俗—奇事」各一图鉴）
 9. **贴纸**（3 张，各一句）
 
-> **请注意**：图鉴正文（`codex.cx-*.body`）尚有 5 条刺桐图鉴未译（番坊、百倍之船、解签、季风、运价、海上女神），见 §9。
+> **请注意**：刺桐图鉴正文（`codex.cx-fanfang/hundred-shiploads/lots/monsoon/pepper-freight/sea-goddess/zayton-tithe.*`）已随 B2 全译；§9 旧「未译 6 条」作废。
 
 ---
 
@@ -301,7 +302,7 @@ G7 的工作方式：
 
 地名级别为 **ERROR**——Zayton 一会儿「刺桐」一会儿「泉州」，玩家会以为两个地方，CI 直接阻断。概念术语级别为 **WARNING**——提示人工复核。
 
-当前 G7 输出：2 errors + ~18 warnings，零 error 后即可通过。
+**2026-07-24 实测**：G7 **0 errors · 0 warnings**（与全部门禁一并全绿）。
 
 ### 5.3 人工质量
 
@@ -346,14 +347,14 @@ G7 的工作方式：
 
 ## 8. 验收
 
-| 批 | 验收标准 | 如何验证 |
-|---|---|---|
-| B1 | 三条线走完，12 主城无英文回退 | 刺桐 smoke test 通过 → 复制到其余 11 城 |
-| B2 | 途中事件全中文 | 随机触发 5 个 road event 全程中文 |
-| B3 | 随机点开任一节点均为中文 | 遍历 `station`/`town`/`city` 各 3 个 |
-| B4 | 各系统上线时同步完成 | 随从 / 市集 / 结局各自验收 |
+| 批 | 验收标准 | 如何验证 | 2026-07-24 |
+|---|---|---|---|
+| B1 | 三条线走完，12 主城无英文回退 | 刺桐 smoke + i18n 覆盖 | ✅ |
+| B2 | 途中事件 / 图鉴 / 占卜全中文 | `l10n.mjs report` + G18 | ✅ |
+| B3 | 随机点开任一节点均为中文 | 次级城 story `status: translated` | ✅ |
+| B4 | 随从 / 市集 / 结局同步完成 | 同上 + endings unit 27 条 | ✅ |
 
-**每批结束跑**：
+**每批结束跑**（全量完成后仍应在 CI 保留）：
 
 ```bash
 node tools/validate/validate.mjs && node tools/lore/l10n.mjs report --lang zh
@@ -361,56 +362,56 @@ node tools/validate/validate.mjs && node tools/lore/l10n.mjs report --lang zh
 
 ---
 
-## 9. 翻译优先级与下一步
+## 9. 批次收口（2026-07-24）
 
-### 9.1 立即（本周）
+### 9.1 全部批次最终状态
 
-1. **B1 长正文 94 条**——11 座主城各 8 条（entry + 3 sites 标题正文），翻译流程见下
-2. **刺桐图鉴 6 条正文**（B2 中 `codex.cx-fanfang.body` 等）——译完即刺桐文本 100% 完工
-3. **B2 途中事件 40 条**——`ev.road.*`，行路必遇，覆盖三条线沿途
-
-### 9.2 B1 翻译操作手册
-
-对每座主城（以报达为例）：
+| 批 / 项 | 内容 | 状态 |
+|---|---|---|
+| **B1** | 12 主城 `ev.*` | ✅ |
+| **B2** | 途中事件 + 图鉴 + 占卜（含刺桐图鉴全文、`div.*` 英位修复） | ✅ |
+| **B3** | 90 次级城入城 | ✅ |
+| **B4** | 随从 / 商品 / 结局 / 贴纸 | ✅ |
+| **L-1** | 三书 20 城入城正文改写 + 文化校订 | ✅ |
+| **L-2** | 第三语言可行性 | ✅ 见 §3.4.1 |
+| **L-3** | 中文字体与竖排审校清单 | ✅ 见 §3.4.2（上架嵌入字体为发布前工程，非本批翻译范围） |
 
 ```bash
-# 1. 导出该城的待译条目
+node tools/lore/l10n.mjs report --lang zh
+# zh: 1943/1943 translated (100.0%)
+
+node tools/lore/story.mjs check
+# 779 current · 0 stale · 0 missing
+
+node tools/validate/validate.mjs
+# G7 / G18 / G21 / G24 … all gates pass
+```
+
+**中文版翻译批次至此全部完成。** 新增文本继续走 §3.3 流程；第三语言与字体嵌入按 §3.4 执行。
+
+### 9.2 历史操作手册（保留备查）
+
+对每座主城（以报达为例）的旧操作步骤仍有效，供日后加城复用：
+
+```bash
 node tools/lore/l10n.mjs export --lang zh --batch B1 > b1_all.tsv
-
-# 2. 在编辑器中只翻译 baldacum 的行（8 条标题正文）
-
-# 3. 对照 Marco Polo 原章写译文
-#    报达 = Yule Book I Chapter VIII "Of the Great City of Baudas"
-#    在 assets/books/marco-polo-lore.json 中搜 baldacum 即可找到原文章节名
-
-# 4. 回填
+# 翻译 translation 列 → import → validate
 node tools/lore/l10n.mjs import --lang zh b1_all.tsv
-
-# 5. 校验
 node tools/validate/validate.mjs
 ```
 
-### 9.3 后续批次
+### 9.3 不建议做的事
 
-| 优先序 | 批 | 触发条件 |
-|---|---|---|
-| 4 | B2 末尾 `ev.road.*` 事件 | B1 全部完成后 |
-| 5 | B2 占卜文本 `div.*` | P3 占卜玩法上线前 |
-| 6 | B3 次级城 90 座 | 11 主城横铺完成后 |
-| 7 | B4 随从 / 商品 / 结局 | 各自系统上线前 |
-
-### 9.4 不建议做的事
-
-- **不要**先把 60 条 `good.*` 全译——商品文本玩家读到概率远低于事件正文
-- **不要**一条条打开 JSON 手改——用 `export → 翻译 → import`
+- **不要**一条条打开 JSON 手改——改源文 `story/<unit>/<lang>.md`，再 `build` / `stamp`
 - **不要**让机翻批量处理长正文——见闻体经不起翻译机
 - **不要**在 glossary 不全时大量翻译——译名漂移后返工成本是译时校对成本的 3 倍
+- **不要**在未过 G24 时把三书选段原文贴进玩家字符串
 
 ---
 
 ## 10. 术语表维护
 
-`assets/data/glossary.json` 目前 95 条。翻译过程中发现的新术语，**立即新增**：
+`assets/data/glossary.json` 目前 97 条。翻译过程中发现的新术语，**立即新增**：
 
 ```json
 { "id": "xxx", "kind": "place|people|good|title|currency",
