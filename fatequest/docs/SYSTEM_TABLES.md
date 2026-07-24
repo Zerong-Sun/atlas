@@ -116,7 +116,7 @@
 
 **关键约束**：`effects` 不得为空——占卜必须改变世界状态或信息可见度，否则它是装饰（见 GDD §8.2）。
 
-**可对照**：归档 Atlas 的 `../atlas/packages/method-data/src/divinationMethods.ts` 已有 24 条同类注册表，且带 `causalityModel` / `uncertaintyMode` / `evidenceStyle` / `questionDomain` 四维分类——比本表原设计更完备。填表时以它为底稿（人工复制，不共享构建），按 `docs/ATLAS_PORT.md` §3 的映射表补出游戏层字段（`learnAt` / `teacher` / `effects` / `cost`）。
+**可对照**：归档 Atlas 的 `../atlas/packages/method-data/src/divinationMethods.ts` 已有 24 条同类注册表，且带 `causalityModel` / `uncertaintyMode` / `evidenceStyle` / `questionDomain` 四维分类——比本表原设计更完备。填表时以它为底稿（人工复制，不共享构建），按 `docs/archive/ATLAS_PORT.md` §3 的映射表补出游戏层字段（`learnAt` / `teacher` / `effects` / `cost`）。
 
 **样例**
 

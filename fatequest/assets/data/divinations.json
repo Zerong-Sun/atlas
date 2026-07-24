@@ -1,0 +1,253 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §3 占卜表. `effects` may never be empty — an art that changes nothing is decoration (GDD §8.2). Each art carries its own minigame; you are not taught by clicking Learn.",
+  "divinations": [
+    {
+      "id": "lots", "name": { "zh": "圣签", "en": "The Casting of Lots" },
+      "culture": "latin", "art": "art-lots",
+      "learnAt": ["venice"], "teacher": "npc-fra-orso",
+      "question": "timing", "inputs": ["question"], "reads": ["route", "year"],
+      "horizon": "day", "confidence": 0.6,
+      "desc": { "zh": "摇筒取签，签落而止。修士说这不是问神明要答案，是逼你把问题问清楚。",
+                "en": "Shake the cylinder until one stick falls. The friar says it does not fetch an answer from heaven — it forces you to state the question." },
+      "effects": [
+        { "stat": "route_risk", "delta": -1 },
+        { "stat": "departure_window", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "sortes",
+        "rounds": 3, "needed": 2,
+        "config": { "speed": 1.0, "band": 0.17, "shrink": 0.82 }
+      },
+      "resultTexts": [
+        { "cond": "high", "zh": "签落而立。今日宜行，出门向{dir}，三日内不逢雨。", "en": "The stick falls and stands. Go today, toward {dir}; no rain for three days." },
+        { "cond": "mid", "zh": "签落而横。可行，但不必赶——赶路的人今日多失物。", "en": "The stick falls flat. You may go, but do not hurry: those who hurried today have lost things." },
+        { "cond": "low", "zh": "签落而折。今日不宜远行，宜就近打听。", "en": "The stick falls broken. Not a day for distance — a day for asking around." }
+      ]
+    },
+    {
+      "id": "yijing", "name": { "zh": "周易", "en": "The Book of Changes" },
+      "culture": "east_asia", "art": "art-yijing",
+      "learnAt": ["quanzhou"], "teacher": "npc-chen-po",
+      "question": "risk", "inputs": ["question"], "reads": ["route", "city", "retainer"],
+      "horizon": "season", "confidence": 0.7,
+      "desc": { "zh": "五十蓍草，去其一，分而挂之，四以揲之。老陈说铜钱是给赶时间的人用的，蓍草是给肯坐下来的人用的。",
+                "en": "Fifty yarrow stalks: set one aside, divide, hang one, count by fours. Old Chen says coins are for men in a hurry and stalks are for men willing to sit down." },
+      "effects": [
+        { "stat": "route_risk", "delta": -2 },
+        { "stat": "hazard_visible", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "yarrow",
+        "rounds": 3, "needed": 3,
+        "config": { "stalks": 49, "tolerance": 0 }
+      },
+      "resultTexts": [
+        { "cond": "yang", "zh": "阳爻在上：此路刚而无险，但费力。", "en": "A yang line above: the road is hard and safe, and it will cost you." },
+        { "cond": "yin", "zh": "阴爻在上：此路顺而多变，宜有同行者。", "en": "A yin line above: the road runs easy and shifts often. Do not take it alone." },
+        { "cond": "moving", "zh": "有动爻：所问之事将变，问题本身要重问一次。", "en": "A moving line: what you asked about is about to change. Ask the question again." }
+      ]
+    },
+    {
+      "id": "bazi", "name": { "zh": "八字", "en": "The Four Pillars" },
+      "culture": "east_asia", "art": "art-bazi",
+      "learnAt": ["khanbaliq"], "teacher": "npc-shen-wu",
+      "question": "person", "inputs": ["birthdate"], "reads": ["self", "retainer"],
+      "horizon": "year", "confidence": 0.65,
+      "desc": { "zh": "年月日时，四柱八字。沈五说这不是算你哪天发财——是看你这个人是什么材料。木要土养，金要水磨。",
+                "en": "Year, month, day, hour — four pillars, eight characters. Shen Wu says it does not tell you which day you get rich; it tells you what material you are. Wood wants earth; metal wants water." },
+      "effects": [
+        { "stat": "retainer_fate_visible", "delta": 1 },
+        { "stat": "rapport_same_culture", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "fivephase",
+        "rounds": 5, "needed": 4,
+        "config": {
+          "phases": ["wood", "fire", "earth", "metal", "water"],
+          "names": {
+            "wood": { "zh": "木", "en": "Wood" }, "fire": { "zh": "火", "en": "Fire" },
+            "earth": { "zh": "土", "en": "Earth" }, "metal": { "zh": "金", "en": "Metal" },
+            "water": { "zh": "水", "en": "Water" }
+          },
+          "generates": { "wood": "fire", "fire": "earth", "earth": "metal", "metal": "water", "water": "wood" },
+          "overcomes": { "wood": "earth", "earth": "water", "water": "fire", "fire": "metal", "metal": "wood" }
+        }
+      },
+      "resultTexts": [
+        { "cond": "strong", "zh": "日主得令，此人自有主张——好用，不好使。", "en": "The day-master holds the season: this one has a mind of their own. Useful, not biddable." },
+        { "cond": "weak", "zh": "日主失令，须借人成事——你若护得住，他能替你走远路。", "en": "The day-master is out of season and must borrow strength. Shelter them and they will walk a long road for you." }
+      ]
+    },
+    {
+      "id": "astrology", "name": { "zh": "星命", "en": "Judicial Astrology" },
+      "culture": "islamic", "art": "art-astrology",
+      "learnAt": ["tabriz", "constantinople"], "teacher": "npc-tebrizi",
+      "question": "timing", "inputs": ["date", "sky"], "reads": ["route", "year", "city"],
+      "horizon": "season", "confidence": 0.72,
+      "desc": { "zh": "把七曜安进十二宫，看它们彼此照与不照。帖必烈说：骰子是捷径，星表才是师傅——但星表要你坐一整夜。",
+                "en": "Set the seven wanderers into the twelve houses and read how they see one another. Tebrizi: dice are a shortcut, the tables are the master — and the tables want a whole night of your knees." },
+      "effects": [
+        { "stat": "weather_forecast", "delta": 1 },
+        { "stat": "route_risk", "delta": -1 },
+        { "stat": "season_window_visible", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "astrolabe",
+        "rounds": 3, "needed": 3,
+        "config": {
+          "houses": 12,
+          "bodies": [
+            { "id": "sun", "sym": "☉", "zh": "日", "en": "Sun" },
+            { "id": "moon", "sym": "☽", "zh": "月", "en": "Moon" },
+            { "id": "mars", "sym": "♂", "zh": "荧惑", "en": "Mars" },
+            { "id": "venus", "sym": "♀", "zh": "太白", "en": "Venus" },
+            { "id": "saturn", "sym": "♄", "zh": "镇星", "en": "Saturn" }
+          ],
+          "clueKinds": ["house", "opposite", "trine", "adjacent"]
+        }
+      },
+      "resultTexts": [
+        { "cond": "benefic", "zh": "吉星临三宫：短途有利，书信可发。", "en": "A benefic in the third: short journeys favoured, letters may go." },
+        { "cond": "malefic", "zh": "凶星临九宫：远行与异乡之事今季不利。", "en": "A malefic in the ninth: long roads and foreign business go badly this season." }
+      ]
+    },
+    {
+      "id": "dream", "name": { "zh": "梦占", "en": "The Reading of Dreams" },
+      "culture": "islamic", "art": "art-dream",
+      "learnAt": ["damascus", "samarkand"], "teacher": "npc-ibn-sahl",
+      "question": "identity", "inputs": ["dream"], "reads": ["self", "retainer", "city"],
+      "horizon": "year", "confidence": 0.55,
+      "desc": { "zh": "梦有三等：真梦、自梦、乱梦。伊本·萨赫勒说难的不是解梦，是记住——象与义要在心里配得上号，才谈得上解。",
+                "en": "Dreams come in three kinds: the true, the self-made and the muddled. Ibn Sahl says the hard part is not interpreting but remembering — symbol and meaning must be paired in the mind before anything can be read." },
+      "effects": [
+        { "stat": "retainer_birth_reveal", "delta": 1 },
+        { "stat": "hidden_event_hint", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "oneiro",
+        "rounds": 1, "needed": 1,
+        "config": {
+          "pairs": [
+            { "sym": "🌊", "zh": "大水", "en": "Flood", "mZh": "有事将至，非你所召", "mEn": "Something coming that you did not send for" },
+            { "sym": "🕊️", "zh": "白鸟", "en": "White bird", "mZh": "音信在路上", "mEn": "News already on the road" },
+            { "sym": "🗝️", "zh": "钥匙", "en": "Key", "mZh": "有人肯为你开门", "mEn": "Someone is willing to open a door" },
+            { "sym": "🪞", "zh": "镜", "en": "Mirror", "mZh": "你看见的是自己的话", "mEn": "What you saw was your own words" },
+            { "sym": "🔥", "zh": "火", "en": "Fire", "mZh": "旧约将断", "mEn": "An old agreement about to break" },
+            { "sym": "🐪", "zh": "驼", "en": "Camel", "mZh": "忍耐可至，急则失货", "mEn": "Patience arrives; haste loses cargo" }
+          ],
+          "peek": 4200
+        }
+      },
+      "resultTexts": [
+        { "cond": "clear", "zh": "此梦为真梦：所指之人尚未出现，但今年会来。", "en": "A true dream: the person it points to has not appeared yet, but will this year." },
+        { "cond": "muddled", "zh": "此梦为乱梦：是你自己白日的担忧翻了个身。", "en": "A muddled dream: your own daylight worry, turning over." }
+      ]
+    },
+    {
+      "id": "geomancy", "name": { "zh": "沙占", "en": "Geomancy (ʿilm al-raml)" },
+      "culture": "islamic", "art": "art-geomancy",
+      "learnAt": ["cairo"], "teacher": "npc-al-maghribi",
+      "question": "route", "inputs": ["question"], "reads": ["route", "city"],
+      "horizon": "day", "confidence": 0.68,
+      "desc": { "zh": "在沙盘上随手点四行，数点之奇偶得一象，十六象各有名。马格里布人说：手要快过念头，慢了就是你在写答案，不是沙在写。",
+                "en": "Strike four rows of marks in the sand; odd or even makes a figure, and there are sixteen with names. The Maghribi: the hand must outrun the thought — go slow and you are writing the answer, not the sand." },
+      "effects": [
+        { "stat": "route_reveal_chance", "delta": 1 },
+        { "stat": "price_transparency", "delta": 1 }
+      ],
+      "minigame": {
+        "kind": "raml",
+        "rounds": 4, "needed": 3,
+        "config": {
+          "window": 1500,
+          "figures": [
+            { "id": "tariq", "lines": [1, 1, 1, 1], "zh": "道路", "en": "Via" },
+            { "id": "jamaa", "lines": [0, 0, 0, 0], "zh": "聚会", "en": "Populus" },
+            { "id": "nusra", "lines": [1, 0, 1, 1], "zh": "外助", "en": "Albus" },
+            { "id": "qabd", "lines": [1, 1, 0, 1], "zh": "内收", "en": "Carcer" },
+            { "id": "farah", "lines": [0, 1, 1, 0], "zh": "喜悦", "en": "Laetitia" },
+            { "id": "hamra", "lines": [0, 1, 0, 1], "zh": "赤色", "en": "Rubeus" }
+          ]
+        }
+      },
+      "resultTexts": [
+        { "cond": "via", "zh": "得「道路」：确有一条路，但不在你问的那个方向。", "en": "Via: there is a road — and it does not run the way you asked." },
+        { "cond": "carcer", "zh": "得「内收」：此城尚有未办之事，走不脱。", "en": "Carcer: something in this city is unfinished. You will not get clear of it yet." }
+      ]
+    }
+  ],
+  "teachers": [
+    { "id": "npc-fra-orso", "name": { "zh": "奥索修士", "en": "Fra Orso" }, "city": "venice",
+      "art": "mentor-lots", "teaches": "lots",
+      "intro": { "zh": "「你要问路。」他不抬头，「那先把问题说清楚。含糊的问题，签也答含糊。」",
+                 "en": "\"You want to ask about a road.\" He does not look up. \"Then state the question. A vague question gets a vague stick.\"" },
+      "task": { "zh": "三摇之中，两次要在签动之际停手。", "en": "Three shakes; stop the stick clean on two of them." },
+      "grad": { "zh": "「记住：签不告诉你去不去。它告诉你，你其实早就想好了。」",
+                "en": "\"Remember: the lot does not tell you whether to go. It tells you that you had already decided.\"" },
+      "story": { "zh": "奥索在圣马可当了十九年的抄写员，抄坏了眼睛才被调去管签筒。他说签筒比抄经诚实——抄经的人会替神修辞，签筒不会。他给水手抽签不收钱，只要他们回来时告诉他去了哪里；他有一本册子，记了四百多条航程，从没给任何人看过。",
+                 "en": "Orso copied at St Mark's for nineteen years and was moved to the lot-cylinder only when his eyes gave out. The cylinder, he says, is more honest than copying: a copyist edits God's phrasing, a cylinder does not. He casts free for sailors and asks only that they tell him where they went when they return. He keeps a book of four hundred voyages and has shown it to no one." } },
+    { "id": "npc-chen-po", "name": { "zh": "老陈伯", "en": "Old Chen" }, "city": "quanzhou",
+      "art": "mentor-yijing", "teaches": "yijing",
+      "intro": { "zh": "「铜钱三分钟一卦，蓍草要一炷香。」他把草推过来，「你赶时间，就别学。」",
+                 "en": "\"Coins give you a hexagram in three minutes; stalks take an incense-stick.\" He pushes the bundle across. \"If you are in a hurry, don't learn this.\"" },
+      "task": { "zh": "揲蓍三变，三次都要数得对。", "en": "Three changes of the stalks — count all three right." },
+      "grad": { "zh": "「卦不是答案，是把事情摊开的方式。摊开了你自己看得见。」",
+                 "en": "\"A hexagram is not an answer. It is a way of laying the thing out flat. Once it is flat you can see it yourself.\"" },
+      "story": { "zh": "老陈伯在番坊口摆了三十年摊，替出海的人起卦。他不给人算发财，只算「这趟走不走得成」——他说海上的事只有这一件值得问。他的蓍草是父亲留下的，缺了六根，从未补过：「补上的不是原来那把了。」",
+                 "en": "Old Chen has kept a stall at the mouth of the foreign quarter for thirty years, casting for men about to sail. He will not cast for profit, only for whether the voyage comes off — at sea, he says, that is the only question worth asking. The stalks were his father's; six are missing and he has never replaced them: \"Replaced, it is no longer the same bundle.\"" } },
+    { "id": "npc-tebrizi", "name": { "zh": "星家帖必烈", "en": "Tebrizi the Star-Reader" }, "city": "tabriz",
+      "art": "mentor-astrology", "teaches": "astrology",
+      "intro": { "zh": "「法兰克人的天文学写得美。」他把星盘转了半圈，「美不等于准。准要靠象限仪，也要靠肯坐一夜的膝盖。」",
+                 "en": "\"Frankish astronomy writes beautifully.\" He turns the astrolabe half round. \"Beauty is not accuracy. Accuracy wants a quadrant, and knees willing to sit a night.\"" },
+      "task": { "zh": "依所给之兆，把三颗星各归其宫。", "en": "From the testimonies given, set each wanderer in its house." },
+      "grad": { "zh": "「骰子是捷径，蓝光才是师傅。」他指向织女，「记住它的颜色。」",
+                 "en": "\"Dice are a shortcut; that blue is the master.\" He points at Vega. \"Remember its colour.\"" },
+      "story": { "zh": "他年轻时在纳西尔丁·图西手下磨镜、抄星表，左手食指被浑天仪铜环夹去一截，他称之为天文学的「血税」。蒙古兵火后，他从废墟扒出三本未尽的星表，驼皮裹好，至今压在床下，每晚翻一遍——星星会变慢，纸上的数字不会。",
+                 "en": "Young, he ground lenses and copied tables under Nasir al-Din al-Tusi; a brass armillary ring took the tip of his left index finger — the blood-tax of astronomy, he calls it. After the Mongol fires he pulled three unfinished star-tables from the rubble, wrapped them in camel-leather, and still turns them nightly under his bed: stars slow with age, numbers on paper never do." } },
+    { "id": "npc-theodoros", "name": { "zh": "狄奥多罗斯", "en": "Theodoros" }, "city": "constantinople",
+      "art": "mentor-astrology-gr", "teaches": "astrology",
+      "intro": { "zh": "「教会不许我做这个。」他把书往身后一推，「所以我们讲的是历法。听清楚了：历法。」",
+                 "en": "\"The Church forbids me this.\" He pushes the book behind him. \"So what we are discussing is the calendar. Be clear about that: the calendar.\"" },
+      "task": { "zh": "依所给之兆，把三颗星各归其宫。", "en": "From the testimonies given, set each wanderer in its house." },
+      "grad": { "zh": "「你学的是希腊人的算法，波斯人的表。两样都不是我们的——但都算得准。」",
+                 "en": "\"You have learnt Greek method on Persian tables. Neither is ours — and both are accurate.\"" },
+      "story": { "zh": "狄奥多罗斯的祖父在拉丁人占城时把整座图书馆的钥匙吞了下去——家里人这么讲，他自己不信。他确实继承了三十七卷抄本，其中十一卷是波斯星表的希腊译文，页边写满了两代人吵架的批注。",
+                 "en": "His grandfather, the family says, swallowed the keys to an entire library when the Latins took the city; Theodoros does not believe it. He did inherit thirty-seven volumes, eleven of them Greek translations of Persian tables, their margins packed with two generations of family arguing." } },
+    { "id": "npc-ibn-sahl", "name": { "zh": "伊本·萨赫勒", "en": "Ibn Sahl" }, "city": "damascus",
+      "art": "mentor-dream", "teaches": "dream",
+      "intro": { "zh": "「你先别说你梦见了什么。」他闭着眼，「先说你醒来时手放在哪里。」",
+                 "en": "\"Don't tell me the dream yet.\" His eyes stay closed. \"Tell me where your hand was when you woke.\"" },
+      "task": { "zh": "记住象与义，再把它们配回去。", "en": "Learn the symbols and their meanings, then pair them back." },
+      "grad": { "zh": "「解梦的人最容易犯的错，是解自己想听的那一半。」",
+                 "en": "\"The interpreter's commonest error is to interpret only the half he wanted to hear.\"" },
+      "story": { "zh": "他在倭马亚大寺的柱廊下坐了二十年，从不主动开口。来找他的人多半睡不好；他给的第一句话总是「先去喝水」。他有一本厚册，记的不是梦，是做梦的人第二年发生了什么——他说只有这本册子能判断他解得对不对。",
+                 "en": "Twenty years under the colonnade of the great mosque, and he never speaks first. Most who come to him sleep badly; his opening line is always \"drink some water first.\" He keeps a thick register — not of dreams, but of what happened to the dreamers the following year. Only that register, he says, can tell him whether he read them right." } },
+    { "id": "npc-bibi-nur", "name": { "zh": "比比·努尔", "en": "Bibi Nur" }, "city": "samarkand",
+      "art": "mentor-dream-nur", "teaches": "dream",
+      "intro": { "zh": "「城里的男人解梦要收钱，我不收。」她把纸推给你，「但你要把梦写下来。说出来的梦已经改过了。」",
+                 "en": "\"The men in this city charge for dreams. I don't.\" She pushes paper at you. \"But write it down. A dream spoken aloud has already been edited.\"" },
+      "task": { "zh": "记住象与义，再把它们配回去。", "en": "Learn the symbols and their meanings, then pair them back." },
+      "grad": { "zh": "「你现在会解了。别替人解他们已经决定的事——那不是解梦，那是收钱。」",
+                 "en": "\"Now you can read them. Do not read for people who have already decided — that is not interpretation, that is collecting a fee.\"" },
+      "story": { "zh": "比比·努尔是造纸匠的寡妻，识字，因为丈夫要她记账。她替全城的女人解梦，条件是把梦写在纸上——三十年下来，那些纸装满了两个木箱，她说等她死了就烧掉，「不是秘密，是别人的睡眠。」",
+                 "en": "Bibi Nur is a papermaker's widow, literate because her husband needed the accounts kept. She reads dreams for the city's women on one condition: they write them down. Thirty years of it fills two wooden chests, and she means them burnt when she dies — \"not because they are secrets, but because they are other people's sleep.\"" } },
+    { "id": "npc-al-maghribi", "name": { "zh": "马格里布人", "en": "The Maghribi" }, "city": "cairo",
+      "art": "mentor-geomancy", "teaches": "geomancy",
+      "intro": { "zh": "他在沙盘上飞快地点了四行，抬头：「你数得清吗？数不清才对。手要快过念头。」",
+                 "en": "He strikes four fast rows in the sand tray and looks up. \"Could you count them? Good — you shouldn't. The hand must outrun the thought.\"" },
+      "task": { "zh": "四行沙点，成象须与所命之象相合。", "en": "Four rows of marks; the figure they make must be the figure named." },
+      "grad": { "zh": "「十六象我教了你六个。剩下的十个，路上自己遇。」",
+                 "en": "\"I have given you six of the sixteen. The other ten you will meet on the road.\"" },
+      "story": { "zh": "没人知道他叫什么，开罗人只叫他「马格里布人」。他说他从非斯一路走来，走了十一年，「不是朝觐，是躲债。」他替卡里米商人算行程，收费按路程长短，从不按吉凶——「凶也是消息，凭什么便宜？」",
+                 "en": "Nobody knows his name; Cairo calls him the Maghribi. He walked from Fes, he says, over eleven years — \"not a pilgrimage, a creditor.\" He casts journeys for the Karimi merchants and charges by distance, never by whether the answer is good: \"Bad news is still news. Why should it cost less?\"" } },
+    { "id": "npc-shen-wu", "name": { "zh": "沈五", "en": "Shen Wu" }, "city": "khanbaliq",
+      "art": "mentor-bazi", "teaches": "bazi",
+      "intro": { "zh": "「年月日时，四柱八字。」他翻开一本旧通书，「这不是算你哪天发财——是看你这个人是什么材料。」",
+                 "en": "\"Year, month, day, hour — four pillars, eight characters.\" He opens a worn almanac. \"This is not about which day you get rich. It is about what material you are.\"" },
+      "task": { "zh": "生克五问，答对四问。", "en": "Five questions of generation and conquest; get four right." },
+      "grad": { "zh": "「木要土养，金要水磨。知道自己是什么材料，才知道该往哪儿使劲。」",
+                 "en": "\"Wood wants earth, metal wants water. Know your material and you know where to push.\"" },
+      "story": { "zh": "沈五的父亲七岁学排盘，学了三十年，排了一万六百张盘。他排盘不问生辰——生辰太容易伪造——他问三个问题：你娘生你的时候是顺产还是难产，你第一次离家是雨季还是旱季，你最近一次哭是为了什么事。「宫殿和时辰都是人定的，但你是怎么来的、你怎么走的、你为什么哭——这些是天定的。」",
+                 "en": "Shen Wu's father began at seven and cast ten thousand six hundred charts in thirty years. Shen Wu does not ask for a birth date — too easily forged. He asks three questions: was your mother's labour easy or hard, was your first leaving in the wet season or the dry, and what was the last thing you wept for. \"Palaces and hours are set by men. How you arrived, how you left, and what you wept for — those are set by heaven.\"" } }
+  ]
+}

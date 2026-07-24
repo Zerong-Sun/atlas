@@ -1,0 +1,173 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §1 城市表. `map` links to an id in worldmap.json; `brief` is what the map's detail card shows once the city is known.",
+  "cities": [
+    {
+      "id": "venice", "map": "venice", "name": { "zh": "威尼斯", "en": "Venice" },
+      "band": "europe", "culture": "latin", "faiths": ["latin", "orthodox"], "tier": "metropolis",
+      "art": "city-venice-entry",
+      "brief": { "zh": "泻湖上的共和国，世界的秤。塞浦路斯的棉与法兰西的呢绒在里亚尔托易手，东方的丝金到此价可翻数倍。契约须有证人与蜡印——无印则如无风之帆。",
+                 "en": "A republic on a lagoon, and the scales of the world. Cypriot cotton and Frankish wool change hands at the Rialto; eastern silk-and-gold multiplies here. A contract needs witnesses and wax — without a seal it is a sail without wind." },
+      "entry": "ev-venice-entry", "sites": ["ev-venice-rialto", "ev-venice-arsenal", "ev-venice-marco-basilica"],
+      "mentor": "npc-fra-orso", "teaches": "lots",
+      "market": { "goods": ["murano-glass", "woolens", "pepper", "silk"], "currency": "ducat", "spread": 0.16 },
+      "shrine": { "faith": "latin", "services": ["bless", "study"] },
+      "specialty": "murano-glass", "calendars": ["julian"]
+    },
+    {
+      "id": "acre", "map": "acre", "name": { "zh": "阿卡", "en": "Acre" },
+      "band": "west_asia", "culture": "latin", "faiths": ["latin", "islam", "orthodox"], "tier": "city",
+      "art": "city-acre-entry",
+      "brief": { "zh": "十字军在东方最后一座大港，城墙里挤着比萨人、热那亚人、威尼斯人各自的区，彼此讲不同的话，收不同的税。往东的一切都从这里起算。",
+                 "en": "The last great crusader haven in the East: Pisan, Genoese and Venetian quarters packed inside one wall, each with its own speech and its own customs house. Everything eastward is measured from here." },
+      "entry": "ev-acre-entry", "sites": ["ev-acre-legate", "ev-acre-khan", "ev-acre-quay"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["sugar", "woolens", "pepper", "glassware"], "currency": "ducat", "spread": 0.2 },
+      "shrine": { "faith": "latin", "services": ["bless", "sanctuary"] },
+      "specialty": "acre-sugar", "calendars": ["julian", "islamic"]
+    },
+    {
+      "id": "constantinople", "map": "istanbul", "name": { "zh": "君士坦丁堡", "en": "Constantinople" },
+      "band": "europe", "culture": "latin", "faiths": ["orthodox", "latin"], "tier": "metropolis",
+      "art": "city-constantinople-entry",
+      "brief": { "zh": "两海之间的城，金角湾的锁链一放，黑海的粮与皮毛便进来。拉丁人刚被赶走，热那亚人却在对岸的加拉塔安顿了下来。",
+                 "en": "The city between two seas. Drop the chain across the Golden Horn and the grain and furs of the Black Sea come in. The Latins have just been driven out; the Genoese have settled comfortably across the water at Galata." },
+      "entry": "ev-constantinople-entry", "sites": ["ev-cp-galata", "ev-cp-hagia", "ev-cp-bookstalls"],
+      "mentor": "npc-theodoros", "teaches": "astrology",
+      "market": { "goods": ["furs", "grain", "silk", "icons"], "currency": "hyperpyron", "spread": 0.18 },
+      "shrine": { "faith": "orthodox", "services": ["bless", "study", "convert"] },
+      "specialty": "byzantine-icon", "calendars": ["julian", "byzantine"]
+    },
+    {
+      "id": "damascus", "map": "damascus", "name": { "zh": "大马士革", "en": "Damascus" },
+      "band": "west_asia", "culture": "islamic", "faiths": ["islam", "orthodox"], "tier": "metropolis",
+      "art": "city-damascus-entry",
+      "brief": { "zh": "绿洲之城，倭马亚大寺的院子里终日有人在读书、睡觉、争论。朝觐的大队每年从这里出发去麦加——错过它，你就得自己穿过沙漠。",
+                 "en": "A city in an oasis. In the courtyard of the great mosque men read, sleep and argue all day. The hajj caravan leaves here for Mecca once a year — miss it and you cross the desert alone." },
+      "entry": "ev-damascus-entry", "sites": ["ev-dam-umayyad", "ev-dam-steel", "ev-dam-caravan-yard"],
+      "mentor": "npc-ibn-sahl", "teaches": "dream",
+      "market": { "goods": ["damascus-steel", "brocade", "dried-apricot", "paper"], "currency": "dirham", "spread": 0.15 },
+      "shrine": { "faith": "islam", "services": ["bless", "study", "convert"] },
+      "specialty": "damascus-steel", "calendars": ["islamic", "julian"]
+    },
+    {
+      "id": "cairo", "map": "cairo", "name": { "zh": "开罗", "en": "Cairo" },
+      "band": "west_asia", "culture": "islamic", "faiths": ["islam", "orthodox"], "tier": "metropolis",
+      "art": "city-cairo-entry",
+      "brief": { "zh": "尼罗河养着的大城，人多得像是全世界都搬来了。爱资哈尔的学圈里坐着从马格里布到呼罗珊的学生；卡里米商人的钱能在印度洋两岸兑现。",
+                 "en": "The great city the Nile feeds, so crowded it seems the world moved in. In the circles at al-Azhar sit students from the Maghrib to Khurasan; a Karimi merchant's paper is good on both shores of the Indian Ocean." },
+      "entry": "ev-cairo-entry", "sites": ["ev-cairo-azhar", "ev-cairo-karimi", "ev-cairo-nilometer"],
+      "mentor": "npc-al-maghribi", "teaches": "geomancy",
+      "market": { "goods": ["flax-linen", "sugar", "pepper", "alum"], "currency": "dinar", "spread": 0.14 },
+      "shrine": { "faith": "islam", "services": ["bless", "study", "convert", "sanctuary"] },
+      "specialty": "egyptian-linen", "calendars": ["islamic", "coptic"]
+    },
+    {
+      "id": "mecca", "map": "mecca", "name": { "zh": "麦加", "en": "Mecca" },
+      "band": "west_asia", "culture": "islamic", "faiths": ["islam"], "tier": "city",
+      "art": "city-mecca-entry",
+      "brief": { "zh": "谷中的城。朝觐月里，从马格里布、印度、中亚、东非来的人在同一个院子里绕行，说着彼此听不懂的话做同一件事。非穆斯林不得入内。",
+                 "en": "A city in a valley. In the pilgrimage month, people from the Maghrib, India, Central Asia and East Africa circle the same court, doing one thing in a dozen tongues. Non-Muslims may not enter." },
+      "entry": "ev-mecca-entry", "sites": ["ev-mecca-tawaf", "ev-mecca-scholars", "ev-mecca-caravan-news"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["dates", "incense", "indian-cotton", "prayer-beads"], "currency": "dinar", "spread": 0.22 },
+      "shrine": { "faith": "islam", "services": ["bless", "study", "sanctuary"] },
+      "specialty": "zamzam-flask", "calendars": ["islamic"]
+    },
+    {
+      "id": "tangier", "map": "tangier", "name": { "zh": "丹吉尔", "en": "Tangier" },
+      "band": "europe", "culture": "islamic", "faiths": ["islam"], "tier": "town",
+      "art": "city-tangier-entry",
+      "brief": { "zh": "海峡这一侧的小城，望得见对岸的山。所有向东走的人都从这里开始数日子；所有回来的人都在这里被问：你见到了什么。",
+                 "en": "A small town on this side of the strait, within sight of the far mountains. Everyone going east starts counting days here; everyone coming back is asked the same question: what did you see." },
+      "entry": "ev-tangier-entry", "sites": ["ev-tangier-farewell", "ev-tangier-qadi", "ev-tangier-harbour"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["woolens", "wax", "dates", "leather"], "currency": "dinar", "spread": 0.24 },
+      "shrine": { "faith": "islam", "services": ["bless", "study"] },
+      "specialty": "maghribi-leather", "calendars": ["islamic"]
+    },
+    {
+      "id": "tabriz", "map": "tabriz", "name": { "zh": "大不里士", "en": "Tabriz" },
+      "band": "west_asia", "culture": "islamic", "faiths": ["islam", "nestorian", "buddhism"], "tier": "metropolis",
+      "art": "city-tabriz-entry",
+      "brief": { "zh": "伊儿汗的都城，四方商路的结。热那亚人、威尼斯人、亚美尼亚人、汉人使者同在一个巴扎里做生意；城外的马拉盖有一座天文台，星表还在续写。",
+                 "en": "The Ilkhan's capital and the knot of four trade roads. Genoese, Venetians, Armenians and envoys from Cathay do business in one bazaar; at Maragha outside the city an observatory is still adding to its tables." },
+      "entry": "ev-tabriz-entry", "sites": ["ev-tabriz-bazaar", "ev-tabriz-observatory", "ev-tabriz-court"],
+      "mentor": "npc-tebrizi", "teaches": "astrology",
+      "market": { "goods": ["silk", "pearls", "carpets", "turquoise"], "currency": "dinar", "spread": 0.13 },
+      "shrine": { "faith": "islam", "services": ["bless", "study", "convert"] },
+      "specialty": "tabriz-carpet", "calendars": ["islamic", "persian", "chinese"]
+    },
+    {
+      "id": "hormuz", "map": "hormuz", "name": { "zh": "忽鲁谟斯", "en": "Hormuz" },
+      "band": "west_asia", "culture": "islamic", "faiths": ["islam"], "tier": "city",
+      "art": "city-hormuz-entry",
+      "brief": { "zh": "海湾口上的港，热得人夏天躲进水里坐着。印度的马、香料、珍珠在此换手；船板用椰索缝合，不用铁钉——波罗说他不敢乘。",
+                 "en": "A port at the mouth of the Gulf, so hot that in summer men sit in the water. Indian horses, spice and pearls change hands here; the ships are sewn with coir and carry no iron nail — Polo says he would not sail in one." },
+      "entry": "ev-hormuz-entry", "sites": ["ev-hormuz-horsefair", "ev-hormuz-shipyard", "ev-hormuz-water"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["horses", "pearls", "dates", "indian-cotton"], "currency": "dinar", "spread": 0.19 },
+      "shrine": { "faith": "islam", "services": ["bless"] },
+      "specialty": "gulf-pearl", "calendars": ["islamic", "persian"]
+    },
+    {
+      "id": "samarkand", "map": "samarkand", "name": { "zh": "撒马尔罕", "en": "Samarkand" },
+      "band": "central_asia", "culture": "steppe", "faiths": ["islam", "nestorian"], "tier": "metropolis",
+      "art": "city-samarkand-entry",
+      "brief": { "zh": "河中之地最大的城，果园环城，纸出于此而胜于他处。景教徒与穆斯林共用一条街，为一根柱子争了三代人。",
+                 "en": "The greatest city of Transoxiana, ringed with orchards, where the paper is better than anywhere else. Nestorians and Muslims share one street and have argued over a single column for three generations." },
+      "entry": "ev-samarkand-entry", "sites": ["ev-sam-papermill", "ev-sam-column", "ev-sam-horse-market"],
+      "mentor": "npc-bibi-nur", "teaches": "dream",
+      "market": { "goods": ["samarkand-paper", "horses", "melons", "silk"], "currency": "dirham", "spread": 0.16 },
+      "shrine": { "faith": "islam", "services": ["bless", "study", "convert"] },
+      "specialty": "samarkand-paper", "calendars": ["islamic", "persian", "turkic"]
+    },
+    {
+      "id": "calicut", "map": "calicut", "name": { "zh": "古里", "en": "Calicut" },
+      "band": "india", "culture": "indian_ocean", "faiths": ["hindu", "islam", "nestorian"], "tier": "metropolis",
+      "art": "city-calicut-entry",
+      "brief": { "zh": "马拉巴尔的胡椒港。扎莫林的秤是全海最公道的一杆——货上岸，秤定价，谁也不许赖。季风把整个海的船按时表送来送走。",
+                 "en": "The pepper port of Malabar. The Zamorin's scales are the fairest on the ocean — goods ashore, weight fixed, no one welches. The monsoon delivers and removes the whole sea's shipping on a timetable." },
+      "entry": "ev-calicut-entry", "sites": ["ev-cal-pepper-yard", "ev-cal-scales", "ev-cal-monsoon-watch"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["pepper", "ginger", "indian-cotton", "teak"], "currency": "fanam", "spread": 0.12 },
+      "shrine": { "faith": "hindu", "services": ["bless", "study"] },
+      "specialty": "malabar-pepper", "calendars": ["malayalam", "islamic"]
+    },
+    {
+      "id": "malacca", "map": "malacca", "name": { "zh": "满剌加", "en": "Melaka" },
+      "band": "maritime_asia", "culture": "indian_ocean", "faiths": ["islam", "buddhism", "folk"], "tier": "city",
+      "art": "city-malacca-entry",
+      "brief": { "zh": "海峡最窄处的港。每一阵季风都必须在此换手：东来的等西风，西来的等东风，于是两边的人都得住下来，学对方的话。",
+                 "en": "A port at the narrowest of the strait. Every monsoon must change hands here: those from the east wait for the west wind, those from the west for the east — so both sides stay ashore and learn each other's speech." },
+      "entry": "ev-malacca-entry", "sites": ["ev-mal-warehouse", "ev-mal-syahbandar", "ev-mal-strait-watch"],
+      "mentor": null, "teaches": null,
+      "market": { "goods": ["cloves", "nutmeg", "camphor", "tin"], "currency": "tin-ingot", "spread": 0.17 },
+      "shrine": { "faith": "islam", "services": ["bless"] },
+      "specialty": "banda-nutmeg", "calendars": ["islamic", "javanese"]
+    },
+    {
+      "id": "quanzhou", "map": "quanzhou", "name": { "zh": "泉州（刺桐）", "en": "Zayton" },
+      "band": "china", "culture": "east_asia", "faiths": ["folk", "islam", "buddhism", "nestorian"], "tier": "metropolis",
+      "art": "city-quanzhou-entry",
+      "brief": { "zh": "刺桐港。番坊自成一街，波斯语、阿拉伯语与闽南话在同一个屋檐下讨价还价；清真寺的宣礼声与天妃宫的锣声隔街相闻，谁也不觉得奇怪。",
+                 "en": "The port of Zayton. The foreign quarter is a street unto itself, where Persian, Arabic and the local tongue haggle under one roof; the call from the mosque and the gong from the sea-goddess's temple cross the street at each other, and nobody finds it strange." },
+      "entry": "ev-quanzhou-entry", "sites": ["ev-qz-port", "ev-qz-tianfei", "ev-qz-fanfang"],
+      "mentor": "npc-chen-po", "teaches": "yijing",
+      "market": { "goods": ["silk", "dehua-porcelain", "tea", "pepper"], "currency": "cash", "spread": 0.18 },
+      "shrine": { "faith": "folk", "services": ["bless", "sanctuary"] },
+      "specialty": "dehua-porcelain", "calendars": ["chinese", "islamic"]
+    },
+    {
+      "id": "khanbaliq", "map": "khanbaliq", "name": { "zh": "大都（汗八里）", "en": "Cambaluc" },
+      "band": "china", "culture": "steppe", "faiths": ["buddhism", "nestorian", "islam", "daoism"], "tier": "metropolis",
+      "art": "city-khanbaliq-entry",
+      "brief": { "zh": "大汗的冬都，方城十二门，夜里击钟之后无人得在街上行走。宫里同时养着景教士、萨满、番僧与占星家——他们各说各的，大汗都听。",
+                 "en": "The Khan's winter capital: a square city with twelve gates, and after the night bell no one may walk the streets. The palace keeps Nestorian priests, shamans, lamas and astrologers all at once — each says his own thing, and the Khan listens to all of them." },
+      "entry": "ev-khanbaliq-entry", "sites": ["ev-kb-audience", "ev-kb-astrologers", "ev-kb-paper-money"],
+      "mentor": "npc-shen-wu", "teaches": "bazi",
+      "market": { "goods": ["silk", "furs", "tea", "jade"], "currency": "chao-note", "spread": 0.11 },
+      "shrine": { "faith": "buddhism", "services": ["bless", "study", "convert"] },
+      "specialty": "khan-paiza", "calendars": ["chinese", "mongol", "islamic"]
+    }
+  ]
+}

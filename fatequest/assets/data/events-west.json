@@ -1,0 +1,506 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §6 事件表. Every choice MUST carry either `then` or both `pass` and `fail`; js/bof/db.js refuses to load an event whose choice resolves to nothing. That rule is what keeps a chosen option from dropping the story.",
+  "events": [
+    {
+      "id": "ev-venice-entry", "kind": "entry", "city": "venice", "once": true,
+      "title": { "zh": "里亚尔托的早晨", "en": "Morning at the Rialto" }, "art": "city-venice-entry",
+      "body": { "zh": "船坞日夜响着斧凿之声。父亲和叔父已经把圣墓的灯油封进铅罐，教皇的书信裹了三层油布——和家族的名誉一起塞进了行囊。你十七岁，从未出过海。",
+                "en": "The yards ring with hammers day and night. Your father and uncle have sealed the oil from the Holy Sepulchre in lead and wrapped the Pope's letters in three layers of oilcloth — packed in with the family name. You are seventeen and have never been to sea." },
+      "choices": [
+        { "id": "listen", "label": { "zh": "站在桥上听商人说话", "en": "Stand on the bridge and listen to the merchants" },
+          "then": { "text": { "zh": "你听了一上午。有人在骂阿卡的关税，有人在说黑海的粮价——两句话之间，你知道了往东有两条路，一条走海，一条经君士坦丁堡。",
+                              "en": "You listen all morning. One man curses the customs at Acre, another quotes Black Sea grain — and between the two sentences you learn that east means two roads: one by sea, one through Constantinople." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-venice-acre" }, { "op": "revealRoute", "id": "rt-venice-constantinople" }, { "op": "codex", "id": "cx-rialto" }] } },
+        { "id": "seal", "label": { "zh": "去公证处把契约盖印", "en": "Go and get the contract sealed" },
+          "needs": { "coins": 4 },
+          "then": { "text": { "zh": "四个达克特换一枚蜡印和两个证人。叔父说这是全威尼斯最便宜的保险。",
+                              "en": "Four ducats buys one wax seal and two witnesses. Your uncle calls it the cheapest insurance in Venice." },
+                    "effects": [{ "op": "coins", "v": -4 }, { "op": "item", "id": "sealed-contract" }, { "op": "rep", "city": "venice", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-venice-rialto", "kind": "site", "city": "venice", "once": true,
+      "title": { "zh": "里亚尔托市集", "en": "The Rialto Market" }, "art": "site-venice-rialto",
+      "body": { "zh": "世界的秤在这里。塞浦路斯的棉、法兰西的呢绒、从亚历山大转口的胡椒挤在一条桥上。价钱每天变两次，谁先知道谁赚钱。",
+                "en": "The scales of the world sit here: Cypriot cotton, Frankish wool and pepper trans-shipped from Alexandria, all crowded onto one bridge. Prices move twice a day, and whoever hears first eats." },
+      "choices": [
+        { "id": "buy-glass", "label": { "zh": "买一箱穆拉诺玻璃", "en": "Buy a case of Murano glass" },
+          "needs": { "coins": 8 },
+          "then": { "text": { "zh": "玻璃匠不肯讲他的配方，但肯讲哪些地方买他的货：开罗、大都。「越远越贵，只要不碎。」",
+                              "en": "The glassmaker will not discuss his formula but is happy to discuss his buyers: Cairo, Cambaluc. \"The further it goes the more it fetches — provided it arrives.\"" },
+                    "effects": [{ "op": "coins", "v": -8 }, { "op": "goods", "id": "murano-glass", "v": 1 }, { "op": "revealCity", "id": "cairo" }] } },
+        { "id": "ask-pepper", "label": { "zh": "打听胡椒是从哪儿来的", "en": "Ask where the pepper actually comes from" },
+          "then": { "text": { "zh": "「亚历山大。」——「亚历山大之前呢？」他笑了：「小子，那要问会说阿拉伯话的人。不过我可以告诉你名字：古里。」",
+                              "en": "\"Alexandria.\" — \"And before Alexandria?\" He laughs. \"For that, boy, you want a man who speaks Arabic. But I can give you the name: Calicut.\"" },
+                    "effects": [{ "op": "revealCity", "id": "calicut" }, { "op": "codex", "id": "cx-pepper-road" }, { "op": "fate", "id": "wealth", "v": 1 }] } },
+        { "id": "pickpocket", "label": { "zh": "追那个撞了你的人", "en": "Chase the man who bumped into you" },
+          "divination": "lots",
+          "pass": { "text": { "zh": "你在鱼市口把他堵住。他还回了钱袋，还多给了一句：「往东走的话，阿卡的热那亚区别去。」",
+                              "en": "You corner him at the fish market. He returns the purse and throws in a sentence: \"If you're going east — stay out of the Genoese quarter at Acre.\"" },
+                    "effects": [{ "op": "flag", "id": "acre-warned" }, { "op": "fate", "id": "travel", "v": 1 }] },
+          "fail": { "text": { "zh": "你追丢了。钱袋轻了三个达克特，市集上没有人抬头看你——这本身就是一课。",
+                              "en": "You lose him. The purse is three ducats lighter and not one person in the market looks up — which is itself the lesson." },
+                    "effects": [{ "op": "coins", "v": -3 }, { "op": "fate", "id": "rapport", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-venice-arsenal", "kind": "site", "city": "venice", "once": true,
+      "title": { "zh": "兵工厂", "en": "The Arsenal" }, "art": "site-venice-arsenal",
+      "body": { "zh": "国家的船厂，外人不得入内。围墙外能听见里面的号子——据说一天能装配出一条桨帆船。守门的是你父亲的旧识。",
+                "en": "The state yard; outsiders are not admitted. From outside the wall you can hear the work chants — they say a galley can be assembled here in a day. The gatekeeper knew your father." },
+      "choices": [
+        { "id": "in", "label": { "zh": "报出父亲的名字", "en": "Give your father's name" },
+          "then": { "text": { "zh": "他放你进去看了半个时辰。你记住了两件事：桨帆船无风也能走；以及每年三月到十月才有定期船东去。",
+                              "en": "He lets you in for half an hour. Two things stay with you: a galley makes way without wind, and the eastward season runs March to October." },
+                    "effects": [{ "op": "codex", "id": "cx-galley" }, { "op": "flag", "id": "knows-sailing-season" }, { "op": "revealRoute", "id": "rt-venice-acre" }] } },
+        { "id": "wait", "label": { "zh": "在墙外等工人下工", "en": "Wait outside for the shift to end" },
+          "then": { "text": { "zh": "工人们出来时你请了一轮酒。醉话里有一条：热那亚人在君士坦丁堡对岸的加拉塔安顿下来了，从那儿走陆路进波斯更快。",
+                              "en": "You stand a round when the shift comes out. In the drunk talk: the Genoese have settled at Galata across from Constantinople, and from there the land road into Persia is faster." },
+                    "effects": [{ "op": "coins", "v": -2 }, { "op": "revealCity", "id": "constantinople" }, { "op": "revealRoute", "id": "rt-constantinople-tabriz" }, { "op": "revealCity", "id": "tabriz" }] } }
+      ]
+    },
+    {
+      "id": "ev-venice-marco-basilica", "kind": "site", "city": "venice", "once": true,
+      "title": { "zh": "圣马可堂", "en": "St Mark's" }, "art": "site-venice-basilica",
+      "body": { "zh": "出航前在圣马可前许愿，归航平安则献银灯——全城的规矩。奥索修士管着签筒，坐在侧廊里，看谁进来。",
+                "en": "Make a vow at St Mark's before sailing; give a silver lamp if you come home. That is the city's rule. Fra Orso keeps the lot-cylinder in the side aisle and watches who comes in." },
+      "choices": [
+        { "id": "vow", "label": { "zh": "许愿", "en": "Make the vow" },
+          "then": { "text": { "zh": "你许了愿。奥索在旁边说：「许愿的人回来的比不许愿的多——不是因为神，是因为许了愿的人会更小心。」",
+                              "en": "You make it. From the side Orso says: \"More of the ones who vow come back. Not because of God — because a man who has vowed takes more care.\"" },
+                    "effects": [{ "op": "rep", "city": "venice", "v": 2 }, { "op": "sticker", "id": "st-st-marks" }, { "op": "flag", "id": "vowed-at-st-marks" }] } },
+        { "id": "ask-orso", "label": { "zh": "问奥索修士签筒的事", "en": "Ask Fra Orso about the cylinder" },
+          "then": { "text": { "zh": "「你要问路。」他不抬头，「那先把问题说清楚。含糊的问题，签也答含糊。」——他愿意教你。",
+                              "en": "\"You want to ask about a road.\" He does not look up. \"Then state the question. A vague question gets a vague stick.\" He is willing to teach you." },
+                    "effects": [{ "op": "offerLearn", "id": "lots" }, { "op": "codex", "id": "cx-sortes" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-acre-entry", "kind": "entry", "city": "acre", "once": true,
+      "title": { "zh": "入阿卡", "en": "Into Acre" }, "art": "city-acre-entry",
+      "body": { "zh": "城墙里挤着比萨人、热那亚人、威尼斯人各自的区，彼此讲不同的话、收不同的税、走不同的门。你必须先选一道门。",
+                "en": "Inside one wall sit the Pisan, Genoese and Venetian quarters, each with its own speech, its own customs and its own gate. You must choose a gate before anything else." },
+      "choices": [
+        { "id": "venetian", "label": { "zh": "走威尼斯区的门", "en": "Take the Venetian gate" },
+          "then": { "text": { "zh": "同乡照顾同乡，税减了三成，但你从此在热那亚区不受欢迎。城里的事就是这样：选了一边就是选了一边。",
+                              "en": "Countrymen look after countrymen: a third off the duty, and from now on you are unwelcome in the Genoese quarter. That is how this city works — choosing a side is choosing a side." },
+                    "effects": [{ "op": "coins", "v": 3 }, { "op": "rep", "city": "acre", "v": 3 }, { "op": "flag", "id": "acre-venetian" }] } },
+        { "id": "neutral", "label": { "zh": "走主城门，照章纳税", "en": "Take the main gate and pay the full duty" },
+          "needs": { "coins": 5 },
+          "then": { "text": { "zh": "五个达克特，一张收据，谁也不欠。守门的书记多说了一句：「往东的商队在可汗客栈集合，不在这儿。」",
+                              "en": "Five ducats, one receipt, nobody owed. The clerk adds a line: \"The eastbound caravans muster at the khan, not here.\"" },
+                    "effects": [{ "op": "coins", "v": -5 }, { "op": "flag", "id": "acre-neutral" }, { "op": "revealRoute", "id": "rt-acre-damascus" }] } }
+      ]
+    },
+    {
+      "id": "ev-acre-legate", "kind": "site", "city": "acre", "once": true,
+      "title": { "zh": "教廷特使", "en": "The Papal Legate" }, "art": "site-acre-legate",
+      "body": { "zh": "特使在圣十字堂后面的院子里，正在等罗马的消息——教皇死了，新的还没选出来。他手里有你们要的东西，也有他自己的难处。",
+                "en": "The Legate waits in the yard behind Holy Cross for word from Rome: the Pope is dead and no successor chosen. He holds what you need, and a difficulty of his own." },
+      "choices": [
+        { "id": "wait", "label": { "zh": "等新教皇选出来", "en": "Wait for a new Pope" },
+          "then": { "text": { "zh": "你们等了两年。书信最后到手了，盖着新印——但东行的两年也没了。特使临别说：「你们等的是纸，纸等的是人。」",
+                              "en": "You wait two years. The letters come at last under a new seal — and two years of the road are gone with them. At parting the Legate says: \"You were waiting on paper. The paper was waiting on men.\"" },
+                    "effects": [{ "op": "days", "v": 730 }, { "op": "item", "id": "papal-letters" }, { "op": "rep", "band": "europe", "v": 5 }, { "op": "flag", "id": "has-papal-letters" }] } },
+        { "id": "go", "label": { "zh": "不等了，先走", "en": "Stop waiting and go" },
+          "then": { "text": { "zh": "特使给了你一封他自己的信——不如教皇的，但盖了印。「路上没有人分得清哪个印大。」",
+                              "en": "The Legate gives you a letter of his own — less than a Pope's, but sealed. \"On the road nobody can tell which seal is the bigger one.\"" },
+                    "effects": [{ "op": "item", "id": "letter-of-introduction" }, { "op": "fate", "id": "travel", "v": 2 }, { "op": "revealRoute", "id": "rt-acre-tabriz" }, { "op": "revealCity", "id": "tabriz" }] } },
+        { "id": "oil", "label": { "zh": "先去取圣墓的灯油", "en": "Fetch the oil from the Holy Sepulchre first" },
+          "needs": { "days": 20 },
+          "then": { "text": { "zh": "来回二十天，铅罐封好。大汗要的就是这个——他派人来讨了三次。",
+                              "en": "Twenty days there and back, the lead flask sealed. This is the thing the Khan asked for — he has sent for it three times." },
+                    "effects": [{ "op": "days", "v": 20 }, { "op": "item", "id": "sepulchre-oil" }, { "op": "flag", "id": "has-sepulchre-oil" }, { "op": "sticker", "id": "st-sepulchre" }] } }
+      ]
+    },
+    {
+      "id": "ev-acre-khan", "kind": "site", "city": "acre", "once": true,
+      "title": { "zh": "可汗客栈", "en": "The Caravanserai" }, "art": "site-acre-khan",
+      "body": { "zh": "商队在这里集合、拆散、重组。院子里有骆驼、账房、翻译，和二十个正在打听同一件事的人：今年往东哪条路是通的。",
+                "en": "Caravans muster here, break up and re-form. In the yard: camels, a counting-house, interpreters, and twenty men all asking one question — which eastern road is open this year." },
+      "choices": [
+        { "id": "buy-info", "label": { "zh": "买消息", "en": "Buy the answer" },
+          "needs": { "coins": 6 },
+          "then": { "text": { "zh": "六个达克特买到两句实话：北路的雪要到四月才化；大马士革的朝觐大队九月出发，跟着走最安全。",
+                              "en": "Six ducats buys two true sentences: the snow on the northern road does not clear until April, and the Damascus hajj caravan leaves in September — the safest company there is." },
+                    "effects": [{ "op": "coins", "v": -6 }, { "op": "revealRoute", "id": "rt-acre-tabriz" }, { "op": "revealRoute", "id": "rt-damascus-mecca" }, { "op": "revealCity", "id": "mecca" }, { "op": "codex", "id": "cx-hajj-caravan" }] } },
+        { "id": "work", "label": { "zh": "替商队干三天活换消息", "en": "Work the yard three days instead" },
+          "then": { "text": { "zh": "三天喂骆驼、搬货、听人吵架。你学会了辨认哪一队真要走、哪一队只是在等钱——这比消息更有用。",
+                              "en": "Three days feeding camels, shifting bales and listening to arguments. You learn to tell which caravan is really leaving from which is only waiting on money — worth more than any answer bought." },
+                    "effects": [{ "op": "days", "v": 3 }, { "op": "fate", "id": "travel", "v": 2 }, { "op": "revealRoute", "id": "rt-acre-tabriz" }, { "op": "language", "id": "arabic" }] } }
+      ]
+    },
+    {
+      "id": "ev-acre-quay", "kind": "site", "city": "acre", "once": true,
+      "title": { "zh": "码头", "en": "The Quay" }, "art": "site-acre-quay",
+      "body": { "zh": "糖从内地的甘蔗园运下来，装船去威尼斯。搬运工里有一个说亚美尼亚语的人，一直在看你。",
+                "en": "Sugar comes down from the inland plantations and goes aboard for Venice. Among the porters is a man speaking Armenian who has been watching you." },
+      "choices": [
+        { "id": "sugar", "label": { "zh": "买糖", "en": "Buy sugar" },
+          "needs": { "coins": 6 },
+          "then": { "text": { "zh": "阿卡的糖霜在威尼斯值四倍——如果它不受潮。船工说：舱底不要放，桅边不要放。",
+                              "en": "Acre loaf-sugar fetches four times as much in Venice — if it stays dry. The hands tell you: not in the bilge, not by the mast." },
+                    "effects": [{ "op": "coins", "v": -6 }, { "op": "goods", "id": "acre-sugar", "v": 1 }, { "op": "codex", "id": "cx-stowage" }] } },
+        { "id": "armenian", "label": { "zh": "回看那个亚美尼亚人", "en": "Look back at the Armenian" },
+          "then": { "text": { "zh": "他走过来，用生硬的意大利语说：「小亚美尼亚，阿雅斯港。从那儿进去，比从这儿快十天，也没有热那亚人。」",
+                              "en": "He comes over and says in stiff Italian: \"Little Armenia. Ayas. Go in that way and you save ten days on this — and there are no Genoese.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-acre-tabriz" }, { "op": "fate", "id": "rapport", "v": 1 }, { "op": "flag", "id": "ayas-hint" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-constantinople-entry", "kind": "entry", "city": "constantinople", "once": true,
+      "title": { "zh": "金角湾", "en": "The Golden Horn" }, "art": "city-constantinople-entry",
+      "body": { "zh": "锁链一放，黑海的粮与皮毛就进来。拉丁人刚被赶走，希腊人回来了，热那亚人在对岸的加拉塔安顿下来——三边都觉得自己吃了亏。",
+                "en": "Drop the chain and the grain and furs of the Black Sea come in. The Latins have just been driven out, the Greeks are back, the Genoese have settled at Galata across the water — and all three consider themselves cheated." },
+      "choices": [
+        { "id": "greek", "label": { "zh": "在希腊城区落脚", "en": "Lodge in the Greek city" },
+          "then": { "text": { "zh": "房东问了你三次是不是拉丁人。第三次之后他不再问，也不再收你多余的钱。",
+                              "en": "Your landlord asks three times whether you are a Latin. After the third he stops asking, and stops overcharging." },
+                    "effects": [{ "op": "rep", "city": "constantinople", "v": 2 }, { "op": "flag", "id": "cp-greek-side" }] } },
+        { "id": "galata", "label": { "zh": "去加拉塔的热那亚区", "en": "Cross to the Genoese at Galata" },
+          "then": { "text": { "zh": "热那亚人做生意快，问得也少。他们直接给你看了一张往东的账目：从这儿到大不里士，四十天，走陆路。",
+                              "en": "The Genoese trade fast and ask little. They simply show you a ledger for the eastern road: forty days from here to Tabriz, overland." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-constantinople-tabriz" }, { "op": "revealCity", "id": "tabriz" }, { "op": "rep", "city": "constantinople", "v": -1 }] } }
+      ]
+    },
+    {
+      "id": "ev-cp-galata", "kind": "site", "city": "constantinople", "once": true,
+      "title": { "zh": "加拉塔", "en": "Galata" }, "art": "site-cp-galata",
+      "body": { "zh": "热那亚人的城中之城，塔楼比对岸的教堂还高。他们不管谁坐在皇位上，只管账目。",
+                "en": "A Genoese town within the town, its tower higher than the churches across the water. They do not mind who sits on the throne so long as the books balance." },
+      "choices": [
+        { "id": "credit", "label": { "zh": "开一张汇票", "en": "Open a bill of exchange" },
+          "needs": { "coins": 10 },
+          "then": { "text": { "zh": "十个达克特换一张纸，凭它在大不里士取钱——扣一成。「路上被抢的是纸，不是钱。」",
+                              "en": "Ten ducats for a piece of paper redeemable at Tabriz, less a tenth. \"On the road they rob the paper, not the money.\"" },
+                    "effects": [{ "op": "coins", "v": -10 }, { "op": "item", "id": "bill-of-exchange" }, { "op": "codex", "id": "cx-bill" }] } },
+        { "id": "blacksea", "label": { "zh": "打听黑海的路", "en": "Ask about the Black Sea road" },
+          "then": { "text": { "zh": "「北路？走塔纳，过草原，四个月到中国。」他顿了顿：「不过那条路要看谁在打仗。」",
+                              "en": "\"The northern way? Tana, then the steppe, four months to Cathay.\" He pauses. \"Depends who is at war that year, mind.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-steppe-road" }, { "op": "revealCity", "id": "samarkand" }, { "op": "fate", "id": "travel", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-cp-hagia", "kind": "site", "city": "constantinople", "once": true,
+      "title": { "zh": "圣智堂", "en": "Hagia Sophia" }, "art": "site-cp-hagia",
+      "body": { "zh": "拉丁人占城的六十年里，这里做过他们的教堂。希腊人回来后重新祝圣了一遍，但穹顶下的马赛克有几块再也补不回去。",
+                "en": "For sixty years of Latin rule this was their church. The Greeks re-consecrated it when they came back, but a few of the mosaics under the dome will never be replaced." },
+      "choices": [
+        { "id": "pray", "label": { "zh": "在穹顶下站一会儿", "en": "Stand a while under the dome" },
+          "then": { "text": { "zh": "光从四十扇窗进来，落在地上像水。你在这里想明白了一件跟信仰无关的事：所有大的东西都是有人一块一块搬来的。",
+                              "en": "Light comes through forty windows and lies on the floor like water. What you work out here has nothing to do with faith: everything large was carried in, piece by piece, by somebody." },
+                    "effects": [{ "op": "rep", "city": "constantinople", "v": 2 }, { "op": "sticker", "id": "st-hagia" }, { "op": "fate", "id": "rapport", "v": 1 }] } },
+        { "id": "theodoros", "label": { "zh": "找那个在角落抄书的人", "en": "Approach the man copying in the corner" },
+          "then": { "text": { "zh": "「教会不许我做这个。」他把书往身后一推，「所以我们讲的是历法。听清楚了：历法。」",
+                              "en": "\"The Church forbids me this.\" He pushes the book behind him. \"So what we are discussing is the calendar. Be clear about that: the calendar.\"" },
+                    "effects": [{ "op": "offerLearn", "id": "astrology" }, { "op": "codex", "id": "cx-greek-tables" }] } }
+      ]
+    },
+    {
+      "id": "ev-cp-bookstalls", "kind": "site", "city": "constantinople", "once": true,
+      "title": { "zh": "书摊", "en": "The Book Stalls" }, "art": "site-cp-books",
+      "body": { "zh": "拉丁人走的时候带不走全部，剩下的在街边论斤卖。有波斯星表的希腊译本，有航海指南，也有一堆没人要的讲道集。",
+                "en": "The Latins could not carry everything, and what is left is sold by weight in the street. Greek translations of Persian star-tables, a pilot's book, and a great heap of sermons nobody wants." },
+      "choices": [
+        { "id": "pilot", "label": { "zh": "买那本航海指南", "en": "Buy the pilot's book" },
+          "needs": { "coins": 5 },
+          "then": { "text": { "zh": "里面记着爱琴海每一处补水点，页边还有前主人的批注：「此港六月后不可泊，风从山后来。」",
+                              "en": "Every watering place in the Aegean, and a previous owner's marginal note: \"After June do not anchor here — the wind comes over the hill.\"" },
+                    "effects": [{ "op": "coins", "v": -5 }, { "op": "item", "id": "pilot-book" }, { "op": "revealRoute", "id": "rt-acre-constantinople" }, { "op": "codex", "id": "cx-portolan" }] } },
+        { "id": "tables", "label": { "zh": "翻那本星表", "en": "Leaf through the star-tables" },
+          "then": { "text": { "zh": "希腊字写的波斯数字。你看不懂，但记住了封面上的地名：马拉盖。有人告诉你那在大不里士城外。",
+                              "en": "Persian numbers in Greek letters. You cannot read it, but you keep the place-name on the cover: Maragha. Someone tells you that is outside Tabriz." },
+                    "effects": [{ "op": "revealCity", "id": "tabriz" }, { "op": "flag", "id": "knows-maragha" }, { "op": "codex", "id": "cx-maragha" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-tangier-entry", "kind": "entry", "city": "tangier", "once": true,
+      "title": { "zh": "离家", "en": "Leaving" }, "art": "city-tangier-entry",
+      "body": { "zh": "你二十一岁，独自上路，家里没有同行的人。母亲送到城门口就不肯再走了。海峡对岸的山看得清清楚楚，但你要往东，不是往北。",
+                "en": "You are twenty-one and going alone; no one from the family is coming. Your mother stops at the gate and will not walk further. The mountains across the strait are perfectly clear — but your road is east, not north." },
+      "choices": [
+        { "id": "vow", "label": { "zh": "立誓不走回头路", "en": "Swear not to travel the same road twice" },
+          "then": { "text": { "zh": "你在城门口立了誓：绝不两次走同一条路。这句话后来让你多绕了半个世界，也让你看见了别人看不见的东西。",
+                              "en": "At the gate you swear it: never the same road twice. That sentence later costs you half a world of detours — and shows you what nobody else saw." },
+                    "effects": [{ "op": "flag", "id": "vow-no-repeat" }, { "op": "fate", "id": "travel", "v": 3 }, { "op": "sticker", "id": "st-departure" }] } },
+        { "id": "quiet", "label": { "zh": "什么也不说就走", "en": "Go without saying anything" },
+          "then": { "text": { "zh": "你没有回头。走出两里地才发现自己一直在数步子——从这天起你一直在数，数了二十九年。",
+                              "en": "You do not look back. Two miles out you notice you have been counting your steps — and you go on counting them for twenty-nine years." },
+                    "effects": [{ "op": "fate", "id": "travel", "v": 2 }, { "op": "fate", "id": "rapport", "v": 1 }, { "op": "flag", "id": "counts-steps" }] } }
+      ]
+    },
+    {
+      "id": "ev-tangier-farewell", "kind": "site", "city": "tangier", "once": true,
+      "title": { "zh": "送行", "en": "The Sending-off" }, "art": "site-tangier-farewell",
+      "body": { "zh": "邻里按规矩来送，带着枣、饼和一小袋盐。他们问的都是同一件事：几时回来。你答不上来。",
+                "en": "The neighbours come as custom requires, with dates, bread and a small bag of salt. They all ask the same thing: when will you be back. You have no answer." },
+      "choices": [
+        { "id": "accept", "label": { "zh": "全收下", "en": "Accept it all" },
+          "then": { "text": { "zh": "收下就是欠下。你把每个人的名字记在纸上——二十九年后你回来时，这张纸上只剩四个人还活着。",
+                              "en": "To accept is to owe. You write down every name — and when you come back twenty-nine years later, four of them are still alive." },
+                    "effects": [{ "op": "goods", "id": "dates", "v": 2 }, { "op": "rep", "city": "tangier", "v": 4 }, { "op": "item", "id": "list-of-names" }] } },
+        { "id": "salt", "label": { "zh": "只收那袋盐", "en": "Take only the salt" },
+          "then": { "text": { "zh": "「盐够了。」你说。老人点头：「知道自己带得动多少的人走得远。」他给了你一个名字：开罗的一位法官。",
+                              "en": "\"The salt is enough,\" you say. An old man nods: \"Those who know what they can carry go furthest.\" He gives you a name — a judge in Cairo." },
+                    "effects": [{ "op": "item", "id": "letter-of-introduction" }, { "op": "revealCity", "id": "cairo" }, { "op": "fate", "id": "rapport", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-tangier-qadi", "kind": "site", "city": "tangier", "once": true,
+      "title": { "zh": "法官的院子", "en": "The Qadi's Courtyard" }, "art": "site-tangier-qadi",
+      "body": { "zh": "你在这里读了七年法学。老法官把你叫来，不是训话，是给你一份名单——从这里到麦加，每一站他认识的人。",
+                "en": "Seven years of law in this courtyard. The old qadi calls you in — not to lecture but to hand you a list: everyone he knows between here and Mecca, stage by stage." },
+      "choices": [
+        { "id": "take", "label": { "zh": "接过名单", "en": "Take the list" },
+          "then": { "text": { "zh": "「他们不会给你钱，」他说，「但会给你住处、消息，和下一站的名字。这比钱耐用。」",
+                              "en": "\"They will not give you money,\" he says. \"They will give you a roof, the news, and the name of the next man. That lasts longer than money.\"" },
+                    "effects": [{ "op": "item", "id": "chain-of-names" }, { "op": "revealRoute", "id": "rt-tangier-cairo" }, { "op": "revealCity", "id": "cairo" }, { "op": "rep", "band": "west_asia", "v": 3 }] } },
+        { "id": "ask-law", "label": { "zh": "问他能否在路上继续读书", "en": "Ask whether you can go on studying on the road" },
+          "then": { "text": { "zh": "「每一座大城都有学圈，坐下就是学生。」他补了一句：「但你要能听懂三种口音的阿拉伯语。」",
+                              "en": "\"Every great city has its circles. Sit down and you are a student.\" He adds: \"Provided you can follow Arabic in three accents.\"" },
+                    "effects": [{ "op": "language", "id": "arabic" }, { "op": "codex", "id": "cx-madrasa" }, { "op": "fate", "id": "rapport", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-tangier-harbour", "kind": "site", "city": "tangier", "once": true,
+      "title": { "zh": "港口", "en": "The Harbour" }, "art": "site-tangier-harbour",
+      "body": { "zh": "热那亚的船停在外锚地，本地的小船在岸边卸蜡和皮革。有一队马格里布朝觐者在等风——他们走陆路，沿海岸东行。",
+                "en": "Genoese ships lie at the outer anchorage while local boats land wax and leather. A Maghribi pilgrim band waits on the weather; they go overland, east along the coast." },
+      "choices": [
+        { "id": "join", "label": { "zh": "跟朝觐队走", "en": "Join the pilgrim band" },
+          "then": { "text": { "zh": "他们不收钱，只要你会诵经、肯抬东西。慢，但一路有饭吃，也没有人抢朝觐的人。",
+                              "en": "They take no fare, only that you can recite and will carry. Slow — but you eat every day, and nobody robs pilgrims." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-tangier-cairo" }, { "op": "flag", "id": "with-pilgrims" }, { "op": "rep", "band": "west_asia", "v": 2 }] } },
+        { "id": "trade", "label": { "zh": "买一批软革带走", "en": "Buy Maghribi leather to carry" },
+          "needs": { "coins": 7 },
+          "then": { "text": { "zh": "马格里布的软革在开罗、威尼斯都值钱，轻，不怕颠。卖家说：「别让它受潮，别让它压平。」",
+                              "en": "Maghribi morocco sells in Cairo and Venice both; it is light and travels well. The seller: \"Keep it dry, and never let it be pressed flat.\"" },
+                    "effects": [{ "op": "coins", "v": -7 }, { "op": "goods", "id": "maghribi-leather", "v": 1 }, { "op": "fate", "id": "wealth", "v": 1 }] } }
+      ]
+    },
+
+    {
+      "id": "ev-cairo-entry", "kind": "entry", "city": "cairo", "once": true,
+      "title": { "zh": "入开罗", "en": "Into Cairo" }, "art": "city-cairo-entry",
+      "body": { "zh": "人多得像是全世界都搬来了。街上同时有骆驼、驴、送水的人和一队马穆鲁克骑兵，谁也不给谁让路，但谁也没撞上。",
+                "en": "So crowded it seems the world moved in. Camels, donkeys, water-carriers and a file of Mamluk cavalry all in one street, none of them giving way and none of them colliding." },
+      "choices": [
+        { "id": "azhar", "label": { "zh": "直接去爱资哈尔", "en": "Go straight to al-Azhar" },
+          "then": { "text": { "zh": "你在一个学圈边上坐下，没人问你是谁。三天后有人递给你一杯水，问你从哪里来——这就算入了圈。",
+                              "en": "You sit at the edge of a circle and nobody asks who you are. Three days later someone hands you a cup of water and asks where you are from. That is admission." },
+                    "effects": [{ "op": "rep", "city": "cairo", "v": 3 }, { "op": "flag", "id": "azhar-known" }, { "op": "days", "v": 3 }] } },
+        { "id": "karimi", "label": { "zh": "先找卡里米商人", "en": "Find the Karimi merchants first" },
+          "then": { "text": { "zh": "他们的账房在市场后面。带一封介绍信来的人可以坐下；没有信的人可以站着说三句话。",
+                              "en": "Their counting-house is behind the market. A man with a letter may sit down; a man without one may stand and say three sentences." },
+                    "effects": [{ "op": "revealCity", "id": "calicut" }, { "op": "revealRoute", "id": "rt-cairo-mecca" }, { "op": "codex", "id": "cx-karimi" }] } }
+      ]
+    },
+    {
+      "id": "ev-cairo-azhar", "kind": "site", "city": "cairo", "once": true,
+      "title": { "zh": "爱资哈尔", "en": "Al-Azhar" }, "art": "site-cairo-azhar",
+      "body": { "zh": "学圈从马格里布排到呼罗珊，每一圈都在讲不同的书。有一位讲师停下来看着你——他认出你的口音是丹吉尔的。",
+                "en": "The circles run from Maghribi to Khurasani, each on a different book. One teacher stops and looks at you: he has placed your accent as Tangier." },
+      "choices": [
+        { "id": "study", "label": { "zh": "留下来读一季", "en": "Stay and study a season" },
+          "needs": { "days": 60 },
+          "then": { "text": { "zh": "六十天。你拿到一份可以在任何一座伊斯兰城市出示的许可——它不值钱，但它省掉了很多解释。",
+                              "en": "Sixty days. You leave with a licence you can show in any Muslim city. It is worth nothing and saves an enormous amount of explaining." },
+                    "effects": [{ "op": "days", "v": 60 }, { "op": "item", "id": "ijaza" }, { "op": "rep", "band": "west_asia", "v": 6 }, { "op": "fate", "id": "rapport", "v": 2 }] } },
+        { "id": "listen-hajj", "label": { "zh": "只打听朝觐的路", "en": "Only ask about the road to Mecca" },
+          "then": { "text": { "zh": "「两条：跟埃及大队走东部沙漠到红海，再渡到吉达；或者北上大马士革，跟叙利亚大队。后者慢一个月，但路上有水。」",
+                              "en": "\"Two. With the Egyptian caravan across the eastern desert to the Red Sea and over to Jidda; or north to Damascus and out with the Syrian one. The second is a month slower and has water on it.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-cairo-mecca" }, { "op": "revealRoute", "id": "rt-cairo-damascus" }, { "op": "revealCity", "id": "damascus" }, { "op": "revealCity", "id": "mecca" }] } }
+      ]
+    },
+    {
+      "id": "ev-cairo-karimi", "kind": "site", "city": "cairo", "once": true,
+      "title": { "zh": "卡里米商人的账房", "en": "The Karimi Counting-House" }, "art": "site-cairo-karimi",
+      "body": { "zh": "他们的钱能在印度洋两岸兑现。桌上摊着一张海图，标着从吉达到古里的每一处锚地——你不该看见它。",
+                "en": "Their paper is good on both shores of the Indian Ocean. A chart lies open on the table, every anchorage from Jidda to Calicut marked — you were not meant to see it." },
+      "choices": [
+        { "id": "look", "label": { "zh": "假装没看见，问别的", "en": "Pretend you did not see it and ask something else" },
+          "then": { "text": { "zh": "掌柜很满意。他主动讲了季风：十一月到三月往东，四月到九月往西，错了季节船就在港里等半年。",
+                              "en": "The clerk is pleased. He volunteers the monsoon: November to March eastward, April to September west; miss it and the ship sits in port half a year." },
+                    "effects": [{ "op": "codex", "id": "cx-monsoon" }, { "op": "flag", "id": "knows-monsoon" }, { "op": "rep", "city": "cairo", "v": 3 }] } },
+        { "id": "buy-chart", "label": { "zh": "开口买那张海图", "en": "Offer to buy the chart" },
+          "needs": { "coins": 14 },
+          "divination": "geomancy",
+          "pass": { "text": { "zh": "你先在沙盘上给他起了一课，起出的是「道路」。他笑了：「懂行的人不能骗。」——图给你抄了一份。",
+                              "en": "You cast for him in the sand tray first and turn up Via. He laughs: \"One does not cheat a man of the craft.\" A copy of the chart is made for you." },
+                    "effects": [{ "op": "coins", "v": -14 }, { "op": "item", "id": "sea-chart" }, { "op": "revealRoute", "id": "rt-calicut-mecca" }, { "op": "revealCity", "id": "calicut" }, { "op": "codex", "id": "cx-monsoon" }] },
+          "fail": { "text": { "zh": "他把图卷起来：「这张图是三代人跑出来的，不卖。」——但他给了你一个亚丁的名字，算是安慰。",
+                              "en": "He rolls the chart up. \"Three generations sailed that. It is not for sale.\" He gives you a name in Aden by way of consolation." },
+                    "effects": [{ "op": "revealCity", "id": "calicut" }, { "op": "fate", "id": "rapport", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-cairo-nilometer", "kind": "site", "city": "cairo", "once": true,
+      "title": { "zh": "水位尺", "en": "The Nilometer" }, "art": "site-cairo-nilometer",
+      "body": { "zh": "河心岛上的一根石柱，刻着尺度。水到哪一格，全国的税就定在哪一档——今年的水还差两指。",
+                "en": "A pillar on the island, marked in cubits. Where the water stands decides the year's tax for the whole country — and this year it is two fingers short." },
+      "choices": [
+        { "id": "watch", "label": { "zh": "等到水位公布", "en": "Wait for the reading to be announced" },
+          "needs": { "days": 7 },
+          "then": { "text": { "zh": "七天后水涨足了。全城的粮价当天跌了三成——你要是先买了粮，这天你会很难过。",
+                              "en": "Seven days and the water comes up. Grain drops by a third across the city that day — which would have been painful had you bought grain first." },
+                    "effects": [{ "op": "days", "v": 7 }, { "op": "codex", "id": "cx-nilometer" }, { "op": "fate", "id": "wealth", "v": 2 }, { "op": "flag", "id": "saw-flood" }] } },
+        { "id": "maghribi", "label": { "zh": "找沙盘边那个马格里布人", "en": "Approach the Maghribi at the sand tray" },
+          "then": { "text": { "zh": "他在石柱边替人算今年的水。「你数得清吗？」他抬头，「数不清才对。手要快过念头。」",
+                              "en": "He is casting the flood for passers-by beside the pillar. \"Could you count them?\" he looks up. \"Good — you shouldn't. The hand must outrun the thought.\"" },
+                    "effects": [{ "op": "offerLearn", "id": "geomancy" }, { "op": "codex", "id": "cx-raml" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-damascus-entry", "kind": "entry", "city": "damascus", "once": true,
+      "title": { "zh": "入大马士革", "en": "Into Damascus" }, "art": "city-damascus-entry",
+      "body": { "zh": "从沙漠里进来的人，进城第一件事都是找水声。绿洲之城的水渠在墙里流，走到哪里都听得见。",
+                "en": "Everyone arriving out of the desert does the same thing first: listens for water. In this oasis city the channels run inside the walls and you hear them wherever you go." },
+      "choices": [
+        { "id": "mosque", "label": { "zh": "先去大寺的院子", "en": "Go first to the courtyard of the great mosque" },
+          "then": { "text": { "zh": "院子里有人读书、睡觉、争论，谁也不管谁。你在柱廊下睡了一夜，没人来收钱——这在别处不会发生。",
+                              "en": "In the courtyard men read, sleep and argue and no one interferes. You sleep a night under the colonnade and nobody asks for money — which does not happen elsewhere." },
+                    "effects": [{ "op": "rep", "city": "damascus", "v": 3 }, { "op": "flag", "id": "slept-umayyad" }] } },
+        { "id": "caravan", "label": { "zh": "直奔商队大院问朝觐队", "en": "Go straight to the caravan yard about the hajj" },
+          "then": { "text": { "zh": "「叙利亚大队九月出发，一年一次。」管事看了你一眼，「现在是{季}——你自己算。」",
+                              "en": "\"The Syrian caravan leaves in September. Once a year.\" The yard-master looks at you. \"It is now what it is. You do the arithmetic.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-damascus-mecca" }, { "op": "revealCity", "id": "mecca" }, { "op": "codex", "id": "cx-hajj-caravan" }] } }
+      ]
+    },
+    {
+      "id": "ev-dam-umayyad", "kind": "site", "city": "damascus", "once": true,
+      "title": { "zh": "倭马亚大寺", "en": "The Umayyad Mosque" }, "art": "site-dam-umayyad",
+      "body": { "zh": "院子大得能装下一支商队。柱廊下有个人坐了二十年，从不主动开口——来找他的人多半睡不好。",
+                "en": "A courtyard big enough to hold a caravan. Under the colonnade sits a man who has been there twenty years and never speaks first. Most who come to him sleep badly." },
+      "choices": [
+        { "id": "sit", "label": { "zh": "在他旁边坐下", "en": "Sit down beside him" },
+          "then": { "text": { "zh": "他闭着眼说了第一句：「先去喝水。」你去了，回来他才问：「你先别说梦见了什么——先说醒来时手放在哪里。」",
+                              "en": "Eyes closed, he says the first line: \"Drink some water first.\" You do, and only then: \"Don't tell me the dream yet. Tell me where your hand was when you woke.\"" },
+                    "effects": [{ "op": "offerLearn", "id": "dream" }, { "op": "codex", "id": "cx-dream-kinds" }] } },
+        { "id": "ask-road", "label": { "zh": "问柱廊下的人东边的路", "en": "Ask the men under the colonnade about the eastern road" },
+          "then": { "text": { "zh": "三个人给了三条路，都指着东北。第四个人没说话，用手指在灰里画了一条——经巴格达，二十八天到大不里士。",
+                              "en": "Three men give three roads and all point northeast. A fourth says nothing and draws one in the dust with a finger: by Baghdad, twenty-eight days to Tabriz." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-damascus-tabriz" }, { "op": "revealCity", "id": "tabriz" }, { "op": "fate", "id": "travel", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-dam-steel", "kind": "site", "city": "damascus", "once": true,
+      "title": { "zh": "钢匠铺", "en": "The Steelworks" }, "art": "site-dam-steel",
+      "body": { "zh": "花纹钢的纹路是打出来的，不是刻的。铁料从印度来，工艺在这里——两边都不肯把自己的一半交出去。",
+                "en": "The watering in the steel is forged, not cut. The ingots come from India and the craft stays here; neither side will hand over its half." },
+      "choices": [
+        { "id": "buy", "label": { "zh": "买一把", "en": "Buy a blade" },
+          "needs": { "coins": 12 },
+          "then": { "text": { "zh": "十二个第纳尔。铁匠警告：过边界时最好裹进行李最底下——「这东西在有些地方算军械。」",
+                              "en": "Twelve dinars. The smith warns you to bury it at the bottom of the baggage at frontiers — \"in some places this counts as ordnance.\"" },
+                    "effects": [{ "op": "coins", "v": -12 }, { "op": "goods", "id": "damascus-steel", "v": 1 }, { "op": "flag", "id": "carrying-steel" }] } },
+        { "id": "ask-india", "label": { "zh": "问铁料从印度哪里来", "en": "Ask where in India the ingots come from" },
+          "then": { "text": { "zh": "「南边，海边的港。名字我念不准——古里？他们把铁装船，跟胡椒一起来。」",
+                              "en": "\"South. A port on the coast. I cannot say the name properly — Calicut? They ship it out with the pepper.\"" },
+                    "effects": [{ "op": "revealCity", "id": "calicut" }, { "op": "codex", "id": "cx-wootz" }, { "op": "fate", "id": "wealth", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-dam-caravan-yard", "kind": "site", "city": "damascus", "once": true,
+      "title": { "zh": "商队大院", "en": "The Caravan Yard" }, "art": "site-dam-caravan",
+      "body": { "zh": "朝觐大队一年一次，规模像一座会走路的城：驼、水囊、医生、法官、乐队，还有专门负责埋人的人。",
+                "en": "The hajj caravan goes once a year and moves like a walking city: camels, water-skins, physicians, a judge, musicians — and men whose job is burying the dead." },
+      "choices": [
+        { "id": "sign", "label": { "zh": "报名随队", "en": "Sign on with the caravan" },
+          "needs": { "coins": 6 },
+          "then": { "text": { "zh": "报了名，分到一头驼和一个水囊的份额。管事说：「掉队的人我们不回头找。记住前面那个人的背影。」",
+                              "en": "Signed on, allotted one camel's share and one water-skin. The yard-master: \"We do not turn back for stragglers. Learn the back of the man in front of you.\"" },
+                    "effects": [{ "op": "coins", "v": -6 }, { "op": "flag", "id": "hajj-enrolled" }, { "op": "revealRoute", "id": "rt-damascus-mecca" }, { "op": "rep", "band": "west_asia", "v": 3 }] } },
+        { "id": "hire", "label": { "zh": "在这里雇一个向导", "en": "Hire a guide here instead" },
+          "needs": { "coins": 9 },
+          "then": { "text": { "zh": "他要价九个第纳尔，条件是走他的路线。「大队安全，但大队走得慢，而且大队不去大不里士。」",
+                              "en": "Nine dinars, on condition you take his route. \"The caravan is safe, the caravan is slow, and the caravan does not go to Tabriz.\"" },
+                    "effects": [{ "op": "coins", "v": -9 }, { "op": "revealRoute", "id": "rt-damascus-tabriz" }, { "op": "revealCity", "id": "tabriz" }, { "op": "fate", "id": "travel", "v": 2 }] } }
+      ]
+    },
+
+    {
+      "id": "ev-mecca-entry", "kind": "entry", "city": "mecca", "once": true,
+      "title": { "zh": "入麦加", "en": "Into Mecca" }, "art": "city-mecca-entry",
+      "when": { "faiths": ["islam"] },
+      "body": { "zh": "在界石处换上两块无缝的白布，从此不能梳头、不能杀生、不能争吵。谷里的城看着比想象中小。",
+                "en": "At the boundary stone you put on two seamless white cloths; from here you may not comb your hair, take life, or quarrel. The city in the valley looks smaller than you had imagined." },
+      "choices": [
+        { "id": "enter", "label": { "zh": "进城", "en": "Enter" },
+          "then": { "text": { "zh": "从马格里布、印度、中亚、东非来的人在同一个院子里绕行，说着彼此听不懂的话做同一件事。你数了七圈就不数了。",
+                              "en": "People from the Maghrib, India, Central Asia and East Africa circle one court, doing a single thing in a dozen tongues. You count seven rounds and then stop counting." },
+                    "effects": [{ "op": "flag", "id": "pilgrimage" }, { "op": "rep", "band": "west_asia", "v": 8 }, { "op": "sticker", "id": "st-hajj" }] } }
+      ]
+    },
+    {
+      "id": "ev-mecca-entry-outsider", "kind": "entry", "city": "mecca", "once": true,
+      "title": { "zh": "界石之外", "en": "Outside the Boundary Stone" }, "art": "city-mecca-outside",
+      "when": { "notFaiths": ["islam"] },
+      "body": { "zh": "界石立在路边，字刻得很清楚：非穆斯林止步。守界的人不凶，只是把手一伸——这条规矩不是给你解释的。",
+                "en": "The boundary stone stands by the road, plainly cut: no non-Muslim beyond this point. The warden is not unfriendly; he simply puts out a hand. The rule is not being explained to you." },
+      "choices": [
+        { "id": "turn", "label": { "zh": "转身", "en": "Turn back" },
+          "then": { "text": { "zh": "你在界外的镇上住了三天，听回来的人讲城里的事。有人愿意替你捎话，也有人愿意替你带一瓶水回来。",
+                              "en": "You stay three days in the town outside the line, listening to those coming back. One man offers to carry a message for you; another offers to bring you a flask of water." },
+                    "effects": [{ "op": "days", "v": 3 }, { "op": "goods", "id": "zamzam-flask", "v": 1 }, { "op": "codex", "id": "cx-boundary" }, { "op": "revealRoute", "id": "rt-mecca-hormuz" }] } },
+        { "id": "convert-ask", "label": { "zh": "问怎样才能进去", "en": "Ask what it would take to go in" },
+          "then": { "text": { "zh": "「说三遍那句话，当着两个证人。」他补了一句，语气不变：「但别为了进门说。进了门他们看得出来。」",
+                              "en": "\"Say the sentence three times before two witnesses.\" He adds, in the same tone: \"But do not say it to get in. Once you are in, they can tell.\"" },
+                    "effects": [{ "op": "flag", "id": "shahada-offered" }, { "op": "codex", "id": "cx-conversion" }, { "op": "fate", "id": "rapport", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-mecca-tawaf", "kind": "site", "city": "mecca", "once": true,
+      "title": { "zh": "环行", "en": "The Circling" }, "art": "site-mecca-tawaf",
+      "when": { "flags": ["pilgrimage"] },
+      "body": { "zh": "人挤得几乎脚不沾地。你旁边是一个印度人，前面是一个东非人，后面有人用你听不懂的话在哭。",
+                "en": "So packed your feet barely touch. An Indian beside you, an East African in front, and behind you someone weeping in a language you do not know." },
+      "choices": [
+        { "id": "ask-india", "label": { "zh": "问那个印度人他是怎么来的", "en": "Ask the Indian how he got here" },
+          "then": { "text": { "zh": "「古里上船，二十四天到吉达。腊月走，三月回。」他说得像在讲一趟集市。",
+                              "en": "\"Ship at Calicut, twenty-four days to Jidda. Out in the twelfth month, back in the third.\" He says it the way other men describe a trip to market." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-calicut-mecca" }, { "op": "revealCity", "id": "calicut" }, { "op": "codex", "id": "cx-monsoon" }] } },
+        { "id": "silent", "label": { "zh": "什么也不问", "en": "Ask nothing" },
+          "then": { "text": { "zh": "你走完了七圈。多年以后你记不清那天说了什么，只记得脚下的石头是凉的，而所有人都朝着同一个方向走。",
+                              "en": "You finish the seven rounds. Years later you cannot recall a word said that day — only that the stone underfoot was cool and that everyone was walking the same way." },
+                    "effects": [{ "op": "fate", "id": "rapport", "v": 3 }, { "op": "sticker", "id": "st-tawaf" }, { "op": "flag", "id": "hajj-complete" }] } }
+      ]
+    },
+    {
+      "id": "ev-mecca-scholars", "kind": "site", "city": "mecca", "once": true,
+      "title": { "zh": "学者们", "en": "The Scholars" }, "art": "site-mecca-scholars",
+      "body": { "zh": "朝觐月里全世界的学者都在这儿。有人从德里来，有人从非斯来，有人从泉州来——最后这个让所有人都围了上去。",
+                "en": "In the pilgrimage month the world's scholars are all here. One from Delhi, one from Fes, and one from Zayton — and it is the last who draws the crowd." },
+      "choices": [
+        { "id": "zayton", "label": { "zh": "去问那个泉州来的人", "en": "Go and ask the man from Zayton" },
+          "then": { "text": { "zh": "「刺桐有清真寺，有番坊，宣礼声跟妈祖庙的锣声隔街相闻。」他画了一条线：古里—满剌加—刺桐。",
+                              "en": "\"Zayton has a mosque and a foreign quarter; the call to prayer and the sea-goddess's gong cross the street at each other.\" He draws a line: Calicut — Melaka — Zayton." },
+                    "effects": [{ "op": "revealCity", "id": "quanzhou" }, { "op": "revealCity", "id": "malacca" }, { "op": "revealRoute", "id": "rt-calicut-malacca" }, { "op": "revealRoute", "id": "rt-malacca-quanzhou" }] } },
+        { "id": "delhi", "label": { "zh": "去问德里来的人", "en": "Go and ask the man from Delhi" },
+          "then": { "text": { "zh": "「苏丹用外来人做官——他信不过本地人。」他打量你，「你识字，会阿拉伯语。你去了不会饿着。」",
+                              "en": "\"The Sultan appoints foreigners; he does not trust the locals.\" He looks you over. \"You read, and you have Arabic. You would not go hungry there.\"" },
+                    "effects": [{ "op": "flag", "id": "delhi-invitation" }, { "op": "codex", "id": "cx-delhi-court" }, { "op": "fate", "id": "wealth", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-mecca-caravan-news", "kind": "site", "city": "mecca", "once": true,
+      "title": { "zh": "散场", "en": "After the Season" }, "art": "site-mecca-caravan",
+      "body": { "zh": "朝觐结束，人往四个方向散。这是一年里唯一一次，你可以在同一个院子里问到所有方向的路况。",
+                "en": "The season ends and the crowd goes out in four directions. This is the one week in the year when every road's condition can be asked about in a single yard." },
+      "choices": [
+        { "id": "ask-all", "label": { "zh": "把四个方向都问一遍", "en": "Ask about all four directions" },
+          "needs": { "days": 4 },
+          "then": { "text": { "zh": "四天，四张嘴，四条路。你把它们记在同一张纸上——这是你第一次意识到，地图是可以自己攒出来的。",
+                              "en": "Four days, four mouths, four roads. You write them on one sheet — the first time it occurs to you that a map can be assembled by hand." },
+                    "effects": [{ "op": "days", "v": 4 }, { "op": "revealRoute", "id": "rt-mecca-hormuz" }, { "op": "revealRoute", "id": "rt-cairo-mecca" }, { "op": "revealCity", "id": "hormuz" }, { "op": "item", "id": "road-notes" }, { "op": "fate", "id": "travel", "v": 2 }] } },
+        { "id": "ship", "label": { "zh": "只打听下一班船", "en": "Just ask about the next ship" },
+          "then": { "text": { "zh": "「十月到三月出红海往东，其他月份别问。」船头说得很干脆，「风不商量。」",
+                              "en": "\"October to March out of the Red Sea and eastward. Any other month, don't ask.\" The master is brisk about it. \"The wind does not negotiate.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-mecca-hormuz" }, { "op": "revealCity", "id": "hormuz" }, { "op": "flag", "id": "knows-monsoon" }] } }
+      ]
+    }
+  ]
+}

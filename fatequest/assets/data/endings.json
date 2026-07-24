@@ -1,0 +1,77 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §7 结局表. Layer 1 is 主动停笔 — available in any city, always. Layers 2 and 3 fire when their conditions are met at the moment you stop writing.",
+  "endings": [
+    { "id": "end-put-down-the-pen", "layer": 1,
+      "name": { "zh": "停下书写", "en": "You Put Down the Pen" },
+      "conditions": {},
+      "epilogue": {
+        "zh": "你在{lastCity}停下。走了{cities}座城，用了{years}年，学了{arts}种占法，认识了{routes}条路。你把这些写下来，不是因为它们重要，是因为再不写就忘了。写完那天你没有出门。",
+        "en": "You stop at {lastCity}. {cities} cities, {years} years, {arts} arts learned, {routes} roads known. You write it down — not because it matters, but because otherwise you would forget it. On the day you finish you do not go out."
+      },
+      "variables": ["lastCity", "cities", "years", "arts", "routes"], "sticker": "st-pen-down" },
+    { "id": "end-court-of-the-khan", "layer": 2,
+      "name": { "zh": "汗廷之前", "en": "Before the Khan" },
+      "conditions": { "visited": ["khanbaliq"], "flags": ["khan-audience"] },
+      "epilogue": {
+        "zh": "你在大都的殿上见到了他。他问的不是你带来了什么，是你路上见到了什么——他问了四个时辰。之后你留下{stayed}。写这一段的时候，威尼斯的人都不信；他们说没有一座城有十二道门。",
+        "en": "You saw him, in the hall at Cambaluc. He did not ask what you had brought but what you had seen, and he asked for four hours. Afterwards you {stayed}. When you wrote this part down, Venice did not believe it — they said no city has twelve gates."
+      },
+      "variables": ["stayed"], "sticker": "st-khan" },
+    { "id": "end-witness-of-the-world", "layer": 2,
+      "name": { "zh": "世界的见证者", "en": "Witness of the World" },
+      "conditions": { "pilgrimages": 3 },
+      "epilogue": {
+        "zh": "你三次回到麦加，每次从不同的方向。第一次你数着日子，第二次你数着钱，第三次你什么也没数——你只是认出了那口井的声音。人们请你讲，你讲了三十年，每次都不太一样。",
+        "en": "Three times you came back to Mecca, each time from a different direction. The first time you counted days, the second money, the third nothing at all — you simply recognised the sound of the well. People asked you to tell it, and you told it for thirty years, never quite the same way twice."
+      },
+      "variables": [], "sticker": "st-witness" },
+    { "id": "end-the-debate", "layer": 2,
+      "name": { "zh": "那场辩论", "en": "The Debate" },
+      "conditions": { "visited": ["khanbaliq"], "flags": ["debate-held"] },
+      "epilogue": {
+        "zh": "辩论在帐中进行，四家各说各的，翻译一层层传下去，等传到最后一句已经不是原话了。没有人赢。大汗说他敬四家，然后照旧祭天。你把这件事原样写下来——包括没有人赢。",
+        "en": "The debate was held in the tent: four parties, each with its own case, passed down through translators until the last sentence was no longer the first. Nobody won. The Khan said he honoured all four, and then sacrificed to Heaven as usual. You wrote it exactly as it happened — including that nobody won."
+      },
+      "variables": [], "sticker": "st-debate" },
+    { "id": "end-hundred-markets", "layer": 3,
+      "name": { "zh": "百市商人", "en": "Merchant of a Hundred Markets" },
+      "conditions": { "cities": 8, "netWorth": 900, "bands": 4 },
+      "epilogue": {
+        "zh": "你的名字在{bands}个地带的账簿上出现过。没有人见过你全部的货，因为它们从来不在同一处。你最后一笔生意是{richestTrade}——赚得不多，但那天你在三个港口同时有船。",
+        "en": "Your name appears in the ledgers of {bands} regions. Nobody ever saw all your cargo, because it was never in one place. Your last deal was {richestTrade} — not a large one, but that day you had ships in three ports at once."
+      },
+      "variables": ["bands", "richestTrade"], "sticker": "st-hundred-markets" },
+    { "id": "end-convert-translator", "layer": 3,
+      "name": { "zh": "边界上的译者", "en": "The Translator on the Border" },
+      "conditions": { "faithChanges": 2, "languages": 4 },
+      "epilogue": {
+        "zh": "你换过{faithChanges}次身份，学会了{languages}种话。两边的人都用你，也都不完全信你——这是译者的报酬。你在{lastCity}老去，替人写信，从不写自己的。",
+        "en": "You changed allegiance {faithChanges} times and learned {languages} tongues. Both sides used you and neither entirely trusted you: that is a translator's wage. You grew old at {lastCity} writing letters for other people, and never one of your own."
+      },
+      "variables": ["faithChanges", "languages", "lastCity"], "sticker": "st-translator" },
+    { "id": "end-lost-map", "layer": 3,
+      "name": { "zh": "失落的地图", "en": "The Lost Map" },
+      "conditions": { "routes": 12, "codexPct": 0.5 },
+      "epilogue": {
+        "zh": "你画完了{routes}条路。图上有些记号只有你懂：某处水苦，某处的守卫认识你父亲的名字，某段路冬天走比夏天快。你死后这张图卖了三次，每一任主人都说前一任标错了。",
+        "en": "You finished {routes} roads. Some of the marks meant nothing to anyone else: bitter water here, a guard here who knew your father's name, a stretch faster in winter than in summer. After you died the map sold three times, and every owner said the last one had it wrong."
+      },
+      "variables": ["routes"], "sticker": "st-lost-map" },
+    { "id": "end-stranger-saint", "layer": 3,
+      "name": { "zh": "异乡圣徒", "en": "A Saint Among Strangers" },
+      "conditions": { "reputationForeign": 40, "faithChanges": 0 },
+      "epilogue": {
+        "zh": "你从没改过信仰，却在{lastCity}被当地人当成了自己人。他们照自己的规矩埋了你，念的却是你的经——两边都觉得对方让了步，其实谁也没让。",
+        "en": "You never changed your faith, and yet at {lastCity} the local people counted you as one of theirs. They buried you by their own rite and read your prayers over it. Each side believed the other had given way; in fact neither had."
+      },
+      "variables": ["lastCity"], "sticker": "st-stranger-saint" },
+    { "id": "end-no-return", "layer": 3,
+      "name": { "zh": "无归之人", "en": "The One Who Did Not Return" },
+      "conditions": { "cities": 10, "returnedToStart": false },
+      "epilogue": {
+        "zh": "你走过{cities}座城，用了{years}年，却始终没有回到{start}。有人说在{lastCity}见过你，有人说你死在路上。两种说法都对：远行者的归宿，就是被人一再提起。",
+        "en": "You crossed {cities} cities in {years} years and never came back to {start}. Some say you were last seen at {lastCity}; some say you died on the road. Both are true: a traveler's home is being spoken of, again and again."
+      },
+      "variables": ["cities", "years", "start", "lastCity"], "sticker": "st-no-return" }
+  ]
+}

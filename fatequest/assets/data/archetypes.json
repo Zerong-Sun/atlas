@@ -1,0 +1,115 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §2 角色表 — the draw pool. Drawing an archetype fixes culture, faith, start city and the 2–3 cities that background would already have heard of.",
+  "birthWindow": { "from": "1253-01-01", "to": "1453-05-29", "rerolls": 3 },
+  "fateBars": [
+    { "id": "travel", "name": { "zh": "远行运", "en": "Road-luck" },
+      "note": { "zh": "路上好事、隐藏路线、恶劣天气减免、迷路概率", "en": "Fortune on the road, hidden ways, weather, and how often you lose it" } },
+    { "id": "rapport", "name": { "zh": "交涉运", "en": "Rapport" },
+      "note": { "zh": "与陌生文化、商人、宗教人士、官员对话的成功率", "en": "How strangers, merchants, clerics and officials receive you" } },
+    { "id": "wealth", "name": { "zh": "财货运", "en": "Wealth-luck" },
+      "note": { "zh": "贸易利润、讨价还价、被偷窃与货损概率", "en": "Margin, haggling, theft and spoilage" } }
+  ],
+  "grades": [
+    { "min": 28, "zh": "上上", "en": "Highest" }, { "min": 25, "zh": "上中", "en": "High" },
+    { "min": 22, "zh": "上下", "en": "High-low" }, { "min": 19, "zh": "中上", "en": "Middling-high" },
+    { "min": 15, "zh": "中中", "en": "Middling" }, { "min": 12, "zh": "中下", "en": "Middling-low" },
+    { "min": 8, "zh": "下上", "en": "Low-high" }, { "min": 4, "zh": "下中", "en": "Low" },
+    { "min": 0, "zh": "下下", "en": "Lowest" }
+  ],
+  "gradeNote": {
+    "zh": "低等不是废号。「下下」更容易触发苦行、流亡、改宗、奇遇与隐士路线——那些路线有专属事件、导师与结局。命格决定你玩哪一种游戏，不决定你玩得好不好。",
+    "en": "A low grade is not a bad roll. The lowest opens the ascetic, the exile, the convert, the hermit — roads with their own events, teachers and endings. Fate decides which game you play, not how well you play it."
+  },
+  "archetypes": [
+    {
+      "id": "marco",
+      "name": { "zh": "波罗式少年", "en": "A Youth in Polo's Manner" },
+      "art": "arch-marco",
+      "start": "venice",
+      "culture": "latin", "faith": "latin",
+      "obsession": { "zh": "跟着父亲和叔父东行，去看看大汗的宫廷是不是真的。", "en": "Follow your father and uncle east, and find out whether the Khan's court is real." },
+      "goal": { "type": "reach", "target": "khanbaliq" },
+      "portrait": { "zh": "十七岁，从未出过海，但站在里亚尔托桥上能指着每一面帆说出它的去处。", "en": "Seventeen, never been to sea — but from the Rialto you can name every sail in the lagoon and say where she is bound." },
+      "knownCities": ["venice", "acre", "constantinople"],
+      "knownRoutes": ["rt-venice-acre", "rt-venice-constantinople"],
+      "bonus": { "wealth": 4 }, "malus": { "rapport": -2 },
+      "startKit": { "coins": 40, "currency": "ducat", "items": ["sepulchre-oil", "papal-letters"], "languages": ["latin", "venetian"] },
+      "endings": ["end-court-of-the-khan", "end-no-return"]
+    },
+    {
+      "id": "battuta",
+      "name": { "zh": "白图泰式旅人", "en": "A Traveler in Ibn Battuta's Manner" },
+      "art": "arch-battuta",
+      "start": "tangier",
+      "culture": "islamic", "faith": "islam",
+      "obsession": { "zh": "完成朝觐，并从不同方向一再回到麦加。", "en": "Complete the hajj — and return to Mecca from every direction." },
+      "goal": { "type": "pilgrimage_loop", "target": "mecca", "times": 3 },
+      "portrait": { "zh": "二十一岁，法学生，行囊里是一本《穆瓦塔》和一封给沿途法官的介绍信。", "en": "Twenty-one, a student of law, carrying a Muwatta and a letter to every qadi on the road." },
+      "knownCities": ["tangier", "cairo", "mecca"],
+      "knownRoutes": ["rt-tangier-cairo"],
+      "bonus": { "rapport": 4 }, "malus": { "wealth": -2 },
+      "startKit": { "coins": 22, "currency": "dinar", "items": ["letter-of-introduction"], "languages": ["arabic"] },
+      "endings": ["end-witness-of-the-world", "end-stranger-saint"]
+    },
+    {
+      "id": "zayton",
+      "name": { "zh": "刺桐船户女", "en": "A Zayton Boat-Family Daughter" },
+      "art": "arch-zayton",
+      "start": "quanzhou",
+      "culture": "east_asia", "faith": "folk",
+      "obsession": { "zh": "把父亲那条船的航路走完，走到没有人认得你的口音为止。", "en": "Finish your father's sailing-routes — and keep going until nobody knows your accent." },
+      "goal": { "type": "network", "target": 4 },
+      "portrait": { "zh": "浪里生浪里长，学了一口能跟各国水手讨价的混杂话。天妃听得懂所有口音的祷告。", "en": "Raised on the swells, with a mongrel tongue for haggling with any sailor afloat. Mazu, you were taught, understands every accent." },
+      "knownCities": ["quanzhou", "malacca", "calicut"],
+      "knownRoutes": ["rt-malacca-quanzhou"],
+      "bonus": { "travel": 3, "wealth": 2 }, "malus": { "rapport": -3 },
+      "startKit": { "coins": 30, "currency": "cash", "items": ["mazu-charm"], "languages": ["hokkien", "malay"] },
+      "endings": ["end-hundred-markets", "end-no-return"]
+    },
+    {
+      "id": "rubruck",
+      "name": { "zh": "鲁布鲁克式修士", "en": "A Friar in Rubruck's Manner" },
+      "art": "arch-rubruck",
+      "start": "acre",
+      "culture": "latin", "faith": "latin",
+      "obsession": { "zh": "去汗廷，把辩论做完——不是为了赢，是为了知道对面说了什么。", "en": "Reach the Khan's court and finish the debate — not to win it, but to hear what the other side actually says." },
+      "goal": { "type": "reach", "target": "khanbaliq" },
+      "portrait": { "zh": "赤足行路，因为会规如此。行囊里是圣经、圣器和一份没人愿意翻译的国书。", "en": "Barefoot, because the Rule says so. In the pack: a bible, the vessels, and a royal letter nobody will translate honestly." },
+      "knownCities": ["acre", "constantinople", "damascus"],
+      "knownRoutes": ["rt-acre-constantinople", "rt-acre-damascus"],
+      "bonus": { "rapport": 3, "travel": 2 }, "malus": { "wealth": -4 },
+      "startKit": { "coins": 8, "currency": "ducat", "items": ["royal-letter", "psalter"], "languages": ["latin", "greek"] },
+      "endings": ["end-the-debate", "end-stranger-saint"]
+    },
+    {
+      "id": "zheng",
+      "name": { "zh": "宝船队通事", "en": "An Interpreter of the Treasure Fleet" },
+      "art": "arch-zheng",
+      "start": "calicut",
+      "culture": "east_asia", "faith": "islam",
+      "obsession": { "zh": "把西洋各国的港口、货、王、风都记进海图。", "en": "Get every western port — its goods, its king, its winds — into the chart." },
+      "goal": { "type": "network", "target": 5 },
+      "portrait": { "zh": "生在云南的穆斯林之家，学的是官话与阿拉伯语。你替一支比城池还大的船队说话。", "en": "Born to a Muslim family in Yunnan, schooled in the officials' tongue and in Arabic. You speak for a fleet larger than most towns." },
+      "knownCities": ["calicut", "quanzhou", "hormuz"],
+      "knownRoutes": ["rt-hormuz-calicut"],
+      "bonus": { "rapport": 3, "wealth": 2 }, "malus": { "travel": -2 },
+      "startKit": { "coins": 45, "currency": "cash", "items": ["fleet-tally", "sailing-chart"], "languages": ["mandarin", "arabic", "persian"] },
+      "endings": ["end-hundred-markets", "end-lost-map"]
+    },
+    {
+      "id": "wanderer",
+      "name": { "zh": "无籍行者", "en": "One Without Papers" },
+      "art": "arch-wanderer",
+      "start": "tabriz",
+      "culture": "steppe", "faith": "nestorian",
+      "obsession": { "zh": "没有执念。走到哪里算哪里，学会一路上所有人肯教的东西。", "en": "No obsession. Go where the road goes, and learn everything anyone is willing to teach." },
+      "goal": { "type": "free" },
+      "portrait": { "zh": "父亲是景教徒，母亲是草原人。你在两边都算外人，也因此两边的门都虚掩着。", "en": "A Nestorian father, a steppe mother. A stranger on both sides — which is why both doors stand slightly ajar." },
+      "knownCities": ["tabriz", "samarkand"],
+      "knownRoutes": ["rt-tabriz-samarkand"],
+      "bonus": { "travel": 5 }, "malus": { "wealth": -3, "rapport": -1 },
+      "startKit": { "coins": 12, "currency": "dirham", "items": [], "languages": ["persian", "turkic", "syriac"] },
+      "endings": ["end-convert-translator", "end-lost-map", "end-no-return"]
+    }
+  ]
+}

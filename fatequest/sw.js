@@ -1,9 +1,20 @@
 /* FateQuest service worker — network-first for the shell (dev-friendly),
    cache fallback for offline play. Art in assets/art/ is cached as it loads. */
-const CACHE = "fatequest-v2";
+const CACHE = "fatequest-v3";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
+  /* —— 《远行之书》 book.html: engine, styles and the eight tables —— */
+  "./book.html", "./css/bof.css",
+  "./js/bof/art.js", "./js/bof/db.js", "./js/bof/save.js", "./js/bof/fx.js",
+  "./js/bof/event.js", "./js/bof/roll.js", "./js/bof/worldmap.js",
+  "./js/bof/travel.js", "./js/bof/learn.js", "./js/bof/ui.js", "./js/bof/end.js",
+  "./assets/data/worldmap.json", "./assets/data/cities.json",
+  "./assets/data/routes.json", "./assets/data/transports.json",
+  "./assets/data/events-west.json", "./assets/data/events-east.json",
+  "./assets/data/divinations.json", "./assets/data/goods.json",
+  "./assets/data/archetypes.json", "./assets/data/endings.json",
+  "./assets/data/art-aliases.json",
   "./js/i18n.js", "./js/data-tarot.js", "./js/data-hexagrams.js",
   "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-mentors.js",
   "./js/data-scenes.js", "./js/data-misc.js",
@@ -41,7 +52,10 @@ self.addEventListener("fetch", e => {
       }
       return res;
     }).catch(() =>
-      caches.match(e.request).then(hit => hit || caches.match("./index.html"))
+      /* offline: serve the cached copy, else fall back to whichever shell the
+         request belongs to — book.html and index.html are separate entries */
+      caches.match(e.request).then(hit => hit
+        || caches.match(e.request.url.includes("book") ? "./book.html" : "./index.html"))
     )
   );
 });

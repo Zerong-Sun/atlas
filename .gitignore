@@ -20,3 +20,6 @@ atlas/corpus/raw/
 __pycache__/
 .venv/
 .vercel
+
+# Natural Earth downloads for scripts/build_worldmap.py — regenerated on demand
+fatequest/scripts/.cache/

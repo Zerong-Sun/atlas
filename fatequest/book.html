@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2b2114">
+<meta name="description" content="远行之书 The Book of Far Roads — 中世纪欧亚非旅行开放世界">
+<title>远行之书 · The Book of Far Roads</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/bof.css">
+</head>
+<body>
+
+<div id="app" class="app"></div>
+
+<nav id="bof-dock" class="bof-dock" hidden></nav>
+<div id="toast" class="toast"></div>
+
+<script src="js/bof/art.js"></script>
+<script src="js/bof/db.js"></script>
+<script src="js/bof/save.js"></script>
+<script src="js/bof/fx.js"></script>
+<script src="js/bof/event.js"></script>
+<script src="js/bof/roll.js"></script>
+<script src="js/bof/worldmap.js"></script>
+<script src="js/bof/travel.js"></script>
+<script src="js/bof/learn.js"></script>
+<script src="js/bof/ui.js"></script>
+<script src="js/bof/end.js"></script>
+<script>
+  /* the event runner and the UI need to know about each other; this is the
+     only wiring between them */
+  (function () {
+    const _open = BOF.EV.open;
+    BOF.EV.open = function (id) {
+      const ok = _open.call(BOF.EV, id);
+      if (ok) BOF.UI.go("event");
+      return ok;
+    };
+  })();
+  document.addEventListener("DOMContentLoaded", BOF.UI.boot);
+</script>
+</body>
+</html>

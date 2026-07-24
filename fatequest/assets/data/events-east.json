@@ -1,0 +1,505 @@
+{
+  "_schema": "docs/SYSTEM_TABLES.md §6 事件表 — eastern half. Same rule: every choice resolves to `then`, or to `pass` + `fail`.",
+  "events": [
+    {
+      "id": "ev-tabriz-entry", "kind": "entry", "city": "tabriz", "once": true,
+      "title": { "zh": "入大不里士", "en": "Into Tabriz" }, "art": "city-tabriz-entry",
+      "body": { "zh": "四方商路的结。热那亚人、威尼斯人、亚美尼亚人、汉人使者在同一个巴扎里做生意，没有人对任何一张面孔感到意外。",
+                "en": "The knot of four trade roads. Genoese, Venetians, Armenians and envoys out of Cathay do business in one bazaar, and nobody is surprised by any face." },
+      "choices": [
+        { "id": "register", "label": { "zh": "去衙署登记", "en": "Register with the officials" },
+          "then": { "text": { "zh": "书记问了三遍你的行业，最后写了「商人」。他说：「写使者要查半年，写商人今天就能走。」",
+                              "en": "The clerk asks your trade three times and writes \"merchant.\" He explains: \"Envoy takes half a year to verify. Merchant leaves today.\"" },
+                    "effects": [{ "op": "rep", "city": "tabriz", "v": 2 }, { "op": "flag", "id": "registered-merchant" }, { "op": "revealRoute", "id": "rt-tabriz-samarkand" }] } },
+        { "id": "bazaar", "label": { "zh": "先进巴扎", "en": "Go into the bazaar first" },
+          "then": { "text": { "zh": "半天之内你听见了四种语言在讲同一批货的价钱。你还没买东西，就已经知道了哪一段路今年不通。",
+                              "en": "Within half a day you hear four languages pricing the same bales. You have bought nothing and already know which stretch of road is shut this year." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-tabriz-hormuz" }, { "op": "revealCity", "id": "hormuz" }, { "op": "fate", "id": "wealth", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-tabriz-bazaar", "kind": "site", "city": "tabriz", "once": true,
+      "title": { "zh": "大巴扎", "en": "The Great Bazaar" }, "art": "site-tabriz-bazaar",
+      "body": { "zh": "顶棚下走上一整天也走不完。丝、珍珠、地毯、绿松石，还有一整条街只卖别人的消息。",
+                "en": "A whole day under the vaults will not get you through it. Silk, pearls, carpets, turquoise — and one entire lane that sells nothing but other people's information." },
+      "choices": [
+        { "id": "carpet", "label": { "zh": "买一条毯子", "en": "Buy a carpet" },
+          "needs": { "coins": 10 },
+          "then": { "text": { "zh": "卖家用三种语言各报了一个价，你挑了最低的那个。他很高兴——说明你听得懂三种。",
+                              "en": "The seller quotes three prices in three languages and you take the lowest. He is delighted: it means you understood all three." },
+                    "effects": [{ "op": "coins", "v": -10 }, { "op": "goods", "id": "tabriz-carpet", "v": 1 }, { "op": "language", "id": "persian" }] } },
+        { "id": "silk-road", "label": { "zh": "问丝是从哪条路来的", "en": "Ask which road the silk comes in on" },
+          "then": { "text": { "zh": "「撒马尔罕过来，四十二天。再往东就不是我们的事了——那要问戴金牌的人。」",
+                              "en": "\"By Samarkand. Forty-two days. Past that it is none of our business — for that you want the men with the gold tablets.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-tabriz-samarkand" }, { "op": "revealCity", "id": "samarkand" }, { "op": "codex", "id": "cx-paiza" }] } },
+        { "id": "gossip-lane", "label": { "zh": "走那条卖消息的街", "en": "Walk the lane that sells information" },
+          "needs": { "coins": 5 },
+          "then": { "text": { "zh": "五个第纳尔换三句：南边到忽鲁谟斯三十天；站赤已通到撒马尔罕；今年喀什以东有雪。",
+                              "en": "Five dinars for three sentences: thirty days south to Hormuz; the yam now runs as far as Samarkand; snow east of Kashgar this year." },
+                    "effects": [{ "op": "coins", "v": -5 }, { "op": "revealRoute", "id": "rt-tabriz-hormuz" }, { "op": "revealCity", "id": "hormuz" }, { "op": "revealCity", "id": "samarkand" }, { "op": "codex", "id": "cx-yam" }] } }
+      ]
+    },
+    {
+      "id": "ev-tabriz-observatory", "kind": "site", "city": "tabriz", "once": true,
+      "title": { "zh": "马拉盖观星台", "en": "The Observatory at Maragha" }, "art": "site-tabriz-observatory",
+      "body": { "zh": "城外的高台。图西死后星表还在续写，抄手轮班，一夜一夜地记。一个缺了半截食指的人在门口看你。",
+                "en": "The high platform outside the city. The tables are still being added to since Tusi died — copyists in shifts, night after night. A man missing half an index finger watches you at the door." },
+      "choices": [
+        { "id": "night", "label": { "zh": "留一夜看他们观测", "en": "Stay a night and watch them work" },
+          "needs": { "days": 1 },
+          "then": { "text": { "zh": "他们从黄昏记到天亮，中间没有人说一句闲话。天快亮时他指着织女：「骰子是捷径，蓝光才是师傅。」",
+                              "en": "From dusk to dawn without one idle sentence. Near daylight he points at Vega: \"Dice are a shortcut; that blue is the master.\"" },
+                    "effects": [{ "op": "days", "v": 1 }, { "op": "offerLearn", "id": "astrology" }, { "op": "codex", "id": "cx-zij" }, { "op": "fate", "id": "travel", "v": 1 }] } },
+        { "id": "buy-tables", "label": { "zh": "求抄一份星表", "en": "Ask for a copy of the tables" },
+          "needs": { "coins": 16 },
+          "then": { "text": { "zh": "抄一份要十天工。他给你的是简本——「全本你带不动，也用不上。会用的人不需要全本。」",
+                              "en": "A copy is ten days' work. He gives you the abridgement: \"You could not carry the full set, and you would not use it. Those who can use it do not need it.\"" },
+                    "effects": [{ "op": "coins", "v": -16 }, { "op": "item", "id": "star-tables" }, { "op": "codex", "id": "cx-zij" }] } }
+      ]
+    },
+    {
+      "id": "ev-tabriz-court", "kind": "site", "city": "tabriz", "once": true,
+      "title": { "zh": "伊儿汗的朝廷", "en": "The Ilkhan's Court" }, "art": "site-tabriz-court",
+      "body": { "zh": "宫门口同时站着穆斯林法官、景教主教、番僧和一个萨满。他们互相不看，但都在等同一场召见。",
+                "en": "At the gate stand a Muslim judge, a Nestorian bishop, a lama and a shaman. They do not look at one another, and all four are waiting on the same audience." },
+      "choices": [
+        { "id": "letter", "label": { "zh": "递上介绍信", "en": "Present your letter" },
+          "needs": { "item": "letter-of-introduction" },
+          "then": { "text": { "zh": "信递上去了。三天后回话：给你一枚驿传的凭牌，往东可用站赤。「不是给使者的，是给识相的商人的。」",
+                              "en": "The letter goes in. Three days later the reply: a tablet for the post road eastward. \"Not for envoys. For merchants who know how to behave.\"" },
+                    "effects": [{ "op": "days", "v": 3 }, { "op": "item", "id": "paiza" }, { "op": "flag", "id": "has-paiza" }, { "op": "rep", "band": "west_asia", "v": 4 }, { "op": "codex", "id": "cx-paiza" }] } },
+        { "id": "watch", "label": { "zh": "站在一边看", "en": "Stand aside and watch" },
+          "then": { "text": { "zh": "四个人依次进去，出来时脸色各不相同。你学到的是：这里不站队，站队的人反而进不去。",
+                              "en": "All four go in and come out wearing different faces. What you take away: nobody here picks a side, and the ones who do are the ones who do not get in." },
+                    "effects": [{ "op": "codex", "id": "cx-four-faiths" }, { "op": "fate", "id": "rapport", "v": 2 }, { "op": "flag", "id": "saw-ilkhan-court" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-hormuz-entry", "kind": "entry", "city": "hormuz", "once": true,
+      "title": { "zh": "入忽鲁谟斯", "en": "Into Hormuz" }, "art": "city-hormuz-entry",
+      "body": { "zh": "热得人夏天躲进水里坐着，脖子以下泡着，脖子以上谈生意。风从沙漠上来时，据说能把人吹死在路上。",
+                "en": "So hot that in summer men sit in the water — everything below the neck submerged and everything above it doing business. When the wind comes off the desert they say it kills people on the road." },
+      "choices": [
+        { "id": "wait-cool", "label": { "zh": "等到日落再进城", "en": "Wait for sundown to enter" },
+          "then": { "text": { "zh": "你等到太阳落。城里这时才活过来——市场、码头、清点货物的声音全在夜里。",
+                              "en": "You wait for the sun to go. Only then does the town come alive: market, quay and the sound of cargo being counted, all of it at night." },
+                    "effects": [{ "op": "flag", "id": "hormuz-night" }, { "op": "rep", "city": "hormuz", "v": 2 }] } },
+        { "id": "push", "label": { "zh": "顶着日头进去", "en": "Push on in the heat" },
+          "then": { "text": { "zh": "你进去了，也病了两天。船头看着你笑：「法兰克人都这样。不是不能走，是不必走。」",
+                              "en": "You get in, and you are ill for two days. A shipmaster laughs at you: \"Franks always do this. It is not that you can't — it is that you needn't.\"" },
+                    "effects": [{ "op": "days", "v": 2 }, { "op": "fate", "id": "travel", "v": 1 }, { "op": "flag", "id": "heat-lesson" }] } }
+      ]
+    },
+    {
+      "id": "ev-hormuz-horsefair", "kind": "site", "city": "hormuz", "once": true,
+      "title": { "zh": "马市", "en": "The Horse Fair" }, "art": "site-hormuz-horse",
+      "body": { "zh": "阿拉伯马装船运往印度。买主明知一半会死在海上，还是照买——因为印度自己养不活。",
+                "en": "Arab horses go aboard for India. The buyers know half will die at sea and buy anyway, because India cannot keep them alive either." },
+      "choices": [
+        { "id": "buy-horse", "label": { "zh": "买两匹试试", "en": "Buy two and try it" },
+          "needs": { "coins": 18 },
+          "then": { "text": { "zh": "十八第纳尔两匹。船头收你双倍舱位费，还要你自己带草料和淡水——「马比人贵，也比人娇。」",
+                              "en": "Eighteen dinars for two. The master charges double freight and expects you to supply fodder and fresh water — \"a horse costs more than a man and complains more.\"" },
+                    "effects": [{ "op": "coins", "v": -18 }, { "op": "goods", "id": "horses", "v": 2 }, { "op": "flag", "id": "carrying-horses" }, { "op": "codex", "id": "cx-horse-trade" }] } },
+        { "id": "watch-loading", "label": { "zh": "看他们怎么装船", "en": "Watch how they get them aboard" },
+          "then": { "text": { "zh": "吊索、眼罩、四条腿分别绑住。你记下了每一步——将来你自己运货时，这半个时辰值很多钱。",
+                              "en": "Slings, blindfolds, each leg tied separately. You note every step; when you ship cargo yourself this half-hour turns out to be worth a great deal." },
+                    "effects": [{ "op": "codex", "id": "cx-loading" }, { "op": "fate", "id": "wealth", "v": 2 }, { "op": "revealRoute", "id": "rt-hormuz-calicut" }, { "op": "revealCity", "id": "calicut" }] } }
+      ]
+    },
+    {
+      "id": "ev-hormuz-shipyard", "kind": "site", "city": "hormuz", "once": true,
+      "title": { "zh": "缝船的地方", "en": "Where They Sew the Ships" }, "art": "site-hormuz-shipyard",
+      "body": { "zh": "船板用椰索缝合，不用一枚铁钉。波罗写道：他不敢乘这种船。当地船匠听了这话会笑很久。",
+                "en": "Planks sewn with coir, not one iron nail. Polo wrote that he would not sail in one. Local shipwrights laugh at this for a long time." },
+      "choices": [
+        { "id": "ask-why", "label": { "zh": "问为什么不用铁钉", "en": "Ask why no iron" },
+          "then": { "text": { "zh": "「铁在海水里会锈，会松，会把板撑裂。绳会松——但绳松了能再紧。」他拍了拍船身：「这船会动，所以不会断。」",
+                              "en": "\"Iron rusts, works loose and splits the plank. Rope works loose too — but rope can be tightened again.\" He slaps the hull. \"This ship moves. That is why it does not break.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-sewn-hull" }, { "op": "fate", "id": "travel", "v": 1 }, { "op": "revealRoute", "id": "rt-hormuz-calicut" }] } },
+        { "id": "work-passage", "label": { "zh": "做工换一程船票", "en": "Work a passage instead of paying" },
+          "needs": { "days": 6 },
+          "then": { "text": { "zh": "六天搓绳、上油、搬板。船头记下了你的名字：「下一趟去古里的，有你的位置。」",
+                              "en": "Six days twisting rope, oiling and shifting planks. The master writes your name down: \"Next run to Calicut, there is a place for you.\"" },
+                    "effects": [{ "op": "days", "v": 6 }, { "op": "flag", "id": "free-passage-calicut" }, { "op": "revealRoute", "id": "rt-hormuz-calicut" }, { "op": "revealCity", "id": "calicut" }] } }
+      ]
+    },
+    {
+      "id": "ev-hormuz-water", "kind": "site", "city": "hormuz", "once": true,
+      "title": { "zh": "水", "en": "Water" }, "art": "site-hormuz-water",
+      "body": { "zh": "岛上没有淡水，全靠船从对岸运。谁控制水，谁控制这座港——本地人对这件事有一种平静的清醒。",
+                "en": "There is no fresh water on the island; it all comes across by boat. Whoever holds the water holds the port, and the locals are calmly clear-eyed about it." },
+      "choices": [
+        { "id": "buy-water", "label": { "zh": "买足够的水", "en": "Buy enough water" },
+          "needs": { "coins": 4 },
+          "then": { "text": { "zh": "四个第纳尔一囊。贵得离谱，但下一段海路二十天见不到岸。你付了，没还价。",
+                              "en": "Four dinars a skin. Outrageous — and the next leg is twenty days out of sight of land. You pay and do not haggle." },
+                    "effects": [{ "op": "coins", "v": -4 }, { "op": "item", "id": "water-skins" }, { "op": "flag", "id": "watered" }] } },
+        { "id": "ask-old", "label": { "zh": "问旧港在哪里", "en": "Ask where the old town was" },
+          "then": { "text": { "zh": "「在对岸，内陆一点。人搬到岛上是为了躲兵，不是为了做生意。」他指了指北边：「往北走三十天到大不里士。」",
+                              "en": "\"Across the water, a little inland. People moved out to the island to escape soldiers, not to trade better.\" He points north: \"Thirty days that way to Tabriz.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-tabriz-hormuz" }, { "op": "revealCity", "id": "tabriz" }, { "op": "codex", "id": "cx-old-hormuz" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-samarkand-entry", "kind": "entry", "city": "samarkand", "once": true,
+      "title": { "zh": "入撒马尔罕", "en": "Into Samarkand" }, "art": "city-samarkand-entry",
+      "body": { "zh": "果园环城，进城前先穿过一片杏林。城墙上还留着被拆过又补上的痕迹——补的人和拆的人现在是同一批。",
+                "en": "Orchards ring the city; you pass through apricot trees before the gate. The walls still show where they were pulled down and rebuilt — by, as it happens, the same people." },
+      "choices": [
+        { "id": "orchard", "label": { "zh": "在果园里过夜", "en": "Sleep in the orchard" },
+          "then": { "text": { "zh": "没花钱，也没人赶你。天亮时一个造纸匠的寡妇给了你一块饼，问你昨夜梦见了什么。",
+                              "en": "It costs nothing and nobody moves you on. At dawn a papermaker's widow gives you bread and asks what you dreamt." },
+                    "effects": [{ "op": "flag", "id": "met-bibi-nur" }, { "op": "rep", "city": "samarkand", "v": 2 }] } },
+        { "id": "gate", "label": { "zh": "照规矩进城门", "en": "Enter properly by the gate" },
+          "needs": { "coins": 2 },
+          "then": { "text": { "zh": "两个迪拉姆的入城钱。守门的问你去哪儿；你说东边，他说：「东边九十天，得跟商队。一个人去的，我们后来都没再见过。」",
+                              "en": "Two dirhams at the gate. The guard asks where you are going; you say east, and he says: \"East is ninety days and wants a caravan. The ones who went alone, we did not see again.\"" },
+                    "effects": [{ "op": "coins", "v": -2 }, { "op": "revealRoute", "id": "rt-samarkand-khanbaliq" }, { "op": "revealCity", "id": "khanbaliq" }] } }
+      ]
+    },
+    {
+      "id": "ev-sam-papermill", "kind": "site", "city": "samarkand", "once": true,
+      "title": { "zh": "纸坊", "en": "The Paper Mill" }, "art": "site-sam-paper",
+      "body": { "zh": "水碓昼夜不停地捣麻。这里的纸比别处白、比别处韧——工艺据说是几百年前从东边俘虏那里学来的。",
+                "en": "The water-hammers pound hemp day and night. The paper here is whiter and tougher than anywhere else; the craft, they say, was learned centuries ago from prisoners taken in the east." },
+      "choices": [
+        { "id": "buy-paper", "label": { "zh": "买一刀纸", "en": "Buy a ream" },
+          "needs": { "coins": 6 },
+          "then": { "text": { "zh": "六个迪拉姆。开罗和威尼斯都抢这个——轻、贵、不怕颠，只怕潮。你把它裹进毡子里。",
+                              "en": "Six dirhams. Cairo and Venice both fight for it: light, valuable, indifferent to jolting and ruined by damp. You roll it into felt." },
+                    "effects": [{ "op": "coins", "v": -6 }, { "op": "goods", "id": "samarkand-paper", "v": 1 }, { "op": "codex", "id": "cx-paper" }] } },
+        { "id": "ask-origin", "label": { "zh": "问工艺是哪儿来的", "en": "Ask where the craft came from" },
+          "then": { "text": { "zh": "老匠人指了指东：「打仗抓来的人教的。他们那边纸更早。」他顿了顿：「打仗带过来的东西，比打仗留下的东西久。」",
+                              "en": "The old man points east. \"Prisoners taught it. They had paper before us.\" A pause. \"What a war carries over lasts longer than what a war leaves behind.\"" },
+                    "effects": [{ "op": "revealCity", "id": "khanbaliq" }, { "op": "codex", "id": "cx-paper-east" }, { "op": "fate", "id": "rapport", "v": 1 }] } }
+      ]
+    },
+    {
+      "id": "ev-sam-column", "kind": "site", "city": "samarkand", "once": true,
+      "title": { "zh": "那根柱子", "en": "The Column" }, "art": "site-sam-column",
+      "body": { "zh": "景教徒与穆斯林共用一条街，为一根柱子争了三代人：它原本是教堂的，后来砌进了清真寺的墙。",
+                "en": "Nestorians and Muslims share a street and have argued three generations over one column: it belonged to a church, and it is now built into the wall of a mosque." },
+      "choices": [
+        { "id": "mediate", "label": { "zh": "两边都听一遍", "en": "Hear both sides out" },
+          "needs": { "days": 2 },
+          "then": { "text": { "zh": "两天，两套说法，都有理。你没有裁决——只是把两边的话都复述了一遍给对方听。他们第一次发现自己被听懂了。",
+                              "en": "Two days, two accounts, both sound. You judge nothing — you simply repeat each side's words back to the other. It is the first time either has been accurately understood." },
+                    "effects": [{ "op": "days", "v": 2 }, { "op": "rep", "city": "samarkand", "v": 6 }, { "op": "fate", "id": "rapport", "v": 3 }, { "op": "flag", "id": "column-mediated" }, { "op": "sticker", "id": "st-column" }] } },
+        { "id": "pass", "label": { "zh": "不管这事", "en": "Leave it alone" },
+          "then": { "text": { "zh": "你绕开了。街角有个景教商人替你记下：「不掺和的人可以两边都住。」他给了你东边的一个名字。",
+                              "en": "You go round it. A Nestorian trader on the corner marks you down: \"A man who stays out can lodge on both sides.\" He gives you a name in the east." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-samarkand-khanbaliq" }, { "op": "revealCity", "id": "khanbaliq" }, { "op": "codex", "id": "cx-nestorians" }] } }
+      ]
+    },
+    {
+      "id": "ev-sam-horse-market", "kind": "site", "city": "samarkand", "once": true,
+      "title": { "zh": "马市与瓜", "en": "Horses and Melons" }, "art": "site-sam-melon",
+      "body": { "zh": "撒马尔罕的瓜切开时香得整条街都知道。有人说用冰窖装着能一路运到大都——也有人说那是骗人的。",
+                "en": "When a Samarkand melon is cut the whole street knows. Some say packed in ice they reach Cambaluc; others say that is a story told to sell melons." },
+      "choices": [
+        { "id": "melon", "label": { "zh": "试着运一批瓜", "en": "Try shipping melons" },
+          "needs": { "coins": 5 },
+          "divination": "dream",
+          "pass": { "text": { "zh": "你梦见驼——忍耐可至，急则失货。你按梦里的走法：夜行，日伏，冰不断。瓜活着到了下一站。",
+                              "en": "You dream of the camel: patience arrives, haste loses cargo. You travel it that way — by night, lying up by day, the ice never allowed to fail. The melons arrive alive." },
+                    "effects": [{ "op": "coins", "v": -5 }, { "op": "goods", "id": "melons", "v": 2 }, { "op": "flag", "id": "melon-run" }, { "op": "fate", "id": "wealth", "v": 3 }] },
+          "fail": { "text": { "zh": "你按常法走。第九天冰化了，瓜烂在筐里，整个营地都是那个味道。你赔了钱，但记住了那个味道。",
+                              "en": "You travel it the ordinary way. On the ninth day the ice goes, the melons rot in the baskets, and the whole camp smells of it. You lose the money and keep the smell." },
+                    "effects": [{ "op": "coins", "v": -5 }, { "op": "codex", "id": "cx-ice-transport" }, { "op": "fate", "id": "wealth", "v": 1 }] } },
+        { "id": "horses", "label": { "zh": "看马", "en": "Look at the horses" },
+          "then": { "text": { "zh": "草原马矮，耐力惊人。马贩说：「往东九十天，别骑阿拉伯马。它们跑得快，死得也快。」",
+                              "en": "Steppe horses are short and unbelievably durable. The dealer: \"Ninety days east — do not take Arabs. They run faster and die sooner.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-steppe-horse" }, { "op": "fate", "id": "travel", "v": 2 }, { "op": "revealRoute", "id": "rt-samarkand-khanbaliq" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-calicut-entry", "kind": "entry", "city": "calicut", "once": true,
+      "title": { "zh": "入古里", "en": "Into Calicut" }, "art": "city-calicut-entry",
+      "body": { "zh": "船一靠岸，扎莫林的人就上来了——不是收税，是称货。称完了才谈价钱，谁也不许私下先卖。",
+                "en": "The Zamorin's men come aboard the moment you touch — not to tax but to weigh. Price is discussed after weight, and nobody may sell privately first." },
+      "choices": [
+        { "id": "comply", "label": { "zh": "照规矩过秤", "en": "Go through the scales properly" },
+          "then": { "text": { "zh": "秤是全海最公道的一杆。你少赚了一点，但从此这个港的人都愿意跟你做生意。",
+                              "en": "The fairest scales on the ocean. You make a little less, and from now on everyone in this port will deal with you." },
+                    "effects": [{ "op": "rep", "city": "calicut", "v": 5 }, { "op": "flag", "id": "calicut-honest" }, { "op": "codex", "id": "cx-zamorin-scales" }] } },
+        { "id": "hold-back", "label": { "zh": "藏一点货", "en": "Hold a little back" },
+          "divination": "geomancy",
+          "pass": { "text": { "zh": "沙上得「内收」——此城尚有未办之事，走不脱。你临时改了主意，把货全报了。称货的人多看了你一眼。",
+                              "en": "The sand gives Carcer: something here is unfinished, you will not get clear of it. You change your mind and declare everything. The weigher looks at you twice." },
+                    "effects": [{ "op": "rep", "city": "calicut", "v": 3 }, { "op": "fate", "id": "rapport", "v": 1 }] },
+          "fail": { "text": { "zh": "他们当天下午就发现了。货没被没收，但你的名字被记在一块木牌上——挂在秤旁边，全港都看得见。",
+                              "en": "They find it that afternoon. The goods are not confiscated; your name is written on a board beside the scales where the whole port can read it." },
+                    "effects": [{ "op": "rep", "city": "calicut", "v": -6 }, { "op": "flag", "id": "calicut-board" }, { "op": "coins", "v": -4 }] } }
+      ]
+    },
+    {
+      "id": "ev-cal-pepper-yard", "kind": "site", "city": "calicut", "once": true,
+      "title": { "zh": "胡椒场", "en": "The Pepper Yard" }, "art": "site-cal-pepper",
+      "body": { "zh": "胡椒摊在席子上晒，翻的人赤脚走在上面。这东西在威尼斯能换一栋房子，在这里论堆卖。",
+                "en": "Pepper spread on mats to dry, turned by men walking barefoot through it. In Venice this buys a house; here it is sold by the heap." },
+      "choices": [
+        { "id": "buy", "label": { "zh": "买一批", "en": "Buy a lot" },
+          "needs": { "coins": 12 },
+          "then": { "text": { "zh": "十二个法南。老板问你运到哪里；你说威尼斯，他笑了：「那你要过三次手。每一次都有人比你先赚。」",
+                              "en": "Twelve fanams. He asks where it is going; you say Venice, and he laughs: \"Then it changes hands three times, and someone takes their cut before you every time.\"" },
+                    "effects": [{ "op": "coins", "v": -12 }, { "op": "goods", "id": "malabar-pepper", "v": 2 }, { "op": "codex", "id": "cx-pepper-chain" }] } },
+        { "id": "ask-chain", "label": { "zh": "问那三次手是谁", "en": "Ask who those three hands are" },
+          "then": { "text": { "zh": "「古里到亚丁，亚丁到开罗，开罗到威尼斯。」他一根一根数，「你要是能少走一手，你就发财了。」",
+                              "en": "\"Calicut to Aden, Aden to Cairo, Cairo to Venice.\" He counts them off. \"Cut out one hand and you are a rich man.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-calicut-mecca" }, { "op": "revealCity", "id": "cairo" }, { "op": "codex", "id": "cx-pepper-chain" }, { "op": "fate", "id": "wealth", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-cal-scales", "kind": "site", "city": "calicut", "once": true,
+      "title": { "zh": "扎莫林的秤", "en": "The Zamorin's Scales" }, "art": "site-cal-scales",
+      "body": { "zh": "秤放在露天，谁都能看。有个故事：一条船在岸边沉了，货漂了三天，没有人捡——三天后失主自己来收走了。",
+                "en": "The scales stand in the open where anyone can watch. There is a story: a ship went down inshore and her cargo floated for three days untouched, until the owner came for it himself." },
+      "choices": [
+        { "id": "ask-story", "label": { "zh": "问那个故事是不是真的", "en": "Ask whether the story is true" },
+          "then": { "text": { "zh": "「真的。」老书记说，「不是因为我们比别人好，是因为捡了的人在这个港做不成生意。规矩不靠人心，靠算账。」",
+                              "en": "\"True,\" says the old clerk. \"Not because we are better people. Because whoever picked it up could never trade in this port again. The rule does not run on virtue; it runs on arithmetic.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-port-law" }, { "op": "fate", "id": "wealth", "v": 1 }, { "op": "fate", "id": "rapport", "v": 1 }] } },
+        { "id": "weigh-in", "label": { "zh": "把自己的货全过一遍秤", "en": "Put all your own goods over the scales" },
+          "then": { "text": { "zh": "你的货比你以为的少了半成——路上损耗。书记照实记下，还给了你一张单子：以后凭它在本港免验。",
+                              "en": "Half a percent short of what you thought — road wastage. The clerk records it honestly and hands you a docket: it exempts you from inspection in this port hereafter." },
+                    "effects": [{ "op": "item", "id": "calicut-docket" }, { "op": "rep", "city": "calicut", "v": 4 }, { "op": "flag", "id": "calicut-exempt" }] } }
+      ]
+    },
+    {
+      "id": "ev-cal-monsoon-watch", "kind": "site", "city": "calicut", "once": true,
+      "title": { "zh": "候风", "en": "Watching for the Wind" }, "art": "site-cal-monsoon",
+      "body": { "zh": "整座港在等风。风一转，所有船同一天开——错过的人得在这里住半年，而半年后货已经不是这个价了。",
+                "en": "The whole port waits on the wind. When it turns, every ship sails on the same day; whoever misses it lodges here six months, by which time the cargo is no longer worth what it was." },
+      "choices": [
+        { "id": "learn", "label": { "zh": "跟老水手学看风", "en": "Learn the wind from the old hands" },
+          "needs": { "days": 5 },
+          "then": { "text": { "zh": "五天。他们不看天，看鸟、看水色、看晒盐的人什么时候收工。你把这些记进本子，从此不必再问船期。",
+                              "en": "Five days. They do not watch the sky but the birds, the colour of the water, and when the salt-workers knock off. You write it down and never have to ask a sailing date again." },
+                    "effects": [{ "op": "days", "v": 5 }, { "op": "codex", "id": "cx-monsoon" }, { "op": "flag", "id": "knows-monsoon" }, { "op": "fate", "id": "travel", "v": 3 }] } },
+        { "id": "east", "label": { "zh": "问往东的船", "en": "Ask about the eastbound ships" },
+          "then": { "text": { "zh": "「西南风起了走满剌加，二十二天。再往东就换季风，得在满剌加住一阵——所以那地方什么话都有人说。」",
+                              "en": "\"On the southwesterly, Melaka, twenty-two days. Past that the wind changes and you lodge there a while — which is why every language on earth is spoken in that town.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-calicut-malacca" }, { "op": "revealCity", "id": "malacca" }, { "op": "codex", "id": "cx-strait" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-malacca-entry", "kind": "entry", "city": "malacca", "once": true,
+      "title": { "zh": "入满剌加", "en": "Into Melaka" }, "art": "city-malacca-entry",
+      "body": { "zh": "港务长的人先上船，登记货、人、来处、去处。这里不打劫过路船——因为过路船就是这座城全部的收入。",
+                "en": "The syahbandar's men board first and register cargo, crew, origin and destination. Nobody preys on passing ships here: passing ships are the town's entire income." },
+      "choices": [
+        { "id": "declare", "label": { "zh": "如实登记", "en": "Declare honestly" },
+          "then": { "text": { "zh": "港务长按你的来处派了一个通事——他们按语言分派，一个语区一个官。你被交给了讲汉语的那个。",
+                              "en": "The syahbandar assigns you an interpreter by origin: they divide the port by language, one officer to each. You are handed to the one who speaks Chinese." },
+                    "effects": [{ "op": "rep", "city": "malacca", "v": 3 }, { "op": "flag", "id": "malacca-registered" }, { "op": "codex", "id": "cx-syahbandar" }] } },
+        { "id": "wait-out", "label": { "zh": "在船上等风，不上岸", "en": "Stay aboard and wait for the wind" },
+          "then": { "text": { "zh": "你省了住宿钱，也错过了这座城唯一的用处：这里是唯一能同时问到东西两洋消息的地方。",
+                              "en": "You save the lodging money and miss the town's one real use: it is the only place where news of both oceans can be had in the same afternoon." },
+                    "effects": [{ "op": "coins", "v": 3 }, { "op": "days", "v": 4 }, { "op": "flag", "id": "malacca-aboard" }] } }
+      ]
+    },
+    {
+      "id": "ev-mal-warehouse", "kind": "site", "city": "malacca", "once": true,
+      "title": { "zh": "货栈", "en": "The Warehouses" }, "art": "site-mal-warehouse",
+      "body": { "zh": "半年一批的货堆在这里等对面的风。丁香和肉豆蔻不是本地产的——它们来自更东边，从没有外人去过的岛。",
+                "en": "Half a year's cargo stacked waiting on the opposite wind. The cloves and nutmeg are not local: they come from further east, from islands no outsider has been to." },
+      "choices": [
+        { "id": "buy-cloves", "label": { "zh": "买丁香", "en": "Buy cloves" },
+          "needs": { "coins": 14 },
+          "then": { "text": { "zh": "十四锭。你问产地，货主只笑：「往东。再往东。那边的人不许我们带客人去。」",
+                              "en": "Fourteen ingots. You ask where they grow; the owner only smiles. \"East. Further east. The people there do not permit us to bring guests.\"" },
+                    "effects": [{ "op": "coins", "v": -14 }, { "op": "goods", "id": "cloves", "v": 2 }, { "op": "codex", "id": "cx-spice-islands" }] } },
+        { "id": "ask-east", "label": { "zh": "打听更东边", "en": "Ask about further east" },
+          "then": { "text": { "zh": "一个爪哇船工画了几个岛给你看，然后把画擦掉了：「知道位置的人一共不到二十个。多一个人知道，我们就少一分钱。」",
+                              "en": "A Javanese hand sketches some islands for you and then rubs them out. \"Fewer than twenty men know where they are. Each extra man who knows costs the rest of us money.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-spice-islands" }, { "op": "fate", "id": "wealth", "v": 2 }, { "op": "flag", "id": "spice-secret" }] } }
+      ]
+    },
+    {
+      "id": "ev-mal-syahbandar", "kind": "site", "city": "malacca", "once": true,
+      "title": { "zh": "港务长", "en": "The Syahbandar" }, "art": "site-mal-harbourmaster",
+      "body": { "zh": "四位港务长，按语言分管：一个管古吉拉特人，一个管南印度与缅甸人，一个管爪哇与南洋人，一个管中国与琉球人。",
+                "en": "Four harbourmasters, divided by language: one for the Gujaratis, one for south India and Burma, one for Java and the archipelago, one for China and the Ryukyus." },
+      "choices": [
+        { "id": "register-china", "label": { "zh": "在管中国人的那位下面登记", "en": "Register under the China officer" },
+          "then": { "text": { "zh": "他给了你一份泊位和一句忠告：「刺桐的船五六月来，七八月走。别自己算日子——跟着他们走。」",
+                              "en": "He gives you a berth and a piece of advice: \"The Zayton ships come in the fifth and sixth month and leave in the seventh and eighth. Do not do your own arithmetic — go when they go.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-malacca-quanzhou" }, { "op": "revealCity", "id": "quanzhou" }, { "op": "flag", "id": "malacca-berth" }] } },
+        { "id": "register-gujarat", "label": { "zh": "在管古吉拉特人的那位下面登记", "en": "Register under the Gujarat officer" },
+          "then": { "text": { "zh": "「往西？古里，二十二天，但要等东北风。」他翻了翻册子，「你要现在走的话，只有去锡兰的船。」",
+                              "en": "\"Westward? Calicut, twenty-two days — on the northeasterly. \" He turns the register. \"If you must leave now, there is only the Ceylon ship.\"" },
+                    "effects": [{ "op": "revealRoute", "id": "rt-calicut-malacca" }, { "op": "revealCity", "id": "calicut" }, { "op": "codex", "id": "cx-strait" }] } }
+      ]
+    },
+    {
+      "id": "ev-mal-strait-watch", "kind": "site", "city": "malacca", "once": true,
+      "title": { "zh": "望海峡", "en": "Watching the Strait" }, "art": "site-mal-strait",
+      "body": { "zh": "从山上能看清整条海峡。最窄处不到十里，两边都是林子——所以每一条船都必须从这里过，也都知道自己被看着。",
+                "en": "From the hill the whole strait is visible. At its narrowest it is under ten miles, forest on both banks — so every ship must pass here, and every ship knows it is being watched." },
+      "choices": [
+        { "id": "count", "label": { "zh": "数一天的船", "en": "Count a day's shipping" },
+          "needs": { "days": 1 },
+          "then": { "text": { "zh": "一天四十一条。你按旗子分了类，算出哪一个月哪一路的船最多——这张表后来比任何海图都值钱。",
+                              "en": "Forty-one in one day. You sort them by flag and work out which month brings which trade — a table that later proves worth more than any chart." },
+                    "effects": [{ "op": "days", "v": 1 }, { "op": "item", "id": "shipping-table" }, { "op": "fate", "id": "wealth", "v": 3 }, { "op": "codex", "id": "cx-strait" }] } },
+        { "id": "pirates", "label": { "zh": "问林子里有没有人", "en": "Ask whether anyone lives in the forest" },
+          "then": { "text": { "zh": "「有。他们不抢在册的船。」通事说得很平静，「所以你才要登记。登记不是税，是保险。」",
+                              "en": "\"Yes. They do not take registered ships.\" The interpreter is matter-of-fact. \"Which is why you register. Registration is not a tax; it is insurance.\"" },
+                    "effects": [{ "op": "codex", "id": "cx-orang-laut" }, { "op": "flag", "id": "knows-strait-law" }, { "op": "fate", "id": "travel", "v": 1 }] } }
+      ]
+    },
+
+    {
+      "id": "ev-quanzhou-entry", "kind": "entry", "city": "quanzhou", "once": true,
+      "title": { "zh": "入刺桐", "en": "Into Zayton" }, "art": "city-quanzhou-entry",
+      "body": { "zh": "港里的船桅像一片烧焦的林子。市舶司的人上船抽解，抽完了才准卸货；番坊在城南，自成一街。",
+                "en": "The masts in the harbour stand like a burnt forest. The maritime office comes aboard and takes its share before anything may be landed; the foreign quarter is south of the city, a street unto itself." },
+      "choices": [
+        { "id": "fanfang", "label": { "zh": "住番坊", "en": "Lodge in the foreign quarter" },
+          "then": { "text": { "zh": "波斯语、阿拉伯语与闽南话在同一个屋檐下讨价还价。清真寺的宣礼声与天妃宫的锣声隔街相闻，谁也不觉得奇怪。",
+                              "en": "Persian, Arabic and the local tongue haggle under one roof. The call from the mosque and the gong from the sea-goddess's temple cross the street at each other, and nobody finds it strange." },
+                    "effects": [{ "op": "rep", "city": "quanzhou", "v": 3 }, { "op": "flag", "id": "in-fanfang" }, { "op": "codex", "id": "cx-fanfang" }] } },
+        { "id": "city", "label": { "zh": "住城里", "en": "Lodge inside the city proper" },
+          "needs": { "coins": 4 },
+          "then": { "text": { "zh": "四百文。房东盘问了半个时辰，最后写下你的名字和来处——「官府要的，不是我要的。」",
+                              "en": "Four hundred cash. The landlord questions you for half an hour and finally writes down your name and origin: \"The office wants it. I don't.\"" },
+                    "effects": [{ "op": "coins", "v": -4 }, { "op": "flag", "id": "quanzhou-registered" }, { "op": "revealRoute", "id": "rt-quanzhou-khanbaliq" }, { "op": "revealCity", "id": "khanbaliq" }] } }
+      ]
+    },
+    {
+      "id": "ev-qz-port", "kind": "site", "city": "quanzhou", "once": true,
+      "title": { "zh": "港口市集", "en": "The Harbour Market" }, "art": "site-qz-port",
+      "body": { "zh": "瓷器成箱堆在码头上，稻草塞得极紧。一个船头说：「装法比货贵。装不好，一路响到爪哇。」",
+                "en": "Crated porcelain stacked on the quay, straw rammed tight. A shipmaster: \"The packing costs more than the cargo. Pack it badly and you can hear it all the way to Java.\"" },
+      "choices": [
+        { "id": "porcelain", "label": { "zh": "买德化白瓷", "en": "Buy Dehua white porcelain" },
+          "needs": { "coins": 9 },
+          "then": { "text": { "zh": "九百文一箱。他教了你装法：一层瓷、一层稻草、一层土，浇水，长出草根来把整箱缠死。",
+                              "en": "Nine hundred cash a crate. He teaches you the packing: a layer of ware, a layer of straw, a layer of soil, watered — the grass roots grow through and bind the whole crate solid." },
+                    "effects": [{ "op": "coins", "v": -9 }, { "op": "goods", "id": "dehua-porcelain", "v": 1 }, { "op": "codex", "id": "cx-porcelain-packing" }, { "op": "fate", "id": "wealth", "v": 1 }] } },
+        { "id": "ask-junk", "label": { "zh": "问中国大舶", "en": "Ask about the great junks" },
+          "then": { "text": { "zh": "「四桅十二帆，舱分隔水，破一舱而不沉。」他敲了敲舱壁，「你们那边的船为什么不这么做？」你答不上来。",
+                              "en": "\"Four masts, twelve sails, bulkheads: hole one compartment and she still swims.\" He raps the partition. \"Why do your ships not do this?\" You have no answer." },
+                    "effects": [{ "op": "codex", "id": "cx-junk" }, { "op": "revealRoute", "id": "rt-malacca-quanzhou" }, { "op": "revealCity", "id": "malacca" }] } }
+      ]
+    },
+    {
+      "id": "ev-qz-tianfei", "kind": "site", "city": "quanzhou", "once": true,
+      "title": { "zh": "天妃宫", "en": "The Temple of the Sea-Goddess" }, "art": "site-qz-tianfei",
+      "body": { "zh": "出海前掷筊：圣筊方行，阴筊则止，笑筊重问，三次为限。法郎机人、波斯人、占城人都在这个院子里伏地——女神从不偏袒任何一种语言。",
+                "en": "Cast the moon-blocks before sailing: Sheng to go, Yin to stop, Xiao to ask again, three casts the limit. Franks, Persians and Champa men all prostrate in this courtyard; the goddess never favours one tongue." },
+      "choices": [
+        { "id": "cast", "label": { "zh": "掷筊问这一趟", "en": "Cast for this voyage" },
+          "then": { "text": { "zh": "第一掷笑筊，第二掷阴筊，第三掷圣筊。庙祝说：「问了三次才准的，比一次就准的实在。」",
+                              "en": "Xiao, then Yin, then Sheng. The temple-keeper: \"An answer that took three asks is worth more than one that came first time.\"" },
+                    "effects": [{ "op": "flag", "id": "blessed-voyage" }, { "op": "rep", "city": "quanzhou", "v": 2 }, { "op": "sticker", "id": "st-tianfei" }] } },
+        { "id": "chen", "label": { "zh": "找门口摆摊的老陈伯", "en": "Find Old Chen at his stall by the gate" },
+          "then": { "text": { "zh": "「铜钱三分钟一卦，蓍草要一炷香。」他把草推过来，「你赶时间，就别学。」",
+                              "en": "\"Coins give you a hexagram in three minutes; stalks take an incense-stick.\" He pushes the bundle across. \"If you are in a hurry, don't learn this.\"" },
+                    "effects": [{ "op": "offerLearn", "id": "yijing" }, { "op": "codex", "id": "cx-yarrow" }] } }
+      ]
+    },
+    {
+      "id": "ev-qz-fanfang", "kind": "site", "city": "quanzhou", "once": true,
+      "title": { "zh": "番坊", "en": "The Foreign Quarter" }, "art": "site-qz-fanfang",
+      "body": { "zh": "番坊有自己的长老、自己的坟地、自己的法。汉人官府不管里面的事，只要税照缴、人不越界。",
+                "en": "The quarter has its own elders, its own burial ground and its own law. The magistrates do not interfere so long as the duty is paid and nobody crosses the line." },
+      "choices": [
+        { "id": "persian", "label": { "zh": "向波斯商人打听海路", "en": "Ask the Persian traders about the sea road" },
+          "needs": { "language": "persian" },
+          "then": { "text": { "zh": "「往西：满剌加换季风，古里过秤，忽鲁谟斯上岸。三段，别想一趟走完。」他在桌上摆了三个杯子。",
+                              "en": "\"West: change monsoon at Melaka, weigh at Calicut, go ashore at Hormuz. Three legs. Do not imagine it is one voyage.\" He sets three cups on the table." },
+                    "effects": [{ "op": "revealRoute", "id": "rt-malacca-quanzhou" }, { "op": "revealRoute", "id": "rt-calicut-malacca" }, { "op": "revealRoute", "id": "rt-hormuz-calicut" }, { "op": "revealCity", "id": "malacca" }, { "op": "revealCity", "id": "calicut" }, { "op": "revealCity", "id": "hormuz" }, { "op": "codex", "id": "cx-monsoon" }] } },
+        { "id": "elder", "label": { "zh": "去见番坊长老", "en": "Call on the quarter's elder" },
+          "then": { "text": { "zh": "他问了你的出身、信仰和打算住多久。回答完，他写了一张条子：凭它可以在番坊赊账。",
+                              "en": "He asks your origin, your faith and how long you intend to stay. When you have answered he writes a slip: it lets you take credit in the quarter." },
+                    "effects": [{ "op": "item", "id": "quarter-credit" }, { "op": "rep", "city": "quanzhou", "v": 4 }, { "op": "fate", "id": "rapport", "v": 2 }] } },
+        { "id": "no-persian", "label": { "zh": "听不懂，只买一件白瓷就走", "en": "Understand none of it; buy one piece of porcelain and go" },
+          "needs": { "coins": 3 },
+          "then": { "text": { "zh": "你带走了一只碗和一个念头：不会说话的人，在这条街上只能当买主。",
+                              "en": "You leave with one bowl and one thought: on this street, a man without the language can only ever be a customer." },
+                    "effects": [{ "op": "coins", "v": -3 }, { "op": "goods", "id": "dehua-porcelain", "v": 1 }, { "op": "sticker", "id": "st-dehua" }] } }
+      ]
+    },
+
+    {
+      "id": "ev-khanbaliq-entry", "kind": "entry", "city": "khanbaliq", "once": true,
+      "title": { "zh": "入大都", "en": "Into Cambaluc" }, "art": "city-khanbaliq-entry",
+      "body": { "zh": "方城十二门，街道笔直得可以从这头看到那头。夜里击钟之后无人得在街上行走——巡夜的会问你三个问题。",
+                "en": "A square city with twelve gates and streets so straight you can see from one end to the other. After the night bell nobody may walk abroad; the watch will ask you three questions." },
+      "choices": [
+        { "id": "paiza", "label": { "zh": "出示金牌", "en": "Show the paiza" },
+          "needs": { "item": "paiza" },
+          "then": { "text": { "zh": "巡夜的看了一眼就退后半步。金牌不是通行证，是身份——在这座城里，这两件事不是一回事。",
+                              "en": "The watch takes one look and steps back half a pace. The tablet is not a pass but a standing — and in this city those are not the same thing." },
+                    "effects": [{ "op": "rep", "city": "khanbaliq", "v": 5 }, { "op": "flag", "id": "khan-recognised" }] } },
+        { "id": "declare", "label": { "zh": "如实说你是远方来的", "en": "Say plainly that you came from far away" },
+          "then": { "text": { "zh": "「多远？」——你说了地名，他没听过。他叫来一个懂波斯话的，又叫来一个懂拉丁话的。天亮时你已经登记在册。",
+                              "en": "\"How far?\" You give the name and he has never heard it. He fetches a man with Persian, then a man with Latin. By dawn you are on the register." },
+                    "effects": [{ "op": "days", "v": 1 }, { "op": "flag", "id": "khanbaliq-registered" }, { "op": "rep", "city": "khanbaliq", "v": 2 }, { "op": "codex", "id": "cx-night-bell" }] } }
+      ]
+    },
+    {
+      "id": "ev-kb-audience", "kind": "site", "city": "khanbaliq", "once": true,
+      "title": { "zh": "召见", "en": "The Audience" }, "art": "site-kb-audience",
+      "body": { "zh": "殿很大，人很多，翻译站了三层。他问的不是你带来了什么——是你路上见到了什么。",
+                "en": "A very large hall, a great many people, and three ranks of interpreters. He does not ask what you have brought. He asks what you saw on the road." },
+      "choices": [
+        { "id": "tell-true", "label": { "zh": "照实讲", "en": "Tell it straight" },
+          "then": { "text": { "zh": "你讲了四个时辰，讲到自己都累了。他一句也没打断。最后他说：「别人给我讲奇事，你给我讲路。留下。」",
+                              "en": "You talk for four hours until you are tired of your own voice. He does not interrupt once. At the end: \"Others bring me marvels. You bring me roads. Stay.\"" },
+                    "effects": [{ "op": "flag", "id": "khan-audience" }, { "op": "rep", "band": "china", "v": 10 }, { "op": "item", "id": "paiza" }, { "op": "sticker", "id": "st-khan" }, { "op": "fate", "id": "rapport", "v": 3 }] } },
+        { "id": "flatter", "label": { "zh": "捡好听的讲", "en": "Tell him the flattering version" },
+          "divination": "bazi",
+          "pass": { "text": { "zh": "你算准了他今天要听什么——他要听的是真话。你临时改口，把最难听的一段先说了。他抬起了头。",
+                              "en": "You read what he wants today: he wants the truth. You change tack mid-sentence and lead with the ugliest part. He looks up." },
+                    "effects": [{ "op": "flag", "id": "khan-audience" }, { "op": "rep", "band": "china", "v": 8 }, { "op": "item", "id": "paiza" }] },
+          "fail": { "text": { "zh": "他听了一刻钟就转向别人。你被安排住下，待遇不差，但再也没被叫进过殿里。",
+                              "en": "A quarter of an hour and he turns to somebody else. You are housed comfortably and never called into the hall again." },
+                    "effects": [{ "op": "rep", "band": "china", "v": 2 }, { "op": "flag", "id": "khan-dismissed" }] } },
+        { "id": "debate", "label": { "zh": "请求让四教辩论", "en": "Ask him to let the four faiths debate" },
+          "needs": { "flag": "saw-ilkhan-court" },
+          "then": { "text": { "zh": "辩论在帐中进行，翻译一层层传下去，等传到最后一句已经不是原话了。没有人赢。大汗说他敬四家，然后照旧祭天。",
+                              "en": "It is held in the tent, passed down through translators until the last sentence is no longer the first. Nobody wins. The Khan says he honours all four, and then sacrifices to Heaven as usual." },
+                    "effects": [{ "op": "flag", "id": "debate-held" }, { "op": "rep", "band": "china", "v": 6 }, { "op": "codex", "id": "cx-debate" }, { "op": "fate", "id": "rapport", "v": 2 }] } }
+      ]
+    },
+    {
+      "id": "ev-kb-astrologers", "kind": "site", "city": "khanbaliq", "once": true,
+      "title": { "zh": "司天台", "en": "The Astronomers' Bureau" }, "art": "site-kb-astrologers",
+      "body": { "zh": "汉人、回回、番僧各有一套推步之法，同在一个院子里，各算各的历，年年吵，年年都要交上去。",
+                "en": "Chinese, Muslim and Tibetan methods, all in one compound, each computing its own calendar, arguing every year and submitting every year regardless." },
+      "choices": [
+        { "id": "compare", "label": { "zh": "看他们对同一天的推算", "en": "Compare their reckonings for the same day" },
+          "then": { "text": { "zh": "三套算法，三个答案，差了不到一刻钟。你忽然明白了：不是谁对谁错的问题，是三种人用三种方式看住了同一件事。",
+                              "en": "Three methods, three answers, less than a quarter-hour apart. It comes to you that this is not a question of who is right: three kinds of men are keeping watch on one thing in three ways." },
+                    "effects": [{ "op": "codex", "id": "cx-three-calendars" }, { "op": "fate", "id": "rapport", "v": 2 }, { "op": "flag", "id": "saw-bureau" }] } },
+        { "id": "shen", "label": { "zh": "找汉人那一边的沈五", "en": "Find Shen Wu on the Chinese side" },
+          "then": { "text": { "zh": "「年月日时，四柱八字。」他翻开一本旧通书，「这不是算你哪天发财——是看你这个人是什么材料。」",
+                              "en": "\"Year, month, day, hour — four pillars, eight characters.\" He opens a worn almanac. \"This is not about which day you get rich. It is about what material you are.\"" },
+                    "effects": [{ "op": "offerLearn", "id": "bazi" }, { "op": "codex", "id": "cx-four-pillars" }] } }
+      ]
+    },
+    {
+      "id": "ev-kb-paper-money", "kind": "site", "city": "khanbaliq", "once": true,
+      "title": { "zh": "交钞", "en": "The Paper Money" }, "art": "site-kb-paper-money",
+      "body": { "zh": "桑皮做的纸，盖着朱印，全国通用。不收的人要杀头。波罗写这一段时知道没有人会信他。",
+                "en": "Mulberry-bark paper under a vermilion seal, current throughout the realm. Refusing it is a capital matter. Polo knew, writing this passage, that nobody would believe him." },
+      "choices": [
+        { "id": "exchange", "label": { "zh": "把银换成交钞", "en": "Change your silver into notes" },
+          "then": { "text": { "zh": "换得很爽快。出城那天你才发现：这纸出了大汗的地界就是一张纸。你留了一张，没花——留着讲这件事。",
+                              "en": "The exchange is briskly done. Only on the day you leave do you discover that outside the Khan's writ this is paper. You keep one note unspent — to tell the story with." },
+                    "effects": [{ "op": "item", "id": "chao-note" }, { "op": "codex", "id": "cx-paper-money" }, { "op": "flag", "id": "learned-chao" }] } },
+        { "id": "keep-silver", "label": { "zh": "留着银子不换", "en": "Keep the silver" },
+          "then": { "text": { "zh": "你在城里处处吃亏——银子要打折收。但你走的那天，别人的钱变成了纸，你的还是银子。",
+                              "en": "You are penalised at every counter; silver is taken at a discount. But on the day you leave, other men's money has turned into paper and yours is still silver." },
+                    "effects": [{ "op": "coins", "v": -4 }, { "op": "fate", "id": "wealth", "v": 3 }, { "op": "codex", "id": "cx-paper-money" }] } }
+      ]
+    }
+  ]
+}

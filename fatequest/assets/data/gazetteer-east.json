@@ -1,0 +1,49 @@
+{
+  "_note": "东方增补地名表 — the lands past the edge of the Latin mappa mundi. Same schema as fatequest-worldmap/data/cities.geojson properties; merged by scripts/build_worldmap.py. Coordinates are real (EPSG:4326); medieval names follow the Yule–Cordier Polo, Ibn Battuta and Chinese sources. CC0.",
+  "cities": [
+    { "id": "quanzhou", "medieval": "Zayton", "modern": "Quanzhou", "part": "Asia", "tier": 1, "lon": 118.589, "lat": 24.874, "note": "刺桐港 — Polo calls it one of the two greatest havens in the world for merchandise" },
+    { "id": "khanbaliq", "medieval": "Cambaluc", "modern": "Beijing (Khanbaliq)", "part": "Asia", "tier": 1, "lon": 116.407, "lat": 39.904, "note": "大都 — the Great Khan's winter capital" },
+    { "id": "kinsay", "medieval": "Kinsay", "modern": "Hangzhou", "part": "Asia", "tier": 1, "lon": 120.155, "lat": 30.274, "note": "行在 — the City of Heaven, twelve thousand bridges by Polo's count" },
+    { "id": "shangdu", "medieval": "Ciandu", "modern": "Shangdu (Xanadu)", "part": "Asia", "tier": 2, "lon": 116.183, "lat": 42.35, "note": "上都 — the summer capital and its cane palace" },
+    { "id": "yangzhou", "medieval": "Yanju", "modern": "Yangzhou", "part": "Asia", "tier": 2, "lon": 119.421, "lat": 32.394, "note": "扬州 — Polo claims to have governed here three years" },
+    { "id": "nanjing", "medieval": "Nanghin", "modern": "Nanjing", "part": "Asia", "tier": 2, "lon": 118.797, "lat": 32.06, "note": "南京 — later the yard where Zheng He's treasure ships were laid down" },
+    { "id": "guangzhou", "medieval": "Chinkalan", "modern": "Guangzhou", "part": "Asia", "tier": 2, "lon": 113.264, "lat": 23.129, "note": "广州 — the older of the southern havens, worked by Arab and Persian factors" },
+    { "id": "dunhuang", "medieval": "Sachiu", "modern": "Dunhuang", "part": "Asia", "tier": 2, "lon": 94.662, "lat": 40.142, "note": "沙州 — where the desert road forks and the caves are cut" },
+    { "id": "kashgar", "medieval": "Cascar", "modern": "Kashgar", "part": "Asia", "tier": 2, "lon": 75.99, "lat": 39.47, "note": "喀什噶尔 — the oasis where the northern and southern rims of the Taklamakan meet" },
+    { "id": "khotan", "medieval": "Cotan", "modern": "Khotan", "part": "Asia", "tier": 3, "lon": 79.925, "lat": 37.11, "note": "于阗 — jade from the two rivers" },
+    { "id": "karakorum", "medieval": "Caracorum", "modern": "Karakorum", "part": "Asia", "tier": 2, "lon": 102.833, "lat": 47.2, "note": "哈剌和林 — the tent-capital Rubruck reached in 1254" },
+    { "id": "balkh", "medieval": "Balc", "modern": "Balkh", "part": "Asia", "tier": 3, "lon": 66.897, "lat": 36.757, "note": "巴尔赫 — the mother of cities, still in ruins when Polo passed" },
+    { "id": "badakhshan", "medieval": "Balascian", "modern": "Badakhshan", "part": "Asia", "tier": 3, "lon": 70.81, "lat": 36.73, "note": "巴达赫尚 — the balas-ruby mines and the high cold air Polo credits with curing him" },
+    { "id": "yazd", "medieval": "Yasdi", "modern": "Yazd", "part": "Asia", "tier": 3, "lon": 54.368, "lat": 31.897, "note": "亚兹德 — silk called Yasdi, and the desert of Kerman beyond" },
+    { "id": "kerman", "medieval": "Kerman", "modern": "Kerman", "part": "Asia", "tier": 3, "lon": 57.079, "lat": 30.284, "note": "克尔曼 — turquoise, steel and the wearisome road to the sea" },
+    { "id": "calicut", "medieval": "Colicut", "modern": "Kozhikode (Calicut)", "part": "Asia", "tier": 1, "lon": 75.78, "lat": 11.259, "note": "古里 — pepper port of Malabar; Zheng He's fleets anchored and his stele stood here" },
+    { "id": "cambay", "medieval": "Cambaet", "modern": "Khambhat (Cambay)", "part": "Asia", "tier": 2, "lon": 72.62, "lat": 22.31, "note": "坎贝 — indigo and cotton cloth out of Gujarat" },
+    { "id": "quilon", "medieval": "Coilum", "modern": "Kollam (Quilon)", "part": "Asia", "tier": 3, "lon": 76.591, "lat": 8.893, "note": "俱蓝 — brazilwood, ginger and the Nestorian church of St Thomas" },
+    { "id": "ceylon", "medieval": "Seilan", "modern": "Sri Lanka (Ceylon)", "part": "Asia", "tier": 2, "lon": 79.861, "lat": 6.927, "note": "锡兰 — rubies, the peak with the footprint, and pearls in the gulf" },
+    { "id": "malacca", "medieval": "Malaiur", "modern": "Melaka", "part": "Asia", "tier": 2, "lon": 102.25, "lat": 2.196, "note": "满剌加 — the strait every monsoon must pass through" },
+    { "id": "samudera", "medieval": "Samara", "modern": "Samudera-Pasai (Sumatra)", "part": "Asia", "tier": 3, "lon": 97.14, "lat": 5.18, "note": "苏门答剌 — where Polo waited five months for the wind" },
+    { "id": "java", "medieval": "Java Maior", "modern": "Java", "part": "Asia", "tier": 3, "lon": 110.4, "lat": -6.97, "note": "爪哇 — pepper, nutmeg and cloves; the Khan never took it" },
+    { "id": "kilwa", "medieval": "Quiloa", "modern": "Kilwa Kisiwani", "part": "Africa", "tier": 3, "lon": 39.51, "lat": -8.96, "note": "基尔瓦 — the gold of Sofala came north through here; Ibn Battuta called it finely built" },
+    { "id": "mogadishu", "medieval": "Magadoxo", "modern": "Mogadishu", "part": "Africa", "tier": 3, "lon": 45.34, "lat": 2.04, "note": "木骨都束 — cloth and camel-meat; a stop for both Battuta and Zheng He" },
+    { "id": "zeila", "medieval": "Zeila", "modern": "Zeila", "part": "Africa", "tier": 3, "lon": 43.47, "lat": 11.36, "note": "泽拉 — the crossing to Arabia, which Battuta judged the foulest-smelling town on earth" },
+    { "id": "hormuz-old", "medieval": "Ormus Vetus", "modern": "Old Hormuz (Minab)", "part": "Asia", "tier": 3, "lon": 57.08, "lat": 27.15, "note": "旧忽鲁谟斯 — the mainland town before the island took the trade" },
+    { "id": "muscat", "medieval": "Mascate", "modern": "Muscat", "part": "Asia", "tier": 3, "lon": 58.545, "lat": 23.588, "note": "马斯喀特 — where the Gulf gives way to the ocean and the monsoon" },
+    { "id": "dhofar", "medieval": "Dufar", "modern": "Dhofar (Salalah)", "part": "Asia", "tier": 3, "lon": 54.09, "lat": 17.02, "note": "佐法儿 — frankincense country" }
+  ],
+  "seas": [
+    { "name_medieval": "Mare Cathaicum", "name_modern": "South China Sea", "lon": 114.0, "lat": 15.0, "note": "涨海 — the junk sea, worked on the monsoon clock" },
+    { "name_medieval": "Sinus Bengalicus", "name_modern": "Bay of Bengal", "lon": 88.0, "lat": 14.0, "note": "榜葛剌海 — crossed only with the wind behind you" },
+    { "name_medieval": "Mare Indicum Orientale", "name_modern": "Java Sea", "lon": 111.0, "lat": -5.0, "note": "the spice waters; nutmeg and cloves grow nowhere else" }
+  ],
+  "regions": [
+    { "name_medieval": "Cathay", "name_modern": "North China", "kind": "land", "lon": 113.0, "lat": 36.0, "note": "契丹 — the Khan's north, reached overland" },
+    { "name_medieval": "Manzi", "name_modern": "South China", "kind": "land", "lon": 116.5, "lat": 28.0, "note": "蛮子 — the conquered Song south, reached by canal and sea" },
+    { "name_medieval": "Tangut", "name_modern": "Hexi Corridor", "kind": "land", "lon": 100.0, "lat": 39.0, "note": "唐兀 — the corridor between desert and mountain" },
+    { "name_medieval": "Maabar", "name_modern": "Coromandel", "kind": "land", "lon": 79.5, "lat": 12.0, "note": "马八儿 — pearl fishery and the shrine of St Thomas" },
+    { "name_medieval": "Malabar", "name_modern": "Malabar", "kind": "land", "lon": 75.6, "lat": 12.5, "note": "南毗 — pepper and the ships that come for it" }
+  ],
+  "ranges": [
+    { "name_medieval": "Pamer", "name_modern": "Pamir", "peak_m": 7495, "line": [[72.0, 38.6], [74.0, 38.0], [75.5, 37.4]], "note": "帕米尔 — twelve days without habitation; Polo says fire burns pale up there" },
+    { "name_medieval": "Montes Serici", "name_modern": "Tian Shan", "peak_m": 7439, "line": [[76.0, 42.4], [82.0, 43.2], [88.0, 43.0]], "note": "天山" }
+  ]
+}
