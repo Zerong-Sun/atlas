@@ -15,9 +15,15 @@ Medina
 
 ## ev.medina.entry.body
 
-Medina — the City of the Prophet, second in holiness only to Mecca. The green dome of
-the Prophet's mosque rises above the palm groves. Pilgrims visit the tomb before
-continuing to Mecca; the road between the two holy cities is the busiest in Arabia.
+Medina — City of the Prophet — lies three days from al-Safrā’ upon the
+pilgrim road. Mount Uhud stands three miles north; upon its slopes is the mosque
+of Hamzah and the tombs of the martyrs. Eastward, by Bāb al-Baqī‘, lies the
+cemetery of al-Gharqad — tombs of Safiyyah, of Mālik ibn Anas under a modest
+cupola, of Ibrāhīm son of the Prophet under a white one. Men come to acquire
+blessings at these graves. You must know that after Mecca this is the second
+city of the Faith, and that no pilgrim from Irāk or Syria passes without visiting
+the sacred tomb.
+
 
 ## ev.medina.entry.choice.pass
 

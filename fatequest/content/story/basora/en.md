@@ -15,11 +15,16 @@ Basora
 
 ## ev.basora.entry.body
 
-Basra — where the Tigris and Euphrates meet before emptying into the Persian Gulf. A
-city of canals and palm groves, famous for its dates — the best in the world, according
-to the merchants who ship them to India. Pearl divers work the oyster beds offshore; the
-finest gems go to the Caliph's treasury, the rest to the bazaar. Ships bound for Hormuz,
-India, and Zanzibar load cargo here when the monsoon blows.
+Basra stands where the waters of Irāk run down toward the Gulf.
+You travel hither with the Badawīn of Khafāja, for there is no safe going
+in these parts except in their company. Date-palms line the canals; gardens
+and plastered walls mark the richer houses. Upstream lie Wāsit and the
+shrines of Meshhed Alī, where the Shīah keep their treasury of vows; down
+the river the dhows take dates, grain, and cloth toward Omān and India. You
+must know that Basra has been a gate of the sea since the first centuries of
+Islam, and that its markets still speak Arabic, Persian, and the tongues of
+the Gulf.
+
 
 ## ev.basora.entry.choice.pass
 

@@ -2,39 +2,40 @@
 unit: cambaluc
 lang: zh
 source: en
-source_rev: e599d6d4013f
+source_rev: dc5dd33a542a
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.cambaluc.name: 803f6e129092
-  ev.cambaluc.a.body: c14cff340e27
   ev.cambaluc.a.choice.admire: 444ed8a9a12b
   ev.cambaluc.a.choice.audience: d709a4e0aab0
   ev.cambaluc.a.choice.talk_guards: 0bc75bc2f19a
-  ev.cambaluc.a.title: 88332650ee07
-  ev.cambaluc.b.body: a2ac0a9da44c
   ev.cambaluc.b.choice.count: fbb995577b1b
   ev.cambaluc.b.choice.granary: 7c82a6788183
   ev.cambaluc.b.choice.silk: 85edc2a0060c
-  ev.cambaluc.b.title: aed6e05ca6ad
-  ev.cambaluc.c.body: 88fb803be248
   ev.cambaluc.c.choice.evening: 7f3e6ee6e29e
   ev.cambaluc.c.choice.gardener: 9a0b35768eb5
   ev.cambaluc.c.choice.walk: 395f4cd4257a
-  ev.cambaluc.c.title: f1dcba9f2ce5
-  ev.cambaluc.entry.body: ef7bf578cd51
   ev.cambaluc.entry.choice.customs: 13906264a318
   ev.cambaluc.entry.choice.lore: 5800603dbcaf
   ev.cambaluc.entry.choice.market: 40d150e29a9c
-  ev.cambaluc.entry.title: f7224b9d3673
   ev.cambaluc.mentor_iching.body: 789ee13d8627
   ev.cambaluc.mentor_iching.choice.ask: f4d6327799e7
   ev.cambaluc.mentor_iching.choice.learn: 277845ea7b39
   ev.cambaluc.mentor_iching.title: 8fea3b7184ba
+  ev.cambaluc.a.body: c14cff340e27
+  ev.cambaluc.a.title: 88332650ee07
+  ev.cambaluc.b.body: a2ac0a9da44c
+  ev.cambaluc.b.title: aed6e05ca6ad
+  ev.cambaluc.c.body: 88fb803be248
+  ev.cambaluc.c.title: f1dcba9f2ce5
+  ev.cambaluc.entry.body: ef7bf578cd51
+  ev.cambaluc.entry.title: f7224b9d3673
 ---
 
 ## city.cambaluc.name

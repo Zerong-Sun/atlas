@@ -2,34 +2,35 @@
 unit: cascar
 lang: zh
 source: en
-source_rev: 5c3cb11d377a
+source_rev: 75771b3910fb
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.cascar.name: ceacb9fc8d93
-  ev.cascar.a.body: 749da5732b85
   ev.cascar.a.choice.grapes: 45bbe9cb20f7
   ev.cascar.a.choice.melon: c64d3a9e6dd3
   ev.cascar.a.choice.orchard: 9b34ec39fab3
-  ev.cascar.a.title: ee308410d49d
-  ev.cascar.b.body: 5cbec76fc03f
   ev.cascar.b.choice.carpet: de093df5d3e8
   ev.cascar.b.choice.dyes: ceec5016345d
   ev.cascar.b.choice.learn_weave: 55395f5d3804
-  ev.cascar.b.title: 63ae24aaf93e
-  ev.cascar.c.body: da8a4c337573
   ev.cascar.c.choice.both: 59e0f1900ad8
   ev.cascar.c.choice.christian: d31b9e923123
   ev.cascar.c.choice.muslim: d043ebd8338a
-  ev.cascar.c.title: b62e99ab1b16
-  ev.cascar.entry.body: d7f9f8e7f288
   ev.cascar.entry.choice.customs: 5f67b1abbf38
   ev.cascar.entry.choice.lore: 5800603dbcaf
   ev.cascar.entry.choice.market: b23d98ceae5c
+  ev.cascar.a.body: 749da5732b85
+  ev.cascar.a.title: ee308410d49d
+  ev.cascar.b.body: 5cbec76fc03f
+  ev.cascar.b.title: 63ae24aaf93e
+  ev.cascar.c.body: da8a4c337573
+  ev.cascar.c.title: b62e99ab1b16
+  ev.cascar.entry.body: d7f9f8e7f288
   ev.cascar.entry.title: 6d770e58667f
 ---
 

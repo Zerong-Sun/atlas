@@ -2,18 +2,19 @@
 unit: fuju
 lang: zh
 source: en
-source_rev: ca4d9bfbf397
+source_rev: 582da0e132fa
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.fuju.name: d277e9a9669e
-  ev.fuju.entry.body: 83c36fb6b97c
   ev.fuju.entry.choice.look: a1e5276c886b
   ev.fuju.entry.choice.pass: 96d145abaf05
+  ev.fuju.entry.body: 83c36fb6b97c
   ev.fuju.entry.title: b06510aed441
 ---
 

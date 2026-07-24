@@ -15,12 +15,16 @@ Alexandria
 
 ## ev.alexandria.entry.body
 
-Alexandria, the ancient port of the Pharaohs, now a Mamluk customs gate. The lighthouse
-that once guided ships from every sea is a ruin, its stones quarried for the city walls.
-But the harbors still teem with vessels: Indian pepper, Syrian glass, Egyptian grain,
-and Frankish woolens change hands on the quays. The Venetian and Genoese fondacos
-compete for warehouse space; the Mamluk customs officers weigh every bale and take their
-fifth.
+You come into Alexandria by the sea-gate of Misr, and the first
+thing you mark is the weighing of bales. The Sultan's clerks take their
+tamghā on every pack that leaves the quay — pepper of India, glass of Syria,
+grain of Egypt, woolens of the Franks. The old light-tower that once guided
+ships from every sea is a ruin; its stones have gone into the walls. And yet
+the harbours still teem, and learned men keep cells in this city — imāms and
+sheikhs whose names are known from Sindia to China. You must know that no
+junk puts in here without answering to the customs, and no traveller leaves
+without hearing what the saints of this place have said of the road ahead.
+
 
 ## ev.alexandria.entry.choice.look
 

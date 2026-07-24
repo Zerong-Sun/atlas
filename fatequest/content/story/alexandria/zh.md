@@ -2,18 +2,21 @@
 unit: alexandria
 lang: zh
 source: en
-source_rev: de1d5dee54b8
+source_rev: b4449ebdcd61
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.alexandria.name: 39ae78ec341c
-  ev.alexandria.entry.body: a6d7aacb7181
   ev.alexandria.entry.choice.look: a1e5276c886b
   ev.alexandria.entry.choice.pass: 96d145abaf05
+  ev.alexandria.entry.body: f6224ab80866
   ev.alexandria.entry.title: 802852e8bceb
 ---
 
@@ -31,9 +34,7 @@ stamps:
 
 ## ev.alexandria.entry.body
 
-亚历山大，法老时代的古港，如今是马穆鲁克的海关大门。昔日指引万国船舶的灯塔已成废墟，
-石料被采去筑城墙。然港中仍船帆如林：印度胡椒、叙利亚玻璃、埃及谷物与法兰克呢绒在码头易手。
-威尼斯与热那亚的商馆争夺库房；马穆鲁克税吏称每一包货，取tamghā（商税）五分之一。
+你自米昔尔的海门进入亚历山大，最先看见的是称量货包。苏丹的书吏对每一包离岸的货物征收tamghā（商税）——天竺胡椒、叙利亚玻璃、埃及谷物与法兰克呢绒，皆在其列。昔日指引万国船舶的古灯塔已成废墟，石料已入城墙。然港中仍船帆如林，城中亦多有学问之士——其名自信度传到中国的伊玛目与谢赫。你须知道：无船入此港而不报关，亦无旅人离此而不闻本地圣者论前路之言。
 
 ## ev.alexandria.entry.title
 

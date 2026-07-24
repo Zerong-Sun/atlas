@@ -2,18 +2,19 @@
 unit: yarcan
 lang: zh
 source: en
-source_rev: a759d2018936
+source_rev: 239834cf0517
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.yarcan.name: 1525829e3200
-  ev.yarcan.entry.body: c67678638579
   ev.yarcan.entry.choice.look: a1e5276c886b
   ev.yarcan.entry.choice.pass: 96d145abaf05
+  ev.yarcan.entry.body: c67678638579
   ev.yarcan.entry.title: fe130d877dff
 ---
 

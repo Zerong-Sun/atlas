@@ -2,18 +2,19 @@
 unit: sinjumatu
 lang: zh
 source: en
-source_rev: 97c3719c587c
+source_rev: 54a84841cae9
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.sinjumatu.name: eeaa6c848103
-  ev.sinjumatu.entry.body: 5490193ea377
   ev.sinjumatu.entry.choice.look: a1e5276c886b
   ev.sinjumatu.entry.choice.pass: 96d145abaf05
+  ev.sinjumatu.entry.body: 5490193ea377
   ev.sinjumatu.entry.title: 744551b84bf1
 ---
 

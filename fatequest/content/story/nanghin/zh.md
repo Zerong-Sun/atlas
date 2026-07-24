@@ -2,18 +2,19 @@
 unit: nanghin
 lang: zh
 source: en
-source_rev: bbf3096f3fd9
+source_rev: d8ec62978396
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.nanghin.name: e261243e71e0
-  ev.nanghin.entry.body: 682b5f9ac525
   ev.nanghin.entry.choice.look: a1e5276c886b
   ev.nanghin.entry.choice.pass: 96d145abaf05
+  ev.nanghin.entry.body: 682b5f9ac525
   ev.nanghin.entry.title: 013b2e12bbe8
 ---
 

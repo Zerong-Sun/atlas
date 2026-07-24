@@ -2,34 +2,35 @@
 unit: balc
 lang: zh
 source: en
-source_rev: a01f87284f43
+source_rev: 19d6c186e4a8
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.balc.name: 79b83c4de8dd
-  ev.balc.a.body: ab472b55a3c0
   ev.balc.a.choice.explore: 679acee0db50
   ev.balc.a.choice.fragment: 7e887bd6acb8
   ev.balc.a.choice.listen: ca6c9a2f1d48
-  ev.balc.a.title: 65c829483ee7
-  ev.balc.b.body: 440c475344e4
   ev.balc.b.choice.lapis: e2b1189ce5c0
   ev.balc.b.choice.ruby: 1e367729c511
   ev.balc.b.choice.talk_traders: 184e42ccf094
-  ev.balc.b.title: fd454524f0d4
-  ev.balc.c.body: c78868a08f00
   ev.balc.c.choice.chant: ca012a565c29
   ev.balc.c.choice.offering: 5ba46ef3e239
   ev.balc.c.choice.sleep: 63eaaf6d393a
-  ev.balc.c.title: c64d043ebe3c
-  ev.balc.entry.body: bf58837bab8b
   ev.balc.entry.choice.customs: 5f67b1abbf38
   ev.balc.entry.choice.lore: 5800603dbcaf
   ev.balc.entry.choice.market: b23d98ceae5c
+  ev.balc.a.body: ab472b55a3c0
+  ev.balc.a.title: 65c829483ee7
+  ev.balc.b.body: 440c475344e4
+  ev.balc.b.title: fd454524f0d4
+  ev.balc.c.body: c78868a08f00
+  ev.balc.c.title: c64d043ebe3c
+  ev.balc.entry.body: bf58837bab8b
   ev.balc.entry.title: 12d06f446c9b
 ---
 

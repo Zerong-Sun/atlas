@@ -2,18 +2,19 @@
 unit: cambaet
 lang: zh
 source: en
-source_rev: e9732c4c13d5
+source_rev: a1082a69d2a8
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.cambaet.name: 7c0440be894c
-  ev.cambaet.entry.body: 9970f3fb7654
   ev.cambaet.entry.choice.look: a1e5276c886b
   ev.cambaet.entry.choice.pass: 96d145abaf05
+  ev.cambaet.entry.body: 9970f3fb7654
   ev.cambaet.entry.title: 8dffe001b1c0
 ---
 

@@ -15,13 +15,16 @@ Babylonia (Cairus)
 
 ## ev.babylonia-cairus.entry.body
 
-Cairo, which the Latins call Babylonia — the greatest city of the Mamluk realm. A
-hundred minarets rise above the Nile; the citadel of Salah al-Din crowns the hill. The
-spice markets of the Khan al-Khalili never sleep; merchants from India, Yemen, and the
-Maghreb crowd the streets. The Caliph's ancient palace is gone, but the Sultan's Mamluk
-cavalry — ten thousand Circassian and Turkic slave-soldiers — patrol the walls. All
-goods that pass from the Indian Ocean to the Mediterranean must pass through the
-Babylonia customs, and the Sultan takes a handsome share.
+Misr and Cairo stand upon the Nile, one city and yet two — the old
+settlement of Fustāt and the new quarters under the citadel. Four congregational
+mosques of superb build rise among many lesser ones; the mosque of ‘Amr ibn
+al-‘Ās draws a daily income for its readers and imāms. Theological colleges
+(madāris) throughout Misr and Cairo are maintained by the Sultan's bounty —
+two thousand Egyptian dīnārs a month, men say. Villages and towns follow
+continuously along the river. You must know that this is the seat of the
+Ayyubid — and afterward the Mamluk — power in Egypt, and that no stranger
+lodges long without hearing the Friday khutbah in the Sunni manner.
+
 
 ## ev.babylonia-cairus.entry.choice.look
 

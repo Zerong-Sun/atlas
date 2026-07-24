@@ -2,18 +2,21 @@
 unit: bochara
 lang: zh
 source: en
-source_rev: 6c3ef2af2209
+source_rev: 83e8b8448b08
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.bochara.name: 61d048de58ec
-  ev.bochara.entry.body: 42e5e62e0b30
   ev.bochara.entry.choice.pass: d9ca0c28a951
   ev.bochara.entry.choice.rest: cc453f19a435
+  ev.bochara.entry.body: c4372336c6b2
   ev.bochara.entry.title: dde08e0d3245
 ---
 
@@ -31,8 +34,7 @@ stamps:
 
 ## ev.bochara.entry.body
 
-不花剌——中亚伊斯兰的穹顶之城，经学院向大汗疆域各方学子传授律法与神学。地毯、丝与最上的纸出自其作坊；
-城堡从未被攻破。
+你进入不花剌，被引见给呼罗珊埃米尔的书记贾伊哈尼——此地人称作「尊贵的支柱」——他下令为旅人备屋并派人照料。随后获准觐见纳斯尔·本·艾哈迈德，一位年轻的埃米尔，他首先问起报达的信士们的长官安否。市集上可见铜与黄铜打的吉特里菲银币，以一百枚折合银迪拉姆计数——嫁妆、产业与奴仆皆用此币。人在此停留数周以待时令；冬季北路封闭。你须知道：萨曼朝治下的不花剌是河中学问的穹顶，其纸、地毯与钱币名闻呼罗珊。
 
 ## ev.bochara.entry.title
 

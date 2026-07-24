@@ -2,34 +2,35 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: 38af1eaa084e
+source_rev: edc900d1f8dd
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.cotan.name: 453bcf60be62
-  ev.cotan.a.body: 1808e030c02f
   ev.cotan.a.choice.jade: 4c31cbad564f
   ev.cotan.a.choice.wade: 002f1c6bc2f4
   ev.cotan.a.choice.watch: 5433bc324f0b
-  ev.cotan.a.title: 0b59c365ce32
-  ev.cotan.b.body: d35abca524b4
   ev.cotan.b.choice.dyes: 29d7258d801b
   ev.cotan.b.choice.silk: 15f6061343bc
   ev.cotan.b.choice.weave: 70a512517158
-  ev.cotan.b.title: c7c48ec8a057
-  ev.cotan.c.body: 1e3b57f73424
   ev.cotan.c.choice.explore: ee5e6a782d70
   ev.cotan.c.choice.fragment: e2154f92603b
   ev.cotan.c.choice.listen_elder: 2d8b54f45668
-  ev.cotan.c.title: b9524767021d
-  ev.cotan.entry.body: 87b436f01b1a
   ev.cotan.entry.choice.customs: 5f67b1abbf38
   ev.cotan.entry.choice.lore: 5800603dbcaf
   ev.cotan.entry.choice.market: b23d98ceae5c
+  ev.cotan.a.body: 1808e030c02f
+  ev.cotan.a.title: 0b59c365ce32
+  ev.cotan.b.body: d35abca524b4
+  ev.cotan.b.title: c7c48ec8a057
+  ev.cotan.c.body: 1e3b57f73424
+  ev.cotan.c.title: b9524767021d
+  ev.cotan.entry.body: 87b436f01b1a
   ev.cotan.entry.title: d750868faec6
 ---
 

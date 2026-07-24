@@ -2,18 +2,21 @@
 unit: smyrna
 lang: zh
 source: en
-source_rev: 96aef39f3d87
+source_rev: 3ccc766d7aa4
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.smyrna.name: 08111fada570
-  ev.smyrna.entry.body: de39e1868008
   ev.smyrna.entry.choice.pass: d9ca0c28a951
   ev.smyrna.entry.choice.rest: cc453f19a435
+  ev.smyrna.entry.body: 653bd15912aa
   ev.smyrna.entry.title: d652dbba3dff
 ---
 
@@ -31,8 +34,7 @@ stamps:
 
 ## ev.smyrna.entry.body
 
-士麦那——安纳托利亚西部的港口，内陆谷地之丝在此打成包，装上热那亚帆桨船。山上城堡飘着最近夺城者的旗；
-山下，突厥、希腊与法兰克商人以三种语言数硬币。港在淤塞，然贸易仍流。
+亚兹米尔——法兰克人称作士麦那——属比尔基苏丹；其埃米尔是该族之子奥马尔贝伊。此港收纳内陆谷地之丝，以法兰克船舶西运；城后山丘多葡萄与橄榄，为土库曼领主所植。由此路通马格尼西亚、贝尔加马与布尔萨，各有其贝伊。你须知道：罗姆海岸昔属罗马人，至今罗马人仍多居于此，受穆斯林管辖，与据守城堡的土库曼人比邻。
 
 ## ev.smyrna.entry.title
 

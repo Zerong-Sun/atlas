@@ -15,9 +15,15 @@ Mecha
 
 ## ev.mecha.entry.body
 
-Mecca — the holy city of Islam, forbidden to Christians. The Kaaba stands in the center
-of the great mosque, draped in black silk; the well of Zamzam waters the pilgrims who
-circle it. The city lives on the Hajj; its merchants sell water and prayer-beads.
+You approach Mecca across the valley and come upon the signs that part
+the haram — the sacred territory — from the hill. Within those towers all is
+haram; beyond, hill. Here pilgrims put on the ihrām and pray at the miqāt before
+entering the House. Zamzam water issues from the well; men pour it upon weary
+limbs after the circumambulation of the Ka‘bah. Fresh dates and the fruits of
+this protected town are praised by every stranger. You must know that this is
+the direction of prayer for every Muslim upon the earth, and that the road hither
+is lined with wells, mosques, and the footprints of the prophets.
+
 
 ## ev.mecha.entry.choice.look
 

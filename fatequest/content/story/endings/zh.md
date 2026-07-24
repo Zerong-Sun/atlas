@@ -9,6 +9,7 @@ notes: >
   路途文本不允许的事——回望。每条只陈述这趟旅程成了什么样子，不指示玩家
   该有什么感受。变量插的是这一局真实记录下来的事实，因此不可写出「只有当
   变量很大才通顺」的句子。参见 LORE_PIPELINE §4、GDD §14。
+
 stamps:
   epilogue.nowhere: 755e9b0583f8
   epilogue.no_long_road: a71b8f85ee3c

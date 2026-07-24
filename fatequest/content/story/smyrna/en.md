@@ -15,10 +15,15 @@ Smyrna
 
 ## ev.smyrna.entry.body
 
-Smyrna — the port of western Anatolia, where silk from the inland valleys is baled for
-Genoese galleys. The castle on the hill flies the flag of whichever power last took the
-city; below, Turkish, Greek, and Frankish merchants count coins in three languages. The
-harbor is silting up, but the trade still flows.
+Yazmīr — which the Franks call Smyrna — belongs to the Sultan of
+Birkī; its Emīr is Omar Beg, one of that house. The port takes silk from the
+inland valleys and sends it west in Frankish bottoms; the hills behind the
+town are planted with vines and olives under Turkoman lords. From here the
+road runs to Magnesia, Bergama, and Burūsa, each under its own beg. You must
+know that these coasts of Room once belonged to the Romans, and that Romans
+still dwell here in number under Muslim rule, side by side with the Turkomans
+who hold the castles.
+
 
 ## ev.smyrna.entry.choice.pass
 

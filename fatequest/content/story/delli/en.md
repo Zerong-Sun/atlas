@@ -15,10 +15,17 @@ Delli
 
 ## ev.delli.entry.body
 
-Delhi — the capital of the Sultanate, a city of mosques, minarets, and markets that
-swallows caravans from Khorasan and Bengal alike. The Sultan's cavalry — ten thousand
-Turkic horsemen — patrols the walls. The bazaars sell horses from Arabia, swords from
-Damascus, and slaves from Africa. No city in India is richer or more dangerous.
+You come to Dehli under the care of the Vizier, and are led first to
+the door of the Sultan's haram, where the Queen-mother El Makhdūma Jahān
+receives the presents of travellers — each gift registered by her secretaries
+according to the giver's means. Dresses of honour are put upon you; flour,
+rice, and flesh are sent from the imperial kitchen. The Kāzī of the city sits
+with the Vizier at such receptions. Beyond the palace gates the markets of
+the Sultanate run for miles — mosques, minarets, and the press of Hindū and
+Muslim trades. You must know that Dehli is the seat of the Tughluq Sultans,
+and that no man of rank enters without his name being written in the books of
+the court.
+
 
 ## ev.delli.entry.choice.look
 

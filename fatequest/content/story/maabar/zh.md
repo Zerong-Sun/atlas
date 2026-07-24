@@ -2,18 +2,19 @@
 unit: maabar
 lang: zh
 source: en
-source_rev: 7588976f2d0d
+source_rev: b68f38fa0bbe
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.maabar.name: 11a8a37d3ede
-  ev.maabar.entry.body: ad2f702bbe8a
   ev.maabar.entry.choice.look: a1e5276c886b
   ev.maabar.entry.choice.pass: 96d145abaf05
+  ev.maabar.entry.body: ad2f702bbe8a
   ev.maabar.entry.title: decd3614b83d
 ---
 

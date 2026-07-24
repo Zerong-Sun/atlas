@@ -15,9 +15,15 @@ Hierusalem
 
 ## ev.hierusalem.entry.body
 
-Jerusalem — the city that three faiths call holy. The Dome of the Rock glitters above
-the Western Wall; the Holy Sepulchre echoes with Latin, Greek, Armenian, and Coptic
-chant. Pilgrims pay a tax at the gate; the Mamluk guard watches from the Citadel.
+Jerusalem — Bait al-Maqdis — lies three days south-west of Acre, eight
+from Damascus, toward Alexandria. Between the Frankish coast and this hill city
+the road climbs past farmsteads and orchards that feed Acre and Tyre. Within
+the walls Muslims, Christians, and Jews keep their sacred places; the Dome and
+the Holy Sepulchre stand within a walk of one another. Bethlehem, the birth-place
+of Jesus, lies upon the road. You must know that this city has changed hands
+more than once in these centuries, and that every pilgrim — of whichever faith —
+speaks of it as a place set apart.
+
 
 ## ev.hierusalem.entry.choice.look
 

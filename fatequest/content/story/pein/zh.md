@@ -2,18 +2,19 @@
 unit: pein
 lang: zh
 source: en
-source_rev: 598cf8cf046f
+source_rev: 447e33f514ff
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.pein.name: 7b50a6deb1ff
-  ev.pein.entry.body: 062b1a35331b
   ev.pein.entry.choice.look: a1e5276c886b
   ev.pein.entry.choice.pass: 96d145abaf05
+  ev.pein.entry.body: 062b1a35331b
   ev.pein.entry.title: 45008b4775a5
 ---
 

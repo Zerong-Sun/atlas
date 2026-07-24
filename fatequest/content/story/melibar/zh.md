@@ -2,19 +2,20 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: 19f760e37b05
+source_rev: b83e9a7a0cde
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.melibar.name: 6bd3f900b455
-  ev.melibar.entry.body: a29a2892f529
   ev.melibar.entry.choice.market: dff8a8e30f89
   ev.melibar.entry.choice.pass: c1ebd610da70
   ev.melibar.entry.choice.shrine: 42854d684489
+  ev.melibar.entry.body: a29a2892f529
   ev.melibar.entry.title: 76f9c9cede18
 ---
 

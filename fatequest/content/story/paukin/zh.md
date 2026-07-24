@@ -2,18 +2,19 @@
 unit: paukin
 lang: zh
 source: en
-source_rev: f7d3a2cb2779
+source_rev: 94d55686f431
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.paukin.name: a8c88ad8019c
-  ev.paukin.entry.body: 94998f202cec
   ev.paukin.entry.choice.look: a1e5276c886b
   ev.paukin.entry.choice.pass: 96d145abaf05
+  ev.paukin.entry.body: 94998f202cec
   ev.paukin.entry.title: 99e6ff0885b8
 ---
 

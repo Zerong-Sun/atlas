@@ -15,11 +15,15 @@ Tripolis
 
 ## ev.tripolis.entry.body
 
-Tripoli — a Crusader county now under Mamluk rule, where the harbor fort built by
-Raymond of Saint-Gilles still stands. Silk from the coastal plantations, sugar from the
-refineries, and glass from the local workshops fill the warehouses. The best library in
-the Levant was burned when the city fell; the scholars have scattered, but the merchants
-remain.
+Tarabalas of Syria — Tripoli upon the sea — is a large city, and
+men who have seen Damascus will set this place beside it. The harbour fort
+commands the roadstead; olive and mulberry climb the terraces inland toward
+the mountain. Under the Mamluk sultans the Latin county is gone, yet Frankish
+merchants still take silk and sugar from these quays, and the road runs north
+to Emessa and Hamah, south toward Bairūt and Acca. You must know that this
+Tripoli is of the Syrian shore, not of the Maghrib, and that its Friday
+mosques and its fondacos stand within the same walls.
+
 
 ## ev.tripolis.entry.choice.pass
 

@@ -15,12 +15,16 @@ Damascus
 
 ## ev.damascus.entry.body
 
-Damascus — the garden city of the Umayyads, where canals fed by the Barada River water
-orchards of apricot and almond within the walls. Its steel blades — watered with a
-pattern like running water — are the finest in the world. Its brocades of gold and silk
-clothe sultans from Cairo to Delhi. The Great Mosque, once a church, once a temple, now
-rises above the old city; the minaret of the Bride is visible from three days' journey
-away.
+Damascus — paradise of the Orient, bride of the cities — is garnished
+with gardens and sweet-scented herbs, her rivulets twisting like serpents through
+every way. The cathedral mosque of the Umayyads is among the most celebrated
+in the world; west of it stands the Dār al-Hadīth. The markets are the finest
+arranged of any — qaysāriyahs tall as caravanserais with iron gates, and the
+Great Market running from Bāb al-Jābiyah to Bāb Sharqī along the Straight Street.
+Outside the walls the Sultan races horses upon green courses beside the river.
+You must know that pilgrims returning from the Hijāz are met here with honour,
+and that steel, silk, and rosewater of this city are named in every caravan.
+
 
 ## ev.damascus.entry.choice.look
 

@@ -15,10 +15,15 @@ Cabul
 
 ## ev.cabul.entry.body
 
-Kabul — a fortress city in the eastern mountains, gateway to India. The Khyber caravans
-assemble here; lapis lazuli from Badakhshan and spices from Delhi change hands in the
-covered bazaar. The winter snows close the passes for four months; in summer the road to
-India is safe for a well-armed caravan.
+Kābul was once a large city; it is now, for the most part, in ruins.
+A people from Persia whom they call the Afghāns hold what remains, and their
+mountains are difficult of access, with narrow passes. The road hither crosses
+the Hindū Kush — the Hindoo-slayer — where the cold kills many of the slaves
+driven up from India; Ghizna of Mahmūd lies a few stages off, cold and high.
+You must know that Kābul is the gate between Irān and Hindūstān, and that
+caravans still risk the passes for the sake of the Indian trade, though the
+old walls are broken and the robbers of the hills are many.
+
 
 ## ev.cabul.entry.choice.pass
 

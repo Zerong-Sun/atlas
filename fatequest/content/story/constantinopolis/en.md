@@ -15,9 +15,15 @@ Constantinopolis
 
 ## ev.constantinopolis.entry.body
 
-Constantinople, the Queen of Cities. The dome of Hagia Sophia still rises above the
-Golden Horn, but the Latin emperors have stripped her of treasure. Venetian and Genoese
-merchants own the best quarters; the Greek merchants watch from Galata with envy.
+Constantinople the Great — seat of the Rum — stands behind walls
+that have held for centuries. Its largest church is Saint Sophia; the churches
+and monasteries within the city are almost beyond count. Genoese and other
+Frankish merchants keep their fondacos along the Golden Horn; the Emperor's
+court receives envoys from the Khāns of the steppe and from the Muslim west.
+Islands of the Greek sea answer to this city's rule. You must know that news
+of this place travels far — of emperors and usurpations — and that no harbour
+of the Middle Sea is spoken of with more weight.
+
 
 ## ev.constantinopolis.entry.choice.look
 

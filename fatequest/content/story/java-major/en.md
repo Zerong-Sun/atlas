@@ -15,11 +15,16 @@ Java Major
 
 ## ev.java-major.entry.body
 
-Java the Great — an island kingdom of immense wealth, where pepper, nutmeg, and cloves
-grow in the volcanic soil. The Shahbandar of the port taxes every ship that enters; no
-man has ever sailed around the island, which the natives claim extends southward without
-end. The king pays no tribute to any power; his war-elephants and his fleet of a
-thousand prahus are the terror of the surrounding seas.
+Out from Zaitūn the junks of El Malik El Zāhir, King of the
+southern islands, take the monsoon for India and the archipelago. Ten days'
+fair wind, then storm and strange seas — and at last landfall where that
+Muslim king holds court, returning from victory with captives, marrying his
+heir with rites no traveller from the west has seen elsewhere. Pepper, nutmeg,
+and the woods of the islands fill the holds; the king's servants are of the
+Faith, and he supplies the stranger with all that is needful. You must know
+that men of China and of India both name this great island among the richest
+of the southern ocean, and that its harbours take junk and dhow alike.
+
 
 ## ev.java-major.entry.choice.look
 

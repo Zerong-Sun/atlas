@@ -2,34 +2,35 @@
 unit: kinsay
 lang: zh
 source: en
-source_rev: 82add5b21671
+source_rev: ca0820f24db5
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.kinsay.name: bf7f3cb66f25
-  ev.kinsay.a.body: 19b809bacfd4
   ev.kinsay.a.choice.boat: c107668bfbb9
   ev.kinsay.a.choice.tower: 48427e5ec3c6
   ev.kinsay.a.choice.walk: 4bd3b89e351f
-  ev.kinsay.a.title: 589b1a95ff61
-  ev.kinsay.b.body: 698df525b1e7
   ev.kinsay.b.choice.bath: 02b92d4cd44c
   ev.kinsay.b.choice.count_pepper: 45cb4d482a5c
   ev.kinsay.b.choice.pepper: 60015df93bfd
-  ev.kinsay.b.title: a44911d01156
-  ev.kinsay.c.body: 2b740c19748d
   ev.kinsay.c.choice.boat: 02f6996058f7
   ev.kinsay.c.choice.moonlight: d517092e82ff
   ev.kinsay.c.choice.watch: 273a41341097
-  ev.kinsay.c.title: 4df4bc077831
-  ev.kinsay.entry.body: 74b5e172b3d8
   ev.kinsay.entry.choice.customs: 13906264a318
   ev.kinsay.entry.choice.lore: 5800603dbcaf
   ev.kinsay.entry.choice.market: 40d150e29a9c
+  ev.kinsay.a.body: 19b809bacfd4
+  ev.kinsay.a.title: 589b1a95ff61
+  ev.kinsay.b.body: 698df525b1e7
+  ev.kinsay.b.title: a44911d01156
+  ev.kinsay.c.body: 2b740c19748d
+  ev.kinsay.c.title: 4df4bc077831
+  ev.kinsay.entry.body: 74b5e172b3d8
   ev.kinsay.entry.title: 4ff36535d29a
 ---
 

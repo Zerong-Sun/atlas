@@ -2,18 +2,19 @@
 unit: linju
 lang: zh
 source: en
-source_rev: 022923d54771
+source_rev: b2d2066915f0
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.linju.name: eec7f1e69064
-  ev.linju.entry.body: 0c28e520b6b9
   ev.linju.entry.choice.look: a1e5276c886b
   ev.linju.entry.choice.pass: 96d145abaf05
+  ev.linju.entry.body: 0c28e520b6b9
   ev.linju.entry.title: 24d00e91f06e
 ---
 

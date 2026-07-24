@@ -2,18 +2,21 @@
 unit: babylonia-cairus
 lang: zh
 source: en
-source_rev: 82f8bca43a72
+source_rev: d936be6b0918
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.babylonia-cairus.name: f3004d0feaad
-  ev.babylonia-cairus.entry.body: c5d55e273bf5
   ev.babylonia-cairus.entry.choice.look: a1e5276c886b
   ev.babylonia-cairus.entry.choice.pass: 96d145abaf05
+  ev.babylonia-cairus.entry.body: b3fe1338514d
   ev.babylonia-cairus.entry.title: c95e8984701c
 ---
 
@@ -31,9 +34,7 @@ stamps:
 
 ## ev.babylonia-cairus.entry.body
 
-开罗，拉丁人称作巴比伦——马穆鲁克疆域中最伟大之城。百座宣礼塔升起于尼罗河上；萨拉丁城堡冠于小丘之巅。
-汗哈利利香料市终夜不歇；印度、也门与马格里布商人挤满街巷。哈里发古宫已不存，然苏丹的马穆鲁克骑兵——一万切尔克斯与突厥奴兵——巡行于墙。
-凡自印度洋至地中海之货，皆须经巴比伦海关，苏丹从中取厚利。
+米昔尔与开罗傍尼罗河而立，一城而两部——旧日福斯塔特聚落与城堡下的新城区。四座形制壮丽的聚礼清真寺耸立于诸多小寺之间；阿慕尔·本·阿斯清真寺每日有收入以供诵经师与伊玛目。米昔尔与开罗的经学院皆赖苏丹恩赐维持——人言月费二千埃及第纳尔。沿河村镇相连不绝。你须知道：此地为阿尤布朝在埃及的权力中心，异乡人寄居稍久，必闻金曜呼图白以逊尼仪轨宣讲。
 
 ## ev.babylonia-cairus.entry.title
 

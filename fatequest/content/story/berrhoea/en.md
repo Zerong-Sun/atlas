@@ -15,11 +15,15 @@ Berrhoea
 
 ## ev.berrhoea.entry.body
 
-Aleppo, known to the Franks as Berrhoea — the caravanserai city of northern Syria. Its
-covered bazaar stretches for a mile, lined with soap-makers, silk-weavers, and spice
-merchants. Caravans from Baghdad, Damascus, and Anatolia converge here; the khans are
-never empty. The citadel on its high mound commands the plain. The governor collects a
-toll on every camel-load, and the city prospers whether under Mamluk or Mongol rule.
+Aleppo — Haleb — is a town of eminent consequence; its fame has flown
+high in all ages. The fortress is renowned for impregnability and is seen from
+far off for its height. Markets and streets are broad; the highest markets are
+roofed, their shops as large as khāns. Within the citadel is a meshhed where
+Abraham is said to have performed his devotions. The road hither passes al-Bāb,
+where the Ismā‘īlīyah once held the gate between Buza‘ah and the city. You must
+know that Aleppo has been sought by many kings, and that its roofed sūqs and
+its citadel mark it among the great cities of Syria.
+
 
 ## ev.berrhoea.entry.choice.look
 

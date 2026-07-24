@@ -2,18 +2,21 @@
 unit: mecha
 lang: zh
 source: en
-source_rev: a341c623c26e
+source_rev: 9e9e0dc06718
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.mecha.name: 86c6f21aa41b
-  ev.mecha.entry.body: 88a34f4e175b
   ev.mecha.entry.choice.look: a1e5276c886b
   ev.mecha.entry.choice.pass: 96d145abaf05
+  ev.mecha.entry.body: 460ec1e01afc
   ev.mecha.entry.title: 793d34b31a75
 ---
 
@@ -31,9 +34,7 @@ stamps:
 
 ## ev.mecha.entry.body
 
-默伽——伊斯兰之圣城，基督徒不得入。Kaaba立于大masjid（清真寺）中央，覆以黑丝；
-Zamzam井之水，供环绕之朝圣者。城赖朝觐而生；商贾售水与念珠。bāzār（集市）
-上念珠与水壶成列。
+你越过山谷近麦加，便见划分禁地（haram）与山地的界标。塔内皆为禁地，塔外为山。朝圣者在此换上戒衣（ihrām），于米卡特礼拜后方入天房。渗渗泉水自井中涌出；人于绕行克尔白后浇灌疲乏的肢体。鲜枣与此受护之城的果品，为每一位异乡人赞叹。你须知道：此地是地上每一个穆斯林礼拜的朝向，来路两旁尽是水井、清真寺与先知的足迹。
 
 ## ev.mecha.entry.title
 

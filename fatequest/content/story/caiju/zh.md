@@ -2,18 +2,19 @@
 unit: caiju
 lang: zh
 source: en
-source_rev: 2252bb569e51
+source_rev: c50abe042736
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.caiju.name: cceee1f1da86
-  ev.caiju.entry.body: c163159d1124
   ev.caiju.entry.choice.look: a1e5276c886b
   ev.caiju.entry.choice.pass: 96d145abaf05
+  ev.caiju.entry.body: c163159d1124
   ev.caiju.entry.title: dc274ca46216
 ---
 

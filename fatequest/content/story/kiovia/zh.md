@@ -2,18 +2,19 @@
 unit: kiovia
 lang: zh
 source: en
-source_rev: 132b1957dde5
+source_rev: 3dff3b842b6c
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.kiovia.name: 5c4220913439
-  ev.kiovia.entry.body: 39f1fbcf801f
   ev.kiovia.entry.choice.look: a1e5276c886b
   ev.kiovia.entry.choice.pass: 96d145abaf05
+  ev.kiovia.entry.body: 39f1fbcf801f
   ev.kiovia.entry.title: 425af08834fd
 ---
 

@@ -2,39 +2,40 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: 791829c679ce
+source_rev: abbd8560d8ce
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.tauris.name: 0d76dc9ff8f7
-  ev.tauris.a.body: d0dcfcf2a83b
   ev.tauris.a.choice.merchants: ee6dc2b6e99c
   ev.tauris.a.choice.pearls: 7901d180c394
   ev.tauris.a.choice.view: 5b6bb68129f3
-  ev.tauris.a.title: 97aa8250dfae
-  ev.tauris.b.body: d1eae6ed13e3
   ev.tauris.b.choice.browse: 529ff7ab9366
   ev.tauris.b.choice.dragoman: b81fb4e66125
   ev.tauris.b.choice.latin: 9d1e2f2a686d
-  ev.tauris.b.title: c257b3a40945
-  ev.tauris.c.body: 635beac20a54
   ev.tauris.c.choice.fruit: d6bb70f74ec0
   ev.tauris.c.choice.rest: a144ba11847e
   ev.tauris.c.choice.wander: e288bb3426ff
-  ev.tauris.c.title: 4b6457f485c1
-  ev.tauris.entry.body: 122ebd882ff0
   ev.tauris.entry.choice.customs: 2738a8784344
   ev.tauris.entry.choice.lore: 5800603dbcaf
   ev.tauris.entry.choice.market: b23d98ceae5c
-  ev.tauris.entry.title: a1cb0345c92f
   ev.tauris.mentor_tarot.body: 07e8f175e941
   ev.tauris.mentor_tarot.choice.ask: 3c2ab766874e
   ev.tauris.mentor_tarot.choice.learn: 32961624751c
   ev.tauris.mentor_tarot.title: 90bb0d2f3234
+  ev.tauris.a.body: d0dcfcf2a83b
+  ev.tauris.a.title: 97aa8250dfae
+  ev.tauris.b.body: d1eae6ed13e3
+  ev.tauris.b.title: c257b3a40945
+  ev.tauris.c.body: 635beac20a54
+  ev.tauris.c.title: 4b6457f485c1
+  ev.tauris.entry.body: 122ebd882ff0
+  ev.tauris.entry.title: a1cb0345c92f
 ---
 
 ## city.tauris.name

@@ -15,11 +15,15 @@ Ninive
 
 ## ev.ninive.entry.body
 
-Mosul, which the Latins call Nineveh after the ancient city whose ruins lie across the
-Tigris. A great bridge of boats spans the river; the workshops along the bank weave the
-gold-threaded muslin cloth that gives the city its name. Christians and Muslims trade
-side by side in the bazaar; the governor answers to the Ilkhan, but the city's wealth is
-its own.
+Mosul sits upon the Tigris; about a mile east, across the water, lie the
+ruins of Ninawa — Nineveh, city of Yūnus — whose wall-traces and gate-openings
+are still plain, and whose ruined towers stand high. Upon the Hill of Penitence
+men pray as the prophet's people once prayed; a blessed spring and mosque lie
+nearby. The people of Mosul are generous to strangers and just in their dealings.
+Bitumen wells darken the ground upon the road hither. You must know that this
+is a city of learning and of pious works, and that the continuous villages along
+the Tigris bring the pilgrim order of march to its end.
+
 
 ## ev.ninive.entry.choice.pass
 

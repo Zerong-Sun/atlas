@@ -2,19 +2,20 @@
 unit: calatu
 lang: zh
 source: en
-source_rev: ce6089b6ec86
+source_rev: b3d488d178f4
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.calatu.name: 4b67890dc2d1
-  ev.calatu.entry.body: 0f5c1fa80e32
   ev.calatu.entry.choice.market: dff8a8e30f89
   ev.calatu.entry.choice.pass: c1ebd610da70
   ev.calatu.entry.choice.shrine: 42854d684489
+  ev.calatu.entry.body: 0f5c1fa80e32
   ev.calatu.entry.title: 898cc5b23dea
 ---
 

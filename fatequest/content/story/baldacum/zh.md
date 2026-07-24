@@ -2,39 +2,40 @@
 unit: baldacum
 lang: zh
 source: en
-source_rev: 9c8c5f4e211e
+source_rev: e74087f30c39
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.baldacum.name: d3515eab261e
-  ev.baldacum.a.body: df4e7ac65664
   ev.baldacum.a.choice.explore: d70c953b634c
   ev.baldacum.a.choice.listen: df275eb5b1c6
   ev.baldacum.a.choice.treasure: d28db5628fba
-  ev.baldacum.a.title: a87938353f66
-  ev.baldacum.b.body: f802c80ad7e5
   ev.baldacum.b.choice.brocade: 2198b8db89ac
   ev.baldacum.b.choice.sherbet: 854af9faba6e
   ev.baldacum.b.choice.spices: 81f08ab5f55b
-  ev.baldacum.b.title: e5c1802405aa
-  ev.baldacum.c.body: 5f35190ed116
   ev.baldacum.c.choice.listen: 78098cf8b402
   ev.baldacum.c.choice.record: 81dd4a8bf4b3
   ev.baldacum.c.choice.search: 482f046c65d6
-  ev.baldacum.c.title: b873ff792737
-  ev.baldacum.entry.body: bfd925edfb53
   ev.baldacum.entry.choice.customs: 2738a8784344
   ev.baldacum.entry.choice.lore: 5800603dbcaf
   ev.baldacum.entry.choice.market: b23d98ceae5c
-  ev.baldacum.entry.title: 8b09f463e011
   ev.baldacum.mentor_bazi.body: ddc2393b3ba2
   ev.baldacum.mentor_bazi.choice.ask: a7c0107ef855
   ev.baldacum.mentor_bazi.choice.learn: 3d9514f6dbeb
   ev.baldacum.mentor_bazi.title: aca9265a55dd
+  ev.baldacum.a.body: df4e7ac65664
+  ev.baldacum.a.title: a87938353f66
+  ev.baldacum.b.body: f802c80ad7e5
+  ev.baldacum.b.title: e5c1802405aa
+  ev.baldacum.c.body: 5f35190ed116
+  ev.baldacum.c.title: b873ff792737
+  ev.baldacum.entry.body: bfd925edfb53
+  ev.baldacum.entry.title: 8b09f463e011
 ---
 
 ## city.baldacum.name

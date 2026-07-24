@@ -2,18 +2,21 @@
 unit: antiochia
 lang: zh
 source: en
-source_rev: bc76a440af60
+source_rev: e4ce1324a241
 status: translated
+proofed: true
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+  # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
+
 stamps:
   city.antiochia.name: f3f214bfbe77
-  ev.antiochia.entry.body: 5fe8a6b1a128
   ev.antiochia.entry.choice.look: a1e5276c886b
   ev.antiochia.entry.choice.pass: 96d145abaf05
+  ev.antiochia.entry.body: 8aa02379693d
   ev.antiochia.entry.title: f3741b89eafd
 ---
 
@@ -31,8 +34,7 @@ stamps:
 
 ## ev.antiochia.entry.body
 
-安条克——昔日罗马第三城，如今马穆鲁克苏丹国的边陲之镇。城墙犹在，满是百年十字军与反围城的伤痕。
-阿勒颇之丝与安纳托利亚之羊毛，在有顶的bāzār（集市）中易手。
+你沿阿西河（El Aāsī）下行至安条克——哈马人呼此河为「叛河」。城在边疆山下，介乎穆斯林之地与昔日法兰克人所据海岸城堡之间。城中有哈比卜·纳加尔之墓，朝圣者来谒；城外高处则是亦思马仪派的堡垒——布格拉斯、沙格哈尔、马西亚夫、卡赫夫——外人不得自由出入。商队仍携丝与钢过奥龙特桥；马穆鲁克哨卡守着城门。你须知道：此地昔为罗马名城之一，人至今言及，犹若言及旧日大马士革。
 
 ## ev.antiochia.entry.title
 
