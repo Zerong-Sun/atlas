@@ -39,3 +39,6 @@ jobs:
           node-version: "20"
       - run: node scripts/validate-outcomes.mjs
       - run: node scripts/smoke-outcomes.mjs
+      # 《远行之书》 book.html engine: table + economy + reachability invariants
+      - run: node scripts/check_bof.mjs
+      - run: node scripts/audit_art.mjs

@@ -137,7 +137,7 @@
 |---|---|
 | 两套入口 | `index.html`（旧 FateQuest）与 `book.html`（本作）并存。旧作的塔、日签、牌阵尚未接入新框架；决定是移植还是弃用。 |
 | ~~`sw.js` 未收录新资源~~ | 已修：`fatequest-v3` 收录 `book.html`、`js/bof/*`、`assets/data/*.json`，离线可开。 |
-| 无测试 | `BOF.DB.validate()` 是唯一的自动检查（数据层）。逻辑层零测试；至少给 `fx.js` 与 `event.js` 补上。 |
+| ~~新引擎无 CI 覆盖~~ | 已修：`scripts/check_bof.mjs` 校验八表结构 + 经济可达性（全图可达、无城可困死无钱之人），已接入 `.github/workflows/ci.yml` 的 `validate-fatequest`。逻辑层（`fx.js` 施效、`learn.js` 计分）仍靠浏览器内手测，可再补 headless。 |
 | 地图详情卡在窄屏溢出 | `max-height:74%` 可滚动，但桌面端位置可再调。 |
 | `worldmap.json` 149 KB | 首屏预算 250 KB 已用掉大半。若要更多城市，考虑按地带分片懒加载。 |
 

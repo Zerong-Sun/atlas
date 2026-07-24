@@ -363,6 +363,11 @@ p { margin: .5em 0; }
 }
 .tv-mode:hover:not(.blocked) { background: rgba(255, 250, 235, .85); }
 .tv-mode.blocked { opacity: .45; border-style: dashed; cursor: not-allowed; }
+.tv-mode.work { border-color: var(--rubric); border-style: dashed; }
+.tv-badge {
+  font-size: .68rem; padding: 1px 6px; border-radius: 999px; vertical-align: middle;
+  background: rgba(179, 64, 46, .16); color: var(--rubric); border: 1px solid var(--rubric);
+}
 .tv-mode-ic, .tv-mode .art, .tv-mode .art-ph { width: 54px; flex: 0 0 54px; }
 .tv-mode-txt { flex: 1; display: flex; flex-direction: column; min-width: 0; }
 .tv-why { color: var(--rubric); font-size: .78rem; }

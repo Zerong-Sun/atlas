@@ -108,23 +108,8 @@ BOF.MAP.render = function () {
       data-route="${r.id}"/>`;
   }).join("");
 
-  /* the ink-wash over unmapped ground: holes where you have stood */
-  const holes = s.visitedCities.map(id => {
-    const c = BOF.DB.city(id);
-    const geo = c && BOF.DB.mapCities[c.map];
-    if (!geo) return "";
-    return `<circle cx="${geo.x}" cy="${geo.y}" r="118" fill="#000"/>`;
-  }).join("") + s.knownRoutes.map(rid => {
-    const r = BOF.DB.route(rid);
-    const a = r && BOF.DB.city(r.from), b = r && BOF.DB.city(r.to);
-    const ga = a && BOF.DB.mapCities[a.map], gb = b && BOF.DB.mapCities[b.map];
-    if (!ga || !gb) return "";
-    let out = "";
-    for (let t = 0.15; t < 1; t += 0.12) {
-      out += `<circle cx="${ga.x + (gb.x - ga.x) * t}" cy="${ga.y + (gb.y - ga.y) * t}" r="64" fill="#000"/>`;
-    }
-    return out;
-  }).join("");
+  /* The ink-wash holes are punched in BOF.MAP.attach(), not here — they live
+     inside an SVG <mask> that only exists once the markup is in the DOM. */
 
   const land = wm.land.map(d => `<path d="${d}"/>`).join("");
   const lakes = wm.lakes.map(d => `<path d="${d}"/>`).join("");

@@ -132,12 +132,8 @@ BOF.EV.arrive = function (cityId) {
 
   const c = BOF.DB.city(cityId);
   BOF.note("🏙️", BOF.lang() === "zh" ? "抵达" + BOF.bi(c.name) : "Arrived at " + BOF.bi(c.name));
-
-  /* arriving teaches you the roads that leave from here — you can see the gate
-     even before you know where it goes */
-  BOF.DB.routesAt(cityId).forEach(r => {
-    if (!s.knownRoutes.includes(r.id)) return;   /* known roads stay known */
-  });
+  /* Arriving does NOT reveal the roads out — the map comes from asking (P2).
+     Only the road you walked in on is known, and it already was. */
   BOF.save();
 
   const entry = BOF.EV.entryFor(cityId);

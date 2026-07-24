@@ -7,7 +7,9 @@
 <meta name="description" content="远行之书 The Book of Far Roads — 中世纪欧亚非旅行开放世界">
 <title>远行之书 · The Book of Far Roads</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/bof.css">
+<!-- ?v bump on each release: defeats the browser + service-worker cache so
+     updated scripts and styles actually load. Keep in step with sw.js CACHE. -->
+<link rel="stylesheet" href="css/bof.css?v=3">
 </head>
 <body>
 
@@ -16,17 +18,17 @@
 <nav id="bof-dock" class="bof-dock" hidden></nav>
 <div id="toast" class="toast"></div>
 
-<script src="js/bof/art.js"></script>
-<script src="js/bof/db.js"></script>
-<script src="js/bof/save.js"></script>
-<script src="js/bof/fx.js"></script>
-<script src="js/bof/event.js"></script>
-<script src="js/bof/roll.js"></script>
-<script src="js/bof/worldmap.js"></script>
-<script src="js/bof/travel.js"></script>
-<script src="js/bof/learn.js"></script>
-<script src="js/bof/ui.js"></script>
-<script src="js/bof/end.js"></script>
+<script src="js/bof/art.js?v=3"></script>
+<script src="js/bof/db.js?v=3"></script>
+<script src="js/bof/save.js?v=3"></script>
+<script src="js/bof/fx.js?v=3"></script>
+<script src="js/bof/event.js?v=3"></script>
+<script src="js/bof/roll.js?v=3"></script>
+<script src="js/bof/worldmap.js?v=3"></script>
+<script src="js/bof/travel.js?v=3"></script>
+<script src="js/bof/learn.js?v=3"></script>
+<script src="js/bof/ui.js?v=3"></script>
+<script src="js/bof/end.js?v=3"></script>
 <script>
   /* the event runner and the UI need to know about each other; this is the
      only wiring between them */

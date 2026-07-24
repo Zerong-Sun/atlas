@@ -21,24 +21,50 @@ BOF.TRAVEL.modes = function () {
   const cur = BOF.TRAVEL.cur;
   const s = BOF.state;
   const r = cur.route;
-  return (r.modes || []).map(id => {
+  const list = (r.modes || []).map(id => {
     const t = BOF.DB.transports[id];
     if (!t) return null;
     const days = Math.max(1, Math.round(r.days * t.dayMul));
     const cost = Math.round(r.cost * (1 + t.cost / 10) + t.cost);
     const risk = Math.max(0, r.risk + t.risk);
-    let why = null;
+    let why = null, reason = null;
     if (s.coins < cost) {
+      reason = "coins";
       why = { zh: "盘缠不足（需 " + cost + "）", en: "Not enough coin (needs " + cost + ")" };
     } else if ((t.needs || []).includes("permit")
                && !s.bag.some(b => b.kind === "item" && b.id === t.permit)) {
+      reason = "permit";
       why = { zh: "需" + BOF.FX.itemName(t.permit), en: "Needs the " + BOF.FX.itemName(t.permit) };
     } else if ((t.needs || []).includes("faith")
                && !["islam", "latin", "orthodox"].includes(s.who.faith)) {
+      reason = "faith";
       why = { zh: "此队只收同信仰者", en: "This band takes only its own" };
     }
-    return { t, days, cost, risk, blocked: !!why, why, cargo: t.cargo, wait: t.wait || 0 };
+    return { t, days, cost, risk, blocked: !!why, reason, why, cargo: t.cargo, wait: t.wait || 0 };
   }).filter(Boolean);
+
+  /* Destitution escape (P1 anti-softlock): if every conveyance is unaffordable
+     and the wall is money — not a permit or a faith you lack — you can always
+     work your passage. Slower, riskier, little cargo, but you are never
+     stranded penniless. A permit/faith gate is a real wall and stays shut. */
+  const anyAffordable = list.some(m => !m.blocked);
+  const coinBlocked = list.filter(m => m.reason === "coins")
+    .sort((a, b) => a.cost - b.cost)[0];
+  if (!anyAffordable && coinBlocked) {
+    const base = coinBlocked;
+    list.push({
+      t: {
+        id: "work-" + base.t.id, art: base.t.art, kinds: base.t.kinds,
+        name: { zh: "做工换" + BOF.bi(base.t.name), en: "Work your passage (" + BOF.bi(base.t.name) + ")" },
+        note: { zh: "身无分文时，以劳力抵船资：更慢，更险，载不了多少货——但走得成。",
+                en: "Penniless, you pay in labour: slower, riskier, little room for cargo — but you get there." }
+      },
+      days: Math.round(base.days * 1.6), cost: 0, risk: base.risk + 2,
+      cargo: Math.max(1, base.cargo - 3), wait: base.wait || 0,
+      blocked: false, work: true
+    });
+  }
+  return list;
 };
 
 /* Season: a road out of its window is not forbidden, it is punished — that is
@@ -221,11 +247,11 @@ BOF.TRAVEL.modeHTML = function (from, to, zh) {
   const cur = BOF.TRAVEL.cur;
   const se = BOF.TRAVEL.season();
   const rows = BOF.TRAVEL.modes().map(m => `
-    <button class="tv-mode ${m.blocked ? "blocked" : ""}"
+    <button class="tv-mode ${m.blocked ? "blocked" : ""} ${m.work ? "work" : ""}"
             ${m.blocked ? "" : `onclick="BOF.TRAVEL.pickMode('${m.t.id}')"`}>
       <span class="tv-mode-ic">${BOF.ART.img(m.t.art, "tv-mode-art")}</span>
       <span class="tv-mode-txt">
-        <b>${BOF.esc(BOF.bi(m.t.name))}</b>
+        <b>${BOF.esc(BOF.bi(m.t.name))}${m.work ? ` <span class="tv-badge">${zh ? "无钱" : "broke"}</span>` : ""}</b>
         <span class="dim small">${BOF.esc(BOF.bi(m.t.note))}</span>
         ${m.blocked ? `<span class="tv-why">🔒 ${BOF.esc(BOF.bi(m.why))}</span>` : ""}
       </span>
