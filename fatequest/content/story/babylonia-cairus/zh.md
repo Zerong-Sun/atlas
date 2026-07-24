@@ -2,7 +2,7 @@
 unit: babylonia-cairus
 lang: zh
 source: en
-source_rev: d936be6b0918
+source_rev: 2f7cacc019b1
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.babylonia-cairus.name: f3004d0feaad
   ev.babylonia-cairus.entry.choice.look: a1e5276c886b
   ev.babylonia-cairus.entry.choice.pass: 96d145abaf05
-  ev.babylonia-cairus.entry.body: b3fe1338514d
+  ev.babylonia-cairus.entry.body: 62faed50dc8c
   ev.babylonia-cairus.entry.title: c95e8984701c
 ---
 

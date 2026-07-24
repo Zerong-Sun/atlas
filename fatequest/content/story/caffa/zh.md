@@ -2,7 +2,7 @@
 unit: caffa
 lang: zh
 source: en
-source_rev: 9f62f6f490cf
+source_rev: 80cd463adc75
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.caffa.name: 04d2ee455e2b
   ev.caffa.entry.choice.pass: d9ca0c28a951
   ev.caffa.entry.choice.rest: cc453f19a435
-  ev.caffa.entry.body: 32f703e8c931
+  ev.caffa.entry.body: 7a0ba30104e7
   ev.caffa.entry.title: 1c1fd0ee2d6d
 ---
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ev.caffa.entry.body
 
-你在基拉什港雇一辆阿剌巴（草原篷车），越过钦察青草荒漠，抵达卡法。城属苏丹穆罕默德·乌兹别克汗；居民大半是基督徒，受其庇护，热那亚帆桨船泊于防波堤侧。墙外平原之草自饲畜群，无需牧人——盖盗贼之法极严。由此车行可至克里木，再至萨莱，即汗之驻跸处。你须知道：卡法乃金帐汗国的黑海门户，法兰克呢绒与鞑靼毛皮在同一旗帜下易手。
+你在基拉什港雇一辆阿剌巴（草原篷车），越过钦察青草荒漠，抵达喀法。城属苏丹穆罕默德·乌兹别克汗；居民大半是基督徒，受其庇护，热那亚帆桨船泊于防波堤侧。墙外平原之草自饲畜群，无需牧人——盖盗贼之法极严。由此车行可至克里木，再至萨莱，即汗之驻跸处。你须知道：喀法乃乌兹别克汗的黑海门户，法兰克呢绒与鞑靼毛皮在同一旗帜下易手。
 
 ## ev.caffa.entry.title
 

@@ -22,8 +22,8 @@ grain of Egypt, woolens of the Franks. The old light-tower that once guided
 ships from every sea is a ruin; its stones have gone into the walls. And yet
 the harbours still teem, and learned men keep cells in this city — imāms and
 sheikhs whose names are known from Sindia to China. You must know that no
-junk puts in here without answering to the customs, and no traveller leaves
-without hearing what the saints of this place have said of the road ahead.
+junk puts in here without passing beneath the clerks' brushes, and no traveller
+leaves without hearing what the saints of this place have said of the road ahead.
 
 
 ## ev.alexandria.entry.choice.look

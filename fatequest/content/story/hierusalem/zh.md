@@ -2,7 +2,7 @@
 unit: hierusalem
 lang: zh
 source: en
-source_rev: 5f235cc2758e
+source_rev: 94ecd8d33454
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.hierusalem.name: 1d64ba842bfc
   ev.hierusalem.entry.choice.look: a1e5276c886b
   ev.hierusalem.entry.choice.pass: 96d145abaf05
-  ev.hierusalem.entry.body: 5ff5570dcede
+  ev.hierusalem.entry.body: d74b81a651db
   ev.hierusalem.entry.title: 29423a5359eb
 ---
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ev.hierusalem.entry.body
 
-耶路撒冷——圣城——在阿卡西南三日路程，距大马士革八日，方向朝向亚历山大。自法兰克海岸至此山城，路旁农庄果园供养阿卡与推罗。墙内穆斯林、基督徒与犹太人各守其圣地；圆顶寺与圣墓相距一箭。耶稣降生的伯利恒在路上。你须知道：数世纪间此城数易其手，不论何教的朝圣者皆言此地与他处不同。
+耶路撒冷——圣城——在阿卡西南三日路程，距大马士革八日，方向朝向阿历山德里亚。自法兰克海岸至此山城，路旁农庄果园供养阿卡与推罗。圆顶寺与圣墓相距一箭；耶稣降生的伯利恒在路上。此数年法兰克人据守城门，各教朝圣者仍络绎而来。你须知道：人皆言此地与他处不同，其名自马格里布传到罗姆诸地。
 
 ## ev.hierusalem.entry.title
 

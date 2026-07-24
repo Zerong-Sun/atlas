@@ -19,11 +19,11 @@ Out from Zaitūn the junks of El Malik El Zāhir, King of the
 southern islands, take the monsoon for India and the archipelago. Ten days'
 fair wind, then storm and strange seas — and at last landfall where that
 Muslim king holds court, returning from victory with captives, marrying his
-heir with rites no traveller from the west has seen elsewhere. Pepper, nutmeg,
-and the woods of the islands fill the holds; the king's servants are of the
-Faith, and he supplies the stranger with all that is needful. You must know
-that men of China and of India both name this great island among the richest
-of the southern ocean, and that its harbours take junk and dhow alike.
+heir with rites no traveller from the lands of the Franks has seen elsewhere.
+Pepper, nutmeg, and the woods of the islands fill the holds; the king's servants
+are of the Faith, and he supplies the stranger with all that is needful. You
+must know that men of China and of India both name this great island among the
+richest of the southern ocean, and that its harbours take junk and dhow alike.
 
 
 ## ev.java-major.entry.choice.look

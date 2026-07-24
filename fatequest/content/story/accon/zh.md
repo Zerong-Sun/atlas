@@ -2,7 +2,7 @@
 unit: accon
 lang: zh
 source: en
-source_rev: 8bf4ef747365
+source_rev: 84543bc25f2a
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.accon.name: 466dfce6920c
   ev.accon.entry.choice.look: a1e5276c886b
   ev.accon.entry.choice.pass: 96d145abaf05
-  ev.accon.entry.body: 31c436041d00
+  ev.accon.entry.body: c4bebd6296e0
   ev.accon.entry.title: 6a6859c7fd39
 ---
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ev.accon.entry.body
 
-叙利亚海岸上的阿卡——法兰克人在此岸最后的大港。朝圣者与马格里布商人自大马士革南下来此求船；防波堤上征收什一税，货值每一第纳尔取一基拉特。威尼斯与热那亚帆桨船卸下呢绒，装上香料返航。阿卡至耶路撒冷三日路程；城外平原无园囿，果品自山庄运入。你须知道：拉丁语、希腊语与阿拉伯语皆闻于码头，圣殿骑士的塔楼仍守望锚地。
+叙利亚海岸上的阿卡——法兰克人在此岸的大港。朝圣者与马格里布商人自大马士革南下来此求船；防波堤上征收什一税，货值每一第纳尔取一基拉特。威尼斯与热那亚帆桨船卸下呢绒，装上香料返航。阿卡至耶路撒冷三日路程；城外平原无园囿，果品自山庄运入。你须知道：拉丁语、希腊语与阿拉伯语皆闻于码头，圣殿骑士的塔楼守望锚地。
 
 ## ev.accon.entry.title
 

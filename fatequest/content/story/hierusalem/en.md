@@ -17,12 +17,12 @@ Hierusalem
 
 Jerusalem — Bait al-Maqdis — lies three days south-west of Acre, eight
 from Damascus, toward Alexandria. Between the Frankish coast and this hill city
-the road climbs past farmsteads and orchards that feed Acre and Tyre. Within
-the walls Muslims, Christians, and Jews keep their sacred places; the Dome and
-the Holy Sepulchre stand within a walk of one another. Bethlehem, the birth-place
-of Jesus, lies upon the road. You must know that this city has changed hands
-more than once in these centuries, and that every pilgrim — of whichever faith —
-speaks of it as a place set apart.
+the road climbs past farmsteads and orchards that feed Acre and Tyre. The Dome
+and the Holy Sepulchre stand within a walk of one another; Bethlehem, the
+birth-place of Jesus, lies upon the road. In these years the Franks hold the
+gates, and pilgrims of every faith still make their way hither. You must know
+that men speak of this city as a place set apart, and that its name is known
+from the Maghrib to the lands of the Rum.
 
 
 ## ev.hierusalem.entry.choice.look

@@ -21,7 +21,7 @@ frontier, between Muslim lands and the castles of the Franks that once held
 this coast. Within the walls is the tomb of Habīb El Najār, which pilgrims
 visit; beyond, toward the high places, lie the fortresses of the Ismāīlīah —
 Bugrās, El Shaghar, Masyāf, El Kahf — and no stranger walks freely among
-them. Caravans still pass the Orontes bridge with silk and steel; the Mamluk
+them. Caravans still pass the Orontes bridge with silk and steel; the Sultan's
 watch holds the gates. You must know that this was once among the great
 cities of the Romans, and men still speak of it as they speak of old
 Damascus.

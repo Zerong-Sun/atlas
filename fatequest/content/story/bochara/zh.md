@@ -2,7 +2,7 @@
 unit: bochara
 lang: zh
 source: en
-source_rev: 83e8b8448b08
+source_rev: 8e2d9f2e8684
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.bochara.name: 61d048de58ec
   ev.bochara.entry.choice.pass: d9ca0c28a951
   ev.bochara.entry.choice.rest: cc453f19a435
-  ev.bochara.entry.body: c4372336c6b2
+  ev.bochara.entry.body: 7c61315496f1
   ev.bochara.entry.title: dde08e0d3245
 ---
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ev.bochara.entry.body
 
-你进入不花剌，被引见给呼罗珊埃米尔的书记贾伊哈尼——此地人称作「尊贵的支柱」——他下令为旅人备屋并派人照料。随后获准觐见纳斯尔·本·艾哈迈德，一位年轻的埃米尔，他首先问起报达的信士们的长官安否。市集上可见铜与黄铜打的吉特里菲银币，以一百枚折合银迪拉姆计数——嫁妆、产业与奴仆皆用此币。人在此停留数周以待时令；冬季北路封闭。你须知道：萨曼朝治下的不花剌是河中学问的穹顶，其纸、地毯与钱币名闻呼罗珊。
+你进入不花剌，被引见给呼罗珊埃米尔的书记贾伊哈尼——此地人称作「尊贵的支柱」——他下令为旅人备屋并派人照料。随后获准觐见纳斯尔·本·艾哈迈德，一位年轻的埃米尔，他首先问起报达的信士们的长官安否。市集上可见铜与黄铜打的吉特里菲银币，以一百枚折合银迪拉姆计数——嫁妆、产业与奴仆皆用此币。人在此停留数周以待时令；冬季北路封闭。你须知道：萨曼朝治下的不花剌是乌浒水外学问的穹顶，其纸、地毯与钱币名闻呼罗珊。
 
 ## ev.bochara.entry.title
 

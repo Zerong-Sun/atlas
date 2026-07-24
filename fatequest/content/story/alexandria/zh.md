@@ -2,7 +2,7 @@
 unit: alexandria
 lang: zh
 source: en
-source_rev: b4449ebdcd61
+source_rev: d9282095514e
 status: translated
 proofed: true
 translator: 人工校译
@@ -16,7 +16,7 @@ stamps:
   city.alexandria.name: 39ae78ec341c
   ev.alexandria.entry.choice.look: a1e5276c886b
   ev.alexandria.entry.choice.pass: 96d145abaf05
-  ev.alexandria.entry.body: f6224ab80866
+  ev.alexandria.entry.body: 0c4eb5717d15
   ev.alexandria.entry.title: 802852e8bceb
 ---
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ev.alexandria.entry.body
 
-你自米昔尔的海门进入亚历山大，最先看见的是称量货包。苏丹的书吏对每一包离岸的货物征收tamghā（商税）——天竺胡椒、叙利亚玻璃、埃及谷物与法兰克呢绒，皆在其列。昔日指引万国船舶的古灯塔已成废墟，石料已入城墙。然港中仍船帆如林，城中亦多有学问之士——其名自信度传到中国的伊玛目与谢赫。你须知道：无船入此港而不报关，亦无旅人离此而不闻本地圣者论前路之言。
+你自米昔尔的海门进入阿历山德里亚，最先看见的是称量货包。苏丹的书吏对每一包离岸的货物征收tamghā（商税）——天竺胡椒、叙利亚玻璃、埃及谷物与法兰克呢绒，皆在其列。昔日指引万国船舶的古灯塔已成废墟，石料已入城墙。然港中仍船帆如林，城中亦多有学问之士——其名自信德传到中国的伊玛目与谢赫。你须知道：无船入此港而不过书吏之笔，亦无旅人离此而不闻本地圣者论前路之言。
 
 ## ev.alexandria.entry.title
 

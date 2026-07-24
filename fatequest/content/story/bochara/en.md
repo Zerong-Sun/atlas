@@ -20,10 +20,10 @@ Khurāsān — called in these parts ‘the Venerable Support’ — who orders 
 and attendance for the traveller. Audience is granted with Nasr ibn Ahmad, a
 youthful amīr, who asks first after the Commander of the Faithful in Baghdād.
 In the markets you see ghitrīfī dirhams of copper and brass, counted out a
-hundred to the silver dirham — used for dowries, property, and slaves alike.
+hundred to one silver dirham — used for dowries, property, and slaves alike.
 Men stay here weeks awaiting the season; winter closes the roads north. You
-must know that Bukhārā under the Sāmānids is the dome of learning in Transoxiana,
-and that its paper, carpets, and coin are known across Khurāsān.
+must know that Bukhārā under the Sāmānids is the dome of learning beyond the
+Oxus, and that its paper, carpets, and coin are known across Khurāsān.
 
 
 ## ev.bochara.entry.choice.pass
