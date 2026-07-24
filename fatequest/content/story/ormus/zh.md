@@ -2,34 +2,35 @@
 unit: ormus
 lang: zh
 source: en
-source_rev: e47e6cf1dc11
+source_rev: 5461ad3c1414
 status: translated
 translator: 人工校译
 notes: >
   行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
+
 stamps:
   city.ormus.name: da208e561cff
-  ev.ormus.a.body: 2d0af2916da9
   ev.ormus.a.choice.pearl_diver: f5e15aa67854
   ev.ormus.a.choice.toll: 459f65345551
   ev.ormus.a.choice.watch_ships: 0e0fa9971614
-  ev.ormus.a.title: 293b79f94bfc
-  ev.ormus.b.body: 04e58e460ad8
   ev.ormus.b.choice.ginger: ab3a54c1bd88
   ev.ormus.b.choice.pepper: aabab6883e89
   ev.ormus.b.choice.trade_routes: f293d6563ba2
-  ev.ormus.b.title: f5874c4731ee
-  ev.ormus.c.body: b8d43c994b87
   ev.ormus.c.choice.guide: 20e988332cd9
   ev.ormus.c.choice.observe: d0b2e8cf01fb
   ev.ormus.c.choice.wait: d152ea18472d
-  ev.ormus.c.title: 6bff4f2afc10
-  ev.ormus.entry.body: a155f652de5e
   ev.ormus.entry.choice.customs: 2738a8784344
   ev.ormus.entry.choice.lore: 5800603dbcaf
   ev.ormus.entry.choice.market: b23d98ceae5c
+  ev.ormus.a.body: 2d0af2916da9
+  ev.ormus.a.title: 293b79f94bfc
+  ev.ormus.b.body: 04e58e460ad8
+  ev.ormus.b.title: f5874c4731ee
+  ev.ormus.c.body: b8d43c994b87
+  ev.ormus.c.title: 6bff4f2afc10
+  ev.ormus.entry.body: a155f652de5e
   ev.ormus.entry.title: fbb93d61bc73
 ---
 
@@ -51,7 +52,7 @@ stamps:
 
 ## ev.ormus.b.choice.ginger
 
-从印度船买干姜
+从印度缝合帆船买干姜
 
 ## ev.ormus.b.choice.pepper
 

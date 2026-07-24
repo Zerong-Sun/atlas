@@ -165,8 +165,10 @@ func _balance(db: ContentDb, mk: Market, exec: EffectExecutor) -> void:
 		# Sell everything that survived.
 		var left := int(st.goods.get(good["id"], 0))
 		for k in left:
+			# The cost basis is whatever the purchase recorded, so the circuit
+			# pays the same money-changer's cut a player would.
 			exec.execute(st, mk.sell_effects(good, dest, arrive_jdn, st.seed,
-				String(origin.get("band", ""))), {"event_id": "s"})
+				st.purchases.get(String(good["id"]), {})), {"event_id": "s"})
 
 		if st.coins <= 0:
 			busts += 1

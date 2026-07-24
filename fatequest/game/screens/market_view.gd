@@ -240,7 +240,8 @@ func _buy(good: Dictionary) -> void:
 
 func _sell(good: Dictionary) -> void:
 	traded.emit()
-	_pending = market.sell_effects(good, _city, jdn, state.seed, String(_city.get("band", "")))
+	_pending = market.sell_effects(good, _city, jdn, state.seed,
+		state.purchases.get(String(good.get("id", "")), {}))
 
 
 ## Trade never writes WorldState here — it hands effects to the executor, like

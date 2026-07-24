@@ -206,7 +206,7 @@ stamps:
 
 ## market.zayton.item.ginger
 
-糖姜，封在蜡罐里，准备上船往忽鲁谟斯和亚丁。
+糖姜，封在蜡罐里，准备上船往忽鲁谟斯和亚丁。香料商说：船上无姜，半数水手会败于痢疾。
 
 ## market.zayton.item.hangzhou-fan
 
@@ -218,7 +218,7 @@ stamps:
 
 ## market.zayton.item.musk
 
-麝香，来自藏地高原的麝鹿，经山口由商队驮到刺桐。
+麝香，来自藏地高原的麝鹿，经山口由商队驮到刺桐。一枚麝香，不过核桃大小，可使一船丝绸熏香一月。
 
 ## market.zayton.item.paper-money
 

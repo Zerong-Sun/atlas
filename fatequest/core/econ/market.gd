@@ -145,26 +145,49 @@ func _has_guard(_state: WorldState) -> bool:
 func buy_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String) -> Array:
 	var price := buy_price(good, city, jdn, seed)
 	var gid := String(good.get("id", ""))
+	var why := "bought-%s-at-%s" % [gid, city.get("id", "")]
 	return [
-		{"op": "coins", "value": -price, "reason": "bought-%s-at-%s" % [gid, city.get("id", "")]},
-		{"op": "goods", "id": gid, "value": 1, "reason": "bought-%s-at-%s" % [gid, city.get("id", "")]},
+		{"op": "coins", "value": -price, "reason": why},
+		{"op": "goods", "id": gid, "value": 1, "reason": why},
+		# Order matters: `bought` averages against the new holding, so it must
+		# run after `goods` has counted this unit.
+		{"op": "bought", "id": gid, "value": price,
+			"band": String(city.get("band", "")), "reason": why},
 	]
 
 
+## `basis` is this good's purchase record — `state.purchases[gid]`, shaped
+## `{band, unit}`. Pass it and the sale knows where the silver came from and
+## what the lot cost.
+##
+## It used to be a bare `bought_band` supplied by the caller, and the one caller
+## passed the band of the city doing the *selling* — so the comparison below was
+## always band-against-itself and the money-changer never took a cut. A cost
+## basis that the kernel records at purchase cannot be got wrong that way.
+##
+## An empty basis is legitimate: goods also arrive as event rewards. Such a sale
+## pays no exchange penalty and is not a candidate for the epilogue's
+## {richestTrade} — an assumed cost would put a number in the player's closing
+## paragraph that no transaction ever produced.
 func sell_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String,
-		bought_band: String = "") -> Array:
+		basis: Dictionary = {}) -> Array:
 	var gross := sell_price(good, city, jdn, seed)
 	var gid := String(good.get("id", ""))
 	var band := String(city.get("band", ""))
+	var bought_band := String(basis.get("band", ""))
 	var loss := 0
 	if bought_band != "" and bought_band != band:
 		loss = exchange_penalty(bought_band, band, gross)
+	var why := "sold-%s-at-%s" % [gid, city.get("id", "")]
 	var out: Array = [
-		{"op": "goods", "id": gid, "value": -1, "reason": "sold-%s-at-%s" % [gid, city.get("id", "")]},
-		{"op": "coins", "value": gross - loss, "reason": "sold-%s-at-%s" % [gid, city.get("id", "")]},
+		{"op": "goods", "id": gid, "value": -1, "reason": why},
+		{"op": "coins", "value": gross - loss, "reason": why},
 	]
 	if loss > 0:
 		out.append({"op": "flag", "value": "fl-paid-exchange", "reason": "money-changer-took-a-cut"})
+	if basis.has("unit"):
+		out.append({"op": "trade", "id": gid, "value": gross - loss - int(basis["unit"]),
+			"reason": why})
 	return out
 
 

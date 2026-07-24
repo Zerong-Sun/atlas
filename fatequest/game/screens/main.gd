@@ -59,6 +59,8 @@ var _codex_view: PanelContainer
 var _archetype_id: String = ""
 var _roster: Roster
 var _party: Dictionary = {}
+var _ending: Ending
+var _ending_ui: Dictionary = {}
 
 
 func _ready() -> void:
@@ -164,6 +166,7 @@ func _begin(archetype: Dictionary) -> void:
 	travel = Travel.new(db, executor)
 	_market = Market.new(db)
 	_roster = Roster.new(db)
+	_ending = Ending.new(db)
 
 	state = WorldState.new()
 	_archetype_id = String(archetype.get("id", ""))
@@ -196,6 +199,7 @@ func _begin_loaded(slot: String) -> void:
 	travel = Travel.new(db, executor)
 	_market = Market.new(db)
 	_roster = Roster.new(db)
+	_ending = Ending.new(db)
 	state = WorldState.new()
 	rng = Rng.new("resume")
 	_build_map()
@@ -364,6 +368,7 @@ func _build_map() -> void:
 	_codex_view.closed.connect(func(): _codex_layer.visible = false)
 
 	_build_party()
+	_build_ending()
 	_build_bag()
 	_build_settings()
 	_build_controls()
@@ -385,6 +390,7 @@ func _build_controls() -> void:
 	bar.add_child(_ctl("行囊", _open_bag))
 	bar.add_child(_ctl("图鉴", _open_codex))
 	bar.add_child(_ctl("同行", _open_party))
+	bar.add_child(_ctl("停笔", _open_ending))
 	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
@@ -499,6 +505,93 @@ func _build_bag() -> void:
 	close_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bag_row.add_child(close_btn)
 	box.add_child(bag_row)
+
+
+## Closing the book (GDD §14). Two screens in one overlay: first what stopping
+## here would mean, then — only after the player says so — the epilogue itself.
+##
+## The confirmation is not ceremony. Ending is the one irreversible thing a
+## player can do from the map, and the panel that offers it also states which
+## ending they would get, so the choice is made with the outcome visible rather
+## than as a gamble on a button labelled "停笔".
+func _build_ending() -> void:
+	_ending_ui = Panels.overlay(self, Vector2(660, 480))
+	var box: VBoxContainer = _ending_ui["box"]
+	var title := Panels.label("停笔", UiScale.title(), Palette.ink())
+	box.add_child(title)
+	_ending_ui["title"] = title
+
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	box.add_child(scroll)
+	var body := RichTextLabel.new()
+	body.bbcode_enabled = true
+	body.fit_content = true
+	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	body.add_theme_font_size_override("normal_font_size", UiScale.body())
+	scroll.add_child(body)
+	_ending_ui["body"] = body
+
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	box.add_child(row)
+	var confirm := Panels.styled_button("就此停笔", _confirm_ending)
+	row.add_child(confirm)
+	_ending_ui["confirm"] = confirm
+	row.add_child(Panels.styled_button("再走一程", func(): _ending_ui["layer"].visible = false))
+
+
+func _open_ending() -> void:
+	var e := _ending.best(state)
+	var body: RichTextLabel = _ending_ui["body"]
+	_ending_ui["title"].text = "停笔"
+	_ending_ui["confirm"].visible = true
+
+	var years := maxi(1, int(state.days_elapsed / 365.0))
+	var lines := "[color=#6a5a48]若在此地合上这本书：[/color]\n\n"
+	lines += "　行过 %d 座城，历 %d 年，日 %d\n" % [state.visited.size(), years, state.days_elapsed]
+	lines += "　起于 %s，止于 %s\n" % [
+		_city_name(state.start_city) if not state.start_city.is_empty() else "尚未启程",
+		_city_name(state.city)]
+	lines += "　囊中 %d 钱，同行 %d 人，图鉴 %d 条\n" % [
+		state.coins / Market.FEN, state.retainers.size(), state.codex.size()]
+	lines += "\n[color=#6a5a48]这本书会被称作：[/color]\n\n"
+	lines += "　[b]%s[/b]\n" % I18n.t(String(e.get("name", "")))
+
+	# Endings the run does not yet reach, so the player can see what stopping
+	# now would cost them. Naming the unreached ones is the whole reason a
+	# player would choose to keep going.
+	var have := {}
+	for q in _ending.qualifying(state):
+		have[String(q.get("id", ""))] = true
+	var missed: Array = []
+	for cand in db.get_table("endings"):
+		if not have.has(String(cand.get("id", ""))):
+			missed.append(I18n.t(String(cand.get("name", ""))))
+	if not missed.is_empty():
+		lines += "\n[color=#8a7a68]走下去还可能成为：%s[/color]\n" % ", ".join(missed)
+
+	body.text = lines
+	_ending_ui["layer"].visible = true
+
+
+func _confirm_ending() -> void:
+	var e := _ending.best(state)
+	_ending_ui["title"].text = I18n.t(String(e.get("name", "")))
+	_ending_ui["confirm"].visible = false
+	var text := _ending.epilogue(state, e, clock)
+	_ending_ui["body"].text = "%s\n\n[color=#6a5a48]——%s[/color]" % [
+		text, I18n.t(String(e.get("name", "")))]
+
+	# The sticker is earned by reaching the ending, so it is recorded like any
+	# other change to the world: through the executor, with a reason.
+	var sid := String(e.get("sticker", ""))
+	if not sid.is_empty():
+		executor.execute(state, [{"op": "sticker", "value": sid,
+			"reason": "ending-%s" % e.get("id", "")}], {"rng": rng, "event_id": "ending"})
+	_say("[color=#4a6a4a]· 停笔：%s[/color]" % I18n.t(String(e.get("name", ""))))
+	_refresh_hud()
 
 
 ## The party: who travels with you, what they carry, and what leaving costs.

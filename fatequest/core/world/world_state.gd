@@ -35,6 +35,22 @@ var stickers: Array[String] = []
 var codex: Array[String] = []
 var birthdate_jdn: int = -1           ## player natal day for bazi; -1 = unset
 
+## Journey record (GDD §14). The epilogue has to name the road this player
+## actually walked, so the facts it needs are recorded as they happen rather
+## than reconstructed at the end. `revealed` is deliberately not reused here:
+## reading a map reveals a city, and a book of travels may not claim a place
+## its author only heard about.
+var start_city: String = ""           ## set on the first departure, never after
+var visited: Array[String] = []       ## every city stood in, in arrival order
+var longest_leg: Dictionary = {}      ## {route, km, days} — the hardest single road
+var best_trade: Dictionary = {}       ## {good, profit} — the most profitable sale
+
+## Cost basis per good: good_id -> {band, unit}. Needed to say what a sale
+## actually earned, and to charge the money-changer for carrying silver across
+## a currency frontier — until this existed, the caller passed the *selling*
+## city's band as the buying band, so the exchange penalty could never fire.
+var purchases: Dictionary = {}
+
 
 func duplicate_state() -> WorldState:
 	## Deep copy for EffectExecutor.preview(). Must stay in sync with the fields
@@ -63,6 +79,11 @@ func duplicate_state() -> WorldState:
 	s.stickers = stickers.duplicate()
 	s.codex = codex.duplicate()
 	s.birthdate_jdn = birthdate_jdn
+	s.start_city = start_city
+	s.visited = visited.duplicate()
+	s.longest_leg = longest_leg.duplicate(true)
+	s.best_trade = best_trade.duplicate(true)
+	s.purchases = purchases.duplicate(true)
 	return s
 
 

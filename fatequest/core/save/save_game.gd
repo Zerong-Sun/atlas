@@ -70,6 +70,11 @@ static func serialize(state: WorldState, clock: WorldClock, extra: Dictionary = 
 			"stickers": Array(state.stickers),
 			"codex": Array(state.codex),
 			"birthdate_jdn": state.birthdate_jdn,
+			"start_city": state.start_city,
+			"visited": Array(state.visited),
+			"longest_leg": state.longest_leg.duplicate(true),
+			"best_trade": state.best_trade.duplicate(true),
+			"purchases": state.purchases.duplicate(true),
 		},
 		"extra": extra,
 	}
@@ -89,6 +94,7 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.fate = (src.get("fate", {}) as Dictionary).duplicate(true)
 	st.cargo_slots = int(src.get("cargo_slots", 4))
 	st.birthdate_jdn = int(src.get("birthdate_jdn", -1))
+	st.start_city = String(src.get("start_city", ""))
 
 	# Typed arrays will not accept an untyped literal from JSON, so each is
 	# filled element by element rather than assigned wholesale.
@@ -104,6 +110,8 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 		st.stickers.append(String(s))
 	for c in src.get("codex", []):
 		st.codex.append(String(c))
+	for v in src.get("visited", []):
+		st.visited.append(String(v))
 
 	st.goods = (src.get("goods", {}) as Dictionary).duplicate(true)
 	st.revealed = (src.get("revealed", {}) as Dictionary).duplicate(true)
@@ -112,6 +120,9 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.band_reputation = (src.get("band_reputation", {}) as Dictionary).duplicate(true)
 	st.retainers = (src.get("retainers", []) as Array).duplicate(true)
 	st.once_fired = (src.get("once_fired", {}) as Dictionary).duplicate(true)
+	st.longest_leg = (src.get("longest_leg", {}) as Dictionary).duplicate(true)
+	st.best_trade = (src.get("best_trade", {}) as Dictionary).duplicate(true)
+	st.purchases = (src.get("purchases", {}) as Dictionary).duplicate(true)
 
 	return {"state": st, "clock": WorldClock.new(st.jdn), "extra": d.get("extra", {})}
 

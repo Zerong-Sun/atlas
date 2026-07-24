@@ -94,6 +94,9 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 				return false
 			if n == 0:
 				state.goods.erase(id)
+				# An empty hold has no cost basis. Leaving a stale one behind
+				# would price the next lot of this good at the old figure.
+				state.purchases.erase(id)
 			else:
 				state.goods[id] = n
 		"item":
@@ -131,7 +134,46 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 		"unflag":
 			state.flags.erase(String(val))
 		"goto":
-			state.city = String(val)
+			# Arrival is the only moment a city becomes part of the journey, so
+			# the record is kept here rather than by whoever happens to move the
+			# player. The origin is captured on the first move: a run starts with
+			# the player already standing somewhere, and that first city belongs
+			# in the book too.
+			var dest := String(val)
+			if state.start_city.is_empty() and not state.city.is_empty():
+				state.start_city = state.city
+				state.visited.append(state.city)
+			if dest not in state.visited:
+				state.visited.append(dest)
+			state.city = dest
+		"leg":
+			# The longest single road walked, for the epilogue's {longestRoute}.
+			# Ties keep the first: the road that was hard *first* is the one a
+			# traveller tells stories about.
+			var km := int(val)
+			if km > int(state.longest_leg.get("km", 0)):
+				state.longest_leg = {
+					"route": String(e.get("id", "")),
+					"km": km,
+					"days": int(e.get("days", 0)),
+				}
+		"bought":
+			# Cost basis, kept as a running average so that selling a mixed lot
+			# cannot be gamed by ordering. Erased by the goods op when the last
+			# unit leaves the hold.
+			var bid := String(e.get("id", ""))
+			var unit := int(val)
+			var prev: Dictionary = state.purchases.get(bid, {})
+			var held := int(state.goods.get(bid, 0))
+			var old_unit := int(prev.get("unit", 0))
+			var avg := unit if held <= 1 else int((old_unit * (held - 1) + unit) / float(held))
+			state.purchases[bid] = {"band": String(e.get("band", "")), "unit": avg}
+		"trade":
+			# The best single sale, for {richestTrade}. Losses are ignored — the
+			# field asks what the player is remembered for, not their worst day.
+			var profit := int(val)
+			if profit > int(state.best_trade.get("profit", 0)):
+				state.best_trade = {"good": String(e.get("id", "")), "profit": profit}
 		"sticker":
 			if String(val) not in state.stickers:
 				state.stickers.append(String(val))

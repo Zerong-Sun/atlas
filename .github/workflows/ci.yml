@@ -82,3 +82,6 @@ jobs:
       - name: Retainers (hire through the UI, cargo linkage §11.7)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_party.gd
+      - name: Endings (close the book, epilogue on screen)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_ending.gd

@@ -1285,6 +1285,11 @@
               "op": "reveal_map",
               "value": "cambaluc",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "flag",
+              "value": "fl-reached-cambaluc",
+              "reason": "stood-in-the-great-khans-city"
             }
           ]
         },
@@ -1305,6 +1310,11 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "flag",
+              "value": "fl-reached-cambaluc",
+              "reason": "stood-in-the-great-khans-city"
             }
           ]
         },
@@ -1326,6 +1336,11 @@
               "id": "dehua-porcelain",
               "value": 1,
               "reason": "bought-local-specialty"
+            },
+            {
+              "op": "flag",
+              "value": "fl-reached-cambaluc",
+              "reason": "stood-in-the-great-khans-city"
             }
           ]
         }

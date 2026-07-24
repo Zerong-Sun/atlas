@@ -193,6 +193,22 @@ var once_fired: Dictionary        # event_id -> true
 | `retainer_mood` | int | `id` 指定随从 |
 | `reveal_birth` | int | 生辰封印级别降低（3→0 三层揭示） |
 
+**旅程账本类**（内核自用，内容层不写）
+
+结语必须说出这一局**实际走过**的路（GDD §14），因此这些事实在发生当时记录，
+而不是结束时反推。三条都只由内核发出：`leg` 由 `Travel.depart`，`bought`/`trade`
+由 `Market`。内容层写不出它们，也不该写。
+
+| op | value | 附加字段 | 语义 |
+|---|---|---|---|
+| `leg` | 公里数 | `id` 路线、`days` | 记录走完的一段；只保留最长的一段 |
+| `bought` | 单价（分） | `id` 商品、`band` | 记录成本基准（滑动均价）与购入地带 |
+| `trade` | 利润（分） | `id` 商品 | 记录一笔卖出的净利；只保留最高的一笔 |
+
+> `goto` 同时承担到达记账：首次移动时把出发地登记为 `start_city`，并把起讫两城
+> 记入 `visited`。**不复用 `revealed`**——看地图会让城市 revealed，而游记不该
+> 声称去过一个只是听说过的地方。
+
 **记录类**
 
 | op | value |

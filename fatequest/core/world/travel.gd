@@ -73,6 +73,8 @@ func depart(route: Dictionary, mode: String, state: WorldState, rng: Rng) -> Dic
 		{"op": "goto", "value": dest, "reason": "arrived-at-%s" % dest},
 		{"op": "reveal_map", "value": dest, "reason": "walked-the-road"},
 		{"op": "reveal_map", "value": route.get("id", ""), "reason": "walked-the-road"},
+		{"op": "leg", "id": route.get("id", ""), "value": int(route.get("distanceKm", 0)),
+			"days": days, "reason": "walked-the-road"},
 	]
 	var res := executor.execute(state, effects, {"rng": rng, "event_id": "travel:" + String(route.get("id", ""))})
 	return {

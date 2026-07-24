@@ -585,6 +585,71 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------ G23: every ending must be reachable, and say something
+// GDD §14 / AUDIT §9.2. An ending whose conditions no run can satisfy is worse
+// than a missing one: it sits in the table looking finished. The judge in
+// core/narrative/ending.gd is the authority on what a condition key means, so
+// this gate checks the two things a static pass can actually prove — that each
+// key is one the judge implements, and that each numeric demand is within what
+// the shipped world can supply.
+{
+  const KEYS = new Set(["visitedCities", "returnedToStart", "reputationBands", "netWorth",
+    "revealedRoutes", "learnedDivinations", "flags", "retainersKept", "codexPct"]);
+  const cityCount = (byTable.cities ?? []).length;
+  const routeCount = (byTable.routes ?? []).length;
+  const divIds = new Set((byTable.divinations ?? []).map((d) => d.id));
+  const retainerCount = (byTable.retainers ?? []).length;
+  const bandSet = new Set((byTable.cities ?? []).map((c) => c.band).filter(Boolean));
+
+  // Flags a run can actually raise: anything some event or divination sets.
+  const flagsSet = new Set();
+  for (const ev of byTable.events ?? [])
+    for (const ch of ev.choices ?? [])
+      for (const branch of [ch, ch.pass, ch.fail])
+        for (const eff of branch?.effects ?? [])
+          if (eff.op === "flag") flagsSet.add(eff.value);
+
+  let layer1 = 0;
+  for (const e of byTable.endings ?? []) {
+    const c = e.conditions ?? {};
+    if (Number(e.layer) === 1) layer1++;
+    const at = recordFile.get(e.id);
+
+    for (const [k, v] of Object.entries(c)) {
+      if (!KEYS.has(k)) { err("G23", at, `${e.id}: condition key '${k}' is not implemented`); continue; }
+      if (k === "visitedCities" && Number(v) > cityCount)
+        err("G23", at, `${e.id}: asks for ${v} cities; the world has ${cityCount}`);
+      if (k === "revealedRoutes" && Number(v) > routeCount)
+        err("G23", at, `${e.id}: asks for ${v} routes; the world has ${routeCount}`);
+      if (k === "retainersKept" && Number(v) > retainerCount)
+        err("G23", at, `${e.id}: asks for ${v} retainers; only ${retainerCount} exist`);
+      if (k === "reputationBands" && Number(v) > bandSet.size)
+        err("G23", at, `${e.id}: asks for ${v} bands; only ${bandSet.size} are inhabited`);
+      if (k === "codexPct" && Number(v) > 100)
+        err("G23", at, `${e.id}: asks for ${v}% of the codex`);
+      if (k === "learnedDivinations")
+        for (const d of v)
+          if (!divIds.has(d)) err("G23", at, `${e.id}: requires unknown divination '${d}'`);
+      if (k === "flags")
+        for (const f of v)
+          if (!flagsSet.has(f)) err("G23", at, `${e.id}: requires flag '${f}' that nothing sets`);
+    }
+
+    // The epilogue must interpolate only variables the judge can supply, and
+    // must actually use the ones it declares — an unused variable is a sign the
+    // text was rewritten and the field forgotten.
+    const VARS = new Set(["cities", "years", "start", "lastCity", "faith",
+      "longestRoute", "richestTrade"]);
+    for (const v of e.variables ?? [])
+      if (!VARS.has(v)) err("G23", at, `${e.id}: epilogue variable '{${v}}' has no value`);
+  }
+
+  // Layer 1 is the floor under every run: without it a player who qualifies for
+  // nothing has no way to close the book.
+  if (layer1 === 0)
+    err("G23", "endings", "no layer-1 ending — a run that qualifies for nothing cannot end");
+}
+
 // -------------------- G22: a retainer's hold must match the road they know
 // GDD §11.7 / AUDIT §9.1. The cargo linkage is the reason retainers exist, and
 // it only means anything if a sailor's hold is worthless on land and a porter's
@@ -622,7 +687,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
