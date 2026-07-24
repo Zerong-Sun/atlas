@@ -1,71 +1,81 @@
-# 灵游 FateQuest 2.0 · 千载行纪
+# 远行之书 · The Book of Far Roads
 
-**环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions.**
+**一款中世纪欧亚旅行开放世界（1253–1453）。** 占卜不是查看结果的按钮，而是你的
+移动方式、资源系统与叙事之笔。计划上架 Steam 与 App Store。
 
-当前可玩实现基于 **GDD 2.0 千载行纪**（[`docs/archive/GDD-2.0-divination.md`](docs/archive/GDD-2.0-divination.md)）：**占卜不是查看结果的按钮，而是你的移动方式、资源系统与叙事之笔。**
-[`docs/GDD.md`](docs/GDD.md) 是下一阶段《远行之书》v3.0 开放世界规划，尚未完全落地。
-视觉方向「墨金曜夜」：漆黑夜空 × 金箔宋体 × 朱砂，Balatro 式卡牌手感。
+> **本目录是 Godot 版——现行且唯一在维护的实现。** 初代网页版（静态 HTML/JS/PWA）
+> 已归档在 [`archive/web-version/`](archive/web-version/)，冻结留档、不进 CI。
 
-## 两大模式 Two modes
+---
 
-- **占途 · 千载行纪 2.0（主线）** — 马可·波罗真实路线做成**路网**：两处岔路（波斯支线纳旅伴、克尔曼沙漠 vs 赫拉特商道、驿路 vs 运河）、天数与逍遥天数（par）、种子天气参与玩法（雾迷路/顺风减日/沙暴雪封）、行进段镜头跟随 + 途中遭遇卡（三选一，必有一项「以占问之」）、九格行囊与低买高卖、城镇四键（市集/庙宇/茶肆/行馆）、旅伴帖必烈与林三娘（技能/好感/偏见证词）、断案 2.0（线索标签 + 追问 + 结论需两条相合证据）、自动书写的《行纪册》。
-- **命途塔（占卜肉鸽）** — 12 层一局，命劫在 4/8/12 层，商队在 3/9 层。三流派（塔罗行者/易卜师/符文萨满），24 枚符号棋子：真实占义直接成为效果（☀️奖励×2、䷜得失皆×2、ᛁ冻结跳层……），正逆位/变爻在揭示时才见分晓。**文明共鸣**：异文明成对打出=「对照」（各×1.5 + 一则真实文化小注），同文明=「同源」（强制正位+2）。弃换、预兆闪光、塔之逆位诅咒、星尘结算与解锁。
+## 技术栈
 
-## 命运博弈三层 (GDD §3)
+- **Godot 4.7.1**，纯 GDScript，无 C#
+- **四层架构**：`content/`（数据）→ `core/`（内核）→ `game/`（表现）→ 平台
+- 内核铁律：不 `extends Node`、不用 `randi/randf/randomize`、不读 `Time.get_*`，
+  世界状态只由 `EffectExecutor` 写。这几条由 CI 门禁 G9/G11 强制，不靠自觉。
 
-1. **预兆可视** — 仪式前泄露半真提示（「炉烟笔直而上」）；水晶球/庙宇祈福提高准度。
-2. **星尘改运** — 全局稀缺资源：仪式重问、塔内技能、解锁符号与流派。只能玩出来，永不出售。
-3. **结果双刃** — 失败开出别的路：关卡失利可走险路（缒城/强行入漠），连得阴筊触发暗线剧情。
+## 运行
 
-## 运行 Run
+**编辑器**：用 Godot 4.7.1 打开本目录（存在 `project.godot`），F5 运行。
+
+**无头测试**（不需要图形界面）：
 
 ```bash
-npx serve .
-# 浏览器打开提示的本地地址（常见为 http://localhost:3000）
+godot --headless --path . --script tests/run_tests.gd    # 11 个内核单测
+godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
+node tools/validate/validate.mjs                         # 21 道内容门禁
+node tools/lore/story.mjs check                          # 译文时效
 ```
 
-手机浏览器打开 →「添加到主屏幕」即全屏运行；离线可玩（Service Worker 网络优先）。
-
-## 结构 Structure
+## 结构
 
 ```text
 fatequest/
-├── index.html / manifest.webmanifest / sw.js
-├── docs/GDD.md            # v3.0 《远行之书》规划（进行中）
-├── docs/archive/          # GDD 2.0 等已实现蓝图归档
-├── assets/art/            # ← 你的美术素材放这里（见 ART_BRIEF.md，缺图自动回退 emoji）
-├── css/style.css          # 「墨金曜夜」设计系统 + 全部动效
-├── scripts/               # 校验 / 生成 outcomes 与 quest-story 目录
-└── js/
-    ├── i18n.js            # 中英双语文案
-    ├── data-*.js          # 塔罗/64卦/卢恩/杂项/章节路网/塔符号/任务传闻/马可游记运行时
-    ├── data-journey-extra.js  # 方案 A 扩点（~22 站）
-    ├── outcomes/          # 占卜全矩阵（key → omen+story+fx+loreRef）
-    ├── engines.js         # 确定性占卜引擎 + 预兆引擎
-    ├── state.js           # XP · 星尘 · 图鉴 · 成就（localStorage: fatequest）
-    ├── audio.js           # 全合成音效：仪式三段式 + 区域音色垫
-    ├── atmo.js            # 云雾层 · 天气粒子 · 昼夜色调 · 打字机 · 地图镜头
-    ├── juice.js           # 墨涡背景 · 卡牌跟手倾斜 · 震屏 · 计分跳数 · 素材槽
-    ├── app.js             # 壳与九秘境仪式
-    ├── journey.js         # 占途引擎（路网 + 行纪册回读）
-    └── tower.js           # 命途塔引擎
+├── project.godot            # Godot 工程入口
+├── content/                 # 唯一数据真相源
+│   ├── tables/              #   八张系统表：cities/routes/events/goods/
+│   │                        #   retainers/divinations/endings/archetypes
+│   ├── i18n/                #   编译产物 en.json / zh.json（勿手改，见 story/）
+│   ├── story/<unit>/<lang>.md  # 叙事文本的 authoring 源，带 stamps 时效戳
+│   └── world/               #   地图投影与山脉（从 worldmap/ 同步而来）
+├── core/                    # 内核：零 Node 依赖，可 headless 全跑
+│   ├── rng/                 #   确定性 RNG（对拍 Atlas seed.ts 逐位一致）
+│   ├── world/ time/ econ/   #   世界状态 · 儒略日历法 · 市场经济
+│   ├── narrative/           #   effect 执行器 · 条件求值器 · 事件机 · 结局判定
+│   ├── divination/          #   开放式占法注册表 + 引擎（加一法只动 6 处）
+│   ├── retainer/ save/      #   随从花名册 · 快照存档 + 单向迁移链
+│   └── i18n/                #   回退链 zh → en → key
+├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
+├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
+├── tests/                   # 11 单测 + 9 界面 smoke
+├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
+├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
+├── docs/                    # 见下
+└── archive/web-version/     # 归档的初代网页版
 ```
 
-**目录约定**：1.0 与 2.0 内容已统一落在本目录 `fatequest/`（不再维护并列的 `fatequest2/`）。占途主线为马可·波罗路网 + 伊本·白图泰支线；命途塔为并行模式。
-## GDD 覆盖对照
+## 文档地图
 
-| GDD | 状态 |
+| 文档 | 讲什么 |
 |---|---|
-| §3 预兆/星尘/双刃 | ✅ 全局实现 |
-| §4 路网/天数/行进段/遭遇/旅伴/城镇/行囊/日志 | ✅（行纪册含路页 / 任务 / 传闻回读；长图导出待做） |
-| §5 命途塔全套 | ✅（+弃换机制，Balatro 参照） |
-| §6 断案 2.0 | ✅ 标签/追问/证词偏见/因果计分 |
-| §7 呈现 | ✅ 雾/天气/昼夜/镜头/五拍仪式/合成音频（真实录音素材待换） |
-| §8 经济 | ✅（罗盘升级线并入占具/庙宇） |
-| §9 内容管线（FastAPI 后台） | ⏳ 未做——章节数据已按 §9.5 schema 精神组织，可平滑迁移 |
-| §11 M1/M2/M4 | ✅ 客户端部分完成；M3 属后端里程碑 |
+| [`docs/STATUS.md`](docs/STATUS.md) | **现在到哪一步**——唯一权威现状页 |
+| [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | 阶段顺序（P0–P6 已闭环） |
+| [`docs/GDD.md`](docs/GDD.md) | 游戏设计文档 |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
+| [`docs/AUDIT_2026-07.md`](docs/AUDIT_2026-07.md) | 六方面验证报告与修复清单 |
+| [`docs/LORE_PIPELINE.md`](docs/LORE_PIPELINE.md) · [`L10N_PLAN.md`](docs/L10N_PLAN.md) | 语料接入 · 多语言 |
 
-## 说明 Notes
+## 现状一览
 
-- 仅供娱乐与文明探索，不构成任何现实建议。宗教意象遵循 GDD §12 红线：不拟人化神明、圣所场景保持敬畏。
-- 概率公示：预兆准度基础 72%（法器/祈福 95%）；改运只花星尘，星尘只能玩出来。
+玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
+102 城 · 204 路线 · 183 事件 · 60 商品 · 53 随从 · 占卜四法接入玩法（易占/八字/
+签占/塔罗，另 20 法已注册待接入）。en/zh 各 1943 条文本。**21 道门禁、11 单测、
+9 smoke 全绿。** 详见 [`docs/STATUS.md`](docs/STATUS.md)。
+
+## 红线
+
+仅供娱乐与文明探索，不构成任何现实建议。宗教意象遵循 GDD 红线：不拟人化神明、
+圣所场景保持敬畏、不合成可辨识语义的礼拜声响。史料中的时代性宗教贬语一律改写
+而非引用——由门禁 G24 强制。

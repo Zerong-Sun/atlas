@@ -21,8 +21,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: node scripts/validate-outcomes.mjs
-      - run: node scripts/smoke-outcomes.mjs
+      # NOTE: the web-version gates (scripts/validate-outcomes.mjs,
+      # smoke-outcomes.mjs) were removed 2026-07. The HTML/JS game they tested
+      # is archived under fatequest/archive/web-version/; the Godot version is
+      # the live game. Restore from git history if the web version is revived.
       # Content gates G1/G2/G3/G8/G10/G12 — docs/DATA_MODEL.md §9
       # Story text must be compiled from its authoring format, and no
       # translation may be older than the source it was made from.

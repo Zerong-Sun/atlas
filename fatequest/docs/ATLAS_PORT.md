@@ -1,6 +1,10 @@
 # Atlas 资产移植方案 · ATLAS PORT PLAN
 
 > **归档对照说明（非构建契约）。** Atlas 已整树迁入同仓库 [`../atlas/`](../../atlas/)，短期冻结，仅供人工阅读与按需复制。本文盘点可移植资产与框架差异；**FateQuest 与 Atlas 无共享构建、无相互 import。** 需要引擎或元数据时，从 `../atlas/...` 复制进本目录后自行维护。
+>
+> **另注（2026-07-24）：** 本文中的 `fatequest/js/...` 均指**初代网页版**的实现，
+> 现已归档到 [`../archive/web-version/js/`](../archive/web-version/)。Godot 版的占卜
+> 移植落点是 `core/divination/`（开放式注册表 + 引擎），与这些 `js/` 路径无关。
 
 ---
 

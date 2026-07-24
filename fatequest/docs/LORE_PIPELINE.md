@@ -14,7 +14,7 @@
 | 章节覆盖 | 234 章 |
 | `places` | **136** 条（有 `placeNames[]`，可与城市节点对齐） |
 | `stories` | **98** 条（无地名索引，属叙事片段） |
-| 运行时 | `js/data-marco-lore.js`（`scripts/build-lore-runtime.mjs`）— 映射游戏节点 → place，挂全文 `bodyEn` |
+| 运行时（网页版，已归档） | `archive/web-version/js/data-marco-lore.js`（`archive/web-version/scripts/build-lore-runtime.mjs`）。Godot 版改由 `content/` + `tools/lore/` 管线接手 |
 | 扩点（方案 A） | `js/data-journey-extra.js` 新增约 22 站（格鲁吉亚→阿丹等），outcome 可「读游记全章」；`chipangu` 坐标已收进 viewBox；缺市集站已补默认 `FQ.PRICES` |
 | `bands` | europe · west_asia · central_asia · steppe · china · india · maritime_asia |
 | 中译 | `zhStatus: "pending"` —— **尚无中文** |
@@ -127,12 +127,16 @@ story.body  →  ① 途中遭遇（road 事件）
 
 **语体规范**：模仿 Yule 译本的见闻体——「你须知道……」「此地出产……」「其人……」。第一人称，避免现代词汇与心理描写。中译参考冯承钧译本的文言白话腔，但不照抄（冯译本 1936 年，版权状态需确认）。
 
-**回归**：
+**回归**：Godot 版的语料门禁走 `tools/validate/validate.mjs`（G2 引用完整、
+G24 语料贬语拦截）与 `tools/lore/story.mjs check`（译文时效）。
 
 ```bash
-node fatequest/scripts/validate-outcomes.mjs
-node fatequest/scripts/smoke-outcomes.mjs
+node tools/validate/validate.mjs
+node tools/lore/story.mjs check
 ```
+
+> 初代网页版的 outcome 门禁（`validate-outcomes` / `smoke-outcomes`）已随网页版
+> 归档到 `archive/web-version/scripts/`，不再进 CI。
 
 ---
 
