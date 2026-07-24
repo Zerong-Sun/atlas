@@ -27,7 +27,12 @@
         "rt-tripolis-accon"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m019"
+        }
       },
       "market": {
         "goods": [
@@ -72,7 +77,12 @@
         "rt-alexandria-hierusalem"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c002",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c002"
+        }
       },
       "market": {
         "goods": [
@@ -118,7 +128,12 @@
         "rt-edessa-antiochia"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c005",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005"
+        }
       },
       "market": {
         "goods": [
@@ -163,7 +178,12 @@
         "rt-babylonia-cairus-petra"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m001",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m001"
+        }
       },
       "market": {
         "goods": [
@@ -273,7 +293,12 @@
         "rt-basora-ispahan"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c006",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c006"
+        }
       },
       "calendars": [
         "islamic"
@@ -302,7 +327,12 @@
         "rt-trapezus-berrhoea"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m016",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m016"
+        }
       },
       "market": {
         "goods": [
@@ -379,7 +409,12 @@
         "rt-kiovia-caffa"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c012",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c012"
+        }
       },
       "calendars": [
         "islamic"
@@ -517,7 +552,12 @@
         "rt-constantinopolis-smyrna"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m023",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m023"
+        }
       },
       "market": {
         "goods": [
@@ -591,7 +631,12 @@
         "rt-damascus-tyrus"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m018",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m018"
+        }
       },
       "market": {
         "goods": [
@@ -694,7 +739,12 @@
         "rt-hierusalem-petra"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m019"
+        }
       },
       "market": {
         "goods": [
@@ -926,7 +976,12 @@
         "rt-ninive-tauris"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m015",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m015"
+        }
       },
       "calendars": [
         "islamic"
@@ -1077,7 +1132,12 @@
         "rt-nicaea-smyrna"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c011",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c011"
+        }
       },
       "calendars": [
         "islamic"
@@ -1275,7 +1335,12 @@
         "rt-tripolis-tyrus"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c005",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005"
+        }
       },
       "calendars": [
         "islamic"
@@ -1303,7 +1368,12 @@
         "rt-tripolis-tyrus"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m019"
+        }
       },
       "calendars": [
         "islamic"

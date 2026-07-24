@@ -151,7 +151,12 @@
         "rt-bochara-sapurgan"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-fadlan:fadlan-p1-004",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "fadlan-p1-004"
+        }
       },
       "calendars": [
         "islamic",
@@ -182,7 +187,12 @@
         "rt-keshimur-cabul"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c013",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013"
+        }
       },
       "calendars": [
         "islamic",
@@ -452,7 +462,12 @@
         "rt-semenat-delli"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c016",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c016"
+        }
       },
       "market": {
         "goods": [

@@ -1,41 +1,41 @@
 # 中文版制作方案 · L10N PLAN
 
-**以刺桐为模版**，把 1678 条英文文本做成中文版。写明流程、分批、质量门槛、工具与译者守则。
+**以刺桐为模版**做中文版。写明流程、分批、质量门槛、工具与译者守则。
+
+> **状态（2026-07-24）**：中译 B1–B4 **已全部完成**，en/zh 各 1943 条，缺 0、中英同文 0。
+> 本文保留全部流程与守则——它们是新增文本继续要走的路，也是第三语言的依据。
+> 各批的最终状态与实测命令见 §3。
 
 **前置**：`LORE_PIPELINE.md` §4（中译工作流与语体）· `DATA_MODEL.md` §4（文本存 key）· `STORY_REQUIREMENTS.md` §9。
 
 ---
 
-## 0. 实测现状（2026-07-23）
+## 0. 实测现状（2026-07-24）
+
+```bash
+node tools/lore/l10n.mjs report            # 覆盖率
+node tools/lore/story.mjs check            # 译文时效
+node tools/validate/validate.mjs           # 含 G7 术语 / G18 ASCII 泄漏 / G24 贬语
+```
 
 ```
-en 条目   1678
-zh 条目   1056          覆盖率 62.9％
-待译       622          其中长正文(.body) 183 · 短串 439
+en 条目 1943 · zh 条目 1943 · 缺 0 · 中英同文 0
+译文时效 779 current · 0 stale · 0 missing
 ```
 
-**刺桐**：55 条全部译毕（100%），是中英双全的唯一城市——也是下面一切规范的依据。
-
-**待译分布**：
-
-| 前缀 | 条数 | 性质 |
-|---|---|---|
-| `ev.*` | **435** | 事件标题／正文——每个玩家一定读到 |
-| `retainer.*` | 66 | 随从（P5 才用） |
-| `good.*` | 60 | 商品描述 |
-| `sticker.*` | 33 | 贴纸名 |
-| `codex.*` `ending.*` `item.*` `div.*` | 28 | 图鉴、结局、物品、占卜术语 |
-
-**城市名**：104 条全部译毕（100%），地图上不再出现拉丁占位。
+对照 2026-07-23 的起点（en 1678 · zh 1056 · 覆盖率 62.9% · 待译 622），这一轮之间
+完成了全部四批。**刺桐**仍是规范的依据：55 条全译，下面一切规矩由它定下。
 
 **已有资产**：
 
 | 资产 | 说明 |
 |---|---|
-| `content/i18n/zh.json` | 1056 条译文 |
+| `content/story/<unit>/<lang>.md` | authoring 源，103 个单元，frontmatter 带逐条 `stamps` |
+| `content/i18n/{en,zh}.json` | 编译产物，**不手改**（§3.3） |
 | `assets/data/glossary.json` | 95 条术语（38 地名 + 57 概念） |
-| `tools/lore/l10n.mjs` | `export` / `import` / `report` 三子命令 |
-| `tools/validate/validate.mjs` | 含 G7（术语一致，error）与 G18（ASCII 泄漏，error）门禁 |
+| `tools/lore/story.mjs` | `check` / `build` / `stamp` |
+| `tools/lore/l10n.mjs` | `export` / `import` / `report` |
+| `tools/validate/validate.mjs` | G7 术语一致 · G18 ASCII 泄漏 · G21 译文时效 · G24 贬语拦截 |
 | `core/i18n/i18n.gd` | 回退链 `zh → en → key`，增量交付就绪 |
 
 ---
@@ -123,45 +123,88 @@ zh 条目   1056          覆盖率 62.9％
 
 ---
 
-## 3. 分批：按玩家读到的顺序
+## 3. 分批 B1–B4：状态与剩余工作
 
-**不要按 key 字母序翻译。** 622 条按接触概率分四批：
+**2026-07-24 按实测重写。** 此前本节记的是 622 条待译（B1 94 / B2 206 / B3 180 / B4 142），
+那是横铺全城之前的数字。现在实测：
 
-| 批 | 内容 | 待译 | B1 内部已译率 | 何时需要 |
+```bash
+node -e 'const en=require("./content/i18n/en.json"),zh=require("./content/i18n/zh.json");
+const k=Object.keys(en);
+console.log("en",k.length,"zh",Object.keys(zh).length,
+ "缺",k.filter(x=>!zh[x]).length,"同文",k.filter(x=>zh[x]===en[x]).length)'
+```
+
+```
+en 1943 · zh 1943 · 缺 0 · 中英同文 0
+```
+
+### 3.1 四批的最终状态
+
+| 批 | 内容 | 原计划待译 | 实测 | 完成于 |
 |---|---|---|---|---|
-| **B1** | **12 主城**全部 `ev.*`（入城 + 3 探索点 + 导师） | **94** | 刺桐 100% · 11 城各 60–67% | 立刻——玩家沿三条线必读 |
-| **B2** | 途中事件 `ev.road.*` + 图鉴正文 `codex.*` + 占卜文本 `div.*` | 206 | — | 立刻——行路必遇 |
-| **B3** | 90 次级城入城文本 | 180 | — | 横铺后 |
-| **B4** | 随从 66 + 商品 60 + 结局 7 + 贴纸 33 | 142 | — | P4/P5/P6 |
+| **B1** | 12 主城 `ev.*`（入城 + 探索点 + 导师） | 94 | ✅ 0 | 2026-07-23 全城 story 补齐 |
+| **B2** | 途中事件 + 图鉴 + 占卜文本 | 206 | ✅ 0 | 同上；占卜文本部分见 §3.2 |
+| **B3** | 90 次级城入城文本 | 180 | ✅ 0 | 同上 |
+| **B4** | 随从 66 + 商品 60 + 结局 7 + 贴纸 33 | 142 | ✅ 0 | 结局 27 条于 2026-07-24 补齐 |
 
-### 3.1 B1 逐城待译明细
+**中译 B1–B4 已全部完成。** 102 城的 `story/<unit>/zh.md` 均为 `status: translated`，
+逐条 `stamps` 齐备，G21 时效检查 779 current · 0 stale · 0 missing。
 
-B1 的 94 条是长正文，分布在 11 座城，模式高度一致：
+### 3.2 一处方向相反的缺口（2026-07-24 修复）
 
-| 城 | 待译 | 内容 | 起点？ |
-|---|---|---|---|
-| **大不里士** `tauris` | 8 | entry + 3 sites 标题正文 | ✅ 波罗/草原线起点 |
-| **报达** `baldacum` | 8 | entry + 3 sites 标题正文 | ✅ 分支枢纽 |
-| **忽鲁谟斯** `ormus` | 8 | entry + 3 sites 标题正文 | ✅ 海路线起点 |
-| 上都 `chandu` | 8 | entry + 3 sites 标题正文 | 草原线终点方向 |
-| 汗八里 `cambaluc` | 8 | entry + 3 sites 标题正文 | 波罗线终点 |
-| 行在 `kinsay` | 8 | entry + 3 sites 标题正文 | 海路线终点方向 |
-| 巴里黑 `balc` | 8 | entry + 3 sites 标题正文 | |
-| 撒马尔罕 `samarcanda` | 8 | entry + 3 sites 标题正文 | |
-| 可失合儿 `cascar` | 8 | entry + 3 sites 标题正文 | |
-| 于阗 `cotan` | 8 | entry + 3 sites 标题正文 | |
-| 罗卜 `lop` | 14 | entry + 2 sites (bazaar/shrine) 标题正文 + 选项 | 沙漠独城，site 数不同 |
+按「中英同文」筛查时出现 151 条，逐条看下来**缺的全是英文，不是中文**——
+中文字坐在 `en.json` 里：
 
-**每条待译正文约 200–400 英文词，对照 Marco Polo 原章落笔。**
-
-### 3.2 B2 组成
-
-| 子类 | 待译 | 备注 |
+| 组 | 条数 | 症状 |
 |---|---|---|
-| `ev.road.*` 途中事件 | ~120 | 40 个事件 × 3（title + body + choice） |
-| `codex.cx-*.body` 图鉴正文 | 6 | 刺桐 5 条 + 其他 1 条 |
-| `div.*` 占卜文本 | ~60 | 易占/八字/签占/塔罗的结果描述与 codex |
-| `ev.*.choice.*` 路径相关选项 | ~20 | |
+| `div.iching.hex.*` | 64 | 英文位是「乾」「坤」「未济」 |
+| `div.tarot.card.*` | 78 | 英文位是「愚者」「圣杯国王」 |
+| `div.tarot.card.*.up/.rev` | — | 拼成「愚者 upright: energy flows」这种中英混排 |
+| `div.tarot.spread.*` | 9 | 英文位是「凯尔特十字」「双选门」 |
+
+根因在 `tools/divination/build_p3_content.mjs`：`en[c.nameKey] = c.name` 直接
+把中文写进英文位；而卦名那 64 条**从来没有任何工具写过**——是很久以前手工塞进
+`en.json` 的，任何一次重建都修不了它。
+
+**处理**：
+
+1. `tools/divination/name_en.mjs` 给两张表补 `nameEn`（142 条）。塔罗是**生成**
+   不是誊写——22 张大阿卡纳 + 四花色 × 14 阶完全规则，手抄 78 条只是制造 78 次
+   打错的机会。
+2. 卦名用**拼音 + 平实释义**（`Qián · Force`），**不用**「The Creative」那套——
+   那是卫礼贤（Wilhelm）的译法，其译本仍在版权期内。拼音是名字本身，不属于任何人。
+   释义刻意平实：卦名是解读的把手，英文玩家看到 `Qián · Force` 抓得住；看到一行
+   小诗，则是在占卜开口之前就先给了他一个解释。
+3. 两个 builder 改为**重建时保留 `nameEn`**，缺失即抛错——此前重建会静默丢弃。
+
+修复后中英同文 0 条。
+
+### 3.3 之后的翻译工作走什么流程
+
+新增文本一律走 `STORY_TEXT_FORMAT.md` 的 authoring 格式，**不直接改 `content/i18n/*.json`**：
+
+```
+content/story/<unit>/en.md   ← 先写英文源
+content/story/<unit>/zh.md   ← 据源翻译，frontmatter 记 stamps
+node tools/lore/story.mjs build     # 编译进 i18n
+node tools/lore/story.mjs stamp zh  # 原文校订后重新盖章
+node tools/lore/story.mjs check     # 时效检查
+```
+
+> **2026-07-24 的教训**：上一轮 G7 术语修复改的是 `content/i18n/zh.json`（编译产物），
+> 结果下一次 `story.mjs build` 把三条中文覆盖回了截短版。**改产物的修复活不过下一次
+> 构建。** 顺序永远是：先改源文（`story/<unit>/<lang>.md`），再 build，再 stamp。
+
+### 3.4 剩余的语言相关工作
+
+中译已完，但下面几项仍在：
+
+| # | 事项 | 量 | 依据 |
+|---|---|---|---|
+| L-1 | 三书新绑定 20 城的 zh 正文重写 | 20 城 | 见 `LORE_PIPELINE.md` §6；素材含时代性贬语，**须改写不得引用**（G24） |
+| L-2 | 第三语言（日／韩／西）可行性 | — | 回退链已就位，加语言只需加 `<lang>.md` 与 `<lang>.json` |
+| L-3 | 中文字体与竖排的上架审校 | — | 见 `ART_REQUIREMENTS.md` |
 
 ---
 

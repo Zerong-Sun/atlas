@@ -6,6 +6,7 @@
       "id": "hex-0",
       "index": 0,
       "name": "乾",
+      "nameEn": "Qián · Force",
       "nameKey": "div.iching.hex.0",
       "adviceKey": "div.iching.hex.0.advice"
     },
@@ -13,6 +14,7 @@
       "id": "hex-1",
       "index": 1,
       "name": "坤",
+      "nameEn": "Kūn · Field",
       "nameKey": "div.iching.hex.1",
       "adviceKey": "div.iching.hex.1.advice"
     },
@@ -20,6 +22,7 @@
       "id": "hex-2",
       "index": 2,
       "name": "屯",
+      "nameEn": "Zhūn · Sprouting",
       "nameKey": "div.iching.hex.2",
       "adviceKey": "div.iching.hex.2.advice"
     },
@@ -27,6 +30,7 @@
       "id": "hex-3",
       "index": 3,
       "name": "蒙",
+      "nameEn": "Méng · Enfolding",
       "nameKey": "div.iching.hex.3",
       "adviceKey": "div.iching.hex.3.advice"
     },
@@ -34,6 +38,7 @@
       "id": "hex-4",
       "index": 4,
       "name": "需",
+      "nameEn": "Xū · Waiting",
       "nameKey": "div.iching.hex.4",
       "adviceKey": "div.iching.hex.4.advice"
     },
@@ -41,6 +46,7 @@
       "id": "hex-5",
       "index": 5,
       "name": "讼",
+      "nameEn": "Sòng · Dispute",
       "nameKey": "div.iching.hex.5",
       "adviceKey": "div.iching.hex.5.advice"
     },
@@ -48,6 +54,7 @@
       "id": "hex-6",
       "index": 6,
       "name": "师",
+      "nameEn": "Shī · The Host",
       "nameKey": "div.iching.hex.6",
       "adviceKey": "div.iching.hex.6.advice"
     },
@@ -55,6 +62,7 @@
       "id": "hex-7",
       "index": 7,
       "name": "比",
+      "nameEn": "Bǐ · Grouping",
       "nameKey": "div.iching.hex.7",
       "adviceKey": "div.iching.hex.7.advice"
     },
@@ -62,6 +70,7 @@
       "id": "hex-8",
       "index": 8,
       "name": "小畜",
+      "nameEn": "Xiǎo Xù · Small Restraint",
       "nameKey": "div.iching.hex.8",
       "adviceKey": "div.iching.hex.8.advice"
     },
@@ -69,6 +78,7 @@
       "id": "hex-9",
       "index": 9,
       "name": "履",
+      "nameEn": "Lǚ · Treading",
       "nameKey": "div.iching.hex.9",
       "adviceKey": "div.iching.hex.9.advice"
     },
@@ -76,6 +86,7 @@
       "id": "hex-10",
       "index": 10,
       "name": "泰",
+      "nameEn": "Tài · Peace",
       "nameKey": "div.iching.hex.10",
       "adviceKey": "div.iching.hex.10.advice"
     },
@@ -83,6 +94,7 @@
       "id": "hex-11",
       "index": 11,
       "name": "否",
+      "nameEn": "Pǐ · Obstruction",
       "nameKey": "div.iching.hex.11",
       "adviceKey": "div.iching.hex.11.advice"
     },
@@ -90,6 +102,7 @@
       "id": "hex-12",
       "index": 12,
       "name": "同人",
+      "nameEn": "Tóng Rén · Fellowship",
       "nameKey": "div.iching.hex.12",
       "adviceKey": "div.iching.hex.12.advice"
     },
@@ -97,6 +110,7 @@
       "id": "hex-13",
       "index": 13,
       "name": "大有",
+      "nameEn": "Dà Yǒu · Great Holding",
       "nameKey": "div.iching.hex.13",
       "adviceKey": "div.iching.hex.13.advice"
     },
@@ -104,6 +118,7 @@
       "id": "hex-14",
       "index": 14,
       "name": "谦",
+      "nameEn": "Qiān · Modesty",
       "nameKey": "div.iching.hex.14",
       "adviceKey": "div.iching.hex.14.advice"
     },
@@ -111,6 +126,7 @@
       "id": "hex-15",
       "index": 15,
       "name": "豫",
+      "nameEn": "Yù · Readiness",
       "nameKey": "div.iching.hex.15",
       "adviceKey": "div.iching.hex.15.advice"
     },
@@ -118,6 +134,7 @@
       "id": "hex-16",
       "index": 16,
       "name": "随",
+      "nameEn": "Suí · Following",
       "nameKey": "div.iching.hex.16",
       "adviceKey": "div.iching.hex.16.advice"
     },
@@ -125,6 +142,7 @@
       "id": "hex-17",
       "index": 17,
       "name": "蛊",
+      "nameEn": "Gǔ · Repair",
       "nameKey": "div.iching.hex.17",
       "adviceKey": "div.iching.hex.17.advice"
     },
@@ -132,6 +150,7 @@
       "id": "hex-18",
       "index": 18,
       "name": "临",
+      "nameEn": "Lín · Approach",
       "nameKey": "div.iching.hex.18",
       "adviceKey": "div.iching.hex.18.advice"
     },
@@ -139,6 +158,7 @@
       "id": "hex-19",
       "index": 19,
       "name": "观",
+      "nameEn": "Guān · Viewing",
       "nameKey": "div.iching.hex.19",
       "adviceKey": "div.iching.hex.19.advice"
     },
@@ -146,6 +166,7 @@
       "id": "hex-20",
       "index": 20,
       "name": "噬嗑",
+      "nameEn": "Shì Kè · Biting Through",
       "nameKey": "div.iching.hex.20",
       "adviceKey": "div.iching.hex.20.advice"
     },
@@ -153,6 +174,7 @@
       "id": "hex-21",
       "index": 21,
       "name": "贲",
+      "nameEn": "Bì · Adornment",
       "nameKey": "div.iching.hex.21",
       "adviceKey": "div.iching.hex.21.advice"
     },
@@ -160,6 +182,7 @@
       "id": "hex-22",
       "index": 22,
       "name": "剥",
+      "nameEn": "Bō · Stripping",
       "nameKey": "div.iching.hex.22",
       "adviceKey": "div.iching.hex.22.advice"
     },
@@ -167,6 +190,7 @@
       "id": "hex-23",
       "index": 23,
       "name": "复",
+      "nameEn": "Fù · Returning",
       "nameKey": "div.iching.hex.23",
       "adviceKey": "div.iching.hex.23.advice"
     },
@@ -174,6 +198,7 @@
       "id": "hex-24",
       "index": 24,
       "name": "无妄",
+      "nameEn": "Wú Wàng · Without Falsehood",
       "nameKey": "div.iching.hex.24",
       "adviceKey": "div.iching.hex.24.advice"
     },
@@ -181,6 +206,7 @@
       "id": "hex-25",
       "index": 25,
       "name": "大畜",
+      "nameEn": "Dà Xù · Great Restraint",
       "nameKey": "div.iching.hex.25",
       "adviceKey": "div.iching.hex.25.advice"
     },
@@ -188,6 +214,7 @@
       "id": "hex-26",
       "index": 26,
       "name": "颐",
+      "nameEn": "Yí · Nourishing",
       "nameKey": "div.iching.hex.26",
       "adviceKey": "div.iching.hex.26.advice"
     },
@@ -195,6 +222,7 @@
       "id": "hex-27",
       "index": 27,
       "name": "大过",
+      "nameEn": "Dà Guò · Great Excess",
       "nameKey": "div.iching.hex.27",
       "adviceKey": "div.iching.hex.27.advice"
     },
@@ -202,6 +230,7 @@
       "id": "hex-28",
       "index": 28,
       "name": "坎",
+      "nameEn": "Kǎn · The Abyss",
       "nameKey": "div.iching.hex.28",
       "adviceKey": "div.iching.hex.28.advice"
     },
@@ -209,6 +238,7 @@
       "id": "hex-29",
       "index": 29,
       "name": "离",
+      "nameEn": "Lí · Radiance",
       "nameKey": "div.iching.hex.29",
       "adviceKey": "div.iching.hex.29.advice"
     },
@@ -216,6 +246,7 @@
       "id": "hex-30",
       "index": 30,
       "name": "咸",
+      "nameEn": "Xián · Influence",
       "nameKey": "div.iching.hex.30",
       "adviceKey": "div.iching.hex.30.advice"
     },
@@ -223,6 +254,7 @@
       "id": "hex-31",
       "index": 31,
       "name": "恒",
+      "nameEn": "Héng · Constancy",
       "nameKey": "div.iching.hex.31",
       "adviceKey": "div.iching.hex.31.advice"
     },
@@ -230,6 +262,7 @@
       "id": "hex-32",
       "index": 32,
       "name": "遁",
+      "nameEn": "Dùn · Retreat",
       "nameKey": "div.iching.hex.32",
       "adviceKey": "div.iching.hex.32.advice"
     },
@@ -237,6 +270,7 @@
       "id": "hex-33",
       "index": 33,
       "name": "大壮",
+      "nameEn": "Dà Zhuàng · Great Vigour",
       "nameKey": "div.iching.hex.33",
       "adviceKey": "div.iching.hex.33.advice"
     },
@@ -244,6 +278,7 @@
       "id": "hex-34",
       "index": 34,
       "name": "晋",
+      "nameEn": "Jìn · Advance",
       "nameKey": "div.iching.hex.34",
       "adviceKey": "div.iching.hex.34.advice"
     },
@@ -251,6 +286,7 @@
       "id": "hex-35",
       "index": 35,
       "name": "明夷",
+      "nameEn": "Míng Yí · Darkening Light",
       "nameKey": "div.iching.hex.35",
       "adviceKey": "div.iching.hex.35.advice"
     },
@@ -258,6 +294,7 @@
       "id": "hex-36",
       "index": 36,
       "name": "家人",
+      "nameEn": "Jiā Rén · The Household",
       "nameKey": "div.iching.hex.36",
       "adviceKey": "div.iching.hex.36.advice"
     },
@@ -265,6 +302,7 @@
       "id": "hex-37",
       "index": 37,
       "name": "睽",
+      "nameEn": "Kuí · Divergence",
       "nameKey": "div.iching.hex.37",
       "adviceKey": "div.iching.hex.37.advice"
     },
@@ -272,6 +310,7 @@
       "id": "hex-38",
       "index": 38,
       "name": "蹇",
+      "nameEn": "Jiǎn · Obstruction",
       "nameKey": "div.iching.hex.38",
       "adviceKey": "div.iching.hex.38.advice"
     },
@@ -279,6 +318,7 @@
       "id": "hex-39",
       "index": 39,
       "name": "解",
+      "nameEn": "Xiè · Release",
       "nameKey": "div.iching.hex.39",
       "adviceKey": "div.iching.hex.39.advice"
     },
@@ -286,6 +326,7 @@
       "id": "hex-40",
       "index": 40,
       "name": "损",
+      "nameEn": "Sǔn · Decrease",
       "nameKey": "div.iching.hex.40",
       "adviceKey": "div.iching.hex.40.advice"
     },
@@ -293,6 +334,7 @@
       "id": "hex-41",
       "index": 41,
       "name": "益",
+      "nameEn": "Yì · Increase",
       "nameKey": "div.iching.hex.41",
       "adviceKey": "div.iching.hex.41.advice"
     },
@@ -300,6 +342,7 @@
       "id": "hex-42",
       "index": 42,
       "name": "夬",
+      "nameEn": "Guài · Resolution",
       "nameKey": "div.iching.hex.42",
       "adviceKey": "div.iching.hex.42.advice"
     },
@@ -307,6 +350,7 @@
       "id": "hex-43",
       "index": 43,
       "name": "姤",
+      "nameEn": "Gòu · Encounter",
       "nameKey": "div.iching.hex.43",
       "adviceKey": "div.iching.hex.43.advice"
     },
@@ -314,6 +358,7 @@
       "id": "hex-44",
       "index": 44,
       "name": "萃",
+      "nameEn": "Cuì · Gathering",
       "nameKey": "div.iching.hex.44",
       "adviceKey": "div.iching.hex.44.advice"
     },
@@ -321,6 +366,7 @@
       "id": "hex-45",
       "index": 45,
       "name": "升",
+      "nameEn": "Shēng · Ascending",
       "nameKey": "div.iching.hex.45",
       "adviceKey": "div.iching.hex.45.advice"
     },
@@ -328,6 +374,7 @@
       "id": "hex-46",
       "index": 46,
       "name": "困",
+      "nameEn": "Kùn · Confinement",
       "nameKey": "div.iching.hex.46",
       "adviceKey": "div.iching.hex.46.advice"
     },
@@ -335,6 +382,7 @@
       "id": "hex-47",
       "index": 47,
       "name": "井",
+      "nameEn": "Jǐng · The Well",
       "nameKey": "div.iching.hex.47",
       "adviceKey": "div.iching.hex.47.advice"
     },
@@ -342,6 +390,7 @@
       "id": "hex-48",
       "index": 48,
       "name": "革",
+      "nameEn": "Gé · Revolution",
       "nameKey": "div.iching.hex.48",
       "adviceKey": "div.iching.hex.48.advice"
     },
@@ -349,6 +398,7 @@
       "id": "hex-49",
       "index": 49,
       "name": "鼎",
+      "nameEn": "Dǐng · The Cauldron",
       "nameKey": "div.iching.hex.49",
       "adviceKey": "div.iching.hex.49.advice"
     },
@@ -356,6 +406,7 @@
       "id": "hex-50",
       "index": 50,
       "name": "震",
+      "nameEn": "Zhèn · Thunder",
       "nameKey": "div.iching.hex.50",
       "adviceKey": "div.iching.hex.50.advice"
     },
@@ -363,6 +414,7 @@
       "id": "hex-51",
       "index": 51,
       "name": "艮",
+      "nameEn": "Gèn · Stillness",
       "nameKey": "div.iching.hex.51",
       "adviceKey": "div.iching.hex.51.advice"
     },
@@ -370,6 +422,7 @@
       "id": "hex-52",
       "index": 52,
       "name": "渐",
+      "nameEn": "Jiàn · Gradual Progress",
       "nameKey": "div.iching.hex.52",
       "adviceKey": "div.iching.hex.52.advice"
     },
@@ -377,6 +430,7 @@
       "id": "hex-53",
       "index": 53,
       "name": "归妹",
+      "nameEn": "Guī Mèi · The Marrying Maiden",
       "nameKey": "div.iching.hex.53",
       "adviceKey": "div.iching.hex.53.advice"
     },
@@ -384,6 +438,7 @@
       "id": "hex-54",
       "index": 54,
       "name": "丰",
+      "nameEn": "Fēng · Abundance",
       "nameKey": "div.iching.hex.54",
       "adviceKey": "div.iching.hex.54.advice"
     },
@@ -391,6 +446,7 @@
       "id": "hex-55",
       "index": 55,
       "name": "旅",
+      "nameEn": "Lǚ · The Traveller",
       "nameKey": "div.iching.hex.55",
       "adviceKey": "div.iching.hex.55.advice"
     },
@@ -398,6 +454,7 @@
       "id": "hex-56",
       "index": 56,
       "name": "巽",
+      "nameEn": "Xùn · The Gentle",
       "nameKey": "div.iching.hex.56",
       "adviceKey": "div.iching.hex.56.advice"
     },
@@ -405,6 +462,7 @@
       "id": "hex-57",
       "index": 57,
       "name": "兑",
+      "nameEn": "Duì · The Joyous",
       "nameKey": "div.iching.hex.57",
       "adviceKey": "div.iching.hex.57.advice"
     },
@@ -412,6 +470,7 @@
       "id": "hex-58",
       "index": 58,
       "name": "涣",
+      "nameEn": "Huàn · Dispersion",
       "nameKey": "div.iching.hex.58",
       "adviceKey": "div.iching.hex.58.advice"
     },
@@ -419,6 +478,7 @@
       "id": "hex-59",
       "index": 59,
       "name": "节",
+      "nameEn": "Jié · Limitation",
       "nameKey": "div.iching.hex.59",
       "adviceKey": "div.iching.hex.59.advice"
     },
@@ -426,6 +486,7 @@
       "id": "hex-60",
       "index": 60,
       "name": "中孚",
+      "nameEn": "Zhōng Fú · Inner Truth",
       "nameKey": "div.iching.hex.60",
       "adviceKey": "div.iching.hex.60.advice"
     },
@@ -433,6 +494,7 @@
       "id": "hex-61",
       "index": 61,
       "name": "小过",
+      "nameEn": "Xiǎo Guò · Small Excess",
       "nameKey": "div.iching.hex.61",
       "adviceKey": "div.iching.hex.61.advice"
     },
@@ -440,6 +502,7 @@
       "id": "hex-62",
       "index": 62,
       "name": "既济",
+      "nameEn": "Jì Jì · Already Across",
       "nameKey": "div.iching.hex.62",
       "adviceKey": "div.iching.hex.62.advice"
     },
@@ -447,6 +510,7 @@
       "id": "hex-63",
       "index": 63,
       "name": "未济",
+      "nameEn": "Wèi Jì · Not Yet Across",
       "nameKey": "div.iching.hex.63",
       "adviceKey": "div.iching.hex.63.advice"
     }

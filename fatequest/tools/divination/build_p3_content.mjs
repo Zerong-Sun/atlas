@@ -370,7 +370,14 @@ function buildTarot() {
       });
     });
   }
-  writeTable(path.join(DIV, "tarot_cards.json"), "tarot_cards", cards);
+  // Carry English names across a regeneration — same reason as the hexagrams.
+  const tp = path.join(DIV, "tarot_cards.json");
+  if (fs.existsSync(tp)) {
+    const prev = new Map((JSON.parse(fs.readFileSync(tp, "utf8")).records ?? [])
+      .filter((r) => r.nameEn).map((r) => [r.id, r.nameEn]));
+    for (const c of cards) c.nameEn = prev.get(c.id) ?? null;
+  }
+  writeTable(tp, "tarot_cards", cards);
   return { spreads, cards };
 }
 
@@ -438,14 +445,24 @@ function buildHexagrams() {
     "震", "艮", "渐", "归妹", "丰", "旅", "巽", "兑", "涣", "节",
     "中孚", "小过", "既济", "未济",
   ];
+  // English names live in tools/divination/name_en.mjs and are read back here.
+  // Regenerating this table used to drop them silently, which is how 64
+  // hexagram names sat in en.json as Chinese characters for an English player.
+  const existing = new Map();
+  const p = path.join(DIV, "hexagrams.json");
+  if (fs.existsSync(p))
+    for (const r of JSON.parse(fs.readFileSync(p, "utf8")).records ?? [])
+      if (r.nameEn) existing.set(r.id, r.nameEn);
+
   const records = NAMES.map((name, i) => ({
     id: `hex-${i}`,
     index: i,
     name,
+    nameEn: existing.get(`hex-${i}`) ?? null,
     nameKey: `div.iching.hex.${i}`,
     adviceKey: `div.iching.hex.${i}.advice`,
   }));
-  writeTable(path.join(DIV, "hexagrams.json"), "hexagrams", records);
+  writeTable(p, "hexagrams", records);
 }
 
 /** Compact ephemeris: solar-term day-of-year for Li Chun year boundary + month branches. */
@@ -694,18 +711,50 @@ function patchI18n(tarot) {
     "money-flow": "金钱流",
     "shadow-dialogue": "阴影对话",
   };
+  const spreadEn = {
+    "one-card": "One-Card Check",
+    "three-timeline": "Past, Present, Trend",
+    cross: "Small Cross",
+    "celtic-cross": "Celtic Cross",
+    "relationship-mirror": "Relationship Mirror",
+    "choice-gate": "The Two Doors",
+    "career-map": "Career Map",
+    "money-flow": "Money Flow",
+    "shadow-dialogue": "Shadow Dialogue",
+  };
   for (const [id, label] of Object.entries(spreadZh)) {
     zh[`div.tarot.spread.${id}`] = label;
-    en[`div.tarot.spread.${id}`] = label;
+    if (!spreadEn[id]) throw new Error(`tarot spread ${id}: no English label`);
+    en[`div.tarot.spread.${id}`] = spreadEn[id];
   }
 
+  // Hexagram names. Nothing wrote these before, so whatever put Chinese into
+  // en.json did it once, by hand, years ago — and no rebuild could correct it.
+  // Generating them here means the table is the source of truth for both
+  // languages, the way every other string in the game already works.
+  {
+    const hexPath = path.join(DIV, "hexagrams.json");
+    if (fs.existsSync(hexPath)) {
+      for (const h of JSON.parse(fs.readFileSync(hexPath, "utf8")).records ?? []) {
+        if (!h.nameEn) throw new Error(`hexagram ${h.id}: no nameEn — run tools/divination/name_en.mjs --write`);
+        zh[h.nameKey] = h.name;
+        en[h.nameKey] = h.nameEn;
+      }
+    }
+  }
+
+  // `nameEn` comes from tools/divination/name_en.mjs. Falling back to the
+  // Chinese would put 愚者 in front of an English player and, in the sentences
+  // below, produce "愚者 upright: energy flows" — text in no language at all.
+  // Better to fail loudly here than to ship that again.
   for (const c of tarot.cards) {
+    if (!c.nameEn) throw new Error(`tarot ${c.id}: no nameEn — run tools/divination/name_en.mjs --write`);
     zh[c.nameKey] = c.name;
-    en[c.nameKey] = c.name;
+    en[c.nameKey] = c.nameEn;
     zh[c.uprightKey] = `${c.name}正位：主题能量顺畅，可作路线参照。`;
     zh[c.reversedKey] = `${c.name}逆位：能量阻滞，宜放缓决策。`;
-    en[c.uprightKey] = `${c.name} upright: energy flows; use as route counsel.`;
-    en[c.reversedKey] = `${c.name} reversed: blockage; slow the decision.`;
+    en[c.uprightKey] = `${c.nameEn} upright: energy flows; use as route counsel.`;
+    en[c.reversedKey] = `${c.nameEn} reversed: blockage; slow the decision.`;
   }
 
   // Mentor / UI strings

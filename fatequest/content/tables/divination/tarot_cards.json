@@ -16,7 +16,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Fool"
     },
     {
       "id": "major-1",
@@ -32,7 +33,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Magician"
     },
     {
       "id": "major-2",
@@ -48,7 +50,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The High Priestess"
     },
     {
       "id": "major-3",
@@ -64,7 +67,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Empress"
     },
     {
       "id": "major-4",
@@ -80,7 +84,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Emperor"
     },
     {
       "id": "major-5",
@@ -96,7 +101,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Hierophant"
     },
     {
       "id": "major-6",
@@ -112,7 +118,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Lovers"
     },
     {
       "id": "major-7",
@@ -128,7 +135,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Chariot"
     },
     {
       "id": "major-8",
@@ -144,7 +152,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Strength"
     },
     {
       "id": "major-9",
@@ -160,7 +169,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Hermit"
     },
     {
       "id": "major-10",
@@ -176,7 +186,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Wheel of Fortune"
     },
     {
       "id": "major-11",
@@ -192,7 +203,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Justice"
     },
     {
       "id": "major-12",
@@ -208,7 +220,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Hanged Man"
     },
     {
       "id": "major-13",
@@ -224,7 +237,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Death"
     },
     {
       "id": "major-14",
@@ -240,7 +254,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Temperance"
     },
     {
       "id": "major-15",
@@ -256,7 +271,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Devil"
     },
     {
       "id": "major-16",
@@ -272,7 +288,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Tower"
     },
     {
       "id": "major-17",
@@ -288,7 +305,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Star"
     },
     {
       "id": "major-18",
@@ -304,7 +322,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Moon"
     },
     {
       "id": "major-19",
@@ -320,7 +339,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The Sun"
     },
     {
       "id": "major-20",
@@ -336,7 +356,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "Judgement"
     },
     {
       "id": "major-21",
@@ -352,7 +373,8 @@
       ],
       "reversedKeywords": [
         "阻滞"
-      ]
+      ],
+      "nameEn": "The World"
     },
     {
       "id": "wands-0",
@@ -370,7 +392,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ace of Wands"
     },
     {
       "id": "wands-1",
@@ -388,7 +411,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Two of Wands"
     },
     {
       "id": "wands-2",
@@ -406,7 +430,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Three of Wands"
     },
     {
       "id": "wands-3",
@@ -424,7 +449,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Four of Wands"
     },
     {
       "id": "wands-4",
@@ -442,7 +468,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Five of Wands"
     },
     {
       "id": "wands-5",
@@ -460,7 +487,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Six of Wands"
     },
     {
       "id": "wands-6",
@@ -478,7 +506,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Seven of Wands"
     },
     {
       "id": "wands-7",
@@ -496,7 +525,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Eight of Wands"
     },
     {
       "id": "wands-8",
@@ -514,7 +544,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Nine of Wands"
     },
     {
       "id": "wands-9",
@@ -532,7 +563,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ten of Wands"
     },
     {
       "id": "wands-10",
@@ -550,7 +582,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Page of Wands"
     },
     {
       "id": "wands-11",
@@ -568,7 +601,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Knight of Wands"
     },
     {
       "id": "wands-12",
@@ -586,7 +620,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Queen of Wands"
     },
     {
       "id": "wands-13",
@@ -604,7 +639,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "King of Wands"
     },
     {
       "id": "cups-0",
@@ -622,7 +658,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ace of Cups"
     },
     {
       "id": "cups-1",
@@ -640,7 +677,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Two of Cups"
     },
     {
       "id": "cups-2",
@@ -658,7 +696,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Three of Cups"
     },
     {
       "id": "cups-3",
@@ -676,7 +715,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Four of Cups"
     },
     {
       "id": "cups-4",
@@ -694,7 +734,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Five of Cups"
     },
     {
       "id": "cups-5",
@@ -712,7 +753,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Six of Cups"
     },
     {
       "id": "cups-6",
@@ -730,7 +772,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Seven of Cups"
     },
     {
       "id": "cups-7",
@@ -748,7 +791,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Eight of Cups"
     },
     {
       "id": "cups-8",
@@ -766,7 +810,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Nine of Cups"
     },
     {
       "id": "cups-9",
@@ -784,7 +829,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ten of Cups"
     },
     {
       "id": "cups-10",
@@ -802,7 +848,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Page of Cups"
     },
     {
       "id": "cups-11",
@@ -820,7 +867,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Knight of Cups"
     },
     {
       "id": "cups-12",
@@ -838,7 +886,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Queen of Cups"
     },
     {
       "id": "cups-13",
@@ -856,7 +905,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "King of Cups"
     },
     {
       "id": "swords-0",
@@ -874,7 +924,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ace of Swords"
     },
     {
       "id": "swords-1",
@@ -892,7 +943,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Two of Swords"
     },
     {
       "id": "swords-2",
@@ -910,7 +962,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Three of Swords"
     },
     {
       "id": "swords-3",
@@ -928,7 +981,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Four of Swords"
     },
     {
       "id": "swords-4",
@@ -946,7 +1000,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Five of Swords"
     },
     {
       "id": "swords-5",
@@ -964,7 +1019,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Six of Swords"
     },
     {
       "id": "swords-6",
@@ -982,7 +1038,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Seven of Swords"
     },
     {
       "id": "swords-7",
@@ -1000,7 +1057,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Eight of Swords"
     },
     {
       "id": "swords-8",
@@ -1018,7 +1076,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Nine of Swords"
     },
     {
       "id": "swords-9",
@@ -1036,7 +1095,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ten of Swords"
     },
     {
       "id": "swords-10",
@@ -1054,7 +1114,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Page of Swords"
     },
     {
       "id": "swords-11",
@@ -1072,7 +1133,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Knight of Swords"
     },
     {
       "id": "swords-12",
@@ -1090,7 +1152,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Queen of Swords"
     },
     {
       "id": "swords-13",
@@ -1108,7 +1171,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "King of Swords"
     },
     {
       "id": "pentacles-0",
@@ -1126,7 +1190,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ace of Pentacles"
     },
     {
       "id": "pentacles-1",
@@ -1144,7 +1209,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Two of Pentacles"
     },
     {
       "id": "pentacles-2",
@@ -1162,7 +1228,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Three of Pentacles"
     },
     {
       "id": "pentacles-3",
@@ -1180,7 +1247,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Four of Pentacles"
     },
     {
       "id": "pentacles-4",
@@ -1198,7 +1266,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Five of Pentacles"
     },
     {
       "id": "pentacles-5",
@@ -1216,7 +1285,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Six of Pentacles"
     },
     {
       "id": "pentacles-6",
@@ -1234,7 +1304,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Seven of Pentacles"
     },
     {
       "id": "pentacles-7",
@@ -1252,7 +1323,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Eight of Pentacles"
     },
     {
       "id": "pentacles-8",
@@ -1270,7 +1342,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Nine of Pentacles"
     },
     {
       "id": "pentacles-9",
@@ -1288,7 +1361,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Ten of Pentacles"
     },
     {
       "id": "pentacles-10",
@@ -1306,7 +1380,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Page of Pentacles"
     },
     {
       "id": "pentacles-11",
@@ -1324,7 +1399,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Knight of Pentacles"
     },
     {
       "id": "pentacles-12",
@@ -1342,7 +1418,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "Queen of Pentacles"
     },
     {
       "id": "pentacles-13",
@@ -1360,7 +1437,8 @@
       "reversedKeywords": [
         "阻滞",
         "失衡"
-      ]
+      ],
+      "nameEn": "King of Pentacles"
     }
   ]
 }

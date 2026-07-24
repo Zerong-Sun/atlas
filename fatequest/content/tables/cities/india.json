@@ -495,7 +495,12 @@
         "rt-mecha-medina"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m006",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m006"
+        }
       },
       "market": {
         "goods": [
@@ -539,7 +544,12 @@
         "rt-medina-petra"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-jubayr:jubayr-m014",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m014"
+        }
       },
       "calendars": [
         "indian"

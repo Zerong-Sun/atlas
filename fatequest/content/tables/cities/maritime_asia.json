@@ -83,7 +83,12 @@
         "rt-pentam-java-major"
       ],
       "lore": {
-        "origin": "authored"
+        "placeId": "ibn-battuta:battuta-c024",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c024"
+        }
       },
       "market": {
         "goods": [

@@ -585,6 +585,62 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------- G24: source citations must resolve, and the sources' invective
+// must not reach the player.
+//
+// Two halves of one rule, because the three new travellers introduce two new
+// ways to be wrong that Polo did not.
+//
+// (a) A city marked `origin: "source"` claims a passage backs it. The claim is
+//     worth nothing unless the passage exists and actually names the place —
+//     an earlier cut of the matcher bound Tarsus and Trebizond to Ibn Fadlan,
+//     who never went to Anatolia, and nothing would have caught it.
+//
+// (b) Ibn Jubayr and Ibn Battuta write across a religious frontier during the
+//     crusades and call the other side pigs and swine. That is authentic
+//     twelfth-century text and legitimate source material; it is not shippable
+//     prose. `passages.json` marks it, and this checks the far end — no string
+//     a player can read may carry it. GDD §19's red line, enforced rather than
+//     remembered.
+{
+  const PASSAGES = join(ROOT, "assets/books/passages.json");
+  const passages = existsSync(PASSAGES)
+    ? JSON.parse(readFileSync(PASSAGES, "utf8")).generated ?? {}
+    : {};
+
+  for (const c of byTable.cities ?? []) {
+    if (c.lore?.origin !== "source") continue;
+    const book = c.lore?.ref?.book;
+    if (book === "marco-polo") continue;   // Polo predates this pipeline
+    const ps = passages[c.id];
+    if (!ps?.length) {
+      err("G24", recordFile.get(c.id),
+        `${c.id}: claims origin "source" from ${book}, but no passage backs it`);
+      continue;
+    }
+    if (ps[0].book !== book)
+      err("G24", recordFile.get(c.id),
+        `${c.id}: cites ${book} but the passage comes from ${ps[0].book}`);
+    if (!ps[0].quote || ps[0].quote.length < 40)
+      err("G24", recordFile.get(c.id), `${c.id}: passage has no reviewable quote`);
+  }
+
+  // The ship surface. Deliberately checked against the compiled i18n rather
+  // than the authoring sources: what matters is what a player can read.
+  const INVECTIVE = /\b(swine|sows?|infidels?|heretics?|accursed|abominable)\b|may God (destroy|curse)/gi;
+  for (const lang of ["en", "zh"]) {
+    const p = join(ROOT, `content/i18n/${lang}.json`);
+    if (!existsSync(p)) continue;
+    const doc = JSON.parse(readFileSync(p, "utf8"));
+    for (const [k, v] of Object.entries(doc)) {
+      const found = [...new Set((String(v).match(INVECTIVE) ?? []).map((s) => s.toLowerCase()))];
+      if (found.length)
+        err("G24", `${lang}.json:${k}`,
+          `period invective reaches the player: ${found.join(", ")} — rewrite, do not quote`);
+    }
+  }
+}
+
 // ------------------ G23: every ending must be reachable, and say something
 // GDD §14 / AUDIT §9.2. An ending whose conditions no run can satisfy is worse
 // than a missing one: it sits in the table looking finished. The judge in
@@ -687,7 +743,7 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
