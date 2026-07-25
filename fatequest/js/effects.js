@@ -37,7 +37,9 @@ FQ.ensureWorld = function () {
       languages: [],
       log: [],
       stopped: false,
-      endingId: null
+      endingId: null,
+      routeMods: {},
+      omen: { route_risk: 0, info_clarity: 0, weather_forecast: 0, omen_clarity: 0, temple_favor: 0 }
     };
   }
   const w = FQ.state.world;
@@ -53,6 +55,8 @@ FQ.ensureWorld = function () {
   w.languages = w.languages || [];
   w.reputation = w.reputation || {};
   w.log = w.log || [];
+  w.routeMods = w.routeMods || {};
+  w.omen = w.omen || { route_risk: 0, info_clarity: 0, weather_forecast: 0, omen_clarity: 0, temple_favor: 0 };
   return w;
 };
 
@@ -212,12 +216,72 @@ FQ.applyEffects = function (list, ctx) {
       case "goto":
         if (ctx) ctx.goto = e.value;
         break;
+      case "routeMod": {
+        /* { op:'routeMod', id:routeId?, stat:'route_risk', value:-2 } */
+        const rid = e.id || e.route || (ctx && ctx.routeId) || null;
+        const key = rid || "_global";
+        if (!w.routeMods[key]) w.routeMods[key] = {};
+        const st = e.stat || "route_risk";
+        w.routeMods[key][st] = (w.routeMods[key][st] || 0) + (e.value || e.delta || 0);
+        summary.push("路势" + st + (e.value >= 0 || e.delta >= 0 ? "+" : "") + (e.value || e.delta || 0));
+        break;
+      }
+      case "omenStat": {
+        const st = e.stat || e.id;
+        if (st) {
+          w.omen[st] = (w.omen[st] || 0) + (e.value || e.delta || 0);
+          summary.push(st + ((e.value || e.delta) >= 0 ? "+" : "") + (e.value || e.delta || 0));
+        }
+        break;
+      }
       default:
         console.warn("unknown effect op", e.op);
     }
   }
   FQ.save();
   return result;
+};
+
+/** Apply divinations.json {stat,delta} rows; on pass also may unlock a side route */
+FQ.applyDivinationTableEffects = function (divId, pass, routeId) {
+  const w = FQ.ensureWorld();
+  const id = divId === "jiaobei" ? "lot" : divId;
+  const div = FQ.DB && FQ.DB.divination && FQ.DB.divination[id];
+  if (!div) return { ok: true, summary: [] };
+  const ops = [];
+  (div.effects || []).forEach(row => {
+    if (!row || !row.stat) return;
+    const delta = pass ? (row.delta || 0) : -(row.delta || 0);
+    if (row.stat === "route_risk" || row.stat === "days") {
+      ops.push({ op: "routeMod", id: routeId || null, stat: row.stat, value: delta });
+    } else {
+      ops.push({ op: "omenStat", stat: row.stat, value: delta });
+    }
+  });
+  if (pass && routeId && FQ.DB && FQ.DB.routes) {
+    /* Unlock one adjacent unrevealed route from current city as "reading opened a side path" */
+    const here = w.at;
+    const side = FQ.DB.routes.find(r =>
+      (r.from === here || r.to === here) &&
+      r.id !== routeId &&
+      !w.unlockedRoutes.includes(r.id));
+    if (side) ops.push({ op: "unlockRoute", value: side.id });
+  } else if (pass && !routeId && FQ.DB && FQ.DB.routes) {
+    const here = w.at;
+    const side = FQ.DB.routes.find(r =>
+      (r.from === here || r.to === here) && !w.unlockedRoutes.includes(r.id));
+    if (side) ops.push({ op: "unlockRoute", value: side.id });
+  }
+  return FQ.applyEffects(ops, { routeId });
+};
+
+FQ.effectiveRouteRisk = function (route) {
+  const w = FQ.ensureWorld();
+  const base = (route && route.risk) || 0;
+  const g = (w.routeMods && w.routeMods._global && w.routeMods._global.route_risk) || 0;
+  const local = (w.routeMods && route && w.routeMods[route.id] && w.routeMods[route.id].route_risk) || 0;
+  const omen = (w.omen && w.omen.route_risk) || 0;
+  return Math.max(0, base + g + local + omen);
 };
 
 FQ.rollDivination = function (divId) {

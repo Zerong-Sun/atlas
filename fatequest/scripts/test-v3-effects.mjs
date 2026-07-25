@@ -48,7 +48,10 @@ function loadEngine() {
     good: index(pack.goods),
     ending: index(pack.endings),
     divination: index(pack.divinations),
-    archetype: index(pack.archetypes)
+    archetype: index(pack.archetypes),
+    routes: pack.routes,
+    endings: pack.endings,
+    cities: pack.cities
   };
   ctx.FQ.lang = 'zh';
   return ctx.FQ;
@@ -109,6 +112,43 @@ assert(!!FQ.DB.good.paiza, 'paiza good registered');
 const r = FQ.DB.route['rt-venice-acre'];
 const dest = r.from === 'venice' ? r.to : r.from;
 assert(dest === 'acre', 'travel dest from venice is acre');
+
+/* M2: divination table effects lower route risk + may unlock side route */
+w.at = 'tabriz';
+w.unlockedRoutes = ['rt-acre-tabriz'];
+w.unlockedCities = ['tabriz', 'acre'];
+w.routeMods = {};
+w.omen = { route_risk: 0, info_clarity: 0, weather_forecast: 0, omen_clarity: 0, temple_favor: 0 };
+const beforeRoutes = w.unlockedRoutes.length;
+const beforeRisk = FQ.effectiveRouteRisk(FQ.DB.route['rt-acre-tabriz']);
+FQ.applyDivinationTableEffects('iching', true, 'rt-acre-tabriz');
+assert((w.routeMods['rt-acre-tabriz'] || {}).route_risk === -2, 'pass applies route_risk delta as authored');
+const afterRisk = FQ.effectiveRouteRisk(FQ.DB.route['rt-acre-tabriz']);
+assert(afterRisk < beforeRisk, 'effective route risk falls on pass');
+assert(w.unlockedRoutes.length >= beforeRoutes, 'side route unlock possible after reading');
+
+/* fail inverts delta (risk rises) */
+w.routeMods = {};
+w.omen = { route_risk: 0, info_clarity: 0, weather_forecast: 0, omen_clarity: 0, temple_favor: 0 };
+FQ.applyDivinationTableEffects('iching', false, 'rt-acre-tabriz');
+assert((w.routeMods['rt-acre-tabriz'] || {}).route_risk === 2, 'fail inverts route_risk delta');
+assert((w.omen.info_clarity || 0) === -1, 'fail inverts positive omen stats');
+
+/* M3: battuta tables present */
+assert(!!FQ.DB.city.tangier && !!FQ.DB.city.mecca, 'battuta cities present');
+assert(!!FQ.DB.archetype.battuta, 'battuta archetype present');
+assert(!!FQ.DB.ending['end-battuta-witness'] || FQ.DB.endings.some(e => e.id === 'end-battuta-witness'), 'battuta ending present');
+assert(!!FQ.DB.route['rt-battuta-tangier-cairo'], 'battuta spine route present');
+assert((FQ.DB.city.baghdad.exits || []).includes('rt-baghdad-damascus'), 'baghdad lists bridge exit');
+
+/* codex unlock */
+FQ.applyEffects([{ op: 'codex', value: 'cx-venice' }]);
+assert(w.codex.includes('cx-venice'), 'codex unlock stores id');
+
+/* goto event opcode stored in ctx */
+const ctx = {};
+FQ.applyEffects([{ op: 'goto', value: 'event:ev-cairo-tree-2' }], ctx);
+assert(ctx.goto === 'event:ev-cairo-tree-2', 'goto event id preserved in ctx');
 
 if (failed) {
   console.error(`\n${failed} test(s) failed`);

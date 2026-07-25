@@ -1,5 +1,5 @@
 /* FateQuest service worker — v3 PWA shell */
-const CACHE = "fatequest-v3";
+const CACHE = "fatequest-v3-m23";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
@@ -7,18 +7,20 @@ const ASSETS = [
   "./js/data-runes.js", "./js/data-lenormand.js", "./js/data-mentors.js",
   "./js/data-scenes.js", "./js/data-misc.js",
   "./js/data-lore.js", "./js/data-marco-lore.js", "./js/data-lore-zh-trunk.js",
-  "./js/data-quests-stories.js",
+  "./js/data-battuta-lore.js", "./js/data-lore-zh-battuta-trunk.js",
   "./js/engines.js", "./js/state.js",
-  "./js/data-loader.js", "./js/effects.js", "./js/chargen.js", "./js/city.js", "./js/travel.js",
+  "./js/data-loader.js", "./js/effects.js", "./js/ritual.js",
+  "./js/chargen.js", "./js/city.js", "./js/travel.js",
   "./js/fx.js", "./js/audio.js", "./js/atmo.js",
   "./js/app.js", "./js/juice.js", "./js/scene.js", "./js/quest.js",
-  "./js/map.js", "./js/data-goods.js",
+  "./js/data-goods.js",
+  "./css/method-motion.css",
   "./assets/art/ART_EMOJI_MAP.json",
   "./assets/art/GOODS_ART_MAP.json",
   "./assets/data/cities.json", "./assets/data/routes.json", "./assets/data/transports.json",
   "./assets/data/events.json", "./assets/data/goods.json", "./assets/data/divinations.json",
   "./assets/data/retainers.json", "./assets/data/archetypes.json", "./assets/data/endings.json",
-  "./assets/data/glossary.json"
+  "./assets/data/glossary.json", "./assets/data/codex.json"
 ];
 
 self.addEventListener("install", e => {

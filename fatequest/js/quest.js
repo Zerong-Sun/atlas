@@ -40,7 +40,7 @@ FQ.Q.showStory = function () {
   const q = FQ.Q.cur;
   if (!q || !q.mentor) return;
   const M = q.mentor;
-  const place = (FQ.DB && FQ.DB.city[M.at]) || (FQ.J && FQ.J.node && FQ.J.node(M.at));
+  const place = FQ.DB && FQ.DB.city[M.at];
   const region = place ? (place.band || place.region || "chr") : "chr";
   const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);
   FQ.Scene.play({
@@ -61,7 +61,7 @@ FQ.SCREENS.trial = function () {
   const M = q.mentor;
   const app = document.getElementById("app");
 
-  const place = (FQ.DB && FQ.DB.city[M.at]) || (FQ.J && FQ.J.node && FQ.J.node(M.at));
+  const place = FQ.DB && FQ.DB.city[M.at];
   const region = place ? (place.band || place.region || "chr") : "chr";
   /* mentors have no plates yet — borrow the local keeper's likeness */
   const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);

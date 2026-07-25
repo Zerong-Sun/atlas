@@ -14,8 +14,10 @@ FQ.TRAVEL.open = function () {
   const rows = outs.map(r => {
     const dest = r.from === w.at ? r.to : r.from;
     const city = FQ.DB.city[dest];
+    const risk = FQ.effectiveRouteRisk ? FQ.effectiveRouteRisk(r) : r.risk;
+    const riskNote = risk !== r.risk ? ` →${risk}` : "";
     return `<button class="btn ghost block" style="margin-top:6px" onclick="FQ.TRAVEL.pickRoute('${r.id}','${dest}')">
-      → ${city ? FQ.T(city.name) : dest} · ${r.days}d · risk ${r.risk}</button>`;
+      → ${city ? FQ.T(city.name) : dest} · ${r.days}d · risk ${r.risk}${riskNote}</button>`;
   }).join("");
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
@@ -55,7 +57,9 @@ FQ.TRAVEL.go = function (routeId, destId, modeId) {
     FQ.toast(FQ.lang === "zh" ? "缺少通行之物：" + needs.join(",") : "Missing: " + needs.join(","));
     return;
   }
-  const days = Math.max(1, Math.round(r.days * (t.dayMul || 1)));
+  const dayMod = ((w.routeMods && w.routeMods[routeId] && w.routeMods[routeId].days) || 0)
+    + ((w.routeMods && w.routeMods._global && w.routeMods._global.days) || 0);
+  const days = Math.max(1, Math.round(r.days * (t.dayMul || 1)) + dayMod);
   const cost = (t.cost || 0) + (r.cost || 0);
   if (w.coins < cost) { FQ.toast(FQ.lang === "zh" ? "盘缠不足" : "Not enough coin"); return; }
   FQ.applyEffects([{ op: "coins", value: -cost }, { op: "days", value: days }]);
@@ -63,14 +67,23 @@ FQ.TRAVEL.go = function (routeId, destId, modeId) {
   const pool = (r.encounters || []).map(id => FQ.DB.event[id]).filter(Boolean);
   const generic = (FQ.DB.events || []).filter(e => e.kind === "road" && /^ev-road-(bandits|storm|caravan)$/.test(e.id));
   const candidates = pool.length ? pool : generic;
-  const enc = candidates.length ? candidates[Math.floor(Math.random() * candidates.length)] : null;
+  /* Higher effective risk → slightly likelier to keep a hostile-flavoured encounter when pool mixed */
+  const risk = FQ.effectiveRouteRisk ? FQ.effectiveRouteRisk(r) : (r.risk || 0);
+  let enc = null;
+  if (candidates.length) {
+    enc = candidates[Math.floor(Math.random() * candidates.length)];
+    if (risk >= 4 && Math.random() < 0.35) {
+      const harsh = candidates.find(e => /bandit|storm|沙|盗|风暴/i.test(FQ.T(e.title) + FQ.T(e.body)));
+      if (harsh) enc = harsh;
+    }
+  }
 
   FQ.TRAVEL._pending = { routeId, destId, encId: enc && enc.id };
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
       <h2>${FQ.lang === "zh" ? "在路上…" : "On the road…"}</h2>
-      <p class="dim">${FQ.T(t.name)} · ${days}${FQ.lang === "zh" ? "日" : " days"}</p>
+      <p class="dim">${FQ.T(t.name)} · ${days}${FQ.lang === "zh" ? "日" : " days"} · risk ${risk}</p>
       <p>${FQ.lang === "zh" ? "驼铃与尘土（动画占位）" : "Bells and dust (animation placeholder)"}</p>
       <button class="btn block" onclick="FQ.TRAVEL.resolveEncounter()">${FQ.lang === "zh" ? "继续" : "Continue"}</button>
     </div>`;
@@ -98,12 +111,19 @@ FQ.TRAVEL.encPick = function (idx) {
   const ev = FQ.DB.event[p.encId];
   const ch = ev.choices[idx];
   if (ch.divination) {
-    const pass = FQ.rollDivination(ch.divination);
-    const branch = pass ? ch.pass : ch.fail;
-    FQ.applyEffects(branch ? branch.effects : []);
-  } else {
-    FQ.applyEffects(ch.effects || []);
+    FQ.RITUAL.begin({
+      divId: ch.divination,
+      title: FQ.T(ch.label),
+      onDone(pass) {
+        const branch = pass ? ch.pass : ch.fail;
+        FQ.applyEffects(branch ? branch.effects : [], { routeId: p.routeId });
+        FQ.worldNote("🐪", FQ.T(ev.title) + (pass ? " · 吉" : " · 凶"));
+        FQ.TRAVEL.arrive();
+      }
+    });
+    return;
   }
+  FQ.applyEffects(ch.effects || [], { routeId: p.routeId });
   FQ.worldNote("🐪", FQ.T(ev.title));
   FQ.TRAVEL.arrive();
 };

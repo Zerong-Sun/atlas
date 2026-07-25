@@ -225,3 +225,10 @@ FQ.ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 FQ.buzz = function (pattern) {
   try { navigator.vibrate && navigator.vibrate(pattern); } catch (e) {}
 };
+
+/** Atlas-port style world cast for MVP methods (iching / astrodice / lot) */
+FQ.worldCast = function (methodId) {
+  return FQ.RITUAL && FQ.RITUAL.castEngine
+    ? FQ.RITUAL.castEngine(methodId)
+    : { pass: FQ.rollDivination(methodId), label: methodId, detail: "", method: methodId };
+};

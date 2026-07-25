@@ -123,5 +123,49 @@
       "end-diviner",
       "end-no-return"
     ]
+  },
+  {
+    "id": "battuta",
+    "name": {
+      "zh": "白图泰式朝圣旅人",
+      "en": "A Traveler in Battuta’s Manner"
+    },
+    "start": "tangier",
+    "obsession": {
+      "zh": "把朝觐与诸城见闻写成可回麦加的圆。",
+      "en": "Write the hajj and cities as a circle that can return to Mecca."
+    },
+    "goal": {
+      "type": "reach",
+      "target": "mecca"
+    },
+    "faith": "islam",
+    "culture": "islamic",
+    "bonus": {
+      "rapport": 3,
+      "travel": 1
+    },
+    "malus": {
+      "wealth_luck": -1
+    },
+    "startKit": {
+      "coins": 45,
+      "currency": "dinar",
+      "goods": [
+        "dates"
+      ],
+      "items": [
+        "letter-of-introduction"
+      ],
+      "languages": [
+        "arabic",
+        "persian"
+      ]
+    },
+    "endings": [
+      "end-stop-write",
+      "end-battuta-witness",
+      "end-convert-translator"
+    ]
   }
 ]

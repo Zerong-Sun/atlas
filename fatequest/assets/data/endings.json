@@ -172,5 +172,33 @@
       "cities"
     ],
     "sticker": "st-translate"
+  },
+  {
+    "id": "end-battuta-witness",
+    "layer": 2,
+    "name": {
+      "zh": "朝觐见证者",
+      "en": "Witness of the Hajj"
+    },
+    "conditions": {
+      "visitedCities": [
+        "tangier",
+        "cairo",
+        "mecca"
+      ],
+      "flags": [
+        "mecca-tree-done"
+      ]
+    },
+    "epilogue": {
+      "zh": "你从丹吉尔走到麦加，把仪轨与城门写成可回望的圆。走过{cities}座城，用了{years}年。",
+      "en": "From Tangier to Mecca you wrote rites and gates as a circle of return. {cities} cities, {years} years."
+    },
+    "variables": [
+      "cities",
+      "years",
+      "lastCity"
+    ],
+    "sticker": "st-battuta"
   }
 ]

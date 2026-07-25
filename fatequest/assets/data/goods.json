@@ -2430,5 +2430,110 @@
       "guarded"
     ],
     "events": []
+  },
+  {
+    "id": "leather",
+    "name": {
+      "zh": "皮革",
+      "en": "Leather"
+    },
+    "tier": "regional",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "linen",
+    "name": {
+      "zh": "亚麻",
+      "en": "Linen"
+    },
+    "tier": "regional",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "papyrus",
+    "name": {
+      "zh": "纸草",
+      "en": "Papyrus"
+    },
+    "tier": "regional",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "damask",
+    "name": {
+      "zh": "大马士革绸",
+      "en": "Damask"
+    },
+    "tier": "regional",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "rosewater",
+    "name": {
+      "zh": "玫瑰水",
+      "en": "Rosewater"
+    },
+    "tier": "regional",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "water-skin",
+    "name": {
+      "zh": "水囊",
+      "en": "Water Skin"
+    },
+    "tier": "common",
+    "origin": [
+      "isl"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
+  },
+  {
+    "id": "teak",
+    "name": {
+      "zh": "柚木",
+      "en": "Teak"
+    },
+    "tier": "regional",
+    "origin": [
+      "india"
+    ],
+    "weight": 1,
+    "lore": {
+      "origin": "hybrid"
+    }
   }
 ]

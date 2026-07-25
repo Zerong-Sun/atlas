@@ -95,38 +95,55 @@ FQ.CITY.pickChoice = function (eid, idx) {
   const ev = FQ.DB.event[eid];
   const ch = ev.choices[idx];
   const w = FQ.ensureWorld();
-  const ctx = {};
-  let result;
+
+  const finish = (result, ctx) => {
+    if (!result.ok) {
+      FQ.toast(result.blocked === "bag_full"
+        ? (FQ.lang === "zh" ? "行囊已满" : "Bag full")
+        : (FQ.lang === "zh" ? "无法执行" : "Cannot apply"));
+      return;
+    }
+    const summary = result.summary || [];
+    if (ev.kind === "entry") w.flags["entry:" + w.at] = true;
+    if (!w.visited.includes(w.at)) w.visited.push(w.at);
+    FQ.worldNote("·", FQ.T(ev.title) + (summary.length ? " · " + summary.join(" ") : ""));
+    FQ.save();
+    if (ctx.goto) {
+      if (ctx.goto === "mentor") {
+        const city = FQ.DB.city[w.at];
+        if (city && city.mentor) return FQ.CITY.meetMentor(city.mentor);
+      } else if (String(ctx.goto).startsWith("event:")) {
+        return FQ.CITY.runEvent(String(ctx.goto).slice(6));
+      } else if (FQ.DB.event[ctx.goto]) {
+        return FQ.CITY.runEvent(ctx.goto);
+      }
+    }
+    document.getElementById("app").innerHTML = `
+      ${FQ.CITY.hud()}
+      <div class="panel">
+        <h2>${FQ.T(ch.label)}</h2>
+        <p class="dim">${summary.join(" · ") || (FQ.lang === "zh" ? "无事发生" : "Nothing marked")}</p>
+        <button class="btn block" onclick="FQ.CITY.renderHub()">${FQ.lang === "zh" ? "继续" : "Continue"}</button>
+      </div>`;
+  };
+
   if (ch.divination) {
-    const pass = FQ.rollDivination(ch.divination);
-    const branch = pass ? ch.pass : ch.fail;
-    if (branch && branch.text) FQ.toast(FQ.T(branch.text));
-    result = FQ.applyEffects(branch ? branch.effects : [], ctx);
-  } else {
-    result = FQ.applyEffects(ch.effects || [], ctx);
-  }
-  if (!result.ok) {
-    FQ.toast(result.blocked === "bag_full"
-      ? (FQ.lang === "zh" ? "行囊已满" : "Bag full")
-      : (FQ.lang === "zh" ? "无法执行" : "Cannot apply"));
+    FQ.RITUAL.begin({
+      divId: ch.divination,
+      title: FQ.T(ch.label),
+      onDone(pass, cast) {
+        const ctx = {};
+        const branch = pass ? ch.pass : ch.fail;
+        if (branch && branch.text) FQ.toast(FQ.T(branch.text));
+        const result = FQ.applyEffects(branch ? branch.effects : [], ctx);
+        finish(result, ctx);
+      }
+    });
     return;
   }
-  const summary = result.summary || [];
-  if (ev.kind === "entry") w.flags["entry:" + w.at] = true;
-  if (!w.visited.includes(w.at)) w.visited.push(w.at);
-  FQ.worldNote("·", FQ.T(ev.title) + (summary.length ? " · " + summary.join(" ") : ""));
-  FQ.save();
-  if (ctx.goto === "mentor") {
-    const city = FQ.DB.city[w.at];
-    if (city && city.mentor) return FQ.CITY.meetMentor(city.mentor);
-  }
-  document.getElementById("app").innerHTML = `
-    ${FQ.CITY.hud()}
-    <div class="panel">
-      <h2>${FQ.T(ch.label)}</h2>
-      <p class="dim">${summary.join(" · ") || (FQ.lang === "zh" ? "无事发生" : "Nothing marked")}</p>
-      <button class="btn block" onclick="FQ.CITY.renderHub()">${FQ.lang === "zh" ? "继续" : "Continue"}</button>
-    </div>`;
+  const ctx = {};
+  const result = FQ.applyEffects(ch.effects || [], ctx);
+  finish(result, ctx);
 };
 
 FQ.CITY.openMarket = function () {
@@ -223,18 +240,7 @@ FQ.CITY.meetMentor = function (rid) {
 };
 
 FQ.CITY.learn = function (divId, rid) {
-  const w = FQ.ensureWorld();
-  const div = FQ.DB.divination[divId];
-  const cost = (div && div.cost && div.cost.coins) || 2;
-  if (w.coins < cost) { FQ.toast(FQ.lang === "zh" ? "银两不足" : "Not enough coin"); return; }
-  const res = FQ.applyEffects([
-    { op: "learnDivination", value: divId },
-    { op: "recruit", value: rid },
-    { op: "coins", value: -cost }
-  ]);
-  if (!res.ok) { FQ.toast(FQ.lang === "zh" ? "无法学习" : "Cannot learn"); return; }
-  FQ.toast(FQ.lang === "zh" ? "已学会" : "Learned");
-  FQ.CITY.renderHub();
+  FQ.RITUAL.beginLearn(divId, rid);
 };
 
 FQ.CITY.openBag = function () {

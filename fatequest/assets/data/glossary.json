@@ -5,100 +5,699 @@
     "updated": "2026-07-22"
   },
   "terms": [
-    { "id": "khan", "kind": "title", "en": "Great Khan / Kaan", "zh": "大汗", "note": "忽必烈等蒙古大汗尊称" },
-    { "id": "il-khan", "kind": "title", "en": "Ilkhan", "zh": "伊利汗", "note": "波斯蒙古汗国君主" },
-    { "id": "paiza", "kind": "good", "en": "paiza / tablet of authority", "zh": "牌子（金牌）", "note": "通行凭证" },
-    { "id": "yule", "kind": "title", "en": "Yule translation", "zh": "玉尔英译", "note": "公有领域马可游记底本" },
-    { "id": "tauris", "kind": "place", "en": "Tauris / Tabriz", "zh": "大不里士", "aliases": ["Tabriz"] },
-    { "id": "hormos", "kind": "place", "en": "Hormos / Hormuz", "zh": "忽鲁谟斯", "aliases": ["Hormuz"] },
-    { "id": "badashan", "kind": "place", "en": "Badashan / Badakhshan", "zh": "巴达哈伤" },
-    { "id": "cascar", "kind": "place", "en": "Cascar / Kashgar", "zh": "可失合儿" },
-    { "id": "tangut", "kind": "place", "en": "Province of Tangut", "zh": "唐古忒" },
-    { "id": "campichu", "kind": "place", "en": "Campichu / Ganzhou", "zh": "甘州" },
-    { "id": "sukchur", "kind": "place", "en": "Sukchur / Suzhou", "zh": "肃州" },
-    { "id": "chandu", "kind": "place", "en": "Chandu / Shangdu", "zh": "上都" },
-    { "id": "cambaluc", "kind": "place", "en": "Cambaluc / Khanbaliq", "zh": "汗八里（大都）" },
-    { "id": "kinsay", "kind": "place", "en": "Kinsay / Hangzhou", "zh": "行在（杭州）" },
-    { "id": "zayton", "kind": "place", "en": "Zayton / Quanzhou", "zh": "刺桐（泉州）" },
-    { "id": "venice", "kind": "place", "en": "Venice", "zh": "威尼斯" },
-    { "id": "acre", "kind": "place", "en": "Acre / Akka", "zh": "阿卡" },
-    { "id": "yasdi", "kind": "place", "en": "Yasdi / Yezd", "zh": "耶兹德" },
-    { "id": "cobinan", "kind": "place", "en": "Cobinan", "zh": "科比南" },
-    { "id": "balc", "kind": "place", "en": "Balc / Balkh", "zh": "巴里黑" },
-    { "id": "samarcand", "kind": "place", "en": "Samarcand", "zh": "撒马尔罕" },
-    { "id": "pamir", "kind": "place", "en": "Pamir", "zh": "帕米尔" },
-    { "id": "cotan", "kind": "place", "en": "Cotan / Khotan", "zh": "于阗" },
-    { "id": "lop", "kind": "place", "en": "Desert of Lop", "zh": "罗布沙漠" },
-    { "id": "caracoron", "kind": "place", "en": "Caracoron / Karakorum", "zh": "哈剌和林" },
-    { "id": "yangiu", "kind": "place", "en": "Yangiu / Yangzhou", "zh": "扬州" },
-    { "id": "mazu", "kind": "people", "en": "Mazu / Tianfei", "zh": "妈祖（天妃）" },
-    { "id": "nestorian", "kind": "people", "en": "Nestorian Christians", "zh": "景教徒" },
-    { "id": "saracen", "kind": "people", "en": "Saracens / Moslems", "zh": "撒拉逊人（穆斯林）" },
-    { "id": "tartar", "kind": "people", "en": "Tartars / Mongols", "zh": "鞑靼（蒙古）" },
-    { "id": "lama", "kind": "people", "en": "Lamas", "zh": "喇嘛" },
-    { "id": "silk", "kind": "good", "en": "silk", "zh": "丝绸" },
-    { "id": "spice", "kind": "good", "en": "spice / pepper", "zh": "香料／胡椒" },
-    { "id": "jade", "kind": "good", "en": "jade", "zh": "玉" },
-    { "id": "rhubarb", "kind": "good", "en": "rhubarb", "zh": "大黄" },
-    { "id": "musk", "kind": "good", "en": "musk", "zh": "麝香" },
-    { "id": "bezant", "kind": "currency", "en": "bezant", "zh": "拜占庭金币" },
-    { "id": "sommo", "kind": "currency", "en": "sommo of silver", "zh": "银锭（索莫）" },
-    { "id": "paper-money", "kind": "currency", "en": "paper money of the Khan", "zh": "大汗钞币" },
-    { "id": "caravan", "kind": "good", "en": "caravan", "zh": "商队" },
-    { "id": "yam", "kind": "title", "en": "yam / post-station", "zh": "站赤（驿站）" },
-    { "id": "cathedral", "kind": "place", "en": "church / cathedral", "zh": "教堂" },
-    { "id": "mosque", "kind": "place", "en": "mosque", "zh": "清真寺" },
-    { "id": "idol-temple", "kind": "place", "en": "idol temple / Buddhist temple", "zh": "佛寺／偶像庙" },
-    { "id": "qanat", "kind": "good", "en": "underground channel / qanat", "zh": "坎儿井" },
-    { "id": "junk", "kind": "good", "en": "Chinese junk", "zh": "中国福船" },
-    { "id": "dhow", "kind": "good", "en": "dhow", "zh": "缝合帆船" },
-    { "id": "tribute", "kind": "good", "en": "tribute", "zh": "贡物" },
-    { "id": "princess", "kind": "title", "en": "Princess Kokochin", "zh": "阔阔真公主" },
-    { "id": "legate", "kind": "title", "en": "Papal Legate", "zh": "教廷特使" },
-    { "id": "templar", "kind": "people", "en": "Templars", "zh": "圣殿骑士" },
-    { "id": "old-man", "kind": "people", "en": "Old Man of the Mountain", "zh": "山中老人（刺客教主）" },
-    { "id": "paradise", "kind": "place", "en": "Assassin paradise garden", "zh": "刺客乐园" },
-    { "id": "observatory", "kind": "place", "en": "observatory", "zh": "观星台" },
-    { "id": "canal", "kind": "place", "en": "Grand Canal", "zh": "大运河" },
-    { "id": "west-lake", "kind": "place", "en": "West Lake", "zh": "西湖" },
-    { "id": "pepper-ship", "kind": "good", "en": "pepper cargo", "zh": "胡椒货载" },
-    { "id": "moon-block", "kind": "good", "en": "jiaobei / moon blocks", "zh": "筊杯" },
-    { "id": "sheng-jiao", "kind": "title", "en": "Sheng-jiao", "zh": "圣筊" },
-    { "id": "yin-jiao", "kind": "title", "en": "Yin-jiao", "zh": "阴筊" },
-    { "id": "plum-blossom", "kind": "title", "en": "Plum Blossom numerology", "zh": "梅花易数" },
-    { "id": "iching", "kind": "title", "en": "I Ching / Book of Changes", "zh": "周易／易经" },
-    { "id": "tarot", "kind": "title", "en": "Tarot", "zh": "塔罗" },
-    { "id": "astro-dice", "kind": "title", "en": "Astrological dice", "zh": "星辰骰" },
-    { "id": "stardust", "kind": "currency", "en": "stardust", "zh": "星尘" },
-    { "id": "blessing", "kind": "currency", "en": "regional blessing / favor", "zh": "护佑" },
-    { "id": "provision", "kind": "currency", "en": "provisions / coin", "zh": "盘缠" },
-    { "id": "tebrizi", "kind": "people", "en": "Master Tebrizi", "zh": "帖必烈" },
-    { "id": "lin", "kind": "people", "en": "Lin Sanniang", "zh": "林三娘" },
-    { "id": "marco", "kind": "people", "en": "Marco Polo", "zh": "马可·波罗" },
-    { "id": "ibn", "kind": "people", "en": "Ibn Battuta", "zh": "伊本·白图泰" },
-    { "id": "kublai", "kind": "people", "en": "Kublai Khan", "zh": "忽必烈" },
-    { "id": "cathedral-of-st-mark", "kind": "place", "en": "St Mark's", "zh": "圣马可" },
-    { "id": "holy-sepulchre", "kind": "place", "en": "Holy Sepulchre", "zh": "圣墓" },
-    { "id": "oil", "kind": "good", "en": "holy oil / lamp oil", "zh": "圣油／灯油" },
-    { "id": "ruby", "kind": "good", "en": "balas ruby", "zh": "巴剌斯红宝石" },
-    { "id": "lapis", "kind": "good", "en": "lapis lazuli", "zh": "青金石" },
-    { "id": "cotton", "kind": "good", "en": "cotton", "zh": "棉花" },
-    { "id": "indigo", "kind": "good", "en": "indigo", "zh": "蓝靛" },
-    { "id": "camphor", "kind": "good", "en": "camphor", "zh": "樟脑" },
-    { "id": "porcelain", "kind": "good", "en": "porcelain", "zh": "瓷器" },
-    { "id": "bridge-of-kinsay", "kind": "place", "en": "bridges of Kinsay", "zh": "行在诸桥" },
-    { "id": "drum-tower", "kind": "place", "en": "drum tower", "zh": "鼓楼" },
-    { "id": "bell-tower", "kind": "place", "en": "bell tower / campanile", "zh": "钟楼" },
-    { "id": "caravanserai", "kind": "place", "en": "caravanserai", "zh": "驿栈／商队客栈" },
-    { "id": "bazaar", "kind": "place", "en": "bazaar", "zh": "巴扎／集市" },
-    { "id": "oasis", "kind": "place", "en": "oasis", "zh": "绿洲" },
-    { "id": "steppe", "kind": "place", "en": "steppe", "zh": "草原" },
-    { "id": "monsoon", "kind": "good", "en": "monsoon", "zh": "季风" },
-    { "id": "typhoon", "kind": "good", "en": "typhoon / great wind", "zh": "台风／大风" },
-    { "id": "watertight", "kind": "good", "en": "watertight compartments", "zh": "水密隔舱" },
-    { "id": "coir", "kind": "good", "en": "coir rope", "zh": "椰索" },
-    { "id": "goitre", "kind": "people", "en": "goitre", "zh": "瘿袋（甲状腺肿）" },
-    { "id": "sky-burial", "kind": "title", "en": "sky burial", "zh": "天葬" },
-    { "id": "paper-boat", "kind": "good", "en": "paper boat offering", "zh": "纸船放灯" }
+    {
+      "id": "khan",
+      "kind": "title",
+      "en": "Great Khan / Kaan",
+      "zh": "大汗",
+      "note": "忽必烈等蒙古大汗尊称"
+    },
+    {
+      "id": "il-khan",
+      "kind": "title",
+      "en": "Ilkhan",
+      "zh": "伊利汗",
+      "note": "波斯蒙古汗国君主"
+    },
+    {
+      "id": "paiza",
+      "kind": "good",
+      "en": "paiza / tablet of authority",
+      "zh": "牌子（金牌）",
+      "note": "通行凭证"
+    },
+    {
+      "id": "yule",
+      "kind": "title",
+      "en": "Yule translation",
+      "zh": "玉尔英译",
+      "note": "公有领域马可游记底本"
+    },
+    {
+      "id": "tauris",
+      "kind": "place",
+      "en": "Tauris / Tabriz",
+      "zh": "大不里士",
+      "aliases": [
+        "Tabriz"
+      ]
+    },
+    {
+      "id": "hormos",
+      "kind": "place",
+      "en": "Hormos / Hormuz",
+      "zh": "忽鲁谟斯",
+      "aliases": [
+        "Hormuz"
+      ]
+    },
+    {
+      "id": "badashan",
+      "kind": "place",
+      "en": "Badashan / Badakhshan",
+      "zh": "巴达哈伤"
+    },
+    {
+      "id": "cascar",
+      "kind": "place",
+      "en": "Cascar / Kashgar",
+      "zh": "可失合儿"
+    },
+    {
+      "id": "tangut",
+      "kind": "place",
+      "en": "Province of Tangut",
+      "zh": "唐古忒"
+    },
+    {
+      "id": "campichu",
+      "kind": "place",
+      "en": "Campichu / Ganzhou",
+      "zh": "甘州"
+    },
+    {
+      "id": "sukchur",
+      "kind": "place",
+      "en": "Sukchur / Suzhou",
+      "zh": "肃州"
+    },
+    {
+      "id": "chandu",
+      "kind": "place",
+      "en": "Chandu / Shangdu",
+      "zh": "上都"
+    },
+    {
+      "id": "cambaluc",
+      "kind": "place",
+      "en": "Cambaluc / Khanbaliq",
+      "zh": "汗八里（大都）"
+    },
+    {
+      "id": "kinsay",
+      "kind": "place",
+      "en": "Kinsay / Hangzhou",
+      "zh": "行在（杭州）"
+    },
+    {
+      "id": "zayton",
+      "kind": "place",
+      "en": "Zayton / Quanzhou",
+      "zh": "刺桐（泉州）"
+    },
+    {
+      "id": "venice",
+      "kind": "place",
+      "en": "Venice",
+      "zh": "威尼斯"
+    },
+    {
+      "id": "acre",
+      "kind": "place",
+      "en": "Acre / Akka",
+      "zh": "阿卡"
+    },
+    {
+      "id": "yasdi",
+      "kind": "place",
+      "en": "Yasdi / Yezd",
+      "zh": "耶兹德"
+    },
+    {
+      "id": "cobinan",
+      "kind": "place",
+      "en": "Cobinan",
+      "zh": "科比南"
+    },
+    {
+      "id": "balc",
+      "kind": "place",
+      "en": "Balc / Balkh",
+      "zh": "巴里黑"
+    },
+    {
+      "id": "samarcand",
+      "kind": "place",
+      "en": "Samarcand",
+      "zh": "撒马尔罕"
+    },
+    {
+      "id": "pamir",
+      "kind": "place",
+      "en": "Pamir",
+      "zh": "帕米尔"
+    },
+    {
+      "id": "cotan",
+      "kind": "place",
+      "en": "Cotan / Khotan",
+      "zh": "于阗"
+    },
+    {
+      "id": "lop",
+      "kind": "place",
+      "en": "Desert of Lop",
+      "zh": "罗布沙漠"
+    },
+    {
+      "id": "caracoron",
+      "kind": "place",
+      "en": "Caracoron / Karakorum",
+      "zh": "哈剌和林"
+    },
+    {
+      "id": "yangiu",
+      "kind": "place",
+      "en": "Yangiu / Yangzhou",
+      "zh": "扬州"
+    },
+    {
+      "id": "mazu",
+      "kind": "people",
+      "en": "Mazu / Tianfei",
+      "zh": "妈祖（天妃）"
+    },
+    {
+      "id": "nestorian",
+      "kind": "people",
+      "en": "Nestorian Christians",
+      "zh": "景教徒"
+    },
+    {
+      "id": "saracen",
+      "kind": "people",
+      "en": "Saracens / Moslems",
+      "zh": "撒拉逊人（穆斯林）"
+    },
+    {
+      "id": "tartar",
+      "kind": "people",
+      "en": "Tartars / Mongols",
+      "zh": "鞑靼（蒙古）"
+    },
+    {
+      "id": "lama",
+      "kind": "people",
+      "en": "Lamas",
+      "zh": "喇嘛"
+    },
+    {
+      "id": "silk",
+      "kind": "good",
+      "en": "silk",
+      "zh": "丝绸"
+    },
+    {
+      "id": "spice",
+      "kind": "good",
+      "en": "spice / pepper",
+      "zh": "香料／胡椒"
+    },
+    {
+      "id": "jade",
+      "kind": "good",
+      "en": "jade",
+      "zh": "玉"
+    },
+    {
+      "id": "rhubarb",
+      "kind": "good",
+      "en": "rhubarb",
+      "zh": "大黄"
+    },
+    {
+      "id": "musk",
+      "kind": "good",
+      "en": "musk",
+      "zh": "麝香"
+    },
+    {
+      "id": "bezant",
+      "kind": "currency",
+      "en": "bezant",
+      "zh": "拜占庭金币"
+    },
+    {
+      "id": "sommo",
+      "kind": "currency",
+      "en": "sommo of silver",
+      "zh": "银锭（索莫）"
+    },
+    {
+      "id": "paper-money",
+      "kind": "currency",
+      "en": "paper money of the Khan",
+      "zh": "大汗钞币"
+    },
+    {
+      "id": "caravan",
+      "kind": "good",
+      "en": "caravan",
+      "zh": "商队"
+    },
+    {
+      "id": "yam",
+      "kind": "title",
+      "en": "yam / post-station",
+      "zh": "站赤（驿站）"
+    },
+    {
+      "id": "cathedral",
+      "kind": "place",
+      "en": "church / cathedral",
+      "zh": "教堂"
+    },
+    {
+      "id": "mosque",
+      "kind": "place",
+      "en": "mosque",
+      "zh": "清真寺"
+    },
+    {
+      "id": "idol-temple",
+      "kind": "place",
+      "en": "idol temple / Buddhist temple",
+      "zh": "佛寺／偶像庙"
+    },
+    {
+      "id": "qanat",
+      "kind": "good",
+      "en": "underground channel / qanat",
+      "zh": "坎儿井"
+    },
+    {
+      "id": "junk",
+      "kind": "good",
+      "en": "Chinese junk",
+      "zh": "中国福船"
+    },
+    {
+      "id": "dhow",
+      "kind": "good",
+      "en": "dhow",
+      "zh": "缝合帆船"
+    },
+    {
+      "id": "tribute",
+      "kind": "good",
+      "en": "tribute",
+      "zh": "贡物"
+    },
+    {
+      "id": "princess",
+      "kind": "title",
+      "en": "Princess Kokochin",
+      "zh": "阔阔真公主"
+    },
+    {
+      "id": "legate",
+      "kind": "title",
+      "en": "Papal Legate",
+      "zh": "教廷特使"
+    },
+    {
+      "id": "templar",
+      "kind": "people",
+      "en": "Templars",
+      "zh": "圣殿骑士"
+    },
+    {
+      "id": "old-man",
+      "kind": "people",
+      "en": "Old Man of the Mountain",
+      "zh": "山中老人（刺客教主）"
+    },
+    {
+      "id": "paradise",
+      "kind": "place",
+      "en": "Assassin paradise garden",
+      "zh": "刺客乐园"
+    },
+    {
+      "id": "observatory",
+      "kind": "place",
+      "en": "observatory",
+      "zh": "观星台"
+    },
+    {
+      "id": "canal",
+      "kind": "place",
+      "en": "Grand Canal",
+      "zh": "大运河"
+    },
+    {
+      "id": "west-lake",
+      "kind": "place",
+      "en": "West Lake",
+      "zh": "西湖"
+    },
+    {
+      "id": "pepper-ship",
+      "kind": "good",
+      "en": "pepper cargo",
+      "zh": "胡椒货载"
+    },
+    {
+      "id": "moon-block",
+      "kind": "good",
+      "en": "jiaobei / moon blocks",
+      "zh": "筊杯"
+    },
+    {
+      "id": "sheng-jiao",
+      "kind": "title",
+      "en": "Sheng-jiao",
+      "zh": "圣筊"
+    },
+    {
+      "id": "yin-jiao",
+      "kind": "title",
+      "en": "Yin-jiao",
+      "zh": "阴筊"
+    },
+    {
+      "id": "plum-blossom",
+      "kind": "title",
+      "en": "Plum Blossom numerology",
+      "zh": "梅花易数"
+    },
+    {
+      "id": "iching",
+      "kind": "title",
+      "en": "I Ching / Book of Changes",
+      "zh": "周易／易经"
+    },
+    {
+      "id": "tarot",
+      "kind": "title",
+      "en": "Tarot",
+      "zh": "塔罗"
+    },
+    {
+      "id": "astro-dice",
+      "kind": "title",
+      "en": "Astrological dice",
+      "zh": "星辰骰"
+    },
+    {
+      "id": "stardust",
+      "kind": "currency",
+      "en": "stardust",
+      "zh": "星尘"
+    },
+    {
+      "id": "blessing",
+      "kind": "currency",
+      "en": "regional blessing / favor",
+      "zh": "护佑"
+    },
+    {
+      "id": "provision",
+      "kind": "currency",
+      "en": "provisions / coin",
+      "zh": "盘缠"
+    },
+    {
+      "id": "tebrizi",
+      "kind": "people",
+      "en": "Master Tebrizi",
+      "zh": "帖必烈"
+    },
+    {
+      "id": "lin",
+      "kind": "people",
+      "en": "Lin Sanniang",
+      "zh": "林三娘"
+    },
+    {
+      "id": "marco",
+      "kind": "people",
+      "en": "Marco Polo",
+      "zh": "马可·波罗"
+    },
+    {
+      "id": "ibn",
+      "kind": "people",
+      "en": "Ibn Battuta",
+      "zh": "伊本·白图泰"
+    },
+    {
+      "id": "kublai",
+      "kind": "people",
+      "en": "Kublai Khan",
+      "zh": "忽必烈"
+    },
+    {
+      "id": "cathedral-of-st-mark",
+      "kind": "place",
+      "en": "St Mark's",
+      "zh": "圣马可"
+    },
+    {
+      "id": "holy-sepulchre",
+      "kind": "place",
+      "en": "Holy Sepulchre",
+      "zh": "圣墓"
+    },
+    {
+      "id": "oil",
+      "kind": "good",
+      "en": "holy oil / lamp oil",
+      "zh": "圣油／灯油"
+    },
+    {
+      "id": "ruby",
+      "kind": "good",
+      "en": "balas ruby",
+      "zh": "巴剌斯红宝石"
+    },
+    {
+      "id": "lapis",
+      "kind": "good",
+      "en": "lapis lazuli",
+      "zh": "青金石"
+    },
+    {
+      "id": "cotton",
+      "kind": "good",
+      "en": "cotton",
+      "zh": "棉花"
+    },
+    {
+      "id": "indigo",
+      "kind": "good",
+      "en": "indigo",
+      "zh": "蓝靛"
+    },
+    {
+      "id": "camphor",
+      "kind": "good",
+      "en": "camphor",
+      "zh": "樟脑"
+    },
+    {
+      "id": "porcelain",
+      "kind": "good",
+      "en": "porcelain",
+      "zh": "瓷器"
+    },
+    {
+      "id": "bridge-of-kinsay",
+      "kind": "place",
+      "en": "bridges of Kinsay",
+      "zh": "行在诸桥"
+    },
+    {
+      "id": "drum-tower",
+      "kind": "place",
+      "en": "drum tower",
+      "zh": "鼓楼"
+    },
+    {
+      "id": "bell-tower",
+      "kind": "place",
+      "en": "bell tower / campanile",
+      "zh": "钟楼"
+    },
+    {
+      "id": "caravanserai",
+      "kind": "place",
+      "en": "caravanserai",
+      "zh": "驿栈／商队客栈"
+    },
+    {
+      "id": "bazaar",
+      "kind": "place",
+      "en": "bazaar",
+      "zh": "巴扎／集市"
+    },
+    {
+      "id": "oasis",
+      "kind": "place",
+      "en": "oasis",
+      "zh": "绿洲"
+    },
+    {
+      "id": "steppe",
+      "kind": "place",
+      "en": "steppe",
+      "zh": "草原"
+    },
+    {
+      "id": "monsoon",
+      "kind": "good",
+      "en": "monsoon",
+      "zh": "季风"
+    },
+    {
+      "id": "typhoon",
+      "kind": "good",
+      "en": "typhoon / great wind",
+      "zh": "台风／大风"
+    },
+    {
+      "id": "watertight",
+      "kind": "good",
+      "en": "watertight compartments",
+      "zh": "水密隔舱"
+    },
+    {
+      "id": "coir",
+      "kind": "good",
+      "en": "coir rope",
+      "zh": "椰索"
+    },
+    {
+      "id": "goitre",
+      "kind": "people",
+      "en": "goitre",
+      "zh": "瘿袋（甲状腺肿）"
+    },
+    {
+      "id": "sky-burial",
+      "kind": "title",
+      "en": "sky burial",
+      "zh": "天葬"
+    },
+    {
+      "id": "paper-boat",
+      "kind": "good",
+      "en": "paper boat offering",
+      "zh": "纸船放灯"
+    },
+    {
+      "id": "hajj",
+      "kind": "rite",
+      "en": "Hajj",
+      "zh": "朝觐"
+    },
+    {
+      "id": "qadi",
+      "kind": "role",
+      "en": "Qadi",
+      "zh": "卡迪（法官）"
+    },
+    {
+      "id": "minaret",
+      "kind": "place",
+      "en": "Minaret",
+      "zh": "宣礼塔"
+    },
+    {
+      "id": "haram",
+      "kind": "place",
+      "en": "Haram",
+      "zh": "禁寺"
+    },
+    {
+      "id": "zamzam",
+      "kind": "place",
+      "en": "Zamzam",
+      "zh": "渗渗泉"
+    },
+    {
+      "id": "rihla",
+      "kind": "genre",
+      "en": "Rihla",
+      "zh": "游记（里赫拉）"
+    },
+    {
+      "id": "madrasah",
+      "kind": "place",
+      "en": "Madrasah",
+      "zh": "经学院"
+    },
+    {
+      "id": "suq",
+      "kind": "place",
+      "en": "Suq",
+      "zh": "集市"
+    },
+    {
+      "id": "dinar",
+      "kind": "coin",
+      "en": "Dinar",
+      "zh": "第纳尔"
+    },
+    {
+      "id": "ihram",
+      "kind": "rite",
+      "en": "Ihram",
+      "zh": "受戒"
+    },
+    {
+      "id": "tawaf",
+      "kind": "rite",
+      "en": "Tawaf",
+      "zh": "绕行"
+    },
+    {
+      "id": "nakhuda",
+      "kind": "role",
+      "en": "Nakhuda",
+      "zh": "船长"
+    },
+    {
+      "id": "munshi",
+      "kind": "role",
+      "en": "Munshi",
+      "zh": "书记"
+    },
+    {
+      "id": "faqih",
+      "kind": "role",
+      "en": "Faqih",
+      "zh": "法学家"
+    },
+    {
+      "id": "imam",
+      "kind": "role",
+      "en": "Imam",
+      "zh": "伊玛目"
+    },
+    {
+      "id": "nile",
+      "kind": "place",
+      "en": "Nile",
+      "zh": "尼罗河"
+    },
+    {
+      "id": "hejaz",
+      "kind": "place",
+      "en": "Hejaz",
+      "zh": "汉志"
+    },
+    {
+      "id": "malabar",
+      "kind": "place",
+      "en": "Malabar",
+      "zh": "马拉巴尔"
+    },
+    {
+      "id": "delhi-sultanate",
+      "kind": "place",
+      "en": "Delhi Sultanate",
+      "zh": "德里苏丹国"
+    }
   ]
 }

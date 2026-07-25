@@ -938,5 +938,113 @@
         "chapterId": "travel"
       }
     }
+  },
+  {
+    "id": "rt-battuta-tangier-cairo",
+    "from": "tangier",
+    "to": "cairo",
+    "days": 40,
+    "risk": 3,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 4,
+    "encounters": [
+      "ev-road-battuta-tangier-cairo"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
+  },
+  {
+    "id": "rt-battuta-cairo-damascus",
+    "from": "cairo",
+    "to": "damascus",
+    "days": 25,
+    "risk": 2,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 4,
+    "encounters": [
+      "ev-road-battuta-cairo-damascus"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
+  },
+  {
+    "id": "rt-battuta-damascus-mecca",
+    "from": "damascus",
+    "to": "mecca",
+    "days": 35,
+    "risk": 3,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 4,
+    "encounters": [
+      "ev-road-battuta-damascus-mecca"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
+  },
+  {
+    "id": "rt-battuta-mecca-delhi",
+    "from": "mecca",
+    "to": "delhi",
+    "days": 55,
+    "risk": 4,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 4,
+    "encounters": [
+      "ev-road-battuta-mecca-delhi"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
+  },
+  {
+    "id": "rt-battuta-delhi-calicut",
+    "from": "delhi",
+    "to": "calicut",
+    "days": 20,
+    "risk": 2,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 4,
+    "encounters": [
+      "ev-road-battuta-delhi-calicut"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
+  },
+  {
+    "id": "rt-baghdad-damascus",
+    "from": "baghdad",
+    "to": "damascus",
+    "days": 18,
+    "risk": 2,
+    "modes": [
+      "caravan",
+      "foot"
+    ],
+    "cost": 5,
+    "encounters": [
+      "ev-road-battuta-bridge"
+    ],
+    "unlock": {
+      "when": "explore"
+    }
   }
 ]

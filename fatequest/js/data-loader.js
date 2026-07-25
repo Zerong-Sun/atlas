@@ -6,7 +6,7 @@ FQ.DB_READY = null;
 
 FQ.TABLE_FILES = [
   "cities", "routes", "transports", "events", "goods",
-  "divinations", "retainers", "archetypes", "endings"
+  "divinations", "retainers", "archetypes", "endings", "codex"
 ];
 
 FQ.indexById = function (arr) {
@@ -36,6 +36,7 @@ FQ.loadTables = async function () {
       retainers: pack.retainers,
       archetypes: pack.archetypes,
       endings: pack.endings,
+      codex: pack.codex,
       city: FQ.indexById(pack.cities),
       route: FQ.indexById(pack.routes),
       transport: FQ.indexById(pack.transports),
@@ -44,7 +45,8 @@ FQ.loadTables = async function () {
       divination: FQ.indexById(pack.divinations),
       retainer: FQ.indexById(pack.retainers),
       archetype: FQ.indexById(pack.archetypes),
-      ending: FQ.indexById(pack.endings)
+      ending: FQ.indexById(pack.endings),
+      codexEntry: FQ.indexById(pack.codex)
     };
     return FQ.DB;
   })().catch(err => {

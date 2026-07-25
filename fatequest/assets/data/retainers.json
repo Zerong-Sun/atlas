@@ -1415,5 +1415,491 @@
       "zh": "此人路上有用，却不善空谈。",
       "en": "Useful on the road; sparing of talk."
     }
+  },
+  {
+    "id": "npc-tangier-faqih",
+    "name": {
+      "zh": "丹吉尔向导",
+      "en": "Tangier (Tanjiers) Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "tangier",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "tangier",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得丹吉尔的巷与礼。",
+      "en": "Knows the lanes and rites of Tangier."
+    }
+  },
+  {
+    "id": "npc-cairo-qadi",
+    "name": {
+      "zh": "开罗向导",
+      "en": "Cairo Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "cairo",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "cairo",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得开罗的巷与礼。",
+      "en": "Knows the lanes and rites of Cairo."
+    }
+  },
+  {
+    "id": "npc-damascus-imam",
+    "name": {
+      "zh": "大马士革向导",
+      "en": "Damascus Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "damascus",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "damascus",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得大马士革的巷与礼。",
+      "en": "Knows the lanes and rites of Damascus."
+    }
+  },
+  {
+    "id": "npc-mecca-guide",
+    "name": {
+      "zh": "麦加向导",
+      "en": "Mecca Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "mecca",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "mecca",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得麦加的巷与礼。",
+      "en": "Knows the lanes and rites of Mecca."
+    }
+  },
+  {
+    "id": "npc-delhi-munshi",
+    "name": {
+      "zh": "德里向导",
+      "en": "Delhi Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "delhi",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "delhi",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得德里的巷与礼。",
+      "en": "Knows the lanes and rites of Delhi."
+    }
+  },
+  {
+    "id": "npc-calicut-nakhuda",
+    "name": {
+      "zh": "卡利卡特向导",
+      "en": "Calicut (Kalikut) Guide"
+    },
+    "roles": [
+      "guide",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "calicut",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "calicut",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open"
+    ],
+    "wage": {
+      "amount": 2,
+      "currency": "dinar",
+      "period": "month"
+    },
+    "contract": {
+      "months": 6,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 10,
+      "trade": 10,
+      "language": 14,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 14,
+      "divination": 6,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 16,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 14,
+      "piety": 16,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 15
+    },
+    "fate": {
+      "company": 14,
+      "road": 14,
+      "success": 14
+    },
+    "birth": {
+      "internalDate": "1300-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "omen": {
+      "zh": "此人识得卡利卡特的巷与礼。",
+      "en": "Knows the lanes and rites of Calicut."
+    }
   }
 ]

@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "cx-acre",
+    "category": "geography",
+    "title": {
+      "zh": "阿卡·见闻",
+      "en": "Acre note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-acre。探索中解锁的远路知识。",
+      "en": "Codex entry cx-acre: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-acre"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-baghdad",
+    "category": "geography",
+    "title": {
+      "zh": "报达·见闻",
+      "en": "Baghdad note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-baghdad。探索中解锁的远路知识。",
+      "en": "Codex entry cx-baghdad: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-baghdad"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-baghdad-craft",
+    "category": "geography",
+    "title": {
+      "zh": "报达·见闻",
+      "en": "Baghdad note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-baghdad-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-baghdad-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-baghdad-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-baghdad-faith",
+    "category": "religion",
+    "title": {
+      "zh": "报达·见闻",
+      "en": "Baghdad note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-baghdad-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-baghdad-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-baghdad-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-baghdad-market",
+    "category": "goods",
+    "title": {
+      "zh": "报达·见闻",
+      "en": "Baghdad note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-baghdad-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-baghdad-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-baghdad-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-balkh",
+    "category": "geography",
+    "title": {
+      "zh": "巴里黑·见闻",
+      "en": "Balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-balkh。探索中解锁的远路知识。",
+      "en": "Codex entry cx-balkh: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-balkh"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-balkh-craft",
+    "category": "geography",
+    "title": {
+      "zh": "巴里黑·见闻",
+      "en": "Balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-balkh-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-balkh-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-balkh-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-balkh-faith",
+    "category": "religion",
+    "title": {
+      "zh": "巴里黑·见闻",
+      "en": "Balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-balkh-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-balkh-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-balkh-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-balkh-market",
+    "category": "goods",
+    "title": {
+      "zh": "巴里黑·见闻",
+      "en": "Balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-balkh-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-balkh-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-balkh-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-bridge-baghdad-damascus",
+    "category": "travel",
+    "title": {
+      "zh": "cx-bridge-baghdad-damascus·见闻",
+      "en": "cx-bridge-baghdad-damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-bridge-baghdad-damascus。探索中解锁的远路知识。",
+      "en": "Codex entry cx-bridge-baghdad-damascus: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-bridge-baghdad-damascus"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo",
+    "category": "geography",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo-craft",
+    "category": "geography",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo-faith",
+    "category": "religion",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo-judgment",
+    "category": "religion",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo-judgment。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo-judgment: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo-judgment"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo-market",
+    "category": "goods",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-cairo-tree",
+    "category": "religion",
+    "title": {
+      "zh": "开罗·见闻",
+      "en": "Cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-cairo-tree。探索中解锁的远路知识。",
+      "en": "Codex entry cx-cairo-tree: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-cairo-tree"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-calicut",
+    "category": "geography",
+    "title": {
+      "zh": "卡利卡特·见闻",
+      "en": "Calicut note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-calicut。探索中解锁的远路知识。",
+      "en": "Codex entry cx-calicut: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-calicut"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-calicut-craft",
+    "category": "geography",
+    "title": {
+      "zh": "卡利卡特·见闻",
+      "en": "Calicut note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-calicut-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-calicut-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-calicut-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-calicut-faith",
+    "category": "religion",
+    "title": {
+      "zh": "卡利卡特·见闻",
+      "en": "Calicut note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-calicut-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-calicut-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-calicut-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-calicut-market",
+    "category": "goods",
+    "title": {
+      "zh": "卡利卡特·见闻",
+      "en": "Calicut note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-calicut-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-calicut-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-calicut-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-caravan-talk",
+    "category": "geography",
+    "title": {
+      "zh": "cx-caravan-talk·见闻",
+      "en": "cx-caravan-talk note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-caravan-talk。探索中解锁的远路知识。",
+      "en": "Codex entry cx-caravan-talk: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-caravan-talk"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-damascus",
+    "category": "geography",
+    "title": {
+      "zh": "大马士革·见闻",
+      "en": "Damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-damascus。探索中解锁的远路知识。",
+      "en": "Codex entry cx-damascus: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-damascus"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-damascus-craft",
+    "category": "geography",
+    "title": {
+      "zh": "大马士革·见闻",
+      "en": "Damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-damascus-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-damascus-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-damascus-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-damascus-faith",
+    "category": "religion",
+    "title": {
+      "zh": "大马士革·见闻",
+      "en": "Damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-damascus-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-damascus-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-damascus-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-damascus-market",
+    "category": "goods",
+    "title": {
+      "zh": "大马士革·见闻",
+      "en": "Damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-damascus-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-damascus-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-damascus-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-delhi",
+    "category": "geography",
+    "title": {
+      "zh": "德里·见闻",
+      "en": "Delhi note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-delhi。探索中解锁的远路知识。",
+      "en": "Codex entry cx-delhi: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-delhi"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-delhi-craft",
+    "category": "geography",
+    "title": {
+      "zh": "德里·见闻",
+      "en": "Delhi note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-delhi-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-delhi-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-delhi-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-delhi-faith",
+    "category": "religion",
+    "title": {
+      "zh": "德里·见闻",
+      "en": "Delhi note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-delhi-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-delhi-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-delhi-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-delhi-market",
+    "category": "goods",
+    "title": {
+      "zh": "德里·见闻",
+      "en": "Delhi note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-delhi-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-delhi-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-delhi-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-hangzhou",
+    "category": "geography",
+    "title": {
+      "zh": "行在·见闻",
+      "en": "Kinsay note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hangzhou。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hangzhou: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hangzhou"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hangzhou-craft",
+    "category": "geography",
+    "title": {
+      "zh": "行在·见闻",
+      "en": "Kinsay note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hangzhou-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hangzhou-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hangzhou-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hangzhou-faith",
+    "category": "religion",
+    "title": {
+      "zh": "行在·见闻",
+      "en": "Kinsay note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hangzhou-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hangzhou-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hangzhou-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hangzhou-market",
+    "category": "goods",
+    "title": {
+      "zh": "行在·见闻",
+      "en": "Kinsay note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hangzhou-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hangzhou-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hangzhou-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hormuz",
+    "category": "geography",
+    "title": {
+      "zh": "忽鲁谟斯·见闻",
+      "en": "Hormuz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hormuz。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hormuz: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hormuz"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hormuz-craft",
+    "category": "geography",
+    "title": {
+      "zh": "忽鲁谟斯·见闻",
+      "en": "Hormuz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hormuz-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hormuz-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hormuz-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hormuz-faith",
+    "category": "religion",
+    "title": {
+      "zh": "忽鲁谟斯·见闻",
+      "en": "Hormuz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hormuz-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hormuz-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hormuz-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-hormuz-market",
+    "category": "goods",
+    "title": {
+      "zh": "忽鲁谟斯·见闻",
+      "en": "Hormuz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-hormuz-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-hormuz-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-hormuz-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-kashgar",
+    "category": "geography",
+    "title": {
+      "zh": "可失合儿·见闻",
+      "en": "Kashgar note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-kashgar。探索中解锁的远路知识。",
+      "en": "Codex entry cx-kashgar: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-kashgar"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-kashgar-craft",
+    "category": "geography",
+    "title": {
+      "zh": "可失合儿·见闻",
+      "en": "Kashgar note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-kashgar-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-kashgar-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-kashgar-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-kashgar-faith",
+    "category": "religion",
+    "title": {
+      "zh": "可失合儿·见闻",
+      "en": "Kashgar note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-kashgar-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-kashgar-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-kashgar-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-kashgar-market",
+    "category": "goods",
+    "title": {
+      "zh": "可失合儿·见闻",
+      "en": "Kashgar note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-kashgar-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-kashgar-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-kashgar-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khanbaliq",
+    "category": "geography",
+    "title": {
+      "zh": "汗八里·见闻",
+      "en": "Khanbaliq note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khanbaliq。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khanbaliq: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khanbaliq"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khanbaliq-craft",
+    "category": "geography",
+    "title": {
+      "zh": "汗八里·见闻",
+      "en": "Khanbaliq note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khanbaliq-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khanbaliq-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khanbaliq-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khanbaliq-faith",
+    "category": "religion",
+    "title": {
+      "zh": "汗八里·见闻",
+      "en": "Khanbaliq note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khanbaliq-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khanbaliq-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khanbaliq-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khanbaliq-market",
+    "category": "goods",
+    "title": {
+      "zh": "汗八里·见闻",
+      "en": "Khanbaliq note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khanbaliq-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khanbaliq-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khanbaliq-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khotan",
+    "category": "geography",
+    "title": {
+      "zh": "忽炭·见闻",
+      "en": "Khotan note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khotan。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khotan: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khotan"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khotan-craft",
+    "category": "geography",
+    "title": {
+      "zh": "忽炭·见闻",
+      "en": "Khotan note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khotan-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khotan-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khotan-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khotan-faith",
+    "category": "religion",
+    "title": {
+      "zh": "忽炭·见闻",
+      "en": "Khotan note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khotan-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khotan-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khotan-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-khotan-market",
+    "category": "goods",
+    "title": {
+      "zh": "忽炭·见闻",
+      "en": "Khotan note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-khotan-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-khotan-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-khotan-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-lop",
+    "category": "geography",
+    "title": {
+      "zh": "罗布·见闻",
+      "en": "Lop note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-lop。探索中解锁的远路知识。",
+      "en": "Codex entry cx-lop: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-lop"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-lop-craft",
+    "category": "geography",
+    "title": {
+      "zh": "罗布·见闻",
+      "en": "Lop note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-lop-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-lop-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-lop-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-lop-faith",
+    "category": "religion",
+    "title": {
+      "zh": "罗布·见闻",
+      "en": "Lop note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-lop-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-lop-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-lop-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-lop-market",
+    "category": "goods",
+    "title": {
+      "zh": "罗布·见闻",
+      "en": "Lop note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-lop-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-lop-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-lop-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-mecca",
+    "category": "geography",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-mecca-craft",
+    "category": "geography",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-mecca-faith",
+    "category": "religion",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-mecca-hajj",
+    "category": "religion",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca-hajj。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca-hajj: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca-hajj"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-mecca-market",
+    "category": "goods",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-mecca-witness",
+    "category": "geography",
+    "title": {
+      "zh": "麦加·见闻",
+      "en": "Mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-mecca-witness。探索中解锁的远路知识。",
+      "en": "Codex entry cx-mecca-witness: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-mecca-witness"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-paiza-declined",
+    "category": "geography",
+    "title": {
+      "zh": "cx-paiza-declined·见闻",
+      "en": "cx-paiza-declined note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-paiza-declined。探索中解锁的远路知识。",
+      "en": "Codex entry cx-paiza-declined: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-paiza-declined"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-quanzhou",
+    "category": "geography",
+    "title": {
+      "zh": "刺桐·见闻",
+      "en": "Zayton note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-quanzhou。探索中解锁的远路知识。",
+      "en": "Codex entry cx-quanzhou: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-quanzhou"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-quanzhou-craft",
+    "category": "geography",
+    "title": {
+      "zh": "刺桐·见闻",
+      "en": "Zayton note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-quanzhou-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-quanzhou-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-quanzhou-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-quanzhou-faith",
+    "category": "religion",
+    "title": {
+      "zh": "刺桐·见闻",
+      "en": "Zayton note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-quanzhou-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-quanzhou-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-quanzhou-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-quanzhou-market",
+    "category": "goods",
+    "title": {
+      "zh": "刺桐·见闻",
+      "en": "Zayton note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-quanzhou-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-quanzhou-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-quanzhou-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-acre-tabriz",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-acre-tabriz·见闻",
+      "en": "cx-rt-acre-tabriz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-acre-tabriz。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-acre-tabriz: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-acre-tabriz"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-baghdad-hormuz",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-baghdad-hormuz·见闻",
+      "en": "cx-rt-baghdad-hormuz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-baghdad-hormuz。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-baghdad-hormuz: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-baghdad-hormuz"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-balkh-samarkand",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-balkh-samarkand·见闻",
+      "en": "cx-rt-balkh-samarkand note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-balkh-samarkand。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-balkh-samarkand: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-balkh-samarkand"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-cairo-damascus",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-cairo-damascus·见闻",
+      "en": "cx-rt-cairo-damascus note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-cairo-damascus。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-cairo-damascus: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-cairo-damascus"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-rt-damascus-mecca",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-damascus-mecca·见闻",
+      "en": "cx-rt-damascus-mecca note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-damascus-mecca。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-damascus-mecca: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-damascus-mecca"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-rt-delhi-calicut",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-delhi-calicut·见闻",
+      "en": "cx-rt-delhi-calicut note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-delhi-calicut。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-delhi-calicut: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-delhi-calicut"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-rt-hangzhou-quanzhou",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-hangzhou-quanzhou·见闻",
+      "en": "cx-rt-hangzhou-quanzhou note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-hangzhou-quanzhou。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-hangzhou-quanzhou: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-hangzhou-quanzhou"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-hormuz-balkh",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-hormuz-balkh·见闻",
+      "en": "cx-rt-hormuz-balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-hormuz-balkh。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-hormuz-balkh: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-hormuz-balkh"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-kashgar-khotan",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-kashgar-khotan·见闻",
+      "en": "cx-rt-kashgar-khotan note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-kashgar-khotan。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-kashgar-khotan: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-kashgar-khotan"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-khanbaliq-hangzhou",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-khanbaliq-hangzhou·见闻",
+      "en": "cx-rt-khanbaliq-hangzhou note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-khanbaliq-hangzhou。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-khanbaliq-hangzhou: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-khanbaliq-hangzhou"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-khotan-lop",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-khotan-lop·见闻",
+      "en": "cx-rt-khotan-lop note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-khotan-lop。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-khotan-lop: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-khotan-lop"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-lop-shangdu",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-lop-shangdu·见闻",
+      "en": "cx-rt-lop-shangdu note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-lop-shangdu。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-lop-shangdu: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-lop-shangdu"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-mecca-delhi",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-mecca-delhi·见闻",
+      "en": "cx-rt-mecca-delhi note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-mecca-delhi。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-mecca-delhi: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-mecca-delhi"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-rt-samarkand-kashgar",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-samarkand-kashgar·见闻",
+      "en": "cx-rt-samarkand-kashgar note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-samarkand-kashgar。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-samarkand-kashgar: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-samarkand-kashgar"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-shangdu-khanbaliq",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-shangdu-khanbaliq·见闻",
+      "en": "cx-rt-shangdu-khanbaliq note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-shangdu-khanbaliq。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-shangdu-khanbaliq: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-shangdu-khanbaliq"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-tabriz-baghdad",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-tabriz-baghdad·见闻",
+      "en": "cx-rt-tabriz-baghdad note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-tabriz-baghdad。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-tabriz-baghdad: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-tabriz-baghdad"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-tabriz-balkh",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-tabriz-balkh·见闻",
+      "en": "cx-rt-tabriz-balkh note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-tabriz-balkh。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-tabriz-balkh: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-tabriz-balkh"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-rt-tangier-cairo",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-tangier-cairo·见闻",
+      "en": "cx-rt-tangier-cairo note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-tangier-cairo。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-tangier-cairo: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-tangier-cairo"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-rt-venice-acre",
+    "category": "travel",
+    "title": {
+      "zh": "cx-rt-venice-acre·见闻",
+      "en": "cx-rt-venice-acre note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-rt-venice-acre。探索中解锁的远路知识。",
+      "en": "Codex entry cx-rt-venice-acre: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-rt-venice-acre"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-samarkand",
+    "category": "geography",
+    "title": {
+      "zh": "撒马尔罕·见闻",
+      "en": "Samarkand note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-samarkand。探索中解锁的远路知识。",
+      "en": "Codex entry cx-samarkand: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-samarkand"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-samarkand-craft",
+    "category": "geography",
+    "title": {
+      "zh": "撒马尔罕·见闻",
+      "en": "Samarkand note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-samarkand-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-samarkand-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-samarkand-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-samarkand-faith",
+    "category": "religion",
+    "title": {
+      "zh": "撒马尔罕·见闻",
+      "en": "Samarkand note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-samarkand-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-samarkand-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-samarkand-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-samarkand-market",
+    "category": "goods",
+    "title": {
+      "zh": "撒马尔罕·见闻",
+      "en": "Samarkand note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-samarkand-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-samarkand-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-samarkand-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-shangdu",
+    "category": "geography",
+    "title": {
+      "zh": "上都·见闻",
+      "en": "Shangdu note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-shangdu。探索中解锁的远路知识。",
+      "en": "Codex entry cx-shangdu: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-shangdu"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-shangdu-craft",
+    "category": "geography",
+    "title": {
+      "zh": "上都·见闻",
+      "en": "Shangdu note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-shangdu-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-shangdu-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-shangdu-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-shangdu-faith",
+    "category": "religion",
+    "title": {
+      "zh": "上都·见闻",
+      "en": "Shangdu note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-shangdu-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-shangdu-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-shangdu-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-shangdu-market",
+    "category": "goods",
+    "title": {
+      "zh": "上都·见闻",
+      "en": "Shangdu note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-shangdu-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-shangdu-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-shangdu-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-tabriz",
+    "category": "geography",
+    "title": {
+      "zh": "大不里士·见闻",
+      "en": "Tabriz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tabriz。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tabriz: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tabriz"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-tabriz-craft",
+    "category": "geography",
+    "title": {
+      "zh": "大不里士·见闻",
+      "en": "Tabriz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tabriz-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tabriz-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tabriz-craft"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-tabriz-faith",
+    "category": "religion",
+    "title": {
+      "zh": "大不里士·见闻",
+      "en": "Tabriz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tabriz-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tabriz-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tabriz-faith"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-tabriz-market",
+    "category": "goods",
+    "title": {
+      "zh": "大不里士·见闻",
+      "en": "Tabriz note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tabriz-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tabriz-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tabriz-market"
+      },
+      "origin": "marco-polo"
+    }
+  },
+  {
+    "id": "cx-tangier",
+    "category": "geography",
+    "title": {
+      "zh": "丹吉尔·见闻",
+      "en": "Tangier note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tangier。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tangier: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tangier"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-tangier-craft",
+    "category": "geography",
+    "title": {
+      "zh": "丹吉尔·见闻",
+      "en": "Tangier note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tangier-craft。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tangier-craft: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tangier-craft"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-tangier-faith",
+    "category": "religion",
+    "title": {
+      "zh": "丹吉尔·见闻",
+      "en": "Tangier note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tangier-faith。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tangier-faith: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tangier-faith"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-tangier-market",
+    "category": "goods",
+    "title": {
+      "zh": "丹吉尔·见闻",
+      "en": "Tangier note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-tangier-market。探索中解锁的远路知识。",
+      "en": "Codex entry cx-tangier-market: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-tangier-market"
+      },
+      "origin": "ibn-battuta"
+    }
+  },
+  {
+    "id": "cx-venice",
+    "category": "geography",
+    "title": {
+      "zh": "威尼斯·见闻",
+      "en": "Venice note"
+    },
+    "body": {
+      "zh": "图鉴条目：cx-venice。探索中解锁的远路知识。",
+      "en": "Codex entry cx-venice: far-road knowledge unlocked by exploration."
+    },
+    "lore": {
+      "ref": {
+        "id": "cx-venice"
+      },
+      "origin": "marco-polo"
+    }
+  }
+]

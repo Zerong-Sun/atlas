@@ -1,0 +1,20 @@
+/* Method ritual motion — five-beat shell */
+.ritual-shell { position: relative; }
+.ritual-pulse {
+  width: 48px; height: 48px; margin: 16px auto;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 170, 90, 0.6);
+  animation: ritual-pulse 0.9s ease-out infinite;
+}
+@keyframes ritual-pulse {
+  from { transform: scale(0.6); opacity: 1; }
+  to { transform: scale(1.4); opacity: 0; }
+}
+.ritual-shake.shake { animation: ritual-shake 0.2s linear; }
+@keyframes ritual-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px) rotate(-3deg); }
+  75% { transform: translateX(4px) rotate(3deg); }
+}
+.ritual-omen { font-style: italic; color: #a89060; }
+.beat-3 h3 { color: #d4b56a; }

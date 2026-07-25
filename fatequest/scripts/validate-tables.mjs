@@ -9,7 +9,7 @@ const dataDir = path.join(__dirname, '../assets/data');
 const EFFECT_OPS = new Set([
   'coins','days','goods','item','reputation','faith','language','etiquette',
   'fate','unlockRoute','revealMap','learnDivination','recruit','retainerMood',
-  'sticker','codex','flag','goto'
+  'sticker','codex','flag','goto','routeMod','omenStat'
 ]);
 
 const errors = [];
@@ -53,6 +53,7 @@ const divinations = load('divinations.json') || [];
 const retainers = load('retainers.json') || [];
 const archetypes = load('archetypes.json') || [];
 const endings = load('endings.json') || [];
+const codex = load('codex.json') || [];
 
 const cityIds = new Set(cities.map(c => c.id));
 const routeIds = new Set(routes.map(r => r.id));
@@ -60,9 +61,11 @@ const eventIds = new Set(events.map(e => e.id));
 const goodIds = new Set(goods.map(g => g.id));
 const divIds = new Set(divinations.map(d => d.id));
 const retIds = new Set(retainers.map(r => r.id));
+const codexIds = new Set(codex.map(c => c.id));
 
 const FULL = ['tabriz','baghdad','hormuz','balkh','samarkand','kashgar','khotan','lop','shangdu','khanbaliq','hangzhou','quanzhou'];
-for (const id of FULL) {
+const BATTUTA = ['tangier','cairo','damascus','mecca','delhi','calicut'];
+for (const id of [...FULL, ...BATTUTA]) {
   if (!cityIds.has(id)) errors.push(`missing full city ${id}`);
   else {
     const c = cities.find(x => x.id === id);
@@ -107,15 +110,23 @@ for (const d of divinations) {
 }
 
 if (retainers.length < 12) errors.push(`retainers ${retainers.length} < 12`);
-if (archetypes.length < 3) errors.push('need 3 archetypes');
+if (archetypes.length < 3) errors.push('need ≥3 archetypes');
 for (const a of archetypes) {
   biOk(a.name, `arch ${a.id}`);
   if (!cityIds.has(a.start)) errors.push(`arch ${a.id}: start ${a.start}`);
 }
+if (!archetypes.find(a => a.id === 'battuta')) errors.push('need battuta archetype');
 
 if (endings.length < 8) errors.push(`endings ${endings.length} < 8`);
 const layers = endings.map(e => e.layer);
 if (!layers.includes(1)) errors.push('need layer-1 stop ending');
+if (!endings.find(e => e.id === 'end-battuta-witness')) errors.push('need end-battuta-witness');
+
+if (!codex.length) errors.push('codex.json empty');
+for (const c of codex) {
+  biOk(c.title, `codex ${c.id}`);
+  biOk(c.body, `codex ${c.id}.body`);
+}
 
 for (const e of events) {
   biOk(e.title, `event ${e.id}`);
@@ -128,11 +139,16 @@ for (const e of events) {
       if (fx.op === 'unlockRoute' && fx.value && !routeIds.has(fx.value)) errors.push(`${e.id}: unknown route ${fx.value}`);
       if (fx.op === 'learnDivination' && fx.value && !divIds.has(fx.value)) errors.push(`${e.id}: unknown learn ${fx.value}`);
       if (fx.op === 'recruit' && fx.value && !retIds.has(fx.value)) errors.push(`${e.id}: unknown retainer ${fx.value}`);
+      if (fx.op === 'codex' && fx.value && !codexIds.has(fx.value)) warn.push(`${e.id}: codex ${fx.value} not in codex.json`);
+      if (fx.op === 'goto' && fx.value && String(fx.value).startsWith('event:')) {
+        const eid = String(fx.value).slice(6);
+        if (!eventIds.has(eid)) errors.push(`${e.id}: goto missing event ${eid}`);
+      }
     }
   }
 }
 
-console.log('validate-tables:', { cities: cities.length, routes: routes.length, events: events.length, goods: goods.length, retainers: retainers.length });
+console.log('validate-tables:', { cities: cities.length, routes: routes.length, events: events.length, goods: goods.length, retainers: retainers.length, codex: codex.length });
 if (warn.length) console.warn('warnings:\n' + warn.slice(0, 20).join('\n'));
 if (errors.length) {
   console.error('ERRORS:\n' + errors.join('\n'));

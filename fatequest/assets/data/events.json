@@ -17,8 +17,8 @@
       "region": "europe"
     },
     "body": {
-      "zh": "你走进威尼斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Venice. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进威尼斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入威尼斯时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Venice. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Venice, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -86,8 +86,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进阿卡。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Acre. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进阿卡。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入阿卡时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Acre. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Acre, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -155,8 +155,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进大不里士。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Tabriz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进大不里士。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入大不里士时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Tabriz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Tabriz, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -256,8 +256,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "大不里士的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Tabriz market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -360,8 +360,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "大不里士的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Tabriz marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -464,8 +464,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "大不里士的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Tabriz, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -568,8 +568,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进报达。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Baghdad. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进报达。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入报达时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Baghdad. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Baghdad, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -669,8 +669,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "报达的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Baghdad market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -773,8 +773,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "报达的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Baghdad marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -877,8 +877,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "报达的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Baghdad, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -981,8 +981,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进忽鲁谟斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Hormuz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进忽鲁谟斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入忽鲁谟斯时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Hormuz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Hormuz, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -1082,8 +1082,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽鲁谟斯的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Hormuz market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -1186,8 +1186,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽鲁谟斯的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Hormuz marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -1290,8 +1290,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽鲁谟斯的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Hormuz, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -1394,8 +1394,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进巴里黑。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Balkh. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进巴里黑。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入巴里黑时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Balkh. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Balkh, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -1495,8 +1495,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "巴里黑的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Balkh market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -1599,8 +1599,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "巴里黑的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Balkh marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -1703,8 +1703,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "巴里黑的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Balkh, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -1807,8 +1807,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进撒马尔罕。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Samarkand. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进撒马尔罕。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入撒马尔罕时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Samarkand. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Samarkand, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -1908,8 +1908,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "撒马尔罕的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Samarkand market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -2012,8 +2012,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "撒马尔罕的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Samarkand marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -2116,8 +2116,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "撒马尔罕的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Samarkand, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -2220,8 +2220,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进可失合儿。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Kashgar. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进可失合儿。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入可失合儿时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Kashgar. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Kashgar, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -2321,8 +2321,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "可失合儿的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Kashgar market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -2425,8 +2425,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "可失合儿的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Kashgar marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -2529,8 +2529,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "可失合儿的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Kashgar, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -2633,8 +2633,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进忽炭。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Khotan. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进忽炭。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入忽炭时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Khotan. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Khotan, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -2734,8 +2734,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽炭的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Khotan market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -2838,8 +2838,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽炭的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Khotan marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -2942,8 +2942,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "忽炭的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Khotan, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -3046,8 +3046,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进罗布。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Lop. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进罗布。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入罗布时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Lop. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Lop, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -3147,8 +3147,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "罗布的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Lop market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -3251,8 +3251,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "罗布的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Lop marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -3355,8 +3355,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "罗布的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Lop, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -3459,8 +3459,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "你走进上都。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Shangdu. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进上都。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入上都时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Shangdu. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Shangdu, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -3560,8 +3560,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "上都的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Shangdu market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -3664,8 +3664,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "上都的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Shangdu marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -3768,8 +3768,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "上都的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Shangdu, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -3872,8 +3872,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进汗八里。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Khanbaliq. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进汗八里。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入汗八里时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Khanbaliq. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Khanbaliq, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -3973,8 +3973,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "汗八里的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Khanbaliq market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -4077,8 +4077,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "汗八里的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Khanbaliq marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -4181,8 +4181,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "汗八里的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Khanbaliq, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -4285,8 +4285,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进行在。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Kinsay. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进行在。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入行在时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Kinsay. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Kinsay, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -4386,8 +4386,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "行在的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Kinsay market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -4490,8 +4490,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "行在的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Kinsay marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -4594,8 +4594,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "行在的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Kinsay, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -4698,8 +4698,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进刺桐。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
-      "en": "You enter Zayton. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+      "zh": "你走进刺桐。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入刺桐时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
+      "en": "You enter Zayton. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Zayton, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
     },
     "choices": [
       {
@@ -4799,8 +4799,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Market Walk in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "刺桐的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
+      "en": "Market Walk in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Zayton market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
     },
     "choices": [
       {
@@ -4899,8 +4899,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Place of Faith in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "刺桐的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
+      "en": "Place of Faith in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Zayton marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
     },
     "choices": [
       {
@@ -4999,8 +4999,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
-      "en": "Crafts & Customs in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+      "zh": "刺桐的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
+      "en": "Crafts & Customs in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Zayton, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
     },
     "choices": [
       {
@@ -6684,6 +6684,2793 @@
       "ref": {
         "book": "marco-polo",
         "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "ev-tangier-entry",
+    "kind": "entry",
+    "at": [
+      "tangier"
+    ],
+    "title": {
+      "zh": "入丹吉尔",
+      "en": "Entering Tangier"
+    },
+    "body": {
+      "zh": "丹吉尔：白图泰记下的城门、市声与礼拜。The first city, therefore, at which he arrived, was Tilimsān; the next Milyāna; the next El Jazāer (Algiers): the next Bijāya; the next Kosantīna the next Būna; the next Tūnis; the",
+      "en": "The first city, therefore, at which he arrived, was Tilimsān; the next Milyāna; the next El Jazāer (Algiers): the next Bijāya; the next Kosantīna the next Būna; the next Tūnis; the next Sawsa; the next Safākus."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-tangier"
+          },
+          {
+            "op": "codex",
+            "value": "cx-tangier"
+          },
+          {
+            "op": "revealMap",
+            "value": "tangier"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-tangier"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "tangier",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "tangier"
+      }
+    }
+  },
+  {
+    "id": "ev-tangier-market",
+    "kind": "site",
+    "at": [
+      "tangier"
+    ],
+    "title": {
+      "zh": "丹吉尔·市集",
+      "en": "Tangier Market"
+    },
+    "body": {
+      "zh": "香料与织物在丹吉尔市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Tangier."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tangier-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-tangier"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "tangier",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "tangier"
+      }
+    }
+  },
+  {
+    "id": "ev-tangier-faith",
+    "kind": "site",
+    "at": [
+      "tangier"
+    ],
+    "title": {
+      "zh": "丹吉尔·信仰场所",
+      "en": "Tangier Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从丹吉尔的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Tangier."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tangier-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-tangier"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "tangier",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "tangier"
+      }
+    }
+  },
+  {
+    "id": "ev-tangier-craft",
+    "kind": "site",
+    "at": [
+      "tangier"
+    ],
+    "title": {
+      "zh": "丹吉尔·工匠巷",
+      "en": "Tangier Craft Lane"
+    },
+    "body": {
+      "zh": "丹吉尔工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Tangier trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tangier-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-tangier"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-tangier-cairo"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "tangier",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "tangier"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-entry",
+    "kind": "entry",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "入开罗",
+      "en": "Entering Cairo"
+    },
+    "body": {
+      "zh": "开罗：白图泰记下的城门、市声与礼拜。It is also said of the Sheikh Jamāl Oddīn, that after he had gone to Damietta, he constantly attended the burial-grounds of that place. There was at that time in Damietta a judge, ",
+      "en": "It is also said of the Sheikh Jamāl Oddīn, that after he had gone to Damietta, he constantly attended the burial-grounds of that place. There was at that time in Damietta a judge, known by the surname of Ibn Omaid, who, attending one day at the funeral of one of the nobles, saw the Sheikh in the burial-ground, and said to him, you are a beastly old fellow. He replied, And you are a foolish judge, who can pass with yo"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-cairo"
+          },
+          {
+            "op": "codex",
+            "value": "cx-cairo"
+          },
+          {
+            "op": "revealMap",
+            "value": "cairo"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-cairo"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-market",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗·市集",
+      "en": "Cairo Market"
+    },
+    "body": {
+      "zh": "香料与织物在开罗市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Cairo."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-cairo-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-cairo"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-faith",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗·信仰场所",
+      "en": "Cairo Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从开罗的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Cairo."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-cairo-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-cairo"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-craft",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗·工匠巷",
+      "en": "Cairo Craft Lane"
+    },
+    "body": {
+      "zh": "开罗工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Cairo trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-cairo-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-cairo"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-cairo-damascus"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-damascus-entry",
+    "kind": "entry",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "入大马士革",
+      "en": "Entering Damascus"
+    },
+    "body": {
+      "zh": "大马士革：白图泰记下的城门、市声与礼拜。From this place I proceeded to Acca: in this is the tomb of Sālih the prophet, which I visited. After this I arrived at the city of Tyre, which is a place wonderfully strong, being",
+      "en": "From this place I proceeded to Acca: in this is the tomb of Sālih the prophet, which I visited. After this I arrived at the city of Tyre, which is a place wonderfully strong, being surrounded on three sides by the sea. Its harbour is one of those which have been much celebrated. I next visited Sidon, and from this place went into the parts of Tiberias, which it was my wish to see. The whole.was, however, in ruins, bu"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-damascus"
+          },
+          {
+            "op": "codex",
+            "value": "cx-damascus"
+          },
+          {
+            "op": "revealMap",
+            "value": "damascus"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-baghdad-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-damascus"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "damascus",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "damascus"
+      }
+    }
+  },
+  {
+    "id": "ev-damascus-market",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革·市集",
+      "en": "Damascus Market"
+    },
+    "body": {
+      "zh": "香料与织物在大马士革市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Damascus."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-damascus-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-damascus"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "damascus",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "damascus"
+      }
+    }
+  },
+  {
+    "id": "ev-damascus-faith",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革·信仰场所",
+      "en": "Damascus Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从大马士革的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Damascus."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-damascus-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-damascus"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "damascus",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "damascus"
+      }
+    }
+  },
+  {
+    "id": "ev-damascus-craft",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革·工匠巷",
+      "en": "Damascus Craft Lane"
+    },
+    "body": {
+      "zh": "大马士革工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Damascus trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-damascus-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-damascus"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-damascus-mecca"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "damascus",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "damascus"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-entry",
+    "kind": "entry",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "入麦加",
+      "en": "Entering Mecca"
+    },
+    "body": {
+      "zh": "麦加：白图泰记下的城门、市声与礼拜。AT this time, that is, in the year 729 (A.D. 1328), prayer was made, during the sermon, for the King of Irak Abu Saīd, and after that for El Melik El Nāsir. I remained there during",
+      "en": "AT this time, that is, in the year 729 (A.D. 1328), prayer was made, during the sermon, for the King of Irak Abu Saīd, and after that for El Melik El Nāsir. I remained there during the third year also, and then left Mecca with the intention of visiting Yemen. I arrived accordingly at Judda. From this place I went with a Company of merchants who were going to Yemen; but, as the wind changed upon us, we put into the is"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-mecca"
+          },
+          {
+            "op": "codex",
+            "value": "cx-mecca"
+          },
+          {
+            "op": "revealMap",
+            "value": "mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-market",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "麦加·市集",
+      "en": "Mecca Market"
+    },
+    "body": {
+      "zh": "香料与织物在麦加市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Mecca."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-mecca-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-faith",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "麦加·信仰场所",
+      "en": "Mecca Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从麦加的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Mecca."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-mecca-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-craft",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "麦加·工匠巷",
+      "en": "Mecca Craft Lane"
+    },
+    "body": {
+      "zh": "麦加工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Mecca trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-mecca-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-mecca"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-mecca-delhi"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-delhi-entry",
+    "kind": "entry",
+    "at": [
+      "delhi"
+    ],
+    "title": {
+      "zh": "入德里",
+      "en": "Entering Delhi"
+    },
+    "body": {
+      "zh": "德里：白图泰记下的城门、市声与礼拜。THE river (just mentioned) is the Sinde: it is the greatest river in the world, and overflows during the hot weather just as the Nile does; and at this time they sow the lands. Her",
+      "en": "THE river (just mentioned) is the Sinde: it is the greatest river in the world, and overflows during the hot weather just as the Nile does; and at this time they sow the lands. Here also commence the territories of the Emperor of Sindia and India, who was at this time Mohammed Shāh. From this place also is the description of persons arriving sent in writing to the Emīr of Sindia to Multān. Their Emīr, at this time, w"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-delhi"
+          },
+          {
+            "op": "codex",
+            "value": "cx-delhi"
+          },
+          {
+            "op": "revealMap",
+            "value": "delhi"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-delhi"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "delhi",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "delhi"
+      }
+    }
+  },
+  {
+    "id": "ev-delhi-market",
+    "kind": "site",
+    "at": [
+      "delhi"
+    ],
+    "title": {
+      "zh": "德里·市集",
+      "en": "Delhi Market"
+    },
+    "body": {
+      "zh": "香料与织物在德里市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Delhi."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-delhi-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-delhi"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "delhi",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "delhi"
+      }
+    }
+  },
+  {
+    "id": "ev-delhi-faith",
+    "kind": "site",
+    "at": [
+      "delhi"
+    ],
+    "title": {
+      "zh": "德里·信仰场所",
+      "en": "Delhi Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从德里的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Delhi."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-delhi-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-delhi"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "delhi",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "delhi"
+      }
+    }
+  },
+  {
+    "id": "ev-delhi-craft",
+    "kind": "site",
+    "at": [
+      "delhi"
+    ],
+    "title": {
+      "zh": "德里·工匠巷",
+      "en": "Delhi Craft Lane"
+    },
+    "body": {
+      "zh": "德里工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Delhi trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-delhi-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-delhi"
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "unlockRoute",
+            "value": "rt-battuta-delhi-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "delhi",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "delhi"
+      }
+    }
+  },
+  {
+    "id": "ev-calicut-entry",
+    "kind": "entry",
+    "at": [
+      "calicut"
+    ],
+    "title": {
+      "zh": "入卡利卡特",
+      "en": "Entering Calicut"
+    },
+    "body": {
+      "zh": "卡利卡特：白图泰记下的城门、市声与礼拜。We next arrived at the city of Manjarūn, which is situated upon a large estuary of the sea, called the “ q estuary of the wolf,” and which is the greatest estuary in the country of",
+      "en": "We next arrived at the city of Manjarūn, which is situated upon a large estuary of the sea, called the “ q estuary of the wolf,” and which is the greatest estuary in the country of Malabar. In this place are some of the greatest merchants of Persia and Yemen. Ginger and black pepper are here in great abundance. The king of this place is the greatest of the kings of Malabar, and in it are about four thousand Mohammeda"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "按礼入城",
+          "en": "Enter with proper greeting"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "good-entry-calicut"
+          },
+          {
+            "op": "codex",
+            "value": "cx-calicut"
+          },
+          {
+            "op": "revealMap",
+            "value": "calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先寻客栈",
+          "en": "Seek an inn first"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "calicut",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "calicut"
+      }
+    }
+  },
+  {
+    "id": "ev-calicut-market",
+    "kind": "site",
+    "at": [
+      "calicut"
+    ],
+    "title": {
+      "zh": "卡利卡特·市集",
+      "en": "Calicut Market"
+    },
+    "body": {
+      "zh": "香料与织物在卡利卡特市集上叠成气味的墙。",
+      "en": "Spice and cloth stack into walls of scent in Calicut."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-calicut-market"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-market-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "calicut",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "calicut"
+      }
+    }
+  },
+  {
+    "id": "ev-calicut-faith",
+    "kind": "site",
+    "at": [
+      "calicut"
+    ],
+    "title": {
+      "zh": "卡利卡特·信仰场所",
+      "en": "Calicut Shrine"
+    },
+    "body": {
+      "zh": "礼拜的呼声从卡利卡特的宣礼塔落下。",
+      "en": "The call to prayer falls from the minarets of Calicut."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-calicut-faith"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-faith-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "calicut",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "calicut"
+      }
+    }
+  },
+  {
+    "id": "ev-calicut-craft",
+    "kind": "site",
+    "at": [
+      "calicut"
+    ],
+    "title": {
+      "zh": "卡利卡特·工匠巷",
+      "en": "Calicut Craft Lane"
+    },
+    "body": {
+      "zh": "卡利卡特工匠用本地的手艺换远路来的银。",
+      "en": "Craftsmen of Calicut trade local skill for distant silver."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听本地 rumours",
+          "en": "Listen to local talk"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-calicut-craft"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "留下银两求安",
+          "en": "Leave coin for safe passage"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -2
+          },
+          {
+            "op": "flag",
+            "value": "good-craft-calicut"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "匆匆路过",
+          "en": "Pass through"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "calicut",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "calicut"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-tangier-cairo",
+    "kind": "road",
+    "title": {
+      "zh": "tangier→cairo 路上",
+      "en": "Road tangier → cairo"
+    },
+    "body": {
+      "zh": "沙与商队之间，有人低声问你是否会礼。",
+      "en": "Between sand and caravans, someone asks if you know the rites."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "以占法问途",
+          "en": "Ask the road by divination"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "吉象：旁路显形。",
+            "en": "Good omen: a side path appears."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            },
+            {
+              "op": "codex",
+              "value": "cx-rt-tangier-cairo"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "凶象：多耗一日。",
+            "en": "Ill omen: one day lost."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": {
+          "zh": "随队而行",
+          "en": "Follow the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-tangier-cairo"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-cairo-damascus",
+    "kind": "road",
+    "title": {
+      "zh": "cairo→damascus 路上",
+      "en": "Road cairo → damascus"
+    },
+    "body": {
+      "zh": "沙与商队之间，有人低声问你是否会礼。",
+      "en": "Between sand and caravans, someone asks if you know the rites."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "以占法问途",
+          "en": "Ask the road by divination"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "吉象：旁路显形。",
+            "en": "Good omen: a side path appears."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            },
+            {
+              "op": "codex",
+              "value": "cx-rt-cairo-damascus"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "凶象：多耗一日。",
+            "en": "Ill omen: one day lost."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": {
+          "zh": "随队而行",
+          "en": "Follow the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-cairo-damascus"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-damascus-mecca",
+    "kind": "road",
+    "title": {
+      "zh": "damascus→mecca 路上",
+      "en": "Road damascus → mecca"
+    },
+    "body": {
+      "zh": "沙与商队之间，有人低声问你是否会礼。",
+      "en": "Between sand and caravans, someone asks if you know the rites."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "以占法问途",
+          "en": "Ask the road by divination"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "吉象：旁路显形。",
+            "en": "Good omen: a side path appears."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            },
+            {
+              "op": "codex",
+              "value": "cx-rt-damascus-mecca"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "凶象：多耗一日。",
+            "en": "Ill omen: one day lost."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": {
+          "zh": "随队而行",
+          "en": "Follow the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-damascus-mecca"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-mecca-delhi",
+    "kind": "road",
+    "title": {
+      "zh": "mecca→delhi 路上",
+      "en": "Road mecca → delhi"
+    },
+    "body": {
+      "zh": "沙与商队之间，有人低声问你是否会礼。",
+      "en": "Between sand and caravans, someone asks if you know the rites."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "以占法问途",
+          "en": "Ask the road by divination"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "吉象：旁路显形。",
+            "en": "Good omen: a side path appears."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            },
+            {
+              "op": "codex",
+              "value": "cx-rt-mecca-delhi"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "凶象：多耗一日。",
+            "en": "Ill omen: one day lost."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": {
+          "zh": "随队而行",
+          "en": "Follow the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-mecca-delhi"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-delhi-calicut",
+    "kind": "road",
+    "title": {
+      "zh": "delhi→calicut 路上",
+      "en": "Road delhi → calicut"
+    },
+    "body": {
+      "zh": "沙与商队之间，有人低声问你是否会礼。",
+      "en": "Between sand and caravans, someone asks if you know the rites."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "以占法问途",
+          "en": "Ask the road by divination"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "吉象：旁路显形。",
+            "en": "Good omen: a side path appears."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            },
+            {
+              "op": "codex",
+              "value": "cx-rt-delhi-calicut"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "凶象：多耗一日。",
+            "en": "Ill omen: one day lost."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": {
+          "zh": "随队而行",
+          "en": "Follow the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-delhi-calicut"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-battuta-bridge",
+    "kind": "road",
+    "title": {
+      "zh": "两河向西",
+      "en": "West from the Two Rivers"
+    },
+    "body": {
+      "zh": "巴格达的余晖把大马士革的尖塔提前画在眼底。",
+      "en": "Baghdad’s afterglow paints Damascus minarets onto the eye."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "继续向西",
+          "en": "Continue west"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-bridge-baghdad-damascus"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "星骰问季",
+          "en": "Ask the season with astral dice"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "宜行。",
+            "en": "Go."
+          },
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "宜缓。",
+            "en": "Wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 2
+            }
+          ]
+        }
+      }
+    ],
+    "lore": {
+      "placeId": "road",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-tree-1",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗断案·一",
+      "en": "Cairo Judgment · I"
+    },
+    "body": {
+      "zh": "尼罗河边，一名法官请你旁听：商队是否隐瞒了关税。",
+      "en": "By the Nile a qadi asks you to witness: did the caravan hide the duty?"
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "细听证词",
+          "en": "Hear the testimony"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "cairo-tree-1"
+          },
+          {
+            "op": "codex",
+            "value": "cx-cairo-tree"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-cairo-tree-2"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "婉拒离开",
+          "en": "Decline and leave"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-tree-2",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗断案·二",
+      "en": "Cairo Judgment · II"
+    },
+    "body": {
+      "zh": "账册上的墨迹新旧不一。译员看你一眼，等人开口。",
+      "en": "Ink on the ledger is uneven. The interpreter waits for you to speak."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "指出矛盾",
+          "en": "Point out the contradiction"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "cairo-tree-2"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "cairo",
+            "value": 2
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-cairo-tree-3"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占决疑",
+          "en": "Settle doubt by I Ching"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "阳爻：账册有伪。",
+            "en": "Yang: the ledger lies."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "cairo-tree-2"
+            },
+            {
+              "op": "goto",
+              "value": "event:ev-cairo-tree-3"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "阴爻：且勿妄断。",
+            "en": "Yin: do not rush judgment."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-cairo-tree-3",
+    "kind": "site",
+    "at": [
+      "cairo"
+    ],
+    "title": {
+      "zh": "开罗断案·三",
+      "en": "Cairo Judgment · III"
+    },
+    "body": {
+      "zh": "法官宣判完毕。尼罗的风把你的名字写进这座城的传闻。",
+      "en": "The qadi finishes. Nile wind writes your name into the city’s talk."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "接受谢礼",
+          "en": "Accept thanks"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "cairo-tree-done"
+          },
+          {
+            "op": "coins",
+            "value": 5
+          },
+          {
+            "op": "codex",
+            "value": "cx-cairo-judgment"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-tree-1",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "朝觐仪轨·一",
+      "en": "Hajj Rites · I"
+    },
+    "body": {
+      "zh": "麦加城外，向导问你是否已洁净、是否知绕行的方向。",
+      "en": "Outside Mecca a guide asks if you are purified and know the circuit."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "跟从仪轨",
+          "en": "Follow the rites"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "mecca-tree-1"
+          },
+          {
+            "op": "faith",
+            "value": "islam"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-mecca-tree-2"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只作旁观记录",
+          "en": "Only record as witness"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-mecca-witness"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-mecca-tree-2"
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-tree-2",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "朝觐仪轨·二",
+      "en": "Hajj Rites · II"
+    },
+    "body": {
+      "zh": "人潮如河。你须在拥挤中保持方向，也保持记录的手不抖。",
+      "en": "The crowd is a river. Keep direction — and a steady hand for the pen."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "完成绕行",
+          "en": "Complete the circuit"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "mecca-tree-2"
+          },
+          {
+            "op": "fate",
+            "stat": "rapport",
+            "value": 1
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-mecca-tree-3"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "求签问安",
+          "en": "Draw a lot for safety"
+        },
+        "divination": "lot",
+        "pass": {
+          "text": {
+            "zh": "上签。",
+            "en": "High lot."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "mecca-tree-2"
+            },
+            {
+              "op": "goto",
+              "value": "event:ev-mecca-tree-3"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "下签：暂歇。",
+            "en": "Low lot: rest."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "ev-mecca-tree-3",
+    "kind": "site",
+    "at": [
+      "mecca"
+    ],
+    "title": {
+      "zh": "朝觐仪轨·三",
+      "en": "Hajj Rites · III"
+    },
+    "body": {
+      "zh": "仪成。你可把麦加写成归途的圆心，而非终点。",
+      "en": "Rites done. Mecca can be written as the center of returns — not an end."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "记下见证",
+          "en": "Record the witness"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "mecca-tree-done"
+          },
+          {
+            "op": "codex",
+            "value": "cx-mecca-hajj"
+          },
+          {
+            "op": "sticker",
+            "value": "st-battuta"
+          },
+          {
+            "op": "fate",
+            "stat": "travel",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
       }
     }
   }

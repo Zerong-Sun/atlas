@@ -4,6 +4,12 @@ window.FQ = window.FQ || {};
 FQ.esc = s => String(s).replace(/[&<>"']/g, c =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+FQ.showCodexEntry = function (id) {
+  const e = FQ.DB && FQ.DB.codexEntry && FQ.DB.codexEntry[id];
+  if (!e) return;
+  FQ.toast(FQ.T(e.title) + " — " + FQ.T(e.body));
+};
+
 const $app = () => document.getElementById("app");
 FQ.current = { screen: "home" };
 
@@ -11,10 +17,8 @@ FQ.current = { screen: "home" };
 /* which musical land & which kind of moment each screen belongs to (§7.2) */
 FQ.SCENE_OF = {
   title: "title", home: "map", codex: "map", profile: "map", lineage: "map",
-  journey: "map", journeyTravel: "travel", journeyMarket: "town",
-  journeyBag: "map", journeyLog: "map",
-  world: "map", worldMap: "map", chargen: "map",
-  trial: "ritual", daily: "ritual"
+  world: "map", worldMap: "map", chargen: "map", travel: "travel",
+  ritual: "ritual", trial: "ritual", daily: "ritual"
 };
 FQ.REGION_OF = {
   tarot: "chr", lenormand: "chr", runes: "nor", astrodice: "isl", western: "isl",
@@ -22,7 +26,7 @@ FQ.REGION_OF = {
   title: "chr", home: "chr", daily: "con"
 };
 /* fullscreen level stages — rituals and trials take the whole screen */
-FQ.STAGED = ["trial", "journeyTravel", "chargen", "tarot", "iching", "meihua",
+FQ.STAGED = ["trial", "travel", "ritual", "chargen", "tarot", "iching", "meihua",
   "bazi", "western", "runes", "dream", "astrodice", "jiaobei", "lenormand", "daily"];
 
 FQ.nav = function (screen, param) {
@@ -30,20 +34,19 @@ FQ.nav = function (screen, param) {
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
   document.body.classList.toggle("titled", screen === "title");
   document.body.classList.toggle("staged", FQ.STAGED.includes(screen));
-  document.body.classList.toggle("world", screen === "journey" || screen === "world" || screen === "worldMap");
+  document.body.classList.toggle("world", screen === "world" || screen === "worldMap" || screen === "travel" || screen === "chargen");
   $app().innerHTML = "";
   render(param);
   if (FQ.AU && FQ.AU.scene) {
-    FQ.AU.scene(FQ.SCENE_OF[screen] || "ritual",
-      String(screen).startsWith("journey") ? null : FQ.REGION_OF[screen]);
+    FQ.AU.scene(FQ.SCENE_OF[screen] || "ritual", FQ.REGION_OF[screen]);
   }
   /* which dock lamp burns for this screen */
-  const GROUP = { journey: "journey", journeyTravel: "journey", journeyMarket: "journey",
-    journeyBag: "journey", journeyLog: "journey", home: "journey",
-    world: "journey", worldMap: "journey", chargen: "journey",
+  const GROUP = {
+    home: "world", world: "world", worldMap: "world", chargen: "world", travel: "world", ritual: "world",
     trial: "arts",
-    records: "records", lineage: "records", codex: "records", profile: "records" };
-  const lamp = GROUP[screen] || (FQ.METHODS.some(m => m.id === screen) || screen === "daily" ? "arts" : "journey");
+    records: "records", lineage: "records", codex: "records", lore: "records", profile: "records"
+  };
+  const lamp = GROUP[screen] || (FQ.METHODS.some(m => m.id === screen) || screen === "daily" ? "arts" : "world");
   document.querySelectorAll(".tab").forEach(b => {
     b.classList.toggle("active", b.dataset.nav === lamp);
   });
@@ -146,12 +149,6 @@ FQ.SCREENS = {
   /* ===== the world is the game — home is just a doorway to it ===== */
   home() { FQ.nav(FQ.state.world && FQ.state.world.archetype ? "world" : "chargen"); },
 
-  /* v3 world / chargen registered in city.js & chargen.js; keep legacy journey as archive fallback */
-  journey() {
-    if (FQ.SCREENS.world) return FQ.SCREENS.world();
-    document.getElementById("app").innerHTML = `<div class="panel"><p>v3 world missing</p></div>`;
-  },
-
   /* ===== 术 · the arts you have been taught (GDD §4.9) =====
      The fortune-telling proper lives here, and only what a teacher on the
      road has actually given you appears. */
@@ -203,12 +200,16 @@ FQ.SCREENS = {
   /* ===== 卷宗 · one book for lineage, codex and the voyager ===== */
   records(tab) {
     tab = tab || "lineage";
-    const sub = { lineage: FQ.SCREENS.lineage, codex: FQ.SCREENS.codex, profile: FQ.SCREENS.profile }[tab]
-      || FQ.SCREENS.lineage;
+    const sub = {
+      lineage: FQ.SCREENS.lineage,
+      codex: FQ.SCREENS.codex,
+      lore: FQ.SCREENS.loreCodex,
+      profile: FQ.SCREENS.profile
+    }[tab] || FQ.SCREENS.lineage;
     sub(tab === "codex" ? "tarot" : undefined);
-    const bar = ["lineage", "codex", "profile"].map(k => `
+    const bar = ["lineage", "codex", "lore", "profile"].map(k => `
       <button class="recTab ${k === tab ? "on" : ""}" onclick="FQ.nav('records','${k}')">
-        ${FQ.t("nav." + (k === "lineage" ? "lineage" : k === "codex" ? "codex" : "profile"))}
+        ${k === "lore" ? (FQ.lang === "zh" ? "图鉴" : "Lore") : FQ.t("nav." + (k === "lineage" ? "lineage" : k === "codex" ? "codex" : "profile"))}
       </button>`).join("");
     $app().insertAdjacentHTML("afterbegin", `<div class="recbar">${bar}</div>`);
     const back = $app().querySelector(".back");
@@ -436,6 +437,42 @@ FQ.SCREENS = {
       </div>
       <div class="center"><button class="btn" onclick="FQ.doJiaobei()">${FQ.t("jiaobei.throw")}</button></div>
       <div id="jb-out"></div>`;
+  },
+
+  /* ===== lore codex (GDD §13 world knowledge) ===== */
+  loreCodex() {
+    const run = () => {
+      const w = FQ.ensureWorld();
+      const unlocked = new Set(w.codex || []);
+      const entries = (FQ.DB && FQ.DB.codex) || [];
+      const cats = {};
+      entries.forEach(e => {
+        const c = e.category || "geography";
+        if (!cats[c]) cats[c] = [];
+        cats[c].push(e);
+      });
+      const sections = Object.keys(cats).sort().map(cat => {
+        const rows = cats[cat].map(e => {
+          const got = unlocked.has(e.id);
+          return `<div class="citem ${got ? "got" : "miss"}" ${got ? `onclick="FQ.showCodexEntry('${e.id}')"` : ""}>
+            <div class="ci">${got ? "📜" : "❔"}</div>
+            <div class="cn">${got ? FQ.T(e.title) : "· · ·"}</div>
+          </div>`;
+        }).join("");
+        return `<h3 style="margin-top:14px">${FQ.esc(cat)}</h3><div class="codexgrid">${rows}</div>`;
+      }).join("");
+      $app().innerHTML = `
+        <div class="panel">
+          <h2>${FQ.lang === "zh" ? "世界图鉴" : "World Codex"}</h2>
+          <p class="dim">${FQ.lang === "zh" ? "已解锁" : "Unlocked"}
+            <b class="gold">${unlocked.size}</b> / ${entries.length}</p>
+          ${sections || "<p class='dim'>—</p>"}
+        </div>`;
+    };
+    if (FQ.DB) run();
+    else FQ.loadTables().then(run).catch(err => {
+      $app().innerHTML = `<div class="panel"><p>${FQ.esc(String(err))}</p></div>`;
+    });
   },
 
   /* ===== codex ===== */

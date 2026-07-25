@@ -151,11 +151,8 @@ FQ.ACHIEVEMENTS = [
   { id: "streak7",   ic: "🕯️", cond: s => s.streak >= 7 },
   { id: "all6",      ic: "🧭", cond: s => s.methodsTried.length >= 6 },
   { id: "hex64",     ic: "☯",  cond: s => s.col.hex.length >= 64 },
-  { id: "marco",     ic: "🐪", cond: s => !!(s.world && (s.world.visited || []).includes("khanbaliq")) || (!!s.journey && (s.journey.completed || []).includes("marco")) },
-  /* archived tower achievements — never fire without tower state */
-  { id: "tower4",    ic: "🗼", cond: s => !!(s.tower && s.tower.best >= 4) },
-  { id: "tower12",   ic: "👑", cond: s => !!(s.tower && s.tower.wins >= 1) },
-  { id: "res10",     ic: "🌈", cond: s => !!(s.tower && s.tower.resTotal >= 10) },
+  { id: "marco",     ic: "🐪", cond: s => !!(s.world && (s.world.visited || []).includes("khanbaliq")) },
+  { id: "battuta",   ic: "🕋", cond: s => !!(s.world && (s.world.visited || []).includes("mecca")) },
   { id: "dust50",    ic: "✨", cond: s => s.stardust >= 50 },
   { id: "bothroads", ic: "🗺️", cond: s => !!(s.world && (s.world.unlockedRoutes || []).length >= 2) },
   { id: "chronicle", ic: "📜", cond: s => !!(s.world && (s.world.log || []).length >= 8) },

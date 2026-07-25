@@ -225,7 +225,8 @@
     },
     "exits": [
       "rt-baghdad-hormuz",
-      "rt-baghdad-balkh"
+      "rt-baghdad-balkh",
+      "rt-baghdad-damascus"
     ],
     "specialty": "paper",
     "calendars": [
@@ -862,6 +863,359 @@
       "ref": {
         "book": "marco-polo",
         "chapterId": "v2-b2-c82"
+      }
+    }
+  },
+  {
+    "id": "tangier",
+    "name": {
+      "zh": "丹吉尔",
+      "en": "Tangier"
+    },
+    "band": "north_africa",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      -5.8,
+      35.78
+    ],
+    "view": [
+      100,
+      120
+    ],
+    "tier": "station",
+    "entryEvent": "ev-tangier-entry",
+    "sites": [
+      "ev-tangier-market",
+      "ev-tangier-faith",
+      "ev-tangier-craft"
+    ],
+    "mentor": "npc-tangier-faqih",
+    "market": {
+      "goods": [
+        "wool",
+        "leather",
+        "dates"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-tangier-cairo"
+    ],
+    "specialty": "leather",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "tangier",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "tangier"
+      }
+    }
+  },
+  {
+    "id": "cairo",
+    "name": {
+      "zh": "开罗",
+      "en": "Cairo"
+    },
+    "band": "egypt",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      31.24,
+      30.04
+    ],
+    "view": [
+      140,
+      140
+    ],
+    "tier": "station",
+    "entryEvent": "ev-cairo-entry",
+    "sites": [
+      "ev-cairo-market",
+      "ev-cairo-faith",
+      "ev-cairo-tree-1"
+    ],
+    "mentor": "npc-cairo-qadi",
+    "market": {
+      "goods": [
+        "linen",
+        "papyrus",
+        "spice"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-tangier-cairo",
+      "rt-battuta-cairo-damascus"
+    ],
+    "specialty": "linen",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "cairo",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "cairo"
+      }
+    }
+  },
+  {
+    "id": "damascus",
+    "name": {
+      "zh": "大马士革",
+      "en": "Damascus"
+    },
+    "band": "levant",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      36.28,
+      33.51
+    ],
+    "view": [
+      180,
+      160
+    ],
+    "tier": "station",
+    "entryEvent": "ev-damascus-entry",
+    "sites": [
+      "ev-damascus-market",
+      "ev-damascus-faith",
+      "ev-damascus-craft"
+    ],
+    "mentor": "npc-damascus-imam",
+    "market": {
+      "goods": [
+        "damask",
+        "steel",
+        "rosewater"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-cairo-damascus",
+      "rt-battuta-damascus-mecca",
+      "rt-baghdad-damascus"
+    ],
+    "specialty": "damask",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "damascus",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "damascus"
+      }
+    }
+  },
+  {
+    "id": "mecca",
+    "name": {
+      "zh": "麦加",
+      "en": "Mecca"
+    },
+    "band": "arabia",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      39.83,
+      21.42
+    ],
+    "view": [
+      220,
+      180
+    ],
+    "tier": "station",
+    "entryEvent": "ev-mecca-entry",
+    "sites": [
+      "ev-mecca-market",
+      "ev-mecca-faith",
+      "ev-mecca-tree-1"
+    ],
+    "mentor": "npc-mecca-guide",
+    "market": {
+      "goods": [
+        "incense",
+        "dates",
+        "water-skin"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-damascus-mecca",
+      "rt-battuta-mecca-delhi"
+    ],
+    "specialty": "incense",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "mecca",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "mecca"
+      }
+    }
+  },
+  {
+    "id": "delhi",
+    "name": {
+      "zh": "德里",
+      "en": "Delhi"
+    },
+    "band": "india",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      77.21,
+      28.61
+    ],
+    "view": [
+      260,
+      200
+    ],
+    "tier": "station",
+    "entryEvent": "ev-delhi-entry",
+    "sites": [
+      "ev-delhi-market",
+      "ev-delhi-faith",
+      "ev-delhi-craft"
+    ],
+    "mentor": "npc-delhi-munshi",
+    "market": {
+      "goods": [
+        "cotton",
+        "indigo",
+        "pepper"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-mecca-delhi",
+      "rt-battuta-delhi-calicut"
+    ],
+    "specialty": "indigo",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "delhi",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "delhi"
+      }
+    }
+  },
+  {
+    "id": "calicut",
+    "name": {
+      "zh": "卡利卡特",
+      "en": "Calicut"
+    },
+    "band": "india",
+    "culture": "indianocean",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      75.78,
+      11.25
+    ],
+    "view": [
+      300,
+      220
+    ],
+    "tier": "station",
+    "entryEvent": "ev-calicut-entry",
+    "sites": [
+      "ev-calicut-market",
+      "ev-calicut-faith",
+      "ev-calicut-craft"
+    ],
+    "mentor": "npc-calicut-nakhuda",
+    "market": {
+      "goods": [
+        "pepper",
+        "ginger",
+        "teak"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-battuta-delhi-calicut"
+    ],
+    "specialty": "pepper",
+    "calendars": [
+      "hijri"
+    ],
+    "lore": {
+      "placeId": "calicut",
+      "origin": "ibn-battuta",
+      "ref": {
+        "book": "ibn-battuta",
+        "chapterId": "calicut"
       }
     }
   }
