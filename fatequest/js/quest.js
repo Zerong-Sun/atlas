@@ -3,11 +3,17 @@
 window.FQ = window.FQ || {};
 FQ.Q = {};
 
-FQ.Q.knows = m => FQ.state.learned.includes(m);
+FQ.Q.knows = function (m) {
+  if (FQ.state.learned.includes(m)) return true;
+  const w = FQ.state.world;
+  return !!(w && Array.isArray(w.learned) && w.learned.includes(m));
+};
 FQ.Q.learn = function (method) {
   if (FQ.Q.knows(method)) return;
   FQ.state.learned.push(method);
-  FQ.state.lineage.push({ m: method, day: FQ.state.journey ? FQ.state.journey.days : 0 });
+  const days = (FQ.state.world && FQ.state.world.days) || (FQ.state.journey && FQ.state.journey.days) || 0;
+  FQ.state.lineage.push({ m: method, day: days });
+  if (FQ.state.world && !FQ.state.world.learned.includes(method)) FQ.state.world.learned.push(method);
   FQ.save();
   FQ.checkAchievements();
 };
@@ -23,7 +29,7 @@ FQ.Q.pendingAt = nodeId => FQ.mentorsAt(nodeId).filter(x => !FQ.Q.knows(x.method
 
 /* ---------- mentor encounter ---------- */
 FQ.Q.meet = function (method) {
-  const back = String(FQ.current.screen).startsWith("journey") ? "journey" : "home";
+  const back = (FQ.current.screen === "world" || String(FQ.current.screen).startsWith("journey")) ? "world" : "home";
   FQ.Q.cur = { mentor: FQ.mentorFor(method), tries: 0, phase: "intro", passed: false, back };
   FQ.AU.scene && FQ.AU.scene("ritual");
   FQ.nav("trial");
@@ -34,8 +40,8 @@ FQ.Q.showStory = function () {
   const q = FQ.Q.cur;
   if (!q || !q.mentor) return;
   const M = q.mentor;
-  const place = FQ.J.node(M.at);
-  const region = place ? place.region : "chr";
+  const place = (FQ.DB && FQ.DB.city[M.at]) || (FQ.J && FQ.J.node && FQ.J.node(M.at));
+  const region = place ? (place.band || place.region || "chr") : "chr";
   const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);
   FQ.Scene.play({
     bg: FQ.SCENE_BG[M.at], region,
@@ -55,8 +61,8 @@ FQ.SCREENS.trial = function () {
   const M = q.mentor;
   const app = document.getElementById("app");
 
-  const place = FQ.J.node(M.at);
-  const region = place ? place.region : "chr";
+  const place = (FQ.DB && FQ.DB.city[M.at]) || (FQ.J && FQ.J.node && FQ.J.node(M.at));
+  const region = place ? (place.band || place.region || "chr") : "chr";
   /* mentors have no plates yet — borrow the local keeper's likeness */
   const face = FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method);
   if (q.phase === "intro") {
@@ -248,7 +254,7 @@ FQ.Q.act = function () {
 FQ.SCREENS.lineage = function () {
   const rows = FQ.MENTORS.map(M => {
     const got = FQ.Q.knows(M.method);
-    const place = FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
+    const place = (FQ.DB && FQ.DB.city[M.at]) || (FQ.CHAPTERS && FQ.CHAPTERS[0] && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at));
     return `
       <div class="panel linrow ${got ? "got" : ""}">
         <div class="lin-ic">${FQ.art(FQ.MENTOR_FACE[M.method] || ("mentor-" + M.method), M.ic, "big")}</div>
@@ -256,7 +262,7 @@ FQ.SCREENS.lineage = function () {
           <b class="${got ? "gold" : ""}">${got ? FQ.bi(M, "zh", "en") : "· · ·"}</b>
           <div class="dim small">${got
             ? FQ.t(M.method + ".name") + " · " + FQ.bi(M, "civZh", "civEn")
-            : FQ.t("lineage.hint", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
+            : FQ.t("lineage.hint", { p: place ? (place.name ? FQ.T(place.name) : FQ.bi(place, "zh", "en")) : "?" })}</div>
           ${got ? `<div class="lin-say">${FQ.bi(M, "gradZh", "gradEn")}</div>
           <details class="lin-story">
             <summary>${FQ.t("mentor.story")}</summary>

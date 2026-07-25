@@ -1,71 +1,31 @@
-# 灵游 FateQuest 2.0 · 千载行纪
+# 远行之书 FateQuest · v3.0（PWA M0–M1）
 
-**环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions.**
+中世纪欧亚旅行开放世界。当前主路径基于 [`docs/GDD.md`](docs/GDD.md) §16 **Polo 走廊**：角色抽取 → 城市探索 → 雾地图解锁 → 出行 → 停笔结语。
 
-当前可玩实现基于 **GDD 2.0 千载行纪**（[`docs/archive/GDD-2.0-divination.md`](docs/archive/GDD-2.0-divination.md)）：**占卜不是查看结果的按钮，而是你的移动方式、资源系统与叙事之笔。**
-[`docs/GDD.md`](docs/GDD.md) 是下一阶段《远行之书》v3.0 开放世界规划，尚未完全落地。
-视觉方向「墨金曜夜」：漆黑夜空 × 金箔宋体 × 朱砂，Balatro 式卡牌手感。
+v2「占途抽签环 / 命途塔」已退出主路径，归档于 [`archive/v2-pwa/`](archive/v2-pwa/README.md)。
 
-## 两大模式 Two modes
-
-- **占途 · 千载行纪 2.0（主线）** — 马可·波罗真实路线做成**路网**：两处岔路（波斯支线纳旅伴、克尔曼沙漠 vs 赫拉特商道、驿路 vs 运河）、天数与逍遥天数（par）、种子天气参与玩法（雾迷路/顺风减日/沙暴雪封）、行进段镜头跟随 + 途中遭遇卡（三选一，必有一项「以占问之」）、九格行囊与低买高卖、城镇四键（市集/庙宇/茶肆/行馆）、旅伴帖必烈与林三娘（技能/好感/偏见证词）、断案 2.0（线索标签 + 追问 + 结论需两条相合证据）、自动书写的《行纪册》。
-- **命途塔（占卜肉鸽）** — 12 层一局，命劫在 4/8/12 层，商队在 3/9 层。三流派（塔罗行者/易卜师/符文萨满），24 枚符号棋子：真实占义直接成为效果（☀️奖励×2、䷜得失皆×2、ᛁ冻结跳层……），正逆位/变爻在揭示时才见分晓。**文明共鸣**：异文明成对打出=「对照」（各×1.5 + 一则真实文化小注），同文明=「同源」（强制正位+2）。弃换、预兆闪光、塔之逆位诅咒、星尘结算与解锁。
-
-## 命运博弈三层 (GDD §3)
-
-1. **预兆可视** — 仪式前泄露半真提示（「炉烟笔直而上」）；水晶球/庙宇祈福提高准度。
-2. **星尘改运** — 全局稀缺资源：仪式重问、塔内技能、解锁符号与流派。只能玩出来，永不出售。
-3. **结果双刃** — 失败开出别的路：关卡失利可走险路（缒城/强行入漠），连得阴筊触发暗线剧情。
-
-## 运行 Run
+## 运行
 
 ```bash
+cd fatequest
 npx serve .
-# 浏览器打开提示的本地地址（常见为 http://localhost:3000）
+# 打开提示的 http://localhost:… （勿用 file://，JSON 表需 fetch）
 ```
 
-手机浏览器打开 →「添加到主屏幕」即全屏运行；离线可玩（Service Worker 网络优先）。
+验收清单：[`docs/V3_MVP_CHECKLIST.md`](docs/V3_MVP_CHECKLIST.md)
 
-## 结构 Structure
+```bash
+node scripts/validate-tables.mjs
+node scripts/test-v3-effects.mjs
+```
+
+## 结构（摘要）
 
 ```text
-fatequest/
-├── index.html / manifest.webmanifest / sw.js
-├── docs/GDD.md            # v3.0 《远行之书》规划（进行中）
-├── docs/archive/          # GDD 2.0 等已实现蓝图归档
-├── assets/art/            # ← 你的美术素材放这里（见 ART_BRIEF.md，缺图自动回退 emoji）
-├── css/style.css          # 「墨金曜夜」设计系统 + 全部动效
-├── scripts/               # 校验 / 生成 outcomes 与 quest-story 目录
-└── js/
-    ├── i18n.js            # 中英双语文案
-    ├── data-*.js          # 塔罗/64卦/卢恩/杂项/章节路网/塔符号/任务传闻/马可游记运行时
-    ├── data-journey-extra.js  # 方案 A 扩点（~22 站）
-    ├── outcomes/          # 占卜全矩阵（key → omen+story+fx+loreRef）
-    ├── engines.js         # 确定性占卜引擎 + 预兆引擎
-    ├── state.js           # XP · 星尘 · 图鉴 · 成就（localStorage: fatequest）
-    ├── audio.js           # 全合成音效：仪式三段式 + 区域音色垫
-    ├── atmo.js            # 云雾层 · 天气粒子 · 昼夜色调 · 打字机 · 地图镜头
-    ├── juice.js           # 墨涡背景 · 卡牌跟手倾斜 · 震屏 · 计分跳数 · 素材槽
-    ├── app.js             # 壳与九秘境仪式
-    ├── journey.js         # 占途引擎（路网 + 行纪册回读）
-    └── tower.js           # 命途塔引擎
+assets/data/     # 八张系统表 + transports
+js/data-loader.js effects.js chargen.js city.js travel.js
+archive/v2-pwa/  # 旧 journey / tower / outcomes
+docs/GDD.md · SYSTEM_TABLES.md · REQ_ANALYSIS.md
 ```
 
-**目录约定**：1.0 与 2.0 内容已统一落在本目录 `fatequest/`（不再维护并列的 `fatequest2/`）。占途主线为马可·波罗路网 + 伊本·白图泰支线；命途塔为并行模式。
-## GDD 覆盖对照
-
-| GDD | 状态 |
-|---|---|
-| §3 预兆/星尘/双刃 | ✅ 全局实现 |
-| §4 路网/天数/行进段/遭遇/旅伴/城镇/行囊/日志 | ✅（行纪册含路页 / 任务 / 传闻回读；长图导出待做） |
-| §5 命途塔全套 | ✅（+弃换机制，Balatro 参照） |
-| §6 断案 2.0 | ✅ 标签/追问/证词偏见/因果计分 |
-| §7 呈现 | ✅ 雾/天气/昼夜/镜头/五拍仪式/合成音频（真实录音素材待换） |
-| §8 经济 | ✅（罗盘升级线并入占具/庙宇） |
-| §9 内容管线（FastAPI 后台） | ⏳ 未做——章节数据已按 §9.5 schema 精神组织，可平滑迁移 |
-| §11 M1/M2/M4 | ✅ 客户端部分完成；M3 属后端里程碑 |
-
-## 说明 Notes
-
-- 仅供娱乐与文明探索，不构成任何现实建议。宗教意象遵循 GDD §12 红线：不拟人化神明、圣所场景保持敬畏。
-- 概率公示：预兆准度基础 72%（法器/祈福 95%）；改运只花星尘，星尘只能玩出来。
+美术缺口见 `assets/art/ART_TODO.md` / `docs/ART_REQUIREMENTS.md`（M0–M1 用已有图 + emoji 回退）。

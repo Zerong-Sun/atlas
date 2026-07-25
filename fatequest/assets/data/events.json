@@ -1,0 +1,6690 @@
+[
+  {
+    "id": "ev-venice-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "威尼斯·入城",
+      "en": "Venice · Arrival"
+    },
+    "when": {
+      "cities": [
+        "venice"
+      ]
+    },
+    "scene": {
+      "bg": "venice",
+      "npc": null,
+      "region": "europe"
+    },
+    "body": {
+      "zh": "你走进威尼斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Venice. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-venice-acre"
+          },
+          {
+            "op": "revealMap",
+            "value": "acre"
+          },
+          {
+            "op": "codex",
+            "value": "cx-venice"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "_venice",
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "prologue"
+      }
+    }
+  },
+  {
+    "id": "ev-acre-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "阿卡·入城",
+      "en": "Acre · Arrival"
+    },
+    "when": {
+      "cities": [
+        "acre"
+      ]
+    },
+    "scene": {
+      "bg": "acre",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "你走进阿卡。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Acre. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-acre-tabriz"
+          },
+          {
+            "op": "revealMap",
+            "value": "tabriz"
+          },
+          {
+            "op": "codex",
+            "value": "cx-acre"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "_acre",
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "prologue"
+      }
+    }
+  },
+  {
+    "id": "ev-tabriz-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "大不里士·入城",
+      "en": "Tabriz · Arrival"
+    },
+    "when": {
+      "cities": [
+        "tabriz"
+      ]
+    },
+    "scene": {
+      "bg": "tabriz",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "你走进大不里士。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Tabriz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-tabriz-baghdad"
+          },
+          {
+            "op": "codex",
+            "value": "cx-tabriz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-tabriz"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "tauris",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c11"
+      }
+    }
+  },
+  {
+    "id": "ev-tabriz-market",
+    "kind": "site",
+    "title": {
+      "zh": "大不里士·市集见闻",
+      "en": "Tabriz · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "tabriz"
+      ]
+    },
+    "scene": {
+      "bg": "tabriz",
+      "npc": "npc-tebrizi",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "大不里士的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-tabriz-baghdad"
+          },
+          {
+            "op": "revealMap",
+            "value": "baghdad"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "tabriz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件turquoise",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "turquoise",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-tabriz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tabriz-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "tauris",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c11"
+      }
+    }
+  },
+  {
+    "id": "ev-tabriz-faith",
+    "kind": "site",
+    "title": {
+      "zh": "大不里士·信仰之所",
+      "en": "Tabriz · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "tabriz"
+      ]
+    },
+    "scene": {
+      "bg": "tabriz",
+      "npc": "npc-tebrizi",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "大不里士的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-tabriz-baghdad"
+          },
+          {
+            "op": "revealMap",
+            "value": "baghdad"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "tabriz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件turquoise",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "turquoise",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-tabriz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tabriz-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "tauris",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c11"
+      }
+    }
+  },
+  {
+    "id": "ev-tabriz-craft",
+    "kind": "site",
+    "title": {
+      "zh": "大不里士·物产与风俗",
+      "en": "Tabriz · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "tabriz"
+      ]
+    },
+    "scene": {
+      "bg": "tabriz",
+      "npc": "npc-tebrizi",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "大不里士的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-tabriz-baghdad"
+          },
+          {
+            "op": "revealMap",
+            "value": "baghdad"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "tabriz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件turquoise",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "turquoise",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-tabriz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-tabriz-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "tauris",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c11"
+      }
+    }
+  },
+  {
+    "id": "ev-baghdad-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "报达·入城",
+      "en": "Baghdad · Arrival"
+    },
+    "when": {
+      "cities": [
+        "baghdad"
+      ]
+    },
+    "scene": {
+      "bg": "baghdad",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "你走进报达。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Baghdad. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-baghdad-hormuz"
+          },
+          {
+            "op": "codex",
+            "value": "cx-baghdad"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-baghdad"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "baudas",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c6"
+      }
+    }
+  },
+  {
+    "id": "ev-baghdad-market",
+    "kind": "site",
+    "title": {
+      "zh": "报达·市集见闻",
+      "en": "Baghdad · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "baghdad"
+      ]
+    },
+    "scene": {
+      "bg": "baghdad",
+      "npc": "npc-yusuf-scribe",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "报达的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-baghdad-hormuz"
+          },
+          {
+            "op": "revealMap",
+            "value": "hormuz"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "baghdad",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件paper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "paper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-baghdad"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-baghdad-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "baudas",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c6"
+      }
+    }
+  },
+  {
+    "id": "ev-baghdad-faith",
+    "kind": "site",
+    "title": {
+      "zh": "报达·信仰之所",
+      "en": "Baghdad · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "baghdad"
+      ]
+    },
+    "scene": {
+      "bg": "baghdad",
+      "npc": "npc-yusuf-scribe",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "报达的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-baghdad-hormuz"
+          },
+          {
+            "op": "revealMap",
+            "value": "hormuz"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "baghdad",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件paper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "paper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-baghdad"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-baghdad-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "baudas",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c6"
+      }
+    }
+  },
+  {
+    "id": "ev-baghdad-craft",
+    "kind": "site",
+    "title": {
+      "zh": "报达·物产与风俗",
+      "en": "Baghdad · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "baghdad"
+      ]
+    },
+    "scene": {
+      "bg": "baghdad",
+      "npc": "npc-yusuf-scribe",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "报达的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-baghdad-hormuz"
+          },
+          {
+            "op": "revealMap",
+            "value": "hormuz"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "baghdad",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件paper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "paper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-baghdad"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-baghdad-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "baudas",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c6"
+      }
+    }
+  },
+  {
+    "id": "ev-hormuz-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "忽鲁谟斯·入城",
+      "en": "Hormuz · Arrival"
+    },
+    "when": {
+      "cities": [
+        "hormuz"
+      ]
+    },
+    "scene": {
+      "bg": "hormuz",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "你走进忽鲁谟斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Hormuz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-hormuz-balkh"
+          },
+          {
+            "op": "codex",
+            "value": "cx-hormuz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-hormuz"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "hormos",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c19"
+      }
+    }
+  },
+  {
+    "id": "ev-hormuz-market",
+    "kind": "site",
+    "title": {
+      "zh": "忽鲁谟斯·市集见闻",
+      "en": "Hormuz · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "hormuz"
+      ]
+    },
+    "scene": {
+      "bg": "hormuz",
+      "npc": "npc-nadira",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "忽鲁谟斯的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hormuz-balkh"
+          },
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hormuz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件pepper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "pepper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hormuz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hormuz-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "hormos",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c19"
+      }
+    }
+  },
+  {
+    "id": "ev-hormuz-faith",
+    "kind": "site",
+    "title": {
+      "zh": "忽鲁谟斯·信仰之所",
+      "en": "Hormuz · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "hormuz"
+      ]
+    },
+    "scene": {
+      "bg": "hormuz",
+      "npc": "npc-nadira",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "忽鲁谟斯的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hormuz-balkh"
+          },
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hormuz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件pepper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "pepper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hormuz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hormuz-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "hormos",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c19"
+      }
+    }
+  },
+  {
+    "id": "ev-hormuz-craft",
+    "kind": "site",
+    "title": {
+      "zh": "忽鲁谟斯·物产与风俗",
+      "en": "Hormuz · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "hormuz"
+      ]
+    },
+    "scene": {
+      "bg": "hormuz",
+      "npc": "npc-nadira",
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "忽鲁谟斯的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hormuz-balkh"
+          },
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hormuz",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件pepper",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "pepper",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hormuz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hormuz-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "hormos",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c19"
+      }
+    }
+  },
+  {
+    "id": "ev-balkh-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "巴里黑·入城",
+      "en": "Balkh · Arrival"
+    },
+    "when": {
+      "cities": [
+        "balkh"
+      ]
+    },
+    "scene": {
+      "bg": "balkh",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "你走进巴里黑。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Balkh. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-balkh-samarkand"
+          },
+          {
+            "op": "codex",
+            "value": "cx-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-balkh"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "balc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c24"
+      }
+    }
+  },
+  {
+    "id": "ev-balkh-market",
+    "kind": "site",
+    "title": {
+      "zh": "巴里黑·市集见闻",
+      "en": "Balkh · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "balkh"
+      ]
+    },
+    "scene": {
+      "bg": "balkh",
+      "npc": "npc-balkh-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "巴里黑的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-balkh-samarkand"
+          },
+          {
+            "op": "revealMap",
+            "value": "samarkand"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "balkh",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件melon",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "melon",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-balkh-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "balc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c24"
+      }
+    }
+  },
+  {
+    "id": "ev-balkh-faith",
+    "kind": "site",
+    "title": {
+      "zh": "巴里黑·信仰之所",
+      "en": "Balkh · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "balkh"
+      ]
+    },
+    "scene": {
+      "bg": "balkh",
+      "npc": "npc-balkh-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "巴里黑的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-balkh-samarkand"
+          },
+          {
+            "op": "revealMap",
+            "value": "samarkand"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "balkh",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件melon",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "melon",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-balkh-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "balc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c24"
+      }
+    }
+  },
+  {
+    "id": "ev-balkh-craft",
+    "kind": "site",
+    "title": {
+      "zh": "巴里黑·物产与风俗",
+      "en": "Balkh · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "balkh"
+      ]
+    },
+    "scene": {
+      "bg": "balkh",
+      "npc": "npc-balkh-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "巴里黑的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-balkh-samarkand"
+          },
+          {
+            "op": "revealMap",
+            "value": "samarkand"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "balkh",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件melon",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "melon",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-balkh-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "balc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c24"
+      }
+    }
+  },
+  {
+    "id": "ev-samarkand-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "撒马尔罕·入城",
+      "en": "Samarkand · Arrival"
+    },
+    "when": {
+      "cities": [
+        "samarkand"
+      ]
+    },
+    "scene": {
+      "bg": "samarkand",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "你走进撒马尔罕。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Samarkand. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-samarkand-kashgar"
+          },
+          {
+            "op": "codex",
+            "value": "cx-samarkand"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-samarkand"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "samarcan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c34"
+      }
+    }
+  },
+  {
+    "id": "ev-samarkand-market",
+    "kind": "site",
+    "title": {
+      "zh": "撒马尔罕·市集见闻",
+      "en": "Samarkand · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "samarkand"
+      ]
+    },
+    "scene": {
+      "bg": "samarkand",
+      "npc": "npc-paper-miller",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "撒马尔罕的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-samarkand-kashgar"
+          },
+          {
+            "op": "revealMap",
+            "value": "kashgar"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "samarkand",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件samarkand-tile",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "samarkand-tile",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-samarkand"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-samarkand-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "samarcan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c34"
+      }
+    }
+  },
+  {
+    "id": "ev-samarkand-faith",
+    "kind": "site",
+    "title": {
+      "zh": "撒马尔罕·信仰之所",
+      "en": "Samarkand · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "samarkand"
+      ]
+    },
+    "scene": {
+      "bg": "samarkand",
+      "npc": "npc-paper-miller",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "撒马尔罕的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-samarkand-kashgar"
+          },
+          {
+            "op": "revealMap",
+            "value": "kashgar"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "samarkand",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件samarkand-tile",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "samarkand-tile",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-samarkand"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-samarkand-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "samarcan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c34"
+      }
+    }
+  },
+  {
+    "id": "ev-samarkand-craft",
+    "kind": "site",
+    "title": {
+      "zh": "撒马尔罕·物产与风俗",
+      "en": "Samarkand · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "samarkand"
+      ]
+    },
+    "scene": {
+      "bg": "samarkand",
+      "npc": "npc-paper-miller",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "撒马尔罕的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-samarkand-kashgar"
+          },
+          {
+            "op": "revealMap",
+            "value": "kashgar"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "samarkand",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件samarkand-tile",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "samarkand-tile",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-samarkand"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-samarkand-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "samarcan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c34"
+      }
+    }
+  },
+  {
+    "id": "ev-kashgar-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "可失合儿·入城",
+      "en": "Kashgar · Arrival"
+    },
+    "when": {
+      "cities": [
+        "kashgar"
+      ]
+    },
+    "scene": {
+      "bg": "kashgar",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "你走进可失合儿。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Kashgar. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-kashgar-khotan"
+          },
+          {
+            "op": "codex",
+            "value": "cx-kashgar"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-kashgar"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "cascar",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c32"
+      }
+    }
+  },
+  {
+    "id": "ev-kashgar-market",
+    "kind": "site",
+    "title": {
+      "zh": "可失合儿·市集见闻",
+      "en": "Kashgar · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "kashgar"
+      ]
+    },
+    "scene": {
+      "bg": "kashgar",
+      "npc": "npc-kashgar-lama",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "可失合儿的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-kashgar-khotan"
+          },
+          {
+            "op": "revealMap",
+            "value": "khotan"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "kashgar",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件cotton",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "cotton",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-kashgar"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-kashgar-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cascar",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c32"
+      }
+    }
+  },
+  {
+    "id": "ev-kashgar-faith",
+    "kind": "site",
+    "title": {
+      "zh": "可失合儿·信仰之所",
+      "en": "Kashgar · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "kashgar"
+      ]
+    },
+    "scene": {
+      "bg": "kashgar",
+      "npc": "npc-kashgar-lama",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "可失合儿的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-kashgar-khotan"
+          },
+          {
+            "op": "revealMap",
+            "value": "khotan"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "kashgar",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件cotton",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "cotton",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-kashgar"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-kashgar-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cascar",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c32"
+      }
+    }
+  },
+  {
+    "id": "ev-kashgar-craft",
+    "kind": "site",
+    "title": {
+      "zh": "可失合儿·物产与风俗",
+      "en": "Kashgar · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "kashgar"
+      ]
+    },
+    "scene": {
+      "bg": "kashgar",
+      "npc": "npc-kashgar-lama",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "可失合儿的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-kashgar-khotan"
+          },
+          {
+            "op": "revealMap",
+            "value": "khotan"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "kashgar",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件cotton",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "cotton",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-kashgar"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-kashgar-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cascar",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c32"
+      }
+    }
+  },
+  {
+    "id": "ev-khotan-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "忽炭·入城",
+      "en": "Khotan · Arrival"
+    },
+    "when": {
+      "cities": [
+        "khotan"
+      ]
+    },
+    "scene": {
+      "bg": "khotan",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "你走进忽炭。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Khotan. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-khotan-lop"
+          },
+          {
+            "op": "codex",
+            "value": "cx-khotan"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-khotan"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "cotan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c36"
+      }
+    }
+  },
+  {
+    "id": "ev-khotan-market",
+    "kind": "site",
+    "title": {
+      "zh": "忽炭·市集见闻",
+      "en": "Khotan · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "khotan"
+      ]
+    },
+    "scene": {
+      "bg": "khotan",
+      "npc": "npc-jade-broker",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "忽炭的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khotan-lop"
+          },
+          {
+            "op": "revealMap",
+            "value": "lop"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khotan",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件khotan-jade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "khotan-jade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khotan"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khotan-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cotan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c36"
+      }
+    }
+  },
+  {
+    "id": "ev-khotan-faith",
+    "kind": "site",
+    "title": {
+      "zh": "忽炭·信仰之所",
+      "en": "Khotan · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "khotan"
+      ]
+    },
+    "scene": {
+      "bg": "khotan",
+      "npc": "npc-jade-broker",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "忽炭的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khotan-lop"
+          },
+          {
+            "op": "revealMap",
+            "value": "lop"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khotan",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件khotan-jade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "khotan-jade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khotan"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khotan-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cotan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c36"
+      }
+    }
+  },
+  {
+    "id": "ev-khotan-craft",
+    "kind": "site",
+    "title": {
+      "zh": "忽炭·物产与风俗",
+      "en": "Khotan · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "khotan"
+      ]
+    },
+    "scene": {
+      "bg": "khotan",
+      "npc": "npc-jade-broker",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "忽炭的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khotan-lop"
+          },
+          {
+            "op": "revealMap",
+            "value": "lop"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khotan",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件khotan-jade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "khotan-jade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khotan"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "astrodice"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khotan-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cotan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c36"
+      }
+    }
+  },
+  {
+    "id": "ev-lop-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "罗布·入城",
+      "en": "Lop · Arrival"
+    },
+    "when": {
+      "cities": [
+        "lop"
+      ]
+    },
+    "scene": {
+      "bg": "lop",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "你走进罗布。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Lop. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-lop-shangdu"
+          },
+          {
+            "op": "codex",
+            "value": "cx-lop"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-lop"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "lop",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c39"
+      }
+    }
+  },
+  {
+    "id": "ev-lop-market",
+    "kind": "site",
+    "title": {
+      "zh": "罗布·市集见闻",
+      "en": "Lop · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "lop"
+      ]
+    },
+    "scene": {
+      "bg": "lop",
+      "npc": "npc-desert-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "罗布的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-lop-shangdu"
+          },
+          {
+            "op": "revealMap",
+            "value": "shangdu"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "lop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件salt",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "salt",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-lop"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-lop-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "lop",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c39"
+      }
+    }
+  },
+  {
+    "id": "ev-lop-faith",
+    "kind": "site",
+    "title": {
+      "zh": "罗布·信仰之所",
+      "en": "Lop · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "lop"
+      ]
+    },
+    "scene": {
+      "bg": "lop",
+      "npc": "npc-desert-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "罗布的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-lop-shangdu"
+          },
+          {
+            "op": "revealMap",
+            "value": "shangdu"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "lop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件salt",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "salt",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-lop"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-lop-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "lop",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c39"
+      }
+    }
+  },
+  {
+    "id": "ev-lop-craft",
+    "kind": "site",
+    "title": {
+      "zh": "罗布·物产与风俗",
+      "en": "Lop · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "lop"
+      ]
+    },
+    "scene": {
+      "bg": "lop",
+      "npc": "npc-desert-guide",
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "罗布的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-lop-shangdu"
+          },
+          {
+            "op": "revealMap",
+            "value": "shangdu"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "lop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件salt",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "salt",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-lop"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-lop-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "lop",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c39"
+      }
+    }
+  },
+  {
+    "id": "ev-shangdu-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "上都·入城",
+      "en": "Shangdu · Arrival"
+    },
+    "when": {
+      "cities": [
+        "shangdu"
+      ]
+    },
+    "scene": {
+      "bg": "shangdu",
+      "npc": null,
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "你走进上都。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Shangdu. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-shangdu-khanbaliq"
+          },
+          {
+            "op": "codex",
+            "value": "cx-shangdu"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "lot",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-shangdu"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "chandu",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "ev-shangdu-market",
+    "kind": "site",
+    "title": {
+      "zh": "上都·市集见闻",
+      "en": "Shangdu · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "shangdu"
+      ]
+    },
+    "scene": {
+      "bg": "shangdu",
+      "npc": "npc-yelu",
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "上都的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-shangdu-khanbaliq"
+          },
+          {
+            "op": "revealMap",
+            "value": "khanbaliq"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "shangdu",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件horse",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "horse",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-shangdu"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-shangdu-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "chandu",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "ev-shangdu-faith",
+    "kind": "site",
+    "title": {
+      "zh": "上都·信仰之所",
+      "en": "Shangdu · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "shangdu"
+      ]
+    },
+    "scene": {
+      "bg": "shangdu",
+      "npc": "npc-yelu",
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "上都的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-shangdu-khanbaliq"
+          },
+          {
+            "op": "revealMap",
+            "value": "khanbaliq"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "shangdu",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件horse",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "horse",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-shangdu"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-shangdu-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "chandu",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "ev-shangdu-craft",
+    "kind": "site",
+    "title": {
+      "zh": "上都·物产与风俗",
+      "en": "Shangdu · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "shangdu"
+      ]
+    },
+    "scene": {
+      "bg": "shangdu",
+      "npc": "npc-yelu",
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "上都的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-shangdu-khanbaliq"
+          },
+          {
+            "op": "revealMap",
+            "value": "khanbaliq"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "shangdu",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件horse",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "horse",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-shangdu"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "lot"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-shangdu-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "chandu",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "ev-khanbaliq-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "汗八里·入城",
+      "en": "Khanbaliq · Arrival"
+    },
+    "when": {
+      "cities": [
+        "khanbaliq"
+      ]
+    },
+    "scene": {
+      "bg": "khanbaliq",
+      "npc": null,
+      "region": "china"
+    },
+    "body": {
+      "zh": "你走进汗八里。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Khanbaliq. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-khanbaliq-hangzhou"
+          },
+          {
+            "op": "codex",
+            "value": "cx-khanbaliq"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-khanbaliq"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "cambaluc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c10"
+      }
+    }
+  },
+  {
+    "id": "ev-khanbaliq-market",
+    "kind": "site",
+    "title": {
+      "zh": "汗八里·市集见闻",
+      "en": "Khanbaliq · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "khanbaliq"
+      ]
+    },
+    "scene": {
+      "bg": "khanbaliq",
+      "npc": "npc-sariman",
+      "region": "china"
+    },
+    "body": {
+      "zh": "汗八里的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khanbaliq-hangzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "hangzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khanbaliq",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件silk-brocade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "silk-brocade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khanbaliq"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khanbaliq-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cambaluc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c10"
+      }
+    }
+  },
+  {
+    "id": "ev-khanbaliq-faith",
+    "kind": "site",
+    "title": {
+      "zh": "汗八里·信仰之所",
+      "en": "Khanbaliq · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "khanbaliq"
+      ]
+    },
+    "scene": {
+      "bg": "khanbaliq",
+      "npc": "npc-sariman",
+      "region": "china"
+    },
+    "body": {
+      "zh": "汗八里的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khanbaliq-hangzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "hangzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khanbaliq",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件silk-brocade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "silk-brocade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khanbaliq"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khanbaliq-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cambaluc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c10"
+      }
+    }
+  },
+  {
+    "id": "ev-khanbaliq-craft",
+    "kind": "site",
+    "title": {
+      "zh": "汗八里·物产与风俗",
+      "en": "Khanbaliq · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "khanbaliq"
+      ]
+    },
+    "scene": {
+      "bg": "khanbaliq",
+      "npc": "npc-sariman",
+      "region": "china"
+    },
+    "body": {
+      "zh": "汗八里的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-khanbaliq-hangzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "hangzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "khanbaliq",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件silk-brocade",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "silk-brocade",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-khanbaliq"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-khanbaliq-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "cambaluc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c10"
+      }
+    }
+  },
+  {
+    "id": "ev-hangzhou-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "行在·入城",
+      "en": "Kinsay · Arrival"
+    },
+    "when": {
+      "cities": [
+        "hangzhou"
+      ]
+    },
+    "scene": {
+      "bg": "hangzhou",
+      "npc": null,
+      "region": "china"
+    },
+    "body": {
+      "zh": "你走进行在。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Kinsay. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-hangzhou-quanzhou"
+          },
+          {
+            "op": "codex",
+            "value": "cx-hangzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-hangzhou"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "great-city-of-kinsay",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c76"
+      }
+    }
+  },
+  {
+    "id": "ev-hangzhou-market",
+    "kind": "site",
+    "title": {
+      "zh": "行在·市集见闻",
+      "en": "Kinsay · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "hangzhou"
+      ]
+    },
+    "scene": {
+      "bg": "hangzhou",
+      "npc": "npc-shen-wu",
+      "region": "china"
+    },
+    "body": {
+      "zh": "行在的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hangzhou-quanzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "quanzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hangzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件hangzhou-fan",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "hangzhou-fan",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hangzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hangzhou-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-city-of-kinsay",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c76"
+      }
+    }
+  },
+  {
+    "id": "ev-hangzhou-faith",
+    "kind": "site",
+    "title": {
+      "zh": "行在·信仰之所",
+      "en": "Kinsay · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "hangzhou"
+      ]
+    },
+    "scene": {
+      "bg": "hangzhou",
+      "npc": "npc-shen-wu",
+      "region": "china"
+    },
+    "body": {
+      "zh": "行在的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hangzhou-quanzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "quanzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hangzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件hangzhou-fan",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "hangzhou-fan",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hangzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hangzhou-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-city-of-kinsay",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c76"
+      }
+    }
+  },
+  {
+    "id": "ev-hangzhou-craft",
+    "kind": "site",
+    "title": {
+      "zh": "行在·物产与风俗",
+      "en": "Kinsay · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "hangzhou"
+      ]
+    },
+    "scene": {
+      "bg": "hangzhou",
+      "npc": "npc-shen-wu",
+      "region": "china"
+    },
+    "body": {
+      "zh": "行在的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "unlockRoute",
+            "value": "rt-hangzhou-quanzhou"
+          },
+          {
+            "op": "revealMap",
+            "value": "quanzhou"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "hangzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件hangzhou-fan",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "hangzhou-fan",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-hangzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-hangzhou-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-city-of-kinsay",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c76"
+      }
+    }
+  },
+  {
+    "id": "ev-quanzhou-entry",
+    "kind": "entry",
+    "title": {
+      "zh": "刺桐·入城",
+      "en": "Zayton · Arrival"
+    },
+    "when": {
+      "cities": [
+        "quanzhou"
+      ]
+    },
+    "scene": {
+      "bg": "quanzhou",
+      "npc": null,
+      "region": "china"
+    },
+    "body": {
+      "zh": "你走进刺桐。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。",
+      "en": "You enter Zayton. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "打听东去的路",
+          "en": "Ask about the eastward road"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-acre-tabriz"
+          },
+          {
+            "op": "codex",
+            "value": "cx-quanzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先找落脚处",
+          "en": "Find lodging first"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以占卜择吉",
+          "en": "Divine an auspicious hour"
+        },
+        "divination": "iching",
+        "pass": {
+          "text": {
+            "zh": "兆头清朗。",
+            "en": "The omen clears."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "good-entry-quanzhou"
+            },
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "兆头含糊，宜缓行。",
+            "en": "The omen is muddy; wait."
+          },
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "great-haven-of-zayton",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c82"
+      }
+    }
+  },
+  {
+    "id": "ev-quanzhou-market",
+    "kind": "site",
+    "title": {
+      "zh": "刺桐·市集见闻",
+      "en": "Zayton · Market Walk"
+    },
+    "when": {
+      "cities": [
+        "quanzhou"
+      ]
+    },
+    "scene": {
+      "bg": "quanzhou",
+      "npc": "npc-chen-po",
+      "region": "china"
+    },
+    "body": {
+      "zh": "刺桐的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Market Walk in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-market"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "quanzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件dehua-porcelain",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "dehua-porcelain",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-quanzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-market"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-haven-of-zayton",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c82"
+      }
+    }
+  },
+  {
+    "id": "ev-quanzhou-faith",
+    "kind": "site",
+    "title": {
+      "zh": "刺桐·信仰之所",
+      "en": "Zayton · Place of Faith"
+    },
+    "when": {
+      "cities": [
+        "quanzhou"
+      ]
+    },
+    "scene": {
+      "bg": "quanzhou",
+      "npc": "npc-chen-po",
+      "region": "china"
+    },
+    "body": {
+      "zh": "刺桐的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Place of Faith in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-faith"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "quanzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件dehua-porcelain",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "dehua-porcelain",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-quanzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-faith"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-haven-of-zayton",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c82"
+      }
+    }
+  },
+  {
+    "id": "ev-quanzhou-craft",
+    "kind": "site",
+    "title": {
+      "zh": "刺桐·物产与风俗",
+      "en": "Zayton · Crafts & Customs"
+    },
+    "when": {
+      "cities": [
+        "quanzhou"
+      ]
+    },
+    "scene": {
+      "bg": "quanzhou",
+      "npc": "npc-chen-po",
+      "region": "china"
+    },
+    "body": {
+      "zh": "刺桐的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。",
+      "en": "Crafts & Customs in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "向本地人打听路线",
+          "en": "Ask locals about the road"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-craft"
+          },
+          {
+            "op": "reputation",
+            "scope": "city",
+            "id": "quanzhou",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "买一件dehua-porcelain",
+          "en": "Buy the local specialty"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "dehua-porcelain",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -8
+          },
+          {
+            "op": "sticker",
+            "value": "st-quanzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "向导师请教占法",
+          "en": "Seek the mentor's art"
+        },
+        "effects": [
+          {
+            "op": "learnDivination",
+            "value": "iching"
+          },
+          {
+            "op": "goto",
+            "value": "mentor"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只是路过观望",
+          "en": "Only look, then leave"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-quanzhou-craft"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "placeId": "great-haven-of-zayton",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c82"
+      }
+    }
+  },
+  {
+    "id": "ev-road-bandits",
+    "title": {
+      "zh": "盗匪阴影",
+      "en": "Bandit Shade"
+    },
+    "body": {
+      "zh": "远处尘头有可疑骑影。",
+      "en": "Suspicious riders raise dust ahead."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "绕道多走一日",
+          "en": "Detour a day"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以星骰问吉凶",
+          "en": "Ask the astral dice"
+        },
+        "divination": "astrodice",
+        "pass": {
+          "effects": [
+            {
+              "op": "flag",
+              "value": "bandits-avoided"
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "coins",
+              "value": -5
+            },
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "kind": "road",
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-storm",
+    "title": {
+      "zh": "风沙/风暴",
+      "en": "Storm"
+    },
+    "body": {
+      "zh": "天地忽然变色。",
+      "en": "The sky turns."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "就地扎营",
+          "en": "Camp at once"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "强行赶路",
+          "en": "Push on"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          },
+          {
+            "op": "fate",
+            "stat": "travel",
+            "value": -1
+          }
+        ]
+      }
+    ],
+    "kind": "road",
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-caravan",
+    "title": {
+      "zh": "商队夜火",
+      "en": "Caravan Fire"
+    },
+    "body": {
+      "zh": "他队邀请你共火。",
+      "en": "Another caravan invites you to the fire."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "交换情报",
+          "en": "Trade news"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "rt-tabriz-balkh"
+          },
+          {
+            "op": "codex",
+            "value": "cx-caravan-talk"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "交换货物",
+          "en": "Trade goods"
+        },
+        "effects": [
+          {
+            "op": "goods",
+            "id": "spice",
+            "value": 1
+          },
+          {
+            "op": "coins",
+            "value": -4
+          }
+        ]
+      }
+    ],
+    "kind": "road",
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "road"
+      }
+    }
+  },
+  {
+    "id": "ev-road-venice-acre",
+    "kind": "road",
+    "title": {
+      "zh": "威尼斯→阿卡",
+      "en": "venice → acre"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "europe"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "acre"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-venice-acre"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-acre-tabriz",
+    "kind": "road",
+    "title": {
+      "zh": "阿卡→大不里士",
+      "en": "acre → tabriz"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "tabriz"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-acre-tabriz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-tabriz-baghdad",
+    "kind": "road",
+    "title": {
+      "zh": "大不里士→报达",
+      "en": "tabriz → baghdad"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "baghdad"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-tabriz-baghdad"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-baghdad-hormuz",
+    "kind": "road",
+    "title": {
+      "zh": "报达→忽鲁谟斯",
+      "en": "baghdad → hormuz"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "hormuz"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-baghdad-hormuz"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-tabriz-balkh",
+    "kind": "road",
+    "title": {
+      "zh": "大不里士→巴里黑",
+      "en": "tabriz → balkh"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-tabriz-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-hormuz-balkh",
+    "kind": "road",
+    "title": {
+      "zh": "忽鲁谟斯→巴里黑",
+      "en": "hormuz → balkh"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-hormuz-balkh"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-balkh-samarkand",
+    "kind": "road",
+    "title": {
+      "zh": "巴里黑→撒马尔罕",
+      "en": "balkh → samarkand"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "samarkand"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-balkh-samarkand"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-samarkand-kashgar",
+    "kind": "road",
+    "title": {
+      "zh": "撒马尔罕→可失合儿",
+      "en": "samarkand → kashgar"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "kashgar"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-samarkand-kashgar"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-kashgar-khotan",
+    "kind": "road",
+    "title": {
+      "zh": "可失合儿→忽炭",
+      "en": "kashgar → khotan"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "khotan"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-kashgar-khotan"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-khotan-lop",
+    "kind": "road",
+    "title": {
+      "zh": "忽炭→罗布",
+      "en": "khotan → lop"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "lop"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-khotan-lop"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-lop-shangdu",
+    "kind": "road",
+    "title": {
+      "zh": "罗布→上都",
+      "en": "lop → shangdu"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "shangdu"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-lop-shangdu"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-shangdu-khanbaliq",
+    "kind": "road",
+    "title": {
+      "zh": "上都→汗八里",
+      "en": "shangdu → khanbaliq"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "khanbaliq"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-shangdu-khanbaliq"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-khanbaliq-hangzhou",
+    "kind": "road",
+    "title": {
+      "zh": "汗八里→行在",
+      "en": "khanbaliq → hangzhou"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "china"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "hangzhou"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-khanbaliq-hangzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-hangzhou-quanzhou",
+    "kind": "road",
+    "title": {
+      "zh": "行在→刺桐",
+      "en": "hangzhou → quanzhou"
+    },
+    "when": {
+      "flags": []
+    },
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "china"
+    },
+    "body": {
+      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
+      "en": "Dust and camel-bells. Decide how this stage will go."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 0
+          },
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站虚实",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "quanzhou"
+          },
+          {
+            "op": "codex",
+            "value": "cx-rt-hangzhou-quanzhou"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "以易占问险",
+          "en": "Ask the Changes"
+        },
+        "divination": "iching",
+        "pass": {
+          "effects": [
+            {
+              "op": "fate",
+              "stat": "travel",
+              "value": 1
+            }
+          ]
+        },
+        "fail": {
+          "effects": [
+            {
+              "op": "days",
+              "value": 1
+            }
+          ]
+        }
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-baghdad-balkh",
+    "kind": "road",
+    "title": {
+      "zh": "报达→巴里黑",
+      "en": "baghdad → balkh"
+    },
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "west_asia"
+    },
+    "body": {
+      "zh": "岔路上的尘土。",
+      "en": "Dust on a fork of the road."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "balkh"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-kashgar-lop",
+    "kind": "road",
+    "title": {
+      "zh": "可失合儿→罗布",
+      "en": "kashgar → lop"
+    },
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "岔路上的尘土。",
+      "en": "Dust on a fork of the road."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "lop"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-road-samarkand-khotan",
+    "kind": "road",
+    "title": {
+      "zh": "撒马尔罕→忽炭",
+      "en": "samarkand → khotan"
+    },
+    "when": {},
+    "scene": {
+      "bg": "road",
+      "npc": null,
+      "region": "central_asia"
+    },
+    "body": {
+      "zh": "岔路上的尘土。",
+      "en": "Dust on a fork of the road."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "稳妥随队",
+          "en": "Stay with the caravan"
+        },
+        "effects": [
+          {
+            "op": "coins",
+            "value": -1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "打听下站",
+          "en": "Ask about the next station"
+        },
+        "effects": [
+          {
+            "op": "revealMap",
+            "value": "khotan"
+          }
+        ]
+      }
+    ],
+    "once": false,
+    "lore": {
+      "origin": "authored",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "ev-shangdu-paiza",
+    "kind": "site",
+    "title": {
+      "zh": "上都·金牌",
+      "en": "Shangdu · Paiza"
+    },
+    "when": {
+      "cities": [
+        "shangdu"
+      ]
+    },
+    "scene": {
+      "bg": "shangdu",
+      "npc": "npc-yelu",
+      "region": "steppe"
+    },
+    "body": {
+      "zh": "太史院值房里，有人替你求一枚站赤金牌——出示则可换驿马。",
+      "en": "At the Bureau they petition a yam paiza for you — show it to change horses."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "领受金牌",
+          "en": "Accept the paiza"
+        },
+        "effects": [
+          {
+            "op": "item",
+            "value": "paiza"
+          },
+          {
+            "op": "flag",
+            "value": "has-paiza"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "婉谢",
+          "en": "Decline"
+        },
+        "effects": [
+          {
+            "op": "codex",
+            "value": "cx-paiza-declined"
+          }
+        ]
+      }
+    ],
+    "once": true,
+    "lore": {
+      "placeId": "chandu",
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  }
+]

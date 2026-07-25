@@ -212,6 +212,14 @@ FQ.MAP.beast = function (kind, x, y, s) {
 
 /* ---------- the whole map ---------- */
 FQ.MAP.render = function (opt) {
+  /* v3 main path no longer loads journey.js — guard legacy SVG map */
+  if (!FQ.J || !FQ.J.node || !FQ.J.gatePassed || !FQ.JOURNEY_REGIONS) {
+    return `<svg class="mmap" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg">
+      <text x="410" y="210" text-anchor="middle" fill="#6a5a40" font-size="14">
+        Map requires v2 journey (archived) — use worldMap screen
+      </text>
+    </svg>`;
+  }
   const ch = opt.chapter, j = opt.state, R = FQ.JOURNEY_REGIONS;
   const M = ch.mapArt || FQ.MAP.DEFAULT_ART;
   const regionPoly = {

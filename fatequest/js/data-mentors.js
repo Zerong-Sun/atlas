@@ -72,7 +72,7 @@ FQ.MENTORS = [
     gradEn: "'Speak the ill hours as well as the fair.' She draws a circle on your palm. 'The stars may mislead. The reader must not.'"
   },
   {
-    method: "meihua", at: "pamir", ic: "🌸",
+    method: "meihua", at: "kashgar", ic: "🌸",
     zh: "西行僧 明远", en: "Mingyuan, the Westbound Monk",
     civZh: "帕米尔 · 雪线驿棚", civEn: "The Pamir · a shelter at the snowline",
     introZh: "雪线上的一间矮石棚里，一个汉地僧人正在烤几块冻得像石头一样的饼。他叫明远，从汴梁出发往西走了三年——他说他的上师托梦告诉他，须到「日没之处」寻一部失传的经书。他走到帕米尔时发现经书只是一个寓言，但已经不想回去了。『邵康节说，观梅落而知天机——不必等蓍草，不必备铜钱。此刻的数就是卦：驼铃响几声，你手边有几块柴。天机不在远处，在手边。』他掰了一小块饼放在火边，让饼上的冰慢慢化成水珠：『你们威尼斯也有失传的东西吗？——不用回答，你的脚步已经说了。人走路，总是为了找一种已经忘了的东西。』",

@@ -1,0 +1,168 @@
+[
+  {
+    "id": "iching",
+    "name": {
+      "zh": "易占",
+      "en": "I Ching"
+    },
+    "culture": "east_asia",
+    "learnAt": [
+      "shangdu",
+      "hangzhou",
+      "khanbaliq"
+    ],
+    "teacher": "npc-yelu",
+    "question": "route",
+    "inputs": [
+      "question"
+    ],
+    "reads": [
+      "route",
+      "self",
+      "year"
+    ],
+    "outputs": {
+      "advice": "route_window",
+      "confidence": 0.7,
+      "horizon": "season"
+    },
+    "effects": [
+      {
+        "stat": "route_risk",
+        "delta": -2
+      },
+      {
+        "stat": "info_clarity",
+        "delta": 1
+      }
+    ],
+    "resultTexts": [
+      {
+        "cond": "yang",
+        "zh": "阳爻盛，宜行。",
+        "en": "Yang prevails — go."
+      },
+      {
+        "cond": "yin",
+        "zh": "阴爻重，宜缓。",
+        "en": "Yin weighs — wait."
+      }
+    ],
+    "cost": {
+      "coins": 2,
+      "time": 0,
+      "favor": 0
+    }
+  },
+  {
+    "id": "astrodice",
+    "name": {
+      "zh": "星辰骰",
+      "en": "Astral Dice"
+    },
+    "culture": "islamic",
+    "learnAt": [
+      "tabriz",
+      "hormuz",
+      "baghdad"
+    ],
+    "teacher": "npc-tebrizi",
+    "question": "timing",
+    "inputs": [
+      "date",
+      "question"
+    ],
+    "reads": [
+      "route",
+      "year",
+      "retainer"
+    ],
+    "outputs": {
+      "advice": "route_window",
+      "confidence": 0.72,
+      "horizon": "season"
+    },
+    "effects": [
+      {
+        "stat": "route_risk",
+        "delta": -2
+      },
+      {
+        "stat": "weather_forecast",
+        "delta": 1
+      }
+    ],
+    "resultTexts": [
+      {
+        "cond": "earth|fire",
+        "zh": "土火之象，宜行陆路。",
+        "en": "Earth and fire: take the land road."
+      },
+      {
+        "cond": "water|air",
+        "zh": "水风之象，问海慎行。",
+        "en": "Water and air: be wary of the sea."
+      }
+    ],
+    "cost": {
+      "coins": 2,
+      "time": 0,
+      "favor": 0
+    }
+  },
+  {
+    "id": "lot",
+    "name": {
+      "zh": "圣签",
+      "en": "Temple Lots"
+    },
+    "culture": "east_asia",
+    "learnAt": [
+      "quanzhou",
+      "hangzhou",
+      "samarkand"
+    ],
+    "teacher": "npc-chen-po",
+    "question": "risk",
+    "inputs": [
+      "question"
+    ],
+    "reads": [
+      "self",
+      "city",
+      "route"
+    ],
+    "outputs": {
+      "advice": "risk_hint",
+      "confidence": 0.65,
+      "horizon": "today"
+    },
+    "effects": [
+      {
+        "stat": "omen_clarity",
+        "delta": 1
+      },
+      {
+        "stat": "temple_favor",
+        "delta": 1
+      }
+    ],
+    "resultTexts": [
+      {
+        "cond": "high",
+        "zh": "上签：路开。",
+        "en": "High lot: the road opens."
+      },
+      {
+        "cond": "low",
+        "zh": "下签：宜止。",
+        "en": "Low lot: better stop."
+      }
+    ],
+    "cost": {
+      "coins": 1,
+      "time": 0,
+      "favor": 0
+    }
+  }
+]

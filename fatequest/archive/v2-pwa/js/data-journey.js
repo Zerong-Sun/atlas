@@ -11,12 +11,7 @@ FQ.JOURNEY_REGIONS = {
   mazu: { zh: "妈祖之海", en: "Mazu's Sea",      color: "#4a8a94", climate: { clear: 4, wind: 2.5, storm: 2, fog: 1.5 } }
 };
 
-/* ---------- tradable goods & bag items (§4.2) ---------- */
-FQ.GOODS = {
-  silk:  { ic: "🧵", zh: "丝绸", en: "Silk" },
-  spice: { ic: "🌶️", zh: "香料", en: "Spice" },
-  glass: { ic: "🏺", zh: "琉璃", en: "Glass" }
-};
+/* ---------- tradable goods — see js/data-goods.js (FQ.GOODS + art map) ---------- */
 /* buy/sell prices per market town — the spread is the trade game */
 FQ.PRICES = {
   venice:   { glass: { b: 3, s: 2 }, silk: { b: 9, s: 7 },  spice: { b: 8, s: 6 } },

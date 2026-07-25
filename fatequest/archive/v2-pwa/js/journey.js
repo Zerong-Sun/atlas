@@ -1152,7 +1152,7 @@ FQ.SCREENS.journeyMarket = function () {
     const have = FQ.J.goodsOf(j, gid);
     return `
       <div class="mrow">
-        <span style="flex:1">${FQ.art("item-" + gid, g.ic)} ${FQ.bi(g, "zh", "en")} ${have ? `<span class="dim small">×${have.n}</span>` : ""}</span>
+        <span style="flex:1">${FQ.goodsArt(gid, g.ic)} ${FQ.bi(g, "zh", "en")} ${have ? `<span class="dim small">×${have.n}</span>` : ""}</span>
         <button class="btn ghost sm" ${j.coins < p.b ? "disabled" : ""} onclick="FQ.J.buyGoods('${gid}')">${FQ.t("journey.buy")} ${p.b}💰</button>
         <button class="btn ghost sm" ${have ? "" : "disabled"} onclick="FQ.J.sellGoods('${gid}')">${FQ.t("journey.sell")} ${p.s}💰</button>
       </div>`;
@@ -1161,7 +1161,7 @@ FQ.SCREENS.journeyMarket = function () {
     const t = FQ.TOOLS[tid];
     return `
       <div class="mrow">
-        <span style="flex:1">${FQ.art("item-" + tid, t.ic)} ${FQ.bi(t, "zh", "en")} <span class="dim small">${FQ.bi(t, "dZh", "dEn")}</span></span>
+        <span style="flex:1">${FQ.goodsArt(tid, t.ic, "", "tool")} ${FQ.bi(t, "zh", "en")} <span class="dim small">${FQ.bi(t, "dZh", "dEn")}</span></span>
         <button class="btn ghost sm" ${j.coins < t.cost ? "disabled" : ""} onclick="FQ.J.buyTool('${tid}')">${t.cost}💰</button>
       </div>`;
   }).join("");
@@ -1216,7 +1216,8 @@ FQ.SCREENS.journeyBag = function () {
     if (!it) return `<div class="bagslot empty">·</div>`;
     const data = it.kind === "tool" ? FQ.TOOLS[it.id] : it.kind === "token" ? FQ.TOKENS[it.id] : FQ.GOODS[it.id];
     const sub = it.kind === "goods" ? `×${it.n}` : it.kind === "tool" ? FQ.bi(data, "dZh", "dEn") : FQ.t("journey.bag.token");
-    return `<div class="bagslot k-${it.kind}"><div class="bs-ic">${FQ.art("item-" + it.id, data.ic, "big")}</div>
+    const kind = it.kind === "tool" ? "tool" : it.kind === "token" ? "token" : "goods";
+    return `<div class="bagslot k-${it.kind}"><div class="bs-ic">${FQ.goodsArt(it.id, data.ic, "big", kind)}</div>
       <div class="bs-n">${FQ.bi(data, "zh", "en")}</div><div class="bs-s dim">${sub}</div></div>`;
   }).join("");
   document.getElementById("app").innerHTML = `

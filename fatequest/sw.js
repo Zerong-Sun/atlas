@@ -1,6 +1,5 @@
-/* FateQuest service worker — network-first for the shell (dev-friendly),
-   cache fallback for offline play. Art in assets/art/ is cached as it loads. */
-const CACHE = "fatequest-v2";
+/* FateQuest service worker — v3 PWA shell */
+const CACHE = "fatequest-v3";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
@@ -9,15 +8,17 @@ const ASSETS = [
   "./js/data-scenes.js", "./js/data-misc.js",
   "./js/data-lore.js", "./js/data-marco-lore.js", "./js/data-lore-zh-trunk.js",
   "./js/data-quests-stories.js",
-  "./js/engines.js", "./js/state.js", "./js/fx.js", "./js/audio.js", "./js/atmo.js",
+  "./js/engines.js", "./js/state.js",
+  "./js/data-loader.js", "./js/effects.js", "./js/chargen.js", "./js/city.js", "./js/travel.js",
+  "./js/fx.js", "./js/audio.js", "./js/atmo.js",
   "./js/app.js", "./js/juice.js", "./js/scene.js", "./js/quest.js",
-  "./js/data-journey.js", "./js/data-journey-extra.js", "./js/data-secret-paths.js",
-  "./js/outcomes/lots-expanded.js", "./js/outcomes/outcome-keys.js",
-  "./js/outcomes/marco-chr.js", "./js/outcomes/marco-isl.js",
-  "./js/outcomes/marco-con.js", "./js/outcomes/marco-mazu.js",
-  "./js/map.js", "./js/journey.js",
-  "./js/data-tower.js", "./js/tower.js",
-  "./assets/art/ART_EMOJI_MAP.json"
+  "./js/map.js", "./js/data-goods.js",
+  "./assets/art/ART_EMOJI_MAP.json",
+  "./assets/art/GOODS_ART_MAP.json",
+  "./assets/data/cities.json", "./assets/data/routes.json", "./assets/data/transports.json",
+  "./assets/data/events.json", "./assets/data/goods.json", "./assets/data/divinations.json",
+  "./assets/data/retainers.json", "./assets/data/archetypes.json", "./assets/data/endings.json",
+  "./assets/data/glossary.json"
 ];
 
 self.addEventListener("install", e => {
@@ -32,7 +33,6 @@ self.addEventListener("activate", e => {
 });
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
-  /* network-first keeps updates flowing; the cache answers when offline */
   e.respondWith(
     fetch(e.request).then(res => {
       if (res.ok && new URL(e.request.url).origin === location.origin) {

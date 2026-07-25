@@ -1,0 +1,942 @@
+[
+  {
+    "id": "rt-venice-acre",
+    "from": "venice",
+    "to": "acre",
+    "modes": [
+      "dhow",
+      "galley"
+    ],
+    "days": 12,
+    "cost": 3,
+    "risk": 1,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [],
+    "hazards": [
+      "storm"
+    ],
+    "encounters": [
+      "ev-road-venice-acre",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-acre-tabriz",
+    "from": "acre",
+    "to": "tabriz",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 9,
+    "cost": 4,
+    "risk": 2,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-acre-tabriz"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-acre-tabriz",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-tabriz-baghdad",
+    "from": "tabriz",
+    "to": "baghdad",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 10,
+    "cost": 5,
+    "risk": 3,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-tabriz-baghdad"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-tabriz-baghdad",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-baghdad-hormuz",
+    "from": "baghdad",
+    "to": "hormuz",
+    "modes": [
+      "dhow",
+      "galley"
+    ],
+    "days": 12,
+    "cost": 6,
+    "risk": 4,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-baghdad-hormuz"
+      }
+    ],
+    "hazards": [
+      "storm"
+    ],
+    "encounters": [
+      "ev-road-baghdad-hormuz",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-tabriz-balkh",
+    "from": "tabriz",
+    "to": "balkh",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 12,
+    "cost": 3,
+    "risk": 1,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-tabriz-balkh"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-tabriz-balkh",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-hormuz-balkh",
+    "from": "hormuz",
+    "to": "balkh",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 8,
+    "cost": 4,
+    "risk": 2,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-hormuz-balkh"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-hormuz-balkh",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-balkh-samarkand",
+    "from": "balkh",
+    "to": "samarkand",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 9,
+    "cost": 5,
+    "risk": 3,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-balkh-samarkand"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-balkh-samarkand",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-samarkand-kashgar",
+    "from": "samarkand",
+    "to": "kashgar",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 10,
+    "cost": 6,
+    "risk": 4,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-samarkand-kashgar"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-samarkand-kashgar",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-kashgar-khotan",
+    "from": "kashgar",
+    "to": "khotan",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 11,
+    "cost": 3,
+    "risk": 1,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-kashgar-khotan"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-kashgar-khotan",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-khotan-lop",
+    "from": "khotan",
+    "to": "lop",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 12,
+    "cost": 4,
+    "risk": 2,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-khotan-lop"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-khotan-lop",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-lop-shangdu",
+    "from": "lop",
+    "to": "shangdu",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 8,
+    "cost": 5,
+    "risk": 3,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-lop-shangdu"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-lop-shangdu",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-shangdu-khanbaliq",
+    "from": "shangdu",
+    "to": "khanbaliq",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 9,
+    "cost": 6,
+    "risk": 4,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-shangdu-khanbaliq"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-shangdu-khanbaliq",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-khanbaliq-hangzhou",
+    "from": "khanbaliq",
+    "to": "hangzhou",
+    "modes": [
+      "barge",
+      "caravan"
+    ],
+    "days": 18,
+    "cost": 3,
+    "risk": 1,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-khanbaliq-hangzhou"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-khanbaliq-hangzhou",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-hangzhou-quanzhou",
+    "from": "hangzhou",
+    "to": "quanzhou",
+    "modes": [
+      "dhow",
+      "galley"
+    ],
+    "days": 12,
+    "cost": 4,
+    "risk": 2,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-hangzhou-quanzhou"
+      }
+    ],
+    "hazards": [
+      "storm"
+    ],
+    "encounters": [
+      "ev-road-hangzhou-quanzhou",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-baghdad-balkh",
+    "from": "baghdad",
+    "to": "balkh",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 12,
+    "cost": 5,
+    "risk": 3,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-baghdad-balkh"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-baghdad-balkh",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-kashgar-lop",
+    "from": "kashgar",
+    "to": "lop",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 8,
+    "cost": 6,
+    "risk": 4,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-kashgar-lop"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-kashgar-lop",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  },
+  {
+    "id": "rt-samarkand-khotan",
+    "from": "samarkand",
+    "to": "khotan",
+    "modes": [
+      "caravan",
+      "mule",
+      "foot"
+    ],
+    "days": 9,
+    "cost": 3,
+    "risk": 1,
+    "season": {
+      "open": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonus": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    "unlock": [
+      {
+        "type": "rumor",
+        "value": "unlock-rt-samarkand-khotan"
+      }
+    ],
+    "hazards": [
+      "bandits",
+      "sand"
+    ],
+    "encounters": [
+      "ev-road-samarkand-khotan",
+      "ev-road-bandits"
+    ],
+    "lore": {
+      "storyId": null,
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "travel"
+      }
+    }
+  }
+]

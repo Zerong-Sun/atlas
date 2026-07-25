@@ -1,0 +1,176 @@
+[
+  {
+    "id": "end-stop-write",
+    "layer": 1,
+    "name": {
+      "zh": "停笔之处",
+      "en": "Where the Pen Stops"
+    },
+    "conditions": {
+      "anyCity": true
+    },
+    "epilogue": {
+      "zh": "你在{lastCity}停下书写。走过{cities}座城，用了{years}年。游记合上，路仍在。",
+      "en": "You stop writing at {lastCity}. {cities} cities, {years} years. The book closes; the road remains."
+    },
+    "variables": [
+      "lastCity",
+      "cities",
+      "years"
+    ],
+    "sticker": "st-stop"
+  },
+  {
+    "id": "end-polo-court",
+    "layer": 2,
+    "name": {
+      "zh": "宫廷见闻者",
+      "en": "Witness at Court"
+    },
+    "conditions": {
+      "visitedCities": [
+        "khanbaliq",
+        "shangdu"
+      ],
+      "flags": [
+        "good-entry-khanbaliq"
+      ]
+    },
+    "epilogue": {
+      "zh": "你抵达汗八里与上都，把宫廷的光写成可带回西方的句子。",
+      "en": "You reached Khanbaliq and Shangdu, and turned court light into sentences the West can carry."
+    },
+    "variables": [
+      "cities",
+      "years"
+    ],
+    "sticker": "st-polo"
+  },
+  {
+    "id": "end-hundred-markets",
+    "layer": 2,
+    "name": {
+      "zh": "百市商人",
+      "en": "Merchant of a Hundred Markets"
+    },
+    "conditions": {
+      "visitedCities": 8,
+      "netWorth": 200
+    },
+    "epilogue": {
+      "zh": "你的账簿比任何朝圣名册都长。",
+      "en": "Your ledgers outlengthen any pilgrim roll."
+    },
+    "variables": [
+      "cities",
+      "richestTrade"
+    ],
+    "sticker": "st-market"
+  },
+  {
+    "id": "end-diviner",
+    "layer": 2,
+    "name": {
+      "zh": "多法占者",
+      "en": "Reader of Many Arts"
+    },
+    "conditions": {
+      "learnedDivinations": [
+        "iching",
+        "astrodice",
+        "lot"
+      ]
+    },
+    "epilogue": {
+      "zh": "三种问天的方式同在你的行囊里——路因此少了几次盲目。",
+      "en": "Three ways of asking Heaven share your pack — the road lost a few blind turns."
+    },
+    "variables": [
+      "cities"
+    ],
+    "sticker": "st-diviner"
+  },
+  {
+    "id": "end-cartographer",
+    "layer": 2,
+    "name": {
+      "zh": "制图师",
+      "en": "The Cartographer"
+    },
+    "conditions": {
+      "routesOpened": 10
+    },
+    "epilogue": {
+      "zh": "你开出的路比你走过的还多。",
+      "en": "You opened more roads than you walked."
+    },
+    "variables": [
+      "cities",
+      "longestRoute"
+    ],
+    "sticker": "st-map"
+  },
+  {
+    "id": "end-silk-friend",
+    "layer": 3,
+    "name": {
+      "zh": "丝路之友",
+      "en": "Friend of the Silk Road"
+    },
+    "conditions": {
+      "reputationBands": 3
+    },
+    "epilogue": {
+      "zh": "多城的人记得你的名——不是征服者，是问路人。",
+      "en": "Cities remember your name — not as conqueror, but as one who asked the way."
+    },
+    "variables": [
+      "cities"
+    ],
+    "sticker": "st-silk"
+  },
+  {
+    "id": "end-no-return",
+    "layer": 3,
+    "name": {
+      "zh": "无归之人",
+      "en": "The One Who Did Not Return"
+    },
+    "conditions": {
+      "visitedCities": 10,
+      "returnedToStart": false
+    },
+    "epilogue": {
+      "zh": "你走过{cities}座城，却未回到起点。远行者的归宿，是被人一再提起。",
+      "en": "You crossed {cities} cities and never returned. A traveler's home is being spoken of."
+    },
+    "variables": [
+      "cities",
+      "years",
+      "start",
+      "lastCity"
+    ],
+    "sticker": "st-no-return"
+  },
+  {
+    "id": "end-convert-translator",
+    "layer": 2,
+    "name": {
+      "zh": "边界译者",
+      "en": "Translator at the Edge"
+    },
+    "conditions": {
+      "faithChanges": 1,
+      "languages": 3
+    },
+    "epilogue": {
+      "zh": "你换过身份，也换过舌头——边界上最需要的人。",
+      "en": "You changed creed and tongue — the border's most needful soul."
+    },
+    "variables": [
+      "faith",
+      "cities"
+    ],
+    "sticker": "st-translate"
+  }
+]

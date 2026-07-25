@@ -1,0 +1,127 @@
+[
+  {
+    "id": "marco",
+    "name": {
+      "zh": "马可式旅人",
+      "en": "A Traveler in Marco's Manner"
+    },
+    "start": "venice",
+    "obsession": {
+      "zh": "把东方的见闻带回威尼斯。",
+      "en": "Bring news of the East back to Venice."
+    },
+    "goal": {
+      "type": "reach",
+      "target": "khanbaliq"
+    },
+    "faith": "latin",
+    "culture": "latin",
+    "bonus": {
+      "travel": 3,
+      "rapport": 1
+    },
+    "malus": {
+      "wealth_luck": -1
+    },
+    "startKit": {
+      "coins": 40,
+      "currency": "ducat",
+      "goods": [
+        "glass"
+      ],
+      "items": [
+        "letter-of-introduction"
+      ],
+      "languages": [
+        "italian",
+        "latin"
+      ]
+    },
+    "endings": [
+      "end-stop-write",
+      "end-polo-court",
+      "end-cartographer"
+    ]
+  },
+  {
+    "id": "merchant",
+    "name": {
+      "zh": "自由商人",
+      "en": "Free Merchant"
+    },
+    "start": "hormuz",
+    "obsession": {
+      "zh": "在两海之间织一张不会断的贸易网。",
+      "en": "Weave a trade net that will not break between two seas."
+    },
+    "goal": {
+      "type": "network",
+      "target": "quanzhou"
+    },
+    "faith": "islam",
+    "culture": "islamic",
+    "bonus": {
+      "wealth_luck": 4
+    },
+    "malus": {
+      "rapport": -1
+    },
+    "startKit": {
+      "coins": 60,
+      "currency": "dinar",
+      "goods": [
+        "pepper",
+        "spice"
+      ],
+      "items": [],
+      "languages": [
+        "persian",
+        "arabic"
+      ]
+    },
+    "endings": [
+      "end-stop-write",
+      "end-hundred-markets",
+      "end-silk-friend"
+    ]
+  },
+  {
+    "id": "pilgrim-road",
+    "name": {
+      "zh": "序章旅人",
+      "en": "Prologue Traveler"
+    },
+    "start": "acre",
+    "obsession": {
+      "zh": "先弄清地图从何而来。",
+      "en": "First learn where maps come from."
+    },
+    "goal": {
+      "type": "free",
+      "target": null
+    },
+    "faith": "latin",
+    "culture": "latin",
+    "bonus": {
+      "rapport": 2,
+      "travel": 2
+    },
+    "malus": {},
+    "startKit": {
+      "coins": 30,
+      "currency": "ducat",
+      "goods": [],
+      "items": [
+        "lampoil"
+      ],
+      "languages": [
+        "latin"
+      ]
+    },
+    "endings": [
+      "end-stop-write",
+      "end-diviner",
+      "end-no-return"
+    ]
+  }
+]

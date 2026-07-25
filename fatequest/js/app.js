@@ -12,8 +12,9 @@ FQ.current = { screen: "home" };
 FQ.SCENE_OF = {
   title: "title", home: "map", codex: "map", profile: "map", lineage: "map",
   journey: "map", journeyTravel: "travel", journeyMarket: "town",
-  journeyBag: "map", journeyLog: "map", tower: "map", towerRun: "tower",
-  towerEnd: "map", trial: "ritual", daily: "ritual"
+  journeyBag: "map", journeyLog: "map",
+  world: "map", worldMap: "map", chargen: "map",
+  trial: "ritual", daily: "ritual"
 };
 FQ.REGION_OF = {
   tarot: "chr", lenormand: "chr", runes: "nor", astrodice: "isl", western: "isl",
@@ -21,7 +22,7 @@ FQ.REGION_OF = {
   title: "chr", home: "chr", daily: "con"
 };
 /* fullscreen level stages — rituals and trials take the whole screen */
-FQ.STAGED = ["trial", "towerRun", "journeyTravel", "tarot", "iching", "meihua",
+FQ.STAGED = ["trial", "journeyTravel", "chargen", "tarot", "iching", "meihua",
   "bazi", "western", "runes", "dream", "astrodice", "jiaobei", "lenormand", "daily"];
 
 FQ.nav = function (screen, param) {
@@ -29,7 +30,7 @@ FQ.nav = function (screen, param) {
   const render = FQ.SCREENS[screen] || FQ.SCREENS.home;
   document.body.classList.toggle("titled", screen === "title");
   document.body.classList.toggle("staged", FQ.STAGED.includes(screen));
-  document.body.classList.toggle("world", screen === "journey");   /* map fills the desk */
+  document.body.classList.toggle("world", screen === "journey" || screen === "world" || screen === "worldMap");
   $app().innerHTML = "";
   render(param);
   if (FQ.AU && FQ.AU.scene) {
@@ -38,8 +39,9 @@ FQ.nav = function (screen, param) {
   }
   /* which dock lamp burns for this screen */
   const GROUP = { journey: "journey", journeyTravel: "journey", journeyMarket: "journey",
-    journeyBag: "journey", journeyLog: "journey", home: "journey", trial: "arts",
-    tower: "tower", towerRun: "tower", towerEnd: "tower",
+    journeyBag: "journey", journeyLog: "journey", home: "journey",
+    world: "journey", worldMap: "journey", chargen: "journey",
+    trial: "arts",
     records: "records", lineage: "records", codex: "records", profile: "records" };
   const lamp = GROUP[screen] || (FQ.METHODS.some(m => m.id === screen) || screen === "daily" ? "arts" : "journey");
   document.querySelectorAll(".tab").forEach(b => {
@@ -142,7 +144,13 @@ FQ.SCREENS = {
   },
 
   /* ===== the world is the game — home is just a doorway to it ===== */
-  home() { FQ.nav("journey"); },
+  home() { FQ.nav(FQ.state.world && FQ.state.world.archetype ? "world" : "chargen"); },
+
+  /* v3 world / chargen registered in city.js & chargen.js; keep legacy journey as archive fallback */
+  journey() {
+    if (FQ.SCREENS.world) return FQ.SCREENS.world();
+    document.getElementById("app").innerHTML = `<div class="panel"><p>v3 world missing</p></div>`;
+  },
 
   /* ===== 术 · the arts you have been taught (GDD §4.9) =====
      The fortune-telling proper lives here, and only what a teacher on the
@@ -162,22 +170,22 @@ FQ.SCREENS = {
       </button>`;
     const dark = m => {
       const M = FQ.mentorFor(m.id);
-      const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
-      const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+      const placeName = M ? M.at : "?";
+      const reached = M && FQ.state.world && (FQ.state.world.visited || []).includes(M.at);
       return `
         <button class="artrow dark" onclick="${reached ? `FQ.Q.meet('${m.id}')`
-          : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+          : `FQ.toast(FQ.t('locked.learn',{p:'${placeName}'}))`}">
           <span class="ar-seal">🔒</span>
           <span class="ar-txt">
             <b>${FQ.t(m.id + ".name")}</b>
             <span class="dim small">${reached
               ? FQ.t("mentor.here") + " · " + FQ.t("mentor.meet")
-              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</span>
+              : FQ.t("locked.learn", { p: placeName })}</span>
           </span>
           <span class="ar-civ">${FQ.t(m.id + ".civ")}</span>
         </button>`;
     };
-    $app().innerHTML = `
+    document.getElementById("app").innerHTML = `
       <h2>${FQ.t("nav.arts")}</h2>
       <p class="dim small">${FQ.t("arts.sub", { n: known.length, t: FQ.METHODS.length })}</p>
       <button class="artrow lot" ${daily ? "" : "disabled"} onclick="FQ.nav('daily')">
@@ -214,17 +222,17 @@ FQ.SCREENS = {
       /* 师承: an art you have not been taught stays dark (GDD §4.9) */
       if (!FQ.Q.knows(m.id)) {
         const M = FQ.mentorFor(m.id);
-        const place = M && FQ.CHAPTERS[0].nodes.find(n => n.id === M.at);
-        const reached = M && FQ.state.journey && (FQ.state.journey.visited || []).includes(M.at);
+        const placeName = M ? M.at : "?";
+        const reached = M && FQ.state.world && (FQ.state.world.visited || []).includes(M.at);
         return `
           <div class="realm unlearned" style="--rc:${m.color};animation-delay:${i * 45}ms"
-               onclick="${reached ? `FQ.Q.meet('${m.id}')` : `FQ.toast(FQ.t('locked.learn',{p:'${place ? FQ.bi(place, "zh", "en") : "?"}'}))`}">
+               onclick="${reached ? `FQ.Q.meet('${m.id}')` : `FQ.toast(FQ.t('locked.learn',{p:'${placeName}'}))`}">
             <div class="rciv">${FQ.t(m.id + ".civ")}</div>
             <div class="ric">🔒</div>
             <div class="rt">${FQ.t(m.id + ".name")}</div>
             <div class="rs">${reached
               ? `<span class="gold">${FQ.t("mentor.here")} · ${FQ.t("mentor.meet")}</span>`
-              : FQ.t("locked.learn", { p: place ? FQ.bi(place, "zh", "en") : "?" })}</div>
+              : FQ.t("locked.learn", { p: placeName })}</div>
           </div>`;
       }
       return `
@@ -236,26 +244,17 @@ FQ.SCREENS = {
         </div>`;
     }).join("");
 
-    const jn = FQ.state.journey;
-    const jdone = jn && (jn.completed || []).includes("marco");
-    const jprog = jn && jn.visited ? jn.visited.length : 0;
-    $app().innerHTML = `
+    const w = FQ.state.world;
+    const wprog = w && w.visited ? w.visited.length : 0;
+    document.getElementById("app").innerHTML = `
       ${FQ.hudHTML()}
-      <div class="panel jbanner" onclick="FQ.nav('journey')" style="display:flex;align-items:center;gap:14px">
+      <div class="panel jbanner" onclick="FQ.nav('world')" style="display:flex;align-items:center;gap:14px">
         <div style="font-size:30px">${FQ.art("mode-journey", "🐪", "big")}</div>
         <div style="flex:1">
-          <h3 class="gold">${FQ.t("journey.name")}</h3>
-          <div class="dim small">${FQ.t("journey.tag")}</div>
+          <h3 class="gold">${FQ.lang === "zh" ? "远行之书" : "Far Roads"}</h3>
+          <div class="dim small">${FQ.lang === "zh" ? "Polo 走廊 · v3" : "Polo corridor · v3"}</div>
         </div>
-        <span class="pill">${jdone ? "✓" : jprog + "/12"}</span>
-      </div>
-      <div class="panel jbanner" onclick="FQ.nav('tower')" style="display:flex;align-items:center;gap:14px">
-        <div style="font-size:30px">${FQ.art("mode-tower", "🗼", "big")}</div>
-        <div style="flex:1">
-          <h3 class="gold">${FQ.t("tw.name")}</h3>
-          <div class="dim small">${FQ.t("tw.tag")}</div>
-        </div>
-        <span class="pill">${FQ.state.tower.run ? "▶ " + FQ.state.tower.run.layer + "/12" : (FQ.state.tower.best ? "⭐" + FQ.state.tower.best : "NEW")}</span>
+        <span class="pill">${wprog}/14</span>
       </div>
       <div class="panel" style="display:flex;align-items:center;gap:14px">
         <div style="font-size:30px">🏮</div>
@@ -511,8 +510,8 @@ FQ.SCREENS = {
           ${FQ.t("profile.days")}: <b class="gold">${FQ.state.daysVisited}</b> ·
           ${FQ.t("codex.progress")}: <b class="gold">${FQ.colCount()}</b><br>
           ✨ <b class="gold">${FQ.state.stardust}</b> ·
-          🗼 ${FQ.t("tw.best")}: <b class="gold">${FQ.state.tower.best}/12</b> ·
-          🌈 <b class="gold">${FQ.state.tower.resTotal}</b>
+          🐪 ${(FQ.state.world && FQ.state.world.visited) ? FQ.state.world.visited.length : 0} ${FQ.lang === "zh" ? "城" : "cities"} ·
+          📜 ${(FQ.state.world && FQ.state.world.log) ? FQ.state.world.log.length : 0}
         </div>
       </div>
       <div class="panel">
@@ -816,7 +815,16 @@ FQ.startGame = function () {
   if (!window.matchMedia("(display-mode: standalone)").matches && !document.fullscreenElement) {
     try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch (e) {}
   }
-  FQ.nav("journey");   /* straight onto the road */
+  FQ.loadTables().then(() => {
+    FQ.ensureWorld();
+    const w = FQ.state.world;
+    if (w && w.archetype && w.at && !w.stopped) FQ.nav("world");
+    else FQ.nav("chargen");
+  }).catch(err => {
+    console.error(err);
+    FQ.toast(String(err));
+    FQ.nav("title");
+  });
 };
 
 /* ---------- boot (after every module has registered) ---------- */

@@ -1,0 +1,868 @@
+[
+  {
+    "id": "venice",
+    "name": {
+      "zh": "威尼斯",
+      "en": "Venice"
+    },
+    "band": "europe",
+    "culture": "latin",
+    "faiths": [
+      "latin"
+    ],
+    "coord": [
+      12.33,
+      45.44
+    ],
+    "view": [
+      78,
+      108
+    ],
+    "tier": "station",
+    "entryEvent": "ev-venice-entry",
+    "sites": [],
+    "mentor": null,
+    "market": {
+      "goods": [
+        "glass",
+        "murano-glass",
+        "wool",
+        "wine",
+        "relic"
+      ],
+      "currency": "ducat",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "latin",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-venice-acre"
+    ],
+    "specialty": "murano-glass",
+    "calendars": [
+      "julian"
+    ],
+    "lore": {
+      "placeId": "_venice",
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "prologue"
+      }
+    }
+  },
+  {
+    "id": "acre",
+    "name": {
+      "zh": "阿卡",
+      "en": "Acre"
+    },
+    "band": "west_asia",
+    "culture": "latin",
+    "faiths": [
+      "latin",
+      "orthodox"
+    ],
+    "coord": [
+      35.07,
+      32.93
+    ],
+    "view": [
+      195,
+      178
+    ],
+    "tier": "station",
+    "entryEvent": "ev-acre-entry",
+    "sites": [],
+    "mentor": "npc-haraldr",
+    "market": {
+      "goods": [
+        "glass",
+        "spice",
+        "relic",
+        "salt",
+        "wine"
+      ],
+      "currency": "ducat",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "latin",
+      "services": [
+        "bless",
+        "sanctuary"
+      ]
+    },
+    "exits": [
+      "rt-acre-tabriz"
+    ],
+    "specialty": "relic",
+    "calendars": [
+      "julian"
+    ],
+    "lore": {
+      "placeId": "_acre",
+      "origin": "hybrid",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "prologue"
+      }
+    }
+  },
+  {
+    "id": "tabriz",
+    "name": {
+      "zh": "大不里士",
+      "en": "Tabriz"
+    },
+    "band": "west_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam",
+      "nestorian"
+    ],
+    "coord": [
+      46.29,
+      38.08
+    ],
+    "view": [
+      282,
+      112
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-tabriz-entry",
+    "sites": [
+      "ev-tabriz-market",
+      "ev-tabriz-faith",
+      "ev-tabriz-craft"
+    ],
+    "mentor": "npc-tebrizi",
+    "market": {
+      "goods": [
+        "silk",
+        "glass",
+        "turquoise",
+        "carpet",
+        "indigo"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless",
+        "study"
+      ]
+    },
+    "exits": [
+      "rt-tabriz-baghdad",
+      "rt-tabriz-balkh"
+    ],
+    "specialty": "turquoise",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "tauris",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c11"
+      }
+    }
+  },
+  {
+    "id": "baghdad",
+    "name": {
+      "zh": "报达",
+      "en": "Baghdad"
+    },
+    "band": "west_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      44.37,
+      33.32
+    ],
+    "view": [
+      268,
+      172
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-baghdad-entry",
+    "sites": [
+      "ev-baghdad-market",
+      "ev-baghdad-faith",
+      "ev-baghdad-craft"
+    ],
+    "mentor": "npc-yusuf-scribe",
+    "market": {
+      "goods": [
+        "silk",
+        "glass",
+        "spice",
+        "paper",
+        "indigo",
+        "books"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless",
+        "study",
+        "sanctuary"
+      ]
+    },
+    "exits": [
+      "rt-baghdad-hormuz",
+      "rt-baghdad-balkh"
+    ],
+    "specialty": "paper",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "baudas",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c6"
+      }
+    }
+  },
+  {
+    "id": "hormuz",
+    "name": {
+      "zh": "忽鲁谟斯",
+      "en": "Hormuz"
+    },
+    "band": "west_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam"
+    ],
+    "coord": [
+      56.45,
+      27.1
+    ],
+    "view": [
+      330,
+      252
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-hormuz-entry",
+    "sites": [
+      "ev-hormuz-market",
+      "ev-hormuz-faith",
+      "ev-hormuz-craft"
+    ],
+    "mentor": "npc-nadira",
+    "market": {
+      "goods": [
+        "spice",
+        "pepper",
+        "frankincense",
+        "dates",
+        "pearl",
+        "ivory"
+      ],
+      "currency": "dinar",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-hormuz-balkh"
+    ],
+    "specialty": "pepper",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "hormos",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c19"
+      }
+    }
+  },
+  {
+    "id": "balkh",
+    "name": {
+      "zh": "巴里黑",
+      "en": "Balkh"
+    },
+    "band": "central_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam",
+      "folk"
+    ],
+    "coord": [
+      66.9,
+      36.76
+    ],
+    "view": [
+      445,
+      140
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-balkh-entry",
+    "sites": [
+      "ev-balkh-market",
+      "ev-balkh-faith",
+      "ev-balkh-craft"
+    ],
+    "mentor": "npc-balkh-guide",
+    "market": {
+      "goods": [
+        "silk",
+        "spice",
+        "cotton",
+        "indigo",
+        "melon"
+      ],
+      "currency": "dirham",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless",
+        "sanctuary"
+      ]
+    },
+    "exits": [
+      "rt-balkh-samarkand"
+    ],
+    "specialty": "melon",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "balc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c24"
+      }
+    }
+  },
+  {
+    "id": "samarkand",
+    "name": {
+      "zh": "撒马尔罕",
+      "en": "Samarkand"
+    },
+    "band": "central_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam",
+      "nestorian"
+    ],
+    "coord": [
+      66.98,
+      39.65
+    ],
+    "view": [
+      470,
+      118
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-samarkand-entry",
+    "sites": [
+      "ev-samarkand-market",
+      "ev-samarkand-faith",
+      "ev-samarkand-craft"
+    ],
+    "mentor": "npc-paper-miller",
+    "market": {
+      "goods": [
+        "silk",
+        "glass",
+        "paper",
+        "samarkand-tile",
+        "carpet"
+      ],
+      "currency": "dirham",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless",
+        "study"
+      ]
+    },
+    "exits": [
+      "rt-samarkand-kashgar",
+      "rt-samarkand-khotan"
+    ],
+    "specialty": "samarkand-tile",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "samarcan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c34"
+      }
+    }
+  },
+  {
+    "id": "kashgar",
+    "name": {
+      "zh": "可失合儿",
+      "en": "Kashgar"
+    },
+    "band": "central_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam",
+      "buddhism"
+    ],
+    "coord": [
+      75.99,
+      39.47
+    ],
+    "view": [
+      538,
+      112
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-kashgar-entry",
+    "sites": [
+      "ev-kashgar-market",
+      "ev-kashgar-faith",
+      "ev-kashgar-craft"
+    ],
+    "mentor": "npc-kashgar-lama",
+    "market": {
+      "goods": [
+        "silk",
+        "spice",
+        "cotton",
+        "jade",
+        "felt"
+      ],
+      "currency": "dirham",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "islam",
+      "services": [
+        "bless"
+      ]
+    },
+    "exits": [
+      "rt-kashgar-khotan",
+      "rt-kashgar-lop"
+    ],
+    "specialty": "cotton",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "cascar",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c32"
+      }
+    }
+  },
+  {
+    "id": "khotan",
+    "name": {
+      "zh": "忽炭",
+      "en": "Khotan"
+    },
+    "band": "central_asia",
+    "culture": "islamic",
+    "faiths": [
+      "islam",
+      "buddhism"
+    ],
+    "coord": [
+      79.93,
+      37.11
+    ],
+    "view": [
+      545,
+      145
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-khotan-entry",
+    "sites": [
+      "ev-khotan-market",
+      "ev-khotan-faith",
+      "ev-khotan-craft"
+    ],
+    "mentor": "npc-jade-broker",
+    "market": {
+      "goods": [
+        "silk",
+        "jade",
+        "khotan-jade",
+        "cotton"
+      ],
+      "currency": "cash",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "buddhism",
+      "services": [
+        "bless",
+        "study"
+      ]
+    },
+    "exits": [
+      "rt-khotan-lop"
+    ],
+    "specialty": "khotan-jade",
+    "calendars": [
+      "islamic"
+    ],
+    "lore": {
+      "placeId": "cotan",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c36"
+      }
+    }
+  },
+  {
+    "id": "lop",
+    "name": {
+      "zh": "罗布",
+      "en": "Lop"
+    },
+    "band": "central_asia",
+    "culture": "steppe",
+    "faiths": [
+      "islam",
+      "folk"
+    ],
+    "coord": [
+      86.8,
+      40.5
+    ],
+    "view": [
+      580,
+      150
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-lop-entry",
+    "sites": [
+      "ev-lop-market",
+      "ev-lop-faith",
+      "ev-lop-craft"
+    ],
+    "mentor": "npc-desert-guide",
+    "market": {
+      "goods": [
+        "salt",
+        "dates",
+        "felt",
+        "camel"
+      ],
+      "currency": "dirham",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "folk",
+      "services": [
+        "bless",
+        "sanctuary"
+      ]
+    },
+    "exits": [
+      "rt-lop-shangdu"
+    ],
+    "specialty": "salt",
+    "calendars": [
+      "julian"
+    ],
+    "lore": {
+      "placeId": "lop",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c39"
+      }
+    }
+  },
+  {
+    "id": "shangdu",
+    "name": {
+      "zh": "上都",
+      "en": "Shangdu"
+    },
+    "band": "steppe",
+    "culture": "steppe",
+    "faiths": [
+      "folk",
+      "buddhism",
+      "nestorian"
+    ],
+    "coord": [
+      116.1,
+      42.35
+    ],
+    "view": [
+      640,
+      90
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-shangdu-entry",
+    "sites": [
+      "ev-shangdu-market",
+      "ev-shangdu-faith",
+      "ev-shangdu-paiza"
+    ],
+    "mentor": "npc-yelu",
+    "market": {
+      "goods": [
+        "horse",
+        "fur",
+        "felt",
+        "tea",
+        "silver"
+      ],
+      "currency": "cash",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "folk",
+      "services": [
+        "bless",
+        "study"
+      ]
+    },
+    "exits": [
+      "rt-shangdu-khanbaliq"
+    ],
+    "specialty": "horse",
+    "calendars": [
+      "julian"
+    ],
+    "lore": {
+      "placeId": "chandu",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v1-b1-c61"
+      }
+    }
+  },
+  {
+    "id": "khanbaliq",
+    "name": {
+      "zh": "汗八里",
+      "en": "Khanbaliq"
+    },
+    "band": "china",
+    "culture": "east_asia",
+    "faiths": [
+      "folk",
+      "buddhism",
+      "daoism",
+      "nestorian"
+    ],
+    "coord": [
+      116.4,
+      39.9
+    ],
+    "view": [
+      670,
+      120
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-khanbaliq-entry",
+    "sites": [
+      "ev-khanbaliq-market",
+      "ev-khanbaliq-faith",
+      "ev-khanbaliq-craft"
+    ],
+    "mentor": "npc-sariman",
+    "market": {
+      "goods": [
+        "silk",
+        "silk-brocade",
+        "tea",
+        "porcelain",
+        "paper",
+        "books"
+      ],
+      "currency": "cash",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "folk",
+      "services": [
+        "bless",
+        "study",
+        "sanctuary"
+      ]
+    },
+    "exits": [
+      "rt-khanbaliq-hangzhou"
+    ],
+    "specialty": "silk-brocade",
+    "calendars": [
+      "chinese"
+    ],
+    "lore": {
+      "placeId": "cambaluc",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c10"
+      }
+    }
+  },
+  {
+    "id": "hangzhou",
+    "name": {
+      "zh": "行在",
+      "en": "Kinsay"
+    },
+    "band": "china",
+    "culture": "east_asia",
+    "faiths": [
+      "folk",
+      "buddhism",
+      "daoism"
+    ],
+    "coord": [
+      120.15,
+      30.28
+    ],
+    "view": [
+      700,
+      200
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-hangzhou-entry",
+    "sites": [
+      "ev-hangzhou-market",
+      "ev-hangzhou-faith",
+      "ev-hangzhou-craft"
+    ],
+    "mentor": "npc-shen-wu",
+    "market": {
+      "goods": [
+        "silk",
+        "tea",
+        "hangzhou-fan",
+        "lacquer",
+        "fan",
+        "porcelain"
+      ],
+      "currency": "cash",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "buddhism",
+      "services": [
+        "bless",
+        "study"
+      ]
+    },
+    "exits": [
+      "rt-hangzhou-quanzhou"
+    ],
+    "specialty": "hangzhou-fan",
+    "calendars": [
+      "chinese"
+    ],
+    "lore": {
+      "placeId": "great-city-of-kinsay",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c76"
+      }
+    }
+  },
+  {
+    "id": "quanzhou",
+    "name": {
+      "zh": "刺桐",
+      "en": "Zayton"
+    },
+    "band": "china",
+    "culture": "east_asia",
+    "faiths": [
+      "folk",
+      "islam",
+      "buddhism"
+    ],
+    "coord": [
+      118.59,
+      24.87
+    ],
+    "view": [
+      700,
+      262
+    ],
+    "tier": "metropolis",
+    "entryEvent": "ev-quanzhou-entry",
+    "sites": [
+      "ev-quanzhou-market",
+      "ev-quanzhou-faith",
+      "ev-quanzhou-craft"
+    ],
+    "mentor": "npc-chen-po",
+    "market": {
+      "goods": [
+        "silk",
+        "porcelain",
+        "dehua-porcelain",
+        "pepper",
+        "zayton-pepper",
+        "aloeswood"
+      ],
+      "currency": "cash",
+      "spread": 0.2
+    },
+    "shrine": {
+      "faith": "folk",
+      "services": [
+        "bless",
+        "sanctuary"
+      ]
+    },
+    "exits": [],
+    "specialty": "dehua-porcelain",
+    "calendars": [
+      "chinese"
+    ],
+    "lore": {
+      "placeId": "great-haven-of-zayton",
+      "origin": "source",
+      "ref": {
+        "book": "marco-polo",
+        "chapterId": "v2-b2-c82"
+      }
+    }
+  }
+]

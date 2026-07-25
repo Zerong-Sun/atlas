@@ -66,7 +66,9 @@
 | **B. 先补语料** | 按同样管线拆解伊本·白图泰《里哈拉》（Gibb 英译 1929 年版，**注意版权**；或 Defrémery–Sanguinetti 法译 1853–1858，公有领域） | 多 2–3 周文本工程 | 二期做 |
 | **C. 新撰补齐** | 五座城按 Yule 语体新撰，标 `origin:"authored"` | 史料密度不均，玩家会读得出来 | 仅作补丁 |
 
-**本案采用 A + C**：MVP 走中国—中亚主干（语料最厚），开罗／麦加等留给第二章（白图泰线），届时用方案 B 补语料。
+**已采纳 A（+ 必要时 C 补丁）**（2026-07 PWA M0–M1）：MVP 满配十二城为 Polo 走廊  
+`tabriz · baghdad · hormuz · balkh · samarkand · kashgar · khotan · lop · shangdu · khanbaliq · hangzhou · quanzhou`，  
+威尼斯／阿卡为序章；开罗／麦加等留给第二章（白图泰线），届时用方案 B 补语料。
 
 ---
 

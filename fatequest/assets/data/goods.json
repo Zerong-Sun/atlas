@@ -1,0 +1,2434 @@
+[
+  {
+    "id": "silk",
+    "name": {
+      "zh": "丝绸",
+      "en": "Silk"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "spice",
+    "name": {
+      "zh": "香料",
+      "en": "Spice"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0.1,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "glass",
+    "name": {
+      "zh": "琉璃",
+      "en": "Glass"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "pepper",
+    "name": {
+      "zh": "胡椒",
+      "en": "Pepper"
+    },
+    "tier": "specialty",
+    "origin": [
+      "hormuz"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "frankincense",
+    "name": {
+      "zh": "乳香",
+      "en": "Frankincense"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "cotton",
+    "name": {
+      "zh": "棉花",
+      "en": "Cotton"
+    },
+    "tier": "specialty",
+    "origin": [
+      "kashgar"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "porcelain",
+    "name": {
+      "zh": "瓷器",
+      "en": "Porcelain"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "tea",
+    "name": {
+      "zh": "茶叶",
+      "en": "Tea"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "paper",
+    "name": {
+      "zh": "纸",
+      "en": "Paper"
+    },
+    "tier": "specialty",
+    "origin": [
+      "baghdad"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "jade",
+    "name": {
+      "zh": "玉",
+      "en": "Jade"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "turquoise",
+    "name": {
+      "zh": "turquoise",
+      "en": "Turquoise"
+    },
+    "tier": "specialty",
+    "origin": [
+      "tabriz"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "pearl",
+    "name": {
+      "zh": "pearl",
+      "en": "Pearl"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "carpet",
+    "name": {
+      "zh": "地毯",
+      "en": "Carpet"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "horse",
+    "name": {
+      "zh": "马",
+      "en": "Horse"
+    },
+    "tier": "specialty",
+    "origin": [
+      "shangdu"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "camel",
+    "name": {
+      "zh": "骆驼",
+      "en": "Camel"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "fur",
+    "name": {
+      "zh": "毛皮",
+      "en": "Fur"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "rhubarb",
+    "name": {
+      "zh": "rhubarb",
+      "en": "Rhubarb"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "dates",
+    "name": {
+      "zh": "枣",
+      "en": "Dates"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "wine",
+    "name": {
+      "zh": "wine",
+      "en": "Wine"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "olive-oil",
+    "name": {
+      "zh": "olive oil",
+      "en": "Olive Oil"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "wool",
+    "name": {
+      "zh": "wool",
+      "en": "Wool"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "silver",
+    "name": {
+      "zh": "silver",
+      "en": "Silver"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "gold-dust",
+    "name": {
+      "zh": "gold dust",
+      "en": "Gold Dust"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "ivory",
+    "name": {
+      "zh": "ivory",
+      "en": "Ivory"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "coral",
+    "name": {
+      "zh": "coral",
+      "en": "Coral"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "indigo",
+    "name": {
+      "zh": "indigo",
+      "en": "Indigo"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "lapis",
+    "name": {
+      "zh": "lapis",
+      "en": "Lapis"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "steel",
+    "name": {
+      "zh": "steel",
+      "en": "Steel"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "incense",
+    "name": {
+      "zh": "incense",
+      "en": "Incense"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "aloeswood",
+    "name": {
+      "zh": "aloeswood",
+      "en": "Aloeswood"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "sandalwood",
+    "name": {
+      "zh": "sandalwood",
+      "en": "Sandalwood"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "nutmeg",
+    "name": {
+      "zh": "nutmeg",
+      "en": "Nutmeg"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "cloves",
+    "name": {
+      "zh": "cloves",
+      "en": "Cloves"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "saffron",
+    "name": {
+      "zh": "saffron",
+      "en": "Saffron"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "ginger",
+    "name": {
+      "zh": "ginger",
+      "en": "Ginger"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "lacquer",
+    "name": {
+      "zh": "lacquer",
+      "en": "Lacquer"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "fan",
+    "name": {
+      "zh": "fan",
+      "en": "Fan"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "salt",
+    "name": {
+      "zh": "盐",
+      "en": "Salt"
+    },
+    "tier": "specialty",
+    "origin": [
+      "lop"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "herbs",
+    "name": {
+      "zh": "herbs",
+      "en": "Herbs"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "felt",
+    "name": {
+      "zh": "毡",
+      "en": "Felt"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "tin",
+    "name": {
+      "zh": "tin",
+      "en": "Tin"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "gems",
+    "name": {
+      "zh": "gems",
+      "en": "Gems"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "ruby",
+    "name": {
+      "zh": "ruby",
+      "en": "Ruby"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "books",
+    "name": {
+      "zh": "书籍",
+      "en": "Books"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "relic",
+    "name": {
+      "zh": "圣物",
+      "en": "Relic"
+    },
+    "tier": "specialty",
+    "origin": [
+      "acre"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "icons",
+    "name": {
+      "zh": "icons",
+      "en": "Icons"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "dehua-porcelain",
+    "name": {
+      "zh": "德化白瓷",
+      "en": "Dehua Porcelain"
+    },
+    "tier": "specialty",
+    "origin": [
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "murano-glass",
+    "name": {
+      "zh": "穆拉诺玻璃",
+      "en": "Murano Glass"
+    },
+    "tier": "specialty",
+    "origin": [
+      "venice"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "samarkand-tile",
+    "name": {
+      "zh": "蓝釉砖",
+      "en": "Samarkand Tile"
+    },
+    "tier": "specialty",
+    "origin": [
+      "samarkand"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "damascus-steel",
+    "name": {
+      "zh": "damascus steel",
+      "en": "Damascus Steel"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "hangzhou-fan",
+    "name": {
+      "zh": "湖上绢扇",
+      "en": "Hangzhou Fan"
+    },
+    "tier": "specialty",
+    "origin": [
+      "hangzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "khotan-jade",
+    "name": {
+      "zh": "于阗玉",
+      "en": "Khotan Jade"
+    },
+    "tier": "specialty",
+    "origin": [
+      "khotan"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "zayton-pepper",
+    "name": {
+      "zh": "刺桐胡椒",
+      "en": "Zayton Pepper"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "brocade",
+    "name": {
+      "zh": "brocade",
+      "en": "Brocade"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "tutia",
+    "name": {
+      "zh": "tutia",
+      "en": "Tutia"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "melon",
+    "name": {
+      "zh": "melon",
+      "en": "Melon"
+    },
+    "tier": "specialty",
+    "origin": [
+      "balkh"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0.1,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "coconut-oil",
+    "name": {
+      "zh": "coconut oil",
+      "en": "Coconut Oil"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      110,
+      160
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "ebony",
+    "name": {
+      "zh": "ebony",
+      "en": "Ebony"
+    },
+    "tier": "regional",
+    "origin": [
+      "tabriz",
+      "samarkand"
+    ],
+    "base": [
+      120,
+      170
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "ambergris",
+    "name": {
+      "zh": "ambergris",
+      "en": "Ambergris"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      130,
+      180
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "silk-brocade",
+    "name": {
+      "zh": "silk brocade",
+      "en": "Silk Brocade"
+    },
+    "tier": "specialty",
+    "origin": [
+      "khanbaliq"
+    ],
+    "base": [
+      140,
+      190
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  },
+  {
+    "id": "paiza-silk",
+    "name": {
+      "zh": "paiza silk",
+      "en": "Paiza Silk"
+    },
+    "tier": "regional",
+    "origin": [
+      "hangzhou",
+      "quanzhou"
+    ],
+    "base": [
+      100,
+      150
+    ],
+    "far": [
+      200,
+      300
+    ],
+    "hot": {
+      "cities": [
+        "venice",
+        "quanzhou",
+        "cairo"
+      ],
+      "range": [
+        800,
+        1000
+      ]
+    },
+    "bulk": 2,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.05,
+      "seizure": 0.03
+    },
+    "needs": [],
+    "events": []
+  },
+  {
+    "id": "paiza",
+    "name": {
+      "zh": "大汗金牌",
+      "en": "The Khan's Paiza"
+    },
+    "tier": "specialty",
+    "origin": [
+      "shangdu",
+      "khanbaliq"
+    ],
+    "base": [
+      500,
+      600
+    ],
+    "far": [
+      700,
+      900
+    ],
+    "hot": {
+      "cities": [
+        "venice"
+      ],
+      "range": [
+        900,
+        1000
+      ]
+    },
+    "bulk": 1,
+    "risk": {
+      "spoil": 0,
+      "theft": 0.02,
+      "seizure": 0.1
+    },
+    "needs": [
+      "guarded"
+    ],
+    "events": []
+  }
+]

@@ -15,10 +15,9 @@ const DEFAULT_STATE = {
   /* 2.0 — stardust (改运资源, cross-mode, GDD §3.2/§8) */
   stardust: 3, dustDay: null, dustToday: 0,
   mute: false,
-  /* 2.0 — tower meta progress (GDD §5.4) */
-  tower: { runs: 0, wins: 0, best: 0, resTotal: 0,
-           unlockedArch: ["tarot"], unlockedSyms: [], run: null },
-  journey: null
+  /* 2.0 — tower meta removed from main path (see archive/v2-pwa) */
+  /* 3.0 — open-world travel state */
+  world: null
 };
 
 FQ.load = function () {
@@ -30,7 +29,7 @@ FQ.load = function () {
   FQ.state.col = Object.assign({ tarot: [], hex: [], rune: [], len: [] }, FQ.state.col);
   if (!Array.isArray(FQ.state.learned) || !FQ.state.learned.length) FQ.state.learned = ["tarot"];
   if (!Array.isArray(FQ.state.lineage)) FQ.state.lineage = [];
-  FQ.state.tower = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE.tower)), FQ.state.tower);
+  if (!FQ.state.world) FQ.state.world = null;
   if (FQ.state.lang) FQ.lang = FQ.state.lang;
   else FQ.lang = (navigator.language || "zh").startsWith("zh") ? "zh" : "en";
   /* visit tracking */
@@ -152,14 +151,15 @@ FQ.ACHIEVEMENTS = [
   { id: "streak7",   ic: "🕯️", cond: s => s.streak >= 7 },
   { id: "all6",      ic: "🧭", cond: s => s.methodsTried.length >= 6 },
   { id: "hex64",     ic: "☯",  cond: s => s.col.hex.length >= 64 },
-  { id: "marco",     ic: "🐪", cond: s => !!s.journey && (s.journey.completed || []).includes("marco") },
-  /* 2.0 */
-  { id: "tower4",    ic: "🗼", cond: s => s.tower.best >= 4 },
-  { id: "tower12",   ic: "👑", cond: s => s.tower.wins >= 1 },
-  { id: "res10",     ic: "🌈", cond: s => s.tower.resTotal >= 10 },
+  { id: "marco",     ic: "🐪", cond: s => !!(s.world && (s.world.visited || []).includes("khanbaliq")) || (!!s.journey && (s.journey.completed || []).includes("marco")) },
+  /* archived tower achievements — never fire without tower state */
+  { id: "tower4",    ic: "🗼", cond: s => !!(s.tower && s.tower.best >= 4) },
+  { id: "tower12",   ic: "👑", cond: s => !!(s.tower && s.tower.wins >= 1) },
+  { id: "res10",     ic: "🌈", cond: s => !!(s.tower && s.tower.resTotal >= 10) },
   { id: "dust50",    ic: "✨", cond: s => s.stardust >= 50 },
-  { id: "bothroads", ic: "🗺️", cond: s => !!s.journey && (s.journey.roadsTaken || []).length >= 2 },
-  { id: "chronicle", ic: "📜", cond: s => !!s.journey && (s.journey.log || []).length >= 8 },
+  { id: "bothroads", ic: "🗺️", cond: s => !!(s.world && (s.world.unlockedRoutes || []).length >= 2) },
+  { id: "chronicle", ic: "📜", cond: s => !!(s.world && (s.world.log || []).length >= 8) },
+  { id: "polo_road", ic: "🧭", cond: s => !!(s.world && (s.world.visited || []).length >= 6) },
   { id: "student",   ic: "✒️", cond: s => s.learned.length >= 3 },
   { id: "polyglot",  ic: "🕊️", cond: s => s.learned.length >= 6 },
   { id: "lineage10", ic: "🎓", cond: s => s.learned.length >= 10 }

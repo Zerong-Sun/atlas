@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#08060f">
-<meta name="description" content="灵游 FateQuest — 环游诸文明的占卜奇旅 · A playful voyage through the world's divination traditions">
-<title>灵游 FateQuest</title>
+<meta name="description" content="远行之书 FateQuest — 中世纪欧亚旅行开放世界 · The Book of Far Roads">
+<title>远行之书 FateQuest</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -22,9 +22,8 @@
 <canvas id="weather"></canvas>
 
 <nav id="tabbar" class="tabbar">
-  <button data-nav="journey" class="tab active"><span class="tab-ic" data-emo="🗺️"></span><span class="tab-t" data-i18n="nav.world"></span></button>
+  <button data-nav="world" class="tab active"><span class="tab-ic" data-emo="🗺️"></span><span class="tab-t" data-i18n="nav.world"></span></button>
   <button data-nav="arts"    class="tab"><span class="tab-ic" data-emo="🔮"></span><span class="tab-t" data-i18n="nav.arts"></span></button>
-  <button data-nav="tower"   class="tab"><span class="tab-ic" data-emo="🗼"></span><span class="tab-t" data-i18n="nav.tower"></span></button>
   <button data-nav="records" class="tab"><span class="tab-ic" data-emo="📖"></span><span class="tab-t" data-i18n="nav.records"></span></button>
 </nav>
 
@@ -45,26 +44,20 @@
 <script src="js/data-quests-stories.js"></script>
 <script src="js/engines.js"></script>
 <script src="js/state.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/effects.js"></script>
 <script src="js/fx.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/atmo.js"></script>
 <script src="js/app.js"></script>
+<script src="js/chargen.js"></script>
+<script src="js/city.js"></script>
+<script src="js/travel.js"></script>
 <script src="js/juice.js"></script>
 <script src="js/scene.js"></script>
 <script src="js/quest.js"></script>
-<script src="js/data-journey.js"></script>
-<script src="js/data-journey-extra.js"></script>
-<script src="js/data-secret-paths.js"></script>
-<script src="js/outcomes/lots-expanded.js"></script>
-<script src="js/outcomes/outcome-keys.js"></script>
-<script src="js/outcomes/marco-chr.js"></script>
-<script src="js/outcomes/marco-isl.js"></script>
-<script src="js/outcomes/marco-con.js"></script>
-<script src="js/outcomes/marco-mazu.js"></script>
+<script src="js/data-goods.js"></script>
 <script src="js/map.js"></script>
-<script src="js/journey.js"></script>
-<script src="js/data-tower.js"></script>
-<script src="js/tower.js"></script>
 <script>
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js").catch(() => {});

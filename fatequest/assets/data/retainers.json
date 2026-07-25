@@ -1,0 +1,1419 @@
+[
+  {
+    "id": "npc-tebrizi",
+    "name": {
+      "zh": "星家帖必烈",
+      "en": "Tebrizi the Star-Reader"
+    },
+    "roles": [
+      "diviner",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "tabriz",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "persian",
+      "arabic",
+      "turkic"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "tabriz",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-lin",
+    "name": {
+      "zh": "船娘林三娘",
+      "en": "Lin Sanniang"
+    },
+    "roles": [
+      "sailor",
+      "guide"
+    ],
+    "origin": {
+      "city": "quanzhou",
+      "culture": "east_asia",
+      "faith": "folk"
+    },
+    "languages": [
+      "chinese",
+      "malay"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "quanzhou",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-haraldr",
+    "name": {
+      "zh": "瓦良格哈拉尔",
+      "en": "Haraldr the Varangian"
+    },
+    "roles": [
+      "guard",
+      "diviner"
+    ],
+    "origin": {
+      "city": "acre",
+      "culture": "latin",
+      "faith": "folk"
+    },
+    "languages": [
+      "norse",
+      "greek"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "acre",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-nadira",
+    "name": {
+      "zh": "海商星占娜迪拉",
+      "en": "Nadira"
+    },
+    "roles": [
+      "diviner",
+      "agent"
+    ],
+    "origin": {
+      "city": "hormuz",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "persian",
+      "arabic"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "hormuz",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-yelu",
+    "name": {
+      "zh": "太史耶律履",
+      "en": "Master Yelü"
+    },
+    "roles": [
+      "diviner",
+      "scribe"
+    ],
+    "origin": {
+      "city": "shangdu",
+      "culture": "east_asia",
+      "faith": "folk"
+    },
+    "languages": [
+      "chinese",
+      "mongol"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "shangdu",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-sariman",
+    "name": {
+      "zh": "圆梦人撒里蛮",
+      "en": "Sarïman"
+    },
+    "roles": [
+      "diviner",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "khanbaliq",
+      "culture": "east_asia",
+      "faith": "buddhism"
+    },
+    "languages": [
+      "uighur",
+      "chinese"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "khanbaliq",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-shen-wu",
+    "name": {
+      "zh": "命馆沈五",
+      "en": "Shen the Fifth"
+    },
+    "roles": [
+      "diviner"
+    ],
+    "origin": {
+      "city": "hangzhou",
+      "culture": "east_asia",
+      "faith": "folk"
+    },
+    "languages": [
+      "chinese"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "hangzhou",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-chen-po",
+    "name": {
+      "zh": "庙祝陈婆",
+      "en": "Chen Po"
+    },
+    "roles": [
+      "diviner",
+      "acolyte"
+    ],
+    "origin": {
+      "city": "quanzhou",
+      "culture": "east_asia",
+      "faith": "folk"
+    },
+    "languages": [
+      "chinese"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "quanzhou",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-yusuf-scribe",
+    "name": {
+      "zh": "书记优素福",
+      "en": "Yusuf the Scribe"
+    },
+    "roles": [
+      "scribe",
+      "interpreter"
+    ],
+    "origin": {
+      "city": "baghdad",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "arabic",
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "baghdad",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-balkh-guide",
+    "name": {
+      "zh": "巴里黑向导",
+      "en": "Guide of Balkh"
+    },
+    "roles": [
+      "guide",
+      "porter"
+    ],
+    "origin": {
+      "city": "balkh",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "persian",
+      "turkic"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "balkh",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-paper-miller",
+    "name": {
+      "zh": "纸坊师傅",
+      "en": "Paper Miller"
+    },
+    "roles": [
+      "agent",
+      "scribe"
+    ],
+    "origin": {
+      "city": "samarkand",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "persian"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "samarkand",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-kashgar-lama",
+    "name": {
+      "zh": "喀什喇嘛",
+      "en": "Lama of Kashgar"
+    },
+    "roles": [
+      "diviner",
+      "acolyte"
+    ],
+    "origin": {
+      "city": "kashgar",
+      "culture": "islamic",
+      "faith": "buddhism"
+    },
+    "languages": [
+      "tibetan",
+      "turkic"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "kashgar",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-jade-broker",
+    "name": {
+      "zh": "玉行掌柜",
+      "en": "Jade Broker"
+    },
+    "roles": [
+      "agent",
+      "porter"
+    ],
+    "origin": {
+      "city": "khotan",
+      "culture": "islamic",
+      "faith": "islam"
+    },
+    "languages": [
+      "turkic",
+      "chinese"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "khotan",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-desert-guide",
+    "name": {
+      "zh": "沙漠向导",
+      "en": "Desert Guide"
+    },
+    "roles": [
+      "guide",
+      "porter"
+    ],
+    "origin": {
+      "city": "lop",
+      "culture": "steppe",
+      "faith": "folk"
+    },
+    "languages": [
+      "turkic"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "lop",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-giovanni",
+    "name": {
+      "zh": "布商乔凡尼",
+      "en": "Giovanni the Draper"
+    },
+    "roles": [
+      "agent"
+    ],
+    "origin": {
+      "city": "venice",
+      "culture": "latin",
+      "faith": "latin"
+    },
+    "languages": [
+      "italian",
+      "latin"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "venice",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  },
+  {
+    "id": "npc-zhou-silk",
+    "name": {
+      "zh": "丝行周三",
+      "en": "Zhou the Silk Broker"
+    },
+    "roles": [
+      "agent"
+    ],
+    "origin": {
+      "city": "hangzhou",
+      "culture": "east_asia",
+      "faith": "folk"
+    },
+    "languages": [
+      "chinese"
+    ],
+    "recruitAt": [
+      {
+        "cityId": "hangzhou",
+        "venue": "inn"
+      }
+    ],
+    "hireMode": [
+      "open",
+      "divined"
+    ],
+    "wage": {
+      "amount": 3,
+      "currency": "dirham",
+      "period": "month"
+    },
+    "contract": {
+      "months": 12,
+      "renewable": true
+    },
+    "abilities": {
+      "travel": 14,
+      "guard": 8,
+      "trade": 10,
+      "language": 16,
+      "medicine": 6,
+      "cartography": 8,
+      "faith": 12,
+      "divination": 10,
+      "cargo": 2
+    },
+    "traits": {
+      "loyalty": 18,
+      "courage": 12,
+      "greed": 8,
+      "curiosity": 16,
+      "piety": 12,
+      "ambition": 10,
+      "adaptability": 14,
+      "honesty": 16
+    },
+    "fate": {
+      "company": 16,
+      "road": 14,
+      "success": 15
+    },
+    "birth": {
+      "internalDate": "1260-01-01",
+      "sealLevel": 1
+    },
+    "sealReason": "calendar",
+    "revealPaths": [
+      "divination",
+      "trust"
+    ],
+    "cargo": {
+      "kind": "documents",
+      "slots": 1,
+      "condition": "always"
+    },
+    "yearly": [],
+    "questId": null,
+    "leaveIf": {
+      "loyaltyBelow": 6
+    },
+    "relations": [],
+    "omen": {
+      "zh": "此人路上有用，却不善空谈。",
+      "en": "Useful on the road; sparing of talk."
+    }
+  }
+]

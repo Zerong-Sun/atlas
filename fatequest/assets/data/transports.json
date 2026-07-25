@@ -1,0 +1,139 @@
+[
+  {
+    "id": "foot",
+    "name": {
+      "zh": "徒步",
+      "en": "On foot"
+    },
+    "kinds": [
+      "land"
+    ],
+    "dayMul": 1.45,
+    "cost": 0,
+    "risk": 0,
+    "cargo": 1,
+    "needs": []
+  },
+  {
+    "id": "caravan",
+    "name": {
+      "zh": "驼队",
+      "en": "Camel caravan"
+    },
+    "kinds": [
+      "land"
+    ],
+    "dayMul": 1,
+    "cost": 2,
+    "risk": 0,
+    "cargo": 4,
+    "needs": []
+  },
+  {
+    "id": "mule",
+    "name": {
+      "zh": "骡队",
+      "en": "Mule train"
+    },
+    "kinds": [
+      "land"
+    ],
+    "dayMul": 1.15,
+    "cost": 1,
+    "risk": -1,
+    "cargo": 3,
+    "needs": []
+  },
+  {
+    "id": "yam",
+    "name": {
+      "zh": "驿马",
+      "en": "Post-horse"
+    },
+    "kinds": [
+      "land"
+    ],
+    "dayMul": 0.55,
+    "cost": 4,
+    "risk": 1,
+    "cargo": 1,
+    "needs": [
+      "paiza"
+    ]
+  },
+  {
+    "id": "yak",
+    "name": {
+      "zh": "牦牛队",
+      "en": "Yak train"
+    },
+    "kinds": [
+      "land"
+    ],
+    "dayMul": 1.2,
+    "cost": 2,
+    "risk": -2,
+    "cargo": 3,
+    "needs": []
+  },
+  {
+    "id": "galley",
+    "name": {
+      "zh": "桨帆船",
+      "en": "Galley"
+    },
+    "kinds": [
+      "sea"
+    ],
+    "dayMul": 0.9,
+    "cost": 3,
+    "risk": 1,
+    "cargo": 5,
+    "needs": []
+  },
+  {
+    "id": "dhow",
+    "name": {
+      "zh": "缝合帆船",
+      "en": "Sewn dhow"
+    },
+    "kinds": [
+      "sea"
+    ],
+    "dayMul": 1,
+    "cost": 2,
+    "risk": 0,
+    "cargo": 4,
+    "needs": []
+  },
+  {
+    "id": "junk",
+    "name": {
+      "zh": "中国大舶",
+      "en": "Chinese junk"
+    },
+    "kinds": [
+      "sea"
+    ],
+    "dayMul": 0.8,
+    "cost": 5,
+    "risk": -1,
+    "cargo": 6,
+    "needs": []
+  },
+  {
+    "id": "barge",
+    "name": {
+      "zh": "运河漕船",
+      "en": "Canal barge"
+    },
+    "kinds": [
+      "river"
+    ],
+    "dayMul": 1.1,
+    "cost": 1,
+    "risk": -2,
+    "cargo": 5,
+    "needs": []
+  }
+]
