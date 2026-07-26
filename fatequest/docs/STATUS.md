@@ -1,6 +1,6 @@
 # 项目现状 · STATUS
 
-**2026-07-26 全面复核。** 这是唯一的「现在到哪一步」权威页；`PLAN.md` 只讲下一步怎么做，`ROADMAP.md` 只讲阶段顺序。三份不重复。
+**2026-07-26 全面复核 · Steam EA 阶段。** 这是唯一的「现在到哪一步」权威页；`PLAN.md` 讲下一步（美术接线 → 动画 → 视觉打磨），`ROADMAP.md` 讲阶段顺序。三份不重复。
 
 ---
 
@@ -192,10 +192,10 @@ A1–A8 ✅ · Autoload `AudioDirector` · 三轴文化×场景×情绪 · CC0 �
 
 按「玩家能感知的收益 ÷ 工作量」排：
 
-1. ~~**21 座 city 级城市各补 2 个探索点**（T3）~~ ✅ 2026-07-26
-2. ~~**法德兰草原 stories 改写为约 40 条途中事件**（T4）~~ ✅ 2026-07-26
-3. ~~**19 城语料证据逐城处置**（T6）~~ ✅ 2026-07-26
-4. **Godot 美术接线**（explore/site/chargen/市集）——见 `ART_REQUIREMENTS.md`
+1. **Godot 美术接线**（explore/site/npc/ic/sym）—— ZERO 新图，543 张已 import 待 run-time 接线。见新 `PLAN.md` §2 · `ART_REQUIREMENTS.md` §5
+2. **动画 N2–N3**（地图迷雾揭开 + 路线描画 + 界面过渡）。见 `ANIMATION_PLAN.md` §2
+3. **chr 底板重绘**（`scene-region-chr` 内容错配）——拉丁基督教世界通用底板
+4. **白图泰六城入城/探索图**（6 + 18 张）
 5. **可选加深**：入城加长、图鉴扩写、对话树（`TEXT_REQUIREMENTS.md` §3）
 
 ---

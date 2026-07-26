@@ -1,6 +1,6 @@
 # 动画规划 · ANIMATION PLAN
 
-**前置**：`ART_REQUIREMENTS.md`（素材）· `AUDIO_PLAN.md`（同为表现层，共用触发时机）· `ATLAS_PORT.md` §1.3（Atlas 已有的六式动效规范）· `ARCHITECTURE.md` §1（分层铁律）。
+**前置**：`ART_REQUIREMENTS.md`（素材）· `AUDIO_PLAN.md`（同为表现层，共用触发时机）· `archive/ATLAS_PORT.md` §1.3（Atlas 已有的六式动效规范）· `ARCHITECTURE.md` §1（分层铁律）。
 
 ---
 
@@ -10,7 +10,7 @@
 |---|---|
 | 动画代码 | **0 行** |
 | 界面 | 全静态 `Control`，切换无过渡 |
-| Atlas 遗产 | `methodExperiences.ts` 六式动效 + 纯 CSS 关键帧（`ATLAS_PORT.md` §1.3） |
+| Atlas 遗产 | `methodExperiences.ts` 六式动效 + 纯 CSS 关键帧（`archive/ATLAS_PORT.md` §1.3） |
 | 旧版遗产 | `js/fx.js` 96 行 · `js/juice.js` 341 行（粒子、抖动、飘字），**思路可借鉴，代码作废** |
 
 ---
@@ -70,7 +70,7 @@ Atlas 的 `methodExperiences.ts` 已有 `reducedMotionFallback: "fade" | "none"`
 
 ### 2.3 占卜仪式（P3）
 
-`ATLAS_PORT.md` §1.3 记 Atlas 有**六式** motion 规范：
+`archive/ATLAS_PORT.md` §1.3 记 Atlas 有**六式** motion 规范：
 
 ```
 shuffle · orbit · ripple · flip · smoke · static

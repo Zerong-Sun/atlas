@@ -3,7 +3,7 @@
 《远行之书》从「网页占卜小游戏」重建为「可上架 Steam / App Store 的开放世界旅行游戏」的技术架构。
 本文只定架构与边界；代码规划见 `CODE_PLAN.md`，数据规划见 `DATA_MODEL.md`（待写）。
 
-对应策划案：`GDD.md`（玩法）· `SYSTEM_TABLES.md`（八张表）· `LORE_PIPELINE.md`（语料）· `ATLAS_PORT.md`（占卜资产）。
+对应策划案：`GDD.md`（玩法）· `SYSTEM_TABLES.md`（八张表）· `LORE_PIPELINE.md`（语料）· `archive/ATLAS_PORT.md`（占卜资产）。
 
 ---
 
@@ -180,7 +180,7 @@ GDD §5.3 要的是**羊皮纸手绘舆图**：山用侧视立面、城塞小像
 
 ### 5.1 移植量比 ATLAS_PORT 估的小——大部分是数据不是代码
 
-`ATLAS_PORT.md` 记 24 引擎 5,973 行 TS，读作「要重写 6000 行 GDScript」是**高估**。实测函数声明密度：
+`archive/ATLAS_PORT.md` 记 24 引擎 5,973 行 TS，读作「要重写 6000 行 GDScript」是**高估**。实测函数声明密度：
 
 | 文件 | 行数 | 函数声明 | 性质 |
 |---|---|---|---|

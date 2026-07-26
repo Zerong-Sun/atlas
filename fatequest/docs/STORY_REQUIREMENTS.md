@@ -1,6 +1,6 @@
 # 文本素材需求 · STORY REQUIREMENTS
 
-**2026-07-26 重写。** 权威执行步骤仍在 `PLAN.md`；本文登记**尚未实现的内容密度任务**（T3 / T4 / T6）与配套门禁规格，使后续可直接开干。
+**2026-07-26 · T3/T4/T6 已闭环。** 本文登记已完成的内容密度任务（T3 / T4 / T6）与配套门禁规格，供后续参考。执行计划见 `PLAN.md`。
 语体见 `LORE_PIPELINE.md` §4；写作格式见 `STORY_TEXT_FORMAT.md`。
 
 > **红线（GDD §19）**：每段文本必须标 `origin`——`source`／`authored`／`hybrid`。桩文本一律 `authored`。
@@ -134,7 +134,7 @@ console.log("总",s.length,"合用",u.length)'
 `sachiu` `coigangiu` `ctesiphon` `ephesus` `ispahan` `moscovia` `nicaea` `petra`
 
 - 前两座中国地名：三书本就不覆盖 → 维持 `authored`，标「三书范围外」
-- 其余：换语料（《瀛涯胜览》《远游记》）或维持新撰；**本阶段不拆新书**（PLAN §10）
+- 其余：换语料（《瀛涯胜览》《远游记》）或维持新撰；**本阶段不拆新书**（`docs/archive/PLAN-2026-07-T1-T6.md` §10）
 
 ### 3.3 验收
 
@@ -163,7 +163,7 @@ console.log("总",s.length,"合用",u.length)'
 |---|---|
 | town／station 探索点 | DATA_MODEL §6 分级 |
 | 24 法全部接入 | 第二批已完成 4 法 |
-| 拆《远游记》《瀛涯胜览》 | 等 T4 流程再验证后再动 |
+| 拆《远游记》《瀛涯胜览》 | 等 S1–S5 收口再动 |
 | 美术管线 | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) · [`ASSETS_REQUIREMENTS.md`](ASSETS_REQUIREMENTS.md) |
 | 文本总表 | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) |
 

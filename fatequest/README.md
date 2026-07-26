@@ -62,23 +62,24 @@ fatequest/
 |---|---|
 | [`docs/STATUS.md`](docs/STATUS.md) | **现在到哪一步**——唯一权威现状页 |
 | [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |
-| [`docs/ROADMAP.md`](docs/ROADMAP.md) | 阶段顺序（P0–P6 已闭环） |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | 阶段顺序（P0–P7 已闭环） |
 | [`docs/GDD.md`](docs/GDD.md) | 游戏设计文档 |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
-| [`docs/AUDIT_2026-07.md`](docs/AUDIT_2026-07.md) | 六方面验证报告与修复清单 |
+| [`docs/archive/AUDIT_2026-07.md`](docs/archive/AUDIT_2026-07.md) | 六方面验证报告与修复清单 |
+| [`docs/archive/PLAN-2026-07-T1-T6.md`](docs/archive/PLAN-2026-07-T1-T6.md) · [`archive/ATLAS_PORT.md`](docs/archive/ATLAS_PORT.md) | T1–T6 执行记录 + Atlas 移植对照 |
 | [`docs/LORE_PIPELINE.md`](docs/LORE_PIPELINE.md) · [`L10N_PLAN.md`](docs/L10N_PLAN.md) | 语料接入 · 多语言 |
 | [`docs/ASSETS_REQUIREMENTS.md`](docs/ASSETS_REQUIREMENTS.md) | **素材总索引**（美术+音频+文本） |
 | [`docs/ART_REQUIREMENTS.md`](docs/ART_REQUIREMENTS.md) · [`assets/art/ART_TODO.md`](assets/art/ART_TODO.md) | 美术需求与缺口 |
-| [`docs/TEXT_REQUIREMENTS.md`](docs/TEXT_REQUIREMENTS.md) · [`STORY_REQUIREMENTS.md`](docs/STORY_REQUIREMENTS.md) | 文本需求与 T3/T4/T6 |
+| [`docs/TEXT_REQUIREMENTS.md`](docs/TEXT_REQUIREMENTS.md) · [`STORY_REQUIREMENTS.md`](docs/STORY_REQUIREMENTS.md) | 文本库存与 T1–T6 规格（已闭环） |
 | [`docs/AUDIO_PLAN.md`](docs/AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](assets/audio/MANIFEST.md) | 配乐规划与清单 |
 | [`archive/README.md`](archive/README.md) | 旧分支版本、最终提交与恢复方式 |
 
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 199 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
-真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2132 条
-文本。**22 道门禁、15 单测、10 smoke 全绿。** 详见
+102 城 · 204 路线 · 276 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
+真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2482 条
+文本。**24 道门禁、15 单测、10 smoke 全绿。** 详见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

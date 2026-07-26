@@ -100,7 +100,7 @@ stamps                 1322 current · 0 stale
 ```bash
 cd fatequest
 python3 tools/art/audit.py              # 美术完整性（需 pillow+numpy）
-node tools/validate/validate.mjs        # 22 道内容门禁
+node tools/validate/validate.mjs        # 24 道内容门禁
 node tools/lore/story.mjs check         # 译文时效
 godot --headless --path . --script tests/run_tests.gd
 ```
@@ -109,8 +109,8 @@ godot --headless --path . --script tests/run_tests.gd
 
 ## 5. Steam 上架素材优先级
 
-1. **接线现有 600 张**（explore/site/chargen/市集 ic-*）— 零新图收益最大  
-2. **T3 文本密度** — 21 城探索 playable 深度  
-3. **T4 steppe 途中** — 草原线厚度  
-4. **chr 底板重绘 + 白图泰专图** — 视觉差异化  
-5. **P2 货币/贴纸/易经下半** — HUD 与收藏 polish  
+1. **接线现有 543 张**（explore/site/npc/ic-*/sym-*）— 零新图收益最大
+2. **动画 N2–N3**（地图迷雾 + 路线描画 + 界面过渡）
+3. **chr 底板重绘 + 白图泰专图** — 视觉差异化
+4. **易经下半/货币/贴纸** — HUD 与收藏 polish
+5. **可选加深**（入城加长/图鉴扩写）— `TEXT_REQUIREMENTS.md` §3  

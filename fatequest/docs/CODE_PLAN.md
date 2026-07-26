@@ -314,7 +314,7 @@ var confidence: float
 var horizon: String              # day｜season｜year｜three_years
 ```
 
-`ATLAS_PORT.md` §3 的 `uncertaintyMode → question` 映射表在此实现：
+`archive/ATLAS_PORT.md` §3 的 `uncertaintyMode → question` 映射表在此实现：
 
 ```gdscript
 const MODE_TO_QUESTION := {
