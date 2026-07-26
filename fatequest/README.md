@@ -23,6 +23,9 @@ node scripts/build-m2-m3-content.mjs
 
 验收：[`docs/V3_MVP_CHECKLIST.md`](docs/V3_MVP_CHECKLIST.md) · [`docs/V3_M2_M3_CHECKLIST.md`](docs/V3_M2_M3_CHECKLIST.md)
 
+文本缺口：[`docs/TEXT_REQUIREMENTS.md`](docs/TEXT_REQUIREMENTS.md)  
+美术缺口：[`docs/ART_REQUIREMENTS.md`](docs/ART_REQUIREMENTS.md) · [`assets/art/ART_TODO.md`](assets/art/ART_TODO.md)
+
 ## 结构（摘要）
 
 ```text

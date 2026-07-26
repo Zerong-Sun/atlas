@@ -1,8 +1,8 @@
 {
   "meta": {
     "zhStatus": "trunk-v1",
-    "note": "主干站用语对照表（方案 A）。先服务校译，再扩全库。",
-    "updated": "2026-07-22"
+    "note": "主干站用语对照表（方案A）。已扩充至全面覆盖丝路术语。",
+    "updated": "2026-07-26"
   },
   "terms": [
     {
@@ -698,6 +698,475 @@
       "kind": "place",
       "en": "Delhi Sultanate",
       "zh": "德里苏丹国"
+    },
+    {
+      "id": "iwan",
+      "kind": "place",
+      "en": "iwan / vaulted hall",
+      "zh": "伊万（穹顶大厅）",
+      "note": "波斯建筑中的巨型拱门大厅"
+    },
+    {
+      "id": "ribat",
+      "kind": "place",
+      "en": "ribat / fortified lodge",
+      "zh": "里巴特（戍边客栈）",
+      "note": "兼具军事与商旅功能的伊斯兰边境客栈"
+    },
+    {
+      "id": "khanqah",
+      "kind": "place",
+      "en": "khanqah / Sufi lodge",
+      "zh": "哈纳卡（苏菲道堂）",
+      "note": "苏菲修士集会、修行、接待旅人的聚所"
+    },
+    {
+      "id": "minbar",
+      "kind": "place",
+      "en": "minbar / pulpit",
+      "zh": "敏拜尔（讲经台）",
+      "note": "清真寺内的阶梯式讲台"
+    },
+    {
+      "id": "mihrab",
+      "kind": "place",
+      "en": "mihrab / prayer niche",
+      "zh": "米哈拉布（壁龛）",
+      "note": "清真寺墙上的凹壁，指示麦加方向"
+    },
+    {
+      "id": "hamam",
+      "kind": "place",
+      "en": "hamam / bathhouse",
+      "zh": "哈马姆（浴室）",
+      "note": "奥斯曼与伊斯兰世界的公共蒸汽浴室"
+    },
+    {
+      "id": "badgir",
+      "kind": "good",
+      "en": "badgir / windcatcher",
+      "zh": "捕风塔",
+      "note": "波斯建筑中的自然通风塔"
+    },
+    {
+      "id": "astrolabe",
+      "kind": "good",
+      "en": "astrolabe",
+      "zh": "星盘",
+      "note": "中世纪用于测定纬度与时间的航海天文仪器"
+    },
+    {
+      "id": "compass",
+      "kind": "good",
+      "en": "compass / south-pointer",
+      "zh": "指南针／罗盘",
+      "note": "磁铁在轴上自由转动，指南航海"
+    },
+    {
+      "id": "kamal",
+      "kind": "good",
+      "en": "kamal / altitude-measurer",
+      "zh": "卡玛尔（测高板）",
+      "note": "阿拉伯航海者用木板与绳索测量北极星高度的工具"
+    },
+    {
+      "id": "portolan",
+      "kind": "good",
+      "en": "portolan chart",
+      "zh": "波特兰海图",
+      "note": "中世纪地中海常用的罗盘线航海图"
+    },
+    {
+      "id": "qibla",
+      "kind": "rite",
+      "en": "qibla / prayer direction",
+      "zh": "朝向（天房方向）",
+      "note": "穆斯林礼拜时必须面向麦加天房的方向"
+    },
+    {
+      "id": "cinnamon",
+      "kind": "good",
+      "en": "cinnamon",
+      "zh": "桂皮",
+      "note": "从锡兰到地中海，欧洲贵族最狂热的香料之一"
+    },
+    {
+      "id": "cardamom",
+      "kind": "good",
+      "en": "cardamom",
+      "zh": "小豆蔻",
+      "note": "阿拉伯咖啡里必放，印度人直接嚼食的香料"
+    },
+    {
+      "id": "turmeric",
+      "kind": "good",
+      "en": "turmeric / yellow ginger",
+      "zh": "姜黄",
+      "note": "染色、入药、煮咖喱的三用根茎"
+    },
+    {
+      "id": "myrrh",
+      "kind": "good",
+      "en": "myrrh",
+      "zh": "没药",
+      "note": "阿拉伯半岛与东非出产的树脂，用于熏香、入药与防腐"
+    },
+    {
+      "id": "cinnabar",
+      "kind": "good",
+      "en": "cinnabar",
+      "zh": "朱砂",
+      "note": "硫化汞矿石，道家炼丹原料，也是红色漆器的色源"
+    },
+    {
+      "id": "borax",
+      "kind": "good",
+      "en": "borax / tincal",
+      "zh": "硼砂",
+      "note": "西藏盐湖产，远销西亚与欧洲，用于焊接金属与制釉"
+    },
+    {
+      "id": "tigris",
+      "kind": "place",
+      "en": "Tigris River",
+      "zh": "底格里斯河",
+      "note": "美索不达米亚双河之一，巴格达建在其岸边"
+    },
+    {
+      "id": "euphrates",
+      "kind": "place",
+      "en": "Euphrates River",
+      "zh": "幼发拉底河",
+      "note": "与底格里斯河并行，共同造就两河文明"
+    },
+    {
+      "id": "indus",
+      "kind": "place",
+      "en": "Indus River / Sindhu",
+      "zh": "印度河（信度河）",
+      "note": "南亚大河，德里苏丹国西部边界"
+    },
+    {
+      "id": "amudarya",
+      "kind": "place",
+      "en": "Amu Darya / Oxus",
+      "zh": "阿姆河（乌浒水）",
+      "note": "流经巴里黑、撒马尔罕的中亚大河"
+    },
+    {
+      "id": "sind",
+      "kind": "place",
+      "en": "Sindh",
+      "zh": "信德",
+      "note": "印度河下游地区，伊斯兰世界进入印度的门户"
+    },
+    {
+      "id": "gujarat",
+      "kind": "place",
+      "en": "Gujarat",
+      "zh": "古吉拉特",
+      "note": "印度西海岸重要贸易区，棉布与靛蓝产地"
+    },
+    {
+      "id": "zagros",
+      "kind": "place",
+      "en": "Zagros Mountains",
+      "zh": "扎格罗斯山脉",
+      "note": "伊朗高原西侧屏障，分隔两河流域与波斯腹地"
+    },
+    {
+      "id": "hindu-kush",
+      "kind": "place",
+      "en": "Hindu Kush",
+      "zh": "兴都库什山脉",
+      "note": "阿富汗与中亚间的巨大山脉，翻越一条山口就要几天时间"
+    },
+    {
+      "id": "malacca",
+      "kind": "place",
+      "en": "Malacca Strait",
+      "zh": "马六甲海峡",
+      "note": "连接印度洋与南海的贸易咽喉"
+    },
+    {
+      "id": "gobi",
+      "kind": "place",
+      "en": "Gobi Desert",
+      "zh": "戈壁",
+      "note": "蒙古高原南部的砾石荒漠"
+    },
+    {
+      "id": "ordu",
+      "kind": "place",
+      "en": "ordu / horde / camp",
+      "zh": "斡耳朵（宫帐）",
+      "note": "蒙古大汗与宗王的移动宫廷"
+    },
+    {
+      "id": "kumis",
+      "kind": "good",
+      "en": "kumis / fermented mare's milk",
+      "zh": "马奶酒（忽迷思）",
+      "note": "发酵马奶，蒙古与突厥人的传统饮料"
+    },
+    {
+      "id": "yurt",
+      "kind": "place",
+      "en": "yurt / ger",
+      "zh": "蒙古包（穹庐）",
+      "note": "毡制可拆装移动居所"
+    },
+    {
+      "id": "darughachi",
+      "kind": "title",
+      "en": "darughachi / overseer",
+      "zh": "达鲁花赤",
+      "note": "蒙古帝国派往各地监治的长官"
+    },
+    {
+      "id": "ortogh",
+      "kind": "role",
+      "en": "ortogh / merchant partner",
+      "zh": "斡脱商人",
+      "note": "与蒙古贵族合伙经营的穆斯林商业代理人"
+    },
+    {
+      "id": "kuriltai",
+      "kind": "rite",
+      "en": "kuriltai / assembly",
+      "zh": "忽里勒台（大聚会）",
+      "note": "蒙古推选大汗的部落议事大会"
+    },
+    {
+      "id": "dragoman",
+      "kind": "role",
+      "en": "dragoman / interpreter",
+      "zh": "通事（译官）",
+      "note": "在丝路上充当翻译与中间人的多语人才"
+    },
+    {
+      "id": "sufi",
+      "kind": "people",
+      "en": "Sufi / mystic",
+      "zh": "苏菲修士",
+      "note": "伊斯兰神秘主义修行者，重内心体验甚于教法条文"
+    },
+    {
+      "id": "dervish",
+      "kind": "people",
+      "en": "dervish / mendicant",
+      "zh": "德尔维希（托钵僧）",
+      "note": "以清贫与游历修行的苏菲行者"
+    },
+    {
+      "id": "ulama",
+      "kind": "people",
+      "en": "ulama / scholars",
+      "zh": "乌里玛（学者阶层）",
+      "note": "伊斯兰教法学者群体，掌管司法与教育"
+    },
+    {
+      "id": "muqaddam",
+      "kind": "title",
+      "en": "muqaddam / caravan leader",
+      "zh": "商队头领",
+      "note": "武装商队的指挥者，负责路线、安全与贸易决策"
+    },
+    {
+      "id": "pilgrim",
+      "kind": "role",
+      "en": "pilgrim",
+      "zh": "朝圣者",
+      "note": "前往圣地朝拜的旅人，通常结队而行"
+    },
+    {
+      "id": "khatun",
+      "kind": "title",
+      "en": "khatun / queen / princess",
+      "zh": "可敦（王后／公主）",
+      "note": "蒙古女性的尊号"
+    },
+    {
+      "id": "tael",
+      "kind": "currency",
+      "en": "tael / liang / silver ounce",
+      "zh": "两（银两）",
+      "note": "中国银本位计量单位"
+    },
+    {
+      "id": "li",
+      "kind": "good",
+      "en": "li / Chinese mile",
+      "zh": "里",
+      "note": "中国的里程单位，约五百米"
+    },
+    {
+      "id": "jinshi",
+      "kind": "title",
+      "en": "jinshi / presented scholar",
+      "zh": "进士",
+      "note": "中国古代最高科举功名"
+    },
+    {
+      "id": "kowtow",
+      "kind": "rite",
+      "en": "kowtow / prostration",
+      "zh": "叩头",
+      "note": "面见皇帝时的跪地磕头大礼"
+    },
+    {
+      "id": "guanxi",
+      "kind": "good",
+      "en": "guanxi / connections",
+      "zh": "关系",
+      "note": "人情网络，商路上不可见的通货"
+    },
+    {
+      "id": "dhow-cargo",
+      "kind": "good",
+      "en": "dhow / sewn-plank vessel",
+      "zh": "缝合船（独桅帆船）",
+      "note": "印度洋传统木船，用椰绳缝合船板而非铁钉"
+    },
+    {
+      "id": "lateen",
+      "kind": "good",
+      "en": "lateen sail / triangular sail",
+      "zh": "三角帆",
+      "note": "阿拉伯航海标志性三角形风帆，迎风能力远优于方帆"
+    },
+    {
+      "id": "sextant",
+      "kind": "good",
+      "en": "sextant",
+      "zh": "六分仪",
+      "note": "测量天体角度以确定纬度的航海仪器"
+    },
+    {
+      "id": "star-chart",
+      "kind": "good",
+      "en": "star chart / nautical almanac",
+      "zh": "星图／航海历",
+      "note": "记录恒星位置的航海指南"
+    },
+    {
+      "id": "khutbah",
+      "kind": "rite",
+      "en": "khutbah / sermon",
+      "zh": "呼图白（主麻日讲道）",
+      "note": "周五聚礼日伊玛目宣讲的布道词"
+    },
+    {
+      "id": "adhan",
+      "kind": "rite",
+      "en": "adhan / call to prayer",
+      "zh": "宣礼（邦克）",
+      "note": "宣礼员从宣礼塔上召唤穆斯林礼拜的呼唤词"
+    },
+    {
+      "id": "fatiha",
+      "kind": "rite",
+      "en": "al-Fatiha / The Opening",
+      "zh": "开端章（法谛海）",
+      "note": "《古兰经》首章，穆斯林每日礼拜必诵"
+    },
+    {
+      "id": "ramadan",
+      "kind": "rite",
+      "en": "Ramadan / fasting month",
+      "zh": "莱麦丹月（斋月）",
+      "note": "伊斯兰历第九月，日出至日落间戒饮食"
+    },
+    {
+      "id": "alexandria",
+      "kind": "place",
+      "en": "Alexandria",
+      "zh": "亚历山大港",
+      "note": "埃及地中海大港，连接欧亚非的贸易枢纽"
+    },
+    {
+      "id": "aden",
+      "kind": "place",
+      "en": "Aden",
+      "zh": "亚丁",
+      "note": "阿拉伯半岛南端港口，印度洋贸易的门锁"
+    },
+    {
+      "id": "isfahan",
+      "kind": "place",
+      "en": "Isfahan",
+      "zh": "伊斯法罕",
+      "note": "波斯心脏，萨法维时代'半天下'之都"
+    },
+    {
+      "id": "shiraz",
+      "kind": "place",
+      "en": "Shiraz",
+      "zh": "设拉子",
+      "note": "波斯诗歌与葡萄酒之城"
+    },
+    {
+      "id": "merv",
+      "kind": "place",
+      "en": "Merv",
+      "zh": "木鹿",
+      "note": "呼罗珊绿洲大城，塞尔柱帝国故都，被蒙古人屠城"
+    },
+    {
+      "id": "kerman",
+      "kind": "place",
+      "en": "Kerman",
+      "zh": "起儿漫",
+      "note": "波斯东南贸易城，以香料、马匹和钢铁出名"
+    },
+    {
+      "id": "tabriz",
+      "kind": "place",
+      "en": "Tabriz",
+      "zh": "大不里士",
+      "note": "波斯西北最大商城，伊利汗国夏都"
+    },
+    {
+      "id": "wadi",
+      "kind": "place",
+      "en": "wadi / dry riverbed",
+      "zh": "干河谷（瓦迪）",
+      "note": "沙漠中季节性干涸的河道"
+    },
+    {
+      "id": "karez",
+      "kind": "good",
+      "en": "karez / qanat / underground canal",
+      "zh": "坎儿井（暗渠）",
+      "note": "从山麓引地下水的暗渠灌溉系统，波斯人发明"
+    },
+    {
+      "id": "simoom",
+      "kind": "good",
+      "en": "simoom / desert wind",
+      "zh": "沙漠热风（赛姆风）",
+      "note": "阿拉伯与撒哈拉的干热暴风，人在其中数分钟即脱水"
+    },
+    {
+      "id": "ghazi",
+      "kind": "people",
+      "en": "ghazi / frontier warrior",
+      "zh": "加齐（信仰战士）",
+      "note": "伊斯兰世界边疆的圣战勇士"
+    },
+    {
+      "id": "bimaristan",
+      "kind": "place",
+      "en": "bimaristan / hospital",
+      "zh": "比马里斯坦（医院）",
+      "note": "伊斯兰世界早期的综合医院兼医学院"
+    },
+    {
+      "id": "waqf",
+      "kind": "good",
+      "en": "waqf / charitable endowment",
+      "zh": "瓦克夫（慈善捐献）",
+      "note": "伊斯兰世界的永久性宗教捐献制度，用于建寺、办学、济贫"
     }
   ]
 }

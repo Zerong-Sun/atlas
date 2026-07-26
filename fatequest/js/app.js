@@ -131,7 +131,12 @@ FQ.SCREENS = {
   title() {
     const returning = FQ.state.xp > 0 || FQ.state.readings > 0;
     $app().innerHTML = `
-      <div class="title-screen">
+      <div class="title-screen" style="background-image:url('assets/art/desk-parchment.webp')">
+        <div class="t-books">
+          ${FQ.art("book-polo", "📕", "inline")}
+          ${FQ.art("book-battuta", "📗", "inline")}
+          ${FQ.art("book-odoric", "📘", "inline")}
+        </div>
         <div class="t-orn">✦ ◆ ✦</div>
         <h1 class="t-logo">${FQ.lang === "zh" ? "灵游" : "FateQuest"}</h1>
         <div class="t-sub">${FQ.lang === "zh" ? "FATEQUEST · 千载行纪" : "灵游 · CHRONICLES OF A THOUSAND YEARS"}</div>

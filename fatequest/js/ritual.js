@@ -141,7 +141,7 @@ FQ.RITUAL.actUI = function (divId) {
   }
   return `<p>${FQ.lang === "zh" ? "摇签筒至心安" : "Shake the lot tube until the heart settles"}</p>
     <p id="ritual-act-prog" class="dim">0 / 4</p>
-    <button class="btn block ritual-shake" onclick="FQ.RITUAL.tapLot()">🎋</button>`;
+    <button class="btn block ritual-shake ritual-lot-art" onclick="FQ.RITUAL.tapLot()">${FQ.art("ritual-lot-tube", "🎋", "big")}</button>`;
 };
 
 FQ.RITUAL._taps = 0;
@@ -163,7 +163,12 @@ FQ.RITUAL.tapLot = function () {
   const el = document.getElementById("ritual-act-prog");
   if (el) el.textContent = FQ.RITUAL._taps + " / 4";
   const btn = document.querySelector(".ritual-shake");
-  if (btn) btn.classList.add("shake");
+  if (btn) {
+    btn.classList.add("shake");
+    const stem = FQ.RITUAL._taps >= 3 ? "ritual-lot-draw"
+      : FQ.RITUAL._taps >= 2 ? "ritual-lot-stick" : "ritual-lot-tube";
+    btn.innerHTML = FQ.art(stem, "🎋", "big");
+  }
   setTimeout(() => btn && btn.classList.remove("shake"), 200);
   if (FQ.RITUAL._taps >= 4) { FQ.RITUAL._taps = 0; FQ.RITUAL.advance(); }
 };

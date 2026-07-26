@@ -17,7 +17,7 @@
 | 运行时 | `js/data-marco-lore.js`（`scripts/build-lore-runtime.mjs`）— 映射游戏节点 → place，挂全文 `bodyEn` |
 | 扩点（方案 A） | `js/data-journey-extra.js` 新增约 22 站（格鲁吉亚→阿丹等），outcome 可「读游记全章」；`chipangu` 坐标已收进 viewBox；缺市集站已补默认 `FQ.PRICES` |
 | `bands` | europe · west_asia · central_asia · steppe · china · india · maritime_asia |
-| 中译 | `zhStatus: "pending"` —— **尚无中文** |
+| 中译 | 走廊主干：`data-lore-zh-trunk.js`（done）；其余 places 多仍 `pending` |
 
 **地带分布**
 
@@ -68,7 +68,12 @@
 
 **已采纳 A（+ 必要时 C 补丁）**（2026-07 PWA M0–M1）：MVP 满配十二城为 Polo 走廊  
 `tabriz · baghdad · hormuz · balkh · samarkand · kashgar · khotan · lop · shangdu · khanbaliq · hangzhou · quanzhou`，  
-威尼斯／阿卡为序章；开罗／麦加等留给第二章（白图泰线），届时用方案 B 补语料。
+威尼斯／阿卡为序章。
+
+**方案 B（白图泰）最小章已落地（2026-07 M3）**：  
+`tangier → cairo → damascus → mecca → delhi → calicut` + `baghdad↔damascus` 桥；  
+语料 `ibn-battuta-lore.json` → `js/data-battuta-lore.js` + 六城 zh trunk；  
+**非** 46 place 全量入城。详见 `docs/TEXT_REQUIREMENTS.md`。
 
 ---
 
@@ -166,5 +171,7 @@ node fatequest/scripts/smoke-outcomes.mjs
 - [x] 主干站中文正文校译（`js/data-lore-zh-trunk.js` 覆盖大不里士→刺桐等；prologue 威尼斯/阿卡另附）
 - [ ] 其余 places 全量中译与 36 段细切
 - [ ] 从 98 stories 中挑 40 条改写为途中事件
-- [ ] 二期：拆解伊本·白图泰语料（选公有领域法译本）
+- [x] 二期最小：白图泰六城章 + runtime（M3）
+- [ ] 二期加深：白图泰其余 places / 全量中译
+- [ ] 三期：其他游记 JSON 进主路径
 - [x] 隐藏路：`data-secret-paths.js`（`needPath` = `{node}_secret`）+ 地图金线高亮

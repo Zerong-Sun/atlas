@@ -48,23 +48,27 @@ FQ.CITY.renderHub = function () {
   const entryDone = !!w.flags["entry:" + city.id];
   const sites = (city.sites || []).map(sid => {
     const ev = FQ.DB.event[sid];
+    const ic = FQ.exploreArt(city.id, sid, null, "inline");
     return `<button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.runEvent('${sid}')">
-      ${ev ? FQ.T(ev.title) : sid}</button>`;
+      <span class="explore-ic">${ic}</span>${ev ? FQ.T(ev.title) : sid}</button>`;
   }).join("");
   const mentorBtn = city.mentor
     ? `<button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.meetMentor('${city.mentor}')">${FQ.lang === "zh" ? "拜访导师" : "Mentor"}</button>`
     : "";
+  const marketIc = FQ.exploreArt(city.id, "market", "🧺", "inline");
+  const shrineIc = FQ.exploreArt(city.id, "faith", "🕌", "inline");
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
+      ${FQ.cityEntryArt(city.id, "full")}
       <h2>${FQ.T(city.name)}</h2>
-      <p class="dim small">${city.band} · ${city.culture}</p>
+      <p class="dim small">${FQ.cultureArt(city.culture, "inline")} ${city.band} · ${city.culture}</p>
       ${!entryDone
         ? `<button class="btn block" onclick="FQ.CITY.runEvent('${city.entryEvent}')">${FQ.lang === "zh" ? "入城见闻" : "Arrival"}</button>`
         : `<p class="dim small">${FQ.lang === "zh" ? "已入城" : "Arrived"}</p>`}
       <div style="margin-top:12px"><b>${FQ.lang === "zh" ? "探索" : "Explore"}</b>${sites || "<p class='dim'>（序章城无满配探索点）</p>"}</div>
-      <button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.openMarket()">${FQ.lang === "zh" ? "市集" : "Market"}</button>
-      <button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.openShrine()">${FQ.lang === "zh" ? "信仰场所" : "Shrine"}</button>
+      <button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.openMarket()"><span class="explore-ic">${marketIc}</span>${FQ.lang === "zh" ? "市集" : "Market"}</button>
+      <button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.openShrine()"><span class="explore-ic">${shrineIc}</span>${FQ.lang === "zh" ? "信仰场所" : "Shrine"}</button>
       ${mentorBtn}
       <button class="btn block" style="margin-top:14px" onclick="FQ.TRAVEL.open()">${FQ.lang === "zh" ? "选择出路 →" : "Choose a road →"}</button>
     </div>`;
@@ -74,6 +78,9 @@ FQ.CITY.runEvent = function (id) {
   const ev = FQ.DB.event[id];
   if (!ev) { FQ.toast("missing event"); return; }
   const w = FQ.ensureWorld();
+  const hero = ev.kind === "entry"
+    ? FQ.cityEntryArt(w.at, "full")
+    : `<div class="center" style="margin-bottom:8px">${FQ.exploreArt(w.at, id, null, "big")}</div>`;
   const choices = (ev.choices || []).map((ch, i) => {
     const need = ch.needs;
     let disabled = false;
@@ -84,6 +91,7 @@ FQ.CITY.runEvent = function (id) {
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
+      ${hero}
       <h2>${FQ.T(ev.title)}</h2>
       <p>${FQ.T(ev.body)}</p>
       ${choices}
@@ -153,15 +161,16 @@ FQ.CITY.openMarket = function () {
   const rows = goods.map(gid => {
     const g = FQ.DB.good[gid];
     const price = 6 + (gid.length % 5);
+    const ic = typeof FQ.goodsArt === "function" ? FQ.goodsArt(gid, "📦", "inline") : "📦";
     return `<div style="display:flex;justify-content:space-between;align-items:center;margin:6px 0">
-      <span>${g ? FQ.T(g.name) : gid}</span>
+      <span>${ic} ${g ? FQ.T(g.name) : gid}</span>
       <button class="btn ghost sm" onclick="FQ.CITY.buy('${gid}',${price})">${price}💰</button>
     </div>`;
   }).join("");
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
-      <h2>${FQ.lang === "zh" ? "市集" : "Market"}</h2>
+      <h2><span class="explore-ic">${FQ.exploreArt(city.id, "market", "🧺", "inline")}</span>${FQ.lang === "zh" ? "市集" : "Market"}</h2>
       ${rows || "<p class='dim'>—</p>"}
       <button class="btn ghost sm" style="margin-top:12px" onclick="FQ.CITY.renderHub()">←</button>
     </div>`;
@@ -191,8 +200,8 @@ FQ.CITY.openShrine = function () {
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
-      <h2>${FQ.lang === "zh" ? "信仰场所" : "Shrine"}</h2>
-      <p class="dim">${faith || "—"}</p>
+      <h2><span class="explore-ic">${FQ.exploreArt(city.id, "faith", "🕌", "inline")}</span>${FQ.lang === "zh" ? "信仰场所" : "Shrine"}</h2>
+      <p class="dim">${faith ? FQ.faithArt(faith, "inline") + " " + faith : "—"}</p>
       <button class="btn block" onclick="FQ.CITY.bless()">${FQ.lang === "zh" ? "祈福（−1💰）" : "Bless (−1)"}</button>
       ${faith ? `<button class="btn ghost block" style="margin-top:6px" onclick="FQ.CITY.convertFaith('${faith}')">${FQ.lang === "zh" ? "依从本地信仰" : "Adopt local faith"}</button>` : ""}
       <button class="btn ghost sm" style="margin-top:12px" onclick="FQ.CITY.renderHub()">←</button>
@@ -228,6 +237,7 @@ FQ.CITY.meetMentor = function (rid) {
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}
     <div class="panel">
+      <div class="mentor-face">${FQ.mentorArt(rid, div && div.id, "🧙", "big")}</div>
       <h2>${r ? FQ.T(r.name) : rid}</h2>
       <p class="dim">${r ? FQ.T(r.omen) : ""}</p>
       ${div && !already
@@ -247,7 +257,10 @@ FQ.CITY.openBag = function () {
   const w = FQ.ensureWorld();
   const rows = w.bag.map(b => {
     const name = b.kind === "goods" && FQ.DB.good[b.id] ? FQ.T(FQ.DB.good[b.id].name) : b.id;
-    return `<div>${name} ×${b.n || 1}</div>`;
+    const ic = b.kind === "goods" && typeof FQ.goodsArt === "function"
+      ? FQ.goodsArt(b.id, "📦", "inline")
+      : "📦";
+    return `<div>${ic} ${name} ×${b.n || 1}</div>`;
   }).join("") || `<p class="dim">${FQ.lang === "zh" ? "空" : "Empty"}</p>`;
   document.getElementById("app").innerHTML = `
     ${FQ.CITY.hud()}

@@ -17,8 +17,8 @@
       "region": "europe"
     },
     "body": {
-      "zh": "你走进威尼斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入威尼斯时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Venice. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Venice, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "圣马可的钟声从海面传来，你踏上威尼斯的石板码头。运河的水腥气与货栈的香料味混在一起，贡多拉船夫的吆喝声此起彼伏。这是1271年，波罗一家即将启程东行——教皇的书信与圣墓灯油已装进行囊。你记下税吏查验货单的口气、商贾讨价还价的手势，以及哪一条小巷通向里亚尔托桥的市集。马可·波罗写道：「此城水多、桥多，人人可做一点买卖。」海是威尼斯人的国土；从此向东，方言、货币与神明都会换一种说法。你在里亚尔托桥下数货船的桅杆，听见亚美尼亚商人用破碎的威尼斯话报胡椒价钱。圣马可广场上鸽子抢食，书记们把东行所需的担保誊成两份——一份留给共和国，一份随船走。夜色落在运河时，你才明白：这座城不生产丝绸，却靠记录与信用把半个地中海织进账本。写下来的见闻，比金币更耐潮。",
+      "en": "St. Mark's bells sound across the water as you step onto Venice's stone quay. Canal brine and warehouse spice mingle in the air; gondoliers call back and forth. It is 1271 — the Polos are about to sail east, papal letters and Holy Sepulcher oil packed. You note the taxman's tone, the merchants' haggling gestures, which alley leads to the Rialto market. Marco Polo wrote: 'This city has many waters, many bridges; everyone trades a little.' The sea is a Venetian's homeland; eastward, every tongue, coin, and god will change."
     },
     "choices": [
       {
@@ -86,8 +86,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进阿卡。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入阿卡时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Acre. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Acre, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "阿卡的城墙耸立在烈日之下，圣殿骑士的白色斗篷在海风中翻卷。这是十字军最后的港口，也是拉丁世界最东端的哨站。码头上，法兰克商人、阿拉伯掮客与亚美尼亚修士并肩行走——多种语言在此讨价还价。教廷特使在此补全致大汗的文书，每一方印章都关乎通行之路。波罗记曰：过了阿卡，地中海的熟悉岸线结束，亚洲的尘土开始附着在靴底。你走进城门，听见铁匠铺的锤声与码头工人的号子交织——此城的市声，比威尼斯多了几分东方的节奏。城墙上的十字军旗已褪色，港湾里却仍挤满热那亚与威尼斯的船。圣殿骑士核对你的路引，像核对一枚会说话的印章。市场尽头有人低声出售往巴格达的向导名单；教堂钟声与宣礼声几乎叠在同一刻。阿卡是拉丁余晖最后一站——过了此门，法律、度量衡与神明的称呼都会改口。",
+      "en": "Acre's walls stand in the blazing sun; Templar white cloaks whip in the sea wind. This is the last Crusader port, the easternmost outpost of the Latin world. Frankish merchants, Arab brokers, and Armenian monks walk the quay together — many tongues haggling. Papal envoys finalize letters to the Khan here; every seal governs the road ahead. Polo noted: beyond Acre, the familiar Mediterranean coast ends; Asia's dust begins to cling to one's boots. Crusader banners on the walls have faded, yet Genoese and Venetian hulls still crowd the harbor. Templars check your pass like a speaking seal. At the market's end someone whispers a list of guides to Baghdad; church bells and the call to prayer nearly coincide. Acre is the last Latin afterglow — beyond it, law, weights, and the names of God all change."
     },
     "choices": [
       {
@@ -155,8 +155,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进大不里士。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入大不里士时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Tabriz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Tabriz, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "大不里士的城门在晨光中打开，驼队与驴车排成长龙等待入城。这是波斯路上最喧闹的贸易枢纽，拱顶巴扎绵延数里。波罗写道：「城大而商多，来自印度、报达、霍尔木兹乃至地中海之货咸集于此。」石榴与无花果的甜香从果市飘来，铜匠街的敲打声如一支永不完结的乐曲。离城时须过一座长石桥，桥头税吏查验每一驮货物的底细。帖必烈在此教授星辰骰占法，说：「能在大不里士站住脚的人，才算真正进了亚洲的市声。」。大不里士的市集分层如岩：上层卖丝绸与青金石，下层卖马具与干果。蒙古驿吏骑马穿过人群，金牌在胸前晃。你学着先问「哪条路税轻」，再问「哪条路土匪少」。夜里客栈炉火边，波斯诗人与亚美尼亚书记争辩同一座山的名字——你把两种写法都记进册子，免得日后被关卡嘲笑。",
+      "en": "Tabriz's gates open at dawn; camel trains and donkey carts queue to enter. This is Persia's noisiest trade hub, its vaulted bazaar stretching miles. Polo wrote: 'A great city with many merchants; goods from India, Baghdad, Hormuz, and the Mediterranean all gather here.' Pomegranate and fig fragrance drifts from the fruit market; coppersmiths' hammers play an endless rhythm. Leave by a long stone bridge where taxmen inspect every pack. Tabriz's bazaar is layered like rock: silk and lapis above, tack and dried fruit below. Mongol couriers ride through with paizas flashing. You learn to ask which road taxes less before which has fewer bandits. By the inn fire a Persian poet and Armenian clerk dispute one mountain's name — you record both spellings so no checkpoint can mock you later."
     },
     "choices": [
       {
@@ -256,8 +256,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Tabriz market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "大不里士的市集如同一条绵延的织物长河。突厥商人用波斯语喊价，印度香料商在地上铺开姜黄与胡椒的地图。这里最出名的货是丝绸与彩釉瓷砖，据说每一块瓷砖上的花纹，都是匠人用三十个昼夜描出来的。你若不想被坑，就先蹲下喝一盏杏仁茶，用眼神与茶碗压一压价钱。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Tabriz's bazaar unfurls like a river of textiles. Turkic merchants shout prices in Persian while Indian spice dealers spread maps of turmeric and pepper on the ground. Silk and glazed tiles are the prized goods here; it's said each tile's pattern takes thirty days to paint. If you don't want to be cheated, squat down, sip a cup of almond tea, and let your eyes do the bargaining."
     },
     "choices": [
       {
@@ -360,8 +360,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Tabriz marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "大不里士是蒙古伊尔汗国的夏都，宫里却养着基督徒、佛教徒与穆斯林各色随从。蓝色清真寺的穹顶尚未完全建好，但你已能听见里头传来的波斯语唱经声，尾音隐约带一丝突厥口音。有人在寺外的廊下摆棋，棋盘漆成与穹顶一样的青金色。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Tabriz is the summer capital of the Ilkhanate, yet the court hosts Christians, Buddhists, and Muslims alike. The dome of the Blue Mosque is not yet finished, but Persian chants already echo within, their trailing tones carrying a hint of Turkic accent. Outside, someone plays chess under the portico, the board painted the same turquoise-gold as the dome."
     },
     "choices": [
       {
@@ -464,8 +464,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "大不里士的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 大不里士工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Tabriz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Tabriz, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "大不里士的陶瓷坊飘出釉彩的焦香。匠人把青金石的粉末调进釉里，烧出来的蓝色比天空更深一层。你看见一个老匠在湿泥坯上画了一匹奔跑的鹿，但他画完就擦，擦完又画，对你说：'陶土记不住鹿，记不住的才是手艺。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Glaze smoke drifts from Tabriz's pottery workshops. Craftsmen mix lapis lazuli powder into the glaze; the fired blue comes out deeper than the sky. An old potter draws a running deer on wet clay — then erases it, draws again, erases again. 'Clay doesn't remember deer,' he tells you. 'What it can't remember, that is the craft.'"
     },
     "choices": [
       {
@@ -568,8 +568,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进报达。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入报达时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Baghdad. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Baghdad, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "报达（Baghdad）的城墙在底格里斯河的暮色中泛黄。昔日的哈里发之都虽经蒙古之劫，城中仍有经学院的诵经声与巴扎的叫卖声此起彼伏。白图泰来时，记其「为天下大城之一」——苏菲先贤之墓香火不绝，汉百里派法学家聚集于学院廊下。金线锦缎在匠人手中泛光，纸坊与书市比邻而居。你走过底格里斯河上的石桥，听船夫用阿拉伯语唱起古老的船歌。两本游记——波罗与白图泰——的路线，在此城投下交叠的影子。底格里斯河把城切成记忆与废墟两半。学者仍在图书馆门口争论亚里士多德，商队却绕开被毁的桥墩另寻渡口。你在香料巷闻见沉香与樟脑，也闻见尘土里未散尽的焦味。哈里发的荣光已淡，可账房里的数字仍精确——谁掌握度量，谁就掌握过河的权利。把见闻写短些，留给渡船的时间。",
+      "en": "Baghdad's walls glow amber in the Tigris twilight. The former Caliphal capital, though scarred by the Mongols, still hums with madrasa recitation and bazaar calls. Ibn Battuta found it 'one of the largest of cities' — Sufi saint tombs burn incense; Hanbali jurists gather under college arcades. Gold brocade gleams in craftsmen's hands; paper mills and book markets sit side by side. The Tigris cuts the city into memory and ruin. Scholars still argue Aristotle at library doors while caravans bypass wrecked piers. In the spice lane you smell agarwood and camphor — and ash that never quite left the dust. Caliphal glory has faded; the counting-house numbers have not. Whoever holds the measures holds the right to cross."
     },
     "choices": [
       {
@@ -669,8 +669,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Baghdad market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "巴格达的市集是阿拔斯王朝最后的回声。底格里斯河边的书摊上，羊皮纸卷被河风吹得哗哗响。有人在卖用三种语言标注的星图，另有人在角落里卖从巴勒贝克遗址拆下来的石雕残片。最珍贵的货是一本据称出自智慧宫的波斯药典抄本——真假不知，但书皮确实熏过没药。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Baghdad's bazaar carries the last echoes of the Abbasid age. On bookstalls by the Tigris, parchment scrolls flutter in the river wind. Someone sells star-charts annotated in three languages; in a corner, another hawks stone fragments pried from Baalbek's ruins. The most prized item is a Persian pharmacopeia copy said to originate from the House of Wisdom — authentic or not, the cover is certainly scented with myrrh."
     },
     "choices": [
       {
@@ -773,8 +773,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Baghdad marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "巴格达曾被蒙古大军踏碎，但清真寺的宣礼塔仍旧竖在废墟之上。如今重修的寺院里，伊玛目用阿拉伯语与波斯语交替讲经，偶尔夹一句蒙古语——那是给守城兵听的。礼拜结束后，有人把自家的无花果和椰枣放在石板前，说这是给路过旅人的天课。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Baghdad was shattered by the Mongol host, but the minarets still rise above the rubble. In the rebuilt mosques, the imam alternates between Arabic and Persian, with an occasional Mongolian phrase — for the garrison troops. After prayer, families leave figs and dates on stone slabs, calling it zakat for passing travelers."
     },
     "choices": [
       {
@@ -877,8 +877,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "报达的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 报达工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Baghdad: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Baghdad, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "巴格达的造纸坊从中国学来了桑皮纸的配方，又掺进了自己的麻絮。成品既薄又韧，苏菲修士用它抄经，商人用它记账，乞丐在纸角上写两句诗去卖钱。一个学徒正在煮树皮，火候没看准，锅里的浆糊溅了他一脸，师傅在旁大笑说：'纸就是这样来的，从生气开始，到耐心结束。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Baghdad's paper mills learned mulberry-bark paper from China and blended in their own hemp. The sheets come out thin yet tough — Sufi scholars copy scripture on them, merchants do accounts, beggars write couplets on scraps to sell. An apprentice who misjudged the boiling pot gets splattered; the master laughs: 'This is how paper is born — from rage, ending in patience.'"
     },
     "choices": [
       {
@@ -981,8 +981,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "你走进忽鲁谟斯。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入忽鲁谟斯时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Hormuz. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Hormuz, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "忽鲁谟斯（Hormuz）的港口热如炉膛，海风挟着盐腥与胡椒味扑面而来。波罗记：「夏日热风如焚，人畜皆苦。」然而此港的财富令人甘冒酷暑——来自印度的船只在此卸下胡椒、珍珠与宝石，波斯商贾以绿松石与银币交换。港城不靠农田靠贸易，一袋胡椒在此买入，运至威尼斯可翻十倍。掮客用波斯语、阿拉伯语与古吉拉特语同时议价，桅杆遮天，船舱里的货物比一座小城的财富还多。帖必烈擦亮星盘，说：「海上的事，先看天再看价。」。霍尔木兹的热气像一口锅盖。珍珠、马匹与印度棉布在同一条潮线上交易；水手用手指比划季风何时转向。你第一次看见船不用桨、只靠天吃饭的规矩：错过风讯等于错过一整季的命。税官查舱比查灵魂更仔细。记下潮汐与税则——在这里，航海历比祈祷书更常被翻开。",
+      "en": "Hormuz harbor is hot as a furnace; sea wind carries salt and pepper scent. Polo recorded: 'The summer wind burns; men and beasts suffer.' Yet the wealth here makes men brave the heat — Indian ships unload pepper, pearls, and gems; Persian merchants trade turquoise and silver. The port lives by trade alone; pepper bought here fetches ten times the price in Venice. Hormuz heat sits like a lid. Pearls, horses, and Indian cotton trade on one tide-line; sailors mark the monsoon turn with their fingers. You first see ships that eat wind, not oars: miss the season and you miss a year of life. Customs men search holds harder than souls. Note tides and tariffs — here the sailing calendar is opened more than the prayer book."
     },
     "choices": [
       {
@@ -1082,8 +1082,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Hormuz market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "霍尔木兹的市集有一股强烈的咸腥味，那是珍珠母贝在烈日下蒸发海水的味道。波斯的珍珠、印度的胡椒、东非的象牙堆在一处，讨价还价的语言比货还杂。传说这里的香料商能在暗室里单凭气味分辨出十二种不同的桂皮。你若不买，只闻一闻也是赚了。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Hormuz's bazaar carries a sharp briny stench — mother-of-pearl baking under the sun. Persian pearls, Indian pepper, East African ivory all pile up, and the bargaining languages outnumber the goods. They say the spice merchants here can distinguish twelve varieties of cinnamon by scent alone, in total darkness. Even if you buy nothing, just breathing here is a profit."
     },
     "choices": [
       {
@@ -1186,8 +1186,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Hormuz marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "霍尔木兹岛上有一座被海风剥得发白的小清真寺。水手们出海前在门槛上放一枚贝壳，回来时又多放一枚——年深日久，门槛两侧积起来的贝壳比寺里的经书还厚。有人说这不是天房，而是海神的居所，但老伊玛目从来不解释，只微笑。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "A small mosque on Hormuz island has been bleached white by sea winds. Sailors leave a shell on the threshold before departing, and another when they return — over the years, the shells on both sides have grown thicker than the mosque's books. Some say this isn't a house of God but of the sea; the old imam never corrects them, only smiles."
     },
     "choices": [
       {
@@ -1290,8 +1290,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "忽鲁谟斯的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽鲁谟斯工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Hormuz: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Hormuz, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "霍尔木兹没有树，连船架都是从大陆运来的。但这里有一样绝活——珍珠钻孔。匠人用一枚细如发丝的骨针，手稳到能在珍珠表面上钻出肉眼看不见的孔来穿线。'在海峡住久了，'他对你说，'你也会学会什么才叫真正的静。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Hormuz has no trees — even ship timbers are imported from the mainland. But the island has one mastery: pearl-drilling. With a bone needle fine as a hair, the craftsman drills holes invisible to the naked eye for threading. 'Live long enough on the strait,' he tells you, 'and you too will learn what true stillness means.'"
     },
     "choices": [
       {
@@ -1394,8 +1394,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进巴里黑。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入巴里黑时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Balkh. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Balkh, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "巴里黑（Balkh）——古称「众城之母」——在呼罗珊的风中静立。亚历山大大帝的铁骑曾踏过这片土地，玄奘曾记此地伽蓝之盛。如今旧城残垣间仍有商队往来，新的巴扎在废墟旁生长。青金石从巴达哈伤山谷运来，在此装驮后继续东行。你看见蓝釉陶器在阳光下闪着天空的颜色，驼绒匠人将羊毛拍打成厚实的毯。波斯之风穿过废城，牧羊人的笛声从远处传来——这座被反复摧毁又反复重建的城，像路上最倔强的植物。巴尔赫被称为众城之母，如今更像众城之墓。绿洲边缘的墙基露出旧砖，牧人在废殿影里挤奶。你仍能辨认佛寺改清真寺再改驿站的层层痕迹。商队在此休整驼峰，像翻一本被撕掉章节的书。有人说东去的路从这里才真正开始——因为西边的繁华你已见过，东边的空旷要靠脚去量。",
+      "en": "Balkh, ancient 'Mother of Cities,' stands in the Khorasan wind. Alexander's army passed here; Xuanzang recorded its monastic splendor. Now caravans still move among old ruins; a new bazaar grows beside broken stones. Lapis lazuli from Badakhshan arrives here, packed for the eastward journey. Balkh is called mother of cities; it feels more like their tomb. Old brick shows at oasis walls; herders milk in the shade of ruined halls. You still read layers: temple to mosque to yam. Caravans rest humps here as if turning a book with chapters torn out. Some say the eastward road truly begins here — western glory you have seen; eastern emptiness you must measure with feet."
     },
     "choices": [
       {
@@ -1495,8 +1495,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Balkh market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "巴里黑被称为'诸城之母'，其市集有一种苍老的庄重。石砌摊位之间的通道宽得可以并行两头骆驼。卖青金石的老人在石板上用指甲刻字展示成色，一个字都懒得喊出来。真正的好货不在摊面上，你得穿过帘子到后头去看。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Balkh is called the Mother of Cities, and its bazaar has an ancient solemnity. The aisles between stone stalls are wide enough for two camels abreast. An old man selling lapis lazuli scratches marks on a stone slab to indicate quality, not bothering to call out a single word. The real goods aren't on display — you have to go behind the curtain."
     },
     "choices": [
       {
@@ -1599,8 +1599,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Balkh marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "巴里黑曾是一座佛教圣地，如今城外的佛塔只剩下一座风化过半的柱础。清真寺建在旧寺院的地基之上，但地基的石材上还残留着半朵莲花的浮雕。有个小男孩在浮雕上放了一块干馕饼，说是给'以前的神'的，他的祖父低声念了一句赞主清净。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Balkh was once a Buddhist holy land; today, only a half-eroded pillar-base remains of the old stupas outside the city. The mosque sits on the foundations of the older temple, and on the stone you can still make out the relief of half a lotus. A small boy places a dried flatbread on it, saying it's 'for the old god.' His grandfather whispers a prayer of divine transcendence."
     },
     "choices": [
       {
@@ -1703,8 +1703,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "巴里黑的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 巴里黑工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Balkh: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Balkh, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "巴里黑的织毯匠人用当地一种粗毛羊的绒做底料，再用石榴皮与靛蓝染出花色。一把剪刀的握柄被几代人磨得锃亮。'地毯不是一个人织的，'匠人说，'第一个结是祖母打的，最后一个结是你这辈子打的。中间的都是别人的路。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Balkh's carpet-weavers use wool from a local coarse-haired sheep, dyed with pomegranate rind and indigo. The grip of a pair of shears has been polished by generations of hands. 'A carpet is never woven by one person,' the weaver says. 'The first knot was tied by your grandmother; the last one, you'll tie in this life. All between are others' roads.'"
     },
     "choices": [
       {
@@ -1807,8 +1807,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进撒马尔罕。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入撒马尔罕时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Samarkand. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Samarkand, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "撒马尔罕的蓝色穹顶在午后的阳光下如天空坠落。河中之明珠，经学院与清真寺的瓷砖拼出星辰与花叶之纹，工匠以中国之法造纸——751年怛罗斯之战后，造纸术在此生根。果园环城，雪水渠网引山泉入市，每一座巴扎拱门下都有人在用波斯语、突厥语与蒙古语讨价还价。出城往东，便是帕米尔之缘；出城往西，便是波斯腹地。此城的纸坊师傅说：「一张好纸胜过十句好话——纸能把商路画在面前。」帖木儿尚未到来，这座城还是商旅之城。撒马尔罕的蓝瓦在日光下几乎刺眼。帖木儿尚未以后世之名震慑世界，但这座城已会用花园与天文仪招待远客。你在雷吉斯坦广场听人用三种语言叫卖同一匹布。夜里星盘的铜臂转动，学者把你的生辰换算成他们的黄道——你不懂全部演算，却记下「数字也能当路引」。",
+      "en": "Samarkand's blue domes shimmer like fallen sky in the afternoon sun. Pearl of Transoxiana — madrasa and mosque tiles spell stars and flowers; craftsmen make paper by Chinese methods, rooted here since the Battle of Talas (751). Orchards ring the city; snow-melt canals bring mountain water to market. Samarkand's blue tiles nearly blind in daylight. Timur's later fame has not yet frozen the world, yet the city already greets strangers with gardens and astrolabes. On the Registan three tongues sell one bolt of cloth. At night a copper arm of the star-plate turns; a scholar translates your birth into their zodiac. You cannot follow every sum, but you note that numbers can be a pass."
     },
     "choices": [
       {
@@ -1908,8 +1908,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Samarkand market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "撒马尔罕的市集建在雷吉斯坦广场周围，穹顶商棚一座接一座，如倒扣的瓷碗。丝绸、纸张与甜瓜——这里的甜瓜据称冰镇两千多里仍不坏，马可波罗在游记里也单独写了一段。最有意思的是一个来自费尔干纳的马商，他不喊价，只拉马出来走一圈，让马蹄替你说话。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Samarkand's bazaar surrounds the Registan, one domed trading hall after another like upturned porcelain bowls. Silk, paper, and melons — these melons are said to survive two thousand li of iced transport, a claim Marco Polo recorded in his own travelogue. The most interesting vendor is a horse dealer from Fergana: he doesn't call prices, only walks the horse around and lets the hooves speak."
     },
     "choices": [
       {
@@ -2012,8 +2012,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Samarkand marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "撒马尔罕的经学院外墙铺满了天青色的瓷砖，几何花纹延伸到门额上变成一行书法，写的是'求知，远至中国亦当求之'。院里的学生正在争论一个问题：如果把经文抄在从中国来的纸上，那纸的丝绸之路上算不算也是一段天命的旅程。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "The madrasa of Samarkand is tiled in sky-blue, its geometric patterns resolving into calligraphy above the gate: 'Seek knowledge, even unto China.' Inside, students debate: if scripture is copied onto paper that came from China, does the paper's Silk Road journey count as part of a divine itinerary?"
     },
     "choices": [
       {
@@ -2116,8 +2116,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "撒马尔罕的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 撒马尔罕工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Samarkand: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Samarkand, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "撒马尔罕的造纸坊是八世纪从战俘那里学会中国造纸术的，如今已自成一派。纸浆里加了棉花短绒，成品比中原的纸更柔软。一个匠人把刚晾好的纸举起来对着太阳照，纸纹里透出一片均匀的云鳞。'这就是为什么撒马尔罕的纸能跨越沙漠，'他说，'它已经学会了云的轻。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Samarkand's paper mills learned the Chinese craft from prisoners of war in the eighth century, and have since made it their own. Cotton linters are mixed into the pulp, making the sheets softer than those from the East. A craftsman lifts a newly dried sheet to the sun — the fiber texture shows a uniform cloud-scale. 'This is why Samarkand paper crosses deserts,' he says. 'It has learned the lightness of clouds.'"
     },
     "choices": [
       {
@@ -2220,8 +2220,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进可失合儿。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入可失合儿时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Kashgar. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Kashgar, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "可失合儿（Kashgar）的城门上，风从帕米尔吹来，带着雪与草的气味。这是「大土耳其」之门户，市集的声调已异于波斯——羊皮帽贩子用突厥语吆喝，驼毛布堆在摊位上如小山。城外绿洲梨树与葡萄成荫，雪水渠网比威尼斯的水道还整齐。喀什喇嘛穿着绯红袍，在街头转起经轮；绿袍阿訇从最近的宣礼塔上呼礼。帖必烈收起星盘，低声说：「你已走出任何威尼斯人熟悉的地图。」你离中原，只差最后几重山口。喀什噶尔是两山夹出的集散口：南路玉石，北路皮毛，城里则是葡萄干与刀鞘。你学会在巴扎用手势谈价，也学会在清真寺外放下刀。向导警告：从此向东，水比银贵，谎比水更多。把水袋装满，把话少说——沙漠会惩罚饶舌的人，也会奖励把井位写清楚的人。",
+      "en": "Kashgar's gate — wind from the Pamirs carries snow and grass scent. Gateway to 'Great Turkey'; the bazaar's accent has shifted from Persia — sheepskin vendors hawk in Turkic, camel-wool bolts piled high. Outside, oasis orchards of pear and grape shade the paths. A lama in crimson robes turns a prayer wheel; a green-robed imam calls from the nearest minaret. Kashgar is a funnel between ranges: jade south, furs north, raisins and knife-sheaths in town. You bargain by gesture in the bazaar and leave blades outside the mosque. Guides warn: eastward, water costs more than silver, and lies outnumber wells. Fill the skins; speak less — the desert punishes chatter and rewards those who write wells clearly."
     },
     "choices": [
       {
@@ -2321,8 +2321,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Kashgar market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "喀什噶尔的星期天巴扎挤在城墙与河滩之间，马蹄与驴蹄把土路踩出一层浮尘。中原的茶叶、西域的玉石、北方的皮毛，还有藏地的盐混在一处。一个柯尔克孜牧民在卖马奶酒，他用一口勉强能沟通的突厥语对你说：'喝这个，再走沙漠就不觉得嘴巴里有土了。'。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Kashgar's Sunday bazaar sprawls between the city wall and the riverbank, the dirt paths churned to dust by hooves of horses and donkeys. Cathay tea, Serindian jade, northern furs, and Tibetan salt all mingle here. A Kirghiz herdsman sells kumis; in barely-intelligible Turki, he tells you: 'Drink this. Then the desert won't taste like dirt in your mouth.'"
     },
     "choices": [
       {
@@ -2425,8 +2425,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Kashgar marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "喀什噶尔有一座绿顶清真寺，门前的台阶被千万双脚磨得像玉一样光滑。郊外的山坡上还有一处摩尼教废弃的洞穴，洞壁残画里一个光明使者正在把海变成甜水。如今牧民把羊赶进洞里避风，羊的咩咩声混着千年前壁画无声的讲道。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Kashgar has a green-domed mosque whose front steps have been worn smooth as jade by millions of feet. On a hillside outside town, an abandoned Manichaean cave preserves faded murals of a Light-Messenger turning the sea sweet. Now herdsmen drive sheep into the cave for shelter; bleating mingles with the silent preaching of thousand-year-old murals."
     },
     "choices": [
       {
@@ -2529,8 +2529,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "可失合儿的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 可失合儿工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Kashgar: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Kashgar, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "喀什噶尔的刀具铺子里，铁砧声从早响到晚。这里的刀是游牧与定居的混合产物——刀柄用角，刀身用铁，刀鞘压花是波斯的风格，纹饰却是突厥的狼图腾。'刀不分家，'铁匠举着刚淬火的刀刃给你看，'淬过帕米尔雪水的刀，才能走完丝路不掉刃。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "The knife-workshops of Kashgar ring with anvil-song from dawn to dusk. The blades here are a hybrid of nomad and settled life: horn-gripped, iron-bodied, with Persian-stamped sheaths and Turki wolf totems. 'A blade knows no nation,' the smith says, holding up a freshly-quenched edge. 'Only steel baptized in Pamir snow-water can cross the Silk Road without losing its bite.'"
     },
     "choices": [
       {
@@ -2633,8 +2633,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进忽炭。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入忽炭时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Khotan. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Khotan, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "忽炭（Khotan）——古之于阗——玉河穿城而过，河水在夏日把昆仑山的玉石冲下山谷。波罗记此地「产棉与葡萄甚丰」，绿洲在沙漠边缘如一枚翠玉。玉行掌柜在摊位上摆放青玉与羊脂白玉，辨玉识字如读经——青玉为下品，羊脂白玉为上品。商旅在此补充干果与驼料，为穿越塔克拉玛干沙漠做最后准备。寺钟从旧日佛寺的方向传来，但如今的忽炭已是清真寺之城——信仰换了，玉石之路的方向没有变。和田的玉在河床里像冷月亮。织工把蚕丝拉成能穿过戒指的薄绢，僧人以梵文与于阗文同时抄经。你看见一座佛寺的泥塑金身缺了一只手，香客仍叩首如仪。夜里风沙拍窗，像有人在门外翻旧籍。把玉的成色与丝的经纬都记下来——货物会说话，只要你肯当翻译。谨记。",
+      "en": "Khotan, ancient Yutian — the Jade River runs through, summer floods washing Kunlun jade down the valley. Polo noted 'abundant cotton and grapes'; this oasis at the desert's edge gleams like green jade. Jade merchants lay out green and mutton-fat white stones, reading them like scripture. Travelers resupply here for the Taklamakan crossing. Khotan's jade lies in the riverbed like cold moons. Weavers draw silk thin enough for a ring; monks copy sutras in Sanskrit and Khotanese together. A clay Buddha lacks one hand; pilgrims still bow. Night sand taps the shutters like someone turning old pages outside. Record jade grades and silk counts — goods speak if you translate."
     },
     "choices": [
       {
@@ -2734,8 +2734,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Khotan market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "于阗的玉石巴扎开在王城东门外，一块块璞玉摆在湿布上，布的水分蒸发光了，就再浇一瓢。这里的规矩是买家先用水泼石头，看看湿色再出价——一块干时泛灰的石头，遇水可能绿如松烟。吐蕃人用盐巴换玉，回鹘人用丝绸换玉，中原人用银锭换玉，只有于阗人用眼睛换玉。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Khotan's jade bazaar sits outside the eastern gate of the royal city, raw stones laid out on damp cloth — when the cloth dries, another ladle of water is splashed on. The rule here: buyers must pour water on the stone first and see its wet color before bidding. A stone that looks gray when dry may turn green as pine-smoke under water. Tibetans trade salt for jade, Uighurs offer silk, Cathayans carry silver ingots — but the Khotanese trade with their eyes."
     },
     "choices": [
       {
@@ -2838,8 +2838,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Khotan marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "于阗在改宗伊斯兰之前是西域最大的佛教王国。城郊破寺里的泥塑佛头被风沙磨平了鼻子，但眼睛里还看得出当年勾过金。如今寺旁的穆斯林圣墓香火更旺，但有人悄悄告诉你，那些来上坟的老婆婆，许愿时会不自觉地把手合在胸前——像佛像的手印。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Before its conversion, Khotan was Serindia's greatest Buddhist kingdom. In a ruined temple outside town, a clay Buddha head has had its nose worn down by wind and sand, but you can still see the traces of gold that once lined the eyes. Now the Muslim shrine next door draws more incense, but someone whispers: the old women who come to pray still clasp their hands before their chest — like a Buddha's mudra."
     },
     "choices": [
       {
@@ -2942,8 +2942,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "忽炭的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 忽炭工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Khotan: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Khotan, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "于阗的织丝坊用桑树养蚕，其蚕种传说是一个中原公主藏在发髻里偷运过来的。如今丝绸上织出的纹样已经与中原不同——多了一层帕米尔与犍陀罗之间的想象。一个织女在经纬间手动穿梭，她对你说：'别人来于阗带玉走，你不如带一截丝走。玉会碎，丝只会在路上越来越软。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Khotan's silk workshops raise silkworms on mulberry, their eggs supposedly smuggled here by a Chinese princess hidden in her hair. The patterns woven now have diverged from Cathay — there's an extra layer of imagination drawn from the space between the Pamirs and Gandhara. A weaver works the shuttle by hand and says: 'Everyone carries jade out of Khotan. Take silk instead. Jade can shatter; silk only grows softer with the road.'"
     },
     "choices": [
       {
@@ -3046,8 +3046,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "你走进罗布。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入罗布时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Lop. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Lop, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "罗布（Lop），大漠之畔最后的绿洲，城墙低矮如驼峰。波罗说所有穿越大漠的商旅「须在此歇足一周，以养人畜」。街上全是风尘仆仆的旅人——有的刚出沙漠，眼神还带着沙砾；有的正准备出发，沉默而紧张。沙漠向导在此招揽生意，价钱是普通向导的三倍——「但值每一枚钱。」过罗布之后，沙海无垠，鬼魅诱人—白日听见呼唤，夜晚看见绿洲幻影。你把水囊装满，最后一次回头望向绿柳——前方只有死驼之骨做的路标。罗布是进入大漠前最后一口正经水。村民教你辨认海市蜃楼与真湖的差别：真湖边上有鸟粪，假湖边上只有焦渴。夜里听见像鼓又像哭的声音，老人说是沙在走。你把驼铃的节奏写进笔记，好在迷路时用耳代替眼。从此每一步都像在借命——借给风，也借给自己的谨慎。",
+      "en": "Lop, last oasis before the great desert, its walls low as camel humps. Polo says all desert-crossers 'must rest here a week to refresh men and beasts.' The streets are full of dusty travelers — some fresh from the desert, eyes still gritty; others preparing to depart, silent and tense. Desert guides tout here at triple the normal fee — 'but worth every coin.'. Lop is the last honest water before the desert. Villagers teach mirage from true lake: birds leave guano at the real shore; thirst alone at the false. Night sounds like drum and weeping; elders say the sand is walking. You note camel-bell rhythm so ears can replace eyes when lost. Every step hereafter borrows life — from the wind, and from your own caution."
     },
     "choices": [
       {
@@ -3147,8 +3147,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Lop market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "罗布镇是进入大漠前最后的补给站。市集与其说是在卖货，不如说是在卖勇气与信息。几只水袋、一袋馕饼、一头能撑三天的骆驼——价格比别处贵三成，但你没得选。沙漠向导在这里开价最高，他们不是卖脚力，而是卖'不迷路'。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Lop town is the last resupply before the great desert. The bazaar sells less goods than courage and information. Water-skins, a sack of naan, a camel that can last three days — prices are thirty percent higher than elsewhere, but you have no choice. Desert guides command the highest fees; they aren't selling their feet, they're selling 'not getting lost.'"
     },
     "choices": [
       {
@@ -3251,8 +3251,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Lop marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "罗布镇太小，只有一个土坯垒的小祈祷室和一个佛龛并排。商队出发前，穆斯林向东礼拜，佛教徒对着佛龛磕头，各自做完仪式之后一起分一壶茶。茶没品级之分，祷词也不互相翻译——但在荒漠边上，这两样东西是一回事。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Lop is too small for proper temples; there's only a mud-brick prayer room next to a Buddhist niche. Before caravans depart, Muslims pray eastward, Buddhists bow to the niche, and afterward they share a pot of tea. The tea has no grade; the prayers need no translation — but at the edge of the desert, the two are the same thing."
     },
     "choices": [
       {
@@ -3355,8 +3355,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "罗布的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 罗布工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Lop: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Lop, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "罗布没什么正经营生，但编水袋的手艺是一绝。用羊皮囊内缝牛膀胱，封口用骨胶，据说滴水不漏能撑七天。'别看不起水袋，'正在封胶的人说，'在戈壁上，一滴水比黄金重。等到你嗓子冒烟的时候，你会觉得全天下最好的匠人就是做水袋的。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Lop has few proper trades, but water-skin making is an art here. Sheep stomachs are sewn inside ox bladders and sealed with bone glue — they say it can hold water without a leak for seven days. 'Don't look down on a water-skin,' says the man sealing the glue. 'In the Gobi, a drop of water is heavier than gold. When your throat is parched, you'll think the finest craftsman in the world is the one who made this.'"
     },
     "choices": [
       {
@@ -3459,8 +3459,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "你走进上都。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入上都时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Shangdu. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Shangdu, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "上都（Shangdu/Xanadu）——大汗的夏都——在草原的绿海中浮现。波罗详记大理石宫殿「涂金绘兽」，竹殿可拆装随大汗迁移。御苑中有奇兽异禽，湖上小舟载着乐师与歌女。礼官在殿前拦住远人——「先卜一卦，再入觐。」仪式本身就是通行证：星盘转动，签筒摇晃，大汗借此考察来客的命运。能走到上都的人，才算被草原与宫殿同时看见。而你已站在御苑的门槛上，比一座城的商队领头人更靠近世界的中心。上都的宫墙在草原上画出整齐的直角。蒙古贵族骑马较猎，色目工匠在作坊里打金银器。你被允许远远看见帐殿的白毡与孔雀羽扇，却不能靠近御案。翻译官反复叮嘱：先报职衔，再报来意，最后才呈礼物。盛世的礼仪像另一座关卡——过得去，才配谈更远的汗八里。",
+      "en": "Shangdu (Xanadu), the Great Khan's summer capital, rises from a green sea of grassland. Polo described marble palaces 'gilded and painted with beasts,' and a bamboo hall that can be dismantled and moved with the Khan. The imperial park holds strange beasts; boats on the lake carry musicians and singers. Shangdu's palace walls cut clean right angles on the steppe. Mongol nobles hunt on horseback; Western craftsmen work gold and silver. You may glimpse white felt and peacock fans from afar, never the imperial desk. Interpreters repeat: rank first, errand second, gifts last. Court etiquette is another checkpoint — clear it before Khanbaliq."
     },
     "choices": [
       {
@@ -3560,8 +3560,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Shangdu market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "上都的市集由色目商人管理，他们在蒙古包之间搭起帐篷商铺。马匹在这里不是用来驮货的，而是货本身——一匹河西的汗血马能换满满三车的丝绸。最受欢迎的货是一种银制马镫，镂空的花纹里藏着《古兰经》的波斯文片段和中国云气纹。没人觉得它们放在一起有什么不对。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Shangdu's bazaar is run by Semu merchants who pitch tent-shops among the Mongol yurts. Horses here aren't for carrying goods — they are the goods. One Ferghana blood-horse can trade for three full carts of silk. The most sought-after item is a silver stirrup whose filigree hides both Persian Qur'anic fragments and Chinese cloud-scroll motifs. Nobody finds the combination strange."
     },
     "choices": [
       {
@@ -3664,8 +3664,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Shangdu marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "忽必烈汗的上都同时养着佛僧、道士、也里可温（景教徒）与伊玛目，在各种节庆轮番祈福。城北的道观里，道士用硫磺与水银炼丹，隔壁清真寺的宣礼声传来时，道士只是把炉火调小了一档，说：'天不分向背。'。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Kublai Khan's Shangdu hosts Buddhist monks, Daoist priests, Nestorian Christians, and Muslim imams, each taking turns to bless festivals. In a Daoist temple north of the city, a priest refines cinnabar and sulphur into elixir pills. When the call to prayer sounds from the neighboring mosque, he simply turns down his furnace and says: 'Heaven knows no direction.'"
     },
     "choices": [
       {
@@ -3768,8 +3768,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "上都的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 上都工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Shangdu: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Shangdu, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "上都的金匠铺里用的是从和林旧都传下来的蒙古锤揲法——把金箔敲进铜胎的凹陷里，不用焊药。锤子落下的节奏像马蹄声。'大汗帐下的金器，'匠人一边敲一边说，'一定要轻。因为他今天在上都，明天就可能拔营北行。我们的手艺也得学会搬家。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "The goldsmiths of Shangdu use the Mongol repoussé technique handed down from Karakorum — hammering gold foil into depressions on a bronze body, without solder. The rhythm of the hammer is like hoofbeats. 'Goldwork for the Great Khan,' says the craftsman as he strikes, 'must be light. Today he is in Shangdu, tomorrow he may break camp north. Our craft must also learn to move.'"
     },
     "choices": [
       {
@@ -3872,8 +3872,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进汗八里。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入汗八里时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Khanbaliq. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Khanbaliq, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "汗八里（大都/北京）——城方正如棋盘，街直如墨线。波罗惊叹其十二城门、鼓楼报时，城中户口之多「不可胜数」。大汗的纸币在此通行全国——「商旅以钞换货，无敢拒者。」白图泰后来亦记此城「为天下最繁华都会之一」。运河从南而来，载着江南的稻米与丝绸；驿路向四方辐射，诏令与商队日夜往返。夜宴之上，忽必烈大汗问起远国风物与梦——满殿皆静。你是站在帝国肚脐上的人——从此城出发，四方的路都已铺好。汗八里的大街宽到可容九车并行。色目、汉人、蒙古人各走各的规矩，市场却把大家绑在同一杆秤上。你在会同馆外排队呈文，看使者把各国土物列成清单。宫城角楼的影投在护城河上，像一句写不完的序言。把所见写成可核对的条目——大汗的世界太大，只有细节能证明你真的来过。",
+      "en": "Khanbaliq (Dadu/Beijing) — the city is squared like a chessboard, streets straight as inked lines. Polo marveled at its twelve gates, drum-tower timekeeping, and countless households. The Khan's paper currency circulates everywhere: 'Merchants trade with it; none dare refuse.' Ibn Battuta later called it 'one of the world's most flourishing cities.'. Khanbaliq avenues fit nine carts abreast. Semu, Han, and Mongol keep separate customs; the market binds them to one scale. Outside the hostel for envoys you queue to present papers and watch tribute lists grow. Corner towers throw shadows on the moat like an unfinished preface. Write what can be checked — the Khan's world is too large; only detail proves you came."
     },
     "choices": [
       {
@@ -3973,8 +3973,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Khanbaliq market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "大都的钟鼓楼前，每天有一千辆马车载货入城。马可波罗说这里'百物输入之众，有如川流不息'。你在市集里能买到南洋的龙涎香、云南的普洱茶、高丽的参膏与蒙古的皮桶子。最抢手的是一副非洲犀角做的弓——不是弓本身值钱，而是把它带到大都的人说它值十三条人命。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Before the Bell and Drum Towers of Khanbaliq, a thousand carts enter the city daily. Marco Polo wrote that 'the multitude of goods brought in is like a never-ending stream.' You can buy ambergris from the South Seas, Pu'er tea from Yunnan, ginseng paste from Goryeo, and leather buckets from Mongolia. The most coveted item is a bow made of African rhino horn — not valuable for the bow itself, but because the man who brought it claims it cost thirteen lives."
     },
     "choices": [
       {
@@ -4077,8 +4077,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Khanbaliq marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "大都城里有各式各样的礼拜场所——佛教的大圣寿万安寺，道教的崇真万寿宫，基督教的最教寺，伊斯兰的清真寺，甚至还有一座来自吐蕃的密宗喇嘛庙。马可波罗说大汗'于诸教皆礼'。你在街上看见一个聂斯托利修士和一名回回阿訇在同一个茶棚下聊天，话题是——哪一种天堂更凉快。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Khanbaliq holds every kind of sanctuary — the Buddhist Temple of Ten Thousand Safeties, the Daoist Palace of Sublime Truth and Longevity, a Nestorian church, mosques, and even a Tibetan tantric lamasery. Marco Polo noted the Great Khan 'honors all faiths.' On the street, you see a Nestorian monk and a Muslim imam sharing a tea-stall, debating one question: which paradise is cooler."
     },
     "choices": [
       {
@@ -4181,8 +4181,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "汗八里的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 汗八里工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Khanbaliq: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Khanbaliq, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "大都的景泰蓝作坊里，铜胎上的掐丝比头发还细。一种天青色的釉料据说是从波斯运来的钴料调的——烧出来的蓝色与撒马尔罕经学院的墙如出一辙。'蓝色没人能独占，'师傅说，'阿拉伯人用它写清真言，蒙古人用它烧瓷，佛僧用它画药师佛的发髻。颜色是同一碗，端给不同的神喝。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "In Khanbaliq's cloisonné workshops, the copper wires laid on the body are finer than hair. The sky-blue glaze is said to be made from Persian cobalt — the fired blue is identical to the walls of Samarkand's madrasas. 'Nobody owns blue,' says the master. 'Arabs use it to write the Shahada, Mongols to fire porcelain, Buddhists to paint the Medicine Buddha's hair. It's the same bowl of color, served to different gods.'"
     },
     "choices": [
       {
@@ -4285,8 +4285,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进行在。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入行在时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Kinsay. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Kinsay, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "行在（杭州）——波罗称之为「世界最富丽之城」——在你眼前展开。西湖如镜，石桥如虹，市集昼夜不歇。他写城中户数以十万计、浴池千余、消防制度之完善——「商人极富，其妇极美」。南宋虽亡，宫室犹在，丝织业的梭声从未停止。马可·波罗曾在此治事三年，说这座水城最像威尼斯：水多，桥多，人人可做一点买卖。龙井茶香随晨雾升起，雨打船篷的节奏，就是这座城的心跳。你的游记，将在此写满最长的篇章。杭州的湖面像一面被温柔擦过的铜镜。画舫上丝竹声与商贩叫卖混在一起，桥洞下乌篷船接踵而过。你尝到醋鱼与龙井，也看见纸钞在酒肆里比银锭更受欢迎。有人说此城富过半个欧洲——你不敢断言，只把桥的数量与丝绸铺的招牌抄进册子。东南的繁华是另一种关山：用享乐考验远行人的克制。",
+      "en": "Kinsay (Hangzhou) — which Polo called 'the most splendid city in the world' — opens before you. West Lake mirrors the sky; stone bridges arch like rainbows; markets never rest. He recorded hundreds of thousands of households, over a thousand bathhouses, a perfect fire-watch system. Marco served here three years, saying it most resembles Venice. Hangzhou's lake is a gently polished bronze mirror. Music from painted boats mixes with hawkers; black-awning craft pass under bridges. You taste vinegar fish and Dragon Well tea, and see paper notes preferred to silver in wine-houses. Some say the city out-riches half of Europe — you will not swear it, only copy bridge counts and silk-shop signs. Southeastern ease is another pass: it tests a traveler's restraint."
     },
     "choices": [
       {
@@ -4386,8 +4386,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Kinsay market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "行在有十二座城门，每扇门外都有比城内更大的市集。这里的猪肉铺子比别处一整座城还多——马可波罗记了一笔：杭州人每顿饭都有鱼和肉。西湖边的鱼贩子用竹笼把活鱼养在水里，你指哪条他就帮你劏哪条。香料街上则是一条由胡椒、丁香与沈香铺成的甬道。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Quinsai has twelve gates, and outside every gate sprawls a market larger than the city inside. There are more pork butchers here than an entire city elsewhere — Marco Polo noted that the people of Quinsai 'eat fish and meat at every meal.' By West Lake, fishmongers keep their catch alive in bamboo cages in the water; you point, they gut. The spice street is a corridor paved with pepper, cloves, and aloeswood."
     },
     "choices": [
       {
@@ -4490,8 +4490,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Kinsay marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "行在城里有佛教、道教、伊斯兰与景教的寺院，但最热闹的是一座城隍庙。庙里供的不是某位天神，而是历史上一位姓周的本地清官，据说死后被封为城隍。来拜的人不祈福，只告状——把自己被欺负的事写在黄纸上烧掉，像烧一张寄到阴间的诉状。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Quinsai has temples for Buddhism, Daoism, Islam, and Nestorian Christianity, but the liveliest is a City God temple. The deity here is no celestial spirit but a local official surnamed Zhou from history, said to have been appointed City God after death. Worshippers don't pray for blessings — they file complaints. They write their grievances on yellow paper and burn it, like a lawsuit mailed to the underworld."
     },
     "choices": [
       {
@@ -4594,8 +4594,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "行在的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 行在工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Kinsay: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Kinsay, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "杭州的丝绸作坊沿着运河排开，染缸里的颜色多到需要一本专门的热水色卡。每一匹绸缎出厂前，要在十丈长的晾架上拉直，晒足六个时辰。'杭绸跟别处不一样，'一个正在检查经线的女工说，'它是在水上漂过的。西湖的水汽嵌到丝里，穿在身上会自己透风。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Hangzhou's silk workshops line the Grand Canal, the dye vats holding so many colors they need a dedicated color-chart book. Every bolt of silk is stretched on a ten-zhang drying rack for six full shichen before leaving the workshop. 'Hangzhou silk is different,' says a woman checking the warp threads. 'It has crossed water. The mists of West Lake soak into the fibers — wearing it, the fabric breathes on its own.'"
     },
     "choices": [
       {
@@ -4698,8 +4698,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "你走进刺桐。市声、烟尘与陌生的语言同时涌来——须先弄清此地规矩，再谈远行。 入刺桐时，城门、市声与外来人的礼先落在纸上。你记下税吏的口气、货栈的气味，以及哪一条街通向信仰场所。马可一路上所写的，正是这些可被带回西方的句子。",
-      "en": "You enter Zayton. Noise, dust and strange tongues arrive together — learn the local rule before you speak of roads. Entering Zayton, gates, market noise, and the manners of strangers land on the page first. You note the taxman’s tone, the warehouse smell, and which street leads to a shrine — the sort of sentence Marco’s road could carry west."
+      "zh": "刺桐（泉州）——世界第一大港——桅杆如林，遮天蔽日。波罗说：「亚历山大有一船胡椒，刺桐便有百船。」来自印度、波斯、南海与东非的商船在此卸货，中国福船满载瓷器与丝绸出海。天妃宫的香火终日不断——船人离港前，必掷筊问平安，圣筊落地，帆才敢满。港池边香料味与潮腥混在一起，德化白瓷在码头上堆成小山。两本游记——波罗与白图泰——的航线，终将在这座港口的波纹中相遇。你把船票收入行囊：远行者的路，在这里从陆地转向海洋。刺桐港的桅林比寺院的塔林更密。波斯船、马来船、汉船并泊，码头上泰米尔语与阿拉伯语抢道。天妃宫的香火旺得像要熏干整条潮水。你看见市舶司验货盖印，像给海打证明。从此若再西还，风与神都要重新商量——把船籍、货单与潮汛写成三联，才算对得起这一趟入海的见闻。",
+      "en": "Zayton (Quanzhou), the world's greatest harbor — masts like a forest blot out the sky. Polo said: 'For one ship of pepper at Alexandria, a hundred come to Zayton.' Ships from India, Persia, the South Seas, and East Africa unload here; Chinese junks sail out full of porcelain and silk. Zayton's mast-forest outnumbers temple pagodas. Persian, Malay, and Han ships share the quay; Tamil and Arabic jostle on the docks. Tianfei's incense seems thick enough to dry the tide. The shipping office stamps cargo like a passport for the sea. If you ever sail west again, wind and gods must renegotiate — write registry, manifest, and tide in triplicate to honor this maritime note."
     },
     "choices": [
       {
@@ -4799,8 +4799,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的市集见闻：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐市集里，织物、香料与金属声叠在一起。议价不只是银两，也是口音与信誉。你在摊位之间走出一条可写进游记的小路。",
-      "en": "Market Walk in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the Zayton market, cloth, spice, and metal stack together. Bargaining is coin, accent, and credit. Between stalls you walk a path fit for a travel book."
+      "zh": "刺桐港的市集不在街上而在码头边，刚从海船上卸下的货箱被撬开，胡椒与沉香的气味能把整条岸线染透。阿拉伯商人、印度商人、波斯商人各自聚居成番坊，各有各的译官与小庙。码头上最贵的东西是航海图——一张画着从爪哇到亚丁的罗盘线图，能换一座泉州城里的宅子。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Zayton's bazaar is not on streets but along the docks, where freshly unloaded crates are pried open and the scent of pepper and aloeswood soaks the entire shoreline. Arab, Indian, and Persian merchants each live in their own foreign quarters, with their own interpreters and shrines. The most expensive item on the docks is a sea-chart — a single sheet of compass-lines from Java to Aden can trade for a mansion in Quanzhou."
     },
     "choices": [
       {
@@ -4899,8 +4899,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的信仰之所：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐的信仰场所以钟、香或呼礼标识边界。你以旅客之礼站在门外，把所见写成不冒犯本地的句子。",
-      "en": "Place of Faith in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. A place of faith in Zayton marks its edge with bell, incense, or the call to prayer. You stand as a guest and write without offense."
+      "zh": "刺桐城有一座清净寺，传说是先知穆罕默德在世时由门徒赛典赤建立的——泉州人管它叫'麒麟寺'，因为寺门上的穹顶远看像一只蹲伏的瑞兽。隔壁就是一座开元寺的佛塔，两个寺院的钟声轮流敲，从来不乱时辰。有人说这是泉州海风调停的——风往东，佛钟先响；风往西，宣礼先起。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Zayton has a mosque said to have been founded by a disciple of the Prophet himself — the locals call it the 'Qilin Temple' because its dome, from afar, resembles a crouching auspicious beast. Next door stands a Buddhist pagoda of the Kaiyuan Temple. The bells of both sanctuaries ring in turn, never out of sequence. They say the sea-wind of Quanzhou moderates the schedule: wind east, the Buddhist bell first; wind west, the call to prayer begins."
     },
     "choices": [
       {
@@ -4999,8 +4999,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "刺桐的物产与风俗：本地人在此交易、祈愿或谈天。你可谨慎打听，亦可只买一件特产便走。 刺桐工匠巷里，手艺比货物更难定价。学徒的眼神与师傅的规矩，都是远路人应当抄下的注脚。",
-      "en": "Crafts & Customs in Zayton: locals trade, pray, or talk. Ask carefully — or buy one specialty and go. In the craft lanes of Zayton, skill is harder to price than goods. Apprentice eyes and master rules are footnotes a far-road writer should copy."
+      "zh": "刺桐的造船厂从不熄火——德化窑烧出的白瓷要从这里装船下海，所以船的龙骨比瓷器还急。这里的船匠把福船造成翘尾的V形底，能在南海的浪上切开一条直线。一个老船匠用墨斗在龙骨上弹了一根墨线，说：'这根线要是偏了一分，你的瓷器到了南海就会碎一地。船匠的手比瓷匠还稳。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Zayton's shipyards never cool — Dehua porcelain fired in the kilns must be loaded here, so the keels are laid with more urgency than the ceramics. The shipwrights build Fujian-style vessels with raised sterns and V-shaped hulls that can slice a straight line through South Sea swells. An old shipwright snaps a chalk-line down a keel: 'If this line is off by one fen, your porcelain will shatter across the South Sea. A shipwright's hand must be steadier than a potter's.'"
     },
     "choices": [
       {
@@ -5088,8 +5088,8 @@
       "en": "Bandit Shade"
     },
     "body": {
-      "zh": "远处尘头有可疑骑影。",
-      "en": "Suspicious riders raise dust ahead."
+      "zh": "前方山路收窄，两侧岩石后有影子在动。你的向导压低声音：'别停。别快。别看。'你把手放在佩刀上，指尖感到刀柄上缠的麻绳已经被汗水泡软。骆驼的步子没有乱——动物比人更早闻得到危险。绕过那片风化的岩壁后，路重新开阔起来，你的肩胛骨终于离开了后颈。",
+      "en": "The mountain road narrows ahead; shadows shift behind the rocks on both sides. Your guide's voice drops: 'Don't stop. Don't speed up. Don't look.' Your hand rests on your blade; the hemp wrapping on the hilt is already soft with sweat. The camel's gait stays steady — animals smell danger sooner than men. Once past the weathered cliff-face, the road opens up again, and your shoulder-blades finally release from the back of your neck."
     },
     "choices": [
       {
@@ -5155,8 +5155,8 @@
       "en": "Storm"
     },
     "body": {
-      "zh": "天地忽然变色。",
-      "en": "The sky turns."
+      "zh": "天在十分钟之内黑了下来，风拉着沙子和碎石撞上你的脸。驼队迅速围成一个圈，骆驼跪地把长颈埋在彼此之间。你钻进骆驼围成的墙里，听见风在外面像一万个疯婆子在嚎哭。风暴持续了大半夜，等它突然停了，你发现你的嘴唇和睫毛上都结了一层灰白的盐壳子。",
+      "en": "The sky turns black within ten minutes; wind drives sand and gravel against your face. The camel train quickly forms a ring, the animals kneeling and tucking their long necks among each other. You crawl inside the wall of camels and listen: the wind howls outside like ten thousand madwomen keening. The storm lasts most of the night; when it stops abruptly, you find a gray-white crust of salt on your lips and eyelashes."
     },
     "choices": [
       {
@@ -5212,8 +5212,8 @@
       "en": "Caravan Fire"
     },
     "body": {
-      "zh": "他队邀请你共火。",
-      "en": "Another caravan invites you to the fire."
+      "zh": "一支比你大十倍的商队从对面走来，驮货的马匹身上绑着从各种地方来的东西——大马士革的兵刃、巴里黑的毛毯、于阗的玉石，甚至还有一只用竹笼装的活孔雀，笼子是杭州的手艺。商队头领递给你一杯热茶，茶里有羊奶与盐——这是蒙古式的喝法。你自己只带了一点干囊与一条命，但你并不觉得自己穷。",
+      "en": "A caravan ten times your size approaches from the opposite direction, pack-horses laden with goods from everywhere — Damascus blades, Balkhi carpets, Khotanese jade, even a live peacock in a bamboo cage of Hangzhou workmanship. The caravan master pours you hot tea with sheep's milk and salt — the Mongol way. You yourself carry only some dried naan and a single life, but you don't feel poor."
     },
     "choices": [
       {
@@ -5282,8 +5282,8 @@
       "region": "europe"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从威尼斯到阿卡的海路不算长，但地中海在这一段喜怒无常。船主是个热那亚人，他一边掌舵一边用拉丁语骂风，骂完又低声念一句圣母经。同船的方济各会修士拿出几块硬饼分给大家，说这是'圣餐之外的恩典'。海浪颠簸，但你看见远处阿卡的城墙在夕阳下泛金。",
+      "en": "The sea route from Venice to Acre is short, but the Mediterranean in this stretch is moody. The captain, a Genoese, curses the wind in Latin while steering, then mutters a Hail Mary under his breath. A Franciscan friar on board shares hard biscuits, calling them 'grace beyond the Eucharist.' The waves pitch, but you glimpse Acre's walls glowing gold in the sunset."
     },
     "choices": [
       {
@@ -5368,8 +5368,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从阿卡向北进入安纳托利亚山脉，路边的十字军城堡残骸上已经长出了栎树。亚美尼亚的车夫告诉你，每一座废堡下面都埋着一个不肯说对方语言的人。驼队在山道上走得慢，夜间宿营时，你用希腊火绒生了一堆篝火，火焰跳起来的样子像小型的海战。",
+      "en": "North from Acre into the Anatolian highlands, oak trees now grow from the ruins of Crusader castles. An Armenian cart-driver tells you every collapsed keep has someone buried beneath who refused to learn the other's tongue. The camel train moves slowly on mountain paths; at night you light a fire with Greek tinder, the flames dancing like a miniature naval battle."
     },
     "choices": [
       {
@@ -5454,8 +5454,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从大不里士南下，扎格罗斯山脉把天空切成一道峡缝。库尔德牧民在路上赶羊，羊蹄扬起的灰尘让太阳变成一枚杏子的颜色。你在路边看见一座坍塌的萨珊王朝火庙，石砌的圣火台上已经长满了野薄荷——踩上去，整条路都是薄荷味。",
+      "en": "South from Tabriz, the Zagros Mountains slice the sky into a canyon-slit. Kurdish herders drive sheep along the road; the dust from their hooves turns the sun the color of an apricot. You pass a collapsed Sassanian fire-temple; wild mint now grows from the stone altar — step on it, and the whole road smells of mint."
     },
     "choices": [
       {
@@ -5540,8 +5540,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从巴格达到霍尔木兹的路上，棕榈树越来越稀，空气越来越咸。底格里斯河与幼发拉底河在身后合拢成一条记忆。进入霍尔木兹海峡前，向导让你把水袋里的淡水喝掉一半，换成海水——他说波斯湾的盐会让你的皮肤适应即将到来的印度洋。你照做了，嘴唇辣了一整夜。",
+      "en": "From Baghdad toward Hormuz, the palms thin out and the air grows saltier. The Tigris and Euphrates merge into a memory behind you. Before entering the Hormuz Strait, the guide tells you to drink half your fresh water and refill the skin with seawater — the Persian Gulf's salt, he says, will season your skin for the Indian Ocean ahead. You do it; your lips burn all night."
     },
     "choices": [
       {
@@ -5626,8 +5626,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从大不里士向东穿越呼罗珊，这是丝路最古老的段落。路边每隔一段就有一座商队客栈的废墟，有的屋顶塌了一半，灶台还在用。今天的客栈主人是个突厥老妇，她用酸奶煮米，米饭的白与酸奶的白混成一种温顺的暮色。你在炕上躺下，头顶的泥砖缝里漏下一缕月光，刚好照在鞋尖上。",
+      "en": "East from Tabriz across Khurasan, this is the oldest stretch of the Silk Road. Every few leagues, a ruined caravanserai stands by the road — some with collapsed roofs, their hearths still in use. Tonight's host is an old Turkic woman; she cooks rice in yogurt, the white of the rice and the white of the yogurt blending into a gentle dusk. You lie on the kang, a thread of moonlight slipping through a crack in the mud-brick ceiling, landing exactly on the tip of your shoe."
     },
     "choices": [
       {
@@ -5712,8 +5712,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从霍尔木兹向北折返内陆，海风的咸被逐渐蒸掉的沙漠取代。路上经过一座被废弃的阿契美尼德宫殿，石柱下的阴影里有蝎子，石柱上的浮雕里则是狮子在扑牛。你在残垣之间躲了一中午的太阳，出来时衣服被晒出了盐霜——那是从波斯湾带上来的最后一点海。",
+      "en": "From Hormuz north back into the interior, the sea-salt is replaced by the baked desert. You pass an abandoned Achaemenid palace; scorpions shelter in the shadows of the columns, while on the reliefs above, lions still pounce on bulls. You hide from the midday sun among the ruins; when you emerge, your clothes are frosted with salt — the last remnant of the Persian Gulf."
     },
     "choices": [
       {
@@ -5798,8 +5798,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从巴里黑到撒马尔罕之间是粟特人的故地。路边的旧灌溉渠里有时会冲出一块刻着粟特文的陶片，没人认得上面的字，但还是有人捡起来塞进衣服里。经过一片杏林时，地上落满了黄杏，踩烂的果肉让你的靴子变得黏糊糊的，你的同伴说这条路上的人都得踩着甜果子走——这是粟特人给后来人的祝福。",
+      "en": "Between Balkh and Samarkand lies the old Sogdian heartland. Old irrigation canals sometimes wash up pottery shards bearing Sogdian script; no one can read them, but travelers still pick them up and tuck them into their robes. Passing an apricot grove, the ground is yellow with fallen fruit; crushed pulp makes your boots sticky. Your companion says everyone on this road walks on sweet fruit — it's the Sogdians' blessing to those who came after."
     },
     "choices": [
       {
@@ -5884,8 +5884,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从撒马尔罕往东进入帕米尔高原的山麓，路开始陡，空气开始稀。你遇上一队回鹘商人，他们在山泉边用冰凉的泉水洗脸，然后把带不动的几捆货物埋进石堆下面，等下次路过再取。他们给了你一把干杏仁，说这东西在山路上比银子实用——饿的时候能嚼，冷的时候能嚼，怕的时候也能嚼。",
+      "en": "From Samarkand east into the Pamir foothills, the road steepens and the air thins. You meet a Uighur caravan washing their faces in an icy spring; they bury surplus bundles under a cairn to retrieve on their next pass. They give you a handful of dried almonds: more useful than silver in the mountains — you can chew them when hungry, when cold, when afraid."
     },
     "choices": [
       {
@@ -5970,8 +5970,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从喀什噶尔到于阗的山路夹在昆仑山与塔克拉玛干之间，你的一侧是雪峰，另一侧是沙漠。同行的牧民一路唱着突厥语的长歌，调子跟着山势走，上坡时高亢，下坡时低沉。晚上在岩洞里过夜，他告诉你这首歌的名字叫'山的呼吸'——他说雪峰也在听。",
+      "en": "The road from Kashgar to Khotan squeezes between the Kunlun Mountains and the Taklamakan — snow peaks on one side, desert on the other. A herder traveling with you sings long Turkic songs, the melody following the mountain contours: high on the ascent, low on the descent. Sleeping in a rock cave at night, he tells you the song is called 'The Mountain's Breath' — the snow peaks, he says, are listening too."
     },
     "choices": [
       {
@@ -6056,8 +6056,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从于阗往东，昆仑山的雪水逐渐消失在地下，路面上开始出现沙。玉龙喀什河的河床越来越干，河滩上的卵石里偶尔能捡到一块半透明的玉——也许是被河水从山上冲下来，也许是前人故意留下的路标。你捡了一块，触手温润，像是拿着一小块属于天空的物质。",
+      "en": "East from Khotan, the Kunlun snow-melt seeps underground and sand begins to appear on the road. The Yurungkash riverbed grows drier; among the pebbles on the bank you occasionally find a translucent piece of jade — washed down from the mountains, or deliberately left as a waymark by a previous traveler. You pick one up; it's warm to the touch, as if holding a small piece of the sky."
     },
     "choices": [
       {
@@ -6142,8 +6142,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "罗布沙漠这一段是丝路上最难走的路之一——没有水，没有树，只有沙丘在风里缓慢地搬家。马可波罗说这段路要骑三十天，入夜后幽灵会在沙里说话，叫你名字。你的向导教你一个办法：用绳子把所有人连在一起，闭着眼睛跟着骆驼走，听见任何人声都别答应。'那不是你认识的人，'他说，'是沙漠在学舌。'",
+      "en": "The Lop Desert stretch is one of the Silk Road's hardest passages — no water, no trees, only dunes that slowly migrate with the wind. Marco Polo said this leg takes thirty days, and at night spirits whisper your name in the sand. Your guide teaches you a method: tie everyone together with rope, follow the camels with eyes closed, and never answer any voice you hear. 'That is no one you know,' he says. 'That's the desert mimicking.'"
     },
     "choices": [
       {
@@ -6228,8 +6228,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从上都到大都的路是蒙古帝国的脊梁——官道宽阔，驿站密集，每隔三十里就能换马。你骑着一匹驿站借给你的蒙古马，鬃毛短硬，跑起来像射出去的箭。路边是一望无际的草场，草浪在风中翻涌如同丝绸抖动。一个蒙古信使从你身边飞驰而过，丢给你一块奶干，喊道：'给马吃！马比你更需要盐！'",
+      "en": "The road from Shangdu to Khanbaliq is the spine of the Mongol empire — a broad imperial highway, relay stations every thirty li for fresh horses. You ride a Mongol pony from the postal relay: short, stiff-maned, launching like an arrow at a gallop. Grasslands stretch endlessly on both sides, the grass-waves rippling like shaken silk. A Mongol courier flashes past, tosses you a dried curd, and shouts: 'Feed the horse! The horse needs salt more than you!'"
     },
     "choices": [
       {
@@ -6314,8 +6314,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从大都往南，大运河把华北平原切成两半。你搭上一艘运米的漕船，船主是个山东人，操着与你不同的官话。运河两岸的柳树一株接一株，柳条碰到水面时搅起一圈圈细细的涟漪。船主用炭炉煮了一锅鲤鱼，鱼肉紧实，汤汁里满是姜丝——他说这是运河的味道，每一条鱼都游过整条河。",
+      "en": "South from Khanbaliq, the Grand Canal slices the North China Plain in two. You board a grain junk; the boatman is from Shandong, his Mandarin different from yours. Willows line the canal bank in an unbroken row, their trailing branches stirring fine ripples where they touch the water. The boatman stews a carp on his charcoal stove — the flesh firm, the broth heavy with ginger threads. This, he says, is the taste of the Canal: every fish has swum the whole river."
     },
     "choices": [
       {
@@ -6400,8 +6400,8 @@
       "region": "china"
     },
     "body": {
-      "zh": "路上尘土与驼铃。你须决定如何度过这一程。",
-      "en": "Dust and camel-bells. Decide how this stage will go."
+      "zh": "从行在到刺桐的路上，茶园像绿色的台阶一层层爬上丘陵。茶农们用竹斗笠遮阳，采茶的动作快得像鸟啄米。你路过武夷山时，一个茶农请你喝了一杯新炒的青茶，说这种茶叫'铁罗汉'——不是因为它硬，而是喝完之后身体里像坐了一尊佛。你确实觉得双腿又有了继续走的力气。",
+      "en": "From Quinsai to Zayton, tea terraces climb the hills like green staircases. Tea-pickers shaded by bamboo hats move fast as birds pecking rice. Passing the Wuyi Mountains, a tea-farmer offers you a cup of freshly roasted oolong: 'Iron Arhat,' he calls it — not because it's hard, but because after drinking it, a Buddha seems to sit inside your body. Your legs do feel ready to walk again."
     },
     "choices": [
       {
@@ -6484,8 +6484,8 @@
       "region": "west_asia"
     },
     "body": {
-      "zh": "岔路上的尘土。",
-      "en": "Dust on a fork of the road."
+      "zh": "从巴格达向东，美索不达米亚的棕榈渐稀，伊朗高原的荒石渐密。这条路避开了北方的山脉，却绕不过孤独。你遇见一个独自徒步的老人，他说自己从伊斯法罕来，要去巴里黑给儿子送一袋椰枣。'我一个人走，'他说，'但路上的石头都在替我数脚步。少了一步，它们会喊我。'",
+      "en": "East from Baghdad, Mesopotamian palms thin and the stones of the Iranian plateau thicken. This route avoids the northern mountains but not loneliness. You meet an old man walking alone; he came from Isfahan, heading to Balkh with a sack of dates for his son. 'I walk alone,' he says, 'but every stone on this road counts my steps. If I miss one, they'll call me back.'"
     },
     "choices": [
       {
@@ -6536,8 +6536,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "岔路上的尘土。",
-      "en": "Dust on a fork of the road."
+      "zh": "从喀什噶尔直插罗布，你选择了南线——这条路绕过了于阗，直接横切塔克拉玛干沙漠的边缘。风大得像有人在扇你的脸。驼队的领头骆驼突然停下，跪在地上不肯走——所有人都知道这是沙暴的前兆。你立刻蹲下，用斗篷盖住口鼻，听见沙子打在羊毛上的声音，恍如一千只手指在同时敲门。",
+      "en": "From Kashgar straight to Lop — you chose the southern route, bypassing Khotan to cut across the edge of the Taklamakan. The wind slaps your face like an open hand. The lead camel suddenly kneels and refuses to move — everyone knows this signals a sandstorm. You crouch, cover your mouth and nose with your cloak, and listen: sand hitting wool sounds like a thousand fingers knocking at once."
     },
     "choices": [
       {
@@ -6588,8 +6588,8 @@
       "region": "central_asia"
     },
     "body": {
-      "zh": "岔路上的尘土。",
-      "en": "Dust on a fork of the road."
+      "zh": "从撒马尔罕直接南下通往于阗，这是一条比常规路线更险的捷径——要翻过帕米尔的几道山口。山路崎岖到骆驼每一步都在喘。你在海拔最高的山口看见一堆前人的玛尼堆，石头上刻着突厥文、藏文、汉字，甚至有阿拉伯字母——你添了一块石头上去，什么也没刻，但你知道它算数。",
+      "en": "From Samarkand south directly to Khotan, this is a shortcut far more treacherous than the normal route — several Pamir passes must be crossed. The path is so rough that camels pant at every step. At the highest pass, you find a cairn built by previous travelers, stones carved with Turkic, Tibetan, Chinese, and even Arabic script. You add a stone, carving nothing, and you know it counts."
     },
     "choices": [
       {
@@ -6644,8 +6644,8 @@
       "region": "steppe"
     },
     "body": {
-      "zh": "太史院值房里，有人替你求一枚站赤金牌——出示则可换驿马。",
-      "en": "At the Bureau they petition a yam paiza for you — show it to change horses."
+      "zh": "太史院值房里，有人替你求一枚站赤金牌——出示则可换驿马。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。金牌不是赐福，是可核验的路权：站赤验过印文，才肯换马。你把申请手续与禁忌写成清单，免得把恩典说成可以买卖的货。",
+      "en": "At the Bureau they petition a yam paiza for you — show it to change horses. Dialogue is a crossing: each question a stepping-stone. Note omitted names and stressed tones — the real key often hides after 'by the way.' Write the chain so you can later see which step changed your road. A paiza is not a blessing but verifiable road-right: the yam checks the seal before remounting you. Write the petition steps and taboos as a list so grace is never mistaken for merchandise."
     },
     "choices": [
       {
@@ -6698,8 +6698,8 @@
       "en": "Entering Tangier"
     },
     "body": {
-      "zh": "丹吉尔：白图泰记下的城门、市声与礼拜。The first city, therefore, at which he arrived, was Tilimsān; the next Milyāna; the next El Jazāer (Algiers): the next Bijāya; the next Kosantīna the next Būna; the next Tūnis; the",
-      "en": "The first city, therefore, at which he arrived, was Tilimsān; the next Milyāna; the next El Jazāer (Algiers): the next Bijāya; the next Kosantīna the next Būna; the next Tūnis; the next Sawsa; the next Safākus."
+      "zh": "丹吉尔（Tangier）——大西洋之风把礼拜的声音送到港口，白色城墙在晨光中泛着淡金。1325年，年轻的法学家伊本·白图泰从此孤身启程，踏上朝觐之路。他写道：「我告别父母，离乡如鸟离巢。那时我尚不知此行将达三十载。」港口的渔船上岸，橄榄与皮革堆在码头等待装船。你最后一次在本城清真寺做晌礼，祈求安拉护佑远人。马格里布的海风推着你的背——前方是整个伊斯兰世界，从非洲之角到天方之门。丹吉尔的风里有大西洋的咸与直布罗陀的窄。白图泰从这里出发时，也许只想完成一次朝觐，却被路本身改写成更长的契约。你在港市听见安达卢西亚流亡者的歌，也看见南下沙漠的驼队整装。把启程写得郑重些：每一本游记都假装自己知道终点，其实终点是走出来的。",
+      "en": "Tangier — Atlantic wind carries the call to prayer to the port; white walls gleam pale gold in dawn light. In 1325, the young jurist Ibn Battuta set out alone on the Hajj road. He wrote: 'I left my parents as a bird leaves its nest. I did not yet know this journey would last thirty years.'. Tangier's wind carries Atlantic salt and the Strait's narrowness. When Ibn Battuta left, he may have meant only the Hajj; the road rewrote that into a longer contract. You hear Andalusian exile songs and watch desert caravans kit out. Write departures with care: every travel book pretends to know its end; the end is walked into being."
     },
     "choices": [
       {
@@ -6767,8 +6767,8 @@
       "en": "Tangier Market"
     },
     "body": {
-      "zh": "香料与织物在丹吉尔市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Tangier."
+      "zh": "丹吉尔的市集面朝直布罗陀海峡，你能闻到两种不同海的味道——一边是地中海的盐，一边是大西洋的腥。柏柏尔商人披着靛蓝染的厚斗篷，只露两只眼睛在讲价。最畅销的货是从加纳来的黄金粉末，装在芦苇管里，封头用蜜蜡。据说一整管金粉可以在丹吉尔买一艘渔船。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Tangier's bazaar faces the Strait of Gibraltar, and you can smell two different seas — the salt of the Mediterranean to one side, the brine of the Atlantic to the other. Berber merchants wrapped in indigo-dyed cloaks bargain with only their eyes visible. The hottest item is gold dust from Ghana, packed in reed tubes sealed with beeswax. One full tube, they say, can buy a fishing boat in Tangier."
     },
     "choices": [
       {
@@ -6857,8 +6857,8 @@
       "en": "Tangier Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从丹吉尔的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Tangier."
+      "zh": "丹吉尔的清真寺建在海崖上，风大的时候宣礼的声音被浪声盖掉一半。但信徒们说，海也是一本经——浪退回海里，就像念完一节经文的尾音。伊本·白图泰从这里出发时只有二十二岁，寺里的老伊玛目在他额上抹了一点海水，说：'你往东走，海水替你往西念经。'。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Tangier's mosque sits on a sea-cliff; when the wind is strong, half the call to prayer is swallowed by the waves. But the faithful say the sea itself is a scripture — the retreating wave is like the trailing note of a finished verse. Ibn Battuta departed from here at twenty-two; the old imam daubed a drop of seawater on his forehead and said: 'Go east. The sea will pray west on your behalf.'"
     },
     "choices": [
       {
@@ -6947,8 +6947,8 @@
       "en": "Tangier Craft Lane"
     },
     "body": {
-      "zh": "丹吉尔工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Tangier trade local skill for distant silver."
+      "zh": "丹吉尔的造船匠用阿特拉斯山的雪松做龙骨，一种树龄超过三百年的木头。造船时不允许外人观看，因为他们相信船在出生时只能见它的爸妈。船下水的那天，匠人会在船头抹一勺橄榄油，说这是'给海的第一口奶'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Tangier's shipwrights use Atlas cedar for keels — wood at least three centuries old. No outsiders are permitted while building, for they believe a ship must only see its parents at birth. On launch day, the craftsman smears a spoonful of olive oil on the bow, calling it 'the first milk given to the sea.'"
     },
     "choices": [
       {
@@ -7037,8 +7037,8 @@
       "en": "Entering Cairo"
     },
     "body": {
-      "zh": "开罗：白图泰记下的城门、市声与礼拜。It is also said of the Sheikh Jamāl Oddīn, that after he had gone to Damietta, he constantly attended the burial-grounds of that place. There was at that time in Damietta a judge, ",
-      "en": "It is also said of the Sheikh Jamāl Oddīn, that after he had gone to Damietta, he constantly attended the burial-grounds of that place. There was at that time in Damietta a judge, known by the surname of Ibn Omaid, who, attending one day at the funeral of one of the nobles, saw the Sheikh in the burial-ground, and said to him, you are a beastly old fellow. He replied, And you are a foolish judge, who can pass with yo"
+      "zh": "开罗（Cairo）——尼罗与苏丹之城——在你面前铺展如一卷手抄本。白图泰来时，马穆鲁克王朝正如日中天，经学院、医院、清真寺与市集比邻而立。他惊叹尼罗河之甘——「天下诸水，无出其右」。爱资哈尔清真寺的学者在廊下授课，苏菲圣徒博尔汗·丁·阿拉杰在此预言了他的远游——「你必须去印度，去中国，去见我的三位兄弟。」尼罗河送来沃土与船运之便，你在此城学到：旅途不只是一条路，也是一本书。开罗把尼罗河当成自己的脉搏。马穆鲁克骑士的马蹄敲在石街，抄经生的墨香飘出艾资哈尔的走廊。你看见粮船卸麦，也看见法官在树荫下审商队逃税案。白图泰称此城为诸城之母之一——母城的规矩多：施舍有序，学问有阶，市集有眼线。学会在拥挤里听见关键的句子，比学会讨价更重要。",
+      "en": "Cairo — city of the Nile and the Sultan — spreads before you like an illuminated manuscript. When Ibn Battuta arrived, the Mamluk dynasty was at its peak. He marveled at the Nile's sweetness: 'No water on earth surpasses it.' The Sufi saint Burhan al-Din al-A'raj foretold his distant travels here. Cairo takes the Nile as its pulse. Mamluk hooves strike stone; ink from al-Azhar drifts in the corridors. Grain boats unload wheat; a judge tries a customs case under a tree. Battuta named it among mother-cities — and mothers have rules: ordered charity, ranked learning, watchful markets. Hearing key sentences in a crowd matters more than haggling."
     },
     "choices": [
       {
@@ -7106,8 +7106,8 @@
       "en": "Cairo Market"
     },
     "body": {
-      "zh": "香料与织物在开罗市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Cairo."
+      "zh": "开罗的汗·哈利利市集，伊本·白图泰在游记里写道：'此地人潮如海，商贾如浪。'香料街上的气味浓到让你想打喷嚏，但你不能遮鼻子——那是嫌货。一个努比亚商人在地摊上铺开一大块生犀皮，旁边是一排象牙手镯。'在开罗，'他说，'非洲的所有颜色最后都汇到这里。'。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Cairo's Khan al-Khalili, of which Ibn Battuta wrote: 'Here the crowds are an ocean, the merchants its waves.' The spice street hits you so strong you want to sneeze, but you mustn't cover your nose — that insults the goods. A Nubian trader spreads a slab of raw rhino hide on the ground, next to a row of ivory bangles. 'In Cairo,' he says, 'all the colors of Africa eventually flow here.'"
     },
     "choices": [
       {
@@ -7196,8 +7196,8 @@
       "en": "Cairo Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从开罗的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Cairo."
+      "zh": "开罗的爱资哈尔清真寺是整个伊斯兰世界的学府心脏。伊本·白图泰在这里住了多日，听学者辩论法学与神学。门廊下的柱子上刻满了历代学生用指甲抠出来的名字，像一棵倒着的族谱树。一个盲人学者凭声音就能分辨出说话人来自哪个学派，他说：'语法就是信仰的骨架。'。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Cairo's Al-Azhar Mosque is the academic heart of the Islamic world. Ibn Battuta stayed here for days, listening to scholars debate jurisprudence and theology. The columns in the portico are carved with names scratched in by generations of students' fingernails, like an inverted family tree. A blind scholar can identify a speaker's school by accent alone: 'Grammar,' he says, 'is the skeleton of faith.'"
     },
     "choices": [
       {
@@ -7286,8 +7286,8 @@
       "en": "Cairo Craft Lane"
     },
     "body": {
-      "zh": "开罗工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Cairo trade local skill for distant silver."
+      "zh": "开罗的玻璃工坊用叙利亚的沙子和埃及的碱草灰熔制彩色玻璃。一种叫'法蒂玛蓝'的颜色需要加进碾碎的天青石——每掺一克，价格翻一倍。吹玻璃的师傅鼓着腮帮子把炽热的玻璃泡吹成一个完美的球体，然后在你面前突然把它砸碎——'好了，'他笑着说，'碎的声音对了，东西就对了。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Cairo's glass workshops fuse Syrian sand with Egyptian plant-ash into colored glass. A shade called 'Fatimid blue' requires crushed lapis lazuli — each gram doubles the price. A glassblower inflates a glowing bubble into a perfect sphere, then suddenly shatters it before your eyes. 'Good,' he says, smiling. 'If the sound of breaking is right, the object was right.'"
     },
     "choices": [
       {
@@ -7376,8 +7376,8 @@
       "en": "Entering Damascus"
     },
     "body": {
-      "zh": "大马士革：白图泰记下的城门、市声与礼拜。From this place I proceeded to Acca: in this is the tomb of Sālih the prophet, which I visited. After this I arrived at the city of Tyre, which is a place wonderfully strong, being",
-      "en": "From this place I proceeded to Acca: in this is the tomb of Sālih the prophet, which I visited. After this I arrived at the city of Tyre, which is a place wonderfully strong, being surrounded on three sides by the sea. Its harbour is one of those which have been much celebrated. I next visited Sidon, and from this place went into the parts of Tiberias, which it was my wish to see. The whole.was, however, in ruins, bu"
+      "zh": "大马士革（Damascus）——绿荫与刃钢之城——街头的水车声与铜匠的锤声交织。白图泰记此城有「天下至美之市街，园林流水之盛，无出其右」。倭马亚大清真寺的金色马赛克在暮光中闪烁，照见古兰经所述的天堂之园。市集中，大马士革钢刀的刃纹如流水——「一柄好刀可切断飘落的丝巾」。东来西往的商队在此换季：从波斯来的地毯，从中国来的瓷器，从印度来的香料，都在这座叙利亚商心之城过手。大马士革的玫瑰水味能顺着巷子走很远。倭马亚清真寺的院子里，学者与香客并肩洗脚。你看见大马士革钢刃在光下泛出水纹，也看见朝觐商队在城外编队。这里是叙利亚的心脏，也是东去波斯、南下麦加的换乘站。把街名与门名写准——迷路的人常把神学争论当成路标，结果走得更远。",
+      "en": "Damascus — city of shade and blade-steel — water-wheels and coppersmiths' hammers blend in the street. Ibn Battuta noted its 'matchless beauty of streets, gardens, and waters.' The Umayyad Mosque's gold mosaics glimmer at dusk, reflecting the gardens of Paradise. Damascus rosewater travels far down alleys. In the Umayyad courtyard scholars and pilgrims wash feet side by side. Damascene steel shows water-patterns in the light; Hajj caravans form outside the walls. This is Syria's heart and a transfer for Persia east and Mecca south. Write street and gate names true — the lost often treat theological debate as a signpost and wander farther."
     },
     "choices": [
       {
@@ -7449,8 +7449,8 @@
       "en": "Damascus Market"
     },
     "body": {
-      "zh": "香料与织物在大马士革市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Damascus."
+      "zh": "大马士革的市集是一条带拱顶的石街，阳光从穹顶的气孔漏下来，在布料上打出圆形的光斑。最有名的货是大马士革钢刀，刀身上的水纹需要折打三十层钢——传闻这种钢材来自印度的乌兹钢。伊本·白图泰也在这里买过一把，后来他用那把刀在撒哈拉切过椰枣。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Damascus's bazaar is a vaulted stone street; sunlight leaks through oculi in the ceiling, casting round spots on the fabrics. The most famous goods are Damascus steel blades, their surface ripples requiring thirty layers of folded steel — the raw material is said to be Indian wootz. Ibn Battuta bought one here too; he later used it to slice dates in the Sahara."
     },
     "choices": [
       {
@@ -7539,8 +7539,8 @@
       "en": "Damascus Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从大马士革的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Damascus."
+      "zh": "大马士革的倭马亚清真寺曾是罗马的朱庇特神庙，后来又改成了基督教堂，如今是一座清真寺。三种宗教的石头叠在一面墙上，你自己趴上去听，能听见三种不同的回声。寺院的庭院里，一个小孩在教另一个小孩用阿拉伯语念《开端章》，但教的人自己也读错了三个字母。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Damascus's Umayyad Mosque was once a Roman temple of Jupiter, then a Christian church, and now a mosque. The stones of three religions are stacked in one wall; press your ear against it and you'll hear three different echoes. In the courtyard, a child teaches another to recite the Fatiha in Arabic — but the teacher mispronounces three letters himself."
     },
     "choices": [
       {
@@ -7629,8 +7629,8 @@
       "en": "Damascus Craft Lane"
     },
     "body": {
-      "zh": "大马士革工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Damascus trade local skill for distant silver."
+      "zh": "大马士革的锻刀铺开在一条深巷里，整条巷子的空气里全是铁锈与松木炭的味道。刀匠用乌兹钢坯反复折叠捶打，每一锤下去，钢里的碳化花纹就又散开一层。'刀子要听过至少一千声锤子才会听话，'老匠人说，'就跟女人一样——啊不，就跟你自己的腿一样。走够路，腿才会自己认方向。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Damascus's blade forges are hidden down a deep alley, the air thick with iron rust and pine charcoal. The smith folds and hammers the wootz billet again and again, each strike spreading the carbon patterns one layer further. 'A blade must hear at least a thousand hammer-blows before it obeys,' says the old smith. 'Like a woman — no, like your own legs. Walk enough, and your legs will find the way on their own.'"
     },
     "choices": [
       {
@@ -7719,8 +7719,8 @@
       "en": "Entering Mecca"
     },
     "body": {
-      "zh": "麦加：白图泰记下的城门、市声与礼拜。AT this time, that is, in the year 729 (A.D. 1328), prayer was made, during the sermon, for the King of Irak Abu Saīd, and after that for El Melik El Nāsir. I remained there during",
-      "en": "AT this time, that is, in the year 729 (A.D. 1328), prayer was made, during the sermon, for the King of Irak Abu Saīd, and after that for El Melik El Nāsir. I remained there during the third year also, and then left Mecca with the intention of visiting Yemen. I arrived accordingly at Judda. From this place I went with a Company of merchants who were going to Yemen; but, as the wind changed upon us, we put into the is"
+      "zh": "麦加（Mecca）——朝觐之圆心——克而白天房的黑色丝幕在烈日下庄严肃穆。白图泰终于走完了从丹吉尔到此的漫长旅程，完成了他的第一次朝觐。他记曰：「七匝环绕，亲吻黑石，饮渗渗泉之水——此时世间再无君王与乞丐之分。众人皆以白布裹身，立于阿拉法特山下。」城中汇聚来自马格里布、埃及、叙利亚、波斯与印度的信众，肤色语言各异，唯朝向一致。朝觐完成，你被唤作「哈吉」——新生的名字，新生的路。但你知道，安拉已为你打开了更多的道路。麦加的热与虔诚叠在一起，使人不敢随便说话。围绕天房的人流像缓慢的银河，你被卷入其中，才懂「方向」有时不是地图而是心。白图泰在此完成朝觐的核心礼仪，却把更多页留给路上的人。你记下水的配给、帐篷的等级、以及谁在夜间诵经到天明——圣城的秩序，是用无数细小的忍让撑住的。",
+      "en": "Mecca — center of the Hajj — the Kaaba's black silk cover stands solemn in the blazing sun. Ibn Battuta had finally completed the long journey from Tangier, performing his first Hajj. He wrote: 'Seven circuits, kiss the Black Stone, drink Zamzam water — at this moment, there is no king nor beggar.'. Mecca stacks heat and devotion until speech feels unsafe. The flow around the Kaaba is a slow galaxy; pulled into it, you learn that direction is sometimes heart, not map. Battuta completed the core rites here and still gave more pages to people on the road. Note water rations, tent ranks, and who recites till dawn — the Holy City's order is held by countless small yields."
     },
     "choices": [
       {
@@ -7788,8 +7788,8 @@
       "en": "Mecca Market"
     },
     "body": {
-      "zh": "香料与织物在麦加市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Mecca."
+      "zh": "麦加的市集是朝觐的附产品。来自世界各地的朝圣者在这里卖掉随身物品凑路费，所以市面上什么鬼东西都有——马里的金饰、爪哇的蜡染、安达卢西亚的水钟零件。一个索马里香料商用阿拉伯语推销乳香，但数钱的时候用的是斯瓦希里语——他说钱听不懂阿拉伯语。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Mecca's bazaar is a by-product of the Hajj. Pilgrims from everywhere sell their belongings for travel funds, so the market fills with oddities — Malian gold ornaments, Javan batik, spare parts from an Andalusian water-clock. A Somali spice merchant pitches frankincense in Arabic but counts money in Swahili — money, he says, doesn't understand Arabic."
     },
     "choices": [
       {
@@ -7878,8 +7878,8 @@
       "en": "Mecca Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从麦加的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Mecca."
+      "zh": "禁寺的天房用黑锦罩覆，每年更换一次，旧罩被剪成小块分给王公与贵客。伊本·白图泰是等到第二年的朝觐季，才摸到了天房的罩幕一角。他在游记里写道，那一刻他'泪水止不住，仿佛自己只是海浪中的一滴水，而这海从来没有岸。'。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "The Kaaba in the Sacred Mosque is draped in black brocade, renewed each year, the old kiswa cut into pieces for princes and honored guests. Ibn Battuta waited until his second Hajj season to touch a corner of the covering. He wrote in his Rihla that at that moment 'tears would not stop, as if I were but a single drop in an ocean that has never known a shore.'"
     },
     "choices": [
       {
@@ -7968,8 +7968,8 @@
       "en": "Mecca Craft Lane"
     },
     "body": {
-      "zh": "麦加工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Mecca trade local skill for distant silver."
+      "zh": "麦加有专门缝制天房罩幕的刺绣工坊，用金线在黑色丝绒上绣出古兰经的经文。一个绣娘的一辈子只够完成一句经文——'万物非主，唯有真主'这七个字，绣了三年半。她的眼睛因此半瞎了，但她说：'用眼睛换一句真主的名字，这笔交易不亏。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Mecca has a workshop dedicated to embroidering the Kaaba's kiswa, stitching Qur'anic verses in gold thread on black velvet. One embroiderer spends her entire life completing just one phrase — 'There is no god but God,' those seven words took three and a half years. Her eyes are half-blind from it, but she says: 'Trading my eyesight for one name of God — that's a good bargain.'"
     },
     "choices": [
       {
@@ -8058,8 +8058,8 @@
       "en": "Entering Delhi"
     },
     "body": {
-      "zh": "德里：白图泰记下的城门、市声与礼拜。THE river (just mentioned) is the Sinde: it is the greatest river in the world, and overflows during the hot weather just as the Nile does; and at this time they sow the lands. Her",
-      "en": "THE river (just mentioned) is the Sinde: it is the greatest river in the world, and overflows during the hot weather just as the Nile does; and at this time they sow the lands. Here also commence the territories of the Emperor of Sindia and India, who was at this time Mohammed Shāh. From this place also is the description of persons arriving sent in writing to the Emīr of Sindia to Multān. Their Emīr, at this time, w"
+      "zh": "德里（Delhi）——苏丹国之庭——在印度平原的热风中出现。白图泰在此效力于穆罕默德·本·图格鲁克苏丹，一住便是八年。他写宫廷之奢华——金盘银盏、舞女与大象——也写苏丹之喜怒无常：「今日赐你万金，明日砍你头颅。」译员与书记比刀剑更常开口，学者的俸禄比将军的军饷更丰厚。苏菲修道堂中，圣徒的祈祷日夜不息。德里是富贵与危险并存之城——白图泰在此几乎丧命，却也在此积累了半生游记的素材。德里的宫廷像一座不断改建的迷宫。苏丹的赏赐可以一夜使人暴富，也可以一夜使人失踪。你在德里看见中亚马匹与印度棉布同场交易，也看见苏菲道堂里的安静与校场上的喧闹对峙。白图泰在此做官又离开——官位是驿站，不是家。把赏罚的传闻写成条件句，比写成神话更有用。",
+      "en": "Delhi — court of the Sultanate — appears in the Indian plain's hot wind. Ibn Battuta served Sultan Muhammad bin Tughluq here for eight years. He recorded the court's opulence — gold plates, silver goblets, dancers, elephants — and the Sultan's volatile temper: 'Today he gives you ten thousand gold; tomorrow he takes your head.'. Delhi's court is a maze under perpetual remodel. A sultan's gift can enrich overnight or erase a name. Central Asian horses trade beside Indian cotton; Sufi quiet faces parade-ground noise. Battuta held office here and left — office is a yam, not a home. Write rumors of reward and punishment as conditionals; they beat myths for use."
     },
     "choices": [
       {
@@ -8127,8 +8127,8 @@
       "en": "Delhi Market"
     },
     "body": {
-      "zh": "香料与织物在德里市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Delhi."
+      "zh": "德里的市集在苏丹穆罕默德·图格鲁克的统治下繁华到近乎疯狂。他强制把整个德里的居民迁往新都，旧城的市集却自己长了回来，像野草一样。你在这里能买到孟加拉的甘蔗糖、克什米尔的藏红花与一头装饰过的大象。一个耍蛇人声称他的眼镜蛇能在笛声里认出十二种不同的拉格旋律。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Delhi's bazaar under Sultan Muhammad Tughlaq was opulent to the point of madness. He forcibly relocated the entire population of Delhi to a new capital, but the old city's markets grew back on their own, like weeds. Here you can buy Bengali cane sugar, Kashmiri saffron, and a fully caparisoned elephant. A snake-charmer claims his cobra can distinguish twelve different raga melodies by flute."
     },
     "choices": [
       {
@@ -8217,8 +8217,8 @@
       "en": "Delhi Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从德里的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Delhi."
+      "zh": "德里的库瓦特·伊斯兰清真寺建在二十多座被拆掉的印度教神庙地基上，廊柱上还留着旧神像被凿去的残痕。但寺院的院子里有一根四世纪笈多王朝的铁柱，历经七百年不生锈——伊斯兰的墙围着印度的铁，谁也不遮谁。伊本·白图泰在此担任法官九年，他说德里的宗教像咖喱，什么料都放。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Delhi's Quwwat al-Islam Mosque stands on the foundations of twenty-seven demolished Hindu temples; the pillars still bear chisel-scars where old deities were erased. Yet in the courtyard stands a fourth-century Gupta iron pillar, rustless after seven centuries — Islamic walls surrounding Indian iron, neither hiding the other. Ibn Battuta served as a judge here for nine years; he said Delhi's religion is like its curry — all spices at once."
     },
     "choices": [
       {
@@ -8307,8 +8307,8 @@
       "en": "Delhi Craft Lane"
     },
     "body": {
-      "zh": "德里工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Delhi trade local skill for distant silver."
+      "zh": "德里的织锦坊专供苏丹宫廷，用金丝银线与丝绸混织成一种叫'金考布'的礼服面料。织机的提花需要两个人配合——一人拉经线，一人穿纬线，错一根就整匹报废。'在德里做手艺，'匠人低声说，'你永远不知道你的下一件货是给苏丹的，还是给砍你脑袋的那个人的。所以每一次都当成最后一件来做。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Delhi's brocade workshops supply the Sultan's court, weaving gold and silver threads with silk into a fabric called kincob. The loom patterning requires two men working in tandem — one pulling warp, one threading weft; one wrong strand ruins the whole bolt. 'Craft in Delhi,' the weaver whispers, 'you never know if your next piece is for the Sultan or for the man who will take your head. So you make each one as if it were your last.'"
     },
     "choices": [
       {
@@ -8397,8 +8397,8 @@
       "en": "Entering Calicut"
     },
     "body": {
-      "zh": "卡利卡特：白图泰记下的城门、市声与礼拜。We next arrived at the city of Manjarūn, which is situated upon a large estuary of the sea, called the “ q estuary of the wolf,” and which is the greatest estuary in the country of",
-      "en": "We next arrived at the city of Manjarūn, which is situated upon a large estuary of the sea, called the “ q estuary of the wolf,” and which is the greatest estuary in the country of Malabar. In this place are some of the greatest merchants of Persia and Yemen. Ginger and black pepper are here in great abundance. The king of this place is the greatest of the kings of Malabar, and in it are about four thousand Mohammeda"
+      "zh": "卡利卡特（Calicut）——胡椒海岸——码头上的香料味浓如大雾。白图泰记此港之盛：中国福船、印度帆船与阿拉伯独桅船同泊一港，胡椒堆积如山。船主以季风为历，以诚信为帆——西南风起，便是交易之季；东北风来，便是归航之时。织工以胡椒浆染布，棉布轻薄如蝉翼，行销阿拉伯与东非。你站在这座印度洋港口的码头上，闻着潮水与肉桂混杂的气味——白图泰的船还在等季风，而你已准备好了下一段航程。从这里，海洋将带你去更远的地方。卡利卡特的胡椒气味能粘在头发上好几天。印度洋的船在此换货：中国瓷器、阿拉伯马、马来香料。扎莫林的官吏用椰子叶登记关税，精确得像潮汐表。你看见不同信仰的商人在同一条船上分红，只为季风不允许拖延。把风向、货种与关税三件事写在同一页——海路的诚实，是用准时证明的。",
+      "en": "Calicut — the pepper coast — spice hangs thick as fog on the docks. Ibn Battuta recorded this great harbor: Chinese junks, Indian dhows, and Arab vessels moored together; pepper piled mountain-high. Captains use the monsoon as calendar, honesty as sail. You stand on the wharf, breathing tide and cinnamon. Calicut pepper clings to hair for days. Indian Ocean ships swap Chinese porcelain, Arabian horses, Malay spices. The Zamorin's clerks tally duty on palm leaf as precise as a tide table. Merchants of many faiths share one hull because the monsoon forbids delay. Put wind, cargo, and tariff on one page — sea honesty is proven by being on time."
     },
     "choices": [
       {
@@ -8458,8 +8458,8 @@
       "en": "Calicut Market"
     },
     "body": {
-      "zh": "香料与织物在卡利卡特市集上叠成气味的墙。",
-      "en": "Spice and cloth stack into walls of scent in Calicut."
+      "zh": "卡里卡特的胡椒市集是全印度最富的买卖——一条条满载胡椒的驳船从马拉巴尔的丛林里顺河漂下来，卸货的苦力黑得像被胡椒汁泡过。伊本·白图泰说这里的商船'多如海面的繁星'。一个中国船商在用天平衡量一袋胡椒的重量，但他的砝码是一截宋代的铜钱串。你沿着摊位记下度量衡与暗语：同一种货在巷口与巷尾可以差出一个脚夫的工钱。问价之前先问产地，问产地之前先看秤是否公平。市集是一座城的呼吸——急促时有谣言，平稳时有信用。",
+      "en": "Calicut's pepper market is the richest trade in all India — barges loaded with pepper drift down from the Malabar jungles, and the dockworkers are so blackened they look pickled in pepper juice. Ibn Battuta said the merchant ships here 'are like stars spread across the sea.' A Chinese ship merchant weighs a sack of pepper, using as his counterweight a string of Song dynasty copper coins."
     },
     "choices": [
       {
@@ -8528,8 +8528,8 @@
       "en": "Calicut Shrine"
     },
     "body": {
-      "zh": "礼拜的呼声从卡利卡特的宣礼塔落下。",
-      "en": "The call to prayer falls from the minarets of Calicut."
+      "zh": "卡里卡特的信仰杂居程度让外来人眼花——马拉巴海岸上同时有印度教神庙、清真寺、犹太会堂和一座景教教堂。渔民出海前在寺庙磕头，在清真寺门口放一篮鱼，在教堂墙外画一条小船——反正海里的事，多求一个神也不嫌多。你在门槛外学当地的小规矩：何处脱鞋，何时沉默，怎样把施舍放进箱子而不像施舍。信仰场所不卖路引，却常常决定你能不能被当作「自己人」。把礼仪写成清单，比写成感想更不易失礼。",
+      "en": "Calicut's religious mix baffles outsiders — the Malabar Coast holds Hindu temples, mosques, a synagogue, and a Nestorian church all at once. Fishermen bow at the temple before heading out, leave a basket of fish at the mosque door, and scratch a little boat on the church wall. Anything involving the sea — one more god can't hurt."
     },
     "choices": [
       {
@@ -8598,8 +8598,8 @@
       "en": "Calicut Craft Lane"
     },
     "body": {
-      "zh": "卡利卡特工匠用本地的手艺换远路来的银。",
-      "en": "Craftsmen of Calicut trade local skill for distant silver."
+      "zh": "卡里卡特的船匠用椰子纤维搓成绳子，比麻绳更耐海水腐蚀，能用二十年不烂。一艘单桅三角帆船从铺龙骨到下水只需要一百二十天，但绳子的准备就要两年——因为椰壳要先泡在死水里发酵，直到臭味把全村都赶跑，才算是好了。'好绳子是臭出来的，'船匠说，'好事也差不多。'。作坊里的节奏比市集诚实：锤子、织机、磨轮都会泄露手艺的年头。你问原料从哪条路来，成品往哪条路去——工匠的回答常常比官员的告示更接近真相。把一道工序记清楚，等于多懂一种不会说谎的语言。",
+      "en": "Calicut's shipwrights make rope from coconut fiber; it resists seawater better than hemp and can last twenty years. A dhow can be built in a hundred and twenty days from keel-laying to launch, but the rope takes two years to prepare — the coconut husk must first ferment in stagnant water until the stench drives away the whole village. 'Good rope comes from stink,' says the shipwright. 'Good things in life are about the same.'"
     },
     "choices": [
       {
@@ -8665,8 +8665,8 @@
       "en": "Road tangier → cairo"
     },
     "body": {
-      "zh": "沙与商队之间，有人低声问你是否会礼。",
-      "en": "Between sand and caravans, someone asks if you know the rites."
+      "zh": "丹吉尔到开罗，沿北非海岸一路向东。伊本·白图泰二十二岁离开家乡时走的就是这条路。路边长满了龙舌兰与橄榄树，牧羊人用柏柏尔语向你打招呼。你在一处泉水边遇见去麦加的朝觐团，他们用骆驼皮袋装着水，袋口扎紧，但水的气味仍然穿皮而出——是加了没药的圣水。",
+      "en": "Tangier to Cairo, hugging the North African coast eastward. Ibn Battuta took this very road when he left home at twenty-two. Agaves and olive trees line the way; shepherds greet you in Tamazight. At a spring, you meet a Hajj caravan heading to Mecca, their water carried in camel-skin bags sealed tight — yet the scent still seeps through the leather: zamzam laced with myrrh."
     },
     "choices": [
       {
@@ -8739,8 +8739,8 @@
       "en": "Road cairo → damascus"
     },
     "body": {
-      "zh": "沙与商队之间，有人低声问你是否会礼。",
-      "en": "Between sand and caravans, someone asks if you know the rites."
+      "zh": "从开罗穿西奈半岛到大马士革，沙漠里满是圣经旧约的石头。经过圣凯瑟琳修道院时，希腊正教的修士送了你一杯用沙漠荆棘酿的淡酒，苦得像远古时代遗留下来的恨。傍晚时分，你在沙丘上看见大马士革的绿色——西奈半岛的荒野与叙利亚绿洲之间只隔最后一眼沙。",
+      "en": "From Cairo across the Sinai to Damascus, the desert is thick with Old Testament stones. Passing Saint Catherine's Monastery, a Greek Orthodox monk offers you thin wine brewed from desert thorns — bitter as an ancient grudge. At dusk, from atop a dune, you see the green of Damascus — between the wilderness of Sinai and the oasis of Syria, just one last gaze of sand."
     },
     "choices": [
       {
@@ -8813,8 +8813,8 @@
       "en": "Road damascus → mecca"
     },
     "body": {
-      "zh": "沙与商队之间，有人低声问你是否会礼。",
-      "en": "Between sand and caravans, someone asks if you know the rites."
+      "zh": "从大马士革南下到麦加的朝觐路是伊斯兰世界里最神圣的一段。路边扎满了朝觐团的帐篷，语言多到你听不过来：阿拉伯语、突厥语、波斯语、柏柏尔语、索马里语、乌尔都语。伊本·白图泰在自己的游记里写道，他在这条路上第一次感到自己不是摩洛哥人，而是'乌玛'——整个穆斯林共同体的一部分。",
+      "en": "South from Damascus to Mecca — the holiest stretch in the Islamic world. Hajj tents line the road; the languages swirl past too fast to count: Arabic, Turkic, Persian, Berber, Somali, Urdu. Ibn Battuta wrote in his Rihla that it was on this road he first felt he was no longer a Moroccan, but part of the Ummah — the entire community of believers."
     },
     "choices": [
       {
@@ -8887,8 +8887,8 @@
       "en": "Road mecca → delhi"
     },
     "body": {
-      "zh": "沙与商队之间，有人低声问你是否会礼。",
-      "en": "Between sand and caravans, someone asks if you know the rites."
+      "zh": "从麦加横渡印度洋到德里，这一段路程伊本·白图泰走了很久——先是坐船到亚丁，沿阿拉伯海东岸北上，再搭一艘季风船到古吉拉特。海上的夜晚，你在甲板上看见印度洋的磷光跟在船尾，像船拖着一条碎星光做的裙摆。印度籍水手说那不是磷，是海里的星辰在跟着你们。",
+      "en": "From Mecca across the Indian Ocean to Delhi — this leg took Ibn Battuta a long time: first by ship to Aden, up the eastern Arabian coast, then a monsoon vessel to Gujarat. On the sea at night, you watch Indian Ocean phosphorescence trailing the stern, like the ship dragging a train of crushed starlight. The Indian sailors say it's not phosphorus — those are sea-stars following you."
     },
     "choices": [
       {
@@ -8961,8 +8961,8 @@
       "en": "Road delhi → calicut"
     },
     "body": {
-      "zh": "沙与商队之间，有人低声问你是否会礼。",
-      "en": "Between sand and caravans, someone asks if you know the rites."
+      "zh": "从德里南下到卡里卡特，热带开始把你的衣服变得永远干不透。路边的椰子树多到你觉得整个世界都是椰子做的。你经过一个因疟疾而荒废的村子，空屋里长出了一棵菩提树，树根穿过窗口，叶子在天花板下展开。一个路过的托钵僧像在自己家里一样走进去，在大树下坐下来打坐。",
+      "en": "South from Delhi toward Calicut, the tropics turn your clothes perpetually damp. Coconut trees crowd the road until the whole world seems made of coconuts. You pass a village abandoned to malaria; a bodhi tree has grown through an empty house, roots threading the window, leaves unfurling beneath the ceiling. A passing fakir walks in as if it were his own home and sits down beneath the tree to meditate."
     },
     "choices": [
       {
@@ -9035,8 +9035,8 @@
       "en": "West from the Two Rivers"
     },
     "body": {
-      "zh": "巴格达的余晖把大马士革的尖塔提前画在眼底。",
-      "en": "Baghdad’s afterglow paints Damascus minarets onto the eye."
+      "zh": "伊本·白图泰走过的桥不属于任何一个国家。你在印度某条河的桥上遇见一个会说七种语言的老船夫，他在两岸之间摆渡了五十年，从来不踏上任何一侧的岸。'我一辈子就住在桥上，'他指着脚下的桥墩说，'所以我没有祖国，但我走过的每一个人都是我的同乡。'他递给你一片槟榔，苦里带甜，像这条河的河口。",
+      "en": "This bridge, crossed by Ibn Battuta, belongs to no nation. On a bridge over an Indian river, you meet an old ferryman who speaks seven languages. He has ferried between the two banks for fifty years but has never set foot on either side. 'I have lived my whole life on this bridge,' he points at the piers beneath. 'So I have no homeland, but every person who has crossed is my countryman.' He hands you a slice of betel nut — bitter-sweet, like the river's mouth."
     },
     "choices": [
       {
@@ -9104,8 +9104,8 @@
       "en": "Cairo Judgment · I"
     },
     "body": {
-      "zh": "尼罗河边，一名法官请你旁听：商队是否隐瞒了关税。",
-      "en": "By the Nile a qadi asks you to witness: did the caravan hide the duty?"
+      "zh": "尼罗河边，一名法官请你旁听：商队是否隐瞒了关税。双方辩手说话像尼罗河水一样滔滔不绝。原告拍桌子，被告摔茶碗，法官一直在打瞌睡——直到听见一个数字对不上账，他突然睁开一只眼。'重新计，'他说，'尼罗河有泛滥的规矩，关税也必须有。'。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "By the Nile, a judge invites you to observe: did a caravan conceal customs duties? Both advocates argue as endlessly as the river flows. The plaintiff pounds the table, the defendant breaks a teacup, the judge dozes throughout — until a number doesn't add up, and one eye snaps open. 'Recount,' he says. 'If the Nile has rules for flooding, so must tariffs.'"
     },
     "choices": [
       {
@@ -9161,8 +9161,8 @@
       "en": "Cairo Judgment · II"
     },
     "body": {
-      "zh": "账册上的墨迹新旧不一。译员看你一眼，等人开口。",
-      "en": "Ink on the ledger is uneven. The interpreter waits for you to speak."
+      "zh": "奴隶市场的角落，一个努比亚老妇悄悄递给一个年轻女孩一块烤焦的硬饼。市场不许私下投食，但她不管。你后来知道，那女孩是她同村的人——被掠来的。老妇在开罗攒了六年的钱，只够买一块饼，但她说：'六年换一块饼，值。她认出我来了。'。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "In a corner of the slave market, an old Nubian woman slips a burnt hard biscuit to a young girl. Private feeding is forbidden in the market, but she doesn't care. You later learn the girl is from her own village — captured. The old woman saved for six years in Cairo, enough for just one biscuit. 'Six years for one biscuit,' she says. 'Worth it. She recognized me.'"
     },
     "choices": [
       {
@@ -9243,8 +9243,8 @@
       "en": "Cairo Judgment · III"
     },
     "body": {
-      "zh": "法官宣判完毕。尼罗的风把你的名字写进这座城的传闻。",
-      "en": "The qadi finishes. Nile wind writes your name into the city’s talk."
+      "zh": "咖啡尚未成为潮流，但一个也门商人在巷子里煮一种黑色的豆茶——磨碎的咖啡豆加小豆蔻。他说这水'能让人睡意全无，与朋友聊一整夜'。你喝了一杯，苦得像尼罗河的泥，但三分钟后手脚发热，整个世界比先前锐利了一点点。这就是你第一次遇见咖啡。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "Coffee is not yet in fashion, but a Yemeni merchant brews a black bean tea in an alley — ground coffee beans with cardamom. This water, he says, 'banishes sleep and lets you talk with friends all night.' You drink a cup; it's bitter as Nile mud, but three minutes later your hands and feet warm up and the world sharpens by a small degree. This is your first encounter with coffee."
     },
     "choices": [
       {
@@ -9293,8 +9293,8 @@
       "en": "Hajj Rites · I"
     },
     "body": {
-      "zh": "麦加城外，向导问你是否已洁净、是否知绕行的方向。",
-      "en": "Outside Mecca a guide asks if you are purified and know the circuit."
+      "zh": "朝觐的人潮中，一个马里老人在找他的骆驼——不是真丢了，而是他曾祖父的曾祖父当年来朝觐时骑的那头。他手里拿着一块刻着骆驼名字的木板，用班巴拉语反复念着一个音节。你帮不了他，但他在你手上画了一个字，说这是'穆'——他们会保佑你的。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "Amid the Hajj crowd, an old Malian searches for his camel — not truly lost, but the one his great-great-grandfather rode on pilgrimage a century ago. He carries a wooden board carved with the camel's name, repeating one syllable in Bambara. You cannot help him, but he draws a character on your palm and says it means 'Mu' — it will protect you."
     },
     "choices": [
       {
@@ -9354,8 +9354,8 @@
       "en": "Hajj Rites · II"
     },
     "body": {
-      "zh": "人潮如河。你须在拥挤中保持方向，也保持记录的手不抖。",
-      "en": "The crowd is a river. Keep direction — and a steady hand for the pen."
+      "zh": "天房清扫仪式后，一个波斯朝圣者把一块旧罩幕的碎片包进绸布里，说等回家要放进他母亲的墓穴。'她已经瞎了，看不见天房了，'他说，'但告诉她，我把天房的衣服带了回来——她会摸得出来。'他把布片贴在脸颊上，点了点头，走了。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "After the Kaaba's cleansing ritual, a Persian pilgrim wraps a scrap of old kiswa in silk, saying he will place it in his mother's grave. 'She is blind now; she cannot see the Kaaba,' he says. 'But if I tell her I brought back the Kaaba's garment — she will feel it.' He presses the cloth to his cheek, nods, and walks away."
     },
     "choices": [
       {
@@ -9435,8 +9435,8 @@
       "en": "Hajj Rites · III"
     },
     "body": {
-      "zh": "仪成。你可把麦加写成归途的圆心，而非终点。",
-      "en": "Rites done. Mecca can be written as the center of returns — not an end."
+      "zh": "麦加城外一个凿井的苦力递给你一瓢水。水里掺了赞赞泉的一小管圣水，他说这是他一生中最贵的东西。'我凿了一辈子井，'他用晒脱皮的肩膀指着远处的禁寺，'但是最好的水不在井里，在那边。不过这一瓢，是井水最好的样子——它知道自己离圣水只有三十里。'。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "Outside Mecca, a well-digger hands you a gourd of water, mixed with a small vial of Zamzam holy water. This, he says, is the most precious thing he has ever owned. 'I've dug wells all my life,' he says, his sun-peeled shoulders nodding toward the Sacred Mosque in the distance. 'But the best water isn't in any well — it's over there. Still, this gourd is water at its finest — it knows it's only thirty li from the holy spring.'"
     },
     "choices": [
       {
@@ -9473,5 +9473,223 @@
         "chapterId": "mecca"
       }
     }
+  },
+  {
+    "id": "ev-damascus-tree-1",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革香市·一",
+      "en": "Damascus Perfume · I"
+    },
+    "body": {
+      "zh": "倭马亚清真寺外的香市里，一名叙利亚香料商请你辨别真假玫瑰水：一瓶清、一瓶浊，价格却写反了。围观者起哄，有人赌你的鼻子，有人赌你的良心。空气里玫瑰与沉香缠在一起，像故意要干扰判断。你忽然想起路上学过的一句：香料的诚实，有时要靠光线，不靠叫卖。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "In the perfume market outside the Umayyad Mosque, a Syrian spicer asks you to tell true rosewater from false: one clear, one cloudy, prices reversed. Onlookers bet on your nose or your conscience. Rose and agarwood tangle in the air as if to confuse judgment. You recall a road proverb: spice honesty sometimes needs light, not shouting."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "借日光细看液面",
+          "en": "Judge by daylight on the surface"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "damascus-tree-1"
+          },
+          {
+            "op": "codex",
+            "value": "cx-damascus-tree"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-damascus-tree-2"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "先问产地文书",
+          "en": "Ask for origin papers first"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "damascus-tree-1b"
+          },
+          {
+            "op": "fate",
+            "value": 1,
+            "stat": "rapport"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-damascus-tree-2"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "婉拒离开",
+          "en": "Decline and leave"
+        },
+        "effects": [
+          {
+            "op": "days",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ev-damascus-tree-2",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革香市·二",
+      "en": "Damascus Perfume · II"
+    },
+    "body": {
+      "zh": "香料商承认浊瓶才是新蒸馏的真货，清瓶掺了酒精求卖相。围观者散去一半，剩下的人要你在「当众揭穿」与「私下纠正」之间选一条路。远处宣礼声起，商贩下意识擦手。你意识到：在大马士革，面子有时比瓶子更易碎，而朝觐季节的信誉能卖到麦加城门。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "The spicer admits the cloudy bottle is freshly distilled truth; the clear one was cut for looks. Half the crowd leaves; the rest ask you to expose him publicly or correct him privately. The call to prayer rises; he wipes his hands. In Damascus, face shatters easier than glass, and Hajj-season credit can sell as far as Mecca's gate."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "私下纠正，留他体面",
+          "en": "Correct him privately"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "damascus-tree-2-kind"
+          },
+          {
+            "op": "fate",
+            "value": 1,
+            "stat": "rapport"
+          },
+          {
+            "op": "goto",
+            "value": "event:ev-damascus-tree-3"
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "当众说破，护买家",
+          "en": "Expose him to protect buyers"
+        },
+        "divination": "lot",
+        "pass": {
+          "text": {
+            "zh": "众人点头，香料商赔笑补差价。",
+            "en": "The crowd nods; he laughs it off and refunds the difference."
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "value": "damascus-tree-2-public"
+            },
+            {
+              "op": "coins",
+              "value": 2
+            },
+            {
+              "op": "goto",
+              "value": "event:ev-damascus-tree-3"
+            }
+          ]
+        },
+        "fail": {
+          "text": {
+            "zh": "他反咬你是外地奸细，你只好花钱消灾。",
+            "en": "He calls you a foreign spy; you pay to end the quarrel."
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -3
+            },
+            {
+              "op": "goto",
+              "value": "event:ev-damascus-tree-3"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-damascus-tree-3",
+    "kind": "site",
+    "at": [
+      "damascus"
+    ],
+    "title": {
+      "zh": "大马士革香市·三",
+      "en": "Damascus Perfume · III"
+    },
+    "body": {
+      "zh": "傍晚，香料商塞给你一小瓶真玫瑰水，作为「路上识货」的谢礼，并指一条少税的南下朝觐支路。你把支路画进雾图，也把「浊者可能为真」写进图鉴——见闻有时反常识，却更接近作坊里的蒸汽。大马士革教你：香与信，都要经得起光线。对话像过河：每一问都是一块踏石。你留意对方省略的名字与加重的口气——真正的关键往往藏在「顺便」两个字后面。把问答写成可回溯的链条，日后才能知道自己在哪一步改了命运。",
+      "en": "At dusk the spicer presses a vial of true rosewater on you — thanks for knowing goods — and points to a lighter-tax side road south toward the Hajj. You sketch the fork into the fog-map and file 'cloudy may be true' in the codex. Damascus teaches: perfume and trust both need light."
+    },
+    "choices": [
+      {
+        "label": {
+          "zh": "收下谢礼并记路",
+          "en": "Accept the gift and note the road"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "damascus-tree-done"
+          },
+          {
+            "op": "codex",
+            "value": "cx-damascus-rose"
+          },
+          {
+            "op": "revealMap",
+            "value": "mecca"
+          },
+          {
+            "op": "goods",
+            "id": "rosewater",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "label": {
+          "zh": "只记路，不受礼",
+          "en": "Note the road; refuse the gift"
+        },
+        "effects": [
+          {
+            "op": "flag",
+            "value": "damascus-tree-done"
+          },
+          {
+            "op": "codex",
+            "value": "cx-damascus-rose"
+          },
+          {
+            "op": "fate",
+            "value": 1,
+            "stat": "rapport"
+          },
+          {
+            "op": "revealMap",
+            "value": "mecca"
+          }
+        ]
+      }
+    ]
   }
 ]

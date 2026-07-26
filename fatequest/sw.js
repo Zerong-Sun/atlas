@@ -1,5 +1,5 @@
 /* FateQuest service worker — v3 PWA shell */
-const CACHE = "fatequest-v3-m23";
+const CACHE = "fatequest-v3-m4";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
   "./css/style.css", "./assets/icon.svg", "./assets/icon-maskable.svg",
@@ -12,7 +12,7 @@ const ASSETS = [
   "./js/data-loader.js", "./js/effects.js", "./js/ritual.js",
   "./js/chargen.js", "./js/city.js", "./js/travel.js",
   "./js/fx.js", "./js/audio.js", "./js/atmo.js",
-  "./js/app.js", "./js/juice.js", "./js/scene.js", "./js/quest.js",
+  "./js/app.js", "./js/juice.js", "./js/art-map.js", "./js/scene.js", "./js/quest.js",
   "./js/data-goods.js",
   "./css/method-motion.css",
   "./assets/art/ART_EMOJI_MAP.json",

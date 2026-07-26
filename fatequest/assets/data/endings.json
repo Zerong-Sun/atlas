@@ -10,8 +10,8 @@
       "anyCity": true
     },
     "epilogue": {
-      "zh": "你在{lastCity}停下书写。走过{cities}座城，用了{years}年。游记合上，路仍在。",
-      "en": "You stop writing at {lastCity}. {cities} cities, {years} years. The book closes; the road remains."
+      "zh": "你在{cities}座城之后，在{lastCity}合上了游记。{years}年的路，记成一本可被后人翻阅的册子。墨水会淡，字迹会旧，但那些城门的气味、市集的声调、信仰场所的寂静——它们已经渗透进你的骨血。远行者的笔停下了，路仍在沙与海之间延伸。下一程，会有另一个人翻开你的书，找到去往东方的第一条线索。",
+      "en": "After {cities} cities, you close the travelogue at {lastCity}. {years} years of road become a book for those who come after. Ink fades, script ages, but the smell of gates, the cadence of bazaars, the silence of shrines — these have seeped into your bones. The traveler's pen stops; the road still stretches between sand and sea. Next journey, someone else will open your book and find the first clue heading east."
     },
     "variables": [
       "lastCity",
@@ -37,8 +37,8 @@
       ]
     },
     "epilogue": {
-      "zh": "你抵达汗八里与上都，把宫廷的光写成可带回西方的句子。",
-      "en": "You reached Khanbaliq and Shangdu, and turned court light into sentences the West can carry."
+      "zh": "你抵达汗八里与上都，把宫廷的金碧辉煌写成可被带回西方的句子。走过{cities}座城，历时{years}年，你记下了大汗的纸币法令、驿路制度、竹殿与御苑。波罗写道：「我的见闻，不及我亲历的百分之一。」但你所记下的，已足够点燃一座大陆的好奇心。旅途的终点是宫廷的门口——而游记，才刚刚开始被抄写。",
+      "en": "You reached Khanbaliq and Shangdu, turning court splendor into sentences the West can carry. Across {cities} cities in {years} years, you recorded the Khan's paper currency, post-road system, bamboo halls and imperial parks. Polo wrote: 'What I have told is not the hundredth part of what I saw.' But what you recorded is enough to ignite a continent's curiosity."
     },
     "variables": [
       "cities",
@@ -58,8 +58,8 @@
       "netWorth": 200
     },
     "epilogue": {
-      "zh": "你的账簿比任何朝圣名册都长。",
-      "en": "Your ledgers outlengthen any pilgrim roll."
+      "zh": "你的账簿比任何朝圣名册都长——走过{cities}座城，在最赚钱的生意中赚了{richestTrade}。呼罗珊的青金石、刺桐的白瓷、忽鲁谟斯的胡椒——它们在你的驮袋里变成了黄金。但夜深时，你合上账簿，想起的却不是利润——而是讨价还价时学会的第八种语言，是那个在巴扎深处把你当成本地人的瞬间。百市商人走到最后，才知道真正的财富不是货物，是路。",
+      "en": "Your ledgers outlengthen any pilgrim roll — {cities} cities, your richest trade in {richestTrade}. Khorasan lapis, Zayton porcelain, Hormuz pepper — they turned to gold in your pack. But at night, closing the ledgers, you remember not profit but the eighth language you learned haggling, the moment a bazaar merchant mistook you for a local."
     },
     "variables": [
       "cities",
@@ -82,8 +82,8 @@
       ]
     },
     "epilogue": {
-      "zh": "三种问天的方式同在你的行囊里——路因此少了几次盲目。",
-      "en": "Three ways of asking Heaven share your pack — the road lost a few blind turns."
+      "zh": "三种问天的方式同在你的行囊里——易占的铜钱、星辰骰与圣签。走过{cities}座城，你在每一座庙宇、每一片星空下问过路。占卜不是预言，是对话——与天、与路、与自己尚未做出的选择。多法占者不靠运气走路；他用三种语言与未知交谈，路因此少了几次盲目的转弯。",
+      "en": "Three ways of asking Heaven share your pack — Yi coins, astrodice, and the holy lot. Across {cities} cities, beneath every temple and starry sky, you asked the road. Divination is not prophecy; it is dialogue — with heaven, with the road, with choices not yet made. The reader of many arts walks not by luck; he speaks to the unknown in three tongues."
     },
     "variables": [
       "cities"
@@ -101,8 +101,8 @@
       "routesOpened": 10
     },
     "epilogue": {
-      "zh": "你开出的路比你走过的还多。",
-      "en": "You opened more roads than you walked."
+      "zh": "你开出的路比你走过的还多——{routesOpened}条路线在你笔下从虚线变成实线。每一条都是从一个问题开始的：「往东还有路吗？」你的地图上没有国界，只有驿站、水源与山口。制图师不画疆域——他画的是可能性。后人展开你的地图时，走的不是你走过的路，而是你画出的路。",
+      "en": "You opened more roads than you walked — {routesOpened} routes turned from dashed lines to solid under your pen. Each began with a question: 'Is there a road east?' Your map has no borders, only posts, water sources, and mountain passes. The cartographer draws not territory but possibility."
     },
     "variables": [
       "cities",
@@ -121,8 +121,8 @@
       "reputationBands": 3
     },
     "epilogue": {
-      "zh": "多城的人记得你的名——不是征服者，是问路人。",
-      "en": "Cities remember your name — not as conqueror, but as one who asked the way."
+      "zh": "多城的人记得你的名——不是征服者，是问路人。你在三个文化圈中获得声望：在波斯你是值得信赖的商人，在草原你是守诺的过客，在东方你是可被托付一封信的远人。走过{cities}座城，你学到的最重要的事：路连接的不是城与城，而是人与记忆。",
+      "en": "Cities remember your name — not as conqueror, but as one who asked the way. You earned renown in three cultural spheres: in Persia a trusted merchant, on the steppe a promise-keeper, in the East someone worthy of carrying a letter. Across {cities} cities, the most important thing you learned: roads connect not cities but people and memory."
     },
     "variables": [
       "cities"
@@ -141,8 +141,8 @@
       "returnedToStart": false
     },
     "epilogue": {
-      "zh": "你走过{cities}座城，却未回到起点。远行者的归宿，是被人一再提起。",
-      "en": "You crossed {cities} cities and never returned. A traveler's home is being spoken of."
+      "zh": "你走过{cities}座城，历时{years}年，始终未回到起点{start}。最后落脚之处是{lastCity}——与你出发时说的再见，隔了一生的距离。远行者的归宿，不是故乡，是被人一再提起。你的名字成为驿站故事的一部分，被下一个旅人带到下一座城。无归之人，最终成了路本身。",
+      "en": "You crossed {cities} cities over {years} years, never returning to {start}. Your last stop was {lastCity} — a lifetime away from the goodbye you said at departure. A traveler's home is not a birthplace but being spoken of. Your name becomes part of way-station stories, carried by the next traveler to the next city."
     },
     "variables": [
       "cities",
@@ -164,8 +164,8 @@
       "languages": 3
     },
     "epilogue": {
-      "zh": "你换过身份，也换过舌头——边界上最需要的人。",
-      "en": "You changed creed and tongue — the border's most needful soul."
+      "zh": "你换过信仰（{faith}），也换过舌头——在{cities}座城中学会了用不同的语言说同一句问候。边界上最需要的人，不是士兵，不是商人，而是能同时听懂两边的译者。你站在不同的神之间、不同的语言之间、不同的货币之间——你的身份不是固定的，而是流动的。这，恰恰是远行者最真实的样子。",
+      "en": "You changed faith ({faith}) and tongue — learned to say the same greeting in different languages across {cities} cities. The border's most needed soul is not a soldier, not a merchant, but one who can hear both sides. You stand between gods, between languages, between currencies — your identity is not fixed but fluid. This, precisely, is the traveler's truest form."
     },
     "variables": [
       "faith",
@@ -191,8 +191,8 @@
       ]
     },
     "epilogue": {
-      "zh": "你从丹吉尔走到麦加，把仪轨与城门写成可回望的圆。走过{cities}座城，用了{years}年。",
-      "en": "From Tangier to Mecca you wrote rites and gates as a circle of return. {cities} cities, {years} years."
+      "zh": "你从丹吉尔走到麦加，把仪轨与城门写成可回望的圆。走过{cities}座城，历时{years}年——白图泰说：「我告别父母，离乡如鸟离巢。当时我不知这一走便是三十年。」朝觐见证者，亦是世界见证者。你在{lastCity}合上笔记的那一刻，朝觐之圆已画完——但你知道，这只是一个圆；世上还有无数个朝觐者，在画着属于他们自己的圆。",
+      "en": "From Tangier to Mecca, you wrote rites and gates as a circle of return. {cities} cities, {years} years — Ibn Battuta said: 'I left my parents as a bird leaves its nest. I did not know then it would be thirty years.' The witness of the Hajj is also a witness of the world. Closing your notes at {lastCity}, the Hajj circle is complete — but you know this is just one circle; countless pilgrims are drawing their own."
     },
     "variables": [
       "cities",

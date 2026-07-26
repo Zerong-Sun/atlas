@@ -214,18 +214,21 @@
 
 **八张系统表**（`docs/SYSTEM_TABLES.md` 已定义完整schema）：
 
-| 表 | 文件 | 说明 | MVP需填 | M0–M1 状态 |
+| 表 | 文件 | 说明 | MVP需填 | 状态（2026-07-26） |
 |----|------|------|----------|------------|
-| 城市表 | `cities.json` | Polo 走廊 12 满配 + venice/acre 序章 | 12+2 | **已落地** |
-| 角色表 | `archetypes.json` | 角色原型/起点/执念/初始资源 | 3条 | **已落地** |
-| 占卜表 | `divinations.json` | 易占/星骰/圣签 + effects | 3条 | **已落地** |
-| 商品表 | `goods.json` | 商品/产地/价格/风险 | 60条 | **已落地** |
-| 路线表 | `routes.json` + `transports.json` | 走廊边 + 交通方式 | ~15–25 边 | **已落地** |
-| 事件表 | `events.json` | 入城/探索点/途中遭遇 | ~68–88 | **已落地** |
-| 结局表 | `endings.json` | 停笔/人物线/世界状态 | 8条 | **已落地** |
-| 随从表 | `retainers.json` | 随从/能力/人格/命运/招募 | 12-18人 | **已落地** |
+| 城市表 | `cities.json` | Polo 12+2 + Battuta 6 | 12+2 | **M0–M3 已落地（20 城）** |
+| 角色表 | `archetypes.json` | 含 `battuta` | 3+ | **4 条** |
+| 占卜表 | `divinations.json` | 易占/星骰/圣签 + effects | 3条 | **已落地（M2 已消费）** |
+| 商品表 | `goods.json` | 含伊斯兰/印度货 | 60条 | **已落地** |
+| 路线表 | `routes.json` + `transports.json` | Polo + Battuta 脊 + 桥 | ~15–25 | **已落地** |
+| 事件表 | `events.json` | 入城/探索/路遇/对话树 | ~68–88 | **107（含树）** |
+| 结局表 | `endings.json` | 含 `end-battuta-witness` | 8条 | **9 条** |
+| 随从表 | `retainers.json` | 导师 + 白图泰向导 | 12-18 | **已落地** |
+| 图鉴表 | `codex.json` | GDD §13 世界知识 | — | **M3 新增 · 100 条** |
 
-**第一章城市 id（已锁定）**：`tabriz baghdad hormuz balkh samarkand kashgar khotan lop shangdu khanbaliq hangzhou quanzhou`；序章 `venice` `acre`。验收见 `docs/V3_MVP_CHECKLIST.md`。
+**第一章城市 id**：`tabriz … quanzhou` + 序章 `venice` `acre`。  
+**第二章最小脊柱**：`tangier → cairo → damascus → mecca → delhi → calicut`。  
+验收：`V3_MVP_CHECKLIST.md` · `V3_M2_M3_CHECKLIST.md` · 文本对照 `TEXT_REQUIREMENTS.md`。
 
 ### 5.2 事件选项与分支
 
@@ -259,7 +262,7 @@
 }
 ```
 
-**效果指令词表**：`coins | days | goods | item | reputation | faith | language | etiquette | fate | unlockRoute | revealMap | learnDivination | recruit | retainerMood | sticker | codex | flag | goto`
+**效果指令词表**：`coins | days | goods | item | reputation | faith | language | etiquette | fate | unlockRoute | revealMap | learnDivination | recruit | retainerMood | sticker | codex | flag | goto | routeMod | omenStat`
 
 ### 5.3 剧本编写流程
 
@@ -281,25 +284,24 @@
 | 数据 | 文件 | 状态 |
 |------|------|------|
 | 马可·波罗游记 | `marco-polo-lore.json` (464KB) | 136地点+98故事，结构化完成 |
-| 马可·波罗中译 | `data-lore-zh-trunk.js` | 主干站点已译，其余pending |
-| 伊本·白图泰游记 | `ibn-battuta-lore.json` | 已提取，待填充 |
-| 伊本·朱拜尔游记 | `ibn-jubayr-lore.json` | 已提取 |
-| 伊本·法德兰游记 | `ibn-fadlan-lore.json` | 已提取 |
-| 门德斯·平托游记 | `mendes-pinto-lore.json` | 已提取 |
-| 《瀛涯胜览》 | `yingya-shenglan-lore.json` | 已提取 |
-| 术语表 | `glossary.json` | ~90条，中世纪↔现代对照 |
+| 马可·波罗中译 | `data-lore-zh-trunk.js` | 主干站点已译，其余 pending |
+| 伊本·白图泰游记 | `ibn-battuta-lore.json` | ✅ 已提取；运行时 `data-battuta-lore.js` |
+| 白图泰中译 trunk | `data-lore-zh-battuta-trunk.js` | ✅ 六枢纽短文；全书 pending |
+| 伊本·朱拜尔等 | `*-lore.json` | 已提取，未进主路径 |
+| 术语表 | `glossary.json` | **114** 条 |
+| 世界图鉴 | `codex.json` | **100** 条骨架（M3） |
 
 ---
 
 ## 6. 占卜学习系统
 
-### 6.1 当前问题
+### 6.1 当前状态（M2 后）
 
-- 点击"学习"后立即学会，无任何过程
-- 学习后无法实际使用（未接入游戏主流程）
-- 无操作手感
+- ✅ 导师学艺：付费后进入五拍微操，通过才 `learnDivination`（MVP 三法）
+- ✅ 城内/路上带 `divination` 的选项走仪式，结果写入 `routeMods` / 可解锁旁路
+- ⏳ 十法全套 REQ 微操与 Atlas 全量引擎仍属加深项（见 `ATLAS_PORT.md`）
 
-### 6.2 目标设计
+### 6.2 目标设计（完整版 · 仍作 M4+ 参考）
 
 **学习 = 拜师 + 通过小游戏考核**
 
@@ -410,9 +412,10 @@
 | `docs/LORE_PIPELINE.md` | 游记接入管线 | 可用（管线已建） |
 | `docs/ATLAS_PORT.md` | Atlas占卜引擎移植方案 | 参考（待执行） |
 | `assets/art/ART_BRIEF.md` | 美术风格规范 | 活跃 |
-| `docs/ART_REQUIREMENTS.md` | v3.0 素材需求与完成度对照 | **活跃（2026-07-25）** |
-| `assets/art/ART_CATALOG.json` | 363 项资产目录（待 `build_art_catalog.py` 刷新） | 活跃 |
-| `assets/art/ART_TODO.md` | v4.0 缺口摘要 | 活跃 |
+| `docs/ART_REQUIREMENTS.md` | v3.0 素材需求与完成度对照 | **活跃（2026-07-26 · M3 后）** |
+| `docs/TEXT_REQUIREMENTS.md` | 文本/语料/图鉴需求与完成度 | **活跃（2026-07-26）** |
+| `assets/art/ART_CATALOG.json` | 资产目录（待 `build_art_catalog.py` 刷新） | 活跃 |
+| `assets/art/ART_TODO.md` | 缺口摘要 v4.1 | 活跃 |
 | `assets/art/ART_TODO_MAP.md` | v2.0地图缺口清单 | 已被ART_TODO.md取代 |
 | `assets/art/ART_EMOJI_MAP.json` | emoji→图片映射表 | 活跃 |
 | `assets/art/ART_PROMPTS*.md` | 各批量生成prompt | 操作文件 |
@@ -422,26 +425,28 @@
 
 | 项目 | 说明 | 状态 |
 |------|------|------|
-| `cities.json` 等八表 + transports | Polo 走廊 MVP 数据 | **M0 落地中** |
-| 角色抽取UI | 生辰抽取+命格轮盘界面 | **M1** |
-| 地图交互 | 可点击城市+动态解锁+迷雾 | **M1** |
-| 城市探索 / 效果引擎 / 出行 | 事件表驱动 | **M1** |
+| `cities.json` 等八表 + transports + codex | Polo + Battuta MVP 数据 | **M0–M3 已落地** |
+| 角色抽取UI | 生辰抽取+命格轮盘界面 | **M1 ✅**（美术接线见 ART） |
+| 地图交互 | 可点击城市+动态解锁+迷雾 | **M1 ✅**（pill 雾图；羊皮纸层 M4） |
+| 城市探索 / 效果引擎 / 出行 | 事件表驱动 | **M1 ✅** |
 | 命途塔 | v2 模式 | **已移除主路径** → `archive/v2-pwa/` |
-| 出行动画打磨 | 驼队/帆船沿路径 | **M2+**（M1 可占位） |
-| 占卜小游戏 | 10种微操 | **M2+** |
-| 存档管理 | 多槽位、自动存档 UI | **M2+** |
-| Atlas引擎移植 | 24个占法引擎 | **M2+** |
-| 马可波罗游记中文 | 走廊主干以外 | **M2+**（主干 zh trunk 已有部分） |
+| 出行动画打磨 | 驼队/帆船沿路径 | **M4** |
+| 占卜小游戏 | MVP 三法微操 ✅；十法全套 | **M2 部分 / M4 加深** |
+| 存档管理 | 多槽位、自动存档 UI | **M4** |
+| Atlas引擎移植 | 24个占法引擎 | **M2 主树加固；全量拷贝 M4** |
+| 马可波罗游记中文 | 走廊外 pending | **M4** |
+| 白图泰章文本 | 六城最小章 | **M3 ✅**；全量 place **M4** |
+| 世界图鉴文案 | `codex.json` | **M3 骨架 ✅**；扩写 **M4** |
 
 ---
 
 ## 10. 实施优先级
 
-### M0 · 数据落地（当前）
+### M0 · 数据落地
 
-Polo 走廊八张表 + `transports.json` + `scripts/validate-tables.mjs`。详见 `docs/V3_MVP_CHECKLIST.md`。
+Polo 走廊八张表 + `transports.json` + `scripts/validate-tables.mjs`。见 `V3_MVP_CHECKLIST.md`。
 
-### M1 · 游戏骨架（当前）
+### M1 · 游戏骨架
 
 - [x] 角色抽取UI（书案→生辰→命格→身份→起点）
 - [x] 城市探索（events + effects）
@@ -450,35 +455,40 @@ Polo 走廊八张表 + `transports.json` + `scripts/validate-tables.mjs`。详�
 - [x] 出行 + road 事件
 - [x] 去掉塔入口；归档 v2
 
-### M2+ · 文本缺口（本阶段只记需求，不实现）
-
-| 缺口 | 说明 | 参考 |
-|------|------|------|
-| 事件深化 | MVP 事件可玩 → 见闻体加长、多轮对话树 | `events.json` / LORE_PIPELINE |
-| 语料中译 | 258 places 中译；走廊外 pending | `assets/books/*-lore.json` |
-| 图鉴文案 | 城市/商品/人物/交通/占卜/传说分类条目 | GDD §13 |
-| 结局扩写 | 停笔结语变量池、人物线结语打磨 | `endings.json` |
-| 白图泰章 | 开罗/麦加等城 + 事件 | LORE 方案 B |
-
-### M2+ · 美术缺口（本阶段用已有图 + emoji/SVG 回退）
-
-| 优先级 | 缺口 | 张数 | 文档 |
-|--------|------|------|------|
-| P0 | 书封/过场/命轮/文化·信仰徽 | ≈36 | `ART_TODO.md` · `ART_REQUIREMENTS.md` §3 |
-| P1 | 入城大图/探索插图/随从立绘/契约 | ≈82 | 同上；POI 小图标已有 |
-| P2 | 易经 31–64、货币、贴纸 | ≈99+ | 商品已映射 `GOODS_ART_MAP.json` |
-| 接线 | mentor/map/explore/fate-rank/ritual-lot/ui-slot | 0 新图 | `ART_REQUIREMENTS.md` §5 |
-
 ### M2 · 占卜接入
 
-- [x] 仪式五拍 + 表效果改路（主树引擎加固；Atlas 全量拷贝可继续加深）
+- [x] 仪式五拍 + 表效果改路
 - [x] 占卜学习微操（MVP 三法）
-- [x] 占卜仪式界面五拍
 - [x] 占卜结果影响路线风险 / 旁路解锁
 
-### M3–M4 · 内容与打磨
+### M3 · 内容（文本主交付）
 
-- [x] 对话树（开罗/麦加）、图鉴系统（`codex.json`）
-- [x] 白图泰六城章 + `battuta` 身份
-- [ ] P0/P1 正式图替换占位（M4）
-- [ ] 存档 UI、音频、结局生成打磨（M4）
+- [x] 白图泰六城 + `battuta` + 朝觐结局
+- [x] `codex.json` + Records 图鉴栏
+- [x] 开罗/麦加对话树；Polo entry/site 一轮加厚  
+  细则：[`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md)
+
+### M4 · 文本与美术打磨（缺口）
+
+#### 文本（见 TEXT_REQUIREMENTS）
+
+| 缺口 | 说明 |
+|------|------|
+| 入城见闻体加长 | 目标 300–500 字；挂稳 lore.ref |
+| 图鉴正文扩写 | 100 条骨架 → 可读段落 |
+| 语料中译 | Polo 非 trunk places；Battuta 非六枢纽 |
+| 结局/变量池 | epilogue 打磨 |
+| 更多对话树 | 大马士革/德里/刺桐等 |
+
+#### 美术（见 ART_REQUIREMENTS / ART_TODO）
+
+| 优先级 | 缺口 | 张数级 |
+|--------|------|--------|
+| 接线 | 书封/过场/命轮/入城别名/explore/仪式 | 0 新图（文件多数已有） |
+| P0 残缺 | `faith-{daoism,nestorian,hindu,folk}` | 4 |
+| P1 | Polo site 大图、随从、契约 | ≈50 |
+| P1b | 白图泰入城/探索专图 | 6–24 |
+| P2 | 易经 31–64、货币、贴纸 | ≈40+ |
+
+- [ ] P0/P1 正式图接线 + 残缺出图
+- [ ] 存档 UI、音频、结局生成打磨

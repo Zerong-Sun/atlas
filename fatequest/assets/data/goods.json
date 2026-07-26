@@ -36,7 +36,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "生丝的柔光里藏着蚕妇的体温，一匹好绸子用手摸时，像在摸流水。汉人说一寸丝一寸金，波斯人则说丝是大地织出的光。",
+      "en": "In the soft sheen of raw silk lingers the warmth of the silkworm-keeper's hands. A fine bolt feels like running water under the touch — one inch of silk, one inch of gold."
+    }
   },
   {
     "id": "spice",
@@ -75,7 +79,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "胡椒、豆蔻、丁香与肉桂混装在麻袋里，打开时气味浓到能让你后退一步。古代罗马人曾经用一斤胡椒当一斤银子用。",
+      "en": "Pepper, cardamom, clove, and cinnamon bundled in hemp — the scent is so thick it makes you step back. The ancient Romans once used pepper as currency, weight for weight in silver."
+    }
   },
   {
     "id": "glass",
@@ -114,7 +122,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "琉璃在熔炉里像一团液体的光，吹管一转便凝成透明的形状。威尼斯人和叙利亚人都说是自己最先学会了把沙子变成宝石。",
+      "en": "Glass in the furnace glows like liquid light, shaped by a turn of the blowpipe. Venetians and Syrians both claim they were first to learn how to turn sand into jewel."
+    }
   },
   {
     "id": "pepper",
@@ -154,7 +166,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "黑胡椒粒皱缩如老人的指节，可就是这些不起眼的小颗粒，让一整条航线的船长发了财。在中世纪的厨房里，胡椒几乎是硬通货。",
+      "en": "Black peppercorns are wrinkled like an old man's knuckles — yet these humble grains made captains rich on entire shipping routes. In medieval kitchens, pepper was near-hard currency."
+    }
   },
   {
     "id": "frankincense",
@@ -193,7 +209,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "乳香是沙漠树流出的泪脂，在炭火上融化时散出一种带着苦味的甜。从示巴女王到三王朝圣，乳香一直在祭坛与王庭之间旅行。",
+      "en": "Frankincense is the tear-resin of desert trees; when it melts on charcoal, it releases a sweet with a bitter edge. From the Queen of Sheba to the Magi, frankincense has travelled between altars and thrones."
+    }
   },
   {
     "id": "cotton",
@@ -233,7 +253,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "印度棉布薄到能穿过一枚戒指，这是埃及人用来裹木乃伊的织物，也是驼队里最不占地方的硬通货。一匹棉布换一匹骆驼。",
+      "en": "Indian cotton is fine enough to pass through a ring — the same fabric Egyptians used to wrap mummies. It takes up less space than any trade good; one bolt for one camel."
+    }
   },
   {
     "id": "porcelain",
@@ -272,7 +296,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "雪白的瓷胎上一层透明的青釉，指甲轻弹声音如钟。景德镇的窑工说，一件好瓷器要用一千三百度的火烧三昼夜，多一刻便废。",
+      "en": "Snow-white clay body beneath a transparent blue-green glaze — flick it with a fingernail and it rings like a bell. Jingdezhen potters say one fine piece needs three days at 1,300 degrees; a moment too long, and it's ruined."
+    }
   },
   {
     "id": "tea",
@@ -311,7 +339,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "炒青后的茶叶蜷缩成墨绿色的螺，投入沸水后慢慢展开，像重开了一朵干花。远道而来的茶砖在驼背上颠了一整年，喝起来多了一层风沙味。",
+      "en": "After roasting, the leaves curl into dark-green spirals; dropped in boiling water they slowly unfurl, like a dried flower blooming again. Tea bricks jostled on a camel's back for a year acquire an extra note of dust and wind."
+    }
   },
   {
     "id": "paper",
@@ -351,7 +383,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "一张桑皮纸轻如蝉翼却韧过麻布，墨吃进去不会洇。撒马尔罕的造纸坊从八世纪的战俘那里学会了中国手艺，如今反过来把纸卖回中原。",
+      "en": "A sheet of mulberry-bark paper is light as a cicada's wing yet tougher than hemp; ink sinks in without bleeding. Samarkand's paper mills learned the Chinese craft from eighth-century prisoners-of-war — and now sell paper back to Cathay."
+    }
   },
   {
     "id": "jade",
@@ -390,7 +426,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "于阗河滩上捡来的卵石，外皮灰白不起眼，切开以后绿如松烟。中原人相信玉能养人，西域人则认为玉是凝固的月光。两种说法都不错。",
+      "en": "A pebble from the Khotan riverbed: drab gray-white outside, but cut it open and it's green as pine-smoke. The Chinese believe jade nourishes the body; Serindians say it's moonlight turned solid. Neither is wrong."
+    }
   },
   {
     "id": "turquoise",
@@ -430,7 +470,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "绿松石的蓝色像伊朗高原冬天的天空，波斯人把它镶嵌在马鞍与剑鞘上。据说骑马的时候松石碰腿，能防止马把你甩下去。",
+      "en": "Turquoise blue is the color of an Iranian plateau winter sky; Persians set it in saddles and scabbards. Legend says the stone brushing against your leg while riding will keep the horse from throwing you."
+    }
   },
   {
     "id": "pearl",
@@ -469,7 +513,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "波斯湾的采珠人憋一口气沉到海底，上来时嘴里含着一枚带沙的贝壳。一枚好珍珠在水中看起来是银色的，上了岸就是光。",
+      "en": "Persian Gulf pearl-divers hold one breath to the seafloor, surfacing with a gritty shell in their teeth. A fine pearl looks silver underwater; once ashore, it turns into light."
+    }
   },
   {
     "id": "carpet",
@@ -508,7 +556,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "一张手工波斯地毯的结数能多到让人的手指发麻——每一平方寸要打三百二十个结。巴里黑的织毯匠用石榴皮染红线，用靛蓝染蓝线。",
+      "en": "A hand-knotted Persian rug has so many knots it numbs the fingers to count — 320 knots per square inch. Balkh weavers use pomegranate rind for red and indigo for blue."
+    }
   },
   {
     "id": "horse",
@@ -548,7 +600,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "一匹费尔干纳的汗血马跑完十里地后，肩膊上会渗出铁锈色的汗珠。蒙古人把马当兄弟，中原人把马当兵器，西域人把马当钱。",
+      "en": "A Fergana blood-horse, after running ten li, sweats rust-red droplets on its shoulders. Mongols treat horses like brothers, Cathayans like weapons, and Serindians like money."
+    }
   },
   {
     "id": "camel",
@@ -587,7 +643,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "双峰驼的驼峰储着脂肪和水，沙漠上能撑七天不吃不喝。老驼商说好骆驼的眼神里带着一丝轻蔑——它们天生知道自己比马贵。",
+      "en": "A Bactrian camel's humps store fat and water; in the desert it can go seven days without food or drink. Old camel-traders say a fine camel has a trace of contempt in its eye — it knows it's worth more than a horse."
+    }
   },
   {
     "id": "fur",
@@ -626,7 +686,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "蒙古草原的狐皮和貂皮在冬天厚得像另一层皮肤，连呼吸喷上去都能在毛尖结成霜。大都的达官贵人为了一件好皮袍可以付出一箱白银。",
+      "en": "Mongol steppe fox and sable furs grow thick in winter — even your breath freezes in frost on the guard hairs. Khanbaliq's nobles will pay a chest of silver for one fine fur robe."
+    }
   },
   {
     "id": "rhubarb",
@@ -665,7 +729,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "唐古特大黄从甘肃的山里挖出来，切成的根块晒干后硬如木柴。欧洲的药房里说它能治一切内脏的毛病——从肠胃到良心。",
+      "en": "Tangut rhubarb is dug from the mountains of Gansu; the dried root chunks are hard as firewood. European apothecaries claim it cures every inner ailment — from the stomach to the conscience."
+    }
   },
   {
     "id": "dates",
@@ -704,7 +772,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "美索不达米亚的椰枣在树上熟到皱皮，吃进嘴里像一包化开的糖浆。驼队里一把椰枣能撑半天，是沙漠里最实在的货物。",
+      "en": "Mesopotamian dates wrinkle on the tree until they're ripe; bite into one and it bursts into syrup. A handful of dates in a caravan lasts half a day — the most practical good in the desert."
+    }
   },
   {
     "id": "wine",
@@ -743,7 +815,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "格鲁吉亚的葡萄酒在陶罐里埋地发酵，倒出来时有紫石榴的颜色。修士说酒是基督的血，波斯诗人说酒是真主的第二种仁慈。",
+      "en": "Georgian wine ferments in clay jars buried underground, poured out the color of purple pomegranate. Monks say wine is the blood of Christ; Persian poets say it's God's second mercy."
+    }
   },
   {
     "id": "olive-oil",
@@ -782,7 +858,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "叙利亚的橄榄用石磨碾碎，榨出的油在灯盏里燃起来几乎没有烟。修道院里用橄榄油点长明灯，据说一盏可以烧七年。",
+      "en": "Syrian olives crushed under stone wheels yield oil that burns almost without smoke in a lamp. Monasteries keep an eternal flame with olive oil; one lamp, they say, can burn seven years."
+    }
   },
   {
     "id": "wool",
@@ -821,7 +901,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "英国羊毛在佛兰德的织机上变成哗叽布料，绕了一圈又被威尼斯商人以三倍价钱卖回伦敦。羊毛上还带着英格兰丘陵的雨水味。",
+      "en": "English wool becomes worsted on Flemish looms, then the Venetians sell it back to London at triple the price. The wool still carries the scent of English hill-rain."
+    }
   },
   {
     "id": "silver",
@@ -860,7 +944,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "银锭上的官印烫进金属表面，像烙在皮肤上的纹身。从波托西到广州，白银是世界贸易的语言——听不懂对方的方言，但看得懂银子的成色。",
+      "en": "Official stamps sunk into silver ingots like brands into skin. From Potosi to Canton, silver is the language of world trade — you may not understand each other's dialect, but you can read the silver's purity."
+    }
   },
   {
     "id": "gold-dust",
@@ -899,7 +987,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "西非的黄金被淘金者用羊皮从河沙里滤出来，细得像磨碎的花粉。马里的皇帝在开罗挥金如土时会说：'这些是沙子，我家里还有更多。'",
+      "en": "West African gold is filtered from river sand on sheepskins by panners — fine as ground pollen. The emperor of Mali, throwing gold in Cairo, would say: 'This is nothing but sand; I have more at home.'"
+    }
   },
   {
     "id": "ivory",
@@ -938,7 +1030,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "非洲象牙比手臂还粗，搬上船的时候需要四个人合抬。桑给巴尔的商栈里象牙堆得像柴火垛，可大象并不知道自己的牙值这么多人命。",
+      "en": "African tusks thicker than a man's arm need four bearers to load onto a ship. In Zanzibar's trading posts, ivory is stacked like firewood — but the elephants don't know their teeth cost so many human lives."
+    }
   },
   {
     "id": "coral",
@@ -977,7 +1073,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "地中海的珊瑚枝从海岩上撬下来时是暗红色的树枝模样，打磨后光滑如婴儿的牙龈。印度人觉得红珊瑚能驱邪，用它做湿婆的项链坠。",
+      "en": "Mediterranean coral pulled from sea-rocks looks like dark-red tree branches; polished, it's smooth as a baby's gum. Indians believe red coral wards off evil and carve it into Shiva pendants."
+    }
   },
   {
     "id": "indigo",
@@ -1016,7 +1116,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "印度靛蓝是从木蓝叶里发酵出来的染料，染出的布蓝得像被闪电劈过的夜空。一缸靛蓝能让整个染坊的工人手指变蓝半年不退。",
+      "en": "Indian indigo is fermented from the indigofera leaf; the dyed cloth comes out blue as a lightning-struck night sky. One vat of indigo stains every worker's fingers blue for six months."
+    }
   },
   {
     "id": "lapis",
@@ -1055,7 +1159,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "巴达赫尚的青金石块在山里炸出来后泛着深蓝到紫的渐变，表面掺杂着金色黄铁矿的星点。中世纪的画家用青金石粉画圣母的袍子。",
+      "en": "Lapis lazuli blocks blasted from the Badakhshan mountains run from deep blue to violet, flecked with golden pyrite stars. Medieval painters ground lapis for the Virgin's robe."
+    }
   },
   {
     "id": "steel",
@@ -1094,7 +1202,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "大马士革钢刀上的水纹是碳化物在折叠锤打中形成的天然花纹，每一把的纹路都不一样。据说乌兹钢的配方在一千年前就已经失传，现在活着的人只是在模仿。",
+      "en": "The water-pattern on a Damascus blade is natural carbide banding from folding and hammering; no two blades have the same pattern. The wootz formula was lost a thousand years ago — those alive now are only imitating it."
+    }
   },
   {
     "id": "incense",
@@ -1133,7 +1245,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "上等沉香的木芯要在朽木中腐烂十几年才结出香脂，点燃时一缕青烟直上。佛寺里用香计时，一炷香烧完就是一堂课。",
+      "en": "The finest aloeswood heartwood must rot for over a decade before the resin forms; lit, one thread of blue smoke rises straight. Temples measure time by incense — when the stick burns out, the lesson ends."
+    }
   },
   {
     "id": "aloeswood",
@@ -1172,7 +1288,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "沉香是瑞香树受伤后分泌的膏脂在地下埋了几百年凝成的，削一片投入炉中，幽香能从书房透到后堂。日本人叫它'伽罗'，说香里有寂。",
+      "en": "Aloeswood is resin secreted by wounded aquilaria trees, buried underground for centuries; one sliver in the brazier, and the scent drifts from study to inner hall. The Japanese call it kyara — they say it holds silence."
+    }
   },
   {
     "id": "sandalwood",
@@ -1211,7 +1331,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "檀香木的芯材刨成粉，和了水涂在佛像上，干了以后整尊佛散发着温润的木香。印度教徒在火葬堆上也撒檀香粉，说烟能送灵魂升天。",
+      "en": "Sandalwood heartwood is ground into paste and smeared on Buddha statues; dried, the whole figure breathes a warm woody scent. Hindus also scatter sandalwood powder on funeral pyres, saying the smoke lifts the soul."
+    }
   },
   {
     "id": "nutmeg",
@@ -1250,7 +1374,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "肉豆蔻长在班达群岛的常青树上，外面是一层红花色的假种皮。一粒肉豆蔻在欧洲能换一间房，英国人和荷兰人为了这几座小岛打了三十年的仗。",
+      "en": "Nutmeg grows on the evergreens of the Banda Islands, wrapped in a scarlet aril. One nutmeg could trade for a room in Europe; the English and Dutch fought thirty years over these tiny islands."
+    }
   },
   {
     "id": "cloves",
@@ -1289,7 +1417,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "丁香是晒干的花苞，形状像一枚铁钉，捏破之后挥发油溅在指尖上，刺痛而辛烈。中世纪医生把丁香含在嘴里防瘟疫，效果大概和祷告差不多。",
+      "en": "Cloves are dried flower buds shaped like iron nails; crack one and the volatile oil stings your fingertip, sharp and fierce. Medieval doctors held cloves in their mouths against plague — effective about as much as prayer."
+    }
   },
   {
     "id": "saffron",
@@ -1328,7 +1460,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "番红花的花蕊要用镊子一朵一朵摘下来，一百五十朵花才出一克干品。克什米尔的藏红花田在秋天像铺了一地的紫色火焰，让人不敢踏进去。",
+      "en": "Saffron threads must be plucked one by one with tweezers — a hundred and fifty flowers yield one gram dry. Kashmiri saffron fields in autumn blaze purple across the earth; you're afraid to step in."
+    }
   },
   {
     "id": "ginger",
@@ -1367,7 +1503,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "生姜从马拉巴尔的海岸装船时带着泥，到了地中海的港口就已经长出了白发般的霉毛。但掰开之后里头还是金黄的——和出发时一样辛辣。",
+      "en": "Ginger shipped from the Malabar coast still carries soil; by the time it reaches Mediterranean ports, it's grown white mold like old hair. But snap it open and the inside is still golden — as sharp as the day it left."
+    }
   },
   {
     "id": "lacquer",
@@ -1406,7 +1546,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "采漆人用刀在漆树干上割出螺旋形伤口，淌出来的白色汁液暴露在空气里慢慢变黑，最后硬成一层镜面。福州剔红漆器要上六十层漆，雕一只手要刻三个月。",
+      "en": "Lacquer-tappers cut spiral wounds on the lacquer tree; the white sap darkens in air and hardens to a mirror finish. Fuzhou carved-cinnabar lacquerware takes sixty coats; to carve one hand takes three months."
+    }
   },
   {
     "id": "fan",
@@ -1445,7 +1589,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "杭州的檀香折扇撒开时像孔雀开屏，扇骨上刻着西湖十景。扇子是东方的袖中气候——一张一合之间，暑气退了一步。",
+      "en": "A Hangzhou sandalwood folding fan opens like a peacock spreading its train, the ribs carved with Ten Views of West Lake. The fan is the Orient's pocket climate — one opening, one closing, and the heat retreats a step."
+    }
   },
   {
     "id": "salt",
@@ -1485,7 +1633,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "撒哈拉的盐板被骆驼队运到马里，一块块劈开当钱用。盐的味道是鲜的，但运盐的路是咸的——每一个驮盐的奴隶，汗里都能熬出盐来。",
+      "en": "Saharan salt slabs are carried by camel train to Mali, chipped into pieces and used as money. Salt tastes fresh, but the salt road is bitter — every slave who carries salt sweats salt."
+    }
   },
   {
     "id": "herbs",
@@ -1524,7 +1676,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "西域的草药摊上，当归、麻黄、甘草与鼠尾草一堆一堆混着放，靠的是药商的鼻子而不是标签。驼队在沙漠里最怕的不是渴，是发烧——草药是活下去唯一的祈符。",
+      "en": "On a Serindian herb stall, angelica, ephedra, licorice, and sage are heaped together — sorted by the herbalist's nose, not by labels. What a caravan fears most in the desert isn't thirst but fever; herbs are the only talisman for survival."
+    }
   },
   {
     "id": "felt",
@@ -1563,7 +1719,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "蒙古人用羊毛擀成毡，压得紧到能顶住草原上白毛风。一顶蒙古包的毡墙用了几十只羊的毛，拆了叠起来刚好能驮在一匹骆驼背上。毡就是可以穿在身上的家。",
+      "en": "Mongols pound wool into felt, compressed tight enough to withstand the white-hair wind of the steppe. One yurt's felt walls use the wool of dozens of sheep; folded flat, they fit exactly on a single camel's back. Felt is a home you can wear."
+    }
   },
   {
     "id": "tin",
@@ -1602,7 +1762,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "锡锭的颜色像冷了太久的月光，马来半岛的矿工光着脚在河沙里淘锡砂。把锡和铜炼在一起就是青铜——人类文明用青铜打了一千年的仗。",
+      "en": "Tin ingots are the color of moonlight that has been cold too long; Malay miners pan cassiterite from river sand barefoot. Melt tin with copper and you get bronze — human civilization fought a thousand years of wars in bronze."
+    }
   },
   {
     "id": "gems",
@@ -1641,7 +1805,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "锡兰的蓝宝石被矿工在溪涧里一颗颗捞出来，表面不仔细看只是一块黑色的砾石。切开了之后，那颗石头会在烛光下变成一小汪海水。",
+      "en": "Ceylonese sapphires are picked one by one from mountain streams; before cutting, they're just black pebbles. Once split open and faceted, the stone turns into a small pool of ocean under candlelight."
+    }
   },
   {
     "id": "ruby",
@@ -1680,7 +1848,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "缅甸的红宝石埋在河谷的砾石层里，雨季山洪冲开后，女人和孩子们光脚踩在泥水里找那一星红光。古印度人说红宝石是不死的火焰，是地下龙王凝固了的血。",
+      "en": "Burmese rubies sit in river gravel; after monsoon floods wash the layers open, women and children wade barefoot in the mud searching for a speck of red. Ancient Indians say ruby is undying flame — the crystallized blood of the naga-king beneath the earth."
+    }
   },
   {
     "id": "books",
@@ -1719,7 +1891,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "巴格达的书商用手抄本的形式搬运知识——阿拉伯文的《医典》、波斯的诗集与亚里士多德的希腊文注疏在同一张桌子上叫卖。一本书在骆驼背上走过丝绸之路，书脊里夹的沙比书本身还沉。",
+      "en": "Baghdad booksellers cart knowledge as hand-copied manuscripts — Arabic medical canons, Persian poetry, and Aristotle's Greek commentaries on the same table. A book that has crossed the Silk Road on camelback carries more sand in its spine than the book itself weighs."
+    }
   },
   {
     "id": "relic",
@@ -1759,7 +1935,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "耶路撒冷的碎圣十字架木片被装进金匣子，在君士坦丁堡、罗马与巴黎之间被反复买卖。圣物上没有神，但每一块木片上都有人的手指印——摸了上千年。",
+      "en": "Splinters of the True Cross from Jerusalem are sealed in gold reliquaries and traded endlessly among Constantinople, Rome, and Paris. Relics hold no god, but every fragment carries human fingerprints — touched for a thousand years."
+    }
   },
   {
     "id": "icons",
@@ -1798,7 +1978,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "君士坦丁堡的圣像画师用蛋黄调颜料，在木板上画基督与圣母，金光来自金箔，黑暗来自炭黑。一副圣像画完要斋戒四十天，他们说画圣容时自己也在被圣像画。",
+      "en": "Constantinople icon-painters mix egg-yolk pigments to paint Christ and the Theotokos on wood — gold from leaf, darkness from charcoal. One icon takes forty days of fasting; they say that while painting the holy face, the icon is painting you too."
+    }
   },
   {
     "id": "dehua-porcelain",
@@ -1838,7 +2022,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "德化窑的'中国白'与别地不同——胎体带着淡淡的乳黄，不上色，全凭雕塑取胜。一尊德化观音像从福建装船下海时，船员在像前多烧三炷保平安的香。",
+      "en": "Dehua 'blanc de Chine' is unlike any other — the body has a faint creamy warmth, no color added, the form is everything. When a Dehua Guanyin is loaded aboard ship in Fujian, the sailors burn three extra sticks of incense before her."
+    }
   },
   {
     "id": "murano-glass",
@@ -1878,7 +2066,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "穆拉诺岛的玻璃匠人把烧制秘方锁在脑子里，出岛者死。他们在熔玻璃时掺进锡粉与骨灰，烧出来的杯盏薄如纸，对着光看像彩虹冻结在里面。",
+      "en": "Murano glassmakers lock their formulas in their heads — leaving the island is death. They mix tin powder and bone ash into the melt; the resulting goblets are thin as paper, and held to the light, a rainbow is frozen inside."
+    }
   },
   {
     "id": "samarkand-tile",
@@ -1918,7 +2110,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "撒马尔罕的彩釉方砖上烧着钴蓝色的几何藤蔓——一种被伊斯兰禁止画人物后发展到极致的抽象。雷吉斯坦广场上的经学院贴了上万块这样的砖，远看像用蓝水写了一整面墙的诗。",
+      "en": "Samarkand's glazed tiles carry cobalt geometric arabesques — abstraction perfected after Islam prohibited human figures. The Registan madrasas are clad in tens of thousands of such tiles; from afar, a whole wall of poetry written in blue water."
+    }
   },
   {
     "id": "damascus-steel",
@@ -1957,7 +2153,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "真的冶铁大马士革钢用的是印度乌兹钢，把钢坯反复折叠锻打几十次，形成碳化物与软铁的交替水纹。刀锋可以凌空切断飘落的一根丝绸——不用力，只靠钢自己。",
+      "en": "True Damascus steel is forged from Indian wootz, folded and hammered dozens of times, creating alternating carbide and soft-iron bands. The edge can slice a falling silk thread in midair — not with force, but by the steel's own will."
+    }
   },
   {
     "id": "hangzhou-fan",
@@ -1997,7 +2197,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "南宋官窑造的扇子大小刚好能收进袖子里，扇面用的是双层绢纱，一面绣西湖落雪，另一面写苏东坡的一句诗：'欲把西湖比西子，淡妆浓抹总相宜。'",
+      "en": "The Southern Song imperial workshop makes fans small enough to conceal in a sleeve, the leaf of double-layered gossamer — on one side, West Lake in snow; on the other, a line by Su Shi: 'To West Lake I would compare fair Xi Zi, plain or adorned, always right.'"
+    }
   },
   {
     "id": "khotan-jade",
@@ -2037,7 +2241,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "于阗白玉料子上有天然的水线纹，唐人谓之'羊脂白'。玉人相玉靠四法：看色，听声，掂重，用嘴唇碰一下试它的凉。一块好玉接触皮肤的一瞬间，凉感应该像薄薄的冰。",
+      "en": "Khotan white jade carries natural water-thread veins; the Tang called it 'mutton-fat white.' Jade-appraisers judge by four tests: look at the color, hear the ring, weigh in hand, and touch to the lip for coolness. Fine jade on skin should feel like a shaving of ice."
+    }
   },
   {
     "id": "zayton-pepper",
@@ -2076,7 +2284,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "刺桐港是胡椒贸易的东方总闸——南海和印度洋各岛的胡椒在这里汇齐，一袋袋印上汉字标签转卖到高丽与日本。刺桐胡椒颗粒饱满，辣味中透一丝果香，水手用它腌鱼走过半个世界。",
+      "en": "Zayton is the eastern hub of the pepper trade — pepper from the South Sea and Indian Ocean islands gathers here, sack by sack stamped with Chinese labels, re-exported to Goryeo and Japan. Zayton peppercorns are plump, their heat laced with a note of fruit; sailors use them to pickle fish across half the world."
+    }
   },
   {
     "id": "brocade",
@@ -2115,7 +2327,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "金线织进丝缎，在光下正看是佛，侧看是花——这叫'妆花'，是南京云锦的绝活。据说织这锦的人一天只能织一寸，一寸里藏了一千根金线。",
+      "en": "Gold thread is woven into silk satin; seen head-on, a Buddha; from the side, a flower — this is zhuanghua, the mastery of Nanjing cloud-brocade. The weaver produces one inch a day; one inch holds a thousand gold threads."
+    }
   },
   {
     "id": "tutia",
@@ -2154,7 +2370,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "波斯产一种叫'突梯亚'的天然锌矿石粉末，磨细后掺入铜液，烧出来的就是黄铜。中世纪的中东术士把 tutia 当成炼金的秘密原料，实际上它只是比金子更诚实的一种金属。",
+      "en": "Persia produces a natural zinc ore called tutia; ground fine and mixed into molten copper, it yields brass. Medieval Middle Eastern alchemists treated tutia as a secret ingredient for gold-making, but it was only a metal more honest than gold."
+    }
   },
   {
     "id": "melon",
@@ -2194,7 +2414,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "撒马尔罕的白兰瓜在藤上熟透后被贮存在冰窖里，冬天切开来瓜心还带着一股雪水般的冷甜。这种瓜的马可波罗版本是这样的：'阿失麻里产一种大瓜，味极甘，剖之以刀，俄顷即干若蜜渍。'",
+      "en": "Samarkand melons ripened on the vine are stored in ice cellars; cut open in winter, the heart still carries a cold sweetness like snow-melt. Marco Polo's version: 'In a place called Asimarin grow melons of great size and sweetness; cut one open with a knife, and soon it dries as if candied in honey.'"
+    }
   },
   {
     "id": "coconut-oil",
@@ -2233,7 +2457,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "马拉巴海岸的椰子被剖开晒干，捣碎后用牛力压出油脂。这种油在清凉的时候是固体，一碰体温就化——印度南部沿海上千里的炊烟都是这个味道。",
+      "en": "Malabar coconuts are split, sun-dried, crushed, and pressed into oil by ox-power. The oil is solid when cool and melts at body temperature; the cooking smoke across a thousand li of southern India carries this scent."
+    }
   },
   {
     "id": "ebony",
@@ -2272,7 +2500,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "乌木黑到看不出木纹，沉得入水即没。东非的木工把它刻成酋长的手杖；波斯人把乌木片磨成棋子，用极黑衬极白。这种木头在阿拉伯语里叫'阿布努斯'，意思是'铁树'。",
+      "en": "Ebony is so black you can't see the grain, so dense it sinks in water. East African woodcarvers shape it into chieftains' staffs; Persians grind it into chess pieces, using the extreme black to contrast the extreme white. In Arabic it is abnus — 'iron tree.'"
+    }
   },
   {
     "id": "ambergris",
@@ -2311,7 +2543,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "龙涎香是抹香鲸肠道里的病理分泌物，漂在海面上被太阳烤了几年后，从臭味变成一种带着海盐味的甜香。一滴龙涎香油能让整条街都染上香味——巴黎香水商人坐船来阿拉伯海岸抢这个。",
+      "en": "Ambergris is a pathological secretion from a sperm whale's gut, floating on the sea and baked by the sun for years, transforming from stench to a sweet scent with a trace of sea-salt. One drop of ambergris oil perfumes an entire street; Parisian perfumers sailed to Arab shores to fight over it."
+    }
   },
   {
     "id": "silk-brocade",
@@ -2351,7 +2587,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "织锦缎上的缠枝牡丹用三十二根梭子同时引纬，织机上的提花工得像蜘蛛一样记住每根丝的来路。一寸锦，一寸光阴——光阴指的是人命，不是时间。",
+      "en": "The scrolling peonies on brocade satin require thirty-two shuttles carrying weft simultaneously; the loom's pattern-boy must remember the route of every thread like a spider. One inch of brocade, one inch of life — life meaning a human life, not time."
+    }
   },
   {
     "id": "paiza-silk",
@@ -2390,7 +2630,11 @@
       "seizure": 0.03
     },
     "needs": [],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "一块织入了蒙古大汗金虎头符令的丝帛牌，拿它可以在帝国任何一个驿站换马、领粮、开道。持牌人等同于握着一枚缩小的皇命——丝绸上的权力比刀上的权力更重。",
+      "en": "A silk tablet woven with the Great Khan's golden tiger-head paiza — with it, you can demand fresh horses, provisions, and right-of-way at any postal relay in the empire. The bearer holds a miniature imperial decree; power on silk weighs more than power on a blade."
+    }
   },
   {
     "id": "paiza",
@@ -2429,7 +2673,11 @@
     "needs": [
       "guarded"
     ],
-    "events": []
+    "events": [],
+    "flavor": {
+      "zh": "蒙古帝国的通行腰牌用金银铁铜分四级，最高级的金虎符上刻着回鹘式蒙古文与汉文，意思是：'长生天气力里，违者死。'这十个字比任何盛大的送别都管用。",
+      "en": "Mongol imperial passports come in four grades — gold, silver, iron, copper. The highest, a golden tiger paiza, bears Uighur-script Mongolian and Chinese: 'By the strength of Eternal Heaven, death to those who disobey.' Those ten words are more powerful than any grand farewell."
+    }
   },
   {
     "id": "leather",
@@ -2444,6 +2692,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "摩洛哥的鞣革工坊在菲斯老城里泡了整片街区，用鸽子粪与石灰脱毛，再用漆树叶染色。成品皮革软到能打褶而不断，欧洲人叫它'摩洛哥皮'，用来装订圣经。",
+      "en": "Morocco's leather tanneries soak entire quarters of Fez, de-hairing with pigeon dung and lime, then dyeing with sumac leaves. The finished leather is so supple it can be pleated without cracking; Europeans call it 'morocco leather' and use it to bind Bibles."
     }
   },
   {
@@ -2459,6 +2711,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "埃及的亚麻布从法老时代就在尼罗河两岸种植，用河水浸泡沤制，织出来的线比棉细三倍。裹木乃伊的亚麻布历几千年不烂——亚麻比记忆更耐久。",
+      "en": "Egyptian flax has been grown on the Nile's banks since the Pharaohs; retted in the river, the spun thread is three times finer than cotton. Mummy-wrappings survive millennia without rotting — linen outlasts memory."
     }
   },
   {
@@ -2474,6 +2730,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "尼罗河的纸莎草割下来劈成薄条，十字交叉压平晒干，表面用象牙磨光——写在上面的字比羊皮纸上的少一份肃穆，多一份水的气味。亚历山大图书馆里的书卷一半是这种纸做的。",
+      "en": "Nile papyrus stalks are cut into thin strips, cross-laid, pressed, and sun-dried, the surface polished with ivory — writing on it carries less solemnity than parchment but more of the scent of water. Half the scrolls in the Library of Alexandria were made of this."
     }
   },
   {
@@ -2489,6 +2749,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "大马士革织锦的正面与反面互为明暗——提起织物往光里照，花是亮的，底是暗的，翻过来刚好颠倒。这种织法是大马士革给世界的关于表里与光线的哲学课。",
+      "en": "Damask fabric reverses light and shadow — hold it to the sun and the pattern is bright while the ground is dark; flip it over and the opposite appears. This weave is Damascus's philosophy lesson to the world on surfaces, depths, and light."
     }
   },
   {
@@ -2504,6 +2768,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "大马士革的玫瑰在四月盛开，花瓣用铜甑蒸馏出香气，冷却后凝成一罐罐带着露水味的香水。清真寺的地板用玫瑰水擦洗，苏丹的手在接见使者之前也用玫瑰水洗。花香是一种谁都听得懂的外交语言。",
+      "en": "Damascus roses bloom in April; the petals are distilled in copper stills, the scent cooled into jars of dewy perfume. Mosque floors are washed with rosewater; the Sultan's hands are rinsed with it before receiving envoys. Floral fragrance is a diplomatic language everyone understands."
     }
   },
   {
@@ -2519,6 +2787,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "羊皮水袋缝得紧密，袋内衬一层薄蜡，水在里面放三天仍然是凉的。沙漠向导说，好水袋丢进水里会浮起来——因为它里面的空气是这世界上唯一不烫的东西。",
+      "en": "A sheepskin water-skin stitched tight, lined inside with a thin layer of wax — the water stays cool for three days. Desert guides say a good water-skin will float when thrown into water, because the air inside it is the only thing in this world that isn't scorching."
     }
   },
   {
@@ -2534,6 +2806,10 @@
     "weight": 1,
     "lore": {
       "origin": "hybrid"
+    },
+    "flavor": {
+      "zh": "缅甸柚木含天然油脂，埋在水里百年不腐，是海洋帝国最渴望的造船材。一株三百年的柚木被砍倒拖进伊洛瓦底江时，河水会为它在树冠倒下的地方绕一个小小的漩涡。",
+      "en": "Burmese teak contains natural oils; submerged for a century, it won't rot. It's the most coveted shipbuilding timber of maritime empires. When a three-hundred-year-old teak is felled and dragged into the Irrawaddy, the river swirls a small eddy where the crown falls."
     }
   }
 ]

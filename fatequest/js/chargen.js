@@ -52,6 +52,7 @@ FQ.CG.stepBirth = function () {
     ${FQ.hudHTML()}
     <div class="panel">
       <h2>${FQ.lang === "zh" ? "生辰抽取" : "Birth Draw"}</h2>
+      <div class="cg-wheel">${FQ.art("fate-wheel", "☯", "big")}</div>
       <p class="dim">${FQ.lang === "zh" ? "1253–1453 年间的一天" : "A day between 1253 and 1453"}</p>
       <div class="center" style="font-size:1.6rem;margin:18px 0">${b.iso}</div>
       <p class="dim small">${FQ.lang === "zh" ? "可重抽" : "Redraws left"}：${FQ.CG.redraws}</p>
@@ -70,12 +71,15 @@ FQ.CG.redrawBirth = function () {
 FQ.CG.stepFate = function () {
   if (!FQ.CG.fate) FQ.CG.fate = FQ.randomFate();
   const f = FQ.CG.fate;
-  const row = (k, zh, en) => `
-    <div style="display:flex;justify-content:space-between;margin:8px 0">
-      <span>${FQ.lang === "zh" ? zh : en}</span>
-      <b>${f[k]} · ${FQ.rankOf(f[k])}</b>
+  const row = (k, zh, en) => {
+    const rank = FQ.rankOf(f[k]);
+    return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0">
+      <span><span class="cg-fate-ic">${FQ.fateBarArt(k, "inline")}</span>${FQ.lang === "zh" ? zh : en}</span>
+      <b>${f[k]} · ${FQ.fateRankArt(rank, "inline")} ${rank}</b>
     </div>
     <div class="xpbar"><i style="width:${Math.round(f[k] / 31 * 100)}%"></i></div>`;
+  };
   document.getElementById("app").innerHTML = `
     ${FQ.hudHTML()}
     <div class="panel">
@@ -90,9 +94,9 @@ FQ.CG.stepFate = function () {
 FQ.CG.stepArch = function () {
   const list = (FQ.DB.archetypes || []).map(a => `
     <button class="artrow" onclick="FQ.CG.pickArch('${a.id}')">
-      <span class="ar-seal">🧭</span>
+      <span class="ar-seal">${FQ.cultureArt(a.culture, "big")}</span>
       <span class="ar-txt"><b>${FQ.T(a.name)}</b>
-        <span class="dim small">${FQ.T(a.obsession)}</span></span>
+        <span class="dim small">${FQ.faithArt(a.faith, "inline")} ${FQ.T(a.obsession)}</span></span>
     </button>`).join("");
   document.getElementById("app").innerHTML = `
     ${FQ.hudHTML()}
@@ -116,8 +120,9 @@ FQ.CG.stepStart = function () {
     ${FQ.hudHTML()}
     <div class="panel">
       <h2>${FQ.lang === "zh" ? "起点" : "Starting City"}</h2>
+      ${FQ.cityEntryArt(start, "full")}
       <p>${FQ.T(city.name)}</p>
-      <p class="dim small">${FQ.T(a.obsession)}</p>
+      <p class="dim small">${FQ.cultureArt(a.culture, "inline")} ${FQ.faithArt(a.faith, "inline")} · ${FQ.T(a.obsession)}</p>
       <button class="btn block" onclick="FQ.CG.commit()">${FQ.lang === "zh" ? "开始远行" : "Begin the Road"}</button>
     </div>`;
 };
