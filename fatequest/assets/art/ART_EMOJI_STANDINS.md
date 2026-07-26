@@ -1,18 +1,11 @@
 # Emoji icon stand-ins (temporary)
 
-ChatGPT Plus **image generation limit** hit (~resets 2026-07-21 13:57 local).
-These three Extra2 files are temporary copies until regenerated:
+**Resolved 2026-07-23:** Extra2 true images harvested and cropped.
 
-| File | Stand-in source |
-|------|-----------------|
-| `ic-extra-alchemical-symbol-for-fire.webp` | `ic-dream-fire.webp` |
-| `ic-extra-microbe.webp` | `ic-dream-snake.webp` |
-| `ic-extra-spool-of-thread.webp` | `ic-extra-school-satchel.webp` |
+| File | Status |
+|------|--------|
+| `ic-extra-alchemical-symbol-for-fire.webp` | real · from Extra2 sheet |
+| `ic-extra-microbe.webp` | real · from Extra2 sheet |
+| `ic-extra-spool-of-thread.webp` | real · from Extra2 sheet |
 
-Regen command after quota resets:
-
-```bash
-cd fatequest/scripts
-.venv/bin/python submit_map_windows.py --prompts-file ART_PROMPTS_EMOJI.md \
-  --style emoji --windows Extra2 --skip-existing --force  # delete stand-ins first
-```
+Sheet: `_sheets/art_prompts_emoji--15-extra-unmapped-leftovers-2.webp`

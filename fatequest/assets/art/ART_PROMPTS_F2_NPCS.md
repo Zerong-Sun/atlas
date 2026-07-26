@@ -135,7 +135,7 @@ Negative: photorealistic, 3D, neon, watermark, text, full-body, facing left, dei
   2. `mentor-iching.webp` — Historiographer Master Yelu: half-body facing right, yarrow stalks / coins as objects, scholar robe; bottom 15% dialog-safe
   3. `mentor-dream.webp` — Dream-interpreter Saliman: half-body facing right, pillow charm, crescent lamp; bottom 15% dialog-safe
   4. `mentor-bazi.webp` — Fate-hall Master Shen Wu: half-body facing right, natal chart board (blank glyphs ok as ornament), brush; bottom 15% dialog-safe
-  5. `mentor-jiaobei.webp` — Tianfei temple Matron Chen: half-body facing right, moon blocks (筊) as objects, no deity figure; bottom 15% dialog-safe
+  5. `mentor-jiaobei.webp` — Tianfei temple Matron Chen: half-body facing right, moon blocks (jiaobei / crescent wood lots) as objects, no deity figure; bottom 15% dialog-safe
 
 **Prompt**
 

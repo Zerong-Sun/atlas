@@ -1,111 +1,159 @@
-# 缺失贴图清单 · ART TODO（v3.0 · 对应《远行之书》规划案）
+# 缺失贴图清单 · ART TODO（v4.2 · 2026-07-26）
 
-本文件是**唯一的缺口总表**，随规划改版重写。此前的 `ART_TODO_MAP.md` 只覆盖地图与交通，已并入本文。
+本文件是**唯一的缺口总表**。完成度对照见 [`docs/ART_REQUIREMENTS.md`](../../docs/ART_REQUIREMENTS.md)。
 
-**放置规则**：文件放进 `assets/art/`（人物、场景、图标、UI）或 `assets/decks/<牌组>/`（成套牌面），文件名与「引用名」完全一致，格式 `.webp`。缺图时程序自动回退到 SVG 或 emoji，**不会开天窗**。
+**放置**：`assets/art/` 或 `assets/decks/<牌组>/`，文件名=引用名，`.webp`。缺图 → SVG/emoji。
 
-**统一风格**：13 世纪抄本 × 暮色山野（「云岭暮光」）。羊皮纸 `#E9DBB8`／墨 `#4A3A1C`／赭 `#8A6234`／朱批 `#B3402E`／海青 `#3F5F6B`。手绘笔触、矿物色淡彩、克制饱和；忌现代扁平矢量、忌照片写实、忌霓虹发光。
-
-**透明底要求**：所有剪影／图标／立绘必须**带真 alpha 通道**。若出图带白底，跑一次
-`python3 scripts/dealpha.py --apply` 自动抠除（已内置安全阀，满幅图会跳过）。
+**风格**：云岭暮光。见 `ART_BRIEF.md`。透明底须真 alpha（`dealpha.py --apply`）。
 
 ---
 
-## ✅ 已有（269 张，不用再画）
+## ✅ 已有（`assets/art/` 根目录 593 张；牌组另计）
 
-| 类别 | 数量 | 说明 |
-|---|---|---|
-| `ic-*` 图标 | ~180 | 导航／HUD／仪式／地点／交通／塔内／梦象／22 张大阿卡纳／怪物／特效，经 `ART_EMOJI_MAP.json` 全局替换 emoji |
-| `scene-*` 场景背景 | 16 | 12 城 + 4 文明通用路景 |
-| `npc-*` 立绘 | 16 | 四文明 × 市集／庙宇／茶肆／行馆守门人 |
-| `map-*` 地图贴图 | 12 | 羊皮纸底、海面、四文明纹样、岩山／雪山／沙丘／森林／河道／礁石 |
-| `ui-bg-*` / `ui-btn-*` / `ui-icon-*` / `ui-orn-*` | 37 | 面板、秘境格、坞栏、经验条、六种按钮态、角饰 |
-| `sym-*` 塔符号 | 18+ | 含 `-full` 全幅卡面 |
-| 塔罗全牌 | 22 | `assets/decks/tarot/` |
-| 易经卦牌 | 30 | `assets/decks/iching/`（1–30） |
-| 雷诺曼 | 36 | `assets/decks/lenormand/`（19 世纪 Dondorf 原版扫描，公有领域） |
-| 星盘线稿 | 34 | `assets/astrodice/`（行星 10／星座 12／宫位 12） |
+### 批量 REQ · 174/174 ✅
 
----
+（同 `ART_REQUIREMENTS.md` §2，略）
 
-## ⏳ P0 · 新规划必需（先做这些）
+### 2026-07 后补 · 原 P0 主体已落盘 ✅
 
-### A. 开场书案（GDD §3）
-
-| 引用名 | 内容 | 尺寸 |
-|---|---|---|
-| `book-rubruck.webp` | 《鲁布鲁克东行记》书脊／封面，羊皮装订 | 512×700 透明 |
-| `book-polo.webp` | 《马可·波罗游记》同上 | 同上 |
-| `book-battuta.webp` | 《伊本·白图泰游记》皮面烫金 | 同上 |
-| `book-odoric.webp` | 《鄂多立克东游录》 | 同上 |
-| `book-zhenghe.webp` | 《郑和航海图志》线装 | 同上 |
-| `book-tafur.webp` | 《佩罗·塔富尔游记》 | 同上 |
-| `book-conti.webp` | 《尼科洛·德·康蒂旅行录》 | 同上 |
-| `desk-parchment.webp` | 书案底图：羊皮地图铺开，书叠其上 | 1920×1080 不透明 |
-
-### B. 导入过场（GDD §3 ②）
-
-11 张循环贴图，**1920×1080 不透明**，暗调、下方 1/4 留给箴言文字：
-`load-port` · `load-desert` · `load-station` · `load-monastery` · `load-mosque` · `load-church` · `load-snowpeak` · `load-steppe` · `load-canal` · `load-bazaar` · `load-seaship`
-
-### C. 角色生成（GDD §4）
-
-| 引用名 | 内容 | 尺寸 |
-|---|---|---|
-| `fate-wheel.webp` | 命格转盘／九等评级底盘 | 800×800 透明 |
-| `fate-bar-travel.webp` `fate-bar-rapport.webp` `fate-bar-wealth.webp` | 三条命运条的纹章端头 | 各 256×64 透明 |
-| `culture-latin.webp` `culture-islamic.webp` `culture-eastasia.webp` `culture-steppe.webp` `culture-indianocean.webp` | 五文化圈徽记 | 各 512×512 透明 |
-| `faith-latin/orthodox/islam/buddhism/daoism/nestorian/hindu/folk.webp` | 八宗教身份徽记（**器物意象，不画神明**） | 各 512×512 透明 |
+| 类别 | 状态 |
+|---|---|
+| 七书封 `book-*` | **7/7** |
+| `desk-parchment` + `scene-desk-opening` | ✅ |
+| 过场 `load-*` | **11/11** |
+| `fate-wheel` + `fate-bar-*` | **4/4** |
+| `culture-*` | **5/5** |
+| 信仰徽 `faith-*` | **8/8** |
+| Polo 入城图（旧拼写文件名） | **12**（见需求文档别名表） |
+| `site-*` 大图 | **15**（venice / acre / tauris / baldacum / hormos） |
+| `explore-*` | **36** |
 
 ---
 
-## ⏳ P1 · MVP 十二城（按 LORE_PIPELINE 方案 A 重排后）
+## ❌ 仍缺出图
 
-> 现有 16 张 `scene-*` 覆盖旧城市表；新主干若改为「阿卡→大不里士→忽鲁谟斯→巴达赫尚→喀什→敦煌→上都→大都→行在→泉州」，需补下列场景。
+### P1 · Polo 探索大图 / 随从 / 契约
 
-| 引用名 | 场景 | 尺寸 |
+| 类别 | 缺 | 备注 |
 |---|---|---|
-| `scene-hormuz-port.webp` | 忽鲁谟斯港（已有，复用） | — |
-| `scene-badashan.webp` | 巴达赫尚高原、宝石矿 | 1920×1080 |
-| `scene-kashgar.webp` | 喀什噶尔绿洲市集 | 同上 |
-| `scene-dunhuang.webp` | 敦煌石窟与鸣沙山 | 同上 |
-| `scene-kinsay.webp` | 行在（杭州）西湖画舫 | 同上（已有 `scene-hangzhou-lake` 可复用） |
+| `site-<polo-id>-{1,2,3}.webp` | 约 21 | 已有 venice/acre/tauris/baldacum/hormos；其余用 `explore-*` 顶 |
+| `city-shangdu-entry` / `city-hangzhou-entry`（或表 id 直名） | 可选 | 已有 scene 回退 |
+| `retainer-<id>.webp` | ~18–22 | 用 `npc-job-*` 顶 |
+| `contract-open/divined/sealed` + `seal-wax` | 4 | UI 可无图 |
 
-**每城另需**：`city-<id>-entry.webp`（入城视角小图 960×540）与三张探索点插图 `site-<id>-1/2/3.webp`（各 960×540）。十二城合计 **12 + 36 = 48 张**。
+### P1b · 白图泰六城（M3 玩法已上、图未上）
 
-## ⏳ P1 · 随从系统（GDD §11）
+`tangier` · `cairo` · `damascus` · `mecca` · `delhi` · `calicut`
 
-| 引用名 | 内容 | 尺寸 |
+| 类别 | 建议张数 | 状态 |
 |---|---|---|
-| `retainer-<id>.webp` × 18 | 随从半身立绘，朝右，底部 15% 可被对话框压住 | 900×1300 透明 |
-| `role-guide/interpreter/agent/guard/physician/sailor/scribe/acolyte/porter/diviner.webp` | 十种职业徽记 | 各 512×512 透明 |
-| `contract-open.webp` `contract-divined.webp` `contract-sealed.webp` | 三种招募方式的契约纸 | 各 800×1000 透明 |
-| `seal-wax.webp` | 生辰封印蜡印（三级揭示动画用） | 512×512 透明 |
+| `city-<id>-entry.webp` | 6 | ❌ 全缺 |
+| `site-<id>-{1,2,3}` 或 `explore-*-<id>` | 18 | ❌ |
+| 临时回退 | — | `scene-band-*` + `npc-*-isl` + `load-mosque/bazaar` |
 
-## ⏳ P1 · 十位师父立绘（沿用旧规划，仍缺）
+### P2 · 内容扩充（不挡 M0–M3 发版 / 属 M4+ 打磨）
 
-`mentor-tarot / lenormand / runes / astrodice / western / meihua / iching / dream / bazi / jiaobei.webp`
-各 900×1300 透明。现暂借同文明守门人立绘顶替；人设见 `js/data-mentors.js`。
+P2 补的是**牌组完整度、货币辨识、收集纪念**三类「锦上添花」资产：主循环（探索/出行/停笔）不依赖它们。
+现有回退：易经 31–64 → Unicode 卦符 / 程序线；货币 → 💰 + 币种文案；贴纸 → emoji / 纯色章；商品 → 已映射 `ic-*`/`item-*`。
+
+#### A. 易经牌面下半部 · 34 张 ❌
+
+| 项 | 说明 |
+|---|---|
+| **用途** | 技艺页 / 仪式揭示完整 64 卦收藏与翻牌；上半 01–30 已在 `assets/decks/iching/` |
+| **规格** | 512×768 不透明；与 01–30 同框（云岭暮光稿本框） |
+| **命名** | `iching-<NN>-<english-slug>-full.webp`（King Wen 序，与现有一致） |
+| **已有** | **30/64**（`iching-01-…` … `iching-30-the-clinging-full.webp`） |
+| **仍缺** | **31–64**（34 张） |
+| **Prompt** | 已写好：[`ART_PROMPTS_ICHING_DECK.md`](ART_PROMPTS_ICHING_DECK.md)（Batch 含 #31 Influence 起） |
+| **接线** | `data-hexagrams.js` / codex hex 格已认 64；缺文件时 UI 用字符回退 |
+
+建议按 prompt 文档分批出图（separate mode），出完跑 `dealpha` 仅当误出白底（牌面应为不透明羊皮纸）。
+
+#### B. 货币徽 · 5 张 ❌
+
+| 引用名 | 对应游戏 `currency` | 用途 |
+|---|---|---|
+| `currency-ducat.webp` | `ducat` | 威尼斯 / 拉丁港市集 HUD、价签 |
+| `currency-dinar.webp` | `dinar` | 伊斯兰城、白图泰线 |
+| `currency-dirham.webp` | `dirham` | 中亚 / 随从薪资显示 |
+| `currency-cash.webp` | `cash` | 汉地（上都→刺桐） |
+| `currency-sycee.webp` | （银锭扩展 / 汉地大额） | 可选；表未强制，预留给打磨 |
+
+| 项 | 说明 |
+|---|---|
+| **规格** | 256×256 透明；器物特写（勿画现代纸币），可读小尺寸 |
+| **回退** | 文案币种名 + `ic-ritual-coin` / emoji |
+| **接线** | `cities.json` / `archetypes.startKit.currency` → 市集价旁图标 |
+
+#### C. 纪念贴纸 · 建议 9 张（随结局 id）❌
+
+结局表已写死 `sticker` 字段；有图则可在停笔/图鉴展示，无图用 emoji 章即可。
+
+| 引用名 | 来源结局（示例） | 意象建议 |
+|---|---|---|
+| `sticker-stop.webp` | `st-stop` | 合上的笔与册 |
+| `sticker-polo.webp` | `st-polo` | 宫廷窗棂 / 汗八里 |
+| `sticker-market.webp` | `st-market` | 秤与布匹 |
+| `sticker-diviner.webp` | `st-diviner` | 三枚铜钱 |
+| `sticker-map.webp` | `st-map` | 展开残图 |
+| `sticker-silk.webp` | `st-silk` | 一匹丝 |
+| `sticker-no-return.webp` | `st-no-return` | 断桥 / 背向落日 |
+| `sticker-translate.webp` | `st-translate` | 双语残页 |
+| `sticker-battuta.webp` | `st-battuta` | 朝觐圆环 / 棕榈与圆顶 |
+
+| 项 | 说明 |
+|---|---|
+| **规格** | 256×256 透明；蜡印/手绘贴纸感，边缘可微毛边 |
+| **文件名** | `sticker-<suffix>.webp`，suffix = 去掉 `st-` 前缀（或全名 `sticker-st-polo`——**选定后与 `effects`/`endings` 对齐一次**；推荐短名上表） |
+| **扩展** | 城纪念章（`sticker-city-tabriz` 等）可后加，不阻塞 |
+
+#### D. 商品独立图标 · 不做新图 ⏭️
+
+| 项 | 说明 |
+|---|---|
+| **原设想** | `goods-<id>.webp` ×60 |
+| **现状** | [`GOODS_ART_MAP.json`](GOODS_ART_MAP.json) 已把商品/工具映到现有 `ic-*` / `item-*` |
+| **决策** | **P2 不再为商品单开一批**；仅当某货映射难看时个案补 1 张 `item-*` |
+| **接线** | 市集/行囊统一走 `FQ.goodsArt()`（或等价）+ `ui-slot-*` |
+
+#### P2 数量小结
+
+| 子项 | 缺 | 状态 |
+|---|---|---|
+| 易经 31–64 | **34** | ❌ 有完整 prompt |
+| 货币 | **5**（sycee 可算第 5） | ❌ |
+| 结局贴纸 | **9**（建议集） | ❌ 表 id 已存在 |
+| 独立 goods | **0** | ⏭️ 映射完成 |
+| **合计建议出图** | **≈48** | 不挡发版 |
+
+**P2 出图顺序建议**：货币 5（HUD 立刻受益）→ 贴纸 9（停笔反馈）→ 易经 31–64（牌组收藏最长）。
 
 ---
 
-## ⏳ P2 · 补全与升级
 
-| 引用名 | 内容 | 尺寸 |
+## 🔌 接线待办（非新素材 · M4 优先）
+
+| 动作 | 素材 | 状态 |
 |---|---|---|
-| `decks/iching/iching-31..64-*-full.webp`（34 张） | 易经卦牌下半部，命名沿用现规则 | 同现有 |
-| `realm-tarot/western/astrodice/jiaobei/meihua/lenormand.webp`（6 张） | 占法徽记（`ART_EMOJI_MAP.json` 已指向这些名字但文件未出，现由近似纹章顶替） | 512×512 透明 |
-| `map-city-chr/isl/con/mazu.webp`、`map-court-con.webp`、`map-shrine.webp` | 地图城塞小像（现由 SVG 立面顶替） | 256×220 透明 |
-| `map-beast-serpent/whale/roc/griffin.webp`、`map-rose.webp`、`map-wind-head.webp`、`map-cartouche.webp`、`map-border.webp` | 地图异兽与装饰（现由 SVG 顶替） | 见 `ART_PROMPTS_MAP.md` |
-| `tr-*.webp`（12 张） | 交通小像（现由 `ic-travel-*` 纹章顶替，可不做） | 256×160 透明 |
-| `sticker-*.webp` | 纪念贴纸，按城市／食物／建筑／导师／占法／商品／路线／节庆／人物分类 | 各 400×400 透明 |
-| `goods-*.webp` × 60 | 商品图标（MVP 六十种） | 各 256×256 透明 |
-| `currency-ducat/dinar/dirham/cash/sycee.webp` | 五种货币 | 各 256×256 透明 |
+| 书案/标题 → `book-*` + `desk-parchment` | ✅ 已有文件 | ✅ 已接 `app.js` title |
+| chargen → `fate-wheel` / `fate-bar-*` / `fate-rank-*` / `culture-*` / `faith-*` | ✅ 文件齐 | PWA 已接；Godot 待接 |
+| 入城 → **别名表** `city-tauris-entry` ↔ `tabriz` 等 | ✅ 文件 | ✅ `js/art-map.js` `FQ.cityEntryArt` |
+| 探索按钮 → `explore-*` | ✅ 文件 | ✅ `city.js` hub/market/shrine |
+| 导师 → `mentor-*` | ✅ | ✅ `FQ.mentorArt` |
+| 仪式签法 → `ritual-lot-*`；星骰 → `astrodice/` | ✅ | ✅ lot 已接；星骰仍 emoji |
+| 过场 → `load-*` | ✅ | ⏳ 出行页未接 |
+| 市集行 → `GOODS_ART_MAP` + `ui-slot-*` | 映射已有 | ✅ `FQ.goodsArt` 市集/行囊 |
+| 雾地图 → 暂不接旧 `map.js`（已归档）；可选新 SVG/羊皮纸层 | ⏳ | ⏳ |
+| 白图泰 → **占位中 · 同名替换** | `city-{id}-entry` 目标名 + `CITY_ENTRY_BAND` 底图 | ✅ 占位；真图生成后放同名 webp |
 
 ---
 
 ## 优先级小结
 
-**先画 P0**（书案 8 + 导入 11 + 角色生成 17 ≈ 36 张）——没有这些，开场三拍无法成立。
-**再画 P1**（城市 48 + 随从 32 + 师父 10 ≈ 90 张）——MVP 内容体验的骨架。
-**P2 随内容扩充**，且多数已有 SVG 或纹章顶替，不阻塞开发。
+| 序 | 内容 | 量 |
+|---|---|---|
+| 1 | **接线**（开场/chargen/入城别名/explore/仪式） | 0 新图 |
+| 2 | 白图泰 6 入城（+可选 site） | 6–24 |
+| 3 | Polo 剩余 `site-*` 大图 + 个体随从 | ≈40 |
+| 4 | P2 货币→贴纸→易经 31–64（见上节） | ≈48 |

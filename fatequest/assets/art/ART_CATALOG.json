@@ -1,7 +1,7 @@
 {
   "version": 1,
   "style": "Cloud-ridge Twilight / 云岭暮光",
-  "count": 248,
+  "count": 363,
   "assets": [
     {
       "file": "arch-iching.webp",
@@ -16,7 +16,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-iching.webp",
-      "bytes": 34338
+      "bytes": 65332
     },
     {
       "file": "arch-runes.webp",
@@ -31,7 +31,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-runes.webp",
-      "bytes": 70090
+      "bytes": 69998
     },
     {
       "file": "arch-tarot.webp",
@@ -46,7 +46,22 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-tarot.webp",
-      "bytes": 65024
+      "bytes": 64986
+    },
+    {
+      "file": "bg-nocturne-alt.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "alternate subtle star-nocturne plate (very dark)",
+      "description_zh": "alternate subtle star-nocturne plate (very dark)",
+      "where": "",
+      "content": "alternate subtle star-nocturne plate (very dark)",
+      "spec": "",
+      "accent": "",
+      "width": 294,
+      "height": 384,
+      "exif_description": "alternate subtle star-nocturne plate (very dark)",
+      "bytes": 19340
     },
     {
       "file": "bg-nocturne.webp",
@@ -61,7 +76,22 @@
       "width": 1920,
       "height": 1080,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for bg-nocturne.webp",
-      "bytes": 157308
+      "bytes": 156944
+    },
+    {
+      "file": "bg-parchment.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "tileable parchment paper texture 512×512 (for future map)",
+      "description_zh": "tileable parchment paper texture 512×512 (for future map)",
+      "where": "",
+      "content": "tileable parchment paper texture 512×512 (for future map)",
+      "spec": "",
+      "accent": "",
+      "width": 429,
+      "height": 437,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for bg-parchment.webp",
+      "bytes": 58252
     },
     {
       "file": "card-back-full.webp",
@@ -76,7 +106,112 @@
       "width": 512,
       "height": 768,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for card-back-full.webp",
-      "bytes": 126784
+      "bytes": 126506
+    },
+    {
+      "file": "card-back.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "same design language as tower card back: compass star + cloud border (mini icon version)",
+      "description_zh": "same design language as tower card back: compass star + cloud border (mini icon version)",
+      "where": "",
+      "content": "same design language as tower card back: compass star + cloud border (mini icon version)",
+      "spec": "",
+      "accent": "",
+      "width": 223,
+      "height": 243,
+      "exif_description": "same design language as tower card back: compass star + cloud border (mini icon version)",
+      "bytes": 32016
+    },
+    {
+      "file": "comp-lin.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "boatwoman with conical hat and oar, incense charm, no facial detail",
+      "description_zh": "半身像剪影：斗笠船娘执桨，腰间香符（旅伴·船娘林三娘）",
+      "where": "旅伴·船娘林三娘",
+      "content": "半身像剪影：斗笠船娘执桨，腰间香符",
+      "spec": "512×640 透明",
+      "accent": "",
+      "width": 360,
+      "height": 298,
+      "exif_description": "boatwoman with conical hat and oar, incense charm, no facial detail",
+      "bytes": 77842
+    },
+    {
+      "file": "comp-tebrizi.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "turbaned astronomer half-body silhouette with astrolabe, no facial detail",
+      "description_zh": "半身像剪影：缠头老者持黄铜星盘，不画五官细节（旅伴·星家帖必烈）",
+      "where": "旅伴·星家帖必烈",
+      "content": "半身像剪影：缠头老者持黄铜星盘，不画五官细节",
+      "spec": "512×640 透明",
+      "accent": "",
+      "width": 362,
+      "height": 296,
+      "exif_description": "turbaned astronomer half-body silhouette with astrolabe, no facial detail",
+      "bytes": 80416
+    },
+    {
+      "file": "curse-chain.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "chains on blank card",
+      "description_zh": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇（塔之逆位（诅咒卡））",
+      "where": "塔之逆位（诅咒卡）",
+      "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
+      "spec": "512×512 透明，紫黑主调",
+      "accent": "",
+      "width": 304,
+      "height": 278,
+      "exif_description": "chains on blank card",
+      "bytes": 67714
+    },
+    {
+      "file": "curse-dread.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "coiled serpent heraldic",
+      "description_zh": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇（塔之逆位（诅咒卡））",
+      "where": "塔之逆位（诅咒卡）",
+      "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
+      "spec": "512×512 透明，紫黑主调",
+      "accent": "",
+      "width": 274,
+      "height": 278,
+      "exif_description": "coiled serpent heraldic",
+      "bytes": 54248
+    },
+    {
+      "file": "curse-leak.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "holed money pouch dripping coins",
+      "description_zh": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇（塔之逆位（诅咒卡））",
+      "where": "塔之逆位（诅咒卡）",
+      "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
+      "spec": "512×512 透明，紫黑主调",
+      "accent": "",
+      "width": 272,
+      "height": 280,
+      "exif_description": "holed money pouch dripping coins",
+      "bytes": 55680
+    },
+    {
+      "file": "curse-shadow.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "light-eating purple-black ink blot",
+      "description_zh": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇（塔之逆位（诅咒卡））",
+      "where": "塔之逆位（诅咒卡）",
+      "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
+      "spec": "512×512 透明，紫黑主调",
+      "accent": "",
+      "width": 344,
+      "height": 276,
+      "exif_description": "light-eating purple-black ink blot",
+      "bytes": 71488
     },
     {
       "file": "ic-creature-dagger.webp",
@@ -90,8 +225,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Dagger knife",
-      "bytes": 31742
+      "bytes": 30938
     },
     {
       "file": "ic-creature-dragon.webp",
@@ -105,8 +239,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? East-Asian dragon coil silhouette",
-      "bytes": 56094
+      "bytes": 50204
     },
     {
       "file": "ic-creature-hole.webp",
@@ -121,7 +254,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Dark pit / hole",
-      "bytes": 45326
+      "bytes": 41902
     },
     {
       "file": "ic-creature-key.webp",
@@ -136,7 +269,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Old ornate key",
-      "bytes": 35782
+      "bytes": 31040
     },
     {
       "file": "ic-creature-mage.webp",
@@ -150,8 +283,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Hooded mage with staff, no face",
-      "bytes": 44508
+      "bytes": 38662
     },
     {
       "file": "ic-creature-mirror.webp",
@@ -165,8 +297,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Hand mirror",
-      "bytes": 44270
+      "bytes": 38642
     },
     {
       "file": "ic-creature-newmoon.webp",
@@ -181,7 +312,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? New moon disk",
-      "bytes": 38438
+      "bytes": 35362
     },
     {
       "file": "ic-creature-owl.webp",
@@ -195,8 +326,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Owl facing forward",
-      "bytes": 51830
+      "bytes": 44690
     },
     {
       "file": "ic-creature-troll.webp",
@@ -210,8 +340,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Mountain spirit / troll silhouette hooded",
-      "bytes": 49708
+      "bytes": 47512
     },
     {
       "file": "ic-creature-walker.webp",
@@ -225,8 +354,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Pedestrian traveler with staff",
-      "bytes": 43054
+      "bytes": 38132
     },
     {
       "file": "ic-dream-baby.webp",
@@ -241,7 +369,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Swaddled infant silhouette, no face detail",
-      "bytes": 32910
+      "bytes": 28136
     },
     {
       "file": "ic-dream-bridge.webp",
@@ -256,7 +384,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Arch bridge silhouette",
-      "bytes": 29922
+      "bytes": 28046
     },
     {
       "file": "ic-dream-cat.webp",
@@ -271,7 +399,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Cat silhouette sitting",
-      "bytes": 23770
+      "bytes": 22078
     },
     {
       "file": "ic-dream-chase.webp",
@@ -286,7 +414,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Running figure silhouette staff-side",
-      "bytes": 33846
+      "bytes": 30910
     },
     {
       "file": "ic-dream-death.webp",
@@ -301,7 +429,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Butterfly emerging from cocoon",
-      "bytes": 43828
+      "bytes": 43756
     },
     {
       "file": "ic-dream-dog.webp",
@@ -316,7 +444,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Dog silhouette loyal stance",
-      "bytes": 30924
+      "bytes": 30412
     },
     {
       "file": "ic-dream-door.webp",
@@ -331,7 +459,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Arched wooden door ajar",
-      "bytes": 37992
+      "bytes": 36258
     },
     {
       "file": "ic-dream-exam.webp",
@@ -346,7 +474,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Hourglass or alarm-bell clock",
-      "bytes": 38290
+      "bytes": 35108
     },
     {
       "file": "ic-dream-fall.webp",
@@ -361,7 +489,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Downward spiral / cyclone glyph",
-      "bytes": 41548
+      "bytes": 39458
     },
     {
       "file": "ic-dream-fire.webp",
@@ -376,7 +504,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Tongue of flame",
-      "bytes": 33602
+      "bytes": 29910
     },
     {
       "file": "ic-dream-fly.webp",
@@ -391,7 +519,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Dove in flight silhouette",
-      "bytes": 32558
+      "bytes": 28562
     },
     {
       "file": "ic-dream-house.webp",
@@ -406,7 +534,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Simple house elevation",
-      "bytes": 37870
+      "bytes": 34358
     },
     {
       "file": "ic-dream-lost.webp",
@@ -421,7 +549,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Compass rose small",
-      "bytes": 27324
+      "bytes": 25180
     },
     {
       "file": "ic-dream-mountain.webp",
@@ -436,7 +564,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Triple peak mountain",
-      "bytes": 33320
+      "bytes": 32546
     },
     {
       "file": "ic-dream-rain.webp",
@@ -451,7 +579,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Cloud with rain strokes",
-      "bytes": 34466
+      "bytes": 34042
     },
     {
       "file": "ic-dream-snake.webp",
@@ -466,7 +594,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Coiled serpent manuscript beast",
-      "bytes": 45670
+      "bytes": 42248
     },
     {
       "file": "ic-dream-stars.webp",
@@ -481,7 +609,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Crescent + star pair (dream stars&moon)",
-      "bytes": 29104
+      "bytes": 28288
     },
     {
       "file": "ic-dream-tooth.webp",
@@ -496,7 +624,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Single tooth emblem, stylized not gory",
-      "bytes": 33406
+      "bytes": 29386
     },
     {
       "file": "ic-dream-treasure.webp",
@@ -511,7 +639,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Tied money pouch",
-      "bytes": 33214
+      "bytes": 31276
     },
     {
       "file": "ic-dream-water.webp",
@@ -526,7 +654,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Wave crest",
-      "bytes": 42208
+      "bytes": 39290
     },
     {
       "file": "ic-extra-alchemical-symbol-for-fire.webp",
@@ -541,7 +669,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Manuscript icon replacing ? (ALCHEMICAL SYMBOL FOR FIRE)",
-      "bytes": 114738
+      "bytes": 38930
     },
     {
       "file": "ic-extra-convenience-store.webp",
@@ -556,7 +684,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Manuscript icon replacing ? (CONVENIENCE STORE)",
-      "bytes": 69500
+      "bytes": 68230
     },
     {
       "file": "ic-extra-fountain.webp",
@@ -570,8 +698,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (FOUNTAIN)",
-      "bytes": 74124
+      "bytes": 69034
     },
     {
       "file": "ic-extra-glowing-star.webp",
@@ -586,7 +713,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Manuscript icon replacing ? (GLOWING STAR)",
-      "bytes": 64812
+      "bytes": 63876
     },
     {
       "file": "ic-extra-horse.webp",
@@ -600,8 +727,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (HORSE)",
-      "bytes": 73080
+      "bytes": 71094
     },
     {
       "file": "ic-extra-hot-pepper.webp",
@@ -616,7 +742,22 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Manuscript icon replacing ?? (HOT PEPPER)",
-      "bytes": 67380
+      "bytes": 66470
+    },
+    {
+      "file": "ic-extra-microbe.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "exif_description": "replaces ? ? Manuscript icon replacing ? (MICROBE)",
+      "bytes": 54674
     },
     {
       "file": "ic-extra-milky-way.webp",
@@ -630,8 +771,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (MILKY WAY)",
-      "bytes": 70166
+      "bytes": 65310
     },
     {
       "file": "ic-extra-pick.webp",
@@ -646,7 +786,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Manuscript icon replacing ?? (PICK)",
-      "bytes": 64884
+      "bytes": 63748
     },
     {
       "file": "ic-extra-school-satchel.webp",
@@ -661,7 +801,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Manuscript icon replacing ? (SCHOOL SATCHEL)",
-      "bytes": 70008
+      "bytes": 68852
     },
     {
       "file": "ic-extra-speaking-head-in-silhouette.webp",
@@ -675,8 +815,22 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Manuscript icon replacing ?? (SPEAKING HEAD IN SILHOUETTE)",
-      "bytes": 61088
+      "bytes": 57830
+    },
+    {
+      "file": "ic-extra-spool-of-thread.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "exif_description": "replaces ? ? Manuscript icon replacing ? (SPOOL OF THREAD)",
+      "bytes": 53278
     },
     {
       "file": "ic-extra-white-diamond.webp",
@@ -691,7 +845,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Manuscript icon replacing ? (WHITE DIAMOND)",
-      "bytes": 65298
+      "bytes": 64126
     },
     {
       "file": "ic-fx-bolt.webp",
@@ -705,8 +859,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Lightning bolt glyph",
-      "bytes": 44606
+      "bytes": 40724
     },
     {
       "file": "ic-fx-fastfwd.webp",
@@ -721,7 +874,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Double chevron forward",
-      "bytes": 50912
+      "bytes": 50246
     },
     {
       "file": "ic-fx-heart.webp",
@@ -736,7 +889,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Heraldic heart, rubric red + gold rim",
-      "bytes": 49702
+      "bytes": 48248
     },
     {
       "file": "ic-fx-nazar.webp",
@@ -751,7 +904,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Nazar / protective eye amulet, glass blue",
-      "bytes": 53340
+      "bytes": 53348
     },
     {
       "file": "ic-fx-rainbow.webp",
@@ -765,8 +918,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Arc of muted mineral rainbow",
-      "bytes": 50428
+      "bytes": 45646
     },
     {
       "file": "ic-fx-shield.webp",
@@ -780,8 +932,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Heraldic kite shield",
-      "bytes": 52310
+      "bytes": 48240
     },
     {
       "file": "ic-fx-sparkle.webp",
@@ -795,8 +946,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Stardust sparkles / gold mote cluster",
-      "bytes": 50782
+      "bytes": 46018
     },
     {
       "file": "ic-fx-target.webp",
@@ -811,7 +961,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Archery target / omen bullseye",
-      "bytes": 46820
+      "bytes": 46870
     },
     {
       "file": "ic-fx-warn.webp",
@@ -826,7 +976,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Warning triangle with gold edge",
-      "bytes": 51458
+      "bytes": 50518
     },
     {
       "file": "ic-fx-xp.webp",
@@ -840,8 +990,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? White four-point star, XP pip",
-      "bytes": 49246
+      "bytes": 44568
     },
     {
       "file": "ic-icon-check.webp",
@@ -856,7 +1005,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Gold manuscript check mark",
-      "bytes": 46816
+      "bytes": 46866
     },
     {
       "file": "ic-icon-fullscreen.webp",
@@ -870,8 +1019,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Four-corner expand / viewport frame",
-      "bytes": 44622
+      "bytes": 40724
     },
     {
       "file": "ic-icon-lock.webp",
@@ -886,7 +1034,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Iron padlock, locked realm",
-      "bytes": 51452
+      "bytes": 50512
     },
     {
       "file": "ic-icon-sound-off.webp",
@@ -900,8 +1048,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Bell with slash / muted stroke",
-      "bytes": 50430
+      "bytes": 45646
     },
     {
       "file": "ic-icon-sound-on.webp",
@@ -916,7 +1063,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Small bronze bell",
-      "bytes": 49682
+      "bytes": 48228
     },
     {
       "file": "ic-icon-unknown.webp",
@@ -931,7 +1078,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Parchment card with question flourish",
-      "bytes": 50928
+      "bytes": 50262
     },
     {
       "file": "ic-misc-books.webp",
@@ -945,8 +1092,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Stack of books",
-      "bytes": 60582
+      "bytes": 59036
     },
     {
       "file": "ic-misc-calendar.webp",
@@ -961,7 +1107,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Calendar plaque",
-      "bytes": 39310
+      "bytes": 36752
     },
     {
       "file": "ic-misc-cap.webp",
@@ -975,8 +1121,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Scholar cap",
-      "bytes": 29838
+      "bytes": 29170
     },
     {
       "file": "ic-misc-clipboard.webp",
@@ -991,7 +1136,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Clipboard / tally board",
-      "bytes": 38546
+      "bytes": 35456
     },
     {
       "file": "ic-misc-comet.webp",
@@ -1006,7 +1151,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Comet with tail",
-      "bytes": 35506
+      "bytes": 33274
     },
     {
       "file": "ic-misc-crown.webp",
@@ -1021,7 +1166,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Royal crown",
-      "bytes": 48012
+      "bytes": 44652
     },
     {
       "file": "ic-misc-diamond.webp",
@@ -1036,7 +1181,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Solid diamond lozenge ornament",
-      "bytes": 24276
+      "bytes": 21206
     },
     {
       "file": "ic-misc-ghost.webp",
@@ -1051,7 +1196,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Soft ghost silhouette (ordeal, not cute)",
-      "bytes": 36320
+      "bytes": 33904
     },
     {
       "file": "ic-misc-leaf.webp",
@@ -1066,7 +1211,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Fluttering leaf",
-      "bytes": 36168
+      "bytes": 32516
     },
     {
       "file": "ic-misc-map.webp",
@@ -1081,7 +1226,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Folded portolan map",
-      "bytes": 59336
+      "bytes": 55064
     },
     {
       "file": "ic-misc-orn-star.webp",
@@ -1096,7 +1241,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Ornamental diamond-star",
-      "bytes": 30828
+      "bytes": 28006
     },
     {
       "file": "ic-misc-scales.webp",
@@ -1111,7 +1256,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Balance scales (UI)",
-      "bytes": 32850
+      "bytes": 31860
     },
     {
       "file": "ic-misc-seed.webp",
@@ -1126,7 +1271,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Seedling sprout",
-      "bytes": 36024
+      "bytes": 31146
     },
     {
       "file": "ic-misc-snow.webp",
@@ -1141,7 +1286,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Snowflake",
-      "bytes": 35630
+      "bytes": 34802
     },
     {
       "file": "ic-misc-speech.webp",
@@ -1155,8 +1300,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Speech scroll balloon manuscript style",
-      "bytes": 39880
+      "bytes": 38658
     },
     {
       "file": "ic-misc-storm.webp",
@@ -1171,7 +1315,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Storm cloud with bolt",
-      "bytes": 31704
+      "bytes": 28864
     },
     {
       "file": "ic-misc-tornado.webp",
@@ -1186,7 +1330,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Tornado column",
-      "bytes": 36886
+      "bytes": 34716
     },
     {
       "file": "ic-misc-trophy.webp",
@@ -1200,8 +1344,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Trophy cup",
-      "bytes": 47020
+      "bytes": 45440
     },
     {
       "file": "ic-nav-codex.webp",
@@ -1216,7 +1359,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Open illuminated book, codex tab",
-      "bytes": 53330
+      "bytes": 53338
     },
     {
       "file": "ic-nav-home.webp",
@@ -1230,8 +1373,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Compass four-point star / rayed medallion, home tab",
-      "bytes": 50796
+      "bytes": 46018
     },
     {
       "file": "ic-nav-lineage.webp",
@@ -1245,8 +1387,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Calligraphy nib / ink brush, lineage tab",
-      "bytes": 49258
+      "bytes": 44568
     },
     {
       "file": "ic-nav-profile.webp",
@@ -1260,8 +1401,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Yin-yang disk in gold rim, profile tab",
-      "bytes": 52328
+      "bytes": 48240
     },
     {
       "file": "ic-place-bed.webp",
@@ -1275,8 +1415,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Simple bed / inn cot",
-      "bytes": 33176
+      "bytes": 29944
     },
     {
       "file": "ic-place-church.webp",
@@ -1290,8 +1429,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Church with cross gable, side elevation",
-      "bytes": 31974
+      "bytes": 31066
     },
     {
       "file": "ic-place-classical.webp",
@@ -1306,7 +1444,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Classical columns pediment",
-      "bytes": 39648
+      "bytes": 38178
     },
     {
       "file": "ic-place-mosque.webp",
@@ -1320,8 +1458,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Mosque dome + minaret silhouette",
-      "bytes": 30354
+      "bytes": 29534
     },
     {
       "file": "ic-place-shrine.webp",
@@ -1336,7 +1473,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Torii / shrine gate simplified",
-      "bytes": 25756
+      "bytes": 23838
     },
     {
       "file": "ic-place-synagogue.webp",
@@ -1350,8 +1487,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Synagogue facade with tablets hint",
-      "bytes": 37902
+      "bytes": 36416
     },
     {
       "file": "ic-place-tea.webp",
@@ -1365,8 +1501,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Teacup without handle",
-      "bytes": 23142
+      "bytes": 22504
     },
     {
       "file": "ic-place-teapot.webp",
@@ -1380,8 +1515,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Teapot",
-      "bytes": 32530
+      "bytes": 31676
     },
     {
       "file": "ic-place-temple.webp",
@@ -1396,7 +1530,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Stepped temple / pagoda eave",
-      "bytes": 34194
+      "bytes": 31942
     },
     {
       "file": "ic-place-wine.webp",
@@ -1410,8 +1544,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Wine cup",
-      "bytes": 27146
+      "bytes": 26436
     },
     {
       "file": "ic-ritual-amphora.webp",
@@ -1425,8 +1558,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Temperance amphora / pouring vessel",
-      "bytes": 42096
+      "bytes": 37502
     },
     {
       "file": "ic-ritual-basket.webp",
@@ -1441,7 +1573,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Woven market basket",
-      "bytes": 48092
+      "bytes": 45234
     },
     {
       "file": "ic-ritual-candle.webp",
@@ -1455,8 +1587,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Lit candle with soft halo",
-      "bytes": 34152
+      "bytes": 32622
     },
     {
       "file": "ic-ritual-coin.webp",
@@ -1470,8 +1601,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Chinese cash coin round with square hole",
-      "bytes": 40958
+      "bytes": 36792
     },
     {
       "file": "ic-ritual-crescent.webp",
@@ -1485,8 +1615,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Waxing crescent moon",
-      "bytes": 27758
+      "bytes": 26658
     },
     {
       "file": "ic-ritual-fog.webp",
@@ -1500,8 +1629,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Fog bank wisps",
-      "bytes": 37562
+      "bytes": 31690
     },
     {
       "file": "ic-ritual-lantern.webp",
@@ -1515,8 +1643,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Paper lantern / temple lantern",
-      "bytes": 33958
+      "bytes": 33118
     },
     {
       "file": "ic-ritual-pouch.webp",
@@ -1530,8 +1657,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Rune drawstring pouch",
-      "bytes": 43974
+      "bytes": 42310
     },
     {
       "file": "ic-ritual-scroll.webp",
@@ -1545,8 +1671,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Rolled parchment scroll",
-      "bytes": 33840
+      "bytes": 32624
     },
     {
       "file": "ic-ritual-waning.webp",
@@ -1560,8 +1685,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Waning crescent moon",
-      "bytes": 25740
+      "bytes": 20464
     },
     {
       "file": "ic-tower-broom.webp",
@@ -1576,7 +1700,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Broom (cleanse)",
-      "bytes": 47368
+      "bytes": 42538
     },
     {
       "file": "ic-tower-chain.webp",
@@ -1591,7 +1715,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Broken or linked chain",
-      "bytes": 44022
+      "bytes": 40882
     },
     {
       "file": "ic-tower-drop.webp",
@@ -1605,8 +1729,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Water droplet",
-      "bytes": 36424
+      "bytes": 29012
     },
     {
       "file": "ic-tower-fail.webp",
@@ -1620,8 +1743,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Cross mark / wax X seal",
-      "bytes": 51686
+      "bytes": 44674
     },
     {
       "file": "ic-tower-ice.webp",
@@ -1636,7 +1758,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Ice crystal / frozen cube",
-      "bytes": 57050
+      "bytes": 53074
     },
     {
       "file": "ic-tower-ok.webp",
@@ -1651,7 +1773,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Heavy check in gold square seal",
-      "bytes": 49228
+      "bytes": 43692
     },
     {
       "file": "ic-tower-pill.webp",
@@ -1666,7 +1788,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Apothecary pill / capsule",
-      "bytes": 41146
+      "bytes": 36036
     },
     {
       "file": "ic-tower-reroll.webp",
@@ -1681,7 +1803,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Anticlockwise arrows cycle",
-      "bytes": 38142
+      "bytes": 34534
     },
     {
       "file": "ic-tower-skull.webp",
@@ -1696,7 +1818,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Heraldic skull (ornament, not gore)",
-      "bytes": 57966
+      "bytes": 54330
     },
     {
       "file": "ic-tower-swords.webp",
@@ -1711,7 +1833,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Crossed swords",
-      "bytes": 46234
+      "bytes": 41966
     },
     {
       "file": "ic-travel-bactrian.webp",
@@ -1726,7 +1848,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Two-hump camel",
-      "bytes": 44350
+      "bytes": 42036
     },
     {
       "file": "ic-travel-boot.webp",
@@ -1741,7 +1863,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Hiking boot",
-      "bytes": 41436
+      "bytes": 38564
     },
     {
       "file": "ic-travel-canoe.webp",
@@ -1756,7 +1878,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Canoe side view",
-      "bytes": 21944
+      "bytes": 17876
     },
     {
       "file": "ic-travel-eagle.webp",
@@ -1771,7 +1893,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Eagle / roc wing",
-      "bytes": 41262
+      "bytes": 38586
     },
     {
       "file": "ic-travel-ferry.webp",
@@ -1786,7 +1908,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Ferry boat",
-      "bytes": 31558
+      "bytes": 28008
     },
     {
       "file": "ic-travel-horse.webp",
@@ -1801,7 +1923,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Horse head / mount",
-      "bytes": 42276
+      "bytes": 39262
     },
     {
       "file": "ic-travel-ox.webp",
@@ -1815,8 +1937,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Ox head",
-      "bytes": 35430
+      "bytes": 30770
     },
     {
       "file": "ic-travel-row.webp",
@@ -1830,8 +1951,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Rowboat with oars",
-      "bytes": 35754
+      "bytes": 30762
     },
     {
       "file": "ic-travel-sail.webp",
@@ -1846,7 +1966,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Lateen / small sailboat",
-      "bytes": 33868
+      "bytes": 31170
     },
     {
       "file": "ic-travel-ship.webp",
@@ -1861,7 +1981,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Passenger junk / cog silhouette",
-      "bytes": 42392
+      "bytes": 39520
     },
     {
       "file": "ic-trump-00-fool.webp",
@@ -1876,7 +1996,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Fool: satchel + cliff edge + small dog",
-      "bytes": 45082
+      "bytes": 42032
     },
     {
       "file": "ic-trump-01-magician.webp",
@@ -1890,8 +2010,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Magician: top hat + wand on table",
-      "bytes": 41192
+      "bytes": 35232
     },
     {
       "file": "ic-trump-02-priestess.webp",
@@ -1906,7 +2025,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Priestess: crescent + veil columns",
-      "bytes": 43200
+      "bytes": 40078
     },
     {
       "file": "ic-trump-03-empress.webp",
@@ -1920,8 +2039,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Empress: grain sheaf + Venus hint",
-      "bytes": 60908
+      "bytes": 53468
     },
     {
       "file": "ic-trump-04-emperor.webp",
@@ -1936,7 +2054,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ?? ? Emperor: throne / columned seat",
-      "bytes": 40688
+      "bytes": 37634
     },
     {
       "file": "ic-trump-05-hierophant.webp",
@@ -1951,7 +2069,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Hierophant: keys crossed + shrine",
-      "bytes": 49714
+      "bytes": 46456
     },
     {
       "file": "ic-trump-06-lovers.webp",
@@ -1965,8 +2083,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Lovers: two hearts linked",
-      "bytes": 37150
+      "bytes": 31232
     },
     {
       "file": "ic-trump-07-chariot.webp",
@@ -1981,7 +2098,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Chariot: horse armor / chariot wheel",
-      "bytes": 58820
+      "bytes": 55340
     },
     {
       "file": "ic-trump-08-strength.webp",
@@ -1995,8 +2112,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Strength: lion head + infinity above",
-      "bytes": 55604
+      "bytes": 47904
     },
     {
       "file": "ic-trump-09-hermit.webp",
@@ -2011,7 +2127,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Hermit: lantern with star flame",
-      "bytes": 37202
+      "bytes": 32234
     },
     {
       "file": "ic-trump-10-wheel.webp",
@@ -2023,9 +2139,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 59960
+      "width": 232,
+      "height": 220,
+      "bytes": 93028
     },
     {
       "file": "ic-trump-11-justice.webp",
@@ -2037,9 +2153,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 51268
+      "width": 248,
+      "height": 228,
+      "bytes": 94322
     },
     {
       "file": "ic-trump-12-hanged.webp",
@@ -2051,9 +2167,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 42840
+      "width": 248,
+      "height": 228,
+      "bytes": 85030
     },
     {
       "file": "ic-trump-13-death.webp",
@@ -2065,9 +2181,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 56612
+      "width": 247,
+      "height": 228,
+      "bytes": 95576
     },
     {
       "file": "ic-trump-14-temperance.webp",
@@ -2079,9 +2195,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 59342
+      "width": 249,
+      "height": 220,
+      "bytes": 93930
     },
     {
       "file": "ic-trump-15-devil.webp",
@@ -2093,9 +2209,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 48970
+      "width": 240,
+      "height": 213,
+      "bytes": 90774
     },
     {
       "file": "ic-trump-16-tower.webp",
@@ -2107,9 +2223,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 47240
+      "width": 248,
+      "height": 215,
+      "bytes": 92758
     },
     {
       "file": "ic-trump-17-star.webp",
@@ -2121,9 +2237,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 54424
+      "width": 247,
+      "height": 213,
+      "bytes": 97554
     },
     {
       "file": "ic-trump-18-moon.webp",
@@ -2135,9 +2251,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 48546
+      "width": 235,
+      "height": 213,
+      "bytes": 87856
     },
     {
       "file": "ic-trump-19-sun.webp",
@@ -2149,9 +2265,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 512,
-      "bytes": 53056
+      "width": 254,
+      "height": 217,
+      "bytes": 102148
     },
     {
       "file": "ic-trump-20-judgement.webp",
@@ -2166,7 +2282,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? Judgement: trumpet / angel-call horn only",
-      "bytes": 35434
+      "bytes": 29878
     },
     {
       "file": "ic-trump-21-world.webp",
@@ -2181,7 +2297,316 @@
       "width": 512,
       "height": 512,
       "exif_description": "replaces ? ? World: orb in wreath / mandorla",
-      "bytes": 53344
+      "bytes": 50330
+    },
+    {
+      "file": "item-astrolabe.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "description_zh": "灯油瓶/星盘/金牌（八思巴文暗示）/香符（信物）",
+      "where": "信物",
+      "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 266,
+      "height": 282,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-astrolabe.webp",
+      "bytes": 43408
+    },
+    {
+      "file": "item-beads.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "罗盘/水晶球/念珠",
+      "description_zh": "罗盘/水晶球/念珠（占具）",
+      "where": "占具",
+      "content": "罗盘/水晶球/念珠",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 252,
+      "height": 264,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-beads.webp",
+      "bytes": 30706
+    },
+    {
+      "file": "item-compass.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "罗盘/水晶球/念珠",
+      "description_zh": "罗盘/水晶球/念珠（占具）",
+      "where": "占具",
+      "content": "罗盘/水晶球/念珠",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 256,
+      "height": 278,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-compass.webp",
+      "bytes": 42746
+    },
+    {
+      "file": "item-crystal.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "罗盘/水晶球/念珠",
+      "description_zh": "罗盘/水晶球/念珠（占具）",
+      "where": "占具",
+      "content": "罗盘/水晶球/念珠",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 238,
+      "height": 254,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-crystal.webp",
+      "bytes": 36778
+    },
+    {
+      "file": "item-glass.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "绸卷/香料袋/琉璃瓶",
+      "description_zh": "绸卷/香料袋/琉璃瓶（商货）",
+      "where": "商货",
+      "content": "绸卷/香料袋/琉璃瓶",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 222,
+      "height": 274,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-glass.webp",
+      "bytes": 33856
+    },
+    {
+      "file": "item-lampoil.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "description_zh": "灯油瓶/星盘/金牌（八思巴文暗示）/香符（信物）",
+      "where": "信物",
+      "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 262,
+      "height": 242,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-lampoil.webp",
+      "bytes": 31362
+    },
+    {
+      "file": "item-mazucharm.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "incense charm with wave + lamp only, no deity figure",
+      "description_zh": "灯油瓶/星盘/金牌（八思巴文暗示）/香符（信物）",
+      "where": "信物",
+      "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 226,
+      "height": 260,
+      "exif_description": "incense charm with wave + lamp only, no deity figure",
+      "bytes": 43206
+    },
+    {
+      "file": "item-paiza.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "description_zh": "灯油瓶/星盘/金牌（八思巴文暗示）/香符（信物）",
+      "where": "信物",
+      "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 196,
+      "height": 262,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-paiza.webp",
+      "bytes": 38352
+    },
+    {
+      "file": "item-silk.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "绸卷/香料袋/琉璃瓶",
+      "description_zh": "绸卷/香料袋/琉璃瓶（商货）",
+      "where": "商货",
+      "content": "绸卷/香料袋/琉璃瓶",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 326,
+      "height": 208,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-silk.webp",
+      "bytes": 36352
+    },
+    {
+      "file": "item-spice.webp",
+      "batch": "7 · Journey items (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "绸卷/香料袋/琉璃瓶",
+      "description_zh": "绸卷/香料袋/琉璃瓶（商货）",
+      "where": "商货",
+      "content": "绸卷/香料袋/琉璃瓶",
+      "spec": "256×256 透明",
+      "accent": "",
+      "width": 276,
+      "height": 264,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-spice.webp",
+      "bytes": 40914
+    },
+    {
+      "file": "map-beast-griffin.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 369,
+      "height": 282,
+      "bytes": 213970
+    },
+    {
+      "file": "map-beast-roc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 488,
+      "height": 257,
+      "bytes": 259342
+    },
+    {
+      "file": "map-beast-serpent.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 484,
+      "height": 257,
+      "bytes": 248734
+    },
+    {
+      "file": "map-beast-whale.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 497,
+      "height": 257,
+      "bytes": 259084
+    },
+    {
+      "file": "map-border.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 824,
+      "height": 98,
+      "bytes": 166594
+    },
+    {
+      "file": "map-cartouche.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 452,
+      "height": 282,
+      "bytes": 232136
+    },
+    {
+      "file": "map-city-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "exif_description": "Christendom fort 256?220: crenellated wall + pointed belfry + arch gate, side elevation, no text",
+      "bytes": 34782
+    },
+    {
+      "file": "map-city-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "exif_description": "Confucian/Daoist fort 256?220: flying eaves tower + rammed-earth wall, side elevation, no text",
+      "bytes": 36638
+    },
+    {
+      "file": "map-city-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "exif_description": "Crescent realm fort 256?220: dome + minaret + pointed arch, side elevation, no text",
+      "bytes": 36422
+    },
+    {
+      "file": "map-city-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "exif_description": "Port fort 256?220: pier + Fuzhou-junk masts + Mazu temple eave, side elevation, no text",
+      "bytes": 38292
+    },
+    {
+      "file": "map-court-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 260,
+      "exif_description": "Palace Shangdu/Dadu 320?260: multi-eave halls + white terrace base, no text",
+      "bytes": 57556
     },
     {
       "file": "map-dune.webp",
@@ -2196,7 +2621,7 @@
       "width": 512,
       "height": 180,
       "exif_description": "Triple dunes Kerman desert 512?180: gold sand, wind ripples, flat base",
-      "bytes": 18668
+      "bytes": 15988
     },
     {
       "file": "map-forest.webp",
@@ -2211,7 +2636,7 @@
       "width": 320,
       "height": 220,
       "exif_description": "Conifer cluster Europe 320?220: 5?7 trees, side view, flat base",
-      "bytes": 21544
+      "bytes": 19470
     },
     {
       "file": "map-mtn-rock.webp",
@@ -2226,7 +2651,7 @@
       "width": 512,
       "height": 280,
       "exif_description": "Rocky ridges Alps/Central plains 512?280: brown rock, texture strokes, flat base + shadow",
-      "bytes": 39962
+      "bytes": 36646
     },
     {
       "file": "map-mtn-snow.webp",
@@ -2241,7 +2666,7 @@
       "width": 512,
       "height": 280,
       "exif_description": "Snow peaks Pamir 512?280: three staggered peaks, white caps, left-light right-hatch, flat base + soft drop shadow",
-      "bytes": 33392
+      "bytes": 30436
     },
     {
       "file": "map-orn-chr.webp",
@@ -2253,9 +2678,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "bytes": 54066
+      "width": 358,
+      "height": 994,
+      "bytes": 789594
     },
     {
       "file": "map-orn-con.webp",
@@ -2267,10 +2692,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "Tileable auspicious clouds + meander border, ochre ink",
-      "bytes": 43686
+      "width": 501,
+      "height": 994,
+      "bytes": 1038048
     },
     {
       "file": "map-orn-isl.webp",
@@ -2282,10 +2706,9 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "Tileable Islamic girih octagram packing, green ink lines",
-      "bytes": 49850
+      "width": 401,
+      "height": 994,
+      "bytes": 904672
     },
     {
       "file": "map-orn-mazu.webp",
@@ -2297,10 +2720,24 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "Tileable fish-scale waves + tangled water-weed, teal ink",
-      "bytes": 46810
+      "width": 117,
+      "height": 994,
+      "bytes": 260210
+    },
+    {
+      "file": "map-parchment.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "wide parchment map base with corner flourishes, center blank",
+      "description_zh": "羊皮纸肌理 + 四角海图装饰，中央大片留白（占途地图底（预留））",
+      "where": "占途地图底（预留）",
+      "content": "羊皮纸肌理 + 四角海图装饰，中央大片留白",
+      "spec": "1640×840，不透明",
+      "accent": "",
+      "width": 478,
+      "height": 384,
+      "exif_description": "wide parchment map base with corner flourishes, center blank",
+      "bytes": 69242
     },
     {
       "file": "map-reef.webp",
@@ -2315,7 +2752,7 @@
       "width": 320,
       "height": 140,
       "exif_description": "Reef shoals Mazu sea 320?140: rocks and shallow water, flat base",
-      "bytes": 11368
+      "bytes": 9124
     },
     {
       "file": "map-river.webp",
@@ -2330,7 +2767,21 @@
       "width": 512,
       "height": 64,
       "exif_description": "Canal brush stroke 512?64: ink ribbon tapering at ends, horizontal",
-      "bytes": 4894
+      "bytes": 3068
+    },
+    {
+      "file": "map-rose.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 365,
+      "height": 282,
+      "bytes": 208896
     },
     {
       "file": "map-sea.webp",
@@ -2342,9 +2793,24 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "bytes": 53036
+      "width": 99,
+      "height": 994,
+      "bytes": 217624
+    },
+    {
+      "file": "map-shrine.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 180,
+      "exif_description": "Generic shrine niche/small temple 200?180, usable for any civilization, no text",
+      "bytes": 23884
     },
     {
       "file": "map-vellum.webp",
@@ -2362,6 +2828,215 @@
       "bytes": 514914
     },
     {
+      "file": "map-wind-head.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 279,
+      "height": 282,
+      "bytes": 159066
+    },
+    {
+      "file": "marker-boat.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "side-view small boat facing right",
+      "description_zh": "侧视小剪影，朝右（行进段小队像（预留））",
+      "where": "行进段小队像（预留）",
+      "content": "侧视小剪影，朝右",
+      "spec": "128×128 透明",
+      "accent": "",
+      "width": 226,
+      "height": 75,
+      "exif_description": "side-view small boat facing right",
+      "bytes": 15728
+    },
+    {
+      "file": "marker-camel.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "side-view camel facing right, tiny",
+      "description_zh": "侧视小剪影，朝右（行进段小队像（预留））",
+      "where": "行进段小队像（预留）",
+      "content": "侧视小剪影，朝右",
+      "spec": "128×128 透明",
+      "accent": "",
+      "width": 210,
+      "height": 151,
+      "exif_description": "side-view camel facing right, tiny",
+      "bytes": 23492
+    },
+    {
+      "file": "marker-ship.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "side-view ship facing right",
+      "description_zh": "侧视小剪影，朝右（行进段小队像（预留））",
+      "where": "行进段小队像（预留）",
+      "content": "侧视小剪影，朝右",
+      "spec": "128×128 透明",
+      "accent": "",
+      "width": 225,
+      "height": 117,
+      "exif_description": "side-view ship facing right",
+      "bytes": 20006
+    },
+    {
+      "file": "mentor-astrodice.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Astronomer Tebrizi: half-body facing right, astrolabe, dice pouch; bottom 15% dialog-safe",
+      "bytes": 481170
+    },
+    {
+      "file": "mentor-bazi.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 768,
+      "height": 1024,
+      "exif_description": "mentor-bazi.webp",
+      "bytes": 305568
+    },
+    {
+      "file": "mentor-dream.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Dream-interpreter Saliman: half-body facing right, pillow charm, crescent lamp; bottom 15% dialog-safe",
+      "bytes": 475524
+    },
+    {
+      "file": "mentor-iching.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Historiographer Master Yelu: half-body facing right, yarrow stalks / coins as objects, scholar robe; bottom 15% dialog-safe",
+      "bytes": 435504
+    },
+    {
+      "file": "mentor-jiaobei.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Tianfei temple Matron Chen: half-body facing right, moon blocks (jiaobei / crescent wood lots) as objects, no deity figure; bottom 15% dialog-safe",
+      "bytes": 419910
+    },
+    {
+      "file": "mentor-lenormand.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Card-shop daughter Caterina: half-body facing right, small card deck pouch; bottom 15% dialog-safe",
+      "bytes": 307236
+    },
+    {
+      "file": "mentor-meihua.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Westbound monk Mingyuan: half-body facing right, plum branch, travel staff; bottom 15% dialog-safe",
+      "bytes": 476822
+    },
+    {
+      "file": "mentor-runes.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Varangian guard Harald: half-body facing right, rune stick, axe token (prop); bottom 15% dialog-safe",
+      "bytes": 531012
+    },
+    {
+      "file": "mentor-tarot.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Venice card-maker old Matteo: half-body facing right, unfinished card, gold leaf brush; bottom 15% dialog-safe",
+      "bytes": 453902
+    },
+    {
+      "file": "mentor-western.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Dock astrologer Nadira: half-body facing right, star chart scroll, compass; bottom 15% dialog-safe",
+      "bytes": 300560
+    },
+    {
       "file": "mode-journey.webp",
       "batch": "",
       "source": "ART_PROMPTS.md",
@@ -2374,7 +3049,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-journey.webp",
-      "bytes": 66192
+      "bytes": 66010
     },
     {
       "file": "mode-tower.webp",
@@ -2389,7 +3064,67 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-tower.webp",
-      "bytes": 49978
+      "bytes": 49758
+    },
+    {
+      "file": "npc-inn-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom innkeeper: half-body facing right, keys, ledger; bottom 15% dialog-safe",
+      "bytes": 413330
+    },
+    {
+      "file": "npc-inn-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Waystation steward: half-body facing right, travel papers, lantern; bottom 15% dialog-safe",
+      "bytes": 506510
+    },
+    {
+      "file": "npc-inn-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Caravanserai host: half-body facing right, hospitality tray; bottom 15% dialog-safe",
+      "bytes": 516972
+    },
+    {
+      "file": "npc-inn-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Boat-inn landlord: half-body facing right, rope coil, harbor coat; bottom 15% dialog-safe",
+      "bytes": 467654
     },
     {
       "file": "npc-market-chr.webp",
@@ -2560,6 +3295,216 @@
       "bytes": 397722
     },
     {
+      "file": "realm-astrodice.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "three dice cluster",
+      "description_zh": "three dice cluster",
+      "where": "",
+      "content": "three dice cluster",
+      "spec": "",
+      "accent": "",
+      "width": 380,
+      "height": 299,
+      "exif_description": "three dice cluster",
+      "bytes": 62470
+    },
+    {
+      "file": "realm-bazi.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "compact compass palace grid, ochre + gold",
+      "description_zh": "compact compass palace grid, ochre + gold",
+      "where": "",
+      "content": "compact compass palace grid, ochre + gold",
+      "spec": "",
+      "accent": "",
+      "width": 380,
+      "height": 370,
+      "exif_description": "compact compass palace grid, ochre + gold",
+      "bytes": 74802
+    },
+    {
+      "file": "realm-dream.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "pillow with crescent moon, gentle",
+      "description_zh": "pillow with crescent moon, gentle",
+      "where": "",
+      "content": "pillow with crescent moon, gentle",
+      "spec": "",
+      "accent": "",
+      "width": 371,
+      "height": 299,
+      "exif_description": "pillow with crescent moon, gentle",
+      "bytes": 57030
+    },
+    {
+      "file": "realm-iching.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Chinese cash coin, verdigris + gold",
+      "description_zh": "Chinese cash coin, verdigris + gold",
+      "where": "",
+      "content": "Chinese cash coin, verdigris + gold",
+      "spec": "",
+      "accent": "",
+      "width": 379,
+      "height": 370,
+      "exif_description": "Chinese cash coin, verdigris + gold",
+      "bytes": 72438
+    },
+    {
+      "file": "realm-jiaobei.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "pair of moon blocks",
+      "description_zh": "pair of moon blocks",
+      "where": "",
+      "content": "pair of moon blocks",
+      "spec": "",
+      "accent": "",
+      "width": 379,
+      "height": 299,
+      "exif_description": "pair of moon blocks",
+      "bytes": 60392
+    },
+    {
+      "file": "realm-lenormand.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Lenormand card + clover motif, warm sepia + gold",
+      "description_zh": "Lenormand card + clover motif, warm sepia + gold",
+      "where": "",
+      "content": "Lenormand card + clover motif, warm sepia + gold",
+      "spec": "",
+      "accent": "",
+      "width": 376,
+      "height": 332,
+      "exif_description": "Lenormand card + clover motif, warm sepia + gold",
+      "bytes": 67184
+    },
+    {
+      "file": "realm-meihua.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "plum blossom branch, tiny rubric blossom",
+      "description_zh": "plum blossom branch, tiny rubric blossom",
+      "where": "",
+      "content": "plum blossom branch, tiny rubric blossom",
+      "spec": "",
+      "accent": "",
+      "width": 377,
+      "height": 299,
+      "exif_description": "plum blossom branch, tiny rubric blossom",
+      "bytes": 60320
+    },
+    {
+      "file": "realm-runes.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "rune drawstring pouch, grey-blue + gold",
+      "description_zh": "rune drawstring pouch, grey-blue + gold",
+      "where": "",
+      "content": "rune drawstring pouch, grey-blue + gold",
+      "spec": "",
+      "accent": "",
+      "width": 377,
+      "height": 370,
+      "exif_description": "rune drawstring pouch, grey-blue + gold",
+      "bytes": 71408
+    },
+    {
+      "file": "realm-tarot.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "upright tarot card emblem, mauve + gold",
+      "description_zh": "upright tarot card emblem, mauve + gold",
+      "where": "",
+      "content": "upright tarot card emblem, mauve + gold",
+      "spec": "",
+      "accent": "",
+      "width": 371,
+      "height": 370,
+      "exif_description": "upright tarot card emblem, mauve + gold",
+      "bytes": 68518
+    },
+    {
+      "file": "realm-western.webp",
+      "batch": "6 · Realm icons (missing gameplay set)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "zodiac ring ticks, mist-blue + gold",
+      "description_zh": "zodiac ring ticks, mist-blue + gold",
+      "where": "",
+      "content": "zodiac ring ticks, mist-blue + gold",
+      "spec": "",
+      "accent": "",
+      "width": 373,
+      "height": 332,
+      "exif_description": "zodiac ring ticks, mist-blue + gold",
+      "bytes": 64170
+    },
+    {
+      "file": "region-chr.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Christian world horizon: bell towers and masts",
+      "description_zh": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪（四文明区横幅（预留））",
+      "where": "四文明区横幅（预留）",
+      "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
+      "spec": "1024×400，不透明",
+      "accent": "",
+      "width": 489,
+      "height": 389,
+      "exif_description": "Christian world horizon: bell towers and masts",
+      "bytes": 67054
+    },
+    {
+      "file": "region-con.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "East Asian eaves and mountains, ochre accent",
+      "description_zh": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪（四文明区横幅（预留））",
+      "where": "四文明区横幅（预留）",
+      "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
+      "spec": "1024×400，不透明",
+      "accent": "",
+      "width": 489,
+      "height": 389,
+      "exif_description": "East Asian eaves and mountains, ochre accent",
+      "bytes": 69620
+    },
+    {
+      "file": "region-isl.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Islamic world: minarets and camel silhouettes",
+      "description_zh": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪（四文明区横幅（预留））",
+      "where": "四文明区横幅（预留）",
+      "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
+      "spec": "1024×400，不透明",
+      "accent": "",
+      "width": 489,
+      "height": 389,
+      "exif_description": "Islamic world: minarets and camel silhouettes",
+      "bytes": 62118
+    },
+    {
+      "file": "region-mazu.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "sea lamps, waves, boats; no goddess figure",
+      "description_zh": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪（四文明区横幅（预留））",
+      "where": "四文明区横幅（预留）",
+      "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
+      "spec": "1024×400，不透明",
+      "accent": "",
+      "width": 490,
+      "height": 389,
+      "exif_description": "sea lamps, waves, boats; no goddess figure",
+      "bytes": 71950
+    },
+    {
       "file": "scene-acre-wall.webp",
       "batch": "",
       "source": "",
@@ -2695,6 +3640,51 @@
       "bytes": 620098
     },
     {
+      "file": "scene-region-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Confucian/Daoist travel: mountain path, post pavilion, flying eaves far; empty lower-left third",
+      "bytes": 278136
+    },
+    {
+      "file": "scene-region-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Crescent travel road: trade path, camels mid-right, minaret far; empty lower-left third",
+      "bytes": 342884
+    },
+    {
+      "file": "scene-region-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Mazu sea travel: waves and sails mid-right, seabirds; empty lower-left third",
+      "bytes": 296638
+    },
+    {
       "file": "scene-shangdu-palace.webp",
       "batch": "",
       "source": "",
@@ -2755,6 +3745,21 @@
       "bytes": 266480
     },
     {
+      "file": "sym-algiz.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Algiz ᛉ on stone with elk antler, grey-blue + gold",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 320,
+      "height": 196,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-algiz.webp",
+      "bytes": 31488
+    },
+    {
       "file": "sym-death-full.webp",
       "batch": "1 · Tarot full faces (Major Arcana set in game)",
       "source": "ART_PROMPTS_CARDS.md",
@@ -2767,7 +3772,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Death/Rebirth: white butterfly from open cocoon or bone-door, no gore",
-      "bytes": 111714
+      "bytes": 110266
     },
     {
       "file": "sym-death.webp",
@@ -2782,7 +3787,22 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-death.webp",
-      "bytes": 47198
+      "bytes": 46964
+    },
+    {
+      "file": "sym-fehu.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Fehu ᚠ on stone with cattle horn",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 314,
+      "height": 200,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-fehu.webp",
+      "bytes": 30548
     },
     {
       "file": "sym-fool-full.webp",
@@ -2797,7 +3817,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Fool: bundle on staff, cliff-edge step, small dog silhouette",
-      "bytes": 105530
+      "bytes": 104320
     },
     {
       "file": "sym-fool.webp",
@@ -2812,7 +3832,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-fool.webp",
-      "bytes": 48112
+      "bytes": 47884
     },
     {
       "file": "sym-ge-full.webp",
@@ -2827,7 +3847,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Ge (Revolution): animal silhouette shedding a skin outline, transformation not gore",
-      "bytes": 92078
+      "bytes": 90644
     },
     {
       "file": "sym-ge.webp",
@@ -2842,7 +3862,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-ge.webp",
-      "bytes": 33502
+      "bytes": 33362
     },
     {
       "file": "sym-gen-full.webp",
@@ -2857,7 +3877,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Gen (Stillness): single monumental still mountain",
-      "bytes": 94388
+      "bytes": 93250
     },
     {
       "file": "sym-gen.webp",
@@ -2872,7 +3892,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-gen.webp",
-      "bytes": 41426
+      "bytes": 41050
     },
     {
       "file": "sym-hermit-full.webp",
@@ -2887,7 +3907,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Hermit: lantern whose wick is a six-pointed star, no face",
-      "bytes": 106164
+      "bytes": 104676
     },
     {
       "file": "sym-hermit.webp",
@@ -2902,7 +3922,22 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-hermit.webp",
-      "bytes": 56900
+      "bytes": 56630
+    },
+    {
+      "file": "sym-isa.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Isa ᛁ on stone with icicle",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 242,
+      "height": 198,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-isa.webp",
+      "bytes": 21292
     },
     {
       "file": "sym-jin-full.webp",
@@ -2917,7 +3952,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Jin (Progress): sun half-disk rising above earth line",
-      "bytes": 89596
+      "bytes": 89046
     },
     {
       "file": "sym-jin.webp",
@@ -2932,7 +3967,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-jin.webp",
-      "bytes": 62700
+      "bytes": 62442
     },
     {
       "file": "sym-kan-full.webp",
@@ -2947,7 +3982,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kan (Abyss): deep double-abyss whirlpool as flat spiral",
-      "bytes": 95716
+      "bytes": 94198
     },
     {
       "file": "sym-kan.webp",
@@ -2962,7 +3997,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kan.webp",
-      "bytes": 54090
+      "bytes": 53832
     },
     {
       "file": "sym-kun-full.webp",
@@ -2977,7 +4012,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kun (Receptive): broad earth vessel holding a simple offering form",
-      "bytes": 91164
+      "bytes": 90688
     },
     {
       "file": "sym-kun.webp",
@@ -2992,7 +4027,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kun.webp",
-      "bytes": 26068
+      "bytes": 25848
     },
     {
       "file": "sym-li-full.webp",
@@ -3007,7 +4042,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Li (Radiance): twin flames as abstract bright clarity, not a realistic eye",
-      "bytes": 93860
+      "bytes": 93028
     },
     {
       "file": "sym-li.webp",
@@ -3022,7 +4057,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-li.webp",
-      "bytes": 38516
+      "bytes": 38004
     },
     {
       "file": "sym-moon-full.webp",
@@ -3037,7 +4072,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Moon: eclipse crescent, one wave line, one dew drop",
-      "bytes": 96674
+      "bytes": 94882
     },
     {
       "file": "sym-moon.webp",
@@ -3052,7 +4087,22 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-moon.webp",
-      "bytes": 34660
+      "bytes": 34478
+    },
+    {
+      "file": "sym-perthro.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Perthro ᛈ + dice cup",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 300,
+      "height": 201,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-perthro.webp",
+      "bytes": 26646
     },
     {
       "file": "sym-qian-full.webp",
@@ -3067,7 +4117,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian (Creative): six solid yang lines forming a celestial gate / sky portal",
-      "bytes": 88004
+      "bytes": 87050
     },
     {
       "file": "sym-qian.webp",
@@ -3082,7 +4132,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian.webp",
-      "bytes": 21622
+      "bytes": 21516
     },
     {
       "file": "sym-qian15-full.webp",
@@ -3097,7 +4147,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian/Humility (hexagram 15): mountain silhouette nested low inside earth",
-      "bytes": 88926
+      "bytes": 88444
     },
     {
       "file": "sym-qian15.webp",
@@ -3112,7 +4162,37 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian15.webp",
-      "bytes": 62852
+      "bytes": 60324
+    },
+    {
+      "file": "sym-raidho.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Raidho ᚱ + wagon wheel",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 332,
+      "height": 199,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-raidho.webp",
+      "bytes": 29260
+    },
+    {
+      "file": "sym-sowilo.webp",
+      "batch": "8 · Curses, companions, runes (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Sowilo ᛋ on stone with sun-wheel",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 270,
+      "height": 200,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-sowilo.webp",
+      "bytes": 27024
     },
     {
       "file": "sym-star-full.webp",
@@ -3127,7 +4207,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Star: eight-pointed star pouring two streams into a pool",
-      "bytes": 105516
+      "bytes": 104366
     },
     {
       "file": "sym-star.webp",
@@ -3142,7 +4222,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-star.webp",
-      "bytes": 55352
+      "bytes": 55066
     },
     {
       "file": "sym-strength-full.webp",
@@ -3157,7 +4237,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Strength: lion head, gentle hand on muzzle, infinity mark above",
-      "bytes": 109930
+      "bytes": 108590
     },
     {
       "file": "sym-strength.webp",
@@ -3172,7 +4252,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-strength.webp",
-      "bytes": 72742
+      "bytes": 72690
     },
     {
       "file": "sym-sun-full.webp",
@@ -3186,8 +4266,7 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "The Sun: radiant gold sun-wheel, compass-face center, no realistic face",
-      "bytes": 109972
+      "bytes": 109910
     },
     {
       "file": "sym-sun.webp",
@@ -3201,8 +4280,7 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-sun.webp",
-      "bytes": 55312
+      "bytes": 99404
     },
     {
       "file": "sym-tarot-frame-master.webp",
@@ -3216,8 +4294,7 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "blank template card: identical border and nameplate, empty center compass watermark only (style master)",
-      "bytes": 89614
+      "bytes": 89662
     },
     {
       "file": "sym-tarot-tower-full.webp",
@@ -3231,8 +4308,7 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "The Tower: spire struck by lightning, crown falling",
-      "bytes": 109564
+      "bytes": 108482
     },
     {
       "file": "sym-tarot-tower.webp",
@@ -3246,8 +4322,21 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-tarot-tower.webp",
-      "bytes": 58932
+      "bytes": 83334
+    },
+    {
+      "file": "sym-uruz.webp",
+      "batch": "9 · Remaining runes & journey markers (10)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "Uruz ᚢ + aurochs silhouette",
+      "description_zh": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）（卢恩七符）",
+      "where": "卢恩七符",
+      "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
+      "spec": "同上，灰蓝金配色",
+      "accent": "",
+      "width": 314,
+      "height": 205,
+      "bytes": 113992
     },
     {
       "file": "sym-wheel-full.webp",
@@ -3261,8 +4350,7 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "exif_description": "Wheel of Fortune: wheel with TARO/ROTA letter ring, sword pointer",
-      "bytes": 105422
+      "bytes": 104224
     },
     {
       "file": "sym-wheel.webp",
@@ -3277,7 +4365,175 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-wheel.webp",
-      "bytes": 46222
+      "bytes": 46152
+    },
+    {
+      "file": "tr-barge.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 476,
+      "height": 240,
+      "bytes": 233452
+    },
+    {
+      "file": "tr-caravan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 309,
+      "height": 239,
+      "bytes": 150794
+    },
+    {
+      "file": "tr-dhow.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 508,
+      "height": 267,
+      "bytes": 273596
+    },
+    {
+      "file": "tr-foot.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 300,
+      "height": 239,
+      "bytes": 138684
+    },
+    {
+      "file": "tr-galley.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 476,
+      "height": 267,
+      "bytes": 265850
+    },
+    {
+      "file": "tr-griffin.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 494,
+      "height": 240,
+      "bytes": 252588
+    },
+    {
+      "file": "tr-junk.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 494,
+      "height": 267,
+      "bytes": 274270
+    },
+    {
+      "file": "tr-mule.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 292,
+      "height": 239,
+      "bytes": 137810
+    },
+    {
+      "file": "tr-roc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 475,
+      "height": 261,
+      "bytes": 268972
+    },
+    {
+      "file": "tr-serpent.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 522,
+      "height": 261,
+      "bytes": 295754
+    },
+    {
+      "file": "tr-yak.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 239,
+      "bytes": 158144
+    },
+    {
+      "file": "tr-yam.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 294,
+      "height": 239,
+      "bytes": 137410
     },
     {
       "file": "ui-bg-badge.webp",
@@ -3292,7 +4548,21 @@
       "width": 512,
       "height": 512,
       "exif_description": "small pill/badge background, gold outline",
-      "bytes": 21232
+      "bytes": 20450
+    },
+    {
+      "file": "ui-bg-bookmark.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "bookmark ribbon corner",
+      "description_zh": "bookmark ribbon corner",
+      "where": "",
+      "content": "bookmark ribbon corner",
+      "spec": "",
+      "accent": "",
+      "width": 295,
+      "height": 384,
+      "bytes": 30124
     },
     {
       "file": "ui-bg-card.webp",
@@ -3307,7 +4577,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "slightly lighter card surface, subtle double-rule hint in corners",
-      "bytes": 49314
+      "bytes": 47798
     },
     {
       "file": "ui-bg-divider.webp",
@@ -3321,8 +4591,8 @@
       "accent": "",
       "width": 512,
       "height": 32,
-      "exif_description": "horizontal gold rule divider, 512?32 effective",
-      "bytes": 976
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-divider.webp",
+      "bytes": 986
     },
     {
       "file": "ui-bg-input.webp",
@@ -3337,7 +4607,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "input field inset background, soft inner shadow",
-      "bytes": 28990
+      "bytes": 24246
     },
     {
       "file": "ui-bg-modal-scrim.webp",
@@ -3352,7 +4622,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "soft dark vignette scrim, center lighter for modal",
-      "bytes": 24032
+      "bytes": 23214
     },
     {
       "file": "ui-bg-panel.webp",
@@ -3366,8 +4636,8 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "tileable lacquer panel with paper grain (512?512)",
-      "bytes": 50114
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-panel.webp",
+      "bytes": 46534
     },
     {
       "file": "ui-bg-realm-tile.webp",
@@ -3382,7 +4652,49 @@
       "width": 512,
       "height": 512,
       "exif_description": "square realm picker tile background, faint tradition-color wash",
-      "bytes": 52986
+      "bytes": 51748
+    },
+    {
+      "file": "ui-bg-ribbon.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "diagonal silk ribbon banner",
+      "description_zh": "diagonal silk ribbon banner",
+      "where": "",
+      "content": "diagonal silk ribbon banner",
+      "spec": "",
+      "accent": "",
+      "width": 294,
+      "height": 384,
+      "bytes": 27098
+    },
+    {
+      "file": "ui-bg-scroll.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "vertical scroll paper strip",
+      "description_zh": "vertical scroll paper strip",
+      "where": "",
+      "content": "vertical scroll paper strip",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 384,
+      "bytes": 19670
+    },
+    {
+      "file": "ui-bg-stamp.webp",
+      "batch": "10 · Region banners (4 + extras)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "square wax stamp texture",
+      "description_zh": "square wax stamp texture",
+      "where": "",
+      "content": "square wax stamp texture",
+      "spec": "",
+      "accent": "",
+      "width": 294,
+      "height": 384,
+      "bytes": 31464
     },
     {
       "file": "ui-bg-tabbar.webp",
@@ -3396,8 +4708,8 @@
       "accent": "",
       "width": 512,
       "height": 128,
-      "exif_description": "wide dock strip 512?128, dark glass + grain",
-      "bytes": 4792
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-tabbar.webp",
+      "bytes": 4488
     },
     {
       "file": "ui-bg-xpbar-fill.webp",
@@ -3411,8 +4723,8 @@
       "accent": "",
       "width": 512,
       "height": 64,
-      "exif_description": "horizontal XP bar fill strip, glowing gold, 512?64 effective",
-      "bytes": 3478
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-xpbar-fill.webp",
+      "bytes": 3320
     },
     {
       "file": "ui-bg-xpbar-track.webp",
@@ -3426,8 +4738,22 @@
       "accent": "",
       "width": 512,
       "height": 64,
-      "exif_description": "horizontal XP bar trough, 512?64 effective in cell",
-      "bytes": 3080
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-xpbar-track.webp",
+      "bytes": 2942
+    },
+    {
+      "file": "ui-btn-cinnabar.webp",
+      "batch": "1 · Button skins (horizontal pills)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "rubric red accent button for rare confirm actions",
+      "description_zh": "rubric red accent button for rare confirm actions",
+      "where": "",
+      "content": "rubric red accent button for rare confirm actions",
+      "spec": "",
+      "accent": "",
+      "width": 479,
+      "height": 115,
+      "bytes": 9918
     },
     {
       "file": "ui-btn-disabled.webp",
@@ -3439,10 +4765,9 @@
       "content": "desaturated grey-green disabled state",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "desaturated grey-green disabled state",
-      "bytes": 8886
+      "width": 440,
+      "height": 107,
+      "bytes": 7222
     },
     {
       "file": "ui-btn-ghost-hover.webp",
@@ -3454,10 +4779,9 @@
       "content": "ghost with brighter gold rim glow",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "ghost with brighter gold rim glow",
-      "bytes": 8824
+      "width": 435,
+      "height": 109,
+      "bytes": 6160
     },
     {
       "file": "ui-btn-ghost.webp",
@@ -3469,10 +4793,9 @@
       "content": "dark lacquer ghost button, thin gold border",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "dark lacquer ghost button, thin gold border",
-      "bytes": 9142
+      "width": 292,
+      "height": 57,
+      "bytes": 2580
     },
     {
       "file": "ui-btn-primary-pressed.webp",
@@ -3484,10 +4807,9 @@
       "content": "same shape, darker, pressed-in shadow",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "same shape, darker, pressed-in shadow",
-      "bytes": 11358
+      "width": 450,
+      "height": 117,
+      "bytes": 9864
     },
     {
       "file": "ui-btn-primary.webp",
@@ -3499,10 +4821,9 @@
       "content": "default gold-foil primary button fill, warm gradient top-lit",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "default gold-foil primary button fill, warm gradient top-lit",
-      "bytes": 12392
+      "width": 483,
+      "height": 107,
+      "bytes": 11328
     },
     {
       "file": "ui-btn-round.webp",
@@ -3514,10 +4835,9 @@
       "content": "circular icon button, gold ring on dark fill",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "circular icon button, gold ring on dark fill",
-      "bytes": 10270
+      "width": 403,
+      "height": 107,
+      "bytes": 19392
     },
     {
       "file": "ui-btn-sm.webp",
@@ -3529,10 +4849,9 @@
       "content": "smaller pill proportion, compact foil button",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "smaller pill proportion, compact foil button",
-      "bytes": 10150
+      "width": 399,
+      "height": 99,
+      "bytes": 7006
     },
     {
       "file": "ui-btn-tab-active.webp",
@@ -3544,10 +4863,261 @@
       "content": "short wide pill, bright gold active tab indicator strip",
       "spec": "",
       "accent": "",
-      "width": 512,
-      "height": 128,
-      "exif_description": "short wide pill, bright gold active tab indicator strip",
-      "bytes": 8966
+      "width": 414,
+      "height": 107,
+      "bytes": 6554
+    },
+    {
+      "file": "ui-btn-tab-idle.webp",
+      "batch": "1 · Button skins (horizontal pills)",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "muted idle tab chip on dark glass",
+      "description_zh": "muted idle tab chip on dark glass",
+      "where": "",
+      "content": "muted idle tab chip on dark glass",
+      "spec": "",
+      "accent": "",
+      "width": 406,
+      "height": 97,
+      "bytes": 4476
+    },
+    {
+      "file": "ui-fx-fog.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "light fog wisp, transparent",
+      "description_zh": "light fog wisp, transparent",
+      "where": "",
+      "content": "light fog wisp, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 232,
+      "height": 243,
+      "bytes": 78030
+    },
+    {
+      "file": "ui-fx-frame.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "rectangular double-gold frame with empty center, transparent",
+      "description_zh": "rectangular double-gold frame with empty center, transparent",
+      "where": "",
+      "content": "rectangular double-gold frame with empty center, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 220,
+      "height": 254,
+      "bytes": 84608
+    },
+    {
+      "file": "ui-fx-glow-azure.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "cool mist-blue glow, transparent",
+      "description_zh": "cool mist-blue glow, transparent",
+      "where": "",
+      "content": "cool mist-blue glow, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 250,
+      "height": 243,
+      "bytes": 82252
+    },
+    {
+      "file": "ui-fx-glow-gold.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "radial gold candle glow, transparent",
+      "description_zh": "radial gold candle glow, transparent",
+      "where": "",
+      "content": "radial gold candle glow, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 252,
+      "height": 243,
+      "bytes": 100060
+    },
+    {
+      "file": "ui-fx-grain.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "tileable paper grain overlay, transparent grey",
+      "description_zh": "tileable paper grain overlay, transparent grey",
+      "where": "",
+      "content": "tileable paper grain overlay, transparent grey",
+      "spec": "",
+      "accent": "",
+      "width": 251,
+      "height": 243,
+      "bytes": 92562
+    },
+    {
+      "file": "ui-fx-spark.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "tiny sparkle / dust motes, transparent",
+      "description_zh": "tiny sparkle / dust motes, transparent",
+      "where": "",
+      "content": "tiny sparkle / dust motes, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 273,
+      "height": 254,
+      "bytes": 32348
+    },
+    {
+      "file": "ui-fx-sweep.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "diagonal highlight sweep for button shine, transparent",
+      "description_zh": "diagonal highlight sweep for button shine, transparent",
+      "where": "",
+      "content": "diagonal highlight sweep for button shine, transparent",
+      "spec": "",
+      "accent": "",
+      "width": 254,
+      "height": 254,
+      "bytes": 102496
+    },
+    {
+      "file": "ui-fx-title-bg.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "title screen backdrop plate, opaque 512×512",
+      "description_zh": "title screen backdrop plate, opaque 512×512",
+      "where": "",
+      "content": "title screen backdrop plate, opaque 512×512",
+      "spec": "",
+      "accent": "",
+      "width": 344,
+      "height": 254,
+      "bytes": 137840
+    },
+    {
+      "file": "ui-fx-toast-bg.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "toast notification pill background, opaque horizontal",
+      "description_zh": "toast notification pill background, opaque horizontal",
+      "where": "",
+      "content": "toast notification pill background, opaque horizontal",
+      "spec": "",
+      "accent": "",
+      "width": 384,
+      "height": 254,
+      "bytes": 134332
+    },
+    {
+      "file": "ui-fx-vignette.webp",
+      "batch": "5 · Atmospheric overlays & FX plates",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "soft edge vignette, transparent center (512×512)",
+      "description_zh": "soft edge vignette, transparent center (512×512)",
+      "where": "",
+      "content": "soft edge vignette, transparent center (512×512)",
+      "spec": "",
+      "accent": "",
+      "width": 273,
+      "height": 243,
+      "bytes": 73024
+    },
+    {
+      "file": "ui-icon-back.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "back chevron / return arrow, gold",
+      "description_zh": "back chevron / return arrow, gold",
+      "where": "",
+      "content": "back chevron / return arrow, gold",
+      "spec": "",
+      "accent": "",
+      "width": 241,
+      "height": 129,
+      "bytes": 38842
+    },
+    {
+      "file": "ui-icon-close.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "close X in circle",
+      "description_zh": "close X in circle",
+      "where": "",
+      "content": "close X in circle",
+      "spec": "",
+      "accent": "",
+      "width": 191,
+      "height": 177,
+      "bytes": 73580
+    },
+    {
+      "file": "ui-icon-coin.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "single Chinese cash coin",
+      "description_zh": "single Chinese cash coin",
+      "where": "",
+      "content": "single Chinese cash coin",
+      "spec": "",
+      "accent": "",
+      "width": 187,
+      "height": 179,
+      "bytes": 77416
+    },
+    {
+      "file": "ui-icon-info.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "info sigil, small i in hexagon",
+      "description_zh": "info sigil, small i in hexagon",
+      "where": "",
+      "content": "info sigil, small i in hexagon",
+      "spec": "",
+      "accent": "",
+      "width": 153,
+      "height": 173,
+      "bytes": 51644
+    },
+    {
+      "file": "ui-icon-lock.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "locked realm padlock",
+      "description_zh": "locked realm padlock",
+      "where": "",
+      "content": "locked realm padlock",
+      "spec": "",
+      "accent": "",
+      "width": 217,
+      "height": 195,
+      "bytes": 73944
+    },
+    {
+      "file": "ui-icon-lot.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "fortune lot / cylinder stick bundle",
+      "description_zh": "fortune lot / cylinder stick bundle",
+      "where": "",
+      "content": "fortune lot / cylinder stick bundle",
+      "spec": "",
+      "accent": "",
+      "width": 112,
+      "height": 201,
+      "bytes": 53702
+    },
+    {
+      "file": "ui-icon-settings.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "gear / astrolabe hybrid",
+      "description_zh": "gear / astrolabe hybrid",
+      "where": "",
+      "content": "gear / astrolabe hybrid",
+      "spec": "",
+      "accent": "",
+      "width": 205,
+      "height": 183,
+      "bytes": 72992
     },
     {
       "file": "ui-orn-cloud.webp",
@@ -3559,9 +5129,9 @@
       "content": "cloud-thunder curl segment (yunlei)",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "bytes": 22292
+      "width": 341,
+      "height": 155,
+      "bytes": 70498
     },
     {
       "file": "ui-orn-corner-bl.webp",
@@ -3573,10 +5143,9 @@
       "content": "bottom-left corner",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "bottom-left corner",
-      "bytes": 16068
+      "width": 247,
+      "height": 261,
+      "bytes": 49718
     },
     {
       "file": "ui-orn-corner-br.webp",
@@ -3588,10 +5157,9 @@
       "content": "bottom-right corner",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "bottom-right corner",
-      "bytes": 8832
+      "width": 221,
+      "height": 259,
+      "bytes": 45532
     },
     {
       "file": "ui-orn-corner-tl.webp",
@@ -3603,10 +5171,9 @@
       "content": "top-left double-rule manuscript corner",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "top-left double-rule manuscript corner",
-      "bytes": 20640
+      "width": 223,
+      "height": 213,
+      "bytes": 50160
     },
     {
       "file": "ui-orn-corner-tr.webp",
@@ -3618,10 +5185,9 @@
       "content": "top-right corner mirror",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "top-right corner mirror",
-      "bytes": 7248
+      "width": 237,
+      "height": 215,
+      "bytes": 52750
     },
     {
       "file": "ui-orn-diamond.webp",
@@ -3633,10 +5199,9 @@
       "content": "lozenge ◆ ornament",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "lozenge ? ornament",
-      "bytes": 9496
+      "width": 135,
+      "height": 91,
+      "bytes": 14334
     },
     {
       "file": "ui-orn-rule-h.webp",
@@ -3648,10 +5213,9 @@
       "content": "horizontal gold divider segment",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "horizontal gold divider segment",
-      "bytes": 1812
+      "width": 231,
+      "height": 51,
+      "bytes": 11256
     },
     {
       "file": "ui-orn-rule-v.webp",
@@ -3663,10 +5227,9 @@
       "content": "vertical gold divider segment",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "vertical gold divider segment",
-      "bytes": 13278
+      "width": 41,
+      "height": 303,
+      "bytes": 12738
     },
     {
       "file": "ui-orn-seal.webp",
@@ -3678,10 +5241,9 @@
       "content": "wax seal / stamp accent, rubric red dot",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "exif_description": "wax seal / stamp accent, rubric red dot",
-      "bytes": 17906
+      "width": 181,
+      "height": 171,
+      "bytes": 51006
     },
     {
       "file": "ui-orn-star.webp",
@@ -3693,9 +5255,51 @@
       "content": "compass star ✦ ornament",
       "spec": "",
       "accent": "",
-      "width": 256,
-      "height": 256,
-      "bytes": 15688
+      "width": 179,
+      "height": 193,
+      "bytes": 29674
+    },
+    {
+      "file": "ui-tab-codex.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "codex / open book icon (replaces 📖)",
+      "description_zh": "codex / open book icon (replaces 📖)",
+      "where": "",
+      "content": "codex / open book icon (replaces 📖)",
+      "spec": "",
+      "accent": "",
+      "width": 301,
+      "height": 183,
+      "bytes": 93778
+    },
+    {
+      "file": "ui-tab-home.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "compass star home icon (replaces ✦)",
+      "description_zh": "compass star home icon (replaces ✦)",
+      "where": "",
+      "content": "compass star home icon (replaces ✦)",
+      "spec": "",
+      "accent": "",
+      "width": 235,
+      "height": 245,
+      "bytes": 53042
+    },
+    {
+      "file": "ui-tab-profile.webp",
+      "batch": "4 · Navigation & chrome icons",
+      "source": "ART_PROMPTS_UI.md",
+      "description_en": "yin-yang / balance profile icon (replaces ☯)",
+      "description_zh": "yin-yang / balance profile icon (replaces ☯)",
+      "where": "",
+      "content": "yin-yang / balance profile icon (replaces ☯)",
+      "spec": "",
+      "accent": "",
+      "width": 259,
+      "height": 201,
+      "bytes": 96990
     }
   ]
 }
