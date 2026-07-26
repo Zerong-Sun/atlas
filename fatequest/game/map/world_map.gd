@@ -224,9 +224,60 @@ func _draw() -> void:
 
 	_draw_mountains()
 	_draw_routes()
+	_draw_ornaments(rect)
 	_draw_cities()
 	_draw_wind_heads(rect)
+	_draw_border(rect)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Decorative beasts, forests and seas — sparse enough not to crowd cities.
+func _draw_ornaments(rect: Rect2) -> void:
+	var placements := [
+		{"stem": "beast-whale", "u": 0.18, "v": 0.72, "s": 38.0},
+		{"stem": "beast-serpent", "u": 0.62, "v": 0.78, "s": 34.0},
+		{"stem": "beast-roc", "u": 0.78, "v": 0.28, "s": 32.0},
+		{"stem": "beast-griffin", "u": 0.42, "v": 0.22, "s": 30.0},
+		{"stem": "forest", "u": 0.55, "v": 0.38, "s": 28.0},
+		{"stem": "reef", "u": 0.30, "v": 0.68, "s": 26.0},
+		{"stem": "sea", "u": 0.12, "v": 0.55, "s": 40.0},
+		{"stem": "river", "u": 0.70, "v": 0.48, "s": 28.0},
+		{"stem": "rose", "u": 0.92, "v": 0.88, "s": 44.0},
+		{"stem": "shrine", "u": 0.48, "v": 0.55, "s": 22.0},
+	]
+	for p in placements:
+		var t := MapArt.map_ornament(String(p["stem"]))
+		if t == null:
+			continue
+		var s: float = p["s"]
+		var pos := Vector2(
+			rect.position.x + rect.size.x * float(p["u"]),
+			rect.position.y + rect.size.y * float(p["v"]))
+		draw_texture_rect(t, Rect2(pos - Vector2(s, s) * 0.5, Vector2(s, s)),
+			false, Color(1, 1, 1, 0.28))
+
+	# Culture cartouches in the four corners of the known world.
+	var orns := [
+		{"stem": "orn-chr", "pos": rect.position + Vector2(48, 48)},
+		{"stem": "orn-isl", "pos": Vector2(rect.end.x - 48, rect.position.y + 48)},
+		{"stem": "orn-con", "pos": Vector2(rect.end.x - 48, rect.end.y - 48)},
+		{"stem": "orn-mazu", "pos": Vector2(rect.position.x + 48, rect.end.y - 48)},
+	]
+	for o in orns:
+		var t2 := MapArt.map_ornament(String(o["stem"]))
+		if t2 == null:
+			continue
+		var sz := Vector2(36, 36)
+		draw_texture_rect(t2, Rect2(o["pos"] - sz * 0.5, sz), false, Color(1, 1, 1, 0.35))
+
+
+func _draw_border(rect: Rect2) -> void:
+	var border := MapArt.map_ornament("border")
+	if border == null:
+		return
+	# Nine-slice-ish: stretch the border frame around the map plate.
+	draw_texture_rect(border, Rect2(rect.position - Vector2(8, 8),
+		rect.size + Vector2(16, 16)), false, Color(1, 1, 1, 0.22))
 
 
 func _draw_mountains() -> void:

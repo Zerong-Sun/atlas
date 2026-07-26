@@ -41,3 +41,43 @@ Visit the masjid (mosque)
 ## ev.chamba.entry.title
 
 Of the Great Country Called Chamba
+
+## ev.chamba.a.title
+
+The Elephant Tribute
+
+## ev.chamba.a.body
+
+The King of Chamba pays a yearly tribute to the Great Kaan, which consists of elephants and nothing but elephants. It was settled in the year 1278, when the Kaan sent Baron Sagatu against this kingdom and the aged King sought peace by offering this tribute alone.
+
+## ev.chamba.a.choice.hear_tribute
+
+Hear the full tale of how the elephant tribute was settled
+
+## ev.chamba.a.choice.watch_harbour
+
+Watch a day upon the harbour while tribute goods are tallied
+
+## ev.chamba.a.choice.buy_sandalwood
+
+Buy sandalwood from the tribute quarter
+
+## ev.chamba.b.title
+
+The Idolater Kingdom
+
+## ev.chamba.b.body
+
+Chamba is a very rich region lying west-south-west of Zayton, having a king of its own. The people are Idolaters, and the kingdom is wealthy with aloewood, spices, and the traffic of the southern seas.
+
+## ev.chamba.b.choice.visit_court
+
+Wait two days upon the harbour to hear word of the King's court
+
+## ev.chamba.b.choice.buy_pepper
+
+Buy pepper from the spice merchants
+
+## ev.chamba.b.choice.ask_sea_road
+
+Ask the mariners how many days' sail lie to Zayton and Fuzhou

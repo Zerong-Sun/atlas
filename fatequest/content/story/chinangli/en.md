@@ -43,3 +43,43 @@ Visit the sì (Buddhist monastery)
 ## ev.chinangli.entry.title
 
 Arriving at CHINANGLI
+
+## ev.chinangli.a.title
+
+The Great River Traffic
+
+## ev.chinangli.a.body
+
+A great and wide river runs through Chinangli, and upon it you see silk goods, spices, and other costly merchandize passing up and down without pause. The quays are stacked with bales, and boatmen shout the names of towns far south and north while they warp their vessels to the bank.
+
+## ev.chinangli.a.choice.quay
+
+Walk the quay and count the upstream boats
+
+## ev.chinangli.a.choice.silk
+
+Buy a bolt of river-traded silk
+
+## ev.chinangli.a.choice.spice
+
+Ask which spices the downstream boats carry
+
+## ev.chinangli.b.title
+
+Paper-Money of Cathay
+
+## ev.chinangli.b.body
+
+The people of Chinangli are idolaters subject to the Great Kaan, and they trade with stamped paper-money in every shop and stall. You watch clerks exchange worn notes for fresh ones, and merchants weigh out goods against the Khan's seal without once touching silver.
+
+## ev.chinangli.b.choice.exchange
+
+Watch the paper-money exchange at a stall
+
+## ev.chinangli.b.choice.porcelain
+
+Buy a small porcelain bowl with paper-money
+
+## ev.chinangli.b.choice.clerks
+
+Ask the exchange clerks how the notes are renewed

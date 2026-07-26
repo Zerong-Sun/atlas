@@ -61,6 +61,9 @@ var _roster: Roster
 var _party: Dictionary = {}
 var _ending: Ending
 var _ending_ui: Dictionary = {}
+var _transit_layer: Control
+var _transit_tex: TextureRect
+var _transit_label: Label
 
 
 func _ready() -> void:
@@ -99,12 +102,26 @@ func _apply_projection() -> void:
 
 func _build_desk() -> void:
 	# Parchment plate so a blank dark window cannot be mistaken for a hang.
-	var bg := ColorRect.new()
+	var bg := TextureRect.new()
 	bg.name = "BootBg"
-	bg.color = Color("2a241c")
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(bg)
+	var parchment := MapArt.desk_parchment()
+	if parchment != null:
+		bg.texture = parchment
+	else:
+		# ColorRect fallback if desk art is missing.
+		var solid := ColorRect.new()
+		solid.name = "BootBg"
+		solid.color = Color("2a241c")
+		solid.set_anchors_preset(Control.PRESET_FULL_RECT)
+		solid.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(solid)
+		bg = null
+	if bg != null:
+		add_child(bg)
 
 	var center := CenterContainer.new()
 	center.name = "BootCenter"
@@ -113,8 +130,19 @@ func _build_desk() -> void:
 
 	_desk = VBoxContainer.new()
 	_desk.alignment = BoxContainer.ALIGNMENT_CENTER
-	_desk.custom_minimum_size = Vector2(360, 0)
+	_desk.custom_minimum_size = Vector2(420, 0)
+	_desk.add_theme_constant_override("separation", 8)
 	center.add_child(_desk)
+
+	var wheel := MapArt.fate_wheel()
+	if wheel != null:
+		var wr := TextureRect.new()
+		wr.texture = wheel
+		wr.custom_minimum_size = Vector2(96, 96)
+		wr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		wr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		wr.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		_desk.add_child(wr)
 
 	var title := Label.new()
 	title.text = "远行之书\nThe Book of Far Roads"
@@ -122,6 +150,23 @@ func _build_desk() -> void:
 	title.add_theme_font_size_override("font_size", 28)
 	title.add_theme_color_override("font_color", Color("e8c46a"))
 	_desk.add_child(title)
+
+	# Seven travellers' books on the desk.
+	var books := HBoxContainer.new()
+	books.alignment = BoxContainer.ALIGNMENT_CENTER
+	books.add_theme_constant_override("separation", 6)
+	_desk.add_child(books)
+	for bid in MapArt.BOOKS:
+		var cover := MapArt.book_cover(bid)
+		if cover == null:
+			continue
+		var tr := TextureRect.new()
+		tr.texture = cover
+		tr.custom_minimum_size = Vector2(48, 64)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		tr.tooltip_text = bid
+		books.add_child(tr)
 
 	var sub := Label.new()
 	sub.text = "\n%d 座城 · %d 条路线 · %d 条事件\n%d 种商品 · %d 位随从 · %d 种占法\n" % [
@@ -143,10 +188,39 @@ func _build_desk() -> void:
 		_desk.add_child(cont)
 
 	for a in db.get_table("archetypes"):
-		var btn := Button.new()
-		btn.text = "%s  →  %s" % [I18n.t(a.get("name", "")), _city_name(a.get("start", ""))]
-		btn.pressed.connect(_begin.bind(a))
-		_desk.add_child(btn)
+		_desk.add_child(_archetype_button(a))
+
+
+func _archetype_button(a: Dictionary) -> Control:
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+	var culture := String(a.get("culture", "latin"))
+	var faith := String(a.get("faith", "latin"))
+	var c_icon := MapArt.culture_icon(culture)
+	if c_icon != null:
+		var tr := TextureRect.new()
+		tr.texture = c_icon
+		tr.custom_minimum_size = Vector2(36, 36)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
+	var f_icon := MapArt.faith_icon(faith)
+	if f_icon != null:
+		var tr2 := TextureRect.new()
+		tr2.texture = f_icon
+		tr2.custom_minimum_size = Vector2(28, 28)
+		tr2.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr2.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr2)
+
+	var btn := Button.new()
+	btn.text = "%s  →  %s" % [I18n.t(a.get("name", "")), _city_name(a.get("start", ""))]
+	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn.pressed.connect(_begin.bind(a))
+	row.add_child(btn)
+	return row
 
 
 func _begin(archetype: Dictionary) -> void:
@@ -372,7 +446,68 @@ func _build_map() -> void:
 	_build_bag()
 	_build_settings()
 	_build_controls()
+	_build_transit()
 	_restyle_all()
+
+
+## Brief transit plate shown while the caravan / ship moves between cities.
+func _build_transit() -> void:
+	_transit_layer = Control.new()
+	_transit_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_transit_layer.visible = false
+	_transit_layer.mouse_filter = Control.MOUSE_FILTER_STOP
+	add_child(_transit_layer)
+
+	_transit_tex = TextureRect.new()
+	_transit_tex.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_transit_tex.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_transit_tex.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	_transit_tex.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_transit_layer.add_child(_transit_tex)
+
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Color(0.06, 0.05, 0.03, 0.35)
+	scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_transit_layer.add_child(scrim)
+
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_transit_layer.add_child(centre)
+
+	var plate := PanelContainer.new()
+	plate.add_theme_stylebox_override("panel", Palette.panel_style())
+	centre.add_child(plate)
+	_transit_label = Label.new()
+	_transit_label.add_theme_font_size_override("font_size", UiScale.title())
+	_transit_label.add_theme_color_override("font_color", Palette.ink())
+	_transit_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	plate.add_child(_transit_label)
+
+
+func _show_transit(route: Dictionary, mode: String, dest: String, days: int) -> void:
+	if _transit_layer == null:
+		return
+	var here := db.get_record(state.city)
+	var t_rec := db.get_record(mode)
+	var kinds: Array = t_rec.get("kinds", ["land"])
+	var mode_kind := String(kinds[0]) if not kinds.is_empty() else "land"
+	var art := MapArt.transit_scene({
+		"kind": String(route.get("kind", mode_kind)),
+		"mode_kind": mode_kind,
+		"mode": mode,
+		"band": String(here.get("band", "")),
+		"culture": String(here.get("culture", "")),
+	})
+	_transit_tex.texture = art
+	_transit_label.text = "启程 → %s\n%d 日 · %s" % [
+		_city_name(dest), days, I18n.t("transport.%s.name" % mode)]
+	_transit_layer.visible = true
+	# Brief beat so the plate is seen; the next event / arrival clears it.
+	get_tree().create_timer(0.85).timeout.connect(func():
+		if is_instance_valid(_transit_layer):
+			_transit_layer.visible = false)
 
 
 ## Reader controls. Text size and contrast are not preferences to bury in a
@@ -429,8 +564,9 @@ func _refresh_hud() -> void:
 	for n in state.goods.values():
 		used += int(n)
 	var here := db.get_record(state.city)
+	var currency := String(here.get("market", {}).get("currency", "")) if here.has("market") else ""
 	_hud.refresh(state, clock, _city_name(state.city), used,
-		String(here.get("culture", "latin")))
+		String(here.get("culture", "latin")), currency)
 	_map.set_current(state.city, state.revealed)
 
 
@@ -445,6 +581,15 @@ func _arrive() -> void:
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	var city := db.get_record(state.city)
 	var ctx := _ctx()
+	# Prefer a dedicated entry plate when one exists.
+	var entry_art := MapArt.city_entry(String(city.get("id", "")))
+	if entry_art != null and _transit_layer != null and not _transit_layer.visible:
+		_transit_tex.texture = entry_art
+		_transit_label.text = I18n.t(city.get("name", ""))
+		_transit_layer.visible = true
+		get_tree().create_timer(0.7).timeout.connect(func():
+			if is_instance_valid(_transit_layer):
+				_transit_layer.visible = false)
 	var ev := events.pick("entry", state, rng, ctx)
 	if _audio_ready(): _audio.set_place(city, ev if not ev.is_empty() else {})
 	if ev.is_empty():
@@ -573,6 +718,21 @@ func _open_ending() -> void:
 		lines += "\n[color=#8a7a68]走下去还可能成为：%s[/color]\n" % ", ".join(missed)
 
 	body.text = lines
+	# Preview the sticker art the ending would award.
+	var preview := MapArt.sticker_icon(String(e.get("sticker", "")))
+	if _ending_ui.has("sticker_preview"):
+		var old: Node = _ending_ui["sticker_preview"]
+		if is_instance_valid(old):
+			old.queue_free()
+	if preview != null:
+		var tr := TextureRect.new()
+		tr.texture = preview
+		tr.custom_minimum_size = Vector2(64, 64)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		tr.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		(_ending_ui["box"] as VBoxContainer).add_child(tr)
+		_ending_ui["sticker_preview"] = tr
 	_ending_ui["layer"].visible = true
 
 
@@ -590,6 +750,15 @@ func _confirm_ending() -> void:
 	if not sid.is_empty():
 		executor.execute(state, [{"op": "sticker", "value": sid,
 			"reason": "ending-%s" % e.get("id", "")}], {"rng": rng, "event_id": "ending"})
+		var sticker_art := MapArt.sticker_icon(sid)
+		if sticker_art != null:
+			var tr := TextureRect.new()
+			tr.texture = sticker_art
+			tr.custom_minimum_size = Vector2(72, 72)
+			tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			tr.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+			(_ending_ui["box"] as VBoxContainer).add_child(tr)
 	_say("[color=#4a6a4a]· 停笔：%s[/color]" % I18n.t(String(e.get("name", ""))))
 	_refresh_hud()
 
@@ -646,6 +815,17 @@ func _party_row(m: Dictionary) -> Control:
 	row.add_theme_constant_override("separation", 10)
 	panel.add_child(row)
 
+	var here := db.get_record(state.city)
+	var culture := String(here.get("culture", "latin"))
+	var portrait := MapArt.retainer_portrait(rid, culture)
+	if portrait != null:
+		var tr := TextureRect.new()
+		tr.texture = portrait
+		tr.custom_minimum_size = Vector2(48, 60)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
+
 	var col := VBoxContainer.new()
 	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(col)
@@ -688,6 +868,17 @@ func _hire_row(rec: Dictionary) -> Control:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 10)
 	panel.add_child(row)
+
+	var here := db.get_record(state.city)
+	var culture := String(here.get("culture", "latin"))
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	if portrait != null:
+		var tr := TextureRect.new()
+		tr.texture = portrait
+		tr.custom_minimum_size = Vector2(48, 60)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
 
 	var col := VBoxContainer.new()
 	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -733,11 +924,12 @@ func _open_bag() -> void:
 		var line := "%s ×%d　占 %d 格" % [I18n.t(g.get("name", "")), n, int(g.get("bulk", 1)) * n]
 		if worth > 0:
 			line += "　此地可售 %d 银" % (worth / Market.FEN)
-		list.add_child(Panels.label(line, UiScale.ui(), Palette.ink()))
+		list.add_child(_icon_line(MapArt.goods_icon(String(gid)), line))
 		rows += 1
 
 	for it in state.items:
-		list.add_child(Panels.label("· " + I18n.fmt("item.%s" % it), UiScale.ui(), Palette.ink()))
+		list.add_child(_icon_line(MapArt.item_icon(String(it)),
+			"· " + I18n.fmt("item.%s" % it)))
 		rows += 1
 
 	if rows == 0:
@@ -758,6 +950,20 @@ func _open_bag() -> void:
 	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
 		UiScale.ui(), Palette.ink_soft()))
 	_bag["layer"].visible = true
+
+
+func _icon_line(icon: Texture2D, text: String) -> Control:
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	if icon != null:
+		var tr := TextureRect.new()
+		tr.texture = icon
+		tr.custom_minimum_size = Vector2(28, 28)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
+	row.add_child(Panels.label(text, UiScale.ui(), Palette.ink()))
+	return row
 
 
 ## Reader settings, reachable from anywhere including the city interior.
@@ -918,8 +1124,15 @@ func _show_event(ev: Dictionary) -> void:
 	var states := events.choice_states(ev, state, _ctx())
 	var art: Texture2D = null
 	var c := db.get_record(state.city)
-	if not c.is_empty():
-		art = _city_view._portrait_for(ev, String(c.get("culture", "")))
+	var culture := String(c.get("culture", "latin")) if not c.is_empty() else "latin"
+	# Mentor / method portraits take priority over generic venue plates.
+	var eid := String(ev.get("id", "")).to_lower()
+	for method in MapArt.MENTOR_METHOD:
+		if eid.contains("mentor") and eid.contains(method):
+			art = MapArt.mentor_portrait(method)
+			break
+	if art == null and not c.is_empty():
+		art = _city_view._portrait_for(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art)
 	if _audio_ready(): _audio.sfx("page")
@@ -942,6 +1155,10 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 		_say("  · %s" % line)
 	if not res.reading.is_empty():
 		_say("")
+		var sym := DivinationResultView.symbol_texture(res.reading)
+		if sym != null and _dialog != null:
+			# Surface the cast symbol briefly in the journal header line.
+			_say("[color=#6a5a48]〔%s〕[/color]" % String(res.reading.get("method", "")))
 		_say(DivinationResultView.as_richtext(res.reading))
 	if not res.rejected.is_empty():
 		_say("  [color=#8a4a3a]· %d 项未能达成[/color]" % res.rejected.size())
@@ -1025,6 +1242,7 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 	var mode_kind := String(kinds[0]) if not kinds.is_empty() else "land"
 
 	var trip := travel.depart(route, mode, state, rng)
+	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]))
 
 	# Wages fall due on the road (GDD §11). Unpaid means goodwill, not debt.
 	var wage_fx := _roster.pay_effects(state, int(trip["days"]))

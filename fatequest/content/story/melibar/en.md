@@ -43,3 +43,43 @@ Visit the mandir (temple)
 ## ev.melibar.entry.title
 
 Concerning the Kingdom of Melibar
+
+## ev.melibar.a.title
+
+The Pepper Coast and the Corsair Watch
+
+## ev.melibar.a.body
+
+Melibar faces west upon the sea, a great kingdom that pays tribute to no man. From this coast and from Gozurat, men say, more than a hundred corsair ships put out each summer, sailing in squadrons that spread across a hundred miles of water so no merchant vessel may pass unseen. You stand on the quay where pepper bales are loaded under the watch of men who scan the horizon for sail.
+
+## ev.melibar.a.choice.watch
+
+Watch the harbour and ask how the merchants avoid the corsairs
+
+## ev.melibar.a.choice.buy-pepper
+
+Buy Malabar pepper while the harbour watch holds
+
+## ev.melibar.a.choice.ask-south
+
+Ask the pilots which ports lie along the pepper coast
+
+## ev.melibar.b.title
+
+The North Star and the Idol Rites
+
+## ev.melibar.b.body
+
+At night upon the shore you mark the North Star standing two cubits above the water — higher here than in any land you have sailed. The people of Melibar are idolaters with a tongue of their own, and their mandirs stand open along the bāzār even while merchants trade in fear of the sea. Priests anoint stone images with oil and rice, and pilgrims leave garlands of coconut flowers at the threshold. You watch the rite in silence, the pole-star bright above the temple roof.
+
+## ev.melibar.b.choice.observe
+
+Observe the idol rites from the temple steps
+
+## ev.melibar.b.choice.measure-star
+
+Measure the North Star against the mast and record what you see
+
+## ev.melibar.b.choice.buy-pearls
+
+Buy pearls from a diver who prayed at the shrine

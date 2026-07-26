@@ -79,8 +79,17 @@ for (const c of byTable.cities ?? []) {
   const req = REQUIRED_BY_TIER[c.tier];
   if (!req) { err("G1", f, `${c.id}: unknown tier "${c.tier}"`); continue; }
   for (const k of req) if (c[k] === undefined) err("G1", f, `${c.id} (${c.tier}): missing \`${k}\``);
-  if (c.tier === "metropolis" && (c.sites?.length ?? 0) !== 3)
-    err("G1", f, `${c.id}: metropolis needs exactly 3 sites, has ${c.sites?.length ?? 0}`);
+}
+
+// ------------------------------------------------ G26: tier-graded site counts
+// metropolis → exactly 3; city → exactly 2; town/station not forced (DATA_MODEL §6).
+for (const c of byTable.cities ?? []) {
+  const f = recordFile.get(c.id);
+  const n = c.sites?.length ?? 0;
+  if (c.tier === "metropolis" && n !== 3)
+    err("G26", f, `${c.id}: metropolis needs exactly 3 sites, has ${n}`);
+  if (c.tier === "city" && n !== 2)
+    err("G26", f, `${c.id}: city needs exactly 2 sites, has ${n}`);
 }
 
 // ----------------------------------------------- G2: reference integrity
@@ -771,12 +780,32 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------------------------------------ G27: road band distribution
+// Any single when.bands value owning ≥50% of road events → warning (not fail).
+// Steppe density after T4 can trip this; that is intentional signal, not a red.
+{
+  const roads = (byTable.events ?? []).filter((e) => e.kind === "road");
+  const bandCount = new Map();
+  for (const e of roads) {
+    const bands = e.when?.bands;
+    if (!bands?.length) continue;
+    for (const b of bands) bandCount.set(b, (bandCount.get(b) ?? 0) + 1);
+  }
+  if (roads.length) {
+    for (const [b, n] of bandCount) {
+      const pct = n / roads.length;
+      if (pct >= 0.5)
+        warn("G27", "events", `band "${b}" is ${(pct * 100).toFixed(0)}% of road events (${n}/${roads.length})`);
+    }
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

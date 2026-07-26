@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: 1da5e050adb4
+source_rev: 06c1f1132230
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.tenduc.entry.choice.shrine: 19753a581ec0
   ev.tenduc.entry.body: 2ecd5b11551d
   ev.tenduc.entry.title: 53a8538c2900
+  ev.tenduc.a.title: 0156cd0bbdbd
+  ev.tenduc.a.body: 2d0c1b84e8d5
+  ev.tenduc.a.choice.attend: d04ee92b2588
+  ev.tenduc.a.choice.ask-cambaluc: 5095917973a9
+  ev.tenduc.a.choice.offer: 449ec50a1d5c
+  ev.tenduc.b.title: 608bee0cbf70
+  ev.tenduc.b.body: 11f584d10249
+  ev.tenduc.b.choice.walk: e2bf94e75be2
+  ev.tenduc.b.choice.buy-cloth: 2dd0bf2632d4
+  ev.tenduc.b.choice.ask-north: f4bb7e4f0c5b
 ---
 
 ## city.tenduc.name
@@ -49,3 +59,42 @@ stamps:
 
 记天德军
 
+## ev.tenduc.a.title
+
+景教教堂与祭司王约翰之裔
+
+## ev.tenduc.a.body
+
+天德军政在景教基督徒之手，其王 George 称系祭司王约翰之裔，大汗册封领此省，然其地不及约翰昔日之半。你入教堂，见十字架与叙利亚文碑并列；祭司告汝：此系诸王久娶大汗之女，为习已久。
+
+## ev.tenduc.a.choice.attend
+
+赴景教礼拜，听叙利亚语圣歌
+
+## ev.tenduc.a.choice.ask-cambaluc
+
+问祭司何路通大汗之城
+
+## ev.tenduc.a.choice.offer
+
+于教堂门献银钱
+
+## ev.tenduc.b.title
+
+三教杂处之市
+
+## ev.tenduc.b.body
+
+天德 bāzār（集市）集基督徒、偶像教徒与礼拜 Mahommet 之撒拉逊人——皆在大汗所置 darughachi（监守官）眼下，取其什一，维持秩序。各色驼绒与石青块、牧地粮袋并陈。一巷闻三语，监吏杖下无争。
+
+## ev.tenduc.b.choice.walk
+
+入市，三语侧耳
+
+## ev.tenduc.b.choice.buy-cloth
+
+向景教织工购色棉布一匹
+
+## ev.tenduc.b.choice.ask-north
+
+问撒拉逊商人何路北入草原

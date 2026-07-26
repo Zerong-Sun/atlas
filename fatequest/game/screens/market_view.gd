@@ -154,7 +154,7 @@ func _stock_row(good: Dictionary) -> Control:
 	row.add_theme_constant_override("separation", 10)
 	panel.add_child(row)
 
-	var icon := MapArt.tex("ic-good-%s" % good.get("id", ""))
+	var icon := MapArt.goods_icon(String(good.get("id", "")))
 	if icon != null:
 		var tr := TextureRect.new()
 		tr.texture = icon
@@ -204,6 +204,14 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 10)
 	panel.add_child(row)
+
+	var icon := MapArt.goods_icon(String(good.get("id", "")))
+	if icon != null:
+		var tr := TextureRect.new()
+		tr.texture = icon
+		tr.custom_minimum_size = Vector2(34, 34)
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
 
 	var text := VBoxContainer.new()
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL

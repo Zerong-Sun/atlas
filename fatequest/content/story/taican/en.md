@@ -43,3 +43,43 @@ Visit the masjid (mosque)
 ## ev.taican.entry.title
 
 Of Taican, and the Mountains of Salt. Also of the Province of Casem
+
+## ev.taican.a.title
+
+The Corn Market
+
+## ev.taican.a.body
+
+After twelve days' journey you come to a fortified place called Taican, where there is a great corn market. It is a fine place, and caravans from every quarter stop here to buy grain before the high passes and the salt mountains to the south.
+
+## ev.taican.a.choice.walk_market
+
+Walk the corn market and hear what the caravans pay
+
+## ev.taican.a.choice.buy_cotton
+
+Buy cotton cloth for the road ahead
+
+## ev.taican.a.choice.ask_balc
+
+Ask the caravan masters which road leads toward Balc
+
+## ev.taican.b.title
+
+The Mountains of Salt
+
+## ev.taican.b.body
+
+The mountains that you see towards the south are all composed of salt. People from all the countries round, to some thirty days' journey, come to fetch this salt, which is the best in the world, and is so hard that it can only be broken with iron picks.
+
+## ev.taican.b.choice.buy_salt
+
+Buy a block of Taican salt for the high passes
+
+## ev.taican.b.choice.watch_miners
+
+Watch two days while the miners break the hard salt
+
+## ev.taican.b.choice.ask_sapurgan
+
+Ask which caravan road runs on toward Sapurgan

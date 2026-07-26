@@ -6,7 +6,7 @@
 
 ## 1. 一句话
 
-**玩法已闭环；占卜第二批（筊杯／星骰／沙盘／卢恩）已接入；密度任务（city 探索点、法德兰途中、19 城语料）见 `STORY_REQUIREMENTS.md`。**
+**玩法已闭环；占卜第二批已接入；T3/T4/T6 文本密度任务已闭环（见 `TEXT_REQUIREMENTS.md`）。**
 
 ---
 
@@ -16,13 +16,13 @@
 |---|---|---|
 | cities | 102 | ✅ 12 主城六件全套 |
 | routes | 204 | ✅ 三条线实测可走完 |
-| events | 199 | ✅ 入城 102 · 探索点 51 · 途中 46 · 0 桩 |
+| events | 276 | ✅ 入城 102 · 探索点 93 · 途中 81 · 0 桩 |
 | goods | 60 | ✅ 可买卖，60 条译名齐 |
 | retainers | 54 | ✅ 招募／契约／货格联动已做 |
 | divinations | 24 | ✅ 8 法接入玩法（易占/八字/签占/塔罗 + 筊杯/星骰/沙盘/卢恩） |
 | archetypes / endings / transports | 3 / 8 / 9 | ✅ 全部接入玩法 |
 
-**门禁 22 道全绿**（G1–G3、G7–G18、G20–G25），15 个内核单测与 10 个界面
+**门禁 24 道全绿**（G1–G3、G7–G18、G20–G27；G27 对 steppe 占比发 WARN 属预期），15 个内核单测与 10 个界面
 smoke 全绿。
 
 ---
@@ -33,7 +33,7 @@ smoke 全绿。
 |---|---|---|---|---|
 | 马可·波罗 | 1271–1295 | 136 | 98 | ✅ 已接入玩法（63 城） |
 | 伊本·白图泰 | 1325–1354 | 25 | 0 | ✅ 已接入（9 城，段落级绑定） |
-| 伊本·法德兰 | 921–922 | 5 | **34** | ⚠️ 已接入 1 城；**34** 条入库 stories 待改 steppe 途中（T4） |
+| 伊本·法德兰 | 921–922 | 5 | **34** | ✅ 已接入 1 城；**35** 条 steppe 途中（T4）已入库 |
 | 伊本·朱拜尔 | 1183–1185 | 0 | 27 | ✅ 已接入（10 城） |
 | 远游记（皮涅托） | 16 世纪 | — | — | ⛔ 仅原文，未拆解 |
 | 瀛涯胜览（马欢） | 1416 | — | — | ⛔ 仅原文，未拆解 |
@@ -53,8 +53,8 @@ smoke 全绿。
 ## 4. 中文版
 
 ```
-en 2132 条 · zh 2132 条 · 缺 0 · 中英同文 0
-译文时效 972 current · 0 stale · 0 missing
+en 2482 条 · zh 2482 条 · 缺 0 · 中英同文 0
+译文时效 1322 current · 0 stale · 0 missing
 ```
 
 **中译 B1–B4 已全部完成**（详见 `L10N_PLAN.md` §3）。运行时回退链保留，供第三语言增量交付。
@@ -132,15 +132,14 @@ Godot 运行时接线             57
 ## 5b. 音频素材（实测 2026-07-26）
 
 ```
-assets/audio/    37 OGG · ~8.4 MB
-  stems/         20  （5 文化 × drone/pulse/melody/color）
-  ambient/       17  （12 场景床 + 5 sacred_blur_*）
+assets/audio/    37 OGG
+  stems/         20  （5 文化 × drone/pulse/melody/color；melody/color 已加厚）
+  ambient/       17  （12 CC0 场景床 + 5 sacred_blur_*）
   sfx/           —   （程序化 · game/audio/sfx.gd）
 ```
 
-A1–A6 ✅ · Autoload `AudioDirector` · 三轴文化×场景×情绪。  
-未映射 ambient：`horse_hooves` · `rain` · `river`（文件在盘）。  
-详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md)。
+A1–A8 ✅ · Autoload `AudioDirector` · 三轴文化×场景×情绪 · CC0 场景床已接线。  
+详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md) · [`assets/audio/CC0_SOURCES.md`](../assets/audio/CC0_SOURCES.md)。
 
 ---
 
@@ -173,9 +172,9 @@ A1–A6 ✅ · Autoload `AudioDirector` · 三轴文化×场景×情绪。
 
 | # | 事项 | 量 |
 |---|---|---|
-| F | ~~三书接入与 20 城正文改写~~ ✅ 2026-07-24 · 剩余：法德兰 **34** 条转 steppe 途中（T4） | 见 `LORE_PIPELINE.md` §6.5 |
+| F | ~~三书接入与 20 城正文改写~~ ✅ · ~~法德兰 steppe 途中~~ ✅ T4 | 见 `LORE_PIPELINE.md` §6.5 |
 | G | ~~中译 B1–B4~~ ✅ 2026-07-24 | 0 条待译 |
-| H | 90 次级城的探索点 | 目前只有 12 主城有 |
+| H | ~~21 city × 2 探索点~~ ✅ T3；town/station 仍按分级不做 | metropolis 36 + city 42 |
 | I | 拆解《远游记》《瀛涯胜览》 | 2 本 |
 
 ### 7.3 工程
@@ -193,9 +192,11 @@ A1–A6 ✅ · Autoload `AudioDirector` · 三轴文化×场景×情绪。
 
 按「玩家能感知的收益 ÷ 工作量」排：
 
-1. **21 座 city 级城市各补 2 个探索点**（T3）——目前只有 12 座主城有完整探索点
-2. **法德兰草原 stories 改写为约 40 条途中事件**（T4）——波罗线最薄的一块
-3. **19 城语料证据逐城处置**（T6）——弱证据复核，查无者维持诚实的新撰标签
+1. ~~**21 座 city 级城市各补 2 个探索点**（T3）~~ ✅ 2026-07-26
+2. ~~**法德兰草原 stories 改写为约 40 条途中事件**（T4）~~ ✅ 2026-07-26
+3. ~~**19 城语料证据逐城处置**（T6）~~ ✅ 2026-07-26
+4. **Godot 美术接线**（explore/site/chargen/市集）——见 `ART_REQUIREMENTS.md`
+5. **可选加深**：入城加长、图鉴扩写、对话树（`TEXT_REQUIREMENTS.md` §3）
 
 ---
 

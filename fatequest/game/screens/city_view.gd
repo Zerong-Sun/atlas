@@ -119,30 +119,16 @@ func _spacer() -> Control:
 	return s
 
 
-## Which portrait stands in for a site. Art is organised by venue and culture
-## (npc-<venue>-<set>), so a market site gets the market trader of its own
-## civilisation rather than a generic figure.
+## Which portrait stands in for a site. Prefers job / mentor art, then venue
+## plates keyed by culture set (npc-<venue>-<set>).
 func _portrait_for(ev: Dictionary, culture: String, slot: int = -1) -> Texture2D:
-	var set_name: String = MapArt.CULTURE_SET.get(culture, "con")
-	var id := String(ev.get("id", ""))
-	var venue := "market"
-	if id.contains("shrine") or id.contains("temple") or id.contains("mazu") or id.contains("mosque"):
-		venue = "temple"
-	elif id.contains("serai") or id.contains("inn") or id.contains("caravan"):
-		venue = "inn"
-	elif id.contains("mentor") or id.contains("tea") or id.contains("school"):
-		venue = "tea"
-	elif slot >= 0:
-		venue = ["market", "inn", "tea", "temple"][slot % 4]
-	return MapArt.tex("npc-%s-%s" % [venue, set_name])
+	return MapArt.event_portrait(ev, culture, slot)
 
 
 func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 		ctx: Dictionary) -> void:
 	_city = city
 	_title.text = I18n.t(city.get("name", ""))
-
-	_bg.texture = MapArt.city_scene(city)
 
 	for c in _figures.get_children():
 		c.queue_free()
@@ -161,6 +147,10 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 			continue
 		_figures.add_child(_make_figure(ev, String(city.get("culture", "")), done, offered))
 		offered += 1
+
+	# Prefer a named site plate; otherwise explore/city scene cascade.
+	var site0 := MapArt.site_scene(String(city.get("id", "")), 0)
+	_bg.texture = site0 if site0 != null else MapArt.city_explore_bg(city, 0)
 
 	_hint.text = ("点击一处走近看看 · 共 %d 处" % offered) if offered > 0 \
 		else "此地已看遍"

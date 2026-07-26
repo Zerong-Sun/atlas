@@ -9,7 +9,7 @@
 | 类型 | 需求/现状 | 执行计划 | 资产目录 |
 |---|---|---|---|
 | **美术** | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) | [`ART_TODO.md`](../assets/art/ART_TODO.md) | `assets/art/` · `assets/decks/` |
-| **音频** | [`AUDIO_PLAN.md`](AUDIO_PLAN.md) | A1–A6 ✅ | [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md) |
+| **音频** | [`AUDIO_PLAN.md`](AUDIO_PLAN.md) | A1–A8 ✅ | [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md) |
 | **文本** | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | [`STORY_REQUIREMENTS.md`](STORY_REQUIREMENTS.md) · [`PLAN.md`](PLAN.md) | `content/story/` · `content/i18n/` |
 | **多语言** | [`L10N_PLAN.md`](L10N_PLAN.md) | B1–B4 ✅ | `content/story/<unit>/{en,zh}.md` |
 | **现状 hub** | [`STATUS.md`](STATUS.md) | — | — |
@@ -58,37 +58,38 @@ assets/decks/tarot/              78 张
 ## 2. 音频（2026-07-26 实测）
 
 ```
-assets/audio/          37 个 .ogg · ~8.4 MB
-  stems/               20   （5 文化 × 4 层）
-  ambient/             17   （12 场景床 + 5 sacred_blur_*）
+assets/audio/          37 个 .ogg
+  stems/               20   （5 文化 × 4 层；drone/pulse 程序化 · melody/color 加厚）
+  ambient/             17   （12 CC0 场景床 + 5 sacred_blur_*）
   sfx/                 —    （程序化，见 game/audio/sfx.gd）
 ```
 
 | 里程碑 | 状态 |
 |---|---|
 | A1–A6 · `AudioDirector` autoload | ✅ |
+| A7 · CC0 场景床 + horse_hooves/rain/river 接线 | ✅ |
+| A8 · melody/color 加厚 | ✅ |
 | 三轴：文化 × 场景 × 情绪 | ✅ |
-| 未接线 ambient | `horse_hooves` · `rain` · `river`（文件在，待映射） |
 
-详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · 运行时 [`game/audio/audio_director.gd`](../game/audio/audio_director.gd)。
+详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · 运行时 [`game/audio/audio_director.gd`](../game/audio/audio_director.gd) · 出处 [`assets/audio/CC0_SOURCES.md`](../assets/audio/CC0_SOURCES.md)。
 
 ---
 
-## 3. 文本（2026-07-26 实测）
+## 3. 文本（2026-07-26 实测 · T3/T4/T6 完成）
 
 ```
-content/story/         108 单元 · 216 个 {en,zh}.md
-content/i18n/          en/zh 各 2132 条 · 缺 0
-content/tables/events/ 199 条（entry 102 · site 51 · road 46）
+content/story/         109 单元 · {en,zh}.md
+content/i18n/          en/zh 各 2482 条 · 缺 0
+content/tables/events/ 276 条（entry 102 · site 93 · road 81）
 glossary               97 条（assets/data/glossary.json）
-stamps                 972 current · 0 stale
+stamps                 1322 current · 0 stale
 ```
 
-| 待办 | 量 | 文档 |
+| 任务 | 量 | 状态 |
 |---|---|---|
-| T3 city 探索点 | 21 城 × 2 = 42 | [`STORY_REQUIREMENTS.md`](STORY_REQUIREMENTS.md) §1 |
-| T4 草原途中 | road 46→81 · steppe 13→40 | §2 |
-| T6 语料处置 | 19 城 | §3 |
+| T3 city 探索点 | 21 城 × 2 = 42 | ✅ |
+| T4 草原途中 | road 81 · steppe 48 | ✅ |
+| T6 语料处置 | 19 城已查标注 | ✅ |
 
 语料书：`ibn-fadlan-lore.json` **34** stories（非 199；旧数来自原始 PDF 拆解）。
 

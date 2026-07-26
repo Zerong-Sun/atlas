@@ -18,7 +18,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-badashan-entry",
-      "sites": [],
+      "sites": [
+        "ev-badashan-a",
+        "ev-badashan-b"
+      ],
       "exits": [
         "rt-badashan-balc",
         "rt-badashan-cabul",
@@ -215,7 +218,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-camul-entry",
-      "sites": [],
+      "sites": [
+        "ev-camul-a",
+        "ev-camul-b"
+      ],
       "exits": [
         "rt-camul-etzina",
         "rt-camul-lop",
@@ -506,7 +512,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-keshimur-entry",
-      "sites": [],
+      "sites": [
+        "ev-keshimur-a",
+        "ev-keshimur-b"
+      ],
       "exits": [
         "rt-delli-keshimur",
         "rt-keshimur-badashan",
@@ -636,7 +645,9 @@
         "rt-merva-sapurgan"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：法德兰途经木鹿（Merv）仅单次点名，未达 hits≥2／章标题门；维持 authored，不放宽判据。"
       },
       "calendars": [
         "islamic",
@@ -719,7 +730,9 @@
         "rt-sachiu-etzina"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-outside-corpus",
+        "note": "已查：三书范围外（中国地名）；维持 authored。"
       },
       "market": {
         "goods": [
@@ -774,7 +787,9 @@
         "rt-samara-pentam"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据（单次提及）；维持 authored。"
       },
       "calendars": [
         "islamic",
@@ -914,7 +929,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-taican-entry",
-      "sites": [],
+      "sites": [
+        "ev-taican-a",
+        "ev-taican-b"
+      ],
       "exits": [
         "rt-badashan-taican",
         "rt-balc-taican",

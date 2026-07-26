@@ -55,14 +55,17 @@ static func layer_gains(scene_class: String) -> Dictionary:
 
 
 ## Ambient stem filenames under assets/audio/ambient/ (no extension).
+## Keep ≤4 names — AudioDirector allocates 4 ambient players.
 static func ambients(scene_class: String) -> PackedStringArray:
 	match scene_class:
 		TOWN:
 			return PackedStringArray(["market_crowd", "dishes"])
 		PORT:
-			return PackedStringArray(["waves", "ropes_mast", "seabirds"])
+			# river + rain were on disk but unmapped
+			return PackedStringArray(["waves", "ropes_mast", "river", "rain"])
 		WILD:
-			return PackedStringArray(["wind_sand", "camel_bells", "fire"])
+			# horse_hooves was on disk but unmapped; fire kept for camp colour
+			return PackedStringArray(["wind_sand", "camel_bells", "horse_hooves", "fire"])
 		COURT:
 			return PackedStringArray(["footsteps_echo"])
 		SHRINE:

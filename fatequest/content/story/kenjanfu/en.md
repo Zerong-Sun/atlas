@@ -42,3 +42,43 @@ Visit the sì (Buddhist monastery)
 ## ev.kenjanfu.entry.title
 
 Concerning the City of Kenjanfu
+
+## ev.kenjanfu.a.title
+
+Mulberry Plains
+
+## ev.kenjanfu.a.body
+
+West of the city you walk fine plains planted with mulberries, the trees whose leaves feed the silkworms. Gardeners spread fresh trays in the shade, and the road from Cachanfu is lined with boroughs that sell cocoons by the basket before noon.
+
+## ev.kenjanfu.a.choice.gardens
+
+Walk the mulberry gardens with a silkworm keeper
+
+## ev.kenjanfu.a.choice.silk
+
+Buy raw silk from a cocoon market
+
+## ev.kenjanfu.a.choice.watch
+
+Stand at the roadside and watch the cocoon carts pass
+
+## ev.kenjanfu.b.title
+
+Cities of Industry
+
+## ev.kenjanfu.b.body
+
+When you leave Cachanfu and travel eight days westward you meet cities and boroughs abounding in trade and industry before ever you reach Kenjanfu. Here Prince Mangalai keeps his palace outside the walls, and the workshops weave cloths of silk and gold and forge harness for the Khan's host.
+
+## ev.kenjanfu.b.choice.workshops
+
+Tour the silk-and-gold workshops
+
+## ev.kenjanfu.b.choice.lacquer
+
+Buy lacquerware from an armourer's quarter
+
+## ev.kenjanfu.b.choice.palace
+
+View Prince Mangalai's palace from the plain

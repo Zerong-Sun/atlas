@@ -174,7 +174,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-tenduc-entry",
-      "sites": [],
+      "sites": [
+        "ev-tenduc-a",
+        "ev-tenduc-b"
+      ],
       "exits": [
         "rt-egrigaia-tenduc",
         "rt-tenduc-cacanfu",

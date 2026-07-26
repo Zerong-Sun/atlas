@@ -43,3 +43,43 @@ Visit the sì (Buddhist monastery)
 ## ev.tanpiju.entry.title
 
 Of the City of Tanpiju and Others
+
+## ev.tanpiju.a.title
+
+Gardens a Day from Kinsay
+
+## ev.tanpiju.a.body
+
+When you leave Kinsay and travel a day's journey south-east through a plenteous region, you pass a succession of dwellings and charming gardens before you reach Tanpiju. Peach and mulberry plots line the road, and the air smells of turned earth and canal water.
+
+## ev.tanpiju.a.choice.gardens
+
+Walk the garden road from Kinsay
+
+## ev.tanpiju.a.choice.tea
+
+Buy tea from a gardener's stall
+
+## ev.tanpiju.a.choice.mulberry
+
+Ask which gardens feed the silkworms
+
+## ev.tanpiju.b.title
+
+Under Kinsay
+
+## ev.tanpiju.b.body
+
+Tanpiju is a great and rich city under Kinsay. The people burn their dead as elsewhere in Manzi, use paper-money, and live by trade and handicrafts, with all necessaries in great plenty and cheapness. Carts from the Heaven City arrive each morning with goods for the local market.
+
+## ev.tanpiju.b.choice.market
+
+Walk the market where Kinsay goods are sold
+
+## ev.tanpiju.b.choice.funeral
+
+Watch a funeral party pass toward the cremation ground
+
+## ev.tanpiju.b.choice.lacquer
+
+Buy lacquerware from a Kinsay trader's stall

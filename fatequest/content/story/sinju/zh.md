@@ -2,7 +2,7 @@
 unit: sinju
 lang: zh
 source: en
-source_rev: 472984ab585c
+source_rev: ec383ccaeed3
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.sinju.entry.choice.shrine: 98e20d47c9a5
   ev.sinju.entry.body: 06d6724a30d7
   ev.sinju.entry.title: 47dc1a8eae46
+  ev.sinju.a.title: 760c839c6e70
+  ev.sinju.a.body: e4da7d73bc10
+  ev.sinju.a.choice.count: 9dce96781fdc
+  ev.sinju.a.choice.tea: 4e015e3fd10f
+  ev.sinju.a.choice.toll: e718818d8e03
+  ev.sinju.b.title: 8261bb1dbb60
+  ev.sinju.b.body: 90b956ab9b7e
+  ev.sinju.b.choice.quay: 2b0ef9457307
+  ev.sinju.b.choice.porcelain: 55b45efebee4
+  ev.sinju.b.choice.harbour: 79a04f6ecae6
 ---
 
 ## city.sinju.name
@@ -46,3 +56,42 @@ stamps:
 
 记真州与大江
 
+## ev.sinju.a.title
+
+天下第一江
+
+## ev.sinju.a.body
+
+真州（仪征）立于天下第一之大江——人呼 KIAN（大江）——之上。城虽不大，江面舟楫如云，舟子誓言：此处过货之富，胜全基督教世界诸江海运之和。
+
+## ev.sinju.a.choice.count
+
+立岸数泊船之数
+
+## ev.sinju.a.choice.tea
+
+向江船客购茶
+
+## ev.sinju.a.choice.toll
+
+问税吏岁过船几何
+
+## ev.sinju.b.title
+
+交钞之港
+
+## ev.sinju.b.body
+
+其民为偶像教徒，臣服大汗，埠头交易皆用交钞。城垣虽不甚大，真州舟楫贸易之盛，大汗岁入之丰，皆令人称奇。
+
+## ev.sinju.b.choice.quay
+
+看商人以交钞纳埠头税
+
+## ev.sinju.b.choice.porcelain
+
+向江商购瓷器
+
+## ev.sinju.b.choice.harbour
+
+巡埠头，记城小而货盛

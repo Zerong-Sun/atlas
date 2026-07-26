@@ -2,7 +2,7 @@
 unit: kerman
 lang: zh
 source: en
-source_rev: 7a5140467ea6
+source_rev: 533cfc8c296b
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.kerman.entry.choice.shrine: 32b9d6e49020
   ev.kerman.entry.body: 008baeb075e8
   ev.kerman.entry.title: 104a7d59a3b2
+  ev.kerman.a.title: 6752bf7af04f
+  ev.kerman.a.body: 33ee1a0bfb7d
+  ev.kerman.a.choice.watch-forge: 2f25557de33e
+  ev.kerman.a.choice.buy-turquoise: ef246c618e13
+  ev.kerman.a.choice.ask-roads: 46d7f4703f63
+  ev.kerman.b.title: 3aec38fab6d2
+  ev.kerman.b.body: 46de2439c9a9
+  ev.kerman.b.choice.browse: edc3629fc827
+  ev.kerman.b.choice.buy-silk: 393f131412cc
+  ev.kerman.b.choice.visit-mews: d227a5090bd9
 ---
 
 ## city.kerman.name
@@ -45,3 +55,43 @@ stamps:
 ## ev.kerman.entry.title
 
 克尔曼
+
+## ev.kerman.a.title
+
+绿松石矿与鞍辔匠坊
+
+## ev.kerman.a.body
+
+你出城至山丘，见人于活石中采绿松石——天青与碧色，波斯商人视逾白银。城下铁匠以钢与 Ondanique 矿锻鞍、辔、距、剑、弓、箭筒，皆依克尔曼式。炉火昼夜不熄，锤击之声盈巷。
+
+## ev.kerman.a.choice.watch-forge
+
+观铁匠锻打
+
+## ev.kerman.a.choice.buy-turquoise
+
+向矿经纪购绿松石一块
+
+## ev.kerman.a.choice.ask-roads
+
+问商队主沙漠何路可通
+
+## ev.kerman.b.title
+
+闺绣与山中鹰
+
+## ev.kerman.b.body
+
+于女眷所内，见贵妇与女儿坐绣架，以各色丝绣鸟兽树木花卉；所制帷幔、垫、衾，精妙惊人，波斯贵人争求。城上鹰匠驯克尔曼猎鹰——人谓天下最佳，生于高崖。你闻脚铃与驯鹰者哨声随风。
+
+## ev.kerman.b.choice.browse
+
+于覆道观绣品
+
+## ev.kerman.b.choice.buy-silk
+
+购绣丝一段为礼
+
+## ev.kerman.b.choice.visit-mews
+
+登鹰房问驯鹰之价

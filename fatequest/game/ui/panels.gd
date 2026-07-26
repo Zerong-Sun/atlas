@@ -31,7 +31,7 @@ static func label(text: String, size: int, col: Color) -> Label:
 	return l
 
 
-## A full-screen dim + centred panel. Returns {layer, box}.
+## A full-screen dim + centred panel. Returns {layer, box, panel}.
 static func overlay(parent: Node, min_size: Vector2) -> Dictionary:
 	var layer := Control.new()
 	layer.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -41,6 +41,17 @@ static func overlay(parent: Node, min_size: Vector2) -> Dictionary:
 	var scrim := ColorRect.new()
 	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
 	scrim.color = Color(0.06, 0.05, 0.03, 0.5)
+	# Prefer the illustrated modal scrim when present.
+	var scrim_tex := MapArt.ui("bg-modal-scrim")
+	if scrim_tex != null:
+		var tr := TextureRect.new()
+		tr.set_anchors_preset(Control.PRESET_FULL_RECT)
+		tr.texture = scrim_tex
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_SCALE
+		tr.modulate = Color(1, 1, 1, 0.55)
+		tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		layer.add_child(tr)
 	layer.add_child(scrim)
 
 	var centre := CenterContainer.new()
@@ -51,6 +62,17 @@ static func overlay(parent: Node, min_size: Vector2) -> Dictionary:
 	var panel := PanelContainer.new()
 	panel.add_theme_stylebox_override("panel", Palette.panel_style())
 	panel.custom_minimum_size = min_size
+	# Optional illustrated panel plate behind the content.
+	var plate := MapArt.ui("bg-panel")
+	if plate != null:
+		var bg := TextureRect.new()
+		bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+		bg.texture = plate
+		bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		bg.stretch_mode = TextureRect.STRETCH_SCALE
+		bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		bg.modulate = Color(1, 1, 1, 0.35)
+		panel.add_child(bg)
 	centre.add_child(panel)
 
 	var box := VBoxContainer.new()
@@ -58,3 +80,4 @@ static func overlay(parent: Node, min_size: Vector2) -> Dictionary:
 	panel.add_child(box)
 
 	return {"layer": layer, "box": box, "panel": panel}
+

@@ -4,6 +4,49 @@ extends RefCounted
 ## Formats a Registry.cast() payload into three UI panels (symbol / reading / effects).
 ## Readings may include omen language (大吉 / 大凶); that is intentional.
 
+## Method → preferred sym-* stems (first hit wins).
+const METHOD_SYMBOLS := {
+	"iching": ["qian", "kun", "li", "kan", "gen", "dui", "zhen", "xun", "jin", "ge"],
+	"tarot": ["fool", "hermit", "moon", "star", "sun", "strength", "wheel", "death",
+			"tarot-tower"],
+	"runes": ["fehu", "uruz", "thurisaz", "ansuz", "raidho", "kenaz", "gebo", "wunjo",
+			"hagalaz", "nauthiz", "isa", "jera", "eihwaz", "perthro", "algiz", "sowilo"],
+	"lot": ["qian15"],
+	"jiaobei": ["qian15"],
+	"bazi": ["qian"],
+	"astrodice": ["star"],
+	"geomancy": ["wheel"],
+	"meihua": ["qian"],
+	"lenormand": ["star"],
+	"dream": ["moon"],
+}
+
+
+static func ritual_texture(method: String) -> Texture2D:
+	if method in ["lot", "jiaobei"]:
+		var t := MapArt.ritual_lot("tube")
+		if t != null:
+			return t
+		return MapArt.ritual_lot("stick")
+	return symbol_texture({"method": method, "raw": {}})
+
+
+static func symbol_texture(cast_result: Dictionary) -> Texture2D:
+	var method := String(cast_result.get("method", ""))
+	var raw: Dictionary = cast_result.get("raw", {})
+	# Prefer a stem encoded in the cast payload when present.
+	for key in ["symbol", "sym", "cardId", "rune", "hexagram"]:
+		if raw.has(key):
+			var t := MapArt.symbol_icon(String(raw[key]).to_lower())
+			if t != null:
+				return t
+	var candidates: Array = METHOD_SYMBOLS.get(method, [])
+	for stem in candidates:
+		var t2 := MapArt.symbol_icon(String(stem))
+		if t2 != null:
+			return t2
+	return MapArt.mentor_portrait(method)
+
 
 static func format(cast_result: Dictionary) -> Dictionary:
 	var raw: Dictionary = cast_result.get("raw", {})

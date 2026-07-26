@@ -2,7 +2,7 @@
 unit: saianfu
 lang: zh
 source: en
-source_rev: 195ea390b258
+source_rev: 3aee808a8d59
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.saianfu.entry.choice.shrine: 98e20d47c9a5
   ev.saianfu.entry.body: 0aa0bf733e82
   ev.saianfu.entry.title: f1dfe26b0b7a
+  ev.saianfu.a.title: 24e516ead43c
+  ev.saianfu.a.body: 9c888f55557e
+  ev.saianfu.a.choice.weavers: 63e38c4c91c9
+  ev.saianfu.a.choice.silk: d8353c260699
+  ev.saianfu.a.choice.magistrates: 7ccc02ef1b6e
+  ev.saianfu.b.title: 45f3b000a508
+  ev.saianfu.b.body: 20006a9658c0
+  ev.saianfu.b.choice.market: 065bc1551204
+  ev.saianfu.b.choice.ginger: 4e5279d18183
+  ev.saianfu.b.choice.walls: 465d72320b0a
 ---
 
 ## city.saianfu.name
@@ -47,3 +57,42 @@ stamps:
 
 记襄阳府及其攻取
 
+## ev.saianfu.a.title
+
+辖十二富城
+
+## ev.saianfu.a.body
+
+襄阳府极大而尊贵，辖十二座大而富之城，本城亦为贸易手艺之盛地。织坊中梭声自晓至灯昏不绝，官府册籍列平原诸属邑。
+
+## ev.saianfu.a.choice.weavers
+
+观织工于机杼前
+
+## ev.saianfu.a.choice.silk
+
+于织户摊购细绢
+
+## ev.saianfu.a.choice.magistrates
+
+问官吏何城纳贡
+
+## ev.saianfu.b.title
+
+猎物与百工
+
+## ev.saianfu.b.body
+
+此地丝多，猎物亦丰，城外林泽兽禽皆饶。猎人携皮货至市，与军器坊相邻；城中具备尊贵都会应有之工坊、仓廪，三面环水。
+
+## ev.saianfu.b.choice.market
+
+巡猎人市，近工坊区
+
+## ev.saianfu.b.choice.ginger
+
+于粮商摊购生姜
+
+## ev.saianfu.b.choice.walls
+
+沿北道而行——昔年大军曾围城处

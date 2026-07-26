@@ -40,3 +40,43 @@ Visit the sì (Buddhist monastery)
 ## ev.sinju.entry.title
 
 Concerning the City of Sinju and the Great River Kian
+
+## ev.sinju.a.title
+
+The Greatest River
+
+## ev.sinju.a.body
+
+Sinju stands on the greatest river in the world, which men call Kian. Though the city is of no great size, the waters before it are black with vessels, and boatmen swear that more wealth passes here than on all the rivers and seas of Christendom together.
+
+## ev.sinju.a.choice.count
+
+Stand at the bank and count the moored vessels
+
+## ev.sinju.a.choice.tea
+
+Buy tea from a river bargeman
+
+## ev.sinju.a.choice.toll
+
+Ask the toll clerks how many vessels pass in a year
+
+## ev.sinju.b.title
+
+Paper-Money Port
+
+## ev.sinju.b.body
+
+The people are idolaters subject to the Great Kaan, and they use paper-money in every transaction on the quay. For all its modest walls, Sinju sees a very great amount of shipping and trade, and the revenue the Khan draws here is something marvellous.
+
+## ev.sinju.b.choice.quay
+
+Watch merchants pay tolls in paper-money
+
+## ev.sinju.b.choice.porcelain
+
+Buy porcelain from a river trader
+
+## ev.sinju.b.choice.harbour
+
+Walk the harbour and note how small the city is for such traffic

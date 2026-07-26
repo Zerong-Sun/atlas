@@ -36,7 +36,7 @@ func _ready() -> void:
 	_portrait = TextureRect.new()
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-	_portrait.custom_minimum_size = Vector2(96, 120)
+	_portrait.custom_minimum_size = Vector2(120, 150)
 	_portrait.visible = false
 	head.add_child(_portrait)
 

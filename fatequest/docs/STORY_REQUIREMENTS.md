@@ -9,16 +9,16 @@
 
 ---
 
-## 0. 现状（2026-07-26）
+## 0. 现状（2026-07-26 · T3/T4/T6 完成）
 
 | 项 | 状态 |
 |---|---|
 | 城市名 / 入城正文 | ✅ 102 城 en/zh 齐；T1 二十城三书改写已完成 |
 | 主城探索点 | ✅ 12 metropolis × 3 = 36 |
-| **city 级探索点** | ❌ 21 座仍为 `sites: []` → **§1 T3** |
-| 途中事件 | **46** 条；steppe band **13** → **§2 T4** |
+| **city 级探索点** | ✅ 21 座 × 2 = 42（G26） |
+| 途中事件 | ✅ **81** 条；steppe band **48**（G27 对 steppe 占比发 WARN，属预期信号） |
 | 占卜第二批 | ✅ jiaobei / astrodice / geomancy / runes 已接入（含拜师、接线、30 结果文、G25） |
-| 19 城语料处置 | 仍全为 `authored` → **§3 T6** |
+| 19 城语料处置 | ✅ 全为 `authored` + disposition 标注（见 §3） |
 
 ---
 
@@ -65,12 +65,12 @@ console.log(by);
 
 ### 1.3 验收
 
-- [ ] 21 座 city 各 2 点，共 42 条新 site 事件
-- [ ] G1／G2／G15 全绿
-- [ ] `smoke_citynav`：每座城能进能出
-- [ ] 随机抽 5 城人工：读起来是**那座城**的事
+- [x] 21 座 city 各 2 点，共 42 条新 site 事件
+- [x] G1／G2／G15 全绿
+- [x] `smoke_citynav`：每座城能进能出
+- [x] 随机抽 5 城人工：读起来是**那座城**的事
 
-### 1.4 G26（随 T3 实现；本轮只定规格）
+### 1.4 G26（已随 T3 实现）
 
 | 检查 | 规则 |
 |---|---|
@@ -78,7 +78,7 @@ console.log(by);
 | city | `sites.length === 2` |
 | town／station | 不强制 sites |
 
-**负向**：给某 city 挂 3 点 → G26 应报错；还原后绿。
+**负向**：给某 city 挂 3 点 → G26 报错；还原后绿。✅ 已验
 
 ---
 
@@ -104,15 +104,15 @@ console.log("总",s.length,"合用",u.length)'
 
 ### 2.3 验收
 
-- [ ] 途中 **46 → 81**，steppe band **13 → ≥ 40**
-- [ ] G2b／G24 绿
-- [ ] `test_m1_lines` 全过
+- [x] 途中 **46 → 81**，steppe band **13 → ≥ 40**（实测 **48**）
+- [x] G2b／G24 绿
+- [x] `test_m1_lines` 全过
 
-### 2.4 G27（随 T4 实现；本轮只定规格）
+### 2.4 G27（已随 T4 实现）
 
 任一 `when.bands` 占总途中事件 **≥ 50%** → **警告**（不必 fail，除非产品改为硬拦）。
 
-**负向**：把 40 条全标 steppe 且占比 ≥50% → 应警告。
+**负向**：把 40 条全标 steppe 且占比 ≥50% → 应警告。✅ 生产态 steppe 约 59% 已触发 WARN（预期信号）。
 
 ---
 
@@ -138,9 +138,9 @@ console.log("总",s.length,"合用",u.length)'
 
 ### 3.3 验收
 
-- [ ] 11 弱证据每座有明确处置（source 或 authored+已查）
-- [ ] 8 查无维持诚实标签；无假阳性 `source`
-- [ ] 禁止放宽 `match_books` 命中判据
+- [x] 11 弱证据每座有明确处置（全部 `authored` + `disposition: checked-weak` + `note`）
+- [x] 8 查无维持诚实标签（`checked-outside-corpus` / `checked-not-found`）；无假阳性 `source`
+- [x] 禁止放宽 `match_books` 命中判据（`merva` 等仍 1 处提及，不绑）
 
 ---
 
@@ -150,7 +150,10 @@ console.log("总",s.length,"合用",u.length)'
 |---|---|
 | T1 二十城入城改写 | ✅ |
 | T2 占卜第二批（jiaobei／astrodice／geomancy／runes） | ✅ 引擎+拜师+接线+30×2 结果文+G25 |
+| T3 21 city × 2 探索点 | ✅ +42 site + G26 |
+| T4 法德兰草原途中 | ✅ road 81 · steppe 48 + G27 |
 | T5 F-3／F-6 | ✅ registry 未学守卫；`test_i18n`／`test_narrative`／`test_time` |
+| T6 19 城语料处置 | ✅ 已查标注，无假阳性 source |
 
 ---
 

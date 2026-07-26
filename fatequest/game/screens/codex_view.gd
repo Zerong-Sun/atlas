@@ -151,7 +151,33 @@ func _show(id: String, prefix: String) -> void:
 	for c in _detail.get_children():
 		c.queue_free()
 
-	_detail.add_child(Panels.label(I18n.t("%s%s.name" % [prefix, id]),
+	var head := HBoxContainer.new()
+	head.add_theme_constant_override("separation", 12)
+	_detail.add_child(head)
+
+	if prefix.begins_with("sticker"):
+		var art := MapArt.sticker_icon(id)
+		if art != null:
+			var tr := TextureRect.new()
+			tr.texture = art
+			tr.custom_minimum_size = Vector2(72, 72)
+			tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			head.add_child(tr)
+	else:
+		# Codex entries reuse goods / ritual icons when the id matches.
+		var art2 := MapArt.goods_icon(id)
+		if art2 == null:
+			art2 = MapArt.tex("ic-misc-books")
+		if art2 != null:
+			var tr2 := TextureRect.new()
+			tr2.texture = art2
+			tr2.custom_minimum_size = Vector2(48, 48)
+			tr2.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			tr2.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			head.add_child(tr2)
+
+	head.add_child(Panels.label(I18n.t("%s%s.name" % [prefix, id]),
 		UiScale.title(), Palette.ink()))
 
 	var body_key := "%s%s.body" % [prefix, id]

@@ -42,3 +42,43 @@ Visit the sì (Buddhist monastery)
 ## ev.saianfu.entry.title
 
 Concerning the Very Noble City of Saianfu, and How Its Capture Was Effected
+
+## ev.saianfu.a.title
+
+Twelve Rich Cities
+
+## ev.saianfu.a.body
+
+Saianfu is a very great and noble city that rules over twelve other large and rich cities, and is itself a seat of great trade and manufacture. In the weaving quarters you hear shuttles clacking from dawn until lamp-light, and the magistrates' lists name every subject town upon the plain.
+
+## ev.saianfu.a.choice.weavers
+
+Watch the silk weavers at their looms
+
+## ev.saianfu.a.choice.silk
+
+Buy fine silken stuff from a weaver's stall
+
+## ev.saianfu.a.choice.magistrates
+
+Ask the magistrates which towns owe tribute
+
+## ev.saianfu.b.title
+
+Game and Manufacture
+
+## ev.saianfu.b.body
+
+They have much silk here, and also a quantity of game, for the woods and marshes round Saianfu abound in beasts and birds. Hunters bring pelts to the market beside the armourers, and the city holds all that behoves a noble seat — workshops, granaries, and deep waters on three sides.
+
+## ev.saianfu.b.choice.market
+
+Walk the hunters' market beside the workshops
+
+## ev.saianfu.b.choice.ginger
+
+Buy ginger from a victualler's stall
+
+## ev.saianfu.b.choice.walls
+
+Walk the northern approach where the host once lay siege

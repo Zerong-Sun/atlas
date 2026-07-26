@@ -36,3 +36,43 @@ Visit the masjid (mosque)
 ## ev.camul.entry.title
 
 Of the Province of Camul
+
+## ev.camul.a.title
+
+The Melon Market of the Oasis
+
+## ev.camul.a.body
+
+Camul lies between two deserts, and the first green you see after days of sand is its melon fields. The bāzār sells melons so sweet that caravan masters load them by the cartload for the road to Sachiu and beyond. Farmers slice one open for you to taste — the flesh is honey-coloured and cool as well water. You mark how every trader praises these fruits above all others on the Silk Road.
+
+## ev.camul.a.choice.walk
+
+Walk the melon rows and taste what the farmers offer
+
+## ev.camul.a.choice.buy-melons
+
+Buy dried melon spirals for the desert crossing
+
+## ev.camul.a.choice.ask-traders
+
+Ask the melon traders where their caravans go
+
+## ev.camul.b.title
+
+The Idol Temples and the Elders' Tale
+
+## ev.camul.b.body
+
+The people of Camul are idolaters, and their temples stand among the mulberry groves at the edge of the oasis. An old man at the temple gate tells you of a custom their fathers kept — a hospitality the Great Kaan forbade long ago, and which no household dares practise now. The elders speak of it only as a tale of former days. Incense smoke rises from the shrines, and painted gods look down upon the courtyard in silence.
+
+## ev.camul.b.choice.listen
+
+Sit with the elders and hear their account of the old custom
+
+## ev.camul.b.choice.observe-rite
+
+Observe the idol rites from the courtyard wall
+
+## ev.camul.b.choice.ask-east
+
+Ask a monk which road leads toward the eastern desert

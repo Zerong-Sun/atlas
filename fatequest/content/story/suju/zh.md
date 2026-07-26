@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: 85a456b8daef
+source_rev: 5baa0b678097
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.suju.entry.choice.shrine: 98e20d47c9a5
   ev.suju.entry.body: 0150dea5f366
   ev.suju.entry.title: 669056ec8146
+  ev.suju.a.title: 9a50925e5ee7
+  ev.suju.a.body: 9131968f4965
+  ev.suju.a.choice.brocade: 9005ae0d0318
+  ev.suju.a.choice.silk: fbcebadd0509
+  ev.suju.a.choice.circuit: 45c2d1ede68d
+  ev.suju.b.title: 078add7ab0c2
+  ev.suju.b.body: 3992f6d0eb08
+  ev.suju.b.choice.gardens: 611876e73b57
+  ev.suju.b.choice.rhubarb: 8a17365a884e
+  ev.suju.b.choice.bridges: 19c67f61be89
 ---
 
 ## city.suju.name
@@ -47,3 +57,42 @@ stamps:
 
 记苏州
 
+## ev.suju.a.title
+
+金锦与六十里周
+
+## ev.suju.a.body
+
+苏州极大而尊贵，城周一约六十里，民有丝极丰，织金锦及其他织物。你过织坊区，梭声不绝；主人言此城名在我辈语言中意为「地」。
+
+## ev.suju.a.choice.brocade
+
+观织金锦之机杼
+
+## ev.suju.a.choice.silk
+
+购金锦一段
+
+## ev.suju.a.choice.circuit
+
+骑行城周一程
+
+## ev.suju.b.title
+
+富商与运河园圃
+
+## ev.suju.b.body
+
+城中富商极多，人口不可胜计，然彼等精于贸易而非兵事。运河之间，富人凿池养鱼，于荫圃植姜与 rhubarb（大黄）。
+
+## ev.suju.b.choice.gardens
+
+随商贾属吏巡运河园圃
+
+## ev.suju.b.choice.rhubarb
+
+于园圃摊购大黄
+
+## ev.suju.b.choice.bridges
+
+立石桥观运河舟行

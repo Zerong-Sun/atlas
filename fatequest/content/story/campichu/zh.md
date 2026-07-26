@@ -2,7 +2,7 @@
 unit: campichu
 lang: zh
 source: en
-source_rev: 950977ad30b7
+source_rev: 7c0e42ff1501
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.campichu.entry.choice.shrine: 98e20d47c9a5
   ev.campichu.entry.body: 189b40d8a431
   ev.campichu.entry.title: 0d06456200fe
+  ev.campichu.a.title: 9e17755a1e1a
+  ev.campichu.a.body: 6b1fb6a9f0fa
+  ev.campichu.a.choice.clerks: 95eca4bb9eb6
+  ev.campichu.a.choice.caravan: 92662dff7548
+  ev.campichu.a.choice.pass: b536d083fc75
+  ev.campichu.b.title: 61bda7ff3462
+  ev.campichu.b.body: bc9711957cd0
+  ev.campichu.b.choice.churches: 98164af1d9fc
+  ev.campichu.b.choice.abbey: 35d55f8ae20b
+  ev.campichu.b.choice.offering: 1b8decf17a2c
 ---
 
 ## city.campichu.name
@@ -46,3 +56,42 @@ stamps:
 
 记甘州
 
+## ev.campichu.a.title
+
+唐古忒治所
+
+## ev.campichu.a.body
+
+你立于唐古忒全省之都会，总督衙门在此称量盐引、核算西陲贡赋。北来沙漠之商队于外城卸驼，市集自晓至三更不绝。
+
+## ev.campichu.a.choice.clerks
+
+看总督属吏清册
+
+## ev.campichu.a.choice.caravan
+
+与沙漠商队议价购茶
+
+## ev.campichu.a.choice.pass
+
+匆匆穿过官署区
+
+## ev.campichu.b.title
+
+教堂与佛寺并立
+
+## ev.campichu.b.body
+
+甘州城中三座极美之基督教堂，与诸多偶像教徒之佛寺比邻而立。寺中卧像金覆，大者可十步，小像环拜。撒拉逊人亦自有礼拜处，四教同街而不争。
+
+## ev.campichu.b.choice.churches
+
+入三座基督教堂之一
+
+## ev.campichu.b.choice.abbey
+
+巡行佛寺，记其金像
+
+## ev.campichu.b.choice.offering
+
+于寺门略献薄礼

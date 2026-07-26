@@ -43,3 +43,43 @@ Visit the sì (Buddhist monastery)
 ## ev.suju.entry.title
 
 Of the Noble City of Suju
+
+## ev.suju.a.title
+
+Gold Brocade and Sixty Miles
+
+## ev.suju.a.body
+
+Suju is a very great and noble city with a circuit of some sixty miles, and the people possess silk in great quantities from which they make gold brocade and other stuffs. You walk a weaving quarter where the shuttles never rest, and the master tells you the city's name means Earth in our tongue.
+
+## ev.suju.a.choice.brocade
+
+Watch the gold brocade looms at work
+
+## ev.suju.a.choice.silk
+
+Buy a length of gold brocade
+
+## ev.suju.a.choice.circuit
+
+Ride part of the city's sixty-mile circuit
+
+## ev.suju.b.title
+
+Merchants and Canal Gardens
+
+## ev.suju.b.body
+
+The city hath merchants of great wealth and an incalculable number of people, though they are accomplished traders and not soldiers at all. Between the canals you find gardens where wealthy men keep fishponds and plant ginger and rhubarb in the shaded plots.
+
+## ev.suju.b.choice.gardens
+
+Walk the canal gardens with a merchant's clerk
+
+## ev.suju.b.choice.rhubarb
+
+Buy rhubarb from a garden stall
+
+## ev.suju.b.choice.bridges
+
+Stand on a stone bridge and watch the canal traffic

@@ -41,3 +41,43 @@ Visit the mandir (temple)
 ## ev.aden.entry.title
 
 Concerning the Province of Aden
+
+## ev.aden.a.title
+
+The Pepper Lighters and the Camel Road
+
+## ev.aden.a.body
+
+You stand upon the quay where the great ships of India discharge their cargoes into lighter craft. Men say the pepper and spicery must pass seven days by sea to a lesser haven, then thirty days by camel to the river of Alexandria, whence it descends to that city. No road of equal convenience serves the merchants of Egypt. The bales are weighed, marked, and stacked in sheds that smell of clove and ginger.
+
+## ev.aden.a.choice.walk
+
+Walk the sheds and watch the lighters load
+
+## ev.aden.a.choice.buy-pepper
+
+Buy a sack of Malabar pepper for the onward road
+
+## ev.aden.a.choice.ask-routes
+
+Ask the camel-masters which roads leave the harbour
+
+## ev.aden.b.title
+
+The Soldan's Mosque and the Harbour Customs
+
+## ev.aden.b.body
+
+Above the harbour rises the Soldan's mosque, where the Saracens of Aden gather at the hours of prayer. Below it, the customs clerks take their due on every bale that crosses the mole — a tenth on pepper, a fee on cloth and dates. The harbour-master keeps a register in Arabic script; no ship departs without his seal. You mark how the muezzin's call and the clerks' abacus share the same wind off the sea.
+
+## ev.aden.b.choice.observe
+
+Stand aside and observe the customs at the mole
+
+## ev.aden.b.choice.pay-frankincense
+
+Pay the harbour fee and buy frankincense from a Somali trader
+
+## ev.aden.b.choice.listen-prayer
+
+Listen at the mosque door as the Soldan's men pray

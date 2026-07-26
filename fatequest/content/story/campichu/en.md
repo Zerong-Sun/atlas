@@ -43,3 +43,43 @@ Visit the sì (Buddhist monastery)
 ## ev.campichu.entry.title
 
 Of the City of Campichu
+
+## ev.campichu.a.title
+
+The Seat of Tangut
+
+## ev.campichu.a.body
+
+You stand in the capital of the whole province of Tangut, where the governor's clerks weigh out salt certificates and tally the tribute of the western marches. Caravans from the sandy desert to the north unload camels in the outer wards, and the market runs from dawn until the third watch without ceasing.
+
+## ev.campichu.a.choice.clerks
+
+Watch the governor's clerks at their tally
+
+## ev.campichu.a.choice.caravan
+
+Bargain with desert caravans for tea
+
+## ev.campichu.a.choice.pass
+
+Pass through the government quarter without delay
+
+## ev.campichu.b.title
+
+Churches and Abbeys
+
+## ev.campichu.b.body
+
+In Campichu you find three very fine Christian churches standing near many idol abbeys after the local fashion. Within the latter lie enormous gilded figures, some ten paces in length, with lesser images adoring before them. Saracens also keep their mosques here, so that four faiths share one street without quarrel.
+
+## ev.campichu.b.choice.churches
+
+Enter one of the three Christian churches
+
+## ev.campichu.b.choice.abbey
+
+Walk the idol abbeys and note their gilded figures
+
+## ev.campichu.b.choice.offering
+
+Leave a small offering at an abbey gate

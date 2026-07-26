@@ -2,7 +2,7 @@
 unit: kenjanfu
 lang: zh
 source: en
-source_rev: 47b1edd6e163
+source_rev: 8afde1af6bef
 status: translated
 translator: 人工校译
 notes: >
@@ -17,6 +17,16 @@ stamps:
   ev.kenjanfu.entry.choice.shrine: 98e20d47c9a5
   ev.kenjanfu.entry.body: 6ae389d2f19a
   ev.kenjanfu.entry.title: f8b422f6996e
+  ev.kenjanfu.a.title: 9661f5f09890
+  ev.kenjanfu.a.body: 4b66b06a669b
+  ev.kenjanfu.a.choice.gardens: 54521ef5f1f5
+  ev.kenjanfu.a.choice.silk: d00d6639dc30
+  ev.kenjanfu.a.choice.watch: b80cbbf5dc9b
+  ev.kenjanfu.b.title: a93061434825
+  ev.kenjanfu.b.body: bb9a456fc3fe
+  ev.kenjanfu.b.choice.workshops: a6ff75d64152
+  ev.kenjanfu.b.choice.lacquer: f496cae3d971
+  ev.kenjanfu.b.choice.palace: 4729d70c99ff
 ---
 
 ## city.kenjanfu.name
@@ -46,3 +56,42 @@ stamps:
 
 记京兆府
 
+## ev.kenjanfu.a.title
+
+桑田与蚕圃
+
+## ev.kenjanfu.a.body
+
+出城西行，见广平原植桑——蚕食桑叶之树。园户于荫下铺新盘，自河中府来之路旁，诸镇午前即售茧篮。
+
+## ev.kenjanfu.a.choice.gardens
+
+随养蚕人巡桑田
+
+## ev.kenjanfu.a.choice.silk
+
+于茧市购生丝
+
+## ev.kenjanfu.a.choice.watch
+
+立路旁观茧车过
+
+## ev.kenjanfu.b.title
+
+沿途百工之盛
+
+## ev.kenjanfu.b.body
+
+自河中府西行八日，未至京兆府，已见城邑市镇贸易百工皆盛。曼哥来王子于城外设宫，工坊织金锦丝帛，又为大汗之军备鞍辔。
+
+## ev.kenjanfu.b.choice.workshops
+
+观金锦丝帛工坊
+
+## ev.kenjanfu.b.choice.lacquer
+
+于军器坊区购漆器
+
+## ev.kenjanfu.b.choice.palace
+
+于平原远观曼哥来王宫

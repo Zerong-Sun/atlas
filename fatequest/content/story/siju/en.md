@@ -43,3 +43,43 @@ Visit the sì (Buddhist monastery)
 ## ev.siju.entry.title
 
 Concerning the City of Siju, and the Great River Caramoran
+
+## ev.siju.a.title
+
+Manufactures from Piju
+
+## ev.siju.a.body
+
+When you leave Piju and travel two days south through districts abounding in game, you reach Siju, a great and rich city flourishing with trade and manufactures. The southern road brings in grain and harness, and the workshops here finish what the northern towns begin.
+
+## ev.siju.a.choice.workshops
+
+Tour the manufactures brought down from Piju
+
+## ev.siju.a.choice.sugar
+
+Buy sugar from a refiner's stall
+
+## ev.siju.a.choice.grain
+
+Walk the grain market on the fertile plain
+
+## ev.siju.b.title
+
+Burning the Dead
+
+## ev.siju.b.body
+
+The people of Siju are idolaters who burn their dead and use paper-money, and you see funeral parties pass toward the cremation grounds outside the walls. They lay out paper offerings beside the pyre, and the smoke rises all day above the southern road.
+
+## ev.siju.b.choice.observe
+
+Stand at a respectful distance and watch a funeral rite
+
+## ev.siju.b.choice.paper-money
+
+Buy paper-money at a stall near the cremation ground
+
+## ev.siju.b.choice.ask
+
+Ask an elder why they burn rather than bury

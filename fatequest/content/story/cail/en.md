@@ -43,3 +43,43 @@ Visit the mandir (temple)
 ## ev.cail.entry.title
 
 Concerning the City of Cail
+
+## ev.cail.a.title
+
+The Horse Quay
+
+## ev.cail.a.body
+
+You stand upon the quay where all the ships from the west make land — from Hormos and Kis, from Aden and all Arabia — their decks heavy with chargers and with other wares for sale. Grooms and brokers press close about the gangways, and the smell of salt, tar, and horseflesh hangs upon the air.
+
+## ev.cail.a.choice.watch_landing
+
+Stand a day upon the quay and watch the horses come ashore
+
+## ev.cail.a.choice.buy_charger
+
+Buy an Arabian charger from the Hormos merchants
+
+## ev.cail.a.choice.ask_routes
+
+Ask the shipmasters where their vessels touch next
+
+## ev.cail.b.title
+
+Ashar's Harbour Concourse
+
+## ev.cail.b.body
+
+King Ashar, the eldest of the five brother-kings of Maabar, keeps great state upon the harbour concourse. He favours merchants and foreigners, and wears upon his person a great store of rich jewels; the crowds that gather for the horse-fairs bring immense business to his city.
+
+## ev.cail.b.choice.wait_audience
+
+Wait two days upon the concourse in hope of seeing the King pass
+
+## ev.cail.b.choice.hear_brothers
+
+Listen while the brokers speak of the five brother-kings
+
+## ev.cail.b.choice.buy_cotton
+
+Buy cotton cloth in the harbour market

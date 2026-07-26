@@ -382,7 +382,9 @@
         "rt-medina-bethleem"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -439,7 +441,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-camadi-entry",
-      "sites": [],
+      "sites": [
+        "ev-camadi-a",
+        "ev-camadi-b"
+      ],
       "exits": [
         "rt-calatu-camadi",
         "rt-camadi-cobinan",
@@ -607,7 +612,9 @@
         "rt-tauris-ctesiphon"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；本阶段不拆新书；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -686,7 +693,9 @@
         "rt-trapezus-edessa"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -714,7 +723,9 @@
         "rt-ephesus-smyrna"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -793,7 +804,9 @@
         "rt-ispahan-yasdi"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -814,7 +827,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-kerman-entry",
-      "sites": [],
+      "sites": [
+        "ev-kerman-a",
+        "ev-kerman-b"
+      ],
       "exits": [
         "rt-camadi-kerman",
         "rt-cobinan-kerman",
@@ -879,7 +895,9 @@
         "rt-novogardia-kiovia"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据；维持 authored。"
       },
       "market": {
         "goods": [
@@ -926,7 +944,9 @@
         "rt-moscovia-tana-azov"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -954,7 +974,9 @@
         "rt-nicaea-smyrna"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -1015,7 +1037,9 @@
         "rt-novogardia-tana-azov"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -1111,7 +1135,9 @@
         "rt-petra-accon"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-not-found",
+        "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -1174,7 +1200,9 @@
         "rt-tana-azov-trapezus"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -1203,7 +1231,9 @@
         "rt-tarsus-tripolis"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据（易假阳性）；维持 authored。"
       },
       "calendars": [
         "islamic"
@@ -1295,7 +1325,9 @@
         "rt-trapezus-edessa"
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据（易假阳性）；维持 authored。"
       },
       "market": {
         "goods": [

@@ -18,7 +18,10 @@
       ],
       "tier": "city",
       "entryEvent": "ev-chamba-entry",
-      "sites": [],
+      "sites": [
+        "ev-chamba-a",
+        "ev-chamba-b"
+      ],
       "exits": [
         "rt-chamba-fuju",
         "rt-chamba-pentam",

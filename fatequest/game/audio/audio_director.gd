@@ -62,7 +62,8 @@ func _ready() -> void:
 			p.volume_db = -80.0
 			add_child(p)
 			_stem_players[key] = p
-	for i in 3:
+	# 4 slots: scene beds (≤4) + sacred_blur may displace the last when shrine/reverence
+	for i in 4:
 		var a := AudioStreamPlayer.new()
 		a.bus = BUS_AMBIENT
 		a.volume_db = -80.0

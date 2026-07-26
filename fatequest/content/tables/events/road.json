@@ -2165,6 +2165,2042 @@
           "chapterId": "TREATING OF THE GREAT YEARLY REVENUE THAT THE GREAT KAAN HATH FROM KINSAY"
         }
       }
+    },
+    {
+      "id": "ev-road-fadlan-01",
+      "kind": "road",
+      "title": "ev.road.fadlan_01.title",
+      "body": "ev.road.fadlan_01.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_01.choice.cross_on_ice",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "crossed-the-frozen-jayhun"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "noted-the-ice-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_01.choice.wait_at_ribat",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "waited-for-safe-ice"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "chose-caution-on-the-jayhun"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "cold-of-hell",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "cold-of-hell"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-02",
+      "kind": "road",
+      "title": "ev.road.fadlan_02.title",
+      "body": "ev.road.fadlan_02.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_02.choice.hire_guide",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -50,
+              "reason": "hired-the-akilavuz"
+            },
+            {
+              "op": "days",
+              "value": -1,
+              "reason": "guide-shortened-the-march"
+            },
+            {
+              "op": "codex",
+              "value": "cx-steppe-road",
+              "reason": "learned-the-turkish-road"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 50
+            }
+          }
+        },
+        {
+          "label": "ev.road.fadlan_02.choice.press_on_alone",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "marched-without-a-guide"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "risked-the-open-steppe"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "caravan-to-the-turks",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "caravan-to-the-turks"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-03",
+      "kind": "road",
+      "title": "ev.road.fadlan_03.title",
+      "body": "ev.road.fadlan_03.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_03.choice.watch_the_sky",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-northern-lights"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-aurora",
+              "reason": "recorded-the-red-mist-battle"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-a-northern-marvel"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_03.choice.seek_shelter",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sheltered-from-the-strange-sky"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "northern-lights-white-nights",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "northern-lights-white-nights"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-04",
+      "kind": "road",
+      "title": "ev.road.fadlan_04.title",
+      "body": "ev.road.fadlan_04.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_04.choice.ask_the_kingdom",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-gog",
+              "reason": "gathered-gog-magog-rumours"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "listened-to-northern-tales"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_04.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-storytellers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "gog-magog-giant",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "gog-magog-giant"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-05",
+      "kind": "road",
+      "title": "ev.road.fadlan_05.title",
+      "body": "ev.road.fadlan_05.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_05.choice.record_rite",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "observed-the-ship-burial"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-burial",
+              "reason": "recorded-rus-funeral-customs"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_05.choice.withdraw",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "withdrew-from-the-shore-rite"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "showed-respect-at-a-distance"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "rus-ship-burial",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "rus-ship-burial"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-06",
+      "kind": "road",
+      "title": "ev.road.fadlan_06.title",
+      "body": "ev.road.fadlan_06.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_06.choice.buy_chart",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -40,
+              "reason": "bought-a-caspian-chart"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-caspian",
+              "reason": "noted-abu-hamids-islands"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        },
+        {
+          "label": "ev.road.fadlan_06.choice.stay_inland",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-on-the-inland-road"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-the-caspian-lore"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "abu-hamid-caspian",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "abu-hamid-caspian"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-07",
+      "kind": "road",
+      "title": "ev.road.fadlan_07.title",
+      "body": "ev.road.fadlan_07.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_07.choice.listen_trade",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-furs",
+              "reason": "noted-beaver-and-ivory-trade"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "spoke-with-bulghar-brokers"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_07.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-fur-market"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "beavers-and-mammoths",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "beavers-and-mammoths"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-08",
+      "kind": "road",
+      "title": "ev.road.fadlan_08.title",
+      "body": "ev.road.fadlan_08.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_08.choice.observe_barter",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "watched-silent-barter"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-barter",
+              "reason": "recorded-the-forest-exchange"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "witnessed-unseen-trade"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_08.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-the-silent-market"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "sea-of-darkness",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "sea-of-darkness"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-09",
+      "kind": "road",
+      "title": "ev.road.fadlan_09.title",
+      "body": "ev.road.fadlan_09.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "temple-interior",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_09.choice.seek_the_mound",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "sought-the-enchanted-mound"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-iram",
+              "reason": "noted-the-golden-dome-rumour"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_09.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "passed-the-marvel-by"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-of-iram-in-the-north"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "giants-of-iram",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "giants-of-iram"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-10",
+      "kind": "road",
+      "title": "ev.road.fadlan_10.title",
+      "body": "ev.road.fadlan_10.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "oasis-town",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_10.choice.enter_khwarazm",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "rested-in-khwarazm"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-khwarazm",
+              "reason": "noted-the-return-road"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "travelled-the-southern-return"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_10.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "passed-through-khwarazm-quickly"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "abu-hamid-return",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "abu-hamid-return"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-11",
+      "kind": "road",
+      "title": "ev.road.fadlan_11.title",
+      "body": "ev.road.fadlan_11.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_11.choice.ask_the_route",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-wall",
+              "reason": "noted-sallams-road-to-the-barrier"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-of-alexanders-wall"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_11.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-couriers-tale"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "sallam-alexanders-wall",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "sallam-alexanders-wall"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-12",
+      "kind": "road",
+      "title": "ev.road.fadlan_12.title",
+      "body": "ev.road.fadlan_12.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_12.choice.share_road_news",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-radhaniya",
+              "reason": "noted-the-radhaniya-and-rus-routes"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "spoke-with-long-distance-merchants"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_12.choice.buy_intelligence",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -50,
+              "reason": "bought-rus-road-intelligence"
+            },
+            {
+              "op": "days",
+              "value": -1,
+              "reason": "used-merchant-routes"
+            },
+            {
+              "op": "codex",
+              "value": "cx-steppe-road",
+              "reason": "obtained-rus-halt-names"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 50
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "radhaniya-routes",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "radhaniya-routes"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-13",
+      "kind": "road",
+      "title": "ev.road.fadlan_13.title",
+      "body": "ev.road.fadlan_13.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_13.choice.record_court",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-khazar",
+              "reason": "recorded-the-khaqan-custom"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_13.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-khazar-politics"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "kept-to-the-open-road"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "khazar-khaqan",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "khazar-khaqan"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-14",
+      "kind": "road",
+      "title": "ev.road.fadlan_14.title",
+      "body": "ev.road.fadlan_14.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_14.choice.observe_night",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "measured-the-white-nights"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-midnight-sun",
+              "reason": "recorded-the-short-night"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_14.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "marched-under-the-pale-sky"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "endured-the-white-nights"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "midnight-sun",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "midnight-sun"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-15",
+      "kind": "road",
+      "title": "ev.road.fadlan_15.title",
+      "body": "ev.road.fadlan_15.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_15.choice.inspect_loads",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-furs",
+              "reason": "noted-the-sledge-fur-trade"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "spoke-with-fur-drivers"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_15.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "yielded-to-the-sledge-train"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "fur-trade-masudi",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "fur-trade-masudi"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-16",
+      "kind": "road",
+      "title": "ev.road.fadlan_16.title",
+      "body": "ev.road.fadlan_16.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_16.choice.catalogue_goods",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "surveyed-the-bulghar-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-bulghar",
+              "reason": "listed-bulghar-exports"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_16.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-seasonal-market"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "passed-the-bulghar-fair"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "exports-from-bulghar",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "exports-from-bulghar"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-17",
+      "kind": "road",
+      "title": "ev.road.fadlan_17.title",
+      "body": "ev.road.fadlan_17.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_17.choice.hire_sled",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "hired-a-dog-sled-relay"
+            },
+            {
+              "op": "days",
+              "value": -1,
+              "reason": "sled-shortened-the-march"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-sleds",
+              "reason": "noted-dog-sled-travel"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 30
+            }
+          }
+        },
+        {
+          "label": "ev.road.fadlan_17.choice.walk_the_ice",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "walked-the-ice-road"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "endured-the-northern-march"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "dog-sleds-silent-barter",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "dog-sleds-silent-barter"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-18",
+      "kind": "road",
+      "title": "ev.road.fadlan_18.title",
+      "body": "ev.road.fadlan_18.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_18.choice.record_tale",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-enclosed",
+              "reason": "recorded-the-enclosed-nations"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-of-alexanders-prisoners"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_18.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "avoided-the-mountain-rumours"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "enclosed-nations",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "enclosed-nations"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-19",
+      "kind": "road",
+      "title": "ev.road.fadlan_19.title",
+      "body": "ev.road.fadlan_19.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_19.choice.learn_the_rite",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "learned-darkness-travel-rites"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-darkness",
+              "reason": "recorded-the-land-of-darkness"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_19.choice.turn_back",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "turned-back-from-the-darkness"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "chose-the-safer-road"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "battuta-land-of-darkness",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "battuta-land-of-darkness"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-20",
+      "kind": "road",
+      "title": "ev.road.fadlan_20.title",
+      "body": "ev.road.fadlan_20.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_20.choice.endure_march",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "marched-through-midwinter"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "noted-winter-travel-on-the-itil"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_20.choice.halt_and_fire",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "halted-for-winter-fire"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "survived-the-freezing-march"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "battuta-new-sarai",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "battuta-new-sarai"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-21",
+      "kind": "road",
+      "title": "ev.road.fadlan_21.title",
+      "body": "ev.road.fadlan_21.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_21.choice.ask_distances",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-sibir",
+              "reason": "noted-siberia-and-the-tower-rumour"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_21.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-siberia-tales"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-of-the-far-north"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "siberia-alexanders-tower",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "siberia-alexanders-tower"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-22",
+      "kind": "road",
+      "title": "ev.road.fadlan_22.title",
+      "body": "ev.road.fadlan_22.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_22.choice.pay_boatmen",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -45,
+              "reason": "paid-the-hide-boatmen"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "crossed-on-skin-rafts"
+            },
+            {
+              "op": "codex",
+              "value": "cx-steppe-road",
+              "reason": "noted-the-hide-boat-crossing"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 45
+            }
+          }
+        },
+        {
+          "label": "ev.road.fadlan_22.choice.swim_with_caravan",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "crossed-the-steppe-river"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "risked-the-swift-current"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "caravan-to-the-turks",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "caravan-to-the-turks"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-23",
+      "kind": "road",
+      "title": "ev.road.fadlan_23.title",
+      "body": "ev.road.fadlan_23.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_23.choice.stand_watch",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stood-watch-after-the-theft"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "helped-the-ghuzz-camp"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_23.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-theft-behind"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "avoided-a-steppe-dispute"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "ghuzz-turks",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "ghuzz-turks"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-24",
+      "kind": "road",
+      "title": "ev.road.fadlan_24.title",
+      "body": "ev.road.fadlan_24.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_24.choice.accept_bowl",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "honoured-koumiss-etiquette"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-koumiss",
+              "reason": "noted-turkic-hospitality"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_24.choice.bring_gift",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -35,
+              "reason": "brought-a-guest-gift"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "gave-a-worthy-guest-gift"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "won-the-hosts-favour"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 35
+            }
+          }
+        }
+      ],
+      "lore": {
+        "storyId": "volga-bulghars",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "volga-bulghars"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-25",
+      "kind": "road",
+      "title": "ev.road.fadlan_25.title",
+      "body": "ev.road.fadlan_25.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_25.choice.keep_fires",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "guarded-against-the-wolves"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "survived-the-wolf-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_25.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "marched-past-the-wolves"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "risked-the-night-march"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "steppe-wolf-pack",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "steppe-wolf-pack"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-26",
+      "kind": "road",
+      "title": "ev.road.fadlan_26.title",
+      "body": "ev.road.fadlan_26.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_26.choice.help_child",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "aided-the-sick-child"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "helped-a-steppe-family"
+            },
+            {
+              "op": "codex",
+              "value": "cx-steppe-road",
+              "reason": "noted-a-healers-choice"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_26.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-yurt-behind"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "steppe-sick-child",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "steppe-sick-child"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-27",
+      "kind": "road",
+      "title": "ev.road.fadlan_27.title",
+      "body": "ev.road.fadlan_27.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_27.choice.ask_the_shores",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-salt",
+              "reason": "noted-the-aral-salt-road"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-salt-route"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_27.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "passed-the-salt-caravan"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "khwarazm-salt-caravan",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "khwarazm-salt-caravan"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-28",
+      "kind": "road",
+      "title": "ev.road.fadlan_28.title",
+      "body": "ev.road.fadlan_28.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_28.choice.record_omen",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-out-the-eclipse"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-omen",
+              "reason": "recorded-the-eclipse-omen"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_28.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "marched-after-the-eclipse"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "endured-a-heavenly-sign"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "steppe-eclipse-omen",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "steppe-eclipse-omen"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-29",
+      "kind": "road",
+      "title": "ev.road.fadlan_29.title",
+      "body": "ev.road.fadlan_29.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_29.choice.witness_record",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "witnessed-the-coffle"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-captives",
+              "reason": "recorded-a-slave-coffle"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "bore-witness-on-the-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_29.choice.look_away",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "passed-the-coffle-in-silence"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "radhaniya-routes",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "radhaniya-routes"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-30",
+      "kind": "road",
+      "title": "ev.road.fadlan_30.title",
+      "body": "ev.road.fadlan_30.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_30.choice.halt_tents",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-out-the-thunderstorm"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "survived-the-open-storm"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_30.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "marched-through-the-squalls"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "risked-the-lightning-road"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "steppe-thunderstorm",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "steppe-thunderstorm"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-31",
+      "kind": "road",
+      "title": "ev.road.fadlan_31.title",
+      "body": "ev.road.fadlan_31.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_31.choice.survey_mound",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "surveyed-the-kurgan"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-kurgan",
+              "reason": "recorded-an-opened-tumulus"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_31.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "passed-the-open-mound"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "steppe-kurgan",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "steppe-kurgan"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-32",
+      "kind": "road",
+      "title": "ev.road.fadlan_32.title",
+      "body": "ev.road.fadlan_32.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_32.choice.pay_toll",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -60,
+              "reason": "paid-the-bulghar-toll"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "crossed-with-the-kings-leave"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "paid-the-royal-toll"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 60
+            }
+          }
+        },
+        {
+          "label": "ev.road.fadlan_32.choice.detour",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "detoured-the-royal-toll"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "avoided-the-kings-messenger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "volga-bulghars",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "volga-bulghars"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-33",
+      "kind": "road",
+      "title": "ev.road.fadlan_33.title",
+      "body": "ev.road.fadlan_33.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "steppe-camp",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_33.choice.learn_lacing",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-felt-boot-lacing"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "noted-turkic-winter-gear"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "gained-northern-footwear-lore"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_33.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-the-boot-lesson"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "ghuzz-turks",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "ghuzz-turks"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-34",
+      "kind": "road",
+      "title": "ev.road.fadlan_34.title",
+      "body": "ev.road.fadlan_34.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_34.choice.circle_wide",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "circled-the-salt-flat"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-salt",
+              "reason": "recorded-the-salt-mirage"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_34.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "crossed-near-the-salt-flat"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "avoided-the-false-lake"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "aral-salt-mirage",
+        "origin": "authored",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "aral-salt-mirage"
+        }
+      }
+    },
+    {
+      "id": "ev-road-fadlan-35",
+      "kind": "road",
+      "title": "ev.road.fadlan_35.title",
+      "body": "ev.road.fadlan_35.body",
+      "once": false,
+      "when": {
+        "bands": [
+          "steppe"
+        ]
+      },
+      "scene": {
+        "bg": "desert-night",
+        "region": "steppe"
+      },
+      "choices": [
+        {
+          "label": "ev.road.fadlan_35.choice.wait_for_sound",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-ice-boom"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "recorded-the-ice-boom"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heeded-the-frozen-river"
+            }
+          ]
+        },
+        {
+          "label": "ev.road.fadlan_35.choice.press_on",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "hurried-across-the-booming-ice"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": -1,
+              "reason": "risked-the-night-ice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "cold-of-hell",
+        "origin": "hybrid",
+        "ref": {
+          "book": "ibn-fadlan",
+          "chapterId": "cold-of-hell"
+        }
+      }
     }
   ]
 }

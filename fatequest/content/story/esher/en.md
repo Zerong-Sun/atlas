@@ -42,3 +42,43 @@ Visit the mandir (temple)
 ## ev.esher.entry.title
 
 Concerning the City of Esher
+
+## ev.esher.a.title
+
+The Haven of the Soldan
+
+## ev.esher.a.body
+
+Esher is a great city lying four hundred miles north-west of the Port of Aden. It has a king who is subject to the Soldan of Aden, and a very good haven where many ships from India come with various cargoes; from hence they export many good chargers to India.
+
+## ev.esher.a.choice.walk_harbour
+
+Walk the haven and note how the Soldan's customs are kept
+
+## ev.esher.a.choice.watch_ships
+
+Stand upon the mole and watch the Indian ships unload
+
+## ev.esher.a.choice.buy_horse
+
+Buy an Arabian horse from the export pens
+
+## ev.esher.b.title
+
+The Frankincense Coast
+
+## ev.esher.b.body
+
+A great deal of white incense grows in this country, and brings in a great revenue to the Prince; for no one dares sell it to any one else. The Prince takes it from the people at ten livres of gold for the hundredweight, and sells it to the merchants at sixty. Dates also grow very abundantly here.
+
+## ev.esher.b.choice.buy_frankincense
+
+Buy frankincense at the Prince's price in the harbour market
+
+## ev.esher.b.choice.buy_dates
+
+Buy dates from the coastal orchards
+
+## ev.esher.b.choice.ask_axuma
+
+Ask the Saracen merchants where the coast trade runs southward

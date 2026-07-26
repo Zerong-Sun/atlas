@@ -42,3 +42,43 @@ Visit the masjid (mosque)
 ## ev.camadi.entry.title
 
 Of the City of Camadi and Its Ruins; Also Touching the Carauna Robbers
+
+## ev.camadi.a.title
+
+The Ruined Plain City
+
+## ev.camadi.a.body
+
+After you have ridden down from the mountains two days, you find yourself in a vast plain, and at the beginning thereof the city of Camadi — formerly a great and noble place, but now of little consequence, for the Tartars in their incursions have several times ravaged it.
+
+## ev.camadi.a.choice.walk_ruins
+
+Walk among the broken walls and ask what the city once was
+
+## ev.camadi.a.choice.buy_dates
+
+Buy dates from the orchards that still cling to the plain
+
+## ev.camadi.a.choice.ask_raids
+
+Listen while the caravan men speak of the Tartar incursions
+
+## ev.camadi.b.title
+
+The Hot Descent
+
+## ev.camadi.b.body
+
+The plain is a very hot region, and the province you now enter is called Reobarles. Dates, pistachioes, and apples of Paradise grow here, with fruits not found in our cold countries; upon the descent you feel how far the city's former greatness has fallen.
+
+## ev.camadi.b.choice.rest_shade
+
+Rest a day in the shade of the date-palms
+
+## ev.camadi.b.choice.ask_calatu
+
+Ask which road leads down to the Gulf of Calatu
+
+## ev.camadi.b.choice.buy_cotton
+
+Buy cotton cloth from the roadside sellers

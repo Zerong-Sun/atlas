@@ -11,11 +11,12 @@
 
 | 项 | 现状 |
 |---|---|
-| 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· **~8.4 MB** |
-| 运行时 | `game/audio/audio_director.gd`（A1–A6）· Autoload `AudioDirector` |
+| 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· CC0 场景床 + 混合 stem |
+| 运行时 | `game/audio/audio_director.gd`（A1–A6）· Autoload `AudioDirector` · 4 ambient 槽 |
 | 旧版实现 | `archive/web-version/js/audio.js` — **作废** |
-| 包体压力 | ~8 MB 量级；iOS/Steam 分发可接受 |
+| 包体压力 | ~8–10 MB 量级；iOS/Steam 分发可接受 |
 | 内核约束 | 音频**不得**写 `WorldState`；表现层只订阅信号 |
+| 管线 | `tools/audio/fetch_cc0.py` · `compose_loops.py` · `generate_melody_color.py` |
 
 **实测的三条轴取值**（来自 `content/tables/`，不是设想）：
 
@@ -32,7 +33,7 @@
 
 ## 1. 红线（先于一切技术决策）
 
-GDD §19 对宗教呈现的要求在音频上**比在美术上更容易踩雷**，因为音乐能直接引用真实的礼拜声响。
+因为音乐能直接引用真实的礼拜声响。
 
 | 禁止 | 理由 |
 |---|---|
@@ -198,6 +199,8 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 | A4 | 场景类密度切换（§4 的 6 类） | 沙漠夜明显更空 | ✅ `scene_density.gd` |
 | A5 | 五文化全层 + 跨文化交叉淡入 | 跨 band 听得出变化 | ✅ 10s 交叉；番坊双床 |
 | A6 | 情绪调制（§5） | 高风险路段听感变紧 | ✅ `mood.gd` + Music 低通 |
+| A7 | CC0 场景床 + 未映射 ambient 接线 | 港口有河/雨，旷野有马蹄 | ✅ BigSoundBank CC0 + `SceneDensity` |
+| A8 | melody/color 加厚（保留 drone/pulse） | 旋律层不再单薄 | ✅ `generate_melody_color.py` |
 
 **A1 先做**：可访问性不是收尾工作。有人对持续音敏感，必须能一键静音。
 
