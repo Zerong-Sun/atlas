@@ -1,0 +1,504 @@
+{
+  "archived_at": "2026-07-26T06:12:50.808873+00:00",
+  "chats": 31,
+  "images_saved": 45,
+  "results": [
+    {
+      "url": "https://chatgpt.com/c/6a64f117-4b1c-83ee-b694-0465336525b0",
+      "chat_id": "6a64f117-4b1c-83ee-b694-0465336525b0",
+      "title": "Faith Emblem Icons",
+      "archived_at": "2026-07-26T06:07:11.146395+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o",
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript map (mappa mundi / portolan) hand-drawn feel — vellum #E9DBB8, iron-gall ink #4A3A1C, "
+      ],
+      "image_count": 4,
+      "saved": 2,
+      "skipped": 2,
+      "files": [
+        "img-01-d0f64fc6e2.webp",
+        "img-02-ab09bf3da1.webp",
+        "img-03-3561218a45.webp",
+        "img-04-80ead33e09.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e96a-5b5c-83e8-8563-ca11496865bb",
+      "chat_id": "6a64e96a-5b5c-83e8-8563-ca11496865bb",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:07:37.124632+00:00",
+      "user_prompts": [
+        "Generate exactly 3 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C",
+        "Generate exactly 3 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C",
+        "Generate exactly 3 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 9,
+      "saved": 9,
+      "skipped": 0,
+      "files": [
+        "img-01-1863fb98c6.webp",
+        "img-02-e933685296.webp",
+        "img-03-2138e5f2e9.webp",
+        "img-04-456eefc1c5.webp",
+        "img-05-86b674f115.webp",
+        "img-06-fa7917a31e.webp",
+        "img-07-810966edb7.webp",
+        "img-08-036165e881.webp",
+        "img-09-7c38384296.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64d9a0-c3a8-83ee-860a-d39054054aa5",
+      "chat_id": "6a64d9a0-c3a8-83ee-860a-d39054054aa5",
+      "title": "Medieval Travel Book Covers",
+      "archived_at": "2026-07-26T06:08:13.595672+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o"
+      ],
+      "image_count": 3,
+      "saved": 2,
+      "skipped": 1,
+      "files": [
+        "img-01-51174ecac5.webp",
+        "img-02-9677a07b1d.webp",
+        "img-03-59d67a2b44.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63572f-5554-83ee-93fb-22f4f4b186c8",
+      "chat_id": "6a63572f-5554-83ee-93fb-22f4f4b186c8",
+      "title": "论文题要求总结",
+      "archived_at": "2026-07-26T06:08:18.245183+00:00",
+      "user_prompts": [
+        "植物3.pdf\nPDF\n植物2.pdf\nPDF\n植物1.pdf\nPDF\n对这三个文件分别出题，带答案和解析，每个文件出两个题组，一个题组三道题，一个题组四道题，要求两个题组相互独立，但是在内容上无关，题组内部要有逻辑。最后你给我整理一个带图的word文件，我允许你直接操作论文里的图片，把它们整理到题目里。最后给我一个包含总共21道题目的word文档",
+        "重新检查！你的截图都截的不完整啊，你下边小字的题图说明都要整合到题干里边去，你截图完了之后要好好的检查！答案以TF的形式呈现！",
+        "s41586-026-10705-2.pdf\nPDF\n出两个题组，一个3道题一个4道题，要求同上"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a635812-0cdc-83ee-83fa-827cca66906a",
+      "chat_id": "6a635812-0cdc-83ee-83fa-827cca66906a",
+      "title": "命题规则设计",
+      "archived_at": "2026-07-26T06:08:27.347098+00:00",
+      "user_prompts": [
+        "要求的是把论文改编成信息自足、重推理、符合生物学竞赛风格的论文题组，而不是简单翻译论文或考学生是否读过原文。核心要求如下。\n\n\n\n题干固定结构\n\n\n\n背景信息\n\n实验描述\n\n图表引用\n\n\n\n背景只补充学生无法从图表、选项或已有知识中推断出的必要信息，不能堆砌论文引言。\n\n\n\n信息必须自足\n\n学生不需要阅读原论文，仅凭题干、图表和竞赛范围内的知识就能完成判断。专业缩写、特殊处理、关键指标和必要机制都要解释。\n\n\n\n实验描述要交代清楚\n\n需要简明说明：\n\n\n\n实验对象与研究问题\n",
+        "PIIS0092867426007609.pdf\nPDF\ns41586-026-10752-9.pdf\nPDF\n2025.10.16.682968v1.full.pdf\nPDF\n对这三个文件分别出题，带答案和解析，每个文件出两个题组，一个题组三道题，一个题组四道题，要求两个题组相互独立，但是在内容上无关，题组内部要有逻辑。最后你给我整理一个带图的word文件，我允许你直接操作论文里的图片，把它们整理到题目里。最后给我一个包含总共21道题目的word文档",
+        "北斗联赛命题1_修订版(1).docx\nDocument\n请你参考这个文件的格式，命题风格和解析方式，尤其多参考题干是怎么写的，改你生成的版本"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a4b6974-8b4c-83ee-85c4-6c3e28a86640",
+      "chat_id": "6a4b6974-8b4c-83ee-85c4-6c3e28a86640",
+      "title": "ChatGPT",
+      "archived_at": "2026-07-26T06:08:32.571141+00:00",
+      "user_prompts": [],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64ec05-8734-83e8-ae1d-c1b08439fa72",
+      "chat_id": "6a64ec05-8734-83e8-ae1d-c1b08439fa72",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:09:07.761488+00:00",
+      "user_prompts": [
+        "Generate exactly 5 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o"
+      ],
+      "image_count": 5,
+      "saved": 4,
+      "skipped": 1,
+      "files": [
+        "img-01-e50a4c9ff1.webp",
+        "img-02-e50caf42b9.webp",
+        "img-03-5f568f38e5.webp",
+        "img-04-508cf4c7ff.webp",
+        "img-05-eb62d68947.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64ee90-39f4-83ee-a790-70de9ad04981",
+      "chat_id": "6a64ee90-39f4-83ee-a790-70de9ad04981",
+      "title": "Faith Emblem Icons",
+      "archived_at": "2026-07-26T06:09:24.168620+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o"
+      ],
+      "image_count": 2,
+      "saved": 1,
+      "skipped": 1,
+      "files": [
+        "img-01-aff7b91550.webp",
+        "img-02-3cc3d690f0.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a3bbb46-1280-83eb-9fd4-f1cf376bea3d",
+      "chat_id": "6a3bbb46-1280-83eb-9fd4-f1cf376bea3d",
+      "title": "ChatGPT",
+      "archived_at": "2026-07-26T06:09:29.504056+00:00",
+      "user_prompts": [],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64dcf5-70f0-83e8-ae5b-45a1fe011630",
+      "chat_id": "6a64dcf5-70f0-83e8-ae5b-45a1fe011630",
+      "title": "Medieval Travel Book Covers",
+      "archived_at": "2026-07-26T06:09:43.879517+00:00",
+      "user_prompts": [
+        "Generate exactly 3 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o"
+      ],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-0bc87ddaf5.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e97e-dc0c-83ee-ab11-39d92b5b7244",
+      "chat_id": "6a64e97e-dc0c-83ee-ab11-39d92b5b7244",
+      "title": "UI Ornaments Request",
+      "archived_at": "2026-07-26T06:09:49.012782+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accent o"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e705-9ff4-83e9-9495-296ab8bbcaf3",
+      "chat_id": "6a64e705-9ff4-83e9-9495-296ab8bbcaf3",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:09:59.782020+00:00",
+      "user_prompts": [
+        "Generate exactly 3 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 3,
+      "saved": 2,
+      "skipped": 1,
+      "files": [
+        "img-01-43cce0d8fa.webp",
+        "img-02-41c36e8f62.webp",
+        "img-03-b2ef616f57.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e6f2-4b84-83e8-8a28-72e16de30f2c",
+      "chat_id": "6a64e6f2-4b84-83e8-8a28-72e16de30f2c",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:10:11.086529+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 4,
+      "saved": 1,
+      "skipped": 3,
+      "files": [
+        "img-01-e8169f82b5.webp",
+        "img-02-0e6892e842.webp",
+        "img-03-6acfd8e6fa.webp",
+        "img-04-457c2b853a.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e48f-2a5c-83e8-be1e-56baadcfb52d",
+      "chat_id": "6a64e48f-2a5c-83e8-be1e-56baadcfb52d",
+      "title": "Manuscript Backgrounds Dusk",
+      "archived_at": "2026-07-26T06:10:23.425173+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 6,
+      "saved": 5,
+      "skipped": 1,
+      "files": [
+        "img-01-30b4157095.webp",
+        "img-02-650136b8a7.webp",
+        "img-03-617bed247e.webp",
+        "img-04-0e45be10d1.webp",
+        "img-05-433ea7818c.webp",
+        "img-06-951111ad80.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e47a-949c-83e8-ab02-5fee54211e87",
+      "chat_id": "6a64e47a-949c-83e8-ab02-5fee54211e87",
+      "title": "Manuscript City Gate Illustrations",
+      "archived_at": "2026-07-26T06:10:36.318543+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 4,
+      "saved": 3,
+      "skipped": 1,
+      "files": [
+        "img-01-6762904c8f.webp",
+        "img-02-1e92125f31.webp",
+        "img-03-11fecf86a3.webp",
+        "img-04-104e80ed67.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64e211-fa18-83e8-8ce5-9e21b9ef478c",
+      "chat_id": "6a64e211-fa18-83e8-8ce5-9e21b9ef478c",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:10:47.689220+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 3,
+      "saved": 3,
+      "skipped": 0,
+      "files": [
+        "img-01-12c8aef422.webp",
+        "img-02-8449fc6ae8.webp",
+        "img-03-e157f89668.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64dd40-30f4-83ee-9984-233d061d78bd",
+      "chat_id": "6a64dd40-30f4-83ee-9984-233d061d78bd",
+      "title": "13th-century city entries",
+      "archived_at": "2026-07-26T06:11:02.240765+00:00",
+      "user_prompts": [
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C",
+        "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+      ],
+      "image_count": 4,
+      "saved": 2,
+      "skipped": 2,
+      "files": [
+        "img-01-977d474caa.webp",
+        "img-02-29b5d2cf51.webp",
+        "img-03-99e3ba96ec.webp",
+        "img-04-5d403a40dd.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64dcfa-1fcc-83e8-b318-00f1f3bb20d6",
+      "chat_id": "6a64dcfa-1fcc-83e8-b318-00f1f3bb20d6",
+      "title": "Image generation request",
+      "archived_at": "2026-07-26T06:11:09.335844+00:00",
+      "user_prompts": [
+        "Generate exactly 1 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\nCloud-ridge Twilight manuscript miniature — forest ink #0D1411, parchment #F0E4D0, antique g"
+      ],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-a3f7a084cb.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64b8bd-3cf0-83e8-8a20-0265bf94a8d7",
+      "chat_id": "6a64b8bd-3cf0-83e8-8a20-0265bf94a8d7",
+      "title": "环球航商 PRD 需求",
+      "archived_at": "2026-07-26T06:11:14.582085+00:00",
+      "user_prompts": [
+        "现在需要做一款游戏，请写prd. 使用godot引擎，使用全世界航线航空公司的公开数据之后，所有的机场，所有的航班，航班时间，这都是公开的嘛。日期设到2025年3月1日。可以选择任意一个机场或者随机。这个可以选择航班起飞之后，每一个城市都添加他们各自的特产，并且根据真实情况定价，玩家可以坐着飞机去其他地方卖掉。做每个城市的简介数据库。做球形世界地图的引擎。时间以固定速度流失，在玩家读完简介，买好东西后，可以选择飞走的航班。至少提前2小时买票。"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a64652c-6600-83e8-bc29-b5225ab6a86a",
+      "chat_id": "6a64652c-6600-83e8-bc29-b5225ab6a86a",
+      "title": "网页设计特征分析",
+      "archived_at": "2026-07-26T06:11:25.609009+00:00",
+      "user_prompts": [
+        "我想做一个类似的网页，帮我抓取特征，整理关键词，包括页面排版、动画、配色等：https://keel-astro.kusa-projects.com/blog/silence-unlocks-meaning-depth/",
+        "继续处理这个，包括字体等：https://molle-astro.pages.dev/"
+      ],
+      "image_count": 5,
+      "saved": 5,
+      "skipped": 0,
+      "files": [
+        "img-01-cc64126500.webp",
+        "img-02-1989f6eae2.webp",
+        "img-03-20eb55d7cf.webp",
+        "img-04-56ba77fd42.webp",
+        "img-05-c7fdef9c76.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a61bc5b-7dd8-83e8-8fc7-a3c2be17898e",
+      "chat_id": "6a61bc5b-7dd8-83e8-8fc7-a3c2be17898e",
+      "title": "期刊文章检索与翻译",
+      "archived_at": "2026-07-26T06:11:31.979553+00:00",
+      "user_prompts": [],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-dfcde51c1f.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63b8e9-2c68-83e9-b58d-90b54ba9a536",
+      "chat_id": "6a63b8e9-2c68-83e9-b58d-90b54ba9a536",
+      "title": "美光股票期权分析",
+      "archived_at": "2026-07-26T06:11:38.724150+00:00",
+      "user_prompts": [
+        "现在美光的股票一股九百三,他们买月底的八百块钱的call,说明什么呢?"
+      ],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-06900e226e.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63a6f5-c49c-83e8-8b26-8d35662c7cfd",
+      "chat_id": "6a63a6f5-c49c-83e8-8b26-8d35662c7cfd",
+      "title": "Contact-sheet Design Request",
+      "archived_at": "2026-07-26T06:11:46.496629+00:00",
+      "user_prompts": [
+        "Generate exactly ONE 4×3 contact-sheet image. Do not write an explanation. Thin dark gutters between cells. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accen"
+      ],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-f161196f00.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63a417-06e4-83ee-b857-2b0a040898e5",
+      "chat_id": "6a63a417-06e4-83ee-b857-2b0a040898e5",
+      "title": "Market Bazaar Contact Sheet",
+      "archived_at": "2026-07-26T06:11:53.109652+00:00",
+      "user_prompts": [
+        "Generate exactly ONE 4×3 contact-sheet image. Do not write an explanation. Thin dark gutters between cells. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accen"
+      ],
+      "image_count": 1,
+      "saved": 1,
+      "skipped": 0,
+      "files": [
+        "img-01-25c02a4702.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63a412-3080-83ee-bc20-214c9fce320f",
+      "chat_id": "6a63a412-3080-83ee-bc20-214c9fce320f",
+      "title": "Contact Sheet Design Request",
+      "archived_at": "2026-07-26T06:11:59.764578+00:00",
+      "user_prompts": [
+        "Generate exactly ONE 4×3 contact-sheet image. Do not write an explanation. Thin dark gutters between cells. Transparent background.\n\nCloud-ridge Twilight UI — parchment #F0E4D0, forest ink #0D1411, antique gold #BDA476, rubric #B3402E accen"
+      ],
+      "image_count": 1,
+      "saved": 0,
+      "skipped": 1,
+      "files": [
+        "img-01-c0b2e3b96f.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a63a112-fb44-83ee-aed1-8f15ee120e26",
+      "chat_id": "6a63a112-fb44-83ee-aed1-8f15ee120e26",
+      "title": "Image Generation Request",
+      "archived_at": "2026-07-26T06:12:07.936689+00:00",
+      "user_prompts": [
+        "Generate exactly 2 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript illumination figure style. Iron-gall #4A3A1C contours, mineral flats, antique gold #BD"
+      ],
+      "image_count": 2,
+      "saved": 1,
+      "skipped": 1,
+      "files": [
+        "img-01-7273d64ea5.webp",
+        "img-02-cc4ddfaf09.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a6392e8-b408-83ee-8f12-0328fcda93eb",
+      "chat_id": "6a6392e8-b408-83ee-8f12-0328fcda93eb",
+      "title": "13th-century NPC Portraits",
+      "archived_at": "2026-07-26T06:12:16.730979+00:00",
+      "user_prompts": [
+        "Generate exactly 2 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript illumination figure style. Iron-gall #4A3A1C contours, mineral flats, antique gold #BD"
+      ],
+      "image_count": 2,
+      "saved": 1,
+      "skipped": 1,
+      "files": [
+        "img-01-dabb33d9d6.webp",
+        "img-02-f2e1c718c5.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a6391dc-26ec-83e8-b6a0-2b879c99264d",
+      "chat_id": "6a6391dc-26ec-83e8-b6a0-2b879c99264d",
+      "title": "NPC Portraits Generation",
+      "archived_at": "2026-07-26T06:12:23.444656+00:00",
+      "user_prompts": [
+        "Generate exactly 2 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript illumination figure style. Iron-gall #4A3A1C contours, mineral flats, antique gold #BD"
+      ],
+      "image_count": 1,
+      "saved": 1,
+      "skipped": 0,
+      "files": [
+        "img-01-d5ca368fc7.webp"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/c/6a6372ac-3660-83ee-8efc-997ab700153e",
+      "chat_id": "6a6372ac-3660-83ee-8efc-997ab700153e",
+      "title": "CLS格式文件修改",
+      "archived_at": "2026-07-26T06:12:28.704332+00:00",
+      "user_prompts": [
+        "三篇论文改编生物学竞赛题组_21题_北斗风格修订版(1).docx\nDocument\n微胶质细胞修剪脑血管_两个题组七道题_含图答案解析.docx\nDocument\n植物论文图表题_21题_完全修订版_TF答案(1).docx\nDocument\nKNIT编辑_两个题组七道题_含图答案解析.docx\nDocument\ncls命题模板.docx\nDocument\n请你先阅读那个cls命题模板，按照模板的要求给我发给你的其他的文件修改格式",
+        "TROP2论文图表题_两个题组_7题_TF答案解析(1).docx\nDocument\n汇智起航国赛论文题.docx\nDocument\n这两个文件也改成cls格式"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a6341d4-4150-83ee-87fd-480a86eab947",
+      "chat_id": "6a6341d4-4150-83ee-87fd-480a86eab947",
+      "title": "修订版答案核对",
+      "archived_at": "2026-07-26T06:12:33.933535+00:00",
+      "user_prompts": [
+        "北斗联赛命题1_修订版.docx\nDocument\n北斗联赛命题1_答案(1).xlsx\nSpreadsheet\n北斗联赛命题1_题目版.docx\nDocument\n帮我给这个修订版题目出一版excel版本的答案。这里边的绝大部分题目都在后边的两个文件里有对应，你需要首先自己做一遍修订版题目，给出自己版本的答案。然后一个一个去跟后边的题目对应（注意，位置不是对应的，每次矫正答案你都需要从头寻找对应题目的位置，然后去excel里边找答案）"
+      ],
+      "image_count": 0,
+      "saved": 0,
+      "skipped": 0,
+      "files": []
+    },
+    {
+      "url": "https://chatgpt.com/c/6a62d093-a92c-83e8-861a-781517335ffc",
+      "chat_id": "6a62d093-a92c-83e8-861a-781517335ffc",
+      "title": "13th-century NPC portraits",
+      "archived_at": "2026-07-26T06:12:50.808711+00:00",
+      "user_prompts": [
+        "Generate exactly 2 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript illumination figure style. Iron-gall #4A3A1C contours, mineral flats, antique gold #BD",
+        "Generate exactly 2 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Transparent background.\n\n13th-century manuscript illumination figure style. Iron-gall #4A3A1C contours, mineral flats, antique gold #BD"
+      ],
+      "image_count": 2,
+      "saved": 2,
+      "skipped": 0,
+      "files": [
+        "img-01-6ad823288e.webp",
+        "img-02-f68f0c2761.webp"
+      ]
+    }
+  ]
+}

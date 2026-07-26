@@ -1,0 +1,17 @@
+{
+  "url": "https://chatgpt.com/c/6a64e211-fa18-83e8-8ce5-9e21b9ef478c",
+  "chat_id": "6a64e211-fa18-83e8-8ce5-9e21b9ef478c",
+  "title": "Image Generation Request",
+  "archived_at": "2026-07-26T06:10:47.689220+00:00",
+  "user_prompts": [
+    "Generate exactly 4 SEPARATE image(s) in ONE response (NOT a contact sheet). Do not write an explanation. Opaque full-bleed / parchment background.\n\n13th-century manuscript miniature × dusk travel light. Vellum #E9DBB8, iron-gall ink #4A3A1C"
+  ],
+  "image_count": 3,
+  "saved": 3,
+  "skipped": 0,
+  "files": [
+    "img-01-12c8aef422.webp",
+    "img-02-8449fc6ae8.webp",
+    "img-03-e157f89668.webp"
+  ]
+}

@@ -29,3 +29,6 @@ fatequest/worldmap/heightmap/_dem_tile*.tif
 
 # Godot import cache
 fatequest/.godot/
+
+# Local agent / editor worktrees & backups
+.claude/
