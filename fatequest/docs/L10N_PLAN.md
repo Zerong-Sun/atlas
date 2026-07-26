@@ -2,8 +2,8 @@
 
 **以刺桐为模版**做中文版。写明流程、分批、质量门槛、工具与译者守则。
 
-> **状态（2026-07-24）**：中译批次 **B1–B4 全部完成**；剩余项 **L-1 / L-2 / L-3 全部完成**。
-> en/zh 各 1943 条，缺 0、中英同文 0；译文时效 779 current · 0 stale · 0 missing；
+> **状态（2026-07-26）**：中译批次 **B1–B4 全部完成**；剩余项 **L-1 / L-2 / L-3 全部完成**。
+> en/zh 各 **2132** 条，缺 0、中英同文 0；译文时效 **972** current · 0 stale · 0 missing；
 > 三书 20 城入城正文已改写并文化校订。本文保留流程与守则——它们是新增文本与第三语言的依据。
 > 各批最终状态见 §3 · §9。
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 0. 实测现状（2026-07-24）
+## 0. 实测现状（2026-07-26）
 
 ```bash
 node tools/lore/l10n.mjs report            # 覆盖率
@@ -20,18 +20,15 @@ node tools/validate/validate.mjs           # 含 G7 术语 / G18 ASCII 泄漏 / 
 ```
 
 ```
-en 条目 1943 · zh 条目 1943 · 缺 0 · 中英同文 0
-译文时效 779 current · 0 stale · 0 missing
+en 条目 2132 · zh 条目 2132 · 缺 0 · 中英同文 0
+译文时效 972 current · 0 stale · 0 missing
 ```
-
-对照 2026-07-23 的起点（en 1678 · zh 1056 · 覆盖率 62.9% · 待译 622），这一轮之间
-完成了全部四批。**刺桐**仍是规范的依据：55 条全译，下面一切规矩由它定下。
 
 **已有资产**：
 
 | 资产 | 说明 |
 |---|---|
-| `content/story/<unit>/<lang>.md` | authoring 源，103 个单元，frontmatter 带逐条 `stamps` |
+| `content/story/<unit>/<lang>.md` | authoring 源，**108** 个单元，frontmatter 带逐条 `stamps` |
 | `content/i18n/{en,zh}.json` | 编译产物，**不手改**（§3.3） |
 | `assets/data/glossary.json` | 97 条术语（地名 + 概念） |
 | `tools/lore/story.mjs` | `check` / `build` / `stamp` |

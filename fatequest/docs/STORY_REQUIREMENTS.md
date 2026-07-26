@@ -16,7 +16,7 @@
 | 城市名 / 入城正文 | ✅ 102 城 en/zh 齐；T1 二十城三书改写已完成 |
 | 主城探索点 | ✅ 12 metropolis × 3 = 36 |
 | **city 级探索点** | ❌ 21 座仍为 `sites: []` → **§1 T3** |
-| 途中事件 | 41 条；steppe band 仅 12 → **§2 T4** |
+| 途中事件 | **46** 条；steppe band **13** → **§2 T4** |
 | 占卜第二批 | ✅ jiaobei / astrodice / geomancy / runes 已接入（含拜师、接线、30 结果文、G25） |
 | 19 城语料处置 | 仍全为 `authored` → **§3 T6** |
 
@@ -87,16 +87,16 @@ console.log(by);
 ### 2.1 起点
 
 ```bash
-node -e 'const s=require("./assets/books/ibn-fadlan-lore.json").stories;
+node -e 'const s=require("./assets/books/ibn-fadlan-lore.json").stories||[];
 const u=s.filter(x=>(x.body||"").length>=400&&(x.body||"").length<=4000);
 console.log("总",s.length,"合用",u.length)'
 ```
 
-约 199 条中 **146** 条长度合用。现有途中 41，steppe 约 12；目标途中 **81**，其中 steppe **≥ 40**。
+入库 **34** 条（`ibn-fadlan-lore.json`）；其中长度合用约 **34**。现有途中 **46**，steppe **13**；目标途中 **81**，steppe **≥ 40**（从 34 条中改写，可辅以 authored 补量）。
 
 ### 2.2 操作
 
-1. 从 146 条挑 **40** 条：优先渡河、驿站、部族礼节、严寒、丧仪见闻；避开纯世系年表。
+1. 从 **34** 条入库 stories 中挑 **27–35** 条改写（优先渡河、驿站、部族礼节、严寒、丧仪见闻）；不足部分用 authored 补 steppe 途中。
 2. 每条 → `kind: "road"`，`when.bands: ["steppe"]`；options／effects 非空带 reason。
 3. 语体同 T1；G24 复查贬语（可观察事实可留，谩骂删）。
 4. 确保事件被路线 `encounters` 引用或可由 `EventMachine.pick("road")` 按 band 抽到（与现网一致）；G2b 无孤儿。
@@ -104,7 +104,7 @@ console.log("总",s.length,"合用",u.length)'
 
 ### 2.3 验收
 
-- [ ] 途中 41 → 81，steppe band ≥ 40
+- [ ] 途中 **46 → 81**，steppe band **13 → ≥ 40**
 - [ ] G2b／G24 绿
 - [ ] `test_m1_lines` 全过
 
@@ -161,7 +161,8 @@ console.log("总",s.length,"合用",u.length)'
 | town／station 探索点 | DATA_MODEL §6 分级 |
 | 24 法全部接入 | 第二批已完成 4 法 |
 | 拆《远游记》《瀛涯胜览》 | 等 T4 流程再验证后再动 |
-| 美术管线 | `ART_REQUIREMENTS.md` |
+| 美术管线 | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) · [`ASSETS_REQUIREMENTS.md`](ASSETS_REQUIREMENTS.md) |
+| 文本总表 | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) |
 
 ---
 

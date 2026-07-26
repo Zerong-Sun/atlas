@@ -1,14 +1,16 @@
-# 缺失贴图清单 · ART TODO（v4.2 · 2026-07-26）
+# 缺失贴图清单 · ART TODO（v4.3 · 2026-07-26）
 
-本文件是**唯一的缺口总表**。完成度对照见 [`docs/ART_REQUIREMENTS.md`](../../docs/ART_REQUIREMENTS.md)。
+本文件是**唯一的缺口总表**。完成度对照见 [`docs/ART_REQUIREMENTS.md`](../../docs/ART_REQUIREMENTS.md) · 总索引 [`docs/ASSETS_REQUIREMENTS.md`](../../docs/ASSETS_REQUIREMENTS.md)。
 
-**放置**：`assets/art/` 或 `assets/decks/<牌组>/`，文件名=引用名，`.webp`。缺图 → SVG/emoji。
+**放置**：`assets/art/` 或 `assets/decks/<牌组>/`，文件名=引用名，`.webp`。缺图 → 程序回退/emoji。
 
 **风格**：云岭暮光。见 `ART_BRIEF.md`。透明底须真 alpha（`dealpha.py --apply`）。
 
+**客户端**：**Godot 4.7**（`game/map/map_art.gd`）。PWA 接线表已作废。
+
 ---
 
-## ✅ 已有（`assets/art/` 根目录 593 张；牌组另计）
+## ✅ 已有（`assets/art/` 根目录 **600** 张；牌组另计）
 
 ### 批量 REQ · 174/174 ✅
 
@@ -19,14 +21,15 @@
 | 类别 | 状态 |
 |---|---|
 | 七书封 `book-*` | **7/7** |
-| `desk-parchment` + `scene-desk-opening` | ✅ |
-| 过场 `load-*` | **11/11** |
-| `fate-wheel` + `fate-bar-*` | **4/4** |
+| `desk-parchment` + `scene-desk-opening` | ✅ 文件在盘 · Godot 书案待接 |
+| 过场 `load-*` | **11/11** · Godot 出行待接 |
+| `fate-wheel` + `fate-bar-*` | **4/4** · Godot chargen 待接 |
 | `culture-*` | **5/5** |
 | 信仰徽 `faith-*` | **8/8** |
 | Polo 入城图（旧拼写文件名） | **12**（见需求文档别名表） |
-| `site-*` 大图 | **15**（venice / acre / tauris / baldacum / hormos） |
+| `site-*` 大图 | **22**（7 城：venice/acre/tauris/baldacum/hormos/balc/samarcanda + cascar-1） |
 | `explore-*` | **36** |
+| Chat 变体归档 | **`_archive/chats/` 187+ 会话**（2026-07-26 从 PWA 工作区合并） |
 
 ---
 
@@ -132,20 +135,20 @@ P2 补的是**牌组完整度、货币辨识、收集纪念**三类「锦上添�
 ---
 
 
-## 🔌 接线待办（非新素材 · M4 优先）
+## 🔌 接线待办（Godot · M4 优先）
 
 | 动作 | 素材 | 状态 |
 |---|---|---|
-| 书案/标题 → `book-*` + `desk-parchment` | ✅ 已有文件 | ✅ 已接 `app.js` title |
-| chargen → `fate-wheel` / `fate-bar-*` / `fate-rank-*` / `culture-*` / `faith-*` | ✅ 文件齐 | PWA 已接；Godot 待接 |
-| 入城 → **别名表** `city-tauris-entry` ↔ `tabriz` 等 | ✅ 文件 | ✅ `js/art-map.js` `FQ.cityEntryArt` |
-| 探索按钮 → `explore-*` | ✅ 文件 | ✅ `city.js` hub/market/shrine |
-| 导师 → `mentor-*` | ✅ | ✅ `FQ.mentorArt` |
-| 仪式签法 → `ritual-lot-*`；星骰 → `astrodice/` | ✅ | ✅ lot 已接；星骰仍 emoji |
-| 过场 → `load-*` | ✅ | ⏳ 出行页未接 |
-| 市集行 → `GOODS_ART_MAP` + `ui-slot-*` | 映射已有 | ✅ `FQ.goodsArt` 市集/行囊 |
-| 雾地图 → 暂不接旧 `map.js`（已归档）；可选新 SVG/羊皮纸层 | ⏳ | ⏳ |
-| 白图泰 → **占位中 · 同名替换** | `city-{id}-entry` 目标名 + `CITY_ENTRY_BAND` 底图 | ✅ 占位；真图生成后放同名 webp |
+| 书案 → `book-*` + `desk-parchment` | ✅ 文件 | ⏳ `main.gd` 待接纹理 |
+| chargen → `fate-wheel` / `fate-bar-*` / `culture-*` / `faith-*` | ✅ | ⏳ Godot 待接 |
+| 入城 → 别名表 + `city-*-entry` | ✅ 文件 | ⏳ `MapArt` / 事件 UI |
+| 探索 → `explore-*` · `site-*` | ✅ **36+22** | ⏳ `city_view.gd` |
+| 导师 → `mentor-*` | ✅ 10 | ⏳ 事件对话框 |
+| 仪式 → `ritual-lot-*` · `sym-*` | ✅ | ⏳ 部分 emoji 回退 |
+| 过场 → `load-*` | ✅ 11 | ⏳ 出行动画 |
+| 市集 → `GOODS_ART_MAP.json` + `ic-*` | 映射已有 | ⏳ 现用错误路径 `ic-good-*` |
+| 地图饰件 → 剩余 `map-*` | 26 未接 | ⏳ 润色 |
+| 白图泰 → band 底板占位 | — | ✅ 占位；专图仍缺 §P1b |
 
 ---
 
@@ -153,7 +156,7 @@ P2 补的是**牌组完整度、货币辨识、收集纪念**三类「锦上添�
 
 | 序 | 内容 | 量 |
 |---|---|---|
-| 1 | **接线**（开场/chargen/入城别名/explore/仪式） | 0 新图 |
+| 1 | **Godot 接线**（explore/site/chargen/市集/过场） | 0 新图 · **543 张待用** |
 | 2 | 白图泰 6 入城（+可选 site） | 6–24 |
 | 3 | Polo 剩余 `site-*` 大图 + 个体随从 | ≈40 |
 | 4 | P2 货币→贴纸→易经 31–64（见上节） | ≈48 |

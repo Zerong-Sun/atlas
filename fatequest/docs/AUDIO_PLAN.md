@@ -11,11 +11,11 @@
 
 | 项 | 现状 |
 |---|---|
-| 音频资产 | `assets/audio/`：20 stem + 12 ambient + 神圣模糊层（见 `MANIFEST.md`） |
+| 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· **~8.4 MB** |
 | 运行时 | `game/audio/audio_director.gd`（A1–A6）· Autoload `AudioDirector` |
-| 旧版实现 | `js/audio.js` 248 行 WebAudio 程序化，**思路可借鉴，代码作废**（D3） |
-| 包体压力 | stems+ambient ≈ 8 MB；iOS 分发是硬约束（`ARCHITECTURE.md` §6） |
-| 内核约束 | 音频**不得**写 `WorldState`；它是表现层，只订阅信号 |
+| 旧版实现 | `archive/web-version/js/audio.js` — **作废** |
+| 包体压力 | ~8 MB 量级；iOS/Steam 分发可接受 |
+| 内核约束 | 音频**不得**写 `WorldState`；表现层只订阅信号 |
 
 **实测的三条轴取值**（来自 `content/tables/`，不是设想）：
 

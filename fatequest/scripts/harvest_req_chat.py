@@ -163,7 +163,8 @@ async def harvest(
         saved += 1
     still = missing_files(batch)
     if still:
-        print(f"  still missing: {', '.join(still)}", flush=True)
+        names = [bf.filename if hasattr(bf, "filename") else str(bf) for bf in still]
+        print(f"  still missing: {', '.join(names)}", flush=True)
     return saved
 
 

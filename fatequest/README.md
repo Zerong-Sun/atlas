@@ -67,6 +67,10 @@ fatequest/
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
 | [`docs/AUDIT_2026-07.md`](docs/AUDIT_2026-07.md) | 六方面验证报告与修复清单 |
 | [`docs/LORE_PIPELINE.md`](docs/LORE_PIPELINE.md) · [`L10N_PLAN.md`](docs/L10N_PLAN.md) | 语料接入 · 多语言 |
+| [`docs/ASSETS_REQUIREMENTS.md`](docs/ASSETS_REQUIREMENTS.md) | **素材总索引**（美术+音频+文本） |
+| [`docs/ART_REQUIREMENTS.md`](docs/ART_REQUIREMENTS.md) · [`assets/art/ART_TODO.md`](assets/art/ART_TODO.md) | 美术需求与缺口 |
+| [`docs/TEXT_REQUIREMENTS.md`](docs/TEXT_REQUIREMENTS.md) · [`STORY_REQUIREMENTS.md`](docs/STORY_REQUIREMENTS.md) | 文本需求与 T3/T4/T6 |
+| [`docs/AUDIO_PLAN.md`](docs/AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](assets/audio/MANIFEST.md) | 配乐规划与清单 |
 | [`archive/README.md`](archive/README.md) | 旧分支版本、最终提交与恢复方式 |
 
 ## 现状一览

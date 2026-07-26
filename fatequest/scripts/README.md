@@ -80,3 +80,21 @@ python3 -m venv .venv
 - ChatGPT DOM / 生图入口常变；若提交或等图失败，改 `chatgpt_gen_art.py` 里选择器或先在页面手动点一次「生成图片」模式。
 - 需要账号具备生图权限；触限流时脚本会记 FAIL，可稍后 `--skip-existing` 续跑。
 - 脚本只 **断开 CDP**，不会退出你的 Chrome。
+
+---
+
+## 与 `art-gen-kit/` 的关系
+
+| 路径 | 用途 |
+|---|---|
+| **`scripts/`**（本目录） | 仓库 **canonical** 脚本；`orchestrate_req.py` 等为 Godot 主线完整版 |
+| **`scripts/art-gen-kit/`** | **可移植 kit**（`kit_paths.py` 自动定位 `assets/art/`）；适合单独拷贝出仓库跑 |
+
+11 个同名文件在两处共存：
+
+- **完全相同**（任一侧改即可同步）：`archive_chat_images.py` · `harvest_chat_images.py` · `resume_dual_decks.py` · `submit_map_windows.py`
+- **有差异**（以 **`scripts/` 根目录为准** 维护 Godot 管线）：`orchestrate_req.py` · `postprocess_art.py` · `batch_art_utils.py` 等 — kit 版含便携路径，勿用旧 kit 覆盖根目录
+
+kit 独有：`run_parallel.py` · `setup.sh` · `config.example.env` · `PROMPTS_TEMPLATE.md`
+
+Chat 变体归档输出：`assets/art/_archive/chats/`（见该目录 `README.md`）。

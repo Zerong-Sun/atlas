@@ -22,9 +22,15 @@ python3 tools/art/strip_checker.py --write --glob 'assets/art/*.webp'   # 修棋
 ## 0. 实测汇总
 
 ```
-总数 593 张 · ✅ 完好 593 · ⚠️ 棋盘格 0 · ❌ 损坏 0
-已接线 25 · 未接线 568
+根目录 assets/art/*.webp   600 张 · ✅ 完好 600 · ⚠️ 棋盘格 0 · ❌ 损坏 0
+  _archive/（Chat 变体）   128 张 · 生产图之外的安全备份，勿删
+  _sheets/（组图原片）       58 张
+Godot 运行时接线             57 张（map_art.gd 动态模式）
+audit.py 字面量扫描          25 张（低估动态引用；以 57 为准）
+未接线                       543 张
 ```
+
+总索引：[`ASSETS_REQUIREMENTS.md`](ASSETS_REQUIREMENTS.md)
 
 **2026-07-23 修复记录**：
 
@@ -79,33 +85,34 @@ python3 tools/art/strip_checker.py --write --glob 'assets/art/*.webp'   # 修棋
 
 ---
 
-## 4. 已接线清单
+## 4. Godot 已接线清单（`game/map/map_art.gd` · 2026-07-26）
 
-| 素材 | 用途 |
-|---|---|
-| `map-vellum-tile` | 地图羊皮纸底 |
-| `map-fog-ink` | 迷雾遮罩（`game/shaders/fog.gdshader`） |
-| `map-city-{chr,con,isl,mazu}-{s,m,l}` 12 张 | 城塞小像，按文化与 tier |
-| `map-mtn-*` 8 张 | 侧视山脉立面，按海拔取形 |
-| `map-route-{land,sea,river}` | 路线笔触 |
-| `map-wind-{n,e,s,w}` | 图幅四缘风神头 |
-| `scene-*` 具名场景 10 张 | 城市探索背景 |
-| `npc-{inn,market,tea,temple}-{4文化}` 16 张 | 城市探索立绘 |
-| `scene-desk-opening` | 书案开场 |
+| 素材 | 数量 | 用途 |
+|---|---|---|
+| `map-vellum-tile` · `map-fog-ink` | 2 | 地图底与迷雾 shader |
+| `map-city-{chr,con,isl,mazu}-{s,m,l}` | 12 | 城塞小像 |
+| `map-mtn-*` · `map-route-*` · `map-dune` · `map-wind-*` | 16 | 山脉/路线/沙丘/风神 |
+| `scene-*` 具名 + `scene-region-{chr,con,mazu}` | 13 | 城市探索背景 |
+| `npc-{inn,market,tea,temple}-{chr,con,isl,mazu}` | 16 | 场所立绘 |
+
+**文件在盘、Godot 未接**（优先接线）：`explore-*` 36 · `site-*` 22 · `load-*` 11 · `book-*` 7 · `fate-*`/`culture-*`/`faith-*` chargen · `mentor-*` 10 · `npc-job-*` 36 · `ic-*` 143 · `ui-*`/`sym-*` · 其余 map 饰件。
+
+> 旧 PWA 接线（`js/art-map.js`）已归档；**现行客户端只有 Godot**。
 
 ---
 
-## 5. 未接线的 568 张
+## 5. 未接线的 543 张（根目录）
 
 | 前缀 | 数量 | 何时接 |
 |---|---|---|
-| `ic-*` | 143 | P4 市集与图鉴（见 §3.2） |
-| `npc-*` | 68 | 城市与随从 |
+| `ic-*` | 143 | 市集与图鉴（见 §3.2；接 `GOODS_ART_MAP.json`） |
+| `npc-*` | 52 | 职业/码头/官吏等（68 总量 − 16 已接） |
 | `ui-*` | 62 | 界面美化 |
 | `sym-*` | 42 | 占卜 UI |
-| `map-*` | 42 | 地图润色（海怪、船、森林、礁石） |
+| `map-*` | 26 | 海怪、船、森林等（54 总量 − 28 已接） |
 | `explore-*` | 36 | 十二主城探索点 |
-| 其余 | 217 | 城景、入城图、交通、导师、书封等 |
+| `site-*` | 22 | 7 城 × 3（venice/acre/tauris/baldacum/hormos/balc/samarcanda + cascar-1） |
+| 其余 | 160 | 入城、过场、导师、书封、交通等 |
 
 完整清单：`python3 tools/art/audit.py --unused`
 
@@ -113,6 +120,6 @@ python3 tools/art/strip_checker.py --write --glob 'assets/art/*.webp'   # 修棋
 
 ## 6. 音频
 
-详见 `AUDIO_PLAN.md`。现状：20 stem + 12 环境 + 5 sacred_blur，8.8 MB，A1–A6 全部落地。
+详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md)。现状：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· **~8.4 MB** · A1–A6 ✅ · `AudioDirector` autoload。
 
 **红线**：不得合成可辨识语义的礼拜声响；圣所只留空间感与偶发钟磬。上线前须与美术、文本一并送敏感读者审阅。
