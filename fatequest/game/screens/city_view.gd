@@ -174,6 +174,10 @@ func set_status(coins: int, cargo_used: int, cargo_max: int, day: int, date: Str
 
 func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Control:
 	var box := VBoxContainer.new()
+	# Keep semantic identity on the figure so accessibility tooling and smoke
+	# tests do not have to infer event rules from child order or translated text.
+	box.set_meta("event_id", String(ev.get("id", "")))
+	box.set_meta("once", bool(ev.get("once", false)))
 	box.alignment = BoxContainer.ALIGNMENT_END
 	box.add_theme_constant_override("separation", 6)
 

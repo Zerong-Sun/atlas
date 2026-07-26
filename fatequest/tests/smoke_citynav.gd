@@ -18,7 +18,8 @@ func _init():
     n._begin(arch)
     await process_frame
 
-    # Clear the entry event, then exhaust every site.
+    # Clear the entry event, then exhaust every once-only site. Mentors may be
+    # repeatable so a player can return with enough money to learn another art.
     if n._dialog_layer.visible:
         for ch in n._dialog._choices.get_children():
             if ch is Button and not ch.disabled: ch.pressed.emit(); break
@@ -30,6 +31,7 @@ func _init():
         if not n._city_view.visible: break
         var hit = false
         for fig in n._city_view._figures.get_children():
+            if not bool(fig.get_meta("once", false)): continue
             for b in fig.get_children():
                 if b is Button and not b.disabled:
                     b.pressed.emit(); hit = true; visited += 1; break
@@ -44,15 +46,15 @@ func _init():
     await process_frame
     var figures = n._city_view._figures.get_child_count() if n._city_view.visible else -1
     print("CITYNAV: visited=%d  city_view=%s  figures_left=%d" % [visited, n._city_view.visible, figures])
-    # Every site is once:true, so after exhausting them the remaining figures
-    # must all be marked done — a figure that is still live means an event is
-    # re-firing and the player is walking in a circle.
-    var live := 0
+    # Every once-only site must now be marked done. Repeatable mentors are
+    # intentionally still live and do not indicate an exploration loop.
+    var live_once := 0
     for fig in n._city_view._figures.get_children():
+        if not bool(fig.get_meta("once", false)): continue
         for plate in fig.get_children():
             for lbl in plate.get_children():
-                if lbl is Label and not String(lbl.text).begins_with("✓"): live += 1
-    print("CITYNAV: figures still un-done = %d" % live)
+                if lbl is Label and not String(lbl.text).begins_with("✓"): live_once += 1
+    print("CITYNAV: once-only figures still un-done = %d" % live_once)
 
     # Can the player get out? Look for any control that leaves the city.
     var exits := 0
@@ -62,9 +64,9 @@ func _init():
                 exits += 1
     print("CITYNAV: usable buttons in city view = %d" % exits)
     # Both regressions this test was written for.
-    var ok = exits > 0 and live == 0
+    var ok = exits > 0 and live_once == 0
     if exits == 0: printerr("  FAIL: dead end — no way out of the city")
-    if live != 0: printerr("  FAIL: %d sites still offered after being explored" % live)
+    if live_once != 0: printerr("  FAIL: %d once-only sites still offered after being explored" % live_once)
     print("CITYNAV: %s" % ("OK" if ok else "FAIL"))
     quit(0 if ok else 1)
 
