@@ -1,4 +1,4 @@
-# 远行之书 · The Book of Far Roads
+# 远行之书 · The Book of Far Roads · v3.0
 
 **一款中世纪欧亚旅行开放世界（1253–1453）。** 占卜不是查看结果的按钮，而是你的
 移动方式、资源系统与叙事之笔。计划上架 Steam 与 App Store。
@@ -22,9 +22,9 @@
 **无头测试**（不需要图形界面）：
 
 ```bash
-godot --headless --path . --script tests/run_tests.gd    # 11 个内核单测
+godot --headless --path . --script tests/run_tests.gd    # 15 个内核单测
 godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
-node tools/validate/validate.mjs                         # 21 道内容门禁
+node tools/validate/validate.mjs                         # 22 道内容门禁
 node tools/lore/story.mjs check                          # 译文时效
 ```
 
@@ -48,7 +48,7 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 11 单测 + 9 界面 smoke
+├── tests/                   # 15 单测 + 10 界面 smoke
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
 ├── docs/                    # 见下
@@ -70,9 +70,10 @@ fatequest/
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 183 事件 · 60 商品 · 53 随从 · 占卜四法接入玩法（易占/八字/
-签占/塔罗，另 20 法已注册待接入）。en/zh 各 1943 条文本。**21 道门禁、11 单测、
-9 smoke 全绿。** 详见 [`docs/STATUS.md`](docs/STATUS.md)。
+102 城 · 204 路线 · 199 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
+真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2132 条
+文本。**22 道门禁、15 单测、10 smoke 全绿。** 详见
+[`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线
 

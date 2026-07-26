@@ -184,19 +184,37 @@
       "id": "ev-zayton-mentor",
       "kind": "site",
       "title": "ev.zayton.mentor.title",
-      "when": { "cities": ["zayton"], "not_flags": ["fl-learned-lot"] },
+      "when": {
+        "cities": ["zayton"],
+        "not": {
+          "all": [
+            { "flags": ["fl-learned-lot"] },
+            { "flags": ["fl-learned-jiaobei"] }
+          ]
+        }
+      },
       "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
       "body": "ev.zayton.mentor.body",
-      "once": true,
+      "once": false,
       "choices": [
         {
           "label": "ev.zayton.mentor.choice.learn",
-          "needs": { "coins": { "min": 5000 } },
+          "needs": { "coins": { "min": 5000 }, "not_flags": ["fl-learned-lot"] },
           "effects": [
             { "op": "coins", "value": -5000, "reason": "a-gift-to-the-temple-diviner" },
             { "op": "days", "value": 14, "reason": "a-fortnight-learning-the-lots" },
             { "op": "learn_divination", "value": "lot", "reason": "learned-the-temple-lots" },
             { "op": "flag", "value": "fl-learned-lot", "reason": "learned-the-temple-lots" }
+          ]
+        },
+        {
+          "label": "ev.zayton.mentor.choice.learn_jiaobei",
+          "needs": { "coins": { "min": 3000 }, "not_flags": ["fl-learned-jiaobei"] },
+          "effects": [
+            { "op": "coins", "value": -3000, "reason": "offering-for-the-jiaobei-lesson" },
+            { "op": "days", "value": 3, "reason": "three-days-learning-the-cups" },
+            { "op": "learn_divination", "value": "jiaobei", "reason": "learned-jiaobei" },
+            { "op": "flag", "value": "fl-learned-jiaobei", "reason": "learned-jiaobei" }
           ]
         },
         {

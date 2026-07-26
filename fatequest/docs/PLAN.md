@@ -1,6 +1,6 @@
 # 执行计划 · PLAN
 
-**2026-07-24 全文重写。** 此前本文写的是 P2-A 刺桐纵切，那一阶段早已完成；
+**2026-07-26 全文复核。** 此前本文写的是 P2-A 刺桐纵切，那一阶段早已完成；
 旧稿存 `docs/archive/PLAN-2026-07-P2A-zayton.md`。
 
 **分工**：`STATUS.md` 讲「现在在哪」，`ROADMAP.md` 讲「阶段顺序」，本文讲
@@ -14,21 +14,21 @@
 ## 0. 现在的真实状态
 
 ```bash
-node tools/validate/validate.mjs                        # 21 道门禁
+node tools/validate/validate.mjs                        # 22 道门禁
 node tools/lore/story.mjs check                         # 译文时效
 node tools/lore/match_books.mjs                         # 三书绑定报告
-godot --headless --path . --script tests/run_tests.gd   # 11 个单测
+godot --headless --path . --script tests/run_tests.gd   # 15 个单测
 ```
 
 | 维度 | 数字 |
 |---|---|
-| 玩法系统 | 交易 · 随从 · 结局 · 图鉴 · 存档 · 占卜四法 —— **全部闭环** |
+| 玩法系统 | 交易 · 随从 · 结局 · 图鉴 · 存档 · 占卜八法 —— **全部闭环** |
 | 世界 | 102 城（12 metropolis · 21 city · 44 town · 25 station）· 204 路线 |
-| 事件 | 183 条：入城 102 · 探索点 40 · 途中 41 |
+| 事件 | 199 条：入城 102 · 探索点 51 · 途中 46 |
 | 语料背书 | 83/102 城有 `origin: "source"`（波罗 63 + 三书 20），19 城 `authored` |
-| 文本 | en/zh 各 1943 条，缺 0、中英同文 0 |
-| 测试 | 11 单测 + 9 smoke，全过 |
-| 门禁 | G1–G3、G7–G18、G20–G24 全绿 |
+| 文本 | en/zh 各 2132 条，缺 0、中英同文 0 |
+| 测试 | 15 单测 + 10 smoke，全过 |
+| 门禁 | G1–G3、G7–G18、G20–G25 全绿 |
 
 **一句话**：机器都通了，世界的密度不够——12 座主城各有 3 个探索点，另外 90 座一个都没有。
 
@@ -41,11 +41,11 @@ godot --headless --path . --script tests/run_tests.gd   # 11 个单测
 | # | 任务 | 量 | 阻塞谁 | 章节 |
 |---|---|---|---|---|
 | **T1** | 20 城入城正文按三书选段改写 | 20 城 × 2 语言 | — | §2 ✅ 2026-07-24 |
-| **T2** | 占卜第二批接入玩法 | 4–6 法 | 无 | §3 |
-| **T3** | 次级城探索点 | 21 座 city 各 2 点 | 无（T1 语体已定） | §4 |
-| **T4** | 法德兰草原 stories 转途中事件 | 约 40 条 | 无 | §5 |
-| **T5** | 补 F-3 / F-6 两项审计遗留 | 小 | 无 | §6 |
-| **T6** | 11 条弱证据复核 + 8 条查无处置 | 19 城 | 无 | §7 |
+| **T2** | 占卜第二批接入玩法 | 4 法 | 无 | §3 ✅ 2026-07-26 |
+| **T3** | 次级城探索点 | 21 座 city 各 2 点 | 无 | §4 · 需求 → `STORY_REQUIREMENTS.md` §1 |
+| **T4** | 法德兰草原 stories 转途中事件 | 约 40 条 | 无 | §5 · 需求 → `STORY_REQUIREMENTS.md` §2 |
+| **T5** | 补 F-3 / F-6 两项审计遗留 | 小 | 无 | §6 ✅ 2026-07-26 |
+| **T6** | 11 条弱证据复核 + 8 条查无处置 | 19 城 | 无 | §7 · 需求 → `STORY_REQUIREMENTS.md` §3 |
 
 ---
 
@@ -121,6 +121,10 @@ for(const [c,ps] of Object.entries(p))
 ---
 
 ## 3. T2 · 占卜第二批接入玩法
+
+> **状态（2026-07-26）**：✅ 已完成。`jiaobei`／`astrodice`／`geomancy`／`runes` 真引擎 + 拜师 +
+> ≥2 接线 + 各 30 条 en/zh 结果文（允许吉凶用语）+ G25（含负向）+
+> `test_divination_reach`／`smoke_divination`。注册表仍为 24 法。
 
 ### 3.1 起点：接口是通的，路是断的
 
@@ -235,8 +239,7 @@ func to_effects(raw: Dictionary, ctx: DivinationContext) -> Array:
 `{"op": "learn_divination", "value": "jiaobei", "reason": "..."}`。
 
 **⑤ 结果文本**：`content/story/div-jiaobei/{en,zh}.md`，30 条。
-**必须是路线建议或训诫，不是吉凶**（GDD §8.2）——「今日不宜出海」可以，
-「大吉」不可以。
+须含路线建议或训诫；**允许**大吉／大凶等吉凶用语，但不能只有空辞。
 
 **⑥ 事件接线**：至少 2 条事件的 `choices[].divination` 指向它，否则学了无处用。
 
@@ -277,12 +280,12 @@ for e in r["effects"]: _ok(e.has("reason"), "每条 effect 带 reason")      # G
 
 ### 3.6 验收
 
-- [ ] 第二批每法：引擎 + 注册 + 落库 + 拜师 + 30 条结果文本 + ≥2 处事件接线
-- [ ] `core/` 与 `game/` **除 `bootstrap.gd` 一行外零改动**——若不成立，先修契约
-- [ ] `test_divination` 扩充，`test_divination_reach` 新增，两者全过
-- [ ] `smoke_divination` 走通界面
-- [ ] G25 上线并完成负向验证
-- [ ] `DivinationRegistry.ids().size()` 仍为 24（第二批是把 soft 换成真引擎，不是加法）
+- [x] 第二批每法：引擎 + 注册 + 落库 + 拜师 + 30 条结果文本 + ≥2 处事件接线
+- [x] `core/` 与 `game/` 除 `bootstrap.gd` 与 F-3 的 `registry.gd` 外无按 method_id 分支
+- [x] `test_divination` 扩充，`test_divination_reach` 新增，两者全过
+- [x] `smoke_divination` 走通界面
+- [x] G25 上线并完成负向验证
+- [x] `DivinationRegistry.ids().size()` 仍为 24（第二批是把 soft 换成真引擎，不是加法）
 
 ---
 
@@ -352,6 +355,8 @@ console.log("总",s.length,"长度适合改途中事件",u.length)'
 
 ## 6. T5 · 审计遗留两项
 
+> **状态（2026-07-26）**：✅ F-3（`DivinationRegistry.cast` 未学守卫）与 F-6（`test_i18n`／`test_narrative`／`test_time`）已落地。
+
 ### 6.1 F-3 · 内核不校验「未拜师即起卦」
 
 **现状**：`event_machine.gd:82` 会拒绝未学的占法，但 `DivinationRegistry.cast()`
@@ -395,11 +400,11 @@ console.log("总",s.length,"长度适合改途中事件",u.length)'
 
 ## 8. 门禁增补计划
 
-现有 21 道。本阶段应补：
+现有 22 道（G25 已随 T2 落地）。后续密度任务应补：
 
 | 门禁 | 检查 | 何时建 | 负向测试 |
 |---|---|---|---|
-| **G25** | `mvp: true` 的占法必须可学、可用（§3.5d） | T2 随实现 | 清空某法 `learnAt` → 应报错 |
+| **G25** ✅ | `mvp: true` 的占法必须可学、可用（§3.5d） | 已随 T2 实现 | 已完成：清空某法 `learnAt` → 报错 |
 | **G26** | `city` 级城市探索点数量（2）与 metropolis（3）分级正确 | T3 随实现 | 给某 city 挂 3 点 → 应报错 |
 | **G27** | 途中事件的 band 分布不得过度倾斜（任一 band ≥ 50% 即警告） | T4 随实现 | 把 40 条全塞 steppe → 应警告 |
 

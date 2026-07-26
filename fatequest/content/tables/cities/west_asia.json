@@ -103,7 +103,9 @@
       },
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-alexandria-mentor-geomancy",
+      "mentor": "npc-baldacum-mentor"
     },
     {
       "id": "antiochia",
@@ -418,7 +420,9 @@
       },
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-caffa-mentor-runes",
+      "mentor": "npc-kiovia-mentor"
     },
     {
       "id": "camadi",
@@ -896,7 +900,9 @@
       },
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-kiovia-mentor-runes",
+      "mentor": "npc-kiovia-mentor"
     },
     {
       "id": "moscovia",
@@ -1078,7 +1084,8 @@
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"
-      ]
+      ],
+      "mentorEvent": "ev-ormus-mentor-astrodice"
     },
     {
       "id": "petra",

@@ -38,11 +38,14 @@ static func clear() -> void:
 
 ## Cast and convert in one step. Asserts the non-empty-effects rule at runtime
 ## so a badly written method fails loudly in dev rather than shipping as
-## decoration.
+## decoration. Also refuses unlearned methods (defense in depth with EventMachine).
 static func cast(mid: String, ctx: DivinationContext) -> Dictionary:
 	var m := get_method(mid)
 	if m == null:
 		push_error("unknown divination method: " + mid)
+		return {}
+	if ctx != null and ctx.state != null and mid not in ctx.state.learned_divinations:
+		push_error("divination '%s' used but not learned" % mid)
 		return {}
 	var raw := m.cast(ctx)
 	var effects := m.to_effects(raw, ctx)

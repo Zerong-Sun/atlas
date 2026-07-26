@@ -2,7 +2,7 @@ class_name DivinationResultView
 extends RefCounted
 
 ## Formats a Registry.cast() payload into three UI panels (symbol / reading / effects).
-## No luck/ill chrome — GDD §8.2.
+## Readings may include omen language (大吉 / 大凶); that is intentional.
 
 
 static func format(cast_result: Dictionary) -> Dictionary:

@@ -70,19 +70,33 @@
         "cities": [
           "baldacum"
         ],
-        "not_flags": [
-          "fl-learned-bazi"
-        ]
+        "not": {
+          "all": [
+            {
+              "flags": [
+                "fl-learned-bazi"
+              ]
+            },
+            {
+              "flags": [
+                "fl-learned-geomancy"
+              ]
+            }
+          ]
+        }
       },
       "body": "ev.baldacum.mentor_bazi.body",
-      "once": true,
+      "once": false,
       "choices": [
         {
           "label": "ev.baldacum.mentor_bazi.choice.learn",
           "needs": {
             "coins": {
               "min": 10000
-            }
+            },
+            "not_flags": [
+              "fl-learned-bazi"
+            ]
           },
           "effects": [
             {
@@ -104,6 +118,39 @@
               "op": "flag",
               "value": "fl-learned-bazi",
               "reason": "learned-bazi"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.mentor_bazi.choice.learn_geomancy",
+          "needs": {
+            "coins": {
+              "min": 8000
+            },
+            "not_flags": [
+              "fl-learned-geomancy"
+            ]
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -8000,
+              "reason": "fee-to-learn-geomancy"
+            },
+            {
+              "op": "days",
+              "value": 10,
+              "reason": "days-learning-geomancy"
+            },
+            {
+              "op": "learn_divination",
+              "value": "geomancy",
+              "reason": "learned-geomancy"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-geomancy",
+              "reason": "learned-geomancy"
             }
           ]
         },
@@ -130,19 +177,33 @@
         "cities": [
           "tauris"
         ],
-        "not_flags": [
-          "fl-learned-tarot"
-        ]
+        "not": {
+          "all": [
+            {
+              "flags": [
+                "fl-learned-tarot"
+              ]
+            },
+            {
+              "flags": [
+                "fl-learned-astrodice"
+              ]
+            }
+          ]
+        }
       },
       "body": "ev.tauris.mentor_tarot.body",
-      "once": true,
+      "once": false,
       "choices": [
         {
           "label": "ev.tauris.mentor_tarot.choice.learn",
           "needs": {
             "coins": {
               "min": 6000
-            }
+            },
+            "not_flags": [
+              "fl-learned-tarot"
+            ]
           },
           "effects": [
             {
@@ -164,6 +225,39 @@
               "op": "flag",
               "value": "fl-learned-tarot",
               "reason": "learned-tarot"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.mentor_tarot.choice.learn_astrodice",
+          "needs": {
+            "coins": {
+              "min": 7000
+            },
+            "not_flags": [
+              "fl-learned-astrodice"
+            ]
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -7000,
+              "reason": "fee-to-learn-astrodice"
+            },
+            {
+              "op": "days",
+              "value": 7,
+              "reason": "days-learning-astrodice"
+            },
+            {
+              "op": "learn_divination",
+              "value": "astrodice",
+              "reason": "learned-astrodice"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-astrodice",
+              "reason": "learned-astrodice"
             }
           ]
         },
@@ -239,6 +333,1020 @@
               "op": "flag",
               "value": "fl-fork-tarot-done",
               "reason": "walked-without-cards"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-mentor-jiaobei",
+      "kind": "site",
+      "title": "ev.kinsay.mentor_jiaobei.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ],
+        "not_flags": [
+          "fl-learned-jiaobei"
+        ]
+      },
+      "body": "ev.kinsay.mentor_jiaobei.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kinsay.mentor_jiaobei.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 3000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -3000,
+              "reason": "fee-to-learn-jiaobei"
+            },
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "days-learning-jiaobei"
+            },
+            {
+              "op": "learn_divination",
+              "value": "jiaobei",
+              "reason": "learned-jiaobei"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-jiaobei",
+              "reason": "learned-jiaobei"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.mentor_jiaobei.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-jiaobei",
+              "reason": "heard-of-jiaobei"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-mentor-astrodice",
+      "kind": "site",
+      "title": "ev.ormus.mentor_astrodice.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ],
+        "not_flags": [
+          "fl-learned-astrodice"
+        ]
+      },
+      "body": "ev.ormus.mentor_astrodice.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ormus.mentor_astrodice.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 7000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -7000,
+              "reason": "fee-to-learn-astrodice"
+            },
+            {
+              "op": "days",
+              "value": 7,
+              "reason": "days-learning-astrodice"
+            },
+            {
+              "op": "learn_divination",
+              "value": "astrodice",
+              "reason": "learned-astrodice"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-astrodice",
+              "reason": "learned-astrodice"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.mentor_astrodice.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-astrodice",
+              "reason": "heard-of-astrodice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-mentor-astrodice",
+      "kind": "site",
+      "title": "ev.tauris.mentor_astrodice.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ],
+        "not_flags": [
+          "fl-learned-astrodice"
+        ]
+      },
+      "body": "ev.tauris.mentor_astrodice.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.tauris.mentor_astrodice.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 7000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -7000,
+              "reason": "fee-to-learn-astrodice"
+            },
+            {
+              "op": "days",
+              "value": 7,
+              "reason": "days-learning-astrodice"
+            },
+            {
+              "op": "learn_divination",
+              "value": "astrodice",
+              "reason": "learned-astrodice"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-astrodice",
+              "reason": "learned-astrodice"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.mentor_astrodice.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-astrodice",
+              "reason": "heard-of-astrodice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-mentor-geomancy",
+      "kind": "site",
+      "title": "ev.baldacum.mentor_geomancy.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ],
+        "not_flags": [
+          "fl-learned-geomancy"
+        ]
+      },
+      "body": "ev.baldacum.mentor_geomancy.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.baldacum.mentor_geomancy.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 8000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -8000,
+              "reason": "fee-to-learn-geomancy"
+            },
+            {
+              "op": "days",
+              "value": 10,
+              "reason": "days-learning-geomancy"
+            },
+            {
+              "op": "learn_divination",
+              "value": "geomancy",
+              "reason": "learned-geomancy"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-geomancy",
+              "reason": "learned-geomancy"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.mentor_geomancy.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-geomancy",
+              "reason": "heard-of-geomancy"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-alexandria-mentor-geomancy",
+      "kind": "site",
+      "title": "ev.alexandria.mentor_geomancy.title",
+      "when": {
+        "cities": [
+          "alexandria"
+        ],
+        "not_flags": [
+          "fl-learned-geomancy"
+        ]
+      },
+      "body": "ev.alexandria.mentor_geomancy.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.mentor_geomancy.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 8000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -8000,
+              "reason": "fee-to-learn-geomancy"
+            },
+            {
+              "op": "days",
+              "value": 10,
+              "reason": "days-learning-geomancy"
+            },
+            {
+              "op": "learn_divination",
+              "value": "geomancy",
+              "reason": "learned-geomancy"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-geomancy",
+              "reason": "learned-geomancy"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.mentor_geomancy.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-geomancy",
+              "reason": "heard-of-geomancy"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kiovia-mentor-runes",
+      "kind": "site",
+      "title": "ev.kiovia.mentor_runes.title",
+      "when": {
+        "cities": [
+          "kiovia"
+        ],
+        "not_flags": [
+          "fl-learned-runes"
+        ]
+      },
+      "body": "ev.kiovia.mentor_runes.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kiovia.mentor_runes.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -5000,
+              "reason": "fee-to-learn-runes"
+            },
+            {
+              "op": "days",
+              "value": 7,
+              "reason": "days-learning-runes"
+            },
+            {
+              "op": "learn_divination",
+              "value": "runes",
+              "reason": "learned-runes"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-runes",
+              "reason": "learned-runes"
+            }
+          ]
+        },
+        {
+          "label": "ev.kiovia.mentor_runes.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-runes",
+              "reason": "heard-of-runes"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caffa-mentor-runes",
+      "kind": "site",
+      "title": "ev.caffa.mentor_runes.title",
+      "when": {
+        "cities": [
+          "caffa"
+        ],
+        "not_flags": [
+          "fl-learned-runes"
+        ]
+      },
+      "body": "ev.caffa.mentor_runes.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.caffa.mentor_runes.choice.learn",
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -5000,
+              "reason": "fee-to-learn-runes"
+            },
+            {
+              "op": "days",
+              "value": 7,
+              "reason": "days-learning-runes"
+            },
+            {
+              "op": "learn_divination",
+              "value": "runes",
+              "reason": "learned-runes"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-runes",
+              "reason": "learned-runes"
+            }
+          ]
+        },
+        {
+          "label": "ev.caffa.mentor_runes.choice.ask",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-runes",
+              "reason": "heard-of-runes"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-jiaobei-ask",
+      "kind": "site",
+      "title": "ev.zayton.jiaobei_ask.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ],
+        "flags": [
+          "fl-learned-jiaobei"
+        ],
+        "not_flags": [
+          "fl-zayton-jiaobei-asked"
+        ]
+      },
+      "body": "ev.zayton.jiaobei_ask.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.jiaobei_ask.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "jiaobei"
+            ]
+          },
+          "divination": "jiaobei",
+          "subject": "zayton",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-zayton-jiaobei-asked",
+                "reason": "jiaobei-asked-at-temple"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-zayton-jiaobei-asked",
+                "reason": "jiaobei-asked-at-temple"
+              },
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "jiaobei-laugh"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.zayton.jiaobei_ask.choice.leave",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-zayton-jiaobei-asked",
+              "reason": "left-without-cups"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-jiaobei-counsel",
+      "kind": "road",
+      "title": "ev.road.jiaobei_counsel.title",
+      "body": "ev.road.jiaobei_counsel.body",
+      "when": {
+        "bands": [
+          "china"
+        ],
+        "not_flags": [
+          "fl-road-jiaobei-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.jiaobei_counsel.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "jiaobei"
+            ]
+          },
+          "divination": "jiaobei",
+          "subject": "$to",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-road-jiaobei-done",
+                "reason": "jiaobei-road-read"
+              },
+              {
+                "op": "codex",
+                "value": "cx-jiaobei",
+                "reason": "jiaobei-road-recorded"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "jiaobei-unclear"
+              },
+              {
+                "op": "flag",
+                "value": "fl-road-jiaobei-done",
+                "reason": "jiaobei-road-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.jiaobei_counsel.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-road-jiaobei-done",
+              "reason": "walked-without-jiaobei"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-astrodice-counsel",
+      "kind": "road",
+      "title": "ev.road.astrodice_counsel.title",
+      "body": "ev.road.astrodice_counsel.body",
+      "when": {
+        "bands": [
+          "west_asia"
+        ],
+        "not_flags": [
+          "fl-road-astrodice-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.astrodice_counsel.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "astrodice"
+            ]
+          },
+          "divination": "astrodice",
+          "subject": "$to",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-road-astrodice-done",
+                "reason": "astrodice-road-read"
+              },
+              {
+                "op": "codex",
+                "value": "cx-astrodice",
+                "reason": "astrodice-road-recorded"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "astrodice-unclear"
+              },
+              {
+                "op": "flag",
+                "value": "fl-road-astrodice-done",
+                "reason": "astrodice-road-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.astrodice_counsel.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-road-astrodice-done",
+              "reason": "walked-without-astrodice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-astrodice-tide",
+      "kind": "site",
+      "title": "ev.ormus.astrodice_tide.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ],
+        "flags": [
+          "fl-learned-astrodice"
+        ],
+        "not_flags": [
+          "fl-ormus-astrodice-tide"
+        ]
+      },
+      "body": "ev.ormus.astrodice_tide.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ormus.astrodice_tide.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "astrodice"
+            ]
+          },
+          "divination": "astrodice",
+          "subject": "ormus",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-ormus-astrodice-tide",
+                "reason": "astrodice-tide-read"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-ormus-astrodice-tide",
+                "reason": "astrodice-tide-read"
+              },
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "waited-on-dice"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.ormus.astrodice_tide.choice.sail",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-astrodice-tide",
+              "reason": "sailed-without-dice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-geomancy-counsel",
+      "kind": "road",
+      "title": "ev.road.geomancy_counsel.title",
+      "body": "ev.road.geomancy_counsel.body",
+      "when": {
+        "bands": [
+          "west_asia"
+        ],
+        "not_flags": [
+          "fl-road-geomancy-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.geomancy_counsel.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "geomancy"
+            ]
+          },
+          "divination": "geomancy",
+          "subject": "$to",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-road-geomancy-done",
+                "reason": "geomancy-road-read"
+              },
+              {
+                "op": "codex",
+                "value": "cx-geomancy",
+                "reason": "geomancy-road-recorded"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "geomancy-unclear"
+              },
+              {
+                "op": "flag",
+                "value": "fl-road-geomancy-done",
+                "reason": "geomancy-road-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.geomancy_counsel.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-road-geomancy-done",
+              "reason": "walked-without-geomancy"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-geomancy-court",
+      "kind": "site",
+      "title": "ev.baldacum.geomancy_court.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ],
+        "flags": [
+          "fl-learned-geomancy"
+        ],
+        "not_flags": [
+          "fl-baldacum-geomancy-court"
+        ]
+      },
+      "body": "ev.baldacum.geomancy_court.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.baldacum.geomancy_court.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "geomancy"
+            ]
+          },
+          "divination": "geomancy",
+          "subject": "baldacum",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-baldacum-geomancy-court",
+                "reason": "geomancy-court-read"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-baldacum-geomancy-court",
+                "reason": "geomancy-court-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.baldacum.geomancy_court.choice.leave",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-geomancy-court",
+              "reason": "left-sand"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-runes-counsel",
+      "kind": "road",
+      "title": "ev.road.runes_counsel.title",
+      "body": "ev.road.runes_counsel.body",
+      "when": {
+        "bands": [
+          "steppe"
+        ],
+        "not_flags": [
+          "fl-road-runes-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.runes_counsel.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "runes"
+            ]
+          },
+          "divination": "runes",
+          "subject": "$to",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-road-runes-done",
+                "reason": "runes-road-read"
+              },
+              {
+                "op": "codex",
+                "value": "cx-runes",
+                "reason": "runes-road-recorded"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "runes-unclear"
+              },
+              {
+                "op": "flag",
+                "value": "fl-road-runes-done",
+                "reason": "runes-road-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.runes_counsel.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-road-runes-done",
+              "reason": "walked-without-runes"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kiovia-runes-ford",
+      "kind": "site",
+      "title": "ev.kiovia.runes_ford.title",
+      "when": {
+        "cities": [
+          "kiovia"
+        ],
+        "flags": [
+          "fl-learned-runes"
+        ],
+        "not_flags": [
+          "fl-kiovia-runes-ford"
+        ]
+      },
+      "body": "ev.kiovia.runes_ford.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kiovia.runes_ford.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "runes"
+            ]
+          },
+          "divination": "runes",
+          "subject": "kiovia",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-kiovia-runes-ford",
+                "reason": "runes-ford-read"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-kiovia-runes-ford",
+                "reason": "runes-ford-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.kiovia.runes_ford.choice.ford",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kiovia-runes-ford",
+              "reason": "forded-without-runes"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-road-bazi-counsel",
+      "kind": "road",
+      "title": "ev.road.bazi_counsel.title",
+      "body": "ev.road.bazi_counsel.body",
+      "when": {
+        "bands": [
+          "west_asia"
+        ],
+        "not_flags": [
+          "fl-road-bazi-done"
+        ]
+      },
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.road.bazi_counsel.choice.cast",
+          "needs": {
+            "learned_divination": [
+              "bazi"
+            ]
+          },
+          "divination": "bazi",
+          "subject": "$to",
+          "pass": {
+            "effects": [
+              {
+                "op": "flag",
+                "value": "fl-road-bazi-done",
+                "reason": "bazi-road-read"
+              },
+              {
+                "op": "codex",
+                "value": "cx-four-pillars",
+                "reason": "bazi-road-recorded"
+              }
+            ]
+          },
+          "fail": {
+            "effects": [
+              {
+                "op": "days",
+                "value": 1,
+                "reason": "bazi-unclear"
+              },
+              {
+                "op": "flag",
+                "value": "fl-road-bazi-done",
+                "reason": "bazi-road-read"
+              }
+            ]
+          }
+        },
+        {
+          "label": "ev.road.bazi_counsel.choice.walk",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-road-bazi-done",
+              "reason": "walked-without-bazi"
             }
           ]
         }

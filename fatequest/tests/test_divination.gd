@@ -1,6 +1,6 @@
 extends RefCounted
 
-## P3: registry has 24 methods; MVP cast/to_effects non-empty; EventMachine cast hook.
+## P3 + T2: registry 24; MVP cast; F-3 learned guard; second-batch engines.
 
 class FakeMethod extends DivinationMethod:
 	func id() -> String: return "fake-bones"
@@ -16,6 +16,17 @@ func _ok(c: bool, w: String) -> void:
 	if not c: printerr("  FAIL: %s" % w); _f += 1
 
 
+func _assert_method(st: WorldState, mid: String) -> void:
+	st.learned_divinations = [mid]
+	var r := DivinationRegistry.cast(mid, DivinationContext.new(st, Rng.new(mid + "-a")))
+	_ok(not r.is_empty(), "%s casts when learned" % mid)
+	_ok(not (r["effects"] as Array).is_empty(), "%s 产出非空 effects" % mid)
+	for e in r["effects"]:
+		_ok(e.has("reason"), "%s 每条 effect 带 reason" % mid)
+	var r2 := DivinationRegistry.cast(mid, DivinationContext.new(st, Rng.new(mid + "-a")))
+	_ok(r2.get("raw", {}) == r.get("raw", {}), "%s 同种子同结果" % mid)
+
+
 func run() -> bool:
 	var db := ContentDb.new()
 	db.load_all()
@@ -23,7 +34,7 @@ func run() -> bool:
 	DivinationBootstrap.register_all()
 
 	_ok(DivinationRegistry.ids().size() == 24, "registry has 24 methods (got %d)" % DivinationRegistry.ids().size())
-	for mid in ["iching", "bazi", "lot", "tarot"]:
+	for mid in ["iching", "bazi", "lot", "tarot", "jiaobei", "astrodice", "geomancy", "runes"]:
 		_ok(DivinationRegistry.has(mid), "%s registered" % mid)
 
 	var st := WorldState.new()
@@ -31,6 +42,13 @@ func run() -> bool:
 	st.city = "lop"
 	st.jdn = 2200000
 	st.birthdate_jdn = 2195000
+
+	# F-3: unlearned cast is empty
+	st.learned_divinations = []
+	var denied := DivinationRegistry.cast("iching", DivinationContext.new(st, Rng.new("div-test")))
+	_ok(denied.is_empty(), "F-3: unlearned cast returns empty")
+
+	st.learned_divinations = ["iching", "lot", "tarot", "bazi", "jiaobei", "astrodice", "geomancy", "runes", "dream"]
 	var ctx := DivinationContext.new(st, Rng.new("div-test"))
 
 	var r := DivinationRegistry.cast("iching", ctx)
@@ -66,7 +84,12 @@ func run() -> bool:
 	_ok(bazi["raw"].has("pillars"), "bazi returns pillars")
 	_ok(not (bazi["effects"] as Array).is_empty(), "bazi produces effects")
 
-	var soft := DivinationRegistry.cast("jiaobei", DivinationContext.new(st, Rng.new("jb")))
+	for mid in ["jiaobei", "astrodice", "geomancy", "runes"]:
+		_assert_method(st, mid)
+
+	# Soft methods still register and cast when learned
+	st.learned_divinations = ["dream"]
+	var soft := DivinationRegistry.cast("dream", DivinationContext.new(st, Rng.new("dr")))
 	_ok((soft["effects"] as Array).size() == 1, "soft method single codex effect")
 	_ok(String(soft["effects"][0].get("op")) == "codex", "soft effect is codex")
 
@@ -97,7 +120,8 @@ func run() -> bool:
 	var before_n := DivinationRegistry.ids().size()
 	DivinationRegistry.register(FakeMethod.new())
 	_ok(DivinationRegistry.ids().size() == before_n + 1, "new method registers")
-	var fr := DivinationRegistry.cast("fake-bones", ctx)
+	st.learned_divinations = ["fake-bones"]
+	var fr := DivinationRegistry.cast("fake-bones", DivinationContext.new(st, Rng.new("fb")))
 	_ok(not (fr["effects"] as Array).is_empty(), "new method casts and yields effects")
 
 	print("test_divination: %s" % ("PASS" if _f == 0 else "FAIL (%d)" % _f))

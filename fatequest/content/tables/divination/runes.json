@@ -1,0 +1,30 @@
+{
+  "contentVersion": 1,
+  "table": "runes",
+  "records": [
+    { "id": "rune-fehu", "name": "Fehu", "aspect": "ally" },
+    { "id": "rune-uruz", "name": "Uruz", "aspect": "travel" },
+    { "id": "rune-thurisaz", "name": "Thurisaz", "aspect": "danger" },
+    { "id": "rune-ansuz", "name": "Ansuz", "aspect": "ally" },
+    { "id": "rune-raidho", "name": "Raidho", "aspect": "travel" },
+    { "id": "rune-kenaz", "name": "Kenaz", "aspect": "travel" },
+    { "id": "rune-gebo", "name": "Gebo", "aspect": "ally" },
+    { "id": "rune-wunjo", "name": "Wunjo", "aspect": "ally" },
+    { "id": "rune-hagalaz", "name": "Hagalaz", "aspect": "danger" },
+    { "id": "rune-nauthiz", "name": "Nauthiz", "aspect": "delay" },
+    { "id": "rune-isa", "name": "Isa", "aspect": "delay" },
+    { "id": "rune-jera", "name": "Jera", "aspect": "travel" },
+    { "id": "rune-eihwaz", "name": "Eihwaz", "aspect": "hold" },
+    { "id": "rune-perthro", "name": "Perthro", "aspect": "hold" },
+    { "id": "rune-algiz", "name": "Algiz", "aspect": "ally" },
+    { "id": "rune-sowilo", "name": "Sowilo", "aspect": "travel" },
+    { "id": "rune-tiwaz", "name": "Tiwaz", "aspect": "travel" },
+    { "id": "rune-berkano", "name": "Berkano", "aspect": "ally" },
+    { "id": "rune-ehwaz", "name": "Ehwaz", "aspect": "travel" },
+    { "id": "rune-mannaz", "name": "Mannaz", "aspect": "ally" },
+    { "id": "rune-laguz", "name": "Laguz", "aspect": "travel" },
+    { "id": "rune-ingwaz", "name": "Ingwaz", "aspect": "hold" },
+    { "id": "rune-dagaz", "name": "Dagaz", "aspect": "travel" },
+    { "id": "rune-othala", "name": "Othala", "aspect": "ally" }
+  ]
+}

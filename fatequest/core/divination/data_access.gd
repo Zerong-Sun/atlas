@@ -58,5 +58,13 @@ static func solar_terms() -> Array:
 	return _db.get_table("ephemeris_solar_terms") if _db else []
 
 
+static func geomancy_figures() -> Array:
+	return _db.get_table("geomancy_figures") if _db else []
+
+
+static func runes() -> Array:
+	return _db.get_table("runes") if _db else []
+
+
 static func result_text_key(method_id: String, idx: int) -> String:
 	return "div.%s.result.%02d" % [method_id, idx]

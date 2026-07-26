@@ -4224,6 +4224,84 @@
         "slots": 6,
         "condition": "sea_only"
       }
+    },
+    {
+      "id": "npc-kiovia-mentor",
+      "name": "npc.npc-kiovia-mentor.name",
+      "roles": [
+        "diviner"
+      ],
+      "origin": {
+        "city": "kiovia",
+        "culture": "latin",
+        "faith": "orthodox"
+      },
+      "languages": [
+        "slavic",
+        "latin"
+      ],
+      "recruitAt": [
+        {
+          "cityId": "kiovia",
+          "venue": "mentor"
+        }
+      ],
+      "hireMode": [
+        "open"
+      ],
+      "wage": {
+        "amount": 500,
+        "currency": "dirham",
+        "period": "month"
+      },
+      "contract": {
+        "months": 12,
+        "renewable": true
+      },
+      "abilities": {
+        "travel": 11,
+        "guard": 9,
+        "trade": 11,
+        "language": 17,
+        "medicine": 7,
+        "cartography": 7,
+        "faith": 23,
+        "divination": 29,
+        "cargo": 3
+      },
+      "traits": {
+        "loyalty": 25,
+        "courage": 22,
+        "greed": 19,
+        "curiosity": 24,
+        "piety": 21,
+        "ambition": 20,
+        "adaptability": 23,
+        "honesty": 26
+      },
+      "fate": {
+        "company": 9,
+        "road": 8,
+        "success": 8
+      },
+      "birth": {
+        "internalDate": null,
+        "sealLevel": 1
+      },
+      "sealReason": "calendar",
+      "revealPaths": [
+        "divination",
+        "hometown",
+        "trust",
+        "learn_calendar"
+      ],
+      "yearly": [],
+      "leaveIf": {
+        "loyaltyBelow": 8
+      },
+      "relations": [],
+      "omen": "npc.npc-kiovia-mentor.omen",
+      "teaches": "divination"
     }
   ]
 }

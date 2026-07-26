@@ -738,12 +738,45 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ---- G25: mvp divinations must be learnable and usable in content
+// Static half of PLAN §3.5b. Runtime reachability is tests/test_divination_reach.gd.
+{
+  const learnGrant = new Map(); // method -> event id
+  const useCount = new Map();
+  for (const e of byTable.events ?? []) {
+    for (const ch of e.choices ?? []) {
+      for (const ef of ch.effects ?? []) {
+        if (ef.op === "learn_divination" && ef.value) {
+          learnGrant.set(String(ef.value), e.id);
+        }
+      }
+      if (ch.divination) {
+        const mid = String(ch.divination);
+        useCount.set(mid, (useCount.get(mid) ?? 0) + 1);
+      }
+    }
+  }
+  for (const d of byTable.divinations ?? []) {
+    if (!d.mvp) continue;
+    const f = recordFile.get(d.id);
+    const at = d.learnAt ?? [];
+    if (!at.length) err("G25", f, `${d.id}: mvp requires non-empty learnAt`);
+    for (const c of at) {
+      if (!cityIds.has(c)) err("G25", f, `${d.id}: learnAt city "${c}" not found`);
+    }
+    if (!learnGrant.has(d.id))
+      err("G25", f, `${d.id}: mvp has no learn_divination event`);
+    if ((useCount.get(d.id) ?? 0) < 1)
+      err("G25", f, `${d.id}: mvp has no choices[].divination use`);
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

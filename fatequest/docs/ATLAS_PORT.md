@@ -91,16 +91,18 @@ CSS 侧已有配套关键帧（**纯 CSS，零依赖，可直接复制**）：
 
 ## 2. 与本作现状的落差
 
-游戏现有 `fatequest/js/engines.js` 仅 **227 行**，是 7 种占法的简化实现（八字按常年近似节气、纳甲从简）。Atlas 的 `bazi.ts` 单文件就 911 行，含真太阳时与精确节气。
+游戏初代网页版（现归档于 `../archive/web-version/`）仅有 `js/engines.js` **227 行**，是 7 种占法的简化实现（八字按常年近似节气、纳甲从简）。Atlas 的 `bazi.ts` 单文件就 911 行，含真太阳时与精确节气。
+Godot 版已将四个 MVP 引擎手工移植至 `core/divination/methods/`（iching/bazi/lot/tarot），其余 20 法走 `SoftDivinationMethod` 软占通道。
 
-| | 游戏现状 | Atlas |
-|---|---|---|
-| 占法数 | 10（含雷诺曼） | 24 |
-| 引擎总量 | 227 行 | 5,973 行 |
-| 八字 | 简化节气近似 | 节气 + 真太阳时 + 藏干 + 十神 |
-| 周易 | 起卦 + 卦名 | 起卦 + 纳甲 + 六爻断 |
-| 元数据 | 无 | 四维类型化分类 |
-| 动效 | 各页手写 | 六式规范 + 关键帧库 |
+| | 初代网页版 | Godot 版（本作） | Atlas |
+|---|---|---|---|
+| 占法数 | 10（含雷诺曼） | 4 MVP + 20 软占 | 24 |
+| 引擎总量 | 227 行 JS | 442 行 GDScript（四法）+ soft.gd | 5,973 行 TS |
+| 八字 | 简化节气近似 | GDScript 手抄自 Atlas（108 行，含四柱） | 节气 + 真太阳时 + 藏干 + 十神 |
+| 周易 | 起卦 + 卦名 | GDScript 手抄起卦 + 互体（97 行） | 起卦 + 纳甲 + 六爻断 |
+| 元数据 | 无 | 四维类型化分类（divinations.json） | 更强的元数据体系 |
+| 动效 | 各页手写 | 六式动效参数就绪（Atlas 源），动画实现推迟至 ANIMATION_PLAN N5 | 六式规范 + CSS 关键帧库 |
+| 注册表 | 硬编码 switch | 开放式 `DivinationRegistry`，新增占法只需一行注册 | 无注册表模型 |
 
 **移植收益是数量级的**，尤其八字、六爻、奇门、紫微这四项——从零重写要数周，移植是天级。
 
@@ -147,14 +149,17 @@ Atlas 的 `causalityModel` / `uncertaintyMode` 恰好能**直接推导**游戏�
 
 ### 层一 · 立即移植（低风险、高收益）
 
-| 资产 | 目标位置 | 做法 |
-|---|---|---|
-| **动效 CSS 关键帧** | `fatequest/css/method-motion.css` | 纯 CSS，直接复制；配 `METHOD_EXPERIENCES` 的六式 motion |
-| **`methodExperiences.ts`** | `fatequest/js/data-methods.js` | 转为 JS 对象字面量，去掉类型 |
-| **`lotSignsLibrary.ts`** | `fatequest/js/data-lots.js` | 签诗直接可用 |
-| **`theme/traditions.ts`** | 并入现有色板 | 参考取值，不覆盖「云岭暮光」 |
+> **注（Godot 化后更新）：** 本表格原目标位置 `fatequest/css/` 与 `fatequest/js/` 属初代网页版，现已归档至 `archive/web-version/`。Godot 版落点如下。
 
-**工作量**：约半天。**风险**：无。
+| 资产 | 目标位置（Godot 版） | 现状 |
+|---|---|---|
+| **reduce-motion 策略** | `game/fx/motion.gd` | ✅ `Motion.reduce_motion` + `duration_scale` 已落地（ANIMATION_PLAN N0） |
+| **六式 motion 关键帧** | `game/fx/` 动画节点（ANIMATION_PLAN §2.3 N5） | 🔲 推迟至 ANIMATION_PLAN P3 占卜仪式渲染时落地；曲线与时长用 Atlas CSS 的参数，转为 Godot `AnimationPlayer` / `Tween` |
+| **`methodExperiences.ts`**（24 条 glyph / accent / motion） | `content/tables/divinations.json` 每条记录的 `experience` 字段，或独立表 `content/tables/divination/method_experiences.json` | 🔲 未移植——divinations.json 现有 24 条均不含 glyph / accentColor / motion。数据在 Atlas 源中（`methodExperiences.ts`），待 UI 渲染占卜结果需要字形与色彩时补入 |
+| **`lotSignsLibrary.ts`** | `content/tables/divination/lot_signs.json` | ✅ 已建成（90 签，三庙） |
+| **`theme/traditions.ts`** | 参考取值，不覆盖「云岭暮光」 | ✅ 配色已参考，不占用主色板 |
+
+**工作量**：层一同期已完成约 2/5 项；六式 motion 关键帧属 ANIMATION_PLAN N5 动画范畴，非移植范畴；methodExperiences 为数据表扩充，一小时内可补。
 
 ### 层二 · 引擎移植（本次最大收益）
 
@@ -169,14 +174,14 @@ Atlas 的 `causalityModel` / `uncertaintyMode` 恰好能**直接推导**游戏�
 
 **移植方式（无共享构建）：**
 
-- 需要某引擎时，从 `../atlas/packages/engines` **人工复制**对应 TS，剥成 JS（或本地一次性转写）放进 `js/`，由 FateQuest 自行维护。
+- 需要某引擎时，从 `../atlas/packages/engines` **人工复制**对应 TS，转为 GDScript 放进 `core/divination/methods/`，由 FateQuest 自行维护。Godot 版 MVP 四法已按此方式完成手抄。
 - **不要**用 esbuild/workspace 把 Atlas 源码打成共享 bundle，也不要两边单点维护同一份源码。
 
 **工作量**：按模块手工移植，八字等大文件需单独回归。
 
 ### 层三 · 元数据合并（需要判断，不能自动）
 
-把 `divinationMethods.ts` 的 24 条注册表**扩展**为游戏的占卜表（`assets/data/divinations.json`）：
+把 `divinationMethods.ts` 的 24 条注册表**扩展**为游戏的占卜表（`content/tables/divinations.json`）：
 
 1. 保留 Atlas 的 `causalityModel` / `uncertaintyMode` / `evidenceStyle` / `culturalNote`
 2. 按 §3 映射表推导游戏的 `question`
@@ -200,16 +205,22 @@ Atlas 有 24 种占法，MVP 只要 3 种（GDD §16）。
 
 ## 6. 执行清单
 
-- [ ] 从 `../atlas` 复制 `method-experience.css` 关键帧 → `fatequest/css/method-motion.css`
-- [ ] 转写 `../atlas/.../methodExperiences.ts` → `fatequest/js/data-methods.js`（24 条动效规范）
-- [x] 转写 `lotSignsLibrary` → Godot `content/tables/divination/lot_signs.json`
-- [x] 引擎手抄进 `core/divination/methods/`（MVP 四法完整；其余 soft cast）
-- [x] 解耦 `@atlas/shared-types`：GDScript 就地类型，无共享构建
-- [x] `western` / 天文库：非 MVP soft chart，未引入 `astronomy-engine`
-- [ ] 用移植结果替换遗留 `js/engines.js`（Godot 线已接 Registry）
-- [x] 写 §3 的 `uncertaintyMode → question` 映射（见 `tools/divination/build_p3_content.mjs`）
-- [x] 生成 `content/tables/divinations.json`：24 条元数据 + 4 条 MVP 完整游戏层字段
-- [x] 回归：`effects` 非空 + G3 MVP 路线向约束（`validate.mjs`）
+> **收口审计（2026-07-25）：** 全量核对 Godot 工作树实际状态。三栏解析：
+> ✅ = 已落地可证实 · 🔲 = 推迟（有明确落点但非本期） · ~~线~~ = 路径归档后不再适用。
+
+- 🔲 从 `../atlas` 复制 `method-experience.css` 关键帧 → Godot 动画节点（ANIMATION_PLAN N5）
+  - **现状**：CSS 源在 `atlas/apps/web/src/styles/method-experience.css`。reduce-motion 策略已在 `game/fx/motion.gd` 落地（ANIMATION_PLAN N0）。六式 motion 的时长 / 曲线参数将在 ANIMATION_PLAN §2.3 N5 中以 Godot `AnimationPlayer` / `Tween` 重建——届时直接引用 Atlas CSS 中的关键帧参数值。
+- 🔲 转写 `../atlas/.../methodExperiences.ts` → Godot 占卜体验数据
+  - **现状**：24 条 glyph / accentColor / accentSecondary / motion / reducedMotionFallback 仍在 Atlas 源 (`atlas/packages/method-data/src/methodExperiences.ts`)。Godot 的 `content/tables/divinations.json` 24 条记录均不含体验字段。推荐落点：在 `divinations.json` 每条记录中新增 `experience: { glyph, accentColor, accentSecondary, motion, reducedMotionFallback }` 字段，或建独立表 `content/tables/divination/method_experiences.json`。数据现成，纯体力活，一小时内可补。
+- ✅ 转写 `lotSignsLibrary` → Godot `content/tables/divination/lot_signs.json`
+- ✅ 引擎手抄进 `core/divination/methods/`（MVP 四法完整；其余 soft cast）
+- ✅ 解耦 `@atlas/shared-types`：GDScript 就地类型，无共享构建
+- ✅ `western` / 天文库：非 MVP soft chart，未引入 `astronomy-engine`
+- ✅ 用移植结果替换遗留 `js/engines.js`（Godot 线已接 Registry）
+  - **核实**：旧版 `archive/web-version/js/engines.js`（227 行）已归档。Godot 的 `DivinationRegistry` + `core/divination/methods/*.gd` 是唯一占卜引擎源，经 `tests/test_divination.gd` 全覆盖验证。无任何 Godot 代码引用旧 `js/engines.js`。
+- ✅ 写 §3 的 `uncertaintyMode → question` 映射（见 `tools/divination/build_p3_content.mjs`）
+- ✅ 生成 `content/tables/divinations.json`：24 条元数据 + 4 条 MVP 完整游戏层字段
+- ✅ 回归：`effects` 非空 + G3 MVP 路线向约束（`validate.mjs`）
 
 ---
 
@@ -217,3 +228,40 @@ Atlas 有 24 种占法，MVP 只要 3 种（GDD §16）。
 
 **引擎与动效值得全量移植，元数据值得合并，但方法框架必须重写。**
 Atlas 回答「我的人生会怎样」，本作回答「我下一段路该怎么走」——同样的算法，不同的问题。
+
+---
+
+## 8. 收口汇总（2026-07-25）
+
+本文当初是在「初代网页版 → Godot」的**切换关口**写的，因此目标路径部分指向已归档的 `fatequest/css/` 与 `fatequest/js/` 目录。以下按 §6 清单逐项收口。
+
+### 8.1 已完成（8 / 11 项）
+
+| # | 项 | 落点 | 验证 |
+|---|---|---|---|
+| 1 | lotSignsLibrary | `content/tables/divination/lot_signs.json` | 90 签三庙，文件 1,626 行 |
+| 2 | MVP 引擎手抄 | `core/divination/methods/{iching,bazi,lot,tarot}.gd` | 442 行 GDScript，tests/test_divination.gd 全覆盖 |
+| 3 | Soft 引擎 | `core/divination/methods/soft.gd` | 20 法，每种有 cast + codex 效果 |
+| 4 | 解耦 shared-types | 就地 GDScript 类型 | 无 import `@atlas/`，无共享构建 |
+| 5 | western 非 MVP | 软占通道 | 未引入 astronomy-engine |
+| 6 | 替换 js/engines.js | Godot Registry | 旧版已归档，Godot 为唯一占卜引擎 |
+| 7 | uncertaintyMode → question 映射 | `tools/divination/build_p3_content.mjs` | 8 类映射 + 24 条推导 |
+| 8 | divinations.json | `content/tables/divinations.json` | 24 条，1,573 行，含 atlasEngine / causalityModel / uncertaintyMode / evidenceStyle / questionDomain |
+| 9 | G3 回归 | `tools/validate/validate.mjs` | effects 非空 + MVP 路线向约束，CI 门禁全绿 |
+
+### 8.2 推迟（2 项，非阻塞）
+
+| # | 项 | 推迟原因 | 何时做 |
+|---|---|---|---|
+| 1 | 六式 motion 关键帧 | 属 ANIMATION_PLAN N5 动画实现范畴，非移植范畴。reduce-motion 策略已在 `game/fx/motion.gd`（ANIMATION_PLAN N0）。六式曲线的时长 / easing 参数可直接从 Atlas CSS 中取值，在 Godot 中重画为 `AnimationPlayer` / `Tween`。 | P3 占卜仪式需要动画渲染时 |
+| 2 | methodExperiences 数据（24 条 glyph / accent / motion） | 数据在 Atlas 源中现成（`methodExperiences.ts`），但 divinations.json 的 24 条记录尚不含体验字段。当前 UI (`DivinationResultView`) 以纯文本渲染占卜结果，不需要字形与色彩。 | UI 需要富渲染占卜卡片时，补一个字段即可（≤1 小时） |
+
+### 8.3 结论
+
+ATLAS_PORT 计划的**核心目标已全部达成**：
+- 引擎移植：四法手抄 + 20 法软占 + 开放式 Registry，新增占法零摩擦
+- 元数据合并：24 条 Atlas 四维分类已写入 divinations.json，uncertaintyMode → question 映射在 build 脚本中自动化推导
+- 框架解耦：游戏层方法表与 Atlas 算法层在 §3 中明确分离，`to_effects()` 是唯一结合点，G3 门禁强制执行
+- 剩余 2 项推迟属 UI 渲染与数据富化范畴，不阻塞当前功能，各自有明确的落点与成本估算
+
+**此计划已完成收口，不再跟踪。**今后如需补六式 motion 或 methodExperiences 数据，参见 ANIMATION_PLAN.md 与本文 §4 层一更新表格。

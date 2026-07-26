@@ -14,13 +14,9 @@ const SOFT_METHODS := [
 	["western", "chart"],
 	["vedic", "chart"],
 	["numerology", "chart"],
-	["runes", "draw"],
-	["geomancy", "symbol"],
-	["jiaobei", "yesno"],
 	["xiangmian", "symbol"],
 	["palmistry", "symbol"],
 	["fengshui", "chart"],
-	["astrodice", "dice"],
 	["lenormand", "draw"],
 	["oracle", "draw"],
 	["coffee", "symbol"],
@@ -34,5 +30,9 @@ static func register_all() -> void:
 	DivinationRegistry.register(BaziMethod.new())
 	DivinationRegistry.register(LotMethod.new())
 	DivinationRegistry.register(TarotMethod.new())
+	DivinationRegistry.register(JiaobeiMethod.new())
+	DivinationRegistry.register(AstrodiceMethod.new())
+	DivinationRegistry.register(GeomancyMethod.new())
+	DivinationRegistry.register(RunesMethod.new())
 	for pair in SOFT_METHODS:
 		DivinationRegistry.register(SoftDivinationMethod.new(String(pair[0]), String(pair[1])))

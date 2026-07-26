@@ -1,0 +1,22 @@
+{
+  "contentVersion": 1,
+  "table": "geomancy_figures",
+  "records": [
+    { "id": "gf-populus", "name": "Populus", "verdict": "hold", "rows": [0, 0, 0, 0] },
+    { "id": "gf-via", "name": "Via", "verdict": "go", "rows": [1, 1, 1, 1] },
+    { "id": "gf-albus", "name": "Albus", "verdict": "hold", "rows": [0, 1, 0, 0] },
+    { "id": "gf-conjuctio", "name": "Conjunctio", "verdict": "go", "rows": [0, 1, 1, 0] },
+    { "id": "gf-puella", "name": "Puella", "verdict": "go", "rows": [1, 0, 1, 0] },
+    { "id": "gf-amissio", "name": "Amissio", "verdict": "stop", "rows": [1, 0, 0, 1] },
+    { "id": "gf-fortunaminor", "name": "Fortuna Minor", "verdict": "go", "rows": [1, 1, 0, 0] },
+    { "id": "gf-puer", "name": "Puer", "verdict": "hold", "rows": [1, 0, 1, 1] },
+    { "id": "gf-rubeus", "name": "Rubeus", "verdict": "stop", "rows": [0, 0, 1, 0] },
+    { "id": "gf-acquisitio", "name": "Acquisitio", "verdict": "go", "rows": [0, 1, 0, 1] },
+    { "id": "gf-carcer", "name": "Carcer", "verdict": "stop", "rows": [1, 0, 0, 0] },
+    { "id": "gf-tristitia", "name": "Tristitia", "verdict": "stop", "rows": [0, 0, 0, 1] },
+    { "id": "gf-laetitia", "name": "Laetitia", "verdict": "go", "rows": [1, 0, 0, 0] },
+    { "id": "gf-caput", "name": "Caput Draconis", "verdict": "go", "rows": [0, 1, 1, 1] },
+    { "id": "gf-cauda", "name": "Cauda Draconis", "verdict": "stop", "rows": [1, 1, 1, 0] },
+    { "id": "gf-fortunamajor", "name": "Fortuna Major", "verdict": "go", "rows": [0, 0, 1, 1] }
+  ]
+}

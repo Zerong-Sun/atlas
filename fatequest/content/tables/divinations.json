@@ -934,9 +934,12 @@
       "id": "runes",
       "name": "div.runes.name",
       "culture": "latin",
-      "mvp": false,
-      "learnAt": [],
-      "teacher": "",
+      "mvp": true,
+      "learnAt": [
+        "kiovia",
+        "caffa"
+      ],
+      "teacher": "npc-kiovia-mentor",
       "question": "person",
       "inputs": [
         "question"
@@ -945,18 +948,144 @@
         "route"
       ],
       "outputs": {
-        "advice": "codex_only",
-        "confidence": 0.5,
-        "horizon": "day"
+        "advice": "event_bearing",
+        "confidence": 0.6,
+        "horizon": "leg"
       },
       "effects": [
         {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "runes-named-a-bearing"
+        },
+        {
           "op": "codex",
           "value": "cx-runes",
-          "reason": "runes-recorded-in-codex"
+          "reason": "runes-recorded"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.runes.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.runes.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.runes.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.runes.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.runes.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.runes.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.runes.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.runes.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.runes.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.runes.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.runes.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.runes.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.runes.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.runes.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.runes.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.runes.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.runes.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.runes.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.runes.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.runes.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.runes.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.runes.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.runes.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.runes.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.runes.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.runes.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.runes.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.runes.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.runes.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.runes.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -977,9 +1106,12 @@
       "id": "geomancy",
       "name": "div.geomancy.name",
       "culture": "islamic",
-      "mvp": false,
-      "learnAt": [],
-      "teacher": "",
+      "mvp": true,
+      "learnAt": [
+        "baldacum",
+        "alexandria"
+      ],
+      "teacher": "npc-baldacum-mentor",
       "question": "risk",
       "inputs": [
         "question"
@@ -988,18 +1120,144 @@
         "route"
       ],
       "outputs": {
-        "advice": "codex_only",
-        "confidence": 0.5,
+        "advice": "risk_yes_no",
+        "confidence": 0.6,
         "horizon": "day"
       },
       "effects": [
         {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "geomancy-opened-the-road"
+        },
+        {
           "op": "codex",
           "value": "cx-geomancy",
-          "reason": "geomancy-recorded-in-codex"
+          "reason": "geomancy-recorded"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.geomancy.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.geomancy.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.geomancy.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.geomancy.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.geomancy.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.geomancy.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.geomancy.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.geomancy.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.geomancy.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.geomancy.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.geomancy.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.geomancy.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.geomancy.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.geomancy.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.geomancy.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.geomancy.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.geomancy.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.geomancy.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.geomancy.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.geomancy.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.geomancy.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.geomancy.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.geomancy.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.geomancy.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.geomancy.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.geomancy.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.geomancy.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.geomancy.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.geomancy.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.geomancy.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1193,9 +1451,12 @@
       "id": "jiaobei",
       "name": "div.jiaobei.name",
       "culture": "east_asia",
-      "mvp": false,
-      "learnAt": [],
-      "teacher": "",
+      "mvp": true,
+      "learnAt": [
+        "zayton",
+        "kinsay"
+      ],
+      "teacher": "npc-zayton-mentor",
       "question": "risk",
       "inputs": [
         "question"
@@ -1204,18 +1465,144 @@
         "route"
       ],
       "outputs": {
-        "advice": "codex_only",
-        "confidence": 0.5,
+        "advice": "yes_no_permission",
+        "confidence": 0.7,
         "horizon": "day"
       },
       "effects": [
         {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "jiaobei-granted"
+        },
+        {
           "op": "codex",
           "value": "cx-jiaobei",
-          "reason": "jiaobei-recorded-in-codex"
+          "reason": "jiaobei-recorded"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.jiaobei.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.jiaobei.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.jiaobei.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.jiaobei.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.jiaobei.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.jiaobei.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.jiaobei.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.jiaobei.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.jiaobei.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.jiaobei.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.jiaobei.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.jiaobei.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.jiaobei.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.jiaobei.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.jiaobei.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.jiaobei.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.jiaobei.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.jiaobei.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.jiaobei.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.jiaobei.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.jiaobei.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.jiaobei.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.jiaobei.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.jiaobei.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.jiaobei.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.jiaobei.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.jiaobei.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.jiaobei.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.jiaobei.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.jiaobei.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1361,9 +1748,12 @@
       "id": "astrodice",
       "name": "div.astrodice.name",
       "culture": "islamic",
-      "mvp": false,
-      "learnAt": [],
-      "teacher": "",
+      "mvp": true,
+      "learnAt": [
+        "tauris",
+        "ormus"
+      ],
+      "teacher": "npc-tauris-mentor",
       "question": "timing",
       "inputs": [
         "question"
@@ -1372,18 +1762,144 @@
         "route"
       ],
       "outputs": {
-        "advice": "codex_only",
-        "confidence": 0.5,
-        "horizon": "day"
+        "advice": "timing_window",
+        "confidence": 0.65,
+        "horizon": "season"
       },
       "effects": [
         {
+          "op": "reveal_map",
+          "value": "$subject",
+          "reason": "astrodice-named-a-window"
+        },
+        {
           "op": "codex",
           "value": "cx-astrodice",
-          "reason": "astrodice-recorded-in-codex"
+          "reason": "astrodice-recorded"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.astrodice.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.astrodice.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.astrodice.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.astrodice.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.astrodice.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.astrodice.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.astrodice.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.astrodice.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.astrodice.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.astrodice.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.astrodice.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.astrodice.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.astrodice.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.astrodice.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.astrodice.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.astrodice.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.astrodice.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.astrodice.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.astrodice.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.astrodice.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.astrodice.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.astrodice.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.astrodice.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.astrodice.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.astrodice.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.astrodice.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.astrodice.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.astrodice.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.astrodice.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.astrodice.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
