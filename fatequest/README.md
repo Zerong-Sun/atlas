@@ -4,7 +4,8 @@
 移动方式、资源系统与叙事之笔。计划上架 Steam 与 App Store。
 
 > **本目录是 Godot 版——现行且唯一在维护的实现。** 初代网页版（静态 HTML/JS/PWA）
-> 已归档在 [`archive/web-version/`](archive/web-version/)，冻结留档、不进 CI。
+> 已归档在 [`archive/web-version/`](archive/web-version/)，所有旧分支版本与恢复方式见
+> [`archive/README.md`](archive/README.md)；它们冻结留档、不进 CI。
 
 ---
 
@@ -52,7 +53,7 @@ fatequest/
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
 ├── docs/                    # 见下
-└── archive/web-version/     # 归档的初代网页版
+└── archive/                 # 旧版本索引 + 初代网页版快照
 ```
 
 ## 文档地图
@@ -66,6 +67,7 @@ fatequest/
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
 | [`docs/AUDIT_2026-07.md`](docs/AUDIT_2026-07.md) | 六方面验证报告与修复清单 |
 | [`docs/LORE_PIPELINE.md`](docs/LORE_PIPELINE.md) · [`L10N_PLAN.md`](docs/L10N_PLAN.md) | 语料接入 · 多语言 |
+| [`archive/README.md`](archive/README.md) | 旧分支版本、最终提交与恢复方式 |
 
 ## 现状一览
 
