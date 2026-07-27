@@ -59,6 +59,7 @@ var _codex_view: PanelContainer
 var _archetype_id: String = ""
 var _roster: Roster
 var _party: Dictionary = {}
+var _hire_ui: HireContract
 var _ending: Ending
 var _ending_ui: Dictionary = {}
 var _transit_layer: Control
@@ -451,6 +452,9 @@ func _build_map() -> void:
 	_codex_view.closed.connect(func(): _codex_layer.visible = false)
 
 	_build_party()
+	_hire_ui = preload("res://game/ui/hire_contract.gd").new()
+	_hire_ui.build(self)
+	_hire_ui.confirmed.connect(_on_hire_confirmed)
 	_build_ending()
 	_build_bag()
 	_build_settings()
@@ -812,8 +816,24 @@ func _open_party() -> void:
 		list.add_child(Panels.label("此地可雇：", UiScale.ui(), Palette.ink()))
 		for r in pool:
 			list.add_child(_hire_row(r))
+
+	var short := _roster.divined_shortlist(state, state.city, rng)
+	if not short.is_empty():
+		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.label("占卜抽选：", UiScale.ui(), Palette.ink()))
+		for entry in short:
+			list.add_child(_divined_hire_row(entry))
 	_party["layer"].visible = true
 	Motion.crossfade_in(_party["layer"], 0.18)
+
+
+func _on_hire_confirmed(rec: Dictionary) -> void:
+	var res := executor.execute(state, _roster.hire_effects(rec),
+		{"rng": rng, "event_id": "hire"})
+	for line in res.log_lines:
+		_say("  · %s" % line)
+	_refresh_hud()
+	_open_party()
 
 
 func _party_row(m: Dictionary) -> Control:
@@ -835,6 +855,17 @@ func _party_row(m: Dictionary) -> Control:
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		row.add_child(tr)
+
+	var seal := MapArt.seal_wax()
+	if seal == null:
+		seal = MapArt.contract_art("sealed")
+	if seal != null:
+		var st := TextureRect.new()
+		st.texture = seal
+		st.custom_minimum_size = Vector2(28, 28)
+		st.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		st.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(st)
 
 	var col := VBoxContainer.new()
 	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -903,12 +934,40 @@ func _hire_row(rec: Dictionary) -> Control:
 
 	var btn := Panels.styled_button("雇", Callable())
 	btn.pressed.connect(func():
-		var res := executor.execute(state, _roster.hire_effects(rec),
-			{"rng": rng, "event_id": "hire"})
-		for line in res.log_lines:
-			_say("  · %s" % line)
-		_refresh_hud()
-		_open_party())
+		_hire_ui.open(rec, culture, "open"))
+	row.add_child(btn)
+	return panel
+
+
+func _divined_hire_row(entry: Dictionary) -> Control:
+	var rec: Dictionary = entry.get("retainer", {})
+	var verdict := String(entry.get("verdict", ""))
+	var panel := PanelContainer.new()
+	panel.add_theme_stylebox_override("panel", Palette.panel_style(true))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	panel.add_child(row)
+
+	var here := db.get_record(state.city)
+	var culture := String(here.get("culture", "latin"))
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	if portrait != null:
+		var tr := TextureRect.new()
+		tr.texture = portrait
+		tr.custom_minimum_size = Vector2(48, 60)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
+
+	var col := VBoxContainer.new()
+	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(col)
+	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
+	col.add_child(Panels.label(I18n.fmt(verdict), UiScale.ui() - 3, Palette.ink_soft()))
+
+	var btn := Panels.styled_button("雇", Callable())
+	btn.pressed.connect(func():
+		_hire_ui.open(rec, culture, "divined", verdict))
 	row.add_child(btn)
 	return panel
 

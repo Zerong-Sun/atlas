@@ -53,12 +53,20 @@ func _init():
         return
     hire_btn.pressed.emit()
     await process_frame
+    # Hire opens the parchment ritual; confirm with 缔结.
+    var seal_btn = _button_in(n, "缔结")
+    _ok(seal_btn != null, "hire ritual shows 缔结")
+    if seal_btn == null:
+        _done()
+        return
+    seal_btn.pressed.emit()
+    await n.get_tree().create_timer(1.0).timeout
 
     var land: int = n._roster.effective_slots(n.state, "land")
     var sea: int = n._roster.effective_slots(n.state, "sea")
     print("PARTY: party=%d  land %d->%d  sea %d->%d"
         % [n.state.retainers.size(), base_land, land, base_sea, sea])
-    _ok(n.state.retainers.size() == 1, "pressing 雇 puts exactly one person in the party")
+    _ok(n.state.retainers.size() == 1, "confirming 缔结 puts exactly one person in the party")
     _ok(land > base_land, "a porter's hold shows up on land")
     _ok(sea == base_sea, "and not at sea")
 
