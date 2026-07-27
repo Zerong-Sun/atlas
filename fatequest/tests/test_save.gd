@@ -43,6 +43,7 @@ func run() -> bool:
 	_ok(got.once_fired == st.once_fired, "once-fired events survive")
 	_ok(got.stickers == st.stickers, "stickers survive")
 	_ok(got.codex == st.codex, "codex survives")
+	_ok(got.etiquette == st.etiquette, "etiquette survives")
 	_ok(got.fate == st.fate, "fate bars survive")
 
 	# --- every field is covered --------------------------------------------
@@ -129,4 +130,5 @@ func _populate() -> WorldState:
 	st.stickers.append("st-zayton-haven")
 	st.codex.append("cx-monsoon")
 	st.codex.append("cx-balc")
+	st.etiquette = {"china": 2, "steppe": 1}
 	return st

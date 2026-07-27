@@ -27,5 +27,15 @@ func run() -> bool:
 	_ok(ev.evaluate({"coins": {"min": 50}}, st) == true, "coins min")
 	_ok(ev.evaluate({"coins": {"min": 500}}, st) == false, "coins min fail")
 
+	# ------------------------------------------------- etiquette & retainers
+	st.etiquette = {"china": 3}
+	st.retainers = [{"id": "npc-guard"}]
+	_ok(ev.evaluate({"etiquette": {"scope": "china", "value": 2}}, st) == true, "etiquette meets threshold")
+	_ok(ev.evaluate({"etiquette": {"scope": "china", "value": 5}}, st) == false, "etiquette below threshold")
+	_ok(ev.evaluate({"etiquette": {"scope": "steppe", "value": 1}}, st) == false, "unvisited region = 0")
+	_ok(ev.evaluate({"has_retainer": {"id": "npc-guard"}}, st) == true, "has_retainer by id")
+	_ok(ev.evaluate({"has_retainer": {"id": "npc-missing"}}, st) == false, "has_retainer missing id")
+	_ok(ev.evaluate({"has_retainer": {}}, st) == false, "has_retainer empty = false")
+
 	print("test_narrative: %s" % ("PASS" if _f == 0 else "FAIL (%d)" % _f))
 	return _f == 0

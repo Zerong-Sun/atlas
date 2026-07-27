@@ -12,6 +12,7 @@ const _LEAF_KEYS := [
 	"cities", "bands", "faiths", "season", "years",
 	"flags", "not_flags", "has_item", "lacks_item",
 	"learned_divination", "language", "min_reputation", "fate", "coins",
+	"etiquette", "has_retainer",
 ]
 
 
@@ -112,6 +113,22 @@ func _leaf(key: String, val: Variant, state: WorldState, ctx: Dictionary) -> boo
 			if val.has("max") and state.coins > int(val["max"]):
 				return false
 			return true
+		"etiquette":
+			# {scope, min} — must know the customs of a region at least this well.
+			var region := String(val.get("scope", ""))
+			var min_lvl := int(val.get("value", 0))
+			return int(state.etiquette.get(region, 0)) >= min_lvl
+		"has_retainer":
+			# {id} or {role} — is a specific person or kind of person in the party.
+			# Role-based checks require retainer record lookup (via ContentDb); until
+			# the evaluator carries a db reference, only id-based lookups are supported.
+			var want_id := String(val.get("id", ""))
+			if want_id != "":
+				for r in state.retainers:
+					if String(r.get("id", "")) == want_id:
+						return true
+				return false
+			return false
 	return false
 
 

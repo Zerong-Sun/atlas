@@ -217,7 +217,14 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 					m["seal"] = maxi(0, int(m.get("seal", 3)) - maxi(1, int(val)))
 					return true
 			return false
-			return true
+		"etiquette":
+			# Per-culture-region familiarity (CODE_PLAN §3.2). Level 0 = outsider,
+			# higher values grant access to culturally-gated choices.
+			var region := String(e.get("scope", ""))
+			if region.is_empty():
+				push_error("etiquette effect missing scope")
+				return false
+			state.etiquette[region] = clampi(int(state.etiquette.get(region, 0)) + int(val), 0, 31)
 		_:
 			push_error("Unknown effect op: %s" % op)
 			return false

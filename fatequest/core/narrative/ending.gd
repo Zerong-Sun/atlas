@@ -119,6 +119,11 @@ func _codex_total() -> int:
 			for eff in ch.get("effects", []):
 				if String(eff.get("op", "")) == "codex":
 					seen[String(eff.get("value", ""))] = true
+			# Divination pass/fail branches may also grant codex entries.
+			for branch in [ch.get("pass", {}).get("effects", []), ch.get("fail", {}).get("effects", [])]:
+				for eff in branch:
+					if String(eff.get("op", "")) == "codex":
+						seen[String(eff.get("value", ""))] = true
 	return seen.size()
 
 

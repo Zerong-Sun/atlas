@@ -33,6 +33,7 @@ var retainers: Array = []
 var once_fired: Dictionary = {}       ## event_id -> true
 var stickers: Array[String] = []
 var codex: Array[String] = []
+var etiquette: Dictionary = {}         ## culture_region -> level (CODE_PLAN §3.2)
 var birthdate_jdn: int = -1           ## player natal day for bazi; -1 = unset
 
 ## Journey record (GDD §14). The epilogue has to name the road this player
@@ -78,6 +79,7 @@ func duplicate_state() -> WorldState:
 	s.once_fired = once_fired.duplicate(true)
 	s.stickers = stickers.duplicate()
 	s.codex = codex.duplicate()
+	s.etiquette = etiquette.duplicate(true)
 	s.birthdate_jdn = birthdate_jdn
 	s.start_city = start_city
 	s.visited = visited.duplicate()

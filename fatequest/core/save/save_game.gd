@@ -69,6 +69,7 @@ static func serialize(state: WorldState, clock: WorldClock, extra: Dictionary = 
 			"once_fired": state.once_fired.duplicate(true),
 			"stickers": Array(state.stickers),
 			"codex": Array(state.codex),
+			"etiquette": state.etiquette.duplicate(true),
 			"birthdate_jdn": state.birthdate_jdn,
 			"start_city": state.start_city,
 			"visited": Array(state.visited),
@@ -118,11 +119,17 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.flags = (src.get("flags", {}) as Dictionary).duplicate(true)
 	st.city_reputation = (src.get("city_reputation", {}) as Dictionary).duplicate(true)
 	st.band_reputation = (src.get("band_reputation", {}) as Dictionary).duplicate(true)
-	st.retainers = (src.get("retainers", []) as Array).duplicate(true)
+	# Retainer state arrives from JSON where integral values are floats
+	# (mood: 16.0, seal: 3.0). _normalize fixes the whole class before any
+	# comparison or arithmetic sees the wrong type.
+	var raw_retainers: Array = src.get("retainers", [])
+	for r in raw_retainers:
+		st.retainers.append(ContentDb._normalize(r))
 	st.once_fired = (src.get("once_fired", {}) as Dictionary).duplicate(true)
 	st.longest_leg = (src.get("longest_leg", {}) as Dictionary).duplicate(true)
 	st.best_trade = (src.get("best_trade", {}) as Dictionary).duplicate(true)
 	st.purchases = (src.get("purchases", {}) as Dictionary).duplicate(true)
+	st.etiquette = (src.get("etiquette", {}) as Dictionary).duplicate(true)
 
 	return {"state": st, "clock": WorldClock.new(st.jdn), "extra": d.get("extra", {})}
 

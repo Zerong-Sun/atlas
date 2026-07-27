@@ -152,7 +152,7 @@ for (const g of byTable.goods ?? []) {
 // --------------------------------- G10: every effect carries a reason
 const CONDITION_KEYS = new Set(["any","all","not","cities","bands","faiths","season","years",
   "flags","not_flags","has_item","lacks_item","learned_divination","language",
-  "min_reputation","fate","coins"]);
+  "min_reputation","fate","coins","etiquette","has_retainer"]);
 const OPS = new Set(["coins","days","goods","item","remove_item","cargo_slots","reputation",
   "faith","language","etiquette","fate","unlock_route","reveal_map","learn_divination",
   "flag","unflag","goto","recruit","dismiss","retainer_mood","reveal_birth","sticker","codex"]);
