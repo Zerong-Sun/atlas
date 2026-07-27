@@ -2,7 +2,7 @@
 unit: bethleem
 lang: zh
 source: en
-source_rev: cb06574a12af
+source_rev: 3aa8afdc8aa7
 status: translated
 translator: 人工校译
 notes: >
@@ -14,7 +14,7 @@ stamps:
   city.bethleem.name: 553ac13cf2d0
   ev.bethleem.entry.choice.pass: d9ca0c28a951
   ev.bethleem.entry.choice.rest: cc453f19a435
-  ev.bethleem.entry.body: 2974e5d0e1a5
+  ev.bethleem.entry.body: b4524c38d75a
   ev.bethleem.entry.title: ddb576403943
 ---
 
@@ -32,8 +32,7 @@ stamps:
 
 ## ev.bethleem.entry.body
 
-伯利恒——小丘上的小镇，基督徒尊为吾主诞生之地。朝圣者来看圣诞洞窟；自耶路撒冷之路短而陡，
-修道院供面包与歇宿。
+你自耶路撒冷循白石短陡之路上行，至小丘上的伯利恒——小镇耳，然基督徒尊为吾主诞生之地。朝圣者拥至圣诞洞窟；烛烟贴岩，拉丁与东方礼仪轮次守时。你须知道，此地修道院以慈善之名，向求宿者供面包、橄榄与一席卧处。橄榄梯田环坡；牧人驱羊仍如旧记。岭上东望死海烟霾，午后回耶路撒冷之路在日光中闪亮。
 
 ## ev.bethleem.entry.title
 

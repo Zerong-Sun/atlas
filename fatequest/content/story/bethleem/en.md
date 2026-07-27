@@ -15,9 +15,15 @@ Bethleem
 
 ## ev.bethleem.entry.body
 
-Bethlehem — a small town on a hill, holy to Christians as the birthplace of the Lord.
-Pilgrims come to see the Grotto of the Nativity; the road from Jerusalem is short but
-steep, and the monasteries offer bread and shelter.
+You climb from Jerusalem by a short, steep road of white stone and come
+to Bethlehem on its hill — a small town, yet holy to Christians as the
+birthplace of the Lord. Pilgrims throng the Grotto of the Nativity; candles
+smoke against the rock, and the Latin and Eastern rites keep their hours in
+turn. You must know that the monasteries here offer bread, olives, and a
+pallet to any traveller who asks in the name of charity. Olive terraces
+ring the slopes; shepherds still drive flocks as they did in the old
+accounts. From the ridge you may see the Dead Sea haze to the east, and the
+road back to Jerusalem glittering in the afternoon light.
 
 ## ev.bethleem.entry.choice.pass
 

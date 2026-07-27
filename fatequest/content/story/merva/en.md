@@ -15,9 +15,15 @@ Merva
 
 ## ev.merva.entry.body
 
-Merv — the Queen of the World in its day, now a ghost of ruined walls and silted canals.
-The Mongol rider left nothing standing a generation ago, but the oasis still waters a
-few caravans between Bokhara and Persia.
+You ride into Merv across the oasis, and the first sight is ruin —
+mud-brick walls broken open to the sky, canals silted to green pools where
+ducks nest. Men still call it the Queen of the World, for in its day no
+caravan from Bokhara to Persia passed without paying toll at its gates. You
+must know that a generation past the Mongol riders left scarce a house
+standing; yet wells still yield, and a handful of hostels shelter those who
+dare the road. Date-palms and melon-plots cling to the watercourses. At dusk
+the dust rises like smoke, and the call to prayer comes from a single
+patched mosque among the rubble.
 
 ## ev.merva.entry.choice.pass
 

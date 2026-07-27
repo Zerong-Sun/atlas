@@ -15,9 +15,15 @@ Ctesiphon
 
 ## ev.ctesiphon.entry.body
 
-Ctesiphon — the ghost of Sassanian glory. The great arch of the Taq-i-Kisra still
-stands, the largest brick span in the world, but the palace halls are empty now, and the
-Tigris has shifted its course away from the ruins.
+You approach Ctesiphon along the Tigris and see first the great arch —
+the Taq-i-Kisra — a brick span so wide that no mason of this age would
+attempt its like. This was the glory of the Sassanian kings: audience halls,
+gardens, and a city facing Seleucia across the water. You must know that the
+palace halls stand empty now, and the river has shifted its bed, leaving the
+ruins half a league from the shore. Shepherds graze among fallen columns;
+brick-pickers cart away what they may. Yet travellers still pause beneath
+the arch to measure its height with the eye, and to remember that empires
+fall while the road goes on.
 
 ## ev.ctesiphon.entry.choice.pass
 

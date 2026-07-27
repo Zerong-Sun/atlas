@@ -2,7 +2,7 @@
 unit: merva
 lang: zh
 source: en
-source_rev: 22a945e9a2f0
+source_rev: 01c846ebd323
 status: translated
 translator: 人工校译
 notes: >
@@ -14,7 +14,7 @@ stamps:
   city.merva.name: ca3d69af7f0f
   ev.merva.entry.choice.pass: d9ca0c28a951
   ev.merva.entry.choice.rest: cc453f19a435
-  ev.merva.entry.body: e99320743ec0
+  ev.merva.entry.body: e4f4a555414e
   ev.merva.entry.title: 8652314e32aa
 ---
 
@@ -32,8 +32,7 @@ stamps:
 
 ## ev.merva.entry.body
 
-木鹿——昔日世界之后，如今只余残墙与淤塞的运河。一代之前蒙古骑手过处，无一物直立；
-然绿洲仍浇灌不花剌与波斯之间稀少的商队。
+你越过绿洲入木鹿，所见先是废墟——土砖墙裂向天空，运河淤成绿潭，鸭巢其间。人犹称它世界之后，因当年自不花剌至波斯，无商队不经其门纳税。你须知道，一代之前蒙古骑手过处，屋宇几无一存；然井泉仍出，数家客栈犹庇敢行此路之人。椰枣与瓜畦贴水渠而生。黄昏尘土如烟，破败清真寺中一声唤礼，自瓦砾间传来。
 
 ## ev.merva.entry.title
 
