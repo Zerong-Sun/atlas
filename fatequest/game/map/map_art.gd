@@ -96,6 +96,19 @@ const JOB_FROM_ID := {
 	"official": "scribe",
 }
 
+## retainer-* filenames use shorter stems than npc-job-* ids.
+const RETAINER_ART_SHORT := {
+	"guide": "guide",
+	"porter": "porter",
+	"guard": "guard",
+	"scribe": "scribe",
+	"translator": "lang",
+	"healer": "heal",
+	"sailor": "sail",
+	"acolyte": "monk",
+	"diviner": "seer",
+}
+
 ## Currency id → art stem (files may be absent; callers fall back to emoji).
 const CURRENCY_ART := {
 	"ducat": "currency-ducat",
@@ -313,12 +326,32 @@ static func event_portrait(ev: Dictionary, culture: String, slot: int = -1) -> T
 
 static func retainer_portrait(retainer_id: String, culture: String) -> Texture2D:
 	var id := retainer_id.to_lower()
+	var set_name := culture_set(culture)
 	for frag in JOB_FROM_ID:
 		if id.contains(frag):
-			var t := job_portrait(String(JOB_FROM_ID[frag]), culture)
+			var job := String(JOB_FROM_ID[frag])
+			var short := String(RETAINER_ART_SHORT.get(job, job))
+			var dedicated := tex("retainer-%s-%s" % [short, set_name])
+			if dedicated != null:
+				return dedicated
+			var t := job_portrait(job, culture)
 			if t != null:
 				return t
 	return venue_portrait("market", culture)
+
+
+static func contract_art(mode: String) -> Texture2D:
+	match mode:
+		"divined":
+			return tex("contract-divined")
+		"sealed":
+			return tex("contract-sealed")
+		_:
+			return tex("contract-open")
+
+
+static func seal_wax() -> Texture2D:
+	return tex("seal-wax")
 
 
 static func mentor_portrait(method_id: String) -> Texture2D:

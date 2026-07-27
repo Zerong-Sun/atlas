@@ -59,6 +59,7 @@ var _codex_view: PanelContainer
 var _archetype_id: String = ""
 var _roster: Roster
 var _party: Dictionary = {}
+var _hire_ui: HireContract
 var _ending: Ending
 var _ending_ui: Dictionary = {}
 var _transit_layer: Control
@@ -224,10 +225,16 @@ func _archetype_button(a: Dictionary) -> Control:
 
 
 func _begin(archetype: Dictionary) -> void:
+	# Tear down the desk immediately. Animation must NOT await before WorldState
+	# exists — smoke tests call _begin and read state on the next frame.
 	var center := get_node_or_null("BootCenter")
-	if center:
-		center.queue_free()
 	var bg := get_node_or_null("BootBg")
+	if center:
+		# N3 — brief parchment fade while freeing; do not block state init.
+		Motion.fade(center, 0.0, 0.25)
+		center.queue_free()
+	elif _desk != null:
+		_desk.queue_free()
 	if bg:
 		bg.queue_free()
 	_desk = null
@@ -260,6 +267,9 @@ func _begin(archetype: Dictionary) -> void:
 	_build_audio_controls()
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	if _audio_ready(): _audio.sfx("page")
+	# N3 — map plate expands in after the desk clears (non-blocking).
+	if _map != null:
+		Motion.parchment_expand(_map, 0.40)
 	_arrive()
 
 
@@ -442,6 +452,9 @@ func _build_map() -> void:
 	_codex_view.closed.connect(func(): _codex_layer.visible = false)
 
 	_build_party()
+	_hire_ui = preload("res://game/ui/hire_contract.gd").new()
+	_hire_ui.build(self)
+	_hire_ui.confirmed.connect(_on_hire_confirmed)
 	_build_ending()
 	_build_bag()
 	_build_settings()
@@ -526,7 +539,7 @@ func _build_controls() -> void:
 	bar.add_child(_ctl("图鉴", _open_codex))
 	bar.add_child(_ctl("同行", _open_party))
 	bar.add_child(_ctl("停笔", _open_ending))
-	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
+	bar.add_child(_ctl("设置", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
 	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
@@ -803,7 +816,23 @@ func _open_party() -> void:
 		list.add_child(Panels.label("此地可雇：", UiScale.ui(), Palette.ink()))
 		for r in pool:
 			list.add_child(_hire_row(r))
-	_party["layer"].visible = true
+
+	var short := _roster.divined_shortlist(state, state.city, rng)
+	if not short.is_empty():
+		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.label("占卜抽选：", UiScale.ui(), Palette.ink()))
+		for entry in short:
+			list.add_child(_divined_hire_row(entry))
+	Motion.crossfade_in(_party["layer"], 0.18)
+
+
+func _on_hire_confirmed(rec: Dictionary) -> void:
+	var res := executor.execute(state, _roster.hire_effects(rec),
+		{"rng": rng, "event_id": "hire"})
+	for line in res.log_lines:
+		_say("  · %s" % line)
+	_refresh_hud()
+	_open_party()
 
 
 func _party_row(m: Dictionary) -> Control:
@@ -825,6 +854,17 @@ func _party_row(m: Dictionary) -> Control:
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		row.add_child(tr)
+
+	var seal := MapArt.seal_wax()
+	if seal == null:
+		seal = MapArt.contract_art("sealed")
+	if seal != null:
+		var st := TextureRect.new()
+		st.texture = seal
+		st.custom_minimum_size = Vector2(28, 28)
+		st.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		st.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(st)
 
 	var col := VBoxContainer.new()
 	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -893,18 +933,46 @@ func _hire_row(rec: Dictionary) -> Control:
 
 	var btn := Panels.styled_button("雇", Callable())
 	btn.pressed.connect(func():
-		var res := executor.execute(state, _roster.hire_effects(rec),
-			{"rng": rng, "event_id": "hire"})
-		for line in res.log_lines:
-			_say("  · %s" % line)
-		_refresh_hud()
-		_open_party())
+		_hire_ui.open(rec, culture, "open"))
+	row.add_child(btn)
+	return panel
+
+
+func _divined_hire_row(entry: Dictionary) -> Control:
+	var rec: Dictionary = entry.get("retainer", {})
+	var verdict := String(entry.get("verdict", ""))
+	var panel := PanelContainer.new()
+	panel.add_theme_stylebox_override("panel", Palette.panel_style(true))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	panel.add_child(row)
+
+	var here := db.get_record(state.city)
+	var culture := String(here.get("culture", "latin"))
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	if portrait != null:
+		var tr := TextureRect.new()
+		tr.texture = portrait
+		tr.custom_minimum_size = Vector2(48, 60)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		row.add_child(tr)
+
+	var col := VBoxContainer.new()
+	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(col)
+	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
+	col.add_child(Panels.label(I18n.fmt(verdict), UiScale.ui() - 3, Palette.ink_soft()))
+
+	var btn := Panels.styled_button("雇", Callable())
+	btn.pressed.connect(func():
+		_hire_ui.open(rec, culture, "divined", verdict))
 	row.add_child(btn)
 	return panel
 
 
 func _open_codex() -> void:
-	_codex_layer.visible = true
+	Motion.crossfade_in(_codex_layer, 0.18)
 	_codex_view.open(state)
 
 
@@ -949,7 +1017,7 @@ func _open_bag() -> void:
 			UiScale.ui(), Palette.ink_soft()))
 	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
 		UiScale.ui(), Palette.ink_soft()))
-	_bag["layer"].visible = true
+	Motion.crossfade_in(_bag["layer"], 0.18)
 
 
 func _icon_line(icon: Texture2D, text: String) -> Control:
@@ -1037,7 +1105,7 @@ func _open_market() -> void:
 	var c := db.get_record(state.city)
 	if c.is_empty() or not c.has("market"):
 		return
-	_market_layer.visible = true
+	Motion.crossfade_in(_market_layer, 0.18)
 	_market_view.open(c, state, state.jdn)
 
 
@@ -1135,6 +1203,10 @@ func _show_event(ev: Dictionary) -> void:
 		art = _city_view._portrait_for(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art)
+	# N3 — panel expands in place (rise fights CenterContainer layout).
+	Motion.parchment_expand(_dialog, 0.25)
+	if _dialog.has_method("animate_choices"):
+		_dialog.animate_choices()
 	if _audio_ready(): _audio.sfx("page")
 
 
@@ -1241,8 +1313,15 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 	var kinds: Array = t_rec.get("kinds", ["land"])
 	var mode_kind := String(kinds[0]) if not kinds.is_empty() else "land"
 
+	# Capture origin before depart moves WorldState (goto + reveal_map).
+	var origin_id := String(state.city)
 	var trip := travel.depart(route, mode, state, rng)
 	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]))
+
+	# N2 M2 — stroke the road as a fire-and-forget visual. Must not await:
+	# ANIMATION_PLAN §4 — animation must not gate game logic (or smoke tests).
+	_map.animate_route(origin_id, String(trip["destination"]), int(trip["days"]),
+		String(route.get("kind", mode_kind)), bool(route.get("trunk", false)))
 
 	# Wages fall due on the road (GDD §11). Unpaid means goodwill, not debt.
 	var wage_fx := _roster.pay_effects(state, int(trip["days"]))
