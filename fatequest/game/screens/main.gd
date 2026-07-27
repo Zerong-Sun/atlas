@@ -224,10 +224,16 @@ func _archetype_button(a: Dictionary) -> Control:
 
 
 func _begin(archetype: Dictionary) -> void:
+	# Tear down the desk immediately. Animation must NOT await before WorldState
+	# exists — smoke tests call _begin and read state on the next frame.
 	var center := get_node_or_null("BootCenter")
-	if center:
-		center.queue_free()
 	var bg := get_node_or_null("BootBg")
+	if center:
+		# N3 — brief parchment fade while freeing; do not block state init.
+		Motion.fade(center, 0.0, 0.25)
+		center.queue_free()
+	elif _desk != null:
+		_desk.queue_free()
 	if bg:
 		bg.queue_free()
 	_desk = null
@@ -260,6 +266,9 @@ func _begin(archetype: Dictionary) -> void:
 	_build_audio_controls()
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	if _audio_ready(): _audio.sfx("page")
+	# N3 — map plate expands in after the desk clears (non-blocking).
+	if _map != null:
+		Motion.parchment_expand(_map, 0.40)
 	_arrive()
 
 
@@ -526,7 +535,7 @@ func _build_controls() -> void:
 	bar.add_child(_ctl("图鉴", _open_codex))
 	bar.add_child(_ctl("同行", _open_party))
 	bar.add_child(_ctl("停笔", _open_ending))
-	bar.add_child(_ctl("设置", func(): _settings["layer"].visible = true))
+	bar.add_child(_ctl("设置", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
 	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
@@ -804,6 +813,7 @@ func _open_party() -> void:
 		for r in pool:
 			list.add_child(_hire_row(r))
 	_party["layer"].visible = true
+	Motion.crossfade_in(_party["layer"], 0.18)
 
 
 func _party_row(m: Dictionary) -> Control:
@@ -904,7 +914,7 @@ func _hire_row(rec: Dictionary) -> Control:
 
 
 func _open_codex() -> void:
-	_codex_layer.visible = true
+	Motion.crossfade_in(_codex_layer, 0.18)
 	_codex_view.open(state)
 
 
@@ -950,6 +960,7 @@ func _open_bag() -> void:
 	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
 		UiScale.ui(), Palette.ink_soft()))
 	_bag["layer"].visible = true
+	Motion.crossfade_in(_bag["layer"], 0.18)
 
 
 func _icon_line(icon: Texture2D, text: String) -> Control:
@@ -1038,6 +1049,7 @@ func _open_market() -> void:
 	if c.is_empty() or not c.has("market"):
 		return
 	_market_layer.visible = true
+	Motion.crossfade_in(_market_layer, 0.18)
 	_market_view.open(c, state, state.jdn)
 
 
@@ -1135,6 +1147,10 @@ func _show_event(ev: Dictionary) -> void:
 		art = _city_view._portrait_for(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art)
+	# N3 — panel expands in place (rise fights CenterContainer layout).
+	Motion.parchment_expand(_dialog, 0.25)
+	if _dialog.has_method("animate_choices"):
+		_dialog.animate_choices()
 	if _audio_ready(): _audio.sfx("page")
 
 
@@ -1241,8 +1257,15 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 	var kinds: Array = t_rec.get("kinds", ["land"])
 	var mode_kind := String(kinds[0]) if not kinds.is_empty() else "land"
 
+	# Capture origin before depart moves WorldState (goto + reveal_map).
+	var origin_id := String(state.city)
 	var trip := travel.depart(route, mode, state, rng)
 	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]))
+
+	# N2 M2 — stroke the road as a fire-and-forget visual. Must not await:
+	# ANIMATION_PLAN §4 — animation must not gate game logic (or smoke tests).
+	_map.animate_route(origin_id, String(trip["destination"]), int(trip["days"]),
+		String(route.get("kind", mode_kind)), bool(route.get("trunk", false)))
 
 	# Wages fall due on the road (GDD §11). Unpaid means goodwill, not debt.
 	var wage_fx := _roster.pay_effects(state, int(trip["days"]))
