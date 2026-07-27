@@ -823,6 +823,7 @@ func _open_party() -> void:
 		list.add_child(Panels.label("占卜抽选：", UiScale.ui(), Palette.ink()))
 		for entry in short:
 			list.add_child(_divined_hire_row(entry))
+	_party["layer"].visible = true
 	Motion.crossfade_in(_party["layer"], 0.18)
 
 
@@ -1017,6 +1018,7 @@ func _open_bag() -> void:
 			UiScale.ui(), Palette.ink_soft()))
 	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
 		UiScale.ui(), Palette.ink_soft()))
+	_bag["layer"].visible = true
 	Motion.crossfade_in(_bag["layer"], 0.18)
 
 
@@ -1105,6 +1107,7 @@ func _open_market() -> void:
 	var c := db.get_record(state.city)
 	if c.is_empty() or not c.has("market"):
 		return
+	_market_layer.visible = true
 	Motion.crossfade_in(_market_layer, 0.18)
 	_market_view.open(c, state, state.jdn)
 
