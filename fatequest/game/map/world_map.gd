@@ -40,9 +40,18 @@ var _pan_from := Vector2.ZERO
 signal view_changed
 var _fog: ColorRect
 var _mask_tex: ImageTexture
+var _mask_prev_tex: ImageTexture
 var _mask_img: Image
+var _mask_prev_img: Image
+var _fog_tween: Tween
+var _reveal_blend: float = 1.0
+
+## N2 M2 — progressive route stroke while travelling.
+var _route_draw: Dictionary = {}  # {from, to, kind, progress 0..1, trunk}
+var _route_tween: Tween
 
 signal city_clicked(city: Dictionary)
+signal route_draw_finished
 
 
 func setup(p: MapProjection, city_records: Array, route_records: Array = [],
@@ -60,9 +69,95 @@ func setup(p: MapProjection, city_records: Array, route_records: Array = [],
 
 
 func set_current(city_id: String, p_revealed: Dictionary) -> void:
+	var changed := city_id != current_city or not _revealed_equal(revealed, p_revealed)
 	current_city = city_id
 	revealed = p_revealed
+	if changed:
+		_animate_fog_reveal()
+	else:
+		_update_mask()
+	queue_redraw()
+
+
+func _revealed_equal(a: Dictionary, b: Dictionary) -> bool:
+	if a.size() != b.size():
+		return false
+	for k in b:
+		if int(a.get(k, -1)) != int(b[k]):
+			return false
+	return true
+
+
+## N2 M1 — dissolve the wash from the previous mask into the current one.
+func _animate_fog_reveal() -> void:
+	if _fog == null or projection == null:
+		_update_mask()
+		return
+	# Snapshot the current wash as "previous" before rebuilding.
+	if _mask_img != null:
+		_mask_prev_img = _mask_img.duplicate()
+		if _mask_prev_tex == null:
+			_mask_prev_tex = ImageTexture.create_from_image(_mask_prev_img)
+		else:
+			_mask_prev_tex.update(_mask_prev_img)
+		_fog.material.set_shader_parameter("mask_prev", _mask_prev_tex)
 	_update_mask()
+	_reveal_blend = 0.0
+	_fog.material.set_shader_parameter("reveal_blend", 0.0)
+	if _fog_tween != null and _fog_tween.is_valid():
+		_fog_tween.kill()
+	var seconds := Motion.dur(0.85, Motion.Kind.FADE)
+	if seconds <= 0.02:
+		_reveal_blend = 1.0
+		_fog.material.set_shader_parameter("reveal_blend", 1.0)
+		return
+	_fog_tween = create_tween()
+	_fog_tween.tween_method(_set_reveal_blend, 0.0, 1.0, seconds)
+
+
+func _set_reveal_blend(v: float) -> void:
+	_reveal_blend = v
+	if _fog != null and _fog.material != null:
+		_fog.material.set_shader_parameter("reveal_blend", v)
+
+
+## N2 M2 — stroke a road from A to B over `seconds` (scaled by travel days).
+## Returns immediately; emits `route_draw_finished` when done.
+func animate_route(from_id: String, to_id: String, days: int = 7,
+		kind: String = "land", trunk: bool = false) -> void:
+	if not _city_pos.has(from_id) or not _city_pos.has(to_id):
+		route_draw_finished.emit()
+		return
+	_route_draw = {
+		"from": from_id,
+		"to": to_id,
+		"kind": kind,
+		"trunk": trunk,
+		"progress": 0.0,
+	}
+	if _route_tween != null and _route_tween.is_valid():
+		_route_tween.kill()
+	# Longer journeys take a touch longer to draw — capped so it never stalls.
+	var seconds := Motion.dur(clampf(0.35 + float(days) * 0.04, 0.45, 1.4),
+		Motion.Kind.MOVE)
+	if not Motion.allows(Motion.Kind.MOVE) or seconds <= 0.02:
+		_route_draw["progress"] = 1.0
+		queue_redraw()
+		route_draw_finished.emit()
+		_route_draw.clear()
+		return
+	_route_tween = create_tween()
+	_route_tween.tween_method(_set_route_progress, 0.0, 1.0, seconds)
+	_route_tween.finished.connect(func():
+		route_draw_finished.emit()
+		_route_draw.clear()
+		queue_redraw())
+
+
+func _set_route_progress(v: float) -> void:
+	if _route_draw.is_empty():
+		return
+	_route_draw["progress"] = v
 	queue_redraw()
 
 
@@ -89,11 +184,17 @@ func _ensure_fog() -> void:
 			return
 		mat.shader = sh
 		mat.set_shader_parameter("ink", ink)
+		mat.set_shader_parameter("reveal_blend", 1.0)
 		_fog.material = mat
 		add_child(_fog)
 	_fog.position = projection.origin
 	_fog.size = Vector2(projection.width, projection.height)
 	_update_mask()
+	# Seed previous mask so the first dissolve has a valid sampler.
+	if _mask_img != null and _mask_prev_tex == null:
+		_mask_prev_img = _mask_img.duplicate()
+		_mask_prev_tex = ImageTexture.create_from_image(_mask_prev_img)
+		_fog.material.set_shader_parameter("mask_prev", _mask_prev_tex)
 
 
 ## Paints the revealed mask from world state. Low resolution on purpose: this is
@@ -328,6 +429,21 @@ func _draw_routes() -> void:
 			var col := Color("2f6f8f", alpha) if kind == "sea" else \
 				(Color("4f7f6f", alpha) if kind == "coastal" else Color("7a5a34", alpha * 0.8))
 			draw_line(a, b, col, 3.0 if is_trunk else 1.0)
+
+	# N2 M2 — the stroke currently being drawn on departure.
+	if not _route_draw.is_empty():
+		var fa: Vector2 = _city_pos.get(String(_route_draw.get("from", "")), Vector2.ZERO)
+		var fb: Vector2 = _city_pos.get(String(_route_draw.get("to", "")), Vector2.ZERO)
+		var prog := float(_route_draw.get("progress", 0.0))
+		if fa != Vector2.ZERO and fb != Vector2.ZERO and prog > 0.001:
+			var mid := fa.lerp(fb, prog)
+			var kind2 := String(_route_draw.get("kind", "land"))
+			var brush2 := MapArt.route_brush(kind2)
+			var w2 := 14.0 if bool(_route_draw.get("trunk", false)) else 11.0
+			if brush2 != null:
+				_draw_brush_line(brush2, fa, mid, w2, 0.95, kind2)
+			else:
+				draw_line(fa, mid, Color("b04a2a", 0.9), 3.0)
 
 
 ## Stretches the brush texture along the segment, rotated to match. Godot has no

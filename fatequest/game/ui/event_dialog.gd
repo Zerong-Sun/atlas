@@ -128,6 +128,14 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	visible = true
 
 
+## N3 — stagger choice buttons (ANIMATION_PLAN §2.1 · 40 ms offset).
+func animate_choices() -> void:
+	var kids: Array = []
+	for c in _choices.get_children():
+		kids.append(c)
+	Motion.stagger_in(kids, 0.04, 0.18)
+
+
 func _make_choice(s: Dictionary, index: int) -> Button:
 	var btn := Button.new()
 	btn.text = I18n.t(s["choice"].get("label", ""))
