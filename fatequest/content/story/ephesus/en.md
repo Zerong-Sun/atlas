@@ -15,9 +15,14 @@ Ephesus
 
 ## ev.ephesus.entry.body
 
-Ephesus — the harbor that silted up. The great Temple of Artemis is a memory; the
-Apostle John's basilica draws a trickle of pilgrims. Silk from the inland valleys still
-reaches the remaining wharves, bound for Smyrna and the sea.
+You come down to Ephesus where the harbour once received the ships of
+all Asia — and find the basin silted to marsh and reed. The great Temple of
+Artemis is a memory of stones carted away; yet the basilica of the Apostle
+John still draws a trickle of pilgrims from the inland valleys. You must
+know that silk and dried fruit still reach the remaining wharves, bound for
+Smyrna and the open sea. Greek speech and Turkish speech mingle in the
+lower town; storks nest on broken columns. The road from Sardis is dusty
+but safe in fair weather, and the inns keep wine of the local hills.
 
 ## ev.ephesus.entry.choice.pass
 

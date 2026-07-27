@@ -2,7 +2,7 @@
 unit: axuma
 lang: zh
 source: en
-source_rev: 676ae1f8aed8
+source_rev: a948766a172d
 status: translated
 translator: 人工校译
 notes: >
@@ -14,7 +14,7 @@ stamps:
   city.axuma.name: 463acde849dc
   ev.axuma.entry.choice.pass: d9ca0c28a951
   ev.axuma.entry.choice.rest: cc453f19a435
-  ev.axuma.entry.body: 646e2ce326f5
+  ev.axuma.entry.body: 9c261ef54203
   ev.axuma.entry.title: 57ac481564cb
 ---
 
@@ -32,8 +32,7 @@ stamps:
 
 ## ev.axuma.entry.body
 
-阿克苏姆——埃塞俄比亚高地之古基督教王国，昔日荣光如今已成阴影。方尖碑犹立，教会仍以Ge'ez祈祷；
-然红海贸易已移往亚丁。城中古教堂犹在，bāzār（集市）上犹见象牙与金屑。
+你由高地之路入阿克苏姆，空气稀薄，古石碑承着日光。此地昔为基督教王国，以象牙与黄金通红海——你须知道，其王曾铸币，使节远至君士坦丁堡。教堂内教会仍以 Ge'ez 在凿石墙内祈祷；方尖碑虽斜而未断。然亚丁与也门诸港已夺去海贸，bāzār（集市）上尘土多于丝帛。朝圣者与稀少商队仍在此停歇取水，并求祭司祝福。
 
 ## ev.axuma.entry.title
 

@@ -15,9 +15,14 @@ Axuma
 
 ## ev.axuma.entry.body
 
-Axum — an ancient Christian kingdom in the Ethiopian highlands, now a shadow of its
-former glory. The obelisks still stand, and the Church still prays in Ge'ez, but the Red
-Sea trade has shifted to Aden.
+You come into Axum by the highland road, where the air is thin and the
+stone of the old stelae catches the sun. This was once a Christian kingdom
+that traded ivory and gold to the Red Sea — you must know that its kings
+struck coin and sent embassies as far as Constantinople. The Church still
+prays in Ge'ez within walls of cut stone; the obelisks stand crooked but
+unbroken. Yet Aden and the Yemeni ports have drawn the sea-trade away, and
+the bāzār shows more dust than silk. Pilgrims and a few caravans still pause
+here for water and for the blessing of the priests.
 
 ## ev.axuma.entry.choice.pass
 
