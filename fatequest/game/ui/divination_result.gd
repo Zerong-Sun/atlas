@@ -224,7 +224,9 @@ static func _generic_symbol_lines(method: String, raw: Dictionary) -> PackedStri
 		var cups: Array = raw.get("cups", [])
 		var faces: PackedStringArray = []
 		for c in cups:
-			faces.append("陽" if String(c) == "yang" else "陰")
+			var is_yang := (typeof(c) == TYPE_STRING and String(c) == "yang") \
+				or (typeof(c) in [TYPE_INT, TYPE_FLOAT] and int(c) == 1)
+			faces.append("陽" if is_yang else "陰")
 		lines.append("掷筊 · %s" % "／".join(faces))
 		lines.append(String(JIAOBEI_FALL.get(
 			String(raw.get("outcome", "")), "筊象未明")))

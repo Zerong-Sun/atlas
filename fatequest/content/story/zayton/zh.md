@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: 0006e88fd957
+source_rev: 2bb7377003d9
 status: translated
 translator: 人工校译
 notes: >
@@ -18,6 +18,18 @@ stamps:
   ev.zayton.entry.choice.customs: cc464d34d793
   ev.zayton.entry.choice.slip: 6cbd9970ded1
   ev.zayton.entry.choice.ask_ships: 543306a30ace
+  ev.zayton.ledger_consequence.title: c49736b8a438
+  ev.zayton.ledger_consequence.body: 689b4c9505a2
+  ev.zayton.ledger_consequence.choice.copy: 9225956ce1e8
+  ev.zayton.ledger_consequence.choice.refuse: 563ddb62e0e2
+  ev.zayton.watch_consequence.title: d67e0900f974
+  ev.zayton.watch_consequence.body: 6ced564ce3d7
+  ev.zayton.watch_consequence.choice.pay: e44b904f7df3
+  ev.zayton.watch_consequence.choice.submit: 8803606154b8
+  ev.zayton.pilot_consequence.title: e06743d691d3
+  ev.zayton.pilot_consequence.body: 23a0bcd99fef
+  ev.zayton.pilot_consequence.choice.chamba: 93125dd0510a
+  ev.zayton.pilot_consequence.choice.local: cc3c87e8eb92
   city.zayton.market.name: 9544599e4537
   city.zayton.shrine.name: f445f38318d3
   city.zayton.shrine.desc: 39d154d2719f
@@ -89,6 +101,57 @@ stamps:
 ## ev.zayton.entry.choice.ask_ships
 
 问船夫这些船都是哪里来的
+
+## ev.zayton.ledger_consequence.title
+
+税册上的去路
+
+## ev.zayton.ledger_consequence.body
+
+第二日，税吏抱来誊清的副册。册页不只列你的货物，也写着货从何处来、下一程可往何处去。
+杭州与刺桐之间的沿海道路被细细记在页边；他问你是否要留一份盖过印的副本。
+
+## ev.zayton.ledger_consequence.choice.copy
+
+收下副本，抄记杭州与沿海道路
+
+## ev.zayton.ledger_consequence.choice.refuse
+
+不留副本，只让货物入册
+
+## ev.zayton.watch_consequence.title
+
+夜巡的灯
+
+## ev.zayton.watch_consequence.body
+
+入夜后，巡夜人的灯停在你住处门前。他们在码头名册里找不到你的记号。领头人没有拔刀，
+只把一块迟报木牌放在桌上：现在补交费用，或让货物留仓查验。
+
+## ev.zayton.watch_consequence.choice.pay
+
+补交迟报费用
+
+## ev.zayton.watch_consequence.choice.submit
+
+让货物留仓查验两日
+
+## ev.zayton.pilot_consequence.title
+
+领航人的两种说法
+
+## ev.zayton.pilot_consequence.body
+
+船夫把酒喝完，领航人用指尖蘸水，在桌上划出两条线。一条向南，须等季风，通往占婆；
+一条向北入内陆，先到福州。你只能来得及把其中一条问清。
+
+## ev.zayton.pilot_consequence.choice.chamba
+
+追问南下占婆的季风海路
+
+## ev.zayton.pilot_consequence.choice.local
+
+追问北上福州的陆路
 
 ## city.zayton.market.name
 
@@ -243,4 +306,3 @@ stamps:
 ## market.zayton.item.tea
 
 茶饼，压成砖，盖着产区印戳。码头上茶砖换胡椒，一比一。
-

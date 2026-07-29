@@ -15,6 +15,7 @@ func _init():
     var ok := true
     for p in ["res://tests/test_rng.gd", "res://tests/test_kernel.gd",
               "res://tests/test_divination.gd", "res://tests/test_divination_reach.gd",
+              "res://tests/test_lesson_engine.gd",
               "res://tests/test_i18n.gd", "res://tests/test_narrative.gd", "res://tests/test_time.gd",
               "res://tests/test_journey.gd",
               "res://tests/test_m1_lines.gd", "res://tests/test_audio.gd",

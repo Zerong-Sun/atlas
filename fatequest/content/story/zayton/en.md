@@ -53,6 +53,61 @@ Go up by the fishermen's steps instead
 
 Ask a boatman what all these ships are
 
+## ev.zayton.ledger_consequence.title
+
+The Road in the Ledger
+
+## ev.zayton.ledger_consequence.body
+
+On the second day a clerk brings a fair copy of the duty ledger. It records not
+only your cargo but where goods came from and where they may go next. The coastal
+road between Kinsay and Zayton is noted in the margin. He asks whether you want a
+sealed copy.
+
+## ev.zayton.ledger_consequence.choice.copy
+
+Keep the copy and note Kinsay and the coastal road
+
+## ev.zayton.ledger_consequence.choice.refuse
+
+Keep no copy; let the cargo alone be entered
+
+## ev.zayton.watch_consequence.title
+
+Lanterns of the Night Watch
+
+## ev.zayton.watch_consequence.body
+
+After dark the watch lanterns stop at your lodging. They cannot find your mark
+in the quay ledger. Their leader draws no weapon; he places a late-declaration
+tally on the table. Pay now, or leave the cargo in bond for inspection.
+
+## ev.zayton.watch_consequence.choice.pay
+
+Pay the late-declaration fee
+
+## ev.zayton.watch_consequence.choice.submit
+
+Leave the cargo for two days' inspection
+
+## ev.zayton.pilot_consequence.title
+
+Two Roads from a Pilot
+
+## ev.zayton.pilot_consequence.body
+
+When the boatman has finished his wine, a pilot dips one finger in water and
+draws two lines on the table. One runs south with the monsoon to Chamba; the
+other goes inland and north to Fuju. There is time to ask one road clearly.
+
+## ev.zayton.pilot_consequence.choice.chamba
+
+Ask about the monsoon lane south to Chamba
+
+## ev.zayton.pilot_consequence.choice.local
+
+Ask about the land road north to Fuju
+
 ## city.zayton.market.name
 
 The Quay at Zayton

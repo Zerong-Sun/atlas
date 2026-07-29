@@ -52,9 +52,13 @@ func _init():
         flag("[严重]", "儒略日往返失败 1253-01-01 -> %s" % str(back))
     var back2 := d2.to_gregorian()
     if back2["year"] != 1453: flag("[严重]", "儒略日往返失败 1453 -> %s" % str(back2))
-    # 闰年
-    var leap := GameDate.from_gregorian(1300,2,29).to_gregorian()
-    if leap["month"] != 2 or leap["day"] != 29: flag("[提示]", "1300-02-29 往返异常：%s" % str(leap))
+    # Proleptic Gregorian: 1300 is not a leap year; 1304 is.
+    var non_leap := GameDate.from_gregorian(1300,2,29).to_gregorian()
+    if non_leap["month"] != 3 or non_leap["day"] != 1:
+        flag("[提示]", "非法公历日未规范到 1300-03-01：%s" % str(non_leap))
+    var leap := GameDate.from_gregorian(1304,2,29).to_gregorian()
+    if leap["month"] != 2 or leap["day"] != 29:
+        flag("[严重]", "1304-02-29 往返异常：%s" % str(leap))
 
     # ---- 逻辑：路线双向可达 ----
     var asym := 0
@@ -105,4 +109,5 @@ func _init():
     if issues.is_empty(): print("  未发现问题")
     for i in issues: print("  " + i)
     print("=== 共 %d 项 ===" % issues.size())
-    quit(0)
+    var severe := issues.any(func(issue): return issue.begins_with("[严重]"))
+    quit(1 if severe else 0)

@@ -79,6 +79,11 @@ for (const c of byTable.cities ?? []) {
   const req = REQUIRED_BY_TIER[c.tier];
   if (!req) { err("G1", f, `${c.id}: unknown tier "${c.tier}"`); continue; }
   for (const k of req) if (c[k] === undefined) err("G1", f, `${c.id} (${c.tier}): missing \`${k}\``);
+  if (!Array.isArray(c.coord) || c.coord.length !== 2 ||
+      !c.coord.every(Number.isFinite) ||
+      c.coord[0] < -180 || c.coord[0] > 180 ||
+      c.coord[1] < -90 || c.coord[1] > 90)
+    err("G1", f, `${c.id}: coord must be [longitude, latitude] within world bounds`);
 }
 
 // ------------------------------------------------ G26: tier-graded site counts
@@ -110,6 +115,49 @@ for (const r of byTable.routes ?? []) {
   ref(cityIds.has(r.to), "G2", f, `${r.id}.to -> "${r.to}" not found`);
   for (const m of r.modes ?? []) ref(transportIds.has(m), "G2", f, `${r.id}.modes -> "${m}" not found`);
   for (const e of r.encounters ?? []) { ref(eventIds.has(e), "G2", f, `${r.id}.encounters -> "${e}" not found`); mark(e); }
+  if (!["land","sea","coastal","river"].includes(r.kind))
+    err("G1", f, `${r.id}: unknown route kind "${r.kind}"`);
+  if (!Number.isInteger(r.days) || r.days < 1)
+    err("G1", f, `${r.id}: days must be an integer >= 1`);
+  if (!Number.isInteger(r.cost) || r.cost < 0)
+    err("G1", f, `${r.id}: cost must be a non-negative integer`);
+  if (!Number.isInteger(r.risk) || r.risk < 0 || r.risk > 5)
+    err("G1", f, `${r.id}: risk must be an integer within [0,5]`);
+  if (!(r.modes?.length > 0) || new Set(r.modes).size !== r.modes.length)
+    err("G1", f, `${r.id}: modes must be a non-empty unique array`);
+  const openMonths = r.season?.open ?? [];
+  if (!Array.isArray(openMonths) ||
+      openMonths.some((m) => !Number.isInteger(m) || m < 1 || m > 12) ||
+      new Set(openMonths).size !== openMonths.length)
+    err("G1", f, `${r.id}: season.open must contain unique months within [1,12]`);
+}
+
+for (const t of byTable.transports ?? []) {
+  const f = recordFile.get(t.id);
+  if (!(t.kinds?.length > 0) ||
+      t.kinds.some((k) => !["land","sea","river"].includes(k)) ||
+      new Set(t.kinds).size !== t.kinds.length)
+    err("G1", f, `${t.id}: kinds must be a non-empty unique movement-kind array`);
+  if (!Number.isFinite(t.dayMul) || t.dayMul <= 0)
+    err("G1", f, `${t.id}: dayMul must be > 0`);
+  if (!Number.isInteger(t.cost) || t.cost < 0)
+    err("G1", f, `${t.id}: cost must be a non-negative integer`);
+  if (!Number.isInteger(t.cargo) || t.cargo < 0)
+    err("G1", f, `${t.id}: cargo must be a non-negative integer`);
+  if (!Number.isInteger(t.risk) || t.risk < -5 || t.risk > 5)
+    err("G1", f, `${t.id}: risk modifier must be an integer within [-5,5]`);
+}
+
+{
+  const transports = new Map((byTable.transports ?? []).map((t) => [t.id, t]));
+  for (const r of byTable.routes ?? []) for (const mode of r.modes ?? []) {
+    const kinds = transports.get(mode)?.kinds ?? [];
+    const compatible = kinds.includes(r.kind) ||
+      (r.kind === "coastal" && (kinds.includes("land") || kinds.includes("sea")));
+    if (!compatible)
+      err("G2", recordFile.get(r.id),
+        `${r.id}.modes -> "${mode}" cannot traverse route kind "${r.kind}"`);
+  }
 }
 
 // G2 continued — the rest of the DATA_MODEL.md §5 reference graph. Without
@@ -131,10 +179,42 @@ for (const a of byTable.archetypes ?? []) {
   if (a.goal?.target) ref(cityIds.has(a.goal.target), "G2", f, `${a.id}.goal.target -> "${a.goal.target}" not found`);
   for (const e of a.endings ?? []) { ref(endingIds.has(e), "G2", f, `${a.id}.endings -> "${e}" not found`); mark(e); }
   for (const g of a.startKit?.goods ?? []) ref(goodIds.has(g), "G2", f, `${a.id}.startKit.goods -> "${g}" not found`);
+  for (const c of a.knownCities ?? []) ref(cityIds.has(c), "G2", f, `${a.id}.knownCities -> "${c}" not found`);
+  for (const r of a.knownRoutes ?? []) ref(routeIds.has(r), "G2", f, `${a.id}.knownRoutes -> "${r}" not found`);
+  const knownCities = a.knownCities ?? [];
+  if (knownCities.length < 2 || knownCities.length > 3)
+    err("G1", f, `${a.id}: knownCities must contain 2–3 cities`);
+  if (new Set(knownCities).size !== knownCities.length)
+    err("G1", f, `${a.id}: knownCities contains duplicates`);
+  if (!knownCities.includes(a.start))
+    err("G1", f, `${a.id}: knownCities must contain start "${a.start}"`);
+  for (const routeId of a.knownRoutes ?? []) {
+    const route = (byTable.routes ?? []).find((candidate) => candidate.id === routeId);
+    if (route && !knownCities.includes(route.from) && !knownCities.includes(route.to))
+      err("G1", f, `${a.id}: known route "${routeId}" touches no known city`);
+  }
+}
+const teachingCities = new Map();
+for (const e of byTable.events ?? []) {
+  const cities = e.when?.cities ?? [];
+  for (const ch of e.choices ?? []) for (const eff of ch.effects ?? []) {
+    if (eff.op !== "learn_divination") continue;
+    const set = teachingCities.get(eff.value) ?? new Set();
+    for (const city of cities) set.add(String(city));
+    teachingCities.set(eff.value, set);
+  }
 }
 for (const d of byTable.divinations ?? []) {
   const f = recordFile.get(d.id);
-  for (const c of d.learnAt ?? []) ref(cityIds.has(c), "G2", f, `${d.id}.learnAt -> "${c}" not found`);
+  const authored = new Set((d.learnAt ?? []).map(String));
+  for (const c of authored) {
+    ref(cityIds.has(c), "G2", f, `${d.id}.learnAt -> "${c}" not found`);
+    if (!teachingCities.get(d.id)?.has(c))
+      err("G2", f, `${d.id}.learnAt -> "${c}" has no applicable learning event`);
+  }
+  for (const c of teachingCities.get(d.id) ?? [])
+    if (!authored.has(c))
+      err("G2", f, `${d.id}: learning event exists in "${c}" but learnAt omits it`);
   if (d.teacher) { ref(retainerIds.has(d.teacher), "G2", f, `${d.id}.teacher -> "${d.teacher}" not found`); mark(d.teacher); }
 }
 for (const r of byTable.retainers ?? []) {
@@ -154,7 +234,8 @@ const CONDITION_KEYS = new Set(["any","all","not","cities","bands","faiths","sea
   "flags","not_flags","has_item","lacks_item","learned_divination","language",
   "min_reputation","fate","coins","etiquette","has_retainer"]);
 const OPS = new Set(["coins","days","goods","item","remove_item","cargo_slots","reputation",
-  "faith","language","etiquette","fate","unlock_route","reveal_map","learn_divination",
+  "faith","language","etiquette","fate","unlock_route","reveal_map","reveal_city","reveal_route",
+  "queue_event","dequeue_event","learn_divination",
   "flag","unflag","goto","recruit","dismiss","retainer_mood","reveal_birth","sticker","codex"]);
 
 function checkEffects(list, f, where) {
@@ -180,19 +261,143 @@ function checkCondition(cond, f, where) {
 
 for (const e of byTable.events ?? []) {
   const f = recordFile.get(e.id);
+  if (!(e.choices?.length > 0)) err("G1", f, `${e.id}: event requires at least one choice`);
   checkCondition(e.when, f, `${e.id}.when`);
   for (const [i, ch] of (e.choices ?? []).entries()) {
+    checkCondition(ch.showWhen, f, `${e.id}.choices[${i}].showWhen`);
     checkCondition(ch.needs, f, `${e.id}.choices[${i}].needs`);
     checkEffects(ch.effects, f, `${e.id}.choices[${i}].effects`);
     checkEffects(ch.pass?.effects, f, `${e.id}.choices[${i}].pass.effects`);
     checkEffects(ch.fail?.effects, f, `${e.id}.choices[${i}].fail.effects`);
+    checkEffects(ch.lessonFailEffects, f, `${e.id}.choices[${i}].lessonFailEffects`);
+    for (const eff of ch.lessonFailEffects ?? [])
+      if (eff.op === "learn_divination")
+        err("G10", f, `${e.id}.choices[${i}].lessonFailEffects: failed lesson cannot teach a method`);
+    const authoredEffectCount = (ch.effects?.length ?? 0) +
+      (ch.pass?.effects?.length ?? 0) + (ch.fail?.effects?.length ?? 0);
+    if (!ch.divination && authoredEffectCount < 1)
+      err("G10", f, `${e.id}.choices[${i}]: choice has no outcome effects`);
     if (ch.divination && divIds.size && !divIds.has(ch.divination))
       err("G2", f, `${e.id}.choices[${i}].divination -> "${ch.divination}" not registered`);
-    for (const eff of ch.effects ?? []) if (eff.op === "unlock_route" || eff.op === "reveal_map") mark(eff.value);
+    const lists = [ch.effects, ch.pass?.effects, ch.fail?.effects, ch.lessonFailEffects];
+    for (const list of lists) {
+      for (const eff of list ?? []) {
+        if (["unlock_route","reveal_map","reveal_city","reveal_route"].includes(eff.op)) mark(eff.value);
+        if (eff.op === "queue_event") {
+          ref(eventIds.has(eff.value), "G2", f,
+            `${e.id}.choices[${i}].queue_event -> "${eff.value}" not found`);
+          const target = (byTable.events ?? []).find((candidate) => candidate.id === eff.value);
+          if (target?.choices?.length < 1)
+            err("G2", f, `${e.id}.choices[${i}].queue_event -> "${eff.value}" has no choices`);
+          if (target && !target.choices.some((choice) => !choice.needs && !choice.showWhen))
+            err("G2", f,
+              `${e.id}.choices[${i}].queue_event -> "${eff.value}" needs an unconditional fallback choice`);
+          mark(eff.value);
+        }
+      }
+    }
   }
   // G8: source-derived text must be traceable (GDD §19).
   if (e.lore?.origin === "source" && !e.lore?.ref)
     err("G8", f, `${e.id}: lore.origin="source" requires \`ref\``);
+}
+
+// Consequence queues are persistent and resolve before control returns to the
+// city. Any authored cycle can therefore trap a save forever, even if every
+// individual reference is valid.
+{
+  const graph = new Map((byTable.events ?? []).map((e) => [e.id, new Set()]));
+  for (const e of byTable.events ?? []) {
+    for (const ch of e.choices ?? []) {
+      for (const list of [ch.effects, ch.pass?.effects, ch.fail?.effects, ch.lessonFailEffects]) {
+        for (const effect of list ?? []) {
+          if (effect.op === "queue_event" && eventIds.has(effect.value))
+            graph.get(e.id).add(String(effect.value));
+        }
+      }
+    }
+  }
+  const visiting = new Set(), visited = new Set(), stack = [];
+  const reported = new Set();
+  function visit(id) {
+    if (visiting.has(id)) {
+      const start = stack.indexOf(id);
+      const cycle = [...stack.slice(start), id];
+      const key = [...new Set(cycle)].sort().join("|");
+      if (!reported.has(key)) {
+        reported.add(key);
+        err("G2", recordFile.get(id), `queue_event cycle: ${cycle.join(" -> ")}`);
+      }
+      return;
+    }
+    if (visited.has(id)) return;
+    visiting.add(id); stack.push(id);
+    for (const next of graph.get(id) ?? []) visit(next);
+    stack.pop(); visiting.delete(id); visited.add(id);
+  }
+  for (const id of graph.keys()) visit(id);
+}
+
+for (const route of byTable.routes ?? [])
+  checkCondition(route.unlock, recordFile.get(route.id), `${route.id}.unlock`);
+
+// Every registered method owns a playable lesson configuration, even when its
+// learnAt content is scheduled for a later chapter.
+{
+  const lessons = byTable.divination_lessons ?? [];
+  const byMethod = new Map(lessons.map((l) => [l.method, l]));
+  const lessonTypes = new Set(["throw","arrange","observe","timing","deduce","form"]);
+  const covered = new Set();
+  const hasReachableTarget = (values, target) => {
+    const reachable = new Array(Number(target) + 1).fill(false);
+    reachable[0] = true;
+    for (let n = 1; n <= target; n++)
+      reachable[n] = values.some((v) => v > 0 && v <= n && reachable[n - v]);
+    return Boolean(reachable[target]);
+  };
+  for (const d of byTable.divinations ?? []) {
+    const lesson = byMethod.get(d.id);
+    if (!lesson) err("G3", recordFile.get(d.id), `${d.id}: missing divination lesson`);
+    else {
+      const f = recordFile.get(lesson.id);
+      covered.add(lesson.type);
+      if (!lessonTypes.has(lesson.type))
+        err("G3", f, `${lesson.id}: unknown lesson type "${lesson.type}"`);
+      if (lesson.id !== `lesson-${lesson.method}`)
+        err("G3", f, `${lesson.id}: id must equal lesson-${lesson.method}`);
+      if (["arrange","form"].includes(lesson.type) && (lesson.steps?.length ?? 0) < 3)
+        err("G3", f, `${lesson.id}: ${lesson.type} requires at least 3 steps`);
+      if (["observe","throw"].includes(lesson.type)) {
+        if ((lesson.options?.length ?? 0) < 2 ||
+            lesson.answer < 0 || lesson.answer >= lesson.options.length)
+          err("G3", f, `${lesson.id}: options/answer are invalid`);
+      }
+      if (lesson.type === "observe" && (lesson.clues?.length ?? 0) < 1)
+        err("G3", f, `${lesson.id}: observe requires clues`);
+      if (lesson.type === "observe") {
+        const required = Number(lesson.required_observations ?? lesson.clues?.length ?? 0);
+        if (!Number.isInteger(required) || required < 1 || required > lesson.clues.length)
+          err("G3", f, `${lesson.id}: required_observations must be within available clues`);
+      }
+      if (lesson.type === "throw") {
+        if (!Number.isInteger(Number(lesson.throws)) || Number(lesson.throws) < 1)
+          err("G3", f, `${lesson.id}: throw requires an integer throws >= 1`);
+        if (!Number.isInteger(Number(lesson.faces)) || Number(lesson.faces) < 2)
+          err("G3", f, `${lesson.id}: throw requires an integer faces >= 2`);
+      }
+      if (lesson.type === "timing") {
+        const w = lesson.window ?? [];
+        if (w.length !== 2 || w[0] < 0 || w[1] > 1 || w[0] >= w[1])
+          err("G3", f, `${lesson.id}: timing window must be 0 <= start < end <= 1`);
+      }
+      if (lesson.type === "deduce" &&
+          (!lesson.values?.length || lesson.target <= 0 ||
+           !hasReachableTarget(lesson.values.map(Number), Number(lesson.target))))
+        err("G3", f, `${lesson.id}: deduction target is unreachable`);
+    }
+  }
+  for (const type of lessonTypes)
+    if (!covered.has(type)) err("G3", "divination_lessons", `lesson family "${type}" is not represented`);
 }
 
 // --------------------------------------------- G3: divination effects ≠ ∅

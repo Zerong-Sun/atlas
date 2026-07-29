@@ -77,10 +77,64 @@ func run() -> bool:
 	poor.coins = 1
 	var poor_avail := travel.availability(road, poor, clock.month(), "caravan")
 	_ok(not poor_avail["ok"], "a penniless traveller cannot hire a caravan")
+	_ok("travel.unknown_route" in poor_avail["reasons"], "an unknown road is refused independently of city knowledge")
+	var poor_city_before := poor.city
+	var poor_jdn_before := poor.jdn
+	var refused := travel.depart(road, "caravan", poor, rng)
+	_ok(not refused.get("ok", true), "depart rechecks availability")
+	_ok(poor.city == poor_city_before and poor.jdn == poor_jdn_before and poor.coins == 1,
+		"refused departure is side-effect free")
+
+	# Knowledge and permission are separate. A synthetic permit condition
+	# exercises the route contract before authored routes begin using it.
+	var permit_road := road.duplicate(true)
+	permit_road["id"] = "rt-test-permit"
+	permit_road["unlock"] = {"has_item": ["it-test-permit"]}
+	st.revealed[String(permit_road["id"])] = 1
+	var locked := travel.availability(permit_road, st, clock.month(), "caravan")
+	_ok(not locked["ok"] and "travel.route_locked" in locked["reasons"],
+		"a known route can still require permission")
+	exec.execute(st, [{
+		"op": "item", "value": "it-test-permit", "reason": "test-permit",
+	}], {"event_id": "test-permit"})
+	var permitted := travel.availability(permit_road, st, clock.month(), "caravan")
+	_ok(permitted["ok"], "permission condition opens a known route")
+	st.items.erase("it-test-permit")
+
+	var one_way := road.duplicate(true)
+	one_way["reverse"] = false
+	var reverse_state := st.duplicate_state()
+	reverse_state.city = String(one_way.get("to", ""))
+	var wrong_way := travel.availability(one_way, reverse_state, clock.month(), "caravan")
+	_ok(not wrong_way["ok"] and "travel.wrong_direction" in wrong_way["reasons"],
+		"one-way route is refused in reverse")
+
+	# A coastal road can be walked or sailed. Capacity follows the selected
+	# transport, not the route label: mules do not board a ship and a sailor's
+	# hold does not follow a traveller on foot.
+	var cargo_state := WorldState.new()
+	cargo_state.retainers = [
+		{"id": "npc-tauris-porter", "present": true},
+		{"id": "npc-ormus-sailor", "present": true},
+	]
+	var coastal := {"kind": "coastal"}
+	var porter_slots := int(db.get_record(
+		"npc-tauris-porter").get("cargo", {}).get("slots", 0))
+	var sailor_slots := int(db.get_record(
+		"npc-ormus-sailor").get("cargo", {}).get("slots", 0))
+	var ship_capacity := travel.cargo_capacity(
+		cargo_state, db.get_record("ship"), coastal)
+	var foot_capacity := travel.cargo_capacity(
+		cargo_state, db.get_record("foot"), coastal)
+	_ok(ship_capacity == maxi(cargo_state.cargo_slots, 20) + sailor_slots,
+		"coastal ship uses sailor capacity but not porter capacity")
+	_ok(foot_capacity == maxi(cargo_state.cargo_slots, 2) + porter_slots,
+		"coastal walk uses porter capacity but not sailor capacity")
 
 	var day0 := st.jdn
 	var elapsed0 := st.days_elapsed
 	var trip := travel.depart(road, "caravan", st, rng)
+	_ok(trip.get("ok", false), "confirmed legal journey settles")
 	_ok(st.city == "sachiu", "arrived at Sachiu")
 	_ok(st.jdn > day0, "time advanced (%d days)" % trip["days"])
 	# Compare the DELTA: resting at the caravanserai already burned a day, so
@@ -88,6 +142,17 @@ func run() -> bool:
 	_ok(st.days_elapsed - elapsed0 == trip["days"], "elapsed days recorded")
 	_ok(st.jdn - day0 == trip["days"], "the calendar advanced by the same amount")
 	_ok(st.revealed.get("sachiu", 0) > 0, "destination revealed on the map")
+	_ok(not st.active_journey.is_empty(), "journey checkpoint remains until encounters/arrival complete")
+	_ok(st.pending_events == trip.get("encounters", []), "selected road encounters are durable FIFO data")
+	var nested_city := st.city
+	var nested_jdn := st.jdn
+	var nested_coins := st.coins
+	var nested := travel.depart(road, "caravan", st, rng)
+	_ok(not nested.get("ok", true) \
+		and "travel.journey_active" in nested.get("reasons", []),
+		"a second journey cannot begin before the first is completed")
+	_ok(st.city == nested_city and st.jdn == nested_jdn and st.coins == nested_coins,
+		"refused nested journey is side-effect free")
 
 	# ---------------------------------------------------- arrive at Sachiu
 	clock = WorldClock.new(st.jdn)

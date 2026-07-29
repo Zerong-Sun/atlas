@@ -12,6 +12,7 @@ extends RefCounted
 var seed: String = ""
 var jdn: int = 0                      ## Julian Day Number — the one authoritative date
 var city: String = ""                 ## current location id
+var character: Dictionary = {}       ## generated identity/background/birth facts
 
 var coins: int = 0                    ## in fen (1/100 of a coin); integers only, never float
 var days_elapsed: int = 0
@@ -35,6 +36,10 @@ var stickers: Array[String] = []
 var codex: Array[String] = []
 var etiquette: Dictionary = {}         ## culture_region -> level (CODE_PLAN §3.2)
 var birthdate_jdn: int = -1           ## player natal day for bazi; -1 = unset
+var pending_events: Array[String] = [] ## durable consequence chain, FIFO
+var active_event: String = ""          ## queued event currently shown; survives saving mid-dialog
+var active_journey: Dictionary = {}    ## resumable journey checkpoint; empty while in a city
+var recovery: Dictionary = {}          ## non-fatal load/content recovery facts for bug reports
 
 ## Journey record (GDD §14). The epilogue has to name the road this player
 ## actually walked, so the facts it needs are recorded as they happen rather
@@ -61,6 +66,7 @@ func duplicate_state() -> WorldState:
 	s.seed = seed
 	s.jdn = jdn
 	s.city = city
+	s.character = character.duplicate(true)
 	s.coins = coins
 	s.days_elapsed = days_elapsed
 	s.faith = faith
@@ -81,6 +87,10 @@ func duplicate_state() -> WorldState:
 	s.codex = codex.duplicate()
 	s.etiquette = etiquette.duplicate(true)
 	s.birthdate_jdn = birthdate_jdn
+	s.pending_events = pending_events.duplicate()
+	s.active_event = active_event
+	s.active_journey = active_journey.duplicate(true)
+	s.recovery = recovery.duplicate(true)
 	s.start_city = start_city
 	s.visited = visited.duplicate()
 	s.longest_leg = longest_leg.duplicate(true)

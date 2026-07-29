@@ -15,6 +15,11 @@ var state: WorldState
 var executor: EffectExecutor
 var conditions: ConditionEvaluator
 var rng: Rng
+var db := ContentDb.new()
+
+
+func _ready() -> void:
+	db.load_all()
 
 
 func new_run(seed: String, start_city: String, start_jdn: int) -> void:
@@ -24,7 +29,7 @@ func new_run(seed: String, start_city: String, start_jdn: int) -> void:
 	state.jdn = start_jdn
 	rng = Rng.new(seed)
 	executor = EffectExecutor.new()
-	conditions = ConditionEvaluator.new()
+	conditions = ConditionEvaluator.new(db)
 
 
 func apply(effects: Array, event_id: String) -> EffectExecutor.EffectResult:

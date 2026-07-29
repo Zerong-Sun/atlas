@@ -19,6 +19,12 @@ func _ready() -> void:
 	add_child(_player)
 
 
+func _exit_tree() -> void:
+	if _player != null:
+		_player.stop()
+		_player.stream = null
+
+
 func play(kind: String) -> void:
 	var samples: PackedFloat32Array
 	match kind:

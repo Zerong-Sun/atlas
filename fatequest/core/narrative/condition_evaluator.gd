@@ -15,6 +15,12 @@ const _LEAF_KEYS := [
 	"etiquette", "has_retainer",
 ]
 
+var db: ContentDb
+
+
+func _init(p_db: ContentDb = null) -> void:
+	db = p_db
+
 
 ## An empty or null condition is always true — most events fire unconditionally
 ## and should not be forced to carry a placeholder.
@@ -120,12 +126,21 @@ func _leaf(key: String, val: Variant, state: WorldState, ctx: Dictionary) -> boo
 			return int(state.etiquette.get(region, 0)) >= min_lvl
 		"has_retainer":
 			# {id} or {role} — is a specific person or kind of person in the party.
-			# Role-based checks require retainer record lookup (via ContentDb); until
-			# the evaluator carries a db reference, only id-based lookups are supported.
 			var want_id := String(val.get("id", ""))
 			if want_id != "":
 				for r in state.retainers:
-					if String(r.get("id", "")) == want_id:
+					if bool(r.get("present", true)) and String(r.get("id", "")) == want_id:
+						return true
+				return false
+			var want_role := String(val.get("role", ""))
+			if want_role != "" and db != null:
+				for r in state.retainers:
+					if not bool(r.get("present", true)):
+						continue
+					var rec := db.get_record(String(r.get("id", "")))
+					if want_role in rec.get("roles", []) \
+							or String(rec.get("role", "")) == want_role \
+							or String(rec.get("job", "")) == want_role:
 						return true
 				return false
 			return false

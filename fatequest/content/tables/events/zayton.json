@@ -17,7 +17,8 @@
           "effects": [
             { "op": "days", "value": 2, "reason": "waited-out-the-tithe-clerks" },
             { "op": "codex", "value": "cx-zayton-tithe", "reason": "learned-the-kaans-duties" },
-            { "op": "reveal_map", "value": "zayton", "reason": "the-clerks-named-the-quarters" }
+            { "op": "reveal_map", "value": "zayton", "reason": "the-clerks-named-the-quarters" },
+            { "op": "queue_event", "value": "ev-zayton-ledger-consequence", "reason": "the-clerk-returned-with-a-ledger" }
           ]
         },
         {
@@ -26,7 +27,8 @@
           "effects": [
             { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "avoided-the-tithe-clerks" },
             { "op": "flag", "value": "fl-zayton-undeclared", "reason": "entered-without-declaring" },
-            { "op": "codex", "value": "cx-zayton-tithe", "reason": "saw-what-the-tithe-costs-others" }
+            { "op": "codex", "value": "cx-zayton-tithe", "reason": "saw-what-the-tithe-costs-others" },
+            { "op": "queue_event", "value": "ev-zayton-watch-consequence", "reason": "the-night-watch-found-the-missing-mark" }
           ]
         },
         {
@@ -34,7 +36,8 @@
           "effects": [
             { "op": "days", "value": 1, "reason": "counted-the-shipping" },
             { "op": "codex", "value": "cx-hundred-shiploads", "reason": "counted-the-shipping" },
-            { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" }
+            { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" },
+            { "op": "queue_event", "value": "ev-zayton-pilot-consequence", "reason": "a-pilot-offered-a-road-rumour" }
           ]
         }
       ],
@@ -43,6 +46,91 @@
         "origin": "source",
         "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
       }
+    },
+
+    {
+      "id": "ev-zayton-ledger-consequence",
+      "kind": "consequence",
+      "title": "ev.zayton.ledger_consequence.title",
+      "when": { "cities": ["zayton"] },
+      "body": "ev.zayton.ledger_consequence.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.ledger_consequence.choice.copy",
+          "effects": [
+            { "op": "item", "value": "it-zayton-duty-copy", "reason": "received-a-duty-copy" },
+            { "op": "reveal_city", "value": "kinsay", "level": 1, "reason": "the-ledger-named-kinsay" },
+            { "op": "reveal_route", "value": "rt-kinsay-zayton", "level": 1, "reason": "the-ledger-listed-the-coastal-road" },
+            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-in-the-ledger" }
+          ]
+        },
+        {
+          "label": "ev.zayton.ledger_consequence.choice.refuse",
+          "effects": [
+            { "op": "reputation", "value": -1, "scope": "city", "id": "zayton", "reason": "refused-the-ledger-copy" },
+            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-without-a-copy" }
+          ]
+        }
+      ],
+      "lore": { "origin": "hybrid" }
+    },
+
+    {
+      "id": "ev-zayton-watch-consequence",
+      "kind": "consequence",
+      "title": "ev.zayton.watch_consequence.title",
+      "when": { "cities": ["zayton"] },
+      "body": "ev.zayton.watch_consequence.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.watch_consequence.choice.pay",
+          "needs": { "coins": { "min": 1200 } },
+          "effects": [
+            { "op": "coins", "value": -1200, "reason": "paid-the-late-declaration-fee" },
+            { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "the-watch-cleared-the-missing-mark" },
+            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-declared-late" }
+          ]
+        },
+        {
+          "label": "ev.zayton.watch_consequence.choice.submit",
+          "effects": [
+            { "op": "days", "value": 2, "reason": "cargo-was-held-for-inspection" },
+            { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "inspection-cleared-the-missing-mark" },
+            { "op": "codex", "value": "cx-zayton-watch", "reason": "learned-the-watch-rounds" }
+          ]
+        }
+      ],
+      "lore": { "origin": "authored" }
+    },
+
+    {
+      "id": "ev-zayton-pilot-consequence",
+      "kind": "consequence",
+      "title": "ev.zayton.pilot_consequence.title",
+      "when": { "cities": ["zayton"] },
+      "body": "ev.zayton.pilot_consequence.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.pilot_consequence.choice.chamba",
+          "effects": [
+            { "op": "reveal_city", "value": "chamba", "level": 1, "reason": "the-pilot-named-chamba" },
+            { "op": "reveal_route", "value": "rt-chamba-zayton", "level": 1, "reason": "the-pilot-described-the-monsoon-lane" },
+            { "op": "flag", "value": "fl-zayton-pilot-rumour", "reason": "remembered-the-pilots-monsoon-counsel" }
+          ]
+        },
+        {
+          "label": "ev.zayton.pilot_consequence.choice.local",
+          "effects": [
+            { "op": "reveal_city", "value": "fuju", "level": 1, "reason": "the-pilot-named-fuju" },
+            { "op": "reveal_route", "value": "rt-fuju-zayton", "level": 1, "reason": "the-pilot-described-the-northern-road" },
+            { "op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "shared-a-meal-with-the-pilot" }
+          ]
+        }
+      ],
+      "lore": { "origin": "authored" }
     },
 
     {

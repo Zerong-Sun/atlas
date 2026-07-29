@@ -22,7 +22,12 @@ class EffectResult extends RefCounted:
 	var rejected: Array[Dictionary] = []
 	var log_lines: Array[String] = []
 	var queued_days: int = 0
+	var queued_events: Array[String] = []
 	var reading: Dictionary = {}  ## last DivinationRegistry.cast payload, if any
+	## Set by EventMachine only after the choice passes every core preflight.
+	## An empty applied list is not enough to tell: valid chance effects may all
+	## miss, while an invalid choice must not be narrated or dequeued.
+	var resolved := false
 
 
 func execute(state: WorldState, effects: Array, ctx: Dictionary = {}) -> EffectResult:
@@ -123,9 +128,44 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 		"unlock_route":
 			if String(val) not in state.unlocked_routes:
 				state.unlocked_routes.append(String(val))
+			# An open road is necessarily a known road. Keeping map intel in
+			# sync here prevents a route from being usable while invisible.
+			state.revealed[String(val)] = maxi(1, int(state.revealed.get(String(val), 0)))
 		"reveal_map":
 			var cur: int = state.revealed.get(String(val), 0)
 			state.revealed[String(val)] = mini(cur + 1, 3)
+		"reveal_city", "reveal_route":
+			var reveal_id := String(val)
+			var level := clampi(int(e.get("level", 1)), 1, 3)
+			state.revealed[reveal_id] = maxi(level, int(state.revealed.get(reveal_id, 0)))
+		"queue_event":
+			var queued_id := String(val)
+			if queued_id.is_empty():
+				return false
+			state.pending_events.append(queued_id)
+			res.queued_events.append(queued_id)
+		"dequeue_event":
+			var expected := String(val)
+			if state.pending_events.is_empty():
+				return false
+			if not expected.is_empty() and state.pending_events[0] != expected:
+				return false
+			state.pending_events.remove_at(0)
+		"active_event":
+			state.active_event = String(val)
+		"fire_event":
+			state.once_fired[String(val)] = true
+		"journey":
+			if typeof(val) != TYPE_DICTIONARY:
+				return false
+			state.active_journey = (val as Dictionary).duplicate(true)
+		"end_journey":
+			state.active_journey.clear()
+		"recovery":
+			var bucket := id if not id.is_empty() else "general"
+			var facts: Array = state.recovery.get(bucket, [])
+			facts.append(val)
+			state.recovery[bucket] = facts
 		"learn_divination":
 			if String(val) not in state.learned_divinations:
 				state.learned_divinations.append(String(val))

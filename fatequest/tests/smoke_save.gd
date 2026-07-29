@@ -38,6 +38,21 @@ func _init():
     var ok = ok_save and ok_load and n.state.city == mark_city \
         and n.state.days_elapsed == mark_day and n.state.coins == 55555 \
         and n.state.codex.size() == 1
+    # Arrival must remain playable when an existing auto slot is damaged, and
+    # the failure must be visible instead of silently promising protection.
+    n._save("auto")
+    var broken_auto = FileAccess.open(SaveGame.slot_path("auto"), FileAccess.WRITE)
+    broken_auto.store_string("{\"broken\":true}")
+    broken_auto.close()
+    var before_failed_auto = n.state.city
+    n._autosave()
+    var auto_failure_visible = "自动保存失败" in n._log.text \
+        and n.state.city == before_failed_auto
+    ok = ok and auto_failure_visible
+    print("AUTOSAVE_FAILURE: visible=%s journey_continues=%s" % [
+        "自动保存失败" in n._log.text, n.state.city == before_failed_auto])
     print("SAVE: %s" % ("OK" if ok else "FAIL"))
     SaveGame.erase("manual"); SaveGame.erase("auto")
+    n.queue_free()
+    await process_frame
     quit(0 if ok else 1)

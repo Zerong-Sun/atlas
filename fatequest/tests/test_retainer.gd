@@ -91,6 +91,8 @@ func _cargo(db: ContentDb, ros: Roster, exec: EffectExecutor, mk: Market) -> voi
 	var sea := ros.effective_slots(st, "sea")
 	_ok(land > base, "a porter adds hold on land (%d -> %d)" % [base, land])
 	_ok(sea == base, "and adds none at sea (%d)" % sea)
+	_ok(ros.effective_slots(st, "river") == base,
+		"and pack animals add none aboard a riverboat")
 
 	# A sailor is the mirror image.
 	var sailor := db.get_record("npc-ormus-sailor")
@@ -99,6 +101,8 @@ func _cargo(db: ContentDb, ros: Roster, exec: EffectExecutor, mk: Market) -> voi
 		exec.execute(st2, ros.hire_effects(sailor), {"event_id": "h"})
 		_ok(ros.effective_slots(st2, "sea") > st2.cargo_slots, "a sailor adds hold at sea")
 		_ok(ros.effective_slots(st2, "land") == st2.cargo_slots, "and none on land")
+		_ok(ros.effective_slots(st2, "river") == st2.cargo_slots,
+			"and a sea hold does not become a riverboat hold")
 
 	# §11.7: losing them strands cargo. This is the consequence that makes a
 	# retainer a decision rather than a stat.

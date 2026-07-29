@@ -13,6 +13,8 @@
       },
       "faith": "latin",
       "culture": "latin",
+      "knownCities": ["tauris", "baldacum", "ormus"],
+      "knownRoutes": ["rt-tauris-baldacum"],
       "bonus": {
         "rapport": 3
       },
@@ -47,6 +49,8 @@
       },
       "faith": "nestorian",
       "culture": "steppe",
+      "knownCities": ["tauris", "balc", "caracoron"],
+      "knownRoutes": [],
       "bonus": {
         "travel": 4
       },
@@ -79,6 +83,8 @@
       },
       "faith": "islam",
       "culture": "indian_ocean",
+      "knownCities": ["ormus", "calatu", "basora"],
+      "knownRoutes": ["rt-ormus-calatu"],
       "bonus": {
         "wealth": 4
       },

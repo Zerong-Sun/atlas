@@ -23,9 +23,10 @@
 **无头测试**（不需要图形界面）：
 
 ```bash
-godot --headless --path . --script tests/run_tests.gd    # 15 个内核单测
+godot --headless --path . --script tests/run_tests.gd    # 16 个内核单测
 godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
-node tools/validate/validate.mjs                         # 22 道内容门禁
+godot --headless --path . --script tests/benchmark_systems.gd # 系统性能门禁
+node tools/validate/validate.mjs                         # 24 道内容门禁
 node tools/lore/story.mjs check                          # 译文时效
 ```
 
@@ -35,8 +36,8 @@ node tools/lore/story.mjs check                          # 译文时效
 fatequest/
 ├── project.godot            # Godot 工程入口
 ├── content/                 # 唯一数据真相源
-│   ├── tables/              #   八张系统表：cities/routes/events/goods/
-│   │                        #   retainers/divinations/endings/archetypes
+│   ├── tables/              #   玩法与占法支持表：cities/routes/events/goods/
+│   │                        #   retainers/divinations/lessons/transports 等
 │   ├── i18n/                #   编译产物 en.json / zh.json（勿手改，见 story/）
 │   ├── story/<unit>/<lang>.md  # 叙事文本的 authoring 源，带 stamps 时效戳
 │   └── world/               #   地图投影与山脉（从 worldmap/ 同步而来）
@@ -49,7 +50,8 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 15 单测 + 10 界面 smoke
+├── tests/                   # 16 单测 + 12 界面 smoke
+├── export_presets.cfg       # Linux / macOS / Windows 桌面导出
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
 ├── docs/                    # 见下
@@ -62,6 +64,8 @@ fatequest/
 |---|---|
 | [`docs/STATUS.md`](docs/STATUS.md) | **现在到哪一步**——唯一权威现状页 |
 | [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |
+| [`docs/FATEQUEST_ENGINE_REQUIREMENTS.md`](docs/FATEQUEST_ENGINE_REQUIREMENTS.md) | **引擎、数据、七系统、文本、美术、排期、风险与发布验收总需求** |
+| [`docs/FATEQUEST_ENGINE_AUDIT_2026-07-30.md`](docs/FATEQUEST_ENGINE_AUDIT_2026-07-30.md) | 本轮六维验证结果、问题与修复清单 |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | 阶段顺序（P0–P7 已闭环） |
 | [`docs/GDD.md`](docs/GDD.md) | 游戏设计文档 |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
@@ -77,9 +81,9 @@ fatequest/
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 276 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
-真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2482 条
-文本。**24 道门禁、15 单测、10 smoke 全绿。** 详见
+102 城 · 204 路线 · 279 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
+真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2501 条
+文本。**24 道门禁、16 单测、12 smoke 全绿。** 详见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

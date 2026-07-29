@@ -69,6 +69,23 @@ var _ending_ui: Dictionary = {}
 var _transit_layer: Control
 var _transit_tex: TextureRect
 var _transit_label: Label
+var _draw_rng: Rng
+var _drawn_archetype: Dictionary = {}
+var _draw_count := 0
+var _character_confirmed := false
+var _draw_card: VBoxContainer
+var _city_detail_layer: Control
+var _city_detail_card: PanelContainer
+var _travel_confirm_layer: Control
+var _travel_confirm: PanelContainer
+var _save_layer: Control
+var _save_manager: PanelContainer
+var _lesson_layer: Control
+var _lesson_ui: PanelContainer
+var _lesson_event: Dictionary = {}
+var _lesson_choice_index := -1
+var _lesson_method := ""
+var _pending_pages_in_sequence := 0
 
 
 func _ready() -> void:
@@ -109,6 +126,7 @@ func _apply_projection() -> void:
 
 
 func _build_desk() -> void:
+	_draw_rng = Rng.new("opening-draw:%d" % Time.get_ticks_usec())
 	# Parchment plate so a blank dark window cannot be mistaken for a hang.
 	var bg := TextureRect.new()
 	bg.name = "BootBg"
@@ -185,18 +203,28 @@ func _build_desk() -> void:
 	sub.add_theme_color_override("font_color", Color("cbb896"))
 	_desk.add_child(sub)
 
-	if SaveGame.exists("auto") or SaveGame.exists("manual"):
-		var slot := "manual" if SaveGame.exists("manual") else "auto"
-		var head: Dictionary = SaveGame.read(slot).get("header", {})
+	var existing_slots := SaveGame.list_slots().filter(
+		func(head): return String(head.get("status", "ok")) == "ok")
+	if not existing_slots.is_empty():
+		var slot := String(existing_slots[0].get("slot", "auto"))
+		var head: Dictionary = existing_slots[0]
 		var cont := Panels.styled_button("继续上次的旅程（%s · 第 %d 日）" % [
 			_city_name(String(head.get("city", ""))), int(head.get("days", 0))], Callable())
 		cont.pressed.connect(func():
-			_desk.queue_free()
-			_begin_loaded(slot))
+			if _begin_loaded(slot):
+				_desk.queue_free()
+			else:
+				_show_desk_load_error(slot))
 		_desk.add_child(cont)
 
-	for a in db.get_table("archetypes"):
-		_desk.add_child(_archetype_button(a))
+	var draw_btn := Panels.primary_button("抽取人物与起点", _draw_character)
+	draw_btn.name = "CharacterDrawButton"
+	_desk.add_child(draw_btn)
+
+	_draw_card = VBoxContainer.new()
+	_draw_card.name = "CharacterDrawCard"
+	_draw_card.add_theme_constant_override("separation", Metrics.xs())
+	_desk.add_child(_draw_card)
 
 
 func _archetype_button(a: Dictionary) -> Control:
@@ -231,7 +259,56 @@ func _archetype_button(a: Dictionary) -> Control:
 	return row
 
 
+func _draw_character() -> void:
+	var pool := db.get_table("archetypes")
+	if pool.is_empty() or _draw_count >= 3:
+		return
+	_drawn_archetype = pool[_draw_rng.fork("draw:%d" % _draw_count).next_int(pool.size())]
+	_draw_count += 1
+	for child in _draw_card.get_children():
+		child.queue_free()
+
+	var culture := String(_drawn_archetype.get("culture", "latin"))
+	var faith := String(_drawn_archetype.get("faith", "latin"))
+	var title := Panels.heading("你抽到了：%s" % I18n.t(_drawn_archetype.get("name", "")))
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_draw_card.add_child(title)
+	_draw_card.add_child(Panels.label("身份文化：%s　公开信仰：%s" % [
+		culture, faith], UiScale.ui(), Palette.ink_soft()))
+	_draw_card.add_child(Panels.label("起点城市：%s" % _city_name(
+		String(_drawn_archetype.get("start", ""))), UiScale.body(), Palette.ink()))
+
+	var known_names: Array[String] = []
+	for cid in _drawn_archetype.get("knownCities", []):
+		known_names.append(_city_name(String(cid)))
+	_draw_card.add_child(Panels.label("开局听说过：%s" % "、".join(
+		PackedStringArray(known_names)), UiScale.ui(), Palette.ink_soft()))
+	var known_routes: Array = _drawn_archetype.get("knownRoutes", [])
+	_draw_card.add_child(Panels.label(
+		"已知道路：%d 条（知道城市并不等于知道怎样抵达）" % known_routes.size(),
+		UiScale.ui(), Palette.ink_soft()))
+
+	var row := HBoxContainer.new()
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_theme_constant_override("separation", Metrics.sm())
+	var reroll := Panels.styled_button("重抽（余 %d 次）" % (3 - _draw_count), _draw_character)
+	reroll.disabled = _draw_count >= 3
+	row.add_child(reroll)
+	row.add_child(Panels.primary_button("接受命运，进入 %s" % _city_name(
+		String(_drawn_archetype.get("start", ""))), _confirm_character_draw))
+	_draw_card.add_child(row)
+
+
+func _confirm_character_draw() -> void:
+	if _character_confirmed or _drawn_archetype.is_empty():
+		return
+	_character_confirmed = true
+	_begin(_drawn_archetype)
+
+
 func _begin(archetype: Dictionary) -> void:
+	if state != null:
+		return
 	# Tear down the desk immediately. Animation must NOT await before WorldState
 	# exists — smoke tests call _begin and read state on the next frame.
 	var center := get_node_or_null("BootCenter")
@@ -249,9 +326,9 @@ func _begin(archetype: Dictionary) -> void:
 	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
 	rng = Rng.new("run:%s:%d" % [archetype.get("id", "x"), clock.date.jdn])
 	executor = EffectExecutor.new()
-	conditions = ConditionEvaluator.new()
+	conditions = ConditionEvaluator.new(db)
 	events = EventMachine.new(db, conditions, executor)
-	travel = Travel.new(db, executor)
+	travel = Travel.new(db, executor, conditions)
 	_market = Market.new(db)
 	_roster = Roster.new(db)
 	_ending = Ending.new(db)
@@ -263,12 +340,49 @@ func _begin(archetype: Dictionary) -> void:
 	state.jdn = clock.date.jdn
 	state.coins = int(archetype.get("startKit", {}).get("coins", START_COINS))
 	state.faith = archetype.get("faith", "latin")
+	var birth_year := 1253 + rng.fork("birth-year").next_int(22)
+	var birth_month := 1 + rng.fork("birth-month").next_int(12)
+	var birth_day := 1 + rng.fork("birth-day").next_int(28)
+	state.birthdate_jdn = GameDate.from_gregorian(
+		birth_year, birth_month, birth_day).jdn
+	state.character = {
+		"archetype_id": _archetype_id,
+		"background": String(archetype.get("culture", "latin")),
+		"faith": String(archetype.get("faith", "latin")),
+		"start_city": String(state.city),
+		"birth_year": birth_year,
+		"birth_month": birth_month,
+		"birth_day": birth_day,
+	}
 	for l in archetype.get("startKit", {}).get("languages", []):
 		if String(l) not in state.languages:
 			state.languages.append(String(l))
 	for it in archetype.get("startKit", {}).get("items", []):
 		if String(it) not in state.items:
 			state.items.append(String(it))
+	for key in archetype.get("bonus", {}):
+		state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
+			+ int(archetype["bonus"][key]), 0, 31)
+	for key in archetype.get("malus", {}):
+		state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
+			+ int(archetype["malus"][key]), 0, 31)
+
+	var opening_effects: Array = [{
+		"op": "reveal_city", "value": String(state.city), "level": 3,
+		"reason": "character-start-city",
+	}]
+	for known_city in archetype.get("knownCities", []):
+		opening_effects.append({
+			"op": "reveal_city", "value": String(known_city), "level": 1,
+			"reason": "character-background-knowledge",
+		})
+	for known_route in archetype.get("knownRoutes", []):
+		opening_effects.append({
+			"op": "reveal_route", "value": String(known_route), "level": 1,
+			"reason": "character-background-road-knowledge",
+		})
+	executor.execute(state, opening_effects, {
+		"rng": rng, "event_id": "character-opening-knowledge"})
 
 	_build_map()
 	_build_audio_controls()
@@ -282,20 +396,42 @@ func _begin(archetype: Dictionary) -> void:
 
 ## Resume: build the same machinery a new run does, then restore the world into
 ## it rather than starting one.
-func _begin_loaded(slot: String) -> void:
+func _begin_loaded(slot: String) -> bool:
+	# Preflight before replacing the desk. A valid-looking sidecar can outlive a
+	# same-size damaged snapshot; failure must leave New Game reachable.
+	var preflight := SaveGame.read(slot)
+	if preflight.is_empty():
+		return false
 	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
 	executor = EffectExecutor.new()
-	conditions = ConditionEvaluator.new()
+	conditions = ConditionEvaluator.new(db)
 	events = EventMachine.new(db, conditions, executor)
-	travel = Travel.new(db, executor)
+	travel = Travel.new(db, executor, conditions)
 	_market = Market.new(db)
 	_roster = Roster.new(db)
 	_ending = Ending.new(db)
 	state = WorldState.new()
 	rng = Rng.new("resume")
 	_build_map()
-	if not _load(slot):
+	# Restore the exact document that passed preflight. Reading the file again
+	# here created a small race where a changed snapshot could replace the desk
+	# after validation and then fail against an already-built world.
+	if not _restore_document(preflight):
 		_say("[color=#8a4a3a]读档失败[/color]")
+		return false
+	return true
+
+
+func _show_desk_load_error(slot: String) -> void:
+	var old := _desk.get_node_or_null("LoadError")
+	var text := "无法读取 %s；现有存档未被改写。可开始新旅程或到存档管理恢复备份。" % slot
+	if old is Label:
+		(old as Label).text = text
+		return
+	var message := Panels.label(text, UiScale.ui(), Palette.loss())
+	message.name = "LoadError"
+	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_desk.add_child(message)
 
 
 func rng_seed(a: Dictionary) -> String:
@@ -315,6 +451,14 @@ func _load_ranges() -> Array:
 	return ContentDb._normalize(doc).get("ranges", [])
 
 
+func _load_world_vectors() -> Dictionary:
+	var f := FileAccess.open("res://content/world/vector_map.json", FileAccess.READ)
+	if f == null:
+		return {}
+	var doc = JSON.parse_string(f.get_as_text())
+	return doc if typeof(doc) == TYPE_DICTIONARY else {}
+
+
 ## Layout is entirely anchor- and container-driven. The previous版 positioned
 ## every widget at a hard pixel offset computed from a 1280x720 assumption, so
 ## text ran off the edge the moment the window differed or the font grew — that
@@ -323,7 +467,8 @@ func _build_map() -> void:
 	_apply_projection()
 	_map = preload("res://game/map/world_map.gd").new()
 	add_child(_map)
-	_map.setup(projection, db.cities(), db.get_table("routes"), _load_ranges())
+	_map.setup(projection, db.cities(), db.get_table("routes"), _load_ranges(),
+		_load_world_vectors())
 	_map.city_clicked.connect(_on_city_clicked)
 
 	# --- HUD: the four numbers every decision is made against ---------------
@@ -413,12 +558,7 @@ func _build_map() -> void:
 	_dialog = preload("res://game/ui/event_dialog.gd").new()
 	centre.add_child(_dialog)
 	_dialog.choice_taken.connect(_on_dialog_choice)
-	_dialog.dismissed.connect(func():
-		_dialog_layer.visible = false
-		if _city_view.visible:
-			_sync_city_status()
-		else:
-			_open_city())
+	_dialog.dismissed.connect(_on_event_dismissed)
 
 	# --- market -------------------------------------------------------------
 	_market_layer = Control.new()
@@ -473,6 +613,10 @@ func _build_map() -> void:
 	_build_settings()
 	_build_controls()
 	_build_transit()
+	_build_city_detail()
+	_build_travel_confirm()
+	_build_save_manager()
+	_build_divination_lesson()
 	_wire_dismissal()
 	_restyle_all()
 
@@ -494,6 +638,17 @@ func _wire_dismissal() -> void:
 	if _codex_layer != null:
 		Panels.make_dismissable(_codex_layer, _codex_view,
 			func() -> void: _codex_layer.visible = false)
+	if _city_detail_layer != null:
+		Panels.make_dismissable(_city_detail_layer, _city_detail_card,
+			func() -> void: _city_detail_layer.visible = false)
+	if _travel_confirm_layer != null:
+		Panels.make_dismissable(_travel_confirm_layer, _travel_confirm,
+			func() -> void: _travel_confirm_layer.visible = false)
+	if _save_layer != null:
+		Panels.make_dismissable(_save_layer, _save_manager,
+			func() -> void: _save_layer.visible = false)
+	if _lesson_layer != null:
+		Panels.make_dismissable(_lesson_layer, _lesson_ui, _cancel_lesson)
 
 
 ## Escape closes the topmost overlay. Ordered innermost-last, so a bag opened
@@ -519,6 +674,15 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		closers.append(func() -> void:
 			_market_layer.visible = false
 			_open_city())
+	for pair in [
+		[_lesson_layer, _cancel_lesson],
+		[_save_layer, func() -> void: _save_layer.visible = false],
+		[_travel_confirm_layer, func() -> void: _travel_confirm_layer.visible = false],
+		[_city_detail_layer, func() -> void: _city_detail_layer.visible = false],
+	]:
+		if pair[0] != null and is_instance_valid(pair[0]):
+			layers.append(pair[0])
+			closers.append(pair[1])
 	if Panels.close_topmost(layers, closers):
 		get_viewport().set_input_as_handled()
 
@@ -557,6 +721,91 @@ func _build_transit() -> void:
 	_transit_label.add_theme_color_override("font_color", Palette.ink())
 	_transit_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	plate.add_child(_transit_label)
+
+
+func _build_city_detail() -> void:
+	_city_detail_layer = Control.new()
+	_city_detail_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_city_detail_layer.visible = false
+	add_child(_city_detail_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_city_detail_layer.add_child(scrim)
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_city_detail_layer.add_child(centre)
+	_city_detail_card = preload("res://game/ui/city_detail_card.gd").new()
+	centre.add_child(_city_detail_card)
+	_city_detail_card.setup(db, travel)
+	_city_detail_card.closed.connect(func(): _city_detail_layer.visible = false)
+
+
+func _build_travel_confirm() -> void:
+	_travel_confirm_layer = Control.new()
+	_travel_confirm_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_travel_confirm_layer.visible = false
+	add_child(_travel_confirm_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_travel_confirm_layer.add_child(scrim)
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_travel_confirm_layer.add_child(centre)
+	_travel_confirm = preload("res://game/ui/travel_confirm.gd").new()
+	centre.add_child(_travel_confirm)
+	_travel_confirm.setup(db, travel)
+	_travel_confirm.cancelled.connect(func(): _travel_confirm_layer.visible = false)
+	_travel_confirm.confirmed.connect(_perform_depart)
+
+
+func _build_save_manager() -> void:
+	_save_layer = Control.new()
+	_save_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_save_layer.visible = false
+	add_child(_save_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_save_layer.add_child(scrim)
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_save_layer.add_child(centre)
+	_save_manager = preload("res://game/ui/save_manager.gd").new()
+	centre.add_child(_save_manager)
+	_save_manager.setup(db)
+	_save_manager.closed.connect(func(): _save_layer.visible = false)
+	_save_manager.save_requested.connect(_on_manual_save)
+	_save_manager.load_requested.connect(_on_manual_load)
+	_save_manager.backup_requested.connect(_on_backup_load)
+
+
+func _build_divination_lesson() -> void:
+	_lesson_layer = Control.new()
+	_lesson_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_lesson_layer.visible = false
+	add_child(_lesson_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_lesson_layer.add_child(scrim)
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_lesson_layer.add_child(centre)
+	_lesson_ui = preload("res://game/ui/divination_lesson.gd").new()
+	centre.add_child(_lesson_ui)
+	_lesson_ui.passed.connect(_on_lesson_passed)
+	_lesson_ui.failed.connect(_on_lesson_failed)
+	_lesson_ui.skipped.connect(_on_lesson_skipped)
 
 
 func _show_transit(route: Dictionary, mode: String, dest: String, days: int) -> void:
@@ -605,6 +854,7 @@ func _build_controls() -> void:
 	bar.add_child(_ctl("图鉴", _open_codex))
 	bar.add_child(_ctl("同行", _open_party))
 	bar.add_child(_ctl("停笔", _open_ending))
+	bar.add_child(_ctl("存档", _open_save_manager))
 	bar.add_child(_ctl("设置", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
 	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
@@ -672,6 +922,38 @@ func _refresh_hud() -> void:
 	_map.set_current(state.city, state.revealed)
 
 
+func _open_save_manager() -> void:
+	_save_manager.refresh()
+	_save_layer.visible = true
+	Motion.parchment_expand(_save_manager, 0.20)
+
+
+func _on_manual_save(slot: String) -> void:
+	if _save(slot):
+		_say("[color=#4a6a4a]· 已保存至 %s[/color]" % slot)
+		_save_manager.trust_slot_header(slot)
+	else:
+		_say("[color=#8a4a3a]· 保存失败：%s；原存档和备份保持不变[/color]" % slot)
+		_save_manager.mark_slot_for_deep_check(slot)
+
+
+func _on_manual_load(slot: String) -> void:
+	if _load(slot):
+		_save_layer.visible = false
+	else:
+		_say("[color=#8a4a3a]· 读取失败：%s；可尝试恢复备份[/color]" % slot)
+		_save_manager.mark_slot_for_deep_check(slot)
+
+
+func _on_backup_load(slot: String) -> void:
+	if SaveGame.restore_backup(slot) and _load(slot):
+		_say("[color=#4a6a4a]· 已恢复并读取 %s 的上一份备份[/color]" % slot)
+		_save_layer.visible = false
+	else:
+		_say("[color=#8a4a3a]· 备份无法恢复：%s[/color]" % slot)
+	_save_manager.refresh()
+
+
 func _say(line: String) -> void:
 	_log.text += line + "\n"
 	_log.scroll_to_line(_log.get_line_count())
@@ -680,6 +962,7 @@ func _say(line: String) -> void:
 ## Arrival: fire the entry event if there is one, else offer the roads.
 func _arrive() -> void:
 	_refresh_hud()
+	_autosave()
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	var city := db.get_record(state.city)
 	var ctx := _ctx()
@@ -723,6 +1006,18 @@ func _on_dialog_choice(index: int) -> void:
 	_dialog_layer.visible = false
 	if not _current_event.is_empty():
 		_on_choice(_current_event, index)
+
+
+func _on_event_dismissed() -> void:
+	_dialog_layer.visible = false
+	# “先不动手” pauses a committed consequence instead of silently hiding a
+	# durable active_event with no way back to it.
+	if state != null and state.active_event == String(_current_event.get("id", "")):
+		_show_pending_pause()
+	elif _city_view.visible:
+		_sync_city_status()
+	else:
+		_open_city()
 
 
 ## Applies a market order. The screen produces effects; the executor applies
@@ -1164,19 +1459,9 @@ func _build_settings() -> void:
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 
-	var save_btn := Panels.styled_button("存档", Callable())
-	save_btn.pressed.connect(func():
-		var okd := _save("manual")
-		save_btn.text = "存档 ✓" if okd else "存档失败")
-	box.add_child(save_btn)
-
-	var load_btn := Panels.styled_button("读档", Callable())
-	load_btn.pressed.connect(func():
-		if _load("manual"):
-			_settings["layer"].visible = false
-		else:
-			load_btn.text = "无存档")
-	box.add_child(load_btn)
+	box.add_child(Panels.styled_button("管理存档（自动 + 五槽）", func():
+		_settings["layer"].visible = false
+		_open_save_manager()))
 
 	box.add_child(Panels.styled_button("合上", func(): _settings["layer"].visible = false))
 
@@ -1216,7 +1501,10 @@ func _open_city() -> void:
 ## Autosave on arrival. GDD's journeys run to four hundred days; losing one to
 ## a crash is the kind of thing a player does not come back from.
 func _autosave() -> void:
-	_save("auto")
+	if not _save("auto"):
+		# Save failure must never block arrival, but it must be visible. Silent
+		# failure gives the player false confidence until the next launch.
+		_say("[color=#8a4a3a]· 自动保存失败；旅程仍可继续，请在存档管理中检查自动槽位[/color]")
 
 
 func _save(slot: String) -> bool:
@@ -1229,7 +1517,13 @@ func _load(slot: String) -> bool:
 	var doc := SaveGame.read(slot)
 	if doc.is_empty():
 		return false
+	return _restore_document(doc)
+
+
+func _restore_document(doc: Dictionary) -> bool:
 	var back := SaveGame.deserialize(doc)
+	if back.is_empty():
+		return false
 	state = back["state"]
 	clock = back["clock"]
 	_archetype_id = String((back["extra"] as Dictionary).get("archetype", _archetype_id))
@@ -1248,7 +1542,12 @@ func _load(slot: String) -> bool:
 	_market_layer.visible = false
 	_codex_layer.visible = false
 	_bag["layer"].visible = false
-	_open_city()
+	_pending_pages_in_sequence = 0
+	if not state.active_journey.is_empty():
+		if not _show_next_pending_event():
+			_complete_journey()
+	elif not _show_next_pending_event():
+		_open_city()
 	return true
 
 
@@ -1334,8 +1633,106 @@ func _origin_tag(rec: Dictionary) -> String:
 
 
 func _on_choice(ev: Dictionary, index: int) -> void:
+	var choices: Array = ev.get("choices", [])
+	if index >= 0 and index < choices.size():
+		var choice: Dictionary = choices[index]
+		for effect in choice.get("effects", []):
+			if String(effect.get("op", "")) == "learn_divination":
+				var method := String(effect.get("value", ""))
+				if method not in state.learned_divinations:
+					_start_lesson(ev, index, method)
+					return
+	_resolve_choice(ev, index)
+
+
+func _start_lesson(ev: Dictionary, index: int, method: String) -> void:
+	_lesson_event = ev
+	_lesson_choice_index = index
+	_lesson_method = method
+	var lesson := db.get_record("lesson-%s" % method)
+	if lesson.is_empty():
+		push_error("Missing divination lesson configuration for %s" % method)
+		_on_lesson_failed(method)
+		return
+	_lesson_ui.start(method, lesson, rng.fork(
+		"lesson:%s:%s" % [ev.get("id", "?"), method]))
+	_lesson_layer.visible = true
+	Motion.parchment_expand(_lesson_ui, 0.22)
+
+
+func _on_lesson_passed(method: String) -> void:
+	if method != _lesson_method or _lesson_event.is_empty():
+		return
+	_lesson_layer.visible = false
+	var ev := _lesson_event
+	var index := _lesson_choice_index
+	_clear_lesson_pending()
+	_say("[color=#4a6a4a]· 练习通过：%s[/color]" % I18n.t(
+		db.get_record(method).get("name", method)))
+	_resolve_choice(ev, index, method)
+
+
+func _on_lesson_failed(method: String) -> void:
+	_lesson_layer.visible = false
+	if not _lesson_event.is_empty() and _lesson_choice_index >= 0:
+		var choices: Array = _lesson_event.get("choices", [])
+		if _lesson_choice_index < choices.size():
+			var choice: Dictionary = choices[_lesson_choice_index]
+			var fail_effects: Array = choice.get("lessonFailEffects", [])
+			if not fail_effects.is_empty():
+				var fail_result := executor.execute(state, fail_effects, {
+					"rng": rng,
+					"event_id": "%s:lesson-failed" % _lesson_event.get("id", "?"),
+				})
+				for line in fail_result.log_lines:
+					_say("  · %s" % line)
+	_say("[color=#8a4a3a]· 练习未通过，尚未学会 %s；可再次拜师。[/color]" % I18n.t(
+		db.get_record(method).get("name", method)))
+	_clear_lesson_pending()
+	_open_city()
+
+
+func _on_lesson_skipped(method: String) -> void:
+	_lesson_layer.visible = false
+	_say("· 你暂时不学 %s。" % I18n.t(db.get_record(method).get("name", method)))
+	_clear_lesson_pending()
+	_open_city()
+
+
+func _cancel_lesson() -> void:
+	if not _lesson_layer.visible:
+		return
+	_on_lesson_skipped(_lesson_method)
+
+
+func _clear_lesson_pending() -> void:
+	_lesson_event = {}
+	_lesson_choice_index = -1
+	_lesson_method = ""
+
+
+func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> void:
 	var coins_before := state.coins
-	var res := events.choose(ev, index, state, rng, _ctx())
+	var choose_ctx := _ctx()
+	if not lesson_passed.is_empty():
+		choose_ctx["lesson_passed"] = lesson_passed
+	if state.active_event == String(ev.get("id", "")):
+		choose_ctx["event_committed"] = true
+	var res := events.choose(ev, index, state, rng, choose_ctx)
+	if not res.resolved:
+		_say("[color=#8a4a3a]· 状态已经变化，该选择未结算；请重新选择[/color]")
+		if state.active_event == String(ev.get("id", "")):
+			_show_event(ev)
+		elif _city_view.visible:
+			_sync_city_status()
+		else:
+			_open_city()
+		return
+	var choices: Array = ev.get("choices", [])
+	if index >= 0 and index < choices.size():
+		var result_text := String((choices[index] as Dictionary).get("resultText", ""))
+		if not result_text.is_empty():
+			_say("  · %s" % I18n.t(result_text))
 	if _audio_ready(): _audio.on_effect_result(res, {}, db.get_record(state.city), coins_before)
 	for line in res.log_lines:
 		_say("  · %s" % line)
@@ -1348,10 +1745,115 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 		_say(DivinationResultView.as_richtext(res.reading))
 	if not res.rejected.is_empty():
 		_say("  [color=#8a4a3a]· %d 项未能达成[/color]" % res.rejected.size())
+	if state.active_event == String(ev.get("id", "")):
+		executor.execute(state, [
+			{
+				"op": "dequeue_event",
+				"value": state.active_event,
+				"reason": "resolved-queued-event",
+			},
+			{
+				"op": "active_event",
+				"value": "",
+				"reason": "closed-queued-event",
+			},
+		], {"rng": rng, "event_id": "queued-event-resolved"})
 	_refresh_hud()
+	# A choice may enqueue one or more authored consequences. Resolve the FIFO
+	# before returning to city exploration so a branch can never silently end
+	# between “what I chose” and “what happened because of it”.
+	if _show_next_pending_event():
+		return
+	if not state.pending_events.is_empty():
+		_show_pending_pause()
+		return
+	if not state.active_journey.is_empty():
+		_complete_journey()
+		return
 	if _city_view.visible:
 		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())
 		_sync_city_status()
+	else:
+		_open_city()
+
+
+func _show_next_pending_event() -> bool:
+	if _pending_pages_in_sequence >= 3 and not state.pending_events.is_empty():
+		return false
+	if state != null and not state.active_event.is_empty():
+		var resumed := db.get_record(state.active_event)
+		if not resumed.is_empty():
+			_city_view.visible = false
+			_pending_pages_in_sequence += 1
+			_show_event(resumed)
+			return true
+		executor.execute(state, [
+			{
+				"op": "dequeue_event",
+				"value": state.active_event,
+				"reason": "discarded-missing-active-event",
+			},
+			{
+				"op": "recovery",
+				"id": "skipped_events",
+				"value": state.active_event,
+				"reason": "missing-active-event",
+			},
+			{
+				"op": "active_event",
+				"value": "",
+				"reason": "cleared-missing-active-event",
+			},
+		], {"rng": rng, "event_id": "active-event-recovery"})
+	while state != null and not state.pending_events.is_empty():
+		var event_id := String(state.pending_events[0])
+		var next := db.get_record(event_id)
+		if next.is_empty():
+			push_error("Missing queued consequence event: %s" % event_id)
+			executor.execute(state, [
+				{
+					"op": "dequeue_event",
+					"value": event_id,
+					"reason": "discarded-missing-queued-event",
+				},
+				{
+					"op": "recovery",
+					"id": "skipped_events",
+					"value": event_id,
+					"reason": "missing-queued-event",
+				},
+			], {"rng": rng, "event_id": "consequence-recovery"})
+			continue
+		executor.execute(state, [{
+			"op": "active_event",
+			"value": event_id,
+			"reason": "opened-queued-event",
+		}], {"rng": rng, "event_id": "consequence-queue"})
+		_city_view.visible = false
+		_pending_pages_in_sequence += 1
+		_show_event(next)
+		return true
+	_pending_pages_in_sequence = 0
+	return false
+
+
+func _show_pending_pause() -> void:
+	_dialog_layer.visible = false
+	_city_view.visible = false
+	_clear_panel()
+	_panel.add_child(Panels.heading("未完的后果"))
+	_panel.add_child(Panels.label(
+		"连续事件已暂停，避免长链阻断自由操作。继续后将处理下一项。",
+		UiScale.ui(), Palette.ink_soft()))
+	_panel.add_child(Panels.primary_button("继续处理", _continue_pending))
+
+
+func _continue_pending() -> void:
+	_pending_pages_in_sequence = 0
+	if _show_next_pending_event():
+		return
+	if not state.active_journey.is_empty():
+		_complete_journey()
 	else:
 		_open_city()
 
@@ -1395,6 +1897,8 @@ func _show_roads() -> void:
 
 	var any := false
 	for r in travel.routes_from(state.city):
+		if not travel.is_route_known(r, state):
+			continue
 		var dest := travel.other_end(r, state.city)
 		for mode in r.get("modes", []):
 			var av := travel.availability(r, state, clock.month(), String(mode))
@@ -1422,13 +1926,18 @@ func _show_roads() -> void:
 				btn.pressed.connect(_on_depart.bind(r, String(mode)))
 			_panel.add_child(btn)
 			any = true
-			break   # one mode per destination keeps the P1 panel readable
 	if not any:
 		_panel.add_child(Panels.label("（无路可走）", UiScale.ui(), Palette.ink_faint()))
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
-	if _audio_ready(): _audio.on_depart(route)
+	_travel_confirm.open(route, mode, state.city, state)
+	_travel_confirm_layer.visible = true
+	Motion.parchment_expand(_travel_confirm, 0.22)
+
+
+func _perform_depart(route: Dictionary, mode: String) -> void:
+	_travel_confirm_layer.visible = false
 	# The hold on THIS road decides whether the cargo travels. A porter's mules
 	# do not help at sea, so the party's contribution is computed per leg.
 	var t_rec := db.get_record(mode)
@@ -1438,6 +1947,15 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 	# Capture origin before depart moves WorldState (goto + reveal_map).
 	var origin_id := String(state.city)
 	var trip := travel.depart(route, mode, state, rng)
+	if not bool(trip.get("ok", false)):
+		var reasons: Array[String] = []
+		for reason in trip.get("reasons", []):
+			reasons.append(I18n.fmt(String(reason)))
+		_say("[color=#8a4a3a]· 无法出发：%s[/color]" % "、".join(
+			PackedStringArray(reasons)))
+		_show_roads()
+		return
+	if _audio_ready(): _audio.on_depart(route)
 	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]))
 
 	# N2 M2 — stroke the road as a fire-and-forget visual. Must not await:
@@ -1463,12 +1981,28 @@ func _on_depart(route: Dictionary, mode: String) -> void:
 	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [
 		_city_name(trip["destination"]), trip["days"], trip["cost"] / 100])
 
-	# Road encounters fire on arrival, before the destination's entry event.
-	var enc := events.pick("road", state, rng, _ctx())
-	if not enc.is_empty():
-		_show_event(enc)
-		_refresh_hud()
+	# Route-specific encounters were deterministically queued by Travel before
+	# the location changed. Checkpoint here so quitting inside a road event
+	# resumes that event and still completes the arrival afterwards.
+	_pending_pages_in_sequence = 0
+	if not state.pending_events.is_empty():
+		_save("auto")
+		if _show_next_pending_event():
+			_refresh_hud()
+			return
+	_complete_journey()
+
+
+func _complete_journey() -> void:
+	if state == null:
 		return
+	if not state.active_journey.is_empty():
+		executor.execute(state, [{
+			"op": "end_journey",
+			"value": true,
+			"reason": "journey-events-complete",
+		}], {"rng": rng, "event_id": "journey-complete"})
+	clock = WorldClock.new(state.jdn)
 	_arrive()
 
 
@@ -1501,9 +2035,13 @@ func _on_city_clicked(c: Dictionary) -> void:
 		return
 	var known: int = state.revealed.get(c.get("id", ""), 0)
 	if c.get("id") == state.city:
-		_say("你在 %s。" % _city_name(c.get("id", "")))
+		_city_detail_card.show_city(c, state)
+		_city_detail_layer.visible = true
+		Motion.parchment_expand(_city_detail_card, 0.20)
 	elif known > 0:
-		_say("%s — 你听说过（情报 %d/3）" % [_city_name(c.get("id", "")), known])
+		_city_detail_card.show_city(c, state)
+		_city_detail_layer.visible = true
+		Motion.parchment_expand(_city_detail_card, 0.20)
 	else:
 		_say("[color=#6a6a6a]那里你还一无所知。[/color]")
 

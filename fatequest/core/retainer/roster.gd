@@ -60,7 +60,7 @@ func slots_from(rec: Dictionary, mode_kind: String) -> int:
 		return 0
 	match String(cargo.get("condition", "always")):
 		"land_only":
-			if mode_kind == "sea":
+			if mode_kind != "land":
 				return 0
 		"sea_only":
 			if mode_kind != "sea":

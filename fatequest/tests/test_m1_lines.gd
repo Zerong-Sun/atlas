@@ -83,6 +83,13 @@ func _walk(db: ContentDb, arch: Dictionary, line: Dictionary) -> void:
 		_trade_here(db, market, exec, st, clock)
 		var r: Dictionary = step["route"]
 		var m: String = step["mode"]
+		# This test validates the economic/seasonal walkability of a planned
+		# historical line. Simulate the traveller obtaining each itinerary leg;
+		# route-discovery coverage is validated separately as content.
+		exec.execute(st, [{
+			"op": "reveal_route", "value": String(r.get("id", "")), "level": 1,
+			"reason": "m1-itinerary-road-knowledge",
+		}], {"event_id": "m1-plan"})
 		var av := travel.availability(r, st, clock.month(), m)
 		if not av["ok"]:
 			# Season is the one constraint a traveller answers by waiting.
@@ -99,8 +106,25 @@ func _walk(db: ContentDb, arch: Dictionary, line: Dictionary) -> void:
 					", ".join(PackedStringArray(av["reasons"]))]
 				break
 		var trip := travel.depart(r, m, st, rng)
+		if not bool(trip.get("ok", false)):
+			stalled_reason = "depart rejected after availability preflight"
+			break
 		clock = WorldClock.new(st.jdn)
 		legs += 1
+		# This suite is about line-level economy and seasons; encounter choice
+		# outcomes are covered independently. Resolve the durable queue and
+		# finish the checkpoint exactly as the presentation flow does before
+		# attempting the next leg.
+		while not st.pending_events.is_empty():
+			exec.execute(st, [{
+				"op": "dequeue_event",
+				"value": String(st.pending_events[0]),
+				"reason": "m1-simulated-encounter-complete",
+			}], {"event_id": "m1-encounter"})
+		exec.execute(st, [{
+			"op": "end_journey", "value": true,
+			"reason": "m1-leg-complete",
+		}], {"event_id": "m1-journey"})
 
 	var arrived := st.city == String(line["to"])
 	_ok(arrived, "line %s: %s -> %s walkable end to end%s" % [

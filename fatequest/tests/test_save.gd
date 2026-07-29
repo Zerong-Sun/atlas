@@ -25,6 +25,7 @@ func run() -> bool:
 
 	_ok(got.seed == st.seed, "seed survives")
 	_ok(got.city == st.city, "city survives")
+	_ok(got.character == st.character, "generated character survives")
 	_ok(got.coins == st.coins, "coins survive")
 	_ok(got.jdn == st.jdn, "date survives")
 	_ok(got.days_elapsed == st.days_elapsed, "elapsed days survive")
@@ -45,6 +46,10 @@ func run() -> bool:
 	_ok(got.codex == st.codex, "codex survives")
 	_ok(got.etiquette == st.etiquette, "etiquette survives")
 	_ok(got.fate == st.fate, "fate bars survive")
+	_ok(got.pending_events == st.pending_events, "consequence queue survives")
+	_ok(got.active_event == st.active_event, "active queued event survives")
+	_ok(got.active_journey == st.active_journey, "journey checkpoint survives")
+	_ok(got.recovery == st.recovery, "recovery facts survive")
 
 	# --- every field is covered --------------------------------------------
 	# Catches the real failure mode: someone adds a field to WorldState and
@@ -74,6 +79,20 @@ func run() -> bool:
 	_ok(h.has("city") and h.has("date") and h.has("coins"),
 		"header carries what a load menu shows")
 	_ok(String(h.get("archetype", "")) == "polo", "header keeps the archetype")
+	_ok(int(h.get("version", 0)) == SaveGame.VERSION, "header carries save version")
+	_ok(doc.has("integrity"), "v3 saves carry integrity metadata")
+	var missing_field := doc.duplicate(true)
+	missing_field["state"].erase("revealed")
+	missing_field = SaveGame._seal(missing_field)
+	_ok(String(SaveGame._document_status(missing_field).get(
+		"code", "")).begins_with("SAVE_STATE_FIELD_MISSING"),
+		"sealed but incomplete v3 save is rejected by schema")
+	var mismatched_header := doc.duplicate(true)
+	mismatched_header["header"]["city"] = "zayton"
+	mismatched_header = SaveGame._seal(mismatched_header)
+	_ok(SaveGame._document_status(mismatched_header).get("code") \
+		== "SAVE_HEADER_STATE_MISMATCH",
+		"header cannot advertise a different world than the snapshot")
 
 	# --- unknown fields are preserved --------------------------------------
 	var future := doc.duplicate(true)
@@ -94,11 +113,97 @@ func run() -> bool:
 
 	var slots := SaveGame.list_slots()
 	_ok(slots.any(func(s): return s.get("slot") == slot), "the slot is listed")
+
+	# A second complete write keeps the first one as a validated backup.
+	var original_coins := st.coins
+	st.coins += 77
+	_ok(SaveGame.write(slot, st, clock, {"archetype": "polo"}), "overwrites safely")
+	_ok(FileAccess.file_exists(SaveGame.backup_path(slot)), "previous save is backed up")
+	var backup := SaveGame.read_backup(slot)
+	_ok(not backup.is_empty(), "backup validates")
+	_ok(int(backup.get("state", {}).get("coins", -1)) == original_coins,
+		"backup is the previous snapshot")
+
+	# Header sidecars are intentionally fast and cannot detect same-length
+	# damage in the full body. Deep inspection and the actual load path must.
+	var live_file := FileAccess.open(SaveGame.slot_path(slot), FileAccess.READ)
+	var live_text := live_file.get_as_text()
+	live_file.close()
+	var coin_token := "\"coins\":%d" % st.coins
+	var coin_at := live_text.rfind(coin_token)
+	_ok(coin_at >= 0, "same-size tamper fixture finds state coin token")
+	if coin_at >= 0:
+		var digit_at := coin_at + coin_token.length() - 1
+		var old_digit := live_text.substr(digit_at, 1)
+		var new_digit := "8" if old_digit != "8" else "7"
+		var damaged := live_text.substr(0, digit_at) + new_digit \
+			+ live_text.substr(digit_at + 1)
+		var same_size := FileAccess.open(SaveGame.slot_path(slot), FileAccess.WRITE)
+		same_size.store_string(damaged)
+		same_size.close()
+		_ok(damaged.length() == live_text.length(), "tamper preserves file length")
+		_ok(SaveGame.inspect_slot(slot, false).get("status") == "ok",
+			"fast sidecar remains a menu hint, not a false integrity promise")
+		_ok(SaveGame.inspect_slot(slot, true).get("status") == "corrupt",
+			"deep inspection detects same-size body corruption")
+		_ok(SaveGame.read(slot).is_empty(),
+			"actual load detects same-size body corruption")
+		DirAccess.remove_absolute(SaveGame.slot_path(slot))
+		_ok(SaveGame.restore_backup(slot), "backup recovers same-size corruption")
+		_ok(SaveGame.write(slot, st, clock, {"archetype": "polo"}),
+			"valid recovered slot can be saved again")
+
+	# Corrupt the live file: it must not load or erase the usable backup.
+	var tamper := FileAccess.open(SaveGame.slot_path(slot), FileAccess.WRITE)
+	tamper.store_string("{\"version\":3,\"truncated\":true}")
+	tamper.close()
+	_ok(SaveGame.read(slot).is_empty(), "checksum/shape failure refuses corrupt live save")
+	var corrupt_info := SaveGame.inspect_slot(slot, true)
+	_ok(corrupt_info.get("status") == "corrupt", "corruption is reported")
+	_ok(corrupt_info.get("backup_available", false), "recovery reports backup")
+	_ok(not SaveGame.write(slot, st, clock, {"archetype": "polo"}),
+		"save refuses to overwrite a corrupt live slot")
+	_ok(int(SaveGame.read_backup(slot).get("state", {}).get("coins", -1)) \
+		== original_coins, "refused overwrite preserves valid backup")
+	DirAccess.remove_absolute(SaveGame.slot_path(slot))
+	_ok(not SaveGame.write(slot, st, clock, {"archetype": "polo"}),
+		"backup-only interrupted slot cannot be hidden by a fresh save")
+	_ok(SaveGame.restore_backup(slot), "validated backup restores")
+	var restored := SaveGame.read(slot)
+	_ok(int(restored.get("state", {}).get("coins", -1)) == original_coins,
+		"restored world matches backup")
+
 	SaveGame.erase(slot)
 	_ok(not SaveGame.exists(slot), "erase removes it")
+	_ok(not FileAccess.file_exists(SaveGame.backup_path(slot)), "erase removes backup")
+	_ok(not FileAccess.file_exists(SaveGame.header_path(slot)), "erase removes header sidecar")
+
+	# Five manual slots are independent snapshots, not five labels pointing at
+	# one file. Read them in reverse order to catch accidental shared state.
+	for i in range(1, 6):
+		var manual := "manual-test-%d" % i
+		SaveGame.erase(manual)
+		st.coins = 200000 + i
+		_ok(SaveGame.write(manual, st, clock, {"archetype": "polo"}),
+			"manual slot %d writes" % i)
+	for i in range(5, 0, -1):
+		var manual := "manual-test-%d" % i
+		var manual_doc := SaveGame.read(manual)
+		_ok(int(manual_doc.get("state", {}).get("coins", -1)) == 200000 + i,
+			"manual slot %d is independent" % i)
+		SaveGame.erase(manual)
 
 	# --- a missing slot is empty, not a crash ------------------------------
 	_ok(SaveGame.read("no-such-slot").is_empty(), "a missing slot reads as empty")
+	_ok(not SaveGame.valid_slot("../escape"), "path traversal is not a valid slot")
+	_ok(not SaveGame.write("../escape", st, clock), "invalid slot cannot be written")
+
+	# A future build is visible as incompatible, never migrated or rewritten.
+	var future_version := doc.duplicate(true)
+	future_version["version"] = SaveGame.VERSION + 1
+	future_version = SaveGame._seal(future_version)
+	var future_status := SaveGame._document_status(future_version)
+	_ok(future_status.get("status") == "incompatible", "newer save is read-only incompatible")
 
 	print("test_save: %s" % ("PASS" if _f == 0 else "FAIL (%d)" % _f))
 	return _f == 0
@@ -110,6 +215,7 @@ func _populate() -> WorldState:
 	st.seed = "save-test"
 	st.jdn = GameDate.from_gregorian(1293, 7, 4).jdn
 	st.city = "kinsay"
+	st.character = {"archetype_id": "polo", "start_city": "tauris", "birth_year": 1268}
 	st.coins = 123456
 	st.days_elapsed = 412
 	st.faith = "buddhism"
@@ -131,4 +237,13 @@ func _populate() -> WorldState:
 	st.codex.append("cx-monsoon")
 	st.codex.append("cx-balc")
 	st.etiquette = {"china": 2, "steppe": 1}
+	st.pending_events.append("ev-kinsay-entry")
+	st.active_event = "ev-kinsay-entry"
+	st.active_journey = {
+		"route": "rt-kinsay-zayton",
+		"origin": "kinsay",
+		"destination": "zayton",
+		"phase": "encounters",
+	}
+	st.recovery = {"skipped_events": ["ev-missing"]}
 	return st

@@ -44,11 +44,13 @@ func pick(kind: String, state: WorldState, rng: Rng, ctx: Dictionary = {}) -> Di
 func choice_states(ev: Dictionary, state: WorldState, ctx: Dictionary = {}) -> Array:
 	var out: Array = []
 	for ch in ev.get("choices", []):
+		var visible := conditions.evaluate(ch.get("showWhen", null), state, ctx)
 		var needs = ch.get("needs", null)
 		var ok := conditions.evaluate(needs, state, ctx)
 		out.append({
 			"choice": ch,
-			"enabled": ok,
+			"visible": visible,
+			"enabled": visible and ok,
 			"reasons": [] if ok else conditions.explain(needs, state, ctx),
 		})
 	return out
@@ -60,6 +62,16 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 		push_error("choice index %d out of range for %s" % [index, ev.get("id", "?")])
 		return EffectExecutor.EffectResult.new()
 	var ch: Dictionary = choices[index]
+	# A queued consequence is already committed by an earlier resolved choice;
+	# its original candidate condition must not make it impossible later.
+	# Ordinary UI references are not committed and must be revalidated.
+	if not bool(ctx.get("event_committed", false)) \
+			and not conditions.evaluate(ev.get("when", null), state, ctx):
+		push_error("event %s is no longer available" % ev.get("id", "?"))
+		return EffectExecutor.EffectResult.new()
+	if not conditions.evaluate(ch.get("showWhen", null), state, ctx):
+		push_error("choice %d of %s is hidden" % [index, ev.get("id", "?")])
+		return EffectExecutor.EffectResult.new()
 
 	# A once-event that already fired must not resolve again. pick() filters on
 	# once_fired, but a city screen offering its sites directly bypasses pick —
@@ -71,6 +83,24 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 	if not conditions.evaluate(ch.get("needs", null), state, ctx):
 		push_error("choice %d of %s is not available" % [index, ev.get("id", "?")])
 		return EffectExecutor.EffectResult.new()
+	# Learning is a gameplay gate, not merely a presentation convention.
+	# Preflight every outcome branch before any fee, random cast, or other
+	# effect can apply. This also closes authored pass/fail learning bypasses.
+	var outcome_lists: Array = [
+		ch.get("effects", []),
+		ch.get("pass", {}).get("effects", []),
+		ch.get("fail", {}).get("effects", []),
+	]
+	for outcome in outcome_lists:
+		for effect in outcome:
+			if String(effect.get("op", "")) != "learn_divination":
+				continue
+			var learning := String(effect.get("value", ""))
+			if learning not in state.learned_divinations \
+					and String(ctx.get("lesson_passed", "")) != learning:
+				push_error("choice %d of %s requires passed lesson '%s'" % [
+					index, ev.get("id", "?"), learning])
+				return EffectExecutor.EffectResult.new()
 
 	var effects: Array = []
 	var reading: Dictionary = {}
@@ -111,11 +141,20 @@ func choose(ev: Dictionary, index: int, state: WorldState, rng: Rng, ctx: Dictio
 			effects.append(ee)
 	else:
 		effects = ch.get("effects", [])
-
-	var res := executor.execute(state, effects, {"rng": rng, "event_id": ev.get("id", "anon")})
-	res.reading = reading
 	if ev.get("once", false):
-		state.once_fired[ev["id"]] = true
+		effects = effects.duplicate()
+		effects.append({
+			"op": "fire_event",
+			"value": String(ev.get("id", "")),
+			"reason": "once-event-resolved",
+		})
+
+	var effect_ctx := ctx.duplicate(true)
+	effect_ctx["rng"] = rng
+	effect_ctx["event_id"] = ev.get("id", "anon")
+	var res := executor.execute(state, effects, effect_ctx)
+	res.reading = reading
+	res.resolved = true
 	return res
 
 

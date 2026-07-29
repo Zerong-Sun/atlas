@@ -1,0 +1,31 @@
+{
+  "contentVersion": 2,
+  "table": "divination_lessons",
+  "placeholderText": true,
+  "records": [
+    {"id":"lesson-bazi","method":"bazi","type":"deduce","title":"排定四柱（占位）","prompt":"用筹片达到目标数，完成数理推演。（占位文案）","values":[1,2,3,4],"target":10},
+    {"id":"lesson-bazi-relationship","method":"bazi-relationship","type":"arrange","title":"合看两命（占位）","prompt":"按次序审视两张命纸。（占位文案）","steps":["各排四柱","比看日主","察合冲","留出未知"]},
+    {"id":"lesson-tarot","method":"tarot","type":"arrange","title":"守住牌阵（占位）","prompt":"按正确次序完成第一次牌阵。（占位文案）","steps":["立意","洗牌","切牌","布阵","逐张解读"]},
+    {"id":"lesson-dream","method":"dream","type":"observe","title":"辨认梦兆（占位）","prompt":"记录观察，再选有限度的解读。（占位文案）","clues":["锁门","白日经历"],"options":["必有灾祸","先问他白日失去了什么","立刻改道"],"answer":1},
+    {"id":"lesson-iching","method":"iching","type":"throw","title":"六掷成卦（占位）","prompt":"完成六次投掷并选择正确记录方式。（占位文案）","throws":6,"faces":4,"options":["从上向下改写结果","从下向上保留每次结果","删去不喜欢的一爻"],"answer":1},
+    {"id":"lesson-qimen","method":"qimen","type":"timing","title":"候门定局（占位）","prompt":"在时窗内定局。（占位文案）","window":[0.42,0.62]},
+    {"id":"lesson-ziwei","method":"ziwei","type":"form","title":"安十二宫（占位）","prompt":"逐步生成宫盘结构。（占位文案）","steps":["定命宫","布十二宫","安主星","安辅曜","看四化"]},
+    {"id":"lesson-liuyao","method":"liuyao","type":"throw","title":"六次记爻（占位）","prompt":"完成六次投掷并保留动爻。（占位文案）","throws":6,"faces":4,"options":["保留全部结果","只留静爻","重新投不利结果"],"answer":0},
+    {"id":"lesson-meihua","method":"meihua","type":"timing","title":"取眼前之数（占位）","prompt":"在景物、声音与时刻重合时取数。（占位文案）","window":[0.68,0.82]},
+    {"id":"lesson-western","method":"western","type":"form","title":"转动星盘（占位）","prompt":"按步骤生成基础星盘。（占位文案）","steps":["校正时刻","找上升点","安置行星","连接相位","判断容许度"]},
+    {"id":"lesson-vedic","method":"vedic","type":"observe","title":"月宿与行旅（占位）","prompt":"观察提示并选择有边界的回答。（占位文案）","clues":["月宿","替代时段"],"options":["断言绝不可出发","说明风险并给出替代时段","替旅人决定命运"],"answer":1},
+    {"id":"lesson-numerology","method":"numerology","type":"deduce","title":"化名为数（占位）","prompt":"用筹片达到指定数。（占位文案）","values":[1,3,4,5],"target":12},
+    {"id":"lesson-runes","method":"runes","type":"throw","title":"投下卢恩（占位）","prompt":"投掷后保留全部落石。（占位文案）","throws":1,"faces":4,"options":["挑掉不喜欢的石","保留全部并按位置记录","反复投到吉象"],"answer":1},
+    {"id":"lesson-geomancy","method":"geomancy","type":"form","title":"沙上成象（占位）","prompt":"按四行次序生成母象。（占位文案）","steps":["第一行点痕","第二行点痕","第三行点痕","第四行点痕"]},
+    {"id":"lesson-lot","method":"lot","type":"timing","title":"止筒取签（占位）","prompt":"在签枝浮起而未散落时收手。（占位文案）","window":[0.48,0.64]},
+    {"id":"lesson-jiaobei","method":"jiaobei","type":"throw","title":"投筊辨象（占位）","prompt":"投掷一次，再辨认落地结果。（占位文案）","throws":1,"faces":3,"options":["圣筊","笑筊","阴筊"],"answer":0},
+    {"id":"lesson-xiangmian","method":"xiangmian","type":"observe","title":"观察而不武断（占位）","prompt":"先观察，再选择不武断的说法。（占位文案）","clues":["旧伤","表情"],"options":["断定此人凶险","询问伤从何来","据此判定寿数"],"answer":1},
+    {"id":"lesson-palmistry","method":"palmistry","type":"observe","title":"掌纹的层次（占位）","prompt":"记录惯用手与纹层后说明不确定。（占位文案）","clues":["惯用手","手形","主纹","细纹"],"options":["据一条纹断定寿数","记录层次并说明不确定","忽略惯用手"],"answer":1},
+    {"id":"lesson-fengshui","method":"fengshui","type":"timing","title":"罗盘定向（占位）","prompt":"在磁针与山向重合时定针。（占位文案）","window":[0.24,0.38]},
+    {"id":"lesson-astrodice","method":"astrodice","type":"throw","title":"三骰成句（占位）","prompt":"投掷三骰并按固定结构记录。（占位文案）","throws":1,"faces":6,"options":["只读最吉利的一骰","按行星、星座、宫位合成一句","不断重投"],"answer":1},
+    {"id":"lesson-lenormand","method":"lenormand","type":"arrange","title":"相邻关系（占位）","prompt":"按中心与左右关系排列。（占位文案）","steps":["确定中心牌","读取左邻","读取右邻","连接成句"]},
+    {"id":"lesson-oracle","method":"oracle","type":"observe","title":"提问的边界（占位）","prompt":"观察问题边界后选择合适问法。（占位文案）","clues":["是否替人决定","是否保留未知"],"options":["替我决定是否结婚","我忽略了什么感受","告诉我确切死期"],"answer":1},
+    {"id":"lesson-coffee","method":"coffee","type":"observe","title":"杯痕观察（占位）","prompt":"记录形状与联想，不直接当作预言。（占位文案）","clues":["杯沿痕迹","杯底形状"],"options":["立即断言结果","记录形状与联想","转杯直到出现想要图案"],"answer":1},
+    {"id":"lesson-scrying","method":"scrying","type":"observe","title":"凝视与记录（占位）","prompt":"记录模糊形状与自身联想。（占位文案）","clues":["模糊影子","自身联想"],"options":["立即当作预言","先记录形状与自己的联想","反复暗示直到看清"],"answer":1}
+  ]
+}

@@ -46,9 +46,14 @@ var _amb_players: Array[AudioStreamPlayer] = []
 var _sfx: AudioSfx
 var _lp: AudioEffectLowPassFilter
 var _tweens: Array[Tween] = []
+var _playback_available := true
 
 
 func _ready() -> void:
+	# Headless runs validate logic and UI structure, not an audio device. Loading
+	# file-backed Ogg playback there only slows tests and leaves packet
+	# sequences pending when the short-lived process exits.
+	_playback_available = DisplayServer.get_name() != "headless"
 	volume_db = volume_db
 	muted = muted
 	_cache_lowpass()
@@ -71,6 +76,20 @@ func _ready() -> void:
 		_amb_players.append(a)
 
 
+func _exit_tree() -> void:
+	# Explicitly release file-backed Ogg streams before AudioServer teardown.
+	# Short-lived smoke processes otherwise leave playback packet sequences
+	# referenced by the audio thread and report ObjectDB leaks on clean exit.
+	_kill_tweens()
+	for p in _stem_players.values():
+		if p is AudioStreamPlayer:
+			(p as AudioStreamPlayer).stop()
+			(p as AudioStreamPlayer).stream = null
+	for p in _amb_players:
+		p.stop()
+		p.stream = null
+
+
 func _cache_lowpass() -> void:
 	var bi := AudioServer.get_bus_index(BUS_MUSIC)
 	if bi < 0:
@@ -88,7 +107,7 @@ func toggle_mute() -> bool:
 
 
 func sfx(kind: String) -> void:
-	if muted:
+	if muted or not _playback_available:
 		return
 	_sfx.play(kind)
 
@@ -122,6 +141,8 @@ func set_place(city: Dictionary, event: Dictionary = {}, blend: Dictionary = {})
 	_seek_stems(rng.next() * 50.0)
 
 	_mood = AudioMood.derive(null, {}, city, _scene_class, _prev_route_risk)
+	if not _playback_available:
+		return
 	_kill_tweens()
 	_apply_mix(CROSSFADE_SEC)
 	_apply_ambients(CROSSFADE_SEC * 0.6)
@@ -136,6 +157,8 @@ func set_route_context(route: Dictionary) -> void:
 			tense = true
 	if tense:
 		_mood = AudioMood.TENSION
+		if not _playback_available:
+			return
 		_kill_tweens()
 		_apply_mood_bus(4.0)
 		_apply_mix(4.0)
@@ -146,6 +169,8 @@ func on_effect_result(res: Variant, route: Dictionary, city: Dictionary, coins_b
 		_mood = AudioMood.derive_with_coins(res, route, city, _scene_class, _prev_route_risk, coins_before)
 	else:
 		_mood = AudioMood.derive(res, route, city, _scene_class, _prev_route_risk)
+	if not _playback_available:
+		return
 	_kill_tweens()
 	_apply_mood_bus(3.5)
 	_apply_mix(3.5)

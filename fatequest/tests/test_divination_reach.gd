@@ -17,14 +17,20 @@ func run() -> bool:
 	for c in db.cities():
 		city_ids[String(c.get("id", ""))] = true
 
-	var learn_events: Dictionary = {}  ## method -> event id
+	var learn_events: Dictionary = {}  ## method -> {event id, choice index}
 	var use_events: Dictionary = {}    ## method -> count
 	for e in db.get_table("events"):
-		for ch in e.get("choices", []):
+		var event_choices: Array = e.get("choices", [])
+		for choice_index in event_choices.size():
+			var ch: Dictionary = event_choices[choice_index]
 			for ef in ch.get("effects", []):
 				if String(ef.get("op", "")) == "learn_divination":
 					var mid := String(ef.get("value", ""))
-					learn_events[mid] = String(e.get("id", ""))
+					if not learn_events.has(mid):
+						learn_events[mid] = {
+							"event": String(e.get("id", "")),
+							"choice": choice_index,
+						}
 			var d := String(ch.get("divination", ""))
 			if d != "":
 				use_events[d] = int(use_events.get(d, 0)) + 1
@@ -46,25 +52,24 @@ func run() -> bool:
 		st.city = String(learn_at[0])
 		st.coins = 100000
 		st.jdn = 2200000
-		var cond := ConditionEvaluator.new()
+		var cond := ConditionEvaluator.new(db)
 		var ex := EffectExecutor.new()
 		var em := EventMachine.new(db, cond, ex)
-		var mentor_id := String(learn_events[mid])
+		var teaching: Dictionary = learn_events.get(mid, {})
+		var mentor_id := String(teaching.get("event", ""))
 		var mentor: Dictionary = db.get_record(mentor_id)
 		_ok(not mentor.is_empty(), "%s mentor event loaded" % mid)
-		var learn_idx := -1
-		var choices: Array = mentor.get("choices", [])
-		for i in choices.size():
-			var ch: Dictionary = choices[i]
-			for ef in ch.get("effects", []):
-				if String(ef.get("op", "")) == "learn_divination" and String(ef.get("value", "")) == mid:
-					learn_idx = i
-					break
-			if learn_idx >= 0:
-				break
+		var learn_idx := int(teaching.get("choice", -1))
 		_ok(learn_idx >= 0, "%s mentor has learn choice" % mid)
 		if learn_idx >= 0:
-			em.choose(mentor, learn_idx, st, Rng.new("learn-" + mid), {})
+			var mentor_cities: Array = mentor.get("when", {}).get("cities", [])
+			_ok(not mentor_cities.is_empty(), "%s mentor event names its city" % mid)
+			if not mentor_cities.is_empty():
+				st.city = String(mentor_cities[0])
+				_ok(st.city in learn_at, "%s mentor city is declared in learnAt" % mid)
+			em.choose(mentor, learn_idx, st, Rng.new("learn-" + mid), {
+				"lesson_passed": mid,
+			})
 			_ok(mid in st.learned_divinations, "%s learned after mentor" % mid)
 			var cast := DivinationRegistry.cast(mid, DivinationContext.new(st, Rng.new("cast-" + mid)))
 			_ok(not cast.is_empty(), "%s cast succeeds after learn" % mid)

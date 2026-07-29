@@ -8,9 +8,7 @@
       "culture": "east_asia",
       "mvp": true,
       "learnAt": [
-        "baldacum",
-        "cambaluc",
-        "kinsay"
+        "baldacum"
       ],
       "teacher": "npc-baldacum-mentor",
       "question": "trade",
@@ -232,8 +230,7 @@
       "culture": "latin",
       "mvp": true,
       "learnAt": [
-        "tauris",
-        "ormus"
+        "tauris"
       ],
       "teacher": "npc-tauris-mentor",
       "question": "person",
@@ -461,9 +458,7 @@
       "culture": "east_asia",
       "mvp": true,
       "learnAt": [
-        "cambaluc",
-        "kinsay",
-        "sachiu"
+        "cambaluc"
       ],
       "teacher": "npc-cambaluc-mentor",
       "question": "route",
@@ -1279,9 +1274,7 @@
       "culture": "east_asia",
       "mvp": true,
       "learnAt": [
-        "zayton",
-        "kinsay",
-        "lop"
+        "zayton"
       ],
       "teacher": "npc-zayton-mentor",
       "question": "risk",

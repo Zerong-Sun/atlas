@@ -137,6 +137,8 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 		c.queue_free()
 	var any_open := false
 	for i in choice_states.size():
+		if not choice_states[i].get("visible", true):
+			continue
 		if choice_states[i]["enabled"]:
 			any_open = true
 		_choices.add_child(_make_choice(choice_states[i], i))
