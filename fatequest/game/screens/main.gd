@@ -48,7 +48,11 @@ var _city_view: Control
 var _dialog: PanelContainer
 var _dialog_layer: Control
 var _current_event: Dictionary = {}
-var _controls: HBoxContainer
+var _controls: HFlowContainer
+## The bottom docks, kept so a font change can re-measure their height instead
+## of leaving them at the 150 px that only ever suited the NORMAL step.
+var _log_wrap: PanelContainer
+var _panel_wrap: PanelContainer
 var _market: Market
 var _market_view: PanelContainer
 var _market_layer: Control
@@ -97,7 +101,10 @@ func _apply_projection() -> void:
 	# terminus and its labels straight off the screen.
 	var w := maxf(size.x, 1280.0)
 	var h := maxf(size.y, 720.0)
-	projection.set_viewport(w - MARGIN * 2.0, h - 150.0 - MARGIN)
+	# Reserve exactly as much as the bottom docks actually occupy. This was
+	# hard-coded to 150, the same guess the docks themselves used to make, so
+	# raising the type size buried the southern cities under the journal.
+	projection.set_viewport(w - MARGIN * 2.0, h - Metrics.dock_height() - MARGIN)
 	projection.origin = Vector2(MARGIN, MARGIN)
 
 
@@ -329,19 +336,22 @@ func _build_map() -> void:
 	_hud.build()
 
 	# --- journal: bottom-left, scrolls, never overlaps the panel ------------
-	var log_wrap := PanelContainer.new()
-	log_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
-	log_wrap.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
-	log_wrap.anchor_right = 0.46
-	log_wrap.offset_left = 12
-	log_wrap.offset_right = -6
-	log_wrap.offset_top = -150
-	log_wrap.offset_bottom = -12
-	add_child(log_wrap)
+	# Height is measured from the current body size rather than fixed at 150 px.
+	# 150 px is six lines at the SMALL step and barely two at HUGE, so turning
+	# the type up used to shrink the journal to a slot — the readers who most
+	# needed the words larger got the fewest of them on screen.
+	_log_wrap = PanelContainer.new()
+	_log_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	_log_wrap.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	_log_wrap.anchor_right = 0.46
+	_log_wrap.offset_left = 12
+	_log_wrap.offset_right = -6
+	_log_wrap.offset_bottom = -12
+	add_child(_log_wrap)
 
 	var log_scroll := ScrollContainer.new()
 	log_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	log_wrap.add_child(log_scroll)
+	_log_wrap.add_child(log_scroll)
 
 	_log = RichTextLabel.new()
 	_log.bbcode_enabled = true
@@ -351,24 +361,25 @@ func _build_map() -> void:
 	log_scroll.add_child(_log)
 
 	# --- action panel: bottom-right, scrolls -------------------------------
-	var panel_wrap := PanelContainer.new()
-	panel_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
-	panel_wrap.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	panel_wrap.anchor_left = 0.48
-	panel_wrap.offset_left = 6
-	panel_wrap.offset_right = -12
-	panel_wrap.offset_top = -150
-	panel_wrap.offset_bottom = -12
-	add_child(panel_wrap)
+	_panel_wrap = PanelContainer.new()
+	_panel_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	_panel_wrap.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	_panel_wrap.anchor_left = 0.48
+	_panel_wrap.offset_left = 6
+	_panel_wrap.offset_right = -12
+	_panel_wrap.offset_bottom = -12
+	add_child(_panel_wrap)
 
 	var panel_scroll := ScrollContainer.new()
 	panel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	panel_wrap.add_child(panel_scroll)
+	_panel_wrap.add_child(panel_scroll)
 
 	_panel = VBoxContainer.new()
 	_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_panel.add_theme_constant_override("separation", 5)
+	_panel.add_theme_constant_override("separation", Metrics.xs())
 	panel_scroll.add_child(_panel)
+
+	_resize_docks()
 
 	# --- city interior ------------------------------------------------------
 	_city_view = preload("res://game/screens/city_view.gd").new()
@@ -391,7 +402,7 @@ func _build_map() -> void:
 
 	var scrim := ColorRect.new()
 	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	scrim.color = Color(0.06, 0.05, 0.03, 0.45)
+	scrim.color = Palette.scrim_color()
 	_dialog_layer.add_child(scrim)
 
 	var centre := CenterContainer.new()
@@ -417,7 +428,7 @@ func _build_map() -> void:
 
 	var mscrim := ColorRect.new()
 	mscrim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	mscrim.color = Color(0.06, 0.05, 0.03, 0.5)
+	mscrim.color = Palette.scrim_color()
 	_market_layer.add_child(mscrim)
 
 	var mcentre := CenterContainer.new()
@@ -440,7 +451,9 @@ func _build_map() -> void:
 	add_child(_codex_layer)
 	var cscrim := ColorRect.new()
 	cscrim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	cscrim.color = Color(0.06, 0.05, 0.03, 0.5)
+	cscrim.color = Palette.scrim_color()
+	# PASS so a click on the dim reaches the layer, which closes the codex.
+	cscrim.mouse_filter = Control.MOUSE_FILTER_PASS
 	_codex_layer.add_child(cscrim)
 	var ccentre := CenterContainer.new()
 	ccentre.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -460,7 +473,54 @@ func _build_map() -> void:
 	_build_settings()
 	_build_controls()
 	_build_transit()
+	_wire_dismissal()
 	_restyle_all()
+
+
+## Every overlay can now be left with Escape or a click on the surrounding
+## dim. Before this the only way out of a panel was to find its own 合上
+## button — and the event dialog's scrim swallowed clicks without offering
+## anything in return, so a mis-click felt like the game had frozen.
+##
+## The ending confirmation is deliberately excluded from click-outside: it is
+## the one irreversible decision on the screen and should not be dismissed by
+## a stray click, though Escape still backs out of it.
+func _wire_dismissal() -> void:
+	for ui in [_bag, _party, _settings]:
+		if ui is Dictionary and ui.has("layer"):
+			var layer: Control = ui["layer"]
+			Panels.make_dismissable(layer, ui["panel"],
+				func() -> void: layer.visible = false)
+	if _codex_layer != null:
+		Panels.make_dismissable(_codex_layer, _codex_view,
+			func() -> void: _codex_layer.visible = false)
+
+
+## Escape closes the topmost overlay. Ordered innermost-last, so a bag opened
+## over the city closes the bag and leaves the city standing.
+func _unhandled_key_input(event: InputEvent) -> void:
+	if not (event is InputEventKey):
+		return
+	var k := event as InputEventKey
+	if not k.pressed or k.echo or k.keycode != KEY_ESCAPE:
+		return
+	var layers: Array = []
+	var closers: Array = []
+	for ui in [_settings, _ending_ui, _party, _bag]:
+		if ui is Dictionary and ui.has("layer") and is_instance_valid(ui["layer"]):
+			var l: Control = ui["layer"]
+			layers.append(l)
+			closers.append(func() -> void: l.visible = false)
+	if _codex_layer != null and is_instance_valid(_codex_layer):
+		layers.append(_codex_layer)
+		closers.append(func() -> void: _codex_layer.visible = false)
+	if _market_layer != null and is_instance_valid(_market_layer):
+		layers.append(_market_layer)
+		closers.append(func() -> void:
+			_market_layer.visible = false
+			_open_city())
+	if Panels.close_topmost(layers, closers):
+		get_viewport().set_input_as_handled()
 
 
 ## Brief transit plate shown while the caravan / ship moves between cities.
@@ -526,13 +586,19 @@ func _show_transit(route: Dictionary, mode: String, dest: String, days: int) -> 
 ## Reader controls. Text size and contrast are not preferences to bury in a
 ## menu on a game made of prose — they decide whether it can be read at all.
 func _build_controls() -> void:
-	var bar := HBoxContainer.new()
+	# Eight buttons were crammed into a hard 418 px slot (offset_left = -430).
+	# At the LARGE step that overflows; at HUGE the last three run off the left
+	# of their own bar and 缩小 becomes unreachable. A flow container wraps to a
+	# second row instead, and the bar is anchored to the top-right corner so it
+	# stays put whatever the window size.
+	var bar := HFlowContainer.new()
 	bar.set_anchors_preset(Control.PRESET_TOP_RIGHT)
-	bar.offset_left = -430
+	bar.grow_horizontal = Control.GROW_DIRECTION_BEGIN
 	bar.offset_right = -12
 	bar.offset_top = 58
-	bar.alignment = BoxContainer.ALIGNMENT_END
-	bar.add_theme_constant_override("separation", 6)
+	bar.alignment = FlowContainer.ALIGNMENT_END
+	bar.add_theme_constant_override("h_separation", Metrics.sm())
+	bar.add_theme_constant_override("v_separation", Metrics.xs())
 	add_child(bar)
 
 	bar.add_child(_ctl("行囊", _open_bag))
@@ -544,6 +610,31 @@ func _build_controls() -> void:
 	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
 	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
 	_controls = bar
+	_resize_controls()
+
+
+## Width the control bar needs at the current type size, so the flow container
+## has something to wrap inside. Measured from the buttons themselves rather
+## than guessed, and never wider than half the window.
+func _resize_controls() -> void:
+	if _controls == null or not is_instance_valid(_controls):
+		return
+	var w := 0.0
+	for k in _controls.get_children():
+		if k is Control:
+			w += (k as Control).get_combined_minimum_size().x + float(Metrics.sm())
+	var avail := maxf(size.x, 1280.0) * 0.55
+	_controls.custom_minimum_size.x = minf(w, avail)
+	_controls.offset_left = -minf(w, avail) - 12.0
+
+
+## Bottom docks are as tall as six lines of the current body type.
+func _resize_docks() -> void:
+	var h := Metrics.dock_height()
+	if _log_wrap != null and is_instance_valid(_log_wrap):
+		_log_wrap.offset_top = -h
+	if _panel_wrap != null and is_instance_valid(_panel_wrap):
+		_panel_wrap.offset_top = -h
 
 
 func _map_centre() -> Vector2:
@@ -551,25 +642,23 @@ func _map_centre() -> Vector2:
 
 
 func _ctl(text: String, cb: Callable) -> Button:
-	var b := Button.new()
-	b.text = text
-	b.focus_mode = Control.FOCUS_NONE
-	b.add_theme_font_size_override("font_size", UiScale.ui())
-	b.add_theme_stylebox_override("normal", Palette.button_style())
-	b.add_theme_stylebox_override("hover", Palette.button_style(true))
-	b.add_theme_color_override("font_color", Palette.ink())
-	b.pressed.connect(cb)
-	return b
+	return Panels.styled_button(text, cb)
 
 
+## Re-dresses the control bar after a font or contrast change.
+##
+## This used to set only `normal`, leaving `hover` holding a stylebox built
+## against the *previous* palette — so after switching to high contrast the
+## buttons went white until the pointer touched them, then flashed back to
+## parchment. Routing through the one button factory makes that class of
+## mismatch impossible.
 func _refresh_controls() -> void:
-	if _controls == null:
+	if _controls == null or not is_instance_valid(_controls):
 		return
-	var kids := _controls.get_children()
-	for k in kids:
-		k.add_theme_font_size_override("font_size", UiScale.ui())
-		k.add_theme_stylebox_override("normal", Palette.button_style())
-		k.add_theme_color_override("font_color", Palette.ink())
+	for k in _controls.get_children():
+		if k is Button:
+			Panels.style_button(k as Button)
+	_resize_controls()
 
 
 func _refresh_hud() -> void:
@@ -1038,7 +1127,9 @@ func _icon_line(icon: Texture2D, text: String) -> Control:
 
 ## Reader settings, reachable from anywhere including the city interior.
 func _build_settings() -> void:
-	_settings = Panels.overlay(self, Vector2(440, 360))
+	# Nine rows and no list of its own, so this one scrolls: at the HUGE step the
+	# column is taller than a 720 px window and 合上 fell off the bottom.
+	_settings = Panels.overlay(self, Vector2(440, 360), true)
 	var box: VBoxContainer = _settings["box"]
 	box.add_child(Panels.label("设置", UiScale.title(), Palette.ink()))
 
@@ -1146,6 +1237,11 @@ func _load(slot: String) -> bool:
 	# deterministically rather than diverging from the run that produced it.
 	rng = Rng.new(state.seed)
 	_say("[color=#4a6a4a]—— 读档：%s，第 %d 日 ——[/color]" % [_city_name(state.city), state.days_elapsed])
+	# Restored numbers are not news. Without this the HUD would light up the
+	# whole bar green on load, as though the player had just earned three
+	# hundred days and a purse in one step.
+	if _hud != null:
+		_hud.silence_next()
 	_refresh_hud()
 	_map.center_on(state.city)
 	_dialog_layer.visible = false
@@ -1175,6 +1271,9 @@ func _restyle_all() -> void:
 	if _log:
 		_log.add_theme_font_size_override("normal_font_size", UiScale.body())
 		_log.add_theme_color_override("default_color", Palette.ink())
+	for wrap in [_log_wrap, _panel_wrap]:
+		if wrap != null and is_instance_valid(wrap):
+			wrap.add_theme_stylebox_override("panel", Palette.panel_style())
 	if _hud and _hud.has_method("restyle"):
 		_hud.restyle()
 	if _dialog and _dialog.has_method("restyle"):
@@ -1185,9 +1284,21 @@ func _restyle_all() -> void:
 		_market_view.restyle()
 	if _codex_view and _codex_view.has_method("restyle"):
 		_codex_view.restyle()
+	# The overlays have no restyle() of their own, and used to be skipped
+	# entirely — switching to high contrast left the bag, party, ending,
+	# settings and hire panels on the old parchment. Those are exactly the
+	# panels a reader who just asked for high contrast is about to open.
+	for ui in [_bag, _party, _ending_ui, _settings]:
+		if ui is Dictionary and ui.has("layer") and is_instance_valid(ui["layer"]):
+			Panels.restyle_tree(ui["layer"])
+	if _hire_ui != null and _hire_ui.has_method("restyle"):
+		_hire_ui.restyle()
+	_refresh_controls()
+	# The docks grew or shrank, so the map has more or less room than it did.
+	_resize_docks()
+	_apply_projection()
 	if _map:
 		_map.queue_redraw()
-	_refresh_controls()
 
 
 func _show_event(ev: Dictionary) -> void:
@@ -1263,49 +1374,57 @@ func _show_roads() -> void:
 			continue
 		if not conditions.evaluate(sev.get("when", {}), state, _ctx()):
 			continue
-		var sbtn := Button.new()
-		sbtn.text = "◆ %s" % I18n.t(sev.get("title", ""))
-		sbtn.pressed.connect(_show_event.bind(sev))
+		# Bare `Button.new()` inherits Godot's default dark theme, so these sat
+		# on the parchment as grey slabs with white text while every other
+		# button in the game was vellum — on the panel the player uses most.
+		var sbtn := Panels.styled_button(
+			"◆ %s" % I18n.t(sev.get("title", "")), _show_event.bind(sev))
+		sbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(sbtn)
 
 	var here_rec := db.get_record(state.city)
 	if here_rec.has("market"):
-		var mbtn := Button.new()
-		mbtn.text = "◈ 市集"
-		mbtn.add_theme_font_size_override("font_size", UiScale.ui())
-		mbtn.add_theme_stylebox_override("normal", Palette.button_style())
-		mbtn.add_theme_stylebox_override("hover", Palette.button_style(true))
-		mbtn.add_theme_color_override("font_color", Palette.ink())
-		mbtn.pressed.connect(_open_market)
+		var mbtn := Panels.styled_button("◈ 市集", _open_market)
+		mbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(mbtn)
 
-	var lbl := Label.new()
-	lbl.text = "%s 的去路：" % _city_name(state.city)
-	_panel.add_child(lbl)
+	# The roads are a different kind of thing from the sites above them, and
+	# the list ran straight on with only a bare Label between.
+	_panel.add_child(Panels.rule())
+	_panel.add_child(Panels.heading("%s 的去路：" % _city_name(state.city)))
 
 	var any := false
 	for r in travel.routes_from(state.city):
 		var dest := travel.other_end(r, state.city)
 		for mode in r.get("modes", []):
 			var av := travel.availability(r, state, clock.month(), String(mode))
-			var btn := Button.new()
-			btn.text = "%s ← %s · %d日 · %d钱" % [
-				_city_name(dest), I18n.t("transport.%s.name" % mode),
-				travel.total_days(r, String(mode)), travel.total_cost(r, String(mode)) / 100]
+			var days := travel.total_days(r, String(mode))
+			var cost := travel.total_cost(r, String(mode)) / 100
+			# The arrow used to point back at the city you are standing in
+			# ("杭州 ← 骆驼"), which reads as arriving rather than leaving.
+			var btn := Panels.styled_button("→ %s · %s · %d日 · %d银" % [
+				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
+				Callable())
+			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 			btn.disabled = not av["ok"]
 			if not av["ok"]:
 				var rr: Array[String] = []
 				for reason in av["reasons"]:
 					rr.append(I18n.fmt(String(reason)))
-				btn.tooltip_text = ", ".join(PackedStringArray(rr))
-			btn.pressed.connect(_on_depart.bind(r, String(mode)))
+				var why := "、".join(PackedStringArray(rr))
+				# Say why on the face of the button, not only in a tooltip a
+				# player has to hover a greyed-out control to discover — the
+				# event dialog already states its reasons this way.
+				btn.text += "　（%s）" % why
+				btn.tooltip_text = why
+			else:
+				btn.tooltip_text = "%s：%d 日，船脚 %d 银" % [_city_name(dest), days, cost]
+				btn.pressed.connect(_on_depart.bind(r, String(mode)))
 			_panel.add_child(btn)
 			any = true
 			break   # one mode per destination keeps the P1 panel readable
 	if not any:
-		var none := Label.new()
-		none.text = "（无路可走）"
-		_panel.add_child(none)
+		_panel.add_child(Panels.label("（无路可走）", UiScale.ui(), Palette.ink_faint()))
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:

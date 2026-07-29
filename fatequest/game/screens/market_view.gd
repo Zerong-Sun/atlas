@@ -54,13 +54,7 @@ func _build() -> void:
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	head.add_child(spacer)
 
-	var close := Button.new()
-	close.text = "离开市集"
-	close.add_theme_font_size_override("font_size", UiScale.ui())
-	close.add_theme_stylebox_override("normal", Palette.button_style())
-	close.add_theme_stylebox_override("hover", Palette.button_style(true))
-	close.add_theme_color_override("font_color", Palette.ink())
-	close.pressed.connect(func(): closed.emit())
+	var close := Panels.styled_button("离开市集", func(): closed.emit())
 	head.add_child(close)
 
 	var cols := HBoxContainer.new()
@@ -180,13 +174,7 @@ func _stock_row(good: Dictionary) -> Control:
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	text.add_child(sub)
 
-	var buy := Button.new()
-	buy.text = "买"
-	buy.add_theme_font_size_override("font_size", UiScale.ui())
-	buy.add_theme_stylebox_override("normal", Palette.button_style())
-	buy.add_theme_stylebox_override("hover", Palette.button_style(true))
-	buy.add_theme_color_override("font_color", Palette.ink())
-	buy.add_theme_color_override("font_disabled_color", Palette.ink_soft())
+	var buy := Panels.styled_button("买", Callable())
 	if not check["ok"]:
 		buy.disabled = true
 		var why: Array[String] = []
@@ -230,13 +218,7 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	text.add_child(sub)
 
-	var sell := Button.new()
-	sell.text = "卖"
-	sell.add_theme_font_size_override("font_size", UiScale.ui())
-	sell.add_theme_stylebox_override("normal", Palette.button_style())
-	sell.add_theme_stylebox_override("hover", Palette.button_style(true))
-	sell.add_theme_color_override("font_color", Palette.ink())
-	sell.pressed.connect(func(): _sell(good))
+	var sell := Panels.primary_button("卖", func(): _sell(good))
 	row.add_child(sell)
 	return panel
 

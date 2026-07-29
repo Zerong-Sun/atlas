@@ -174,3 +174,25 @@ func _play_seal() -> void:
 		_bg.texture = sealed
 		_bg.visible = true
 	await _panel.get_tree().create_timer(Motion.dur(0.25, Motion.Kind.FADE)).timeout
+
+
+## Re-dresses the contract panel for the current type size and contrast mode.
+## Without this, opening a hire after switching to high contrast handed the
+## player a parchment panel in the middle of an otherwise black-and-white game.
+func restyle() -> void:
+	if _layer == null or not is_instance_valid(_layer):
+		return
+	Panels.restyle_tree(_layer)
+	if _name_l != null and is_instance_valid(_name_l):
+		_name_l.add_theme_font_size_override("font_size", UiScale.title())
+		_name_l.add_theme_color_override("font_color", Palette.ink())
+	if _origin_l != null and is_instance_valid(_origin_l):
+		_origin_l.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
+		_origin_l.add_theme_color_override("font_color", Palette.ink_faint())
+	for l in [_detail_l, _verdict_l]:
+		if l != null and is_instance_valid(l):
+			l.add_theme_font_size_override("font_size", UiScale.ui())
+			l.add_theme_color_override("font_color", Palette.ink())
+	if _portrait != null and is_instance_valid(_portrait):
+		var w := 140.0 * Metrics.factor()
+		_portrait.custom_minimum_size = Vector2(w, w * 1.29)

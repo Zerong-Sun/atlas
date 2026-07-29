@@ -27,6 +27,10 @@ var _title: Label
 var _hint: Label
 var _market_btn: Button
 var _status: Label
+var _head: PanelContainer
+var _foot: PanelContainer
+var _foot_row: HBoxContainer
+var _scrim: ColorRect
 
 
 func setup(p_db: ContentDb) -> void:
@@ -45,11 +49,11 @@ func _build() -> void:
 	add_child(_bg)
 
 	# The scene photograph is busy; text needs its own ground to sit on.
-	var scrim := ColorRect.new()
-	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	scrim.color = Color(0.09, 0.07, 0.04, 0.42)
-	scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(scrim)
+	_scrim = ColorRect.new()
+	_scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_scrim.color = _scrim_color()
+	_scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_scrim)
 
 	var col := VBoxContainer.new()
 	col.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -60,13 +64,13 @@ func _build() -> void:
 	col.add_theme_constant_override("separation", 10)
 	add_child(col)
 
-	var head := PanelContainer.new()
-	head.add_theme_stylebox_override("panel", Palette.panel_style())
-	head.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	col.add_child(head)
+	_head = PanelContainer.new()
+	_head.add_theme_stylebox_override("panel", Palette.panel_style())
+	_head.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	col.add_child(_head)
 	var head_row := VBoxContainer.new()
 	head_row.alignment = BoxContainer.ALIGNMENT_CENTER
-	head.add_child(head_row)
+	_head.add_child(head_row)
 	_title = Label.new()
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
@@ -90,14 +94,15 @@ func _build() -> void:
 	col.add_child(_figures)
 
 	# --- foot: hint + the ways out --------------------------------------
-	var foot := PanelContainer.new()
-	foot.add_theme_stylebox_override("panel", Palette.panel_style())
-	foot.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	col.add_child(foot)
+	_foot = PanelContainer.new()
+	_foot.add_theme_stylebox_override("panel", Palette.panel_style())
+	_foot.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	col.add_child(_foot)
 
 	var foot_row := HBoxContainer.new()
-	foot_row.add_theme_constant_override("separation", 14)
-	foot.add_child(foot_row)
+	foot_row.add_theme_constant_override("separation", Metrics.md() + Metrics.xs())
+	_foot.add_child(foot_row)
+	_foot_row = foot_row
 
 	_hint = Label.new()
 	_hint.add_theme_font_size_override("font_size", UiScale.ui())
@@ -109,8 +114,9 @@ func _build() -> void:
 	foot_row.add_child(Panels.styled_button("行囊", func(): bag_requested.emit()))
 	foot_row.add_child(Panels.styled_button("同行", func(): party_requested.emit()))
 	# Without this the city is a dead end. It is the single most important
-	# control on the screen.
-	foot_row.add_child(Panels.styled_button("上路 →", func(): leave_requested.emit()))
+	# control on the screen — so it carries the primary styling rather than
+	# sitting fourth in a row of four identical buttons.
+	foot_row.add_child(Panels.primary_button("上路 →", func(): leave_requested.emit()))
 
 
 func _spacer() -> Control:
@@ -173,7 +179,11 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 
 	var btn := Button.new()
 	btn.flat = true
-	btn.focus_mode = Control.FOCUS_NONE
+	# Reachable from the keyboard like everything else, but without the plate:
+	# a figure standing in a square should not acquire a parchment frame just
+	# because it happens to be clickable.
+	btn.focus_mode = Control.FOCUS_ALL
+	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	var art := _portrait_for(ev, culture, slot)
 	if art != null:
 		var tr := TextureRect.new()
@@ -195,9 +205,23 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 		# Still readable — you can look at a place you have been — but it no
 		# longer offers choices, so it must not look like an open action.
 		btn.disabled = true
+		btn.focus_mode = Control.FOCUS_NONE
+		btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
 		btn.tooltip_text = "已看过"
 	else:
 		btn.pressed.connect(func(): site_chosen.emit(String(ev.get("id", ""))))
+		btn.tooltip_text = I18n.t(ev.get("title", ""))
+		# The figures had no hover state at all: a portrait you can walk up to
+		# looked exactly the same whether the pointer was on it or not, so the
+		# only way to find the clickable region was to click around. Brightening
+		# on hover is a colour change, not motion, so it is safe under
+		# reduce-motion and needs no tween.
+		btn.mouse_entered.connect(func() -> void:
+			if is_instance_valid(btn):
+				btn.modulate = Color(1.10, 1.06, 0.98, 1.0))
+		btn.mouse_exited.connect(func() -> void:
+			if is_instance_valid(btn):
+				btn.modulate = Color(1, 1, 1, 1))
 	box.add_child(btn)
 
 	var plate := PanelContainer.new()
@@ -212,7 +236,42 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 	return box
 
 
+## Re-dresses the whole screen for the current type size and contrast mode.
+##
+## This used to stop after the title and the hint, so switching to high
+## contrast left the status line, all four foot buttons and every site plaque
+## on the old parchment styling — the city is the screen the player spends the
+## most time on, and it was the one that changed least.
 func restyle() -> void:
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
+	_status.add_theme_font_size_override("font_size", UiScale.ui())
+	_status.add_theme_color_override("font_color", Palette.ink_soft())
 	_hint.add_theme_font_size_override("font_size", UiScale.ui())
+	_hint.add_theme_color_override("font_color", Palette.ink_soft())
+
+	for p in [_head, _foot]:
+		if p != null and is_instance_valid(p):
+			p.add_theme_stylebox_override("panel", Palette.panel_style())
+	if _foot_row != null and is_instance_valid(_foot_row):
+		_foot_row.add_theme_constant_override(
+			"separation", Metrics.md() + Metrics.xs())
+		for c in _foot_row.get_children():
+			if c is Button:
+				Panels.style_button(c as Button)
+
+	# The scene photograph behind the text has to darken further under high
+	# contrast, or white-on-illustration is no more legible than it was.
+	if _scrim != null and is_instance_valid(_scrim):
+		_scrim.color = _scrim_color()
+
+	# The site plaques are rebuilt by show_city() on every entry, so they only
+	# need catching up if the player changed the setting while standing here.
+	if _figures != null and is_instance_valid(_figures):
+		_figures.add_theme_constant_override("separation", Metrics.xl())
+		Panels.restyle_tree(_figures)
+
+
+func _scrim_color() -> Color:
+	return Color(0, 0, 0, 0.62) if UiScale.high_contrast \
+		else Color(0.09, 0.07, 0.04, 0.42)

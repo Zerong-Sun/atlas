@@ -10,6 +10,9 @@ extends PanelContainer
 signal choice_taken(index: int)
 signal dismissed()
 
+## Kept for anything still reading it. The live measure now comes from
+## Metrics.measure(), which grows the column with the type rather than pinning
+## large print to the same 760 px as small.
 const MAX_W := 760.0
 
 var _title: Label
@@ -26,11 +29,11 @@ func _ready() -> void:
 	custom_minimum_size = Vector2(560, 260)
 
 	_root = VBoxContainer.new()
-	_root.add_theme_constant_override("separation", 10)
+	_root.add_theme_constant_override("separation", Metrics.md())
 	add_child(_root)
 
 	var head := HBoxContainer.new()
-	head.add_theme_constant_override("separation", 12)
+	head.add_theme_constant_override("separation", Metrics.md() + Metrics.xs())
 	_root.add_child(head)
 
 	_portrait = TextureRect.new()
@@ -52,10 +55,14 @@ func _ready() -> void:
 	_origin.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	head_col.add_child(_origin)
 
+	# A hairline between the heading and the prose. Title, provenance note and
+	# first paragraph used to run together as one block of text with only a
+	# size difference to separate them.
+	_root.add_child(Panels.rule())
+
 	# The body scrolls. Long chapters must never push the choices off screen.
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_scroll.custom_minimum_size = Vector2(0, 150)
 	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_root.add_child(_scroll)
 
@@ -66,8 +73,12 @@ func _ready() -> void:
 	_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_scroll.add_child(_body)
 
+	# And another above the choices, so the moment of deciding is visibly
+	# separate from the moment of reading.
+	_root.add_child(Panels.rule())
+
 	_choices = VBoxContainer.new()
-	_choices.add_theme_constant_override("separation", 6)
+	_choices.add_theme_constant_override("separation", Metrics.sm())
 	_root.add_child(_choices)
 
 	restyle()
@@ -77,14 +88,33 @@ func restyle() -> void:
 	add_theme_stylebox_override("panel", Palette.panel_style())
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
-	_origin.add_theme_font_size_override("font_size", UiScale.ui() - 2)
-	_origin.add_theme_color_override("font_color", Palette.ink_soft())
+	_origin.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
+	# A provenance note is a footnote, not a subtitle — it should read as an
+	# aside under the title rather than competing with it.
+	_origin.add_theme_color_override("font_color", Palette.ink_faint())
 	_body.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_body.add_theme_color_override("default_color", Palette.ink())
+	# Leading. Set solid, long medieval prose in a narrow column is a wall;
+	# roughly a third of the type size between lines is what makes it a page.
+	_body.add_theme_constant_override("line_separation",
+		int(round(float(UiScale.body()) * 0.34)))
+	_body.add_theme_constant_override("paragraph_separation", Metrics.sm())
+
+	# Portrait scales with the type, or a 120 px figure beside 26 pt text reads
+	# as a stamp rather than a person.
+	var pw := 120.0 * Metrics.factor()
+	_portrait.custom_minimum_size = Vector2(pw, pw * 1.25)
+
+	# The prose window is at least four lines tall whatever the step, so the
+	# reader is never handed a two-line slit to scroll a chapter through.
+	_scroll.custom_minimum_size = Vector2(0, float(UiScale.body()) * 6.0)
+
 	# Width follows the window but never grows past a comfortable measure:
 	# prose set across 1400px is unreadable however large the type.
 	var vp := get_viewport_rect().size
-	custom_minimum_size = Vector2(minf(MAX_W, vp.x - 80.0), minf(vp.y - 120.0, 520.0))
+	custom_minimum_size = Vector2(
+		Metrics.measure(vp.x),
+		minf(vp.y - float(Metrics.xl()) * 4.0, 560.0))
 
 
 func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null) -> void:
@@ -114,14 +144,13 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	# An event whose every choice is barred — no coin, no language, no art —
 	# must still be leavable. Without this the player is trapped reading the
 	# same page: the same defect the city screen had, one level down.
-	var leave := Button.new()
-	leave.text = "就此走开" if not any_open else "先不动手"
+	var leave := Panels.styled_button(
+		"就此走开" if not any_open else "先不动手",
+		func(): dismissed.emit())
 	leave.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	leave.add_theme_font_size_override("font_size", UiScale.ui())
-	leave.add_theme_stylebox_override("normal", Palette.button_style())
-	leave.add_theme_stylebox_override("hover", Palette.button_style(true))
-	leave.add_theme_color_override("font_color", Palette.ink_soft())
-	leave.pressed.connect(func(): dismissed.emit())
+	# Walking away is always available but never the point of the panel, so it
+	# stays visibly quieter than the choices it sits under.
+	leave.add_theme_color_override("font_color", Palette.ink_faint())
 	_choices.add_child(leave)
 
 	_scroll.scroll_vertical = 0
@@ -137,16 +166,9 @@ func animate_choices() -> void:
 
 
 func _make_choice(s: Dictionary, index: int) -> Button:
-	var btn := Button.new()
-	btn.text = I18n.t(s["choice"].get("label", ""))
+	var btn := Panels.styled_button(I18n.t(s["choice"].get("label", "")), Callable())
 	btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	btn.add_theme_font_size_override("font_size", UiScale.ui())
-	btn.add_theme_stylebox_override("normal", Palette.button_style())
-	btn.add_theme_stylebox_override("hover", Palette.button_style(true))
-	btn.add_theme_stylebox_override("pressed", Palette.button_style(true))
-	btn.add_theme_color_override("font_color", Palette.ink())
-	btn.add_theme_color_override("font_disabled_color", Palette.ink_soft())
 
 	if not s["enabled"]:
 		btn.disabled = true
