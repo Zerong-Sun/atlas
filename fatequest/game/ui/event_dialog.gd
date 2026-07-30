@@ -147,7 +147,7 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	# must still be leavable. Without this the player is trapped reading the
 	# same page: the same defect the city screen had, one level down.
 	var leave := Panels.styled_button(
-		"就此走开" if not any_open else "先不动手",
+		I18n.t("ui.walk_away") if not any_open else I18n.t("ui.hold_for_now"),
 		func(): dismissed.emit())
 	leave.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	# Walking away is always available but never the point of the panel, so it
@@ -193,9 +193,9 @@ func _origin_note(ev: Dictionary) -> String:
 		"source":
 			var ref: Dictionary = lore.get("ref", {})
 			var ch := String(ref.get("chapterId", ""))
-			return "据《马可·波罗游记》%s" % ch if ch != "" else "据史料"
+			return I18n.t("ui.source_polo") + " %s" % ch if ch != "" else "据史料"
 		"hybrid":
-			return "据原文演绎"
+			return I18n.t("ui.source_hybrid")
 		"authored":
-			return "据原文语体新撰"
+			return I18n.t("ui.source_authored")
 	return ""

@@ -44,12 +44,12 @@ func _ready() -> void:
 	_body.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_body.add_theme_color_override("default_color", Palette.ink())
 	content.add_child(_body)
-	content.add_child(Panels.heading("已知道路与出行方式"))
+	content.add_child(Panels.heading(I18n.t("ui.known_routes")))
 	_routes = VBoxContainer.new()
 	_routes.add_theme_constant_override("separation", Metrics.xs())
 	content.add_child(_routes)
 
-	root.add_child(Panels.styled_button("收起地图卡", func(): closed.emit()))
+	root.add_child(Panels.styled_button(I18n.t("ui.close_map_card"), func(): closed.emit()))
 
 
 func setup(p_db: ContentDb, p_travel: Travel) -> void:

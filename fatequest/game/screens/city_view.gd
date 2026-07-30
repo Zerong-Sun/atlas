@@ -109,14 +109,14 @@ func _build() -> void:
 	_hint.add_theme_color_override("font_color", Palette.ink_soft())
 	foot_row.add_child(_hint)
 
-	_market_btn = Panels.styled_button("市集", func(): market_requested.emit())
+	_market_btn = Panels.styled_button(I18n.t("ui.market"), func(): market_requested.emit())
 	foot_row.add_child(_market_btn)
-	foot_row.add_child(Panels.styled_button("行囊", func(): bag_requested.emit()))
-	foot_row.add_child(Panels.styled_button("同行", func(): party_requested.emit()))
+	foot_row.add_child(Panels.styled_button(I18n.t("ui.bag"), func(): bag_requested.emit()))
+	foot_row.add_child(Panels.styled_button(I18n.t("ui.party"), func(): party_requested.emit()))
 	# Without this the city is a dead end. It is the single most important
 	# control on the screen — so it carries the primary styling rather than
 	# sitting fourth in a row of four identical buttons.
-	foot_row.add_child(Panels.primary_button("上路 →", func(): leave_requested.emit()))
+	foot_row.add_child(Panels.primary_button(I18n.t("ui.set_out"), func(): leave_requested.emit()))
 
 
 func _spacer() -> Control:
@@ -159,7 +159,7 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 	_bg.texture = site0 if site0 != null else MapArt.city_explore_bg(city, 0)
 
 	_hint.text = ("点击一处走近看看 · 共 %d 处" % offered) if offered > 0 \
-		else "此地已看遍"
+		else I18n.t("ui.seen_everything")
 	_market_btn.visible = city.has("market")
 
 
@@ -207,7 +207,7 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 		btn.disabled = true
 		btn.focus_mode = Control.FOCUS_NONE
 		btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
-		btn.tooltip_text = "已看过"
+		btn.tooltip_text = I18n.t("ui.seen")
 	else:
 		btn.pressed.connect(func(): site_chosen.emit(String(ev.get("id", ""))))
 		btn.tooltip_text = I18n.t(ev.get("title", ""))

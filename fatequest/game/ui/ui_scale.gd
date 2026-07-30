@@ -18,10 +18,10 @@ const STEPS := {
 	Size.HUGE: 1.55,
 }
 const LABELS := {
-	Size.SMALL: "小",
-	Size.NORMAL: "中",
-	Size.LARGE: "大",
-	Size.HUGE: "特大",
+	Size.SMALL: I18n.t("ui.font_small"),
+	Size.NORMAL: I18n.t("ui.font_normal"),
+	Size.LARGE: I18n.t("ui.font_large"),
+	Size.HUGE: I18n.t("ui.font_huge"),
 }
 
 ## Base sizes in points, before the step multiplier.
@@ -66,7 +66,7 @@ static func cycle() -> int:
 
 
 static func label() -> String:
-	return LABELS.get(step, "中")
+	return LABELS.get(step, I18n.t("ui.font_normal"))
 
 
 static func save() -> void:

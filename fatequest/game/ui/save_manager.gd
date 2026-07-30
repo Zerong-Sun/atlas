@@ -23,9 +23,9 @@ func _ready() -> void:
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", Metrics.sm())
 	add_child(root)
-	root.add_child(Panels.heading("旅程存档"))
+	root.add_child(Panels.heading(I18n.t("ui.save_heading")))
 	root.add_child(Panels.label(
-		"抵达城市时自动保存；手动存档提供五个独立槽位。",
+		I18n.t("ui.save_desc"),
 		UiScale.ui(), Palette.ink_soft()))
 	root.add_child(Panels.rule())
 	var scroll := ScrollContainer.new()
@@ -36,14 +36,14 @@ func _ready() -> void:
 	_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_list.add_theme_constant_override("separation", Metrics.xs())
 	scroll.add_child(_list)
-	root.add_child(Panels.styled_button("合上", func(): closed.emit()))
+	root.add_child(Panels.styled_button(I18n.t("ui.close"), func(): closed.emit()))
 	_overwrite_dialog = ConfirmationDialog.new()
-	_overwrite_dialog.title = "覆盖手动存档"
+	_overwrite_dialog.title = I18n.t("ui.overwrite_manual")
 	_overwrite_dialog.confirmed.connect(_confirm_overwrite)
 	add_child(_overwrite_dialog)
 	_restore_dialog = ConfirmationDialog.new()
-	_restore_dialog.title = "恢复上一份备份"
-	_restore_dialog.dialog_text = "将用上一份已验证备份替换当前文件。是否继续？"
+	_restore_dialog.title = I18n.t("ui.restore_backup")
+	_restore_dialog.dialog_text = I18n.t("ui.restore_confirm")
 	_restore_dialog.confirmed.connect(_confirm_restore)
 	add_child(_restore_dialog)
 
@@ -55,9 +55,9 @@ func setup(p_db: ContentDb) -> void:
 func refresh() -> void:
 	for child in _list.get_children():
 		child.queue_free()
-	_list.add_child(_slot_row("auto", "自动存档", false))
+	_list.add_child(_slot_row("auto", I18n.t("ui.auto_save"), false))
 	for i in range(1, MANUAL_SLOTS + 1):
-		_list.add_child(_slot_row("manual-%d" % i, "手动槽位 %d" % i, true))
+		_list.add_child(_slot_row("manual-%d" % i, I18n.t("ui.slot_manual_fmt") % i, true))
 
 
 func mark_slot_for_deep_check(slot: String) -> void:
@@ -88,30 +88,30 @@ func _slot_row(slot: String, label: String, writable: bool) -> Control:
 		var city_id := String(h.get("city", ""))
 		var city := db.get_record(city_id) if db != null else {}
 		var city_name := I18n.t(city.get("name", city_id)) if not city.is_empty() else city_id
-		text.add_child(Panels.label("%s · 第 %d 日 · %s" % [
+		text.add_child(Panels.label(I18n.t("ui.slot_info_fmt") % [
 			city_name, int(h.get("days", 0)), String(h.get("saved_at", ""))],
 			maxi(UiScale.ui() - 2, 10), Palette.ink_soft()))
 	elif status == "empty":
-		text.add_child(Panels.label("空", maxi(UiScale.ui() - 2, 10), Palette.ink_faint()))
+		text.add_child(Panels.label(I18n.t("ui.empty_slot"), maxi(UiScale.ui() - 2, 10), Palette.ink_faint()))
 	else:
-		var message := "存档损坏" if status == "corrupt" else "版本不兼容"
+		var message := I18n.t("ui.save_corrupted") if status == "corrupt" else I18n.t("ui.version_mismatch")
 		text.add_child(Panels.label("%s · %s" % [
 			message, String(info.get("code", "SAVE_INVALID"))],
 			maxi(UiScale.ui() - 2, 10), Palette.loss()))
 	if writable:
 		var save_btn := Panels.styled_button(
-			"覆盖" if exists else "保存",
+			I18n.t("ui.overwrite") if exists else I18n.t("ui.save_btn"),
 			_request_save.bind(slot, exists))
 		save_btn.disabled = status not in ["ok", "empty"]
 		if save_btn.disabled:
-			save_btn.tooltip_text = "损坏或高版本槽位不可覆盖；请先恢复备份或显式删除。"
+			save_btn.tooltip_text = I18n.t("ui.slot_blocked")
 		row.add_child(save_btn)
-	var load_btn := Panels.primary_button("读取", func(): load_requested.emit(slot))
+	var load_btn := Panels.primary_button(I18n.t("ui.load"), func(): load_requested.emit(slot))
 	load_btn.disabled = not exists
 	row.add_child(load_btn)
 	if bool(info.get("backup_available", false)):
 		row.add_child(Panels.styled_button(
-			"恢复备份", _request_restore.bind(slot)))
+			I18n.t("ui.restore"), _request_restore.bind(slot)))
 	return panel
 
 
@@ -122,7 +122,7 @@ func _request_save(slot: String, exists: bool) -> void:
 	_pending_overwrite = slot
 	var info := SaveGame.inspect_slot(slot)
 	var h: Dictionary = info.get("header", {})
-	_overwrite_dialog.dialog_text = "将覆盖 %s（第 %d 日，%s）。旧文件会保留为备份。" % [
+	_overwrite_dialog.dialog_text = I18n.t("ui.overwrite_confirm_fmt") % [
 		slot, int(h.get("days", 0)), String(h.get("saved_at", ""))]
 	_overwrite_dialog.popup_centered()
 

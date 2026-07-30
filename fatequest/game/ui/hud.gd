@@ -37,10 +37,10 @@ var _quiet: bool = true
 ## Long-form labels for each cell, shown on hover. The bar is terse by
 ## necessity; the meaning of "行52" should not depend on having read the manual.
 const TIPS := {
-	"place": "当前所在地",
+	"place": I18n.t("ui.current_location"),
 	"date": "当地历法日期 · 干支",
 	"coins": "钱袋（银）",
-	"days": "已行日数",
+	"days": I18n.t("ui.days_travelled"),
 	"cargo": "货格 已用／总数",
 	"fate": "命运三轴：行旅 · 交游 · 财货",
 }
@@ -152,8 +152,8 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 
 	# Deltas worth announcing. Cargo is not one: it changes on every trade and
 	# the market screen already shows the movement in place.
-	_track("coins", silver, "银")
-	_track("days", state.days_elapsed, "日")
+	_track("coins", silver, I18n.t("ui.silver"))
+	_track("days", state.days_elapsed, I18n.t("ui.days"))
 	_track("fate", int(state.fate.get("travel", 0))
 		+ int(state.fate.get("rapport", 0))
 		+ int(state.fate.get("wealth", 0)), "")

@@ -208,7 +208,7 @@ func _build_desk() -> void:
 	if not existing_slots.is_empty():
 		var slot := String(existing_slots[0].get("slot", "auto"))
 		var head: Dictionary = existing_slots[0]
-		var cont := Panels.styled_button("继续上次的旅程（%s · 第 %d 日）" % [
+		var cont := Panels.styled_button(I18n.t("ui.continue_journey_fmt") % [
 			_city_name(String(head.get("city", ""))), int(head.get("days", 0))], Callable())
 		cont.pressed.connect(func():
 			if _begin_loaded(slot):
@@ -217,7 +217,7 @@ func _build_desk() -> void:
 				_show_desk_load_error(slot))
 		_desk.add_child(cont)
 
-	var draw_btn := Panels.primary_button("抽取人物与起点", _draw_character)
+	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
 	draw_btn.name = "CharacterDrawButton"
 	_desk.add_child(draw_btn)
 
@@ -270,7 +270,7 @@ func _draw_character() -> void:
 
 	var culture := String(_drawn_archetype.get("culture", "latin"))
 	var faith := String(_drawn_archetype.get("faith", "latin"))
-	var title := Panels.heading("你抽到了：%s" % I18n.t(_drawn_archetype.get("name", "")))
+	var title := Panels.heading(I18n.t("ui.you_drew") % I18n.t(_drawn_archetype.get("name", "")))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_draw_card.add_child(title)
 	_draw_card.add_child(Panels.label("身份文化：%s　公开信仰：%s" % [
@@ -291,10 +291,10 @@ func _draw_character() -> void:
 	var row := HBoxContainer.new()
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.add_theme_constant_override("separation", Metrics.sm())
-	var reroll := Panels.styled_button("重抽（余 %d 次）" % (3 - _draw_count), _draw_character)
+	var reroll := Panels.styled_button(I18n.t("ui.reroll_fmt") % (3 - _draw_count), _draw_character)
 	reroll.disabled = _draw_count >= 3
 	row.add_child(reroll)
-	row.add_child(Panels.primary_button("接受命运，进入 %s" % _city_name(
+	row.add_child(Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
 		String(_drawn_archetype.get("start", ""))), _confirm_character_draw))
 	_draw_card.add_child(row)
 
@@ -417,7 +417,7 @@ func _begin_loaded(slot: String) -> bool:
 	# here created a small race where a changed snapshot could replace the desk
 	# after validation and then fail against an already-built world.
 	if not _restore_document(preflight):
-		_say("[color=#8a4a3a]读档失败[/color]")
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("log.load_failed"))
 		return false
 	return true
 
@@ -850,15 +850,15 @@ func _build_controls() -> void:
 	bar.add_theme_constant_override("v_separation", Metrics.xs())
 	add_child(bar)
 
-	bar.add_child(_ctl("行囊", _open_bag))
-	bar.add_child(_ctl("图鉴", _open_codex))
-	bar.add_child(_ctl("同行", _open_party))
-	bar.add_child(_ctl("停笔", _open_ending))
-	bar.add_child(_ctl("存档", _open_save_manager))
-	bar.add_child(_ctl("设置", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
-	bar.add_child(_ctl("归位", func(): _map.center_on(state.city)))
-	bar.add_child(_ctl("放大", func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
-	bar.add_child(_ctl("缩小", func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
+	bar.add_child(_ctl(I18n.t("ui.bag"), _open_bag))
+	bar.add_child(_ctl(I18n.t("ui.codex"), _open_codex))
+	bar.add_child(_ctl(I18n.t("ui.party"), _open_party))
+	bar.add_child(_ctl(I18n.t("ui.ending"), _open_ending))
+	bar.add_child(_ctl(I18n.t("ui.save"), _open_save_manager))
+	bar.add_child(_ctl(I18n.t("ui.settings"), func(): Motion.crossfade_in(_settings["layer"], 0.18)))
+	bar.add_child(_ctl(I18n.t("ui.reset_view"), func(): _map.center_on(state.city)))
+	bar.add_child(_ctl(I18n.t("ui.zoom_in"), func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
+	bar.add_child(_ctl(I18n.t("ui.zoom_out"), func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
 	_controls = bar
 	_resize_controls()
 
@@ -1027,7 +1027,7 @@ func _on_event_dismissed() -> void:
 func _build_bag() -> void:
 	_bag = Panels.overlay(self, Vector2(560, 420))
 	var box: VBoxContainer = _bag["box"]
-	var title := Panels.label("行囊", UiScale.title(), Palette.ink())
+	var title := Panels.label(I18n.t("ui.bag"), UiScale.title(), Palette.ink())
 	box.add_child(title)
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -1040,10 +1040,10 @@ func _build_bag() -> void:
 	_bag["list"] = list
 	var bag_row := HBoxContainer.new()
 	bag_row.add_theme_constant_override("separation", 8)
-	bag_row.add_child(Panels.styled_button("图鉴", func():
+	bag_row.add_child(Panels.styled_button(I18n.t("ui.codex"), func():
 		_bag["layer"].visible = false
 		_open_codex()))
-	var close_btn := Panels.styled_button("合上", func(): _bag["layer"].visible = false)
+	var close_btn := Panels.styled_button(I18n.t("ui.close"), func(): _bag["layer"].visible = false)
 	close_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bag_row.add_child(close_btn)
 	box.add_child(bag_row)
@@ -1059,7 +1059,7 @@ func _build_bag() -> void:
 func _build_ending() -> void:
 	_ending_ui = Panels.overlay(self, Vector2(660, 480))
 	var box: VBoxContainer = _ending_ui["box"]
-	var title := Panels.label("停笔", UiScale.title(), Palette.ink())
+	var title := Panels.label(I18n.t("ui.ending"), UiScale.title(), Palette.ink())
 	box.add_child(title)
 	_ending_ui["title"] = title
 
@@ -1078,10 +1078,10 @@ func _build_ending() -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	box.add_child(row)
-	var confirm := Panels.styled_button("就此停笔", _confirm_ending)
+	var confirm := Panels.styled_button(I18n.t("ui.end_now"), _confirm_ending)
 	row.add_child(confirm)
 	_ending_ui["confirm"] = confirm
-	row.add_child(Panels.styled_button("再走一程", func(): _ending_ui["layer"].visible = false))
+	row.add_child(Panels.styled_button(I18n.t("ui.keep_going"), func(): _ending_ui["layer"].visible = false))
 
 
 func _open_ending() -> void:
@@ -1094,7 +1094,7 @@ func _open_ending() -> void:
 	var lines := "[color=#6a5a48]若在此地合上这本书：[/color]\n\n"
 	lines += "　行过 %d 座城，历 %d 年，日 %d\n" % [state.visited.size(), years, state.days_elapsed]
 	lines += "　起于 %s，止于 %s\n" % [
-		_city_name(state.start_city) if not state.start_city.is_empty() else "尚未启程",
+		_city_name(state.start_city) if not state.start_city.is_empty() else I18n.t("ui.not_started"),
 		_city_name(state.city)]
 	lines += "　囊中 %d 钱，同行 %d 人，图鉴 %d 条\n" % [
 		state.coins / Market.FEN, state.retainers.size(), state.codex.size()]
@@ -1156,7 +1156,7 @@ func _confirm_ending() -> void:
 			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			tr.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 			(_ending_ui["box"] as VBoxContainer).add_child(tr)
-	_say("[color=#4a6a4a]· 停笔：%s[/color]" % I18n.t(String(e.get("name", ""))))
+	_say("[color=#4a6a4a]· %s[/color]" % (I18n.t("log.journey_ended") % I18n.t(String(e.get("name", "")))))
 	_refresh_hud()
 
 
@@ -1164,7 +1164,7 @@ func _confirm_ending() -> void:
 func _build_party() -> void:
 	_party = Panels.overlay(self, Vector2(640, 460))
 	var box: VBoxContainer = _party["box"]
-	box.add_child(Panels.label("同行", UiScale.title(), Palette.ink()))
+	box.add_child(Panels.label(I18n.t("ui.party"), UiScale.title(), Palette.ink()))
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -1174,7 +1174,7 @@ func _build_party() -> void:
 	list.add_theme_constant_override("separation", 5)
 	scroll.add_child(list)
 	_party["list"] = list
-	box.add_child(Panels.styled_button("合上", func(): _party["layer"].visible = false))
+	box.add_child(Panels.styled_button(I18n.t("ui.close"), func(): _party["layer"].visible = false))
 
 
 func _open_party() -> void:
@@ -1268,7 +1268,7 @@ func _party_row(m: Dictionary) -> Control:
 
 	# Dismissal must state the cost before it happens (GDD §11.7).
 	var of := _roster.overflow_if_leaving(state, _market, rid, "land")
-	var btn := Panels.styled_button("辞退", Callable())
+	var btn := Panels.styled_button(I18n.t("ui.dismiss"), Callable())
 	btn.pressed.connect(func():
 		var over := int(of["over"])
 		if over > 0:
@@ -1316,7 +1316,7 @@ func _hire_row(rec: Dictionary) -> Control:
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(note, UiScale.ui() - 3, Palette.ink_soft()))
 
-	var btn := Panels.styled_button("雇", Callable())
+	var btn := Panels.styled_button(I18n.t("ui.hire"), Callable())
 	btn.pressed.connect(func():
 		_hire_ui.open(rec, culture, "open"))
 	row.add_child(btn)
@@ -1349,7 +1349,7 @@ func _divined_hire_row(entry: Dictionary) -> Control:
 	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
 	col.add_child(Panels.label(I18n.fmt(verdict), UiScale.ui() - 3, Palette.ink_soft()))
 
-	var btn := Panels.styled_button("雇", Callable())
+	var btn := Panels.styled_button(I18n.t("ui.hire"), Callable())
 	btn.pressed.connect(func():
 		_hire_ui.open(rec, culture, "divined", verdict))
 	row.add_child(btn)
@@ -1426,44 +1426,44 @@ func _build_settings() -> void:
 	# column is taller than a 720 px window and 合上 fell off the bottom.
 	_settings = Panels.overlay(self, Vector2(440, 360), true)
 	var box: VBoxContainer = _settings["box"]
-	box.add_child(Panels.label("设置", UiScale.title(), Palette.ink()))
+	box.add_child(Panels.label(I18n.t("ui.settings"), UiScale.title(), Palette.ink()))
 
-	var size_btn := Panels.styled_button("字号：" + UiScale.label(), Callable())
+	var size_btn := Panels.styled_button(I18n.t("ui.font_size_fmt") + UiScale.label(), Callable())
 	size_btn.pressed.connect(func():
 		UiScale.cycle()
-		size_btn.text = "字号：" + UiScale.label()
+		size_btn.text = I18n.t("ui.font_size_fmt") + UiScale.label()
 		_restyle_all())
 	box.add_child(size_btn)
 
-	var hc := Panels.styled_button("高对比：" + ("开" if UiScale.high_contrast else "关"), Callable())
+	var hc := Panels.styled_button(I18n.t("ui.high_contrast") + (I18n.t("ui.high_contrast_on") if UiScale.high_contrast else I18n.t("ui.high_contrast_off")), Callable())
 	hc.pressed.connect(func():
 		UiScale.high_contrast = not UiScale.high_contrast
 		UiScale.save()
-		hc.text = "高对比：" + ("开" if UiScale.high_contrast else "关")
+		hc.text = I18n.t("ui.high_contrast") + (I18n.t("ui.high_contrast_on") if UiScale.high_contrast else I18n.t("ui.high_contrast_off"))
 		_restyle_all())
 	box.add_child(hc)
 
-	var mute := Panels.styled_button("声音", Callable())
+	var mute := Panels.styled_button(I18n.t("ui.sound"), Callable())
 	mute.pressed.connect(func():
 		if _audio_ready():
 			_audio.toggle_mute()
-			mute.text = "声音：" + ("静" if _audio.muted else "开"))
+			mute.text = I18n.t("ui.sound") + "：" + (I18n.t("ui.mute") if _audio.muted else I18n.t("ui.high_contrast_on")))
 	box.add_child(mute)
 
-	var motion := Panels.styled_button("减少动效：" + ("开" if Motion.reduce_motion else "关"), Callable())
+	var motion := Panels.styled_button(I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off")), Callable())
 	motion.pressed.connect(func():
 		Motion.reduce_motion = not Motion.reduce_motion
-		motion.text = "减少动效：" + ("开" if Motion.reduce_motion else "关"))
+		motion.text = I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off"))
 	box.add_child(motion)
 
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 
-	box.add_child(Panels.styled_button("管理存档（自动 + 五槽）", func():
+	box.add_child(Panels.styled_button(I18n.t("ui.manage_saves"), func():
 		_settings["layer"].visible = false
 		_open_save_manager()))
 
-	box.add_child(Panels.styled_button("合上", func(): _settings["layer"].visible = false))
+	box.add_child(Panels.styled_button(I18n.t("ui.close"), func(): _settings["layer"].visible = false))
 
 
 func _on_traded() -> void:
@@ -1504,7 +1504,7 @@ func _autosave() -> void:
 	if not _save("auto"):
 		# Save failure must never block arrival, but it must be visible. Silent
 		# failure gives the player false confidence until the next launch.
-		_say("[color=#8a4a3a]· 自动保存失败；旅程仍可继续，请在存档管理中检查自动槽位[/color]")
+		_say("[color=#8a4a3a]· %s[/color]" % I18n.t("log.autosave_failed"))
 
 
 func _save(slot: String) -> bool:
@@ -1626,9 +1626,9 @@ func _show_event(ev: Dictionary) -> void:
 ## GDD §19: the player must always be able to tell source from invention.
 func _origin_tag(rec: Dictionary) -> String:
 	match rec.get("lore", {}).get("origin", ""):
-		"source":  return "[color=#7a6a4a](据《马可·波罗游记》)[/color]"
-		"hybrid":  return "[color=#7a6a4a](据原文演绎)[/color]"
-		"authored": return "[color=#7a6a4a](据原文语体新撰)[/color]"
+		"source":  return "[color=#7a6a4a](" + I18n.t("ui.source_polo") + ")[/color]"
+		"hybrid":  return "[color=#7a6a4a](" + I18n.t("ui.source_hybrid") + ")[/color]"
+		"authored": return "[color=#7a6a4a](" + I18n.t("ui.source_authored") + ")[/color]"
 	return ""
 
 
@@ -1667,7 +1667,7 @@ func _on_lesson_passed(method: String) -> void:
 	var ev := _lesson_event
 	var index := _lesson_choice_index
 	_clear_lesson_pending()
-	_say("[color=#4a6a4a]· 练习通过：%s[/color]" % I18n.t(
+	_say("[color=#4a6a4a]· %s[/color]" % I18n.t("log.lesson_passed") % I18n.t(
 		db.get_record(method).get("name", method)))
 	_resolve_choice(ev, index, method)
 
@@ -1686,7 +1686,7 @@ func _on_lesson_failed(method: String) -> void:
 				})
 				for line in fail_result.log_lines:
 					_say("  · %s" % line)
-	_say("[color=#8a4a3a]· 练习未通过，尚未学会 %s；可再次拜师。[/color]" % I18n.t(
+	_say("[color=#8a4a3a]· %s[/color]" % I18n.t("log.lesson_failed") % I18n.t(
 		db.get_record(method).get("name", method)))
 	_clear_lesson_pending()
 	_open_city()
@@ -1694,7 +1694,7 @@ func _on_lesson_failed(method: String) -> void:
 
 func _on_lesson_skipped(method: String) -> void:
 	_lesson_layer.visible = false
-	_say("· 你暂时不学 %s。" % I18n.t(db.get_record(method).get("name", method)))
+	_say(I18n.t("ui.skip_learn_fmt") % I18n.t(db.get_record(method).get("name", method)))
 	_clear_lesson_pending()
 	_open_city()
 
@@ -1841,11 +1841,11 @@ func _show_pending_pause() -> void:
 	_dialog_layer.visible = false
 	_city_view.visible = false
 	_clear_panel()
-	_panel.add_child(Panels.heading("未完的后果"))
+	_panel.add_child(Panels.heading(I18n.t("ui.pending_consequences")))
 	_panel.add_child(Panels.label(
 		"连续事件已暂停，避免长链阻断自由操作。继续后将处理下一项。",
 		UiScale.ui(), Palette.ink_soft()))
-	_panel.add_child(Panels.primary_button("继续处理", _continue_pending))
+	_panel.add_child(Panels.primary_button(I18n.t("ui.continue_pending"), _continue_pending))
 
 
 func _continue_pending() -> void:
@@ -1886,14 +1886,14 @@ func _show_roads() -> void:
 
 	var here_rec := db.get_record(state.city)
 	if here_rec.has("market"):
-		var mbtn := Panels.styled_button("◈ 市集", _open_market)
+		var mbtn := Panels.styled_button(I18n.t("ui.open_market"), _open_market)
 		mbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(mbtn)
 
 	# The roads are a different kind of thing from the sites above them, and
 	# the list ran straight on with only a bare Label between.
 	_panel.add_child(Panels.rule())
-	_panel.add_child(Panels.heading("%s 的去路：" % _city_name(state.city)))
+	_panel.add_child(Panels.heading(I18n.t("ui.routes_from") % _city_name(state.city)))
 
 	var any := false
 	for r in travel.routes_from(state.city):
@@ -1906,7 +1906,7 @@ func _show_roads() -> void:
 			var cost := travel.total_cost(r, String(mode)) / 100
 			# The arrow used to point back at the city you are standing in
 			# ("杭州 ← 骆驼"), which reads as arriving rather than leaving.
-			var btn := Panels.styled_button("→ %s · %s · %d日 · %d银" % [
+			var btn := Panels.styled_button(I18n.t("ui.route_button_fmt") % [
 				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
 				Callable())
 			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
@@ -1927,7 +1927,7 @@ func _show_roads() -> void:
 			_panel.add_child(btn)
 			any = true
 	if not any:
-		_panel.add_child(Panels.label("（无路可走）", UiScale.ui(), Palette.ink_faint()))
+		_panel.add_child(Panels.label(I18n.t("ui.no_routes"), UiScale.ui(), Palette.ink_faint()))
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
@@ -2055,7 +2055,7 @@ func _build_audio_controls() -> void:
 	# A1: mute must be reachable before any sustained drone settles in.
 	var btn := Button.new()
 	btn.name = "MuteBtn"
-	btn.text = "静音"
+	btn.text = I18n.t("ui.mute")
 	btn.set_anchors_preset(Control.PRESET_TOP_RIGHT)
 	btn.offset_left = -96
 	btn.offset_right = -12
@@ -2074,4 +2074,4 @@ func _on_mute_pressed() -> void:
 func _on_mute_changed(is_muted: bool) -> void:
 	var btn := get_node_or_null("MuteBtn") as Button
 	if btn:
-		btn.text = "取消静音" if is_muted else "静音"
+		btn.text = I18n.t("ui.unmute") if is_muted else I18n.t("ui.mute")

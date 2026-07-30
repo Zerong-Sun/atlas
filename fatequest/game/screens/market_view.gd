@@ -54,7 +54,7 @@ func _build() -> void:
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	head.add_child(spacer)
 
-	var close := Panels.styled_button("离开市集", func(): closed.emit())
+	var close := Panels.styled_button(I18n.t("ui.leave_market"), func(): closed.emit())
 	head.add_child(close)
 
 	var cols := HBoxContainer.new()
@@ -62,8 +62,8 @@ func _build() -> void:
 	cols.add_theme_constant_override("separation", 16)
 	root.add_child(cols)
 
-	cols.add_child(_column("此地货殖", true))
-	cols.add_child(_column("你的行囊", false))
+	cols.add_child(_column(I18n.t("ui.local_goods"), true))
+	cols.add_child(_column(I18n.t("ui.your_bag"), false))
 
 
 func _column(title: String, is_stock: bool) -> Control:
@@ -131,9 +131,9 @@ func refresh() -> void:
 ## not compute one.
 func _demand_note(good: Dictionary) -> String:
 	match market.demand_tier(good, _city):
-		0: return "此地自产"
-		2: return "此地紧缺"
-	return "寻常货色"
+		0: return I18n.t("ui.local_produce")
+		2: return I18n.t("ui.local_shortage")
+	return I18n.t("ui.common_goods")
 
 
 func _row_panel() -> PanelContainer:
@@ -174,7 +174,7 @@ func _stock_row(good: Dictionary) -> Control:
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	text.add_child(sub)
 
-	var buy := Panels.styled_button("买", Callable())
+	var buy := Panels.styled_button(I18n.t("ui.buy"), Callable())
 	if not check["ok"]:
 		buy.disabled = true
 		var why: Array[String] = []
@@ -218,7 +218,7 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	text.add_child(sub)
 
-	var sell := Panels.primary_button("卖", func(): _sell(good))
+	var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))
 	row.add_child(sell)
 	return panel
 

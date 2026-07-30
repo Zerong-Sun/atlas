@@ -69,13 +69,13 @@ func _build() -> void:
 	_tabs = HBoxContainer.new()
 	_tabs.add_theme_constant_override("separation", 6)
 	head.add_child(_tabs)
-	_tabs.add_child(Panels.styled_button("图鉴", func(): _switch("codex")))
-	_tabs.add_child(Panels.styled_button("贴纸", func(): _switch("sticker")))
+	_tabs.add_child(Panels.styled_button(I18n.t("ui.codex"), func(): _switch("codex")))
+	_tabs.add_child(Panels.styled_button(I18n.t("ui.stickers"), func(): _switch("sticker")))
 
 	var spacer := Control.new()
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	head.add_child(spacer)
-	head.add_child(Panels.styled_button("合上", func(): closed.emit()))
+	head.add_child(Panels.styled_button(I18n.t("ui.close"), func(): closed.emit()))
 
 	var cols := HBoxContainer.new()
 	cols.size_flags_vertical = Control.SIZE_EXPAND_FILL

@@ -82,8 +82,8 @@ func build(parent: Node) -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 10)
 	_box.add_child(row)
-	_btn_ok = Panels.styled_button("缔结", _run_confirm)
-	_btn_cancel = Panels.styled_button("作罢", _on_cancel)
+	_btn_ok = Panels.styled_button(I18n.t("ui.forge_contract"), _run_confirm)
+	_btn_cancel = Panels.styled_button(I18n.t("ui.pass"), _on_cancel)
 	row.add_child(_btn_ok)
 	row.add_child(_btn_cancel)
 
@@ -121,7 +121,7 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 	_origin_l.text = origin_line
 	var months := int(rec.get("contract", {}).get("months", 12))
 	var wage := int(rec.get("wage", {}).get("amount", 0)) / Market.FEN
-	_detail_l.text = "月俸 %d 银　合同 %d 月" % [wage, months]
+	_detail_l.text = I18n.t("ui.hire_wage_fmt") % [wage, months]
 	if mode == "divined" and verdict_key != "":
 		_verdict_l.text = I18n.fmt(verdict_key)
 		_verdict_l.visible = true

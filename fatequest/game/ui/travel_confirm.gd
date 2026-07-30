@@ -42,8 +42,8 @@ func _ready() -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", Metrics.sm())
 	root.add_child(row)
-	row.add_child(Panels.styled_button("再想想", func(): cancelled.emit()))
-	_confirm = Panels.primary_button("确定出发", _emit_confirmed)
+	row.add_child(Panels.styled_button(I18n.t("ui.think_again"), func(): cancelled.emit()))
+	_confirm = Panels.primary_button(I18n.t("ui.depart_confirm"), _emit_confirmed)
 	_confirm.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(_confirm)
 
