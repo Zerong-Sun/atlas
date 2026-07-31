@@ -16,7 +16,7 @@
 | 差异格式 | ✅ `git diff --check` |
 | Godot 版本 | ✅ `/Applications/Godot.app`，4.7.1.stable.official |
 | Godot 单测 | ✅ `tests/run_tests.gd`：SUITE PASS |
-| Godot smoke | ✅ boot、Zayton、旅途恢复、完整流程、party、benchmark 全部通过 |
+| Godot smoke | ✅ 全部 12 个 `smoke_*.gd` 通过，含城市导航、主流程、存档、占卜、市场和结语 |
 
 ## 剧情重点
 
@@ -40,6 +40,7 @@ godot --headless --path . --script tests/smoke_journey_resume.gd
 godot --headless --path . --script tests/smoke_fatequest_flow.gd
 godot --headless --path . --script tests/smoke_party.gd
 godot --headless --path . --script tests/benchmark_systems.gd
+for test in tests/smoke_*.gd; do godot --headless --path . --script "$test" || exit 1; done
 ```
 
 Godot 4.7.1 兼容修正：运行时翻译不得放入 `const` 字典；HUD 改为惰性初始化，

@@ -18,12 +18,11 @@ func _init():
     n._begin(arch)
     await process_frame
 
-    # Clear the entry event, then exhaust every once-only site. Mentors may be
-    # repeatable so a player can return with enough money to learn another art.
-    if n._dialog_layer.visible:
-        for ch in n._dialog._choices.get_children():
-            if ch is Button and not ch.disabled: ch.pressed.emit(); break
-        await process_frame
+    # Clear the entry event and every queued consequence before exploring.
+    # Twelve-city closure data can legitimately add more than one page after
+    # the first choice; the smoke must follow the player-facing FIFO path
+    # instead of mistaking an open consequence dialog for a city dead end.
+    await _drain_to_city(n)
 
     var visited := 0
     for pass_i in 12:
@@ -37,11 +36,7 @@ func _init():
                     b.pressed.emit(); hit = true; visited += 1; break
             if hit: break
         if not hit: break
-        await process_frame
-        if n._dialog_layer.visible:
-            for ch in n._dialog._choices.get_children():
-                if ch is Button and not ch.disabled: ch.pressed.emit(); break
-        await process_frame
+        await _drain_to_city(n)
 
     await process_frame
     var figures = n._city_view._figures.get_child_count() if n._city_view.visible else -1
@@ -69,6 +64,32 @@ func _init():
     if live_once != 0: printerr("  FAIL: %d once-only sites still offered after being explored" % live_once)
     print("CITYNAV: %s" % ("OK" if ok else "FAIL"))
     quit(0 if ok else 1)
+
+
+func _drain_to_city(n) -> void:
+    for _step in 64:
+        await process_frame
+        if n._dialog_layer.visible:
+            var chose := false
+            for ch in n._dialog._choices.get_children():
+                if ch is Button and not ch.disabled:
+                    ch.pressed.emit()
+                    chose = true
+                    break
+            if chose:
+                continue
+        if not n.state.active_event.is_empty() or not n.state.pending_events.is_empty():
+            var resumed := false
+            for control in _walk(n._panel):
+                if control is Button and not control.disabled:
+                    control.pressed.emit()
+                    resumed = true
+                    break
+            if resumed:
+                continue
+        if n._city_view.visible:
+            return
+    printerr("  FAIL: narrative did not return to city within 64 steps")
 
 func _walk(n: Node) -> Array:
     var out := [n]

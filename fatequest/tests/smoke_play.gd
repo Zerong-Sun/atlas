@@ -29,20 +29,36 @@ func _init():
     await process_frame
     print("PLAY: start=%s coins=%d" % [n.state.city, n.state.coins])
 
+    var progressed := false
     for step in 6:
         await process_frame
-        var pressed := false
-        for ch in n._panel.get_children():
-            if ch is Button and not ch.disabled and not ch.text.begins_with("—"):
-                ch.pressed.emit()
-                pressed = true
-                break
+        var pressed := _press_first_action(n)
         if not pressed:
-            print("PLAY: nothing actionable at step %d" % step)
+            printerr("PLAY: nothing actionable at step %d" % step)
             break
+        progressed = true
         await process_frame
         print("  step %d: at=%s day=%d coins=%d revealed=%d"
             % [step, n.state.city, n.state.days_elapsed, n.state.coins, n.state.revealed.size()])
 
-    print("PLAY: OK")
-    quit(0)
+    var ok: bool = progressed and n.state != null and not n.state.city.is_empty()
+    print("PLAY: %s" % ("OK" if ok else "FAIL"))
+    quit(0 if ok else 1)
+
+
+func _press_first_action(n) -> bool:
+    if n._dialog_layer.visible:
+        return _press_first_enabled(n._dialog._choices)
+    if n._city_view.visible:
+        return _press_first_enabled(n._city_view)
+    return _press_first_enabled(n._panel)
+
+
+func _press_first_enabled(node: Node) -> bool:
+    if node is Button and not node.disabled and not String(node.text).begins_with("—"):
+        node.pressed.emit()
+        return true
+    for child in node.get_children():
+        if _press_first_enabled(child):
+            return true
+    return false

@@ -18,6 +18,7 @@
 | 美术验收细则 | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) | 尺寸、文化匹配、接线和机器审计 |
 | 十二主城剧情接线 | [`12_CITY_CLOSURE_MATRIX.md`](12_CITY_CLOSURE_MATRIX.md) | 入口选择、后果链、双语文本与探索点接线 |
 | 当前验证快照 | [`FATEQUEST_ENGINE_AUDIT_2026-07-31.md`](FATEQUEST_ENGINE_AUDIT_2026-07-31.md) | 本轮剧情接线、文本、资源与测试结果 |
+| 六维验收与修复清单 | [`QA_FIX_LIST_2026-07-31.md`](QA_FIX_LIST_2026-07-31.md) | 需求、逻辑、边界、代码、测试与实际运行复核 |
 
 ## 当前机器事实
 

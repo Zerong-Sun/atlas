@@ -1033,6 +1033,15 @@ for (const e of byTable.events ?? [])
     }
     return seen;
   };
+  const choiceEffectLists = (choice) => [
+    choice.effects,
+    choice.pass?.effects,
+    choice.fail?.effects,
+    choice.lessonFailEffects,
+  ];
+  const queuedEvent = (choice) => choiceEffectLists(choice)
+    .flatMap((list) => list ?? [])
+    .find((effect) => effect.op === "queue_event");
   const textExists = (key) => key && en[key] !== undefined && zh[key] !== undefined;
   for (const city of closureCities) {
     const c = (byTable.cities ?? []).find((row) => row.id === city);
@@ -1044,7 +1053,7 @@ for (const e of byTable.events ?? [])
       const e = (byTable.events ?? []).find((row) => row.id === id);
       if (!e) { err("G28", `events:${city}`, `${id}: target event missing`); continue; }
       for (const [i, ch] of (e.choices ?? []).entries()) {
-        const hasQueue = (ch.effects ?? []).some((ef) => ef.op === "queue_event");
+        const hasQueue = Boolean(queuedEvent(ch));
         if (!ch.resultText && !hasQueue)
           err("G28", `events:${e.id}`, `choice ${i + 1} has no resultText or queue_event`);
         for (const key of [e.title, e.body, ch.label, ch.resultText])
@@ -1053,7 +1062,7 @@ for (const e of byTable.events ?? [])
     }
     const entry = (byTable.events ?? []).find((e) => e.id === c.entryEvent);
     for (const [i, ch] of (entry?.choices ?? []).slice(0, 2).entries()) {
-      const target = (ch.effects ?? []).find((ef) => ef.op === "queue_event")?.value;
+      const target = queuedEvent(ch)?.value;
       if (!target) { err("G28", `events:${c.entryEvent}`, `important choice ${i + 1} must queue a consequence`); continue; }
       if (reach(String(target)).size < 2)
         err("G28", `events:${c.entryEvent}`, `important choice ${i + 1} reaches fewer than 2 consequence pages`);
