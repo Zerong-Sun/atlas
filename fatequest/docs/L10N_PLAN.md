@@ -3,11 +3,11 @@
 **以刺桐为模版**做中文版。写明流程、分批、质量门槛、工具与译者守则。
 
 > **状态（2026-07-31）**：中译批次 **B1–B4 全部完成**；剩余项 **L-1 / L-2 / L-3 全部完成**。
-> en/zh 各 **3169** 条，缺 0、中英同文 0；译文时效 **1830** current · 0 stale · 0 missing；
+> en/zh 各 **3179** 条，缺 0、中英同文 0；译文时效 **1838** current · 0 stale · 0 missing；
 > 三书 20 城入城正文已改写并文化校订。本文保留流程与守则——它们是新增文本与第三语言的依据。
 > 各批最终状态见 §3 · §9。
 
-**前置**：`LORE_PIPELINE.md` §4（中译工作流与语体）· `DATA_MODEL.md` §4（文本存 key）· `STORY_REQUIREMENTS.md` §9。
+**前置**：`LORE_PIPELINE.md` §4（中译工作流与语体）· `DATA_MODEL.md` §4（文本存 key）· `TEXT_REQUIREMENTS.md` §7–§9。
 
 ---
 
@@ -20,15 +20,15 @@ node tools/validate/validate.mjs           # 含 G7 术语 / G18 ASCII 泄漏 / 
 ```
 
 ```
-en 条目 3169 · zh 条目 3169 · 缺 0 · 中英同文 0
-译文时效 1830 current · 0 stale · 0 missing
+en 条目 3179 · zh 条目 3179 · 缺 0 · 中英同文 0
+译文时效 1838 current · 0 stale · 0 missing
 ```
 
 **已有资产**：
 
 | 资产 | 说明 |
 |---|---|
-| `content/story/<unit>/<lang>.md` | authoring 源，**108** 个单元，frontmatter 带逐条 `stamps` |
+| `content/story/<unit>/<lang>.md` | authoring 源，**109** 个单元，frontmatter 带逐条 `stamps` |
 | `content/i18n/{en,zh}.json` | 编译产物，**不手改**（§3.3） |
 | `assets/data/glossary.json` | 97 条术语（地名 + 概念） |
 | `tools/lore/story.mjs` | `check` / `build` / `stamp` |
@@ -123,8 +123,8 @@ en 条目 3169 · zh 条目 3169 · 缺 0 · 中英同文 0
 
 ## 3. 分批 B1–B4：状态与剩余工作
 
-**2026-07-24 按实测重写。** 此前本节记的是 622 条待译（B1 94 / B2 206 / B3 180 / B4 142），
-那是横铺全城之前的数字。现在实测：
+**历史批次快照（2026-07-24）。** 此前本节记的是 622 条待译（B1 94 / B2 206 / B3 180 / B4 142），
+那是横铺全城之前的历史数字；当前库存以本文 §0 和 `TEXT_REQUIREMENTS.md` §2 为准：
 
 ```bash
 node -e 'const en=require("./content/i18n/en.json"),zh=require("./content/i18n/zh.json");
@@ -134,7 +134,8 @@ console.log("en",k.length,"zh",Object.keys(zh).length,
 ```
 
 ```
-en 1943 · zh 1943 · 缺 0 · 中英同文 0
+历史快照：en 1943 · zh 1943 · 缺 0 · 中英同文 0
+当前基线：en 3179 · zh 3179 · 缺 0 · 中英同文 0
 ```
 
 ### 3.1 四批的最终状态
@@ -147,7 +148,7 @@ en 1943 · zh 1943 · 缺 0 · 中英同文 0
 | **B4** | 随从 66 + 商品 60 + 结局 7 + 贴纸 33 | 142 | ✅ 0 | 结局 27 条于 2026-07-24 补齐 |
 
 **中译 B1–B4 已全部完成。** 102 城的 `story/<unit>/zh.md` 均为 `status: translated`，
-逐条 `stamps` 齐备，G21 时效检查 779 current · 0 stale · 0 missing。
+逐条 `stamps` 齐备；2026-07-24 批次快照为 779 current，当前基线为 1838 current · 0 stale · 0 missing。
 
 ### 3.2 一处方向相反的缺口（2026-07-24 修复）
 
@@ -359,7 +360,7 @@ node tools/validate/validate.mjs && node tools/lore/l10n.mjs report --lang zh
 
 ---
 
-## 9. 批次收口（2026-07-24）
+## 9. 批次收口（历史记录：2026-07-24）
 
 ### 9.1 全部批次最终状态
 
@@ -375,10 +376,10 @@ node tools/validate/validate.mjs && node tools/lore/l10n.mjs report --lang zh
 
 ```bash
 node tools/lore/l10n.mjs report --lang zh
-# zh: 1943/1943 translated (100.0%)
+# 当前基线：zh 3179/3179 translated (100.0%)
 
 node tools/lore/story.mjs check
-# 779 current · 0 stale · 0 missing
+# 1838 current · 0 stale · 0 missing
 
 node tools/validate/validate.mjs
 # G7 / G18 / G21 / G24 … all gates pass

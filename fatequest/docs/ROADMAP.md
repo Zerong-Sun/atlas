@@ -2,7 +2,7 @@
 
 `ARCHITECTURE.md` 定架构，`CODE_PLAN.md` 定接口，`DATA_MODEL.md` 定校验，**本文定阶段顺序**。每阶段以可玩为验收，不以「代码写完」为验收。
 
-素材缺口不在本文，另见 `ART_REQUIREMENTS.md` 与 `STORY_REQUIREMENTS.md`。
+素材缺口不在本文，另见 `ART_REQUIREMENTS.md`；当前文本缺口与生产规格见 `TEXT_REQUIREMENTS.md`。
 
 ---
 

@@ -10,7 +10,7 @@
 |---|---|---|---|
 | **美术** | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) | [`ART_TODO.md`](../assets/art/ART_TODO.md) | `assets/art/` · `assets/decks/` |
 | **音频** | [`AUDIO_PLAN.md`](AUDIO_PLAN.md) | A1–A8 ✅ | [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md) |
-| **文本** | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | [`STORY_REQUIREMENTS.md`](STORY_REQUIREMENTS.md) · [`PLAN.md`](PLAN.md) | `content/story/` · `content/i18n/` |
+| **文本** | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | [`PLAN.md`](PLAN.md) · [`L10N_PLAN.md`](L10N_PLAN.md) | `content/story/` · `content/i18n/` |
 | **多语言** | [`L10N_PLAN.md`](L10N_PLAN.md) | B1–B4 ✅ | `content/story/<unit>/{en,zh}.md` |
 | **动画** | [`ANIMATION_PLAN.md`](ANIMATION_PLAN.md) | N0–N3 ✅ | `game/fx/` · `game/shaders/` |
 | **现状 hub** | [`STATUS.md`](STATUS.md) | — | — |
@@ -65,14 +65,14 @@ assets/audio/          37 个 .ogg
 
 ---
 
-## 3. 文本（2026-07-26 · T3/T4/T6 + P5 入城加长）
+## 3. 文本（2026-07-31 · 当前文本生产基线）
 
 ```
 content/story/         109 单元 · {en,zh}.md
-content/i18n/          en/zh 各 3169 条 · 缺 0
-content/tables/events/ 331 条（entry 102 · site 93 · mentor 12 · road 81 · consequence 49）
+content/i18n/          en/zh 各 3179 条 · 缺 0
+content/tables/events/ 332 条（entry 102 · site 93 · mentor 12 · road 81 · consequence 50）
 glossary               97 条
-stamps                 1830 current · 0 stale
+stamps                 1838 current · 0 stale
 ```
 
 | 任务 | 量 | 状态 |
@@ -100,4 +100,4 @@ godot --headless --path . --script tests/run_tests.gd
 2. ~~动画 N2–N3~~ ✅
 3. ~~chr 底板重绘 + 白图泰专图~~ ✅ 2026-07-30
 4. **易经下半** — 牌组完整度 polish
-5. **可选加深续作** — `TEXT_REQUIREMENTS.md` §3
+5. **文本多轮互动与正式文案** — `TEXT_REQUIREMENTS.md` §4–§10

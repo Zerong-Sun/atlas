@@ -53,7 +53,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | **P2** | 动画 N2–N3 | 迷雾/路线 + 界面过渡 | ✅ 2026-07-26 | §3 |
 | **P3** | chr 底板重绘 | 1 张 | ✅ 2026-07-30 | §4 |
 | **P4** | 白图泰六城入城/探索图 | 24 张 | ✅ 2026-07-30 | §5 |
-| **P5** | 可选加深：入城长文 | 5 城已加长 | ✅ 部分 · 其余可选 | §6 |
+| **P5** | 文本多轮互动与入城长文 | 12 主城城市内互动未完成；5 城入城已加长 | ⛔ 当前优先级 | §6、`TEXT_REQUIREMENTS.md` §4–§10 |
 
 ---
 
@@ -111,16 +111,17 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 
 ---
 
-## 6. P5 · 可选加深
+## 6. P5 · 文本多轮互动与可选加深
 
 | 任务 | 状态 |
 |---|---|
 | 入城正文加长 | ✅ 五城（axuma/merva/ctesiphon/bethleem/ephesus） |
 | 图鉴扩展 | 可选续作 |
-| 对话树 | 可选续作 |
+| 12 主城 site/mentor 第二页 | ⛔ 35 个 site + 12 个 mentor 待写，详见 `TEXT_REQUIREMENTS.md` |
+| 21 city 探索点深化 | ⛔ 每城至少 1 个多轮探索点待排期 |
 | 易经 31–64 | 规格在 ART · 非阻塞，使用卦符回退 |
 
-详见 `TEXT_REQUIREMENTS.md` §3 · `ART_REQUIREMENTS.md`。
+详见 `TEXT_REQUIREMENTS.md` §4–§10 · `ART_REQUIREMENTS.md`。
 
 ---
 
@@ -144,5 +145,5 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | 美术缺口（重绘/新绘） | `ART_REQUIREMENTS.md` | §1–2 |
 | 动画六式 | `ANIMATION_PLAN.md` | §2 · §5 |
 | 音频现状 | `AUDIO_PLAN.md` | §0 |
-| 文本深度可选任务 | `TEXT_REQUIREMENTS.md` | §3 |
+| 文本多轮互动与正式文案 | `TEXT_REQUIREMENTS.md` | §4–§10 |
 | 素材总索引 | `ASSETS_REQUIREMENTS.md` | — |

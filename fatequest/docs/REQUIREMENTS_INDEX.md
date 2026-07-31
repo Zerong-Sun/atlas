@@ -12,7 +12,7 @@
 | 下一步怎么做 | [`PLAN.md`](PLAN.md) | 只保留可执行任务与验收出口 |
 | 版本阶段顺序 | [`ROADMAP.md`](ROADMAP.md) | 阶段完成后更新，不重复写操作步骤 |
 | 引擎/数据/发布总需求 | [`FATEQUEST_ENGINE_REQUIREMENTS.md`](FATEQUEST_ENGINE_REQUIREMENTS.md) | 需求、边界与发布验收 |
-| 文本需求与库存 | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | 文本数量、来源、校对和未完成内容 |
+| 当前文本生产需求 | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | 已完成基线、未完成多轮互动、物品/故事/情报文本规格与验收 |
 | 中英文流程 | [`L10N_PLAN.md`](L10N_PLAN.md) | 翻译守则与当前覆盖率 |
 | 美术/音频/文本资产总索引 | [`ASSETS_REQUIREMENTS.md`](ASSETS_REQUIREMENTS.md) | 库存、接线、缺口与归档策略 |
 | 美术验收细则 | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) | 尺寸、文化匹配、接线和机器审计 |

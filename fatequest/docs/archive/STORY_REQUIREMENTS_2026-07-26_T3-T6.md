@@ -1,7 +1,9 @@
-# 文本素材需求 · STORY REQUIREMENTS
+# 历史故事密度规格 · STORY REQUIREMENTS T3–T6
+
+> **归档标识（2026-07-31）**：本文记录的 T3/T4/T6 已完成并被当前版 [`../TEXT_REQUIREMENTS.md`](../TEXT_REQUIREMENTS.md) 的完成基线和后续 backlog 取代。本文只用于追溯当时的操作规格，不作为当前实现依据。
 
 **2026-07-26 · T3/T4/T6 已闭环。** 本文登记已完成的内容密度任务（T3 / T4 / T6）与配套门禁规格，供后续参考。执行计划见 `PLAN.md`。
-语体见 `LORE_PIPELINE.md` §4；写作格式见 `STORY_TEXT_FORMAT.md`。
+语体见 `../LORE_PIPELINE.md` §4；写作格式见 `../STORY_TEXT_FORMAT.md`。
 
 > **红线（GDD §19）**：每段文本必须标 `origin`——`source`／`authored`／`hybrid`。桩文本一律 `authored`。
 
@@ -164,8 +166,8 @@ console.log("总",s.length,"合用",u.length)'
 | town／station 探索点 | DATA_MODEL §6 分级 |
 | 24 法全部接入 | 第二批已完成 4 法 |
 | 拆《远游记》《瀛涯胜览》 | 等 S1–S5 收口再动 |
-| 美术管线 | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) · [`ASSETS_REQUIREMENTS.md`](ASSETS_REQUIREMENTS.md) |
-| 文本总表 | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) |
+| 美术管线 | [`ART_REQUIREMENTS.md`](../ART_REQUIREMENTS.md) · [`ASSETS_REQUIREMENTS.md`](../ASSETS_REQUIREMENTS.md) |
+| 文本总表 | [`../TEXT_REQUIREMENTS.md`](../TEXT_REQUIREMENTS.md) |
 
 ---
 

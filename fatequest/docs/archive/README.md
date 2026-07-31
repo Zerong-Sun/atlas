@@ -9,6 +9,7 @@
 - `PLAN-*`：已完成批次或被新计划替代的执行计划。
 - `AUDIT-*`：历史审计快照，数字只代表当时的工作区状态。
 - `GDD-*`、`ATLAS_PORT.md`：旧设计或旧版本移植参考。
+- `TEXT_*`、`STORY_*`：已完成批次的文本库存或故事密度规格；当前文本生产以根目录 `TEXT_REQUIREMENTS.md` 为准。
 - `art-prompts/`：已完成批次的生成提示词和素材记录。
 
 如果归档记录与现行文档冲突，以 `STATUS.md`、`PLAN.md`、`ROADMAP.md` 和
