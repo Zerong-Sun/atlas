@@ -1,6 +1,6 @@
 # 执行计划 · PLAN
 
-**2026-07-30 · Steam EA 阶段。** 既有 P0–P7 玩法与 T1–T6 密度任务已闭环
+**2026-07-31 · Steam EA 阶段。** 既有 P0–P7 玩法与 T1–T6 密度任务已闭环
 （旧稿存 `docs/archive/PLAN-2026-07-T1-T6.md`）。新七系统的引擎与发布安全加固已经完成，
 下一步转入 **优化与实机验证 → 正式文本/美术替换 → 人工发布验收**。
 
@@ -14,18 +14,18 @@
 
 ### 本轮之后的实际优先级
 
-1. O1：运行性能基准、导入/导出检查并处理热点。
-2. Q1：完成 720p、200% 字号、中英、键盘与覆盖层视觉回归。
-3. T1：把课程和新增 UI 占位迁移为正式中英文本，完成文化校读。
-4. A1：按 24 法清单逐法替换工具、反馈和动画占位。
-5. R1：外部试玩和全分支人工通读，P0/P1 清零后形成发布候选。
+1. Q1：完成 720p、200% 字号、中英、键盘与覆盖层视觉回归，并逐城点选 12 城后果链。
+2. T1：把课程和新增 UI 占位迁移为正式中英文本，完成文化校读。
+3. A1：补齐易经 31–64，并按 24 法清单逐法替换工具、反馈和动画占位。
+4. O1：完成运行性能基准、导入/导出检查和最新 PCK 导出。
+5. R1：外部试玩和全分支人工通读，P0/P1 清零后形成发布候选并上传。
 
 ---
 
 ## 0. 现在的真实状态
 
 ```bash
-node tools/validate/validate.mjs                        # 24 道门禁
+node tools/validate/validate.mjs                        # 25 道门禁
 node tools/lore/story.mjs check                         # 译文时效
 godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 ```
@@ -35,14 +35,13 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | 玩法系统 | P0–P7 **全部闭环** |
 | 密度任务 | T1–T6 **全部闭环** |
 | 世界 | 102 城 · 204 路线 |
-| 事件 | 279（原 276 + 刺桐后果事件 3） |
-| 文本 | en/zh 各 2501 · 0 缺 · 1334 stamps current |
-| Godot 美术接线 | **650/650**（S1b ✅） |
+| 事件 | 331（原 279 + 十二主城后果链 46 + 导师事件 6） |
+| 文本 | en/zh 各 3169 · 0 缺 · 1830 stamps current |
+| Godot 美术接线 | **674/674**（S1c ✅） |
 | 动画 | N0–N3 ✅ · N4–N6 待做 |
-| 测试 | 16 单测 + 12 smoke · 24 道门禁全绿 |
+| 测试 | 16 单测 + 12 smoke · 25 道门禁全绿 |
 
-**一句话**：除正式文本和正式美术占位外，本轮系统已完成；当前工作只剩优化、正式内容
-替换和人工发布验收。
+**一句话**：系统、首批 12 城剧情闭环和资源接线已完成；当前工作转入正式课程/占法内容、易经缺图、运行时回归和发布验收。
 
 ---
 
@@ -50,17 +49,17 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 
 | # | 任务 | 量 | 状态 | 章节 |
 |---|---|---|---|---|
-| **P1** | Godot 美术接线 | 650 张 | ✅ S1b 2026-07-27 | §2 |
+| **P1** | Godot 美术接线 | 674 张 | ✅ S1c 2026-07-30 | §2 |
 | **P2** | 动画 N2–N3 | 迷雾/路线 + 界面过渡 | ✅ 2026-07-26 | §3 |
-| **P3** | chr 底板重绘 | 1 张 | 规格已写入 ART · **待出图** | §4 |
-| **P4** | 白图泰六城入城/探索图 | 24 张 | 规格已写入 ART · **待出图** | §5 |
+| **P3** | chr 底板重绘 | 1 张 | ✅ 2026-07-30 | §4 |
+| **P4** | 白图泰六城入城/探索图 | 24 张 | ✅ 2026-07-30 | §5 |
 | **P5** | 可选加深：入城长文 | 5 城已加长 | ✅ 部分 · 其余可选 | §6 |
 
 ---
 
 ## 2. P1 · 美术接线 ✅
 
-全部走 `MapArt`（`game/map/map_art.gd`）+ `art_wire_index.json`（650 stems）。
+全部走 `MapArt`（`game/map/map_art.gd`）+ `art_wire_index.json`（674 stems）。
 雇佣签契：`game/ui/hire_contract.gd`。
 
 **验收**：
@@ -68,7 +67,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 - [x] `npc-*` / `retainer-*` 接线（场所 + job + 随从）
 - [x] `ic-*` → `GOODS_ART_MAP.json`
 - [x] `currency-*` / `sticker-*` / `contract-*` 接线
-- [x] audit 650/650 wired
+- [x] audit 674/674 wired
 
 ---
 
@@ -89,15 +88,15 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 
 ---
 
-## 4. P3 · chr 底板重绘（待出图）
+## 4. P3 · chr 底板重绘 ✅
 
-**内容错配**：`scene-region-chr.webp` 仍是西亚圆顶、宣礼塔与骆驼。
+**内容错配**：原图曾使用西亚圆顶、宣礼塔与骆驼，已于 2026-07-30 重绘为拉丁基督教世界。
 
 **画什么 / 规格 / 验收**：完整写入 [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) §1.1 · [`assets/art/ART_TODO.md`](../assets/art/ART_TODO.md)。
 
 ---
 
-## 5. P4 · 白图泰六城素材（待出图）
+## 5. P4 · 白图泰六城素材 ✅
 
 | 城 | 入城图 | 探索图 × 3 |
 |---|---|---|
@@ -119,7 +118,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | 入城正文加长 | ✅ 五城（axuma/merva/ctesiphon/bethleem/ephesus） |
 | 图鉴扩展 | 可选续作 |
 | 对话树 | 可选续作 |
-| 易经 31–64 / 货币徽 / 结局贴纸 | 规格在 ART · 待出图 |
+| 易经 31–64 | 规格在 ART · 非阻塞，使用卦符回退 |
 
 详见 `TEXT_REQUIREMENTS.md` §3 · `ART_REQUIREMENTS.md`。
 

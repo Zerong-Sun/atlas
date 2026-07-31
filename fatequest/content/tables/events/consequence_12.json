@@ -1,0 +1,1800 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-balc-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_balc_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_balc_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-closure-a-carried",
+              "reason": "balc-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_balc_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "balc-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_balc_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_balc_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-closure-b-carried",
+              "reason": "balc-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_balc_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "balc-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_cascar_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-closure-a-carried",
+              "reason": "cascar-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_cascar_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cascar-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_cascar_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-closure-b-carried",
+              "reason": "cascar-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_cascar_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cascar-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_cotan_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-closure-a-carried",
+              "reason": "cotan-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_cotan_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cotan-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_cotan_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-closure-b-carried",
+              "reason": "cotan-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_cotan_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cotan-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_lop_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_lop_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-closure-a-carried",
+              "reason": "lop-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_lop_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lop-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_lop_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_lop_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-closure-b-carried",
+              "reason": "lop-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_lop_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lop-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_samarcanda_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-closure-a-carried",
+              "reason": "samarcanda-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_samarcanda_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "samarcanda-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_samarcanda_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-closure-b-carried",
+              "reason": "samarcanda-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_samarcanda_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "samarcanda-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_cambaluc_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cambaluc-closure-a-carried",
+              "reason": "cambaluc-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_cambaluc_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cambaluc-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_cambaluc_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cambaluc-closure-b-carried",
+              "reason": "cambaluc-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_cambaluc_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cambaluc-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_kinsay_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kinsay-closure-a-carried",
+              "reason": "kinsay-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_kinsay_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kinsay-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_kinsay_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kinsay-closure-b-carried",
+              "reason": "kinsay-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_kinsay_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kinsay-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-ledger-consequence-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_ledger_consequence_resolution.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_ledger_consequence_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_ledger_consequence_resolution.choice_1",
+          "resultText": "ev.ev_zayton_ledger_consequence_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-zayton-closure-a-carried",
+              "reason": "zayton-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_ledger_consequence_resolution.choice_2",
+          "resultText": "ev.ev_zayton_ledger_consequence_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "zayton-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-watch-consequence-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_watch_consequence_resolution.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_watch_consequence_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_watch_consequence_resolution.choice_1",
+          "resultText": "ev.ev_zayton_watch_consequence_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-zayton-closure-b-carried",
+              "reason": "zayton-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_watch_consequence_resolution.choice_2",
+          "resultText": "ev.ev_zayton_watch_consequence_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "zayton-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_chandu_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-closure-a-carried",
+              "reason": "chandu-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_chandu_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "chandu-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_chandu_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-closure-b-carried",
+              "reason": "chandu-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_chandu_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "chandu-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_baldacum_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-closure-a-carried",
+              "reason": "baldacum-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_baldacum_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "baldacum-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_baldacum_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-closure-b-carried",
+              "reason": "baldacum-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_baldacum_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "baldacum-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_ormus_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-closure-a-carried",
+              "reason": "ormus-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_ormus_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "ormus-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_ormus_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-closure-b-carried",
+              "reason": "ormus-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_ormus_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "ormus-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-consequence-a-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_consequence_a_resolution.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_consequence_a_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_consequence_a_resolution.choice_1",
+          "resultText": "ev.ev_tauris_consequence_a_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-closure-a-carried",
+              "reason": "tauris-a-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_consequence_a_resolution.choice_2",
+          "resultText": "ev.ev_tauris_consequence_a_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "tauris-a-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-consequence-b-resolution",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_consequence_b_resolution.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_consequence_b_resolution.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_consequence_b_resolution.choice_1",
+          "resultText": "ev.ev_tauris_consequence_b_resolution.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-closure-b-carried",
+              "reason": "tauris-b-carried-forward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_consequence_b_resolution.choice_2",
+          "resultText": "ev.ev_tauris_consequence_b_resolution.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "tauris-b-made-time"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_balc_consequence_a.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_consequence_a.choice_1",
+          "resultText": "ev.ev_balc_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-a-resolution",
+              "reason": "balc-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_consequence_a.choice_2",
+          "resultText": "ev.ev_balc_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-closure-a",
+              "reason": "balc-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_balc_consequence_b.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_consequence_b.choice_1",
+          "resultText": "ev.ev_balc_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-b-resolution",
+              "reason": "balc-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_consequence_b.choice_2",
+          "resultText": "ev.ev_balc_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-closure-b",
+              "reason": "balc-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_consequence_a.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_consequence_a.choice_1",
+          "resultText": "ev.ev_cascar_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-a-resolution",
+              "reason": "cascar-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_consequence_a.choice_2",
+          "resultText": "ev.ev_cascar_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-closure-a",
+              "reason": "cascar-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_consequence_b.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_consequence_b.choice_1",
+          "resultText": "ev.ev_cascar_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-b-resolution",
+              "reason": "cascar-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_consequence_b.choice_2",
+          "resultText": "ev.ev_cascar_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-closure-b",
+              "reason": "cascar-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_consequence_a.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_consequence_a.choice_1",
+          "resultText": "ev.ev_cotan_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-a-resolution",
+              "reason": "cotan-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_consequence_a.choice_2",
+          "resultText": "ev.ev_cotan_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-closure-a",
+              "reason": "cotan-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_consequence_b.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_consequence_b.choice_1",
+          "resultText": "ev.ev_cotan_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-b-resolution",
+              "reason": "cotan-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_consequence_b.choice_2",
+          "resultText": "ev.ev_cotan_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-closure-b",
+              "reason": "cotan-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_lop_consequence_a.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_consequence_a.choice_1",
+          "resultText": "ev.ev_lop_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-a-resolution",
+              "reason": "lop-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_consequence_a.choice_2",
+          "resultText": "ev.ev_lop_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-closure-a",
+              "reason": "lop-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_lop_consequence_b.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_consequence_b.choice_1",
+          "resultText": "ev.ev_lop_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-b-resolution",
+              "reason": "lop-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_consequence_b.choice_2",
+          "resultText": "ev.ev_lop_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-closure-b",
+              "reason": "lop-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_consequence_a.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_consequence_a.choice_1",
+          "resultText": "ev.ev_samarcanda_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-a-resolution",
+              "reason": "samarcanda-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_consequence_a.choice_2",
+          "resultText": "ev.ev_samarcanda_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-closure-a",
+              "reason": "samarcanda-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_consequence_b.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_consequence_b.choice_1",
+          "resultText": "ev.ev_samarcanda_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-b-resolution",
+              "reason": "samarcanda-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_consequence_b.choice_2",
+          "resultText": "ev.ev_samarcanda_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-closure-b",
+              "reason": "samarcanda-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_consequence_a.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_consequence_a.choice_1",
+          "resultText": "ev.ev_cambaluc_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-a-resolution",
+              "reason": "cambaluc-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_consequence_a.choice_2",
+          "resultText": "ev.ev_cambaluc_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cambaluc-closure-a",
+              "reason": "cambaluc-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_consequence_b.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_consequence_b.choice_1",
+          "resultText": "ev.ev_cambaluc_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-b-resolution",
+              "reason": "cambaluc-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_consequence_b.choice_2",
+          "resultText": "ev.ev_cambaluc_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cambaluc-closure-b",
+              "reason": "cambaluc-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_consequence_a.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_consequence_a.choice_1",
+          "resultText": "ev.ev_kinsay_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-a-resolution",
+              "reason": "kinsay-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_consequence_a.choice_2",
+          "resultText": "ev.ev_kinsay_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kinsay-closure-a",
+              "reason": "kinsay-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_consequence_b.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_consequence_b.choice_1",
+          "resultText": "ev.ev_kinsay_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-b-resolution",
+              "reason": "kinsay-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_consequence_b.choice_2",
+          "resultText": "ev.ev_kinsay_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kinsay-closure-b",
+              "reason": "kinsay-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_consequence_a.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_consequence_a.choice_1",
+          "resultText": "ev.ev_chandu_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-a-resolution",
+              "reason": "chandu-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_consequence_a.choice_2",
+          "resultText": "ev.ev_chandu_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-closure-a",
+              "reason": "chandu-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_consequence_b.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_consequence_b.choice_1",
+          "resultText": "ev.ev_chandu_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-b-resolution",
+              "reason": "chandu-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_consequence_b.choice_2",
+          "resultText": "ev.ev_chandu_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-closure-b",
+              "reason": "chandu-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_consequence_a.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_consequence_a.choice_1",
+          "resultText": "ev.ev_baldacum_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-a-resolution",
+              "reason": "baldacum-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_consequence_a.choice_2",
+          "resultText": "ev.ev_baldacum_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-closure-a",
+              "reason": "baldacum-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_consequence_b.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_consequence_b.choice_1",
+          "resultText": "ev.ev_baldacum_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-b-resolution",
+              "reason": "baldacum-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_consequence_b.choice_2",
+          "resultText": "ev.ev_baldacum_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-closure-b",
+              "reason": "baldacum-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_consequence_a.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_consequence_a.choice_1",
+          "resultText": "ev.ev_ormus_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-a-resolution",
+              "reason": "ormus-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_consequence_a.choice_2",
+          "resultText": "ev.ev_ormus_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-closure-a",
+              "reason": "ormus-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_consequence_b.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_consequence_b.choice_1",
+          "resultText": "ev.ev_ormus_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-b-resolution",
+              "reason": "ormus-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_consequence_b.choice_2",
+          "resultText": "ev.ev_ormus_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-closure-b",
+              "reason": "ormus-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-consequence-a",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_consequence_a.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_consequence_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_consequence_a.choice_1",
+          "resultText": "ev.ev_tauris_consequence_a.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-a-resolution",
+              "reason": "tauris-a-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_consequence_a.choice_2",
+          "resultText": "ev.ev_tauris_consequence_a.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-closure-a",
+              "reason": "tauris-a-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-consequence-b",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_consequence_b.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_consequence_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_consequence_b.choice_1",
+          "resultText": "ev.ev_tauris_consequence_b.choice_1_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-b-resolution",
+              "reason": "tauris-b-resolution"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_consequence_b.choice_2",
+          "resultText": "ev.ev_tauris_consequence_b.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-closure-b",
+              "reason": "tauris-b-kept-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

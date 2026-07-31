@@ -1,0 +1,336 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-balc-mentor",
+      "kind": "mentor",
+      "title": "ev.balc.mentor_closure.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.balc.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.balc.mentor_closure.choice_1",
+          "resultText": "ev.balc.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-mentor-met",
+              "reason": "balc-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.mentor_closure.choice_2",
+          "resultText": "ev.balc.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "balc-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-balc-mentor-met",
+              "reason": "balc-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.mentor_closure.choice_3",
+          "resultText": "ev.balc.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-mentor-passed",
+              "reason": "balc-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-mentor",
+      "kind": "mentor",
+      "title": "ev.cascar.mentor_closure.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.cascar.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cascar.mentor_closure.choice_1",
+          "resultText": "ev.cascar.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-mentor-met",
+              "reason": "cascar-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.mentor_closure.choice_2",
+          "resultText": "ev.cascar.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cascar-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-cascar-mentor-met",
+              "reason": "cascar-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.mentor_closure.choice_3",
+          "resultText": "ev.cascar.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-mentor-passed",
+              "reason": "cascar-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-mentor",
+      "kind": "mentor",
+      "title": "ev.cotan.mentor_closure.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.cotan.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cotan.mentor_closure.choice_1",
+          "resultText": "ev.cotan.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-mentor-met",
+              "reason": "cotan-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.mentor_closure.choice_2",
+          "resultText": "ev.cotan.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cotan-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-cotan-mentor-met",
+              "reason": "cotan-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.mentor_closure.choice_3",
+          "resultText": "ev.cotan.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-mentor-passed",
+              "reason": "cotan-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-mentor",
+      "kind": "mentor",
+      "title": "ev.lop.mentor_closure.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.lop.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.lop.mentor_closure.choice_1",
+          "resultText": "ev.lop.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-mentor-met",
+              "reason": "lop-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.lop.mentor_closure.choice_2",
+          "resultText": "ev.lop.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lop-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-lop-mentor-met",
+              "reason": "lop-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.lop.mentor_closure.choice_3",
+          "resultText": "ev.lop.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-mentor-passed",
+              "reason": "lop-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-mentor",
+      "kind": "mentor",
+      "title": "ev.samarcanda.mentor_closure.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.samarcanda.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.samarcanda.mentor_closure.choice_1",
+          "resultText": "ev.samarcanda.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-mentor-met",
+              "reason": "samarcanda-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.mentor_closure.choice_2",
+          "resultText": "ev.samarcanda.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "samarcanda-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-mentor-met",
+              "reason": "samarcanda-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.mentor_closure.choice_3",
+          "resultText": "ev.samarcanda.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-mentor-passed",
+              "reason": "samarcanda-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-mentor",
+      "kind": "mentor",
+      "title": "ev.chandu.mentor_closure.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.chandu.mentor_closure.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.chandu.mentor_closure.choice_1",
+          "resultText": "ev.chandu.mentor_closure.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-mentor-met",
+              "reason": "chandu-mentor-met"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.mentor_closure.choice_2",
+          "resultText": "ev.chandu.mentor_closure.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "chandu-mentor-lesson"
+            },
+            {
+              "op": "flag",
+              "value": "fl-chandu-mentor-met",
+              "reason": "chandu-mentor-lesson"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.mentor_closure.choice_3",
+          "resultText": "ev.chandu.mentor_closure.choice_3_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-mentor-passed",
+              "reason": "chandu-mentor-passed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

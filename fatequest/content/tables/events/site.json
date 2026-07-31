@@ -20,6 +20,7 @@
       "choices": [
         {
           "label": "ev.balc.a.choice.explore",
+          "resultText": "ev.ev_balc_a.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -40,6 +41,7 @@
         },
         {
           "label": "ev.balc.a.choice.fragment",
+          "resultText": "ev.ev_balc_a.choice_2_result",
           "effects": [
             {
               "op": "item",
@@ -60,6 +62,7 @@
         },
         {
           "label": "ev.balc.a.choice.listen",
+          "resultText": "ev.ev_balc_a.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -101,6 +104,7 @@
       "choices": [
         {
           "label": "ev.balc.b.choice.lapis",
+          "resultText": "ev.ev_balc_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 800
@@ -127,6 +131,7 @@
         },
         {
           "label": "ev.balc.b.choice.ruby",
+          "resultText": "ev.ev_balc_b.choice_2_result",
           "needs": {
             "coins": {
               "min": 4000
@@ -153,6 +158,7 @@
         },
         {
           "label": "ev.balc.b.choice.talk_traders",
+          "resultText": "ev.ev_balc_b.choice_3_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -199,6 +205,7 @@
       "choices": [
         {
           "label": "ev.balc.c.choice.offering",
+          "resultText": "ev.ev_balc_c.choice_1_result",
           "needs": {
             "coins": {
               "min": 200
@@ -225,6 +232,7 @@
         },
         {
           "label": "ev.balc.c.choice.sleep",
+          "resultText": "ev.ev_balc_c.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -245,6 +253,7 @@
         },
         {
           "label": "ev.balc.c.choice.chant",
+          "resultText": "ev.ev_balc_c.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -286,6 +295,7 @@
       "choices": [
         {
           "label": "ev.baldacum.a.choice.explore",
+          "resultText": "ev.ev_baldacum_a.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -306,6 +316,7 @@
         },
         {
           "label": "ev.baldacum.a.choice.treasure",
+          "resultText": "ev.ev_baldacum_a.choice_2_result",
           "needs": {
             "coins": {
               "min": 500
@@ -332,6 +343,7 @@
         },
         {
           "label": "ev.baldacum.a.choice.listen",
+          "resultText": "ev.ev_baldacum_a.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -378,6 +390,7 @@
       "choices": [
         {
           "label": "ev.baldacum.b.choice.brocade",
+          "resultText": "ev.ev_baldacum_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 2500
@@ -404,6 +417,7 @@
         },
         {
           "label": "ev.baldacum.b.choice.spices",
+          "resultText": "ev.ev_baldacum_b.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -424,6 +438,7 @@
         },
         {
           "label": "ev.baldacum.b.choice.sherbet",
+          "resultText": "ev.ev_baldacum_b.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -472,6 +487,7 @@
       "choices": [
         {
           "label": "ev.baldacum.c.choice.listen",
+          "resultText": "ev.ev_baldacum_c.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -487,6 +503,7 @@
         },
         {
           "label": "ev.baldacum.c.choice.search",
+          "resultText": "ev.ev_baldacum_c.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -507,6 +524,7 @@
         },
         {
           "label": "ev.baldacum.c.choice.record",
+          "resultText": "ev.ev_baldacum_c.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -553,6 +571,7 @@
       "choices": [
         {
           "label": "ev.cambaluc.a.choice.audience",
+          "resultText": "ev.ev_cambaluc_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 3000
@@ -585,6 +604,7 @@
         },
         {
           "label": "ev.cambaluc.a.choice.admire",
+          "resultText": "ev.ev_cambaluc_a.choice_2_result",
           "effects": [
             {
               "op": "sticker",
@@ -600,6 +620,7 @@
         },
         {
           "label": "ev.cambaluc.a.choice.talk_guards",
+          "resultText": "ev.ev_cambaluc_a.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -641,6 +662,7 @@
       "choices": [
         {
           "label": "ev.cambaluc.b.choice.silk",
+          "resultText": "ev.ev_cambaluc_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 2000
@@ -667,6 +689,7 @@
         },
         {
           "label": "ev.cambaluc.b.choice.count",
+          "resultText": "ev.ev_cambaluc_b.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -687,6 +710,7 @@
         },
         {
           "label": "ev.cambaluc.b.choice.granary",
+          "resultText": "ev.ev_cambaluc_b.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -730,6 +754,7 @@
       "choices": [
         {
           "label": "ev.cambaluc.c.choice.walk",
+          "resultText": "ev.ev_cambaluc_c.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -750,6 +775,7 @@
         },
         {
           "label": "ev.cambaluc.c.choice.evening",
+          "resultText": "ev.ev_cambaluc_c.choice_2_result",
           "effects": [
             {
               "op": "fate",
@@ -771,6 +797,7 @@
         },
         {
           "label": "ev.cambaluc.c.choice.gardener",
+          "resultText": "ev.ev_cambaluc_c.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -812,6 +839,7 @@
       "choices": [
         {
           "label": "ev.cascar.a.choice.melon",
+          "resultText": "ev.ev_cascar_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 50
@@ -832,6 +860,7 @@
         },
         {
           "label": "ev.cascar.a.choice.orchard",
+          "resultText": "ev.ev_cascar_a.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -852,6 +881,7 @@
         },
         {
           "label": "ev.cascar.a.choice.grapes",
+          "resultText": "ev.ev_cascar_a.choice_3_result",
           "needs": {
             "coins": {
               "min": 100
@@ -898,6 +928,7 @@
       "choices": [
         {
           "label": "ev.cascar.b.choice.carpet",
+          "resultText": "ev.ev_cascar_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 3000
@@ -924,6 +955,7 @@
         },
         {
           "label": "ev.cascar.b.choice.learn_weave",
+          "resultText": "ev.ev_cascar_b.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -939,6 +971,7 @@
         },
         {
           "label": "ev.cascar.b.choice.dyes",
+          "resultText": "ev.ev_cascar_b.choice_3_result",
           "needs": {
             "coins": {
               "min": 150
@@ -985,6 +1018,7 @@
       "choices": [
         {
           "label": "ev.cascar.c.choice.muslim",
+          "resultText": "ev.ev_cascar_c.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1002,6 +1036,7 @@
         },
         {
           "label": "ev.cascar.c.choice.christian",
+          "resultText": "ev.ev_cascar_c.choice_2_result",
           "effects": [
             {
               "op": "reputation",
@@ -1019,6 +1054,7 @@
         },
         {
           "label": "ev.cascar.c.choice.both",
+          "resultText": "ev.ev_cascar_c.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -1065,6 +1101,7 @@
       "choices": [
         {
           "label": "ev.chandu.a.choice.enter",
+          "resultText": "ev.ev_chandu_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 500
@@ -1090,6 +1127,7 @@
         },
         {
           "label": "ev.chandu.a.choice.admire",
+          "resultText": "ev.ev_chandu_a.choice_2_result",
           "effects": [
             {
               "op": "sticker",
@@ -1105,6 +1143,7 @@
         },
         {
           "label": "ev.chandu.a.choice.sketch",
+          "resultText": "ev.ev_chandu_a.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -1151,6 +1190,7 @@
       "choices": [
         {
           "label": "ev.chandu.b.choice.walk",
+          "resultText": "ev.ev_chandu_b.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1171,6 +1211,7 @@
         },
         {
           "label": "ev.chandu.b.choice.horses",
+          "resultText": "ev.ev_chandu_b.choice_2_result",
           "effects": [
             {
               "op": "sticker",
@@ -1186,6 +1227,7 @@
         },
         {
           "label": "ev.chandu.b.choice.falcon",
+          "resultText": "ev.ev_chandu_b.choice_3_result",
           "needs": {
             "coins": {
               "min": 800
@@ -1237,6 +1279,7 @@
       "choices": [
         {
           "label": "ev.chandu.c.choice.watch_mares",
+          "resultText": "ev.ev_chandu_c.choice_1_result",
           "effects": [
             {
               "op": "sticker",
@@ -1252,6 +1295,7 @@
         },
         {
           "label": "ev.chandu.c.choice.offering",
+          "resultText": "ev.ev_chandu_c.choice_2_result",
           "needs": {
             "coins": {
               "min": 100
@@ -1273,6 +1317,7 @@
         },
         {
           "label": "ev.chandu.c.choice.listen",
+          "resultText": "ev.ev_chandu_c.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -1314,6 +1359,7 @@
       "choices": [
         {
           "label": "ev.cotan.a.choice.jade",
+          "resultText": "ev.ev_cotan_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 2000
@@ -1340,6 +1386,7 @@
         },
         {
           "label": "ev.cotan.a.choice.wade",
+          "resultText": "ev.ev_cotan_a.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1355,6 +1402,7 @@
         },
         {
           "label": "ev.cotan.a.choice.watch",
+          "resultText": "ev.ev_cotan_a.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -1396,6 +1444,7 @@
       "choices": [
         {
           "label": "ev.cotan.b.choice.silk",
+          "resultText": "ev.ev_cotan_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 1500
@@ -1422,6 +1471,7 @@
         },
         {
           "label": "ev.cotan.b.choice.weave",
+          "resultText": "ev.ev_cotan_b.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1437,6 +1487,7 @@
         },
         {
           "label": "ev.cotan.b.choice.dyes",
+          "resultText": "ev.ev_cotan_b.choice_3_result",
           "needs": {
             "coins": {
               "min": 120
@@ -1483,6 +1534,7 @@
       "choices": [
         {
           "label": "ev.cotan.c.choice.explore",
+          "resultText": "ev.ev_cotan_c.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1503,6 +1555,7 @@
         },
         {
           "label": "ev.cotan.c.choice.fragment",
+          "resultText": "ev.ev_cotan_c.choice_2_result",
           "effects": [
             {
               "op": "item",
@@ -1518,6 +1571,7 @@
         },
         {
           "label": "ev.cotan.c.choice.listen_elder",
+          "resultText": "ev.ev_cotan_c.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -1559,6 +1613,7 @@
       "choices": [
         {
           "label": "ev.kinsay.a.choice.boat",
+          "resultText": "ev.ev_kinsay_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 200
@@ -1589,6 +1644,7 @@
         },
         {
           "label": "ev.kinsay.a.choice.walk",
+          "resultText": "ev.ev_kinsay_a.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1609,6 +1665,7 @@
         },
         {
           "label": "ev.kinsay.a.choice.tower",
+          "resultText": "ev.ev_kinsay_a.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -1655,6 +1712,7 @@
       "choices": [
         {
           "label": "ev.kinsay.b.choice.pepper",
+          "resultText": "ev.ev_kinsay_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 20000
@@ -1681,6 +1739,7 @@
         },
         {
           "label": "ev.kinsay.b.choice.bath",
+          "resultText": "ev.ev_kinsay_b.choice_2_result",
           "needs": {
             "coins": {
               "min": 100
@@ -1711,6 +1770,7 @@
         },
         {
           "label": "ev.kinsay.b.choice.count_pepper",
+          "resultText": "ev.ev_kinsay_b.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -1757,6 +1817,7 @@
       "choices": [
         {
           "label": "ev.kinsay.c.choice.boat",
+          "resultText": "ev.ev_kinsay_c.choice_1_result",
           "needs": {
             "coins": {
               "min": 500
@@ -1787,6 +1848,7 @@
         },
         {
           "label": "ev.kinsay.c.choice.watch",
+          "resultText": "ev.ev_kinsay_c.choice_2_result",
           "effects": [
             {
               "op": "sticker",
@@ -1802,6 +1864,7 @@
         },
         {
           "label": "ev.kinsay.c.choice.moonlight",
+          "resultText": "ev.ev_kinsay_c.choice_3_result",
           "effects": [
             {
               "op": "fate",
@@ -1849,6 +1912,7 @@
       "choices": [
         {
           "label": "ev.lop.bazaar.choice.buy_jade",
+          "resultText": "ev.ev_lop_bazaar.choice_1_result",
           "needs": {
             "coins": {
               "min": 400
@@ -1875,6 +1939,7 @@
         },
         {
           "label": "ev.lop.bazaar.choice.ask_prices",
+          "resultText": "ev.ev_lop_bazaar.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1916,6 +1981,7 @@
       "choices": [
         {
           "label": "ev.lop.caravanserai.choice.hire_guide",
+          "resultText": "ev.ev_lop_caravanserai.choice_1_result",
           "needs": {
             "coins": {
               "min": 200
@@ -1941,6 +2007,7 @@
         },
         {
           "label": "ev.lop.caravanserai.choice.wait_caravan",
+          "resultText": "ev.ev_lop_caravanserai.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1961,6 +2028,7 @@
         },
         {
           "label": "ev.lop.caravanserai.choice.provision",
+          "resultText": "ev.ev_lop_caravanserai.choice_3_result",
           "effects": [
             {
               "op": "coins",
@@ -2007,6 +2075,7 @@
       "choices": [
         {
           "label": "ev.lop.shrine.choice.offer",
+          "resultText": "ev.ev_lop_shrine.choice_1_result",
           "needs": {
             "coins": {
               "min": 50
@@ -2035,6 +2104,7 @@
         },
         {
           "label": "ev.lop.shrine.choice.watch",
+          "resultText": "ev.ev_lop_shrine.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -2067,6 +2137,7 @@
       "choices": [
         {
           "label": "ev.ormus.a.choice.toll",
+          "resultText": "ev.ev_ormus_a.choice_1_result",
           "needs": {
             "coins": {
               "min": 300
@@ -2094,6 +2165,7 @@
         },
         {
           "label": "ev.ormus.a.choice.pearl_diver",
+          "resultText": "ev.ev_ormus_a.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2109,6 +2181,7 @@
         },
         {
           "label": "ev.ormus.a.choice.watch_ships",
+          "resultText": "ev.ev_ormus_a.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -2155,6 +2228,7 @@
       "choices": [
         {
           "label": "ev.ormus.b.choice.pepper",
+          "resultText": "ev.ev_ormus_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 15000
@@ -2181,6 +2255,7 @@
         },
         {
           "label": "ev.ormus.b.choice.ginger",
+          "resultText": "ev.ev_ormus_b.choice_2_result",
           "needs": {
             "coins": {
               "min": 300
@@ -2207,6 +2282,7 @@
         },
         {
           "label": "ev.ormus.b.choice.trade_routes",
+          "resultText": "ev.ev_ormus_b.choice_3_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2253,6 +2329,7 @@
       "choices": [
         {
           "label": "ev.ormus.c.choice.guide",
+          "resultText": "ev.ev_ormus_c.choice_1_result",
           "needs": {
             "coins": {
               "min": 150
@@ -2278,6 +2355,7 @@
         },
         {
           "label": "ev.ormus.c.choice.wait",
+          "resultText": "ev.ev_ormus_c.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2294,6 +2372,7 @@
         },
         {
           "label": "ev.ormus.c.choice.observe",
+          "resultText": "ev.ev_ormus_c.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -2335,6 +2414,7 @@
       "choices": [
         {
           "label": "ev.samarcanda.a.choice.madrasa",
+          "resultText": "ev.ev_samarcanda_a.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2356,6 +2436,7 @@
         },
         {
           "label": "ev.samarcanda.a.choice.dome",
+          "resultText": "ev.ev_samarcanda_a.choice_2_result",
           "effects": [
             {
               "op": "sticker",
@@ -2371,6 +2452,7 @@
         },
         {
           "label": "ev.samarcanda.a.choice.gardens",
+          "resultText": "ev.ev_samarcanda_a.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -2419,6 +2501,7 @@
       "choices": [
         {
           "label": "ev.samarcanda.b.choice.paper",
+          "resultText": "ev.ev_samarcanda_b.choice_1_result",
           "needs": {
             "coins": {
               "min": 500
@@ -2445,6 +2528,7 @@
         },
         {
           "label": "ev.samarcanda.b.choice.learn",
+          "resultText": "ev.ev_samarcanda_b.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2460,6 +2544,7 @@
         },
         {
           "label": "ev.samarcanda.b.choice.manuscript",
+          "resultText": "ev.ev_samarcanda_b.choice_3_result",
           "needs": {
             "coins": {
               "min": 1000
@@ -2506,6 +2591,7 @@
       "choices": [
         {
           "label": "ev.samarcanda.c.choice.touch",
+          "resultText": "ev.ev_samarcanda_c.choice_1_result",
           "effects": [
             {
               "op": "fate",
@@ -2522,6 +2608,7 @@
         },
         {
           "label": "ev.samarcanda.c.choice.pray",
+          "resultText": "ev.ev_samarcanda_c.choice_2_result",
           "effects": [
             {
               "op": "fate",
@@ -2538,6 +2625,7 @@
         },
         {
           "label": "ev.samarcanda.c.choice.watch_pilgrims",
+          "resultText": "ev.ev_samarcanda_c.choice_3_result",
           "effects": [
             {
               "op": "sticker",
@@ -2579,6 +2667,7 @@
       "choices": [
         {
           "label": "ev.tauris.a.choice.merchants",
+          "resultText": "ev.ev_tauris_a.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2599,6 +2688,7 @@
         },
         {
           "label": "ev.tauris.a.choice.pearls",
+          "resultText": "ev.ev_tauris_a.choice_2_result",
           "needs": {
             "coins": {
               "min": 800
@@ -2625,6 +2715,7 @@
         },
         {
           "label": "ev.tauris.a.choice.view",
+          "resultText": "ev.ev_tauris_a.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -2671,6 +2762,7 @@
       "choices": [
         {
           "label": "ev.tauris.b.choice.latin",
+          "resultText": "ev.ev_tauris_b.choice_1_result",
           "needs": {
             "language": "persian"
           },
@@ -2696,6 +2788,7 @@
         },
         {
           "label": "ev.tauris.b.choice.dragoman",
+          "resultText": "ev.ev_tauris_b.choice_2_result",
           "needs": {
             "coins": {
               "min": 2000
@@ -2726,6 +2819,7 @@
         },
         {
           "label": "ev.tauris.b.choice.browse",
+          "resultText": "ev.ev_tauris_b.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -2767,6 +2861,7 @@
       "choices": [
         {
           "label": "ev.tauris.c.choice.rest",
+          "resultText": "ev.ev_tauris_c.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2783,6 +2878,7 @@
         },
         {
           "label": "ev.tauris.c.choice.fruit",
+          "resultText": "ev.ev_tauris_c.choice_2_result",
           "needs": {
             "coins": {
               "min": 120
@@ -2803,6 +2899,7 @@
         },
         {
           "label": "ev.tauris.c.choice.wander",
+          "resultText": "ev.ev_tauris_c.choice_3_result",
           "effects": [
             {
               "op": "sticker",

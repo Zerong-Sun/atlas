@@ -156,3 +156,155 @@ Pay the fee and learn I Ching
 ## ev.cambaluc.mentor_iching.title
 
 I Ching at Khanbaliq
+
+## ev.ev_cambaluc_entry.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_entry.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_entry.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+
+## ev.ev_cambaluc_mentor_iching.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_mentor_iching.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_a.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_a.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_a.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+
+## ev.ev_cambaluc_b.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_b.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_b.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+
+## ev.ev_cambaluc_c.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_c.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_c.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+
+## ev.ev_cambaluc_consequence_a.title
+
+Cambaluc: The Mark at the Gate
+
+## ev.ev_cambaluc_consequence_a.body
+
+The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Cambaluc. Beyond the question lies the palace gate and the relay stations; choose what you will make of the sign.
+
+## ev.ev_cambaluc_consequence_a.choice_1
+
+Keep the name and ask who can vouch for it
+
+## ev.ev_cambaluc_consequence_a.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_a.choice_2
+
+Thank the stranger and keep your own counsel
+
+## ev.ev_cambaluc_consequence_a.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_a_resolution.title
+
+Cambaluc: A Consequence Takes Shape
+
+## ev.ev_cambaluc_consequence_a_resolution.body
+
+By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_cambaluc_consequence_a_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_cambaluc_consequence_a_resolution.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_a_resolution.choice_2
+
+Keep the sign in your travel book
+
+## ev.ev_cambaluc_consequence_a_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_b.title
+
+Cambaluc: The Road Behind the Answer
+
+## ev.ev_cambaluc_consequence_b.body
+
+The answer sends a rumour along the road. Before the day is out, someone who knows Cambaluc by its working life offers a second account of the palace gate and the relay stations. It is less grand than a traveller's tale, and more useful.
+
+## ev.ev_cambaluc_consequence_b.choice_1
+
+Follow the practical advice
+
+## ev.ev_cambaluc_consequence_b.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_b.choice_2
+
+Leave the rumour with the teller
+
+## ev.ev_cambaluc_consequence_b.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_b_resolution.title
+
+Cambaluc: A Consequence Takes Shape
+
+## ev.ev_cambaluc_consequence_b_resolution.body
+
+By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_cambaluc_consequence_b_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_cambaluc_consequence_b_resolution.choice_1_result
+
+The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_consequence_b_resolution.choice_2
+
+Keep the sign in your travel book
+
+## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.

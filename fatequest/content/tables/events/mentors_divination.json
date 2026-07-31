@@ -19,6 +19,7 @@
       "choices": [
         {
           "label": "ev.cambaluc.mentor_iching.choice.learn",
+          "resultText": "ev.ev_cambaluc_mentor_iching.choice_1_result",
           "needs": {
             "coins": {
               "min": 8000
@@ -49,6 +50,7 @@
         },
         {
           "label": "ev.cambaluc.mentor_iching.choice.ask",
+          "resultText": "ev.ev_cambaluc_mentor_iching.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -90,6 +92,7 @@
       "choices": [
         {
           "label": "ev.baldacum.mentor_bazi.choice.learn",
+          "resultText": "ev.ev_baldacum_mentor_bazi.choice_1_result",
           "needs": {
             "coins": {
               "min": 10000
@@ -123,6 +126,7 @@
         },
         {
           "label": "ev.baldacum.mentor_bazi.choice.learn_geomancy",
+          "resultText": "ev.ev_baldacum_mentor_bazi.choice_2_result",
           "needs": {
             "coins": {
               "min": 8000
@@ -156,6 +160,7 @@
         },
         {
           "label": "ev.baldacum.mentor_bazi.choice.ask",
+          "resultText": "ev.ev_baldacum_mentor_bazi.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -197,6 +202,7 @@
       "choices": [
         {
           "label": "ev.tauris.mentor_tarot.choice.learn",
+          "resultText": "ev.ev_tauris_mentor_tarot.choice_1_result",
           "needs": {
             "coins": {
               "min": 6000
@@ -230,6 +236,7 @@
         },
         {
           "label": "ev.tauris.mentor_tarot.choice.learn_astrodice",
+          "resultText": "ev.ev_tauris_mentor_tarot.choice_2_result",
           "needs": {
             "coins": {
               "min": 7000
@@ -263,6 +270,7 @@
         },
         {
           "label": "ev.tauris.mentor_tarot.choice.ask",
+          "resultText": "ev.ev_tauris_mentor_tarot.choice_3_result",
           "effects": [
             {
               "op": "codex",
@@ -358,6 +366,7 @@
       "choices": [
         {
           "label": "ev.kinsay.mentor_jiaobei.choice.learn",
+          "resultText": "ev.ev_kinsay_mentor_jiaobei.choice_1_result",
           "needs": {
             "coins": {
               "min": 3000
@@ -388,6 +397,7 @@
         },
         {
           "label": "ev.kinsay.mentor_jiaobei.choice.ask",
+          "resultText": "ev.ev_kinsay_mentor_jiaobei.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -418,6 +428,7 @@
       "choices": [
         {
           "label": "ev.ormus.mentor_astrodice.choice.learn",
+          "resultText": "ev.ev_ormus_mentor_astrodice.choice_1_result",
           "needs": {
             "coins": {
               "min": 7000
@@ -448,6 +459,7 @@
         },
         {
           "label": "ev.ormus.mentor_astrodice.choice.ask",
+          "resultText": "ev.ev_ormus_mentor_astrodice.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -478,6 +490,7 @@
       "choices": [
         {
           "label": "ev.tauris.mentor_astrodice.choice.learn",
+          "resultText": "ev.ev_tauris_mentor_astrodice.choice_1_result",
           "needs": {
             "coins": {
               "min": 7000
@@ -508,6 +521,7 @@
         },
         {
           "label": "ev.tauris.mentor_astrodice.choice.ask",
+          "resultText": "ev.ev_tauris_mentor_astrodice.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -538,6 +552,7 @@
       "choices": [
         {
           "label": "ev.baldacum.mentor_geomancy.choice.learn",
+          "resultText": "ev.ev_baldacum_mentor_geomancy.choice_1_result",
           "needs": {
             "coins": {
               "min": 8000
@@ -568,6 +583,7 @@
         },
         {
           "label": "ev.baldacum.mentor_geomancy.choice.ask",
+          "resultText": "ev.ev_baldacum_mentor_geomancy.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -781,6 +797,7 @@
       "choices": [
         {
           "label": "ev.zayton.jiaobei_ask.choice.cast",
+          "resultText": "ev.ev_zayton_jiaobei_ask.choice_1_result",
           "needs": {
             "learned_divination": [
               "jiaobei"
@@ -814,6 +831,7 @@
         },
         {
           "label": "ev.zayton.jiaobei_ask.choice.leave",
+          "resultText": "ev.ev_zayton_jiaobei_ask.choice_2_result",
           "effects": [
             {
               "op": "flag",
@@ -983,6 +1001,7 @@
       "choices": [
         {
           "label": "ev.ormus.astrodice_tide.choice.cast",
+          "resultText": "ev.ev_ormus_astrodice_tide.choice_1_result",
           "needs": {
             "learned_divination": [
               "astrodice"
@@ -1016,6 +1035,7 @@
         },
         {
           "label": "ev.ormus.astrodice_tide.choice.sail",
+          "resultText": "ev.ev_ormus_astrodice_tide.choice_2_result",
           "effects": [
             {
               "op": "flag",
@@ -1117,6 +1137,7 @@
       "choices": [
         {
           "label": "ev.baldacum.geomancy_court.choice.cast",
+          "resultText": "ev.ev_baldacum_geomancy_court.choice_1_result",
           "needs": {
             "learned_divination": [
               "geomancy"
@@ -1145,6 +1166,7 @@
         },
         {
           "label": "ev.baldacum.geomancy_court.choice.leave",
+          "resultText": "ev.ev_baldacum_geomancy_court.choice_2_result",
           "effects": [
             {
               "op": "flag",

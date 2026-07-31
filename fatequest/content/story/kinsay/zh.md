@@ -2,7 +2,7 @@
 unit: kinsay
 lang: zh
 source: en
-source_rev: ca0820f24db5
+source_rev: 98d243d431fc
 status: translated
 translator: 人工校译
 notes: >
@@ -32,6 +32,44 @@ stamps:
   ev.kinsay.c.title: 4df4bc077831
   ev.kinsay.entry.body: 74b5e172b3d8
   ev.kinsay.entry.title: 4ff36535d29a
+  ev.ev_kinsay_entry.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_entry.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_entry.choice_3_result: 9958b5c302d4
+  ev.ev_kinsay_mentor_jiaobei.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_mentor_jiaobei.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_a.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_a.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_a.choice_3_result: 9958b5c302d4
+  ev.ev_kinsay_b.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_b.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_b.choice_3_result: 9958b5c302d4
+  ev.ev_kinsay_c.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_c.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_c.choice_3_result: 9958b5c302d4
+  ev.ev_kinsay_consequence_a.title: 0ec5f1c48602
+  ev.ev_kinsay_consequence_a.body: 34b649331d78
+  ev.ev_kinsay_consequence_a.choice_1: 4012a4cadc73
+  ev.ev_kinsay_consequence_a.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_a.choice_2: 2d73ba8cc84a
+  ev.ev_kinsay_consequence_a.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_a_resolution.title: df1a1d394f66
+  ev.ev_kinsay_consequence_a_resolution.body: 357c2908f927
+  ev.ev_kinsay_consequence_a_resolution.choice_1: 3b4827283f98
+  ev.ev_kinsay_consequence_a_resolution.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_a_resolution.choice_2: c200bc7d41b1
+  ev.ev_kinsay_consequence_a_resolution.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_b.title: a7c938f27bbd
+  ev.ev_kinsay_consequence_b.body: 8ae3d9be31ac
+  ev.ev_kinsay_consequence_b.choice_1: 5624c3fd45af
+  ev.ev_kinsay_consequence_b.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_b.choice_2: bb0917a651a0
+  ev.ev_kinsay_consequence_b.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_b_resolution.title: df1a1d394f66
+  ev.ev_kinsay_consequence_b_resolution.body: 827b72f18207
+  ev.ev_kinsay_consequence_b_resolution.choice_1: 3b4827283f98
+  ev.ev_kinsay_consequence_b_resolution.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_b_resolution.choice_2: c200bc7d41b1
+  ev.ev_kinsay_consequence_b_resolution.choice_2_result: 644a7e6e6d1d
 ---
 
 ## city.kinsay.name
@@ -134,3 +172,154 @@ stamps:
 
 至大城行在
 
+## ev.ev_kinsay_entry.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_entry.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_entry.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在行在的下一步行动。
+
+## ev.ev_kinsay_mentor_jiaobei.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_mentor_jiaobei.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_a.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_a.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_a.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在行在的下一步行动。
+
+## ev.ev_kinsay_b.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_b.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_b.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在行在的下一步行动。
+
+## ev.ev_kinsay_c.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_c.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_c.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在行在的下一步行动。
+
+## ev.ev_kinsay_consequence_a.title
+
+行在：门上的印记
+
+## ev.ev_kinsay_consequence_a.body
+
+第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从行在带走什么。问题背后正是水巷与粮船；你须决定如何对待这道征兆。
+
+## ev.ev_kinsay_consequence_a.choice_1
+
+记下这个名字，追问谁能为它作保
+
+## ev.ev_kinsay_consequence_a.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_consequence_a.choice_2
+
+谢过来人，把自己的打算收在心里
+
+## ev.ev_kinsay_consequence_a.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_consequence_a_resolution.title
+
+行在：后果显出形状
+
+## ev.ev_kinsay_consequence_a_resolution.body
+
+你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_kinsay_consequence_a_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_kinsay_consequence_a_resolution.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_consequence_a_resolution.choice_2
+
+把这道征兆收进自己的行纪
+
+## ev.ev_kinsay_consequence_a_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_consequence_b.title
+
+行在：回答之后的路
+
+## ev.ev_kinsay_consequence_b.body
+
+回答把一条传闻送上了道路。日落之前，一个熟悉行在日常生计的人又讲起水巷与粮船。这说法不如游记宏大，却更适合带在身上。
+
+## ev.ev_kinsay_consequence_b.choice_1
+
+照着这条实用的建议走
+
+## ev.ev_kinsay_consequence_b.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_consequence_b.choice_2
+
+把这条传闻留给讲述它的人
+
+## ev.ev_kinsay_consequence_b.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_consequence_b_resolution.title
+
+行在：后果显出形状
+
+## ev.ev_kinsay_consequence_b_resolution.body
+
+你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_kinsay_consequence_b_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_kinsay_consequence_b_resolution.choice_1_result
+
+这一选择留下了痕迹：行在的人们已把你记在水巷与粮船之间。
+
+## ev.ev_kinsay_consequence_b_resolution.choice_2
+
+把这道征兆收进自己的行纪
+
+## ev.ev_kinsay_consequence_b_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。

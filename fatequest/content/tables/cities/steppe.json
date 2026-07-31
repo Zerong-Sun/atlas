@@ -103,6 +103,7 @@
         ]
       },
       "mentor": "npc-chandu-mentor",
+      "mentorEvent": "ev-chandu-mentor",
       "specialty": "camlet",
       "calendars": [
         "turkic",

@@ -398,6 +398,7 @@
       "choices": [
         {
           "label": "ev.balc.entry.choice.customs",
+          "resultText": "ev.ev_balc_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -414,10 +415,13 @@
               "value": "balc",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-balc-consequence-a", "reason": "balc-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.balc.entry.choice.lore",
+          "resultText": "ev.ev_balc_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -434,10 +438,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-balc-consequence-b", "reason": "balc-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.balc.entry.choice.market",
+          "resultText": "ev.ev_balc_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -481,6 +488,7 @@
       "choices": [
         {
           "label": "ev.baldacum.entry.choice.customs",
+          "resultText": "ev.ev_baldacum_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -497,10 +505,13 @@
               "value": "baldacum",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-baldacum-consequence-a", "reason": "baldacum-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.baldacum.entry.choice.lore",
+          "resultText": "ev.ev_baldacum_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -517,10 +528,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-baldacum-consequence-b", "reason": "baldacum-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.baldacum.entry.choice.market",
+          "resultText": "ev.ev_baldacum_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -1270,6 +1284,7 @@
       "choices": [
         {
           "label": "ev.cambaluc.entry.choice.customs",
+          "resultText": "ev.ev_cambaluc_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1291,10 +1306,13 @@
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cambaluc-consequence-a", "reason": "cambaluc-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.cambaluc.entry.choice.lore",
+          "resultText": "ev.ev_cambaluc_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -1316,10 +1334,13 @@
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cambaluc-consequence-b", "reason": "cambaluc-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cambaluc.entry.choice.market",
+          "resultText": "ev.ev_cambaluc_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -1568,6 +1589,7 @@
       "choices": [
         {
           "label": "ev.cascar.entry.choice.customs",
+          "resultText": "ev.ev_cascar_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1584,10 +1606,13 @@
               "value": "cascar",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cascar-consequence-a", "reason": "cascar-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.cascar.entry.choice.lore",
+          "resultText": "ev.ev_cascar_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -1604,10 +1629,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cascar-consequence-b", "reason": "cascar-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cascar.entry.choice.market",
+          "resultText": "ev.ev_cascar_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -1725,6 +1753,7 @@
       "choices": [
         {
           "label": "ev.chandu.entry.choice.customs",
+          "resultText": "ev.ev_chandu_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1741,10 +1770,13 @@
               "value": "chandu",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-chandu-consequence-a", "reason": "chandu-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.chandu.entry.choice.lore",
+          "resultText": "ev.ev_chandu_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -1761,10 +1793,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-chandu-consequence-b", "reason": "chandu-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.chandu.entry.choice.market",
+          "resultText": "ev.ev_chandu_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -2286,6 +2321,7 @@
       "choices": [
         {
           "label": "ev.cotan.entry.choice.customs",
+          "resultText": "ev.ev_cotan_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2302,10 +2338,13 @@
               "value": "cotan",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cotan-consequence-a", "reason": "cotan-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.cotan.entry.choice.lore",
+          "resultText": "ev.ev_cotan_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -2322,10 +2361,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-cotan-consequence-b", "reason": "cotan-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cotan.entry.choice.market",
+          "resultText": "ev.ev_cotan_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -3287,6 +3329,7 @@
       "choices": [
         {
           "label": "ev.kinsay.entry.choice.customs",
+          "resultText": "ev.ev_kinsay_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3303,10 +3346,13 @@
               "value": "kinsay",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-kinsay-consequence-a", "reason": "kinsay-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.kinsay.entry.choice.lore",
+          "resultText": "ev.ev_kinsay_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -3323,10 +3369,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-kinsay-consequence-b", "reason": "kinsay-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.kinsay.entry.choice.market",
+          "resultText": "ev.ev_kinsay_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -3468,6 +3517,7 @@
       "choices": [
         {
           "label": "ev.lop.entry.choice.rest",
+          "resultText": "ev.ev_lop_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3479,10 +3529,13 @@
               "value": "rt-lop-sachiu",
               "reason": "innkeeper-mentions-the-road"
             }
+          ,
+            { "op": "queue_event", "value": "ev-lop-consequence-a", "reason": "lop-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.lop.entry.choice.ask",
+          "resultText": "ev.ev_lop_entry.choice_2_result",
           "needs": {
             "min_reputation": {
               "scope": "city",
@@ -3503,6 +3556,8 @@
               "id": "lop",
               "reason": "courteous-enquiry"
             }
+          ,
+            { "op": "queue_event", "value": "ev-lop-consequence-b", "reason": "lop-entry-consequence-b" }
           ]
         }
       ],
@@ -4085,6 +4140,7 @@
       "choices": [
         {
           "label": "ev.ormus.entry.choice.customs",
+          "resultText": "ev.ev_ormus_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -4101,10 +4157,13 @@
               "value": "ormus",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-ormus-consequence-a", "reason": "ormus-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.ormus.entry.choice.lore",
+          "resultText": "ev.ev_ormus_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -4121,10 +4180,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-ormus-consequence-b", "reason": "ormus-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.ormus.entry.choice.market",
+          "resultText": "ev.ev_ormus_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -4531,6 +4593,7 @@
       "choices": [
         {
           "label": "ev.samarcanda.entry.choice.customs",
+          "resultText": "ev.ev_samarcanda_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -4547,10 +4610,13 @@
               "value": "samarcanda",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-samarcanda-consequence-a", "reason": "samarcanda-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.samarcanda.entry.choice.lore",
+          "resultText": "ev.ev_samarcanda_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -4567,10 +4633,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-samarcanda-consequence-b", "reason": "samarcanda-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.samarcanda.entry.choice.market",
+          "resultText": "ev.ev_samarcanda_entry.choice_3_result",
           "effects": [
             {
               "op": "days",
@@ -5382,6 +5451,7 @@
       "choices": [
         {
           "label": "ev.tauris.entry.choice.customs",
+          "resultText": "ev.ev_tauris_entry.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -5398,10 +5468,13 @@
               "value": "tauris",
               "reason": "clerks-named-the-quarters"
             }
+          ,
+            { "op": "queue_event", "value": "ev-tauris-consequence-a", "reason": "tauris-entry-consequence-a" }
           ]
         },
         {
           "label": "ev.tauris.entry.choice.lore",
+          "resultText": "ev.ev_tauris_entry.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -5418,10 +5491,13 @@
               "value": 1,
               "reason": "listened-to-the-tales"
             }
+          ,
+            { "op": "queue_event", "value": "ev-tauris-consequence-b", "reason": "tauris-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.tauris.entry.choice.market",
+          "resultText": "ev.ev_tauris_entry.choice_3_result",
           "effects": [
             {
               "op": "days",

@@ -1,6 +1,6 @@
 # 美术素材需求 · ART REQUIREMENTS
 
-**2026-07-27 · S1b 48 张新图接线 + 签契雇佣屏 · S2 动画 N2–N3 已实现 · S3/S4 缺口规格见下。**
+**2026-07-30 · P3 `scene-region-chr` 重绘 + P4 白图泰 24 张落盘接线（根目录 674）· 易经 31–64 仍缺。**
 每条素材标注四种状态之一，由 `tools/art/audit.py` 机器判定，不靠记忆：
 
 | 状态 | 含义 |
@@ -22,10 +22,10 @@ python3 tools/art/strip_checker.py --write --glob 'assets/art/*.webp'   # 修棋
 ## 0. 实测汇总
 
 ```
-根目录 assets/art/*.webp   650 张 · ✅ 完好 650 · ⚠️ 棋盘格 0 · ❌ 损坏 0
+根目录 assets/art/*.webp   674 张 · ✅ 完好 674 · ⚠️ 棋盘格 0 · ❌ 损坏 0
   _archive/（Chat 变体）   128 张 · 生产图之外的安全备份，勿删
   _sheets/（组图原片）       58 张
-Godot 运行时接线            650 张（MapArt + art_wire_index.json）
+Godot 运行时接线            674 张（MapArt + art_wire_index.json）
 未接线                        0 张
 ```
 
@@ -47,7 +47,7 @@ Godot 运行时接线            650 张（MapArt + art_wire_index.json）
 | 素材 | 问题 | 现状 |
 |---|---|---|
 | `scene-region-isl.webp` | 旧图是中国湖景 | ✅ 已重绘为西亚城郭与商队 |
-| `scene-region-chr.webp` | 仍是西亚圆顶、宣礼塔与骆驼，不是拉丁基督教世界 | 由 `MapArt.CITY_SCENE` 优先取具名场景绕开，**待重绘** |
+| `scene-region-chr.webp` | 曾是西亚圆顶、宣礼塔与骆驼 | ✅ 2026-07-30 已重绘为拉丁基督教世界（石砌教堂、集市、客栈/城门） |
 
 这两张是**内容错误不是技术缺陷**——文件完好，画错了对象。机器查不出来，只能人看。
 
@@ -83,9 +83,9 @@ Godot 运行时接线            650 张（MapArt + art_wire_index.json）
 
 | # | 素材 | 数量 | 规格 | 阻塞 |
 |---|---|---|---|---|
-| 2.1 | `scene-region-chr.webp` 重绘 | 1 | 见 §1.1 | 拉丁世界通用底板内容错配 |
-| 2.2 | 白图泰六城入城图 | 6 | 960×540 WebP · 见 §2.A | 目前用 band 底板回退 |
-| 2.3 | 白图泰六城探索图 | 18 | 960×540 WebP · 见 §2.A | 目前用通用场所图回退 |
+| 2.1 | ~~`scene-region-chr.webp` 重绘~~ | 1 | ✅ 2026-07-30 | — |
+| 2.2 | ~~白图泰六城入城图~~ | 6 | ✅ 2026-07-30 · 960×540 | — |
+| 2.3 | ~~白图泰六城探索图~~ | 18 | ✅ 2026-07-30 · 960×540 | — |
 | 2.4 | 易经 31–64 牌面 | 34 | 512×768 WebP | 非阻塞，使用卦符回退 |
 | 2.5 | ~~货币徽~~ | 5 | ✅ 已交付 · `MapArt.currency_icon` | — |
 | 2.6 | ~~结局贴纸~~ | 9 | ✅ 已交付 · `MapArt.sticker_icon` | — |
@@ -135,7 +135,7 @@ Godot 运行时接线            650 张（MapArt + art_wire_index.json）
 
 | 类别 | 数量 | 解析入口 |
 |---|---|---|
-| 全量 stem | **650** | `art_wire_index.json` + `MapArt.tex()` |
+| 全量 stem | **674** | `art_wire_index.json` + `MapArt.tex()` |
 | 地图 | 54 | `city_icon` / `mountain_icon` / `route_brush` / `map_ornament` / `wind_head` |
 | 场景 / 入城 / 探索 | scene + city-entry + explore/site | `city_scene` / `city_entry` / `site_scene` / `city_explore_bg` |
 | NPC / 导师 | 68 + 10 | `event_portrait` / `job_portrait` / `mentor_portrait` |
@@ -151,7 +151,7 @@ Godot 运行时接线            650 张（MapArt + art_wire_index.json）
 
 ## 5. 接线状态（S1 完成）
 
-**未接线：0。** 先前登记的 543 张（explore / site / npc / ic / ui / sym / map 饰件等）均已通过 `MapArt` 统一解析。
+**未接线：0。** 根目录 **674** stems 均已写入 `art_wire_index.json`（含 2026-07-30 白图泰 24 张；`scene-region-chr` 为覆盖重绘）。
 
 完整清单：`python3 tools/art/audit.py --unused`（期望空）。
 

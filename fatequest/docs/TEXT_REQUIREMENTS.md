@@ -1,6 +1,6 @@
 # 文本素材需求 · TEXT REQUIREMENTS
 
-**2026-07-26 · Godot v3.0。** 汇总**已交付文本资产**与**仍待写的密度任务**。执行步骤见 `[PLAN.md](PLAN.md)`；T3/T4/T6 规格见 `[STORY_REQUIREMENTS.md](STORY_REQUIREMENTS.md)`；中译流程见 `[L10N_PLAN.md](L10N_PLAN.md)`。
+**2026-07-31 · Godot v3.0。** 汇总**已交付文本资产**与**仍待写的密度任务**。执行步骤见 `[PLAN.md](PLAN.md)`；T3/T4/T6 规格见 `[STORY_REQUIREMENTS.md](STORY_REQUIREMENTS.md)`；中译流程见 `[L10N_PLAN.md](L10N_PLAN.md)`。
 
 保证文本用词用语与当时当地习惯和风格吻合，尽量符合史实。可以有夸张或者神话色彩。
 
@@ -8,16 +8,16 @@
 
 ---
 
-## 0. 实测库存（2026-07-26 · T3/T4/T6 完成后）
+## 0. 实测库存（2026-07-31 · 当前基线）
 
 
 | 资产              | 数量                                     | 状态  |
 | --------------- | -------------------------------------- | --- |
 | 城市入城正文          | 102 城 × en/zh                          | ✅   |
 | 故事 authoring 单元 | 109（102 城 + 5 div + stamps + ibn-fadlan-road） | ✅   |
-| i18n 编译产物       | en **2482** · zh **2482** · 缺 0        | ✅   |
-| 译文 stamps       | **1322** current · 0 stale              | ✅   |
-| 事件表             | **276**（entry 102 · site 93 · road 81） | ✅   |
+| i18n 编译产物       | en **3169** · zh **3169** · 缺 0        | ✅   |
+| 译文 stamps       | **1830** current · 0 stale              | ✅   |
+| 事件表             | **331**（entry 102 · site 93 · mentor 12 · road 81 · consequence 49） | ✅   |
 | city 探索点        | 21 city × 2 = **42**；12 metro × 3 = 36 | ✅   |
 | 途中事件 / steppe   | road **81** · steppe band **48**        | ✅   |
 | 图鉴/术语           | codex 100+ · glossary **97**           | ✅   |
@@ -108,5 +108,3 @@ T3/T4 生成器（可复跑、幂等）：`tools/lore/_gen/apply_t3.mjs` · `app
 | `L10N_PLAN.md`           | 中译批次与译者守则                   |
 | `STATUS.md`              | 全项目现状 hub                   |
 | `ASSETS_REQUIREMENTS.md` | 美术+音频+文本**总索引**             |
-
-

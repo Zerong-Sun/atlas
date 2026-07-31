@@ -135,3 +135,179 @@ Walk the great bāzār
 ## ev.samarcanda.entry.title
 
 Of the Great City of Samarcan
+
+## ev.ev_samarcanda_entry.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_entry.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_entry.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+
+## ev.ev_samarcanda_a.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_a.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_a.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+
+## ev.ev_samarcanda_b.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_b.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_b.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+
+## ev.ev_samarcanda_c.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_c.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_c.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+
+## ev.ev_samarcanda_consequence_a.title
+
+Samarcanda: The Mark at the Gate
+
+## ev.ev_samarcanda_consequence_a.body
+
+The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Samarcanda. Beyond the question lies the colleges and the caravans; choose what you will make of the sign.
+
+## ev.ev_samarcanda_consequence_a.choice_1
+
+Keep the name and ask who can vouch for it
+
+## ev.ev_samarcanda_consequence_a.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_a.choice_2
+
+Thank the stranger and keep your own counsel
+
+## ev.ev_samarcanda_consequence_a.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_a_resolution.title
+
+Samarcanda: A Consequence Takes Shape
+
+## ev.ev_samarcanda_consequence_a_resolution.body
+
+By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_samarcanda_consequence_a_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_samarcanda_consequence_a_resolution.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_a_resolution.choice_2
+
+Keep the sign in your travel book
+
+## ev.ev_samarcanda_consequence_a_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_b.title
+
+Samarcanda: The Road Behind the Answer
+
+## ev.ev_samarcanda_consequence_b.body
+
+The answer sends a rumour along the road. Before the day is out, someone who knows Samarcanda by its working life offers a second account of the colleges and the caravans. It is less grand than a traveller's tale, and more useful.
+
+## ev.ev_samarcanda_consequence_b.choice_1
+
+Follow the practical advice
+
+## ev.ev_samarcanda_consequence_b.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_b.choice_2
+
+Leave the rumour with the teller
+
+## ev.ev_samarcanda_consequence_b.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_b_resolution.title
+
+Samarcanda: A Consequence Takes Shape
+
+## ev.ev_samarcanda_consequence_b_resolution.body
+
+By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_samarcanda_consequence_b_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_samarcanda_consequence_b_resolution.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.ev_samarcanda_consequence_b_resolution.choice_2
+
+Keep the sign in your travel book
+
+## ev.ev_samarcanda_consequence_b_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.samarcanda.mentor_closure.title
+
+The Guide of Samarcanda
+
+## ev.samarcanda.mentor_closure.body
+
+Before you leave Samarcanda, the old student of the blue-tiled college asks what you have learned from Samarcanda. The lesson is not a spell or a bargain; it is a way of noticing which detail will matter after the road turns.
+
+## ev.samarcanda.mentor_closure.choice_1
+
+Ask what the road will demand
+
+## ev.samarcanda.mentor_closure.choice_1_result
+
+The choice leaves a mark: the people of Samarcanda now remember you among the the colleges and the caravans.
+
+## ev.samarcanda.mentor_closure.choice_2
+
+Stay for a day and listen to the whole account
+
+## ev.samarcanda.mentor_closure.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the colleges and the caravans.
+
+## ev.samarcanda.mentor_closure.choice_3
+
+Thank the guide and keep moving
+
+## ev.samarcanda.mentor_closure.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Samarcanda.

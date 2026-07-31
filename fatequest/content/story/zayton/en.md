@@ -301,3 +301,143 @@ closed without one.
 Tea pressed into bricks and stamped with the producer's chop. The quayside merchants
 will trade a brick for a sack of pepper straight across, and both sides consider it a
 bargain.
+
+## ev.ev_zayton_entry.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_entry.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_entry.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Zayton.
+
+## ev.ev_zayton_jiaobei_ask.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_jiaobei_ask.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_pilot_consequence.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_pilot_consequence.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_harbour.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_harbour.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_harbour.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Zayton.
+
+## ev.ev_zayton_fanfang.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_fanfang.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_fanfang.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Zayton.
+
+## ev.ev_zayton_mazu.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_mazu.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_mazu.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Zayton.
+
+## ev.ev_zayton_mentor.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_mentor.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_mentor.choice_3_result
+
+You close the matter for now. The sign you gained will still guide your next action in Zayton.
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_watch_consequence_resolution.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_watch_consequence_resolution.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_ledger_consequence.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_ledger_consequence.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_watch_consequence.choice_1_result
+
+The choice leaves a mark: the people of Zayton now remember you among the the harbour and the foreign ships.
+
+## ev.ev_zayton_watch_consequence.choice_2_result
+
+The matter is not finished, but the next road is clear; your name travels ahead with the the harbour and the foreign ships.
+
+## ev.ev_zayton_ledger_consequence_resolution.title
+
+Zayton: A Consequence Takes Shape
+
+## ev.ev_zayton_ledger_consequence_resolution.body
+
+By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_2
+
+Keep the sign in your travel book
+
+## ev.ev_zayton_watch_consequence_resolution.title
+
+Zayton: A Consequence Takes Shape
+
+## ev.ev_zayton_watch_consequence_resolution.body
+
+By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+
+## ev.ev_zayton_watch_consequence_resolution.choice_1
+
+Make the introduction before nightfall
+
+## ev.ev_zayton_watch_consequence_resolution.choice_2
+
+Keep the sign in your travel book

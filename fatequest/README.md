@@ -26,7 +26,7 @@
 godot --headless --path . --script tests/run_tests.gd    # 16 个内核单测
 godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
 godot --headless --path . --script tests/benchmark_systems.gd # 系统性能门禁
-node tools/validate/validate.mjs                         # 24 道内容门禁
+node tools/validate/validate.mjs                         # 25 道内容门禁
 node tools/lore/story.mjs check                          # 译文时效
 ```
 
@@ -63,9 +63,11 @@ fatequest/
 | 文档 | 讲什么 |
 |---|---|
 | [`docs/STATUS.md`](docs/STATUS.md) | **现在到哪一步**——唯一权威现状页 |
+| [`docs/REQUIREMENTS_INDEX.md`](docs/REQUIREMENTS_INDEX.md) | 需求、验收与交付索引；区分当前文档和历史记录 |
+| [`docs/12_CITY_CLOSURE_MATRIX.md`](docs/12_CITY_CLOSURE_MATRIX.md) | 十二主城选择、后果链和即时反馈接线矩阵 |
 | [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |
 | [`docs/FATEQUEST_ENGINE_REQUIREMENTS.md`](docs/FATEQUEST_ENGINE_REQUIREMENTS.md) | **引擎、数据、七系统、文本、美术、排期、风险与发布验收总需求** |
-| [`docs/FATEQUEST_ENGINE_AUDIT_2026-07-30.md`](docs/FATEQUEST_ENGINE_AUDIT_2026-07-30.md) | 本轮六维验证结果、问题与修复清单 |
+| [`docs/FATEQUEST_ENGINE_AUDIT_2026-07-31.md`](docs/FATEQUEST_ENGINE_AUDIT_2026-07-31.md) | 本轮剧情接线、文本、资源与测试结果 |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | 阶段顺序（P0–P7 已闭环） |
 | [`docs/GDD.md`](docs/GDD.md) | 游戏设计文档 |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`CODE_PLAN.md`](docs/CODE_PLAN.md) · [`DATA_MODEL.md`](docs/DATA_MODEL.md) | 架构 · 内核规格 · 数据模型 |
@@ -81,9 +83,9 @@ fatequest/
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 279 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
-真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 2501 条
-文本。**24 道门禁、16 单测、12 smoke 全绿。** 详见
+102 城 · 204 路线 · 331 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
+真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 3169 条
+文本。**25 道门禁、16 单测、12 smoke 全绿。** 详见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

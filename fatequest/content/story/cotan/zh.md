@@ -2,7 +2,7 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: edc900d1f8dd
+source_rev: 17a9253e0450
 status: translated
 translator: 人工校译
 notes: >
@@ -32,6 +32,50 @@ stamps:
   ev.cotan.c.title: b9524767021d
   ev.cotan.entry.body: 87b436f01b1a
   ev.cotan.entry.title: d750868faec6
+  ev.ev_cotan_entry.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_entry.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_entry.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_a.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_a.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_a.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_b.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_b.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_b.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_c.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_c.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_c.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_consequence_a.title: 0a189a9de00d
+  ev.ev_cotan_consequence_a.body: 0a5c32e02c01
+  ev.ev_cotan_consequence_a.choice_1: 4012a4cadc73
+  ev.ev_cotan_consequence_a.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_a.choice_2: 2d73ba8cc84a
+  ev.ev_cotan_consequence_a.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_a_resolution.title: d282ac8b9ba2
+  ev.ev_cotan_consequence_a_resolution.body: 357c2908f927
+  ev.ev_cotan_consequence_a_resolution.choice_1: 3b4827283f98
+  ev.ev_cotan_consequence_a_resolution.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_a_resolution.choice_2: c200bc7d41b1
+  ev.ev_cotan_consequence_a_resolution.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_b.title: 407b734dd715
+  ev.ev_cotan_consequence_b.body: 0b6da447baef
+  ev.ev_cotan_consequence_b.choice_1: 5624c3fd45af
+  ev.ev_cotan_consequence_b.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_b.choice_2: bb0917a651a0
+  ev.ev_cotan_consequence_b.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_b_resolution.title: d282ac8b9ba2
+  ev.ev_cotan_consequence_b_resolution.body: 827b72f18207
+  ev.ev_cotan_consequence_b_resolution.choice_1: 3b4827283f98
+  ev.ev_cotan_consequence_b_resolution.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_b_resolution.choice_2: c200bc7d41b1
+  ev.ev_cotan_consequence_b_resolution.choice_2_result: 4e8560062ac9
+  ev.cotan.mentor_closure.title: da75a7423ad9
+  ev.cotan.mentor_closure.body: d5f692b5c670
+  ev.cotan.mentor_closure.choice_1: da8d611ab3c7
+  ev.cotan.mentor_closure.choice_1_result: 2ac2ca3e8160
+  ev.cotan.mentor_closure.choice_2: 59a447ce21bf
+  ev.cotan.mentor_closure.choice_2_result: 4e8560062ac9
+  ev.cotan.mentor_closure.choice_3: 630a8fcfe069
+  ev.cotan.mentor_closure.choice_3_result: 2c512b57b3d2
 ---
 
 ## city.cotan.name
@@ -129,3 +173,178 @@ stamps:
 
 记于阗一省
 
+## ev.ev_cotan_entry.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_entry.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_entry.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+
+## ev.ev_cotan_a.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_a.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_a.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+
+## ev.ev_cotan_b.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_b.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_b.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+
+## ev.ev_cotan_c.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_c.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_c.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+
+## ev.ev_cotan_consequence_a.title
+
+于阗：门上的印记
+
+## ev.ev_cotan_consequence_a.body
+
+第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从于阗带走什么。问题背后正是玉河与绿洲；你须决定如何对待这道征兆。
+
+## ev.ev_cotan_consequence_a.choice_1
+
+记下这个名字，追问谁能为它作保
+
+## ev.ev_cotan_consequence_a.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_consequence_a.choice_2
+
+谢过来人，把自己的打算收在心里
+
+## ev.ev_cotan_consequence_a.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_consequence_a_resolution.title
+
+于阗：后果显出形状
+
+## ev.ev_cotan_consequence_a_resolution.body
+
+你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_cotan_consequence_a_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_cotan_consequence_a_resolution.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_consequence_a_resolution.choice_2
+
+把这道征兆收进自己的行纪
+
+## ev.ev_cotan_consequence_a_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_consequence_b.title
+
+于阗：回答之后的路
+
+## ev.ev_cotan_consequence_b.body
+
+回答把一条传闻送上了道路。日落之前，一个熟悉于阗日常生计的人又讲起玉河与绿洲。这说法不如游记宏大，却更适合带在身上。
+
+## ev.ev_cotan_consequence_b.choice_1
+
+照着这条实用的建议走
+
+## ev.ev_cotan_consequence_b.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_consequence_b.choice_2
+
+把这条传闻留给讲述它的人
+
+## ev.ev_cotan_consequence_b.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.ev_cotan_consequence_b_resolution.title
+
+于阗：后果显出形状
+
+## ev.ev_cotan_consequence_b_resolution.body
+
+你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_cotan_consequence_b_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_cotan_consequence_b_resolution.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.ev_cotan_consequence_b_resolution.choice_2
+
+把这道征兆收进自己的行纪
+
+## ev.ev_cotan_consequence_b_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.cotan.mentor_closure.title
+
+于阗的引路人
+
+## ev.cotan.mentor_closure.body
+
+离开于阗之前，玉河边的守井人问你从这里看出了什么。这个教诲不是法术，也不是交易；它只是教你留意道路转弯之后真正有用的细节。
+
+## ev.cotan.mentor_closure.choice_1
+
+问这条路将要求你付出什么
+
+## ev.cotan.mentor_closure.choice_1_result
+
+这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+
+## ev.cotan.mentor_closure.choice_2
+
+留下 一日，听完这段完整的讲述
+
+## ev.cotan.mentor_closure.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+
+## ev.cotan.mentor_closure.choice_3
+
+谢过引路人，继续上路
+
+## ev.cotan.mentor_closure.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。

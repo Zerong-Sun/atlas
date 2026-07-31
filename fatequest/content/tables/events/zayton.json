@@ -14,6 +14,7 @@
       "choices": [
         {
           "label": "ev.zayton.entry.choice.customs",
+          "resultText": "ev.ev_zayton_entry.choice_1_result",
           "effects": [
             { "op": "days", "value": 2, "reason": "waited-out-the-tithe-clerks" },
             { "op": "codex", "value": "cx-zayton-tithe", "reason": "learned-the-kaans-duties" },
@@ -23,6 +24,7 @@
         },
         {
           "label": "ev.zayton.entry.choice.slip",
+          "resultText": "ev.ev_zayton_entry.choice_2_result",
           "needs": { "language": "chinese" },
           "effects": [
             { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "avoided-the-tithe-clerks" },
@@ -33,6 +35,7 @@
         },
         {
           "label": "ev.zayton.entry.choice.ask_ships",
+          "resultText": "ev.ev_zayton_entry.choice_3_result",
           "effects": [
             { "op": "days", "value": 1, "reason": "counted-the-shipping" },
             { "op": "codex", "value": "cx-hundred-shiploads", "reason": "counted-the-shipping" },
@@ -58,15 +61,19 @@
       "choices": [
         {
           "label": "ev.zayton.ledger_consequence.choice.copy",
+          "resultText": "ev.ev_zayton_ledger_consequence.choice_1_result",
           "effects": [
             { "op": "item", "value": "it-zayton-duty-copy", "reason": "received-a-duty-copy" },
             { "op": "reveal_city", "value": "kinsay", "level": 1, "reason": "the-ledger-named-kinsay" },
             { "op": "reveal_route", "value": "rt-kinsay-zayton", "level": 1, "reason": "the-ledger-listed-the-coastal-road" },
             { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-in-the-ledger" }
+          ,
+            { "op": "queue_event", "value": "ev-zayton-ledger-consequence-resolution", "reason": "zayton-a-resolution" }
           ]
         },
         {
           "label": "ev.zayton.ledger_consequence.choice.refuse",
+          "resultText": "ev.ev_zayton_ledger_consequence.choice_2_result",
           "effects": [
             { "op": "reputation", "value": -1, "scope": "city", "id": "zayton", "reason": "refused-the-ledger-copy" },
             { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-without-a-copy" }
@@ -86,15 +93,19 @@
       "choices": [
         {
           "label": "ev.zayton.watch_consequence.choice.pay",
+          "resultText": "ev.ev_zayton_watch_consequence.choice_1_result",
           "needs": { "coins": { "min": 1200 } },
           "effects": [
             { "op": "coins", "value": -1200, "reason": "paid-the-late-declaration-fee" },
             { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "the-watch-cleared-the-missing-mark" },
             { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-declared-late" }
+          ,
+            { "op": "queue_event", "value": "ev-zayton-watch-consequence-resolution", "reason": "zayton-b-resolution" }
           ]
         },
         {
           "label": "ev.zayton.watch_consequence.choice.submit",
+          "resultText": "ev.ev_zayton_watch_consequence.choice_2_result",
           "effects": [
             { "op": "days", "value": 2, "reason": "cargo-was-held-for-inspection" },
             { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "inspection-cleared-the-missing-mark" },
@@ -115,6 +126,7 @@
       "choices": [
         {
           "label": "ev.zayton.pilot_consequence.choice.chamba",
+          "resultText": "ev.ev_zayton_pilot_consequence.choice_1_result",
           "effects": [
             { "op": "reveal_city", "value": "chamba", "level": 1, "reason": "the-pilot-named-chamba" },
             { "op": "reveal_route", "value": "rt-chamba-zayton", "level": 1, "reason": "the-pilot-described-the-monsoon-lane" },
@@ -123,6 +135,7 @@
         },
         {
           "label": "ev.zayton.pilot_consequence.choice.local",
+          "resultText": "ev.ev_zayton_pilot_consequence.choice_2_result",
           "effects": [
             { "op": "reveal_city", "value": "fuju", "level": 1, "reason": "the-pilot-named-fuju" },
             { "op": "reveal_route", "value": "rt-fuju-zayton", "level": 1, "reason": "the-pilot-described-the-northern-road" },
@@ -144,6 +157,7 @@
       "choices": [
         {
           "label": "ev.zayton.harbour.choice.pepper",
+          "resultText": "ev.ev_zayton_harbour.choice_1_result",
           "needs": { "coins": { "min": 18000 } },
           "effects": [
             { "op": "coins", "value": -18000, "reason": "bought-pepper-at-the-quay" },
@@ -153,6 +167,7 @@
         },
         {
           "label": "ev.zayton.harbour.choice.monsoon",
+          "resultText": "ev.ev_zayton_harbour.choice_2_result",
           "effects": [
             { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "pilots-named-the-monsoon-lane" },
             { "op": "codex", "value": "cx-monsoon", "reason": "learned-the-monsoon" },
@@ -161,6 +176,7 @@
         },
         {
           "label": "ev.zayton.harbour.choice.watch",
+          "resultText": "ev.ev_zayton_harbour.choice_3_result",
           "effects": [
             { "op": "sticker", "value": "st-zayton-haven", "reason": "stood-a-day-at-the-haven" },
             { "op": "codex", "value": "cx-hundred-shiploads", "reason": "stood-a-day-at-the-haven" },
@@ -186,6 +202,7 @@
       "choices": [
         {
           "label": "ev.zayton.fanfang.choice.persian",
+          "resultText": "ev.ev_zayton_fanfang.choice_1_result",
           "needs": { "language": "persian" },
           "effects": [
             { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "persian-traders-named-the-sea-road" },
@@ -195,6 +212,7 @@
         },
         {
           "label": "ev.zayton.fanfang.choice.interpreter",
+          "resultText": "ev.ev_zayton_fanfang.choice_2_result",
           "needs": { "coins": { "min": 3000 } },
           "effects": [
             { "op": "coins", "value": -3000, "reason": "paid-a-lad-to-interpret" },
@@ -205,6 +223,7 @@
         },
         {
           "label": "ev.zayton.fanfang.choice.silk",
+          "resultText": "ev.ev_zayton_fanfang.choice_3_result",
           "needs": { "coins": { "min": 12000 } },
           "effects": [
             { "op": "coins", "value": -12000, "reason": "bought-a-bolt-of-silk" },
@@ -231,6 +250,7 @@
       "choices": [
         {
           "label": "ev.zayton.mazu.choice.offer",
+          "resultText": "ev.ev_zayton_mazu.choice_1_result",
           "needs": { "coins": { "min": 800 } },
           "effects": [
             { "op": "coins", "value": -800, "reason": "an-offering-before-sailing" },
@@ -241,6 +261,7 @@
         },
         {
           "label": "ev.zayton.mazu.choice.lots",
+          "resultText": "ev.ev_zayton_mazu.choice_2_result",
           "needs": { "learned_divination": ["lot"] },
           "divination": "lot",
           "pass": {
@@ -259,6 +280,7 @@
         },
         {
           "label": "ev.zayton.mazu.choice.watch",
+          "resultText": "ev.ev_zayton_mazu.choice_3_result",
           "effects": [
             { "op": "codex", "value": "cx-sea-goddess", "reason": "watched-the-sailors-at-prayer" },
             { "op": "sticker", "value": "st-zayton-mazu", "reason": "watched-the-sailors-at-prayer" }
@@ -287,6 +309,7 @@
       "choices": [
         {
           "label": "ev.zayton.mentor.choice.learn",
+          "resultText": "ev.ev_zayton_mentor.choice_1_result",
           "needs": { "coins": { "min": 5000 }, "not_flags": ["fl-learned-lot"] },
           "effects": [
             { "op": "coins", "value": -5000, "reason": "a-gift-to-the-temple-diviner" },
@@ -297,6 +320,7 @@
         },
         {
           "label": "ev.zayton.mentor.choice.learn_jiaobei",
+          "resultText": "ev.ev_zayton_mentor.choice_2_result",
           "needs": { "coins": { "min": 3000 }, "not_flags": ["fl-learned-jiaobei"] },
           "effects": [
             { "op": "coins", "value": -3000, "reason": "offering-for-the-jiaobei-lesson" },
@@ -307,6 +331,7 @@
         },
         {
           "label": "ev.zayton.mentor.choice.ask",
+          "resultText": "ev.ev_zayton_mentor.choice_3_result",
           "effects": [
             { "op": "codex", "value": "cx-lots", "reason": "heard-how-the-lots-are-read" }
           ]

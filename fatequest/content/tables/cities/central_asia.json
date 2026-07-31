@@ -125,6 +125,7 @@
         ]
       },
       "mentor": "npc-balc-mentor",
+      "mentorEvent": "ev-balc-mentor",
       "specialty": "jade",
       "calendars": [
         "islamic",
@@ -321,6 +322,7 @@
         ]
       },
       "mentor": "npc-cascar-mentor",
+      "mentorEvent": "ev-cascar-mentor",
       "specialty": "jade",
       "calendars": [
         "islamic",
@@ -438,6 +440,7 @@
         ]
       },
       "mentor": "npc-cotan-mentor",
+      "mentorEvent": "ev-cotan-mentor",
       "specialty": "jade",
       "calendars": [
         "islamic",
@@ -616,6 +619,7 @@
         ]
       },
       "mentor": "npc-lop-guide",
+      "mentorEvent": "ev-lop-mentor",
       "specialty": "jade",
       "calendars": [
         "islamic",
@@ -854,6 +858,7 @@
         ]
       },
       "mentor": "npc-samarcanda-mentor",
+      "mentorEvent": "ev-samarcanda-mentor",
       "specialty": "jade",
       "calendars": [
         "islamic",

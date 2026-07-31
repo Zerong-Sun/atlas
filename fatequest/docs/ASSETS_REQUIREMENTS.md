@@ -1,6 +1,6 @@
 # 素材总索引 · ASSETS REQUIREMENTS
 
-**2026-07-27 · Godot v3.0 唯一维护线。** 本文汇总美术、音频、文本三类素材的**实测库存、接线状态、缺口与文档入口**。原则：**已有尽量接线使用，不丢文件；重复副本归档并注明 canonical 路径。**
+**2026-07-31 · Godot v3.0 唯一维护线。** 本文汇总美术、音频、文本三类素材的**实测库存、接线状态、缺口与文档入口**。原则：**已有尽量接线使用，不丢文件；重复副本归档并注明 canonical 路径。**
 
 ---
 
@@ -17,10 +17,10 @@
 
 ---
 
-## 1. 美术（2026-07-27 实测 · S1b 完成）
+## 1. 美术（2026-07-30 实测 · P3/P4 落盘）
 
 ```
-assets/art/*.webp（根目录）     650 张
+assets/art/*.webp（根目录）     674 张
   _archive/（抓图归档）         128 张   ← 生产图之外的 Chat 变体，勿删
   _sheets/（组图原片）            58 张
 assets/decks/iching/             30/64 牌面
@@ -29,10 +29,10 @@ assets/decks/tarot/              78 张
 
 | 接线 | 数量 | 说明 |
 |---|---|---|
-| Godot 运行时（`MapArt` + `art_wire_index.json`） | **650** | 全量可解析 |
-| **未接线** | **0** | S1b ✅ 2026-07-27 |
+| Godot 运行时（`MapArt` + `art_wire_index.json`） | **674** | 全量可解析 |
+| **未接线** | **0** | S1c ✅ 2026-07-30 |
 
-**仍缺出图**（规格见 `ART_REQUIREMENTS.md`）：`scene-region-chr` 重绘 1 · 白图泰 6+18 · 易经 31–64（34）。货币／贴纸／随从／契约已交付；雇佣签契屏见 `game/ui/hire_contract.gd`。
+**仍缺出图**（规格见 `ART_REQUIREMENTS.md`）：易经 31–64（34）。P3 chr 重绘与白图泰 6+18 已交付；货币／贴纸／随从／契约已交付；雇佣签契屏见 `game/ui/hire_contract.gd`。
 
 **归档策略**：
 
@@ -69,10 +69,10 @@ assets/audio/          37 个 .ogg
 
 ```
 content/story/         109 单元 · {en,zh}.md
-content/i18n/          en/zh 各 2482 条 · 缺 0
-content/tables/events/ 276 条（entry 102 · site 93 · road 81）
+content/i18n/          en/zh 各 3169 条 · 缺 0
+content/tables/events/ 331 条（entry 102 · site 93 · mentor 12 · road 81 · consequence 49）
 glossary               97 条
-stamps                 1322 current · 0 stale
+stamps                 1830 current · 0 stale
 ```
 
 | 任务 | 量 | 状态 |
@@ -87,7 +87,7 @@ stamps                 1322 current · 0 stale
 ```bash
 cd fatequest
 python3 tools/art/audit.py              # 美术完整性（需 pillow+numpy）
-node tools/validate/validate.mjs        # 24 道内容门禁
+node tools/validate/validate.mjs        # 25 道内容门禁
 node tools/lore/story.mjs check         # 译文时效
 godot --headless --path . --script tests/run_tests.gd
 ```
@@ -96,8 +96,8 @@ godot --headless --path . --script tests/run_tests.gd
 
 ## 5. Steam 上架素材优先级
 
-1. ~~接线现有素材~~ ✅ 650/650
+1. ~~接线现有素材~~ ✅ 674/674
 2. ~~动画 N2–N3~~ ✅
-3. **chr 底板重绘 + 白图泰专图** — 视觉差异化（规格已写）
+3. ~~chr 底板重绘 + 白图泰专图~~ ✅ 2026-07-30
 4. **易经下半** — 牌组完整度 polish
 5. **可选加深续作** — `TEXT_REQUIREMENTS.md` §3

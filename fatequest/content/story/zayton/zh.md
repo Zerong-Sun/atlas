@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: 2bb7377003d9
+source_rev: b6f4a6240b67
 status: translated
 translator: 人工校译
 notes: >
@@ -65,6 +65,41 @@ stamps:
   market.zayton.item.silk: cb0933e8d1cc
   market.zayton.item.sugar: c92a7af00746
   market.zayton.item.tea: d8a2a9c1a5a2
+  ev.ev_zayton_entry.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_entry.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_entry.choice_3_result: 0f17302674f3
+  ev.ev_zayton_jiaobei_ask.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_jiaobei_ask.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_pilot_consequence.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_pilot_consequence.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_harbour.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_harbour.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_harbour.choice_3_result: 0f17302674f3
+  ev.ev_zayton_fanfang.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_fanfang.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_fanfang.choice_3_result: 0f17302674f3
+  ev.ev_zayton_mazu.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_mazu.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_mazu.choice_3_result: 0f17302674f3
+  ev.ev_zayton_mentor.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_mentor.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_mentor.choice_3_result: 0f17302674f3
+  ev.ev_zayton_ledger_consequence_resolution.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_watch_consequence_resolution.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_watch_consequence_resolution.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_ledger_consequence.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_ledger_consequence.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_watch_consequence.choice_1_result: ff1ff815c02d
+  ev.ev_zayton_watch_consequence.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_ledger_consequence_resolution.title: 7a639d219752
+  ev.ev_zayton_ledger_consequence_resolution.body: 357c2908f927
+  ev.ev_zayton_ledger_consequence_resolution.choice_1: 3b4827283f98
+  ev.ev_zayton_ledger_consequence_resolution.choice_2: c200bc7d41b1
+  ev.ev_zayton_watch_consequence_resolution.title: 7a639d219752
+  ev.ev_zayton_watch_consequence_resolution.body: 827b72f18207
+  ev.ev_zayton_watch_consequence_resolution.choice_1: 3b4827283f98
+  ev.ev_zayton_watch_consequence_resolution.choice_2: c200bc7d41b1
 ---
 
 ## city.zayton.name
@@ -306,3 +341,143 @@ stamps:
 ## market.zayton.item.tea
 
 茶饼，压成砖，盖着产区印戳。码头上茶砖换胡椒，一比一。
+
+## ev.ev_zayton_entry.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_entry.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_entry.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+
+## ev.ev_zayton_jiaobei_ask.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_jiaobei_ask.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_pilot_consequence.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_pilot_consequence.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_harbour.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_harbour.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_harbour.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+
+## ev.ev_zayton_fanfang.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_fanfang.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_fanfang.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+
+## ev.ev_zayton_mazu.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_mazu.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_mazu.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+
+## ev.ev_zayton_mentor.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_mentor.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_mentor.choice_3_result
+
+你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_watch_consequence_resolution.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_watch_consequence_resolution.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_ledger_consequence.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_ledger_consequence.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_watch_consequence.choice_1_result
+
+这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+
+## ev.ev_zayton_watch_consequence.choice_2_result
+
+事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+
+## ev.ev_zayton_ledger_consequence_resolution.title
+
+刺桐：后果显出形状
+
+## ev.ev_zayton_ledger_consequence_resolution.body
+
+你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_2
+
+把这道征兆收进自己的行纪
+
+## ev.ev_zayton_watch_consequence_resolution.title
+
+刺桐：后果显出形状
+
+## ev.ev_zayton_watch_consequence_resolution.body
+
+你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+
+## ev.ev_zayton_watch_consequence_resolution.choice_1
+
+在天黑前把这份引荐送到
+
+## ev.ev_zayton_watch_consequence_resolution.choice_2
+
+把这道征兆收进自己的行纪

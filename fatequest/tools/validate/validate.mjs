@@ -1005,12 +1005,68 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------------------------------------ G28: twelve metropolis narrative closure
+// Every player-facing choice in the first production slice must either show a
+// result or enqueue a consequence. The first two entry choices are the long
+// branches: each must reach a branch page and a resolution page before the
+// player returns to city exploration. This catches the original defect where
+// a choice applied state and then silently ended the story.
+{
+  const closureCities = new Set([
+    "balc", "cascar", "cotan", "lop", "samarcanda", "cambaluc",
+    "kinsay", "zayton", "chandu", "baldacum", "ormus", "tauris",
+  ]);
+  const enPath = join(ROOT, "content/i18n/en.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
+  const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  const graph = new Map((byTable.events ?? []).map((e) => [e.id, new Set()]));
+  for (const e of byTable.events ?? []) for (const ch of e.choices ?? [])
+    for (const ef of ch.effects ?? []) if (ef.op === "queue_event" && eventIds.has(ef.value)) graph.get(e.id)?.add(String(ef.value));
+  const reach = (start) => {
+    const seen = new Set(), todo = [start];
+    while (todo.length) {
+      const id = todo.shift();
+      if (seen.has(id)) continue;
+      seen.add(id);
+      for (const next of graph.get(id) ?? []) todo.push(next);
+    }
+    return seen;
+  };
+  const textExists = (key) => key && en[key] !== undefined && zh[key] !== undefined;
+  for (const city of closureCities) {
+    const c = (byTable.cities ?? []).find((row) => row.id === city);
+    if (!c || c.tier !== "metropolis") { err("G28", "cities", `${city}: closure target is not a metropolis`); continue; }
+    const ids = new Set([c.entryEvent, ...(c.sites ?? []), ...(c.mentorEvent ? [c.mentorEvent] : [])]);
+    for (const e of byTable.events ?? [])
+      if (e.when?.cities?.includes(city) && ["entry", "site", "mentor", "consequence"].includes(e.kind)) ids.add(e.id);
+    for (const id of ids) {
+      const e = (byTable.events ?? []).find((row) => row.id === id);
+      if (!e) { err("G28", `events:${city}`, `${id}: target event missing`); continue; }
+      for (const [i, ch] of (e.choices ?? []).entries()) {
+        const hasQueue = (ch.effects ?? []).some((ef) => ef.op === "queue_event");
+        if (!ch.resultText && !hasQueue)
+          err("G28", `events:${e.id}`, `choice ${i + 1} has no resultText or queue_event`);
+        for (const key of [e.title, e.body, ch.label, ch.resultText])
+          if (key && !textExists(key)) err("G28", `events:${e.id}`, `missing bilingual text key "${key}"`);
+      }
+    }
+    const entry = (byTable.events ?? []).find((e) => e.id === c.entryEvent);
+    for (const [i, ch] of (entry?.choices ?? []).slice(0, 2).entries()) {
+      const target = (ch.effects ?? []).find((ef) => ef.op === "queue_event")?.value;
+      if (!target) { err("G28", `events:${c.entryEvent}`, `important choice ${i + 1} must queue a consequence`); continue; }
+      if (reach(String(target)).size < 2)
+        err("G28", `events:${c.entryEvent}`, `important choice ${i + 1} reaches fewer than 2 consequence pages`);
+    }
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
