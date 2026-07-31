@@ -14,7 +14,9 @@
 | i18n 结构测试 | ✅ 3169/3169，0 raw key |
 | 资源接线 | ✅ 项目资源审计 `--unused` 无未接线输出 |
 | 差异格式 | ✅ `git diff --check` |
-| Godot 单测 | ⏸ 当前环境未安装 Godot CLI，待有 Godot 4.7.1 的环境执行 |
+| Godot 版本 | ✅ `/Applications/Godot.app`，4.7.1.stable.official |
+| Godot 单测 | ✅ `tests/run_tests.gd`：SUITE PASS |
+| Godot smoke | ✅ boot、Zayton、旅途恢复、完整流程、party、benchmark 全部通过 |
 
 ## 剧情重点
 
@@ -32,4 +34,13 @@ node tests/test_i18n_lines.mjs
 scripts/art-gen-kit/.venv/bin/python tools/art/audit.py --unused
 git diff --check
 godot --headless --path . --script tests/run_tests.gd
+godot --headless --path . --script tests/smoke_boot.gd
+godot --headless --path . --script tests/smoke_zayton.gd
+godot --headless --path . --script tests/smoke_journey_resume.gd
+godot --headless --path . --script tests/smoke_fatequest_flow.gd
+godot --headless --path . --script tests/smoke_party.gd
+godot --headless --path . --script tests/benchmark_systems.gd
 ```
+
+Godot 4.7.1 兼容修正：运行时翻译不得放入 `const` 字典；HUD 改为惰性初始化，
+字号标签改为调用时生成。设置页的 reduced-motion 回调也补齐了闭合括号。

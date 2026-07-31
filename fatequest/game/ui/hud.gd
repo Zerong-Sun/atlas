@@ -36,14 +36,20 @@ var _quiet: bool = true
 
 ## Long-form labels for each cell, shown on hover. The bar is terse by
 ## necessity; the meaning of "行52" should not depend on having read the manual.
-const TIPS := {
-	"place": I18n.t("ui.current_location"),
-	"date": "当地历法日期 · 干支",
-	"coins": "钱袋（银）",
-	"days": I18n.t("ui.days_travelled"),
-	"cargo": "货格 已用／总数",
-	"fate": "命运三轴：行旅 · 交游 · 财货",
-}
+var _tips: Dictionary = {}
+
+
+func _tip(key: String, fallback: String = "") -> String:
+	if _tips.is_empty():
+		_tips = {
+			"place": I18n.t("ui.current_location"),
+			"date": "当地历法日期 · 干支",
+			"coins": "钱袋（银）",
+			"days": I18n.t("ui.days_travelled"),
+			"cargo": "货格 已用／总数",
+			"fate": "命运三轴：行旅 · 交游 · 财货",
+		}
+	return String(_tips.get(key, fallback))
 
 
 func _ready() -> void:
@@ -57,7 +63,7 @@ func _ready() -> void:
 func _cell(key: String, emoji: String, art: Texture2D = null) -> void:
 	var box := HBoxContainer.new()
 	box.add_theme_constant_override("separation", Metrics.xs() + 1)
-	box.tooltip_text = String(TIPS.get(key, ""))
+	box.tooltip_text = _tip(key)
 	# The whole cell answers the tooltip, not just the glyph — a 18 px icon is
 	# a small target to have to find with the pointer.
 	box.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -124,7 +130,7 @@ func build() -> void:
 		tr.custom_minimum_size = Vector2(d, d)
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		tr.tooltip_text = String(TIPS.get("fate", axis))
+		tr.tooltip_text = _tip("fate", axis)
 		_fate_bars.add_child(tr)
 	if _fate_bars.get_child_count() > 0:
 		_grid.add_child(_fate_bars)

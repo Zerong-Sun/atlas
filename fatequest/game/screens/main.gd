@@ -1454,6 +1454,7 @@ func _build_settings() -> void:
 	motion.pressed.connect(func():
 		Motion.reduce_motion = not Motion.reduce_motion
 		motion.text = I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off"))
+	)
 	box.add_child(motion)
 
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))

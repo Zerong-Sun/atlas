@@ -133,6 +133,7 @@ func run() -> bool:
 
 	var day0 := st.jdn
 	var elapsed0 := st.days_elapsed
+	var pending_before_trip := st.pending_events.duplicate()
 	var trip := travel.depart(road, "caravan", st, rng)
 	_ok(trip.get("ok", false), "confirmed legal journey settles")
 	_ok(st.city == "sachiu", "arrived at Sachiu")
@@ -143,7 +144,8 @@ func run() -> bool:
 	_ok(st.jdn - day0 == trip["days"], "the calendar advanced by the same amount")
 	_ok(st.revealed.get("sachiu", 0) > 0, "destination revealed on the map")
 	_ok(not st.active_journey.is_empty(), "journey checkpoint remains until encounters/arrival complete")
-	_ok(st.pending_events == trip.get("encounters", []), "selected road encounters are durable FIFO data")
+	var expected_pending := pending_before_trip + Array(trip.get("encounters", []))
+	_ok(st.pending_events == expected_pending, "selected road encounters append to durable FIFO data")
 	var nested_city := st.city
 	var nested_jdn := st.jdn
 	var nested_coins := st.coins

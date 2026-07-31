@@ -60,7 +60,12 @@ func _init() -> void:
 		and String(n._current_event.get("id", "")) == "ev-zayton-ledger-consequence"
 	n._resolve_choice(n._current_event, 0)
 	await process_frame
-	var defer_ok: bool = consequence_paused and consequence_resumed \
+	var consequence_continued: bool = n._dialog_layer.visible \
+		and String(n._current_event.get("id", "")) == "ev-zayton-ledger-consequence-resolution"
+	if consequence_continued:
+		n._resolve_choice(n._current_event, 0)
+		await process_frame
+	var defer_ok: bool = consequence_paused and consequence_resumed and consequence_continued \
 		and n.state.active_event.is_empty() and n.state.pending_events.is_empty()
 
 	# A known city is clickable, and selecting travel is not yet departure.

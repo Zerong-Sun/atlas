@@ -17,12 +17,6 @@ const STEPS := {
 	Size.LARGE: 1.25,
 	Size.HUGE: 1.55,
 }
-const LABELS := {
-	Size.SMALL: I18n.t("ui.font_small"),
-	Size.NORMAL: I18n.t("ui.font_normal"),
-	Size.LARGE: I18n.t("ui.font_large"),
-	Size.HUGE: I18n.t("ui.font_huge"),
-}
 
 ## Base sizes in points, before the step multiplier.
 const BASE_BODY := 17
@@ -66,7 +60,13 @@ static func cycle() -> int:
 
 
 static func label() -> String:
-	return LABELS.get(step, I18n.t("ui.font_normal"))
+	var labels := {
+		Size.SMALL: I18n.t("ui.font_small"),
+		Size.NORMAL: I18n.t("ui.font_normal"),
+		Size.LARGE: I18n.t("ui.font_large"),
+		Size.HUGE: I18n.t("ui.font_huge"),
+	}
+	return labels.get(step, I18n.t("ui.font_normal"))
 
 
 static func save() -> void:
