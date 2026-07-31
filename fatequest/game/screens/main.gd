@@ -1014,7 +1014,10 @@ func _on_event_dismissed() -> void:
 	# durable active_event with no way back to it.
 	if state != null and state.active_event == String(_current_event.get("id", "")):
 		_show_pending_pause()
+	elif state != null and not state.active_journey.is_empty():
+		_complete_journey()
 	elif _city_view.visible:
+		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())
 		_sync_city_status()
 	else:
 		_open_city()
@@ -1715,6 +1718,7 @@ func _clear_lesson_pending() -> void:
 func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> void:
 	var coins_before := state.coins
 	var choose_ctx := _ctx()
+	var result_text_key := ""
 	if not lesson_passed.is_empty():
 		choose_ctx["lesson_passed"] = lesson_passed
 	if state.active_event == String(ev.get("id", "")):
@@ -1731,9 +1735,9 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 		return
 	var choices: Array = ev.get("choices", [])
 	if index >= 0 and index < choices.size():
-		var result_text := String((choices[index] as Dictionary).get("resultText", ""))
-		if not result_text.is_empty():
-			_say("  · %s" % I18n.t(result_text))
+		result_text_key = String((choices[index] as Dictionary).get("resultText", ""))
+		if not result_text_key.is_empty():
+			_say("  · %s" % I18n.t(result_text_key))
 	if _audio_ready(): _audio.on_effect_result(res, {}, db.get_record(state.city), coins_before)
 	for line in res.log_lines:
 		_say("  · %s" % line)
@@ -1769,7 +1773,17 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 		_show_pending_pause()
 		return
 	if not state.active_journey.is_empty():
-		_complete_journey()
+		if result_text_key.is_empty():
+			_complete_journey()
+			return
+		# The result page must be dismissed before arrival; otherwise the player
+		# sees the city transition before they can read what the choice caused.
+		_dialog_layer.visible = true
+		_dialog.show_result(result_text_key)
+		return
+	if not result_text_key.is_empty():
+		_dialog_layer.visible = true
+		_dialog.show_result(result_text_key)
 		return
 	if _city_view.visible:
 		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())

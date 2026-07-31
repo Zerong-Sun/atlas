@@ -306,3 +306,35 @@ Keep the sign in your travel book
 ## ev.ev_tauris_consequence_b_resolution.choice_2_result
 
 The matter is not finished, but the next road is clear; your name travels ahead with the the bazaar and the snow-fed qanats.
+
+## ev.ev_tauris_a_merchants_followup.title
+
+Tauris: The Roads Behind the Rumour
+
+## ev.ev_tauris_a_merchants_followup.body
+
+The foreign merchants do not merely name places. One points south toward Ctesiphon, another warns that the road to Baudas follows a different rhythm of tolls and water. Their answers are useful only if you press them for the detail that belongs to your own journey.
+
+## ev.ev_tauris_a_merchants_followup.choice_1
+
+Ask which southern road is safest after the next levy
+
+## ev.ev_tauris_a_merchants_followup.choice_1_result
+
+The merchant marks the southern road in charcoal: Ctesiphon is now more than a name on a distant map.
+
+## ev.ev_tauris_a_merchants_followup.choice_2
+
+Share the warning with the caravan brokers
+
+## ev.ev_tauris_a_merchants_followup.choice_2_result
+
+The brokers lower their voices and add your warning to the day's road talk; a useful name now travels with you.
+
+## ev.ev_tauris_a_merchants_followup.choice_3
+
+Wait for the merchant who keeps the water ledger
+
+## ev.ev_tauris_a_merchants_followup.choice_3_result
+
+The water ledger gives you one more day's measure between wells. It costs time, but the next departure is no longer blind.

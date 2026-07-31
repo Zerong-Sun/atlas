@@ -159,6 +159,32 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	visible = true
 
 
+## A result is a page in the conversation, not a line that disappears into the
+## journal. Site choices often resolve immediately, so give their authored
+## feedback the same readable surface as the event body and an explicit way
+## to continue.
+func show_result(result_key: String) -> void:
+	restyle()
+	_title.text = I18n.t("ui.choice_result_title")
+	_origin.text = I18n.t("ui.source_authored")
+	_portrait.texture = null
+	_portrait.visible = false
+
+	var text := I18n.t(result_key)
+	_body.text = text
+	if I18n.is_untranslated(result_key):
+		_body.text += "\n[i][color=#6b5a3c](尚未译出，暂显英文原文)[/color][/i]"
+
+	for c in _choices.get_children():
+		c.queue_free()
+	var continue_btn := Panels.primary_button(I18n.t("ui.continue_pending"), func(): dismissed.emit())
+	continue_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	_choices.add_child(continue_btn)
+
+	_scroll.scroll_vertical = 0
+	visible = true
+
+
 ## N3 — stagger choice buttons (ANIMATION_PLAN §2.1 · 40 ms offset).
 func animate_choices() -> void:
 	var kids: Array = []

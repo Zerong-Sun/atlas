@@ -357,3 +357,35 @@ stamps:
 ## ev.ev_tauris_consequence_b_resolution.choice_2_result
 
 事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+
+## ev.ev_tauris_a_merchants_followup.title
+
+大不里士：传闻背后的道路
+
+## ev.ev_tauris_a_merchants_followup.body
+
+外国商人并不只是报出几个地名。有人指向南方的泰西封，有人提醒说，通往报达的道路有另一套关卡与水源节奏。只有追问与你自己的旅程有关的细节，这些回答才真正有用。
+
+## ev.ev_tauris_a_merchants_followup.choice_1
+
+追问下一道关卡之后，哪条南行道路最稳妥
+
+## ev.ev_tauris_a_merchants_followup.choice_1_result
+
+商人用炭笔标出了南行道路：泰西封不再只是远地图上的一个名字。
+
+## ev.ev_tauris_a_merchants_followup.choice_2
+
+把这条警告告诉商队经纪人
+
+## ev.ev_tauris_a_merchants_followup.choice_2_result
+
+经纪人压低声音，把你的警告添进当天的路上传闻；一个有用的名字如今随你同行。
+
+## ev.ev_tauris_a_merchants_followup.choice_3
+
+等那位记着水源账本的商人回来
+
+## ev.ev_tauris_a_merchants_followup.choice_3_result
+
+水源账本让你多得到一日井站之间的尺度。你付出了时间，却不再盲目启程。

@@ -1795,6 +1795,73 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-tauris-a-merchants-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_a_merchants_followup.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_a_merchants_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_a_merchants_followup.choice_1",
+          "resultText": "ev.ev_tauris_a_merchants_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ctesiphon",
+              "reason": "merchant-named-the-southern-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "recorded-the-road-warning"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_a_merchants_followup.choice_2",
+          "resultText": "ev.ev_tauris_a_merchants_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tauris",
+              "reason": "shared-the-road-warning"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "shared-the-road-warning"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_a_merchants_followup.choice_3",
+          "resultText": "ev.ev_tauris_a_merchants_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-merchants-ledger"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-road-sense",
+              "reason": "waited-for-the-merchants-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

@@ -35,6 +35,91 @@ const CITY_INFO = {
 };
 
 const METROPOLISES = Object.keys(CITY_INFO);
+
+// A site choice is not a closure merely because it has a resultText key. The
+// foreign-merchants choice is an authored information lead: it must open a
+// second page in the same interaction so the player can ask what the rumour
+// means and decide what to do with it.
+const SITE_FOLLOWUPS = {
+  "ev-tauris-a:0": {
+    city: "tauris",
+    id: "ev-tauris-a-merchants-followup",
+    record: {
+      id: "ev-tauris-a-merchants-followup",
+      kind: "consequence",
+      title: "ev.ev_tauris_a_merchants_followup.title",
+      when: { cities: ["tauris"] },
+      body: "ev.ev_tauris_a_merchants_followup.body",
+      once: true,
+      choices: [
+        {
+          label: "ev.ev_tauris_a_merchants_followup.choice_1",
+          resultText: "ev.ev_tauris_a_merchants_followup.choice_1_result",
+          effects: [
+            { op: "reveal_map", value: "ctesiphon", reason: "merchant-named-the-southern-road" },
+            { op: "codex", value: "cx-tauris", reason: "recorded-the-road-warning" },
+          ],
+        },
+        {
+          label: "ev.ev_tauris_a_merchants_followup.choice_2",
+          resultText: "ev.ev_tauris_a_merchants_followup.choice_2_result",
+          effects: [
+            { op: "reputation", value: 1, scope: "city", id: "tauris", reason: "shared-the-road-warning" },
+            { op: "codex", value: "cx-tauris", reason: "shared-the-road-warning" },
+          ],
+        },
+        {
+          label: "ev.ev_tauris_a_merchants_followup.choice_3",
+          resultText: "ev.ev_tauris_a_merchants_followup.choice_3_result",
+          effects: [
+            { op: "days", value: 1, reason: "waited-for-the-merchants-ledger" },
+            { op: "sticker", value: "st-tauris-road-sense", reason: "waited-for-the-merchants-ledger" },
+          ],
+        },
+      ],
+      lore: { origin: "authored" },
+    },
+    texts: {
+      title: [
+        "Tauris: The Roads Behind the Rumour",
+        "大不里士：传闻背后的道路",
+      ],
+      body: [
+        "The foreign merchants do not merely name places. One points south toward Ctesiphon, another warns that the road to Baudas follows a different rhythm of tolls and water. Their answers are useful only if you press them for the detail that belongs to your own journey.",
+        "外国商人并不只是报出几个地名。有人指向南方的泰西封，有人提醒说，通往报达的道路有另一套关卡与水源节奏。只有追问与你自己的旅程有关的细节，这些回答才真正有用。",
+      ],
+      choices: [
+        [
+          "Ask which southern road is safest after the next levy",
+          "追问下一道关卡之后，哪条南行道路最稳妥",
+        ],
+        [
+          "Share the warning with the caravan brokers",
+          "把这条警告告诉商队经纪人",
+        ],
+        [
+          "Wait for the merchant who keeps the water ledger",
+          "等那位记着水源账本的商人回来",
+        ],
+      ],
+      results: [
+        [
+          "The merchant marks the southern road in charcoal: Ctesiphon is now more than a name on a distant map.",
+          "商人用炭笔标出了南行道路：泰西封不再只是远地图上的一个名字。",
+        ],
+        [
+          "The brokers lower their voices and add your warning to the day's road talk; a useful name now travels with you.",
+          "经纪人压低声音，把你的警告添进当天的路上传闻；一个有用的名字如今随你同行。",
+        ],
+        [
+          "The water ledger gives you one more day's measure between wells. It costs time, but the next departure is no longer blind.",
+          "水源账本让你多得到一日井站之间的尺度。你付出了时间，却不再盲目启程。",
+        ],
+      ],
+    },
+  },
+};
+
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const writeJson = (p, v) => writeFileSync(p, JSON.stringify(v, null, 2) + "\n");
 const walkJson = (dir) => readdirSync(dir).flatMap((name) => {
@@ -217,8 +302,24 @@ function patchExistingEvents(eventsById, allEvents, citiesById) {
         const choice = event.choices[i];
         if (choice.resultText) {
           storyEntries.push([choice.resultText, feedbackText(city, eventId, i)]);
-          continue;
         }
+        const followup = SITE_FOLLOWUPS[`${event.id}:${i}`];
+        if (followup) {
+          const target = followup.id;
+          const hasQueue = (choice.effects ?? []).some((e) => e.op === "queue_event" && e.value === target);
+          if (!hasQueue) {
+            const labelPos = fileTexts.get(p).indexOf(`"label": ${q(choice.label)}`, span.start);
+            const effectsPos = fileTexts.get(p).indexOf('"effects": [', labelPos);
+            const effectsEnd = findMatching(fileTexts.get(p), effectsPos + '"effects": '.length, "[", "]");
+            if (effectsPos < 0 || effectsEnd < 0 || effectsEnd > span.end)
+              throw new Error(`cannot locate effects for ${event.id}[${i}]`);
+            const text = fileTexts.get(p);
+            const indent = (text.slice(text.lastIndexOf("\n", effectsEnd) + 1, effectsEnd).match(/^\s*/)?.[0] ?? "          ") + "  ";
+            addInsertion(p, effectsEnd, `,\n${indent}{ "op": "queue_event", "value": ${q(target)}, "reason": "${event.id}-followup" }\n${indent.slice(0, -2)}`);
+          }
+          queueTargets.set(target, city);
+        }
+        if (choice.resultText) continue;
         const labelPos = fileTexts.get(p).indexOf(`"label": ${q(choice.label)}`, span.start);
         if (labelPos < 0 || labelPos > span.end) throw new Error(`cannot locate label for ${eventId}[${i}]`);
         const lineEnd = fileTexts.get(p).indexOf("\n", labelPos);
@@ -348,6 +449,18 @@ function buildNewRecords(eventsById, queueTargets) {
           updated = text.slice(0, effectsEnd) + `,\n${indent}{ "op": "queue_event", "value": ${q(resolutionId)}, "reason": "${city}-${branch}-resolution" }\n${indent.slice(0, -2)}` + text.slice(effectsEnd);
         }
         writeFileSync(p, updated);
+      }
+    }
+    const siteFollowup = SITE_FOLLOWUPS["ev-tauris-a:0"];
+    if (city === siteFollowup.city) {
+      if (!byId.has(siteFollowup.id) && !eventsById.has(siteFollowup.id)) {
+        byId.set(siteFollowup.id, siteFollowup.record);
+      }
+      addStory(city, siteFollowup.record.title, siteFollowup.texts.title);
+      addStory(city, siteFollowup.record.body, siteFollowup.texts.body);
+      for (let i = 0; i < siteFollowup.texts.choices.length; i++) {
+        addStory(city, siteFollowup.record.choices[i].label, siteFollowup.texts.choices[i]);
+        addStory(city, siteFollowup.record.choices[i].resultText, siteFollowup.texts.results[i]);
       }
     }
     appendStory(city, storyByCity.get(city) ?? []);

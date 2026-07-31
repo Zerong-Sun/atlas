@@ -2684,6 +2684,8 @@
               "value": "cx-tauris",
               "reason": "heard-the-merchants-talk"
             }
+          ,
+            { "op": "queue_event", "value": "ev-tauris-a-merchants-followup", "reason": "ev-tauris-a-followup" }
           ]
         },
         {
