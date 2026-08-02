@@ -14,13 +14,15 @@ const GOODS_MAP_PATH := "res://assets/art/GOODS_ART_MAP.json"
 
 ## The four illustrated sets are Christian / Confucian / Islamic / Mazu — the
 ## civilisational silhouettes GDD §5.3 asks for. Data carries five `culture`
-## values, so steppe borrows the Confucian set (Karakorum and Chandu sit in the
-## Mongol-Chinese orbit) and indian_ocean borrows Mazu, the sea-folk set.
+## values, so steppe borrows the Islamic set (Karakorum and Chandu sit in the
+## Mongol-Chinese orbit, but so does every Central-Asian town the player will
+## cross before the desert ends — a Chinese silhouette in Balkh or Samarcand
+## read as an anachronism) and indian_ocean borrows Mazu, the sea-folk set.
 const CULTURE_SET := {
 	"latin": "chr",
 	"islamic": "isl",
 	"east_asia": "con",
-	"steppe": "con",
+	"steppe": "isl",
 	"indian_ocean": "mazu",
 }
 
@@ -70,9 +72,9 @@ const BAND_SCENE := {
 	"maritime_asia": "scene-region-mazu",
 	"india": "scene-region-mazu",
 	"europe": "scene-region-chr",
-	"west_asia": "scene-region-chr",
-	"central_asia": "scene-region-chr",
-	"steppe": "scene-region-chr",
+	"west_asia": "scene-region-isl",
+	"central_asia": "scene-region-isl",
+	"steppe": "scene-region-isl",
 }
 
 ## Venue keywords → portrait stem (npc-<venue>-<set>).

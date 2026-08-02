@@ -15,10 +15,12 @@ var _facts: Label
 var _confirm: Button
 var _route: Dictionary = {}
 var _mode := ""
+var _scroll: ScrollContainer
 
 
 func _ready() -> void:
 	custom_minimum_size = Vector2(640, 430)
+	clip_contents = true
 	add_theme_stylebox_override("panel", Palette.panel_style())
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", Metrics.sm())
@@ -28,17 +30,17 @@ func _ready() -> void:
 	_facts = Panels.label("", UiScale.ui(), Palette.ink_soft())
 	root.add_child(_facts)
 	root.add_child(Panels.rule())
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	root.add_child(scroll)
+	_scroll = ScrollContainer.new()
+	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	root.add_child(_scroll)
 	_intro = RichTextLabel.new()
 	_intro.bbcode_enabled = true
 	_intro.fit_content = true
 	_intro.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_intro.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_intro.add_theme_color_override("default_color", Palette.ink())
-	scroll.add_child(_intro)
+	_scroll.add_child(_intro)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", Metrics.sm())
 	root.add_child(row)
@@ -74,6 +76,25 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 		intro = ""
 	_intro.text = intro if not intro.is_empty() else "关于这座城市，你目前只知道一个名字与方向。"
 	_confirm.text = "确定出发 · %s →" % transport
+	_fit_scroll()
+
+
+## The prose window has a floor but the panel has a ceiling: at a large type
+## step the fixed head + button row can already fill the panel, and a long
+## entry chapter would push the confirm buttons out of reach. Measure what the
+## fixed parts actually need and compress the scroll to fit, keeping at least
+## two readable lines.
+func _fit_scroll() -> void:
+	if _scroll == null:
+		return
+	var vp := get_viewport_rect().size
+	var cap := minf(vp.y - float(Metrics.xl()) * 3.0, 520.0)
+	var scroll_min := float(_scroll.custom_minimum_size.y)
+	var fixed := get_minimum_size().y - scroll_min
+	var floor_h := float(UiScale.body()) * 2.0
+	var want := clampf(scroll_min, floor_h, maxf(floor_h, cap - fixed))
+	if absf(want - scroll_min) > 0.5:
+		_scroll.custom_minimum_size = Vector2(0, want)
 
 
 func _emit_confirmed() -> void:

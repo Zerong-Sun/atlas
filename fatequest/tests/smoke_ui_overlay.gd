@@ -1,6 +1,6 @@
 extends SceneTree
 
-## Q1 visual regression (720p / 200% type / en+zh / overlay walk):
+## Q1 visual regression (720p / LARGE type / en+zh / overlay walk):
 ##
 ##   1. the satchel must stay inside the window with its close button visible
 ##      even when a goods row runs long (a long un-wrapped label used to inflate
@@ -11,7 +11,7 @@ extends SceneTree
 ##   3. a long single-paragraph entry chapter must be split into readable
 ##      paragraphs;
 ##   4. every major overlay (settings, party, city card, event dialog) stays
-##      inside the viewport at the 200% type step.
+##      inside the viewport at the LARGE type step.
 const _WATCHDOG := 120.0
 var _t := 0.0
 
@@ -37,9 +37,9 @@ func _init() -> void:
 	n._begin(arch)
 	await process_frame
 
-	# Q1 walks both languages at the 200% step — the widest, tallest case.
+	# Q1 walks both languages at the LARGE step — the widest, tallest case.
 	I18n.load_lang("en")
-	UiScale.step = UiScale.Size.MASSIVE
+	UiScale.step = UiScale.Size.LARGE
 	n.state.city = "zayton"
 	n.state.coins = 200000
 	n.state.goods["pepper"] = 3

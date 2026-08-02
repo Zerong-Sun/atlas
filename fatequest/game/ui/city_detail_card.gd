@@ -13,10 +13,12 @@ var _title: Label
 var _intel: Label
 var _body: RichTextLabel
 var _routes: VBoxContainer
+var _scroll: ScrollContainer
 
 
 func _ready() -> void:
 	custom_minimum_size = Vector2(640, 460)
+	clip_contents = true
 	add_theme_stylebox_override("panel", Palette.panel_style())
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", Metrics.sm())
@@ -28,14 +30,14 @@ func _ready() -> void:
 	root.add_child(_intel)
 	root.add_child(Panels.rule())
 
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	root.add_child(scroll)
+	_scroll = ScrollContainer.new()
+	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	root.add_child(_scroll)
 	var content := VBoxContainer.new()
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	content.add_theme_constant_override("separation", Metrics.sm())
-	scroll.add_child(content)
+	_scroll.add_child(content)
 
 	_body = RichTextLabel.new()
 	_body.bbcode_enabled = true
@@ -94,3 +96,19 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 		_routes.add_child(Panels.label(
 			"知道这座城市，但尚未获知任何可靠的通行道路。",
 			UiScale.ui(), Palette.ink_soft()))
+	_fit_scroll()
+
+
+## Compress the scroll so the close button always stays on screen at any type
+## step, the same ceiling the event dialog applies to its prose.
+func _fit_scroll() -> void:
+	if _scroll == null:
+		return
+	var vp := get_viewport_rect().size
+	var cap := minf(vp.y - float(Metrics.xl()) * 3.0, 520.0)
+	var scroll_min := float(_scroll.custom_minimum_size.y)
+	var fixed := get_minimum_size().y - scroll_min
+	var floor_h := float(UiScale.body()) * 2.0
+	var want := clampf(scroll_min, floor_h, maxf(floor_h, cap - fixed))
+	if absf(want - scroll_min) > 0.5:
+		_scroll.custom_minimum_size = Vector2(0, want)

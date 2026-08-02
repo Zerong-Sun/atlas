@@ -49,6 +49,9 @@ var _dialog: PanelContainer
 var _dialog_layer: Control
 var _current_event: Dictionary = {}
 var _controls: HFlowContainer
+## The right spine: the bag and party buttons, kept apart from the top bar so
+## the map art and the top-right city labels stay visible.
+var _right_spine: VBoxContainer
 ## The bottom docks, kept so a font change can re-measure their height instead
 ## of leaving them at the 150 px that only ever suited the NORMAL step.
 var _log_wrap: PanelContainer
@@ -91,7 +94,10 @@ var _pending_pages_in_sequence := 0
 func _ready() -> void:
 	_resolve_audio()
 	UiScale.load_prefs()
-	I18n.load_lang("zh")
+	# Default to Chinese when the config holds no saved language; load_prefs()
+	# has already switched I18n to the persisted language if one exists.
+	if I18n.lang() != "zh" and I18n.lang() != "en":
+		I18n.load_lang("zh")
 	var n := db.load_all()
 	DivinationData.bind(db)
 	DivinationBootstrap.register_all()
@@ -808,7 +814,8 @@ func _build_divination_lesson() -> void:
 	_lesson_ui.skipped.connect(_on_lesson_skipped)
 
 
-func _show_transit(route: Dictionary, mode: String, dest: String, days: int) -> void:
+func _show_transit(route: Dictionary, mode: String, dest: String, days: int,
+		hold: bool = false) -> void:
 	if _transit_layer == null:
 		return
 	var here := db.get_record(state.city)
@@ -827,19 +834,25 @@ func _show_transit(route: Dictionary, mode: String, dest: String, days: int) -> 
 		_city_name(dest), days, I18n.t("transport.%s.name" % mode)]
 	_transit_layer.visible = true
 	# Brief beat so the plate is seen; the next event / arrival clears it.
-	get_tree().create_timer(0.85).timeout.connect(func():
-		if is_instance_valid(_transit_layer):
-			_transit_layer.visible = false)
+	# When a road event is queued the plate stays up for the whole passage —
+	# the 0.85 s beat used to be swallowed by the event dialog that opened
+	# instantly over it, which read as "the return trip had no animation".
+	if not hold:
+		get_tree().create_timer(0.85).timeout.connect(func():
+			if is_instance_valid(_transit_layer):
+				_transit_layer.visible = false)
 
 
 ## Reader controls. Text size and contrast are not preferences to bury in a
 ## menu on a game made of prose — they decide whether it can be read at all.
 func _build_controls() -> void:
-	# Eight buttons were crammed into a hard 418 px slot (offset_left = -430).
-	# At the LARGE step that overflows; at HUGE the last three run off the left
-	# of their own bar and 缩小 becomes unreachable. A flow container wraps to a
-	# second row instead, and the bar is anchored to the top-right corner so it
-	# stays put whatever the window size.
+	# The top bar used to carry eight buttons crammed into a hard slot; at the
+	# LARGE step it overflowed, and at HUGE it covered the map art and pushed
+	# the 缩小 button unreachable. All those commands live in the settings panel
+	# now. The top-right corner keeps only 设置 — the one thing a player may
+	# need with the map still open — and the two panels you open while on the
+	# road (行囊, 同行) sit on a slim right spine instead, so neither the bar
+	# nor the spine hides the map.
 	var bar := HFlowContainer.new()
 	bar.set_anchors_preset(Control.PRESET_TOP_RIGHT)
 	bar.grow_horizontal = Control.GROW_DIRECTION_BEGIN
@@ -850,16 +863,19 @@ func _build_controls() -> void:
 	bar.add_theme_constant_override("v_separation", Metrics.xs())
 	add_child(bar)
 
-	bar.add_child(_ctl(I18n.t("ui.bag"), _open_bag))
-	bar.add_child(_ctl(I18n.t("ui.codex"), _open_codex))
-	bar.add_child(_ctl(I18n.t("ui.party"), _open_party))
-	bar.add_child(_ctl(I18n.t("ui.ending"), _open_ending))
-	bar.add_child(_ctl(I18n.t("ui.save"), _open_save_manager))
-	bar.add_child(_ctl(I18n.t("ui.settings"), func(): Motion.crossfade_in(_settings["layer"], 0.18)))
-	bar.add_child(_ctl(I18n.t("ui.reset_view"), func(): _map.center_on(state.city)))
-	bar.add_child(_ctl(I18n.t("ui.zoom_in"), func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
-	bar.add_child(_ctl(I18n.t("ui.zoom_out"), func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
+	bar.add_child(_ctl_key("ui.settings", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
 	_controls = bar
+
+	var spine := VBoxContainer.new()
+	spine.set_anchors_preset(Control.PRESET_CENTER_RIGHT)
+	spine.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+	spine.offset_right = -12
+	spine.alignment = BoxContainer.ALIGNMENT_CENTER
+	spine.add_theme_constant_override("separation", Metrics.xs())
+	add_child(spine)
+	spine.add_child(_ctl_key("ui.bag", _open_bag))
+	spine.add_child(_ctl_key("ui.party", _open_party))
+	_right_spine = spine
 	_resize_controls()
 
 
@@ -895,6 +911,25 @@ func _ctl(text: String, cb: Callable) -> Button:
 	return Panels.styled_button(text, cb)
 
 
+## A control-bar button that remembers its i18n key, so the language toggle can
+## re-label it without rebuilding the whole bar.
+func _ctl_key(key: String, cb: Callable) -> Button:
+	var b := Panels.styled_button(I18n.t(key), cb)
+	b.set_meta("i18n_key", key)
+	return b
+
+
+## Re-labels control-bar buttons after a language switch.
+func _relang_controls() -> void:
+	for bar in [_controls, _right_spine]:
+		if bar == null or not is_instance_valid(bar):
+			continue
+		for k in bar.get_children():
+			if k is Button and (k as Button).has_meta("i18n_key"):
+				(k as Button).text = I18n.t(String((k as Button).get_meta("i18n_key")))
+	_resize_controls()
+
+
 ## Re-dresses the control bar after a font or contrast change.
 ##
 ## This used to set only `normal`, leaving `hover` holding a stylebox built
@@ -903,11 +938,12 @@ func _ctl(text: String, cb: Callable) -> Button:
 ## parchment. Routing through the one button factory makes that class of
 ## mismatch impossible.
 func _refresh_controls() -> void:
-	if _controls == null or not is_instance_valid(_controls):
-		return
-	for k in _controls.get_children():
-		if k is Button:
-			Panels.style_button(k as Button)
+	for bar in [_controls, _right_spine]:
+		if bar == null or not is_instance_valid(bar):
+			continue
+		for k in bar.get_children():
+			if k is Button:
+				Panels.style_button(k as Button)
 	_resize_controls()
 
 
@@ -966,9 +1002,14 @@ func _arrive() -> void:
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	var city := db.get_record(state.city)
 	var ctx := _ctx()
+	# End of passage: the transit plate (possibly held through a road event)
+	# gives way to the entry art or the city itself. Clear it unconditionally
+	# so a held plate can never sit over the arrival screen.
+	if _transit_layer != null:
+		_transit_layer.visible = false
 	# Prefer a dedicated entry plate when one exists.
 	var entry_art := MapArt.city_entry(String(city.get("id", "")))
-	if entry_art != null and _transit_layer != null and not _transit_layer.visible:
+	if entry_art != null and _transit_layer != null:
 		_transit_tex.texture = entry_art
 		_transit_label.text = I18n.t(city.get("name", ""))
 		_transit_layer.visible = true
@@ -1433,13 +1474,20 @@ func _icon_line(icon: Texture2D, text: String) -> Control:
 
 
 ## Reader settings, reachable from anywhere including the city interior.
+## All map-and-journal commands that used to crowd the top-right bar live here
+## now, so the top of the screen stays clear of the map art.
 func _build_settings() -> void:
-	# Nine rows and no list of its own, so this one scrolls: at the HUGE step the
-	# column is taller than a 720 px window and 合上 fell off the bottom.
-	_settings = Panels.overlay(self, Vector2(440, 360), true)
-	var box: VBoxContainer = _settings["box"]
+	_settings = Panels.overlay(self, Vector2(460, 420), true)
+	_fill_settings(_settings["box"])
+
+
+## Populates the settings box. Extracted so a language switch can rebuild the
+## panel text in place: every button label is authored against the current
+## I18n, so switching zh/en must re-read them rather than restyle stale ones.
+func _fill_settings(box: VBoxContainer) -> void:
 	box.add_child(Panels.label(I18n.t("ui.settings"), UiScale.title(), Palette.ink()))
 
+	# --- appearance -------------------------------------------------------
 	var size_btn := Panels.styled_button(I18n.t("ui.font_size_fmt") + UiScale.label(), Callable())
 	size_btn.pressed.connect(func():
 		UiScale.cycle()
@@ -1455,6 +1503,19 @@ func _build_settings() -> void:
 		_restyle_all())
 	box.add_child(hc)
 
+	var lang_btn := Panels.styled_button(I18n.t("ui.language") + I18n.t("ui.lang_%s" % I18n.lang()), Callable())
+	lang_btn.pressed.connect(func():
+		I18n.load_lang("zh" if I18n.lang() == "en" else "en")
+		UiScale.save()
+		_restyle_all()
+		_rebuild_settings_text()
+		_relang_controls()
+		if _hud != null and _hud.has_method("build"):
+			_hud.build()
+		_refresh_hud())
+	box.add_child(lang_btn)
+
+	# --- sound & motion ---------------------------------------------------
 	var mute := Panels.styled_button(I18n.t("ui.sound"), Callable())
 	mute.pressed.connect(func():
 		if _audio_ready():
@@ -1469,7 +1530,23 @@ func _build_settings() -> void:
 	)
 	box.add_child(motion)
 
-	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
+	# --- map --------------------------------------------------------------
+	var map_row := HBoxContainer.new()
+	map_row.add_theme_constant_override("separation", Metrics.xs())
+	box.add_child(map_row)
+	map_row.add_child(Panels.styled_button(I18n.t("ui.reset_view"), func(): _map.center_on(state.city)))
+	map_row.add_child(Panels.styled_button(I18n.t("ui.zoom_in"), func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
+	map_row.add_child(Panels.styled_button(I18n.t("ui.zoom_out"), func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
+
+	# --- books & journal --------------------------------------------------
+	var open_btn := Panels.styled_button(I18n.t("ui.codex"), func():
+		_settings["layer"].visible = false
+		_open_codex())
+	box.add_child(open_btn)
+	box.add_child(Panels.styled_button(I18n.t("ui.ending"), func():
+		_settings["layer"].visible = false
+		_open_ending()))
+
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 
 	box.add_child(Panels.styled_button(I18n.t("ui.manage_saves"), func():
@@ -1477,6 +1554,17 @@ func _build_settings() -> void:
 		_open_save_manager()))
 
 	box.add_child(Panels.styled_button(I18n.t("ui.close"), func(): _settings["layer"].visible = false))
+
+
+## Language switch rebuilds the settings column so every label re-reads the
+## new locale instead of showing stale text from the previous one.
+func _rebuild_settings_text() -> void:
+	if not _settings.has("box"):
+		return
+	var box: VBoxContainer = _settings["box"]
+	for c in box.get_children():
+		c.queue_free()
+	_fill_settings(box)
 
 
 func _on_traded() -> void:
@@ -1886,6 +1974,13 @@ func _show_roads() -> void:
 	_clear_panel()
 	var here := db.get_record(state.city)
 
+	# The road list is reached from the city interior and from arrival, and a
+	# player who only came to look must be able to leave again without hunting
+	# for an invisible exit. The button is first, so it survives whatever the
+	# list below grows to.
+	_panel.add_child(Panels.styled_button(
+		I18n.t("ui.back_to_map"), _clear_panel))
+
 	# A city's own contents come first. GDD §5.2: you must do at least one thing
 	# in a place before you know how to leave it — so the sites cannot be buried
 	# under the road list.
@@ -1952,6 +2047,7 @@ func _show_roads() -> void:
 			any = true
 	if not any:
 		_panel.add_child(Panels.label(I18n.t("ui.no_routes"), UiScale.ui(), Palette.ink_faint()))
+		_panel.add_child(Panels.label(I18n.t("ui.no_routes_hint"), UiScale.ui(), Palette.ink_soft()))
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
@@ -1980,7 +2076,11 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		_show_roads()
 		return
 	if _audio_ready(): _audio.on_depart(route)
-	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]))
+	# If the road holds an encounter, keep the transit plate on screen for the
+	# whole passage: the beat it used to show was swallowed by the event dialog
+	# opening instantly on top, which read as "the return trip had no animation".
+	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]),
+		not state.pending_events.is_empty())
 
 	# N2 M2 — stroke the road as a fire-and-forget visual. Must not await:
 	# ANIMATION_PLAN §4 — animation must not gate game logic (or smoke tests).

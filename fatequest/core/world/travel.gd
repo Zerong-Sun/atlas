@@ -235,6 +235,14 @@ func depart(route: Dictionary, mode: String, state: WorldState, rng: Rng) -> Dic
 		{"op": "leg", "id": route.get("id", ""), "value": int(route.get("distanceKm", 0)),
 			"days": days, "reason": "walked-the-road"},
 	]
+	# The town you arrive in is the town you can leave. Revealing only the road
+	# you walked made every new place a dead end — you could go back the way you
+	# came and nowhere else. Knowing a place means knowing which roads lead out
+	# of it; the far towns stay fogged until you walk or hear of them.
+	for out_route in routes_from(dest):
+		var out_id := String(out_route.get("id", ""))
+		if out_id != "" and out_id != String(route.get("id", "")):
+			effects.append({"op": "reveal_map", "value": out_id, "reason": "arrived-sees-the-roads"})
 	for encounter_id in encounters:
 		effects.append({
 			"op": "queue_event", "value": encounter_id,

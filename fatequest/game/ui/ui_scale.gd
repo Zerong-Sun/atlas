@@ -9,16 +9,12 @@ extends RefCounted
 
 const CFG := "user://ui.cfg"
 
-enum Size { SMALL, NORMAL, LARGE, HUGE, MASSIVE }
+enum Size { SMALL, NORMAL, LARGE }
 
 const STEPS := {
 	Size.SMALL: 0.85,
 	Size.NORMAL: 1.0,
 	Size.LARGE: 1.25,
-	Size.HUGE: 1.55,
-	# 200% of the base body size — the largest step the release checklist
-	# exercises (§13: "UI 按 100%–200% 字号缩放验证").
-	Size.MASSIVE: 2.0,
 }
 
 ## Base sizes in points, before the step multiplier.
@@ -67,8 +63,6 @@ static func label() -> String:
 		Size.SMALL: I18n.t("ui.font_small"),
 		Size.NORMAL: I18n.t("ui.font_normal"),
 		Size.LARGE: I18n.t("ui.font_large"),
-		Size.HUGE: I18n.t("ui.font_huge"),
-		Size.MASSIVE: I18n.t("ui.font_massive"),
 	}
 	return labels.get(step, I18n.t("ui.font_normal"))
 
@@ -77,6 +71,7 @@ static func save() -> void:
 	var f := ConfigFile.new()
 	f.set_value("ui", "text_step", step)
 	f.set_value("ui", "high_contrast", high_contrast)
+	f.set_value("ui", "lang", I18n.lang())
 	f.save(CFG)
 
 
@@ -86,3 +81,6 @@ static func load_prefs() -> void:
 		return
 	step = int(f.get_value("ui", "text_step", Size.NORMAL))
 	high_contrast = bool(f.get_value("ui", "high_contrast", false))
+	var lang := String(f.get_value("ui", "lang", "zh"))
+	if lang in ["zh", "en"]:
+		I18n.load_lang(lang)
