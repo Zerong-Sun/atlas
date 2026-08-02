@@ -2,7 +2,7 @@
 unit: ormus
 lang: zh
 source: en
-source_rev: 713557b71280
+source_rev: 5c97aa7f6fed
 status: translated
 translator: 人工校译
 notes: >
@@ -72,6 +72,38 @@ stamps:
   ev.ev_ormus_consequence_b_resolution.choice_1_result: adfc171d3abf
   ev.ev_ormus_consequence_b_resolution.choice_2: c200bc7d41b1
   ev.ev_ormus_consequence_b_resolution.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_a_followup.title: 004ea54ff1d8
+  ev.ev_ormus_a_followup.body: 0606d6cc56bd
+  ev.ev_ormus_a_followup.choice_1: 50aed45f2217
+  ev.ev_ormus_a_followup.choice_1_result: e714c2ad3d99
+  ev.ev_ormus_a_followup.choice_2: ef2123d0db2a
+  ev.ev_ormus_a_followup.choice_2_result: 908f3d502851
+  ev.ev_ormus_a_followup.choice_3: 95d611650be3
+  ev.ev_ormus_a_followup.choice_3_result: 5ca41cd6c4ca
+  ev.ev_ormus_b_followup.title: c682036be109
+  ev.ev_ormus_b_followup.body: 63ec9aecdd93
+  ev.ev_ormus_b_followup.choice_1: 6191b2422000
+  ev.ev_ormus_b_followup.choice_1_result: 79d503b5f55a
+  ev.ev_ormus_b_followup.choice_2: c23bb66dafb0
+  ev.ev_ormus_b_followup.choice_2_result: afbad4559111
+  ev.ev_ormus_b_followup.choice_3: beb58ce7edc6
+  ev.ev_ormus_b_followup.choice_3_result: 3c0dd790b6af
+  ev.ev_ormus_c_followup.title: e177dc331d99
+  ev.ev_ormus_c_followup.body: c8110d03b44c
+  ev.ev_ormus_c_followup.choice_1: 78df4a006d90
+  ev.ev_ormus_c_followup.choice_1_result: 69ab68f0b565
+  ev.ev_ormus_c_followup.choice_2: 538f68622f84
+  ev.ev_ormus_c_followup.choice_2_result: 10a175a2e793
+  ev.ev_ormus_c_followup.choice_3: 41f9ccd26f0e
+  ev.ev_ormus_c_followup.choice_3_result: 4474703625b3
+  ev.ev_ormus_mentor_followup.title: af7899553cd0
+  ev.ev_ormus_mentor_followup.body: fb8ec150d9bf
+  ev.ev_ormus_mentor_followup.choice_1: 16e9f9eb8b95
+  ev.ev_ormus_mentor_followup.choice_1_result: baad0b45711c
+  ev.ev_ormus_mentor_followup.choice_2: 53ebbf78c7d8
+  ev.ev_ormus_mentor_followup.choice_2_result: bc76930e96ed
+  ev.ev_ormus_mentor_followup.choice_3: f0caa158d7af
+  ev.ev_ormus_mentor_followup.choice_3_result: 2403653e6d8d
 ---
 
 ## city.ormus.name
@@ -333,3 +365,131 @@ stamps:
 ## ev.ev_ormus_consequence_b_resolution.choice_2_result
 
 事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+
+## ev.ev_ormus_a_followup.title
+
+忽鲁谟斯：港口账簿
+
+## ev.ev_ormus_a_followup.body
+
+那在黄铜秤上称过你货包的税吏，又把你从码头边唤回。他见你在堡墙上数过船，采珠人也同他说起你在水滨凝听。他不再向你索税；只问你打算自海峡带走什么。他说，港口自有一本账——凡入港之船，皆被称量、被记住；堂堂正正留下名姓之人，决不会被逐出城门两次。
+
+## ev.ev_ormus_a_followup.choice_1
+
+让税吏把你的名姓写入港口账簿
+
+## ev.ev_ormus_a_followup.choice_1_result
+
+税吏蘸墨，把你的名字记在当日税银之旁。码头的书吏从此肯为你说话，港口堡垒也把你的印记留在自己中间。
+
+## ev.ev_ormus_a_followup.choice_2
+
+请采珠人画出渡往哈剌图的海路
+
+## ev.ev_ormus_a_followup.choice_2_result
+
+采珠人在一片帆布上画出渡海之路——牡蛎所在的浅滩、潮水的回转、海那边的哈剌图港。海路如今上了你的舆图，你也明白采珠人为何称这海峡为他们的田亩。
+
+## ev.ev_ormus_a_followup.choice_3
+
+在堡墙上度过一日，学读这座港
+
+## ev.ev_ormus_a_followup.choice_3_result
+
+你在堡墙上度过一日，学读这座港——哪片帆载香料而来、哪片帆载税银、哪片帆逐风而去。这一日花费了光阴，但从此海峡上不会有船只再叫你措手不及。
+
+## ev.ev_ormus_b_followup.title
+
+忽鲁谟斯：商贾的仓库
+
+## ev.ev_ormus_b_followup.body
+
+那按季风价卖你胡椒的商人，遣一名脚夫引你到他的仓库，麻袋以七种文字堆至梁上。他见你买过他的姜、问过他的路，便把自己的账簿摊在你面前。他说，忽鲁谟斯的仓库是海的肠胃：凡入海峡之物皆从此过，识得其中次序之人，便识得天下的价钱。
+
+## ev.ev_ormus_b_followup.choice_1
+
+趁独桅帆船尚泊港中，买下一袋胡椒
+
+## ev.ev_ormus_b_followup.choice_1_result
+
+你趁下一艘船抬价之前，按季风价买下胡椒。口袋诚实，价钱公道，印度群岛的第一宗香料如今归你携行。
+
+## ev.ev_ormus_b_followup.choice_2
+
+请商人画出通往科比南的内陆之路
+
+## ev.ev_ormus_b_followup.choice_2_result
+
+商人画出香料登岸转入内陆、通往科比南的路，标出税卡与水井。此路如今向你敞开，你也知道海的货物如何送进沙漠。
+
+## ev.ev_ormus_b_followup.choice_3
+
+留一日，学这仓库如何保藏货物
+
+## ev.ev_ormus_b_followup.choice_3_result
+
+你在麻袋之间度过一日，学这库房如何避开酷热、令香料完好如初。这花费了时日，但账簿的次序在你离去后依然随身。
+
+## ev.ev_ormus_c_followup.title
+
+忽鲁谟斯：死风
+
+## ev.ev_ormus_c_followup.body
+
+识风的向导在地下室的门口与你重逢——众人正坐在灌渠里，水没至颏。他看惯了北漠夏风焚过平原，并不假装它可被驯服。他只肯给你他所知的：读风的征兆、可抢在风前的路，或一日的耐心，像全城人那样把它熬过去。
+
+## ev.ev_ormus_c_followup.choice_1
+
+学那预告死风的征兆
+
+## ev.ev_ormus_c_followup.choice_1_result
+
+向导指给你看发白的天、凝住的气、落地不飞的鸟——死风将至的征兆。这读法如今记入你的行纪，你决不会再于旷野中被它捉住。
+
+## ev.ev_ormus_c_followup.choice_2
+
+问哪条路向内陆去，风势会缓
+
+## ev.ev_ormus_c_followup.choice_2_result
+
+向导指向那条攀向内陆、通往起儿漫的路，群山会挡住沙漠之风。此路如今向你敞开，你也知道酷热止于何处。
+
+## ev.ev_ormus_c_followup.choice_3
+
+在地下室里把这场风熬过去
+
+## ev.ev_ormus_c_followup.choice_3_result
+
+你在密室里与全城人一起熬过一日，水没至颏，任热风在上面灼烧平原。这一日花费了光阴，但你已如忽鲁谟斯人一般，亲身领受了死风。
+
+## ev.ev_ormus_mentor_followup.title
+
+忽鲁谟斯：引航人的临别一掷
+
+## ev.ev_ormus_mentor_followup.body
+
+教过你星骰的引航人，不肯让你只带着功课离开港口。他把皮囊再摇一次，将三枚骰子摊在你我之间的席上。他说，这骰是为航程定时辰而设——不为赌运，虽然水手们仍把一次亮掷唤作大幸。他问你打算自海峡带走什么，愿意为你掷上一卦，或指出骰子所青睐的海路，或教你这三枚骰子如何相称。
+
+## ev.ev_ormus_mentor_followup.choice_1
+
+收下引航人的临别一掷，问此行吉凶
+
+## ev.ev_ormus_mentor_followup.choice_1_result
+
+引航人掷下三骰，读出你启程的时辰，把那卦文按进你手里，作为临别之赠。港中的嘱托，从此随你同行。
+
+## ev.ev_ormus_mentor_followup.choice_2
+
+请骰子指出通往哈剌图的海路
+
+## ev.ev_ormus_mentor_followup.choice_2_result
+
+骰子所点的海路，正是引航人早已了然于心的那一条；他为你画出——横渡海峡至哈剌图，及更远的诸港。此路如今向你敞开，星辰已为它开口。
+
+## ev.ev_ormus_mentor_followup.choice_3
+
+留一日，学这三枚骰子如何相称
+
+## ev.ev_ormus_mentor_followup.choice_3_result
+
+你在引航人的席前度过一日，学星辰、宫位与家宅三骰如何彼此权衡。这花费了时日，但从此这骰的读法，有一半已是你的。

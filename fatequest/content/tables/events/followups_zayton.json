@@ -1,0 +1,354 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-zayton-harbour-followup",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_harbour_followup.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_harbour_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_harbour_followup.choice_1",
+          "resultText": "ev.ev_zayton_harbour_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-the-pepper-at-the-merchants-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pepper-freight",
+              "reason": "learned-the-freight-reckoning"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_harbour_followup.choice_2",
+          "resultText": "ev.ev_zayton_harbour_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "rt-chamba-zayton",
+              "reason": "warehouseman-pointed-the-monsoon-lane"
+            },
+            {
+              "op": "codex",
+              "value": "cx-monsoon",
+              "reason": "learned-the-season-that-serves-chamba"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_harbour_followup.choice_3",
+          "resultText": "ev.ev_zayton_harbour_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stood-another-day-at-the-haven"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-haven",
+              "reason": "stood-another-day-at-the-haven"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "zayton",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
+      }
+    },
+    {
+      "id": "ev-zayton-fanfang-followup",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_fanfang_followup.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_fanfang_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_fanfang_followup.choice_1",
+          "resultText": "ev.ev_zayton_fanfang_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-the-bolt-at-the-weavers-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-silk",
+              "reason": "bought-the-bolt-at-the-weavers-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_fanfang_followup.choice_2",
+          "resultText": "ev.ev_zayton_fanfang_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_city",
+              "value": "chamba",
+              "level": 1,
+              "reason": "sea-merchant-drew-the-lane-to-chamba"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-chamba-zayton",
+              "level": 1,
+              "reason": "sea-merchant-drew-the-lane-to-chamba"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_fanfang_followup.choice_3",
+          "resultText": "ev.ev_zayton_fanfang_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "maritime_asia",
+              "reason": "the-quarter-remembers-your-name"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fanfang",
+              "reason": "walked-the-foreign-quarter-by-repute"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "zayton",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
+      }
+    },
+    {
+      "id": "ev-zayton-mazu-followup",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_mazu_followup.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_mazu_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_mazu_followup.choice_1",
+          "resultText": "ev.ev_zayton_mazu_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "offering-before-sailing"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 2,
+              "reason": "blessed-for-the-sea-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mazu_followup.choice_2",
+          "resultText": "ev.ev_zayton_mazu_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-good-sailing-window",
+              "reason": "the-slip-named-a-sailing-day"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-chamba-zayton",
+              "reason": "the-slip-named-the-lane-to-chamba"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mazu_followup.choice_3",
+          "resultText": "ev.ev_zayton_mazu_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-a-day-at-the-temple"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-mazu",
+              "reason": "stayed-a-day-at-the-temple"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "zayton",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_mentor_followup.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_mentor_followup.choice_1",
+          "resultText": "ev.ev_zayton_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-good-sailing-window",
+              "reason": "took-the-slip-for-the-voyage"
+            },
+            {
+              "op": "codex",
+              "value": "cx-lots",
+              "reason": "learned-the-readers-parting-counsel"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mentor_followup.choice_2",
+          "resultText": "ev.ev_zayton_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-chamba-zayton",
+              "level": 1,
+              "reason": "the-slips-counselled-the-monsoon-lane"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sea-goddess",
+              "reason": "learned-the-goddesss-counsel"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mentor_followup.choice_3",
+          "resultText": "ev.ev_zayton_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "silver-for-the-temple-lamps"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-mazu",
+              "reason": "carried-the-temples-blessing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "zayton",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-zayton-mentor-jiaobei-followup",
+      "kind": "consequence",
+      "title": "ev.ev_zayton_mentor_jiaobei_followup.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "body": "ev.ev_zayton_mentor_jiaobei_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_zayton_mentor_jiaobei_followup.choice_1",
+          "resultText": "ev.ev_zayton_mentor_jiaobei_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-zayton-jiaobei-slip",
+              "reason": "took-the-jiaobei-verdict-for-the-voyage"
+            },
+            {
+              "op": "codex",
+              "value": "cx-jiaobei",
+              "reason": "learned-the-cups-verdict-for-the-voyage"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mentor_jiaobei_followup.choice_2",
+          "resultText": "ev.ev_zayton_mentor_jiaobei_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "java-major",
+              "reason": "the-cups-counselled-the-java-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sea-goddess",
+              "reason": "learned-the-goddesss-verdict"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_zayton_mentor_jiaobei_followup.choice_3",
+          "resultText": "ev.ev_zayton_mentor_jiaobei_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-three-cups-to-settle"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "zayton",
+              "reason": "the-temple-remembered-your-patience"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "zayton",
+        "origin": "authored"
+      }
+    }
+  ]
+}

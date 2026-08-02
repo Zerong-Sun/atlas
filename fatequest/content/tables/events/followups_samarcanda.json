@@ -1,0 +1,293 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-samarcanda-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_a_followup.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_a_followup.choice_1",
+          "resultText": "ev.ev_samarcanda_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-through-the-astronomers-lesson"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-the-tables-of-the-stars"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_a_followup.choice_2",
+          "resultText": "ev.ev_samarcanda_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cascar",
+              "reason": "astronomer-drew-the-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "heard-of-the-scholars-of-cascar"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_a_followup.choice_3",
+          "resultText": "ev.ev_samarcanda_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "samarcanda",
+              "reason": "spoke-in-the-registan-debate"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-dome",
+              "reason": "earned-a-place-beneath-the-dome"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c034"
+        }
+      }
+    },
+    {
+      "id": "ev-samarcanda-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_b_followup.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_b_followup.choice_1",
+          "resultText": "ev.ev_samarcanda_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-the-masters-finest-paper"
+            },
+            {
+              "op": "goods",
+              "id": "paper",
+              "value": 1,
+              "reason": "bought-the-masters-finest-paper"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-paper",
+              "reason": "carried-the-worlds-finest-paper"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_b_followup.choice_2",
+          "resultText": "ev.ev_samarcanda_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-polishing"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-the-secret-of-the-stone"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_b_followup.choice_3",
+          "resultText": "ev.ev_samarcanda_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "bochara",
+              "reason": "master-named-the-fields-of-bochara"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-where-the-rags-come-from"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c034"
+        }
+      }
+    },
+    {
+      "id": "ev-samarcanda-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_c_followup.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_c_followup.choice_1",
+          "resultText": "ev.ev_samarcanda_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "trusted-the-sign-of-the-stone"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-stone",
+              "reason": "marked-by-the-weeping-stone"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_c_followup.choice_2",
+          "resultText": "ev.ev_samarcanda_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "read-the-chronicle-of-the-stone"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-the-pattern-of-the-weepings"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_c_followup.choice_3",
+          "resultText": "ev.ev_samarcanda_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sapurgan",
+              "reason": "pilgrims-named-their-city"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "samarcanda",
+              "reason": "courtesy-before-the-stone"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c034"
+        }
+      }
+    },
+    {
+      "id": "ev-samarcanda-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_samarcanda_mentor_followup.title",
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "body": "ev.ev_samarcanda_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samarcanda_mentor_followup.choice_1",
+          "resultText": "ev.ev_samarcanda_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-samarcanda-mentor-gift",
+              "reason": "received-the-students-parting-gift"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "received-the-students-parting-gift"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_mentor_followup.choice_2",
+          "resultText": "ev.ev_samarcanda_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "student-named-the-lapis-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-samarcanda",
+              "reason": "learned-the-secret-of-the-blue"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samarcanda_mentor_followup.choice_3",
+          "resultText": "ev.ev_samarcanda_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-to-copy-the-star-table"
+            },
+            {
+              "op": "sticker",
+              "value": "st-samarcanda-paper",
+              "reason": "copied-the-star-table-on-samarcand-paper"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "samarcan",
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -269,3 +269,189 @@ Thank the guide and keep moving
 ## ev.lop.mentor_closure.choice_3_result
 
 You close the matter for now. The sign you gained will still guide your next action in Lop.
+
+## ev.ev_lop_bazaar_followup.title
+
+Lop: The Dealer's Word on the Salt
+
+## ev.ev_lop_bazaar_followup.body
+
+When the market of Lop has thinned and the last camel is led away, the jade dealer folds his
+black velvet and beckons you to the end of his carpet. He has watched you weigh his stones,
+and he does not think you a buyer who will be cheated twice. In a low voice he tells you
+where the jade truly comes from: the riverbeds above Cotan, where the streams run down from
+the snow mountains and lay their gravel bare when the autumn waters fall. The best stones,
+he says, are gathered in the weeks when the rivers are low, and a man who knows the season
+can buy at the source for a tenth of the bazaar price. Then he speaks of the salt wastes
+that lie beyond the Desert of Lop — a white country where the ground crunches underfoot like
+frozen snow, where nothing grows, and where the old wells stand far apart, some sweet and
+some so bitter that a beast will not drink. He says the road to Sachiu runs through the
+narrowest place, and that caravans fear the salt wastes more than the sand itself, for a man
+can be parched a hundred paces from water that would kill him. He has told this to no other
+buyer this season. He waits to see what you will make of it.
+
+## ev.ev_lop_bazaar_followup.choice_1
+
+Buy the dealer's private reserve of white jade
+
+## ev.ev_lop_bazaar_followup.choice_1_result
+
+The dealer lifts a smaller stone from a pouch at his belt and names a price below the market,
+holding it to the light so you can see the oil of the grain. You leave the market carrying
+jade that none of the other buyers have seen.
+
+## ev.ev_lop_bazaar_followup.choice_2
+
+Ask where the rivers give up their jade
+
+## ev.ev_lop_bazaar_followup.choice_2_result
+
+The dealer draws the rivers above Cotan for you in the dust, and marks the road that runs
+east toward Sachiu. The name is on your map now, and you know the season when the stones
+appear.
+
+## ev.ev_lop_bazaar_followup.choice_3
+
+Stay a while and hear the tale of the salt wastes
+
+## ev.ev_lop_bazaar_followup.choice_3_result
+
+You sit on the carpet while the sun falls, and the dealer tells of the white salt wastes and
+the wells that stand between the sand and the road. A day is spent, but the account stays
+with you.
+
+## ev.ev_lop_caravanserai_followup.title
+
+Lop: The Guide's Stages
+
+## ev.ev_lop_caravanserai_followup.body
+
+The desert guide finds you in the caravanserai before the last fire has been banked. He has
+crossed the Desert of Lop nineteen days to Sachiu more times than he can count, and he has
+brought a stick with which to draw the road in the dust. He does not begin with water. He
+begins with the salt. The crossing, he says, is not one desert but two: sand for the first
+days, then the salt wastes, where the ground is white and cracked and the air tastes of
+metal. You must march by night in the summer months and lie up by day, for the sand grows so
+hot that it will burn through a camel's hoof by noon. The wells are set a day and a night
+apart, as the old rule says; some are sweet, some are brackish, and one, he says, you will
+smell before you see it. He speaks of the tower of dry stones where the caravans leave marks
+and prayers, and of the wind that makes the dunes sing so that a man walks toward the sound
+expecting voices. When he has finished, he scrapes the dust smooth with his heel and looks at
+you, waiting for your answer.
+
+## ev.ev_lop_caravanserai_followup.choice_1
+
+Agree to cross with the guide when the wind turns
+
+## ev.ev_lop_caravanserai_followup.choice_1_result
+
+The guide marks the day on his thumb and tells you to be ready before dawn. The road to
+Sachiu is open to you now, drawn in the dust and in your mind.
+
+## ev.ev_lop_caravanserai_followup.choice_2
+
+Take the guide's list and buy provisions for the crossing
+
+## ev.ev_lop_caravanserai_followup.choice_2_result
+
+You follow his list: dried meat, hard biscuit, salt, and a water-skin for each beast. The
+provision is set by, and you know the rule that will carry you across.
+
+## ev.ev_lop_caravanserai_followup.choice_3
+
+Rest a day and learn the rule of the crossing
+
+## ev.ev_lop_caravanserai_followup.choice_3_result
+
+You stay a day in the caravanserai while the guide rehearses the stages: the wells, the bare
+hills, the singing dunes. The waiting costs a day, and the crossing is the clearer for it.
+
+## ev.ev_lop_shrine_followup.title
+
+Lop: The Monks' Account
+
+## ev.ev_lop_shrine_followup.body
+
+At dusk the shrine-keeper of the caves at Lop comes to sit beside you where the lamps throw
+their small light on the clay Buddha. She is the one who tends the lamps and takes the coins;
+the monks, you have been told, are gone. She does not deny it. But she tells you where they
+went and what they left: they were monks of the desert road, who kept the wells between Lop
+and Sachiu and marked the stages for the caravans. When the wells began to fail and the salt
+crept over the old pastures, the monks went east, carrying the account of the crossing with
+them. What they could not carry they scratched on the cave walls — not prayers only, but the
+days between wells, the shape of the bare hills, and the warnings of the bad water. She
+points to a corner of the cave where the charcoal has faded to the colour of the rock. She
+says the old account is still true, though the hand that wrote it is gone, and that a
+traveller who copies it will not be lost in the salt wastes. Then she feeds the lamps and
+leaves you with the Buddha and the quiet.
+
+## ev.ev_lop_shrine_followup.choice_1
+
+Ask the keeper to read the monks' account
+
+## ev.ev_lop_shrine_followup.choice_1_result
+
+The keeper reads the cave wall like a letter, naming each well and each warning. The monks'
+account is yours now, and the salt wastes hold no more secrets for you.
+
+## ev.ev_lop_shrine_followup.choice_2
+
+Give silver for the monks' lamps
+
+## ev.ev_lop_shrine_followup.choice_2_result
+
+You lay silver among the offerings, and the keeper nods without speaking. The lamps will burn
+a little longer, and the blessing of the road rests on you.
+
+## ev.ev_lop_shrine_followup.choice_3
+
+Stay a day and copy the account from the cave wall
+
+## ev.ev_lop_shrine_followup.choice_3_result
+
+You spend a day at the wall, copying the faded charcoal into your travel book. It costs you a
+day, but the account is now written where you can read it on the road.
+
+## ev.ev_lop_mentor_followup.title
+
+Lop: The Listener's Counsel
+
+## ev.ev_lop_mentor_followup.body
+
+The listener who reads the desert wind comes to you at the edge of town, where the gravel
+plain begins, and stands with you looking east. He has read the wind all his life, and he
+does not speak of the desert as a thing to be feared; he speaks of it as a thing to be read.
+He tells you that the sand writes its own account: the ripple of the dunes tells which wind
+has blown, and the dry salt crust tells how far the old sea has receded, and the smell of the
+air tells whether water lies ahead or only the memory of water. He shows you how to read the
+stars of the night crossing, and how to listen for the singing dunes, which are not voices
+but the sand speaking to itself. His counsel is not a charm; it is a way of paying attention,
+and he gives it to you because you asked the right question at the wrong time, which is the
+best time to learn. Then he steps back and waits, leaving the road to you.
+
+## ev.ev_lop_mentor_followup.choice_1
+
+Take the listener's counsel for the road
+
+## ev.ev_lop_mentor_followup.choice_1_result
+
+The listener's counsel is written into your travel book, and the desert reads differently
+now. What he taught you will not fail you where the sand begins.
+
+## ev.ev_lop_mentor_followup.choice_2
+
+Ask what the desert will demand of you
+
+## ev.ev_lop_mentor_followup.choice_2_result
+
+The listener reads the omens for the crossing and tells you what the road will cost: water,
+patience, and the will to march by night. The warning stays with you.
+
+## ev.ev_lop_mentor_followup.choice_3
+
+Thank the listener and mark the road he has shown
+
+## ev.ev_lop_mentor_followup.choice_3_result
+
+You thank the listener and walk east along the road he has marked. The way to Sachiu is drawn
+before you, and you carry his counsel unspoken.

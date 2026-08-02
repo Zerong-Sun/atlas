@@ -1,0 +1,290 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-cotan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_a_followup.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_a_followup.choice_1",
+          "resultText": "ev.ev_cotan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "took-a-stone-the-diver-offered"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-jade",
+              "reason": "carried-a-piece-of-the-two-rivers"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_a_followup.choice_2",
+          "resultText": "ev.ev_cotan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yarcan",
+              "reason": "diver-pointed-the-road-west"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-where-the-jade-is-carried"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_a_followup.choice_3",
+          "resultText": "ev.ev_cotan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-divers-reading-of-the-water"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-rivers",
+              "reason": "learned-the-divers-reading-of-the-water"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cotan",
+              "reason": "learned-the-divers-reading-of-the-water"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c036"
+        }
+      }
+    },
+    {
+      "id": "ev-cotan-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_b_followup.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_b_followup.choice_1",
+          "resultText": "ev.ev_cotan_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-dye-sample",
+              "reason": "took-the-dye-samples-and-the-measure-of-silk"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-silk",
+              "reason": "took-the-dye-samples-and-the-measure-of-silk"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_b_followup.choice_2",
+          "resultText": "ev.ev_cotan_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cascar",
+              "reason": "weaver-named-the-road-north"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-where-cotan-silk-goes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_b_followup.choice_3",
+          "resultText": "ev.ev_cotan_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-weavers-song"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-silk",
+              "reason": "learned-the-weavers-song"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c036"
+        }
+      }
+    },
+    {
+      "id": "ev-cotan-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_c_followup.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_c_followup.choice_1",
+          "resultText": "ev.ev_cotan_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-buddha-fragment",
+              "reason": "took-the-fragment-of-the-monks-procession"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-buddha",
+              "reason": "took-the-fragment-of-the-monks-procession"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_c_followup.choice_2",
+          "resultText": "ev.ev_cotan_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "charchan",
+              "reason": "elder-named-the-pilgrim-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-the-pilgrim-road-of-the-old-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_c_followup.choice_3",
+          "resultText": "ev.ev_cotan_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-names-of-the-buried-monasteries"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-buddha",
+              "reason": "heard-the-names-of-the-buried-monasteries"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c036"
+        }
+      }
+    },
+    {
+      "id": "ev-cotan-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cotan_mentor_followup.title",
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "body": "ev.ev_cotan_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cotan_mentor_followup.choice_1",
+          "resultText": "ev.ev_cotan_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cotan-mentor-gift",
+              "reason": "received-the-well-keepers-parting-gift"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "received-the-well-keepers-parting-gift"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_mentor_followup.choice_2",
+          "resultText": "ev.ev_cotan_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pein",
+              "reason": "keeper-drew-the-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-the-road-the-jade-really-comes-by"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cotan_mentor_followup.choice_3",
+          "resultText": "ev.ev_cotan_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-for-the-rivers-story"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cotan-jade",
+              "reason": "lingered-for-the-rivers-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "a-province-called-cotan",
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -56,15 +56,15 @@ func run() -> bool:
 	var before := state.coins
 	var pv := ex.preview(state, buy, {"event_id": "preview-test"})
 	_ok(state.coins == before, "preview does NOT mutate the real state")
-	_ok(pv.applied.size() == 3, "preview still reports what would apply")
+	_ok(pv.applied.size() == 4, "preview still reports what would apply")
 
 	# ------------------------------------------------- execute
 	var res := ex.execute(state, buy, {"event_id": "ev-lop-bazaar"})
 	_ok(state.coins == before - 400, "coins deducted")
 	_ok(state.goods.get("jade", 0) == 1, "jade acquired")
 	_ok("st-lop-jade" in state.stickers, "sticker recorded")
-	_ok(res.applied.size() == 3 and res.rejected.is_empty(), "all three effects applied")
-	_ok(res.log_lines.size() == 3, "log lines emitted for UI")
+	_ok(res.applied.size() == 4 and res.rejected.is_empty(), "all four effects applied")
+	_ok(res.log_lines.size() == 4, "log lines emitted for UI")
 
 	# ------------------------------------------------- guards
 	var poor := WorldState.new()

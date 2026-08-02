@@ -45,7 +45,8 @@
               "op": "flag",
               "value": "fl-learned-iching",
               "reason": "learned-iching"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cambaluc-mentor-followup", "reason": "ev-cambaluc-mentor-followup" }
           ]
         },
         {
@@ -121,7 +122,8 @@
               "op": "flag",
               "value": "fl-learned-bazi",
               "reason": "learned-bazi"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-mentor-followup", "reason": "ev-baldacum-mentor-followup" }
           ]
         },
         {
@@ -155,7 +157,8 @@
               "op": "flag",
               "value": "fl-learned-geomancy",
               "reason": "learned-geomancy"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-mentor-geomancy-followup", "reason": "ev-baldacum-mentor-geomancy-followup" }
           ]
         },
         {
@@ -231,7 +234,8 @@
               "op": "flag",
               "value": "fl-learned-tarot",
               "reason": "learned-tarot"
-            }
+            },
+            { "op": "queue_event", "value": "ev-tauris-mentor-followup", "reason": "ev-tauris-mentor-followup" }
           ]
         },
         {
@@ -265,7 +269,8 @@
               "op": "flag",
               "value": "fl-learned-astrodice",
               "reason": "learned-astrodice"
-            }
+            },
+            { "op": "queue_event", "value": "ev-tauris-mentor-astrodice-followup", "reason": "ev-tauris-mentor-astrodice-followup" }
           ]
         },
         {
@@ -392,7 +397,8 @@
               "op": "flag",
               "value": "fl-learned-jiaobei",
               "reason": "learned-jiaobei"
-            }
+            },
+            { "op": "queue_event", "value": "ev-kinsay-mentor-followup", "reason": "ev-kinsay-mentor-followup" }
           ]
         },
         {
@@ -454,7 +460,8 @@
               "op": "flag",
               "value": "fl-learned-astrodice",
               "reason": "learned-astrodice"
-            }
+            },
+            { "op": "queue_event", "value": "ev-ormus-mentor-followup", "reason": "ev-ormus-mentor-followup" }
           ]
         },
         {
@@ -516,7 +523,8 @@
               "op": "flag",
               "value": "fl-learned-astrodice",
               "reason": "learned-astrodice"
-            }
+            },
+            { "op": "queue_event", "value": "ev-tauris-mentor-astrodice-followup", "reason": "ev-tauris-mentor-astrodice-followup" }
           ]
         },
         {
@@ -578,7 +586,8 @@
               "op": "flag",
               "value": "fl-learned-geomancy",
               "reason": "learned-geomancy"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-mentor-geomancy-followup", "reason": "ev-baldacum-mentor-geomancy-followup" }
           ]
         },
         {

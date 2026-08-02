@@ -1,0 +1,287 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-cascar-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_a_followup.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_a_followup.choice_1",
+          "resultText": "ev.ev_cascar_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-cascar-melon",
+              "reason": "took-the-keepers-melon"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "heard-the-story-of-the-seed-that-crossed-the-pamir"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_a_followup.choice_2",
+          "resultText": "ev.ev_cascar_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "keeper-drew-the-road-the-melt-water-comes-by"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-water-road-from-the-snows"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_a_followup.choice_3",
+          "resultText": "ev.ev_cascar_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-cascar-garden",
+              "reason": "promised-to-plant-a-seed-of-cascar"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cascar",
+              "reason": "kept-the-gardeners-promise"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c033"
+        }
+      }
+    },
+    {
+      "id": "ev-cascar-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_b_followup.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_b_followup.choice_1",
+          "resultText": "ev.ev_cascar_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "persian-carpet",
+              "value": 1,
+              "reason": "bought-a-carpet-at-the-dyers-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-carpet",
+              "reason": "bought-a-carpet-at-the-dyers-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_b_followup.choice_2",
+          "resultText": "ev.ev_cascar_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yarcan",
+              "reason": "dyer-drew-the-road-to-the-green-pit"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-where-the-green-mineral-lies"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_b_followup.choice_3",
+          "resultText": "ev.ev_cascar_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-read-the-prayer-in-the-border"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-prayers-in-the-patterns"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c033"
+        }
+      }
+    },
+    {
+      "id": "ev-cascar-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_c_followup.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_c_followup.choice_1",
+          "resultText": "ev.ev_cascar_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-cascar-sleepers",
+              "reason": "carried-both-names-of-the-sleepers"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-names-from-both-faiths"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_c_followup.choice_2",
+          "resultText": "ev.ev_cascar_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cotan",
+              "reason": "monk-drew-the-pilgrim-road-from-the-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-pilgrim-road-of-the-sleepers"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_c_followup.choice_3",
+          "resultText": "ev.ev_cascar_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kept-a-second-vigil-at-the-cave"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "central_asia",
+              "reason": "kept-vigil-with-both-faiths"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c033"
+        }
+      }
+    },
+    {
+      "id": "ev-cascar-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cascar_mentor_followup.title",
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "body": "ev.ev_cascar_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cascar_mentor_followup.choice_1",
+          "resultText": "ev.ev_cascar_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cascar-mentor-gift",
+              "reason": "received-the-relay-keepers-cord"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "received-the-relay-keepers-cord"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_mentor_followup.choice_2",
+          "resultText": "ev.ev_cascar_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samarcanda",
+              "reason": "guide-drew-the-traders-road-west"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-the-traders-road-west"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cascar_mentor_followup.choice_3",
+          "resultText": "ev.ev_cascar_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-at-the-mountain-relay"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cascar-garden",
+              "reason": "learned-the-signals-of-the-relay"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cascar",
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -441,3 +441,165 @@ Make the introduction before nightfall
 ## ev.ev_zayton_watch_consequence_resolution.choice_2
 
 Keep the sign in your travel book
+
+## ev.ev_zayton_harbour_followup.title
+
+Zayton: The Freight Reckoning
+
+## ev.ev_zayton_harbour_followup.body
+
+The warehouseman who weighed your pepper at the quay finds you again by the customs shed. He has seen how you counted the shipping, and he does what his kind do for a man they trust: he lays open his own reckoning. Freight, he says, is the harbour's second tongue. Small wares pay thirty in the hundred, bulky goods forty, and pepper four and forty — and then the Kaan's tamghā on top. He offers to let you take a sack at the price the merchants pay among themselves. He will not hold it past the turning of the tide.
+
+## ev.ev_zayton_harbour_followup.choice_1
+
+Buy the sack at the merchants' own price
+
+## ev.ev_zayton_harbour_followup.choice_1_result
+
+The warehouseman weighs out a sack and lets you have it at the price merchants pay among themselves, the tamghā already reckoned in. Pepper in hand, you know the freight reckoning as the merchants know it — and you know the rate that will follow you to every quay of the Indian sea.
+
+## ev.ev_zayton_harbour_followup.choice_2
+
+Ask which season the wind turns toward Chamba
+
+## ev.ev_zayton_harbour_followup.choice_2_result
+
+The warehouseman points south across the water, where the ships lie waiting. When the monsoon turns, he says, the lane to Chamba opens; a ship that misses it waits a season. The lane is now on your map, and the season that serves it.
+
+## ev.ev_zayton_harbour_followup.choice_3
+
+Stand another day among the masts
+
+## ev.ev_zayton_harbour_followup.choice_3_result
+
+You spend another day on the quay, among masts that stand like a burnt forest, watching the ships of India come in. The day is gone before the last one is moored, but the haven stays with you after you leave it.
+
+## ev.ev_zayton_fanfang_followup.title
+
+Zayton: The Quarter's Bargain
+
+## ev.ev_zayton_fanfang_followup.body
+
+In the foreign quarter, the merchant who heard you bargain sends word to your lodging: a bolt of silk has come from the weaver's own loom, and it is offered first to you. He sets it out beside the well where the merchants of three tongues meet. The price is the weaver's price, he says, and the bargain is yours to close — or you may ask instead what the sea-merchants know of the road they do not speak of at the quay.
+
+## ev.ev_zayton_fanfang_followup.choice_1
+
+Buy the bolt at the weaver's price
+
+## ev.ev_zayton_fanfang_followup.choice_1_result
+
+The bolt is fine Manzi silk, heavier in the hand than it looks, and you carry it out of the quarter wrapped in oiled cloth. At the weaver's price it is a bargain worth the telling; the quarter watches you go, and its judgment is recorded.
+
+## ev.ev_zayton_fanfang_followup.choice_2
+
+Ask the sea-merchants of the lane to Chamba
+
+## ev.ev_zayton_fanfang_followup.choice_2_result
+
+A merchant of the Indian sea draws the lane in the dust with his finger, mark by mark — the monsoon's turning, the days of open water, the haven at the end. Chamba is now named on your map, and the road that serves it.
+
+## ev.ev_zayton_fanfang_followup.choice_3
+
+Let the quarter learn your name
+
+## ev.ev_zayton_fanfang_followup.choice_3_result
+
+You bargain plainly and speak plainly, and the quarter marks you for an honest man. Among the merchants of the sea-lands your name will be repeated before you are seen again.
+
+## ev.ev_zayton_mazu_followup.title
+
+Zayton: The Temple Asks Again
+
+## ev.ev_zayton_mazu_followup.body
+
+The slip-reader at the temple door calls you back from the stair. The goddess does not count an offering once, she says; she asks again before every sailing, and a fleet is making ready below. The sailors are already on the hill, burning paper and setting out rice and wine. There is still room at the door for one more who means to ask.
+
+## ev.ev_zayton_mazu_followup.choice_1
+
+Make an offering before the fleet sails
+
+## ev.ev_zayton_mazu_followup.choice_1_result
+
+You burn paper at the goddess's feet and set out a dish of rice and a cup of wine, as the shipmasters do. She looks south over the water and does not refuse you; the sea road is kinder to you for the asking.
+
+## ev.ev_zayton_mazu_followup.choice_2
+
+Draw a slip for the sailing
+
+## ev.ev_zayton_mazu_followup.choice_2_result
+
+You shake the cylinder until a slip falls, and the reader reads it against the book of verses. It names a day when the wind will serve you — and the lane to Chamba is named with it. You mark the day and go down to the water.
+
+## ev.ev_zayton_mazu_followup.choice_3
+
+Stay and watch the sailors ask
+
+## ev.ev_zayton_mazu_followup.choice_3_result
+
+You stay a day on the temple hill while the sailors come and go, each one asking in his own way. The smoke of the sea-temple goes with you when you leave, and you carry the memory of what asking is.
+
+## ev.ev_zayton_mentor_followup.title
+
+Zayton: The Reader's Parting Counsel
+
+## ev.ev_zayton_mentor_followup.body
+
+The old woman who reads the slips will not let you leave with only what you have learned. She reaches for the cylinder and draws one slip for your voyage, but she does not read it aloud. The slips tell a man what he has not considered, she says; you have sat with her long enough to read your own. She holds it out and lets you choose how to carry it.
+
+## ev.ev_zayton_mentor_followup.choice_1
+
+Take the slip she draws for your voyage
+
+## ev.ev_zayton_mentor_followup.choice_1_result
+
+She reads the slip once, then presses it into your hand: a day to sail, and counsel you now know how to read for yourself. The reading is yours, and the day with it.
+
+## ev.ev_zayton_mentor_followup.choice_2
+
+Ask her which road the slips favour
+
+## ev.ev_zayton_mentor_followup.choice_2_result
+
+She shakes the cylinder until it answers, and reads what falls: the slips counsel the monsoon lane to Chamba, and the sea-goddess's favour with it. The road is drawn on your map, and the counsel carried in your book.
+
+## ev.ev_zayton_mentor_followup.choice_3
+
+Leave silver for the temple lamps
+
+## ev.ev_zayton_mentor_followup.choice_3_result
+
+You leave silver for the lamps that burn at the goddess's feet and take your leave of the reader. The blessing of the temple goes with you down the hill, and the smoke of it after you to the water.
+
+## ev.ev_zayton_mentor_jiaobei_followup.title
+
+Zayton: The Three Cups at Parting
+
+## ev.ev_zayton_mentor_jiaobei_followup.body
+
+The temple attendant who taught you the throwing of the cups waylays you at the gate. He sets three half-moons of wood before you and bids you throw for the voyage you are about to make. The cups fall, and he does not smile or frown: a throw is a throw, he says, and a verdict is a verdict. Choose how to carry it.
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_1
+
+Keep the verdict as a ward for the journey
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_1_result
+
+He wraps the three cups in a cloth and presses them into your hand. Whatever the throw promised, the carry itself is a protection, and you will know how to read it at any campfire.
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_2
+
+Ask the cups which road to take from the port
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_2_result
+
+He throws again and reads the falling cups: the sea road to Java is favoured, the goddess's lane open. The course is drawn on your map and the verdict kept in your book.
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_3
+
+Wait a day and let the cups settle in your own hand
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
+
+You sit with the cups through an afternoon, learning their weight, and leave them with the temple at dusk. The attendant remembers your patience, and the quarter speaks well of you.
+
+

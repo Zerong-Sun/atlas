@@ -94,7 +94,8 @@
               "op": "flag",
               "value": "fl-cascar-mentor-met",
               "reason": "cascar-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cascar-mentor-followup", "reason": "ev-cascar-mentor-followup" }
           ]
         },
         {
@@ -149,7 +150,8 @@
               "op": "flag",
               "value": "fl-cotan-mentor-met",
               "reason": "cotan-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cotan-mentor-followup", "reason": "ev-cotan-mentor-followup" }
           ]
         },
         {
@@ -204,7 +206,8 @@
               "op": "flag",
               "value": "fl-lop-mentor-met",
               "reason": "lop-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-lop-mentor-followup", "reason": "ev-lop-mentor-followup" }
           ]
         },
         {
@@ -259,7 +262,8 @@
               "op": "flag",
               "value": "fl-samarcanda-mentor-met",
               "reason": "samarcanda-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-samarcanda-mentor-followup", "reason": "ev-samarcanda-mentor-followup" }
           ]
         },
         {
@@ -314,7 +318,8 @@
               "op": "flag",
               "value": "fl-chandu-mentor-met",
               "reason": "chandu-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-chandu-mentor-followup", "reason": "ev-chandu-mentor-followup" }
           ]
         },
         {

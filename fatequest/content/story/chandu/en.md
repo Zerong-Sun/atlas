@@ -310,3 +310,131 @@ Thank the guide and keep moving
 ## ev.chandu.mentor_closure.choice_3_result
 
 You close the matter for now. The sign you gained will still guide your next action in Chandu.
+
+## ev.ev_chandu_a_followup.title
+
+Chandu: The Palace That Moves
+
+## ev.ev_chandu_a_followup.body
+
+You stand at last inside the gilded cane palace of the Great Kaan, and the keeper of the building, a man of the household, comes to your side. The whole palace, he tells you, is held together by silk alone — every column and roof-beam lashed with cords dyed in the Kaan's colours. You ask why a sovereign who commands marble from half Asia should raise his summer seat of hollow cane. The keeper answers that the astrologers of the court read the sky when the palace was first planned, and they declared that the trees of the park would die within the Kaan's own lifetime, and that no fixed palace could stand long among dead groves. So the Kaan commanded a house that could be unbound and carried wherever he chose to hold his court; when he travels, the silk cords are loosed, the gilded columns laid down, and the whole palace moves with him on the backs of camels, to be re-lashed at the next camp. He shows you the lacquered dragon columns, the gilded roof, the marble floors that reflect the ceiling, and he says that the palace is never empty long, for the Kaan returns with the summer. You look at the silk bindings with new eyes: a building that is not nailed together is a building that is never abandoned.
+
+## ev.ev_chandu_a_followup.choice_1
+
+Ask the keeper why the palace is built to move
+
+## ev.ev_chandu_a_followup.choice_1_result
+
+The keeper explains that the astrologers of the court read the sky when the palace was planned, and declared that no fixed house could stand among trees that were doomed to die. The silk cords and gilded columns are the Kaan's answer: a palace that can move is a palace that cannot be left in a dead grove.
+
+## ev.ev_chandu_a_followup.choice_2
+
+Ask where the cane and the silk come from by road
+
+## ev.ev_chandu_a_followup.choice_2_result
+
+The keeper names the road south, through the cane country of Manzi, by which the gilded bamboo and the silk come up to Chandu. The road to Cacanfu is now on your map, and you know where the lightest palace in the world is born.
+
+## ev.ev_chandu_a_followup.choice_3
+
+Stay a day to watch the palace re-bound for the Kaan's travel
+
+## ev.ev_chandu_a_followup.choice_3_result
+
+You stay a day in the palace while the cords are loosed and the columns laid down, as though the whole gilded house were a tent. The keeper lets you watch the binding, and you carry away a knowledge of how the Kaan's palace travels that no book would have given you.
+
+## ev.ev_chandu_b_followup.title
+
+Chandu: The Mews of the Falconers
+
+## ev.ev_chandu_b_followup.body
+
+You find the falconers' mews along the inner face of the sixteen-mile wall, where the Kaan keeps his hunting birds. There are more than two hundred gerfalcons alone, without reckoning the other hawks, each sitting hooded on its perch; the keepers feed them on the flesh of the game that the Kaan takes in the park. The head falconer, seeing that you are a stranger, sets a hooded gerfalcon on his wrist and speaks of the Kaan's hunts: how he rides the park with a leopard on the croup of his horse, and when he sees an animal that takes his fancy, he slips the leopard at it, and the quarry when taken is made over to feed the hawks in mew. The falconer tells you the art of the hood and the lure, and how a bird is entered to the lure before it is ever flown at game. He speaks also of the road that runs east to the great city of Cambaluc, where the Kaan winters when the grass of the meadow is gone, and he draws in the air the shape of the way — the park wall, the river, the plain. You listen, and the park that seemed only a pleasure-ground begins to look like the frame of a whole empire.
+
+## ev.ev_chandu_b_followup.choice_1
+
+Ask the falconer how the Kaan hunts with the leopard
+
+## ev.ev_chandu_b_followup.choice_1_result
+
+The falconer tells you how the Kaan slips the leopard from the croup of his horse when a beast takes his fancy, and how the quarry is made over to feed the birds in mew. You understand now why the park is stocked so richly — every hare and stag is meat for the Kaan's hawks.
+
+## ev.ev_chandu_b_followup.choice_2
+
+Ask the way the road runs east to Cambaluc
+
+## ev.ev_chandu_b_followup.choice_2_result
+
+The falconer draws the road east in the air: past the park wall, over the river, across the plain to the great city of Cambaluc. The way is now clear on your map, and you know the Kaan rides it when the meadow's grass is spent.
+
+## ev.ev_chandu_b_followup.choice_3
+
+Stay a day to watch the gerfalcons fed in mew
+
+## ev.ev_chandu_b_followup.choice_3_result
+
+You spend a day at the mews while the keepers feed the gerfalcons the flesh of the morning's hunt. You see a hooded bird bated to the lure, and the day costs you something — but you have watched the Kaan's own falconers at their trade.
+
+## ev.ev_chandu_c_followup.title
+
+Chandu: The Rite of the White Mares
+
+## ev.ev_chandu_c_followup.body
+
+At the northern end of the park, the monk of the Palace of the Spring keeps the tale of the white mares and of the rite that no foreigner has ever witnessed. He tells you that the Mongols were once a tribe of wandering herdsmen on the northern steppe, long before they ruled the world, and that the great Kaan Chinghiz rose from those herds to bind all nations under one sky. Once a year, on the day of the great festival, the Kaan rides to the meadow and pours the milk of the thousand white mares upon the ground as an offering to the spirits of the Eternal Blue Sky and the Golden Earth. The monk explains what the rite asks: that the sky keep the grass green and the earth keep the waters sweet, and that the Kaan hold the two in balance as his ancestors did when they had nothing but felt tents and mares. He speaks of Chinghiz's own oath, taken on the steppe, to the spirits of sky and earth, and of how the Mongols mark that oath still, in milk poured from golden vessels. The rite, he says, is older than any palace, and it will outlast them all.
+
+## ev.ev_chandu_c_followup.choice_1
+
+Ask the monk to tell of Chinghiz Kaan's rise
+
+## ev.ev_chandu_c_followup.choice_1_result
+
+The monk tells the tale of Chinghiz Kaan, the herdsman who bound all nations under one sky, and of the oath he swore on the steppe to the spirits of sky and earth. The tale of the first Kaan now goes with you out of the meadow.
+
+## ev.ev_chandu_c_followup.choice_2
+
+Ask what the rite asks of the sky and the earth
+
+## ev.ev_chandu_c_followup.choice_2_result
+
+The monk explains that the rite of the poured milk asks the sky to keep the grass green and the earth to keep the waters sweet, and that the Kaan pours it in the name of his ancestors. Some of that understanding stays with you, and it will shape the roads you choose.
+
+## ev.ev_chandu_c_followup.choice_3
+
+Stay until dawn to watch the mares milked in the first light
+
+## ev.ev_chandu_c_followup.choice_3_result
+
+You stay until dawn to watch the white mares milked in the first light, the golden vessels borne to the Kaan's table. It costs you a day of the road, but you have seen the rite that no foreigner was ever permitted to witness.
+
+## ev.ev_chandu_mentor_followup.title
+
+Chandu: The Horse-Master's Parting Gift
+
+## ev.ev_chandu_mentor_followup.body
+
+The court horse-master who taught you by the meadow does not let you leave Chandu with only his account. He reaches into his saddlebag and lays out what remains of his working life: a page of notes on the imperial stud, a worn tracing of the courier roads, and a day's patience. He tells you to choose what will serve you best on the road ahead, because the steppe is wide and a traveller is only as good as what he carries. His notes set down the points of the white mares — the breadth of chest, the slope of the shoulder, the temper of the eye — and the order of the stud as it is kept for the Kaan. The courier road he traces runs south to Chinangli, where the posts change horses at every stage. Or you may take the day of patience, and learn at his side how a horse is read at a glance, how a mount is chosen for a long journey, and how a rider's weight is carried without harm to the beast. You choose, and the horse-master watches you choose without comment, as a man who has spent his life reading men as he reads horses.
+
+## ev.ev_chandu_mentor_followup.choice_1
+
+Take the horse-master's notes on the imperial stud
+
+## ev.ev_chandu_mentor_followup.choice_1_result
+
+You take the horse-master's notes on the imperial stud, written in a close, plain hand. What you have learned of the white mares and of the reading of horses is now yours to consult on the road.
+
+## ev.ev_chandu_mentor_followup.choice_2
+
+Ask which road the couriers ride south to Chinangli
+
+## ev.ev_chandu_mentor_followup.choice_2_result
+
+The horse-master traces the courier road south to Chinangli, where the posts change horses at every stage. The road is now drawn on your map, and you know the way the Kaan's own messengers ride.
+
+## ev.ev_chandu_mentor_followup.choice_3
+
+Linger a day to learn the horse-master's art
+
+## ev.ev_chandu_mentor_followup.choice_3_result
+
+You linger a day at the horse-master's side, learning how a mount is chosen and how a rider's weight is carried. It costs you time, but the art of reading a horse is now partly your own.

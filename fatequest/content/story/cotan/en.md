@@ -298,3 +298,131 @@ Thank the guide and keep moving
 ## ev.cotan.mentor_closure.choice_3_result
 
 You close the matter for now. The sign you gained will still guide your next action in Cotan.
+
+## ev.ev_cotan_a_followup.title
+
+Cotan: The Diver's Offering
+
+## ev.ev_cotan_a_followup.body
+
+The diver who waded beside you in the cold water climbs out onto the shingle and will not let you leave with only what your eyes saw. He is the one whose bare feet found the white stone under the running water, and he carries his craft the way other men carry goods. Now he shows you how the river is read: the white jade gathers where the current turns slow, the green jade hides where the gravel runs deep, and a man learns the bottom of the river the way a shepherd learns the face of a mountain. He speaks of the divers' oath, that no man may take a stone the river has not given, and that the river gives only to those who ask in silence. He sets before you his own asking: a stone from his own haul, or the road the jade travels when it leaves the water, or the patience to learn what his feet know.
+
+## ev.ev_cotan_a_followup.choice_1
+
+Take a white stone the diver offers from his own haul
+
+## ev.ev_cotan_a_followup.choice_1_result
+
+The diver wraps a white stone in a strip of cloth and presses it into your hands. It is a piece of the two rivers, and it goes with you now.
+
+## ev.ev_cotan_a_followup.choice_2
+
+Ask the diver where the jade is carried from the rivers
+
+## ev.ev_cotan_a_followup.choice_2_result
+
+He points west along the valley, to the road by which the jade is carried toward Yarcan. The road to Yarcan is now written in your mind, and you will not ride into it blind.
+
+## ev.ev_cotan_a_followup.choice_3
+
+Stay a day and learn the divers' craft
+
+## ev.ev_cotan_a_followup.choice_3_result
+
+You stay a day on the shingle while the diver teaches you to feel the river with your feet. The cold water teaches you patience, and the river people remember that you asked.
+
+## ev.ev_cotan_b_followup.title
+
+Cotan: The Weaver's Song
+
+## ev.ev_cotan_b_followup.body
+
+The woman who sang at the looms has not forgotten you. She finds you in the dye-vat courtyard, where the smell of saffron and indigo hangs in the air, and she sings the weaver's song again, slowly, so you may learn what it carries. The song is not for pleasure only: it counts the threads of the warp, it marks the hours of the loom, and it keeps the shuttle's rhythm so that two women may work as one. When a weaver dies, her song is given to the woman who sat opposite her, so that no loom loses its time. She shows you the vats — yellow from saffron, blue from indigo, red from madder, crimson from cochineal — and she tells you the order in which a bolt of silk must take its colours, for the order is the song's second verse. What you do with the song is your own matter.
+
+## ev.ev_cotan_b_followup.choice_1
+
+Take the dye samples and a measure of silk
+
+## ev.ev_cotan_b_followup.choice_1_result
+
+The weaver presses a packet of dyed threads into your hands — saffron, indigo, madder, cochineal — and a measure of silk to match them. The colours of Cotan now travel with you.
+
+## ev.ev_cotan_b_followup.choice_2
+
+Ask where the silk of Cotan goes from the looms
+
+## ev.ev_cotan_b_followup.choice_2_result
+
+She points north along the road the silk takes to Cascar, where the Kaan's agents weigh it for the court. The road to Cascar is now written in your mind, and you will not ride into it blind.
+
+## ev.ev_cotan_b_followup.choice_3
+
+Stay a day and learn the weaver's song
+
+## ev.ev_cotan_b_followup.choice_3_result
+
+You stay a day at the looms, learning the song line by line until your hands keep its time. The weavers smile at your effort, and a part of Cotan's rhythm now lives in you.
+
+## ev.ev_cotan_c_followup.title
+
+Cotan: The Tale of a Thousand Monasteries
+
+## ev.ev_cotan_c_followup.body
+
+The elder who spoke of the Buddha Dust calls you back to the terrace at dusk, when the wind has laid bare a corner of the buried city. He tells you what the fathers tell the sons: that the old Cotan held a thousand monasteries, and that each monastery kept a bell, so that the whole city rang at the hour of prayer like a single instrument. He walks the sand with you and names the places where the monks' roads ran — the pilgrim road east, the road to the painted caves, the road by which the relics came. He says the dust of these walls is holy because it holds the prayers of the thousand monasteries, and that a man who drinks it drinks the memory of the city. He offers you the old city's own gift: a painted fragment, or the pilgrim road, or the tale itself.
+
+## ev.ev_cotan_c_followup.choice_1
+
+Take the painted fragment the elder lifts from the sand
+
+## ev.ev_cotan_c_followup.choice_1_result
+
+The elder lifts a painted fragment from the sand and wraps it for you — a piece of the city's memory. It is a small thing, but it is old Cotan.
+
+## ev.ev_cotan_c_followup.choice_2
+
+Ask the elder where the pilgrims' road ran
+
+## ev.ev_cotan_c_followup.choice_2_result
+
+He points east along the old pilgrim road, to Charchan, where the monks' way led out of the valley. The road to Charchan is now written in your mind, and you will not lose it in the sand.
+
+## ev.ev_cotan_c_followup.choice_3
+
+Stay through the dusk and hear the tale of the thousand monasteries
+
+## ev.ev_cotan_c_followup.choice_3_result
+
+You stay through the dusk while the elder tells the tale of the thousand monasteries to its end. The tale stays with you, and the old city is no longer only sand.
+
+## ev.ev_cotan_mentor_followup.title
+
+Cotan: The Well-Keeper's Parting Gift
+
+## ev.ev_cotan_mentor_followup.body
+
+The keeper of the jade-river well does not let you leave with only his counsel. He draws a smooth stone from his belt and holds it out — a stone worn round by the river, kept at the well for good luck. He tells you that the well keeps nothing for itself, and that a traveller who will not take a gift will not be given knowledge either. He has kept the well since before the Mongol riders came, and he has seen every traveller who drank there; some left gifts and some left nothing, and the well remembers both. He asks what you will carry away from Cotan: the stone, the road by which the jade truly comes, or a day of his company while he tells you the river's story. Whatever you choose, he says, carry it as the divers carry their stones — in silence, and without greed.
+
+## ev.ev_cotan_mentor_followup.choice_1
+
+Take the smooth stone the keeper offers
+
+## ev.ev_cotan_mentor_followup.choice_1_result
+
+The keeper presses the smooth river stone into your hand and closes your fingers over it. It is a small thing, but it is the river's own luck, and the well's memory goes with it.
+
+## ev.ev_cotan_mentor_followup.choice_2
+
+Ask the keeper which road the jade truly comes by
+
+## ev.ev_cotan_mentor_followup.choice_2_result
+
+He draws the road east in the sand, the way the jade really comes, by Pein and the old terraces. The road to Pein is now written in your mind, and you will not lose it in the sand.
+
+## ev.ev_cotan_mentor_followup.choice_3
+
+Stay a day and hear the river's story
+
+## ev.ev_cotan_mentor_followup.choice_3_result
+
+You stay a day at the well while the keeper tells the river's story, from the snows to the sea of sand. It costs you a day, but the river and its keeper are no longer strangers.

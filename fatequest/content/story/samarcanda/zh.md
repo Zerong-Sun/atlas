@@ -2,7 +2,7 @@
 unit: samarcanda
 lang: zh
 source: en
-source_rev: 9b7f1a8afffb
+source_rev: 03a49d3f29be
 status: translated
 translator: 人工校译
 notes: >
@@ -76,6 +76,38 @@ stamps:
   ev.samarcanda.mentor_closure.choice_2_result: 7661079ff881
   ev.samarcanda.mentor_closure.choice_3: 630a8fcfe069
   ev.samarcanda.mentor_closure.choice_3_result: 33d2e695305a
+  ev.ev_samarcanda_a_followup.title: abec22872467
+  ev.ev_samarcanda_a_followup.body: 0e4455fc14c8
+  ev.ev_samarcanda_a_followup.choice_1: e2a00c5b0c6d
+  ev.ev_samarcanda_a_followup.choice_1_result: 0b13dfa9dd0c
+  ev.ev_samarcanda_a_followup.choice_2: 880b0569d37e
+  ev.ev_samarcanda_a_followup.choice_2_result: 19ab1e090d2d
+  ev.ev_samarcanda_a_followup.choice_3: 5ccc5a838207
+  ev.ev_samarcanda_a_followup.choice_3_result: 2b89b736d838
+  ev.ev_samarcanda_b_followup.title: cf0ae42e5976
+  ev.ev_samarcanda_b_followup.body: ccbb75162dac
+  ev.ev_samarcanda_b_followup.choice_1: e28425df2d3d
+  ev.ev_samarcanda_b_followup.choice_1_result: ff1f502a05a1
+  ev.ev_samarcanda_b_followup.choice_2: 10e2a2752f98
+  ev.ev_samarcanda_b_followup.choice_2_result: bdcedc7cb144
+  ev.ev_samarcanda_b_followup.choice_3: e925f5d9e5a2
+  ev.ev_samarcanda_b_followup.choice_3_result: 998dba32a072
+  ev.ev_samarcanda_c_followup.title: c71f5d891007
+  ev.ev_samarcanda_c_followup.body: 1033c540fd78
+  ev.ev_samarcanda_c_followup.choice_1: 49e861d987ad
+  ev.ev_samarcanda_c_followup.choice_1_result: f2a412058fc0
+  ev.ev_samarcanda_c_followup.choice_2: beaa0bb2b2c8
+  ev.ev_samarcanda_c_followup.choice_2_result: aff13315b9db
+  ev.ev_samarcanda_c_followup.choice_3: 3e09d3d23956
+  ev.ev_samarcanda_c_followup.choice_3_result: 2fa7ff009828
+  ev.ev_samarcanda_mentor_followup.title: 9c0bd2335ed8
+  ev.ev_samarcanda_mentor_followup.body: 524dcd18a566
+  ev.ev_samarcanda_mentor_followup.choice_1: 6528d2af166a
+  ev.ev_samarcanda_mentor_followup.choice_1_result: 45ba97ab219c
+  ev.ev_samarcanda_mentor_followup.choice_2: 39e75a46b79c
+  ev.ev_samarcanda_mentor_followup.choice_2_result: bf6935770552
+  ev.ev_samarcanda_mentor_followup.choice_3: 1a800e2203a1
+  ev.ev_samarcanda_mentor_followup.choice_3_result: c9a9f00ae279
 ---
 
 ## city.samarcanda.name
@@ -352,3 +384,131 @@ stamps:
 ## ev.samarcanda.mentor_closure.choice_3_result
 
 你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+
+## ev.ev_samarcanda_a_followup.title
+
+撒马尔罕：列吉斯坦的观星人
+
+## ev.ev_samarcanda_a_followup.body
+
+第三座经学院的观星人并未与你作别。他唤你登上东侧拱廊之上的小室，列吉斯坦的黄铜仪器与星表俱收于此。案上摊着一张天下最白的纸，画满圆圈与恒星之名，出自百位学者之手。他指给你看：商队横越世界屋脊之时，人人随身带着一份抄本；而此地的岁，不以日晷计，以黎明前某星之升计。他把星盘放入你掌，任你转动其环，直到你明白：撒马尔罕上方的天，是一座永不停摆的钟。这一课不是法术，是耐心，也是学舍的骄傲。
+
+## ev.ev_samarcanda_a_followup.choice_1
+
+坐下听讲，研习星表
+
+## ev.ev_samarcanda_a_followup.choice_1_result
+
+你坐到灯盏燃起，把能抄的星表尽数抄进自己的书里。这门功课随你而去，列吉斯坦的耐心也随你而去。
+
+## ev.ev_samarcanda_a_followup.choice_2
+
+问学者，去往可失合儿之天的是哪条路
+
+## ev.ev_samarcanda_a_followup.choice_2_result
+
+观星人沿河谷向东画出通往可失合儿的路，说那里的天更清，学者更勤。通往可失合儿的路，如今上了你的舆图。
+
+## ev.ev_samarcanda_a_followup.choice_3
+
+以你行路的见闻，换他观星的见闻
+
+## ev.ev_samarcanda_a_followup.choice_3_result
+
+你以行路见闻换取观星见闻。列吉斯坦的学者记住了你的名字，在这座青城里，你的言语从此有了分量。
+
+## ev.ev_samarcanda_b_followup.title
+
+撒马尔罕：纸匠之秘
+
+## ev.ev_samarcanda_b_followup.body
+
+让你看过纸坊的纸匠，有一桩秘法只留给问过两遍的人。他领你穿过晾纸的院子，进一间矮屋，成品成叠堆着；他指给你看那块磨石——一块巨大光润的石头，中央被几代人的手磨出凹痕。捶好的纸贴于其上，以一掌可握的小石反复研磨，直到纸面亮如水纹绸。他说这光泽不为好看，正是不洇墨的缘故；如此磨成的纸，可载一部书三百年。说罢他蘸笔，当着你在一张纸上写下一行，墨停在纸面如活物，并不渗入纸理。
+
+## ev.ev_samarcanda_b_followup.choice_1
+
+买一叠纸匠磨成的纸
+
+## ev.ev_samarcanda_b_followup.choice_1_result
+
+你按纸匠的价付钱，带走一叠磨至发亮的纸。墨在其上三百年不洇，纸坊的人也记下了这笔买卖。
+
+## ev.ev_samarcanda_b_followup.choice_2
+
+求纸匠教你磨纸之法
+
+## ev.ev_samarcanda_b_followup.choice_2_result
+
+你在磨石前耗了一日，学一张纸要如何磨至发亮。纸坊的手艺，从此有一分是你自己的。
+
+## ev.ev_samarcanda_b_followup.choice_3
+
+问最白的麻布从何而来
+
+## ev.ev_samarcanda_b_followup.choice_3_result
+
+纸匠告诉你，最白的破布自不花剌西边的路上来，那里的亚麻长而净。通往不花剌的路，如今上了你的舆图。
+
+## ev.ev_samarcanda_c_followup.title
+
+撒马尔罕：灵石志
+
+## ev.ev_samarcanda_c_followup.body
+
+看守清真寺寺志的毛拉见你触过那流泪的石头，并不忘记。他捧出铁角包边的册子，石的每一次流泪都记于其上，年月并列。他指给你看最后一条——正是蒙古骑手自北方而下之前的一年；再前一条，是大疫之年。他合上书，告诉你：自南方上来的朝圣者另有一种说法——石是为离开撒马尔罕而不再归来的人流泪；他们把孩子的小脸贴向玄武岩，好让石记得他们。他问你如何看这石之泪，又是否要带一个答案离开。
+
+## ev.ev_samarcanda_c_followup.choice_1
+
+以额抵石，等一个征兆
+
+## ev.ev_samarcanda_c_followup.choice_1_result
+
+你以额抵黑色玄武岩，感到石面的凉意贴上皮肤。无论这石意味着什么，你已与它当面相对，这征兆从此由你携带。
+
+## ev.ev_samarcanda_c_followup.choice_2
+
+请毛拉把整部寺志读给你听
+
+## ev.ev_samarcanda_c_followup.choice_2_result
+
+你在灯下坐定，听毛拉读完整个寺志，每一次流泪、每一个年份。石之泪的脉络，从此写进你对这座城的理解。
+
+## ev.ev_samarcanda_c_followup.choice_3
+
+问朝圣者自何处而来
+
+## ev.ev_samarcanda_c_followup.choice_3_result
+
+朝圣者告诉你，他们自撒普儿干翻山而来，为触石而祷。你问那路在何方，通往撒普儿干的路，如今上了你的舆图。
+
+## ev.ev_samarcanda_mentor_followup.title
+
+撒马尔罕：学子的临别之赠
+
+## ev.ev_samarcanda_mentor_followup.body
+
+蓝砖学舍的老学生，不让你只带走他的讲述。他探手入行囊，把学子生涯所余之物尽数摆出：一张他亲手画着舆图的撒马尔罕纸，一册磨旧的星表，一日的耐心。他让你自择哪一件最合用，因为行路人只靠带在身上的东西，而撒马尔罕的学舍，再没有别的可赠。
+
+## ev.ev_samarcanda_mentor_followup.choice_1
+
+收下学生对前路的笔记
+
+## ev.ev_samarcanda_mentor_followup.choice_1_result
+
+这笔记如其人，素朴而准确。你在蓝砖学舍所学，如今已写成文字，可在路上随时查阅。
+
+## ev.ev_samarcanda_mentor_followup.choice_2
+
+问穹顶之蓝是如何烧成的
+
+## ev.ev_samarcanda_mentor_followup.choice_2_result
+
+学生告诉你，穹顶之蓝来自巴达哈伤山中磨碎的青金石，烧入釉中。通往巴达哈伤的路，如今上了你的舆图。
+
+## ev.ev_samarcanda_mentor_followup.choice_3
+
+留一日，亲手抄录学生的书
+
+## ev.ev_samarcanda_mentor_followup.choice_3_result
+
+你在学生的书案前耗了一日，学他的手笔与他的书。这花费了时日，但这本书从此有一半是你的。

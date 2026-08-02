@@ -288,3 +288,131 @@ Keep the sign in your travel book
 ## ev.ev_kinsay_consequence_b_resolution.choice_2_result
 
 The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+
+## ev.ev_kinsay_a_followup.title
+
+Kinsay: The Water-Keeper of the Twelve Thousand Bridges
+
+## ev.ev_kinsay_a_followup.body
+
+The canal keeper who poled your boat through the city finds you again at the landing, his pole still dripping. He has spent his life among the twelve thousand bridges of Kinsay, and he tells you how the city is built like a net: the hundred canals are the meshes, the stone bridges the knots, and the streets are paved with stone so that no rain-mud ever holds back a cart. Every arch, he says, is counted and kept, and a broken bridge is a broken word to the men who govern the water. He shows you a block of toll marks cut into the quay, by which the keepers reckon what each boat owes for the day. The city of heaven, he says, does not float — it is held up by good accounting. You look at the water running beneath the twelve thousand bridges and see the order that the travellers' tales leave out.
+
+## ev.ev_kinsay_a_followup.choice_1
+
+Ask the keeper how the tolls are reckoned on the water
+
+## ev.ev_kinsay_a_followup.choice_1_result
+
+The keeper reads the block of toll marks for you — so much for a grain boat, so much for a passenger skiff, nothing for a funeral barge. The water-law of Kinsay is now written in your travel book.
+
+## ev.ev_kinsay_a_followup.choice_2
+
+Ask which water-road leads south to Suju
+
+## ev.ev_kinsay_a_followup.choice_2_result
+
+The keeper draws the water-road south on the flat of his hand: down the canal to the great lake, then by the river where the silk boats pass. The road to Suju is now clear on your map.
+
+## ev.ev_kinsay_a_followup.choice_3
+
+Stay a day to walk the bridges with the keeper
+
+## ev.ev_kinsay_a_followup.choice_3_result
+
+You spend a day crossing bridges with the keeper, learning to read the toll marks and the state of each arch. It costs you a day of the road, but the twelve thousand bridges are no longer a number to you.
+
+## ev.ev_kinsay_b_followup.title
+
+Kinsay: The Account of the Ten Great Squares
+
+## ev.ev_kinsay_b_followup.body
+
+A merchant of the ten great squares of Kinsay takes you for a buyer and keeps you by the pepper stalls. He tells you that the pepper he sells comes by sea to the port of Zayton and up the river to Kinsay, and that the city consumes in a single day a quantity of it that a kingdom of the West would not use in a year. He speaks of the twelve guilds of the handicrafts, each with its twelve thousand houses and its own gate, and of the ten markets where, three days in every week, every stall is filled with the hunters' and the fishers' catch. If you mean to deal honestly, he says, he will show you how the day's accounts are kept — the pepper weighed, the price set, the cartage reckoned. What you do with the offer is your own.
+
+## ev.ev_kinsay_b_followup.choice_1
+
+Buy pepper at the merchant's own price
+
+## ev.ev_kinsay_b_followup.choice_1_result
+
+The merchant weighs out a load of pepper for you at his list price, a courtesy he shows to travellers who ask the truth of the markets before they trade. The pepper goes into your goods, and the account of the ten great squares goes into your book.
+
+## ev.ev_kinsay_b_followup.choice_2
+
+Ask which sea-port the pepper comes from
+
+## ev.ev_kinsay_b_followup.choice_2_result
+
+The merchant names the port of Zayton, where the junks put in from the southern seas, and the river-road by which the pepper comes up to Kinsay. The sea-port is now on your map.
+
+## ev.ev_kinsay_b_followup.choice_3
+
+Stay a day to watch the twelve guilds at their accounting
+
+## ev.ev_kinsay_b_followup.choice_3_result
+
+You spend a day among the guild halls, watching the weights set and the prices entered in the great books. It costs you a day, but you have seen how a city with a million doors keeps its accounts straight.
+
+## ev.ev_kinsay_c_followup.title
+
+Kinsay: The Lanterns of the West Lake
+
+## ev.ev_kinsay_c_followup.body
+
+The pipa player who sang among the lantern boats finds you on the lake shore the next evening, her instrument wrapped and her fee refused. She will not take payment, she says, for a song heard on the water is half the lake's own. She tells you that the lake is the pleasure-ground of the city of heaven: the boats go out at dusk with wine and lanterns, and the surveyors once counted the houseboats at more than a thousand, not one of them earning its keep by trade. The city works on the land and plays on the water, and a traveller who has seen only the markets has seen half of Kinsay. She asks what you mean to carry away from the lake — a blessing, a belief, or an evening's music.
+
+## ev.ev_kinsay_c_followup.choice_1
+
+Ask the singer for a blessing of the lake to carry on the road
+
+## ev.ev_kinsay_c_followup.choice_1_result
+
+The singer threads a reed into your collar and sings a line of the lake's own song over it. For the length of your stay by the water, the doors of the city seem to open a little wider for you.
+
+## ev.ev_kinsay_c_followup.choice_2
+
+Ask what the lake folk believe about the lanterns
+
+## ev.ev_kinsay_c_followup.choice_2_result
+
+She tells you that the lanterns are set on the water for the drowned, so that no soul is left to find its way in the dark, and that the pleasure boats are decked for the living to enjoy what the dead remember. The belief of the lake is now written in your travel book.
+
+## ev.ev_kinsay_c_followup.choice_3
+
+Stay until the moon rises to hear the boats' music
+
+## ev.ev_kinsay_c_followup.choice_3_result
+
+You stay by the shore until the moon is up and the lantern boats drift out to the middle of the lake. It costs you a day, but you have heard the city of heaven at its most beautiful, and the people of Kinsay will remember that you listened.
+
+## ev.ev_kinsay_mentor_followup.title
+
+Kinsay: The Temple Reader's Parting Cups
+
+## ev.ev_kinsay_mentor_followup.body
+
+The temple reader who taught you the cups meets you once more by the threshold, her two wooden cups wrapped in cloth. She does not ask what you have done with the divination; the cups, she says, do not keep accounts. Instead she lays out what remains of her working life: a set of carved cups that have answered for her these twenty years, a casting of the water-road south that the cups have blessed, or a day at her side to learn the cups' third answer — the laugh — by ear. Take what will serve you, she says, for a craft is only as good as the hand that carries it.
+
+## ev.ev_kinsay_mentor_followup.choice_1
+
+Take the reader's carved cups as a parting gift
+
+## ev.ev_kinsay_mentor_followup.choice_1_result
+
+The reader wraps the cups in cloth and gives them to you without ceremony. What she taught you by the threshold is now written where you can consult it on the road.
+
+## ev.ev_kinsay_mentor_followup.choice_2
+
+Ask which water-road the cups would bless
+
+## ev.ev_kinsay_mentor_followup.choice_2_result
+
+The reader casts the cups once more, and they grant leave for the water-road south, past the lake, toward Suju. The road is now drawn on your map, and the cups' answer goes with it.
+
+## ev.ev_kinsay_mentor_followup.choice_3
+
+Linger a day to learn the laugh of the cups
+
+## ev.ev_kinsay_mentor_followup.choice_3_result
+
+You spend a day at the temple threshold learning how to hear the laugh of the cups — the cast that means the craft has no counsel yet. It costs you time, but the reader's ear is now partly your own, and the temples of the land have heard of it.

@@ -162,7 +162,8 @@
           "effects": [
             { "op": "coins", "value": -18000, "reason": "bought-pepper-at-the-quay" },
             { "op": "goods", "id": "pepper", "value": 1, "reason": "bought-pepper-at-the-quay" },
-            { "op": "codex", "value": "cx-pepper-freight", "reason": "learned-the-freight-rates" }
+            { "op": "codex", "value": "cx-pepper-freight", "reason": "learned-the-freight-rates" },
+            { "op": "queue_event", "value": "ev-zayton-harbour-followup", "reason": "ev-zayton-harbour-followup" }
           ]
         },
         {
@@ -207,7 +208,8 @@
           "effects": [
             { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "persian-traders-named-the-sea-road" },
             { "op": "reputation", "value": 2, "scope": "band", "id": "maritime_asia", "reason": "spoke-with-the-persian-traders" },
-            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" }
+            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" },
+            { "op": "queue_event", "value": "ev-zayton-fanfang-followup", "reason": "ev-zayton-fanfang-followup" }
           ]
         },
         {
@@ -256,7 +258,8 @@
             { "op": "coins", "value": -800, "reason": "an-offering-before-sailing" },
             { "op": "fate", "id": "travel", "value": 2, "reason": "blessed-for-the-sea-road" },
             { "op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "observed-the-local-rite" },
-            { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+            { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" },
+            { "op": "queue_event", "value": "ev-zayton-mazu-followup", "reason": "ev-zayton-mazu-followup" }
           ]
         },
         {
@@ -315,7 +318,8 @@
             { "op": "coins", "value": -5000, "reason": "a-gift-to-the-temple-diviner" },
             { "op": "days", "value": 14, "reason": "a-fortnight-learning-the-lots" },
             { "op": "learn_divination", "value": "lot", "reason": "learned-the-temple-lots" },
-            { "op": "flag", "value": "fl-learned-lot", "reason": "learned-the-temple-lots" }
+            { "op": "flag", "value": "fl-learned-lot", "reason": "learned-the-temple-lots" },
+            { "op": "queue_event", "value": "ev-zayton-mentor-followup", "reason": "ev-zayton-mentor-followup" }
           ]
         },
         {
@@ -326,7 +330,8 @@
             { "op": "coins", "value": -3000, "reason": "offering-for-the-jiaobei-lesson" },
             { "op": "days", "value": 3, "reason": "three-days-learning-the-cups" },
             { "op": "learn_divination", "value": "jiaobei", "reason": "learned-jiaobei" },
-            { "op": "flag", "value": "fl-learned-jiaobei", "reason": "learned-jiaobei" }
+            { "op": "flag", "value": "fl-learned-jiaobei", "reason": "learned-jiaobei" },
+            { "op": "queue_event", "value": "ev-zayton-mentor-jiaobei-followup", "reason": "ev-zayton-mentor-jiaobei-followup" }
           ]
         },
         {

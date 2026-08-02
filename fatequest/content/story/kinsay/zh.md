@@ -2,7 +2,7 @@
 unit: kinsay
 lang: zh
 source: en
-source_rev: 98d243d431fc
+source_rev: a437d0cbedbe
 status: translated
 translator: 人工校译
 notes: >
@@ -70,6 +70,38 @@ stamps:
   ev.ev_kinsay_consequence_b_resolution.choice_1_result: 00051dac2baa
   ev.ev_kinsay_consequence_b_resolution.choice_2: c200bc7d41b1
   ev.ev_kinsay_consequence_b_resolution.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_a_followup.title: aa04e443a837
+  ev.ev_kinsay_a_followup.body: e543ff163f1e
+  ev.ev_kinsay_a_followup.choice_1: c25263604fbd
+  ev.ev_kinsay_a_followup.choice_1_result: a9537cdedc9e
+  ev.ev_kinsay_a_followup.choice_2: 913c41fbdca7
+  ev.ev_kinsay_a_followup.choice_2_result: 8d345a206dfb
+  ev.ev_kinsay_a_followup.choice_3: b3ac1fecc0fb
+  ev.ev_kinsay_a_followup.choice_3_result: 7fdc4ec98880
+  ev.ev_kinsay_b_followup.title: a5555118806f
+  ev.ev_kinsay_b_followup.body: 0df05cb300e2
+  ev.ev_kinsay_b_followup.choice_1: 28041f5c61ee
+  ev.ev_kinsay_b_followup.choice_1_result: 00825622cbc4
+  ev.ev_kinsay_b_followup.choice_2: 4e9c2493846d
+  ev.ev_kinsay_b_followup.choice_2_result: 266e137ff65f
+  ev.ev_kinsay_b_followup.choice_3: 02710093ea3c
+  ev.ev_kinsay_b_followup.choice_3_result: e48ac2b3d954
+  ev.ev_kinsay_c_followup.title: 64b380197b58
+  ev.ev_kinsay_c_followup.body: 546db6a8f141
+  ev.ev_kinsay_c_followup.choice_1: 70a4aa49f599
+  ev.ev_kinsay_c_followup.choice_1_result: 3aebc822daae
+  ev.ev_kinsay_c_followup.choice_2: 06f21c8798b2
+  ev.ev_kinsay_c_followup.choice_2_result: 03df86a77736
+  ev.ev_kinsay_c_followup.choice_3: 20b584917aeb
+  ev.ev_kinsay_c_followup.choice_3_result: c2b2fcf8e82d
+  ev.ev_kinsay_mentor_followup.title: a967f3f08fa5
+  ev.ev_kinsay_mentor_followup.body: 8ee427347b4b
+  ev.ev_kinsay_mentor_followup.choice_1: bdf69c9c04ab
+  ev.ev_kinsay_mentor_followup.choice_1_result: 1d3b52d43efc
+  ev.ev_kinsay_mentor_followup.choice_2: dd2130f5a4a2
+  ev.ev_kinsay_mentor_followup.choice_2_result: 1f3b5af8846d
+  ev.ev_kinsay_mentor_followup.choice_3: 75495db8b567
+  ev.ev_kinsay_mentor_followup.choice_3_result: d9d99d4a2424
 ---
 
 ## city.kinsay.name
@@ -323,3 +355,131 @@ stamps:
 ## ev.ev_kinsay_consequence_b_resolution.choice_2_result
 
 事情尚未完结，但下一段路已经显出：你的名字随水巷与粮船先一步传开。
+
+## ev.ev_kinsay_a_followup.title
+
+行在：一万二千桥的守水人
+
+## ev.ev_kinsay_a_followup.body
+
+曾用船篙载你穿行全城的水务官，在码头又寻到你，篙上犹自滴水。他一生都在行在诸桥之间度过。他告诉你，这座城织得如同一张网：一百条水巷是网眼，石桥是网结，街道皆以石板铺就，任是大雨，泥泞也拦不住车马。他说，每座桥拱都有人计数看管，桥断一处，便如同执掌水政的人失信一句。他指给你看码头石上凿刻的税牌，水务官们便凭它算出每艘船当日该缴几何。他说，天堂之城并不漂浮——它是被一册好账目托住的。你望着这一万二千座桥下奔流的水，看见了旅人的传说里略去的那份秩序。
+
+## ev.ev_kinsay_a_followup.choice_1
+
+问水务官，水上的税如何估定
+
+## ev.ev_kinsay_a_followup.choice_1_result
+
+水务官为你读那块税牌——粮船几何，客舟几何，丧舟分文不取。行在的水上法令，如今写进了你的行纪。
+
+## ev.ev_kinsay_a_followup.choice_2
+
+问哪一条水路向南通苏州
+
+## ev.ev_kinsay_a_followup.choice_2_result
+
+水务官在掌心里画出向南的水路：沿水巷下大湖，再循载丝之舟所走的河道而去。去苏州的路，如今在你的舆图上清清楚楚。
+
+## ev.ev_kinsay_a_followup.choice_3
+
+留下 一日，随水务官走过群桥
+
+## ev.ev_kinsay_a_followup.choice_3_result
+
+你花了一日与水务官过桥，学认税牌，学看每座桥拱的好坏。它耗去你路上的一日，但一万二千座桥对你而言，不再是一个数目。
+
+## ev.ev_kinsay_b_followup.title
+
+行在：十大市场之账
+
+## ev.ev_kinsay_b_followup.body
+
+行在十大市场中的一位商贾把你当作买家，留你在胡椒摊前。他告诉你，他卖的胡椒自海路到刺桐港，再沿河上行至行在；这座城一日所耗，西域一国一年也用不完。他说起十二行会的手艺，各行会各有门户与街坊，又说起十座市场，每旬三日，摊上尽是猎户与渔人的收获。他说，你若打算老实交易，他便教你看当日如何记账——胡椒过秤、定价、车脚钱如何折算。如何处置这桩提议，全在你。
+
+## ev.ev_kinsay_b_followup.choice_1
+
+按商贾自己的价钱买胡椒
+
+## ev.ev_kinsay_b_followup.choice_1_result
+
+商贾按他账上所列的价目为你称出一份胡椒，这是他对先问行情再行交易的旅人的礼遇。胡椒入了你的货囊，十大市场的账则入了你的行纪。
+
+## ev.ev_kinsay_b_followup.choice_2
+
+问胡椒自哪一座海港而来
+
+## ev.ev_kinsay_b_followup.choice_2_result
+
+商贾说出刺桐港之名——南来的海舶在那里泊岸——又说出胡椒溯河上行在的水路。海港如今上了你的舆图。
+
+## ev.ev_kinsay_b_followup.choice_3
+
+留下 一日，看十二行会如何结算
+
+## ev.ev_kinsay_b_followup.choice_3_result
+
+你在行会各坊间留了一日，看他们定秤、记账、登价于大册。它耗去你一日，但你已见过一座有百万门户的城，如何把账目理得分毫不差。
+
+## ev.ev_kinsay_c_followup.title
+
+行在：西湖灯夜
+
+## ev.ev_kinsay_c_followup.body
+
+曾在灯船间唱琵琶的歌者，次日傍晚在湖岸又寻到你，琴已裹布，酬金却坚辞不受。她说，水上听来的歌，一半是湖自己的，不能收钱。她告诉你，西湖是天堂之城的游乐之地：船在黄昏时载酒点灯而去，测量官曾数过湖上的船屋，千艘有余，无一艘靠营生过活。城在陆上劳作，在水上作乐；只见过市场的旅人，见到的只是行在的一半。她问你要从湖上带走什么——一道祝福、一则信念，还是整整一夜的音乐。
+
+## ev.ev_kinsay_c_followup.choice_1
+
+请歌者赐一道湖上的祝福，带上路去
+
+## ev.ev_kinsay_c_followup.choice_1_result
+
+歌者把一茎芦管穿进你的衣领，又对着它唱了一句湖上自己的歌。你在水边的这段时日里，这座城的门仿佛为你开得稍宽了些。
+
+## ev.ev_kinsay_c_followup.choice_2
+
+问湖上人家，灯是为何而点
+
+## ev.ev_kinsay_c_followup.choice_2_result
+
+她说，灯是为溺者放在水上的，好叫没有一个魂魄在黑暗里找不到归路；画舫则为生者而张灯，让活人享受亡者所记得的东西。湖上的信念，如今写进了你的行纪。
+
+## ev.ev_kinsay_c_followup.choice_3
+
+留到月上，听船上的乐声
+
+## ev.ev_kinsay_c_followup.choice_3_result
+
+你在湖岸留到月升，看灯船漂向湖心。它耗去你一日，但你已听见天堂之城最美的时分，行在的人们也会记得你曾静静听过。
+
+## ev.ev_kinsay_mentor_followup.title
+
+行在：庙祝的赠杯
+
+## ev.ev_kinsay_mentor_followup.body
+
+教过你筊杯的庙祝，在门槛边又与你相见，两枚木杯以布裹着。她不问你拿占法做了什么；她说，杯子不记账。她只把一生余下的物件摆出来任你挑选：一套为她答了二十年问的雕花杯，一卦已经得杯首肯的南行水路，或是留下 一日，在身侧学会杯子的第三种回答——那声笑——如何听。她说，取对你有用的罢，因为一门手艺，好坏全看带着它的那双手。
+
+## ev.ev_kinsay_mentor_followup.choice_1
+
+收下庙祝的雕花杯，作为别赠
+
+## ev.ev_kinsay_mentor_followup.choice_1_result
+
+庙祝把杯子裹进布里，不事铺张地交给你。她在门槛边教你的东西，如今写在你路上随时可查的地方。
+
+## ev.ev_kinsay_mentor_followup.choice_2
+
+问哪一条水路，杯子肯为它赐准
+
+## ev.ev_kinsay_mentor_followup.choice_2_result
+
+庙祝再掷一次杯，杯子准了南行的水路：过湖，向苏州去。这条路如今画在你的舆图上，杯子的答复也随之同行。
+
+## ev.ev_kinsay_mentor_followup.choice_3
+
+留下 一日，学听杯子那声笑
+
+## ev.ev_kinsay_mentor_followup.choice_3_result
+
+你在庙槛边留了一日，学听杯子那声笑——那是手艺自认尚无话可答的一掷。它耗去你时日，但庙祝的耳力，如今也有一分是你的了；此地的寺观之间，亦已传开你的名。

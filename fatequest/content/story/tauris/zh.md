@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: 4b484bfc83fd
+source_rev: f66fb987ff8b
 status: translated
 translator: 人工校译
 notes: >
@@ -85,6 +85,38 @@ stamps:
   ev.ev_tauris_a_merchants_followup.choice_2_result: 17a14ec2039f
   ev.ev_tauris_a_merchants_followup.choice_3: e8a1c0259f78
   ev.ev_tauris_a_merchants_followup.choice_3_result: cf0ecebd922b
+  ev.ev_tauris_b_followup.title: f925514a2452
+  ev.ev_tauris_b_followup.body: b92e83ab8f7d
+  ev.ev_tauris_b_followup.choice_1: 9823f82bf733
+  ev.ev_tauris_b_followup.choice_1_result: 6538608a9dc8
+  ev.ev_tauris_b_followup.choice_2: 53a8549ead1a
+  ev.ev_tauris_b_followup.choice_2_result: c87d601aee5f
+  ev.ev_tauris_b_followup.choice_3: e8df48af1898
+  ev.ev_tauris_b_followup.choice_3_result: f5e708b9f667
+  ev.ev_tauris_c_followup.title: 777e6106b7eb
+  ev.ev_tauris_c_followup.body: bdc25f2114b2
+  ev.ev_tauris_c_followup.choice_1: 4606da62b252
+  ev.ev_tauris_c_followup.choice_1_result: e7e899d8f257
+  ev.ev_tauris_c_followup.choice_2: 0c95e6bd958e
+  ev.ev_tauris_c_followup.choice_2_result: fb7dad11bd4e
+  ev.ev_tauris_c_followup.choice_3: 5fb16183de6d
+  ev.ev_tauris_c_followup.choice_3_result: 07b7db66355e
+  ev.ev_tauris_mentor_followup.title: 1b7e66999f4e
+  ev.ev_tauris_mentor_followup.body: a4844f669382
+  ev.ev_tauris_mentor_followup.choice_1: 3a84092345d3
+  ev.ev_tauris_mentor_followup.choice_1_result: 82ecc8da8d31
+  ev.ev_tauris_mentor_followup.choice_2: 2e75570179b8
+  ev.ev_tauris_mentor_followup.choice_2_result: bff50aecf959
+  ev.ev_tauris_mentor_followup.choice_3: 5179f9453af2
+  ev.ev_tauris_mentor_followup.choice_3_result: 52d4009e19af
+  ev.ev_tauris_mentor_astrodice_followup.title: 6c8dd3b28aeb
+  ev.ev_tauris_mentor_astrodice_followup.body: ae90e18c83fe
+  ev.ev_tauris_mentor_astrodice_followup.choice_1: 48c74daf964b
+  ev.ev_tauris_mentor_astrodice_followup.choice_1_result: 32dfb6c163db
+  ev.ev_tauris_mentor_astrodice_followup.choice_2: 48e8e8d87caa
+  ev.ev_tauris_mentor_astrodice_followup.choice_2_result: 808feee1de9b
+  ev.ev_tauris_mentor_astrodice_followup.choice_3: 969a23bee853
+  ev.ev_tauris_mentor_astrodice_followup.choice_3_result: 82f658a717a5
 ---
 
 ## city.tauris.name
@@ -397,3 +429,132 @@ stamps:
 ## ev.ev_tauris_a_merchants_followup.choice_3_result
 
 水源账本让你多得到一日井站之间的尺度。你付出了时间，却不再盲目启程。
+
+## ev.ev_tauris_b_followup.title
+
+大不里士：税署的账册
+
+## ev.ev_tauris_b_followup.body
+
+大不里士的税署设于东门之内，守署之人掌着那份无人敢争的账册。见你与热那亚人谈过话，他便将你引到一旁，摊开书卷：凡过境之货，皆向伊利汗纳税；每一条账目之侧，他都注着货自何路而来——自契丹来的丝路、自海湾来的珠路、自报达来的金缎之路。你若肯听，他愿把这账册所知的道路，细细讲给你听。
+
+## ev.ev_tauris_b_followup.choice_1
+
+按账册所载之价，买一串大不里士珍珠
+
+## ev.ev_tauris_b_followup.choice_1_result
+
+守署之人按书中所记的价钱报出，正是他给商栈自己的价。珍珠是真珠，串线均匀，税署容你携着它过门。
+
+## ev.ev_tauris_b_followup.choice_2
+
+请守署之人画出通往尼尼微的道路
+
+## ev.ev_tauris_b_followup.choice_2_result
+
+他在账册页边勾出那条路，一井一卡，历历分明。尼尼微不再只是远方舆图上的一个名字；这条路要你付出什么，你如今一清二楚。
+
+## ev.ev_tauris_b_followup.choice_3
+
+在税署留一日，听当日的税目读毕
+
+## ev.ev_tauris_b_followup.choice_3_result
+
+你在秤与盖印的货包之间留了一日，听税目逐一读毕。时日是花了，可税署的人从此认得你的面容，说起你来也公道。
+
+## ev.ev_tauris_c_followup.title
+
+大不里士：分水人的份额
+
+## ev.ev_tauris_c_followup.body
+
+大不里士的园囿饮着坎儿井之水，守闸之人除水之外别无主人。他在水渠分岔处迎上你，指给你看每一座果园取走自己的一份，不多，也不少。他说，同一股令杏树发绿的水，从平原底下淌过去，正流向东方的道路。
+
+## ev.ev_tauris_c_followup.choice_1
+
+向果园主人买些杏脯与开心果
+
+## ev.ev_tauris_c_followup.choice_1_result
+
+果园主人按园丁的价钱，为你装满了鞍囊。大不里士之果为波斯最上，如今其中一份将随你同行。
+
+## ev.ev_tauris_c_followup.choice_2
+
+问分水人，东行的道路循着哪股水
+
+## ev.ev_tauris_c_followup.choice_2_result
+
+分水人顺着水渠的走向指去，直到它们在干地间枯尽，再报出循水而行的路名。伊斯帕罕如今写上了你的舆图，你也知道了那条路尽头之城。
+
+## ev.ev_tauris_c_followup.choice_3
+
+在闸口留一日，学这分水的法度
+
+## ev.ev_tauris_c_followup.choice_3_result
+
+你在闸口留了一日，学园囿如何分取各自的水。时日是花了，但坎儿井的法度随你留下，园囿也养好了你的精神。
+
+## ev.ev_tauris_mentor_followup.title
+
+大不里士：占者的临别之赠
+
+## ev.ev_tauris_mentor_followup.body
+
+教你牌阵的那位寡妇，不肯让你空手离开她的牌桌。她摆下最后一局，为前路占了一回「择门之局」，读罢，把一张牌按入你掌心。临别的一局，她说，应当分文不取、了无所系；你只须从中取走道路应答你的那一部分。
+
+## ev.ev_tauris_mentor_followup.choice_1
+
+收下她递给你的临别之牌
+
+## ev.ev_tauris_mentor_followup.choice_1_result
+
+她递牌给你，不报牌名，只嘱你在第一处岔口再读它。占者的赠礼如今随你而行，牌阵的功课也一并带上。
+
+## ev.ev_tauris_mentor_followup.choice_2
+
+请她占一占，哪条路最利于你
+
+## ev.ev_tauris_mentor_followup.choice_2_result
+
+她翻过牌面，报出南方那条路——尽头通海之路。忽鲁谟斯如今上了你的舆图，你也知道了行此路当择何季。
+
+## ev.ev_tauris_mentor_followup.choice_3
+
+留一日，看她为海路起卦
+
+## ev.ev_tauris_mentor_followup.choice_3_result
+
+你在她家中留了一日，看她为海路起卦，听她讲每张牌的含义。时日是花了，可占者之家从此记得你；在大不里士，一个被人记住的名字，会替你打开门扉。
+
+## ev.ev_tauris_mentor_astrodice_followup.title
+
+大不里士：骰师的最后一掷
+
+## ev.ev_tauris_mentor_astrodice_followup.body
+
+教你掷十二面骰的骰师，在城门边又唤住了你。他把骰子拢进双掌，呵了一口气，在路边石上掷出：为前路做的最后一局。掷便是掷，他说；你已付过学费，这一掷便是你的，如何花用由你。你自择从中取走什么。
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_1
+
+把这一掷收作一路的护符
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_1_result
+
+他把骰子交给你随身携带，这几面已被岁月的行旅磨圆了。无论它们掷出了什么，这一掷本身就是护佑，而到了任何转弯处，你都懂得如何再掷它。
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_2
+
+问骰，出城走哪条路最好
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_2_result
+
+他又掷了一次，读出骰面：南方那条路——尽头是忽鲁谟斯与海。这条路画上了你的舆图，这一掷也收进了你的行纪。
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_3
+
+留一日，让骰在你自己手中落定
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
+
+你与这副骰子坐了一日，学会了它们的落势，黄昏时把它们还了回去。骰师记下你的沉静，坊间也对你有了好话。
+

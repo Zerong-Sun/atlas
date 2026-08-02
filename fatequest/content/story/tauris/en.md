@@ -338,3 +338,133 @@ Wait for the merchant who keeps the water ledger
 ## ev.ev_tauris_a_merchants_followup.choice_3_result
 
 The water ledger gives you one more day's measure between wells. It costs time, but the next departure is no longer blind.
+
+## ev.ev_tauris_b_followup.title
+
+Tauris: The Toll-Master's Ledger
+
+## ev.ev_tauris_b_followup.body
+
+The tax-house of Tauris stands within the east gate, and its keeper keeps the ledger that no merchant argues with. Seeing that you have spoken with the Genoese, he draws you aside and lays the book open: every bale that passes pays the Ilkhan his share, and beside each entry he has set the road the goods came by — the silk road from Cathay, the pearl road from the Gulf, the cloth-of-gold road from Baudas. He will read you what the ledger knows of the roads, if you will listen.
+
+## ev.ev_tauris_b_followup.choice_1
+
+Buy a string of Tabriz pearls at the price written in the ledger
+
+## ev.ev_tauris_b_followup.choice_1_result
+
+The toll-master names his price from the book, and it is the price he charges the fondaco itself. The pearls are real, the string even, and the tax-house lets you pass with it.
+
+## ev.ev_tauris_b_followup.choice_2
+
+Ask the toll-master to draw the road to Niniveh
+
+## ev.ev_tauris_b_followup.choice_2_result
+
+He draws it in the margin of the ledger, well by well, toll by toll. Niniveh is now more than a name on a distant map; you know what the road will cost you.
+
+## ev.ev_tauris_b_followup.choice_3
+
+Wait a day in the tax-house while the day's tolls are read
+
+## ev.ev_tauris_b_followup.choice_3_result
+
+You wait a day among the scales and the stamped bales, hearing the tolls read out. It costs time, but the keepers of the tax-house now know your face and speak of you fairly.
+
+## ev.ev_tauris_c_followup.title
+
+Tauris: The Water-Master's Share
+
+## ev.ev_tauris_c_followup.body
+
+The gardens of Tauris drink from the qanats, and the man who keeps the sluices has no master but the water. He meets you where the channels divide and shows you how each orchard takes its share, no more and no less. The same water that greens the apricots, he says, runs on beneath the plain toward the eastern roads.
+
+## ev.ev_tauris_c_followup.choice_1
+
+Buy dried apricots and pistachios from the orchard-keeper
+
+## ev.ev_tauris_c_followup.choice_1_result
+
+The orchard-keeper fills your saddlebag at the gardeners' price. The fruit of Tauris is the finest in Persia, and now some of it will travel with you.
+
+## ev.ev_tauris_c_followup.choice_2
+
+Ask the water-master which road the water takes to the east
+
+## ev.ev_tauris_c_followup.choice_2_result
+
+The water-master points along the line of the channels to where they fail among the dry lands, and names the road that follows them. Ispahan is now written on your map, and you know the road it stands at the end of.
+
+## ev.ev_tauris_c_followup.choice_3
+
+Rest a day by the sluice and learn the water's measure
+
+## ev.ev_tauris_c_followup.choice_3_result
+
+You spend a day at the sluice, learning how the water is shared among the gardens. It costs a day of travel, but the measure of the qanat stays with you, and the gardens have refreshed you.
+
+## ev.ev_tauris_mentor_followup.title
+
+Tauris: The Reader's Parting Gift
+
+## ev.ev_tauris_mentor_followup.body
+
+The widow who taught you the cards does not let you leave her table empty-handed. She lays out one last spread and reads it for you — a choice-gate cast for the road ahead — then presses a single card into your palm. A parting spread should cost nothing and bind nothing, she says; take from it only what the road will answer for.
+
+## ev.ev_tauris_mentor_followup.choice_1
+
+Take the parting card she offers you
+
+## ev.ev_tauris_mentor_followup.choice_1_result
+
+She gives you the card without naming it, and tells you to read it at the first fork. The reader's gift travels with you now, and the lesson of the spreads with it.
+
+## ev.ev_tauris_mentor_followup.choice_2
+
+Ask her to read which road will serve you best
+
+## ev.ev_tauris_mentor_followup.choice_2_result
+
+She turns the cards and names the southern road, the one that ends at the sea. Ormus is now on your map, and you know the season in which it is best ridden.
+
+## ev.ev_tauris_mentor_followup.choice_3
+
+Stay a day and watch her cast for the sea road
+
+## ev.ev_tauris_mentor_followup.choice_3_result
+
+You stay a day in her house, watching her cast for the sea road and hearing the meaning of each card. It costs time, but the reader's house remembers you, and in Tauris a remembered name opens doors.
+
+## ev.ev_tauris_mentor_astrodice_followup.title
+
+Tauris: The Dice Master's Last Cast
+
+## ev.ev_tauris_mentor_astrodice_followup.body
+
+The dice master who taught you the throwing of the twelve faces calls you back at the city gate. He cups the dice in both hands, blows on them once, and casts them on the curbstone: a final reading for the road. A cast is a cast, he says; you have paid your fee and it is yours to spend. Choose what to take from it.
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_1
+
+Take the cast as a talisman for the journey
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_1_result
+
+He gives you the dice to carry, their faces worn with years of travel. Whatever they showed, the cast itself is a guard, and you will know how to throw it at any turning.
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_2
+
+Ask the dice which road runs best from the city
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_2_result
+
+He casts again and reads the faces: the southern road, the one that ends at Ormus and the sea. The course is drawn on your map and the cast kept in your book.
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_3
+
+Stay a day and let the dice settle in your own hand
+
+## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
+
+You sit with the dice through a day, learning their fall, and return them at dusk. The dice master remembers your calm, and the quarter speaks well of you.
+
+

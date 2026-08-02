@@ -1,0 +1,355 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-baldacum-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_a_followup.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_a_followup.choice_1",
+          "resultText": "ev.ev_baldacum_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -300,
+              "reason": "paid-the-warden-to-open-the-door"
+            },
+            {
+              "op": "item",
+              "value": "it-old-coin",
+              "reason": "took-a-coin-from-before-the-fall"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_a_followup.choice_2",
+          "resultText": "ev.ev_baldacum_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "warden-drew-the-river-road-to-the-sea"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-the-caliphs-way-to-the-sea"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_a_followup.choice_3",
+          "resultText": "ev.ev_baldacum_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-in-the-empty-hall"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-palace",
+              "reason": "carried-the-emptiness-of-the-hall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baldacum",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c006"
+        }
+      }
+    },
+    {
+      "id": "ev-baldacum-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_b_followup.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_b_followup.choice_1",
+          "resultText": "ev.ev_baldacum_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -2000,
+              "reason": "bought-silk-at-the-weavers-price"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-silk-at-the-weavers-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_b_followup.choice_2",
+          "resultText": "ev.ev_baldacum_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "pearl-merchant-drew-the-sea-road-to-ormus"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-where-the-gulf-pearls-come-from"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_b_followup.choice_3",
+          "resultText": "ev.ev_baldacum_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-gold-thread-woven"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-brocade",
+              "reason": "learned-the-pattern-of-the-gold-thread"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baldacum",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c006"
+        }
+      }
+    },
+    {
+      "id": "ev-baldacum-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_c_followup.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_c_followup.choice_1",
+          "resultText": "ev.ev_baldacum_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-old-coin",
+              "reason": "took-the-coin-from-the-ashes"
+            },
+            {
+              "op": "sticker",
+              "value": "st-baldacum-fall",
+              "reason": "carried-the-proof-of-the-fall"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_c_followup.choice_2",
+          "resultText": "ev.ev_baldacum_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "keeper-drew-the-flight-down-the-river"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-the-road-of-the-flight"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_c_followup.choice_3",
+          "resultText": "ev.ev_baldacum_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "wrote-down-the-tale-of-the-fall"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "baldacum",
+              "reason": "kept-the-tale-of-the-fall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baldacum",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c006"
+        }
+      }
+    },
+    {
+      "id": "ev-baldacum-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_mentor_followup.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_mentor_followup.choice_1",
+          "resultText": "ev.ev_baldacum_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-mentor-gift",
+              "reason": "received-the-calendar-masters-almanac"
+            },
+            {
+              "op": "codex",
+              "value": "cx-four-pillars",
+              "reason": "received-the-calendar-masters-almanac"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_mentor_followup.choice_2",
+          "resultText": "ev.ev_baldacum_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "master-named-the-safe-season-for-basora"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-the-river-roads-seasons"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_mentor_followup.choice_3",
+          "resultText": "ev.ev_baldacum_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-master-to-read-the-pillars"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "baldacum",
+              "reason": "the-calendar-masters-circle-remembered-you"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baldacum",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-mentor-geomancy-followup",
+      "kind": "consequence",
+      "title": "ev.ev_baldacum_mentor_geomancy_followup.title",
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "body": "ev.ev_baldacum_mentor_geomancy_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_baldacum_mentor_geomancy_followup.choice_1",
+          "resultText": "ev.ev_baldacum_mentor_geomancy_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-baldacum-geomancy-ward",
+              "reason": "took-the-sand-reading-as-a-ward"
+            },
+            {
+              "op": "codex",
+              "value": "cx-geomancy",
+              "reason": "received-the-geomancers-ward"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_mentor_geomancy_followup.choice_2",
+          "resultText": "ev.ev_baldacum_mentor_geomancy_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "the-geomancer-drew-the-road-to-the-river"
+            },
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-the-sands-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_baldacum_mentor_geomancy_followup.choice_3",
+          "resultText": "ev.ev_baldacum_mentor_geomancy_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-sand-traced-to-its-answer"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "baldacum",
+              "reason": "the-sand-readers-remembered-your-poise"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "baldacum",
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-ormus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_a_followup.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_a_followup.choice_1",
+          "resultText": "ev.ev_ormus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-ormus-fort",
+              "reason": "entered-the-harbor-ledger"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ormus",
+              "reason": "paid-the-toll-honestly"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_a_followup.choice_2",
+          "resultText": "ev.ev_ormus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "divers-drew-the-crossing"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-divers-crossing"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_a_followup.choice_3",
+          "resultText": "ev.ev_ormus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-harbor-from-the-fort"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-reading-of-the-strait"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ormus",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c019"
+        }
+      }
+    },
+    {
+      "id": "ev-ormus-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_b_followup.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_b_followup.choice_1",
+          "resultText": "ev.ev_ormus_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-while-the-dhow-lay-at-anchor"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-spice",
+              "reason": "bought-pepper-while-the-dhow-lay-at-anchor"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_b_followup.choice_2",
+          "resultText": "ev.ev_ormus_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "unlock_route",
+              "value": "rt-ormus-cobinan",
+              "reason": "merchant-drew-the-inland-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-inland-caravan-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_b_followup.choice_3",
+          "resultText": "ev.ev_ormus_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-how-the-warehouse-keeps-the-spice"
+            },
+            {
+              "op": "sticker",
+              "value": "st-ormus-spice",
+              "reason": "learned-how-the-warehouse-keeps-the-spice"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ormus",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c019"
+        }
+      }
+    },
+    {
+      "id": "ev-ormus-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_c_followup.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_c_followup.choice_1",
+          "resultText": "ev.ev_ormus_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-ormus-wind",
+              "reason": "learned-the-sign-of-the-deadly-wind"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-signs-of-the-wind-of-death"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_c_followup.choice_2",
+          "resultText": "ev.ev_ormus_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "unlock_route",
+              "value": "rt-ormus-kerman",
+              "reason": "guide-pointed-the-road-inland"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-where-the-wind-loses-its-edge"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_c_followup.choice_3",
+          "resultText": "ev.ev_ormus_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-out-the-wind-in-the-chamber"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "endured-the-wind-of-death"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ormus",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c019"
+        }
+      }
+    },
+    {
+      "id": "ev-ormus-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ormus_mentor_followup.title",
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "body": "ev.ev_ormus_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ormus_mentor_followup.choice_1",
+          "resultText": "ev.ev_ormus_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-ormus-mentor-gift",
+              "reason": "received-the-pilots-parting-cast"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "received-the-pilots-parting-cast"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_mentor_followup.choice_2",
+          "resultText": "ev.ev_ormus_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "unlock_route",
+              "value": "rt-ormus-calatu",
+              "reason": "dice-named-the-sea-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-the-sea-road-the-dice-named"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ormus_mentor_followup.choice_3",
+          "resultText": "ev.ev_ormus_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-how-the-three-dice-are-weighed"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-how-the-three-dice-are-weighed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ormus",
+        "origin": "authored"
+      }
+    }
+  ]
+}

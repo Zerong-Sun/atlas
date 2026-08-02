@@ -2,7 +2,7 @@
 unit: lop
 lang: zh
 source: en
-source_rev: c86b23e2d01f
+source_rev: 7a6c333bdcda
 status: translated
 translator: 人工校译
 notes: >
@@ -70,6 +70,38 @@ stamps:
   ev.lop.mentor_closure.choice_2_result: 74adc434f44a
   ev.lop.mentor_closure.choice_3: 630a8fcfe069
   ev.lop.mentor_closure.choice_3_result: ca61672333bb
+  ev.ev_lop_bazaar_followup.title: 5397ba750946
+  ev.ev_lop_bazaar_followup.body: c07b8528feb6
+  ev.ev_lop_bazaar_followup.choice_1: e8539bc57bc4
+  ev.ev_lop_bazaar_followup.choice_1_result: fbfc9d281bc9
+  ev.ev_lop_bazaar_followup.choice_2: cdff509562a7
+  ev.ev_lop_bazaar_followup.choice_2_result: 06f934bcc0e3
+  ev.ev_lop_bazaar_followup.choice_3: 223789c7410b
+  ev.ev_lop_bazaar_followup.choice_3_result: 89a34afa9674
+  ev.ev_lop_caravanserai_followup.title: 2c5ce3d0124f
+  ev.ev_lop_caravanserai_followup.body: 74d89fe86a52
+  ev.ev_lop_caravanserai_followup.choice_1: 26c3cac4361b
+  ev.ev_lop_caravanserai_followup.choice_1_result: 67afcc8eafc3
+  ev.ev_lop_caravanserai_followup.choice_2: 76c5ca7667cc
+  ev.ev_lop_caravanserai_followup.choice_2_result: 4c2fd1649f7d
+  ev.ev_lop_caravanserai_followup.choice_3: 779c9dfc3734
+  ev.ev_lop_caravanserai_followup.choice_3_result: 6afa57948ff5
+  ev.ev_lop_shrine_followup.title: 765ebdfbd010
+  ev.ev_lop_shrine_followup.body: 976ef3ffe69d
+  ev.ev_lop_shrine_followup.choice_1: 082b57c032d1
+  ev.ev_lop_shrine_followup.choice_1_result: 41614c2f7ce0
+  ev.ev_lop_shrine_followup.choice_2: 048f68e19400
+  ev.ev_lop_shrine_followup.choice_2_result: 958d9fbbea42
+  ev.ev_lop_shrine_followup.choice_3: 89c63abdbb14
+  ev.ev_lop_shrine_followup.choice_3_result: b0b99f0a710e
+  ev.ev_lop_mentor_followup.title: 5332c05794cc
+  ev.ev_lop_mentor_followup.body: 4743bb6c62ce
+  ev.ev_lop_mentor_followup.choice_1: 8cb26b1d1e3c
+  ev.ev_lop_mentor_followup.choice_1_result: ba3cd8db62cc
+  ev.ev_lop_mentor_followup.choice_2: 537fd856974c
+  ev.ev_lop_mentor_followup.choice_2_result: 9dd2b93b3a17
+  ev.ev_lop_mentor_followup.choice_3: 06628fbab7e0
+  ev.ev_lop_mentor_followup.choice_3_result: 834f677ea73a
 ---
 
 ## city.lop.name
@@ -317,3 +349,131 @@ stamps:
 ## ev.lop.mentor_closure.choice_3_result
 
 你暂且把此事收下。得到的线索仍会指向你在罗卜的下一步行动。
+
+## ev.ev_lop_bazaar_followup.title
+
+罗卜：玉商的盐泽之言
+
+## ev.ev_lop_bazaar_followup.body
+
+罗卜的bāzār（集市）散场之后，最后一峰骆驼也被牵走，玉商折起他的黑绒，招手唤你到毯子尽头。他看过你掂量他的石头，知道你不是那种能骗第二次的买主。他压低声音，告诉你玉真正的来处：于阗上游的河床，雪山的溪流奔下，秋水一落，卵石便裸露出来。他说最好的石头都在水浅的季节捡拾，懂得时令的人，在源头用市价的一成便能买到。随后他又说起罗布沙漠之外的盐泽——一片白色的国土，脚下像冻雪一样咔嚓作响，寸草不生，旧井相距甚远，有的甘甜，有的苦涩到牲口不肯饮。他说去沙州的路正从那最窄处穿过，商队怕盐泽更甚于怕沙，因为在能要人命的水边百步之内，人照样会渴死。这番话，这个季节他还没有对别的买主讲过。他在等，看你拿它如何。
+
+## ev.ev_lop_bazaar_followup.choice_1
+
+买下玉商私藏的白玉
+
+## ev.ev_lop_bazaar_followup.choice_1_result
+
+玉商从腰带间的袋子里取出一块更小的石头，报出低于市价的价格，把它举到光下，让你看见玉质的油润。你离开集市时，带着别的买主从未见过的玉。
+
+## ev.ev_lop_bazaar_followup.choice_2
+
+问河川何时献出美玉
+
+## ev.ev_lop_bazaar_followup.choice_2_result
+
+玉商在尘土里替你画出于阗上游的河川，又标出向东通往沙州的路。那名字如今上了你的舆图，你也知道了石头现身的季节。
+
+## ev.ev_lop_bazaar_followup.choice_3
+
+留下听一听盐泽的传说
+
+## ev.ev_lop_bazaar_followup.choice_3_result
+
+你坐在毯子上看日头落下，玉商讲起白色的盐泽，和立在沙与路之间的旧井。耗去一日，而那讲述从此随身。
+
+## ev.ev_lop_caravanserai_followup.title
+
+罗卜：向导的分程
+
+## ev.ev_lop_caravanserai_followup.body
+
+沙漠向导在罗卜的商队客栈最后一堆火熄灭之前找到了你。他往来罗布沙漠，十九日达沙州，次数多得自己也数不清；他带了一根棍子，好把路画在尘土里。他并不先讲水。他先讲盐。他说这段路程其实是两片沙漠：前几日是沙，之后是盐泽，地面白而龟裂，空气里带着金属的味道。夏季须趁夜赶路，白日卧息，因为正午的沙能烫穿骆驼的蹄。旧井照旧例隔一日一夜一处；有的甘甜，有的发咸，有一处，他说，还没看见先闻见。他又说起那座干石垒成的塔，商队在那里留下记号与祷词；还有让沙丘唱歌的风，旅人循声走去，以为听见人语。讲完了，他用脚跟把尘土抹平，望着你，等你回答。
+
+## ev.ev_lop_caravanserai_followup.choice_1
+
+答应向导，待风转时一同上路
+
+## ev.ev_lop_caravanserai_followup.choice_1_result
+
+向导在大拇指上记下日子，叫你黎明前备妥。去沙州的路从此对你敞开，画在尘土里，也画在你心里。
+
+## ev.ev_lop_caravanserai_followup.choice_2
+
+照向导的单子备齐过漠之粮
+
+## ev.ev_lop_caravanserai_followup.choice_2_result
+
+你照他的单子采买：干肉、硬饼、盐，和每头牲口一只水囊。粮秣备齐，你也记住了能载你过漠的规矩。
+
+## ev.ev_lop_caravanserai_followup.choice_3
+
+留一日，学这段路程的规矩
+
+## ev.ev_lop_caravanserai_followup.choice_3_result
+
+你在商队客栈里留了一日，听向导复述各程：旧井、荒山、唱歌的沙丘。等待耗去一日，路程因此分明。
+
+## ev.ev_lop_shrine_followup.title
+
+罗卜：僧人的记述
+
+## ev.ev_lop_shrine_followup.body
+
+黄昏时分，罗卜石窟的守龛人走到你身边坐下，灯盏的小光落在泥佛身上。她便是那个照料灯火、收下钱币的老妇；僧人，你听人说已经走了。她并不否认。但她告诉你他们去了哪里，留下了什么：他们本是沙路之僧，守着罗卜与沙州之间的旧井，为商队标记路程。后来井水渐涸，盐泽漫上旧牧场，僧人们便东去，带走了横渡的记载。带不走的，他们刻在洞壁上——不只是祷词，还有井与井之间的日数、荒山的形状、对坏水的告诫。她指向洞角一处炭迹已经褪成岩石颜色的地方，说这旧记仍然可信，虽然执笔的手已经不在了；抄下它的旅人，不会在盐泽中迷失。说罢她又添了灯油，把你留给佛像与寂静。
+
+## ev.ev_lop_shrine_followup.choice_1
+
+请守龛人读出僧人的记载
+
+## ev.ev_lop_shrine_followup.choice_1_result
+
+守龛人像读一封信那样读着洞壁，一一说出每口井与每句告诫。僧人的记载从此归你，盐泽于你不再有秘密。
+
+## ev.ev_lop_shrine_followup.choice_2
+
+为僧人的灯献上银钱
+
+## ev.ev_lop_shrine_followup.choice_2_result
+
+你在供品间放下银钱，守龛人只点点头，不言不语。灯会多亮一些时候，沙路的祝福落在你身上。
+
+## ev.ev_lop_shrine_followup.choice_3
+
+留一日，把记载抄下洞壁
+
+## ev.ev_lop_shrine_followup.choice_3_result
+
+你在洞壁前过了一日，把褪色的炭迹抄进行纪。耗去一日，而这份记载从此写在你路上可读之处。
+
+## ev.ev_lop_mentor_followup.title
+
+罗卜：听风人的教诲
+
+## ev.ev_lop_mentor_followup.body
+
+读风之人站在城边，砾石原尽头，与你并肩向东望去。他一辈子读风，不把沙漠当作可畏之物，而当作可读之书。他告诉你，沙自己会写字：沙丘的纹理说出刮过什么风，干裂的盐壳说出旧海退去多远，空气的味道说出前方是水，还是只有水的记忆。他教你夜渡认星之法，教你去听唱歌的沙丘——那不是人语，是沙在自言自语。他的告诫不是符咒；是一种留神的法子。他把它给你，因为你问错了时候却问对了问题，而那是学东西最好的时候。说完他退后一步，把路留给你。
+
+## ev.ev_lop_mentor_followup.choice_1
+
+把听风人的告诫带在路上
+
+## ev.ev_lop_mentor_followup.choice_1_result
+
+听风人的告诫写进了你的行纪，沙漠从此读起来两样。他教给你的，在沙起之处不会辜负你。
+
+## ev.ev_lop_mentor_followup.choice_2
+
+问沙漠将向你索取什么
+
+## ev.ev_lop_mentor_followup.choice_2_result
+
+听风人为这段路程读了征兆，告诉你路要什么：水、耐性，还有趁夜行路的决心。这警告从此随身。
+
+## ev.ev_lop_mentor_followup.choice_3
+
+谢过听风人，循他指的路走去
+
+## ev.ev_lop_mentor_followup.choice_3_result
+
+你谢过听风人，顺他标出的路向东行。去沙州的路已在眼前展开，你把他那句未说出口的告诫藏在心里。

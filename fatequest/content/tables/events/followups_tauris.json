@@ -1,0 +1,286 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-tauris-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_b_followup.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_b_followup.choice_1",
+          "resultText": "ev.ev_tauris_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "tabriz-pearls",
+              "value": 1,
+              "reason": "bought-pearls-at-the-toll-masters-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-pearl",
+              "reason": "bought-pearls-at-the-toll-masters-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_b_followup.choice_2",
+          "resultText": "ev.ev_tauris_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ninive",
+              "reason": "toll-master-drew-the-road-to-niniveh"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "learned-the-road-to-niniveh"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_b_followup.choice_3",
+          "resultText": "ev.ev_tauris_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-southbound-caravan"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tauris",
+              "reason": "kept-the-toll-masters-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c011"
+        }
+      }
+    },
+    {
+      "id": "ev-tauris-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_c_followup.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_c_followup.choice_1",
+          "resultText": "ev.ev_tauris_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-dried-fruit",
+              "reason": "bought-fruit-from-the-orchard-keeper"
+            },
+            {
+              "op": "sticker",
+              "value": "st-tauris-gardens",
+              "reason": "bought-fruit-from-the-orchard-keeper"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_c_followup.choice_2",
+          "resultText": "ev.ev_tauris_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ispahan",
+              "reason": "water-master-named-the-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tauris",
+              "reason": "learned-the-road-the-water-takes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_c_followup.choice_3",
+          "resultText": "ev.ev_tauris_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-how-the-water-is-shared"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "the-water-masters-measure"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c011"
+        }
+      }
+    },
+    {
+      "id": "ev-tauris-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_mentor_followup.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_mentor_followup.choice_1",
+          "resultText": "ev.ev_tauris_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-mentor-gift",
+              "reason": "received-the-readers-parting-card"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tarot",
+              "reason": "received-the-readers-parting-card"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_mentor_followup.choice_2",
+          "resultText": "ev.ev_tauris_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "reader-named-the-sea-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tarot",
+              "reason": "learned-the-sea-roads-season"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_mentor_followup.choice_3",
+          "resultText": "ev.ev_tauris_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-full-reading"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tauris",
+              "reason": "waited-for-the-full-reading"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tauris-mentor-astrodice-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tauris_mentor_astrodice_followup.title",
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "body": "ev.ev_tauris_mentor_astrodice_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tauris_mentor_astrodice_followup.choice_1",
+          "resultText": "ev.ev_tauris_mentor_astrodice_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-tauris-astrodice-throw",
+              "reason": "took-the-dice-cast-for-the-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-astrodice",
+              "reason": "learned-the-dice-answer-for-the-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_mentor_astrodice_followup.choice_2",
+          "resultText": "ev.ev_tauris_mentor_astrodice_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "the-dice-named-the-sea-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-astrodice",
+              "reason": "learned-the-dice-road-south"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tauris_mentor_astrodice_followup.choice_3",
+          "resultText": "ev.ev_tauris_mentor_astrodice_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-cast-to-settle"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tauris",
+              "reason": "the-dice-master-remembered-your-calm"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tauris",
+        "origin": "authored"
+      }
+    }
+  ]
+}

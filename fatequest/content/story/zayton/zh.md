@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: b6f4a6240b67
+source_rev: 4cd0d3f143f5
 status: translated
 translator: 人工校译
 notes: >
@@ -100,6 +100,46 @@ stamps:
   ev.ev_zayton_watch_consequence_resolution.body: 827b72f18207
   ev.ev_zayton_watch_consequence_resolution.choice_1: 3b4827283f98
   ev.ev_zayton_watch_consequence_resolution.choice_2: c200bc7d41b1
+  ev.ev_zayton_harbour_followup.title: b2762956c8cb
+  ev.ev_zayton_harbour_followup.body: 23a51ab3adf7
+  ev.ev_zayton_harbour_followup.choice_1: ec851e8b860c
+  ev.ev_zayton_harbour_followup.choice_1_result: e435f247c53c
+  ev.ev_zayton_harbour_followup.choice_2: eff13a9071d7
+  ev.ev_zayton_harbour_followup.choice_2_result: 68000ad00f87
+  ev.ev_zayton_harbour_followup.choice_3: c1157f993e82
+  ev.ev_zayton_harbour_followup.choice_3_result: 754358c105c7
+  ev.ev_zayton_fanfang_followup.title: 52e8dff7589f
+  ev.ev_zayton_fanfang_followup.body: ec6b0144eb2b
+  ev.ev_zayton_fanfang_followup.choice_1: 70a1bcc5230f
+  ev.ev_zayton_fanfang_followup.choice_1_result: 2e2243cb79d6
+  ev.ev_zayton_fanfang_followup.choice_2: 6f3889f134a9
+  ev.ev_zayton_fanfang_followup.choice_2_result: f98c3473c1d7
+  ev.ev_zayton_fanfang_followup.choice_3: 8a8107916db6
+  ev.ev_zayton_fanfang_followup.choice_3_result: 7dac3aa5563c
+  ev.ev_zayton_mazu_followup.title: c2728e67a362
+  ev.ev_zayton_mazu_followup.body: cde292df36a3
+  ev.ev_zayton_mazu_followup.choice_1: 59a0c48eabcc
+  ev.ev_zayton_mazu_followup.choice_1_result: 0b262b695a28
+  ev.ev_zayton_mazu_followup.choice_2: 4886f739c8e6
+  ev.ev_zayton_mazu_followup.choice_2_result: 4bbb9e8d3db8
+  ev.ev_zayton_mazu_followup.choice_3: d2dfe2876c2c
+  ev.ev_zayton_mazu_followup.choice_3_result: 4e250bba3d36
+  ev.ev_zayton_mentor_followup.title: 0437372a459f
+  ev.ev_zayton_mentor_followup.body: 1894364ead4c
+  ev.ev_zayton_mentor_followup.choice_1: 108dfd86a376
+  ev.ev_zayton_mentor_followup.choice_1_result: dbaff8feba72
+  ev.ev_zayton_mentor_followup.choice_2: 0c493c719e95
+  ev.ev_zayton_mentor_followup.choice_2_result: dcac0579f5e2
+  ev.ev_zayton_mentor_followup.choice_3: f90e51f36836
+  ev.ev_zayton_mentor_followup.choice_3_result: dbe015c63987
+  ev.ev_zayton_mentor_jiaobei_followup.title: c22322c51e22
+  ev.ev_zayton_mentor_jiaobei_followup.body: db1cbafee0d9
+  ev.ev_zayton_mentor_jiaobei_followup.choice_1: f00fd889bbc0
+  ev.ev_zayton_mentor_jiaobei_followup.choice_1_result: ca999bc0fc71
+  ev.ev_zayton_mentor_jiaobei_followup.choice_2: 3a15a479f9f9
+  ev.ev_zayton_mentor_jiaobei_followup.choice_2_result: 3656d8afbd53
+  ev.ev_zayton_mentor_jiaobei_followup.choice_3: c66e5cd5f920
+  ev.ev_zayton_mentor_jiaobei_followup.choice_3_result: c73bb57ce6bc
 ---
 
 ## city.zayton.name
@@ -481,3 +521,164 @@ stamps:
 ## ev.ev_zayton_watch_consequence_resolution.choice_2
 
 把这道征兆收进自己的行纪
+
+## ev.ev_zayton_harbour_followup.title
+
+刺桐：运费之算
+
+## ev.ev_zayton_harbour_followup.body
+
+码头给你称胡椒的那位栈房掌柜，又在税关边上寻见了你。他见你数过船艘，便以他这等人待可信之人的方式行事：把自己的账册摊开。他说，运费是这座港口的第二种语言。细货三十取百，粗货四十取百，胡椒四十四取百——此外还有大汗的tamghā（商税）加在上面。他愿意让你按商人们彼此交易的价格取走一袋。他说，过了这一潮，他便不再留着这桩买卖了。
+
+## ev.ev_zayton_harbour_followup.choice_1
+
+按商人自定的价买下这袋胡椒
+
+## ev.ev_zayton_harbour_followup.choice_1_result
+
+掌柜称出一袋，按商人彼此交易的价格卖给你，tamghā已在其中。胡椒到手，你便如商人一般懂得运费之算——也懂得那将随你走遍天竺海每一座码头的税率。
+
+## ev.ev_zayton_harbour_followup.choice_2
+
+问季风何时转向占婆
+
+## ev.ev_zayton_harbour_followup.choice_2_result
+
+掌柜向南指过水面，指向停船等待之处。他说，季风一转，通往占婆的海路便开；误了这一季的船，就要再等一季。如今这条海路已上了你的舆图，连同当用的时令。
+
+## ev.ev_zayton_harbour_followup.choice_3
+
+再在桅林之间站一日
+
+## ev.ev_zayton_harbour_followup.choice_3_result
+
+你又在码头站了一日，立于密如焚林的桅杆之间，看天竺的船一艘艘进港。最后一艘尚未泊定，一日已尽，但离开之后，这座港口仍留在你身上。
+
+## ev.ev_zayton_fanfang_followup.title
+
+刺桐：番坊的交易
+
+## ev.ev_zayton_fanfang_followup.body
+
+番坊中，听过你讨价还价的那位商人遣人送话到你住处：一匹绢已从织工自家的织机下来，先尽着你。他把绢摊在三种语言交会的井边。他说，价钱是织工的价钱，买卖由你定——你也可以不问此价，改问海商们不肯在码头上说起的那条路。
+
+## ev.ev_zayton_fanfang_followup.choice_1
+
+按织工的价钱买下这匹绢
+
+## ev.ev_zayton_fanfang_followup.choice_1_result
+
+这匹绢是上好的蛮子丝，入手比看着还沉；你以油布裹了，带出番坊。按织工的价，这是桩值得说与人听的便宜买卖；番坊看着你离去，记下了它的评断。
+
+## ev.ev_zayton_fanfang_followup.choice_2
+
+向海商打听通往占婆的海路
+
+## ev.ev_zayton_fanfang_followup.choice_2_result
+
+一位天竺海的商人用手指在尘土里画出这条海路，一段一段——季风之转、海上之日、尽头的港口。占婆如今已上了你的舆图，连同那通向它的路。
+
+## ev.ev_zayton_fanfang_followup.choice_3
+
+让番坊记下你的名姓
+
+## ev.ev_zayton_fanfang_followup.choice_3_result
+
+你谈价坦直，说话也坦直，番坊便把你认作一个诚实的人。在海上诸国的商人之间，你的名字会先于你被再次提起。
+
+## ev.ev_zayton_mazu_followup.title
+
+刺桐：天妃再问
+
+## ev.ev_zayton_mazu_followup.body
+
+庙门口的解签老妇在石阶上唤住你。她说，天妃不把一份供献当作一次便了；每逢出海之前，她都要再问一回，而此刻山下正有一支船队在备航。水手们已经上了山，烧纸、摆米、斟酒。门口还留得下一个人的空，给又一个存心要问的人。
+
+## ev.ev_zayton_mazu_followup.choice_1
+
+在船队出海之前上供
+
+## ev.ev_zayton_mazu_followup.choice_1_result
+
+你像船主们那样，在天妃脚下烧了纸，摆上一碗米、一杯酒。她望着南面的水面，没有拒绝你；因这一问，海路待你更和善些。
+
+## ev.ev_zayton_mazu_followup.choice_2
+
+求一签问出海之事
+
+## ev.ev_zayton_mazu_followup.choice_2_result
+
+你摇动竹筒，直到一签落下；解签者照着签诗之书读它。签上写着风将相助的一日——连同通往占婆的海路一同写出。你记下这一日，走下山去。
+
+## ev.ev_zayton_mazu_followup.choice_3
+
+留下，看水手们发问
+
+## ev.ev_zayton_mazu_followup.choice_3_result
+
+你在庙里站了一日，看水手们来来去去，各以各的方式问。你离去时，天妃宫的香烟随你而行，你也带走了「问」是怎样一回事的记忆。
+
+## ev.ev_zayton_mentor_followup.title
+
+刺桐：解签者的临别之语
+
+## ev.ev_zayton_mentor_followup.body
+
+解签的老妇不让你只带走你已学会的东西。她伸手取过竹筒，为你的行程抽出一签，却不读出声来。她说，签是告诉一个人他尚未权衡之事；你已随她坐得够久，该学会自己读了。她把这签递到你面前，由你自择如何带走。
+
+## ev.ev_zayton_mentor_followup.choice_1
+
+收下她为你行程抽的签
+
+## ev.ev_zayton_mentor_followup.choice_1_result
+
+她把签读了一遍，随即按入你掌中：宜出行的一日，以及你如今已会自己读的告诫。这份解读是你的了，连同那一日。
+
+## ev.ev_zayton_mentor_followup.choice_2
+
+问她，签文偏向哪一条路
+
+## ev.ev_zayton_mentor_followup.choice_2_result
+
+她摇动竹筒，直到有了应答，再读出落下的一签：签文指点通往占婆的季风海路，连同天妃的庇佑。这条路画上了你的舆图，这句告诫收进了你的行纪。
+
+## ev.ev_zayton_mentor_followup.choice_3
+
+为庙中灯烛留下银钱
+
+## ev.ev_zayton_mentor_followup.choice_3_result
+
+你为天妃脚边长明的灯烛留下银钱，与解签者作别。庙中的福泽随你下山，它的香烟又追着你直到水边。
+
+## ev.ev_zayton_mentor_jiaobei_followup.title
+
+刺桐：临别的三只掷杯
+
+## ev.ev_zayton_mentor_jiaobei_followup.body
+
+庙中教你掷杯的侍者在门口拦住了你。他把三片半月形的木杯放在你面前，要你为即将成行的航程掷上一掷。杯落定了，他不笑也不皱眉：掷便是掷，他说道，判词便是判词。如何带走它，由你自择。
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_1
+
+把判词收作一路的护符
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_1_result
+
+他把三只杯裹进布巾，按进你手里。无论那一掷应了什么，这随身的一裹本身就是庇佑，往后的任何营火边，你都懂得如何读它。
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_2
+
+问杯，出港该走哪一条路
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_2_result
+
+他又掷了一次，读出落定的杯相：往爪哇的海路得吉，天妃的水道正开。这条航线画上了你的舆图，判词也收进了你的行纪。
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_3
+
+留一日，让杯在你自己手中落定
+
+## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
+
+你与这三只杯坐过整个下午，记住了它们的轻重，黄昏时把它们留还庙中。侍者记下你的耐心，坊间也对你有了好话。
+

@@ -2,7 +2,7 @@
 unit: cambaluc
 lang: zh
 source: en
-source_rev: c30e53524ced
+source_rev: c32ca38afcef
 status: translated
 translator: 人工校译
 notes: >
@@ -74,6 +74,38 @@ stamps:
   ev.ev_cambaluc_consequence_b_resolution.choice_1_result: d7bf50115886
   ev.ev_cambaluc_consequence_b_resolution.choice_2: c200bc7d41b1
   ev.ev_cambaluc_consequence_b_resolution.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_a_followup.title: e581ba7d19f8
+  ev.ev_cambaluc_a_followup.body: 92282460a841
+  ev.ev_cambaluc_a_followup.choice_1: 6d2f302373fc
+  ev.ev_cambaluc_a_followup.choice_1_result: a0195e2e44d6
+  ev.ev_cambaluc_a_followup.choice_2: 435e7c2e3d34
+  ev.ev_cambaluc_a_followup.choice_2_result: f6ac8e4fe041
+  ev.ev_cambaluc_a_followup.choice_3: 4bfee7a1eb58
+  ev.ev_cambaluc_a_followup.choice_3_result: 783651f37d61
+  ev.ev_cambaluc_b_followup.title: f33bf0093594
+  ev.ev_cambaluc_b_followup.body: 42943871b17c
+  ev.ev_cambaluc_b_followup.choice_1: d60721afb8e5
+  ev.ev_cambaluc_b_followup.choice_1_result: 11be2a85c63e
+  ev.ev_cambaluc_b_followup.choice_2: b62e6eb743b5
+  ev.ev_cambaluc_b_followup.choice_2_result: 48d74c4e0728
+  ev.ev_cambaluc_b_followup.choice_3: e521105404f8
+  ev.ev_cambaluc_b_followup.choice_3_result: 3eb775e20f23
+  ev.ev_cambaluc_c_followup.title: 7db7a9204b3a
+  ev.ev_cambaluc_c_followup.body: 524fdd216861
+  ev.ev_cambaluc_c_followup.choice_1: df10a44e1655
+  ev.ev_cambaluc_c_followup.choice_1_result: a47309fd6477
+  ev.ev_cambaluc_c_followup.choice_2: 591db27b364b
+  ev.ev_cambaluc_c_followup.choice_2_result: e76a064cdfbf
+  ev.ev_cambaluc_c_followup.choice_3: 69adcc9f8768
+  ev.ev_cambaluc_c_followup.choice_3_result: b3ea35884822
+  ev.ev_cambaluc_mentor_followup.title: bfa62fbbce1d
+  ev.ev_cambaluc_mentor_followup.body: a357f23716b7
+  ev.ev_cambaluc_mentor_followup.choice_1: 499ad8ddfa61
+  ev.ev_cambaluc_mentor_followup.choice_1_result: b66358c37230
+  ev.ev_cambaluc_mentor_followup.choice_2: 67ac077c9c33
+  ev.ev_cambaluc_mentor_followup.choice_2_result: 0f6451e56a8f
+  ev.ev_cambaluc_mentor_followup.choice_3: 5ae390190d00
+  ev.ev_cambaluc_mentor_followup.choice_3_result: d546b32d329c
 ---
 
 ## city.cambaluc.name
@@ -343,3 +375,131 @@ stamps:
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
 事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+
+## ev.ev_cambaluc_a_followup.title
+
+大都（汗八里）：侍臣的信物
+
+## ev.ev_cambaluc_a_followup.body
+
+你离开大殿的阴影时，汗廷的一位侍臣赶上来。他在这彩绘的梁下侍候过三次盛宴，看人站立的姿态便能识得宾客的分量。他不问你看见了什么；他问你打算从这座大殿带走什么。他说，宫廷会为它打算记住的旅人备下信物。
+
+## ev.ev_cambaluc_a_followup.choice_1
+
+收下侍臣所赠、与大殿同料的朱红丝绦
+
+## ev.ev_cambaluc_a_followup.choice_1_result
+
+侍臣取一段大殿里悬挂的那种朱红丝，系在你的腕上。在大都（汗八里），这结是人人认得的；见者便知你曾站在大汗设宴之处。
+
+## ev.ev_cambaluc_a_followup.choice_2
+
+问使节南去走的是哪条路
+
+## ev.ev_cambaluc_a_followup.choice_2_result
+
+侍臣画出使节南行的路，过行在（杭州），标出换马的站赤。通往行在（杭州）的路如今清清楚楚地印在你的舆图上，你也知道了大汗的言语如何远行。
+
+## ev.ev_cambaluc_a_followup.choice_3
+
+答应在前方的城市为大汗之宫美言
+
+## ev.ev_cambaluc_a_followup.choice_3_result
+
+侍臣接受了你的承诺，别无他求。在大都（汗八里），听过你许诺的人如今看重你的言语。
+
+## ev.ev_cambaluc_b_followup.title
+
+大都（汗八里）：账房之主
+
+## ev.ev_cambaluc_b_followup.body
+
+城郊一间账房的主人在算盘前把你唤住，当日的车马正一笔一笔地记入账册。他在千车丝绸之间见过你的面孔，也知道哪一种旅人懂得这座城的度量。他不向你贩卖沉默；他拿出城郊肯卖给善问之人的东西。
+
+## ev.ev_cambaluc_b_followup.choice_1
+
+按账上写明的价格买一匹丝绸
+
+## ev.ev_cambaluc_b_followup.choice_1_result
+
+账房按自己的底价卖你一匹丝绸，不还价，也没有花招。布是实打实的，价也公道，城郊容你带着它离开。
+
+## ev.ev_cambaluc_b_followup.choice_2
+
+请他画出北方车辆所走的路
+
+## ev.ev_cambaluc_b_followup.choice_2_result
+
+账房画出北车进入十二城郊的路，标出水井与税卡。通往上都的路如今印在你的舆图上，你也知道了北方往南送些什么。
+
+## ev.ev_cambaluc_b_followup.choice_3
+
+留一日，与记数人一同清点进城的车马
+
+## ev.ev_cambaluc_b_followup.choice_3_result
+
+你在账房留了一日，学那城郊如何以丝绸、胡椒与米粮计数。这花费了时日，但大都（汗八里）的度量，在你离去后依然随身。
+
+## ev.ev_cambaluc_c_followup.title
+
+大都（汗八里）：绿玉山的园丁
+
+## ev.ev_cambaluc_c_followup.body
+
+在绿玉山的缓坡上，千名园丁中最老的一位放下水桶，招手唤你过去。这些树被象背驮来的时候，便是他浇灌的；此后他日日登上此山。他不拦你上山；他只求你明白，堆起这座山要花什么代价。
+
+## ev.ev_cambaluc_c_followup.choice_1
+
+问他，一棵树如何能被移走而自己浑然不觉
+
+## ev.ev_cambaluc_c_followup.choice_1_result
+
+园丁让你看那裹在丝帛与湿土里的树根，以及掘树人如何赶在冬日把一棵树整株取走。绿玉山的技艺，如今写进了你的行纪。
+
+## ev.ev_cambaluc_c_followup.choice_2
+
+请他画出这些树自北而来的路
+
+## ev.ev_cambaluc_c_followup.choice_2_result
+
+园丁画出树木自北方林莽而来的路，过上都，标出山口与象队歇脚之处。通往上都的路如今印在你的舆图上，你也知道了这座山是由什么堆成的。
+
+## ev.ev_cambaluc_c_followup.choice_3
+
+挑起水桶，帮园丁浇树一日
+
+## ev.ev_cambaluc_c_followup.choice_3_result
+
+你担起扁担与水桶，跟着园丁的步子学他们的浇灌之法。大都（汗八里）的园丁记得你帮过手，这座山也留住你的一分。
+
+## ev.ev_cambaluc_mentor_followup.title
+
+大都（汗八里）：太史的临别一卦
+
+## ev.ev_cambaluc_mentor_followup.body
+
+太史署的先生不让你只带着功课离开。他再取蓍草，这一回是为你面前的路起卦，读出它在哪一季开通、人须立于何处方能抉择。然后他把这一卦放下，余事全交给你自己裁度。
+
+## ev.ev_cambaluc_mentor_followup.choice_1
+
+收下他论「以时位观路」的临别笔记
+
+## ev.ev_cambaluc_mentor_followup.choice_1_result
+
+这笔记如其人一般素朴而精确。你在太史署所学到的，如今已写成文字，在路上随时可以翻阅。
+
+## ev.ev_cambaluc_mentor_followup.choice_2
+
+问卦中所示，来季哪一条路开通
+
+## ev.ev_cambaluc_mentor_followup.choice_2_result
+
+太史读出卦象，点出南方之路——大汗使节通往行在（杭州）所走的路。这条路如今清清楚楚地印在你心里，你也知道了该在哪个季节启程。
+
+## ev.ev_cambaluc_mentor_followup.choice_3
+
+在太史署留一日，学读四时之路
+
+## ev.ev_cambaluc_mentor_followup.choice_3_result
+
+你在太史署的仪器间留了一日，学那一年如何被读出、诸路如何被排定。这花费了时日，但从此读卦之人，知道自己在何处立足。

@@ -1,0 +1,288 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-kinsay-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_a_followup.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_a_followup.choice_1",
+          "resultText": "ev.ev_kinsay_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-water-law-of-kinsay"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-canals",
+              "reason": "read-the-toll-marks-of-the-canals"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_a_followup.choice_2",
+          "resultText": "ev.ev_kinsay_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "keeper-drew-the-water-road-south"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-water-road-to-suju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_a_followup.choice_3",
+          "resultText": "ev.ev_kinsay_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-bridges-with-the-keeper"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-canals",
+              "reason": "learned-the-twelve-thousand-bridges"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kinsay",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c076"
+        }
+      }
+    },
+    {
+      "id": "ev-kinsay-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_b_followup.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_b_followup.choice_1",
+          "resultText": "ev.ev_kinsay_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-the-merchants-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-markets",
+              "reason": "bought-pepper-in-the-ten-great-squares"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_b_followup.choice_2",
+          "resultText": "ev.ev_kinsay_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "merchant-named-the-sea-port"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-where-the-pepper-comes-from"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_b_followup.choice_3",
+          "resultText": "ev.ev_kinsay_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-guild-accounting"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-markets",
+              "reason": "learned-the-guild-accounting"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kinsay",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c076"
+        }
+      }
+    },
+    {
+      "id": "ev-kinsay-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_c_followup.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_c_followup.choice_1",
+          "resultText": "ev.ev_kinsay_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "received-the-lake-blessing"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "carried-the-lake-blessing"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_c_followup.choice_2",
+          "resultText": "ev.ev_kinsay_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-lake-folk-belief-of-the-lanterns"
+            },
+            {
+              "op": "sticker",
+              "value": "st-kinsay-lake",
+              "reason": "learned-the-lanterns-of-the-lake"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_c_followup.choice_3",
+          "resultText": "ev.ev_kinsay_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-the-lantern-boats"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "kinsay",
+              "reason": "listened-to-the-lake-music"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kinsay",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c076"
+        }
+      }
+    },
+    {
+      "id": "ev-kinsay-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kinsay_mentor_followup.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "body": "ev.ev_kinsay_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kinsay_mentor_followup.choice_1",
+          "resultText": "ev.ev_kinsay_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-kinsay-mentor-gift",
+              "reason": "received-the-temple-readers-parting-cups"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "received-the-temple-readers-parting-cups"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_mentor_followup.choice_2",
+          "resultText": "ev.ev_kinsay_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "suju",
+              "reason": "cups-blessed-the-water-road-south"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-cups-blessing-of-the-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kinsay_mentor_followup.choice_3",
+          "resultText": "ev.ev_kinsay_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-to-learn-the-laugh-of-the-cups"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "china",
+              "reason": "learned-the-laugh-of-the-cups"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kinsay",
+        "origin": "authored"
+      }
+    }
+  ]
+}

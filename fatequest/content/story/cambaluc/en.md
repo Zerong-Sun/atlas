@@ -308,3 +308,131 @@ Keep the sign in your travel book
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
 The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+
+## ev.ev_cambaluc_a_followup.title
+
+Cambaluc: The Chamberlain's Token
+
+## ev.ev_cambaluc_a_followup.body
+
+A chamberlain of the Kaan's household finds you as you leave the shadow of the great hall. He has served at three feasts beneath those painted beams and can read a guest's worth by the way he stands. He does not ask what you saw; he asks what you mean to carry away from the hall. The court, he says, keeps tokens for travellers it intends to remember.
+
+## ev.ev_cambaluc_a_followup.choice_1
+
+Take the cord of the hall's own silk the chamberlain offers
+
+## ev.ev_cambaluc_a_followup.choice_1_result
+
+The chamberlain knots a cord of vermilion silk about your wrist, the same silk that hangs in the great hall. In Cambaluc the knot is known; those who see it will know you stood where the Kaan holds his feasts.
+
+## ev.ev_cambaluc_a_followup.choice_2
+
+Ask which road the envoys take when they leave for the south
+
+## ev.ev_cambaluc_a_followup.choice_2_result
+
+The chamberlain draws the road the envoys ride southward, past Kinsay, marking the post-stations where horses are changed. The way to Kinsay is now clear on your map, and you know how the Kaan's word travels.
+
+## ev.ev_cambaluc_a_followup.choice_3
+
+Promise to speak well of the great hall in the cities ahead
+
+## ev.ev_cambaluc_a_followup.choice_3_result
+
+The chamberlain accepts your promise and asks nothing else. In Cambaluc your word now carries weight among those who heard you give it.
+
+## ev.ev_cambaluc_b_followup.title
+
+Cambaluc: The Counting-House Keeper
+
+## ev.ev_cambaluc_b_followup.body
+
+The keeper of a counting-house in the suburbs calls you over from his abacus, where the day's carts are being tallied. He has seen your face among the thousand cart-loads of silk, and he knows which travellers understand the city's measure. He does not sell you his silence; he offers what the suburbs sell to those who ask the right questions.
+
+## ev.ev_cambaluc_b_followup.choice_1
+
+Buy a bolt of silk at the price written in his ledger
+
+## ev.ev_cambaluc_b_followup.choice_1_result
+
+The keeper sells you a bolt of silk at his own list price, no bargaining and no tricks. The cloth is real, the price fair, and the suburb lets you leave with it.
+
+## ev.ev_cambaluc_b_followup.choice_2
+
+Ask him to draw the road the northern carts come by
+
+## ev.ev_cambaluc_b_followup.choice_2_result
+
+The keeper draws the road the northern carts take to the twelve suburbs, marking the watering places and the toll-houses. The way to Chandu is now on your map, and you know what the north sends south.
+
+## ev.ev_cambaluc_b_followup.choice_3
+
+Stay a day and count cart-loads with the tally-men
+
+## ev.ev_cambaluc_b_followup.choice_3_result
+
+You spend a day at the counting-house, learning how the suburbs are numbered in silk and pepper and grain. It costs you time, but the measure of Cambaluc stays with you when you go.
+
+## ev.ev_cambaluc_c_followup.title
+
+Cambaluc: The Gardener of the Green Hill
+
+## ev.ev_cambaluc_c_followup.body
+
+On the lower slope of the mountain of green jade, the oldest of the thousand gardeners sets down his buckets and waves you over. He watered these trees when they were carried in on the backs of elephants, and he has climbed this hill every day since. He does not forbid you the mountain; he asks only that you understand what it cost to raise it.
+
+## ev.ev_cambaluc_c_followup.choice_1
+
+Ask him how a tree can be moved without knowing it
+
+## ev.ev_cambaluc_c_followup.choice_1_result
+
+The gardener shows you the wet earth bound in silk about the roots, and the way the diggers take a tree whole in winter. The art of the green hill is now written in your travel book.
+
+## ev.ev_cambaluc_c_followup.choice_2
+
+Ask him to draw the road the trees came by from the north
+
+## ev.ev_cambaluc_c_followup.choice_2_result
+
+The gardener draws the road the trees came by from the forests of the north, past Chandu, marking the passes and the places where the elephants rested. The way to Chandu is now on your map, and you know what a mountain is made of.
+
+## ev.ev_cambaluc_c_followup.choice_3
+
+Take up a bucket and help water the trees for a day
+
+## ev.ev_cambaluc_c_followup.choice_3_result
+
+You climb the hill with a shoulder-pole and buckets, learning the gardeners' pace and their water. The gardeners of Cambaluc remember that you helped, and the hill keeps a part of you.
+
+## ev.ev_cambaluc_mentor_followup.title
+
+Cambaluc: The Chronologer's Parting Hexagram
+
+## ev.ev_cambaluc_mentor_followup.body
+
+The chronologer of the Astronomical Bureau does not let you leave with only his lessons. He draws the yarrow-stalks once more, this time for the road ahead of you, and reads what season it will be open and where a man must stand when he chooses it. Then he sets the reading down between you and leaves the rest to your choosing.
+
+## ev.ev_cambaluc_mentor_followup.choice_1
+
+Take his parting notes on reading a road by time and position
+
+## ev.ev_cambaluc_mentor_followup.choice_1_result
+
+The notes are plain and exact, like the man himself. What you learned at the Bureau is now written where you can consult it on the road.
+
+## ev.ev_cambaluc_mentor_followup.choice_2
+
+Ask which road the hexagrams show to be open in the season ahead
+
+## ev.ev_cambaluc_mentor_followup.choice_2_result
+
+The chronologer reads the hexagrams and names the road south, the road by which the Kaan's envoys ride to Kinsay. The way is now clear in your mind, and you know the season in which to take it.
+
+## ev.ev_cambaluc_mentor_followup.choice_3
+
+Linger a day at the Bureau to learn the reading of the seasons
+
+## ev.ev_cambaluc_mentor_followup.choice_3_result
+
+You spend a day among the Bureau's instruments, learning how the year is read and the roads ordered. It costs you time, but the hexagrams now have a reader who knows where he stands.

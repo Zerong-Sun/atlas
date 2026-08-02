@@ -315,7 +315,8 @@
               "op": "reveal_map",
               "value": "basora",
               "reason": "saw-the-tigris-road-from-the-palace"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-a-followup", "reason": "ev-baldacum-a-followup" }
           ]
         },
         {
@@ -416,7 +417,8 @@
               "op": "sticker",
               "value": "st-baldacum-brocade",
               "reason": "first-silk-of-baudas"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-b-followup", "reason": "ev-baldacum-b-followup" }
           ]
         },
         {
@@ -502,7 +504,8 @@
               "op": "sticker",
               "value": "st-baldacum-fall",
               "reason": "heard-the-tale-of-the-fall"
-            }
+            },
+            { "op": "queue_event", "value": "ev-baldacum-c-followup", "reason": "ev-baldacum-c-followup" }
           ]
         },
         {
@@ -603,7 +606,8 @@
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "saw-the-jade-throne"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cambaluc-a-followup", "reason": "ev-cambaluc-a-followup" }
           ]
         },
         {
@@ -688,7 +692,8 @@
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "traded-in-the-twelve-suburbs"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cambaluc-b-followup", "reason": "ev-cambaluc-b-followup" }
           ]
         },
         {
@@ -774,7 +779,8 @@
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "walked-among-the-transplanted-trees"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cambaluc-c-followup", "reason": "ev-cambaluc-c-followup" }
           ]
         },
         {
@@ -880,7 +886,8 @@
               "op": "codex",
               "value": "cx-cascar",
               "reason": "walked-the-oasis"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cascar-a-followup", "reason": "ev-cascar-a-followup" }
           ]
         },
         {
@@ -970,7 +977,8 @@
               "op": "codex",
               "value": "cx-cascar",
               "reason": "learned-the-prayers-in-the-patterns"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cascar-b-followup", "reason": "ev-cascar-b-followup" }
           ]
         },
         {
@@ -1074,7 +1082,8 @@
               "op": "codex",
               "value": "cx-cascar",
               "reason": "heard-both-tales-of-the-sleepers"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cascar-c-followup", "reason": "ev-cascar-c-followup" }
           ]
         }
       ],
@@ -1126,7 +1135,8 @@
               "op": "sticker",
               "value": "st-chandu-palace",
               "reason": "entered-the-kaans-summer-palace"
-            }
+            },
+            { "op": "queue_event", "value": "ev-chandu-a-followup", "reason": "ev-chandu-a-followup" }
           ]
         },
         {
@@ -1252,7 +1262,8 @@
               "op": "codex",
               "value": "cx-chandu",
               "reason": "learned-the-kaans-hunting-grounds"
-            }
+            },
+            { "op": "queue_event", "value": "ev-chandu-b-followup", "reason": "ev-chandu-b-followup" }
           ]
         }
       ],
@@ -1332,7 +1343,8 @@
               "op": "sticker",
               "value": "st-chandu-mares",
               "reason": "heard-the-old-mongol-rites"
-            }
+            },
+            { "op": "queue_event", "value": "ev-chandu-c-followup", "reason": "ev-chandu-c-followup" }
           ]
         }
       ],
@@ -1417,7 +1429,8 @@
               "op": "codex",
               "value": "cx-cotan",
               "reason": "learned-where-the-jade-comes-from"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cotan-a-followup", "reason": "ev-cotan-a-followup" }
           ]
         }
       ],
@@ -1486,7 +1499,8 @@
               "op": "codex",
               "value": "cx-cotan",
               "reason": "learned-the-weavers-song"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cotan-b-followup", "reason": "ev-cotan-b-followup" }
           ]
         },
         {
@@ -1586,7 +1600,8 @@
               "op": "sticker",
               "value": "st-cotan-buddha",
               "reason": "heard-of-the-thousand-monasteries"
-            }
+            },
+            { "op": "queue_event", "value": "ev-cotan-c-followup", "reason": "ev-cotan-c-followup" }
           ]
         }
       ],
@@ -1643,7 +1658,8 @@
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "sailed-the-city-of-heaven"
-            }
+            },
+            { "op": "queue_event", "value": "ev-kinsay-a-followup", "reason": "ev-kinsay-a-followup" }
           ]
         },
         {
@@ -1769,7 +1785,8 @@
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "lived-a-day-in-the-markets"
-            }
+            },
+            { "op": "queue_event", "value": "ev-kinsay-b-followup", "reason": "ev-kinsay-b-followup" }
           ]
         },
         {
@@ -1847,7 +1864,8 @@
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "saw-the-lanterns-on-the-water"
-            }
+            },
+            { "op": "queue_event", "value": "ev-kinsay-c-followup", "reason": "ev-kinsay-c-followup" }
           ]
         },
         {
@@ -1938,7 +1956,8 @@
               "op": "sticker",
               "value": "st-lop-jade",
               "reason": "first-jade-purchase"
-            }
+            },
+            { "op": "queue_event", "value": "ev-lop-bazaar-followup", "reason": "ev-lop-bazaar-followup" }
           ]
         },
         {
@@ -2006,7 +2025,8 @@
               "op": "reveal_map",
               "value": "rt-lop-sachiu",
               "reason": "guide-described-the-stages"
-            }
+            },
+            { "op": "queue_event", "value": "ev-lop-caravanserai-followup", "reason": "ev-lop-caravanserai-followup" }
           ]
         },
         {
@@ -2103,7 +2123,8 @@
               "scope": "city",
               "id": "lop",
               "reason": "observed-the-local-rite"
-            }
+            },
+            { "op": "queue_event", "value": "ev-lop-shrine-followup", "reason": "ev-lop-shrine-followup" }
           ]
         },
         {
@@ -2164,7 +2185,8 @@
               "op": "codex",
               "value": "cx-ormus",
               "reason": "learned-the-port-laws"
-            }
+            },
+            { "op": "queue_event", "value": "ev-ormus-a-followup", "reason": "ev-ormus-a-followup" }
           ]
         },
         {
@@ -2254,7 +2276,8 @@
               "op": "codex",
               "value": "cx-ormus",
               "reason": "learned-the-spice-prices"
-            }
+            },
+            { "op": "queue_event", "value": "ev-ormus-b-followup", "reason": "ev-ormus-b-followup" }
           ]
         },
         {
@@ -2354,7 +2377,8 @@
               "op": "codex",
               "value": "cx-ormus",
               "reason": "the-guide-taught-the-wind-signs"
-            }
+            },
+            { "op": "queue_event", "value": "ev-ormus-c-followup", "reason": "ev-ormus-c-followup" }
           ]
         },
         {
@@ -2435,7 +2459,8 @@
               "id": "rapport",
               "value": 1,
               "reason": "wisdom-of-the-blue-city"
-            }
+            },
+            { "op": "queue_event", "value": "ev-samarcanda-a-followup", "reason": "ev-samarcanda-a-followup" }
           ]
         },
         {
@@ -2543,7 +2568,8 @@
               "op": "codex",
               "value": "cx-samarcanda",
               "reason": "learned-the-paper-secret"
-            }
+            },
+            { "op": "queue_event", "value": "ev-samarcanda-b-followup", "reason": "ev-samarcanda-b-followup" }
           ]
         },
         {
@@ -2640,7 +2666,8 @@
               "op": "codex",
               "value": "cx-samarcanda",
               "reason": "heard-when-the-stone-last-wept"
-            }
+            },
+            { "op": "queue_event", "value": "ev-samarcanda-c-followup", "reason": "ev-samarcanda-c-followup" }
           ]
         }
       ],
@@ -2789,7 +2816,8 @@
               "op": "codex",
               "value": "cx-tauris",
               "reason": "learned-the-trade-routes"
-            }
+            },
+            { "op": "queue_event", "value": "ev-tauris-b-followup", "reason": "ev-tauris-b-followup" }
           ]
         },
         {
@@ -2879,7 +2907,8 @@
               "id": "rapport",
               "value": 2,
               "reason": "a-fortnight-of-peace"
-            }
+            },
+            { "op": "queue_event", "value": "ev-tauris-c-followup", "reason": "ev-tauris-c-followup" }
           ]
         },
         {

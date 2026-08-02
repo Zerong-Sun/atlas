@@ -324,3 +324,165 @@ Keep the sign in your travel book
 ## ev.ev_baldacum_consequence_b_resolution.choice_2_result
 
 The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+
+## ev.ev_baldacum_a_followup.title
+
+Baldacum: The Warden's Last Door
+
+## ev.ev_baldacum_a_followup.body
+
+The old warden of the Caliph's palace finds you again as evening falls across the ruins. He was young when the gates broke, and through all the years of the sack he kept one thing: a key to a door beneath the fallen hall, a door the Mongols never opened. He asks little for it — a handful of silver to turn the lock, or only your silence, or your company for one more walk through the empty rooms. Behind that door, he says, the Caliph's servants left what they could not carry when the city burned.
+
+## ev.ev_baldacum_a_followup.choice_1
+
+Pay the warden to open the buried door
+
+## ev.ev_baldacum_a_followup.choice_1_result
+
+The warden takes your silver, works the key in the rusted lock, and stands back. Within is a chest of the Caliph's last household goods — a few coins, a broken seal. You take a coin from before the fall, and leave the rest to the dark.
+
+## ev.ev_baldacum_a_followup.choice_2
+
+Ask by which road the Caliph meant to flee
+
+## ev.ev_baldacum_a_followup.choice_2_result
+
+The warden points downstream, past the date groves and the tolls, to where the Tigris reaches the sea. The road to Basora is drawn in the air between you; you will not miss it now.
+
+## ev.ev_baldacum_a_followup.choice_3
+
+Walk the empty hall once more before the light fails
+
+## ev.ev_baldacum_a_followup.choice_3_result
+
+You walk the hall where the golden dome once threw its shadow across the plain. The silence of a palace that once held ten thousand voices settles around you, and you carry a little of it away.
+
+## ev.ev_baldacum_b_followup.title
+
+Baldacum: The Pearl and the Loom
+
+## ev.ev_baldacum_b_followup.body
+
+The bazaar keeps its own hours and its own favours. As the day cools, the weaver who sold you the brocade waves you back to his stall, and the pearl-merchant from the Gulf sets his basket on the counter. Between the two of them lies the whole trade of Baudas: silk worked with gold thread, and the pearls that come up the sea road. What you take from this hour is your own choosing.
+
+## ev.ev_baldacum_b_followup.choice_1
+
+Buy one more length of silk at the weaver's price
+
+## ev.ev_baldacum_b_followup.choice_1_result
+
+The weaver draws a length of gold-worked silk from his bundle and names a price below any merchant's. You pay it and leave the stall with cloth that will keep its worth all the way to the mountains.
+
+## ev.ev_baldacum_b_followup.choice_2
+
+Ask the pearl-merchant where the Gulf pearls are gathered
+
+## ev.ev_baldacum_b_followup.choice_2_result
+
+The merchant traces the sea road with a fingertip: past the straits to Ormus, where the divers work the oyster beds. The name is on your map now, and the road behind it.
+
+## ev.ev_baldacum_b_followup.choice_3
+
+Stay a day and watch the gold thread take its shape
+
+## ev.ev_baldacum_b_followup.choice_3_result
+
+You stay a day at the loom, watching the shuttle lay gold through the silk while the weaver hums the old patterns. The patience of the work stays with you longer than the cloth.
+
+## ev.ev_baldacum_c_followup.title
+
+Baldacum: The Keeper of the Tale
+
+## ev.ev_baldacum_c_followup.body
+
+The man who told you how the city fell has not done with you. He keeps, he says, one proof that the tale is true: a coin his grandfather picked from the ashes when the fire at last burned down. He turns it in his palm and holds it out — not as a gift, but as a choice.
+
+## ev.ev_baldacum_c_followup.choice_1
+
+Take the old coin as proof that the tale is true
+
+## ev.ev_baldacum_c_followup.choice_1_result
+
+The keeper presses the coin into your hand. It bears a name no mint will ever strike again. Wherever you tell what you saw at Baudas, you will hold the proof in your palm.
+
+## ev.ev_baldacum_c_followup.choice_2
+
+Ask by which gate the people fled when the walls fell
+
+## ev.ev_baldacum_c_followup.choice_2_result
+
+The keeper traces the flight of the city: out through the river gate, downstream past the palms, toward Basora and the sea, where the boats waited. The road is plain to you now.
+
+## ev.ev_baldacum_c_followup.choice_3
+
+Stay and set the tale down in writing
+
+## ev.ev_baldacum_c_followup.choice_3_result
+
+You stay while the keeper speaks and you write, until the lamps are lit in the bazaar and the story is safe on paper. The people of Baldacum will remember the stranger who wrote their grief down properly.
+
+## ev.ev_baldacum_mentor_followup.title
+
+Baldacum: The Calendar Master's Almanac
+
+## ev.ev_baldacum_mentor_followup.body
+
+Before you leave the city, the calendar master calls you back to his low table. He has read the pillars for travellers for forty years and will not read for many more. He spreads his almanac open between you and tells you to choose what will serve you on the road, for a journey, he says, is a fortune that may be read ahead.
+
+## ev.ev_baldacum_mentor_followup.choice_1
+
+Take the master's almanac for the road
+
+## ev.ev_baldacum_mentor_followup.choice_1_result
+
+The master presses his almanac into your hands — the travel windows, the warnings, the days to avoid. What he taught you at the low table is now written where you may consult it in any camp.
+
+## ev.ev_baldacum_mentor_followup.choice_2
+
+Ask in which season the river road runs safest
+
+## ev.ev_baldacum_mentor_followup.choice_2_result
+
+The master's finger finds the page for the months when the river to the sea runs gentle. Basora, he says, is best reached in late autumn, when the floods are done. You will know when to ride.
+
+## ev.ev_baldacum_mentor_followup.choice_3
+
+Stay a day and let the master read your own pillars
+
+## ev.ev_baldacum_mentor_followup.choice_3_result
+
+You stay a day at the low table while the master sets down your four pillars and reads your road aloud. The fortune is neither great nor small; it is simply yours. In the calendar master's circle they will remember the traveller who sat still long enough to be read.
+
+## ev.ev_baldacum_mentor_geomancy_followup.title
+
+Baldacum: The Geomancer's Final Reading
+
+## ev.ev_baldacum_mentor_geomancy_followup.body
+
+The geomancer who taught you the tracing of the sixteen figures finds you again by the river gate. He casts a handful of sand upon his board and draws his finger through it once, twice, without a word. Then he looks up: the reading is made, he says, and a reading given is a reading owed. Choose what to carry from it.
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_1
+
+Take the reading as a ward for the road
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_1_result
+
+He folds the reading into a small packet of waxed cloth and gives it to you. Whatever the sixteen figures said, the ward itself protects, and you will know how to trace it anew at need.
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_2
+
+Ask the sand which road leads to the river
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_2_result
+
+His finger draws a line through the figures to the edge of the board: the road to the river, and beyond it the way to the sea. The course is marked on your map and the reading kept in your book.
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_3
+
+Stay a day and watch the sand traced to its answer
+
+## ev.ev_baldacum_mentor_geomancy_followup.choice_3_result
+
+You watch him trace figure after figure through an afternoon and learn the patience of it. When you leave, the sand readers remember the traveller who watched to the end.
+
+

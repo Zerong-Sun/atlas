@@ -1,0 +1,287 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-cambaluc-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_a_followup.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_a_followup.choice_1",
+          "resultText": "ev.ev_cambaluc_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "carried-the-chamberlains-token"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-court",
+              "reason": "carried-the-chamberlains-token"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_a_followup.choice_2",
+          "resultText": "ev.ev_cambaluc_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "chamberlain-drew-the-envoys-road-south"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-how-the-kaans-word-travels"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_a_followup.choice_3",
+          "resultText": "ev.ev_cambaluc_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaluc",
+              "reason": "promised-to-speak-of-the-great-hall"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-court",
+              "reason": "promised-to-speak-of-the-great-hall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaluc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b2-c022"
+        }
+      }
+    },
+    {
+      "id": "ev-cambaluc-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_b_followup.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_b_followup.choice_1",
+          "resultText": "ev.ev_cambaluc_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-the-counting-house-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-suburbs",
+              "reason": "bought-silk-at-the-counting-house-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_b_followup.choice_2",
+          "resultText": "ev.ev_cambaluc_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "keeper-drew-the-road-of-the-northern-carts"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-what-the-north-sends-south"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_b_followup.choice_3",
+          "resultText": "ev.ev_cambaluc_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-the-cart-loads-with-the-tally-men"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-suburbs",
+              "reason": "counted-the-cart-loads-with-the-tally-men"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaluc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b2-c022"
+        }
+      }
+    },
+    {
+      "id": "ev-cambaluc-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_c_followup.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_c_followup.choice_1",
+          "resultText": "ev.ev_cambaluc_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-the-art-of-the-green-hill"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-hill",
+              "reason": "learned-the-art-of-the-green-hill"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_c_followup.choice_2",
+          "resultText": "ev.ev_cambaluc_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "gardener-drew-the-road-the-trees-came-by"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-what-a-mountain-is-made-of"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_c_followup.choice_3",
+          "resultText": "ev.ev_cambaluc_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watered-the-trees-with-the-gardeners"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaluc",
+              "reason": "helped-water-the-green-hill"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaluc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b2-c022"
+        }
+      }
+    },
+    {
+      "id": "ev-cambaluc-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cambaluc_mentor_followup.title",
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "body": "ev.ev_cambaluc_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaluc_mentor_followup.choice_1",
+          "resultText": "ev.ev_cambaluc_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-cambaluc-mentor-gift",
+              "reason": "received-the-chronologers-parting-notes"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "received-the-chronologers-parting-notes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_mentor_followup.choice_2",
+          "resultText": "ev.ev_cambaluc_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "chronologer-read-the-road-to-kinsay"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaluc",
+              "reason": "learned-the-season-of-the-south-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaluc_mentor_followup.choice_3",
+          "resultText": "ev.ev_cambaluc_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-at-the-bureau-reading-the-seasons"
+            },
+            {
+              "op": "sticker",
+              "value": "st-cambaluc-court",
+              "reason": "lingered-at-the-bureau-reading-the-seasons"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaluc",
+        "origin": "authored"
+      }
+    }
+  ]
+}

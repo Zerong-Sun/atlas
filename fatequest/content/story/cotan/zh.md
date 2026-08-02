@@ -2,7 +2,7 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: 17a9253e0450
+source_rev: 82b1c859fc1c
 status: translated
 translator: 人工校译
 notes: >
@@ -76,6 +76,38 @@ stamps:
   ev.cotan.mentor_closure.choice_2_result: 4e8560062ac9
   ev.cotan.mentor_closure.choice_3: 630a8fcfe069
   ev.cotan.mentor_closure.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_a_followup.title: 337d29f258ba
+  ev.ev_cotan_a_followup.body: 9e267d9a3b43
+  ev.ev_cotan_a_followup.choice_1: f6dfbb0bfee3
+  ev.ev_cotan_a_followup.choice_1_result: 3f497a15fcc4
+  ev.ev_cotan_a_followup.choice_2: 8c4f2665ff2d
+  ev.ev_cotan_a_followup.choice_2_result: 7570c2e4b6c8
+  ev.ev_cotan_a_followup.choice_3: 70445aa8e353
+  ev.ev_cotan_a_followup.choice_3_result: 598404b89f39
+  ev.ev_cotan_b_followup.title: a13fc6139a87
+  ev.ev_cotan_b_followup.body: d030d0342910
+  ev.ev_cotan_b_followup.choice_1: 6d8accc902fe
+  ev.ev_cotan_b_followup.choice_1_result: 8f86f0fd53b2
+  ev.ev_cotan_b_followup.choice_2: 07072559721d
+  ev.ev_cotan_b_followup.choice_2_result: bcc89c4b3f24
+  ev.ev_cotan_b_followup.choice_3: 4528c8406bd0
+  ev.ev_cotan_b_followup.choice_3_result: 76838a5527ce
+  ev.ev_cotan_c_followup.title: ffa785fd6170
+  ev.ev_cotan_c_followup.body: b58a669390fc
+  ev.ev_cotan_c_followup.choice_1: 53ccc60addd3
+  ev.ev_cotan_c_followup.choice_1_result: 59440b8b03b1
+  ev.ev_cotan_c_followup.choice_2: dacd7941ad43
+  ev.ev_cotan_c_followup.choice_2_result: b024adcb8814
+  ev.ev_cotan_c_followup.choice_3: b16c8df6a207
+  ev.ev_cotan_c_followup.choice_3_result: 85971a399fb6
+  ev.ev_cotan_mentor_followup.title: f783b21d647e
+  ev.ev_cotan_mentor_followup.body: 36cd6aef8c99
+  ev.ev_cotan_mentor_followup.choice_1: 570265583575
+  ev.ev_cotan_mentor_followup.choice_1_result: 4decdb990650
+  ev.ev_cotan_mentor_followup.choice_2: 154ce6710bf5
+  ev.ev_cotan_mentor_followup.choice_2_result: 9ffdad740338
+  ev.ev_cotan_mentor_followup.choice_3: 22db267dc3fb
+  ev.ev_cotan_mentor_followup.choice_3_result: d0dd6130b3aa
 ---
 
 ## city.cotan.name
@@ -348,3 +380,131 @@ stamps:
 ## ev.cotan.mentor_closure.choice_3_result
 
 你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+
+## ev.ev_cotan_a_followup.title
+
+于阗：采玉人之献
+
+## ev.ev_cotan_a_followup.body
+
+先前与你一同踏入寒水的采玉人，爬上岸边卵石滩，不让你只带眼看之物离去。他便是赤足在奔流之下探得白玉之人，一身技艺，正如别人携带货物。如今他教你看河须如何读：白玉聚于水流迟回之处，绿玉藏于砾石深陷之处；识河底，如牧人识山面。他讲采玉人的誓约——河不曾予之石，人不取；河只应静默相求之人。他把自己的求取摆在你面前：自其所得中取一石，或记下玉石离水之后所行之路，或留下，学他那双足所知的耐心。
+
+## ev.ev_cotan_a_followup.choice_1
+
+收下采玉人自其所得中相赠的白石
+
+## ev.ev_cotan_a_followup.choice_1_result
+
+采玉人以布条裹起一枚白石，按入你掌中。这是两条河的一分，如今随你而去。
+
+## ev.ev_cotan_a_followup.choice_2
+
+问采玉人，玉石离河之后运往何处
+
+## ev.ev_cotan_a_followup.choice_2_result
+
+他沿谷指西，指向玉石运往鸦儿看所经之路。去鸦儿看的路，如今已刻在你心里，你不会再盲目踏上。
+
+## ev.ev_cotan_a_followup.choice_3
+
+留一日，学采玉人以足读河
+
+## ev.ev_cotan_a_followup.choice_3_result
+
+你在卵石滩留了一日，采玉人教你的双足识得河底。寒水教你耐心，河边之人也记下你曾开口相问。
+
+## ev.ev_cotan_b_followup.title
+
+于阗：织女之歌
+
+## ev.ev_cotan_b_followup.body
+
+在织机前唱过歌的那女子，不曾忘记你。她在染缸院里寻到你，空气里尽是番红花与靛蓝的气味；她把织女的歌又唱一遍，唱得慢，好让你明白歌里载着什么。这歌不为取乐：它数经线的数目，记织机的时辰，又守梭子的节拍，使二女如一人而作。织女死时，其歌传予对坐之女，使无一张织机失其时。她指给你看诸缸——番红花染黄，靛蓝染青，茜草染红，胭脂虫染绛——又告诉你一匹丝须按何序受色，因为那次序便是这歌的第二段。你如何处置这支歌，是你自己的事。
+
+## ev.ev_cotan_b_followup.choice_1
+
+收下染料样本与一尺丝
+
+## ev.ev_cotan_b_followup.choice_1_result
+
+织女把一包染线按入你手——番红花、靛蓝、茜草、胭脂虫——并配以可对色的丝一尺。于阗的颜色，如今随你而行。
+
+## ev.ev_cotan_b_followup.choice_2
+
+问于阗丝离了织机之后送往何处
+
+## ev.ev_cotan_b_followup.choice_2_result
+
+她指向北，指向丝运往可失合儿之路，大汗的税吏在那里称量以为贡。去可失合儿的路，如今已刻在你心里，你不会再盲目踏上。
+
+## ev.ev_cotan_b_followup.choice_3
+
+留一日，学这支织女之歌
+
+## ev.ev_cotan_b_followup.choice_3_result
+
+你在织机前留了一日，一句一句学这支歌，直到双手合上它的节拍。织女们见你用功而笑；于阗的一分韵律，从此活在你身上。
+
+## ev.ev_cotan_c_followup.title
+
+于阗：千寺之谈
+
+## ev.ev_cotan_c_followup.body
+
+向你讲过佛尘的那位老人，在黄昏唤你回到旧河阶上；风已把埋城的一角揭开。他讲父传子的话：旧于阗曾有千座寺院，每座寺院一口钟，是以整城于祈祷之时，如一件乐器般齐鸣。他与你走过沙地，一一指点僧人的路所经之处——东去的朝圣路、往彩绘石窟的路、舍利运来的路。他说这些墙的尘土所以为圣，正因它盛着千座寺院的祈祷；饮此尘者，饮的是城的记忆。他把旧城的馈赠献于你：一片彩绘残片，或朝圣之路，或这传说本身。
+
+## ev.ev_cotan_c_followup.choice_1
+
+收下老人自沙中拾起的彩绘残片
+
+## ev.ev_cotan_c_followup.choice_1_result
+
+老人自沙中拾起一片彩绘残片，裹好交与你——这是那城记忆的一分。它很小，却是旧于阗。
+
+## ev.ev_cotan_c_followup.choice_2
+
+问老人，朝圣之路通往何处
+
+## ev.ev_cotan_c_followup.choice_2_result
+
+他沿旧朝圣路指向东，指向车尔臣，僧人的路由此出谷。去车尔臣的路，如今已刻在你心里，你不会在沙中迷失。
+
+## ev.ev_cotan_c_followup.choice_3
+
+留至入夜，听千寺的传说讲完
+
+## ev.ev_cotan_c_followup.choice_3_result
+
+你留至入夜，听老人把千寺的传说讲到尽头。传说随你而去，旧城从此不再只是沙。
+
+## ev.ev_cotan_mentor_followup.title
+
+于阗：守井人之临别之赠
+
+## ev.ev_cotan_mentor_followup.body
+
+玉河边的守井人不肯让你只带着他的劝诫离去。他从腰间取出一枚被河磨圆的石头，递给你——这是存于井边的好运之石。他说，井不为自己留一物；不肯受赠的旅人，也得不到见识。他自蒙古骑手到来之前便守着这口井，凡来饮者皆曾见过；有人留下赠物，有人一物不留，井两者都记得。他问你要从于阗带走什么：这枚石，玉真正所经的路，或留一日听他讲河的故事。无论你选什么，他说，都当如采玉人携石一般携带——静默，而无贪心。
+
+## ev.ev_cotan_mentor_followup.choice_1
+
+收下守井人相赠的圆石
+
+## ev.ev_cotan_mentor_followup.choice_1_result
+
+守井人把河磨圆的石按入你掌中，合上你的手指。它很小，却是河自己的好运；井的记忆，也随它而去。
+
+## ev.ev_cotan_mentor_followup.choice_2
+
+问守井人，玉真正经哪条路而来
+
+## ev.ev_cotan_mentor_followup.choice_2_result
+
+他在沙上画出东去的路，玉真正所经之途，过髣城与旧河阶。去髣城的路，如今已刻在你心里，你不会在沙中迷失。
+
+## ev.ev_cotan_mentor_followup.choice_3
+
+留一日，听河的故事
+
+## ev.ev_cotan_mentor_followup.choice_3_result
+
+你在井边留了一日，守井人自山雪讲到沙海，把河的故事讲与你。这一日花得值，河与守井人于你不再陌生。

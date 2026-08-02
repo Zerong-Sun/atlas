@@ -1,0 +1,283 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-chandu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_a_followup.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_a_followup.choice_1",
+          "resultText": "ev.ev_chandu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-why-the-palace-is-built-to-move"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "learned-why-the-palace-is-built-to-move"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_a_followup.choice_2",
+          "resultText": "ev.ev_chandu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "keeper-drew-the-road-of-the-canes"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-road-of-the-canes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_a_followup.choice_3",
+          "resultText": "ev.ev_chandu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-palace-re-bound"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-palace",
+              "reason": "watched-the-palace-re-bound"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c061"
+        }
+      }
+    },
+    {
+      "id": "ev-chandu-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_b_followup.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_b_followup.choice_1",
+          "resultText": "ev.ev_chandu_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-leopard-hunt"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-park",
+              "reason": "learned-the-leopard-hunt"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_b_followup.choice_2",
+          "resultText": "ev.ev_chandu_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaluc",
+              "reason": "falconer-named-the-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-road-to-cambaluc"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_b_followup.choice_3",
+          "resultText": "ev.ev_chandu_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-gerfalcons-fed"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-park",
+              "reason": "watched-the-gerfalcons-fed"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c061"
+        }
+      }
+    },
+    {
+      "id": "ev-chandu-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_c_followup.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_c_followup.choice_1",
+          "resultText": "ev.ev_chandu_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "heard-the-tale-of-chinghiz"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "heard-the-tale-of-chinghiz"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_c_followup.choice_2",
+          "resultText": "ev.ev_chandu_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-what-the-milk-rite-asks"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-what-the-milk-rite-asks"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_c_followup.choice_3",
+          "resultText": "ev.ev_chandu_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-mares-milked-at-dawn"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "watched-the-mares-milked-at-dawn"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c061"
+        }
+      }
+    },
+    {
+      "id": "ev-chandu-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chandu_mentor_followup.title",
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "body": "ev.ev_chandu_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chandu_mentor_followup.choice_1",
+          "resultText": "ev.ev_chandu_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-chandu-mentor-gift",
+              "reason": "received-the-horse-masters-notes"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "received-the-horse-masters-notes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_mentor_followup.choice_2",
+          "resultText": "ev.ev_chandu_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinangli",
+              "reason": "horse-master-named-the-couriers-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chandu",
+              "reason": "learned-the-couriers-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chandu_mentor_followup.choice_3",
+          "resultText": "ev.ev_chandu_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-to-learn-the-horse-masters-art"
+            },
+            {
+              "op": "sticker",
+              "value": "st-chandu-mares",
+              "reason": "lingered-to-learn-the-horse-masters-art"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chandu",
+        "origin": "authored"
+      }
+    }
+  ]
+}

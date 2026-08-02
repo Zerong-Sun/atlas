@@ -1,0 +1,287 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-lop-bazaar-followup",
+      "kind": "consequence",
+      "title": "ev.ev_lop_bazaar_followup.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_bazaar_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_bazaar_followup.choice_1",
+          "resultText": "ev.ev_lop_bazaar_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-the-dealers-private-reserve"
+            },
+            {
+              "op": "sticker",
+              "value": "st-lop-jade",
+              "reason": "bought-the-dealers-private-reserve"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_bazaar_followup.choice_2",
+          "resultText": "ev.ev_lop_bazaar_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-jade-rivers",
+              "reason": "learned-when-the-rivers-give-up-jade"
+            },
+            {
+              "op": "reveal_city",
+              "value": "sachiu",
+              "level": 1,
+              "reason": "dealer-named-the-road-east"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_bazaar_followup.choice_3",
+          "resultText": "ev.ev_lop_bazaar_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-hear-of-the-salt-wastes"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "heard-the-tale-of-the-salt-wastes"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
+        }
+      }
+    },
+    {
+      "id": "ev-lop-caravanserai-followup",
+      "kind": "consequence",
+      "title": "ev.ev_lop_caravanserai_followup.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_caravanserai_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_caravanserai_followup.choice_1",
+          "resultText": "ev.ev_lop_caravanserai_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "unlock_route",
+              "value": "rt-lop-sachiu",
+              "reason": "guide-will-lead-the-crossing"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-lop-sachiu",
+              "reason": "guide-drew-the-stages"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_caravanserai_followup.choice_2",
+          "resultText": "ev.ev_lop_caravanserai_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-desert-provisions",
+              "reason": "bought-provision-for-the-crossing"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "learned-the-rule-of-the-crossing"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_caravanserai_followup.choice_3",
+          "resultText": "ev.ev_lop_caravanserai_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rested-to-learn-the-stages"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "blessed-by-the-guides-knowledge"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c39"
+        }
+      }
+    },
+    {
+      "id": "ev-lop-shrine-followup",
+      "kind": "consequence",
+      "title": "ev.ev_lop_shrine_followup.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_shrine_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_shrine_followup.choice_1",
+          "resultText": "ev.ev_lop_shrine_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "read-the-monks-account"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "lop",
+              "reason": "honoured-the-monks-memory"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_shrine_followup.choice_2",
+          "resultText": "ev.ev_lop_shrine_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -30,
+              "reason": "silver-for-the-monks-lamps"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "blessed-for-the-crossing"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_shrine_followup.choice_3",
+          "resultText": "ev.ev_lop_shrine_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "copied-the-account-from-the-wall"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "copied-the-account-from-the-wall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_lop_mentor_followup.title",
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "body": "ev.ev_lop_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_lop_mentor_followup.choice_1",
+          "resultText": "ev.ev_lop_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-lop-mentor-followup",
+              "reason": "took-the-listeners-counsel"
+            },
+            {
+              "op": "codex",
+              "value": "cx-desert-of-lop",
+              "reason": "learned-to-read-the-desert"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_mentor_followup.choice_2",
+          "resultText": "ev.ev_lop_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-what-the-desert-will-demand"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "listener-read-the-omens"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_lop_mentor_followup.choice_3",
+          "resultText": "ev.ev_lop_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "lop",
+              "reason": "parted-well-with-the-listener"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-lop-sachiu",
+              "reason": "listener-marked-the-road-east"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "lop",
+        "origin": "authored"
+      }
+    }
+  ]
+}
