@@ -158,6 +158,29 @@ func _init() -> void:
 	n._dialog_layer.visible = false
 	await process_frame
 
+	# ------------------------------------------------- journal english leak
+	# An event choice journals translated resultText but must never print the
+	# `op:reason` audit slugs EffectExecutor emits — that is English on the
+	# reader's journal.
+	var journal_ok := true
+	n._show_event(ev)
+	await process_frame
+	n._resolve_choice(n._current_event, 0)
+	await process_frame
+	await process_frame
+	for line in n._log.text.split("\n"):
+		var t := String(line).strip_edges()
+		if t == "" or not t.contains(":") or "·" not in t:
+			continue
+		var head := t.substr(0, t.find(":"))
+		if head != "" and head == head.to_lower():
+			journal_ok = false
+			printerr("  FAIL: journal leaked audit slug: %s" % t)
+			break
+	print("UI_OVERLAY: journal=%s" % journal_ok)
+	n._dialog_layer.visible = false
+	await process_frame
+
 	# ------------------------------------------------- keyboard traversal
 	# Escape closes the topmost overlay; drive the real handler so the layer
 	# ordering and closers are exercised, not just `visible` flags.
@@ -243,11 +266,11 @@ func _init() -> void:
 
 	var ok: bool = bag_ok and close_ok and wrap_ok and mkt_ok and icon_ok \
 		and settings_ok and party_ok and card_ok and dlg_ok and para_ok and zh_ok and esc_ok \
-		and zorder_ok and lang_relabel_ok
-	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s esc=%s zorder=%s lang=%s" % [
+		and zorder_ok and lang_relabel_ok and journal_ok
+	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s esc=%s zorder=%s lang=%s journal=%s" % [
 		bag_ok, close_ok, wrap_ok, mkt_ok, icon_ok,
 		settings_ok, party_ok, card_ok, dlg_ok, para_ok, zh_ok, esc_ok,
-		zorder_ok, lang_relabel_ok])
+		zorder_ok, lang_relabel_ok, journal_ok])
 	print("UI_OVERLAY: vp=%s bag=%s market=%s dialog=%s" % [vp, bag2, mkt, dr])
 	print("UI_OVERLAY: %s" % ("OK" if ok else "FAIL"))
 	quit(0 if ok else 1)

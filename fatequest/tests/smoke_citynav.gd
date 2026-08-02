@@ -58,10 +58,34 @@ func _init():
             if c is Button and not c.disabled and String(c.text).length() > 0:
                 exits += 1
     print("CITYNAV: usable buttons in city view = %d" % exits)
+
+    # Q2.5: leaving to the roads panel and pressing back must return to the
+    # town, not strand the player on a bare map.
+    var back_ok := true
+    n._close_city()
+    await process_frame
+    await process_frame
+    var back_btn: Button = null
+    for c in _walk(n._panel):
+        if c is Button and "回到地图" in String(c.text):
+            back_btn = c
+    if back_btn == null:
+        back_ok = false
+        printerr("  FAIL: no back button on the roads panel")
+    else:
+        back_btn.pressed.emit()
+        await process_frame
+        await process_frame
+        back_ok = n._city_view.visible
+        if not back_ok:
+            printerr("  FAIL: back from roads did not return to the town")
+    print("CITYNAV: back-to-town=%s" % back_ok)
+
     # Both regressions this test was written for.
-    var ok = exits > 0 and live_once == 0
+    var ok = exits > 0 and live_once == 0 and back_ok
     if exits == 0: printerr("  FAIL: dead end — no way out of the city")
     if live_once != 0: printerr("  FAIL: %d once-only sites still offered after being explored" % live_once)
+    if not back_ok: printerr("  FAIL: roads panel did not return to the town")
     print("CITYNAV: %s" % ("OK" if ok else "FAIL"))
     quit(0 if ok else 1)
 

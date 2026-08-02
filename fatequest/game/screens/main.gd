@@ -996,6 +996,32 @@ func _say(line: String) -> void:
 	_log.scroll_to_line(_log.get_line_count())
 
 
+## Journals an effect result for the player, dropping the raw audit trail.
+##
+## EffectExecutor's log_lines are `op:reason` slugs authored for debugging and
+## save-replay ("coins:fare-camel", "days:travel-rt-…"). Printed verbatim they
+## leak English onto the journal — the reader asked "why is there English on
+## my screen". The player-facing story is already carried by resultText and the
+## HUD; the audit trail belongs in a log file, not the journal. A line that is
+## not an `op:reason` slug (already-translated prose) is kept.
+func _log_effects(res) -> void:
+	if res == null or not (res as Object).has_method("get"):
+		return
+	for line in res.log_lines:
+		if _is_audit_slug(line):
+			continue
+		_say("  · %s" % line)
+
+
+## True for the `op:reason` audit format the executor emits — a bare slug with
+## a colon, no spaces. Translated prose lines never match this shape.
+func _is_audit_slug(line: String) -> bool:
+	if not line.contains(":") or line.contains(" "):
+		return false
+	var head := line.substr(0, line.find(":"))
+	return head != "" and head == head.to_lower()
+
+
 ## Arrival: fire the entry event if there is one, else offer the roads.
 func _arrive() -> void:
 	_refresh_hud()
@@ -1259,8 +1285,7 @@ func _open_party() -> void:
 func _on_hire_confirmed(rec: Dictionary) -> void:
 	var res := executor.execute(state, _roster.hire_effects(rec),
 		{"rng": rng, "event_id": "hire"})
-	for line in res.log_lines:
-		_say("  · %s" % line)
+	_log_effects(res)
 	_refresh_hud()
 	_open_party()
 
@@ -1322,8 +1347,7 @@ func _party_row(m: Dictionary) -> Control:
 			return
 		var res := executor.execute(state, _roster.dismiss_effects(rid),
 			{"rng": rng, "event_id": "dismiss"})
-		for line in res.log_lines:
-			_say("  · %s" % line)
+		_log_effects(res)
 		_refresh_hud()
 		_open_party())
 	if int(of["over"]) > 0:
@@ -1573,8 +1597,7 @@ func _on_traded() -> void:
 	if effects.is_empty():
 		return
 	var res := executor.execute(state, effects, {"rng": rng, "event_id": "market:" + state.city})
-	for line in res.log_lines:
-		_say("  · %s" % line)
+	_log_effects(res)
 	if _audio_ready(): _audio.sfx("coin")
 	_refresh_hud()
 	_sync_city_status()
@@ -1665,7 +1688,7 @@ func _sync_city_status() -> void:
 
 func _close_city() -> void:
 	_city_view.visible = false
-	_show_roads()
+	_show_roads(true)
 
 
 func _restyle_all() -> void:
@@ -1786,8 +1809,7 @@ func _on_lesson_failed(method: String) -> void:
 					"rng": rng,
 					"event_id": "%s:lesson-failed" % _lesson_event.get("id", "?"),
 				})
-				for line in fail_result.log_lines:
-					_say("  · %s" % line)
+				_log_effects(fail_result)
 	_say("[color=#8a4a3a]· %s[/color]" % I18n.t("log.lesson_failed") % I18n.t(
 		db.get_record(method).get("name", method)))
 	_clear_lesson_pending()
@@ -1837,8 +1859,7 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 		if not result_text_key.is_empty():
 			_say("  · %s" % I18n.t(result_text_key))
 	if _audio_ready(): _audio.on_effect_result(res, {}, db.get_record(state.city), coins_before)
-	for line in res.log_lines:
-		_say("  · %s" % line)
+	_log_effects(res)
 	if not res.reading.is_empty():
 		_say("")
 		var sym := DivinationResultView.symbol_texture(res.reading)
@@ -1971,7 +1992,11 @@ func _continue_pending() -> void:
 		_open_city()
 
 
-func _show_roads() -> void:
+## The road list. `from_city` records that the player stepped out of the town
+## interior: the top "back" button must then return them to the town, not to a
+## bare map — walking out to read the roads and finding the town gone read as
+## being stuck. Arrival and map entry return to the map instead.
+func _show_roads(from_city: bool = false) -> void:
 	_clear_panel()
 	var here := db.get_record(state.city)
 
@@ -1980,7 +2005,12 @@ func _show_roads() -> void:
 	# for an invisible exit. The button is first, so it survives whatever the
 	# list below grows to.
 	_panel.add_child(Panels.styled_button(
-		I18n.t("ui.back_to_map"), _clear_panel))
+		I18n.t("ui.back_to_map"),
+		func() -> void:
+			if from_city:
+				_open_city()
+			else:
+				_clear_panel()))
 
 	# A city's own contents come first. GDD §5.2: you must do at least one thing
 	# in a place before you know how to leave it — so the sites cannot be buried
@@ -2074,7 +2104,11 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 			reasons.append(I18n.fmt(String(reason)))
 		_say("[color=#8a4a3a]· 无法出发：%s[/color]" % "、".join(
 			PackedStringArray(reasons)))
-		_show_roads()
+		# A road the player is standing in may still be a town interior —
+		# returning to a bare map would strand them outside their own city.
+		var origin_rec := db.get_record(origin_id)
+		_show_roads(not origin_rec.is_empty()
+			and not (origin_rec.get("sites", []) as Array).is_empty())
 		return
 	if _audio_ready(): _audio.on_depart(route)
 	# If the road holds an encounter, keep the transit plate on screen for the
@@ -2092,15 +2126,13 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 	var wage_fx := _roster.pay_effects(state, int(trip["days"]))
 	if not wage_fx.is_empty():
 		var wr := executor.execute(state, wage_fx, {"rng": rng, "event_id": "wages"})
-		for line in wr.log_lines:
-			_say("  · %s" % line)
+		_log_effects(wr)
 
 	# Spoilage and theft resolve per leg — GDD §9.2's brake is fares AND losses.
 	var losses := _market.travel_losses(state, route, int(trip["days"]), rng.fork("cargo"))
 	if not losses.is_empty():
 		var lr := executor.execute(state, losses, {"rng": rng, "event_id": "cargo-loss"})
-		for line in lr.log_lines:
-			_say("  [color=#8a4a3a]· %s[/color]" % line)
+		_log_effects(lr)
 	clock = WorldClock.new(state.jdn)
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [

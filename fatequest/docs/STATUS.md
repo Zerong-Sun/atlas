@@ -68,6 +68,8 @@
 | 出行页偶发英文残留 | 确认所有城市 entry.body 双语齐全，travel_confirm 纯中文渲染 |
 | transit 常驻遮挡事件对话（验证期发现） | transit 层 z-order 移到地图之上、全部交互层之下（`move_child`），hold 期间事件对话框与设置仍可点击 |
 | 语言切换后 HUD 提示残留旧语言（验证期发现） | `hud.gd::build()` 清空 `_tips` 惰性缓存 |
+| 出发后卡住回不去城镇 | 道路面板「回到地图」按来源返回：从城市内部进入则回到城市视图（`_show_roads(from_city)`）；出发失败同样回到城镇 |
+| 左下日志英文乱码 | 日志过滤 `op:reason` 审计行（`_log_effects`/`_is_audit_slug`），玩家只见中文叙事；审计仍走 `log_lines` 供存档回放 |
 | Q2 手动测试修复（2026-08-02） | ✅ 见 §2.2 |
 
 ---
