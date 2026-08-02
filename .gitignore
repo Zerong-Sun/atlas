@@ -19,6 +19,7 @@ atlas/packages/corpus-scripts/.cache/
 atlas/corpus/raw/
 __pycache__/
 .venv/
+fatequest/scripts/art-gen-kit/.venv
 .vercel
 
 # Intermediate DEM tiles/mosaic from worldmap/scripts/build_real_terrain.py.

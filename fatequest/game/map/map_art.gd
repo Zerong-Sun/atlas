@@ -48,8 +48,8 @@ const CITY_ART_ALIAS := {
 }
 
 ## Cities with their own painted scene. Falling back to a region plate loses a
-## lot, and one of those plates is mislabelled: scene-region-chr is still West
-## Asian in content. Named scenes are therefore preferred wherever one exists.
+## lot, so named scenes and city-specific entry plates are preferred wherever
+## one exists.
 const CITY_SCENE := {
 	"tauris": "scene-tabriz-bazaar",
 	"ormus": "scene-hormuz-port",
@@ -63,8 +63,8 @@ const CITY_SCENE := {
 	"herat": "scene-herat-road",
 }
 
-## Band plates are a safer fallback than culture plates while the region art is
-## mislabelled — they at least never claim the wrong civilisation outright.
+## Band plates keep the fallback visual language stable when a city has no
+## dedicated entry or named scene.
 const BAND_SCENE := {
 	"china": "scene-region-con",
 	"maritime_asia": "scene-region-mazu",
@@ -157,6 +157,7 @@ const BOOKS := ["polo", "battuta", "conti", "odoric", "rubruck", "tafur", "zheng
 
 static var _cache: Dictionary = {}
 static var _goods_map: Dictionary = {}
+static var _goods_index: Dictionary = {}
 static var _goods_loaded := false
 
 
@@ -374,19 +375,18 @@ static func _ensure_goods_map() -> void:
 	if typeof(doc) != TYPE_DICTIONARY:
 		return
 	_goods_map = doc
+	_goods_index.clear()
+	for section in ["goods", "tools", "tokens"]:
+		var table: Dictionary = _goods_map.get(section, {})
+		for goods_id in table:
+			var item: Variant = table[goods_id]
+			if typeof(item) == TYPE_DICTIONARY:
+				_goods_index[String(goods_id)] = String(item.get("art", ""))
 
 
 static func goods_icon(goods_id: String) -> Texture2D:
 	_ensure_goods_map()
-	var entry: Variant = null
-	for section in ["goods", "tools", "tokens"]:
-		var table: Dictionary = _goods_map.get(section, {})
-		if table.has(goods_id):
-			entry = table[goods_id]
-			break
-	var stem := ""
-	if typeof(entry) == TYPE_DICTIONARY:
-		stem = String(entry.get("art", ""))
+	var stem := String(_goods_index.get(goods_id, ""))
 	if stem.is_empty():
 		var defaults: Dictionary = _goods_map.get("defaults", {})
 		stem = String(defaults.get("goods", "ic-ritual-basket"))

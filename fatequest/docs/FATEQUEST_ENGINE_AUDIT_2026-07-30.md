@@ -66,7 +66,7 @@
 | FQ-17 | P1 | 1300 年闰年审计 fixture 把非闰年断言成闰年 | 改验 1300 非闰与 1304 闰年的往返 | `audit_logic` | 已修复 |
 | FQ-18 | P1 | 逻辑审计发现严重项仍可能退出 0 | 严重项统一返回非零退出码 | `audit_logic` | 已修复 |
 | FQ-19 | P1 | 端到端路线夹具未结束旅程；占法夹具绕过课程且站错导师城 | 夹具按真实旅程/课程门禁完成状态转换 | 全部 16 单测 | 已修复 |
-| FQ-20 | P2 | 文档 i18n 数量、表结构说明和地图冲突规则与实现漂移 | 同步为 2501/2501、支持表描述和稳定选择规则 | 文档校对 / i18n 检查 | 已修复 |
+| FQ-20 | P2 | 文档 i18n 数量、表结构说明和地图冲突规则与实现漂移 | 同步为 2673/2673、支持表描述和稳定选择规则 | 文档校对 / i18n 检查 | 已修复 |
 | FQ-21 | P1 | 路线、交通、坐标和 lesson 数值缺少完整静态边界门禁 | 增加范围、整数、唯一性、月份及交通兼容性验证 | G1/G2/G3 | 已修复 |
 | FQ-22 | P1 | 核心拒绝过期点击后 UI 仍显示结果并可能把未结算后果出队 | EffectResult 显式标记 resolved；拒绝时不叙述、不出队并刷新选择 | `test_narrative` | 已修复 |
 | FQ-23 | P1 | 队列后果点“先不动手”会隐藏 active_event 且没有恢复入口 | 进入“未完的后果”暂停页；可继续处理；队列目标强制无条件兜底选项 | 流程 smoke / G2 | 已修复 |
@@ -89,7 +89,7 @@
 |---|---|
 | `node tools/validate/validate.mjs --quiet` | 24 道内容门禁通过，0 error |
 | `node tools/lore/story.mjs check` | 1334 current，0 stale，0 missing |
-| `node tests/test_i18n_lines.mjs` | 2501/2501，100%，0 raw key |
+| `node tests/test_i18n_lines.mjs` | 2673/2673，100%，0 raw key |
 | `godot --headless --script tests/run_tests.gd` | 16/16 通过 |
 | 全部 `tests/smoke_*.gd` | 12/12 通过 |
 | `tests/audit_logic.gd` | 0 项问题，退出 0 |

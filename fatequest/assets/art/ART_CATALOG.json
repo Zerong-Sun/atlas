@@ -1,7 +1,7 @@
 {
   "version": 1,
   "style": "Cloud-ridge Twilight / 云岭暮光",
-  "count": 363,
+  "count": 674,
   "assets": [
     {
       "file": "arch-iching.webp",
@@ -16,7 +16,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-iching.webp",
-      "bytes": 65332
+      "bytes": 28596
     },
     {
       "file": "arch-runes.webp",
@@ -31,7 +31,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-runes.webp",
-      "bytes": 69998
+      "bytes": 69908
     },
     {
       "file": "arch-tarot.webp",
@@ -46,7 +46,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for arch-tarot.webp",
-      "bytes": 64986
+      "bytes": 64666
     },
     {
       "file": "bg-nocturne-alt.webp",
@@ -58,10 +58,10 @@
       "content": "alternate subtle star-nocturne plate (very dark)",
       "spec": "",
       "accent": "",
-      "width": 294,
-      "height": 384,
+      "width": 1024,
+      "height": 400,
       "exif_description": "alternate subtle star-nocturne plate (very dark)",
-      "bytes": 19340
+      "bytes": 93330
     },
     {
       "file": "bg-nocturne.webp",
@@ -76,7 +76,7 @@
       "width": 1920,
       "height": 1080,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for bg-nocturne.webp",
-      "bytes": 156944
+      "bytes": 147008
     },
     {
       "file": "bg-parchment.webp",
@@ -88,10 +88,110 @@
       "content": "tileable parchment paper texture 512×512 (for future map)",
       "spec": "",
       "accent": "",
-      "width": 429,
-      "height": 437,
+      "width": 647,
+      "height": 523,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for bg-parchment.webp",
-      "bytes": 58252
+      "bytes": 64068
+    },
+    {
+      "file": "book-battuta.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "exif_description": "Ibn Battuta: Maghrebi travel book, crescent arch + desert road motif, no calligraphy",
+      "bytes": 150650
+    },
+    {
+      "file": "book-conti.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "bytes": 630746
+    },
+    {
+      "file": "book-odoric.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "bytes": 466116
+    },
+    {
+      "file": "book-polo.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "bytes": 424560
+    },
+    {
+      "file": "book-rubruck.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "bytes": 407810
+    },
+    {
+      "file": "book-tafur.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "bytes": 549390
+    },
+    {
+      "file": "book-zhenghe.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 700,
+      "exif_description": "Zheng He voyages: East-Asian naval cover, junk silhouette + wave pattern, no glyphs",
+      "bytes": 153238
     },
     {
       "file": "card-back-full.webp",
@@ -106,7 +206,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for card-back-full.webp",
-      "bytes": 126506
+      "bytes": 114006
     },
     {
       "file": "card-back.webp",
@@ -118,10 +218,279 @@
       "content": "same design language as tower card back: compass star + cloud border (mini icon version)",
       "spec": "",
       "accent": "",
-      "width": 223,
+      "width": 301,
       "height": 243,
       "exif_description": "same design language as tower card back: compass star + cloud border (mini icon version)",
-      "bytes": 32016
+      "bytes": 33218
+    },
+    {
+      "file": "city-acre-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Acre: crusader gate arch, battlements, Mediterranean glint",
+      "bytes": 193334
+    },
+    {
+      "file": "city-balc-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Balc/Balkh: ruined marble gate, dust haze, fallen columns",
+      "bytes": 181962
+    },
+    {
+      "file": "city-baldacum-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Baldacum/Baghdad: Tigris gate, palms, caliphate walls",
+      "bytes": 187372
+    },
+    {
+      "file": "city-basora-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "city-basora-entry.webp",
+      "bytes": 241714
+    },
+    {
+      "file": "city-cabul-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "city-cabul-entry.webp",
+      "bytes": 224978
+    },
+    {
+      "file": "city-cambaluc-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Cambaluc/Khanbaliq: drum-tower gate, pagoda hint (no deity)",
+      "bytes": 187246
+    },
+    {
+      "file": "city-cascar-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Cascar/Kashgar: oasis crossroads gate, twin roads diverging",
+      "bytes": 186312
+    },
+    {
+      "file": "city-cotan-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Cotan/Khotan: jade river gate, willows, cotton fields glimpse",
+      "bytes": 181728
+    },
+    {
+      "file": "city-delli-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "city-delli-entry.webp",
+      "bytes": 202760
+    },
+    {
+      "file": "city-hormos-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Hormuz: gulf port gate, dhow masts, heat haze",
+      "bytes": 199514
+    },
+    {
+      "file": "city-java-major-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Java Major: monsoon island harbor gate, spice cargo hold hint, Muslim court roofs and sea ships",
+      "bytes": 237716
+    },
+    {
+      "file": "city-lop-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Lop: desert-edge mud gate, dunes beyond, camel silhouettes",
+      "bytes": 172558
+    },
+    {
+      "file": "city-maldive-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Maldives: atoll lagoon approach, palms, coral mosque silhouette, monsoon sail",
+      "bytes": 197996
+    },
+    {
+      "file": "city-samarcanda-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Samarcanda: blue-glazed gate, orchard trees",
+      "bytes": 187282
+    },
+    {
+      "file": "city-tauris-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Tabriz/Tauris: bazaar gate, blue dome beyond arches",
+      "bytes": 155044
+    },
+    {
+      "file": "city-venice-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "bytes": 719328
+    },
+    {
+      "file": "city-zancibar-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Zanzibar: Swahili coral-stone port gate, coconut palms, Indian Ocean merchant ships",
+      "bytes": 220216
+    },
+    {
+      "file": "city-zayton-entry.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "entering Zayton/Quanzhou: harbor gate, junk masts, spice wharf",
+      "bytes": 166044
     },
     {
       "file": "comp-lin.webp",
@@ -133,10 +502,10 @@
       "content": "半身像剪影：斗笠船娘执桨，腰间香符",
       "spec": "512×640 透明",
       "accent": "",
-      "width": 360,
-      "height": 298,
+      "width": 349,
+      "height": 287,
       "exif_description": "boatwoman with conical hat and oar, incense charm, no facial detail",
-      "bytes": 77842
+      "bytes": 74706
     },
     {
       "file": "comp-tebrizi.webp",
@@ -148,10 +517,200 @@
       "content": "半身像剪影：缠头老者持黄铜星盘，不画五官细节",
       "spec": "512×640 透明",
       "accent": "",
-      "width": 362,
-      "height": 296,
+      "width": 353,
+      "height": 287,
       "exif_description": "turbaned astronomer half-body silhouette with astrolabe, no facial detail",
-      "bytes": 80416
+      "bytes": 76958
+    },
+    {
+      "file": "contract-divined.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 768,
+      "exif_description": "same contract with star/omen watermark (divined hire mode)",
+      "bytes": 93158
+    },
+    {
+      "file": "contract-open.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 768,
+      "exif_description": "open recruitment contract parchment, blank lines, wax seal corner empty",
+      "bytes": 56454
+    },
+    {
+      "file": "contract-sealed.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 768,
+      "exif_description": "rolled sealed contract with rubric wax ribbon",
+      "bytes": 28054
+    },
+    {
+      "file": "culture-eastasia.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 131514
+    },
+    {
+      "file": "culture-indianocean.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 168362
+    },
+    {
+      "file": "culture-islamic.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 126200
+    },
+    {
+      "file": "culture-latin.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 157214
+    },
+    {
+      "file": "culture-steppe.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 166154
+    },
+    {
+      "file": "currency-cash.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "Song/Yuan copper cash coins on square hole string, Han trade currency",
+      "bytes": 19874
+    },
+    {
+      "file": "currency-dinar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "Islamic gold dinar, circular with central calligraphy-free star motif",
+      "bytes": 32356
+    },
+    {
+      "file": "currency-dirham.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "silver dirham coin stack, Central Asian trade coin style",
+      "bytes": 22412
+    },
+    {
+      "file": "currency-ducat.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "Venetian gold ducat coin obverse, heraldic lion, medieval minted coin NOT paper",
+      "bytes": 31100
+    },
+    {
+      "file": "currency-sycee.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "Chinese silver sycee ingot boat-shape, merchant stamp mark (no letters)",
+      "bytes": 15520
     },
     {
       "file": "curse-chain.webp",
@@ -163,10 +722,10 @@
       "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
       "spec": "512×512 透明，紫黑主调",
       "accent": "",
-      "width": 304,
-      "height": 278,
+      "width": 299,
+      "height": 263,
       "exif_description": "chains on blank card",
-      "bytes": 67714
+      "bytes": 61230
     },
     {
       "file": "curse-dread.webp",
@@ -178,10 +737,10 @@
       "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
       "spec": "512×512 透明，紫黑主调",
       "accent": "",
-      "width": 274,
-      "height": 278,
+      "width": 263,
+      "height": 267,
       "exif_description": "coiled serpent heraldic",
-      "bytes": 54248
+      "bytes": 52436
     },
     {
       "file": "curse-leak.webp",
@@ -193,10 +752,10 @@
       "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
       "spec": "512×512 透明，紫黑主调",
       "accent": "",
-      "width": 272,
-      "height": 280,
+      "width": 299,
+      "height": 271,
       "exif_description": "holed money pouch dripping coins",
-      "bytes": 55680
+      "bytes": 61166
     },
     {
       "file": "curse-shadow.webp",
@@ -208,10 +767,823 @@
       "content": "阴翳=噬光墨团 / 锁蔽=缠卡锁链 / 漏财=漏底钱袋 / 惊惶=盘蛇",
       "spec": "512×512 透明，紫黑主调",
       "accent": "",
-      "width": 344,
-      "height": 276,
+      "width": 265,
+      "height": 287,
       "exif_description": "light-eating purple-black ink blot",
-      "bytes": 71488
+      "bytes": 56496
+    },
+    {
+      "file": "desk-parchment.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "1920?1080 close-up desk surface: spread blank parchment mappa mundi, ink pot edge, candle glow upper-right; lower-left ~1/3 empty for UI; no readable map labels",
+      "bytes": 387374
+    },
+    {
+      "file": "explore-inn-acre.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 86096
+    },
+    {
+      "file": "explore-inn-balc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 92494
+    },
+    {
+      "file": "explore-inn-baldacum.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 86668
+    },
+    {
+      "file": "explore-inn-cambaluc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 87852
+    },
+    {
+      "file": "explore-inn-cascar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 88896
+    },
+    {
+      "file": "explore-inn-cotan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 93608
+    },
+    {
+      "file": "explore-inn-hormos.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 89814
+    },
+    {
+      "file": "explore-inn-lop.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 90040
+    },
+    {
+      "file": "explore-inn-samarcanda.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 97240
+    },
+    {
+      "file": "explore-inn-tauris.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 89036
+    },
+    {
+      "file": "explore-inn-venice.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 89574
+    },
+    {
+      "file": "explore-inn-zayton.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 90154
+    },
+    {
+      "file": "explore-market-acre.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 66362
+    },
+    {
+      "file": "explore-market-balc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74356
+    },
+    {
+      "file": "explore-market-baldacum.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 80890
+    },
+    {
+      "file": "explore-market-cambaluc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74532
+    },
+    {
+      "file": "explore-market-cascar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 64328
+    },
+    {
+      "file": "explore-market-cotan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 80598
+    },
+    {
+      "file": "explore-market-hormos.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74892
+    },
+    {
+      "file": "explore-market-lop.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 72778
+    },
+    {
+      "file": "explore-market-samarcanda.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 82058
+    },
+    {
+      "file": "explore-market-tauris.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 77570
+    },
+    {
+      "file": "explore-market-venice.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 76892
+    },
+    {
+      "file": "explore-market-zayton.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 77528
+    },
+    {
+      "file": "explore-temple-acre.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 73256
+    },
+    {
+      "file": "explore-temple-balc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 68592
+    },
+    {
+      "file": "explore-temple-baldacum.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 79334
+    },
+    {
+      "file": "explore-temple-cambaluc.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 77150
+    },
+    {
+      "file": "explore-temple-cascar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 79046
+    },
+    {
+      "file": "explore-temple-cotan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 77550
+    },
+    {
+      "file": "explore-temple-hormos.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74868
+    },
+    {
+      "file": "explore-temple-lop.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 67802
+    },
+    {
+      "file": "explore-temple-samarcanda.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 81776
+    },
+    {
+      "file": "explore-temple-tauris.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 77540
+    },
+    {
+      "file": "explore-temple-venice.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74172
+    },
+    {
+      "file": "explore-temple-zayton.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 74414
+    },
+    {
+      "file": "faith-buddhism.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 137804
+    },
+    {
+      "file": "faith-daoism.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 154138
+    },
+    {
+      "file": "faith-folk.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 155048
+    },
+    {
+      "file": "faith-hindu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 152214
+    },
+    {
+      "file": "faith-islam.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 149148
+    },
+    {
+      "file": "faith-latin.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 67922
+    },
+    {
+      "file": "faith-nestorian.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 88810
+    },
+    {
+      "file": "faith-orthodox.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 122404
+    },
+    {
+      "file": "fate-bar-rapport.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 65570
+    },
+    {
+      "file": "fate-bar-travel.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 62974
+    },
+    {
+      "file": "fate-bar-wealth.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 55488
+    },
+    {
+      "file": "fate-rank-shangshang.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 66860
+    },
+    {
+      "file": "fate-rank-shangxia.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 57536
+    },
+    {
+      "file": "fate-rank-shangzhong.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 63582
+    },
+    {
+      "file": "fate-rank-xiashang.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 55364
+    },
+    {
+      "file": "fate-rank-xiaxia.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 59070
+    },
+    {
+      "file": "fate-rank-xiazhong.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 50692
+    },
+    {
+      "file": "fate-rank-zhongshang.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 56412
+    },
+    {
+      "file": "fate-rank-zhongxia.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 59094
+    },
+    {
+      "file": "fate-rank-zhongzhong.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 56230
+    },
+    {
+      "file": "fate-wheel.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 512,
+      "bytes": 268426
     },
     {
       "file": "ic-creature-dagger.webp",
@@ -225,7 +1597,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 30938
+      "bytes": 86604
     },
     {
       "file": "ic-creature-dragon.webp",
@@ -239,7 +1611,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 50204
+      "bytes": 190178
     },
     {
       "file": "ic-creature-hole.webp",
@@ -283,7 +1655,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 38662
+      "bytes": 155662
     },
     {
       "file": "ic-creature-mirror.webp",
@@ -297,7 +1669,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 38642
+      "bytes": 142048
     },
     {
       "file": "ic-creature-newmoon.webp",
@@ -326,7 +1698,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 44690
+      "bytes": 172638
     },
     {
       "file": "ic-creature-troll.webp",
@@ -340,7 +1712,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 47512
+      "bytes": 178136
     },
     {
       "file": "ic-creature-walker.webp",
@@ -354,7 +1726,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 38132
+      "bytes": 154068
     },
     {
       "file": "ic-dream-baby.webp",
@@ -668,8 +2040,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (ALCHEMICAL SYMBOL FOR FIRE)",
-      "bytes": 38930
+      "bytes": 137952
     },
     {
       "file": "ic-extra-convenience-store.webp",
@@ -727,7 +2098,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 71094
+      "bytes": 312518
     },
     {
       "file": "ic-extra-hot-pepper.webp",
@@ -756,8 +2127,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (MICROBE)",
-      "bytes": 54674
+      "bytes": 190546
     },
     {
       "file": "ic-extra-milky-way.webp",
@@ -815,7 +2185,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 57830
+      "bytes": 270040
     },
     {
       "file": "ic-extra-spool-of-thread.webp",
@@ -829,8 +2199,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Manuscript icon replacing ? (SPOOL OF THREAD)",
-      "bytes": 53278
+      "bytes": 186760
     },
     {
       "file": "ic-extra-white-diamond.webp",
@@ -859,7 +2228,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 40724
+      "bytes": 176260
     },
     {
       "file": "ic-fx-fastfwd.webp",
@@ -903,8 +2272,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Nazar / protective eye amulet, glass blue",
-      "bytes": 53348
+      "bytes": 211092
     },
     {
       "file": "ic-fx-rainbow.webp",
@@ -960,8 +2328,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Archery target / omen bullseye",
-      "bytes": 46870
+      "bytes": 193288
     },
     {
       "file": "ic-fx-warn.webp",
@@ -1004,8 +2371,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Gold manuscript check mark",
-      "bytes": 46866
+      "bytes": 193288
     },
     {
       "file": "ic-icon-fullscreen.webp",
@@ -1019,7 +2385,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 40724
+      "bytes": 176260
     },
     {
       "file": "ic-icon-lock.webp",
@@ -1092,7 +2458,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 59036
+      "bytes": 224740
     },
     {
       "file": "ic-misc-calendar.webp",
@@ -1121,7 +2487,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 29170
+      "bytes": 107058
     },
     {
       "file": "ic-misc-clipboard.webp",
@@ -1255,8 +2621,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ?? ? Balance scales (UI)",
-      "bytes": 31860
+      "bytes": 110500
     },
     {
       "file": "ic-misc-seed.webp",
@@ -1300,7 +2665,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 38658
+      "bytes": 153902
     },
     {
       "file": "ic-misc-storm.webp",
@@ -1344,7 +2709,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 45440
+      "bytes": 165684
     },
     {
       "file": "ic-nav-codex.webp",
@@ -1358,8 +2723,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "exif_description": "replaces ? ? Open illuminated book, codex tab",
-      "bytes": 53338
+      "bytes": 211092
     },
     {
       "file": "ic-nav-home.webp",
@@ -1429,7 +2793,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 31066
+      "bytes": 129462
     },
     {
       "file": "ic-place-classical.webp",
@@ -1458,7 +2822,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 29534
+      "bytes": 114758
     },
     {
       "file": "ic-place-shrine.webp",
@@ -1487,7 +2851,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 36416
+      "bytes": 145484
     },
     {
       "file": "ic-place-tea.webp",
@@ -1501,7 +2865,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 22504
+      "bytes": 84346
     },
     {
       "file": "ic-place-teapot.webp",
@@ -1515,7 +2879,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 31676
+      "bytes": 127582
     },
     {
       "file": "ic-place-temple.webp",
@@ -1544,7 +2908,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 26436
+      "bytes": 96862
     },
     {
       "file": "ic-ritual-amphora.webp",
@@ -1558,7 +2922,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 37502
+      "bytes": 139316
     },
     {
       "file": "ic-ritual-basket.webp",
@@ -1587,7 +2951,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 32622
+      "bytes": 124206
     },
     {
       "file": "ic-ritual-coin.webp",
@@ -1601,7 +2965,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 36792
+      "bytes": 145852
     },
     {
       "file": "ic-ritual-crescent.webp",
@@ -1615,7 +2979,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 26658
+      "bytes": 91454
     },
     {
       "file": "ic-ritual-fog.webp",
@@ -1629,7 +2993,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 31690
+      "bytes": 125122
     },
     {
       "file": "ic-ritual-lantern.webp",
@@ -1643,7 +3007,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 33118
+      "bytes": 110596
     },
     {
       "file": "ic-ritual-pouch.webp",
@@ -1657,7 +3021,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 42310
+      "bytes": 166660
     },
     {
       "file": "ic-ritual-scroll.webp",
@@ -1671,7 +3035,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 32624
+      "bytes": 103538
     },
     {
       "file": "ic-ritual-waning.webp",
@@ -1685,7 +3049,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 20464
+      "bytes": 80498
     },
     {
       "file": "ic-tower-broom.webp",
@@ -1729,7 +3093,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 29012
+      "bytes": 108152
     },
     {
       "file": "ic-tower-fail.webp",
@@ -1743,7 +3107,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 44674
+      "bytes": 196028
     },
     {
       "file": "ic-tower-ice.webp",
@@ -2039,7 +3403,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 53468
+      "bytes": 206970
     },
     {
       "file": "ic-trump-04-emperor.webp",
@@ -2112,7 +3476,7 @@
       "accent": "",
       "width": 512,
       "height": 512,
-      "bytes": 47904
+      "bytes": 201994
     },
     {
       "file": "ic-trump-09-hermit.webp",
@@ -2141,7 +3505,7 @@
       "accent": "",
       "width": 232,
       "height": 220,
-      "bytes": 93028
+      "bytes": 93002
     },
     {
       "file": "ic-trump-11-justice.webp",
@@ -2155,7 +3519,7 @@
       "accent": "",
       "width": 248,
       "height": 228,
-      "bytes": 94322
+      "bytes": 94996
     },
     {
       "file": "ic-trump-12-hanged.webp",
@@ -2169,7 +3533,7 @@
       "accent": "",
       "width": 248,
       "height": 228,
-      "bytes": 85030
+      "bytes": 85000
     },
     {
       "file": "ic-trump-13-death.webp",
@@ -2183,7 +3547,7 @@
       "accent": "",
       "width": 247,
       "height": 228,
-      "bytes": 95576
+      "bytes": 95992
     },
     {
       "file": "ic-trump-14-temperance.webp",
@@ -2197,7 +3561,7 @@
       "accent": "",
       "width": 249,
       "height": 220,
-      "bytes": 93930
+      "bytes": 94008
     },
     {
       "file": "ic-trump-15-devil.webp",
@@ -2239,7 +3603,7 @@
       "accent": "",
       "width": 247,
       "height": 213,
-      "bytes": 97554
+      "bytes": 98208
     },
     {
       "file": "ic-trump-18-moon.webp",
@@ -2253,7 +3617,7 @@
       "accent": "",
       "width": 235,
       "height": 213,
-      "bytes": 87856
+      "bytes": 87800
     },
     {
       "file": "ic-trump-19-sun.webp",
@@ -2309,10 +3673,10 @@
       "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 266,
-      "height": 282,
+      "width": 253,
+      "height": 269,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-astrolabe.webp",
-      "bytes": 43408
+      "bytes": 40972
     },
     {
       "file": "item-beads.webp",
@@ -2324,10 +3688,10 @@
       "content": "罗盘/水晶球/念珠",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 252,
-      "height": 264,
+      "width": 239,
+      "height": 251,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-beads.webp",
-      "bytes": 30706
+      "bytes": 28772
     },
     {
       "file": "item-compass.webp",
@@ -2339,10 +3703,10 @@
       "content": "罗盘/水晶球/念珠",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 256,
-      "height": 278,
+      "width": 243,
+      "height": 265,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-compass.webp",
-      "bytes": 42746
+      "bytes": 40778
     },
     {
       "file": "item-crystal.webp",
@@ -2354,10 +3718,10 @@
       "content": "罗盘/水晶球/念珠",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 238,
-      "height": 254,
+      "width": 223,
+      "height": 241,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-crystal.webp",
-      "bytes": 36778
+      "bytes": 34792
     },
     {
       "file": "item-glass.webp",
@@ -2369,10 +3733,10 @@
       "content": "绸卷/香料袋/琉璃瓶",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 222,
-      "height": 274,
+      "width": 262,
+      "height": 259,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-glass.webp",
-      "bytes": 33856
+      "bytes": 35060
     },
     {
       "file": "item-lampoil.webp",
@@ -2384,10 +3748,10 @@
       "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 262,
-      "height": 242,
+      "width": 219,
+      "height": 231,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-lampoil.webp",
-      "bytes": 31362
+      "bytes": 28076
     },
     {
       "file": "item-mazucharm.webp",
@@ -2399,10 +3763,10 @@
       "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 226,
-      "height": 260,
+      "width": 213,
+      "height": 247,
       "exif_description": "incense charm with wave + lamp only, no deity figure",
-      "bytes": 43206
+      "bytes": 41882
     },
     {
       "file": "item-paiza.webp",
@@ -2414,10 +3778,10 @@
       "content": "灯油瓶/星盘/金牌（八思巴文暗示）/香符",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 196,
-      "height": 262,
+      "width": 183,
+      "height": 251,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-paiza.webp",
-      "bytes": 38352
+      "bytes": 36078
     },
     {
       "file": "item-silk.webp",
@@ -2429,10 +3793,10 @@
       "content": "绸卷/香料袋/琉璃瓶",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 326,
-      "height": 208,
+      "width": 309,
+      "height": 195,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-silk.webp",
-      "bytes": 36352
+      "bytes": 33880
     },
     {
       "file": "item-spice.webp",
@@ -2444,10 +3808,172 @@
       "content": "绸卷/香料袋/琉璃瓶",
       "spec": "256×256 透明",
       "accent": "",
-      "width": 276,
-      "height": 264,
+      "width": 261,
+      "height": 251,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for item-spice.webp",
-      "bytes": 40914
+      "bytes": 39416
+    },
+    {
+      "file": "load-bazaar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "covered bazaar vault: arches mid-right, spice sacks silhouette; dark; lower 1/4 empty",
+      "bytes": 391526
+    },
+    {
+      "file": "load-canal.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Grand Canal scene: barges mid-right, willow banks; dark dusk; lower 1/4 empty",
+      "bytes": 481790
+    },
+    {
+      "file": "load-church.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1369218
+    },
+    {
+      "file": "load-desert.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "desert caravan trail: dunes mid-right, camel silhouettes far; dark dusk; lower 1/4 empty",
+      "bytes": 310936
+    },
+    {
+      "file": "load-monastery.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "mountain monastery: stone abbey mid-right, pine silhouettes; dark dusk; lower 1/4 empty",
+      "bytes": 246450
+    },
+    {
+      "file": "load-mosque.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "mosque courtyard at dusk: arcade mid-right, pool reflection; dark; lower 1/4 empty; no calligraphy",
+      "bytes": 212072
+    },
+    {
+      "file": "load-port.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Mediterranean port at dusk: quay mid-right, masts, warm fog; dark overall; lower 1/4 empty",
+      "bytes": 270338
+    },
+    {
+      "file": "load-seaship.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "open sea voyage: junk/dhow sails mid-right, dark waves; lower 1/4 empty",
+      "bytes": 455448
+    },
+    {
+      "file": "load-snowpeak.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1201710
+    },
+    {
+      "file": "load-station.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "roadside yam/post-station: mud walls mid-right, lantern glow; dark; lower 1/4 empty",
+      "bytes": 247174
+    },
+    {
+      "file": "load-steppe.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1304184
     },
     {
       "file": "map-beast-griffin.webp",
@@ -2475,7 +4001,7 @@
       "accent": "",
       "width": 488,
       "height": 257,
-      "bytes": 259342
+      "bytes": 259490
     },
     {
       "file": "map-beast-serpent.webp",
@@ -2489,7 +4015,7 @@
       "accent": "",
       "width": 484,
       "height": 257,
-      "bytes": 248734
+      "bytes": 248942
     },
     {
       "file": "map-beast-whale.webp",
@@ -2534,6 +4060,48 @@
       "bytes": 232136
     },
     {
+      "file": "map-city-chr-l.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 280,
+      "bytes": 79516
+    },
+    {
+      "file": "map-city-chr-m.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "bytes": 33772
+    },
+    {
+      "file": "map-city-chr-s.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 160,
+      "height": 140,
+      "bytes": 4240
+    },
+    {
       "file": "map-city-chr.webp",
       "batch": "",
       "source": "",
@@ -2545,8 +4113,49 @@
       "accent": "",
       "width": 256,
       "height": 220,
-      "exif_description": "Christendom fort 256?220: crenellated wall + pointed belfry + arch gate, side elevation, no text",
-      "bytes": 34782
+      "bytes": 87394
+    },
+    {
+      "file": "map-city-con-l.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 280,
+      "bytes": 90808
+    },
+    {
+      "file": "map-city-con-m.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "bytes": 35256
+    },
+    {
+      "file": "map-city-con-s.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 160,
+      "height": 140,
+      "bytes": 4530
     },
     {
       "file": "map-city-con.webp",
@@ -2560,8 +4169,49 @@
       "accent": "",
       "width": 256,
       "height": 220,
-      "exif_description": "Confucian/Daoist fort 256?220: flying eaves tower + rammed-earth wall, side elevation, no text",
-      "bytes": 36638
+      "bytes": 91114
+    },
+    {
+      "file": "map-city-isl-l.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 280,
+      "bytes": 74742
+    },
+    {
+      "file": "map-city-isl-m.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "bytes": 32024
+    },
+    {
+      "file": "map-city-isl-s.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 160,
+      "height": 140,
+      "bytes": 4996
     },
     {
       "file": "map-city-isl.webp",
@@ -2579,6 +4229,48 @@
       "bytes": 36422
     },
     {
+      "file": "map-city-mazu-l.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 320,
+      "height": 280,
+      "bytes": 86256
+    },
+    {
+      "file": "map-city-mazu-m.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 220,
+      "bytes": 40900
+    },
+    {
+      "file": "map-city-mazu-s.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 160,
+      "height": 140,
+      "bytes": 7322
+    },
+    {
       "file": "map-city-mazu.webp",
       "batch": "",
       "source": "",
@@ -2590,8 +4282,7 @@
       "accent": "",
       "width": 256,
       "height": 220,
-      "exif_description": "Port fort 256?220: pier + Fuzhou-junk masts + Mazu temple eave, side elevation, no text",
-      "bytes": 38292
+      "bytes": 93854
     },
     {
       "file": "map-court-con.webp",
@@ -2605,8 +4296,7 @@
       "accent": "",
       "width": 320,
       "height": 260,
-      "exif_description": "Palace Shangdu/Dadu 320?260: multi-eave halls + white terrace base, no text",
-      "bytes": 57556
+      "bytes": 147400
     },
     {
       "file": "map-dune.webp",
@@ -2624,6 +4314,21 @@
       "bytes": 15988
     },
     {
+      "file": "map-fog-ink.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 2048,
+      "height": 2048,
+      "exif_description": "2048?2048 irregular iron-gall ink wash fog mask: blotchy soft edges, mostly dark center with torn translucent rim; usable as unexplored-region overlay; no symbols",
+      "bytes": 777944
+    },
+    {
       "file": "map-forest.webp",
       "batch": "",
       "source": "",
@@ -2637,6 +4342,76 @@
       "height": 220,
       "exif_description": "Conifer cluster Europe 320?220: 5?7 trees, side view, flat base",
       "bytes": 19470
+    },
+    {
+      "file": "map-mtn-cliff.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 280,
+      "bytes": 118132
+    },
+    {
+      "file": "map-mtn-foothill.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 200,
+      "bytes": 50068
+    },
+    {
+      "file": "map-mtn-glacier.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 280,
+      "bytes": 127174
+    },
+    {
+      "file": "map-mtn-karst.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 280,
+      "bytes": 102186
+    },
+    {
+      "file": "map-mtn-plateau.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 280,
+      "bytes": 109038
     },
     {
       "file": "map-mtn-rock.webp",
@@ -2667,6 +4442,20 @@
       "height": 280,
       "exif_description": "Snow peaks Pamir 512?280: three staggered peaks, white caps, left-light right-hatch, flat base + soft drop shadow",
       "bytes": 30436
+    },
+    {
+      "file": "map-mtn-volcano.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 280,
+      "bytes": 81726
     },
     {
       "file": "map-orn-chr.webp",
@@ -2734,10 +4523,10 @@
       "content": "羊皮纸肌理 + 四角海图装饰，中央大片留白",
       "spec": "1640×840，不透明",
       "accent": "",
-      "width": 478,
-      "height": 384,
+      "width": 1024,
+      "height": 400,
       "exif_description": "wide parchment map base with corner flourishes, center blank",
-      "bytes": 69242
+      "bytes": 93512
     },
     {
       "file": "map-reef.webp",
@@ -2779,9 +4568,51 @@
       "content": "",
       "spec": "",
       "accent": "",
-      "width": 365,
-      "height": 282,
-      "bytes": 208896
+      "width": 512,
+      "height": 512,
+      "bytes": 168078
+    },
+    {
+      "file": "map-route-land.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 96,
+      "bytes": 2306
+    },
+    {
+      "file": "map-route-river.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 96,
+      "bytes": 3924
+    },
+    {
+      "file": "map-route-sea.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 96,
+      "bytes": 2150
     },
     {
       "file": "map-sea.webp",
@@ -2809,8 +4640,22 @@
       "accent": "",
       "width": 200,
       "height": 180,
-      "exif_description": "Generic shrine niche/small temple 200?180, usable for any civilization, no text",
-      "bytes": 23884
+      "bytes": 60298
+    },
+    {
+      "file": "map-vellum-tile.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 2048,
+      "height": 2048,
+      "exif_description": "2048?2048 seamless tileable parchment: fibers, foxing, faint water stains; NO map drawings, NO text, edge-to-edge tileable",
+      "bytes": 716180
     },
     {
       "file": "map-vellum.webp",
@@ -2828,6 +4673,20 @@
       "bytes": 514914
     },
     {
+      "file": "map-wind-e.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 200,
+      "bytes": 25820
+    },
+    {
       "file": "map-wind-head.webp",
       "batch": "",
       "source": "",
@@ -2839,7 +4698,49 @@
       "accent": "",
       "width": 279,
       "height": 282,
-      "bytes": 159066
+      "bytes": 159052
+    },
+    {
+      "file": "map-wind-n.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 200,
+      "bytes": 25592
+    },
+    {
+      "file": "map-wind-s.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 200,
+      "bytes": 26104
+    },
+    {
+      "file": "map-wind-w.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 200,
+      "height": 200,
+      "bytes": 25726
     },
     {
       "file": "marker-boat.webp",
@@ -2851,10 +4752,10 @@
       "content": "侧视小剪影，朝右",
       "spec": "128×128 透明",
       "accent": "",
-      "width": 226,
-      "height": 75,
+      "width": 277,
+      "height": 95,
       "exif_description": "side-view small boat facing right",
-      "bytes": 15728
+      "bytes": 13656
     },
     {
       "file": "marker-camel.webp",
@@ -2866,10 +4767,10 @@
       "content": "侧视小剪影，朝右",
       "spec": "128×128 透明",
       "accent": "",
-      "width": 210,
+      "width": 219,
       "height": 151,
       "exif_description": "side-view camel facing right, tiny",
-      "bytes": 23492
+      "bytes": 22078
     },
     {
       "file": "marker-ship.webp",
@@ -2881,10 +4782,10 @@
       "content": "侧视小剪影，朝右",
       "spec": "128×128 透明",
       "accent": "",
-      "width": 225,
-      "height": 117,
+      "width": 171,
+      "height": 145,
       "exif_description": "side-view ship facing right",
-      "bytes": 20006
+      "bytes": 17344
     },
     {
       "file": "mentor-astrodice.webp",
@@ -2898,8 +4799,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Astronomer Tebrizi: half-body facing right, astrolabe, dice pouch; bottom 15% dialog-safe",
-      "bytes": 481170
+      "bytes": 1158664
     },
     {
       "file": "mentor-bazi.webp",
@@ -2928,8 +4828,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Dream-interpreter Saliman: half-body facing right, pillow charm, crescent lamp; bottom 15% dialog-safe",
-      "bytes": 475524
+      "bytes": 1105352
     },
     {
       "file": "mentor-iching.webp",
@@ -2943,8 +4842,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Historiographer Master Yelu: half-body facing right, yarrow stalks / coins as objects, scholar robe; bottom 15% dialog-safe",
-      "bytes": 435504
+      "bytes": 1001154
     },
     {
       "file": "mentor-jiaobei.webp",
@@ -2958,8 +4856,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Tianfei temple Matron Chen: half-body facing right, moon blocks (jiaobei / crescent wood lots) as objects, no deity figure; bottom 15% dialog-safe",
-      "bytes": 419910
+      "bytes": 1032114
     },
     {
       "file": "mentor-lenormand.webp",
@@ -2988,8 +4885,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Westbound monk Mingyuan: half-body facing right, plum branch, travel staff; bottom 15% dialog-safe",
-      "bytes": 476822
+      "bytes": 1112440
     },
     {
       "file": "mentor-runes.webp",
@@ -3003,8 +4899,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Varangian guard Harald: half-body facing right, rune stick, axe token (prop); bottom 15% dialog-safe",
-      "bytes": 531012
+      "bytes": 1247500
     },
     {
       "file": "mentor-tarot.webp",
@@ -3018,8 +4913,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Venice card-maker old Matteo: half-body facing right, unfinished card, gold leaf brush; bottom 15% dialog-safe",
-      "bytes": 453902
+      "bytes": 1105214
     },
     {
       "file": "mentor-western.webp",
@@ -3033,8 +4927,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Dock astrologer Nadira: half-body facing right, star chart scroll, compass; bottom 15% dialog-safe",
-      "bytes": 300560
+      "bytes": 701956
     },
     {
       "file": "mode-journey.webp",
@@ -3049,7 +4942,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-journey.webp",
-      "bytes": 66010
+      "bytes": 65670
     },
     {
       "file": "mode-tower.webp",
@@ -3064,7 +4957,119 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for mode-tower.webp",
-      "bytes": 49758
+      "bytes": 49542
+    },
+    {
+      "file": "npc-dock-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 737810
+    },
+    {
+      "file": "npc-dock-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 784900
+    },
+    {
+      "file": "npc-dock-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 772524
+    },
+    {
+      "file": "npc-dock-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 857104
+    },
+    {
+      "file": "npc-healer-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 778154
+    },
+    {
+      "file": "npc-healer-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 782580
+    },
+    {
+      "file": "npc-healer-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 744994
+    },
+    {
+      "file": "npc-healer-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 700534
     },
     {
       "file": "npc-inn-chr.webp",
@@ -3078,8 +5083,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Christendom innkeeper: half-body facing right, keys, ledger; bottom 15% dialog-safe",
-      "bytes": 413330
+      "bytes": 1040610
     },
     {
       "file": "npc-inn-con.webp",
@@ -3093,8 +5097,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Waystation steward: half-body facing right, travel papers, lantern; bottom 15% dialog-safe",
-      "bytes": 506510
+      "bytes": 1258250
     },
     {
       "file": "npc-inn-isl.webp",
@@ -3108,8 +5111,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Caravanserai host: half-body facing right, hospitality tray; bottom 15% dialog-safe",
-      "bytes": 516972
+      "bytes": 1286628
     },
     {
       "file": "npc-inn-mazu.webp",
@@ -3123,8 +5125,511 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "exif_description": "Boat-inn landlord: half-body facing right, rope coil, harbor coat; bottom 15% dialog-safe",
-      "bytes": 467654
+      "bytes": 1202874
+    },
+    {
+      "file": "npc-job-acolyte-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 632970
+    },
+    {
+      "file": "npc-job-acolyte-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 673326
+    },
+    {
+      "file": "npc-job-acolyte-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 710650
+    },
+    {
+      "file": "npc-job-acolyte-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 1182110
+    },
+    {
+      "file": "npc-job-diviner-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 902438
+    },
+    {
+      "file": "npc-job-diviner-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 899868
+    },
+    {
+      "file": "npc-job-diviner-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 904062
+    },
+    {
+      "file": "npc-job-diviner-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 1132968
+    },
+    {
+      "file": "npc-job-guard-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 936104
+    },
+    {
+      "file": "npc-job-guard-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 936104
+    },
+    {
+      "file": "npc-job-guard-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 970114
+    },
+    {
+      "file": "npc-job-guard-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 970114
+    },
+    {
+      "file": "npc-job-guide-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 838456
+    },
+    {
+      "file": "npc-job-guide-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 838456
+    },
+    {
+      "file": "npc-job-guide-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 809752
+    },
+    {
+      "file": "npc-job-guide-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 809752
+    },
+    {
+      "file": "npc-job-healer-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 788474
+    },
+    {
+      "file": "npc-job-healer-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 786874
+    },
+    {
+      "file": "npc-job-healer-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 765946
+    },
+    {
+      "file": "npc-job-healer-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 791762
+    },
+    {
+      "file": "npc-job-porter-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 709904
+    },
+    {
+      "file": "npc-job-porter-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 709904
+    },
+    {
+      "file": "npc-job-porter-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 819962
+    },
+    {
+      "file": "npc-job-porter-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 819962
+    },
+    {
+      "file": "npc-job-sailor-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 795432
+    },
+    {
+      "file": "npc-job-sailor-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 966766
+    },
+    {
+      "file": "npc-job-sailor-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 883716
+    },
+    {
+      "file": "npc-job-sailor-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 918956
+    },
+    {
+      "file": "npc-job-scribe-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 1429574
+    },
+    {
+      "file": "npc-job-scribe-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 777960
+    },
+    {
+      "file": "npc-job-scribe-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 817354
+    },
+    {
+      "file": "npc-job-scribe-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 807802
+    },
+    {
+      "file": "npc-job-translator-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 1057566
+    },
+    {
+      "file": "npc-job-translator-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 777462
+    },
+    {
+      "file": "npc-job-translator-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 778932
+    },
+    {
+      "file": "npc-job-translator-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 778932
     },
     {
       "file": "npc-market-chr.webp",
@@ -3138,7 +5643,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 302298
+      "bytes": 973080
     },
     {
       "file": "npc-market-con.webp",
@@ -3152,7 +5657,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 388206
+      "bytes": 968040
     },
     {
       "file": "npc-market-isl.webp",
@@ -3166,7 +5671,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 450020
+      "bytes": 1144550
     },
     {
       "file": "npc-market-mazu.webp",
@@ -3180,7 +5685,119 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 519416
+      "bytes": 1286810
+    },
+    {
+      "file": "npc-official-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 795466
+    },
+    {
+      "file": "npc-official-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 722422
+    },
+    {
+      "file": "npc-official-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 850282
+    },
+    {
+      "file": "npc-official-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 575866
+    },
+    {
+      "file": "npc-scribe-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 841564
+    },
+    {
+      "file": "npc-scribe-con.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 857104
+    },
+    {
+      "file": "npc-scribe-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 792680
+    },
+    {
+      "file": "npc-scribe-mazu.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "bytes": 784900
     },
     {
       "file": "npc-tea-chr.webp",
@@ -3194,7 +5811,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 403522
+      "bytes": 1013640
     },
     {
       "file": "npc-tea-con.webp",
@@ -3208,7 +5825,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 456784
+      "bytes": 1170698
     },
     {
       "file": "npc-tea-isl.webp",
@@ -3222,7 +5839,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 504850
+      "bytes": 1255576
     },
     {
       "file": "npc-tea-mazu.webp",
@@ -3236,7 +5853,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 494162
+      "bytes": 1228298
     },
     {
       "file": "npc-temple-chr.webp",
@@ -3250,7 +5867,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 329818
+      "bytes": 1005432
     },
     {
       "file": "npc-temple-con.webp",
@@ -3264,7 +5881,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 402532
+      "bytes": 1182078
     },
     {
       "file": "npc-temple-isl.webp",
@@ -3278,7 +5895,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 409676
+      "bytes": 1287690
     },
     {
       "file": "npc-temple-mazu.webp",
@@ -3292,7 +5909,7 @@
       "accent": "",
       "width": 900,
       "height": 1300,
-      "bytes": 397722
+      "bytes": 1168320
     },
     {
       "file": "realm-astrodice.webp",
@@ -3307,7 +5924,7 @@
       "width": 380,
       "height": 299,
       "exif_description": "three dice cluster",
-      "bytes": 62470
+      "bytes": 59218
     },
     {
       "file": "realm-bazi.webp",
@@ -3320,9 +5937,9 @@
       "spec": "",
       "accent": "",
       "width": 380,
-      "height": 370,
+      "height": 366,
       "exif_description": "compact compass palace grid, ochre + gold",
-      "bytes": 74802
+      "bytes": 70086
     },
     {
       "file": "realm-dream.webp",
@@ -3334,10 +5951,10 @@
       "content": "pillow with crescent moon, gentle",
       "spec": "",
       "accent": "",
-      "width": 371,
+      "width": 369,
       "height": 299,
       "exif_description": "pillow with crescent moon, gentle",
-      "bytes": 57030
+      "bytes": 52984
     },
     {
       "file": "realm-iching.webp",
@@ -3350,9 +5967,9 @@
       "spec": "",
       "accent": "",
       "width": 379,
-      "height": 370,
+      "height": 366,
       "exif_description": "Chinese cash coin, verdigris + gold",
-      "bytes": 72438
+      "bytes": 68204
     },
     {
       "file": "realm-jiaobei.webp",
@@ -3367,7 +5984,7 @@
       "width": 379,
       "height": 299,
       "exif_description": "pair of moon blocks",
-      "bytes": 60392
+      "bytes": 56898
     },
     {
       "file": "realm-lenormand.webp",
@@ -3379,10 +5996,10 @@
       "content": "Lenormand card + clover motif, warm sepia + gold",
       "spec": "",
       "accent": "",
-      "width": 376,
-      "height": 332,
+      "width": 375,
+      "height": 327,
       "exif_description": "Lenormand card + clover motif, warm sepia + gold",
-      "bytes": 67184
+      "bytes": 62492
     },
     {
       "file": "realm-meihua.webp",
@@ -3394,10 +6011,10 @@
       "content": "plum blossom branch, tiny rubric blossom",
       "spec": "",
       "accent": "",
-      "width": 377,
+      "width": 373,
       "height": 299,
       "exif_description": "plum blossom branch, tiny rubric blossom",
-      "bytes": 60320
+      "bytes": 55526
     },
     {
       "file": "realm-runes.webp",
@@ -3409,10 +6026,10 @@
       "content": "rune drawstring pouch, grey-blue + gold",
       "spec": "",
       "accent": "",
-      "width": 377,
-      "height": 370,
+      "width": 373,
+      "height": 368,
       "exif_description": "rune drawstring pouch, grey-blue + gold",
-      "bytes": 71408
+      "bytes": 66710
     },
     {
       "file": "realm-tarot.webp",
@@ -3424,10 +6041,10 @@
       "content": "upright tarot card emblem, mauve + gold",
       "spec": "",
       "accent": "",
-      "width": 371,
-      "height": 370,
+      "width": 367,
+      "height": 366,
       "exif_description": "upright tarot card emblem, mauve + gold",
-      "bytes": 68518
+      "bytes": 64836
     },
     {
       "file": "realm-western.webp",
@@ -3442,7 +6059,7 @@
       "width": 373,
       "height": 332,
       "exif_description": "zodiac ring ticks, mist-blue + gold",
-      "bytes": 64170
+      "bytes": 60854
     },
     {
       "file": "region-chr.webp",
@@ -3454,10 +6071,10 @@
       "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
       "spec": "1024×400，不透明",
       "accent": "",
-      "width": 489,
-      "height": 389,
+      "width": 1024,
+      "height": 400,
       "exif_description": "Christian world horizon: bell towers and masts",
-      "bytes": 67054
+      "bytes": 91192
     },
     {
       "file": "region-con.webp",
@@ -3469,10 +6086,10 @@
       "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
       "spec": "1024×400，不透明",
       "accent": "",
-      "width": 489,
-      "height": 389,
+      "width": 1024,
+      "height": 400,
       "exif_description": "East Asian eaves and mountains, ochre accent",
-      "bytes": 69620
+      "bytes": 92338
     },
     {
       "file": "region-isl.webp",
@@ -3484,10 +6101,10 @@
       "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
       "spec": "1024×400，不透明",
       "accent": "",
-      "width": 489,
-      "height": 389,
+      "width": 1024,
+      "height": 400,
       "exif_description": "Islamic world: minarets and camel silhouettes",
-      "bytes": 62118
+      "bytes": 88994
     },
     {
       "file": "region-mazu.webp",
@@ -3499,10 +6116,322 @@
       "content": "各文明地平线剪影：钟楼帆影/宣礼塔驼影/飞檐山影/妈祖灯与浪",
       "spec": "1024×400，不透明",
       "accent": "",
-      "width": 490,
-      "height": 389,
+      "width": 1024,
+      "height": 400,
       "exif_description": "sea lamps, waves, boats; no goddess figure",
-      "bytes": 71950
+      "bytes": 94688
+    },
+    {
+      "file": "retainer-guard-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom caravan guard, half-body facing right, mail coif + spear",
+      "bytes": 387618
+    },
+    {
+      "file": "retainer-guard-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic guard, half-body facing right, round shield + curved blade",
+      "bytes": 376488
+    },
+    {
+      "file": "retainer-guide-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom caravan guide, half-body facing right, staff + travel cloak",
+      "bytes": 434792
+    },
+    {
+      "file": "retainer-guide-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic desert guide, half-body facing right, turban + camel goad",
+      "bytes": 347936
+    },
+    {
+      "file": "retainer-heal-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom physician attendant, half-body facing right, herb pouch + mortar",
+      "bytes": 288774
+    },
+    {
+      "file": "retainer-heal-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic physician, half-body facing right, medicine jar + linen roll",
+      "bytes": 387346
+    },
+    {
+      "file": "retainer-lang-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom interpreter, half-body facing right, phrase scroll + finger gesture (blank scroll)",
+      "bytes": 273112
+    },
+    {
+      "file": "retainer-lang-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic dragoman, half-body facing right, ledger tablet + pointing hand (no script)",
+      "bytes": 285674
+    },
+    {
+      "file": "retainer-monk-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Franciscan acolyte, half-body facing right, candle + rosary beads (no cross text)",
+      "bytes": 295652
+    },
+    {
+      "file": "retainer-monk-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Sufi novice attendant, half-body facing right, incense burner + prayer beads",
+      "bytes": 298612
+    },
+    {
+      "file": "retainer-porter-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom porter, half-body facing right, shoulder yoke + bales",
+      "bytes": 473092
+    },
+    {
+      "file": "retainer-porter-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic porter, half-body facing right, head-load basket + rope",
+      "bytes": 482288
+    },
+    {
+      "file": "retainer-sail-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Mediterranean sailor, half-body facing right, rope coil + lead line",
+      "bytes": 420138
+    },
+    {
+      "file": "retainer-sail-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Indian Ocean navigator, half-body facing right, astrolabe + chart board (no letters)",
+      "bytes": 239174
+    },
+    {
+      "file": "retainer-scribe-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom scribe, half-body facing right, quill + blank parchment",
+      "bytes": 291280
+    },
+    {
+      "file": "retainer-scribe-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic secretary, half-body facing right, reed pen + blank folio",
+      "bytes": 328688
+    },
+    {
+      "file": "retainer-seer-chr.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Christendom star-reader, half-body facing right, brass astrolabe + star chart (no letters)",
+      "bytes": 356206
+    },
+    {
+      "file": "retainer-seer-isl.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 900,
+      "height": 1300,
+      "exif_description": "Islamic astrologer, half-body facing right, armillary sphere + sand board (no script)",
+      "bytes": 395794
+    },
+    {
+      "file": "ritual-lot-draw.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 768,
+      "height": 768,
+      "bytes": 69056
+    },
+    {
+      "file": "ritual-lot-stick.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 768,
+      "height": 768,
+      "bytes": 226654
+    },
+    {
+      "file": "ritual-lot-tube.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 768,
+      "height": 768,
+      "bytes": 173022
     },
     {
       "file": "scene-acre-wall.webp",
@@ -3518,6 +6447,423 @@
       "height": 1080,
       "exif_description": "Acre night walls: crusader battlements, torches, distant Mediterranean, stars; empty lower-left 1/3",
       "bytes": 258362
+    },
+    {
+      "file": "scene-badashan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Balkh/Balc half-ruined grandeur: broken marble palace columns and fallen arches mid-right, dust haze, once-great city; empty lower-left third",
+      "bytes": 551920
+    },
+    {
+      "file": "scene-balc-ruins.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Balkh/Balc half-ruined grandeur: broken marble palace columns and fallen arches mid-right, dust haze, once-great city; empty lower-left third",
+      "bytes": 551920
+    },
+    {
+      "file": "scene-baldacum-river.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Baghdad/Baldacum on the Tigris: wide river mid-right, caliphate treasury walls and gold-brocade market stalls upper/mid-right, warm dusk; empty lower-left third",
+      "bytes": 582266
+    },
+    {
+      "file": "scene-band-central-camp.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "central_asia reusable plate: desert night camp, tents mid-right, dunes; empty lower-left third",
+      "bytes": 428354
+    },
+    {
+      "file": "scene-band-central-caravanserai.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "central_asia reusable plate: courtyard caravanserai gates mid-right; empty lower-left third",
+      "bytes": 452950
+    },
+    {
+      "file": "scene-band-central-oasis.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "central_asia reusable plate: oasis town, poplars, irrigation channels mid-right; empty lower-left third",
+      "bytes": 228264
+    },
+    {
+      "file": "scene-band-central-yam.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "central_asia reusable plate: mountain-pass yam station, stone posthouse mid-right; empty lower-left third",
+      "bytes": 230376
+    },
+    {
+      "file": "scene-band-china-bridge.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2422752
+    },
+    {
+      "file": "scene-band-china-canal.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "china reusable plate: canal city, arched bridge mid-right, eaves; empty lower-left third",
+      "bytes": 605454
+    },
+    {
+      "file": "scene-band-china-temple.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2472454
+    },
+    {
+      "file": "scene-band-china-yamen.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "china reusable plate: yamen / government court hall mid-right; empty lower-left third",
+      "bytes": 573766
+    },
+    {
+      "file": "scene-band-europe-stoneport.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "europe reusable plate: stone harbor quay, medieval towers mid-right (prologue); empty lower-left third",
+      "bytes": 595718
+    },
+    {
+      "file": "scene-band-india-bazaar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "india reusable plate: spice bazaar street mid-right, awnings; empty lower-left third",
+      "bytes": 613118
+    },
+    {
+      "file": "scene-band-india-port.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2429814
+    },
+    {
+      "file": "scene-band-india-temple.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "india reusable plate: temple gopuram silhouette mid-right (no idol faces); empty lower-left third",
+      "bytes": 461274
+    },
+    {
+      "file": "scene-band-maritime-shipyard.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "maritime_asia reusable plate: wooden shipyard cradles mid-right; empty lower-left third",
+      "bytes": 547426
+    },
+    {
+      "file": "scene-band-maritime-spice.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "maritime_asia reusable plate: spice harbor, junks and warehouses mid-right; empty lower-left third",
+      "bytes": 491636
+    },
+    {
+      "file": "scene-band-maritime-warehouse.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "maritime_asia reusable plate: warehouse quay with crates mid-right (keep crates out of lower-left); empty lower-left third",
+      "bytes": 473194
+    },
+    {
+      "file": "scene-band-steppe-yamroad.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "steppe reusable plate: long yam road across grassland, distant post mid-right; empty lower-left third",
+      "bytes": 605562
+    },
+    {
+      "file": "scene-band-steppe-yurt.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "steppe reusable plate: felt yurt camp on grassland mid-right, wide sky; empty lower-left third",
+      "bytes": 485284
+    },
+    {
+      "file": "scene-band-west-bazaar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "west_asia reusable plate: covered bazaar vaults mid-right, soft shafts of light; empty lower-left third",
+      "bytes": 239670
+    },
+    {
+      "file": "scene-band-west-caravan.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "west_asia reusable plate: caravan city silhouette, mud walls, distant minarets; empty lower-left third; generic (no unique landmark)",
+      "bytes": 642870
+    },
+    {
+      "file": "scene-band-west-mosque.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "west_asia reusable plate: quiet mosque courtyard, arcade shade, pool; empty lower-left third",
+      "bytes": 560658
+    },
+    {
+      "file": "scene-band-west-riverport.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "west_asia reusable plate: river port quays, barges mid-right; empty lower-left third",
+      "bytes": 565142
+    },
+    {
+      "file": "scene-cascar-crossroads.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Kashgar/Cascar oasis fork: two caravan roads splitting mid-right, mud-brick town, camels departing different ways; empty lower-left third",
+      "bytes": 567720
+    },
+    {
+      "file": "scene-cotan-jaderiver.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Khotan/Cotan: jade river glimmer, cotton fields and vineyards mid-right, low mud walls; empty lower-left third",
+      "bytes": 579326
+    },
+    {
+      "file": "scene-desk-opening.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "1920?1080 desk prologue: several travel books stacked on a spread parchment mappa mundi, brass astrolabe, candlelight, empty lower-left ~1/3 for UI; no readable text",
+      "bytes": 432790
+    },
+    {
+      "file": "scene-dunhuang.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "central_asia reusable plate: oasis town, poplars, irrigation channels mid-right; empty lower-left third",
+      "bytes": 228264
     },
     {
       "file": "scene-hangzhou-lake.webp",
@@ -3565,6 +6911,21 @@
       "bytes": 305628
     },
     {
+      "file": "scene-kashgar.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Kashgar/Cascar oasis fork: two caravan roads splitting mid-right, mud-brick town, camels departing different ways; empty lower-left third",
+      "bytes": 567720
+    },
+    {
       "file": "scene-kerman-dunes.webp",
       "batch": "",
       "source": "",
@@ -3593,6 +6954,36 @@
       "height": 1080,
       "exif_description": "Khanbaliq night banquet hall: giant pillars, candle sea, screens mid-right; empty lower-left third",
       "bytes": 263374
+    },
+    {
+      "file": "scene-kinsay.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "West Lake painted boat: stone bridge mid-right, lanterns, distant hills; empty lower-left third",
+      "bytes": 310834
+    },
+    {
+      "file": "scene-lop-desertedge.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Lop desert-edge last town: camel train resupply mid-right, dunes beyond, sparse mud houses; empty lower-left third",
+      "bytes": 555336
     },
     {
       "file": "scene-pamir-pass.webp",
@@ -3636,8 +7027,8 @@
       "accent": "",
       "width": 1920,
       "height": 1080,
-      "exif_description": "Christendom travel road: European hills, abbey silhouette far-right; empty lower-left third",
-      "bytes": 620098
+      "exif_description": "Latin Christian world plate: Romanesque or early-Gothic stone church side facade (pointed/round arches, NOT onion dome), market square with wooden stalls and cloth awnings plus stone well or fountain, stone caravan inn or city-gate arch; optional distant crenellated walls and a small Latin-cross banner (no modern heraldry); warm brown low-saturation dusk; empty lower-left third. MUST be European Latin West.",
+      "bytes": 553914
     },
     {
       "file": "scene-region-con.webp",
@@ -3666,8 +7057,7 @@
       "accent": "",
       "width": 1920,
       "height": 1080,
-      "exif_description": "Crescent travel road: trade path, camels mid-right, minaret far; empty lower-left third",
-      "bytes": 342884
+      "bytes": 2656566
     },
     {
       "file": "scene-region-mazu.webp",
@@ -3683,6 +7073,21 @@
       "height": 1080,
       "exif_description": "Mazu sea travel: waves and sails mid-right, seabirds; empty lower-left third",
       "bytes": 296638
+    },
+    {
+      "file": "scene-samarcanda-orchard.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1920,
+      "height": 1080,
+      "exif_description": "Samarkand orchards: blue-glazed brick walls and fruit trees mid-right, distant stone-column church legend motif (no cross text), soft evening; empty lower-left third",
+      "bytes": 584310
     },
     {
       "file": "scene-shangdu-palace.webp",
@@ -3745,6 +7150,964 @@
       "bytes": 266480
     },
     {
+      "file": "seal-wax.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 512,
+      "height": 768,
+      "exif_description": "standalone wax seal stamp blob, rubric red #B3402E",
+      "bytes": 114806
+    },
+    {
+      "file": "site-acre-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Acre chapel/shrine: crusader chapel, coastal fortress",
+      "bytes": 190432
+    },
+    {
+      "file": "site-acre-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Acre market: spice sacks by port wall",
+      "bytes": 217926
+    },
+    {
+      "file": "site-acre-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Acre inn: pilgrims' hospice stone walls",
+      "bytes": 218270
+    },
+    {
+      "file": "site-balc-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Balc ruined temple column, dust haze",
+      "bytes": 198936
+    },
+    {
+      "file": "site-balc-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Balc open-air lapis market",
+      "bytes": 104524
+    },
+    {
+      "file": "site-balc-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Balc ruined caravanserai arch",
+      "bytes": 102884
+    },
+    {
+      "file": "site-baldacum-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Baldacum mosque courtyard: Tigris-side arch, palms",
+      "bytes": 171720
+    },
+    {
+      "file": "site-baldacum-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Baldacum market: gold-brocade stall",
+      "bytes": 205574
+    },
+    {
+      "file": "site-baldacum-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Baldacum caravanserai: palm + courtyard arch",
+      "bytes": 182296
+    },
+    {
+      "file": "site-basora-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Basra date-palm canal dock: mud piers, palm fronds, small boats",
+      "bytes": 197284
+    },
+    {
+      "file": "site-basora-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Basra caravanserai inn with Bedouin escort silhouettes in courtyard",
+      "bytes": 113284
+    },
+    {
+      "file": "site-basora-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Basra riverside market: dates, cloth, grain sacks on stalls",
+      "bytes": 109254
+    },
+    {
+      "file": "site-cabul-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Kabul pass stone road: narrow rocky path, cold wind, broken paving",
+      "bytes": 208340
+    },
+    {
+      "file": "site-cabul-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Kabul ruined bazaar: collapsed stalls, dust, sparse traders",
+      "bytes": 172652
+    },
+    {
+      "file": "site-cabul-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Kabul waystation looking to snow peaks: austere inn, highland vista",
+      "bytes": 177826
+    },
+    {
+      "file": "site-cambaluc-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cambaluc pagoda/drum-tower shrine (no deity figure)",
+      "bytes": 189290
+    },
+    {
+      "file": "site-cambaluc-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cambaluc paper-money market stall + tower",
+      "bytes": 188122
+    },
+    {
+      "file": "site-cambaluc-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cambaluc yam post-station, drum-tower",
+      "bytes": 176702
+    },
+    {
+      "file": "site-cascar-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cascar crossroads shrine, twin roads",
+      "bytes": 158972
+    },
+    {
+      "file": "site-cascar-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cascar split-route caravan stall",
+      "bytes": 104530
+    },
+    {
+      "file": "site-cascar-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cascar crossroads caravanserai",
+      "bytes": 102886
+    },
+    {
+      "file": "site-cotan-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cotan river temple, willow + stream",
+      "bytes": 189274
+    },
+    {
+      "file": "site-cotan-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cotan jade + cotton market by river",
+      "bytes": 188116
+    },
+    {
+      "file": "site-cotan-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Cotan riverside waystation, bridge hint",
+      "bytes": 176704
+    },
+    {
+      "file": "site-delli-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Delhi court ledger room / queen gate: palace threshold, gift chests, attendants silhouettes",
+      "bytes": 113674
+    },
+    {
+      "file": "site-delli-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "bytes": 603592
+    },
+    {
+      "file": "site-delli-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "bytes": 597496
+    },
+    {
+      "file": "site-hormos-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Hormos coastal shrine, dhow silhouette",
+      "bytes": 203948
+    },
+    {
+      "file": "site-hormos-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Hormos pearl/fish market by dock",
+      "bytes": 195258
+    },
+    {
+      "file": "site-hormos-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Hormos port rest-house, palm + dhow",
+      "bytes": 185532
+    },
+    {
+      "file": "site-java-major-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "site-java-major-1.webp",
+      "bytes": 209642
+    },
+    {
+      "file": "site-java-major-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "site-java-major-2.webp",
+      "bytes": 202786
+    },
+    {
+      "file": "site-java-major-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "site-java-major-3.webp",
+      "bytes": 191788
+    },
+    {
+      "file": "site-lop-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Lop desert-edge mud shrine, dune horizon",
+      "bytes": 189280
+    },
+    {
+      "file": "site-lop-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Lop camel-goods market, sand drift",
+      "bytes": 188116
+    },
+    {
+      "file": "site-lop-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Lop desert inn, well + dune",
+      "bytes": 176692
+    },
+    {
+      "file": "site-maldive-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Maldives lagoon dock: coral pier, shallow turquoise water, small sails",
+      "bytes": 219274
+    },
+    {
+      "file": "site-maldive-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Maldives coral-stone mosque exterior (no calligraphy, no deity)",
+      "bytes": 226094
+    },
+    {
+      "file": "site-maldive-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Maldives coconut-grove village market: palm shade, mat stalls",
+      "bytes": 217522
+    },
+    {
+      "file": "site-samarcanda-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Samarcanda blue-glazed dome shrine, orchard",
+      "bytes": 158978
+    },
+    {
+      "file": "site-samarcanda-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Samarcanda silk + fruit market",
+      "bytes": 104528
+    },
+    {
+      "file": "site-samarcanda-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Samarcanda orchard caravanserai",
+      "bytes": 102886
+    },
+    {
+      "file": "site-tauris-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Tauris shrine: blue dome courtyard (no calligraphy)",
+      "bytes": 218282
+    },
+    {
+      "file": "site-tauris-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Tauris bazaar: carpet rolls under arch",
+      "bytes": 187082
+    },
+    {
+      "file": "site-tauris-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Tauris caravanserai: courtyard + camel",
+      "bytes": 187534
+    },
+    {
+      "file": "site-venice-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Venice temple/shrine: campanile courtyard, lagoon hint",
+      "bytes": 174554
+    },
+    {
+      "file": "site-venice-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Venice market: Rialto-style arcade, cloth bolts",
+      "bytes": 183820
+    },
+    {
+      "file": "site-venice-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Venice inn: canal-side inn doorway, gondola",
+      "bytes": 181438
+    },
+    {
+      "file": "site-zancibar-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zanzibar coral-stone merchant house courtyard",
+      "bytes": 185984
+    },
+    {
+      "file": "site-zancibar-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zanzibar ivory/gold goods storehouse (abstract cargo crates, no gore)",
+      "bytes": 194740
+    },
+    {
+      "file": "site-zancibar-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zanzibar mosque and market square (architecture + stalls; no calligraphy)",
+      "bytes": 211908
+    },
+    {
+      "file": "site-zayton-1.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zayton harbor temple, junk mast silhouette",
+      "bytes": 189282
+    },
+    {
+      "file": "site-zayton-2.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zayton spice/pepper market, junk dock",
+      "bytes": 188118
+    },
+    {
+      "file": "site-zayton-3.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 960,
+      "height": 540,
+      "exif_description": "Zayton harbor inn, junk + dock",
+      "bytes": 176696
+    },
+    {
+      "file": "sticker-battuta.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: pilgrimage arc with palm and dome silhouette (no deity)",
+      "bytes": 26296
+    },
+    {
+      "file": "sticker-diviner.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: three divination coins in triangle",
+      "bytes": 26276
+    },
+    {
+      "file": "sticker-map.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: torn unfolded map fragment with compass rose hint",
+      "bytes": 24966
+    },
+    {
+      "file": "sticker-market.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: market scale with bolt of cloth",
+      "bytes": 24024
+    },
+    {
+      "file": "sticker-no-return.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: broken bridge at sunset silhouette",
+      "bytes": 22618
+    },
+    {
+      "file": "sticker-polo.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: Khanbaliq palace window lattice silhouette",
+      "bytes": 22626
+    },
+    {
+      "file": "sticker-silk.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: silk roll with tassel",
+      "bytes": 23840
+    },
+    {
+      "file": "sticker-stop.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: closed pen on folded booklet, rubric wax edge",
+      "bytes": 23864
+    },
+    {
+      "file": "sticker-translate.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "exif_description": "wax-seal sticker: two blank manuscript pages side by side (no glyphs)",
+      "bytes": 24044
+    },
+    {
       "file": "sym-algiz.webp",
       "batch": "8 · Curses, companions, runes (10)",
       "source": "ART_PROMPTS_UI.md",
@@ -3754,10 +8117,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 320,
-      "height": 196,
+      "width": 259,
+      "height": 195,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-algiz.webp",
-      "bytes": 31488
+      "bytes": 25906
     },
     {
       "file": "sym-death-full.webp",
@@ -3772,7 +8135,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Death/Rebirth: white butterfly from open cocoon or bone-door, no gore",
-      "bytes": 110266
+      "bytes": 109416
     },
     {
       "file": "sym-death.webp",
@@ -3787,7 +8150,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-death.webp",
-      "bytes": 46964
+      "bytes": 46428
     },
     {
       "file": "sym-fehu.webp",
@@ -3799,10 +8162,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 314,
-      "height": 200,
+      "width": 299,
+      "height": 199,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-fehu.webp",
-      "bytes": 30548
+      "bytes": 24290
     },
     {
       "file": "sym-fool-full.webp",
@@ -3817,7 +8180,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Fool: bundle on staff, cliff-edge step, small dog silhouette",
-      "bytes": 104320
+      "bytes": 103906
     },
     {
       "file": "sym-fool.webp",
@@ -3832,7 +8195,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-fool.webp",
-      "bytes": 47884
+      "bytes": 47694
     },
     {
       "file": "sym-ge-full.webp",
@@ -3847,7 +8210,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Ge (Revolution): animal silhouette shedding a skin outline, transformation not gore",
-      "bytes": 90644
+      "bytes": 90116
     },
     {
       "file": "sym-ge.webp",
@@ -3862,7 +8225,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-ge.webp",
-      "bytes": 33362
+      "bytes": 32428
     },
     {
       "file": "sym-gen-full.webp",
@@ -3877,7 +8240,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Gen (Stillness): single monumental still mountain",
-      "bytes": 93250
+      "bytes": 92714
     },
     {
       "file": "sym-gen.webp",
@@ -3892,7 +8255,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-gen.webp",
-      "bytes": 41050
+      "bytes": 40834
     },
     {
       "file": "sym-hermit-full.webp",
@@ -3907,7 +8270,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Hermit: lantern whose wick is a six-pointed star, no face",
-      "bytes": 104676
+      "bytes": 103950
     },
     {
       "file": "sym-hermit.webp",
@@ -3922,7 +8285,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-hermit.webp",
-      "bytes": 56630
+      "bytes": 54974
     },
     {
       "file": "sym-isa.webp",
@@ -3934,10 +8297,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 242,
-      "height": 198,
+      "width": 299,
+      "height": 195,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-isa.webp",
-      "bytes": 21292
+      "bytes": 25498
     },
     {
       "file": "sym-jin-full.webp",
@@ -3952,7 +8315,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Jin (Progress): sun half-disk rising above earth line",
-      "bytes": 89046
+      "bytes": 88522
     },
     {
       "file": "sym-jin.webp",
@@ -3967,7 +8330,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-jin.webp",
-      "bytes": 62442
+      "bytes": 61916
     },
     {
       "file": "sym-kan-full.webp",
@@ -3982,7 +8345,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kan (Abyss): deep double-abyss whirlpool as flat spiral",
-      "bytes": 94198
+      "bytes": 93496
     },
     {
       "file": "sym-kan.webp",
@@ -3997,7 +8360,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kan.webp",
-      "bytes": 53832
+      "bytes": 53284
     },
     {
       "file": "sym-kun-full.webp",
@@ -4012,7 +8375,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Kun (Receptive): broad earth vessel holding a simple offering form",
-      "bytes": 90688
+      "bytes": 90212
     },
     {
       "file": "sym-kun.webp",
@@ -4027,7 +8390,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-kun.webp",
-      "bytes": 25848
+      "bytes": 25532
     },
     {
       "file": "sym-li-full.webp",
@@ -4042,7 +8405,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Li (Radiance): twin flames as abstract bright clarity, not a realistic eye",
-      "bytes": 93028
+      "bytes": 92664
     },
     {
       "file": "sym-li.webp",
@@ -4057,7 +8420,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-li.webp",
-      "bytes": 38004
+      "bytes": 37504
     },
     {
       "file": "sym-moon-full.webp",
@@ -4072,7 +8435,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Moon: eclipse crescent, one wave line, one dew drop",
-      "bytes": 94882
+      "bytes": 93934
     },
     {
       "file": "sym-moon.webp",
@@ -4087,7 +8450,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-moon.webp",
-      "bytes": 34478
+      "bytes": 34284
     },
     {
       "file": "sym-perthro.webp",
@@ -4099,10 +8462,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 300,
-      "height": 201,
+      "width": 301,
+      "height": 203,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-perthro.webp",
-      "bytes": 26646
+      "bytes": 25048
     },
     {
       "file": "sym-qian-full.webp",
@@ -4117,7 +8480,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian (Creative): six solid yang lines forming a celestial gate / sky portal",
-      "bytes": 87050
+      "bytes": 86590
     },
     {
       "file": "sym-qian.webp",
@@ -4132,7 +8495,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian.webp",
-      "bytes": 21516
+      "bytes": 20904
     },
     {
       "file": "sym-qian15-full.webp",
@@ -4147,7 +8510,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Qian/Humility (hexagram 15): mountain silhouette nested low inside earth",
-      "bytes": 88444
+      "bytes": 88064
     },
     {
       "file": "sym-qian15.webp",
@@ -4162,7 +8525,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-qian15.webp",
-      "bytes": 60324
+      "bytes": 59780
     },
     {
       "file": "sym-raidho.webp",
@@ -4174,10 +8537,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 332,
-      "height": 199,
+      "width": 271,
+      "height": 201,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-raidho.webp",
-      "bytes": 29260
+      "bytes": 25252
     },
     {
       "file": "sym-sowilo.webp",
@@ -4189,10 +8552,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 270,
-      "height": 200,
+      "width": 271,
+      "height": 195,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-sowilo.webp",
-      "bytes": 27024
+      "bytes": 25718
     },
     {
       "file": "sym-star-full.webp",
@@ -4207,7 +8570,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "The Star: eight-pointed star pouring two streams into a pool",
-      "bytes": 104366
+      "bytes": 103012
     },
     {
       "file": "sym-star.webp",
@@ -4222,7 +8585,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-star.webp",
-      "bytes": 55066
+      "bytes": 54670
     },
     {
       "file": "sym-strength-full.webp",
@@ -4237,7 +8600,7 @@
       "width": 512,
       "height": 768,
       "exif_description": "Strength: lion head, gentle hand on muzzle, infinity mark above",
-      "bytes": 108590
+      "bytes": 107778
     },
     {
       "file": "sym-strength.webp",
@@ -4252,7 +8615,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-strength.webp",
-      "bytes": 72690
+      "bytes": 71930
     },
     {
       "file": "sym-sun-full.webp",
@@ -4266,7 +8629,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "bytes": 109910
+      "exif_description": "The Sun: radiant gold sun-wheel, compass-face center, no realistic face",
+      "bytes": 108416
     },
     {
       "file": "sym-sun.webp",
@@ -4280,7 +8644,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "bytes": 99404
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-sun.webp",
+      "bytes": 57556
     },
     {
       "file": "sym-tarot-frame-master.webp",
@@ -4294,7 +8659,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "bytes": 89662
+      "exif_description": "blank template card: identical border and nameplate, empty center compass watermark only (style master)",
+      "bytes": 88134
     },
     {
       "file": "sym-tarot-tower-full.webp",
@@ -4308,7 +8674,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "bytes": 108482
+      "exif_description": "The Tower: spire struck by lightning, crown falling",
+      "bytes": 107306
     },
     {
       "file": "sym-tarot-tower.webp",
@@ -4322,7 +8689,8 @@
       "accent": "塔罗茜紫微量",
       "width": 512,
       "height": 512,
-      "bytes": 83334
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-tarot-tower.webp",
+      "bytes": 49850
     },
     {
       "file": "sym-uruz.webp",
@@ -4334,9 +8702,10 @@
       "content": "石刻符文为主体 + 一个意象（牛角/麋角/冰柱/日轮/车轮/骰盅/野牛）",
       "spec": "同上，灰蓝金配色",
       "accent": "",
-      "width": 314,
-      "height": 205,
-      "bytes": 113992
+      "width": 301,
+      "height": 207,
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-uruz.webp",
+      "bytes": 25216
     },
     {
       "file": "sym-wheel-full.webp",
@@ -4350,7 +8719,8 @@
       "accent": "",
       "width": 512,
       "height": 768,
-      "bytes": 104224
+      "exif_description": "Wheel of Fortune: wheel with TARO/ROTA letter ring, sword pointer",
+      "bytes": 102096
     },
     {
       "file": "sym-wheel.webp",
@@ -4365,7 +8735,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for sym-wheel.webp",
-      "bytes": 46152
+      "bytes": 45696
     },
     {
       "file": "tr-barge.webp",
@@ -4407,7 +8777,7 @@
       "accent": "",
       "width": 508,
       "height": 267,
-      "bytes": 273596
+      "bytes": 273066
     },
     {
       "file": "tr-foot.webp",
@@ -4421,7 +8791,7 @@
       "accent": "",
       "width": 300,
       "height": 239,
-      "bytes": 138684
+      "bytes": 138834
     },
     {
       "file": "tr-galley.webp",
@@ -4435,7 +8805,7 @@
       "accent": "",
       "width": 476,
       "height": 267,
-      "bytes": 265850
+      "bytes": 265860
     },
     {
       "file": "tr-griffin.webp",
@@ -4449,7 +8819,7 @@
       "accent": "",
       "width": 494,
       "height": 240,
-      "bytes": 252588
+      "bytes": 252278
     },
     {
       "file": "tr-junk.webp",
@@ -4463,7 +8833,7 @@
       "accent": "",
       "width": 494,
       "height": 267,
-      "bytes": 274270
+      "bytes": 274488
     },
     {
       "file": "tr-mule.webp",
@@ -4519,7 +8889,7 @@
       "accent": "",
       "width": 320,
       "height": 239,
-      "bytes": 158144
+      "bytes": 158492
     },
     {
       "file": "tr-yam.webp",
@@ -4536,6 +8906,20 @@
       "bytes": 137410
     },
     {
+      "file": "ui-bag-panel.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 45520
+    },
+    {
       "file": "ui-bg-badge.webp",
       "batch": "2 · Background tiles & surfaces",
       "source": "ART_PROMPTS_UI.md",
@@ -4548,7 +8932,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "small pill/badge background, gold outline",
-      "bytes": 20450
+      "bytes": 19910
     },
     {
       "file": "ui-bg-bookmark.webp",
@@ -4560,9 +8944,10 @@
       "content": "bookmark ribbon corner",
       "spec": "",
       "accent": "",
-      "width": 295,
-      "height": 384,
-      "bytes": 30124
+      "width": 1024,
+      "height": 400,
+      "exif_description": "bookmark ribbon corner",
+      "bytes": 62154
     },
     {
       "file": "ui-bg-card.webp",
@@ -4577,7 +8962,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "slightly lighter card surface, subtle double-rule hint in corners",
-      "bytes": 47798
+      "bytes": 46722
     },
     {
       "file": "ui-bg-divider.webp",
@@ -4592,7 +8977,7 @@
       "width": 512,
       "height": 32,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-divider.webp",
-      "bytes": 986
+      "bytes": 956
     },
     {
       "file": "ui-bg-input.webp",
@@ -4607,7 +8992,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "input field inset background, soft inner shadow",
-      "bytes": 24246
+      "bytes": 23348
     },
     {
       "file": "ui-bg-modal-scrim.webp",
@@ -4622,7 +9007,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "soft dark vignette scrim, center lighter for modal",
-      "bytes": 23214
+      "bytes": 22742
     },
     {
       "file": "ui-bg-panel.webp",
@@ -4637,7 +9022,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-panel.webp",
-      "bytes": 46534
+      "bytes": 43920
     },
     {
       "file": "ui-bg-realm-tile.webp",
@@ -4652,7 +9037,7 @@
       "width": 512,
       "height": 512,
       "exif_description": "square realm picker tile background, faint tradition-color wash",
-      "bytes": 51748
+      "bytes": 48454
     },
     {
       "file": "ui-bg-ribbon.webp",
@@ -4664,9 +9049,10 @@
       "content": "diagonal silk ribbon banner",
       "spec": "",
       "accent": "",
-      "width": 294,
-      "height": 384,
-      "bytes": 27098
+      "width": 1024,
+      "height": 400,
+      "exif_description": "diagonal silk ribbon banner",
+      "bytes": 65472
     },
     {
       "file": "ui-bg-scroll.webp",
@@ -4678,9 +9064,10 @@
       "content": "vertical scroll paper strip",
       "spec": "",
       "accent": "",
-      "width": 200,
-      "height": 384,
-      "bytes": 19670
+      "width": 1024,
+      "height": 400,
+      "exif_description": "vertical scroll paper strip",
+      "bytes": 63052
     },
     {
       "file": "ui-bg-stamp.webp",
@@ -4692,9 +9079,10 @@
       "content": "square wax stamp texture",
       "spec": "",
       "accent": "",
-      "width": 294,
-      "height": 384,
-      "bytes": 31464
+      "width": 1024,
+      "height": 400,
+      "exif_description": "square wax stamp texture",
+      "bytes": 67862
     },
     {
       "file": "ui-bg-tabbar.webp",
@@ -4709,7 +9097,7 @@
       "width": 512,
       "height": 128,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-tabbar.webp",
-      "bytes": 4488
+      "bytes": 4306
     },
     {
       "file": "ui-bg-xpbar-fill.webp",
@@ -4724,7 +9112,7 @@
       "width": 512,
       "height": 64,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-xpbar-fill.webp",
-      "bytes": 3320
+      "bytes": 3226
     },
     {
       "file": "ui-bg-xpbar-track.webp",
@@ -4739,7 +9127,7 @@
       "width": 512,
       "height": 64,
       "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-bg-xpbar-track.webp",
-      "bytes": 2942
+      "bytes": 2818
     },
     {
       "file": "ui-btn-cinnabar.webp",
@@ -4753,7 +9141,8 @@
       "accent": "",
       "width": 479,
       "height": 115,
-      "bytes": 9918
+      "exif_description": "rubric red accent button for rare confirm actions",
+      "bytes": 9410
     },
     {
       "file": "ui-btn-disabled.webp",
@@ -4767,7 +9156,8 @@
       "accent": "",
       "width": 440,
       "height": 107,
-      "bytes": 7222
+      "exif_description": "desaturated grey-green disabled state",
+      "bytes": 7170
     },
     {
       "file": "ui-btn-ghost-hover.webp",
@@ -4781,7 +9171,8 @@
       "accent": "",
       "width": 435,
       "height": 109,
-      "bytes": 6160
+      "exif_description": "ghost with brighter gold rim glow",
+      "bytes": 6050
     },
     {
       "file": "ui-btn-ghost.webp",
@@ -4795,7 +9186,8 @@
       "accent": "",
       "width": 292,
       "height": 57,
-      "bytes": 2580
+      "exif_description": "dark lacquer ghost button, thin gold border",
+      "bytes": 2544
     },
     {
       "file": "ui-btn-primary-pressed.webp",
@@ -4809,7 +9201,8 @@
       "accent": "",
       "width": 450,
       "height": 117,
-      "bytes": 9864
+      "exif_description": "same shape, darker, pressed-in shadow",
+      "bytes": 9670
     },
     {
       "file": "ui-btn-primary.webp",
@@ -4823,7 +9216,8 @@
       "accent": "",
       "width": 483,
       "height": 107,
-      "bytes": 11328
+      "exif_description": "default gold-foil primary button fill, warm gradient top-lit",
+      "bytes": 11076
     },
     {
       "file": "ui-btn-round.webp",
@@ -4837,7 +9231,8 @@
       "accent": "",
       "width": 403,
       "height": 107,
-      "bytes": 19392
+      "exif_description": "circular icon button, gold ring on dark fill",
+      "bytes": 5570
     },
     {
       "file": "ui-btn-sm.webp",
@@ -4851,7 +9246,8 @@
       "accent": "",
       "width": 399,
       "height": 99,
-      "bytes": 7006
+      "exif_description": "smaller pill proportion, compact foil button",
+      "bytes": 6790
     },
     {
       "file": "ui-btn-tab-active.webp",
@@ -4865,7 +9261,8 @@
       "accent": "",
       "width": 414,
       "height": 107,
-      "bytes": 6554
+      "exif_description": "short wide pill, bright gold active tab indicator strip",
+      "bytes": 6466
     },
     {
       "file": "ui-btn-tab-idle.webp",
@@ -4879,7 +9276,37 @@
       "accent": "",
       "width": 406,
       "height": 97,
-      "bytes": 4476
+      "exif_description": "muted idle tab chip on dark glass",
+      "bytes": 4288
+    },
+    {
+      "file": "ui-cargo-tag.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 35128
+    },
+    {
+      "file": "ui-dialog-nine.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1024,
+      "height": 1024,
+      "exif_description": "1024?1024 nine-slice dialog panel sheet: show 9 patches in 3?3 (corners, edges, center fill) of one parchment dialog frame style; thin gutters; no text",
+      "bytes": 172630
     },
     {
       "file": "ui-fx-fog.webp",
@@ -4893,7 +9320,8 @@
       "accent": "",
       "width": 232,
       "height": 243,
-      "bytes": 78030
+      "exif_description": "light fog wisp, transparent",
+      "bytes": 6644
     },
     {
       "file": "ui-fx-frame.webp",
@@ -4907,7 +9335,8 @@
       "accent": "",
       "width": 220,
       "height": 254,
-      "bytes": 84608
+      "exif_description": "rectangular double-gold frame with empty center, transparent",
+      "bytes": 11180
     },
     {
       "file": "ui-fx-glow-azure.webp",
@@ -4921,7 +9350,8 @@
       "accent": "",
       "width": 250,
       "height": 243,
-      "bytes": 82252
+      "exif_description": "cool mist-blue glow, transparent",
+      "bytes": 6940
     },
     {
       "file": "ui-fx-glow-gold.webp",
@@ -4935,7 +9365,8 @@
       "accent": "",
       "width": 252,
       "height": 243,
-      "bytes": 100060
+      "exif_description": "radial gold candle glow, transparent",
+      "bytes": 17908
     },
     {
       "file": "ui-fx-grain.webp",
@@ -4949,7 +9380,8 @@
       "accent": "",
       "width": 251,
       "height": 243,
-      "bytes": 92562
+      "exif_description": "tileable paper grain overlay, transparent grey",
+      "bytes": 13490
     },
     {
       "file": "ui-fx-spark.webp",
@@ -4963,7 +9395,8 @@
       "accent": "",
       "width": 273,
       "height": 254,
-      "bytes": 32348
+      "exif_description": "tiny sparkle / dust motes, transparent",
+      "bytes": 25022
     },
     {
       "file": "ui-fx-sweep.webp",
@@ -4977,7 +9410,8 @@
       "accent": "",
       "width": 254,
       "height": 254,
-      "bytes": 102496
+      "exif_description": "diagonal highlight sweep for button shine, transparent",
+      "bytes": 20692
     },
     {
       "file": "ui-fx-title-bg.webp",
@@ -4991,7 +9425,8 @@
       "accent": "",
       "width": 344,
       "height": 254,
-      "bytes": 137840
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-fx-title-bg.webp",
+      "bytes": 23672
     },
     {
       "file": "ui-fx-toast-bg.webp",
@@ -5005,7 +9440,8 @@
       "accent": "",
       "width": 384,
       "height": 254,
-      "bytes": 134332
+      "exif_description": "toast notification pill background, opaque horizontal",
+      "bytes": 10028
     },
     {
       "file": "ui-fx-vignette.webp",
@@ -5019,7 +9455,8 @@
       "accent": "",
       "width": 273,
       "height": 243,
-      "bytes": 73024
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-fx-vignette.webp",
+      "bytes": 12220
     },
     {
       "file": "ui-icon-back.webp",
@@ -5033,7 +9470,8 @@
       "accent": "",
       "width": 241,
       "height": 129,
-      "bytes": 38842
+      "exif_description": "back chevron / return arrow, gold",
+      "bytes": 8418
     },
     {
       "file": "ui-icon-close.webp",
@@ -5047,7 +9485,8 @@
       "accent": "",
       "width": 191,
       "height": 177,
-      "bytes": 73580
+      "exif_description": "close X in circle",
+      "bytes": 15820
     },
     {
       "file": "ui-icon-coin.webp",
@@ -5061,7 +9500,8 @@
       "accent": "",
       "width": 187,
       "height": 179,
-      "bytes": 77416
+      "exif_description": "single Chinese cash coin",
+      "bytes": 16286
     },
     {
       "file": "ui-icon-info.webp",
@@ -5075,7 +9515,8 @@
       "accent": "",
       "width": 153,
       "height": 173,
-      "bytes": 51644
+      "exif_description": "info sigil, small i in hexagon",
+      "bytes": 10902
     },
     {
       "file": "ui-icon-lock.webp",
@@ -5089,7 +9530,8 @@
       "accent": "",
       "width": 217,
       "height": 195,
-      "bytes": 73944
+      "exif_description": "locked realm padlock",
+      "bytes": 15826
     },
     {
       "file": "ui-icon-lot.webp",
@@ -5103,7 +9545,8 @@
       "accent": "",
       "width": 112,
       "height": 201,
-      "bytes": 53702
+      "exif_description": "fortune lot / cylinder stick bundle",
+      "bytes": 11328
     },
     {
       "file": "ui-icon-settings.webp",
@@ -5117,7 +9560,23 @@
       "accent": "",
       "width": 205,
       "height": 183,
-      "bytes": 72992
+      "exif_description": "gear / astrolabe hybrid",
+      "bytes": 14796
+    },
+    {
+      "file": "ui-lore-card.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 1024,
+      "height": 640,
+      "exif_description": "1024?640 landscape lore/source card frame: parchment panel, thin gold corner flourishes, blank center for text, rubric accent line; no readable text",
+      "bytes": 119026
     },
     {
       "file": "ui-orn-cloud.webp",
@@ -5131,7 +9590,8 @@
       "accent": "",
       "width": 341,
       "height": 155,
-      "bytes": 70498
+      "exif_description": "cloud-thunder curl segment (yunlei)",
+      "bytes": 28708
     },
     {
       "file": "ui-orn-corner-bl.webp",
@@ -5145,7 +9605,8 @@
       "accent": "",
       "width": 247,
       "height": 261,
-      "bytes": 49718
+      "exif_description": "bottom-left corner",
+      "bytes": 20860
     },
     {
       "file": "ui-orn-corner-br.webp",
@@ -5159,7 +9620,8 @@
       "accent": "",
       "width": 221,
       "height": 259,
-      "bytes": 45532
+      "exif_description": "bottom-right corner",
+      "bytes": 19312
     },
     {
       "file": "ui-orn-corner-tl.webp",
@@ -5173,7 +9635,8 @@
       "accent": "",
       "width": 223,
       "height": 213,
-      "bytes": 50160
+      "exif_description": "top-left double-rule manuscript corner",
+      "bytes": 18520
     },
     {
       "file": "ui-orn-corner-tr.webp",
@@ -5187,7 +9650,8 @@
       "accent": "",
       "width": 237,
       "height": 215,
-      "bytes": 52750
+      "exif_description": "top-right corner mirror",
+      "bytes": 20302
     },
     {
       "file": "ui-orn-diamond.webp",
@@ -5201,7 +9665,8 @@
       "accent": "",
       "width": 135,
       "height": 91,
-      "bytes": 14334
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-orn-diamond.webp",
+      "bytes": 6536
     },
     {
       "file": "ui-orn-rule-h.webp",
@@ -5215,7 +9680,8 @@
       "accent": "",
       "width": 231,
       "height": 51,
-      "bytes": 11256
+      "exif_description": "horizontal gold divider segment",
+      "bytes": 5888
     },
     {
       "file": "ui-orn-rule-v.webp",
@@ -5229,7 +9695,8 @@
       "accent": "",
       "width": 41,
       "height": 303,
-      "bytes": 12738
+      "exif_description": "vertical gold divider segment",
+      "bytes": 6346
     },
     {
       "file": "ui-orn-seal.webp",
@@ -5243,7 +9710,8 @@
       "accent": "",
       "width": 181,
       "height": 171,
-      "bytes": 51006
+      "exif_description": "wax seal / stamp accent, rubric red dot",
+      "bytes": 20506
     },
     {
       "file": "ui-orn-star.webp",
@@ -5257,7 +9725,64 @@
       "accent": "",
       "width": 179,
       "height": 193,
-      "bytes": 29674
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-orn-star.webp",
+      "bytes": 13704
+    },
+    {
+      "file": "ui-slot-empty.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 41156
+    },
+    {
+      "file": "ui-slot-locked.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 44818
+    },
+    {
+      "file": "ui-slot-overweight.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 45034
+    },
+    {
+      "file": "ui-slot-selected.webp",
+      "batch": "",
+      "source": "",
+      "description_en": "",
+      "description_zh": "",
+      "where": "",
+      "content": "",
+      "spec": "",
+      "accent": "",
+      "width": 256,
+      "height": 256,
+      "bytes": 46090
     },
     {
       "file": "ui-tab-codex.webp",
@@ -5271,7 +9796,8 @@
       "accent": "",
       "width": 301,
       "height": 183,
-      "bytes": 93778
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-tab-codex.webp",
+      "bytes": 18468
     },
     {
       "file": "ui-tab-home.webp",
@@ -5285,7 +9811,8 @@
       "accent": "",
       "width": 235,
       "height": 245,
-      "bytes": 53042
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-tab-home.webp",
+      "bytes": 10140
     },
     {
       "file": "ui-tab-profile.webp",
@@ -5299,7 +9826,8 @@
       "accent": "",
       "width": 259,
       "height": 201,
-      "bytes": 96990
+      "exif_description": "FateQuest art asset - see ART_CATALOG.json for ui-tab-profile.webp",
+      "bytes": 20668
     }
   ]
 }
