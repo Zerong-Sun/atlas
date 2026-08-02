@@ -61,15 +61,17 @@ Prompt：[`ART_PROMPTS_REQ_P4_IBBATUTA.md`](ART_PROMPTS_REQ_P4_IBBATUTA.md)。
 
 ### P2 · 打磨资产（不挡发版）
 
-#### A. 易经牌面下半部 · 34 张 ❌
+#### A. 易经牌面下半部 · 34 张 🟡 占位符已补齐
 
 | 项 | 说明 |
 |---|---|
 | **用途** | 技艺页 / 仪式揭示完整 64 卦 |
 | **规格** | 512×768；与 01–30 同框 |
 | **命名** | `iching-<NN>-<english-slug>-full.webp` |
-| **已有** | **30/64** |
+| **已有** | **64/64**（01–30 正式图；31–64 暂为程序占位符，待正式出图替换） |
+| **接线** | ✅ `MapArt.hexagram_face()` + `symbol_texture` 优先牌面；`smoke_iching_deck.gd` 回归 |
 | **Prompt** | [`ART_PROMPTS_ICHING_DECK.md`](ART_PROMPTS_ICHING_DECK.md) · 续跑 [`ART_PROMPTS_ICHING_REMAIN.md`](ART_PROMPTS_ICHING_REMAIN.md) |
+| **替换** | `python3 scripts/gen_iching_placeholders.py` 生成的占位符，正式图落盘同名覆盖即可 |
 
 #### B–C. 货币徽 / 结局贴纸 · ✅ 2026-07-27
 
@@ -83,10 +85,10 @@ Prompt：[`ART_PROMPTS_REQ_P4_IBBATUTA.md`](ART_PROMPTS_REQ_P4_IBBATUTA.md)。
 
 | 子项 | 缺 |
 |---|---|
-| 易经 31–64 | **34** |
+| 易经 31–64（正式图） | 34 张占位符已补齐，正式出图待跑 |
 | **合计建议出图** | **34** |
 
-**出图顺序**：易经 31–64（本轮暂缓）。
+**出图顺序**：易经 31–64 正式出图（当前以占位符运行）。
 
 ---
 
@@ -97,4 +99,4 @@ Prompt：[`ART_PROMPTS_REQ_P4_IBBATUTA.md`](ART_PROMPTS_REQ_P4_IBBATUTA.md)。
 | 1 | ~~Godot 接线~~ | ✅ 674/674 |
 | 2 | ~~chr 底板重绘（P3）~~ | ✅ |
 | 3 | ~~白图泰 6 入城 + 18 探索（P4）~~ | ✅ |
-| 4 | P2 易经 31–64 | 34 |
+| 4 | P2 易经 31–64 | 占位符 ✅ 2026-08-02；正式出图待跑 |

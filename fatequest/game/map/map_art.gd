@@ -477,6 +477,39 @@ static func symbol_icon(sym_id: String) -> Texture2D:
 	return tex("sym-%s-full" % sym_id)
 
 
+const DECK_ICHING_MANIFEST := "res://assets/decks/iching/DECK_MANIFEST.json"
+const DECK_ICHING_DIR := "res://assets/decks/iching/"
+
+static var _iching_index: Dictionary = {}
+static var _iching_loaded := false
+
+
+## The 64 full card faces in King Wen order. Hexagrams 01–30 are the finished
+## manuscript faces; 31–64 are currently legible placeholders pending the
+## generation batch (ART_PROMPTS_ICHING_REMAIN.md). Missing files return null
+## and the caller falls back to the method symbol.
+static func hexagram_face(index: int) -> Texture2D:
+	if not _iching_loaded:
+		_iching_loaded = true
+		if FileAccess.file_exists(DECK_ICHING_MANIFEST):
+			var f := FileAccess.open(DECK_ICHING_MANIFEST, FileAccess.READ)
+			if f != null:
+				var doc = JSON.parse_string(f.get_as_text())
+				if typeof(doc) == TYPE_ARRAY:
+					for entry in doc:
+						var rec: Dictionary = entry
+						var fn := String(rec.get("file", ""))
+						var n := fn.get_slice("-", 1).to_int()
+						if n > 0:
+							_iching_index[n] = fn
+	if not _iching_index.has(index):
+		return null
+	var fn2 := String(_iching_index[index])
+	if fn2.is_empty() or not ResourceLoader.exists(DECK_ICHING_DIR + fn2):
+		return null
+	return load(DECK_ICHING_DIR + fn2) as Texture2D
+
+
 static func ritual_lot(piece: String = "tube") -> Texture2D:
 	return tex("ritual-lot-%s" % piece)
 

@@ -107,6 +107,12 @@ static func ritual_texture(method: String) -> Texture2D:
 static func symbol_texture(cast_result: Dictionary) -> Texture2D:
 	var method := String(cast_result.get("method", ""))
 	var raw: Dictionary = cast_result.get("raw", {})
+	# I Ching casts carry the hexagram index; prefer the full card face when a
+	# face exists (01–30 finished, 31–64 placeholders), then fall through.
+	if method == "iching" and raw.has("primary"):
+		var face := MapArt.hexagram_face(int(raw.get("primary", 0)) % 64)
+		if face != null:
+			return face
 	# Prefer a stem encoded in the cast payload when present.
 	for key in ["symbol", "sym", "cardId", "rune", "hexagram"]:
 		if raw.has(key):
