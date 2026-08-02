@@ -1415,11 +1415,20 @@ func _icon_line(icon: Texture2D, text: String) -> Control:
 	if icon != null:
 		var tr := TextureRect.new()
 		tr.texture = icon
-		tr.custom_minimum_size = Vector2(28, 28)
+		# Icons track the type size: a fixed 28 px box is oversized beside 25 px
+		# HUGE-step text and undersized beside it at SMALL.
+		var isz := float(Metrics.icon_lg())
+		tr.custom_minimum_size = Vector2(isz, isz)
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		row.add_child(tr)
-	row.add_child(Panels.label(text, UiScale.ui(), Palette.ink()))
+	var lbl := Panels.label(text, UiScale.ui(), Palette.ink())
+	# Without wrapping, a long English goods row sets the list's minimum width,
+	# which inflates the bag panel past the window and drags the close button
+	# off-screen with it.
+	lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(lbl)
 	return row
 
 

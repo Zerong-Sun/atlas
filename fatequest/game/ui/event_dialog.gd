@@ -101,17 +101,19 @@ func restyle() -> void:
 	_body.add_theme_constant_override("paragraph_separation", Metrics.sm())
 
 	# Portrait scales with the type, or a 120 px figure beside 26 pt text reads
-	# as a stamp rather than a person.
-	var pw := 120.0 * Metrics.factor()
+	# as a stamp rather than a person. Capped to a third of the window height so
+	# a 200%-step portrait cannot push the panel past the viewport by itself.
+	var vp := get_viewport_rect().size
+	var pw := minf(120.0 * Metrics.factor(), vp.y * 0.34)
 	_portrait.custom_minimum_size = Vector2(pw, pw * 1.25)
 
 	# The prose window is at least four lines tall whatever the step, so the
-	# reader is never handed a two-line slit to scroll a chapter through.
+	# reader is never handed a two-line slit to scroll a chapter through. The
+	# 200%-step ceiling is enforced in _fit_scroll once the choices are in.
 	_scroll.custom_minimum_size = Vector2(0, float(UiScale.body()) * 6.0)
 
 	# Width follows the window but never grows past a comfortable measure:
 	# prose set across 1400px is unreadable however large the type.
-	var vp := get_viewport_rect().size
 	custom_minimum_size = Vector2(
 		Metrics.measure(vp.x),
 		minf(vp.y - float(Metrics.xl()) * 4.0, 560.0))
@@ -126,7 +128,7 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	var text := I18n.t(body_key)
 	if text == body_key:
 		text = ""
-	_body.text = text
+	_body.text = _auto_paragraphs(text)
 	if I18n.is_untranslated(body_key):
 		_body.text += "\n[i][color=#6b5a3c](尚未译出，暂显英文原文)[/color][/i]"
 
@@ -156,6 +158,7 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 	_choices.add_child(leave)
 
 	_scroll.scroll_vertical = 0
+	_fit_scroll()
 	visible = true
 
 
@@ -171,7 +174,7 @@ func show_result(result_key: String) -> void:
 	_portrait.visible = false
 
 	var text := I18n.t(result_key)
-	_body.text = text
+	_body.text = _auto_paragraphs(text)
 	if I18n.is_untranslated(result_key):
 		_body.text += "\n[i][color=#6b5a3c](尚未译出，暂显英文原文)[/color][/i]"
 
@@ -182,6 +185,7 @@ func show_result(result_key: String) -> void:
 	_choices.add_child(continue_btn)
 
 	_scroll.scroll_vertical = 0
+	_fit_scroll()
 	visible = true
 
 
@@ -225,3 +229,39 @@ func _origin_note(ev: Dictionary) -> String:
 		"authored":
 			return I18n.t("ui.source_authored")
 	return ""
+
+
+## The prose window has a floor (restyle) but the panel has a ceiling: at the
+## 200% type step the fixed head + choices can already reach 500–600 px, and the
+## six-line floor would push the whole dialog past the window. Once the choices
+## are in, measure what the head and buttons actually need and compress the
+## scroll to fit, keeping at least two readable lines.
+func _fit_scroll() -> void:
+	var vp := get_viewport_rect().size
+	var cap := minf(vp.y - float(Metrics.xl()) * 4.0, 560.0)
+	var scroll_min := float(_scroll.custom_minimum_size.y)
+	var fixed := _root.get_minimum_size().y - scroll_min
+	var floor_h := float(UiScale.body()) * 2.0
+	var want := clampf(scroll_min, floor_h, maxf(floor_h, cap - fixed))
+	if absf(want - scroll_min) > 0.5:
+		_scroll.custom_minimum_size = Vector2(0, want)
+
+
+## A wall of unbroken prose is hard to track however wide the column, and the
+## entry chapters in the tables are written as one long paragraph. When a body
+## has no blank-line breaks and runs long, split it at sentence ends so each
+## paragraph stays within a comfortable reading length.
+static func _auto_paragraphs(text: String, max_chars: int = 120) -> String:
+	if text.is_empty() or text.contains("\n\n") or text.length() <= max_chars:
+		return text
+	var out := ""
+	var buf := ""
+	var ends := "。！？；.!?;"
+	for i in text.length():
+		var ch := text[i]
+		buf += ch
+		if ends.contains(ch) and buf.length() >= max_chars:
+			out += buf.strip_edges() + "\n\n"
+			buf = ""
+	out += buf
+	return out.strip_edges()

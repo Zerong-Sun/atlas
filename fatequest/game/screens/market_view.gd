@@ -152,7 +152,13 @@ func _stock_row(good: Dictionary) -> Control:
 	if icon != null:
 		var tr := TextureRect.new()
 		tr.texture = icon
-		tr.custom_minimum_size = Vector2(34, 34)
+		# EXPAND_IGNORE_SIZE: without it the TextureRect reports the full source
+		# texture as its minimum (goods art is 512×512), which inflates every
+		# row to hundreds of pixels tall and pushes the whole panel past the
+		# window. With it the box is exactly the type-scaled icon size.
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		var isz := float(Metrics.icon_lg())
+		tr.custom_minimum_size = Vector2(isz, isz)
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		row.add_child(tr)
 
@@ -164,6 +170,8 @@ func _stock_row(good: Dictionary) -> Control:
 	name_lbl.text = I18n.t(good.get("name", ""))
 	name_lbl.add_theme_font_size_override("font_size", UiScale.ui())
 	name_lbl.add_theme_color_override("font_color", Palette.ink())
+	name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(name_lbl)
 
 	var check := market.can_buy(good, _city, state, jdn)
@@ -172,6 +180,8 @@ func _stock_row(good: Dictionary) -> Control:
 		int(check["price"]) / Market.FEN, _demand_note(good), int(good.get("bulk", 1))]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
+	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sub.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(sub)
 
 	var buy := Panels.styled_button(I18n.t("ui.buy"), Callable())
@@ -197,7 +207,9 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	if icon != null:
 		var tr := TextureRect.new()
 		tr.texture = icon
-		tr.custom_minimum_size = Vector2(34, 34)
+		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		var isz := float(Metrics.icon_lg())
+		tr.custom_minimum_size = Vector2(isz, isz)
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		row.add_child(tr)
 
@@ -209,6 +221,8 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	name_lbl.text = "%s ×%d" % [I18n.t(good.get("name", "")), count]
 	name_lbl.add_theme_font_size_override("font_size", UiScale.ui())
 	name_lbl.add_theme_color_override("font_color", Palette.ink())
+	name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(name_lbl)
 
 	var price := market.sell_price(good, _city, jdn, state.seed)
@@ -216,6 +230,8 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	sub.text = "此地可售 %d 银 · %s" % [price / Market.FEN, _demand_note(good)]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
+	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sub.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(sub)
 
 	var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))

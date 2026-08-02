@@ -9,13 +9,16 @@ extends RefCounted
 
 const CFG := "user://ui.cfg"
 
-enum Size { SMALL, NORMAL, LARGE, HUGE }
+enum Size { SMALL, NORMAL, LARGE, HUGE, MASSIVE }
 
 const STEPS := {
 	Size.SMALL: 0.85,
 	Size.NORMAL: 1.0,
 	Size.LARGE: 1.25,
 	Size.HUGE: 1.55,
+	# 200% of the base body size — the largest step the release checklist
+	# exercises (§13: "UI 按 100%–200% 字号缩放验证").
+	Size.MASSIVE: 2.0,
 }
 
 ## Base sizes in points, before the step multiplier.
@@ -65,6 +68,7 @@ static func label() -> String:
 		Size.NORMAL: I18n.t("ui.font_normal"),
 		Size.LARGE: I18n.t("ui.font_large"),
 		Size.HUGE: I18n.t("ui.font_huge"),
+		Size.MASSIVE: I18n.t("ui.font_massive"),
 	}
 	return labels.get(step, I18n.t("ui.font_normal"))
 

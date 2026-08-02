@@ -143,6 +143,10 @@ static func overlay(parent: Node, min_size: Vector2,
 	layer.add_child(centre)
 
 	var panel := PanelContainer.new()
+	# Belt and braces: a Container cannot be shrunk below its content minimum,
+	# so the rows themselves must wrap (see _icon_line). Clipping here only
+	# guarantees an overgrown panel can never paint past the window edge.
+	panel.clip_contents = true
 	panel.add_theme_stylebox_override("panel", Palette.panel_style())
 	panel.custom_minimum_size = min_size
 	# Optional illustrated panel plate behind the content.
