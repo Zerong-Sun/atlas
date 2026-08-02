@@ -25,7 +25,7 @@
 | divinations / lessons | 24 / 24 | ✅ 8 法接入路线玩法；24 法均有学习练习配置 |
 | archetypes / endings / transports | 3 / 8 / 9 | ✅ 全部接入玩法 |
 
-**门禁 25 道全绿**（advisory WARN 均为既有已知项），16 个内核单测与 19 个界面 smoke
+**门禁 25 道全绿**（advisory WARN 均为既有已知项），16 个内核单测与 20 个界面 smoke
 全绿。
 
 ---
@@ -170,6 +170,11 @@ assets/audio/    37 OGG · A1–A8 ✅
 | 市场/行囊物品图标过大 | 市场行图标 `TextureRect` 缺 `EXPAND_IGNORE_SIZE`，按 512² 源纹理当最小尺寸，单行被撑到 500+ px、面板出界 | 加 `expand_mode`，图标随字号缩放（`Metrics.icon_lg()`） |
 | 入城介绍一大段不好读 | 入城正文单段 200–400 字无分段，读起来是一堵墙 | `event_dialog._auto_paragraphs` 按句末自动分句成段（≤120 字/段，短文不破坏） |
 | 200% 字号下事件对话超界（卡片内容可滚动、确认按钮保持可见） | 大头像 + 头部 + 按钮固定部分在 200% 下超过 720 视口 | 头像限高 1/3 窗口；`_fit_scroll` 按实测压缩正文滚动窗，至少保留两行 |
+
+**12 城后果链逐城回归**：`tests/smoke_twelve_cities.gd` 逐城走完 12 主城入口两条重要分支
+（choice → consequence → resolution → 返回城市），0 失败——Q1"逐城点选后果链"的自动版本。
+键盘遍历（Esc 关闭覆盖层）由 `smoke_ui_overlay.gd` 覆盖。剩余人工项（GPU 60 FPS 实机、
+§13.2 十步人工脚本）见 [`RELEASE_CANDIDATE.md`](RELEASE_CANDIDATE.md)。
 
 ---
 
