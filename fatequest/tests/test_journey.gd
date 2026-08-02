@@ -144,6 +144,13 @@ func run() -> bool:
 	_ok(st.jdn - day0 == trip["days"], "the calendar advanced by the same amount")
 	_ok(st.revealed.get("sachiu", 0) > 0, "destination revealed on the map")
 	_ok(not st.active_journey.is_empty(), "journey checkpoint remains until encounters/arrival complete")
+	# Q2 dead-end fix: arriving reveals the town's own exits, not just the road
+	# you walked — otherwise every new place is a one-way street back.
+	var dead_end := false
+	for oid in travel.routes_from("sachiu"):
+		if int(st.revealed.get(oid.get("id", ""), 0)) <= 0:
+			dead_end = true
+	_ok(not dead_end, "arrival reveals every outbound road of the destination")
 	var expected_pending := pending_before_trip + Array(trip.get("encounters", []))
 	_ok(st.pending_events == expected_pending, "selected road encounters append to durable FIFO data")
 	var nested_city := st.city

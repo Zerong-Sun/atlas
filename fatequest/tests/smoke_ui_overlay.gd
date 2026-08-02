@@ -187,11 +187,67 @@ func _init() -> void:
 	esc_ok = esc_ok and not n._settings["layer"].visible
 	await process_frame
 
+	# ------------------------------------------------- transit z-order
+	# The held transit plate (road encounter / return trip) must stay BELOW the
+	# event dialog and the settings overlay, or its STOP mouse filter eats the
+	# clicks meant for them. Regression for the Q2 hold fix.
+	var zorder_ok := true
+	var transit_idx: int = -1
+	var dialog_idx: int = -1
+	var settings_idx: int = -1
+	for i in n.get_child_count():
+		var c = n.get_child(i)
+		if c == n._transit_layer:
+			transit_idx = i
+		if c == n._dialog_layer:
+			dialog_idx = i
+		if n._settings is Dictionary and n._settings.has("layer") \
+				and c == n._settings["layer"]:
+			settings_idx = i
+		if transit_idx >= 0 and dialog_idx >= 0 and settings_idx >= 0:
+			break
+	zorder_ok = dialog_idx > transit_idx and settings_idx > transit_idx \
+		and transit_idx >= 0 and dialog_idx >= 0 and settings_idx >= 0
+	if not zorder_ok:
+		printerr("  FAIL: transit z=%d dialog z=%d settings z=%d" % [
+			transit_idx, dialog_idx, settings_idx])
+
+	# ------------------------------------------------- language switch relabel
+	# Switching zh/en must re-label the control-bar buttons, not just restyle
+	# them; the bag/settings top-right spine keeps stale text otherwise.
+	var lang_relabel_ok := true
+	I18n.load_lang("en")
+	await process_frame
+	n._relang_controls()
+	await process_frame
+	if n._controls != null and n._controls is Control:
+		var label_ok := false
+		for c in n._controls.get_children():
+			if c is Button and "Settings" in String(c.text):
+				label_ok = true
+		lang_relabel_ok = lang_relabel_ok and label_ok
+	if n._right_spine != null and n._right_spine is Control:
+		var bag_btn: Button = null
+		var party_btn: Button = null
+		for c in n._right_spine.get_children():
+			if c is Button:
+				if bag_btn == null:
+					bag_btn = c
+				else:
+					party_btn = c
+		if bag_btn != null and party_btn != null:
+			lang_relabel_ok = lang_relabel_ok \
+				and ("Bag" in String(bag_btn.text) or "行囊" in String(bag_btn.text))
+	I18n.load_lang("zh")
+	await process_frame
+
 	var ok: bool = bag_ok and close_ok and wrap_ok and mkt_ok and icon_ok \
-		and settings_ok and party_ok and card_ok and dlg_ok and para_ok and zh_ok and esc_ok
-	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s esc=%s" % [
+		and settings_ok and party_ok and card_ok and dlg_ok and para_ok and zh_ok and esc_ok \
+		and zorder_ok and lang_relabel_ok
+	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s esc=%s zorder=%s lang=%s" % [
 		bag_ok, close_ok, wrap_ok, mkt_ok, icon_ok,
-		settings_ok, party_ok, card_ok, dlg_ok, para_ok, zh_ok, esc_ok])
+		settings_ok, party_ok, card_ok, dlg_ok, para_ok, zh_ok, esc_ok,
+		zorder_ok, lang_relabel_ok])
 	print("UI_OVERLAY: vp=%s bag=%s market=%s dialog=%s" % [vp, bag2, mkt, dr])
 	print("UI_OVERLAY: %s" % ("OK" if ok else "FAIL"))
 	quit(0 if ok else 1)

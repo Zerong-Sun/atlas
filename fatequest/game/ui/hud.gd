@@ -111,6 +111,9 @@ func build() -> void:
 	_rows.clear()
 	_icons.clear()
 	_deltas.clear()
+	# The tips cache is built lazily against the current locale; a language
+	# switch must forget it or every cell would keep its old-language tooltip.
+	_tips.clear()
 	_cell("place", "◈", MapArt.ui("orn-seal"))
 	_cell("date", "☉")
 	_cell("coins", "◎", MapArt.ui("icon-coin"))

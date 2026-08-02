@@ -700,6 +700,11 @@ func _build_transit() -> void:
 	_transit_layer.visible = false
 	_transit_layer.mouse_filter = Control.MOUSE_FILTER_STOP
 	add_child(_transit_layer)
+	# The plate is a travel backdrop, not a modal: when a road event holds it
+	# on screen, the event dialog and every overlay must stay above and
+	# clickable. It is built after them, so pin it just above the map rather
+	# than letting it cover the whole UI stack.
+	move_child(_transit_layer, _map.get_index() + 1)
 
 	_transit_tex = TextureRect.new()
 	_transit_tex.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -905,10 +910,6 @@ func _resize_docks() -> void:
 
 func _map_centre() -> Vector2:
 	return projection.origin + Vector2(projection.width, projection.height) * 0.5
-
-
-func _ctl(text: String, cb: Callable) -> Button:
-	return Panels.styled_button(text, cb)
 
 
 ## A control-bar button that remembers its i18n key, so the language toggle can
