@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: 8e7adfa72fd8
+source_rev: 4b484bfc83fd
 status: translated
 translator: 人工校译
 notes: >
@@ -77,6 +77,14 @@ stamps:
   ev.ev_tauris_consequence_b_resolution.choice_1_result: 41d663410a70
   ev.ev_tauris_consequence_b_resolution.choice_2: c200bc7d41b1
   ev.ev_tauris_consequence_b_resolution.choice_2_result: 26afa0a18785
+  ev.ev_tauris_a_merchants_followup.title: fdaecaa050f1
+  ev.ev_tauris_a_merchants_followup.body: 199d52a728ca
+  ev.ev_tauris_a_merchants_followup.choice_1: 248d28e09a24
+  ev.ev_tauris_a_merchants_followup.choice_1_result: b130318487ff
+  ev.ev_tauris_a_merchants_followup.choice_2: 3cd8a6aec47c
+  ev.ev_tauris_a_merchants_followup.choice_2_result: 17a14ec2039f
+  ev.ev_tauris_a_merchants_followup.choice_3: e8a1c0259f78
+  ev.ev_tauris_a_merchants_followup.choice_3_result: cf0ecebd922b
 ---
 
 ## city.tauris.name

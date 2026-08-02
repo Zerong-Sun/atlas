@@ -38,7 +38,8 @@
               "op": "flag",
               "value": "fl-balc-mentor-met",
               "reason": "balc-mentor-lesson"
-            }
+            },
+            { "op": "queue_event", "value": "ev-balc-mentor-followup", "reason": "ev-balc-mentor-followup" }
           ]
         },
         {

@@ -1,0 +1,280 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-balc-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_balc_a_followup.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_a_followup.choice_1",
+          "resultText": "ev.ev_balc_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-bactrian-fragment",
+              "reason": "found-the-guardians-fragment"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "heard-the-guardian-tell-of-bactra"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_a_followup.choice_2",
+          "resultText": "ev.ev_balc_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "guardian-named-the-lapis-mountains"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-where-the-stones-come-from"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_a_followup.choice_3",
+          "resultText": "ev.ev_balc_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-balc-ruins",
+              "reason": "kept-the-promise-to-the-ruins"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "balc",
+              "reason": "kept-the-promise-to-the-ruins"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "balc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c027"
+        }
+      }
+    },
+    {
+      "id": "ev-balc-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_balc_b_followup.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_b_followup.choice_1",
+          "resultText": "ev.ev_balc_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "lapis",
+              "value": 1,
+              "reason": "bought-lapis-at-the-caravan-masters-price"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-lapis",
+              "reason": "bought-lapis-at-the-caravan-masters-price"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_b_followup.choice_2",
+          "resultText": "ev.ev_balc_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samarcanda",
+              "reason": "caravan-master-drew-the-road-east"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-the-tolls-to-samarcanda"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_b_followup.choice_3",
+          "resultText": "ev.ev_balc_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-the-traders-ledger"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-lapis",
+              "reason": "waited-for-the-traders-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "balc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c027"
+        }
+      }
+    },
+    {
+      "id": "ev-balc-c-followup",
+      "kind": "consequence",
+      "title": "ev.ev_balc_c_followup.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_c_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_c_followup.choice_1",
+          "resultText": "ev.ev_balc_c_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "item",
+              "value": "it-bactrian-fragment",
+              "reason": "took-a-slip-of-incense-for-the-road"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-magi",
+              "reason": "carried-the-magi-fire-blessing"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_c_followup.choice_2",
+          "resultText": "ev.ev_balc_c_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-the-magi-to-read-the-dream"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-the-magi-reading-of-the-dream"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_c_followup.choice_3",
+          "resultText": "ev.ev_balc_c_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "sticker",
+              "value": "st-balc-magi",
+              "reason": "kept-the-dream-secret"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "balc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c027"
+        }
+      }
+    },
+    {
+      "id": "ev-balc-mentor-followup",
+      "kind": "consequence",
+      "title": "ev.ev_balc_mentor_followup.title",
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "body": "ev.ev_balc_mentor_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_balc_mentor_followup.choice_1",
+          "resultText": "ev.ev_balc_mentor_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "fl-balc-mentor-gift",
+              "reason": "received-the-copyists-parting-gift"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "received-the-copyists-parting-gift"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_mentor_followup.choice_2",
+          "resultText": "ev.ev_balc_mentor_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "copyist-named-the-mountain-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-the-mountain-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_balc_mentor_followup.choice_3",
+          "resultText": "ev.ev_balc_mentor_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "lingered-to-copy-the-road-book"
+            },
+            {
+              "op": "sticker",
+              "value": "st-balc-ruins",
+              "reason": "lingered-to-copy-the-road-book"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "balc",
+        "origin": "authored"
+      }
+    }
+  ]
+}

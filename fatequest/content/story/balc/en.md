@@ -304,3 +304,131 @@ Thank the guide and keep moving
 ## ev.balc.mentor_closure.choice_3_result
 
 You close the matter for now. The sign you gained will still guide your next action in Balc.
+
+## ev.ev_balc_a_followup.title
+
+Balc: The Guardian of Bactra
+
+## ev.ev_balc_a_followup.body
+
+As you walk among the ruined palaces, an old man who keeps the ground wakes from his rest and rises to meet you. He has watched every digger and every traveller who came to pick at the bones of the mother of cities. He does not forbid you; he only asks that you listen first. The broken stones of Balc, he says, remember more than the Mongols left standing. If you mean to carry a fragment of Bactra away, carry also some knowledge of what it was.
+
+## ev.ev_balc_a_followup.choice_1
+
+Take the fragment the guardian offers from the old wall
+
+## ev.ev_balc_a_followup.choice_1_result
+
+The guardian lifts a carved stone from a niche no raider has reached, and presses it into your hand. Bactria's last unbroken piece now travels with you, and the old man's account of the city goes with it.
+
+## ev.ev_balc_a_followup.choice_2
+
+Ask the guardian where the lapis of the old kings came from
+
+## ev.ev_balc_a_followup.choice_2_result
+
+The guardian points northeast, past the mountains, to the mines the kings of Bactra held as their own. The name of Badashan is now on your map, and you know why its blue stones were worth a kingdom.
+
+## ev.ev_balc_a_followup.choice_3
+
+Promise to speak well of Bactra in the cities ahead
+
+## ev.ev_balc_a_followup.choice_3_result
+
+The guardian accepts your promise and asks nothing else. In Balc your word now carries weight among those who heard you give it.
+
+## ev.ev_balc_b_followup.title
+
+Balc: The Caravan Masters' Ledger
+
+## ev.ev_balc_b_followup.body
+
+The caravan masters of Balc do not scatter their knowledge like grain. When one of them finally settles on a bench beside the arcade and lays out his ledger, the page is covered in names: toll-houses, wells, pastures, and the days between each. He reads them aloud for you, then turns the book so you can see the road drawn in the margin. What you do with the page is up to you.
+
+## ev.ev_balc_b_followup.choice_1
+
+Buy a block of lapis at the price written in the ledger
+
+## ev.ev_balc_b_followup.choice_1_result
+
+The master sells you a block of raw lapis at his own list price, no bargaining and no tricks. The stone is real, the price fair, and the arcade lets you leave with it.
+
+## ev.ev_balc_b_followup.choice_2
+
+Follow the road the margin shows toward Samarcanda
+
+## ev.ev_balc_b_followup.choice_2_result
+
+The road to Samarcanda is now drawn clearly in your mind: the tolls, the watered pastures, the two passes. You will not ride into it blind.
+
+## ev.ev_balc_b_followup.choice_3
+
+Wait a day for the traders' report to be copied
+
+## ev.ev_balc_b_followup.choice_3_result
+
+You wait a day in the arcade while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons stay with you when you go.
+
+## ev.ev_balc_c_followup.title
+
+Balc: The Dream at the Shrine
+
+## ev.ev_balc_c_followup.body
+
+You wake on the hill above Balc with the dream still clear behind your eyes, as the Magi promised it would be. The white-robed priest who kept the fire through the night has not moved. He looks at you without asking, then nods, as though the dream had been expected. What you do with it — take it as a warning, as a gift, or hold it in silence — he leaves entirely to you.
+
+## ev.ev_balc_c_followup.choice_1
+
+Ask the priest for a blessing to carry on the road
+
+## ev.ev_balc_c_followup.choice_1_result
+
+The priest marks your brow with ash from the eternal fire and says a blessing older than the city. A piece of the shrine's sanctity goes with you now.
+
+## ev.ev_balc_c_followup.choice_2
+
+Stay a day and ask what the dream means
+
+## ev.ev_balc_c_followup.choice_2_result
+
+You stay a day among the incense while the priest reads the dream for you. His answer is recorded in your travel book, and it is not the answer you expected.
+
+## ev.ev_balc_c_followup.choice_3
+
+Keep the dream to yourself and say nothing
+
+## ev.ev_balc_c_followup.choice_3_result
+
+You leave the hill in silence, carrying the dream where no one else can weigh it. Some things are meant to be carried alone.
+
+## ev.ev_balc_mentor_followup.title
+
+Balc: The Copyist's Parting Gift
+
+## ev.ev_balc_mentor_followup.body
+
+The old copyist of the lapis road does not let you leave with only his account. He reaches into his travelling chest and lays out what remains of his working life: a scrap of parchment, a worn map, a day's patience. He tells you to choose what will serve you best, because a road is only as good as what you carry into it.
+
+## ev.ev_balc_mentor_followup.choice_1
+
+Take the copyist's notes on the road ahead
+
+## ev.ev_balc_mentor_followup.choice_1_result
+
+The notes are plain and exact, like the man himself. What you learned at Balc's copyist desk is now written where you can consult it on the road.
+
+## ev.ev_balc_mentor_followup.choice_2
+
+Ask which mountain road the lapis really comes by
+
+## ev.ev_balc_mentor_followup.choice_2_result
+
+The copyist draws the mountain road to Badashan from memory — a day shorter than the caravan route, and a day harder. Now you know both.
+
+## ev.ev_balc_mentor_followup.choice_3
+
+Linger a day to copy the road book yourself
+
+## ev.ev_balc_mentor_followup.choice_3_result
+
+You spend a day at the copyist's bench, learning his hand and his road. It costs you time, but the book is now partly yours.

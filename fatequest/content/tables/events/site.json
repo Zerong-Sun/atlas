@@ -36,7 +36,8 @@
               "op": "reveal_map",
               "value": "samarcanda",
               "reason": "saw-the-road-from-the-old-walls"
-            }
+            },
+            { "op": "queue_event", "value": "ev-balc-a-followup", "reason": "ev-balc-a-followup" }
           ]
         },
         {
@@ -73,7 +74,8 @@
               "op": "sticker",
               "value": "st-balc-ruins",
               "reason": "heard-the-story-of-bactras-height"
-            }
+            },
+            { "op": "queue_event", "value": "ev-balc-a-followup", "reason": "ev-balc-a-followup" }
           ]
         }
       ],
@@ -174,7 +176,8 @@
               "op": "codex",
               "value": "cx-balc",
               "reason": "learned-the-trade-of-the-caravanserai"
-            }
+            },
+            { "op": "queue_event", "value": "ev-balc-b-followup", "reason": "ev-balc-b-followup" }
           ]
         }
       ],
@@ -248,7 +251,8 @@
               "op": "sticker",
               "value": "st-balc-magi",
               "reason": "slept-where-the-magi-sleep"
-            }
+            },
+            { "op": "queue_event", "value": "ev-balc-c-followup", "reason": "ev-balc-c-followup" }
           ]
         },
         {
