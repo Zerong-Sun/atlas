@@ -158,11 +158,40 @@ func _init() -> void:
 	n._dialog_layer.visible = false
 	await process_frame
 
+	# ------------------------------------------------- keyboard traversal
+	# Escape closes the topmost overlay; drive the real handler so the layer
+	# ordering and closers are exercised, not just `visible` flags.
+	var esc_ok := true
+	var ev_esc := InputEventKey.new()
+	ev_esc.keycode = KEY_ESCAPE
+	ev_esc.pressed = true
+
+	n._open_bag()
+	await process_frame
+	n._unhandled_key_input(ev_esc)
+	await process_frame
+	esc_ok = esc_ok and not n._bag["layer"].visible
+	await process_frame
+
+	n._open_market()
+	await process_frame
+	n._unhandled_key_input(ev_esc)
+	await process_frame
+	esc_ok = esc_ok and not n._market_layer.visible and n._city_view.visible
+	await process_frame
+
+	n._settings["layer"].visible = true
+	await process_frame
+	n._unhandled_key_input(ev_esc)
+	await process_frame
+	esc_ok = esc_ok and not n._settings["layer"].visible
+	await process_frame
+
 	var ok: bool = bag_ok and close_ok and wrap_ok and mkt_ok and icon_ok \
-		and settings_ok and party_ok and card_ok and dlg_ok and para_ok and zh_ok
-	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s" % [
+		and settings_ok and party_ok and card_ok and dlg_ok and para_ok and zh_ok and esc_ok
+	print("UI_OVERLAY: bag=%s close=%s wrap=%s market=%s icons=%s settings=%s party=%s card=%s dialog=%s paras=%s zh=%s esc=%s" % [
 		bag_ok, close_ok, wrap_ok, mkt_ok, icon_ok,
-		settings_ok, party_ok, card_ok, dlg_ok, para_ok, zh_ok])
+		settings_ok, party_ok, card_ok, dlg_ok, para_ok, zh_ok, esc_ok])
 	print("UI_OVERLAY: vp=%s bag=%s market=%s dialog=%s" % [vp, bag2, mkt, dr])
 	print("UI_OVERLAY: %s" % ("OK" if ok else "FAIL"))
 	quit(0 if ok else 1)
