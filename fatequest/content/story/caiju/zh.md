@@ -2,7 +2,7 @@
 unit: caiju
 lang: zh
 source: en
-source_rev: c50abe042736
+source_rev: ee7015e3592b
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.caiju.entry.choice.pass: 96d145abaf05
   ev.caiju.entry.body: c163159d1124
   ev.caiju.entry.title: dc274ca46216
+  ev.ev_caiju_entry.choice_1_result: bd33f4197dee
+  ev.ev_caiju_entry.choice_2_result: 7302bc414ce1
 ---
 
 ## city.caiju.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.caiju.entry.title
 
 记瓜州
+
+## ev.ev_caiju_entry.choice_1_result
+
+你穿城而过，不加停留，通往瓜州的道路，就此展开在舆图上。
+
+## ev.ev_caiju_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往瓜州的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

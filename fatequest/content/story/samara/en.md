@@ -32,3 +32,11 @@ Rest half a day by the road
 ## ev.samara.entry.title
 
 Arriving at Samara
+
+## ev.ev_samara_entry.choice_1_result
+
+You ride on without delay. You set the way to Samara on your map.
+
+## ev.ev_samara_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Samara opens on your map.

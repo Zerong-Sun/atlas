@@ -83,3 +83,39 @@ Buy paper-money at a stall near the cremation ground
 ## ev.siju.b.choice.ask
 
 Ask an elder why they burn rather than bury
+
+## ev.ev_siju_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Siju on your map.
+
+## ev.ev_siju_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Siju opens on your map.
+
+## ev.ev_siju_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Siju on your map.
+
+## ev.ev_siju_a.choice_1_result
+
+You tour the manufactures brought down from Piju. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Paukin on your map.
+
+## ev.ev_siju_a.choice_2_result
+
+You buy sugar from a refiner's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Coigangiu opens on your map.
+
+## ev.ev_siju_a.choice_3_result
+
+You walk the grain market on the fertile plain. You set what you saw into your travel book. A small turn of fortune favours you. You set the way to Coiganju on your map.
+
+## ev.ev_siju_b.choice_1_result
+
+You stand at a respectful distance and watch a funeral rite. It costs you 1 day on the road. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_siju_b.choice_2_result
+
+You buy paper-money at a stall near the cremation ground. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+## ev.ev_siju_b.choice_3_result
+
+You ask an elder why they burn rather than bury. The account is written down before the hour turns. Fortune bends a little your way.

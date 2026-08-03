@@ -2,7 +2,7 @@
 unit: cail
 lang: zh
 source: en
-source_rev: 156ae99f9ffb
+source_rev: cc3d7f6c72ae
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.cail.b.choice.wait_audience: 89d61662b937
   ev.cail.b.choice.hear_brothers: dca6deb72e38
   ev.cail.b.choice.buy_cotton: 41cb9eb05d38
+  ev.ev_cail_entry.choice_1_result: 8c6cb943c3aa
+  ev.ev_cail_entry.choice_2_result: cae81682ee80
+  ev.ev_cail_entry.choice_3_result: afc54530576f
+  ev.ev_cail_a.choice_1_result: ea4cf05216fd
+  ev.ev_cail_a.choice_2_result: 9cfcb17daf36
+  ev.ev_cail_a.choice_3_result: 1231df9d9707
+  ev.ev_cail_b.choice_1_result: aba474628d0a
+  ev.ev_cail_b.choice_2_result: 82eef34c105b
+  ev.ev_cail_b.choice_3_result: 7bb9a23c5440
 ---
 
 ## city.cail.name
@@ -97,3 +106,39 @@ stamps:
 ## ev.cail.b.choice.buy_cotton
 
 在海滨集市买棉布
+
+## ev.ev_cail_entry.choice_1_result
+
+你匆匆穿过 darvāzā（城门），你标出了通往加异勒的路。
+
+## ev.ev_cail_entry.choice_2_result
+
+你穿过 bāzār（集市），为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往加异勒的道路，就此展开在舆图上。
+
+## ev.ev_cail_entry.choice_3_result
+
+你去 mandir（神庙）看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往加异勒的路。
+
+## ev.ev_cail_a.choice_1_result
+
+你在码头立一日，看马匹上岸，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往没来（马拉巴尔）的路。
+
+## ev.ev_cail_a.choice_2_result
+
+你向忽鲁谟斯商人买一匹阿拉伯战马，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_cail_a.choice_3_result
+
+你问船主下次泊在何处，你标出了通往俱蓝（奎隆）的路。你标出了通往须文那（苏门答腊）的路。你把这番见闻记入行纪。
+
+## ev.ev_cail_b.choice_1_result
+
+你在广场候二日，盼见国王仪仗，为此费去你 2 日路程。你的行事之名先你一步传开。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_cail_b.choice_2_result
+
+你听掮客述五兄弟王之事，你标出了通往没来（马拉巴尔）的路。你标出了通往俱蓝（奎隆）的路。你把这番见闻记入行纪。
+
+## ev.ev_cail_b.choice_3_result
+
+你在海滨集市买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。

@@ -25,7 +25,6 @@ sheikhs whose names are known from Sindia to China. You must know that no
 junk puts in here without passing beneath the clerks' brushes, and no traveller
 leaves without hearing what the saints of this place have said of the road ahead.
 
-
 ## ev.alexandria.entry.choice.look
 
 Rest and ask what men say of this place
@@ -37,3 +36,11 @@ Pass through without stopping
 ## ev.alexandria.entry.title
 
 Arriving at Alexandria
+
+## ev.ev_alexandria_entry.choice_1_result
+
+You pass through without stopping. You set the way to Alexandria on your map.
+
+## ev.ev_alexandria_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Alexandria opens on your map. It costs you 1 day on the road.

@@ -35,3 +35,11 @@ Pass through without stopping
 ## ev.cachanfu.entry.title
 
 Concerning the Great River Caramoran and the City of Cachanfu
+
+## ev.ev_cachanfu_entry.choice_1_result
+
+You pass through without stopping. You set the way to Cachanfu on your map.
+
+## ev.ev_cachanfu_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Cachanfu opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

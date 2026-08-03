@@ -24,7 +24,6 @@ where the Ismā‘īlīyah once held the gate between Buza‘ah and the city. Yo
 know that Aleppo has been sought by many kings, and that its roofed sūqs and
 its citadel mark it among the great cities of Syria.
 
-
 ## ev.berrhoea.entry.choice.look
 
 Rest and ask what men say of this place
@@ -36,3 +35,11 @@ Pass through without stopping
 ## ev.berrhoea.entry.title
 
 Arriving at Berrhoea
+
+## ev.ev_berrhoea_entry.choice_1_result
+
+You pass through without stopping. The road to Berrhoea opens on your map.
+
+## ev.ev_berrhoea_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Berrhoea on your map. You spend 1 day before the way is clear again.

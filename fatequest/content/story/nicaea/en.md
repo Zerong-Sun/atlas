@@ -32,3 +32,11 @@ Rest half a day by the road
 ## ev.nicaea.entry.title
 
 Arriving at Nicaea
+
+## ev.ev_nicaea_entry.choice_1_result
+
+You ride on without delay. You set the way to Nicaea on your map.
+
+## ev.ev_nicaea_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Nicaea opens on your map.

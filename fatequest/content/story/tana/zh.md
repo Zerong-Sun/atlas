@@ -2,7 +2,7 @@
 unit: tana
 lang: zh
 source: en
-source_rev: a7df6f4bb295
+source_rev: f743d5e0533d
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.tana.entry.choice.pass: 96d145abaf05
   ev.tana.entry.body: 39600eede34d
   ev.tana.entry.title: d6df39470a63
+  ev.ev_tana_entry.choice_1_result: 04ae0af71cf8
+  ev.ev_tana_entry.choice_2_result: 505637049013
 ---
 
 ## city.tana.name
@@ -40,3 +42,11 @@ bāzār（集市）上皮革与棉布成堆；城中有mandir（神庙）。
 ## ev.tana.entry.title
 
 记塔那国
+
+## ev.ev_tana_entry.choice_1_result
+
+你穿城而过，不加停留，通往塔那的道路，就此展开在舆图上。
+
+## ev.ev_tana_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往塔那的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

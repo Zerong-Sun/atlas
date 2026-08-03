@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: 4cd0d3f143f5
+source_rev: 1a9439206005
 status: translated
 translator: 人工校译
 notes: >
@@ -65,33 +65,33 @@ stamps:
   market.zayton.item.silk: cb0933e8d1cc
   market.zayton.item.sugar: c92a7af00746
   market.zayton.item.tea: d8a2a9c1a5a2
-  ev.ev_zayton_entry.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_entry.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_entry.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_entry.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_entry.choice_3_result: 0f17302674f3
-  ev.ev_zayton_jiaobei_ask.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_jiaobei_ask.choice_2_result: b8d02cb03b95
-  ev.ev_zayton_pilot_consequence.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_pilot_consequence.choice_2_result: b8d02cb03b95
-  ev.ev_zayton_harbour.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_harbour.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_jiaobei_ask.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_jiaobei_ask.choice_2_result: 140f6bf24cf5
+  ev.ev_zayton_pilot_consequence.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_pilot_consequence.choice_2_result: 140f6bf24cf5
+  ev.ev_zayton_harbour.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_harbour.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_harbour.choice_3_result: 0f17302674f3
-  ev.ev_zayton_fanfang.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_fanfang.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_fanfang.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_fanfang.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_fanfang.choice_3_result: 0f17302674f3
-  ev.ev_zayton_mazu.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_mazu.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_mazu.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_mazu.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_mazu.choice_3_result: 0f17302674f3
-  ev.ev_zayton_mentor.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_mentor.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_mentor.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_mentor.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_mentor.choice_3_result: 0f17302674f3
-  ev.ev_zayton_ledger_consequence_resolution.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: b8d02cb03b95
-  ev.ev_zayton_watch_consequence_resolution.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_watch_consequence_resolution.choice_2_result: b8d02cb03b95
-  ev.ev_zayton_ledger_consequence.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_ledger_consequence.choice_2_result: b8d02cb03b95
-  ev.ev_zayton_watch_consequence.choice_1_result: ff1ff815c02d
-  ev.ev_zayton_watch_consequence.choice_2_result: b8d02cb03b95
+  ev.ev_zayton_ledger_consequence_resolution.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 140f6bf24cf5
+  ev.ev_zayton_watch_consequence_resolution.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_watch_consequence_resolution.choice_2_result: 140f6bf24cf5
+  ev.ev_zayton_ledger_consequence.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_ledger_consequence.choice_2_result: 140f6bf24cf5
+  ev.ev_zayton_watch_consequence.choice_1_result: 7ac246d0b5c5
+  ev.ev_zayton_watch_consequence.choice_2_result: 140f6bf24cf5
   ev.ev_zayton_ledger_consequence_resolution.title: 7a639d219752
   ev.ev_zayton_ledger_consequence_resolution.body: 357c2908f927
   ev.ev_zayton_ledger_consequence_resolution.choice_1: 3b4827283f98

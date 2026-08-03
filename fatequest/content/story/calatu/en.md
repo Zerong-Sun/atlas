@@ -82,3 +82,39 @@ Buy dates brought in with the grain ships
 ## ev.calatu.b.choice.ask_inland
 
 Ask the caravan masters which inland roads leave from here
+
+## ev.ev_calatu_entry.choice_1_result
+
+You pass through the darvāzā without delay. The road to Calatu opens on your map.
+
+## ev.ev_calatu_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Calatu on your map.
+
+## ev.ev_calatu_entry.choice_3_result
+
+You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Calatu opens on your map.
+
+## ev.ev_calatu_a.choice_1_result
+
+You walk the fort walls and look out upon the gulf. It costs you 1 day on the road. The road to Ormus opens on your map. The account is written down before the hour turns.
+
+## ev.ev_calatu_a.choice_2_result
+
+You buy a sack of pepper from the Indian merchants. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_calatu_a.choice_3_result
+
+You stand upon the mole and count the vessels at anchor. The road to Dufar opens on your map. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_calatu_b.choice_1_result
+
+You hear how the Melic of Hormos uses this city as a refuge. You set what you saw into your travel book. You set the way to Ormus on your map. A small turn of fortune favours you.
+
+## ev.ev_calatu_b.choice_2_result
+
+You buy dates brought in with the grain ships. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+## ev.ev_calatu_b.choice_3_result
+
+You ask the caravan masters which inland roads leave from here. You set the way to Camadi on your map. You set the way to Dufar on your map. You set what you saw into your travel book.

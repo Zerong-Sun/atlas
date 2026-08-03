@@ -2,7 +2,7 @@
 unit: sinju
 lang: zh
 source: en
-source_rev: ec383ccaeed3
+source_rev: 766d8a0d9cc0
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.sinju.b.choice.quay: 2b0ef9457307
   ev.sinju.b.choice.porcelain: 55b45efebee4
   ev.sinju.b.choice.harbour: 79a04f6ecae6
+  ev.ev_sinju_entry.choice_1_result: bcbf984b2a25
+  ev.ev_sinju_entry.choice_2_result: 75a64a6da9ed
+  ev.ev_sinju_entry.choice_3_result: fb9e2acb13d4
+  ev.ev_sinju_a.choice_1_result: 3bdd6f80d246
+  ev.ev_sinju_a.choice_2_result: 5e33eb32de5c
+  ev.ev_sinju_a.choice_3_result: 6c47fbb0a7f5
+  ev.ev_sinju_b.choice_1_result: c856af921631
+  ev.ev_sinju_b.choice_2_result: 180a217d539f
+  ev.ev_sinju_b.choice_3_result: cc2bdbfa9cb1
 ---
 
 ## city.sinju.name
@@ -95,3 +104,39 @@ stamps:
 ## ev.sinju.b.choice.harbour
 
 巡埠头，记城小而货盛
+
+## ev.ev_sinju_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往真州（仪征）的路。
+
+## ev.ev_sinju_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往真州（仪征）的道路，就此展开在舆图上。
+
+## ev.ev_sinju_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往真州（仪征）的路。
+
+## ev.ev_sinju_a.choice_1_result
+
+你立岸数泊船之数，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往瓜州的路。
+
+## ev.ev_sinju_a.choice_2_result
+
+你向江船客购茶，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往扬州的道路，就此展开在舆图上。
+
+## ev.ev_sinju_a.choice_3_result
+
+你问税吏岁过船几何，你把这番见闻记入行纪。时运待你，比先前好了几分。你标出了通往镇江府的路。
+
+## ev.ev_sinju_b.choice_1_result
+
+你看商人以交钞纳埠头税，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+
+## ev.ev_sinju_b.choice_2_result
+
+你向江商购瓷器，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_sinju_b.choice_3_result
+
+你巡埠头，记城小而货盛，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。

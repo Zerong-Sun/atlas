@@ -83,3 +83,39 @@ Watch a funeral party pass toward the cremation ground
 ## ev.tanpiju.b.choice.lacquer
 
 Buy lacquerware from a Kinsay trader's stall
+
+## ev.ev_tanpiju_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Tanpiju on your map.
+
+## ev.ev_tanpiju_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Tanpiju opens on your map.
+
+## ev.ev_tanpiju_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Tanpiju on your map.
+
+## ev.ev_tanpiju_a.choice_1_result
+
+You walk the garden road from Kinsay. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Kinsay on your map.
+
+## ev.ev_tanpiju_a.choice_2_result
+
+You buy tea from a gardener's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Fuju opens on your map.
+
+## ev.ev_tanpiju_a.choice_3_result
+
+You ask which gardens feed the silkworms. You set what you saw into your travel book. A small turn of fortune favours you. You set the way to Chinginju on your map.
+
+## ev.ev_tanpiju_b.choice_1_result
+
+You walk the market where Kinsay goods are sold. It costs you 1 day on the road. The account is written down before the hour turns. The trade fills your hold a little.
+
+## ev.ev_tanpiju_b.choice_2_result
+
+You watch a funeral party pass toward the cremation ground. You set what you saw into your travel book. Your name carries a little more weight here now. A small turn of fortune favours you.
+
+## ev.ev_tanpiju_b.choice_3_result
+
+You buy lacquerware from a Kinsay trader's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Kinsay opens on your map.

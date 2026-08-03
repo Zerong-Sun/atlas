@@ -2,7 +2,7 @@
 unit: dongola
 lang: zh
 source: en
-source_rev: 481a5782c4c6
+source_rev: 922a5d1842fa
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.dongola.entry.choice.rest: cc453f19a435
   ev.dongola.entry.body: 68d800bc70f1
   ev.dongola.entry.title: 08ccec81fd8c
+  ev.ev_dongola_entry.choice_1_result: 30f7a87cff89
+  ev.ev_dongola_entry.choice_2_result: 2679d7137442
 ---
 
 ## city.dongola.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.dongola.entry.title
 
 至洞古剌
+
+## ev.ev_dongola_entry.choice_1_result
+
+你继续赶路，不作停留，通往洞古剌的道路，就此展开在舆图上。
+
+## ev.ev_dongola_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往洞古剌的路。

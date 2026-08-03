@@ -2,7 +2,7 @@
 unit: kinsay
 lang: zh
 source: en
-source_rev: a437d0cbedbe
+source_rev: c352e576eb54
 status: translated
 translator: 人工校译
 notes: >
@@ -32,44 +32,44 @@ stamps:
   ev.kinsay.c.title: 4df4bc077831
   ev.kinsay.entry.body: 74b5e172b3d8
   ev.kinsay.entry.title: 4ff36535d29a
-  ev.ev_kinsay_entry.choice_1_result: 00051dac2baa
-  ev.ev_kinsay_entry.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_entry.choice_1_result: 747e7619900d
+  ev.ev_kinsay_entry.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_entry.choice_3_result: 9958b5c302d4
-  ev.ev_kinsay_mentor_jiaobei.choice_1_result: 00051dac2baa
-  ev.ev_kinsay_mentor_jiaobei.choice_2_result: 644a7e6e6d1d
-  ev.ev_kinsay_a.choice_1_result: 00051dac2baa
-  ev.ev_kinsay_a.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_mentor_jiaobei.choice_1_result: 747e7619900d
+  ev.ev_kinsay_mentor_jiaobei.choice_2_result: ac1e47e3c8b8
+  ev.ev_kinsay_a.choice_1_result: 747e7619900d
+  ev.ev_kinsay_a.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_a.choice_3_result: 9958b5c302d4
-  ev.ev_kinsay_b.choice_1_result: 00051dac2baa
-  ev.ev_kinsay_b.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_b.choice_1_result: 747e7619900d
+  ev.ev_kinsay_b.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_b.choice_3_result: 9958b5c302d4
-  ev.ev_kinsay_c.choice_1_result: 00051dac2baa
-  ev.ev_kinsay_c.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_c.choice_1_result: 747e7619900d
+  ev.ev_kinsay_c.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_c.choice_3_result: 9958b5c302d4
   ev.ev_kinsay_consequence_a.title: 0ec5f1c48602
   ev.ev_kinsay_consequence_a.body: 34b649331d78
   ev.ev_kinsay_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_kinsay_consequence_a.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_a.choice_1_result: 747e7619900d
   ev.ev_kinsay_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_kinsay_consequence_a.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_a.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_consequence_a_resolution.title: df1a1d394f66
   ev.ev_kinsay_consequence_a_resolution.body: 357c2908f927
   ev.ev_kinsay_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_kinsay_consequence_a_resolution.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_a_resolution.choice_1_result: 747e7619900d
   ev.ev_kinsay_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_kinsay_consequence_a_resolution.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_a_resolution.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_consequence_b.title: a7c938f27bbd
   ev.ev_kinsay_consequence_b.body: 8ae3d9be31ac
   ev.ev_kinsay_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_kinsay_consequence_b.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_b.choice_1_result: 747e7619900d
   ev.ev_kinsay_consequence_b.choice_2: bb0917a651a0
-  ev.ev_kinsay_consequence_b.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_b.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_consequence_b_resolution.title: df1a1d394f66
   ev.ev_kinsay_consequence_b_resolution.body: 827b72f18207
   ev.ev_kinsay_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_kinsay_consequence_b_resolution.choice_1_result: 00051dac2baa
+  ev.ev_kinsay_consequence_b_resolution.choice_1_result: 747e7619900d
   ev.ev_kinsay_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_kinsay_consequence_b_resolution.choice_2_result: 644a7e6e6d1d
+  ev.ev_kinsay_consequence_b_resolution.choice_2_result: ac1e47e3c8b8
   ev.ev_kinsay_a_followup.title: aa04e443a837
   ev.ev_kinsay_a_followup.body: e543ff163f1e
   ev.ev_kinsay_a_followup.choice_1: c25263604fbd

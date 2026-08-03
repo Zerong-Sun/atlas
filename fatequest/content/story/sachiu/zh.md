@@ -2,7 +2,7 @@
 unit: sachiu
 lang: zh
 source: en
-source_rev: 4a5fbf0a057f
+source_rev: 7706c78f3bc7
 status: translated
 translator: 人工校译
 notes: >
@@ -15,6 +15,7 @@ stamps:
   ev.sachiu.entry.choice.arrive: a3f3e25c5368
   ev.sachiu.entry.body: b15893bed8fb
   ev.sachiu.entry.title: 6c09e3c4f982
+  ev.ev_sachiu_entry.choice_1_result: 3444d3cc772f
 ---
 
 ## city.sachiu.name
@@ -35,3 +36,7 @@ stamps:
 ## ev.sachiu.entry.title
 
 沙州
+
+## ev.ev_sachiu_entry.choice_1_result
+
+你经过，你带走此地的一枚小小印记。你把这番见闻记入行纪。

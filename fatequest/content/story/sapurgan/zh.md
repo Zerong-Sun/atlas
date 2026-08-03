@@ -2,7 +2,7 @@
 unit: sapurgan
 lang: zh
 source: en
-source_rev: 4a0f19ab8aec
+source_rev: c39bb874ed5f
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.sapurgan.entry.choice.pass: 96d145abaf05
   ev.sapurgan.entry.body: 028fcdaaaccb
   ev.sapurgan.entry.title: 768dfb7e3d69
+  ev.ev_sapurgan_entry.choice_1_result: 6235aaa7251c
+  ev.ev_sapurgan_entry.choice_2_result: 1f05735db398
 ---
 
 ## city.sapurgan.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.sapurgan.entry.title
 
 撒普尔干
+
+## ev.ev_sapurgan_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往撒普儿干的路。
+
+## ev.ev_sapurgan_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往撒普儿干的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

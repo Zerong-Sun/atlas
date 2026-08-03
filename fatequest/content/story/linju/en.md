@@ -34,3 +34,11 @@ Pass through without stopping
 ## ev.linju.entry.title
 
 Concerning the Cities of Linju and Piju
+
+## ev.ev_linju_entry.choice_1_result
+
+You pass through without stopping. The road to Linju opens on your map.
+
+## ev.ev_linju_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Linju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.

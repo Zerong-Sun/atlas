@@ -31,3 +31,11 @@ Pass through without stopping
 ## ev.kiovia.entry.title
 
 Arriving at Kiovia
+
+## ev.ev_kiovia_entry.choice_1_result
+
+You pass through without stopping. You set the way to Kiovia on your map.
+
+## ev.ev_kiovia_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Kiovia opens on your map. It costs you 1 day on the road.

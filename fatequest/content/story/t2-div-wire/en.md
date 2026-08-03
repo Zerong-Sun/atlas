@@ -282,3 +282,50 @@ Cast the pillars
 
 Walk on
 
+## ev.ev_alexandria_mentor_geomancy.choice_1_result
+
+You pay and learn geomancy. Coin changes hands, and the purse settles. You spend 10 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+## ev.ev_alexandria_mentor_geomancy.choice_2_result
+
+You ask what Populus means for a voyage. The account is written down before the hour turns.
+
+## ev.ev_kiovia_mentor_runes.choice_1_result
+
+You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+## ev.ev_kiovia_mentor_runes.choice_2_result
+
+You hear how a single rune is drawn. The account is written down before the hour turns.
+
+## ev.ev_caffa_mentor_runes.choice_1_result
+
+You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+## ev.ev_caffa_mentor_runes.choice_2_result
+
+You ask what Raidho names on this quay. The account is written down before the hour turns.
+
+## ev.ev_road_jiaobei_counsel.choice_2_result
+
+You walk on. The matter is marked and will not be forgotten.
+
+## ev.ev_road_astrodice_counsel.choice_2_result
+
+You walk on. A mark is set on this affair.
+
+## ev.ev_road_geomancy_counsel.choice_2_result
+
+You walk on. The matter is marked and will not be forgotten.
+
+## ev.ev_road_runes_counsel.choice_2_result
+
+You walk on. The matter is marked and will not be forgotten.
+
+## ev.ev_kiovia_runes_ford.choice_2_result
+
+You cross without a mark. The matter is marked and will not be forgotten.
+
+## ev.ev_road_bazi_counsel.choice_2_result
+
+You walk on. A mark is set on this affair.

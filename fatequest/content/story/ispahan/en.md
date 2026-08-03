@@ -33,3 +33,11 @@ Rest half a day by the road
 ## ev.ispahan.entry.title
 
 Arriving at Ispahan
+
+## ev.ev_ispahan_entry.choice_1_result
+
+You ride on without delay. The road to Ispahan opens on your map.
+
+## ev.ev_ispahan_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Ispahan on your map.

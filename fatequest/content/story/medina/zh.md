@@ -2,7 +2,7 @@
 unit: medina
 lang: zh
 source: en
-source_rev: f3744c02438d
+source_rev: 0bcfbb089ce0
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.medina.entry.choice.rest: cc453f19a435
   ev.medina.entry.body: cb605e1d6bd8
   ev.medina.entry.title: ffa73d993347
+  ev.ev_medina_entry.choice_1_result: 9df3eed8a4ba
+  ev.ev_medina_entry.choice_2_result: a0d4cd5ed83c
 ---
 
 ## city.medina.name
@@ -40,3 +42,10 @@ stamps:
 
 至默德那
 
+## ev.ev_medina_entry.choice_1_result
+
+你继续赶路，不作停留，通往默德那（麦地那）的道路，就此展开在舆图上。
+
+## ev.ev_medina_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往默德那（麦地那）的路。

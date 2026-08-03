@@ -2,7 +2,7 @@
 unit: basora
 lang: zh
 source: en
-source_rev: 5118cd26a013
+source_rev: 9b77413d601d
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.basora.entry.choice.rest: cc453f19a435
   ev.basora.entry.body: 1d7fce52b170
   ev.basora.entry.title: 16f0f5df1d53
+  ev.ev_basora_entry.choice_1_result: 68bb334a1f1d
+  ev.ev_basora_entry.choice_2_result: bbf8bed94aa1
 ---
 
 ## city.basora.name
@@ -40,3 +42,10 @@ stamps:
 
 巴士拉
 
+## ev.ev_basora_entry.choice_1_result
+
+你继续赶路，不作停留，通往巴索拉（巴士拉）的道路，就此展开在舆图上。
+
+## ev.ev_basora_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往巴索拉（巴士拉）的路。

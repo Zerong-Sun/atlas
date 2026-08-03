@@ -24,7 +24,6 @@ and fruit is brought in from the hill farms. You must know that Latin, Greek,
 and Arabic tongues are all heard upon these quays, and that the Templars' tower
 watches the roadstead.
 
-
 ## ev.accon.entry.choice.look
 
 Rest and ask what men say of this place
@@ -36,3 +35,11 @@ Pass through without stopping
 ## ev.accon.entry.title
 
 Arriving at Accon
+
+## ev.ev_accon_entry.choice_1_result
+
+You pass through without stopping. The road to Accon opens on your map.
+
+## ev.ev_accon_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Accon on your map. You spend 1 day before the way is clear again.

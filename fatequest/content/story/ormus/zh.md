@@ -2,7 +2,7 @@
 unit: ormus
 lang: zh
 source: en
-source_rev: 5c97aa7f6fed
+source_rev: 8b7ea1d73f68
 status: translated
 translator: 人工校译
 notes: >
@@ -32,46 +32,46 @@ stamps:
   ev.ormus.c.title: 6bff4f2afc10
   ev.ormus.entry.body: a155f652de5e
   ev.ormus.entry.title: fbb93d61bc73
-  ev.ev_ormus_entry.choice_1_result: adfc171d3abf
-  ev.ev_ormus_entry.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_entry.choice_1_result: 28a86388d749
+  ev.ev_ormus_entry.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_entry.choice_3_result: dff0bbe18824
-  ev.ev_ormus_mentor_astrodice.choice_1_result: adfc171d3abf
-  ev.ev_ormus_mentor_astrodice.choice_2_result: 36cc5d3c89f1
-  ev.ev_ormus_astrodice_tide.choice_1_result: adfc171d3abf
-  ev.ev_ormus_astrodice_tide.choice_2_result: 36cc5d3c89f1
-  ev.ev_ormus_a.choice_1_result: adfc171d3abf
-  ev.ev_ormus_a.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_mentor_astrodice.choice_1_result: 28a86388d749
+  ev.ev_ormus_mentor_astrodice.choice_2_result: 5a65a8ebdfb7
+  ev.ev_ormus_astrodice_tide.choice_1_result: 28a86388d749
+  ev.ev_ormus_astrodice_tide.choice_2_result: 5a65a8ebdfb7
+  ev.ev_ormus_a.choice_1_result: 28a86388d749
+  ev.ev_ormus_a.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_a.choice_3_result: dff0bbe18824
-  ev.ev_ormus_b.choice_1_result: adfc171d3abf
-  ev.ev_ormus_b.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_b.choice_1_result: 28a86388d749
+  ev.ev_ormus_b.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_b.choice_3_result: dff0bbe18824
-  ev.ev_ormus_c.choice_1_result: adfc171d3abf
-  ev.ev_ormus_c.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_c.choice_1_result: 28a86388d749
+  ev.ev_ormus_c.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_c.choice_3_result: dff0bbe18824
   ev.ev_ormus_consequence_a.title: d01ed0947ae4
   ev.ev_ormus_consequence_a.body: 7ba5edd4ee6f
   ev.ev_ormus_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_ormus_consequence_a.choice_1_result: adfc171d3abf
+  ev.ev_ormus_consequence_a.choice_1_result: 28a86388d749
   ev.ev_ormus_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_ormus_consequence_a.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_consequence_a.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_consequence_a_resolution.title: 0e8235d2dd40
   ev.ev_ormus_consequence_a_resolution.body: 357c2908f927
   ev.ev_ormus_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_ormus_consequence_a_resolution.choice_1_result: adfc171d3abf
+  ev.ev_ormus_consequence_a_resolution.choice_1_result: 28a86388d749
   ev.ev_ormus_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_ormus_consequence_a_resolution.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_consequence_a_resolution.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_consequence_b.title: 2d14d8f9858b
   ev.ev_ormus_consequence_b.body: 7c2530422322
   ev.ev_ormus_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_ormus_consequence_b.choice_1_result: adfc171d3abf
+  ev.ev_ormus_consequence_b.choice_1_result: 28a86388d749
   ev.ev_ormus_consequence_b.choice_2: bb0917a651a0
-  ev.ev_ormus_consequence_b.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_consequence_b.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_consequence_b_resolution.title: 0e8235d2dd40
   ev.ev_ormus_consequence_b_resolution.body: 827b72f18207
   ev.ev_ormus_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_ormus_consequence_b_resolution.choice_1_result: adfc171d3abf
+  ev.ev_ormus_consequence_b_resolution.choice_1_result: 28a86388d749
   ev.ev_ormus_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_ormus_consequence_b_resolution.choice_2_result: 36cc5d3c89f1
+  ev.ev_ormus_consequence_b_resolution.choice_2_result: 5a65a8ebdfb7
   ev.ev_ormus_a_followup.title: 004ea54ff1d8
   ev.ev_ormus_a_followup.body: 0606d6cc56bd
   ev.ev_ormus_a_followup.choice_1: 50aed45f2217

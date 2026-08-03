@@ -108,27 +108,27 @@ The Caves of Lop
 
 ## ev.ev_lop_entry.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_bazaar.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_bazaar.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_caravanserai.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
@@ -136,11 +136,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_lop_shrine.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_shrine.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_a.title
 
@@ -156,7 +156,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_lop_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_a.choice_2
 
@@ -164,7 +164,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_lop_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_a_resolution.title
 
@@ -180,7 +180,7 @@ Make the introduction before nightfall
 
 ## ev.ev_lop_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_a_resolution.choice_2
 
@@ -188,7 +188,7 @@ Keep the sign in your travel book
 
 ## ev.ev_lop_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_b.title
 
@@ -204,7 +204,7 @@ Follow the practical advice
 
 ## ev.ev_lop_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_b.choice_2
 
@@ -212,7 +212,7 @@ Leave the rumour with the teller
 
 ## ev.ev_lop_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_b_resolution.title
 
@@ -228,7 +228,7 @@ Make the introduction before nightfall
 
 ## ev.ev_lop_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.ev_lop_consequence_b_resolution.choice_2
 
@@ -236,7 +236,7 @@ Keep the sign in your travel book
 
 ## ev.ev_lop_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.lop.mentor_closure.title
 
@@ -252,7 +252,7 @@ Ask what the road will demand
 
 ## ev.lop.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the the sand sea and its old wells.
+The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
 
 ## ev.lop.mentor_closure.choice_2
 
@@ -260,7 +260,7 @@ Stay for a day and listen to the whole account
 
 ## ev.lop.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the sand sea and its old wells.
+The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
 
 ## ev.lop.mentor_closure.choice_3
 

@@ -83,3 +83,39 @@ Buy rhubarb from a garden stall
 ## ev.suju.b.choice.bridges
 
 Stand on a stone bridge and watch the canal traffic
+
+## ev.ev_suju_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Suju on your map.
+
+## ev.ev_suju_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Suju opens on your map.
+
+## ev.ev_suju_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Suju on your map.
+
+## ev.ev_suju_a.choice_1_result
+
+You watch the gold brocade looms at work. You spend 2 days before the way is clear again. You set what you saw into your travel book. You set the way to Kinsay on your map.
+
+## ev.ev_suju_a.choice_2_result
+
+You buy a length of gold brocade. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+
+## ev.ev_suju_a.choice_3_result
+
+You ride part of the city's sixty-mile circuit. You set what you saw into your travel book. A small turn of fortune favours you. You set the way to Chinghianfu on your map.
+
+## ev.ev_suju_b.choice_1_result
+
+You walk the canal gardens with a merchant's clerk. It costs you 1 day on the road. The account is written down before the hour turns. The road to Chinginju opens on your map.
+
+## ev.ev_suju_b.choice_2_result
+
+You buy rhubarb from a garden stall. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+## ev.ev_suju_b.choice_3_result
+
+You stand on a stone bridge and watch the canal traffic. The account is written down before the hour turns. Word of your conduct runs ahead of you.

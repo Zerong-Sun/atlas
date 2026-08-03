@@ -2,7 +2,7 @@
 unit: tanpiju
 lang: zh
 source: en
-source_rev: b2e4779ffcb9
+source_rev: feb7142f5010
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.tanpiju.b.choice.market: 665fe163939c
   ev.tanpiju.b.choice.funeral: 093a1d056852
   ev.tanpiju.b.choice.lacquer: 2cb0527ddc76
+  ev.ev_tanpiju_entry.choice_1_result: 735735579d70
+  ev.ev_tanpiju_entry.choice_2_result: 72cc8c04f52a
+  ev.ev_tanpiju_entry.choice_3_result: 77ac5c687027
+  ev.ev_tanpiju_a.choice_1_result: 569fab400a9a
+  ev.ev_tanpiju_a.choice_2_result: 7c46f8b4257c
+  ev.ev_tanpiju_a.choice_3_result: 48b7924bcded
+  ev.ev_tanpiju_b.choice_1_result: a2e60a4d66e7
+  ev.ev_tanpiju_b.choice_2_result: e3bbf02d8870
+  ev.ev_tanpiju_b.choice_3_result: 804801f25e40
 ---
 
 ## city.tanpiju.name
@@ -97,3 +106,39 @@ stamps:
 ## ev.tanpiju.b.choice.lacquer
 
 于行在商贩摊购漆器
+
+## ev.ev_tanpiju_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往通州（桐庐）的路。
+
+## ev.ev_tanpiju_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往通州（桐庐）的道路，就此展开在舆图上。
+
+## ev.ev_tanpiju_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往通州（桐庐）的路。
+
+## ev.ev_tanpiju_a.choice_1_result
+
+你沿自行在来之园路而行，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往行在（杭州）的路。
+
+## ev.ev_tanpiju_a.choice_2_result
+
+你于园户摊购茶，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往福州的道路，就此展开在舆图上。
+
+## ev.ev_tanpiju_a.choice_3_result
+
+你问何园供蚕食，你把这番见闻记入行纪。时运待你，比先前好了几分。你标出了通往常州的路。
+
+## ev.ev_tanpiju_b.choice_1_result
+
+你巡行在货于市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+
+## ev.ev_tanpiju_b.choice_2_result
+
+你见丧队往火化地，你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。时运待你，比先前好了几分。
+
+## ev.ev_tanpiju_b.choice_3_result
+
+你于行在商贩摊购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往行在（杭州）的道路，就此展开在舆图上。

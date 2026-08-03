@@ -2,7 +2,7 @@
 unit: cabul
 lang: zh
 source: en
-source_rev: d985912af88f
+source_rev: 7d7a481459ae
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.cabul.entry.choice.rest: cc453f19a435
   ev.cabul.entry.body: 446ff320dcad
   ev.cabul.entry.title: 05d10c3652d8
+  ev.ev_cabul_entry.choice_1_result: 81989812e29a
+  ev.ev_cabul_entry.choice_2_result: c8c601b1b000
 ---
 
 ## city.cabul.name
@@ -40,3 +42,10 @@ stamps:
 
 喀布尔
 
+## ev.ev_cabul_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往可不里（喀布尔）的路。
+
+## ev.ev_cabul_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往可不里（喀布尔）的道路，就此展开在舆图上。

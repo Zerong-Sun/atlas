@@ -2,7 +2,7 @@
 unit: cascar
 lang: zh
 source: en
-source_rev: 6970b3b5b476
+source_rev: 73ab90b1ea08
 status: translated
 translator: 人工校译
 notes: >
@@ -32,48 +32,48 @@ stamps:
   ev.cascar.c.title: b62e99ab1b16
   ev.cascar.entry.body: d7f9f8e7f288
   ev.cascar.entry.title: 6d770e58667f
-  ev.ev_cascar_entry.choice_1_result: 42fb44bda1d3
-  ev.ev_cascar_entry.choice_2_result: d989315b37e9
+  ev.ev_cascar_entry.choice_1_result: d24a5a091449
+  ev.ev_cascar_entry.choice_2_result: fd06c351f169
   ev.ev_cascar_entry.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_a.choice_1_result: 42fb44bda1d3
-  ev.ev_cascar_a.choice_2_result: d989315b37e9
+  ev.ev_cascar_a.choice_1_result: d24a5a091449
+  ev.ev_cascar_a.choice_2_result: fd06c351f169
   ev.ev_cascar_a.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_b.choice_1_result: 42fb44bda1d3
-  ev.ev_cascar_b.choice_2_result: d989315b37e9
+  ev.ev_cascar_b.choice_1_result: d24a5a091449
+  ev.ev_cascar_b.choice_2_result: fd06c351f169
   ev.ev_cascar_b.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_c.choice_1_result: 42fb44bda1d3
-  ev.ev_cascar_c.choice_2_result: d989315b37e9
+  ev.ev_cascar_c.choice_1_result: d24a5a091449
+  ev.ev_cascar_c.choice_2_result: fd06c351f169
   ev.ev_cascar_c.choice_3_result: 2dcbe72e40d3
   ev.ev_cascar_consequence_a.title: 5a7568ccaec2
   ev.ev_cascar_consequence_a.body: 228665473ea5
   ev.ev_cascar_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cascar_consequence_a.choice_1_result: 42fb44bda1d3
+  ev.ev_cascar_consequence_a.choice_1_result: d24a5a091449
   ev.ev_cascar_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cascar_consequence_a.choice_2_result: d989315b37e9
+  ev.ev_cascar_consequence_a.choice_2_result: fd06c351f169
   ev.ev_cascar_consequence_a_resolution.title: 320bbc8aa9ab
   ev.ev_cascar_consequence_a_resolution.body: 357c2908f927
   ev.ev_cascar_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cascar_consequence_a_resolution.choice_1_result: 42fb44bda1d3
+  ev.ev_cascar_consequence_a_resolution.choice_1_result: d24a5a091449
   ev.ev_cascar_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cascar_consequence_a_resolution.choice_2_result: d989315b37e9
+  ev.ev_cascar_consequence_a_resolution.choice_2_result: fd06c351f169
   ev.ev_cascar_consequence_b.title: 94ae968d6021
   ev.ev_cascar_consequence_b.body: 909b2d74573c
   ev.ev_cascar_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cascar_consequence_b.choice_1_result: 42fb44bda1d3
+  ev.ev_cascar_consequence_b.choice_1_result: d24a5a091449
   ev.ev_cascar_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cascar_consequence_b.choice_2_result: d989315b37e9
+  ev.ev_cascar_consequence_b.choice_2_result: fd06c351f169
   ev.ev_cascar_consequence_b_resolution.title: 320bbc8aa9ab
   ev.ev_cascar_consequence_b_resolution.body: 827b72f18207
   ev.ev_cascar_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cascar_consequence_b_resolution.choice_1_result: 42fb44bda1d3
+  ev.ev_cascar_consequence_b_resolution.choice_1_result: d24a5a091449
   ev.ev_cascar_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cascar_consequence_b_resolution.choice_2_result: d989315b37e9
+  ev.ev_cascar_consequence_b_resolution.choice_2_result: fd06c351f169
   ev.cascar.mentor_closure.title: c17ec69bc70c
   ev.cascar.mentor_closure.body: eaa67bc52e85
   ev.cascar.mentor_closure.choice_1: da8d611ab3c7
-  ev.cascar.mentor_closure.choice_1_result: 42fb44bda1d3
+  ev.cascar.mentor_closure.choice_1_result: d24a5a091449
   ev.cascar.mentor_closure.choice_2: 59a447ce21bf
-  ev.cascar.mentor_closure.choice_2_result: d989315b37e9
+  ev.cascar.mentor_closure.choice_2_result: fd06c351f169
   ev.cascar.mentor_closure.choice_3: 630a8fcfe069
   ev.cascar.mentor_closure.choice_3_result: 2dcbe72e40d3
   ev.ev_cascar_a_followup.title: 391591a6ed0c

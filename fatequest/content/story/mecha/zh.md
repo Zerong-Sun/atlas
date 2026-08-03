@@ -2,7 +2,7 @@
 unit: mecha
 lang: zh
 source: en
-source_rev: 9e9e0dc06718
+source_rev: e652d229268e
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.mecha.entry.choice.pass: 96d145abaf05
   ev.mecha.entry.body: 460ec1e01afc
   ev.mecha.entry.title: 793d34b31a75
+  ev.ev_mecha_entry.choice_1_result: c1c604a6b4f4
+  ev.ev_mecha_entry.choice_2_result: 64dd52adbe96
 ---
 
 ## city.mecha.name
@@ -40,3 +42,10 @@ stamps:
 
 至默伽
 
+## ev.ev_mecha_entry.choice_1_result
+
+你穿城而过，不加停留，通往默伽（麦加）的道路，就此展开在舆图上。
+
+## ev.ev_mecha_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往默伽（麦加）的路。你在路上用去 1 日光阴。

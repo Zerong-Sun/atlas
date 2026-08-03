@@ -24,7 +24,6 @@ know that these coasts of Room once belonged to the Romans, and that Romans
 still dwell here in number under Muslim rule, side by side with the Turkomans
 who hold the castles.
 
-
 ## ev.smyrna.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.smyrna.entry.title
 
 Arriving at Smyrna
+
+## ev.ev_smyrna_entry.choice_1_result
+
+You ride on without delay. The road to Smyrna opens on your map.
+
+## ev.ev_smyrna_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Smyrna on your map.

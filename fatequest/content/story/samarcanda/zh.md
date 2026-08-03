@@ -2,7 +2,7 @@
 unit: samarcanda
 lang: zh
 source: en
-source_rev: 03a49d3f29be
+source_rev: fa1e91582243
 status: translated
 translator: 人工校译
 notes: >
@@ -32,48 +32,48 @@ stamps:
   ev.samarcanda.c.title: cb8401993af6
   ev.samarcanda.entry.body: c6deec0502d7
   ev.samarcanda.entry.title: 549d9a825266
-  ev.ev_samarcanda_entry.choice_1_result: 4bbee73c3ea8
-  ev.ev_samarcanda_entry.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_entry.choice_1_result: 1f76fdb28523
+  ev.ev_samarcanda_entry.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_entry.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_a.choice_1_result: 4bbee73c3ea8
-  ev.ev_samarcanda_a.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_a.choice_1_result: 1f76fdb28523
+  ev.ev_samarcanda_a.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_a.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_b.choice_1_result: 4bbee73c3ea8
-  ev.ev_samarcanda_b.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_b.choice_1_result: 1f76fdb28523
+  ev.ev_samarcanda_b.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_b.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_c.choice_1_result: 4bbee73c3ea8
-  ev.ev_samarcanda_c.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_c.choice_1_result: 1f76fdb28523
+  ev.ev_samarcanda_c.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_c.choice_3_result: 33d2e695305a
   ev.ev_samarcanda_consequence_a.title: e9e72b928a44
   ev.ev_samarcanda_consequence_a.body: a4210e7e475e
   ev.ev_samarcanda_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_samarcanda_consequence_a.choice_1_result: 4bbee73c3ea8
+  ev.ev_samarcanda_consequence_a.choice_1_result: 1f76fdb28523
   ev.ev_samarcanda_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_samarcanda_consequence_a.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_consequence_a.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_consequence_a_resolution.title: 3252e600e6ca
   ev.ev_samarcanda_consequence_a_resolution.body: 357c2908f927
   ev.ev_samarcanda_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: 4bbee73c3ea8
+  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: 1f76fdb28523
   ev.ev_samarcanda_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_consequence_b.title: 3e1c3889cb14
   ev.ev_samarcanda_consequence_b.body: 272bf30fd4a5
   ev.ev_samarcanda_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_samarcanda_consequence_b.choice_1_result: 4bbee73c3ea8
+  ev.ev_samarcanda_consequence_b.choice_1_result: 1f76fdb28523
   ev.ev_samarcanda_consequence_b.choice_2: bb0917a651a0
-  ev.ev_samarcanda_consequence_b.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_consequence_b.choice_2_result: fa3ce0606be2
   ev.ev_samarcanda_consequence_b_resolution.title: 3252e600e6ca
   ev.ev_samarcanda_consequence_b_resolution.body: 827b72f18207
   ev.ev_samarcanda_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: 4bbee73c3ea8
+  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: 1f76fdb28523
   ev.ev_samarcanda_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: 7661079ff881
+  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: fa3ce0606be2
   ev.samarcanda.mentor_closure.title: f58da55750f6
   ev.samarcanda.mentor_closure.body: 5b4e9d1962af
   ev.samarcanda.mentor_closure.choice_1: da8d611ab3c7
-  ev.samarcanda.mentor_closure.choice_1_result: 4bbee73c3ea8
+  ev.samarcanda.mentor_closure.choice_1_result: 1f76fdb28523
   ev.samarcanda.mentor_closure.choice_2: 59a447ce21bf
-  ev.samarcanda.mentor_closure.choice_2_result: 7661079ff881
+  ev.samarcanda.mentor_closure.choice_2_result: fa3ce0606be2
   ev.samarcanda.mentor_closure.choice_3: 630a8fcfe069
   ev.samarcanda.mentor_closure.choice_3_result: 33d2e695305a
   ev.ev_samarcanda_a_followup.title: abec22872467

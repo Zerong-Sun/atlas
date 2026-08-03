@@ -2,7 +2,7 @@
 unit: egrigaia
 lang: zh
 source: en
-source_rev: 3ed3d300d722
+source_rev: 8faf2f3a0b4e
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.egrigaia.entry.choice.pass: 96d145abaf05
   ev.egrigaia.entry.body: 034d259baa28
   ev.egrigaia.entry.title: a6255350e8ee
+  ev.ev_egrigaia_entry.choice_1_result: 64c329746573
+  ev.ev_egrigaia_entry.choice_2_result: 1e5a9d3423a7
 ---
 
 ## city.egrigaia.name
@@ -41,3 +43,10 @@ yām（驿）穿省而过，草原上亦见ovoo（敖包）。
 
 记额里合牙
 
+## ev.ev_egrigaia_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往额里合牙（宁夏）的路。
+
+## ev.ev_egrigaia_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往额里合牙（宁夏）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

@@ -26,7 +26,6 @@ watch holds the gates. You must know that this was once among the great
 cities of the Romans, and men still speak of it as they speak of old
 Damascus.
 
-
 ## ev.antiochia.entry.choice.look
 
 Rest and ask what men say of this place
@@ -38,3 +37,11 @@ Pass through without stopping
 ## ev.antiochia.entry.title
 
 Arriving at Antiochia
+
+## ev.ev_antiochia_entry.choice_1_result
+
+You pass through without stopping. The road to Antiochia opens on your map.
+
+## ev.ev_antiochia_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Antiochia on your map. You spend 1 day before the way is clear again.

@@ -24,7 +24,6 @@ Its streets are cleaner than Acre's; Muslim strangers find easier lodging here.
 You must know that the Franks hold this place as a refuge in extremity, and that
 its harbour is counted among the wonders of the maritime cities.
 
-
 ## ev.tyrus.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.tyrus.entry.title
 
 Arriving at Tyrus
+
+## ev.ev_tyrus_entry.choice_1_result
+
+You ride on without delay. You set the way to Tyrus on your map.
+
+## ev.ev_tyrus_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Tyrus opens on your map.

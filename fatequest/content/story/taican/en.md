@@ -83,3 +83,39 @@ Watch two days while the miners break the hard salt
 ## ev.taican.b.choice.ask_sapurgan
 
 Ask which caravan road runs on toward Sapurgan
+
+## ev.ev_taican_entry.choice_1_result
+
+You pass through the darvāzeh without delay. The road to Taican opens on your map.
+
+## ev.ev_taican_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Taican on your map.
+
+## ev.ev_taican_entry.choice_3_result
+
+You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Taican opens on your map.
+
+## ev.ev_taican_a.choice_1_result
+
+You walk the corn market and hear what the caravans pay. It costs you 1 day on the road. The account is written down before the hour turns. The road to Badashan opens on your map.
+
+## ev.ev_taican_a.choice_2_result
+
+You buy cotton cloth for the road ahead. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+## ev.ev_taican_a.choice_3_result
+
+You ask the caravan masters which road leads toward Balc. The road to Balc opens on your map. The road to Badashan opens on your map. The account is written down before the hour turns.
+
+## ev.ev_taican_b.choice_1_result
+
+You buy a block of Taican salt for the high passes. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_taican_b.choice_2_result
+
+You watch two days while the miners break the hard salt. It costs you 2 days on the road. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_taican_b.choice_3_result
+
+You ask which caravan road runs on toward Sapurgan. You set the way to Sapurgan on your map. You set the way to Balc on your map. You set what you saw into your travel book.

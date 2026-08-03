@@ -81,3 +81,39 @@ Pay the harbour fee and buy frankincense from a Somali trader
 ## ev.aden.b.choice.listen-prayer
 
 Listen at the mosque door as the Soldan's men pray
+
+## ev.ev_aden_entry.choice_1_result
+
+You pass through the darvāzā without delay. The road to Aden opens on your map.
+
+## ev.ev_aden_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Aden on your map.
+
+## ev.ev_aden_entry.choice_3_result
+
+You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Aden opens on your map.
+
+## ev.ev_aden_a.choice_1_result
+
+You walk the sheds and watch the lighters load. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_aden_a.choice_2_result
+
+You buy a sack of Malabar pepper for the onward road. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_aden_a.choice_3_result
+
+You ask the camel-masters which roads leave the harbour. The road to Dufar opens on your map. The road to Cambaet opens on your map. Fortune bends a little your way.
+
+## ev.ev_aden_b.choice_1_result
+
+You stand aside and observe the customs at the mole. You spend 1 day before the way is clear again. You set what you saw into your travel book. Your name carries a little more weight here now.
+
+## ev.ev_aden_b.choice_2_result
+
+You pay the harbour fee and buy frankincense from a Somali trader. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Esher opens on your map.
+
+## ev.ev_aden_b.choice_3_result
+
+You listen at the mosque door as the Soldan's men pray. You set what you saw into your travel book. A small turn of fortune favours you.

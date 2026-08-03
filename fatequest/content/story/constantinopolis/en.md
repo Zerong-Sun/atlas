@@ -24,7 +24,6 @@ Islands of the Greek sea answer to this city's rule. You must know that news
 of this place travels far — of emperors and usurpations — and that no harbour
 of the Middle Sea is spoken of with more weight.
 
-
 ## ev.constantinopolis.entry.choice.look
 
 Rest and ask what men say of this place
@@ -36,3 +35,11 @@ Pass through without stopping
 ## ev.constantinopolis.entry.title
 
 Arriving at Constantinopolis
+
+## ev.ev_constantinopolis_entry.choice_1_result
+
+You pass through without stopping. You set the way to Constantinopolis on your map.
+
+## ev.ev_constantinopolis_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Constantinopolis opens on your map. It costs you 1 day on the road.

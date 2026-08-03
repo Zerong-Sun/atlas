@@ -83,3 +83,39 @@ Measure the North Star against the mast and record what you see
 ## ev.melibar.b.choice.buy-pearls
 
 Buy pearls from a diver who prayed at the shrine
+
+## ev.ev_melibar_entry.choice_1_result
+
+You pass through the darvāzā without delay. The road to Melibar opens on your map.
+
+## ev.ev_melibar_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Melibar on your map.
+
+## ev.ev_melibar_entry.choice_3_result
+
+You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Melibar opens on your map.
+
+## ev.ev_melibar_a.choice_1_result
+
+You watch the harbour and ask how the merchants avoid the corsairs. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_melibar_a.choice_2_result
+
+You buy Malabar pepper while the harbour watch holds. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Cail on your map.
+
+## ev.ev_melibar_a.choice_3_result
+
+You ask the pilots which ports lie along the pepper coast. The road to Coilum opens on your map. The road to Maabar opens on your map. Fortune bends a little your way.
+
+## ev.ev_melibar_b.choice_1_result
+
+You observe the idol rites from the temple steps. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_melibar_b.choice_2_result
+
+You measure the North Star against the mast and record what you see. The account is written down before the hour turns. Fortune bends a little your way. Word of your conduct runs ahead of you.
+
+## ev.ev_melibar_b.choice_3_result
+
+You buy pearls from a diver who prayed at the shrine. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.

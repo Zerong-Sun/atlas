@@ -2,7 +2,7 @@
 unit: tana-azov
 lang: zh
 source: en
-source_rev: dfa38fd62812
+source_rev: c4f9cace10e6
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.tana-azov.entry.choice.rest: cc453f19a435
   ev.tana-azov.entry.body: e15a5bd4a480
   ev.tana-azov.entry.title: 0fb23fde294d
+  ev.ev_tana_azov_entry.choice_1_result: 343a08241907
+  ev.ev_tana_azov_entry.choice_2_result: a333537918e7
 ---
 
 ## city.tana-azov.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.tana-azov.entry.title
 
 塔纳
+
+## ev.ev_tana_azov_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往塔那（亚速）的路。
+
+## ev.ev_tana_azov_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往塔那（亚速）的道路，就此展开在舆图上。

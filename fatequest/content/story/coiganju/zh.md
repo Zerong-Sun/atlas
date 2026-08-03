@@ -2,7 +2,7 @@
 unit: coiganju
 lang: zh
 source: en
-source_rev: 30ceada3986e
+source_rev: bea94ecd279d
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.coiganju.entry.choice.pass: 96d145abaf05
   ev.coiganju.entry.body: 5ddd022fcbed
   ev.coiganju.entry.title: 40e30bced450
+  ev.ev_coiganju_entry.choice_1_result: 5acb6658138a
+  ev.ev_coiganju_entry.choice_2_result: ed35dd68e44d
 ---
 
 ## city.coiganju.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.coiganju.entry.title
 
 记淮安
+
+## ev.ev_coiganju_entry.choice_1_result
+
+你穿城而过，不加停留，通往淮安的道路，就此展开在舆图上。
+
+## ev.ev_coiganju_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往淮安的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

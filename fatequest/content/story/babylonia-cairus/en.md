@@ -25,7 +25,6 @@ the river. You must know that this is the seat of Ayyubid power in Egypt, and
 that no stranger lodges long without hearing the Friday khutbah in the Sunni
 manner.
 
-
 ## ev.babylonia-cairus.entry.choice.look
 
 Rest and ask what men say of this place
@@ -37,3 +36,11 @@ Pass through without stopping
 ## ev.babylonia-cairus.entry.title
 
 Arriving at Babylonia Cairus
+
+## ev.ev_babylonia_cairus_entry.choice_1_result
+
+You pass through without stopping. You set the way to Babylonia (Cairus) on your map.
+
+## ev.ev_babylonia_cairus_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Babylonia (Cairus) opens on your map. It costs you 1 day on the road.

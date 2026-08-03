@@ -2,7 +2,7 @@
 unit: chinangli
 lang: zh
 source: en
-source_rev: 4c8596d5738c
+source_rev: 04f8bae1e498
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.chinangli.b.choice.exchange: de38ff0ada95
   ev.chinangli.b.choice.porcelain: a922f76c07a9
   ev.chinangli.b.choice.clerks: ae1d97a38fa0
+  ev.ev_chinangli_entry.choice_1_result: 18f616f700db
+  ev.ev_chinangli_entry.choice_2_result: 812959af1214
+  ev.ev_chinangli_entry.choice_3_result: f963e415c15c
+  ev.ev_chinangli_a.choice_1_result: a8081f6a0474
+  ev.ev_chinangli_a.choice_2_result: 4fe6ddd69fdb
+  ev.ev_chinangli_a.choice_3_result: e4b543baea07
+  ev.ev_chinangli_b.choice_1_result: f68d865ffb6f
+  ev.ev_chinangli_b.choice_2_result: 1fd6d5e91a45
+  ev.ev_chinangli_b.choice_3_result: 01c6ec1457be
 ---
 
 ## city.chinangli.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.chinangli.b.choice.clerks
 
 问兑换吏如何换新钞
+
+## ev.ev_chinangli_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往长芦（沧州）的路。
+
+## ev.ev_chinangli_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往长芦（沧州）的道路，就此展开在舆图上。
+
+## ev.ev_chinangli_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往长芦（沧州）的路。
+
+## ev.ev_chinangli_a.choice_1_result
+
+你沿河埠头数上行之船，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往汗八里（大都）的路。
+
+## ev.ev_chinangli_a.choice_2_result
+
+你购沿河贸易之丝一束，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往河间府的道路，就此展开在舆图上。
+
+## ev.ev_chinangli_a.choice_3_result
+
+你问下行之船载何香料，你把这番见闻记入行纪。时运待你，比先前好了几分。你标出了通往上都的路。
+
+## ev.ev_chinangli_b.choice_1_result
+
+你于摊前看钞币兑换，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+
+## ev.ev_chinangli_b.choice_2_result
+
+你以交钞购一小瓷碗，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_chinangli_b.choice_3_result
+
+你问兑换吏如何换新钞，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。

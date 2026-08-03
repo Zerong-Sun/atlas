@@ -2,7 +2,7 @@
 unit: petra
 lang: zh
 source: en
-source_rev: 2fbeeeb939ee
+source_rev: c60e2877cd59
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.petra.entry.choice.rest: cc453f19a435
   ev.petra.entry.body: ffca263cb0fc
   ev.petra.entry.title: a0e514525d11
+  ev.ev_petra_entry.choice_1_result: 4aa71911afd6
+  ev.ev_petra_entry.choice_2_result: 11a6ed3b6441
 ---
 
 ## city.petra.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.petra.entry.title
 
 佩特拉
+
+## ev.ev_petra_entry.choice_1_result
+
+你继续赶路，不作停留，通往佩特拉的道路，就此展开在舆图上。
+
+## ev.ev_petra_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往佩特拉的路。

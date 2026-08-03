@@ -2,7 +2,7 @@
 unit: yasdi
 lang: zh
 source: en
-source_rev: 0769f8714d57
+source_rev: a8c605d8b7e3
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.yasdi.entry.choice.pass: 96d145abaf05
   ev.yasdi.entry.body: d529c92e9f1e
   ev.yasdi.entry.title: 0d46575125fc
+  ev.ev_yasdi_entry.choice_1_result: 07f6362afdaf
+  ev.ev_yasdi_entry.choice_2_result: 058bb613f8a2
 ---
 
 ## city.yasdi.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.yasdi.entry.title
 
 耶兹德
+
+## ev.ev_yasdi_entry.choice_1_result
+
+你穿城而过，不加停留，通往耶兹德的道路，就此展开在舆图上。
+
+## ev.ev_yasdi_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往耶兹德的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

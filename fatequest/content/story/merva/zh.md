@@ -2,7 +2,7 @@
 unit: merva
 lang: zh
 source: en
-source_rev: 01c846ebd323
+source_rev: 9a00e3f70031
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.merva.entry.choice.rest: cc453f19a435
   ev.merva.entry.body: e4f4a555414e
   ev.merva.entry.title: 8652314e32aa
+  ev.ev_merva_entry.choice_1_result: c2e8174d919d
+  ev.ev_merva_entry.choice_2_result: cad55480cb1c
 ---
 
 ## city.merva.name
@@ -37,3 +39,11 @@ stamps:
 ## ev.merva.entry.title
 
 木鹿
+
+## ev.ev_merva_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往木鹿（梅尔夫）的路。
+
+## ev.ev_merva_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往木鹿（梅尔夫）的道路，就此展开在舆图上。

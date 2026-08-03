@@ -2,7 +2,7 @@
 unit: bethleem
 lang: zh
 source: en
-source_rev: 3aa8afdc8aa7
+source_rev: fbe4428d5148
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.bethleem.entry.choice.rest: cc453f19a435
   ev.bethleem.entry.body: b4524c38d75a
   ev.bethleem.entry.title: ddb576403943
+  ev.ev_bethleem_entry.choice_1_result: 2f90219d2584
+  ev.ev_bethleem_entry.choice_2_result: b016ab773406
 ---
 
 ## city.bethleem.name
@@ -37,3 +39,11 @@ stamps:
 ## ev.bethleem.entry.title
 
 伯利恒
+
+## ev.ev_bethleem_entry.choice_1_result
+
+你继续赶路，不作停留，通往伯利恒的道路，就此展开在舆图上。
+
+## ev.ev_bethleem_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往伯利恒的路。

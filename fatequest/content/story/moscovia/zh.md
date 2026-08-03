@@ -2,7 +2,7 @@
 unit: moscovia
 lang: zh
 source: en
-source_rev: a52adb15fa7c
+source_rev: 59b9d8381c83
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.moscovia.entry.choice.rest: cc453f19a435
   ev.moscovia.entry.body: e28aff8ac23f
   ev.moscovia.entry.title: 66ec4d962a57
+  ev.ev_moscovia_entry.choice_1_result: 7f06c22b32be
+  ev.ev_moscovia_entry.choice_2_result: fa79e94931e4
 ---
 
 ## city.moscovia.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.moscovia.entry.title
 
 莫斯科
+
+## ev.ev_moscovia_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往莫斯科维（莫斯科）的路。
+
+## ev.ev_moscovia_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往莫斯科维（莫斯科）的道路，就此展开在舆图上。

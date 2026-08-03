@@ -24,7 +24,6 @@ gates, and pilgrims of every faith still make their way hither. You must know
 that men speak of this city as a place set apart, and that its name is known
 from the Maghrib to the lands of the Rum.
 
-
 ## ev.hierusalem.entry.choice.look
 
 Rest and ask what men say of this place
@@ -36,3 +35,11 @@ Pass through without stopping
 ## ev.hierusalem.entry.title
 
 Arriving at Hierusalem
+
+## ev.ev_hierusalem_entry.choice_1_result
+
+You pass through without stopping. You set the way to Hierusalem on your map.
+
+## ev.ev_hierusalem_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Hierusalem opens on your map. It costs you 1 day on the road.

@@ -2,7 +2,7 @@
 unit: alexandria
 lang: zh
 source: en
-source_rev: d9282095514e
+source_rev: 7952f458647c
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.alexandria.entry.choice.pass: 96d145abaf05
   ev.alexandria.entry.body: 0c4eb5717d15
   ev.alexandria.entry.title: 802852e8bceb
+  ev.ev_alexandria_entry.choice_1_result: 4bc71980dd21
+  ev.ev_alexandria_entry.choice_2_result: 53c936244d20
 ---
 
 ## city.alexandria.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.alexandria.entry.title
 
 亚历山大
+
+## ev.ev_alexandria_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往阿历山德里亚的路。
+
+## ev.ev_alexandria_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往阿历山德里亚的道路，就此展开在舆图上。为此费去你 1 日路程。

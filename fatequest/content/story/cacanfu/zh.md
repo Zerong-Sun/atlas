@@ -2,7 +2,7 @@
 unit: cacanfu
 lang: zh
 source: en
-source_rev: da70216e9a2d
+source_rev: 2248223760cf
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.cacanfu.entry.choice.pass: 96d145abaf05
   ev.cacanfu.entry.body: b51376b37780
   ev.cacanfu.entry.title: 96a02167f5ac
+  ev.ev_cacanfu_entry.choice_1_result: 9f1e8414dcec
+  ev.ev_cacanfu_entry.choice_2_result: 1cf825a9d356
 ---
 
 ## city.cacanfu.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.cacanfu.entry.title
 
 记河间府
+
+## ev.ev_cacanfu_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往河间府的路。
+
+## ev.ev_cacanfu_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往河间府的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

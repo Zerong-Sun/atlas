@@ -2,7 +2,7 @@
 unit: tripolis
 lang: zh
 source: en
-source_rev: 757a63fc6cfe
+source_rev: 04fc5e696c61
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.tripolis.entry.choice.rest: cc453f19a435
   ev.tripolis.entry.body: a10a4c1d7beb
   ev.tripolis.entry.title: e6c12e4e1214
+  ev.ev_tripolis_entry.choice_1_result: 5f48f12f3aa5
+  ev.ev_tripolis_entry.choice_2_result: 5782cbeacf82
 ---
 
 ## city.tripolis.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.tripolis.entry.title
 
 的黎波里
+
+## ev.ev_tripolis_entry.choice_1_result
+
+你继续赶路，不作停留，通往的黎波里的道路，就此展开在舆图上。
+
+## ev.ev_tripolis_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往的黎波里的路。

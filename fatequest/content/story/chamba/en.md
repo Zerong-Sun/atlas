@@ -81,3 +81,39 @@ Buy pepper from the spice merchants
 ## ev.chamba.b.choice.ask_sea_road
 
 Ask the mariners how many days' sail lie to Zayton and Fuzhou
+
+## ev.ev_chamba_entry.choice_1_result
+
+You pass through the gate without delay. The road to Chamba opens on your map.
+
+## ev.ev_chamba_entry.choice_2_result
+
+You walk through the harbour market. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Chamba on your map.
+
+## ev.ev_chamba_entry.choice_3_result
+
+You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Chamba opens on your map.
+
+## ev.ev_chamba_a.choice_1_result
+
+You hear the full tale of how the elephant tribute was settled. The account is written down before the hour turns. The road to Zayton opens on your map. Fortune bends a little your way.
+
+## ev.ev_chamba_a.choice_2_result
+
+You watch a day upon the harbour while tribute goods are tallied. You spend 1 day before the way is clear again. You set the way to Pentam on your map. You set what you saw into your travel book.
+
+## ev.ev_chamba_a.choice_3_result
+
+You buy sandalwood from the tribute quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+
+## ev.ev_chamba_b.choice_1_result
+
+You wait two days upon the harbour to hear word of the King's court. You spend 2 days before the way is clear again. You set what you saw into your travel book. Your name carries a little more weight here now.
+
+## ev.ev_chamba_b.choice_2_result
+
+You buy pepper from the spice merchants. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+## ev.ev_chamba_b.choice_3_result
+
+You ask the mariners how many days' sail lie to Zayton and Fuzhou. You set the way to Zayton on your map. You set the way to Fuju on your map. You set what you saw into your travel book.

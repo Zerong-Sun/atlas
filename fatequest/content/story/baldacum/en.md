@@ -155,11 +155,11 @@ Pillars at Baghdad
 
 ## ev.ev_baldacum_entry.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_entry.choice_3_result
 
@@ -167,11 +167,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_baldacum_mentor_bazi.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_mentor_bazi.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_mentor_bazi.choice_3_result
 
@@ -179,27 +179,27 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_baldacum_mentor_geomancy.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_mentor_geomancy.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_geomancy_court.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_geomancy_court.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_a.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_a.choice_3_result
 
@@ -207,11 +207,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_baldacum_b.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_b.choice_3_result
 
@@ -219,11 +219,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_baldacum_c.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_c.choice_3_result
 
@@ -243,7 +243,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_baldacum_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_a.choice_2
 
@@ -251,7 +251,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_baldacum_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_a_resolution.title
 
@@ -267,7 +267,7 @@ Make the introduction before nightfall
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2
 
@@ -275,7 +275,7 @@ Keep the sign in your travel book
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_b.title
 
@@ -291,7 +291,7 @@ Follow the practical advice
 
 ## ev.ev_baldacum_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_b.choice_2
 
@@ -299,7 +299,7 @@ Leave the rumour with the teller
 
 ## ev.ev_baldacum_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_b_resolution.title
 
@@ -315,7 +315,7 @@ Make the introduction before nightfall
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the the two rivers and the old palace.
+The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2
 
@@ -323,7 +323,7 @@ Keep the sign in your travel book
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the two rivers and the old palace.
+The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
 
 ## ev.ev_baldacum_a_followup.title
 

@@ -2,7 +2,7 @@
 unit: esher
 lang: zh
 source: en
-source_rev: 97848a927072
+source_rev: 2e9659516c2a
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.esher.b.choice.buy_frankincense: 476c77d2d971
   ev.esher.b.choice.buy_dates: 35505023d2a7
   ev.esher.b.choice.ask_axuma: 92156d77b6ea
+  ev.ev_esher_entry.choice_1_result: 4539c9d9cd92
+  ev.ev_esher_entry.choice_2_result: aae80b9de483
+  ev.ev_esher_entry.choice_3_result: a79574aa4106
+  ev.ev_esher_a.choice_1_result: 8b858d76be51
+  ev.ev_esher_a.choice_2_result: f0ca7c5f4f79
+  ev.ev_esher_a.choice_3_result: 695ef8a83d3a
+  ev.ev_esher_b.choice_1_result: 3d619d9a783f
+  ev.ev_esher_b.choice_2_result: 45441acd23b1
+  ev.ev_esher_b.choice_3_result: 03628260cd19
 ---
 
 ## city.esher.name
@@ -96,3 +105,39 @@ Soldan属港
 ## ev.esher.b.choice.ask_axuma
 
 问撒拉逊商人南海商路何往
+
+## ev.ev_esher_entry.choice_1_result
+
+你匆匆穿过 darvāzā（城门），你标出了通往呵舍儿（席赫尔）的路。
+
+## ev.ev_esher_entry.choice_2_result
+
+你穿过 bāzār（集市），为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往呵舍儿（席赫尔）的道路，就此展开在舆图上。
+
+## ev.ev_esher_entry.choice_3_result
+
+你去 mandir（神庙）看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往呵舍儿（席赫尔）的路。
+
+## ev.ev_esher_a.choice_1_result
+
+你行于港内，看Soldan关防如何，你在路上用去 1 日光阴。你标出了通往亚丁的路。你把这番见闻记入行纪。
+
+## ev.ev_esher_a.choice_2_result
+
+你立于突堤，看印度船只卸货，通往佐法尔的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_esher_a.choice_3_result
+
+你向出口马厩买一匹阿拉伯马，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+
+## ev.ev_esher_b.choice_1_result
+
+你于港市按王价买乳香，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_esher_b.choice_2_result
+
+你向海岸果园买枣，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_esher_b.choice_3_result
+
+你问撒拉逊商人南海商路何往，通往阿克苏姆的道路，就此展开在舆图上。通往亚丁的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。

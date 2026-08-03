@@ -2,7 +2,7 @@
 unit: pentam
 lang: zh
 source: en
-source_rev: abe491d4ef7a
+source_rev: 4c15f9f5bee2
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.pentam.entry.choice.pass: 96d145abaf05
   ev.pentam.entry.body: 4e6a6840d49a
   ev.pentam.entry.title: a38382e1a178
+  ev.ev_pentam_entry.choice_1_result: 6a5aa584793a
+  ev.ev_pentam_entry.choice_2_result: c44589f7ea8e
 ---
 
 ## city.pentam.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.pentam.entry.title
 
 记宾坦岛与末罗游
+
+## ev.ev_pentam_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往宾坦的路。
+
+## ev.ev_pentam_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往宾坦的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

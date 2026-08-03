@@ -83,3 +83,39 @@ Buy a roll of coloured cotton cloth from a Nestorian weaver
 ## ev.tenduc.b.choice.ask-north
 
 Ask the Saracen merchants which road leads north to the steppe
+
+## ev.ev_tenduc_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Tenduc on your map.
+
+## ev.ev_tenduc_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Tenduc opens on your map.
+
+## ev.ev_tenduc_entry.choice_3_result
+
+You visit the ovoo (sacred cairn). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Tenduc on your map.
+
+## ev.ev_tenduc_a.choice_1_result
+
+You attend the Nestorian service and listen to the Syriac psalms. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_tenduc_a.choice_2_result
+
+You ask the priests what road leads to the Great Kaan's city. The road to Cambaluc opens on your map. The road to Cacanfu opens on your map. Fortune bends a little your way.
+
+## ev.ev_tenduc_a.choice_3_result
+
+You leave a coin offering at the church door. Coin changes hands, and the purse settles. Your name carries a little more weight here now.
+
+## ev.ev_tenduc_b.choice_1_result
+
+You walk the market and listen in three tongues. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_tenduc_b.choice_2_result
+
+You buy a roll of coloured cotton cloth from a Nestorian weaver. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+## ev.ev_tenduc_b.choice_3_result
+
+You ask the Saracen merchants which road leads north to the steppe. The road to Egrigaia opens on your map. Word of your conduct runs ahead of you.

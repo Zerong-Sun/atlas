@@ -82,3 +82,39 @@ Ask which road leads down to the Gulf of Calatu
 ## ev.camadi.b.choice.buy_cotton
 
 Buy cotton cloth from the roadside sellers
+
+## ev.ev_camadi_entry.choice_1_result
+
+You pass through the darvāzeh without delay. You set the way to Camadi on your map.
+
+## ev.ev_camadi_entry.choice_2_result
+
+You walk through the bāzār. It costs you 1 day on the road. The account is written down before the hour turns. The road to Camadi opens on your map.
+
+## ev.ev_camadi_entry.choice_3_result
+
+You visit the masjid (mosque). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Camadi on your map.
+
+## ev.ev_camadi_a.choice_1_result
+
+You walk among the broken walls and ask what the city once was. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Kerman on your map.
+
+## ev.ev_camadi_a.choice_2_result
+
+You buy dates from the orchards that still cling to the plain. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+## ev.ev_camadi_a.choice_3_result
+
+You listen while the caravan men speak of the Tartar incursions. A small turn of fortune favours you. You set the way to Cobinan on your map. You set what you saw into your travel book.
+
+## ev.ev_camadi_b.choice_1_result
+
+You rest a day in the shade of the date-palms. It costs you 1 day on the road. Fortune bends a little your way. The account is written down before the hour turns.
+
+## ev.ev_camadi_b.choice_2_result
+
+You ask which road leads down to the Gulf of Calatu. You set the way to Calatu on your map. You set the way to Kerman on your map. You set what you saw into your travel book.
+
+## ev.ev_camadi_b.choice_3_result
+
+You buy cotton cloth from the roadside sellers. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.

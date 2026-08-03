@@ -83,3 +83,39 @@ Listen while the brokers speak of the five brother-kings
 ## ev.cail.b.choice.buy_cotton
 
 Buy cotton cloth in the harbour market
+
+## ev.ev_cail_entry.choice_1_result
+
+You pass through the darvāzā without delay. You set the way to Cail on your map.
+
+## ev.ev_cail_entry.choice_2_result
+
+You walk through the bāzār. It costs you 1 day on the road. The account is written down before the hour turns. The road to Cail opens on your map.
+
+## ev.ev_cail_entry.choice_3_result
+
+You visit the mandir (temple). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Cail on your map.
+
+## ev.ev_cail_a.choice_1_result
+
+You stand a day upon the quay and watch the horses come ashore. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Melibar on your map.
+
+## ev.ev_cail_a.choice_2_result
+
+You buy an Arabian charger from the Hormos merchants. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+## ev.ev_cail_a.choice_3_result
+
+You ask the shipmasters where their vessels touch next. You set the way to Coilum on your map. You set the way to Samara on your map. You set what you saw into your travel book.
+
+## ev.ev_cail_b.choice_1_result
+
+You wait two days upon the concourse in hope of seeing the King pass. It costs you 2 days on the road. Word of your conduct runs ahead of you. The account is written down before the hour turns.
+
+## ev.ev_cail_b.choice_2_result
+
+You listen while the brokers speak of the five brother-kings. You set the way to Melibar on your map. You set the way to Coilum on your map. You set what you saw into your travel book.
+
+## ev.ev_cail_b.choice_3_result
+
+You buy cotton cloth in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.

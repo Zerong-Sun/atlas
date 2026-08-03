@@ -2,7 +2,7 @@
 unit: trapezus
 lang: zh
 source: en
-source_rev: 84646a1a83d8
+source_rev: 9a5c934b63d8
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.trapezus.entry.choice.pass: 96d145abaf05
   ev.trapezus.entry.body: 635e2e8bb9d3
   ev.trapezus.entry.title: 42083003fc4a
+  ev.ev_trapezus_entry.choice_1_result: a71f4ce774a0
+  ev.ev_trapezus_entry.choice_2_result: f51dfe081377
 ---
 
 ## city.trapezus.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.trapezus.entry.title
 
 特拉布宗
+
+## ev.ev_trapezus_entry.choice_1_result
+
+你穿城而过，不加停留，通往特拉佩宗（特拉布宗）的道路，就此展开在舆图上。
+
+## ev.ev_trapezus_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往特拉佩宗（特拉布宗）的路。你在路上用去 1 日光阴。

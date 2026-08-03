@@ -2,7 +2,7 @@
 unit: kiovia
 lang: zh
 source: en
-source_rev: 3dff3b842b6c
+source_rev: 3bdc7bc09f5c
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.kiovia.entry.choice.pass: 96d145abaf05
   ev.kiovia.entry.body: 39f1fbcf801f
   ev.kiovia.entry.title: 425af08834fd
+  ev.ev_kiovia_entry.choice_1_result: d4a366e90cac
+  ev.ev_kiovia_entry.choice_2_result: 0ba590011953
 ---
 
 ## city.kiovia.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.kiovia.entry.title
 
 基辅
+
+## ev.ev_kiovia_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往乞瓦（基辅）的路。
+
+## ev.ev_kiovia_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往乞瓦（基辅）的道路，就此展开在舆图上。为此费去你 1 日路程。

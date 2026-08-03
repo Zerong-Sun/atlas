@@ -2,7 +2,7 @@
 unit: siju
 lang: zh
 source: en
-source_rev: 06ff71867c3d
+source_rev: dcad9393075c
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.siju.b.choice.observe: da4f65ea6a79
   ev.siju.b.choice.paper-money: 67a66662dc9e
   ev.siju.b.choice.ask: 0ec8a82d6a0a
+  ev.ev_siju_entry.choice_1_result: 5dc06eab4b69
+  ev.ev_siju_entry.choice_2_result: 1ae61cfc2e43
+  ev.ev_siju_entry.choice_3_result: c08c78563112
+  ev.ev_siju_a.choice_1_result: 4fabd42db446
+  ev.ev_siju_a.choice_2_result: 1679c78da4d5
+  ev.ev_siju_a.choice_3_result: 5913632b2455
+  ev.ev_siju_b.choice_1_result: f4c6f1f509b1
+  ev.ev_siju_b.choice_2_result: 8c079194a58a
+  ev.ev_siju_b.choice_3_result: b2514e556e4a
 ---
 
 ## city.siju.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.siju.b.choice.ask
 
 问长者何以火葬而非土葬
+
+## ev.ev_siju_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往邳州的路。
+
+## ev.ev_siju_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往邳州的道路，就此展开在舆图上。
+
+## ev.ev_siju_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往邳州的路。
+
+## ev.ev_siju_a.choice_1_result
+
+你观自邳州南来之物于工坊，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往宝应的路。
+
+## ev.ev_siju_a.choice_2_result
+
+你于炼糖摊购糖，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往淮阴的道路，就此展开在舆图上。
+
+## ev.ev_siju_a.choice_3_result
+
+你巡平原粮市，你把这番见闻记入行纪。时运待你，比先前好了几分。你标出了通往淮安的路。
+
+## ev.ev_siju_b.choice_1_result
+
+你于远处静观丧礼，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_siju_b.choice_2_result
+
+你于火化地旁摊购交钞，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+
+## ev.ev_siju_b.choice_3_result
+
+你问长者何以火葬而非土葬，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。

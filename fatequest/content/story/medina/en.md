@@ -24,7 +24,6 @@ blessings at these graves. You must know that after Mecca this is the second
 city of the Faith, and that no pilgrim from Irāk or Syria passes without visiting
 the sacred tomb.
 
-
 ## ev.medina.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.medina.entry.title
 
 Arriving at Medina
+
+## ev.ev_medina_entry.choice_1_result
+
+You ride on without delay. The road to Medina opens on your map.
+
+## ev.ev_medina_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Medina on your map.

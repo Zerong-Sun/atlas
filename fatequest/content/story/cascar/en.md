@@ -127,11 +127,11 @@ Of the Kingdom of Cascar
 
 ## ev.ev_cascar_entry.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_entry.choice_3_result
 
@@ -139,11 +139,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cascar_a.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_a.choice_3_result
 
@@ -151,11 +151,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cascar_b.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_b.choice_3_result
 
@@ -163,11 +163,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cascar_c.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_c.choice_3_result
 
@@ -187,7 +187,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_cascar_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_a.choice_2
 
@@ -195,7 +195,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_cascar_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_a_resolution.title
 
@@ -211,7 +211,7 @@ Make the introduction before nightfall
 
 ## ev.ev_cascar_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2
 
@@ -219,7 +219,7 @@ Keep the sign in your travel book
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_b.title
 
@@ -235,7 +235,7 @@ Follow the practical advice
 
 ## ev.ev_cascar_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_b.choice_2
 
@@ -243,7 +243,7 @@ Leave the rumour with the teller
 
 ## ev.ev_cascar_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_b_resolution.title
 
@@ -259,7 +259,7 @@ Make the introduction before nightfall
 
 ## ev.ev_cascar_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2
 
@@ -267,7 +267,7 @@ Keep the sign in your travel book
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.cascar.mentor_closure.title
 
@@ -283,7 +283,7 @@ Ask what the road will demand
 
 ## ev.cascar.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the the mountain pass and its relay road.
+The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
 
 ## ev.cascar.mentor_closure.choice_2
 
@@ -291,7 +291,7 @@ Stay for a day and listen to the whole account
 
 ## ev.cascar.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the mountain pass and its relay road.
+The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
 
 ## ev.cascar.mentor_closure.choice_3
 

@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: 5baa0b678097
+source_rev: b4df625ef008
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.suju.b.choice.gardens: 611876e73b57
   ev.suju.b.choice.rhubarb: 8a17365a884e
   ev.suju.b.choice.bridges: 19c67f61be89
+  ev.ev_suju_entry.choice_1_result: a889fb420b1d
+  ev.ev_suju_entry.choice_2_result: 678c2c0a0513
+  ev.ev_suju_entry.choice_3_result: 911f34e6ff85
+  ev.ev_suju_a.choice_1_result: 362553e305e8
+  ev.ev_suju_a.choice_2_result: 39467d9a8619
+  ev.ev_suju_a.choice_3_result: d2cd771c4d58
+  ev.ev_suju_b.choice_1_result: 3352b85f18b0
+  ev.ev_suju_b.choice_2_result: 54ddeeb352e8
+  ev.ev_suju_b.choice_3_result: 80ea2f005556
 ---
 
 ## city.suju.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.suju.b.choice.bridges
 
 立石桥观运河舟行
+
+## ev.ev_suju_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往苏州的路。
+
+## ev.ev_suju_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往苏州的道路，就此展开在舆图上。
+
+## ev.ev_suju_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往苏州的路。
+
+## ev.ev_suju_a.choice_1_result
+
+你观织金锦之机杼，你在路上用去 2 日光阴。你把这番见闻记入行纪。你标出了通往行在（杭州）的路。
+
+## ev.ev_suju_a.choice_2_result
+
+你购金锦一段，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+
+## ev.ev_suju_a.choice_3_result
+
+你骑行城周一程，你把这番见闻记入行纪。时运待你，比先前好了几分。你标出了通往镇江府的路。
+
+## ev.ev_suju_b.choice_1_result
+
+你随商贾属吏巡运河园圃，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往常州的道路，就此展开在舆图上。
+
+## ev.ev_suju_b.choice_2_result
+
+你于园圃摊购大黄，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+
+## ev.ev_suju_b.choice_3_result
+
+你立石桥观运河舟行，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。

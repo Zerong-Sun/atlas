@@ -2,7 +2,7 @@
 unit: tiju
 lang: zh
 source: en
-source_rev: cac4a024bc59
+source_rev: 3515b690432e
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.tiju.entry.choice.pass: 96d145abaf05
   ev.tiju.entry.body: 54f21022fe72
   ev.tiju.entry.title: 19d712b1a614
+  ev.ev_tiju_entry.choice_1_result: eef2a9626653
+  ev.ev_tiju_entry.choice_2_result: f47a64778a5d
 ---
 
 ## city.tiju.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.tiju.entry.title
 
 记高邮诸城
+
+## ev.ev_tiju_entry.choice_1_result
+
+你穿城而过，不加停留，通往高邮的道路，就此展开在舆图上。
+
+## ev.ev_tiju_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往高邮的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

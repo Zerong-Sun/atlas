@@ -35,3 +35,11 @@ Rest half a day by the road
 ## ev.axuma.entry.title
 
 Arriving at Axuma
+
+## ev.ev_axuma_entry.choice_1_result
+
+You ride on without delay. The road to Axuma opens on your map.
+
+## ev.ev_axuma_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Axuma on your map.

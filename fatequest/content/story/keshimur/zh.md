@@ -2,7 +2,7 @@
 unit: keshimur
 lang: zh
 source: en
-source_rev: 6ac449ad55d9
+source_rev: 4803ac03d9a5
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.keshimur.b.choice.hire_guide: b4fa859e265e
   ev.keshimur.b.choice.rest_valley: 0fb87cedd411
   ev.keshimur.b.choice.buy_turquoise: 5c6c797d3757
+  ev.ev_keshimur_entry.choice_1_result: e53438477392
+  ev.ev_keshimur_entry.choice_2_result: 965ef7974710
+  ev.ev_keshimur_entry.choice_3_result: 48dd260164fb
+  ev.ev_keshimur_a.choice_1_result: a1dbaefa20de
+  ev.ev_keshimur_a.choice_2_result: 890ac94eceba
+  ev.ev_keshimur_a.choice_3_result: 02e604017d36
+  ev.ev_keshimur_b.choice_1_result: 5da4e07e316d
+  ev.ev_keshimur_b.choice_2_result: f3ae6d8c12bd
+  ev.ev_keshimur_b.choice_3_result: d4a476bb76e4
 ---
 
 ## city.keshimur.name
@@ -95,3 +104,39 @@ stamps:
 ## ev.keshimur.b.choice.buy_turquoise
 
 向山中商人买绿松石
+
+## ev.ev_keshimur_entry.choice_1_result
+
+你匆匆穿过 darvāzeh（城门），通往怯失迷儿（克什米尔）的道路，就此展开在舆图上。
+
+## ev.ev_keshimur_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往怯失迷儿（克什米尔）的路。
+
+## ev.ev_keshimur_entry.choice_3_result
+
+你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往怯失迷儿（克什米尔）的道路，就此展开在舆图上。
+
+## ev.ev_keshimur_a.choice_1_result
+
+你听长者述能言之像，一日，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_keshimur_a.choice_2_result
+
+你立于祠门外观看，不入内，你把这番见闻记入行纪。你标出了通往巴达哈伤的路。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_keshimur_a.choice_3_result
+
+你问何隘东通迦布尔，通往可不里（喀布尔）的道路，就此展开在舆图上。通往巴达哈伤的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_keshimur_b.choice_1_result
+
+你雇山向导，学几句本族之语，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。你标出了通往德列（德里）的路。你把这番见闻记入行纪。
+
+## ev.ev_keshimur_b.choice_2_result
+
+你于山谷歇七日，再上高隘，为此费去你 7 日路程。气运稍稍偏向于你。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_keshimur_b.choice_3_result
+
+你向山中商人买绿松石，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。

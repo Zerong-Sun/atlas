@@ -2,7 +2,7 @@
 unit: ctesiphon
 lang: zh
 source: en
-source_rev: 105456cad532
+source_rev: 48a97711d40e
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.ctesiphon.entry.choice.rest: cc453f19a435
   ev.ctesiphon.entry.body: 4f047099a077
   ev.ctesiphon.entry.title: ac63129b5a19
+  ev.ev_ctesiphon_entry.choice_1_result: bd8eb7ba0608
+  ev.ev_ctesiphon_entry.choice_2_result: d2cdcfa4f4fb
 ---
 
 ## city.ctesiphon.name
@@ -37,3 +39,11 @@ stamps:
 ## ev.ctesiphon.entry.title
 
 泰西封
+
+## ev.ev_ctesiphon_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往忒息封的路。
+
+## ev.ev_ctesiphon_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往忒息封的道路，就此展开在舆图上。

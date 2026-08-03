@@ -25,7 +25,6 @@ Men stay here weeks awaiting the season; winter closes the roads north. You
 must know that Bukhārā under the Sāmānids is the dome of learning beyond the
 Oxus, and that its paper, carpets, and coin are known across Khurāsān.
 
-
 ## ev.bochara.entry.choice.pass
 
 Ride on without delay
@@ -37,3 +36,11 @@ Rest half a day by the road
 ## ev.bochara.entry.title
 
 Arriving at Bochara
+
+## ev.ev_bochara_entry.choice_1_result
+
+You ride on without delay. The road to Bochara opens on your map.
+
+## ev.ev_bochara_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Bochara on your map.

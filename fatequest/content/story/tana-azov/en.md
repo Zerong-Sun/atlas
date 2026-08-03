@@ -33,3 +33,11 @@ Rest half a day by the road
 ## ev.tana-azov.entry.title
 
 Arriving at Tana Azov
+
+## ev.ev_tana_azov_entry.choice_1_result
+
+You ride on without delay. You set the way to Tana (Azov) on your map.
+
+## ev.ev_tana_azov_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Tana (Azov) opens on your map.

@@ -2,7 +2,7 @@
 unit: ispahan
 lang: zh
 source: en
-source_rev: 943e0f55b889
+source_rev: 0c21246e6510
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.ispahan.entry.choice.rest: cc453f19a435
   ev.ispahan.entry.body: 9d5cacba083c
   ev.ispahan.entry.title: 9863bef367dd
+  ev.ev_ispahan_entry.choice_1_result: 43b98b33113f
+  ev.ev_ispahan_entry.choice_2_result: e8c7bef32d75
 ---
 
 ## city.ispahan.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.ispahan.entry.title
 
 伊斯法罕
+
+## ev.ev_ispahan_entry.choice_1_result
+
+你继续赶路，不作停留，通往伊斯帕罕（伊斯法罕）的道路，就此展开在舆图上。
+
+## ev.ev_ispahan_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往伊斯帕罕（伊斯法罕）的路。

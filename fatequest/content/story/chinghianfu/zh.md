@@ -2,7 +2,7 @@
 unit: chinghianfu
 lang: zh
 source: en
-source_rev: 6ce84f960f9f
+source_rev: c91604b37169
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.chinghianfu.entry.choice.pass: 96d145abaf05
   ev.chinghianfu.entry.body: f499614d36dc
   ev.chinghianfu.entry.title: da799fe37293
+  ev.ev_chinghianfu_entry.choice_1_result: c1b8b1ace238
+  ev.ev_chinghianfu_entry.choice_2_result: 27d00b0bd3ab
 ---
 
 ## city.chinghianfu.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.chinghianfu.entry.title
 
 记镇江府
+
+## ev.ev_chinghianfu_entry.choice_1_result
+
+你穿城而过，不加停留，通往镇江府的道路，就此展开在舆图上。
+
+## ev.ev_chinghianfu_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往镇江府的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

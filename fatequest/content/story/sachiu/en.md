@@ -32,3 +32,7 @@ Pass through
 ## ev.sachiu.entry.title
 
 Arriving at Sachiu
+
+## ev.ev_sachiu_entry.choice_1_result
+
+You pass through. You carry away a small sign of the place. You set what you saw into your travel book.

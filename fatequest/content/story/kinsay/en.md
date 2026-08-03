@@ -139,11 +139,11 @@ Arriving at GREAT CITY OF KINSAY
 
 ## ev.ev_kinsay_entry.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_entry.choice_3_result
 
@@ -151,19 +151,19 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_a.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_a.choice_3_result
 
@@ -171,11 +171,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_kinsay_b.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_b.choice_3_result
 
@@ -183,11 +183,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_kinsay_c.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_c.choice_3_result
 
@@ -207,7 +207,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_kinsay_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_a.choice_2
 
@@ -215,7 +215,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_kinsay_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_a_resolution.title
 
@@ -231,7 +231,7 @@ Make the introduction before nightfall
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2
 
@@ -239,7 +239,7 @@ Keep the sign in your travel book
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_b.title
 
@@ -255,7 +255,7 @@ Follow the practical advice
 
 ## ev.ev_kinsay_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_b.choice_2
 
@@ -263,7 +263,7 @@ Leave the rumour with the teller
 
 ## ev.ev_kinsay_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_b_resolution.title
 
@@ -279,7 +279,7 @@ Make the introduction before nightfall
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the the canals and the grain boats.
+The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2
 
@@ -287,7 +287,7 @@ Keep the sign in your travel book
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the canals and the grain boats.
+The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
 
 ## ev.ev_kinsay_a_followup.title
 

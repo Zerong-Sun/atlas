@@ -2,7 +2,7 @@
 unit: chandu
 lang: zh
 source: en
-source_rev: c9ad2a044d46
+source_rev: b44bf9f64c6a
 status: translated
 translator: 人工校译
 notes: >
@@ -32,48 +32,48 @@ stamps:
   ev.chandu.c.title: 5246e39d0536
   ev.chandu.entry.body: 6a6e197bd362
   ev.chandu.entry.title: 71280f0b9041
-  ev.ev_chandu_entry.choice_1_result: 97325cace124
-  ev.ev_chandu_entry.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_entry.choice_1_result: f4cb12f2f1a9
+  ev.ev_chandu_entry.choice_2_result: a2f04eb7e283
   ev.ev_chandu_entry.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_a.choice_1_result: 97325cace124
-  ev.ev_chandu_a.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_a.choice_1_result: f4cb12f2f1a9
+  ev.ev_chandu_a.choice_2_result: a2f04eb7e283
   ev.ev_chandu_a.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_b.choice_1_result: 97325cace124
-  ev.ev_chandu_b.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_b.choice_1_result: f4cb12f2f1a9
+  ev.ev_chandu_b.choice_2_result: a2f04eb7e283
   ev.ev_chandu_b.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_c.choice_1_result: 97325cace124
-  ev.ev_chandu_c.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_c.choice_1_result: f4cb12f2f1a9
+  ev.ev_chandu_c.choice_2_result: a2f04eb7e283
   ev.ev_chandu_c.choice_3_result: acc79f0bc8ce
   ev.ev_chandu_consequence_a.title: 5a1fc0b89f37
   ev.ev_chandu_consequence_a.body: 67b385b4a5f9
   ev.ev_chandu_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_chandu_consequence_a.choice_1_result: 97325cace124
+  ev.ev_chandu_consequence_a.choice_1_result: f4cb12f2f1a9
   ev.ev_chandu_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_chandu_consequence_a.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_consequence_a.choice_2_result: a2f04eb7e283
   ev.ev_chandu_consequence_a_resolution.title: 2b7e88c3a738
   ev.ev_chandu_consequence_a_resolution.body: 357c2908f927
   ev.ev_chandu_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_chandu_consequence_a_resolution.choice_1_result: 97325cace124
+  ev.ev_chandu_consequence_a_resolution.choice_1_result: f4cb12f2f1a9
   ev.ev_chandu_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_chandu_consequence_a_resolution.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_consequence_a_resolution.choice_2_result: a2f04eb7e283
   ev.ev_chandu_consequence_b.title: 67951197658f
   ev.ev_chandu_consequence_b.body: b3936526a575
   ev.ev_chandu_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_chandu_consequence_b.choice_1_result: 97325cace124
+  ev.ev_chandu_consequence_b.choice_1_result: f4cb12f2f1a9
   ev.ev_chandu_consequence_b.choice_2: bb0917a651a0
-  ev.ev_chandu_consequence_b.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_consequence_b.choice_2_result: a2f04eb7e283
   ev.ev_chandu_consequence_b_resolution.title: 2b7e88c3a738
   ev.ev_chandu_consequence_b_resolution.body: 827b72f18207
   ev.ev_chandu_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_chandu_consequence_b_resolution.choice_1_result: 97325cace124
+  ev.ev_chandu_consequence_b_resolution.choice_1_result: f4cb12f2f1a9
   ev.ev_chandu_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_chandu_consequence_b_resolution.choice_2_result: 7c1f467c0894
+  ev.ev_chandu_consequence_b_resolution.choice_2_result: a2f04eb7e283
   ev.chandu.mentor_closure.title: 34de8345e68d
   ev.chandu.mentor_closure.body: ed1bbafdd7e8
   ev.chandu.mentor_closure.choice_1: da8d611ab3c7
-  ev.chandu.mentor_closure.choice_1_result: 97325cace124
+  ev.chandu.mentor_closure.choice_1_result: f4cb12f2f1a9
   ev.chandu.mentor_closure.choice_2: 59a447ce21bf
-  ev.chandu.mentor_closure.choice_2_result: 7c1f467c0894
+  ev.chandu.mentor_closure.choice_2_result: a2f04eb7e283
   ev.chandu.mentor_closure.choice_3: 630a8fcfe069
   ev.chandu.mentor_closure.choice_3_result: acc79f0bc8ce
   ev.ev_chandu_a_followup.title: 4a2333e6293e

@@ -82,3 +82,39 @@ Buy dates from the coastal orchards
 ## ev.esher.b.choice.ask_axuma
 
 Ask the Saracen merchants where the coast trade runs southward
+
+## ev.ev_esher_entry.choice_1_result
+
+You pass through the darvāzā without delay. You set the way to Esher on your map.
+
+## ev.ev_esher_entry.choice_2_result
+
+You walk through the bāzār. It costs you 1 day on the road. The account is written down before the hour turns. The road to Esher opens on your map.
+
+## ev.ev_esher_entry.choice_3_result
+
+You visit the mandir (temple). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Esher on your map.
+
+## ev.ev_esher_a.choice_1_result
+
+You walk the haven and note how the Soldan's customs are kept. You spend 1 day before the way is clear again. You set the way to Aden on your map. You set what you saw into your travel book.
+
+## ev.ev_esher_a.choice_2_result
+
+You stand upon the mole and watch the Indian ships unload. The road to Dufar opens on your map. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_esher_a.choice_3_result
+
+You buy an Arabian horse from the export pens. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_esher_b.choice_1_result
+
+You buy frankincense at the Prince's price in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+## ev.ev_esher_b.choice_2_result
+
+You buy dates from the coastal orchards. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+## ev.ev_esher_b.choice_3_result
+
+You ask the Saracen merchants where the coast trade runs southward. The road to Axuma opens on your map. The road to Aden opens on your map. The account is written down before the hour turns.

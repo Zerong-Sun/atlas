@@ -2,7 +2,7 @@
 unit: kenjanfu
 lang: zh
 source: en
-source_rev: 8afde1af6bef
+source_rev: ac3b9b6f1097
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.kenjanfu.b.choice.workshops: a6ff75d64152
   ev.kenjanfu.b.choice.lacquer: f496cae3d971
   ev.kenjanfu.b.choice.palace: 4729d70c99ff
+  ev.ev_kenjanfu_entry.choice_1_result: 48344d886090
+  ev.ev_kenjanfu_entry.choice_2_result: e32dc4c90511
+  ev.ev_kenjanfu_entry.choice_3_result: 6d0c7f8da699
+  ev.ev_kenjanfu_a.choice_1_result: 0d83297130b2
+  ev.ev_kenjanfu_a.choice_2_result: 59da4fbc148e
+  ev.ev_kenjanfu_a.choice_3_result: 22f0fef633bb
+  ev.ev_kenjanfu_b.choice_1_result: 63fb6bf187dc
+  ev.ev_kenjanfu_b.choice_2_result: bf5e84f654e2
+  ev.ev_kenjanfu_b.choice_3_result: c75254c68c28
 ---
 
 ## city.kenjanfu.name
@@ -95,3 +104,39 @@ stamps:
 ## ev.kenjanfu.b.choice.palace
 
 于平原远观曼哥来王宫
+
+## ev.ev_kenjanfu_entry.choice_1_result
+
+你匆匆穿过城门，通往京兆府（西安）的道路，就此展开在舆图上。
+
+## ev.ev_kenjanfu_entry.choice_2_result
+
+你穿过集市，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往京兆府（西安）的路。
+
+## ev.ev_kenjanfu_entry.choice_3_result
+
+你去佛寺看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往京兆府（西安）的道路，就此展开在舆图上。
+
+## ev.ev_kenjanfu_a.choice_1_result
+
+你随养蚕人巡桑田，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往河中府（蒲州）的道路，就此展开在舆图上。
+
+## ev.ev_kenjanfu_a.choice_2_result
+
+你于茧市购生丝，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往额里合牙（宁夏）的路。
+
+## ev.ev_kenjanfu_a.choice_3_result
+
+你立路旁观茧车过，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_kenjanfu_b.choice_1_result
+
+你观金锦丝帛工坊，你在路上用去 2 日光阴。你把这番见闻记入行纪。你标出了通往襄阳府的路。
+
+## ev.ev_kenjanfu_b.choice_2_result
+
+你于军器坊区购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+
+## ev.ev_kenjanfu_b.choice_3_result
+
+你于平原远观曼哥来王宫，你把这番见闻记入行纪。时运待你，比先前好了几分。

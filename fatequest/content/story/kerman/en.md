@@ -84,3 +84,39 @@ Buy a length of embroidered silk for a gift
 ## ev.kerman.b.choice.visit-mews
 
 Climb to the mews and ask the price of a trained falcon
+
+## ev.ev_kerman_entry.choice_1_result
+
+You pass through the darvāzeh without delay. The road to Kerman opens on your map.
+
+## ev.ev_kerman_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Kerman on your map.
+
+## ev.ev_kerman_entry.choice_3_result
+
+You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Kerman opens on your map.
+
+## ev.ev_kerman_a.choice_1_result
+
+You watch the smiths at their forges. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_kerman_a.choice_2_result
+
+You buy a rough turquoise from a mine broker. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_kerman_a.choice_3_result
+
+You ask the caravan masters which roads cross the desert. The road to Yasdi opens on your map. The road to Ormus opens on your map. Word of your conduct runs ahead of you.
+
+## ev.ev_kerman_b.choice_1_result
+
+You browse the embroiderers' stalls in the covered lane. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_kerman_b.choice_2_result
+
+You buy a length of embroidered silk for a gift. Money moves — a little the better or the worse for you. The trade fills your hold a little. Fortune bends a little your way.
+
+## ev.ev_kerman_b.choice_3_result
+
+You climb to the mews and ask the price of a trained falcon. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Camadi on your map.

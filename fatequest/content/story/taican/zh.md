@@ -2,7 +2,7 @@
 unit: taican
 lang: zh
 source: en
-source_rev: 310da9c4a982
+source_rev: 43ade2268abf
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.taican.b.choice.buy_salt: cca881ac9399
   ev.taican.b.choice.watch_miners: 1665988b4901
   ev.taican.b.choice.ask_sapurgan: 6b635aca7254
+  ev.ev_taican_entry.choice_1_result: 7e825275fdfc
+  ev.ev_taican_entry.choice_2_result: c5ae24e14d72
+  ev.ev_taican_entry.choice_3_result: 95111a69e763
+  ev.ev_taican_a.choice_1_result: 4c2543ba7da6
+  ev.ev_taican_a.choice_2_result: 3aac962a756d
+  ev.ev_taican_a.choice_3_result: 9ca63851a87b
+  ev.ev_taican_b.choice_1_result: 3fc16a3517b2
+  ev.ev_taican_b.choice_2_result: b5e308afcbcb
+  ev.ev_taican_b.choice_3_result: ee4e6eb981ff
 ---
 
 ## city.taican.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.taican.b.choice.ask_sapurgan
 
 问何路驼队续往沙吾甘
+
+## ev.ev_taican_entry.choice_1_result
+
+你匆匆穿过 darvāzeh（城门），通往塔里寒（塔卢坎）的道路，就此展开在舆图上。
+
+## ev.ev_taican_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往塔里寒（塔卢坎）的路。
+
+## ev.ev_taican_entry.choice_3_result
+
+你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往塔里寒（塔卢坎）的道路，就此展开在舆图上。
+
+## ev.ev_taican_a.choice_1_result
+
+你行于谷物市，听驼队出价，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往巴达哈伤的道路，就此展开在舆图上。
+
+## ev.ev_taican_a.choice_2_result
+
+你买棉布备前路，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_taican_a.choice_3_result
+
+你问商队主人何路通巴里黑，通往巴里黑的道路，就此展开在舆图上。通往巴达哈伤的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_taican_b.choice_1_result
+
+你买塔里寒盐一块，备高隘之用，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+
+## ev.ev_taican_b.choice_2_result
+
+你看矿工凿硬盐，二日，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_taican_b.choice_3_result
+
+你问何路驼队续往沙吾甘，你标出了通往撒普儿干的路。你标出了通往巴里黑的路。你把这番见闻记入行纪。

@@ -2,7 +2,7 @@
 unit: smyrna
 lang: zh
 source: en
-source_rev: 3ccc766d7aa4
+source_rev: 0cd2649a1da8
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.smyrna.entry.choice.rest: cc453f19a435
   ev.smyrna.entry.body: 653bd15912aa
   ev.smyrna.entry.title: d652dbba3dff
+  ev.ev_smyrna_entry.choice_1_result: f095854edf2d
+  ev.ev_smyrna_entry.choice_2_result: 76d9c8141608
 ---
 
 ## city.smyrna.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.smyrna.entry.title
 
 士麦那
+
+## ev.ev_smyrna_entry.choice_1_result
+
+你继续赶路，不作停留，通往士麦那（伊兹密尔）的道路，就此展开在舆图上。
+
+## ev.ev_smyrna_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往士麦那（伊兹密尔）的路。

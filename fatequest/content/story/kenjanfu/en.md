@@ -82,3 +82,39 @@ Buy lacquerware from an armourer's quarter
 ## ev.kenjanfu.b.choice.palace
 
 View Prince Mangalai's palace from the plain
+
+## ev.ev_kenjanfu_entry.choice_1_result
+
+You pass through the gate without delay. The road to Kenjanfu opens on your map.
+
+## ev.ev_kenjanfu_entry.choice_2_result
+
+You walk through the market. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Kenjanfu on your map.
+
+## ev.ev_kenjanfu_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Kenjanfu opens on your map.
+
+## ev.ev_kenjanfu_a.choice_1_result
+
+You walk the mulberry gardens with a silkworm keeper. It costs you 1 day on the road. The account is written down before the hour turns. The road to Cachanfu opens on your map.
+
+## ev.ev_kenjanfu_a.choice_2_result
+
+You buy raw silk from a cocoon market. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Egrigaia on your map.
+
+## ev.ev_kenjanfu_a.choice_3_result
+
+You stand at the roadside and watch the cocoon carts pass. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_kenjanfu_b.choice_1_result
+
+You tour the silk-and-gold workshops. You spend 2 days before the way is clear again. You set what you saw into your travel book. You set the way to Saianfu on your map.
+
+## ev.ev_kenjanfu_b.choice_2_result
+
+You buy lacquerware from an armourer's quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+
+## ev.ev_kenjanfu_b.choice_3_result
+
+You view Prince Mangalai's palace from the plain. You set what you saw into your travel book. A small turn of fortune favours you.

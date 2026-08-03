@@ -83,3 +83,39 @@ Buy a small porcelain bowl with paper-money
 ## ev.chinangli.b.choice.clerks
 
 Ask the exchange clerks how the notes are renewed
+
+## ev.ev_chinangli_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Chinangli on your map.
+
+## ev.ev_chinangli_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Chinangli opens on your map.
+
+## ev.ev_chinangli_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Chinangli on your map.
+
+## ev.ev_chinangli_a.choice_1_result
+
+You walk the quay and count the upstream boats. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Cambaluc on your map.
+
+## ev.ev_chinangli_a.choice_2_result
+
+You buy a bolt of river-traded silk. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Cacanfu opens on your map.
+
+## ev.ev_chinangli_a.choice_3_result
+
+You ask which spices the downstream boats carry. You set what you saw into your travel book. A small turn of fortune favours you. You set the way to Chandu on your map.
+
+## ev.ev_chinangli_b.choice_1_result
+
+You watch the paper-money exchange at a stall. It costs you 1 day on the road. The account is written down before the hour turns. The trade fills your hold a little.
+
+## ev.ev_chinangli_b.choice_2_result
+
+You buy a small porcelain bowl with paper-money. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+## ev.ev_chinangli_b.choice_3_result
+
+You ask the exchange clerks how the notes are renewed. The account is written down before the hour turns. Fortune bends a little your way.

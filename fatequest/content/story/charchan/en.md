@@ -34,3 +34,11 @@ Pass through without stopping
 ## ev.charchan.entry.title
 
 Of the Province of Charchan
+
+## ev.ev_charchan_entry.choice_1_result
+
+You pass through without stopping. The road to Charchan opens on your map.
+
+## ev.ev_charchan_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Charchan on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.

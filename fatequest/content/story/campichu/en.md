@@ -83,3 +83,39 @@ Walk the idol abbeys and note their gilded figures
 ## ev.campichu.b.choice.offering
 
 Leave a small offering at an abbey gate
+
+## ev.ev_campichu_entry.choice_1_result
+
+You pass through the gate without delay. The road to Campichu opens on your map.
+
+## ev.ev_campichu_entry.choice_2_result
+
+You walk through the market. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Campichu on your map.
+
+## ev.ev_campichu_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Campichu opens on your map.
+
+## ev.ev_campichu_a.choice_1_result
+
+You watch the governor's clerks at their tally. It costs you 1 day on the road. The account is written down before the hour turns. The road to Caracoron opens on your map.
+
+## ev.ev_campichu_a.choice_2_result
+
+You bargain with desert caravans for tea. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_campichu_a.choice_3_result
+
+You pass through the government quarter without delay. The road to Etzina opens on your map. Fortune bends a little your way.
+
+## ev.ev_campichu_b.choice_1_result
+
+You enter one of the three Christian churches. You spend 1 day before the way is clear again. You set what you saw into your travel book. Your name carries a little more weight here now.
+
+## ev.ev_campichu_b.choice_2_result
+
+You walk the idol abbeys and note their gilded figures. The account is written down before the hour turns. The road to Egrigaia opens on your map. Fortune bends a little your way.
+
+## ev.ev_campichu_b.choice_3_result
+
+You leave a small offering at an abbey gate. Coin changes hands, and the purse settles. Your name carries a little more weight here now. You set what you saw into your travel book.

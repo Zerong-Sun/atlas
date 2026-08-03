@@ -32,3 +32,11 @@ Rest half a day by the road
 ## ev.petra.entry.title
 
 Arriving at Petra
+
+## ev.ev_petra_entry.choice_1_result
+
+You ride on without delay. The road to Petra opens on your map.
+
+## ev.ev_petra_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Petra on your map.

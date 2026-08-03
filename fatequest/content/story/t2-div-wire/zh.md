@@ -75,6 +75,18 @@ stamps:
   ev.road.bazi_counsel.body: dc10379e7d4f
   ev.road.bazi_counsel.choice.cast: 3fa0ab2de832
   ev.road.bazi_counsel.choice.walk: e9f8f4c6239b
+  ev.ev_alexandria_mentor_geomancy.choice_1_result: ccd1c7338e1a
+  ev.ev_alexandria_mentor_geomancy.choice_2_result: 92f8f2fcf73c
+  ev.ev_kiovia_mentor_runes.choice_1_result: 2f0ddd51b15f
+  ev.ev_kiovia_mentor_runes.choice_2_result: 0e0e05915e5c
+  ev.ev_caffa_mentor_runes.choice_1_result: 2f0ddd51b15f
+  ev.ev_caffa_mentor_runes.choice_2_result: 0977459d9644
+  ev.ev_road_jiaobei_counsel.choice_2_result: cfd195ed21a9
+  ev.ev_road_astrodice_counsel.choice_2_result: 43a2651fe4a5
+  ev.ev_road_geomancy_counsel.choice_2_result: cfd195ed21a9
+  ev.ev_road_runes_counsel.choice_2_result: cfd195ed21a9
+  ev.ev_kiovia_runes_ford.choice_2_result: b33fd46e9124
+  ev.ev_road_bazi_counsel.choice_2_result: 43a2651fe4a5
 ---
 
 ## npc.npc-kiovia-mentor.name
@@ -353,3 +365,50 @@ stamps:
 
 不问便走
 
+## ev.ev_alexandria_mentor_geomancy.choice_1_result
+
+你付资学沙盘，银钱易手，囊中为之或增或减。你在路上用去 10 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+
+## ev.ev_alexandria_mentor_geomancy.choice_2_result
+
+你问众象与航程，不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_kiovia_mentor_runes.choice_1_result
+
+你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+
+## ev.ev_kiovia_mentor_runes.choice_2_result
+
+你只听抽法，不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_caffa_mentor_runes.choice_1_result
+
+你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+
+## ev.ev_caffa_mentor_runes.choice_2_result
+
+你问此埠Raidho之意，不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_jiaobei_counsel.choice_2_result
+
+你不问便走，此事已作下记号，不会被忘记。
+
+## ev.ev_road_astrodice_counsel.choice_2_result
+
+你不问便走，这件公案，就此有了着落。
+
+## ev.ev_road_geomancy_counsel.choice_2_result
+
+你不问便走，此事已作下记号，不会被忘记。
+
+## ev.ev_road_runes_counsel.choice_2_result
+
+你不问便走，此事已作下记号，不会被忘记。
+
+## ev.ev_kiovia_runes_ford.choice_2_result
+
+你不抽便渡，此事已作下记号，不会被忘记。
+
+## ev.ev_road_bazi_counsel.choice_2_result
+
+你不问便走，这件公案，就此有了着落。

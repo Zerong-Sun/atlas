@@ -83,3 +83,39 @@ Rest a week in the valley before the high passes
 ## ev.keshimur.b.choice.buy_turquoise
 
 Buy turquoise from the mountain traders
+
+## ev.ev_keshimur_entry.choice_1_result
+
+You pass through the darvāzeh without delay. The road to Keshimur opens on your map.
+
+## ev.ev_keshimur_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Keshimur on your map.
+
+## ev.ev_keshimur_entry.choice_3_result
+
+You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Keshimur opens on your map.
+
+## ev.ev_keshimur_a.choice_1_result
+
+You listen a day while the elders tell of the speaking idols. It costs you 1 day on the road. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_keshimur_a.choice_2_result
+
+You stand at the shrine door and watch without entering. You set what you saw into your travel book. You set the way to Badashan on your map. Your name carries a little more weight here now.
+
+## ev.ev_keshimur_a.choice_3_result
+
+You ask which passes lead east toward Cabul. The road to Cabul opens on your map. The road to Badashan opens on your map. The account is written down before the hour turns.
+
+## ev.ev_keshimur_b.choice_1_result
+
+You hire a mountain guide to teach you a little of their tongue. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. You set the way to Delli on your map. You set what you saw into your travel book.
+
+## ev.ev_keshimur_b.choice_2_result
+
+You rest a week in the valley before the high passes. It costs you 7 days on the road. Fortune bends a little your way. The account is written down before the hour turns.
+
+## ev.ev_keshimur_b.choice_3_result
+
+You buy turquoise from the mountain traders. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.

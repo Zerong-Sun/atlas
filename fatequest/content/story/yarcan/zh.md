@@ -2,7 +2,7 @@
 unit: yarcan
 lang: zh
 source: en
-source_rev: 239834cf0517
+source_rev: 06f7dbdc13ee
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.yarcan.entry.choice.pass: 96d145abaf05
   ev.yarcan.entry.body: c67678638579
   ev.yarcan.entry.title: fe130d877dff
+  ev.ev_yarcan_entry.choice_1_result: f1fbf982f5bd
+  ev.ev_yarcan_entry.choice_2_result: 1078afafdc9f
 ---
 
 ## city.yarcan.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.yarcan.entry.title
 
 鸦儿看
+
+## ev.ev_yarcan_entry.choice_1_result
+
+你穿城而过，不加停留，通往鸦儿看（叶尔羌）的道路，就此展开在舆图上。
+
+## ev.ev_yarcan_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往鸦儿看（叶尔羌）的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

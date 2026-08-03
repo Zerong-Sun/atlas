@@ -2,7 +2,7 @@
 unit: axuma
 lang: zh
 source: en
-source_rev: a948766a172d
+source_rev: 45afece8cabe
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.axuma.entry.choice.rest: cc453f19a435
   ev.axuma.entry.body: 9c261ef54203
   ev.axuma.entry.title: 57ac481564cb
+  ev.ev_axuma_entry.choice_1_result: c7393f929415
+  ev.ev_axuma_entry.choice_2_result: 07121367e850
 ---
 
 ## city.axuma.name
@@ -37,3 +39,11 @@ stamps:
 ## ev.axuma.entry.title
 
 至阿克苏姆
+
+## ev.ev_axuma_entry.choice_1_result
+
+你继续赶路，不作停留，通往阿克苏姆的道路，就此展开在舆图上。
+
+## ev.ev_axuma_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往阿克苏姆的路。

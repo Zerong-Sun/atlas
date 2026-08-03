@@ -2,7 +2,7 @@
 unit: ninive
 lang: zh
 source: en
-source_rev: 1234fc42800a
+source_rev: 88e6683af64d
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.ninive.entry.choice.rest: cc453f19a435
   ev.ninive.entry.body: 82f15903f86b
   ev.ninive.entry.title: ec5b951756c2
+  ev.ev_ninive_entry.choice_1_result: a34562eb00bd
+  ev.ev_ninive_entry.choice_2_result: 0210a025373b
 ---
 
 ## city.ninive.name
@@ -40,3 +42,10 @@ stamps:
 
 摩苏尔
 
+## ev.ev_ninive_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往尼尼微（摩苏尔）的路。
+
+## ev.ev_ninive_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往尼尼微（摩苏尔）的道路，就此展开在舆图上。

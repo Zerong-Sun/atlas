@@ -2,7 +2,7 @@
 unit: cambaluc
 lang: zh
 source: en
-source_rev: c32ca38afcef
+source_rev: 668ddc94b5e6
 status: translated
 translator: 人工校译
 notes: >
@@ -36,44 +36,44 @@ stamps:
   ev.cambaluc.c.title: f1dcba9f2ce5
   ev.cambaluc.entry.body: ef7bf578cd51
   ev.cambaluc.entry.title: f7224b9d3673
-  ev.ev_cambaluc_entry.choice_1_result: d7bf50115886
-  ev.ev_cambaluc_entry.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_entry.choice_1_result: 259360edfd7b
+  ev.ev_cambaluc_entry.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_entry.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_mentor_iching.choice_1_result: d7bf50115886
-  ev.ev_cambaluc_mentor_iching.choice_2_result: 5a8c60d2fad0
-  ev.ev_cambaluc_a.choice_1_result: d7bf50115886
-  ev.ev_cambaluc_a.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_mentor_iching.choice_1_result: 259360edfd7b
+  ev.ev_cambaluc_mentor_iching.choice_2_result: ff35c818ea78
+  ev.ev_cambaluc_a.choice_1_result: 259360edfd7b
+  ev.ev_cambaluc_a.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_a.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_b.choice_1_result: d7bf50115886
-  ev.ev_cambaluc_b.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_b.choice_1_result: 259360edfd7b
+  ev.ev_cambaluc_b.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_b.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_c.choice_1_result: d7bf50115886
-  ev.ev_cambaluc_c.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_c.choice_1_result: 259360edfd7b
+  ev.ev_cambaluc_c.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_c.choice_3_result: 33b892a51eae
   ev.ev_cambaluc_consequence_a.title: c50ef1ebc721
   ev.ev_cambaluc_consequence_a.body: 215bf5dbb437
   ev.ev_cambaluc_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cambaluc_consequence_a.choice_1_result: d7bf50115886
+  ev.ev_cambaluc_consequence_a.choice_1_result: 259360edfd7b
   ev.ev_cambaluc_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cambaluc_consequence_a.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_consequence_a.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_consequence_a_resolution.title: 3be836affbbb
   ev.ev_cambaluc_consequence_a_resolution.body: 357c2908f927
   ev.ev_cambaluc_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cambaluc_consequence_a_resolution.choice_1_result: d7bf50115886
+  ev.ev_cambaluc_consequence_a_resolution.choice_1_result: 259360edfd7b
   ev.ev_cambaluc_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cambaluc_consequence_a_resolution.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_consequence_a_resolution.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_consequence_b.title: 4cc01553daf1
   ev.ev_cambaluc_consequence_b.body: b78971914551
   ev.ev_cambaluc_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cambaluc_consequence_b.choice_1_result: d7bf50115886
+  ev.ev_cambaluc_consequence_b.choice_1_result: 259360edfd7b
   ev.ev_cambaluc_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cambaluc_consequence_b.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_consequence_b.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_consequence_b_resolution.title: 3be836affbbb
   ev.ev_cambaluc_consequence_b_resolution.body: 827b72f18207
   ev.ev_cambaluc_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cambaluc_consequence_b_resolution.choice_1_result: d7bf50115886
+  ev.ev_cambaluc_consequence_b_resolution.choice_1_result: 259360edfd7b
   ev.ev_cambaluc_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cambaluc_consequence_b_resolution.choice_2_result: 5a8c60d2fad0
+  ev.ev_cambaluc_consequence_b_resolution.choice_2_result: ff35c818ea78
   ev.ev_cambaluc_a_followup.title: e581ba7d19f8
   ev.ev_cambaluc_a_followup.body: 92282460a841
   ev.ev_cambaluc_a_followup.choice_1: 6d2f302373fc

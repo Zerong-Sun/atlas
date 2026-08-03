@@ -2,7 +2,7 @@
 unit: cobinan
 lang: zh
 source: en
-source_rev: ad749aa23410
+source_rev: 1a00b5d13e95
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.cobinan.entry.choice.pass: 96d145abaf05
   ev.cobinan.entry.body: 3be4c07ddb3d
   ev.cobinan.entry.title: f94220935097
+  ev.ev_cobinan_entry.choice_1_result: 338bfddb6f0d
+  ev.ev_cobinan_entry.choice_2_result: 4964ea64f917
 ---
 
 ## city.cobinan.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.cobinan.entry.title
 
 科比南
+
+## ev.ev_cobinan_entry.choice_1_result
+
+你穿城而过，不加停留，通往科比南的道路，就此展开在舆图上。
+
+## ev.ev_cobinan_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往科比南的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

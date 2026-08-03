@@ -2,7 +2,7 @@
 unit: saianfu
 lang: zh
 source: en
-source_rev: 3aee808a8d59
+source_rev: 8f5506c2ff64
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.saianfu.b.choice.market: 065bc1551204
   ev.saianfu.b.choice.ginger: 4e5279d18183
   ev.saianfu.b.choice.walls: 465d72320b0a
+  ev.ev_saianfu_entry.choice_1_result: eddebd7ca919
+  ev.ev_saianfu_entry.choice_2_result: d553bd7f774d
+  ev.ev_saianfu_entry.choice_3_result: 352f06c09c84
+  ev.ev_saianfu_a.choice_1_result: f08a6618c94d
+  ev.ev_saianfu_a.choice_2_result: d1113787ed4e
+  ev.ev_saianfu_a.choice_3_result: e7615a5f7c24
+  ev.ev_saianfu_b.choice_1_result: ab0f94ef6ec9
+  ev.ev_saianfu_b.choice_2_result: 60e102559b5d
+  ev.ev_saianfu_b.choice_3_result: 9dee9dab3340
 ---
 
 ## city.saianfu.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.saianfu.b.choice.walls
 
 沿北道而行——昔年大军曾围城处
+
+## ev.ev_saianfu_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往襄阳府的路。
+
+## ev.ev_saianfu_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往襄阳府的道路，就此展开在舆图上。
+
+## ev.ev_saianfu_entry.choice_3_result
+
+你去佛寺看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往襄阳府的路。
+
+## ev.ev_saianfu_a.choice_1_result
+
+你观织工于机杼前，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往济宁的路。
+
+## ev.ev_saianfu_a.choice_2_result
+
+你于织户摊购细绢，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往河中府（蒲州）的道路，就此展开在舆图上。
+
+## ev.ev_saianfu_a.choice_3_result
+
+你问官吏何城纳贡，你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_saianfu_b.choice_1_result
+
+你巡猎人市，近工坊区，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往京兆府（西安）的道路，就此展开在舆图上。
+
+## ev.ev_saianfu_b.choice_2_result
+
+你于粮商摊购生姜，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_saianfu_b.choice_3_result
+
+你沿北道而行——昔年大军曾围城处，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。

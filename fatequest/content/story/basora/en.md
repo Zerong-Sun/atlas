@@ -25,7 +25,6 @@ must know that Basra has been a gate of the sea since the first centuries of
 Islam, and that its markets still speak Arabic, Persian, and the tongues of
 the Gulf.
 
-
 ## ev.basora.entry.choice.pass
 
 Ride on without delay
@@ -37,3 +36,11 @@ Rest half a day by the road
 ## ev.basora.entry.title
 
 Arriving at Basora
+
+## ev.ev_basora_entry.choice_1_result
+
+You ride on without delay. The road to Basora opens on your map.
+
+## ev.ev_basora_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Basora on your map.

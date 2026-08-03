@@ -24,7 +24,6 @@ to Emessa and Hamah, south toward Bairūt and Acca. You must know that this
 Tripoli is of the Syrian shore, not of the Maghrib, and that its Friday
 mosques and its fondacos stand within the same walls.
 
-
 ## ev.tripolis.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.tripolis.entry.title
 
 Arriving at Tripolis
+
+## ev.ev_tripolis_entry.choice_1_result
+
+You ride on without delay. The road to Tripolis opens on your map.
+
+## ev.ev_tripolis_entry.choice_2_result
+
+You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Tripolis on your map.

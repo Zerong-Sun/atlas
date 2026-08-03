@@ -2,7 +2,7 @@
 unit: ibn-fadlan-road
 lang: zh
 source: en
-source_rev: c7b48daf1762
+source_rev: a11614024ca1
 status: translated
 translator: 人工校译
 notes: >
@@ -149,6 +149,76 @@ stamps:
   ev.road.fadlan_35.body: 73b0f5df308e
   ev.road.fadlan_35.choice.wait_for_sound: 3c1b0f232069
   ev.road.fadlan_35.choice.press_on: 44d4adb6fc88
+  ev.ev_road_fadlan_01.choice_1_result: 39e20677333b
+  ev.ev_road_fadlan_01.choice_2_result: eae5e3a07cab
+  ev.ev_road_fadlan_02.choice_1_result: 245a7e505ac9
+  ev.ev_road_fadlan_02.choice_2_result: 174c22cca1be
+  ev.ev_road_fadlan_03.choice_1_result: fb79a1649cad
+  ev.ev_road_fadlan_03.choice_2_result: 96f8be3e1189
+  ev.ev_road_fadlan_04.choice_1_result: 8211391479ba
+  ev.ev_road_fadlan_04.choice_2_result: 795dcc26c9c8
+  ev.ev_road_fadlan_05.choice_1_result: 325efa11f4fe
+  ev.ev_road_fadlan_05.choice_2_result: efbf71359e8b
+  ev.ev_road_fadlan_06.choice_1_result: e8bafcb44876
+  ev.ev_road_fadlan_06.choice_2_result: 22abd92904f8
+  ev.ev_road_fadlan_07.choice_1_result: 438b4d9adf46
+  ev.ev_road_fadlan_07.choice_2_result: 7cb8c36990e7
+  ev.ev_road_fadlan_08.choice_1_result: c47fe6211c65
+  ev.ev_road_fadlan_08.choice_2_result: 1bb0fc567995
+  ev.ev_road_fadlan_09.choice_1_result: eeeec39c6ca1
+  ev.ev_road_fadlan_09.choice_2_result: 099d9ca6e618
+  ev.ev_road_fadlan_10.choice_1_result: e6e2e319ee13
+  ev.ev_road_fadlan_10.choice_2_result: 3858deccf21a
+  ev.ev_road_fadlan_11.choice_1_result: 1ee84f763995
+  ev.ev_road_fadlan_11.choice_2_result: d9f165001f11
+  ev.ev_road_fadlan_12.choice_1_result: 1467f234b45b
+  ev.ev_road_fadlan_12.choice_2_result: 489235540fee
+  ev.ev_road_fadlan_13.choice_1_result: 1eb48c742c08
+  ev.ev_road_fadlan_13.choice_2_result: 9a8bf20823ba
+  ev.ev_road_fadlan_14.choice_1_result: bb11d247fe2b
+  ev.ev_road_fadlan_14.choice_2_result: 05f9c9686d08
+  ev.ev_road_fadlan_15.choice_1_result: 21f434f811db
+  ev.ev_road_fadlan_15.choice_2_result: d75a7c4b9c18
+  ev.ev_road_fadlan_16.choice_1_result: a093309314e1
+  ev.ev_road_fadlan_16.choice_2_result: 0479a4e5a79e
+  ev.ev_road_fadlan_17.choice_1_result: 05e4de1a4539
+  ev.ev_road_fadlan_17.choice_2_result: c2c4581bf944
+  ev.ev_road_fadlan_18.choice_1_result: 147039426526
+  ev.ev_road_fadlan_18.choice_2_result: bd2536aea47f
+  ev.ev_road_fadlan_19.choice_1_result: 47b72395bfeb
+  ev.ev_road_fadlan_19.choice_2_result: 57d7182ad77a
+  ev.ev_road_fadlan_20.choice_1_result: 8928762845c0
+  ev.ev_road_fadlan_20.choice_2_result: 828a887ccb67
+  ev.ev_road_fadlan_21.choice_1_result: 441cc64fc1c4
+  ev.ev_road_fadlan_21.choice_2_result: 05c09c6dfc34
+  ev.ev_road_fadlan_22.choice_1_result: bc780b8c5462
+  ev.ev_road_fadlan_22.choice_2_result: c5ea1c6a9d62
+  ev.ev_road_fadlan_23.choice_1_result: 7b6bfa06ccea
+  ev.ev_road_fadlan_23.choice_2_result: de0c8d315519
+  ev.ev_road_fadlan_24.choice_1_result: 8eae2c1917b3
+  ev.ev_road_fadlan_24.choice_2_result: 36fe7caab0c0
+  ev.ev_road_fadlan_25.choice_1_result: 7bbca312934c
+  ev.ev_road_fadlan_25.choice_2_result: cfe18b91ffcc
+  ev.ev_road_fadlan_26.choice_1_result: 13a341a23808
+  ev.ev_road_fadlan_26.choice_2_result: 3acb7db381ad
+  ev.ev_road_fadlan_27.choice_1_result: 6416e76eacd8
+  ev.ev_road_fadlan_27.choice_2_result: 00a45f93dff2
+  ev.ev_road_fadlan_28.choice_1_result: d2d60917ebe5
+  ev.ev_road_fadlan_28.choice_2_result: 5ef7e701ba56
+  ev.ev_road_fadlan_29.choice_1_result: e9709bbc3bf9
+  ev.ev_road_fadlan_29.choice_2_result: eb3978b52b62
+  ev.ev_road_fadlan_30.choice_1_result: ee7a33e98327
+  ev.ev_road_fadlan_30.choice_2_result: 02daabfc12b0
+  ev.ev_road_fadlan_31.choice_1_result: 92b6c29d729d
+  ev.ev_road_fadlan_31.choice_2_result: cfe9c6bd8a4f
+  ev.ev_road_fadlan_32.choice_1_result: 64270d913204
+  ev.ev_road_fadlan_32.choice_2_result: bff33660cfd2
+  ev.ev_road_fadlan_33.choice_1_result: b4e617243273
+  ev.ev_road_fadlan_33.choice_2_result: d5f77f4e9a37
+  ev.ev_road_fadlan_34.choice_1_result: b1196c95076d
+  ev.ev_road_fadlan_34.choice_2_result: 502837b3cad9
+  ev.ev_road_fadlan_35.choice_1_result: 2a6cf2dd1d03
+  ev.ev_road_fadlan_35.choice_2_result: 77ef9addd5ca
 ---
 
 ## ev.road.fadlan_01.title
@@ -710,3 +780,283 @@ stamps:
 ## ev.road.fadlan_35.choice.press_on
 
 趁冰尚坚，疾行而过
+
+## ev.ev_road_fadlan_01.choice_1_result
+
+你随商队踏冰渡河，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_01.choice_2_result
+
+你于驿站候三日，待探路者报冰情，你在路上用去 3 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_02.choice_1_result
+
+你付向导酬金，携其同行，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_02.choice_2_result
+
+你信商队旧迹，不雇而前行，为此费去你 2 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_03.choice_1_result
+
+你立而观天象，记其所见，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_03.choice_2_result
+
+你入帐避之，任天象自去，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_04.choice_1_result
+
+你问可曾有人亲见，你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_road_fadlan_04.choice_2_result
+
+你离火堆，平明即行，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_05.choice_1_result
+
+你记所见丧仪次第，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_05.choice_2_result
+
+你火未起前悄然退去，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_06.choice_1_result
+
+你付水手薄资，求诸岛草图，银钱易手，囊中为之或增或减。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_06.choice_2_result
+
+你仍走陆路，但携其说而行，为此费去你 1 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_07.choice_1_result
+
+你听经纪人言，记北地所出，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_road_fadlan_07.choice_2_result
+
+你议价方酣时离市前行，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_08.choice_1_result
+
+你观默市规矩而记之，你在路上用去 2 日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_08.choice_2_result
+
+你绕场而行，继续上路，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_09.choice_1_result
+
+你改道二日，往观奇丘，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_09.choice_2_result
+
+你仍走萨格辛道，但记其说，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_10.choice_1_result
+
+你入花剌子模，于瓜市歇息，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_road_fadlan_10.choice_2_result
+
+你购粮即行，不作久留，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_11.choice_1_result
+
+你问何隘仍可通北障，你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_11.choice_2_result
+
+你谢其言，仍走己路，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_12.choice_1_result
+
+你互报路况，问前路，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_road_fadlan_12.choice_2_result
+
+你付资求罗斯道安营清单，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_13.choice_1_result
+
+你按马苏第所记录朝仪，你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_13.choice_2_result
+
+你不听可萨闲话，东行，为此费去你 1 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_14.choice_1_result
+
+你一昼夜不寐，量其明晦，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_14.choice_2_result
+
+你能眠则眠，随商队而行，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_15.choice_1_result
+
+你请观皮货，记其产地号，你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_road_fadlan_15.choice_2_result
+
+你让道于雪橇，继续北行，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_16.choice_1_result
+
+你遍历货行，记北地所出，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_16.choice_2_result
+
+你但购干粮，市散前上路，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_17.choice_1_result
+
+你付资乘犬橇至下一停，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_17.choice_2_result
+
+你踏冰路步行，为此费去你 2 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_18.choice_1_result
+
+你据闻直录，不加增饰，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_18.choice_2_result
+
+你不涉此类传闻，仍走开阔草原，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_19.choice_1_result
+
+你学其结绳与标货之法，你在路上用去 2 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_19.choice_2_result
+
+你觉利不足抵险，折返，为此费去你 1 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_20.choice_1_result
+
+你忍寒随商队而行，你在路上用去 2 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_20.choice_2_result
+
+你停一日，燃柞木以御寒，为此费去你 3 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_21.choice_1_result
+
+你问自不里加尔至西伯利亚程日，不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_21.choice_2_result
+
+你谢其言，向南行，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_22.choice_1_result
+
+你付舟子先渡汝之行囊，银钱易手，囊中为之或增或减。你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_22.choice_2_result
+
+你随商队渡河，任其迟延，为此费去你 2 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_23.choice_1_result
+
+你守至天明，助搜草原，为此费去你 1 日路程。你的行事之名先你一步传开。
+
+## ev.ev_road_fadlan_23.choice_2_result
+
+你平明备鞍，离此纷争，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_24.choice_1_result
+
+你接碗饮一口，求其祝路，此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_24.choice_2_result
+
+你先献葡萄干、胡椒为客礼再饮，一注钱款进出，得失皆在掌中。你的行事之名先你一步传开。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_25.choice_1_result
+
+你高燃篝火，近武装者而行，为此费去你 2 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_25.choice_2_result
+
+你趁狼尚远，连夜赶路，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_26.choice_1_result
+
+你留一时辰，分水施药并记其事，你在路上用去 1 日光阴。此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_26.choice_2_result
+
+你留可舍之水，随队前行，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_27.choice_1_result
+
+你问距阿拉尔岸几日程，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_27.choice_2_result
+
+你让路于盐队，继续行，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_28.choice_1_result
+
+你记其时与骑者之言，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_28.choice_2_result
+
+你日复即安抚坐骑上路，为此费去你 1 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_29.choice_1_result
+
+你并行一里，尽记姓名数目，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_29.choice_2_result
+
+你避目不看，趁守卫未问急行，你在路上用去 1 日光阴。
+
+## ev.ev_road_fadlan_30.choice_1_result
+
+你停步低桩扎帐，待风暴过，为此费去你 2 日路程。气运稍稍偏向于你。
+
+## ev.ev_road_fadlan_30.choice_2_result
+
+你趁间隙赶路，趁马尚行，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_31.choice_1_result
+
+你勘丘墓，绘其所遗，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_road_fadlan_31.choice_2_result
+
+你任死者归风，继续行，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_32.choice_1_result
+
+你纳费，持印信收据渡河，一注钱款进出，得失皆在掌中。为此费去你 1 日路程。你的行事之名先你一步传开。
+
+## ev.ev_road_fadlan_32.choice_2_result
+
+你溯流改道，从不守之浅渡，你在路上用去 3 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_33.choice_1_result
+
+你习系法，记其层数，你在路上用去 1 日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_33.choice_2_result
+
+你谢其教，趁雪前上路，为此费去你 1 日路程。
+
+## ev.ev_road_fadlan_34.choice_1_result
+
+你绕远而行，记其如何惑目，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_road_fadlan_34.choice_2_result
+
+你信向导旧迹，不延而进，你在路上用去 1 日光阴。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_35.choice_1_result
+
+你待冰静，单列渡之，你在路上用去 1 日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_road_fadlan_35.choice_2_result
+
+你趁冰尚坚，疾行而过，为此费去你 1 日路程。气运稍稍偏向于你。

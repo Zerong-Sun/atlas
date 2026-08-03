@@ -76,3 +76,39 @@ Observe the idol rites from the courtyard wall
 ## ev.camul.b.choice.ask-east
 
 Ask a monk which road leads toward the eastern desert
+
+## ev.ev_camul_entry.choice_1_result
+
+You pass through the darvāzeh without delay. The road to Camul opens on your map.
+
+## ev.ev_camul_entry.choice_2_result
+
+You walk through the bāzār. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Camul on your map.
+
+## ev.ev_camul_entry.choice_3_result
+
+You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Camul opens on your map.
+
+## ev.ev_camul_a.choice_1_result
+
+You walk the melon rows and taste what the farmers offer. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_camul_a.choice_2_result
+
+You buy dried melon spirals for the desert crossing. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+## ev.ev_camul_a.choice_3_result
+
+You ask the melon traders where their caravans go. The road to Lop opens on your map. The road to Sachiu opens on your map.
+
+## ev.ev_camul_b.choice_1_result
+
+You sit with the elders and hear their account of the old custom. You spend 1 day before the way is clear again. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_camul_b.choice_2_result
+
+You observe the idol rites from the courtyard wall. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_camul_b.choice_3_result
+
+You ask a monk which road leads toward the eastern desert. You set the way to Etzina on your map. You spend 1 day before the way is clear again.

@@ -2,7 +2,7 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: 82b1c859fc1c
+source_rev: d41aa615335a
 status: translated
 translator: 人工校译
 notes: >
@@ -32,48 +32,48 @@ stamps:
   ev.cotan.c.title: b9524767021d
   ev.cotan.entry.body: 87b436f01b1a
   ev.cotan.entry.title: d750868faec6
-  ev.ev_cotan_entry.choice_1_result: 2ac2ca3e8160
-  ev.ev_cotan_entry.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_entry.choice_1_result: ebbb4d9f7c44
+  ev.ev_cotan_entry.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_entry.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_a.choice_1_result: 2ac2ca3e8160
-  ev.ev_cotan_a.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_a.choice_1_result: ebbb4d9f7c44
+  ev.ev_cotan_a.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_a.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_b.choice_1_result: 2ac2ca3e8160
-  ev.ev_cotan_b.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_b.choice_1_result: ebbb4d9f7c44
+  ev.ev_cotan_b.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_b.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_c.choice_1_result: 2ac2ca3e8160
-  ev.ev_cotan_c.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_c.choice_1_result: ebbb4d9f7c44
+  ev.ev_cotan_c.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_c.choice_3_result: 2c512b57b3d2
   ev.ev_cotan_consequence_a.title: 0a189a9de00d
   ev.ev_cotan_consequence_a.body: 0a5c32e02c01
   ev.ev_cotan_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cotan_consequence_a.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_a.choice_1_result: ebbb4d9f7c44
   ev.ev_cotan_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cotan_consequence_a.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_a.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_consequence_a_resolution.title: d282ac8b9ba2
   ev.ev_cotan_consequence_a_resolution.body: 357c2908f927
   ev.ev_cotan_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cotan_consequence_a_resolution.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_a_resolution.choice_1_result: ebbb4d9f7c44
   ev.ev_cotan_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cotan_consequence_a_resolution.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_a_resolution.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_consequence_b.title: 407b734dd715
   ev.ev_cotan_consequence_b.body: 0b6da447baef
   ev.ev_cotan_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cotan_consequence_b.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_b.choice_1_result: ebbb4d9f7c44
   ev.ev_cotan_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cotan_consequence_b.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_b.choice_2_result: 616d22cd9bb6
   ev.ev_cotan_consequence_b_resolution.title: d282ac8b9ba2
   ev.ev_cotan_consequence_b_resolution.body: 827b72f18207
   ev.ev_cotan_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cotan_consequence_b_resolution.choice_1_result: 2ac2ca3e8160
+  ev.ev_cotan_consequence_b_resolution.choice_1_result: ebbb4d9f7c44
   ev.ev_cotan_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cotan_consequence_b_resolution.choice_2_result: 4e8560062ac9
+  ev.ev_cotan_consequence_b_resolution.choice_2_result: 616d22cd9bb6
   ev.cotan.mentor_closure.title: da75a7423ad9
   ev.cotan.mentor_closure.body: d5f692b5c670
   ev.cotan.mentor_closure.choice_1: da8d611ab3c7
-  ev.cotan.mentor_closure.choice_1_result: 2ac2ca3e8160
+  ev.cotan.mentor_closure.choice_1_result: ebbb4d9f7c44
   ev.cotan.mentor_closure.choice_2: 59a447ce21bf
-  ev.cotan.mentor_closure.choice_2_result: 4e8560062ac9
+  ev.cotan.mentor_closure.choice_2_result: 616d22cd9bb6
   ev.cotan.mentor_closure.choice_3: 630a8fcfe069
   ev.cotan.mentor_closure.choice_3_result: 2c512b57b3d2
   ev.ev_cotan_a_followup.title: 337d29f258ba

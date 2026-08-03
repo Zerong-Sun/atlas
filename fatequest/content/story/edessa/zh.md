@@ -2,7 +2,7 @@
 unit: edessa
 lang: zh
 source: en
-source_rev: 02aa437fd4a6
+source_rev: 43198c021751
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.edessa.entry.choice.rest: cc453f19a435
   ev.edessa.entry.body: 6682fb7f2fba
   ev.edessa.entry.title: 2caf31f3fe4e
+  ev.ev_edessa_entry.choice_1_result: 8cdcb6e24018
+  ev.ev_edessa_entry.choice_2_result: f95a8651e618
 ---
 
 ## city.edessa.name
@@ -40,3 +42,10 @@ stamps:
 
 埃德萨
 
+## ev.ev_edessa_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往以得撒的路。
+
+## ev.ev_edessa_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往以得撒的道路，就此展开在舆图上。

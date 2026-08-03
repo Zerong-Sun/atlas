@@ -1070,12 +1070,46 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------------------------------------ G29: no silent choices
+// Every choice a player can click must give them something to read back: a
+// resultText line, a divination reading, or a queued consequence. A choice
+// that only applies effects and then ends the event is a dead end — the
+// "nothing happened" complaint this optimization round is closing
+// (docs/OPTIMIZATION_PLAN.md §2). `divination` choices are exempt because the
+// cast's reading is itself the feedback.
+{
+  const silent = [];
+  const effectLists = (ch) => [
+    ch.effects,
+    ch.pass?.effects,
+    ch.fail?.effects,
+    ch.lessonFailEffects,
+  ];
+  for (const e of byTable.events ?? []) {
+    for (const [i, ch] of (e.choices ?? []).entries()) {
+      const hasFeedback = Boolean(ch.resultText) || Boolean(ch.divination) ||
+        effectLists(ch).some((list) => (list ?? [])
+          .some((effect) => effect.op === "queue_event"));
+      if (!hasFeedback)
+        silent.push(`${e.id}.choices[${i}]`);
+    }
+  }
+  for (const s of silent) {
+    const [id] = s.split(".");
+    err("G29", recordFile.get(id) ?? "events", `${s}: no resultText, divination, or queue_event`);
+  }
+  if (process.argv.includes("--silent-list")) {
+    console.log(`\nSILENT_CHOICE_LIST (${silent.length}):`);
+    for (const s of silent) console.log(`  ${s}`);
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

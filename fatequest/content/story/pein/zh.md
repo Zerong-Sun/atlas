@@ -2,7 +2,7 @@
 unit: pein
 lang: zh
 source: en
-source_rev: 447e33f514ff
+source_rev: a968bfe27319
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.pein.entry.choice.pass: 96d145abaf05
   ev.pein.entry.body: 062b1a35331b
   ev.pein.entry.title: 45008b4775a5
+  ev.ev_pein_entry.choice_1_result: 00b91b4e1fbb
+  ev.ev_pein_entry.choice_2_result: 08ca3aff978b
 ---
 
 ## city.pein.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.pein.entry.title
 
 培因
+
+## ev.ev_pein_entry.choice_1_result
+
+你穿城而过，不加停留，通往髣城（克里雅）的道路，就此展开在舆图上。
+
+## ev.ev_pein_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往髣城（克里雅）的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

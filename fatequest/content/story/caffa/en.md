@@ -25,7 +25,6 @@ the Khān's own seat. You must know that Caffa is Uzbek Khān's door upon the
 Black Sea, where Frankish cloth and Tartar hides change hands beneath the
 same banner.
 
-
 ## ev.caffa.entry.choice.pass
 
 Ride on without delay
@@ -37,3 +36,11 @@ Rest half a day by the road
 ## ev.caffa.entry.title
 
 Arriving at Caffa
+
+## ev.ev_caffa_entry.choice_1_result
+
+You ride on without delay. You set the way to Caffa on your map.
+
+## ev.ev_caffa_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Caffa opens on your map.

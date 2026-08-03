@@ -2,7 +2,7 @@
 unit: coilum
 lang: zh
 source: en
-source_rev: 1866781d14ad
+source_rev: 2b0a10824023
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.coilum.entry.choice.pass: 96d145abaf05
   ev.coilum.entry.body: 24e469298723
   ev.coilum.entry.title: abb98c4c692b
+  ev.ev_coilum_entry.choice_1_result: 1099cd0c71eb
+  ev.ev_coilum_entry.choice_2_result: 0c488a7c4934
 ---
 
 ## city.coilum.name
@@ -40,3 +42,11 @@ bāzār（集市）上胡椒与姜成山；mandir（神庙）金顶映日。
 ## ev.coilum.entry.title
 
 记俱蓝国
+
+## ev.ev_coilum_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往俱蓝（奎隆）的路。
+
+## ev.ev_coilum_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往俱蓝（奎隆）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

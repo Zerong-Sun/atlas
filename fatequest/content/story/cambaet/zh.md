@@ -2,7 +2,7 @@
 unit: cambaet
 lang: zh
 source: en
-source_rev: a1082a69d2a8
+source_rev: cb9a1b1a20fd
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.cambaet.entry.choice.pass: 96d145abaf05
   ev.cambaet.entry.body: 9970f3fb7654
   ev.cambaet.entry.title: 8dffe001b1c0
+  ev.ev_cambaet_entry.choice_1_result: 172e617fbdf2
+  ev.ev_cambaet_entry.choice_2_result: 91eb3a92d144
 ---
 
 ## city.cambaet.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.cambaet.entry.title
 
 记坎巴叶国
+
+## ev.ev_cambaet_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往坎巴叶（坎贝）的路。
+
+## ev.ev_cambaet_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往坎巴叶（坎贝）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

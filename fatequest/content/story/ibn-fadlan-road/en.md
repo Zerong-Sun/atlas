@@ -568,3 +568,283 @@ Wait until the ice falls silent and cross in single file
 ## ev.road.fadlan_35.choice.press_on
 
 Press on quickly while the ice still holds
+
+## ev.ev_road_fadlan_01.choice_1_result
+
+You cross the river on the ice with the caravan. It costs you 2 days on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_01.choice_2_result
+
+You wait three days at the ribāt until scouts report the ice sound. You spend 3 days before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_02.choice_1_result
+
+You pay the guide his fee and take him for the next march. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_02.choice_2_result
+
+You trust the caravan track and press on without him. It costs you 2 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_03.choice_1_result
+
+You stand watch and record what you see in the sky. It costs you 1 day on the road. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_03.choice_2_result
+
+You withdraw to the tents and leave the sky to itself. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_04.choice_1_result
+
+You ask whether any living man has seen such a figure. You set what you saw into your travel book. Your name carries a little more weight here now.
+
+## ev.ev_road_fadlan_04.choice_2_result
+
+You leave the fire and press on at first light. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_05.choice_1_result
+
+You write down the stages of the burial you observe. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_05.choice_2_result
+
+You withdraw quietly before the pyre is kindled. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_06.choice_1_result
+
+You pay a sailor for a rough chart of the island routes. Coin changes hands, and the purse settles. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_06.choice_2_result
+
+You keep to the inland road and carry the tales only. It costs you 1 day on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_07.choice_1_result
+
+You listen to the brokers and note what the north exports. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_road_fadlan_07.choice_2_result
+
+You leave the market before the bargaining grows heated. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_08.choice_1_result
+
+You watch the silent exchange and record its rules. You spend 2 days before the way is clear again. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_08.choice_2_result
+
+You pass wide of the clearing and press on. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_09.choice_1_result
+
+You turn aside two days toward the canyon marvel. It costs you 2 days on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_09.choice_2_result
+
+You keep to the Saqsīn road and carry the tale only. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_10.choice_1_result
+
+You enter Khwarazm and rest in the melon markets. It costs you 2 days on the road. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_road_fadlan_10.choice_2_result
+
+You buy provisions and press on without lingering. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_11.choice_1_result
+
+You ask which passes still lead toward the northern barrier. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_11.choice_2_result
+
+You thank him and press on with your own road. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_12.choice_1_result
+
+You share road news and learn their onward routes. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_road_fadlan_12.choice_2_result
+
+You pay for a written list of safe halts on the Rus road. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_13.choice_1_result
+
+You record the court customs as Mas'udi described them. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_13.choice_2_result
+
+You leave the Itil gossip and press on eastward. It costs you 1 day on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_14.choice_1_result
+
+You stay awake one full cycle and measure the light. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_14.choice_2_result
+
+You sleep when you can and march with the caravan. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_15.choice_1_result
+
+You ask to see the pelts and note their marks of origin. You set what you saw into your travel book. Your name carries a little more weight here now.
+
+## ev.ev_road_fadlan_15.choice_2_result
+
+You give way on the track and press on northward. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_16.choice_1_result
+
+You walk the rows and catalogue what the north exports. It costs you 1 day on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_16.choice_2_result
+
+You buy only bread and press on before the market scatters. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_17.choice_1_result
+
+You pay for a dog sled relay to the next halting place. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_17.choice_2_result
+
+You walk the ice road on your own feet. It costs you 2 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_18.choice_1_result
+
+You write the tale as you heard it, without embellishment. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_18.choice_2_result
+
+You leave such rumours and keep to the open steppe. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_19.choice_1_result
+
+You learn how they tie the line and mark their goods. You spend 2 days before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_19.choice_2_result
+
+You decide the profit is not worth the mist and turn back. It costs you 1 day on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_20.choice_1_result
+
+You endure the march and keep with the caravan. You spend 2 days before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_20.choice_2_result
+
+You halt one day and burn tāghwood until the worst passes. It costs you 3 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_21.choice_1_result
+
+You ask the marching days between Bulghar and Sibir. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_21.choice_2_result
+
+You thank him and press on toward warmer latitudes. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_22.choice_1_result
+
+You pay the boatmen to carry your pack across first. Coin changes hands, and the purse settles. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_22.choice_2_result
+
+You cross with the caravan and accept the delay. It costs you 2 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_23.choice_1_result
+
+You stand watch until daylight and help search the plain. It costs you 1 day on the road. Word of your conduct runs ahead of you.
+
+## ev.ev_road_fadlan_23.choice_2_result
+
+You saddle at first light and press on away from the quarrel. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_24.choice_1_result
+
+You accept the bowl, drink once, and ask his blessing on the road. Your name carries a little more weight here now. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_24.choice_2_result
+
+You bring raisins and pepper as a guest gift before you drink. Money moves — a little the better or the worse for you. Word of your conduct runs ahead of you. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_25.choice_1_result
+
+You keep the fires high and march close to the armed guard. It costs you 2 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_25.choice_2_result
+
+You push through the night while the pack still keeps its distance. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_26.choice_1_result
+
+You stay one hour, share water and herbs, and record what you did. You spend 1 day before the way is clear again. Your name carries a little more weight here now. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_26.choice_2_result
+
+You leave what water you can spare and press on with the caravan. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_27.choice_1_result
+
+You ask how many days lie between here and the Aral shores. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_27.choice_2_result
+
+You give the salt train the road and press on. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_28.choice_1_result
+
+You record the hour and what the riders said. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_28.choice_2_result
+
+You calm your mount and press on as soon as the sun returns. It costs you 1 day on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_29.choice_1_result
+
+You walk beside them one mile and record names and numbers as you can. It costs you 1 day on the road. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_29.choice_2_result
+
+You look away and press on before the guard demands answers. You spend 1 day before the way is clear again.
+
+## ev.ev_road_fadlan_30.choice_1_result
+
+You halt, peg the tents low, and wait out the storm. It costs you 2 days on the road. Fortune bends a little your way.
+
+## ev.ev_road_fadlan_30.choice_2_result
+
+You press on between squalls while the horses still willing. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_31.choice_1_result
+
+You survey the mound and sketch what the diggers left. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+## ev.ev_road_fadlan_31.choice_2_result
+
+You leave the dead to the wind and press on. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_32.choice_1_result
+
+You pay the toll and cross with the sealed receipt. Money moves — a little the better or the worse for you. It costs you 1 day on the road. Word of your conduct runs ahead of you.
+
+## ev.ev_road_fadlan_32.choice_2_result
+
+You detour upstream to a shallow ford the messenger does not hold. You spend 3 days before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_33.choice_1_result
+
+You learn the lacing and record the layers they wear. You spend 1 day before the way is clear again. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_33.choice_2_result
+
+You thank her and press on before the next snow. It costs you 1 day on the road.
+
+## ev.ev_road_fadlan_34.choice_1_result
+
+You circle wide and note how the flat deceives the eye. It costs you 2 days on the road. The account is written down before the hour turns.
+
+## ev.ev_road_fadlan_34.choice_2_result
+
+You trust the guide's track and press on without delay. You spend 1 day before the way is clear again. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_35.choice_1_result
+
+You wait until the ice falls silent and cross in single file. You spend 1 day before the way is clear again. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_road_fadlan_35.choice_2_result
+
+You press on quickly while the ice still holds. It costs you 1 day on the road. Fortune bends a little your way.

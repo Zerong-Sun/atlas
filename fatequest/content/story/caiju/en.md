@@ -32,3 +32,11 @@ Pass through without stopping
 ## ev.caiju.entry.title
 
 Concerning the City of Caiju
+
+## ev.ev_caiju_entry.choice_1_result
+
+You pass through without stopping. The road to Caiju opens on your map.
+
+## ev.ev_caiju_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Caiju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.

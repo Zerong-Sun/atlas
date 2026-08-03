@@ -24,7 +24,6 @@ Bitumen wells darken the ground upon the road hither. You must know that this
 is a city of learning and of pious works, and that the continuous villages along
 the Tigris bring the pilgrim order of march to its end.
 
-
 ## ev.ninive.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.ninive.entry.title
 
 Arriving at Ninive
+
+## ev.ev_ninive_entry.choice_1_result
+
+You ride on without delay. You set the way to Ninive on your map.
+
+## ev.ev_ninive_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Ninive opens on your map.

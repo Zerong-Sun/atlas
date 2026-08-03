@@ -2,7 +2,7 @@
 unit: mien
 lang: zh
 source: en
-source_rev: d84eb6c6aae7
+source_rev: 3ab23e4f2a84
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.mien.entry.choice.pass: 96d145abaf05
   ev.mien.entry.body: 50edef708b37
   ev.mien.entry.title: 925ef7111e47
+  ev.ev_mien_entry.choice_1_result: 9d20a21d9164
+  ev.ev_mien_entry.choice_2_result: 9f09d7c205bb
 ---
 
 ## city.mien.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.mien.entry.title
 
 至缅
+
+## ev.ev_mien_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往缅甸（蒲甘）的路。
+
+## ev.ev_mien_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往缅甸（蒲甘）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

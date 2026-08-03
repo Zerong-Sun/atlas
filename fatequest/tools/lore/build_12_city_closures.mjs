@@ -135,7 +135,7 @@ function eventKey(id, suffix) {
 
 function feedbackText(city, event, index) {
   const info = CITY_INFO[city];
-  const focus = info.focusEn;
+  const focus = info.focusEn.replace(/^the\s+/i, "");
   const focusZh = info.focusZh;
   const labels = [
     [`The choice leaves a mark: the people of ${info.en} now remember you among the ${focus}.`, `这一选择留下了痕迹：${info.zh}的人们已把你记在${focusZh}之间。`],

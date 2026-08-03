@@ -2,7 +2,7 @@
 unit: kerman
 lang: zh
 source: en
-source_rev: 533cfc8c296b
+source_rev: 61721d1c390d
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.kerman.b.choice.browse: edc3629fc827
   ev.kerman.b.choice.buy-silk: 393f131412cc
   ev.kerman.b.choice.visit-mews: d227a5090bd9
+  ev.ev_kerman_entry.choice_1_result: 545c99c32683
+  ev.ev_kerman_entry.choice_2_result: 9d7e2d46a437
+  ev.ev_kerman_entry.choice_3_result: c79c223bd641
+  ev.ev_kerman_a.choice_1_result: c408260a020f
+  ev.ev_kerman_a.choice_2_result: 66258c7a53c2
+  ev.ev_kerman_a.choice_3_result: 21b65f28b482
+  ev.ev_kerman_b.choice_1_result: 35f86cffd992
+  ev.ev_kerman_b.choice_2_result: 2662997d13e5
+  ev.ev_kerman_b.choice_3_result: 0ede05d472e1
 ---
 
 ## city.kerman.name
@@ -95,3 +104,39 @@ stamps:
 ## ev.kerman.b.choice.visit-mews
 
 登鹰房问驯鹰之价
+
+## ev.ev_kerman_entry.choice_1_result
+
+你匆匆穿过 darvāzeh（城门），通往克尔曼的道路，就此展开在舆图上。
+
+## ev.ev_kerman_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往克尔曼的路。
+
+## ev.ev_kerman_entry.choice_3_result
+
+你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往克尔曼的道路，就此展开在舆图上。
+
+## ev.ev_kerman_a.choice_1_result
+
+你观铁匠锻打，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_kerman_a.choice_2_result
+
+你向矿经纪购绿松石一块，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+
+## ev.ev_kerman_a.choice_3_result
+
+你问商队主沙漠何路可通，通往耶兹德的道路，就此展开在舆图上。通往忽鲁谟斯的道路，就此展开在舆图上。你的行事之名先你一步传开。
+
+## ev.ev_kerman_b.choice_1_result
+
+你于覆道观绣品，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_kerman_b.choice_2_result
+
+你购绣丝一段为礼，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。气运稍稍偏向于你。
+
+## ev.ev_kerman_b.choice_3_result
+
+你登鹰房问驯鹰之价，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往可马底的路。

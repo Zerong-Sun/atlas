@@ -2,7 +2,7 @@
 unit: novogardia
 lang: zh
 source: en
-source_rev: 8ab41a94b3c5
+source_rev: 5f3168bb37f9
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.novogardia.entry.choice.rest: cc453f19a435
   ev.novogardia.entry.body: 26dda6168232
   ev.novogardia.entry.title: 229899936b3e
+  ev.ev_novogardia_entry.choice_1_result: 5596ebfde2c7
+  ev.ev_novogardia_entry.choice_2_result: e4241cc487c4
 ---
 
 ## city.novogardia.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.novogardia.entry.title
 
 诺夫哥罗德
+
+## ev.ev_novogardia_entry.choice_1_result
+
+你继续赶路，不作停留，通往诺甫哥罗（诺夫哥罗德）的道路，就此展开在舆图上。
+
+## ev.ev_novogardia_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往诺甫哥罗（诺夫哥罗德）的路。

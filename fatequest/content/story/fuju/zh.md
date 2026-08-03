@@ -2,7 +2,7 @@
 unit: fuju
 lang: zh
 source: en
-source_rev: 582da0e132fa
+source_rev: d081199a2125
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.fuju.entry.choice.pass: 96d145abaf05
   ev.fuju.entry.body: 83c36fb6b97c
   ev.fuju.entry.title: b06510aed441
+  ev.ev_fuju_entry.choice_1_result: f6efd1c9c7fc
+  ev.ev_fuju_entry.choice_2_result: 6d6f41c49bad
 ---
 
 ## city.fuju.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.fuju.entry.title
 
 记福州之大
+
+## ev.ev_fuju_entry.choice_1_result
+
+你穿城而过，不加停留，通往福州的道路，就此展开在舆图上。
+
+## ev.ev_fuju_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往福州的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

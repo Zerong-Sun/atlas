@@ -2,7 +2,7 @@
 unit: chinginju
 lang: zh
 source: en
-source_rev: 41e65a9dca3a
+source_rev: 244a56136be4
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.chinginju.entry.choice.pass: 96d145abaf05
   ev.chinginju.entry.body: 79420da5166d
   ev.chinginju.entry.title: dae1adc48f78
+  ev.ev_chinginju_entry.choice_1_result: 5c285bf9144e
+  ev.ev_chinginju_entry.choice_2_result: ce87add100d3
 ---
 
 ## city.chinginju.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.chinginju.entry.title
 
 记常州与阿兰人之屠
+
+## ev.ev_chinginju_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往常州的路。
+
+## ev.ev_chinginju_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往常州的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

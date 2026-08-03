@@ -2,7 +2,7 @@
 unit: paukin
 lang: zh
 source: en
-source_rev: 94d55686f431
+source_rev: d77b150463e9
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.paukin.entry.choice.pass: 96d145abaf05
   ev.paukin.entry.body: 94998f202cec
   ev.paukin.entry.title: 99e6ff0885b8
+  ev.ev_paukin_entry.choice_1_result: 613f98a3cefd
+  ev.ev_paukin_entry.choice_2_result: 1a6849ef1e33
 ---
 
 ## city.paukin.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.paukin.entry.title
 
 记宝应
+
+## ev.ev_paukin_entry.choice_1_result
+
+你穿城而过，不加停留，通往宝应的道路，就此展开在舆图上。
+
+## ev.ev_paukin_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往宝应的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

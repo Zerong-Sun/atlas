@@ -2,7 +2,7 @@
 unit: etzina
 lang: zh
 source: en
-source_rev: 9347e340c1b6
+source_rev: 6f617b1ffbc7
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.etzina.entry.choice.pass: 96d145abaf05
   ev.etzina.entry.body: 1a014a65e996
   ev.etzina.entry.title: c934a80b96fc
+  ev.ev_etzina_entry.choice_1_result: 767ad5ac2b53
+  ev.ev_etzina_entry.choice_2_result: 3aaf360a4757
 ---
 
 ## city.etzina.name
@@ -39,3 +41,10 @@ stamps:
 
 记亦集乃
 
+## ev.ev_etzina_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往亦集乃（黑水城）的路。
+
+## ev.ev_etzina_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往亦集乃（黑水城）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

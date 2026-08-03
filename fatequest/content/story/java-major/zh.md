@@ -2,7 +2,7 @@
 unit: java-major
 lang: zh
 source: en
-source_rev: 07d6fb26c745
+source_rev: e1b2f5f31c37
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.java-major.entry.choice.pass: 96d145abaf05
   ev.java-major.entry.body: 978df4af2d4e
   ev.java-major.entry.title: 52d2dab1d143
+  ev.ev_java_major_entry.choice_1_result: 4b7d8ca904c0
+  ev.ev_java_major_entry.choice_2_result: 253c6a23ac1d
 ---
 
 ## city.java-major.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.java-major.entry.title
 
 至大爪哇
+
+## ev.ev_java_major_entry.choice_1_result
+
+你穿城而过，不加停留，通往大爪哇的道路，就此展开在舆图上。
+
+## ev.ev_java_major_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往大爪哇的路。你在路上用去 1 日光阴。

@@ -2,7 +2,7 @@
 unit: coigangiu
 lang: zh
 source: en
-source_rev: fc8a57db499a
+source_rev: d84c62a907bb
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.coigangiu.entry.choice.rest: cc453f19a435
   ev.coigangiu.entry.body: 34010041239f
   ev.coigangiu.entry.title: 1922021852be
+  ev.ev_coigangiu_entry.choice_1_result: df793879ed1f
+  ev.ev_coigangiu_entry.choice_2_result: 277952d9e6a0
 ---
 
 ## city.coigangiu.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.coigangiu.entry.title
 
 至淮阴
+
+## ev.ev_coigangiu_entry.choice_1_result
+
+你继续赶路，不作停留，通往淮阴的道路，就此展开在舆图上。
+
+## ev.ev_coigangiu_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往淮阴的路。

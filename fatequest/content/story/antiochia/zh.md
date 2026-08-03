@@ -2,7 +2,7 @@
 unit: antiochia
 lang: zh
 source: en
-source_rev: cc6068243e0d
+source_rev: 0fd17b07056d
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.antiochia.entry.choice.pass: 96d145abaf05
   ev.antiochia.entry.body: b0136a68cfb5
   ev.antiochia.entry.title: f3741b89eafd
+  ev.ev_antiochia_entry.choice_1_result: 46a6c23ea55c
+  ev.ev_antiochia_entry.choice_2_result: 38aa0b9a7413
 ---
 
 ## city.antiochia.name
@@ -40,3 +42,10 @@ stamps:
 
 安条克
 
+## ev.ev_antiochia_entry.choice_1_result
+
+你穿城而过，不加停留，通往昂都城（安条克）的道路，就此展开在舆图上。
+
+## ev.ev_antiochia_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往昂都城（安条克）的路。你在路上用去 1 日光阴。

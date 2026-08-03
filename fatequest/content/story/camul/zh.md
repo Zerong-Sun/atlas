@@ -2,7 +2,7 @@
 unit: camul
 lang: zh
 source: en
-source_rev: 87ab3090cd87
+source_rev: 1964b3f52100
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.camul.b.choice.listen: 68da61533e69
   ev.camul.b.choice.observe-rite: fa4df3596d5a
   ev.camul.b.choice.ask-east: 9c8e8a0ef32e
+  ev.ev_camul_entry.choice_1_result: 2f3043dbaff4
+  ev.ev_camul_entry.choice_2_result: 96ae9663ca9c
+  ev.ev_camul_entry.choice_3_result: fe5f42c3e264
+  ev.ev_camul_a.choice_1_result: 446c9ff61829
+  ev.ev_camul_a.choice_2_result: 53cb6ac1bca4
+  ev.ev_camul_a.choice_3_result: 0fb7e2d6dd29
+  ev.ev_camul_b.choice_1_result: 1f3c886bfce4
+  ev.ev_camul_b.choice_2_result: 0d0cc74531ce
+  ev.ev_camul_b.choice_3_result: c65ad75f8928
 ---
 
 ## city.camul.name
@@ -94,3 +103,39 @@ stamps:
 ## ev.camul.b.choice.ask-east
 
 问僧人何路通东漠
+
+## ev.ev_camul_entry.choice_1_result
+
+你匆匆穿过 darvāzeh（城门），通往哈密力（哈密）的道路，就此展开在舆图上。
+
+## ev.ev_camul_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往哈密力（哈密）的路。
+
+## ev.ev_camul_entry.choice_3_result
+
+你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往哈密力（哈密）的道路，就此展开在舆图上。
+
+## ev.ev_camul_a.choice_1_result
+
+你行于瓜垄，尝农人所献，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_camul_a.choice_2_result
+
+你购瓜干螺旋备沙漠，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+
+## ev.ev_camul_a.choice_3_result
+
+你问瓜商驼队何往，通往罗卜的道路，就此展开在舆图上。通往沙州（敦煌）的道路，就此展开在舆图上。
+
+## ev.ev_camul_b.choice_1_result
+
+你与长老同坐，听其述旧俗，你在路上用去 1 日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_camul_b.choice_2_result
+
+你于庭墙外观偶像礼，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_camul_b.choice_3_result
+
+你问僧人何路通东漠，你标出了通往亦集乃（黑水城）的路。你在路上用去 1 日光阴。

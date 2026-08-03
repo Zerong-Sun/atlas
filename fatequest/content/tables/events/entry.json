@@ -20,6 +20,7 @@
       "choices": [
         {
           "label": "ev.accon.entry.choice.pass",
+          "resultText": "ev.ev_accon_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -30,6 +31,7 @@
         },
         {
           "label": "ev.accon.entry.choice.look",
+          "resultText": "ev.ev_accon_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -66,6 +68,7 @@
       "choices": [
         {
           "label": "ev.aden.entry.choice.pass",
+          "resultText": "ev.ev_aden_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -76,6 +79,7 @@
         },
         {
           "label": "ev.aden.entry.choice.market",
+          "resultText": "ev.ev_aden_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -96,6 +100,7 @@
         },
         {
           "label": "ev.aden.entry.choice.shrine",
+          "resultText": "ev.ev_aden_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -140,6 +145,7 @@
       "choices": [
         {
           "label": "ev.alexandria.entry.choice.pass",
+          "resultText": "ev.ev_alexandria_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -150,6 +156,7 @@
         },
         {
           "label": "ev.alexandria.entry.choice.look",
+          "resultText": "ev.ev_alexandria_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -186,6 +193,7 @@
       "choices": [
         {
           "label": "ev.antiochia.entry.choice.pass",
+          "resultText": "ev.ev_antiochia_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -196,6 +204,7 @@
         },
         {
           "label": "ev.antiochia.entry.choice.look",
+          "resultText": "ev.ev_antiochia_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -232,6 +241,7 @@
       "choices": [
         {
           "label": "ev.axuma.entry.choice.pass",
+          "resultText": "ev.ev_axuma_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -242,6 +252,7 @@
         },
         {
           "label": "ev.axuma.entry.choice.rest",
+          "resultText": "ev.ev_axuma_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -278,6 +289,7 @@
       "choices": [
         {
           "label": "ev.babylonia-cairus.entry.choice.pass",
+          "resultText": "ev.ev_babylonia_cairus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -288,6 +300,7 @@
         },
         {
           "label": "ev.babylonia-cairus.entry.choice.look",
+          "resultText": "ev.ev_babylonia_cairus_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -324,6 +337,7 @@
       "choices": [
         {
           "label": "ev.badashan.entry.choice.pass",
+          "resultText": "ev.ev_badashan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -334,6 +348,7 @@
         },
         {
           "label": "ev.badashan.entry.choice.market",
+          "resultText": "ev.ev_badashan_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -354,6 +369,7 @@
         },
         {
           "label": "ev.badashan.entry.choice.shrine",
+          "resultText": "ev.ev_badashan_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -578,6 +594,7 @@
       "choices": [
         {
           "label": "ev.basora.entry.choice.pass",
+          "resultText": "ev.ev_basora_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -588,6 +605,7 @@
         },
         {
           "label": "ev.basora.entry.choice.rest",
+          "resultText": "ev.ev_basora_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -624,6 +642,7 @@
       "choices": [
         {
           "label": "ev.berrhoea.entry.choice.pass",
+          "resultText": "ev.ev_berrhoea_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -634,6 +653,7 @@
         },
         {
           "label": "ev.berrhoea.entry.choice.look",
+          "resultText": "ev.ev_berrhoea_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -670,6 +690,7 @@
       "choices": [
         {
           "label": "ev.bethleem.entry.choice.pass",
+          "resultText": "ev.ev_bethleem_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -680,6 +701,7 @@
         },
         {
           "label": "ev.bethleem.entry.choice.rest",
+          "resultText": "ev.ev_bethleem_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -716,6 +738,7 @@
       "choices": [
         {
           "label": "ev.bochara.entry.choice.pass",
+          "resultText": "ev.ev_bochara_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -726,6 +749,7 @@
         },
         {
           "label": "ev.bochara.entry.choice.rest",
+          "resultText": "ev.ev_bochara_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -762,6 +786,7 @@
       "choices": [
         {
           "label": "ev.cabul.entry.choice.pass",
+          "resultText": "ev.ev_cabul_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -772,6 +797,7 @@
         },
         {
           "label": "ev.cabul.entry.choice.rest",
+          "resultText": "ev.ev_cabul_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -808,6 +834,7 @@
       "choices": [
         {
           "label": "ev.cacanfu.entry.choice.pass",
+          "resultText": "ev.ev_cacanfu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -818,6 +845,7 @@
         },
         {
           "label": "ev.cacanfu.entry.choice.look",
+          "resultText": "ev.ev_cacanfu_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -860,6 +888,7 @@
       "choices": [
         {
           "label": "ev.cachanfu.entry.choice.pass",
+          "resultText": "ev.ev_cachanfu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -870,6 +899,7 @@
         },
         {
           "label": "ev.cachanfu.entry.choice.look",
+          "resultText": "ev.ev_cachanfu_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -912,6 +942,7 @@
       "choices": [
         {
           "label": "ev.caffa.entry.choice.pass",
+          "resultText": "ev.ev_caffa_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -922,6 +953,7 @@
         },
         {
           "label": "ev.caffa.entry.choice.rest",
+          "resultText": "ev.ev_caffa_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -958,6 +990,7 @@
       "choices": [
         {
           "label": "ev.caiju.entry.choice.pass",
+          "resultText": "ev.ev_caiju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -968,6 +1001,7 @@
         },
         {
           "label": "ev.caiju.entry.choice.look",
+          "resultText": "ev.ev_caiju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1010,6 +1044,7 @@
       "choices": [
         {
           "label": "ev.cail.entry.choice.pass",
+          "resultText": "ev.ev_cail_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1020,6 +1055,7 @@
         },
         {
           "label": "ev.cail.entry.choice.market",
+          "resultText": "ev.ev_cail_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1040,6 +1076,7 @@
         },
         {
           "label": "ev.cail.entry.choice.shrine",
+          "resultText": "ev.ev_cail_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1084,6 +1121,7 @@
       "choices": [
         {
           "label": "ev.calatu.entry.choice.pass",
+          "resultText": "ev.ev_calatu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1094,6 +1132,7 @@
         },
         {
           "label": "ev.calatu.entry.choice.market",
+          "resultText": "ev.ev_calatu_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1114,6 +1153,7 @@
         },
         {
           "label": "ev.calatu.entry.choice.shrine",
+          "resultText": "ev.ev_calatu_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1158,6 +1198,7 @@
       "choices": [
         {
           "label": "ev.camadi.entry.choice.pass",
+          "resultText": "ev.ev_camadi_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1168,6 +1209,7 @@
         },
         {
           "label": "ev.camadi.entry.choice.market",
+          "resultText": "ev.ev_camadi_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1188,6 +1230,7 @@
         },
         {
           "label": "ev.camadi.entry.choice.shrine",
+          "resultText": "ev.ev_camadi_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1232,6 +1275,7 @@
       "choices": [
         {
           "label": "ev.cambaet.entry.choice.pass",
+          "resultText": "ev.ev_cambaet_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1242,6 +1286,7 @@
         },
         {
           "label": "ev.cambaet.entry.choice.look",
+          "resultText": "ev.ev_cambaet_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1389,6 +1434,7 @@
       "choices": [
         {
           "label": "ev.campichu.entry.choice.pass",
+          "resultText": "ev.ev_campichu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1399,6 +1445,7 @@
         },
         {
           "label": "ev.campichu.entry.choice.market",
+          "resultText": "ev.ev_campichu_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1419,6 +1466,7 @@
         },
         {
           "label": "ev.campichu.entry.choice.shrine",
+          "resultText": "ev.ev_campichu_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1463,6 +1511,7 @@
       "choices": [
         {
           "label": "ev.camul.entry.choice.pass",
+          "resultText": "ev.ev_camul_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1473,6 +1522,7 @@
         },
         {
           "label": "ev.camul.entry.choice.market",
+          "resultText": "ev.ev_camul_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1493,6 +1543,7 @@
         },
         {
           "label": "ev.camul.entry.choice.shrine",
+          "resultText": "ev.ev_camul_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1537,6 +1588,7 @@
       "choices": [
         {
           "label": "ev.caracoron.entry.choice.pass",
+          "resultText": "ev.ev_caracoron_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1547,6 +1599,7 @@
         },
         {
           "label": "ev.caracoron.entry.choice.look",
+          "resultText": "ev.ev_caracoron_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1679,6 +1732,7 @@
       "choices": [
         {
           "label": "ev.chamba.entry.choice.pass",
+          "resultText": "ev.ev_chamba_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1689,6 +1743,7 @@
         },
         {
           "label": "ev.chamba.entry.choice.market",
+          "resultText": "ev.ev_chamba_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1709,6 +1764,7 @@
         },
         {
           "label": "ev.chamba.entry.choice.shrine",
+          "resultText": "ev.ev_chamba_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1843,6 +1899,7 @@
       "choices": [
         {
           "label": "ev.charchan.entry.choice.pass",
+          "resultText": "ev.ev_charchan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1853,6 +1910,7 @@
         },
         {
           "label": "ev.charchan.entry.choice.look",
+          "resultText": "ev.ev_charchan_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1895,6 +1953,7 @@
       "choices": [
         {
           "label": "ev.chinangli.entry.choice.pass",
+          "resultText": "ev.ev_chinangli_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1905,6 +1964,7 @@
         },
         {
           "label": "ev.chinangli.entry.choice.market",
+          "resultText": "ev.ev_chinangli_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1925,6 +1985,7 @@
         },
         {
           "label": "ev.chinangli.entry.choice.shrine",
+          "resultText": "ev.ev_chinangli_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -1969,6 +2030,7 @@
       "choices": [
         {
           "label": "ev.chinghianfu.entry.choice.pass",
+          "resultText": "ev.ev_chinghianfu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -1979,6 +2041,7 @@
         },
         {
           "label": "ev.chinghianfu.entry.choice.look",
+          "resultText": "ev.ev_chinghianfu_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2021,6 +2084,7 @@
       "choices": [
         {
           "label": "ev.chinginju.entry.choice.pass",
+          "resultText": "ev.ev_chinginju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2031,6 +2095,7 @@
         },
         {
           "label": "ev.chinginju.entry.choice.look",
+          "resultText": "ev.ev_chinginju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2073,6 +2138,7 @@
       "choices": [
         {
           "label": "ev.cobinan.entry.choice.pass",
+          "resultText": "ev.ev_cobinan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2083,6 +2149,7 @@
         },
         {
           "label": "ev.cobinan.entry.choice.look",
+          "resultText": "ev.ev_cobinan_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2125,6 +2192,7 @@
       "choices": [
         {
           "label": "ev.coigangiu.entry.choice.pass",
+          "resultText": "ev.ev_coigangiu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2135,6 +2203,7 @@
         },
         {
           "label": "ev.coigangiu.entry.choice.rest",
+          "resultText": "ev.ev_coigangiu_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2171,6 +2240,7 @@
       "choices": [
         {
           "label": "ev.coiganju.entry.choice.pass",
+          "resultText": "ev.ev_coiganju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2181,6 +2251,7 @@
         },
         {
           "label": "ev.coiganju.entry.choice.look",
+          "resultText": "ev.ev_coiganju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2223,6 +2294,7 @@
       "choices": [
         {
           "label": "ev.coilum.entry.choice.pass",
+          "resultText": "ev.ev_coilum_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2233,6 +2305,7 @@
         },
         {
           "label": "ev.coilum.entry.choice.look",
+          "resultText": "ev.ev_coilum_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2275,6 +2348,7 @@
       "choices": [
         {
           "label": "ev.constantinopolis.entry.choice.pass",
+          "resultText": "ev.ev_constantinopolis_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2285,6 +2359,7 @@
         },
         {
           "label": "ev.constantinopolis.entry.choice.look",
+          "resultText": "ev.ev_constantinopolis_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2411,6 +2486,7 @@
       "choices": [
         {
           "label": "ev.ctesiphon.entry.choice.pass",
+          "resultText": "ev.ev_ctesiphon_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2421,6 +2497,7 @@
         },
         {
           "label": "ev.ctesiphon.entry.choice.rest",
+          "resultText": "ev.ev_ctesiphon_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2457,6 +2534,7 @@
       "choices": [
         {
           "label": "ev.damascus.entry.choice.pass",
+          "resultText": "ev.ev_damascus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2467,6 +2545,7 @@
         },
         {
           "label": "ev.damascus.entry.choice.look",
+          "resultText": "ev.ev_damascus_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2503,6 +2582,7 @@
       "choices": [
         {
           "label": "ev.delli.entry.choice.pass",
+          "resultText": "ev.ev_delli_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2513,6 +2593,7 @@
         },
         {
           "label": "ev.delli.entry.choice.look",
+          "resultText": "ev.ev_delli_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2549,6 +2630,7 @@
       "choices": [
         {
           "label": "ev.dongola.entry.choice.pass",
+          "resultText": "ev.ev_dongola_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2559,6 +2641,7 @@
         },
         {
           "label": "ev.dongola.entry.choice.rest",
+          "resultText": "ev.ev_dongola_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2595,6 +2678,7 @@
       "choices": [
         {
           "label": "ev.dufar.entry.choice.pass",
+          "resultText": "ev.ev_dufar_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2605,6 +2689,7 @@
         },
         {
           "label": "ev.dufar.entry.choice.look",
+          "resultText": "ev.ev_dufar_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2647,6 +2732,7 @@
       "choices": [
         {
           "label": "ev.edessa.entry.choice.pass",
+          "resultText": "ev.ev_edessa_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2657,6 +2743,7 @@
         },
         {
           "label": "ev.edessa.entry.choice.rest",
+          "resultText": "ev.ev_edessa_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2693,6 +2780,7 @@
       "choices": [
         {
           "label": "ev.egrigaia.entry.choice.pass",
+          "resultText": "ev.ev_egrigaia_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2703,6 +2791,7 @@
         },
         {
           "label": "ev.egrigaia.entry.choice.look",
+          "resultText": "ev.ev_egrigaia_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2745,6 +2834,7 @@
       "choices": [
         {
           "label": "ev.ephesus.entry.choice.pass",
+          "resultText": "ev.ev_ephesus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2755,6 +2845,7 @@
         },
         {
           "label": "ev.ephesus.entry.choice.rest",
+          "resultText": "ev.ev_ephesus_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2791,6 +2882,7 @@
       "choices": [
         {
           "label": "ev.esher.entry.choice.pass",
+          "resultText": "ev.ev_esher_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2801,6 +2893,7 @@
         },
         {
           "label": "ev.esher.entry.choice.market",
+          "resultText": "ev.ev_esher_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2821,6 +2914,7 @@
         },
         {
           "label": "ev.esher.entry.choice.shrine",
+          "resultText": "ev.ev_esher_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -2865,6 +2959,7 @@
       "choices": [
         {
           "label": "ev.etzina.entry.choice.pass",
+          "resultText": "ev.ev_etzina_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2875,6 +2970,7 @@
         },
         {
           "label": "ev.etzina.entry.choice.look",
+          "resultText": "ev.ev_etzina_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2917,6 +3013,7 @@
       "choices": [
         {
           "label": "ev.fuju.entry.choice.pass",
+          "resultText": "ev.ev_fuju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2927,6 +3024,7 @@
         },
         {
           "label": "ev.fuju.entry.choice.look",
+          "resultText": "ev.ev_fuju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2969,6 +3067,7 @@
       "choices": [
         {
           "label": "ev.hierusalem.entry.choice.pass",
+          "resultText": "ev.ev_hierusalem_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -2979,6 +3078,7 @@
         },
         {
           "label": "ev.hierusalem.entry.choice.look",
+          "resultText": "ev.ev_hierusalem_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3015,6 +3115,7 @@
       "choices": [
         {
           "label": "ev.ispahan.entry.choice.pass",
+          "resultText": "ev.ev_ispahan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3025,6 +3126,7 @@
         },
         {
           "label": "ev.ispahan.entry.choice.rest",
+          "resultText": "ev.ev_ispahan_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3061,6 +3163,7 @@
       "choices": [
         {
           "label": "ev.java-major.entry.choice.pass",
+          "resultText": "ev.ev_java_major_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3071,6 +3174,7 @@
         },
         {
           "label": "ev.java-major.entry.choice.look",
+          "resultText": "ev.ev_java_major_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3107,6 +3211,7 @@
       "choices": [
         {
           "label": "ev.kenjanfu.entry.choice.pass",
+          "resultText": "ev.ev_kenjanfu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3117,6 +3222,7 @@
         },
         {
           "label": "ev.kenjanfu.entry.choice.market",
+          "resultText": "ev.ev_kenjanfu_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3137,6 +3243,7 @@
         },
         {
           "label": "ev.kenjanfu.entry.choice.shrine",
+          "resultText": "ev.ev_kenjanfu_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -3181,6 +3288,7 @@
       "choices": [
         {
           "label": "ev.kerman.entry.choice.pass",
+          "resultText": "ev.ev_kerman_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3191,6 +3299,7 @@
         },
         {
           "label": "ev.kerman.entry.choice.market",
+          "resultText": "ev.ev_kerman_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3211,6 +3320,7 @@
         },
         {
           "label": "ev.kerman.entry.choice.shrine",
+          "resultText": "ev.ev_kerman_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -3255,6 +3365,7 @@
       "choices": [
         {
           "label": "ev.keshimur.entry.choice.pass",
+          "resultText": "ev.ev_keshimur_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3265,6 +3376,7 @@
         },
         {
           "label": "ev.keshimur.entry.choice.market",
+          "resultText": "ev.ev_keshimur_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3285,6 +3397,7 @@
         },
         {
           "label": "ev.keshimur.entry.choice.shrine",
+          "resultText": "ev.ev_keshimur_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -3419,6 +3532,7 @@
       "choices": [
         {
           "label": "ev.kiovia.entry.choice.pass",
+          "resultText": "ev.ev_kiovia_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3429,6 +3543,7 @@
         },
         {
           "label": "ev.kiovia.entry.choice.look",
+          "resultText": "ev.ev_kiovia_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3465,6 +3580,7 @@
       "choices": [
         {
           "label": "ev.linju.entry.choice.pass",
+          "resultText": "ev.ev_linju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3475,6 +3591,7 @@
         },
         {
           "label": "ev.linju.entry.choice.look",
+          "resultText": "ev.ev_linju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3588,6 +3705,7 @@
       "choices": [
         {
           "label": "ev.maabar.entry.choice.pass",
+          "resultText": "ev.ev_maabar_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3598,6 +3716,7 @@
         },
         {
           "label": "ev.maabar.entry.choice.look",
+          "resultText": "ev.ev_maabar_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3640,6 +3759,7 @@
       "choices": [
         {
           "label": "ev.mecha.entry.choice.pass",
+          "resultText": "ev.ev_mecha_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3650,6 +3770,7 @@
         },
         {
           "label": "ev.mecha.entry.choice.look",
+          "resultText": "ev.ev_mecha_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3686,6 +3807,7 @@
       "choices": [
         {
           "label": "ev.medina.entry.choice.pass",
+          "resultText": "ev.ev_medina_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3696,6 +3818,7 @@
         },
         {
           "label": "ev.medina.entry.choice.rest",
+          "resultText": "ev.ev_medina_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3732,6 +3855,7 @@
       "choices": [
         {
           "label": "ev.melibar.entry.choice.pass",
+          "resultText": "ev.ev_melibar_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3742,6 +3866,7 @@
         },
         {
           "label": "ev.melibar.entry.choice.market",
+          "resultText": "ev.ev_melibar_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3762,6 +3887,7 @@
         },
         {
           "label": "ev.melibar.entry.choice.shrine",
+          "resultText": "ev.ev_melibar_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -3806,6 +3932,7 @@
       "choices": [
         {
           "label": "ev.merva.entry.choice.pass",
+          "resultText": "ev.ev_merva_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3816,6 +3943,7 @@
         },
         {
           "label": "ev.merva.entry.choice.rest",
+          "resultText": "ev.ev_merva_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3852,6 +3980,7 @@
       "choices": [
         {
           "label": "ev.mien.entry.choice.pass",
+          "resultText": "ev.ev_mien_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3862,6 +3991,7 @@
         },
         {
           "label": "ev.mien.entry.choice.look",
+          "resultText": "ev.ev_mien_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3904,6 +4034,7 @@
       "choices": [
         {
           "label": "ev.moscovia.entry.choice.pass",
+          "resultText": "ev.ev_moscovia_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3914,6 +4045,7 @@
         },
         {
           "label": "ev.moscovia.entry.choice.rest",
+          "resultText": "ev.ev_moscovia_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3950,6 +4082,7 @@
       "choices": [
         {
           "label": "ev.nanghin.entry.choice.pass",
+          "resultText": "ev.ev_nanghin_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -3960,6 +4093,7 @@
         },
         {
           "label": "ev.nanghin.entry.choice.look",
+          "resultText": "ev.ev_nanghin_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4002,6 +4136,7 @@
       "choices": [
         {
           "label": "ev.nicaea.entry.choice.pass",
+          "resultText": "ev.ev_nicaea_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4012,6 +4147,7 @@
         },
         {
           "label": "ev.nicaea.entry.choice.rest",
+          "resultText": "ev.ev_nicaea_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4048,6 +4184,7 @@
       "choices": [
         {
           "label": "ev.ninive.entry.choice.pass",
+          "resultText": "ev.ev_ninive_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4058,6 +4195,7 @@
         },
         {
           "label": "ev.ninive.entry.choice.rest",
+          "resultText": "ev.ev_ninive_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4094,6 +4232,7 @@
       "choices": [
         {
           "label": "ev.novogardia.entry.choice.pass",
+          "resultText": "ev.ev_novogardia_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4104,6 +4243,7 @@
         },
         {
           "label": "ev.novogardia.entry.choice.rest",
+          "resultText": "ev.ev_novogardia_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4230,6 +4370,7 @@
       "choices": [
         {
           "label": "ev.paukin.entry.choice.pass",
+          "resultText": "ev.ev_paukin_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4240,6 +4381,7 @@
         },
         {
           "label": "ev.paukin.entry.choice.look",
+          "resultText": "ev.ev_paukin_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4282,6 +4424,7 @@
       "choices": [
         {
           "label": "ev.pein.entry.choice.pass",
+          "resultText": "ev.ev_pein_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4292,6 +4435,7 @@
         },
         {
           "label": "ev.pein.entry.choice.look",
+          "resultText": "ev.ev_pein_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4334,6 +4478,7 @@
       "choices": [
         {
           "label": "ev.pentam.entry.choice.pass",
+          "resultText": "ev.ev_pentam_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4344,6 +4489,7 @@
         },
         {
           "label": "ev.pentam.entry.choice.look",
+          "resultText": "ev.ev_pentam_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4386,6 +4532,7 @@
       "choices": [
         {
           "label": "ev.petra.entry.choice.pass",
+          "resultText": "ev.ev_petra_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4396,6 +4543,7 @@
         },
         {
           "label": "ev.petra.entry.choice.rest",
+          "resultText": "ev.ev_petra_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4432,6 +4580,7 @@
       "choices": [
         {
           "label": "ev.sachiu.entry.choice.arrive",
+          "resultText": "ev.ev_sachiu_entry.choice_1_result",
           "effects": [
             {
               "op": "sticker",
@@ -4473,6 +4622,7 @@
       "choices": [
         {
           "label": "ev.saianfu.entry.choice.pass",
+          "resultText": "ev.ev_saianfu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4483,6 +4633,7 @@
         },
         {
           "label": "ev.saianfu.entry.choice.market",
+          "resultText": "ev.ev_saianfu_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4503,6 +4654,7 @@
         },
         {
           "label": "ev.saianfu.entry.choice.shrine",
+          "resultText": "ev.ev_saianfu_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -4547,6 +4699,7 @@
       "choices": [
         {
           "label": "ev.samara.entry.choice.pass",
+          "resultText": "ev.ev_samara_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4557,6 +4710,7 @@
         },
         {
           "label": "ev.samara.entry.choice.rest",
+          "resultText": "ev.ev_samara_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4683,6 +4837,7 @@
       "choices": [
         {
           "label": "ev.sapurgan.entry.choice.pass",
+          "resultText": "ev.ev_sapurgan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4693,6 +4848,7 @@
         },
         {
           "label": "ev.sapurgan.entry.choice.look",
+          "resultText": "ev.ev_sapurgan_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4735,6 +4891,7 @@
       "choices": [
         {
           "label": "ev.semenat.entry.choice.pass",
+          "resultText": "ev.ev_semenat_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4745,6 +4902,7 @@
         },
         {
           "label": "ev.semenat.entry.choice.look",
+          "resultText": "ev.ev_semenat_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4787,6 +4945,7 @@
       "choices": [
         {
           "label": "ev.siju.entry.choice.pass",
+          "resultText": "ev.ev_siju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4797,6 +4956,7 @@
         },
         {
           "label": "ev.siju.entry.choice.market",
+          "resultText": "ev.ev_siju_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4817,6 +4977,7 @@
         },
         {
           "label": "ev.siju.entry.choice.shrine",
+          "resultText": "ev.ev_siju_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -4861,6 +5022,7 @@
       "choices": [
         {
           "label": "ev.sindafu.entry.choice.pass",
+          "resultText": "ev.ev_sindafu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4871,6 +5033,7 @@
         },
         {
           "label": "ev.sindafu.entry.choice.look",
+          "resultText": "ev.ev_sindafu_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4913,6 +5076,7 @@
       "choices": [
         {
           "label": "ev.sinju.entry.choice.pass",
+          "resultText": "ev.ev_sinju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4923,6 +5087,7 @@
         },
         {
           "label": "ev.sinju.entry.choice.market",
+          "resultText": "ev.ev_sinju_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4943,6 +5108,7 @@
         },
         {
           "label": "ev.sinju.entry.choice.shrine",
+          "resultText": "ev.ev_sinju_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -4987,6 +5153,7 @@
       "choices": [
         {
           "label": "ev.sinjumatu.entry.choice.pass",
+          "resultText": "ev.ev_sinjumatu_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -4997,6 +5164,7 @@
         },
         {
           "label": "ev.sinjumatu.entry.choice.look",
+          "resultText": "ev.ev_sinjumatu_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5039,6 +5207,7 @@
       "choices": [
         {
           "label": "ev.smyrna.entry.choice.pass",
+          "resultText": "ev.ev_smyrna_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5049,6 +5218,7 @@
         },
         {
           "label": "ev.smyrna.entry.choice.rest",
+          "resultText": "ev.ev_smyrna_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5085,6 +5255,7 @@
       "choices": [
         {
           "label": "ev.suju.entry.choice.pass",
+          "resultText": "ev.ev_suju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5095,6 +5266,7 @@
         },
         {
           "label": "ev.suju.entry.choice.market",
+          "resultText": "ev.ev_suju_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5115,6 +5287,7 @@
         },
         {
           "label": "ev.suju.entry.choice.shrine",
+          "resultText": "ev.ev_suju_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -5159,6 +5332,7 @@
       "choices": [
         {
           "label": "ev.taican.entry.choice.pass",
+          "resultText": "ev.ev_taican_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5169,6 +5343,7 @@
         },
         {
           "label": "ev.taican.entry.choice.market",
+          "resultText": "ev.ev_taican_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5189,6 +5364,7 @@
         },
         {
           "label": "ev.taican.entry.choice.shrine",
+          "resultText": "ev.ev_taican_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -5233,6 +5409,7 @@
       "choices": [
         {
           "label": "ev.tana-azov.entry.choice.pass",
+          "resultText": "ev.ev_tana_azov_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5243,6 +5420,7 @@
         },
         {
           "label": "ev.tana-azov.entry.choice.rest",
+          "resultText": "ev.ev_tana_azov_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5279,6 +5457,7 @@
       "choices": [
         {
           "label": "ev.tana.entry.choice.pass",
+          "resultText": "ev.ev_tana_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5289,6 +5468,7 @@
         },
         {
           "label": "ev.tana.entry.choice.look",
+          "resultText": "ev.ev_tana_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5331,6 +5511,7 @@
       "choices": [
         {
           "label": "ev.tanpiju.entry.choice.pass",
+          "resultText": "ev.ev_tanpiju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5341,6 +5522,7 @@
         },
         {
           "label": "ev.tanpiju.entry.choice.market",
+          "resultText": "ev.ev_tanpiju_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5361,6 +5543,7 @@
         },
         {
           "label": "ev.tanpiju.entry.choice.shrine",
+          "resultText": "ev.ev_tanpiju_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -5405,6 +5588,7 @@
       "choices": [
         {
           "label": "ev.tarsus.entry.choice.pass",
+          "resultText": "ev.ev_tarsus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5415,6 +5599,7 @@
         },
         {
           "label": "ev.tarsus.entry.choice.rest",
+          "resultText": "ev.ev_tarsus_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5541,6 +5726,7 @@
       "choices": [
         {
           "label": "ev.tenduc.entry.choice.pass",
+          "resultText": "ev.ev_tenduc_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5551,6 +5737,7 @@
         },
         {
           "label": "ev.tenduc.entry.choice.market",
+          "resultText": "ev.ev_tenduc_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5571,6 +5758,7 @@
         },
         {
           "label": "ev.tenduc.entry.choice.shrine",
+          "resultText": "ev.ev_tenduc_entry.choice_3_result",
           "effects": [
             {
               "op": "reputation",
@@ -5615,6 +5803,7 @@
       "choices": [
         {
           "label": "ev.tiju.entry.choice.pass",
+          "resultText": "ev.ev_tiju_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5625,6 +5814,7 @@
         },
         {
           "label": "ev.tiju.entry.choice.look",
+          "resultText": "ev.ev_tiju_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5667,6 +5857,7 @@
       "choices": [
         {
           "label": "ev.trapezus.entry.choice.pass",
+          "resultText": "ev.ev_trapezus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5677,6 +5868,7 @@
         },
         {
           "label": "ev.trapezus.entry.choice.look",
+          "resultText": "ev.ev_trapezus_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5713,6 +5905,7 @@
       "choices": [
         {
           "label": "ev.tripolis.entry.choice.pass",
+          "resultText": "ev.ev_tripolis_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5723,6 +5916,7 @@
         },
         {
           "label": "ev.tripolis.entry.choice.rest",
+          "resultText": "ev.ev_tripolis_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5759,6 +5953,7 @@
       "choices": [
         {
           "label": "ev.tyrus.entry.choice.pass",
+          "resultText": "ev.ev_tyrus_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5769,6 +5964,7 @@
         },
         {
           "label": "ev.tyrus.entry.choice.rest",
+          "resultText": "ev.ev_tyrus_entry.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -5805,6 +6001,7 @@
       "choices": [
         {
           "label": "ev.yarcan.entry.choice.pass",
+          "resultText": "ev.ev_yarcan_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5815,6 +6012,7 @@
         },
         {
           "label": "ev.yarcan.entry.choice.look",
+          "resultText": "ev.ev_yarcan_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5857,6 +6055,7 @@
       "choices": [
         {
           "label": "ev.yasdi.entry.choice.pass",
+          "resultText": "ev.ev_yasdi_entry.choice_1_result",
           "effects": [
             {
               "op": "reveal_map",
@@ -5867,6 +6066,7 @@
         },
         {
           "label": "ev.yasdi.entry.choice.look",
+          "resultText": "ev.ev_yasdi_entry.choice_2_result",
           "effects": [
             {
               "op": "reveal_map",

@@ -2,7 +2,7 @@
 unit: berrhoea
 lang: zh
 source: en
-source_rev: 84eac6aba913
+source_rev: 28bfa5aa45f7
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.berrhoea.entry.choice.pass: 96d145abaf05
   ev.berrhoea.entry.body: fad7bbb9f17b
   ev.berrhoea.entry.title: df558fe23a3c
+  ev.ev_berrhoea_entry.choice_1_result: ee64df8a203e
+  ev.ev_berrhoea_entry.choice_2_result: f86194d723f0
 ---
 
 ## city.berrhoea.name
@@ -40,3 +42,10 @@ stamps:
 
 阿勒颇
 
+## ev.ev_berrhoea_entry.choice_1_result
+
+你穿城而过，不加停留，通往备鲁亚（阿勒颇）的道路，就此展开在舆图上。
+
+## ev.ev_berrhoea_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往备鲁亚（阿勒颇）的路。你在路上用去 1 日光阴。

@@ -2,7 +2,7 @@
 unit: damascus
 lang: zh
 source: en
-source_rev: fcbff778648a
+source_rev: 64140b4a29ff
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.damascus.entry.choice.pass: 96d145abaf05
   ev.damascus.entry.body: bf6273e92863
   ev.damascus.entry.title: f3975b95c782
+  ev.ev_damascus_entry.choice_1_result: f5d0a4cf9614
+  ev.ev_damascus_entry.choice_2_result: 4604a5e870ac
 ---
 
 ## city.damascus.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.damascus.entry.title
 
 大马士革
+
+## ev.ev_damascus_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往大马色（大马士革）的路。
+
+## ev.ev_damascus_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往大马色（大马士革）的道路，就此展开在舆图上。为此费去你 1 日路程。

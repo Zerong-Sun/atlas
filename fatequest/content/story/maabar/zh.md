@@ -2,7 +2,7 @@
 unit: maabar
 lang: zh
 source: en
-source_rev: b68f38fa0bbe
+source_rev: 24ef4f5562d1
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.maabar.entry.choice.pass: 96d145abaf05
   ev.maabar.entry.body: ad2f702bbe8a
   ev.maabar.entry.title: decd3614b83d
+  ev.ev_maabar_entry.choice_1_result: 2f5fe78cdfa1
+  ev.ev_maabar_entry.choice_2_result: a247ea3f869f
 ---
 
 ## city.maabar.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.maabar.entry.title
 
 至马八儿大省
+
+## ev.ev_maabar_entry.choice_1_result
+
+你穿城而过，不加停留，通往马八儿的道路，就此展开在舆图上。
+
+## ev.ev_maabar_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往马八儿的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

@@ -2,7 +2,7 @@
 unit: bochara
 lang: zh
 source: en
-source_rev: 8e2d9f2e8684
+source_rev: 602f5ebe0260
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.bochara.entry.choice.rest: cc453f19a435
   ev.bochara.entry.body: 7c61315496f1
   ev.bochara.entry.title: dde08e0d3245
+  ev.ev_bochara_entry.choice_1_result: f1016c5b4fdd
+  ev.ev_bochara_entry.choice_2_result: b98a1cc4472d
 ---
 
 ## city.bochara.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.bochara.entry.title
 
 不花剌
+
+## ev.ev_bochara_entry.choice_1_result
+
+你继续赶路，不作停留，通往不花剌（布哈拉）的道路，就此展开在舆图上。
+
+## ev.ev_bochara_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往不花剌（布哈拉）的路。

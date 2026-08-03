@@ -2,7 +2,7 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: 0fd3497341c5
+source_rev: b0fcc10bce59
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.melibar.b.choice.observe: 6e7c4b4c35c4
   ev.melibar.b.choice.measure-star: e1473caa1089
   ev.melibar.b.choice.buy-pearls: c50320d68c98
+  ev.ev_melibar_entry.choice_1_result: ada5949883d9
+  ev.ev_melibar_entry.choice_2_result: 7e5a1b444e79
+  ev.ev_melibar_entry.choice_3_result: b1f0693fd00e
+  ev.ev_melibar_a.choice_1_result: a3cb62492ac6
+  ev.ev_melibar_a.choice_2_result: a9f049c6c164
+  ev.ev_melibar_a.choice_3_result: 51b46b004ce7
+  ev.ev_melibar_b.choice_1_result: 3e6a379f2c88
+  ev.ev_melibar_b.choice_2_result: 36cb51d3207d
+  ev.ev_melibar_b.choice_3_result: 4f3bcc6db7b8
 ---
 
 ## city.melibar.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.melibar.b.choice.buy-pearls
 
 向祷毕之采珠人购珠
+
+## ev.ev_melibar_entry.choice_1_result
+
+你匆匆穿过 darvāzā（城门），通往没来（马拉巴尔）的道路，就此展开在舆图上。
+
+## ev.ev_melibar_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往没来（马拉巴尔）的路。
+
+## ev.ev_melibar_entry.choice_3_result
+
+你去 mandir（神庙）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往没来（马拉巴尔）的道路，就此展开在舆图上。
+
+## ev.ev_melibar_a.choice_1_result
+
+你观港，问贾人如何避海盗，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_melibar_a.choice_2_result
+
+你趁港警在，购麻栏胡椒，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往加异勒的路。
+
+## ev.ev_melibar_a.choice_3_result
+
+你问引水人胡椒海岸何港，通往俱蓝（奎隆）的道路，就此展开在舆图上。通往马八儿的道路，就此展开在舆图上。气运稍稍偏向于你。
+
+## ev.ev_melibar_b.choice_1_result
+
+你于寺阶外观偶像礼，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_melibar_b.choice_2_result
+
+你以桅比北辰，记所见，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。你的行事之名先你一步传开。
+
+## ev.ev_melibar_b.choice_3_result
+
+你向祷毕之采珠人购珠，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。

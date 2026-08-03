@@ -2,7 +2,7 @@
 unit: tarsus
 lang: zh
 source: en
-source_rev: b18afa3eaedd
+source_rev: 1a4b197ac6c8
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.tarsus.entry.choice.rest: cc453f19a435
   ev.tarsus.entry.body: 25631e833fad
   ev.tarsus.entry.title: ba4180f0a9c6
+  ev.ev_tarsus_entry.choice_1_result: f48b0ab5537f
+  ev.ev_tarsus_entry.choice_2_result: 6ced54240af0
 ---
 
 ## city.tarsus.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.tarsus.entry.title
 
 塔尔苏斯
+
+## ev.ev_tarsus_entry.choice_1_result
+
+你继续赶路，不作停留，通往大数（塔尔苏斯）的道路，就此展开在舆图上。
+
+## ev.ev_tarsus_entry.choice_2_result
+
+你在路边歇半日，你在路上用去 1 日光阴。你标出了通往大数（塔尔苏斯）的路。

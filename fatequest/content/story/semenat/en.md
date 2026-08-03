@@ -31,3 +31,11 @@ Pass through without stopping
 ## ev.semenat.entry.title
 
 Concerning the Kingdom of Semenat
+
+## ev.ev_semenat_entry.choice_1_result
+
+You pass through without stopping. You set the way to Semenat on your map.
+
+## ev.ev_semenat_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Semenat opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

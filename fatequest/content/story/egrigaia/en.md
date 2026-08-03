@@ -35,3 +35,11 @@ Pass through without stopping
 ## ev.egrigaia.entry.title
 
 Of the Kingdom of Egrigaia
+
+## ev.ev_egrigaia_entry.choice_1_result
+
+You pass through without stopping. You set the way to Egrigaia on your map.
+
+## ev.ev_egrigaia_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Egrigaia opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

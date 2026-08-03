@@ -2,7 +2,7 @@
 unit: delli
 lang: zh
 source: en
-source_rev: 06c4137d574e
+source_rev: 6ab074ca4aad
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.delli.entry.choice.pass: 96d145abaf05
   ev.delli.entry.body: 2e63839ae769
   ev.delli.entry.title: 9c130751f8f0
+  ev.ev_delli_entry.choice_1_result: 5b4dd5b40ef6
+  ev.ev_delli_entry.choice_2_result: 4cb74250b64e
 ---
 
 ## city.delli.name
@@ -40,3 +42,10 @@ stamps:
 
 德里
 
+## ev.ev_delli_entry.choice_1_result
+
+你穿城而过，不加停留，通往德列（德里）的道路，就此展开在舆图上。
+
+## ev.ev_delli_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往德列（德里）的路。你在路上用去 1 日光阴。

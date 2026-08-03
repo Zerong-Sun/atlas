@@ -33,3 +33,11 @@ Pass through without stopping
 ## ev.sindafu.entry.title
 
 Concerning the Province and City of Sindafu
+
+## ev.ev_sindafu_entry.choice_1_result
+
+You pass through without stopping. The road to Sindafu opens on your map.
+
+## ev.ev_sindafu_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Sindafu on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.

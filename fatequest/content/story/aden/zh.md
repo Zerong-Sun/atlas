@@ -2,7 +2,7 @@
 unit: aden
 lang: zh
 source: en
-source_rev: 71782fddab1e
+source_rev: 3c766463c6b3
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.aden.b.choice.observe: 94dab7decbfd
   ev.aden.b.choice.pay-frankincense: 91f40bf8a859
   ev.aden.b.choice.listen-prayer: f548c9bb4ce7
+  ev.ev_aden_entry.choice_1_result: b3bced50f46c
+  ev.ev_aden_entry.choice_2_result: 1aa0a73f3ba7
+  ev.ev_aden_entry.choice_3_result: bc559ddd0c4b
+  ev.ev_aden_a.choice_1_result: b2979a48ef72
+  ev.ev_aden_a.choice_2_result: 0cbb8e969257
+  ev.ev_aden_a.choice_3_result: 692ce6f0bdc2
+  ev.ev_aden_b.choice_1_result: f8ebb105aeda
+  ev.ev_aden_b.choice_2_result: f6799312c84a
+  ev.ev_aden_b.choice_3_result: a00d61b2dc77
 ---
 
 ## city.aden.name
@@ -96,3 +105,39 @@ stamps:
 ## ev.aden.b.choice.listen-prayer
 
 于清真寺门侧耳听礼
+
+## ev.ev_aden_entry.choice_1_result
+
+你匆匆穿过 darvāzā（城门），通往亚丁的道路，就此展开在舆图上。
+
+## ev.ev_aden_entry.choice_2_result
+
+你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往亚丁的路。
+
+## ev.ev_aden_entry.choice_3_result
+
+你去 mandir（神庙）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往亚丁的道路，就此展开在舆图上。
+
+## ev.ev_aden_a.choice_1_result
+
+你沿棚而行，看小船装货，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_aden_a.choice_2_result
+
+你购麻栏胡椒一袋备行，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+
+## ev.ev_aden_a.choice_3_result
+
+你问驼队主哪路出港，通往佐法尔的道路，就此展开在舆图上。通往坎巴叶（坎贝）的道路，就此展开在舆图上。气运稍稍偏向于你。
+
+## ev.ev_aden_b.choice_1_result
+
+你立于堤旁观海关，你在路上用去 1 日光阴。你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_aden_b.choice_2_result
+
+你纳港税，向索马里商人购乳香，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往呵舍儿（席赫尔）的道路，就此展开在舆图上。
+
+## ev.ev_aden_b.choice_3_result
+
+你于清真寺门侧耳听礼，你把这番见闻记入行纪。时运待你，比先前好了几分。

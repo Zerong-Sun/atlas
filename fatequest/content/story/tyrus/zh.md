@@ -2,7 +2,7 @@
 unit: tyrus
 lang: zh
 source: en
-source_rev: 24ba1ff14c9a
+source_rev: b312c940ac99
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.tyrus.entry.choice.rest: cc453f19a435
   ev.tyrus.entry.body: c2ecb36bc51c
   ev.tyrus.entry.title: 0c309b12e05f
+  ev.ev_tyrus_entry.choice_1_result: 85cffb997cf9
+  ev.ev_tyrus_entry.choice_2_result: b2bd2f733ce9
 ---
 
 ## city.tyrus.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.tyrus.entry.title
 
 提尔
+
+## ev.ev_tyrus_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往推罗（提尔）的路。
+
+## ev.ev_tyrus_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往推罗（提尔）的道路，就此展开在舆图上。

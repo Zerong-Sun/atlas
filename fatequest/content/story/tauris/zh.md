@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: f66fb987ff8b
+source_rev: 8205cca3f8ac
 status: translated
 translator: 人工校译
 notes: >
@@ -36,47 +36,47 @@ stamps:
   ev.tauris.c.title: 4b6457f485c1
   ev.tauris.entry.body: 122ebd882ff0
   ev.tauris.entry.title: a1cb0345c92f
-  ev.ev_tauris_entry.choice_1_result: 41d663410a70
-  ev.ev_tauris_entry.choice_2_result: 26afa0a18785
+  ev.ev_tauris_entry.choice_1_result: d71c26f70db2
+  ev.ev_tauris_entry.choice_2_result: e2fff2e332a7
   ev.ev_tauris_entry.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_mentor_tarot.choice_1_result: 41d663410a70
-  ev.ev_tauris_mentor_tarot.choice_2_result: 26afa0a18785
+  ev.ev_tauris_mentor_tarot.choice_1_result: d71c26f70db2
+  ev.ev_tauris_mentor_tarot.choice_2_result: e2fff2e332a7
   ev.ev_tauris_mentor_tarot.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_mentor_astrodice.choice_1_result: 41d663410a70
-  ev.ev_tauris_mentor_astrodice.choice_2_result: 26afa0a18785
-  ev.ev_tauris_a.choice_1_result: 41d663410a70
-  ev.ev_tauris_a.choice_2_result: 26afa0a18785
+  ev.ev_tauris_mentor_astrodice.choice_1_result: d71c26f70db2
+  ev.ev_tauris_mentor_astrodice.choice_2_result: e2fff2e332a7
+  ev.ev_tauris_a.choice_1_result: d71c26f70db2
+  ev.ev_tauris_a.choice_2_result: e2fff2e332a7
   ev.ev_tauris_a.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_b.choice_1_result: 41d663410a70
-  ev.ev_tauris_b.choice_2_result: 26afa0a18785
+  ev.ev_tauris_b.choice_1_result: d71c26f70db2
+  ev.ev_tauris_b.choice_2_result: e2fff2e332a7
   ev.ev_tauris_b.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_c.choice_1_result: 41d663410a70
-  ev.ev_tauris_c.choice_2_result: 26afa0a18785
+  ev.ev_tauris_c.choice_1_result: d71c26f70db2
+  ev.ev_tauris_c.choice_2_result: e2fff2e332a7
   ev.ev_tauris_c.choice_3_result: abbb8b4eb2ff
   ev.ev_tauris_consequence_a.title: d229f64fb1b5
   ev.ev_tauris_consequence_a.body: c4a2d0a9109c
   ev.ev_tauris_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_tauris_consequence_a.choice_1_result: 41d663410a70
+  ev.ev_tauris_consequence_a.choice_1_result: d71c26f70db2
   ev.ev_tauris_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_tauris_consequence_a.choice_2_result: 26afa0a18785
+  ev.ev_tauris_consequence_a.choice_2_result: e2fff2e332a7
   ev.ev_tauris_consequence_a_resolution.title: 51d5185c7e16
   ev.ev_tauris_consequence_a_resolution.body: 357c2908f927
   ev.ev_tauris_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_tauris_consequence_a_resolution.choice_1_result: 41d663410a70
+  ev.ev_tauris_consequence_a_resolution.choice_1_result: d71c26f70db2
   ev.ev_tauris_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_tauris_consequence_a_resolution.choice_2_result: 26afa0a18785
+  ev.ev_tauris_consequence_a_resolution.choice_2_result: e2fff2e332a7
   ev.ev_tauris_consequence_b.title: 87ca51a3b222
   ev.ev_tauris_consequence_b.body: 8ea551e1b6ea
   ev.ev_tauris_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_tauris_consequence_b.choice_1_result: 41d663410a70
+  ev.ev_tauris_consequence_b.choice_1_result: d71c26f70db2
   ev.ev_tauris_consequence_b.choice_2: bb0917a651a0
-  ev.ev_tauris_consequence_b.choice_2_result: 26afa0a18785
+  ev.ev_tauris_consequence_b.choice_2_result: e2fff2e332a7
   ev.ev_tauris_consequence_b_resolution.title: 51d5185c7e16
   ev.ev_tauris_consequence_b_resolution.body: 827b72f18207
   ev.ev_tauris_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_tauris_consequence_b_resolution.choice_1_result: 41d663410a70
+  ev.ev_tauris_consequence_b_resolution.choice_1_result: d71c26f70db2
   ev.ev_tauris_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_tauris_consequence_b_resolution.choice_2_result: 26afa0a18785
+  ev.ev_tauris_consequence_b_resolution.choice_2_result: e2fff2e332a7
   ev.ev_tauris_a_merchants_followup.title: fdaecaa050f1
   ev.ev_tauris_a_merchants_followup.body: 199d52a728ca
   ev.ev_tauris_a_merchants_followup.choice_1: 248d28e09a24

@@ -36,3 +36,11 @@ Rest half a day by the road
 ## ev.merva.entry.title
 
 Arriving at Merva
+
+## ev.ev_merva_entry.choice_1_result
+
+You ride on without delay. You set the way to Merva on your map.
+
+## ev.ev_merva_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Merva opens on your map.

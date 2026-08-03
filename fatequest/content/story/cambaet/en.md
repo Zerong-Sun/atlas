@@ -35,3 +35,11 @@ Pass through without stopping
 ## ev.cambaet.entry.title
 
 Concerning the Kingdom of Cambaet
+
+## ev.ev_cambaet_entry.choice_1_result
+
+You pass through without stopping. You set the way to Cambaet on your map.
+
+## ev.ev_cambaet_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Cambaet opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

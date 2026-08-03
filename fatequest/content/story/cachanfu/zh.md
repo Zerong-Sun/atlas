@@ -2,7 +2,7 @@
 unit: cachanfu
 lang: zh
 source: en
-source_rev: bfa66a61fd95
+source_rev: 98435ffbdb50
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.cachanfu.entry.choice.pass: 96d145abaf05
   ev.cachanfu.entry.body: c8f9d57d3d72
   ev.cachanfu.entry.title: b624478e7805
+  ev.ev_cachanfu_entry.choice_1_result: acddf024fc6c
+  ev.ev_cachanfu_entry.choice_2_result: d6fa3409776f
 ---
 
 ## city.cachanfu.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.cachanfu.entry.title
 
 记黄河与河中府
+
+## ev.ev_cachanfu_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往河中府（蒲州）的路。
+
+## ev.ev_cachanfu_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往河中府（蒲州）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

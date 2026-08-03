@@ -2,7 +2,7 @@
 unit: baldacum
 lang: zh
 source: en
-source_rev: 12d09078977e
+source_rev: 2d3bfc002e4c
 status: translated
 translator: 人工校译
 notes: >
@@ -36,49 +36,49 @@ stamps:
   ev.baldacum.c.title: b873ff792737
   ev.baldacum.entry.body: bfd925edfb53
   ev.baldacum.entry.title: 8b09f463e011
-  ev.ev_baldacum_entry.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_entry.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_entry.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_entry.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_entry.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_mentor_bazi.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_mentor_bazi.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_mentor_bazi.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_mentor_bazi.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_mentor_bazi.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_mentor_geomancy.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_mentor_geomancy.choice_2_result: 02bd8c6326e7
-  ev.ev_baldacum_geomancy_court.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_geomancy_court.choice_2_result: 02bd8c6326e7
-  ev.ev_baldacum_a.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_a.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_mentor_geomancy.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_mentor_geomancy.choice_2_result: 1fdd60f900e7
+  ev.ev_baldacum_geomancy_court.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_geomancy_court.choice_2_result: 1fdd60f900e7
+  ev.ev_baldacum_a.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_a.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_a.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_b.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_b.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_b.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_b.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_b.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_c.choice_1_result: 72384fe7c85a
-  ev.ev_baldacum_c.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_c.choice_1_result: 0f7063ea16ef
+  ev.ev_baldacum_c.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_c.choice_3_result: 95db535a1ec6
   ev.ev_baldacum_consequence_a.title: d8ca652f577a
   ev.ev_baldacum_consequence_a.body: 1648d46d7f76
   ev.ev_baldacum_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_baldacum_consequence_a.choice_1_result: 72384fe7c85a
+  ev.ev_baldacum_consequence_a.choice_1_result: 0f7063ea16ef
   ev.ev_baldacum_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_baldacum_consequence_a.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_consequence_a.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_consequence_a_resolution.title: d0008e67befc
   ev.ev_baldacum_consequence_a_resolution.body: 357c2908f927
   ev.ev_baldacum_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_baldacum_consequence_a_resolution.choice_1_result: 72384fe7c85a
+  ev.ev_baldacum_consequence_a_resolution.choice_1_result: 0f7063ea16ef
   ev.ev_baldacum_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_baldacum_consequence_a_resolution.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_consequence_a_resolution.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_consequence_b.title: 8f970a465a94
   ev.ev_baldacum_consequence_b.body: 2c2a6b692765
   ev.ev_baldacum_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_baldacum_consequence_b.choice_1_result: 72384fe7c85a
+  ev.ev_baldacum_consequence_b.choice_1_result: 0f7063ea16ef
   ev.ev_baldacum_consequence_b.choice_2: bb0917a651a0
-  ev.ev_baldacum_consequence_b.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_consequence_b.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_consequence_b_resolution.title: d0008e67befc
   ev.ev_baldacum_consequence_b_resolution.body: 827b72f18207
   ev.ev_baldacum_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_baldacum_consequence_b_resolution.choice_1_result: 72384fe7c85a
+  ev.ev_baldacum_consequence_b_resolution.choice_1_result: 0f7063ea16ef
   ev.ev_baldacum_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_baldacum_consequence_b_resolution.choice_2_result: 02bd8c6326e7
+  ev.ev_baldacum_consequence_b_resolution.choice_2_result: 1fdd60f900e7
   ev.ev_baldacum_a_followup.title: 291f43b0ac20
   ev.ev_baldacum_a_followup.body: 69a04c6104cd
   ev.ev_baldacum_a_followup.choice_1: 0f3cd4f4314b

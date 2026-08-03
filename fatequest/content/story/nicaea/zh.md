@@ -2,7 +2,7 @@
 unit: nicaea
 lang: zh
 source: en
-source_rev: 27247767f1a8
+source_rev: 785a0df3c03d
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.nicaea.entry.choice.rest: cc453f19a435
   ev.nicaea.entry.body: 0cd9aa9ccace
   ev.nicaea.entry.title: 50c634c89bf7
+  ev.ev_nicaea_entry.choice_1_result: f32ed56ebf81
+  ev.ev_nicaea_entry.choice_2_result: d170c8a2ddba
 ---
 
 ## city.nicaea.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.nicaea.entry.title
 
 尼西亚
+
+## ev.ev_nicaea_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往尼该亚的路。
+
+## ev.ev_nicaea_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往尼该亚的道路，就此展开在舆图上。

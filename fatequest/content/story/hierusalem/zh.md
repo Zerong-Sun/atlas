@@ -2,7 +2,7 @@
 unit: hierusalem
 lang: zh
 source: en
-source_rev: 94ecd8d33454
+source_rev: e5ad54045532
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.hierusalem.entry.choice.pass: 96d145abaf05
   ev.hierusalem.entry.body: d74b81a651db
   ev.hierusalem.entry.title: 29423a5359eb
+  ev.ev_hierusalem_entry.choice_1_result: 8697a2f7c294
+  ev.ev_hierusalem_entry.choice_2_result: db6d1fa35afb
 ---
 
 ## city.hierusalem.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.hierusalem.entry.title
 
 耶路撒冷
+
+## ev.ev_hierusalem_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往耶路撒冷的路。
+
+## ev.ev_hierusalem_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往耶路撒冷的道路，就此展开在舆图上。为此费去你 1 日路程。

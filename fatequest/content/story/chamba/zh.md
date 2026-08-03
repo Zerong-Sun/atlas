@@ -2,7 +2,7 @@
 unit: chamba
 lang: zh
 source: en
-source_rev: 7d134b8fd6f3
+source_rev: d4c894514dc9
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.chamba.b.choice.visit_court: 7b31e4574072
   ev.chamba.b.choice.buy_pepper: a66d1e755786
   ev.chamba.b.choice.ask_sea_road: 1830deda347f
+  ev.ev_chamba_entry.choice_1_result: 286fc0de1f9e
+  ev.ev_chamba_entry.choice_2_result: 24a87e8c27d0
+  ev.ev_chamba_entry.choice_3_result: ca34ca445c10
+  ev.ev_chamba_a.choice_1_result: 490a317e66d3
+  ev.ev_chamba_a.choice_2_result: 62fb99bcf165
+  ev.ev_chamba_a.choice_3_result: 2c3b117235de
+  ev.ev_chamba_b.choice_1_result: 9a58ec57e790
+  ev.ev_chamba_b.choice_2_result: 13dabc16181e
+  ev.ev_chamba_b.choice_3_result: 5716069fa47f
 ---
 
 ## city.chamba.name
@@ -95,3 +104,39 @@ stamps:
 ## ev.chamba.b.choice.ask_sea_road
 
 问水手至刺桐、福州须几日航程
+
+## ev.ev_chamba_entry.choice_1_result
+
+你匆匆穿过城门，通往占城的道路，就此展开在舆图上。
+
+## ev.ev_chamba_entry.choice_2_result
+
+你穿过港口集市，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往占城的路。
+
+## ev.ev_chamba_entry.choice_3_result
+
+你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往占城的道路，就此展开在舆图上。
+
+## ev.ev_chamba_a.choice_1_result
+
+你听人详述象贡何以定约，不到一个时辰，这段记录已落笔成文。通往刺桐（泉州）的道路，就此展开在舆图上。气运稍稍偏向于你。
+
+## ev.ev_chamba_a.choice_2_result
+
+你于港立一日，看贡物清点，你在路上用去 1 日光阴。你标出了通往宾坦的路。你把这番见闻记入行纪。
+
+## ev.ev_chamba_a.choice_3_result
+
+你于贡物区买旃檀，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+
+## ev.ev_chamba_b.choice_1_result
+
+你于港候二日，闻王宫消息，你在路上用去 2 日光阴。你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_chamba_b.choice_2_result
+
+你向香料商买胡椒，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_chamba_b.choice_3_result
+
+你问水手至刺桐、福州须几日航程，你标出了通往刺桐（泉州）的路。你标出了通往福州的路。你把这番见闻记入行纪。

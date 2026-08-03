@@ -32,3 +32,11 @@ Pass through without stopping
 ## ev.trapezus.entry.title
 
 Arriving at Trapezus
+
+## ev.ev_trapezus_entry.choice_1_result
+
+You pass through without stopping. The road to Trapezus opens on your map.
+
+## ev.ev_trapezus_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Trapezus on your map. You spend 1 day before the way is clear again.

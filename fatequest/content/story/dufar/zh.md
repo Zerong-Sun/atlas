@@ -2,7 +2,7 @@
 unit: dufar
 lang: zh
 source: en
-source_rev: f230bb86f565
+source_rev: 1261ec518a31
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.dufar.entry.choice.pass: 96d145abaf05
   ev.dufar.entry.body: c3d4506c39aa
   ev.dufar.entry.title: 8e6c35e369e9
+  ev.ev_dufar_entry.choice_1_result: 90226620cecb
+  ev.ev_dufar_entry.choice_2_result: 10350565226b
 ---
 
 ## city.dufar.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.dufar.entry.title
 
 记佐法尔
+
+## ev.ev_dufar_entry.choice_1_result
+
+你穿城而过，不加停留，通往佐法尔的道路，就此展开在舆图上。
+
+## ev.ev_dufar_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往佐法尔的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

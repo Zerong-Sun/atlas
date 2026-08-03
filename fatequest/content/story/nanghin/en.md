@@ -33,3 +33,11 @@ Pass through without stopping
 ## ev.nanghin.entry.title
 
 Concerning the City of Nanghin
+
+## ev.ev_nanghin_entry.choice_1_result
+
+You pass through without stopping. You set the way to Nanghin on your map.
+
+## ev.ev_nanghin_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Nanghin opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

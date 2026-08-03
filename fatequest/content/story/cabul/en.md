@@ -24,7 +24,6 @@ You must know that Kābul is the gate between Persia and Hindūstān, and that
 caravans still risk the passes for the sake of the Indian trade, though the
 old walls are broken and the robbers of the hills are many.
 
-
 ## ev.cabul.entry.choice.pass
 
 Ride on without delay
@@ -36,3 +35,11 @@ Rest half a day by the road
 ## ev.cabul.entry.title
 
 Arriving at Cabul
+
+## ev.ev_cabul_entry.choice_1_result
+
+You ride on without delay. You set the way to Cabul on your map.
+
+## ev.ev_cabul_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Cabul opens on your map.

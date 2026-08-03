@@ -2,7 +2,7 @@
 unit: semenat
 lang: zh
 source: en
-source_rev: 5e890a132d83
+source_rev: 6648df1eaac8
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.semenat.entry.choice.pass: 96d145abaf05
   ev.semenat.entry.body: 034f043d887a
   ev.semenat.entry.title: a40e0146353f
+  ev.ev_semenat_entry.choice_1_result: 1214d24b5515
+  ev.ev_semenat_entry.choice_2_result: a91200dda027
 ---
 
 ## city.semenat.name
@@ -39,3 +41,11 @@ bāzār（集市）上货物如潮。
 ## ev.semenat.entry.title
 
 记苏门纳国
+
+## ev.ev_semenat_entry.choice_1_result
+
+你穿城而过，不加停留，你标出了通往苏门纳（索姆纳特）的路。
+
+## ev.ev_semenat_entry.choice_2_result
+
+你歇脚打听此地有何说头，通往苏门纳（索姆纳特）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。

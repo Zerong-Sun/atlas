@@ -159,11 +159,11 @@ I Ching at Khanbaliq
 
 ## ev.ev_cambaluc_entry.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_entry.choice_3_result
 
@@ -171,19 +171,19 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cambaluc_mentor_iching.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_mentor_iching.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_a.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_a.choice_3_result
 
@@ -191,11 +191,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cambaluc_b.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_b.choice_3_result
 
@@ -203,11 +203,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_cambaluc_c.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_c.choice_3_result
 
@@ -227,7 +227,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_cambaluc_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_a.choice_2
 
@@ -235,7 +235,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_cambaluc_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_a_resolution.title
 
@@ -251,7 +251,7 @@ Make the introduction before nightfall
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2
 
@@ -259,7 +259,7 @@ Keep the sign in your travel book
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_b.title
 
@@ -275,7 +275,7 @@ Follow the practical advice
 
 ## ev.ev_cambaluc_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_b.choice_2
 
@@ -283,7 +283,7 @@ Leave the rumour with the teller
 
 ## ev.ev_cambaluc_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_b_resolution.title
 
@@ -299,7 +299,7 @@ Make the introduction before nightfall
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the the palace gate and the relay stations.
+The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2
 
@@ -307,7 +307,7 @@ Keep the sign in your travel book
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the palace gate and the relay stations.
+The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
 
 ## ev.ev_cambaluc_a_followup.title
 

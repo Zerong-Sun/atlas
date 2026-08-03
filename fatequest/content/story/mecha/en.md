@@ -24,7 +24,6 @@ this protected town are praised by every stranger. You must know that this is
 the direction of prayer for every Muslim upon the earth, and that the road hither
 is lined with wells, mosques, and the footprints of the prophets.
 
-
 ## ev.mecha.entry.choice.look
 
 Rest and ask what men say of this place
@@ -36,3 +35,11 @@ Pass through without stopping
 ## ev.mecha.entry.title
 
 Arriving at Mecha
+
+## ev.ev_mecha_entry.choice_1_result
+
+You pass through without stopping. The road to Mecha opens on your map.
+
+## ev.ev_mecha_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Mecha on your map. You spend 1 day before the way is clear again.

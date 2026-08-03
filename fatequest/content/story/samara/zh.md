@@ -2,7 +2,7 @@
 unit: samara
 lang: zh
 source: en
-source_rev: 7f972624b177
+source_rev: bddf3183c709
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.samara.entry.choice.rest: cc453f19a435
   ev.samara.entry.body: 3ac15456f51e
   ev.samara.entry.title: dbd2838a99fd
+  ev.ev_samara_entry.choice_1_result: e51fcc43216b
+  ev.ev_samara_entry.choice_2_result: 5c52291a17b4
 ---
 
 ## city.samara.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.samara.entry.title
 
 撒麻剌
+
+## ev.ev_samara_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往须文那（苏门答腊）的路。
+
+## ev.ev_samara_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往须文那（苏门答腊）的道路，就此展开在舆图上。

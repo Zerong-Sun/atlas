@@ -25,7 +25,6 @@ are of the Faith, and he supplies the stranger with all that is needful. You
 must know that men of China and of India both name this great island among the
 richest of the southern ocean, and that its harbours take junk and dhow alike.
 
-
 ## ev.java-major.entry.choice.look
 
 Rest and ask what men say of this place
@@ -37,3 +36,11 @@ Pass through without stopping
 ## ev.java-major.entry.title
 
 Arriving at Java Major
+
+## ev.ev_java_major_entry.choice_1_result
+
+You pass through without stopping. The road to Java Major opens on your map.
+
+## ev.ev_java_major_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Java Major on your map. You spend 1 day before the way is clear again.

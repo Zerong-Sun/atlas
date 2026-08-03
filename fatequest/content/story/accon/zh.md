@@ -2,7 +2,7 @@
 unit: accon
 lang: zh
 source: en
-source_rev: 84543bc25f2a
+source_rev: 000b53b059b9
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.accon.entry.choice.pass: 96d145abaf05
   ev.accon.entry.body: c4bebd6296e0
   ev.accon.entry.title: 6a6859c7fd39
+  ev.ev_accon_entry.choice_1_result: 18bb6cadd8f0
+  ev.ev_accon_entry.choice_2_result: 2f3b1f0e4a6e
 ---
 
 ## city.accon.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.accon.entry.title
 
 阿卡
+
+## ev.ev_accon_entry.choice_1_result
+
+你穿城而过，不加停留，通往阿卡的道路，就此展开在舆图上。
+
+## ev.ev_accon_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往阿卡的路。你在路上用去 1 日光阴。

@@ -2,7 +2,7 @@
 unit: ephesus
 lang: zh
 source: en
-source_rev: 8371b9102d5e
+source_rev: 4c2ac7442343
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.ephesus.entry.choice.rest: cc453f19a435
   ev.ephesus.entry.body: 63f8d94918ae
   ev.ephesus.entry.title: 6ff428c7fcdd
+  ev.ev_ephesus_entry.choice_1_result: 2f0fe7060e89
+  ev.ev_ephesus_entry.choice_2_result: 1ce7662919d0
 ---
 
 ## city.ephesus.name
@@ -37,3 +39,11 @@ stamps:
 ## ev.ephesus.entry.title
 
 以弗所
+
+## ev.ev_ephesus_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往以弗所的路。
+
+## ev.ev_ephesus_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往以弗所的道路，就此展开在舆图上。

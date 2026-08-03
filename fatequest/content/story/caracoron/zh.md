@@ -2,7 +2,7 @@
 unit: caracoron
 lang: zh
 source: en
-source_rev: 596e4aeff7fc
+source_rev: 2a06039313c8
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.caracoron.entry.choice.pass: 96d145abaf05
   ev.caracoron.entry.body: d7780f8db3c2
   ev.caracoron.entry.title: 599b41f7df97
+  ev.ev_caracoron_entry.choice_1_result: 553c16bdd8a9
+  ev.ev_caracoron_entry.choice_2_result: 7b7631e06ecf
 ---
 
 ## city.caracoron.name
@@ -40,3 +42,11 @@ stamps:
 ## ev.caracoron.entry.title
 
 记哈剌和林
+
+## ev.ev_caracoron_entry.choice_1_result
+
+你穿城而过，不加停留，通往哈剌和林的道路，就此展开在舆图上。
+
+## ev.ev_caracoron_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往哈剌和林的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

@@ -32,3 +32,11 @@ Pass through without stopping
 ## ev.yasdi.entry.title
 
 Concerning the Great City of Yasdi
+
+## ev.ev_yasdi_entry.choice_1_result
+
+You pass through without stopping. The road to Yasdi opens on your map.
+
+## ev.ev_yasdi_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Yasdi on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.

@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: 06c1f1132230
+source_rev: 9d4cc7618d98
 status: translated
 translator: 人工校译
 notes: >
@@ -27,6 +27,15 @@ stamps:
   ev.tenduc.b.choice.walk: e2bf94e75be2
   ev.tenduc.b.choice.buy-cloth: 2dd0bf2632d4
   ev.tenduc.b.choice.ask-north: f4bb7e4f0c5b
+  ev.ev_tenduc_entry.choice_1_result: 17761554e093
+  ev.ev_tenduc_entry.choice_2_result: 86cb5cb81219
+  ev.ev_tenduc_entry.choice_3_result: 13820984012f
+  ev.ev_tenduc_a.choice_1_result: 82c9bbae84e3
+  ev.ev_tenduc_a.choice_2_result: 8681cc799341
+  ev.ev_tenduc_a.choice_3_result: d7d1eda71b71
+  ev.ev_tenduc_b.choice_1_result: 1d1412748f59
+  ev.ev_tenduc_b.choice_2_result: 032f6eee1b38
+  ev.ev_tenduc_b.choice_3_result: 7cf65b891207
 ---
 
 ## city.tenduc.name
@@ -98,3 +107,39 @@ stamps:
 ## ev.tenduc.b.choice.ask-north
 
 问撒拉逊商人何路北入草原
+
+## ev.ev_tenduc_entry.choice_1_result
+
+你匆匆穿过城门，你标出了通往天德军（丰州）的路。
+
+## ev.ev_tenduc_entry.choice_2_result
+
+你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往天德军（丰州）的道路，就此展开在舆图上。
+
+## ev.ev_tenduc_entry.choice_3_result
+
+你去 ovoo（敖包）看看，此地人谈起你，语气添了几分敬重。你带走此地的一枚小小印记。你标出了通往天德军（丰州）的路。
+
+## ev.ev_tenduc_a.choice_1_result
+
+你赴景教礼拜，听叙利亚语圣歌，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+
+## ev.ev_tenduc_a.choice_2_result
+
+你问祭司何路通大汗之城，通往汗八里（大都）的道路，就此展开在舆图上。通往河间府的道路，就此展开在舆图上。气运稍稍偏向于你。
+
+## ev.ev_tenduc_a.choice_3_result
+
+你于教堂门献银钱，银钱易手，囊中为之或增或减。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_tenduc_b.choice_1_result
+
+你入市，三语侧耳，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_tenduc_b.choice_2_result
+
+你向景教织工购色棉布一匹，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+
+## ev.ev_tenduc_b.choice_3_result
+
+你问撒拉逊商人何路北入草原，通往额里合牙（宁夏）的道路，就此展开在舆图上。你的行事之名先你一步传开。

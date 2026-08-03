@@ -26,7 +26,6 @@ Muslim trades. You must know that Dehli is the seat of the Tughluq Sultans,
 and that no man of rank enters without his name being written in the books of
 the court.
 
-
 ## ev.delli.entry.choice.look
 
 Rest and ask what men say of this place
@@ -38,3 +37,11 @@ Pass through without stopping
 ## ev.delli.entry.title
 
 Arriving at Delli
+
+## ev.ev_delli_entry.choice_1_result
+
+You pass through without stopping. The road to Delli opens on your map.
+
+## ev.ev_delli_entry.choice_2_result
+
+You rest and ask what men say of this place. You set the way to Delli on your map. You spend 1 day before the way is clear again.

@@ -2,7 +2,7 @@
 unit: sindafu
 lang: zh
 source: en
-source_rev: e702bacb05b5
+source_rev: 63d0f40c3bcc
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,8 @@ stamps:
   ev.sindafu.entry.choice.pass: 96d145abaf05
   ev.sindafu.entry.body: 00170d73d4c1
   ev.sindafu.entry.title: 6afc4ecd70f9
+  ev.ev_sindafu_entry.choice_1_result: e582791ab0d7
+  ev.ev_sindafu_entry.choice_2_result: 22f016dcc29b
 ---
 
 ## city.sindafu.name
@@ -38,3 +40,11 @@ stamps:
 ## ev.sindafu.entry.title
 
 记成都府
+
+## ev.ev_sindafu_entry.choice_1_result
+
+你穿城而过，不加停留，通往成都府的道路，就此展开在舆图上。
+
+## ev.ev_sindafu_entry.choice_2_result
+
+你歇脚打听此地有何说头，你标出了通往成都府的路。你把这番见闻记入行纪。你在路上用去 1 日光阴。

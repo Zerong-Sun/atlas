@@ -137,11 +137,11 @@ Of the City of Chandu, and the Kaan’s Palace There
 
 ## ev.ev_chandu_entry.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_entry.choice_3_result
 
@@ -149,11 +149,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_chandu_a.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_a.choice_3_result
 
@@ -161,11 +161,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_chandu_b.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_b.choice_3_result
 
@@ -173,11 +173,11 @@ You close the matter for now. The sign you gained will still guide your next act
 
 ## ev.ev_chandu_c.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_c.choice_3_result
 
@@ -197,7 +197,7 @@ Keep the name and ask who can vouch for it
 
 ## ev.ev_chandu_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_a.choice_2
 
@@ -205,7 +205,7 @@ Thank the stranger and keep your own counsel
 
 ## ev.ev_chandu_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_a_resolution.title
 
@@ -221,7 +221,7 @@ Make the introduction before nightfall
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2
 
@@ -229,7 +229,7 @@ Keep the sign in your travel book
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_b.title
 
@@ -245,7 +245,7 @@ Follow the practical advice
 
 ## ev.ev_chandu_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_b.choice_2
 
@@ -253,7 +253,7 @@ Leave the rumour with the teller
 
 ## ev.ev_chandu_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_b_resolution.title
 
@@ -269,7 +269,7 @@ Make the introduction before nightfall
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2
 
@@ -277,7 +277,7 @@ Keep the sign in your travel book
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.chandu.mentor_closure.title
 
@@ -293,7 +293,7 @@ Ask what the road will demand
 
 ## ev.chandu.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the the summer palace and the meadow.
+The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
 
 ## ev.chandu.mentor_closure.choice_2
 
@@ -301,7 +301,7 @@ Stay for a day and listen to the whole account
 
 ## ev.chandu.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the the summer palace and the meadow.
+The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
 
 ## ev.chandu.mentor_closure.choice_3
 

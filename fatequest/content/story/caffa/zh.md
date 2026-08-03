@@ -2,7 +2,7 @@
 unit: caffa
 lang: zh
 source: en
-source_rev: 80cd463adc75
+source_rev: 139ecc141b5d
 status: translated
 proofed: true
 translator: 人工校译
@@ -18,6 +18,8 @@ stamps:
   ev.caffa.entry.choice.rest: cc453f19a435
   ev.caffa.entry.body: 7a0ba30104e7
   ev.caffa.entry.title: 1c1fd0ee2d6d
+  ev.ev_caffa_entry.choice_1_result: 53030817de53
+  ev.ev_caffa_entry.choice_2_result: e650848fe28a
 ---
 
 ## city.caffa.name
@@ -39,3 +41,11 @@ stamps:
 ## ev.caffa.entry.title
 
 卡法
+
+## ev.ev_caffa_entry.choice_1_result
+
+你继续赶路，不作停留，你标出了通往喀法（费奥多西亚）的路。
+
+## ev.ev_caffa_entry.choice_2_result
+
+你在路边歇半日，为此费去你 1 日路程。通往喀法（费奥多西亚）的道路，就此展开在舆图上。

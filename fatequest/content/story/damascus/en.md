@@ -25,7 +25,6 @@ Outside the walls the Sultan races horses upon green courses beside the river.
 You must know that pilgrims returning from the Hijāz are met here with honour,
 and that steel, silk, and rosewater of this city are named in every caravan.
 
-
 ## ev.damascus.entry.choice.look
 
 Rest and ask what men say of this place
@@ -37,3 +36,11 @@ Pass through without stopping
 ## ev.damascus.entry.title
 
 Arriving at Damascus
+
+## ev.ev_damascus_entry.choice_1_result
+
+You pass through without stopping. You set the way to Damascus on your map.
+
+## ev.ev_damascus_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Damascus opens on your map. It costs you 1 day on the road.

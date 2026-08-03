@@ -20,6 +20,7 @@
       "choices": [
         {
           "label": "ev.road.desert_voices.choice.follow",
+          "resultText": "ev.ev_road_desert_voices.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -41,6 +42,7 @@
         },
         {
           "label": "ev.road.desert_voices.choice.ignore",
+          "resultText": "ev.ev_road_desert_voices.choice_2_result",
           "effects": [
             {
               "op": "flag",
@@ -119,6 +121,7 @@
       "choices": [
         {
           "label": "ev.road.00.choice.choice_0",
+          "resultText": "ev.ev_road_00.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -129,6 +132,7 @@
         },
         {
           "label": "ev.road.00.choice.choice_1",
+          "resultText": "ev.ev_road_00.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -170,6 +174,7 @@
       "choices": [
         {
           "label": "ev.road.01.choice.choice_0",
+          "resultText": "ev.ev_road_01.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -180,6 +185,7 @@
         },
         {
           "label": "ev.road.01.choice.choice_1",
+          "resultText": "ev.ev_road_01.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -221,6 +227,7 @@
       "choices": [
         {
           "label": "ev.road.02.choice.choice_0",
+          "resultText": "ev.ev_road_02.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -231,6 +238,7 @@
         },
         {
           "label": "ev.road.02.choice.choice_1",
+          "resultText": "ev.ev_road_02.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -272,6 +280,7 @@
       "choices": [
         {
           "label": "ev.road.03.choice.choice_0",
+          "resultText": "ev.ev_road_03.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -282,6 +291,7 @@
         },
         {
           "label": "ev.road.03.choice.choice_1",
+          "resultText": "ev.ev_road_03.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -323,6 +333,7 @@
       "choices": [
         {
           "label": "ev.road.04.choice.choice_0",
+          "resultText": "ev.ev_road_04.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -333,6 +344,7 @@
         },
         {
           "label": "ev.road.04.choice.choice_1",
+          "resultText": "ev.ev_road_04.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -374,6 +386,7 @@
       "choices": [
         {
           "label": "ev.road.05.choice.choice_0",
+          "resultText": "ev.ev_road_05.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -384,6 +397,7 @@
         },
         {
           "label": "ev.road.05.choice.choice_1",
+          "resultText": "ev.ev_road_05.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -425,6 +439,7 @@
       "choices": [
         {
           "label": "ev.road.06.choice.choice_0",
+          "resultText": "ev.ev_road_06.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -445,6 +460,7 @@
         },
         {
           "label": "ev.road.06.choice.choice_1",
+          "resultText": "ev.ev_road_06.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -481,6 +497,7 @@
       "choices": [
         {
           "label": "ev.road.07.choice.choice_0",
+          "resultText": "ev.ev_road_07.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -501,6 +518,7 @@
         },
         {
           "label": "ev.road.07.choice.choice_1",
+          "resultText": "ev.ev_road_07.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -537,6 +555,7 @@
       "choices": [
         {
           "label": "ev.road.08.choice.choice_0",
+          "resultText": "ev.ev_road_08.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -557,6 +576,7 @@
         },
         {
           "label": "ev.road.08.choice.choice_1",
+          "resultText": "ev.ev_road_08.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -593,6 +613,7 @@
       "choices": [
         {
           "label": "ev.road.09.choice.choice_0",
+          "resultText": "ev.ev_road_09.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -613,6 +634,7 @@
         },
         {
           "label": "ev.road.09.choice.choice_1",
+          "resultText": "ev.ev_road_09.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -649,6 +671,7 @@
       "choices": [
         {
           "label": "ev.road.10.choice.choice_0",
+          "resultText": "ev.ev_road_10.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -669,6 +692,7 @@
         },
         {
           "label": "ev.road.10.choice.choice_1",
+          "resultText": "ev.ev_road_10.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -705,6 +729,7 @@
       "choices": [
         {
           "label": "ev.road.11.choice.choice_0",
+          "resultText": "ev.ev_road_11.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -725,6 +750,7 @@
         },
         {
           "label": "ev.road.11.choice.choice_1",
+          "resultText": "ev.ev_road_11.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -761,6 +787,7 @@
       "choices": [
         {
           "label": "ev.road.12.choice.choice_0",
+          "resultText": "ev.ev_road_12.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -781,6 +808,7 @@
         },
         {
           "label": "ev.road.12.choice.choice_1",
+          "resultText": "ev.ev_road_12.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -817,6 +845,7 @@
       "choices": [
         {
           "label": "ev.road.13.choice.choice_0",
+          "resultText": "ev.ev_road_13.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -837,6 +866,7 @@
         },
         {
           "label": "ev.road.13.choice.choice_1",
+          "resultText": "ev.ev_road_13.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -873,6 +903,7 @@
       "choices": [
         {
           "label": "ev.road.14.choice.choice_0",
+          "resultText": "ev.ev_road_14.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -885,6 +916,7 @@
         },
         {
           "label": "ev.road.14.choice.choice_1",
+          "resultText": "ev.ev_road_14.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -926,6 +958,7 @@
       "choices": [
         {
           "label": "ev.road.15.choice.choice_0",
+          "resultText": "ev.ev_road_15.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -938,6 +971,7 @@
         },
         {
           "label": "ev.road.15.choice.choice_1",
+          "resultText": "ev.ev_road_15.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -979,6 +1013,7 @@
       "choices": [
         {
           "label": "ev.road.16.choice.choice_0",
+          "resultText": "ev.ev_road_16.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -991,6 +1026,7 @@
         },
         {
           "label": "ev.road.16.choice.choice_1",
+          "resultText": "ev.ev_road_16.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1032,6 +1068,7 @@
       "choices": [
         {
           "label": "ev.road.17.choice.choice_0",
+          "resultText": "ev.ev_road_17.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1044,6 +1081,7 @@
         },
         {
           "label": "ev.road.17.choice.choice_1",
+          "resultText": "ev.ev_road_17.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1085,6 +1123,7 @@
       "choices": [
         {
           "label": "ev.road.18.choice.choice_0",
+          "resultText": "ev.ev_road_18.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1097,6 +1136,7 @@
         },
         {
           "label": "ev.road.18.choice.choice_1",
+          "resultText": "ev.ev_road_18.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1138,6 +1178,7 @@
       "choices": [
         {
           "label": "ev.road.19.choice.choice_0",
+          "resultText": "ev.ev_road_19.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1150,6 +1191,7 @@
         },
         {
           "label": "ev.road.19.choice.choice_1",
+          "resultText": "ev.ev_road_19.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1191,6 +1233,7 @@
       "choices": [
         {
           "label": "ev.road.20.choice.choice_0",
+          "resultText": "ev.ev_road_20.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1203,6 +1246,7 @@
         },
         {
           "label": "ev.road.20.choice.choice_1",
+          "resultText": "ev.ev_road_20.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1244,6 +1288,7 @@
       "choices": [
         {
           "label": "ev.road.21.choice.choice_0",
+          "resultText": "ev.ev_road_21.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1256,6 +1301,7 @@
         },
         {
           "label": "ev.road.21.choice.choice_1",
+          "resultText": "ev.ev_road_21.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1297,6 +1343,7 @@
       "choices": [
         {
           "label": "ev.road.22.choice.choice_0",
+          "resultText": "ev.ev_road_22.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -1309,6 +1356,7 @@
         },
         {
           "label": "ev.road.22.choice.choice_1",
+          "resultText": "ev.ev_road_22.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1350,6 +1398,7 @@
       "choices": [
         {
           "label": "ev.road.23.choice.choice_0",
+          "resultText": "ev.ev_road_23.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1366,6 +1415,7 @@
         },
         {
           "label": "ev.road.23.choice.choice_1",
+          "resultText": "ev.ev_road_23.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1402,6 +1452,7 @@
       "choices": [
         {
           "label": "ev.road.24.choice.choice_0",
+          "resultText": "ev.ev_road_24.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1418,6 +1469,7 @@
         },
         {
           "label": "ev.road.24.choice.choice_1",
+          "resultText": "ev.ev_road_24.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1454,6 +1506,7 @@
       "choices": [
         {
           "label": "ev.road.25.choice.choice_0",
+          "resultText": "ev.ev_road_25.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1470,6 +1523,7 @@
         },
         {
           "label": "ev.road.25.choice.choice_1",
+          "resultText": "ev.ev_road_25.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1506,6 +1560,7 @@
       "choices": [
         {
           "label": "ev.road.26.choice.choice_0",
+          "resultText": "ev.ev_road_26.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1522,6 +1577,7 @@
         },
         {
           "label": "ev.road.26.choice.choice_1",
+          "resultText": "ev.ev_road_26.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1558,6 +1614,7 @@
       "choices": [
         {
           "label": "ev.road.27.choice.choice_0",
+          "resultText": "ev.ev_road_27.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1574,6 +1631,7 @@
         },
         {
           "label": "ev.road.27.choice.choice_1",
+          "resultText": "ev.ev_road_27.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1610,6 +1668,7 @@
       "choices": [
         {
           "label": "ev.road.28.choice.choice_0",
+          "resultText": "ev.ev_road_28.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -1626,6 +1685,7 @@
         },
         {
           "label": "ev.road.28.choice.choice_1",
+          "resultText": "ev.ev_road_28.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -1662,6 +1722,7 @@
       "choices": [
         {
           "label": "ev.road.29.choice.choice_0",
+          "resultText": "ev.ev_road_29.choice_1_result",
           "effects": [
             {
               "op": "fate",
@@ -1683,6 +1744,7 @@
         },
         {
           "label": "ev.road.29.choice.choice_1",
+          "resultText": "ev.ev_road_29.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -1719,6 +1781,7 @@
       "choices": [
         {
           "label": "ev.road.30.choice.choice_0",
+          "resultText": "ev.ev_road_30.choice_1_result",
           "effects": [
             {
               "op": "fate",
@@ -1740,6 +1803,7 @@
         },
         {
           "label": "ev.road.30.choice.choice_1",
+          "resultText": "ev.ev_road_30.choice_2_result",
           "effects": [
             {
               "op": "codex",
@@ -1776,6 +1840,7 @@
       "choices": [
         {
           "label": "ev.road.32.choice.choice_0",
+          "resultText": "ev.ev_road_32.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1786,6 +1851,7 @@
         },
         {
           "label": "ev.road.32.choice.choice_1",
+          "resultText": "ev.ev_road_32.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1827,6 +1893,7 @@
       "choices": [
         {
           "label": "ev.road.33.choice.choice_0",
+          "resultText": "ev.ev_road_33.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1837,6 +1904,7 @@
         },
         {
           "label": "ev.road.33.choice.choice_1",
+          "resultText": "ev.ev_road_33.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1878,6 +1946,7 @@
       "choices": [
         {
           "label": "ev.road.34.choice.choice_0",
+          "resultText": "ev.ev_road_34.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1888,6 +1957,7 @@
         },
         {
           "label": "ev.road.34.choice.choice_1",
+          "resultText": "ev.ev_road_34.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1929,6 +1999,7 @@
       "choices": [
         {
           "label": "ev.road.35.choice.choice_0",
+          "resultText": "ev.ev_road_35.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1939,6 +2010,7 @@
         },
         {
           "label": "ev.road.35.choice.choice_1",
+          "resultText": "ev.ev_road_35.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -1980,6 +2052,7 @@
       "choices": [
         {
           "label": "ev.road.36.choice.choice_0",
+          "resultText": "ev.ev_road_36.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -1990,6 +2063,7 @@
         },
         {
           "label": "ev.road.36.choice.choice_1",
+          "resultText": "ev.ev_road_36.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2031,6 +2105,7 @@
       "choices": [
         {
           "label": "ev.road.37.choice.choice_0",
+          "resultText": "ev.ev_road_37.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2041,6 +2116,7 @@
         },
         {
           "label": "ev.road.37.choice.choice_1",
+          "resultText": "ev.ev_road_37.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2082,6 +2158,7 @@
       "choices": [
         {
           "label": "ev.road.38.choice.choice_0",
+          "resultText": "ev.ev_road_38.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2092,6 +2169,7 @@
         },
         {
           "label": "ev.road.38.choice.choice_1",
+          "resultText": "ev.ev_road_38.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2133,6 +2211,7 @@
       "choices": [
         {
           "label": "ev.road.39.choice.choice_0",
+          "resultText": "ev.ev_road_39.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2143,6 +2222,7 @@
         },
         {
           "label": "ev.road.39.choice.choice_1",
+          "resultText": "ev.ev_road_39.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2184,6 +2264,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_01.choice.cross_on_ice",
+          "resultText": "ev.ev_road_fadlan_01.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2199,6 +2280,7 @@
         },
         {
           "label": "ev.road.fadlan_01.choice.wait_at_ribat",
+          "resultText": "ev.ev_road_fadlan_01.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2241,6 +2323,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_02.choice.hire_guide",
+          "resultText": "ev.ev_road_fadlan_02.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -2266,6 +2349,7 @@
         },
         {
           "label": "ev.road.fadlan_02.choice.press_on_alone",
+          "resultText": "ev.ev_road_fadlan_02.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2308,6 +2392,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_03.choice.watch_the_sky",
+          "resultText": "ev.ev_road_fadlan_03.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2329,6 +2414,7 @@
         },
         {
           "label": "ev.road.fadlan_03.choice.seek_shelter",
+          "resultText": "ev.ev_road_fadlan_03.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2365,6 +2451,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_04.choice.ask_the_kingdom",
+          "resultText": "ev.ev_road_fadlan_04.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -2382,6 +2469,7 @@
         },
         {
           "label": "ev.road.fadlan_04.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_04.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2418,6 +2506,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_05.choice.record_rite",
+          "resultText": "ev.ev_road_fadlan_05.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2433,6 +2522,7 @@
         },
         {
           "label": "ev.road.fadlan_05.choice.withdraw",
+          "resultText": "ev.ev_road_fadlan_05.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2475,6 +2565,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_06.choice.buy_chart",
+          "resultText": "ev.ev_road_fadlan_06.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -2495,6 +2586,7 @@
         },
         {
           "label": "ev.road.fadlan_06.choice.stay_inland",
+          "resultText": "ev.ev_road_fadlan_06.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2537,6 +2629,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_07.choice.listen_trade",
+          "resultText": "ev.ev_road_fadlan_07.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -2554,6 +2647,7 @@
         },
         {
           "label": "ev.road.fadlan_07.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_07.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2590,6 +2684,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_08.choice.observe_barter",
+          "resultText": "ev.ev_road_fadlan_08.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2611,6 +2706,7 @@
         },
         {
           "label": "ev.road.fadlan_08.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_08.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2647,6 +2743,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_09.choice.seek_the_mound",
+          "resultText": "ev.ev_road_fadlan_09.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2662,6 +2759,7 @@
         },
         {
           "label": "ev.road.fadlan_09.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_09.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2704,6 +2802,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_10.choice.enter_khwarazm",
+          "resultText": "ev.ev_road_fadlan_10.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2726,6 +2825,7 @@
         },
         {
           "label": "ev.road.fadlan_10.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_10.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2762,6 +2862,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_11.choice.ask_the_route",
+          "resultText": "ev.ev_road_fadlan_11.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -2778,6 +2879,7 @@
         },
         {
           "label": "ev.road.fadlan_11.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_11.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2814,6 +2916,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_12.choice.share_road_news",
+          "resultText": "ev.ev_road_fadlan_12.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -2831,6 +2934,7 @@
         },
         {
           "label": "ev.road.fadlan_12.choice.buy_intelligence",
+          "resultText": "ev.ev_road_fadlan_12.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -2882,6 +2986,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_13.choice.record_court",
+          "resultText": "ev.ev_road_fadlan_13.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -2892,6 +2997,7 @@
         },
         {
           "label": "ev.road.fadlan_13.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_13.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2934,6 +3040,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_14.choice.observe_night",
+          "resultText": "ev.ev_road_fadlan_14.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -2949,6 +3056,7 @@
         },
         {
           "label": "ev.road.fadlan_14.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_14.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -2991,6 +3099,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_15.choice.inspect_loads",
+          "resultText": "ev.ev_road_fadlan_15.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -3008,6 +3117,7 @@
         },
         {
           "label": "ev.road.fadlan_15.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_15.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3044,6 +3154,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_16.choice.catalogue_goods",
+          "resultText": "ev.ev_road_fadlan_16.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3059,6 +3170,7 @@
         },
         {
           "label": "ev.road.fadlan_16.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_16.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3101,6 +3213,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_17.choice.hire_sled",
+          "resultText": "ev.ev_road_fadlan_17.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -3126,6 +3239,7 @@
         },
         {
           "label": "ev.road.fadlan_17.choice.walk_the_ice",
+          "resultText": "ev.ev_road_fadlan_17.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3168,6 +3282,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_18.choice.record_tale",
+          "resultText": "ev.ev_road_fadlan_18.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -3184,6 +3299,7 @@
         },
         {
           "label": "ev.road.fadlan_18.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_18.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3220,6 +3336,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_19.choice.learn_the_rite",
+          "resultText": "ev.ev_road_fadlan_19.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3235,6 +3352,7 @@
         },
         {
           "label": "ev.road.fadlan_19.choice.turn_back",
+          "resultText": "ev.ev_road_fadlan_19.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3277,6 +3395,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_20.choice.endure_march",
+          "resultText": "ev.ev_road_fadlan_20.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3292,6 +3411,7 @@
         },
         {
           "label": "ev.road.fadlan_20.choice.halt_and_fire",
+          "resultText": "ev.ev_road_fadlan_20.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3334,6 +3454,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_21.choice.ask_distances",
+          "resultText": "ev.ev_road_fadlan_21.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -3344,6 +3465,7 @@
         },
         {
           "label": "ev.road.fadlan_21.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_21.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3386,6 +3508,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_22.choice.pay_boatmen",
+          "resultText": "ev.ev_road_fadlan_22.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -3411,6 +3534,7 @@
         },
         {
           "label": "ev.road.fadlan_22.choice.swim_with_caravan",
+          "resultText": "ev.ev_road_fadlan_22.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3453,6 +3577,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_23.choice.stand_watch",
+          "resultText": "ev.ev_road_fadlan_23.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3470,6 +3595,7 @@
         },
         {
           "label": "ev.road.fadlan_23.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_23.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3512,6 +3638,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_24.choice.accept_bowl",
+          "resultText": "ev.ev_road_fadlan_24.choice_1_result",
           "effects": [
             {
               "op": "reputation",
@@ -3529,6 +3656,7 @@
         },
         {
           "label": "ev.road.fadlan_24.choice.bring_gift",
+          "resultText": "ev.ev_road_fadlan_24.choice_2_result",
           "effects": [
             {
               "op": "coins",
@@ -3583,6 +3711,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_25.choice.keep_fires",
+          "resultText": "ev.ev_road_fadlan_25.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3599,6 +3728,7 @@
         },
         {
           "label": "ev.road.fadlan_25.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_25.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3641,6 +3771,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_26.choice.help_child",
+          "resultText": "ev.ev_road_fadlan_26.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3663,6 +3794,7 @@
         },
         {
           "label": "ev.road.fadlan_26.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_26.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3699,6 +3831,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_27.choice.ask_the_shores",
+          "resultText": "ev.ev_road_fadlan_27.choice_1_result",
           "effects": [
             {
               "op": "codex",
@@ -3715,6 +3848,7 @@
         },
         {
           "label": "ev.road.fadlan_27.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_27.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3751,6 +3885,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_28.choice.record_omen",
+          "resultText": "ev.ev_road_fadlan_28.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3766,6 +3901,7 @@
         },
         {
           "label": "ev.road.fadlan_28.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_28.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3808,6 +3944,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_29.choice.witness_record",
+          "resultText": "ev.ev_road_fadlan_29.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3829,6 +3966,7 @@
         },
         {
           "label": "ev.road.fadlan_29.choice.look_away",
+          "resultText": "ev.ev_road_fadlan_29.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3865,6 +4003,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_30.choice.halt_tents",
+          "resultText": "ev.ev_road_fadlan_30.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3881,6 +4020,7 @@
         },
         {
           "label": "ev.road.fadlan_30.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_30.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3923,6 +4063,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_31.choice.survey_mound",
+          "resultText": "ev.ev_road_fadlan_31.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -3938,6 +4079,7 @@
         },
         {
           "label": "ev.road.fadlan_31.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_31.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -3974,6 +4116,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_32.choice.pay_toll",
+          "resultText": "ev.ev_road_fadlan_32.choice_1_result",
           "effects": [
             {
               "op": "coins",
@@ -4001,6 +4144,7 @@
         },
         {
           "label": "ev.road.fadlan_32.choice.detour",
+          "resultText": "ev.ev_road_fadlan_32.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4043,6 +4187,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_33.choice.learn_lacing",
+          "resultText": "ev.ev_road_fadlan_33.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -4064,6 +4209,7 @@
         },
         {
           "label": "ev.road.fadlan_33.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_33.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4100,6 +4246,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_34.choice.circle_wide",
+          "resultText": "ev.ev_road_fadlan_34.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -4115,6 +4262,7 @@
         },
         {
           "label": "ev.road.fadlan_34.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_34.choice_2_result",
           "effects": [
             {
               "op": "days",
@@ -4157,6 +4305,7 @@
       "choices": [
         {
           "label": "ev.road.fadlan_35.choice.wait_for_sound",
+          "resultText": "ev.ev_road_fadlan_35.choice_1_result",
           "effects": [
             {
               "op": "days",
@@ -4178,6 +4327,7 @@
         },
         {
           "label": "ev.road.fadlan_35.choice.press_on",
+          "resultText": "ev.ev_road_fadlan_35.choice_2_result",
           "effects": [
             {
               "op": "days",

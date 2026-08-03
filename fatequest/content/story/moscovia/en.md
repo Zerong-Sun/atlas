@@ -32,3 +32,11 @@ Rest half a day by the road
 ## ev.moscovia.entry.title
 
 Arriving at Moscovia
+
+## ev.ev_moscovia_entry.choice_1_result
+
+You ride on without delay. You set the way to Moscovia on your map.
+
+## ev.ev_moscovia_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Moscovia opens on your map.

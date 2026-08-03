@@ -82,3 +82,39 @@ Buy ginger from a victualler's stall
 ## ev.saianfu.b.choice.walls
 
 Walk the northern approach where the host once lay siege
+
+## ev.ev_saianfu_entry.choice_1_result
+
+You pass through the gate without delay. You set the way to Saianfu on your map.
+
+## ev.ev_saianfu_entry.choice_2_result
+
+You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Saianfu opens on your map.
+
+## ev.ev_saianfu_entry.choice_3_result
+
+You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Saianfu on your map.
+
+## ev.ev_saianfu_a.choice_1_result
+
+You watch the silk weavers at their looms. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Sinjumatu on your map.
+
+## ev.ev_saianfu_a.choice_2_result
+
+You buy fine silken stuff from a weaver's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Cachanfu opens on your map.
+
+## ev.ev_saianfu_a.choice_3_result
+
+You ask the magistrates which towns owe tribute. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_saianfu_b.choice_1_result
+
+You walk the hunters' market beside the workshops. It costs you 1 day on the road. The account is written down before the hour turns. The road to Kenjanfu opens on your map.
+
+## ev.ev_saianfu_b.choice_2_result
+
+You buy ginger from a victualler's stall. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+## ev.ev_saianfu_b.choice_3_result
+
+You walk the northern approach where the host once lay siege. The account is written down before the hour turns. Fortune bends a little your way.

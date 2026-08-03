@@ -34,3 +34,11 @@ Pass through without stopping
 ## ev.chinginju.entry.title
 
 Of the City of Chinginju and the Slaughter of Certain Alans There
+
+## ev.ev_chinginju_entry.choice_1_result
+
+You pass through without stopping. You set the way to Chinginju on your map.
+
+## ev.ev_chinginju_entry.choice_2_result
+
+You rest and ask what men say of this place. The road to Chinginju opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.

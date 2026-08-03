@@ -32,3 +32,11 @@ Rest half a day by the road
 ## ev.edessa.entry.title
 
 Arriving at Edessa
+
+## ev.ev_edessa_entry.choice_1_result
+
+You ride on without delay. You set the way to Edessa on your map.
+
+## ev.ev_edessa_entry.choice_2_result
+
+You rest half a day by the road. It costs you 1 day on the road. The road to Edessa opens on your map.
