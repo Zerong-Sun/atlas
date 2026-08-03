@@ -11,6 +11,9 @@ const WILD := "wild"
 const COURT := "court"
 const SHRINE := "shrine"
 const INN := "inn"
+## Between cities: open road. Uses the departure culture's stems with a
+## journey pulse and the road ambients (wind, camel bells, hooves).
+const JOURNEY := "journey"
 
 const _BG_TO_CLASS := {
 	"caravan-city": TOWN,
@@ -50,6 +53,10 @@ static func layer_gains(scene_class: String) -> Dictionary:
 			return {"drone": 0.75, "pulse": 0.0, "melody": 0.0, "color": 0.35}
 		INN:
 			return {"drone": 1.0, "pulse": 0.4, "melody": 0.55, "color": 0.0}
+		JOURNEY:
+			# A caravan keeps its rhythm: pulse leads, melody thins so the road
+			# ambients (wind, bells, hooves) can carry the scene.
+			return {"drone": 1.0, "pulse": 0.95, "melody": 0.55, "color": 0.0}
 		_:
 			return {"drone": 1.0, "pulse": 0.6, "melody": 0.7, "color": 0.0}
 
@@ -72,6 +79,8 @@ static func ambients(scene_class: String) -> PackedStringArray:
 			return PackedStringArray([])  # space left to music drone + procedural bells
 		INN:
 			return PackedStringArray(["market_crowd", "dishes"])
+		JOURNEY:
+			return PackedStringArray(["wind_sand", "camel_bells", "horse_hooves"])
 		_:
 			return PackedStringArray(["wind_sand"])
 

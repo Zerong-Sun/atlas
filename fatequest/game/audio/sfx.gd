@@ -64,6 +64,8 @@ func play(kind: String) -> void:
 			samples = _tone(660.0 + _rng.randf_range(-30, 30), 0.05, 0.06)
 		"wood":
 			samples = _mix([_noise(0.06, 0.14, 900.0), _tone(210.0, 0.08, 0.1, 150.0)])
+		"tick":
+			samples = _mix([_noise(0.03, 0.09, 1400.0), _tone(340.0, 0.05, 0.07, 240.0)])
 		_:
 			samples = _tone(520.0, 0.08, 0.05)
 	_play_samples(samples)

@@ -183,6 +183,25 @@ func on_depart(route: Dictionary) -> void:
 	sfx("wood")
 
 
+## Journey mix for the transit plate: keeps the origin culture's stems under a
+## caravan pulse, with the road ambients instead of the town's. `set_place`
+## on arrival restores the destination city's own mix.
+func set_travel(route: Dictionary) -> void:
+	_prev_route_risk = int(route.get("risk", 0))
+	var tense := _prev_route_risk >= 4
+	for h in route.get("hazards", []):
+		if String(h) in ["bandits", "pirates", "storm"]:
+			tense = true
+	_mood = AudioMood.TENSION if tense else AudioMood.NEUTRAL
+	_scene_class = SceneDensity.JOURNEY
+	if not _playback_available:
+		return
+	_kill_tweens()
+	_apply_mix(2.5)
+	_apply_ambients(2.0)
+	_apply_mood_bus(2.5)
+
+
 static func blend_fanfang() -> Dictionary:
 	return {"islamic": 0.5, "east_asia": 0.5}
 

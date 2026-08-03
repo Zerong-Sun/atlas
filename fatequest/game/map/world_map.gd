@@ -30,6 +30,9 @@ var revealed: Dictionary = {}
 var _labels_visible := true
 var _city_pos: Dictionary = {}
 var _focused_city := ""
+## Greedily-placed label rects from the last draw, in map space. `_pick` hits
+## against them so a readable name is a clickable target.
+var _label_hits: Array = []
 ## Projected geometry and texture choices are immutable between setup calls.
 ## Keeping them out of _draw matters while a route tween redraws every frame.
 var _mountain_visuals: Array = []
@@ -40,7 +43,7 @@ var _city_visuals: Array = []
 # Without zoom and pan a 142-degree-wide world on a 1300px strip is unreadable:
 # the Grand Canal corridor alone packs fourteen cities into ninety pixels.
 const ZOOM_MIN := 1.0
-const ZOOM_MAX := 6.0
+const ZOOM_MAX := 8.0
 var zoom: float = 1.0
 var pan: Vector2 = Vector2.ZERO
 var _dragging := false
@@ -220,8 +223,11 @@ func _set_reveal_blend(v: float) -> void:
 
 ## N2 M2 — stroke a road from A to B over `seconds` (scaled by travel days).
 ## Returns immediately; emits `route_draw_finished` when done.
+## Strokes the travelled route with an ink line. `seconds` lets the caller
+## (the departure countdown) drive the pacing so the ink keeps up with the
+## day counter; when omitted the length follows the journey's own duration.
 func animate_route(from_id: String, to_id: String, days: int = 7,
-		kind: String = "land", trunk: bool = false) -> void:
+		kind: String = "land", trunk: bool = false, seconds: float = -1.0) -> void:
 	if not _city_pos.has(from_id) or not _city_pos.has(to_id):
 		route_draw_finished.emit()
 		return
@@ -235,16 +241,19 @@ func animate_route(from_id: String, to_id: String, days: int = 7,
 	if _route_tween != null and _route_tween.is_valid():
 		_route_tween.kill()
 	# Longer journeys take a touch longer to draw — capped so it never stalls.
-	var seconds := Motion.dur(clampf(0.35 + float(days) * 0.04, 0.45, 1.4),
-		Motion.Kind.MOVE)
-	if not Motion.allows(Motion.Kind.MOVE) or seconds <= 0.02:
+	# When the caller passes a countdown length, honour it exactly so the ink
+	# and the day counter land on "arrived" together.
+	var total := seconds if seconds > 0.0 \
+		else clampf(0.35 + float(days) * 0.04, 0.45, 1.4)
+	var dur := Motion.dur(total, Motion.Kind.MOVE)
+	if not Motion.allows(Motion.Kind.MOVE) or dur <= 0.02:
 		_route_draw["progress"] = 1.0
 		queue_redraw()
 		route_draw_finished.emit()
 		_route_draw.clear()
 		return
 	_route_tween = create_tween()
-	_route_tween.tween_method(_set_route_progress, 0.0, 1.0, seconds)
+	_route_tween.tween_method(_set_route_progress, 0.0, 1.0, dur)
 	_route_tween.finished.connect(func():
 		route_draw_finished.emit()
 		_route_draw.clear()
@@ -570,6 +579,9 @@ func _draw_brush_line(brush: Texture2D, a: Vector2, b: Vector2, width: float,
 
 func _draw_cities() -> void:
 	var font := ThemeDB.fallback_font
+	var label_size := UiScale.map_label()
+	# Dot/icon pass first: every revealed city keeps its marker regardless of
+	# label collisions, so decluttering names never makes a city disappear.
 	for visual in _city_visuals:
 		var c: Dictionary = visual.get("record", {})
 		var cid := String(c.get("id", ""))
@@ -595,16 +607,83 @@ func _draw_cities() -> void:
 		if cid == _focused_city:
 			draw_arc(pos, 17.0, 0, TAU, 28, Palette.FOCUS, 2.0)
 
+	# Label pass: greedy, non-overlapping placement from the same list `_pick`
+	# hits against.
+	_label_hits = _compute_label_hits()
+	for hit in _label_hits:
+		var rect: Rect2 = hit.get("rect", Rect2())
+		var label := I18n.t(String(hit.get("label", "")))
+		var baseline := Vector2(rect.position.x + 3.0,
+			rect.position.y + font.get_ascent(label_size) + 2.0)
+		# Cheap legibility pass: dark text over busy vellum needs a halo.
+		draw_string(font, baseline + Vector2(1, 1), label,
+			HORIZONTAL_ALIGNMENT_LEFT, -1, label_size, Color(0.97, 0.94, 0.86, 0.92))
+		draw_string(font, baseline, label,
+			HORIZONTAL_ALIGNMENT_LEFT, -1, label_size, Palette.ink())
+
+
+## Greedy label placement, pure layout: returns placed labels as
+## `{id, label, rect}` in map space, drawn and hit-tested against the same list
+## so a readable name is always a clickable target. The dot pass runs separately
+## so labels are laid out against dots rather than drawn over them.
+func _compute_label_hits() -> Array:
+	var font := ThemeDB.fallback_font
+	var label_size := UiScale.map_label()
+	var hits: Array = []
+	var placed: Array[Rect2] = []
+	# Highest-ranked cities claim their labels first so a metropolis is never
+	# squeezed out by a way-station. Ranks below are dots only.
+	var ordered: Array = _city_visuals.duplicate()
+	ordered.sort_custom(func(a, b):
+		return _city_rank(a.get("record", {})) > _city_rank(b.get("record", {})))
+	for visual in ordered:
+		var c: Dictionary = visual.get("record", {})
+		var cid := String(c.get("id", ""))
+		var pos: Vector2 = visual.get("position", Vector2.ZERO)
+		var k := intel(cid)
+		if k <= 0:
+			continue
+		var tier := String(visual.get("tier", "station"))
 		# Below tier city, only label once zoomed in — otherwise 102 names collide.
-		var label_ok := k >= 1 and (tier in ["metropolis", "city"] or zoom >= 2.2)
-		if _labels_visible and label_ok:
-			var label := I18n.t(c.get("name", ""))
-			var off := Vector2(-14, 8) if tier == "station" else Vector2(-18, 11)
-			# Cheap legibility pass: dark text over busy vellum needs a halo.
-			draw_string(font, pos + off + Vector2(1, 1), label,
-				HORIZONTAL_ALIGNMENT_LEFT, -1, UiScale.map_label(), Color(0.97, 0.94, 0.86, 0.92))
-			draw_string(font, pos + off, label,
-				HORIZONTAL_ALIGNMENT_LEFT, -1, UiScale.map_label(), Palette.ink())
+		if not _labels_visible or not (tier in ["metropolis", "city"] or zoom >= 2.2):
+			continue
+		var label := I18n.t(c.get("name", ""))
+		if label.is_empty():
+			continue
+		var rect: Rect2 = _place_label(font, label_size, pos, label, tier, placed)
+		if rect.size == Vector2.ZERO:
+			continue
+		placed.append(rect)
+		hits.append({"id": cid, "label": c.get("name", ""), "rect": rect})
+	return hits
+
+
+## Finds a free spot for a city label near `pos` (map space). Tries the default
+## corner first, then the other side of the dot, so a crowded lane spreads names
+## instead of stacking them. Returns an empty rect when every anchor collides.
+func _place_label(font: Font, size: int, pos: Vector2, label: String,
+		tier: String, placed: Array) -> Rect2:
+	var ts := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, size)
+	var ascent := font.get_ascent(size)
+	var w := ts.x + 6.0
+	var h := ts.y + 4.0
+	var default_off := Vector2(-14, 8) if tier == "station" else Vector2(-18, 11)
+	var anchors := [
+		default_off,
+		Vector2(-w + 6.0, 8.0),
+		Vector2(default_off.x, -ascent - 4.0),
+		Vector2(6.0, -ascent - 4.0),
+	]
+	for off in anchors:
+		var box := Rect2(pos + off - Vector2(0, ascent) - Vector2(2, 2), Vector2(w, h))
+		var blocked := false
+		for used in placed:
+			if box.intersects(used):
+				blocked = true
+				break
+		if not blocked:
+			return box
+	return Rect2()
 
 
 func _draw_wind_heads(rect: Rect2) -> void:
@@ -674,20 +753,29 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _pick(map_p: Vector2) -> void:
 	var best: Dictionary = {}
-	# Hit radius shrinks as you zoom in, so dense clusters become selectable.
-	var best_d := 24.0 / maxf(zoom, 1.0)
-	for c in cities:
-		var cid := String(c.get("id", ""))
-		if intel(cid) <= 0:
-			continue
-		var d: float = _city_pos.get(c.get("id", ""), Vector2(-9999, -9999)).distance_to(map_p)
-		var same_distance := is_equal_approx(d, best_d)
-		var higher_rank := _city_rank(c) > _city_rank(best)
-		var stable_tie := _city_rank(c) == _city_rank(best) \
-			and String(c.get("id", "")) < String(best.get("id", ""))
-		if d < best_d or (same_distance and (higher_rank or stable_tie)):
-			best_d = d
-			best = c
+	# A placed label is a first-class target: a readable name should be clickable
+	# even when the dot itself sits inside a denser neighbour's shadow.
+	for hit in _label_hits:
+		if (hit.get("rect", Rect2()) as Rect2).has_point(map_p):
+			var c := _city_record(String(hit.get("id", "")))
+			if not c.is_empty() and _city_rank(c) > _city_rank(best):
+				best = c
+	# No label hit — nearest revealed dot wins.
+	if best.is_empty():
+		# Hit radius shrinks as you zoom in, so dense clusters become selectable.
+		var best_d := 24.0 / maxf(zoom, 1.0)
+		for c in cities:
+			var cid := String(c.get("id", ""))
+			if intel(cid) <= 0:
+				continue
+			var d: float = _city_pos.get(c.get("id", ""), Vector2(-9999, -9999)).distance_to(map_p)
+			var same_distance := is_equal_approx(d, best_d)
+			var higher_rank := _city_rank(c) > _city_rank(best)
+			var stable_tie := _city_rank(c) == _city_rank(best) \
+				and String(c.get("id", "")) < String(best.get("id", ""))
+			if d < best_d or (same_distance and (higher_rank or stable_tie)):
+				best_d = d
+				best = c
 	if not best.is_empty():
 		_focused_city = String(best.get("id", ""))
 		queue_redraw()

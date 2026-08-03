@@ -48,6 +48,11 @@ func _init() -> void:
 		and not main.state.active_journey.is_empty()
 	main._resolve_choice(main._current_event, 1)
 	await process_frame
+	# Choice now carries authored resultText, so the result page must be
+	# dismissed before the journey completes (main._resolve_choice paths:
+	# result → dismissal → _complete_journey).
+	main._on_event_dismissed()
+	await process_frame
 
 	var arrived_ok: bool = main.state.city == "baldacum" \
 		and main.state.active_journey.is_empty() \

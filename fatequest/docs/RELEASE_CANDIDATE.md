@@ -18,15 +18,15 @@ done
 /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/benchmark_systems.gd
 ```
 
-最新结果（2026-08-02）：
+最新结果（2026-08-03）：
 
 | 项目 | 结果 |
 |---|---|
 | 内容门禁 | ✅ `all gates pass`（0 errors） |
-| story 时效 | ✅ `2238 current · 0 stale · 0 missing` |
+| story 时效 | ✅ `2646 current · 0 stale · 0 missing` |
 | i18n 行测试 | ✅ `ALL CHECKS PASSED` |
 | 内核单测 | ✅ `SUITE: PASS`（16 个） |
-| UI smoke | ✅ **20 个全绿**（含新增 `smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
+| UI smoke | ✅ **23 个全绿**（含新增 `smoke_map_display.gd`、`smoke_dock_drag.gd`、`smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
 | 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 1.10 ms · save P95 5.98 ms） |
 
 ---
@@ -64,6 +64,8 @@ done
 ## 6. 覆盖层可退出 / 无黑屏 / 无断线
 
 - **自动**：`smoke_ui_overlay.gd` 含键盘遍历（Esc 关闭行囊/市场/设置）+ 200% 中英覆盖层断言，✅ 通过。
+- **无黑屏**：`smoke_map_display.gd` 驱动真实进图流程（书桌 → 抽签 → 出发 → 到达 → 往返）断言
+  `world_map` 可见不透明、迷雾遮罩存在、投影尺寸非零、无全屏覆盖层残留，✅ 通过。
 - **人工项**：60 分钟试玩中确认无断线、无黑屏、无不可退出覆盖层。
 
 ## 7. 外部 60 分钟试玩

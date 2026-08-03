@@ -56,6 +56,15 @@ var _right_spine: VBoxContainer
 ## of leaving them at the 150 px that only ever suited the NORMAL step.
 var _log_wrap: PanelContainer
 var _panel_wrap: PanelContainer
+
+## Drag-to-resize for the bottom docks (OPTIMIZATION_PLAN §5): a grab rail on
+## each panel's top edge. Per-key heights in px persist to user://ui.cfg under
+## [dock]; a missing entry means "use Metrics.dock_height()".
+const DOCK_HANDLE_H := 10.0
+const DOCK_MAX_FRAC := 0.80
+var _dock_h: Dictionary = {}
+var _dock_handles: Dictionary = {}
+var _dragging_dock := ""
 var _market: Market
 var _market_view: PanelContainer
 var _market_layer: Control
@@ -72,6 +81,15 @@ var _ending_ui: Dictionary = {}
 var _transit_layer: Control
 var _transit_tex: TextureRect
 var _transit_label: Label
+var _transit_day: Label
+var _transit_progress: ProgressBar
+var _transit_hint: Label
+var _transit_tween: Tween
+var _transit_days := 0
+var _transit_hold := false
+var _transit_skip := false
+var _last_transit_day := -1
+var _transit_on_done: Callable = Callable()
 var _draw_rng: Rng
 var _drawn_archetype: Dictionary = {}
 var _draw_count := 0
@@ -94,6 +112,7 @@ var _pending_pages_in_sequence := 0
 func _ready() -> void:
 	_resolve_audio()
 	UiScale.load_prefs()
+	_load_dock_heights()
 	# Default to Chinese when the config holds no saved language; load_prefs()
 	# has already switched I18n to the persisted language if one exists.
 	if I18n.lang() != "zh" and I18n.lang() != "en":
@@ -127,7 +146,8 @@ func _apply_projection() -> void:
 	# Reserve exactly as much as the bottom docks actually occupy. This was
 	# hard-coded to 150, the same guess the docks themselves used to make, so
 	# raising the type size buried the southern cities under the journal.
-	projection.set_viewport(w - MARGIN * 2.0, h - Metrics.dock_height() - MARGIN)
+	# A player who drags the docks taller gets the same map courtesy.
+	projection.set_viewport(w - MARGIN * 2.0, h - _dock_floor() - MARGIN)
 	projection.origin = Vector2(MARGIN, MARGIN)
 
 
@@ -499,6 +519,7 @@ func _build_map() -> void:
 	_log_wrap.offset_right = -6
 	_log_wrap.offset_bottom = -12
 	add_child(_log_wrap)
+	_build_dock_handle("log", 0.0, 0.46, 12.0, -6.0)
 
 	var log_scroll := ScrollContainer.new()
 	log_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -520,6 +541,7 @@ func _build_map() -> void:
 	_panel_wrap.offset_right = -12
 	_panel_wrap.offset_bottom = -12
 	add_child(_panel_wrap)
+	_build_dock_handle("panel", 0.48, 1.0, 6.0, -12.0)
 
 	var panel_scroll := ScrollContainer.new()
 	panel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -694,11 +716,14 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 
 ## Brief transit plate shown while the caravan / ship moves between cities.
+## The day counter ticks down over a few seconds of road-music while the route
+## is drawn on the map; clicking the plate skips the rest of the passage.
 func _build_transit() -> void:
 	_transit_layer = Control.new()
 	_transit_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_transit_layer.visible = false
 	_transit_layer.mouse_filter = Control.MOUSE_FILTER_STOP
+	_transit_layer.gui_input.connect(_on_transit_input)
 	add_child(_transit_layer)
 	# The plate is a travel backdrop, not a modal: when a road event holds it
 	# on screen, the event dialog and every overlay must stay above and
@@ -727,11 +752,31 @@ func _build_transit() -> void:
 	var plate := PanelContainer.new()
 	plate.add_theme_stylebox_override("panel", Palette.panel_style())
 	centre.add_child(plate)
+
+	var col := VBoxContainer.new()
+	col.add_theme_constant_override("separation", Metrics.sm())
+	plate.add_child(col)
+
 	_transit_label = Label.new()
 	_transit_label.add_theme_font_size_override("font_size", UiScale.title())
 	_transit_label.add_theme_color_override("font_color", Palette.ink())
 	_transit_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	plate.add_child(_transit_label)
+	col.add_child(_transit_label)
+
+	_transit_day = Label.new()
+	_transit_day.add_theme_font_size_override("font_size", int(UiScale.title() * 1.8))
+	_transit_day.add_theme_color_override("font_color", Palette.accent())
+	_transit_day.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(_transit_day)
+
+	_transit_progress = ProgressBar.new()
+	_transit_progress.custom_minimum_size = Vector2(320, Metrics.tap_target() * 0.6)
+	_transit_progress.show_percentage = false
+	col.add_child(_transit_progress)
+
+	_transit_hint = Panels.label("", UiScale.ui(), Palette.ink_faint())
+	_transit_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(_transit_hint)
 
 
 func _build_city_detail() -> void:
@@ -820,7 +865,7 @@ func _build_divination_lesson() -> void:
 
 
 func _show_transit(route: Dictionary, mode: String, dest: String, days: int,
-		hold: bool = false) -> void:
+		hold: bool = false, on_done: Callable = Callable()) -> void:
 	if _transit_layer == null:
 		return
 	var here := db.get_record(state.city)
@@ -835,17 +880,90 @@ func _show_transit(route: Dictionary, mode: String, dest: String, days: int,
 		"culture": String(here.get("culture", "")),
 	})
 	_transit_tex.texture = art
-	_transit_label.text = "启程 → %s\n%d 日 · %s" % [
+	_transit_label.text = I18n.t("ui.transit_label_fmt") % [
 		_city_name(dest), days, I18n.t("transport.%s.name" % mode)]
+	_transit_day.visible = true
+	_transit_progress.visible = true
+	_transit_hint.visible = true
 	_transit_layer.visible = true
-	# Brief beat so the plate is seen; the next event / arrival clears it.
-	# When a road event is queued the plate stays up for the whole passage —
-	# the 0.85 s beat used to be swallowed by the event dialog that opened
-	# instantly over it, which read as "the return trip had no animation".
-	if not hold:
-		get_tree().create_timer(0.85).timeout.connect(func():
-			if is_instance_valid(_transit_layer):
-				_transit_layer.visible = false)
+	# A road event may open instantly over the plate; the countdown still runs
+	# behind the dialog so the passage is not read as a teleport. Skipping is
+	# allowed either way — a tap on the plate jumps to the end of the trip.
+	_transit_days = maxi(days, 1)
+	_transit_hold = hold
+	_transit_skip = false
+	_transit_on_done = on_done
+	_transit_progress.max_value = float(_transit_days)
+	_start_transit_countdown()
+
+
+## Drives the day counter across the journey. Total length is capped so a
+## ninety-day trek to the far west does not hold the screen for a minute:
+## ANIMATION_PLAN — animation serves the reading, it does not own the clock.
+func _start_transit_countdown() -> void:
+	if _transit_tween != null and _transit_tween.is_valid():
+		_transit_tween.kill()
+	_transit_hint.text = I18n.t("ui.transit_skip")
+	_transit_progress.value = 0.0
+	var total := clampf(float(_transit_days) * 0.09, 1.8, 3.6)
+	var seconds := Motion.dur(total, Motion.Kind.MOVE)
+	if not Motion.allows(Motion.Kind.MOVE) or seconds <= 0.02:
+		_transit_day.text = _day_string(0)
+		_transit_progress.value = _transit_progress.max_value
+		_finish_transit_countdown()
+		return
+	_transit_tween = create_tween()
+	_transit_tween.tween_method(_set_transit_day, 0.0, 1.0, seconds)
+	_transit_tween.finished.connect(_finish_transit_countdown)
+
+
+## Day counter down to zero; the audio ticks each time the number drops.
+func _set_transit_day(t: float) -> void:
+	var remaining := ceili(float(_transit_days) * (1.0 - t))
+	remaining = maxi(remaining, 0)
+	_transit_day.text = _day_string(remaining)
+	_transit_progress.value = float(_transit_days - remaining)
+	if remaining != _last_transit_day and _audio_ready():
+		_audio.sfx("tick")
+	_last_transit_day = remaining
+
+
+func _day_string(remaining: int) -> String:
+	if remaining <= 0:
+		return I18n.t("ui.transit_arrived")
+	return I18n.t("ui.transit_day_fmt") % remaining
+
+
+func _finish_transit_countdown() -> void:
+	_last_transit_day = -1
+	if _transit_hold:
+		# The plate stays up for the whole passage; arrival clears it.
+		return
+	var done := _transit_on_done
+	_transit_on_done = Callable()
+	if _transit_skip:
+		_transit_layer.visible = false
+		if done.is_valid():
+			done.call()
+		return
+	get_tree().create_timer(0.35).timeout.connect(func():
+		if is_instance_valid(_transit_layer):
+			_transit_layer.visible = false
+		if done.is_valid():
+			done.call())
+
+
+func _on_transit_input(event: InputEvent) -> void:
+	if not (event is InputEventMouseButton):
+		return
+	var mb := event as InputEventMouseButton
+	if not mb.pressed or mb.button_index != MOUSE_BUTTON_LEFT:
+		return
+	if _transit_tween != null and _transit_tween.is_valid():
+		_transit_tween.kill()
+	_transit_skip = true
+	_set_transit_day(1.0)
+	_finish_transit_countdown()
 
 
 ## Reader controls. Text size and contrast are not preferences to bury in a
@@ -901,11 +1019,134 @@ func _resize_controls() -> void:
 
 ## Bottom docks are as tall as six lines of the current body type.
 func _resize_docks() -> void:
-	var h := Metrics.dock_height()
 	if _log_wrap != null and is_instance_valid(_log_wrap):
-		_log_wrap.offset_top = -h
+		_log_wrap.offset_top = -_dock_height("log")
 	if _panel_wrap != null and is_instance_valid(_panel_wrap):
-		_panel_wrap.offset_top = -h
+		_panel_wrap.offset_top = -_dock_height("panel")
+	_sync_dock_handles()
+
+
+## Saved height in px for a dock key, falling back to the metrics default and
+## clamped to the window so a stored value from a smaller screen still fits.
+func _dock_height(key: String) -> float:
+	var min_h := _min_dock_height()
+	var max_h := maxf(size.y * DOCK_MAX_FRAC, min_h + 1.0)
+	var h := float(_dock_h.get(key, -1.0))
+	if h < 0.0:
+		h = Metrics.dock_height()
+	return clampf(h, min_h, max_h)
+
+
+## Shortest dock that stays readable: three lines of body type plus padding.
+func _min_dock_height() -> float:
+	return maxf(56.0, float(UiScale.body()) * 3.0 + float(Metrics.md()) * 2.0 + 8.0)
+
+
+## The tallest panel decides how much of the window the map must give up.
+func _dock_floor() -> float:
+	return maxf(_dock_height("log"), _dock_height("panel"))
+
+
+## A grab rail along the top edge of a bottom dock. A sibling of the panel so
+## the Container cannot re-lay it out; _sync_dock_handles keeps it pinned to
+## the panel's current top edge.
+func _build_dock_handle(key: String, anchor_left: float, anchor_right: float,
+		offset_left: float, offset_right: float) -> void:
+	var handle := Control.new()
+	handle.name = "DockHandle_%s" % key
+	handle.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	handle.anchor_top = 1.0
+	handle.anchor_bottom = 1.0
+	handle.anchor_left = anchor_left
+	handle.anchor_right = anchor_right
+	handle.offset_left = offset_left
+	handle.offset_right = offset_right
+	handle.mouse_filter = Control.MOUSE_FILTER_STOP
+	handle.mouse_default_cursor_shape = Control.CURSOR_VSIZE
+	handle.gui_input.connect(_on_dock_handle_input.bind(key))
+	add_child(handle)
+	var rail := ColorRect.new()
+	rail.color = Color(Palette.ink_soft(), 0.55)
+	rail.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	rail.set_anchors_preset(Control.PRESET_FULL_RECT)
+	rail.offset_top = (DOCK_HANDLE_H - 3.0) * 0.5
+	rail.offset_bottom = -(DOCK_HANDLE_H - 3.0) * 0.5
+	handle.add_child(rail)
+	_dock_handles[key] = handle
+	_sync_dock_handles()
+
+
+## Keeps each handle hugging its panel's top edge after any resize.
+func _sync_dock_handles() -> void:
+	for key in ["log", "panel"]:
+		if not _dock_handles.has(key) or not is_instance_valid(_dock_handles[key]):
+			continue
+		var wrap: Control = _log_wrap if key == "log" else _panel_wrap
+		if wrap == null or not is_instance_valid(wrap):
+			continue
+		var handle: Control = _dock_handles[key]
+		handle.offset_top = wrap.offset_top - DOCK_HANDLE_H
+		handle.offset_bottom = wrap.offset_top
+
+
+## Pressing the rail starts a drag; motion and release are followed in _input
+## so they are seen even when the pointer runs over the panel's own buttons.
+func _on_dock_handle_input(event: InputEvent, key: String) -> void:
+	if not (event is InputEventMouseButton):
+		return
+	var mb := event as InputEventMouseButton
+	if mb.button_index != MOUSE_BUTTON_LEFT or not mb.pressed:
+		return
+	_dragging_dock = key
+	get_viewport().set_input_as_handled()
+
+
+func _input(event: InputEvent) -> void:
+	if _dragging_dock == "":
+		return
+	if event is InputEventMouseMotion:
+		_drag_dock_to(_dragging_dock, (event as InputEventMouseMotion).position.y)
+		get_viewport().set_input_as_handled()
+	elif event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if not mb.pressed and mb.button_index == MOUSE_BUTTON_LEFT:
+			_dragging_dock = ""
+			_save_dock_heights()
+			get_viewport().set_input_as_handled()
+
+
+## Live resize: the pointer fixes the top edge, so taller windows or a dragged
+## panel leave more map visible through _apply_projection.
+func _drag_dock_to(key: String, global_y: float) -> void:
+	var min_h := _min_dock_height()
+	var max_h := maxf(size.y * DOCK_MAX_FRAC, min_h + 1.0)
+	# The wrap's bottom edge sits 12 px above the window floor (offset_bottom).
+	var h := clampf(size.y - 12.0 - global_y, min_h, max_h)
+	_dock_h[key] = h
+	_resize_docks()
+	_apply_projection()
+	if _map:
+		_map.queue_redraw()
+
+
+## Dock heights survive a restart via the same ui.cfg UiScale owns. Both sides
+## re-read the file before writing so each only touches its own sections.
+func _load_dock_heights() -> void:
+	var f := ConfigFile.new()
+	if f.load(UiScale.CFG) != OK:
+		return
+	for key in ["log", "panel"]:
+		var v := float(f.get_value("dock", key, -1.0))
+		if v >= 0.0:
+			_dock_h[key] = v
+
+
+func _save_dock_heights() -> void:
+	var f := ConfigFile.new()
+	f.load(UiScale.CFG)
+	for key in ["log", "panel"]:
+		f.set_value("dock", key, float(_dock_h.get(key, -1.0)))
+	f.save(UiScale.CFG)
 
 
 func _map_centre() -> Vector2:
@@ -1032,11 +1273,17 @@ func _arrive() -> void:
 	# End of passage: the transit plate (possibly held through a road event)
 	# gives way to the entry art or the city itself. Clear it unconditionally
 	# so a held plate can never sit over the arrival screen.
+	if _transit_tween != null and _transit_tween.is_valid():
+		_transit_tween.kill()
+	_last_transit_day = -1
 	if _transit_layer != null:
 		_transit_layer.visible = false
 	# Prefer a dedicated entry plate when one exists.
 	var entry_art := MapArt.city_entry(String(city.get("id", "")))
 	if entry_art != null and _transit_layer != null:
+		_transit_day.visible = false
+		_transit_progress.visible = false
+		_transit_hint.visible = false
 		_transit_tex.texture = entry_art
 		_transit_label.text = I18n.t(city.get("name", ""))
 		_transit_layer.visible = true
@@ -2110,17 +2357,25 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		_show_roads(not origin_rec.is_empty()
 			and not (origin_rec.get("sites", []) as Array).is_empty())
 		return
-	if _audio_ready(): _audio.on_depart(route)
+	if _audio_ready():
+		_audio.on_depart(route)
+		_audio.set_travel(route)
 	# If the road holds an encounter, keep the transit plate on screen for the
 	# whole passage: the beat it used to show was swallowed by the event dialog
 	# opening instantly on top, which read as "the return trip had no animation".
+	# With no encounter the plate runs its countdown, then arrival completes.
+	var has_pending := not state.pending_events.is_empty()
+	var transit_seconds := clampf(float(int(trip["days"])) * 0.09, 1.8, 3.6)
 	_show_transit(route, mode, String(trip["destination"]), int(trip["days"]),
-		not state.pending_events.is_empty())
+		has_pending, _complete_journey if not has_pending else Callable())
 
 	# N2 M2 — stroke the road as a fire-and-forget visual. Must not await:
 	# ANIMATION_PLAN §4 — animation must not gate game logic (or smoke tests).
+	# The stroke length is the countdown's own, so the ink keeps pace with the
+	# day counter instead of finishing in the first half-second.
 	_map.animate_route(origin_id, String(trip["destination"]), int(trip["days"]),
-		String(route.get("kind", mode_kind)), bool(route.get("trunk", false)))
+		String(route.get("kind", mode_kind)), bool(route.get("trunk", false)),
+		transit_seconds)
 
 	# Wages fall due on the road (GDD §11). Unpaid means goodwill, not debt.
 	var wage_fx := _roster.pay_effects(state, int(trip["days"]))
@@ -2147,7 +2402,11 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		if _show_next_pending_event():
 			_refresh_hud()
 			return
-	_complete_journey()
+		_complete_journey()
+		return
+	# No encounter queued: the departure countdown plays out (or is skipped),
+	# then arrival completes through the callback handed to _show_transit.
+	# WorldState already moved during depart; only the presentation waits.
 
 
 func _complete_journey() -> void:
