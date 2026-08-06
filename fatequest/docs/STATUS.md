@@ -253,7 +253,7 @@ assets/audio/    37 OGG · A1–A8 ✅
 1. ~~正式课程文本：占位迁移 i18n，并完成中英与文化校读~~ ✅ 2026-08-06（T1 闭环）
 2. ~~优化与发布验证：导入/导出、存档 P95、地图帧耗~~ ✅ 2026-08-07（O1 闭环：基准落 `docs/benchmarks.json` + 产物存 `build/audit/`，fixture 迁移用例，`verify_pck.mjs` PCK 结构门禁，`benchmark_map_fps.gd` 窗口帧耗实测）；~~720p/200%/中英回归~~ ✅ 已由 `smoke_ui_overlay.gd` 自动化（2026-08-02）；Q2 手动测试修复已完成并回归（2026-08-02）
 3. **正式占法美术与既有缺图**：易经 31–64（34）及 §11.7 占位替换
-4. **R1 外部试玩与通读**：✅ 自动化准备已完成（2026-08-06：全量门禁复跑落档、[`R1_READTHROUGH.md`](R1_READTHROUGH.md) 通读清单、[`PLAYTEST_README.md`](PLAYTEST_README.md)/[`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md) 交接包；六维验证修复：4 个占法用法站点接线进城市 `sites`，G2b 警告 6→2）；⏳ 待外部试玩与人工通读后按反馈收尾发布候选签署
+4. **R1 外部试玩与通读**：✅ 自动化准备已完成（2026-08-06：全量门禁复跑落档、[`R1_READTHROUGH.md`](R1_READTHROUGH.md) 通读清单、[`PLAYTEST_README.md`](PLAYTEST_README.md)/[`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md) 交接包、[`AI_USAGE.md`](AI_USAGE.md) 生成式工具记录；六维验证修复：4 个占法用法站点接线进城市 `sites`，G2b 警告 6→2）；⏳ 待外部试玩与人工通读后按反馈收尾发布候选签署
 
 ---
 

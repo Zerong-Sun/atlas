@@ -94,7 +94,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PASS
 | 24 法工具/反馈/动画占位 | A1 未做，控件/符号占位（§11.7） |
 | 动画 N4–N6 | 未做 |
 | 移动端 | EA 先桌面端 |
-| AI 生成工具记录 | `docs/AI_USAGE.md` 待建（§8 人工项） |
+| AI 生成工具记录 | `docs/AI_USAGE.md` 已建（工具/归档/审阅链/签署区）；对话甄别为签署项 |
 
 ## 7. 反馈收集
 

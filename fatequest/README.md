@@ -69,6 +69,7 @@ fatequest/
 | [`docs/RELEASE_CANDIDATE.md`](docs/RELEASE_CANDIDATE.md) | **R1 发布候选签署清单**（自动门禁全绿；人工项待签） |
 | [`docs/R1_READTHROUGH.md`](docs/R1_READTHROUGH.md) | 全分支人工通读可勾选清单（中英各一遍） |
 | [`docs/PLAYTEST_README.md`](docs/PLAYTEST_README.md) · [`PLAYTEST_FEEDBACK.md`](docs/PLAYTEST_FEEDBACK.md) | 外部试玩交接包：运行/构建说明 + 反馈表单 |
+| [`docs/AI_USAGE.md`](docs/AI_USAGE.md) | 生成式工具记录：工具/用途/对话归档/人工审阅链/签署区 |
 | [`docs/REQUIREMENTS_INDEX.md`](docs/REQUIREMENTS_INDEX.md) | 需求、验收与交付索引；区分当前文档和历史记录 |
 | [`docs/12_CITY_CLOSURE_MATRIX.md`](docs/12_CITY_CLOSURE_MATRIX.md) | 十二主城选择、后果链和即时反馈接线矩阵 |
 | [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |

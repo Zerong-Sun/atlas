@@ -103,7 +103,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 ## 8. 版权、生成式工具记录、史料来源与文化审阅
 
 - **史料来源**：马可·波罗 / 伊本·白图泰 / 法德兰 / 朱拜尔逐段标记，`passages.json` 含 `origin` 与时代性宗教贬语标记（G24 拦截）。
-- **生成式工具记录**：`docs/AI_USAGE.md`（如有）与美术批次 `ART_PROMPTS_REQ_*.md` 留存。
+- **生成式工具记录**：✅ [`AI_USAGE.md`](AI_USAGE.md) 已建（工具/用途/对话归档/人工审阅链/签署区），美术批次 `ART_PROMPTS_*.md` 与 `_archive/chats/index.json` 留存。
 - **文化审阅归档模板**（G24 拦截证据 + 术语 + 来源标记，供人工填日期签署）：
 
 | 归档项 | 证据位置 | 复核人 | 日期 |
@@ -113,6 +113,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 | 史料 origin 逐段标记 | `content/world/passages.json` | | |
 | 中英关键流程通读（zh/en 各一遍） | `docs/R1_READTHROUGH.md` | | |
 | 24 课/480 占法结果文化校读 | T1 完成记录（2026-08-06/07） | | |
+| 生成式工具记录归档 | `docs/AI_USAGE.md` + `_archive/chats/index.json` 甄别 | | |
 
 ## 9. README / STATUS / 需求书 / 发行说明一致
 
@@ -132,7 +133,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 | 5 | 离线导出资产 | 🟡 PCK✅（`verify_pck` PASS）+ mac/win zip 已导出；平台可执行档待模板装后构建 |
 | 6 | 覆盖层可退出 | 🟡 自动部分✅；试玩确认待签 |
 | 7 | 外部 60 分钟试玩 | 🟡 交接包已备（`PLAYTEST_README`/`FEEDBACK`/PCK/双 zip/`--seed`）；试玩待执行 |
-| 8 | 版权/工具/史料/文化 | 🟡 归档模板已建（§8 表）；`AI_USAGE.md` 待建；文化审阅待签 |
+| 8 | 版权/工具/史料/文化 | 🟡 归档模板已建（§8 表）+ `AI_USAGE.md` 已建；文化审阅待签 |
 | 9 | 文档一致 | 🟡 自动部分✅；发版前核对待签 |
 
 **结论**：可自动验证的发布候选门禁全部通过；试玩交接包（运行说明 + 反馈表单 + PCK + 双 zip + 固定 seed）与全分支

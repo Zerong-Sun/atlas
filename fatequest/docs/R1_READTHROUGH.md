@@ -127,7 +127,7 @@
 
 - [ ] 史料来源逐段标记（`passages.json` origin）抽查 5 段
 - [ ] 时代性宗教贬语标记（G24 拦截）抽查
-- [ ] 生成式工具记录归档（`docs/AI_USAGE.md`、`ART_PROMPTS_REQ_*.md`）
+- [ ] 生成式工具记录归档（`docs/AI_USAGE.md` 已建；甄别 `_archive/chats/index.json` 杂项对话）
 - [ ] 文化审阅记录归档
 
 ---
