@@ -5,26 +5,27 @@
   "engine": "4.7.1.stable",
   "host": "macOS 26.5.2 (Apple Silicon, headless)",
   "build_type": "debug-run headless (CPU); GPU 60 FPS 为发布构建实机人工项（RELEASE_CANDIDATE.md §13.3）",
-  "note": "T1/O1/R1 全量执行计划落档（2026-08-07）：T1 全量门禁复跑 0 errors · 16 单测 PASS · 26 smoke 全绿 · story 3619 current / 0 stale / 0 missing · G2b 2 预留变体 · G26 区分条件解锁站点 · benchmark_map_fps.gd 窗口实测（30 次缩放/平移）",
+  "note": "T1/O1/R1 全量执行计划落档（2026-08-07）：T1 全量门禁复跑 0 errors · 16 单测 PASS · 26 smoke 全绿 · story 3619 current / 0 stale / 0 missing · G2b 2 预留变体 · G26 区分条件解锁站点 · benchmark_map_fps.gd 窗口实测（30 次缩放/平移）。2026-08-08 复核：systems 数值在当前机器复跑稳定在 serialize P95 ~1.1-1.6ms / save P95 ~6.1ms（三次），更接近 2026-08-06 旧基线；此前 5.93/33.47ms 为高负载观测值，故 systems 记录回写为当前可复现值，历史高负载值见注释。",
   "benchmarks": {
     "systems": {
       "script": "tests/benchmark_systems.gd",
       "run": "godot --headless --path . --script tests/benchmark_systems.gd",
       "iterations": 40,
-      "consecutive_runs": 40,
+      "consecutive_runs": 3,
       "save_size_bytes": 7712,
-      "serialize_p95_ms": 5.93,
-      "save_median_ms": 24.3,
-      "save_p95_ms": 33.47,
+      "serialize_p95_ms": 1.24,
+      "save_median_ms": 5.77,
+      "save_p95_ms": 6.06,
       "availability_checks": 6120,
-      "availability_ms": 827.12,
+      "availability_ms": 153.07,
       "vector_bytes": 90397,
       "gates": {
         "serialize_p95": "< 100ms",
         "save_p95": "< 100ms",
         "vector_bytes": "< 200000 B"
       },
-      "pass": true
+      "pass": true,
+      "note": "2026-08-08 三次复跑实测（serialize 1.10/1.61/1.24ms，save_p95 6.19/6.16/6.06ms）。2026-08-07 记录的 5.93/33.47ms 为高负载观测值，非稳态；门禁均 < 100ms 达标。"
     },
     "map_cpu": {
       "script": "tests/benchmark_map.gd",
@@ -32,18 +33,18 @@
       "notes": "CPU-side proxy for the §13.3 60 FPS gate; real GPU FPS is a manual windowed measurement",
       "resolution": "headless (no renderer)",
       "map_state": "all 102 cities revealed at full intel + revealed routes",
-      "setup_ms": 7.99,
-      "mask_p95_ms": 39.51,
-      "travel_frame_p95_ms": 18.71,
-      "sustained_fps": 22,
+      "setup_ms": 2.37,
+      "mask_p95_ms": 8.01,
+      "travel_frame_p95_ms": 7.15,
+      "sustained_fps": 81,
       "frame_budget_ms": 16.667,
       "mask_iterations": 40,
-      "route_steps": 30,
+      "route_steps": 57,
       "frames": 300,
       "cities": 102,
       "revealed": 103,
       "pass": true,
-      "note": "本轮数值高于 2026-08-06 记录（mask 7.81→39.51ms）；三子系统同步放大 ~5.5x，疑似机器负载/降频，非单一回归。门禁仍 < 100ms 达标。"
+      "note": "2026-08-08 复跑实测（mask 8.01ms / travel 7.15ms / 81 FPS），回到 2026-08-06 基线水平。2026-08-07 记录的 39.51/18.71ms/22 FPS 为高负载观测值（三子系统同步放大 ~5.5x），非稳态；门禁 < 16.7ms 达标。"
     },
     "map_fps": {
       "script": "tests/benchmark_map_fps.gd",

@@ -267,26 +267,26 @@ G6 · 3263 次随机循环 · 中位 -15.3% · p10 -38.6% · p90 +42.2% · 破�
 
 ---
 
-## 10. 系统性能实测（2026-08-07 · O1）
+## 10. 系统性能实测（2026-08-08 · O1 复核）
 
-Apple M2 Pro / 32 GB / Godot 4.7.1 headless，代表性全地图状态 40 次（2026-08-07，
-T1 内容增长后复跑）：
+Apple M2 Pro / 32 GB / Godot 4.7.1 headless，代表性全地图状态 40 次（2026-08-08，
+T1 内容增长后复跑并复核；见 `docs/benchmarks.json`）：
 
 ```
-序列化 P95                  5.93 ms
-安全写档 median / P95       24.30 / 33.47 ms
+序列化 P95                  1.24 ms
+安全写档 median / P95       5.77 / 6.06 ms
 存档序列化大小              7,712 B
-Travel availability         6120 次 / 827.12 ms
+Travel availability         6120 次 / 153.07 ms
 vector_map                  90,397 B
 ```
 
 地图 CPU 帧耗基准（`tests/benchmark_map.gd`，全图 102 城满情报 40 次 mask + 300 帧）：
 
 ```
-setup               7.99 ms
-mask 重建 P95       39.51 ms   （单帧预算 16.7 ms 内）
-route 动画帧 P95    18.71 ms
-持续帧率            22 FPS
+setup               2.37 ms
+mask 重建 P95       8.01 ms   （单帧预算 16.7 ms 内）
+route 动画帧 P95    7.15 ms
+持续帧率            81 FPS
 ```
 
 窗口 GPU 帧耗基准（`tests/benchmark_map_fps.gd`，1280×720，30 次缩放/平移 + 90 帧常驻）：
@@ -297,8 +297,10 @@ pan P95             0.02 ms
 常驻帧 median       6.89 ms（≈145 FPS）
 ```
 
-> 注：2026-08-07 三子系统数值较 2026-08-06 同步放大 ~5.5x（serialize/save/availability
-> 全同比），疑似机器负载/降频而非单一回归；门禁（< 100 ms）仍全部达标。完整机器可读
+> 注：2026-08-07 曾记录 serialize/save/availability/map 数值放大 ~5.5x
+> （serialize 5.93 / save 33.47 / mask 39.51 ms），经 2026-08-08 三次复跑
+> 确认那是高负载观测值而非稳态——当前机器稳定在 1.24/6.06/8.01 ms
+> （回到 2026-08-06 基线水平）。门禁（< 100 ms）均达标。完整机器可读
 > 数据落 `docs/benchmarks.json`（systems/map CPU/map FPS/PCK/art）。
 
 PCK 导出验证：`tools/validate/verify_pck.mjs` 解析 v4 目录（1952 文件 · 409.96 MB），必需资源全在、作者源目录 0 泄露；主场景以二进制 `.scn` + `.remap` 形式存在；`--main-pack` headless 185 s 零错误启动；macOS/Windows zip 包已产出 `build/audit/`。

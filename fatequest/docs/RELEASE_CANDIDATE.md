@@ -33,8 +33,8 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 | 逻辑审计 | ✅ `tests/audit_logic.gd` 0 项问题 |
 | 占法阅读审计 | ✅ `tests/audit_divination_readings.gd` 24 法 reading key 双语全覆盖 |
 | UI smoke | ✅ **26 个全绿**（含 `smoke_21city_followups`、`smoke_map_display.gd`、`smoke_dock_drag.gd`、`smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
-| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 5.93 ms · save P95 33.47 ms · save 7712 B） |
-| 地图 CPU 基准 | ✅ `MAP_BENCH`（setup 7.99 ms · mask P95 39.51 ms · travel frame P95 18.71 ms） |
+| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 1.24 ms · save P95 6.06 ms · save 7712 B） |
+| 地图 CPU 基准 | ✅ `MAP_BENCH`（setup 2.37 ms · mask P95 8.01 ms · travel frame P95 7.15 ms） |
 | 地图窗口帧耗 | ✅ `MAP_FPS_BENCH: PASS`（1280×720：zoom P95 0.03 ms · pan P95 0.02 ms · 常驻帧 6.89 ms ≈145 FPS） |
 | PCK 结构验证 | ✅ `verify_pck.mjs` PASS（1952 文件 · 必需全在 · 0 泄露） |
 | PCK 启动 | ✅ `--main-pack` headless 185 s 零错误 |
@@ -97,7 +97,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 - **固定 seed**：按身份确定（`fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`），同一身份世界确定、可复现；开局抽签可用 `-- --seed=<串>` 固定（缺省行为不变）。
 - **状态**：⏳ 待外部执行（三平台可执行档需先安装 export templates，见交接包 §3）。
 - **流程**：新玩家 / 三个身份各 30–60 分钟；记录完成率、断点、P0/P1/P2 清单、固定 seed、构建 commit、
-  验证器结果（§13.5）。
+  验证器结果（§13.5）。30 分钟为功能验收下限（§14.1 任务 5），60 分钟为发布候选出口（§13.6）。
 - **出口**：0 个 P0/P1，P2 有负责人。
 
 ## 8. 版权、生成式工具记录、史料来源与文化审阅

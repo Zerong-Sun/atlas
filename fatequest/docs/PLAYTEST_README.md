@@ -71,8 +71,8 @@ godot --headless --path . --script tests/run_tests.gd     # 16 单测 PASS
 godot --headless --path . --script tests/audit_logic.gd   # 0 项问题
 godot --headless --path . --script tests/audit_divination_readings.gd  # 24 法阅读双语全覆盖
 for t in tests/smoke_*.gd; do godot --headless --path . --script "$t" || exit 1; done  # 26 smoke
-godot --headless --path . --script tests/benchmark_systems.gd  # serialize P95 5.93ms · save P95 33.47ms
-godot --headless --path . --script tests/benchmark_map.gd      # mask P95 39.51ms · travel 18.71ms
+godot --headless --path . --script tests/benchmark_systems.gd  # serialize P95 1.24ms · save P95 6.06ms
+godot --headless --path . --script tests/benchmark_map.gd      # mask P95 8.01ms · travel 7.15ms
 godot --path . --script tests/benchmark_map_fps.gd             # 窗口 1280×720：zoom 0.03ms · pan 0.02ms · ≈145 FPS
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PASS
 ```

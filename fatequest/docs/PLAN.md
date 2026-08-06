@@ -17,7 +17,7 @@
 1. ~~Q1：完成 720p、200% 字号、中英、键盘与覆盖层视觉回归，并逐城点选 12 城后果链~~ ✅ 2026-08-02 `smoke_ui_overlay.gd`（覆盖层/200%/中英/键盘）+ `smoke_twelve_cities.gd`（12 城 × 2 重要分支后果链逐城回归）；GPU 60 FPS 实机与 §13.2 人工脚本见 [`RELEASE_CANDIDATE.md`](RELEASE_CANDIDATE.md)
 2. ~~T1：把课程和新增 UI 占位迁移为正式中英文本，完成文化校读。~~ ✅ 2026-08-06（24 课 i18n + 16 非 MVP 占法 480 结果文本 + UI 硬编码迁移 + G7 术语 0 告警）
 3. A1：补齐易经 31–64，并按 24 法清单逐法替换工具、反馈和动画占位。
-4. ~~O1：完成运行性能基准、导入/导出检查和最新 PCK 导出。~~ ✅ 2026-08-06（`benchmark_systems` serialize P95 1.13ms/save P95 6.10ms/save 7712B；`benchmark_map` mask P95 7.72ms/travel frame P95 8.28ms/88 FPS；fixture `save_v1/v2` 迁移用例；`verify_pck.mjs` 结构门禁；结果落 `build/audit/benchmarks.json`）
+4. ~~O1：完成运行性能基准、导入/导出检查和最新 PCK 导出。~~ ✅ 2026-08-07（`benchmark_systems` serialize P95 1.24ms/save P95 6.06ms/save 7712B；`benchmark_map` mask P95 8.01ms/travel frame P95 7.15ms；`benchmark_map_fps` 窗口 zoom P95 0.03ms/常驻 6.89ms；fixture `save_v1/v2` 迁移用例；`verify_pck.mjs` 结构门禁；结果落 `docs/benchmarks.json`）
 5. R1：外部试玩和全分支人工通读，P0/P1 清零后形成发布候选并上传。（**准备已完成 2026-08-06**：全量门禁复跑落档 + [`R1_READTHROUGH.md`](R1_READTHROUGH.md) 通读清单 + [`PLAYTEST_README.md`](PLAYTEST_README.md)/[`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md) 试玩交接包；待人工试玩通读后按反馈收尾签署）
 
 ---
@@ -40,7 +40,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | Godot 美术接线 | **674/674**（S1c ✅） |
 | 动画 | N0–N3 ✅ · N4–N6 待做 |
 | 测试 | 16 单测 + smoke（含 `smoke_21city_followups`）· 门禁含 G31 全绿 |
-| 性能基准 | systems serialize P95 1.13ms · save P95 6.10ms；map mask P95 7.72ms · travel frame P95 8.28ms · 88 FPS；`benchmarks.json` 落档 |
+| 性能基准 | systems serialize P95 1.24ms · save P95 6.06ms；map mask P95 8.01ms · travel frame P95 7.15ms；窗口 zoom P95 0.03ms · 常驻 6.89ms（≈145 FPS）；`docs/benchmarks.json` 落档 |
 | PCK 导出 | ✅ `verify_pck.mjs` 1952 文件 · 20 必需全在 · 0 泄露（409.95 MB） |
 
 **一句话**：系统、12 主城与 21 city 探索多轮、资源接线已完成；当前工作转入正式课程/占法内容、易经缺图、运行时回归和发布验收。
