@@ -259,3 +259,82 @@ func depart(route: Dictionary, mode: String, state: WorldState, rng: Rng) -> Dic
 		"hazards": route.get("hazards", []),
 		"encounters": encounters,
 	}
+
+
+## Guarantee the city the player is standing in has at least one known way out.
+##
+## Arrival normally reveals every outbound road (see depart, "arrived-sees-the-
+## roads"), so this only fires when nothing at all is known — most notably a
+## fresh run starting in a city the character has no road knowledge of. Without
+## it the roads panel would report "no routes" and the run would stall before
+## it began.
+##
+## When any exit is already passable this month (known, open, transport kind and
+## permission all in order, money aside) it reveals one of those, so the road
+## the player is handed can actually be walked. Only when every exit is blocked
+## — e.g. mid-winter on the Levant coast, a deliberate `season.open` window —
+## does it fall back to revealing whichever road looks least gated, so the way
+## out is at least on the map and the wait is explicit. Returns the revealed
+## route id, or "" when there was already a way out (or no route exists).
+func ensure_way_out(state: WorldState, month: int) -> String:
+	var exits := routes_from(state.city)
+	for r in exits:
+		if is_route_known(r, state):
+			return ""
+	# Money is a soft wall — you can earn, sell or wait — so affordability is
+	# deliberately ignored. Every hard gate (season, transport kind, permit,
+	# required item) counts as blocking.
+	var passable: Array = []
+	for r in exits:
+		if _passable(r, state, month):
+			passable.append(r)
+	var pool: Array = passable if not passable.is_empty() else exits
+	var best: Dictionary = {}
+	var best_score := -1
+	for r in pool:
+		# Within a passable pool every road can be taken today, so the scores
+		# only pick the friendliest one. In the blocked fallback pool they pick
+		# the one least likely to stay shut.
+		var score := 0
+		if r.get("unlock", null) == null:
+			score += 4
+		var open: Array = r.get("season", {}).get("open", [])
+		if open.is_empty():
+			score += 3
+		elif month in open:
+			score += 2
+		var kind := String(r.get("kind", "land"))
+		if kind == "land" or kind == "coastal":
+			score += 1
+		if score > best_score:
+			best_score = score
+			best = r
+	if best.is_empty():
+		return ""
+	var rid := String(best.get("id", ""))
+	executor.execute(state, [{
+		"op": "reveal_map",
+		"value": rid,
+		"reason": "safety-net-exit",
+	}], {"event_id": "travel:ensure-way-out"})
+	return rid
+
+
+## Can this road be taken right now, price and knowledge aside? Mirrors the hard
+## gates in availability(): direction, season window, transport mode and any
+## unlock/permission. `cannot_afford`, `cargo_over` and `unknown_route` are
+## ignored — the guard is about to reveal the road, and money is earnable.
+func _passable(route: Dictionary, state: WorldState, month: int) -> bool:
+	for mode in route.get("modes", ["foot"]):
+		var ok := true
+		for reason in availability(route, state, month, String(mode)).get("reasons", []):
+			var key := String(reason)
+			if key == "travel.unknown_route" or key == "travel.closed_season" \
+					or key == "travel.route_locked" or key == "travel.mode_unavailable" \
+					or key == "travel.mode_wrong_kind" or key.begins_with("travel.needs_item:"):
+				ok = false
+				break
+		if ok:
+			return true
+	return false
+

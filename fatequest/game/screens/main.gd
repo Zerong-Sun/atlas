@@ -1299,6 +1299,11 @@ func _is_audit_slug(line: String) -> bool:
 
 ## Arrival: fire the entry event if there is one, else offer the roads.
 func _arrive() -> void:
+	# Stranding guard: however the player got here, a city with not one known
+	# road out of it is a dead end — every exit button stays greyed and the
+	# run stalls. Arrival usually reveals the outbound roads (travel.depart);
+	# this is the safety net for the openings that don't.
+	travel.ensure_way_out(state, clock.month())
 	_refresh_hud()
 	_autosave()
 	if _audio_ready(): _audio.set_jdn(state.jdn)
@@ -1982,6 +1987,9 @@ func _restore_document(doc: Dictionary) -> bool:
 	# hundred days and a purse in one step.
 	if _hud != null:
 		_hud.silence_next()
+	# Same stranding guard as arrival: a loaded world must never pin the
+	# player inside a city with no known way out.
+	travel.ensure_way_out(state, clock.month())
 	_refresh_hud()
 	_map.center_on(state.city)
 	_dialog_layer.visible = false

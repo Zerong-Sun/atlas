@@ -18,6 +18,7 @@ func _init():
               "res://tests/test_lesson_engine.gd",
               "res://tests/test_i18n.gd", "res://tests/test_narrative.gd", "res://tests/test_time.gd",
               "res://tests/test_journey.gd",
+              "res://tests/test_way_out.gd",
               "res://tests/test_m1_lines.gd", "res://tests/test_audio.gd",
               "res://tests/test_motion.gd", "res://tests/test_market.gd", "res://tests/test_save.gd", "res://tests/test_retainer.gd",
               "res://tests/test_ending.gd"]:
