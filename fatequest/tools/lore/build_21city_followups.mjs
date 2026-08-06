@@ -120,7 +120,7 @@ const PACKS = [
         "景教礼拜结束，乔治王一系的一位祭司把你引到木屏风旁。他说东去汗八里的路不只是驿马之链——仍有一串教会与驿站记着祭司王约翰的名字。你若谨慎选择，他愿为你开一扇门。",
       ],
       choices: [
-        ["Ask him to mark the yam road toward Cambaluc", "请他标出通往汗八里的驿路"],
+        ["Ask him to mark the yam road toward Cambaluc", "请他标出通往汗八里的驿站之路"],
         ["Offer a small gift for the church and ask a blessing for the road", "为教堂献上一份薄礼，求一条路的祝福"],
         ["Wait a day to copy the priests' list of post-houses", "等一日，抄下祭司所记的驿站名单"],
       ],
@@ -175,12 +175,12 @@ const PACKS = [
       choices: [
         ["Pay for a day's lesson in the mountain tongue", "付一日学费，学几句山语"],
         ["Ask which pass leads toward Keshimur and Cabul", "追问通往克什米尔与喀布尔的山口"],
-        ["Buy a balas ruby at the court clerk's measured price", "按书记的公道价买下一枚红宝石"],
+        ["Buy a balas ruby at the court clerk's measured price", "按书记的公道价买下一枚巴剌红宝石"],
       ],
       results: [
         ["You spend the day on the highland speech. The words are few, but in Badashan your name now carries a little more weight.", "你花一日学高地话。字句不多，在巴达哈伤你的名字却多了一分分量。"],
         ["He names Taican and Keshimur and the days between. The mountain road east is on your map.", "他点出塔伊坎、克什米尔与其间的日子。东去的山路已上你的舆图。"],
-        ["The clerk sells you a balas ruby at a price that would buy a horse in lesser markets. The stone is sealed with the court's mark.", "书记按能在小市买一匹马的价钱卖给你红宝石。石头盖着宫廷的印记。"],
+        ["The clerk sells you a balas ruby at a price that would buy a horse in lesser markets. The stone is sealed with the court's mark.", "书记按能在小市买一匹马的价钱卖给你一枚巴剌红宝石。石头盖着宫廷的印记。"],
       ],
     },
     effects: [
@@ -820,7 +820,7 @@ function writeMatrix(matrix) {
   }
   lines.push(
     "",
-    "验收：每城至少 1 个 site 选择 `queue_event` 指向有效 followup；枢纽城两点齐全；中英文 key 由 G30 与主校验器检查。",
+    "验收：每城至少 1 个 site 选择 `queue_event` 指向有效 followup；枢纽城两点齐全；中英文 key 由 **G31** 与主校验器检查；运行时回归见 `tests/smoke_21city_followups.gd`。",
     "",
   );
   writeFileSync(MATRIX_PATH, lines.join("\n"));

@@ -1150,6 +1150,17 @@ for (const e of byTable.events ?? [])
   if (cityTier.length !== 21) {
     err("G31", "cities", `expected 21 city-tier nodes, found ${cityTier.length}`);
   }
+  const cityIdSet = new Set((byTable.cities ?? []).map((c) => c.id));
+  const routeIdSet = new Set((byTable.routes ?? []).map((r) => r.id));
+  const goodIdSet = new Set((byTable.goods ?? []).map((g) => g.id));
+  const bandSet = new Set((byTable.cities ?? []).map((c) => c.band).filter(Boolean));
+  const FU_FATES = new Set(["travel", "rapport", "wealth"]);
+  const effectTargets = (ch) => [
+    ch.effects,
+    ch.pass?.effects,
+    ch.fail?.effects,
+    ch.lessonFailEffects,
+  ].flatMap((list) => list ?? []);
   for (const c of cityTier) {
     const sites = c.sites ?? [];
     if (sites.length !== 2) {
@@ -1179,6 +1190,25 @@ for (const e of byTable.events ?? [])
           }
           for (const k of [fu.title, fu.body, ch.label, ch.resultText]) {
             if (k && !textExists(k)) err("G31", `events:${fid}`, `missing bilingual text key "${k}"`);
+          }
+          const where = `events:${fid}.choices[${i + 1}]`;
+          for (const e of effectTargets(ch)) {
+            if (e.op === "goods" && e.id !== undefined && !goodIdSet.has(String(e.id))) {
+              err("G31", where, `goods "${e.id}" not found`);
+            }
+            if (e.op === "reveal_map" && e.value !== undefined
+              && !cityIdSet.has(String(e.value)) && !routeIdSet.has(String(e.value))) {
+              err("G31", where, `reveal_map "${e.value}" is neither a city nor a route`);
+            }
+            if (e.op === "reputation" && e.id !== undefined) {
+              const targets = e.scope === "band" ? bandSet : cityIdSet;
+              if (!targets.has(String(e.id))) {
+                err("G31", where, `reputation target "${e.id}" not in scope "${e.scope ?? "city"}"`);
+              }
+            }
+            if (e.op === "fate" && e.id !== undefined && !FU_FATES.has(e.id)) {
+              err("G31", where, `fate id "${e.id}" must be travel|rapport|wealth`);
+            }
           }
         }
       }
