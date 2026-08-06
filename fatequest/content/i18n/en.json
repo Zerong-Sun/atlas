@@ -4270,7 +4270,6 @@
   "ui.back_to_map": "← Back to Map",
   "ui.bag": "Bag",
   "ui.book_about": "About this book",
-  "ui.book_codex_gained": "A new leaf was added to your codex.",
   "ui.book_missing": "This volume is not on the desk.",
   "ui.book_origin_authored": "Authored / desk gloss — not a city citation.",
   "ui.book_origin_hybrid": "Hybrid: source frame with authored detail.",

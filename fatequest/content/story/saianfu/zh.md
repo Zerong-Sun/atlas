@@ -84,7 +84,7 @@ stamps:
 
 ## ev.saianfu.a.choice.weavers
 
-观织工于机杼前
+观丝织工于机杼前
 
 ## ev.saianfu.a.choice.silk
 
@@ -128,7 +128,7 @@ stamps:
 
 ## ev.ev_saianfu_a.choice_1_result
 
-你观织工于机杼前，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往济宁的路。
+你观丝织工于机杼前，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往济宁的路。
 
 ## ev.ev_saianfu_a.choice_2_result
 

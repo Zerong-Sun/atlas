@@ -7,7 +7,6 @@ extends PanelContainer
 signal closed()
 
 var db: ContentDb
-var state: WorldState
 var _list: VBoxContainer
 var _detail: VBoxContainer
 var _books: Array = []
@@ -61,8 +60,7 @@ func _build() -> void:
 	right.add_child(_detail)
 
 
-func open(book_id: String = "", p_state: WorldState = null) -> void:
-	state = p_state
+func open(book_id: String = "") -> void:
 	visible = true
 	_refresh_list()
 	var want := book_id
@@ -95,12 +93,12 @@ func _resolve_book(book_id: String) -> Dictionary:
 
 
 func _show(book_id: String) -> void:
-	_current = book_id
 	for c in _detail.get_children():
 		c.queue_free()
 
 	var rec: Dictionary = _resolve_book(book_id)
 	if rec.is_empty():
+		_current = book_id
 		_detail.add_child(Panels.label(I18n.t("ui.book_missing"), UiScale.body(), Palette.ink_soft()))
 		return
 	_current = String(rec.get("id", book_id))
@@ -146,23 +144,6 @@ func _show(book_id: String) -> void:
 	if origin_note.begins_with("ui.book_origin_"):
 		origin_note = origin
 	_detail.add_child(Panels.label(origin_note, UiScale.ui() - 2, Palette.ink_soft()))
-
-	_award_related_codex(rec)
-
-
-func _award_related_codex(rec: Dictionary) -> void:
-	if state == null:
-		return
-	var awarded := false
-	for cid in rec.get("relatedCodex", []):
-		var id := String(cid)
-		if id.is_empty() or id in state.codex:
-			continue
-		state.codex.append(id)
-		awarded = true
-	if awarded:
-		_detail.add_child(Panels.label(I18n.t("ui.book_codex_gained"),
-			UiScale.ui() - 1, Palette.ink_soft()))
 
 
 func _add_section(heading: String, key: String) -> void:

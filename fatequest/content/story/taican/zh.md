@@ -112,7 +112,7 @@ stamps:
 
 ## ev.taican.b.choice.ask_sapurgan
 
-问何路驼队续往沙吾甘
+问哪路商队续往沙吾甘
 
 ## ev.ev_taican_entry.choice_1_result
 
@@ -148,7 +148,7 @@ stamps:
 
 ## ev.ev_taican_b.choice_3_result
 
-你问何路驼队续往沙吾甘，你标出了通往撒普儿干的路。你标出了通往巴里黑的路。你把这番见闻记入行纪。
+你问哪路商队续往沙吾甘，你标出了通往撒普儿干的路。你标出了通往巴里黑的路。你把这番见闻记入行纪。
 
 ## ev.ev_taican_a_followup.title
 

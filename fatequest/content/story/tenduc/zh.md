@@ -162,7 +162,7 @@ stamps:
 
 ## ev.ev_tenduc_a_followup.choice_1
 
-请他标出通往汗八里的驿路
+请他标出通往汗八里的驿站之路
 
 ## ev.ev_tenduc_a_followup.choice_1_result
 

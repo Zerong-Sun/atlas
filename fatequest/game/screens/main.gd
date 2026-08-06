@@ -1701,7 +1701,7 @@ func _open_book(book_id: String = "") -> void:
 	if _book_layer == null or _book_view == null:
 		return
 	Motion.crossfade_in(_book_layer, 0.18)
-	_book_view.open(book_id, state if state != null else null)
+	_book_view.open(book_id)
 
 
 func _ensure_book_reader() -> void:

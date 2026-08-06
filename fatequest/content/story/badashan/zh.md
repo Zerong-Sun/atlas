@@ -216,8 +216,8 @@ stamps:
 
 ## ev.ev_badashan_b_followup.choice_3
 
-按书记的公道价买下一枚红宝石
+按书记的公道价买下一枚巴剌红宝石
 
 ## ev.ev_badashan_b_followup.choice_3_result
 
-书记按能在小市买一匹马的价钱卖给你红宝石。石头盖着宫廷的印记。
+书记按能在小市买一匹马的价钱卖给你一枚巴剌红宝石。石头盖着宫廷的印记。
