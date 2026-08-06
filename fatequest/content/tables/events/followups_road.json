@@ -1,0 +1,310 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-road-fadlan-01-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_01_followup.title",
+      "body": "ev.ev_road_fadlan_01_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_01_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_01_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "mapped-the-frozen-crossing"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "held-the-ice-road-in-memory"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_01_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_01_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "pressed-on-while-the-ice-held"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-19-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_19_followup.title",
+      "body": "ev.ev_road_fadlan_19_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_19_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_19_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-darkness",
+              "reason": "kept-the-darkness-testimony"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "wrote-while-the-tale-was-fresh"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_19_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_19_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-darkness",
+              "reason": "remembered-the-smell-of-the-mist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-23-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_23_followup.title",
+      "body": "ev.ev_road_fadlan_23_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_23_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_23_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "stayed-for-the-settlement-feast"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "steppe",
+              "reason": "kept-watch-at-the-ghuzz-camp"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_23_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_23_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "left-before-the-quarrel-turned"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "took-the-road-while-the-camp-feasted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-25-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_25_followup.title",
+      "body": "ev.ev_road_fadlan_25_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_25_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_25_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kept-the-guard-after-the-wolves"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_25_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_25_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "read-the-morning-tracks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-29-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_29_followup.title",
+      "body": "ev.ev_road_fadlan_29_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_29_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_29_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-captives",
+              "reason": "kept-the-coffle-account"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "wrote-while-the-coffle-was-close"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_29_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_29_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "folded-the-account-away"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-30-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_30_followup.title",
+      "body": "ev.ev_road_fadlan_30_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_30_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_30_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-for-the-grass-to-dry"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_30_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_30_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "moved-while-the-roads-were-empty"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "won-the-wet-road-alone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-32-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_32_followup.title",
+      "body": "ev.ev_road_fadlan_32_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_32_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_32_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "camped-before-crossing-openly"
+            },
+            {
+              "op": "coins",
+              "value": -20,
+              "reason": "paid-the-passage-with-the-ledger"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_32_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_32_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "hurried-while-the-road-was-clear"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "emptied-the-watched-road-before-me"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ev-road-fadlan-35-followup",
+      "kind": "consequence",
+      "title": "ev.ev_road_fadlan_35_followup.title",
+      "body": "ev.ev_road_fadlan_35_followup.body",
+      "once": false,
+      "choices": [
+        {
+          "label": "ev.ev_road_fadlan_35_followup.choice_1",
+          "resultText": "ev.ev_road_fadlan_35_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-fadlan-cold",
+              "reason": "recorded-the-ice-boom-aftermath"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "kept-the-silent-river-in-memory"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_road_fadlan_35_followup.choice_2",
+          "resultText": "ev.ev_road_fadlan_35_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "pressed-on-from-the-frozen-bank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2275,6 +2275,11 @@
               "op": "codex",
               "value": "cx-fadlan-cold",
               "reason": "noted-the-ice-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-01-followup",
+              "reason": "ev-road-fadlan-01-followup"
             }
           ]
         },
@@ -2292,6 +2297,11 @@
               "id": "travel",
               "value": 1,
               "reason": "chose-caution-on-the-jayhun"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-01-followup",
+              "reason": "ev-road-fadlan-01-followup"
             }
           ]
         }
@@ -3347,6 +3357,11 @@
               "op": "codex",
               "value": "cx-fadlan-darkness",
               "reason": "recorded-the-land-of-darkness"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-19-followup",
+              "reason": "ev-road-fadlan-19-followup"
             }
           ]
         },
@@ -3590,6 +3605,11 @@
               "scope": "band",
               "id": "steppe",
               "reason": "helped-the-ghuzz-camp"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-23-followup",
+              "reason": "ev-road-fadlan-23-followup"
             }
           ]
         },
@@ -3723,6 +3743,11 @@
               "id": "travel",
               "value": 1,
               "reason": "survived-the-wolf-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-25-followup",
+              "reason": "ev-road-fadlan-25-followup"
             }
           ]
         },
@@ -3740,6 +3765,11 @@
               "id": "travel",
               "value": -1,
               "reason": "risked-the-night-march"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-25-followup",
+              "reason": "ev-road-fadlan-25-followup"
             }
           ]
         }
@@ -3961,6 +3991,11 @@
               "id": "travel",
               "value": 1,
               "reason": "bore-witness-on-the-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-29-followup",
+              "reason": "ev-road-fadlan-29-followup"
             }
           ]
         },
@@ -4015,6 +4050,11 @@
               "id": "travel",
               "value": 1,
               "reason": "survived-the-open-storm"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-30-followup",
+              "reason": "ev-road-fadlan-30-followup"
             }
           ]
         },
@@ -4032,6 +4072,11 @@
               "id": "travel",
               "value": -1,
               "reason": "risked-the-lightning-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-30-followup",
+              "reason": "ev-road-fadlan-30-followup"
             }
           ]
         }
@@ -4134,6 +4179,11 @@
               "scope": "band",
               "id": "steppe",
               "reason": "paid-the-royal-toll"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-32-followup",
+              "reason": "ev-road-fadlan-32-followup"
             }
           ],
           "needs": {
@@ -4156,6 +4206,11 @@
               "id": "travel",
               "value": -1,
               "reason": "avoided-the-kings-messenger"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-32-followup",
+              "reason": "ev-road-fadlan-32-followup"
             }
           ]
         }
@@ -4322,6 +4377,11 @@
               "id": "travel",
               "value": 1,
               "reason": "heeded-the-frozen-river"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-35-followup",
+              "reason": "ev-road-fadlan-35-followup"
             }
           ]
         },
@@ -4339,6 +4399,11 @@
               "id": "travel",
               "value": -1,
               "reason": "risked-the-night-ice"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-road-fadlan-35-followup",
+              "reason": "ev-road-fadlan-35-followup"
             }
           ]
         }
