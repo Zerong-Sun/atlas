@@ -2000,6 +2000,12 @@ func _restore_document(doc: Dictionary) -> bool:
 	_bag["layer"].visible = false
 	_pending_pages_in_sequence = 0
 	if not state.active_journey.is_empty():
+		# A resumed journey has not been through the departure screen, so the
+		# bottom-right panel would sit blank behind the queued road event (and
+		# then the arrival's entry event) — reading as "the route vanished".
+		# Populate it now; every route renders disabled with "journey in
+		# progress", which is the same state the roads panel shows mid-trip.
+		_show_roads()
 		if not _show_next_pending_event():
 			_complete_journey()
 	elif not _show_next_pending_event():
