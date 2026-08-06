@@ -145,71 +145,71 @@ Cards at Tabriz
 
 ## ev.ev_tauris_entry.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You declare your goods at the tamghā-khāna of Tauris, and the tax-master reads the list twice, for the bazaar is full of tricks. As he stamps the page, a broker who holds a bench in the Great Bazaar beckons to you.
 
 ## ev.ev_tauris_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+The men of Tauris answer your questions in a dozen tongues, for half the world's merchants live here. Their answers do not agree, and one of them, a qanat-waterman, promises to bring you the truth before the bazaar closes.
 
 ## ev.ev_tauris_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Tauris.
+You spend a day in the great bāzār of Tauris and carry away a load of goods. The city's trade in pearls, spices, and horses is now written in your book.
 
 ## ev.ev_tauris_mentor_tarot.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+The Frankish widow takes your silver and lays out her cards on the worn table. The teaching weighs gain against cost, and when you rise to go she lays one last spread that she reads only to herself.
 
 ## ev.ev_tauris_mentor_tarot.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+The card-reader nods at your request and points across the room to the other table, where the dice master keeps his leather cup. Two arts, she says, and one parting gift.
 
 ## ev.ev_tauris_mentor_tarot.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Tauris.
+You watch the reader lay out the gates of choice and show how each road is a reading. The art of the cards is now in your book, though the dealing stays with her.
 
 ## ev.ev_tauris_mentor_astrodice.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You sit down to learn the star-dice from the reader beside the card table. He teaches the cast for the hour of departure, and at the end he gives you a throw that will wait for you on the road.
 
 ## ev.ev_tauris_mentor_astrodice.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+The dice master shows how each house of the sky names a stage of the road. The reading of the houses is now in your book, though the throw stays with him.
 
 ## ev.ev_tauris_a.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You ask the foreign merchants about the roads ahead, and their answers are many and sharp. One points south, one warns of tolls, and a third offers to write the true account down for you.
 
 ## ev.ev_tauris_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You buy a pearl from the Great Bazaar of Tauris and wrap it against harm in your pack. The pearl-work of the bazaar now rides with you as goods of worth.
 
 ## ev.ev_tauris_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Tauris.
+You climb the hill and see the whole city below — the bazaars, the caravanserais, the roads fanning out like a hand. The view is now in your book.
 
 ## ev.ev_tauris_b.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You speak with the Genoese merchants in their fondaco, and they receive you with the courtesy of men who measure every stranger. Their answers are careful, but one of them opens a ledger that is not for show.
 
 ## ev.ev_tauris_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You hire a dragoman and spend twenty days learning the Persian tongue. The language of the caravan roads now sits in your mouth, and your purse is lighter by two thousand pieces.
 
 ## ev.ev_tauris_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Tauris.
+You walk the covered market and listen to the talk of the caravans. Men speak of the road north to Caffa, where the steppe begins; the name is now on your map.
 
 ## ev.ev_tauris_c.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You rest a fortnight in the gardens among the jasmine, as the great lords do. The water-master who tends the qanat has watched your ease with a traveller's eye, and he comes to the pavilion to speak.
 
 ## ev.ev_tauris_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You buy dried apricots and pistachios for the road. The gardens of Tauris go with you in a small cloth bag.
 
 ## ev.ev_tauris_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Tauris.
+You walk the qanats and learn how the water comes from the hills without a single drop lost to the sun. The water-craft of Tauris is now in your book.
 
 ## ev.ev_tauris_consequence_a.title
 
@@ -217,47 +217,47 @@ Tauris: The Mark at the Gate
 
 ## ev.ev_tauris_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Tauris. Beyond the question lies the bazaar and the snow-fed qanats; choose what you will make of the sign.
+The first answer does not end at the gate. A broker who holds a bench in the Great Bazaar draws you aside and asks what you intend to carry away from Tauris. Beyond the question lies the bazaar and the snow-fed qanats; he offers to set a name to your name, the name of a merchant whose letter outruns any caravan. Choose what you will make of the sign.
 
 ## ev.ev_tauris_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the broker who can vouch for it
 
 ## ev.ev_tauris_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You take the name the broker offers and ask who can vouch for it. He names two credit keepers of the bazaar, and the matter opens again.
 
 ## ev.ev_tauris_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the broker and keep your own counsel
 
 ## ev.ev_tauris_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You thank the broker and keep your own counsel. The matter closes at the bazaar bench, and nothing more is asked of you in Tauris.
 
 ## ev.ev_tauris_consequence_a_resolution.title
 
-Tauris: A Consequence Takes Shape
+Tauris: The Broker's Letter
 
 ## ev.ev_tauris_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the broker's letter with you — a letter that will outrun any caravan. It will not decide the whole journey, but at the next bazaar his letter may open the credit house.
 
 ## ev.ev_tauris_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Send the letter before nightfall
 
 ## ev.ev_tauris_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You send the letter before nightfall. The broker's word now travels with your name, and the bazaar folk have a reason to receive you.
 
 ## ev.ev_tauris_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the letter in your travel book
 
 ## ev.ev_tauris_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You keep the letter in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_tauris_consequence_b.title
 
@@ -265,47 +265,47 @@ Tauris: The Road Behind the Answer
 
 ## ev.ev_tauris_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Tauris by its working life offers a second account of the bazaar and the snow-fed qanats. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a qanat-waterman finds you in the bazaar with a second account of the bazaar and the snow-fed qanats — which water lasts the year, and which house keeps a horse for hire. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_tauris_consequence_b.choice_1
 
-Follow the practical advice
+Follow the waterman's practical advice
 
 ## ev.ev_tauris_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You follow the waterman's practical advice and ask him to set it down. He writes the account out for you, and the city's true measures come into your hand.
 
 ## ev.ev_tauris_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the waterman
 
 ## ev.ev_tauris_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You leave the account with the waterman and keep your own counsel. It goes back to the qanat, and Tauris asks nothing more of you.
 
 ## ev.ev_tauris_consequence_b_resolution.title
 
-Tauris: A Consequence Takes Shape
+Tauris: The Water Account
 
 ## ev.ev_tauris_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the waterman's account with you — which water lasts the year, and which house keeps a horse. It will not decide the whole journey, but it will keep your purse and your mount in good order.
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Tell the next broker before nightfall
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Tauris now remember you among the bazaar and the snow-fed qanats.
+You tell the next broker before nightfall. The city's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_tauris_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the water-notes in your travel book
 
 ## ev.ev_tauris_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the bazaar and the snow-fed qanats.
+You spend a day copying the water-notes into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.ev_tauris_a_merchants_followup.title
 
@@ -466,5 +466,4 @@ Stay a day and let the dice settle in your own hand
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
 
 You sit with the dice through a day, learning their fall, and return them at dusk. The dice master remembers your calm, and the quarter speaks well of you.
-
 

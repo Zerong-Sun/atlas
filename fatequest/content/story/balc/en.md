@@ -131,51 +131,51 @@ Of the City of Balc
 
 ## ev.ev_balc_entry.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You declare your goods at the toll-house and pay the tax into the clerk's brass tray. The gate opens, but the old clerk keeps your name before him and beckons you aside.
 
 ## ev.ev_balc_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+The men you ask are glad to speak of Balc, and the answers follow you down the street. Before the day is out, a second voice is looking for you with a fuller account.
 
 ## ev.ev_balc_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Balc.
+You spend a day walking the great bāzār of Balc and come away with a pack of goods. The prices of lapis, balas rubies, and Turkoman horses are now written in your book.
 
 ## ev.ev_balc_a.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You climb among the broken palaces toward the spot where they say Alexander wed Roxana. The stones give nothing, but your footfall wakes an old man who keeps the ground.
 
 ## ev.ev_balc_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You lift a carved stone from the rubble of old Bactra. The fragment of the mother of cities now travels with you, and its tale goes into your book.
 
 ## ev.ev_balc_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Balc.
+The old man of the ruins is slow to answer, but your question is an old friend to him. He gathers himself and begins, as he has begun a hundred times, with the mother of cities.
 
 ## ev.ev_balc_b.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You pay eight hundred silver pieces for a block of raw lapis and stow it in your cargo. The blue of Badakhshan now rides with you, and the arcade remembers the deal.
 
 ## ev.ev_balc_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You part with four thousand pieces for the balas ruby. A stone that could buy a ship in Venice now rides in your cargo, heavier than anything else you carry.
 
 ## ev.ev_balc_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Balc.
+The caravan masters answer your question by weighing you, one after another. At last one of them settles on a bench beside the arcade and lays a ledger open across his knees.
 
 ## ev.ev_balc_c.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You lay incense and a silver coin upon the fire that has never gone out. The Magi nod, and the shrine's favour walks down the hill with you.
 
 ## ev.ev_balc_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You lie down in the shadow of the three stone tombs and close your eyes. The fire crackles once, and the dream the Magi promised comes to meet you.
 
 ## ev.ev_balc_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Balc.
+You listen as the Magi chant the dawn hymn before the eternal flame. The shrine and its white-robed keepers are now marked in your book.
 
 ## ev.ev_balc_consequence_a.title
 
@@ -183,31 +183,31 @@ Balc: The Mark at the Gate
 
 ## ev.ev_balc_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Balc. Beyond the question lies ruins and the lapis road; choose what you will make of the sign.
+The first answer does not end at the gate. An old clerk who keeps the caravanserai's ledgers draws you aside and asks what you intend to carry away from Balc. Beyond the question lies ruins and the lapis road; he offers to set a name to your name, so that the toll-houses ahead will know it. Choose what you will make of the sign.
 
 ## ev.ev_balc_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the old clerk who can vouch for it
 
 ## ev.ev_balc_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You take the name the clerk offers and ask who can vouch for it. He thinks, then names two men — one at the toll-house, one on the lapis road. The matter opens again.
 
 ## ev.ev_balc_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the old clerk and keep your own counsel
 
 ## ev.ev_balc_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You thank the clerk and keep your own counsel. The matter closes at the caravanserai door, and nothing more is asked of you in Balc.
 
 ## ev.ev_balc_consequence_a_resolution.title
 
-Balc: A Consequence Takes Shape
+Balc: The Caravanserai's Mark
 
 ## ev.ev_balc_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the caravanserai's mark with you — the name of a man who vouches for travellers on the lapis road. It will not decide the whole journey, but at the next toll-house his name may open a ledger that would otherwise stay closed.
 
 ## ev.ev_balc_consequence_a_resolution.choice_1
 
@@ -215,15 +215,15 @@ Make the introduction before nightfall
 
 ## ev.ev_balc_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You carry the introduction before nightfall. The name is now bound to yours, and the toll-houses of the lapis road have a reason to open to you.
 
 ## ev.ev_balc_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the mark in your travel book
 
 ## ev.ev_balc_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You keep the mark in your travel book and spend a day setting it down plainly. The record is made; the obligation waits for a road that may never call on it.
 
 ## ev.ev_balc_consequence_b.title
 
@@ -231,47 +231,47 @@ Balc: The Road Behind the Answer
 
 ## ev.ev_balc_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Balc by its working life offers a second account of ruins and the lapis road. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, the clerk's young assistant finds you in the arcade with a second account of ruins and the lapis road — what a stone really fetches, and which wells fail in summer. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_balc_consequence_b.choice_1
 
-Follow the practical advice
+Follow the assistant's practical advice
 
 ## ev.ev_balc_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You follow the practical advice and ask him to set it down. He writes the account out for you, and the road's true measures come into your hand.
 
 ## ev.ev_balc_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the assistant
 
 ## ev.ev_balc_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You leave the account with the assistant and keep your own counsel. It goes back to the arcade, and Balc asks nothing more of you.
 
 ## ev.ev_balc_consequence_b_resolution.title
 
-Balc: A Consequence Takes Shape
+Balc: The Account on the Road
 
 ## ev.ev_balc_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the assistant's account with you — the true price of a stone, and which wells dry in summer. It will not decide the whole journey, but on the road ahead it will earn its keep where grander tales would not.
 
 ## ev.ev_balc_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Pass the account on before nightfall
 
 ## ev.ev_balc_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+You pass the account to the next caravan before nightfall. The measures of the lapis road now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_balc_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the price-list in your travel book
 
 ## ev.ev_balc_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You spend a day copying the price-list into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.balc.mentor_closure.title
 
@@ -287,7 +287,7 @@ Ask what the road will demand
 
 ## ev.balc.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Balc now remember you among the ruins and the lapis road.
+The copyist answers without evasion: tolls, dry stages, and the reading of men will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.balc.mentor_closure.choice_2
 
@@ -295,7 +295,7 @@ Stay for a day and listen to the whole account
 
 ## ev.balc.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the ruins and the lapis road.
+You stay a day at the copyist's table, and he sets the whole account before you at leisure. What he reads aloud is longer than the parting lesson, and it earns what it asks.
 
 ## ev.balc.mentor_closure.choice_3
 
@@ -303,7 +303,7 @@ Thank the guide and keep moving
 
 ## ev.balc.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Balc.
+You thank the old copyist and take the road. He lets you go with a blessing, and the lesson of Balc remains unwritten.
 
 ## ev.ev_balc_a_followup.title
 

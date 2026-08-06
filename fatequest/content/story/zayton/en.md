@@ -304,143 +304,143 @@ bargain.
 
 ## ev.ev_zayton_entry.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You declare your goods to the Kaan's clerks, and their brushes move without pause, recording your cargo in the sea-trade register. When the tally is struck, one clerk draws a second sheet and asks where your road goes next.
 
 ## ev.ev_zayton_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You slip ashore by the fishermen's steps, and no brush records your coming. But a lamp burns in the watch-house above the quay, and the night watch keeps its own account of every shadow.
 
 ## ev.ev_zayton_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Zayton.
+You ask a boatman what all these ships are, and he answers as only a man who reads the sea can. He can name a hundred ships and a hundred roads, and he offers you the two that matter.
 
 ## ev.ev_zayton_jiaobei_ask.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You cast the two cups before the shrine and wait while they settle their answer. The reading is given, and the shrine keeps your name.
 
 ## ev.ev_zayton_jiaobei_ask.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You pass the temple-shrine without casting the cups. The goddess's answer stays unasked, and the slip stays in the cylinder.
 
 ## ev.ev_zayton_pilot_consequence.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You ask after the monsoon lane, and the pilot draws the southern line again, deeper. He names the days of the season when it runs, and Chamba settles on your map like a ship coming to anchor.
 
 ## ev.ev_zayton_pilot_consequence.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You ask after the inland road, and the pilot sets down his cup and speaks of it as a man speaks of a road he knows in the dark. The way north to Fuju is now written in your book, and your name in his.
 
 ## ev.ev_zayton_harbour.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You buy a sack of pepper at the quayside price, and the merchant slaps the sack as it is weighed. But the price he names is not the whole bargain; he keeps you a moment to speak of the freight ledger.
 
 ## ev.ev_zayton_harbour.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You stand the pilots a drink and ask about the winds. A day passes in good talk, and the monsoon's law — and the sea-road to Chamba — are now on your map.
 
 ## ev.ev_zayton_harbour.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Zayton.
+You spend the day watching the ships come in — a hundred at a time, they say, when the season is full. The haven of Zayton is now marked in your book.
 
 ## ev.ev_zayton_fanfang.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You ask the Persian traders about the sea road, and they answer in a tongue you are learning to follow. One of them, an old merchant, calls for tea and offers you the bargain that the quarter keeps for strangers of good faith.
 
 ## ev.ev_zayton_fanfang.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You pay a lad of the foreign quarter to interpret for a season, and spend twenty days in his company. The Arabic tongue now sits in your mouth, and your purse is lighter by three thousand pieces.
 
 ## ev.ev_zayton_fanfang.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Zayton.
+You pay twelve thousand pieces for a bolt of silk from a Manzi weaver and roll it into your cargo. The finest silk of the south now rides with you.
 
 ## ev.ev_zayton_mazu.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You make your offering before the sea goddess, and the smoke of the paper rises straight in the still air. The temple keeper watches the reading of your slip, and does not turn away as you rise to leave.
 
 ## ev.ev_zayton_mazu.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You shake the cylinder and draw a slip before the shrine of the sea-goddess. The answer is read aloud, and the sailors watch to see how you take it.
 
 ## ev.ev_zayton_mazu.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Zayton.
+You stand at the back and watch the sailors at their prayers before the sea-goddess. The way of the sea-folk is now written in your book.
 
 ## ev.ev_zayton_mentor.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You sit with the old woman at the temple door and give what you can to the temple. She watches your hands as you take up the cylinder, and she begins to teach you as she has taught forty years of readers.
 
 ## ev.ev_zayton_mentor.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You sit with the old woman and ask to learn the cups. She looks at you a long moment, then sets the three cups on the threshold and begins, for the three answers have their own order.
 
 ## ev.ev_zayton_mentor.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Zayton.
+The reader of the slips shows how the slips are read by their order and their marks. The art of the lots is now in your book, though the shaking stays with her.
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+The harbour-master reads the seal by lamplight and marks your name cleared in his own book. The copy has done its work; Zayton's harbour will not hold you back again.
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You spend a day setting the copy down fair in your travel book. The seal's work is preserved for the road, though the writing costs you a day.
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+The quay clerk strikes the tally through and writes your name in the paid column. The night's mischance is closed, and the ledger holds no shadow against you.
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You spend a day copying the tally and its reason into your travel book. The reckoning is recorded for the road ahead, though it costs you a day.
 
 ## ev.ev_zayton_ledger_consequence.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You keep the clerk's fair copy of the duty ledger, and your hand rests on the margin where Kinsay and the coastal road are noted. The ledger has given you a road to think about.
 
 ## ev.ev_zayton_ledger_consequence.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You let the cargo alone be entered and take no copy. The clerk dips his brush once more and closes the book; a coldness settles on the table that has nothing to do with the ink.
 
 ## ev.ev_zayton_watch_consequence.choice_1_result
 
-The choice leaves a mark: the people of Zayton now remember you among the harbour and the foreign ships.
+You pay the late-declaration fee on the watch-table, and the tally is marked paid. The watch leaves your cargo in your keeping, but they have written your name down twice.
 
 ## ev.ev_zayton_watch_consequence.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the harbour and the foreign ships.
+You leave the cargo for two days' inspection. The watch goes through the bales without haste and marks each one in their book; in the waiting you come to know the rounds of the quay by heart.
 
 ## ev.ev_zayton_ledger_consequence_resolution.title
 
-Zayton: A Consequence Takes Shape
+Zayton: The Sealed Copy
 
 ## ev.ev_zayton_ledger_consequence_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+By carrying the sealed copy of the duty ledger, you carry Zayton's own mark upon your cargo. It will not decide the whole journey, but wherever the Kaan's clerks keep their tables, the seal will speak before you do.
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1
 
-Make the introduction before nightfall
+Present the copy to the harbour-master before nightfall
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the copy safe in your travel book
 
 ## ev.ev_zayton_watch_consequence_resolution.title
 
-Zayton: A Consequence Takes Shape
+Zayton: The Watch's Tally
 
 ## ev.ev_zayton_watch_consequence_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+By carrying the watch's tally, you carry the receipt of a debt settled in the dark. It will not decide the whole journey, but at the next quay the tally says you have already paid your reckoning at Zayton.
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1
 
-Make the introduction before nightfall
+Enter the tally at the quay office before nightfall
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the tally in your travel book
 
 ## ev.ev_zayton_harbour_followup.title
 
@@ -609,5 +609,4 @@ Wait a day and let the cups settle in your own hand
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
 
 You sit with the cups through an afternoon, learning their weight, and leave them with the temple at dusk. The attendant remembers your patience, and the quarter speaks well of you.
-
 

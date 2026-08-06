@@ -139,59 +139,59 @@ Arriving at GREAT CITY OF KINSAY
 
 ## ev.ev_kinsay_entry.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+The clerks of the shìbó sī weigh your cargo on the wharf scales and write your name into the canal register. As you turn away, a boatman who works the grain canal calls to you from the water's edge.
 
 ## ev.ev_kinsay_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+The men of Kinsay answer your questions by pointing across the water, for the city is too great to describe standing still. Their answers travel from bridge to bridge, and before nightfall a fuller account has crossed the canal to find you.
 
 ## ev.ev_kinsay_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Kinsay.
+You spend a day walking the great market of Kinsay and carry away a load of goods. The market of the city of Heaven is now written in your book.
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You pay the temple reader and sit at her low table while she lays out the three cups. The teaching is quick and exact, and at the end she closes her hand over the cups and gives you a parting throw.
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+The temple reader shows how the two cups answer by their fall. The art of the cups is now written in your book, though its practice stays with her.
 
 ## ev.ev_kinsay_a.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You hire a boat and spend the day on the canals under the twelve thousand bridges. The boatman reads the water like a book, and at the turning of the afternoon he ships his oars to tell you what the bridges keep.
 
 ## ev.ev_kinsay_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You walk the bridges of Kinsay and lose the count before midday. The canals of the city of Heaven are now marked in your book.
 
 ## ev.ev_kinsay_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Kinsay.
+You climb the drum-tower and see a hundred canals below, all alive with boats. The road south to Suju is now on your map, and the view is in your book.
 
 ## ev.ev_kinsay_b.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You pay twenty thousand pieces for two sacks of pepper at the customs house. A merchant's fortune in spice now rides in your cargo, and the freight is written in your book.
 
 ## ev.ev_kinsay_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You bathe in perfumed water and dine on ten courses in a house overlooking the market squares. The steward who served you clears the last dish and lingers, as if the account of the city is not yet closed.
 
 ## ev.ev_kinsay_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Kinsay.
+You count forty cart-loads of pepper pass the customs in a single day. The sea-road to Zayton, where the ships bring it, is now on your map.
 
 ## ev.ev_kinsay_c.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You hire a pleasure boat with musicians and wine and push out onto the West Lake. As dusk falls and the lanterns are lit on the water, the boatmaster leans close to speak against the music.
 
 ## ev.ev_kinsay_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You stand on the shore and watch the floating palaces move across the lake. The pleasure lake of Kinsay is now marked in your book.
 
 ## ev.ev_kinsay_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Kinsay.
+You wait for the moon to rise over the lake. What the moonlight shows you, no one in the empire can argue with; it settles in you like a certainty.
 
 ## ev.ev_kinsay_consequence_a.title
 
@@ -199,47 +199,47 @@ Kinsay: The Mark at the Gate
 
 ## ev.ev_kinsay_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Kinsay. Beyond the question lies the canals and the grain boats; choose what you will make of the sign.
+The first answer does not end at the gate. A boatman who works the grain canal draws you aside by the wharf and asks what you intend to carry away from Kinsay. Beyond the question lies the canals and the grain boats; he offers to set a name to your name, a name the customs house will remember. Choose what you will make of the sign.
 
 ## ev.ev_kinsay_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the boatman who can vouch for it
 
 ## ev.ev_kinsay_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You take the name the boatman offers and ask who can vouch for it. He names two clerks of the wharf, and the matter opens again.
 
 ## ev.ev_kinsay_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the boatman and keep your own counsel
 
 ## ev.ev_kinsay_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You thank the boatman and keep your own counsel. The matter closes at the wharf, and nothing more is asked of you in Kinsay.
 
 ## ev.ev_kinsay_consequence_a_resolution.title
 
-Kinsay: A Consequence Takes Shape
+Kinsay: The Boatman's Name
 
 ## ev.ev_kinsay_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the boatman's name with you — a name the customs house will remember. It will not decide the whole journey, but at the next canal toll his name may halve your wait.
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Deliver the name before nightfall
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You deliver the name before nightfall. The boatman's word now travels with your name, and the wharf folk have a reason to receive you.
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the boatman's name in your travel book
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You keep the boatman's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_kinsay_consequence_b.title
 
@@ -247,47 +247,47 @@ Kinsay: The Road Behind the Answer
 
 ## ev.ev_kinsay_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Kinsay by its working life offers a second account of the canals and the grain boats. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a grain porter finds you on the wharf with a second account of the canals and the grain boats — how the canal tolls run, and which bridge opens for a loaded boat. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_kinsay_consequence_b.choice_1
 
-Follow the practical advice
+Follow the porter's practical advice
 
 ## ev.ev_kinsay_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You follow the porter's practical advice and ask him to set it down. He writes the account out for you, and the canal's true measures come into your hand.
 
 ## ev.ev_kinsay_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the porter
 
 ## ev.ev_kinsay_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You leave the account with the porter and keep your own counsel. It goes back to the wharf, and Kinsay asks nothing more of you.
 
 ## ev.ev_kinsay_consequence_b_resolution.title
 
-Kinsay: A Consequence Takes Shape
+Kinsay: The Canal-Toll Account
 
 ## ev.ev_kinsay_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the porter's account with you — how the canal tolls run, and which bridge opens for a loaded boat. It will not decide the whole journey, but it will save you more than it cost to learn.
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Tell the next boatman before nightfall
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Kinsay now remember you among the canals and the grain boats.
+You tell the next boatman before nightfall. The canal's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the toll-schedule in your travel book
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the canals and the grain boats.
+You spend a day copying the toll-schedule into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.ev_kinsay_a_followup.title
 

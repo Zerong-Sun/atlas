@@ -155,79 +155,79 @@ Pillars at Baghdad
 
 ## ev.ev_baldacum_entry.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You declare your goods at the tamghā-khāna, and the tax-master stamps the page without lifting his eyes. But the scribe who once served the old palace has noted your name, and he follows you to the door.
 
 ## ev.ev_baldacum_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+The men of Baudas answer your questions with the pride of a city that once ruled half the world. Their answers differ, and one speaker breaks off to promise you the truer version before the day closes.
 
 ## ev.ev_baldacum_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Baldacum.
+You spend a day in the great bāzār of Baudas and carry away a load of goods. The city's trade in spices and brocade is now written in your book.
 
 ## ev.ev_baldacum_mentor_bazi.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+The calendar master takes your fee and draws up your four pillars in the dust of his table. The teaching runs past three years of roads, and at the end he turns the almanac page to a year he says you will need.
 
 ## ev.ev_baldacum_mentor_bazi.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+The calendar master nods at your request and sweeps his table clean. The sand figures ask a different question than the pillars do, and he gives you a final reading with the day's last light.
 
 ## ev.ev_baldacum_mentor_bazi.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Baldacum.
+The calendar master shows how the four pillars of a birth date name the seasons of a life. The art of the calendar is now in your book, though its use stays with him.
 
 ## ev.ev_baldacum_mentor_geomancy.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+The sand-reader marks his sixteen figures in the dust and pays you the respect of telling the truth without softening. What he finds for your road, he sets before you plainly.
 
 ## ev.ev_baldacum_mentor_geomancy.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You watch one figure cast in the sand and see how the marks divide into houses. The earth-reading is now written in your book, though the casting stays with him.
 
 ## ev.ev_baldacum_geomancy_court.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You cast the sand before the geomancer and wait while the marks fall into their houses. The reading is given, and the court keeps your name.
 
 ## ev.ev_baldacum_geomancy_court.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You walk past the court of the earth-readers without asking. The geomancy of Baudas stays where you found it.
 
 ## ev.ev_baldacum_a.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You climb through the ruined halls of the Caliph's palace, past fallen domes and rooms of bare brick. In the deepest court a warden who keeps the last door watches you come, and does not turn you away.
 
 ## ev.ev_baldacum_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You slip the old warden five hundred pieces and search the treasury's rubble. You come out with goods and a book's worth of what the Caliph's hoard once was.
 
 ## ev.ev_baldacum_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Baldacum.
+You hire a guard to tell you what this place once was. The day passes among the fallen palaces, and the memory of old Baudas goes into your book.
 
 ## ev.ev_baldacum_b.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You buy a length of Baghdad brocade worked with gold thread, and the cloth-merchant closes his hand over the sale. But he keeps your wrist a moment longer than the price requires, and leans toward the lamp.
 
 ## ev.ev_baldacum_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+The spice-sellers trace their wares to the sea-ports: Ormus for the pepper, Basora for the dates and the gulf-boats. Both names are now on your map.
 
 ## ev.ev_baldacum_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Baldacum.
+You drink sherbet with the money-changers and listen to their talk of rates and letters of credit. The men of the exchange now speak of you with favour.
 
 ## ev.ev_baldacum_c.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+The old storyteller of the bazaar sees that you want the whole tale, and he settles deeper onto his carpet. He will tell it as it is told in the bazaars, with the gold tower and the river of treasure in it.
 
 ## ev.ev_baldacum_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You pay two hundred pieces for the right to search, and turn up a coin from before the fall of Baudas. A small piece of the old city now rides in your pack.
 
 ## ev.ev_baldacum_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Baldacum.
+You spend two days writing down the story while it is still told. When Baudas forgets itself, your book will still remember.
 
 ## ev.ev_baldacum_consequence_a.title
 
@@ -235,47 +235,47 @@ Baldacum: The Mark at the Gate
 
 ## ev.ev_baldacum_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Baldacum. Beyond the question lies the two rivers and the old palace; choose what you will make of the sign.
+The first answer does not end at the gate. A scribe who once served the old palace draws you aside and asks what you intend to carry away from Baudas. Beyond the question lies the two rivers and the old palace; he offers to set a name to your name, a name that still opens the river gate. Choose what you will make of the sign.
 
 ## ev.ev_baldacum_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the scribe who can vouch for it
 
 ## ev.ev_baldacum_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You take the name the scribe offers and ask who can vouch for it. He names two keepers of the river gate, and the matter opens again.
 
 ## ev.ev_baldacum_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the scribe and keep your own counsel
 
 ## ev.ev_baldacum_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You thank the scribe and keep your own counsel. The matter closes at the river gate, and nothing more is asked of you in Baudas.
 
 ## ev.ev_baldacum_consequence_a_resolution.title
 
-Baldacum: A Consequence Takes Shape
+Baudas: The Scribe's Name
 
 ## ev.ev_baldacum_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the scribe's name with you — a name that still opens the river gate. It will not decide the whole journey, but at the next gate his name may spare you the bribe.
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Use the name before nightfall
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You use the name before nightfall. The scribe's word now travels with your name, and the river folk have a reason to receive you.
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the scribe's name in your travel book
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You keep the scribe's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_baldacum_consequence_b.title
 
@@ -283,47 +283,47 @@ Baldacum: The Road Behind the Answer
 
 ## ev.ev_baldacum_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Baldacum by its working life offers a second account of the two rivers and the old palace. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a river-boatman finds you at the quay with a second account of the two rivers and the old palace — what still floats out of Baudas, and what the tide takes back. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_baldacum_consequence_b.choice_1
 
-Follow the practical advice
+Follow the boatman's practical advice
 
 ## ev.ev_baldacum_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You follow the boatman's practical advice and ask him to set it down. He writes the account out for you, and the river's true measures come into your hand.
 
 ## ev.ev_baldacum_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the boatman
 
 ## ev.ev_baldacum_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You leave the account with the boatman and keep your own counsel. It goes back to the quay, and Baudas asks nothing more of you.
 
 ## ev.ev_baldacum_consequence_b_resolution.title
 
-Baldacum: A Consequence Takes Shape
+Baudas: The Tide Account
 
 ## ev.ev_baldacum_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the boatman's account with you — what still floats out of Baudas, and what the tide takes back. It will not decide the whole journey, but it will keep your cargo on the safe water.
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Tell the next river-boatman before nightfall
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Baldacum now remember you among the two rivers and the old palace.
+You tell the next boatman before nightfall. The river's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the tide-notes in your travel book
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the two rivers and the old palace.
+You spend a day copying the tide-notes into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.ev_baldacum_a_followup.title
 
@@ -484,5 +484,4 @@ Stay a day and watch the sand traced to its answer
 ## ev.ev_baldacum_mentor_geomancy_followup.choice_3_result
 
 You watch him trace figure after figure through an afternoon and learn the patience of it. When you leave, the sand readers remember the traveller who watched to the end.
-
 

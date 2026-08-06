@@ -125,51 +125,51 @@ Of a Province Called Cotan
 
 ## ev.ev_cotan_entry.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+The toll-house of Cotan writes your goods into the river register, and the clerk notes that you have come by the jade road. As you turn from the table, a jade-washer who has stood in the river since boyhood calls to you.
 
 ## ev.ev_cotan_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+The men of Cotan answer your questions with the caution of men who trade in precious things. Their answers do not quite agree, and one of them promises to find you again when the river has told him more.
 
 ## ev.ev_cotan_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cotan.
+You spend a day in the bāzār of Cotan and carry away a load of goods. The city's jade and silk are now written in your book.
 
 ## ev.ev_cotan_a.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You pay two thousand pieces for a piece of mutton-fat jade, white as curd, and stow it in your cargo. A stone worth its weight in gold now rides with you.
 
 ## ev.ev_cotan_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You wade into the cold river and feel with your bare feet for the stones the water has polished. A day passes in the search, and the jade-river's craft is now in your book.
 
 ## ev.ev_cotan_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cotan.
+You watch the jade-divers from the bank as they drop into the cold water, and the eldest calls you to his side to show you what his hands have learned in a lifetime of that river.
 
 ## ev.ev_cotan_b.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You buy a bolt of Cotan silk, finer than a thread of hair, and roll it into your cargo. The city's weaving now travels with you as goods of worth.
 
 ## ev.ev_cotan_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You sit among the women at the looms, and they take up their song. When you ask what it means, one of them laughs and promises to teach you the part that belongs to a traveller.
 
 ## ev.ev_cotan_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cotan.
+You buy the dyers' samples — saffron, indigo, madder, cochineal. Four colours, and each one tells where the trade of Cotan goes.
 
 ## ev.ev_cotan_c.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You spend three days digging in the buried city of a thousand monasteries. You find no hoard, but the sand gives up its old story, now written in your book.
 
 ## ev.ev_cotan_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You take a painted fragment from the buried city — a bodhisattva's hand, still holding its colours after all these years. It now travels with you.
 
 ## ev.ev_cotan_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cotan.
+You ask an elder why the people drink the dust as medicine. He looks at you a long while, then walks you to the edge of the old river terrace and begins a tale of a thousand monasteries.
 
 ## ev.ev_cotan_consequence_a.title
 
@@ -177,47 +177,47 @@ Cotan: The Mark at the Gate
 
 ## ev.ev_cotan_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Cotan. Beyond the question lies the jade river and the oasis; choose what you will make of the sign.
+The first answer does not end at the gate. A jade-washer who has stood in the river since boyhood draws you aside and asks what you intend to carry away from Cotan. Beyond the question lies the jade river and the oasis; he offers to teach you a name the water has not yet given up. Choose what you will make of the sign.
 
 ## ev.ev_cotan_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the jade-washer who can vouch for it
 
 ## ev.ev_cotan_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You take the name the jade-washer offers and ask who can vouch for it. He names the elders of the river, and the matter opens again.
 
 ## ev.ev_cotan_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the jade-washer and keep your own counsel
 
 ## ev.ev_cotan_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You thank the jade-washer and keep your own counsel. The matter closes at the river, and nothing more is asked of you in Cotan.
 
 ## ev.ev_cotan_consequence_a_resolution.title
 
-Cotan: A Consequence Takes Shape
+Cotan: The Jade-Washer's Mark
 
 ## ev.ev_cotan_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the jade-washer's mark with you — the name of a man who knows the river's true course. It will not decide the whole journey, but where the road fords next, his name may buy you a guide.
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Bring the name before nightfall
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You bring the name before nightfall. The jade-washer's word now travels with your name, and the river folk have a reason to receive you.
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the jade-washer's name in your travel book
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You keep the jade-washer's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_cotan_consequence_b.title
 
@@ -225,47 +225,47 @@ Cotan: The Road Behind the Answer
 
 ## ev.ev_cotan_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Cotan by its working life offers a second account of the jade river and the oasis. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a silk-weaver finds you at the river with a second account of the jade river and the oasis — how the jade is graded, and where the water runs deep. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_cotan_consequence_b.choice_1
 
-Follow the practical advice
+Follow the weaver's practical advice
 
 ## ev.ev_cotan_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You follow the weaver's practical advice and ask her to set it down. She writes the account out for you, and the river's true measures come into your hand.
 
 ## ev.ev_cotan_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the weaver
 
 ## ev.ev_cotan_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You leave the account with the weaver and keep your own counsel. It goes back to the loom, and Cotan asks nothing more of you.
 
 ## ev.ev_cotan_consequence_b_resolution.title
 
-Cotan: A Consequence Takes Shape
+Cotan: The River Account
 
 ## ev.ev_cotan_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the weaver's account with you — how jade is graded, and where the water runs deep. It will not decide the whole journey, but on the river road it will keep you from a fool's bargain.
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Share the grading before nightfall
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+You share the grading with the next buyer before nightfall. The river's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the grading-rule in your travel book
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You spend a day copying the grading-rule into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.cotan.mentor_closure.title
 
@@ -281,7 +281,7 @@ Ask what the road will demand
 
 ## ev.cotan.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Cotan now remember you among the jade river and the oasis.
+The keeper of the jade-river well answers without evasion: judgement of stone, and of men, will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.cotan.mentor_closure.choice_2
 
@@ -289,7 +289,7 @@ Stay for a day and listen to the whole account
 
 ## ev.cotan.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the jade river and the oasis.
+You stay a day by the keeper's well, and he gives you the whole of the jade river's counsel. What you carry away is longer than a lesson and lighter than a stone.
 
 ## ev.cotan.mentor_closure.choice_3
 
@@ -297,7 +297,7 @@ Thank the guide and keep moving
 
 ## ev.cotan.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cotan.
+You thank the keeper of the jade-river well and take the road. He lets you go with a blessing, and the lesson of Cotan remains unwritten.
 
 ## ev.ev_cotan_a_followup.title
 

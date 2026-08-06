@@ -2,7 +2,7 @@
 unit: lop
 lang: zh
 source: en
-source_rev: 5b4bfe72c111
+source_rev: b9e736109ddc
 status: translated
 translator: 人工校译
 notes: >
@@ -29,47 +29,47 @@ stamps:
   ev.lop.shrine.choice.offer: 2e7c07820489
   ev.lop.shrine.choice.watch: 57e1354d9104
   ev.lop.shrine.title: 411cd7fe9473
-  ev.ev_lop_entry.choice_1_result: 11f37aebb83e
-  ev.ev_lop_entry.choice_2_result: fa490ec8c040
-  ev.ev_lop_bazaar.choice_1_result: 11f37aebb83e
-  ev.ev_lop_bazaar.choice_2_result: fa490ec8c040
-  ev.ev_lop_caravanserai.choice_1_result: 11f37aebb83e
-  ev.ev_lop_caravanserai.choice_2_result: fa490ec8c040
-  ev.ev_lop_caravanserai.choice_3_result: ca61672333bb
-  ev.ev_lop_shrine.choice_1_result: 11f37aebb83e
-  ev.ev_lop_shrine.choice_2_result: fa490ec8c040
+  ev.ev_lop_entry.choice_1_result: 31e2a31d8542
+  ev.ev_lop_entry.choice_2_result: 5a612d26bf51
+  ev.ev_lop_bazaar.choice_1_result: cbdbeee893e2
+  ev.ev_lop_bazaar.choice_2_result: 07b8543c07f9
+  ev.ev_lop_caravanserai.choice_1_result: d41057c9090f
+  ev.ev_lop_caravanserai.choice_2_result: 7f51984628d6
+  ev.ev_lop_caravanserai.choice_3_result: 824b33e754c8
+  ev.ev_lop_shrine.choice_1_result: 3ba95416d6a0
+  ev.ev_lop_shrine.choice_2_result: fc65eac579b0
   ev.ev_lop_consequence_a.title: eb062c7d2ca6
-  ev.ev_lop_consequence_a.body: 992e9e08deb2
-  ev.ev_lop_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_lop_consequence_a.choice_1_result: 11f37aebb83e
-  ev.ev_lop_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_lop_consequence_a.choice_2_result: fa490ec8c040
-  ev.ev_lop_consequence_a_resolution.title: 8f61fadf58ea
-  ev.ev_lop_consequence_a_resolution.body: 357c2908f927
-  ev.ev_lop_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_lop_consequence_a_resolution.choice_1_result: 11f37aebb83e
-  ev.ev_lop_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_lop_consequence_a_resolution.choice_2_result: fa490ec8c040
+  ev.ev_lop_consequence_a.body: 7af3c98eac27
+  ev.ev_lop_consequence_a.choice_1: a388e02d95ab
+  ev.ev_lop_consequence_a.choice_1_result: d58e45732a6d
+  ev.ev_lop_consequence_a.choice_2: 4c3e5cb2d921
+  ev.ev_lop_consequence_a.choice_2_result: 904c68945651
+  ev.ev_lop_consequence_a_resolution.title: 8da8411c8076
+  ev.ev_lop_consequence_a_resolution.body: 8f02a293460b
+  ev.ev_lop_consequence_a_resolution.choice_1: 9026575c45a6
+  ev.ev_lop_consequence_a_resolution.choice_1_result: e5f80e3b0abf
+  ev.ev_lop_consequence_a_resolution.choice_2: 906bc885b2c6
+  ev.ev_lop_consequence_a_resolution.choice_2_result: 6a301c26d2b7
   ev.ev_lop_consequence_b.title: af7be3ab3455
-  ev.ev_lop_consequence_b.body: e3a247ec704f
-  ev.ev_lop_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_lop_consequence_b.choice_1_result: 11f37aebb83e
-  ev.ev_lop_consequence_b.choice_2: bb0917a651a0
-  ev.ev_lop_consequence_b.choice_2_result: fa490ec8c040
-  ev.ev_lop_consequence_b_resolution.title: 8f61fadf58ea
-  ev.ev_lop_consequence_b_resolution.body: 827b72f18207
-  ev.ev_lop_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_lop_consequence_b_resolution.choice_1_result: 11f37aebb83e
-  ev.ev_lop_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_lop_consequence_b_resolution.choice_2_result: fa490ec8c040
+  ev.ev_lop_consequence_b.body: fdfbd0596466
+  ev.ev_lop_consequence_b.choice_1: e7ea14f7220c
+  ev.ev_lop_consequence_b.choice_1_result: 1d7c341e2546
+  ev.ev_lop_consequence_b.choice_2: 89ba37c166c9
+  ev.ev_lop_consequence_b.choice_2_result: 764d32532634
+  ev.ev_lop_consequence_b_resolution.title: 1e68cb6e4816
+  ev.ev_lop_consequence_b_resolution.body: 57174b4257ea
+  ev.ev_lop_consequence_b_resolution.choice_1: f90772d45222
+  ev.ev_lop_consequence_b_resolution.choice_1_result: 21f57136f682
+  ev.ev_lop_consequence_b_resolution.choice_2: 8dc5da77ae0f
+  ev.ev_lop_consequence_b_resolution.choice_2_result: bdd77d33624b
   ev.lop.mentor_closure.title: da4a56320d6c
   ev.lop.mentor_closure.body: 7c7b8735668f
   ev.lop.mentor_closure.choice_1: da8d611ab3c7
-  ev.lop.mentor_closure.choice_1_result: 11f37aebb83e
+  ev.lop.mentor_closure.choice_1_result: 7247e877d5a4
   ev.lop.mentor_closure.choice_2: 59a447ce21bf
-  ev.lop.mentor_closure.choice_2_result: fa490ec8c040
+  ev.lop.mentor_closure.choice_2_result: 1c9ce8b2614e
   ev.lop.mentor_closure.choice_3: 630a8fcfe069
-  ev.lop.mentor_closure.choice_3_result: ca61672333bb
+  ev.lop.mentor_closure.choice_3_result: 1eb7e05498bf
   ev.ev_lop_bazaar_followup.title: 5397ba750946
   ev.ev_lop_bazaar_followup.body: c07b8528feb6
   ev.ev_lop_bazaar_followup.choice_1: e8539bc57bc4
@@ -189,39 +189,39 @@ stamps:
 
 ## ev.ev_lop_entry.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你在沙漠边缘的路边歇了半日，给牲口饮水。一位熟知罗卜路上每一处水源的老守井人望着你，走过来搭话。
 
 ## ev.ev_lop_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+这片荒原前最后一个镇子的人，郑重地回答了你的问题。他们对穿越之路的说法并不一致，其中一人说，日落前会把真实情况带来给你。
 
 ## ev.ev_lop_bazaar.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+商贩把羊脂玉托在手心掂了掂才肯放手，价钱就此说定。但这块玉并不是交易的全部——他按住你的手片刻，凑近了身子。
 
 ## ev.ev_lop_bazaar.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+商人们告诉你，玉石自东边的河流而来。沙州之名如今上了你的舆图，玉河的流向也写进了你的行纪。
 
 ## ev.ev_lop_caravanserai.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+向导收下你的两百枚钱，数了两遍，点了下头。他话不多，却用看自家马匹的眼神打量了你的牲口。
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你在驿栈中等了八日，向店主付了食宿之资。待商队终于启程，通往沙州的路已在眼前展开。
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在罗卜的下一步行动。
+你为干渴的路程备足了干粮，并把沙漠的规矩记进行纪：一日之内无食无水，亦无人烟。沙漠能拿走的，它必会拿走。
 
 ## ev.ev_lop_shrine.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你把供物放进小庙的佛龛，退后一步。看守洞窟的僧人走近前来——不为那枚钱，而是想讲讲你之前的旅人留下了什么。
 
 ## ev.ev_lop_shrine.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你默默看着朝圣者献上供奉。沙漠圣祠的礼俗，如今写进了你的行纪。
 
 ## ev.ev_lop_consequence_a.title
 
@@ -229,47 +229,47 @@ stamps:
 
 ## ev.ev_lop_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从罗卜带走什么。问题背后正是沙海与旧井；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。一位熟知罗卜路上每一处水源的老守井人把你引到一旁，问你打算从罗卜带走什么。问题背后正是沙海与旧井；他提出说出沙海那一头一口井的名字，说它至今仍甘甜。你须决定如何对待这道征兆。
 
 ## ev.ev_lop_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问他有何凭据
 
 ## ev.ev_lop_consequence_a.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你收下守井人递来的名字，追问他有何凭据。他取出一片那口井沿上敲下的石片，此事又打开了。
 
 ## ev.ev_lop_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过老守井人，把自己的打算收在心里
 
 ## ev.ev_lop_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你谢过老守井人，把自己的打算收在心里。此事在井边就此了结，罗卜不再有人向你多问一句。
 
 ## ev.ev_lop_consequence_a_resolution.title
 
-罗卜：后果显出形状
+罗卜：守井人的印记
 
 ## ev.ev_lop_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把守井人的印记带在身上——一个他担保能打开沙海那一头井口的名字。它不会替你决定整段旅程，但在无水可饮的日子里，它或许正是咸与甜的分界。
 
 ## ev.ev_lop_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这个名字定下
 
 ## ev.ev_lop_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你在天黑前把这个名字定了下来。守井人的承诺如今随你的名字而行，沙漠里的人从此有理由接待你。
 
 ## ev.ev_lop_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把守井人的名字收进自己的行纪
 
 ## ev.ev_lop_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你把守井人的名字收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_lop_consequence_b.title
 
@@ -277,47 +277,47 @@ stamps:
 
 ## ev.ev_lop_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉罗卜日常生计的人又讲起沙海与旧井。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位商队厨子找到你，讲起沙海与旧井的另一番说法——哪些井至今有水，哪些已经咸了。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_lop_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位厨子的实用建议走
 
 ## ev.ev_lop_consequence_b.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你照着这位厨子的实用建议走，请他把它写下来。他为你把这段叙述抄出，沙漠真正的尺度便落进你手里。
 
 ## ev.ev_lop_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位厨子
 
 ## ev.ev_lop_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你把这段叙述留给那位厨子，自己收住了口。它回到了井边，罗卜不再向你索取什么。
 
 ## ev.ev_lop_consequence_b_resolution.title
 
-罗卜：后果显出形状
+罗卜：甜井的账目
 
 ## ev.ev_lop_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位厨子的账目上路——哪些井至今有水，哪些已经咸了。它不会替你决定整段旅程，但在无水可饮的日子里，它是一张舆图也画不出的地图。
 
 ## ev.ev_lop_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把甜井标出来
 
 ## ev.ev_lop_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+你在天黑前把甜井标上了舆图。沙漠的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_lop_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份井位图收进自己的行纪
 
 ## ev.ev_lop_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你花了一日，把这份井位图抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.lop.mentor_closure.title
 
@@ -333,7 +333,7 @@ stamps:
 
 ## ev.lop.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：罗卜的人们已把你记在沙海与旧井之间。
+听风人并不回避：水与观天之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.lop.mentor_closure.choice_2
 
@@ -341,7 +341,7 @@ stamps:
 
 ## ev.lop.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随沙海与旧井先一步传开。
+你在读风人身边留了一日，他把全部的忠告从容地讲给你。那不是一张地图，却会替你读脚下的沙。
 
 ## ev.lop.mentor_closure.choice_3
 
@@ -349,7 +349,7 @@ stamps:
 
 ## ev.lop.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在罗卜的下一步行动。
+你谢过听风人，踏上了路。他放你前行，为你祝福；沙漠的这番功课，便没有落笔。
 
 ## ev.ev_lop_bazaar_followup.title
 

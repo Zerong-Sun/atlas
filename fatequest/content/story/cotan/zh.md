@@ -2,7 +2,7 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: d41aa615335a
+source_rev: 251935c87eed
 status: translated
 translator: 人工校译
 notes: >
@@ -32,50 +32,50 @@ stamps:
   ev.cotan.c.title: b9524767021d
   ev.cotan.entry.body: 87b436f01b1a
   ev.cotan.entry.title: d750868faec6
-  ev.ev_cotan_entry.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_entry.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_entry.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_a.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_a.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_a.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_b.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_b.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_b.choice_3_result: 2c512b57b3d2
-  ev.ev_cotan_c.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_c.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_c.choice_3_result: 2c512b57b3d2
+  ev.ev_cotan_entry.choice_1_result: 7c9b643637e3
+  ev.ev_cotan_entry.choice_2_result: 1d0d1a88a4ab
+  ev.ev_cotan_entry.choice_3_result: 4915924aa8eb
+  ev.ev_cotan_a.choice_1_result: 91e8595e6287
+  ev.ev_cotan_a.choice_2_result: 1303a640ba39
+  ev.ev_cotan_a.choice_3_result: 5cb18c158a5a
+  ev.ev_cotan_b.choice_1_result: 60ba47c6f2b3
+  ev.ev_cotan_b.choice_2_result: c8b20b3e98d8
+  ev.ev_cotan_b.choice_3_result: 5ad749de3931
+  ev.ev_cotan_c.choice_1_result: 532a55a9c3cc
+  ev.ev_cotan_c.choice_2_result: 503b3b765500
+  ev.ev_cotan_c.choice_3_result: 68f76c14447a
   ev.ev_cotan_consequence_a.title: 0a189a9de00d
-  ev.ev_cotan_consequence_a.body: 0a5c32e02c01
-  ev.ev_cotan_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cotan_consequence_a.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cotan_consequence_a.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_consequence_a_resolution.title: d282ac8b9ba2
-  ev.ev_cotan_consequence_a_resolution.body: 357c2908f927
-  ev.ev_cotan_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cotan_consequence_a_resolution.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cotan_consequence_a_resolution.choice_2_result: 616d22cd9bb6
+  ev.ev_cotan_consequence_a.body: 33b87e3d32ef
+  ev.ev_cotan_consequence_a.choice_1: f66b3e8cdcec
+  ev.ev_cotan_consequence_a.choice_1_result: a562b9c9eaa9
+  ev.ev_cotan_consequence_a.choice_2: 2cd7a2907d14
+  ev.ev_cotan_consequence_a.choice_2_result: a8b0ca9b404b
+  ev.ev_cotan_consequence_a_resolution.title: 397f9f76c13b
+  ev.ev_cotan_consequence_a_resolution.body: 5b6c14ff83a0
+  ev.ev_cotan_consequence_a_resolution.choice_1: 2cb9a5275ee5
+  ev.ev_cotan_consequence_a_resolution.choice_1_result: edabbab86ac8
+  ev.ev_cotan_consequence_a_resolution.choice_2: da45666f4966
+  ev.ev_cotan_consequence_a_resolution.choice_2_result: 0264747381a3
   ev.ev_cotan_consequence_b.title: 407b734dd715
-  ev.ev_cotan_consequence_b.body: 0b6da447baef
-  ev.ev_cotan_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cotan_consequence_b.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cotan_consequence_b.choice_2_result: 616d22cd9bb6
-  ev.ev_cotan_consequence_b_resolution.title: d282ac8b9ba2
-  ev.ev_cotan_consequence_b_resolution.body: 827b72f18207
-  ev.ev_cotan_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cotan_consequence_b_resolution.choice_1_result: ebbb4d9f7c44
-  ev.ev_cotan_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cotan_consequence_b_resolution.choice_2_result: 616d22cd9bb6
+  ev.ev_cotan_consequence_b.body: 05f1326e1d29
+  ev.ev_cotan_consequence_b.choice_1: 11e5086d6ff2
+  ev.ev_cotan_consequence_b.choice_1_result: 5130430498bf
+  ev.ev_cotan_consequence_b.choice_2: 35feccad45a6
+  ev.ev_cotan_consequence_b.choice_2_result: 5404b612e641
+  ev.ev_cotan_consequence_b_resolution.title: 8ae5ace3e36c
+  ev.ev_cotan_consequence_b_resolution.body: b847cdf2a2c8
+  ev.ev_cotan_consequence_b_resolution.choice_1: 01690b5ec567
+  ev.ev_cotan_consequence_b_resolution.choice_1_result: 3d9b94569ff9
+  ev.ev_cotan_consequence_b_resolution.choice_2: e178f7261dc3
+  ev.ev_cotan_consequence_b_resolution.choice_2_result: 537f699c2366
   ev.cotan.mentor_closure.title: da75a7423ad9
   ev.cotan.mentor_closure.body: d5f692b5c670
   ev.cotan.mentor_closure.choice_1: da8d611ab3c7
-  ev.cotan.mentor_closure.choice_1_result: ebbb4d9f7c44
+  ev.cotan.mentor_closure.choice_1_result: d8f002ceecab
   ev.cotan.mentor_closure.choice_2: 59a447ce21bf
-  ev.cotan.mentor_closure.choice_2_result: 616d22cd9bb6
+  ev.cotan.mentor_closure.choice_2_result: fc1d07827c51
   ev.cotan.mentor_closure.choice_3: 630a8fcfe069
-  ev.cotan.mentor_closure.choice_3_result: 2c512b57b3d2
+  ev.cotan.mentor_closure.choice_3_result: ac5256d81408
   ev.ev_cotan_a_followup.title: 337d29f258ba
   ev.ev_cotan_a_followup.body: 9e267d9a3b43
   ev.ev_cotan_a_followup.choice_1: f6dfbb0bfee3
@@ -207,51 +207,51 @@ stamps:
 
 ## ev.ev_cotan_entry.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+于阗的税关把你的货物记入河关簿，书办特意注明你是沿着玉路来的。你刚转身离开案台，一位自少年时便站在玉河里的淘玉人便叫住了你。
 
 ## ev.ev_cotan_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+于阗人回答你的问题时，带着买卖贵重物事之人特有的谨慎。他们的回答并不完全一致，其中一人答应，等河水告诉他更多时，再来寻你。
 
 ## ev.ev_cotan_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+你在于阗的集市里走了一日，带出来一驮货物。此城的玉石与丝绸，如今都记入了你的行纪。
 
 ## ev.ev_cotan_a.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你花两千银买下一块羊脂白玉，色白如乳，收进货物。一块按金论价的石头，从此随你而行。
 
 ## ev.ev_cotan_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你趟进冰凉的河水，用赤足去探水里磨圆了的石头。一日就这样过去，寻玉的手艺如今写进了你的行纪。
 
 ## ev.ev_cotan_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+你在岸上看玉工们一次次潜入冰冷的河水，其中最长者把你唤到身边，把他一生在那条河里用手学会的东西展示给你看。
 
 ## ev.ev_cotan_b.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你买下一匹细过发丝的于阗丝，卷进货物。此城的织造技艺，就此随你同行，成了一宗值钱的货物。
 
 ## ev.ev_cotan_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你坐在织机旁的妇人中间，她们唱起了那支歌。你问它唱的是什么，其中一人笑着答应，把属于旅人的那一段教给你。
 
 ## ev.ev_cotan_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+你买下染匠的色样——藏红花、靛蓝、茜草、胭脂虫。四色各一，每一种都道出于阗的贸易通向何方。
 
 ## ev.ev_cotan_c.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你在千寺之城的地下挖掘了三日。没有找到窖藏，但黄沙交出了它古老的旧事，如今写进了你的行纪。
 
 ## ev.ev_cotan_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你从地下古城取下一块彩绘残片——一只菩萨的手，历经多年仍带着颜色。它从此随你而行。
 
 ## ev.ev_cotan_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+你问一位长者，人们为何把尘土当药来喝。他久久地打量着你，然后领你走到旧河台地的边缘，讲起一座千寺之城的故事。
 
 ## ev.ev_cotan_consequence_a.title
 
@@ -259,47 +259,47 @@ stamps:
 
 ## ev.ev_cotan_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从于阗带走什么。问题背后正是玉河与绿洲；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。一位自少年时便站在玉河里的淘玉人把你引到一旁，问你打算从于阗带走什么。问题背后正是玉河与绿洲；他提出教给你一个河水尚未交出的名字。你须决定如何对待这道征兆。
 
 ## ev.ev_cotan_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位淘玉人谁能作保
 
 ## ev.ev_cotan_consequence_a.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你收下淘玉人递来的名字，追问谁能为它作保。他报出河上的几位长者，此事又打开了。
 
 ## ev.ev_cotan_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过淘玉人，把自己的打算收在心里
 
 ## ev.ev_cotan_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你谢过淘玉人，把自己的打算收在心里。此事在河边就此了结，于阗不再有人向你多问一句。
 
 ## ev.ev_cotan_consequence_a_resolution.title
 
-于阗：后果显出形状
+于阗：淘玉人的印记
 
 ## ev.ev_cotan_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把淘玉人的印记带在身上——那是深知玉河真水道之人的名字。它不会替你决定整段旅程，但在下一处涉水之地，这个名字或许能为你换来一位向导。
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这个名字带到
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你在天黑前把这个名字带到了。淘玉人的承诺如今随你的名字而行，河上的人从此有理由接待你。
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把淘玉人的名字收进自己的行纪
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你把淘玉人的名字收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_cotan_consequence_b.title
 
@@ -307,47 +307,47 @@ stamps:
 
 ## ev.ev_cotan_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉于阗日常生计的人又讲起玉河与绿洲。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位织丝人找到你，讲起玉河与绿洲的另一番说法——玉石如何分等，以及哪一段水最深。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_cotan_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位织丝人的实用建议走
 
 ## ev.ev_cotan_consequence_b.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你照着这位织丝人的实用建议走，请她把写下来。她为你把这段叙述抄出，河水真正的尺度便落进你手里。
 
 ## ev.ev_cotan_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位织丝人
 
 ## ev.ev_cotan_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你把这段叙述留给那位织丝人，自己收住了口。它回到了织机旁，于阗不再向你索取什么。
 
 ## ev.ev_cotan_consequence_b_resolution.title
 
-于阗：后果显出形状
+于阗：河上的账目
 
 ## ev.ev_cotan_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位织丝人的账目上路——玉石如何分等，以及哪一段水最深。它不会替你决定整段旅程，但在河边的路上，它会让你免于一场糊涂的交易。
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这分等之法说出去
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+你在天黑前把分等之法告诉了下一位买主。河上的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份分等之规收进自己的行纪
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你花了一日，把这份分等之规抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.cotan.mentor_closure.title
 
@@ -363,7 +363,7 @@ stamps:
 
 ## ev.cotan.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：于阗的人们已把你记在玉河与绿洲之间。
+玉井的看守并不回避：辨石与识人之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.cotan.mentor_closure.choice_2
 
@@ -371,7 +371,7 @@ stamps:
 
 ## ev.cotan.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随玉河与绿洲先一步传开。
+你在守井人的井边留了一日，他把玉河全部的教诲都给了你。你带走的东西比一课更长，比一块石头更轻。
 
 ## ev.cotan.mentor_closure.choice_3
 
@@ -379,7 +379,7 @@ stamps:
 
 ## ev.cotan.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在于阗的下一步行动。
+你谢过玉井的看守，踏上了路。他放你前行，为你祝福；于阗的这番功课，便没有落笔。
 
 ## ev.ev_cotan_a_followup.title
 

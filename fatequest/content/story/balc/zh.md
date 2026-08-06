@@ -2,7 +2,7 @@
 unit: balc
 lang: zh
 source: en
-source_rev: e07a1e7d91d5
+source_rev: 78eedd17501d
 status: translated
 translator: 人工校译
 notes: >
@@ -32,50 +32,50 @@ stamps:
   ev.balc.c.title: c64d043ebe3c
   ev.balc.entry.body: bf58837bab8b
   ev.balc.entry.title: 12d06f446c9b
-  ev.ev_balc_entry.choice_1_result: 9e008c35e127
-  ev.ev_balc_entry.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_entry.choice_3_result: 782067b1eb1a
-  ev.ev_balc_a.choice_1_result: 9e008c35e127
-  ev.ev_balc_a.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_a.choice_3_result: 782067b1eb1a
-  ev.ev_balc_b.choice_1_result: 9e008c35e127
-  ev.ev_balc_b.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_b.choice_3_result: 782067b1eb1a
-  ev.ev_balc_c.choice_1_result: 9e008c35e127
-  ev.ev_balc_c.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_c.choice_3_result: 782067b1eb1a
+  ev.ev_balc_entry.choice_1_result: 85bb7f0ca41b
+  ev.ev_balc_entry.choice_2_result: 9f5cd6d07b01
+  ev.ev_balc_entry.choice_3_result: 8938ad9c2795
+  ev.ev_balc_a.choice_1_result: d271e360210b
+  ev.ev_balc_a.choice_2_result: 80a1e0130fff
+  ev.ev_balc_a.choice_3_result: 8c7516be0920
+  ev.ev_balc_b.choice_1_result: 82c3818659e6
+  ev.ev_balc_b.choice_2_result: 3d94c952c1a8
+  ev.ev_balc_b.choice_3_result: 0cb19e1d269d
+  ev.ev_balc_c.choice_1_result: 05b507ceefe8
+  ev.ev_balc_c.choice_2_result: 3de44aa60ee7
+  ev.ev_balc_c.choice_3_result: 292f9a9f42bd
   ev.ev_balc_consequence_a.title: 209a66c1ef89
-  ev.ev_balc_consequence_a.body: 146f69bcc05f
-  ev.ev_balc_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_balc_consequence_a.choice_1_result: 9e008c35e127
-  ev.ev_balc_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_balc_consequence_a.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_consequence_a_resolution.title: bd7015098a4d
-  ev.ev_balc_consequence_a_resolution.body: 357c2908f927
+  ev.ev_balc_consequence_a.body: 0720afae98f3
+  ev.ev_balc_consequence_a.choice_1: 193d0f58c4b7
+  ev.ev_balc_consequence_a.choice_1_result: 2b193d824369
+  ev.ev_balc_consequence_a.choice_2: 189b20ba1c4c
+  ev.ev_balc_consequence_a.choice_2_result: 76c3bfb26029
+  ev.ev_balc_consequence_a_resolution.title: c5084537ad2b
+  ev.ev_balc_consequence_a_resolution.body: 0ddb83553478
   ev.ev_balc_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_balc_consequence_a_resolution.choice_1_result: 9e008c35e127
-  ev.ev_balc_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_balc_consequence_a_resolution.choice_2_result: 88a5efe5d9b6
+  ev.ev_balc_consequence_a_resolution.choice_1_result: de950a880d21
+  ev.ev_balc_consequence_a_resolution.choice_2: 3418ca0ae842
+  ev.ev_balc_consequence_a_resolution.choice_2_result: eb2432509da3
   ev.ev_balc_consequence_b.title: b6675e80e7b8
-  ev.ev_balc_consequence_b.body: 3ab1d5a1f10a
-  ev.ev_balc_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_balc_consequence_b.choice_1_result: 9e008c35e127
-  ev.ev_balc_consequence_b.choice_2: bb0917a651a0
-  ev.ev_balc_consequence_b.choice_2_result: 88a5efe5d9b6
-  ev.ev_balc_consequence_b_resolution.title: bd7015098a4d
-  ev.ev_balc_consequence_b_resolution.body: 827b72f18207
-  ev.ev_balc_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_balc_consequence_b_resolution.choice_1_result: 9e008c35e127
-  ev.ev_balc_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_balc_consequence_b_resolution.choice_2_result: 88a5efe5d9b6
+  ev.ev_balc_consequence_b.body: ccaf1129bdce
+  ev.ev_balc_consequence_b.choice_1: 4b7f4203d9c1
+  ev.ev_balc_consequence_b.choice_1_result: 0658ce7b93ba
+  ev.ev_balc_consequence_b.choice_2: e2936071c993
+  ev.ev_balc_consequence_b.choice_2_result: 1d72d8493722
+  ev.ev_balc_consequence_b_resolution.title: 8d8c137fc49c
+  ev.ev_balc_consequence_b_resolution.body: dbd7c1ee91d9
+  ev.ev_balc_consequence_b_resolution.choice_1: 62bdf27c689c
+  ev.ev_balc_consequence_b_resolution.choice_1_result: 5c13b73f4793
+  ev.ev_balc_consequence_b_resolution.choice_2: 90d50fc1e90d
+  ev.ev_balc_consequence_b_resolution.choice_2_result: e6b25db99571
   ev.balc.mentor_closure.title: 4846153e69c7
   ev.balc.mentor_closure.body: 5fd1c1c88d99
   ev.balc.mentor_closure.choice_1: da8d611ab3c7
-  ev.balc.mentor_closure.choice_1_result: 9e008c35e127
+  ev.balc.mentor_closure.choice_1_result: 681de6e8758d
   ev.balc.mentor_closure.choice_2: 59a447ce21bf
-  ev.balc.mentor_closure.choice_2_result: 88a5efe5d9b6
+  ev.balc.mentor_closure.choice_2_result: b7e866ce24f4
   ev.balc.mentor_closure.choice_3: 630a8fcfe069
-  ev.balc.mentor_closure.choice_3_result: 782067b1eb1a
+  ev.balc.mentor_closure.choice_3_result: 659a9f74b7b1
   ev.ev_balc_a_followup.title: 0646cd53a287
   ev.ev_balc_a_followup.body: 863716ce9695
   ev.ev_balc_a_followup.choice_1: 09323f4f5fa1
@@ -211,51 +211,51 @@ stamps:
 
 ## ev.ev_balc_entry.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你在税卡报明了货物，把税款放进书办的铜盘里。城门就此打开，但那位老书办把你的名字留在案前，招手让你到一旁说话。
 
 ## ev.ev_balc_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你问起巴里黑，人们都乐意开口，那些回答一直跟着你走完整条街。日落之前，有第二个声音带着更完整的一番叙述来找你。
 
 ## ev.ev_balc_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在巴里黑的下一步行动。
+你在巴里黑的大集市里走了一日，带回来一驮货物。青金石、巴剌红宝石与土库曼马的行情，如今都写进了你的行纪。
 
 ## ev.ev_balc_a.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你攀进断墙残柱之间，走向传说亚历山大迎娶罗克珊娜的地方。石块什么都没给你，但你的脚步声惊醒了一位看守这片土地的老人。
 
 ## ev.ev_balc_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你从旧大夏的瓦砾中拾起一块雕石。诸城之母的残片从此随你同行，它的旧事也记入了你的行纪。
 
 ## ev.ev_balc_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在巴里黑的下一步行动。
+废墟里那位老人答得迟缓，但你的问题对他来说像是旧友。他定了定神，像已经讲过一百遍那样，从「万城之母」说起。
 
 ## ev.ev_balc_b.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你花八百银买下一块青金石原石，收进货物。巴达哈伤的蓝从此随你而行，拱廊下的人记住了这笔交易。
 
 ## ev.ev_balc_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你为这颗巴剌红宝石付出四千银。一块在威尼斯能买一条船的石头，如今沉甸甸地躺在你的货物里，比随身任何物件都重。
 
 ## ev.ev_balc_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在巴里黑的下一步行动。
+商队头领们一个个把你打量了一番，才算回应了你的问题。最后有人坐到拱廊边的长凳上，把一本账簿摊开在膝头。
 
 ## ev.ev_balc_c.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你在那盏从未熄灭的火前放下香与一枚银币。祆教祭司点头应允，圣陵的眷顾随你走下小丘。
 
 ## ev.ev_balc_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你在三座石棺的影子里躺下，闭上眼睛。火堆啪地响了一声，祭司们许诺过的那场梦便来迎接你了。
 
 ## ev.ev_balc_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在巴里黑的下一步行动。
+你聆听祆教祭司在不灭之火前诵唱黎明赞歌。圣陵与白袍祭司的身影，如今记在你的行纪里。
 
 ## ev.ev_balc_consequence_a.title
 
@@ -263,31 +263,31 @@ stamps:
 
 ## ev.ev_balc_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从巴里黑带走什么。问题背后正是废墟与蓝宝石商路；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。一位守着驿栈账簿的老吏员把你引到一旁，问你打算从巴里黑带走什么。问题背后正是废墟与蓝宝石商路；他提出把你的名字与一个人的名字系在一起，好让前面的税卡认得你。你须决定如何对待这道征兆。
 
 ## ev.ev_balc_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位老吏员谁能作保
 
 ## ev.ev_balc_consequence_a.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你收下吏员递来的名字，追问谁能为它作保。他沉吟片刻，说出两个人——一个在税卡，一个在蓝宝石商路上。此事又打开了。
 
 ## ev.ev_balc_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过老吏员，把自己的打算收在心里
 
 ## ev.ev_balc_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你谢过老吏员，把自己的打算收在心里。此事在驿栈门口就此了结，巴里黑不再有人向你多问一句。
 
 ## ev.ev_balc_consequence_a_resolution.title
 
-巴里黑：后果显出形状
+巴里黑：驿栈的印记
 
 ## ev.ev_balc_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把驿栈的印记带在身上——那是蓝宝石商路上一位愿意为旅人作保之人的名字。它不会替你决定整段旅程，但在下一座税卡，这个名字或许能打开一本本会合上的账簿。
 
 ## ev.ev_balc_consequence_a_resolution.choice_1
 
@@ -295,15 +295,15 @@ stamps:
 
 ## ev.ev_balc_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你在天黑前送出了这份引荐。那名字如今与你的名字系在一起，蓝宝石商路上的税卡，从此有理由为你开门。
 
 ## ev.ev_balc_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这道印记收进自己的行纪
 
 ## ev.ev_balc_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你把这道印记收进行纪，花了一日把它工工整整记下。记录已成；那桩承诺便等着一条或许永远不会叫它的路。
 
 ## ev.ev_balc_consequence_b.title
 
@@ -311,47 +311,47 @@ stamps:
 
 ## ev.ev_balc_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉巴里黑日常生计的人又讲起废墟与蓝宝石商路。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，那位吏员年轻的助手在拱廊下找到你，讲起废墟与蓝宝石商路的另一番说法——一块石头真正的价钱，以及哪些井会在夏天枯竭。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_balc_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位助手的实用建议走
 
 ## ev.ev_balc_consequence_b.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你照着这条实用的建议走，请他把它写下来。他为你把这段叙述抄出，路途中真正的尺度便落进你手里。
 
 ## ev.ev_balc_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位助手
 
 ## ev.ev_balc_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你把这段叙述留给那位助手，自己收住了口。它回到了拱廊，巴里黑不再向你索取什么。
 
 ## ev.ev_balc_consequence_b_resolution.title
 
-巴里黑：后果显出形状
+巴里黑：路上的账目
 
 ## ev.ev_balc_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位助手的账目上路——一块石头的真价，以及哪些井会在夏天干涸。它不会替你决定整段旅程，但在前方的路上，它比那些更宏大的游记更值得携带。
 
 ## ev.ev_balc_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这本账目传下去
 
 ## ev.ev_balc_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+你在天黑前把这本账目传给下一支商队。蓝宝石商路的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_balc_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份价目收进自己的行纪
 
 ## ev.ev_balc_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你花了一日，把这份价目抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.balc.mentor_closure.title
 
@@ -367,7 +367,7 @@ stamps:
 
 ## ev.balc.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：巴里黑的人们已把你记在废墟与蓝宝石商路之间。
+抄写员并不回避：税卡、干渴的路程与识人之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.balc.mentor_closure.choice_2
 
@@ -375,7 +375,7 @@ stamps:
 
 ## ev.balc.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随废墟与蓝宝石商路先一步传开。
+你在抄写员的案前留了一日，他把整本叙述从容地铺展在你面前。他读出的内容比临别一课更长，也值得你所付出的时间。
 
 ## ev.balc.mentor_closure.choice_3
 
@@ -383,7 +383,7 @@ stamps:
 
 ## ev.balc.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在巴里黑的下一步行动。
+你谢过老抄写员，踏上了路。他放你前行，为你祝福；巴里黑的这番功课，便没有落笔。
 
 ## ev.ev_balc_a_followup.title
 

@@ -2,7 +2,7 @@
 unit: samarcanda
 lang: zh
 source: en
-source_rev: fa1e91582243
+source_rev: febfb511b5d5
 status: translated
 translator: 人工校译
 notes: >
@@ -32,50 +32,50 @@ stamps:
   ev.samarcanda.c.title: cb8401993af6
   ev.samarcanda.entry.body: c6deec0502d7
   ev.samarcanda.entry.title: 549d9a825266
-  ev.ev_samarcanda_entry.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_entry.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_entry.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_a.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_a.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_a.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_b.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_b.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_b.choice_3_result: 33d2e695305a
-  ev.ev_samarcanda_c.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_c.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_c.choice_3_result: 33d2e695305a
+  ev.ev_samarcanda_entry.choice_1_result: 4a878f84ec7c
+  ev.ev_samarcanda_entry.choice_2_result: 659438c67ece
+  ev.ev_samarcanda_entry.choice_3_result: 71726d23c373
+  ev.ev_samarcanda_a.choice_1_result: 3d547f2781d6
+  ev.ev_samarcanda_a.choice_2_result: e02d40008129
+  ev.ev_samarcanda_a.choice_3_result: 56167f1b65dd
+  ev.ev_samarcanda_b.choice_1_result: 59d87004f05b
+  ev.ev_samarcanda_b.choice_2_result: 61e4dc34720b
+  ev.ev_samarcanda_b.choice_3_result: 16b3209603ca
+  ev.ev_samarcanda_c.choice_1_result: bd81ddeab87b
+  ev.ev_samarcanda_c.choice_2_result: 9214c8142030
+  ev.ev_samarcanda_c.choice_3_result: a5cc20025e64
   ev.ev_samarcanda_consequence_a.title: e9e72b928a44
-  ev.ev_samarcanda_consequence_a.body: a4210e7e475e
-  ev.ev_samarcanda_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_samarcanda_consequence_a.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_samarcanda_consequence_a.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_consequence_a_resolution.title: 3252e600e6ca
-  ev.ev_samarcanda_consequence_a_resolution.body: 357c2908f927
-  ev.ev_samarcanda_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: fa3ce0606be2
+  ev.ev_samarcanda_consequence_a.body: 0f55c0754367
+  ev.ev_samarcanda_consequence_a.choice_1: bbdfdb4e3b01
+  ev.ev_samarcanda_consequence_a.choice_1_result: 1a1598ed1965
+  ev.ev_samarcanda_consequence_a.choice_2: 6f704c0825af
+  ev.ev_samarcanda_consequence_a.choice_2_result: 696abc33d201
+  ev.ev_samarcanda_consequence_a_resolution.title: 4446b7806646
+  ev.ev_samarcanda_consequence_a_resolution.body: bfad8cd28581
+  ev.ev_samarcanda_consequence_a_resolution.choice_1: b9f059d26917
+  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: dac99cfbb6f5
+  ev.ev_samarcanda_consequence_a_resolution.choice_2: 8ed7d605a371
+  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: d0e1306cfcc6
   ev.ev_samarcanda_consequence_b.title: 3e1c3889cb14
-  ev.ev_samarcanda_consequence_b.body: 272bf30fd4a5
-  ev.ev_samarcanda_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_samarcanda_consequence_b.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_consequence_b.choice_2: bb0917a651a0
-  ev.ev_samarcanda_consequence_b.choice_2_result: fa3ce0606be2
-  ev.ev_samarcanda_consequence_b_resolution.title: 3252e600e6ca
-  ev.ev_samarcanda_consequence_b_resolution.body: 827b72f18207
-  ev.ev_samarcanda_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: 1f76fdb28523
-  ev.ev_samarcanda_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: fa3ce0606be2
+  ev.ev_samarcanda_consequence_b.body: aa54caa3b08b
+  ev.ev_samarcanda_consequence_b.choice_1: 06c9a396bbbb
+  ev.ev_samarcanda_consequence_b.choice_1_result: 82bd0b4d35c6
+  ev.ev_samarcanda_consequence_b.choice_2: bcba0c66a191
+  ev.ev_samarcanda_consequence_b.choice_2_result: 41e3d4882c3a
+  ev.ev_samarcanda_consequence_b_resolution.title: 4ff492e6d9e9
+  ev.ev_samarcanda_consequence_b_resolution.body: bd9dfd526eb0
+  ev.ev_samarcanda_consequence_b_resolution.choice_1: 1d1ba8ea280e
+  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: d57d5731e11d
+  ev.ev_samarcanda_consequence_b_resolution.choice_2: 288f55f7065a
+  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: e07065af3c84
   ev.samarcanda.mentor_closure.title: f58da55750f6
   ev.samarcanda.mentor_closure.body: 5b4e9d1962af
   ev.samarcanda.mentor_closure.choice_1: da8d611ab3c7
-  ev.samarcanda.mentor_closure.choice_1_result: 1f76fdb28523
+  ev.samarcanda.mentor_closure.choice_1_result: 87dacd9c34cf
   ev.samarcanda.mentor_closure.choice_2: 59a447ce21bf
-  ev.samarcanda.mentor_closure.choice_2_result: fa3ce0606be2
+  ev.samarcanda.mentor_closure.choice_2_result: 3b58f30a1e8d
   ev.samarcanda.mentor_closure.choice_3: 630a8fcfe069
-  ev.samarcanda.mentor_closure.choice_3_result: 33d2e695305a
+  ev.samarcanda.mentor_closure.choice_3_result: 3273f4078083
   ev.ev_samarcanda_a_followup.title: abec22872467
   ev.ev_samarcanda_a_followup.body: 0e4455fc14c8
   ev.ev_samarcanda_a_followup.choice_1: e2a00c5b0c6d
@@ -212,51 +212,51 @@ stamps:
 
 ## ev.ev_samarcanda_entry.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你在撒马尔罕的税关报明了货物，书办在单据上记下你途经蓝顶书院。他落印时，一位书院的学生凑近前来搭话。
 
 ## ev.ev_samarcanda_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你收集到的回答都带着自豪谈起学舍与商队，但每个人讲的都不一样。这说法在口耳之间传开，到了傍晚又传回你耳边，比先前更完整了。
 
 ## ev.ev_samarcanda_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+你在撒马尔罕的集市里走了一日，带出来一驮货物。此城的纸张、染料与商道，如今都记入了你的行纪。
 
 ## ev.ev_samarcanda_a.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你走过列基斯坦广场三座宏伟的神学院之间，一个穿着灰旧长袍的瘦削男子从柱廊下走出，与你并肩。他说，他一直在等一个会问出正确问题的人。
 
 ## ev.ev_samarcanda_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你站在青绿色穹顶之下，仰头望到那一片蓝充满视野。那座陵墓与它的琉璃砖，如今记在你的行纪里。
 
 ## ev.ev_samarcanda_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+你沿夹岸的沟渠街道而行，与学者们互相致意。在撒马尔罕，每三人中便有一人是教书先生，你的名字如今已被人称许。
 
 ## ev.ev_samarcanda_b.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你买下一札撒马尔罕纸，纸质细腻，落墨不洇。它卷进你的货物，造纸人的手艺就此随你同行。
 
 ## ev.ev_samarcanda_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你看着造纸匠捶打麻布、把纸面磨得如波纹绸般发亮。店里的师傅看着你看得入神，终于抽出一张并非出自他纸浆槽的纸来。
 
 ## ev.ev_samarcanda_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+你花一千银，从一位书法家手中买下一卷插金绘彩的手稿。金箔与墨迹订在木版之间，如今随你行囊同行。
 
 ## ev.ev_samarcanda_c.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你把额头抵在那块泣石上，感受它的寒意贴上皮肤。圣祠接纳了你的虔诚，那一分眷顾轻轻落在你身上。
 
 ## ev.ev_samarcanda_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你在清真寺中为前路祈祷。庭院的寂静回应了你，圣祠的眷顾随你走进日光之中。
 
 ## ev.ev_samarcanda_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+你问毛拉们，那块黑石上一次流泪是什么时候。最年轻的先开了口，最年长的把他止住；但问题已经问出，而这里恰好有一个一直记着次数的人。
 
 ## ev.ev_samarcanda_consequence_a.title
 
@@ -264,47 +264,47 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从撒马尔罕带走什么。问题背后正是学舍与商队；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。蓝顶书院里一位学生把你引到一旁，问你打算从撒马尔罕带走什么。问题背后正是学舍与商队；他提出把你的名字与一位学者的名字系在一起，这位学者乐于接待旅人。你须决定如何对待这道征兆。
 
 ## ev.ev_samarcanda_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位学生谁能作保
 
 ## ev.ev_samarcanda_consequence_a.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你收下学生递来的名字，追问谁能为它作保。他报出书院的两位先生，此事又打开了。
 
 ## ev.ev_samarcanda_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位学生，把自己的打算收在心里
 
 ## ev.ev_samarcanda_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你谢过这位学生，把自己的打算收在心里。此事在书院门前就此了结，撒马尔罕不再有人向你多问一句。
 
 ## ev.ev_samarcanda_consequence_a_resolution.title
 
-撒马尔罕：后果显出形状
+撒马尔罕：未写成的书
 
 ## ev.ev_samarcanda_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把这位学生的印记带在身上——一本尚未有抄写员写成的书，答应送往前路一位学者手中。它不会替你决定整段旅程，但这位学者的门或许会在别处门都紧闭时为你敞开。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这本书送到学者手中
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你在天黑前把这本书送到了学者手中。这位学生的承诺如今随你的名字而行，书院的人从此有理由接待你。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把学者的承诺收进自己的行纪
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你把学者的承诺收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_samarcanda_consequence_b.title
 
@@ -312,47 +312,47 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉撒马尔罕日常生计的人又讲起学舍与商队。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位造纸匠在书院里找到你，讲起学舍与商队的另一番说法——哪支商队付的是好钱，哪支能教你些有用的道理。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_samarcanda_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位造纸匠的实用建议走
 
 ## ev.ev_samarcanda_consequence_b.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你照着这位造纸匠的实用建议走，请他把它写下来。他为你把这段叙述抄出，路途真正的尺度便落进你手里。
 
 ## ev.ev_samarcanda_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位造纸匠
 
 ## ev.ev_samarcanda_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你把这段叙述留给那位造纸匠，自己收住了口。它回到了纸铺，撒马尔罕不再向你索取什么。
 
 ## ev.ev_samarcanda_consequence_b_resolution.title
 
-撒马尔罕：后果显出形状
+撒马尔罕：商队的账目
 
 ## ev.ev_samarcanda_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位造纸匠的账目上路——哪支商队付的是好钱，哪支能教你些道理。它不会替你决定整段旅程，但在路上遇到一笔亏本买卖时，它会稳住你的手。
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这话告诉下一位学生
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+你在天黑前把这话告诉了下一名学生。路途的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份商队札记收进自己的行纪
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你花了一日，把这份商队札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.samarcanda.mentor_closure.title
 
@@ -368,7 +368,7 @@ stamps:
 
 ## ev.samarcanda.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：撒马尔罕的人们已把你记在学舍与商队之间。
+蓝顶书院的老学生并不回避：耐心与衡文之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.samarcanda.mentor_closure.choice_2
 
@@ -376,7 +376,7 @@ stamps:
 
 ## ev.samarcanda.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随学舍与商队先一步传开。
+你在书院陪着这位老学生留了一日，他把毕生所学从容地讲给你。你带走的东西，是一本还没有任何抄写员写过的书。
 
 ## ev.samarcanda.mentor_closure.choice_3
 
@@ -384,7 +384,7 @@ stamps:
 
 ## ev.samarcanda.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在撒马尔罕的下一步行动。
+你谢过蓝顶书院的老学生，踏上了路。他放你前行，为你祝福；撒马尔罕的这番功课，便没有落笔。
 
 ## ev.ev_samarcanda_a_followup.title
 

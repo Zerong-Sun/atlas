@@ -108,39 +108,39 @@ The Caves of Lop
 
 ## ev.ev_lop_entry.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You rest half a day by the road at the edge of the desert, watering your beasts. An old well-keeper who knows every water on the Lop road watches you, and comes over to speak.
 
 ## ev.ev_lop_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+The men of the last town before the waste answer your questions gravely. They do not agree about the crossing, and one of them says he will bring you the truth of it before nightfall.
 
 ## ev.ev_lop_bazaar.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+The dealer weighs the mutton-fat jade in his palm before he lets it go, and the price is settled. But the stone is not the whole bargain; the dealer keeps your hand a moment and leans close.
 
 ## ev.ev_lop_bazaar.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+The traders tell you the jade comes down from the rivers to the east. The name of Sachiu is now on your map, and the jade-river's course is written in your book.
 
 ## ev.ev_lop_caravanserai.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+The guide takes your two hundred coins and counts them twice, then nods once. He says little, but he looks at your beasts the way a man looks at his own horses.
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You wait eight days in the caravanserai and pay the inn-keeper for the lodging. When the caravan finally moves, the road to Sachiu is open before it.
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Lop.
+You lay in provisions for the dry road and note the desert's law in your book: no food, no water, and no dwelling for a day's ride. What the desert can take, it will.
 
 ## ev.ev_lop_shrine.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You leave your offering in the niche of the little shrine and step back. The monk who keeps the cave draws near, not for the coin, but to speak of what the travellers before you left behind.
 
 ## ev.ev_lop_shrine.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You watch the pilgrims make their offerings in silence. The way of the desert shrine is now written in your book.
 
 ## ev.ev_lop_consequence_a.title
 
@@ -148,47 +148,47 @@ Lop: The Mark at the Gate
 
 ## ev.ev_lop_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Lop. Beyond the question lies the sand sea and its old wells; choose what you will make of the sign.
+The first answer does not end at the gate. An old well-keeper who knows every water on the Lop road draws you aside and asks what you intend to carry away from Lop. Beyond the question lies the sand sea and its old wells; he offers to name a well on the far side that he swears still runs sweet. Choose what you will make of the sign.
 
 ## ev.ev_lop_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask what proof he holds
 
 ## ev.ev_lop_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You take the name the well-keeper offers and ask what proof he holds. He shows you a chip of stone from the well's coping, and the matter opens again.
 
 ## ev.ev_lop_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the well-keeper and keep your own counsel
 
 ## ev.ev_lop_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You thank the well-keeper and keep your own counsel. The matter closes at the well, and nothing more is asked of you in Lop.
 
 ## ev.ev_lop_consequence_a_resolution.title
 
-Lop: A Consequence Takes Shape
+Lop: The Well-Keeper's Mark
 
 ## ev.ev_lop_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the well-keeper's mark with you — a name that, he swears, opens a well on the far side of the sand sea. It will not decide the whole journey, but in the waterless days it may be the difference between salt and sweet.
 
 ## ev.ev_lop_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Seal the name before nightfall
 
 ## ev.ev_lop_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You seal the name before nightfall. The well-keeper's word now travels with your name, and the desert folk have a reason to receive you.
 
 ## ev.ev_lop_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the well-keeper's name in your travel book
 
 ## ev.ev_lop_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You keep the well-keeper's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_lop_consequence_b.title
 
@@ -196,47 +196,47 @@ Lop: The Road Behind the Answer
 
 ## ev.ev_lop_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Lop by its working life offers a second account of the sand sea and its old wells. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a caravan cook finds you at the well with a second account of the sand sea and its old wells — which wells still run, and which have turned salt. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_lop_consequence_b.choice_1
 
-Follow the practical advice
+Follow the cook's practical advice
 
 ## ev.ev_lop_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You follow the cook's practical advice and ask him to set it down. He writes the account out for you, and the desert's true measures come into your hand.
 
 ## ev.ev_lop_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the cook
 
 ## ev.ev_lop_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You leave the account with the cook and keep your own counsel. It goes back to the well, and Lop asks nothing more of you.
 
 ## ev.ev_lop_consequence_b_resolution.title
 
-Lop: A Consequence Takes Shape
+Lop: The Sweet-Well Account
 
 ## ev.ev_lop_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the cook's account with you — which wells still run, and which are salt. It will not decide the whole journey, but in the waterless days it is a map no chart can hold.
 
 ## ev.ev_lop_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Mark the sweet wells before nightfall
 
 ## ev.ev_lop_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+You mark the sweet wells on your map before nightfall. The desert's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_lop_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the well-map in your travel book
 
 ## ev.ev_lop_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You spend a day copying the well-map into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.lop.mentor_closure.title
 
@@ -252,7 +252,7 @@ Ask what the road will demand
 
 ## ev.lop.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Lop now remember you among the sand sea and its old wells.
+The listener of the desert wind answers without evasion: water, and the reading of the sky, will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.lop.mentor_closure.choice_2
 
@@ -260,7 +260,7 @@ Stay for a day and listen to the whole account
 
 ## ev.lop.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the sand sea and its old wells.
+You stay a day with the listener who reads the desert wind, and he gives you his whole counsel at length. It is not a map, but it will read the sand for you.
 
 ## ev.lop.mentor_closure.choice_3
 
@@ -268,7 +268,7 @@ Thank the guide and keep moving
 
 ## ev.lop.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Lop.
+You thank the listener of the desert wind and take the road. He lets you go with a blessing, and the lesson of the desert remains unwritten.
 
 ## ev.ev_lop_bazaar_followup.title
 

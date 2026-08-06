@@ -159,59 +159,59 @@ I Ching at Khanbaliq
 
 ## ev.ev_cambaluc_entry.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+The clerks of the shìbó sī write your cargo into the great register and hand you the tally. As you turn from the table, a clerk of the relay stations rises to ask a word with you.
 
 ## ev.ev_cambaluc_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+The men of Cambaluc answer you freely, for the city is proud of its size and its roads. Their answers are many and different, and one of them follows you out of the gate to give you the truer account.
 
 ## ev.ev_cambaluc_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+You spend a day walking the great market of Cambaluc and carry away a load of goods. The market of the Great Kaan's city is now written in your book.
 
 ## ev.ev_cambaluc_mentor_iching.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+The chronologer of the Astronomical Bureau takes your fee and opens his hand. The fourteen days' teaching begins with the first cast, and before you leave he has a parting hexagram to lay before you.
 
 ## ev.ev_cambaluc_mentor_iching.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+The chronologer shows how each hexagram names a turn in the road. The six-and-forty signs are now written in your book, though their reading stays with him.
 
 ## ev.ev_cambaluc_a.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You present yourself at the Kaan's court with your gifts, and the chamberlain receives them with practiced courtesy. He measures you as he speaks, and when the audience ends he makes you a small sign to stay.
 
 ## ev.ev_cambaluc_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You stand before the great hall and measure its size with your eyes until it overwhelms you. The palace of the Kaan is now marked in your book.
 
 ## ev.ev_cambaluc_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+The Kaan's guards speak of the empire's breadth: a road runs from this gate to the city of Kinsay, where the Kaan's granaries never empty. Its name is now on your map.
 
 ## ev.ev_cambaluc_b.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You buy silk in the suburb at the Cambaluc price, and the counting-house keeper watches the transaction with sharp eyes. When the bolt is wrapped, he motions you inside to a quieter chamber.
 
 ## ev.ev_cambaluc_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You spend a day counting the cart-loads of silk that enter the city. By evening the tally is beyond counting, and the city's hunger for silk is in your book.
 
 ## ev.ev_cambaluc_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+You visit the public granaries and find them full in a year when no one goes hungry. The men who keep them remember your interest.
 
 ## ev.ev_cambaluc_c.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You walk among the transplanted trees of the green hill, where cedars brought from the south shade the jade terraces. A gardener tending the roots looks up at your footsteps and sets down his spade.
 
 ## ev.ev_cambaluc_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You climb the hill at sunset and see the whole city at once — the palace, the market, the relay stations, all below one roof of light. The sight settles in you.
 
 ## ev.ev_cambaluc_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cambaluc.
+The gardeners who water the trees by hand speak of the summer palace at Chandu, a day's ride north. Its name is now on your map, and their craft is in your book.
 
 ## ev.ev_cambaluc_consequence_a.title
 
@@ -219,47 +219,47 @@ Cambaluc: The Mark at the Gate
 
 ## ev.ev_cambaluc_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Cambaluc. Beyond the question lies the palace gate and the relay stations; choose what you will make of the sign.
+The first answer does not end at the gate. A clerk of the relay stations draws you aside and asks what you intend to carry away from Cambaluc. Beyond the question lies the palace gate and the relay stations; he offers to set a name to your name, the name of a courier who reads the roads of the empire. Choose what you will make of the sign.
 
 ## ev.ev_cambaluc_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the relay clerk who can vouch for it
 
 ## ev.ev_cambaluc_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You take the name the clerk offers and ask who can vouch for it. He names two relay masters, and the matter opens again.
 
 ## ev.ev_cambaluc_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the relay clerk and keep your own counsel
 
 ## ev.ev_cambaluc_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You thank the clerk and keep your own counsel. The matter closes at the relay station, and nothing more is asked of you in Cambaluc.
 
 ## ev.ev_cambaluc_consequence_a_resolution.title
 
-Cambaluc: A Consequence Takes Shape
+Cambaluc: The Relay's Seal
 
 ## ev.ev_cambaluc_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the relay's seal with you — the name of a courier who reads the roads of the empire. It will not decide the whole journey, but at the next relay station his name may win you a fresh horse.
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Send the seal on before nightfall
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You send the seal on before nightfall. The courier's word now travels with your name, and the relay stations have a reason to receive you.
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the seal in your travel book
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You keep the seal in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_cambaluc_consequence_b.title
 
@@ -267,47 +267,47 @@ Cambaluc: The Road Behind the Answer
 
 ## ev.ev_cambaluc_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Cambaluc by its working life offers a second account of the palace gate and the relay stations. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a guard of the granaries finds you at the gate with a second account of the palace gate and the relay stations — how the couriers count their days, and who reads the road ahead. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_cambaluc_consequence_b.choice_1
 
-Follow the practical advice
+Follow the guard's practical advice
 
 ## ev.ev_cambaluc_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You follow the guard's practical advice and ask him to set it down. He writes the account out for you, and the road's true measures come into your hand.
 
 ## ev.ev_cambaluc_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the guard
 
 ## ev.ev_cambaluc_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You leave the account with the guard and keep your own counsel. It goes back to the granary gate, and Cambaluc asks nothing more of you.
 
 ## ev.ev_cambaluc_consequence_b_resolution.title
 
-Cambaluc: A Consequence Takes Shape
+Cambaluc: The Couriers' Account
 
 ## ev.ev_cambaluc_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the guard's account with you — how the couriers count their days, and who reads the road. It will not decide the whole journey, but it will keep you on the swift road among the slow ones.
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Pass the couriers' count before nightfall
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cambaluc now remember you among the palace gate and the relay stations.
+You pass the couriers' count to the next rider before nightfall. The road's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the couriers' schedule in your travel book
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the palace gate and the relay stations.
+You spend a day copying the couriers' schedule into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.ev_cambaluc_a_followup.title
 

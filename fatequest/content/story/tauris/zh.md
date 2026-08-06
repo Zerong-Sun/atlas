@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: 8205cca3f8ac
+source_rev: 72b11093cf6b
 status: translated
 translator: 人工校译
 notes: >
@@ -36,47 +36,47 @@ stamps:
   ev.tauris.c.title: 4b6457f485c1
   ev.tauris.entry.body: 122ebd882ff0
   ev.tauris.entry.title: a1cb0345c92f
-  ev.ev_tauris_entry.choice_1_result: d71c26f70db2
-  ev.ev_tauris_entry.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_entry.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_mentor_tarot.choice_1_result: d71c26f70db2
-  ev.ev_tauris_mentor_tarot.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_mentor_tarot.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_mentor_astrodice.choice_1_result: d71c26f70db2
-  ev.ev_tauris_mentor_astrodice.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_a.choice_1_result: d71c26f70db2
-  ev.ev_tauris_a.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_a.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_b.choice_1_result: d71c26f70db2
-  ev.ev_tauris_b.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_b.choice_3_result: abbb8b4eb2ff
-  ev.ev_tauris_c.choice_1_result: d71c26f70db2
-  ev.ev_tauris_c.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_c.choice_3_result: abbb8b4eb2ff
+  ev.ev_tauris_entry.choice_1_result: 5742d35648e0
+  ev.ev_tauris_entry.choice_2_result: 62833cabcea5
+  ev.ev_tauris_entry.choice_3_result: b8474561226b
+  ev.ev_tauris_mentor_tarot.choice_1_result: 0cb28f320c5d
+  ev.ev_tauris_mentor_tarot.choice_2_result: ffb6a11fdc1e
+  ev.ev_tauris_mentor_tarot.choice_3_result: 177f9485c86f
+  ev.ev_tauris_mentor_astrodice.choice_1_result: c94845a19698
+  ev.ev_tauris_mentor_astrodice.choice_2_result: 5ac0545bfbf9
+  ev.ev_tauris_a.choice_1_result: 400f81c3bad1
+  ev.ev_tauris_a.choice_2_result: 929655eea29f
+  ev.ev_tauris_a.choice_3_result: 2a2be12159d3
+  ev.ev_tauris_b.choice_1_result: 67f2f797acf6
+  ev.ev_tauris_b.choice_2_result: 121a5b0d23c7
+  ev.ev_tauris_b.choice_3_result: fcc3ab9301e8
+  ev.ev_tauris_c.choice_1_result: ec68aef13390
+  ev.ev_tauris_c.choice_2_result: 880443994aeb
+  ev.ev_tauris_c.choice_3_result: 8557c4830d3e
   ev.ev_tauris_consequence_a.title: d229f64fb1b5
-  ev.ev_tauris_consequence_a.body: c4a2d0a9109c
-  ev.ev_tauris_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_tauris_consequence_a.choice_1_result: d71c26f70db2
-  ev.ev_tauris_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_tauris_consequence_a.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_consequence_a_resolution.title: 51d5185c7e16
-  ev.ev_tauris_consequence_a_resolution.body: 357c2908f927
-  ev.ev_tauris_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_tauris_consequence_a_resolution.choice_1_result: d71c26f70db2
-  ev.ev_tauris_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_tauris_consequence_a_resolution.choice_2_result: e2fff2e332a7
+  ev.ev_tauris_consequence_a.body: a300c0b7d783
+  ev.ev_tauris_consequence_a.choice_1: 0554c77a7e9e
+  ev.ev_tauris_consequence_a.choice_1_result: 1efb06f93206
+  ev.ev_tauris_consequence_a.choice_2: 6ebeb4cfec5d
+  ev.ev_tauris_consequence_a.choice_2_result: 6e454a43b15b
+  ev.ev_tauris_consequence_a_resolution.title: aeeaffcdad25
+  ev.ev_tauris_consequence_a_resolution.body: 337e3a2c133c
+  ev.ev_tauris_consequence_a_resolution.choice_1: e8bd87deeb4b
+  ev.ev_tauris_consequence_a_resolution.choice_1_result: 48da92053331
+  ev.ev_tauris_consequence_a_resolution.choice_2: 78ed5421f174
+  ev.ev_tauris_consequence_a_resolution.choice_2_result: c4b6413cd94d
   ev.ev_tauris_consequence_b.title: 87ca51a3b222
-  ev.ev_tauris_consequence_b.body: 8ea551e1b6ea
-  ev.ev_tauris_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_tauris_consequence_b.choice_1_result: d71c26f70db2
-  ev.ev_tauris_consequence_b.choice_2: bb0917a651a0
-  ev.ev_tauris_consequence_b.choice_2_result: e2fff2e332a7
-  ev.ev_tauris_consequence_b_resolution.title: 51d5185c7e16
-  ev.ev_tauris_consequence_b_resolution.body: 827b72f18207
-  ev.ev_tauris_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_tauris_consequence_b_resolution.choice_1_result: d71c26f70db2
-  ev.ev_tauris_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_tauris_consequence_b_resolution.choice_2_result: e2fff2e332a7
+  ev.ev_tauris_consequence_b.body: 32d225db7d7f
+  ev.ev_tauris_consequence_b.choice_1: b3b39d4e8cce
+  ev.ev_tauris_consequence_b.choice_1_result: b7199f32143a
+  ev.ev_tauris_consequence_b.choice_2: 0d183140c885
+  ev.ev_tauris_consequence_b.choice_2_result: d2c9ff9e90f7
+  ev.ev_tauris_consequence_b_resolution.title: 8d4e1689a217
+  ev.ev_tauris_consequence_b_resolution.body: 5f5740fe2094
+  ev.ev_tauris_consequence_b_resolution.choice_1: 20aa536aa25d
+  ev.ev_tauris_consequence_b_resolution.choice_1_result: d97a0cf1b4c7
+  ev.ev_tauris_consequence_b_resolution.choice_2: 03f93978c6ff
+  ev.ev_tauris_consequence_b_resolution.choice_2_result: 4a13c356842d
   ev.ev_tauris_a_merchants_followup.title: fdaecaa050f1
   ev.ev_tauris_a_merchants_followup.body: 199d52a728ca
   ev.ev_tauris_a_merchants_followup.choice_1: 248d28e09a24
@@ -236,71 +236,71 @@ stamps:
 
 ## ev.ev_tauris_entry.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你在大不里士的税关报明了货物，税官把货单读了两遍——这座巴扎里多的是花招。他盖印时，大集市里一位占着长凳的掮客向你招了招手。
 
 ## ev.ev_tauris_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+大不里士的人用十来种语言回答你的问题，因为半个世界的商人都在这里营生。说法对不上，其中一位看管坎儿井的水夫答应，在集市收市前把真话带给你。
 
 ## ev.ev_tauris_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大不里士的下一步行动。
+你在大不里士的大集市里走了一日，带出来一驮货物。此城的珍珠、香料与马匹贸易，如今写进了你的行纪。
 
 ## ev.ev_tauris_mentor_tarot.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+那位法兰克寡妇收下你的银钱，在磨旧的桌上摆开纸牌。授业讲的是权衡所得与代价；你起身要走时，她又摆了一副牌，却只读给自己听。
 
 ## ev.ev_tauris_mentor_tarot.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+纸牌师听了你的请求点点头，抬手指向房间另一头的桌子——骰术师守着他的皮杯坐在那里。她说，两种技艺，一份临别赠礼。
 
 ## ev.ev_tauris_mentor_tarot.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大不里士的下一步行动。
+你看读牌师摆出抉择之门，演示每一条路如何各成其解。牌艺如今写进了你的行纪，只是布牌仍在她手里。
 
 ## ev.ev_tauris_mentor_astrodice.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你在牌桌旁的占师面前坐下，学起星辰骰。他教的是推算启程时辰的掷法；最后他为你掷出一把，说这一掷会在路上等着你。
 
 ## ev.ev_tauris_mentor_astrodice.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+骰师演示天盘各宫如何为路途的每一段命名。观宫之法如今写进了你的行纪，只是掷骰仍在他手里。
 
 ## ev.ev_tauris_a.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你向外国商人打听前方的道路，回答又多又锋利。有人指向南方，有人提醒税关，还有一人愿意把真实的叙述写下来给你。
 
 ## ev.ev_tauris_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你从大不里士的大集市买下一颗珍珠，包好放进行囊。集市的珠工之艺，如今随你同行，成了一宗值钱的货物。
 
 ## ev.ev_tauris_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大不里士的下一步行动。
+你登上小山，望见整座城铺在脚下——集市、驿栈，道路如掌纹般四散开去。这幅景色，如今记在你的行纪里。
 
 ## ev.ev_tauris_b.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你在热那亚商栈里与拉丁商人交谈，他们以衡量每一位陌生人的礼数接待了你。回答都很谨慎，但其中一人翻开了一本并非装样子的账簿。
 
 ## ev.ev_tauris_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你雇了一名通事，用二十日学波斯语。商队通用的语言如今挂在你的嘴边，钱袋则轻了两千银。
 
 ## ev.ev_tauris_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大不里士的下一步行动。
+你走过有顶的市场，听商队之间的话语。有人说起北通卡法的路，那里便是草原的起点；其名如今上了你的舆图。
 
 ## ev.ev_tauris_c.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你学着那些大领主的样子，在茉莉花丛间的园子里歇了两周。看守坎儿井的水夫用旅人的眼光望着你的安逸，终于走到亭前来与你说话。
 
 ## ev.ev_tauris_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你为路上买下干杏与开心果。大不里士的果园，装在一只小布袋里随你同行。
 
 ## ev.ev_tauris_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大不里士的下一步行动。
+你沿着坎儿井行走，学会水如何从山中来，途中不损失一滴给太阳。大不里士的水利之术，如今写进了你的行纪。
 
 ## ev.ev_tauris_consequence_a.title
 
@@ -308,47 +308,47 @@ stamps:
 
 ## ev.ev_tauris_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从大不里士带走什么。问题背后正是市集（巴扎）与雪山水道；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。大集市里一位占着长凳的掮客把你引到一旁，问你打算从大不里士带走什么。问题背后正是市集与雪山水道；他提出把你的名字与一位商人的名字系在一起，这位商人的信能比任何商队先到。你须决定如何对待这道征兆。
 
 ## ev.ev_tauris_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位掮客谁能作保
 
 ## ev.ev_tauris_consequence_a.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你收下掮客递来的名字，追问谁能为它作保。他报出集市里两位管赊账的人，此事又打开了。
 
 ## ev.ev_tauris_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位掮客，把自己的打算收在心里
 
 ## ev.ev_tauris_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你谢过这位掮客，把自己的打算收在心里。此事在集市的长凳上就此了结，大不里士不再有人向你多问一句。
 
 ## ev.ev_tauris_consequence_a_resolution.title
 
-大不里士：后果显出形状
+大不里士：掮客的信
 
 ## ev.ev_tauris_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把掮客的信带在身上——一封能比任何商队先到的信。它不会替你决定整段旅程，但在下一座集市，这封信或许能为你打开钱庄的门。
 
 ## ev.ev_tauris_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这封信送出
 
 ## ev.ev_tauris_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你在天黑前把这封信送出了。掮客的承诺如今随你的名字而行，集市的人从此有理由接待你。
 
 ## ev.ev_tauris_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这封信收进自己的行纪
 
 ## ev.ev_tauris_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你把信收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_tauris_consequence_b.title
 
@@ -356,47 +356,47 @@ stamps:
 
 ## ev.ev_tauris_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉大不里士日常生计的人又讲起市集（巴扎）与雪山水道。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位看管坎儿井的水夫在集市里找到你，讲起市集与雪山水道的另一番说法——哪里的水全年不断，以及哪家宅院有马可雇。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_tauris_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位水夫的实用建议走
 
 ## ev.ev_tauris_consequence_b.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你照着这位水夫的实用建议走，请他把它写下来。他为你把这段叙述抄出，此城真正的尺度便落进你手里。
 
 ## ev.ev_tauris_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位水夫
 
 ## ev.ev_tauris_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你把这段叙述留给那位水夫，自己收住了口。它回到了坎儿井边，大不里士不再向你索取什么。
 
 ## ev.ev_tauris_consequence_b_resolution.title
 
-大不里士：后果显出形状
+大不里士：水源的账目
 
 ## ev.ev_tauris_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位水夫的账目上路——哪里的水全年不断，以及哪家宅院有马可雇。它不会替你决定整段旅程，但会让你的钱袋与坐骑都保持在妥帖的状态。
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这话告诉下一位掮客
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：大不里士的人们已把你记在市集（巴扎）与雪山水道之间。
+你在天黑前把这话告诉了下一名掮客。此城的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_tauris_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份水源札记收进自己的行纪
 
 ## ev.ev_tauris_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随市集（巴扎）与雪山水道先一步传开。
+你花了一日，把这份水源札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.ev_tauris_a_merchants_followup.title
 

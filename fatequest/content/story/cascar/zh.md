@@ -2,7 +2,7 @@
 unit: cascar
 lang: zh
 source: en
-source_rev: 73ab90b1ea08
+source_rev: 6cb687f1255e
 status: translated
 translator: 人工校译
 notes: >
@@ -32,50 +32,50 @@ stamps:
   ev.cascar.c.title: b62e99ab1b16
   ev.cascar.entry.body: d7f9f8e7f288
   ev.cascar.entry.title: 6d770e58667f
-  ev.ev_cascar_entry.choice_1_result: d24a5a091449
-  ev.ev_cascar_entry.choice_2_result: fd06c351f169
-  ev.ev_cascar_entry.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_a.choice_1_result: d24a5a091449
-  ev.ev_cascar_a.choice_2_result: fd06c351f169
-  ev.ev_cascar_a.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_b.choice_1_result: d24a5a091449
-  ev.ev_cascar_b.choice_2_result: fd06c351f169
-  ev.ev_cascar_b.choice_3_result: 2dcbe72e40d3
-  ev.ev_cascar_c.choice_1_result: d24a5a091449
-  ev.ev_cascar_c.choice_2_result: fd06c351f169
-  ev.ev_cascar_c.choice_3_result: 2dcbe72e40d3
+  ev.ev_cascar_entry.choice_1_result: 820ad3ecb445
+  ev.ev_cascar_entry.choice_2_result: 8dc160536ad8
+  ev.ev_cascar_entry.choice_3_result: b4f270d5ce67
+  ev.ev_cascar_a.choice_1_result: 37f83ab7449a
+  ev.ev_cascar_a.choice_2_result: 4a621b566b38
+  ev.ev_cascar_a.choice_3_result: be8305fe2edf
+  ev.ev_cascar_b.choice_1_result: b38572e4f9b6
+  ev.ev_cascar_b.choice_2_result: b3577a3f90ca
+  ev.ev_cascar_b.choice_3_result: 61724df722c0
+  ev.ev_cascar_c.choice_1_result: 335c24ebb22d
+  ev.ev_cascar_c.choice_2_result: 479a4cf6f7b5
+  ev.ev_cascar_c.choice_3_result: c0bce78c1188
   ev.ev_cascar_consequence_a.title: 5a7568ccaec2
-  ev.ev_cascar_consequence_a.body: 228665473ea5
-  ev.ev_cascar_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cascar_consequence_a.choice_1_result: d24a5a091449
-  ev.ev_cascar_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cascar_consequence_a.choice_2_result: fd06c351f169
-  ev.ev_cascar_consequence_a_resolution.title: 320bbc8aa9ab
-  ev.ev_cascar_consequence_a_resolution.body: 357c2908f927
-  ev.ev_cascar_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cascar_consequence_a_resolution.choice_1_result: d24a5a091449
-  ev.ev_cascar_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cascar_consequence_a_resolution.choice_2_result: fd06c351f169
+  ev.ev_cascar_consequence_a.body: c86a4dcc4460
+  ev.ev_cascar_consequence_a.choice_1: d12523044323
+  ev.ev_cascar_consequence_a.choice_1_result: 1334fb99c360
+  ev.ev_cascar_consequence_a.choice_2: 6753ee1f8f0e
+  ev.ev_cascar_consequence_a.choice_2_result: 7c7808cfdbfc
+  ev.ev_cascar_consequence_a_resolution.title: 57a8f4583716
+  ev.ev_cascar_consequence_a_resolution.body: 7162a5ceb8ab
+  ev.ev_cascar_consequence_a_resolution.choice_1: 48603f352e12
+  ev.ev_cascar_consequence_a_resolution.choice_1_result: aeac0077f8b0
+  ev.ev_cascar_consequence_a_resolution.choice_2: 888a6b33f446
+  ev.ev_cascar_consequence_a_resolution.choice_2_result: 370b0a883386
   ev.ev_cascar_consequence_b.title: 94ae968d6021
-  ev.ev_cascar_consequence_b.body: 909b2d74573c
-  ev.ev_cascar_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cascar_consequence_b.choice_1_result: d24a5a091449
-  ev.ev_cascar_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cascar_consequence_b.choice_2_result: fd06c351f169
-  ev.ev_cascar_consequence_b_resolution.title: 320bbc8aa9ab
-  ev.ev_cascar_consequence_b_resolution.body: 827b72f18207
-  ev.ev_cascar_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cascar_consequence_b_resolution.choice_1_result: d24a5a091449
-  ev.ev_cascar_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cascar_consequence_b_resolution.choice_2_result: fd06c351f169
+  ev.ev_cascar_consequence_b.body: df9f3c3c3b51
+  ev.ev_cascar_consequence_b.choice_1: 0491f297d27c
+  ev.ev_cascar_consequence_b.choice_1_result: 93c84229a100
+  ev.ev_cascar_consequence_b.choice_2: 6a6c205a7560
+  ev.ev_cascar_consequence_b.choice_2_result: ca19510b216e
+  ev.ev_cascar_consequence_b_resolution.title: 8fe44cfbf45b
+  ev.ev_cascar_consequence_b_resolution.body: 8ba10931632e
+  ev.ev_cascar_consequence_b_resolution.choice_1: 930748063fd3
+  ev.ev_cascar_consequence_b_resolution.choice_1_result: ca06deb786cf
+  ev.ev_cascar_consequence_b_resolution.choice_2: 25aa6b846af4
+  ev.ev_cascar_consequence_b_resolution.choice_2_result: f515abfe3106
   ev.cascar.mentor_closure.title: c17ec69bc70c
   ev.cascar.mentor_closure.body: eaa67bc52e85
   ev.cascar.mentor_closure.choice_1: da8d611ab3c7
-  ev.cascar.mentor_closure.choice_1_result: d24a5a091449
+  ev.cascar.mentor_closure.choice_1_result: 319e1b5bb896
   ev.cascar.mentor_closure.choice_2: 59a447ce21bf
-  ev.cascar.mentor_closure.choice_2_result: fd06c351f169
+  ev.cascar.mentor_closure.choice_2_result: 0fa350ceeef4
   ev.cascar.mentor_closure.choice_3: 630a8fcfe069
-  ev.cascar.mentor_closure.choice_3_result: 2dcbe72e40d3
+  ev.cascar.mentor_closure.choice_3_result: 7768d533e809
   ev.ev_cascar_a_followup.title: 391591a6ed0c
   ev.ev_cascar_a_followup.body: 7c8e7a628439
   ev.ev_cascar_a_followup.choice_1: ca9f25b910f7
@@ -208,51 +208,51 @@ stamps:
 
 ## ev.ev_cascar_entry.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+可失合儿的税吏把你的货物记入驿册，挥手放你过门。山口驿站上一位织匠的儿子一直在看着你，这时跟上来，与你并肩而行。
 
 ## ev.ev_cascar_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你收集到的回答都称赞可失合儿与它的园林，彼此却对不上。这分歧在集市里传开，到了傍晚，一个熟悉山口生计的人正到处找你。
 
 ## ev.ev_cascar_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在喀什噶尔的下一步行动。
+你在可失合儿的集市里走了一日，带出来一驮货物。此城的甜瓜、地毯与染布，如今都记入了你的行纪。
 
 ## ev.ev_cascar_a.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你买下一个号称天下最甜的甜瓜，收在不会碰伤的地方。此后一日，这条路都带着它的甜意。
 
 ## ev.ev_cascar_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你沿着石渠引来的融雪水，走过一片片果园台地。看守果园的人见你流连，便唤你到他的长凳边，讲讲这些树都见过什么。
 
 ## ev.ev_cascar_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在喀什噶尔的下一步行动。
+你从山坡上的葡萄园买下干葡萄。这是轻便耐放的干粮，留给路上买不到吃食的日子。
 
 ## ev.ev_cascar_b.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你买下一张细得能穿过指环的地毯。它卷起来只占一小块地方，织工的技艺就此随你同行，成了一宗值钱的货物。
 
 ## ev.ev_cascar_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你坐下来看一位织女劳作，她一边织一边把图案逐针读给你听。她指给你看的那道边饰不是装饰，而是一句用线写下的祈祷。
 
 ## ev.ev_cascar_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在喀什噶尔的下一步行动。
+染匠卖给你一小包秘传的染料。在织工之城，懂得这些染料的人，手里握着别的商队拿不出的东西。
 
 ## ev.ev_cascar_c.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你从清真寺入内，听了可失合儿的穆斯林如何讲述此城的开端。讲述者把你的名字带进了整个坊间。
 
 ## ev.ev_cascar_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你从小教堂入内，听了可失合儿的基督徒如何讲述此城的开端。讲述者把你的名字带进了整个坊间。
 
 ## ev.ev_cascar_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在喀什噶尔的下一步行动。
+你在七眠人的洞中留了一夜，屏住呼吸倾听。在深沉的寂静里，一个名字涌到你唇边，你还未察觉，已经把它说了出来。
 
 ## ev.ev_cascar_consequence_a.title
 
@@ -260,47 +260,47 @@ stamps:
 
 ## ev.ev_cascar_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从喀什噶尔带走什么。问题背后正是山口与驿路；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。山口驿站上一位织匠的儿子把你引到一旁，问你打算从可失合儿带走什么。问题背后正是山口与驿路；他提出给你一根打结的绳，好让驿站认你是朋友。你须决定如何对待这道征兆。
 
 ## ev.ev_cascar_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这根绳，追问谁会认它
 
 ## ev.ev_cascar_consequence_a.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你收下这根绳，追问谁会认它。他逐个报出各驿站的名字，此事又打开了。
 
 ## ev.ev_cascar_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过织匠的儿子，把自己的打算收在心里
 
 ## ev.ev_cascar_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你谢过织匠的儿子，把自己的打算收在心里。此事在驿站就此了结，可失合儿不再有人向你多问一句。
 
 ## ev.ev_cascar_consequence_a_resolution.title
 
-喀什噶尔：后果显出形状
+可失合儿：驿站的绳
 
 ## ev.ev_cascar_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把驿站打结的绳带在身上——那是让山口驿站认你为友的信物。它不会替你决定整段旅程，但在下一座山驿，这根绳或许能换得一炉暖火与一匹新马。
 
 ## ev.ev_cascar_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这根绳传下去
 
 ## ev.ev_cascar_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你在天黑前把这根绳传了下去。驿站的承诺如今随你的名字而行，山间的驿站从此有理由接待你。
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这根绳收进自己的行纪
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你把绳收进行纪，花了一日把驿站的绳结一一记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_cascar_consequence_b.title
 
@@ -308,47 +308,47 @@ stamps:
 
 ## ev.ev_cascar_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉喀什噶尔日常生计的人又讲起山口与驿路。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，织坊里一位染匠找到你，讲起山口与驿路的另一番说法——哪个山口积雪迟迟不化，哪个驿站待客周到。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_cascar_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位染匠的实用建议走
 
 ## ev.ev_cascar_consequence_b.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你照着这位染匠的实用建议走，请他把它写下来。他为你把这段叙述抄出，山口真正的尺度便落进你手里。
 
 ## ev.ev_cascar_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位染匠
 
 ## ev.ev_cascar_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你把这段叙述留给那位染匠，自己收住了口。它回到了织坊，可失合儿不再向你索取什么。
 
 ## ev.ev_cascar_consequence_b_resolution.title
 
-喀什噶尔：后果显出形状
+可失合儿：山路的账目
 
 ## ev.ev_cascar_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位染匠的账目上路——哪个山口积雪迟迟不化，哪个驿站待客周到。它不会替你决定整段旅程，但山路变坏之时，这本账目会告诉你该在何处转弯。
 
 ## ev.ev_cascar_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前向下一座驿站提个醒
 
 ## ev.ev_cascar_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+你在天黑前向下一座驿站提了醒。山口的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份过路要略收进自己的行纪
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你花了一日，把这份过路要略抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.cascar.mentor_closure.title
 
@@ -364,7 +364,7 @@ stamps:
 
 ## ev.cascar.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：喀什噶尔的人们已把你记在山口与驿路之间。
+山口驿站的向导并不回避：水与识人之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.cascar.mentor_closure.choice_2
 
@@ -372,7 +372,7 @@ stamps:
 
 ## ev.cascar.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随山口与驿路先一步传开。
+你在驿站陪着这位向导留了一日，听他讲完整段山口的故事。临别时他递给你的那根绳，抵得过这一日的耽搁，还有富余。
 
 ## ev.cascar.mentor_closure.choice_3
 
@@ -380,7 +380,7 @@ stamps:
 
 ## ev.cascar.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在喀什噶尔的下一步行动。
+你谢过山口驿站的向导，踏上了路。他放你前行，为你祝福；可失合儿的这番功课，便没有落笔。
 
 ## ev.ev_cascar_a_followup.title
 

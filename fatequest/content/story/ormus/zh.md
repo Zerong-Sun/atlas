@@ -2,7 +2,7 @@
 unit: ormus
 lang: zh
 source: en
-source_rev: 8b7ea1d73f68
+source_rev: 316e71ff69f3
 status: translated
 translator: 人工校译
 notes: >
@@ -32,46 +32,46 @@ stamps:
   ev.ormus.c.title: 6bff4f2afc10
   ev.ormus.entry.body: a155f652de5e
   ev.ormus.entry.title: fbb93d61bc73
-  ev.ev_ormus_entry.choice_1_result: 28a86388d749
-  ev.ev_ormus_entry.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_entry.choice_3_result: dff0bbe18824
-  ev.ev_ormus_mentor_astrodice.choice_1_result: 28a86388d749
-  ev.ev_ormus_mentor_astrodice.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_astrodice_tide.choice_1_result: 28a86388d749
-  ev.ev_ormus_astrodice_tide.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_a.choice_1_result: 28a86388d749
-  ev.ev_ormus_a.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_a.choice_3_result: dff0bbe18824
-  ev.ev_ormus_b.choice_1_result: 28a86388d749
-  ev.ev_ormus_b.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_b.choice_3_result: dff0bbe18824
-  ev.ev_ormus_c.choice_1_result: 28a86388d749
-  ev.ev_ormus_c.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_c.choice_3_result: dff0bbe18824
+  ev.ev_ormus_entry.choice_1_result: 5e9b8c47d771
+  ev.ev_ormus_entry.choice_2_result: 0c665fe387d2
+  ev.ev_ormus_entry.choice_3_result: 54e94708c916
+  ev.ev_ormus_mentor_astrodice.choice_1_result: 0974937add4e
+  ev.ev_ormus_mentor_astrodice.choice_2_result: 6286bb44c4d3
+  ev.ev_ormus_astrodice_tide.choice_1_result: 491b8bac7c1a
+  ev.ev_ormus_astrodice_tide.choice_2_result: 3607d9fa4e73
+  ev.ev_ormus_a.choice_1_result: 32467fad48c5
+  ev.ev_ormus_a.choice_2_result: 0bd66a5fd054
+  ev.ev_ormus_a.choice_3_result: bd81e5372bc1
+  ev.ev_ormus_b.choice_1_result: 0c6b04901157
+  ev.ev_ormus_b.choice_2_result: 8469b25c54e8
+  ev.ev_ormus_b.choice_3_result: a64aecb15e79
+  ev.ev_ormus_c.choice_1_result: ced86c480c16
+  ev.ev_ormus_c.choice_2_result: b891769afbe7
+  ev.ev_ormus_c.choice_3_result: cdb54ff9da2d
   ev.ev_ormus_consequence_a.title: d01ed0947ae4
-  ev.ev_ormus_consequence_a.body: 7ba5edd4ee6f
-  ev.ev_ormus_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_ormus_consequence_a.choice_1_result: 28a86388d749
-  ev.ev_ormus_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_ormus_consequence_a.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_consequence_a_resolution.title: 0e8235d2dd40
-  ev.ev_ormus_consequence_a_resolution.body: 357c2908f927
-  ev.ev_ormus_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_ormus_consequence_a_resolution.choice_1_result: 28a86388d749
-  ev.ev_ormus_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_ormus_consequence_a_resolution.choice_2_result: 5a65a8ebdfb7
+  ev.ev_ormus_consequence_a.body: 6e62d41a4ad1
+  ev.ev_ormus_consequence_a.choice_1: cfdf26a8e712
+  ev.ev_ormus_consequence_a.choice_1_result: 5507f3d0158f
+  ev.ev_ormus_consequence_a.choice_2: c46b3bb95486
+  ev.ev_ormus_consequence_a.choice_2_result: d19563e46510
+  ev.ev_ormus_consequence_a_resolution.title: b0cbb1921918
+  ev.ev_ormus_consequence_a_resolution.body: d80fe55aee3c
+  ev.ev_ormus_consequence_a_resolution.choice_1: 4893e93de9bf
+  ev.ev_ormus_consequence_a_resolution.choice_1_result: de997919cece
+  ev.ev_ormus_consequence_a_resolution.choice_2: a5248eaaceb1
+  ev.ev_ormus_consequence_a_resolution.choice_2_result: 6e0cd51282ad
   ev.ev_ormus_consequence_b.title: 2d14d8f9858b
-  ev.ev_ormus_consequence_b.body: 7c2530422322
-  ev.ev_ormus_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_ormus_consequence_b.choice_1_result: 28a86388d749
-  ev.ev_ormus_consequence_b.choice_2: bb0917a651a0
-  ev.ev_ormus_consequence_b.choice_2_result: 5a65a8ebdfb7
-  ev.ev_ormus_consequence_b_resolution.title: 0e8235d2dd40
-  ev.ev_ormus_consequence_b_resolution.body: 827b72f18207
-  ev.ev_ormus_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_ormus_consequence_b_resolution.choice_1_result: 28a86388d749
-  ev.ev_ormus_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_ormus_consequence_b_resolution.choice_2_result: 5a65a8ebdfb7
+  ev.ev_ormus_consequence_b.body: d06bad58cd04
+  ev.ev_ormus_consequence_b.choice_1: 5ce196efa889
+  ev.ev_ormus_consequence_b.choice_1_result: e55b90e7e7dc
+  ev.ev_ormus_consequence_b.choice_2: 31a998eb2e16
+  ev.ev_ormus_consequence_b.choice_2_result: 0bdc1cd80485
+  ev.ev_ormus_consequence_b_resolution.title: c23aa59524ae
+  ev.ev_ormus_consequence_b_resolution.body: ca130382d3af
+  ev.ev_ormus_consequence_b_resolution.choice_1: b15c5163e088
+  ev.ev_ormus_consequence_b_resolution.choice_1_result: 1a5d3c77f3e1
+  ev.ev_ormus_consequence_b_resolution.choice_2: 2a43641c8805
+  ev.ev_ormus_consequence_b_resolution.choice_2_result: a9b1a80628ef
   ev.ev_ormus_a_followup.title: 004ea54ff1d8
   ev.ev_ormus_a_followup.body: 0606d6cc56bd
   ev.ev_ormus_a_followup.choice_1: 50aed45f2217
@@ -208,67 +208,67 @@ stamps:
 
 ## ev.ev_ormus_entry.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你在忽鲁谟斯的税关报明了货物，税官把胡椒对照货单核了两遍。他盖印时，码头上一名料理珍珠的妇人抬起头，叫出了你的名字。
 
 ## ev.ev_ormus_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+忽鲁谟斯的人在海风的气息间回答你的问题，回答里都带着码头的味道。其中一位领航人的副手话到一半停住，答应在潮水转向前来找你。
 
 ## ev.ev_ormus_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在忽鲁谟斯的下一步行动。
+你在忽鲁谟斯的大集市里走了一日，带出来一驮货物。此城的香料与珍珠贸易，如今写进了你的行纪。
 
 ## ev.ev_ormus_mentor_astrodice.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+领航人收下束修，摇响皮杯里的骰子。授业讲的都是出航时机的学问；临别时他为你投了最后一掷，却不解释那一掷的含义。
 
 ## ev.ev_ormus_mentor_astrodice.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+领航人演示三枚骰子如何以游星命名。星骰之术如今写进了你的行纪，只是掷法仍在他手里。
 
 ## ev.ev_ormus_astrodice_tide.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你在码头趁潮水转向掷下星骰。卜辞就着海流而解，答案就此立定。
 
 ## ev.ev_ormus_astrodice_tide.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你趁潮启航，未掷星骰。水自会决断的事，便由水自己去决断。
 
 ## ev.ev_ormus_a.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你付了港税，规规矩矩穿过堡门，账房在册上记下你，没说什么。但他又在你的名字旁多写了一行，用的是一种你看不懂的文字。
 
 ## ev.ev_ormus_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+采珠人说起珠床所在的海滩，说起对岸舟船靠泊的加剌图。其名如今上了你的舆图。
 
 ## ev.ev_ormus_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在忽鲁谟斯的下一步行动。
+你在堡垒墙上花了一日，清点下方的船只——独桅船、桨帆船与沿岸船，挂着海上的种种旗号。忽鲁谟斯的港口，如今记在你的行纪里。
 
 ## ev.ev_ormus_b.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你以季风价买下胡椒，商人用自己的秤称了，也不与你争那点分量。麻袋扎好时，他招呼你到库房深处去——那里还放着更好的货。
 
 ## ev.ev_ormus_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你从一艘印度缝合帆船上买下干姜，收进货物。印度的香料，从此随你而行。
 
 ## ev.ev_ormus_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在忽鲁谟斯的下一步行动。
+印度商人从海上画出香料之路：胡椒经海峡抵加剌图，丁香与肉豆蔻自科比南沿东路而来。两个地名如今都上了你的舆图。
 
 ## ev.ev_ormus_c.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你付钱雇下那位懂得风道的向导，他看也没把铜钱数第二遍。他整个上午都在看天，他所看到的，让他说起话来比这笔钱所值的还要急切。
 
 ## ev.ev_ormus_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你在一间地下室里避了三天，任狂风撕扯屋顶。此城熬得住，你也熬得住；一分眷顾就此落在你的行旅上。
 
 ## ev.ev_ormus_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在忽鲁谟斯的下一步行动。
+你看着忽鲁谟斯人如何与风共处——低矮的屋顶、密闭的斗室，以及起风时分的一片寂静。他们与风相处的法子，如今写进了你的行纪。
 
 ## ev.ev_ormus_consequence_a.title
 
@@ -276,47 +276,47 @@ stamps:
 
 ## ev.ev_ormus_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从忽鲁谟斯带走什么。问题背后正是海峡与珍珠；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。一位在港边码头料理珍珠的妇人把你引到一旁，问你打算从忽鲁谟斯带走什么。问题背后正是海峡与珍珠船；她提出把你的名字与一位懂潮的领航人的名字系在一起。你须决定如何对待这道征兆。
 
 ## ev.ev_ormus_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位妇人谁能作保
 
 ## ev.ev_ormus_consequence_a.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你收下妇人递来的名字，追问谁能为它作保。她报出港上两位领航人的名字，此事又打开了。
 
 ## ev.ev_ormus_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位妇人，把自己的打算收在心里
 
 ## ev.ev_ormus_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你谢过这位妇人，把自己的打算收在心里。此事在码头就此了结，忽鲁谟斯不再有人向你多问一句。
 
 ## ev.ev_ormus_consequence_a_resolution.title
 
-忽鲁谟斯：后果显出形状
+忽鲁谟斯：领航人的渡口
 
 ## ev.ev_ormus_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把领航人的渡口记在心上——那是一位懂得读潮之人的名字。它不会替你决定整段旅程，但在下一座海港，这个名字或许能为你找到一处泊位。
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这段渡口走通
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你在天黑前把这段渡口走通了。领航人的承诺如今随你的名字而行，港上的人从此有理由接待你。
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这段渡口记进行纪
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你把渡口记进行纪，花了一日把它工工整整写下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_ormus_consequence_b.title
 
@@ -324,47 +324,47 @@ stamps:
 
 ## ev.ev_ormus_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉忽鲁谟斯日常生计的人又讲起海峡与珍珠。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位领航人的副手在码头上找到你，讲起海峡与珍珠船的另一番说法——风何时转向，以及暗礁藏在哪里。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_ormus_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位副手的实用建议走
 
 ## ev.ev_ormus_consequence_b.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你照着这位副手的实用建议走，请他把它写下来。他为你把这段叙述抄出，大海的真正尺度便落进你手里。
 
 ## ev.ev_ormus_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位副手
 
 ## ev.ev_ormus_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你把这段叙述留给那位副手，自己收住了口。它回到了码头，忽鲁谟斯不再向你索取什么。
 
 ## ev.ev_ormus_consequence_b_resolution.title
 
-忽鲁谟斯：后果显出形状
+忽鲁谟斯：风向的账目
 
 ## ev.ev_ormus_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位副手的账目上路——风何时转向，以及暗礁藏在哪里。它不会替你决定整段旅程，但在海上，它抵得过任何海图上的一个星期。
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这风向的警告传下去
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：忽鲁谟斯的人们已把你记在海峡与珍珠之间。
+你在天黑前把这风向的警告传了下去。大海的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份风向札记收进自己的行纪
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海峡与珍珠先一步传开。
+你花了一日，把这份风向札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.ev_ormus_a_followup.title
 

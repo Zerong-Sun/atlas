@@ -140,67 +140,67 @@ Of the Descent to the City of Hormos
 
 ## ev.ev_ormus_entry.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You declare your goods at the tamghā-khāna of Ormus, and the tax-master checks the pepper against his list twice. As he stamps your page, a pearl-cleaner working the quay lifts her head and calls your name.
 
 ## ev.ev_ormus_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+The men of Ormus answer your questions between breaths of the sea wind, and their answers smell of the harbour. One of them, a pilot's mate, breaks off mid-sentence and promises to find you before the tide turns.
 
 ## ev.ev_ormus_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Ormus.
+You spend a day in the great bāzār of Ormus and carry away a load of goods. The city's trade in spice and pearls is now written in your book.
 
 ## ev.ev_ormus_mentor_astrodice.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+The pilot takes your fee and shakes the dice in his leather cup. The teaching is all about the timing of departures, and when you leave he makes a last cast for you that he does not explain.
 
 ## ev.ev_ormus_mentor_astrodice.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+The pilot shows how the three dice are named for the wandering stars. The art of the star-dice is now in your book, though the throw stays with him.
 
 ## ev.ev_ormus_astrodice_tide.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You cast the star-dice on the quay while the tide turns. The throw is read against the water, and the answer stands.
 
 ## ev.ev_ormus_astrodice_tide.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You set out with the tide and leave the star-dice unthrown. What the water decides, it decides on its own.
 
 ## ev.ev_ormus_a.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You pay the harbor toll and pass through the fortress gate in proper form, and the ledger-keeper marks you down without comment. But he writes something more beside your name, in a line you cannot read.
 
 ## ev.ev_ormus_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+The pearl-divers speak of the banks where the shells lie, and of Calatu across the water where the boats put in. The name is now on your map.
 
 ## ev.ev_ormus_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Ormus.
+You spend a day on the fort wall counting the ships below — dhows, galleys, and coasters under every flag of the sea. The harbour of Ormus is now marked in your book.
 
 ## ev.ev_ormus_b.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You buy pepper at the monsoon price, and the merchant weighs it with his own scales and lets the weight stand. When the sack is tied, he motions you to the back of the warehouse, where the better cargo waits.
 
 ## ev.ev_ormus_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You buy dried ginger from an Indian dhow and stow it in your cargo. The spice of India now rides with you.
 
 ## ev.ev_ormus_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Ormus.
+The Indian merchants draw the spice routes from the sea: pepper by the strait to Calatu, cloves and mace from Cobinan by the eastern road. Both names are now on your map.
 
 ## ev.ev_ormus_c.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You pay the guide who knows the wind patterns, and he does not count the coins twice. He has watched the sky all morning, and what he has seen makes him speak to you more urgently than the fee requires.
 
 ## ev.ev_ormus_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You wait three days in an underground chamber while the wind tears at the rooftops. The city endures it, and so do you; a small favour settles on your undertaking.
 
 ## ev.ev_ormus_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Ormus.
+You watch how the people of Ormus endure the wind — low roofs, sealed chambers, and silence at the hour it blows. Their way of the wind is now in your book.
 
 ## ev.ev_ormus_consequence_a.title
 
@@ -208,47 +208,47 @@ Ormus: The Mark at the Gate
 
 ## ev.ev_ormus_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Ormus. Beyond the question lies the strait and the pearl boats; choose what you will make of the sign.
+The first answer does not end at the gate. A pearl-cleaner who works the harbour quay draws you aside and asks what you intend to carry away from Ormus. Beyond the question lies the strait and the pearl boats; she offers to set a name to your name, the name of a pilot who reads the tide. Choose what you will make of the sign.
 
 ## ev.ev_ormus_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the pearl-cleaner who can vouch for it
 
 ## ev.ev_ormus_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You take the name the pearl-cleaner offers and ask who can vouch for it. She names two pilots of the harbour, and the matter opens again.
 
 ## ev.ev_ormus_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the pearl-cleaner and keep your own counsel
 
 ## ev.ev_ormus_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You thank the pearl-cleaner and keep your own counsel. The matter closes at the quay, and nothing more is asked of you in Ormus.
 
 ## ev.ev_ormus_consequence_a_resolution.title
 
-Ormus: A Consequence Takes Shape
+Ormus: The Pilot's Passage
 
 ## ev.ev_ormus_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the pilot's passage with you — the name of a man who reads the tide. It will not decide the whole journey, but at the next harbour his name may find you a berth.
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Take the passage before nightfall
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You take the passage before nightfall. The pilot's word now travels with your name, and the harbour folk have a reason to receive you.
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the passage in your travel book
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You keep the passage in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_ormus_consequence_b.title
 
@@ -256,47 +256,47 @@ Ormus: The Road Behind the Answer
 
 ## ev.ev_ormus_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Ormus by its working life offers a second account of the strait and the pearl boats. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a pilot's mate finds you on the quay with a second account of the strait and the pearl boats — when the wind turns, and where the reef lies hidden. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_ormus_consequence_b.choice_1
 
-Follow the practical advice
+Follow the mate's practical advice
 
 ## ev.ev_ormus_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You follow the mate's practical advice and ask him to set it down. He writes the account out for you, and the sea's true measures come into your hand.
 
 ## ev.ev_ormus_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the mate
 
 ## ev.ev_ormus_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You leave the account with the mate and keep your own counsel. It goes back to the quay, and Ormus asks nothing more of you.
 
 ## ev.ev_ormus_consequence_b_resolution.title
 
-Ormus: A Consequence Takes Shape
+Ormus: The Wind Account
 
 ## ev.ev_ormus_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the mate's account with you — when the wind turns, and where the reef lies hidden. It will not decide the whole journey, but at sea it is worth a week of any chart.
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Pass the wind's warning before nightfall
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Ormus now remember you among the strait and the pearl boats.
+You pass the wind's warning before nightfall. The sea's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the wind-notes in your travel book
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the strait and the pearl boats.
+You spend a day copying the wind-notes into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.ev_ormus_a_followup.title
 

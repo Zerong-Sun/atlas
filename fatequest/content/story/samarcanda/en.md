@@ -138,51 +138,51 @@ Of the Great City of Samarcan
 
 ## ev.ev_samarcanda_entry.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You declare your goods at the toll-house of Samarcanda, and the clerk notes the blue tiles of the colleges on your route. As he stamps the page, a student of the college leans in to speak.
 
 ## ev.ev_samarcanda_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+The answers you gather speak of the colleges and the caravans with pride, but each man tells it differently. The tale passes from mouth to mouth, and by evening it has found its way back to you, fuller than before.
 
 ## ev.ev_samarcanda_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+You spend a day in the bāzār of Samarcanda and carry away a load of goods. The city's paper, dyes, and trade are now written in your book.
 
 ## ev.ev_samarcanda_a.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You walk the Registan between its three great madrasas, and a thin man in a dusty robe detaches himself from the portico to walk beside you. He has been waiting, he says, for someone to ask the right question.
 
 ## ev.ev_samarcanda_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You stand beneath the turquoise dome and look up until the blue fills your sight. The mausoleum and its glazed tiles are now marked in your book.
 
 ## ev.ev_samarcanda_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+You walk the canal-lined streets and return the greetings of the scholars. In Samarcanda, where every third man is a teacher, your name is now spoken with approval.
 
 ## ev.ev_samarcanda_b.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You buy a sheaf of Samarcand paper, fine enough to take ink without blotting. It rolls into your cargo, and the paper-makers' skill rides with you.
 
 ## ev.ev_samarcanda_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You watch the paper-makers beat the linen rags and polish the sheets to a shine like watered silk. The master of the shop watches you watching, and at last draws out a sheet that did not come from his vat.
 
 ## ev.ev_samarcanda_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+You pay a thousand pieces for an illuminated manuscript from a calligrapher's hand. Gold leaf and ink, bound between boards, now travel in your pack.
 
 ## ev.ev_samarcanda_c.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You press your forehead to the stone that weeps and feel its cold against your skin. The shrine accepts your devotion, and the favour sits light on you.
 
 ## ev.ev_samarcanda_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You pray in the great mosque for the road ahead. The silence of the courtyard answers you, and the shrine's favour walks out with you into the sun.
 
 ## ev.ev_samarcanda_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+You ask the mullahs when the black stone last wept. The youngest answers you, and the oldest silences him; but the question has been asked, and there is a man here who has kept the count.
 
 ## ev.ev_samarcanda_consequence_a.title
 
@@ -190,47 +190,47 @@ Samarcanda: The Mark at the Gate
 
 ## ev.ev_samarcanda_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Samarcanda. Beyond the question lies the colleges and the caravans; choose what you will make of the sign.
+The first answer does not end at the gate. A student of the blue-tiled college draws you aside and asks what you intend to carry away from Samarcanda. Beyond the question lies the colleges and the caravans; he offers to set a name to your name, the name of a scholar who receives travellers. Choose what you will make of the sign.
 
 ## ev.ev_samarcanda_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the student who can vouch for it
 
 ## ev.ev_samarcanda_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You take the name the student offers and ask who can vouch for it. He names two masters of the college, and the matter opens again.
 
 ## ev.ev_samarcanda_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the student and keep your own counsel
 
 ## ev.ev_samarcanda_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You thank the student and keep your own counsel. The matter closes at the college gate, and nothing more is asked of you in Samarcanda.
 
 ## ev.ev_samarcanda_consequence_a_resolution.title
 
-Samarcanda: A Consequence Takes Shape
+Samarcanda: The Unwritten Book
 
 ## ev.ev_samarcanda_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the student's mark with you — a book no copyist has yet made, promised to a scholar on the road. It will not decide the whole journey, but the scholar's house may open to you when no other door will.
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Carry the book to its scholar before nightfall
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You carry the book to its scholar before nightfall. The student's word now travels with your name, and the college folk have a reason to receive you.
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the scholar's promise in your travel book
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You keep the scholar's promise in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_samarcanda_consequence_b.title
 
@@ -238,47 +238,47 @@ Samarcanda: The Road Behind the Answer
 
 ## ev.ev_samarcanda_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Samarcanda by its working life offers a second account of the colleges and the caravans. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a paper-maker finds you at the college with a second account of the colleges and the caravans — which caravan pays in good coin, and which teaches a useful lesson. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_samarcanda_consequence_b.choice_1
 
-Follow the practical advice
+Follow the paper-maker's practical advice
 
 ## ev.ev_samarcanda_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You follow the paper-maker's practical advice and ask him to set it down. He writes the account out for you, and the road's true measures come into your hand.
 
 ## ev.ev_samarcanda_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the paper-maker
 
 ## ev.ev_samarcanda_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You leave the account with the paper-maker and keep your own counsel. It goes back to the paper shop, and Samarcanda asks nothing more of you.
 
 ## ev.ev_samarcanda_consequence_b_resolution.title
 
-Samarcanda: A Consequence Takes Shape
+Samarcanda: The Caravan Account
 
 ## ev.ev_samarcanda_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the paper-maker's account with you — which caravan pays in good coin, and which teaches. It will not decide the whole journey, but it will steady you when the road offers a bad bargain.
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Tell the next student before nightfall
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+You tell the next student before nightfall. The road's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the caravan-notes in your travel book
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You spend a day copying the caravan-notes into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.samarcanda.mentor_closure.title
 
@@ -294,7 +294,7 @@ Ask what the road will demand
 
 ## ev.samarcanda.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Samarcanda now remember you among the colleges and the caravans.
+The old student of the blue-tiled college answers without evasion: patience, and the weighing of words, will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.samarcanda.mentor_closure.choice_2
 
@@ -302,7 +302,7 @@ Stay for a day and listen to the whole account
 
 ## ev.samarcanda.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the colleges and the caravans.
+You stay a day at the college with the old student, and he gives you the whole of his learning at leisure. What you take away is a book no copyist has yet made.
 
 ## ev.samarcanda.mentor_closure.choice_3
 
@@ -310,7 +310,7 @@ Thank the guide and keep moving
 
 ## ev.samarcanda.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Samarcanda.
+You thank the old student of the blue-tiled college and take the road. He lets you go with a blessing, and the lesson of Samarcanda remains unwritten.
 
 ## ev.ev_samarcanda_a_followup.title
 

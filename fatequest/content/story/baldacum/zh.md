@@ -2,7 +2,7 @@
 unit: baldacum
 lang: zh
 source: en
-source_rev: 2d3bfc002e4c
+source_rev: 7822f0d60468
 status: translated
 translator: 人工校译
 notes: >
@@ -36,49 +36,49 @@ stamps:
   ev.baldacum.c.title: b873ff792737
   ev.baldacum.entry.body: bfd925edfb53
   ev.baldacum.entry.title: 8b09f463e011
-  ev.ev_baldacum_entry.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_entry.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_entry.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_mentor_bazi.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_mentor_bazi.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_mentor_bazi.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_mentor_geomancy.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_mentor_geomancy.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_geomancy_court.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_geomancy_court.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_a.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_a.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_a.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_b.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_b.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_b.choice_3_result: 95db535a1ec6
-  ev.ev_baldacum_c.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_c.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_c.choice_3_result: 95db535a1ec6
+  ev.ev_baldacum_entry.choice_1_result: c348f01bb47b
+  ev.ev_baldacum_entry.choice_2_result: 75745453b20a
+  ev.ev_baldacum_entry.choice_3_result: 0bf36410574d
+  ev.ev_baldacum_mentor_bazi.choice_1_result: c9717cdc998c
+  ev.ev_baldacum_mentor_bazi.choice_2_result: 1082d5354c69
+  ev.ev_baldacum_mentor_bazi.choice_3_result: bd49ee01c1cb
+  ev.ev_baldacum_mentor_geomancy.choice_1_result: 2a80dd0ee2e6
+  ev.ev_baldacum_mentor_geomancy.choice_2_result: 62280959213f
+  ev.ev_baldacum_geomancy_court.choice_1_result: 2d2d52c57c6e
+  ev.ev_baldacum_geomancy_court.choice_2_result: 15dbe042dc60
+  ev.ev_baldacum_a.choice_1_result: f7dbd216cba5
+  ev.ev_baldacum_a.choice_2_result: 9b1fe1681e88
+  ev.ev_baldacum_a.choice_3_result: 2edd5a7311c2
+  ev.ev_baldacum_b.choice_1_result: f24c3c426412
+  ev.ev_baldacum_b.choice_2_result: 1bedcf825225
+  ev.ev_baldacum_b.choice_3_result: 4e0df901f904
+  ev.ev_baldacum_c.choice_1_result: d0dd5dd5343c
+  ev.ev_baldacum_c.choice_2_result: 6aac26db03c5
+  ev.ev_baldacum_c.choice_3_result: 3f284af5281c
   ev.ev_baldacum_consequence_a.title: d8ca652f577a
-  ev.ev_baldacum_consequence_a.body: 1648d46d7f76
-  ev.ev_baldacum_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_baldacum_consequence_a.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_baldacum_consequence_a.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_consequence_a_resolution.title: d0008e67befc
-  ev.ev_baldacum_consequence_a_resolution.body: 357c2908f927
-  ev.ev_baldacum_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_baldacum_consequence_a_resolution.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_baldacum_consequence_a_resolution.choice_2_result: 1fdd60f900e7
+  ev.ev_baldacum_consequence_a.body: 79300adaefca
+  ev.ev_baldacum_consequence_a.choice_1: f018b86e99e6
+  ev.ev_baldacum_consequence_a.choice_1_result: f91ce6580580
+  ev.ev_baldacum_consequence_a.choice_2: b39e4babfc10
+  ev.ev_baldacum_consequence_a.choice_2_result: 961500b93b62
+  ev.ev_baldacum_consequence_a_resolution.title: 00feadd43b47
+  ev.ev_baldacum_consequence_a_resolution.body: e65c5c58ce84
+  ev.ev_baldacum_consequence_a_resolution.choice_1: f32157db452e
+  ev.ev_baldacum_consequence_a_resolution.choice_1_result: b2953eca5d5c
+  ev.ev_baldacum_consequence_a_resolution.choice_2: 2362f75afffa
+  ev.ev_baldacum_consequence_a_resolution.choice_2_result: 8a13a0a48ebd
   ev.ev_baldacum_consequence_b.title: 8f970a465a94
-  ev.ev_baldacum_consequence_b.body: 2c2a6b692765
-  ev.ev_baldacum_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_baldacum_consequence_b.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_consequence_b.choice_2: bb0917a651a0
-  ev.ev_baldacum_consequence_b.choice_2_result: 1fdd60f900e7
-  ev.ev_baldacum_consequence_b_resolution.title: d0008e67befc
-  ev.ev_baldacum_consequence_b_resolution.body: 827b72f18207
-  ev.ev_baldacum_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_baldacum_consequence_b_resolution.choice_1_result: 0f7063ea16ef
-  ev.ev_baldacum_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_baldacum_consequence_b_resolution.choice_2_result: 1fdd60f900e7
+  ev.ev_baldacum_consequence_b.body: e3f129f4668a
+  ev.ev_baldacum_consequence_b.choice_1: c5b938179a5d
+  ev.ev_baldacum_consequence_b.choice_1_result: e3ee3b1ba9c0
+  ev.ev_baldacum_consequence_b.choice_2: c9f0e2cc0078
+  ev.ev_baldacum_consequence_b.choice_2_result: de68e7f61d96
+  ev.ev_baldacum_consequence_b_resolution.title: b7e3f894bb72
+  ev.ev_baldacum_consequence_b_resolution.body: 2f6cddcb9582
+  ev.ev_baldacum_consequence_b_resolution.choice_1: 42ab2f59c67b
+  ev.ev_baldacum_consequence_b_resolution.choice_1_result: 7b1b7aea8b40
+  ev.ev_baldacum_consequence_b_resolution.choice_2: 5f70c4e8f658
+  ev.ev_baldacum_consequence_b_resolution.choice_2_result: 1977230cf615
   ev.ev_baldacum_a_followup.title: 291f43b0ac20
   ev.ev_baldacum_a_followup.body: 69a04c6104cd
   ev.ev_baldacum_a_followup.choice_1: 0f3cd4f4314b
@@ -240,79 +240,79 @@ stamps:
 
 ## ev.ev_baldacum_entry.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你在税关报明了货物，税官头也不抬地盖了印。但那位曾在旧宫供职的书记记下了你的名字，一直跟你到了门口。
 
 ## ev.ev_baldacum_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+报达的人带着一座曾经号令半个世界之城的骄傲，回答了你的问题。说法各有不同，其中一人话到一半停住，答应在日落前把更真实的版本讲给你。
 
 ## ev.ev_baldacum_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在报达的下一步行动。
+你在报达的大集市里走了一日，带出来一驮货物。此城的香料与织锦贸易，如今写进了你的行纪。
 
 ## ev.ev_baldacum_mentor_bazi.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+历法先生收下束修，在桌上尘土里排出你的四柱。授业一直讲到三年的道路之外；最后他把历书翻到一页，说那一年你会用得上。
 
 ## ev.ev_baldacum_mentor_bazi.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+历法先生听了你的请求点点头，把桌面扫净。沙盘问的与四柱不同；他用一天里最后的光，为你做了最后一占。
 
 ## ev.ev_baldacum_mentor_bazi.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在报达的下一步行动。
+历法大师演示生辰四柱如何为人生分定季节。历法之术如今写进了你的行纪，只是施用仍在他手里。
 
 ## ev.ev_baldacum_mentor_geomancy.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+沙盘师在尘土里排出十六卦，以不加粉饰的诚实待你。他为你的道路占得的结果，就这样明白地摆在你面前。
 
 ## ev.ev_baldacum_mentor_geomancy.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你看着他在沙上布下一局，看那些印痕如何分出宫位。土占之术如今写进了你的行纪，只是布局仍在他手里。
 
 ## ev.ev_baldacum_geomancy_court.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你在土占师面前布下沙局，等那些印痕落入各自宫位。占辞已示，堂上的人记住了你的名字。
 
 ## ev.ev_baldacum_geomancy_court.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你未及叩问，便走过土占师的堂前。报达的土占之术，仍留在它原来的地方。
 
 ## ev.ev_baldacum_a.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你穿行在哈里发旧宫的断壁之间，经过坍塌的圆顶和只剩裸砖的厅堂。在最深处的庭院里，一位看守最后一道门的守望者望着你走近，没有赶你走。
 
 ## ev.ev_baldacum_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你塞给老守门人五百银，在国库的废墟里翻拣。你带出了货物，也带回了整整一页关于哈里发旧藏的行纪。
 
 ## ev.ev_baldacum_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在报达的下一步行动。
+你雇了一名卫士，听他讲这里昔日是何等模样。一日在倾颓的宫阙间过去，旧报达的记忆写进了你的行纪。
 
 ## ev.ev_baldacum_b.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你买下一匹织金的巴格达锦缎，布商在成交时握住你的手。但他的手比付账所需多停留了一瞬，并且朝灯边倾过身来。
 
 ## ev.ev_baldacum_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+香料商循着货物指出海港：胡椒来自忽鲁谟斯，椰枣与海湾舟楫来自巴斯拉。两个地名如今都上了你的舆图。
 
 ## ev.ev_baldacum_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在报达的下一步行动。
+你与钱商同饮果子露，听他们谈论汇率与信用票据。汇兑行的人如今提起你，带着几分好感。
 
 ## ev.ev_baldacum_c.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+集市里那位老说书人看出你想听完整的故事，便在毯子上坐得更深些。他会照集市上流传的样子讲——里面有金塔，有装满宝物的河道。
 
 ## ev.ev_baldacum_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你花两百银买下搜寻之权，翻出一枚报达陷落前的旧钱。旧城的一小片，如今随你的行囊而行。
 
 ## ev.ev_baldacum_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在报达的下一步行动。
+你花了两日，趁故事还有人讲述，把它一字一字记下。待到报达忘了自己，你的行纪仍会记得。
 
 ## ev.ev_baldacum_consequence_a.title
 
@@ -320,47 +320,47 @@ stamps:
 
 ## ev.ev_baldacum_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从报达带走什么。问题背后正是两河与旧宫；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。一位曾在旧宫供职的书记把你引到一旁，问你打算从报达带走什么。问题背后正是两河与旧宫；他提出把你的名字与一个仍能打开河门的人的名字系在一起。你须决定如何对待这道征兆。
 
 ## ev.ev_baldacum_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位书记谁能作保
 
 ## ev.ev_baldacum_consequence_a.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你收下书记递来的名字，追问谁能为它作保。他报出河门的两位看守，此事又打开了。
 
 ## ev.ev_baldacum_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位书记，把自己的打算收在心里
 
 ## ev.ev_baldacum_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你谢过这位书记，把自己的打算收在心里。此事在河门就此了结，报达不再有人向你多问一句。
 
 ## ev.ev_baldacum_consequence_a_resolution.title
 
-报达：后果显出形状
+报达：书记的名字
 
 ## ev.ev_baldacum_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把书记的名字带在身上——那是一个仍能打开河门的人的名字。它不会替你决定整段旅程，但在下一道门前，这个名字或许能免去你的一笔贿赂。
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前用上这个名字
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你在天黑前用上了这个名字。书记的承诺如今随你的名字而行，河上的人从此有理由接待你。
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把书记的名字收进自己的行纪
 
 ## ev.ev_baldacum_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你把书记的名字收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_baldacum_consequence_b.title
 
@@ -368,47 +368,47 @@ stamps:
 
 ## ev.ev_baldacum_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉报达日常生计的人又讲起两河与旧宫。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位河船船夫在码头上找到你，讲起两河与旧宫的另一番说法——什么仍能从报达顺水运出，以及什么会被潮水带走。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_baldacum_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位船夫的实用建议走
 
 ## ev.ev_baldacum_consequence_b.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你照着这位船夫的实用建议走，请他把它写下来。他为你把这段叙述抄出，河道的真正尺度便落进你手里。
 
 ## ev.ev_baldacum_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位船夫
 
 ## ev.ev_baldacum_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你把这段叙述留给那位船夫，自己收住了口。它回到了码头，报达不再向你索取什么。
 
 ## ev.ev_baldacum_consequence_b_resolution.title
 
-报达：后果显出形状
+报达：潮水的账目
 
 ## ev.ev_baldacum_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位船夫的账目上路——什么仍能从报达顺水运出，以及什么会被潮水带走。它不会替你决定整段旅程，但会让你的货物始终走在安全的水面上。
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这话告诉下一位河船船夫
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：报达的人们已把你记在两河与旧宫之间。
+你在天黑前把这话告诉了下一名船夫。河道的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份潮汛札记收进自己的行纪
 
 ## ev.ev_baldacum_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随两河与旧宫先一步传开。
+你花了一日，把这份潮汛札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.ev_baldacum_a_followup.title
 

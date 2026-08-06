@@ -137,51 +137,51 @@ Of the City of Chandu, and the Kaan’s Palace There
 
 ## ev.ev_chandu_entry.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+The darughachi reads your declaration over twice, then stamps it and waves you toward the meadow gate. As you pass, a stable-hand of the Kaan's meadow detaches himself from the postern to walk with you.
 
 ## ev.ev_chandu_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+The men of Chandu answer your questions with their eyes on the palace roof. Their answers are careful and short, but one of them adds that a truer telling will find you before you leave the meadow.
 
 ## ev.ev_chandu_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Chandu.
+You spend a day in the market of Chandu and carry away a load of goods. The summer capital's trade is now written in your book.
 
 ## ev.ev_chandu_a.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+The guards take your silver and look the other way, and you step inside the gilded cane palace. The light is all gold and green, and the walls give gently as you pass, as if the building itself were breathing.
 
 ## ev.ev_chandu_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You stand in the meadow outside the palace and admire its gilded roof against the sky. The Kaan's pleasure palace is now marked in your book.
 
 ## ev.ev_chandu_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Chandu.
+You spend a day sketching the palace in detail. The lines of the roof and the garden are now set down in your book, as no other traveller has them.
 
 ## ev.ev_chandu_b.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You walk the edge of the sixteen-mile wall until the sun moves. The park of Chandu is now marked in your book, with its game and its herds.
 
 ## ev.ev_chandu_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You find a gap in the wall and watch the sacred white mares, whose milk only the Kaan and his kin may drink. The sight is now marked in your book.
 
 ## ev.ev_chandu_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Chandu.
+You hire a falconer who keeps the Kaan's own birds, and you ride out with the hooded gerfalcon on his fist. The master of the mews has chosen his bird and his ground with care, and he means to show you why.
 
 ## ev.ev_chandu_c.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You watch the monks milk the white mares at dawn and spill the milk on the ground, as the rite demands. The sacrifice to the sky is now written in your book.
 
 ## ev.ev_chandu_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You pour an offering of wine to the Eternal Blue Sky. The shaman's eyes follow you, and a small favour settles on you like a falling feather.
 
 ## ev.ev_chandu_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Chandu.
+You ask a monk what the ceremony means, and he pauses at the brim of the golden vessel. The question is one the monks are used to answering, but he chooses his words as though for the first time.
 
 ## ev.ev_chandu_consequence_a.title
 
@@ -189,47 +189,47 @@ Chandu: The Mark at the Gate
 
 ## ev.ev_chandu_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Chandu. Beyond the question lies the summer palace and the meadow; choose what you will make of the sign.
+The first answer does not end at the gate. A stable-hand of the Kaan's meadow draws you aside and asks what you intend to carry away from Chandu. Beyond the question lies the summer palace and the meadow; he offers to set a name to your name, the name of the horse-master who keeps the sacred mares. Choose what you will make of the sign.
 
 ## ev.ev_chandu_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the name and ask the stable-hand who can vouch for it
 
 ## ev.ev_chandu_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You take the name the stable-hand offers and ask who can vouch for it. He names two grooms of the meadow, and the matter opens again.
 
 ## ev.ev_chandu_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the stable-hand and keep your own counsel
 
 ## ev.ev_chandu_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You thank the stable-hand and keep your own counsel. The matter closes at the meadow, and nothing more is asked of you in Chandu.
 
 ## ev.ev_chandu_consequence_a_resolution.title
 
-Chandu: A Consequence Takes Shape
+Chandu: The Horse-Master's Word
 
 ## ev.ev_chandu_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the horse-master's word with you — a promise, the stable-hand says, that will be honoured on the northern meadow. It will not decide the whole journey, but on the meadow road his word may gain you a mount.
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Give your word before nightfall
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You give your word before nightfall. The horse-master's promise now travels with your name, and the meadow folk have a reason to receive you.
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the horse-master's promise in your travel book
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You keep the horse-master's promise in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_chandu_consequence_b.title
 
@@ -237,47 +237,47 @@ Chandu: The Road Behind the Answer
 
 ## ev.ev_chandu_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Chandu by its working life offers a second account of the summer palace and the meadow. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a falconer of the court finds you at the meadow with a second account of the summer palace and the meadow — where the mares graze, and which gate the Kaan truly uses. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_chandu_consequence_b.choice_1
 
-Follow the practical advice
+Follow the falconer's practical advice
 
 ## ev.ev_chandu_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You follow the falconer's practical advice and ask him to set it down. He writes the account out for you, and the meadow's true measures come into your hand.
 
 ## ev.ev_chandu_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the falconer
 
 ## ev.ev_chandu_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You leave the account with the falconer and keep your own counsel. It goes back to the meadow, and Chandu asks nothing more of you.
 
 ## ev.ev_chandu_consequence_b_resolution.title
 
-Chandu: A Consequence Takes Shape
+Chandu: The Meadow Account
 
 ## ev.ev_chandu_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the falconer's account with you — where the mares graze, and which gate the Kaan truly uses. It will not decide the whole journey, but it names the road that will not waste your day.
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Warn the next rider before nightfall
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+You warn the next rider before nightfall. The meadow's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the meadow-notes in your travel book
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You spend a day copying the meadow-notes into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.chandu.mentor_closure.title
 
@@ -293,7 +293,7 @@ Ask what the road will demand
 
 ## ev.chandu.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Chandu now remember you among the summer palace and the meadow.
+The court horse-master answers without evasion: reading the land, and the wind, will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.chandu.mentor_closure.choice_2
 
@@ -301,7 +301,7 @@ Stay for a day and listen to the whole account
 
 ## ev.chandu.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the summer palace and the meadow.
+You stay a day at the meadow with the horse-master, and he gives you the whole of the Kaan's keeping at leisure. What he lays before you at parting is a promise the northern meadow will honour.
 
 ## ev.chandu.mentor_closure.choice_3
 
@@ -309,7 +309,7 @@ Thank the guide and keep moving
 
 ## ev.chandu.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Chandu.
+You thank the court horse-master and take the road. He lets you go with a blessing, and the lesson of Chandu remains unwritten.
 
 ## ev.ev_chandu_a_followup.title
 

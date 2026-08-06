@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: a0b0af3b38c5
+source_rev: b96f0ff55a9d
 status: translated
 translator: 人工校译
 notes: >
@@ -65,41 +65,41 @@ stamps:
   market.zayton.item.silk: cb0933e8d1cc
   market.zayton.item.sugar: c92a7af00746
   market.zayton.item.tea: d8a2a9c1a5a2
-  ev.ev_zayton_entry.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_entry.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_entry.choice_3_result: 0f17302674f3
-  ev.ev_zayton_jiaobei_ask.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_jiaobei_ask.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_pilot_consequence.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_pilot_consequence.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_harbour.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_harbour.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_harbour.choice_3_result: 0f17302674f3
-  ev.ev_zayton_fanfang.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_fanfang.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_fanfang.choice_3_result: 0f17302674f3
-  ev.ev_zayton_mazu.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_mazu.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_mazu.choice_3_result: 0f17302674f3
-  ev.ev_zayton_mentor.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_mentor.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_mentor.choice_3_result: 0f17302674f3
-  ev.ev_zayton_ledger_consequence_resolution.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_watch_consequence_resolution.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_watch_consequence_resolution.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_ledger_consequence.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_ledger_consequence.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_watch_consequence.choice_1_result: 7ac246d0b5c5
-  ev.ev_zayton_watch_consequence.choice_2_result: 140f6bf24cf5
-  ev.ev_zayton_ledger_consequence_resolution.title: 7a639d219752
-  ev.ev_zayton_ledger_consequence_resolution.body: 357c2908f927
-  ev.ev_zayton_ledger_consequence_resolution.choice_1: 3b4827283f98
-  ev.ev_zayton_ledger_consequence_resolution.choice_2: c200bc7d41b1
-  ev.ev_zayton_watch_consequence_resolution.title: 7a639d219752
-  ev.ev_zayton_watch_consequence_resolution.body: 827b72f18207
-  ev.ev_zayton_watch_consequence_resolution.choice_1: 3b4827283f98
-  ev.ev_zayton_watch_consequence_resolution.choice_2: c200bc7d41b1
+  ev.ev_zayton_entry.choice_1_result: 6eb274053092
+  ev.ev_zayton_entry.choice_2_result: 778f1f066ebc
+  ev.ev_zayton_entry.choice_3_result: 684c4950d4fb
+  ev.ev_zayton_jiaobei_ask.choice_1_result: 6c435a9456c4
+  ev.ev_zayton_jiaobei_ask.choice_2_result: 332ac3dfff1f
+  ev.ev_zayton_pilot_consequence.choice_1_result: a1b0a906b24c
+  ev.ev_zayton_pilot_consequence.choice_2_result: 0e6437a75703
+  ev.ev_zayton_harbour.choice_1_result: f7141106bce4
+  ev.ev_zayton_harbour.choice_2_result: f81178ffa971
+  ev.ev_zayton_harbour.choice_3_result: 52873b7596e1
+  ev.ev_zayton_fanfang.choice_1_result: 346280f8ee74
+  ev.ev_zayton_fanfang.choice_2_result: c54b87c81636
+  ev.ev_zayton_fanfang.choice_3_result: 1bf772565fad
+  ev.ev_zayton_mazu.choice_1_result: c997c482ae89
+  ev.ev_zayton_mazu.choice_2_result: 16a47fc28ff5
+  ev.ev_zayton_mazu.choice_3_result: 26a87bcf367d
+  ev.ev_zayton_mentor.choice_1_result: 7b38491d6130
+  ev.ev_zayton_mentor.choice_2_result: 25fc577b4714
+  ev.ev_zayton_mentor.choice_3_result: 757761d33fc4
+  ev.ev_zayton_ledger_consequence_resolution.choice_1_result: f77518ff30b0
+  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 522dfcce4109
+  ev.ev_zayton_watch_consequence_resolution.choice_1_result: 6f681441cd08
+  ev.ev_zayton_watch_consequence_resolution.choice_2_result: 0e9e31c56a89
+  ev.ev_zayton_ledger_consequence.choice_1_result: f0a405e9114a
+  ev.ev_zayton_ledger_consequence.choice_2_result: 58e3adfab038
+  ev.ev_zayton_watch_consequence.choice_1_result: de43fac3a45a
+  ev.ev_zayton_watch_consequence.choice_2_result: bd814626b8c0
+  ev.ev_zayton_ledger_consequence_resolution.title: 39b1991e5d00
+  ev.ev_zayton_ledger_consequence_resolution.body: 3f4d952da37e
+  ev.ev_zayton_ledger_consequence_resolution.choice_1: a9a6332891b5
+  ev.ev_zayton_ledger_consequence_resolution.choice_2: 156f17dcb491
+  ev.ev_zayton_watch_consequence_resolution.title: 93fbadcc03b9
+  ev.ev_zayton_watch_consequence_resolution.body: f76bf2c8aeca
+  ev.ev_zayton_watch_consequence_resolution.choice_1: 62f10d2411fc
+  ev.ev_zayton_watch_consequence_resolution.choice_2: 0e314bbb5119
   ev.ev_zayton_harbour_followup.title: b2762956c8cb
   ev.ev_zayton_harbour_followup.body: 23a51ab3adf7
   ev.ev_zayton_harbour_followup.choice_1: ec851e8b860c
@@ -386,143 +386,143 @@ stamps:
 
 ## ev.ev_zayton_entry.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你向大汗的吏员报明货物，他们的笔毫不停歇，把你的货物记入海贸册。税单落定时，一名书办另抽出一张纸，问你的路下一程往哪里去。
 
 ## ev.ev_zayton_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你从渔人的石阶悄悄上了岸，没有笔记录你的到来。但码头上的瞭望所亮着一盏灯，夜间的巡守自有一本账，记下每一道影子。
 
 ## ev.ev_zayton_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+你问一个船夫这些船都是些什么，他用只有读懂大海的人才有的方式回答。他能叫出一百条船、一百条路的名字，而他把其中两条要紧的指给了你。
 
 ## ev.ev_zayton_jiaobei_ask.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你在神祠前掷下两枚杯筊，等它们以落势作答。卜辞已示，祠中的人记住了你的名字。
 
 ## ev.ev_zayton_jiaobei_ask.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你未掷杯筊，便走过神祠。女神的回答未被问及，签枝仍留在签筒里。
 
 ## ev.ev_zayton_pilot_consequence.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你追问季风航道，领航人又把那条南行的线描深了一遍。他说出这条航道通行的时节；占婆便在你的舆图上落定，像一艘船缓缓下了锚。
 
 ## ev.ev_zayton_pilot_consequence.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你问起内陆之路，领航人放下酒盏，像讲一条他在黑夜里也认得的路那样讲起来。北往福州的路如今写进了你的行纪，你的名字也落进了他的记性。
 
 ## ev.ev_zayton_harbour.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你以码头价买下一袋胡椒，商人在过秤时拍了拍麻袋。但他报出的价并不是交易的全部——他留你片刻，要谈谈那本货运账。
 
 ## ev.ev_zayton_harbour.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你请领港人喝了一杯，向他们打听风向。一日在畅谈中过去；季风的规律，连同通往占婆的海路，如今都上了你的舆图。
 
 ## ev.ev_zayton_harbour.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+你花了一日，看船一艘接一艘地进港——他们说，旺季之时，一次可入一百艘。刺桐的避风港，如今记在你的行纪里。
 
 ## ev.ev_zayton_fanfang.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你向波斯商人打听海路，他们用一种你正在学的语言回答。其中一位老商人叫了茶，把外坊留给诚信陌生人的那桩买卖端到你面前。
 
 ## ev.ev_zayton_fanfang.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你雇下番坊里一个少年当一季通事，与他相处了二十日。阿拉伯语如今挂在你的嘴边，钱袋则轻了三千银。
 
 ## ev.ev_zayton_fanfang.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+你花一万二千银，从蛮子地织工手中买下一匹丝，卷进货物。南方最好的丝绸，如今随你而行。
 
 ## ev.ev_zayton_mazu.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你在海神娘娘面前献上供物，纸灰的烟在无风的空气里笔直升起。庙祝看着你那支签的解读，直到你起身离去也没有移开目光。
 
 ## ev.ev_zayton_mazu.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你在海上女神的祠前摇动签筒，抽出一支签。卜辞被念了出来，水手们都看着你如何领受。
 
 ## ev.ev_zayton_mazu.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+你站在后排，看水手们在海上女神像前祈祷。海民敬神的礼俗，如今写进了你的行纪。
 
 ## ev.ev_zayton_mentor.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你在庙门口的老妇人身边坐下，把能给的都给了庙里。你拿起签筒时，她看着你的手，开始像教了四十年读签人那样教你。
 
 ## ev.ev_zayton_mentor.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你在老妇人身边坐下，说要学掷筊。她久久望着你，然后把三只杯摆在门槛上，从三个答案各自的次序开始讲起。
 
 ## ev.ev_zayton_mentor.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在刺桐的下一步行动。
+读签的老妇人演示签枝如何按次序与印痕判读。解签之术如今写进了你的行纪，只是摇签仍在她手里。
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+港务就着灯光验看了封印，在他自己的册上把你记作已清。副本尽到了职分；刺桐的港口不会再来拦你。
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你花了一日，把副本工整地抄进行纪。封印的效力为前路保存下来，只是这笔誊写耗去你一日。
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+码头书办把凭据划销，把你的名字写入「已纳」一栏。夜里那桩事故就此了结，账簿上不再记着你的阴影。
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你花了一日，把凭据与它的缘由抄进行纪。这份结算为前路记录下来，只是耗去你一日。
 
 ## ev.ev_zayton_ledger_consequence.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你收下书办抄清的税册副本，手落在边注上——那里写着行在与沿海道路。这本册子给了你一条值得思量的路。
 
 ## ev.ev_zayton_ledger_consequence.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你只让货物入册，不取副本。书办又蘸了一回笔，合上了簿子；一重与墨无关的凉意落在案上。
 
 ## ev.ev_zayton_watch_consequence.choice_1_result
 
-这一选择留下了痕迹：刺桐的人们已把你记在海港与番舶之间。
+你在巡守的桌边付清了迟报罚金，税单上盖了「已纳」。巡守把你的货物留给你照管，却把你的名字写了两遍。
 
 ## ev.ev_zayton_watch_consequence.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随海港与番舶先一步传开。
+你留下货物供两日查验。巡守不慌不忙地翻检每一包，逐包记入册中；在等待里，你把码头巡行的规矩记进了心里。
 
 ## ev.ev_zayton_ledger_consequence_resolution.title
 
-刺桐：后果显出形状
+刺桐：封缄的副本
 
 ## ev.ev_zayton_ledger_consequence_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+带着这份封缄的税册副本，你便把刺桐自己的印记带在了货物上。它不会替你决定整段旅程，但只要是汗廷书办设案之处，这方封印都会先于你开口。
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把副本呈给港务
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把副本妥帖收进自己的行纪
 
 ## ev.ev_zayton_watch_consequence_resolution.title
 
-刺桐：后果显出形状
+刺桐：巡守的凭据
 
 ## ev.ev_zayton_watch_consequence_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+带着巡守的凭据，你便带着一份在黑夜里清偿了债务的收据。它不会替你决定整段旅程，但在下一座码头，这份凭据会说明你在刺桐的账已经结清。
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把凭据交进码头官署
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把凭据收进自己的行纪
 
 ## ev.ev_zayton_harbour_followup.title
 

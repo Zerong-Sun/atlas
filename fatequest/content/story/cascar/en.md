@@ -127,51 +127,51 @@ Of the Kingdom of Cascar
 
 ## ev.ev_cascar_entry.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+The toll-clerk of Cascar writes your cargo into the relay book and waves you past the gate. A weaver's son who mans the mountain relay has been watching; he falls into step beside you.
 
 ## ev.ev_cascar_entry.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+The answers you gather speak well of Cascar and its gardens, but they do not agree. The disagreement spreads through the bazaar, and by evening someone who knows the working life of the pass is looking for you.
 
 ## ev.ev_cascar_entry.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cascar.
+You spend a day in the bāzār of Cascar and carry away a load of goods. The city's melons, carpets, and dyed cloth are now written in your book.
 
 ## ev.ev_cascar_a.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You buy a melon said to be the sweetest in the world and stow it where it will not bruise. It will keep the road sweet for a day.
 
 ## ev.ev_cascar_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You walk the orchard terraces where the melt-water runs in stone channels. The orchard-keeper sees you linger and calls you to his bench to speak of what these trees have seen.
 
 ## ev.ev_cascar_a.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cascar.
+You buy dried grapes from a vineyard on the mountain slope. A light, lasting provision for the days when no food is to be had.
 
 ## ev.ev_cascar_b.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You buy a carpet so fine it can pass through a finger-ring. It rolls small in your cargo, and the weavers' work rides with you as goods of worth.
 
 ## ev.ev_cascar_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You sit and watch a weaver work, and she reads the pattern aloud for you stitch by stitch. The border she points to is not an ornament; it is a prayer set down in thread.
 
 ## ev.ev_cascar_b.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cascar.
+The dyers sell you a small parcel of their secret colours. In a city of weavers, a hand that knows these dyes holds what no other caravan can offer.
 
 ## ev.ev_cascar_c.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You enter by the mosque and hear how the Muslims of Cascar tell the city's beginning. The tellers carry your name through the quarter.
 
 ## ev.ev_cascar_c.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You enter by the chapel and hear how the Christians of Cascar tell the city's beginning. The tellers carry your name through the quarter.
 
 ## ev.ev_cascar_c.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cascar.
+You stay the night in the cave of the sleepers and hold your breath to listen. In the deep quiet a name rises to your lips before you know you have spoken it.
 
 ## ev.ev_cascar_consequence_a.title
 
@@ -179,47 +179,47 @@ Cascar: The Mark at the Gate
 
 ## ev.ev_cascar_consequence_a.body
 
-The first answer does not end at the gate. A clerk, porter, or traveller draws you aside and asks what you intend to carry away from Cascar. Beyond the question lies the mountain pass and its relay road; choose what you will make of the sign.
+The first answer does not end at the gate. A weaver's son who mans the mountain relay draws you aside and asks what you intend to carry away from Cascar. Beyond the question lies the mountain pass and its relay road; he offers to give you a knotted cord that names you a friend of the relay. Choose what you will make of the sign.
 
 ## ev.ev_cascar_consequence_a.choice_1
 
-Keep the name and ask who can vouch for it
+Take the cord and ask who will honour it
 
 ## ev.ev_cascar_consequence_a.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You take the cord and ask who will honour it. He names the relay keepers one by one, and the matter opens again.
 
 ## ev.ev_cascar_consequence_a.choice_2
 
-Thank the stranger and keep your own counsel
+Thank the weaver's son and keep your own counsel
 
 ## ev.ev_cascar_consequence_a.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You thank the weaver's son and keep your own counsel. The matter closes at the relay, and nothing more is asked of you in Cascar.
 
 ## ev.ev_cascar_consequence_a_resolution.title
 
-Cascar: A Consequence Takes Shape
+Cascar: The Relay's Cord
 
 ## ev.ev_cascar_consequence_a_resolution.body
 
-By choosing to carry the name at the gate, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have agreed to carry the relay's knotted cord with you — a token that names you a friend of the mountain relay. It will not decide the whole journey, but at the next mountain post the cord may earn you a warm hearth and a fresh horse.
 
 ## ev.ev_cascar_consequence_a_resolution.choice_1
 
-Make the introduction before nightfall
+Send the cord on before nightfall
 
 ## ev.ev_cascar_consequence_a_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You send the cord on before nightfall. The relay's word now travels with your name, and the mountain posts have a reason to receive you.
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the cord in your travel book
 
 ## ev.ev_cascar_consequence_a_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You keep the cord in your travel book and spend a day recording the relay's knots. The record is made; the favour waits for a road that may never call on it.
 
 ## ev.ev_cascar_consequence_b.title
 
@@ -227,47 +227,47 @@ Cascar: The Road Behind the Answer
 
 ## ev.ev_cascar_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, someone who knows Cascar by its working life offers a second account of the mountain pass and its relay road. It is less grand than a traveller's tale, and more useful.
+The answer sends a rumour along the road. Before the day is out, a dyer from the weavers' quarter finds you with a second account of the mountain pass and its relay road — which pass holds snow late, and which relay feeds you well. It is less grand than a traveller's tale, and more useful.
 
 ## ev.ev_cascar_consequence_b.choice_1
 
-Follow the practical advice
+Follow the dyer's practical advice
 
 ## ev.ev_cascar_consequence_b.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You follow the dyer's practical advice and ask him to set it down. He writes the account out for you, and the pass's true measures come into your hand.
 
 ## ev.ev_cascar_consequence_b.choice_2
 
-Leave the rumour with the teller
+Leave the account with the dyer
 
 ## ev.ev_cascar_consequence_b.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You leave the account with the dyer and keep your own counsel. It goes back to the weavers' quarter, and Cascar asks nothing more of you.
 
 ## ev.ev_cascar_consequence_b_resolution.title
 
-Cascar: A Consequence Takes Shape
+Cascar: The Mountain Account
 
 ## ev.ev_cascar_consequence_b_resolution.body
 
-By choosing to carry the road rumour, you turn a passing exchange into a small obligation. It will not decide the whole journey, but it gives the next person a reason to open a door.
+You have chosen to carry the dyer's account with you — which pass holds snow late, and which relay feeds you. It will not decide the whole journey, but when the mountain road turns bad, this account will tell you the turning.
 
 ## ev.ev_cascar_consequence_b_resolution.choice_1
 
-Make the introduction before nightfall
+Warn the next relay before nightfall
 
 ## ev.ev_cascar_consequence_b_resolution.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+You warn the next relay before nightfall. The pass's measures now travel ahead of you, and where they land, your name follows.
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2
 
-Keep the sign in your travel book
+Keep the pass-guide in your travel book
 
 ## ev.ev_cascar_consequence_b_resolution.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You spend a day copying the pass-guide into your travel book. The record is yours now, though it cost you a day of the road.
 
 ## ev.cascar.mentor_closure.title
 
@@ -283,7 +283,7 @@ Ask what the road will demand
 
 ## ev.cascar.mentor_closure.choice_1_result
 
-The choice leaves a mark: the people of Cascar now remember you among the mountain pass and its relay road.
+The guide of the mountain relay answers without evasion: water, and the reading of men, will be asked of you. His lesson is offered, and what you make of it lies with you.
 
 ## ev.cascar.mentor_closure.choice_2
 
@@ -291,7 +291,7 @@ Stay for a day and listen to the whole account
 
 ## ev.cascar.mentor_closure.choice_2_result
 
-The matter is not finished, but the next road is clear; your name travels ahead with the mountain pass and its relay road.
+You stay a day at the relay with the guide, and he tells the whole of the pass's tale. The cord he offers at parting is worth the day's delay, and more.
 
 ## ev.cascar.mentor_closure.choice_3
 
@@ -299,7 +299,7 @@ Thank the guide and keep moving
 
 ## ev.cascar.mentor_closure.choice_3_result
 
-You close the matter for now. The sign you gained will still guide your next action in Cascar.
+You thank the guide of the mountain relay and take the road. He lets you go with a blessing, and the lesson of Cascar remains unwritten.
 
 ## ev.ev_cascar_a_followup.title
 

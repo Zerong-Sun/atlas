@@ -2,7 +2,7 @@
 unit: cambaluc
 lang: zh
 source: en
-source_rev: 668ddc94b5e6
+source_rev: f3219e43e7a7
 status: translated
 translator: 人工校译
 notes: >
@@ -36,44 +36,44 @@ stamps:
   ev.cambaluc.c.title: f1dcba9f2ce5
   ev.cambaluc.entry.body: ef7bf578cd51
   ev.cambaluc.entry.title: f7224b9d3673
-  ev.ev_cambaluc_entry.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_entry.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_entry.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_mentor_iching.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_mentor_iching.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_a.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_a.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_a.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_b.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_b.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_b.choice_3_result: 33b892a51eae
-  ev.ev_cambaluc_c.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_c.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_c.choice_3_result: 33b892a51eae
+  ev.ev_cambaluc_entry.choice_1_result: 97ff92c72cb6
+  ev.ev_cambaluc_entry.choice_2_result: 9acfc01df6a1
+  ev.ev_cambaluc_entry.choice_3_result: 8147814265aa
+  ev.ev_cambaluc_mentor_iching.choice_1_result: 7f9873d14686
+  ev.ev_cambaluc_mentor_iching.choice_2_result: 8c5e34bb3dd6
+  ev.ev_cambaluc_a.choice_1_result: 8be771cad478
+  ev.ev_cambaluc_a.choice_2_result: 38aa5c92fb7e
+  ev.ev_cambaluc_a.choice_3_result: e2240a0a3a8c
+  ev.ev_cambaluc_b.choice_1_result: f66a8e82faaa
+  ev.ev_cambaluc_b.choice_2_result: 2244ce91518d
+  ev.ev_cambaluc_b.choice_3_result: 652b47db4b85
+  ev.ev_cambaluc_c.choice_1_result: 1b0993001770
+  ev.ev_cambaluc_c.choice_2_result: 14ad10a8f6ad
+  ev.ev_cambaluc_c.choice_3_result: 687f3dd36948
   ev.ev_cambaluc_consequence_a.title: c50ef1ebc721
-  ev.ev_cambaluc_consequence_a.body: 215bf5dbb437
-  ev.ev_cambaluc_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_cambaluc_consequence_a.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_cambaluc_consequence_a.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_consequence_a_resolution.title: 3be836affbbb
-  ev.ev_cambaluc_consequence_a_resolution.body: 357c2908f927
-  ev.ev_cambaluc_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_cambaluc_consequence_a_resolution.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_cambaluc_consequence_a_resolution.choice_2_result: ff35c818ea78
+  ev.ev_cambaluc_consequence_a.body: 809cfec4b8bb
+  ev.ev_cambaluc_consequence_a.choice_1: a9bef6627503
+  ev.ev_cambaluc_consequence_a.choice_1_result: d878625dd570
+  ev.ev_cambaluc_consequence_a.choice_2: c90b3922c168
+  ev.ev_cambaluc_consequence_a.choice_2_result: b7d909e820de
+  ev.ev_cambaluc_consequence_a_resolution.title: 9d063eaf2dee
+  ev.ev_cambaluc_consequence_a_resolution.body: 972aa9d8ad33
+  ev.ev_cambaluc_consequence_a_resolution.choice_1: ba4f4f0635d3
+  ev.ev_cambaluc_consequence_a_resolution.choice_1_result: 8694cc85cb31
+  ev.ev_cambaluc_consequence_a_resolution.choice_2: a2842de8ff1b
+  ev.ev_cambaluc_consequence_a_resolution.choice_2_result: 3e656c6d9dd4
   ev.ev_cambaluc_consequence_b.title: 4cc01553daf1
-  ev.ev_cambaluc_consequence_b.body: b78971914551
-  ev.ev_cambaluc_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_cambaluc_consequence_b.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_consequence_b.choice_2: bb0917a651a0
-  ev.ev_cambaluc_consequence_b.choice_2_result: ff35c818ea78
-  ev.ev_cambaluc_consequence_b_resolution.title: 3be836affbbb
-  ev.ev_cambaluc_consequence_b_resolution.body: 827b72f18207
-  ev.ev_cambaluc_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_cambaluc_consequence_b_resolution.choice_1_result: 259360edfd7b
-  ev.ev_cambaluc_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_cambaluc_consequence_b_resolution.choice_2_result: ff35c818ea78
+  ev.ev_cambaluc_consequence_b.body: f36cdbe246de
+  ev.ev_cambaluc_consequence_b.choice_1: 099a4898ae32
+  ev.ev_cambaluc_consequence_b.choice_1_result: ba980d2ea461
+  ev.ev_cambaluc_consequence_b.choice_2: 15a1827c52d3
+  ev.ev_cambaluc_consequence_b.choice_2_result: 7a0d63f8bd57
+  ev.ev_cambaluc_consequence_b_resolution.title: 8a286dbbafe0
+  ev.ev_cambaluc_consequence_b_resolution.body: 2cdd5136be69
+  ev.ev_cambaluc_consequence_b_resolution.choice_1: e96bcdfa2735
+  ev.ev_cambaluc_consequence_b_resolution.choice_1_result: cbe73eb72d40
+  ev.ev_cambaluc_consequence_b_resolution.choice_2: cca102b07047
+  ev.ev_cambaluc_consequence_b_resolution.choice_2_result: 972f4bebd8bc
   ev.ev_cambaluc_a_followup.title: e581ba7d19f8
   ev.ev_cambaluc_a_followup.body: 92282460a841
   ev.ev_cambaluc_a_followup.choice_1: 6d2f302373fc
@@ -225,59 +225,59 @@ stamps:
 
 ## ev.ev_cambaluc_entry.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+市舶司的书办把你的货物写进大册，递给你税单。你刚要转身，驿站的一位吏员起身，说要同你说句话。
 
 ## ev.ev_cambaluc_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+大都的人乐意回答你，因为这座城市为自己的规模与道路而自豪。回答很多，也各不相同，其中一人跟你出了城门，要把更真实的说法给你。
 
 ## ev.ev_cambaluc_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大都（汗八里）的下一步行动。
+你在汗八里的大市集里走了一日，带出来一驮货物。大汗之城的市集，如今写进了你的行纪。
 
 ## ev.ev_cambaluc_mentor_iching.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+司天监的历官收下你的束修，摊开手掌。十四日的授业从第一次起卦开始；临别时，他还有一卦要摆在你面前。
 
 ## ev.ev_cambaluc_mentor_iching.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+司天监的编年官演示每一卦如何为道路的转折命名。六十四卦如今写进了你的行纪，只是解卦之法仍留在他手里。
 
 ## ev.ev_cambaluc_a.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你带着礼物来到大汗的宫廷，内侍以惯常的礼数收下。他一面说话一面打量你；觐见结束时，他向你做了个极小的手势，让你留下。
 
 ## ev.ev_cambaluc_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你站在大殿之前，以目丈量它的宏大，直到那规模将你压服。大汗的宫殿，如今记在你的行纪里。
 
 ## ev.ev_cambaluc_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大都（汗八里）的下一步行动。
+大汗的卫士说起帝国的广袤：一条路自这座城门通向行在城，那里的粮仓从不空虚。其名如今上了你的舆图。
 
 ## ev.ev_cambaluc_b.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你在外郭以大都的价钱买下丝绸，账房先生用锐利的目光看着这桩买卖。布匹包好时，他招手让你进到一间更安静的屋里。
 
 ## ev.ev_cambaluc_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你花了一日，清点进城运丝的车驾。到傍晚，数目已无法计数，此城对丝绸的渴求，写进了你的行纪。
 
 ## ev.ev_cambaluc_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大都（汗八里）的下一步行动。
+你参观了官仓，发现荒年之中仓廪依然充实，无人挨饿。看守官仓的人，记下了你的这份关切。
 
 ## ev.ev_cambaluc_c.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你走在绿山移植来的树木之间，南方运来的松柏为青玉砌的台地遮着阴。一位在培土的园丁听见你的脚步抬起头，放下了铁锹。
 
 ## ev.ev_cambaluc_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你在日落时登上那座小山，一眼望尽整座城——宫殿、市集、驿站，都罩在同一片光里。这幅景象，深深落进你心里。
 
 ## ev.ev_cambaluc_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在大都（汗八里）的下一步行动。
+那些亲手浇树的园丁，说起北行一日路程外的上都夏宫。其名如今上了你的舆图，他们的手艺也记入了你的行纪。
 
 ## ev.ev_cambaluc_consequence_a.title
 
@@ -285,47 +285,47 @@ stamps:
 
 ## ev.ev_cambaluc_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从大都（汗八里）带走什么。问题背后正是宫门与驿站；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。驿站里一位吏员把你引到一旁，问你打算从汗八里带走什么。问题背后正是宫门与驿站；他提出把你的名字与一位信使的名字系在一起，这位信使熟知帝国的道路。你须决定如何对待这道征兆。
 
 ## ev.ev_cambaluc_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位驿站吏员谁能作保
 
 ## ev.ev_cambaluc_consequence_a.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你收下吏员递来的名字，追问谁能为它作保。他报出两位驿站总管，此事又打开了。
 
 ## ev.ev_cambaluc_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位吏员，把自己的打算收在心里
 
 ## ev.ev_cambaluc_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你谢过这位吏员，把自己的打算收在心里。此事在驿站就此了结，汗八里不再有人向你多问一句。
 
 ## ev.ev_cambaluc_consequence_a_resolution.title
 
-大都（汗八里）：后果显出形状
+汗八里：驿站的印信
 
 ## ev.ev_cambaluc_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把驿站的印信带在身上——那是一位熟知帝国道路的信使的名字。它不会替你决定整段旅程，但在下一座驿站，这个名字或许能为你换来一匹新马。
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把这印信传下去
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你在天黑前把这印信传了下去。信使的承诺如今随你的名字而行，驿站从此有理由接待你。
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这印信收进自己的行纪
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你把印信收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_cambaluc_consequence_b.title
 
@@ -333,47 +333,47 @@ stamps:
 
 ## ev.ev_cambaluc_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉大都（汗八里）日常生计的人又讲起宫门与驿站。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，一位粮仓卫士在城门口找到你，讲起宫门与驿站的另一番说法——信使如何计算路程时日，以及谁懂得读前面的路。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_cambaluc_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位卫士的实用建议走
 
 ## ev.ev_cambaluc_consequence_b.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你照着这位卫士的实用建议走，请他把它写下来。他为你把这段叙述抄出，路途真正的尺度便落进你手里。
 
 ## ev.ev_cambaluc_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位卫士
 
 ## ev.ev_cambaluc_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你把这段叙述留给那位卫士，自己收住了口。它回到了粮仓门口，汗八里不再向你索取什么。
 
 ## ev.ev_cambaluc_consequence_b_resolution.title
 
-大都（汗八里）：后果显出形状
+汗八里：信使的账目
 
 ## ev.ev_cambaluc_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位卫士的账目上路——信使如何计算路程时日，以及谁懂得读路。它不会替你决定整段旅程，但会在一条条慢路之中，替你守住那条快的。
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把信使的算法传下去
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：大都（汗八里）的人们已把你记在宫门与驿站之间。
+你在天黑前把信使的算法传给了下一位骑手。路途的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份信使程表收进自己的行纪
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随宫门与驿站先一步传开。
+你花了一日，把这份信使程表抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.ev_cambaluc_a_followup.title
 

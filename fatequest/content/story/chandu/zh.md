@@ -2,7 +2,7 @@
 unit: chandu
 lang: zh
 source: en
-source_rev: b44bf9f64c6a
+source_rev: c469a1364ff1
 status: translated
 translator: 人工校译
 notes: >
@@ -32,50 +32,50 @@ stamps:
   ev.chandu.c.title: 5246e39d0536
   ev.chandu.entry.body: 6a6e197bd362
   ev.chandu.entry.title: 71280f0b9041
-  ev.ev_chandu_entry.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_entry.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_entry.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_a.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_a.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_a.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_b.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_b.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_b.choice_3_result: acc79f0bc8ce
-  ev.ev_chandu_c.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_c.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_c.choice_3_result: acc79f0bc8ce
+  ev.ev_chandu_entry.choice_1_result: 2ee448ac6b97
+  ev.ev_chandu_entry.choice_2_result: fbb794a10c96
+  ev.ev_chandu_entry.choice_3_result: ec0b73dddd61
+  ev.ev_chandu_a.choice_1_result: 5e6691b10b01
+  ev.ev_chandu_a.choice_2_result: b252462e7406
+  ev.ev_chandu_a.choice_3_result: e59d63dca14b
+  ev.ev_chandu_b.choice_1_result: 752833f1001f
+  ev.ev_chandu_b.choice_2_result: c3f0b863d390
+  ev.ev_chandu_b.choice_3_result: ee6a065a2f63
+  ev.ev_chandu_c.choice_1_result: eed519e12c28
+  ev.ev_chandu_c.choice_2_result: 952b47a7943c
+  ev.ev_chandu_c.choice_3_result: b0efdd35e4de
   ev.ev_chandu_consequence_a.title: 5a1fc0b89f37
-  ev.ev_chandu_consequence_a.body: 67b385b4a5f9
-  ev.ev_chandu_consequence_a.choice_1: 4012a4cadc73
-  ev.ev_chandu_consequence_a.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_consequence_a.choice_2: 2d73ba8cc84a
-  ev.ev_chandu_consequence_a.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_consequence_a_resolution.title: 2b7e88c3a738
-  ev.ev_chandu_consequence_a_resolution.body: 357c2908f927
-  ev.ev_chandu_consequence_a_resolution.choice_1: 3b4827283f98
-  ev.ev_chandu_consequence_a_resolution.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_consequence_a_resolution.choice_2: c200bc7d41b1
-  ev.ev_chandu_consequence_a_resolution.choice_2_result: a2f04eb7e283
+  ev.ev_chandu_consequence_a.body: 8fd0431b830c
+  ev.ev_chandu_consequence_a.choice_1: da3b44b04fed
+  ev.ev_chandu_consequence_a.choice_1_result: 61600f49e311
+  ev.ev_chandu_consequence_a.choice_2: 4872fa7aaf22
+  ev.ev_chandu_consequence_a.choice_2_result: 74c95e2af424
+  ev.ev_chandu_consequence_a_resolution.title: 47d58eedc08c
+  ev.ev_chandu_consequence_a_resolution.body: dcdb968182cd
+  ev.ev_chandu_consequence_a_resolution.choice_1: 8000d098ca51
+  ev.ev_chandu_consequence_a_resolution.choice_1_result: bcd4e7b1d44c
+  ev.ev_chandu_consequence_a_resolution.choice_2: 23a76593af2b
+  ev.ev_chandu_consequence_a_resolution.choice_2_result: 10110a52f956
   ev.ev_chandu_consequence_b.title: 67951197658f
-  ev.ev_chandu_consequence_b.body: b3936526a575
-  ev.ev_chandu_consequence_b.choice_1: 5624c3fd45af
-  ev.ev_chandu_consequence_b.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_consequence_b.choice_2: bb0917a651a0
-  ev.ev_chandu_consequence_b.choice_2_result: a2f04eb7e283
-  ev.ev_chandu_consequence_b_resolution.title: 2b7e88c3a738
-  ev.ev_chandu_consequence_b_resolution.body: 827b72f18207
-  ev.ev_chandu_consequence_b_resolution.choice_1: 3b4827283f98
-  ev.ev_chandu_consequence_b_resolution.choice_1_result: f4cb12f2f1a9
-  ev.ev_chandu_consequence_b_resolution.choice_2: c200bc7d41b1
-  ev.ev_chandu_consequence_b_resolution.choice_2_result: a2f04eb7e283
+  ev.ev_chandu_consequence_b.body: 96cce47741e6
+  ev.ev_chandu_consequence_b.choice_1: 21bde693925f
+  ev.ev_chandu_consequence_b.choice_1_result: c2565087a921
+  ev.ev_chandu_consequence_b.choice_2: 65cb193c0692
+  ev.ev_chandu_consequence_b.choice_2_result: 170e90b33003
+  ev.ev_chandu_consequence_b_resolution.title: d46b0cef8941
+  ev.ev_chandu_consequence_b_resolution.body: 7a2024e79aa2
+  ev.ev_chandu_consequence_b_resolution.choice_1: d51eb49f8d7e
+  ev.ev_chandu_consequence_b_resolution.choice_1_result: fa35284517b4
+  ev.ev_chandu_consequence_b_resolution.choice_2: fb951fb173bd
+  ev.ev_chandu_consequence_b_resolution.choice_2_result: 6ad8c7a3d919
   ev.chandu.mentor_closure.title: 34de8345e68d
   ev.chandu.mentor_closure.body: ed1bbafdd7e8
   ev.chandu.mentor_closure.choice_1: da8d611ab3c7
-  ev.chandu.mentor_closure.choice_1_result: f4cb12f2f1a9
+  ev.chandu.mentor_closure.choice_1_result: 289bd0dd5b17
   ev.chandu.mentor_closure.choice_2: 59a447ce21bf
-  ev.chandu.mentor_closure.choice_2_result: a2f04eb7e283
+  ev.chandu.mentor_closure.choice_2_result: 78bf11881375
   ev.chandu.mentor_closure.choice_3: 630a8fcfe069
-  ev.chandu.mentor_closure.choice_3_result: acc79f0bc8ce
+  ev.chandu.mentor_closure.choice_3_result: a7284963248a
   ev.ev_chandu_a_followup.title: 4a2333e6293e
   ev.ev_chandu_a_followup.body: aafee4ea7f6a
   ev.ev_chandu_a_followup.choice_1: 4b4066660c57
@@ -211,51 +211,51 @@ stamps:
 
 ## ev.ev_chandu_entry.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+达鲁花赤把你的申报书读了两遍，盖了印，挥手放你走向草场门。你经过时，草场上一名马夫从角门里闪出来，与你同行。
 
 ## ev.ev_chandu_entry.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+上都的人回答你的问题时，眼睛都望着行宫的屋顶。回答谨慎而简短，其中一人补了一句：在你离开草场之前，会有更实在的叙述来找你。
 
 ## ev.ev_chandu_entry.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在上都的下一步行动。
+你在上都的市集里走了一日，带出来一驮货物。夏都的贸易，如今写进了你的行纪。
 
 ## ev.ev_chandu_a.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+卫兵收了你的银子，别过脸去。你踏进鎏金竹宫，满眼光华如金似翠；你走过时墙壁轻轻颤动，仿佛整座宫殿正在呼吸。
 
 ## ev.ev_chandu_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你站在宫外草地上，仰望那金顶衬着天空。大汗的游乐宫殿，如今记在你的行纪里。
 
 ## ev.ev_chandu_a.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在上都的下一步行动。
+你花了一日，仔细描画这座宫殿。屋顶与园林的线条，如今落在你的行纪里，是别的旅人拿不到的。
 
 ## ev.ev_chandu_b.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你沿着十六里长的围墙走了大半天。上都御苑如今记在你的行纪里，连同其中的禽兽与畜群。
 
 ## ev.ev_chandu_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你在围墙的缺口处望见那神圣的白马，它们的乳汁唯有大汗与宗亲可饮。这一幕，如今记在你的行纪里。
 
 ## ev.ev_chandu_b.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在上都的下一步行动。
+你雇下一位照管大汗鹰鸟的驯鹰人，带着蒙眼的白隼骑出城去。鹰房的主人精心选定了鹰和场地，他有意让你看个明白。
 
 ## ev.ev_chandu_c.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你在黎明看僧侣为白马挤奶，并按礼数把乳汁洒在地上。向天献祭的仪轨，如今写进了你的行纪。
 
 ## ev.ev_chandu_c.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你把一杯酒洒向长生天。萨满的目光随你而去，一分眷顾如落羽般轻轻落在你身上。
 
 ## ev.ev_chandu_c.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在上都的下一步行动。
+你问一位僧人这仪式意味着什么，他在金盂边沿顿了一顿。这个问题僧人们早已答惯，他却像第一次斟酌字句那样开了口。
 
 ## ev.ev_chandu_consequence_a.title
 
@@ -263,47 +263,47 @@ stamps:
 
 ## ev.ev_chandu_consequence_a.body
 
-第一个回答并没有在城门处结束。吏员、脚夫或旅人把你引到一旁，问你打算从上都带走什么。问题背后正是行宫与草场；你须决定如何对待这道征兆。
+第一个回答并没有在城门处结束。草场上一位马夫把你引到一旁，问你打算从上都带走什么。问题背后正是行宫与草场；他提出把你的名字与一位马师的名字系在一起，这位马师照看着神圣的白马。你须决定如何对待这道征兆。
 
 ## ev.ev_chandu_consequence_a.choice_1
 
-记下这个名字，追问谁能为它作保
+收下这个名字，追问这位马夫谁能作保
 
 ## ev.ev_chandu_consequence_a.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你收下马夫递来的名字，追问谁能为它作保。他报出草场上两位饲马的汉子，此事又打开了。
 
 ## ev.ev_chandu_consequence_a.choice_2
 
-谢过来人，把自己的打算收在心里
+谢过这位马夫，把自己的打算收在心里
 
 ## ev.ev_chandu_consequence_a.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你谢过这位马夫，把自己的打算收在心里。此事在草场就此了结，上都不再有人向你多问一句。
 
 ## ev.ev_chandu_consequence_a_resolution.title
 
-上都：后果显出形状
+上都：马师的承诺
 
 ## ev.ev_chandu_consequence_a_resolution.body
 
-你选择带走城门上的名字，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已答应把马师的承诺带在身上——马夫说，这承诺在北边草场上会被兑现。它不会替你决定整段旅程，但在草场的路上，这句话或许能为你换得一匹坐骑。
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前把承诺交付
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你在天黑前把承诺交付了。马师的承诺如今随你的名字而行，草场的人从此有理由接待你。
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把马师的承诺收进自己的行纪
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你把马师的承诺收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
 
 ## ev.ev_chandu_consequence_b.title
 
@@ -311,47 +311,47 @@ stamps:
 
 ## ev.ev_chandu_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一个熟悉上都日常生计的人又讲起行宫与草场。这说法不如游记宏大，却更适合带在身上。
+回答把一条传闻送上了道路。日落之前，宫中一位驯鹰人找到你，讲起行宫与草场的另一番说法——白马在哪片草场吃草，以及大汗真正走的是哪座门。这说法不如游记宏大，却更适合带在身上。
 
 ## ev.ev_chandu_consequence_b.choice_1
 
-照着这条实用的建议走
+照着这位驯鹰人的实用建议走
 
 ## ev.ev_chandu_consequence_b.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你照着这位驯鹰人的实用建议走，请他把它写下来。他为你把这段叙述抄出，草场的真正尺度便落进你手里。
 
 ## ev.ev_chandu_consequence_b.choice_2
 
-把这条传闻留给讲述它的人
+把这段叙述留给那位驯鹰人
 
 ## ev.ev_chandu_consequence_b.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你把这段叙述留给那位驯鹰人，自己收住了口。它回到了草场，上都不再向你索取什么。
 
 ## ev.ev_chandu_consequence_b_resolution.title
 
-上都：后果显出形状
+上都：草场的账目
 
 ## ev.ev_chandu_consequence_b_resolution.body
 
-你选择带走道路上的传闻，便把一次擦肩而过的交谈变成了一桩小小的承诺。它不会替你决定整段旅程，却会让下一个人有理由为你开门。
+你已选择带着这位驯鹰人的账目上路——白马在哪片草场吃草，以及大汗真正走的是哪座门。它不会替你决定整段旅程，但它指出的那条路，不会白白耗掉你一日。
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1
 
-在天黑前把这份引荐送到
+在天黑前给下一位骑手提个醒
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+你在天黑前给下一位骑手提了醒。草场的尺度从此走在你前头，它落在何处，你的名字便随到何处。
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2
 
-把这道征兆收进自己的行纪
+把这份草场札记收进自己的行纪
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你花了一日，把这份草场札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
 
 ## ev.chandu.mentor_closure.title
 
@@ -367,7 +367,7 @@ stamps:
 
 ## ev.chandu.mentor_closure.choice_1_result
 
-这一选择留下了痕迹：上都的人们已把你记在行宫与草场之间。
+宫廷马师并不回避：读地与观风之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
 
 ## ev.chandu.mentor_closure.choice_2
 
@@ -375,7 +375,7 @@ stamps:
 
 ## ev.chandu.mentor_closure.choice_2_result
 
-事情尚未完结，但下一段路已经显出：你的名字随行宫与草场先一步传开。
+你在草场陪着马师留了一日，他把大汗的饲养之道从容地讲给你。临别时他摆在你面前的，是一个北边草场会兑现的承诺。
 
 ## ev.chandu.mentor_closure.choice_3
 
@@ -383,7 +383,7 @@ stamps:
 
 ## ev.chandu.mentor_closure.choice_3_result
 
-你暂且把此事收下。得到的线索仍会指向你在上都的下一步行动。
+你谢过宫廷马师，踏上了路。他放你前行，为你祝福；上都的这番功课，便没有落笔。
 
 ## ev.ev_chandu_a_followup.title
 
