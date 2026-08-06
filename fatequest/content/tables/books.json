@@ -1,0 +1,109 @@
+{
+  "contentVersion": 1,
+  "table": "books",
+  "records": [
+    {
+      "id": "vol-polo",
+      "cover": "polo",
+      "corpus": "marco-polo",
+      "years": "1271–1295",
+      "status": "integrated",
+      "title": "book.polo.title",
+      "subtitle": "book.polo.subtitle",
+      "blurb": "book.polo.blurb",
+      "passage": "book.polo.passage",
+      "origin": "source"
+    },
+    {
+      "id": "vol-battuta",
+      "cover": "battuta",
+      "corpus": "ibn-battuta",
+      "years": "1325–1354",
+      "status": "integrated",
+      "title": "book.battuta.title",
+      "subtitle": "book.battuta.subtitle",
+      "blurb": "book.battuta.blurb",
+      "passage": "book.battuta.passage",
+      "origin": "source"
+    },
+    {
+      "id": "vol-rubruck",
+      "cover": "rubruck",
+      "corpus": "rubruck",
+      "years": "1253–1255",
+      "status": "excerpt",
+      "title": "book.rubruck.title",
+      "subtitle": "book.rubruck.subtitle",
+      "blurb": "book.rubruck.blurb",
+      "passage": "book.rubruck.passage",
+      "origin": "source",
+      "relatedCodex": ["chr-changchun-audience"]
+    },
+    {
+      "id": "vol-odoric",
+      "cover": "odoric",
+      "corpus": "odoric",
+      "years": "1318–1330",
+      "status": "excerpt",
+      "title": "book.odoric.title",
+      "subtitle": "book.odoric.subtitle",
+      "blurb": "book.odoric.blurb",
+      "passage": "book.odoric.passage",
+      "origin": "source",
+      "relatedCodex": ["leg-prester-john", "leg-earthly-paradise"]
+    },
+    {
+      "id": "vol-conti",
+      "cover": "conti",
+      "corpus": "conti",
+      "years": "1419–1444",
+      "status": "excerpt",
+      "title": "book.conti.title",
+      "subtitle": "book.conti.subtitle",
+      "blurb": "book.conti.blurb",
+      "passage": "book.conti.passage",
+      "origin": "source",
+      "relatedCodex": ["chr-daoyi-gulong", "chr-zhenla-city"]
+    },
+    {
+      "id": "vol-tafur",
+      "cover": "tafur",
+      "corpus": "tafur",
+      "years": "1435–1439",
+      "status": "excerpt",
+      "title": "book.tafur.title",
+      "subtitle": "book.tafur.subtitle",
+      "blurb": "book.tafur.blurb",
+      "passage": "book.tafur.passage",
+      "origin": "source",
+      "relatedCodex": ["chr-yelu-xiyou"]
+    },
+    {
+      "id": "vol-zhenghe",
+      "cover": "zhenghe",
+      "corpus": "yingya-shenglan",
+      "years": "1405–1433",
+      "status": "integrated",
+      "title": "book.zhenghe.title",
+      "subtitle": "book.zhenghe.subtitle",
+      "blurb": "book.zhenghe.blurb",
+      "passage": "book.zhenghe.passage",
+      "origin": "source",
+      "relatedCodex": ["chr-xingcha-malacca", "chr-daoyi-gulong"]
+    },
+    {
+      "id": "vol-pinto",
+      "cover": "",
+      "corpus": "mendes-pinto",
+      "years": "1537–1558",
+      "status": "desk_only",
+      "title": "book.pinto.title",
+      "subtitle": "book.pinto.subtitle",
+      "blurb": "book.pinto.blurb",
+      "passage": "book.pinto.passage",
+      "origin": "authored",
+      "deskOnly": true,
+      "relatedCodex": []
+    }
+  ]
+}

@@ -1104,12 +1104,100 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// -------------------------------- G30: desk books table is complete and keyed
+{
+  const books = byTable.books ?? [];
+  if (!books.length) {
+    err("G30", "content/tables/books.json", "books table missing or empty");
+  } else {
+    const enPath = join(ROOT, "content/i18n/en.json");
+    const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
+    const needCover = new Set(["polo", "battuta", "conti", "odoric", "rubruck", "tafur", "zhenghe"]);
+    const seenCover = new Set();
+    for (const b of books) {
+      if (!b.id) { err("G30", "books", "record missing id"); continue; }
+      if (b.cover) seenCover.add(b.cover);
+      for (const field of ["title", "subtitle", "blurb", "passage"]) {
+        const k = b[field];
+        if (!k) { err("G30", "books", `${b.id} missing ${field}`); continue; }
+        if (en[k] === undefined) err("G30", "content/i18n/en.json", `${b.id} ${field} key "${k}" missing`);
+      }
+    }
+    for (const id of needCover) {
+      if (!seenCover.has(id)) err("G30", "books", `desk cover "${id}" missing from books table`);
+    }
+  }
+}
+
+// -------------------------------------- G31: 21 city-tier site deepening
+// Every city-tier node must deepen at least one site into a multi-round
+// follow-up (TEXT_REQUIREMENTS §4.2 / PLAN P5). Hub cities by route degree
+// (chamba, badashan, tanpiju) must deepen both sites.
+{
+  const hubs = new Set(["chamba", "badashan", "tanpiju"]);
+  const enPath = join(ROOT, "content/i18n/en.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
+  const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  const textExists = (k) => k && en[k] !== undefined && zh[k] !== undefined;
+  const queuedEvent = (choice) => [
+    choice.effects,
+    choice.pass?.effects,
+    choice.fail?.effects,
+    choice.lessonFailEffects,
+  ].flatMap((list) => list ?? []).find((effect) => effect.op === "queue_event");
+  const cityTier = (byTable.cities ?? []).filter((c) => c.tier === "city");
+  if (cityTier.length !== 21) {
+    err("G31", "cities", `expected 21 city-tier nodes, found ${cityTier.length}`);
+  }
+  for (const c of cityTier) {
+    const sites = c.sites ?? [];
+    if (sites.length !== 2) {
+      err("G31", `cities:${c.id}`, `city needs exactly 2 sites, has ${sites.length}`);
+      continue;
+    }
+    const deepened = [];
+    for (const siteId of sites) {
+      const site = (byTable.events ?? []).find((e) => e.id === siteId);
+      if (!site) { err("G31", `events:${c.id}`, `${siteId}: site missing`); continue; }
+      const followupTargets = new Set();
+      for (const ch of site.choices ?? []) {
+        const q = queuedEvent(ch)?.value;
+        if (q) followupTargets.add(String(q));
+      }
+      if (!followupTargets.size) continue;
+      deepened.push(siteId);
+      for (const fid of followupTargets) {
+        const fu = (byTable.events ?? []).find((e) => e.id === fid);
+        if (!fu) { err("G31", `events:${siteId}`, `queue target ${fid} missing`); continue; }
+        if (fu.kind !== "consequence") {
+          err("G31", `events:${fid}`, `followup must be kind consequence, got ${fu.kind}`);
+        }
+        for (const [i, ch] of (fu.choices ?? []).entries()) {
+          if (!ch.resultText && !queuedEvent(ch)) {
+            err("G31", `events:${fid}`, `choice ${i + 1} has no resultText or queue_event`);
+          }
+          for (const k of [fu.title, fu.body, ch.label, ch.resultText]) {
+            if (k && !textExists(k)) err("G31", `events:${fid}`, `missing bilingual text key "${k}"`);
+          }
+        }
+      }
+    }
+    if (!deepened.length) {
+      err("G31", `cities:${c.id}`, `no site deepened with queue_event followup`);
+    }
+    if (hubs.has(c.id) && deepened.length < 2) {
+      err("G31", `cities:${c.id}`, `hub city must deepen both sites, deepened ${deepened.length}`);
+    }
+  }
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

@@ -119,3 +119,35 @@ You walk the idol abbeys and note their gilded figures. The account is written d
 ## ev.ev_campichu_b.choice_3_result
 
 You leave a small offering at an abbey gate. Coin changes hands, and the purse settles. Your name carries a little more weight here now. You set what you saw into your travel book.
+
+## ev.ev_campichu_a_followup.title
+
+Campichu: The Tangut Seat's Second Counsel
+
+## ev.ev_campichu_a_followup.body
+
+In the capital of Tangut a clerk of the governor's court who has sealed caravan papers for twenty years draws you from the market into a side room. He says Caracoron and Etzina are not merely names on a map — they are the measure of how far a Tangut passport will carry you before the desert takes over.
+
+## ev.ev_campichu_a_followup.choice_1
+
+Ask him to seal a note naming the road to Caracoron
+
+## ev.ev_campichu_a_followup.choice_1_result
+
+Caracoron is marked on your map with the clerk's seal beside it. The northern road is no longer a rumour.
+
+## ev.ev_campichu_a_followup.choice_2
+
+Buy a chest of tea at the court caravan price
+
+## ev.ev_campichu_a_followup.choice_2_result
+
+You leave with tea at a price the desert caravans accept. The chest is sealed for the next march.
+
+## ev.ev_campichu_a_followup.choice_3
+
+Wait a day for the passport office to open again
+
+## ev.ev_campichu_a_followup.choice_3_result
+
+You wait a day for the office. The waiting costs time, but Etzina is named before you go.

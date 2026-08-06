@@ -118,3 +118,35 @@ You buy dates from the coastal orchards. Coin changes hands, and the purse settl
 ## ev.ev_esher_b.choice_3_result
 
 You ask the Saracen merchants where the coast trade runs southward. The road to Axuma opens on your map. The road to Aden opens on your map. The account is written down before the hour turns.
+
+## ev.ev_esher_a_followup.title
+
+Esher: The Soldan's Haven, a Second Page
+
+## ev.ev_esher_a_followup.body
+
+In the haven four hundred miles from Aden a frankincense merchant who farms the Soldan's white incense draws you from the mole into his storehouse. He says Esher's revenue is smoke and gum — and that Aden, Dufar, and Axuma are written in his coast book if you mean to sail or ride with more than a glance at the harbour.
+
+## ev.ev_esher_a_followup.choice_1
+
+Buy frankincense at the Soldan's coast price
+
+## ev.ev_esher_a_followup.choice_1_result
+
+He sells you frankincense sealed for the next monsoon. The gum is white and the price is the coast's own.
+
+## ev.ev_esher_a_followup.choice_2
+
+Ask which sea road leads toward Aden and Dufar
+
+## ev.ev_esher_a_followup.choice_2_result
+
+Aden and Dufar are marked on your map. The frankincense coast is clear.
+
+## ev.ev_esher_a_followup.choice_3
+
+Watch the ships a day and hear Axuma named
+
+## ev.ev_esher_a_followup.choice_3_result
+
+You spend a day on the mole. Axuma is named in the talk, and fortune bends a little your way.

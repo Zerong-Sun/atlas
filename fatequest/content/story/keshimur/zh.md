@@ -2,7 +2,7 @@
 unit: keshimur
 lang: zh
 source: en
-source_rev: 4803ac03d9a5
+source_rev: cfa977669910
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_keshimur_b.choice_1_result: 5da4e07e316d
   ev.ev_keshimur_b.choice_2_result: f3ae6d8c12bd
   ev.ev_keshimur_b.choice_3_result: d4a476bb76e4
+  ev.ev_keshimur_a_followup.title: 25a6aa03ce5f
+  ev.ev_keshimur_a_followup.body: f2a794ed7a73
+  ev.ev_keshimur_a_followup.choice_1: e9688f0c19cd
+  ev.ev_keshimur_a_followup.choice_1_result: 34acb9e3e7c0
+  ev.ev_keshimur_a_followup.choice_2: 9a6fce50c1c8
+  ev.ev_keshimur_a_followup.choice_2_result: 1aa8faad3f01
+  ev.ev_keshimur_a_followup.choice_3: 38093d22b082
+  ev.ev_keshimur_a_followup.choice_3_result: a5ddb366e534
 ---
 
 ## city.keshimur.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_keshimur_b.choice_3_result
 
 你向山中商人买绿松石，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+
+## ev.ev_keshimur_a_followup.title
+
+克什米尔：偶像守护者的劝告
+
+## ev.ev_keshimur_a_followup.body
+
+会说话的偶像旁，一位看过许多季旅人的守护者把你引到寺庭。他说克什米尔的法术不卖——但通往喀布尔与回到巴达哈伤的路可以讲给你听，只要你不嘲笑。他问你打算从这山谷带走什么。
+
+## ev.ev_keshimur_a_followup.choice_1
+
+不讥讽地听完会说话偶像的故事
+
+## ev.ev_keshimur_a_followup.choice_1_result
+
+守护者把你的沉默当作敬意。克什米尔偶像的记述写入你的行纪，时运也待你稍好些。
+
+## ev.ev_keshimur_a_followup.choice_2
+
+追问通往喀布尔与德里的路
+
+## ev.ev_keshimur_a_followup.choice_2_result
+
+他点出喀布尔与更远的日子。德里仍远，第一段路却已上舆图。
+
+## ev.ev_keshimur_a_followup.choice_3
+
+为下一段山路雇一名山谷向导
+
+## ev.ev_keshimur_a_followup.choice_3_result
+
+向导收下你的钱与你的脚步。山中天气不再全然未知。

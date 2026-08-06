@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "book": "odoric",
+    "title": "The Travels of Friar Odoric",
+    "years": "1318-1330",
+    "source": "Yule, Cathay and the Way Thither, 1866 — public domain",
+    "zhStatus": "pending"
+  },
+  "bands": [
+    "west_asia",
+    "india",
+    "china",
+    "maritime_asia"
+  ],
+  "places": [
+    {
+      "id": "tana-odoric",
+      "title": "Of Tana in India",
+      "band": "india",
+      "placeNames": [
+        "Tana",
+        "Thana"
+      ],
+      "body": "I passed by the sea of Pontus and came to Trebizond, and thence to Tauris, and so by many lands to the Indus. At Tana, near the sea of India, four of our friars were martyred. From thence I went to many cities of the idolaters, and saw oxen worshipped, and widows burned with their dead husbands — a custom which I beheld with horror.",
+      "source": {
+        "book": "odoric",
+        "chapterId": "odoric-tana",
+        "chapterTitle": "Tana"
+      }
+    },
+    {
+      "id": "zayton-odoric",
+      "title": "Of the great city of Zayton",
+      "band": "china",
+      "placeNames": [
+        "Zayton",
+        "Caitan",
+        "Quanzhou"
+      ],
+      "body": "Departing thence I came to a certain city called Zayton, which hath a port twice as great as any in the world. In this city a great multitude of friars dwell, and they have two houses. Here also is made a great quantity of porcelain ware. The people of this country are idolaters, yet courteous to guests. From Zayton one may sail to many isles of India.",
+      "source": {
+        "book": "odoric",
+        "chapterId": "odoric-zayton",
+        "chapterTitle": "Zayton"
+      }
+    },
+    {
+      "id": "kinsay-odoric",
+      "title": "Of Cansay, the City of Heaven",
+      "band": "china",
+      "placeNames": [
+        "Cansay",
+        "Kinsay",
+        "Hangzhou"
+      ],
+      "body": "I came to the noble city of Cansay, which is greater than any city I have ever seen. It hath twelve principal gates, and at each gate a suburb greater than Venice or Padua. Through the midst of the city runs a great river, and over it are more bridges than a man can count. The people are so numerous that if an army of Tartars should come against them they would not fear.",
+      "source": {
+        "book": "odoric",
+        "chapterId": "odoric-kinsay",
+        "chapterTitle": "Cansay"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "valley-of-devils",
+      "title": "The Valley Terrible",
+      "band": "west_asia",
+      "body": "I came to a certain valley beside a pleasant river, wherein I heard many sounds of music, yet saw no players. Looking in, I beheld a multitude of dead men's bones. A friar who was with me dared not enter; I went in making the sign of the cross, and found at the end a face terrible to look upon. I fled, and thereafter no man would go that way with me.",
+      "source": {
+        "book": "odoric",
+        "chapterId": "odoric-valley",
+        "chapterTitle": "Valley"
+      }
+    }
+  ]
+}

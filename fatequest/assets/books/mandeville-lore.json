@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "book": "mandeville",
+    "title": "The Travels of Sir John Mandeville",
+    "years": "c.1356",
+    "source": "Public-domain English tradition (composite medieval travel lore)",
+    "zhStatus": "pending",
+    "note": "LEGEND material only. Mark origin authored / hybrid in game texts — not city lore bindings."
+  },
+  "bands": [
+    "west_asia",
+    "india",
+    "china"
+  ],
+  "places": [],
+  "stories": [
+    {
+      "id": "mandeville-prester",
+      "title": "Of Prester John",
+      "band": "india",
+      "body": "Men say that beyond India there reigns a Christian prince called Prester John, whose land is full of marvels: rivers of jewels, salamanders that live in fire, and ants that dig gold. Whether any traveller has truly seen this realm, the book does not prove; it offers the tale as wonder, not as chart.",
+      "source": {
+        "book": "mandeville",
+        "chapterId": "mandeville-prester",
+        "chapterTitle": "Prester John"
+      }
+    },
+    {
+      "id": "mandeville-paradise",
+      "title": "Of the Earthly Paradise",
+      "band": "west_asia",
+      "body": "Some say Paradise lies beyond the deserts of India, guarded so that no living man may enter. Mandeville gathers older stories and dresses them as itinerary. In this game such passages feed the legend codex, never a sourced city entry.",
+      "source": {
+        "book": "mandeville",
+        "chapterId": "mandeville-paradise",
+        "chapterTitle": "Paradise"
+      }
+    }
+  ]
+}

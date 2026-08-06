@@ -119,3 +119,67 @@ You pay a scribe to teach you a few words of the mountain tongue. Money moves �
 ## ev.ev_badashan_b.choice_3_result
 
 You buy a small balas ruby from a licensed broker. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+## ev.ev_badashan_a_followup.title
+
+Badashan: The Lapis Brokers' Second Page
+
+## ev.ev_badashan_a_followup.body
+
+In the highland bāzār a broker who deals only in rough lapis lays his ledger on the carpet and turns a page you were not meant to see. It names the mines, the tolls to Balc, and the days to Taican and Keshimur. He will sell you stone, or he will sell you the road — but not both for the same coin.
+
+## ev.ev_badashan_a_followup.choice_1
+
+Buy a block of lapis at the ledger price
+
+## ev.ev_badashan_a_followup.choice_1_result
+
+He sells you raw lapis at his list price. The stone is real, and the highland market lets you leave with it.
+
+## ev.ev_badashan_a_followup.choice_2
+
+Follow the margin road toward Balc
+
+## ev.ev_badashan_a_followup.choice_2_result
+
+The road to Balc is now clear: tolls, watered pastures, the two passes. You will not ride into Bactra blind.
+
+## ev.ev_badashan_a_followup.choice_3
+
+Wait a day for the brokers' report to be copied
+
+## ev.ev_badashan_a_followup.choice_3_result
+
+You wait a day while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons stay with you.
+
+## ev.ev_badashan_b_followup.title
+
+Badashan: The Prince's Tongue and the Ruby Road
+
+## ev.ev_badashan_b_followup.body
+
+After the audience, a court clerk who keeps the mountain tongue draws you into a side chamber. He says every prince of the royal blood claims descent that opens doors — and that a traveller who learns a few words of the highland speech may buy balas rubies without being cheated, or find the road to Keshimur without a guide's full price.
+
+## ev.ev_badashan_b_followup.choice_1
+
+Pay for a day's lesson in the mountain tongue
+
+## ev.ev_badashan_b_followup.choice_1_result
+
+You spend the day on the highland speech. The words are few, but in Badashan your name now carries a little more weight.
+
+## ev.ev_badashan_b_followup.choice_2
+
+Ask which pass leads toward Keshimur and Cabul
+
+## ev.ev_badashan_b_followup.choice_2_result
+
+He names Taican and Keshimur and the days between. The mountain road east is on your map.
+
+## ev.ev_badashan_b_followup.choice_3
+
+Buy a balas ruby at the court clerk's measured price
+
+## ev.ev_badashan_b_followup.choice_3_result
+
+The clerk sells you a balas ruby at a price that would buy a horse in lesser markets. The stone is sealed with the court's mark.

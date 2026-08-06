@@ -2,7 +2,7 @@
 unit: campichu
 lang: zh
 source: en
-source_rev: 82ecf18165eb
+source_rev: 47286a760da3
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_campichu_b.choice_1_result: 1b6318269cfc
   ev.ev_campichu_b.choice_2_result: bc7740be102b
   ev.ev_campichu_b.choice_3_result: f17b995ce698
+  ev.ev_campichu_a_followup.title: fd5e12d2f8f9
+  ev.ev_campichu_a_followup.body: fbfdd85c83fa
+  ev.ev_campichu_a_followup.choice_1: e511fe157574
+  ev.ev_campichu_a_followup.choice_1_result: 2de261194d94
+  ev.ev_campichu_a_followup.choice_2: aaaf13994751
+  ev.ev_campichu_a_followup.choice_2_result: 3b2d1d1c6722
+  ev.ev_campichu_a_followup.choice_3: 0f2d4e64f437
+  ev.ev_campichu_a_followup.choice_3_result: 957b1e5dca88
 ---
 
 ## city.campichu.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_campichu_b.choice_3_result
 
 你于寺门略献薄礼，银钱易手，囊中为之或增或减。此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
+
+## ev.ev_campichu_a_followup.title
+
+甘州：唐古特治所的第二劝告
+
+## ev.ev_campichu_a_followup.body
+
+在唐古特的治所，一位盖了二十年商队文书的吏员把你从市集引到侧室。他说哈剌和林与亦集乃不只是图上的名字——它们是唐古特路引在沙漠接管之前能带你走多远的尺度。
+
+## ev.ev_campichu_a_followup.choice_1
+
+请他在文书上点名通往哈剌和林的路
+
+## ev.ev_campichu_a_followup.choice_1_result
+
+哈剌和林标上你的舆图，旁有吏员印记。北路不再是传闻。
+
+## ev.ev_campichu_a_followup.choice_2
+
+按宫廷商队价买下一箱茶
+
+## ev.ev_campichu_a_followup.choice_2_result
+
+你按沙漠商队认的价钱带走茶叶。箱子已封好上路。
+
+## ev.ev_campichu_a_followup.choice_3
+
+等一日，等路引房重新开门
+
+## ev.ev_campichu_a_followup.choice_3_result
+
+你等了一日路引房。等待耗费时日，亦集乃却在你走前被点名。

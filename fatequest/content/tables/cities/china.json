@@ -797,7 +797,14 @@
       "calendars": [
         "chinese"
       ],
-      "mentorEvent": "ev-kinsay-mentor-jiaobei"
+      "mentorEvent": "ev-kinsay-mentor-jiaobei",
+      "altRefs": [
+        {
+          "book": "odoric",
+          "chapterId": "odoric-kinsay",
+          "title": "Cansay"
+        }
+      ]
     },
     {
       "id": "linju",
@@ -1557,6 +1564,13 @@
       "specialty": "dehua-porcelain",
       "calendars": [
         "chinese"
+      ],
+      "altRefs": [
+        {
+          "book": "odoric",
+          "chapterId": "odoric-zayton",
+          "title": "Zayton"
+        }
       ]
     }
   ]

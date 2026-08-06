@@ -2,7 +2,7 @@
 unit: kenjanfu
 lang: zh
 source: en
-source_rev: ac3b9b6f1097
+source_rev: 1d3bc9708d8d
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_kenjanfu_b.choice_1_result: 63fb6bf187dc
   ev.ev_kenjanfu_b.choice_2_result: bf5e84f654e2
   ev.ev_kenjanfu_b.choice_3_result: c75254c68c28
+  ev.ev_kenjanfu_a_followup.title: d44e281e1959
+  ev.ev_kenjanfu_a_followup.body: 5c36822de598
+  ev.ev_kenjanfu_a_followup.choice_1: a6b19b8e4031
+  ev.ev_kenjanfu_a_followup.choice_1_result: 0d670f3bccf3
+  ev.ev_kenjanfu_a_followup.choice_2: 6e3a103ef916
+  ev.ev_kenjanfu_a_followup.choice_2_result: 9e19de895694
+  ev.ev_kenjanfu_a_followup.choice_3: 97a59f0a0f74
+  ev.ev_kenjanfu_a_followup.choice_3_result: e095b6ce43a7
 ---
 
 ## city.kenjanfu.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_kenjanfu_b.choice_3_result
 
 你于平原远观曼哥来王宫，你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_kenjanfu_a_followup.title
+
+西安：桑田之间
+
+## ev.ev_kenjanfu_a_followup.body
+
+城西一位每日清晨巡桑的丝务管事把你引到树行下。他说西安之富在叶与蚕——通往河中、襄阳与北方的路，都写在收获的时令里，只要你肯听。
+
+## ev.ev_kenjanfu_a_followup.choice_1
+
+按平原收获价买下丝绸
+
+## ev.ev_kenjanfu_a_followup.choice_1_result
+
+他按作坊认的价钱卖给你丝。布匹已备好走西路。
+
+## ev.ev_kenjanfu_a_followup.choice_2
+
+追问通往襄阳的路
+
+## ev.ev_kenjanfu_a_followup.choice_2_result
+
+襄阳连同其间的日子已标上舆图。西去的工业之路清晰。
+
+## ev.ev_kenjanfu_a_followup.choice_3
+
+在园林走一日，记下桑时
+
+## ev.ev_kenjanfu_a_followup.choice_3_result
+
+你在树间过了一日。闲话里点到河中，时运也稍稍偏向你。

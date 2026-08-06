@@ -206,6 +206,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "tafur",
+          "chapterId": "tafur-cairo",
+          "title": "Cairo"
+        }
       ]
     },
     {
@@ -587,6 +594,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "tafur",
+          "chapterId": "tafur-constantinople",
+          "title": "Constantinople"
+        }
       ]
     },
     {
@@ -1109,7 +1123,14 @@
       "calendars": [
         "islamic"
       ],
-      "mentorEvent": "ev-ormus-mentor-astrodice"
+      "mentorEvent": "ev-ormus-mentor-astrodice",
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-hormuz",
+          "title": "忽鲁谟厮国"
+        }
+      ]
     },
     {
       "id": "petra",

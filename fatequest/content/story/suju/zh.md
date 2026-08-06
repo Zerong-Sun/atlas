@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: b4df625ef008
+source_rev: be633e47cc8e
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_suju_b.choice_1_result: 3352b85f18b0
   ev.ev_suju_b.choice_2_result: 54ddeeb352e8
   ev.ev_suju_b.choice_3_result: 80ea2f005556
+  ev.ev_suju_a_followup.title: 91f73cf33824
+  ev.ev_suju_a_followup.body: 273aa48a235e
+  ev.ev_suju_a_followup.choice_1: 58eba79601e6
+  ev.ev_suju_a_followup.choice_1_result: 6353b72d6011
+  ev.ev_suju_a_followup.choice_2: a3375e80c2a4
+  ev.ev_suju_a_followup.choice_2_result: 025dbea34a5a
+  ev.ev_suju_a_followup.choice_3: aa6cd68f6861
+  ev.ev_suju_a_followup.choice_3_result: b47e20370552
 ---
 
 ## city.suju.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_suju_b.choice_3_result
 
 你立石桥观运河舟行，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+
+## ev.ev_suju_a_followup.title
+
+苏州：金锦与六十里城郭
+
+## ev.ev_suju_a_followup.body
+
+在周回约六十里的大城里，一位把金线锦卖到行在的商人把你引到运河边的账房。他说苏州的丝路与桥路是同一条街——镇江府与常州都写在他的账上，若你想带走的不只是一匹布。
+
+## ev.ev_suju_a_followup.choice_1
+
+按他的公道价买下一幅金锦
+
+## ev.ev_suju_a_followup.choice_1_result
+
+他卖给你封好走运河的金锦。线光如行在市集。
+
+## ev.ev_suju_a_followup.choice_2
+
+追问通往行在的桥路
+
+## ev.ev_suju_a_followup.choice_2_result
+
+行在标作南方大市。桥路清晰。
+
+## ev.ev_suju_a_followup.choice_3
+
+沿城桥走一日，听运河上的话
+
+## ev.ev_suju_a_followup.choice_3_result
+
+你在桥上过了一日。闲话里点到镇江府，时运也稍稍偏向你。

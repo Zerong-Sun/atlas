@@ -72,6 +72,8 @@ var _bag: Dictionary = {}
 var _settings: Dictionary = {}
 var _codex_layer: Control
 var _codex_view: PanelContainer
+var _book_layer: Control
+var _book_view: PanelContainer
 var _archetype_id: String = ""
 var _roster: Roster
 var _party: Dictionary = {}
@@ -203,7 +205,7 @@ func _build_desk() -> void:
 	title.add_theme_color_override("font_color", Color("e8c46a"))
 	_desk.add_child(title)
 
-	# Seven travellers' books on the desk.
+	# Seven travellers' books on the desk — each opens the reader.
 	var books := HBoxContainer.new()
 	books.alignment = BoxContainer.ALIGNMENT_CENTER
 	books.add_theme_constant_override("separation", 6)
@@ -212,13 +214,21 @@ func _build_desk() -> void:
 		var cover := MapArt.book_cover(bid)
 		if cover == null:
 			continue
+		var btn := Button.new()
+		btn.custom_minimum_size = Vector2(48, 64)
+		btn.flat = true
+		btn.tooltip_text = I18n.t("book.%s.title" % bid)
+		btn.focus_mode = Control.FOCUS_ALL
 		var tr := TextureRect.new()
 		tr.texture = cover
-		tr.custom_minimum_size = Vector2(48, 64)
+		tr.set_anchors_preset(Control.PRESET_FULL_RECT)
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		tr.tooltip_text = bid
-		books.add_child(tr)
+		tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		btn.add_child(tr)
+		var open_id := String(bid)
+		btn.pressed.connect(func(): _open_book(open_id))
+		books.add_child(btn)
 
 	var sub := Label.new()
 	sub.text = "\n%d 座城 · %d 条路线 · %d 条事件\n%d 种商品 · %d 位随从 · %d 种占法\n" % [
@@ -632,6 +642,9 @@ func _build_map() -> void:
 	ccentre.add_child(_codex_view)
 	_codex_view.closed.connect(func(): _codex_layer.visible = false)
 
+	# Book reader may already exist from a desk click before `_begin`.
+	_ensure_book_reader()
+
 	_build_party()
 	_hire_ui = preload("res://game/ui/hire_contract.gd").new()
 	_hire_ui.build(self)
@@ -666,6 +679,9 @@ func _wire_dismissal() -> void:
 	if _codex_layer != null:
 		Panels.make_dismissable(_codex_layer, _codex_view,
 			func() -> void: _codex_layer.visible = false)
+	if _book_layer != null and _book_view != null:
+		Panels.make_dismissable(_book_layer, _book_view,
+			func() -> void: _book_layer.visible = false)
 	if _city_detail_layer != null:
 		Panels.make_dismissable(_city_detail_layer, _city_detail_card,
 			func() -> void: _city_detail_layer.visible = false)
@@ -697,6 +713,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if _codex_layer != null and is_instance_valid(_codex_layer):
 		layers.append(_codex_layer)
 		closers.append(func() -> void: _codex_layer.visible = false)
+	if _book_layer != null and is_instance_valid(_book_layer):
+		layers.append(_book_layer)
+		closers.append(func() -> void: _book_layer.visible = false)
 	if _market_layer != null and is_instance_valid(_market_layer):
 		layers.append(_market_layer)
 		closers.append(func() -> void:
@@ -1677,6 +1696,45 @@ func _open_codex() -> void:
 	_codex_view.open(state)
 
 
+func _open_book(book_id: String = "") -> void:
+	_ensure_book_reader()
+	if _book_layer == null or _book_view == null:
+		return
+	Motion.crossfade_in(_book_layer, 0.18)
+	_book_view.open(book_id, state if state != null else null)
+
+
+func _ensure_book_reader() -> void:
+	## Desk opens before `_begin` builds the play overlays — create the reader
+	## on demand so the seven covers work on the parchment screen too.
+	if _book_layer != null and is_instance_valid(_book_layer):
+		return
+	_book_layer = Control.new()
+	_book_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_book_layer.visible = false
+	_book_layer.z_index = 80
+	add_child(_book_layer)
+	var bscrim := ColorRect.new()
+	bscrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	bscrim.color = Palette.scrim_color()
+	bscrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_book_layer.add_child(bscrim)
+	var bcentre := CenterContainer.new()
+	bcentre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	bcentre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_book_layer.add_child(bcentre)
+	_book_view = preload("res://game/screens/book_reader.gd").new()
+	_book_view.setup(db)
+	bcentre.add_child(_book_view)
+	_book_view.closed.connect(func():
+		if _book_layer != null:
+			_book_layer.visible = false)
+	Panels.make_dismissable(_book_layer, _book_view,
+		func() -> void:
+			if _book_layer != null:
+				_book_layer.visible = false)
+
+
 func _open_bag() -> void:
 	var list: VBoxContainer = _bag["list"]
 	for c in list.get_children():
@@ -1913,6 +1971,8 @@ func _restore_document(doc: Dictionary) -> bool:
 	_dialog_layer.visible = false
 	_market_layer.visible = false
 	_codex_layer.visible = false
+	if _book_layer != null:
+		_book_layer.visible = false
 	_bag["layer"].visible = false
 	_pending_pages_in_sequence = 0
 	if not state.active_journey.is_empty():
@@ -1955,6 +2015,8 @@ func _restyle_all() -> void:
 		_market_view.restyle()
 	if _codex_view and _codex_view.has_method("restyle"):
 		_codex_view.restyle()
+	if _book_view and _book_view.has_method("restyle"):
+		_book_view.restyle()
 	# The overlays have no restyle() of their own, and used to be skipped
 	# entirely — switching to high contrast left the bag, party, ending,
 	# settings and hire panels on the old parchment. Those are exactly the

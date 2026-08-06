@@ -112,3 +112,35 @@ You observe the idol rites from the courtyard wall. The account is written down 
 ## ev.ev_camul_b.choice_3_result
 
 You ask a monk which road leads toward the eastern desert. You set the way to Etzina on your map. You spend 1 day before the way is clear again.
+
+## ev.ev_camul_a_followup.title
+
+Camul: The Melon Sellers' Desert Measure
+
+## ev.ev_camul_a_followup.body
+
+Between the two deserts a melon seller who has crossed both sands sits you down beside his stall and will not take your coin until you hear the measure of the next marches. He names Lop and Sachiu as if they were neighbours, and asks whether you mean to buy fruit for the road or knowledge of the wells.
+
+## ev.ev_camul_a_followup.choice_1
+
+Buy melons at his road price for the next desert
+
+## ev.ev_camul_a_followup.choice_1_result
+
+He sells you melons at a fair weight. The fruit will keep on the sand, and the oasis account goes with it.
+
+## ev.ev_camul_a_followup.choice_2
+
+Ask him to name the wells toward Lop and Sachiu
+
+## ev.ev_camul_a_followup.choice_2_result
+
+Lop and Sachiu are marked on your map with the wells between. The next desert is no longer a blank.
+
+## ev.ev_camul_a_followup.choice_3
+
+Wait a day for the caravan that knows the eastern fog
+
+## ev.ev_camul_a_followup.choice_3_result
+
+You wait a day for the eastern caravan. The waiting costs time, but the fog road is no longer a rumour alone.

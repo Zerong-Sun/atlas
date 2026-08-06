@@ -2,7 +2,7 @@
 unit: taican
 lang: zh
 source: en
-source_rev: 43ade2268abf
+source_rev: 5bbeb34405ee
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_taican_b.choice_1_result: 3fc16a3517b2
   ev.ev_taican_b.choice_2_result: b5e308afcbcb
   ev.ev_taican_b.choice_3_result: ee4e6eb981ff
+  ev.ev_taican_a_followup.title: 5eeee38a0d28
+  ev.ev_taican_a_followup.body: 7bbe37e9a85c
+  ev.ev_taican_a_followup.choice_1: 32c281b1690e
+  ev.ev_taican_a_followup.choice_1_result: 968ae9ffb7b9
+  ev.ev_taican_a_followup.choice_2: 15258ad9a90a
+  ev.ev_taican_a_followup.choice_2_result: 169d8ba70349
+  ev.ev_taican_a_followup.choice_3: 761a02f74618
+  ev.ev_taican_a_followup.choice_3_result: ad8e3cd7610c
 ---
 
 ## city.taican.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_taican_b.choice_3_result
 
 你问何路驼队续往沙吾甘，你标出了通往撒普儿干的路。你标出了通往巴里黑的路。你把这番见闻记入行纪。
+
+## ev.ev_taican_a_followup.title
+
+塔伊坎：粮商的路册
+
+## ev.ev_taican_a_followup.body
+
+在设防的粮市里，一位为每支出城商队定价粮食的主人在秤旁翻开路册。他说巴达哈伤与巴里黑都写在里面，以日子与载量为尺度——买棉花却不听路册的旅人，出城时只睁半只眼。
+
+## ev.ev_taican_a_followup.choice_1
+
+按市集公道价买下棉布
+
+## ev.ev_taican_a_followup.choice_1_result
+
+你按公道分量带走棉布。布料可在下一段路上转卖或自用。
+
+## ev.ev_taican_a_followup.choice_2
+
+请他读出通往巴里黑与巴达哈伤的路
+
+## ev.ev_taican_a_followup.choice_2_result
+
+巴里黑与巴达哈伤连同其间的日子被点名。运粮之路已上你的舆图。
+
+## ev.ev_taican_a_followup.choice_3
+
+等一日，等粮价张榜
+
+## ev.ev_taican_a_followup.choice_3_result
+
+你等了一日张榜。等待耗费时日，市集的劝告却留在你身上。

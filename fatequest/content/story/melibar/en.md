@@ -119,3 +119,35 @@ You measure the North Star against the mast and record what you see. The account
 ## ev.ev_melibar_b.choice_3_result
 
 You buy pearls from a diver who prayed at the shrine. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+## ev.ev_melibar_a_followup.title
+
+Melibar: The Pepper Coast Watch
+
+## ev.ev_melibar_a_followup.body
+
+On the west-facing pepper coast a watchman who has counted corsair sails for twenty monsoons draws you under a palm shed. He says Melibar pays tribute to no man — but Cail, Coilum, and Maabar are written in his watch book if you mean to buy pepper without sailing blind into the next haven.
+
+## ev.ev_melibar_a_followup.choice_1
+
+Buy pepper at the coast watch price
+
+## ev.ev_melibar_a_followup.choice_1_result
+
+He sells you pepper sealed for the next westbound ship. The price is the coast's own list.
+
+## ev.ev_melibar_a_followup.choice_2
+
+Ask which road leads toward Cail and Coilum
+
+## ev.ev_melibar_a_followup.choice_2_result
+
+Cail and Coilum are marked on your map. The pepper coast road is clear.
+
+## ev.ev_melibar_a_followup.choice_3
+
+Watch the corsair horizon a day and hear Maabar named
+
+## ev.ev_melibar_a_followup.choice_3_result
+
+You spend a day on the watch. Maabar is named in the talk, and fortune bends a little your way.

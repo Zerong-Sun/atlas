@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "book": "zhenla",
+    "title": "真腊风土记 Zhenla Fengtu Ji",
+    "years": "1296-1297",
+    "source": "周达观 Yuan dynasty — classical Chinese, public domain",
+    "language": "zh",
+    "zhStatus": "source"
+  },
+  "bands": [
+    "maritime_asia"
+  ],
+  "places": [
+    {
+      "id": "angkor",
+      "title": "城郭",
+      "band": "maritime_asia",
+      "placeNames": [
+        "真腊",
+        "Angkor",
+        "吴哥"
+      ],
+      "body": "州城周围可二十里，有五门，门各有石佛。其城甚方整，石塔、石屋极多。国王每日坐朝，国人合掌膜拜。周达观随使至其国，记其宫室、耕种、贸易甚详。",
+      "source": {
+        "book": "zhenla",
+        "chapterId": "zhenla-city",
+        "chapterTitle": "城郭"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "zhenla-trade",
+      "title": "贸易",
+      "band": "maritime_asia",
+      "body": "国人交易皆妇人为之。每有唐人到彼，必先纳一妇人者，兼利其能买卖故也。其地出黄蜡、降真、苏木、翠羽。",
+      "source": {
+        "book": "zhenla",
+        "chapterId": "zhenla-trade",
+        "chapterTitle": "贸易"
+      }
+    }
+  ]
+}

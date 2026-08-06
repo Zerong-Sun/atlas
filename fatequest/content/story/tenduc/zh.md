@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: 9d4cc7618d98
+source_rev: 4cda029c8003
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_tenduc_b.choice_1_result: 1d1412748f59
   ev.ev_tenduc_b.choice_2_result: 032f6eee1b38
   ev.ev_tenduc_b.choice_3_result: 7cf65b891207
+  ev.ev_tenduc_a_followup.title: 30719bcaba73
+  ev.ev_tenduc_a_followup.body: 9fd87e572e02
+  ev.ev_tenduc_a_followup.choice_1: 9a31e4830103
+  ev.ev_tenduc_a_followup.choice_1_result: 991c789acbba
+  ev.ev_tenduc_a_followup.choice_2: f86065039ba0
+  ev.ev_tenduc_a_followup.choice_2_result: 0dc0b07dc984
+  ev.ev_tenduc_a_followup.choice_3: b7db3652bfc1
+  ev.ev_tenduc_a_followup.choice_3_result: c9378da06a7b
 ---
 
 ## city.tenduc.name
@@ -143,3 +151,35 @@ stamps:
 ## ev.ev_tenduc_b.choice_3_result
 
 你问撒拉逊商人何路北入草原，通往额里合牙（宁夏）的道路，就此展开在舆图上。你的行事之名先你一步传开。
+
+## ev.ev_tenduc_a_followup.title
+
+天德州：景教礼拜之后
+
+## ev.ev_tenduc_a_followup.body
+
+景教礼拜结束，乔治王一系的一位祭司把你引到木屏风旁。他说东去汗八里的路不只是驿马之链——仍有一串教会与驿站记着祭司王约翰的名字。你若谨慎选择，他愿为你开一扇门。
+
+## ev.ev_tenduc_a_followup.choice_1
+
+请他标出通往汗八里的驿路
+
+## ev.ev_tenduc_a_followup.choice_1_result
+
+他在羊皮纸上标出汗八里与南面驿路。东去的驿站不再盲目。
+
+## ev.ev_tenduc_a_followup.choice_2
+
+为教堂献上一份薄礼，求一条路的祝福
+
+## ev.ev_tenduc_a_followup.choice_2_result
+
+礼物被收下，并无繁文。教堂记下你的名字，草原路上多了一分照应。
+
+## ev.ev_tenduc_a_followup.choice_3
+
+等一日，抄下祭司所记的驿站名单
+
+## ev.ev_tenduc_a_followup.choice_3_result
+
+你等了一日，书记抄完驿站名单。等待耗费时日，下一次启程却有了尺度。

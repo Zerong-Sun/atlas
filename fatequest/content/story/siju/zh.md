@@ -2,7 +2,7 @@
 unit: siju
 lang: zh
 source: en
-source_rev: dcad9393075c
+source_rev: 9442411bd514
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_siju_b.choice_1_result: f4c6f1f509b1
   ev.ev_siju_b.choice_2_result: 8c079194a58a
   ev.ev_siju_b.choice_3_result: b2514e556e4a
+  ev.ev_siju_a_followup.title: 25f724234c99
+  ev.ev_siju_a_followup.body: 491d00be5550
+  ev.ev_siju_a_followup.choice_1: 08494c193b51
+  ev.ev_siju_a_followup.choice_1_result: 904de4f249ce
+  ev.ev_siju_a_followup.choice_2: c0935e978cfc
+  ev.ev_siju_a_followup.choice_2_result: 9e0b125dafe6
+  ev.ev_siju_a_followup.choice_3: 7530a4374db8
+  ev.ev_siju_a_followup.choice_3_result: b9aaebc2daa1
 ---
 
 ## city.siju.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_siju_b.choice_3_result
 
 你问长者何以火葬而非土葬，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_siju_a_followup.title
+
+徐州：糖坊的第二页
+
+## ev.ev_siju_a_followup.body
+
+邳州以南的作坊里，一位把糖箱运到淮安与高邮的糖坊主人把你拉到煮锅旁。他说徐州的工艺若没有墙上写着的运河日子便一文不值——买糖却不问那些日子的旅人，去粮镇时只睁半只眼。
+
+## ev.ev_siju_a_followup.choice_1
+
+按作坊公道价买下糖
+
+## ev.ev_siju_a_followup.choice_1_result
+
+他卖给你封好走运河的糖。价钱公道，徐州之名随箱子同行。
+
+## ev.ev_siju_a_followup.choice_2
+
+追问通往淮安的运河路
+
+## ev.ev_siju_a_followup.choice_2_result
+
+淮安与宝应已标上舆图。南去的运河清晰。
+
+## ev.ev_siju_a_followup.choice_3
+
+与书吏一起清点一日粮袋
+
+## ev.ev_siju_a_followup.choice_3_result
+
+你在粮袋间过了一日。闲话里点到高邮，时运也稍稍偏向你。

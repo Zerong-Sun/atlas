@@ -2,7 +2,7 @@
 unit: chamba
 lang: zh
 source: en
-source_rev: d4c894514dc9
+source_rev: c9cfcc3afff0
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,22 @@ stamps:
   ev.ev_chamba_b.choice_1_result: 9a58ec57e790
   ev.ev_chamba_b.choice_2_result: 13dabc16181e
   ev.ev_chamba_b.choice_3_result: 5716069fa47f
+  ev.ev_chamba_a_followup.title: 5ce7d1b05de9
+  ev.ev_chamba_a_followup.body: adebcda2a6d9
+  ev.ev_chamba_a_followup.choice_1: a31fc8f156cb
+  ev.ev_chamba_a_followup.choice_1_result: 82d0c3f77b97
+  ev.ev_chamba_a_followup.choice_2: 2d263bb0ea5d
+  ev.ev_chamba_a_followup.choice_2_result: 42482fb7e9be
+  ev.ev_chamba_a_followup.choice_3: 7f5fc20a219b
+  ev.ev_chamba_a_followup.choice_3_result: 67597250c22f
+  ev.ev_chamba_b_followup.title: 4b8123da79f4
+  ev.ev_chamba_b_followup.body: 1efae4b5e1e6
+  ev.ev_chamba_b_followup.choice_1: 3ae8ce92525a
+  ev.ev_chamba_b_followup.choice_1_result: a22310621c56
+  ev.ev_chamba_b_followup.choice_2: 878e9920ad3e
+  ev.ev_chamba_b_followup.choice_2_result: bb36249c0987
+  ev.ev_chamba_b_followup.choice_3: 22f62642b7a1
+  ev.ev_chamba_b_followup.choice_3_result: 071be0fc75a2
 ---
 
 ## city.chamba.name
@@ -140,3 +156,67 @@ stamps:
 ## ev.ev_chamba_b.choice_3_result
 
 你问水手至刺桐、福州须几日航程，你标出了通往刺桐（泉州）的路。你标出了通往福州的路。你把这番见闻记入行纪。
+
+## ev.ev_chamba_a_followup.title
+
+占城：象贡之后
+
+## ev.ev_chamba_a_followup.body
+
+书吏点完象贡之后，一位把贡船开到刺桐的港引把你拉上防波堤。他说占城之富不只在象牙——更在刺桐西南西的海路，以及宾童龙与福州之名，若你打算跟着可汗的船回家。
+
+## ev.ev_chamba_a_followup.choice_1
+
+按贡港价买下檀香
+
+## ev.ev_chamba_a_followup.choice_1_result
+
+他卖给你封好等季风的檀香。香气留在货舱里。
+
+## ev.ev_chamba_a_followup.choice_2
+
+请他标出海路通往刺桐
+
+## ev.ev_chamba_a_followup.choice_2_result
+
+刺桐连同季风之间的日子已标上舆图。朝贡海路清晰。
+
+## ev.ev_chamba_a_followup.choice_3
+
+在贡港看一日，听引水员的话
+
+## ev.ev_chamba_a_followup.choice_3_result
+
+你在防波堤上过了一日。闲话里点到宾童龙，时运也稍稍偏向你。
+
+## ev.ev_chamba_b_followup.title
+
+占城：偶像王廷与胡椒码头
+
+## ev.ev_chamba_b_followup.body
+
+在偶像王廷，一位既伺候国王又伺候番舶的胡椒经纪人把你从觐见处引到码头棚荫下。他说占城以象进贡，以胡椒贸易——福州与诸岛都写在他的季风册上，若你打算带着比故事更多的东西从刺桐西南西出航。
+
+## ev.ev_chamba_b_followup.choice_1
+
+按宫廷经纪人价买下胡椒
+
+## ev.ev_chamba_b_followup.choice_1_result
+
+他卖给你封好等季风的胡椒。价钱是宫廷本价。
+
+## ev.ev_chamba_b_followup.choice_2
+
+追问通往福州的海路
+
+## ev.ev_chamba_b_followup.choice_2_result
+
+福州已标上舆图。北去的海路清晰。
+
+## ev.ev_chamba_b_followup.choice_3
+
+在王廷待一日，听国王论海
+
+## ev.ev_chamba_b_followup.choice_3_result
+
+你在王廷过了一日。国王的话点到诸岛，时运也稍稍偏向你。

@@ -2,7 +2,7 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: b0fcc10bce59
+source_rev: 89c267b84b5a
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_melibar_b.choice_1_result: 3e6a379f2c88
   ev.ev_melibar_b.choice_2_result: 36cb51d3207d
   ev.ev_melibar_b.choice_3_result: 4f3bcc6db7b8
+  ev.ev_melibar_a_followup.title: 21c8a50503cf
+  ev.ev_melibar_a_followup.body: 347521ff43f3
+  ev.ev_melibar_a_followup.choice_1: 2bd4e9474d42
+  ev.ev_melibar_a_followup.choice_1_result: 35c3873d452e
+  ev.ev_melibar_a_followup.choice_2: 043dde1a58c3
+  ev.ev_melibar_a_followup.choice_2_result: eebf84a82c5a
+  ev.ev_melibar_a_followup.choice_3: 2d835bd962f8
+  ev.ev_melibar_a_followup.choice_3_result: caff10deb627
 ---
 
 ## city.melibar.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_melibar_b.choice_3_result
 
 你向祷毕之采珠人购珠，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+
+## ev.ev_melibar_a_followup.title
+
+马拉巴：胡椒海岸的守望
+
+## ev.ev_melibar_a_followup.body
+
+在西向的胡椒海岸，一位点了二十个季风海盗帆影的守望者把你引到棕棚下。他说马拉巴不向任何人纳贡——但加异勒、俱蓝与马八儿都写在他的守望册上，若你想买胡椒却不盲目前往下一港。
+
+## ev.ev_melibar_a_followup.choice_1
+
+按海岸守望价买下胡椒
+
+## ev.ev_melibar_a_followup.choice_1_result
+
+他卖给你封好等西行船的胡椒。价钱是海岸本价。
+
+## ev.ev_melibar_a_followup.choice_2
+
+追问通往加异勒与俱蓝的路
+
+## ev.ev_melibar_a_followup.choice_2_result
+
+加异勒与俱蓝已标上舆图。胡椒海岸之路清晰。
+
+## ev.ev_melibar_a_followup.choice_3
+
+望一日海盗天际，听马八儿之名
+
+## ev.ev_melibar_a_followup.choice_3_result
+
+你守望了一日。闲话里点到马八儿，时运也稍稍偏向你。

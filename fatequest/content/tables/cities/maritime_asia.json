@@ -61,6 +61,13 @@
       "calendars": [
         "islamic",
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-champa",
+          "title": "占城"
+        }
       ]
     },
     {
@@ -110,6 +117,13 @@
       "calendars": [
         "islamic",
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-sumatra",
+          "title": "苏门荅刺　那孤儿  黎伐国"
+        }
       ]
     },
     {
@@ -159,6 +173,13 @@
       "calendars": [
         "islamic",
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-malacca",
+          "title": "满刺加"
+        }
       ]
     }
   ]

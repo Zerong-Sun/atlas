@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "book": "conti",
+    "title": "The Travels of Niccolò de' Conti",
+    "years": "1419-1444",
+    "source": "Major, India in the Fifteenth Century (Hakluyt Society), 1857 — public domain",
+    "zhStatus": "pending"
+  },
+  "bands": [
+    "india",
+    "maritime_asia",
+    "west_asia"
+  ],
+  "places": [
+    {
+      "id": "calicut-conti",
+      "title": "Of Calicut",
+      "band": "india",
+      "placeNames": [
+        "Calicut",
+        "Collicuthia"
+      ],
+      "body": "Calicut is a maritime city, noble and noted for its harbour. The inhabitants are addicted to the worship of idols. Pepper grows here in great abundance. Ships come from all parts of India, from Ethiopia, Arabia and China. The king of this place is very powerful. Conti lived here long enough to learn the tongue and the manners of the merchants.",
+      "source": {
+        "book": "conti",
+        "chapterId": "conti-calicut",
+        "chapterTitle": "Calicut"
+      }
+    },
+    {
+      "id": "pegu-conti",
+      "title": "Of Pegu and the lands of Ava",
+      "band": "maritime_asia",
+      "placeNames": [
+        "Pegu",
+        "Ava",
+        "Burma"
+      ],
+      "body": "Beyond Bengal lies the kingdom of Pegu, rich in rubies and in elephants. The people are idolaters of gentle manners. Conti sailed along these coasts and noted that the ships of China come here for spices, and that the rains fall for months together so that the rivers overflow their banks.",
+      "source": {
+        "book": "conti",
+        "chapterId": "conti-pegu",
+        "chapterTitle": "Pegu"
+      }
+    },
+    {
+      "id": "quilon-conti",
+      "title": "Of Columbo and Quilon",
+      "band": "india",
+      "placeNames": [
+        "Columbo",
+        "Quilon",
+        "Coilum"
+      ],
+      "body": "On the coast of Malabar stands Quilon, where ginger and cinnamon are gathered. Christians of Saint Thomas dwell here in some numbers. Conti observed that the seasons are divided by monsoon winds, and that no ship dares the ocean when the wind is contrary.",
+      "source": {
+        "book": "conti",
+        "chapterId": "conti-quilon",
+        "chapterTitle": "Quilon"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "conti-renunciation",
+      "title": "How Conti was forced to renounce his faith",
+      "band": "west_asia",
+      "body": "In Egypt, Conti and his family were compelled, under threat of death, to renounce the Christian faith for a time. He afterwards confessed this to Pope Eugene IV, and Poggio Bracciolini wrote down his travels from that confession. The tale is a reminder that the roads of the fifteenth century exacted more than gold.",
+      "source": {
+        "book": "conti",
+        "chapterId": "conti-renounce",
+        "chapterTitle": "Renunciation"
+      }
+    }
+  ]
+}

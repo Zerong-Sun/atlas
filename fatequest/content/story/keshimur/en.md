@@ -119,3 +119,35 @@ You rest a week in the valley before the high passes. It costs you 7 days on the
 ## ev.ev_keshimur_b.choice_3_result
 
 You buy turquoise from the mountain traders. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+## ev.ev_keshimur_a_followup.title
+
+Keshimur: The Idol Keepers' Counsel
+
+## ev.ev_keshimur_a_followup.body
+
+Beside the speaking idols a keeper who has watched travellers for many seasons draws you into the temple court. He says the enchantments of Keshimur are not for sale — but the road to Cabul and the road back to Badashan are, if you listen without mockery. He asks what you intend to carry away from this valley.
+
+## ev.ev_keshimur_a_followup.choice_1
+
+Listen to the tale of the speaking idols without scoffing
+
+## ev.ev_keshimur_a_followup.choice_1_result
+
+The keeper accepts your silence as respect. The account of Keshimur's idols goes into your book, and a small turn of fortune favours you.
+
+## ev.ev_keshimur_a_followup.choice_2
+
+Ask which road leads toward Cabul and Delhi
+
+## ev.ev_keshimur_a_followup.choice_2_result
+
+He names Cabul and the days beyond. Delhi is still distant, but the first road is on your map.
+
+## ev.ev_keshimur_a_followup.choice_3
+
+Hire a valley guide for the next mountain march
+
+## ev.ev_keshimur_a_followup.choice_3_result
+
+A guide takes your coin and your pace. The mountain weather is no longer wholly unknown.

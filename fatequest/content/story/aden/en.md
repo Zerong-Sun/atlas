@@ -117,3 +117,35 @@ You pay the harbour fee and buy frankincense from a Somali trader. Money moves â
 ## ev.ev_aden_b.choice_3_result
 
 You listen at the mosque door as the Soldan's men pray. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_aden_a_followup.title
+
+Aden: The Camel Masters' Ledger
+
+## ev.ev_aden_a_followup.body
+
+On the quay where India's ships discharge into lighters, a camel master who has walked the thirty-day road to the river of Alexandria lays his ledger beside the pepper sheds. He says Aden is the gate of Egypt's spice â€” and that Dufar and Cambaet are written in the margin if you mean to leave the harbour with more than a sack.
+
+## ev.ev_aden_a_followup.choice_1
+
+Buy Malabar pepper at the camel master's price
+
+## ev.ev_aden_a_followup.choice_1_result
+
+He sells you pepper sealed for the camel road. The sack will keep through the thirty days.
+
+## ev.ev_aden_a_followup.choice_2
+
+Ask him to mark the roads that leave the harbour
+
+## ev.ev_aden_a_followup.choice_2_result
+
+Dufar and Cambaet are marked on your map. The harbour exits are clear.
+
+## ev.ev_aden_a_followup.choice_3
+
+Walk the sheds a day and watch the lighters load
+
+## ev.ev_aden_a_followup.choice_3_result
+
+You spend a day among the bales. The camel road to Alexandria is noted, and fortune bends a little your way.

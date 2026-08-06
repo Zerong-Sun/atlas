@@ -119,3 +119,35 @@ You buy a roll of coloured cotton cloth from a Nestorian weaver. Coin changes ha
 ## ev.ev_tenduc_b.choice_3_result
 
 You ask the Saracen merchants which road leads north to the steppe. The road to Egrigaia opens on your map. Word of your conduct runs ahead of you.
+
+## ev.ev_tenduc_a_followup.title
+
+Tenduc: After the Nestorian Service
+
+## ev.ev_tenduc_a_followup.body
+
+When the Nestorian service ends, a priest of King George's line draws you aside beside the wooden screen. He says the road east to Cambaluc is not only a yam of horses — it is a chain of churches and post-houses that still remember Prester John's name. He will open one door for you if you choose carefully.
+
+## ev.ev_tenduc_a_followup.choice_1
+
+Ask him to mark the yam road toward Cambaluc
+
+## ev.ev_tenduc_a_followup.choice_1_result
+
+He marks Cambaluc and the southern post-road on a scrap of parchment. The yam eastward is no longer blind.
+
+## ev.ev_tenduc_a_followup.choice_2
+
+Offer a small gift for the church and ask a blessing for the road
+
+## ev.ev_tenduc_a_followup.choice_2_result
+
+Your gift is accepted without ceremony. The church remembers your name, and a little favour goes with you on the steppe road.
+
+## ev.ev_tenduc_a_followup.choice_3
+
+Wait a day to copy the priests' list of post-houses
+
+## ev.ev_tenduc_a_followup.choice_3_result
+
+You wait a day while a scribe copies the post-house list. The waiting costs time, but the next departure is measured.

@@ -2,7 +2,7 @@
 unit: tanpiju
 lang: zh
 source: en
-source_rev: feb7142f5010
+source_rev: 02b4e5c60693
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,22 @@ stamps:
   ev.ev_tanpiju_b.choice_1_result: a2e60a4d66e7
   ev.ev_tanpiju_b.choice_2_result: e3bbf02d8870
   ev.ev_tanpiju_b.choice_3_result: 804801f25e40
+  ev.ev_tanpiju_a_followup.title: 8278eb053a74
+  ev.ev_tanpiju_a_followup.body: 1f2a48d2b632
+  ev.ev_tanpiju_a_followup.choice_1: ec92e7b8600e
+  ev.ev_tanpiju_a_followup.choice_1_result: de0b6e3f07d3
+  ev.ev_tanpiju_a_followup.choice_2: 6b1a37922ad0
+  ev.ev_tanpiju_a_followup.choice_2_result: 8ab9e4b7ebbf
+  ev.ev_tanpiju_a_followup.choice_3: bbdf6fcaa873
+  ev.ev_tanpiju_a_followup.choice_3_result: ed1b3f810686
+  ev.ev_tanpiju_b_followup.title: 664214250e23
+  ev.ev_tanpiju_b_followup.body: 9d95f8e3516a
+  ev.ev_tanpiju_b_followup.choice_1: 111c667f4e28
+  ev.ev_tanpiju_b_followup.choice_1_result: 7b7da1da0087
+  ev.ev_tanpiju_b_followup.choice_2: 91c16dd8fd49
+  ev.ev_tanpiju_b_followup.choice_2_result: d6bd22785fc1
+  ev.ev_tanpiju_b_followup.choice_3: 037f5e91fef2
+  ev.ev_tanpiju_b_followup.choice_3_result: 6e47e061e8e8
 ---
 
 ## city.tanpiju.name
@@ -142,3 +158,67 @@ stamps:
 ## ev.ev_tanpiju_b.choice_3_result
 
 你于行在商贩摊购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往行在（杭州）的道路，就此展开在舆图上。
+
+## ev.ev_tanpiju_a_followup.title
+
+潭州：离行在一日，第二页
+
+## ev.ev_tanpiju_a_followup.body
+
+离行在一日路程的园林里，一位掌管桑账的管事把你引到廊下。他说潭州之富，因行在在近——南去的茶路与通往福州的扇路都写在他的账上，只要你肯问。
+
+## ev.ev_tanpiju_a_followup.choice_1
+
+按管事的园价买下茶叶
+
+## ev.ev_tanpiju_a_followup.choice_1_result
+
+他按比行在本市更公道的价钱卖给你茶。叶子已封好上路。
+
+## ev.ev_tanpiju_a_followup.choice_2
+
+追问通往福州与海岸的路
+
+## ev.ev_tanpiju_a_followup.choice_2_result
+
+福州与常州已标上你的舆图。沿海之路不再只是行在传来的传闻。
+
+## ev.ev_tanpiju_a_followup.choice_3
+
+在桑田间走一日，记下时令
+
+## ev.ev_tanpiju_a_followup.choice_3_result
+
+你在桑间走了一日。时令已记，时运也待你稍好些。
+
+## ev.ev_tanpiju_b_followup.title
+
+潭州：隶于行在，市集的劝告
+
+## ev.ev_tanpiju_b_followup.body
+
+在隶于行在的富市里，一位按本地礼俗葬过亲人的漆器商把你拉到扇子与漆匣之间坐下。他说丧礼之路与贸易之路是同一条街——买漆器却不听风俗的旅人，在潭州只睁半只眼。
+
+## ev.ev_tanpiju_b_followup.choice_1
+
+按他的公道价买下一件漆器
+
+## ev.ev_tanpiju_b_followup.choice_1_result
+
+他按公道价卖给你漆器。物件已封好，可走运河路。
+
+## ev.ev_tanpiju_b_followup.choice_2
+
+追问火葬之礼，以及外乡人要付什么
+
+## ev.ev_tanpiju_b_followup.choice_2_result
+
+你学会礼俗并留下薄奠。在潭州你的名字多了一分分量。
+
+## ev.ev_tanpiju_b_followup.choice_3
+
+买一把杭州扇，并问回行在的路
+
+## ev.ev_tanpiju_b_followup.choice_3_result
+
+扇子归你，行在标作西北一日之路。你不会错过回大城的路。

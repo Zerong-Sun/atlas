@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "book": "yelu-xiyou",
+    "title": "西游录",
+    "years": "1229",
+    "source": "耶律楚材 Yuan dynasty — classical Chinese, public domain",
+    "language": "zh",
+    "zhStatus": "source"
+  },
+  "bands": [
+    "central_asia",
+    "steppe"
+  ],
+  "places": [
+    {
+      "id": "bishbalik",
+      "title": "别石把",
+      "band": "central_asia",
+      "placeNames": [
+        "别石把",
+        "Beshbalik"
+      ],
+      "body": "耶律楚材从太祖西征，记天山南北城郭、物产，成《西游录》。别石把等城，可与长春真人之记相参。",
+      "source": {
+        "book": "yelu-xiyou",
+        "chapterId": "yelu-bishbalik",
+        "chapterTitle": "别石把"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "yelu-preface",
+      "title": "西游录自序大意",
+      "band": "central_asia",
+      "body": "楚材自谓西征所见，恐后世无闻，故作录以记之。其文简奥，偏于地理与政俗。",
+      "source": {
+        "book": "yelu-xiyou",
+        "chapterId": "yelu-preface",
+        "chapterTitle": "自序"
+      }
+    }
+  ]
+}

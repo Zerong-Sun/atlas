@@ -118,3 +118,35 @@ You ask which road leads down to the Gulf of Calatu. You set the way to Calatu o
 ## ev.ev_camadi_b.choice_3_result
 
 You buy cotton cloth from the roadside sellers. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+
+## ev.ev_camadi_a_followup.title
+
+Camadi: The Elders of the Ruined Plain
+
+## ev.ev_camadi_a_followup.body
+
+Among the broken walls of Camadi an elder who remembers the raids sits in the shade of a date palm and will not let you pass with only a glance. He says the plain still keeps roads that the raiders never burned — roads toward Kerman, toward Cobinan, and toward the gulf. If you mean to ride out of this ruin, he asks that you listen to the measure of the days.
+
+## ev.ev_camadi_a_followup.choice_1
+
+Buy a sack of dates at the elders' price for the next march
+
+## ev.ev_camadi_a_followup.choice_1_result
+
+The elders sell you dates at a fair weight. The sack will keep you through the hot descent, and the account of Camadi goes with it.
+
+## ev.ev_camadi_a_followup.choice_2
+
+Ask him to name the inland road that reaches Calatu
+
+## ev.ev_camadi_a_followup.choice_2_result
+
+He draws the inland road toward Calatu in the dust: wells, tolls, and the days between. The gulf fortress is now on your map.
+
+## ev.ev_camadi_a_followup.choice_3
+
+Sit a day and hear how Camadi fell
+
+## ev.ev_camadi_a_followup.choice_3_result
+
+You wait a day under the palm while he tells how the plain was ravaged. The story costs time, but Camadi is no longer a nameless ruin.

@@ -261,3 +261,23 @@ node tools/lore/match_books.mjs --write    # 写 passages.json 并绑定城市
 - [ ] 从 98 stories 中挑 40 条改写为途中事件
 - [x] 二期：拆解伊本·白图泰语料（2026-07-24，连同法德兰与朱拜尔；见 §6）
 - [x] 隐藏路：`data-secret-paths.js`（`needPath` = `{node}_secret`）+ 地图金线高亮
+- [x] 书案可读 + 瀛涯／远游记／鲁布鲁克／鄂多立克／康蒂／塔富尔／中文行纪／曼德维尔（2026-08-06；见 §8）
+
+---
+
+## 8. 书案扩展（2026-08-06）
+
+开场七封面（`MapArt.BOOKS`）可点开 `game/screens/book_reader.gd`。内容表
+`content/tables/books.json` 用 `vol-*` id（避免与 archetype `polo` 撞名），`cover`
+字段对齐封面 stem。正文走 `content/story/books/{en,zh}.md`。
+
+| 语料 | 处置 |
+|---|---|
+| 瀛涯胜览 | 据 `07_..._ZH.txt` 重生 18 places；`passages_yingya.json`；城市挂 `altRefs`，**不改**既有 Polo/Battuta 主 `lore.ref` |
+| 远游记 | 保持机译摘录，`status: desk_only`，禁止绑城 |
+| 鲁布鲁克／鄂多立克／康蒂／塔富尔 | 公有领域选段入库（见 `SOURCE_NOTES.md`）；书案 + 少量 `altRefs` |
+| 岛夷志略等五种中文行纪 | 语料 + 图鉴 `codex.chr-*` |
+| 曼德维尔 | 传说图鉴 `codex.leg-*`，`origin: authored` |
+
+生成器：`node tools/lore/_gen/build_travel_books.mjs`。门禁 **G30** 校验书案七封面与 i18n key。
+烟测：`tests/smoke_book_reader.gd`。

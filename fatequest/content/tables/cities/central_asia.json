@@ -863,6 +863,13 @@
       "calendars": [
         "islamic",
         "turkic"
+      ],
+      "altRefs": [
+        {
+          "book": "changchun",
+          "chapterId": "changchun-samarkand",
+          "title": "邪米思干"
+        }
       ]
     },
     {

@@ -1,670 +1,341 @@
 {
   "meta": {
-    "title": "Yingya Shenglan — Place & Story Lore",
-    "source": "Zhang Sheng, Yingya Shenglan Ji (Ming); EN machine translation of Ma Huan abridgement",
-    "language": "en",
-    "zhStatus": "pending",
-    "chapterCount": 18,
+    "book": "yingya-shenglan",
+    "title": "瀛涯胜览 Yingya Shenglan",
+    "years": "1416 / Ming abridgement",
+    "source": "张升《瀛涯胜览集》中文古籍 — public domain; EN glosses authored for desk",
+    "language": "zh",
+    "zhStatus": "source",
     "placeCount": 18,
-    "storyCount": 8,
-    "missingChapterIds": []
+    "storyCount": 1
   },
   "bands": [
-    {
-      "id": "maritime_asia",
-      "label": "Maritime Asia"
-    },
-    {
-      "id": "india",
-      "label": "India"
-    },
-    {
-      "id": "arabia",
-      "label": "Arabia & Hejaz"
-    },
-    {
-      "id": "east_africa",
-      "label": "East Africa"
-    },
-    {
-      "id": "west_asia",
-      "label": "West Asia"
-    }
+    "maritime_asia",
+    "india",
+    "west_asia"
   ],
   "places": [
     {
       "id": "champa",
-      "title": "Champa",
+      "title": "占城",
       "band": "maritime_asia",
       "placeNames": [
+        "占城",
         "Champa",
-        "Zhancheng",
-        "Xinzhou"
+        "Zhancheng"
       ],
-      "body": "The country is located in the sea to the south, from Chenla to the west, and to the northeast of Jiaozhi. Starting from Wuhumen in Changle County, Fujian, it takes about ten days to sail southwest with a favorable wind to reach the country. There is a seaport about a hundred miles northeast of the country, called Xinzhou Port. There is a guard at the door, Wang Naisuo, and the people inside are also Buddhists. The top is decorated with three mountains of golden flowers, an exquisite crown, and the upper part is made of colorful cotton cloth. The lower part is like a cotton turban. The scarf has several turns, the feet are stretched across an elephant, or someone rides on a small cart with two yellow robes. The crown of wild rice leaves on the head of the minister is also similar to the royal crown. It is decorated with gold color. The crown is of good rank, but the upper garment is also colorful below the knees. The royal palace is grand and majestic. The neat gates have vertical carvings of wooden beasts to show the majesty of the people's houses. The height of the crotch is no more than three feet. Those who bend their bodies to enter and exit are allowed to wear purple. Only the king's white clothes are prohibited. Those who violate the law are dead. Males have unkempt hair and female vertebrae are knotted in the back. The skin is black, the upper body is bald, and the sleeves are also covered with colorful cloth under the short shirt. Both men and women are naked. The four seasons are warm and there is no frost and snow. The grass and trees are always green. They eat betel nuts and talk endlessly. As is customary in Fujian and Yue, a man first marries a woman, and then the parents marry him or her on ten days or five days after ten days.",
+      "body": "国于大海南南距真腊西距交趾东北际海自闽之长乐县五虎门发舟西南行顺风约十日可抵其国国东北百里许有海口曰新洲港者港岸立石塔为标舶至是系焉有寨曰没比柰王以二酋领卒五六十辈专戌守焉西南百里至王城曰占城名也城方有四门门有守者王乃锁里人也尚释教顶三山金花玲珑冠上衣花番布若棉紬状下萦彩?帨巾数匝跣足跨象或乘小车驾以二黄犊其臣顶茭蔁叶冠亦类王冠饰以金彩其冠有品秩上衣不过膝下亦萦彩帨王宫宏壮墉塈整洁门竖雕木兽以为威仪民居茅茨高不踰三尺曲身出入违制者有法许服紫唯王白服禁服玄黄违者死男蓬头女椎结于后肌肤俱黑上秃袖短衫下亦萦彩布皆女装也男女俱跣行四时温热并无霜雪草木恒青啖槟榔不绝口如闽越俗议婚男先诣女成偶或旬日或旬有五日然后父母亲党导以鼓乐迎归设酒筵酒则酿瓮饭待熟用筒咂之宾主绕瓮以次而咂咂必注水至味尽乃止文字无纸以椎羊皮及黑?皮书之刑轻则絷以藤重则劓之盗必断其肱奸不问男女俱燎其颊极刑则锐木于舟坐以罪人顺流而下至木贯出口而毙严示众也年无闰月昼夜各分五十刻以鼓记之王当贺日以人胆汁沐浴将领献人胆为礼王即位三十年则入山茹素受戒命子侄摄国居一载则吁天自矢曰我不道当充虎狼食否则病死朞年无恙则复辟于是国人呼为芳嚟马哈刺朼极其尊称也有号尸致鱼者乃妇人也其目无瞳夜寝则头飞入人家食小儿秽气侵儿腹必死头返合体如故移其体则不合而死矣其夫匿不以闻者罪及家属境有鳄鱼潭讼难明者遣诣潭直者虽往返十数而不遭害傍海山野牛甚狠逄青衣人辄触之至死盖亦耕牛奔入山积久而成羣然也人则重其首犯之不杀不巳市交易以金间亦用银极宝爱中国青磁器暨?疋绫绢见则以金易之厥产伽南香观音竹降真香乌木尤胜他国伽南香唯此地有之价亦高观音竹如藤长丈八尺许色如黑铁每寸约二三节犀角象牙甚多犀如水牛大者八百斤体无毛黑色鳞甲皮厚蹄有三跲独角在鼻端长者可尺五寸唯啖刺树叶条干木马小于驴水牛黄牛猪羊亦产鹅鸭则罕鸡大者不踰二斤果有梅橘西瓜蔗椰子蕉子其波罗密形如东瓜荔枝大如鸡子肤黄味胜蜜核亦可炒食之蔬有东瓜黄瓜胡芦芥葱姜民务渔不务耕种米粒细颗长而杂红厥贡犀角象牙伽南香",
+      "bodyZh": "国于大海南南距真腊西距交趾东北际海自闽之长乐县五虎门发舟西南行顺风约十日可抵其国国东北百里许有海口曰新洲港者港岸立石塔为标舶至是系焉有寨曰没比柰王以二酋领卒五六十辈专戌守焉西南百里至王城曰占城名也城方有四门门有守者王乃锁里人也尚释教顶三山金花玲珑冠上衣花番布若棉紬状下萦彩?帨巾数匝跣足跨象或乘小车驾以二黄犊其臣顶茭蔁叶冠亦类王冠饰以金彩其冠有品秩上衣不过膝下亦萦彩帨王宫宏壮墉塈整洁门竖雕木兽以为威仪民居茅茨高不踰三尺曲身出入违制者有法许服紫唯王白服禁服玄黄违者死男蓬头女椎结于后肌肤俱黑上秃袖短衫下亦萦彩布皆女装也男女俱跣行四时温热并无霜雪草木恒青啖槟榔不绝口如闽越俗议婚男先诣女成偶或旬日或旬有五日然后父母亲党导以鼓乐迎归设酒筵酒则酿瓮饭待熟用筒咂之宾主绕瓮以次而咂咂必注水至味尽乃止文字无纸以椎羊皮及黑?皮书之刑轻则絷以藤重则劓之盗必断其肱奸不问男女俱燎其颊极刑则锐木于舟坐以罪人顺流而下至木贯出口而毙严示众也年无闰月昼夜各分五十刻以鼓记之王当贺日以人胆汁沐浴将领献人胆为礼王即位三十年则入山茹素受戒命子侄摄国居一载则吁天自矢曰我不道当充虎狼食否则病死朞年无恙则复辟于是国人呼为芳嚟马哈刺朼极其尊称也有号尸致鱼者乃妇人也其目无瞳夜寝则头飞入人家食小儿秽气侵儿腹必死头返合体如故移其体则不合而死矣其夫匿不以闻者罪及家属境有鳄鱼潭讼难明者遣诣潭直者虽往返十数而不遭害傍海山野牛甚狠逄青衣人辄触之至死盖亦耕牛奔入山积久而成羣然也人则重其首犯之不杀不巳市交易以金间亦用银极宝爱中国青磁器暨?疋绫绢见则以金易之厥产伽南香观音竹降真香乌木尤胜他国伽南香唯此地有之价亦高观音竹如藤长丈八尺许色如黑铁每寸约二三节犀角象牙甚多犀如水牛大者八百斤体无毛黑色鳞甲皮厚蹄有三跲独角在鼻端长者可尺五寸唯啖刺树叶条干木马小于驴水牛黄牛猪羊亦产鹅鸭则罕鸡大者不踰二斤果有梅橘西瓜蔗椰子蕉子其波罗密形如东瓜荔枝大如鸡子肤黄味胜蜜核亦可炒食之蔬有东瓜黄瓜胡芦芥葱姜民务渔不务耕种米粒细颗长而杂红厥贡犀角象牙伽南香",
       "source": {
-        "chapterIds": [
-          "yingya-c001"
-        ],
-        "chapterId": "yingya-c001",
-        "chapter": 1,
-        "chapterTitle": "Champa",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-champa",
+        "chapterTitle": "占城",
         "zhHeading": "占城"
       }
     },
     {
       "id": "java",
-      "title": "Java",
+      "title": "爪哇",
       "band": "maritime_asia",
       "placeNames": [
-        "Java",
-        "Majapahit",
-        "Tuban",
-        "Gresik",
-        "Surabaya"
+        "爪哇",
+        "Java"
       ],
-      "body": "In ancient times, the country of Jhapo had no city walls. He first entered Du Banci and entered the Si Village. Then he entered Suluma Yici and entered the capital of Manjuboyi. The palace was built with bricks on all sides and was more than three feet high. It was more than three hundred miles square. The gate was deep and strict. The house was four feet high. The floor was covered with boards. The wooden dwellings are made of bricks. The king's head is covered with a crown of gold leaves, and the crown is inlaid with crotch. The waist is tied with brocade, and the waist is pressed down. The waist is worn with a short blade, which is not pierced. The head is not pierced. The man is walking or riding on an elephant or riding an ox. Folk men with unkempt heads, women with vertebrae, and tops are knotted. Men must have a sword on their waists. There are no old or weak, nobility or poverty. All the rich and poor must have a sword. The handle is made of iron with various colors and is decorated with gold or rhinoceros. It is often covered with a ghost face and is very elaborate. If someone offends his head and fights with each other during the gathering, he will be killed with a sword. If he escapes for more than three days, he will not be punished. If he is captured immediately, he will still be punished by the official without a whip. The crime does not matter the severity, and he will be killed with a rattan-type sword. It is not surprising that the market is easy to use Chinese copper coins, and the people who use it are called Jianban. The name of the place is also about a thousand family heads, and the two chiefs live among them. Many people from Guangdong and Zhangzhou are also from Haizhu. The water in the small pond is sweet and refreshing. The name of the holy water is passed down.",
+      "body": "古者阇婆其国有四皆无城郭初入杜板次入厮村次入苏鲁马益次入满者伯夷王都也王宫四面砖墉墉高余三丈方三百余里门馆深严屋高四丈覆地以板蒙以藤花席跏跌而坐瓦以坚木民居茅茨类皆砖库坐卧于内王蓬头顶金叶冠胷萦嵌?帨腰束锦绮曰压腰腰佩短刃曰不刺头跣行或跨象或乘牛民间男蓬头女椎结上衣下帨男必腰刃无老弱贵贱贫富皆然刃必雪花色镔铁铸之柄饰以金或犀象饰往往蒙鬼面备极精巧会聚间有犯其首及争鬪必以佩刃刃之伤死则遁踰三日则免罪当即捕获则仍受刃官无鞭朴罪不问重轻以藤系之必刃以死杀戮为常不足怪也市易用中国铜钱杜板者曰睹斑地名也约以千余家主以二酋间有流寓多广东人也漳州人也海渚小池水甘冽可歃号圣水传云元将史弼高与征阇婆经月不克登岸三军乏水渴甚二将默祷卓抢于渚泉遂涌出军赖以济又东行半日至厮村曰革儿昔者故沽滩地中国人客此而成聚落遂名新村约千余家村主广东人也渚番舶至此互市金宝番玲充溢居人多富又南水行可半日至苏鲁马益港口淡水浅涩仅通小艇二十余里始至苏鲁马益曰苏儿把牙约十余家亦有首领间有中国人港口大洲林木蔚茂长尾猱万数聚于中一里猱俗云胡孙也老猱为主曾掠老番妇与俱国人求嗣者必具酒殽祈于老猱猱食之余纵羣竞食食尽少选猱雌雄交以此?征求嗣人回即有姙不然无应也又水行八十里至埠头曰漳沽登岸西南陆行半日至满者伯夷乃王都也无虑二三百家总领七八人皆王佐也气候常热如夏稻岁两熟坐卧无榻椅饮食无匙七啖槟榔不离口寘饭于盘酥浇之餐则嗽去榔屑向盘掬而食食既水饮待宾以槟榔人有三等西番贾胡流落而居久者服食皆雅洁一等也唐人如广东漳泉人流寓者食用鲜华率尚回回教持斋受戒一等也颜色黝黑猱头赤脚崇信鬼道释云鬼国即此土人也饮食粗恶啖蛇蚁虫蚓稍燎以火而巳与犬同寝食不以为秽也传云昔有鬼子魔王青颊红肤赤鬓发与罔象交而生子百余以人为粮忽雷震石裂乃出一人众异之推为主遂领兵驱罔象鬼子而去由是人得安焉俗尚武勇岁设竹枪会始于冬十月王偕妻出观夫妻各坐一塔车妻前夫后车高丈徐四疏轩窓驾马以行至会开场列阵相向各操竹枪劲实若铁登场者亦携妻至妻亦操三尺棒相格曰那刺格巳被伤毙者王遣胜者出金钞一筩偿之以孀妇胜者即巳凡婚姻男造女家合卺后五日迎妇归鸣金鼓吹椰筒拥以刀盾前后甚都妇则裸而被发跣足萦嵌丝帨戴被金珠彩餙宝妆无不周备姻邻亦以槟榔花草寘彩舟助之燕乐数日始散丧事于病革子弟请遗命或水火葬或犬腹葬舁尸至海滨纵犬飱之尽不尽拾其遗投水而后巳尤惨于水火也有宠妾者誓与主同往盛妆悲号俟焚骸火炽亦投火死之民间殷富贸易用中国古钱字书无纸刻于茭蔁叶类锁俚字以二十两为斤十六钱为两四姑邦为钱每邦二分一厘八毫七丝五忽截竹为升升为一姑刺盖中国一升八合也升为■〈木柰〉黎盖八升中国一斗四升四合也月望番媍或二十余或三十余?辈成队月下缚臂联行俚歌唱和遍历宦戚豪门必投赏以钱又有展画指画以谕众听环之坐者有笑有哭殊能动人最重中国花磁暨麝花绢绮罗厥产白芝麻菉豆苏木金刚子白檀肉荳蔻龟筒玳瑁鹦鹉有绿红五彩者鹩哥皆能言又有珍珠鸡倒挂鸟彩鸠孔雀珍珠雀绿鸠之类白鹿白猿猴羊猪牛马鸡鸭亦有之果有芭蕉子椰子甘蔗粗大长可二三丈石榴莲房蜜柿郎扱若枇杷稍尖中有白肉",
+      "bodyZh": "古者阇婆其国有四皆无城郭初入杜板次入厮村次入苏鲁马益次入满者伯夷王都也王宫四面砖墉墉高余三丈方三百余里门馆深严屋高四丈覆地以板蒙以藤花席跏跌而坐瓦以坚木民居茅茨类皆砖库坐卧于内王蓬头顶金叶冠胷萦嵌?帨腰束锦绮曰压腰腰佩短刃曰不刺头跣行或跨象或乘牛民间男蓬头女椎结上衣下帨男必腰刃无老弱贵贱贫富皆然刃必雪花色镔铁铸之柄饰以金或犀象饰往往蒙鬼面备极精巧会聚间有犯其首及争鬪必以佩刃刃之伤死则遁踰三日则免罪当即捕获则仍受刃官无鞭朴罪不问重轻以藤系之必刃以死杀戮为常不足怪也市易用中国铜钱杜板者曰睹斑地名也约以千余家主以二酋间有流寓多广东人也漳州人也海渚小池水甘冽可歃号圣水传云元将史弼高与征阇婆经月不克登岸三军乏水渴甚二将默祷卓抢于渚泉遂涌出军赖以济又东行半日至厮村曰革儿昔者故沽滩地中国人客此而成聚落遂名新村约千余家村主广东人也渚番舶至此互市金宝番玲充溢居人多富又南水行可半日至苏鲁马益港口淡水浅涩仅通小艇二十余里始至苏鲁马益曰苏儿把牙约十余家亦有首领间有中国人港口大洲林木蔚茂长尾猱万数聚于中一里猱俗云胡孙也老猱为主曾掠老番妇与俱国人求嗣者必具酒殽祈于老猱猱食之余纵羣竞食食尽少选猱雌雄交以此?征求嗣人回即有姙不然无应也又水行八十里至埠头曰漳沽登岸西南陆行半日至满者伯夷乃王都也无虑二三百家总领七八人皆王佐也气候常热如夏稻岁两熟坐卧无榻椅饮食无匙七啖槟榔不离口寘饭于盘酥浇之餐则嗽去榔屑向盘掬而食食既水饮待宾以槟榔人有三等西番贾胡流落而居久者服食皆雅洁一等也唐人如广东漳泉人流寓者食用鲜华率尚回回教持斋受戒一等也颜色黝黑猱头赤脚崇信鬼道释云鬼国即此土人也饮食粗恶啖蛇蚁虫蚓稍燎以火而巳与犬同寝食不以为秽也传云昔有鬼子魔王青颊红肤赤鬓发与罔象交而生子百余以人为粮忽雷震石裂乃出一人众异之推为主遂领兵驱罔象鬼子而去由是人得安焉俗尚武勇岁设竹枪会始于冬十月王偕妻出观夫妻各坐一塔车妻前夫后车高丈徐四疏轩窓驾马以行至会开场列阵相向各操竹枪劲实若铁登场者亦携妻至妻亦操三尺棒相格曰那刺格巳被伤毙者王遣胜者出金钞一筩偿之以孀妇胜者即巳凡婚姻男造女家合卺后五日迎妇归鸣金鼓吹椰筒拥以刀盾前后甚都妇则裸而被发跣足萦嵌丝帨戴被金珠彩餙宝妆无不周备姻邻亦以槟榔花草寘彩舟助之燕乐数日始散丧事于病革子弟请遗命或水火葬或犬腹葬舁尸至海滨纵犬飱之尽不尽拾其遗投水而后巳尤惨于水火也有宠妾者誓与主同往盛妆悲号俟焚骸火炽亦投火死之民间殷富贸易用中国古钱字书无纸刻于茭蔁叶类锁俚字以二十两为斤十六钱为两四姑邦为钱每邦二分一厘八毫七丝五忽截竹为升升为一姑刺盖中国一升八合也升为■〈木柰〉黎盖八升中国一斗四升四合也月望番媍或二十余或三十余?辈成队月下缚臂联行俚歌唱和遍历宦戚豪门必投赏以钱又有展画指画以谕众听环之坐者有笑有哭殊能动人最重中国花磁暨麝花绢绮罗厥产白芝麻菉豆苏木金刚子白檀肉荳蔻龟筒玳瑁鹦鹉有绿红五彩者鹩哥皆能言又有珍珠鸡倒挂鸟彩鸠孔雀珍珠雀绿鸠之类白鹿白猿猴羊猪牛马鸡鸭亦有之果有芭蕉子椰子甘蔗粗大长可二三丈石榴莲房蜜柿郎扱若枇杷稍尖中有白肉",
       "source": {
-        "chapterIds": [
-          "yingya-c002"
-        ],
-        "chapterId": "yingya-c002",
-        "chapter": 2,
-        "chapterTitle": "Java",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-java",
+        "chapterTitle": "爪哇",
         "zhHeading": "爪哇"
       }
     },
     {
       "id": "palembang",
-      "title": "Palembang (Old Port / Srivijaya)",
+      "title": "旧港国",
       "band": "maritime_asia",
       "placeNames": [
+        "旧港",
         "Palembang",
-        "Old Port",
-        "Srivijaya",
-        "Jiugang"
+        "三佛齐"
       ],
-      "body": "The ancient name is Srivijaya, and it is called Banglinbangli. Java is to the east from Java, to the west to Mancic, and to the south, it is far from the mountains. It is on the northwest coast, and ships enter Dan Harbor and enter Peng's house. It is easy to enter the harbor by boat. There are many people in the country, Zhangquan, Guangdong, where people live. The fertile land is fertile and densely populated, suitable for farming. The proverb says that one season of farming, three seasons of rice harvest, the harvest is wide, there is a lot of water, and there are few people. The generals' homes are used to the water, and only then can they live on the shore. Soldiers often live on rafts tied to the rafters. The tides, customs and language of Ge Gangtong are just like those of Java. During the Hongwu Period, there was Chen Zuyi, and the Guangdong people also took their families to seek refuge here. The generals passed by Yongle Room. Zheng He, the eunuch of the imperial court, commanded the sea, and there were even Shijin people. The people of Guangzhou also complained about the ancestral righteousness in peace, and led the soldiers to capture the ancestral righteousness. Fu was executed by the official, but he still returned to the old port? He was about to be destroyed. The rewards and punishments of the female generation are all based on their customs. They are fond of gambling, such as turtles, chess, and chickens. They ask for money and tools. They also use Chinese copper coins, cloth, and silk. The hair is black, the legs are long, the brain bones are more than an inch thick, the inside is yellow and the outside is red, and the turkey is bigger than a crane. The neck is also too long, the soft red crown is sharp, the hair is like a green sheep, the legs are long, the black claws are very sharp, it can hurt the abdomen and kill people. Even if it eats charcoal, it can hit the immortal deer.",
+      "body": "古号三佛齐曰浡淋邦隶爪哇东距爪哇西距满刺加南距大山卜西北滨海舶入淡港入彭家里舍易小舟入港达其国国人多广东漳泉人流寓此境土沃人稠地宜稼穑谚云一季种田三季收稻言收获广也水多地少人习水战将领之家始得岸居民卒往往筏居系于椓木?戈港通潮汐风俗语言一如爪哇洪武间有陈祖义者广东人也挈家逋避于此?将横甚摽掠过客永乐间朝命太监郑和统海舶至有施进者亦广人也具诉祖义于和和领卒擒之祖义伏诛乃官进仍回旧港?将进没其女代之赏罚黜陟皆从其俗俗好赌博如把龟奕棋鬪鸡皆索钱具也市亦用中国铜钱布帛之类厥产鹤顶黄连降真沉水香黄蜡金银如钑花银器黑色间有白色成色高者白多黑少低者黑多白少爇之气触鼻莫禁西番锁里人重之鹤顶鸟大于鸭毛黑胫长脑骨厚寸余内黄外红俱鲜丽可爱火鸡大于鹤颈亦过长软红冠锐觜毛如青羊色脚长黑色爪甚利解伤人腹致死食炭虽击之不死神鹿大如巨猪高可三尺短毛猪喙蹄亦如之三跲秪啖草木不近腥物牛羊猪犬鸡鸭蔬果之类与爪哇同",
+      "bodyZh": "古号三佛齐曰浡淋邦隶爪哇东距爪哇西距满刺加南距大山卜西北滨海舶入淡港入彭家里舍易小舟入港达其国国人多广东漳泉人流寓此境土沃人稠地宜稼穑谚云一季种田三季收稻言收获广也水多地少人习水战将领之家始得岸居民卒往往筏居系于椓木?戈港通潮汐风俗语言一如爪哇洪武间有陈祖义者广东人也挈家逋避于此?将横甚摽掠过客永乐间朝命太监郑和统海舶至有施进者亦广人也具诉祖义于和和领卒擒之祖义伏诛乃官进仍回旧港?将进没其女代之赏罚黜陟皆从其俗俗好赌博如把龟奕棋鬪鸡皆索钱具也市亦用中国铜钱布帛之类厥产鹤顶黄连降真沉水香黄蜡金银如钑花银器黑色间有白色成色高者白多黑少低者黑多白少爇之气触鼻莫禁西番锁里人重之鹤顶鸟大于鸭毛黑胫长脑骨厚寸余内黄外红俱鲜丽可爱火鸡大于鹤颈亦过长软红冠锐觜毛如青羊色脚长黑色爪甚利解伤人腹致死食炭虽击之不死神鹿大如巨猪高可三尺短毛猪喙蹄亦如之三跲秪啖草木不近腥物牛羊猪犬鸡鸭蔬果之类与爪哇同",
       "source": {
-        "chapterIds": [
-          "yingya-c003"
-        ],
-        "chapterId": "yingya-c003",
-        "chapter": 3,
-        "chapterTitle": "Palembang (Old Port / Srivijaya)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-palembang",
+        "chapterTitle": "旧港国",
         "zhHeading": "旧港国"
       }
     },
     {
       "id": "siam",
-      "title": "Siam",
+      "title": "暹罗",
       "band": "maritime_asia",
       "placeNames": [
-        "Siam",
-        "Ayutthaya",
-        "Xianluo"
+        "暹罗",
+        "Siam"
       ],
-      "body": "The country is surrounded by thousands of miles of steep mountains and rugged underground soil. The soil is sparse and sparse, and is rarely suitable for farming. The climate is unusual, hazy or hot. We can boat from the southwest of Zhancheng for seven days and nights to Xinmen Haikou and enter the harbor. We can reach the king's residence in a palace and a magnificent residential building. The building is densely connected with betel nut pieces and the vines are very solid. The king is sleeping in the middle with a rattan mat and a bamboo mat. The gold-handled umbrella cover is made of wild wild leaves. There are many monks and nuns in the country. There are many kinds of clothing in China. There are nunneries, fasting, and folk customs. There are many wise husbands. It is not strange for wives to sleep privately with Chinese people and sleep together. Women like this are wearing white cloth, wearing long clothes, and women are like vertebra knots. When men are twenty, their vagina must be embedded with pearls and jade. If the rich and noble are Fan Jin Shengzhu, it is beautiful. Otherwise, if the poor and lowly people get married, the monks will welcome the son-in-law to the daughter-in-law. It was pasted on the man's forehead and said, \"It's unspeakable that the market has been poor for more than three days.\" The monks and other members of the party supported the betel-nut-colored boats to send them home, and a banquet was held and a funeral was held. Flying to eat, there are abandoned in the sea, saying that the birds are buried, and they use pagodas to teach fasting. The language is similar to the customs of Guangdong, pouring water, often conquering neighboring cities and using the sea. Next to the red crow, it is bright and clear like pomegranates. There are more than two hundred miles northwest of the country. There are towns and cities with water flowing to the south. There are 600 people living in the south. There are six hundred shops with all kinds of crops. There are coptis, fragrant, brown, lotus, and lotus.",
+      "body": "地方千里环国皆山峭拔崎岖地下湿土疏恶罕宜耕种气候不常或岚或热自占城西南舟行七昼夜方至新门海口入港方达其国王居宫室壮丽民楼居其楼密联槟榔片藤系之甚固藉以藤席竹簟寝处于中王乃锁里人也白布缠首无衣腰束嵌丝帨加以锦绮压腰跨象行或肩舆金柄伞盖茭蔁叶为之尚释教国人皆然僧尼甚多其服类中国有庵观持斋受戒民俗妇人多智夫听于妻妻与中国人私寝食与同恬不怪也男白布缠首衣长衣妇如之乃椎结男年二十阴必嵌珠玉及富贵者范金盛珠有声为美否则贫贱人也婚则僧羣迎婿至女家僧取女红贴于男额曰利市陋不可言踰三日僧暨亲党拥槟榔彩舟送归乃开筵作乐丧礼富贵者则灌水银而葬民间则舁尸投海洲有金色鸟数十飞来食之有遗弃诸海曰鸟葬巳而用浮屠教斋事言语与广东同俗浇浮习水战常征伐邻邦市用海■〈贝八〉一如钱价厥产红马肯的石次于红鸦忽明莹如石榴子国西北二百余里有市镇曰上水通南居人无虑六百家各种番货俱有黄连香罗褐连香降真沉水亦有花黎木白荳蔻火风子血结藤结苏木花锡象牙翠毛苏木贱如薪色绝胜兽有白象狮猫白鼠蔬果如占城有米酒椰子酒皆烧酒也厥贡苏木降真香",
+      "bodyZh": "地方千里环国皆山峭拔崎岖地下湿土疏恶罕宜耕种气候不常或岚或热自占城西南舟行七昼夜方至新门海口入港方达其国王居宫室壮丽民楼居其楼密联槟榔片藤系之甚固藉以藤席竹簟寝处于中王乃锁里人也白布缠首无衣腰束嵌丝帨加以锦绮压腰跨象行或肩舆金柄伞盖茭蔁叶为之尚释教国人皆然僧尼甚多其服类中国有庵观持斋受戒民俗妇人多智夫听于妻妻与中国人私寝食与同恬不怪也男白布缠首衣长衣妇如之乃椎结男年二十阴必嵌珠玉及富贵者范金盛珠有声为美否则贫贱人也婚则僧羣迎婿至女家僧取女红贴于男额曰利市陋不可言踰三日僧暨亲党拥槟榔彩舟送归乃开筵作乐丧礼富贵者则灌水银而葬民间则舁尸投海洲有金色鸟数十飞来食之有遗弃诸海曰鸟葬巳而用浮屠教斋事言语与广东同俗浇浮习水战常征伐邻邦市用海■〈贝八〉一如钱价厥产红马肯的石次于红鸦忽明莹如石榴子国西北二百余里有市镇曰上水通南居人无虑六百家各种番货俱有黄连香罗褐连香降真沉水亦有花黎木白荳蔻火风子血结藤结苏木花锡象牙翠毛苏木贱如薪色绝胜兽有白象狮猫白鼠蔬果如占城有米酒椰子酒皆烧酒也厥贡苏木降真香",
       "source": {
-        "chapterIds": [
-          "yingya-c004"
-        ],
-        "chapterId": "yingya-c004",
-        "chapter": 4,
-        "chapterTitle": "Siam",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-siam",
+        "chapterTitle": "暹罗",
         "zhHeading": "暹罗"
       }
     },
     {
       "id": "malacca",
-      "title": "Malacca",
+      "title": "满刺加",
       "band": "maritime_asia",
       "placeNames": [
-        "Malacca",
-        "Melaka",
-        "Manlajia"
+        "满刺加",
+        "Malacca"
       ],
-      "body": "The old name is Wuyu. There is this mountain on the sea. It is also southeast of the sea and northwest. It is a coast with mountains. The harvest is barren and the harvest is very small. Therefore, it has not been called a country. Siam has to pay 5,000 taels of gold every year. Otherwise, it will be conquered in the seventh year of Yongle. In the seventh year of Yongle, the eunuch Zheng He was ordered to give his generals a silver seal and a crown. The king was not in service. In the pavilion, there are about twenty traders who come to gather, to gather customs, to return to Islam, to observe fasting, and to receive precepts. The king wears a white robe with fine green flowers on his head, and wears leather shoes. He rides in a sedan. Folks, men wear handkerchiefs, and women put buns on their backs. Their bodies are slightly black and short blouses are tied. The customs of the waist are simple and simple, such as the Siamese couplet, sitting on the couch, fishing and harvesting wood as a boat, and sailing across the sea. Fishing, weddings and funerals. There is a turtle and dragon in the sea off Java. Its dragon is four feet tall and has four legs. Its body is covered with scales and its armor is exposed. It has long teeth and bites them. Black tigers from the mountains are worse than ordinary tigers. They have small fur and dark flowers. Wenhu has the ability to change into human form during the day. It goes to the market in the daytime. It is like a swarm of birds. It kills the corpses of the ancient city. The Chinese ships also come to the ground. There are four doors for drum towers and night patrols. There are heavy sheds with bells inside. There are warehouses to store goods. In May, China shipped ships. Coptis fragrant bird wood is used to fight magic. This incense is made from resin dropped to the ground. When it encounters fire, the Chinese people use it as a lamp and paint boats.",
+      "body": "旧名五屿以海有此山也东南距海西北皆岸岸连山地瘠卤收获殊寡故未称国隶暹罗岁输金五千两否则被伐永乐七年巳丑上命太监郑和??满刺加国赐其将领银印冠服?王自是不役属暹罗王携妻子赴京谢愿修职贡上赐舶还其境有大溪贯王宫入海跨溪桥之构亭于上约二十余楹交易者来集俗尚回回教持斋受戒王以白缠首青细花袍蹑皮履乘轿民间男帕首女撮髻于后其体微黑短衫束腰以帨风俗淳朴民舍如暹罗联榻跌坐业渔刳木为舟泛海而渔婚丧类爪哇旁海有龟龙患其龙高四尺四足身皆鳞甲露长牙遇之则啮山出黑虎比常虎差小毛有暗花文虎有能变人形者白昼入市羣行觉者禽杀之古城尸头蛮中国舶亦至其地栫木为棚辟四门鼓楼夜巡以铃内设重棚有仓库可贮货五月中方发舶厥产黄连香鸟木打魔香此香乃树脂堕地成遇火即然国人以当灯及涂舟水不能入明莹者若金箔曰损都卢厮可作瑁珠名水珀是巳花锡有场山曰树沙姑其皮如葛捣滤成粉可作饭渚生水草曰茭蔁长如刀状韧坚其子类荔枝大若鸡子以酿酒曰茭蔁酒亦醉人叶可作簟席果有甘蔗芭蕉子波罗蜜野荔枝之类蔬有葱姜蒜芥东瓜西瓜之属牛羊鸡鸭罕有驴马无",
+      "bodyZh": "旧名五屿以海有此山也东南距海西北皆岸岸连山地瘠卤收获殊寡故未称国隶暹罗岁输金五千两否则被伐永乐七年巳丑上命太监郑和??满刺加国赐其将领银印冠服?王自是不役属暹罗王携妻子赴京谢愿修职贡上赐舶还其境有大溪贯王宫入海跨溪桥之构亭于上约二十余楹交易者来集俗尚回回教持斋受戒王以白缠首青细花袍蹑皮履乘轿民间男帕首女撮髻于后其体微黑短衫束腰以帨风俗淳朴民舍如暹罗联榻跌坐业渔刳木为舟泛海而渔婚丧类爪哇旁海有龟龙患其龙高四尺四足身皆鳞甲露长牙遇之则啮山出黑虎比常虎差小毛有暗花文虎有能变人形者白昼入市羣行觉者禽杀之古城尸头蛮中国舶亦至其地栫木为棚辟四门鼓楼夜巡以铃内设重棚有仓库可贮货五月中方发舶厥产黄连香鸟木打魔香此香乃树脂堕地成遇火即然国人以当灯及涂舟水不能入明莹者若金箔曰损都卢厮可作瑁珠名水珀是巳花锡有场山曰树沙姑其皮如葛捣滤成粉可作饭渚生水草曰茭蔁长如刀状韧坚其子类荔枝大若鸡子以酿酒曰茭蔁酒亦醉人叶可作簟席果有甘蔗芭蕉子波罗蜜野荔枝之类蔬有葱姜蒜芥东瓜西瓜之属牛羊鸡鸭罕有驴马无",
       "source": {
-        "chapterIds": [
-          "yingya-c005"
-        ],
-        "chapterId": "yingya-c005",
-        "chapter": 5,
-        "chapterTitle": "Malacca",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-malacca",
+        "chapterTitle": "满刺加",
         "zhHeading": "满刺加"
       }
     },
     {
       "id": "aru",
-      "title": "Aru",
+      "title": "哑鲁国",
       "band": "maritime_asia",
       "placeNames": [
-        "Aru",
-        "Yalu"
+        "哑鲁",
+        "Aru"
       ],
-      "body": "To the south is the mountain. To the north is the sea. To the west is Sumen.\n\nIt can be reached in four days and nights by water. There is Tamsui Port to the east. The wilderness is suitable for early rice.\n\nIts grains are small. Farming and fishing customs are simple. Weddings and funerals are in the same city as Java.\n\nIt is easy to use small cotton cloth. It is mud, rice, grain, cattle, sheep, chickens and ducks. There are many cheeses.\n\nPeople from many countries also produce flying tigers such as cats and dogs. Long-haired gray meat wings such as bats are not far away. There are gold and silver incense like coptis.",
+      "body": "南连大山北距海西距苏门答刺自满刺加水行四昼夜可至有淡水港东连旷野地宜早稻其粒小民业耕渔风俗淳朴婚丧礼与爪哇满刺加同市易用小棉布曰栲泥米谷牛羊鸡鸭甚丰奶酪亦多国皆回回人也厥产飞虎如猫犬长毛灰色肉翅如蝙蝠飞亦不远有黄连香金银香之类",
+      "bodyZh": "南连大山北距海西距苏门答刺自满刺加水行四昼夜可至有淡水港东连旷野地宜早稻其粒小民业耕渔风俗淳朴婚丧礼与爪哇满刺加同市易用小棉布曰栲泥米谷牛羊鸡鸭甚丰奶酪亦多国皆回回人也厥产飞虎如猫犬长毛灰色肉翅如蝙蝠飞亦不远有黄连香金银香之类",
       "source": {
-        "chapterIds": [
-          "yingya-c006"
-        ],
-        "chapterId": "yingya-c006",
-        "chapter": 6,
-        "chapterTitle": "Aru",
-        "zhHeading": "哑鲁国 【 小国也】"
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-aru",
+        "chapterTitle": "哑鲁国",
+        "zhHeading": "哑鲁国"
       }
     },
     {
-      "id": "samudra-pasai",
-      "title": "Samudra-Pasai, Nakur, and Lide",
+      "id": "sumatra",
+      "title": "苏门荅刺　那孤儿  黎伐国",
       "band": "maritime_asia",
       "placeNames": [
-        "Samudra",
-        "Pasai",
-        "Sumatra",
-        "Nakur",
-        "Lide"
+        "苏门答剌",
+        "Sumatra"
       ],
-      "body": "The one who stabbed Sumen was the ancient Xuwendana country. It was connected to mountains to the south and the sea to the east. It was connected to mountains to the east and was connected to the mountains to the west. It was a small country connected to the sea to the west of Alu. The orphan Li Fa was an important meeting place in the Western Ocean. He was also proud of the country. He could go southwest and have a favorable wind for five days and nights. There was a village by the sea. He was a barbarian who could reach the capital by boat ten miles away. There was no city wall and a big stream entered the sea at dawn and dusk. The big waves at Xihaikou have often not drowned the old ones so far? The orphan country was invaded by the Flower Face King and was defeated in the battle. The son was weak and died. His wife was angry and threatened, saying, \"If you can recover, I will be the husband of the common state. The fisherman heard about it and led the army to defeat the Flower Face King. The country relied on An and the king's wife was virtuous, so he changed the fisherman's state affairs and listened to it.\" In the seventh year of Yongle, the king came to pay tribute. In the tenth year of Shangjia, he sent envoys to his country. Jiazi led his troops to kill the king. He was also a fisherman. His son, Su Qianli, led the people to run to the tent on the steep mountain. They invaded again and wanted to recover him. In the eleventh year of Yongle, the eunuch Zheng He captured him and sent him to the capital. The old prince was grateful for the tribute. The same is true for people living in Canada. The goods traded by ships are also abundant. The money used in the market is gold and tin money, which weighs five cents. The trade is mostly made of tin. The sulfur produced in the caves is not grown in the mountains.",
+      "body": "苏门荅刺者即古须文达那国南连大山北距海东亦连山距阿鲁国西距海山连二小国那孤儿黎伐是巳西洋之要会也自满刺加西南行顺风五昼夜可至先有村滨海曰荅鲁蛮舍舟十里可至国都无城郭有大溪入海朝夕潮汐海口大涛舶至此往往没溺旧?那孤儿国被花面王侵伐乃出战败绩中矢而死子弱不能复雠其妻忿而扬言曰能复此雠者我则夫之与共国事有渔翁闻之领兵败花面王杀之国赖以安王妻德之于是改适渔翁国政听焉永乐七年王来贡上嘉之十年遣使入其国假子率部众弒王即渔翁也其子曰苏干利领众奔棚于峭山时复侵之欲复其雠永乐十一年太监郑和擒之送京伏法旧王子感激修贡其地气候朝热如夏暮凉如秋瘴发于五六月间风俗淳厚言语和媚婚丧服用与满刺加国同民居亦如之番舶往来货亦充牣市用金锡钱金钱曰那底儿重五分交易多用锡厥产硫黄出岩穴山则不生草木土石焦黄地隘宜稻岁两稔无大小麦依山则种椒国蔓生如中国甜菜状花黄子白其实初青老则红半老则采之曝干每百斤直白金一两有芭蕉子甘蔗吉柿波罗蜜有臭叶曰暏尔乌如中国鸡头菱状长八九寸有刺热则开瓣五六臭如腐肉酥白十五片甚甘有子可炒食甘橘四时有绿橘不酸柰久不烂酸子白俺拔如消梨稍长香冽去其皮可食蔬有葱蒜姜芥东瓜西瓜东瓜久留不败西瓜绿皮红子长二三尺黄牛多有乳赂羊皆黑色雄鸡大者七八斤易煮味美异常蚕桑不省缲丝但成绵那孤王一名花面王在苏门荅刺之西国小仅比大村人皆剺面故号花面秪千余家田少稻稀有猪羊鸡鸭服用风俗语言与苏门荅刺同",
+      "bodyZh": "苏门荅刺者即古须文达那国南连大山北距海东亦连山距阿鲁国西距海山连二小国那孤儿黎伐是巳西洋之要会也自满刺加西南行顺风五昼夜可至先有村滨海曰荅鲁蛮舍舟十里可至国都无城郭有大溪入海朝夕潮汐海口大涛舶至此往往没溺旧?那孤儿国被花面王侵伐乃出战败绩中矢而死子弱不能复雠其妻忿而扬言曰能复此雠者我则夫之与共国事有渔翁闻之领兵败花面王杀之国赖以安王妻德之于是改适渔翁国政听焉永乐七年王来贡上嘉之十年遣使入其国假子率部众弒王即渔翁也其子曰苏干利领众奔棚于峭山时复侵之欲复其雠永乐十一年太监郑和擒之送京伏法旧王子感激修贡其地气候朝热如夏暮凉如秋瘴发于五六月间风俗淳厚言语和媚婚丧服用与满刺加国同民居亦如之番舶往来货亦充牣市用金锡钱金钱曰那底儿重五分交易多用锡厥产硫黄出岩穴山则不生草木土石焦黄地隘宜稻岁两稔无大小麦依山则种椒国蔓生如中国甜菜状花黄子白其实初青老则红半老则采之曝干每百斤直白金一两有芭蕉子甘蔗吉柿波罗蜜有臭叶曰暏尔乌如中国鸡头菱状长八九寸有刺热则开瓣五六臭如腐肉酥白十五片甚甘有子可炒食甘橘四时有绿橘不酸柰久不烂酸子白俺拔如消梨稍长香冽去其皮可食蔬有葱蒜姜芥东瓜西瓜东瓜久留不败西瓜绿皮红子长二三尺黄牛多有乳赂羊皆黑色雄鸡大者七八斤易煮味美异常蚕桑不省缲丝但成绵那孤王一名花面王在苏门荅刺之西国小仅比大村人皆剺面故号花面秪千余家田少稻稀有猪羊鸡鸭服用风俗语言与苏门荅刺同",
       "source": {
-        "chapterIds": [
-          "yingya-c007"
-        ],
-        "chapterId": "yingya-c007",
-        "chapter": 7,
-        "chapterTitle": "Samudra-Pasai, Nakur, and Lide",
-        "zhHeading": "苏门荅刺　那孤儿 【 小国】 黎伐国 【 亦小】"
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-sumatra",
+        "chapterTitle": "苏门荅刺　那孤儿  黎伐国",
+        "zhHeading": "苏门荅刺　那孤儿  黎伐国"
       }
     },
     {
       "id": "lide",
-      "title": "Lide (Lifa)",
+      "title": "黎伐",
       "band": "maritime_asia",
       "placeNames": [
-        "Lide",
-        "Lifa",
-        "Li Fa"
+        "黎伐"
       ],
-      "body": "The small country is also connected to the mountains to the south, to the north to the sea, to the south to the south and to the southeast to the Orphan Country. There are 1 or 2,000 residents of the Orphan Country, but one person is recommended to be the king.",
+      "body": "小国也南连大山北际海西距南浡里国东南连那孤儿国居民有一二千家乃推一人为王隶苏门荅刺国操舍一听之言语服用与荅刺同山产野犀甚多",
+      "bodyZh": "小国也南连大山北际海西距南浡里国东南连那孤儿国居民有一二千家乃推一人为王隶苏门荅刺国操舍一听之言语服用与荅刺同山产野犀甚多",
       "source": {
-        "chapterIds": [
-          "yingya-c008"
-        ],
-        "chapterId": "yingya-c008",
-        "chapter": 8,
-        "chapterTitle": "Lide (Lifa)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-lide",
+        "chapterTitle": "黎伐",
         "zhHeading": "黎伐"
       }
     },
     {
-      "id": "lambri",
-      "title": "Lambri (Nanboli)",
+      "id": "lamuri",
+      "title": "南泥里",
       "band": "maritime_asia",
       "placeNames": [
-        "Lambri",
-        "Nanboli",
-        "Aceh"
+        "南渤里",
+        "Lambri"
       ],
-      "body": "From the international sea to the east, Li Feng, to the northwest from Hainan, there are mountains and mountains to the south. There are only a thousand or so homes with Hui people. The customs are simple, and the king's house is four feet high. The surrounding boards are also well-shielded. There are no walls under Mijie, and the cattle and sheep are pastured. The same city uses copper coins to produce cattle, sheep, chickens, ducks, millet, few vegetables, fruits, fish and shrimps. The fragrance is really wonderful. There are also white lotus and rhinoceros. In the northwest sea, there is a flat-top giant. The mountain can be reached in half a day, and Mao Mountain and the Sea are the Western Ocean. All Li ships use this mountain as a guide. There are trees in the shallow water at the foot of the mountain, some of which are corals. Some of them are two or three feet high. Their branches are whirling and lovely. The roots can be used as molten beads. There are twenty or thirty people living in the mountain. Each of them calls himself a king. When asked who he is, he says, \"Agu Huan\". I give him the king's name. He also asks. He is so frightened that he laughs. He is from the country of Wuli. It takes three days and nights to reach the country by boat from Sumen.",
+      "body": "国际海东距黎伐国西北距海南连大山山南际海仅千余家皆回回人也风俗朴实王居类楼高四丈周围板蔽亦严整??米洁下则无壁牧放牛羊之类民居与荅刺同市用铜钱厥产牛羊鸡鸭粟粒少蔬果丰鱼虾降真香甚妙?白莲花亦有犀牛西北大海中有平顶巨山半日可至曰帽山海乃西洋也曰那没黎舶皆以此山为指南山下浅水有树乃珊瑚也大者高二三尺分枝婆娑可爱根可为瑁珠器皿依山有居人二三十家人各称王有问其为谁曰阿孤楂我盖王号也问者辄以是对殊可骇笑隶浡里国自苏门荅刺国舟行三昼夜可至",
+      "bodyZh": "国际海东距黎伐国西北距海南连大山山南际海仅千余家皆回回人也风俗朴实王居类楼高四丈周围板蔽亦严整??米洁下则无壁牧放牛羊之类民居与荅刺同市用铜钱厥产牛羊鸡鸭粟粒少蔬果丰鱼虾降真香甚妙?白莲花亦有犀牛西北大海中有平顶巨山半日可至曰帽山海乃西洋也曰那没黎舶皆以此山为指南山下浅水有树乃珊瑚也大者高二三尺分枝婆娑可爱根可为瑁珠器皿依山有居人二三十家人各称王有问其为谁曰阿孤楂我盖王号也问者辄以是对殊可骇笑隶浡里国自苏门荅刺国舟行三昼夜可至",
       "source": {
-        "chapterIds": [
-          "yingya-c009"
-        ],
-        "chapterId": "yingya-c009",
-        "chapter": 9,
-        "chapterTitle": "Lambri (Nanboli)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-lamuri",
+        "chapterTitle": "南泥里",
         "zhHeading": "南泥里"
       }
     },
     {
       "id": "ceylon",
-      "title": "Ceylon and the Naked Isle",
+      "title": "锡兰　裸形",
       "band": "india",
       "placeNames": [
-        "Ceylon",
-        "Sri Lanka",
-        "Xilan",
-        "Nicobar"
+        "锡兰",
+        "Ceylon"
       ],
-      "body": "There are green mountains in the sea. There are three or four tall people called Suo Duman. They ride the northeast wind from the southeast of Mao Shan for three days. Everyone is living in caves, regardless of gender. They are naked like wild beasts. There is no rice. They eat taro, banana, jackfruit, etc. or fish and agarwood. If you cover your body with a naked cloth, you will get sores. In the past, when the Buddha came to the sea, he took off his clothes and bathed in the Buddha's corpse stolen by the natives. Then he covered it with a saying. It is also said that Chimaowu is here. On the 7th and 8th day, we saw the Yingge Mountain in the West Sea. On the 3 nd, we arrived at the Fotang Mountain and began to be Ceylon. Guo Bo Zhou said that Fuluoli Binhai foothills are still traces of the faint footprints that can be two feet long. The clouds spread to the Buddha's feet. There is a spring that never dries up. People dip their faces and wipe their faces, saying that the Buddha is pure. This is the absurdity of folk customs. There is also a reclining Buddha couch in the temple, decorated with eight agarwoods. The precious and precious Buddha's tooth relics are all kept in the temple. The so-called Nirvana is the place where we have traveled fifty miles northwest to the king's residence. The people in Suoli are also still free from heavy elephants. Those who are killed will be punished by death or redeemed with a gold bull's head. Every day in the palace and the people's residence, cow dung will be spread on the ground to pay homage to the Buddha. In the prosperous country of Java, the people were naked and pressed down to their waists, and their beards and beards were shaved off, leaving their hair tied with a cloth. When their father died, they had to leave their hair unshaved, and the women's spine was tied up in a bun with a white cloth on their backs.",
+      "body": "大海中有翠蓝山山有三四高大者曰梭笃蛮自帽山东南乘东北风三日方至人皆穴居不问男女俱裸若野兽然无稻而食芋芭蕉子波罗蜜之类或鱼鰕生来即裸布略蔽身必生烂疮昔佛度海至此解衣而浴土人窃之佛呪而然盖附会语也俗云赤卯坞此地是巳又西海七八日见莺哥觜山又三二日至佛堂山始为锡兰国泊舟曰副罗里滨海山麓盘石隐然足迹尚存长可二尺传云佛足至此也其迹有泉不涸人蘸之拭面目曰佛清净盖民俗之谬也寺有卧佛榻沉香为之饰以八宝华丽鲜侔佛牙舍利子俱存于寺所谓涅盘其地是巳又西北陆行五十里始至王居王锁里人也尚释重象牛煅牛粪灰遍体涂之牛则饮其乳而不食其肉死瘗之有杀者死刑或赎以牛头金王宫民居旦必调牛粪涂地而礼佛王都大山侵云石有巨迹深二尺长余八尺传云祖阿■〈日冉〉生人足迹即盘古也地广人稠亚于爪哇国富饶民上裸下帨加以压腰须毫皆剃留发首布缠之遭父丧则须毫不剃女椎髻于后下亦萦白布隐潜饮食不令人见也膳必酥乳槟榔不绝口死者火之而葬其骨厥产鸦忽有青红黄三色青朱蓝石昔刺泥窟没蓝石二种出于沙中山被水冲流下则有之海洲日映光浮乃蚌珠气也?池间二三年冥蚌于池有司守之珠可淘取有稻芝麻菉豆无麦多椰子果有芭蕉子波罗蜜甘蔗瓜蔬牛羊鸡鸭亦有市用金钱重一分六厘重中国麝香绮谷彩绢青磁器铜钱樟脑厥贡珠宝石",
+      "bodyZh": "大海中有翠蓝山山有三四高大者曰梭笃蛮自帽山东南乘东北风三日方至人皆穴居不问男女俱裸若野兽然无稻而食芋芭蕉子波罗蜜之类或鱼鰕生来即裸布略蔽身必生烂疮昔佛度海至此解衣而浴土人窃之佛呪而然盖附会语也俗云赤卯坞此地是巳又西海七八日见莺哥觜山又三二日至佛堂山始为锡兰国泊舟曰副罗里滨海山麓盘石隐然足迹尚存长可二尺传云佛足至此也其迹有泉不涸人蘸之拭面目曰佛清净盖民俗之谬也寺有卧佛榻沉香为之饰以八宝华丽鲜侔佛牙舍利子俱存于寺所谓涅盘其地是巳又西北陆行五十里始至王居王锁里人也尚释重象牛煅牛粪灰遍体涂之牛则饮其乳而不食其肉死瘗之有杀者死刑或赎以牛头金王宫民居旦必调牛粪涂地而礼佛王都大山侵云石有巨迹深二尺长余八尺传云祖阿■〈日冉〉生人足迹即盘古也地广人稠亚于爪哇国富饶民上裸下帨加以压腰须毫皆剃留发首布缠之遭父丧则须毫不剃女椎髻于后下亦萦白布隐潜饮食不令人见也膳必酥乳槟榔不绝口死者火之而葬其骨厥产鸦忽有青红黄三色青朱蓝石昔刺泥窟没蓝石二种出于沙中山被水冲流下则有之海洲日映光浮乃蚌珠气也?池间二三年冥蚌于池有司守之珠可淘取有稻芝麻菉豆无麦多椰子果有芭蕉子波罗蜜甘蔗瓜蔬牛羊鸡鸭亦有市用金钱重一分六厘重中国麝香绮谷彩绢青磁器铜钱樟脑厥贡珠宝石",
       "source": {
-        "chapterIds": [
-          "yingya-c010"
-        ],
-        "chapterId": "yingya-c010",
-        "chapter": 10,
-        "chapterTitle": "Ceylon and the Naked Isle",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-ceylon",
+        "chapterTitle": "锡兰　裸形",
         "zhHeading": "锡兰　裸形"
       }
     },
     {
       "id": "quilon",
-      "title": "Quilon (Xiaogelan)",
+      "title": "小葛兰",
       "band": "india",
       "placeNames": [
+        "小葛兰",
         "Quilon",
-        "Kollam",
-        "Xiaogelan"
+        "Coilum"
       ],
-      "body": "The mountains in the east are adjacent to the sea, and the rest of the country is close to the sea. The people of Suoli also worship pagodas, respect elephants and cows, and use them for weddings and funerals. It is the same as Ceylon.\n\nFrom the country of Ceylon, we travel to the northwest sea for six days and nights from beginning to end. There is a lot of cake for food, food, and money. It is a small country.",
+      "body": "东连大山余方皆濒海王乃锁里人也尚浮屠尊重象牛婚丧服用与锡兰同自锡兰国别那里西北海行六昼夜始至日飡多酥用以和饭市用金钱重二分境土乃小国也",
+      "bodyZh": "东连大山余方皆濒海王乃锁里人也尚浮屠尊重象牛婚丧服用与锡兰同自锡兰国别那里西北海行六昼夜始至日飡多酥用以和饭市用金钱重二分境土乃小国也",
       "source": {
-        "chapterIds": [
-          "yingya-c011"
-        ],
-        "chapterId": "yingya-c011",
-        "chapter": 11,
-        "chapterTitle": "Quilon (Xiaogelan)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-quilon",
+        "chapterTitle": "小葛兰",
         "zhHeading": "小葛兰"
       }
     },
     {
       "id": "cochin",
-      "title": "Cochin (Kezhi)",
+      "title": "柯枝",
       "band": "india",
       "placeNames": [
-        "Cochin",
-        "Kochi",
-        "Kezhi"
+        "柯枝",
+        "Cochin"
       ],
-      "body": "Connecting the mountains to the east, the rest of the country is on the coast. From the Gulan Kingdom, sailing to the northwest of the mountain for a day and night, even the king also locked up his head, wrapped it in yellow and white cloth, without any clothes, and tied it with silk silk. Those who are rich and wealthy are called Zhe Di, third-class Yama. Hui, the fourth class of Gequan, are called the fifth class of Papaya. Those who are fishermen and woodcutter are accustomed to wearing clothes. It is forbidden to wear long clothes when living by the seaside. Anyone who violates this is guilty of wearing a top coat. However, on the way to the south, I met people from Pizhe, and I fell down to wait for them to pass by. I then got up from the pagoda, respected the elephant and cow, and built a temple. There are those with turbid skin, such as Upasaka, who also marry their own wives. Their hair is not shaved or pruned, and they are moved and separated. There are ten or seven or eight strands hanging down from the back, and the body is coated with cow dung ash. They have no clothes, but their waists are girded with white rims. However, his wife only covered her shame with a small cloth and went with her husband to look for money and millet. The climate was as hot as summer, frost-free and snow-free. Spring rains meant that the house was being renovated and storage equipment was caught. In the summer, Lianyu City, Mo Chenghe, could not enter or leave the house until the beginning of July and the end of August. From sunny to winter, it rains again in March. As the saying goes, it rains for half the year and is sunny for half the year. It is the market that uses gold and silver money. Nine percent of the color is said to be one point and one cent in the South. Silver money is only like a snail, which is said to be four cents per fifteen pieces of gold.",
+      "body": "东连大山余方皆滨海自葛兰国海行船山西北一昼夜乃至其国王亦锁里人首缠黄白布上无衣下萦丝帨加以彩?一定系之曰压腰臣民服用稍与王同屋用椰木及叶缉缀当瓦如苫盖然家造库藏赀以避火盗人有五等南毘辈与王同类祝发悬胫以线乃贵族一等也回回人二等富有财者曰哲地三等牙马?会曰革全四等也卑贱者曰木瓜五等也木瓜业渔樵习服荷禁不许服长衣滨海居居檐仅三尺违者罪之上衣不过膝途遇南毘哲地人即伏地候过乃起王尚浮屠尊敬象牛建寺范金为佛青石结座环以沟水旁穿井每旦鸣锺鼓汲泉灌佛顶数回巳乃礼之有曰浊肌者盖优婆夷之类亦娶妻自胎发不剃不栉以酥挼辨或十缕或七八缕垂于后牛粪灰涂体不衣而藤束腰白缘四末持大螺常吹而行其妻祗以小布蔽羞随夫历人家觅钱粟气候热如夏无霜雪春雨即葺舍储具逮夏连雨市陌成河比屋不能出入至七月始霁八月望后始晴至冬犹然三月又雨谚云半年有雨半年晴者是巳市用金银钱金钱九成色曰法南计一分一厘银钱仅如螺靥曰荅儿计四厘每十五当金钱之一婚丧各以类不等厥产胡椒往往种于圃四百斤直金钱百文银直五两珠以分论有米粟瓜豆黍稷无麦有象马牛羊犬猫鸡无骡马暨鹅",
+      "bodyZh": "东连大山余方皆滨海自葛兰国海行船山西北一昼夜乃至其国王亦锁里人首缠黄白布上无衣下萦丝帨加以彩?一定系之曰压腰臣民服用稍与王同屋用椰木及叶缉缀当瓦如苫盖然家造库藏赀以避火盗人有五等南毘辈与王同类祝发悬胫以线乃贵族一等也回回人二等富有财者曰哲地三等牙马?会曰革全四等也卑贱者曰木瓜五等也木瓜业渔樵习服荷禁不许服长衣滨海居居檐仅三尺违者罪之上衣不过膝途遇南毘哲地人即伏地候过乃起王尚浮屠尊敬象牛建寺范金为佛青石结座环以沟水旁穿井每旦鸣锺鼓汲泉灌佛顶数回巳乃礼之有曰浊肌者盖优婆夷之类亦娶妻自胎发不剃不栉以酥挼辨或十缕或七八缕垂于后牛粪灰涂体不衣而藤束腰白缘四末持大螺常吹而行其妻祗以小布蔽羞随夫历人家觅钱粟气候热如夏无霜雪春雨即葺舍储具逮夏连雨市陌成河比屋不能出入至七月始霁八月望后始晴至冬犹然三月又雨谚云半年有雨半年晴者是巳市用金银钱金钱九成色曰法南计一分一厘银钱仅如螺靥曰荅儿计四厘每十五当金钱之一婚丧各以类不等厥产胡椒往往种于圃四百斤直金钱百文银直五两珠以分论有米粟瓜豆黍稷无麦有象马牛羊犬猫鸡无骡马暨鹅",
       "source": {
-        "chapterIds": [
-          "yingya-c012"
-        ],
-        "chapterId": "yingya-c012",
-        "chapter": 12,
-        "chapterTitle": "Cochin (Kezhi)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-cochin",
+        "chapterTitle": "柯枝",
         "zhHeading": "柯枝"
       }
     },
     {
       "id": "calicut",
-      "title": "Calicut (Guli)",
+      "title": "古俚",
       "band": "india",
       "placeNames": [
-        "Calicut",
-        "Kozhikode",
-        "Guli"
+        "古俚",
+        "古里",
+        "Calicut"
       ],
-      "body": "The Western Dog Kingdom is also bordered by the sea to the west and south to the Kochi Kingdom to the north. It is about 700 miles away from the sea of Hennuer Kingdom and the mountains to the far east. It is three days away from Kanbayi from the Kochi Sea to more than 100,000 miles away from China. In the fifth year of Yongle, the eunuch Zheng He and others were ordered to give the king an imperial edict to reward his generals. The king of the crown belt, the beautiful stone, Shangfu Tu, respects the elephant and the cow. There are five classes, one Hui, one south, one Zhe, one leather, one wood. The people of Wang Nanbi do not eat beef, and the general Hui people do not eat pork. The king and Hui Hui swore to fast to each other. The copper model Buddha elephant said Na'er. The Buddha Hall is surrounded by a copper tile base. After bathing the Buddha in a well, he took cow dung, mixed it with water, and spread it on the floor and walls. When the subjects got up in the morning, they also used cow dung to smear the ground and forged the ash bag of cow dung on their bodies. Every time they mixed the water with the ash, they wiped their foreheads and buttocks and worshiped the Buddha. It is also said that in the past, there was a sage who said that everyone should obey certain practices and teachings. The younger brother of Lord Li gave birth to a golden calf to tell the people of the country that this was the sacred Lord who respected him. People with experience ignored it and disobeyed the order of the cow. The gold man reaped the benefits and believed it without doubt. All state affairs are decided by the two generals, who return to the country. The people of the country also worship Islam. There are more than 20 or 30 days of worship in the mosque. On the solstice, fasting, praying, and giving thanks. At noon, men and women pray to God in the temple.",
+      "body": "西洋犬国也西濒海南距柯支国北距狠奴儿国海近山远东七百里许距坎巴夷自柯支海行可三日至距中国十万余里永乐五年上命太监郑和等赐王以诰命升赏其将领有差皆冠带勒石美之王尚浮屠敬象牛人有五等一回回一南毘一哲地一革全一木?王南毘人不食牛肉将领回回人不食猪肉昔王与回回誓互相禁食铜范佛象曰纳儿佛殿以铜瓦座傍穿井汲泉浴佛而礼之取牛粪调水涂地及壁臣民大家晨起亦用牛粪涂地煅牛粪灰囊于身每旦水调灰抹额及股谓敬佛也传云昔有圣人曰某些行教化人人俱服从某些远适遣弟曰撒没黎主之弟乃纵诞铸金犊以谕国人曰此乃圣主敬之有验人罔不从命牛日粪金人获其利遂信之不疑某些归恚其弟诬惑遂毁牛弟恐于是跨象而遁国人犹望其还故敬象牛者以此国事皆决于二将领乃回回人也国人半崇回回教礼拜寺有二三十余七日一礼至日斋沐谢事午时男女拜天于寺未刻乃散始治他事俗尚信义中国舶货至皆二将领主之遣驵侩议直言定再不易其筭法祗凭手指屈伸分毫不谬市用六成金钱曰吧南重二分文二面小银钱曰搭儿重三厘秤曰法刺二十两为斤当中国一斤九两六钱升曰党戛黎当中国一升六合乐则葫芦为乐器红铜丝为弦歌乐自和协铿锵可听婚丧礼各以类王老则不传子而传外甥无姊妹子则传弟无弟则传于有德者古今皆然刑无鞭笞轻则断手足重则罚金珠戮甚则没家夷族有罪系之辄承服不承服则冥其手指于沸油中半饷三日后验之烂者伏辜全者免罪免罪者将领导以鼓乐还家亲戚致贺饮酒西洋布白撦黎出于邻邦坎巴夷之属每疋阔四尺五寸长二丈五尺直金钱八文有色?间花帨阔五尺长一丈三二尺直金钱百文厥产胡椒亦以圃种十月熟富家则多植椰子树千株至二三千者有之嫩者有浆可酿酒老者可作油糖或饭壳可作杯煅枝灰可厢金枝干可构室叶可盖屋蔬有姜芥萝卜胡荽葱蒜胡芦茄瓜东瓜四时有小瓜如指长一寸许味美果有芭蕉子波罗蜜木鳖子树高十余丈绿囊如柿三四十有米无麦有鸡鸭无鹅羊高如骡灰色水牛不大黄牛则大有至三四百斤者不食其肉而取其乳酥不绝口牛死则埋之畜有孔雀乌雅鹰鹭鸶燕无余鸟厥贡金?宝带金?如发结花缀八宝珍珠",
+      "bodyZh": "西洋犬国也西濒海南距柯支国北距狠奴儿国海近山远东七百里许距坎巴夷自柯支海行可三日至距中国十万余里永乐五年上命太监郑和等赐王以诰命升赏其将领有差皆冠带勒石美之王尚浮屠敬象牛人有五等一回回一南毘一哲地一革全一木?王南毘人不食牛肉将领回回人不食猪肉昔王与回回誓互相禁食铜范佛象曰纳儿佛殿以铜瓦座傍穿井汲泉浴佛而礼之取牛粪调水涂地及壁臣民大家晨起亦用牛粪涂地煅牛粪灰囊于身每旦水调灰抹额及股谓敬佛也传云昔有圣人曰某些行教化人人俱服从某些远适遣弟曰撒没黎主之弟乃纵诞铸金犊以谕国人曰此乃圣主敬之有验人罔不从命牛日粪金人获其利遂信之不疑某些归恚其弟诬惑遂毁牛弟恐于是跨象而遁国人犹望其还故敬象牛者以此国事皆决于二将领乃回回人也国人半崇回回教礼拜寺有二三十余七日一礼至日斋沐谢事午时男女拜天于寺未刻乃散始治他事俗尚信义中国舶货至皆二将领主之遣驵侩议直言定再不易其筭法祗凭手指屈伸分毫不谬市用六成金钱曰吧南重二分文二面小银钱曰搭儿重三厘秤曰法刺二十两为斤当中国一斤九两六钱升曰党戛黎当中国一升六合乐则葫芦为乐器红铜丝为弦歌乐自和协铿锵可听婚丧礼各以类王老则不传子而传外甥无姊妹子则传弟无弟则传于有德者古今皆然刑无鞭笞轻则断手足重则罚金珠戮甚则没家夷族有罪系之辄承服不承服则冥其手指于沸油中半饷三日后验之烂者伏辜全者免罪免罪者将领导以鼓乐还家亲戚致贺饮酒西洋布白撦黎出于邻邦坎巴夷之属每疋阔四尺五寸长二丈五尺直金钱八文有色?间花帨阔五尺长一丈三二尺直金钱百文厥产胡椒亦以圃种十月熟富家则多植椰子树千株至二三千者有之嫩者有浆可酿酒老者可作油糖或饭壳可作杯煅枝灰可厢金枝干可构室叶可盖屋蔬有姜芥萝卜胡荽葱蒜胡芦茄瓜东瓜四时有小瓜如指长一寸许味美果有芭蕉子波罗蜜木鳖子树高十余丈绿囊如柿三四十有米无麦有鸡鸭无鹅羊高如骡灰色水牛不大黄牛则大有至三四百斤者不食其肉而取其乳酥不绝口牛死则埋之畜有孔雀乌雅鹰鹭鸶燕无余鸟厥贡金?宝带金?如发结花缀八宝珍珠",
       "source": {
-        "chapterIds": [
-          "yingya-c013"
-        ],
-        "chapterId": "yingya-c013",
-        "chapter": 13,
-        "chapterTitle": "Calicut (Guli)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-calicut",
+        "chapterTitle": "古俚",
         "zhHeading": "古俚"
       }
     },
     {
       "id": "maldives",
-      "title": "Maldives (Liushan)",
+      "title": "溜山",
       "band": "maritime_asia",
       "placeNames": [
-        "Maldives",
-        "Liushan"
+        "溜山",
+        "Maldives"
       ],
-      "body": "Surrounded by the sea, there is only a small country like Zhouzhu. It is also said to be a small country with no city walls. It is inhabited on the mountain. To the west, there are stone gates like city gates in the sea. There are eight large places, all of which are named after the river. There are also boats. There are still more small rivers and no worries. The so-called three thousand people with weak water are all nests. They live in caves where they don’t know how to eat millet and eat fish, but they don’t have any clothes. They use leaves to cover their front and back. When the boat is traveling, if it slips into the wind, the water is weak and it drowns. Therefore, the boatmen are careful to be careful. All the countries have returned to their customs, and they follow the teachings. They are good at fishing, and they have coconut trees. The man’s skin is small. The black and white clothes are wrapped around the head, and the women's blouses are covered with big clothes, which cover their faces. Weddings and funerals are held in accordance with the sect. The climate is often hot, such as summer. There is little rice and no wheat. The money produced in the market is really fragrant. The coconut bark knots can be run through the board to form a boat, and the asphalt coating is as solid asThe fragrant scent of ambergris is as pure as silver. It is collected in Siam. It is made from kudzu, thorns, and mackerel. It can be sold to neighboring countries with money. It is called fish weaving. It is very delicate and woven.",
+      "body": "四面滨海仅如洲渚小国也曰牒干无城郭依山聚居西距海中有石门如城阙有八大地皆以溜名亦通舟楫余小溜无虑三千数所谓弱水三千者是巳人皆巢居穴处不识菽粟而啖鱼鰕无衣祗以叶蔽前后阴舟行遇风一失入溜则水弱而没溺故舟人谨防之牒干国皆回回风俗淳厚动遵教门业渔好种椰树男肤微黑白缠首下萦帨妇人短衫下亦萦帨大帨蔽面目婚丧礼遵教门行气候常热如夏士瘠米少无麦市用银钱厥产降真香椰皮结绳可贯板成舟沥青涂之坚如铁丁龙涎香然之香清直与银同海■〈贝八〉采而鬻于暹罗葛刺用与钱同鲛鱼脔之可鬻于邻国曰溜鱼织?帨甚精致又织□帨男可萦首牛羊鸡鸭俱有",
+      "bodyZh": "四面滨海仅如洲渚小国也曰牒干无城郭依山聚居西距海中有石门如城阙有八大地皆以溜名亦通舟楫余小溜无虑三千数所谓弱水三千者是巳人皆巢居穴处不识菽粟而啖鱼鰕无衣祗以叶蔽前后阴舟行遇风一失入溜则水弱而没溺故舟人谨防之牒干国皆回回风俗淳厚动遵教门业渔好种椰树男肤微黑白缠首下萦帨妇人短衫下亦萦帨大帨蔽面目婚丧礼遵教门行气候常热如夏士瘠米少无麦市用银钱厥产降真香椰皮结绳可贯板成舟沥青涂之坚如铁丁龙涎香然之香清直与银同海■〈贝八〉采而鬻于暹罗葛刺用与钱同鲛鱼脔之可鬻于邻国曰溜鱼织?帨甚精致又织□帨男可萦首牛羊鸡鸭俱有",
       "source": {
-        "chapterIds": [
-          "yingya-c014"
-        ],
-        "chapterId": "yingya-c014",
-        "chapter": 14,
-        "chapterTitle": "Maldives (Liushan)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-maldives",
+        "chapterTitle": "溜山",
         "zhHeading": "溜山"
       }
     },
     {
       "id": "dhofar",
-      "title": "Dhofar (Zufar)",
-      "band": "arabia",
+      "title": "祖法儿",
+      "band": "west_asia",
       "placeNames": [
-        "Dhofar",
-        "Zufar",
-        "Zafar"
+        "祖法儿",
+        "Dhofar"
       ],
-      "body": "The country is bordered by the sea, with mountains in the southeast, and mountains in the northwest. Since ancient times, it has been said that the northwest sea can be reached in ten days and nights without any city walls. People worship Islam, with a strong body, a simple language, and a simple language. Teams of camels and horses formed a line to promote the locks and locks. Folks wrapped their heads and long clothes and boots. On Sundays, the market was closed for half a day. All adults and children took baths and dressed in rich clothes. They applied rose dew or agarwood incense to their clothes and body. They also burned incense and then saluted. The incense spread all over the market. Weddings and funerals follow the Islamic climate, which is always like autumn without cold. The money used in the city weighs two cents, one inch in diameter and five cents. The copper coin weighs four cents in human form. It produces frankincense, resin, and blood knots, aloe vera, myrrh, benzoin, styrax oil, wood turtle seed, etc., to make Chinese silk porcelain. Its rice, wheat, beans, millet, wheat, cereals, melons and eggplants, cattle, sheep, horses, mules, cats, dogs, chickens and ducks, all have mountain camel, chicken, plaque neck, chicken body like a crane, three or four feet long, two fingers, hair like a camel, walking like a camel, so it is called camel, chicken, camel, one humped, some bimodal.",
+      "body": "国濒海依山东南皆海西北重山自古俚国西北海行十昼夜可至无城郭人皆崇回回教体干修硕语言朴实王缠首以白细布衣青花细彩帨或织金锦袍穿靴蹑履乘轿跨马前后象驼马队成行鼓吹筚篥锁■〈木柰〉民间缠首长衣靴履当礼拜日罢市半日长幼俱沐浴盛服涂容体或蔷薇露或沉水香熏衣及体又以炉然沉擅香然后行礼礼既乃散香满街市半饷乃巳婚丧遵回回教气候常如秋无寒市用金钱重二钱径一寸五分文以人形铜钱重四分厥产乳香乃树脂也又有血结芦荟没药安息香苏合油木鳖子之类以易中国纻丝磁器其米麦豆粟黍稷麻谷瓜茄牛羊马骡猫犬鸡鸭俱有山驼鸡匾颈鸡身如鹤长三四尺脚二指毛如驼行亦如驼故唤驼鸡驼有单峰者有双峰者人以骑坐肉以市鬻厥贡乳香驼鸡等物",
+      "bodyZh": "国濒海依山东南皆海西北重山自古俚国西北海行十昼夜可至无城郭人皆崇回回教体干修硕语言朴实王缠首以白细布衣青花细彩帨或织金锦袍穿靴蹑履乘轿跨马前后象驼马队成行鼓吹筚篥锁■〈木柰〉民间缠首长衣靴履当礼拜日罢市半日长幼俱沐浴盛服涂容体或蔷薇露或沉水香熏衣及体又以炉然沉擅香然后行礼礼既乃散香满街市半饷乃巳婚丧遵回回教气候常如秋无寒市用金钱重二钱径一寸五分文以人形铜钱重四分厥产乳香乃树脂也又有血结芦荟没药安息香苏合油木鳖子之类以易中国纻丝磁器其米麦豆粟黍稷麻谷瓜茄牛羊马骡猫犬鸡鸭俱有山驼鸡匾颈鸡身如鹤长三四尺脚二指毛如驼行亦如驼故唤驼鸡驼有单峰者有双峰者人以骑坐肉以市鬻厥贡乳香驼鸡等物",
       "source": {
-        "chapterIds": [
-          "yingya-c015"
-        ],
-        "chapterId": "yingya-c015",
-        "chapter": 15,
-        "chapterTitle": "Dhofar (Zufar)",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-dhofar",
+        "chapterTitle": "祖法儿",
         "zhHeading": "祖法儿"
       }
     },
     {
       "id": "aden",
-      "title": "Aden",
-      "band": "arabia",
+      "title": "阿丹国",
+      "band": "west_asia",
       "placeNames": [
-        "Aden",
-        "Adan"
+        "阿丹",
+        "Aden"
       ],
-      "body": "The country is bordering the sea and is rich. It worships Islam. Azibi's language is tough and ruthless. He has a victorious army of seven or eight thousand horses and infantry. The neighbors are afraid of it. Since ancient times, it has been said that the country's boat can travel westward to the ninth year of Yongle. The envoy ordered his king to stay far away. That is to say, he ordered the people of his country to trade with each other. The king's crown, gold crown, yellow robe, waist, jewelery and gold belt. On Sundays, it is easy to wrap his head in white with gold and brocade. The top coat, white robe, rides in the car and marches like a train. The generals and other uniforms have different crowns and attire. Folk men will wrap their hair and robes. The clothes are made of brocade silk and fine cloth, and have boots and shoes. The women wear long clothes with beaded crowns and tassels on their ears. They have golden chests and jeweled rings on their hands and gold jeweled bracelets. They also have rings on their toes? It is said that the climate in Bulusi City is mild and easy to use. There are no leaps in the calendar. The size of the moon is determined by the moonrise. The moon is seen at night and it is January. There are also those who are good at walking. Determine a certain day in spring when the flowers and trees bloom and a certain day in autumn when the flowers and trees set. The sun and the moon are eclipsed? The winds, rains and tides of Sichuan are all observed. The houses are made of stone and the walls are covered with bricks or earth as high as four or five. The shops are full of cooked food and silk books, just like Chinese cereals. Most of them are made with molasses and are extremely delicious. Rice, wheat, melons, beans and vegetables are produced here. Vegetables and fruits include dates, pine nuts, loquats, dried grapes, walnut blossoms, red pomegranates, peaches and apricots.",
+      "body": "国濒海富饶崇回回教阿刺壁言语性情强梗悍戾有胜兵七八千马步俱精邻邦畏之自古俚国舟西行可至永乐九年诏中使赐命其国王远迓谨甚即谕其国人就互市王顶金冠衣黄袍腰宝妆金带属礼拜日则易白缠头以金锦?顶衣白袍乘车列象而行将领等冠服有差民间男则缠头衣撒哈刺锦绣纻丝细布等服有靴鞋妇人则长衣顶珠冠缨络耳金厢宝环手金宝镯钏足指亦有环?帨金银器皿绝胜赤金钱曰哺噜黎重一钱面有文红铜钱曰哺噜厮市易用之气候温和历无闰以月出定月之大小夜见月明日又为一月也有善椎步者定某日春则花木开荣某日秋则花木雕落日月交食?蜀风雨潮汐无不验者民居累石为壁上覆以砖或土高至于四五者市肆熟食及绮帛书籍俱如中国粒食多用酥糖蜜制味极精美厥产有米麦瓜豆蔬菜果有万年枣松子杷担干葡萄核桃花红石榴桃杏之类兽有象驼牛羊鸡鸭犬猫无猪鹅羊则无角颔垂短毛有紫檀蔷薇露檐卜花白葡萄福鹿青花白驼鸡福鹿如骡白首白眉满体细间道青花如画青花白驼鸡如福鹿麒麟前足高九尺余后足六尺余项长头昂至一丈六尺傍耳生二短肉角牛尾鹿身食粟豆饼饵狮子形类虎黄黑毛巨首阔口尾稍黑其长如缨声吼如雷百兽见之皆伏厥贡金厢宝带珍珠八宝全冠鸦忽等各种宝石地角金叶表文",
+      "bodyZh": "国濒海富饶崇回回教阿刺壁言语性情强梗悍戾有胜兵七八千马步俱精邻邦畏之自古俚国舟西行可至永乐九年诏中使赐命其国王远迓谨甚即谕其国人就互市王顶金冠衣黄袍腰宝妆金带属礼拜日则易白缠头以金锦?顶衣白袍乘车列象而行将领等冠服有差民间男则缠头衣撒哈刺锦绣纻丝细布等服有靴鞋妇人则长衣顶珠冠缨络耳金厢宝环手金宝镯钏足指亦有环?帨金银器皿绝胜赤金钱曰哺噜黎重一钱面有文红铜钱曰哺噜厮市易用之气候温和历无闰以月出定月之大小夜见月明日又为一月也有善椎步者定某日春则花木开荣某日秋则花木雕落日月交食?蜀风雨潮汐无不验者民居累石为壁上覆以砖或土高至于四五者市肆熟食及绮帛书籍俱如中国粒食多用酥糖蜜制味极精美厥产有米麦瓜豆蔬菜果有万年枣松子杷担干葡萄核桃花红石榴桃杏之类兽有象驼牛羊鸡鸭犬猫无猪鹅羊则无角颔垂短毛有紫檀蔷薇露檐卜花白葡萄福鹿青花白驼鸡福鹿如骡白首白眉满体细间道青花如画青花白驼鸡如福鹿麒麟前足高九尺余后足六尺余项长头昂至一丈六尺傍耳生二短肉角牛尾鹿身食粟豆饼饵狮子形类虎黄黑毛巨首阔口尾稍黑其长如缨声吼如雷百兽见之皆伏厥贡金厢宝带珍珠八宝全冠鸦忽等各种宝石地角金叶表文",
       "source": {
-        "chapterIds": [
-          "yingya-c016"
-        ],
-        "chapterId": "yingya-c016",
-        "chapter": 16,
-        "chapterTitle": "Aden",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-aden",
+        "chapterTitle": "阿丹国",
         "zhHeading": "阿丹国"
       }
     },
     {
       "id": "bengal",
-      "title": "Bengal",
+      "title": "榜葛刺国",
       "band": "india",
       "placeNames": [
-        "Bengal",
-        "Banggela",
-        "Sonargaon"
+        "榜葛刺",
+        "Bengal"
       ],
-      "body": "The territory is vast, densely populated, and rich in wealth. From Sumen to the sea, we can see the mountains and the Cuilan Island, and travel 20 miles northwest to Zhejiang Port. We can then go by boat for more than 500 miles to Suona'er Port. We can go southwest for 35 miles to the state-owned city, the royal palace, and the big and small temples. They are all in the city and then back to the city. People's customs are thick. Men and women are black and white. Men are rare. All men have white cloth wrapped around their round necks and long clothes. They are still tied with colorful silk shoes. The king and generals wear crowns. They are very clean and tidy. The language list is Geslang's own family. There are also Brazilian speakers. The money used in the city is called Tuangjia, which is three coins in diameter and two centimeters in diameter. According to this power, the price of goods also has the sea said Kaoli, weddings and funerals are all Muslim, the climate is often hot like summer punishment, there are whipping sticks, official posts, official seals, moving troops, and food management troops, they are said to be thorns, yin and yang, medicine, divination, all kinds of craftsmanship, all wearing black and white flowered shirts, piercing the coral with glass. The amber is worn as a tassel, and the bracelets are made of glass. The bracelets are tied to the arms. They are good at singing and dancing, and they are good at drinking and feasting. There are those who are called root, Xiao, Lu, and Nainai. The outstanding people also blow the locks on the doors of the generals and rich houses every five drums. The drumming is the order of the family. At the end of the meal, each family must work hard to buy wine, food, and money. The remaining 100 plays are all in existence, and the tiger is tied up with iron ropes in the market and people use it to untie the rope, sit on the tiger naked in the courtyard, and beat the tiger in anger.",
+      "body": "地广人稠财物丰硕自苏门荅刺国海行见山并翠蓝岛西北行二十里方至淛地港更小舟入五百余里至锁纳儿港舍舟而陆西南行三十五里始至其国有城郭王宫暨大小府寺皆在城乃回回人风俗厚男妇皆黑色白者稀男皆祝发白布缠身圆领长衣仍束彩帨蹑皮履王及将领冠服用回回制甚洁整语言榜葛俚自成一家亦有巴儿西语者市用银钱曰傥伽重三钱径寸二分面有文以此权物价重轻亦有海■〈贝八〉曰考黎婚丧皆回回教气候常热如夏刑有笞杖徒流官有印章行移军亦给粮管军者曰吧斯刺儿阴阳医卜百工伎艺皆有衣黑白花衫萦帨以硝子贯珊瑚琥珀曰缨络为佩以硝子为镯钏系臂善歌舞以侑酒筵有曰根肖速鲁柰柰者优人也每五鼓时候于将领及富室门吹锁■〈木柰〉击鼓巳乃次第其家作之至饔时诣各家必劳以酒馔钱货其余百戏皆有又以铁索系虎行市及人家则解索坐虎于庭裸而搏虎虎怒交扑仆虎数回乃巳或手投入虎喉虎亦不伤之戏巳仍系之家必啖虎以肉劳其人以钱盖虎戏以需财也历止十二月无闰厥产红粟麦芝麻豆黍稻一年二熟蔬有姜芥葱蒜瓜茄酒有椰子酒树子酒茭蔁酒以槟榔当茶畜有驼马骡水黄牛山绵羊鸡鸭猪鹅犬猫果有芭蕉子波罗蜜酸石榴蔗糖蜜布有数色荜布曰卑泊阔三尺余长五丈六七尺细腻如粉笺姜黄布曰满者提阔四尺长五丈余紧蜜坚实曰沙纳巴付阔五尺长三丈如生罗即布罗也曰圻白勒搭黎阔三尺长六丈布眼疏丽即纱布也以缠头曰沙塌儿阔二尺五寸长四丈若三梭曰蓦黑蓦勒阔四尺长二丈背面皆毳绒厚可五分即兠罗锦也蚕?秪织?嵌帨亦有绢成锦者布有白者树皮制成腻滑光润如鹿皮器有髹漆杯盘镔铁鎗翦",
+      "bodyZh": "地广人稠财物丰硕自苏门荅刺国海行见山并翠蓝岛西北行二十里方至淛地港更小舟入五百余里至锁纳儿港舍舟而陆西南行三十五里始至其国有城郭王宫暨大小府寺皆在城乃回回人风俗厚男妇皆黑色白者稀男皆祝发白布缠身圆领长衣仍束彩帨蹑皮履王及将领冠服用回回制甚洁整语言榜葛俚自成一家亦有巴儿西语者市用银钱曰傥伽重三钱径寸二分面有文以此权物价重轻亦有海■〈贝八〉曰考黎婚丧皆回回教气候常热如夏刑有笞杖徒流官有印章行移军亦给粮管军者曰吧斯刺儿阴阳医卜百工伎艺皆有衣黑白花衫萦帨以硝子贯珊瑚琥珀曰缨络为佩以硝子为镯钏系臂善歌舞以侑酒筵有曰根肖速鲁柰柰者优人也每五鼓时候于将领及富室门吹锁■〈木柰〉击鼓巳乃次第其家作之至饔时诣各家必劳以酒馔钱货其余百戏皆有又以铁索系虎行市及人家则解索坐虎于庭裸而搏虎虎怒交扑仆虎数回乃巳或手投入虎喉虎亦不伤之戏巳仍系之家必啖虎以肉劳其人以钱盖虎戏以需财也历止十二月无闰厥产红粟麦芝麻豆黍稻一年二熟蔬有姜芥葱蒜瓜茄酒有椰子酒树子酒茭蔁酒以槟榔当茶畜有驼马骡水黄牛山绵羊鸡鸭猪鹅犬猫果有芭蕉子波罗蜜酸石榴蔗糖蜜布有数色荜布曰卑泊阔三尺余长五丈六七尺细腻如粉笺姜黄布曰满者提阔四尺长五丈余紧蜜坚实曰沙纳巴付阔五尺长三丈如生罗即布罗也曰圻白勒搭黎阔三尺长六丈布眼疏丽即纱布也以缠头曰沙塌儿阔二尺五寸长四丈若三梭曰蓦黑蓦勒阔四尺长二丈背面皆毳绒厚可五分即兠罗锦也蚕?秪织?嵌帨亦有绢成锦者布有白者树皮制成腻滑光润如鹿皮器有髹漆杯盘镔铁鎗翦",
       "source": {
-        "chapterIds": [
-          "yingya-c017"
-        ],
-        "chapterId": "yingya-c017",
-        "chapter": 17,
-        "chapterTitle": "Bengal",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-bengal",
+        "chapterTitle": "榜葛刺国",
         "zhHeading": "榜葛刺国"
       }
     },
     {
       "id": "hormuz",
-      "title": "Hormuz",
+      "title": "忽鲁谟厮国",
       "band": "west_asia",
       "placeNames": [
-        "Hormuz",
-        "Ormuz",
-        "Hulumosi"
+        "忽鲁谟厮",
+        "Hormuz"
       ],
-      "body": "Hormuz stands on the shore by the mountains, a rich entrepôt where goods of many countries meet. The people are Muslim; they pray five times a day and keep the fast. Their customs are honest, their dress rich and solemn, their weddings and funerals ordered by Islamic rite. From China the voyage northwestward is reckoned at about twenty-five days. The city is populous and prosperous; merchants of many nations gather here, and the market is famous for gems, spices, horses, and fine stuffs. Stone houses and brick walls rise several stories; the streets throng with cooked foods and silk as in a Chinese city. Travelers praise the mild climate and the abundance of fruits — dates, grapes, pomegranates, peaches — and strange beasts brought as tribute, among them the giraffe and the lion.",
+      "body": "国滨海倚山通诸国货故国人多殷富无甚窘者有则众济之自古俚国西北海行可二十五日至其国人崇回回教曰五回礼拜必斋沐诚敬风俗淳厚人肌肤白晳丰伟衣冠严肃婚丧礼遵回回教",
+      "bodyZh": "国滨海倚山通诸国货故国人多殷富无甚窘者有则众济之自古俚国西北海行可二十五日至其国人崇回回教曰五回礼拜必斋沐诚敬风俗淳厚人肌肤白晳丰伟衣冠严肃婚丧礼遵回回教",
       "source": {
-        "chapterIds": [
-          "yingya-c018"
-        ],
-        "chapterId": "yingya-c018",
-        "chapter": 18,
-        "chapterTitle": "Hormuz",
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-hormuz",
+        "chapterTitle": "忽鲁谟厮国",
         "zhHeading": "忽鲁谟厮国"
       }
     }
   ],
   "stories": [
     {
-      "id": "zheng-he-chen-zuyi",
-      "title": "Zheng He Captures Chen Zuyi at Old Port",
+      "id": "zhenghe-preface",
+      "title": "瀛涯胜览序",
       "band": "maritime_asia",
-      "body": "Zheng He, the eunuch of the imperial court, commanded the sea, and there were even Shijin people. The people of Guangzhou also complained about the ancestral righteousness in peace, and led the soldiers to capture the ancestral righteousness. Fu was executed by the official, but he still returned to the old port?\n\nThe tides, customs and language of Ge Gangtong are just like those of Java. During the Hongwu Period, there was Chen Zuyi, and the Guangdong people also took their families to seek refuge here. The generals passed by Yongle Room.",
+      "body": "永乐中，太监郑和出使西洋，遍历诸国；随行者记其乡土风俗物产，后经张升润色为《瀛涯胜览集》。本书用作郑和线港口叙事与书案选段。",
       "source": {
-        "chapterIds": [
-          "yingya-c003"
-        ],
-        "chapterId": "yingya-c003",
-        "chapterTitle": "Zheng He Captures Chen Zuyi at Old Port"
-      },
-      "anchorPlace": "palembang"
-    },
-    {
-      "id": "zheng-he-raises-malacca",
-      "title": "Zheng He Raises Malacca to a Kingdom",
-      "band": "maritime_asia",
-      "body": "Siam has to pay 5,000 taels of gold every year. Otherwise, it will be conquered in the seventh year of Yongle. In the seventh year of Yongle, the eunuch Zheng He was ordered to give his generals a silver seal and a crown.\n\nThe customs of the waist are simple and simple, such as the Siamese couplet, sitting on the couch, fishing and harvesting wood as a boat, and sailing across the sea. Fishing, weddings and funerals. There is a turtle and dragon in the sea off Java.",
-      "source": {
-        "chapterIds": [
-          "yingya-c005"
-        ],
-        "chapterId": "yingya-c005",
-        "chapterTitle": "Zheng He Raises Malacca to a Kingdom"
-      },
-      "anchorPlace": "malacca"
-    },
-    {
-      "id": "fisherman-king-flower-face",
-      "title": "The Fisherman King and the Flower-Face War",
-      "band": "maritime_asia",
-      "body": "The son was weak and died. His wife was angry and threatened, saying, \"If you can recover, I will be the husband of the common state. The fisherman heard about it and led the army to defeat the Flower Face King.\n\nThere was no city wall and a big stream entered the sea at dawn and dusk. The big waves at Xihaikou have often not drowned the old ones so far? The orphan country was invaded by the Flower Face King and was defeated in the battle.\n\nHe was also a fisherman. His son, Su Qianli, led the people to run to the tent on the steep mountain. They invaded again and wanted to recover him.",
-      "source": {
-        "chapterIds": [
-          "yingya-c007"
-        ],
-        "chapterId": "yingya-c007",
-        "chapterTitle": "The Fisherman King and the Flower-Face War"
-      },
-      "anchorPlace": "samudra-pasai"
-    },
-    {
-      "id": "java-bamboo-spear-meeting",
-      "title": "The Bamboo-Spear Meeting of Java",
-      "band": "maritime_asia",
-      "body": "Therefore, people were at peace, customs, martial arts, and brave, and a bamboo spear meeting was established every year. It started in the tenth month of winter when Wang and his wife went out to see each other. The husband and wife each took a tower car.\n\nThey each wielded bamboo spears as strong as iron. The one who came on stage also brought his wife to the scene. The wife also wielded a three-foot stick to compete with each other.\n\nThe one who had been wounded and killed was Wang sent the winner to pay a gold note. The winner is a widower who is married. The man makes a woman and joins the family.",
-      "source": {
-        "chapterIds": [
-          "yingya-c002"
-        ],
-        "chapterId": "yingya-c002",
-        "chapterTitle": "The Bamboo-Spear Meeting of Java"
-      },
-      "anchorPlace": "java"
-    },
-    {
-      "id": "holy-water-of-tuban",
-      "title": "Holy Water at Tuban — Yuan Generals' Prayer",
-      "band": "maritime_asia",
-      "body": "The water in the small pond is sweet and refreshing. The name of the holy water is passed down. It is said that Yunyuan generals Shi Bigao and Zheng Zhapo were unable to land for many months.\n\nThe three armies were exhausted. The two generals were very thirsty for water. They prayed silently and rushed to Zhuoquan, so they rushed out to feed the army.",
-      "source": {
-        "chapterIds": [
-          "yingya-c002"
-        ],
-        "chapterId": "yingya-c002",
-        "chapterTitle": "Holy Water at Tuban — Yuan Generals' Prayer"
+        "book": "yingya-shenglan",
+        "chapterId": "yingya-preface",
+        "chapterTitle": "序"
       }
-    },
-    {
-      "id": "buddha-foot-ceylon",
-      "title": "Buddha's Footprint and Tooth Relic on Ceylon",
-      "band": "india",
-      "body": "This is the absurdity of folk customs. There is also a reclining Buddha couch in the temple, decorated with eight agarwoods. The precious and precious Buddha's tooth relics are all kept in the temple.\n\nOn the 7th and 8th day, we saw the Yingge Mountain in the West Sea. On the 3 nd, we arrived at the Fotang Mountain and began to be Ceylon. Guo Bo Zhou said that Fuluoli Binhai foothills are still traces of the faint footprints that can be two feet long.\n\nIn the past, when the Buddha came to the sea, he took off his clothes and bathed in the Buddha's corpse stolen by the natives. Then he covered it with a saying. It is also said that Chimaowu is here.",
-      "source": {
-        "chapterIds": [
-          "yingya-c010"
-        ],
-        "chapterId": "yingya-c010",
-        "chapterTitle": "Buddha's Footprint and Tooth Relic on Ceylon"
-      },
-      "anchorPlace": "ceylon"
-    },
-    {
-      "id": "calicut-cow-worship",
-      "title": "Cow Worship and the Gold Calf of Calicut",
-      "band": "india",
-      "body": "The Buddha Hall is surrounded by a copper tile base. After bathing the Buddha in a well, he took cow dung, mixed it with water, and spread it on the floor and walls. When the subjects got up in the morning, they also used cow dung to smear the ground and forged the ash bag of cow dung on their bodies.\n\nThe people of the country also worship Islam. There are more than 20 or 30 days of worship in the mosque. On the solstice, fasting, praying, and giving thanks.\n\nIn the fifth year of Yongle, the eunuch Zheng He and others were ordered to give the king an imperial edict to reward his generals. The king of the crown belt, the beautiful stone, Shangfu Tu, respects the elephant and the cow. There are five classes, one Hui, one south, one Zhe, one leather, one wood.",
-      "source": {
-        "chapterIds": [
-          "yingya-c013"
-        ],
-        "chapterId": "yingya-c013",
-        "chapterTitle": "Cow Worship and the Gold Calf of Calicut"
-      },
-      "anchorPlace": "calicut"
-    },
-    {
-      "id": "bengal-tiger-play",
-      "title": "The Tiger Play in the Markets of Bengal",
-      "band": "india",
-      "body": "The drumming is the order of the family. At the end of the meal, each family must work hard to buy wine, food, and money. The remaining 100 plays are all in existence, and the tiger is tied up with iron ropes in the market and people use it to untie the rope, sit on the tiger naked in the courtyard, and beat the tiger in anger.\n\nThe tiger fights and pounces on the servant tiger several times. Even if he throws his hand into the tiger's throat, the tiger will not be hurt. The play is still in the house.\n\nThe tiger must eat the tiger, work it with its meat, and the people will use money to cover the tiger play. In order to need money, there has been no money for the past twelve months. The red corn, wheat, sesame, beans, millet and rice produced by Runjue are harvested twice a year.",
-      "source": {
-        "chapterIds": [
-          "yingya-c017"
-        ],
-        "chapterId": "yingya-c017",
-        "chapterTitle": "The Tiger Play in the Markets of Bengal"
-      },
-      "anchorPlace": "bengal"
-    }
-  ],
-  "coverage": [
-    {
-      "chapterId": "yingya-c001",
-      "type": "place",
-      "entryId": "champa",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c002",
-      "type": "place",
-      "entryId": "java",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c003",
-      "type": "place",
-      "entryId": "palembang",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c004",
-      "type": "place",
-      "entryId": "siam",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c005",
-      "type": "place",
-      "entryId": "malacca",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c006",
-      "type": "place",
-      "entryId": "aru",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c007",
-      "type": "place",
-      "entryId": "samudra-pasai",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c008",
-      "type": "place",
-      "entryId": "lide",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c009",
-      "type": "place",
-      "entryId": "lambri",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c010",
-      "type": "place",
-      "entryId": "ceylon",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c011",
-      "type": "place",
-      "entryId": "quilon",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c012",
-      "type": "place",
-      "entryId": "cochin",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c013",
-      "type": "place",
-      "entryId": "calicut",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c014",
-      "type": "place",
-      "entryId": "maldives",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c015",
-      "type": "place",
-      "entryId": "dhofar",
-      "band": "arabia"
-    },
-    {
-      "chapterId": "yingya-c016",
-      "type": "place",
-      "entryId": "aden",
-      "band": "arabia"
-    },
-    {
-      "chapterId": "yingya-c017",
-      "type": "place",
-      "entryId": "bengal",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c018",
-      "type": "place",
-      "entryId": "hormuz",
-      "band": "west_asia"
-    },
-    {
-      "chapterId": "yingya-c003",
-      "type": "story",
-      "entryId": "zheng-he-chen-zuyi",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c005",
-      "type": "story",
-      "entryId": "zheng-he-raises-malacca",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c007",
-      "type": "story",
-      "entryId": "fisherman-king-flower-face",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c002",
-      "type": "story",
-      "entryId": "java-bamboo-spear-meeting",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c002",
-      "type": "story",
-      "entryId": "holy-water-of-tuban",
-      "band": "maritime_asia"
-    },
-    {
-      "chapterId": "yingya-c010",
-      "type": "story",
-      "entryId": "buddha-foot-ceylon",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c013",
-      "type": "story",
-      "entryId": "calicut-cow-worship",
-      "band": "india"
-    },
-    {
-      "chapterId": "yingya-c017",
-      "type": "story",
-      "entryId": "bengal-tiger-play",
-      "band": "india"
     }
   ]
 }

@@ -2,7 +2,7 @@
 unit: kerman
 lang: zh
 source: en
-source_rev: 61721d1c390d
+source_rev: 6dc7c13b1ada
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_kerman_b.choice_1_result: 35f86cffd992
   ev.ev_kerman_b.choice_2_result: 2662997d13e5
   ev.ev_kerman_b.choice_3_result: 0ede05d472e1
+  ev.ev_kerman_a_followup.title: da4e7766ed5a
+  ev.ev_kerman_a_followup.body: 8fbf87f91438
+  ev.ev_kerman_a_followup.choice_1: f6ede5a03a5b
+  ev.ev_kerman_a_followup.choice_1_result: d98daed0abe9
+  ev.ev_kerman_a_followup.choice_2: fc725c8947d0
+  ev.ev_kerman_a_followup.choice_2_result: 67f81253a39b
+  ev.ev_kerman_a_followup.choice_3: 71051d43334a
+  ev.ev_kerman_a_followup.choice_3_result: 6431b667f300
 ---
 
 ## city.kerman.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_kerman_b.choice_3_result
 
 你登鹰房问驯鹰之价，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往可马底的路。
+
+## ev.ev_kerman_a_followup.title
+
+起儿漫：炉边的师傅
+
+## ev.ev_kerman_a_followup.body
+
+一位在起儿漫打制昂丹尼钢刃三十年的铁匠，把你从矿径上拉进炉边的阴影。他不卖给你石头；他问你打算拿手头的绿松石做什么，又问你是否听说过本城鞍匠如何为沙漠路配钢与皮革。炉火已低，他只肯讲这一回。
+
+## ev.ev_kerman_a_followup.choice_1
+
+按师傅的定价买下一小件昂丹尼钢配件
+
+## ev.ev_kerman_a_followup.choice_1_result
+
+师傅按定价卖给你一件钢配件，不许还价。它小得能塞进鞍囊，却够撑过下一段沙漠行军。
+
+## ev.ev_kerman_a_followup.choice_2
+
+追问绿松石山通往忽鲁谟斯的路
+
+## ev.ev_kerman_a_followup.choice_2_result
+
+他用炭笔在一块皮上标出通往忽鲁谟斯的路：山口、水源、驿站之间的日子。忽鲁谟斯不再只是一个名字。
+
+## ev.ev_kerman_a_followup.choice_3
+
+答应在西去的城中为起儿漫的手艺说好话
+
+## ev.ev_kerman_a_followup.choice_3_result
+
+他收下你的承诺，不再多要。在起儿漫，听见这句话的人已把你的名字多记了一分。

@@ -2,7 +2,7 @@
 unit: camul
 lang: zh
 source: en
-source_rev: 1964b3f52100
+source_rev: 8a0bcd97ed20
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_camul_b.choice_1_result: 1f3c886bfce4
   ev.ev_camul_b.choice_2_result: 0d0cc74531ce
   ev.ev_camul_b.choice_3_result: c65ad75f8928
+  ev.ev_camul_a_followup.title: 178ec08acd2f
+  ev.ev_camul_a_followup.body: 6a7fe31db497
+  ev.ev_camul_a_followup.choice_1: e96037e1d4c8
+  ev.ev_camul_a_followup.choice_1_result: d51a1c709230
+  ev.ev_camul_a_followup.choice_2: a2e5ad153111
+  ev.ev_camul_a_followup.choice_2_result: 1deac34eda3e
+  ev.ev_camul_a_followup.choice_3: f5a1f1e889b6
+  ev.ev_camul_a_followup.choice_3_result: b5c653e15284
 ---
 
 ## city.camul.name
@@ -139,3 +147,35 @@ stamps:
 ## ev.ev_camul_b.choice_3_result
 
 你问僧人何路通东漠，你标出了通往亦集乃（黑水城）的路。你在路上用去 1 日光阴。
+
+## ev.ev_camul_a_followup.title
+
+哈密：瓜商的沙漠尺度
+
+## ev.ev_camul_a_followup.body
+
+夹在两片沙漠之间，一位走过两边沙海的瓜商拉你坐在摊边，不听完下一段路的尺度就不收你的钱。他把罗卜与沙州说得像邻村，问你是要买上路的果子，还是要买水井的知识。
+
+## ev.ev_camul_a_followup.choice_1
+
+按他的路价买下瓜子供下一段沙漠
+
+## ev.ev_camul_a_followup.choice_1_result
+
+他按公道分量卖给你瓜。果子能在沙上保存，绿洲的账目也随它同行。
+
+## ev.ev_camul_a_followup.choice_2
+
+请他点名通往罗卜与沙州的水井
+
+## ev.ev_camul_a_followup.choice_2_result
+
+罗卜与沙州连同其间的水井已标上你的舆图。下一段沙漠不再是空白。
+
+## ev.ev_camul_a_followup.choice_3
+
+等一日，等那支熟悉东边雾气的商队
+
+## ev.ev_camul_a_followup.choice_3_result
+
+你等了一日东行商队。等待耗费时日，雾中之路却不再只是传闻。

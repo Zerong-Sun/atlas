@@ -2,7 +2,7 @@
 unit: saianfu
 lang: zh
 source: en
-source_rev: 8f5506c2ff64
+source_rev: e5f80d8f361a
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_saianfu_b.choice_1_result: ab0f94ef6ec9
   ev.ev_saianfu_b.choice_2_result: 60e102559b5d
   ev.ev_saianfu_b.choice_3_result: 9dee9dab3340
+  ev.ev_saianfu_a_followup.title: 779c9e27588b
+  ev.ev_saianfu_a_followup.body: 6f75662805a5
+  ev.ev_saianfu_a_followup.choice_1: b7e8b3650c56
+  ev.ev_saianfu_a_followup.choice_1_result: 017815a54a85
+  ev.ev_saianfu_a_followup.choice_2: c8a526433d3d
+  ev.ev_saianfu_a_followup.choice_2_result: 8e1a148fbfaf
+  ev.ev_saianfu_a_followup.choice_3: de2a1864b39d
+  ev.ev_saianfu_a_followup.choice_3_result: 5339cfacc63b
 ---
 
 ## city.saianfu.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_saianfu_b.choice_3_result
 
 你沿北道而行——昔年大军曾围城处，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_saianfu_a_followup.title
+
+襄阳：十二城的书吏
+
+## ev.ev_saianfu_a_followup.body
+
+在辖十二城的贵邑里，一位掌管属城贡单的书吏把你引到官署外庭。他说襄阳的丝路与姜路，正是养活那十二城的同一条路——买货却不听名册的旅人，去新州码头与河中时只睁半只眼。
+
+## ev.ev_saianfu_a_followup.choice_1
+
+按官府公道价买下丝绸
+
+## ev.ev_saianfu_a_followup.choice_1_result
+
+你带走封好走巡回路的丝。价钱公道，襄阳之名随布匹同行。
+
+## ev.ev_saianfu_a_followup.choice_2
+
+追问十二路中哪条通往新州码头
+
+## ev.ev_saianfu_a_followup.choice_2_result
+
+新州码头与河中已标上舆图。富庶的巡回不再是空白。
+
+## ev.ev_saianfu_a_followup.choice_3
+
+与织工共度一日，听巡回城名
+
+## ev.ev_saianfu_a_followup.choice_3_result
+
+你在织机间过了一日。闲话里点到西安，时运也稍稍偏向你。

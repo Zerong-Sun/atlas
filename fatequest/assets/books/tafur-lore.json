@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "book": "tafur",
+    "title": "Travels and Adventures of Pero Tafur",
+    "years": "1435-1439",
+    "source": "Letts translation, Broadway Travellers, 1926 — public domain in the United States (pre-1929 publication)",
+    "zhStatus": "pending",
+    "note": "Desk + Mediterranean excerpts only; city bindings kept conservative."
+  },
+  "bands": [
+    "europe",
+    "west_asia"
+  ],
+  "places": [
+    {
+      "id": "constantinople-tafur",
+      "title": "Of Constantinople",
+      "band": "west_asia",
+      "placeNames": [
+        "Constantinople",
+        "Pera"
+      ],
+      "body": "I came to Constantinople, which is a great city, though much of it is in ruins. The Emperor received me kindly. The Genoese hold Pera across the Horn. Saint Sophia still stands in majesty, and the walls that have held so many sieges yet enclose the city. Tafur walked the markets and noted the mingling of Greeks, Latins and Turks.",
+      "source": {
+        "book": "tafur",
+        "chapterId": "tafur-constantinople",
+        "chapterTitle": "Constantinople"
+      }
+    },
+    {
+      "id": "cairo-tafur",
+      "title": "Of Cairo and the Sultan",
+      "band": "west_asia",
+      "placeNames": [
+        "Cairo",
+        "Babylon of Egypt"
+      ],
+      "body": "Cairo is the greatest city I have seen in the lands of the Sultan. The Nile floods the fields each year. The Sultan's court is rich beyond measure, and Christian merchants keep their fondacos under watch. From here one may go up to the Red Sea and take ship for India, if one has leave.",
+      "source": {
+        "book": "tafur",
+        "chapterId": "tafur-cairo",
+        "chapterTitle": "Cairo"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "tafur-cyprus",
+      "title": "Of Cyprus and the road east",
+      "band": "west_asia",
+      "body": "From Cyprus Tafur took ship toward the East, noting the islands of the Greek sea and the manners of the knights who still held fortresses there. His book is less a merchant's ledger than a gentleman's adventure — tournaments, audiences, and the gossip of courts.",
+      "source": {
+        "book": "tafur",
+        "chapterId": "tafur-cyprus",
+        "chapterTitle": "Cyprus"
+      }
+    }
+  ]
+}

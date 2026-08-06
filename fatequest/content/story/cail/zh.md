@@ -2,7 +2,7 @@
 unit: cail
 lang: zh
 source: en
-source_rev: cc3d7f6c72ae
+source_rev: 1d71bfb732b4
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_cail_b.choice_1_result: aba474628d0a
   ev.ev_cail_b.choice_2_result: 82eef34c105b
   ev.ev_cail_b.choice_3_result: 7bb9a23c5440
+  ev.ev_cail_a_followup.title: f2a94865eb94
+  ev.ev_cail_a_followup.body: e68a441e9943
+  ev.ev_cail_a_followup.choice_1: cb585bef0fac
+  ev.ev_cail_a_followup.choice_1_result: 2d875215be89
+  ev.ev_cail_a_followup.choice_2: 5ba80fde4286
+  ev.ev_cail_a_followup.choice_2_result: d5e84494fc33
+  ev.ev_cail_a_followup.choice_3: 7cabbc0bc802
+  ev.ev_cail_a_followup.choice_3_result: 708361e15e0f
 ---
 
 ## city.cail.name
@@ -142,3 +150,35 @@ stamps:
 ## ev.ev_cail_b.choice_3_result
 
 你在海滨集市买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+
+## ev.ev_cail_a_followup.title
+
+加异勒：马码头的第二页
+
+## ev.ev_cail_a_followup.body
+
+在西来船只卸马的码头上，一位为阿沙王港口服务的战马经纪人把你引到卸货棚荫下。他说加异勒正是忽鲁谟斯的马遇见马八儿的棉布之处——马拉巴、俱蓝与撒马拉都写在他的登岸册上，若你打算继续骑马或出航。
+
+## ev.ev_cail_a_followup.choice_1
+
+按港口公道价买下一匹战马
+
+## ev.ev_cail_a_followup.choice_1_result
+
+他卖给你一匹适合马八儿路的战马。价钱不低，马却结实。
+
+## ev.ev_cail_a_followup.choice_2
+
+追问通往马拉巴与俱蓝的海路
+
+## ev.ev_cail_a_followup.choice_2_result
+
+马拉巴与俱蓝已标上舆图。胡椒海岸清晰。
+
+## ev.ev_cail_a_followup.choice_3
+
+看一日卸马，听五兄弟王之名
+
+## ev.ev_cail_a_followup.choice_3_result
+
+你在卸马处过了一日。闲话里点到撒马拉，时运也稍稍偏向你。

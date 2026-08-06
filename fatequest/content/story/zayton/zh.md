@@ -586,6 +586,14 @@ stamps:
 
 你谈价坦直，说话也坦直，番坊便把你认作一个诚实的人。在海上诸国的商人之间，你的名字会先于你被再次提起。
 
+## ev.ev_zayton_fanfang_followup.choice_4
+
+抄录奇闻与行纪
+
+## ev.ev_zayton_fanfang_followup.choice_4_result
+
+学者们把纸卷借给你。灯下你抄录了普雷斯特·约翰与汪大渊、天堂与真腊、两位西行者的山程——一本比你出发时所带更厚的行路之书。
+
 ## ev.ev_zayton_mazu_followup.title
 
 刺桐：天妃再问

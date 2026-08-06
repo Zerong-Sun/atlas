@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "book": "changchun",
+    "title": "长春真人西游记",
+    "years": "1220-1224",
+    "source": "李志常 Yuan dynasty — classical Chinese, public domain",
+    "language": "zh",
+    "zhStatus": "source"
+  },
+  "bands": [
+    "central_asia",
+    "steppe",
+    "china"
+  ],
+  "places": [
+    {
+      "id": "samarkand-changchun",
+      "title": "邪米思干",
+      "band": "central_asia",
+      "placeNames": [
+        "邪米思干",
+        "Samarkand",
+        "撒马尔罕"
+      ],
+      "body": "邪米思干大城也。园林、水磨、市井皆盛。长春真人西觐成吉思汗，道经此地，弟子李志常记其山川驿程。",
+      "source": {
+        "book": "changchun",
+        "chapterId": "changchun-samarkand",
+        "chapterTitle": "邪米思干"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "changchun-audience",
+      "title": "觐见成吉思汗",
+      "band": "steppe",
+      "body": "太祖成吉思汗问以长生之药，真人答曰：有卫生之道，无长生之药。其言质直，载于《西游记》。",
+      "source": {
+        "book": "changchun",
+        "chapterId": "changchun-audience",
+        "chapterTitle": "觐见"
+      }
+    }
+  ]
+}

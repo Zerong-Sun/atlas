@@ -117,3 +117,67 @@ You buy pepper from the spice merchants. Money moves — a little the better or 
 ## ev.ev_chamba_b.choice_3_result
 
 You ask the mariners how many days' sail lie to Zayton and Fuzhou. You set the way to Zayton on your map. You set the way to Fuju on your map. You set what you saw into your travel book.
+
+## ev.ev_chamba_a_followup.title
+
+Chamba: After the Elephant Tribute
+
+## ev.ev_chamba_a_followup.body
+
+When the clerks have finished counting the elephant tribute, a harbour pilot who has sailed the tribute ships to Zayton draws you onto the mole. He says Chamba's wealth is not only ivory — it is the sea road west-south-west of Zayton, and the names of Pentam and Fuju if you mean to follow the Kaan's ships home.
+
+## ev.ev_chamba_a_followup.choice_1
+
+Buy sandalwood at the tribute harbour price
+
+## ev.ev_chamba_a_followup.choice_1_result
+
+He sells you sandalwood sealed for the next monsoon. The scent stays in the hold.
+
+## ev.ev_chamba_a_followup.choice_2
+
+Ask him to mark the sea road toward Zayton
+
+## ev.ev_chamba_a_followup.choice_2_result
+
+Zayton is marked on your map with the monsoon days between. The tribute road is clear.
+
+## ev.ev_chamba_a_followup.choice_3
+
+Watch the tribute harbour a day and hear the pilots' talk
+
+## ev.ev_chamba_a_followup.choice_3_result
+
+You spend a day on the mole. Pentam is named in the talk, and fortune bends a little your way.
+
+## ev.ev_chamba_b_followup.title
+
+Chamba: The Idolater Court and the Pepper Quay
+
+## ev.ev_chamba_b_followup.body
+
+At the idolater court a pepper broker who serves both the king and the foreign ships draws you from the audience into the shade of the quay sheds. He says Chamba pays tribute in elephants but trades in pepper — and that Fuju and the islands are written in his monsoon book if you mean to sail west-south-west of Zayton with more than a story.
+
+## ev.ev_chamba_b_followup.choice_1
+
+Buy pepper at the court broker's price
+
+## ev.ev_chamba_b_followup.choice_1_result
+
+He sells you pepper sealed for the monsoon. The price is the court's own list.
+
+## ev.ev_chamba_b_followup.choice_2
+
+Ask which sea road leads toward Fuju
+
+## ev.ev_chamba_b_followup.choice_2_result
+
+Fuju is marked on your map. The sea road north is clear.
+
+## ev.ev_chamba_b_followup.choice_3
+
+Visit the court a day and hear the king's sea talk
+
+## ev.ev_chamba_b_followup.choice_3_result
+
+You spend a day at court. The king's talk names the islands, and fortune bends a little your way.

@@ -118,3 +118,35 @@ You buy ginger from a victualler's stall. Coin changes hands, and the purse sett
 ## ev.ev_saianfu_b.choice_3_result
 
 You walk the northern approach where the host once lay siege. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_saianfu_a_followup.title
+
+Saianfu: The Twelve Cities' Clerk
+
+## ev.ev_saianfu_a_followup.body
+
+In the noble city that rules twelve others a clerk who keeps the tribute lists of the subordinate towns draws you into the magistrate's outer court. He says Saianfu's silk and ginger roads are the same roads that feed those twelve — and that a traveller who buys without hearing the list rides half-blind toward Sinjumatu and Cachanfu.
+
+## ev.ev_saianfu_a_followup.choice_1
+
+Buy silk at the magistrate's measured price
+
+## ev.ev_saianfu_a_followup.choice_1_result
+
+You leave with silk sealed for the circuit road. The price is fair, and Saianfu's name goes with the bolt.
+
+## ev.ev_saianfu_a_followup.choice_2
+
+Ask which of the twelve roads leads toward Sinjumatu
+
+## ev.ev_saianfu_a_followup.choice_2_result
+
+Sinjumatu and Cachanfu are marked on your map. The rich circuit is no longer a blank.
+
+## ev.ev_saianfu_a_followup.choice_3
+
+Spend a day with the weavers and hear the circuit names
+
+## ev.ev_saianfu_a_followup.choice_3_result
+
+You spend a day among the looms. Kenjanfu is named in the talk, and fortune bends a little your way.

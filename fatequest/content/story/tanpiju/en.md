@@ -119,3 +119,67 @@ You watch a funeral party pass toward the cremation ground. You set what you saw
 ## ev.ev_tanpiju_b.choice_3_result
 
 You buy lacquerware from a Kinsay trader's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Kinsay opens on your map.
+
+## ev.ev_tanpiju_a_followup.title
+
+Tanpiju: A Day from Kinsay, a Second Page
+
+## ev.ev_tanpiju_a_followup.body
+
+In the gardens a day's journey from Kinsay a steward who keeps the mulberry accounts draws you under a verandah. He says Tanpiju is rich because Kinsay is near — and that the tea road south and the fan road toward Fuju are written in his books if you care to ask.
+
+## ev.ev_tanpiju_a_followup.choice_1
+
+Buy tea at the steward's garden price
+
+## ev.ev_tanpiju_a_followup.choice_1_result
+
+He sells you tea at a price that would cost more in Kinsay itself. The leaves are sealed for the road.
+
+## ev.ev_tanpiju_a_followup.choice_2
+
+Ask which road leads toward Fuju and the coast
+
+## ev.ev_tanpiju_a_followup.choice_2_result
+
+Fuju and Chinghinju are marked on your map. The coastal road is no longer only a rumour from Kinsay.
+
+## ev.ev_tanpiju_a_followup.choice_3
+
+Walk the mulberry rows for a day and note the season
+
+## ev.ev_tanpiju_a_followup.choice_3_result
+
+You spend a day among the mulberries. The season is noted, and a small turn of fortune favours you.
+
+## ev.ev_tanpiju_b_followup.title
+
+Tanpiju: Under Kinsay, the Market's Counsel
+
+## ev.ev_tanpiju_b_followup.body
+
+In the rich market under Kinsay a lacquer merchant who has buried kin according to the local rite sits you down among the fans and boxes. He says the funeral road and the trade road are the same streets — and that a traveller who buys lacquer without hearing the custom walks half-blind through Tanpiju.
+
+## ev.ev_tanpiju_b_followup.choice_1
+
+Buy a lacquerware piece at his measured price
+
+## ev.ev_tanpiju_b_followup.choice_1_result
+
+He sells you lacquer at a fair price. The piece is sealed and ready for the canal road.
+
+## ev.ev_tanpiju_b_followup.choice_2
+
+Ask how the dead are burned and what it costs a stranger
+
+## ev.ev_tanpiju_b_followup.choice_2_result
+
+You learn the rite and leave a small offering. In Tanpiju your name now carries a little more weight.
+
+## ev.ev_tanpiju_b_followup.choice_3
+
+Buy a Hangzhou fan and ask the road back to Kinsay
+
+## ev.ev_tanpiju_b_followup.choice_3_result
+
+The fan is yours, and Kinsay is marked clearly as a day's journey north-west. You will not miss the road home to the great city.

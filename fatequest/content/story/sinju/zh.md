@@ -2,7 +2,7 @@
 unit: sinju
 lang: zh
 source: en
-source_rev: 766d8a0d9cc0
+source_rev: e09472806b3a
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_sinju_b.choice_1_result: c856af921631
   ev.ev_sinju_b.choice_2_result: 180a217d539f
   ev.ev_sinju_b.choice_3_result: cc2bdbfa9cb1
+  ev.ev_sinju_a_followup.title: 487bd9c343ca
+  ev.ev_sinju_a_followup.body: 51c76f171d01
+  ev.ev_sinju_a_followup.choice_1: 1f09dcb16827
+  ev.ev_sinju_a_followup.choice_1_result: ef31c15ad83d
+  ev.ev_sinju_a_followup.choice_2: 3d6e6353fb73
+  ev.ev_sinju_a_followup.choice_2_result: 7c3531c826b1
+  ev.ev_sinju_a_followup.choice_3: 0d415656b1dc
+  ev.ev_sinju_a_followup.choice_3_result: f4a9aaf7bf0a
 ---
 
 ## city.sinju.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_sinju_b.choice_3_result
 
 你巡埠头，记城小而货盛，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_sinju_a_followup.title
+
+镇江：在最大的河上
+
+## ev.ev_sinju_a_followup.body
+
+在江边码头，一位为可汗港口清点茶箱的税吏把你引到棚下。他说镇江正站在世界最大河流把贸易换成交钞的地方——瓜洲、南京与镇江府都写在他的税册上，只要你肯问。
+
+## ev.ev_sinju_a_followup.choice_1
+
+按河税价买下茶叶
+
+## ev.ev_sinju_a_followup.choice_1_result
+
+他卖给你封好走水路的茶。价钱里已含你本来要付的税。
+
+## ev.ev_sinju_a_followup.choice_2
+
+追问通往瓜洲的水路
+
+## ev.ev_sinju_a_followup.choice_2_result
+
+瓜洲与南京已标上舆图。水路清晰。
+
+## ev.ev_sinju_a_followup.choice_3
+
+在税房过一日，听港口之名
+
+## ev.ev_sinju_a_followup.choice_3_result
+
+你在税房过了一日。镇江府被点名，时运也稍稍偏向你。

@@ -120,3 +120,35 @@ You buy a length of embroidered silk for a gift. Money moves — a little the be
 ## ev.ev_kerman_b.choice_3_result
 
 You climb to the mews and ask the price of a trained falcon. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Camadi on your map.
+
+## ev.ev_kerman_a_followup.title
+
+Kerman: The Master of the Forge
+
+## ev.ev_kerman_a_followup.body
+
+A smith who has worked the ondanique blades of Kerman for thirty years draws you from the quarry path into the shade of his forge. He does not sell you stone; he asks what you mean to do with the turquoise you carry, and whether you have heard how the harness-makers of this city fit steel and leather for the desert road. The fire is low; he will speak only once.
+
+## ev.ev_kerman_a_followup.choice_1
+
+Buy a small ondanique fitting at the smith's own price
+
+## ev.ev_kerman_a_followup.choice_1_result
+
+The smith sells you a steel fitting at his list price, no bargaining. It is small enough for a saddle-bag and strong enough for the next desert march.
+
+## ev.ev_kerman_a_followup.choice_2
+
+Ask which road from the turquoise hills reaches Ormus
+
+## ev.ev_kerman_a_followup.choice_2_result
+
+He marks the road to Ormus in charcoal on a scrap of hide: the passes, the water, the days between. Ormus is no longer only a name.
+
+## ev.ev_kerman_a_followup.choice_3
+
+Promise to speak well of Kerman's craft in the cities west
+
+## ev.ev_kerman_a_followup.choice_3_result
+
+He accepts your promise and asks nothing else. In Kerman your word now carries a little more weight among those who heard it.

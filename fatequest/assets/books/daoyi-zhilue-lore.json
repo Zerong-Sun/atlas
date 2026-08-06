@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "book": "daoyi-zhilue",
+    "title": "岛夷志略 Dao Yi Zhi Lue",
+    "years": "1349",
+    "source": "汪大渊 Yuan dynasty — classical Chinese, public domain",
+    "language": "zh",
+    "zhStatus": "source"
+  },
+  "bands": [
+    "maritime_asia",
+    "india"
+  ],
+  "places": [
+    {
+      "id": "gulongyu",
+      "title": "古里",
+      "band": "india",
+      "placeNames": [
+        "古里",
+        "Calicut"
+      ],
+      "body": "古里，西滨大海，南距柯枝，乃西洋诸番之会也。其王尚浮屠，敬象牛。市用金钱，交易以信。中国舶至，二将领主之，遣驜侩议价，定不再易。产胡椒、椰子、西洋布。",
+      "source": {
+        "book": "daoyi-zhilue",
+        "chapterId": "daoyi-gulong",
+        "chapterTitle": "古里"
+      }
+    },
+    {
+      "id": "sulu",
+      "title": "苏禄",
+      "band": "maritime_asia",
+      "placeNames": [
+        "苏禄",
+        "Sulu"
+      ],
+      "body": "苏禄在东洋之中，山形如笔架。民煮海为盐，织竹为布。地产珍珠、玳瑁。其酋以珍珠为献。",
+      "source": {
+        "book": "daoyi-zhilue",
+        "chapterId": "daoyi-sulu",
+        "chapterTitle": "苏禄"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "daoyi-preface",
+      "title": "岛夷志略序意",
+      "band": "maritime_asia",
+      "body": "汪大渊两下东西洋，随舶记其山川、物产、风俗，成《岛夷志略》。其文简而有据，可与《诸蕃志》《岭外代答》相参。游戏中用作海洋图鉴与港口传闻之源。",
+      "source": {
+        "book": "daoyi-zhilue",
+        "chapterId": "daoyi-preface",
+        "chapterTitle": "序"
+      }
+    }
+  ]
+}

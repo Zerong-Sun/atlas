@@ -137,6 +137,17 @@
               "reason": "walked-the-foreign-quarter-by-repute"
             }
           ]
+        },
+        {
+          "label": "ev.ev_zayton_fanfang_followup.choice_4",
+          "resultText": "ev.ev_zayton_fanfang_followup.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-codex-legend-seed",
+              "reason": "copied-the-wonder-leaves-and-chronicles"
+            }
+          ]
         }
       ],
       "lore": {

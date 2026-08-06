@@ -1,0 +1,1901 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-kerman-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kerman_a_followup.title",
+      "when": {
+        "cities": [
+          "kerman"
+        ]
+      },
+      "body": "ev.ev_kerman_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kerman_a_followup.choice_1",
+          "resultText": "ev.ev_kerman_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "bought-ondanique-fitting-at-forge"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kerman",
+              "reason": "learned-the-forge-craft"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kerman_a_followup.choice_2",
+          "resultText": "ev.ev_kerman_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "smith-named-the-road-to-ormus"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kerman",
+              "reason": "mapped-the-turquoise-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kerman_a_followup.choice_3",
+          "resultText": "ev.ev_kerman_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "kerman",
+              "reason": "promised-to-praise-kerman-craft"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-at-the-forge"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-kerman",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c017"
+        }
+      }
+    },
+    {
+      "id": "ev-camadi-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_camadi_a_followup.title",
+      "when": {
+        "cities": [
+          "camadi"
+        ]
+      },
+      "body": "ev.ev_camadi_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_camadi_a_followup.choice_1",
+          "resultText": "ev.ev_camadi_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "dates",
+              "value": 1,
+              "reason": "bought-dates-from-camadi-elders"
+            },
+            {
+              "op": "codex",
+              "value": "cx-camadi",
+              "reason": "provisioned-at-the-ruined-plain"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_camadi_a_followup.choice_2",
+          "resultText": "ev.ev_camadi_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "calatu",
+              "reason": "elder-named-the-road-to-calatu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-camadi",
+              "reason": "learned-the-inland-gulf-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_camadi_a_followup.choice_3",
+          "resultText": "ev.ev_camadi_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-how-camadi-fell"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "camadi",
+              "reason": "listened-to-the-elders"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "camadi",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c018"
+        }
+      }
+    },
+    {
+      "id": "ev-tenduc-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tenduc_a_followup.title",
+      "when": {
+        "cities": [
+          "tenduc"
+        ]
+      },
+      "body": "ev.ev_tenduc_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tenduc_a_followup.choice_1",
+          "resultText": "ev.ev_tenduc_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaluc",
+              "reason": "priest-marked-the-yam-to-cambaluc"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "priest-named-the-southern-post-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tenduc",
+              "reason": "learned-the-nestorian-post-chain"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tenduc_a_followup.choice_2",
+          "resultText": "ev.ev_tenduc_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -120,
+              "reason": "offered-to-the-nestorian-church"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tenduc",
+              "reason": "gift-to-the-nestorian-church"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tenduc_a_followup.choice_3",
+          "resultText": "ev.ev_tenduc_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "copied-the-post-house-list"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "the-priests-measure-of-the-yam"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tenduc",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c059"
+        }
+      }
+    },
+    {
+      "id": "ev-badashan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_badashan_a_followup.title",
+      "when": {
+        "cities": [
+          "badashan"
+        ]
+      },
+      "body": "ev.ev_badashan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_badashan_a_followup.choice_1",
+          "resultText": "ev.ev_badashan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "lapis",
+              "value": 1,
+              "reason": "bought-lapis-at-broker-ledger-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "bought-at-the-highland-ledger"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_badashan_a_followup.choice_2",
+          "resultText": "ev.ev_badashan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "balc",
+              "reason": "broker-drew-the-road-to-balc"
+            },
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "learned-the-tolls-to-bactra"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_badashan_a_followup.choice_3",
+          "resultText": "ev.ev_badashan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-broker-report"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "studied-the-lapis-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "badashan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c029"
+        }
+      }
+    },
+    {
+      "id": "ev-badashan-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_badashan_b_followup.title",
+      "when": {
+        "cities": [
+          "badashan"
+        ]
+      },
+      "body": "ev.ev_badashan_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_badashan_b_followup.choice_1",
+          "resultText": "ev.ev_badashan_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "paid-for-mountain-tongue-lesson"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "city",
+              "id": "badashan",
+              "reason": "learned-the-highland-speech"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "spoke-the-princes-tongue"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_badashan_b_followup.choice_2",
+          "resultText": "ev.ev_badashan_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "keshimur",
+              "reason": "clerk-named-the-pass-to-keshimur"
+            },
+            {
+              "op": "reveal_map",
+              "value": "taican",
+              "reason": "clerk-named-the-road-to-taican"
+            },
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "mapped-the-ruby-passes"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_badashan_b_followup.choice_3",
+          "resultText": "ev.ev_badashan_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -2200,
+              "reason": "bought-balas-ruby-at-court-price"
+            },
+            {
+              "op": "goods",
+              "id": "balas-ruby",
+              "value": 1,
+              "reason": "bought-balas-ruby-at-court-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "carried-a-court-sealed-ruby"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "badashan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c029"
+        }
+      }
+    },
+    {
+      "id": "ev-camul-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_camul_a_followup.title",
+      "when": {
+        "cities": [
+          "camul"
+        ]
+      },
+      "body": "ev.ev_camul_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_camul_a_followup.choice_1",
+          "resultText": "ev.ev_camul_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "melons",
+              "value": 1,
+              "reason": "bought-melons-at-camul-road-price"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "provisioned-for-the-desert"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_camul_a_followup.choice_2",
+          "resultText": "ev.ev_camul_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "lop",
+              "reason": "seller-named-the-wells-to-lop"
+            },
+            {
+              "op": "reveal_map",
+              "value": "sachiu",
+              "reason": "seller-named-the-wells-to-sachiu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-camul",
+              "reason": "learned-the-oasis-desert-measure"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_camul_a_followup.choice_3",
+          "resultText": "ev.ev_camul_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-eastern-caravan"
+            },
+            {
+              "op": "reveal_map",
+              "value": "etzina",
+              "reason": "caravan-named-etzina"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "camul",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c041"
+        }
+      }
+    },
+    {
+      "id": "ev-keshimur-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_keshimur_a_followup.title",
+      "when": {
+        "cities": [
+          "keshimur"
+        ]
+      },
+      "body": "ev.ev_keshimur_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_keshimur_a_followup.choice_1",
+          "resultText": "ev.ev_keshimur_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "listened-at-the-idol-court"
+            },
+            {
+              "op": "codex",
+              "value": "cx-keshimur",
+              "reason": "heard-the-speaking-idols-tale"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "respected-the-idol-keepers"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_keshimur_a_followup.choice_2",
+          "resultText": "ev.ev_keshimur_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cabul",
+              "reason": "keeper-named-the-road-to-cabul"
+            },
+            {
+              "op": "reveal_map",
+              "value": "delli",
+              "reason": "keeper-named-the-road-toward-delhi"
+            },
+            {
+              "op": "codex",
+              "value": "cx-keshimur",
+              "reason": "mapped-the-valley-exits"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_keshimur_a_followup.choice_3",
+          "resultText": "ev.ev_keshimur_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -400,
+              "reason": "hired-keshimur-valley-guide"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "keshimur",
+              "reason": "hired-a-local-guide"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "guided-through-mountain-weather"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "keshimur",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c031"
+        }
+      }
+    },
+    {
+      "id": "ev-taican-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_taican_a_followup.title",
+      "when": {
+        "cities": [
+          "taican"
+        ]
+      },
+      "body": "ev.ev_taican_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_taican_a_followup.choice_1",
+          "resultText": "ev.ev_taican_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "cotton-cloth",
+              "value": 1,
+              "reason": "bought-cotton-at-taican-measured-price"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "taican",
+              "reason": "provisioned-at-the-corn-market"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_taican_a_followup.choice_2",
+          "resultText": "ev.ev_taican_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "balc",
+              "reason": "corn-master-named-balc"
+            },
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "corn-master-named-badashan"
+            },
+            {
+              "op": "codex",
+              "value": "cx-taican",
+              "reason": "read-the-corn-road-book"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_taican_a_followup.choice_3",
+          "resultText": "ev.ev_taican_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-grain-posting"
+            },
+            {
+              "op": "codex",
+              "value": "cx-taican",
+              "reason": "watched-the-corn-prices"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "taican",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c028"
+        }
+      }
+    },
+    {
+      "id": "ev-tanpiju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tanpiju_a_followup.title",
+      "when": {
+        "cities": [
+          "tanpiju"
+        ]
+      },
+      "body": "ev.ev_tanpiju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tanpiju_a_followup.choice_1",
+          "resultText": "ev.ev_tanpiju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-tanpiju-garden-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tanpiju",
+              "reason": "bought-garden-tea-near-kinsay"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tanpiju_a_followup.choice_2",
+          "resultText": "ev.ev_tanpiju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "fuju",
+              "reason": "steward-named-the-road-to-fuju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinginju",
+              "reason": "steward-named-chinginju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tanpiju",
+              "reason": "mapped-the-coast-road-from-tanpiju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tanpiju_a_followup.choice_3",
+          "resultText": "ev.ev_tanpiju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-mulberry-rows"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "noted-the-mulberry-season"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tanpiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c079"
+        }
+      }
+    },
+    {
+      "id": "ev-tanpiju-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tanpiju_b_followup.title",
+      "when": {
+        "cities": [
+          "tanpiju"
+        ]
+      },
+      "body": "ev.ev_tanpiju_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tanpiju_b_followup.choice_1",
+          "resultText": "ev.ev_tanpiju_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "lacquerware",
+              "value": 1,
+              "reason": "bought-lacquer-at-tanpiju-market"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tanpiju",
+              "reason": "bought-lacquer-under-kinsay"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tanpiju_b_followup.choice_2",
+          "resultText": "ev.ev_tanpiju_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "funeral-offering-at-tanpiju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tanpiju",
+              "reason": "respected-the-funeral-custom"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tanpiju",
+              "reason": "learned-the-burning-rite"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tanpiju_b_followup.choice_3",
+          "resultText": "ev.ev_tanpiju_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "hangzhou-fan",
+              "value": 1,
+              "reason": "bought-hangzhou-fan-at-tanpiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "merchant-named-the-day-to-kinsay"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tanpiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c079"
+        }
+      }
+    },
+    {
+      "id": "ev-campichu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_campichu_a_followup.title",
+      "when": {
+        "cities": [
+          "campichu"
+        ]
+      },
+      "body": "ev.ev_campichu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_campichu_a_followup.choice_1",
+          "resultText": "ev.ev_campichu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caracoron",
+              "reason": "clerk-sealed-the-road-to-caracoron"
+            },
+            {
+              "op": "codex",
+              "value": "cx-campichu",
+              "reason": "learned-the-tangut-passport-measure"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_campichu_a_followup.choice_2",
+          "resultText": "ev.ev_campichu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-campichu-caravan-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-campichu",
+              "reason": "provisioned-at-the-tangut-seat"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_campichu_a_followup.choice_3",
+          "resultText": "ev.ev_campichu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-passport-office"
+            },
+            {
+              "op": "reveal_map",
+              "value": "etzina",
+              "reason": "clerk-named-etzina"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "tangut-road-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "campichu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c044"
+        }
+      }
+    },
+    {
+      "id": "ev-chinangli-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chinangli_a_followup.title",
+      "when": {
+        "cities": [
+          "chinangli"
+        ]
+      },
+      "body": "ev.ev_chinangli_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chinangli_a_followup.choice_1",
+          "resultText": "ev.ev_chinangli_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-chinangli-river-price"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "broker-named-cacanfu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinangli_a_followup.choice_2",
+          "resultText": "ev.ev_chinangli_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaluc",
+              "reason": "broker-named-the-water-road-to-cambaluc"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinangli",
+              "reason": "learned-the-river-tolls"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinangli_a_followup.choice_3",
+          "resultText": "ev.ev_chinangli_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-spice-chests"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "clerks-named-chandu"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "studied-the-river-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinangli",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c061"
+        }
+      }
+    },
+    {
+      "id": "ev-kenjanfu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_kenjanfu_a_followup.title",
+      "when": {
+        "cities": [
+          "kenjanfu"
+        ]
+      },
+      "body": "ev.ev_kenjanfu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_kenjanfu_a_followup.choice_1",
+          "resultText": "ev.ev_kenjanfu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-kenjanfu-harvest-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kenjanfu",
+              "reason": "bought-silk-on-the-mulberry-plain"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kenjanfu_a_followup.choice_2",
+          "resultText": "ev.ev_kenjanfu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "steward-named-the-road-to-saianfu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-kenjanfu",
+              "reason": "mapped-the-western-industrial-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_kenjanfu_a_followup.choice_3",
+          "resultText": "ev.ev_kenjanfu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-mulberry-gardens"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cachanfu",
+              "reason": "steward-named-cachanfu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "noted-the-mulberry-season"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kenjanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c041"
+        }
+      }
+    },
+    {
+      "id": "ev-saianfu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_saianfu_a_followup.title",
+      "when": {
+        "cities": [
+          "saianfu"
+        ]
+      },
+      "body": "ev.ev_saianfu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_saianfu_a_followup.choice_1",
+          "resultText": "ev.ev_saianfu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-saianfu-magistrate-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-saianfu",
+              "reason": "bought-silk-in-the-twelve-city-seat"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_saianfu_a_followup.choice_2",
+          "resultText": "ev.ev_saianfu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sinjumatu",
+              "reason": "clerk-named-sinjumatu"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cachanfu",
+              "reason": "clerk-named-cachanfu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-saianfu",
+              "reason": "mapped-the-twelve-city-roads"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_saianfu_a_followup.choice_3",
+          "resultText": "ev.ev_saianfu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-day-with-weavers"
+            },
+            {
+              "op": "reveal_map",
+              "value": "kenjanfu",
+              "reason": "weavers-named-kenjanfu"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "heard-the-circuit-names"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "very-noble-city-of-saianfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c070"
+        }
+      }
+    },
+    {
+      "id": "ev-siju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_siju_a_followup.title",
+      "when": {
+        "cities": [
+          "siju"
+        ]
+      },
+      "body": "ev.ev_siju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_siju_a_followup.choice_1",
+          "resultText": "ev.ev_siju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "sugar",
+              "value": 1,
+              "reason": "bought-sugar-at-siju-workshop"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coigangiu",
+              "reason": "master-named-coigangiu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_siju_a_followup.choice_2",
+          "resultText": "ev.ev_siju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "paukin",
+              "reason": "master-named-paukin"
+            },
+            {
+              "op": "codex",
+              "value": "cx-siju",
+              "reason": "learned-the-canal-days"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_siju_a_followup.choice_3",
+          "resultText": "ev.ev_siju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-grain-sacks"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coiganju",
+              "reason": "clerks-named-coiganju"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "studied-the-sugar-wall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "siju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c064"
+        }
+      }
+    },
+    {
+      "id": "ev-sinju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_sinju_a_followup.title",
+      "when": {
+        "cities": [
+          "sinju"
+        ]
+      },
+      "body": "ev.ev_sinju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_sinju_a_followup.choice_1",
+          "resultText": "ev.ev_sinju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-sinju-toll-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sinju",
+              "reason": "bought-tea-on-the-kian"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sinju_a_followup.choice_2",
+          "resultText": "ev.ev_sinju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caiju",
+              "reason": "clerk-named-caiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "nanghin",
+              "reason": "clerk-named-nanghin"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sinju",
+              "reason": "mapped-the-kian-ports"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sinju_a_followup.choice_3",
+          "resultText": "ev.ev_sinju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-day-at-toll-house"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinghianfu",
+              "reason": "clerks-named-chinghianfu"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "studied-the-river-toll-book"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sinju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c071"
+        }
+      }
+    },
+    {
+      "id": "ev-suju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_suju_a_followup.title",
+      "when": {
+        "cities": [
+          "suju"
+        ]
+      },
+      "body": "ev.ev_suju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_suju_a_followup.choice_1",
+          "resultText": "ev.ev_suju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-gold-brocade-at-suju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-suju",
+              "reason": "bought-brocade-in-the-sixty-mile-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_suju_a_followup.choice_2",
+          "resultText": "ev.ev_suju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "merchant-named-the-bridge-road-to-kinsay"
+            },
+            {
+              "op": "codex",
+              "value": "cx-suju",
+              "reason": "mapped-the-canal-to-kinsay"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_suju_a_followup.choice_3",
+          "resultText": "ev.ev_suju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-suju-bridges"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinghianfu",
+              "reason": "canal-talk-named-chinghianfu"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "heard-the-sixty-mile-circuit"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "suju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c075"
+        }
+      }
+    },
+    {
+      "id": "ev-chamba-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chamba_a_followup.title",
+      "when": {
+        "cities": [
+          "chamba"
+        ]
+      },
+      "body": "ev.ev_chamba_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chamba_a_followup.choice_1",
+          "resultText": "ev.ev_chamba_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "sandalwood",
+              "value": 1,
+              "reason": "bought-sandalwood-at-chamba-tribute-harbour"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chamba",
+              "reason": "bought-sandalwood-after-the-elephant-tribute"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chamba_a_followup.choice_2",
+          "resultText": "ev.ev_chamba_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "pilot-marked-the-sea-road-to-zayton"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chamba",
+              "reason": "learned-the-tribute-sea-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chamba_a_followup.choice_3",
+          "resultText": "ev.ev_chamba_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-tribute-harbour"
+            },
+            {
+              "op": "reveal_map",
+              "value": "pentam",
+              "reason": "pilots-named-pentam"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "heard-the-kings-embassy-talk"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-country-called-chamba",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c005"
+        }
+      }
+    },
+    {
+      "id": "ev-chamba-b-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chamba_b_followup.title",
+      "when": {
+        "cities": [
+          "chamba"
+        ]
+      },
+      "body": "ev.ev_chamba_b_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chamba_b_followup.choice_1",
+          "resultText": "ev.ev_chamba_b_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-chamba-court-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chamba",
+              "reason": "bought-pepper-at-the-idolater-court"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chamba_b_followup.choice_2",
+          "resultText": "ev.ev_chamba_b_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "fuju",
+              "reason": "broker-named-the-sea-road-to-fuju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chamba",
+              "reason": "mapped-the-monsoon-to-fuju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chamba_b_followup.choice_3",
+          "resultText": "ev.ev_chamba_b_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "visited-chamba-court"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chamba",
+              "reason": "heard-at-the-idolater-court"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "the-kings-sea-counsel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "great-country-called-chamba",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c005"
+        }
+      }
+    },
+    {
+      "id": "ev-aden-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_aden_a_followup.title",
+      "when": {
+        "cities": [
+          "aden"
+        ]
+      },
+      "body": "ev.ev_aden_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_aden_a_followup.choice_1",
+          "resultText": "ev.ev_aden_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-aden-camel-master-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-aden",
+              "reason": "bought-pepper-for-the-alexandria-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_aden_a_followup.choice_2",
+          "resultText": "ev.ev_aden_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "dufar",
+              "reason": "camel-master-named-dufar"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cambaet",
+              "reason": "camel-master-named-cambaet"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-harbour-exits"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_aden_a_followup.choice_3",
+          "resultText": "ev.ev_aden_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-pepper-lighters"
+            },
+            {
+              "op": "codex",
+              "value": "cx-aden",
+              "reason": "noted-the-camel-road-to-alexandria"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "aden",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c036"
+        }
+      }
+    },
+    {
+      "id": "ev-cail-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cail_a_followup.title",
+      "when": {
+        "cities": [
+          "cail"
+        ]
+      },
+      "body": "ev.ev_cail_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cail_a_followup.choice_1",
+          "resultText": "ev.ev_cail_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "arabian-horse",
+              "value": 1,
+              "reason": "bought-charger-at-cail-harbour"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cail",
+              "reason": "bought-a-charger-on-the-horse-quay"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cail_a_followup.choice_2",
+          "resultText": "ev.ev_cail_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "melibar",
+              "reason": "broker-named-melibar"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coilum",
+              "reason": "broker-named-coilum"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cail",
+              "reason": "mapped-the-pepper-coast-from-cail"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cail_a_followup.choice_3",
+          "resultText": "ev.ev_cail_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-horse-landing"
+            },
+            {
+              "op": "reveal_map",
+              "value": "samara",
+              "reason": "landing-talk-named-samara"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "heard-the-brother-kings"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cail",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c021"
+        }
+      }
+    },
+    {
+      "id": "ev-calatu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_calatu_a_followup.title",
+      "when": {
+        "cities": [
+          "calatu"
+        ]
+      },
+      "body": "ev.ev_calatu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_calatu_a_followup.choice_1",
+          "resultText": "ev.ev_calatu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-calatu-mole"
+            },
+            {
+              "op": "codex",
+              "value": "cx-calatu",
+              "reason": "bought-pepper-at-the-gulf-fortress"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_calatu_a_followup.choice_2",
+          "resultText": "ev.ev_calatu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "camadi",
+              "reason": "captain-named-the-inland-road-to-camadi"
+            },
+            {
+              "op": "codex",
+              "value": "cx-calatu",
+              "reason": "mapped-the-inland-from-calatu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_calatu_a_followup.choice_3",
+          "resultText": "ev.ev_calatu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-ships-on-the-wall"
+            },
+            {
+              "op": "reveal_map",
+              "value": "ormus",
+              "reason": "wall-talk-named-ormus"
+            },
+            {
+              "op": "reveal_map",
+              "value": "dufar",
+              "reason": "wall-talk-named-dufar"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "studied-the-gulf-traffic"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "gulf-of-calatu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c039"
+        }
+      }
+    },
+    {
+      "id": "ev-esher-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_esher_a_followup.title",
+      "when": {
+        "cities": [
+          "esher"
+        ]
+      },
+      "body": "ev.ev_esher_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_esher_a_followup.choice_1",
+          "resultText": "ev.ev_esher_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "frankincense",
+              "value": 1,
+              "reason": "bought-frankincense-at-esher-coast-price"
+            },
+            {
+              "op": "codex",
+              "value": "cx-esher",
+              "reason": "bought-frankincense-at-the-soldans-haven"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_esher_a_followup.choice_2",
+          "resultText": "ev.ev_esher_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "merchant-named-aden"
+            },
+            {
+              "op": "reveal_map",
+              "value": "dufar",
+              "reason": "merchant-named-dufar"
+            },
+            {
+              "op": "codex",
+              "value": "cx-esher",
+              "reason": "mapped-the-frankincense-coast"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_esher_a_followup.choice_3",
+          "resultText": "ev.ev_esher_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-esher-harbour"
+            },
+            {
+              "op": "reveal_map",
+              "value": "axuma",
+              "reason": "harbour-talk-named-axuma"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "studied-the-soldans-coast-book"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "esher",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c037"
+        }
+      }
+    },
+    {
+      "id": "ev-melibar-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_melibar_a_followup.title",
+      "when": {
+        "cities": [
+          "melibar"
+        ]
+      },
+      "body": "ev.ev_melibar_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_melibar_a_followup.choice_1",
+          "resultText": "ev.ev_melibar_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-melibar-coast-price"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "watchman-named-cail"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_melibar_a_followup.choice_2",
+          "resultText": "ev.ev_melibar_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coilum",
+              "reason": "watchman-named-coilum"
+            },
+            {
+              "op": "reveal_map",
+              "value": "maabar",
+              "reason": "watchman-named-maabar"
+            },
+            {
+              "op": "codex",
+              "value": "cx-melibar",
+              "reason": "mapped-the-pepper-coast"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-corsair-watch"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_melibar_a_followup.choice_3",
+          "resultText": "ev.ev_melibar_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-corsair-horizon"
+            },
+            {
+              "op": "codex",
+              "value": "cx-melibar",
+              "reason": "noted-the-pepper-coast-watch"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "kingdom-of-melibar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c025"
+        }
+      }
+    }
+  ]
+}

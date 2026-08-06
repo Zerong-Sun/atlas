@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "book": "rubruck",
+    "title": "The Journey of William of Rubruck",
+    "years": "1253-1255",
+    "source": "Rockhill, Hakluyt Society, 1900 — public domain",
+    "zhStatus": "pending",
+    "note": "Curated excerpts for desk reading and steppe city lore. Full OCR not retained."
+  },
+  "bands": [
+    "west_asia",
+    "steppe",
+    "central_asia"
+  ],
+  "places": [
+    {
+      "id": "soldaia",
+      "title": "Of Soldaia and the entry into Tartary",
+      "band": "west_asia",
+      "placeNames": [
+        "Soldaia",
+        "Sudak",
+        "Crimea"
+      ],
+      "body": "We arrived at Soldaia on the twelfth of the kalends of June (21st May), and there certain merchants of Constantinople who had preceded us had reported that envoys from the Holy Land were coming who wished to go to Sartach. I myself had publicly preached on Palm Sunday in Saint Sophia that I was not an envoy of any man, only a monk going to live according to the rule of our Order. Nevertheless they caused it to be proclaimed that I was an envoy. Then the people of Soldaia advised us to take carts and to leave our horses, for if we took horses they would be stolen, and we should be left afoot on the steppes.",
+      "source": {
+        "book": "rubruck",
+        "chapterId": "rubruck-soldaia",
+        "chapterTitle": "Soldaia"
+      }
+    },
+    {
+      "id": "sartach-camp",
+      "title": "Of the camp of Sartach",
+      "band": "steppe",
+      "placeNames": [
+        "Sartach",
+        "Volga",
+        "Don"
+      ],
+      "body": "When we came to Sartach he received us kindly enough after the Tartar fashion, and asked what we brought to the Khan. We answered that we brought the Word of God. He asked whether we were of the Franks who had come from the Holy Land. We said that we were. Then he asked if there was peace between the Franks and the Saracens. We said that we did not know, for we had come from Acre. He wished to know of the Pope and of the kings of the Franks, and of the power of each.",
+      "source": {
+        "book": "rubruck",
+        "chapterId": "rubruck-sartach",
+        "chapterTitle": "Sartach"
+      }
+    },
+    {
+      "id": "karakorum",
+      "title": "Of Caracarum, the city of the Khan",
+      "band": "steppe",
+      "placeNames": [
+        "Caracarum",
+        "Karakorum",
+        "Qaraqorum"
+      ],
+      "body": "Of the city of Caracarum you must know that, exclusive of the palace of the Khan, it is not as large as the village of Saint Denis, and the monastery of Saint Denis is worth ten times more than that palace. There are two quarters in it: one of the Saracens, where the market is, and many merchants gather there; the other of the Cathayans, who are all craftsmen. Outside these quarters are large palaces belonging to the court secretaries. There are twelve temples of the idols of different nations, two mosques where the religion of Mahomet is proclaimed, and one Christian church at the far end of the town.",
+      "source": {
+        "book": "rubruck",
+        "chapterId": "rubruck-karakorum",
+        "chapterTitle": "Caracarum"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "debate-before-mangu",
+      "title": "The religious debate before Mangu Khan",
+      "band": "steppe",
+      "body": "On the day before Pentecost, Mangu Khan ordered that Christians, Saracens and tuins (idolaters) should meet, and that each should write down the reasons of his faith, so that he might know the truth. A Nestorians scribe wrote for us. When the debate began, the tuins said that God is the highest of spirits, and that there are many gods. We answered that there is but one God, creator of all. The Nestorians sang and then we argued with the Saracens. In the end they all listened, but none confessed himself beaten; wine was brought, and each went his way.",
+      "source": {
+        "book": "rubruck",
+        "chapterId": "rubruck-debate",
+        "chapterTitle": "Debate"
+      }
+    },
+    {
+      "id": "felt-idols",
+      "title": "Of the felt images of the Tartars",
+      "band": "steppe",
+      "body": "Over the master's head is always an image of felt, like a doll, which they call the brother of the master. Another similar image is above the mistress of the house. Between these two, higher up, is a thin little one which is as it were the guardian of the whole house. Near the entrance on the women's side is another image with a cow's udder, for the women who milk the cows. On the men's side is another with a mare's udder for the men who milk the mares.",
+      "source": {
+        "book": "rubruck",
+        "chapterId": "rubruck-felt",
+        "chapterTitle": "Felt idols"
+      }
+    }
+  ]
+}

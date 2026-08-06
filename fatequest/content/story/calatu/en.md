@@ -118,3 +118,35 @@ You buy dates brought in with the grain ships. Money moves — a little the bett
 ## ev.ev_calatu_b.choice_3_result
 
 You ask the caravan masters which inland roads leave from here. You set the way to Camadi on your map. You set the way to Dufar on your map. You set what you saw into your travel book.
+
+## ev.ev_calatu_a_followup.title
+
+Calatu: The Gulf Fortress Wall-Walk
+
+## ev.ev_calatu_a_followup.body
+
+On the walls of the gulf fortress a watch captain who has counted ships for the Melic of Hormos draws you along the parapet. He says Calatu is six hundred miles from the open sea and yet every pepper ship from Dufar and every inland caravan from Camadi must answer to this mole — if you mean to leave with more than a glance at the gulf.
+
+## ev.ev_calatu_a_followup.choice_1
+
+Buy pepper at the fortress mole price
+
+## ev.ev_calatu_a_followup.choice_1_result
+
+He sells you pepper sealed for the gulf. The price includes the mole fee.
+
+## ev.ev_calatu_a_followup.choice_2
+
+Ask which inland road leads toward Camadi
+
+## ev.ev_calatu_a_followup.choice_2_result
+
+Camadi is marked on your map with the inland days. The plain road is clear.
+
+## ev.ev_calatu_a_followup.choice_3
+
+Count the ships a day and hear Ormus named
+
+## ev.ev_calatu_a_followup.choice_3_result
+
+You spend a day counting masts. Ormus and Dufar are named, and fortune bends a little your way.

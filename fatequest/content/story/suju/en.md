@@ -119,3 +119,35 @@ You buy rhubarb from a garden stall. Coin changes hands, and the purse settles. 
 ## ev.ev_suju_b.choice_3_result
 
 You stand on a stone bridge and watch the canal traffic. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+
+## ev.ev_suju_a_followup.title
+
+Suju: Gold Brocade and the Sixty-Mile Circuit
+
+## ev.ev_suju_a_followup.body
+
+In the great city of some sixty miles' circuit a brocade merchant who has sold gold-thread cloth to Kinsay draws you into a counting house beside the canal. He says Suju's silk roads and the bridge roads are the same streets — and that Chinghianfu and Chinghinju are written in his ledgers if you mean to leave with more than a bolt.
+
+## ev.ev_suju_a_followup.choice_1
+
+Buy a length of gold brocade at his measured price
+
+## ev.ev_suju_a_followup.choice_1_result
+
+He sells you brocade sealed for the canal. The thread catches the light like the markets of Kinsay.
+
+## ev.ev_suju_a_followup.choice_2
+
+Ask which bridge road leads toward Kinsay
+
+## ev.ev_suju_a_followup.choice_2_result
+
+Kinsay is marked on your map as the great market south. The bridge road is clear.
+
+## ev.ev_suju_a_followup.choice_3
+
+Walk the circuit bridges a day and hear the canal talk
+
+## ev.ev_suju_a_followup.choice_3_result
+
+You spend a day on the bridges. Chinghianfu is named in the talk, and fortune bends a little your way.

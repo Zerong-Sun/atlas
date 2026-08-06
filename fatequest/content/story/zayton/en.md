@@ -506,6 +506,14 @@ Let the quarter learn your name
 
 You bargain plainly and speak plainly, and the quarter marks you for an honest man. Among the merchants of the sea-lands your name will be repeated before you are seen again.
 
+## ev.ev_zayton_fanfang_followup.choice_4
+
+Copy the wonder-leaves and road chronicles
+
+## ev.ev_zayton_fanfang_followup.choice_4_result
+
+The scholars lend you their stack of papers. By lamplight you copy Prester John beside Wang Dayuan, paradise beside Zhenla, and the mountain crossings of the two pilgrims — a richer book of the road than you carried out.
+
 ## ev.ev_zayton_mazu_followup.title
 
 Zayton: The Temple Asks Again

@@ -2,7 +2,7 @@
 unit: esher
 lang: zh
 source: en
-source_rev: 2e9659516c2a
+source_rev: 119069974b3f
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_esher_b.choice_1_result: 3d619d9a783f
   ev.ev_esher_b.choice_2_result: 45441acd23b1
   ev.ev_esher_b.choice_3_result: 03628260cd19
+  ev.ev_esher_a_followup.title: 77c2bb3600cf
+  ev.ev_esher_a_followup.body: 3bf9d4fa9379
+  ev.ev_esher_a_followup.choice_1: af5e61ad70cd
+  ev.ev_esher_a_followup.choice_1_result: 3869f394024a
+  ev.ev_esher_a_followup.choice_2: e081fa48dad7
+  ev.ev_esher_a_followup.choice_2_result: 7a5652ad6bc5
+  ev.ev_esher_a_followup.choice_3: c0cc6c403f95
+  ev.ev_esher_a_followup.choice_3_result: 7120f68dabed
 ---
 
 ## city.esher.name
@@ -141,3 +149,35 @@ Soldan属港
 ## ev.ev_esher_b.choice_3_result
 
 你问撒拉逊商人南海商路何往，通往阿克苏姆的道路，就此展开在舆图上。通往亚丁的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。
+
+## ev.ev_esher_a_followup.title
+
+施赫尔：苏丹的港湾，第二页
+
+## ev.ev_esher_a_followup.body
+
+在离亚丁四百里的港湾里，一位替苏丹经营白乳香的商人把你从防波堤引到库房。他说施赫尔的岁入是烟与脂——亚丁、佐法尔与阿克苏姆都写在他的海岸册上，若你想带着比一瞥港口更多的东西出航或上路。
+
+## ev.ev_esher_a_followup.choice_1
+
+按苏丹海岸价买下乳香
+
+## ev.ev_esher_a_followup.choice_1_result
+
+他卖给你封好等季风的乳香。脂是白的，价钱是海岸本价。
+
+## ev.ev_esher_a_followup.choice_2
+
+追问通往亚丁与佐法尔的海路
+
+## ev.ev_esher_a_followup.choice_2_result
+
+亚丁与佐法尔已标上舆图。乳香海岸清晰。
+
+## ev.ev_esher_a_followup.choice_3
+
+看一日船，听阿克苏姆之名
+
+## ev.ev_esher_a_followup.choice_3_result
+
+你在防波堤上过了一日。闲话里点到阿克苏姆，时运也稍稍偏向你。

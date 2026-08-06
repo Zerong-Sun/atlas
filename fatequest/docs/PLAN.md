@@ -25,7 +25,7 @@
 ## 0. 现在的真实状态
 
 ```bash
-node tools/validate/validate.mjs                        # 25 道门禁
+node tools/validate/validate.mjs                        # 门禁含 G31
 node tools/lore/story.mjs check                         # 译文时效
 godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 ```
@@ -35,13 +35,13 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | 玩法系统 | P0–P7 **全部闭环** |
 | 密度任务 | T1–T6 **全部闭环** |
 | 世界 | 102 城 · 204 路线 |
-| 事件 | 332（原 279 + 十二主城后果链 46 + 导师事件 6 + 大不里士商人后续 1） |
-| 文本 | en/zh 各 3179 · 0 缺 · 1838 stamps current |
+| 事件 | 415（含 12 主城后果链、site/mentor 多轮、21 city 深化 24 条） |
+| 文本 | en/zh 各 4384 · 0 缺 · 2884 stamps current |
 | Godot 美术接线 | **674/674**（S1c ✅） |
 | 动画 | N0–N3 ✅ · N4–N6 待做 |
-| 测试 | 16 单测 + 13 smoke · 25 道门禁全绿 |
+| 测试 | 16 单测 + smoke（含 `smoke_21city_followups`）· 门禁含 G31 全绿 |
 
-**一句话**：系统、首批 12 城剧情闭环和资源接线已完成；当前工作转入正式课程/占法内容、易经缺图、运行时回归和发布验收。
+**一句话**：系统、12 主城与 21 city 探索多轮、资源接线已完成；当前工作转入正式课程/占法内容、易经缺图、运行时回归和发布验收。
 
 ---
 
@@ -53,7 +53,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 | **P2** | 动画 N2–N3 | 迷雾/路线 + 界面过渡 | ✅ 2026-07-26 | §3 |
 | **P3** | chr 底板重绘 | 1 张 | ✅ 2026-07-30 | §4 |
 | **P4** | 白图泰六城入城/探索图 | 24 张 | ✅ 2026-07-30 | §5 |
-| **P5** | 文本多轮互动与入城长文 | 12 主城城市内互动未完成；5 城入城已加长 | ⛔ 当前优先级 | §6、`TEXT_REQUIREMENTS.md` §4–§10 |
+| **P5** | 文本多轮互动与入城长文 | 12 主城 + 21 city 多轮 ✅；5 城入城已加长 | ✅ 2026-08-06 | §6、`TEXT_REQUIREMENTS.md` §4–§10 |
 
 ---
 
@@ -117,8 +117,8 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 |---|---|
 | 入城正文加长 | ✅ 五城（axuma/merva/ctesiphon/bethleem/ephesus） |
 | 图鉴扩展 | 可选续作 |
-| 12 主城 site/mentor 第二页 | ⛔ 35 个 site + 12 个 mentor 待写，详见 `TEXT_REQUIREMENTS.md` |
-| 21 city 探索点深化 | ⛔ 每城至少 1 个多轮探索点待排期 |
+| 12 主城 site/mentor 第二页 | ✅ 2026-08-02 · 35 site + 12 mentor followup |
+| 21 city 探索点深化 | ✅ 2026-08-06 · 24 followup（18 城各 1 点 + 枢纽 chamba/badashan/tanpiju 各 2 点）；矩阵见 [`21_CITY_DEEPENING_MATRIX.md`](21_CITY_DEEPENING_MATRIX.md)；门禁 G31；smoke `smoke_21city_followups.gd` |
 | 易经 31–64 | 规格在 ART · 非阻塞，使用卦符回退 |
 
 详见 `TEXT_REQUIREMENTS.md` §4–§10 · `ART_REQUIREMENTS.md`。
@@ -131,7 +131,7 @@ godot --headless --path . --script tests/run_tests.gd   # 16 个单测
 |---|---|
 | 新玩法系统 | P0–P7 已闭环 |
 | `town` / `station` 级探索点 | 分级投入是设计 |
-| 拆《远游记》《瀛涯胜览》 | 等 S1–S5 收口再动 |
+| 用远游记机译绑城 | 仅书案；见 `SOURCE_NOTES.md` |
 | iOS 构建 | 先做桌面端 |
 | 美术生成管线修复 | 现有素材够用 |
 

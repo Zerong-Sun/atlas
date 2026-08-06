@@ -119,3 +119,35 @@ You buy a small porcelain bowl with paper-money. Coin changes hands, and the pur
 ## ev.ev_chinangli_b.choice_3_result
 
 You ask the exchange clerks how the notes are renewed. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_chinangli_a_followup.title
+
+Chinangli: The River Brokers' Ledger
+
+## ev.ev_chinangli_a_followup.body
+
+On the quay of the great river a broker who prices silk and spice for boats bound to Cambaluc opens his ledger beside the water. He says the river is a road that remembers every toll — and that a traveller who buys silk without hearing the days to Cacanfu and Chandu rides half-blind upstream.
+
+## ev.ev_chinangli_a_followup.choice_1
+
+Buy a bolt of silk at the river ledger price
+
+## ev.ev_chinangli_a_followup.choice_1_result
+
+He sells you silk at a price the upstream markets will recognize. The bolt is sealed for the boat.
+
+## ev.ev_chinangli_a_followup.choice_2
+
+Ask him to name the water road toward Cambaluc
+
+## ev.ev_chinangli_a_followup.choice_2_result
+
+Cambaluc and Cacanfu are marked on your map. The river road north is clear.
+
+## ev.ev_chinangli_a_followup.choice_3
+
+Spend a day counting spice chests with the clerks
+
+## ev.ev_chinangli_a_followup.choice_3_result
+
+You spend a day among the chests. Chandu is named in the talk, and a small turn of fortune favours you.

@@ -1,0 +1,44 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-codex-legend-seed",
+      "kind": "consequence",
+      "once": true,
+      "title": "ev.codex_legend_seed.title",
+      "body": "ev.codex_legend_seed.body",
+      "when": {
+        "cities": ["zayton"]
+      },
+      "lore": {
+        "origin": "authored",
+        "note": "Registers legend/chronicle codex ids for the browser; awards Mandeville and Chinese road chronicles. Reached from the Zayton scholar quarter."
+      },
+      "choices": [
+        {
+          "id": "read-wonders",
+          "label": "ev.codex_legend_seed.choice_1",
+          "resultText": "ev.codex_legend_seed.choice_1_result",
+          "effects": [
+            { "op": "codex", "value": "leg-prester-john", "reason": "wonder-book" },
+            { "op": "codex", "value": "leg-earthly-paradise", "reason": "wonder-book" },
+            { "op": "codex", "value": "chr-zhenla-city", "reason": "chronicle" },
+            { "op": "codex", "value": "chr-yelu-xiyou", "reason": "chronicle" },
+            { "op": "codex", "value": "chr-changchun-audience", "reason": "chronicle" },
+            { "op": "codex", "value": "chr-daoyi-gulong", "reason": "chronicle" },
+            { "op": "codex", "value": "chr-xingcha-malacca", "reason": "chronicle" }
+          ]
+        },
+        {
+          "id": "leave",
+          "label": "ev.codex_legend_seed.choice_2",
+          "resultText": "ev.codex_legend_seed.choice_2_result",
+          "effects": [
+            { "op": "days", "value": 0, "reason": "left-papers" }
+          ]
+        }
+      ]
+    }
+  ]
+}

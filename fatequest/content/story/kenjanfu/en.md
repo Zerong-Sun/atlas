@@ -118,3 +118,35 @@ You buy lacquerware from an armourer's quarter. Money moves — a little the bet
 ## ev.ev_kenjanfu_b.choice_3_result
 
 You view Prince Mangalai's palace from the plain. You set what you saw into your travel book. A small turn of fortune favours you.
+
+## ev.ev_kenjanfu_a_followup.title
+
+Kenjanfu: Among the Mulberry Plains
+
+## ev.ev_kenjanfu_a_followup.body
+
+West of the city a silk steward who walks the mulberry plains every morning draws you under a row of trees. He says Kenjanfu's wealth is leaf and worm — and that the roads to Cachanfu, Saianfu, and the north are written in the season of the harvest if you care to listen.
+
+## ev.ev_kenjanfu_a_followup.choice_1
+
+Buy silk at the plain's harvest price
+
+## ev.ev_kenjanfu_a_followup.choice_1_result
+
+He sells you silk at a price the workshops accept. The bolt is ready for the western road.
+
+## ev.ev_kenjanfu_a_followup.choice_2
+
+Ask which road leads toward Saianfu
+
+## ev.ev_kenjanfu_a_followup.choice_2_result
+
+Saianfu is marked on your map with the days between. The industrial road west is clear.
+
+## ev.ev_kenjanfu_a_followup.choice_3
+
+Walk the gardens a day and note the mulberry season
+
+## ev.ev_kenjanfu_a_followup.choice_3_result
+
+You spend a day among the trees. Cachanfu is named in the talk, and fortune bends a little your way.

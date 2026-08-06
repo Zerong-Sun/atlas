@@ -2,7 +2,7 @@
 unit: camadi
 lang: zh
 source: en
-source_rev: 4fa18a53a7d7
+source_rev: 0e14cdb1b114
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_camadi_b.choice_1_result: a21992df3ead
   ev.ev_camadi_b.choice_2_result: 90bce7b6861d
   ev.ev_camadi_b.choice_3_result: 1dee16e04711
+  ev.ev_camadi_a_followup.title: 7c5198d4d30a
+  ev.ev_camadi_a_followup.body: bca395fdae2a
+  ev.ev_camadi_a_followup.choice_1: e5c9dfdb21a1
+  ev.ev_camadi_a_followup.choice_1_result: e7d91d07a4ca
+  ev.ev_camadi_a_followup.choice_2: 403fe9ca0dd0
+  ev.ev_camadi_a_followup.choice_2_result: 33c5a3a3f03a
+  ev.ev_camadi_a_followup.choice_3: 7ff3f4d9a362
+  ev.ev_camadi_a_followup.choice_3_result: ea714c7d3306
 ---
 
 ## city.camadi.name
@@ -140,3 +148,35 @@ stamps:
 ## ev.ev_camadi_b.choice_3_result
 
 你向道旁贩者买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+
+## ev.ev_camadi_a_followup.title
+
+卡玛迪：废墟平原上的长老
+
+## ev.ev_camadi_a_followup.body
+
+在卡玛迪残墙之间，一位记得劫掠岁月的长老坐在枣树荫下，不让你只看一眼就走。他说平原上仍有劫匪未烧毁的路——通往起儿漫，通往科比南，通往海湾。若你要从这废墟上路，他要你先听清日子的尺度。
+
+## ev.ev_camadi_a_followup.choice_1
+
+按长老的定价买下一袋枣子供下一段路
+
+## ev.ev_camadi_a_followup.choice_1_result
+
+长老按公道分量卖给你枣子。这袋果能撑过炎热的下坡，卡玛迪的旧事也随它同行。
+
+## ev.ev_camadi_a_followup.choice_2
+
+请他点名通往卡拉图的内陆路
+
+## ev.ev_camadi_a_followup.choice_2_result
+
+他在尘土上画出通往卡拉图的内陆路：水井、关卡、驿站之间的日子。海湾要塞已出现在你的舆图上。
+
+## ev.ev_camadi_a_followup.choice_3
+
+坐上一天，听卡玛迪如何陷落
+
+## ev.ev_camadi_a_followup.choice_3_result
+
+你在枣树下坐了一日，听他讲平原如何被蹂躏。故事耗费时日，卡玛迪却不再是无名的废墟。

@@ -119,3 +119,35 @@ You watch two days while the miners break the hard salt. It costs you 2 days on 
 ## ev.ev_taican_b.choice_3_result
 
 You ask which caravan road runs on toward Sapurgan. You set the way to Sapurgan on your map. You set the way to Balc on your map. You set what you saw into your travel book.
+
+## ev.ev_taican_a_followup.title
+
+Taican: The Corn Masters' Road Book
+
+## ev.ev_taican_a_followup.body
+
+In the fortified corn market a master who prices grain for every caravan that leaves Taican opens a road book beside the scales. He says Badashan and Balc are written there in measures of days and loads — and that a traveller who buys cotton without hearing the book rides out half-blind.
+
+## ev.ev_taican_a_followup.choice_1
+
+Buy cotton cloth at the market's measured price
+
+## ev.ev_taican_a_followup.choice_1_result
+
+You leave with cotton at a fair weight. The cloth will sell or serve on the next march.
+
+## ev.ev_taican_a_followup.choice_2
+
+Ask him to read the road toward Balc and Badashan
+
+## ev.ev_taican_a_followup.choice_2_result
+
+Balc and Badashan are named with the days between. The corn roads are on your map.
+
+## ev.ev_taican_a_followup.choice_3
+
+Wait a day while the grain prices are posted
+
+## ev.ev_taican_a_followup.choice_3_result
+
+You wait a day for the posting. The waiting costs time, but the market's counsel stays with you.

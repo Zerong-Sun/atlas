@@ -2,7 +2,7 @@
 unit: aden
 lang: zh
 source: en
-source_rev: 3c766463c6b3
+source_rev: f100a71506b3
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_aden_b.choice_1_result: f8ebb105aeda
   ev.ev_aden_b.choice_2_result: f6799312c84a
   ev.ev_aden_b.choice_3_result: a00d61b2dc77
+  ev.ev_aden_a_followup.title: 0b5a86ae4991
+  ev.ev_aden_a_followup.body: 2cd1cd8d415d
+  ev.ev_aden_a_followup.choice_1: 57d639fba0bb
+  ev.ev_aden_a_followup.choice_1_result: 858fc578ca1f
+  ev.ev_aden_a_followup.choice_2: 4693c7ea6ed2
+  ev.ev_aden_a_followup.choice_2_result: 38ff52ec375c
+  ev.ev_aden_a_followup.choice_3: e4ee63c7f931
+  ev.ev_aden_a_followup.choice_3_result: 152e8fe7b9d6
 ---
 
 ## city.aden.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_aden_b.choice_3_result
 
 你于清真寺门侧耳听礼，你把这番见闻记入行纪。时运待你，比先前好了几分。
+
+## ev.ev_aden_a_followup.title
+
+亚丁：驼队主人的账本
+
+## ev.ev_aden_a_followup.body
+
+在印度大船卸货到驳船的码头上，一位走过三十日至亚历山大河的驼队主人把账本摊在胡椒棚旁。他说亚丁是埃及香料的大门——佐法尔与坎贝都写在页边，若你想带着比一袋货更多的东西离开港口。
+
+## ev.ev_aden_a_followup.choice_1
+
+按驼队主人的定价买下马拉巴胡椒
+
+## ev.ev_aden_a_followup.choice_1_result
+
+他卖给你封好走驼路的胡椒。袋子能撑过那三十日。
+
+## ev.ev_aden_a_followup.choice_2
+
+请他标出离港的各条路
+
+## ev.ev_aden_a_followup.choice_2_result
+
+佐法尔与坎贝已标上舆图。离港之路清晰。
+
+## ev.ev_aden_a_followup.choice_3
+
+在货棚走一日，看驳船装货
+
+## ev.ev_aden_a_followup.choice_3_result
+
+你在货包间过了一日。通往亚历山大的驼路已记，时运也稍稍偏向你。

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "book": "xingcha",
+    "title": "星槎胜览 Xingcha Shenglan",
+    "years": "1436",
+    "source": "费信 Ming dynasty — classical Chinese, public domain",
+    "language": "zh",
+    "zhStatus": "source"
+  },
+  "bands": [
+    "maritime_asia",
+    "india",
+    "west_asia"
+  ],
+  "places": [
+    {
+      "id": "malacca-xingcha",
+      "title": "满剌加",
+      "band": "maritime_asia",
+      "placeNames": [
+        "满剌加",
+        "Malacca"
+      ],
+      "body": "满剌加，旧不称国，隶暹罗。永乐初，诏封为王，赐印诰。其地东南距海，西北皆岸。民崇回回教。中国宝船至此，立排栅城垣，设官仓，以贮货物。",
+      "source": {
+        "book": "xingcha",
+        "chapterId": "xingcha-malacca",
+        "chapterTitle": "满剌加"
+      }
+    },
+    {
+      "id": "hormuz-xingcha",
+      "title": "忽鲁谟斯",
+      "band": "west_asia",
+      "placeNames": [
+        "忽鲁谟斯",
+        "Hormuz"
+      ],
+      "body": "忽鲁谟斯国，边海倚山，各番宝货皆萃于此。民崇回回教，肌肤白皙。市用金银钱。产珍珠、宝石、名马。",
+      "source": {
+        "book": "xingcha",
+        "chapterId": "xingcha-hormuz",
+        "chapterTitle": "忽鲁谟斯"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "xingcha-fleet",
+      "title": "宝船记略",
+      "band": "maritime_asia",
+      "body": "费信从郑和四使西洋，记其国风土，成《星槎胜览》。文较《瀛涯胜览》为简，而港口、物产、朝贡之事可互证。",
+      "source": {
+        "book": "xingcha",
+        "chapterId": "xingcha-fleet",
+        "chapterTitle": "宝船"
+      }
+    }
+  ]
+}

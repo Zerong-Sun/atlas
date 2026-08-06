@@ -2,7 +2,7 @@
 unit: chinangli
 lang: zh
 source: en
-source_rev: 04f8bae1e498
+source_rev: 233673a17a78
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_chinangli_b.choice_1_result: f68d865ffb6f
   ev.ev_chinangli_b.choice_2_result: 1fd6d5e91a45
   ev.ev_chinangli_b.choice_3_result: 01c6ec1457be
+  ev.ev_chinangli_a_followup.title: 3b4ce69b5150
+  ev.ev_chinangli_a_followup.body: bf2ab3a2558a
+  ev.ev_chinangli_a_followup.choice_1: 073c237d39b4
+  ev.ev_chinangli_a_followup.choice_1_result: adc182774d28
+  ev.ev_chinangli_a_followup.choice_2: db60506e8d5e
+  ev.ev_chinangli_a_followup.choice_2_result: 0fa6cedd7a98
+  ev.ev_chinangli_a_followup.choice_3: 92eca1e43923
+  ev.ev_chinangli_a_followup.choice_3_result: 293f5f04be80
 ---
 
 ## city.chinangli.name
@@ -141,3 +149,35 @@ stamps:
 ## ev.ev_chinangli_b.choice_3_result
 
 你问兑换吏如何换新钞，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+
+## ev.ev_chinangli_a_followup.title
+
+济南：河商的账本
+
+## ev.ev_chinangli_a_followup.body
+
+大河码头上，一位为开往汗八里的船定价丝与香料的经纪人在水边翻开账本。他说这条河是记得每一道关卡的路——买丝却不问到河间与上都要几日的旅人，逆流时只睁半只眼。
+
+## ev.ev_chinangli_a_followup.choice_1
+
+按河账价格买下一匹丝
+
+## ev.ev_chinangli_a_followup.choice_1_result
+
+他按上游市集认得出的价钱卖给你丝。布匹已封好上船。
+
+## ev.ev_chinangli_a_followup.choice_2
+
+请他点名通往汗八里的水路
+
+## ev.ev_chinangli_a_followup.choice_2_result
+
+汗八里与河间已标上你的舆图。北去的水路清晰。
+
+## ev.ev_chinangli_a_followup.choice_3
+
+与书吏一起清点一日香料箱
+
+## ev.ev_chinangli_a_followup.choice_3_result
+
+你在箱子间过了一日。闲话里点到上都，时运也待你稍好些。

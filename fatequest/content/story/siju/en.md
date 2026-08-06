@@ -119,3 +119,35 @@ You buy paper-money at a stall near the cremation ground. Coin changes hands, an
 ## ev.ev_siju_b.choice_3_result
 
 You ask an elder why they burn rather than bury. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_siju_a_followup.title
+
+Siju: The Sugar Workshops' Second Page
+
+## ev.ev_siju_a_followup.body
+
+In the workshops south of Piju a sugar master who has shipped chests to Coigangiu and Coiganju draws you beside the boiling pans. He says Siju's manufactures are nothing without the canal days written on his wall — and that a traveller who buys sugar without hearing those days rides half-blind toward the grain towns.
+
+## ev.ev_siju_a_followup.choice_1
+
+Buy sugar at the workshop's measured price
+
+## ev.ev_siju_a_followup.choice_1_result
+
+He sells you sugar sealed for the canal. The price is fair, and Siju's name goes with the chest.
+
+## ev.ev_siju_a_followup.choice_2
+
+Ask which canal road leads toward Coigangiu
+
+## ev.ev_siju_a_followup.choice_2_result
+
+Coigangiu and Paukin are marked on your map. The canal south is clear.
+
+## ev.ev_siju_a_followup.choice_3
+
+Spend a day counting grain sacks with the clerks
+
+## ev.ev_siju_a_followup.choice_3_result
+
+You spend a day among the sacks. Coiganju is named in the talk, and fortune bends a little your way.

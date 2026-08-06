@@ -62,6 +62,13 @@
       "_backup": [
         "ev-aden-a",
         "ev-aden-b"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-aden",
+          "title": "阿丹国"
+        }
       ]
     },
     {
@@ -306,6 +313,13 @@
       },
       "calendars": [
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-quilon",
+          "title": "小葛兰"
+        }
       ]
     },
     {
@@ -385,6 +399,13 @@
       },
       "calendars": [
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-dhofar",
+          "title": "祖法儿"
+        }
       ]
     },
     {
@@ -631,6 +652,13 @@
       },
       "calendars": [
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "yingya-shenglan",
+          "chapterId": "yingya-calicut",
+          "title": "古俚"
+        }
       ]
     },
     {

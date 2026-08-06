@@ -116,3 +116,35 @@ You buy porcelain from a river trader. Coin changes hands, and the purse settles
 ## ev.ev_sinju_b.choice_3_result
 
 You walk the harbour and note how small the city is for such traffic. The account is written down before the hour turns. Fortune bends a little your way.
+
+## ev.ev_sinju_a_followup.title
+
+Sinju: On the Greatest River
+
+## ev.ev_sinju_a_followup.body
+
+On the quay of the Kian a toll clerk who has counted tea chests for the Great Kaan's ports draws you under a shed. He says Sinju stands where the greatest river in the world turns trade into paper-money — and that Caiju, Nanghin, and Chinghianfu are written in his toll book if you care to ask.
+
+## ev.ev_sinju_a_followup.choice_1
+
+Buy tea at the river toll price
+
+## ev.ev_sinju_a_followup.choice_1_result
+
+He sells you tea sealed for the river. The price includes the toll you would have paid anyway.
+
+## ev.ev_sinju_a_followup.choice_2
+
+Ask which water road leads toward Caiju
+
+## ev.ev_sinju_a_followup.choice_2_result
+
+Caiju and Nanghin are marked on your map. The river road is clear.
+
+## ev.ev_sinju_a_followup.choice_3
+
+Spend a day at the toll house and hear the port names
+
+## ev.ev_sinju_a_followup.choice_3_result
+
+You spend a day at the toll house. Chinghianfu is named, and fortune bends a little your way.

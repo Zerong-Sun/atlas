@@ -2,7 +2,7 @@
 unit: calatu
 lang: zh
 source: en
-source_rev: 47dbca3cfbdd
+source_rev: 4077413a1554
 status: translated
 translator: 人工校译
 notes: >
@@ -36,6 +36,14 @@ stamps:
   ev.ev_calatu_b.choice_1_result: 1cb3913a0b8a
   ev.ev_calatu_b.choice_2_result: 71da337e7649
   ev.ev_calatu_b.choice_3_result: 4af5df6f88ad
+  ev.ev_calatu_a_followup.title: 092638ab2a0d
+  ev.ev_calatu_a_followup.body: f214b45803c0
+  ev.ev_calatu_a_followup.choice_1: 8409ba4cfeb8
+  ev.ev_calatu_a_followup.choice_1_result: 987eb071f40b
+  ev.ev_calatu_a_followup.choice_2: db79d2f86d83
+  ev.ev_calatu_a_followup.choice_2_result: 1ee4714336ee
+  ev.ev_calatu_a_followup.choice_3: efe34f2c8817
+  ev.ev_calatu_a_followup.choice_3_result: 7f7d209d472c
 ---
 
 ## city.calatu.name
@@ -141,3 +149,35 @@ Melic避战之所
 ## ev.ev_calatu_b.choice_3_result
 
 你问商队主人内陆道路何往，你标出了通往可马底的路。你标出了通往佐法尔的路。你把这番见闻记入行纪。
+
+## ev.ev_calatu_a_followup.title
+
+卡拉图：海湾要塞的墙巡
+
+## ev.ev_calatu_a_followup.body
+
+在海湾要塞墙上，一位为忽鲁谟斯的马立克点过船只的守将带你沿女墙走。他说卡拉图离外海六百里，然而来自佐法尔的每艘胡椒船与来自卡玛迪的每支内陆商队都须应答这道防波堤——若你想带走的不只是对海湾的一瞥。
+
+## ev.ev_calatu_a_followup.choice_1
+
+按要塞码头价买下胡椒
+
+## ev.ev_calatu_a_followup.choice_1_result
+
+他卖给你封好走海湾的胡椒。价钱里已含码头费。
+
+## ev.ev_calatu_a_followup.choice_2
+
+追问通往卡玛迪的内陆路
+
+## ev.ev_calatu_a_followup.choice_2_result
+
+卡玛迪连同内陆日子已标上舆图。平原之路清晰。
+
+## ev.ev_calatu_a_followup.choice_3
+
+点一日船，听忽鲁谟斯之名
+
+## ev.ev_calatu_a_followup.choice_3_result
+
+你点了一日桅杆。忽鲁谟斯与佐法尔被点名，时运也稍稍偏向你。

@@ -119,3 +119,35 @@ You listen while the brokers speak of the five brother-kings. You set the way to
 ## ev.ev_cail_b.choice_3_result
 
 You buy cotton cloth in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+
+## ev.ev_cail_a_followup.title
+
+Cail: The Horse Quay's Second Page
+
+## ev.ev_cail_a_followup.body
+
+On the quay where western ships land horses, a charger broker who serves King Ashar's harbour draws you into the shade of the landing sheds. He says Cail is where Hormos horses meet Maabar cotton — and that Melibar, Coilum, and Samara are written in his landing book if you mean to ride or sail onward.
+
+## ev.ev_cail_a_followup.choice_1
+
+Buy a charger at the harbour's measured price
+
+## ev.ev_cail_a_followup.choice_1_result
+
+He sells you a charger fit for the Maabar road. The price is steep, and the horse is sound.
+
+## ev.ev_cail_a_followup.choice_2
+
+Ask which sea road leads toward Melibar and Coilum
+
+## ev.ev_cail_a_followup.choice_2_result
+
+Melibar and Coilum are marked on your map. The pepper coast is clear.
+
+## ev.ev_cail_a_followup.choice_3
+
+Watch the landing a day and hear the brother-kings named
+
+## ev.ev_cail_a_followup.choice_3_result
+
+You spend a day at the landing. Samara is named in the talk, and fortune bends a little your way.

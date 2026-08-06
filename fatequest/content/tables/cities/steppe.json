@@ -47,6 +47,13 @@
       "calendars": [
         "turkic",
         "chinese"
+      ],
+      "altRefs": [
+        {
+          "book": "rubruck",
+          "chapterId": "rubruck-karakorum",
+          "title": "Caracarum"
+        }
       ]
     },
     {
