@@ -88,13 +88,35 @@ for (const c of byTable.cities ?? []) {
 
 // ------------------------------------------------ G26: tier-graded site counts
 // metropolis → exactly 3; city → exactly 2; town/station not forced (DATA_MODEL §6).
+// A site whose event gates itself behind `when.flags` (e.g. a usage site that
+// only appears after learning the matching divination) is a dynamic unlock,
+// not one of the city's standing exploration sites, so it does not count
+// toward the tier quota. It must still claim the city it lives in, or it can
+// never render (city_view filters sites through cond.evaluate).
+const siteById = new Map((byTable.events ?? []).map((e) => [e.id, e]));
+const isStandingSite = (id) => {
+  const w = siteById.get(id)?.when ?? {};
+  const flagged = Array.isArray(w.flags) && w.flags.length > 0;
+  const notFlagged = w.not && Array.isArray(w.not.flags) && w.not.flags.length > 0;
+  return !flagged && !notFlagged;
+};
 for (const c of byTable.cities ?? []) {
   const f = recordFile.get(c.id);
-  const n = c.sites?.length ?? 0;
-  if (c.tier === "metropolis" && n !== 3)
-    err("G26", f, `${c.id}: metropolis needs exactly 3 sites, has ${n}`);
-  if (c.tier === "city" && n !== 2)
-    err("G26", f, `${c.id}: city needs exactly 2 sites, has ${n}`);
+  const all = c.sites ?? [];
+  const standing = all.filter((s) => isStandingSite(s));
+  if (c.tier === "metropolis" && standing.length !== 3)
+    err("G26", f, `${c.id}: metropolis needs exactly 3 standing sites, has ${standing.length} (${all.length} total)`);
+  if (c.tier === "city" && standing.length !== 2)
+    err("G26", f, `${c.id}: city needs exactly 2 standing sites, has ${standing.length} (${all.length} total)`);
+  for (const s of all) {
+    const ev = siteById.get(s);
+    if (!ev) continue;
+    const w = ev.when ?? {};
+    const flagged = Array.isArray(w.flags) && w.flags.length > 0;
+    const notFlagged = w.not && Array.isArray(w.not.flags) && w.not.flags.length > 0;
+    if ((flagged || notFlagged) && !(w.cities ?? []).includes(c.id))
+      err("G26", f, `${c.id}.sites -> "${s}" is a conditional site but when.cities does not include ${c.id}`);
+  }
 }
 
 // ----------------------------------------------- G2: reference integrity

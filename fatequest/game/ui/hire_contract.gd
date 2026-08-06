@@ -113,9 +113,10 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 		var city_id := String(origin_v.get("city", ""))
 		var culture_id := String(origin_v.get("culture", ""))
 		if city_id != "":
-			origin_line = city_id
+			origin_line = I18n.t("city.%s.name" % city_id)
 		if culture_id != "":
-			origin_line = (origin_line + " · " if origin_line != "" else "") + culture_id
+			origin_line = (origin_line + " · " if origin_line != "" else "") \
+				+ I18n.t("ui.culture.%s" % culture_id)
 	elif String(origin_v) != "":
 		origin_line = I18n.t(origin_v)
 	_origin_l.text = origin_line

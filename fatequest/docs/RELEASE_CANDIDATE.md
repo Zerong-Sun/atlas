@@ -22,22 +22,27 @@ done
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 ```
 
-最新结果（2026-08-06，commit `94e708e`，R1 全量门禁复跑）：
+最新结果（2026-08-07，commit `ecb2dda`，T1/O1/R1 执行计划落档复跑）：
 
 | 项目 | 结果 |
 |---|---|
-| 内容门禁 | ✅ `all gates pass`（0 errors） |
+| 内容门禁 | ✅ `all gates pass`（0 errors；G26 区分常驻/条件解锁站点） |
 | story 时效 | ✅ `3619 current · 0 stale · 0 missing` |
 | i18n 行测试 | ✅ `ALL CHECKS PASSED` |
 | 内核单测 | ✅ `SUITE: PASS`（16 个） |
 | 逻辑审计 | ✅ `tests/audit_logic.gd` 0 项问题 |
 | 占法阅读审计 | ✅ `tests/audit_divination_readings.gd` 24 法 reading key 双语全覆盖 |
 | UI smoke | ✅ **26 个全绿**（含 `smoke_21city_followups`、`smoke_map_display.gd`、`smoke_dock_drag.gd`、`smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
-| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 1.12 ms · save P95 5.98 ms · save 7712 B） |
-| 地图基准 | ✅ `MAP_BENCH: PASS`（setup 2.26 ms · mask P95 7.81 ms · travel frame P95 7.15 ms · sustained 88 FPS） |
-| PCK 结构验证 | ✅ `verify_pck.mjs` PASS（1952 文件 · 20 必需全在 · 0 泄露） |
+| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 5.93 ms · save P95 33.47 ms · save 7712 B） |
+| 地图 CPU 基准 | ✅ `MAP_BENCH`（setup 7.99 ms · mask P95 39.51 ms · travel frame P95 18.71 ms） |
+| 地图窗口帧耗 | ✅ `MAP_FPS_BENCH: PASS`（1280×720：zoom P95 0.03 ms · pan P95 0.02 ms · 常驻帧 6.89 ms ≈145 FPS） |
+| PCK 结构验证 | ✅ `verify_pck.mjs` PASS（1952 文件 · 必需全在 · 0 泄露） |
+| PCK 启动 | ✅ `--main-pack` headless 185 s 零错误 |
+| 三平台导出 | ✅ Linux PCK + macOS/Windows zip 包 |
+| 美术审计 | ✅ `tools/art/audit.py` 674/674 完好 · 0 棋盘格 · 0 损坏 · 674 接线 |
 
-`build/audit/benchmarks.json` 落档 R1 复跑轮次的 systems/map 基准与 PCK 验证结果。
+`docs/benchmarks.json` 落档 systems/map CPU/map FPS/PCK/art 全部基准（机器可读）。
+`build/audit/` 存实际产物（PCK/zip，git 忽略不提交）。
 
 ---
 
@@ -50,7 +55,7 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
   - G17（1）：`en.json` 中 1015 个 `ev.*` 键未被事件 title/body/choice 直接引用——占法结果文本等合法先于事件的文本键，纯信息；
   - G20（1）：刺桐模板城市完整提示；
   - G27（1）：草原事件占路线事件 59%，属既有平衡备注。
-- **已接线内容**：4 个占法用法站点（`ev-ormus-astrodice-tide`、`ev-baldacum-geomancy-court`、`ev-kiovia-runes-ford`、`ev-zayton-jiaobei-ask`）已加入对应城市 `sites`，`when.flags` 保证仅"已学该占法"后出现，不干扰新手流程。
+- **已接线内容**：4 个占法用法站点（`ev-ormus-astrodice-tide`、`ev-baldacum-geomancy-court`、`ev-kiovia-runes-ford`、`ev-zayton-jiaobei-ask`）已加入对应城市 `sites`，`when.flags` 保证仅"已学该占法"后出现，不干扰新手流程。G26 已区分**常驻探索点**（metropolis 恰 3 / city 恰 2）与**条件解锁站点**（带 `when.flags` 不计入常驻配额，但必须 `when.cities` 归属本城），与 `city_view` 运行时过滤一致。
 - **状态**：✅ 通过。
 
 ## 2. 中英关键流程通读
@@ -73,9 +78,10 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 
 ## 5. 离线导出资产完整性
 
-- **PCK**：✅ `build/audit/FateQuest.pck`（409,953,036 B）`--export-pack` 成功，含 `vector_map.json` 与全部接线资产。
+- **PCK**：✅ `build/audit/FateQuest.pck`（409,955,504 B）`--export-pack` 成功，含 `vector_map.json` 与全部接线资产。
 - **PCK 结构验证**：✅ `tools/validate/verify_pck.mjs` 解析 v4 目录（1952 文件），20 项必需资源全在、`content/story/docs/tests/tools/worldmap/_archive/_sheets` 0 泄露；主场景以二进制 `.scn` + `.remap` 形式存在。
-- **启动**：✅ `--main-pack` 主包启动 85 s 零错误（后台验证后主动停止）。
+- **启动**：✅ `--main-pack` 主包启动 185 s 零错误（后台验证后主动停止）。
+- **平台包**：✅ macOS/Windows 预设 zip 已导出（各 405 MB）；Linux 可执行档与 macOS `.app` 需官方 export templates 安装后构建。
 - **人工项**：三目标平台可执行文件（Linux/macOS/Windows）需对应官方 export template 与实机验收。
 
 ## 6. 覆盖层可退出 / 无黑屏 / 无断线
@@ -87,8 +93,8 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 
 ## 7. 外部 60 分钟试玩
 
-- **交接包**：✅ [`PLAYTEST_README.md`](PLAYTEST_README.md)（运行/构建命令/记录口径/已知限制）+ [`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md)（反馈表单）+ `build/audit/FateQuest.pck`（409.95 MB，已验证）。
-- **固定 seed**：按身份确定（`fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`），同一身份世界确定、可复现。
+- **交接包**：✅ [`PLAYTEST_README.md`](PLAYTEST_README.md)（运行/构建命令/记录口径/已知限制）+ [`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md)（反馈表单）+ `build/audit/FateQuest.pck`（409.96 MB，已验证）+ `FateQuest-mac.zip` / `FateQuest-win.zip`（405 MB）。
+- **固定 seed**：按身份确定（`fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`），同一身份世界确定、可复现；开局抽签可用 `-- --seed=<串>` 固定（缺省行为不变）。
 - **状态**：⏳ 待外部执行（三平台可执行档需先安装 export templates，见交接包 §3）。
 - **流程**：新玩家 / 三个身份各 30–60 分钟；记录完成率、断点、P0/P1/P2 清单、固定 seed、构建 commit、
   验证器结果（§13.5）。
@@ -98,7 +104,15 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 
 - **史料来源**：马可·波罗 / 伊本·白图泰 / 法德兰 / 朱拜尔逐段标记，`passages.json` 含 `origin` 与时代性宗教贬语标记（G24 拦截）。
 - **生成式工具记录**：`docs/AI_USAGE.md`（如有）与美术批次 `ART_PROMPTS_REQ_*.md` 留存。
-- **人工项**：发布前完成文化审阅记录归档。
+- **文化审阅归档模板**（G24 拦截证据 + 术语 + 来源标记，供人工填日期签署）：
+
+| 归档项 | 证据位置 | 复核人 | 日期 |
+|---|---|---|---|
+| G24 时代性宗教贬语拦截 0 errors | `node tools/validate/validate.mjs`（G24 门禁） | | |
+| 术语一致性（筊/周易/季风/商队/驿栈等） | `assets/data/glossary.json` | | |
+| 史料 origin 逐段标记 | `content/world/passages.json` | | |
+| 中英关键流程通读（zh/en 各一遍） | `docs/R1_READTHROUGH.md` | | |
+| 24 课/480 占法结果文化校读 | T1 完成记录（2026-08-06/07） | | |
 
 ## 9. README / STATUS / 需求书 / 发行说明一致
 
@@ -115,11 +129,11 @@ node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 | 2 | 中英关键流程通读 | 🟡 清单已备（`R1_READTHROUGH.md`）；人工通读待签 |
 | 3 | P0/P1 归零 | 🟡 无已知；60 分钟试玩待签 |
 | 4 | 三身份/五槽/坏档 | 🟡 自动部分✅；§13.2 人工步骤待签 |
-| 5 | 离线导出资产 | 🟡 PCK✅（`verify_pck` PASS）；三平台可执行文件待模板装后构建 |
+| 5 | 离线导出资产 | 🟡 PCK✅（`verify_pck` PASS）+ mac/win zip 已导出；平台可执行档待模板装后构建 |
 | 6 | 覆盖层可退出 | 🟡 自动部分✅；试玩确认待签 |
-| 7 | 外部 60 分钟试玩 | 🟡 交接包已备（`PLAYTEST_README`/`FEEDBACK`/PCK）；试玩待执行 |
-| 8 | 版权/工具/史料/文化 | 🟡 大部分归档（`AI_USAGE.md` 待建）；文化审阅待签 |
+| 7 | 外部 60 分钟试玩 | 🟡 交接包已备（`PLAYTEST_README`/`FEEDBACK`/PCK/双 zip/`--seed`）；试玩待执行 |
+| 8 | 版权/工具/史料/文化 | 🟡 归档模板已建（§8 表）；`AI_USAGE.md` 待建；文化审阅待签 |
 | 9 | 文档一致 | 🟡 自动部分✅；发版前核对待签 |
 
-**结论**：可自动验证的发布候选门禁全部通过；试玩交接包（运行说明 + 反馈表单 + PCK）与全分支
+**结论**：可自动验证的发布候选门禁全部通过；试玩交接包（运行说明 + 反馈表单 + PCK + 双 zip + 固定 seed）与全分支
 通读清单已备齐。剩余为外部试玩（第 7 项）、三平台可执行档构建与实机验收、文化审阅等人工签署项。

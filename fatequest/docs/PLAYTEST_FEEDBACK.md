@@ -8,7 +8,7 @@
 - 日期：__________
 - 试玩者：__________
 - 平台：□ macOS □ Linux □ Windows · 分辨率：__________ · 字号：100% / 200%
-- 构建 commit：`94e708e`（`git rev-parse --short HEAD`）
+- 构建 commit：`ecb2dda`（`git rev-parse --short HEAD`）
 - 身份：□ polo □ steppe □ merchant
 - 固定 seed：`fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`（按身份）
 - 时长：__________ 分钟 · 完成率：__________（□ 到达目标城 □ 出结局 □ 途中中断）

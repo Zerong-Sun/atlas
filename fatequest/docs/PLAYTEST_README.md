@@ -1,6 +1,6 @@
 # 外部试玩交接包 · PLAYTEST
 
-**commit `94e708e` · 2026-08-06 · 需求书 §13.2 步骤 / §13.5 记录口径 / §13.6 出口。**
+**commit `ecb2dda` · 2026-08-07 · 需求书 §13.2 步骤 / §13.5 记录口径 / §13.6 出口。**
 本文是给外部试玩者的运行与记录说明；全分支人工通读清单见 [`R1_READTHROUGH.md`](R1_READTHROUGH.md)。
 
 ## 0. 交接包内容
@@ -8,14 +8,16 @@
 | 物 | 位置 | 说明 |
 |---|---|---|
 | Godot 工程 | 本仓库 `fatequest/` | 唯一现行实现；`project.godot` 入口 |
-| 资源包 PCK | `build/audit/FateQuest.pck` | 409.95 MB · 1952 文件 · `verify_pck.mjs` 已验证 |
+| 资源包 PCK | `build/audit/FateQuest.pck` | 409.96 MB · 1952 文件 · `verify_pck.mjs` 已验证 |
+| macOS 包 | `build/audit/FateQuest-mac.zip` | 405 MB（zip 打包，装模板后转 `.app`） |
+| Windows 包 | `build/audit/FateQuest-win.zip` | 405 MB |
 | 通读清单 | `docs/R1_READTHROUGH.md` | 全分支人工通读的可勾选清单 |
 | 反馈表单 | `docs/PLAYTEST_FEEDBACK.md` | 每个试玩者一份 |
 | 自动门禁 | 见 §4 | 每次候选前复跑 |
 
-> 本机导出模板目录为空，**平台可执行档（Linux/macOS/Windows）尚未构建**。
-> 安装官方 export templates（Godot 编辑器 → 菜单 Export Templates → 下载）后，按 §3 命令即可导出；
-> 构建与实机验收列为人工签署项（§13.6 第 5 条）。
+> 平台 zip 包已导出；macOS 的 `.app` 与 Linux 可执行档需官方 export templates
+> 安装后转换（Godot 编辑器 → Export Templates → 下载），构建与实机验收列为人
+> 工签署项（§13.6 第 5 条）。
 
 ## 1. 运行方式
 
@@ -39,6 +41,8 @@ godot --path . --main-pack build/audit/FateQuest.pck
 - **身份**：马可·波罗 `polo`（tauris→cambaluc）· 草原旅人 `steppe`（tauris→chandu）· 商人 `merchant`（ormus→zayton）。
 - **固定 seed**：按身份确定 —— `fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`
   （`main.gd rng_seed()`，同一身份的所有试玩共享同一确定性世界，便于复现）。记录身份即记录 seed。
+- **开局抽签复现（可选）**：`godot --path . -- --seed=<任意串>` 可固定角色抽取随机流
+  （缺省行为不变）。试玩者若需复现某次开局三选，把启动命令原样写进反馈表单。
 - **时长**：每身份 30–60 分钟。记录完成率（是否到达目标城/是否结局）、断点、问题清单。
 - **每个候选必须记录**：测试日志、固定 seed、构建 commit、验证器结果（§4）、已知问题清单 —— 都写进反馈表单。
 
@@ -67,12 +71,13 @@ godot --headless --path . --script tests/run_tests.gd     # 16 单测 PASS
 godot --headless --path . --script tests/audit_logic.gd   # 0 项问题
 godot --headless --path . --script tests/audit_divination_readings.gd  # 24 法阅读双语全覆盖
 for t in tests/smoke_*.gd; do godot --headless --path . --script "$t" || exit 1; done  # 26 smoke
-godot --headless --path . --script tests/benchmark_systems.gd  # serialize P95 1.12ms · save P95 5.98ms
-godot --headless --path . --script tests/benchmark_map.gd      # mask P95 7.81ms · travel 7.15ms · 88 FPS
+godot --headless --path . --script tests/benchmark_systems.gd  # serialize P95 5.93ms · save P95 33.47ms
+godot --headless --path . --script tests/benchmark_map.gd      # mask P95 39.51ms · travel 18.71ms
+godot --path . --script tests/benchmark_map_fps.gd             # 窗口 1280×720：zoom 0.03ms · pan 0.02ms · ≈145 FPS
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PASS
 ```
 
-2026-08-06 `94e708e` 全量复跑结果：全部 ✅（详见 `docs/RELEASE_CANDIDATE.md` §0，`build/audit/benchmarks.json` 落档）。
+2026-08-07 `ecb2dda` 全量复跑结果：全部 ✅（详见 `docs/RELEASE_CANDIDATE.md` §0，`docs/benchmarks.json` 落档机器可读数据）。
 
 ## 5. 试玩重点（§13.6 出口项）
 

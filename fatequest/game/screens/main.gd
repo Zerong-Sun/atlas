@@ -154,7 +154,12 @@ func _apply_projection() -> void:
 
 
 func _build_desk() -> void:
-	_draw_rng = Rng.new("opening-draw:%d" % Time.get_ticks_usec())
+	# A fixed seed makes the opening draw reproducible for playtests: run with
+	# `-- --seed=polo-2026-08-07` and every player is offered the same set.
+	# Without --seed the draw stays non-deterministic as before.
+	var draw_seed := _fixed_draw_seed()
+	_draw_rng = Rng.new(draw_seed if draw_seed != "" \
+		else "opening-draw:%d" % Time.get_ticks_usec())
 	# Parchment plate so a blank dark window cannot be mistaken for a hang.
 	var bg := TextureRect.new()
 	bg.name = "BootBg"
@@ -473,6 +478,15 @@ func _show_desk_load_error(slot: String) -> void:
 
 func rng_seed(a: Dictionary) -> String:
 	return "fatequest:%s" % a.get("id", "run")
+
+
+## Read `--seed=<value>` from the engine command line (after `--`), so a
+## playtest recorder can pin the opening draw. Empty when absent.
+func _fixed_draw_seed() -> String:
+	for a in OS.get_cmdline_user_args():
+		if String(a).begins_with("--seed="):
+			return String(a).trim_prefix("--seed=")
+	return ""
 
 
 ## Mountain spines for the side-elevation relief (GDD §5.3). Read from

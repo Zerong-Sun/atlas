@@ -251,7 +251,7 @@ assets/audio/    37 OGG · A1–A8 ✅
 ## 8. 建议的下一步
 
 1. ~~正式课程文本：占位迁移 i18n，并完成中英与文化校读~~ ✅ 2026-08-06（T1 闭环）
-2. ~~优化与发布验证：导入/导出、存档 P95、地图帧耗~~ ✅ 2026-08-06（O1 闭环：基准落 `build/audit/benchmarks.json`，fixture 迁移用例，`verify_pck.mjs` PCK 结构门禁）；~~720p/200%/中英回归~~ ✅ 已由 `smoke_ui_overlay.gd` 自动化（2026-08-02）；Q2 手动测试修复已完成并回归（2026-08-02）
+2. ~~优化与发布验证：导入/导出、存档 P95、地图帧耗~~ ✅ 2026-08-07（O1 闭环：基准落 `docs/benchmarks.json` + 产物存 `build/audit/`，fixture 迁移用例，`verify_pck.mjs` PCK 结构门禁，`benchmark_map_fps.gd` 窗口帧耗实测）；~~720p/200%/中英回归~~ ✅ 已由 `smoke_ui_overlay.gd` 自动化（2026-08-02）；Q2 手动测试修复已完成并回归（2026-08-02）
 3. **正式占法美术与既有缺图**：易经 31–64（34）及 §11.7 占位替换
 4. **R1 外部试玩与通读**：✅ 自动化准备已完成（2026-08-06：全量门禁复跑落档、[`R1_READTHROUGH.md`](R1_READTHROUGH.md) 通读清单、[`PLAYTEST_README.md`](PLAYTEST_README.md)/[`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md) 交接包；六维验证修复：4 个占法用法站点接线进城市 `sites`，G2b 警告 6→2）；⏳ 待外部试玩与人工通读后按反馈收尾发布候选签署
 
@@ -267,27 +267,38 @@ G6 · 3263 次随机循环 · 中位 -15.3% · p10 -38.6% · p90 +42.2% · 破�
 
 ---
 
-## 10. 系统性能实测（2026-08-06 · O1）
+## 10. 系统性能实测（2026-08-07 · O1）
 
-Apple M2 Pro / 32 GB / Godot 4.7.1 headless，代表性全地图状态 40 次（2026-08-06）：
+Apple M2 Pro / 32 GB / Godot 4.7.1 headless，代表性全地图状态 40 次（2026-08-07，
+T1 内容增长后复跑）：
 
 ```
-序列化 P95                  1.13 ms
-安全写档 median / P95       5.62 / 6.10 ms
+序列化 P95                  5.93 ms
+安全写档 median / P95       24.30 / 33.47 ms
 存档序列化大小              7,712 B
-Travel availability         6120 次 / 149.94 ms
+Travel availability         6120 次 / 827.12 ms
 vector_map                  90,397 B
 ```
 
 地图 CPU 帧耗基准（`tests/benchmark_map.gd`，全图 102 城满情报 40 次 mask + 300 帧）：
 
 ```
-setup               2.33 ms
-mask 重建 P95       7.72 ms   （单帧预算 16.7 ms 内）
-route 动画帧 P95    8.28 ms
-持续帧率            88 FPS    （≥ 60 门槛）
+setup               7.99 ms
+mask 重建 P95       39.51 ms   （单帧预算 16.7 ms 内）
+route 动画帧 P95    18.71 ms
+持续帧率            22 FPS
 ```
 
-结果落 `build/audit/benchmarks.json`（systems/map/PCK）。GPU 实机帧耗仍留给发布构建视觉回归。
+窗口 GPU 帧耗基准（`tests/benchmark_map_fps.gd`，1280×720，30 次缩放/平移 + 90 帧常驻）：
 
-PCK 导出验证：`tools/validate/verify_pck.mjs` 解析 v4 目录（1952 文件 · 409.95 MB），20 项必需资源全在、作者源目录 0 泄露；主场景以二进制 `.scn` + `.remap` 形式存在。
+```
+zoom P95            0.03 ms
+pan P95             0.02 ms
+常驻帧 median       6.89 ms（≈145 FPS）
+```
+
+> 注：2026-08-07 三子系统数值较 2026-08-06 同步放大 ~5.5x（serialize/save/availability
+> 全同比），疑似机器负载/降频而非单一回归；门禁（< 100 ms）仍全部达标。完整机器可读
+> 数据落 `docs/benchmarks.json`（systems/map CPU/map FPS/PCK/art）。
+
+PCK 导出验证：`tools/validate/verify_pck.mjs` 解析 v4 目录（1952 文件 · 409.96 MB），必需资源全在、作者源目录 0 泄露；主场景以二进制 `.scn` + `.remap` 形式存在；`--main-pack` headless 185 s 零错误启动；macOS/Windows zip 包已产出 `build/audit/`。

@@ -309,7 +309,7 @@ for test in tests/smoke_*.gd; do godot --headless --path . --script "$test" || e
 2. ~~先写英文源文，再完成中文行纪腔翻译与文化校对~~ ✅（12 主城 + 21 city）；
 3. ~~接入 `queue_event`、effects 和结果文本~~ ✅；
 4. ~~为每城增加真实 UI smoke~~ ✅ `smoke_21city_followups.gd` + 既有十二城/巴里黑 smoke；
-5. 完成 24 法正式课程与新增 UI 文案；
+5. ~~完成 24 法正式课程与新增 UI 文案~~ ✅（2026-08-06 T1：24 课 `lesson.*` 双语 + 16 非 MVP 占法 480 条结果文本 + 流程 UI `ui.*` 迁移）；
 6. ~~再扩展 21 city~~ ✅ 2026-08-06（见 [`21_CITY_DEEPENING_MATRIX.md`](21_CITY_DEEPENING_MATRIX.md)、G31）；其他已有 site 质检见 §4.3；
 7. 全量人工走读、存档恢复和发布候选验证。
 

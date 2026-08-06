@@ -942,9 +942,9 @@ UI 与未来正式美术不拥有规则。投掷使用命名随机流，同种�
 | `difficulty` | object | 正式内容 | 容错、速度、提示次数，不改变文化知识 |
 | `assist` | object | 正式内容 | 美术演示与教学文案；逻辑辅助已接线 |
 
-当前 `divination_lessons.json` 明示 `placeholderText: true`，标题、提示、步骤和选项是
-逻辑验证占位。依据 §5.1 与 §10，正式内容验收前必须迁移为 i18n key、补齐中英教学文案
-并逐项做文化与伤害边界校读；替换不得改变 method、type 或 pass/fail 数据契约。
+T1（2026-08-06）已把 24 课 `title/prompt/steps/clues/options` 全部迁移为 `lesson.*` i18n key，
+中英文本落库并逐项完成文化校读（G7/G18/G24/G21 通过）。`placeholderText` 字段已移除。
+替换未改变 method、type 或 pass/fail 数据契约。
 
 ### 9.3 量产美术后的特色升级
 
@@ -1486,15 +1486,22 @@ P2：
 性能测量须记录机器、构建类型、分辨率、地图缩放、存档大小和连续运行次数。单次最好值
 不作为验收；以至少 30 次的中位数和 P95 判断自动存档与地图帧耗。
 
-2026-07-30 本轮 headless 基准（MacBook Pro Mac14,9，Apple M2 Pro，32 GB，Godot
-4.7.1，40 次代表性全地图状态）：
+2026-08-07 本轮 headless 基准（MacBook Pro Apple M2 Pro，Godot 4.7.1，40 次代表
+性全地图状态；GPU 帧耗另见 `benchmark_map_fps.gd` 窗口实测）：
 
 | 项目 | 结果 | 门禁 |
 |---|---:|---:|
-| 快照序列化 P95 | 0.97 ms | < 100 ms |
-| 磁盘安全写入 median / P95 | 5.21 / 5.39 ms | P95 < 100 ms |
-| Travel availability | 6120 次 / 138.24 ms | 记录趋势 |
+| 快照序列化 P95 | 5.93 ms | < 100 ms |
+| 磁盘安全写入 median / P95 | 24.30 / 33.47 ms | P95 < 100 ms |
+| Travel availability | 6120 次 / 827.12 ms | 记录趋势 |
 | vector_map 运行包 | 90,397 B | < 200,000 B |
+| 地图缩放 P95（窗口 1280×720，30 次） | 0.03 ms | < 16.7 ms |
+| 地图平移 P95（窗口 1280×720，30 次） | 0.02 ms | < 16.7 ms |
+| 常驻地图帧 median（窗口 1280×720） | 6.89 ms（≈145 FPS） | ≥ 60 FPS |
+
+2026-07-30 基线（serialize 0.97 / save 5.21–5.39 ms）因 2026-08-06 内容增长
+（i18n 5118 条、16 非 MVP 占法 resultTexts、24 课）自然升高，门禁不变。
+完整机器可读数据见 `docs/benchmarks.json`。
 
 地图逐帧路线动画已把山脉投影、路线端点/笔刷、城市图标/尺寸移到 `setup()` 缓存。GPU
 60 FPS 与最大字号视觉帧耗仍须在非 headless 发布构建按上述 30 次口径人工记录。
