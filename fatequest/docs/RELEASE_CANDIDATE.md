@@ -22,7 +22,7 @@ done
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 ```
 
-最新结果（2026-08-07，commit `ecb2dda`，T1/O1/R1 执行计划落档复跑）：
+最新结果（2026-08-07，commit `a12f924`，T1/O1/R1 执行计划落档复跑）：
 
 | 项目 | 结果 |
 |---|---|
