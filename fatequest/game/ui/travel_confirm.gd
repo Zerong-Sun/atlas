@@ -62,8 +62,8 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 	var dest := travel.other_end(route, origin)
 	var city := db.get_record(dest)
 	var transport := I18n.t("transport.%s.name" % mode)
-	_title.text = "前往 %s" % I18n.t(city.get("name", dest))
-	_facts.text = "%s · %d 日 · %d 银 · 风险 %d/5" % [
+	_title.text = I18n.t("ui.travel.title") % I18n.t(city.get("name", dest))
+	_facts.text = I18n.t("ui.travel.facts") % [
 		transport,
 		travel.total_days(route, mode),
 		travel.total_cost(route, mode) / Market.FEN,
@@ -74,8 +74,8 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 	var intro := I18n.t(key) if not key.is_empty() else ""
 	if intro == key:
 		intro = ""
-	_intro.text = intro if not intro.is_empty() else "关于这座城市，你目前只知道一个名字与方向。"
-	_confirm.text = "确定出发 · %s →" % transport
+	_intro.text = intro if not intro.is_empty() else I18n.t("ui.travel.intro_unknown")
+	_confirm.text = I18n.t("ui.travel.confirm") % transport
 	_fit_scroll()
 
 

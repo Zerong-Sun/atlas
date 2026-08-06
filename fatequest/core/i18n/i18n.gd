@@ -88,6 +88,20 @@ static func lang() -> String:
 	return _lang
 
 
+## Enumeration join: "、" for CJK text, ", " for Latin. The separator differs by
+## script and cannot live in a key — the story compiler trims trailing
+## whitespace, which would eat the Latin ", ".
+static func list(items: PackedStringArray) -> String:
+	return "、".join(items) if _lang == "zh" else ", ".join(items)
+
+
+## Script-aware gap for a phrase the code appends after a translated label. A
+## key cannot carry it either: the compiler trims leading whitespace, so the
+## "　" (CJK) / " " (Latin) choice has to be made here.
+static func gap() -> String:
+	return "　" if _lang == "zh" else " "
+
+
 ## Parameterised keys, as produced by ConditionEvaluator.explain():
 ##   "explain.need_language:chinese"  ->  "需要通晓：汉语"
 ##

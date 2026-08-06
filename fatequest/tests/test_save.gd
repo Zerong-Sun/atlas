@@ -198,6 +198,10 @@ func run() -> bool:
 	_ok(not SaveGame.valid_slot("../escape"), "path traversal is not a valid slot")
 	_ok(not SaveGame.write("../escape", st, clock), "invalid slot cannot be written")
 
+	# Committed legacy fixtures migrate step by step instead of being forged
+	# by the current serializer on the spot (requirement §13.1).
+	_migration_fixtures()
+
 	# A future build is visible as incompatible, never migrated or rewritten.
 	var future_version := doc.duplicate(true)
 	future_version["version"] = SaveGame.VERSION + 1
@@ -207,6 +211,59 @@ func run() -> bool:
 
 	print("test_save: %s" % ("PASS" if _f == 0 else "FAIL (%d)" % _f))
 	return _f == 0
+
+
+## Committed v1/v2 save fixtures. A real old file exercises the migration
+## steps with the shapes they actually shipped in — a v1->v3 shortcut or a
+## fixture forged by today's serializer would never catch a dropped field.
+func _migration_fixtures() -> void:
+	for spec in [
+		["save_v1.json", 1, false],
+		["save_v2.json", 2, true],
+	]:
+		var fname: String = spec[0]
+		var expect_version: int = spec[1]
+		var has_character: bool = spec[2]
+		var f := FileAccess.open(
+			"res://tests/fixtures/%s" % fname, FileAccess.READ)
+		_ok(f != null, "fixture %s exists" % fname)
+		if f == null:
+			continue
+		var parsed = JSON.parse_string(f.get_as_text())
+		f.close()
+		_ok(typeof(parsed) == TYPE_DICTIONARY, "fixture %s parses" % fname)
+		if typeof(parsed) != TYPE_DICTIONARY:
+			continue
+		var doc: Dictionary = ContentDb._normalize(parsed)
+		_ok(int(doc.get("version", 0)) == expect_version,
+			"%s starts at v%d" % [fname, expect_version])
+
+		# A legacy file is readable as-is (no integrity to verify), then
+		# stepped one version at a time to the current format.
+		var status: Dictionary = SaveGame._document_status(doc)
+		_ok(status.get("status", "") == "ok",
+			"%s is readable as legacy" % fname)
+		var migrated: Dictionary = SaveGame.migrate(doc)
+		_ok(int(migrated.get("version", 0)) == SaveGame.VERSION,
+			"%s migrates to v%d" % [fname, SaveGame.VERSION])
+
+		# Full load path: safe defaults for the v2/v3 additions, and every
+		# field the old file actually carried survives.
+		var back: Dictionary = SaveGame.deserialize(doc)
+		_ok(not back.is_empty(), "%s deserializes" % fname)
+		var st: WorldState = back["state"]
+		_ok(st.city == String(doc["state"]["city"]), "%s city survives" % fname)
+		_ok(st.coins == int(doc["state"]["coins"]), "%s coins survive" % fname)
+		_ok(st.pending_events.size() == (1 if has_character else 0),
+			"%s pending_events default/kept" % fname)
+		if has_character:
+			_ok((st.character as Dictionary).get("archetype_id", "") == "polo",
+				"%s character survives" % fname)
+			_ok(st.pending_events.has("ev-kinsay-entry"),
+				"%s pending event survives" % fname)
+		_ok(st.active_journey.is_empty() and st.recovery.is_empty() \
+			and st.active_event == "",
+			"%s v3 journey defaults are empty" % fname)
 
 
 ## A world with something in every field, so nothing can pass by being empty.

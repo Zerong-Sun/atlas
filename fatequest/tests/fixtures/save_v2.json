@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "header": {
+    "city": "zayton",
+    "jdn": 2198902,
+    "date": "1294-07-23",
+    "days": 486,
+    "coins": 3217,
+    "archetype": "polo",
+    "version": 2
+  },
+  "state": {
+    "seed": "fixture-v2",
+    "jdn": 2198902,
+    "city": "zayton",
+    "coins": 3217,
+    "days_elapsed": 486,
+    "faith": "buddhism",
+    "character": {
+      "archetype_id": "polo",
+      "start_city": "tauris",
+      "birth_year": 1268,
+      "name": "Marco"
+    },
+    "fate": { "travel": 28, "rapport": 15, "wealth": 22 },
+    "languages": ["persian", "chinese"],
+    "items": ["it-paiza"],
+    "goods": { "silk": 6, "pepper": 2 },
+    "cargo_slots": 12,
+    "revealed": {
+      "tauris": 3,
+      "zayton": 3,
+      "kinsay": 2,
+      "rt-tauris-baldacum": 1,
+      "rt-kinsay-zayton": 2
+    },
+    "unlocked_routes": ["rt-tauris-baldacum", "rt-kinsay-zayton"],
+    "learned_divinations": ["iching"],
+    "flags": { "fl-good-sailing-window": true },
+    "city_reputation": { "zayton": 4, "kinsay": 1 },
+    "band_reputation": { "china": 2 },
+    "retainers": [
+      { "id": "rt-lin", "present": true, "mood": 16 }
+    ],
+    "once_fired": { "ev-zayton-entry": true },
+    "stickers": ["st-zayton-haven"],
+    "codex": ["cx-monsoon", "cx-balc"],
+    "etiquette": { "china": 2, "steppe": 1 },
+    "pending_events": ["ev-kinsay-entry"],
+    "birthdate_jdn": 2184249,
+    "start_city": "tauris",
+    "visited": ["tauris", "zayton"],
+    "longest_leg": {},
+    "best_trade": {},
+    "purchases": {}
+  },
+  "extra": { "archetype": "polo" }
+}

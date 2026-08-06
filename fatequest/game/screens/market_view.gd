@@ -103,8 +103,8 @@ func open(city: Dictionary, p_state: WorldState, p_jdn: int) -> void:
 
 
 func refresh() -> void:
-	_purse.text = "囊中 %d 银" % (state.coins / Market.FEN)
-	_hold_label.text = "货格 %d/%d" % [market.cargo_used(state), state.cargo_slots]
+	_purse.text = I18n.t("ui.market.purse") % (state.coins / Market.FEN)
+	_hold_label.text = I18n.t("ui.market.cargo") % [market.cargo_used(state), state.cargo_slots]
 
 	for c in _stock_box.get_children():
 		c.queue_free()
@@ -116,7 +116,7 @@ func refresh() -> void:
 
 	if state.goods.is_empty():
 		var none := Label.new()
-		none.text = "（空）"
+		none.text = I18n.t("ui.market.empty")
 		none.add_theme_font_size_override("font_size", UiScale.ui())
 		none.add_theme_color_override("font_color", Palette.ink_soft())
 		_hold_box.add_child(none)
@@ -176,7 +176,7 @@ func _stock_row(good: Dictionary) -> Control:
 
 	var check := market.can_buy(good, _city, state, jdn)
 	var sub := Label.new()
-	sub.text = "%d 银 · %s · 占 %d 格" % [
+	sub.text = I18n.t("ui.market.buy_sub") % [
 		int(check["price"]) / Market.FEN, _demand_note(good), int(good.get("bulk", 1))]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
@@ -190,7 +190,7 @@ func _stock_row(good: Dictionary) -> Control:
 		var why: Array[String] = []
 		for r in check["reasons"]:
 			why.append(I18n.fmt(String(r)))
-		buy.tooltip_text = "、".join(PackedStringArray(why))
+		buy.tooltip_text = I18n.list(PackedStringArray(why))
 	else:
 		buy.pressed.connect(func(): _buy(good))
 	row.add_child(buy)
@@ -227,7 +227,7 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 
 	var price := market.sell_price(good, _city, jdn, state.seed)
 	var sub := Label.new()
-	sub.text = "此地可售 %d 银 · %s" % [price / Market.FEN, _demand_note(good)]
+	sub.text = I18n.t("ui.market.sell_sub") % [price / Market.FEN, _demand_note(good)]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

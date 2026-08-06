@@ -130,7 +130,7 @@ func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null
 		text = ""
 	_body.text = _auto_paragraphs(text)
 	if I18n.is_untranslated(body_key):
-		_body.text += "\n[i][color=#6b5a3c](尚未译出，暂显英文原文)[/color][/i]"
+		_body.text += "\n[i][color=#6b5a3c]%s[/color][/i]" % I18n.t("ui.i18n.pending")
 
 	_portrait.texture = portrait
 	_portrait.visible = portrait != null
@@ -176,7 +176,7 @@ func show_result(result_key: String) -> void:
 	var text := I18n.t(result_key)
 	_body.text = _auto_paragraphs(text)
 	if I18n.is_untranslated(result_key):
-		_body.text += "\n[i][color=#6b5a3c](尚未译出，暂显英文原文)[/color][/i]"
+		_body.text += "\n[i][color=#6b5a3c]%s[/color][/i]" % I18n.t("ui.i18n.pending")
 
 	for c in _choices.get_children():
 		c.queue_free()
@@ -208,8 +208,8 @@ func _make_choice(s: Dictionary, index: int) -> Button:
 		var why: Array[String] = []
 		for r in s["reasons"]:
 			why.append(I18n.fmt(String(r)))
-		var joined := "、".join(PackedStringArray(why))
-		btn.text += "　（%s）" % joined
+		var joined := I18n.list(PackedStringArray(why))
+		btn.text += I18n.gap() + I18n.t("ui.why_fmt") % joined
 		btn.tooltip_text = joined
 	else:
 		btn.pressed.connect(func(): choice_taken.emit(index))
@@ -223,7 +223,7 @@ func _origin_note(ev: Dictionary) -> String:
 		"source":
 			var ref: Dictionary = lore.get("ref", {})
 			var ch := String(ref.get("chapterId", ""))
-			return I18n.t("ui.source_polo") + " %s" % ch if ch != "" else "据史料"
+			return I18n.t("ui.source_polo") + " %s" % ch if ch != "" else I18n.t("ui.source_record")
 		"hybrid":
 			return I18n.t("ui.source_hybrid")
 		"authored":

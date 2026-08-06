@@ -8,41 +8,57 @@
 ## 0. 自动门禁与回归（每次候选前复跑）
 
 ```bash
-node tools/validate/validate.mjs --quiet                       # 25 道内容门禁
+node tools/validate/validate.mjs --quiet                       # 28 道内容门禁
 node tools/lore/story.mjs check                                # 译文时效
 node tests/test_i18n_lines.mjs                                 # i18n 行测试
 /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/run_tests.gd
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/audit_logic.gd
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/audit_divination_readings.gd
 for test in tests/smoke_*.gd; do
   /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script "$test" || exit 1
 done
 /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/benchmark_systems.gd
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script tests/benchmark_map.gd
+node tools/validate/verify_pck.mjs build/audit/FateQuest.pck
 ```
 
-最新结果（2026-08-03）：
+最新结果（2026-08-06，commit `94e708e`，R1 全量门禁复跑）：
 
 | 项目 | 结果 |
 |---|---|
 | 内容门禁 | ✅ `all gates pass`（0 errors） |
-| story 时效 | ✅ `2646 current · 0 stale · 0 missing` |
+| story 时效 | ✅ `3619 current · 0 stale · 0 missing` |
 | i18n 行测试 | ✅ `ALL CHECKS PASSED` |
 | 内核单测 | ✅ `SUITE: PASS`（16 个） |
-| UI smoke | ✅ **23 个全绿**（含新增 `smoke_map_display.gd`、`smoke_dock_drag.gd`、`smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
-| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 1.10 ms · save P95 5.98 ms） |
+| 逻辑审计 | ✅ `tests/audit_logic.gd` 0 项问题 |
+| 占法阅读审计 | ✅ `tests/audit_divination_readings.gd` 24 法 reading key 双语全覆盖 |
+| UI smoke | ✅ **26 个全绿**（含 `smoke_21city_followups`、`smoke_map_display.gd`、`smoke_dock_drag.gd`、`smoke_twelve_cities.gd`、`smoke_ui_overlay.gd`） |
+| 系统基准 | ✅ `BENCHMARK: PASS`（serialize P95 1.12 ms · save P95 5.98 ms · save 7712 B） |
+| 地图基准 | ✅ `MAP_BENCH: PASS`（setup 2.26 ms · mask P95 7.81 ms · travel frame P95 7.15 ms · sustained 88 FPS） |
+| PCK 结构验证 | ✅ `verify_pck.mjs` PASS（1952 文件 · 20 必需全在 · 0 泄露） |
+
+`build/audit/benchmarks.json` 落档 R1 复跑轮次的 systems/map 基准与 PCK 验证结果。
 
 ---
 
 ## 1. 数据门禁与警告归属
 
 - **门禁**：`validate.mjs --quiet` → ✅ 0 errors。
-- **warning 归属**：当前 advisory WARN 为既有已知项（G20 刺桐模板完整提示、G27 草原事件占比），
-  无新增未知 warning。
+- **warning 归属**：当前 advisory WARN 全部为已知信息性项，无新增未知：
+  - G2b（2）：`mentors_divination.json` 中 2 个教学变体事件（`ev-tauris-mentor-astrodice`、`ev-baldacum-mentor-geomancy`）未被城市/路线直接引用——占法已可由 tauris/baldacum 的既有 mentor 事件（含对应 choice）习得，接上会形成重复教学入口，故保持为预留变体，非 P0/P1；
+  - G15（1）：0 桩剩余，纯信息；
+  - G17（1）：`en.json` 中 1015 个 `ev.*` 键未被事件 title/body/choice 直接引用——占法结果文本等合法先于事件的文本键，纯信息；
+  - G20（1）：刺桐模板城市完整提示；
+  - G27（1）：草原事件占路线事件 59%，属既有平衡备注。
+- **已接线内容**：4 个占法用法站点（`ev-ormus-astrodice-tide`、`ev-baldacum-geomancy-court`、`ev-kiovia-runes-ford`、`ev-zayton-jiaobei-ask`）已加入对应城市 `sites`，`when.flags` 保证仅"已学该占法"后出现，不干扰新手流程。
 - **状态**：✅ 通过。
 
 ## 2. 中英关键流程通读
 
 - **story check**：✅ 0 stale / 0 missing。
 - **12 城后果链**：✅ `smoke_twelve_cities.gd` 逐城走完 12 链 × 2 重要分支（consequence → resolution → 城市），0 失败。
-- **人工项**：发布候选前由人通读一遍中英各关键流程（入口 → 探索 → 导师 → 出行 → 结局）。
+- **全分支通读清单**：✅ [`R1_READTHROUGH.md`](R1_READTHROUGH.md) 已备（12 主城 + 21 城深化 + 24 课 + 24 占法 + 路遇 + 8 结局 + 存读档 + 性能人工项）。
+- **人工项**：按通读清单逐项打勾（中英各一遍），发现登记表回填 `QA_FIX_LIST`。
 
 ## 3. P0 / P1 归零
 
@@ -57,7 +73,8 @@ done
 
 ## 5. 离线导出资产完整性
 
-- **PCK**：✅ `build/audit/FateQuest.pck`（409,429,492 B）`--export-pack` 成功，含 `vector_map.json` 与全部接线资产。
+- **PCK**：✅ `build/audit/FateQuest.pck`（409,953,036 B）`--export-pack` 成功，含 `vector_map.json` 与全部接线资产。
+- **PCK 结构验证**：✅ `tools/validate/verify_pck.mjs` 解析 v4 目录（1952 文件），20 项必需资源全在、`content/story/docs/tests/tools/worldmap/_archive/_sheets` 0 泄露；主场景以二进制 `.scn` + `.remap` 形式存在。
 - **启动**：✅ `--main-pack` 主包启动 85 s 零错误（后台验证后主动停止）。
 - **人工项**：三目标平台可执行文件（Linux/macOS/Windows）需对应官方 export template 与实机验收。
 
@@ -70,7 +87,9 @@ done
 
 ## 7. 外部 60 分钟试玩
 
-- **状态**：⏳ 待执行。
+- **交接包**：✅ [`PLAYTEST_README.md`](PLAYTEST_README.md)（运行/构建命令/记录口径/已知限制）+ [`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md)（反馈表单）+ `build/audit/FateQuest.pck`（409.95 MB，已验证）。
+- **固定 seed**：按身份确定（`fatequest:polo` / `fatequest:steppe` / `fatequest:merchant`），同一身份世界确定、可复现。
+- **状态**：⏳ 待外部执行（三平台可执行档需先安装 export templates，见交接包 §3）。
 - **流程**：新玩家 / 三个身份各 30–60 分钟；记录完成率、断点、P0/P1/P2 清单、固定 seed、构建 commit、
   验证器结果（§13.5）。
 - **出口**：0 个 P0/P1，P2 有负责人。
@@ -83,7 +102,7 @@ done
 
 ## 9. README / STATUS / 需求书 / 发行说明一致
 
-- **自动**：`docs/STATUS.md` 数据表与实际表一致（events 382、goods 60、art 674）。
+- **自动**：`docs/STATUS.md` 数据表与实际表一致（events 415、goods 60、art 674）。
 - **人工项**：发版前核对 README、STATUS、需求书版本号与发行说明。
 
 ---
@@ -93,13 +112,14 @@ done
 | # | 项 | 状态 |
 |---|---|---|
 | 1 | 数据门禁 + warning 归属 | ✅ 自动 |
-| 2 | 中英关键流程通读 | 🟡 自动部分✅；人工通读待签 |
+| 2 | 中英关键流程通读 | 🟡 清单已备（`R1_READTHROUGH.md`）；人工通读待签 |
 | 3 | P0/P1 归零 | 🟡 无已知；60 分钟试玩待签 |
 | 4 | 三身份/五槽/坏档 | 🟡 自动部分✅；§13.2 人工步骤待签 |
-| 5 | 离线导出资产 | 🟡 PCK✅；三平台可执行文件待签 |
+| 5 | 离线导出资产 | 🟡 PCK✅（`verify_pck` PASS）；三平台可执行文件待模板装后构建 |
 | 6 | 覆盖层可退出 | 🟡 自动部分✅；试玩确认待签 |
-| 7 | 外部 60 分钟试玩 | ⏳ 待执行 |
-| 8 | 版权/工具/史料/文化 | 🟡 大部分归档；文化审阅待签 |
+| 7 | 外部 60 分钟试玩 | 🟡 交接包已备（`PLAYTEST_README`/`FEEDBACK`/PCK）；试玩待执行 |
+| 8 | 版权/工具/史料/文化 | 🟡 大部分归档（`AI_USAGE.md` 待建）；文化审阅待签 |
 | 9 | 文档一致 | 🟡 自动部分✅；发版前核对待签 |
 
-**结论**：可自动验证的发布候选门禁全部通过；剩余为外部试玩（第 7 项）与三平台实机验收等人工签署项。
+**结论**：可自动验证的发布候选门禁全部通过；试玩交接包（运行说明 + 反馈表单 + PCK）与全分支
+通读清单已备齐。剩余为外部试玩（第 7 项）、三平台可执行档构建与实机验收、文化审阅等人工签署项。

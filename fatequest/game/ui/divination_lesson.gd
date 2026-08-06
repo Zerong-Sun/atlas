@@ -109,16 +109,19 @@ func _build_order(rng: Rng) -> void:
 		shuffled[i] = shuffled[j]
 		shuffled[j] = tmp
 	for step in shuffled:
-		var text := String(step)
-		_stage.add_child(Panels.styled_button(text, _pick_order_step.bind(text)))
+		var key := String(step)
+		var text := I18n.t(key)
+		_stage.add_child(Panels.styled_button(text, _pick_order_step.bind(key)))
 
 
 func _pick_order_step(step: String) -> void:
 	if _finished:
 		return
 	var result := _engine.pick_step(step)
-	_status.text = I18n.t("lesson.completed_fmt") % " → ".join(
-		PackedStringArray(_engine.picked_steps))
+	var done: PackedStringArray = []
+	for k in _engine.picked_steps:
+		done.append(I18n.t(String(k)))
+	_status.text = I18n.t("lesson.completed_fmt") % " → ".join(done)
 	_handle_result(result, I18n.t("lesson.order_pass"), I18n.t("lesson.order_fail"))
 
 
@@ -126,11 +129,11 @@ func _build_interpret() -> void:
 	var clues: Array = _lesson.get("clues", [])
 	for i in clues.size():
 		_stage.add_child(Panels.styled_button(
-			I18n.t("lesson.observe_fmt") % String(clues[i]), _observe.bind(i)))
+			I18n.t("lesson.observe_fmt") % I18n.t(String(clues[i])), _observe.bind(i)))
 	var options: Array = _lesson.get("options", [])
 	for i in options.size():
 		_stage.add_child(Panels.styled_button(
-			String(options[i]), _pick_interpret.bind(i)))
+			I18n.t(String(options[i])), _pick_interpret.bind(i)))
 
 
 func _observe(index: int) -> void:
@@ -202,7 +205,7 @@ func _build_throw() -> void:
 	var options: Array = _lesson.get("options", [])
 	for i in options.size():
 		_stage.add_child(Panels.styled_button(
-			String(options[i]), _pick_interpret.bind(i)))
+			I18n.t(String(options[i])), _pick_interpret.bind(i)))
 
 
 func _throw_tool() -> void:

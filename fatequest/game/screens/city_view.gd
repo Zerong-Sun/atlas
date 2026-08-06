@@ -158,14 +158,14 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 	var site0 := MapArt.site_scene(String(city.get("id", "")), 0)
 	_bg.texture = site0 if site0 != null else MapArt.city_explore_bg(city, 0)
 
-	_hint.text = ("点击一处走近看看 · 共 %d 处" % offered) if offered > 0 \
+	_hint.text = (I18n.t("ui.city.tap_hint") % offered) if offered > 0 \
 		else I18n.t("ui.seen_everything")
 	_market_btn.visible = city.has("market")
 
 
 ## Money, hold and day, repeated here because the HUD is behind this screen.
 func set_status(coins: int, cargo_used: int, cargo_max: int, day: int, date: String) -> void:
-	_status.text = "%d 银 · 货格 %d/%d · 第 %d 日 · %s" % [coins, cargo_used, cargo_max, day, date]
+	_status.text = I18n.t("ui.city.status") % [coins, cargo_used, cargo_max, day, date]
 
 
 func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Control:

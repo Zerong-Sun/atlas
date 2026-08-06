@@ -199,7 +199,7 @@ func _build_desk() -> void:
 		_desk.add_child(wr)
 
 	var title := Label.new()
-	title.text = "远行之书\nThe Book of Far Roads"
+	title.text = I18n.t("ui.boot.title_a") + "\n" + I18n.t("ui.boot.title_b")
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.add_theme_font_size_override("font_size", 28)
 	title.add_theme_color_override("font_color", Color("e8c46a"))
@@ -231,7 +231,7 @@ func _build_desk() -> void:
 		books.add_child(btn)
 
 	var sub := Label.new()
-	sub.text = "\n%d 座城 · %d 条路线 · %d 条事件\n%d 种商品 · %d 位随从 · %d 种占法\n" % [
+	sub.text = I18n.t("ui.boot.sub") % [
 		db.cities().size(), db.get_table("routes").size(), db.get_table("events").size(),
 		db.get_table("goods").size(), db.get_table("retainers").size(),
 		DivinationRegistry.ids().size()]
@@ -309,19 +309,20 @@ func _draw_character() -> void:
 	var title := Panels.heading(I18n.t("ui.you_drew") % I18n.t(_drawn_archetype.get("name", "")))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_draw_card.add_child(title)
-	_draw_card.add_child(Panels.label("身份文化：%s　公开信仰：%s" % [
-		culture, faith], UiScale.ui(), Palette.ink_soft()))
-	_draw_card.add_child(Panels.label("起点城市：%s" % _city_name(
+	_draw_card.add_child(Panels.label(I18n.t("ui.boot.identity") % [
+		I18n.t("ui.culture.%s" % culture), I18n.t("faith.%s" % faith)],
+		UiScale.ui(), Palette.ink_soft()))
+	_draw_card.add_child(Panels.label(I18n.t("ui.boot.start_city") % _city_name(
 		String(_drawn_archetype.get("start", ""))), UiScale.body(), Palette.ink()))
 
 	var known_names: Array[String] = []
 	for cid in _drawn_archetype.get("knownCities", []):
 		known_names.append(_city_name(String(cid)))
-	_draw_card.add_child(Panels.label("开局听说过：%s" % "、".join(
+	_draw_card.add_child(Panels.label(I18n.t("ui.boot.heard_of") % I18n.list(
 		PackedStringArray(known_names)), UiScale.ui(), Palette.ink_soft()))
 	var known_routes: Array = _drawn_archetype.get("knownRoutes", [])
 	_draw_card.add_child(Panels.label(
-		"已知道路：%d 条（知道城市并不等于知道怎样抵达）" % known_routes.size(),
+		I18n.t("ui.boot.roads_known") % known_routes.size(),
 		UiScale.ui(), Palette.ink_soft()))
 
 	var row := HBoxContainer.new()
@@ -460,7 +461,7 @@ func _begin_loaded(slot: String) -> bool:
 
 func _show_desk_load_error(slot: String) -> void:
 	var old := _desk.get_node_or_null("LoadError")
-	var text := "无法读取 %s；现有存档未被改写。可开始新旅程或到存档管理恢复备份。" % slot
+	var text := I18n.t("ui.save.read_failed") % slot
 	if old is Label:
 		(old as Label).text = text
 		return
@@ -1227,10 +1228,10 @@ func _open_save_manager() -> void:
 
 func _on_manual_save(slot: String) -> void:
 	if _save(slot):
-		_say("[color=#4a6a4a]· 已保存至 %s[/color]" % slot)
+		_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.save.saved") % slot)
 		_save_manager.trust_slot_header(slot)
 	else:
-		_say("[color=#8a4a3a]· 保存失败：%s；原存档和备份保持不变[/color]" % slot)
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.save.save_failed") % slot)
 		_save_manager.mark_slot_for_deep_check(slot)
 
 
@@ -1238,16 +1239,16 @@ func _on_manual_load(slot: String) -> void:
 	if _load(slot):
 		_save_layer.visible = false
 	else:
-		_say("[color=#8a4a3a]· 读取失败：%s；可尝试恢复备份[/color]" % slot)
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.save.load_failed") % slot)
 		_save_manager.mark_slot_for_deep_check(slot)
 
 
 func _on_backup_load(slot: String) -> void:
 	if SaveGame.restore_backup(slot) and _load(slot):
-		_say("[color=#4a6a4a]· 已恢复并读取 %s 的上一份备份[/color]" % slot)
+		_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.save.restored") % slot)
 		_save_layer.visible = false
 	else:
-		_say("[color=#8a4a3a]· 备份无法恢复：%s[/color]" % slot)
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.save.restore_failed") % slot)
 	_save_manager.refresh()
 
 
@@ -1424,19 +1425,20 @@ func _build_ending() -> void:
 func _open_ending() -> void:
 	var e := _ending.best(state)
 	var body: RichTextLabel = _ending_ui["body"]
-	_ending_ui["title"].text = "停笔"
+	_ending_ui["title"].text = I18n.t("ui.ending.title")
 	_ending_ui["confirm"].visible = true
 
 	var years := maxi(1, int(state.days_elapsed / 365.0))
-	var lines := "[color=#6a5a48]若在此地合上这本书：[/color]\n\n"
-	lines += "　行过 %d 座城，历 %d 年，日 %d\n" % [state.visited.size(), years, state.days_elapsed]
-	lines += "　起于 %s，止于 %s\n" % [
+	var ind := I18n.gap()
+	var lines := "[color=#6a5a48]%s[/color]\n\n" % I18n.t("ui.ending.intro")
+	lines += ind + I18n.t("ui.ending.journey") % [state.visited.size(), years, state.days_elapsed] + "\n"
+	lines += ind + I18n.t("ui.ending.path") % [
 		_city_name(state.start_city) if not state.start_city.is_empty() else I18n.t("ui.not_started"),
-		_city_name(state.city)]
-	lines += "　囊中 %d 钱，同行 %d 人，图鉴 %d 条\n" % [
-		state.coins / Market.FEN, state.retainers.size(), state.codex.size()]
-	lines += "\n[color=#6a5a48]这本书会被称作：[/color]\n\n"
-	lines += "　[b]%s[/b]\n" % I18n.t(String(e.get("name", "")))
+		_city_name(state.city)] + "\n"
+	lines += ind + I18n.t("ui.ending.ledger") % [
+		state.coins / Market.FEN, state.retainers.size(), state.codex.size()] + "\n"
+	lines += "\n[color=#6a5a48]%s[/color]\n\n" % I18n.t("ui.ending.named")
+	lines += ind + "[b]%s[/b]\n" % I18n.t(String(e.get("name", "")))
 
 	# Endings the run does not yet reach, so the player can see what stopping
 	# now would cost them. Naming the unreached ones is the whole reason a
@@ -1444,12 +1446,12 @@ func _open_ending() -> void:
 	var have := {}
 	for q in _ending.qualifying(state):
 		have[String(q.get("id", ""))] = true
-	var missed: Array = []
+	var missed: PackedStringArray = []
 	for cand in db.get_table("endings"):
 		if not have.has(String(cand.get("id", ""))):
 			missed.append(I18n.t(String(cand.get("name", ""))))
 	if not missed.is_empty():
-		lines += "\n[color=#8a7a68]走下去还可能成为：%s[/color]\n" % ", ".join(missed)
+		lines += "\n[color=#8a7a68]%s[/color]\n" % I18n.t("ui.ending.missed") % I18n.list(missed)
 
 	body.text = lines
 	# Preview the sticker art the ending would award.
@@ -1521,12 +1523,12 @@ func _open_party() -> void:
 
 	# What the hold is on each kind of road, so the player can see the shape of
 	# the party rather than one number.
-	list.add_child(Panels.label("货格　陆路 %d　海路 %d" % [
+	list.add_child(Panels.label(I18n.t("ui.party.cargo_slots") % [
 		_roster.effective_slots(state, "land"), _roster.effective_slots(state, "sea")],
 		UiScale.ui(), Palette.ink_soft()))
 
 	if state.retainers.is_empty():
-		list.add_child(Panels.label("你独自上路。", UiScale.body(), Palette.ink_soft()))
+		list.add_child(Panels.label(I18n.t("ui.party.alone"), UiScale.body(), Palette.ink_soft()))
 	for m in state.retainers:
 		list.add_child(_party_row(m))
 
@@ -1534,14 +1536,14 @@ func _open_party() -> void:
 	var pool := _roster.candidates(state, state.city, "open")
 	if not pool.is_empty():
 		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
-		list.add_child(Panels.label("此地可雇：", UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.label(I18n.t("ui.party.hire_here"), UiScale.ui(), Palette.ink()))
 		for r in pool:
 			list.add_child(_hire_row(r))
 
 	var short := _roster.divined_shortlist(state, state.city, rng)
 	if not short.is_empty():
 		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
-		list.add_child(Panels.label("占卜抽选：", UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.label(I18n.t("ui.party.divined_pick"), UiScale.ui(), Palette.ink()))
 		for entry in short:
 			list.add_child(_divined_hire_row(entry))
 	_party["layer"].visible = true
@@ -1595,9 +1597,9 @@ func _party_row(m: Dictionary) -> Control:
 	var cargo: Dictionary = rec.get("cargo", {})
 	var carries := "—"
 	if not cargo.is_empty():
-		carries = "%s +%d 格" % [
+		carries = I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
-	col.add_child(Panels.label("月俸 %d 银　%s　情谊 %d/31　%s" % [
+	col.add_child(Panels.label(I18n.t("ui.party.wage_line") % [
 		int(rec.get("wage", {}).get("amount", 0)) / Market.FEN,
 		carries, int(m.get("mood", 16)), I18n.fmt(_roster.birth_known(state, rid))],
 		UiScale.ui() - 3, Palette.ink_soft()))
@@ -1608,8 +1610,8 @@ func _party_row(m: Dictionary) -> Control:
 	btn.pressed.connect(func():
 		var over := int(of["over"])
 		if over > 0:
-			_say("[color=#8a4a3a]· 辞退 %s：%d 件货物无处可放，须先处置[/color]"
-				% [I18n.t(rec.get("name", rid)), over])
+			_say("[color=#8a4a3a]%s[/color]"
+				% I18n.t("ui.party.dismiss_overflow") % [I18n.t(rec.get("name", rid)), over])
 			return
 		var res := executor.execute(state, _roster.dismiss_effects(rid),
 			{"rng": rng, "event_id": "dismiss"})
@@ -1617,7 +1619,7 @@ func _party_row(m: Dictionary) -> Control:
 		_refresh_hud()
 		_open_party())
 	if int(of["over"]) > 0:
-		btn.tooltip_text = "会有 %d 件货物无处可放" % int(of["over"])
+		btn.tooltip_text = I18n.t("ui.party.dismiss_tip") % int(of["over"])
 	row.add_child(btn)
 	return panel
 
@@ -1645,9 +1647,9 @@ func _hire_row(rec: Dictionary) -> Control:
 	row.add_child(col)
 	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
 	var cargo: Dictionary = rec.get("cargo", {})
-	var note := "月俸 %d 银" % (int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
+	var note := I18n.t("ui.party.wage") % (int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
 	if not cargo.is_empty():
-		note += "　%s +%d 格" % [
+		note += I18n.gap() + I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(note, UiScale.ui() - 3, Palette.ink_soft()))
 
@@ -1748,9 +1750,9 @@ func _open_bag() -> void:
 			continue
 		var n := int(state.goods[gid])
 		var worth := _market.sell_price(g, here, state.jdn, state.seed) if here.has("market") else 0
-		var line := "%s ×%d　占 %d 格" % [I18n.t(g.get("name", "")), n, int(g.get("bulk", 1)) * n]
+		var line := I18n.t("ui.cargo.bulk_line") % [I18n.t(g.get("name", "")), n, int(g.get("bulk", 1)) * n]
 		if worth > 0:
-			line += "　此地可售 %d 银" % (worth / Market.FEN)
+			line += I18n.gap() + I18n.t("ui.cargo.sell_here") % (worth / Market.FEN)
 		list.add_child(_icon_line(MapArt.goods_icon(String(gid)), line))
 		rows += 1
 
@@ -1760,10 +1762,10 @@ func _open_bag() -> void:
 		rows += 1
 
 	if rows == 0:
-		list.add_child(Panels.label("（空手上路）", UiScale.ui(), Palette.ink_soft()))
+		list.add_child(Panels.label(I18n.t("ui.cargo.empty_hands"), UiScale.ui(), Palette.ink_soft()))
 
 	list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
-	list.add_child(Panels.label("货格 %d/%d　囊中 %d 银" % [
+	list.add_child(Panels.label(I18n.t("ui.cargo.purse_line") % [
 		_market.cargo_used(state), state.cargo_slots, state.coins / Market.FEN],
 		UiScale.ui(), Palette.ink_soft()))
 	# Learned arts and the codex belong here too — they are what the journey
@@ -1772,10 +1774,10 @@ func _open_bag() -> void:
 		var arts: Array[String] = []
 		for d in state.learned_divinations:
 			arts.append(I18n.t("div.%s.name" % d))
-		list.add_child(Panels.label("所习占法：" + "、".join(PackedStringArray(arts)),
-			UiScale.ui(), Palette.ink_soft()))
-	list.add_child(Panels.label("图鉴 %d 条　贴纸 %d 枚" % [state.codex.size(), state.stickers.size()],
-		UiScale.ui(), Palette.ink_soft()))
+		list.add_child(Panels.label(I18n.t("ui.bag.arts_known") % I18n.list(
+			PackedStringArray(arts)), UiScale.ui(), Palette.ink_soft()))
+	list.add_child(Panels.label(I18n.t("ui.bag.codex_stickers") % [
+		state.codex.size(), state.stickers.size()], UiScale.ui(), Palette.ink_soft()))
 	_bag["layer"].visible = true
 	Motion.crossfade_in(_bag["layer"], 0.18)
 
@@ -1960,7 +1962,7 @@ func _restore_document(doc: Dictionary) -> bool:
 	# The RNG is reseeded from the saved seed, so a loaded world continues
 	# deterministically rather than diverging from the run that produced it.
 	rng = Rng.new(state.seed)
-	_say("[color=#4a6a4a]—— 读档：%s，第 %d 日 ——[/color]" % [_city_name(state.city), state.days_elapsed])
+	_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.load.banner") % [_city_name(state.city), state.days_elapsed])
 	# Restored numbers are not news. Without this the HUD would light up the
 	# whole bar green on load, as though the player had just earned three
 	# hundred days and a purse in one step.
@@ -1990,7 +1992,7 @@ func _sync_city_status() -> void:
 	var g := clock.date.civil(String(c.get("culture", "latin")))
 	_city_view.set_status(state.coins / Market.FEN, _market.cargo_used(state),
 		state.cargo_slots, state.days_elapsed,
-		"%d年%d月%d日" % [g["year"], g["month"], g["day"]])
+		I18n.t("ui.date.full") % [g["year"], g["month"], g["day"]])
 
 
 func _close_city() -> void:
@@ -2154,7 +2156,7 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 		choose_ctx["event_committed"] = true
 	var res := events.choose(ev, index, state, rng, choose_ctx)
 	if not res.resolved:
-		_say("[color=#8a4a3a]· 状态已经变化，该选择未结算；请重新选择[/color]")
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.choice.stale"))
 		if state.active_event == String(ev.get("id", "")):
 			_show_event(ev)
 		elif _city_view.visible:
@@ -2174,10 +2176,11 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 		var sym := DivinationResultView.symbol_texture(res.reading)
 		if sym != null and _dialog != null:
 			# Surface the cast symbol briefly in the journal header line.
-			_say("[color=#6a5a48]〔%s〕[/color]" % String(res.reading.get("method", "")))
+			_say("[color=#6a5a48]%s[/color]" % I18n.t("ui.method_bracket") % DivinationResultView.method_name(
+				String(res.reading.get("method", ""))))
 		_say(DivinationResultView.as_richtext(res.reading))
 	if not res.rejected.is_empty():
-		_say("  [color=#8a4a3a]· %d 项未能达成[/color]" % res.rejected.size())
+		_say("  [color=#8a4a3a]%s[/color]" % I18n.t("ui.choice.rejected") % res.rejected.size())
 	if state.active_event == String(ev.get("id", "")):
 		executor.execute(state, [
 			{
@@ -2286,7 +2289,7 @@ func _show_pending_pause() -> void:
 	_clear_panel()
 	_panel.add_child(Panels.heading(I18n.t("ui.pending_consequences")))
 	_panel.add_child(Panels.label(
-		"连续事件已暂停，避免长链阻断自由操作。继续后将处理下一项。",
+		I18n.t("ui.chain.paused"),
 		UiScale.ui(), Palette.ink_soft()))
 	_panel.add_child(Panels.primary_button(I18n.t("ui.continue_pending"), _continue_pending))
 
@@ -2374,14 +2377,14 @@ func _show_roads(from_city: bool = false) -> void:
 				var rr: Array[String] = []
 				for reason in av["reasons"]:
 					rr.append(I18n.fmt(String(reason)))
-				var why := "、".join(PackedStringArray(rr))
+				var why := I18n.list(PackedStringArray(rr))
 				# Say why on the face of the button, not only in a tooltip a
 				# player has to hover a greyed-out control to discover — the
 				# event dialog already states its reasons this way.
-				btn.text += "　（%s）" % why
+				btn.text += I18n.gap() + I18n.t("ui.why_fmt") % why
 				btn.tooltip_text = why
 			else:
-				btn.tooltip_text = "%s：%d 日，船脚 %d 银" % [_city_name(dest), days, cost]
+				btn.tooltip_text = I18n.t("ui.route.tooltip") % [_city_name(dest), days, cost]
 				btn.pressed.connect(_on_depart.bind(r, String(mode)))
 			_panel.add_child(btn)
 			any = true
@@ -2411,7 +2414,7 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		var reasons: Array[String] = []
 		for reason in trip.get("reasons", []):
 			reasons.append(I18n.fmt(String(reason)))
-		_say("[color=#8a4a3a]· 无法出发：%s[/color]" % "、".join(
+		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.route.cannot") % I18n.list(
 			PackedStringArray(reasons)))
 		# A road the player is standing in may still be a town interior —
 		# returning to a bare map would strand them outside their own city.
@@ -2452,7 +2455,7 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		_log_effects(lr)
 	clock = WorldClock.new(state.jdn)
 	if _audio_ready(): _audio.set_jdn(state.jdn)
-	_say("[color=#4a6a4a]启程 → %s（%d 日，%d 钱）[/color]" % [
+	_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.route.departed") % [
 		_city_name(trip["destination"]), trip["days"], trip["cost"] / 100])
 
 	# Route-specific encounters were deterministically queued by Travel before
@@ -2521,7 +2524,7 @@ func _on_city_clicked(c: Dictionary) -> void:
 		_city_detail_layer.visible = true
 		Motion.parchment_expand(_city_detail_card, 0.20)
 	else:
-		_say("[color=#6a6a6a]那里你还一无所知。[/color]")
+		_say("[color=#6a6a6a]%s[/color]" % I18n.t("ui.route.unknown"))
 
 
 func _city_name(cid: String) -> String:

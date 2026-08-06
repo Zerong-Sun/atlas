@@ -64,7 +64,7 @@
     { "id": "canal", "kind": "place", "en": "Grand Canal", "zh": "大运河" },
     { "id": "west-lake", "kind": "place", "en": "West Lake", "zh": "西湖" },
     { "id": "pepper-ship", "kind": "good", "en": "pepper cargo", "zh": "胡椒货载" },
-    { "id": "moon-block", "kind": "good", "en": "jiaobei / moon blocks", "zh": "筊杯／杯筊", "note": "筊杯 与 杯筊 同物异序" },
+    { "id": "moon-block", "kind": "good", "en": "jiaobei / moon blocks", "zh": "筊杯／杯筊／筊", "note": "筊杯 与 杯筊 同物异序；筊 单独用于动词（掷筊）与复合词（筊问）" },
     { "id": "sheng-jiao", "kind": "title", "en": "Sheng-jiao", "zh": "圣筊" },
     { "id": "yin-jiao", "kind": "title", "en": "Yin-jiao", "zh": "阴筊" },
     { "id": "plum-blossom", "kind": "title", "en": "Plum Blossom numerology", "zh": "梅花易数" },

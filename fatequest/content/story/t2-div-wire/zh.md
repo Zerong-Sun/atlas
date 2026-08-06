@@ -223,7 +223,7 @@ stamps:
 
 ## ev.road.jiaobei_counsel.title
 
-途中筊问
+途中掷筊
 
 ## ev.road.jiaobei_counsel.body
 
@@ -231,7 +231,7 @@ stamps:
 
 ## ev.road.jiaobei_counsel.choice.cast
 
-起卦
+掷筊
 
 ## ev.road.jiaobei_counsel.choice.walk
 

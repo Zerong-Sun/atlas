@@ -87,7 +87,7 @@ stamps                 1838 current · 0 stale
 ```bash
 cd fatequest
 python3 tools/art/audit.py              # 美术完整性（需 pillow+numpy）
-node tools/validate/validate.mjs        # 25 道内容门禁
+node tools/validate/validate.mjs        # 28 道内容门禁
 node tools/lore/story.mjs check         # 译文时效
 godot --headless --path . --script tests/run_tests.gd
 ```

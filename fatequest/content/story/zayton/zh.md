@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: 1a9439206005
+source_rev: a0b0af3b38c5
 status: translated
 translator: 人工校译
 notes: >
@@ -116,6 +116,8 @@ stamps:
   ev.ev_zayton_fanfang_followup.choice_2_result: f98c3473c1d7
   ev.ev_zayton_fanfang_followup.choice_3: 8a8107916db6
   ev.ev_zayton_fanfang_followup.choice_3_result: 7dac3aa5563c
+  ev.ev_zayton_fanfang_followup.choice_4: edb92b0162d8
+  ev.ev_zayton_fanfang_followup.choice_4_result: 70286f9b886e
   ev.ev_zayton_mazu_followup.title: c2728e67a362
   ev.ev_zayton_mazu_followup.body: cde292df36a3
   ev.ev_zayton_mazu_followup.choice_1: 59a0c48eabcc

@@ -233,7 +233,8 @@
       "sites": [
         "ev-baldacum-a",
         "ev-baldacum-b",
-        "ev-baldacum-c"
+        "ev-baldacum-c",
+        "ev-baldacum-geomancy-court"
       ],
       "exits": [
         "rt-baldacum-basora",
@@ -901,7 +902,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-kiovia-entry",
-      "sites": [],
+      "sites": [
+        "ev-kiovia-runes-ford"
+      ],
       "exits": [
         "rt-kiovia-caffa",
         "rt-kiovia-moscovia",
@@ -1077,7 +1080,8 @@
       "sites": [
         "ev-ormus-a",
         "ev-ormus-b",
-        "ev-ormus-c"
+        "ev-ormus-c",
+        "ev-ormus-astrodice-tide"
       ],
       "exits": [
         "rt-baldacum-ormus",

@@ -21,7 +21,7 @@
 
 | 层次 | 当前状态 | 说明 |
 |---|---|---|
-| 文本 key 是否存在 | ✅ 完成 | en/zh 各 4384 条，当前引用缺失 0 |
+| 文本 key 是否存在 | ✅ 完成 | en/zh 各 5118 条，当前引用缺失 0 |
 | 已有事件是否有反馈 | ✅ 完成 | 选择均有 `resultText` 或 `queue_event`（G29） |
 | 每个互动是否都有多轮剧情 | ✅ 12 主城 + 21 city | 12 主城 site/mentor 与 21 city 深化（24 followup）已闭环；其余 site 仍可按 §4.3 继续质检 |
 
@@ -34,8 +34,8 @@
 | 指标 | 当前数量 | 状态 |
 |---|---:|---|
 | 事件 | 415 | ✅ 已接入运行时 |
-| 双语 i18n 条目 | en/zh 各 4384 | ✅ 缺失 0 |
-| 故事 authoring 条目 | 2884 current | ✅ 0 stale、0 missing |
+| 双语 i18n 条目 | en/zh 各 5118 | ✅ 缺失 0 |
+| 故事 authoring 条目 | 3619 current | ✅ 0 stale、0 missing |
 | site 事件 | 93 | ✅ 12 主城 + 21 city 已多轮深化 |
 | 12 主城 site | 36 | ✅ followup 已齐 |
 | 12 主城 mentor | 12 | ✅ followup 已齐 |

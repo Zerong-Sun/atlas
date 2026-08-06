@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "header": {
+    "city": "tauris",
+    "jdn": 2193504,
+    "date": "1293-07-04",
+    "days": 120,
+    "coins": 843,
+    "archetype": "polo",
+    "version": 1
+  },
+  "state": {
+    "seed": "fixture-v1",
+    "jdn": 2193504,
+    "city": "tauris",
+    "coins": 843,
+    "days_elapsed": 120,
+    "faith": "nestorian",
+    "fate": { "travel": 12, "rapport": 4, "wealth": 7 },
+    "languages": ["persian"],
+    "items": [],
+    "goods": { "silk": 2 },
+    "cargo_slots": 8,
+    "revealed": { "tauris": 3, "baldacum": 2, "rt-tauris-baldacum": 1 },
+    "unlocked_routes": ["rt-tauris-baldacum"],
+    "learned_divinations": [],
+    "flags": {},
+    "city_reputation": { "tauris": 2 },
+    "band_reputation": { "persia": 1 },
+    "retainers": [],
+    "once_fired": {},
+    "stickers": [],
+    "codex": ["cx-tauris"],
+    "etiquette": {},
+    "birthdate_jdn": 2184249,
+    "start_city": "tauris",
+    "visited": ["tauris"],
+    "longest_leg": {},
+    "best_trade": {},
+    "purchases": {}
+  },
+  "extra": { "archetype": "polo" }
+}

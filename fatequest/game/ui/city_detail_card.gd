@@ -65,15 +65,16 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 	var cid := String(city.get("id", ""))
 	var level := 3 if cid == state.city else int(state.revealed.get(cid, 0))
 	_title.text = I18n.t(city.get("name", cid))
-	_intel.text = "城市情报 %d/3 · %s · %s" % [
-		level, String(city.get("tier", "station")), String(city.get("culture", ""))]
+	_intel.text = I18n.t("ui.city.intel") % [
+		level, I18n.t("tier.%s" % city.get("tier", "station")),
+		I18n.t("ui.culture.%s" % city.get("culture", "latin"))]
 
 	var entry := db.get_record(String(city.get("entryEvent", "")))
 	var intro_key := String(entry.get("body", ""))
 	var intro := I18n.t(intro_key) if not intro_key.is_empty() else ""
 	if intro == intro_key:
 		intro = ""
-	_body.text = intro if not intro.is_empty() else "你只知道这座城的名字与大致方位，尚未听到可靠的城中描述。"
+	_body.text = intro if not intro.is_empty() else I18n.t("ui.city.intro_unknown")
 
 	for child in _routes.get_children():
 		child.queue_free()
@@ -86,7 +87,7 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 		var mode_names: Array[String] = []
 		for mode in route.get("modes", []):
 			mode_names.append(I18n.t("transport.%s.name" % String(mode)))
-		var line := "→ %s　%s" % [
+		var line := I18n.t("ui.city.route_line") % [
 			I18n.t(other_city.get("name", other)),
 			"／".join(PackedStringArray(mode_names)),
 		]
@@ -94,7 +95,7 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 		route_count += 1
 	if route_count == 0:
 		_routes.add_child(Panels.label(
-			"知道这座城市，但尚未获知任何可靠的通行道路。",
+			I18n.t("ui.city.road_unknown"),
 			UiScale.ui(), Palette.ink_soft()))
 	_fit_scroll()
 

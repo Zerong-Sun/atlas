@@ -74,4 +74,4 @@ func to_effects(raw: Dictionary, _ctx: DivinationContext) -> Array:
 
 
 func reading_keys(raw: Dictionary, _ctx: DivinationContext) -> Array:
-	return ["div.%s.name" % _id]
+	return [DivinationData.result_text_key(_id, int(raw.get("idx", 0)) % 30)]

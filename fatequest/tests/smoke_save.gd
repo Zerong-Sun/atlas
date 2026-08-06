@@ -46,11 +46,12 @@ func _init():
     broken_auto.close()
     var before_failed_auto = n.state.city
     n._autosave()
-    var auto_failure_visible = "自动保存失败" in n._log.text \
+    var autosave_failed := I18n.t("log.autosave_failed")
+    var auto_failure_visible = autosave_failed in n._log.text \
         and n.state.city == before_failed_auto
     ok = ok and auto_failure_visible
     print("AUTOSAVE_FAILURE: visible=%s journey_continues=%s" % [
-        "自动保存失败" in n._log.text, n.state.city == before_failed_auto])
+        autosave_failed in n._log.text, n.state.city == before_failed_auto])
     print("SAVE: %s" % ("OK" if ok else "FAIL"))
     SaveGame.erase("manual"); SaveGame.erase("auto")
     n.queue_free()

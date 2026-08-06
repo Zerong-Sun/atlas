@@ -130,7 +130,7 @@ func _refresh() -> void:
 		var have: bool = id in held
 		if not have and not SHOW_UNFOUND:
 			continue
-		var title := I18n.t("%s%s.name" % [prefix, id]) if have else "— 未见 —"
+		var title := I18n.t("%s%s.name" % [prefix, id]) if have else I18n.t("ui.codex.unseen")
 		var b := Panels.styled_button(title, Callable())
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		if have:
@@ -144,7 +144,7 @@ func _refresh() -> void:
 	if first_found != "":
 		_show(first_found, prefix)
 	else:
-		_detail.add_child(Panels.label("尚无记录。", UiScale.body(), Palette.ink_soft()))
+		_detail.add_child(Panels.label(I18n.t("ui.codex.no_record"), UiScale.body(), Palette.ink_soft()))
 
 
 func _show(id: String, prefix: String) -> void:
@@ -193,12 +193,12 @@ func _show(id: String, prefix: String) -> void:
 		rt.text = body
 		_detail.add_child(rt)
 		if I18n.is_untranslated(body_key):
-			_detail.add_child(Panels.label("（尚未译出，暂显英文原文）",
+			_detail.add_child(Panels.label(I18n.t("ui.i18n.pending"),
 				UiScale.ui() - 2, Palette.ink_soft()))
 	else:
 		# No body is better than an invented one — GDD §19 keeps record and
 		# invention distinguishable, and that applies to the codex most of all.
-		_detail.add_child(Panels.label("（此条只录其名。）", UiScale.ui(), Palette.ink_soft()))
+		_detail.add_child(Panels.label(I18n.t("ui.codex.name_only"), UiScale.ui(), Palette.ink_soft()))
 
 
 func restyle() -> void:

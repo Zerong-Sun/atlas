@@ -26,7 +26,9 @@
 godot --headless --path . --script tests/run_tests.gd    # 16 个内核单测
 godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
 godot --headless --path . --script tests/benchmark_systems.gd # 系统性能门禁
-node tools/validate/validate.mjs                         # 25 道内容门禁
+godot --headless --path . --script tests/benchmark_map.gd     # 地图 CPU 帧耗门禁
+node tools/validate/verify_pck.mjs                            # PCK 导出结构门禁
+node tools/validate/validate.mjs                         # 28 道内容门禁
 node tools/lore/story.mjs check                          # 译文时效
 ```
 
@@ -50,7 +52,7 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 16 单测 + 17 界面 smoke
+├── tests/                   # 16 单测 + 26 界面 smoke + 2 基准
 ├── export_presets.cfg       # Linux / macOS / Windows 桌面导出
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
@@ -63,6 +65,9 @@ fatequest/
 | 文档 | 讲什么 |
 |---|---|
 | [`docs/STATUS.md`](docs/STATUS.md) | **现在到哪一步**——唯一权威现状页 |
+| [`docs/RELEASE_CANDIDATE.md`](docs/RELEASE_CANDIDATE.md) | **R1 发布候选签署清单**（自动门禁全绿；人工项待签） |
+| [`docs/R1_READTHROUGH.md`](docs/R1_READTHROUGH.md) | 全分支人工通读可勾选清单（中英各一遍） |
+| [`docs/PLAYTEST_README.md`](docs/PLAYTEST_README.md) · [`PLAYTEST_FEEDBACK.md`](docs/PLAYTEST_FEEDBACK.md) | 外部试玩交接包：运行/构建说明 + 反馈表单 |
 | [`docs/REQUIREMENTS_INDEX.md`](docs/REQUIREMENTS_INDEX.md) | 需求、验收与交付索引；区分当前文档和历史记录 |
 | [`docs/12_CITY_CLOSURE_MATRIX.md`](docs/12_CITY_CLOSURE_MATRIX.md) | 十二主城选择、后果链和即时反馈接线矩阵 |
 | [`docs/PLAN.md`](docs/PLAN.md) | 下一步具体怎么做、做到什么算完、怎么验 |
@@ -83,9 +88,8 @@ fatequest/
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 382 事件 · 60 商品 · 54 随从 · 24 种占法注册，其中 8 法已用
-真实引擎接入玩法（易占/八字/签占/塔罗/筊杯/星骰/沙盘/卢恩）。en/zh 各 3579 条
-文本。**25 道门禁、16 单测、17 smoke 全绿。** 详见
+102 城 · 204 路线 · 415 事件 · 60 商品 · 54 随从 · 24 种占法注册（8 法已用真实引擎接入玩法）。
+en/zh 各 5118 条文本。**28 道门禁、16 单测、26 smoke、2 基准、PCK 结构验证全绿。** 详见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

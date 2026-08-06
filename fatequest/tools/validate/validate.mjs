@@ -398,6 +398,26 @@ for (const route of byTable.routes ?? [])
   }
   for (const type of lessonTypes)
     if (!covered.has(type)) err("G3", "divination_lessons", `lesson family "${type}" is not represented`);
+
+  // Lesson text fields must be i18n keys present in both languages. Inline
+  // prose here would render as Chinese to an English player (T1 migration).
+  const enPath = join(ROOT, "content/i18n/en.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
+  const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  for (const l of lessons) {
+    const f = recordFile.get(l.id);
+    for (const field of ["steps", "clues", "options"]) {
+      for (const v of l[field] ?? []) {
+        if (typeof v !== "string" || !v.startsWith("lesson."))
+          err("G3", f, `${l.id}: ${field} entry "${String(v)}" must be an i18n key (lesson.*)`);
+        else if (en[v] === undefined)
+          err("G3", f, `${l.id}: ${field} key "${v}" missing in en.json`);
+        else if (zh[v] === undefined)
+          err("G3", f, `${l.id}: ${field} key "${v}" missing in zh.json`);
+      }
+    }
+  }
 }
 
 // --------------------------------------------- G3: divination effects ≠ ∅
@@ -414,6 +434,17 @@ for (const d of byTable.divinations ?? []) {
       err("G3", f, `${d.id}: mvp requires at least one route-facing effect (reveal_map|reveal_birth|unlock_route)`);
   } else if (!(d.effects ?? []).some((e) => e.op === "codex")) {
     err("G3", f, `${d.id}: non-mvp should include a codex soft effect`);
+  }
+  // Every result text a method can produce must resolve in both languages.
+  const rtEnPath = join(ROOT, "content/i18n/en.json");
+  const rtZhPath = join(ROOT, "content/i18n/zh.json");
+  const rtEn = existsSync(rtEnPath) ? JSON.parse(readFileSync(rtEnPath, "utf8")) : {};
+  const rtZh = existsSync(rtZhPath) ? JSON.parse(readFileSync(rtZhPath, "utf8")) : {};
+  for (const rt of d.resultTexts ?? []) {
+    if (rtEn[rt.key] === undefined)
+      err("G3", f, `${d.id}: resultText key "${rt.key}" missing in en.json`);
+    else if (rtZh[rt.key] === undefined)
+      err("G3", f, `${d.id}: resultText key "${rt.key}" missing in zh.json`);
   }
 }
 

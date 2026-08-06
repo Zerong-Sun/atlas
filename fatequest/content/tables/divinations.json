@@ -208,7 +208,128 @@
           "reason": "bazi-relationship-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.bazi-relationship.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.bazi-relationship.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.bazi-relationship.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.bazi-relationship.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.bazi-relationship.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.bazi-relationship.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.bazi-relationship.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.bazi-relationship.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.bazi-relationship.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.bazi-relationship.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.bazi-relationship.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.bazi-relationship.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.bazi-relationship.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.bazi-relationship.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.bazi-relationship.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.bazi-relationship.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.bazi-relationship.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.bazi-relationship.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.bazi-relationship.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.bazi-relationship.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.bazi-relationship.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.bazi-relationship.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.bazi-relationship.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.bazi-relationship.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.bazi-relationship.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.bazi-relationship.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.bazi-relationship.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.bazi-relationship.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.bazi-relationship.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.bazi-relationship.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -435,7 +556,128 @@
           "reason": "dream-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.dream.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.dream.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.dream.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.dream.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.dream.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.dream.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.dream.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.dream.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.dream.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.dream.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.dream.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.dream.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.dream.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.dream.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.dream.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.dream.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.dream.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.dream.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.dream.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.dream.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.dream.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.dream.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.dream.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.dream.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.dream.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.dream.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.dream.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.dream.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.dream.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.dream.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -653,7 +895,128 @@
           "reason": "qimen-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.qimen.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.qimen.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.qimen.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.qimen.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.qimen.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.qimen.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.qimen.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.qimen.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.qimen.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.qimen.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.qimen.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.qimen.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.qimen.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.qimen.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.qimen.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.qimen.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.qimen.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.qimen.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.qimen.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.qimen.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.qimen.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.qimen.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.qimen.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.qimen.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.qimen.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.qimen.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.qimen.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.qimen.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.qimen.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.qimen.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -697,7 +1060,128 @@
           "reason": "ziwei-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.ziwei.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.ziwei.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.ziwei.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.ziwei.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.ziwei.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.ziwei.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.ziwei.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.ziwei.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.ziwei.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.ziwei.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.ziwei.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.ziwei.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.ziwei.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.ziwei.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.ziwei.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.ziwei.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.ziwei.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.ziwei.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.ziwei.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.ziwei.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.ziwei.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.ziwei.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.ziwei.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.ziwei.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.ziwei.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.ziwei.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.ziwei.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.ziwei.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.ziwei.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.ziwei.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -739,7 +1223,128 @@
           "reason": "liuyao-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.liuyao.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.liuyao.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.liuyao.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.liuyao.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.liuyao.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.liuyao.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.liuyao.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.liuyao.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.liuyao.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.liuyao.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.liuyao.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.liuyao.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.liuyao.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.liuyao.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.liuyao.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.liuyao.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.liuyao.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.liuyao.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.liuyao.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.liuyao.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.liuyao.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.liuyao.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.liuyao.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.liuyao.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.liuyao.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.liuyao.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.liuyao.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.liuyao.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.liuyao.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.liuyao.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -781,7 +1386,128 @@
           "reason": "meihua-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.meihua.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.meihua.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.meihua.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.meihua.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.meihua.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.meihua.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.meihua.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.meihua.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.meihua.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.meihua.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.meihua.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.meihua.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.meihua.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.meihua.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.meihua.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.meihua.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.meihua.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.meihua.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.meihua.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.meihua.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.meihua.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.meihua.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.meihua.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.meihua.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.meihua.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.meihua.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.meihua.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.meihua.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.meihua.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.meihua.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -823,7 +1549,128 @@
           "reason": "western-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.western.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.western.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.western.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.western.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.western.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.western.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.western.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.western.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.western.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.western.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.western.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.western.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.western.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.western.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.western.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.western.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.western.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.western.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.western.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.western.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.western.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.western.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.western.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.western.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.western.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.western.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.western.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.western.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.western.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.western.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -866,7 +1713,128 @@
           "reason": "vedic-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.vedic.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.vedic.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.vedic.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.vedic.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.vedic.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.vedic.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.vedic.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.vedic.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.vedic.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.vedic.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.vedic.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.vedic.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.vedic.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.vedic.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.vedic.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.vedic.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.vedic.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.vedic.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.vedic.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.vedic.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.vedic.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.vedic.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.vedic.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.vedic.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.vedic.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.vedic.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.vedic.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.vedic.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.vedic.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.vedic.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -909,7 +1877,128 @@
           "reason": "numerology-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.numerology.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.numerology.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.numerology.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.numerology.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.numerology.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.numerology.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.numerology.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.numerology.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.numerology.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.numerology.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.numerology.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.numerology.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.numerology.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.numerology.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.numerology.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.numerology.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.numerology.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.numerology.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.numerology.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.numerology.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.numerology.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.numerology.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.numerology.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.numerology.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.numerology.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.numerology.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.numerology.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.numerology.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.numerology.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.numerology.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1637,7 +2726,128 @@
           "reason": "xiangmian-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.xiangmian.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.xiangmian.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.xiangmian.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.xiangmian.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.xiangmian.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.xiangmian.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.xiangmian.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.xiangmian.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.xiangmian.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.xiangmian.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.xiangmian.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.xiangmian.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.xiangmian.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.xiangmian.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.xiangmian.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.xiangmian.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.xiangmian.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.xiangmian.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.xiangmian.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.xiangmian.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.xiangmian.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.xiangmian.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.xiangmian.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.xiangmian.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.xiangmian.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.xiangmian.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.xiangmian.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.xiangmian.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.xiangmian.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.xiangmian.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1679,7 +2889,128 @@
           "reason": "palmistry-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.palmistry.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.palmistry.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.palmistry.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.palmistry.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.palmistry.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.palmistry.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.palmistry.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.palmistry.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.palmistry.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.palmistry.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.palmistry.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.palmistry.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.palmistry.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.palmistry.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.palmistry.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.palmistry.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.palmistry.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.palmistry.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.palmistry.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.palmistry.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.palmistry.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.palmistry.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.palmistry.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.palmistry.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.palmistry.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.palmistry.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.palmistry.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.palmistry.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.palmistry.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.palmistry.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1721,7 +3052,128 @@
           "reason": "fengshui-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.fengshui.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.fengshui.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.fengshui.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.fengshui.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.fengshui.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.fengshui.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.fengshui.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.fengshui.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.fengshui.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.fengshui.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.fengshui.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.fengshui.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.fengshui.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.fengshui.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.fengshui.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.fengshui.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.fengshui.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.fengshui.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.fengshui.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.fengshui.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.fengshui.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.fengshui.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.fengshui.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.fengshui.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.fengshui.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.fengshui.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.fengshui.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.fengshui.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.fengshui.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.fengshui.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1934,7 +3386,128 @@
           "reason": "lenormand-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.lenormand.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.lenormand.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.lenormand.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.lenormand.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.lenormand.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.lenormand.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.lenormand.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.lenormand.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.lenormand.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.lenormand.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.lenormand.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.lenormand.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.lenormand.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.lenormand.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.lenormand.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.lenormand.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.lenormand.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.lenormand.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.lenormand.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.lenormand.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.lenormand.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.lenormand.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.lenormand.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.lenormand.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.lenormand.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.lenormand.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.lenormand.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.lenormand.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.lenormand.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.lenormand.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -1977,7 +3550,128 @@
           "reason": "oracle-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.oracle.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.oracle.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.oracle.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.oracle.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.oracle.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.oracle.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.oracle.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.oracle.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.oracle.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.oracle.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.oracle.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.oracle.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.oracle.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.oracle.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.oracle.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.oracle.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.oracle.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.oracle.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.oracle.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.oracle.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.oracle.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.oracle.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.oracle.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.oracle.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.oracle.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.oracle.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.oracle.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.oracle.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.oracle.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.oracle.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -2020,7 +3714,128 @@
           "reason": "coffee-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.coffee.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.coffee.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.coffee.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.coffee.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.coffee.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.coffee.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.coffee.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.coffee.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.coffee.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.coffee.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.coffee.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.coffee.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.coffee.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.coffee.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.coffee.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.coffee.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.coffee.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.coffee.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.coffee.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.coffee.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.coffee.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.coffee.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.coffee.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.coffee.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.coffee.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.coffee.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.coffee.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.coffee.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.coffee.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.coffee.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,
@@ -2062,7 +3877,128 @@
           "reason": "scrying-recorded-in-codex"
         }
       ],
-      "resultTexts": [],
+      "resultTexts": [
+        {
+          "cond": "idx_0",
+          "key": "div.scrying.result.00"
+        },
+        {
+          "cond": "idx_1",
+          "key": "div.scrying.result.01"
+        },
+        {
+          "cond": "idx_2",
+          "key": "div.scrying.result.02"
+        },
+        {
+          "cond": "idx_3",
+          "key": "div.scrying.result.03"
+        },
+        {
+          "cond": "idx_4",
+          "key": "div.scrying.result.04"
+        },
+        {
+          "cond": "idx_5",
+          "key": "div.scrying.result.05"
+        },
+        {
+          "cond": "idx_6",
+          "key": "div.scrying.result.06"
+        },
+        {
+          "cond": "idx_7",
+          "key": "div.scrying.result.07"
+        },
+        {
+          "cond": "idx_8",
+          "key": "div.scrying.result.08"
+        },
+        {
+          "cond": "idx_9",
+          "key": "div.scrying.result.09"
+        },
+        {
+          "cond": "idx_10",
+          "key": "div.scrying.result.10"
+        },
+        {
+          "cond": "idx_11",
+          "key": "div.scrying.result.11"
+        },
+        {
+          "cond": "idx_12",
+          "key": "div.scrying.result.12"
+        },
+        {
+          "cond": "idx_13",
+          "key": "div.scrying.result.13"
+        },
+        {
+          "cond": "idx_14",
+          "key": "div.scrying.result.14"
+        },
+        {
+          "cond": "idx_15",
+          "key": "div.scrying.result.15"
+        },
+        {
+          "cond": "idx_16",
+          "key": "div.scrying.result.16"
+        },
+        {
+          "cond": "idx_17",
+          "key": "div.scrying.result.17"
+        },
+        {
+          "cond": "idx_18",
+          "key": "div.scrying.result.18"
+        },
+        {
+          "cond": "idx_19",
+          "key": "div.scrying.result.19"
+        },
+        {
+          "cond": "idx_20",
+          "key": "div.scrying.result.20"
+        },
+        {
+          "cond": "idx_21",
+          "key": "div.scrying.result.21"
+        },
+        {
+          "cond": "idx_22",
+          "key": "div.scrying.result.22"
+        },
+        {
+          "cond": "idx_23",
+          "key": "div.scrying.result.23"
+        },
+        {
+          "cond": "idx_24",
+          "key": "div.scrying.result.24"
+        },
+        {
+          "cond": "idx_25",
+          "key": "div.scrying.result.25"
+        },
+        {
+          "cond": "idx_26",
+          "key": "div.scrying.result.26"
+        },
+        {
+          "cond": "idx_27",
+          "key": "div.scrying.result.27"
+        },
+        {
+          "cond": "idx_28",
+          "key": "div.scrying.result.28"
+        },
+        {
+          "cond": "idx_29",
+          "key": "div.scrying.result.29"
+        }
+      ],
       "cost": {
         "coins": 0,
         "time": 0,

@@ -635,7 +635,7 @@ stamps:
 
 ## ev.road.fadlan_26.choice.press_on
 
-留可舍之水，随队前行
+留可舍之水，随商队前行
 
 ## ev.road.fadlan_27.title
 
@@ -691,7 +691,7 @@ stamps:
 
 ## ev.road.fadlan_30.body
 
-无山而云聚，电光行于平地天际。无可庇之林——唯低草与散帐。汝觉暴露之甚，非沙漠所能教。
+无山而云聚，电光行于平地天际。无可庇之林——唯低草与商队散帐。汝觉暴露之甚，非沙漠所能教。
 
 ## ev.road.fadlan_30.choice.halt_tents
 
@@ -987,7 +987,7 @@ stamps:
 
 ## ev.ev_road_fadlan_26.choice_2_result
 
-你留可舍之水，随队前行，为此费去你 1 日路程。
+你留可舍之水，随商队前行，为此费去你 1 日路程。
 
 ## ev.ev_road_fadlan_27.choice_1_result
 

@@ -11,6 +11,10 @@ func _init() -> void:
 	var executor := EffectExecutor.new()
 	var travel := Travel.new(db, executor, ConditionEvaluator.new(db))
 
+	var save_bytes: int = JSON.stringify(
+		SaveGame.serialize(state, clock, {"archetype": "benchmark"})
+	).to_utf8_buffer().size()
+
 	var serialize_ms: Array[float] = []
 	for i in ITERATIONS:
 		var started := Time.get_ticks_usec()
@@ -60,6 +64,7 @@ func _init() -> void:
 		disk_median, disk_p95])
 	print("BENCHMARK: availability=%d checks/%.2fms vector=%dB" % [
 		routes.size() * 30, availability_ms, vector_bytes])
+	print("BENCHMARK: save=%dB" % save_bytes)
 	print("BENCHMARK: %s" % ("PASS" if ok else "FAIL"))
 	quit(0 if ok else 1)
 

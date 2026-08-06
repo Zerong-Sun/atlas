@@ -44,54 +44,61 @@ const METHOD_SYMBOLS := {
 ## Jiaobei falls. The cups answer yes, no, or "you have asked the wrong
 ## question" — worth naming, because the reading text depends on which.
 const JIAOBEI_FALL := {
-	"holy": "聖筊 · 允",
-	"laugh": "笑筊 · 神不置可否",
-	"yin": "陰筊 · 不允",
+	"holy": "ui.jiaobei.holy",
+	"laugh": "ui.jiaobei.laugh",
+	"yin": "ui.jiaobei.yin",
 }
 
 ## Astrodice: ten wanderers, twelve signs, twelve houses. The cast returns
-## indices; a player should be told what they landed on.
-const PLANETS := ["日", "月", "水星", "金星", "火星", "木星", "土星",
-		"天王", "海王", "北交"]
-const SIGNS := ["白羊", "金牛", "双子", "巨蟹", "狮子", "室女",
-		"天秤", "天蝎", "人马", "摩羯", "宝瓶", "双鱼"]
-const HOUSES := ["命", "财", "兄弟", "田宅", "子女", "奴仆",
-		"夫妻", "疾厄", "迁移", "官禄", "福德", "相貌"]
+## indices; a player should be told what they landed on. Values are i18n keys
+## (ui.astrodice.*); resolved through I18n.t at render time.
+const PLANETS := ["ui.astrodice.planet.0", "ui.astrodice.planet.1", "ui.astrodice.planet.2",
+		"ui.astrodice.planet.3", "ui.astrodice.planet.4", "ui.astrodice.planet.5",
+		"ui.astrodice.planet.6", "ui.astrodice.planet.7", "ui.astrodice.planet.8",
+		"ui.astrodice.planet.9"]
+const SIGNS := ["ui.astrodice.sign.0", "ui.astrodice.sign.1", "ui.astrodice.sign.2",
+		"ui.astrodice.sign.3", "ui.astrodice.sign.4", "ui.astrodice.sign.5",
+		"ui.astrodice.sign.6", "ui.astrodice.sign.7", "ui.astrodice.sign.8",
+		"ui.astrodice.sign.9", "ui.astrodice.sign.10", "ui.astrodice.sign.11"]
+const HOUSES := ["ui.astrodice.house.0", "ui.astrodice.house.1", "ui.astrodice.house.2",
+		"ui.astrodice.house.3", "ui.astrodice.house.4", "ui.astrodice.house.5",
+		"ui.astrodice.house.6", "ui.astrodice.house.7", "ui.astrodice.house.8",
+		"ui.astrodice.house.9", "ui.astrodice.house.10", "ui.astrodice.house.11"]
 
 ## Geomancy verdicts, as the figure would be read aloud.
 const VERDICTS := {
-	"go": "宜行",
-	"hold": "宜守",
-	"turn": "宜改道",
-	"wait": "宜待时",
+	"go": "ui.div.verdict.go",
+	"hold": "ui.div.verdict.hold",
+	"turn": "ui.div.verdict.turn",
+	"wait": "ui.div.verdict.wait",
 }
 
 ## Effect ops in the player's language. An omen that "grants codex" means
 ## nothing; an omen that "记入图鉴" is a thing that happened in the world.
 const OP_NAMES := {
-	"coins": "银钱",
-	"days": "时日",
-	"goods": "货物",
-	"item": "得物",
-	"remove_item": "失物",
-	"cargo_slots": "货格",
-	"reputation": "声望",
-	"faith": "信心",
-	"language": "言语",
-	"fate": "命运",
-	"unlock_route": "新路",
-	"reveal_map": "地理",
-	"learn_divination": "习法",
-	"flag": "记事",
-	"unflag": "了事",
-	"goto": "移步",
-	"sticker": "贴纸",
-	"codex": "图鉴",
-	"recruit": "招募",
-	"dismiss": "辞别",
-	"retainer_mood": "人心",
-	"reveal_birth": "身世",
-	"etiquette": "礼数",
+	"coins": "ui.div.op.coins",
+	"days": "ui.div.op.days",
+	"goods": "ui.div.op.goods",
+	"item": "ui.div.op.item",
+	"remove_item": "ui.div.op.remove_item",
+	"cargo_slots": "ui.div.op.cargo_slots",
+	"reputation": "ui.div.op.reputation",
+	"faith": "ui.div.op.faith",
+	"language": "ui.div.op.language",
+	"fate": "ui.div.op.fate",
+	"unlock_route": "ui.div.op.unlock_route",
+	"reveal_map": "ui.div.op.reveal_map",
+	"learn_divination": "ui.div.op.learn_divination",
+	"flag": "ui.div.op.flag",
+	"unflag": "ui.div.op.unflag",
+	"goto": "ui.div.op.goto",
+	"sticker": "ui.div.op.sticker",
+	"codex": "ui.div.op.codex",
+	"recruit": "ui.div.op.recruit",
+	"dismiss": "ui.div.op.dismiss",
+	"retainer_mood": "ui.div.op.retainer_mood",
+	"reveal_birth": "ui.div.op.reveal_birth",
+	"etiquette": "ui.div.op.etiquette",
 }
 
 
@@ -169,14 +176,14 @@ static func symbol_lines_for(method: String, raw: Dictionary) -> PackedStringArr
 	var lines: PackedStringArray = []
 	match method:
 		"iching":
-			lines.append("易 · 本卦 %d" % int(raw.get("primary", 0)))
+			lines.append(I18n.t("ui.div.symbol.iching_primary") % int(raw.get("primary", 0)))
 			var moving: Array = raw.get("moving", [])
 			if not moving.is_empty():
 				var nth: PackedStringArray = []
 				for m in moving:
-					nth.append("%d 爻" % int(m))
-				lines.append("变卦 %d · 动爻 %s" % [
-					int(raw.get("derived", 0)), "、".join(nth)])
+					nth.append(I18n.t("ui.div.symbol.iching_moving") % int(m))
+				lines.append(I18n.t("ui.div.symbol.iching_changed") % [
+					int(raw.get("derived", 0)), I18n.list(nth)])
 		"lot":
 			lines.append("%s · %s" % [
 				String(raw.get("grade", "")), String(raw.get("title", ""))])
@@ -185,14 +192,15 @@ static func symbol_lines_for(method: String, raw: Dictionary) -> PackedStringArr
 		"tarot":
 			lines.append(I18n.t(String(raw.get("spreadNameKey", "div.tarot.name"))))
 			for c in raw.get("cards", []):
-				var mark := "逆" if bool(c.get("reversed", false)) else "正"
-				lines.append("%s · %s（%s）" % [
+				var mark := I18n.t("ui.div.mark.reversed") if bool(c.get("reversed", false)) \
+					else I18n.t("ui.div.mark.upright")
+				lines.append(I18n.t("ui.div.symbol.tarot_card") % [
 					String(c.get("position", "")), String(c.get("name", "")), mark])
 		"bazi":
 			var pillars: Dictionary = raw.get("pillars", {})
-			lines.append("年 %s 月 %s" % [pillars.get("year", ""), pillars.get("month", "")])
-			lines.append("日 %s 时 %s" % [pillars.get("day", ""), pillars.get("hour", "")])
-			lines.append("日主 %s" % String(raw.get("dayMaster", "")))
+			lines.append(I18n.t("ui.div.symbol.bazi_year") % [pillars.get("year", ""), pillars.get("month", "")])
+			lines.append(I18n.t("ui.div.symbol.bazi_day") % [pillars.get("day", ""), pillars.get("hour", "")])
+			lines.append(I18n.t("ui.div.symbol.bazi_master") % String(raw.get("dayMaster", "")))
 		_:
 			lines = _generic_symbol_lines(method, raw)
 	return lines
@@ -212,17 +220,19 @@ static func _generic_symbol_lines(method: String, raw: Dictionary) -> PackedStri
 	if raw.has("rune"):
 		var rune := String(raw.get("rune", ""))
 		var aspect := String(raw.get("aspect", ""))
-		lines.append(("抽得 %s" % rune) if rune != "" else "抽得一符")
+		lines.append(I18n.t("ui.div.symbol.rune_drawn") % rune) if rune != "" \
+			else lines.append(I18n.t("ui.div.symbol.rune_blank"))
 		if aspect != "":
-			lines.append("所主 · %s" % _aspect_name(aspect))
+			lines.append(I18n.t("ui.div.symbol.aspect") % I18n.t(_aspect_name(aspect)))
 		return lines
 
 	if raw.has("figure"):
 		var fig := String(raw.get("figure", ""))
-		lines.append(("成象 %s" % fig) if fig != "" else "成象一形")
+		lines.append(I18n.t("ui.div.symbol.figure_drawn") % fig) if fig != "" \
+			else lines.append(I18n.t("ui.div.symbol.figure_blank"))
 		var verdict := String(raw.get("verdict", ""))
 		if verdict != "":
-			lines.append(String(VERDICTS.get(verdict, verdict)))
+			lines.append(I18n.t(String(VERDICTS.get(verdict, verdict))))
 		return lines
 
 	# Jiaobei and the soft yes/no methods: two cups, one answer.
@@ -232,29 +242,30 @@ static func _generic_symbol_lines(method: String, raw: Dictionary) -> PackedStri
 		for c in cups:
 			var is_yang := (typeof(c) == TYPE_STRING and String(c) == "yang") \
 				or (typeof(c) in [TYPE_INT, TYPE_FLOAT] and int(c) == 1)
-			faces.append("陽" if is_yang else "陰")
-		lines.append("掷筊 · %s" % "／".join(faces))
-		lines.append(String(JIAOBEI_FALL.get(
-			String(raw.get("outcome", "")), "筊象未明")))
+			faces.append(I18n.t("ui.div.face.yang") if is_yang else I18n.t("ui.div.face.yin"))
+		lines.append(I18n.t("ui.div.symbol.cups_fmt") % "／".join(faces))
+		lines.append(I18n.t(String(JIAOBEI_FALL.get(
+			String(raw.get("outcome", "")), "ui.div.symbol.cups_unknown"))))
 		return lines
 
 	# Astrodice and the soft dice methods: planet, sign, house.
 	if raw.has("planet") and raw.has("sign"):
-		lines.append("%s 入 %s · %s宫" % [
-			_pick(PLANETS, int(raw.get("planet", 0))),
-			_pick(SIGNS, int(raw.get("sign", 0))),
-			_pick(HOUSES, int(raw.get("house", 1)) - 1)])
+		lines.append(I18n.t("ui.div.symbol.astro_placement") % [
+			I18n.t(_pick(PLANETS, int(raw.get("planet", 0)))),
+			I18n.t(_pick(SIGNS, int(raw.get("sign", 0)))),
+			I18n.t(_pick(HOUSES, int(raw.get("house", 1)) - 1))])
 		return lines
 
 	# Chart methods: a figure was drawn up, and its detail is not the point —
 	# the reading below is. Naming the houses is enough to make it feel cast.
 	if raw.has("houses"):
-		lines.append("布盘 · 十二宫定，主 %s宫" % _pick(HOUSES, int(raw.get("houses", 0))))
+		lines.append(I18n.t("ui.div.symbol.ziwei_board") % I18n.t(
+			_pick(HOUSES, int(raw.get("houses", 0)))))
 		return lines
 
 	# Symbol methods: dream, palmistry, coffee grounds, scrying.
 	if raw.has("symbol"):
-		lines.append("现象 · 第 %d 徵" % (int(raw.get("symbol", 0)) + 1))
+		lines.append(I18n.t("ui.div.symbol.symbol_nth") % (int(raw.get("symbol", 0)) + 1))
 		return lines
 
 	# Draw methods: a small handful of lots pulled at once.
@@ -263,12 +274,12 @@ static func _generic_symbol_lines(method: String, raw: Dictionary) -> PackedStri
 		var nums: PackedStringArray = []
 		for d in draws:
 			nums.append(str(int(d) + 1))
-		lines.append("连抽 %d 签 · %s" % [draws.size(), "、".join(nums)])
+		lines.append(I18n.t("ui.div.symbol.lots_draw") % [draws.size(), I18n.list(nums)])
 		return lines
 
 	# Genuinely unknown payload. Say so plainly rather than printing the
 	# dictionary — the reading below still carries the meaning.
-	lines.append("卦象已成，其详不书")
+	lines.append(I18n.t("ui.div.symbol.closed"))
 	return lines
 
 
@@ -280,12 +291,12 @@ static func _pick(names: Array, i: int) -> String:
 
 static func _aspect_name(aspect: String) -> String:
 	match aspect:
-		"delay": return "宜缓"
-		"danger": return "有险"
-		"ally": return "得助"
-		"travel": return "利行"
-		"wealth": return "利财"
-		"rapport": return "利交"
+		"delay": return "ui.div.aspect.delay"
+		"danger": return "ui.div.aspect.danger"
+		"ally": return "ui.div.aspect.ally"
+		"travel": return "ui.div.aspect.travel"
+		"wealth": return "ui.div.aspect.wealth"
+		"rapport": return "ui.div.aspect.rapport"
 	return aspect
 
 
@@ -295,7 +306,7 @@ static func describe_effect(e: Dictionary) -> String:
 	var op := String(e.get("op", ""))
 	if op == "":
 		return ""
-	var name := String(OP_NAMES.get(op, op))
+	var name := I18n.t(String(OP_NAMES.get(op, ""))) if OP_NAMES.has(op) else op
 	var v = e.get("value", null)
 	# Numeric effects read as a ledger line; the sign is what matters.
 	if typeof(v) == TYPE_INT or typeof(v) == TYPE_FLOAT:

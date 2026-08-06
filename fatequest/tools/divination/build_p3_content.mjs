@@ -283,6 +283,10 @@ const MVP_GAME = {
 const METHOD_IDS = Object.keys(ATLAS_META);
 
 function buildDivinations() {
+  // CAUTION: this generator is a one-time bootstrap. It does NOT encode the
+  // hand-authored state of the shipped table (runes/geomancy/jiaobei/astrodice
+  // were promoted to MVP later; learnAt lists were trimmed per chapter). Do not
+  // rerun it as a migration — apply field-level edits instead.
   const records = METHOD_IDS.map((id) => {
     const meta = ATLAS_META[id];
     const question =
@@ -304,7 +308,7 @@ function buildDivinations() {
       effects: mvp
         ? MVP_GAME[id].effects
         : [{ op: "codex", value: `cx-${id}`, reason: `${id}-recorded-in-codex` }],
-      resultTexts: mvp ? resultTexts(`div.${id}`, 30) : [],
+      resultTexts: resultTexts(`div.${id}`, 30),
       cost: mvp ? MVP_GAME[id].cost : { coins: 0, time: 0, favor: 0 },
       atlasEngine: id,
       causalityModel: meta.causalityModel,
@@ -693,7 +697,10 @@ function patchI18n(tarot) {
     lines.forEach((line, i) => {
       const key = `div.${mid}.result.${String(i).padStart(2, "0")}`;
       zh[key] = line;
-      en[key] = `[route] ${line}`;
+      // The English translations of these readings live in en.json (an authored
+      // artifact). Preserve them on regeneration; fall back to the plain
+      // Chinese source line without a `[route]` marker.
+      en[key] ??= line;
     });
   }
 

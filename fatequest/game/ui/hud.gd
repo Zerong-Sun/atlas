@@ -43,11 +43,11 @@ func _tip(key: String, fallback: String = "") -> String:
 	if _tips.is_empty():
 		_tips = {
 			"place": I18n.t("ui.current_location"),
-			"date": "当地历法日期 · 干支",
-			"coins": "钱袋（银）",
+			"date": I18n.t("ui.hud.tip_date"),
+			"coins": I18n.t("ui.hud.tip_coins"),
 			"days": I18n.t("ui.days_travelled"),
-			"cargo": "货格 已用／总数",
-			"fate": "命运三轴：行旅 · 交游 · 财货",
+			"cargo": I18n.t("ui.hud.tip_cargo"),
+			"fate": I18n.t("ui.hud.tip_fate"),
 		}
 	return String(_tips.get(key, fallback))
 
@@ -148,13 +148,13 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 	# in 1292 would misdate the world by a week.
 	var g := clock.date.civil(culture)
 	_put("place", place_name)
-	_put("date", "%d年%d月%d日 %s" % [g["year"], g["month"], g["day"], clock.date.ganzhi_day()])
+	_put("date", I18n.t("ui.hud.date") % [g["year"], g["month"], g["day"], clock.date.ganzhi_day()])
 	# Money is kept in fen internally; show it the way a traveller would count.
 	var silver := state.coins / 100
-	_put("coins", "%d 银" % silver)
-	_put("days", "第 %d 日" % state.days_elapsed)
+	_put("coins", I18n.t("ui.hud.coins") % silver)
+	_put("days", I18n.t("ui.hud.days") % state.days_elapsed)
 	_put("cargo", "%d/%d" % [cargo_used, state.cargo_slots])
-	_put("fate", "行%d 交%d 财%d" % [
+	_put("fate", I18n.t("ui.hud.fate") % [
 		int(state.fate.get("travel", 0)),
 		int(state.fate.get("rapport", 0)),
 		int(state.fate.get("wealth", 0))])

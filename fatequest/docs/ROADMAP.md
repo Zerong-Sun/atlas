@@ -30,7 +30,7 @@ P6  能收尾          图鉴、贴纸、结语生成、结局判定        ✅ 
 | 世界 | 102 城（12 metropolis · 21 city · 44 town · 25 station）· 204 路线 |
 | 事件 | 415 条（含 12 主城后果链、site/mentor 多轮、21 city 深化 24） |
 | 语料背书 | 83/102 城有 `origin: "source"`，19 城 `authored` |
-| 文本 | en/zh 各 4384 条，缺 0 · stamps 2884 current · 0 stale |
+| 文本 | en/zh 各 5118 条，缺 0 · stamps 3619 current · 0 stale |
 | 美术 | 674 张 WebP · Godot 接线 **674** · 未接线 0 · **S1c 已完成** 2026-07-30 |
 | 动画 | N0–N3 ✅ · N4–N6 待做 |
 | 音频 | 37 OGG · CC0 场景床 + 5 文化 stem · A1–A8 ✅ |
