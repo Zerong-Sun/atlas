@@ -1,6 +1,6 @@
 # 外部试玩交接包 · PLAYTEST
 
-**commit `a12f924` · 2026-08-07 · 需求书 §13.2 步骤 / §13.5 记录口径 / §13.6 出口。**
+**commit `42eef9f` · 2026-08-08 · 需求书 §13.2 步骤 / §13.5 记录口径 / §13.6 出口。**
 本文是给外部试玩者的运行与记录说明；全分支人工通读清单见 [`R1_READTHROUGH.md`](R1_READTHROUGH.md)。
 
 ## 0. 交接包内容
@@ -77,7 +77,7 @@ godot --path . --script tests/benchmark_map_fps.gd             # 窗口 1280×72
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PASS
 ```
 
-2026-08-07 `a12f924` 全量复跑结果：全部 ✅（详见 `docs/RELEASE_CANDIDATE.md` §0，`docs/benchmarks.json` 落档机器可读数据）。
+2026-08-08 `42eef9f` 全量复跑结果：全部 ✅（详见 `docs/RELEASE_CANDIDATE.md` §0，`docs/benchmarks.json` 落档机器可读数据）。
 
 ## 5. 试玩重点（§13.6 出口项）
 

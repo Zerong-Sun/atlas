@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-07T01:15:00+08:00",
-  "commit": "a12f924",
+  "generated_at": "2026-08-08T03:10:00+08:00",
+  "commit": "42eef9f",
   "engine": "4.7.1.stable",
   "host": "macOS 26.5.2 (Apple Silicon, headless)",
   "build_type": "debug-run headless (CPU); GPU 60 FPS 为发布构建实机人工项（RELEASE_CANDIDATE.md §13.3）",
