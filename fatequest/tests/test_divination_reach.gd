@@ -1,6 +1,10 @@
 extends RefCounted
 
-## T2 reachability: every mvp method is learnable and usable in content + via EventMachine.
+const CatalogCore = preload("res://core/divination/catalog.gd")
+
+## T2 reachability: every method admitted to a historical journey is learnable
+## and usable there. Annex-only methods are deliberately excluded even if an
+## archived mentor event still exists in the content corpus.
 
 var _f := 0
 func _ok(c: bool, w: String) -> void:
@@ -12,6 +16,8 @@ func run() -> bool:
 	db.load_all()
 	DivinationData.bind(db)
 	DivinationBootstrap.register_all()
+	var catalog = CatalogCore.new()
+	catalog.configure(db.get_table("divination_catalog"))
 
 	var city_ids: Dictionary = {}
 	for c in db.cities():
@@ -36,9 +42,11 @@ func run() -> bool:
 				use_events[d] = int(use_events.get(d, 0)) + 1
 
 	for rec in db.get_table("divinations"):
-		if not bool(rec.get("mvp", false)):
-			continue
 		var mid := String(rec.get("id", ""))
+		_ok(catalog.available_in_annex(mid), "%s is represented in the annex" % mid)
+		var catalog_entry := catalog.get_entry(mid)
+		if "journey" not in catalog_entry.get("playSpaces", []):
+			continue
 		var learn_at: Array = rec.get("learnAt", [])
 		_ok(not learn_at.is_empty(), "%s has non-empty learnAt" % mid)
 		for cid in learn_at:

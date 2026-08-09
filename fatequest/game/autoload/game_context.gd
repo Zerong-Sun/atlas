@@ -16,6 +16,11 @@ var executor: EffectExecutor
 var conditions: ConditionEvaluator
 var rng: Rng
 var db := ContentDb.new()
+## Carries one finished volume across a deliberate scene reload. It is not a
+## world-state shortcut: the successor receives it through LegacyBook effects
+## when their new WorldState is created.
+var pending_legacy: Dictionary = {}
+var pending_heirloom: String = ""
 
 
 func _ready() -> void:

@@ -1,6 +1,6 @@
 # 执行计划 · PLAN
 
-**2026-07-31 · Steam EA 阶段。** 既有 P0–P7 玩法与 T1–T6 密度任务已闭环
+**2026-08-09 · Steam EA 阶段。** 既有 P0–P7 玩法与 T1–T6 密度任务已闭环
 （旧稿存 `docs/archive/PLAN-2026-07-T1-T6.md`）。新七系统的引擎与发布安全加固已经完成，
 下一步转入 **优化与实机验证 → 正式文本/美术替换 → 人工发布验收**。
 
@@ -14,20 +14,21 @@
 
 ### 本轮之后的实际优先级
 
-1. ~~Q1：完成 720p、200% 字号、中英、键盘与覆盖层视觉回归，并逐城点选 12 城后果链~~ ✅ 2026-08-02 `smoke_ui_overlay.gd`（覆盖层/200%/中英/键盘）+ `smoke_twelve_cities.gd`（12 城 × 2 重要分支后果链逐城回归）；GPU 60 FPS 实机与 §13.2 人工脚本见 [`RELEASE_CANDIDATE.md`](RELEASE_CANDIDATE.md)
-2. ~~T1：把课程和新增 UI 占位迁移为正式中英文本，完成文化校读。~~ ✅ 2026-08-06（24 课 i18n + 16 非 MVP 占法 480 结果文本 + UI 硬编码迁移 + G7 术语 0 告警）
-3. A1：补齐易经 31–64，并按 24 法清单逐法替换工具、反馈和动画占位。
-4. ~~O1：完成运行性能基准、导入/导出检查和最新 PCK 导出。~~ ✅ 2026-08-07（`benchmark_systems` serialize P95 1.24ms/save P95 6.06ms/save 7712B；`benchmark_map` mask P95 8.01ms/travel frame P95 7.15ms；`benchmark_map_fps` 窗口 zoom P95 0.03ms/常驻 6.89ms；fixture `save_v1/v2` 迁移用例；`verify_pck.mjs` 结构门禁；结果落 `docs/benchmarks.json`）
-5. R1：外部试玩和全分支人工通读，P0/P1 清零后形成发布候选并上传。（**准备已完成 2026-08-06**：全量门禁复跑落档 + [`R1_READTHROUGH.md`](R1_READTHROUGH.md) 通读清单 + [`PLAYTEST_README.md`](PLAYTEST_README.md)/[`PLAYTEST_FEEDBACK.md`](PLAYTEST_FEEDBACK.md) 试玩交接包；待人工试玩通读后按反馈收尾签署）
+1. D1：把 16 个 `SoftDivinationMethod` 通用适配器替换为独立算法与路线问题适配；完成人类专家复核。
+2. D2：实现游记“初闻 → 亲见 → 对照 → 修订”，地图情报记录来源、时间与置信度。
+3. D3：将人物原型拆成历史可行的文化、信仰、阶层、职业组合，同时保留三人完整候选界面。
+4. D4：给四年代补城市、人物、路线和事件 `validYears`，让 1253 与 1405 不只是不同日期。
+5. A1：补齐易经 31–64，并逐法替换正式工具图与反馈素材。
+6. R1：按 [`CORE_DESIGN_REVIEW.md`](CORE_DESIGN_REVIEW.md) 与发布清单完成人工通读、敏感读者审阅和外部试玩。
 
 ---
 
 ## 0. 现在的真实状态
 
 ```bash
-node tools/validate/validate.mjs                        # 门禁含 G31
+node tools/validate/validate.mjs                        # 门禁含 G33
 node tools/lore/story.mjs check                         # 译文时效
-godot --headless --path . --script tests/run_tests.gd   # 16 个单测
+godot --headless --path . --script tests/run_tests.gd   # 内核测试
 ```
 
 | 维度 | 数字 |

@@ -50,6 +50,8 @@ func run() -> bool:
 	_ok(got.active_event == st.active_event, "active queued event survives")
 	_ok(got.active_journey == st.active_journey, "journey checkpoint survives")
 	_ok(got.recovery == st.recovery, "recovery facts survive")
+	_ok(got.life == st.life, "life and mortality state survives")
+	_ok(got.legacy == st.legacy, "lineage archive survives")
 
 	# --- every field is covered --------------------------------------------
 	# Catches the real failure mode: someone adds a field to WorldState and
@@ -80,19 +82,26 @@ func run() -> bool:
 		"header carries what a load menu shows")
 	_ok(String(h.get("archetype", "")) == "polo", "header keeps the archetype")
 	_ok(int(h.get("version", 0)) == SaveGame.VERSION, "header carries save version")
-	_ok(doc.has("integrity"), "v3 saves carry integrity metadata")
+	_ok(doc.has("integrity"), "current saves carry integrity metadata")
 	var missing_field := doc.duplicate(true)
 	missing_field["state"].erase("revealed")
 	missing_field = SaveGame._seal(missing_field)
 	_ok(String(SaveGame._document_status(missing_field).get(
 		"code", "")).begins_with("SAVE_STATE_FIELD_MISSING"),
-		"sealed but incomplete v3 save is rejected by schema")
+		"sealed but incomplete current save is rejected by schema")
 	var mismatched_header := doc.duplicate(true)
 	mismatched_header["header"]["city"] = "zayton"
 	mismatched_header = SaveGame._seal(mismatched_header)
 	_ok(SaveGame._document_status(mismatched_header).get("code") \
 		== "SAVE_HEADER_STATE_MISMATCH",
 		"header cannot advertise a different world than the snapshot")
+	var invalid_life := doc.duplicate(true)
+	invalid_life["state"]["life"]["stage"] = "deceased"
+	invalid_life["state"]["life"]["deceased"] = false
+	invalid_life = SaveGame._seal(invalid_life)
+	_ok(SaveGame._document_status(invalid_life).get("code") \
+		== "SAVE_LIFE_TERMINAL_INCONSISTENT",
+		"sealed save cannot carry a half-applied death transition")
 
 	# --- unknown fields are preserved --------------------------------------
 	var future := doc.duplicate(true)
@@ -303,4 +312,20 @@ func _populate() -> WorldState:
 		"phase": "encounters",
 	}
 	st.recovery = {"skipped_events": ["ev-missing"]}
+	st.life = {
+		"vitality": 47,
+		"stage": "strained",
+		"stage_since_jdn": st.jdn - 3,
+		"conditions": [{"id": "condition-fever", "severity": 2}],
+		"deceased": false,
+		"cause": "",
+		"death_jdn": -1,
+		"legacy_prepared": true,
+	}
+	st.legacy = {
+		"generation": 2,
+		"lineage_id": "lineage-test",
+		"volumes": [{"ending_id": "end-cartographer"}],
+		"pending_heirloom": "it-paiza",
+	}
 	return st

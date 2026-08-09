@@ -84,6 +84,12 @@ func run() -> bool:
 	_ok(not refused.get("ok", true), "depart rechecks availability")
 	_ok(poor.city == poor_city_before and poor.jdn == poor_jdn_before and poor.coins == 1,
 		"refused departure is side-effect free")
+	var deceased := st.duplicate_state()
+	deceased.life["deceased"] = true
+	deceased.life["stage"] = "deceased"
+	var terminal_avail := travel.availability(road, deceased, clock.month(), "caravan")
+	_ok(not terminal_avail["ok"] and "travel.deceased" in terminal_avail["reasons"],
+		"a deceased character cannot dismiss the ending and depart")
 
 	# Knowledge and permission are separate. A synthetic permit condition
 	# exercises the route contract before authored routes begin using it.

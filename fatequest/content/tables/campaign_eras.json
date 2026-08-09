@@ -1,0 +1,38 @@
+{
+  "contentVersion": 1,
+  "table": "campaign_eras",
+  "records": [
+    {
+      "id": "era-1253",
+      "name": "era.1253.name",
+      "description": "era.1253.description",
+      "startDate": { "year": 1253, "month": 5, "day": 7 },
+      "ageRange": [18, 60],
+      "anchor": "rubruck"
+    },
+    {
+      "id": "era-1292",
+      "name": "era.1292.name",
+      "description": "era.1292.description",
+      "startDate": { "year": 1292, "month": 4, "day": 11 },
+      "ageRange": [18, 60],
+      "anchor": "polo"
+    },
+    {
+      "id": "era-1325",
+      "name": "era.1325.name",
+      "description": "era.1325.description",
+      "startDate": { "year": 1325, "month": 6, "day": 14 },
+      "ageRange": [18, 60],
+      "anchor": "battuta"
+    },
+    {
+      "id": "era-1405",
+      "name": "era.1405.name",
+      "description": "era.1405.description",
+      "startDate": { "year": 1405, "month": 7, "day": 11 },
+      "ageRange": [18, 60],
+      "anchor": "zhenghe"
+    }
+  ]
+}

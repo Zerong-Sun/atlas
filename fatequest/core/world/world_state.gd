@@ -40,6 +40,22 @@ var pending_events: Array[String] = [] ## durable consequence chain, FIFO
 var active_event: String = ""          ## queued event currently shown; survives saving mid-dialog
 var active_journey: Dictionary = {}    ## resumable journey checkpoint; empty while in a city
 var recovery: Dictionary = {}          ## non-fatal load/content recovery facts for bug reports
+var life: Dictionary = {                  ## vitality, warning stage, conditions and death
+	"vitality": 100,
+	"stage": "stable",
+	"stage_since_jdn": -1,
+	"conditions": [],
+	"deceased": false,
+	"cause": "",
+	"death_jdn": -1,
+	"legacy_prepared": false,
+}
+var legacy: Dictionary = {             ## lineage volumes inherited across finished lives
+	"generation": 1,
+	"lineage_id": "",
+	"volumes": [],
+	"pending_heirloom": "",
+}
 
 ## Journey record (GDD §14). The epilogue has to name the road this player
 ## actually walked, so the facts it needs are recorded as they happen rather
@@ -91,6 +107,8 @@ func duplicate_state() -> WorldState:
 	s.active_event = active_event
 	s.active_journey = active_journey.duplicate(true)
 	s.recovery = recovery.duplicate(true)
+	s.life = life.duplicate(true)
+	s.legacy = legacy.duplicate(true)
 	s.start_city = start_city
 	s.visited = visited.duplicate()
 	s.longest_leg = longest_leg.duplicate(true)

@@ -1,6 +1,6 @@
 # 项目现状 · STATUS
 
-**2026-08-06 复核 · Steam EA 阶段。** 这是唯一的「现在到哪一步」权威页；`PLAN.md` 讲下一步，`ROADMAP.md` 讲阶段顺序。三份不重复。
+**2026-08-09 复核 · Steam EA 阶段。** 这是唯一的「现在到哪一步」权威页；`PLAN.md` 讲下一步，`ROADMAP.md` 讲阶段顺序。三份不重复。
 
 ---
 
@@ -22,11 +22,23 @@
 | events | 415 | ✅ 含十二主城后果链、site/mentor 多轮、**21 city 深化 24 followup** · 0 桩 |
 | goods | 60 | ✅ 可买卖，60 条译名齐 |
 | retainers | 54 | ✅ 招募／契约／货格联动已做 |
-| divinations / lessons | 24 / 24 | ✅ 8 法接入路线玩法；24 法均有学习练习配置 |
-| archetypes / endings / transports | 3 / 8 / 9 | ✅ 全部接入玩法 |
+| divinations / lessons / catalog | 24 / 24 / 24 | ✅ 8 类学习玩法；旅程年代门禁；全法可在附录练习 |
+| archetypes / eras / endings / transports | 8 / 4 / 8 / 9 | ✅ 全部接入玩法 |
 
-**门禁含 G31 全绿**（advisory WARN 均为既有已知项），16 个内核单测与界面 smoke
-（含 `smoke_21city_followups`）全绿。
+**门禁含 G33 全绿**（advisory WARN 均为既有已知项），新增人物、死亡与占法目录内核测试；
+界面 smoke（含 `smoke_divination_annex`）全绿。
+
+### 2.0 2026-08-09 核心系统重做
+
+| 系统 | 状态 |
+|---|---|
+| 人物抽取 | ✅ 四年代场景；每次并列三位完整候选；生辰、年龄、起点和命格确认后锁定 |
+| 死亡与传承 | ✅ 五阶段可见预警、救治窗口、不可复活终局、游记/降级地图/一件遗物传承；存档 v4 |
+| 占卜学习 | ✅ 8 类规则覆盖 24 课；24 条目录与史源；方法专属仪式动效；后世方法仅附录可练 |
+| 地图 | ✅ 真实经纬度、海岸河海矢量、1–8× 平移缩放、经纬网、比例尺、坐标与羊皮纸表达 |
+| 立意审查 | ✅ [`CORE_DESIGN_REVIEW.md`](CORE_DESIGN_REVIEW.md)；明确 16 法通用适配器与文化史复核仍是 P0 |
+
+六维验证与修复记录：[`CORE_SYSTEM_VERIFICATION_2026-08-09.md`](CORE_SYSTEM_VERIFICATION_2026-08-09.md)。
 
 ---
 

@@ -1,5 +1,10 @@
 extends Control
 
+const CharacterGeneratorCore = preload("res://core/character/character_generator.gd")
+const MortalityCore = preload("res://core/life/mortality.gd")
+const LegacyBookCore = preload("res://core/life/legacy_book.gd")
+const DivinationCatalogCore = preload("res://core/divination/catalog.gd")
+
 ## P1 shell: desk -> map -> travel + events. Deliberately plain; art lands in
 ## P2 (docs/ART_REQUIREMENTS.md). What matters here is that the kernel loop is
 ## reachable by a human: arrive, read an event, choose, hire a road, depart.
@@ -7,6 +12,8 @@ extends Control
 const MARGIN := 48.0
 const START_JDN_Y := 1292
 const START_COINS := 500000     # fen — the kernel keeps money in integers
+const TREATMENT_COST := 1200
+const TREATMENT_DAYS := 5
 
 ## Resolved at runtime rather than referenced as a global identifier.
 ##
@@ -17,6 +24,7 @@ const START_COINS := 500000     # fen — the kernel keeps money in integers
 ##
 ## A scene should not be untestable because one optional subsystem is absent.
 var _audio: Node = null
+var _game_context: Node = null
 
 func _audio_ready() -> bool:
 	return _audio != null and is_instance_valid(_audio)
@@ -28,7 +36,16 @@ func _resolve_audio() -> void:
 	if tree and tree.root:
 		_audio = tree.root.get_node_or_null("AudioDirector")
 
+
+func _resolve_game_context() -> void:
+	if _game_context != null and is_instance_valid(_game_context):
+		return
+	var tree := get_tree()
+	if tree and tree.root:
+		_game_context = tree.root.get_node_or_null("GameContext")
+
 var db := ContentDb.new()
+var divination_catalog = DivinationCatalogCore.new()
 var projection: MapProjection
 
 var state: WorldState
@@ -94,9 +111,12 @@ var _last_transit_day := -1
 var _transit_on_done: Callable = Callable()
 var _draw_rng: Rng
 var _drawn_archetype: Dictionary = {}
+var _draw_candidates: Array = []
+var _selected_era_id := "era-1292"
 var _draw_count := 0
 var _character_confirmed := false
 var _draw_card: VBoxContainer
+var _desk_intro_nodes: Array[Control] = []
 var _city_detail_layer: Control
 var _city_detail_card: PanelContainer
 var _travel_confirm_layer: Control
@@ -108,11 +128,15 @@ var _lesson_ui: PanelContainer
 var _lesson_event: Dictionary = {}
 var _lesson_choice_index := -1
 var _lesson_method := ""
+var _lesson_annex := false
+var _annex_layer: Control
+var _annex_view: PanelContainer
 var _pending_pages_in_sequence := 0
 
 
 func _ready() -> void:
 	_resolve_audio()
+	_resolve_game_context()
 	UiScale.load_prefs()
 	_load_dock_heights()
 	# Default to Chinese when the config holds no saved language; load_prefs()
@@ -120,6 +144,7 @@ func _ready() -> void:
 	if I18n.lang() != "zh" and I18n.lang() != "en":
 		I18n.load_lang("zh")
 	var n := db.load_all()
+	divination_catalog.configure(db.get_table("divination_catalog"))
 	DivinationData.bind(db)
 	DivinationBootstrap.register_all()
 
@@ -260,8 +285,23 @@ func _build_desk() -> void:
 
 	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
 	draw_btn.name = "CharacterDrawButton"
+	_desk.add_child(Panels.label(I18n.t("ui.boot.choose_era"), UiScale.ui(), Palette.ink_soft()))
+	var eras := HBoxContainer.new()
+	eras.alignment = BoxContainer.ALIGNMENT_CENTER
+	eras.add_theme_constant_override("separation", Metrics.xs())
+	for era in db.get_table("campaign_eras"):
+		var era_id := String(era.get("id", ""))
+		var era_btn := Panels.styled_button(I18n.t(String(era.get("name", era_id))),
+			_select_campaign_era.bind(era_id))
+		era_btn.tooltip_text = I18n.t(String(era.get("description", "")))
+		eras.add_child(era_btn)
+	_desk.add_child(eras)
 	_desk.add_child(draw_btn)
 
+	_desk_intro_nodes.clear()
+	for child in _desk.get_children():
+		if child is Control:
+			_desk_intro_nodes.append(child)
 	_draw_card = VBoxContainer.new()
 	_draw_card.name = "CharacterDrawCard"
 	_draw_card.add_theme_constant_override("separation", Metrics.xs())
@@ -302,43 +342,104 @@ func _archetype_button(a: Dictionary) -> Control:
 
 func _draw_character() -> void:
 	var pool := db.get_table("archetypes")
-	if pool.is_empty() or _draw_count >= 3:
+	var era := db.get_record(_selected_era_id)
+	if pool.is_empty() or era.is_empty():
 		return
-	_drawn_archetype = pool[_draw_rng.fork("draw:%d" % _draw_count).next_int(pool.size())]
+	_draw_candidates = CharacterGeneratorCore.generate_slate(pool, era,
+		_draw_rng.fork("slate:%s:%d" % [_selected_era_id, _draw_count]), 3)
 	_draw_count += 1
+	_drawn_archetype = _draw_candidates[0] if not _draw_candidates.is_empty() else {}
+	for intro in _desk_intro_nodes:
+		if is_instance_valid(intro):
+			intro.visible = false
 	for child in _draw_card.get_children():
 		child.queue_free()
-
-	var culture := String(_drawn_archetype.get("culture", "latin"))
-	var faith := String(_drawn_archetype.get("faith", "latin"))
-	var title := Panels.heading(I18n.t("ui.you_drew") % I18n.t(_drawn_archetype.get("name", "")))
+	var title := Panels.heading(I18n.t("ui.boot.choose_traveller"))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_draw_card.add_child(title)
-	_draw_card.add_child(Panels.label(I18n.t("ui.boot.identity") % [
+	var cards := HBoxContainer.new()
+	cards.alignment = BoxContainer.ALIGNMENT_CENTER
+	cards.add_theme_constant_override("separation", Metrics.sm())
+	for candidate in _draw_candidates:
+		cards.add_child(_character_candidate_card(candidate))
+	_draw_card.add_child(cards)
+	var actions := HBoxContainer.new()
+	actions.alignment = BoxContainer.ALIGNMENT_CENTER
+	actions.add_theme_constant_override("separation", Metrics.sm())
+	actions.add_child(Panels.styled_button(I18n.t("ui.boot.draw_again"), _draw_character))
+	actions.add_child(Panels.styled_button(I18n.t("ui.boot.change_era"),
+		_return_to_era_selection))
+	_draw_card.add_child(actions)
+
+
+func _return_to_era_selection() -> void:
+	_draw_candidates.clear()
+	_drawn_archetype.clear()
+	for child in _draw_card.get_children():
+		child.queue_free()
+	for intro in _desk_intro_nodes:
+		if is_instance_valid(intro):
+			intro.visible = true
+
+
+func _select_campaign_era(era_id: String) -> void:
+	_selected_era_id = era_id
+	_draw_count = 0
+	_draw_candidates.clear()
+	_drawn_archetype.clear()
+	for child in _draw_card.get_children():
+		child.queue_free()
+	var era := db.get_record(era_id)
+	_draw_card.add_child(Panels.label(I18n.t(String(era.get("description", ""))),
+		UiScale.ui(), Palette.ink_soft()))
+
+
+func _character_candidate_card(candidate: Dictionary) -> Control:
+	var panel := PanelContainer.new()
+	panel.custom_minimum_size = Vector2(330, 0)
+	panel.add_theme_stylebox_override("panel", Palette.panel_style())
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", Metrics.xs())
+	panel.add_child(box)
+	box.add_child(Panels.heading(I18n.t(String(candidate.get("name", "")))))
+	var culture := String(candidate.get("culture", "latin"))
+	var faith := String(candidate.get("faith", "latin"))
+	box.add_child(Panels.label(I18n.t("ui.boot.identity") % [
 		I18n.t("ui.culture.%s" % culture), I18n.t("faith.%s" % faith)],
 		UiScale.ui(), Palette.ink_soft()))
-	_draw_card.add_child(Panels.label(I18n.t("ui.boot.start_city") % _city_name(
-		String(_drawn_archetype.get("start", ""))), UiScale.body(), Palette.ink()))
-
-	var known_names: Array[String] = []
-	for cid in _drawn_archetype.get("knownCities", []):
-		known_names.append(_city_name(String(cid)))
-	_draw_card.add_child(Panels.label(I18n.t("ui.boot.heard_of") % I18n.list(
-		PackedStringArray(known_names)), UiScale.ui(), Palette.ink_soft()))
-	var known_routes: Array = _drawn_archetype.get("knownRoutes", [])
-	_draw_card.add_child(Panels.label(
-		I18n.t("ui.boot.roads_known") % known_routes.size(),
+	var birth: Dictionary = candidate.get("birth", {})
+	box.add_child(Panels.label(I18n.t("ui.boot.age") % [
+		int(birth.get("age", 0)), int(birth.get("year", 0)),
+		int(birth.get("month", 0)), int(birth.get("day", 0))],
 		UiScale.ui(), Palette.ink_soft()))
+	box.add_child(Panels.label(I18n.t("ui.boot.start_city") % _city_name(
+		String(candidate.get("start", ""))), UiScale.body(), Palette.ink()))
+	var fate: Dictionary = candidate.get("fate", {})
+	box.add_child(Panels.label(I18n.t("ui.boot.fate") % [
+		int(fate.get("travel", 15)), int(fate.get("rapport", 15)),
+		int(fate.get("wealth", 15))], UiScale.ui(), Palette.ink_soft()))
+	var obsession := I18n.t(String(candidate.get("obsession", "")))
+	var obsession_label := Panels.label(I18n.t("ui.boot.obsession") % obsession,
+		UiScale.ui(), Palette.ink_soft())
+	obsession_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(obsession_label)
+	var known_names: Array[String] = []
+	for cid in candidate.get("knownCities", []):
+		known_names.append(_city_name(String(cid)))
+	var known := Panels.label(I18n.t("ui.boot.heard_of") % I18n.list(
+		PackedStringArray(known_names)), UiScale.ui(), Palette.ink_soft())
+	known.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(known)
+	box.add_child(Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
+		String(candidate.get("start", ""))), _choose_character.bind(candidate)))
+	return panel
 
-	var row := HBoxContainer.new()
-	row.alignment = BoxContainer.ALIGNMENT_CENTER
-	row.add_theme_constant_override("separation", Metrics.sm())
-	var reroll := Panels.styled_button(I18n.t("ui.reroll_fmt") % (3 - _draw_count), _draw_character)
-	reroll.disabled = _draw_count >= 3
-	row.add_child(reroll)
-	row.add_child(Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
-		String(_drawn_archetype.get("start", ""))), _confirm_character_draw))
-	_draw_card.add_child(row)
+
+func _choose_character(candidate: Dictionary) -> void:
+	if _character_confirmed:
+		return
+	_drawn_archetype = candidate
+	_confirm_character_draw()
 
 
 func _confirm_character_draw() -> void:
@@ -365,8 +466,12 @@ func _begin(archetype: Dictionary) -> void:
 		bg.queue_free()
 	_desk = null
 
-	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
-	rng = Rng.new("run:%s:%d" % [archetype.get("id", "x"), clock.date.jdn])
+	var start_date: Dictionary = archetype.get("start_date", {
+		"year": START_JDN_Y, "month": 4, "day": 11})
+	clock = WorldClock.new(GameDate.from_gregorian(int(start_date.get("year", START_JDN_Y)),
+		int(start_date.get("month", 4)), int(start_date.get("day", 11))).jdn)
+	rng = Rng.new("run:%s:%d" % [archetype.get("candidate_id", archetype.get("id", "x")),
+		clock.date.jdn])
 	executor = EffectExecutor.new()
 	conditions = ConditionEvaluator.new(db)
 	events = EventMachine.new(db, conditions, executor)
@@ -382,9 +487,11 @@ func _begin(archetype: Dictionary) -> void:
 	state.jdn = clock.date.jdn
 	state.coins = int(archetype.get("startKit", {}).get("coins", START_COINS))
 	state.faith = archetype.get("faith", "latin")
-	var birth_year := 1253 + rng.fork("birth-year").next_int(22)
-	var birth_month := 1 + rng.fork("birth-month").next_int(12)
-	var birth_day := 1 + rng.fork("birth-day").next_int(28)
+	var birth: Dictionary = archetype.get("birth", {})
+	var birth_year := int(birth.get("year", int(start_date.get("year", START_JDN_Y))
+		- (18 + rng.fork("birth-age").next_int(43))))
+	var birth_month := int(birth.get("month", 1 + rng.fork("birth-month").next_int(12)))
+	var birth_day := int(birth.get("day", 1 + rng.fork("birth-day").next_int(28)))
 	state.birthdate_jdn = GameDate.from_gregorian(
 		birth_year, birth_month, birth_day).jdn
 	state.character = {
@@ -392,6 +499,8 @@ func _begin(archetype: Dictionary) -> void:
 		"background": String(archetype.get("culture", "latin")),
 		"faith": String(archetype.get("faith", "latin")),
 		"start_city": String(state.city),
+		"era_id": String(archetype.get("era_id", "era-1292")),
+		"age_at_start": int(birth.get("age", int(start_date.get("year", START_JDN_Y)) - birth_year)),
 		"birth_year": birth_year,
 		"birth_month": birth_month,
 		"birth_day": birth_day,
@@ -402,12 +511,15 @@ func _begin(archetype: Dictionary) -> void:
 	for it in archetype.get("startKit", {}).get("items", []):
 		if String(it) not in state.items:
 			state.items.append(String(it))
-	for key in archetype.get("bonus", {}):
-		state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
-			+ int(archetype["bonus"][key]), 0, 31)
-	for key in archetype.get("malus", {}):
-		state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
-			+ int(archetype["malus"][key]), 0, 31)
+	if archetype.has("fate"):
+		state.fate = (archetype.get("fate", {}) as Dictionary).duplicate(true)
+	else:
+		for key in archetype.get("bonus", {}):
+			state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
+				+ int(archetype["bonus"][key]), 0, 31)
+		for key in archetype.get("malus", {}):
+			state.fate[String(key)] = clampi(int(state.fate.get(String(key), 15))
+				+ int(archetype["malus"][key]), 0, 31)
 
 	var opening_effects: Array = [{
 		"op": "reveal_city", "value": String(state.city), "level": 3,
@@ -425,6 +537,26 @@ func _begin(archetype: Dictionary) -> void:
 		})
 	executor.execute(state, opening_effects, {
 		"rng": rng, "event_id": "character-opening-knowledge"})
+	# A successor receives only the predecessor's written record, a copied map
+	# and the one heirloom chosen on the death screen. The new background still
+	# supplies their own money, skills, faith and living relationships.
+	var pending_legacy: Dictionary = _game_context.get("pending_legacy") \
+		if _game_context != null else {}
+	if not pending_legacy.is_empty():
+		var package: Dictionary = pending_legacy
+		var volume: Dictionary = package.get("volume", {})
+		var old_lineage: Dictionary = package.get("lineage", {})
+		state.legacy = old_lineage.duplicate(true)
+		state.legacy["generation"] = int(old_lineage.get("generation", 1)) + 1
+		if String(state.legacy.get("lineage_id", "")).is_empty():
+			state.legacy["lineage_id"] = String(volume.get("predecessor", {}).get(
+				"candidate_id", state.seed))
+		var inheritance := LegacyBookCore.inheritance_effects(volume,
+			String(_game_context.get("pending_heirloom")))
+		if not inheritance.is_empty():
+			executor.execute(state, inheritance, {"rng": rng, "event_id": "lineage-inheritance"})
+		_game_context.set("pending_legacy", {})
+		_game_context.set("pending_heirloom", "")
 
 	_build_map()
 	_build_audio_controls()
@@ -477,7 +609,7 @@ func _show_desk_load_error(slot: String) -> void:
 
 
 func rng_seed(a: Dictionary) -> String:
-	return "fatequest:%s" % a.get("id", "run")
+	return "fatequest:%s" % a.get("candidate_id", a.get("id", "run"))
 
 
 ## Read `--seed=<value>` from the engine command line (after `--`), so a
@@ -673,6 +805,7 @@ func _build_map() -> void:
 	_build_travel_confirm()
 	_build_save_manager()
 	_build_divination_lesson()
+	_build_divination_annex()
 	_wire_dismissal()
 	_restyle_all()
 
@@ -694,6 +827,9 @@ func _wire_dismissal() -> void:
 	if _codex_layer != null:
 		Panels.make_dismissable(_codex_layer, _codex_view,
 			func() -> void: _codex_layer.visible = false)
+	if _annex_layer != null:
+		Panels.make_dismissable(_annex_layer, _annex_view,
+			func() -> void: _annex_layer.visible = false)
 	if _book_layer != null and _book_view != null:
 		Panels.make_dismissable(_book_layer, _book_view,
 			func() -> void: _book_layer.visible = false)
@@ -724,10 +860,18 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if ui is Dictionary and ui.has("layer") and is_instance_valid(ui["layer"]):
 			var l: Control = ui["layer"]
 			layers.append(l)
-			closers.append(func() -> void: l.visible = false)
+			if ui == _ending_ui:
+				closers.append(func() -> void:
+					if state == null or not bool(state.life.get("deceased", false)):
+						l.visible = false)
+			else:
+				closers.append(func() -> void: l.visible = false)
 	if _codex_layer != null and is_instance_valid(_codex_layer):
 		layers.append(_codex_layer)
 		closers.append(func() -> void: _codex_layer.visible = false)
+	if _annex_layer != null and is_instance_valid(_annex_layer):
+		layers.append(_annex_layer)
+		closers.append(func() -> void: _annex_layer.visible = false)
 	if _book_layer != null and is_instance_valid(_book_layer):
 		layers.append(_book_layer)
 		closers.append(func() -> void: _book_layer.visible = false)
@@ -896,6 +1040,27 @@ func _build_divination_lesson() -> void:
 	_lesson_ui.passed.connect(_on_lesson_passed)
 	_lesson_ui.failed.connect(_on_lesson_failed)
 	_lesson_ui.skipped.connect(_on_lesson_skipped)
+
+
+func _build_divination_annex() -> void:
+	_annex_layer = Control.new()
+	_annex_layer.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_annex_layer.visible = false
+	add_child(_annex_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_annex_layer.add_child(scrim)
+	var centre := CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	centre.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_annex_layer.add_child(centre)
+	_annex_view = preload("res://game/screens/divination_annex.gd").new()
+	centre.add_child(_annex_view)
+	_annex_view.setup(db, divination_catalog)
+	_annex_view.closed.connect(func(): _annex_layer.visible = false)
+	_annex_view.practice_requested.connect(_practice_annex_method)
 
 
 func _show_transit(route: Dictionary, mode: String, dest: String, days: int,
@@ -1438,7 +1603,18 @@ func _build_ending() -> void:
 	var confirm := Panels.styled_button(I18n.t("ui.end_now"), _confirm_ending)
 	row.add_child(confirm)
 	_ending_ui["confirm"] = confirm
-	row.add_child(Panels.styled_button(I18n.t("ui.keep_going"), func(): _ending_ui["layer"].visible = false))
+	var keep := Panels.styled_button(I18n.t("ui.keep_going"), func(): _ending_ui["layer"].visible = false)
+	row.add_child(keep)
+	_ending_ui["keep"] = keep
+	var heirloom := OptionButton.new()
+	heirloom.visible = false
+	heirloom.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(heirloom)
+	_ending_ui["heirloom"] = heirloom
+	var successor := Panels.primary_button(I18n.t("ui.death.successor"), _continue_lineage)
+	successor.visible = false
+	row.add_child(successor)
+	_ending_ui["successor"] = successor
 
 
 func _open_ending() -> void:
@@ -1446,6 +1622,9 @@ func _open_ending() -> void:
 	var body: RichTextLabel = _ending_ui["body"]
 	_ending_ui["title"].text = I18n.t("ui.ending.title")
 	_ending_ui["confirm"].visible = true
+	_ending_ui["keep"].visible = true
+	_ending_ui["successor"].visible = false
+	_ending_ui["heirloom"].visible = false
 
 	var years := maxi(1, int(state.days_elapsed / 365.0))
 	var ind := I18n.gap()
@@ -1516,6 +1695,60 @@ func _confirm_ending() -> void:
 			(_ending_ui["box"] as VBoxContainer).add_child(tr)
 	_say("[color=#4a6a4a]· %s[/color]" % (I18n.t("log.journey_ended") % I18n.t(String(e.get("name", "")))))
 	_refresh_hud()
+
+
+func _open_death() -> void:
+	if state == null or not bool(state.life.get("deceased", false)):
+		return
+	var ending_record := _ending.best(state)
+	var volume := LegacyBookCore.current_volume(state)
+	if volume.is_empty():
+		volume = LegacyBookCore.archive(state, String(ending_record.get("id", "")))
+		executor.execute(state, [{"op": "legacy_archive", "value": volume,
+			"reason": "life-closed"}], {"rng": rng, "event_id": "death:archive"})
+	if _game_context != null:
+		_game_context.set("pending_legacy", {
+			"volume": volume,
+			"lineage": state.legacy.duplicate(true),
+		})
+		_game_context.set("pending_heirloom", "")
+
+	_ending_ui["title"].text = I18n.t("ui.death.title")
+	_ending_ui["confirm"].visible = false
+	_ending_ui["keep"].visible = false
+	_ending_ui["successor"].visible = true
+	var heirloom: OptionButton = _ending_ui["heirloom"]
+	heirloom.clear()
+	heirloom.add_item(I18n.t("ui.death.no_heirloom"))
+	heirloom.set_item_metadata(0, "")
+	for item_id in volume.get("heirloom_options", []):
+		var item_name := I18n.t("item.%s.name" % String(item_id).trim_prefix("it-"))
+		if item_name.begins_with("item."):
+			item_name = String(item_id)
+		heirloom.add_item(item_name)
+		heirloom.set_item_metadata(heirloom.item_count - 1, String(item_id))
+	heirloom.visible = true
+
+	var cause := String(state.life.get("cause", ""))
+	var cause_key := "life.cause.%s" % cause
+	var cause_text := I18n.t(cause_key)
+	if cause_text == cause_key:
+		cause_text = cause.replace("-", " ")
+	var epilogue := _ending.epilogue(state, ending_record, clock)
+	_ending_ui["body"].text = "%s\n\n%s\n\n%s\n\n[color=#6a5a48]——%s[/color]" % [
+		I18n.t("ui.death.where") % [_city_name(state.city), cause_text],
+		I18n.t("ui.death.legacy"), epilogue,
+		I18n.t(String(ending_record.get("name", "")))]
+	_ending_ui["layer"].visible = true
+	_save("auto")
+
+
+func _continue_lineage() -> void:
+	var heirloom: OptionButton = _ending_ui["heirloom"]
+	if heirloom.item_count > 0 and _game_context != null:
+		_game_context.set("pending_heirloom",
+			String(heirloom.get_item_metadata(heirloom.selected)))
+	get_tree().reload_current_scene()
 
 
 ## The party: who travels with you, what they carry, and what leaving costs.
@@ -1894,6 +2127,9 @@ func _fill_settings(box: VBoxContainer) -> void:
 		_settings["layer"].visible = false
 		_open_codex())
 	box.add_child(open_btn)
+	box.add_child(Panels.styled_button(I18n.t("annex.open"), func():
+		_settings["layer"].visible = false
+		_open_divination_annex()))
 	box.add_child(Panels.styled_button(I18n.t("ui.ending"), func():
 		_settings["layer"].visible = false
 		_open_ending()))
@@ -1999,6 +2235,11 @@ func _restore_document(doc: Dictionary) -> bool:
 		_book_layer.visible = false
 	_bag["layer"].visible = false
 	_pending_pages_in_sequence = 0
+	# A terminal save resumes at its closing page.  It must never reopen the
+	# city beneath the ending or archive the same life twice on repeated loads.
+	if bool(state.life.get("deceased", false)):
+		_open_death()
+		return true
 	if not state.active_journey.is_empty():
 		# A resumed journey has not been through the departure screen, so the
 		# bottom-right panel would sit blank behind the queued road event (and
@@ -2100,6 +2341,12 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 	var choices: Array = ev.get("choices", [])
 	if index >= 0 and index < choices.size():
 		var choice: Dictionary = choices[index]
+		var cast_method := String(choice.get("divination", ""))
+		if not cast_method.is_empty() and not _method_allowed_in_journey(cast_method):
+			_dialog_layer.visible = false
+			_say("[color=#8a4a3a]· %s[/color]" % I18n.t("annex.journey_blocked"))
+			_open_city()
+			return
 		for effect in choice.get("effects", []):
 			if String(effect.get("op", "")) == "learn_divination":
 				var method := String(effect.get("value", ""))
@@ -2110,6 +2357,11 @@ func _on_choice(ev: Dictionary, index: int) -> void:
 
 
 func _start_lesson(ev: Dictionary, index: int, method: String) -> void:
+	if not _method_allowed_in_journey(method):
+		_dialog_layer.visible = false
+		_say("[color=#8a4a3a]· %s[/color]" % I18n.t("annex.journey_blocked"))
+		_open_city()
+		return
 	_lesson_event = ev
 	_lesson_choice_index = index
 	_lesson_method = method
@@ -2118,13 +2370,29 @@ func _start_lesson(ev: Dictionary, index: int, method: String) -> void:
 		push_error("Missing divination lesson configuration for %s" % method)
 		_on_lesson_failed(method)
 		return
-	_lesson_ui.start(method, lesson, rng.fork(
+	_lesson_annex = false
+	_dialog_layer.visible = false
+	_lesson_ui.start(method, divination_catalog.merge_lesson(method, lesson), rng.fork(
 		"lesson:%s:%s" % [ev.get("id", "?"), method]))
 	_lesson_layer.visible = true
 	Motion.parchment_expand(_lesson_ui, 0.22)
 
 
+func _method_allowed_in_journey(method: String) -> bool:
+	if state == null:
+		return false
+	return divination_catalog.available_in_journey(method,
+		String(state.character.get("era_id", "era-1292")))
+
+
 func _on_lesson_passed(method: String) -> void:
+	if _lesson_annex and method == _lesson_method:
+		_lesson_layer.visible = false
+		_lesson_annex = false
+		_say("[color=#4a6a4a]· %s[/color]" % I18n.t("annex.practice_complete"))
+		_clear_lesson_pending()
+		_open_divination_annex()
+		return
 	if method != _lesson_method or _lesson_event.is_empty():
 		return
 	_lesson_layer.visible = false
@@ -2138,6 +2406,11 @@ func _on_lesson_passed(method: String) -> void:
 
 func _on_lesson_failed(method: String) -> void:
 	_lesson_layer.visible = false
+	if _lesson_annex:
+		_lesson_annex = false
+		_clear_lesson_pending()
+		_open_divination_annex()
+		return
 	if not _lesson_event.is_empty() and _lesson_choice_index >= 0:
 		var choices: Array = _lesson_event.get("choices", [])
 		if _lesson_choice_index < choices.size():
@@ -2157,6 +2430,11 @@ func _on_lesson_failed(method: String) -> void:
 
 func _on_lesson_skipped(method: String) -> void:
 	_lesson_layer.visible = false
+	if _lesson_annex:
+		_lesson_annex = false
+		_clear_lesson_pending()
+		_open_divination_annex()
+		return
 	_say(I18n.t("ui.skip_learn_fmt") % I18n.t(db.get_record(method).get("name", method)))
 	_clear_lesson_pending()
 	_open_city()
@@ -2172,6 +2450,28 @@ func _clear_lesson_pending() -> void:
 	_lesson_event = {}
 	_lesson_choice_index = -1
 	_lesson_method = ""
+
+
+func _open_divination_annex() -> void:
+	if _annex_view != null:
+		_annex_view.refresh()
+	_annex_layer.visible = true
+	Motion.crossfade_in(_annex_layer, 0.18)
+
+
+func _practice_annex_method(method: String) -> void:
+	var lesson := db.get_record("lesson-%s" % method)
+	if lesson.is_empty():
+		return
+	_annex_layer.visible = false
+	_lesson_event = {}
+	_lesson_choice_index = -1
+	_lesson_method = method
+	_lesson_annex = true
+	_lesson_ui.start(method, divination_catalog.merge_lesson(method, lesson),
+		rng.fork("annex-lesson:%s:%d" % [method, state.jdn]))
+	_lesson_layer.visible = true
+	Motion.parchment_expand(_lesson_ui, 0.22)
 
 
 func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> void:
@@ -2351,6 +2651,16 @@ func _show_roads(from_city: bool = false) -> void:
 				_open_city()
 			else:
 				_clear_panel()))
+	var life_stage := String(state.life.get("stage", MortalityCore.STABLE))
+	if life_stage != MortalityCore.STABLE:
+		var care := Panels.primary_button(I18n.t("ui.life.seek_care") % [
+			TREATMENT_COST / Market.FEN, TREATMENT_DAYS], _seek_care)
+		care.disabled = state.coins < TREATMENT_COST
+		_panel.add_child(care)
+		if life_stage in [MortalityCore.GRAVE, MortalityCore.DYING] \
+				and not bool(state.life.get("legacy_prepared", false)):
+			_panel.add_child(Panels.styled_button(I18n.t("ui.life.prepare_legacy"),
+				_prepare_legacy))
 
 	# A city's own contents come first. GDD §5.2: you must do at least one thing
 	# in a place before you know how to leave it — so the sites cannot be buried
@@ -2450,6 +2760,19 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		_show_roads(not origin_rec.is_empty()
 			and not (origin_rec.get("sites", []) as Array).is_empty())
 		return
+	var life_fx := MortalityCore.exposure_effects(state, int(trip.get("days", 0)),
+		int(trip.get("risk", 0)), trip.get("hazards", []),
+		rng.fork("mortality:%s" % route.get("id", "?")), String(route.get("id", "road")))
+	if not life_fx.is_empty():
+		var life_result := executor.execute(state, life_fx, {
+			"rng": rng, "event_id": "mortality:%s" % route.get("id", "?")})
+		_log_effects(life_result)
+		_refresh_hud()
+		if bool(state.life.get("deceased", false)):
+			executor.execute(state, [{"op": "end_journey", "value": true,
+				"reason": "journey-ended-by-death"}], {"rng": rng, "event_id": "death"})
+			_open_death()
+			return
 	if _audio_ready():
 		_audio.on_depart(route)
 		_audio.set_travel(route)
@@ -2500,6 +2823,37 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 	# No encounter queued: the departure countdown plays out (or is skipped),
 	# then arrival completes through the callback handed to _show_transit.
 	# WorldState already moved during depart; only the presentation waits.
+
+
+func _seek_care() -> void:
+	if state == null or state.coins < TREATMENT_COST \
+			or bool(state.life.get("deceased", false)):
+		return
+	var condition_id := ""
+	var conditions_list: Array = state.life.get("conditions", [])
+	if not conditions_list.is_empty():
+		condition_id = String(conditions_list[0].get("id", ""))
+	var effects: Array = [
+		{"op": "coins", "value": -TREATMENT_COST, "reason": "local-treatment"},
+		{"op": "days", "value": TREATMENT_DAYS, "reason": "local-treatment"},
+	]
+	effects.append_array(MortalityCore.treatment_effects(state, 24, condition_id, "local-treatment"))
+	var result := executor.execute(state, effects, {"rng": rng, "event_id": "local-treatment"})
+	clock = WorldClock.new(state.jdn)
+	_log_effects(result)
+	_say(I18n.t("ui.life.care_result") % [int(state.life.get("vitality", 100)),
+		I18n.t("life.stage.%s" % String(state.life.get("stage", MortalityCore.STABLE)))])
+	_refresh_hud()
+	_show_roads(true)
+
+
+func _prepare_legacy() -> void:
+	var result := executor.execute(state, [{"op": "prepare_legacy", "value": true,
+		"reason": "entrusted-book-and-map"}], {"rng": rng, "event_id": "prepare-legacy"})
+	_log_effects(result)
+	_say(I18n.t("ui.life.legacy_prepared"))
+	_refresh_hud()
+	_show_roads(true)
 
 
 func _complete_journey() -> void:

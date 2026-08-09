@@ -1,0 +1,70 @@
+{
+  "contentVersion": 1,
+  "table": "divination_sources",
+  "records": [
+    {
+      "id": "src-yijing-ctext",
+      "title": "Book of Changes · Chinese Text Project",
+      "sourceType": "primary_public_domain",
+      "url": "https://ctext.org/book-of-changes",
+      "licenseNote": "Public-domain classical text; game explanations are newly written.",
+      "reviewStatus": "verified"
+    },
+    {
+      "id": "src-chinese-classics-atlas",
+      "title": "Atlas Chinese divination rules corpus",
+      "sourceType": "mixed_primary_and_authored",
+      "url": "",
+      "licenseNote": "Public-domain excerpts and original structured summaries; see atlas/corpus/manifests/corpus_v0_1.yaml.",
+      "reviewStatus": "internal_audit"
+    },
+    {
+      "id": "src-tetrabiblos-chicago",
+      "title": "Ptolemy, Tetrabiblos · LacusCurtius",
+      "sourceType": "primary_public_domain_translation",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ptolemy/Tetrabiblos/home.html",
+      "licenseNote": "Public-domain translation; used for historical framing, not deterministic claims.",
+      "reviewStatus": "verified"
+    },
+    {
+      "id": "src-atlas-method-engines",
+      "title": "Atlas method engines and authored libraries",
+      "sourceType": "self_authored_software",
+      "url": "",
+      "licenseNote": "Repository-owned algorithms and wording; method history must be checked separately.",
+      "reviewStatus": "internal_audit"
+    },
+    {
+      "id": "src-travel-corpus",
+      "title": "FateQuest medieval travel corpus",
+      "sourceType": "mixed_primary_public_domain",
+      "url": "",
+      "licenseNote": "Passage-level travel sources listed in assets/books/SOURCE_NOTES.md.",
+      "reviewStatus": "internal_audit"
+    },
+    {
+      "id": "src-modern-card-history",
+      "title": "Modern card-divination historical review",
+      "sourceType": "secondary_placeholder",
+      "url": "",
+      "licenseNote": "No quoted text. A specialist bibliography is required before release.",
+      "reviewStatus": "needs_scholar_review"
+    },
+    {
+      "id": "src-folk-practice-review",
+      "title": "Folk and embodied divination practice review",
+      "sourceType": "secondary_placeholder",
+      "url": "",
+      "licenseNote": "No quoted text. Regional and practitioner review required before release.",
+      "reviewStatus": "needs_practitioner_review"
+    },
+    {
+      "id": "src-modern-esoteric-review",
+      "title": "Modern esoteric method review",
+      "sourceType": "secondary_placeholder",
+      "url": "",
+      "licenseNote": "For explicit post-medieval annex entries; not evidence for the medieval journey.",
+      "reviewStatus": "needs_scholar_review"
+    }
+  ]
+}

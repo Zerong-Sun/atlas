@@ -105,6 +105,111 @@
         "end-hundred-markets",
         "end-no-return"
       ]
+    },
+    {
+      "id": "cartographer",
+      "name": "arch.cartographer.name",
+      "obsession": "arch.cartographer.obsession",
+      "start": "kinsay",
+      "goal": { "type": "network", "target": "samarcanda" },
+      "faith": "daoism",
+      "culture": "east_asia",
+      "knownCities": ["kinsay", "zayton", "cambaluc"],
+      "knownRoutes": ["rt-kinsay-zayton"],
+      "bonus": { "travel": 2, "rapport": 1 },
+      "malus": { "wealth": -2 },
+      "startKit": {
+        "coins": 10000,
+        "currency": "cash",
+        "goods": [],
+        "items": [],
+        "languages": ["chinese"]
+      },
+      "endings": ["end-cartographer", "end-no-return"]
+    },
+    {
+      "id": "pilgrim-scholar",
+      "name": "arch.pilgrim.name",
+      "obsession": "arch.pilgrim.obsession",
+      "start": "baldacum",
+      "goal": { "type": "reach", "target": "zayton" },
+      "faith": "islam",
+      "culture": "islamic",
+      "knownCities": ["baldacum", "basora", "tauris"],
+      "knownRoutes": ["rt-baldacum-basora"],
+      "bonus": { "rapport": 3 },
+      "malus": { "wealth": -2 },
+      "startKit": {
+        "coins": 7000,
+        "currency": "dinar",
+        "goods": [],
+        "items": [],
+        "languages": ["arabic", "persian"]
+      },
+      "endings": ["end-witness-of-the-world", "end-no-return"]
+    },
+    {
+      "id": "translator",
+      "name": "arch.translator.name",
+      "obsession": "arch.translator.obsession",
+      "start": "samarcanda",
+      "goal": { "type": "reach", "target": "cambaluc" },
+      "faith": "buddhism",
+      "culture": "steppe",
+      "knownCities": ["samarcanda", "balc", "cascar"],
+      "knownRoutes": ["rt-balc-samarcanda"],
+      "bonus": { "rapport": 4 },
+      "malus": { "wealth": -2 },
+      "startKit": {
+        "coins": 8500,
+        "currency": "silver-ingot",
+        "goods": [],
+        "items": [],
+        "languages": ["turkic", "persian", "chinese"]
+      },
+      "endings": ["end-witness-of-the-world", "end-no-return"]
+    },
+    {
+      "id": "healer",
+      "name": "arch.healer.name",
+      "obsession": "arch.healer.obsession",
+      "start": "balc",
+      "goal": { "type": "network", "target": "ormus" },
+      "faith": "buddhism",
+      "culture": "steppe",
+      "knownCities": ["balc", "samarcanda", "ormus"],
+      "knownRoutes": ["rt-balc-samarcanda"],
+      "bonus": { "travel": 2, "rapport": 2 },
+      "malus": { "wealth": -3 },
+      "startKit": {
+        "coins": 6500,
+        "currency": "silver-ingot",
+        "goods": [],
+        "items": [],
+        "languages": ["persian", "turkic"]
+      },
+      "endings": ["end-witness-of-the-world", "end-lay-down-the-pen"]
+    },
+    {
+      "id": "scribe",
+      "name": "arch.scribe.name",
+      "obsession": "arch.scribe.obsession",
+      "start": "cambaluc",
+      "goal": { "type": "network", "target": "tauris" },
+      "faith": "nestorian",
+      "culture": "east_asia",
+      "knownCities": ["cambaluc", "kinsay", "chandu"],
+      "knownRoutes": ["rt-chandu-cambaluc"],
+      "bonus": { "rapport": 2, "wealth": 1 },
+      "malus": { "travel": -2 },
+      "startKit": {
+        "coins": 9000,
+        "currency": "cash",
+        "goods": [],
+        "items": ["it-letter-of-introduction"],
+        "languages": ["chinese", "turkic"]
+      },
+      "endings": ["end-cartographer", "end-diviner"]
     }
   ]
 }

@@ -4,7 +4,7 @@ extends RefCounted
 ## Pure, data-driven lesson evaluator. Art and animation are deliberately absent:
 ## the UI may replace every placeholder control without changing pass/fail rules.
 
-const TYPES := ["throw", "arrange", "observe", "timing", "deduce", "form"]
+const TYPES := ["throw", "arrange", "observe", "timing", "deduce", "form", "orient", "compare"]
 const LEGACY_TYPES := {
 	"order": "arrange",
 	"interpret": "observe",
@@ -70,6 +70,21 @@ func validate() -> Array[String]:
 				errors.append("LESSON_FACES_INVALID")
 			if options.size() < 2 or answer < 0 or answer >= options.size():
 				errors.append("LESSON_ANSWER_INVALID")
+		"orient":
+			var directions: Array = lesson.get("directions", [])
+			var direction_answer := int(lesson.get("answer", -1))
+			if directions.size() < 3 or direction_answer < 0 \
+					or direction_answer >= directions.size():
+				errors.append("LESSON_ORIENTATION_INVALID")
+		"compare":
+			var pairs: Array = lesson.get("pairs", [])
+			var pair_answer := int(lesson.get("answer", -1))
+			if pairs.size() < 2 or pair_answer < 0 or pair_answer >= pairs.size():
+				errors.append("LESSON_COMPARISON_INVALID")
+			for pair in pairs:
+				if typeof(pair) != TYPE_ARRAY or pair.size() != 2:
+					errors.append("LESSON_PAIR_INVALID")
+					break
 	return errors
 
 
@@ -97,7 +112,7 @@ func pick_step(step: String) -> Dictionary:
 
 
 func choose(index: int) -> Dictionary:
-	if finished or type not in ["observe", "throw"]:
+	if finished or type not in ["observe", "throw", "orient", "compare"]:
 		return _invalid("LESSON_ACTION_INVALID")
 	if type == "observe":
 		var required := int(lesson.get(
@@ -182,7 +197,7 @@ func apply_assist() -> Dictionary:
 			var out := _active("LESSON_ASSIST_SOLUTION")
 			out["solution"] = _solution(lesson.get("values", []), int(lesson.get("target", 0)))
 			return out
-		"observe":
+		"observe", "orient", "compare":
 			var out := _active("LESSON_ASSIST_CLUE")
 			out["clue"] = int(lesson.get("answer", 0))
 			return out

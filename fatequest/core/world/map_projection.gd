@@ -44,3 +44,14 @@ func to_view(lon: float, lat: float) -> Vector2:
 		(lon - west) / (east - west) * width,
 		(north - lat) / (north - south) * height
 	)
+
+
+func to_geo(view_point: Vector2) -> Vector2:
+	return Vector2(
+		west + (view_point.x - origin.x) / maxf(width, 1.0) * (east - west),
+		north - (view_point.y - origin.y) / maxf(height, 1.0) * (north - south)
+	)
+
+
+static func longitude_km_per_degree(latitude: float) -> float:
+	return 111.32 * maxf(0.01, cos(deg_to_rad(clampf(latitude, -89.0, 89.0))))
