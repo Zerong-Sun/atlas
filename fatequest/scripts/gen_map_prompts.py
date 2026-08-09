@@ -376,7 +376,7 @@ BATCHES: list[tuple] = [
         (900, 1300),
         True,
         [
-            ("mentor-tarot.webp", "Venice card-maker old Matteo, half-body facing right"),
+            ("mentor-tarot.webp", "Frankish widow card-reader of Tabriz, half-body facing right"),
             ("mentor-lenormand.webp", "Card-shop daughter Caterina, half-body facing right"),
             ("mentor-runes.webp", "Varangian guard Harald, half-body facing right"),
             ("mentor-astrodice.webp", "Astronomer Tebrizi, half-body facing right"),

@@ -79,6 +79,7 @@ var _panel_wrap: PanelContainer
 ## [dock]; a missing entry means "use Metrics.dock_height()".
 const DOCK_HANDLE_H := 10.0
 const DOCK_MAX_FRAC := 0.80
+enum RoadPanelOrigin { MAP, CITY, ARRIVAL, RESUME }
 var _dock_h: Dictionary = {}
 var _dock_handles: Dictionary = {}
 var _dragging_dock := ""
@@ -109,6 +110,7 @@ var _transit_hold := false
 var _transit_skip := false
 var _last_transit_day := -1
 var _transit_on_done: Callable = Callable()
+var _transit_generation := 0
 var _draw_rng: Rng
 var _drawn_archetype: Dictionary = {}
 var _draw_candidates: Array = []
@@ -1067,6 +1069,9 @@ func _show_transit(route: Dictionary, mode: String, dest: String, days: int,
 		hold: bool = false, on_done: Callable = Callable()) -> void:
 	if _transit_layer == null:
 		return
+	# Invalidate any entry-art timer or previous countdown before reusing the
+	# same full-screen layer. Old callbacks must never hide a new passage.
+	_hide_transit()
 	var here := db.get_record(state.city)
 	var t_rec := db.get_record(mode)
 	var kinds: Array = t_rec.get("kinds", ["land"])
@@ -1109,11 +1114,14 @@ func _start_transit_countdown() -> void:
 	if not Motion.allows(Motion.Kind.MOVE) or seconds <= 0.02:
 		_transit_day.text = _day_string(0)
 		_transit_progress.value = _transit_progress.max_value
-		_finish_transit_countdown()
+		_finish_transit_countdown(_transit_generation)
 		return
+	var generation := _transit_generation
 	_transit_tween = create_tween()
 	_transit_tween.tween_method(_set_transit_day, 0.0, 1.0, seconds)
-	_transit_tween.finished.connect(_finish_transit_countdown)
+	_transit_tween.finished.connect(func() -> void:
+		if generation == _transit_generation:
+			_finish_transit_countdown(generation))
 
 
 ## Day counter down to zero; the audio ticks each time the number drops.
@@ -1133,7 +1141,9 @@ func _day_string(remaining: int) -> String:
 	return I18n.t("ui.transit_day_fmt") % remaining
 
 
-func _finish_transit_countdown() -> void:
+func _finish_transit_countdown(generation: int = -1) -> void:
+	if generation >= 0 and generation != _transit_generation:
+		return
 	_last_transit_day = -1
 	if _transit_hold:
 		# The plate stays up for the whole passage; arrival clears it.
@@ -1141,13 +1151,15 @@ func _finish_transit_countdown() -> void:
 	var done := _transit_on_done
 	_transit_on_done = Callable()
 	if _transit_skip:
-		_transit_layer.visible = false
+		_hide_transit()
 		if done.is_valid():
 			done.call()
 		return
+	var finish_generation := _transit_generation
 	get_tree().create_timer(0.35).timeout.connect(func():
-		if is_instance_valid(_transit_layer):
-			_transit_layer.visible = false
+		if finish_generation != _transit_generation:
+			return
+		_hide_transit()
 		if done.is_valid():
 			done.call())
 
@@ -1158,11 +1170,30 @@ func _on_transit_input(event: InputEvent) -> void:
 	var mb := event as InputEventMouseButton
 	if not mb.pressed or mb.button_index != MOUSE_BUTTON_LEFT:
 		return
+	_skip_transit_countdown()
+
+
+func _skip_transit_countdown() -> void:
 	if _transit_tween != null and _transit_tween.is_valid():
 		_transit_tween.kill()
-	_transit_skip = true
-	_set_transit_day(1.0)
-	_finish_transit_countdown()
+		_transit_skip = true
+		_set_transit_day(1.0)
+		_finish_transit_countdown(_transit_generation)
+
+
+func _hide_transit() -> void:
+	# One cancellation point for countdowns, entry art and their callbacks.
+	# Incrementing the generation makes already queued timer signals harmless.
+	_transit_generation += 1
+	if _transit_tween != null and _transit_tween.is_valid():
+		_transit_tween.kill()
+	_transit_tween = null
+	_last_transit_day = -1
+	_transit_hold = false
+	_transit_skip = false
+	_transit_on_done = Callable()
+	if _transit_layer != null and is_instance_valid(_transit_layer):
+		_transit_layer.visible = false
 
 
 ## Reader controls. Text size and contrast are not preferences to bury in a
@@ -1301,6 +1332,13 @@ func _on_dock_handle_input(event: InputEvent, key: String) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventKey and _transit_layer != null \
+			and _transit_layer.visible and not _dialog_layer.visible:
+		var key := event as InputEventKey
+		if key.pressed and not key.echo and key.keycode in [KEY_SPACE, KEY_ENTER, KEY_KP_ENTER]:
+			_skip_transit_countdown()
+			get_viewport().set_input_as_handled()
+			return
 	if _dragging_dock == "":
 		return
 	if event is InputEventMouseMotion:
@@ -1477,11 +1515,7 @@ func _arrive() -> void:
 	# End of passage: the transit plate (possibly held through a road event)
 	# gives way to the entry art or the city itself. Clear it unconditionally
 	# so a held plate can never sit over the arrival screen.
-	if _transit_tween != null and _transit_tween.is_valid():
-		_transit_tween.kill()
-	_last_transit_day = -1
-	if _transit_layer != null:
-		_transit_layer.visible = false
+	_hide_transit()
 	# Prefer a dedicated entry plate when one exists.
 	var entry_art := MapArt.city_entry(String(city.get("id", "")))
 	if entry_art != null and _transit_layer != null:
@@ -1491,13 +1525,14 @@ func _arrive() -> void:
 		_transit_tex.texture = entry_art
 		_transit_label.text = I18n.t(city.get("name", ""))
 		_transit_layer.visible = true
+		var entry_generation := _transit_generation
 		get_tree().create_timer(0.7).timeout.connect(func():
-			if is_instance_valid(_transit_layer):
-				_transit_layer.visible = false)
+			if entry_generation == _transit_generation and is_instance_valid(_transit_layer):
+				_hide_transit())
 	var ev := events.pick("entry", state, rng, ctx)
 	if _audio_ready(): _audio.set_place(city, ev if not ev.is_empty() else {})
 	if ev.is_empty():
-		_show_roads()
+		_show_roads(RoadPanelOrigin.ARRIVAL)
 	else:
 		_show_event(ev)
 
@@ -1821,7 +1856,7 @@ func _party_row(m: Dictionary) -> Control:
 
 	var here := db.get_record(state.city)
 	var culture := String(here.get("culture", "latin"))
-	var portrait := MapArt.retainer_portrait(rid, culture)
+	var portrait := MapArt.retainer_portrait(rid, culture, String(rec.get("gender", "")))
 	if portrait != null:
 		var tr := TextureRect.new()
 		tr.texture = portrait
@@ -1885,7 +1920,7 @@ func _hire_row(rec: Dictionary) -> Control:
 
 	var here := db.get_record(state.city)
 	var culture := String(here.get("culture", "latin"))
-	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture, String(rec.get("gender", "")))
 	if portrait != null:
 		var tr := TextureRect.new()
 		tr.texture = portrait
@@ -1923,7 +1958,7 @@ func _divined_hire_row(entry: Dictionary) -> Control:
 
 	var here := db.get_record(state.city)
 	var culture := String(here.get("culture", "latin"))
-	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture, String(rec.get("gender", "")))
 	if portrait != null:
 		var tr := TextureRect.new()
 		tr.texture = portrait
@@ -2178,7 +2213,7 @@ func _open_market() -> void:
 func _open_city() -> void:
 	var c := db.get_record(state.city)
 	if c.is_empty() or (c.get("sites", []) as Array).is_empty():
-		_show_roads()
+		_show_roads(RoadPanelOrigin.CITY)
 		return
 	_city_view.visible = true
 	_city_view.show_city(c, state, conditions, _ctx())
@@ -2246,7 +2281,7 @@ func _restore_document(doc: Dictionary) -> bool:
 		# then the arrival's entry event) — reading as "the route vanished".
 		# Populate it now; every route renders disabled with "journey in
 		# progress", which is the same state the roads panel shows mid-trip.
-		_show_roads()
+		_show_roads(RoadPanelOrigin.RESUME)
 		if not _show_next_pending_event():
 			_complete_journey()
 	elif not _show_next_pending_event():
@@ -2266,7 +2301,7 @@ func _sync_city_status() -> void:
 
 func _close_city() -> void:
 	_city_view.visible = false
-	_show_roads(true)
+	_show_roads(RoadPanelOrigin.CITY)
 
 
 func _restyle_all() -> void:
@@ -2320,12 +2355,19 @@ func _show_event(ev: Dictionary) -> void:
 	if art == null and not c.is_empty():
 		art = _city_view._portrait_for(ev, culture)
 	_dialog_layer.visible = true
-	_dialog.show_event(ev, states, art)
+	_dialog.show_event(ev, states, art, _pending_context())
 	# N3 — panel expands in place (rise fights CenterContainer layout).
 	Motion.parchment_expand(_dialog, 0.25)
 	if _dialog.has_method("animate_choices"):
 		_dialog.animate_choices()
 	if _audio_ready(): _audio.sfx("page")
+
+
+func _pending_context() -> String:
+	if _pending_pages_in_sequence <= 0 or state == null or state.active_event.is_empty():
+		return ""
+	var remaining := maxi(state.pending_events.size() - 1, 0)
+	return I18n.t("ui.chain.progress_fmt") % [_pending_pages_in_sequence, remaining]
 
 
 ## GDD §19: the player must always be able to tell source from invention.
@@ -2523,6 +2565,10 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 			},
 		], {"rng": rng, "event_id": "queued-event-resolved"})
 	_refresh_hud()
+	# A committed choice may have changed the FIFO, active event, inventory or
+	# journey checkpoint. Save at this boundary so quitting between pages never
+	# rolls the player back to a choice that has already been applied.
+	_autosave()
 	# A choice may enqueue one or more authored consequences. Resolve the FIFO
 	# before returning to city exploration so a branch can never silently end
 	# between “what I chose” and “what happened because of it”.
@@ -2552,8 +2598,6 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 
 
 func _show_next_pending_event() -> bool:
-	if _pending_pages_in_sequence >= 3 and not state.pending_events.is_empty():
-		return false
 	if state != null and not state.active_event.is_empty():
 		var resumed := db.get_record(state.active_event)
 		if not resumed.is_empty():
@@ -2603,6 +2647,7 @@ func _show_next_pending_event() -> bool:
 			"value": event_id,
 			"reason": "opened-queued-event",
 		}], {"rng": rng, "event_id": "consequence-queue"})
+		_autosave()
 		_city_view.visible = false
 		_pending_pages_in_sequence += 1
 		_show_event(next)
@@ -2632,25 +2677,57 @@ func _continue_pending() -> void:
 		_open_city()
 
 
-## The road list. `from_city` records that the player stepped out of the town
-## interior: the top "back" button must then return them to the town, not to a
-## bare map — walking out to read the roads and finding the town gone read as
-## being stuck. Arrival and map entry return to the map instead.
-func _show_roads(from_city: bool = false) -> void:
+## The road list. The origin is explicit because the same panel is used from
+## the city, map, arrival and resume paths, each with a different safe return.
+## Routes are deliberately rendered before optional city actions: the player
+## asking "where can I go?" must see a destination without scrolling.
+func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
+	_city_view.visible = false
 	_clear_panel()
 	var here := db.get_record(state.city)
+	if origin == RoadPanelOrigin.CITY:
+		_panel.add_child(Panels.styled_button(I18n.t("ui.back_to_city"), _open_city))
+	else:
+		_panel.add_child(Panels.styled_button(I18n.t("ui.back_to_map"),
+			func() -> void: _clear_panel()))
 
-	# The road list is reached from the city interior and from arrival, and a
-	# player who only came to look must be able to leave again without hunting
-	# for an invisible exit. The button is first, so it survives whatever the
-	# list below grows to.
-	_panel.add_child(Panels.styled_button(
-		I18n.t("ui.back_to_map"),
-		func() -> void:
-			if from_city:
-				_open_city()
+	_panel.add_child(Panels.heading(I18n.t("ui.routes_from") % _city_name(state.city)))
+	_panel.add_child(Panels.label(I18n.t("ui.routes_hint"), UiScale.ui(), Palette.ink_soft()))
+
+	var any := false
+	for r in travel.routes_from(state.city):
+		if not travel.is_route_known(r, state):
+			continue
+		var dest := travel.other_end(r, state.city)
+		for mode in r.get("modes", []):
+			var av := travel.availability(r, state, clock.month(), String(mode))
+			var days := travel.total_days(r, String(mode))
+			var cost := travel.total_cost(r, String(mode)) / 100
+			var btn := Panels.styled_button(I18n.t("ui.route_button_fmt") % [
+				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
+				Callable())
+			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			btn.disabled = not av["ok"]
+			if not av["ok"]:
+				var rr: Array[String] = []
+				for reason in av["reasons"]:
+					rr.append(I18n.fmt(String(reason)))
+				var why := I18n.list(PackedStringArray(rr))
+				btn.text += I18n.gap() + I18n.t("ui.why_fmt") % why
+				btn.tooltip_text = why
 			else:
-				_clear_panel()))
+				btn.tooltip_text = I18n.t("ui.route.tooltip") % [_city_name(dest), days, cost]
+				btn.pressed.connect(_on_depart.bind(r, String(mode)))
+			_panel.add_child(btn)
+			any = true
+	if not any:
+		_panel.add_child(Panels.label(I18n.t("ui.no_routes"), UiScale.ui(), Palette.ink_faint()))
+		_panel.add_child(Panels.label(I18n.t("ui.no_routes_hint"), UiScale.ui(), Palette.ink_soft()))
+
+	# Secondary city actions remain available below the primary route area.
+	# They are intentionally not duplicated above the route list.
+	_panel.add_child(Panels.rule())
+	_panel.add_child(Panels.heading(I18n.t("ui.city.explore_more")))
 	var life_stage := String(state.life.get("stage", MortalityCore.STABLE))
 	if life_stage != MortalityCore.STABLE:
 		var care := Panels.primary_button(I18n.t("ui.life.seek_care") % [
@@ -2662,73 +2739,24 @@ func _show_roads(from_city: bool = false) -> void:
 			_panel.add_child(Panels.styled_button(I18n.t("ui.life.prepare_legacy"),
 				_prepare_legacy))
 
-	# A city's own contents come first. GDD §5.2: you must do at least one thing
-	# in a place before you know how to leave it — so the sites cannot be buried
-	# under the road list.
 	var here_sites: Array = here.get("sites", []).duplicate()
 	if here.has("mentorEvent"):
 		here_sites.append(here["mentorEvent"])
 	for sid in here_sites:
 		var sev := db.get_record(String(sid))
-		if sev.is_empty():
-			continue
-		if sev.get("once", false) and state.once_fired.get(sev["id"], false):
+		if sev.is_empty() or (sev.get("once", false) and state.once_fired.get(sev["id"], false)):
 			continue
 		if not conditions.evaluate(sev.get("when", {}), state, _ctx()):
 			continue
-		# Bare `Button.new()` inherits Godot's default dark theme, so these sat
-		# on the parchment as grey slabs with white text while every other
-		# button in the game was vellum — on the panel the player uses most.
 		var sbtn := Panels.styled_button(
 			"◆ %s" % I18n.t(sev.get("title", "")), _show_event.bind(sev))
 		sbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(sbtn)
 
-	var here_rec := db.get_record(state.city)
-	if here_rec.has("market"):
+	if here.has("market"):
 		var mbtn := Panels.styled_button(I18n.t("ui.open_market"), _open_market)
 		mbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(mbtn)
-
-	# The roads are a different kind of thing from the sites above them, and
-	# the list ran straight on with only a bare Label between.
-	_panel.add_child(Panels.rule())
-	_panel.add_child(Panels.heading(I18n.t("ui.routes_from") % _city_name(state.city)))
-
-	var any := false
-	for r in travel.routes_from(state.city):
-		if not travel.is_route_known(r, state):
-			continue
-		var dest := travel.other_end(r, state.city)
-		for mode in r.get("modes", []):
-			var av := travel.availability(r, state, clock.month(), String(mode))
-			var days := travel.total_days(r, String(mode))
-			var cost := travel.total_cost(r, String(mode)) / 100
-			# The arrow used to point back at the city you are standing in
-			# ("杭州 ← 骆驼"), which reads as arriving rather than leaving.
-			var btn := Panels.styled_button(I18n.t("ui.route_button_fmt") % [
-				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
-				Callable())
-			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-			btn.disabled = not av["ok"]
-			if not av["ok"]:
-				var rr: Array[String] = []
-				for reason in av["reasons"]:
-					rr.append(I18n.fmt(String(reason)))
-				var why := I18n.list(PackedStringArray(rr))
-				# Say why on the face of the button, not only in a tooltip a
-				# player has to hover a greyed-out control to discover — the
-				# event dialog already states its reasons this way.
-				btn.text += I18n.gap() + I18n.t("ui.why_fmt") % why
-				btn.tooltip_text = why
-			else:
-				btn.tooltip_text = I18n.t("ui.route.tooltip") % [_city_name(dest), days, cost]
-				btn.pressed.connect(_on_depart.bind(r, String(mode)))
-			_panel.add_child(btn)
-			any = true
-	if not any:
-		_panel.add_child(Panels.label(I18n.t("ui.no_routes"), UiScale.ui(), Palette.ink_faint()))
-		_panel.add_child(Panels.label(I18n.t("ui.no_routes_hint"), UiScale.ui(), Palette.ink_soft()))
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
@@ -2757,8 +2785,9 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		# A road the player is standing in may still be a town interior —
 		# returning to a bare map would strand them outside their own city.
 		var origin_rec := db.get_record(origin_id)
-		_show_roads(not origin_rec.is_empty()
-			and not (origin_rec.get("sites", []) as Array).is_empty())
+		_show_roads(RoadPanelOrigin.CITY if not origin_rec.is_empty()
+			and not (origin_rec.get("sites", []) as Array).is_empty()
+			else RoadPanelOrigin.MAP)
 		return
 	var life_fx := MortalityCore.exposure_effects(state, int(trip.get("days", 0)),
 		int(trip.get("risk", 0)), trip.get("hazards", []),
@@ -2844,7 +2873,7 @@ func _seek_care() -> void:
 	_say(I18n.t("ui.life.care_result") % [int(state.life.get("vitality", 100)),
 		I18n.t("life.stage.%s" % String(state.life.get("stage", MortalityCore.STABLE)))])
 	_refresh_hud()
-	_show_roads(true)
+	_show_roads(RoadPanelOrigin.CITY)
 
 
 func _prepare_legacy() -> void:
@@ -2853,11 +2882,14 @@ func _prepare_legacy() -> void:
 	_log_effects(result)
 	_say(I18n.t("ui.life.legacy_prepared"))
 	_refresh_hud()
-	_show_roads(true)
+	_show_roads(RoadPanelOrigin.CITY)
 
 
 func _complete_journey() -> void:
-	if state == null:
+	if state == null or state.active_journey.is_empty():
+		# Arrival callbacks can race with a skipped transit tween or a repeated
+		# continue click. Once the journey is closed, arriving again would replay
+		# entry art and duplicate the next entry event.
 		return
 	if not state.active_journey.is_empty():
 		executor.execute(state, [{

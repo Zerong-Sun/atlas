@@ -102,7 +102,7 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 	_bg.texture = parchment
 	_bg.visible = parchment != null
 
-	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture)
+	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture, String(rec.get("gender", "")))
 	_portrait.texture = portrait
 	_portrait.visible = portrait != null
 

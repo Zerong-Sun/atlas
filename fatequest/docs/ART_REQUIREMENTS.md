@@ -162,3 +162,83 @@ Godot 运行时接线            674 张（MapArt + art_wire_index.json）
 详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md) · [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md)。现状：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· **~8.4 MB** · A1–A8 ✅ · `AudioDirector` autoload。
 
 **红线**：不得合成可辨识语义的礼拜声响；圣所只留空间感与偶发钟磬。上线前须与美术、文本一并送敏感读者审阅。
+
+---
+
+## 7. 人物立绘矩阵（2026-08-07 实测）
+
+> 机器 audit（文件存在性/可解码）全绿，但**内容覆盖度**存在三类缺口：随从 con/mazu 缺 18 张、女性代表不足、`mentor-tarot` 内容错配。本矩阵为「种族 × 性别 × 风格」权威底稿，改角色/出图后须同步本表。
+
+### 7.1 守门人 `npc-*` · 16 张（4 场所 × 4 文明）· 已接线
+
+| 场所 | chr 基督之境 | isl 新月之境 | con 儒道之境 | mazu 妈祖之海 |
+|---|---|---|---|---|
+| 市集 `market` | 男·布商乔凡尼 | 男·香料贩优素福 | 男·丝行掌柜周三 | 男·船货牙人阿海 |
+| 圣所 `temple` | 男·执事修士 | 男·寺守阿卜杜勒 | 男·道观知客 | 男·天妃宫庙祝 |
+| 茶肆 `tea` | **女**·酒馆老板娘 | 男·驿栈茶博士 | 男·野店说书人 | **女**·码头茶棚阿婆 |
+| 客栈 `inn` | 男·客栈掌柜 | 男·驿栈主人 | 男·行馆管事 | 男·船家客栈老板 |
+
+16 张中仅 `tea-chr`、`tea-mazu` 两张为女性。
+
+### 7.2 职业 `npc-job-*` · 36 张（9 职业 × 4 文明）· 已接线
+
+| 职业 | chr | isl | con | mazu |
+|---|---|---|---|---|
+| 向导 `guide` | ✅ | ✅ | ✅ | ✅ |
+| 通译 `translator` | ✅ | ✅ | ✅ | ✅ |
+| 脚夫 `porter` | ✅ | ✅ | ✅ | ✅ |
+| 水手 `sailor` | ✅ | ✅ | ✅ | ✅ |
+| 护卫 `guard` | ✅ | ✅ | ✅ | ✅ |
+| 医者 `healer` | ✅ | ✅ | ✅ | ✅ |
+| 书记 `scribe` | ✅ | ✅ | ✅ | ✅ |
+| 修士 `acolyte` | ✅ | ✅ | ✅ | ✅ |
+| 卜者 `diviner` | ✅ | ✅ | ✅ | ✅ |
+
+Prompt 无性别指定，形象几乎全为男性单一版本。
+
+### 7.3 随从 `retainer-*` · 18 张（9 短名 × 仅 chr/isl）· **缺口**
+
+代码入口：`game/map/map_art.gd` `retainer_portrait()` → `RETAINER_ART_SHORT` 短名 → `retainer-<short>-<set>.webp`，缺图回退 `npc-job-*` 再回退 `npc-market-*`。
+
+| 短名 | 职业 | chr | isl | con | mazu |
+|---|---|---|---|---|---|
+| `guide` | 向导 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `porter` | 脚夫 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `guard` | 护卫 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `scribe` | 书记 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `lang` | 通译 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `heal` | 医者 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `sail` | 水手 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `monk` | 修士 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+| `seer` | 卜者 | ✅ | ✅ | ❌ 缺 | ❌ 缺 |
+
+> `retainers.json` 有 58+ 随从记录，文化覆盖 islamic / steppe / east_asia / indian_ocean / latin。`CULTURE_SET` 将 steppe→isl、indian_ocean→mazu、east_asia→con，故 **east_asia / indian_ocean 随从当前回退到通用职业立绘**。
+
+### 7.4 导师 `mentor-*` · 10 张 · 已接线（1 张待重绘）
+
+| 方法 | 人物 | 性别 |
+|---|---|---|
+| `mentor-tarot` | 大不里士的法兰克遗孀牌师（**旧图为中国面孔，待重绘**） | 女 |
+| `mentor-lenormand` | 牌铺女儿卡特琳娜 | 女 |
+| `mentor-runes` | 瓦良格卫兵哈拉尔 | 男 |
+| `mentor-astrodice` | 星家帖必烈 | 男 |
+| `mentor-western` | 码头星占娜迪拉 | 女 |
+| `mentor-meihua` | 西行僧明远 | 男 |
+| `mentor-iching` | 太史院耶律先生 | 男 |
+| `mentor-dream` | 圆梦人撒里蛮 | 男 |
+| `mentor-bazi` | 命馆先生沈五 | 男 |
+| `mentor-jiaobei` | 天妃宫庙祝陈婆 | 女 |
+
+### 7.5 缺口汇总
+
+| # | 缺口 | 数量 | 处理 |
+|---|---|---|---|
+| 1 | 随从立绘 con / mazu 两套（`retainer-{guide,porter,guard,scribe,lang,heal,sail,monk,seer}-{con,mazu}.webp`） | 18 | 2026-08-07 生成 + 接线 |
+| 2 | `mentor-tarot.webp` 内容错配（中国面孔 → 法兰克遗孀） | 1 | 同批重绘 |
+| 3 | 女性立绘代表不足（96 张人物立绘仅 ~6 女） | — | 后续出图按性别双版补齐，代码已支持 `-{m,f}` 后缀 |
+
+### 7.6 命名与接入约定（gender 维度）
+
+- 文件名：`retainer-<short>-<set>-{m,f}.webp`（无后缀 = 旧版回退，不破坏现有 36 张）。
+- 代码：`retainer_portrait(rid, culture, gender := "")` 优先精确匹配，`-m` 次之，无后缀兜底。
+- 数据：`content/tables/retainers.json` 每条记录补 `gender` 字段（`m` / `f` / 空），用于雇佣契约与队伍界面选图。

@@ -872,6 +872,7 @@
     {
       "id": "npc-zayton-mentor",
       "name": "npc.npc-zayton-mentor.name",
+      "gender": "f",
       "roles": [
         "diviner"
       ],
@@ -4228,6 +4229,7 @@
     {
       "id": "npc-kiovia-mentor",
       "name": "npc.npc-kiovia-mentor.name",
+      "gender": "m",
       "roles": [
         "diviner"
       ],

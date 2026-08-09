@@ -25,9 +25,13 @@ func _process(d: float) -> bool:
 	return false
 
 
-## Await `cond` until it returns true, or give up after `max_frames` (~1/60 s).
+## Await `cond` until it returns true, or give up after a wall-clock budget.
+## Headless Godot can advance frames much faster than real time while timers
+## still use elapsed seconds; a frame-only budget made this smoke flaky when
+## several Godot processes were running together.
 func _wait_until(cond: Callable, max_frames: int) -> bool:
-	for i in max_frames:
+	var deadline := Time.get_ticks_msec() + maxi(1000, int(float(max_frames) * 1000.0 / 60.0))
+	while Time.get_ticks_msec() < deadline:
 		if cond.call():
 			return true
 		await process_frame

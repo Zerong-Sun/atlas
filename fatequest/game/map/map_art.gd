@@ -327,13 +327,19 @@ static func event_portrait(ev: Dictionary, culture: String, slot: int = -1) -> T
 	return venue_portrait("market", culture)
 
 
-static func retainer_portrait(retainer_id: String, culture: String) -> Texture2D:
+static func retainer_portrait(retainer_id: String, culture: String, gender: String = "") -> Texture2D:
 	var id := retainer_id.to_lower()
 	var set_name := culture_set(culture)
 	for frag in JOB_FROM_ID:
 		if id.contains(frag):
 			var job := String(JOB_FROM_ID[frag])
 			var short := String(RETAINER_ART_SHORT.get(job, job))
+			# Prefer gender-specific `retainer-<short>-<set>-<gender>`, then the
+			# shared `retainer-<short>-<set>` legacy set, then the generic job set.
+			if gender != "":
+				var gendered := tex("retainer-%s-%s-%s" % [short, set_name, gender])
+				if gendered != null:
+					return gendered
 			var dedicated := tex("retainer-%s-%s" % [short, set_name])
 			if dedicated != null:
 				return dedicated

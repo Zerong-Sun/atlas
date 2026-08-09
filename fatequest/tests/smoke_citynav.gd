@@ -31,6 +31,9 @@ func _init():
         var hit = false
         for fig in n._city_view._figures.get_children():
             if not bool(fig.get_meta("once", false)): continue
+            if fig is Button and not fig.disabled:
+                fig.pressed.emit(); hit = true; visited += 1
+                break
             for b in fig.get_children():
                 if b is Button and not b.disabled:
                     b.pressed.emit(); hit = true; visited += 1; break
@@ -67,7 +70,7 @@ func _init():
     await process_frame
     var back_btn: Button = null
     for c in _walk(n._panel):
-        if c is Button and "回到地图" in String(c.text):
+        if c is Button and ("回到地图" in String(c.text) or "返回城市" in String(c.text)):
             back_btn = c
     if back_btn == null:
         back_ok = false
