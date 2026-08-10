@@ -15,6 +15,18 @@ const START_COINS := 500000     # fen — the kernel keeps money in integers
 const TREATMENT_COST := 1200
 const TREATMENT_DAYS := 5
 
+## A quiet epigraph for the opening leaf. Three of the five selections are
+## from Yuan Zhen's "Ballad of the Merchant", so the poem that best states the
+## game's mercantile restlessness remains the voice players hear most often.
+## The text itself lives in i18n; these prefixes only define complete couplets.
+const OPENING_VERSES := [
+	"ui.boot.verse.yuanzhen_1",
+	"ui.boot.verse.yuanzhen_2",
+	"ui.boot.verse.yuanzhen_3",
+	"ui.boot.verse.zhangji",
+	"ui.boot.verse.libai",
+]
+
 ## Resolved at runtime rather than referenced as a global identifier.
 ##
 ## `godot --script tests/foo.gd` does NOT register autoload globals, so a hard
@@ -73,6 +85,11 @@ var _right_spine: VBoxContainer
 ## of leaving them at the 150 px that only ever suited the NORMAL step.
 var _log_wrap: PanelContainer
 var _panel_wrap: PanelContainer
+## Kept separately from the panel content so a newly opened action surface can
+## always start at its first action.  In particular, a traveller returning to
+## the road list must never inherit the scroll position of city errands and
+## mistake the panel for a dead end.
+var _panel_scroll: ScrollContainer
 
 ## Drag-to-resize for the bottom docks (OPTIMIZATION_PLAN §5): a grab rail on
 ## each panel's top edge. Per-key heights in px persist to user://ui.cfg under
@@ -215,39 +232,115 @@ func _build_desk() -> void:
 	add_child(center)
 
 	_desk = VBoxContainer.new()
+	_desk.name = "BootDesk"
 	_desk.alignment = BoxContainer.ALIGNMENT_CENTER
-	_desk.custom_minimum_size = Vector2(420, 0)
-	_desk.add_theme_constant_override("separation", 8)
+	_desk.custom_minimum_size = Vector2(600, 0)
+	_desk.add_theme_constant_override("separation", Metrics.sm())
 	center.add_child(_desk)
 
-	var wheel := MapArt.fate_wheel()
-	if wheel != null:
-		var wr := TextureRect.new()
-		wr.texture = wheel
-		wr.custom_minimum_size = Vector2(96, 96)
-		wr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		wr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		wr.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		_desk.add_child(wr)
+	# The first view is deliberately one quiet leaf: what this game is, a short
+	# epigraph, and one way forward. Campaign controls live on the next leaf so
+	# the opening never reads like a settings panel.
+	var opening_leaf := VBoxContainer.new()
+	opening_leaf.name = "OpeningLeaf"
+	opening_leaf.add_theme_constant_override("separation", Metrics.sm())
+	_desk.add_child(opening_leaf)
 
-	var title := Label.new()
-	title.text = I18n.t("ui.boot.title_a") + "\n" + I18n.t("ui.boot.title_b")
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 28)
-	title.add_theme_color_override("font_color", Color("e8c46a"))
-	_desk.add_child(title)
+	# Keep the two scripts in separate labels. A mixed CJK/Latin label at title
+	# size can select a Latin fallback for the whole run on some platforms,
+	# leaving the Chinese title as four missing-glyph boxes.
+	var title := VBoxContainer.new()
+	title.name = "BootTitle"
+	title.add_theme_constant_override("separation", 0)
+	var title_font := SystemFont.new()
+	title_font.font_names = PackedStringArray([
+		"Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong",
+		"SimSun", "Microsoft YaHei",
+	])
+	for title_line in [
+		{"text": I18n.t("ui.boot.title_a"), "size": UiScale.title()},
+		{"text": I18n.t("ui.boot.title_b"), "size": UiScale.body() + 3},
+	]:
+		var title_label := Panels.label(String(title_line.text),
+			int(title_line.size), Palette.ink())
+		title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		title_label.add_theme_font_override("font", title_font)
+		title.add_child(title_label)
+	opening_leaf.add_child(title)
 
-	# Seven travellers' books on the desk — each opens the reader.
+	var introduction := Panels.label(I18n.t("ui.boot.introduction"),
+		UiScale.body(), Palette.ink_soft())
+	introduction.name = "GameIntroduction"
+	introduction.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	introduction.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	introduction.custom_minimum_size.x = 600
+	opening_leaf.add_child(introduction)
+
+	opening_leaf.add_child(_opening_epigraph())
+	opening_leaf.add_child(Panels.rule())
+
+	var existing_slots := SaveGame.list_slots().filter(
+		func(head): return String(head.get("status", "ok")) == "ok")
+	if not existing_slots.is_empty():
+		var slot := String(existing_slots[0].get("slot", "auto"))
+		var head: Dictionary = existing_slots[0]
+		var cont := Panels.styled_button(I18n.t("ui.continue_journey_fmt") % [
+			_city_name(String(head.get("city", ""))), int(head.get("days", 0))], Callable())
+		cont.pressed.connect(func():
+			if _begin_loaded(slot):
+				_desk.queue_free()
+			else:
+				_show_desk_load_error(slot))
+		opening_leaf.add_child(cont)
+
+	var begin_new := Panels.primary_button(I18n.t("ui.boot.begin_new"),
+		_show_journey_setup)
+	begin_new.name = "BeginNewJourneyButton"
+	opening_leaf.add_child(begin_new)
+
+	var journey_setup := VBoxContainer.new()
+	journey_setup.name = "JourneySetup"
+	journey_setup.visible = false
+	journey_setup.add_theme_constant_override("separation", Metrics.sm())
+	_desk.add_child(journey_setup)
+
+	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
+	draw_btn.name = "CharacterDrawButton"
+	var era_label := Panels.label(I18n.t("ui.boot.choose_era"),
+		UiScale.body(), Palette.ink_soft())
+	era_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	journey_setup.add_child(era_label)
+	var eras := HBoxContainer.new()
+	eras.alignment = BoxContainer.ALIGNMENT_CENTER
+	eras.add_theme_constant_override("separation", Metrics.xs())
+	for era in db.get_table("campaign_eras"):
+		var era_id := String(era.get("id", ""))
+		var era_btn := Panels.styled_button(I18n.t(String(era.get("name", era_id))),
+			_select_campaign_era.bind(era_id))
+		era_btn.tooltip_text = I18n.t(String(era.get("description", "")))
+		eras.add_child(era_btn)
+	journey_setup.add_child(eras)
+	journey_setup.add_child(draw_btn)
+
+	# The travel books remain available, but as a secondary shelf below the
+	# actual way into the game. Their seven illustrated covers used to compete
+	# with the title, statistics, era picker and fate wheel all at once.
+	journey_setup.add_child(Panels.rule())
+	var books_label := Panels.label(I18n.t("ui.books_desk"),
+		UiScale.ui(), Palette.ink_faint())
+	books_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	journey_setup.add_child(books_label)
 	var books := HBoxContainer.new()
+	books.name = "TravellerBooks"
 	books.alignment = BoxContainer.ALIGNMENT_CENTER
 	books.add_theme_constant_override("separation", 6)
-	_desk.add_child(books)
+	journey_setup.add_child(books)
 	for bid in MapArt.BOOKS:
 		var cover := MapArt.book_cover(bid)
 		if cover == null:
 			continue
 		var btn := Button.new()
-		btn.custom_minimum_size = Vector2(48, 64)
+		btn.custom_minimum_size = Vector2(40, 54)
 		btn.flat = true
 		btn.tooltip_text = I18n.t("book.%s.title" % bid)
 		btn.focus_mode = Control.FOCUS_ALL
@@ -262,52 +355,46 @@ func _build_desk() -> void:
 		btn.pressed.connect(func(): _open_book(open_id))
 		books.add_child(btn)
 
-	var sub := Label.new()
-	sub.text = I18n.t("ui.boot.sub") % [
-		db.cities().size(), db.get_table("routes").size(), db.get_table("events").size(),
-		db.get_table("goods").size(), db.get_table("retainers").size(),
-		DivinationRegistry.ids().size()]
-	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	sub.add_theme_color_override("font_color", Color("cbb896"))
-	_desk.add_child(sub)
-
-	var existing_slots := SaveGame.list_slots().filter(
-		func(head): return String(head.get("status", "ok")) == "ok")
-	if not existing_slots.is_empty():
-		var slot := String(existing_slots[0].get("slot", "auto"))
-		var head: Dictionary = existing_slots[0]
-		var cont := Panels.styled_button(I18n.t("ui.continue_journey_fmt") % [
-			_city_name(String(head.get("city", ""))), int(head.get("days", 0))], Callable())
-		cont.pressed.connect(func():
-			if _begin_loaded(slot):
-				_desk.queue_free()
-			else:
-				_show_desk_load_error(slot))
-		_desk.add_child(cont)
-
-	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
-	draw_btn.name = "CharacterDrawButton"
-	_desk.add_child(Panels.label(I18n.t("ui.boot.choose_era"), UiScale.ui(), Palette.ink_soft()))
-	var eras := HBoxContainer.new()
-	eras.alignment = BoxContainer.ALIGNMENT_CENTER
-	eras.add_theme_constant_override("separation", Metrics.xs())
-	for era in db.get_table("campaign_eras"):
-		var era_id := String(era.get("id", ""))
-		var era_btn := Panels.styled_button(I18n.t(String(era.get("name", era_id))),
-			_select_campaign_era.bind(era_id))
-		era_btn.tooltip_text = I18n.t(String(era.get("description", "")))
-		eras.add_child(era_btn)
-	_desk.add_child(eras)
-	_desk.add_child(draw_btn)
-
-	_desk_intro_nodes.clear()
-	for child in _desk.get_children():
-		if child is Control:
-			_desk_intro_nodes.append(child)
+	_desk_intro_nodes.assign([opening_leaf, journey_setup])
 	_draw_card = VBoxContainer.new()
 	_draw_card.name = "CharacterDrawCard"
 	_draw_card.add_theme_constant_override("separation", Metrics.xs())
 	_desk.add_child(_draw_card)
+
+
+func _show_journey_setup() -> void:
+	if _desk == null:
+		return
+	var opening_leaf := _desk.get_node_or_null("OpeningLeaf") as Control
+	var journey_setup := _desk.get_node_or_null("JourneySetup") as Control
+	if opening_leaf != null:
+		opening_leaf.visible = false
+	if journey_setup != null:
+		journey_setup.visible = true
+
+
+func _opening_epigraph() -> Control:
+	var box := VBoxContainer.new()
+	box.name = "OpeningVerse"
+	box.add_theme_constant_override("separation", 2)
+	var verse_rng := _draw_rng.fork("opening-verse")
+	var prefix: String = OPENING_VERSES[verse_rng.next_int(OPENING_VERSES.size())]
+
+	var lines := Panels.label("%s\n%s" % [
+		I18n.t("%s.line_1" % prefix), I18n.t("%s.line_2" % prefix)],
+		UiScale.body(), Palette.ink())
+	lines.name = "OpeningVerseLines"
+	lines.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	lines.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	lines.add_theme_constant_override("line_spacing", 5)
+	box.add_child(lines)
+
+	var source := Panels.label("—— %s" % I18n.t("%s.source" % prefix),
+		UiScale.ui(), Palette.ink_faint())
+	source.name = "OpeningVerseSource"
+	source.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	box.add_child(source)
+	return box
 
 
 func _archetype_button(a: Dictionary) -> Control:
@@ -379,9 +466,7 @@ func _return_to_era_selection() -> void:
 	_drawn_archetype.clear()
 	for child in _draw_card.get_children():
 		child.queue_free()
-	for intro in _desk_intro_nodes:
-		if is_instance_valid(intro):
-			intro.visible = true
+	_show_journey_setup()
 
 
 func _select_campaign_era(era_id: String) -> void:
@@ -702,14 +787,14 @@ func _build_map() -> void:
 	add_child(_panel_wrap)
 	_build_dock_handle("panel", 0.48, 1.0, 6.0, -12.0)
 
-	var panel_scroll := ScrollContainer.new()
-	panel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_panel_wrap.add_child(panel_scroll)
+	_panel_scroll = ScrollContainer.new()
+	_panel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_panel_wrap.add_child(_panel_scroll)
 
 	_panel = VBoxContainer.new()
 	_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_panel.add_theme_constant_override("separation", Metrics.xs())
-	panel_scroll.add_child(_panel)
+	_panel_scroll.add_child(_panel)
 
 	_resize_docks()
 
@@ -1546,8 +1631,21 @@ func _ctx() -> Dictionary:
 
 
 func _clear_panel() -> void:
+	_reset_panel_scroll()
 	for ch in _panel.get_children():
 		ch.queue_free()
+
+
+## `ScrollContainer` keeps its offset when its content is replaced.  Clearing
+## a panel alone therefore leaves its next screen open halfway down on the
+## same frame.  Reset once now and once deferred after layout settles.
+func _reset_panel_scroll() -> void:
+	if _panel_scroll != null and is_instance_valid(_panel_scroll):
+		_panel_scroll.scroll_vertical = 0
+
+
+func _reset_panel_scroll_after_layout() -> void:
+	_reset_panel_scroll()
 
 
 func _on_site_chosen(event_id: String) -> void:
@@ -2758,6 +2856,11 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 		var mbtn := Panels.styled_button(I18n.t("ui.open_market"), _open_market)
 		mbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(mbtn)
+
+	# Route choices are the purpose of this surface.  The deferred reset also
+	# covers reopening it after a longer city/action list has changed the
+	# scrollbar's maximum on the next layout pass.
+	call_deferred("_reset_panel_scroll_after_layout")
 
 
 func _on_depart(route: Dictionary, mode: String) -> void:
