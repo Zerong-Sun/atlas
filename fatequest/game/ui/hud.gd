@@ -152,7 +152,7 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 	_put("place", place_name)
 	_put("date", I18n.t("ui.hud.date") % [g["year"], g["month"], g["day"], clock.date.ganzhi_day()])
 	# Money is kept in fen internally; show it the way a traveller would count.
-	var silver := state.coins / 100
+	var silver := int(state.coins / 100)
 	_put("coins", I18n.t("ui.hud.coins") % silver)
 	_put("days", I18n.t("ui.hud.days") % state.days_elapsed)
 	_put("cargo", "%d/%d" % [cargo_used, state.cargo_slots])

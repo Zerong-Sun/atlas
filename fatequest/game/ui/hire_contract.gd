@@ -121,7 +121,7 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 		origin_line = I18n.t(origin_v)
 	_origin_l.text = origin_line
 	var months := int(rec.get("contract", {}).get("months", 12))
-	var wage := int(rec.get("wage", {}).get("amount", 0)) / Market.FEN
+	var wage := int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
 	_detail_l.text = I18n.t("ui.hire_wage_fmt") % [wage, months]
 	if mode == "divined" and verdict_key != "":
 		_verdict_l.text = I18n.fmt(verdict_key)

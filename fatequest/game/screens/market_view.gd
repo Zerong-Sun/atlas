@@ -103,7 +103,7 @@ func open(city: Dictionary, p_state: WorldState, p_jdn: int) -> void:
 
 
 func refresh() -> void:
-	_purse.text = I18n.t("ui.market.purse") % (state.coins / Market.FEN)
+	_purse.text = I18n.t("ui.market.purse") % int(state.coins / Market.FEN)
 	_hold_label.text = I18n.t("ui.market.cargo") % [market.cargo_used(state), state.cargo_slots]
 
 	for c in _stock_box.get_children():
@@ -177,7 +177,7 @@ func _stock_row(good: Dictionary) -> Control:
 	var check := market.can_buy(good, _city, state, jdn)
 	var sub := Label.new()
 	sub.text = I18n.t("ui.market.buy_sub") % [
-		int(check["price"]) / Market.FEN, _demand_note(good), int(good.get("bulk", 1))]
+		int(int(check["price"]) / Market.FEN), _demand_note(good), int(good.get("bulk", 1))]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -227,7 +227,7 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 
 	var price := market.sell_price(good, _city, jdn, state.seed)
 	var sub := Label.new()
-	sub.text = I18n.t("ui.market.sell_sub") % [price / Market.FEN, _demand_note(good)]
+	sub.text = I18n.t("ui.market.sell_sub") % [int(price / Market.FEN), _demand_note(good)]
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

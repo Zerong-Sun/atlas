@@ -1669,7 +1669,7 @@ func _open_ending() -> void:
 		_city_name(state.start_city) if not state.start_city.is_empty() else I18n.t("ui.not_started"),
 		_city_name(state.city)] + "\n"
 	lines += ind + I18n.t("ui.ending.ledger") % [
-		state.coins / Market.FEN, state.retainers.size(), state.codex.size()] + "\n"
+		int(state.coins / Market.FEN), state.retainers.size(), state.codex.size()] + "\n"
 	lines += "\n[color=#6a5a48]%s[/color]\n\n" % I18n.t("ui.ending.named")
 	lines += ind + "[b]%s[/b]\n" % I18n.t(String(e.get("name", "")))
 
@@ -1887,7 +1887,7 @@ func _party_row(m: Dictionary) -> Control:
 		carries = I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(I18n.t("ui.party.wage_line") % [
-		int(rec.get("wage", {}).get("amount", 0)) / Market.FEN,
+		int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN),
 		carries, int(m.get("mood", 16)), I18n.fmt(_roster.birth_known(state, rid))],
 		UiScale.ui() - 3, Palette.ink_soft()))
 
@@ -1934,13 +1934,14 @@ func _hire_row(rec: Dictionary) -> Control:
 	row.add_child(col)
 	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
 	var cargo: Dictionary = rec.get("cargo", {})
-	var note := I18n.t("ui.party.wage") % (int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
+	var note := I18n.t("ui.party.wage") % int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
 	if not cargo.is_empty():
 		note += I18n.gap() + I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(note, UiScale.ui() - 3, Palette.ink_soft()))
 
 	var btn := Panels.styled_button(I18n.t("ui.hire"), Callable())
+	btn.set_meta("retainer_cargo_slots", int(cargo.get("slots", 0)))
 	btn.pressed.connect(func():
 		_hire_ui.open(rec, culture, "open"))
 	row.add_child(btn)
@@ -2039,7 +2040,7 @@ func _open_bag() -> void:
 		var worth := _market.sell_price(g, here, state.jdn, state.seed) if here.has("market") else 0
 		var line := I18n.t("ui.cargo.bulk_line") % [I18n.t(g.get("name", "")), n, int(g.get("bulk", 1)) * n]
 		if worth > 0:
-			line += I18n.gap() + I18n.t("ui.cargo.sell_here") % (worth / Market.FEN)
+			line += I18n.gap() + I18n.t("ui.cargo.sell_here") % int(worth / Market.FEN)
 		list.add_child(_icon_line(MapArt.goods_icon(String(gid)), line))
 		rows += 1
 
@@ -2053,7 +2054,7 @@ func _open_bag() -> void:
 
 	list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 	list.add_child(Panels.label(I18n.t("ui.cargo.purse_line") % [
-		_market.cargo_used(state), state.cargo_slots, state.coins / Market.FEN],
+		_market.cargo_used(state), state.cargo_slots, int(state.coins / Market.FEN)],
 		UiScale.ui(), Palette.ink_soft()))
 	# Learned arts and the codex belong here too — they are what the journey
 	# actually accumulates.
@@ -2294,7 +2295,7 @@ func _sync_city_status() -> void:
 		return
 	var c := db.get_record(state.city)
 	var g := clock.date.civil(String(c.get("culture", "latin")))
-	_city_view.set_status(state.coins / Market.FEN, _market.cargo_used(state),
+	_city_view.set_status(int(state.coins / Market.FEN), _market.cargo_used(state),
 		state.cargo_slots, state.days_elapsed,
 		I18n.t("ui.date.full") % [g["year"], g["month"], g["day"]])
 
@@ -2702,7 +2703,7 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 		for mode in r.get("modes", []):
 			var av := travel.availability(r, state, clock.month(), String(mode))
 			var days := travel.total_days(r, String(mode))
-			var cost := travel.total_cost(r, String(mode)) / 100
+			var cost := int(travel.total_cost(r, String(mode)) / 100)
 			var btn := Panels.styled_button(I18n.t("ui.route_button_fmt") % [
 				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
 				Callable())
@@ -2731,7 +2732,7 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 	var life_stage := String(state.life.get("stage", MortalityCore.STABLE))
 	if life_stage != MortalityCore.STABLE:
 		var care := Panels.primary_button(I18n.t("ui.life.seek_care") % [
-			TREATMENT_COST / Market.FEN, TREATMENT_DAYS], _seek_care)
+				int(TREATMENT_COST / Market.FEN), TREATMENT_DAYS], _seek_care)
 		care.disabled = state.coins < TREATMENT_COST
 		_panel.add_child(care)
 		if life_stage in [MortalityCore.GRAVE, MortalityCore.DYING] \
@@ -2836,7 +2837,7 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 	clock = WorldClock.new(state.jdn)
 	if _audio_ready(): _audio.set_jdn(state.jdn)
 	_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.route.departed") % [
-		_city_name(trip["destination"]), trip["days"], trip["cost"] / 100])
+		_city_name(trip["destination"]), trip["days"], int(trip["cost"] / 100)])
 
 	# Route-specific encounters were deterministically queued by Travel before
 	# the location changed. Checkpoint here so quitting inside a road event

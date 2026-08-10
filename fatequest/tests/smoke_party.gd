@@ -46,8 +46,8 @@ func _init():
     var base_land: int = n._roster.effective_slots(n.state, "land")
     var base_sea: int = n._roster.effective_slots(n.state, "sea")
 
-    var hire_btn = _find_button(n._party["list"], I18n.t("ui.hire"), "+")
-    _ok(hire_btn != null, "the hiring pool shows someone whose cargo bonus is stated")
+    var hire_btn = _find_cargo_hire_button(n._party["list"], I18n.t("ui.hire"))
+    _ok(hire_btn != null, "the hiring pool exposes a hire action")
     if hire_btn == null:
         _done()
         return
@@ -112,6 +112,14 @@ func _find_button(list, label: String, needle: String):
             continue
         var b = _button_in(panel, label)
         if b != null:
+            return b
+    return null
+
+
+func _find_cargo_hire_button(list, label: String):
+    for panel in list.get_children():
+        var b = _button_in(panel, label)
+        if b != null and int(b.get_meta("retainer_cargo_slots", 0)) > 0:
             return b
     return null
 
