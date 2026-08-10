@@ -117,7 +117,7 @@ You ask which road leads down to the Gulf of Calatu. You set the way to Calatu o
 
 ## ev.ev_camadi_b.choice_3_result
 
-You buy cotton cloth from the roadside sellers. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+You buy cotton cloth from the roadside sellers. Money moves — a little the better or the worse for you. The trade fills your hold a little. At the next stall they wave you past as a known customer.
 
 ## ev.ev_camadi_a_followup.title
 

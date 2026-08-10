@@ -2,7 +2,7 @@
 unit: calatu
 lang: zh
 source: en
-source_rev: 4077413a1554
+source_rev: be552e8e7919
 status: translated
 translator: 人工校译
 notes: >
@@ -29,7 +29,7 @@ stamps:
   ev.calatu.b.choice.ask_inland: af1e60e62e04
   ev.ev_calatu_entry.choice_1_result: 563096f32008
   ev.ev_calatu_entry.choice_2_result: 7b13422a348e
-  ev.ev_calatu_entry.choice_3_result: 94beda4a1e40
+  ev.ev_calatu_entry.choice_3_result: fc073e1c0ef1
   ev.ev_calatu_a.choice_1_result: 245f468b9773
   ev.ev_calatu_a.choice_2_result: 6c58f117d268
   ev.ev_calatu_a.choice_3_result: ac5676aa547c
@@ -124,7 +124,7 @@ Melic避战之所
 
 ## ev.ev_calatu_entry.choice_3_result
 
-你去 mandir（神庙）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往哈剌图（盖勒哈特）的道路，就此展开在舆图上。
+你在神庙的灯火间坐了一会儿。离庙时，守庙人已记得你的名字，还在你掌心放了一撮香。通往哈剌图的海路，已标在你的舆图边角。
 
 ## ev.ev_calatu_a.choice_1_result
 

@@ -93,7 +93,7 @@ You walk through the market. You spend 1 day before the way is clear again. You 
 
 ## ev.ev_kenjanfu_entry.choice_3_result
 
-You visit the sì (Buddhist monastery). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Kenjanfu opens on your map.
+You enter the sì at the hour of the evening drum. The abbot gives you tea and a parting line of scripture, which stays with you at the gate. You know the road to Kenjanfu well enough to draw it now.
 
 ## ev.ev_kenjanfu_a.choice_1_result
 
@@ -113,7 +113,7 @@ You tour the silk-and-gold workshops. You spend 2 days before the way is clear a
 
 ## ev.ev_kenjanfu_b.choice_2_result
 
-You buy lacquerware from an armourer's quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+You buy lacquerware from an armourer's quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. The armourers speak of the buyer come from the western road.
 
 ## ev.ev_kenjanfu_b.choice_3_result
 

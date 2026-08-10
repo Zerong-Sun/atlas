@@ -2,7 +2,7 @@
 unit: taican
 lang: zh
 source: en
-source_rev: 5bbeb34405ee
+source_rev: 3c82deae299b
 status: translated
 translator: 人工校译
 notes: >
@@ -29,7 +29,7 @@ stamps:
   ev.taican.b.choice.ask_sapurgan: 6b635aca7254
   ev.ev_taican_entry.choice_1_result: 7e825275fdfc
   ev.ev_taican_entry.choice_2_result: c5ae24e14d72
-  ev.ev_taican_entry.choice_3_result: 95111a69e763
+  ev.ev_taican_entry.choice_3_result: 6b8a83a67325
   ev.ev_taican_a.choice_1_result: 4c2543ba7da6
   ev.ev_taican_a.choice_2_result: 3aac962a756d
   ev.ev_taican_a.choice_3_result: 9ca63851a87b
@@ -43,7 +43,7 @@ stamps:
   ev.ev_taican_a_followup.choice_2: 15258ad9a90a
   ev.ev_taican_a_followup.choice_2_result: 169d8ba70349
   ev.ev_taican_a_followup.choice_3: 761a02f74618
-  ev.ev_taican_a_followup.choice_3_result: ad8e3cd7610c
+  ev.ev_taican_a_followup.choice_3_result: 064cd2426d2f
 ---
 
 ## city.taican.name
@@ -124,7 +124,7 @@ stamps:
 
 ## ev.ev_taican_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往塔里寒（塔卢坎）的道路，就此展开在舆图上。
+你参加了塔里寒清真寺的晚祷。到了早晨，街上的人已认得你的脸；打谷场的大麦灰留在你的衣上。通往塔里寒的路，已经落进你的舆图。
 
 ## ev.ev_taican_a.choice_1_result
 
@@ -180,4 +180,4 @@ stamps:
 
 ## ev.ev_taican_a_followup.choice_3_result
 
-你等了一日张榜。等待耗费时日，市集的劝告却留在你身上。
+你等了一日张榜。等待耗费时日，市集的劝告，随你上了路。

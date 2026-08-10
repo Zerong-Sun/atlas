@@ -2,7 +2,7 @@
 unit: aden
 lang: zh
 source: en
-source_rev: f100a71506b3
+source_rev: c819e46007d4
 status: translated
 translator: 人工校译
 notes: >
@@ -29,7 +29,7 @@ stamps:
   ev.aden.b.choice.listen-prayer: f548c9bb4ce7
   ev.ev_aden_entry.choice_1_result: b3bced50f46c
   ev.ev_aden_entry.choice_2_result: 1aa0a73f3ba7
-  ev.ev_aden_entry.choice_3_result: bc559ddd0c4b
+  ev.ev_aden_entry.choice_3_result: 3009a5c68940
   ev.ev_aden_a.choice_1_result: b2979a48ef72
   ev.ev_aden_a.choice_2_result: 0cbb8e969257
   ev.ev_aden_a.choice_3_result: 692ce6f0bdc2
@@ -124,7 +124,7 @@ stamps:
 
 ## ev.ev_aden_entry.choice_3_result
 
-你去 mandir（神庙）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往亚丁的道路，就此展开在舆图上。
+你在神庙的阴凉里站了片刻。礼敬之人记住了你的面容，为你念了一句祝祷，这祝祷随你出了门。通往亚丁的路，已画进你的舆图。
 
 ## ev.ev_aden_a.choice_1_result
 

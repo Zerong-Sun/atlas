@@ -2,7 +2,7 @@
 unit: chandu
 lang: zh
 source: en
-source_rev: c469a1364ff1
+source_rev: 6d1c46f5e8a6
 status: translated
 translator: 人工校译
 notes: >
@@ -97,7 +97,7 @@ stamps:
   ev.ev_chandu_c_followup.choice_1: b21b7676c0a8
   ev.ev_chandu_c_followup.choice_1_result: 3c1ce9002e8f
   ev.ev_chandu_c_followup.choice_2: d62aaea36f23
-  ev.ev_chandu_c_followup.choice_2_result: b96553b239de
+  ev.ev_chandu_c_followup.choice_2_result: 19e6993d4f02
   ev.ev_chandu_c_followup.choice_3: fd4e6ef75bfc
   ev.ev_chandu_c_followup.choice_3_result: 3702f06c92f9
   ev.ev_chandu_mentor_followup.title: b3e91010beed
@@ -471,7 +471,7 @@ stamps:
 
 ## ev.ev_chandu_c_followup.choice_2_result
 
-僧人说，泼乳之祭所求，是天令草青、地令水甜，大汗代其先祖而祭。这分领会留在你身上，并将影响你日后所选的路。
+僧人说，泼乳之祭所求，是天令草青、地令水甜，大汗代其先祖而祭。这分领会，你带在了身上；日后所选的路，会受它的影响。
 
 ## ev.ev_chandu_c_followup.choice_3
 

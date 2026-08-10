@@ -619,7 +619,7 @@ You keep to the inland road and carry the tales only. It costs you 1 day on the 
 
 ## ev.ev_road_fadlan_07.choice_1_result
 
-You listen to the brokers and note what the north exports. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You listen to the brokers and note what the north exports — beaver, ermine, and the white teeth dug from the earth. The account is written down before the hour turns, and the brokers carry your name into the fur market.
 
 ## ev.ev_road_fadlan_07.choice_2_result
 
@@ -643,7 +643,7 @@ You keep to the Saqsīn road and carry the tale only. You spend 1 day before the
 
 ## ev.ev_road_fadlan_10.choice_1_result
 
-You enter Khwarazm and rest in the melon markets. It costs you 2 days on the road. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You enter Khwarazm and rest in the melon markets. It costs you 2 days on the road, and the way back is set down in your book. The dealers speak of you to every caravan bound south.
 
 ## ev.ev_road_fadlan_10.choice_2_result
 
@@ -659,7 +659,7 @@ You thank him and press on with your own road. It costs you 1 day on the road.
 
 ## ev.ev_road_fadlan_12.choice_1_result
 
-You share road news and learn their onward routes. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You share road news with the Radhaniya and the Rus and learn their onward routes. The account is written down before the hour turns, and the long-distance merchants mark your name for the road.
 
 ## ev.ev_road_fadlan_12.choice_2_result
 
@@ -747,7 +747,7 @@ You cross with the caravan and accept the delay. It costs you 2 days on the road
 
 ## ev.ev_road_fadlan_23.choice_1_result
 
-You stand watch until daylight and help search the plain. It costs you 1 day on the road. Word of your conduct runs ahead of you.
+You stand watch until daylight and help the Ghuzz search the plain. It costs you 1 day on the road; the camp will speak well of you to the next guest who asks the way.
 
 ## ev.ev_road_fadlan_23.choice_2_result
 
@@ -755,11 +755,11 @@ You saddle at first light and press on away from the quarrel. You spend 1 day be
 
 ## ev.ev_road_fadlan_24.choice_1_result
 
-You accept the bowl, drink once, and ask his blessing on the road. Your name carries a little more weight here now. You set what you saw into your travel book.
+You accept the bowl, drink once, and ask his blessing on the road. The host speaks your name to his household; the courtesy is set down in your travel book.
 
 ## ev.ev_road_fadlan_24.choice_2_result
 
-You bring raisins and pepper as a guest gift before you drink. Money moves — a little the better or the worse for you. Word of your conduct runs ahead of you. Fortune bends a little your way.
+You bring raisins and pepper as a guest gift before you drink. Money moves — a little the better or the worse for you. The host speaks well of the giver to the whole tent. Fortune bends a little your way.
 
 ## ev.ev_road_fadlan_25.choice_1_result
 
@@ -819,7 +819,7 @@ You leave the dead to the wind and press on. It costs you 1 day on the road.
 
 ## ev.ev_road_fadlan_32.choice_1_result
 
-You pay the toll and cross with the sealed receipt. Money moves — a little the better or the worse for you. It costs you 1 day on the road. Word of your conduct runs ahead of you.
+You pay the toll and cross with the sealed receipt. Money moves — a little the better or the worse for you. It costs you 1 day on the road, and the king's men at the ford remember the name on the receipt.
 
 ## ev.ev_road_fadlan_32.choice_2_result
 

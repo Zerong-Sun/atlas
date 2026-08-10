@@ -2,7 +2,7 @@
 unit: ibn-fadlan-road
 lang: zh
 source: en
-source_rev: a11614024ca1
+source_rev: 3ed7af77b86d
 status: translated
 translator: 人工校译
 notes: >
@@ -161,17 +161,17 @@ stamps:
   ev.ev_road_fadlan_05.choice_2_result: efbf71359e8b
   ev.ev_road_fadlan_06.choice_1_result: e8bafcb44876
   ev.ev_road_fadlan_06.choice_2_result: 22abd92904f8
-  ev.ev_road_fadlan_07.choice_1_result: 438b4d9adf46
+  ev.ev_road_fadlan_07.choice_1_result: 6585d1a05811
   ev.ev_road_fadlan_07.choice_2_result: 7cb8c36990e7
   ev.ev_road_fadlan_08.choice_1_result: c47fe6211c65
   ev.ev_road_fadlan_08.choice_2_result: 1bb0fc567995
   ev.ev_road_fadlan_09.choice_1_result: eeeec39c6ca1
   ev.ev_road_fadlan_09.choice_2_result: 099d9ca6e618
-  ev.ev_road_fadlan_10.choice_1_result: e6e2e319ee13
+  ev.ev_road_fadlan_10.choice_1_result: 7179cc16e9ec
   ev.ev_road_fadlan_10.choice_2_result: 3858deccf21a
   ev.ev_road_fadlan_11.choice_1_result: 1ee84f763995
   ev.ev_road_fadlan_11.choice_2_result: d9f165001f11
-  ev.ev_road_fadlan_12.choice_1_result: 1467f234b45b
+  ev.ev_road_fadlan_12.choice_1_result: a72519545ec1
   ev.ev_road_fadlan_12.choice_2_result: 489235540fee
   ev.ev_road_fadlan_13.choice_1_result: 1eb48c742c08
   ev.ev_road_fadlan_13.choice_2_result: 9a8bf20823ba
@@ -193,10 +193,10 @@ stamps:
   ev.ev_road_fadlan_21.choice_2_result: 05c09c6dfc34
   ev.ev_road_fadlan_22.choice_1_result: bc780b8c5462
   ev.ev_road_fadlan_22.choice_2_result: c5ea1c6a9d62
-  ev.ev_road_fadlan_23.choice_1_result: 7b6bfa06ccea
+  ev.ev_road_fadlan_23.choice_1_result: a45cb84f54c7
   ev.ev_road_fadlan_23.choice_2_result: de0c8d315519
-  ev.ev_road_fadlan_24.choice_1_result: 8eae2c1917b3
-  ev.ev_road_fadlan_24.choice_2_result: 36fe7caab0c0
+  ev.ev_road_fadlan_24.choice_1_result: 1d2996c046fb
+  ev.ev_road_fadlan_24.choice_2_result: c93a3927e4ac
   ev.ev_road_fadlan_25.choice_1_result: 7bbca312934c
   ev.ev_road_fadlan_25.choice_2_result: cfe18b91ffcc
   ev.ev_road_fadlan_26.choice_1_result: 13a341a23808
@@ -211,7 +211,7 @@ stamps:
   ev.ev_road_fadlan_30.choice_2_result: 02daabfc12b0
   ev.ev_road_fadlan_31.choice_1_result: 92b6c29d729d
   ev.ev_road_fadlan_31.choice_2_result: cfe9c6bd8a4f
-  ev.ev_road_fadlan_32.choice_1_result: 64270d913204
+  ev.ev_road_fadlan_32.choice_1_result: afba11d83fc3
   ev.ev_road_fadlan_32.choice_2_result: bff33660cfd2
   ev.ev_road_fadlan_33.choice_1_result: b4e617243273
   ev.ev_road_fadlan_33.choice_2_result: d5f77f4e9a37
@@ -831,7 +831,7 @@ stamps:
 
 ## ev.ev_road_fadlan_07.choice_1_result
 
-你听经纪人言，记北地所出，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你听不里加尔经纪人言，记下北地所出——海狸、白鼬，还有从土里掘出的白牙。不到一个时辰，这段记录已落笔成文；经纪人把你的名字带进了皮货市集。
 
 ## ev.ev_road_fadlan_07.choice_2_result
 
@@ -855,7 +855,7 @@ stamps:
 
 ## ev.ev_road_fadlan_10.choice_1_result
 
-你入花剌子模，于瓜市歇息，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你入花剌子模，于瓜市歇息，为此费去你 2 日路程；回程之路已记入你的行纪。贩瓜人对每一支南行的商队提起你。
 
 ## ev.ev_road_fadlan_10.choice_2_result
 
@@ -871,7 +871,7 @@ stamps:
 
 ## ev.ev_road_fadlan_12.choice_1_result
 
-你互报路况，问前路，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你与拉扎尼亚、罗斯商人互报路况，问明他们的前路。不到一个时辰，这段记录已落笔成文；行远路的商人把你的名字记在了道上。
 
 ## ev.ev_road_fadlan_12.choice_2_result
 
@@ -959,7 +959,7 @@ stamps:
 
 ## ev.ev_road_fadlan_23.choice_1_result
 
-你守至天明，助搜草原，为此费去你 1 日路程。你的行事之名先你一步传开。
+你守至天明，助突厥人搜遍草原，为此费去你 1 日路程。日后有客问路，这个营地会记得替你说话。
 
 ## ev.ev_road_fadlan_23.choice_2_result
 
@@ -967,11 +967,11 @@ stamps:
 
 ## ev.ev_road_fadlan_24.choice_1_result
 
-你接碗饮一口，求其祝路，此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
+你接碗饮一口，求其祝路。主人把你的名字念给帐内众人听；这番礼数，已被你记入行纪。
 
 ## ev.ev_road_fadlan_24.choice_2_result
 
-你先献葡萄干、胡椒为客礼再饮，一注钱款进出，得失皆在掌中。你的行事之名先你一步传开。气运稍稍偏向于你。
+你先献葡萄干、胡椒为客礼再饮，一注钱款进出，得失皆在掌中。主人当着全帐的人称赞送礼的客人。气运稍稍偏向于你。
 
 ## ev.ev_road_fadlan_25.choice_1_result
 
@@ -1031,7 +1031,7 @@ stamps:
 
 ## ev.ev_road_fadlan_32.choice_1_result
 
-你纳费，持印信收据渡河，一注钱款进出，得失皆在掌中。为此费去你 1 日路程。你的行事之名先你一步传开。
+你纳费，持印信收据渡河，一注钱款进出，得失皆在掌中。为此费去你 1 日路程；渡口的王家卫士记住了收据上的名字。
 
 ## ev.ev_road_fadlan_32.choice_2_result
 

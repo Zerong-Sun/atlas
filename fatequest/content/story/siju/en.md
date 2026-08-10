@@ -110,7 +110,7 @@ You walk the grain market on the fertile plain. You set what you saw into your t
 
 ## ev.ev_siju_b.choice_1_result
 
-You stand at a respectful distance and watch a funeral rite. It costs you 1 day on the road. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You stand at a respectful distance and watch a funeral rite. It costs you 1 day on the road. The account is written down before the hour turns. The mourners' kin remember your courtesy.
 
 ## ev.ev_siju_b.choice_2_result
 

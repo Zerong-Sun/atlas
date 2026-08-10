@@ -95,7 +95,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_kerman_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Kerman opens on your map.
+You pray in the masjid of the turquoise dealers. Afterwards they speak of you in the arcade, and a chip of blue stone finds your palm. The road to Kerman lies open on your map.
 
 ## ev.ev_kerman_a.choice_1_result
 
@@ -107,7 +107,7 @@ You buy a rough turquoise from a mine broker. Coin changes hands, and the purse 
 
 ## ev.ev_kerman_a.choice_3_result
 
-You ask the caravan masters which roads cross the desert. The road to Yasdi opens on your map. The road to Ormus opens on your map. Word of your conduct runs ahead of you.
+You ask the caravan masters which roads cross the desert. The road to Yasdi opens on your map. The road to Ormus opens on your map. When you come again, they will answer you the same.
 
 ## ev.ev_kerman_b.choice_1_result
 

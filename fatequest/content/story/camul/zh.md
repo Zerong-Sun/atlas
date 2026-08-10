@@ -2,7 +2,7 @@
 unit: camul
 lang: zh
 source: en
-source_rev: 8a0bcd97ed20
+source_rev: 6ec3ace4158b
 status: translated
 translator: 人工校译
 notes: >
@@ -29,12 +29,12 @@ stamps:
   ev.camul.b.choice.ask-east: 9c8e8a0ef32e
   ev.ev_camul_entry.choice_1_result: 2f3043dbaff4
   ev.ev_camul_entry.choice_2_result: 96ae9663ca9c
-  ev.ev_camul_entry.choice_3_result: fe5f42c3e264
+  ev.ev_camul_entry.choice_3_result: 951bc70a746e
   ev.ev_camul_a.choice_1_result: 446c9ff61829
   ev.ev_camul_a.choice_2_result: 53cb6ac1bca4
   ev.ev_camul_a.choice_3_result: 0fb7e2d6dd29
   ev.ev_camul_b.choice_1_result: 1f3c886bfce4
-  ev.ev_camul_b.choice_2_result: 0d0cc74531ce
+  ev.ev_camul_b.choice_2_result: 4cba14b80b66
   ev.ev_camul_b.choice_3_result: c65ad75f8928
   ev.ev_camul_a_followup.title: 178ec08acd2f
   ev.ev_camul_a_followup.body: 6a7fe31db497
@@ -122,7 +122,7 @@ stamps:
 
 ## ev.ev_camul_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往哈密力（哈密）的道路，就此展开在舆图上。
+你在哈密力人中间礼拜——此地人以款待宾客为荣。你未出巷口，你的来意已传遍街坊；甜瓜的香气留在你衣上。通往哈密力的路，已在舆图上现出。
 
 ## ev.ev_camul_a.choice_1_result
 
@@ -142,7 +142,7 @@ stamps:
 
 ## ev.ev_camul_b.choice_2_result
 
-你于庭墙外观偶像礼，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你于庭墙外观偶像礼，不到一个时辰，这段记录已落笔成文。哈密力人记得那个以礼相观的陌生人。
 
 ## ev.ev_camul_b.choice_3_result
 

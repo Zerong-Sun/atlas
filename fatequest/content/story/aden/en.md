@@ -92,7 +92,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_aden_entry.choice_3_result
 
-You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Aden opens on your map.
+You stand a while in the mandir's shade. The worshippers mark your face and call down a blessing that goes with you out the door. The way to Aden lies drawn on your map.
 
 ## ev.ev_aden_a.choice_1_result
 

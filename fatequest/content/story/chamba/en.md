@@ -92,7 +92,7 @@ You walk through the harbour market. You spend 1 day before the way is clear aga
 
 ## ev.ev_chamba_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Chamba opens on your map.
+You climb to the masjid above the roofs. The elders take your greeting and give their names in turn, and their blessing rides down the hill with you. The road to Chamba is now drawn on your map.
 
 ## ev.ev_chamba_a.choice_1_result
 
@@ -104,7 +104,7 @@ You watch a day upon the harbour while tribute goods are tallied. You spend 1 da
 
 ## ev.ev_chamba_a.choice_3_result
 
-You buy sandalwood from the tribute quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+You buy sandalwood from the tribute quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. The tribute clerks set your name beside the ledger of gifts.
 
 ## ev.ev_chamba_b.choice_1_result
 

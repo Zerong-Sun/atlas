@@ -2,7 +2,7 @@
 unit: campichu
 lang: zh
 source: en
-source_rev: 47286a760da3
+source_rev: 1c0f99eaf390
 status: translated
 translator: 人工校译
 notes: >
@@ -29,7 +29,7 @@ stamps:
   ev.campichu.b.choice.offering: 1b8decf17a2c
   ev.ev_campichu_entry.choice_1_result: 6d7c7fb12422
   ev.ev_campichu_entry.choice_2_result: 1eca6c9cd8bb
-  ev.ev_campichu_entry.choice_3_result: 2611d66f26eb
+  ev.ev_campichu_entry.choice_3_result: 602dbd8f125a
   ev.ev_campichu_a.choice_1_result: b53240c63b87
   ev.ev_campichu_a.choice_2_result: 1b717fe80dbe
   ev.ev_campichu_a.choice_3_result: 3f8d603c470f
@@ -123,7 +123,7 @@ stamps:
 
 ## ev.ev_campichu_entry.choice_3_result
 
-你去佛寺看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往甘州的道路，就此展开在舆图上。
+你入佛寺，在绘像前合十。僧人们记下你的礼数；香的余味留在你的袖间。你标出了通往甘州的路。
 
 ## ev.ev_campichu_a.choice_1_result
 

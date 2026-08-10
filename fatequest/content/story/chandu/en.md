@@ -397,7 +397,7 @@ Ask what the rite asks of the sky and the earth
 
 ## ev.ev_chandu_c_followup.choice_2_result
 
-The monk explains that the rite of the poured milk asks the sky to keep the grass green and the earth to keep the waters sweet, and that the Kaan pours it in the name of his ancestors. Some of that understanding stays with you, and it will shape the roads you choose.
+The monk explains that the rite of the poured milk asks the sky to keep the grass green and the earth to keep the waters sweet, and that the Kaan pours it in the name of his ancestors. Some of that understanding you take with you, and it will shape the roads you choose.
 
 ## ev.ev_chandu_c_followup.choice_3
 

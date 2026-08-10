@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: be633e47cc8e
+source_rev: c35d422cf6af
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_suju_entry.choice_2_result: 678c2c0a0513
   ev.ev_suju_entry.choice_3_result: 911f34e6ff85
   ev.ev_suju_a.choice_1_result: 362553e305e8
-  ev.ev_suju_a.choice_2_result: 39467d9a8619
+  ev.ev_suju_a.choice_2_result: c70c91d17e42
   ev.ev_suju_a.choice_3_result: d2cd771c4d58
   ev.ev_suju_b.choice_1_result: 3352b85f18b0
   ev.ev_suju_b.choice_2_result: 54ddeeb352e8
-  ev.ev_suju_b.choice_3_result: 80ea2f005556
+  ev.ev_suju_b.choice_3_result: d9337530849e
   ev.ev_suju_a_followup.title: 91f73cf33824
   ev.ev_suju_a_followup.body: 273aa48a235e
   ev.ev_suju_a_followup.choice_1: 58eba79601e6
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_suju_a.choice_2_result
 
-你购金锦一段，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+你购金锦一段，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。织坊一带，传着那个按足价付钱的客人的名字。
 
 ## ev.ev_suju_a.choice_3_result
 
@@ -148,7 +148,7 @@ stamps:
 
 ## ev.ev_suju_b.choice_3_result
 
-你立石桥观运河舟行，不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你立石桥观运河舟行，不到一个时辰，这段记录已落笔成文。船夫过桥时，会向桥上的看客点头。
 
 ## ev.ev_suju_a_followup.title
 

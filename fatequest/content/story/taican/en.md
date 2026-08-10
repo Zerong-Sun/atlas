@@ -94,7 +94,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_taican_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Taican opens on your map.
+You join the evening prayer in the masjid of Taican. By morning the folk know your face, and the barley dust of the threshing floor stays on your clothes. The road to Taican is now plain on your map.
 
 ## ev.ev_taican_a.choice_1_result
 
@@ -150,4 +150,4 @@ Wait a day while the grain prices are posted
 
 ## ev.ev_taican_a_followup.choice_3_result
 
-You wait a day for the posting. The waiting costs time, but the market's counsel stays with you.
+You wait a day for the posting. The waiting costs time, but the market's counsel goes with you down the road.
