@@ -80,6 +80,7 @@ const hasScene = has("game/screens/main.tscn")
 
 const required = [
   "game/map/art_wire_index.json",
+  "content/world/map_tiles.json",
   "content/world/vector_map.json",
   "content/world/world_config.json",
   "content/world/mountains.json",

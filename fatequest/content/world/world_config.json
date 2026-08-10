@@ -14,12 +14,6 @@
   "lat": 31.778,
   "lon": 35.235
  },
- "rendering": {
-  "projection": "equirectangular",
-  "orientation": "north-up",
-  "style": "medieval-parchment",
-  "reason": "Preserve geographic literacy and pan/zoom usability while using period-inspired visual treatment."
- },
  "counts": {
   "cities": 158,
   "mountains": 26,
@@ -28,5 +22,11 @@
   "regions": 31
  },
  "data_license": "Curated content CC0 / public-domain facts. Coastlines and physical geography derived from Natural Earth public-domain data; see scripts/build_real_terrain.py.",
+ "rendering": {
+  "projection": "web-mercator",
+  "orientation": "north-up",
+  "style": "real-tiles-with-medieval-overlay",
+  "reason": "Align the live XYZ basemap with historical cities, routes, vectors and fog while preserving the period-inspired overlay."
+ },
  "source_url": "https://www.naturalearthdata.com/"
 }

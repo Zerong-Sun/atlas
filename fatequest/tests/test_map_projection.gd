@@ -16,6 +16,11 @@ func run() -> bool:
 	var geo := Vector2(35.235, 31.778)
 	var roundtrip := projection.to_geo(projection.to_view(geo.x, geo.y))
 	_ok(roundtrip.distance_to(geo) < 0.0001, "projection round-trip preserves longitude and latitude")
+	var north_y := projection.to_view(0.0, 60.0).y
+	var mid_y := projection.to_view(0.0, 30.0).y
+	var equator_y := projection.to_view(0.0, 0.0).y
+	_ok(absf((mid_y - north_y) - (equator_y - mid_y)) > 1.0,
+		"projection uses Web Mercator rather than an equirectangular approximation")
 	var equator := MapProjection.longitude_km_per_degree(0.0)
 	var north := MapProjection.longitude_km_per_degree(60.0)
 	_ok(absf(equator - 111.32) < 0.01, "equatorial longitude scale is correct")

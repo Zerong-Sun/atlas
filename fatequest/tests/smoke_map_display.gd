@@ -89,6 +89,11 @@ func _init() -> void:
 
 	# 1. map present, visible and opaque
 	var map_ok: bool = map.visible and map.modulate.a >= 0.99
+	var input_ok: bool = n._map_input != null \
+		and n._map_input.mouse_filter == Control.MOUSE_FILTER_STOP \
+		and n._map_input.size.x >= n.projection.origin.x + n.projection.width
+	if not input_ok:
+		printerr("  FAIL: map GUI input surface is missing or does not cover the map")
 
 	# 2. projection non-zero
 	var proj_ok: bool = n.projection != null \
@@ -141,10 +146,10 @@ func _init() -> void:
 	# re-check the standing map after re-entry.
 	var roundtrip_ok := await _phase_travel_roundtrip()
 
-	var ok: bool = map_ok and proj_ok and fog_ok and covers_ok and draw_ok \
+	var ok: bool = map_ok and input_ok and proj_ok and fog_ok and covers_ok and draw_ok \
 		and intel_ok and roundtrip_ok
-	print("MAP_DISPLAY: map=%s projection=%s fog=%s covers=%s draw=%s intel=%s roundtrip=%s" % [
-		map_ok, proj_ok, fog_ok, covers_ok, draw_ok, intel_ok, roundtrip_ok])
+	print("MAP_DISPLAY: map=%s input=%s projection=%s fog=%s covers=%s draw=%s intel=%s roundtrip=%s" % [
+		map_ok, input_ok, proj_ok, fog_ok, covers_ok, draw_ok, intel_ok, roundtrip_ok])
 	print("MAP_DISPLAY: projection=%0.fx%.0f fog=%0.fx%.0f cities=%d revealed=%d" % [
 		n.projection.width if n.projection != null else -1.0,
 		n.projection.height if n.projection != null else -1.0,

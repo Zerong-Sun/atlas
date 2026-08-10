@@ -1348,16 +1348,19 @@ for (const e of byTable.events ?? [])
 {
   const configPath = join(ROOT, "content/world/world_config.json");
   const vectorPath = join(ROOT, "content/world/vector_map.json");
-  let config = {}, vectors = {};
+  const tilesPath = join(ROOT, "content/world/map_tiles.json");
+  let config = {}, vectors = {}, tiles = {};
   try { config = JSON.parse(readFileSync(configPath, "utf8")); }
   catch (e) { err("G33", "content/world/world_config.json", `cannot parse: ${e.message}`); }
   try { vectors = JSON.parse(readFileSync(vectorPath, "utf8")); }
   catch (e) { err("G33", "content/world/vector_map.json", `cannot parse: ${e.message}`); }
+  try { tiles = JSON.parse(readFileSync(tilesPath, "utf8")); }
+  catch (e) { err("G33", "content/world/map_tiles.json", `cannot parse: ${e.message}`); }
   const b = config.bbox ?? {};
   if (![b.west, b.south, b.east, b.north].every(Number.isFinite) || b.west >= b.east || b.south >= b.north)
     err("G33", "content/world/world_config.json", "bbox must be finite and ordered");
-  if (config.rendering?.orientation !== "north-up" || config.rendering?.projection !== "equirectangular")
-    err("G33", "content/world/world_config.json", "runtime map must declare its north-up equirectangular contract");
+  if (config.rendering?.orientation !== "north-up" || config.rendering?.projection !== "web-mercator")
+    err("G33", "content/world/world_config.json", "runtime map must declare its north-up Web Mercator contract");
   if (!String(config.data_license ?? "").length || !String(config.source_url ?? "").length)
     err("G33", "content/world/world_config.json", "map source and license metadata are required");
   for (const city of byTable.cities ?? []) {
@@ -1368,6 +1371,18 @@ for (const e of byTable.events ?? [])
   if ((vectors.coastlines ?? []).length < 100) err("G33", "content/world/vector_map.json", "coastline geometry is unexpectedly sparse");
   if ((vectors.rivers ?? []).length < 20) err("G33", "content/world/vector_map.json", "river geometry is unexpectedly sparse");
   if ((vectors.seas ?? []).length < 10) err("G33", "content/world/vector_map.json", "sea labels are unexpectedly sparse");
+  if (tiles.enabled !== true) err("G33", "content/world/map_tiles.json", "real map tile provider must be enabled by default");
+  const tileUrl = String(tiles.urlTemplate ?? "");
+  if (!tileUrl.startsWith("https://") || !["{z}", "{x}", "{y}"].every((token) => tileUrl.includes(token)))
+    err("G33", "content/world/map_tiles.json", "tile URL must be HTTPS and contain {z}/{x}/{y}");
+  if (!String(tiles.attribution ?? "").length || !String(tiles.userAgent ?? "").length)
+    err("G33", "content/world/map_tiles.json", "tile attribution and application User-Agent are required");
+  if (!Number.isInteger(tiles.cacheDays) || tiles.cacheDays < 7)
+    err("G33", "content/world/map_tiles.json", "tile cache must retain entries for at least seven days");
+  if (!Number.isInteger(tiles.maxConcurrentRequests) || tiles.maxConcurrentRequests < 1 || tiles.maxConcurrentRequests > 8)
+    err("G33", "content/world/map_tiles.json", "maxConcurrentRequests must be between 1 and 8");
+  if (!Number.isInteger(tiles.maxMemoryTiles) || tiles.maxMemoryTiles < 32 || tiles.maxMemoryTiles > 512)
+    err("G33", "content/world/map_tiles.json", "maxMemoryTiles must be between 32 and 512");
 }
 
 // ------------------------------------------------------------- report

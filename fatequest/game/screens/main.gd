@@ -57,6 +57,7 @@ var events: EventMachine
 var travel: Travel
 
 var _map: Node2D
+var _map_input: Control
 var _desk: Control
 var _hud: Hud
 var _log: RichTextLabel
@@ -178,6 +179,18 @@ func _apply_projection() -> void:
 	# A player who drags the docks taller gets the same map courtesy.
 	projection.set_viewport(w - MARGIN * 2.0, h - _dock_floor() - MARGIN)
 	projection.origin = Vector2(MARGIN, MARGIN)
+	_sync_map_input_surface()
+	if _map != null and is_instance_valid(_map) and _map.has_method("on_projection_changed"):
+		_map.on_projection_changed()
+
+
+func _sync_map_input_surface() -> void:
+	if _map_input == null or not is_instance_valid(_map_input) or projection == null:
+		return
+	# Keep the surface at canvas origin so GUI event positions use the same
+	# coordinates as Node2D map input. The handler rejects the outer margin.
+	_map_input.position = Vector2.ZERO
+	_map_input.size = projection.origin + Vector2(projection.width, projection.height)
 
 
 func _build_desk() -> void:
@@ -656,6 +669,17 @@ func _build_map() -> void:
 		_load_world_vectors())
 	_map.city_clicked.connect(_on_city_clicked)
 
+	# A dedicated GUI hit surface ensures map gestures are delivered before the
+	# full-screen Control hierarchy can consume them. It is added below the HUD,
+	# docks and dialogs, so real UI controls still win every overlapping hit.
+	_map_input = Control.new()
+	_map_input.name = "MapInputSurface"
+	_map_input.mouse_filter = Control.MOUSE_FILTER_STOP
+	_map_input.mouse_default_cursor_shape = Control.CURSOR_DRAG
+	_map_input.gui_input.connect(_on_map_gui_input)
+	add_child(_map_input)
+	_sync_map_input_surface()
+
 	# --- HUD: the four numbers every decision is made against ---------------
 	_hud = preload("res://game/ui/hud.gd").new()
 	_hud.set_anchors_preset(Control.PRESET_TOP_WIDE)
@@ -810,6 +834,28 @@ func _build_map() -> void:
 	_build_divination_annex()
 	_wire_dismissal()
 	_restyle_all()
+
+
+func _on_map_gui_input(event: InputEvent) -> void:
+	if _map == null or not is_instance_valid(_map):
+		return
+	var position := Vector2(-1, -1)
+	if event is InputEventMouse:
+		position = (event as InputEventMouse).position
+	elif event is InputEventGesture:
+		position = (event as InputEventGesture).position
+	elif event is InputEventScreenTouch:
+		position = (event as InputEventScreenTouch).position
+	elif event is InputEventScreenDrag:
+		position = (event as InputEventScreenDrag).position
+	var map_rect := Rect2(projection.origin, Vector2(projection.width, projection.height))
+	if position.x >= 0.0 and not map_rect.has_point(position) and not _map._dragging:
+		return
+	_map.handle_map_input(event)
+	if event is InputEventMouseButton or event is InputEventMouseMotion \
+			or event is InputEventGesture or event is InputEventScreenTouch \
+			or event is InputEventScreenDrag:
+		accept_event()
 
 
 ## Every overlay can now be left with Escape or a click on the surrounding

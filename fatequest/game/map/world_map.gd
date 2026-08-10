@@ -23,6 +23,7 @@ var mountains: Array = []
 var coastlines: Array = []
 var rivers: Array = []
 var seas: Array = []
+var _vector_records: Dictionary = {}
 
 var current_city: String = ""
 var revealed: Dictionary = {}
@@ -38,6 +39,8 @@ var _label_hits: Array = []
 var _mountain_visuals: Array = []
 var _route_visuals: Array = []
 var _city_visuals: Array = []
+var _tiles: SlippyMapTiles
+var _tile_attribution: Label
 
 # ------------------------------------------------------------------- camera
 # Without zoom and pan a 142-degree-wide world on a 1300px strip is unreadable:
@@ -49,6 +52,10 @@ var pan: Vector2 = Vector2.ZERO
 var _dragging := false
 var _drag_from := Vector2.ZERO
 var _pan_from := Vector2.ZERO
+var _touches: Dictionary = {}
+var _touch_starts: Dictionary = {}
+var _pinch_distance := 0.0
+var _touch_was_multitouch := false
 signal view_changed
 var _fog: ColorRect
 var _mask_tex: ImageTexture
@@ -72,27 +79,97 @@ func setup(p: MapProjection, city_records: Array, route_records: Array = [],
 	cities = city_records
 	routes = route_records
 	mountains = mountain_records
-	coastlines = _project_lines(vector_records.get("coastlines", []))
+	_vector_records = vector_records.duplicate(true)
+	_rebuild_projected_geometry()
+	_ensure_real_map_tiles()
+	_ensure_fog()
+	_ensure_tile_attribution()
+	queue_redraw()
+
+
+## Rebuilds every cached lon/lat overlay after the drawable viewport changes.
+## The projection object is shared with Main and mutates during dock resizing;
+## without this pass, fresh tiles move while cities and routes remain at their
+## old pixel coordinates.
+func on_projection_changed() -> void:
+	if projection == null:
+		return
+	_rebuild_projected_geometry()
+	_clamp_pan()
+	_sync_fog()
+	_refresh_tiles()
+	queue_redraw()
+	view_changed.emit()
+
+
+func _rebuild_projected_geometry() -> void:
+	coastlines = _project_lines(_vector_records.get("coastlines", []))
 	rivers.clear()
-	for river in vector_records.get("rivers", []):
+	for river in _vector_records.get("rivers", []):
 		rivers.append({
 			"name": String(river.get("name", "")),
 			"lines": _project_lines(river.get("lines", [])),
 		})
 	seas.clear()
-	for sea in vector_records.get("seas", []):
+	for sea in _vector_records.get("seas", []):
 		var coord: Array = sea.get("coord", [0, 0])
 		seas.append({
 			"name": String(sea.get("name", "")),
-			"pos": p.to_view(float(coord[0]), float(coord[1])),
+			"pos": projection.to_view(float(coord[0]), float(coord[1])),
 		})
 	_city_pos.clear()
 	for c in cities:
 		var co: Array = c.get("coord", [0, 0])
-		_city_pos[c.get("id", "")] = p.to_view(float(co[0]), float(co[1]))
+		_city_pos[c.get("id", "")] = projection.to_view(float(co[0]), float(co[1]))
 	_cache_visuals()
-	_ensure_fog()
-	queue_redraw()
+
+
+func _ensure_real_map_tiles() -> void:
+	if _tiles == null:
+		_tiles = preload("res://game/map/slippy_map_tiles.gd").new()
+		add_child(_tiles)
+		_tiles.tiles_changed.connect(queue_redraw)
+	# SlippyMapTiles reads its config in _ready(), which has run immediately
+	# after add_child in a live tree. A deferred refresh also covers setup in a
+	# node that has not entered the tree yet (benchmarks instantiate this way).
+	_refresh_tiles()
+	call_deferred("_refresh_tiles")
+
+
+func _refresh_tiles() -> void:
+	if _tiles != null and projection != null:
+		_tiles.update_view(projection, zoom, pan)
+	if _tile_attribution == null:
+		_ensure_tile_attribution()
+	else:
+		_sync_tile_attribution()
+
+
+func _ensure_tile_attribution() -> void:
+	if _tiles == null or not _tiles.enabled or _tiles.attribution.is_empty():
+		return
+	if _tile_attribution == null:
+		_tile_attribution = Label.new()
+		_tile_attribution.name = "MapAttribution"
+		_tile_attribution.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_tile_attribution.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		_tile_attribution.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		_tile_attribution.add_theme_color_override("font_color", Color(0.08, 0.08, 0.08, 0.94))
+		_tile_attribution.add_theme_color_override("font_shadow_color", Color(1, 1, 1, 0.92))
+		_tile_attribution.add_theme_constant_override("shadow_offset_x", 1)
+		_tile_attribution.add_theme_constant_override("shadow_offset_y", 1)
+		add_child(_tile_attribution)
+	_tile_attribution.text = _tiles.attribution
+	_sync_tile_attribution()
+
+
+func _sync_tile_attribution() -> void:
+	if _tile_attribution == null or projection == null:
+		return
+	_tile_attribution.position = projection.origin \
+		+ Vector2(projection.width - 450.0, projection.height - 26.0)
+	_tile_attribution.size = Vector2(440.0, 24.0)
+	_tile_attribution.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 4, 9))
 
 
 func _project_lines(raw_lines: Array) -> Array:
@@ -374,6 +451,7 @@ func set_zoom(z: float, focus: Vector2) -> void:
 	pan = focus - projection.origin - (before - projection.origin) * zoom
 	_clamp_pan()
 	_sync_fog()
+	_refresh_tiles()
 	queue_redraw()
 	view_changed.emit()
 
@@ -382,6 +460,7 @@ func nudge(delta: Vector2) -> void:
 	pan += delta
 	_clamp_pan()
 	_sync_fog()
+	_refresh_tiles()
 	queue_redraw()
 	view_changed.emit()
 
@@ -404,6 +483,7 @@ func center_on(city_id: String) -> void:
 	pan = mid - projection.origin - (p - projection.origin) * zoom
 	_clamp_pan()
 	_sync_fog()
+	_refresh_tiles()
 	queue_redraw()
 	view_changed.emit()
 
@@ -429,6 +509,7 @@ func _draw() -> void:
 	else:
 		draw_rect(rect, Color("d9c9a3"))
 
+	_draw_real_map_tiles()
 	_draw_graticule(rect)
 	_draw_worldmap_vectors()
 	_draw_mountains()
@@ -439,6 +520,38 @@ func _draw() -> void:
 	_draw_border(rect)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_draw_scale_and_coordinates()
+
+
+func _draw_real_map_tiles() -> void:
+	if _tiles == null or not _tiles.enabled:
+		return
+	for tile in _tiles.draw_tiles(projection):
+		var texture: Texture2D = tile.get("texture")
+		var tile_rect: Rect2 = tile.get("rect")
+		if texture == null or tile_rect.size.x <= 0.0 or tile_rect.size.y <= 0.0:
+			continue
+		var region := _clip_tile_to_map(tile_rect, texture.get_size())
+		if region.is_empty():
+			continue
+		# XYZ edge tiles extend beyond the game's geographic bbox. Crop both the
+		# destination and source region so they cannot bleed into HUD/dock space.
+		# The live cartography remains legible while a light parchment tint keeps
+		# the historical city and route overlay visually coherent.
+		draw_texture_rect_region(texture, region["destination"], region["source"],
+			Color(0.93, 0.90, 0.82, 0.92), false, true)
+
+
+func _clip_tile_to_map(tile_rect: Rect2, texture_size: Vector2) -> Dictionary:
+	var map_rect := Rect2(projection.origin, Vector2(projection.width, projection.height))
+	var clipped := tile_rect.intersection(map_rect)
+	if clipped.size.x <= 0.0 or clipped.size.y <= 0.0:
+		return {}
+	return {
+		"destination": clipped,
+		"source": Rect2(
+			(clipped.position - tile_rect.position) / tile_rect.size * texture_size,
+			clipped.size / tile_rect.size * texture_size),
+	}
 
 
 func _draw_graticule(rect: Rect2) -> void:
@@ -481,7 +594,7 @@ func _draw_scale_and_coordinates() -> void:
 		var label := "%.1f°%s  %.1f°%s" % [absf(geo.y), "N" if geo.y >= 0 else "S",
 			absf(geo.x), "E" if geo.x >= 0 else "W"]
 		draw_string(font, projection.origin + Vector2(projection.width - 160,
-			projection.height - 14), label, HORIZONTAL_ALIGNMENT_LEFT, -1,
+			projection.height - 38), label, HORIZONTAL_ALIGNMENT_LEFT, -1,
 			maxi(UiScale.ui() - 2, 10), Palette.ink_soft())
 
 
@@ -751,6 +864,13 @@ func _draw_wind_heads(rect: Rect2) -> void:
 # -------------------------------------------------------------------- input
 
 func _unhandled_input(event: InputEvent) -> void:
+	handle_map_input(event)
+
+
+## Public input entry used by Main's transparent map interaction surface.
+## Keeping the handling here lets keyboard navigation, mouse, trackpads and
+## touch all manipulate the exact same camera state.
+func handle_map_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		var mb := event as InputEventMouseButton
 		if mb.button_index == MOUSE_BUTTON_WHEEL_UP and mb.pressed:
@@ -773,8 +893,21 @@ func _unhandled_input(event: InputEvent) -> void:
 		pan = _pan_from + (event.position - _drag_from)
 		_clamp_pan()
 		_sync_fog()
+		_refresh_tiles()
 		queue_redraw()
 		view_changed.emit()
+	elif event is InputEventMagnifyGesture:
+		var magnify := event as InputEventMagnifyGesture
+		set_zoom(zoom * magnify.factor, to_local(magnify.position))
+	elif event is InputEventPanGesture:
+		var gesture := event as InputEventPanGesture
+		# Godot reports the content travel direction; map dragging follows the
+		# fingers, hence the negative delta.
+		nudge(-gesture.delta * 24.0)
+	elif event is InputEventScreenTouch:
+		_handle_touch(event as InputEventScreenTouch)
+	elif event is InputEventScreenDrag:
+		_handle_touch_drag(event as InputEventScreenDrag)
 	elif event is InputEventKey:
 		var key := event as InputEventKey
 		if not key.pressed or key.echo:
@@ -795,6 +928,52 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_HOME:
 				_focused_city = current_city
 				center_on(current_city)
+
+
+func _handle_touch(event: InputEventScreenTouch) -> void:
+	if event.pressed:
+		_touches[event.index] = event.position
+		_touch_starts[event.index] = event.position
+		if _touches.size() >= 2:
+			_touch_was_multitouch = true
+	else:
+		var start: Vector2 = _touch_starts.get(event.index, event.position)
+		var tap := not _touch_was_multitouch and _touches.size() == 1 \
+			and start.distance_to(event.position) < 12.0
+		_touches.erase(event.index)
+		_touch_starts.erase(event.index)
+		if tap:
+			_pick(to_map(to_local(event.position)))
+	if _touches.size() == 1:
+		var points := _touches.values()
+		_dragging = event.pressed
+		_drag_from = points[0] if event.pressed else event.position
+		_pan_from = pan
+	elif _touches.size() >= 2:
+		_dragging = false
+		var points := _touches.values()
+		_pinch_distance = (points[0] as Vector2).distance_to(points[1] as Vector2)
+	else:
+		_dragging = false
+		_pinch_distance = 0.0
+		_touch_was_multitouch = false
+
+
+func _handle_touch_drag(event: InputEventScreenDrag) -> void:
+	_touches[event.index] = event.position
+	if _touches.size() == 1:
+		nudge(event.relative)
+		return
+	if _touches.size() < 2:
+		return
+	var points := _touches.values()
+	var a := points[0] as Vector2
+	var b := points[1] as Vector2
+	var distance := a.distance_to(b)
+	var centre := (a + b) * 0.5
+	if _pinch_distance > 1.0:
+		set_zoom(zoom * distance / _pinch_distance, to_local(centre))
+	_pinch_distance = distance
 
 
 func _pick(map_p: Vector2) -> void:

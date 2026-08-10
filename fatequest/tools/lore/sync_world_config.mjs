@@ -12,7 +12,24 @@ const ROOT = fileURLToPath(new URL("../..", import.meta.url));
 const src = join(ROOT, "worldmap/data/world_config.json");
 const dstDir = join(ROOT, "content/world");
 mkdirSync(dstDir, { recursive: true });
-const cfg = JSON.parse(readFileSync(src, "utf8"));
+const sourceCfg = JSON.parse(readFileSync(src, "utf8"));
+// Source geometry remains WGS84 lon/lat. Runtime rendering uses Web Mercator
+// so historical overlays align with the live XYZ basemap. Keep this metadata
+// here rather than hand-editing the synced file after every worldmap rebuild.
+const cfg = {
+  ...sourceCfg,
+  title: "Afro-Eurasian Journey Map",
+  worldview: "real geography rendered with a medieval parchment visual language",
+  rendering: {
+    projection: "web-mercator",
+    orientation: "north-up",
+    style: "real-tiles-with-medieval-overlay",
+    reason: "Align the live XYZ basemap with historical cities, routes, vectors and fog while preserving the period-inspired overlay.",
+  },
+  data_license: "Curated content CC0 / public-domain facts. Coastlines and physical geography derived from Natural Earth public-domain data; see scripts/build_real_terrain.py.",
+  source_url: "https://www.naturalearthdata.com/",
+};
+delete cfg.orientation_note;
 writeFileSync(join(dstDir, "world_config.json"), JSON.stringify(cfg, null, 1) + "\n");
 console.log(`synced bbox ${JSON.stringify(cfg.bbox)} -> content/world/world_config.json`);
 
