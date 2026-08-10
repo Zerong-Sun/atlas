@@ -17,6 +17,7 @@
 | FQ-QA-06 | 基于帧数等待的 smoke 在负载下会误报超时 | 地图 smoke 改为按实际经过时间等待，并保留明确超时 | 完整 smoke 32/32 通过 |
 | FQ-QA-07 | 过场只能用鼠标跳过，键盘路径可能卡住 | transit 层增加 Space/Enter/小键盘 Enter 跳过，仍保留非阻塞最长 3.6 秒约束 | 全键盘路径包含在 `smoke_player_surface.gd` 与 map smoke |
 | FQ-QA-08 | 市场 smoke 将购买按钮硬编码为中文，CI 语言状态变化时找不到可购买按钮 | 测试改为匹配 `I18n.t("ui.buy")`，保持中英文运行均可识别真实按钮 | 本地 `smoke_market.gd` 通过；PR CI 重跑待确认 |
+| FQ-QA-09 | 城市导航 smoke 将返回按钮硬编码为中文，英文 CI 误报城市死路 | 测试改为匹配 `ui.back_to_map`/`ui.back_to_city` 的当前语言文案 | PR CI 的市场修复后定位并修复 |
 
 ## 六维验收
 
