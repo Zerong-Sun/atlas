@@ -26,13 +26,14 @@ func _init():
     print("MARKET: purse=%d hold=%d/%d" % [before_coins, n._market.cargo_used(n.state), n.state.cargo_slots])
 
     var bought = 0
+    var buy_label := I18n.t("ui.buy")
     for pass_i in 4:
         await process_frame
         var hit = false
         for row in n._market_view._stock_box.get_children():
             for ch in row.get_children():
                 for b in ch.get_children():
-                    if b is Button and not b.disabled and b.text == "买":
+                    if b is Button and not b.disabled and b.text == buy_label:
                         b.pressed.emit(); hit = true; bought += 1; break
                 if hit: break
             if hit: break

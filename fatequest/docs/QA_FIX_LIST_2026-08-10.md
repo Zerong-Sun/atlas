@@ -16,6 +16,7 @@
 | FQ-QA-05 | 过期 timer/tween 可能关闭新一代 transit 覆盖层 | 集中管理 transit 生命周期，使用代次标识校验旧回调；抵达与重复完成都会先失效旧回调 | `smoke_map_display.gd`：`roundtrip=true`，完整 smoke 通过 |
 | FQ-QA-06 | 基于帧数等待的 smoke 在负载下会误报超时 | 地图 smoke 改为按实际经过时间等待，并保留明确超时 | 完整 smoke 32/32 通过 |
 | FQ-QA-07 | 过场只能用鼠标跳过，键盘路径可能卡住 | transit 层增加 Space/Enter/小键盘 Enter 跳过，仍保留非阻塞最长 3.6 秒约束 | 全键盘路径包含在 `smoke_player_surface.gd` 与 map smoke |
+| FQ-QA-08 | 市场 smoke 将购买按钮硬编码为中文，CI 语言状态变化时找不到可购买按钮 | 测试改为匹配 `I18n.t("ui.buy")`，保持中英文运行均可识别真实按钮 | 本地 `smoke_market.gd` 通过；PR CI 重跑待确认 |
 
 ## 六维验收
 
