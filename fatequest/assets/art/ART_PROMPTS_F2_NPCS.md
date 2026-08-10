@@ -102,7 +102,7 @@ Negative: photorealistic, 3D, neon, watermark, text, full-body, facing left, dei
 - **Mode**: separate · **Count**: 5 · **Output per file**: 900×1300 · **Background**: transparent
 - **Output dir**: art
 - **Files**:
-  1. `mentor-tarot.webp` — Venice card-maker old Matteo: half-body facing right, unfinished card, gold leaf brush; bottom 15% dialog-safe
+  1. `mentor-tarot.webp` — Frankish widow card-reader of Tabriz: half-body facing right, tarot spread on table, widow's wimple; bottom 15% dialog-safe
   2. `mentor-lenormand.webp` — Card-shop daughter Caterina: half-body facing right, small card deck pouch; bottom 15% dialog-safe
   3. `mentor-runes.webp` — Varangian guard Harald: half-body facing right, rune stick, axe token (prop); bottom 15% dialog-safe
   4. `mentor-astrodice.webp` — Astronomer Tebrizi: half-body facing right, astrolabe, dice pouch; bottom 15% dialog-safe
@@ -115,12 +115,12 @@ Generate exactly 5 SEPARATE half-body mentor portraits on transparent background
 Style: 13th-century manuscript illumination, iron-gall outlines, mineral flat color, parchment grain, candlelight only. No photorealism, no neon, no text.
 COMPOSITION LOCK: half-body facing RIGHT; bottom ~15% dialog-safe; face/shoulders/signature props in upper 85%; transparent; single figure; no deities.
 Order 1→5:
-1. mentor-tarot.webp — old Matteo the Venetian card-maker with unfinished card and gold brush
+1. mentor-tarot.webp — the Frankish widow laying out a tarot spread on the table
 2. mentor-lenormand.webp — Caterina the card-shop daughter with deck pouch
 3. mentor-runes.webp — Varangian Harald with rune stick
 4. mentor-astrodice.webp — Tebrizi with astrolabe and dice pouch
 5. mentor-western.webp — Nadira dock astrologer with star chart and compass
-Negative: photorealistic, 3D, neon, watermark, text, full-body, facing left, deities.
+Negative: photorealistic, 3D, neon, watermark, text, full-body, facing left, deities, East Asian facial features on European or West-Asian figures.
 ```
 
 ---

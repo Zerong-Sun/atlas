@@ -238,7 +238,7 @@ Generate exactly ONE 4×2 contact sheet of 8 map/journey assets (transparent bac
 - **Mode**: sheet · **Grid**: 5×2 · **Cell**: 450×650 · **Output per file**: 900×1300 · **Background**: transparent
 - **Output dir**: art
 - **Files**:
-  1. `mentor-tarot.webp` — Venice card-maker old Matteo, half-body facing right
+  1. `mentor-tarot.webp` — Frankish widow card-reader of Tabriz, half-body facing right
   2. `mentor-lenormand.webp` — Card-shop daughter Caterina, half-body facing right
   3. `mentor-runes.webp` — Varangian guard Harald, half-body facing right
   4. `mentor-astrodice.webp` — Astronomer Tebrizi, half-body facing right

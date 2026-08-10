@@ -1,6 +1,8 @@
 class_name SaveGame
 extends RefCounted
 
+const MortalityCore = preload("res://core/life/mortality.gd")
+
 ## Snapshot saves with a one-way migration chain (docs/CODE_PLAN.md §7).
 ##
 ## The kernel is deterministic, so a replay save — seed plus the effect log —
@@ -17,7 +19,7 @@ extends RefCounted
 ##   2. Unknown fields are preserved. A save written by a newer build must not
 ##      lose data when an older build reads and re-writes it.
 
-const VERSION := 3
+const VERSION := 4
 const DIR := "user://saves"
 const EXT := ".fqsave"
 const HEAD_EXT := ".fqhead"
@@ -35,6 +37,7 @@ const _V3_STATE_FIELDS := [
 	"active_event", "active_journey", "recovery", "start_city", "visited",
 	"longest_leg", "best_trade", "purchases",
 ]
+const _V4_STATE_FIELDS := _V3_STATE_FIELDS + ["life", "legacy"]
 const _V3_ARRAY_FIELDS := [
 	"languages", "items", "unlocked_routes", "learned_divinations",
 	"retainers", "stickers", "codex", "pending_events", "visited",
@@ -44,6 +47,7 @@ const _V3_DICTIONARY_FIELDS := [
 	"band_reputation", "once_fired", "etiquette", "active_journey",
 	"recovery", "longest_leg", "best_trade", "purchases",
 ]
+const _V4_DICTIONARY_FIELDS := _V3_DICTIONARY_FIELDS + ["life", "legacy"]
 
 
 static func _ensure_dir() -> void:
@@ -123,6 +127,8 @@ static func serialize(state: WorldState, _clock: WorldClock, extra: Dictionary =
 			"longest_leg": state.longest_leg.duplicate(true),
 			"best_trade": state.best_trade.duplicate(true),
 			"purchases": state.purchases.duplicate(true),
+			"life": state.life.duplicate(true),
+			"legacy": state.legacy.duplicate(true),
 		},
 		"extra": extra,
 	}
@@ -197,7 +203,8 @@ static func _document_status(doc: Dictionary) -> Dictionary:
 					"version": version,
 					"header": header,
 				}
-		for field in _V3_STATE_FIELDS:
+		var required_state_fields := _V4_STATE_FIELDS if version >= 4 else _V3_STATE_FIELDS
+		for field in required_state_fields:
 			if not state.has(field):
 				return {
 					"status": "corrupt",
@@ -213,13 +220,41 @@ static func _document_status(doc: Dictionary) -> Dictionary:
 					"version": version,
 					"header": header,
 				}
-		for field in _V3_DICTIONARY_FIELDS:
+		var dictionary_fields := _V4_DICTIONARY_FIELDS if version >= 4 else _V3_DICTIONARY_FIELDS
+		for field in dictionary_fields:
 			if typeof(state[field]) != TYPE_DICTIONARY:
 				return {
 					"status": "corrupt",
 					"code": "SAVE_STATE_FIELD_BAD_TYPE:%s" % field,
 					"version": version,
 					"header": header,
+				}
+		if version >= 4:
+			var life: Dictionary = state.get("life", {})
+			var vitality := int(life.get("vitality", -1))
+			var stage := String(life.get("stage", ""))
+			var deceased = life.get("deceased", null)
+			if vitality < 0 or vitality > 100 or stage not in MortalityCore.VALID_STAGES \
+					or typeof(deceased) != TYPE_BOOL \
+					or typeof(life.get("conditions", null)) != TYPE_ARRAY:
+				return {
+					"status": "corrupt", "code": "SAVE_LIFE_STATE_INVALID",
+					"version": version, "header": header,
+				}
+			if (bool(deceased) and (stage != MortalityCore.DECEASED \
+					or int(life.get("death_jdn", -1)) < 0 \
+					or String(life.get("cause", "")).is_empty())) \
+					or (not bool(deceased) and stage == MortalityCore.DECEASED):
+				return {
+					"status": "corrupt", "code": "SAVE_LIFE_TERMINAL_INCONSISTENT",
+					"version": version, "header": header,
+				}
+			var legacy: Dictionary = state.get("legacy", {})
+			if int(legacy.get("generation", 0)) < 1 \
+					or typeof(legacy.get("volumes", null)) != TYPE_ARRAY:
+				return {
+					"status": "corrupt", "code": "SAVE_LEGACY_STATE_INVALID",
+					"version": version, "header": header,
 				}
 		if String(state.get("seed", "")).is_empty() \
 				or String(state.get("city", "")).is_empty():
@@ -306,6 +341,10 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.etiquette = (src.get("etiquette", {}) as Dictionary).duplicate(true)
 	st.active_journey = (src.get("active_journey", {}) as Dictionary).duplicate(true)
 	st.recovery = (src.get("recovery", {}) as Dictionary).duplicate(true)
+	st.life = (src.get("life", MortalityCore.default_life()) as Dictionary).duplicate(true)
+	st.legacy = (src.get("legacy", {
+		"generation": 1, "lineage_id": "", "volumes": [], "pending_heirloom": ""}) \
+		as Dictionary).duplicate(true)
 
 	return {"state": st, "clock": WorldClock.new(st.jdn), "extra": d.get("extra", {})}
 
@@ -344,6 +383,22 @@ static func migrate(doc: Dictionary) -> Dictionary:
 					state3["active_event"] = ""
 				d["state"] = state3
 				d["version"] = 3
+			3:
+				# v4 adds the warning-first life state and bounded lineage archive.
+				# Existing travellers resume healthy; no old run can die merely by
+				# loading into the new system.
+				var state4: Dictionary = d.get("state", {})
+				if not state4.has("life"):
+					state4["life"] = MortalityCore.default_life()
+				if not state4.has("legacy"):
+					state4["legacy"] = {
+						"generation": 1,
+						"lineage_id": "",
+						"volumes": [],
+						"pending_heirloom": "",
+					}
+				d["state"] = state4
+				d["version"] = 4
 			_:
 				push_error("SaveGame: no migration from version %d" % v)
 				break

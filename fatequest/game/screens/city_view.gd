@@ -169,21 +169,30 @@ func set_status(coins: int, cargo_used: int, cargo_max: int, day: int, date: Str
 
 
 func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Control:
-	var box := VBoxContainer.new()
-	# Keep semantic identity on the figure so accessibility tooling and smoke
-	# tests do not have to infer event rules from child order or translated text.
-	box.set_meta("event_id", String(ev.get("id", "")))
-	box.set_meta("once", bool(ev.get("once", false)))
-	box.alignment = BoxContainer.ALIGNMENT_END
-	box.add_theme_constant_override("separation", 6)
-
+	# The portrait and its plaque are one interaction. Previously only the
+	# portrait was a Button while the plaque looked like a button but was a
+	# PanelContainer, so clicking the name — the most obvious target — did
+	# nothing. Make the whole tile the hit target and let its presentation
+	# children ignore mouse input.
 	var btn := Button.new()
+	btn.set_meta("event_id", String(ev.get("id", "")))
+	btn.set_meta("once", bool(ev.get("once", false)))
 	btn.flat = true
+	btn.focus_mode = Control.FOCUS_ALL
+	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	btn.custom_minimum_size = Vector2(180, PORTRAIT_H + 42)
+	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	btn.clip_contents = false
+	var content := VBoxContainer.new()
+	content.set_anchors_preset(Control.PRESET_FULL_RECT)
+	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	content.alignment = BoxContainer.ALIGNMENT_END
+	content.add_theme_constant_override("separation", 6)
+	btn.add_child(content)
+
 	# Reachable from the keyboard like everything else, but without the plate:
 	# a figure standing in a square should not acquire a parchment frame just
 	# because it happens to be clickable.
-	btn.focus_mode = Control.FOCUS_ALL
-	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	var art := _portrait_for(ev, culture, slot)
 	if art != null:
 		var tr := TextureRect.new()
@@ -196,11 +205,12 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 		# A place already explored stays visible but recedes, so the player can
 		# see what they have done without it competing for attention.
 		tr.modulate = Color(0.72, 0.68, 0.62, 0.62) if done else Color(1, 1, 1, 1)
-		btn.custom_minimum_size = tr.custom_minimum_size
-		btn.add_child(tr)
+		btn.custom_minimum_size = Vector2(tr.custom_minimum_size.x, tr.custom_minimum_size.y + 42)
+		content.add_child(tr)
 	else:
-		btn.text = I18n.t(ev.get("title", ""))
-		btn.custom_minimum_size = Vector2(180, 90)
+		var spacer := Control.new()
+		spacer.custom_minimum_size = Vector2(180, 90)
+		content.add_child(spacer)
 	if done:
 		# Still readable — you can look at a place you have been — but it no
 		# longer offers choices, so it must not look like an open action.
@@ -222,18 +232,19 @@ func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Con
 		btn.mouse_exited.connect(func() -> void:
 			if is_instance_valid(btn):
 				btn.modulate = Color(1, 1, 1, 1))
-	box.add_child(btn)
 
 	var plate := PanelContainer.new()
 	plate.add_theme_stylebox_override("panel", Palette.panel_style())
 	plate.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	plate.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var lbl := Label.new()
 	lbl.text = ("✓ " if done else "") + I18n.t(ev.get("title", ""))
 	lbl.add_theme_font_size_override("font_size", UiScale.ui())
 	lbl.add_theme_color_override("font_color", Palette.ink_soft() if done else Palette.ink())
+	lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	plate.add_child(lbl)
-	box.add_child(plate)
-	return box
+	content.add_child(plate)
+	return btn
 
 
 ## Re-dresses the whole screen for the current type size and contrast mode.

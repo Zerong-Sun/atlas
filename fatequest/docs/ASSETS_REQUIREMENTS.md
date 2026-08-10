@@ -1,6 +1,6 @@
 # 素材总索引 · ASSETS REQUIREMENTS
 
-**2026-07-31 · Godot v3.0 唯一维护线。** 本文汇总美术、音频、文本三类素材的**实测库存、接线状态、缺口与文档入口**。原则：**已有尽量接线使用，不丢文件；重复副本归档并注明 canonical 路径。**
+**2026-08-07 · Godot v3.0 唯一维护线。** 本文汇总美术、音频、文本三类素材的**实测库存、接线状态、缺口与文档入口**。原则：**已有尽量接线使用，不丢文件；重复副本归档并注明 canonical 路径。**
 
 ---
 
@@ -17,14 +17,16 @@
 
 ---
 
-## 1. 美术（2026-07-30 实测 · P3/P4 落盘）
+## 1. 美术（2026-08-07 实测 · 人物矩阵补查）
 
 ```
 assets/art/*.webp（根目录）     674 张
   _archive/（抓图归档）         128 张   ← 生产图之外的 Chat 变体，勿删
   _sheets/（组图原片）            58 张
-assets/decks/iching/             30/64 牌面
-assets/decks/tarot/              78 张
+assets/decks/iching/             64 文件（30 真图 + 34 占位 <30KB 线描）
+assets/decks/tarot/              40/78 张（22 大阿卡纳 + 权杖全组 + 圣杯 2–4）
+assets/astrodice/                34 张 SVG 线稿（24 宫 + 20 行星 + 24 星座，非 webp 画作）
+人物立绘（npc/npc-job/retainer/mentor）  96 张 · 矩阵见 ART_REQUIREMENTS.md §7
 ```
 
 | 接线 | 数量 | 说明 |
@@ -32,7 +34,7 @@ assets/decks/tarot/              78 张
 | Godot 运行时（`MapArt` + `art_wire_index.json`） | **674** | 全量可解析 |
 | **未接线** | **0** | S1c ✅ 2026-07-30 |
 
-**仍缺出图**（规格见 `ART_REQUIREMENTS.md`）：易经 31–64（34）。P3 chr 重绘与白图泰 6+18 已交付；货币／贴纸／随从／契约已交付；雇佣签契屏见 `game/ui/hire_contract.gd`。
+**仍缺出图**（规格见 [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) §2 / §7）：易经 31–64（34 张占位）、塔罗小阿卡纳（38 张）、**随从立绘 con/mazu 两套（18 张）**、`mentor-tarot` 内容错配重绘（1 张）。P3 chr 重绘与白图泰 6+18 已交付；货币／贴纸／契约已交付；雇佣签契屏见 `game/ui/hire_contract.gd`。
 
 **归档策略**：
 
@@ -99,5 +101,7 @@ godot --headless --path . --script tests/run_tests.gd
 1. ~~接线现有素材~~ ✅ 674/674
 2. ~~动画 N2–N3~~ ✅
 3. ~~chr 底板重绘 + 白图泰专图~~ ✅ 2026-07-30
-4. **易经下半** — 牌组完整度 polish
-5. **文本多轮互动与正式文案** — `TEXT_REQUIREMENTS.md` §4–§10
+4. **随从立绘 con/mazu 两套（18 张）** — 人物矩阵补齐，`retainers.json` 已覆盖 east_asia / indian_ocean 文化
+5. **易经下半（34 张占位）** — 牌组完整度 polish
+6. **塔罗小阿卡纳（38 张）** — 牌组完整度 polish
+7. **文本多轮互动与正式文案** — `TEXT_REQUIREMENTS.md` §4–§10

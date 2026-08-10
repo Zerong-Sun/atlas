@@ -122,7 +122,7 @@ func can_buy(good: Dictionary, city: Dictionary, state: WorldState, jdn: int) ->
 	var reasons: Array[String] = []
 	var price := buy_price(good, city, jdn, state.seed)
 	if state.coins < price:
-		reasons.append("trade.cannot_afford:%d" % (price / FEN))
+		reasons.append("trade.cannot_afford:%d" % int(price / FEN))
 	var bulk := int(good.get("bulk", 1))
 	if cargo_free(state) < bulk:
 		reasons.append("trade.no_cargo_room:%d" % bulk)

@@ -66,7 +66,7 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 	_facts.text = I18n.t("ui.travel.facts") % [
 		transport,
 		travel.total_days(route, mode),
-		travel.total_cost(route, mode) / Market.FEN,
+		int(travel.total_cost(route, mode) / Market.FEN),
 		travel.total_risk(route, mode),
 	]
 	var entry := db.get_record(String(city.get("entryEvent", "")))

@@ -46,15 +46,15 @@ func _init():
     var base_land: int = n._roster.effective_slots(n.state, "land")
     var base_sea: int = n._roster.effective_slots(n.state, "sea")
 
-    var hire_btn = _find_button(n._party["list"], "雇", "格")
-    _ok(hire_btn != null, "the hiring pool shows someone whose cargo bonus is stated")
+    var hire_btn = _find_cargo_hire_button(n._party["list"], I18n.t("ui.hire"))
+    _ok(hire_btn != null, "the hiring pool exposes a hire action")
     if hire_btn == null:
         _done()
         return
     hire_btn.pressed.emit()
     await process_frame
-    # Hire opens the parchment ritual; confirm with 缔结.
-    var seal_btn = _button_in(n, "缔结")
+    # Hire opens the parchment ritual; confirm with the localized contract label.
+    var seal_btn = _button_in(n, I18n.t("ui.forge_contract"))
     _ok(seal_btn != null, "hire ritual shows 缔结")
     if seal_btn == null:
         _done()
@@ -66,7 +66,7 @@ func _init():
     var sea: int = n._roster.effective_slots(n.state, "sea")
     print("PARTY: party=%d  land %d->%d  sea %d->%d"
         % [n.state.retainers.size(), base_land, land, base_sea, sea])
-    _ok(n.state.retainers.size() == 1, "confirming 缔结 puts exactly one person in the party")
+    _ok(n.state.retainers.size() == 1, "confirming the contract puts exactly one person in the party")
     _ok(land > base_land, "a porter's hold shows up on land")
     _ok(sea == base_sea, "and not at sea")
 
@@ -74,7 +74,7 @@ func _init():
     n.state.goods = {"silk": land}
     n._open_party()
     await process_frame
-    var quit_btn = _find_button(n._party["list"], "辞退", "")
+    var quit_btn = _find_button(n._party["list"], I18n.t("ui.dismiss"), "")
     _ok(quit_btn != null, "a party member has a 辞退 button")
     if quit_btn != null:
         quit_btn.pressed.emit()
@@ -87,7 +87,7 @@ func _init():
     n.state.goods = {}
     n._open_party()
     await process_frame
-    quit_btn = _find_button(n._party["list"], "辞退", "")
+    quit_btn = _find_button(n._party["list"], I18n.t("ui.dismiss"), "")
     if quit_btn != null:
         quit_btn.pressed.emit()
         await process_frame
@@ -112,6 +112,14 @@ func _find_button(list, label: String, needle: String):
             continue
         var b = _button_in(panel, label)
         if b != null:
+            return b
+    return null
+
+
+func _find_cargo_hire_button(list, label: String):
+    for panel in list.get_children():
+        var b = _button_in(panel, label)
+        if b != null and int(b.get_meta("retainer_cargo_slots", 0)) > 0:
             return b
     return null
 

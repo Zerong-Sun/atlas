@@ -17,6 +17,7 @@ const MAX_W := 760.0
 
 var _title: Label
 var _origin: Label
+var _context: Label
 var _body: RichTextLabel
 var _scroll: ScrollContainer
 var _choices: VBoxContainer
@@ -55,6 +56,11 @@ func _ready() -> void:
 	_origin.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	head_col.add_child(_origin)
 
+	_context = Label.new()
+	_context.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_context.visible = false
+	head_col.add_child(_context)
+
 	# A hairline between the heading and the prose. Title, provenance note and
 	# first paragraph used to run together as one block of text with only a
 	# size difference to separate them.
@@ -92,6 +98,8 @@ func restyle() -> void:
 	# A provenance note is a footnote, not a subtitle — it should read as an
 	# aside under the title rather than competing with it.
 	_origin.add_theme_color_override("font_color", Palette.ink_faint())
+	_context.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
+	_context.add_theme_color_override("font_color", Palette.accent())
 	_body.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_body.add_theme_color_override("default_color", Palette.ink())
 	# Leading. Set solid, long medieval prose in a narrow column is a wall;
@@ -119,10 +127,13 @@ func restyle() -> void:
 		minf(vp.y - float(Metrics.xl()) * 4.0, 560.0))
 
 
-func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null) -> void:
+func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null,
+		chain_context: String = "") -> void:
 	restyle()
 	_title.text = I18n.t(ev.get("title", ""))
 	_origin.text = _origin_note(ev)
+	_context.text = chain_context
+	_context.visible = not chain_context.is_empty()
 
 	var body_key := String(ev.get("body", ""))
 	var text := I18n.t(body_key)
@@ -170,6 +181,8 @@ func show_result(result_key: String) -> void:
 	restyle()
 	_title.text = I18n.t("ui.choice_result_title")
 	_origin.text = I18n.t("ui.source_authored")
+	_context.text = ""
+	_context.visible = false
 	_portrait.texture = null
 	_portrait.visible = false
 

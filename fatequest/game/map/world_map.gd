@@ -429,6 +429,7 @@ func _draw() -> void:
 	else:
 		draw_rect(rect, Color("d9c9a3"))
 
+	_draw_graticule(rect)
 	_draw_worldmap_vectors()
 	_draw_mountains()
 	_draw_routes()
@@ -437,6 +438,51 @@ func _draw() -> void:
 	_draw_wind_heads(rect)
 	_draw_border(rect)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	_draw_scale_and_coordinates()
+
+
+func _draw_graticule(rect: Rect2) -> void:
+	# A faint geographic scaffold makes zooming readable without turning the
+	# parchment into a modern road atlas. Lines are true lon/lat, not decoration.
+	var col := Color(0.34, 0.27, 0.18, 0.13 if zoom < 2.0 else 0.20)
+	for lon in range(int(ceil(projection.west / 10.0)) * 10,
+			int(floor(projection.east / 10.0)) * 10 + 1, 10):
+		var a := projection.to_view(float(lon), projection.south)
+		var b := projection.to_view(float(lon), projection.north)
+		draw_line(a, b, col, 0.65)
+	for lat in range(int(ceil(projection.south / 10.0)) * 10,
+			int(floor(projection.north / 10.0)) * 10 + 1, 10):
+		var a := projection.to_view(projection.west, float(lat))
+		var b := projection.to_view(projection.east, float(lat))
+		draw_line(a, b, col, 0.65)
+
+
+func _draw_scale_and_coordinates() -> void:
+	var font := ThemeDB.fallback_font
+	var base := projection.origin + Vector2(22, projection.height - 20)
+	var focus: Vector2 = _city_pos.get(_focused_city,
+		_city_pos.get(current_city, Vector2.ZERO))
+	var geo := projection.to_geo(focus) if focus != Vector2.ZERO else Vector2(
+		(projection.west + projection.east) * 0.5,
+		(projection.south + projection.north) * 0.5)
+	var px_per_degree := projection.width / (projection.east - projection.west) * zoom
+	var px_per_km := px_per_degree / MapProjection.longitude_km_per_degree(geo.y)
+	var distance := 100
+	for candidate in [100, 250, 500, 1000, 2000]:
+		if float(candidate) * px_per_km <= 150.0:
+			distance = candidate
+	var length := float(distance) * px_per_km
+	draw_line(base, base + Vector2(length, 0), Palette.ink(), 2.0)
+	draw_line(base + Vector2(0, -5), base + Vector2(0, 5), Palette.ink(), 2.0)
+	draw_line(base + Vector2(length, -5), base + Vector2(length, 5), Palette.ink(), 2.0)
+	draw_string(font, base + Vector2(0, -8), "%d km" % distance,
+		HORIZONTAL_ALIGNMENT_LEFT, -1, maxi(UiScale.ui() - 2, 10), Palette.ink())
+	if focus != Vector2.ZERO:
+		var label := "%.1f°%s  %.1f°%s" % [absf(geo.y), "N" if geo.y >= 0 else "S",
+			absf(geo.x), "E" if geo.x >= 0 else "W"]
+		draw_string(font, projection.origin + Vector2(projection.width - 160,
+			projection.height - 14), label, HORIZONTAL_ALIGNMENT_LEFT, -1,
+			maxi(UiScale.ui() - 2, 10), Palette.ink_soft())
 
 
 func _draw_worldmap_vectors() -> void:

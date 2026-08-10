@@ -1,7 +1,7 @@
 class_name DivinationLesson
 extends PanelContainer
 
-## Placeholder presentation for the six data-driven lesson families. Formal
+## Presentation for the eight data-driven lesson families. Formal
 ## art can replace these controls; DivinationLessonEngine remains authoritative.
 
 signal passed(method: String)
@@ -9,6 +9,7 @@ signal failed(method: String)
 signal skipped(method: String)
 
 const LessonEngine = preload("res://core/divination/lesson_engine.gd")
+const DivinationResultView = preload("res://game/ui/divination_result.gd")
 
 var _method := ""
 var _lesson: Dictionary = {}
@@ -23,6 +24,8 @@ var _actions: HBoxContainer
 var _engine = LessonEngine.new()
 var _rng: Rng
 var _throw_label: Label
+var _ritual_icon: TextureRect
+var _ritual_tween: Tween
 
 
 func _ready() -> void:
@@ -34,6 +37,12 @@ func _ready() -> void:
 	add_child(root)
 	_title = Panels.heading(I18n.t("lesson.heading"))
 	root.add_child(_title)
+	_ritual_icon = TextureRect.new()
+	_ritual_icon.custom_minimum_size = Vector2(0, 92)
+	_ritual_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_ritual_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_ritual_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(_ritual_icon)
 	_prompt = RichTextLabel.new()
 	_prompt.bbcode_enabled = true
 	_prompt.fit_content = true
@@ -59,6 +68,7 @@ func start(method: String, lesson: Dictionary, rng: Rng) -> void:
 	_rng = rng
 	_finished = false
 	set_process(false)
+	_ritual_icon.texture = DivinationResultView.ritual_texture(method)
 	_title.text = I18n.t(String(lesson.get("title", method)))
 	_prompt.text = I18n.t(String(lesson.get("prompt", "")))
 	var configured := _engine.configure(lesson)
@@ -69,6 +79,39 @@ func start(method: String, lesson: Dictionary, rng: Rng) -> void:
 		_rebuild_actions(false)
 		return
 	_build_round()
+	_animate_ritual(String(lesson.get("ritual", {}).get("motion", "reveal")))
+
+
+func _animate_ritual(style: String) -> void:
+	if _ritual_tween != null and _ritual_tween.is_valid():
+		_ritual_tween.kill()
+	_ritual_icon.position = Vector2.ZERO
+	_ritual_icon.rotation = 0.0
+	_ritual_icon.scale = Vector2.ONE
+	_ritual_icon.modulate.a = 0.0
+	_ritual_tween = _ritual_icon.create_tween()
+	_ritual_tween.set_parallel(true)
+	_ritual_tween.tween_property(_ritual_icon, "modulate:a", 1.0,
+		Motion.dur(0.35, Motion.Kind.FADE))
+	if Motion.reduce_motion:
+		return
+	match style:
+		"orbit":
+			_ritual_icon.rotation = -0.09
+			_ritual_tween.tween_property(_ritual_icon, "rotation", 0.09,
+				Motion.dur(0.65, Motion.Kind.ROTATE)).set_trans(Tween.TRANS_SINE)
+		"shuffle", "shake", "scatter":
+			_ritual_icon.position.x = -14.0
+			_ritual_tween.tween_property(_ritual_icon, "position:x", 14.0,
+				Motion.dur(0.32, Motion.Kind.MOVE)).set_trans(Tween.TRANS_SINE)
+		"flip":
+			_ritual_icon.scale.x = 0.08
+			_ritual_tween.tween_property(_ritual_icon, "scale:x", 1.0,
+				Motion.dur(0.38, Motion.Kind.SCALE)).set_ease(Tween.EASE_OUT)
+		"ripple", "smoke", "swirl", "tumble":
+			_ritual_icon.scale = Vector2(0.88, 0.88)
+			_ritual_tween.tween_property(_ritual_icon, "scale", Vector2.ONE,
+				Motion.dur(0.48, Motion.Kind.SCALE)).set_ease(Tween.EASE_OUT)
 
 
 func _build_round() -> void:
@@ -88,6 +131,10 @@ func _build_round() -> void:
 			_build_throw()
 		"observe":
 			_build_interpret()
+		"orient":
+			_build_orient()
+		"compare":
+			_build_compare()
 
 
 func _rebuild_actions(show_retry: bool) -> void:
@@ -146,6 +193,29 @@ func _pick_interpret(index: int) -> void:
 	var result := _engine.choose(index)
 	_handle_result(result, I18n.t("lesson.interpret_pass"),
 		I18n.t("lesson.interpret_fail"))
+
+
+func _build_orient() -> void:
+	for i in (_lesson.get("directions", []) as Array).size():
+		var key := String(_lesson.get("directions", [])[i])
+		_stage.add_child(Panels.styled_button(I18n.t(key), _pick_orientation.bind(i)))
+
+
+func _pick_orientation(index: int) -> void:
+	var result := _engine.choose(index)
+	_handle_result(result, I18n.t("lesson.orient_pass"), I18n.t("lesson.orient_fail"))
+
+
+func _build_compare() -> void:
+	for i in (_lesson.get("pairs", []) as Array).size():
+		var pair: Array = _lesson.get("pairs", [])[i]
+		var label := "%s  ↔  %s" % [I18n.t(String(pair[0])), I18n.t(String(pair[1]))]
+		_stage.add_child(Panels.styled_button(label, _pick_comparison.bind(i)))
+
+
+func _pick_comparison(index: int) -> void:
+	var result := _engine.choose(index)
+	_handle_result(result, I18n.t("lesson.compare_pass"), I18n.t("lesson.compare_fail"))
 
 
 func _build_balance() -> void:

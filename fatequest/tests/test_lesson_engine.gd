@@ -26,6 +26,8 @@ func run() -> bool:
 	_test_deduce()
 	_test_throw()
 	_test_form()
+	_test_orient()
+	_test_compare()
 	print("test_lesson_engine: ", "PASS" if _ok else "FAIL")
 	return _ok
 
@@ -141,6 +143,29 @@ func _test_form() -> void:
 	engine.pick_step("house")
 	_check(engine.pick_step("mark").get("status") == "passed",
 		"generated form completes in sequence")
+
+
+func _test_orient() -> void:
+	var engine = LessonEngine.new()
+	_check(engine.configure({
+		"method": "test-orient", "type": "orient",
+		"directions": ["north", "east", "south", "west"], "answer": 1,
+	}).get("ok", false), "orientation config")
+	_check(engine.choose(0).get("status") == "failed", "wrong orientation fails")
+	engine.reset_round()
+	_check(engine.choose(1).get("status") == "passed", "authored orientation passes")
+
+
+func _test_compare() -> void:
+	var engine = LessonEngine.new()
+	_check(engine.configure({
+		"method": "test-compare", "type": "compare",
+		"pairs": [["wood", "water"], ["wood", "metal"], ["fire", "earth"]],
+		"answer": 0,
+	}).get("ok", false), "comparison config")
+	_check(engine.choose(2).get("status") == "failed", "wrong comparison fails")
+	engine.reset_round()
+	_check(engine.choose(0).get("status") == "passed", "bounded comparison passes")
 
 
 func _check(value: bool, message: String) -> void:

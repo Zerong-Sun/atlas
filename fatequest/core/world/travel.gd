@@ -42,6 +42,8 @@ func is_route_known(route: Dictionary, state: WorldState) -> bool:
 func availability(route: Dictionary, state: WorldState, month: int, mode: String) -> Dictionary:
 	var reasons: Array[String] = []
 	var rid := String(route.get("id", ""))
+	if bool(state.life.get("deceased", false)):
+		reasons.append("travel.deceased")
 	if not state.active_journey.is_empty():
 		reasons.append("travel.journey_active")
 	var dest := other_end(route, state.city)
@@ -337,4 +339,3 @@ func _passable(route: Dictionary, state: WorldState, month: int) -> bool:
 		if ok:
 			return true
 	return false
-

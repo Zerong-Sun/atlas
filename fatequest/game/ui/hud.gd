@@ -48,6 +48,7 @@ func _tip(key: String, fallback: String = "") -> String:
 			"days": I18n.t("ui.days_travelled"),
 			"cargo": I18n.t("ui.hud.tip_cargo"),
 			"fate": I18n.t("ui.hud.tip_fate"),
+			"life": I18n.t("ui.hud.tip_life"),
 		}
 	return String(_tips.get(key, fallback))
 
@@ -120,6 +121,7 @@ func build() -> void:
 	_cell("days", "⏳")
 	_cell("cargo", "▤", MapArt.ui("cargo-tag"))
 	_cell("fate", "☯", MapArt.fate_wheel())
+	_cell("life", "♡")
 
 	_fate_bars = HBoxContainer.new()
 	_fate_bars.add_theme_constant_override("separation", Metrics.xs())
@@ -150,7 +152,7 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 	_put("place", place_name)
 	_put("date", I18n.t("ui.hud.date") % [g["year"], g["month"], g["day"], clock.date.ganzhi_day()])
 	# Money is kept in fen internally; show it the way a traveller would count.
-	var silver := state.coins / 100
+	var silver := int(state.coins / 100)
 	_put("coins", I18n.t("ui.hud.coins") % silver)
 	_put("days", I18n.t("ui.hud.days") % state.days_elapsed)
 	_put("cargo", "%d/%d" % [cargo_used, state.cargo_slots])
@@ -158,6 +160,9 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 		int(state.fate.get("travel", 0)),
 		int(state.fate.get("rapport", 0)),
 		int(state.fate.get("wealth", 0))])
+	_put("life", I18n.t("ui.hud.life") % [
+		int(state.life.get("vitality", 100)),
+		I18n.t("life.stage.%s" % String(state.life.get("stage", "stable")))])
 
 	# Deltas worth announcing. Cargo is not one: it changes on every trade and
 	# the market screen already shows the movement in place.
@@ -166,6 +171,7 @@ func refresh(state: WorldState, clock: WorldClock, place_name: String, cargo_use
 	_track("fate", int(state.fate.get("travel", 0))
 		+ int(state.fate.get("rapport", 0))
 		+ int(state.fate.get("wealth", 0)), "")
+	_track("life", int(state.life.get("vitality", 100)), "")
 	_quiet = false
 
 	# Swap the coin cell's art for the local currency emblem when one exists.

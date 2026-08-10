@@ -258,7 +258,8 @@ const CONDITION_KEYS = new Set(["any","all","not","cities","bands","faiths","sea
 const OPS = new Set(["coins","days","goods","item","remove_item","cargo_slots","reputation",
   "faith","language","etiquette","fate","unlock_route","reveal_map","reveal_city","reveal_route",
   "queue_event","dequeue_event","learn_divination",
-  "flag","unflag","goto","recruit","dismiss","retainer_mood","reveal_birth","sticker","codex"]);
+  "flag","unflag","goto","recruit","dismiss","retainer_mood","reveal_birth","sticker","codex",
+  "vitality","life_stage","condition_add","condition_remove","prepare_legacy","death","legacy_archive"]);
 
 function checkEffects(list, f, where) {
   for (const [i, e] of (list ?? []).entries()) {
@@ -368,7 +369,7 @@ for (const route of byTable.routes ?? [])
 {
   const lessons = byTable.divination_lessons ?? [];
   const byMethod = new Map(lessons.map((l) => [l.method, l]));
-  const lessonTypes = new Set(["throw","arrange","observe","timing","deduce","form"]);
+  const lessonTypes = new Set(["throw","arrange","observe","timing","deduce","form","orient","compare"]);
   const covered = new Set();
   const hasReachableTarget = (values, target) => {
     const reachable = new Array(Number(target) + 1).fill(false);
@@ -407,6 +408,15 @@ for (const route of byTable.routes ?? [])
         if (!Number.isInteger(Number(lesson.faces)) || Number(lesson.faces) < 2)
           err("G3", f, `${lesson.id}: throw requires an integer faces >= 2`);
       }
+      if (lesson.type === "orient") {
+        if ((lesson.directions?.length ?? 0) < 3 || lesson.answer < 0 || lesson.answer >= lesson.directions.length)
+          err("G3", f, `${lesson.id}: directions/answer are invalid`);
+      }
+      if (lesson.type === "compare") {
+        if ((lesson.pairs?.length ?? 0) < 2 || lesson.answer < 0 || lesson.answer >= lesson.pairs.length ||
+            lesson.pairs.some((pair) => !Array.isArray(pair) || pair.length !== 2))
+          err("G3", f, `${lesson.id}: pairs/answer are invalid`);
+      }
       if (lesson.type === "timing") {
         const w = lesson.window ?? [];
         if (w.length !== 2 || w[0] < 0 || w[1] > 1 || w[0] >= w[1])
@@ -429,7 +439,7 @@ for (const route of byTable.routes ?? [])
   const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
   for (const l of lessons) {
     const f = recordFile.get(l.id);
-    for (const field of ["steps", "clues", "options"]) {
+    for (const field of ["steps", "clues", "options", "directions"]) {
       for (const v of l[field] ?? []) {
         if (typeof v !== "string" || !v.startsWith("lesson."))
           err("G3", f, `${l.id}: ${field} entry "${String(v)}" must be an i18n key (lesson.*)`);
@@ -437,6 +447,14 @@ for (const route of byTable.routes ?? [])
           err("G3", f, `${l.id}: ${field} key "${v}" missing in en.json`);
         else if (zh[v] === undefined)
           err("G3", f, `${l.id}: ${field} key "${v}" missing in zh.json`);
+      }
+    }
+    for (const pair of l.pairs ?? []) {
+      for (const v of pair) {
+        if (typeof v !== "string" || !v.startsWith("lesson."))
+          err("G3", f, `${l.id}: pair entry "${String(v)}" must be an i18n key (lesson.*)`);
+        else if (en[v] === undefined || zh[v] === undefined)
+          err("G3", f, `${l.id}: pair key "${v}" must exist in en.json and zh.json`);
       }
     }
   }
@@ -1275,12 +1293,89 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// ------------------------ G32: eras + complete divination teaching catalogue
+{
+  const eras = byTable.campaign_eras ?? [];
+  const eraSet = new Set(eras.map((x) => x.id));
+  const expectedEras = new Set(["era-1253", "era-1292", "era-1325", "era-1405"]);
+  if (eras.length !== 4 || [...expectedEras].some((id) => !eraSet.has(id)))
+    err("G32", "content/tables/campaign_eras.json", "campaign must define exactly the four authored era scenarios");
+  for (const era of eras) {
+    const d = era.startDate ?? {};
+    if (![d.year, d.month, d.day].every(Number.isInteger))
+      err("G32", recordFile.get(era.id), `${era.id}: startDate must contain integer year/month/day`);
+    if (!Array.isArray(era.ageRange) || era.ageRange.length !== 2 || era.ageRange[0] < 16 || era.ageRange[1] > 90 || era.ageRange[0] > era.ageRange[1])
+      err("G32", recordFile.get(era.id), `${era.id}: invalid ageRange`);
+  }
+
+  const catalogs = byTable.divination_catalog ?? [];
+  const lessons = byTable.divination_lessons ?? [];
+  const sourceSet = ids("divination_sources");
+  const lessonByMethod = new Map(lessons.map((x) => [x.method, x]));
+  const catalogByMethod = new Map();
+  const mechanics = new Set();
+  const learnableMethods = new Set();
+  for (const event of byTable.events ?? [])
+    for (const choice of event.choices ?? [])
+      for (const effect of choice.effects ?? [])
+        if (effect.op === "learn_divination") learnableMethods.add(String(effect.value));
+  for (const entry of catalogs) {
+    if (catalogByMethod.has(entry.method)) err("G32", recordFile.get(entry.id), `duplicate catalog method ${entry.method}`);
+    catalogByMethod.set(entry.method, entry);
+    mechanics.add(entry.lessonMechanic);
+    if (!["native", "adapter"].includes(entry.implementation)) err("G32", recordFile.get(entry.id), `${entry.method}: implementation must be native|adapter`);
+    if (!divIds.has(entry.method)) err("G32", recordFile.get(entry.id), `unknown method ${entry.method}`);
+    if (!(entry.playSpaces ?? []).includes("annex")) err("G32", recordFile.get(entry.id), `${entry.method}: annex access is required`);
+    for (const era of entry.journeyEras ?? []) if (!eraSet.has(era)) err("G32", recordFile.get(entry.id), `${entry.method}: unknown journey era ${era}`);
+    if ((entry.journeyEras ?? []).length && !(entry.playSpaces ?? []).includes("journey")) err("G32", recordFile.get(entry.id), `${entry.method}: journey eras require journey playSpace`);
+    if ((entry.playSpaces ?? []).includes("journey") && !(entry.journeyEras ?? []).length) err("G32", recordFile.get(entry.id), `${entry.method}: journey playSpace requires at least one era`);
+    if ((entry.playSpaces ?? []).includes("journey") && entry.implementation !== "native") err("G32", recordFile.get(entry.id), `${entry.method}: adapter cannot enter the journey`);
+    if ((entry.playSpaces ?? []).includes("journey") && !learnableMethods.has(entry.method)) err("G32", recordFile.get(entry.id), `${entry.method}: journey method has no learn event`);
+    if (!["tool", "motion"].every((k) => String(entry.ritual?.[k] ?? "").length)) err("G32", recordFile.get(entry.id), `${entry.method}: ritual needs tool and motion`);
+    if (!(entry.sourceIds ?? []).length) err("G32", recordFile.get(entry.id), `${entry.method}: sourceIds required`);
+    for (const source of entry.sourceIds ?? []) if (!sourceSet.has(source)) err("G32", recordFile.get(entry.id), `${entry.method}: unknown source ${source}`);
+    const lesson = lessonByMethod.get(entry.method);
+    if (!lesson) err("G32", recordFile.get(entry.id), `${entry.method}: lesson missing`);
+    else if (lesson.type !== entry.lessonMechanic) err("G32", recordFile.get(entry.id), `${entry.method}: lesson type ${lesson.type} != catalog ${entry.lessonMechanic}`);
+  }
+  for (const id of divIds) if (!catalogByMethod.has(id)) err("G32", recordFile.get(id), `${id}: catalog entry missing`);
+  for (const lesson of lessons) if (!divIds.has(lesson.method)) err("G32", recordFile.get(lesson.id), `${lesson.id}: unknown method ${lesson.method}`);
+  for (const mechanic of ["throw","arrange","observe","timing","deduce","form","orient","compare"])
+    if (!mechanics.has(mechanic)) err("G32", "content/tables/divination_catalog.json", `mechanic ${mechanic} has no ritual`);
+}
+
+// --------------------------- G33: geographic map contract and source metadata
+{
+  const configPath = join(ROOT, "content/world/world_config.json");
+  const vectorPath = join(ROOT, "content/world/vector_map.json");
+  let config = {}, vectors = {};
+  try { config = JSON.parse(readFileSync(configPath, "utf8")); }
+  catch (e) { err("G33", "content/world/world_config.json", `cannot parse: ${e.message}`); }
+  try { vectors = JSON.parse(readFileSync(vectorPath, "utf8")); }
+  catch (e) { err("G33", "content/world/vector_map.json", `cannot parse: ${e.message}`); }
+  const b = config.bbox ?? {};
+  if (![b.west, b.south, b.east, b.north].every(Number.isFinite) || b.west >= b.east || b.south >= b.north)
+    err("G33", "content/world/world_config.json", "bbox must be finite and ordered");
+  if (config.rendering?.orientation !== "north-up" || config.rendering?.projection !== "equirectangular")
+    err("G33", "content/world/world_config.json", "runtime map must declare its north-up equirectangular contract");
+  if (!String(config.data_license ?? "").length || !String(config.source_url ?? "").length)
+    err("G33", "content/world/world_config.json", "map source and license metadata are required");
+  for (const city of byTable.cities ?? []) {
+    const [lon, lat] = city.coord ?? [];
+    if (lon < b.west || lon > b.east || lat < b.south || lat > b.north)
+      err("G33", recordFile.get(city.id), `${city.id}: coordinate falls outside runtime bbox`);
+  }
+  if ((vectors.coastlines ?? []).length < 100) err("G33", "content/world/vector_map.json", "coastline geometry is unexpectedly sparse");
+  if ((vectors.rivers ?? []).length < 20) err("G33", "content/world/vector_map.json", "river geometry is unexpectedly sparse");
+  if ((vectors.seas ?? []).length < 10) err("G33", "content/world/vector_map.json", "sea labels are unexpectedly sparse");
+}
+
 // ------------------------------------------------------------- report
 const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31","G32","G33"];
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);

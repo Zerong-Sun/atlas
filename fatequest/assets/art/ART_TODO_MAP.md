@@ -10,9 +10,12 @@
 - **图标 171 个** `ic-*.webp` —— 经 `ART_EMOJI_MAP.json` 全局替换所有 emoji（导航/HUD/仪式/地点/交通/塔内/梦象/22 张大阿卡纳/怪物/特效）
 - **场景背景 16 张** `scene-*.webp` —— 12 座城 + 4 个文明通用路景，已用于到站叙事、城镇对话、途中遭遇
 - **NPC 立绘 16 张** `npc-*.webp` —— 四文明 × 市集/庙宇/茶肆/行馆守门人
+- **职业立绘 36 张** `npc-job-*.webp` —— 9 职业 × 四文明（向导/通译/脚夫/水手/护卫/医者/书记/修士/卜者）
+- **随从立绘 18 张** `retainer-*.webp` —— 9 短名 × 基督/新月两境（`con`/`mazu` 两套缺，见 F2c）
+- **旅伴立绘 2 张** `comp-*.webp` —— `comp-tebrizi` / `comp-lin`（旧 PWA 旅伴，归档）
 - **地图贴图 12 张** `map-*.webp` —— 羊皮纸底、海面、四文明纹样、岩山/雪山/沙丘/森林/河道/礁石
 - **UI 表面 10 张** `ui-bg-*.webp` + 按钮 10 张 `ui-btn-*` + 图标 `ui-icon-*` / 角饰 `ui-orn-*`
-- **塔罗全副 22 张** `decks/tarot/tarot-*-full.webp` —— 抽牌与图鉴直接用画作
+- **塔罗全副 22 张** `decks/tarot/tarot-*-full.webp` —— 抽牌与图鉴直接用画作（小阿卡纳 38 张未出，见 §2.4 扩展）
 - **易经卦牌 30 张** `decks/iching/iching-01..30-*-full.webp` —— 起卦结果显示对应卦牌
 - **塔符号 18 + 卡背 + 流派徽记 3** `sym-*`, `card-back-full`, `arch-*`
 - 雷诺曼 36 张（`decks/lenormand/`）、星盘 34 张（`assets/astrodice/`）
@@ -21,9 +24,11 @@
 
 | 引用名 | 用途 | 内容要求 | 尺寸 |
 |---|---|---|---|
-| `mentor-tarot/lenormand/runes/astrodice/western/meihua/iching/dream/bazi/jiaobei.webp`（10 张） | 十位师父立绘 | 现暂借同文明守门人立绘顶替；各人设定见 `js/data-mentors.js` | 900×1300 透明 |
+| `mentor-tarot.webp`（1 张） | 塔罗导师立绘 | 现图与角色不符（绘成中国面孔；角色为大不里士的法兰克遗孀）；按 `ART_PROMPTS_F2_NPCS.md` 重绘 | 900×1300 透明 |
+| `retainer-{guide,porter,guard,scribe,lang,heal,sail,monk,seer}-{con,mazu}.webp`（18 张） | 随从立绘（儒道/妈祖两境） | `east_asia`/`indian_ocean` 文化随从当前回退到通用职业立绘；按 `ART_PROMPTS_F2_RETAINERS.md` 出图 | 900×1300 透明 |
 | `realm-tarot/western/astrodice/jiaobei/meihua/lenormand.webp`（6 张） | 星图秘境图标 | `ART_EMOJI_MAP.json` 已指向这些名字但文件未出；现由近似纹章顶替 | 512×512 透明 |
 | `decks/iching/iching-31..64-*-full.webp`（34 张） | 易经卦牌下半部 | 命名沿用现有规则；缺的卦目前退回线描卦象 | 同现有卦牌 |
+| `decks/tarot/` 小阿卡纳（38 张） | 塔罗牌面 | `ART_PROMPTS_TAROT_DECK.md` 已备好全部 78 张 prompt；现有 40/78（22 大阿卡纳 + 权杖/圣杯前段），缺宝剑/星币全组与圣杯 5–10、人物牌 | 512×768 |
 | `item-beads.webp` | 行脚念珠（占具） | 现由符袋纹章顶替 | 256×256 透明 |
 | `map-city-chr/isl/con/mazu.webp`、`map-court-con.webp`、`map-shrine.webp` | 地图城塞小像 | 现由 SVG 立面顶替（见下表 C） | 256×220 透明 |
 | `map-beast-serpent/whale/roc/griffin.webp`、`map-rose.webp`、`map-wind-head.webp`、`map-cartouche.webp`、`map-border.webp` | 地图异兽与装饰 | 现由 SVG 顶替（见下表 D） | 见下表 |
@@ -161,7 +166,7 @@
 
 | 引用名 | 人物 |
 |---|---|
-| `mentor-tarot.webp` | 威尼斯制牌人老马蒂欧 |
+| `mentor-tarot.webp` | 大不里士的法兰克遗孀牌师（旧图为中国面孔，待重绘） |
 | `mentor-lenormand.webp` | 牌铺女儿卡特琳娜 |
 | `mentor-runes.webp` | 瓦良格卫兵哈拉尔 |
 | `mentor-astrodice.webp` | 星家帖必烈 |
@@ -171,6 +176,24 @@
 | `mentor-dream.webp` | 圆梦人撒里蛮 |
 | `mentor-bazi.webp` | 命馆先生沈五 |
 | `mentor-jiaobei.webp` | 天妃宫庙祝陈婆 |
+
+### F2c · 随从立绘 18（9 职业 × 儒道/妈祖两境）· 2026-08-07 待出
+
+> 规格同 F2：900×1300 透明、半身朝右、底部 15% 对话安全区。`retainers.json` 58+ 随从的文化覆盖含 `east_asia`(con) 与 `indian_ocean`(mazu)，但立绘此前只有 chr/isl 两套，east_asia / indian_ocean 随从回退到通用职业立绘。Prompt 表：[`ART_PROMPTS_F2_RETAINERS.md`](./ART_PROMPTS_F2_RETAINERS.md)。
+
+| 短名 | 职业 | con 儒道之境 | mazu 妈祖之海 |
+|---|---|---|---|
+| `retainer-guide` | 向导 | 中原装束：竹笠、背囊、地图筒 | 海民装束：罗盘板、海衣 |
+| `retainer-porter` | 脚夫 | 挑夫：扁担、麻绳、箩筐 | 码头扛包：麻袋、缆绳 |
+| `retainer-guard` | 护卫 | 州府差役：佩刀、皂衣 | 船队镖师：弯刀、缠头 |
+| `retainer-scribe` | 书记 | 书办：毛笔、书卷 | 账房：算盘、账册 |
+| `retainer-lang` | 通译 | 译官：公文、折扇 | 港市牙人：筹码、货单 |
+| `retainer-heal` | 医者 | 郎中：药箱、艾草 | 船医：药囊、海医刀 |
+| `retainer-sail` | 水手 | —（内陆无）→ 内河船工：篙、蓑衣 | 帆手：绞盘柄、海袍 |
+| `retainer-monk` | 修士 | 僧侣：念珠、布衣 | 天妃宫祝：香炉、法衣 |
+| `retainer-seer` | 卜者 | 卦师：龟甲、铜钱 | 妈祖乩童：筊杯、香符 |
+
+> 命名：`retainer-<short>-<set>.webp`；出图后 `retainer_portrait()` 自动解析，无需改代码。
 
 ## G. 秘境图标（P2，星图九宫格，现用 emoji）
 

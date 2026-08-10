@@ -1,6 +1,8 @@
 class_name EffectExecutor
 extends RefCounted
 
+const MortalityCore = preload("res://core/life/mortality.gd")
+
 ## The ONLY writer of WorldState. See docs/ARCHITECTURE.md §2.1, CODE_PLAN.md §3.
 ##
 ## Execution semantics are load-bearing for save replay — do not "optimise" them:
@@ -93,6 +95,59 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 			state.days_elapsed += d
 			state.jdn += d
 			res.queued_days += d
+		"vitality":
+			if bool(state.life.get("deceased", false)):
+				return false
+			state.life["vitality"] = clampi(
+				int(state.life.get("vitality", 100)) + int(val), 0, 100)
+		"life_stage":
+			var stage := String(val)
+			# `deceased` is a compound terminal transition and may only be
+			# entered through the death op, which also records cause and date.
+			if stage not in MortalityCore.VALID_STAGES or stage == MortalityCore.DECEASED \
+					or bool(state.life.get("deceased", false)):
+				return false
+			state.life["stage"] = stage
+			state.life["stage_since_jdn"] = state.jdn
+		"condition_add":
+			if typeof(val) != TYPE_DICTIONARY or String(val.get("id", "")).is_empty():
+				return false
+			var conditions: Array = state.life.get("conditions", [])
+			var condition_id := String(val.get("id", ""))
+			for condition in conditions:
+				if String(condition.get("id", "")) == condition_id:
+					condition["severity"] = maxi(int(condition.get("severity", 1)),
+						int(val.get("severity", 1)))
+					state.life["conditions"] = conditions
+					return true
+			conditions.append((val as Dictionary).duplicate(true))
+			state.life["conditions"] = conditions
+		"condition_remove":
+			var remove_id := String(val)
+			var existing: Array = state.life.get("conditions", [])
+			var kept: Array = []
+			for condition in existing:
+				if String(condition.get("id", "")) != remove_id:
+					kept.append(condition)
+			if kept.size() == existing.size():
+				return false
+			state.life["conditions"] = kept
+		"prepare_legacy":
+			state.life["legacy_prepared"] = bool(val)
+		"death":
+			if bool(state.life.get("deceased", false)):
+				return false
+			state.life["deceased"] = true
+			state.life["stage"] = MortalityCore.DECEASED
+			state.life["stage_since_jdn"] = state.jdn
+			state.life["death_jdn"] = state.jdn
+			state.life["cause"] = String(val)
+		"legacy_archive":
+			if typeof(val) != TYPE_DICTIONARY:
+				return false
+			var volumes: Array = state.legacy.get("volumes", [])
+			volumes.append((val as Dictionary).duplicate(true))
+			state.legacy["volumes"] = volumes
 		"goods":
 			var n: int = state.goods.get(id, 0) + int(val)
 			if n < 0:
