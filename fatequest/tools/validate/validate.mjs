@@ -664,6 +664,26 @@ const LINES = {
       }
     }
     if (codeMissing > 8) err("G17", "game/", `...and ${codeMissing - 8} more missing keys`);
+    // G17 (continued): altRefs must name a real book and a chapter id in the
+    // shape that book's corpus uses — a mis-typed chapter silently weakens a
+    // city's second voice and nothing else catches it.
+    const ALT_BOOK_PATTERNS = {
+      "ibn-battuta": /^battuta-c\d{3}$/,
+      "yingya-shenglan": /^yingya-[a-z0-9-]+$/,
+      "odoric": /^odoric-[a-z0-9-]+$/,
+      "rubruck": /^rubruck-[a-z0-9-]+$/,
+      "changchun": /^changchun-[a-z0-9-]+$/,
+      "tafur": /^tafur-[a-z0-9-]+$/,
+    };
+    for (const c of byTable.cities ?? []) {
+      for (const a of c.altRefs ?? []) {
+        const pat = ALT_BOOK_PATTERNS[a.book];
+        if (pat && !pat.test(a.chapterId ?? ""))
+          err("G17", recordFile.get(c.id),
+            `${c.id}: altRefs ${a.book} chapter "${a.chapterId}" does not match ${pat}`);
+      }
+    }
+
   }
 }
 

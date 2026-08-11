@@ -8250,7 +8250,12 @@
         "ref": {
           "book": "ibn-battuta",
           "chapterId": "battuta-c014"
-        }
+        },
+        "stories": [
+          "widow-burning",
+          "delhi-sultanate-history",
+          "cruelties-of-the-sultan"
+        ]
       }
     },
     {
@@ -8332,7 +8337,12 @@
         "ref": {
           "book": "ibn-battuta",
           "chapterId": "battuta-c016"
-        }
+        },
+        "stories": [
+          "judge-of-delhi",
+          "gwalior-fortress",
+          "embassy-to-china-wreck"
+        ]
       }
     }
   ]
