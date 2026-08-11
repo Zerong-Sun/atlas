@@ -803,6 +803,11 @@
           "book": "odoric",
           "chapterId": "odoric-kinsay",
           "title": "Cansay"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c023",
+          "title": "The Rihla"
         }
       ]
     },
@@ -1571,6 +1576,11 @@
           "book": "odoric",
           "chapterId": "odoric-zayton",
           "title": "Zayton"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c023",
+          "title": "The Rihla"
         }
       ]
     }

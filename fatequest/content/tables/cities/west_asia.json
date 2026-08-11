@@ -17,7 +17,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-accon-entry",
-      "sites": [],
+      "sites": [
+        "ev-accon-battuta-a"
+      ],
       "exits": [
         "rt-accon-damascus",
         "rt-accon-hierusalem",
@@ -70,7 +72,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-alexandria-entry",
-      "sites": [],
+      "sites": [
+        "ev-alexandria-battuta-a",
+        "ev-alexandria-battuta-b"
+      ],
       "exits": [
         "rt-alexandria-babylonia-cairus",
         "rt-alexandria-bethleem",
@@ -212,6 +217,11 @@
           "book": "tafur",
           "chapterId": "tafur-cairo",
           "title": "Cairo"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c002",
+          "title": "The Rihla"
         }
       ]
     },
@@ -279,6 +289,13 @@
       "specialty": "damascus-steel",
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c008",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -363,6 +380,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -601,6 +625,11 @@
           "book": "tafur",
           "chapterId": "tafur-constantinople",
           "title": "Constantinople"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013",
+          "title": "The Rihla"
         }
       ]
     },
@@ -683,6 +712,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -795,6 +831,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -1030,6 +1073,13 @@
       },
       "calendars": [
         "islamic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c008",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -1133,6 +1183,11 @@
           "book": "yingya-shenglan",
           "chapterId": "yingya-hormuz",
           "title": "忽鲁谟厮国"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c010",
+          "title": "The Rihla"
         }
       ]
     },
@@ -1458,7 +1513,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-yasdi-entry",
-      "sites": [],
+      "sites": [
+        "ev-yasdi-battuta-a"
+      ],
       "exits": [
         "rt-cobinan-yasdi",
         "rt-ispahan-yasdi",

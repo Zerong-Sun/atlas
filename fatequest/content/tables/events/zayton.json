@@ -6,8 +6,15 @@
       "id": "ev-zayton-entry",
       "kind": "entry",
       "title": "ev.zayton.entry.title",
-      "when": { "cities": ["zayton"] },
-      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
       "body": "ev.zayton.entry.body",
       "once": true,
       "priority": 10,
@@ -16,46 +23,115 @@
           "label": "ev.zayton.entry.choice.customs",
           "resultText": "ev.ev_zayton_entry.choice_1_result",
           "effects": [
-            { "op": "days", "value": 2, "reason": "waited-out-the-tithe-clerks" },
-            { "op": "codex", "value": "cx-zayton-tithe", "reason": "learned-the-kaans-duties" },
-            { "op": "reveal_map", "value": "zayton", "reason": "the-clerks-named-the-quarters" },
-            { "op": "queue_event", "value": "ev-zayton-ledger-consequence", "reason": "the-clerk-returned-with-a-ledger" }
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "waited-out-the-tithe-clerks"
+            },
+            {
+              "op": "codex",
+              "value": "cx-zayton-tithe",
+              "reason": "learned-the-kaans-duties"
+            },
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "the-clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-ledger-consequence",
+              "reason": "the-clerk-returned-with-a-ledger"
+            }
           ]
         },
         {
           "label": "ev.zayton.entry.choice.slip",
           "resultText": "ev.ev_zayton_entry.choice_2_result",
-          "needs": { "language": "chinese" },
+          "needs": {
+            "language": "chinese"
+          },
           "effects": [
-            { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "avoided-the-tithe-clerks" },
-            { "op": "flag", "value": "fl-zayton-undeclared", "reason": "entered-without-declaring" },
-            { "op": "codex", "value": "cx-zayton-tithe", "reason": "saw-what-the-tithe-costs-others" },
-            { "op": "queue_event", "value": "ev-zayton-watch-consequence", "reason": "the-night-watch-found-the-missing-mark" }
+            {
+              "op": "reputation",
+              "value": -2,
+              "scope": "city",
+              "id": "zayton",
+              "reason": "avoided-the-tithe-clerks"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-undeclared",
+              "reason": "entered-without-declaring"
+            },
+            {
+              "op": "codex",
+              "value": "cx-zayton-tithe",
+              "reason": "saw-what-the-tithe-costs-others"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-watch-consequence",
+              "reason": "the-night-watch-found-the-missing-mark"
+            }
           ]
         },
         {
           "label": "ev.zayton.entry.choice.ask_ships",
           "resultText": "ev.ev_zayton_entry.choice_3_result",
           "effects": [
-            { "op": "days", "value": 1, "reason": "counted-the-shipping" },
-            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "counted-the-shipping" },
-            { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" },
-            { "op": "queue_event", "value": "ev-zayton-pilot-consequence", "reason": "a-pilot-offered-a-road-rumour" }
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-the-shipping"
+            },
+            {
+              "op": "codex",
+              "value": "cx-hundred-shiploads",
+              "reason": "counted-the-shipping"
+            },
+            {
+              "op": "reveal_map",
+              "value": "zayton",
+              "reason": "sailors-described-the-port"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-pilot-consequence",
+              "reason": "a-pilot-offered-a-road-rumour"
+            }
+          ]
+        },
+        {
+          "label": "ev.zayton.entry.choice.battuta",
+          "resultText": "ev.ev_zayton_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-battuta-a",
+              "reason": "heard-of-paper-money-and-ship-registry"
+            }
           ]
         }
       ],
       "lore": {
         "placeId": "great-haven-of-zayton",
         "origin": "source",
-        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
       }
     },
-
     {
       "id": "ev-zayton-ledger-consequence",
       "kind": "consequence",
       "title": "ev.zayton.ledger_consequence.title",
-      "when": { "cities": ["zayton"] },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
       "body": "ev.zayton.ledger_consequence.body",
       "once": true,
       "choices": [
@@ -63,64 +139,136 @@
           "label": "ev.zayton.ledger_consequence.choice.copy",
           "resultText": "ev.ev_zayton_ledger_consequence.choice_1_result",
           "effects": [
-            { "op": "item", "value": "it-zayton-duty-copy", "reason": "received-a-duty-copy" },
-            { "op": "reveal_city", "value": "kinsay", "level": 1, "reason": "the-ledger-named-kinsay" },
-            { "op": "reveal_route", "value": "rt-kinsay-zayton", "level": 1, "reason": "the-ledger-listed-the-coastal-road" },
-            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-in-the-ledger" }
-          ,
-            { "op": "queue_event", "value": "ev-zayton-ledger-consequence-resolution", "reason": "zayton-a-resolution" }
+            {
+              "op": "item",
+              "value": "it-zayton-duty-copy",
+              "reason": "received-a-duty-copy"
+            },
+            {
+              "op": "reveal_city",
+              "value": "kinsay",
+              "level": 1,
+              "reason": "the-ledger-named-kinsay"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-kinsay-zayton",
+              "level": 1,
+              "reason": "the-ledger-listed-the-coastal-road"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-declared",
+              "reason": "cargo-was-entered-in-the-ledger"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-ledger-consequence-resolution",
+              "reason": "zayton-a-resolution"
+            }
           ]
         },
         {
           "label": "ev.zayton.ledger_consequence.choice.refuse",
           "resultText": "ev.ev_zayton_ledger_consequence.choice_2_result",
           "effects": [
-            { "op": "reputation", "value": -1, "scope": "city", "id": "zayton", "reason": "refused-the-ledger-copy" },
-            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-without-a-copy" }
+            {
+              "op": "reputation",
+              "value": -1,
+              "scope": "city",
+              "id": "zayton",
+              "reason": "refused-the-ledger-copy"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-declared",
+              "reason": "cargo-was-entered-without-a-copy"
+            }
           ]
         }
       ],
-      "lore": { "origin": "hybrid" }
+      "lore": {
+        "origin": "hybrid"
+      }
     },
-
     {
       "id": "ev-zayton-watch-consequence",
       "kind": "consequence",
       "title": "ev.zayton.watch_consequence.title",
-      "when": { "cities": ["zayton"] },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
       "body": "ev.zayton.watch_consequence.body",
       "once": true,
       "choices": [
         {
           "label": "ev.zayton.watch_consequence.choice.pay",
           "resultText": "ev.ev_zayton_watch_consequence.choice_1_result",
-          "needs": { "coins": { "min": 1200 } },
+          "needs": {
+            "coins": {
+              "min": 1200
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -1200, "reason": "paid-the-late-declaration-fee" },
-            { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "the-watch-cleared-the-missing-mark" },
-            { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-declared-late" }
-          ,
-            { "op": "queue_event", "value": "ev-zayton-watch-consequence-resolution", "reason": "zayton-b-resolution" }
+            {
+              "op": "coins",
+              "value": -1200,
+              "reason": "paid-the-late-declaration-fee"
+            },
+            {
+              "op": "unflag",
+              "value": "fl-zayton-undeclared",
+              "reason": "the-watch-cleared-the-missing-mark"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-declared",
+              "reason": "cargo-was-declared-late"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-watch-consequence-resolution",
+              "reason": "zayton-b-resolution"
+            }
           ]
         },
         {
           "label": "ev.zayton.watch_consequence.choice.submit",
           "resultText": "ev.ev_zayton_watch_consequence.choice_2_result",
           "effects": [
-            { "op": "days", "value": 2, "reason": "cargo-was-held-for-inspection" },
-            { "op": "unflag", "value": "fl-zayton-undeclared", "reason": "inspection-cleared-the-missing-mark" },
-            { "op": "codex", "value": "cx-zayton-watch", "reason": "learned-the-watch-rounds" }
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "cargo-was-held-for-inspection"
+            },
+            {
+              "op": "unflag",
+              "value": "fl-zayton-undeclared",
+              "reason": "inspection-cleared-the-missing-mark"
+            },
+            {
+              "op": "codex",
+              "value": "cx-zayton-watch",
+              "reason": "learned-the-watch-rounds"
+            }
           ]
         }
       ],
-      "lore": { "origin": "authored" }
+      "lore": {
+        "origin": "authored"
+      }
     },
-
     {
       "id": "ev-zayton-pilot-consequence",
       "kind": "consequence",
       "title": "ev.zayton.pilot_consequence.title",
-      "when": { "cities": ["zayton"] },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
       "body": "ev.zayton.pilot_consequence.body",
       "once": true,
       "choices": [
@@ -128,156 +276,365 @@
           "label": "ev.zayton.pilot_consequence.choice.chamba",
           "resultText": "ev.ev_zayton_pilot_consequence.choice_1_result",
           "effects": [
-            { "op": "reveal_city", "value": "chamba", "level": 1, "reason": "the-pilot-named-chamba" },
-            { "op": "reveal_route", "value": "rt-chamba-zayton", "level": 1, "reason": "the-pilot-described-the-monsoon-lane" },
-            { "op": "flag", "value": "fl-zayton-pilot-rumour", "reason": "remembered-the-pilots-monsoon-counsel" }
+            {
+              "op": "reveal_city",
+              "value": "chamba",
+              "level": 1,
+              "reason": "the-pilot-named-chamba"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-chamba-zayton",
+              "level": 1,
+              "reason": "the-pilot-described-the-monsoon-lane"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-pilot-rumour",
+              "reason": "remembered-the-pilots-monsoon-counsel"
+            }
           ]
         },
         {
           "label": "ev.zayton.pilot_consequence.choice.local",
           "resultText": "ev.ev_zayton_pilot_consequence.choice_2_result",
           "effects": [
-            { "op": "reveal_city", "value": "fuju", "level": 1, "reason": "the-pilot-named-fuju" },
-            { "op": "reveal_route", "value": "rt-fuju-zayton", "level": 1, "reason": "the-pilot-described-the-northern-road" },
-            { "op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "shared-a-meal-with-the-pilot" }
+            {
+              "op": "reveal_city",
+              "value": "fuju",
+              "level": 1,
+              "reason": "the-pilot-named-fuju"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-fuju-zayton",
+              "level": 1,
+              "reason": "the-pilot-described-the-northern-road"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "zayton",
+              "reason": "shared-a-meal-with-the-pilot"
+            }
           ]
         }
       ],
-      "lore": { "origin": "authored" }
+      "lore": {
+        "origin": "authored"
+      }
     },
-
     {
       "id": "ev-zayton-harbour",
       "kind": "site",
       "title": "ev.zayton.harbour.title",
-      "when": { "cities": ["zayton"] },
-      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
       "body": "ev.zayton.harbour.body",
       "once": true,
       "choices": [
         {
           "label": "ev.zayton.harbour.choice.pepper",
           "resultText": "ev.ev_zayton_harbour.choice_1_result",
-          "needs": { "coins": { "min": 18000 } },
+          "needs": {
+            "coins": {
+              "min": 18000
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -18000, "reason": "bought-pepper-at-the-quay" },
-            { "op": "goods", "id": "pepper", "value": 1, "reason": "bought-pepper-at-the-quay" },
-            { "op": "codex", "value": "cx-pepper-freight", "reason": "learned-the-freight-rates" },
-            { "op": "queue_event", "value": "ev-zayton-harbour-followup", "reason": "ev-zayton-harbour-followup" }
+            {
+              "op": "coins",
+              "value": -18000,
+              "reason": "bought-pepper-at-the-quay"
+            },
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-the-quay"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pepper-freight",
+              "reason": "learned-the-freight-rates"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-harbour-followup",
+              "reason": "ev-zayton-harbour-followup"
+            }
           ]
         },
         {
           "label": "ev.zayton.harbour.choice.monsoon",
           "resultText": "ev.ev_zayton_harbour.choice_2_result",
           "effects": [
-            { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "pilots-named-the-monsoon-lane" },
-            { "op": "codex", "value": "cx-monsoon", "reason": "learned-the-monsoon" },
-            { "op": "days", "value": 1, "reason": "drank-with-the-pilots" }
+            {
+              "op": "reveal_map",
+              "value": "rt-chamba-zayton",
+              "reason": "pilots-named-the-monsoon-lane"
+            },
+            {
+              "op": "codex",
+              "value": "cx-monsoon",
+              "reason": "learned-the-monsoon"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "drank-with-the-pilots"
+            }
           ]
         },
         {
           "label": "ev.zayton.harbour.choice.watch",
           "resultText": "ev.ev_zayton_harbour.choice_3_result",
           "effects": [
-            { "op": "sticker", "value": "st-zayton-haven", "reason": "stood-a-day-at-the-haven" },
-            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "stood-a-day-at-the-haven" },
-            { "op": "days", "value": 1, "reason": "stood-a-day-at-the-haven" }
+            {
+              "op": "sticker",
+              "value": "st-zayton-haven",
+              "reason": "stood-a-day-at-the-haven"
+            },
+            {
+              "op": "codex",
+              "value": "cx-hundred-shiploads",
+              "reason": "stood-a-day-at-the-haven"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stood-a-day-at-the-haven"
+            }
           ]
         }
       ],
       "lore": {
         "placeId": "great-haven-of-zayton",
         "origin": "source",
-        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
       }
     },
-
     {
       "id": "ev-zayton-fanfang",
       "kind": "site",
       "title": "ev.zayton.fanfang.title",
-      "when": { "cities": ["zayton"] },
-      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
       "body": "ev.zayton.fanfang.body",
       "once": true,
       "choices": [
         {
           "label": "ev.zayton.fanfang.choice.persian",
           "resultText": "ev.ev_zayton_fanfang.choice_1_result",
-          "needs": { "language": "persian" },
+          "needs": {
+            "language": "persian"
+          },
           "effects": [
-            { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "persian-traders-named-the-sea-road" },
-            { "op": "reputation", "value": 2, "scope": "band", "id": "maritime_asia", "reason": "spoke-with-the-persian-traders" },
-            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" },
-            { "op": "queue_event", "value": "ev-zayton-fanfang-followup", "reason": "ev-zayton-fanfang-followup" }
+            {
+              "op": "reveal_map",
+              "value": "rt-chamba-zayton",
+              "reason": "persian-traders-named-the-sea-road"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "scope": "band",
+              "id": "maritime_asia",
+              "reason": "spoke-with-the-persian-traders"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fanfang",
+              "reason": "walked-the-foreign-quarter"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-fanfang-followup",
+              "reason": "ev-zayton-fanfang-followup"
+            }
           ]
         },
         {
           "label": "ev.zayton.fanfang.choice.interpreter",
           "resultText": "ev.ev_zayton_fanfang.choice_2_result",
-          "needs": { "coins": { "min": 3000 } },
+          "needs": {
+            "coins": {
+              "min": 3000
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -3000, "reason": "paid-a-lad-to-interpret" },
-            { "op": "language", "value": "arabic", "reason": "a-season-of-listening-in-the-quarter" },
-            { "op": "days", "value": 20, "reason": "a-season-of-listening-in-the-quarter" },
-            { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" }
+            {
+              "op": "coins",
+              "value": -3000,
+              "reason": "paid-a-lad-to-interpret"
+            },
+            {
+              "op": "language",
+              "value": "arabic",
+              "reason": "a-season-of-listening-in-the-quarter"
+            },
+            {
+              "op": "days",
+              "value": 20,
+              "reason": "a-season-of-listening-in-the-quarter"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fanfang",
+              "reason": "walked-the-foreign-quarter"
+            }
           ]
         },
         {
           "label": "ev.zayton.fanfang.choice.silk",
           "resultText": "ev.ev_zayton_fanfang.choice_3_result",
-          "needs": { "coins": { "min": 12000 } },
+          "needs": {
+            "coins": {
+              "min": 12000
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -12000, "reason": "bought-a-bolt-of-silk" },
-            { "op": "goods", "id": "silk", "value": 1, "reason": "bought-a-bolt-of-silk" },
-            { "op": "sticker", "value": "st-zayton-silk", "reason": "bought-a-bolt-of-silk" }
+            {
+              "op": "coins",
+              "value": -12000,
+              "reason": "bought-a-bolt-of-silk"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-a-bolt-of-silk"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-silk",
+              "reason": "bought-a-bolt-of-silk"
+            }
           ]
         }
       ],
       "lore": {
         "placeId": "great-haven-of-zayton",
         "origin": "hybrid",
-        "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c082"
+        }
       }
     },
-
     {
       "id": "ev-zayton-mazu",
       "kind": "site",
       "title": "ev.zayton.mazu.title",
-      "when": { "cities": ["zayton"] },
-      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
       "body": "ev.zayton.mazu.body",
       "once": true,
       "choices": [
         {
           "label": "ev.zayton.mazu.choice.offer",
           "resultText": "ev.ev_zayton_mazu.choice_1_result",
-          "needs": { "coins": { "min": 800 } },
+          "needs": {
+            "coins": {
+              "min": 800
+            }
+          },
           "effects": [
-            { "op": "coins", "value": -800, "reason": "an-offering-before-sailing" },
-            { "op": "fate", "id": "travel", "value": 2, "reason": "blessed-for-the-sea-road" },
-            { "op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "observed-the-local-rite" },
-            { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" },
-            { "op": "queue_event", "value": "ev-zayton-mazu-followup", "reason": "ev-zayton-mazu-followup" }
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "an-offering-before-sailing"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 2,
+              "reason": "blessed-for-the-sea-road"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "zayton",
+              "reason": "observed-the-local-rite"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sea-goddess",
+              "reason": "learned-the-sea-goddess"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-mazu-followup",
+              "reason": "ev-zayton-mazu-followup"
+            }
           ]
         },
         {
           "label": "ev.zayton.mazu.choice.lots",
           "resultText": "ev.ev_zayton_mazu.choice_2_result",
-          "needs": { "learned_divination": ["lot"] },
+          "needs": {
+            "learned_divination": [
+              "lot"
+            ]
+          },
           "divination": "lot",
           "pass": {
             "effects": [
-              { "op": "flag", "value": "fl-good-sailing-window", "reason": "the-lot-named-a-sailing-day" },
-              { "op": "reveal_map", "value": "rt-chamba-zayton", "reason": "the-lot-named-a-sailing-day" },
-              { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+              {
+                "op": "flag",
+                "value": "fl-good-sailing-window",
+                "reason": "the-lot-named-a-sailing-day"
+              },
+              {
+                "op": "reveal_map",
+                "value": "rt-chamba-zayton",
+                "reason": "the-lot-named-a-sailing-day"
+              },
+              {
+                "op": "codex",
+                "value": "cx-sea-goddess",
+                "reason": "learned-the-sea-goddess"
+              }
             ]
           },
           "fail": {
             "effects": [
-              { "op": "days", "value": 3, "reason": "the-lot-counselled-waiting" },
-              { "op": "codex", "value": "cx-sea-goddess", "reason": "learned-the-sea-goddess" }
+              {
+                "op": "days",
+                "value": 3,
+                "reason": "the-lot-counselled-waiting"
+              },
+              {
+                "op": "codex",
+                "value": "cx-sea-goddess",
+                "reason": "learned-the-sea-goddess"
+              }
             ]
           }
         },
@@ -285,64 +642,146 @@
           "label": "ev.zayton.mazu.choice.watch",
           "resultText": "ev.ev_zayton_mazu.choice_3_result",
           "effects": [
-            { "op": "codex", "value": "cx-sea-goddess", "reason": "watched-the-sailors-at-prayer" },
-            { "op": "sticker", "value": "st-zayton-mazu", "reason": "watched-the-sailors-at-prayer" }
+            {
+              "op": "codex",
+              "value": "cx-sea-goddess",
+              "reason": "watched-the-sailors-at-prayer"
+            },
+            {
+              "op": "sticker",
+              "value": "st-zayton-mazu",
+              "reason": "watched-the-sailors-at-prayer"
+            }
           ]
         }
       ],
-      "lore": { "origin": "authored" }
+      "lore": {
+        "origin": "authored"
+      }
     },
-
     {
       "id": "ev-zayton-mentor",
       "kind": "site",
       "title": "ev.zayton.mentor.title",
       "when": {
-        "cities": ["zayton"],
+        "cities": [
+          "zayton"
+        ],
         "not": {
           "all": [
-            { "flags": ["fl-learned-lot"] },
-            { "flags": ["fl-learned-jiaobei"] }
+            {
+              "flags": [
+                "fl-learned-lot"
+              ]
+            },
+            {
+              "flags": [
+                "fl-learned-jiaobei"
+              ]
+            }
           ]
         }
       },
-      "scene": { "bg": "scene-quanzhou-harbor", "region": "china" },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
       "body": "ev.zayton.mentor.body",
       "once": false,
       "choices": [
         {
           "label": "ev.zayton.mentor.choice.learn",
           "resultText": "ev.ev_zayton_mentor.choice_1_result",
-          "needs": { "coins": { "min": 5000 }, "not_flags": ["fl-learned-lot"] },
+          "needs": {
+            "coins": {
+              "min": 5000
+            },
+            "not_flags": [
+              "fl-learned-lot"
+            ]
+          },
           "effects": [
-            { "op": "coins", "value": -5000, "reason": "a-gift-to-the-temple-diviner" },
-            { "op": "days", "value": 14, "reason": "a-fortnight-learning-the-lots" },
-            { "op": "learn_divination", "value": "lot", "reason": "learned-the-temple-lots" },
-            { "op": "flag", "value": "fl-learned-lot", "reason": "learned-the-temple-lots" },
-            { "op": "queue_event", "value": "ev-zayton-mentor-followup", "reason": "ev-zayton-mentor-followup" }
+            {
+              "op": "coins",
+              "value": -5000,
+              "reason": "a-gift-to-the-temple-diviner"
+            },
+            {
+              "op": "days",
+              "value": 14,
+              "reason": "a-fortnight-learning-the-lots"
+            },
+            {
+              "op": "learn_divination",
+              "value": "lot",
+              "reason": "learned-the-temple-lots"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-lot",
+              "reason": "learned-the-temple-lots"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-mentor-followup",
+              "reason": "ev-zayton-mentor-followup"
+            }
           ]
         },
         {
           "label": "ev.zayton.mentor.choice.learn_jiaobei",
           "resultText": "ev.ev_zayton_mentor.choice_2_result",
-          "needs": { "coins": { "min": 3000 }, "not_flags": ["fl-learned-jiaobei"] },
+          "needs": {
+            "coins": {
+              "min": 3000
+            },
+            "not_flags": [
+              "fl-learned-jiaobei"
+            ]
+          },
           "effects": [
-            { "op": "coins", "value": -3000, "reason": "offering-for-the-jiaobei-lesson" },
-            { "op": "days", "value": 3, "reason": "three-days-learning-the-cups" },
-            { "op": "learn_divination", "value": "jiaobei", "reason": "learned-jiaobei" },
-            { "op": "flag", "value": "fl-learned-jiaobei", "reason": "learned-jiaobei" },
-            { "op": "queue_event", "value": "ev-zayton-mentor-jiaobei-followup", "reason": "ev-zayton-mentor-jiaobei-followup" }
+            {
+              "op": "coins",
+              "value": -3000,
+              "reason": "offering-for-the-jiaobei-lesson"
+            },
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "three-days-learning-the-cups"
+            },
+            {
+              "op": "learn_divination",
+              "value": "jiaobei",
+              "reason": "learned-jiaobei"
+            },
+            {
+              "op": "flag",
+              "value": "fl-learned-jiaobei",
+              "reason": "learned-jiaobei"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-zayton-mentor-jiaobei-followup",
+              "reason": "ev-zayton-mentor-jiaobei-followup"
+            }
           ]
         },
         {
           "label": "ev.zayton.mentor.choice.ask",
           "resultText": "ev.ev_zayton_mentor.choice_3_result",
           "effects": [
-            { "op": "codex", "value": "cx-lots", "reason": "heard-how-the-lots-are-read" }
+            {
+              "op": "codex",
+              "value": "cx-lots",
+              "reason": "heard-how-the-lots-are-read"
+            }
           ]
         }
       ],
-      "lore": { "origin": "authored" }
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

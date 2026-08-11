@@ -1,3013 +1,3032 @@
 {
- "type": "FeatureCollection",
- "crs": {
-  "type": "name",
-  "properties": {
-   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-  }
- },
- "features": [
-  {
-   "type": "Feature",
-   "id": "city-0",
-   "properties": {
-    "name_medieval": "Hierusalem",
-    "name_modern": "Jerusalem",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Umbilicus mundi — the navel of the world, center of the mappa mundi",
-    "is_center": true
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.235,
-     31.778
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-1",
-   "properties": {
-    "name_medieval": "Roma",
-    "name_modern": "Rome",
-    "part": "Europa",
-    "tier": 1,
-    "note": "Seat of the Papacy and the old Empire",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     12.496,
-     41.902
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-2",
-   "properties": {
-    "name_medieval": "Constantinopolis",
-    "name_modern": "Istanbul",
-    "part": "Europa",
-    "tier": 1,
-    "note": "New Rome, capital of the Greeks",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     28.978,
-     41.008
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-3",
-   "properties": {
-    "name_medieval": "Alexandria",
-    "name_modern": "Alexandria",
-    "part": "Africa",
-    "tier": 1,
-    "note": "Great port of Egypt, seat of a Patriarch",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     29.918,
-     31.2
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-4",
-   "properties": {
-    "name_medieval": "Antiochia",
-    "name_modern": "Antakya",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Chief city of Syria, crusader principality",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.161,
-     36.202
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-5",
-   "properties": {
-    "name_medieval": "Babylonia (Cairus)",
-    "name_modern": "Cairo",
-    "part": "Africa",
-    "tier": 1,
-    "note": "'Babylon of Egypt', seat of the Sultan",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.236,
-     30.044
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-6",
-   "properties": {
-    "name_medieval": "Baldacum",
-    "name_modern": "Baghdad",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Baghdad, seat of the Caliph of the East",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.366,
-     33.315
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-7",
-   "properties": {
-    "name_medieval": "Damascus",
-    "name_modern": "Damascus",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Great city of Syria",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.292,
-     33.513
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-8",
-   "properties": {
-    "name_medieval": "Mecha",
-    "name_modern": "Mecca",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Holy city of the Saracens",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     39.826,
-     21.423
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-9",
-   "properties": {
-    "name_medieval": "Medina",
-    "name_modern": "Medina",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of the Prophet",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     39.611,
-     24.47
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-10",
-   "properties": {
-    "name_medieval": "Parisius",
-    "name_modern": "Paris",
-    "part": "Europa",
-    "tier": 1,
-    "note": "Capital of the Franks, great university",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.352,
-     48.857
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-11",
-   "properties": {
-    "name_medieval": "Londinium",
-    "name_modern": "London",
-    "part": "Europa",
-    "tier": 1,
-    "note": "Chief city of the English",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -0.128,
-     51.507
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-12",
-   "properties": {
-    "name_medieval": "Colonia",
-    "name_modern": "Cologne",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Holy city of the Rhine, relics of the Magi",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     6.96,
-     50.938
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-13",
-   "properties": {
-    "name_medieval": "Aquisgranum",
-    "name_modern": "Aachen",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Charlemagne's imperial seat",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     6.084,
-     50.776
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-14",
-   "properties": {
-    "name_medieval": "Venetia",
-    "name_modern": "Venice",
-    "part": "Europa",
-    "tier": 1,
-    "note": "Queen of the Adriatic, gate to the East",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     12.336,
-     45.438
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-15",
-   "properties": {
-    "name_medieval": "Ianua",
-    "name_modern": "Genoa",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Maritime republic, Levant trade",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     8.933,
-     44.406
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-16",
-   "properties": {
-    "name_medieval": "Florentia",
-    "name_modern": "Florence",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Banking city of Tuscany",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     11.256,
-     43.769
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-17",
-   "properties": {
-    "name_medieval": "Mediolanum",
-    "name_modern": "Milan",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Great city of Lombardy",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     9.19,
-     45.464
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-18",
-   "properties": {
-    "name_medieval": "Neapolis",
-    "name_modern": "Naples",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Capital of the southern kingdom",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.268,
-     40.851
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-19",
-   "properties": {
-    "name_medieval": "Ravenna",
-    "name_modern": "Ravenna",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Old exarchate capital",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     12.203,
-     44.418
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-20",
-   "properties": {
-    "name_medieval": "Pisa",
-    "name_modern": "Pisa",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Maritime republic of Tuscany",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     10.401,
-     43.716
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-21",
-   "properties": {
-    "name_medieval": "Bononia",
-    "name_modern": "Bologna",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Oldest university",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     11.343,
-     44.494
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-22",
-   "properties": {
-    "name_medieval": "Panormus",
-    "name_modern": "Palermo",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Capital of Sicily",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     13.361,
-     38.116
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-23",
-   "properties": {
-    "name_medieval": "Salernum",
-    "name_modern": "Salerno",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Famed medical school",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.759,
-     40.681
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-24",
-   "properties": {
-    "name_medieval": "Corduba",
-    "name_modern": "Cordoba",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Great city of al-Andalus",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -4.779,
-     37.888
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-25",
-   "properties": {
-    "name_medieval": "Toletum",
-    "name_modern": "Toledo",
-    "part": "Europa",
-    "tier": 2,
-    "note": "City of translators",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -4.024,
-     39.858
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-26",
-   "properties": {
-    "name_medieval": "Hispalis",
-    "name_modern": "Seville",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Andalusian port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -5.994,
-     37.389
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-27",
-   "properties": {
-    "name_medieval": "Granata",
-    "name_modern": "Granada",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Last Moorish emirate",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -3.598,
-     37.177
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-28",
-   "properties": {
-    "name_medieval": "Compostella",
-    "name_modern": "Santiago de Compostela",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Pilgrimage to St James",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.545,
-     42.881
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-29",
-   "properties": {
-    "name_medieval": "Olisipo",
-    "name_modern": "Lisbon",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Atlantic port of Portugal",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -9.139,
-     38.722
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-30",
-   "properties": {
-    "name_medieval": "Caesaraugusta",
-    "name_modern": "Zaragoza",
-    "part": "Europa",
-    "tier": 3,
-    "note": "City of the Ebro",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -0.887,
-     41.649
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-31",
-   "properties": {
-    "name_medieval": "Barcino",
-    "name_modern": "Barcelona",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Catalan sea-port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.173,
-     41.385
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-32",
-   "properties": {
-    "name_medieval": "Massilia",
-    "name_modern": "Marseille",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Ancient Greek port of Gaul",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     5.37,
-     43.296
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-33",
-   "properties": {
-    "name_medieval": "Tolosa",
-    "name_modern": "Toulouse",
-    "part": "Europa",
-    "tier": 3,
-    "note": "City of the Garonne",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     1.444,
-     43.605
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-34",
-   "properties": {
-    "name_medieval": "Avinio",
-    "name_modern": "Avignon",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Second seat of the Popes",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     4.806,
-     43.949
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-35",
-   "properties": {
-    "name_medieval": "Remi",
-    "name_modern": "Reims",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Coronation city of French kings",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     4.032,
-     49.258
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-36",
-   "properties": {
-    "name_medieval": "Rothomagus",
-    "name_modern": "Rouen",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Capital of Normandy",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     1.099,
-     49.443
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-37",
-   "properties": {
-    "name_medieval": "Brugae",
-    "name_modern": "Bruges",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Cloth and banking of Flanders",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     3.224,
-     51.209
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-38",
-   "properties": {
-    "name_medieval": "Gandavum",
-    "name_modern": "Ghent",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Flemish cloth town",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     3.717,
-     51.054
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-39",
-   "properties": {
-    "name_medieval": "Argentoratum",
-    "name_modern": "Strasbourg",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Free city of the Rhine",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.752,
-     48.573
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-40",
-   "properties": {
-    "name_medieval": "Moguntia",
-    "name_modern": "Mainz",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Archbishopric of the Rhine",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     8.247,
-     49.993
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-41",
-   "properties": {
-    "name_medieval": "Treveris",
-    "name_modern": "Trier",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Oldest city of Germany",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     6.644,
-     49.759
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-42",
-   "properties": {
-    "name_medieval": "Ratisbona",
-    "name_modern": "Regensburg",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Danube trade city",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     12.098,
-     49.019
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-43",
-   "properties": {
-    "name_medieval": "Norimberga",
-    "name_modern": "Nuremberg",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Imperial free city",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     11.077,
-     49.454
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-44",
-   "properties": {
-    "name_medieval": "Lubeca",
-    "name_modern": "Lübeck",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Queen of the Hanseatic League",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     10.687,
-     53.866
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-45",
-   "properties": {
-    "name_medieval": "Hammaburg",
-    "name_modern": "Hamburg",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Hanseatic Elbe port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     9.993,
-     53.551
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-46",
-   "properties": {
-    "name_medieval": "Vindobona",
-    "name_modern": "Vienna",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Danube seat of the dukes",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     16.373,
-     48.208
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-47",
-   "properties": {
-    "name_medieval": "Praga",
-    "name_modern": "Prague",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Capital of Bohemia",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.438,
-     50.076
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-48",
-   "properties": {
-    "name_medieval": "Cracovia",
-    "name_modern": "Kraków",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Capital of Poland",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     19.937,
-     50.062
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-49",
-   "properties": {
-    "name_medieval": "Kiovia",
-    "name_modern": "Kyiv",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Mother of the Rus' cities",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     30.523,
-     50.451
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-50",
-   "properties": {
-    "name_medieval": "Novogardia",
-    "name_modern": "Novgorod",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Northern Rus' republic",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.271,
-     58.521
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-51",
-   "properties": {
-    "name_medieval": "Moscovia",
-    "name_modern": "Moscow",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Rising Rus' principality",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     37.618,
-     55.751
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-52",
-   "properties": {
-    "name_medieval": "Cantuaria",
-    "name_modern": "Canterbury",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Seat of the English Church",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     1.083,
-     51.279
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-53",
-   "properties": {
-    "name_medieval": "Eboracum",
-    "name_modern": "York",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Northern English see",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -1.081,
-     53.96
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-54",
-   "properties": {
-    "name_medieval": "Dublinia",
-    "name_modern": "Dublin",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Norse-Irish port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -6.26,
-     53.35
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-55",
-   "properties": {
-    "name_medieval": "Edinburgum",
-    "name_modern": "Edinburgh",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Seat of the Scots",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -3.188,
-     55.953
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-56",
-   "properties": {
-    "name_medieval": "Thessalonica",
-    "name_modern": "Thessaloniki",
-    "part": "Europa",
-    "tier": 2,
-    "note": "Second city of the Greeks",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     22.944,
-     40.64
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-57",
-   "properties": {
-    "name_medieval": "Athenae",
-    "name_modern": "Athens",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Ancient seat of philosophy",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     23.728,
-     37.984
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-58",
-   "properties": {
-    "name_medieval": "Nicaea",
-    "name_modern": "İznik",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of the great Councils",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     29.719,
-     40.428
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-59",
-   "properties": {
-    "name_medieval": "Smyrna",
-    "name_modern": "İzmir",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Aegean port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     27.129,
-     38.419
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-60",
-   "properties": {
-    "name_medieval": "Ephesus",
-    "name_modern": "Selçuk",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of the Seven Sleepers",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     27.341,
-     37.941
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-61",
-   "properties": {
-    "name_medieval": "Trapezus",
-    "name_modern": "Trabzon",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Empire on the Black Sea",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     39.723,
-     41.005
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-62",
-   "properties": {
-    "name_medieval": "Caffa",
-    "name_modern": "Feodosia",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Genoese colony of Crimea",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.382,
-     45.031
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-63",
-   "properties": {
-    "name_medieval": "Tana (Azov)",
-    "name_modern": "Azov",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Mouth of the Tanais, Silk Road terminus; the Venetian La Tana",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     39.423,
-     47.112
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-64",
-   "properties": {
-    "name_medieval": "Accon",
-    "name_modern": "Acre",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Chief crusader port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.082,
-     32.928
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-65",
-   "properties": {
-    "name_medieval": "Tyrus",
-    "name_modern": "Tyre",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Phoenician sea-city",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.194,
-     33.271
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-66",
-   "properties": {
-    "name_medieval": "Tripolis",
-    "name_modern": "Tripoli (Lebanon)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Crusader county",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.844,
-     34.436
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-67",
-   "properties": {
-    "name_medieval": "Berrhoea",
-    "name_modern": "Aleppo",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Great Syrian trade city",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     37.134,
-     36.202
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-68",
-   "properties": {
-    "name_medieval": "Edessa",
-    "name_modern": "Şanlıurfa",
-    "part": "Asia",
-    "tier": 3,
-    "note": "First crusader county",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     38.791,
-     37.158
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-69",
-   "properties": {
-    "name_medieval": "Bethleem",
-    "name_modern": "Bethlehem",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Birthplace of Christ",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.203,
-     31.705
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-70",
-   "properties": {
-    "name_medieval": "Petra",
-    "name_modern": "Petra",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Rock city of Arabia",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.444,
-     30.329
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-71",
-   "properties": {
-    "name_medieval": "Tarsus",
-    "name_modern": "Tarsus",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Birthplace of St Paul",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     34.895,
-     36.917
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-72",
-   "properties": {
-    "name_medieval": "Ninive",
-    "name_modern": "Mosul",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Ancient Nineveh of the Assyrians",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     43.152,
-     36.36
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-73",
-   "properties": {
-    "name_medieval": "Ctesiphon",
-    "name_modern": "Ctesiphon",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Old Persian capital",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.581,
-     33.093
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-74",
-   "properties": {
-    "name_medieval": "Basora",
-    "name_modern": "Basra",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Gulf port of Mesopotamia",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     47.784,
-     30.508
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-75",
-   "properties": {
-    "name_medieval": "Tauris",
-    "name_modern": "Tabriz",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Great city of the Mongol Ilkhans",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     46.293,
-     38.08
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-76",
-   "properties": {
-    "name_medieval": "Ispahan",
-    "name_modern": "Isfahan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of central Persia",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     51.668,
-     32.654
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-77",
-   "properties": {
-    "name_medieval": "Ormus",
-    "name_modern": "Hormuz",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Spice-emporium of the Gulf",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     56.461,
-     27.1
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-78",
-   "properties": {
-    "name_medieval": "Merva",
-    "name_modern": "Merv",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Silk Road oasis of Khorasan",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     62.192,
-     37.66
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-79",
-   "properties": {
-    "name_medieval": "Bochara",
-    "name_modern": "Bukhara",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Learned city of Transoxiana",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     64.421,
-     39.767
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-80",
-   "properties": {
-    "name_medieval": "Samarcanda",
-    "name_modern": "Samarkand",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Capital of Tamerlane",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     66.96,
-     39.654
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-81",
-   "properties": {
-    "name_medieval": "Cabul",
-    "name_modern": "Kabul",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Gate to India",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     69.172,
-     34.528
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-82",
-   "properties": {
-    "name_medieval": "Delli",
-    "name_modern": "Delhi",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Sultanate of India",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     77.231,
-     28.651
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-83",
-   "properties": {
-    "name_medieval": "Aden",
-    "name_modern": "Aden",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Arabian gate of the Indian Ocean",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     45.03,
-     12.788
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-84",
-   "properties": {
-    "name_medieval": "Carthago",
-    "name_modern": "Carthage/Tunis",
-    "part": "Africa",
-    "tier": 2,
-    "note": "Old rival of Rome, now Tunis",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     10.323,
-     36.853
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-85",
-   "properties": {
-    "name_medieval": "Cairoan",
-    "name_modern": "Kairouan",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Holy city of the Maghreb",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     10.1,
-     35.681
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-86",
-   "properties": {
-    "name_medieval": "Tripolis Barbariae",
-    "name_modern": "Tripoli (Libya)",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Barbary coast port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     13.191,
-     32.887
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-87",
-   "properties": {
-    "name_medieval": "Fessa",
-    "name_modern": "Fès",
-    "part": "Africa",
-    "tier": 2,
-    "note": "Learned capital of Morocco",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -5.0,
-     34.033
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-88",
-   "properties": {
-    "name_medieval": "Marrochium",
-    "name_modern": "Marrakesh",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Almohad capital",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -7.981,
-     31.63
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-89",
-   "properties": {
-    "name_medieval": "Ceuta",
-    "name_modern": "Ceuta",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Strait fortress",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -5.32,
-     35.889
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-90",
-   "properties": {
-    "name_medieval": "Tingis",
-    "name_modern": "Tangier",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Pillar of Hercules, African side",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -5.813,
-     35.783
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-91",
-   "properties": {
-    "name_medieval": "Tombuctu",
-    "name_modern": "Timbuktu",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Gold city beyond the sand-sea",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -3.009,
-     16.775
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-92",
-   "properties": {
-    "name_medieval": "Dongola",
-    "name_modern": "Dongola",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Christian Nubian kingdom",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     30.482,
-     19.17
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-93",
-   "properties": {
-    "name_medieval": "Axuma",
-    "name_modern": "Axum",
-    "part": "Africa",
-    "tier": 3,
-    "note": "Realm of Prester John (Ethiopia)",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     38.719,
-     14.13
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-94",
-   "properties": {
-    "name_medieval": "Salmantica",
-    "name_modern": "Salamanca",
-    "part": "Europa",
-    "tier": 3,
-    "note": "University of Castile",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -5.664,
-     40.965
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-95",
-   "properties": {
-    "name_medieval": "Conimbriga",
-    "name_modern": "Coimbra",
-    "part": "Europa",
-    "tier": 3,
-    "note": "Portuguese see",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.429,
-     40.211
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-96",
-   "properties": {
-    "name_medieval": "Yasdi",
-    "name_modern": "Yazd",
-    "part": "Asia",
-    "tier": 2,
-    "note": "City of silk-weaving on the desert road",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     54.368,
-     31.898
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-97",
-   "properties": {
-    "name_medieval": "Kerman",
-    "name_modern": "Kerman",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Kingdom of turquoise and fine steel",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     57.078,
-     30.284
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-98",
-   "properties": {
-    "name_medieval": "Camadi",
-    "name_modern": "Jiroft (ruins)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "A city laid in ruins by the Carauna robbers",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     57.74,
-     28.675
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-99",
-   "properties": {
-    "name_medieval": "Cobinan",
-    "name_modern": "Kuhbanan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where mirrors of steel and tutty are made",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     56.279,
-     31.409
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-100",
-   "properties": {
-    "name_medieval": "Sapurgan",
-    "name_modern": "Shibarghan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Land of the best melons in the world",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     65.752,
-     36.665
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-101",
-   "properties": {
-    "name_medieval": "Balc",
-    "name_modern": "Balkh",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Noble and great city, once greater still",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     66.897,
-     36.758
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-102",
-   "properties": {
-    "name_medieval": "Taican",
-    "name_modern": "Taloqan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Market town below the mountains of salt",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     69.535,
-     36.736
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-103",
-   "properties": {
-    "name_medieval": "Badashan",
-    "name_modern": "Badakhshan (Faizabad)",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Whence come the balas rubies and the lapis",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     70.579,
-     37.112
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-104",
-   "properties": {
-    "name_medieval": "Keshimur",
-    "name_modern": "Srinagar",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Province of enchanters who darken the day",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     74.797,
-     34.084
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-105",
-   "properties": {
-    "name_medieval": "Cascar",
-    "name_modern": "Kashgar",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Where the roads of the north and south divide",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     75.994,
-     39.467
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-106",
-   "properties": {
-    "name_medieval": "Yarcan",
-    "name_modern": "Yarkand",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Province of five days' journey",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     77.243,
-     38.417
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-107",
-   "properties": {
-    "name_medieval": "Cotan",
-    "name_modern": "Khotan",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Province of jade, cotton and vineyards",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     79.927,
-     37.11
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-108",
-   "properties": {
-    "name_medieval": "Pein",
-    "name_modern": "Keriya",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where the rivers yield chalcedony and jasper",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     81.67,
-     36.86
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-109",
-   "properties": {
-    "name_medieval": "Charchan",
-    "name_modern": "Qiemo",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Last town before the Great Desert",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     85.533,
-     38.15
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-110",
-   "properties": {
-    "name_medieval": "Lop",
-    "name_modern": "Charkhlik (Ruoqiang)",
-    "part": "Asia",
-    "tier": 1,
-    "note": "The town at the edge of the Desert of Lop",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     88.167,
-     39.017
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-111",
-   "properties": {
-    "name_medieval": "Sachiu",
-    "name_modern": "Dunhuang",
-    "part": "Asia",
-    "tier": 2,
-    "note": "City of Tangut where the dead are burned",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     94.662,
-     40.142
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-112",
-   "properties": {
-    "name_medieval": "Camul",
-    "name_modern": "Hami",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Province of music, sport and famous hospitality",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     93.515,
-     42.827
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-113",
-   "properties": {
-    "name_medieval": "Campichu",
-    "name_modern": "Zhangye",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Chief city of Tangut, full of idol-monasteries",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     100.45,
-     38.933
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-114",
-   "properties": {
-    "name_medieval": "Etzina",
-    "name_modern": "Khara-Khoto (ruins)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Last provisioning before forty days of desert",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     101.067,
-     41.767
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-115",
-   "properties": {
-    "name_medieval": "Caracoron",
-    "name_modern": "Karakorum (ruins)",
-    "part": "Asia",
-    "tier": 2,
-    "note": "First seat of the Tartar Kaans",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     102.832,
-     47.198
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-116",
-   "properties": {
-    "name_medieval": "Egrigaia",
-    "name_modern": "Yinchuan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where the finest camlets of camel-hair are made",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     106.232,
-     38.487
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-117",
-   "properties": {
-    "name_medieval": "Tenduc",
-    "name_modern": "Tokto / Hohhot",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Province said to be the land of Prester John",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     111.194,
-     40.274
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-118",
-   "properties": {
-    "name_medieval": "Chandu",
-    "name_modern": "Shangdu (Xanadu, ruins)",
-    "part": "Asia",
-    "tier": 1,
-    "note": "The Kaan's summer palace of marble and cane",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.183,
-     42.359
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-119",
-   "properties": {
-    "name_medieval": "Cambaluc",
-    "name_modern": "Beijing",
-    "part": "Asia",
-    "tier": 1,
-    "note": "The Great Kaan's capital; seat of the paper money",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.407,
-     39.904
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-120",
-   "properties": {
-    "name_medieval": "Kenjanfu",
-    "name_modern": "Xi'an",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Great and noble city, seat of a king's son",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     108.94,
-     34.341
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-121",
-   "properties": {
-    "name_medieval": "Sindafu",
-    "name_modern": "Chengdu",
-    "part": "Asia",
-    "tier": 2,
-    "note": "City divided by a river of bridges",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     104.065,
-     30.659
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-122",
-   "properties": {
-    "name_medieval": "Saianfu",
-    "name_modern": "Xiangyang",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Held out three years until the mangonels came",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     112.122,
-     32.009
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-123",
-   "properties": {
-    "name_medieval": "Coiganju",
-    "name_modern": "Huai'an",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Entry to Manzi, great store of salt",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.15,
-     33.502
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-124",
-   "properties": {
-    "name_medieval": "Nanghin",
-    "name_modern": "Nanjing",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Noble province of great wealth",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     118.797,
-     32.06
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-125",
-   "properties": {
-    "name_medieval": "Sinjumatu",
-    "name_modern": "Jining",
-    "part": "Asia",
-    "tier": 3,
-    "note": "River-city of vast shipping",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.587,
-     35.415
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-126",
-   "properties": {
-    "name_medieval": "Kinsay",
-    "name_modern": "Hangzhou",
-    "part": "Asia",
-    "tier": 1,
-    "note": "The City of Heaven; greatest city in the world",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     120.155,
-     30.274
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-127",
-   "properties": {
-    "name_medieval": "Suju",
-    "name_modern": "Suzhou",
-    "part": "Asia",
-    "tier": 2,
-    "note": "City of ginger and six thousand stone bridges",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     120.585,
-     31.299
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-128",
-   "properties": {
-    "name_medieval": "Fuju",
-    "name_modern": "Fuzhou",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Great river-city of the sugar trade",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.297,
-     26.075
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-129",
-   "properties": {
-    "name_medieval": "Zayton",
-    "name_modern": "Quanzhou",
-    "part": "Asia",
-    "tier": 1,
-    "note": "Haven of all the ships of India; the world's great port",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     118.593,
-     24.874
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-130",
-   "properties": {
-    "name_medieval": "Cachanfu",
-    "name_modern": "Puzhou (Yongji)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City on the Caramoran, of silk and gold cloth",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     110.338,
-     34.865
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-131",
-   "properties": {
-    "name_medieval": "Cacanfu",
-    "name_modern": "Hejian",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Noble city of trade and handicraft",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.089,
-     38.446
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-132",
-   "properties": {
-    "name_medieval": "Chinangli",
-    "name_modern": "Cangzhou",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City on a great river, much shipping",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.857,
-     38.304
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-133",
-   "properties": {
-    "name_medieval": "Linju",
-    "name_modern": "Lingxian",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of the river country",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     116.573,
-     37.333
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-134",
-   "properties": {
-    "name_medieval": "Siju",
-    "name_modern": "Pizhou",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of great game and hunting",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     117.954,
-     34.311
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-135",
-   "properties": {
-    "name_medieval": "Coigangiu",
-    "name_modern": "Huaiyin",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Salt city at the river mouth",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.028,
-     33.583
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-136",
-   "properties": {
-    "name_medieval": "Paukin",
-    "name_modern": "Baoying",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City of silk and of the canal",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.311,
-     33.234
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-137",
-   "properties": {
-    "name_medieval": "Tiju",
-    "name_modern": "Gaoyou",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Canal city of fish and fowl",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.443,
-     32.785
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-138",
-   "properties": {
-    "name_medieval": "Caiju",
-    "name_modern": "Guazhou",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where the grain fleet enters the great river",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.4,
-     32.253
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-139",
-   "properties": {
-    "name_medieval": "Sinju",
-    "name_modern": "Yizheng",
-    "part": "Asia",
-    "tier": 3,
-    "note": "River port of vast shipping",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.182,
-     32.272
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-140",
-   "properties": {
-    "name_medieval": "Chinghianfu",
-    "name_modern": "Zhenjiang",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City with two Nestorian churches",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.425,
-     32.188
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-141",
-   "properties": {
-    "name_medieval": "Chinginju",
-    "name_modern": "Changzhou",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where the Alans were slaughtered in their sleep",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.974,
-     31.811
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-142",
-   "properties": {
-    "name_medieval": "Tanpiju",
-    "name_modern": "Tonglu",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Fair city under the walls of Kinsay",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     119.687,
-     29.808
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-143",
-   "properties": {
-    "name_medieval": "Mien",
-    "name_modern": "Bagan (Pagan)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Kingdom of the gold and silver towers",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     94.86,
-     21.171
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-144",
-   "properties": {
-    "name_medieval": "Chamba",
-    "name_modern": "Champa (Qui Nhon)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Kingdom of aloeswood and elephants",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     109.223,
-     13.776
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-145",
-   "properties": {
-    "name_medieval": "Pentam",
-    "name_modern": "Bintan",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Island on the strait toward Java",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     104.45,
-     1.083
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-146",
-   "properties": {
-    "name_medieval": "Java Major",
-    "name_modern": "Java (Jakarta)",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Greatest island in the world; source of the spices",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     106.817,
-     -6.2
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-147",
-   "properties": {
-    "name_medieval": "Samara",
-    "name_modern": "Sumatra (Banda Aceh)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Where the pole-star is no longer seen",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     95.324,
-     5.548
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-148",
-   "properties": {
-    "name_medieval": "Maabar",
-    "name_modern": "Coromandel (Nagapattinam)",
-    "part": "Asia",
-    "tier": 2,
-    "note": "The finest province in the world; pearl fishery",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     79.843,
-     10.766
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-149",
-   "properties": {
-    "name_medieval": "Cail",
-    "name_modern": "Kayalpattinam",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Great port for all ships from the west",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     78.123,
-     8.568
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-150",
-   "properties": {
-    "name_medieval": "Coilum",
-    "name_modern": "Kollam (Quilon)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Whence comes the brazil, ginger and indigo",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     76.6,
-     8.893
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-151",
-   "properties": {
-    "name_medieval": "Melibar",
-    "name_modern": "Malabar (Kozhikode)",
-    "part": "Asia",
-    "tier": 2,
-    "note": "Kingdom of pepper and of corsairs",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     75.78,
-     11.259
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-152",
-   "properties": {
-    "name_medieval": "Tana",
-    "name_modern": "Thane",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Great kingdom of incense and buckram",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.97,
-     19.197
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-153",
-   "properties": {
-    "name_medieval": "Cambaet",
-    "name_modern": "Khambhat (Cambay)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Kingdom of indigo and fine leather",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.62,
-     22.313
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-154",
-   "properties": {
-    "name_medieval": "Semenat",
-    "name_modern": "Somnath",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Kingdom of great trade, its people idolaters",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     70.401,
-     20.888
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-155",
-   "properties": {
-    "name_medieval": "Dufar",
-    "name_modern": "Salalah (Dhofar)",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City whence the white incense is shipped",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     54.089,
-     17.019
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-156",
-   "properties": {
-    "name_medieval": "Esher",
-    "name_modern": "Ash-Shihr",
-    "part": "Asia",
-    "tier": 3,
-    "note": "Port of frankincense and of horses for India",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     49.601,
-     14.761
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "id": "city-157",
-   "properties": {
-    "name_medieval": "Calatu",
-    "name_modern": "Qalhat",
-    "part": "Asia",
-    "tier": 3,
-    "note": "City at the mouth of the Gulf, subject to Hormos",
-    "is_center": false
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     59.372,
-     22.7
-    ]
-   }
-  }
- ]
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "city-0",
+      "properties": {
+        "name_medieval": "Hierusalem",
+        "name_modern": "Jerusalem",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Umbilicus mundi — the navel of the world, center of the mappa mundi",
+        "is_center": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.235,
+          31.778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-1",
+      "properties": {
+        "name_medieval": "Roma",
+        "name_modern": "Rome",
+        "part": "Europa",
+        "tier": 1,
+        "note": "Seat of the Papacy and the old Empire",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.496,
+          41.902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-2",
+      "properties": {
+        "name_medieval": "Constantinopolis",
+        "name_modern": "Istanbul",
+        "part": "Europa",
+        "tier": 1,
+        "note": "New Rome, capital of the Greeks",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.978,
+          41.008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-3",
+      "properties": {
+        "name_medieval": "Alexandria",
+        "name_modern": "Alexandria",
+        "part": "Africa",
+        "tier": 1,
+        "note": "Great port of Egypt, seat of a Patriarch",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.918,
+          31.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-4",
+      "properties": {
+        "name_medieval": "Antiochia",
+        "name_modern": "Antakya",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Chief city of Syria, crusader principality",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.161,
+          36.202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-5",
+      "properties": {
+        "name_medieval": "Babylonia (Cairus)",
+        "name_modern": "Cairo",
+        "part": "Africa",
+        "tier": 1,
+        "note": "'Babylon of Egypt', seat of the Sultan",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.236,
+          30.044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-6",
+      "properties": {
+        "name_medieval": "Baldacum",
+        "name_modern": "Baghdad",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Baghdad, seat of the Caliph of the East",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.366,
+          33.315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-7",
+      "properties": {
+        "name_medieval": "Damascus",
+        "name_modern": "Damascus",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Great city of Syria",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.292,
+          33.513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-8",
+      "properties": {
+        "name_medieval": "Mecha",
+        "name_modern": "Mecca",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Holy city of the Saracens",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.826,
+          21.423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-9",
+      "properties": {
+        "name_medieval": "Medina",
+        "name_modern": "Medina",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of the Prophet",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.611,
+          24.47
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-10",
+      "properties": {
+        "name_medieval": "Parisius",
+        "name_modern": "Paris",
+        "part": "Europa",
+        "tier": 1,
+        "note": "Capital of the Franks, great university",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352,
+          48.857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-11",
+      "properties": {
+        "name_medieval": "Londinium",
+        "name_modern": "London",
+        "part": "Europa",
+        "tier": 1,
+        "note": "Chief city of the English",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.128,
+          51.507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-12",
+      "properties": {
+        "name_medieval": "Colonia",
+        "name_modern": "Cologne",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Holy city of the Rhine, relics of the Magi",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.96,
+          50.938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-13",
+      "properties": {
+        "name_medieval": "Aquisgranum",
+        "name_modern": "Aachen",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Charlemagne's imperial seat",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.084,
+          50.776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-14",
+      "properties": {
+        "name_medieval": "Venetia",
+        "name_modern": "Venice",
+        "part": "Europa",
+        "tier": 1,
+        "note": "Queen of the Adriatic, gate to the East",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.336,
+          45.438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-15",
+      "properties": {
+        "name_medieval": "Ianua",
+        "name_modern": "Genoa",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Maritime republic, Levant trade",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.933,
+          44.406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-16",
+      "properties": {
+        "name_medieval": "Florentia",
+        "name_modern": "Florence",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Banking city of Tuscany",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.256,
+          43.769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-17",
+      "properties": {
+        "name_medieval": "Mediolanum",
+        "name_modern": "Milan",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Great city of Lombardy",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19,
+          45.464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-18",
+      "properties": {
+        "name_medieval": "Neapolis",
+        "name_modern": "Naples",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Capital of the southern kingdom",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.268,
+          40.851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-19",
+      "properties": {
+        "name_medieval": "Ravenna",
+        "name_modern": "Ravenna",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Old exarchate capital",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.203,
+          44.418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-20",
+      "properties": {
+        "name_medieval": "Pisa",
+        "name_modern": "Pisa",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Maritime republic of Tuscany",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.401,
+          43.716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-21",
+      "properties": {
+        "name_medieval": "Bononia",
+        "name_modern": "Bologna",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Oldest university",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.343,
+          44.494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-22",
+      "properties": {
+        "name_medieval": "Panormus",
+        "name_modern": "Palermo",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Capital of Sicily",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.361,
+          38.116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-23",
+      "properties": {
+        "name_medieval": "Salernum",
+        "name_modern": "Salerno",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Famed medical school",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.759,
+          40.681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-24",
+      "properties": {
+        "name_medieval": "Corduba",
+        "name_modern": "Cordoba",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Great city of al-Andalus",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.779,
+          37.888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-25",
+      "properties": {
+        "name_medieval": "Toletum",
+        "name_modern": "Toledo",
+        "part": "Europa",
+        "tier": 2,
+        "note": "City of translators",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.024,
+          39.858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-26",
+      "properties": {
+        "name_medieval": "Hispalis",
+        "name_modern": "Seville",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Andalusian port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.994,
+          37.389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-27",
+      "properties": {
+        "name_medieval": "Granata",
+        "name_modern": "Granada",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Last Moorish emirate",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.598,
+          37.177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-28",
+      "properties": {
+        "name_medieval": "Compostella",
+        "name_modern": "Santiago de Compostela",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Pilgrimage to St James",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.545,
+          42.881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-29",
+      "properties": {
+        "name_medieval": "Olisipo",
+        "name_modern": "Lisbon",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Atlantic port of Portugal",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.139,
+          38.722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-30",
+      "properties": {
+        "name_medieval": "Caesaraugusta",
+        "name_modern": "Zaragoza",
+        "part": "Europa",
+        "tier": 3,
+        "note": "City of the Ebro",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.887,
+          41.649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-31",
+      "properties": {
+        "name_medieval": "Barcino",
+        "name_modern": "Barcelona",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Catalan sea-port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.173,
+          41.385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-32",
+      "properties": {
+        "name_medieval": "Massilia",
+        "name_modern": "Marseille",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Ancient Greek port of Gaul",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.37,
+          43.296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-33",
+      "properties": {
+        "name_medieval": "Tolosa",
+        "name_modern": "Toulouse",
+        "part": "Europa",
+        "tier": 3,
+        "note": "City of the Garonne",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.444,
+          43.605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-34",
+      "properties": {
+        "name_medieval": "Avinio",
+        "name_modern": "Avignon",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Second seat of the Popes",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.806,
+          43.949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-35",
+      "properties": {
+        "name_medieval": "Remi",
+        "name_modern": "Reims",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Coronation city of French kings",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.032,
+          49.258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-36",
+      "properties": {
+        "name_medieval": "Rothomagus",
+        "name_modern": "Rouen",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Capital of Normandy",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.099,
+          49.443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-37",
+      "properties": {
+        "name_medieval": "Brugae",
+        "name_modern": "Bruges",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Cloth and banking of Flanders",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.224,
+          51.209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-38",
+      "properties": {
+        "name_medieval": "Gandavum",
+        "name_modern": "Ghent",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Flemish cloth town",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.717,
+          51.054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-39",
+      "properties": {
+        "name_medieval": "Argentoratum",
+        "name_modern": "Strasbourg",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Free city of the Rhine",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.752,
+          48.573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-40",
+      "properties": {
+        "name_medieval": "Moguntia",
+        "name_modern": "Mainz",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Archbishopric of the Rhine",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.247,
+          49.993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-41",
+      "properties": {
+        "name_medieval": "Treveris",
+        "name_modern": "Trier",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Oldest city of Germany",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.644,
+          49.759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-42",
+      "properties": {
+        "name_medieval": "Ratisbona",
+        "name_modern": "Regensburg",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Danube trade city",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.098,
+          49.019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-43",
+      "properties": {
+        "name_medieval": "Norimberga",
+        "name_modern": "Nuremberg",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Imperial free city",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.077,
+          49.454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-44",
+      "properties": {
+        "name_medieval": "Lubeca",
+        "name_modern": "Lübeck",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Queen of the Hanseatic League",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.687,
+          53.866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-45",
+      "properties": {
+        "name_medieval": "Hammaburg",
+        "name_modern": "Hamburg",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Hanseatic Elbe port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.993,
+          53.551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-46",
+      "properties": {
+        "name_medieval": "Vindobona",
+        "name_modern": "Vienna",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Danube seat of the dukes",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.373,
+          48.208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-47",
+      "properties": {
+        "name_medieval": "Praga",
+        "name_modern": "Prague",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Capital of Bohemia",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.438,
+          50.076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-48",
+      "properties": {
+        "name_medieval": "Cracovia",
+        "name_modern": "Kraków",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Capital of Poland",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.937,
+          50.062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-49",
+      "properties": {
+        "name_medieval": "Kiovia",
+        "name_modern": "Kyiv",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Mother of the Rus' cities",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.523,
+          50.451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-50",
+      "properties": {
+        "name_medieval": "Novogardia",
+        "name_modern": "Novgorod",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Northern Rus' republic",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.271,
+          58.521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-51",
+      "properties": {
+        "name_medieval": "Moscovia",
+        "name_modern": "Moscow",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Rising Rus' principality",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.618,
+          55.751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-52",
+      "properties": {
+        "name_medieval": "Cantuaria",
+        "name_modern": "Canterbury",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Seat of the English Church",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.083,
+          51.279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-53",
+      "properties": {
+        "name_medieval": "Eboracum",
+        "name_modern": "York",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Northern English see",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.081,
+          53.96
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-54",
+      "properties": {
+        "name_medieval": "Dublinia",
+        "name_modern": "Dublin",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Norse-Irish port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.26,
+          53.35
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-55",
+      "properties": {
+        "name_medieval": "Edinburgum",
+        "name_modern": "Edinburgh",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Seat of the Scots",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.188,
+          55.953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-56",
+      "properties": {
+        "name_medieval": "Thessalonica",
+        "name_modern": "Thessaloniki",
+        "part": "Europa",
+        "tier": 2,
+        "note": "Second city of the Greeks",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.944,
+          40.64
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-57",
+      "properties": {
+        "name_medieval": "Athenae",
+        "name_modern": "Athens",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Ancient seat of philosophy",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.728,
+          37.984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-58",
+      "properties": {
+        "name_medieval": "Nicaea",
+        "name_modern": "İznik",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of the great Councils",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.719,
+          40.428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-59",
+      "properties": {
+        "name_medieval": "Smyrna",
+        "name_modern": "İzmir",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Aegean port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.129,
+          38.419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-60",
+      "properties": {
+        "name_medieval": "Ephesus",
+        "name_modern": "Selçuk",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of the Seven Sleepers",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.341,
+          37.941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-61",
+      "properties": {
+        "name_medieval": "Trapezus",
+        "name_modern": "Trabzon",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Empire on the Black Sea",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.723,
+          41.005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-62",
+      "properties": {
+        "name_medieval": "Caffa",
+        "name_modern": "Feodosia",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Genoese colony of Crimea",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.382,
+          45.031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-63",
+      "properties": {
+        "name_medieval": "Tana (Azov)",
+        "name_modern": "Azov",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Mouth of the Tanais, Silk Road terminus; the Venetian La Tana",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.423,
+          47.112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-64",
+      "properties": {
+        "name_medieval": "Accon",
+        "name_modern": "Acre",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Chief crusader port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.082,
+          32.928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-65",
+      "properties": {
+        "name_medieval": "Tyrus",
+        "name_modern": "Tyre",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Phoenician sea-city",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.194,
+          33.271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-66",
+      "properties": {
+        "name_medieval": "Tripolis",
+        "name_modern": "Tripoli (Lebanon)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Crusader county",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.844,
+          34.436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-67",
+      "properties": {
+        "name_medieval": "Berrhoea",
+        "name_modern": "Aleppo",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Great Syrian trade city",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.134,
+          36.202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-68",
+      "properties": {
+        "name_medieval": "Edessa",
+        "name_modern": "Şanlıurfa",
+        "part": "Asia",
+        "tier": 3,
+        "note": "First crusader county",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.791,
+          37.158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-69",
+      "properties": {
+        "name_medieval": "Bethleem",
+        "name_modern": "Bethlehem",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Birthplace of Christ",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.203,
+          31.705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-70",
+      "properties": {
+        "name_medieval": "Petra",
+        "name_modern": "Petra",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Rock city of Arabia",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.444,
+          30.329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-71",
+      "properties": {
+        "name_medieval": "Tarsus",
+        "name_modern": "Tarsus",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Birthplace of St Paul",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.895,
+          36.917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-72",
+      "properties": {
+        "name_medieval": "Ninive",
+        "name_modern": "Mosul",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Ancient Nineveh of the Assyrians",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.152,
+          36.36
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-73",
+      "properties": {
+        "name_medieval": "Ctesiphon",
+        "name_modern": "Ctesiphon",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Old Persian capital",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.581,
+          33.093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-74",
+      "properties": {
+        "name_medieval": "Basora",
+        "name_modern": "Basra",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Gulf port of Mesopotamia",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.784,
+          30.508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-75",
+      "properties": {
+        "name_medieval": "Tauris",
+        "name_modern": "Tabriz",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Great city of the Mongol Ilkhans",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.293,
+          38.08
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-76",
+      "properties": {
+        "name_medieval": "Ispahan",
+        "name_modern": "Isfahan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of central Persia",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.668,
+          32.654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-77",
+      "properties": {
+        "name_medieval": "Ormus",
+        "name_modern": "Hormuz",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Spice-emporium of the Gulf",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.461,
+          27.1
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-78",
+      "properties": {
+        "name_medieval": "Merva",
+        "name_modern": "Merv",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Silk Road oasis of Khorasan",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.192,
+          37.66
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-79",
+      "properties": {
+        "name_medieval": "Bochara",
+        "name_modern": "Bukhara",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Learned city of Transoxiana",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.421,
+          39.767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-80",
+      "properties": {
+        "name_medieval": "Samarcanda",
+        "name_modern": "Samarkand",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Capital of Tamerlane",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.96,
+          39.654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-81",
+      "properties": {
+        "name_medieval": "Cabul",
+        "name_modern": "Kabul",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Gate to India",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.172,
+          34.528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-82",
+      "properties": {
+        "name_medieval": "Delli",
+        "name_modern": "Delhi",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Sultanate of India",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.231,
+          28.651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-83",
+      "properties": {
+        "name_medieval": "Aden",
+        "name_modern": "Aden",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Arabian gate of the Indian Ocean",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.03,
+          12.788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-84",
+      "properties": {
+        "name_medieval": "Carthago",
+        "name_modern": "Carthage/Tunis",
+        "part": "Africa",
+        "tier": 2,
+        "note": "Old rival of Rome, now Tunis",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.323,
+          36.853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-85",
+      "properties": {
+        "name_medieval": "Cairoan",
+        "name_modern": "Kairouan",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Holy city of the Maghreb",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.1,
+          35.681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-86",
+      "properties": {
+        "name_medieval": "Tripolis Barbariae",
+        "name_modern": "Tripoli (Libya)",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Barbary coast port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.191,
+          32.887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-87",
+      "properties": {
+        "name_medieval": "Fessa",
+        "name_modern": "Fès",
+        "part": "Africa",
+        "tier": 2,
+        "note": "Learned capital of Morocco",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0,
+          34.033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-88",
+      "properties": {
+        "name_medieval": "Marrochium",
+        "name_modern": "Marrakesh",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Almohad capital",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.981,
+          31.63
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-89",
+      "properties": {
+        "name_medieval": "Ceuta",
+        "name_modern": "Ceuta",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Strait fortress",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.32,
+          35.889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-90",
+      "properties": {
+        "name_medieval": "Tingis",
+        "name_modern": "Tangier",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Pillar of Hercules, African side",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.813,
+          35.783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-91",
+      "properties": {
+        "name_medieval": "Tombuctu",
+        "name_modern": "Timbuktu",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Gold city beyond the sand-sea",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.009,
+          16.775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-92",
+      "properties": {
+        "name_medieval": "Dongola",
+        "name_modern": "Dongola",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Christian Nubian kingdom",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.482,
+          19.17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-93",
+      "properties": {
+        "name_medieval": "Axuma",
+        "name_modern": "Axum",
+        "part": "Africa",
+        "tier": 3,
+        "note": "Realm of Prester John (Ethiopia)",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.719,
+          14.13
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-94",
+      "properties": {
+        "name_medieval": "Salmantica",
+        "name_modern": "Salamanca",
+        "part": "Europa",
+        "tier": 3,
+        "note": "University of Castile",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.664,
+          40.965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-95",
+      "properties": {
+        "name_medieval": "Conimbriga",
+        "name_modern": "Coimbra",
+        "part": "Europa",
+        "tier": 3,
+        "note": "Portuguese see",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.429,
+          40.211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-96",
+      "properties": {
+        "name_medieval": "Yasdi",
+        "name_modern": "Yazd",
+        "part": "Asia",
+        "tier": 2,
+        "note": "City of silk-weaving on the desert road",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.368,
+          31.898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-97",
+      "properties": {
+        "name_medieval": "Kerman",
+        "name_modern": "Kerman",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Kingdom of turquoise and fine steel",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.078,
+          30.284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-98",
+      "properties": {
+        "name_medieval": "Camadi",
+        "name_modern": "Jiroft (ruins)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "A city laid in ruins by the Carauna robbers",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.74,
+          28.675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-99",
+      "properties": {
+        "name_medieval": "Cobinan",
+        "name_modern": "Kuhbanan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where mirrors of steel and tutty are made",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.279,
+          31.409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-100",
+      "properties": {
+        "name_medieval": "Sapurgan",
+        "name_modern": "Shibarghan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Land of the best melons in the world",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.752,
+          36.665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-101",
+      "properties": {
+        "name_medieval": "Balc",
+        "name_modern": "Balkh",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Noble and great city, once greater still",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.897,
+          36.758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-102",
+      "properties": {
+        "name_medieval": "Taican",
+        "name_modern": "Taloqan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Market town below the mountains of salt",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.535,
+          36.736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-103",
+      "properties": {
+        "name_medieval": "Badashan",
+        "name_modern": "Badakhshan (Faizabad)",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Whence come the balas rubies and the lapis",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.579,
+          37.112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-104",
+      "properties": {
+        "name_medieval": "Keshimur",
+        "name_modern": "Srinagar",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Province of enchanters who darken the day",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.797,
+          34.084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-105",
+      "properties": {
+        "name_medieval": "Cascar",
+        "name_modern": "Kashgar",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Where the roads of the north and south divide",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.994,
+          39.467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-106",
+      "properties": {
+        "name_medieval": "Yarcan",
+        "name_modern": "Yarkand",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Province of five days' journey",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.243,
+          38.417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-107",
+      "properties": {
+        "name_medieval": "Cotan",
+        "name_modern": "Khotan",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Province of jade, cotton and vineyards",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.927,
+          37.11
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-108",
+      "properties": {
+        "name_medieval": "Pein",
+        "name_modern": "Keriya",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where the rivers yield chalcedony and jasper",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.67,
+          36.86
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-109",
+      "properties": {
+        "name_medieval": "Charchan",
+        "name_modern": "Qiemo",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Last town before the Great Desert",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.533,
+          38.15
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-110",
+      "properties": {
+        "name_medieval": "Lop",
+        "name_modern": "Charkhlik (Ruoqiang)",
+        "part": "Asia",
+        "tier": 1,
+        "note": "The town at the edge of the Desert of Lop",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.167,
+          39.017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-111",
+      "properties": {
+        "name_medieval": "Sachiu",
+        "name_modern": "Dunhuang",
+        "part": "Asia",
+        "tier": 2,
+        "note": "City of Tangut where the dead are burned",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.662,
+          40.142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-112",
+      "properties": {
+        "name_medieval": "Camul",
+        "name_modern": "Hami",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Province of music, sport and famous hospitality",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.515,
+          42.827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-113",
+      "properties": {
+        "name_medieval": "Campichu",
+        "name_modern": "Zhangye",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Chief city of Tangut, full of idol-monasteries",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.45,
+          38.933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-114",
+      "properties": {
+        "name_medieval": "Etzina",
+        "name_modern": "Khara-Khoto (ruins)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Last provisioning before forty days of desert",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.067,
+          41.767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-115",
+      "properties": {
+        "name_medieval": "Caracoron",
+        "name_modern": "Karakorum (ruins)",
+        "part": "Asia",
+        "tier": 2,
+        "note": "First seat of the Tartar Kaans",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.832,
+          47.198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-116",
+      "properties": {
+        "name_medieval": "Egrigaia",
+        "name_modern": "Yinchuan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where the finest camlets of camel-hair are made",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.232,
+          38.487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-117",
+      "properties": {
+        "name_medieval": "Tenduc",
+        "name_modern": "Tokto / Hohhot",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Province said to be the land of Prester John",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.194,
+          40.274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-118",
+      "properties": {
+        "name_medieval": "Chandu",
+        "name_modern": "Shangdu (Xanadu, ruins)",
+        "part": "Asia",
+        "tier": 1,
+        "note": "The Kaan's summer palace of marble and cane",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.183,
+          42.359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-119",
+      "properties": {
+        "name_medieval": "Cambaluc",
+        "name_modern": "Beijing",
+        "part": "Asia",
+        "tier": 1,
+        "note": "The Great Kaan's capital; seat of the paper money",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.407,
+          39.904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-120",
+      "properties": {
+        "name_medieval": "Kenjanfu",
+        "name_modern": "Xi'an",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Great and noble city, seat of a king's son",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.94,
+          34.341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-121",
+      "properties": {
+        "name_medieval": "Sindafu",
+        "name_modern": "Chengdu",
+        "part": "Asia",
+        "tier": 2,
+        "note": "City divided by a river of bridges",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.065,
+          30.659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-122",
+      "properties": {
+        "name_medieval": "Saianfu",
+        "name_modern": "Xiangyang",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Held out three years until the mangonels came",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.122,
+          32.009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-123",
+      "properties": {
+        "name_medieval": "Coiganju",
+        "name_modern": "Huai'an",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Entry to Manzi, great store of salt",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.15,
+          33.502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-124",
+      "properties": {
+        "name_medieval": "Nanghin",
+        "name_modern": "Nanjing",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Noble province of great wealth",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.797,
+          32.06
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-125",
+      "properties": {
+        "name_medieval": "Sinjumatu",
+        "name_modern": "Jining",
+        "part": "Asia",
+        "tier": 3,
+        "note": "River-city of vast shipping",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.587,
+          35.415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-126",
+      "properties": {
+        "name_medieval": "Kinsay",
+        "name_modern": "Hangzhou",
+        "part": "Asia",
+        "tier": 1,
+        "note": "The City of Heaven; greatest city in the world",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.155,
+          30.274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-127",
+      "properties": {
+        "name_medieval": "Suju",
+        "name_modern": "Suzhou",
+        "part": "Asia",
+        "tier": 2,
+        "note": "City of ginger and six thousand stone bridges",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.585,
+          31.299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-128",
+      "properties": {
+        "name_medieval": "Fuju",
+        "name_modern": "Fuzhou",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Great river-city of the sugar trade",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.297,
+          26.075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-129",
+      "properties": {
+        "name_medieval": "Zayton",
+        "name_modern": "Quanzhou",
+        "part": "Asia",
+        "tier": 1,
+        "note": "Haven of all the ships of India; the world's great port",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.593,
+          24.874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-130",
+      "properties": {
+        "name_medieval": "Cachanfu",
+        "name_modern": "Puzhou (Yongji)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City on the Caramoran, of silk and gold cloth",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.338,
+          34.865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-131",
+      "properties": {
+        "name_medieval": "Cacanfu",
+        "name_modern": "Hejian",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Noble city of trade and handicraft",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.089,
+          38.446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-132",
+      "properties": {
+        "name_medieval": "Chinangli",
+        "name_modern": "Cangzhou",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City on a great river, much shipping",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.857,
+          38.304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-133",
+      "properties": {
+        "name_medieval": "Linju",
+        "name_modern": "Lingxian",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of the river country",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.573,
+          37.333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-134",
+      "properties": {
+        "name_medieval": "Siju",
+        "name_modern": "Pizhou",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of great game and hunting",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.954,
+          34.311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-135",
+      "properties": {
+        "name_medieval": "Coigangiu",
+        "name_modern": "Huaiyin",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Salt city at the river mouth",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.028,
+          33.583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-136",
+      "properties": {
+        "name_medieval": "Paukin",
+        "name_modern": "Baoying",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City of silk and of the canal",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.311,
+          33.234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-137",
+      "properties": {
+        "name_medieval": "Tiju",
+        "name_modern": "Gaoyou",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Canal city of fish and fowl",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.443,
+          32.785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-138",
+      "properties": {
+        "name_medieval": "Caiju",
+        "name_modern": "Guazhou",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where the grain fleet enters the great river",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.4,
+          32.253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-139",
+      "properties": {
+        "name_medieval": "Sinju",
+        "name_modern": "Yizheng",
+        "part": "Asia",
+        "tier": 3,
+        "note": "River port of vast shipping",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.182,
+          32.272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-140",
+      "properties": {
+        "name_medieval": "Chinghianfu",
+        "name_modern": "Zhenjiang",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City with two Nestorian churches",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.425,
+          32.188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-141",
+      "properties": {
+        "name_medieval": "Chinginju",
+        "name_modern": "Changzhou",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where the Alans were slaughtered in their sleep",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.974,
+          31.811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-142",
+      "properties": {
+        "name_medieval": "Tanpiju",
+        "name_modern": "Tonglu",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Fair city under the walls of Kinsay",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.687,
+          29.808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-143",
+      "properties": {
+        "name_medieval": "Mien",
+        "name_modern": "Bagan (Pagan)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Kingdom of the gold and silver towers",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.86,
+          21.171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-144",
+      "properties": {
+        "name_medieval": "Chamba",
+        "name_modern": "Champa (Qui Nhon)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Kingdom of aloeswood and elephants",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.223,
+          13.776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-145",
+      "properties": {
+        "name_medieval": "Pentam",
+        "name_modern": "Bintan",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Island on the strait toward Java",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.45,
+          1.083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-146",
+      "properties": {
+        "name_medieval": "Java Major",
+        "name_modern": "Java (Jakarta)",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Greatest island in the world; source of the spices",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.817,
+          -6.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-147",
+      "properties": {
+        "name_medieval": "Samara",
+        "name_modern": "Sumatra (Banda Aceh)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Where the pole-star is no longer seen",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.324,
+          5.548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-148",
+      "properties": {
+        "name_medieval": "Maabar",
+        "name_modern": "Coromandel (Nagapattinam)",
+        "part": "Asia",
+        "tier": 2,
+        "note": "The finest province in the world; pearl fishery",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.843,
+          10.766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-149",
+      "properties": {
+        "name_medieval": "Cail",
+        "name_modern": "Kayalpattinam",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Great port for all ships from the west",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.123,
+          8.568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-150",
+      "properties": {
+        "name_medieval": "Coilum",
+        "name_modern": "Kollam (Quilon)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Whence comes the brazil, ginger and indigo",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6,
+          8.893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-151",
+      "properties": {
+        "name_medieval": "Melibar",
+        "name_modern": "Malabar (Kozhikode)",
+        "part": "Asia",
+        "tier": 2,
+        "note": "Kingdom of pepper and of corsairs",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78,
+          11.259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-152",
+      "properties": {
+        "name_medieval": "Tana",
+        "name_modern": "Thane",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Great kingdom of incense and buckram",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97,
+          19.197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-153",
+      "properties": {
+        "name_medieval": "Cambaet",
+        "name_modern": "Khambhat (Cambay)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Kingdom of indigo and fine leather",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.62,
+          22.313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-154",
+      "properties": {
+        "name_medieval": "Semenat",
+        "name_modern": "Somnath",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Kingdom of great trade, its people idolaters",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.401,
+          20.888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-155",
+      "properties": {
+        "name_medieval": "Dufar",
+        "name_modern": "Salalah (Dhofar)",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City whence the white incense is shipped",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.089,
+          17.019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-156",
+      "properties": {
+        "name_medieval": "Esher",
+        "name_modern": "Ash-Shihr",
+        "part": "Asia",
+        "tier": 3,
+        "note": "Port of frankincense and of horses for India",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.601,
+          14.761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-157",
+      "properties": {
+        "name_medieval": "Calatu",
+        "name_modern": "Qalhat",
+        "part": "Asia",
+        "tier": 3,
+        "note": "City at the mouth of the Gulf, subject to Hormos",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.372,
+          22.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-158",
+      "properties": {
+        "name_medieval": "Maldive",
+        "name_modern": "Maldives",
+        "part": "Asia",
+        "tier": 3,
+        "note": "The coconut isles of the sea road",
+        "is_center": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.52,
+          4.18
+        ]
+      }
+    }
+  ]
 }

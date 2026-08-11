@@ -58,6 +58,8 @@
 | T6 | 19 城弱证据/查无语料处置 | `origin`、`disposition`、`note` |
 | B1–B4 | 现有英文文本的中文翻译 | en/zh 双语校验、G21 |
 | M3 | 白图泰六城与相关结局文本 | 主流程、语料接线 |
+| M3b ✅ 2026-08-11 | 白图泰《里哈拉》全量接线：新增马儿代夫城市节点与入城文本（`ev-maldive-entry`）、13 个探索事件（西亚 7 + 海路 5 + 马儿代夫 1，含德里双事件；刺桐/行在/古里/没来 4 个由入城选择 `queue_event` 触发）、17 城 `altRefs` 二次声部、`battuta` archetype（丹吉尔式旅人，亚历山大出发朝觐麦加） | G17/G24/G26/G31、`story.mjs check`、smoke 套件 |
+| zancibar 说明 | 桑给巴尔无 Lee 节译语料（语料全文零命中），本轮不新增节点，保持 ART_REQUIREMENTS 规划状态 | — |
 | 12 主城入口 | 每城前两项重要选择进入两页后果链 | G28、`12_CITY_CLOSURE_MATRIX.md` |
 | 大不里士外国商人 | “向外国商人打听前路”进入后续追问事件 | `smoke_tauris_merchant.gd` |
 | 运行时结果页 | `resultText` 在对话卡中显示，点击继续后返回城市 | 全部 smoke、城市导航回归 |

@@ -86,7 +86,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-java-major-entry",
-      "sites": [],
+      "sites": [
+        "ev-java-major-battuta-a"
+      ],
       "exits": [
         "rt-java-major-chamba",
         "rt-java-major-samara",

@@ -649,6 +649,16 @@
           "infidels"
         ]
       }
+    ],
+    "maldive": [
+      {
+        "book": "ibn-battuta",
+        "years": "1325-1354",
+        "chapterId": "battuta-c019",
+        "title": "The Maldive Islands",
+        "hits": 1,
+        "quote": "THESE islands constitute one of the wonders of the world; for their number is about two thousand, nearly a hundred of which are so close to each other as to form a sort of ring; each of which, neverth"
+      }
     ]
   }
 }

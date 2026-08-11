@@ -8214,6 +8214,94 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "rt-cail-maldive",
+      "from": "cail",
+      "to": "maldive",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 14,
+      "distanceKm": 1100,
+      "cost": 480,
+      "risk": 4,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
+      }
+    },
+    {
+      "id": "rt-maldive-melibar",
+      "from": "maldive",
+      "to": "melibar",
+      "reverse": true,
+      "kind": "sea",
+      "trunk": true,
+      "lane": true,
+      "modes": [
+        "ship"
+      ],
+      "days": 10,
+      "distanceKm": 620,
+      "cost": 320,
+      "risk": 3,
+      "season": {
+        "open": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonus": [
+          11,
+          12,
+          1
+        ]
+      },
+      "hazards": [
+        "storm",
+        "pirates"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
+      }
     }
   ]
 }

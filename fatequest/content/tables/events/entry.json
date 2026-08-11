@@ -430,9 +430,12 @@
               "op": "reveal_map",
               "value": "balc",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-a",
+              "reason": "balc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-a", "reason": "balc-entry-consequence-a" }
           ]
         },
         {
@@ -453,9 +456,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-b",
+              "reason": "balc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-b", "reason": "balc-entry-consequence-b" }
           ]
         },
         {
@@ -520,9 +526,12 @@
               "op": "reveal_map",
               "value": "baldacum",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-a",
+              "reason": "baldacum-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-a", "reason": "baldacum-entry-consequence-a" }
           ]
         },
         {
@@ -543,9 +552,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-b",
+              "reason": "baldacum-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-b", "reason": "baldacum-entry-consequence-b" }
           ]
         },
         {
@@ -1096,6 +1108,17 @@
               "reason": "found-the-way"
             }
           ]
+        },
+        {
+          "label": "ev.cail.entry.choice.battuta",
+          "resultText": "ev.ev_cail_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cail-battuta-a",
+              "reason": "heard-of-adams-peak"
+            }
+          ]
         }
       ],
       "lore": {
@@ -1350,9 +1373,12 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-a",
+              "reason": "cambaluc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-a", "reason": "cambaluc-entry-consequence-a" }
           ]
         },
         {
@@ -1378,9 +1404,12 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-b",
+              "reason": "cambaluc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-b", "reason": "cambaluc-entry-consequence-b" }
           ]
         },
         {
@@ -1658,9 +1687,12 @@
               "op": "reveal_map",
               "value": "cascar",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-a",
+              "reason": "cascar-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-a", "reason": "cascar-entry-consequence-a" }
           ]
         },
         {
@@ -1681,9 +1713,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-b",
+              "reason": "cascar-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-b", "reason": "cascar-entry-consequence-b" }
           ]
         },
         {
@@ -1825,9 +1860,12 @@
               "op": "reveal_map",
               "value": "chandu",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-a",
+              "reason": "chandu-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-a", "reason": "chandu-entry-consequence-a" }
           ]
         },
         {
@@ -1848,9 +1886,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-b",
+              "reason": "chandu-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-b", "reason": "chandu-entry-consequence-b" }
           ]
         },
         {
@@ -2412,9 +2453,12 @@
               "op": "reveal_map",
               "value": "cotan",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-a",
+              "reason": "cotan-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-a", "reason": "cotan-entry-consequence-a" }
           ]
         },
         {
@@ -2435,9 +2479,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-b",
+              "reason": "cotan-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-b", "reason": "cotan-entry-consequence-b" }
           ]
         },
         {
@@ -3458,9 +3505,12 @@
               "op": "reveal_map",
               "value": "kinsay",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-a",
+              "reason": "kinsay-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-a", "reason": "kinsay-entry-consequence-a" }
           ]
         },
         {
@@ -3481,9 +3531,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-b",
+              "reason": "kinsay-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-b", "reason": "kinsay-entry-consequence-b" }
           ]
         },
         {
@@ -3505,6 +3558,17 @@
               "id": "dehua-porcelain",
               "value": 1,
               "reason": "bought-local-specialty"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.entry.choice.battuta",
+          "resultText": "ev.ev_kinsay_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-battuta-a",
+              "reason": "heard-of-the-homeward-voyage"
             }
           ]
         }
@@ -3645,9 +3709,12 @@
               "op": "reveal_map",
               "value": "rt-lop-sachiu",
               "reason": "innkeeper-mentions-the-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-a",
+              "reason": "lop-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-a", "reason": "lop-entry-consequence-a" }
           ]
         },
         {
@@ -3672,9 +3739,12 @@
               "scope": "city",
               "id": "lop",
               "reason": "courteous-enquiry"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-b",
+              "reason": "lop-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-b", "reason": "lop-entry-consequence-b" }
           ]
         }
       ],
@@ -3905,6 +3975,17 @@
               "op": "reveal_map",
               "value": "melibar",
               "reason": "found-the-way"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.entry.choice.battuta",
+          "resultText": "ev.ev_melibar_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-melibar-battuta-a",
+              "reason": "heard-of-the-chinese-junks"
             }
           ]
         }
@@ -4296,9 +4377,12 @@
               "op": "reveal_map",
               "value": "ormus",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-a",
+              "reason": "ormus-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-a", "reason": "ormus-entry-consequence-a" }
           ]
         },
         {
@@ -4319,9 +4403,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-b",
+              "reason": "ormus-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-b", "reason": "ormus-entry-consequence-b" }
           ]
         },
         {
@@ -4763,9 +4850,12 @@
               "op": "reveal_map",
               "value": "samarcanda",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-a",
+              "reason": "samarcanda-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-a", "reason": "samarcanda-entry-consequence-a" }
           ]
         },
         {
@@ -4786,9 +4876,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-b",
+              "reason": "samarcanda-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-b", "reason": "samarcanda-entry-consequence-b" }
           ]
         },
         {
@@ -5652,9 +5745,12 @@
               "op": "reveal_map",
               "value": "tauris",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-a",
+              "reason": "tauris-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-a", "reason": "tauris-entry-consequence-a" }
           ]
         },
         {
@@ -5675,9 +5771,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-b",
+              "reason": "tauris-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-b", "reason": "tauris-entry-consequence-b" }
           ]
         },
         {
@@ -6089,6 +6188,45 @@
       "lore": {
         "placeId": "great-city-of-yasdi",
         "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-maldive-entry",
+      "kind": "entry",
+      "title": "ev.maldive.entry.title",
+      "when": {
+        "cities": [
+          "maldive"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.maldive.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.maldive.entry.choice.arrive",
+          "resultText": "ev.ev_maldive_entry.choice_1_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "arrived-at-the-coconut-isles"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ibn-battuta:battuta-c019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
       }
     }
   ]

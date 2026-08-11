@@ -148,7 +148,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-bochara-entry",
-      "sites": [],
+      "sites": [
+        "ev-bochara-battuta-a"
+      ],
       "exits": [
         "rt-bochara-merva",
         "rt-bochara-samarcanda",
@@ -165,6 +167,13 @@
       "calendars": [
         "islamic",
         "turkic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -463,7 +472,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-delli-entry",
-      "sites": [],
+      "sites": [
+        "ev-delli-battuta-a",
+        "ev-delli-battuta-b"
+      ],
       "exits": [
         "rt-delli-cambaet",
         "rt-delli-cotan",
@@ -798,6 +810,13 @@
       "calendars": [
         "islamic",
         "turkic"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c022",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -869,6 +888,11 @@
           "book": "changchun",
           "chapterId": "changchun-samarkand",
           "title": "邪米思干"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013",
+          "title": "The Rihla"
         }
       ]
     },
