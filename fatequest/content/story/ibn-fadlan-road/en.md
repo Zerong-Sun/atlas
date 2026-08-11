@@ -848,3 +848,195 @@ You wait until the ice falls silent and cross in single file. You spend 1 day be
 ## ev.ev_road_fadlan_35.choice_2_result
 
 You press on quickly while the ice still holds. It costs you 1 day on the road. Fortune bends a little your way.
+
+## codex.cx-fadlan-cold.name
+
+The Cold of the North
+
+## codex.cx-fadlan-cold.body
+
+You have come to know the north by its cold. The Jayhun lay frozen seventeen spans thick, and horses, mules, and laden carts moved upon it as upon a paved road while your breath hung white before your face. Mid-winter you wore three coats and could not mount without help; water froze in your beard, and every drink began as ice melted in a cauldron. The Itil stood solid enough to cut blocks from. A Turkic woman taught you two pairs of felt boots over horse-hide soles, for cold enters through the feet before the chest. At night the ice boomed beneath you — the guide said the river speaks when the night air falls faster than the water below.
+
+## codex.cx-fadlan-darkness.name
+
+The Land of Darkness
+
+## codex.cx-fadlan-darkness.body
+
+Fur merchants who have entered the Land of Darkness told you how they rope themselves wrist to wrist before stepping into the mist where sun and moon never show. A man who loses the line is not found again. They lay out blades and goods, then retreat; when they return, pelts lie beside what they left. You learned how the line is tied and how the goods are marked, and you weigh whether any profit is worth that mist.
+
+## codex.cx-fadlan-captives.name
+
+A Coffle on the Forest Road
+
+## codex.cx-fadlan-captives.body
+
+You met a coffle of captives driven north under guard — men and women bound wrist to wrist, some barefoot on the frozen track. The guard said they were bound for the Bulghar market and beyond. You could not undo the chain; you walked beside them a mile, recorded names and numbers as you could, and wrote what you saw. The account is set down before the hour turns.
+
+## codex.cx-fadlan-aurora.name
+
+The Sky Armies
+
+## codex.cx-fadlan-aurora.body
+
+On your first night in these northern latitudes the horizon turned a brilliant red before the sun had fully set. Above you, a bank of mist held the shapes of horsemen with lances, and a second cloud advanced as if to charge the first. Your companions prayed; the Turkic herders only laughed and said the sky armies fight every evening. You stood watch and recorded what you saw, and the account was written down before the hour turned.
+
+## codex.cx-fadlan-gog.name
+
+Tales of Gog and Magog
+
+## codex.cx-fadlan-gog.body
+
+Around the evening fire a merchant retold how the Bulghar king once rode to the Itil in flood season and found a man swimming — twelve cubits tall, with a head like the largest cooking pot. Messengers from Wīsū, three months distant, wrote that he belonged to the people of Gog and Magog beyond the sea. You marked the tale as hearsay, yet asked whether any living man had seen such a figure. The north keeps such stories close.
+
+## codex.cx-fadlan-burial.name
+
+The Fire-Burial of the Rus
+
+## codex.cx-fadlan-burial.body
+
+From a bluff above the river you watched without approaching: a great man lay in a boat-shaped grave, dressed for the road ahead, with horses sacrificed and their heads set on stakes. An old woman called the Angel of Death moved among the company, arranging what must be done before the pyre was lit. You recorded the stages of the rite in order, and did not speak ill of what you could not fully understand.
+
+## codex.cx-fadlan-caspian.name
+
+The Islands of the Caspian
+
+## codex.cx-fadlan-caspian.body
+
+Traders at a caravan halt spoke of Abū Hāmid's voyage among the Caspian isles — a mountain of black clay, an island where sea birds nest among serpents unharmed, and another where only voices are heard. One man claimed his uncle saw the Island of Sheep, where mountain ewes stand thick as locusts. You paid a sailor for a rough chart of the island routes and weighed whether to alter your course toward the coast.
+
+## codex.cx-fadlan-furs.name
+
+Furs of the Northern Rivers
+
+## codex.cx-fadlan-furs.body
+
+Bulghar brokers spread their wares: beaver and ermine from the northern rivers, and tusks dug from the earth white as snow and heavy as lead. No one agreed what beast left them; some said the bones of ancient peoples, others trade goods bound for Khwarazm. On the sledge road you met a train of black fox and sable pressed in oilcloth, come down the Khazar river from Burtas country, bound for Darband and beyond. You noted the marks of origin; the weight of fur is warmth itself.
+
+## codex.cx-fadlan-barter.name
+
+Silent Barter
+
+## codex.cx-fadlan-barter.body
+
+At a forest clearing you watched merchants lay bare blades and cow bones upon the snow, mark each pile, and withdraw out of sight. When they returned, sable skins lay beside some goods while others stood untouched. Footprints in the drifts showed long boards tied to the feet of men who never showed their faces. You recorded the rules of the silent exchange.
+
+## codex.cx-fadlan-iram.name
+
+Iram of the Pillars
+
+## codex.cx-fadlan-iram.body
+
+A Khwarazmian pilgrim told of a canyon eight farsakhs from the city where a mound rises from stagnant water, topped by a dome bright with gold tiles. Men say it is Iram of the pillars, or a mosque enchanted by the giants of old who marched north from Ad. Anything that touches the water vanishes, and no boat thrown upon it is ever seen again. You turned aside two days toward the canyon marvel.
+
+## codex.cx-fadlan-khwarazm.name
+
+The Orchards of Khwarazm
+
+## codex.cx-fadlan-khwarazm.body
+
+You turned south-west with a party bound for Khwarazm, where Abū Hāmid once sailed the Caspian and came home by a hundred farsakhs of orchards. The brokers promised melons sweet as honey kept through winter, and grapes as large as dates. The steppe lay behind you; ahead the towns grew denser and the wind milder. You entered Khwarazm and rested in the melon markets.
+
+## codex.cx-fadlan-wall.name
+
+The Wall of the Barrier
+
+## codex.cx-fadlan-wall.body
+
+An old courier retold how Sallām the Interpreter left Samarra with felt coats and fur boots to find the barrier raised by Dhū al-Qarnayn. Letter followed letter — Armenia, the Alan king, the Khazar tarkhān — until the earth turned black and smelled of rank soil. You asked which passes still lead toward the northern barrier, and wondered whether any wall still stands between the settled lands and the peoples of the far north.
+
+## codex.cx-fadlan-radhaniya.name
+
+The Radhaniya Road
+
+## codex.cx-fadlan-radhaniya.body
+
+At a steppe crossing you met Radhaniya merchants who spoke Arabic, Persian, and Frankish in one breath, and Rus traders with beaver pelts and bare sword blanks. The one party came by camel from Faramā; the other by river from the farthest Slavic forests. Their routes meet here as Ibn Khurradādhbih once mapped them. You shared road news and paid for a written list of safe halts on the Rus road.
+
+## codex.cx-fadlan-khazar.name
+
+The Court of the Khazar Khaqan
+
+## codex.cx-fadlan-khazar.body
+
+Travellers from Itil spoke of two rulers: a king who leads armies, and a khaqan who lives sequestered in the inner palace and never mounts a horse. When famine or defeat comes, the people may demand the khaqan's life, saying his reign has brought ill fortune. You recorded the court customs as Mas'udi described them, and wondered how long the office can endure.
+
+## codex.cx-fadlan-midnight-sun.name
+
+The Night That Barely Comes
+
+## codex.cx-fadlan-midnight-sun.body
+
+In Bulghar country the twilight lingered so long that a man could scarcely boil a pot between sunset and dawn. A timekeeper swore the shortest night was four and a half hours, and farther north still less. You stayed awake one full cycle and measured the light; sleep comes oddly when the sky never fully darkens.
+
+## codex.cx-fadlan-bulghar.name
+
+The Bulghar Market
+
+## codex.cx-fadlan-bulghar.body
+
+You reached a seasonal market where Bulghar brokers traded honey, wax, arrows, birch wood, and furs of every grade. Grey squirrel and ermine hung beside fish teeth and amber brought from rivers you have not yet seen. You walked the rows and catalogued what the north exports; the list ran longer than your ink would comfortably hold.
+
+## codex.cx-fadlan-sleds.name
+
+Dog Sleds and Bone Skates
+
+## codex.cx-fadlan-sleds.body
+
+Biruni's account came alive before you: men drag provisions on wooden sleighs, or let great dogs pull them, and others glide on bone skates across crusted snow. A relay master offered to carry your pack one day's journey to the next post. You paid for the dog sled relay and marked what the dogs know about the ice that no rider does.
+
+## codex.cx-fadlan-enclosed.name
+
+The Nations of the Enclosed Mountains
+
+## codex.cx-fadlan-enclosed.body
+
+A Novgorod merchant told how his servant reached the Iughra and heard cries within mountains that slope to the sea. Through a narrow opening, unseen hands pointed at iron blades and left furs in exchange. He believes them the nations Alexander walled away, though no one has seen their faces. You wrote the tale as you heard it, without embellishment.
+
+## codex.cx-fadlan-sibir.name
+
+Sibir and the Tower
+
+## codex.cx-fadlan-sibir.body
+
+An official from Bulghar spoke of Sibir and Julmān beyond Afīkūn, where snow covers house and plain six months of the year. Some say Alexander raised a tower at the edge of the world; others only that the cold wastes men until they boil the same bones seven times. You asked the marching days between Bulghar and Sibir; the names felt very far.
+
+## codex.cx-fadlan-koumiss.name
+
+The Host's Bowl
+
+## codex.cx-fadlan-koumiss.body
+
+A Turkic host offered you a bowl of koumiss fermented one day and one night — still mild, still lawful to drink without intoxication. He waited until you had tasted before he spoke of the road ahead. You accepted the bowl, drank once, and asked his blessing on the road, for to refuse the bowl is to refuse the tent.
+
+## codex.cx-fadlan-salt.name
+
+Salt and the Aral Shores
+
+## codex.cx-fadlan-salt.body
+
+A slow train of camels passed, each bearing slabs of salt crust from the shallow southern sea; the drivers said the water recedes in summer and leaves white fields hard enough to cut with an axe. They trade the salt north for fish and south for millet. Later you saw water shining on the horizon — reeds, birds, the ripple of wind — yet the nearer you rode, the more the ground crunched white underhoof. It was a salt flat, not a lake, and the caravan turned aside lest the hooves break through the shell into brine.
+
+## codex.cx-fadlan-omen.name
+
+The Steppe Eclipse
+
+## codex.cx-fadlan-omen.body
+
+Mid-march, the sun thinned to a crescent and the steppe darkened though it was not yet evening. Some riders shouted that heaven warned the caravan; others said the astronomers of Bukhara had predicted it. The horses shied and would not line until the light returned. You recorded the hour and what the riders said, and saw how the sky itself becomes an omen on open grass.
+
+## codex.cx-fadlan-kurgan.name
+
+An Opened Tumulus
+
+## codex.cx-fadlan-kurgan.body
+
+Beside the track rose a kurgan already breached — prior diggers had left bones and broken pottery scattered down the slope. The elders said the mound had held a horse lord of an earlier age. You surveyed the mound and sketched what the diggers left; nothing of value remained, only the wind in the hollow crown.
+
+## codex.cx-steppe-road.name
+
+The Steppe Road
+
+## codex.cx-steppe-road.body
+
+Before the Gate of the Turks, caravan masters spoke of an akilavuz — a guide bred to these roads, who knows where the snow lies knee-deep and which ribāt still keeps fodder; without him you may wander ten days on the steppe and meet no soul. The road itself is crossings: hide boats stretched on saddle frames where rivers run too swift for wading, a crossroads where Radhaniya and Rus routes meet, and low yurts where a sick child waits for water and herbs while the caravan master signals to move. You have written all of it down as part of the road.

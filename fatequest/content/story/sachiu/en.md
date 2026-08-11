@@ -36,3 +36,7 @@ Arriving at Sachiu
 ## ev.ev_sachiu_entry.choice_1_result
 
 You pass through. You carry away a small sign of the place. You set what you saw into your travel book.
+
+## codex.cx-tangut-rites.body
+
+After thirty days of desert you come to Sachiu, in the province of Tangut, a city lying on the edge of the Great Desert where the caravans restock after the terrible crossing. The people are for the most part Idolaters, with a peculiar language of their own; they are no traders, but live by the fruits of the earth. They have many abbeys and minsters, all full of idols of divers fashions, to which they pay great honour and show reverence. Their dead are burned on pyres, and the ashes are gathered and kept — you watched a burial and set it down in your book.

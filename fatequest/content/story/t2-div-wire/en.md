@@ -329,3 +329,47 @@ You cross without a mark. The matter is marked and will not be forgotten.
 ## ev.ev_road_bazi_counsel.choice_2_result
 
 You walk on. A mark is set on this affair.
+
+## codex.cx-astrodice.name
+
+The Star-Dice of Tauris
+
+## codex.cx-astrodice.body
+
+You learned the star-dice in two harbours: the pilot of Ormus keeps planet, sign, and house dice in a leather cup, and the reader at Tauris sets the same three beside the card table. The cast is for the hour of departure — the timing of a voyage, not luck, though sailors still call a bright throw great fortune. The houses speak of the road as it will be when you take it.
+
+## codex.cx-geomancy.name
+
+The Sixteen Figures
+
+## codex.cx-geomancy.body
+
+You learned the sixteen figures from the sand-reader of Baldacum, who marks them in the dust — which open a road, which stop it, and which hold you a day. At Alexandria the same art casts near the warehouses for risk on the sea lanes and the desert posts alike, and you learned to ask what Populus means for a voyage. He spoke great fortune and great ill omen without shame; the sand does.
+
+## codex.cx-jiaobei.name
+
+The Cups of Zayton
+
+## codex.cx-jiaobei.body
+
+You learned the temple cups from the reader at Kinsay, and found them waiting at Zayton's temple threshold. The cups give three answers — leave, refuse, or ask again. A bright answer is called great fortune; a dark one, great ill omen — and still you must choose a road. When the cups laugh, she said, that is not failure; it is the craft admitting it has no counsel yet.
+
+## codex.cx-runes.name
+
+Runic Staves of the North
+
+## codex.cx-runes.body
+
+You learned twenty-four birch staves from the carver at Kiovia, who cuts a mark into birch before every ford and reads the winter roads. When Fehu falls he names great fortune; when Hagalaz does, great ill omen. At Caffa a northern trader casts the same marks on the quay for the steppe road inland, and you learned how a single rune is drawn, and what Raidho names on the quay.
+
+## codex.cx-four-pillars.body
+
+You learned the four pillars from a calendar master at Baldacum. He reads a time in four columns, and from them a three-year travel window: a way that lies shut this season may lie open in the next. The master reads the years the road is open, so a journey may be timed to a window that will carry it. The pillars speak in years, and the choice stays yours.
+
+## codex.cx-hexagrams.body
+
+You learned the hexagrams from a chronologer of the Astronomical Bureau at Cambaluc, who sat with you fourteen days and taught the casting of hexagrams for the road. He does not ask after fortune. He asks after time and position — which season a road is open, and where a man stands when he chooses it. The cast sets the standing of the moment, and the reading is that.
+
+## codex.cx-tarot.body
+
+You learned the tarot from a Frankish widow at Tauris. Her spreads weigh gain against cost, and the rule of choice at forks — when two post-roads split, you lay a choice-gate and compare what each road would gain and what it would cost. She does not name the outcome. She weighs the choice before it is made.

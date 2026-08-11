@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: b96f0ff55a9d
+source_rev: 2fe8835b44eb
 status: translated
 translator: 人工校译
 notes: >
@@ -142,6 +142,8 @@ stamps:
   ev.ev_zayton_mentor_jiaobei_followup.choice_2_result: 3656d8afbd53
   ev.ev_zayton_mentor_jiaobei_followup.choice_3: c66e5cd5f920
   ev.ev_zayton_mentor_jiaobei_followup.choice_3_result: c73bb57ce6bc
+  codex.cx-zayton-watch.name: 95bac79e64a2
+  codex.cx-zayton-watch.body: e703b0336670
 ---
 
 ## city.zayton.name
@@ -691,4 +693,14 @@ stamps:
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
 
 你与这三只杯坐过整个下午，记住了它们的轻重，黄昏时把它们留还庙中。侍者记下你的耐心，坊间也对你有了好话。
+
+## codex.cx-zayton-watch.name
+
+刺桐夜巡
+
+## codex.cx-zayton-watch.body
+
+入夜，刺桐港便交给巡夜人。瞭望所彻夜亮着一盏灯，码头的名册就着灯核验每一笔上岸的货物；
+凡找不到记号者，领头人并不拔刀，只把一块迟报木牌放在桌上——补交费用，或让货物留仓查验两日。
+夜间的巡守自有一本账，记下每一道影子。刺桐的夜自有它的规矩，规矩认得每个人的名字。
 

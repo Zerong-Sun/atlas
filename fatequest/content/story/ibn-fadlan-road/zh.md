@@ -2,7 +2,7 @@
 unit: ibn-fadlan-road
 lang: zh
 source: en
-source_rev: a11614024ca1
+source_rev: 642878dd4ab7
 status: translated
 translator: 人工校译
 notes: >
@@ -219,6 +219,54 @@ stamps:
   ev.ev_road_fadlan_34.choice_2_result: 502837b3cad9
   ev.ev_road_fadlan_35.choice_1_result: 2a6cf2dd1d03
   ev.ev_road_fadlan_35.choice_2_result: 77ef9addd5ca
+  codex.cx-fadlan-cold.name: 271457138b39
+  codex.cx-fadlan-cold.body: 65415a8c76b8
+  codex.cx-fadlan-darkness.name: 1e9b8479eace
+  codex.cx-fadlan-darkness.body: 3504a3c9d8f6
+  codex.cx-fadlan-captives.name: 3faa45326166
+  codex.cx-fadlan-captives.body: a65b745530e7
+  codex.cx-fadlan-aurora.name: bc18de96865e
+  codex.cx-fadlan-aurora.body: 75c4120a6364
+  codex.cx-fadlan-gog.name: 0ea1ae03a5c0
+  codex.cx-fadlan-gog.body: 86953c632ecb
+  codex.cx-fadlan-burial.name: 083d709fad2e
+  codex.cx-fadlan-burial.body: 584f1cfd86a7
+  codex.cx-fadlan-caspian.name: b958c420ec78
+  codex.cx-fadlan-caspian.body: b488a2430ea9
+  codex.cx-fadlan-furs.name: dfc7ed07fc42
+  codex.cx-fadlan-furs.body: 30a90e3fc4b2
+  codex.cx-fadlan-barter.name: 2584bcf11d3c
+  codex.cx-fadlan-barter.body: 89c097a7e135
+  codex.cx-fadlan-iram.name: 82e853ea0b24
+  codex.cx-fadlan-iram.body: a9de454e3ca0
+  codex.cx-fadlan-khwarazm.name: 625b6e4c9ec2
+  codex.cx-fadlan-khwarazm.body: be01574de716
+  codex.cx-fadlan-wall.name: c9e223af44ce
+  codex.cx-fadlan-wall.body: 01054b2c78d7
+  codex.cx-fadlan-radhaniya.name: 731295b9308d
+  codex.cx-fadlan-radhaniya.body: 1fc5f5f1da55
+  codex.cx-fadlan-khazar.name: 0f3d77108578
+  codex.cx-fadlan-khazar.body: 8c2516c79970
+  codex.cx-fadlan-midnight-sun.name: e5ee541089ea
+  codex.cx-fadlan-midnight-sun.body: d8d683cac002
+  codex.cx-fadlan-bulghar.name: f54aa4b6d71a
+  codex.cx-fadlan-bulghar.body: 09c37f990fd2
+  codex.cx-fadlan-sleds.name: 589ee9183080
+  codex.cx-fadlan-sleds.body: c14988dc4b74
+  codex.cx-fadlan-enclosed.name: edbe9703b359
+  codex.cx-fadlan-enclosed.body: 5771da3c1ac7
+  codex.cx-fadlan-sibir.name: 275d9efb5e1b
+  codex.cx-fadlan-sibir.body: 6064f837d351
+  codex.cx-fadlan-koumiss.name: 8b86ab4cd7d5
+  codex.cx-fadlan-koumiss.body: 8b855fe0fd83
+  codex.cx-fadlan-salt.name: 9a3726f5057a
+  codex.cx-fadlan-salt.body: 2a14ccba9225
+  codex.cx-fadlan-omen.name: 33100420ed6d
+  codex.cx-fadlan-omen.body: 135f04283129
+  codex.cx-fadlan-kurgan.name: 23fc6c94f214
+  codex.cx-fadlan-kurgan.body: 6d62c3f8638e
+  codex.cx-steppe-road.name: 4fa0b4f013fd
+  codex.cx-steppe-road.body: 23df42ec9698
 ---
 
 ## ev.road.fadlan_01.title
@@ -1060,3 +1108,195 @@ stamps:
 ## ev.ev_road_fadlan_35.choice_2_result
 
 你趁冰尚坚，疾行而过，为此费去你 1 日路程。气运稍稍偏向于你。
+
+## codex.cx-fadlan-cold.name
+
+寒狱之门
+
+## codex.cx-fadlan-cold.body
+
+行至药浑，见河自岸至岸尽冻，冰厚十七拃，车马行其上如行坦途。仲冬趋新萨莱，衣三重仍须人扶上马，面水结于须中，饮水皆凿冰化之。突厥妇人教余系毡靴于马皮底上，双层一常一絮，谓寒自足入，先于胸至。夜行冻河，忽闻冰下轰鸣，裂纹溯流而上，如布裹雷，待声远去，方敢再行。
+
+## codex.cx-fadlan-darkness.name
+
+暗地结绳
+
+## codex.cx-fadlan-darkness.body
+
+尝闻曾入暗地之裘商言：入雾前以绳联腕——日月至不了之处，失线者不复得。彼等陈列货物即退，再返则皮货在，刃仍在。余学其结绳标货之法，然终不敢轻入；录之以备后行。
+
+## codex.cx-fadlan-captives.name
+
+北行押队
+
+## codex.cx-fadlan-captives.body
+
+余行林道，遇一押队北行——男女腕系于链，有赤足行冻土者。守卫言，将赴不里加尔市乃至更远。链非余所能解，然所见不可不记；余并行一里，录其人数状貌，存为见证。
+
+## codex.cx-fadlan-aurora.name
+
+赤雾天兵
+
+## codex.cx-fadlan-aurora.body
+
+初入北地，日未全没而天际尽赤。空中有赤雾，形若持槊骑者；又有一团雾来，如两军对垒。同行皆伏地祷告，突厥牧人但笑，言天兵每夕交战，自古如此。余立而观之，记其象，不敢妄断其故。
+
+## codex.cx-fadlan-gog.name
+
+河中巨人
+
+## codex.cx-fadlan-gog.body
+
+暮火之侧，商人言：不里加尔王曾于伊提尔河涨水时，见一人泅水，高十二肘，首大如巨釜。又威斯人函告，谓其属歌革玛各族，居海彼岸。余录为传闻；然北地此类故事不绝，姑记之以俟考。
+
+## codex.cx-fadlan-burial.name
+
+罗斯人船葬
+
+## codex.cx-fadlan-burial.body
+
+余立河岸高坡远观，不近前：贵人卧舟形墓中，衣装整备，马既献祭，首悬木桩。一老妪，人呼死亡之天使，往来指挥，俟火起前诸事须备。余记其仪序，于未能尽解之事，不加妄议。
+
+## codex.cx-fadlan-caspian.name
+
+里海诸岛
+
+## codex.cx-fadlan-caspian.body
+
+于商队停处，闻贾人言阿布·哈米德里海诸岛之行：有黑土之山，有蛇与海鸟共栖之岛，有但闻人声而无人迹之岛；又有人称叔父曾见羊岛，山羊之牝厚如蝗。余思改道赴岸，终仍走陆路，而携其说以行。
+
+## codex.cx-fadlan-furs.name
+
+海狸皮与土中牙
+
+## codex.cx-fadlan-furs.body
+
+不里加尔经纪人陈列北河海狸、白鼬皮，又有自土中掘出之牙，白如雪，重如铅；兽主为何，众说不一，或言古人之骨。道上雪橇南行，各载黑狐、黑貂皮，油布紧束，自可萨河、布尔塔斯地而来，将赴达尔班。裘皮之重，即暖之所在。
+
+## codex.cx-fadlan-barter.name
+
+林边默市
+
+## codex.cx-fadlan-barter.body
+
+余至一空场，见贾人置裸刃与牛骨于雪上，各标其号，遂退避远观。再返，有处旁置黑貂皮，有处原物仍在；雪中足迹系长板于足，其人终不露面。余观默市规矩，录而传之。
+
+## codex.cx-fadlan-iram.name
+
+金穹神寺
+
+## codex.cx-fadlan-iram.body
+
+尝闻花剌子模朝觐者言：离城八法尔萨克有谷，臭水环人工丘，丘上圆顶金瓦耀目。或谓即伊拉姆柱城，或谓古阿德巨人北征所建神异清真寺；物触水即没，投舟亦不复见。余录其说，以存异闻。
+
+## codex.cx-fadlan-khwarazm.name
+
+花剌子模
+
+## codex.cx-fadlan-khwarazm.body
+
+余随南西行者赴花剌子模——阿布·哈米德昔自里海归，经百里果园之地。经纪人许以蜜甜之瓜，冬存不腐；葡萄大如枣。出草原，前路市镇渐密，风亦和矣。余于瓜市歇息，买瓜尝之，甘美如所言。
+
+## codex.cx-fadlan-wall.name
+
+萨拉姆与铁障
+
+## codex.cx-fadlan-wall.body
+
+老驿卒述：译官萨拉姆自萨迈拉出，裘靴齐备，往寻两角者所筑之障。文书递传——亚美尼亚、阿兰王、可萨塔尔汗——终至土地尽黑，秽气扑鼻，而障犹未至。余问何隘可通北障，思北地与定居诸国之间，果有墙在否。
+
+## codex.cx-fadlan-radhaniya.name
+
+拉达尼雅商人
+
+## codex.cx-fadlan-radhaniya.body
+
+草原岔口，遇拉达尼雅贾人，一语间阿拉伯、波斯、法兰克语并用；又有罗斯商人，携海狸皮与无柄剑胚。前者自法拉马驼道而来，后者自斯拉夫林深处水程而至。其道于此交汇，如伊本·胡尔达兹比昔所记。
+
+## codex.cx-fadlan-khazar.name
+
+可萨可汗之廷
+
+## codex.cx-fadlan-khazar.body
+
+自伊提尔来者言：可萨国有二主——一王掌军，一可汗幽于内宫，不骑马，不出见。遇饥馑或战败，民众或请杀可汗，谓其在位致祸。余按马苏第所记录朝仪，思此虚位之尊，不知其能久否。
+
+## codex.cx-fadlan-midnight-sun.name
+
+短夜
+
+## codex.cx-fadlan-midnight-sun.body
+
+在不里加尔境，暮至旦之间短促，人不及把釜水烧开。余与守时者同坐，彼言至短之夜仅四半时辰，愈北愈短。眠意来处怪异，天终不完全黑。余一昼夜不寐，量其明晦，始信其言不虚。
+
+## codex.cx-fadlan-bulghar.name
+
+不里加尔货物
+
+## codex.cx-fadlan-bulghar.body
+
+余至一季市，不里加尔经纪人售蜜、蜡、箭、桦木及各级皮毛。灰鼠、白鼬与鱼牙、琥珀同悬，皆自未历之河而来。余遍历货行，记北地所出；货单之长，按纸难尽。
+
+## codex.cx-fadlan-sleds.name
+
+犬橇与骨滑橇
+
+## codex.cx-fadlan-sleds.body
+
+比鲁尼所述，今见于目前：或手拖木橇负粮，或令大犬牵引，又有人以骨橇行坚雪之上。一驿主愿替余负囊一日程至下一站。犬比骑手更识冰路，余付资乘犬橇而行。
+
+## codex.cx-fadlan-enclosed.name
+
+封闭诸族
+
+## codex.cx-fadlan-enclosed.body
+
+有诺夫哥罗德商人言：其仆至尤格拉，闻倾海之山中有呼号。窄缝之外，无形之手指铁刃，留皮货为换。彼谓乃亚历山大封闭之族，然终无人见其面。余据闻直录，不加增饰。
+
+## codex.cx-fadlan-sibir.name
+
+西伯利亚与高塔
+
+## codex.cx-fadlan-sibir.body
+
+不里加尔吏言：阿菲昆之外有西伯利亚、朱尔曼，雪覆屋与野六阅月。或谓亚历山大于世界边缘立塔；或仅言寒极，人至七度煮同一骨。其名于口尚生疏，却觉极远。余问程日，谢其言而南行。
+
+## codex.cx-fadlan-koumiss.name
+
+马奶与主人之碗
+
+## codex.cx-fadlan-koumiss.body
+
+突厥主人献马奶酒，发酵仅一日一夜——味尚淡，饮之未至大醉。彼待余尝后方言前路；拒碗即拒其帐。余接碗饮一口，求其祝路，主人乃为余言前路之利病。
+
+## codex.cx-fadlan-salt.name
+
+盐原与幻湖
+
+## codex.cx-fadlan-salt.body
+
+天际水光熠熠，芦苇、鸟影、风纹皆见——愈近愈闻蹄下白土作声，此非湖，乃盐原，其光为盐壳映日，商队改道，恐壳破没于卤。道上盐队负浅海南岸所割盐块，夏月水退，白野坚可斧切；彼以盐北换鱼，南换粟。
+
+## codex.cx-fadlan-omen.name
+
+草原日蚀
+
+## codex.cx-fadlan-omen.body
+
+行旅中忽日成弯月，草原暗而未暮。有骑者呼天道警商队；又有人言，布哈拉天文学家早已预告。马惊不合队，待光复方静。余记其时与骑者之言。
+
+## codex.cx-fadlan-kurgan.name
+
+已开之丘墓
+
+## codex.cx-fadlan-kurgan.body
+
+道旁一丘冢已被先开——断骨破陶，散于坡。长老言，昔葬马部贵人。已无值钱之物，唯风入空顶。余勘其遗，绘其所留形制，然后任死者归风，继续行。
+
+## codex.cx-steppe-road.name
+
+草原之路
+
+## codex.cx-steppe-road.body
+
+草原之道，无导引难行：向导阿基拉武兹知何处雪没膝、何处驿站尚存草料，无此人引路，或十日不见商队人烟。道上岔口，拉达尼雅与罗斯商道交汇；渡河则展骆驼皮舟，以圆鞍架撑之，马驼随后游过。又见妇人于毡帐呼救，其子高热，医者在南二日程。余记此途诸状，以备后来者。

@@ -2,7 +2,7 @@
 unit: sachiu
 lang: zh
 source: en
-source_rev: 7706c78f3bc7
+source_rev: 3f5b6ea4e955
 status: translated
 translator: 人工校译
 notes: >
@@ -16,6 +16,7 @@ stamps:
   ev.sachiu.entry.body: b15893bed8fb
   ev.sachiu.entry.title: 6c09e3c4f982
   ev.ev_sachiu_entry.choice_1_result: 3444d3cc772f
+  codex.cx-tangut-rites.body: da5c1d3cdb4f
 ---
 
 ## city.sachiu.name
@@ -40,3 +41,9 @@ stamps:
 ## ev.ev_sachiu_entry.choice_1_result
 
 你经过，你带走此地的一枚小小印记。你把这番见闻记入行纪。
+
+## codex.cx-tangut-rites.body
+
+沙州属大汗，在唐古忒省。其偶像教徒有特别的语言，不做买卖，靠田土之果为生；有许多寺院庙宇，
+满是各式偶像，敬崇备至。他们的丧葬之礼以火化为要：人死则焚尸而葬。我在此目击了这火化之礼，
+连同满寺的偶像与敬崇，一并写进了行纪。

@@ -87,6 +87,17 @@ stamps:
   ev.ev_road_runes_counsel.choice_2_result: cfd195ed21a9
   ev.ev_kiovia_runes_ford.choice_2_result: b33fd46e9124
   ev.ev_road_bazi_counsel.choice_2_result: 43a2651fe4a5
+  codex.cx-astrodice.name: 8654548e8518
+  codex.cx-astrodice.body: 6c84208d5a4c
+  codex.cx-geomancy.name: 6cbdf2367593
+  codex.cx-geomancy.body: b953fa55cb4e
+  codex.cx-jiaobei.name: 361aeac5492b
+  codex.cx-jiaobei.body: 78e74acffd6f
+  codex.cx-runes.name: 2584e156dd44
+  codex.cx-runes.body: aaf0cc73b659
+  codex.cx-four-pillars.body: 0996042daf29
+  codex.cx-hexagrams.body: 81f37fad59a0
+  codex.cx-tarot.body: c7f2f9165905
 ---
 
 ## npc.npc-kiovia-mentor.name
@@ -412,3 +423,47 @@ stamps:
 ## ev.ev_road_bazi_counsel.choice_2_result
 
 你不问便走，这件公案，就此有了着落。
+
+## codex.cx-astrodice.name
+
+大不里士星骰
+
+## codex.cx-astrodice.body
+
+于忽鲁谟斯学得星骰。领航人把行星、宫位诸骰收在皮筒里，为出航择时而掷——水手仍把亮骰唤作大吉。及至大不里士，牌桌旁又有人执三骰，专问出发的时辰。三骰以游星命名，天盘各宫为路途的每一段定名：问的不是吉凶，是何时启程。
+
+## codex.cx-geomancy.name
+
+沙盘
+
+## codex.cx-geomancy.body
+
+于报达学得沙盘。沙盘师在尘土上点十六象，何象开路，何象止行，何象留你一日；大吉大凶他照说——沙子本就如此。及至亚历山大，货仓旁的沙盘师又为海路与沙漠驿站问风险；我曾问众象与航程，众象之间自有一段可读。
+
+## codex.cx-jiaobei.name
+
+刺桐筊杯
+
+## codex.cx-jiaobei.body
+
+于刺桐与行在学得筊杯。庙祝传授三答：准，不准，再问。两枚杯筊以落势作答，亮答人称大吉，暗答人称大凶；笑杯不是失败，而是此法承认这一次无话可说——仍须自择其路。
+
+## codex.cx-runes.name
+
+卢恩
+
+## codex.cx-runes.body
+
+于基辅学得卢恩。刻手在桦杖上刻二十四符，教渡口与冬路；每逢渡口，他先在桦木上落刀。Fehu落出便是大吉，Hagalaz则是大凶。及至卡法，码头上的北方商人为内陆草原路掷卢恩——我曾问此埠Raidho之意。
+
+## codex.cx-four-pillars.body
+
+于报达闻四柱之法。历算先生据生辰排四柱，教你看三年内的行路窗口；历法如何服务于行路，他逐一演示。四柱为人生分定季节，行路亦有季——最后他把历书翻到一页，说那一年你会用得上。
+
+## codex.cx-hexagrams.body
+
+于大都闻易占之法。太史署的先生愿以十四日授起卦观路，不问吉凶，只问时位：哪一季路开，人又站在何处择它。每一卦为道路的转折命名——六十四卦写进了我的行纪，解卦之法仍在他手里。
+
+## codex.cx-tarot.body
+
+于大不里士闻塔罗之法。法兰克商人的遗孀以牌阵教人看岔路：权衡收益与代价，再论选择的原则。她摆出双选门，每一张牌是一条路的解——牌艺写进了我的行纪，布牌仍在她手里。

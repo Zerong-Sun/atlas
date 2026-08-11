@@ -258,6 +258,18 @@ Latin
 
 Steppe
 
+## ui.culture.islamic
+
+Islamic
+
+## ui.culture.east_asia
+
+East Asia
+
+## ui.mute
+
+Mute
+
 ## ui.date.full
 
 %d/%d/%d

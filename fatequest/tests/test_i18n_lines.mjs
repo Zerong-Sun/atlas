@@ -155,6 +155,17 @@ function walk(dir) {
       }
       for (const c of r.choices ?? []) {
         if (c.label) { tableRefs++; if (!en[c.label]) { ok(false, `${f}: "${r.id}" → choice "${c.label}" not in en.json`); tableMissing++; } }
+        // A granted codex/sticker must have both a name and a body (G17 twin).
+        const groups = [...(c.effects ?? []), ...(c.pass?.effects ?? []), ...(c.fail?.effects ?? [])];
+        for (const g of groups) {
+          if (g.op === "codex" || g.op === "sticker") {
+            for (const p of ["name", "body"]) {
+              const k = `${g.op}.${g.value}.${p}`;
+              tableRefs++;
+              if (!en[k]) { ok(false, `${f}: "${r.id}" grants "${k}" — not in en.json`); tableMissing++; }
+            }
+          }
+        }
       }
     }
   }

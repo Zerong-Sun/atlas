@@ -455,3 +455,15 @@ Thank the listener and mark the road he has shown
 
 You thank the listener and walk east along the road he has marked. The way to Sachiu is drawn
 before you, and you carry his counsel unspoken.
+
+## codex.cx-desert-of-lop.body
+
+Men say of the Desert of Lop that no one could ride across it in a year, and where it is narrowest it still takes a month; it is all sand and barren mountains, with nothing at all to eat. Travellers who mean to cross rest a week at Lop and load provision for a month for man and beast, since in a day and a night you find sweet water enough for fifty or a hundred persons with their beasts. The walls of the caravanserai keep the record of the crossing: names of travellers who made it, prayers for those who did not, and the monks' charcoal account of the days between wells and the bad water.
+
+## codex.cx-jade-rivers.body
+
+The jade of Lop's market comes down from the streams above Cotan, where the waters run from the snow mountains and lay their gravel bare when the autumn rivers fall. The best stones are gathered in the weeks when the water is low, and the dealers keep them on black velvet to show the colour — a piece of mutton-fat white jade the size of a man's fist costs more than a camel. A man who knows the season may buy at the source for a tenth of the bazaar price; the rivers run east, and their course bends toward Sachiu.
+
+## codex.cx-desert-voices.body
+
+If you cross the Desert of Lop by night and chance to lag behind your company or fall asleep, when you try to rejoin it you hear spirits talking in the air, and the voices seem to be those of your companions. Sometimes they call you by name; a traveller may be led away so that he never finds his party again, and many have perished in this way. Even by daylight you may hear these spirit-voices, and now and then the sound of instruments — drums, fifes — playing in the air. Such are the perils of the Desert of Lop.

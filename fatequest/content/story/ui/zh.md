@@ -71,6 +71,9 @@ stamps:
   ui.culture.indian_ocean: dab33c75b13f
   ui.culture.latin: 2d38c456a2ec
   ui.culture.steppe: b87caef90556
+  ui.culture.islamic: a5c147deea5f
+  ui.culture.east_asia: 2b394b41a7ff
+  ui.mute: 8dd6857baf02
   ui.date.full: f3be6aff95a0
   tier.city: fc33f73246f4
   tier.metropolis: 1dce2c62a0fd
@@ -432,6 +435,18 @@ The Book of Far Roads
 ## ui.culture.steppe
 
 草原
+
+## ui.culture.islamic
+
+伊斯兰
+
+## ui.culture.east_asia
+
+东亚
+
+## ui.mute
+
+静音
 
 ## ui.date.full
 
