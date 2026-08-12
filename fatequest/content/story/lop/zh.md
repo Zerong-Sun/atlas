@@ -2,7 +2,7 @@
 unit: lop
 lang: zh
 source: en
-source_rev: b9e736109ddc
+source_rev: e987659a0f33
 status: translated
 translator: 人工校译
 notes: >
@@ -102,6 +102,9 @@ stamps:
   ev.ev_lop_mentor_followup.choice_2_result: 9dd2b93b3a17
   ev.ev_lop_mentor_followup.choice_3: 06628fbab7e0
   ev.ev_lop_mentor_followup.choice_3_result: 834f677ea73a
+  codex.cx-desert-of-lop.body: 274170ec9ede
+  codex.cx-jade-rivers.body: 5a1ebccdd235
+  codex.cx-desert-voices.body: 268c27bb3a94
 ---
 
 ## city.lop.name
@@ -478,3 +481,22 @@ stamps:
 ## ev.ev_lop_mentor_followup.choice_3_result
 
 你谢过听风人，顺他标出的路向东行。去沙州的路已在眼前展开，你把他那句未说出口的告诫藏在心里。
+
+## codex.cx-desert-of-lop.body
+
+罗布沙漠在罗卜之东，人们说极长——骑马一年也走不到尽头，最窄处仍须一月。渡漠者歇足七日，
+备足一月之粮；旧井照旧例隔一日一夜一处，甘泉一昼夜可寻，足供五十人或百人连同牲口饮用。
+向导教我夏月趁夜赶路、白日卧息。沙路驿栈之僧曾守罗卜与沙州之间的旧井，为商队标程；井涸东去前，
+他们把井与井之间的日数、荒山形状与坏水告诫刻在洞壁——我抄下时，炭迹已褪成岩色。
+
+## codex.cx-jade-rivers.body
+
+玉出何处？罗卜的玉商说，在于阗上游的河床——雪山的溪流奔下，秋水一落，卵石便裸露出来；最好的石头都在
+水浅的季节捡拾，懂得时令的人在源头用市价的一成便能买到。集市上他们把玉摆在黑绒上显色：一块拳头大的
+羊脂白玉，价过一峰骆驼。商人举它向日光，光透过去，如水一般。玉河的流向，如今写进了我的行纪。
+
+## codex.cx-desert-voices.body
+
+罗卜乃大漠边缘之大镇，此漠名罗布沙漠。人言夜渡此漠，若有人落后或睡沉，欲追大队时，便闻空中精灵语，
+声似同伴；有时精灵直呼其名，旅人常被诱离，终不得复见队伍，以此死者甚众。即白昼，人亦闻此精灵之声，
+有时空中尚有鼓、笛之乐器声。此漠之险如此——我离开罗卜时，把这番告诫写进了行纪。

@@ -1096,7 +1096,12 @@
               "reason": "found-the-way"
             }
           ]
-        }
+        },
+      {
+        "label": "ev.cail.entry.choice.battuta",
+        "resultText": "ev.ev_cail_entry.choice_4_result",
+        "effects": [ { "op": "queue_event", "value": "ev-cail-battuta-a", "reason": "heard-of-adams-peak" } ]
+      }
       ],
       "lore": {
         "placeId": "cail",
@@ -3507,7 +3512,12 @@
               "reason": "bought-local-specialty"
             }
           ]
-        }
+        },
+      {
+        "label": "ev.kinsay.entry.choice.battuta",
+        "resultText": "ev.ev_kinsay_entry.choice_4_result",
+        "effects": [ { "op": "queue_event", "value": "ev-kinsay-battuta-a", "reason": "heard-of-the-homeward-voyage" } ]
+      }
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
@@ -3907,7 +3917,12 @@
               "reason": "found-the-way"
             }
           ]
-        }
+        },
+      {
+        "label": "ev.melibar.entry.choice.battuta",
+        "resultText": "ev.ev_melibar_entry.choice_4_result",
+        "effects": [ { "op": "queue_event", "value": "ev-melibar-battuta-a", "reason": "heard-of-the-chinese-junks" } ]
+      }
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
@@ -6090,6 +6105,38 @@
         "placeId": "great-city-of-yasdi",
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-maldive-entry",
+      "kind": "entry",
+      "title": "ev.maldive.entry.title",
+      "when": {
+        "cities": [
+          "maldive"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.maldive.entry.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.maldive.entry.choice.arrive",
+          "resultText": "ev.ev_maldive_entry.choice_1_result",
+          "effects": [ { "op": "reputation", "value": 1, "scope": "city", "id": "maldive", "reason": "arrived-at-the-coconut-isles" } ]
+        }
+      ],
+      "lore": {
+        "placeId": "ibn-battuta:battuta-c019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
+      }
     }
+
   ]
 }

@@ -68,6 +68,11 @@
           "book": "yingya-shenglan",
           "chapterId": "yingya-aden",
           "title": "阿丹国"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c009",
+          "title": "The Rihla"
         }
       ]
     },
@@ -511,6 +516,13 @@
       },
       "calendars": [
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c021",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -559,6 +571,13 @@
       },
       "calendars": [
         "indian"
+      ],
+      "altRefs": [
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c009",
+          "title": "The Rihla"
+        }
       ]
     },
     {
@@ -658,6 +677,11 @@
           "book": "yingya-shenglan",
           "chapterId": "yingya-calicut",
           "title": "古俚"
+        },
+        {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c017",
+          "title": "The Rihla"
         }
       ]
     },
@@ -756,6 +780,56 @@
       "calendars": [
         "indian"
       ]
+    },
+    {
+      "id": "maldive",
+      "name": "city.maldive.name",
+      "band": "india",
+      "culture": "indian_ocean",
+      "faiths": [
+        "islam"
+      ],
+      "coord": [
+        73.52,
+        4.18
+      ],
+      "tier": "town",
+      "entryEvent": "ev-maldive-entry",
+      "sites": [
+        "ev-maldive-battuta-a"
+      ],
+      "exits": [
+        "rt-cail-maldive",
+        "rt-maldive-melibar"
+      ],
+      "lore": {
+        "placeId": "ibn-battuta:battuta-c019",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
+      },
+      "market": {
+        "goods": [
+          "pearls",
+          "tortoiseshell",
+          "dates",
+          "cotton-cloth",
+          "sandalwood"
+        ],
+        "currency": "dinar",
+        "spread": 0.22
+      },
+      "calendars": [
+        "islamic"
+      ],
+      "shrine": {
+        "faith": "islam",
+        "services": [
+          "bless"
+        ]
+      }
     }
   ]
 }

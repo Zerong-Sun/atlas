@@ -610,3 +610,11 @@ Wait a day and let the cups settle in your own hand
 
 You sit with the cups through an afternoon, learning their weight, and leave them with the temple at dusk. The attendant remembers your patience, and the quarter speaks well of you.
 
+## codex.cx-zayton-watch.name
+
+The Night Watch of Zayton
+
+## codex.cx-zayton-watch.body
+
+The night watch of Zayton keeps its own account of every shadow that slips past the Kaan's clerks. After dark the watch lanterns stop at your lodging and look for your mark in the quay ledger; when they cannot find it, their leader draws no weapon but sets a late-declaration tally on the table. Pay then, or leave the cargo in bond for inspection. The watch writes a name down twice before it is done, and their rounds over the quay are known to you by heart before your cargo is released.
+

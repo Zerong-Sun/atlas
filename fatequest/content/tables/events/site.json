@@ -7303,6 +7303,1047 @@
           "chapterId": "v1-b1-c028"
         }
       }
+    },
+    {
+      "id": "ev-maldive-battuta-a",
+      "kind": "site",
+      "title": "ev.maldive.battuta_a.title",
+      "when": {
+        "cities": [
+          "maldive"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.maldive.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.maldive.battuta_a.choice.judge",
+          "resultText": "ev.ev_maldive_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "held-the-office-of-judge"
+            },
+            {
+              "op": "coins",
+              "value": 150,
+              "reason": "revenue-of-three-islands"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "the-judges-word-runs-like-a-kings"
+            }
+          ]
+        },
+        {
+          "label": "ev.maldive.battuta_a.choice.marry",
+          "resultText": "ev.ev_maldive_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "paid-a-small-dowry"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "kept-the-marriage-custom"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "honoured-the-island-custom"
+            }
+          ]
+        },
+        {
+          "label": "ev.maldive.battuta_a.choice.flight",
+          "resultText": "ev.ev_maldive_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-harbour-for-a-ship"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-maldive-melibar",
+              "reason": "pilots-named-the-sea-road-to-melibar"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "maldives-judge-marriages",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c019"
+        }
+      }
+    },
+    {
+      "id": "ev-melibar-battuta-a",
+      "kind": "site",
+      "title": "ev.melibar.battuta_a.title",
+      "when": {
+        "cities": [
+          "melibar"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.melibar.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.melibar.battuta_a.choice.junks",
+          "resultText": "ev.ev_melibar_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-great-junks-waiting-for-the-china-season"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-coilum-melibar",
+              "reason": "the-ships-of-china-put-in-at-hili-kalikut-and-kawlam-alone"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.battuta_a.choice.trade",
+          "resultText": "ev.ev_melibar_battuta_a.choice_2_result",
+          "needs": {
+            "coins": {
+              "min": 1500
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1500,
+              "reason": "paid-a-kalikut-merchant-for-pepper"
+            },
+            {
+              "op": "goods",
+              "id": "pepper",
+              "value": 1,
+              "reason": "bought-pepper-at-kalikut"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.battuta_a.choice.prayer",
+          "resultText": "ev.ev_melibar_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kept-the-friday-prayer-on-shore"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "india",
+              "reason": "held-to-the-prayer-while-the-sea-rose"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "chinese-junks-wreck",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c018"
+        }
+      }
+    },
+    {
+      "id": "ev-cail-battuta-a",
+      "kind": "site",
+      "title": "ev.cail.battuta_a.title",
+      "when": {
+        "cities": [
+          "cail"
+        ]
+      },
+      "scene": {
+        "bg": "monsoon-port",
+        "region": "india"
+      },
+      "body": "ev.cail.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.cail.battuta_a.choice.baba",
+          "resultText": "ev.ev_cail_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "climbed-the-rough-way-of-baba"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "india",
+              "reason": "made-the-pilgrimage-by-the-way-of-baba"
+            }
+          ]
+        },
+        {
+          "label": "ev.cail.battuta_a.choice.foot",
+          "resultText": "ev.ev_cail_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-pilgrims-at-the-foot-mark"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-maabar-cail",
+              "reason": "jogees-described-the-crossing-from-the-maabar"
+            }
+          ]
+        },
+        {
+          "label": "ev.cail.battuta_a.choice.ruby",
+          "resultText": "ev.ev_cail_battuta_a.choice_3_result",
+          "needs": {
+            "coins": {
+              "min": 1000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1000,
+              "reason": "bought-a-ruby-sold-by-the-islanders"
+            },
+            {
+              "op": "goods",
+              "id": "balas-ruby",
+              "value": 1,
+              "reason": "bought-a-ruby-sold-by-the-islanders"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "adams-peak",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c020"
+        }
+      }
+    },
+    {
+      "id": "ev-java-major-battuta-a",
+      "kind": "site",
+      "title": "ev.java-major.battuta_a.title",
+      "when": {
+        "cities": [
+          "java-major"
+        ]
+      },
+      "scene": {
+        "bg": "spice-harbour",
+        "region": "maritime_asia"
+      },
+      "body": "ev.java-major.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.java-major.battuta_a.choice.audience",
+          "resultText": "ev.ev_java_major_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-before-the-queen-of-tawalisi"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "maritime_asia",
+              "reason": "presented-himself-to-the-queen-of-tawalisi"
+            }
+          ]
+        },
+        {
+          "label": "ev.java-major.battuta_a.choice.aloes",
+          "resultText": "ev.ev_java_major_battuta_a.choice_2_result",
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "bought-an-elephant-load-of-aloeswood"
+            },
+            {
+              "op": "goods",
+              "id": "aloeswood",
+              "value": 1,
+              "reason": "bought-an-elephant-load-of-aloeswood"
+            }
+          ]
+        },
+        {
+          "label": "ev.java-major.battuta_a.choice.army",
+          "resultText": "ev.ev_java_major_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-the-sailors-of-the-queens-army"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-java-major-samara",
+              "reason": "the-sailors-described-the-eastward-sea-road"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "tawalisi-queen",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c022"
+        }
+      }
+    },
+    {
+      "id": "ev-zayton-battuta-a",
+      "kind": "site",
+      "title": "ev.zayton.battuta_a.title",
+      "when": {
+        "cities": [
+          "zayton"
+        ]
+      },
+      "scene": {
+        "bg": "scene-quanzhou-harbor",
+        "region": "china"
+      },
+      "body": "ev.zayton.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.zayton.battuta_a.choice.change",
+          "resultText": "ev.ev_zayton_battuta_a.choice_1_result",
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "changed-coins-for-the-kings-stamped-notes"
+            },
+            {
+              "op": "goods",
+              "id": "paper-money",
+              "value": 1,
+              "reason": "changed-coins-for-the-kings-stamped-notes"
+            }
+          ]
+        },
+        {
+          "label": "ev.zayton.battuta_a.choice.painters",
+          "resultText": "ev.ev_zayton_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-for-the-chinese-painters"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "china",
+              "reason": "sat-for-the-painters-as-the-strangers-do"
+            }
+          ]
+        },
+        {
+          "label": "ev.zayton.battuta_a.choice.registry",
+          "resultText": "ev.ev_zayton_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-registry-of-the-junks-crews"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-kinsay-zayton",
+              "reason": "learned-the-twenty-seven-day-river-road-to-sin-kilan"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "paper-money-china",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c023"
+        }
+      }
+    },
+    {
+      "id": "ev-kinsay-battuta-a",
+      "kind": "site",
+      "title": "ev.kinsay.battuta_a.title",
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.kinsay.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.kinsay.battuta_a.choice.passage",
+          "resultText": "ev.ev_kinsay_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "took-passage-on-the-junk-of-the-king-of-sumatra"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-kinsay-zayton",
+              "reason": "descended-the-river-toward-the-sea-at-zaitun"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.battuta_a.choice.prayer",
+          "resultText": "ev.ev_kinsay_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "prayed-with-the-merchants-in-the-dark-sea"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "band",
+              "id": "china",
+              "reason": "prayed-with-the-merchants-when-the-storm-came"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.battuta_a.choice.rokh",
+          "resultText": "ev.ev_kinsay_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-the-sailors-of-the-mountain-in-the-sea"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-zayton-tanpiju",
+              "reason": "the-sailors-named-the-sea-road-southward"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "homeward-voyage",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c024"
+        }
+      }
+    },
+    {
+      "id": "ev-alexandria-battuta-a",
+      "kind": "site",
+      "title": "ev.alexandria.battuta_a.title",
+      "when": {
+        "cities": [
+          "alexandria"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.alexandria.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.battuta_a.choice.observe",
+          "resultText": "ev.ev_alexandria_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-at-the-gate-until-dusk"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "heard-the-gatekeepers-jest",
+              "scope": "city",
+              "id": "alexandria"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.battuta_a.choice.speak",
+          "resultText": "ev.ev_alexandria_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spoke-with-the-scholar-at-the-gate"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "named-the-road-from-the-hejaz"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.battuta_a.choice.omen",
+          "resultText": "ev.ev_alexandria_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "entered-the-city-at-dusk"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "kept-the-scholars-omen",
+              "scope": "city",
+              "id": "alexandria"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "judge-of-alexandria-omen",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c002"
+        }
+      }
+    },
+    {
+      "id": "ev-alexandria-battuta-b",
+      "kind": "site",
+      "title": "ev.alexandria.battuta_b.title",
+      "when": {
+        "cities": [
+          "alexandria"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.alexandria.battuta_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.battuta_b.choice.promise",
+          "resultText": "ev.ev_alexandria_battuta_b.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "swore-the-oath-to-the-saint"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "pledged-the-greetings-to-the-east",
+              "scope": "city",
+              "id": "alexandria"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.battuta_b.choice.ask",
+          "resultText": "ev.ev_alexandria_battuta_b.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-of-the-three-brothers"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "the-saint-named-india-and-china"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.battuta_b.choice.depart",
+          "resultText": "ev.ev_alexandria_battuta_b.choice_3_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "kept-the-saints-prophecy",
+              "scope": "city",
+              "id": "alexandria"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "borhan-oddins-prophecy",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c002"
+        }
+      }
+    },
+    {
+      "id": "ev-accon-battuta-a",
+      "kind": "site",
+      "title": "ev.accon.battuta_a.title",
+      "when": {
+        "cities": [
+          "accon"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.accon.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.accon.battuta_a.choice.tomb",
+          "resultText": "ev.ev_accon_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "rode-to-the-tomb-at-kark-nuh"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "paid-honour-at-the-saints-cell",
+              "scope": "city",
+              "id": "accon"
+            }
+          ]
+        },
+        {
+          "label": "ev.accon.battuta_a.choice.harbor",
+          "resultText": "ev.ev_accon_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-the-famous-harbour"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-accon-tyrus",
+              "reason": "mapped-the-road-to-tyre"
+            }
+          ]
+        },
+        {
+          "label": "ev.accon.battuta_a.choice.mat",
+          "resultText": "ev.ev_accon_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-tale-of-the-mat-weaver"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "heard-the-tale-of-the-honest-keeper",
+              "scope": "city",
+              "id": "accon"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "abu-yaakub-alchemy",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005"
+        }
+      }
+    },
+    {
+      "id": "ev-yasdi-battuta-a",
+      "kind": "site",
+      "title": "ev.yasdi.battuta_a.title",
+      "when": {
+        "cities": [
+          "yasdi"
+        ]
+      },
+      "scene": {
+        "bg": "caravan-city",
+        "region": "west_asia"
+      },
+      "body": "ev.yasdi.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.yasdi.battuta_a.choice.cell",
+          "resultText": "ev.ev_yasdi_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "slept-at-the-roadside-cell"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "honoured-the-cells-of-the-road",
+              "scope": "city",
+              "id": "yasdi"
+            }
+          ]
+        },
+        {
+          "label": "ev.yasdi.battuta_a.choice.pray",
+          "resultText": "ev.ev_yasdi_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "prayed-with-the-religious-of-the-road",
+              "scope": "city",
+              "id": "yasdi"
+            }
+          ]
+        },
+        {
+          "label": "ev.yasdi.battuta_a.choice.shiraz",
+          "resultText": "ev.ev_yasdi_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-of-the-saint-of-shiraz"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-ispahan-yasdi",
+              "reason": "mapped-the-road-toward-shiraz"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "saints-of-fars",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c007"
+        }
+      }
+    },
+    {
+      "id": "ev-bochara-battuta-a",
+      "kind": "site",
+      "title": "ev.bochara.battuta_a.title",
+      "when": {
+        "cities": [
+          "bochara"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.bochara.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.bochara.battuta_a.choice.ruins",
+          "resultText": "ev.ev_bochara_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "searched-the-ruined-city"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "remembered-the-ruined-city",
+              "scope": "city",
+              "id": "bochara"
+            }
+          ]
+        },
+        {
+          "label": "ev.bochara.battuta_a.choice.tale",
+          "resultText": "ev.ev_bochara_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-tale-of-the-blacksmith"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-bochara-samarcanda",
+              "reason": "mapped-the-road-the-conqueror-took"
+            }
+          ]
+        },
+        {
+          "label": "ev.bochara.battuta_a.choice.melon",
+          "resultText": "ev.ev_bochara_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -40,
+              "reason": "bought-dried-bokhara-melons"
+            },
+            {
+              "op": "goods",
+              "value": 1,
+              "reason": "bought-dried-bokhara-melons",
+              "id": "melons"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "jengiz-khan-origin",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013"
+        }
+      }
+    },
+    {
+      "id": "ev-delli-battuta-a",
+      "kind": "site",
+      "title": "ev.delli.battuta_a.title",
+      "when": {
+        "cities": [
+          "delli"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.delli.battuta_a.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.delli.battuta_a.choice.pyre",
+          "resultText": "ev.ev_delli_battuta_a.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stood-by-the-pyre"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "bore-witness-at-the-pyre",
+              "scope": "city",
+              "id": "delli"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.battuta_a.choice.court",
+          "resultText": "ev.ev_delli_battuta_a.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-of-the-court-and-its-debts"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-delli-cambaet",
+              "reason": "mapped-the-road-of-the-sultans-campaigns"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.battuta_a.choice.ask",
+          "resultText": "ev.ev_delli_battuta_a.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-of-the-custom-of-the-pyre"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "learned-the-custom-of-the-road",
+              "scope": "city",
+              "id": "delli"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "widow-burning",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c014"
+        },
+        "stories": [
+          "widow-burning",
+          "delhi-sultanate-history",
+          "cruelties-of-the-sultan"
+        ]
+      }
+    },
+    {
+      "id": "ev-delli-battuta-b",
+      "kind": "site",
+      "title": "ev.delli.battuta_b.title",
+      "when": {
+        "cities": [
+          "delli"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.delli.battuta_b.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.delli.battuta_b.choice.house",
+          "resultText": "ev.ev_delli_battuta_b.choice_1_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "reckoned-the-emperors-allowance"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "received-the-provision-of-the-queen-mother",
+              "scope": "city",
+              "id": "delli"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.battuta_b.choice.gwalior",
+          "resultText": "ev.ev_delli_battuta_b.choice_2_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "asked-of-the-fortress-of-gwalior"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-delli-cambaet",
+              "reason": "mapped-the-road-south-past-the-fortress"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.battuta_b.choice.embassy",
+          "resultText": "ev.ev_delli_battuta_b.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "made-ready-for-the-embassy"
+            },
+            {
+              "op": "goods",
+              "value": 1,
+              "reason": "received-silk-for-the-embassy",
+              "id": "silk"
+            },
+            {
+              "op": "reveal_map",
+              "value": "rt-delli-cotan",
+              "reason": "mapped-the-road-toward-china"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "storyId": "judge-of-delhi",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c016"
+        },
+        "stories": [
+          "judge-of-delhi",
+          "gwalior-fortress",
+          "embassy-to-china-wreck"
+        ]
+      }
     }
   ]
 }

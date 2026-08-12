@@ -211,5 +211,27 @@
       },
       "endings": ["end-cartographer", "end-diviner"]
     }
+,
+    {
+      "id": "battuta",
+      "name": "arch.battuta.name",
+      "obsession": "arch.battuta.obsession",
+      "start": "alexandria",
+      "goal": { "type": "reach", "target": "mecha" },
+      "faith": "islam",
+      "culture": "islamic",
+      "knownCities": ["alexandria", "babylonia-cairus", "axuma"],
+      "knownRoutes": ["rt-alexandria-babylonia-cairus"],
+      "bonus": { "rapport": 4 },
+      "malus": { "travel": -1 },
+      "startKit": {
+        "coins": 2000,
+        "currency": "dinar",
+        "goods": [],
+        "items": ["it-letter-of-introduction"],
+        "languages": ["arabic"]
+      },
+      "endings": ["end-witness-of-the-world", "end-no-return"]
+    }
   ]
 }

@@ -42,6 +42,11 @@
             { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" },
             { "op": "queue_event", "value": "ev-zayton-pilot-consequence", "reason": "a-pilot-offered-a-road-rumour" }
           ]
+        },
+        {
+          "label": "ev.zayton.entry.choice.battuta",
+          "resultText": "ev.ev_zayton_entry.choice_4_result",
+          "effects": [ { "op": "queue_event", "value": "ev-zayton-battuta-a", "reason": "heard-of-paper-money-and-ship-registry" } ]
         }
       ],
       "lore": {

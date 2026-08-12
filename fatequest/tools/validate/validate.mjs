@@ -620,6 +620,70 @@ const LINES = {
     let orphan = 0;
     for (const k of Object.keys(en)) if (k.startsWith("ev.") && !want.has(k)) orphan++;
     if (orphan) warn("G17", "content/i18n/en.json", `${orphan} ev.* keys referenced by nothing`);
+    // G17 (continued): every codex/sticker id an event grants must have both a
+    // name and a body — a missing name renders the raw key in the codex list,
+    // and a missing body silently falls back to the "name only" note. And every
+    // culture band a city uses must have a ui.culture.<band> label.
+    const want2 = new Map();
+    for (const e of byTable.events ?? []) {
+      for (const c of e.choices ?? []) {
+        const groups = [c.effects ?? [], c.pass?.effects ?? [], c.fail?.effects ?? []];
+        for (const g of groups.flat()) {
+          if (g.op === "codex") { want2.set(`codex.${g.value}.name`, e.id); want2.set(`codex.${g.value}.body`, e.id); }
+          else if (g.op === "sticker") { want2.set(`sticker.${g.value}.name`, e.id); want2.set(`sticker.${g.value}.body`, e.id); }
+        }
+      }
+    }
+    for (const c of byTable.cities ?? []) if (c.culture) want2.set(`ui.culture.${c.culture}`, c.id);
+    let missing2 = 0;
+    for (const [k, owner] of want2) {
+      if (en[k] === undefined) {
+        missing2++;
+        if (missing2 <= 8) err("G17", "content/i18n/en.json", `${owner} asks for "${k}" — no English text`);
+      }
+    }
+    if (missing2 > 8) err("G17", "content/i18n/en.json", `...and ${missing2 - 8} more missing keys`);
+    // G17 (continued): literal keys referenced from game code must exist.
+    // Format strings (I18n.t("city.%s.name" % id)) are resolved at runtime and
+    // covered by the event/city loops above; only plain literals are checked.
+    const walkGd = (dir) => {
+      if (!existsSync(dir)) return [];
+      return readdirSync(dir).flatMap((n) => {
+        const p = join(dir, n);
+        return statSync(p).isDirectory() ? walkGd(p) : (n.endsWith(".gd") ? [p] : []);
+      });
+    };
+    let codeMissing = 0;
+    for (const f of walkGd(join(ROOT, "game"))) {
+      const src = readFileSync(f, "utf8");
+      for (const m of src.matchAll(/I18n\.t\(\s*"([^"%]+)"/g)) {
+        if (en[m[1]] === undefined) {
+          codeMissing++;
+          if (codeMissing <= 8) err("G17", f.slice(f.indexOf("game/")), `"${m[1]}" — no English text`);
+        }
+      }
+    }
+    if (codeMissing > 8) err("G17", "game/", `...and ${codeMissing - 8} more missing keys`);
+    // G17 (continued): altRefs must name a real book and a chapter id in the
+    // shape that book's corpus uses — a mis-typed chapter silently weakens a
+    // city's second voice and nothing else catches it.
+    const ALT_BOOK_PATTERNS = {
+      "ibn-battuta": /^battuta-c\d{3}$/,
+      "yingya-shenglan": /^yingya-[a-z0-9-]+$/,
+      "odoric": /^odoric-[a-z0-9-]+$/,
+      "rubruck": /^rubruck-[a-z0-9-]+$/,
+      "changchun": /^changchun-[a-z0-9-]+$/,
+      "tafur": /^tafur-[a-z0-9-]+$/,
+    };
+    for (const c of byTable.cities ?? []) {
+      for (const a of c.altRefs ?? []) {
+        const pat = ALT_BOOK_PATTERNS[a.book];
+        if (pat && !pat.test(a.chapterId ?? ""))
+          err("G17", recordFile.get(c.id),
+            `${c.id}: altRefs ${a.book} chapter "${a.chapterId}" does not match ${pat}`);
+      }
+    }
+
   }
 }
 
