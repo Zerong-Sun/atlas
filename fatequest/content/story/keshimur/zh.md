@@ -2,7 +2,7 @@
 unit: keshimur
 lang: zh
 source: en
-source_rev: cfa977669910
+source_rev: a9d32b0abc1d
 status: translated
 translator: 人工校译
 notes: >
@@ -29,7 +29,7 @@ stamps:
   ev.keshimur.b.choice.buy_turquoise: 5c6c797d3757
   ev.ev_keshimur_entry.choice_1_result: e53438477392
   ev.ev_keshimur_entry.choice_2_result: 965ef7974710
-  ev.ev_keshimur_entry.choice_3_result: 48dd260164fb
+  ev.ev_keshimur_entry.choice_3_result: c1eabfc22610
   ev.ev_keshimur_a.choice_1_result: a1dbaefa20de
   ev.ev_keshimur_a.choice_2_result: 890ac94eceba
   ev.ev_keshimur_a.choice_3_result: 02e604017d36
@@ -123,7 +123,7 @@ stamps:
 
 ## ev.ev_keshimur_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往怯失迷儿（克什米尔）的道路，就此展开在舆图上。
+你穿过番红花园走进清真寺。怯失迷儿人记得你张开的掌心；藏红花的气息留在你的发间。舆图上添了通往怯失迷儿的一条路。
 
 ## ev.ev_keshimur_a.choice_1_result
 

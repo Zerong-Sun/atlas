@@ -94,7 +94,7 @@ You walk through the market. You spend 1 day before the way is clear again. You 
 
 ## ev.ev_campichu_entry.choice_3_result
 
-You visit the sì (Buddhist monastery). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Campichu opens on your map.
+You enter the sì and bow before the painted scrolls. The monks remember your courtesy, and the scent of incense lingers in your sleeves. You set the road to Campichu on your map.
 
 ## ev.ev_campichu_a.choice_1_result
 

@@ -2,7 +2,7 @@
 unit: kenjanfu
 lang: zh
 source: en
-source_rev: 1d3bc9708d8d
+source_rev: 361047aa9df8
 status: translated
 translator: 人工校译
 notes: >
@@ -29,12 +29,12 @@ stamps:
   ev.kenjanfu.b.choice.palace: 4729d70c99ff
   ev.ev_kenjanfu_entry.choice_1_result: 48344d886090
   ev.ev_kenjanfu_entry.choice_2_result: e32dc4c90511
-  ev.ev_kenjanfu_entry.choice_3_result: 6d0c7f8da699
+  ev.ev_kenjanfu_entry.choice_3_result: 048a15a22064
   ev.ev_kenjanfu_a.choice_1_result: 0d83297130b2
   ev.ev_kenjanfu_a.choice_2_result: 59da4fbc148e
   ev.ev_kenjanfu_a.choice_3_result: 22f0fef633bb
   ev.ev_kenjanfu_b.choice_1_result: 63fb6bf187dc
-  ev.ev_kenjanfu_b.choice_2_result: bf5e84f654e2
+  ev.ev_kenjanfu_b.choice_2_result: c139f6b1c0b2
   ev.ev_kenjanfu_b.choice_3_result: c75254c68c28
   ev.ev_kenjanfu_a_followup.title: d44e281e1959
   ev.ev_kenjanfu_a_followup.body: 5c36822de598
@@ -123,7 +123,7 @@ stamps:
 
 ## ev.ev_kenjanfu_entry.choice_3_result
 
-你去佛寺看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往京兆府（西安）的道路，就此展开在舆图上。
+你在晚鼓时分走进佛寺。方丈请你饮茶，临别送你一句经文，那句话到门口还跟着你。通往京兆府的路，你如今已画得出来。
 
 ## ev.ev_kenjanfu_a.choice_1_result
 
@@ -143,7 +143,7 @@ stamps:
 
 ## ev.ev_kenjanfu_b.choice_2_result
 
-你于军器坊区购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+你于军器坊区购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。军器坊的人提起那位从西路来的买主。
 
 ## ev.ev_kenjanfu_b.choice_3_result
 

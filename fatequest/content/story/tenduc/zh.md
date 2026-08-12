@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: 4cda029c8003
+source_rev: bff0c047f60d
 status: translated
 translator: 人工校译
 notes: >
@@ -35,7 +35,7 @@ stamps:
   ev.ev_tenduc_a.choice_3_result: d7d1eda71b71
   ev.ev_tenduc_b.choice_1_result: 1d1412748f59
   ev.ev_tenduc_b.choice_2_result: 032f6eee1b38
-  ev.ev_tenduc_b.choice_3_result: 7cf65b891207
+  ev.ev_tenduc_b.choice_3_result: d310296ea62a
   ev.ev_tenduc_a_followup.title: 30719bcaba73
   ev.ev_tenduc_a_followup.body: 9fd87e572e02
   ev.ev_tenduc_a_followup.choice_1: 9a31e4830103
@@ -150,7 +150,7 @@ stamps:
 
 ## ev.ev_tenduc_b.choice_3_result
 
-你问撒拉逊商人何路北入草原，通往额里合牙（宁夏）的道路，就此展开在舆图上。你的行事之名先你一步传开。
+你问撒拉逊商人何路北入草原，通往额里合牙（宁夏）的道路，就此展开在舆图上。他们告诉同伴，有个陌生人要去走草原路。
 
 ## ev.ev_tenduc_a_followup.title
 

@@ -2,7 +2,7 @@
 unit: camadi
 lang: zh
 source: en
-source_rev: 0e14cdb1b114
+source_rev: e5d2bef95104
 status: translated
 translator: 人工校译
 notes: >
@@ -35,7 +35,7 @@ stamps:
   ev.ev_camadi_a.choice_3_result: 34ef67d497e2
   ev.ev_camadi_b.choice_1_result: a21992df3ead
   ev.ev_camadi_b.choice_2_result: 90bce7b6861d
-  ev.ev_camadi_b.choice_3_result: 1dee16e04711
+  ev.ev_camadi_b.choice_3_result: 06a003bea018
   ev.ev_camadi_a_followup.title: 7c5198d4d30a
   ev.ev_camadi_a_followup.body: bca395fdae2a
   ev.ev_camadi_a_followup.choice_1: e5c9dfdb21a1
@@ -147,7 +147,7 @@ stamps:
 
 ## ev.ev_camadi_b.choice_3_result
 
-你向道旁贩者买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+你向道旁贩者买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。走到下个摊位，贩者已把你当作熟客让路。
 
 ## ev.ev_camadi_a_followup.title
 

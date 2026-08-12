@@ -94,7 +94,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_melibar_entry.choice_3_result
 
-You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Melibar opens on your map.
+You step into the mandir at the water's edge. The pepper folk take you for a man of fortune, and the wet sand clings to your sandals. The sea road to Melibar is now on your map.
 
 ## ev.ev_melibar_a.choice_1_result
 
@@ -114,7 +114,7 @@ You observe the idol rites from the temple steps. You spend 1 day before the way
 
 ## ev.ev_melibar_b.choice_2_result
 
-You measure the North Star against the mast and record what you see. The account is written down before the hour turns. Fortune bends a little your way. Word of your conduct runs ahead of you.
+You measure the North Star against the mast and record what you see. The account is written down before the hour turns. Fortune bends a little your way. The pilots mark you as one who watches the sky.
 
 ## ev.ev_melibar_b.choice_3_result
 

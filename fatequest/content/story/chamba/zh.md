@@ -2,7 +2,7 @@
 unit: chamba
 lang: zh
 source: en
-source_rev: c9cfcc3afff0
+source_rev: 760e4204713c
 status: translated
 translator: 人工校译
 notes: >
@@ -29,10 +29,10 @@ stamps:
   ev.chamba.b.choice.ask_sea_road: 1830deda347f
   ev.ev_chamba_entry.choice_1_result: 286fc0de1f9e
   ev.ev_chamba_entry.choice_2_result: 24a87e8c27d0
-  ev.ev_chamba_entry.choice_3_result: ca34ca445c10
+  ev.ev_chamba_entry.choice_3_result: 5602223eeb68
   ev.ev_chamba_a.choice_1_result: 490a317e66d3
   ev.ev_chamba_a.choice_2_result: 62fb99bcf165
-  ev.ev_chamba_a.choice_3_result: 2c3b117235de
+  ev.ev_chamba_a.choice_3_result: 6ebc73870ec6
   ev.ev_chamba_b.choice_1_result: 9a58ec57e790
   ev.ev_chamba_b.choice_2_result: 13dabc16181e
   ev.ev_chamba_b.choice_3_result: 5716069fa47f
@@ -131,7 +131,7 @@ stamps:
 
 ## ev.ev_chamba_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往占城的道路，就此展开在舆图上。
+你登上屋顶之上的清真寺。长者受了你的问候，一一报上名姓；他们的祝语随你下了山。通往占城的道路，已在你舆图上展开。
 
 ## ev.ev_chamba_a.choice_1_result
 
@@ -143,7 +143,7 @@ stamps:
 
 ## ev.ev_chamba_a.choice_3_result
 
-你于贡物区买旃檀，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。你的行事之名先你一步传开。
+你于贡物区买旃檀，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。贡物书吏把你的名字记在礼单旁边。
 
 ## ev.ev_chamba_b.choice_1_result
 

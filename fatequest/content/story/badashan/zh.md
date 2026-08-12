@@ -2,7 +2,7 @@
 unit: badashan
 lang: zh
 source: en
-source_rev: 6246071941f0
+source_rev: a9cc7a701236
 status: translated
 translator: 人工校译
 notes: >
@@ -29,12 +29,12 @@ stamps:
   ev.badashan.b.choice.buy-ruby: d1e218d1593c
   ev.ev_badashan_entry.choice_1_result: 3be78064b2b6
   ev.ev_badashan_entry.choice_2_result: 6ffd0e1d5fff
-  ev.ev_badashan_entry.choice_3_result: cd9ce7c888c3
+  ev.ev_badashan_entry.choice_3_result: 9a5359488648
   ev.ev_badashan_a.choice_1_result: 793fd74d1d4c
   ev.ev_badashan_a.choice_2_result: 60c93144f4e8
   ev.ev_badashan_a.choice_3_result: 12b36e6c9b46
   ev.ev_badashan_b.choice_1_result: 32615f8986b8
-  ev.ev_badashan_b.choice_2_result: dfb85b634598
+  ev.ev_badashan_b.choice_2_result: 2a77858f36d2
   ev.ev_badashan_b.choice_3_result: b62fc6bbe15a
   ev.ev_badashan_a_followup.title: 79d634adcb2a
   ev.ev_badashan_a_followup.body: 30a35899294f
@@ -43,7 +43,7 @@ stamps:
   ev.ev_badashan_a_followup.choice_2: 68c8606f4e86
   ev.ev_badashan_a_followup.choice_2_result: 38d97a5506fb
   ev.ev_badashan_a_followup.choice_3: 8bcfcfd6cf15
-  ev.ev_badashan_a_followup.choice_3_result: 301bd716679c
+  ev.ev_badashan_a_followup.choice_3_result: bbfbb3ae4aaf
   ev.ev_badashan_b_followup.title: 491f2d9b762c
   ev.ev_badashan_b_followup.body: 6a9d2c68d78a
   ev.ev_badashan_b_followup.choice_1: 2b240688f537
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_badashan_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往巴达哈伤的道路，就此展开在舆图上。
+你随山民登上清真寺。礼毕，他们私下念起你的名字；寺里的烟气沾上你的衣袍。你的舆图上，从此有了通往巴达哈伤的路。
 
 ## ev.ev_badashan_a.choice_1_result
 
@@ -152,7 +152,7 @@ stamps:
 
 ## ev.ev_badashan_b.choice_2_result
 
-你付金请书吏教山中语数言，一注钱款进出，得失皆在掌中。你的行事之名先你一步传开。气运稍稍偏向于你。
+你付金请书吏教山中语数言，一注钱款进出，得失皆在掌中。从此山民见了你，会直呼你的名字。气运稍稍偏向于你。
 
 ## ev.ev_badashan_b.choice_3_result
 
@@ -188,7 +188,7 @@ stamps:
 
 ## ev.ev_badashan_a_followup.choice_3_result
 
-你等了一日，书记抄完当日报告。等待耗费时日，账本上的教训却留在你身上。
+你等了一日，书记抄完当日报告。等待耗费时日，账本上的教训，你从此记在心里。
 
 ## ev.ev_badashan_b_followup.title
 

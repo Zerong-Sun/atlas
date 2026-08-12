@@ -94,7 +94,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_keshimur_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Keshimur opens on your map.
+You enter the masjid through the saffron gardens. The folk of Keshimur remember your open hand, and the smell of the crocus stays in your hair. The way to Keshimur is written on your map now.
 
 ## ev.ev_keshimur_a.choice_1_result
 

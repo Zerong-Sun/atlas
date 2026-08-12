@@ -37,11 +37,17 @@ func _init() -> void:
 		intro_hidden_ok = intro_hidden_ok and not intro.visible
 	main._return_to_era_selection()
 	await process_frame
-	var restored_ok: bool = true
-	for intro in main._desk_intro_nodes:
-		restored_ok = restored_ok and intro.visible
-	var ok: bool = cards_ok and compact_ok and intro_hidden_ok and restored_ok
-	print("CHARACTER_DRAW: cards=%s compact=%s intro=%s restored=%s" % [
-		cards_ok, compact_ok, intro_hidden_ok, restored_ok])
+	# The opening is now a separate welcome leaf. “Change era” must return to
+	# the actionable journey setup, rather than reopening that introductory leaf.
+	var opening := main._desk.get_node_or_null("OpeningLeaf") as Control
+	var setup := main._desk.get_node_or_null("JourneySetup") as Control
+	var restored_ok: bool = opening != null and setup != null \
+		and not opening.visible and setup.visible
+	var draw_button := setup.get_node_or_null("CharacterDrawButton") as Button \
+		if setup != null else null
+	var continue_ok: bool = draw_button != null and draw_button.visible and not draw_button.disabled
+	var ok: bool = cards_ok and compact_ok and intro_hidden_ok and restored_ok and continue_ok
+	print("CHARACTER_DRAW: cards=%s compact=%s intro=%s setup=%s continue=%s" % [
+		cards_ok, compact_ok, intro_hidden_ok, restored_ok, continue_ok])
 	print("CHARACTER_DRAW: %s" % ("OK" if ok else "FAIL"))
 	quit(0 if ok else 1)

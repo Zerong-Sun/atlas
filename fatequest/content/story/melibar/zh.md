@@ -2,7 +2,7 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: 89c267b84b5a
+source_rev: 37629e02906b
 status: translated
 translator: 人工校译
 notes: >
@@ -29,12 +29,12 @@ stamps:
   ev.melibar.b.choice.buy-pearls: c50320d68c98
   ev.ev_melibar_entry.choice_1_result: ada5949883d9
   ev.ev_melibar_entry.choice_2_result: 7e5a1b444e79
-  ev.ev_melibar_entry.choice_3_result: b1f0693fd00e
+  ev.ev_melibar_entry.choice_3_result: 10ba9409f5d4
   ev.ev_melibar_a.choice_1_result: a3cb62492ac6
   ev.ev_melibar_a.choice_2_result: a9f049c6c164
   ev.ev_melibar_a.choice_3_result: 51b46b004ce7
   ev.ev_melibar_b.choice_1_result: 3e6a379f2c88
-  ev.ev_melibar_b.choice_2_result: 36cb51d3207d
+  ev.ev_melibar_b.choice_2_result: e778893d4861
   ev.ev_melibar_b.choice_3_result: 4f3bcc6db7b8
   ev.ev_melibar_a_followup.title: 21c8a50503cf
   ev.ev_melibar_a_followup.body: 347521ff43f3
@@ -124,7 +124,7 @@ stamps:
 
 ## ev.ev_melibar_entry.choice_3_result
 
-你去 mandir（神庙）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往没来（马拉巴尔）的道路，就此展开在舆图上。
+你踏进水边的神庙。胡椒贩子把你当作有福之人；湿沙粘在你的鞋上。通往没来的海路，已在你的舆图上标出。
 
 ## ev.ev_melibar_a.choice_1_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_melibar_b.choice_2_result
 
-你以桅比北辰，记所见，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。你的行事之名先你一步传开。
+你以桅比北辰，记所见，不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。领航人把你记作一个看天的人。
 
 ## ev.ev_melibar_b.choice_3_result
 

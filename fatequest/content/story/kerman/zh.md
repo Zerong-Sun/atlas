@@ -2,7 +2,7 @@
 unit: kerman
 lang: zh
 source: en
-source_rev: 6dc7c13b1ada
+source_rev: 62ebe2c168e7
 status: translated
 translator: 人工校译
 notes: >
@@ -29,10 +29,10 @@ stamps:
   ev.kerman.b.choice.visit-mews: d227a5090bd9
   ev.ev_kerman_entry.choice_1_result: 545c99c32683
   ev.ev_kerman_entry.choice_2_result: 9d7e2d46a437
-  ev.ev_kerman_entry.choice_3_result: c79c223bd641
+  ev.ev_kerman_entry.choice_3_result: ccd07a627d6f
   ev.ev_kerman_a.choice_1_result: c408260a020f
   ev.ev_kerman_a.choice_2_result: 66258c7a53c2
-  ev.ev_kerman_a.choice_3_result: 21b65f28b482
+  ev.ev_kerman_a.choice_3_result: 947bced41f27
   ev.ev_kerman_b.choice_1_result: 35f86cffd992
   ev.ev_kerman_b.choice_2_result: 2662997d13e5
   ev.ev_kerman_b.choice_3_result: 0ede05d472e1
@@ -123,7 +123,7 @@ stamps:
 
 ## ev.ev_kerman_entry.choice_3_result
 
-你去 masjid（清真寺）看看，你的行事之名先你一步传开。一缕此地痕迹，随你留在身上。通往克尔曼的道路，就此展开在舆图上。
+你在绿松石商人聚礼的清真寺里礼拜。事毕，拱廊里便有人提起你；一块蓝石子落进你掌中。通往克尔曼的道路，如今画在你的舆图上。
 
 ## ev.ev_kerman_a.choice_1_result
 
@@ -135,7 +135,7 @@ stamps:
 
 ## ev.ev_kerman_a.choice_3_result
 
-你问商队主沙漠何路可通，通往耶兹德的道路，就此展开在舆图上。通往忽鲁谟斯的道路，就此展开在舆图上。你的行事之名先你一步传开。
+你问商队主沙漠何路可通，通往耶兹德的道路，就此展开在舆图上。通往忽鲁谟斯的道路，就此展开在舆图上。等你再来，他们还会这般答你。
 
 ## ev.ev_kerman_b.choice_1_result
 

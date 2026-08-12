@@ -51,16 +51,37 @@ func _init() -> void:
     var dialog_ok: bool = bool(main._dialog_layer.visible)
     await _drain_to_city(main)
 
+    # Reproduce the reported interaction at the affected city, at the
+    # project's 1280×720 viewport: enter Balc, then use its “set out” action.
+    # The very first route must be visible before any optional city errands.
+    main.state.city = "balc"
+    main.travel.ensure_way_out(main.state, main.clock.month())
+    main._open_city()
+    await process_frame
     main._close_city()
     await process_frame
     await process_frame
     var route: Button = null
+    var route_index := -1
+    var explore_index := -1
+    var child_index := 0
     for child in main._panel.get_children():
-        if child is Button and String(child.text).contains("→"):
+        var child_text := ""
+        if child is Button or child is Label:
+            child_text = String(child.text)
+        if route == null and child is Button and child_text.contains("→"):
             route = child
-            break
+            route_index = child_index
+        if child_text.contains(I18n.t("ui.city.explore_more")):
+            explore_index = child_index
+        child_index += 1
     var fold: Rect2 = main._panel_wrap.get_global_rect()
-    var route_visible: bool = route != null and route.get_global_rect().position.y < fold.end.y
+    var route_visible: bool = route != null \
+        and route.get_global_rect().position.y >= fold.position.y \
+        and route.get_global_rect().end.y <= fold.end.y
+    # “Explore more” is secondary content.  It may not precede route choices.
+    var route_primary: bool = route != null and (explore_index < 0 or route_index < explore_index)
+    var panel_at_top: bool = main._panel_scroll.scroll_vertical == 0
 
     var back: Button = null
     for child in main._panel.get_children():
@@ -73,9 +94,10 @@ func _init() -> void:
         await process_frame
     var back_ok: bool = bool(main._city_view.visible)
 
-    print("PLAYER_SURFACE: target=%s caption=%s dialog=%s route=%s visible=%s back=%s" % [
-        target_ok, caption_ok, dialog_ok, route != null, route_visible, back_ok])
-    var ok: bool = target_ok and caption_ok and dialog_ok and route_visible and back_ok
+    print("PLAYER_SURFACE: target=%s caption=%s dialog=%s route=%s visible=%s primary=%s top=%s back=%s" % [
+        target_ok, caption_ok, dialog_ok, route != null, route_visible, route_primary, panel_at_top, back_ok])
+    var ok: bool = target_ok and caption_ok and dialog_ok and route_visible \
+        and route_primary and panel_at_top and back_ok
     print("PLAYER_SURFACE: %s" % ("OK" if ok else "FAIL"))
     quit(0 if ok else 1)
 

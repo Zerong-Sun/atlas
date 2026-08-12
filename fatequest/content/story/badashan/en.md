@@ -94,7 +94,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_badashan_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Badashan opens on your map.
+You climb to the masjid with the mountain folk. After prayer they speak your name among themselves, and the smoke of the place clings to your coat. Your map now carries the road to Badashan.
 
 ## ev.ev_badashan_a.choice_1_result
 
@@ -114,7 +114,7 @@ You listen as the court herald recites the royal genealogy. You spend 1 day befo
 
 ## ev.ev_badashan_b.choice_2_result
 
-You pay a scribe to teach you a few words of the mountain tongue. Money moves — a little the better or the worse for you. Word of your conduct runs ahead of you. Fortune bends a little your way.
+You pay a scribe to teach you a few words of the mountain tongue. Money moves — a little the better or the worse for you. The hill folk will greet you by name from now on. Fortune bends a little your way.
 
 ## ev.ev_badashan_b.choice_3_result
 
@@ -150,7 +150,7 @@ Wait a day for the brokers' report to be copied
 
 ## ev.ev_badashan_a_followup.choice_3_result
 
-You wait a day while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons stay with you.
+You wait a day while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons go with you from now on.
 
 ## ev.ev_badashan_b_followup.title
 

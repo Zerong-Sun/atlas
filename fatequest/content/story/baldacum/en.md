@@ -387,7 +387,7 @@ Stay a day and watch the gold thread take its shape
 
 ## ev.ev_baldacum_b_followup.choice_3_result
 
-You stay a day at the loom, watching the shuttle lay gold through the silk while the weaver hums the old patterns. The patience of the work stays with you longer than the cloth.
+You stay a day at the loom, watching the shuttle lay gold through the silk while the weaver hums the old patterns. The cloth will fray, but the patience of the work you remember.
 
 ## ev.ev_baldacum_c_followup.title
 

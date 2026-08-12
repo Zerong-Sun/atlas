@@ -2,7 +2,7 @@
 unit: siju
 lang: zh
 source: en
-source_rev: 9442411bd514
+source_rev: 4a4320932b00
 status: translated
 translator: 人工校译
 notes: >
@@ -33,7 +33,7 @@ stamps:
   ev.ev_siju_a.choice_1_result: 4fabd42db446
   ev.ev_siju_a.choice_2_result: 1679c78da4d5
   ev.ev_siju_a.choice_3_result: 5913632b2455
-  ev.ev_siju_b.choice_1_result: f4c6f1f509b1
+  ev.ev_siju_b.choice_1_result: 364aa5258421
   ev.ev_siju_b.choice_2_result: 8c079194a58a
   ev.ev_siju_b.choice_3_result: b2514e556e4a
   ev.ev_siju_a_followup.title: 25f724234c99
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_siju_b.choice_1_result
 
-你于远处静观丧礼，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。你的行事之名先你一步传开。
+你于远处静观丧礼，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。丧家记下了你的礼数。
 
 ## ev.ev_siju_b.choice_2_result
 

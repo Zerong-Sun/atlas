@@ -102,7 +102,7 @@ You watch the gold brocade looms at work. You spend 2 days before the way is cle
 
 ## ev.ev_suju_a.choice_2_result
 
-You buy a length of gold brocade. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+You buy a length of gold brocade. Money moves — a little the better or the worse for you. The trade fills your hold a little. The weavers' quarter knows the name of the man who paid full price.
 
 ## ev.ev_suju_a.choice_3_result
 
@@ -118,7 +118,7 @@ You buy rhubarb from a garden stall. Coin changes hands, and the purse settles. 
 
 ## ev.ev_suju_b.choice_3_result
 
-You stand on a stone bridge and watch the canal traffic. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You stand on a stone bridge and watch the canal traffic. The account is written down before the hour turns. The boatmen nod to the watcher on the bridge as they pass.
 
 ## ev.ev_suju_a_followup.title
 

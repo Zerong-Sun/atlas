@@ -87,7 +87,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_camul_entry.choice_3_result
 
-You visit the masjid (mosque). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Camul opens on your map.
+You pray among the folk of Camul, who hold a guest's honour high. Your coming is spoken of through the lanes before you leave, and the smell of melons stays on your clothes. The road to Camul shows on your map.
 
 ## ev.ev_camul_a.choice_1_result
 
@@ -107,7 +107,7 @@ You sit with the elders and hear their account of the old custom. You spend 1 da
 
 ## ev.ev_camul_b.choice_2_result
 
-You observe the idol rites from the courtyard wall. The account is written down before the hour turns. Word of your conduct runs ahead of you.
+You observe the idol rites from the courtyard wall. The account is written down before the hour turns. The folk of Camul remember the stranger who watched with respect.
 
 ## ev.ev_camul_b.choice_3_result
 

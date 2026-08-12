@@ -93,7 +93,7 @@ You walk through the bāzār. You spend 1 day before the way is clear again. You
 
 ## ev.ev_calatu_entry.choice_3_result
 
-You visit the mandir (temple). Word of your conduct runs ahead of you. A little mark of it stays with you. The road to Calatu opens on your map.
+You sit a while among the lamps of the mandir. The keeper knows your name by the time you leave, and a pinch of incense is pressed into your hand. The sea road to Calatu is marked on your map.
 
 ## ev.ev_calatu_a.choice_1_result
 

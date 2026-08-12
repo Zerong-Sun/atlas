@@ -2,7 +2,7 @@
 unit: baldacum
 lang: zh
 source: en
-source_rev: 7822f0d60468
+source_rev: 27901037ec7e
 status: translated
 translator: 人工校译
 notes: >
@@ -94,7 +94,7 @@ stamps:
   ev.ev_baldacum_b_followup.choice_2: 4971eafa97fc
   ev.ev_baldacum_b_followup.choice_2_result: 248c46e3183b
   ev.ev_baldacum_b_followup.choice_3: fecf1514185a
-  ev.ev_baldacum_b_followup.choice_3_result: 963f35a6e9f9
+  ev.ev_baldacum_b_followup.choice_3_result: 65ea5f996f61
   ev.ev_baldacum_c_followup.title: 8cd2ecaf91b2
   ev.ev_baldacum_c_followup.body: 8d5b232e048b
   ev.ev_baldacum_c_followup.choice_1: 20cc0f7f6541
@@ -472,7 +472,7 @@ stamps:
 
 ## ev.ev_baldacum_b_followup.choice_3_result
 
-你在织机前留了一日，看梭子把金线穿过丝绸，听织工哼着旧时的纹样。这工夫里的耐心，比布更长久地留在你身上。
+你在织机前留了一日，看梭子把金线穿过丝绸，听织工哼着旧时的纹样。布会旧，这工夫里的耐心却忘不掉。
 
 ## ev.ev_baldacum_c_followup.title
 

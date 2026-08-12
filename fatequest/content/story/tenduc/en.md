@@ -118,7 +118,7 @@ You buy a roll of coloured cotton cloth from a Nestorian weaver. Coin changes ha
 
 ## ev.ev_tenduc_b.choice_3_result
 
-You ask the Saracen merchants which road leads north to the steppe. The road to Egrigaia opens on your map. Word of your conduct runs ahead of you.
+You ask the Saracen merchants which road leads north to the steppe. The road to Egrigaia opens on your map. They tell their fellows of the stranger who means to ride the steppe road.
 
 ## ev.ev_tenduc_a_followup.title
 

@@ -110,7 +110,7 @@ You ask the shipmasters where their vessels touch next. You set the way to Coilu
 
 ## ev.ev_cail_b.choice_1_result
 
-You wait two days upon the concourse in hope of seeing the King pass. It costs you 2 days on the road. Word of your conduct runs ahead of you. The account is written down before the hour turns.
+You wait two days upon the concourse in hope of seeing the King pass. It costs you 2 days on the road. Your patient waiting is spoken of at the gate. The account is written down before the hour turns.
 
 ## ev.ev_cail_b.choice_2_result
 
@@ -118,7 +118,7 @@ You listen while the brokers speak of the five brother-kings. You set the way to
 
 ## ev.ev_cail_b.choice_3_result
 
-You buy cotton cloth in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. Word of your conduct runs ahead of you.
+You buy cotton cloth in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. After the bargain, the cloth merchants call your name across the wharf.
 
 ## ev.ev_cail_a_followup.title
 

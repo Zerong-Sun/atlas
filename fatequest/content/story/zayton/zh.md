@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: b96f0ff55a9d
+source_rev: 7a1bf1007466
 status: translated
 translator: 人工校译
 notes: >
@@ -107,7 +107,7 @@ stamps:
   ev.ev_zayton_harbour_followup.choice_2: eff13a9071d7
   ev.ev_zayton_harbour_followup.choice_2_result: 68000ad00f87
   ev.ev_zayton_harbour_followup.choice_3: c1157f993e82
-  ev.ev_zayton_harbour_followup.choice_3_result: 754358c105c7
+  ev.ev_zayton_harbour_followup.choice_3_result: 2bf07d24aae8
   ev.ev_zayton_fanfang_followup.title: 52e8dff7589f
   ev.ev_zayton_fanfang_followup.body: ec6b0144eb2b
   ev.ev_zayton_fanfang_followup.choice_1: 70a1bcc5230f
@@ -554,7 +554,7 @@ stamps:
 
 ## ev.ev_zayton_harbour_followup.choice_3_result
 
-你又在码头站了一日，立于密如焚林的桅杆之间，看天竺的船一艘艘进港。最后一艘尚未泊定，一日已尽，但离开之后，这座港口仍留在你身上。
+你又在码头站了一日，立于密如焚林的桅杆之间，看天竺的船一艘艘进港。最后一艘尚未泊定，一日已尽。离开之后，再看海时，这座港口总在你眼前。
 
 ## ev.ev_zayton_fanfang_followup.title
 

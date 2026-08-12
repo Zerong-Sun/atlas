@@ -27,6 +27,24 @@ func _init():
     root.add_child(n)
     await process_frame
 
+    var opening = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf")
+    var intro = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf/GameIntroduction")
+    var verse = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf/OpeningVerse/OpeningVerseLines")
+    var setup = n.get_node_or_null("BootCenter/BootDesk/JourneySetup")
+    if opening == null or intro == null or verse == null or setup == null:
+        print("BOOT: FAIL (opening leaf incomplete)")
+        quit(1)
+        return
+    if not opening.visible or setup.visible or String(verse.text).count("\n") != 1:
+        print("BOOT: FAIL (opening leaf state or verse pair invalid)")
+        quit(1)
+        return
+    n._show_journey_setup()
+    if opening.visible or not setup.visible:
+        print("BOOT: FAIL (journey setup transition failed)")
+        quit(1)
+        return
+
     var cities = n.db.cities()
     var routes = n.db.get_table("routes")
     if cities.is_empty() or routes.is_empty():

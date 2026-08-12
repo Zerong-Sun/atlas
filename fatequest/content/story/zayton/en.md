@@ -472,7 +472,7 @@ Stand another day among the masts
 
 ## ev.ev_zayton_harbour_followup.choice_3_result
 
-You spend another day on the quay, among masts that stand like a burnt forest, watching the ships of India come in. The day is gone before the last one is moored, but the haven stays with you after you leave it.
+You spend another day on the quay, among masts that stand like a burnt forest, watching the ships of India come in. The day is gone before the last one is moored; after you leave, whenever you look at the sea, this haven is what you see.
 
 ## ev.ev_zayton_fanfang_followup.title
 
