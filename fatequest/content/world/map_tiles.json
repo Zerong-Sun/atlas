@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "urlTemplate": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "attribution": "© OpenStreetMap contributors · openstreetmap.org/copyright",
+  "userAgent": "FateQuest/3.0 (+https://github.com/Zerong-Sun/atlas)",
+  "minZoom": 2,
+  "maxZoom": 7,
+  "baseZoom": 3,
+  "cacheDays": 7,
+  "maxConcurrentRequests": 4,
+  "maxMemoryTiles": 192
+}
