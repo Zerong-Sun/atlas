@@ -19,7 +19,9 @@ var _city: Dictionary = {}
 var _stock_box: VBoxContainer
 var _hold_box: VBoxContainer
 var _purse: Label
+var _title: Label
 var _hold_label: Label
+var _armed_good: String = ""   ## gid awaiting the second (confirm) press of Abandon
 
 
 func setup(p_db: ContentDb, p_market: Market) -> void:
@@ -39,6 +41,11 @@ func _build() -> void:
 	var head := HBoxContainer.new()
 	head.add_theme_constant_override("separation", 20)
 	root.add_child(head)
+
+	_title = Label.new()
+	_title.add_theme_font_size_override("font_size", UiScale.title())
+	_title.add_theme_color_override("font_color", Palette.ink())
+	head.add_child(_title)
 
 	_purse = Label.new()
 	_purse.add_theme_font_size_override("font_size", UiScale.hud())
@@ -99,6 +106,17 @@ func open(city: Dictionary, p_state: WorldState, p_jdn: int) -> void:
 	state = p_state
 	jdn = p_jdn
 	visible = true
+	# A market opening must start from a clean slate: a stale pending order
+	# from an earlier screen would otherwise fire on the next press here.
+	_pending = []
+	_armed_good = ""
+	var cid := String(city.get("id", ""))
+	var name_key := "city.%s.market.name" % cid
+	var desc_key := "city.%s.market.desc" % cid
+	var name_s := I18n.t(name_key)
+	var desc_s := I18n.t(desc_key)
+	_title.text = name_s if name_s != name_key else I18n.t("ui.market")
+	_title.tooltip_text = desc_s if desc_s != desc_key else ""
 	refresh()
 
 
@@ -173,6 +191,12 @@ func _stock_row(good: Dictionary) -> Control:
 	name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(name_lbl)
+	# The quayside flavour written for this very stall: market.<city>.item.<id>.
+	# Falls back silently when the city has no authored blurb for this good.
+	var flavor_key := "market.%s.item.%s" % [String(_city.get("id", "")), String(good.get("id", ""))]
+	var flavor := I18n.t(flavor_key)
+	if flavor != flavor_key:
+		name_lbl.tooltip_text = flavor
 
 	var check := market.can_buy(good, _city, state, jdn)
 	var sub := Label.new()
@@ -225,61 +249,84 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(name_lbl)
 
+	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
+	var granted_here := int(basis.get("granted", {}).get(String(_city.get("id", "")), 0))
 	var price := market.sell_price(good, _city, jdn, state.seed)
 	var sub := Label.new()
-	sub.text = I18n.t("ui.market.sell_sub") % [int(price / Market.FEN), _demand_note(good)]
+	if granted_here > 0:
+		# The travel brake (GDD §9.2). The quote stays visible, but the row
+		# tells the truth: this counter will not pay it.
+		sub.text = I18n.t("ui.market.sell_local_quote") % [int(price / Market.FEN), _demand_note(good)]
+		name_lbl.text += " — " + I18n.t("ui.market.local_grant_count") % granted_here
+	else:
+		sub.text = I18n.t("ui.market.sell_sub") % [int(price / Market.FEN), _demand_note(good)]
+		# The changer's cut, shown before the player commits: a sale across
+		# currency zones bleeds EXCHANGE_LOSS at the money-changer.
+		var bband := String(basis.get("band", ""))
+		var cband := String(_city.get("band", ""))
+		if not bband.is_empty() and bband != cband:
+			var cut := market.exchange_penalty(bband, cband, price)
+			if cut > 0:
+				sub.text += "\n" + I18n.t("ui.market.exchange_cut") % int(cut / Market.FEN)
 	sub.add_theme_font_size_override("font_size", UiScale.ui() - 3)
 	sub.add_theme_color_override("font_color", Palette.ink_soft())
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	sub.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(sub)
 
-	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
-	var local_grant := int(basis.get("granted", {}).get(String(_city.get("id", "")), 0)) > 0
-	if local_grant:
-		# The travel brake (GDD §9.2): got it here, sell it down the road.
-		# The local quote stays visible — the screen's one question is still
-		# answered at a glance — but the sell button is closed.
-		sub.text += "\n" + I18n.t("ui.market.local_grant")
+	if granted_here > 0:
 		var sell := Panels.primary_button(I18n.t("ui.sell"), func(): return)
 		sell.disabled = true
 		sell.tooltip_text = I18n.t("ui.market.local_grant")
 		row.add_child(sell)
-		# The release valve: a hold must never strand cargo with no way out.
-		var jettison := Panels.styled_button(I18n.t("ui.market.jettison"), func(): _jettison(good))
-		jettison.tooltip_text = I18n.t("ui.market.jettison_tip")
-		row.add_child(jettison)
-		return panel
+	else:
+		var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))
+		row.add_child(sell)
 
-	var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))
-	row.add_child(sell)
-	var jettison := Panels.styled_button(I18n.t("ui.market.jettison"), func(): _jettison(good))
-	jettison.tooltip_text = I18n.t("ui.market.jettison_tip")
+	# The release valve: a hold must never strand cargo with no way out.
+	# Two presses: the first arms the button, the second commits — cargo is
+	# the one thing the market destroys for nothing, so it asks twice.
+	var gid := String(good.get("id", ""))
+	var armed := _armed_good == gid
+	var jettison := Panels.styled_button(
+		I18n.t("ui.market.confirm_abandon") if armed else I18n.t("ui.market.abandon"),
+		func(): _abandon(good))
+	jettison.tooltip_text = I18n.t("ui.market.abandon_tip")
 	row.add_child(jettison)
 	return panel
 
 
 func _buy(good: Dictionary) -> void:
-	traded.emit()
+	# Order matters: the host consumes _pending on the traded signal, so the
+	# order must be queued BEFORE the signal fires — otherwise the first press
+	# of a session applies nothing and the next press applies this trade.
 	_pending = market.buy_effects(good, _city, jdn, state.seed)
+	traded.emit()
 
 
 func _sell(good: Dictionary) -> void:
 	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
 	if int(basis.get("granted", {}).get(String(_city.get("id", "")), 0)) > 0:
 		return  # the gate held even if the button was somehow pressed
-	traded.emit()
 	_pending = market.sell_effects(good, _city, jdn, state.seed, basis)
-
-
-## Throw a unit overboard for nothing. Money never comes out of a jettison —
-## it exists so a gated or bulk-heavy hold can always free a cargo slot.
-func _jettison(good: Dictionary) -> void:
 	traded.emit()
+
+
+## Abandon a unit for nothing. Money never comes out of an abandon — it
+## exists so a gated or bulk-heavy hold can always free a cargo slot.
+## First press arms the button; the second press commits.
+func _abandon(good: Dictionary) -> void:
+	var gid := String(good.get("id", ""))
+	if _armed_good != gid:
+		_armed_good = gid
+		refresh()
+		return
+	_armed_good = ""
 	_pending = [{
-		"op": "goods", "id": String(good.get("id", "")), "value": -1,
-		"reason": "jettisoned-at-%s" % String(_city.get("id", "")),
+		"op": "goods", "id": gid, "value": -1,
+		"reason": "abandoned-at-%s" % String(_city.get("id", "")),
 	}]
+	traded.emit()
 
 
 ## Trade never writes WorldState here — it hands effects to the executor, like

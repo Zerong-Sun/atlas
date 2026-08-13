@@ -102,3 +102,6 @@ jobs:
       - name: Economy sell-gate contract (GDLC ratchet)
         working-directory: fatequest
         run: godot --headless --script tests/audit_economy_sellgate.gd
+      - name: Market trade order (GDLC ratchet)
+        working-directory: fatequest
+        run: godot --headless --script tests/audit_market_trades.gd

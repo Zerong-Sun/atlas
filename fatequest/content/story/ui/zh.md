@@ -161,9 +161,14 @@ stamps:
   ui.market.empty: d29a0939bcb5
   ui.market.purse: c43e6f25c675
   ui.market.sell_sub: 7bc1f36cf822
-  ui.market.local_grant: 33eb31e7ca31
-  ui.market.jettison: c83cb8b66d32
-  ui.market.jettison_tip: e937f20a620e
+  ui.market.local_grant: 17b4739f8a95
+  ui.market.local_grant_count: f0c16ce49bf8
+  ui.market.sell_local_quote: 6daf326793a9
+  ui.market.exchange_cut: 442d8a56a500
+  ui.market.abandon: d09252c46a7b
+  ui.market.abandon_tip: 26949dfedb36
+  ui.market.confirm_abandon: a563666c977e
+  ui.local_shortage: 87f8757b0e16
   ui.method_bracket: b1945e967ea9
   ui.party.alone: 28ac37521e87
   ui.party.cargo_slots: 519fe531c48e
@@ -801,15 +806,35 @@ The Book of Far Roads
 
 ## ui.market.local_grant
 
-本地所得——且往他埠发卖，方显其价
+本地所得——只可往他埠发卖，方显其价
 
-## ui.market.jettison
+## ui.market.local_grant_count
 
-丢弃
+其中 %d 件本地所得
 
-## ui.market.jettison_tip
+## ui.market.sell_local_quote
 
-弃一单位于途，不取分文
+此处可值 %d 银——但此地不买
+
+## ui.market.exchange_cut
+
+兑换抽银 %d
+
+## ui.market.abandon
+
+弃货
+
+## ui.market.abandon_tip
+
+弃一件于途，不取分文
+
+## ui.market.confirm_abandon
+
+确认——不取分文
+
+## ui.local_shortage
+
+此地所缺
 
 ## ui.method_bracket
 

@@ -620,15 +620,35 @@ Sells here for %d silver · %s
 
 ## ui.market.local_grant
 
-Got it here — can only be sold at another port
+Bought at a friend's price — its worth is met only at another port
 
-## ui.market.jettison
+## ui.market.local_grant_count
 
-Jettison
+of these, %d got here
 
-## ui.market.jettison_tip
+## ui.market.sell_local_quote
 
-Throw one unit overboard — no silver for it
+Here it would fetch %d silver — but it is not sold here
+
+## ui.market.exchange_cut
+
+the changer takes %d silver
+
+## ui.market.abandon
+
+Abandon
+
+## ui.market.abandon_tip
+
+Abandon one unit on the road — no silver for it
+
+## ui.market.confirm_abandon
+
+Confirm — no silver
+
+## ui.local_shortage
+
+Local Shortage
 
 ## ui.method_bracket
 

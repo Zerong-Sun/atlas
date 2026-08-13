@@ -115,6 +115,31 @@ func _init():
 			if FileAccess.file_exists(p):
 				DirAccess.remove_absolute(p)
 
+	# ---- S4c: the committed pre-gate fixture — grandfathering pinned on disk ----
+	var fx := FileAccess.open("res://tests/fixtures/save_v4.json", FileAccess.READ)
+	if fx == null:
+		flag("[严重]", "S4c: save_v4.json fixture missing")
+	else:
+		var fx_parsed = JSON.parse_string(fx.get_as_text())
+		fx.close()
+		if typeof(fx_parsed) != TYPE_DICTIONARY:
+			flag("[严重]", "S4c: fixture does not parse")
+		else:
+			var fx_doc: Dictionary = ContentDb._normalize(fx_parsed)
+			var fx_status: Dictionary = SaveGame._document_status(fx_doc)
+			if String(fx_status.get("status", "")) != "ok":
+				flag("[严重]", "S4c: fixture rejected: %s" % str(fx_status))
+			var fx_back: Dictionary = SaveGame.deserialize(fx_doc)
+			var fx_st: WorldState = fx_back["state"]
+			var fx_p: Dictionary = fx_st.purchases.get("paper-money", {})
+			if fx_p.has("granted"):
+				flag("[严重]", "S4c: pre-gate basis mutated on load")
+			if fx_st.city != "zayton" or not fx_st.goods.has("paper-money"):
+				flag("[严重]", "S4c: fixture state did not survive")
+			if market.sell_effects(good, zayton, fx_st.jdn, fx_st.seed,
+					fx_p).is_empty():
+				flag("[严重]", "S4c: grandfathered fixture lot blocked from sale")
+
 	# ---- S5: debt closure — the Playtest #1 mint sweep is braked everywhere ----
 	# Includes free grants (cost == 0), multi-city `when`, and divination
 	# pass/fail branches — the earlier sweep skipped all three.
@@ -168,6 +193,26 @@ func _init():
 						braked += 1
 					else:
 						unbraked.append("%s:%s" % [eid, gid])
+
+	# ---- S7: basis dilution — a free grant must not water down bought cost ----
+	# (Playtest #3: grant + market buy averaged the zero-cost grant into the
+	# basis, so a loss-making sale recorded a phantom profit in {richestTrade}.)
+	if not good.is_empty() and not zayton.is_empty():
+		var st8 := WorldState.new()
+		st8.seed = AUDIT_SEED
+		st8.city = "zayton"
+		st8.coins = 999999999
+		exec.execute(st8, [{"op": "goods", "id": "paper-money", "value": 1, "reason": "t"}], {})
+		var purse8: int = st8.coins
+		for e in market.buy_effects(good, zayton, st8.jdn, st8.seed):
+			exec.execute(st8, [e], {})
+		var price8 := purse8 - st8.coins
+		var b8: Dictionary = st8.purchases.get("paper-money", {})
+		var unit8 := int(b8.get("unit", 0))
+		if unit8 <= 0:
+			flag("[严重]", "S7: no cost basis after grant + buy")
+		elif unit8 != price8:
+			flag("[严重]", "S7: basis diluted by the free grant (unit %d for a %d buy)" % [unit8, price8])
 
 	# ---- S6: the launder and the overwrite must not reopen the gate ----
 	# Persona probes (Playtest #2): one market buy wipes a single-scalar mark

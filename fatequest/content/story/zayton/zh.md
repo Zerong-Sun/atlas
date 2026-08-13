@@ -364,7 +364,7 @@ stamps:
 
 ## market.zayton.item.paper-money
 
-大汗的纸钞，印在楮皮纸上，盖着朱红御玺。
+大汗的交钞，印在楮皮纸上，盖着朱红御玺。
 
 ## market.zayton.item.porcelain
 

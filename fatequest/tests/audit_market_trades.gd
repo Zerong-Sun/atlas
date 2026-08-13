@@ -72,7 +72,7 @@ func _init():
 	if not n._market_view._pending.is_empty():
 		flag("[严重]", "T2: pending not consumed after the sell press")
 
-	# ---- T3: jettison applies immediately, grants no silver ----
+	# ---- T3: abandon applies on the SECOND press (arm + commit), no silver ----
 	n.executor.execute(n.state, [{"op": "goods", "id": "paper-money", "value": 1,
 		"reason": "t"}], {})
 	await process_frame
@@ -80,15 +80,23 @@ func _init():
 	await process_frame
 	var before3: int = n.state.coins
 	var held3: int = int(n.state.goods.get("paper-money", 0))
-	if not _press(n._market_view._hold_box, I18n.t("ui.market.jettison")):
-		flag("[严重]", "T3: no jettison button on the hold row")
+	var abandon_label := I18n.t("ui.market.abandon")
+	if not _press(n._market_view._hold_box, abandon_label):
+		flag("[严重]", "T3: no abandon button on the hold row")
+	await process_frame
+	if int(n.state.goods.get("paper-money", 0)) != held3:
+		flag("[严重]", "T3: first abandon press already destroyed cargo (hold %d -> %d)"
+			% [held3, int(n.state.goods.get("paper-money", 0))])
+	# Second press commits.
+	if not _press(n._market_view._hold_box, I18n.t("ui.market.confirm_abandon")):
+		flag("[严重]", "T3: confirm press not offered after arming")
 	await process_frame
 	if int(n.state.goods.get("paper-money", 0)) != held3 - 1:
-		flag("[严重]", "T3: jettison applied nothing (hold %d -> %d)" % [held3, int(n.state.goods.get("paper-money", 0))])
+		flag("[严重]", "T3: abandon applied nothing (hold %d -> %d)" % [held3, int(n.state.goods.get("paper-money", 0))])
 	if n.state.coins != before3:
-		flag("[严重]", "T3: jettison moved silver (%d -> %d)" % [before3, n.state.coins])
+		flag("[严重]", "T3: abandon moved silver (%d -> %d)" % [before3, n.state.coins])
 	if not n._market_view._pending.is_empty():
-		flag("[严重]", "T3: pending not consumed after the jettison press")
+		flag("[严重]", "T3: pending not consumed after the abandon press")
 
 	print("=== MARKET TRADE ORDER AUDIT ===")
 	if issues.is_empty():

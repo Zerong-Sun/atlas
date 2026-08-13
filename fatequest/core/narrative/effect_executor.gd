@@ -171,7 +171,8 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 					state.purchases[id] = prev
 				elif int(val) < 0:
 					# Units leaving the hold consume granted units first, so a
-					# mark dies only with the units it belongs to.
+					# mark dies only with the units it belongs to. Anything
+					# left comes out of the bought pool.
 					var left := -int(val)
 					var g: Dictionary = prev.get("granted", {})
 					for c in g.keys():
@@ -186,6 +187,8 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 							g.erase(c)
 					if g.is_empty():
 						prev.erase("granted")
+					if prev.has("bought") and left > 0:
+						prev["bought"] = maxi(int(prev["bought"]) - left, 0)
 					state.purchases[id] = prev
 		"item":
 			if String(val) not in state.items:
@@ -282,17 +285,21 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 				}
 		"bought":
 			# Cost basis, kept as a running average so that selling a mixed lot
-			# cannot be gamed by ordering. Erased by the goods op when the last
-			# unit leaves the hold. The market unit is NOT a grant: the goods
-			# op stamped it in this city, and this op takes that stamp back —
-			# a purchase can neither wipe nor launder any other unit's grant.
+			# cannot be gamed by ordering. The average runs over BOUGHT units
+			# only — a free grant must not water the basis down, or a
+			# loss-making sale would record a phantom profit in {richestTrade}.
+			# Erased by the goods op when the last unit leaves the hold. The
+			# market unit is NOT a grant: the goods op stamped it in this city,
+			# and this op takes that stamp back — a purchase can neither wipe
+			# nor launder any other unit's grant.
 			var bid := String(e.get("id", ""))
 			var unit := int(val)
 			var prev: Dictionary = state.purchases.get(bid, {})
-			var held := int(state.goods.get(bid, 0))
+			var bought_cnt := int(prev.get("bought", 0)) + 1
 			var old_unit := int(prev.get("unit", 0))
-			var avg := unit if held <= 1 else int((old_unit * (held - 1) + unit) / float(held))
-			var out := {"band": String(e.get("band", "")), "unit": avg}
+			var avg := unit if bought_cnt <= 1 \
+				else int((old_unit * (bought_cnt - 1) + unit) / float(bought_cnt))
+			var out := {"band": String(e.get("band", "")), "unit": avg, "bought": bought_cnt}
 			if prev.has("granted"):
 				var g: Dictionary = prev["granted"]
 				var c := String(state.city)
