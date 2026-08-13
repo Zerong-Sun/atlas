@@ -132,10 +132,18 @@ func _init():
 					else:
 						flag("[提示]", line)
 
-	# ---- R3: the battuta event must be a listed Zayton site ----
-	var zayton: Dictionary = db.get_record("zayton")
-	if not (zayton.get("sites", []) as Array).has("ev-zayton-battuta-a"):
-		flag("[严重]", "ev-zayton-battuta-a is not in zayton's sites list — reachable only via the one-shot entry fork")
+	# ---- R3: the battuta tale must be a listed site in every city it has ----
+	# (Playtest #1 fixed Zayton; Playtest #4 extends the same dynamic-unlock
+	# pattern to the kinsay/cail/melibar cameos, which were still reachable
+	# only through their one-shot entry forks.)
+	for site_id in ["ev-zayton-battuta-a", "ev-kinsay-battuta-a", "ev-cail-battuta-a", "ev-melibar-battuta-a"]:
+		var city_id := String(site_id).trim_prefix("ev-").get_slice("-", 0)
+		var city_rec: Dictionary = db.get_record(city_id)
+		if city_rec.is_empty():
+			flag("[严重]", "R3: no city record for %s" % site_id)
+			continue
+		if not (city_rec.get("sites", []) as Array).has(site_id):
+			flag("[严重]", "R3: %s is not in %s's sites list — reachable only via the one-shot entry fork" % [site_id, city_id])
 
 	# ---- R4: needs labels speak display coins, like the HUD and market ----
 	var st := WorldState.new()
