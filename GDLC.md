@@ -66,6 +66,25 @@ _Chronological log of playtest cycles. Each entry: date, cycle type, personas, f
 - **Cross-model review:** Codex CLI not installed — skipped with reason; four contract lenses substituted.
 - **Earned rules:** 1 (see above).
 
+### Playtest #3 — Market experience after the sell-gate (2026-08-14)
+
+- **Cycle:** gameplay-matrix (UX half of the mixed pipeline+UX ship, playbook rule #32). **Personas:** Tourist, Casual Historian, Historian Senior, China Purist, Speedrunner. **Confidence:** HIGH.
+- **Instruments:** content read-through (market_view + i18n en/zh); shared headless probe (`tests/pt3_market_probe.gd`, transient) + contract audit `tests/audit_market_trades.gd` as the runtime instrument.
+- **Findings (promoted):**
+  - **P0** — Every market trade applied one press late: `_buy/_sell/_jettison` emitted `traded` before assigning `_pending`, so the first press of a session did nothing, the last press left a stale trade, and the next press of any button (in any city) applied the previous trade — a Zayton silk sell once fired on a Kinsay buy press. Pre-dates the sell-gate (original trade commit); smoke_market had masked it (4 presses → 3 applied still passed). Observers: preflight audit (8 severe), Casual Historian, Speedrunner. → fixed (queue-before-emit + pending purge on open); RED 1a52e91 → GREEN 3c11b8c.
+  - **P1** — Ghost trades bypassed purse/cargo guards at fire time (consequence of the same root; evaporates with same-press consumption). Speedrunner.
+  - **P2** — local_grant framing: en rules-panel voice, zh lost the mandatory tone, and the string asserted a false liquidity fact (the quay buys anything at spread — the honest frame is the friend's price). 3 personas. → reworded en+zh (只可 restored).
+  - **P2** — Jettison on dry land + no confirmation + dominated trap button. 3 personas. → renamed Abandon/弃货, land-neutral tip, arm-confirm (two presses).
+  - **P2** — Gated row showed "Sells here for X" on a dead Sell button; mixed-lot rows claimed all units were locked. 2 personas. → sell_local_quote + local_grant_count.
+  - **P2** — Invisible changer's cut on cross-zone sells (Historian Senior). → exchange_cut line on the row.
+  - **P2** — Yuan paper money priced as a profitable export (inconvertible chao). Historian Senior. → far band set to base parity.
+  - **P2** — Orphaned quayside flavour (market.item.* blurbs + market desc never rendered). 2 personas. → wired as stock-row tooltips + screen header.
+  - **P2 (re-surfaced, fixed at root)** — basis dilution: the free grant watered the bought average, so a loss sale recorded phantom richestTrade profit (S7 RED → GREEN: unit now equals the exact buy price; bought-count basis).
+  - **P3s:** 一单位/丢弃/紧缺 zh register; 交钞/纸钞 variance; jettison-tip hover-only; flat 6% vs prose variance (accepted abstraction).
+- **Ratchet delta:** `tests/audit_market_trades.gd` (T1–T3, RED 1a52e91 → GREEN 3c11b8c); S7 + S4c added to `audit_economy_sellgate.gd`; `tests/fixtures/save_v4.json` (pre-gate save, grandfathering pinned on disk); CI runs the trade-order audit.
+- **Re-surface %:** 2/14 (basis dilution — fixed at root this cycle; flat-6% prose — accepted). No regression-of-fix.
+- **Fold-ins:** save fixture (test-infra); the remaining PT1 P3 text items deferred to a content cycle.
+
 ## Ratchet (Regression Tests)
 
 _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discretion, severity + reason recorded._
@@ -89,7 +108,15 @@ _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discre
 | 2026-08-14 | P2 — grandfathering contract untested | Save Auditor | audit_economy_sellgate.gd S4b (old-shape round trip); fixture file remains as noted debt |
 | 2026-08-14 | P3 — 4 bargain choices ungated (free good when broke) | Fiscal Clerk | persona-note; needs gates added |
 | 2026-08-14 | P3 — gated rows hid the sell price | Caravan Broker, Market Maker | persona-note; price line kept + prohibition wording |
-| 2026-08-14 | P3 (re-surface) — running-average basis dilution overstates richestTrade on mixed lots | Market Maker | not fixed — pre-existing, logged |
+| 2026-08-14 | P3 (re-surface) — running-average basis dilution overstates richestTrade on mixed lots | Market Maker | fixed PT3 — bought-count basis (audit_economy_sellgate.gd S7, RED → GREEN 3c11b8c) |
+| 2026-08-14 | P0 — every market trade applied one press late; stale trades fired cross-city | preflight audit, Casual Historian, Speedrunner | tests/audit_market_trades.gd T1–T3 (RED 1a52e91 → GREEN 3c11b8c) |
+| 2026-08-14 | P2 — local_grant en rules-panel voice / zh lost mandatory tone / false liquidity claim | Tourist, China Purist, Historian Senior | persona-note; friend's-price fiction en+zh |
+| 2026-08-14 | P2 — jettison on dry land, no confirmation, dominated beside Sell | Tourist, Historian Senior, China Purist | persona-note; Abandon/弃货 + arm-confirm (T3 asserts the two-press contract) |
+| 2026-08-14 | P2 — "Sells here for X" on a dead Sell button; mixed-lot row mislabels bought units | Tourist, Historian Senior | persona-note; sell_local_quote + local_grant_count |
+| 2026-08-14 | P2 — invisible changer's cut on cross-zone sells | Historian Senior | persona-note; exchange_cut line |
+| 2026-08-14 | P2 — Yuan paper money priced as a profitable export | Historian Senior | persona-note; far band = base parity |
+| 2026-08-14 | P2 — orphaned quayside flavour never rendered | China Purist, Historian Senior | persona-note; stock-row tooltips + market header |
+| 2026-08-14 | P2 — grandfathering contract unpinned on disk | Save Auditor (PT2) | tests/fixtures/save_v4.json + audit_economy_sellgate.gd S4c |
 
 ## What's Working
 
