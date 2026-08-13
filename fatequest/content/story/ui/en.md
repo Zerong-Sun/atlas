@@ -618,6 +618,10 @@ Purse: %d silver
 
 Sells here for %d silver · %s
 
+## ui.market.local_grant
+
+Got it here — worth more down the road
+
 ## ui.method_bracket
 
 [%s]

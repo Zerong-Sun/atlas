@@ -171,6 +171,13 @@ func buy_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String) -> 
 ## paragraph that no transaction ever produced.
 func sell_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String,
 		basis: Dictionary = {}) -> Array:
+	# The travel brake (GDD §9.2): a lot granted in this very city cannot be
+	# flipped back to it at market price — events sell cheap at the source, and
+	# an ungated same-city resale turns every such bargain into a money mint.
+	# Market buys rebuild the basis without the grant mark, so liquidation at a
+	# spread loss stays legal; selling after one leg of travel is unaffected.
+	if String(basis.get("granted_city", "")) == String(city.get("id", "")):
+		return []
 	var gross := sell_price(good, city, jdn, seed)
 	var gid := String(good.get("id", ""))
 	var band := String(city.get("band", ""))

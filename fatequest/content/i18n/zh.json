@@ -5395,6 +5395,7 @@
   "ui.market.buy_sub": "%d 银 · %s · 占 %d 格",
   "ui.market.cargo": "货 %d/%d",
   "ui.market.empty": "（空）",
+  "ui.market.local_grant": "本地所得——且往他埠发卖，方显其价",
   "ui.market.purse": "钱袋：%d 银",
   "ui.market.sell_sub": "在此可售 %d 银 · %s",
   "ui.method_bracket": "〔%s〕",

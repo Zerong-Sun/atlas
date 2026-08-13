@@ -234,6 +234,17 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	sub.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text.add_child(sub)
 
+	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
+	var local_grant := String(basis.get("granted_city", "")) == String(_city.get("id", ""))
+	if local_grant:
+		# The travel brake (GDD §9.2): got it here, sell it down the road.
+		sub.text = I18n.t("ui.market.local_grant")
+		var sell := Panels.primary_button(I18n.t("ui.sell"), func(): return)
+		sell.disabled = true
+		sell.tooltip_text = I18n.t("ui.market.local_grant")
+		row.add_child(sell)
+		return panel
+
 	var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))
 	row.add_child(sell)
 	return panel
@@ -245,9 +256,11 @@ func _buy(good: Dictionary) -> void:
 
 
 func _sell(good: Dictionary) -> void:
+	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
+	if String(basis.get("granted_city", "")) == String(_city.get("id", "")):
+		return  # the gate held even if the button was somehow pressed
 	traded.emit()
-	_pending = market.sell_effects(good, _city, jdn, state.seed,
-		state.purchases.get(String(good.get("id", "")), {}))
+	_pending = market.sell_effects(good, _city, jdn, state.seed, basis)
 
 
 ## Trade never writes WorldState here — it hands effects to the executor, like

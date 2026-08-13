@@ -161,6 +161,7 @@ stamps:
   ui.market.empty: d29a0939bcb5
   ui.market.purse: c43e6f25c675
   ui.market.sell_sub: 7bc1f36cf822
+  ui.market.local_grant: 8777b7ed7316
   ui.method_bracket: b1945e967ea9
   ui.party.alone: 28ac37521e87
   ui.party.cargo_slots: 519fe531c48e
@@ -795,6 +796,10 @@ The Book of Far Roads
 ## ui.market.sell_sub
 
 在此可售 %d 银 · %s
+
+## ui.market.local_grant
+
+本地所得——且往他埠发卖，方显其价
 
 ## ui.method_bracket
 

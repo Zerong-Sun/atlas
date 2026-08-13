@@ -5395,6 +5395,7 @@
   "ui.market.buy_sub": "%d silver · %s · %d slots",
   "ui.market.cargo": "cargo %d/%d",
   "ui.market.empty": "(empty)",
+  "ui.market.local_grant": "Got it here — worth more down the road",
   "ui.market.purse": "Purse: %d silver",
   "ui.market.sell_sub": "Sells here for %d silver · %s",
   "ui.method_bracket": "[%s]",

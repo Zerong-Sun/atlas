@@ -99,3 +99,6 @@ jobs:
       - name: Divination readings audit
         working-directory: fatequest
         run: godot --headless --script tests/audit_divination_readings.gd
+      - name: Economy sell-gate contract (GDLC ratchet)
+        working-directory: fatequest
+        run: godot --headless --script tests/audit_economy_sellgate.gd

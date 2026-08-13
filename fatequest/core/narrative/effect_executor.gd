@@ -159,6 +159,13 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 				state.purchases.erase(id)
 			else:
 				state.goods[id] = n
+				if int(val) > 0:
+					# Provenance: a lot granted by an event is braked from
+					# same-city resale (GDD §9.2). Market buys clear this via
+					# the `bought` op that rebuilds the basis after the grant.
+					var _basis: Dictionary = state.purchases.get(id, {})
+					_basis["granted_city"] = state.city
+					state.purchases[id] = _basis
 		"item":
 			if String(val) not in state.items:
 				state.items.append(String(val))
