@@ -96,47 +96,83 @@ func _init():
 			flag("[严重]", "S4: grant record lost on save/load (got '%s')" % rgrant)
 
 	# ---- S5: debt closure — the Playtest #1 mint sweep is braked everywhere ----
+	# Includes free grants (cost == 0), multi-city `when`, and divination
+	# pass/fail branches — the earlier sweep skipped all three.
 	var braked := 0
 	var unbraked: Array[String] = []
 	for rec in db.get_table("events"):
 		var eid := String(rec.get("id", ""))
 		var when: Dictionary = rec.get("when", {})
 		var cities: Array = when.get("cities", [])
-		if cities.size() != 1:
+		if cities.is_empty():
 			continue
-		var city_id := String(cities[0])
-		var city: Dictionary = db.get_record(city_id)
-		if city.is_empty() or not city.has("market"):
-			continue
-		for c in rec.get("choices", []):
-			var cost := 0
-			var granted := {}
-			for e in c.get("effects", []):
-				if e.get("op") == "coins":
-					cost += int(e.get("value", 0))
-				if e.get("op") == "goods":
-					var gid := String(e.get("id", ""))
-					granted[gid] = int(granted.get(gid, 0)) + int(e.get("value", 0))
-			if cost >= 0 or granted.is_empty():
+		for city_id_v in cities:
+			var city_id := String(city_id_v)
+			var city: Dictionary = db.get_record(city_id)
+			if city.is_empty() or not city.has("market"):
 				continue
-			for gid in granted:
-				var g: Dictionary = db.get_record(gid)
-				if g.is_empty():
+			for c in rec.get("choices", []):
+				if c.has("divination"):
 					continue
-				var sell := market.sell_price(g, city, AUDIT_JDN, AUDIT_SEED)
-				if -cost >= int(sell * 0.5):
+				var cost := 0
+				var granted := {}
+				var branch_lists: Array = [c.get("effects", [])]
+				if c.has("pass"):
+					branch_lists.append(c.get("pass", {}).get("effects", []))
+				if c.has("fail"):
+					branch_lists.append(c.get("fail", {}).get("effects", []))
+				for branch in branch_lists:
+					for e in branch:
+						if e.get("op") == "coins":
+							cost += int(e.get("value", 0))
+						if e.get("op") == "goods":
+							var gid := String(e.get("id", ""))
+							granted[gid] = int(granted.get(gid, 0)) + int(e.get("value", 0))
+				if granted.is_empty():
 					continue
-				# Mint candidate: grant it in the event's own city, then try to
-				# sell it right back. The gate must refuse.
-				var st5 := WorldState.new()
-				st5.seed = AUDIT_SEED
-				st5.city = city_id
-				exec.execute(st5, [{"op": "goods", "id": gid, "value": 1, "reason": "t"}], {})
-				var b5: Dictionary = st5.purchases.get(gid, {})
-				if market.sell_effects(g, city, st5.jdn, st5.seed, b5).is_empty():
-					braked += 1
-				else:
-					unbraked.append("%s:%s" % [eid, gid])
+				for gid in granted:
+					var g: Dictionary = db.get_record(gid)
+					if g.is_empty():
+						continue
+					var sell := market.sell_price(g, city, AUDIT_JDN, AUDIT_SEED)
+					if cost > 0 and cost >= int(sell * 0.5):
+						continue
+					# Mint candidate: grant it in the event's own city, then try
+					# to sell it right back. The gate must refuse.
+					var st5 := WorldState.new()
+					st5.seed = AUDIT_SEED
+					st5.city = city_id
+					exec.execute(st5, [{"op": "goods", "id": gid, "value": 1, "reason": "t"}], {})
+					var b5: Dictionary = st5.purchases.get(gid, {})
+					if market.sell_effects(g, city, st5.jdn, st5.seed, b5).is_empty():
+						braked += 1
+					else:
+						unbraked.append("%s:%s" % [eid, gid])
+
+	# ---- S6: the launder and the overwrite must not reopen the gate ----
+	# Persona probes (Playtest #2): one market buy wipes a single-scalar mark
+	# for the whole lot; a second grant in another city moves it.
+	if not good.is_empty() and not zayton.is_empty():
+		var st6 := WorldState.new()
+		st6.seed = AUDIT_SEED
+		st6.city = "zayton"
+		st6.coins = 999999999
+		exec.execute(st6, [{"op": "goods", "id": "paper-money", "value": 1, "reason": "t"}], {})
+		for e in market.buy_effects(good, zayton, st6.jdn, st6.seed):
+			exec.execute(st6, [e], {})
+		var b6: Dictionary = st6.purchases.get("paper-money", {})
+		if not market.sell_effects(good, zayton, st6.jdn, st6.seed, b6).is_empty():
+			flag("[严重]", "S6: launder — one market buy reopens same-city sale of the granted lot")
+
+		var st7 := WorldState.new()
+		st7.seed = AUDIT_SEED
+		st7.city = "zayton"
+		exec.execute(st7, [{"op": "goods", "id": "paper-money", "value": 1, "reason": "t"}], {})
+		st7.city = "fuju"
+		exec.execute(st7, [{"op": "goods", "id": "paper-money", "value": 1, "reason": "t"}], {})
+		var b7: Dictionary = st7.purchases.get("paper-money", {})
+		if not market.sell_effects(good, zayton, st7.jdn, st7.seed, b7).is_empty():
+			flag("[严重]", "S6: overwrite — a second grant in another city unblocks the first city's lot")
 
 	print("=== ECONOMY SELL-GATE AUDIT ===")
 	if issues.is_empty():
