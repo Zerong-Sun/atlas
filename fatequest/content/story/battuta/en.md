@@ -585,7 +585,9 @@ take a dinar or a dirhem until it is changed for these notes. The painters are t
 most skilful in the world, and you find pictures of yourself and your companions
 upon the walls and on papers stuck up in the streets. When a vessel leaves China,
 the names and forms of the men aboard are written down, and when it returns the
-magistrates' servants board it and compare.
+magistrates' servants board it and compare; if a man is missing, the commander of
+the vessel is seized, and goods not entered in the register forfeit ship and cargo
+to the king — an oppression seen nowhere else.
 
 ## ev.zayton.battuta_a.choice.change
 
@@ -603,9 +605,9 @@ Watch the registry of the junks
 
 You take your dinars and dirhems to the changers, for no one in China will deal with
 you until your coin is changed into the king's notes. Each note is a palm-sized
-sheet stamped with the king's stamp; twenty-five make a nashhat, as a dinar is with
-us. When the paper grows torn or worn you may carry it to the mint, and receive new
-notes in its place without interest.
+sheet stamped with the king's stamp; twenty-five make a nashhat, a dinar of the
+place. When the paper grows torn or worn you may carry it to the mint, and receive
+new notes in its place without interest.
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
@@ -619,9 +621,23 @@ send his picture to the other provinces, and wherever he is, he is taken.
 
 You watch the clerks of the harbour take down the names and forms of the men aboard
 each junk before it sails, and when a vessel returns, the servants of the
-magistrates board her and compare the men with the descriptions. You learn that a
-river road runs twenty-seven days upstream to Sin Kilan, where the earthenware is
-made and the river called the water of life enters the sea.
+magistrates board her and compare the men with the descriptions; a missing man
+costs the commander his ship, and goods not entered in the register forfeit ship
+and cargo to the king — an oppression seen nowhere else. You learn of the river
+road, twenty-seven days from Sin Kilan, where earthenware is made as here at
+Zayton, and that the same river runs on toward Kinsay; here the river called the
+water of life enters the sea, and the place is called the meeting of two seas.
+
+## codex.cx-paper-money.name
+
+The King's Paper Money
+
+## codex.cx-paper-money.body
+
+In China the king's paper is money: palm-sized sheets stamped with his stamp,
+twenty-five to a nashhat. Torn notes are exchanged at the mint for new ones without
+interest, and no one will take a dinar or a dirhem until it is changed for these
+notes.
 
 ## ev.kinsay.battuta_a.title
 
@@ -699,8 +715,8 @@ A traveller tells how he came down the river from Kinsay and took ship for the s
 
 ## ev.zayton.entry.choice.battuta
 
-Ask of the traveller who marvelled at your paper money
+Ask of the traveller who marvelled at the king's paper money
 
 ## ev.ev_zayton_entry.choice_4_result
 
-A traveller from the West asks leave to handle your paper money, and tells of the registry of ships and the painters who draw every stranger's face; he would tell you more of it, if you will listen.
+A traveller from the West asks leave to handle the king's paper money, and tells of the registry of ships and the painters who draw every stranger's face; he would tell you more of it, if you will listen.

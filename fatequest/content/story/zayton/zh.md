@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: e4483310c8ce
+source_rev: 3a2c64f482e1
 status: translated
 translator: 人工校译
 notes: >
@@ -82,7 +82,7 @@ stamps:
   ev.ev_zayton_mazu.choice_2_result: 16a47fc28ff5
   ev.ev_zayton_mazu.choice_3_result: 26a87bcf367d
   ev.ev_zayton_mentor.choice_1_result: 7b38491d6130
-  ev.ev_zayton_mentor.choice_2_result: 25fc577b4714
+  ev.ev_zayton_mentor.choice_2_result: f3b568d7a058
   ev.ev_zayton_mentor.choice_3_result: 757761d33fc4
   ev.ev_zayton_ledger_consequence_resolution.choice_1_result: f77518ff30b0
   ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 522dfcce4109
@@ -135,13 +135,13 @@ stamps:
   ev.ev_zayton_mentor_followup.choice_3: f90e51f36836
   ev.ev_zayton_mentor_followup.choice_3_result: dbe015c63987
   ev.ev_zayton_mentor_jiaobei_followup.title: c22322c51e22
-  ev.ev_zayton_mentor_jiaobei_followup.body: db1cbafee0d9
+  ev.ev_zayton_mentor_jiaobei_followup.body: 30f915efcb6d
   ev.ev_zayton_mentor_jiaobei_followup.choice_1: f00fd889bbc0
-  ev.ev_zayton_mentor_jiaobei_followup.choice_1_result: ca999bc0fc71
+  ev.ev_zayton_mentor_jiaobei_followup.choice_1_result: 651c1a38f66f
   ev.ev_zayton_mentor_jiaobei_followup.choice_2: 3a15a479f9f9
   ev.ev_zayton_mentor_jiaobei_followup.choice_2_result: 3656d8afbd53
   ev.ev_zayton_mentor_jiaobei_followup.choice_3: c66e5cd5f920
-  ev.ev_zayton_mentor_jiaobei_followup.choice_3_result: c73bb57ce6bc
+  ev.ev_zayton_mentor_jiaobei_followup.choice_3_result: 9eb67c3e2995
   codex.cx-zayton-watch.name: 95bac79e64a2
   codex.cx-zayton-watch.body: e703b0336670
 ---
@@ -456,7 +456,7 @@ stamps:
 
 ## ev.ev_zayton_mentor.choice_2_result
 
-你在老妇人身边坐下，说要学掷筊。她久久望着你，然后把三只杯摆在门槛上，从三个答案各自的次序开始讲起。
+你在老妇人身边坐下，说要学掷筊。她久久望着你，然后把两枚杯筊摆在门槛上，从三个答案各自的次序开始讲起。
 
 ## ev.ev_zayton_mentor.choice_3_result
 
@@ -668,7 +668,7 @@ stamps:
 
 ## ev.ev_zayton_mentor_jiaobei_followup.body
 
-庙中教你掷杯的侍者在门口拦住了你。他把三片半月形的木杯放在你面前，要你为即将成行的航程掷上一掷。杯落定了，他不笑也不皱眉：掷便是掷，他说道，判词便是判词。如何带走它，由你自择。
+庙中教你掷杯的侍者在门口拦住了你。他把一对半月形的木杯放在你面前，要你为即将成行的航程掷上一掷。杯落定了，他不笑也不皱眉：掷便是掷，他说道，判词便是判词。如何带走它，由你自择。
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1
 
@@ -676,7 +676,7 @@ stamps:
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1_result
 
-他把三只杯裹进布巾，按进你手里。无论那一掷应了什么，这随身的一裹本身就是庇佑，往后的任何营火边，你都懂得如何读它。
+他把两枚杯筊裹进布巾，按进你手里。无论那一掷应了什么，这随身的一裹本身就是庇佑，往后的任何营火边，你都懂得如何读它。
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_2
 
@@ -692,7 +692,7 @@ stamps:
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
 
-你与这三只杯坐过整个下午，记住了它们的轻重，黄昏时把它们留还庙中。侍者记下你的耐心，坊间也对你有了好话。
+你与这对杯筊坐过整个下午，记住了它们的轻重，黄昏时把它们留还庙中。侍者记下你的耐心，坊间也对你有了好话。
 
 ## codex.cx-zayton-watch.name
 

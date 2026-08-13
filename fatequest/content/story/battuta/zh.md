@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: 9f969571fa7c
+source_rev: f5864ac7e25b
 status: translated
 translator: 人工校译
 notes: >
@@ -105,13 +105,15 @@ stamps:
   ev.ev_java_major_battuta_a.choice_2_result: 4964b744b127
   ev.ev_java_major_battuta_a.choice_3_result: 0b7b8772b4ad
   ev.zayton.battuta_a.title: 3b583a25bb01
-  ev.zayton.battuta_a.body: cc2a54abafa7
+  ev.zayton.battuta_a.body: aa3ea26bfc59
   ev.zayton.battuta_a.choice.change: 87c4287dc2b8
   ev.zayton.battuta_a.choice.painters: 04135536a658
   ev.zayton.battuta_a.choice.registry: c478903bfc33
-  ev.ev_zayton_battuta_a.choice_1_result: cd4c282edf29
+  ev.ev_zayton_battuta_a.choice_1_result: 82246bd31e29
   ev.ev_zayton_battuta_a.choice_2_result: 6a27445c4887
-  ev.ev_zayton_battuta_a.choice_3_result: 5128894b4b17
+  ev.ev_zayton_battuta_a.choice_3_result: 3dc708afeee8
+  codex.cx-paper-money.name: 9ca3fc568eeb
+  codex.cx-paper-money.body: 4499af1d24d5
   ev.kinsay.battuta_a.title: 0d7d1c27bf30
   ev.kinsay.battuta_a.body: 93c7090d0786
   ev.kinsay.battuta_a.choice.passage: 24bf1e4c6348
@@ -126,8 +128,8 @@ stamps:
   ev.ev_melibar_entry.choice_4_result: e12c954097fd
   ev.kinsay.entry.choice.battuta: b784f22bea2f
   ev.ev_kinsay_entry.choice_4_result: a7086c5dbbc2
-  ev.zayton.entry.choice.battuta: ef0cdc20eb0f
-  ev.ev_zayton_entry.choice_4_result: 8c70e0f6cb41
+  ev.zayton.entry.choice.battuta: de9bc6f6327b
+  ev.ev_zayton_entry.choice_4_result: 4051a91402c7
 ---
 
 ## ev.alexandria.battuta_a.title
@@ -532,15 +534,23 @@ stamps:
 
 ## ev.ev_zayton_battuta_a.choice_1_result
 
-你持金银入市，竟无人肯收；至官署兑为王印纸钞，方得市易。钞破旧者，官中照换新钞，不取分文利息。你把这番见闻记入行纪。
+你持金银入市，竟无人肯收；至官署兑为王印纸钞，方得市易。钞破旧者，官中照换新钞，不取分文利息。
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-你坐下让画师写真——画师之技天下无对，你与同伴的形貌便上了墙，又印在街头贴纸上。人言凡过客皆如此画，客若犯事须逃，画像传之诸省，所在必获。你把这番见闻记入行纪。
+你坐下让画师写真——画师之技天下无对，你与同伴的形貌便上了墙，又印在街头贴纸上。人言凡过客皆如此画，客若犯事须逃，画像传之诸省，所在必获。
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-官人持册登舟，录舟人名姓形貌；归时按册比形，缺一人则执船主，匿一物则船货俱没。此种苛察，为你平生所未见。
+官人持册登舟，录舟人名姓形貌；归时按册比形，缺一人则执船主，匿一物则船货俱没。此种苛察，为你平生所未见。你又闻得一条河路，自辛克兰行二十七日而来——辛克兰与刺桐皆出陶器；此河复前行，通往行在。生命之水即在刺桐入海，故此地又号两海之交。
+
+## codex.cx-paper-money.name
+
+王印纸钞
+
+## codex.cx-paper-money.body
+
+此国交易不用金银，只用纸钞——掌大，盖王印，二十五张当一第纳尔。钞破旧者，官中照换新钞，不取分文利息；不以金银兑成纸钞，无人肯与你市易。
 
 ## ev.kinsay.battuta_a.title
 
@@ -587,7 +597,7 @@ stamps:
 
 ## ev.ev_melibar_entry.choice_4_result
 
-港中有旅人讲起刺桐与刺基朗所造的巨大戎克，讲起那一夜海起、贡舟触岸而没；你若愿听，他说可把全事讲来。
+港中有旅人讲起刺桐与辛克兰所造的巨大戎克，讲起那一夜海起、贡舟触岸而没；你若愿听，他说可把全事讲来。
 
 ## ev.kinsay.entry.choice.battuta
 
@@ -603,4 +613,4 @@ stamps:
 
 ## ev.ev_zayton_entry.choice_4_result
 
-有西方旅人求看你的纸钞，又讲起船籍册与为每位过客画像的画师；你若愿听，他说还有更多要讲。
+有西方旅人求看此国的纸钞，又讲起船籍册与为每位过客画像的画师；你若愿听，他说还有更多要讲。

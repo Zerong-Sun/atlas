@@ -87,3 +87,15 @@ jobs:
       - name: Endings (close the book, epilogue on screen)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_ending.gd
+      - name: Battuta corpus (entry + site events, raw-key guard)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_battuta.gd
+      - name: Zayton battuta content contract (GDLC ratchet)
+        working-directory: fatequest
+        run: godot --headless --script tests/audit_zayton_battuta.gd
+      - name: Logic & boundary audit
+        working-directory: fatequest
+        run: godot --headless --script tests/audit_logic.gd
+      - name: Divination readings audit
+        working-directory: fatequest
+        run: godot --headless --script tests/audit_divination_readings.gd

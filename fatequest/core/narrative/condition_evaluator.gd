@@ -177,5 +177,7 @@ func _reason(key: String, val: Variant, state: WorldState) -> String:
 		"learned_divination":
 			return "explain.need_divination:%s" % ",".join(PackedStringArray(val))
 		"coins":
-			return "explain.need_coins:%d" % int(val.get("min", 0))
+			# The HUD, market and status panel all display coins (fen / 100);
+			# a needs label in raw fen reads 100x wrong next to them.
+			return "explain.need_coins:%d" % int(ceil(float(val.get("min", 0)) / Market.FEN))
 	return "explain.generic:%s" % key

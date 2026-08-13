@@ -17,7 +17,17 @@
         {
           "label": "ev.ev_zayton_harbour_followup.choice_1",
           "resultText": "ev.ev_zayton_harbour_followup.choice_1_result",
+          "needs": {
+            "coins": {
+              "min": 12000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -12000,
+              "reason": "paid-the-merchants-price-for-the-pepper"
+            },
             {
               "op": "goods",
               "id": "pepper",
@@ -88,7 +98,17 @@
         {
           "label": "ev.ev_zayton_fanfang_followup.choice_1",
           "resultText": "ev.ev_zayton_fanfang_followup.choice_1_result",
+          "needs": {
+            "coins": {
+              "min": 8000
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -8000,
+              "reason": "paid-the-weavers-price-for-the-bolt"
+            },
             {
               "op": "goods",
               "id": "silk",

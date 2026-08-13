@@ -372,7 +372,7 @@ You sit with the old woman at the temple door and give what you can to the templ
 
 ## ev.ev_zayton_mentor.choice_2_result
 
-You sit with the old woman and ask to learn the cups. She looks at you a long moment, then sets the three cups on the threshold and begins, for the three answers have their own order.
+You sit with the old woman and ask to learn the cups. She looks at you a long moment, then sets the two cups on the threshold and begins, for the three answers have their own order.
 
 ## ev.ev_zayton_mentor.choice_3_result
 
@@ -584,7 +584,7 @@ Zayton: The Three Cups at Parting
 
 ## ev.ev_zayton_mentor_jiaobei_followup.body
 
-The temple attendant who taught you the throwing of the cups waylays you at the gate. He sets three half-moons of wood before you and bids you throw for the voyage you are about to make. The cups fall, and he does not smile or frown: a throw is a throw, he says, and a verdict is a verdict. Choose how to carry it.
+The temple attendant who taught you the throwing of the cups waylays you at the gate. He sets a pair of half-moons of wood before you and bids you throw for the voyage you are about to make. The cups fall, and he does not smile or frown: a throw is a throw, he says, and a verdict is a verdict. Choose how to carry it.
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1
 
@@ -592,7 +592,7 @@ Keep the verdict as a ward for the journey
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1_result
 
-He wraps the three cups in a cloth and presses them into your hand. Whatever the throw promised, the carry itself is a protection, and you will know how to read it at any campfire.
+He wraps the two cups in a cloth and presses them into your hand. Whatever the throw promised, the carry itself is a protection, and you will know how to read it at any campfire.
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_2
 
@@ -608,7 +608,7 @@ Wait a day and let the cups settle in your own hand
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
 
-You sit with the cups through an afternoon, learning their weight, and leave them with the temple at dusk. The attendant remembers your patience, and the quarter speaks well of you.
+You sit with the two cups through an afternoon, learning their weight, and leave them with the temple at dusk. The attendant remembers your patience, and the quarter speaks well of you.
 
 ## codex.cx-zayton-watch.name
 

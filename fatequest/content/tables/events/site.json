@@ -7645,7 +7645,12 @@
       "when": {
         "cities": [
           "zayton"
-        ]
+        ],
+        "not": {
+          "flags": [
+            "fl-zayton-battuta-told"
+          ]
+        }
       },
       "scene": {
         "bg": "scene-quanzhou-harbor",
@@ -7669,10 +7674,14 @@
               "reason": "changed-coins-for-the-kings-stamped-notes"
             },
             {
-              "op": "goods",
-              "id": "paper-money",
-              "value": 1,
+              "op": "codex",
+              "value": "cx-paper-money",
               "reason": "changed-coins-for-the-kings-stamped-notes"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-battuta-told",
+              "reason": "heard-the-travellers-tale-of-paper-money"
             }
           ]
         },
@@ -7691,6 +7700,11 @@
               "scope": "band",
               "id": "china",
               "reason": "sat-for-the-painters-as-the-strangers-do"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-battuta-told",
+              "reason": "heard-the-travellers-tale-of-the-painters"
             }
           ]
         },
@@ -7706,7 +7720,12 @@
             {
               "op": "reveal_map",
               "value": "rt-kinsay-zayton",
-              "reason": "learned-the-twenty-seven-day-river-road-to-sin-kilan"
+              "reason": "learned-the-river-road-toward-kinsay"
+            },
+            {
+              "op": "flag",
+              "value": "fl-zayton-battuta-told",
+              "reason": "heard-the-travellers-tale-of-the-registry"
             }
           ]
         }
