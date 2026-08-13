@@ -71,7 +71,9 @@ var best_trade: Dictionary = {}       ## {good, profit} — the most profitable 
 ## actually earned, and to charge the money-changer for carrying silver across
 ## a currency frontier — until this existed, the caller passed the *selling*
 ## city's band as the buying band, so the exchange penalty could never fire.
-var purchases: Dictionary = {}
+var purchases: Dictionary = {}           ## good_id -> {band, unit} cost basis; may carry
+                                          ## "granted": {city_id -> count} — units braked from
+                                          ## same-city resale (GDD §9.2); absent in older saves
 
 
 func duplicate_state() -> WorldState:

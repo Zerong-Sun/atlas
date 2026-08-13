@@ -375,7 +375,12 @@
               "value": "cx-badashan",
               "reason": "carried-a-court-sealed-ruby"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 2200
+            }
+          }
         }
       ],
       "lore": {

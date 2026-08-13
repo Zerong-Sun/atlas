@@ -303,6 +303,9 @@ func _populate() -> WorldState:
 	st.codex.append("cx-monsoon")
 	st.codex.append("cx-balc")
 	st.etiquette = {"china": 2, "steppe": 1}
+	# Cost basis with a grant mark: the sell-gate provenance must round-trip
+	# like every other WorldState field (GDLC Playtest #2).
+	st.purchases = {"silk": {"band": "china", "unit": 8000, "granted": {"kinsay": 1}}}
 	st.pending_events.append("ev-kinsay-entry")
 	st.active_event = "ev-kinsay-entry"
 	st.active_journey = {

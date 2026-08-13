@@ -159,13 +159,34 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 				state.purchases.erase(id)
 			else:
 				state.goods[id] = n
+				var prev: Dictionary = state.purchases.get(id, {})
 				if int(val) > 0:
-					# Provenance: a lot granted by an event is braked from
-					# same-city resale (GDD §9.2). Market buys clear this via
-					# the `bought` op that rebuilds the basis after the grant.
-					var _basis: Dictionary = state.purchases.get(id, {})
-					_basis["granted_city"] = state.city
-					state.purchases[id] = _basis
+					# Provenance: units granted here are braked from resale in
+					# this city (GDD §9.2). Per-city counts, not a scalar: a
+					# second grant elsewhere must not move the mark, and one
+					# market buy must not wipe it (both were live exploits).
+					var g: Dictionary = prev.get("granted", {})
+					g[state.city] = int(g.get(state.city, 0)) + int(val)
+					prev["granted"] = g
+					state.purchases[id] = prev
+				elif int(val) < 0:
+					# Units leaving the hold consume granted units first, so a
+					# mark dies only with the units it belongs to.
+					var left := -int(val)
+					var g: Dictionary = prev.get("granted", {})
+					for c in g.keys():
+						if left <= 0:
+							break
+						var have := int(g[c])
+						var take := mini(have, left)
+						left -= take
+						if have - take > 0:
+							g[c] = have - take
+						else:
+							g.erase(c)
+					if g.is_empty():
+						prev.erase("granted")
+					state.purchases[id] = prev
 		"item":
 			if String(val) not in state.items:
 				state.items.append(String(val))
@@ -262,14 +283,27 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 		"bought":
 			# Cost basis, kept as a running average so that selling a mixed lot
 			# cannot be gamed by ordering. Erased by the goods op when the last
-			# unit leaves the hold.
+			# unit leaves the hold. The market unit is NOT a grant: the goods
+			# op stamped it in this city, and this op takes that stamp back —
+			# a purchase can neither wipe nor launder any other unit's grant.
 			var bid := String(e.get("id", ""))
 			var unit := int(val)
 			var prev: Dictionary = state.purchases.get(bid, {})
 			var held := int(state.goods.get(bid, 0))
 			var old_unit := int(prev.get("unit", 0))
 			var avg := unit if held <= 1 else int((old_unit * (held - 1) + unit) / float(held))
-			state.purchases[bid] = {"band": String(e.get("band", "")), "unit": avg}
+			var out := {"band": String(e.get("band", "")), "unit": avg}
+			if prev.has("granted"):
+				var g: Dictionary = prev["granted"]
+				var c := String(state.city)
+				var cnt := int(g.get(c, 0)) - 1
+				if cnt > 0:
+					g[c] = cnt
+				else:
+					g.erase(c)
+				if not g.is_empty():
+					out["granted"] = g
+			state.purchases[bid] = out
 		"trade":
 			# The best single sale, for {richestTrade}. Losses are ignored — the
 			# field asks what the player is remembered for, not their worst day.

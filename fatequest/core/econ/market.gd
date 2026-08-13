@@ -157,8 +157,10 @@ func buy_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String) -> 
 
 
 ## `basis` is this good's purchase record — `state.purchases[gid]`, shaped
-## `{band, unit}`. Pass it and the sale knows where the silver came from and
-## what the lot cost.
+## `{band, unit}`, plus `granted: {city_id -> count}` when any of the held
+## units came from an event grant rather than a market buy. Pass it and the
+## sale knows where the silver came from, what the lot cost, and whether the
+## travel brake (GDD §9.2) gates the sale here.
 ##
 ## It used to be a bare `bought_band` supplied by the caller, and the one caller
 ## passed the band of the city doing the *selling* — so the comparison below was
@@ -171,12 +173,13 @@ func buy_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String) -> 
 ## paragraph that no transaction ever produced.
 func sell_effects(good: Dictionary, city: Dictionary, jdn: int, seed: String,
 		basis: Dictionary = {}) -> Array:
-	# The travel brake (GDD §9.2): a lot granted in this very city cannot be
+	# The travel brake (GDD §9.2): units granted in this very city cannot be
 	# flipped back to it at market price — events sell cheap at the source, and
 	# an ungated same-city resale turns every such bargain into a money mint.
-	# Market buys rebuild the basis without the grant mark, so liquidation at a
-	# spread loss stays legal; selling after one leg of travel is unaffected.
-	if String(basis.get("granted_city", "")) == String(city.get("id", "")):
+	# Granted counts are per-city and survive market buys and other-city
+	# grants (the scalar mark they replaced was laundered by one purchase);
+	# pure market lots carry no grant and stay liquidatable at a spread loss.
+	if int(basis.get("granted", {}).get(String(city.get("id", "")), 0)) > 0:
 		return []
 	var gross := sell_price(good, city, jdn, seed)
 	var gid := String(good.get("id", ""))

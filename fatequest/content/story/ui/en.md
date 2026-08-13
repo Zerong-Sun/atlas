@@ -620,7 +620,15 @@ Sells here for %d silver · %s
 
 ## ui.market.local_grant
 
-Got it here — worth more down the road
+Got it here — can only be sold at another port
+
+## ui.market.jettison
+
+Jettison
+
+## ui.market.jettison_tip
+
+Throw one unit overboard — no silver for it
 
 ## ui.method_bracket
 

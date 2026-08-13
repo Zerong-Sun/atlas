@@ -99,7 +99,12 @@
               "value": 1,
               "reason": "bought-silk-at-the-weavers-price"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 2000
+            }
+          }
         },
         {
           "label": "ev.ev_baldacum_b_followup.choice_2",

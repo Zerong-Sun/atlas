@@ -123,9 +123,10 @@ func _init():
 						% [eid, String(c.get("label", "?")), -cost, int(granted[gid]), gid, sell, bound]
 					# Playtest #1 P0 covers the Zayton battuta mint. The same
 					# pattern exists across 50+ events; Playtest #2 delivered
-					# the pipeline-level fix (sell-gate in market.gd, asserted
-					# by audit_economy_sellgate.gd S5) — so these lines are
-					# informational pricing notes, no longer exploitable.
+					# the pipeline-level fix (per-city sell-gate, asserted by
+					# audit_economy_sellgate.gd S1–S6) — so these lines are
+					# informational pricing notes: direct same-city resale is
+					# braked, and the launder/overwrite paths are closed by S6.
 					if eid == "ev-zayton-battuta-a":
 						flag("[严重]", line)
 					else:

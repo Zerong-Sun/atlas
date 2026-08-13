@@ -91,9 +91,29 @@ func _init():
 		SaveGame.write("__gdlc_sellgate__", st4, clock4, {})
 		var restored := SaveGame.read("__gdlc_sellgate__")
 		var rpurchases: Dictionary = restored.get("state", {}).get("purchases", {})
-		var rgrant := String(rpurchases.get("paper-money", {}).get("granted_city", ""))
-		if rgrant != "zayton":
-			flag("[严重]", "S4: grant record lost on save/load (got '%s')" % rgrant)
+		var rgrant := int(rpurchases.get("paper-money", {}).get("granted", {}).get("zayton", 0))
+		if rgrant != 1:
+			flag("[严重]", "S4: grant record lost on save/load (got %d)" % rgrant)
+
+		# ---- S4b: old-shape basis (pre-gate save) stays sellable — grandfathering ----
+		var st4b := WorldState.new()
+		st4b.seed = AUDIT_SEED
+		st4b.city = "zayton"
+		st4b.goods["paper-money"] = 1
+		st4b.purchases["paper-money"] = {"band": "china", "unit": 9571}
+		var clock4b := WorldClock.new(GameDate.from_gregorian(1292, 4, 11).jdn)
+		SaveGame.write("__gdlc_sellgate__", st4b, clock4b, {})
+		var restored_b := SaveGame.read("__gdlc_sellgate__")
+		var rp_b: Dictionary = restored_b.get("state", {}).get("purchases", {})
+		if not rp_b.get("paper-money", {}).get("granted", {}).is_empty():
+			flag("[严重]", "S4b: old-shape basis mutated by the round trip")
+		if market.sell_effects(good, zayton, st4b.jdn, st4b.seed,
+				rp_b.get("paper-money", {})).is_empty():
+			flag("[严重]", "S4b: grandfathered lot blocked from sale")
+		# Dev-machine hygiene: drop the temp slot and its backup.
+		for p in [SaveGame.slot_path("__gdlc_sellgate__"), SaveGame.backup_path("__gdlc_sellgate__")]:
+			if FileAccess.file_exists(p):
+				DirAccess.remove_absolute(p)
 
 	# ---- S5: debt closure — the Playtest #1 mint sweep is braked everywhere ----
 	# Includes free grants (cost == 0), multi-city `when`, and divination

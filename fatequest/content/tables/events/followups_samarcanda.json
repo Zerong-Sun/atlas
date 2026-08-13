@@ -106,7 +106,12 @@
               "value": "st-samarcanda-paper",
               "reason": "carried-the-worlds-finest-paper"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          }
         },
         {
           "label": "ev.ev_samarcanda_b_followup.choice_2",

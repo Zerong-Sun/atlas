@@ -235,18 +235,27 @@ func _hold_row(good: Dictionary, count: int) -> Control:
 	text.add_child(sub)
 
 	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
-	var local_grant := String(basis.get("granted_city", "")) == String(_city.get("id", ""))
+	var local_grant := int(basis.get("granted", {}).get(String(_city.get("id", "")), 0)) > 0
 	if local_grant:
 		# The travel brake (GDD §9.2): got it here, sell it down the road.
-		sub.text = I18n.t("ui.market.local_grant")
+		# The local quote stays visible — the screen's one question is still
+		# answered at a glance — but the sell button is closed.
+		sub.text += "\n" + I18n.t("ui.market.local_grant")
 		var sell := Panels.primary_button(I18n.t("ui.sell"), func(): return)
 		sell.disabled = true
 		sell.tooltip_text = I18n.t("ui.market.local_grant")
 		row.add_child(sell)
+		# The release valve: a hold must never strand cargo with no way out.
+		var jettison := Panels.styled_button(I18n.t("ui.market.jettison"), func(): _jettison(good))
+		jettison.tooltip_text = I18n.t("ui.market.jettison_tip")
+		row.add_child(jettison)
 		return panel
 
 	var sell := Panels.primary_button(I18n.t("ui.sell"), func(): _sell(good))
 	row.add_child(sell)
+	var jettison := Panels.styled_button(I18n.t("ui.market.jettison"), func(): _jettison(good))
+	jettison.tooltip_text = I18n.t("ui.market.jettison_tip")
+	row.add_child(jettison)
 	return panel
 
 
@@ -257,10 +266,20 @@ func _buy(good: Dictionary) -> void:
 
 func _sell(good: Dictionary) -> void:
 	var basis: Dictionary = state.purchases.get(String(good.get("id", "")), {})
-	if String(basis.get("granted_city", "")) == String(_city.get("id", "")):
+	if int(basis.get("granted", {}).get(String(_city.get("id", "")), 0)) > 0:
 		return  # the gate held even if the button was somehow pressed
 	traded.emit()
 	_pending = market.sell_effects(good, _city, jdn, state.seed, basis)
+
+
+## Throw a unit overboard for nothing. Money never comes out of a jettison —
+## it exists so a gated or bulk-heavy hold can always free a cargo slot.
+func _jettison(good: Dictionary) -> void:
+	traded.emit()
+	_pending = [{
+		"op": "goods", "id": String(good.get("id", "")), "value": -1,
+		"reason": "jettisoned-at-%s" % String(_city.get("id", "")),
+	}]
 
 
 ## Trade never writes WorldState here — it hands effects to the executor, like
