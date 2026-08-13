@@ -25,7 +25,7 @@ _Rules earned through this project's playtests. When a rule recurs in a second c
 - **One denomination for all player-facing numbers** (Playtest #1, 2026-08-14): the coins needs-label printed raw fen (500) while the HUD/market/status all display coins (fen/100) — the mismatch misled two of five persona readers into concluding the exact opposite economic diagnosis (a "trap" instead of a "mint"). Every player-facing number must pass through the same unit boundary (`Market.FEN`). Fix landed in `core/narrative/condition_evaluator.gd` with regression assertion R4.
 - **Event-granted goods are outside the economy's brake** (Playtest #1, 2026-08-14; resolved Playtest #2): GDD §9.2's travel brake and gate G6 model market-to-market arbitrage only; a choice that sells a good below its same-city market price mints money with zero travel, because the market's sell path had no gate. 55 authored instances found (audit sweep). Playtest #2 delivered the pipeline fix: per-city granted counts + sell gate in `market.gd` / `effect_executor.gd` (S1–S6 in `tests/audit_economy_sellgate.gd`, 108 candidates braked).
 - **A gate's test suite must include the adversary paths** (Playtest #2, 2026-08-14): the sell-gate's own green tests (S1/S2) codified the bought-op wipe as intended behavior — which was the exact mechanism of the launder bypass (one market buy reopened the mint in 40 of 54 cities). Four contract personas with live probes caught what the contract test blessed. Every new gate ships with its bypass assertions (launder/overwrite/mixed-lot) written RED.
-- **Content gates collide with persona-driven fixes** (Playtest #1, 2026-08-14): adding the Battuta tale as a 4th standing Zayton site broke G26's "metropolis = exactly 3 standing sites" quota. The gate's own dynamic-unlock escape hatch (`when.not.flags` + per-choice flag) resolved it honestly — a real condition, not a never-set flag.
+- **Content gates collide with persona-driven fixes** (Playtest #1, 2026-08-14; extended Playtest #4): adding the Battuta tale as a 4th standing Zayton site broke G26's "metropolis = exactly 3 standing sites" quota. The gate's own dynamic-unlock escape hatch (`when.not.flags` + per-choice flag) resolved it honestly — a real condition, not a never-set flag. G31 (city-tier deepening) lacked the same hatch; it now counts standing sites only, mirroring G26 (DATA_MODEL §6).
 
 ## Playtest Ledger
 
@@ -85,6 +85,14 @@ _Chronological log of playtest cycles. Each entry: date, cycle type, personas, f
 - **Re-surface %:** 2/14 (basis dilution — fixed at root this cycle; flat-6% prose — accepted). No regression-of-fix.
 - **Fold-ins:** save fixture (test-infra); the remaining PT1 P3 text items deferred to a content cycle.
 
+### Playtest #4 — Battuta cameos in Kinsay/Cail/Melibar (2026-08-14)
+
+- **Cycle:** content-wiring fix of a logged P1 (small content cycle; no persona roster — the defect was already playtested and the fix pattern already approved in PT1).
+- **Findings:** `ev-kinsay-battuta-a`, `ev-cail-battuta-a`, `ev-melibar-battuta-a` were reachable only through their one-shot entry choice — the same fork-lock PT1 fixed for Zayton.
+- **Fix:** the three cameos are now dynamic-unlock sites (when.not.flags + per-choice flag), listed in each city's sites; the entry chain still fires them and the once-guard keeps the double path idempotent. G31 gained G26's standing-sites exemption (dynamic unlocks don't count toward the tier quota or the deepening sweep — DATA_MODEL §6).
+- **Ratchet delta:** R3 generalized to all four battuta cities (RED c936425 → GREEN 06c8c1f).
+- **Re-surface %:** 1/1 (the defect itself, by design — it was a logged debt).
+
 ## Ratchet (Regression Tests)
 
 _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discretion, severity + reason recorded._
@@ -117,6 +125,7 @@ _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discre
 | 2026-08-14 | P2 — Yuan paper money priced as a profitable export | Historian Senior | persona-note; far band = base parity |
 | 2026-08-14 | P2 — orphaned quayside flavour never rendered | China Purist, Historian Senior | persona-note; stock-row tooltips + market header |
 | 2026-08-14 | P2 — grandfathering contract unpinned on disk | Save Auditor (PT2) | tests/fixtures/save_v4.json + audit_economy_sellgate.gd S4c |
+| 2026-08-14 | P1 — kinsay/cail/melibar battuta cameos entry-fork-locked (same class as PT1 Zayton fix) | Speedrunner (PT1), extended | tests/audit_zayton_battuta.gd R3 generalized (RED c936425 → GREEN 06c8c1f) |
 
 ## What's Working
 
