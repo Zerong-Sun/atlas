@@ -23,7 +23,8 @@ Persona matrix pruned to cover these surfaces only. Add rows back as new surface
 _Rules earned through this project's playtests. When a rule recurs in a second case study, it graduates to the upstream playbook in `claude-gdlc-wizard`._
 
 - **One denomination for all player-facing numbers** (Playtest #1, 2026-08-14): the coins needs-label printed raw fen (500) while the HUD/market/status all display coins (fen/100) — the mismatch misled two of five persona readers into concluding the exact opposite economic diagnosis (a "trap" instead of a "mint"). Every player-facing number must pass through the same unit boundary (`Market.FEN`). Fix landed in `core/narrative/condition_evaluator.gd` with regression assertion R4.
-- **Event-granted goods are outside the economy's brake** (Playtest #1, 2026-08-14): GDD §9.2's travel brake and gate G6 model market-to-market arbitrage only; a choice that sells a good below its same-city market price mints money with zero travel, because the market's sell path has no listing gate. 55 authored instances found (audit sweep, [提示] debt in `tests/audit_zayton_battuta.gd`); a market sell-gate design (or content-level pricing pass) is the pipeline-level fix — pending a dedicated economy cycle.
+- **Event-granted goods are outside the economy's brake** (Playtest #1, 2026-08-14; resolved Playtest #2): GDD §9.2's travel brake and gate G6 model market-to-market arbitrage only; a choice that sells a good below its same-city market price mints money with zero travel, because the market's sell path had no gate. 55 authored instances found (audit sweep). Playtest #2 delivered the pipeline fix: per-city granted counts + sell gate in `market.gd` / `effect_executor.gd` (S1–S6 in `tests/audit_economy_sellgate.gd`, 108 candidates braked).
+- **A gate's test suite must include the adversary paths** (Playtest #2, 2026-08-14): the sell-gate's own green tests (S1/S2) codified the bought-op wipe as intended behavior — which was the exact mechanism of the launder bypass (one market buy reopened the mint in 40 of 54 cities). Four contract personas with live probes caught what the contract test blessed. Every new gate ships with its bypass assertions (launder/overwrite/mixed-lot) written RED.
 - **Content gates collide with persona-driven fixes** (Playtest #1, 2026-08-14): adding the Battuta tale as a 4th standing Zayton site broke G26's "metropolis = exactly 3 standing sites" quota. The gate's own dynamic-unlock escape hatch (`when.not.flags` + per-choice flag) resolved it honestly — a real condition, not a never-set flag.
 
 ## Playtest Ledger
@@ -43,10 +44,27 @@ _Chronological log of playtest cycles. Each entry: date, cycle type, personas, f
   - **P2** — Needs-label fen/coins unit mismatch (orchestrator code trace; explains the P0 misread). → display coins.
   - **P2** — Adjacent Zayton, approved in-cycle: jiaobei cup counts 两枚 vs 三只; harbour/fanfang bargain followups promising a price they never charged. → unified; priced with needs gates.
   - **P3s** (ledger only): customs 2-day cost unstated in text; slip choice hidden reputation cost + unexplained language gate; painters' wanted-poster line with no mechanical echo; body pre-describes a choice outcome; entry result texts dead (queued consequence preempts the result page); "as a dinar is with us" en-only POV; 辛克兰/刺基朗 transliteration split; nashhat spelling; time costs unstated on painters/registry.
-  - **Debt filed (not fixed — systemic):** 55 event choices across the content base sell goods below their same-city market price (audit [提示] sweep). Needs a market sell-gate design cycle, not per-event band-aids.
+  - **Debt filed (systemic):** 55 event choices across the content base sell goods below their same-city market price (audit [提示] sweep; 55 in R2 vs 54 in S5 — bochara-battuta-a has no market to sell into, so it is not a mint). → **Resolved by Playtest #2**: per-city sell-gate braked all 108 sweep candidates (S5/S6).
 - **Ratchet delta:** +1 test file `tests/audit_zayton_battuta.gd` (4 assertions, RED commit 72285a2 → GREEN commit d120fd3); CI now runs it plus smoke_battuta/audit_logic/audit_divination_readings (previously never executed by any workflow).
 - **Re-surface %:** 0% (all NEW — first playtest on a freshly shipped corpus; playbook rule #31).
 - **Earned rules:** 3 (see above).
+
+### Playtest #2 — Market sell-gate (economy debt) (2026-08-14)
+
+- **Cycle:** pipeline-contract-audit. **Personas:** Market Maker, Caravan Broker, Fiscal Clerk, Save Auditor. **Confidence:** HIGH.
+- **Target:** the Playtest #1 debt class — 55 event choices minting goods below same-city market price. Fix: provenance + sell gate in the pipeline (`effect_executor` goods/bought ops, `market.sell_effects`, `market_view`).
+- **Findings (promoted):**
+  - **P0** — Launder: one market buy wiped the scalar grant mark for the whole lot, reopening the mint at ~0.7·mid in 40 of 54 cities (Save Auditor code-trace; Caravan Broker live probe +9,032 fen; Market Maker live probe +15,981 fen; Fiscal Clerk probes +4,789/+7,726 fen). → fixed with per-city granted counts; S6 RED (b946d30) → GREEN (4e1c687).
+  - **P0** — Overwrite: a second grant of the same good in another city moved the mark, unblocking the first city (3 personas). → fixed by the same count model; S6.
+  - **P1** — Over-block: a grant on a market-bought lot locked the bought units out of same-city liquidation (3 personas). → counts fix the wipe; residual mixed-lot restriction documented as intended trade-off.
+  - **P2** — No release valve: gated/bulk cargo could strand slots (Caravan). → jettison button (no silver) on hold rows.
+  - **P2** — S5 sweep blind spots: free grants (cost == 0, 44 events) skipped; no bypass assertions existed (Market Maker, Fiscal Clerk). → S5 widened (108 candidates), S6 added.
+  - **P2** — Grandfathering contract untested; no pre-gate save fixture (Save Auditor). → S4b in-memory old-shape round trip; fixture file remains as noted debt.
+  - **P3s**: gated rows hid the sell price → price line kept + prohibition wording; 4 bargain choices lacked needs gates → gated (bochara/samarcanda/badashan/baldacum); route-event grants marked with the departure city (cosmetic, journey semantics out of scope); running-average basis dilution (pre-existing, RE-SURFACE, not fixed); stale shape docs → updated.
+- **Ratchet delta:** `tests/audit_economy_sellgate.gd` (S1–S6, RED 091b272 → GREEN 8053d3c; RED b946d30 → GREEN 4e1c687); CI runs it; test_save now carries a purchase basis.
+- **Re-surface %:** 1/12 (F7 basis dilution — pre-existing, surfaced by the change; filed as debt).
+- **Cross-model review:** Codex CLI not installed — skipped with reason; four contract lenses substituted.
+- **Earned rules:** 1 (see above).
 
 ## Ratchet (Regression Tests)
 
@@ -62,13 +80,22 @@ _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discre
 | 2026-08-14 | P2 — "your paper money" premise gap in entry label/result | Tourist, Casual Historian, Historian Senior, China Purist | persona-note; reworded to "the king's paper money" |
 | 2026-08-14 | P2 — jiaobei cup counts 两枚 vs 三只 in both languages | China Purist | persona-note; unified to a pair |
 | 2026-08-14 | P2 — harbour/fanfang bargain followups promise a price, charge none | China Purist | persona-note; priced with needs gates (12000/8000 fen) |
-| 2026-08-14 | P1 (debt) — 55 event choices sell goods below same-city market price; market sell has no listing gate | audit sweep (R2, [提示]) | not fixed — market sell-gate design cycle pending; sweep reported by tests/audit_zayton_battuta.gd |
+| 2026-08-14 | P1 (debt) — 55 event choices sell goods below same-city market price; market sell had no gate | audit sweep (R2, [提示]) | resolved by Playtest #2 — per-city sell-gate (audit_economy_sellgate.gd S1–S6, 108 braked) |
+| 2026-08-14 | P0 — launder: one market buy wiped the scalar grant mark, reopening the mint in 40/54 cities | Save Auditor, Caravan Broker, Market Maker, Fiscal Clerk (4 live probes) | tests/audit_economy_sellgate.gd S6 launder (RED b946d30 → GREEN 4e1c687) |
+| 2026-08-14 | P0 — overwrite: a second grant in another city moved the mark, unblocking the first | Save Auditor, Caravan Broker, Market Maker | tests/audit_economy_sellgate.gd S6 overwrite |
+| 2026-08-14 | P1 — over-block: grant on a market-bought lot locked bought units out of liquidation | Save Auditor, Market Maker, Fiscal Clerk | persona-note; count model + documented trade-off |
+| 2026-08-14 | P2 — no release valve for gated/bulk cargo | Caravan Broker | persona-note; jettison button added |
+| 2026-08-14 | P2 — S5 sweep skipped free grants (44 events) | Market Maker, Fiscal Clerk | S5 widened to 108 candidates |
+| 2026-08-14 | P2 — grandfathering contract untested | Save Auditor | audit_economy_sellgate.gd S4b (old-shape round trip); fixture file remains as noted debt |
+| 2026-08-14 | P3 — 4 bargain choices ungated (free good when broke) | Fiscal Clerk | persona-note; needs gates added |
+| 2026-08-14 | P3 — gated rows hid the sell price | Caravan Broker, Market Maker | persona-note; price line kept + prohibition wording |
+| 2026-08-14 | P3 (re-surface) — running-average basis dilution overstates richestTrade on mixed lots | Market Maker | not fixed — pre-existing, logged |
 
 ## What's Working
 
 _Methodological patterns that proved themselves across 2+ playtests (playbook rule #28)._
 
-- **Shared headless runtime probe as a second instrument** (Playtest #1): one verified Godot driver (`--script tests/pt1_*.gd`) exercised the real UI for all personas, giving the playtest a runtime instrument distinct from content read-through — the two-instrument triangulation that caught the reveal mismatch and the mint class. One GDScript caveat learned and passed to every persona: `await` inside an `if` condition silently drops the coroutine resume in headless runs — use `var x: bool = await foo()` instead. (1 playtest — confirm in the next before promoting.)
+- **Shared headless runtime probe as a second instrument** (Playtests #1 + #2, 2026-08-14): a verified Godot driver exercising the real UI/core gives every cycle a runtime instrument distinct from content read-through or code audit — the two-instrument triangulation that caught the reveal mismatch, the mint class (PT1), and the launder/overwrite bypasses (PT2, where contract personas wrote their own transient probes with live quotes). One GDScript caveat: `await` inside an `if` condition silently drops the coroutine resume in headless runs — use `var x: bool = await foo()` instead. Confirmed across 2 playtests → promoted per rule #28.
 
 ## References
 
