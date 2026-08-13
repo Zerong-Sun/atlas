@@ -1298,12 +1298,22 @@ for (const e of byTable.events ?? [])
   ].flatMap((list) => list ?? []);
   for (const c of cityTier) {
     const sites = c.sites ?? [];
-    if (sites.length !== 2) {
-      err("G31", `cities:${c.id}`, `city needs exactly 2 sites, has ${sites.length}`);
+    // Dynamic unlocks (when.flags / when.not.flags) are not standing
+    // exploration sites: they do not count toward the tier quota and are
+    // exempt from the deepening requirement, mirroring G26 (DATA_MODEL §6).
+    // The battuta cameos (Playtest #4) are such unlocks.
+    const standing = sites.filter((s) => {
+      const w = (byTable.events ?? []).find((e) => e.id === s)?.when ?? {};
+      const flagged = Array.isArray(w.flags) && w.flags.length > 0;
+      const notFlagged = w.not && Array.isArray(w.not.flags) && w.not.flags.length > 0;
+      return !flagged && !notFlagged;
+    });
+    if (standing.length !== 2) {
+      err("G31", `cities:${c.id}`, `city needs exactly 2 standing sites, has ${standing.length} (${sites.length} total)`);
       continue;
     }
     const deepened = [];
-    for (const siteId of sites) {
+    for (const siteId of standing) {
       const site = (byTable.events ?? []).find((e) => e.id === siteId);
       if (!site) { err("G31", `events:${c.id}`, `${siteId}: site missing`); continue; }
       const followupTargets = new Set();

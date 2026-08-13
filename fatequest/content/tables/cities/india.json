@@ -126,7 +126,8 @@
       "entryEvent": "ev-cail-entry",
       "sites": [
         "ev-cail-a",
-        "ev-cail-b"
+        "ev-cail-b",
+        "ev-cail-battuta-a"
       ],
       "exits": [
         "rt-cail-coilum",
@@ -633,7 +634,8 @@
       "entryEvent": "ev-melibar-entry",
       "sites": [
         "ev-melibar-a",
-        "ev-melibar-b"
+        "ev-melibar-b",
+        "ev-melibar-battuta-a"
       ],
       "exits": [
         "rt-cail-melibar",

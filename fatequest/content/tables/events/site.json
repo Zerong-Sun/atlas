@@ -7399,7 +7399,12 @@
       "when": {
         "cities": [
           "melibar"
-        ]
+        ],
+        "not": {
+          "flags": [
+            "fl-melibar-battuta-told"
+          ]
+        }
       },
       "scene": {
         "bg": "monsoon-port",
@@ -7421,6 +7426,11 @@
               "op": "reveal_map",
               "value": "rt-coilum-melibar",
               "reason": "the-ships-of-china-put-in-at-hili-kalikut-and-kawlam-alone"
+            },
+            {
+              "op": "flag",
+              "value": "fl-melibar-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7443,6 +7453,11 @@
               "id": "pepper",
               "value": 1,
               "reason": "bought-pepper-at-kalikut"
+            },
+            {
+              "op": "flag",
+              "value": "fl-melibar-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7461,6 +7476,11 @@
               "scope": "band",
               "id": "india",
               "reason": "held-to-the-prayer-while-the-sea-rose"
+            },
+            {
+              "op": "flag",
+              "value": "fl-melibar-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         }
@@ -7481,7 +7501,12 @@
       "when": {
         "cities": [
           "cail"
-        ]
+        ],
+        "not": {
+          "flags": [
+            "fl-cail-battuta-told"
+          ]
+        }
       },
       "scene": {
         "bg": "monsoon-port",
@@ -7505,6 +7530,11 @@
               "scope": "band",
               "id": "india",
               "reason": "made-the-pilgrimage-by-the-way-of-baba"
+            },
+            {
+              "op": "flag",
+              "value": "fl-cail-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7521,6 +7551,11 @@
               "op": "reveal_map",
               "value": "rt-maabar-cail",
               "reason": "jogees-described-the-crossing-from-the-maabar"
+            },
+            {
+              "op": "flag",
+              "value": "fl-cail-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7543,6 +7578,11 @@
               "id": "balas-ruby",
               "value": 1,
               "reason": "bought-a-ruby-sold-by-the-islanders"
+            },
+            {
+              "op": "flag",
+              "value": "fl-cail-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         }
@@ -7746,7 +7786,12 @@
       "when": {
         "cities": [
           "kinsay"
-        ]
+        ],
+        "not": {
+          "flags": [
+            "fl-kinsay-battuta-told"
+          ]
+        }
       },
       "scene": {
         "bg": "canal-city",
@@ -7768,6 +7813,11 @@
               "op": "reveal_map",
               "value": "rt-kinsay-zayton",
               "reason": "descended-the-river-toward-the-sea-at-zaitun"
+            },
+            {
+              "op": "flag",
+              "value": "fl-kinsay-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7786,6 +7836,11 @@
               "scope": "band",
               "id": "china",
               "reason": "prayed-with-the-merchants-when-the-storm-came"
+            },
+            {
+              "op": "flag",
+              "value": "fl-kinsay-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         },
@@ -7802,6 +7857,11 @@
               "op": "reveal_map",
               "value": "rt-zayton-tanpiju",
               "reason": "the-sailors-named-the-sea-road-southward"
+            },
+            {
+              "op": "flag",
+              "value": "fl-kinsay-battuta-told",
+              "reason": "heard-the-travellers-tale"
             }
           ]
         }
