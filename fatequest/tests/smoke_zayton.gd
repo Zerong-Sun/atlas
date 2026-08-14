@@ -40,6 +40,17 @@ func _init():
             ch.pressed.emit()
             break
     await process_frame
+    # The entry choice's authored result text must reach the player BEFORE the
+    # queued consequence chain takes over (GDLC Playtest #1 P3: dead texts).
+    var expected_result := I18n.t("ev.ev_zayton_entry.choice_1_result").strip_edges()
+    var shown_result: bool = n._dialog.visible \
+        and n._dialog._body.text.strip_edges() == expected_result
+    print("  entry result shown before chain: %s" % shown_result)
+    if not shown_result:
+        printerr("  DEAD TEXT: entry result text never displayed")
+        quit(1)
+    n._on_event_dismissed()
+    await process_frame
 
     var visited := 0
     for pass_i in 8:
