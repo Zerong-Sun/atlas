@@ -2,7 +2,7 @@
 unit: zayton
 lang: zh
 source: en
-source_rev: 3a2c64f482e1
+source_rev: 9ba57526853d
 status: translated
 translator: 人工校译
 notes: >
@@ -65,8 +65,8 @@ stamps:
   market.zayton.item.silk: cb0933e8d1cc
   market.zayton.item.sugar: c92a7af00746
   market.zayton.item.tea: d8a2a9c1a5a2
-  ev.ev_zayton_entry.choice_1_result: 6eb274053092
-  ev.ev_zayton_entry.choice_2_result: 778f1f066ebc
+  ev.ev_zayton_entry.choice_1_result: a1c28218fb89
+  ev.ev_zayton_entry.choice_2_result: 8e4f708041b7
   ev.ev_zayton_entry.choice_3_result: 684c4950d4fb
   ev.ev_zayton_jiaobei_ask.choice_1_result: 6c435a9456c4
   ev.ev_zayton_jiaobei_ask.choice_2_result: 332ac3dfff1f
@@ -388,11 +388,11 @@ stamps:
 
 ## ev.ev_zayton_entry.choice_1_result
 
-你向大汗的吏员报明货物，他们的笔毫不停歇，把你的货物记入海贸册。税单落定时，一名书办另抽出一张纸，问你的路下一程往哪里去。
+你向大汗的吏员报明货物，他们的笔毫不停歇，把你的货物记入海贸册。百船之货排在前面，点验足足费了你两日光阴。税单落定时，一名书办另抽出一张纸，问你的路下一程往哪里去。
 
 ## ev.ev_zayton_entry.choice_2_result
 
-你从渔人的石阶悄悄上了岸，没有笔记录你的到来。但码头上的瞭望所亮着一盏灯，夜间的巡守自有一本账，记下每一道影子。
+你用渔人的乡音打过招呼，从他们的石阶悄悄上了岸，没有笔记录你的到来。但税吏会记得那个未曾报关的商人，码头上的闲话里，你的名字少了三分热络。瞭望所亮着一盏灯，夜间的巡守自有一本账，记下每一道影子。
 
 ## ev.ev_zayton_entry.choice_3_result
 

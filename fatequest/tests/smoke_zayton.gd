@@ -15,6 +15,25 @@ func _process(_d: float) -> bool:
 
 ## Zayton vertical-slice acceptance (docs/PLAN.md §2): a player standing in
 ## Zayton must be able to spend real time there and leave changed.
+##
+## Drives the real dialog: entry choice -> its authored result page -> the
+## queued consequence chain -> city sites via the panel's ◆ buttons.
+
+
+func _first_dialog_choice(n, tag: String) -> String:
+    for c in n._dialog._choices.get_children():
+        if c is Button and not c.disabled and not c.text.is_empty():
+            print("  [%s] choice: %s" % [tag, c.text])
+            c.pressed.emit()
+            return c.text
+    return ""
+
+
+func _dismiss(n) -> void:
+    await process_frame
+    n._on_event_dismissed()
+    await process_frame
+
 
 func _init():
     var n = load("res://game/screens/main.tscn").instantiate()
@@ -33,15 +52,15 @@ func _init():
     await process_frame
 
     print("=== ZAYTON ===")
-    # Resolve the entry event first; only then does the panel list the sites.
-    for ch in n._panel.get_children():
-        if ch is Button and not ch.disabled and not ch.text.begins_with("—"):
-            print("  entry: %s" % ch.text)
-            ch.pressed.emit()
-            break
+    if not n._dialog.visible:
+        printerr("  entry dialog not shown on arrival")
+        quit(1)
+
+    # Resolve the entry event: the choice's authored result text must reach
+    # the player BEFORE the queued consequence chain takes over
+    # (GDLC Playtest #1 P3: dead texts).
+    _first_dialog_choice(n, "entry")
     await process_frame
-    # The entry choice's authored result text must reach the player BEFORE the
-    # queued consequence chain takes over (GDLC Playtest #1 P3: dead texts).
     var expected_result := I18n.t("ev.ev_zayton_entry.choice_1_result").strip_edges()
     var shown_result: bool = n._dialog.visible \
         and n._dialog._body.text.strip_edges() == expected_result
@@ -49,11 +68,21 @@ func _init():
     if not shown_result:
         printerr("  DEAD TEXT: entry result text never displayed")
         quit(1)
-    n._on_event_dismissed()
-    await process_frame
+    await _dismiss(n)
+
+    # Walk the queued consequence chain (ledger -> resolution) to the city.
+    for chain_i in 6:
+        await process_frame
+        if not n._dialog.visible:
+            break
+        _first_dialog_choice(n, "chain%d" % chain_i)
+        await _dismiss(n)
 
     var visited := 0
     for pass_i in 8:
+        # The roads surface lists the city's sites as ◆ buttons; rebuild it
+        # each pass so once-fired sites drop out of the list.
+        n._show_roads()
         await process_frame
         var acted := false
         for ch in n._panel.get_children():
@@ -65,11 +94,8 @@ func _init():
                 break
         if acted:
             await process_frame
-            # take the first affordable choice of that site
-            for ch in n._panel.get_children():
-                if ch is Button and not ch.disabled and not ch.text.begins_with("—") and not ch.text.begins_with("◆"):
-                    ch.pressed.emit()
-                    break
+            _first_dialog_choice(n, "site")
+            await _dismiss(n)
             continue
         break
 
@@ -86,5 +112,6 @@ func _init():
             leaked.append(k)
     print("  raw keys leaked in Zayton: %d %s" % [leaked.size(), str(leaked)])
     print("  untranslated (showing English): %d" % I18n.untranslated_keys().size())
-    print("ZAYTON: %s" % ("OK" if leaked.is_empty() else "FAIL — raw keys visible"))
-    quit(0)
+    var ok := leaked.is_empty() and visited >= 3
+    print("ZAYTON: %s" % ("OK" if ok else "FAIL — %s" % ("raw keys visible" if not leaked.is_empty() else "no sites visited")))
+    quit(0 if ok else 1)

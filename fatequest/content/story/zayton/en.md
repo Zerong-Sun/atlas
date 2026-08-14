@@ -304,11 +304,11 @@ bargain.
 
 ## ev.ev_zayton_entry.choice_1_result
 
-You declare your goods to the Kaan's clerks, and their brushes move without pause, recording your cargo in the sea-trade register. When the tally is struck, one clerk draws a second sheet and asks where your road goes next.
+You declare your goods to the Kaan's clerks, and their brushes move without pause, recording your cargo in the sea-trade register. A hundred shiploads wait ahead of yours, and the tally runs two full days before the register closes. When it is struck, one clerk draws a second sheet and asks where your road goes next.
 
 ## ev.ev_zayton_entry.choice_2_result
 
-You slip ashore by the fishermen's steps, and no brush records your coming. But a lamp burns in the watch-house above the quay, and the night watch keeps its own account of every shadow.
+You call to the fishermen in their own tongue and slip ashore by their steps, and no brush records your coming. But the tithe clerks will remember the merchant who came ashore undeclared, and the quayside murmurs your name with less welcome. A lamp burns in the watch-house above the quay, and the night watch keeps its own account of every shadow.
 
 ## ev.ev_zayton_entry.choice_3_result
 

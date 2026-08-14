@@ -152,6 +152,7 @@ var _lesson_annex := false
 var _annex_layer: Control
 var _annex_view: PanelContainer
 var _pending_pages_in_sequence := 0
+var _result_then_chain := false  ## a result page is up; dismissing it fires the queued chain
 
 
 func _ready() -> void:
@@ -1708,6 +1709,14 @@ func _on_dialog_choice(index: int) -> void:
 
 func _on_event_dismissed() -> void:
 	_dialog_layer.visible = false
+	# A result page that was shown ahead of a queued consequence: the chain
+	# fires now, on the player's own "continue". If nothing is left to chain,
+	# fall through to the normal city flow — a dismissal must never strand
+	# the player on a closed dialog.
+	if _result_then_chain:
+		_result_then_chain = false
+		if _show_next_pending_event():
+			return
 	# “先不动手” pauses a committed consequence instead of silently hiding a
 	# durable active_event with no way back to it.
 	if state != null and state.active_event == String(_current_event.get("id", "")):
@@ -2487,6 +2496,7 @@ func _restyle_all() -> void:
 
 func _show_event(ev: Dictionary) -> void:
 	_current_event = ev
+	_result_then_chain = false  # a new page invalidates any stale result-then-chain
 	var states := events.choice_states(ev, state, _ctx())
 	var art: Texture2D = null
 	var c := db.get_record(state.city)
@@ -2717,6 +2727,13 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 	# A choice may enqueue one or more authored consequences. Resolve the FIFO
 	# before returning to city exploration so a branch can never silently end
 	# between “what I chose” and “what happened because of it”.
+	# But a choice with a result text owes the player that page FIRST — the
+	# chain follows on dismissal, so no authored result ever goes unread.
+	if not result_text_key.is_empty() and not state.pending_events.is_empty():
+		_result_then_chain = true
+		_dialog_layer.visible = true
+		_dialog.show_result(result_text_key)
+		return
 	if _show_next_pending_event():
 		return
 	if not state.pending_events.is_empty():

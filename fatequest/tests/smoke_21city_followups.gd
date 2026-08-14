@@ -111,6 +111,14 @@ func _walk_queued(n: Node, city: String, site: Dictionary, followup_id: String, 
 		and String(n._current_event.get("id", "")) == String(site.get("id", ""))
 	n._resolve_choice(site, choice_idx)
 	await process_frame
+	# Contract (Playtest #5): the choice's authored result page shows first;
+	# the followup opens only when the player dismisses it.
+	var result_open: bool = n._dialog_layer.visible \
+		and n._dialog._title.text == I18n.t("ui.choice_result_title")
+	if not result_open:
+		return "%s choice %d -> result page did not open (site=%s)" % [String(site.get("id", "")), choice_idx, site_open]
+	n._dialog.dismissed.emit()
+	await process_frame
 	var followup_open: bool = n._dialog_layer.visible \
 		and String(n._current_event.get("id", "")) == followup_id \
 		and not n.state.active_event.is_empty()

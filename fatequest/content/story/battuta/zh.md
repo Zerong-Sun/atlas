@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: f5864ac7e25b
+source_rev: 4b26a94cd71b
 status: translated
 translator: 人工校译
 notes: >
@@ -105,13 +105,13 @@ stamps:
   ev.ev_java_major_battuta_a.choice_2_result: 4964b744b127
   ev.ev_java_major_battuta_a.choice_3_result: 0b7b8772b4ad
   ev.zayton.battuta_a.title: 3b583a25bb01
-  ev.zayton.battuta_a.body: aa3ea26bfc59
+  ev.zayton.battuta_a.body: 3729483c8c15
   ev.zayton.battuta_a.choice.change: 87c4287dc2b8
   ev.zayton.battuta_a.choice.painters: 04135536a658
   ev.zayton.battuta_a.choice.registry: c478903bfc33
   ev.ev_zayton_battuta_a.choice_1_result: 82246bd31e29
-  ev.ev_zayton_battuta_a.choice_2_result: 6a27445c4887
-  ev.ev_zayton_battuta_a.choice_3_result: 3dc708afeee8
+  ev.ev_zayton_battuta_a.choice_2_result: 28eec0b63854
+  ev.ev_zayton_battuta_a.choice_3_result: a16806af3e8a
   codex.cx-paper-money.name: 9ca3fc568eeb
   codex.cx-paper-money.body: 4499af1d24d5
   ev.kinsay.battuta_a.title: 0d7d1c27bf30
@@ -518,7 +518,7 @@ stamps:
 
 ## ev.zayton.battuta_a.body
 
-你须知道：此国交易不用金银，只用纸钞——掌大，盖王印，二十五张当一第纳尔，破旧者官中照换新钞，不取利息。画师之技天下无对：你入城未几，壁上与街头贴纸皆画你与同伴形貌；客若犯事逃匿，画像传之诸省，所在必获。舟离港时，官录舟人名姓形貌为册，归时按册稽核，缺一人则执船主；货不登册者，船货俱没于王。此种苛察，为他国所未见。
+那旅人所说，件件都在码头上应验——此国交易不用金银，只用纸钞：掌大，盖王印，二十五张当一第纳尔，破旧者官中照换新钞，不取利息。画师之技天下无对：凡过客入其城，壁上与街头贴纸皆画其形貌；客若犯事逃匿，画像传之诸省，所在必获。舟离港时，官录舟人名姓形貌为册，归时按册稽核，缺一人则执船主；货不登册者，船货俱没于王。此种苛察，为他国所未见。
 
 ## ev.zayton.battuta_a.choice.change
 
@@ -538,11 +538,11 @@ stamps:
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-你坐下让画师写真——画师之技天下无对，你与同伴的形貌便上了墙，又印在街头贴纸上。人言凡过客皆如此画，客若犯事须逃，画像传之诸省，所在必获。
+你坐下让画师写真，一日光阴便在这支笔下过去——画师之技天下无对，你与同伴的形貌便上了墙，又印在街头贴纸上。人言凡过客皆如此画，客若犯事须逃，画像传之诸省，所在必获。
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-官人持册登舟，录舟人名姓形貌；归时按册比形，缺一人则执船主，匿一物则船货俱没。此种苛察，为你平生所未见。你又闻得一条河路，自辛克兰行二十七日而来——辛克兰与刺桐皆出陶器；此河复前行，通往行在。生命之水即在刺桐入海，故此地又号两海之交。
+你在码头边站了一日，看官人持册登舟，录舟人名姓形貌；归时按册比形，缺一人则执船主，匿一物则船货俱没。此种苛察，为你平生所未见。你又闻得一条河路，自辛克兰行二十七日而来——辛克兰与刺桐皆出陶器；此河复前行，通往行在。生命之水即在刺桐入海，故此地又号两海之交。
 
 ## codex.cx-paper-money.name
 

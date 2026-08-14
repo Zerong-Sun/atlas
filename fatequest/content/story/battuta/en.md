@@ -578,11 +578,12 @@ Paper Money, Painters, and the Registry of Ships
 
 ## ev.zayton.battuta_a.body
 
-In China you buy and sell with paper. A palm-sized sheet, stamped with the king's
-stamp, is money: twenty-five such notes make a nashhat, a dinar of the place, and
-torn notes are exchanged at the mint for new ones, without interest. No one will
-take a dinar or a dirhem until it is changed for these notes. The painters are the
-most skilful in the world, and you find pictures of yourself and your companions
+The traveller's tale is borne out as you walk the quay: in China you buy and sell
+with paper. A palm-sized sheet, stamped with the king's stamp, is money:
+twenty-five such notes make a nashhat, a dinar of the place, and torn notes are
+exchanged at the mint for new ones, without interest. No one will take a dinar or
+a dirhem until it is changed for these notes. The painters are the most skilful
+in the world: every stranger who passes through their towns finds his likeness
 upon the walls and on papers stuck up in the streets. When a vessel leaves China,
 the names and forms of the men aboard are written down, and when it returns the
 magistrates' servants board it and compare; if a man is missing, the commander of
@@ -611,16 +612,18 @@ new notes in its place without interest.
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-You sit for the painters, for none in the world come near to them in painting, and
-your likeness and the likenesses of your companions go up on the walls and on
-papers stuck about the streets. It is done with every stranger who passes through
-their towns; and should such a one do anything that makes flight necessary, they
-send his picture to the other provinces, and wherever he is, he is taken.
+You sit for the painters, and a day passes under their brushes — none in the world
+come near to them in painting, and your likeness and the likenesses of your
+companions go up on the walls and on papers stuck about the streets. It is the
+custom with every stranger who passes through their towns: should any such a one
+make flight necessary, his picture is sent out to the other provinces, and
+wherever he is, he is taken.
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-You watch the clerks of the harbour take down the names and forms of the men aboard
-each junk before it sails, and when a vessel returns, the servants of the
+You spend a day watching the clerks of the harbour take down the names and forms
+of the men aboard each junk before it sails, and when a vessel returns, the
+servants of the
 magistrates board her and compare the men with the descriptions; a missing man
 costs the commander his ship, and goods not entered in the register forfeit ship
 and cargo to the king — an oppression seen nowhere else. You learn of the river
