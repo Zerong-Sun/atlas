@@ -33,3 +33,8 @@ fatequest/.godot/
 
 # Local agent / editor worktrees & backups
 .claude/
+.claude/plans/
+.claude/settings.local.json
+
+# GDLC feedback drafts (transient recovery files, never committed)
+.gdlc/feedback-drafts/
