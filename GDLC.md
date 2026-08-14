@@ -43,7 +43,7 @@ _Chronological log of playtest cycles. Each entry: date, cycle type, personas, f
   - **P2** — "your paper money" premise gap (4 personas, content instrument). → "the king's paper money".
   - **P2** — Needs-label fen/coins unit mismatch (orchestrator code trace; explains the P0 misread). → display coins.
   - **P2** — Adjacent Zayton, approved in-cycle: jiaobei cup counts 两枚 vs 三只; harbour/fanfang bargain followups promising a price they never charged. → unified; priced with needs gates.
-  - **P3s** (ledger only): customs 2-day cost unstated in text; slip choice hidden reputation cost + unexplained language gate; painters' wanted-poster line with no mechanical echo; body pre-describes a choice outcome; entry result texts dead (queued consequence preempts the result page); "as a dinar is with us" en-only POV; 辛克兰/刺基朗 transliteration split; nashhat spelling; time costs unstated on painters/registry.
+  - **P3s** (fixed in Playtest #5 unless noted): customs 2-day cost now owned in text; slip choice's language gate + reputation cost now diegetic; painters' wanted-poster line reframed as custom; body no longer pre-describes the painters outcome; entry result texts dead → engine now shows result pages before queued chains; "as a dinar is with us" en-only POV (fixed PT1); 辛克兰/刺基朗 transliteration (fixed PT1); nashhat spelling (kept — recorded decision); time costs stated on painters/registry.
   - **Debt filed (systemic):** 55 event choices across the content base sell goods below their same-city market price (audit [提示] sweep; 55 in R2 vs 54 in S5 — bochara-battuta-a has no market to sell into, so it is not a mint). → **Resolved by Playtest #2**: per-city sell-gate braked all 108 sweep candidates (S5/S6).
 - **Ratchet delta:** +1 test file `tests/audit_zayton_battuta.gd` (4 assertions, RED commit 72285a2 → GREEN commit d120fd3); CI now runs it plus smoke_battuta/audit_logic/audit_divination_readings (previously never executed by any workflow).
 - **Re-surface %:** 0% (all NEW — first playtest on a freshly shipped corpus; playbook rule #31).
@@ -93,6 +93,15 @@ _Chronological log of playtest cycles. Each entry: date, cycle type, personas, f
 - **Ratchet delta:** R3 generalized to all four battuta cities (RED c936425 → GREEN 06c8c1f).
 - **Re-surface %:** 1/1 (the defect itself, by design — it was a logged debt).
 
+### Playtest #5 — PT1 P3 text pass + dead result texts (2026-08-15)
+
+- **Cycle:** content+engine fix of logged P3s (no persona roster — findings already triaged).
+- **Findings:** the four Zayton entry resultTexts were dead prose — the queued consequence chain preempted the result page; plus the PT1 P3 text list (customs 2-day, slip gate/cost, painters lore framing, body pre-description, time costs, raconteur handoff).
+- **Fix:** `_resolve_choice` shows the authored result page first and fires the chain on dismissal (`_result_then_chain`, cleared by `_show_event`, falls through safely when nothing chains); en+zh text edits in lockstep through the story authoring files.
+- **Meta-finding:** smoke_zayton was vacuous — it pressed a panel that was empty (0 sites entered, still "OK"). Rewritten to drive the real dialog (entry → result page → chain → 8 sites); smoke_21city_followups updated to the result-then-chain contract and its failures exposed the stale-flag dismissal bug before the engine fix landed.
+- **Ratchet delta:** smoke_zayton dead-text assertion (RED 56e1f16 → GREEN f2177ec); smoke_21city_followups contract update.
+- **Re-surface %:** 0% new findings.
+
 ## Ratchet (Regression Tests)
 
 _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discretion, severity + reason recorded._
@@ -126,6 +135,8 @@ _Each P0 finding earns a test RED before the fix. P1/P2 entries at author discre
 | 2026-08-14 | P2 — orphaned quayside flavour never rendered | China Purist, Historian Senior | persona-note; stock-row tooltips + market header |
 | 2026-08-14 | P2 — grandfathering contract unpinned on disk | Save Auditor (PT2) | tests/fixtures/save_v4.json + audit_economy_sellgate.gd S4c |
 | 2026-08-14 | P1 — kinsay/cail/melibar battuta cameos entry-fork-locked (same class as PT1 Zayton fix) | Speedrunner (PT1), extended | tests/audit_zayton_battuta.gd R3 generalized (RED c936425 → GREEN 06c8c1f) |
+| 2026-08-15 | P3 — four Zayton entry resultTexts were dead prose (chain preempted the result page) | Tourist, Casual Historian (PT1) | tests/smoke_zayton.gd dead-text assertion (RED 56e1f16 → GREEN f2177ec) |
+| 2026-08-15 | P3 — customs/slip/painters/registry text gaps (day costs, hidden rep, lore framing) | Tourist, Casual Historian (PT1) | persona-note; en+zh text edits |
 
 ## What's Working
 
