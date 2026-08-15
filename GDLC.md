@@ -149,3 +149,26 @@ _Methodological patterns that proved themselves across 2+ playtests (playbook ru
 - Upstream playbook: `https://raw.githubusercontent.com/BaseInfinity/claude-gdlc-wizard/main/GDLC.md`
 - Skill: `.claude/skills/gdlc/SKILL.md`
 - Wizard: `/gdlc-update` to pull playbook changes
+
+### Playtest #6 — Town/station deepening (61 cities) (2026-08-15)
+
+- **Cycle:** pipeline-contract-audit (gates + runtime harness) → gameplay-matrix (personas). **Personas:** Tourist, Casual Historian, Historian Senior, China Purist, Speedrunner. **Confidence:** HIGH.
+- **Target:** P6 content — 61 new town/station exploration sites + followups (events 429 → 551, en+zh), contract G34 + `tests/smoke_town_station_followups.gd` (183 checks).
+- **Instruments:** content read-through (en/zh story + tables) × 5 personas; transient headless probe driving the real UI (6-city choice walks with state deltas); corpus cross-check (marco-polo/ibn-battuta/ibn-jubayr lore files) × 1; economy audits.
+- **Findings (promoted):**
+  - **P0** — Hollow "account of X goes with it": 32 city buy-results promised a travel-book entry the effects never granted (codex grants only via op; probe: codex=0 on every mecha/petra choice). Tourist (probe), Historian Senior, Speedrunner (F2). → 32 codex entries authored (en+zh) + ops wired; runtime-verified. Ratchet **G36**.
+  - **P0** — zh city-name splits: one node, two names — 10 pre-existing 21-city pack names (起儿漫/克尔曼, 济南/长芦, 徐州/邳州, 镇江/真州, 天德州/天德军, 塔伊坎/塔里寒, 潭州/通州, 卡玛迪/可马底, 卡拉图/哈剌图, 施赫尔/呵舍儿) + 7 P6 references + entry forms (车尔成/车尔臣, 培因/髣城, 细兰/锡兰, 萨克/猎隼, 卡法/喀法). All 5 personas. → fixed across packs + entries; matrix regen. Ratchet **G35** (canon-name alias map + zh punctuation + prose digits).
+  - **P1** — Station "rest" decoy: rest cost a full day for the same reveal the free pass gives; label promised 半日, engine charged 1 日. Tourist, Historian Senior. → rest now grants +1 fate; labels aligned to a full day. Ratchet **G37**.
+  - **P1** — Mineral/goods collapse: chalcedony/jasper → goods id `jade`; steel mirror → `damascus-steel`; zh 玛瑙 (agate) for chalcedony (5 personas, mineral class). → text unified per city (second jasper at honest share; steel of Cobinan); 玉髓 fixed.
+  - **P2** — Template wear: 62× identical 「时运也待你稍好些」 + 「在X你的名字也多了一分分量」 closers (Tourist, Casual Historian, China Purist). → rotated variants by pack.
+  - **P2** — Observe (choice 2) strictly dominated by the ask path in 28/61 cities (Speedrunner F3). → fate aspect rotated per scene (rapport/wealth/travel).
+  - **P2** — cacanfu followup sold porcelain; corpus names silk-and-gold + (Changlu) salt (Historian Senior). → salt of Changlu.
+  - **P2** — maabar followup invented "the diver's law"; corpus has companies' wage-hire + the Abraiaman fish-charmers + the king's tenth (Historian Senior). → rewritten to the chapter's arrangement.
+  - **P2** — cobinan sold damascus-steel with "the blade is well forged" (Casual Historian, Historian Senior). → steel of Cobinan, bar not blade.
+  - **P2** — petra entry anachronisms: rose-red (Burgon 1845), Nabateans, Hajj way-station, invented toll regime (2 personas). → rewritten as a ruined gorge on the caravan road.
+  - **P3s**: list price → fixed price; 楮币 → 交钞 (re-surface of the PT2 unification); zh modernisms (帮忙/潜水/旱鸭子/补给点); half-width ；：swept corpus-wide; Arabic digits → Chinese numerals (46 road texts + 192 entry lines); en/zh entry padding removed (maabar/coigangiu); Frankish-held Jerusalem → the Sultan's men; etzina 白隼→猎隼 (saker = 猎隼); charchan sweet-water corpus fix; holy-city differentiation (Jerusalem sells myrrh); same-good-two-prices in-fiction lines; maabar "second pearl" label neutralised; 18 pre-existing div/ui zh sections restored from i18n (stamp-pruned).
+- **Ratchet delta:** gates **G34** (town/station deepening), **G35** (zh hygiene: canon names / punctuation / prose digits), **G36** (deepened sites grant codex), **G37** (rest choices pay out). `tests/smoke_town_station_followups.gd` + `smoke_21city_followups.gd` added to CI — the 21-city smoke had a latent parse error and had never executed (class: gate shipped without a runner; the new ratchet gates all run in CI via validate.mjs).
+- **Re-surface %:** 1/30+ (楮币 — PT2's 交钞/纸钞 unification resurfaced as a third variant; fixed, glossary-checked).
+- **Self-review:** every promoted finding has a gate (G34–G37) or a runtime check; RED verified before fixes (G35 392 / G36 32 / G37 26 errors on pre-fix content); full suite green after.
+- **Cross-model review:** skipped — content + gate changes only, no pipeline refactor.
+- **What's Working:** corpus cross-check as a dedicated persona instrument (Historian Senior quoting chapter vs pack lines) closed a fabrication class (diver's law, porcelain, damascus-steel) that prose-read personas could not — confirmed PT6 only, pending a second confirmation before promotion.

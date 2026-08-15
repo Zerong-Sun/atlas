@@ -105,3 +105,9 @@ jobs:
       - name: Market trade order (GDLC ratchet)
         working-directory: fatequest
         run: godot --headless --script tests/audit_market_trades.gd
+      - name: City-tier followup wiring (GDLC ratchet)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_21city_followups.gd
+      - name: Town/station followup wiring (GDLC ratchet, P6)
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_town_station_followups.gd

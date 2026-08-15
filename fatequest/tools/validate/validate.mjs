@@ -87,7 +87,7 @@ for (const c of byTable.cities ?? []) {
 }
 
 // ------------------------------------------------ G26: tier-graded site counts
-// metropolis → exactly 3; city → exactly 2; town/station not forced (DATA_MODEL §6).
+// metropolis → exactly 3; city → exactly 2; town/station ≥1 (G34, DATA_MODEL §6).
 // A site whose event gates itself behind `when.flags` (e.g. a usage site that
 // only appears after learning the matching divination) is a dynamic unlock,
 // not one of the city's standing exploration sites, so it does not count
@@ -1367,6 +1367,98 @@ for (const e of byTable.events ?? [])
   }
 }
 
+// -------------------------------------- G34: town/station site deepening
+// Every town/station must have at least one site (standing or dynamic — a
+// mentor unlock or battuta cameo is content too) — an entry-only node is a
+// dead stop on the map (DATA_MODEL §6). Standing sites that queue a followup
+// must resolve to a valid consequence with bilingual text and legal effect
+// targets, mirroring G31's deepening loop. Dynamic unlocks are exempt from
+// the followup requirement, exactly as G31 skips sites without queue_event.
+{
+  const enPath = join(ROOT, "content/i18n/en.json");
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
+  const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  const textExists = (k) => k && en[k] !== undefined && zh[k] !== undefined;
+  const queuedEvent = (choice) => [
+    choice.effects,
+    choice.pass?.effects,
+    choice.fail?.effects,
+    choice.lessonFailEffects,
+  ].flatMap((list) => list ?? []).find((effect) => effect.op === "queue_event");
+  const effectTargets = (ch) => [
+    ch.effects,
+    ch.pass?.effects,
+    ch.fail?.effects,
+    ch.lessonFailEffects,
+  ].flatMap((list) => list ?? []);
+  const cityIdSet = new Set((byTable.cities ?? []).map((c) => c.id));
+  const routeIdSet = new Set((byTable.routes ?? []).map((r) => r.id));
+  const goodIdSet = new Set((byTable.goods ?? []).map((g) => g.id));
+  const bandSet = new Set((byTable.cities ?? []).map((c) => c.band).filter(Boolean));
+  const FU_FATES = new Set(["travel", "rapport", "wealth"]);
+  for (const c of byTable.cities ?? []) {
+    if (c.tier !== "town" && c.tier !== "station") continue;
+    const all = c.sites ?? [];
+    // A mentor wired via mentorEvent (caffa, kiovia) is content too — the
+    // quota targets entry-only nodes, not mentor-carried towns.
+    if (all.length < 1 && !c.mentorEvent) {
+      err("G34", recordFile.get(c.id), `${c.id}: town/station needs at least 1 site or a mentorEvent, has 0`);
+      continue;
+    }
+    const standing = all.filter((s) => {
+      const w = (byTable.events ?? []).find((e) => e.id === s)?.when ?? {};
+      const flagged = Array.isArray(w.flags) && w.flags.length > 0;
+      const notFlagged = w.not && Array.isArray(w.not.flags) && w.not.flags.length > 0;
+      return !flagged && !notFlagged;
+    });
+    for (const siteId of standing) {
+      const site = (byTable.events ?? []).find((e) => e.id === siteId);
+      if (!site) { err("G34", `events:${c.id}`, `${siteId}: site missing`); continue; }
+      const followupTargets = new Set();
+      for (const ch of site.choices ?? []) {
+        const q = queuedEvent(ch)?.value;
+        if (q) followupTargets.add(String(q));
+      }
+      if (!followupTargets.size) continue;
+      for (const fid of followupTargets) {
+        const fu = (byTable.events ?? []).find((e) => e.id === fid);
+        if (!fu) { err("G34", `events:${siteId}`, `queue target ${fid} missing`); continue; }
+        if (fu.kind !== "consequence") {
+          err("G34", `events:${fid}`, `followup must be kind consequence, got ${fu.kind}`);
+        }
+        for (const [i, ch] of (fu.choices ?? []).entries()) {
+          if (!ch.resultText && !queuedEvent(ch)) {
+            err("G34", `events:${fid}`, `choice ${i + 1} has no resultText or queue_event`);
+          }
+          for (const k of [fu.title, fu.body, ch.label, ch.resultText]) {
+            if (k && !textExists(k)) err("G34", `events:${fid}`, `missing bilingual text key "${k}"`);
+          }
+          const where = `events:${fid}.choices[${i + 1}]`;
+          for (const e of effectTargets(ch)) {
+            if (e.op === "goods" && e.id !== undefined && !goodIdSet.has(String(e.id))) {
+              err("G34", where, `goods "${e.id}" not found`);
+            }
+            if (e.op === "reveal_map" && e.value !== undefined
+              && !cityIdSet.has(String(e.value)) && !routeIdSet.has(String(e.value))) {
+              err("G34", where, `reveal_map "${e.value}" is neither a city nor a route`);
+            }
+            if (e.op === "reputation" && e.id !== undefined) {
+              const targets = e.scope === "band" ? bandSet : cityIdSet;
+              if (!targets.has(String(e.id))) {
+                err("G34", where, `reputation target "${e.id}" not in scope "${e.scope ?? "city"}"`);
+              }
+            }
+            if (e.op === "fate" && e.id !== undefined && !FU_FATES.has(e.id)) {
+              err("G34", where, `fate id "${e.id}" must be travel|rapport|wealth`);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // ------------------------ G32: eras + complete divination teaching catalogue
 {
   const eras = byTable.campaign_eras ?? [];
@@ -1464,7 +1556,114 @@ const quiet = process.argv.includes("--quiet");
 const counts = Object.entries(byTable).map(([t, r]) => `${t}:${r.length}`).join(" ");
 if (!quiet) {
   console.log(`\ncontent: ${files.length} files, ${counts}\n`);
-  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31","G32","G33"];
+  const gates = ["G1","G2","G2b","G3","G7","G8","G10","G12","G13","G14","G15","G16","G9","G11","G17","G18","G21","G20","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31","G32","G33","G34","G35","G36","G37"];
+// --------------------------- G35: zh text hygiene (names, punctuation, digits)
+// Playtest #6 P0 (5 personas): a city node must be called by its canon name
+// (city.<id>.name) in every player-facing zh text; half-width punctuation and
+// ASCII digits must not sit inside zh prose.
+{
+  const zhPath = join(ROOT, "content/i18n/zh.json");
+  const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  const ALIASES = [
+    ["济南", "长芦（沧州）"],
+    ["起儿漫", "克尔曼"],
+    ["卡玛迪", "可马底"],
+    ["天德州", "天德军（丰州）"],
+    ["塔伊坎", "塔里寒（塔卢坎）"],
+    ["潭州", "通州（桐庐）"],
+    ["徐州", "邳州"],
+    ["卡拉图", "哈剌图（盖勒哈特）"],
+    ["施赫尔", "呵舍儿（席赫尔）"],
+    ["培因", "髣城（克里雅）"],
+    ["车尔成", "车尔臣（且末）"],
+    ["卡法", "喀法（费奥多西亚）"],
+    ["玛瑙", "玉髓"],
+    ["楮币", "交钞"],
+    ["旱鸭子", "不识水性之人"],
+    ["补给点", "驿站"],
+  ];
+  const scanKeys = Object.keys(zh).filter((k) => k.startsWith("ev.") || k.startsWith("city."));
+  for (const key of scanKeys) {
+    // Canon names (city.<id>.name) ARE the reference — never flag them.
+    if (/^city\..*\.name$/.test(key)) continue;
+    const text = String(zh[key]);
+    for (const [alias, canon] of ALIASES) {
+      if (text.includes(alias)) err("G35", zhPath, `${key}: 别名「${alias}」应作「${canon}」`);
+    }
+    if (text.includes("镇江") && !text.includes("镇江府")) {
+      err("G35", zhPath, `${key}: 别名「镇江」应作「真州」`);
+    }
+    if (text.includes("大马士革") && !text.includes("大马士革钢")) {
+      err("G35", zhPath, `${key}: 别名「大马士革」应作「大马色」`);
+    }
+    if (/[㐀-鿿][;:,?!]|[,;:?!][㐀-鿿]/.test(text)) {
+      err("G35", zhPath, `${key}: 中文句中夹半角标点`);
+    }
+    // Digits in prose must be Chinese numerals; prices (before 钱/银/文/枚/两)
+    // are a UI convention and stay exempt.
+    if (/[㐀-鿿]\s*[0-9]|[0-9](?![钱银文枚两])\s*[㐀-鿿]/.test(text)) {
+      err("G35", zhPath, `${key}: 中文句中夹阿拉伯数字`);
+    }
+  }
+}
+
+// --------------------------- G36: deepened town/station grants a book entry
+// Playtest #6 P0-1 (3 personas): "the account of X goes with it" promised a
+// travel-book entry the effects never granted. Every town/station standing
+// site that deepens into a followup must grant at least one codex op.
+{
+  const queuedEvent = (choice) => [
+    choice.effects,
+    choice.pass?.effects,
+    choice.fail?.effects,
+    choice.lessonFailEffects,
+  ].flatMap((list) => list ?? []).find((effect) => effect.op === "queue_event");
+  const effectTargets = (ch) => [
+    ch.effects,
+    ch.pass?.effects,
+    ch.fail?.effects,
+    ch.lessonFailEffects,
+  ].flatMap((list) => list ?? []);
+  const grantsCodex = (ev) => (ev.choices ?? []).some((ch) =>
+    effectTargets(ch).some((e) => e.op === "codex"));
+  for (const c of byTable.cities ?? []) {
+    if (c.tier !== "town" && c.tier !== "station") continue;
+    for (const siteId of c.sites ?? []) {
+      const site = (byTable.events ?? []).find((e) => e.id === siteId);
+      if (!site) continue;
+      const queues = (site.choices ?? []).some((ch) => queuedEvent(ch));
+      if (!queues) continue;
+      const chain = [site];
+      for (const ch of site.choices ?? []) {
+        const q = queuedEvent(ch)?.value;
+        if (q) chain.push((byTable.events ?? []).find((e) => e.id === String(q)));
+      }
+      if (!chain.filter(Boolean).some(grantsCodex)) {
+        err("G36", `events:${siteId}`, `${siteId}: deepened site must grant a codex entry`);
+      }
+    }
+  }
+}
+
+// --------------------------- G37: entry rest choices must pay out
+// Playtest #6 (2 personas): "rest half a day" at stations cost a full day for
+// the same reveal the free pass gives — a decoy choice. Rest must grant days
+// plus at least one payout (fate/reputation/codex/goods) beyond reveal_map.
+{
+  for (const e of byTable.events ?? []) {
+    if (e.kind !== "entry") continue;
+    for (const [i, ch] of (e.choices ?? []).entries()) {
+      if (!/rest/i.test(String(ch.label ?? ""))) continue;
+      const eff = [ch.effects, ch.pass?.effects, ch.fail?.effects].flatMap((x) => x ?? []);
+      const hasDays = eff.some((x) => x.op === "days");
+      const hasPayout = eff.some((x) => ["fate", "reputation", "codex", "goods"].includes(x.op));
+      if (!hasDays || !hasPayout) {
+        err("G37", recordFile.get(e.id), `${e.id} choice ${i + 1} (rest): needs days + a payout beyond reveal_map`);
+      }
+    }
+  }
+}
+
   for (const g of gates) {
     const es = errors.filter((x) => x.gate === g);
     const ws = warnings.filter((x) => x.gate === g);
