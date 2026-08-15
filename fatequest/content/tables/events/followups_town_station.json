@@ -1,0 +1,4689 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-charchan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_charchan_a_followup.title",
+      "when": {
+        "cities": [
+          "charchan"
+        ]
+      },
+      "body": "ev.ev_charchan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_charchan_a_followup.choice_1",
+          "resultText": "ev.ev_charchan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "bought-chalcedony-at-charchan-sifters-price"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-chalcedony-for-the-cathay-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-charchan",
+              "reason": "carried-chalcedony-for-the-cathay-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_charchan_a_followup.choice_2",
+          "resultText": "ev.ev_charchan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pein",
+              "reason": "sifter-named-the-sweet-wells-to-pein"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-sweet-wells-of-the-sand"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_charchan_a_followup.choice_3",
+          "resultText": "ev.ev_charchan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-hiding-wind"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "charchan",
+              "reason": "studied-with-the-jasper-sifters"
+            },
+            {
+              "op": "codex",
+              "value": "cx-charchan",
+              "reason": "learned-the-sifters-trick-of-the-wind"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "charchan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c038"
+        }
+      }
+    },
+    {
+      "id": "ev-samara-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_samara_a_followup.title",
+      "when": {
+        "cities": [
+          "samara"
+        ]
+      },
+      "body": "ev.ev_samara_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_samara_a_followup.choice_1",
+          "resultText": "ev.ev_samara_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-camphor-at-samara-tide-book-price"
+            },
+            {
+              "op": "goods",
+              "id": "camphor",
+              "value": 1,
+              "reason": "bought-camphor-sealed-for-the-monsoon-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samara_a_followup.choice_2",
+          "resultText": "ev.ev_samara_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "pentam",
+              "reason": "shoreman-read-the-days-to-pentam"
+            },
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "shoreman-read-the-days-to-cail"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-tide-book"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_samara_a_followup.choice_3",
+          "resultText": "ev.ev_samara_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-out-the-tide"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "samara",
+              "reason": "sat-with-the-shoremen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：弱证据（单次提及）；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-cacanfu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cacanfu_a_followup.title",
+      "when": {
+        "cities": [
+          "cacanfu"
+        ]
+      },
+      "body": "ev.ev_cacanfu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cacanfu_a_followup.choice_1",
+          "resultText": "ev.ev_cacanfu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -350,
+              "reason": "bought-changlu-salt-for-the-canal-road"
+            },
+            {
+              "op": "goods",
+              "id": "salt",
+              "value": 1,
+              "reason": "bought-changlu-salt-at-cacanfu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cacanfu",
+              "reason": "carried-porcelain-for-the-canal"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cacanfu_a_followup.choice_2",
+          "resultText": "ev.ev_cacanfu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cambaluc",
+              "reason": "clerk-named-the-days-to-cambaluc"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chandu",
+              "reason": "clerk-named-the-days-to-chandu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-tolls-to-the-two-capitals"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cacanfu_a_followup.choice_3",
+          "resultText": "ev.ev_cacanfu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "studied-the-ferry-ledger"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cacanfu",
+              "reason": "sat-over-the-river-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-cacanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c060"
+        }
+      }
+    },
+    {
+      "id": "ev-cachanfu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cachanfu_a_followup.title",
+      "when": {
+        "cities": [
+          "cachanfu"
+        ]
+      },
+      "body": "ev.ev_cachanfu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cachanfu_a_followup.choice_1",
+          "resultText": "ev.ev_cachanfu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1000,
+              "reason": "bought-silk-at-cachanfu-crossing-price"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-for-the-western-road"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cachanfu",
+              "reason": "carried-silk-from-the-great-river"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cachanfu_a_followup.choice_2",
+          "resultText": "ev.ev_cachanfu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "egrigaia",
+              "reason": "boatman-marked-the-road-to-egrigaia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-fords-to-tangut"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cachanfu_a_followup.choice_3",
+          "resultText": "ev.ev_cachanfu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-crossings-by-heart"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cachanfu",
+              "reason": "studied-the-river-with-the-boatman"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cachanfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c040"
+        }
+      }
+    },
+    {
+      "id": "ev-caiju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_caiju_a_followup.title",
+      "when": {
+        "cities": [
+          "caiju"
+        ]
+      },
+      "body": "ev.ev_caiju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_caiju_a_followup.choice_1",
+          "resultText": "ev.ev_caiju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -600,
+              "reason": "bought-tea-for-the-canal-passage"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-caiju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-caiju",
+              "reason": "carried-tea-on-the-granary-canal"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_caiju_a_followup.choice_2",
+          "resultText": "ev.ev_caiju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "sinju",
+              "reason": "clerk-named-the-reach-to-sinju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "tiju",
+              "reason": "clerk-named-the-reach-to-tiju"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-canal-reaches"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_caiju_a_followup.choice_3",
+          "resultText": "ev.ev_caiju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-grain-fleet-make-up"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "caiju",
+              "reason": "waited-with-the-granary-clerks"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "caiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c072"
+        }
+      }
+    },
+    {
+      "id": "ev-chinghianfu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chinghianfu_a_followup.title",
+      "when": {
+        "cities": [
+          "chinghianfu"
+        ]
+      },
+      "body": "ev.ev_chinghianfu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chinghianfu_a_followup.choice_1",
+          "resultText": "ev.ev_chinghianfu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -700,
+              "reason": "bought-lacquer-at-chinghianfu-market"
+            },
+            {
+              "op": "goods",
+              "id": "lacquerware",
+              "value": 1,
+              "reason": "bought-lacquer-at-chinghianfu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinghianfu",
+              "reason": "carried-lacquer-from-the-two-faiths-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinghianfu_a_followup.choice_2",
+          "resultText": "ev.ev_chinghianfu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caiju",
+              "reason": "weavers-named-the-road-to-caiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chinginju",
+              "reason": "weavers-named-chinginju"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-canal-network"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinghianfu_a_followup.choice_3",
+          "resultText": "ev.ev_chinghianfu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-tale-of-mar-sarghis"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinghianfu",
+              "reason": "sat-with-the-weavers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinghianfu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c073"
+        }
+      }
+    },
+    {
+      "id": "ev-chinginju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_chinginju_a_followup.title",
+      "when": {
+        "cities": [
+          "chinginju"
+        ]
+      },
+      "body": "ev.ev_chinginju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_chinginju_a_followup.choice_1",
+          "resultText": "ev.ev_chinginju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -550,
+              "reason": "bought-tea-at-chinginju-for-the-southern-road"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-chinginju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-chinginju",
+              "reason": "provisioned-at-chinginju-market"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinginju_a_followup.choice_2",
+          "resultText": "ev.ev_chinginju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kinsay",
+              "reason": "market-master-named-the-road-to-kinsay"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-road-to-the-great-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_chinginju_a_followup.choice_3",
+          "resultText": "ev.ev_chinginju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-cautions-of-chinginju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinginju",
+              "reason": "listened-to-the-market-master"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "chinginju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c074"
+        }
+      }
+    },
+    {
+      "id": "ev-coigangiu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_coigangiu_a_followup.title",
+      "when": {
+        "cities": [
+          "coigangiu"
+        ]
+      },
+      "body": "ev.ev_coigangiu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_coigangiu_a_followup.choice_1",
+          "resultText": "ev.ev_coigangiu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-tea-for-the-canal-nights"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-coigangiu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coigangiu_a_followup.choice_2",
+          "resultText": "ev.ev_coigangiu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tiju",
+              "reason": "boatmen-named-the-reach-to-tiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coiganju",
+              "reason": "boatmen-named-coiganju"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-river-book"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coigangiu_a_followup.choice_3",
+          "resultText": "ev.ev_coigangiu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-an-evening-with-the-boatmen"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coigangiu",
+              "reason": "sat-with-the-boatmen"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "coigangiu",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：运河镇，入口文本后深化。"
+      }
+    },
+    {
+      "id": "ev-coiganju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_coiganju_a_followup.title",
+      "when": {
+        "cities": [
+          "coiganju"
+        ]
+      },
+      "body": "ev.ev_coiganju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_coiganju_a_followup.choice_1",
+          "resultText": "ev.ev_coiganju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1100,
+              "reason": "bought-silk-at-coiganju-distribution-price"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-coiganju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-coiganju",
+              "reason": "carried-silk-from-the-salt-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coiganju_a_followup.choice_2",
+          "resultText": "ev.ev_coiganju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "siju",
+              "reason": "salt-master-named-the-road-to-siju"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "learned-the-distribution-trade"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coiganju_a_followup.choice_3",
+          "resultText": "ev.ev_coiganju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-in-the-yard-office"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coiganju",
+              "reason": "studied-the-trade-seasons"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "coiganju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c066"
+        }
+      }
+    },
+    {
+      "id": "ev-etzina-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_etzina_a_followup.title",
+      "when": {
+        "cities": [
+          "etzina"
+        ]
+      },
+      "body": "ev.ev_etzina_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_etzina_a_followup.choice_1",
+          "resultText": "ev.ev_etzina_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-lanner-at-etzina-desert-price"
+            },
+            {
+              "op": "goods",
+              "id": "hunting-falcon",
+              "value": 1,
+              "reason": "bought-lanner-at-etzina"
+            },
+            {
+              "op": "codex",
+              "value": "cx-etzina",
+              "reason": "carried-a-lanner-from-the-desert-verge"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_etzina_a_followup.choice_2",
+          "resultText": "ev.ev_etzina_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "egrigaia",
+              "reason": "falconer-marked-the-wells-to-egrigaia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-falcons-wells"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_etzina_a_followup.choice_3",
+          "resultText": "ev.ev_etzina_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-sand-reading"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "etzina",
+              "reason": "studied-with-the-falconers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "etzina",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c045"
+        }
+      }
+    },
+    {
+      "id": "ev-fuju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_fuju_a_followup.title",
+      "when": {
+        "cities": [
+          "fuju"
+        ]
+      },
+      "body": "ev.ev_fuju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_fuju_a_followup.choice_1",
+          "resultText": "ev.ev_fuju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -550,
+              "reason": "bought-tea-for-the-sea-passage"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-fuju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-fuju",
+              "reason": "carried-tea-from-the-shipyards"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_fuju_a_followup.choice_2",
+          "resultText": "ev.ev_fuju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tanpiju",
+              "reason": "master-named-the-river-road-to-tanpiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "chamba",
+              "reason": "master-named-the-sea-road-to-chamba"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-river-to-the-sea"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_fuju_a_followup.choice_3",
+          "resultText": "ev.ev_fuju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-launching-days"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "fuju",
+              "reason": "sat-with-the-shipwrights"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "fuju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c081"
+        }
+      }
+    },
+    {
+      "id": "ev-linju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_linju_a_followup.title",
+      "when": {
+        "cities": [
+          "linju"
+        ]
+      },
+      "body": "ev.ev_linju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_linju_a_followup.choice_1",
+          "resultText": "ev.ev_linju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-rhubarb-at-linju-road-price"
+            },
+            {
+              "op": "goods",
+              "id": "rhubarb",
+              "value": 1,
+              "reason": "bought-rhubarb-at-linju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-linju",
+              "reason": "carried-rhubarb-from-the-river-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_linju_a_followup.choice_2",
+          "resultText": "ev.ev_linju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cacanfu",
+              "reason": "merchant-marked-the-road-to-cacanfu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-northern-river-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_linju_a_followup.choice_3",
+          "resultText": "ev.ev_linju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-garrison-market"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "linju",
+              "reason": "learned-the-market-ways"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "linju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c063"
+        }
+      }
+    },
+    {
+      "id": "ev-mien-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_mien_a_followup.title",
+      "when": {
+        "cities": [
+          "mien"
+        ]
+      },
+      "body": "ev.ev_mien_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_mien_a_followup.choice_1",
+          "resultText": "ev.ev_mien_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "offered-at-the-tomb-of-mien"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "mien",
+              "reason": "honoured-the-dead-king"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "remembered-the-kings-wish"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_mien_a_followup.choice_2",
+          "resultText": "ev.ev_mien_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samara",
+              "reason": "keeper-named-the-road-toward-the-sea"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-way-out-of-the-valley"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_mien_a_followup.choice_3",
+          "resultText": "ev.ev_mien_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-wonders-of-mien"
+            },
+            {
+              "op": "codex",
+              "value": "cx-mien",
+              "reason": "learned-the-citys-wonders"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "mien",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c054"
+        }
+      }
+    },
+    {
+      "id": "ev-nanghin-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_nanghin_a_followup.title",
+      "when": {
+        "cities": [
+          "nanghin"
+        ]
+      },
+      "body": "ev.ev_nanghin_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_nanghin_a_followup.choice_1",
+          "resultText": "ev.ev_nanghin_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -700,
+              "reason": "bought-lacquerware-at-nanghin-warehouse"
+            },
+            {
+              "op": "goods",
+              "id": "lacquerware",
+              "value": 1,
+              "reason": "bought-lacquerware-at-nanghin"
+            },
+            {
+              "op": "codex",
+              "value": "cx-nanghin",
+              "reason": "carried-lacquer-from-the-opulent-province"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_nanghin_a_followup.choice_2",
+          "resultText": "ev.ev_nanghin_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "chinghianfu",
+              "reason": "merchant-marked-the-road-to-chinghianfu"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "learned-the-trade-tides"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_nanghin_a_followup.choice_3",
+          "resultText": "ev.ev_nanghin_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-among-the-bales"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "nanghin",
+              "reason": "studied-the-trade-tides"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "nanghin",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c069"
+        }
+      }
+    },
+    {
+      "id": "ev-paukin-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_paukin_a_followup.title",
+      "when": {
+        "cities": [
+          "paukin"
+        ]
+      },
+      "body": "ev.ev_paukin_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_paukin_a_followup.choice_1",
+          "resultText": "ev.ev_paukin_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -550,
+              "reason": "bought-tea-for-the-road-beyond-the-gate"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-paukin"
+            },
+            {
+              "op": "codex",
+              "value": "cx-paukin",
+              "reason": "provisioned-at-the-gate-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_paukin_a_followup.choice_2",
+          "resultText": "ev.ev_paukin_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "coiganju",
+              "reason": "weaver-named-the-way-to-coiganju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coigangiu",
+              "reason": "weaver-named-coigangiu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-gate-seasons"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_paukin_a_followup.choice_3",
+          "resultText": "ev.ev_paukin_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-at-the-gate"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "paukin",
+              "reason": "learned-the-gate-seasons"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "paukin",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c067"
+        }
+      }
+    },
+    {
+      "id": "ev-sindafu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_sindafu_a_followup.title",
+      "when": {
+        "cities": [
+          "sindafu"
+        ]
+      },
+      "body": "ev.ev_sindafu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_sindafu_a_followup.choice_1",
+          "resultText": "ev.ev_sindafu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -550,
+              "reason": "bought-tea-at-sindafu-bridge"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-sindafu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sindafu",
+              "reason": "provisioned-at-the-bridge-market"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sindafu_a_followup.choice_2",
+          "resultText": "ev.ev_sindafu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "bridge-keeper-named-the-road-to-saianfu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-eastern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sindafu_a_followup.choice_3",
+          "resultText": "ev.ev_sindafu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-at-the-middle-bridge"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sindafu",
+              "reason": "heard-the-three-tongues"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sindafu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c044"
+        }
+      }
+    },
+    {
+      "id": "ev-sinjumatu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_sinjumatu_a_followup.title",
+      "when": {
+        "cities": [
+          "sinjumatu"
+        ]
+      },
+      "body": "ev.ev_sinjumatu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_sinjumatu_a_followup.choice_1",
+          "resultText": "ev.ev_sinjumatu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -550,
+              "reason": "bought-tea-for-the-canal-passage"
+            },
+            {
+              "op": "goods",
+              "id": "tea",
+              "value": 1,
+              "reason": "bought-tea-at-sinjumatu"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sinjumatu",
+              "reason": "provisioned-at-the-river-works"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sinjumatu_a_followup.choice_2",
+          "resultText": "ev.ev_sinjumatu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "saianfu",
+              "reason": "master-marked-the-road-to-saianfu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-upper-river"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sinjumatu_a_followup.choice_3",
+          "resultText": "ev.ev_sinjumatu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-flood-seasons"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sinjumatu",
+              "reason": "studied-with-the-river-master"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sinjumatu",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c062"
+        }
+      }
+    },
+    {
+      "id": "ev-tiju-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tiju_a_followup.title",
+      "when": {
+        "cities": [
+          "tiju"
+        ]
+      },
+      "body": "ev.ev_tiju_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tiju_a_followup.choice_1",
+          "resultText": "ev.ev_tiju_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1000,
+              "reason": "bought-silk-at-tiju-city-price"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-tiju"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tiju",
+              "reason": "carried-silk-from-the-salt-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tiju_a_followup.choice_2",
+          "resultText": "ev.ev_tiju_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "caiju",
+              "reason": "pan-master-named-the-road-to-caiju"
+            },
+            {
+              "op": "reveal_map",
+              "value": "coigangiu",
+              "reason": "pan-master-named-coigangiu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-canal-country"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tiju_a_followup.choice_3",
+          "resultText": "ev.ev_tiju_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-sea-salt-seasons"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tiju",
+              "reason": "studied-the-salt-seasons"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tiju",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c068"
+        }
+      }
+    },
+    {
+      "id": "ev-cabul-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cabul_a_followup.title",
+      "when": {
+        "cities": [
+          "cabul"
+        ]
+      },
+      "body": "ev.ev_cabul_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cabul_a_followup.choice_1",
+          "resultText": "ev.ev_cabul_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -600,
+              "reason": "bought-camel-felt-at-cabul"
+            },
+            {
+              "op": "goods",
+              "id": "camel-felt",
+              "value": 1,
+              "reason": "bought-camel-felt-at-cabul"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cabul_a_followup.choice_2",
+          "resultText": "ev.ev_cabul_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "badashan",
+              "reason": "dealer-named-the-road-to-badashan"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-northern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cabul_a_followup.choice_3",
+          "resultText": "ev.ev_cabul_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-with-the-horse-dealers"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cabul",
+              "reason": "sat-with-the-horse-dealers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cabul",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c013"
+        }
+      }
+    },
+    {
+      "id": "ev-merva-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_merva_a_followup.title",
+      "when": {
+        "cities": [
+          "merva"
+        ]
+      },
+      "body": "ev.ev_merva_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_merva_a_followup.choice_1",
+          "resultText": "ev.ev_merva_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -400,
+              "reason": "bought-dates-at-merva-market"
+            },
+            {
+              "op": "goods",
+              "id": "dates",
+              "value": 1,
+              "reason": "bought-dates-at-merva"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_merva_a_followup.choice_2",
+          "resultText": "ev.ev_merva_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "bochara",
+              "reason": "gardener-named-the-road-to-bochara"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-old-northern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_merva_a_followup.choice_3",
+          "resultText": "ev.ev_merva_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-turn-the-water"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "merva",
+              "reason": "helped-in-the-gardens"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "merva",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：蒙古毁城后余脉；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-pein-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_pein_a_followup.title",
+      "when": {
+        "cities": [
+          "pein"
+        ]
+      },
+      "body": "ev.ev_pein_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_pein_a_followup.choice_1",
+          "resultText": "ev.ev_pein_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1200,
+              "reason": "bought-jade-at-pein-river-price"
+            },
+            {
+              "op": "goods",
+              "id": "jade",
+              "value": 1,
+              "reason": "bought-jade-at-pein"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pein",
+              "reason": "carried-river-jade-from-pein"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_pein_a_followup.choice_2",
+          "resultText": "ev.ev_pein_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "charchan",
+              "reason": "river-master-marked-the-road-to-charchan"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-sand-road-south"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_pein_a_followup.choice_3",
+          "resultText": "ev.ev_pein_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-day-count"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "pein",
+              "reason": "learned-the-day-count"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "pein",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c037"
+        }
+      }
+    },
+    {
+      "id": "ev-sachiu-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_sachiu_a_followup.title",
+      "when": {
+        "cities": [
+          "sachiu"
+        ]
+      },
+      "body": "ev.ev_sachiu_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_sachiu_a_followup.choice_1",
+          "resultText": "ev.ev_sachiu_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "offered-at-the-spring-of-sachiu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sachiu",
+              "reason": "honoured-the-oasis"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "repaid-the-oasis"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sachiu_a_followup.choice_2",
+          "resultText": "ev.ev_sachiu_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "campichu",
+              "reason": "water-keeper-named-the-road-to-campichu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-tangut-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sachiu_a_followup.choice_3",
+          "resultText": "ev.ev_sachiu_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-deserts-measure"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-oasis-gate"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sachiu",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：绿洲门户与崖窟；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-sapurgan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_sapurgan_a_followup.title",
+      "when": {
+        "cities": [
+          "sapurgan"
+        ]
+      },
+      "body": "ev.ev_sapurgan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_sapurgan_a_followup.choice_1",
+          "resultText": "ev.ev_sapurgan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-water-skins-at-sapurgan"
+            },
+            {
+              "op": "goods",
+              "id": "leather",
+              "value": 1,
+              "reason": "bought-water-skins-at-sapurgan"
+            },
+            {
+              "op": "codex",
+              "value": "cx-sapurgan",
+              "reason": "carried-water-skins-from-the-desert-town"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sapurgan_a_followup.choice_2",
+          "resultText": "ev.ev_sapurgan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "taican",
+              "reason": "water-seller-marked-the-road-to-taican"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-dry-reaches-measure"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_sapurgan_a_followup.choice_3",
+          "resultText": "ev.ev_sapurgan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-measure-of-thirst"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sapurgan",
+              "reason": "learned-with-the-water-sellers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "sapurgan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c026"
+        }
+      }
+    },
+    {
+      "id": "ev-yarcan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_yarcan_a_followup.title",
+      "when": {
+        "cities": [
+          "yarcan"
+        ]
+      },
+      "body": "ev.ev_yarcan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_yarcan_a_followup.choice_1",
+          "resultText": "ev.ev_yarcan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-leather-at-yarcan-guild-price"
+            },
+            {
+              "op": "goods",
+              "id": "leather",
+              "value": 1,
+              "reason": "bought-leather-at-yarcan"
+            },
+            {
+              "op": "codex",
+              "value": "cx-yarcan",
+              "reason": "traded-with-both-guilds"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_yarcan_a_followup.choice_2",
+          "resultText": "ev.ev_yarcan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "keshimur",
+              "reason": "cotton-master-marked-the-road-to-keshimur"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-mountain-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_yarcan_a_followup.choice_3",
+          "resultText": "ev.ev_yarcan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-both-books"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "yarcan",
+              "reason": "honoured-both-faiths"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "yarcan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c035"
+        }
+      }
+    },
+    {
+      "id": "ev-axuma-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_axuma_a_followup.title",
+      "when": {
+        "cities": [
+          "axuma"
+        ]
+      },
+      "body": "ev.ev_axuma_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_axuma_a_followup.choice_1",
+          "resultText": "ev.ev_axuma_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-at-axuma"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-axuma"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_axuma_a_followup.choice_2",
+          "resultText": "ev.ev_axuma_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mecha",
+              "reason": "keeper-named-the-road-to-mecha"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-south-coast-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_axuma_a_followup.choice_3",
+          "resultText": "ev.ev_axuma_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "mended-the-oldest-pillar"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "axuma",
+              "reason": "helped-mend-the-pillar"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "axuma",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：石柱之城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-cambaet-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cambaet_a_followup.title",
+      "when": {
+        "cities": [
+          "cambaet"
+        ]
+      },
+      "body": "ev.ev_cambaet_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cambaet_a_followup.choice_1",
+          "resultText": "ev.ev_cambaet_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -700,
+              "reason": "bought-cotton-cloth-at-cambaet-export-price"
+            },
+            {
+              "op": "goods",
+              "id": "cotton-cloth",
+              "value": 1,
+              "reason": "bought-cotton-cloth-at-cambaet"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cambaet",
+              "reason": "carried-cotton-from-the-free-kingdom"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaet_a_followup.choice_2",
+          "resultText": "ev.ev_cambaet_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "dyer-marked-the-road-to-aden"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-gulf-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cambaet_a_followup.choice_3",
+          "resultText": "ev.ev_cambaet_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-ships-take-the-star"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaet",
+              "reason": "waited-at-the-coast"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cambaet",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c028"
+        }
+      }
+    },
+    {
+      "id": "ev-coilum-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_coilum_a_followup.title",
+      "when": {
+        "cities": [
+          "coilum"
+        ]
+      },
+      "body": "ev.ev_coilum_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_coilum_a_followup.choice_1",
+          "resultText": "ev.ev_coilum_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-ginger-at-coilum-garden-price"
+            },
+            {
+              "op": "goods",
+              "id": "ginger",
+              "value": 1,
+              "reason": "bought-ginger-at-coilum"
+            },
+            {
+              "op": "codex",
+              "value": "cx-coilum",
+              "reason": "carried-coinlum-ginger"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coilum_a_followup.choice_2",
+          "resultText": "ev.ev_coilum_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "cail",
+              "reason": "garden-master-marked-the-road-to-cail"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-north-coast-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_coilum_a_followup.choice_3",
+          "resultText": "ev.ev_coilum_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "sat-among-the-vines"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coilum",
+              "reason": "studied-with-the-garden-master"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "coilum",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c022"
+        }
+      }
+    },
+    {
+      "id": "ev-dongola-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_dongola_a_followup.title",
+      "when": {
+        "cities": [
+          "dongola"
+        ]
+      },
+      "body": "ev.ev_dongola_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_dongola_a_followup.choice_1",
+          "resultText": "ev.ev_dongola_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-leather-at-dongola-market"
+            },
+            {
+              "op": "goods",
+              "id": "leather",
+              "value": 1,
+              "reason": "bought-leather-at-dongola"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_dongola_a_followup.choice_2",
+          "resultText": "ev.ev_dongola_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "medina",
+              "reason": "boatman-named-the-road-to-medina"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-north-west-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_dongola_a_followup.choice_3",
+          "resultText": "ev.ev_dongola_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "mended-the-river-boats"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "dongola",
+              "reason": "helped-mend-the-boats"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "dongola",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：尼罗河城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-dufar-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_dufar_a_followup.title",
+      "when": {
+        "cities": [
+          "dufar"
+        ]
+      },
+      "body": "ev.ev_dufar_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_dufar_a_followup.choice_1",
+          "resultText": "ev.ev_dufar_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-at-dufar-notcher-price"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-dufar"
+            },
+            {
+              "op": "codex",
+              "value": "cx-dufar",
+              "reason": "kept-the-measure-of-the-incense-trade"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_dufar_a_followup.choice_2",
+          "resultText": "ev.ev_dufar_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "notcher-marked-the-road-to-aden"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-gulf-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_dufar_a_followup.choice_3",
+          "resultText": "ev.ev_dufar_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-seasons-keeping"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "dufar",
+              "reason": "kept-the-seasons-covenant"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "dufar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c038"
+        }
+      }
+    },
+    {
+      "id": "ev-maabar-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_maabar_a_followup.title",
+      "when": {
+        "cities": [
+          "maabar"
+        ]
+      },
+      "body": "ev.ev_maabar_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_maabar_a_followup.choice_1",
+          "resultText": "ev.ev_maabar_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -2000,
+              "reason": "bought-second-pearl-at-maabar-law-price"
+            },
+            {
+              "op": "goods",
+              "id": "pearls",
+              "value": 1,
+              "reason": "bought-second-pearl-at-maabar"
+            },
+            {
+              "op": "codex",
+              "value": "cx-maabar",
+              "reason": "kept-the-divers-law"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_maabar_a_followup.choice_2",
+          "resultText": "ev.ev_maabar_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "melibar",
+              "reason": "diver-marked-the-road-to-melibar"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-coast-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_maabar_a_followup.choice_3",
+          "resultText": "ev.ev_maabar_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-gulfs-seasons"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maabar",
+              "reason": "learned-with-the-divers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "maabar",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c016"
+        }
+      }
+    },
+    {
+      "id": "ev-mecha-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_mecha_a_followup.title",
+      "when": {
+        "cities": [
+          "mecha"
+        ]
+      },
+      "body": "ev.ev_mecha_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_mecha_a_followup.choice_1",
+          "resultText": "ev.ev_mecha_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-road-north"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-mecha"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_mecha_a_followup.choice_2",
+          "resultText": "ev.ev_mecha_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "bethleem",
+              "reason": "caravan-master-named-the-road-to-bethleem"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-north-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_mecha_a_followup.choice_3",
+          "resultText": "ev.ev_mecha_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-citys-measure"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "mecha",
+              "reason": "learned-the-citys-measure"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "mecha",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：朝觐之城，行纪守观察尺度；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-medina-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_medina_a_followup.title",
+      "when": {
+        "cities": [
+          "medina"
+        ]
+      },
+      "body": "ev.ev_medina_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_medina_a_followup.choice_1",
+          "resultText": "ev.ev_medina_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -350,
+              "reason": "bought-dates-at-medina-pilgrim-measure"
+            },
+            {
+              "op": "goods",
+              "id": "dates",
+              "value": 1,
+              "reason": "bought-dates-at-medina-pilgrim-measure"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_medina_a_followup.choice_2",
+          "resultText": "ev.ev_medina_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "mecha",
+              "reason": "garden-master-marked-the-road-to-mecha"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-pilgrim-road-south"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_medina_a_followup.choice_3",
+          "resultText": "ev.ev_medina_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "drew-for-the-hosts"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "medina",
+              "reason": "drew-water-for-the-hosts"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "medina",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m014"
+        }
+      }
+    },
+    {
+      "id": "ev-semenat-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_semenat_a_followup.title",
+      "when": {
+        "cities": [
+          "semenat"
+        ]
+      },
+      "body": "ev.ev_semenat_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_semenat_a_followup.choice_1",
+          "resultText": "ev.ev_semenat_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "bought-indigo-at-semenat-known-weight"
+            },
+            {
+              "op": "goods",
+              "id": "indigo",
+              "value": 1,
+              "reason": "bought-indigo-at-semenat"
+            },
+            {
+              "op": "codex",
+              "value": "cx-semenat",
+              "reason": "traded-by-the-same-stone"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_semenat_a_followup.choice_2",
+          "resultText": "ev.ev_semenat_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "delli",
+              "reason": "merchant-marked-the-road-to-delli"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-inland-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_semenat_a_followup.choice_3",
+          "resultText": "ev.ev_semenat_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-weights-keeping"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "semenat",
+              "reason": "traded-by-the-markets-law"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "semenat",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c029"
+        }
+      }
+    },
+    {
+      "id": "ev-tana-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tana_a_followup.title",
+      "when": {
+        "cities": [
+          "tana"
+        ]
+      },
+      "body": "ev.ev_tana_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tana_a_followup.choice_1",
+          "resultText": "ev.ev_tana_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -700,
+              "reason": "bought-cotton-cloth-at-tana-second-price"
+            },
+            {
+              "op": "goods",
+              "id": "cotton-cloth",
+              "value": 1,
+              "reason": "bought-cotton-cloth-at-tana"
+            },
+            {
+              "op": "codex",
+              "value": "cx-tana",
+              "reason": "shipped-leather-and-cotton-from-tana"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tana_a_followup.choice_2",
+          "resultText": "ev.ev_tana_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "semenat",
+              "reason": "tanner-marked-the-safe-road-to-semenat"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-safe-stages"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tana_a_followup.choice_3",
+          "resultText": "ev.ev_tana_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-harbours-weather"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tana",
+              "reason": "learned-the-harbours-weather"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tana",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c027"
+        }
+      }
+    },
+    {
+      "id": "ev-antiochia-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_antiochia_a_followup.title",
+      "when": {
+        "cities": [
+          "antiochia"
+        ]
+      },
+      "body": "ev.ev_antiochia_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_antiochia_a_followup.choice_1",
+          "resultText": "ev.ev_antiochia_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-brocade-at-antiochia-citadel"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-brocade-at-antiochia"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_antiochia_a_followup.choice_2",
+          "resultText": "ev.ev_antiochia_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "edessa",
+              "reason": "guard-marked-the-road-to-edessa"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-eastern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_antiochia_a_followup.choice_3",
+          "resultText": "ev.ev_antiochia_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-siege-marks"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "antiochia",
+              "reason": "studied-with-the-citadel-guard"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "antiochia",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005"
+        }
+      }
+    },
+    {
+      "id": "ev-babylonia-cairus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_babylonia-cairus_a_followup.title",
+      "when": {
+        "cities": [
+          "babylonia-cairus"
+        ]
+      },
+      "body": "ev.ev_babylonia-cairus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_babylonia-cairus_a_followup.choice_1",
+          "resultText": "ev.ev_babylonia-cairus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-rosewater-at-babylonia"
+            },
+            {
+              "op": "goods",
+              "id": "rosewater",
+              "value": 1,
+              "reason": "bought-rosewater-at-babylonia"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_babylonia-cairus_a_followup.choice_2",
+          "resultText": "ev.ev_babylonia-cairus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "alexandria",
+              "reason": "clerk-marked-the-road-to-alexandria"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-river-road-north"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_babylonia-cairus_a_followup.choice_3",
+          "resultText": "ev.ev_babylonia-cairus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-tariffs-seasons"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "babylonia-cairus",
+              "reason": "studied-the-customs-book"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "babylonia-cairus",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m001"
+        }
+      }
+    },
+    {
+      "id": "ev-basora-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_basora_a_followup.title",
+      "when": {
+        "cities": [
+          "basora"
+        ]
+      },
+      "body": "ev.ev_basora_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_basora_a_followup.choice_1",
+          "resultText": "ev.ev_basora_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-gulf-passage"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-basora"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_basora_a_followup.choice_2",
+          "resultText": "ev.ev_basora_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "baldacum",
+              "reason": "grove-master-marked-the-road-to-baldacum"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-river-road-north"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_basora_a_followup.choice_3",
+          "resultText": "ev.ev_basora_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-tide-hours"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "basora",
+              "reason": "learned-the-tide-hours"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "basora",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c006"
+        }
+      }
+    },
+    {
+      "id": "ev-berrhoea-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_berrhoea_a_followup.title",
+      "when": {
+        "cities": [
+          "berrhoea"
+        ]
+      },
+      "body": "ev.ev_berrhoea_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_berrhoea_a_followup.choice_1",
+          "resultText": "ev.ev_berrhoea_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-brocade-at-berrhoea-night-ledger"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-brocade-at-berrhoea"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_berrhoea_a_followup.choice_2",
+          "resultText": "ev.ev_berrhoea_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "antiochia",
+              "reason": "khan-keeper-marked-the-road-to-antiochia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-western-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_berrhoea_a_followup.choice_3",
+          "resultText": "ev.ev_berrhoea_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-nights-news"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "berrhoea",
+              "reason": "heard-the-nights-news"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "berrhoea",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m016"
+        }
+      }
+    },
+    {
+      "id": "ev-bethleem-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_bethleem_a_followup.title",
+      "when": {
+        "cities": [
+          "bethleem"
+        ]
+      },
+      "body": "ev.ev_bethleem_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_bethleem_a_followup.choice_1",
+          "resultText": "ev.ev_bethleem_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "offered-at-the-church-of-bethleem"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "bethleem",
+              "reason": "honoured-the-church"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "came-in-peace"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_bethleem_a_followup.choice_2",
+          "resultText": "ev.ev_bethleem_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "petra",
+              "reason": "keeper-marked-the-road-to-petra"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-southern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_bethleem_a_followup.choice_3",
+          "resultText": "ev.ev_bethleem_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "wrote-in-the-quiet"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "wrote-of-the-pilgrim-town"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "bethleem",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：圣迹之城，行纪守观察尺度；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-cobinan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_cobinan_a_followup.title",
+      "when": {
+        "cities": [
+          "cobinan"
+        ]
+      },
+      "body": "ev.ev_cobinan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_cobinan_a_followup.choice_1",
+          "resultText": "ev.ev_cobinan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1600,
+              "reason": "bought-steel-mirror-at-cobinan"
+            },
+            {
+              "op": "goods",
+              "id": "damascus-steel",
+              "value": 1,
+              "reason": "bought-steel-mirror-at-cobinan"
+            },
+            {
+              "op": "codex",
+              "value": "cx-cobinan",
+              "reason": "carried-a-cobinan-mirror"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cobinan_a_followup.choice_2",
+          "resultText": "ev.ev_cobinan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "yasdi",
+              "reason": "furnace-master-marked-the-road-to-yasdi"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-road-north"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_cobinan_a_followup.choice_3",
+          "resultText": "ev.ev_cobinan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-burnings-patience"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cobinan",
+              "reason": "studied-with-the-furnace-master"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "cobinan",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c021"
+        }
+      }
+    },
+    {
+      "id": "ev-constantinopolis-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_constantinopolis_a_followup.title",
+      "when": {
+        "cities": [
+          "constantinopolis"
+        ]
+      },
+      "body": "ev.ev_constantinopolis_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_constantinopolis_a_followup.choice_1",
+          "resultText": "ev.ev_constantinopolis_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-brocade-at-constantinopolis"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-brocade-at-constantinopolis"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_constantinopolis_a_followup.choice_2",
+          "resultText": "ev.ev_constantinopolis_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "smyrna",
+              "reason": "harbour-master-marked-the-road-to-smyrna"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-aegean-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_constantinopolis_a_followup.choice_3",
+          "resultText": "ev.ev_constantinopolis_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-years-entries"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "constantinopolis",
+              "reason": "studied-the-harbour-log"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "constantinopolis",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m023"
+        }
+      }
+    },
+    {
+      "id": "ev-ctesiphon-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ctesiphon_a_followup.title",
+      "when": {
+        "cities": [
+          "ctesiphon"
+        ]
+      },
+      "body": "ev.ev_ctesiphon_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ctesiphon_a_followup.choice_1",
+          "resultText": "ev.ev_ctesiphon_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-river-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-ctesiphon"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ctesiphon_a_followup.choice_2",
+          "resultText": "ev.ev_ctesiphon_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tauris",
+              "reason": "keeper-marked-the-road-to-tauris"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-northern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ctesiphon_a_followup.choice_3",
+          "resultText": "ev.ev_ctesiphon_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-rivers-talk"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ctesiphon",
+              "reason": "listened-at-the-arch"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ctesiphon",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：古都废墟；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-damascus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_damascus_a_followup.title",
+      "when": {
+        "cities": [
+          "damascus"
+        ]
+      },
+      "body": "ev.ev_damascus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_damascus_a_followup.choice_1",
+          "resultText": "ev.ev_damascus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-brocade-at-damascus-workshop"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-brocade-at-damascus"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_damascus_a_followup.choice_2",
+          "resultText": "ev.ev_damascus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "hierusalem",
+              "reason": "steel-master-marked-the-road-to-hierusalem"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-southern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_damascus_a_followup.choice_3",
+          "resultText": "ev.ev_damascus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-steels-patience"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "damascus",
+              "reason": "studied-with-the-steel-master"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "damascus",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m018"
+        }
+      }
+    },
+    {
+      "id": "ev-edessa-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_edessa_a_followup.title",
+      "when": {
+        "cities": [
+          "edessa"
+        ]
+      },
+      "body": "ev.ev_edessa_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_edessa_a_followup.choice_1",
+          "resultText": "ev.ev_edessa_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-mountain-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-edessa"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_edessa_a_followup.choice_2",
+          "resultText": "ev.ev_edessa_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "berrhoea",
+              "reason": "bath-keeper-marked-the-road-to-berrhoea"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-road-west"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_edessa_a_followup.choice_3",
+          "resultText": "ev.ev_edessa_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-citys-tales"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "edessa",
+              "reason": "heard-the-citys-tales"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "edessa",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：平原古城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-ephesus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ephesus_a_followup.title",
+      "when": {
+        "cities": [
+          "ephesus"
+        ]
+      },
+      "body": "ev.ev_ephesus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ephesus_a_followup.choice_1",
+          "resultText": "ev.ev_ephesus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-inland-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-ephesus"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ephesus_a_followup.choice_2",
+          "resultText": "ev.ev_ephesus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "constantinopolis",
+              "reason": "harbourman-marked-the-road-to-constantinopolis"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-northern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ephesus_a_followup.choice_3",
+          "resultText": "ev.ev_ephesus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "kept-the-light"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ephesus",
+              "reason": "kept-the-light-with-the-harbourman"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ephesus",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：古港之城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-hierusalem-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_hierusalem_a_followup.title",
+      "when": {
+        "cities": [
+          "hierusalem"
+        ]
+      },
+      "body": "ev.ev_hierusalem_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_hierusalem_a_followup.choice_1",
+          "resultText": "ev.ev_hierusalem_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "offered-at-the-well-of-hierusalem"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "hierusalem",
+              "reason": "honoured-the-hosts"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "honoured-the-three-books-peace"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_hierusalem_a_followup.choice_2",
+          "resultText": "ev.ev_hierusalem_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "accon",
+              "reason": "well-keeper-marked-the-road-to-accon"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-coast-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_hierusalem_a_followup.choice_3",
+          "resultText": "ev.ev_hierusalem_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-hosts-tongues"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "wrote-of-the-three-books-peace"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "hierusalem",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m019"
+        }
+      }
+    },
+    {
+      "id": "ev-ispahan-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ispahan_a_followup.title",
+      "when": {
+        "cities": [
+          "ispahan"
+        ]
+      },
+      "body": "ev.ev_ispahan_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ispahan_a_followup.choice_1",
+          "resultText": "ev.ev_ispahan_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1300,
+              "reason": "bought-brocade-at-ispahan-mid-roof"
+            },
+            {
+              "op": "goods",
+              "id": "baghdad-brocade",
+              "value": 1,
+              "reason": "bought-brocade-at-ispahan"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ispahan_a_followup.choice_2",
+          "resultText": "ev.ev_ispahan_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "basora",
+              "reason": "merchant-marked-the-road-to-basora"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-gulf-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ispahan_a_followup.choice_3",
+          "resultText": "ev.ev_ispahan_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-trade"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ispahan",
+              "reason": "sat-at-the-bazaars-heart"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ispahan",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：波斯大城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-moscovia-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_moscovia_a_followup.title",
+      "when": {
+        "cities": [
+          "moscovia"
+        ]
+      },
+      "body": "ev.ev_moscovia_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_moscovia_a_followup.choice_1",
+          "resultText": "ev.ev_moscovia_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -800,
+              "reason": "bought-furs-at-moscovia-winter-market"
+            },
+            {
+              "op": "goods",
+              "id": "furs",
+              "value": 1,
+              "reason": "bought-furs-at-moscovia"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_moscovia_a_followup.choice_2",
+          "resultText": "ev.ev_moscovia_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kiovia",
+              "reason": "fur-master-marked-the-road-to-kiovia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-western-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_moscovia_a_followup.choice_3",
+          "resultText": "ev.ev_moscovia_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-seasons-trade"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "moscovia",
+              "reason": "learned-the-seasons-trade"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "moscovia",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：林木之城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-nicaea-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_nicaea_a_followup.title",
+      "when": {
+        "cities": [
+          "nicaea"
+        ]
+      },
+      "body": "ev.ev_nicaea_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_nicaea_a_followup.choice_1",
+          "resultText": "ev.ev_nicaea_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1100,
+              "reason": "bought-silk-at-nicaea-wall-walk"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-nicaea-second"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_nicaea_a_followup.choice_2",
+          "resultText": "ev.ev_nicaea_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "constantinopolis",
+              "reason": "weaver-marked-the-road-to-constantinopolis"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-eastern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_nicaea_a_followup.choice_3",
+          "resultText": "ev.ev_nicaea_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-citys-counsels"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "nicaea",
+              "reason": "heard-the-citys-counsels"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "nicaea",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：湖畔古城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-ninive-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_ninive_a_followup.title",
+      "when": {
+        "cities": [
+          "ninive"
+        ]
+      },
+      "body": "ev.ev_ninive_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_ninive_a_followup.choice_1",
+          "resultText": "ev.ev_ninive_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-mountain-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-ninive"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ninive_a_followup.choice_2",
+          "resultText": "ev.ev_ninive_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "baldacum",
+              "reason": "bridge-master-marked-the-road-to-baldacum"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-road-south"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_ninive_a_followup.choice_3",
+          "resultText": "ev.ev_ninive_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-moor-the-boats"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "ninive",
+              "reason": "helped-moor-the-boats"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "ninive",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m015"
+        }
+      }
+    },
+    {
+      "id": "ev-novogardia-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_novogardia_a_followup.title",
+      "when": {
+        "cities": [
+          "novogardia"
+        ]
+      },
+      "body": "ev.ev_novogardia_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_novogardia_a_followup.choice_1",
+          "resultText": "ev.ev_novogardia_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -900,
+              "reason": "bought-sable-at-novogardia-ice-market"
+            },
+            {
+              "op": "goods",
+              "id": "sable",
+              "value": 1,
+              "reason": "bought-sable-at-novogardia"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_novogardia_a_followup.choice_2",
+          "resultText": "ev.ev_novogardia_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "moscovia",
+              "reason": "wharf-master-marked-the-road-to-moscovia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-forest-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_novogardia_a_followup.choice_3",
+          "resultText": "ev.ev_novogardia_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-winters-trade"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "novogardia",
+              "reason": "heard-the-winters-trade"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "novogardia",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：北地商城；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-petra-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_petra_a_followup.title",
+      "when": {
+        "cities": [
+          "petra"
+        ]
+      },
+      "body": "ev.ev_petra_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_petra_a_followup.choice_1",
+          "resultText": "ev.ev_petra_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-frankincense-for-the-desert-road"
+            },
+            {
+              "op": "goods",
+              "id": "frankincense",
+              "value": 1,
+              "reason": "bought-frankincense-at-petra"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_petra_a_followup.choice_2",
+          "resultText": "ev.ev_petra_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "accon",
+              "reason": "caravan-man-marked-the-road-to-accon"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-road-north"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_petra_a_followup.choice_3",
+          "resultText": "ev.ev_petra_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watered-the-trains"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "petra",
+              "reason": "watered-the-caravans"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "petra",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：岩城古道；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-smyrna-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_smyrna_a_followup.title",
+      "when": {
+        "cities": [
+          "smyrna"
+        ]
+      },
+      "body": "ev.ev_smyrna_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_smyrna_a_followup.choice_1",
+          "resultText": "ev.ev_smyrna_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-sea-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-smyrna"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_smyrna_a_followup.choice_2",
+          "resultText": "ev.ev_smyrna_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "nicaea",
+              "reason": "harbourman-marked-the-road-to-nicaea"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-inland-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_smyrna_a_followup.choice_3",
+          "resultText": "ev.ev_smyrna_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-harbours-history"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "smyrna",
+              "reason": "heard-the-harbours-history"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "smyrna",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c011"
+        }
+      }
+    },
+    {
+      "id": "ev-tana-azov-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tana-azov_a_followup.title",
+      "when": {
+        "cities": [
+          "tana-azov"
+        ]
+      },
+      "body": "ev.ev_tana-azov_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tana-azov_a_followup.choice_1",
+          "resultText": "ev.ev_tana-azov_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -900,
+              "reason": "bought-sable-at-tana-ledger"
+            },
+            {
+              "op": "goods",
+              "id": "sable",
+              "value": 1,
+              "reason": "bought-sable-at-tana-azov"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tana-azov_a_followup.choice_2",
+          "resultText": "ev.ev_tana-azov_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "moscovia",
+              "reason": "factor-marked-the-road-to-moscovia"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-northern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tana-azov_a_followup.choice_3",
+          "resultText": "ev.ev_tana-azov_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-three-accounts"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tana-azov",
+              "reason": "studied-the-colony-ledger"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tana-azov",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：河口商站；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-tarsus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tarsus_a_followup.title",
+      "when": {
+        "cities": [
+          "tarsus"
+        ]
+      },
+      "body": "ev.ev_tarsus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tarsus_a_followup.choice_1",
+          "resultText": "ev.ev_tarsus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -400,
+              "reason": "bought-dates-at-tarsus-field-edge"
+            },
+            {
+              "op": "goods",
+              "id": "dates",
+              "value": 1,
+              "reason": "bought-dates-at-tarsus"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tarsus_a_followup.choice_2",
+          "resultText": "ev.ev_tarsus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "edessa",
+              "reason": "grower-marked-the-road-to-edessa"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-mountain-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tarsus_a_followup.choice_3",
+          "resultText": "ev.ev_tarsus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-traffic-pass"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tarsus",
+              "reason": "watched-the-gate"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tarsus",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：平原棉乡；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-trapezus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_trapezus_a_followup.title",
+      "when": {
+        "cities": [
+          "trapezus"
+        ]
+      },
+      "body": "ev.ev_trapezus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_trapezus_a_followup.choice_1",
+          "resultText": "ev.ev_trapezus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1100,
+              "reason": "bought-silk-at-trapezus-second-tally"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "bought-silk-at-trapezus-second"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_trapezus_a_followup.choice_2",
+          "resultText": "ev.ev_trapezus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "berrhoea",
+              "reason": "port-master-marked-the-road-to-berrhoea"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-mountain-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_trapezus_a_followup.choice_3",
+          "resultText": "ev.ev_trapezus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-two-calendars"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "trapezus",
+              "reason": "learned-the-two-calendars"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "trapezus",
+        "origin": "authored",
+        "disposition": "checked-weak",
+        "note": "已查：黑海丝港；维持 authored。"
+      }
+    },
+    {
+      "id": "ev-tripolis-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tripolis_a_followup.title",
+      "when": {
+        "cities": [
+          "tripolis"
+        ]
+      },
+      "body": "ev.ev_tripolis_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tripolis_a_followup.choice_1",
+          "resultText": "ev.ev_tripolis_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-coast-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-tripolis"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tripolis_a_followup.choice_2",
+          "resultText": "ev.ev_tripolis_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "damascus",
+              "reason": "castle-keeper-marked-the-road-to-damascus"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-inland-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tripolis_a_followup.choice_3",
+          "resultText": "ev.ev_tripolis_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-flags-tales"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tripolis",
+              "reason": "heard-the-flags-tales"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tripolis",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-battuta",
+          "chapterId": "battuta-c005"
+        }
+      }
+    },
+    {
+      "id": "ev-tyrus-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_tyrus_a_followup.title",
+      "when": {
+        "cities": [
+          "tyrus"
+        ]
+      },
+      "body": "ev.ev_tyrus_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_tyrus_a_followup.choice_1",
+          "resultText": "ev.ev_tyrus_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -450,
+              "reason": "bought-myrrh-for-the-causeway-road"
+            },
+            {
+              "op": "goods",
+              "id": "myrrh",
+              "value": 1,
+              "reason": "bought-myrrh-at-tyrus"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tyrus_a_followup.choice_2",
+          "resultText": "ev.ev_tyrus_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "damascus",
+              "reason": "harbourman-marked-the-road-to-damascus"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-inland-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_tyrus_a_followup.choice_3",
+          "resultText": "ev.ev_tyrus_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-seas-traffic"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tyrus",
+              "reason": "watched-the-seas-traffic"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "tyrus",
+        "origin": "source",
+        "ref": {
+          "book": "ibn-jubayr",
+          "chapterId": "jubayr-m019"
+        }
+      }
+    },
+    {
+      "id": "ev-pentam-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_pentam_a_followup.title",
+      "when": {
+        "cities": [
+          "pentam"
+        ]
+      },
+      "body": "ev.ev_pentam_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_pentam_a_followup.choice_1",
+          "resultText": "ev.ev_pentam_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -600,
+              "reason": "bought-aloeswood-at-pentam"
+            },
+            {
+              "op": "goods",
+              "id": "aloeswood",
+              "value": 1,
+              "reason": "bought-aloeswood-at-pentam"
+            },
+            {
+              "op": "codex",
+              "value": "cx-pentam",
+              "reason": "carried-aloeswood-from-the-wild-island"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_pentam_a_followup.choice_2",
+          "resultText": "ev.ev_pentam_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "samara",
+              "reason": "woodman-marked-the-passage-to-samara"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-channel-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_pentam_a_followup.choice_3",
+          "resultText": "ev.ev_pentam_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "piloted-the-shallow-water"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "pentam",
+              "reason": "helped-at-the-channel"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "pentam",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c008"
+        }
+      }
+    },
+    {
+      "id": "ev-caracoron-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_caracoron_a_followup.title",
+      "when": {
+        "cities": [
+          "caracoron"
+        ]
+      },
+      "body": "ev.ev_caracoron_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_caracoron_a_followup.choice_1",
+          "resultText": "ev.ev_caracoron_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -1500,
+              "reason": "bought-hunting-falcon-at-caracoron"
+            },
+            {
+              "op": "goods",
+              "id": "hunting-falcon",
+              "value": 1,
+              "reason": "bought-hunting-falcon-at-caracoron"
+            },
+            {
+              "op": "codex",
+              "value": "cx-caracoron",
+              "reason": "carried-a-falcon-from-the-first-city"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_caracoron_a_followup.choice_2",
+          "resultText": "ev.ev_caracoron_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "camul",
+              "reason": "elder-marked-the-road-to-camul"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-eastern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_caracoron_a_followup.choice_3",
+          "resultText": "ev.ev_caracoron_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "heard-the-empires-older-tales"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "caracoron",
+              "reason": "heard-the-empires-older-tales"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "caracoron",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c046"
+        }
+      }
+    },
+    {
+      "id": "ev-egrigaia-a-followup",
+      "kind": "consequence",
+      "title": "ev.ev_egrigaia_a_followup.title",
+      "when": {
+        "cities": [
+          "egrigaia"
+        ]
+      },
+      "body": "ev.ev_egrigaia_a_followup.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_egrigaia_a_followup.choice_1",
+          "resultText": "ev.ev_egrigaia_a_followup.choice_1_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -500,
+              "reason": "bought-leather-at-egrigaia-second-price"
+            },
+            {
+              "op": "goods",
+              "id": "leather",
+              "value": 1,
+              "reason": "bought-leather-at-egrigaia"
+            },
+            {
+              "op": "codex",
+              "value": "cx-egrigaia",
+              "reason": "traded-with-the-two-faiths"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_egrigaia_a_followup.choice_2",
+          "resultText": "ev.ev_egrigaia_a_followup.choice_2_result",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "kenjanfu",
+              "reason": "weaver-marked-the-road-to-kenjanfu"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-eastern-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_egrigaia_a_followup.choice_3",
+          "resultText": "ev.ev_egrigaia_a_followup.choice_3_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-white-weaving"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "egrigaia",
+              "reason": "studied-the-white-weaving"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "placeId": "egrigaia",
+        "origin": "source",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c058"
+        }
+      }
+    }
+  ]
+}

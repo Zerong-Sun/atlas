@@ -120,7 +120,7 @@ stamps:
 
 ## ev.ev_melibar_entry.choice_2_result
 
-你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往没来（马拉巴尔）的路。
+你穿过 bāzār（集市），你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往没来（马拉巴尔）的路。
 
 ## ev.ev_melibar_entry.choice_3_result
 
@@ -128,7 +128,7 @@ stamps:
 
 ## ev.ev_melibar_a.choice_1_result
 
-你观港，问贾人如何避海盗，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+你观港，问贾人如何避海盗，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_melibar_a.choice_2_result
 
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_melibar_b.choice_1_result
 
-你于寺阶外观偶像礼，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+你于寺阶外观偶像礼，你在路上用去 一日光阴。你把这番见闻记入行纪。
 
 ## ev.ev_melibar_b.choice_2_result
 

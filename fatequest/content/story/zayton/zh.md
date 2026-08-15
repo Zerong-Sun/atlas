@@ -352,7 +352,7 @@ stamps:
 
 ## market.zayton.item.hangzhou-fan
 
-行在折扇，檀香木为骨，扇面写满行书。一箱扇子在刺桐上船，到大马士革值十倍。
+行在折扇，檀香木为骨，扇面写满行书。一箱扇子在刺桐上船，到大马色值十倍。
 
 ## market.zayton.item.lacquerware
 

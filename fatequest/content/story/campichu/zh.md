@@ -119,7 +119,7 @@ stamps:
 
 ## ev.ev_campichu_entry.choice_2_result
 
-你穿过集市，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往甘州的路。
+你穿过集市，你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往甘州的路。
 
 ## ev.ev_campichu_entry.choice_3_result
 
@@ -127,7 +127,7 @@ stamps:
 
 ## ev.ev_campichu_a.choice_1_result
 
-你看总督属吏清册，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往哈剌和林的道路，就此展开在舆图上。
+你看总督属吏清册，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。通往哈剌和林的道路，就此展开在舆图上。
 
 ## ev.ev_campichu_a.choice_2_result
 
@@ -139,7 +139,7 @@ stamps:
 
 ## ev.ev_campichu_b.choice_1_result
 
-你入三座基督教堂之一，你在路上用去 1 日光阴。你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
+你入三座基督教堂之一，你在路上用去 一日光阴。你把这番见闻记入行纪。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_campichu_b.choice_2_result
 

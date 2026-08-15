@@ -120,7 +120,7 @@ stamps:
 
 ## ev.ev_chinangli_entry.choice_2_result
 
-你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往长芦（沧州）的道路，就此展开在舆图上。
+你穿过集市，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。通往长芦（沧州）的道路，就此展开在舆图上。
 
 ## ev.ev_chinangli_entry.choice_3_result
 
@@ -128,7 +128,7 @@ stamps:
 
 ## ev.ev_chinangli_a.choice_1_result
 
-你沿河埠头数上行之船，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往汗八里（大都）的路。
+你沿河埠头数上行之船，你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往汗八里（大都）的路。
 
 ## ev.ev_chinangli_a.choice_2_result
 
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_chinangli_b.choice_1_result
 
-你于摊前看钞币兑换，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+你于摊前看钞币兑换，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
 
 ## ev.ev_chinangli_b.choice_2_result
 
@@ -152,7 +152,7 @@ stamps:
 
 ## ev.ev_chinangli_a_followup.title
 
-济南：河商的账本
+长芦：河商的账本
 
 ## ev.ev_chinangli_a_followup.body
 

@@ -59,23 +59,23 @@ const HUBS = new Set(["chamba", "badashan", "tanpiju"]);
 const PACKS = [
   // ─── B1 ───────────────────────────────────────────────────────────
   {
-    city: "kerman", site: "a", zhName: "起儿漫", enName: "Kerman",
+    city: "kerman", site: "a", zhName: "克尔曼", enName: "Kerman",
     lore: { placeId: "kingdom-of-kerman", origin: "source", ref: { book: "marco-polo", chapterId: "v1-b1-c017" } },
     texts: {
-      title: ["Kerman: The Master of the Forge", "起儿漫：炉边的师傅"],
+      title: ["Kerman: The Master of the Forge", "克尔曼：炉边的师傅"],
       body: [
         "A smith who has worked the ondanique blades of Kerman for thirty years draws you from the quarry path into the shade of his forge. He does not sell you stone; he asks what you mean to do with the turquoise you carry, and whether you have heard how the harness-makers of this city fit steel and leather for the desert road. The fire is low; he will speak only once.",
-        "一位在起儿漫打制昂丹尼钢刃三十年的铁匠，把你从矿径上拉进炉边的阴影。他不卖给你石头；他问你打算拿手头的绿松石做什么，又问你是否听说过本城鞍匠如何为沙漠路配钢与皮革。炉火已低，他只肯讲这一回。",
+        "一位在克尔曼打制昂丹尼钢刃三十年的铁匠，把你从矿径上拉进炉边的阴影。他不卖给你石头；他问你打算拿手头的绿松石做什么，又问你是否听说过本城鞍匠如何为沙漠路配钢与皮革。炉火已低，他只肯讲这一回。",
       ],
       choices: [
         ["Buy a small ondanique fitting at the smith's own price", "按师傅的定价买下一小件昂丹尼钢配件"],
         ["Ask which road from the turquoise hills reaches Ormus", "追问绿松石山通往忽鲁谟斯的路"],
-        ["Promise to speak well of Kerman's craft in the cities west", "答应在西去的城中为起儿漫的手艺说好话"],
+        ["Promise to speak well of Kerman's craft in the cities west", "答应在西去的城中为克尔曼的手艺说好话"],
       ],
       results: [
         ["The smith sells you a steel fitting at his list price, no bargaining. It is small enough for a saddle-bag and strong enough for the next desert march.", "师傅按定价卖给你一件钢配件，不许还价。它小得能塞进鞍囊，却够撑过下一段沙漠行军。"],
         ["He marks the road to Ormus in charcoal on a scrap of hide: the passes, the water, the days between. Ormus is no longer only a name.", "他用炭笔在一块皮上标出通往忽鲁谟斯的路：山口、水源、驿站之间的日子。忽鲁谟斯不再只是一个名字。"],
-        ["He accepts your promise and asks nothing else. In Kerman your word now carries a little more weight among those who heard it.", "他收下你的承诺，不再多要。在起儿漫，听见这句话的人已把你的名字多记了一分。"],
+        ["He accepts your promise and asks nothing else. In Kerman your word now carries a little more weight among those who heard it.", "他收下你的承诺，不再多要。在克尔曼，听见这句话的人已把你的名字多记了一分。"],
       ],
     },
     effects: [
@@ -85,23 +85,23 @@ const PACKS = [
     ],
   },
   {
-    city: "camadi", site: "a", zhName: "卡玛迪", enName: "Camadi",
+    city: "camadi", site: "a", zhName: "可马底", enName: "Camadi",
     lore: { placeId: "camadi", origin: "source", ref: { book: "marco-polo", chapterId: "v1-b1-c018" } },
     texts: {
-      title: ["Camadi: The Elders of the Ruined Plain", "卡玛迪：废墟平原上的长老"],
+      title: ["Camadi: The Elders of the Ruined Plain", "可马底：废墟平原上的长老"],
       body: [
         "Among the broken walls of Camadi an elder who remembers the raids sits in the shade of a date palm and will not let you pass with only a glance. He says the plain still keeps roads that the raiders never burned — roads toward Kerman, toward Cobinan, and toward the gulf. If you mean to ride out of this ruin, he asks that you listen to the measure of the days.",
-        "在卡玛迪残墙之间，一位记得劫掠岁月的长老坐在枣树荫下，不让你只看一眼就走。他说平原上仍有劫匪未烧毁的路——通往起儿漫，通往科比南，通往海湾。若你要从这废墟上路，他要你先听清日子的尺度。",
+        "在可马底残墙之间，一位记得劫掠岁月的长老坐在枣树荫下，不让你只看一眼就走。他说平原上仍有劫匪未烧毁的路——通往克尔曼，通往科比南，通往海湾。若你要从这废墟上路，他要你先听清日子的尺度。",
       ],
       choices: [
         ["Buy a sack of dates at the elders' price for the next march", "按长老的定价买下一袋枣子供下一段路"],
-        ["Ask him to name the inland road that reaches Calatu", "请他点名通往卡拉图的内陆路"],
-        ["Sit a day and hear how Camadi fell", "坐上一天，听卡玛迪如何陷落"],
+        ["Ask him to name the inland road that reaches Calatu", "请他点名通往哈剌图的内陆路"],
+        ["Sit a day and hear how Camadi fell", "坐上一天，听可马底如何陷落"],
       ],
       results: [
-        ["The elders sell you dates at a fair weight. The sack will keep you through the hot descent, and the account of Camadi goes with it.", "长老按公道分量卖给你枣子。这袋果能撑过炎热的下坡，卡玛迪的旧事也随它同行。"],
-        ["He draws the inland road toward Calatu in the dust: wells, tolls, and the days between. The gulf fortress is now on your map.", "他在尘土上画出通往卡拉图的内陆路：水井、关卡、驿站之间的日子。海湾要塞已出现在你的舆图上。"],
-        ["You wait a day under the palm while he tells how the plain was ravaged. The story costs time, but Camadi is no longer a nameless ruin.", "你在枣树下坐了一日，听他讲平原如何被蹂躏。故事耗费时日，卡玛迪却不再是无名的废墟。"],
+        ["The elders sell you dates at a fair weight. The sack will keep you through the hot descent, and the account of Camadi goes with it.", "长老按公道分量卖给你枣子。这袋果能撑过炎热的下坡，可马底的旧事也随它同行。"],
+        ["He draws the inland road toward Calatu in the dust: wells, tolls, and the days between. The gulf fortress is now on your map.", "他在尘土上画出通往哈剌图的内陆路：水井、关卡、驿站之间的日子。海湾要塞已出现在你的舆图上。"],
+        ["You wait a day under the palm while he tells how the plain was ravaged. The story costs time, but Camadi is no longer a nameless ruin.", "你在枣树下坐了一日，听他讲平原如何被蹂躏。故事耗费时日，可马底却不再是无名的废墟。"],
       ],
     },
     effects: [
@@ -111,10 +111,10 @@ const PACKS = [
     ],
   },
   {
-    city: "tenduc", site: "a", zhName: "天德州", enName: "Tenduc",
+    city: "tenduc", site: "a", zhName: "天德军", enName: "Tenduc",
     lore: { placeId: "tenduc", origin: "source", ref: { book: "marco-polo", chapterId: "v1-b1-c059" } },
     texts: {
-      title: ["Tenduc: After the Nestorian Service", "天德州：景教礼拜之后"],
+      title: ["Tenduc: After the Nestorian Service", "天德军：景教礼拜之后"],
       body: [
         "When the Nestorian service ends, a priest of King George's line draws you aside beside the wooden screen. He says the road east to Cambaluc is not only a yam of horses — it is a chain of churches and post-houses that still remember Prester John's name. He will open one door for you if you choose carefully.",
         "景教礼拜结束，乔治王一系的一位祭司把你引到木屏风旁。他说东去汗八里的路不只是驿马之链——仍有一串教会与驿站记着祭司王约翰的名字。你若谨慎选择，他愿为你开一扇门。",
@@ -144,7 +144,7 @@ const PACKS = [
       title: ["Badashan: The Lapis Brokers' Second Page", "巴达哈伤：青金石经纪人的第二页"],
       body: [
         "In the highland bāzār a broker who deals only in rough lapis lays his ledger on the carpet and turns a page you were not meant to see. It names the mines, the tolls to Balc, and the days to Taican and Keshimur. He will sell you stone, or he will sell you the road — but not both for the same coin.",
-        "高地巴扎里，一位只做粗青金石买卖的经纪人把账本摊在毯子上，翻开你本不该看见的一页。上面写着矿口、通往巴里黑的关卡，以及到塔伊坎与克什米尔的日子。他可以卖你石头，也可以卖你道路——却不肯用同一枚钱两样都给。",
+        "高地巴扎里，一位只做粗青金石买卖的经纪人把账本摊在毯子上，翻开你本不该看见的一页。上面写着矿口、通往巴里黑的关卡，以及到塔里寒与克什米尔的日子。他可以卖你石头，也可以卖你道路——却不肯用同一枚钱两样都给。",
       ],
       choices: [
         ["Buy a block of lapis at the ledger price", "按账本价格买下一块青金石"],
@@ -179,7 +179,7 @@ const PACKS = [
       ],
       results: [
         ["You spend the day on the highland speech. The words are few, but in Badashan your name now carries a little more weight.", "你花一日学高地话。字句不多，在巴达哈伤你的名字却多了一分分量。"],
-        ["He names Taican and Keshimur and the days between. The mountain road east is on your map.", "他点出塔伊坎、克什米尔与其间的日子。东去的山路已上你的舆图。"],
+        ["He names Taican and Keshimur and the days between. The mountain road east is on your map.", "他点出塔里寒、克什米尔与其间的日子。东去的山路已上你的舆图。"],
         ["The clerk sells you a balas ruby at a price that would buy a horse in lesser markets. The stone is sealed with the court's mark.", "书记按能在小市买一匹马的价钱卖给你一枚巴剌红宝石。石头盖着宫廷的印记。"],
       ],
     },
@@ -242,10 +242,10 @@ const PACKS = [
     ],
   },
   {
-    city: "taican", site: "a", zhName: "塔伊坎", enName: "Taican",
+    city: "taican", site: "a", zhName: "塔里寒", enName: "Taican",
     lore: { placeId: "taican", origin: "source", ref: { book: "marco-polo", chapterId: "v1-b1-c028" } },
     texts: {
-      title: ["Taican: The Corn Masters' Road Book", "塔伊坎：粮商的路册"],
+      title: ["Taican: The Corn Masters' Road Book", "塔里寒：粮商的路册"],
       body: [
         "In the fortified corn market a master who prices grain for every caravan that leaves Taican opens a road book beside the scales. He says Badashan and Balc are written there in measures of days and loads — and that a traveller who buys cotton without hearing the book rides out half-blind.",
         "在设防的粮市里，一位为每支出城商队定价粮食的主人在秤旁翻开路册。他说巴达哈伤与巴里黑都写在里面，以日子与载量为尺度——买棉花却不听路册的旅人，出城时只睁半只眼。",
@@ -269,13 +269,13 @@ const PACKS = [
   },
   // ─── B3 ───────────────────────────────────────────────────────────
   {
-    city: "tanpiju", site: "a", zhName: "潭州", enName: "Tanpiju",
+    city: "tanpiju", site: "a", zhName: "通州", enName: "Tanpiju",
     lore: { placeId: "tanpiju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c079" } },
     texts: {
-      title: ["Tanpiju: A Day from Kinsay, a Second Page", "潭州：离行在一日，第二页"],
+      title: ["Tanpiju: A Day from Kinsay, a Second Page", "通州：离行在一日，第二页"],
       body: [
         "In the gardens a day's journey from Kinsay a steward who keeps the mulberry accounts draws you under a verandah. He says Tanpiju is rich because Kinsay is near — and that the tea road south and the fan road toward Fuju are written in his books if you care to ask.",
-        "离行在一日路程的园林里，一位掌管桑账的管事把你引到廊下。他说潭州之富，因行在在近——南去的茶路与通往福州的扇路都写在他的账上，只要你肯问。",
+        "离行在一日路程的园林里，一位掌管桑账的管事把你引到廊下。他说通州之富，因行在在近——南去的茶路与通往福州的扇路都写在他的账上，只要你肯问。",
       ],
       choices: [
         ["Buy tea at the steward's garden price", "按管事的园价买下茶叶"],
@@ -295,13 +295,13 @@ const PACKS = [
     ],
   },
   {
-    city: "tanpiju", site: "b", zhName: "潭州", enName: "Tanpiju",
+    city: "tanpiju", site: "b", zhName: "通州", enName: "Tanpiju",
     lore: { placeId: "tanpiju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c079" } },
     texts: {
-      title: ["Tanpiju: Under Kinsay, the Market's Counsel", "潭州：隶于行在，市集的劝告"],
+      title: ["Tanpiju: Under Kinsay, the Market's Counsel", "通州：隶于行在，市集的劝告"],
       body: [
         "In the rich market under Kinsay a lacquer merchant who has buried kin according to the local rite sits you down among the fans and boxes. He says the funeral road and the trade road are the same streets — and that a traveller who buys lacquer without hearing the custom walks half-blind through Tanpiju.",
-        "在隶于行在的富市里，一位按本地礼俗葬过亲人的漆器商把你拉到扇子与漆匣之间坐下。他说丧礼之路与贸易之路是同一条街——买漆器却不听风俗的旅人，在潭州只睁半只眼。",
+        "在隶于行在的富市里，一位按本地礼俗葬过亲人的漆器商把你拉到扇子与漆匣之间坐下。他说丧礼之路与贸易之路是同一条街——买漆器却不听风俗的旅人，在通州只睁半只眼。",
       ],
       choices: [
         ["Buy a lacquerware piece at his measured price", "按他的公道价买下一件漆器"],
@@ -310,7 +310,7 @@ const PACKS = [
       ],
       results: [
         ["He sells you lacquer at a fair price. The piece is sealed and ready for the canal road.", "他按公道价卖给你漆器。物件已封好，可走运河路。"],
-        ["You learn the rite and leave a small offering. In Tanpiju your name now carries a little more weight.", "你学会礼俗并留下薄奠。在潭州你的名字多了一分分量。"],
+        ["You learn the rite and leave a small offering. In Tanpiju your name now carries a little more weight.", "你学会礼俗并留下薄奠。在通州你的名字多了一分分量。"],
         ["The fan is yours, and Kinsay is marked clearly as a day's journey north-west. You will not miss the road home to the great city.", "扇子归你，行在标作西北一日之路。你不会错过回大城的路。"],
       ],
     },
@@ -347,10 +347,10 @@ const PACKS = [
     ],
   },
   {
-    city: "chinangli", site: "a", zhName: "济南", enName: "Chinangli",
+    city: "chinangli", site: "a", zhName: "长芦", enName: "Chinangli",
     lore: { placeId: "chinangli", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c061" } },
     texts: {
-      title: ["Chinangli: The River Brokers' Ledger", "济南：河商的账本"],
+      title: ["Chinangli: The River Brokers' Ledger", "长芦：河商的账本"],
       body: [
         "On the quay of the great river a broker who prices silk and spice for boats bound to Cambaluc opens his ledger beside the water. He says the river is a road that remembers every toll — and that a traveller who buys silk without hearing the days to Cacanfu and Chandu rides half-blind upstream.",
         "大河码头上，一位为开往汗八里的船定价丝与香料的经纪人在水边翻开账本。他说这条河是记得每一道关卡的路——买丝却不问到河间与上都要几日的旅人，逆流时只睁半只眼。",
@@ -425,13 +425,13 @@ const PACKS = [
     ],
   },
   {
-    city: "siju", site: "a", zhName: "徐州", enName: "Siju",
+    city: "siju", site: "a", zhName: "邳州", enName: "Siju",
     lore: { placeId: "siju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c064" } },
     texts: {
-      title: ["Siju: The Sugar Workshops' Second Page", "徐州：糖坊的第二页"],
+      title: ["Siju: The Sugar Workshops' Second Page", "邳州：糖坊的第二页"],
       body: [
         "In the workshops south of Piju a sugar master who has shipped chests to Coigangiu and Coiganju draws you beside the boiling pans. He says Siju's manufactures are nothing without the canal days written on his wall — and that a traveller who buys sugar without hearing those days rides half-blind toward the grain towns.",
-        "邳州以南的作坊里，一位把糖箱运到淮安与高邮的糖坊主人把你拉到煮锅旁。他说徐州的工艺若没有墙上写着的运河日子便一文不值——买糖却不问那些日子的旅人，去粮镇时只睁半只眼。",
+        "邳州以南的作坊里，一位把糖箱运到淮安与高邮的糖坊主人把你拉到煮锅旁。他说邳州的工艺若没有墙上写着的运河日子便一文不值——买糖却不问那些日子的旅人，去粮镇时只睁半只眼。",
       ],
       choices: [
         ["Buy sugar at the workshop's measured price", "按作坊公道价买下糖"],
@@ -439,7 +439,7 @@ const PACKS = [
         ["Spend a day counting grain sacks with the clerks", "与书吏一起清点一日粮袋"],
       ],
       results: [
-        ["He sells you sugar sealed for the canal. The price is fair, and Siju's name goes with the chest.", "他卖给你封好走运河的糖。价钱公道，徐州之名随箱子同行。"],
+        ["He sells you sugar sealed for the canal. The price is fair, and Siju's name goes with the chest.", "他卖给你封好走运河的糖。价钱公道，邳州之名随箱子同行。"],
         ["Coigangiu and Paukin are marked on your map. The canal south is clear.", "淮安与宝应已标上舆图。南去的运河清晰。"],
         ["You spend a day among the sacks. Coiganju is named in the talk, and fortune bends a little your way.", "你在粮袋间过了一日。闲话里点到高邮，时运也稍稍偏向你。"],
       ],
@@ -451,13 +451,13 @@ const PACKS = [
     ],
   },
   {
-    city: "sinju", site: "a", zhName: "镇江", enName: "Sinju",
+    city: "sinju", site: "a", zhName: "真州", enName: "Sinju",
     lore: { placeId: "sinju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c071" } },
     texts: {
-      title: ["Sinju: On the Greatest River", "镇江：在最大的河上"],
+      title: ["Sinju: On the Greatest River", "真州：在最大的河上"],
       body: [
         "On the quay of the Kian a toll clerk who has counted tea chests for the Great Kaan's ports draws you under a shed. He says Sinju stands where the greatest river in the world turns trade into paper-money — and that Caiju, Nanghin, and Chinghianfu are written in his toll book if you care to ask.",
-        "在江边码头，一位为可汗港口清点茶箱的税吏把你引到棚下。他说镇江正站在世界最大河流把贸易换成交钞的地方——瓜洲、南京与镇江府都写在他的税册上，只要你肯问。",
+        "在江边码头，一位为可汗港口清点茶箱的税吏把你引到棚下。他说真州正站在世界最大河流把贸易换成交钞的地方——瓜洲、南京与镇江府都写在他的税册上，只要你肯问。",
       ],
       choices: [
         ["Buy tea at the river toll price", "按河税价买下茶叶"],
@@ -608,22 +608,22 @@ const PACKS = [
     ],
   },
   {
-    city: "calatu", site: "a", zhName: "卡拉图", enName: "Calatu",
+    city: "calatu", site: "a", zhName: "哈剌图", enName: "Calatu",
     lore: { placeId: "gulf-of-calatu", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b3-c039" } },
     texts: {
-      title: ["Calatu: The Gulf Fortress Wall-Walk", "卡拉图：海湾要塞的墙巡"],
+      title: ["Calatu: The Gulf Fortress Wall-Walk", "哈剌图：海湾要塞的墙巡"],
       body: [
         "On the walls of the gulf fortress a watch captain who has counted ships for the Melic of Hormos draws you along the parapet. He says Calatu is six hundred miles from the open sea and yet every pepper ship from Dufar and every inland caravan from Camadi must answer to this mole — if you mean to leave with more than a glance at the gulf.",
-        "在海湾要塞墙上，一位为忽鲁谟斯的马立克点过船只的守将带你沿女墙走。他说卡拉图离外海六百里，然而来自佐法尔的每艘胡椒船与来自卡玛迪的每支内陆商队都须应答这道防波堤——若你想带走的不只是对海湾的一瞥。",
+        "在海湾要塞墙上，一位为忽鲁谟斯的马立克点过船只的守将带你沿女墙走。他说哈剌图离外海六百里，然而来自佐法尔的每艘胡椒船与来自可马底的每支内陆商队都须应答这道防波堤——若你想带走的不只是对海湾的一瞥。",
       ],
       choices: [
         ["Buy pepper at the fortress mole price", "按要塞码头价买下胡椒"],
-        ["Ask which inland road leads toward Camadi", "追问通往卡玛迪的内陆路"],
+        ["Ask which inland road leads toward Camadi", "追问通往可马底的内陆路"],
         ["Count the ships a day and hear Ormus named", "点一日船，听忽鲁谟斯之名"],
       ],
       results: [
         ["He sells you pepper sealed for the gulf. The price includes the mole fee.", "他卖给你封好走海湾的胡椒。价钱里已含码头费。"],
-        ["Camadi is marked on your map with the inland days. The plain road is clear.", "卡玛迪连同内陆日子已标上舆图。平原之路清晰。"],
+        ["Camadi is marked on your map with the inland days. The plain road is clear.", "可马底连同内陆日子已标上舆图。平原之路清晰。"],
         ["You spend a day counting masts. Ormus and Dufar are named, and fortune bends a little your way.", "你点了一日桅杆。忽鲁谟斯与佐法尔被点名，时运也稍稍偏向你。"],
       ],
     },
@@ -634,13 +634,13 @@ const PACKS = [
     ],
   },
   {
-    city: "esher", site: "a", zhName: "施赫尔", enName: "Esher",
+    city: "esher", site: "a", zhName: "呵舍儿", enName: "Esher",
     lore: { placeId: "esher", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b3-c037" } },
     texts: {
-      title: ["Esher: The Soldan's Haven, a Second Page", "施赫尔：苏丹的港湾，第二页"],
+      title: ["Esher: The Soldan's Haven, a Second Page", "呵舍儿：苏丹的港湾，第二页"],
       body: [
         "In the haven four hundred miles from Aden a frankincense merchant who farms the Soldan's white incense draws you from the mole into his storehouse. He says Esher's revenue is smoke and gum — and that Aden, Dufar, and Axuma are written in his coast book if you mean to sail or ride with more than a glance at the harbour.",
-        "在离亚丁四百里的港湾里，一位替苏丹经营白乳香的商人把你从防波堤引到库房。他说施赫尔的岁入是烟与脂——亚丁、佐法尔与阿克苏姆都写在他的海岸册上，若你想带着比一瞥港口更多的东西出航或上路。",
+        "在离亚丁四百里的港湾里，一位替苏丹经营白乳香的商人把你从防波堤引到库房。他说呵舍儿的岁入是烟与脂——亚丁、佐法尔与阿克苏姆都写在他的海岸册上，若你想带着比一瞥港口更多的东西出航或上路。",
       ],
       choices: [
         ["Buy frankincense at the Soldan's coast price", "按苏丹海岸价买下乳香"],

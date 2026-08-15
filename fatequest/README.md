@@ -53,7 +53,7 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 16 单测 + 26 界面 smoke + 3 基准
+├── tests/                   # 16 单测 + 28 界面 smoke + 3 基准
 ├── export_presets.cfg       # Linux / macOS / Windows 桌面导出
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
@@ -90,8 +90,8 @@ fatequest/
 ## 现状一览
 
 玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 415 事件 · 60 商品 · 54 随从 · 24 种占法注册（8 法已用真实引擎接入玩法）。
-en/zh 各 5118 条文本。**28 道门禁、16 单测、26 smoke、3 基准、PCK 结构验证全绿。** 详见
+103 城 · 206 路线 · 551 事件 · 60 商品 · 54 随从 · 24 种占法注册（8 法已用真实引擎接入玩法）。
+en/zh 各 6469 条文本。**30 道门禁、16 单测、28 smoke、3 基准、PCK 结构验证全绿。** 详见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

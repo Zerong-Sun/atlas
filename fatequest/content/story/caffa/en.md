@@ -31,7 +31,7 @@ Ride on without delay
 
 ## ev.caffa.entry.choice.rest
 
-Rest half a day by the road
+Rest a day by the road
 
 ## ev.caffa.entry.title
 
@@ -43,4 +43,4 @@ You ride on without delay. You set the way to Caffa on your map.
 
 ## ev.ev_caffa_entry.choice_2_result
 
-You rest half a day by the road. It costs you 1 day on the road. The road to Caffa opens on your map.
+You rest a day by the road. It costs you 1 day on the road. The road to Caffa opens on your map.

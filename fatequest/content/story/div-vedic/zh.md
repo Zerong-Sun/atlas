@@ -31,11 +31,11 @@ stamps:
   div.vedic.result.22: d3e01099ae86
   div.vedic.result.23: 2339e4ceb5c7
   div.vedic.result.24: aaf7a4177c42
-  div.vedic.result.25: 064c6d4dfdc8
   div.vedic.result.26: eac3622c76d4
   div.vedic.result.27: 8ed6ac7c03d4
   div.vedic.result.28: ea85b93cc02e
   div.vedic.result.29: 87fad2776ef7
+  div.vedic.result.25: 064c6d4dfdc8
 ---
 
 ## div.vedic.result.00
@@ -138,9 +138,7 @@ stamps:
 
 月入奎宿：丰足，最后一座城的集市最好。
 
-## div.vedic.result.25
-
-日入白羊：路上新的一年开始了，起个好头。
+## div.vedic.result.二十五日入白羊：路上新的一年开始了，起个好头。
 
 ## div.vedic.result.26
 
@@ -157,3 +155,7 @@ stamps:
 ## div.vedic.result.29
 
 木星守望此行：你信任的向导，值得信任。
+
+## div.vedic.result.25
+
+日入白羊：路上新的一年开始了，起个好头。

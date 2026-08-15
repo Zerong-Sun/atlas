@@ -2,7 +2,7 @@
 unit: cambaet
 lang: zh
 source: en
-source_rev: cb9a1b1a20fd
+source_rev: f5d927097def
 status: translated
 translator: 人工校译
 notes: >
@@ -18,6 +18,22 @@ stamps:
   ev.cambaet.entry.title: 8dffe001b1c0
   ev.ev_cambaet_entry.choice_1_result: 172e617fbdf2
   ev.ev_cambaet_entry.choice_2_result: 91eb3a92d144
+  ev.ev_cambaet_a.choice_1_result: 1aac8b38e38c
+  ev.ev_cambaet_a.choice_2_result: 2a14ded24aee
+  ev.ev_cambaet_a.choice_3_result: be72652a6e9e
+  ev.cambaet.a.title: b55dd1c0ffd5
+  ev.cambaet.a.body: 7dc0811c1021
+  ev.cambaet.a.choice.1: 494843e5be3c
+  ev.cambaet.a.choice.2: ec09b1e5e5ef
+  ev.cambaet.a.choice.3: 7f6246078c3c
+  ev.ev_cambaet_a_followup.title: 0265597415e4
+  ev.ev_cambaet_a_followup.body: d712269500bd
+  ev.ev_cambaet_a_followup.choice_1: 8d3ef03fa562
+  ev.ev_cambaet_a_followup.choice_1_result: 519fd44abd78
+  ev.ev_cambaet_a_followup.choice_2: 098136424e10
+  ev.ev_cambaet_a_followup.choice_2_result: 6ca33e57949a
+  ev.ev_cambaet_a_followup.choice_3: ff50e9c08b08
+  ev.ev_cambaet_a_followup.choice_3_result: 2ca436582a99
 ---
 
 ## city.cambaet.name
@@ -49,4 +65,68 @@ stamps:
 
 ## ev.ev_cambaet_entry.choice_2_result
 
-你歇脚打听此地有何说头，通往坎巴叶（坎贝）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 1 日路程。
+你歇脚打听此地有何说头，通往坎巴叶（坎贝）的道路，就此展开在舆图上。不到一个时辰，这段记录已落笔成文。为此费去你 一日路程。
+
+## ev.ev_cambaet_a.choice_1_result
+
+他按公道分量卖给你靛蓝。此染料在任何布市都值其价。
+
+## ev.ev_cambaet_a.choice_2_result
+
+苏门纳与塔那已标上你的舆图。西向商路已通。
+
+## ev.ev_cambaet_a.choice_3_result
+
+你在染缸间过了一日。制炼之法已学，仿佛风也顺了些。
+
+## ev.cambaet.a.title
+
+坎巴叶：自由之邦的靛蓝缸
+
+## ev.cambaet.a.body
+
+在这片更西、不向任何人纳贡的大邦，坎巴叶的染工经营着丰产至极的靛蓝，北极为星在他们的染缸上方明亮照临。一位同时侍候本地与外来商船的染工说，此邦织出上等麻布，棉布远销四方，皮革鞣制冠绝海岸——商人们带着金银与铜来，把这些都运走。
+
+## ev.cambaet.a.choice.1
+
+按染工之价买下靛蓝
+
+## ev.cambaet.a.choice.2
+
+问染工通往苏门纳的路
+
+## ev.cambaet.a.choice.3
+
+看一日染缸，学一学靛蓝的制炼
+
+## ev.ev_cambaet_a_followup.title
+
+坎巴叶：染工谈星的第二句话
+
+## ev.ev_cambaet_a_followup.body
+
+染工指向北极星，说它是此邦的第二位君王。他说这颗星在此地比东方任何地方都更清晰，来此海岸的每艘船都以它定航向——此邦无须纳贡，因无须主人，只要有星与贸易。他问你是依星航行，还是依货航行。
+
+## ev.ev_cambaet_a_followup.choice_1
+
+按染工的出口价买下棉布
+
+## ev.ev_cambaet_a_followup.choice_1_result
+
+他按公道价卖给你棉布。布质精细，已备好走海路。
+
+## ev.ev_cambaet_a_followup.choice_2
+
+请他标出通往亚丁的路
+
+## ev.ev_cambaet_a_followup.choice_2_result
+
+亚丁连同其间的日子已标上舆图。海湾之路已通。
+
+## ev.ev_cambaet_a_followup.choice_3
+
+在海岸等一日，看船只依星出航
+
+## ev.ev_cambaet_a_followup.choice_3_result
+
+你在海岸等了一日。船只的航向已学，坎巴叶的人也把你的名字多记了一分。

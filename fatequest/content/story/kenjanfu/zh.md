@@ -119,7 +119,7 @@ stamps:
 
 ## ev.ev_kenjanfu_entry.choice_2_result
 
-你穿过集市，你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往京兆府（西安）的路。
+你穿过集市，你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往京兆府（西安）的路。
 
 ## ev.ev_kenjanfu_entry.choice_3_result
 
@@ -127,7 +127,7 @@ stamps:
 
 ## ev.ev_kenjanfu_a.choice_1_result
 
-你随养蚕人巡桑田，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往河中府（蒲州）的道路，就此展开在舆图上。
+你随养蚕人巡桑田，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。通往河中府（蒲州）的道路，就此展开在舆图上。
 
 ## ev.ev_kenjanfu_a.choice_2_result
 
@@ -139,7 +139,7 @@ stamps:
 
 ## ev.ev_kenjanfu_b.choice_1_result
 
-你观金锦丝帛工坊，你在路上用去 2 日光阴。你把这番见闻记入行纪。你标出了通往襄阳府的路。
+你观金锦丝帛工坊，你在路上用去 二日光阴。你把这番见闻记入行纪。你标出了通往襄阳府的路。
 
 ## ev.ev_kenjanfu_b.choice_2_result
 

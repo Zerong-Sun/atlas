@@ -255,10 +255,12 @@ GDD §16.3 定了深度按 `tier` 递减，校验器必须相应分级——**�
 | `market` | ✅ | ✅ | ✅ | — |
 | `shrine` | ✅ | ✅ | — | — |
 | `mentor` | ✅ | — | — | — |
-| `sites`（3 条） | ✅ | — | — | — |
+| `sites`（metropolis 3 · city 2 · town/station 1） | ✅ | ✅ | ✅ | ✅ |
 | `specialty` | ✅ | 可选 | — | — |
 
 `entryEvent` 对所有 tier 必填：没有入城文本的节点在地图上是个哑点，会直接暴露世界的空心（`SYSTEM_TABLES.md §6`）。
+
+**P6（2026-08-15）**：`town` / `station` 各获得 1 个 standing 探索点并深化为 followup（G34），由 `tools/lore/build_town_station_sites.mjs` 生成、`tests/smoke_town_station_followups.gd` 回归。站点级节点仍无 `market`，探索点授予的货物在下一座有市的城出售（卖出门禁 S5/S6 照常生效）。
 
 ---
 

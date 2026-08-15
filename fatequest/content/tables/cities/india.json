@@ -92,7 +92,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-axuma-entry",
-      "sites": [],
+      "sites": [
+        "ev-axuma-a"
+      ],
       "exits": [
         "rt-aden-axuma",
         "rt-axuma-dongola",
@@ -240,7 +242,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cambaet-entry",
-      "sites": [],
+      "sites": [
+        "ev-cambaet-a"
+      ],
       "exits": [
         "rt-aden-cambaet",
         "rt-cambaet-semenat",
@@ -289,7 +293,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-coilum-entry",
-      "sites": [],
+      "sites": [
+        "ev-coilum-a"
+      ],
       "exits": [
         "rt-cail-coilum",
         "rt-coilum-maabar",
@@ -344,7 +350,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-dongola-entry",
-      "sites": [],
+      "sites": [
+        "ev-dongola-a"
+      ],
       "exits": [
         "rt-axuma-dongola",
         "rt-dongola-mecha",
@@ -375,7 +383,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-dufar-entry",
-      "sites": [],
+      "sites": [
+        "ev-dufar-a"
+      ],
       "exits": [
         "rt-aden-dufar",
         "rt-calatu-dufar",
@@ -487,7 +497,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-maabar-entry",
-      "sites": [],
+      "sites": [
+        "ev-maabar-a"
+      ],
       "exits": [
         "rt-coilum-maabar",
         "rt-maabar-cail",
@@ -542,7 +554,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-mecha-entry",
-      "sites": [],
+      "sites": [
+        "ev-mecha-a"
+      ],
       "exits": [
         "rt-axuma-mecha",
         "rt-dongola-mecha",
@@ -597,7 +611,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-medina-entry",
-      "sites": [],
+      "sites": [
+        "ev-medina-a"
+      ],
       "exits": [
         "rt-dongola-medina",
         "rt-mecha-medina",
@@ -703,7 +719,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-semenat-entry",
-      "sites": [],
+      "sites": [
+        "ev-semenat-a"
+      ],
       "exits": [
         "rt-cambaet-semenat",
         "rt-semenat-delli",
@@ -751,7 +769,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-tana-entry",
-      "sites": [],
+      "sites": [
+        "ev-tana-a"
+      ],
       "exits": [
         "rt-cambaet-tana",
         "rt-semenat-tana",

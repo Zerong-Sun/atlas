@@ -21,14 +21,12 @@ stamps:
   ui.astrodice.house.9: 9e380d9991e6
   ui.astrodice.house.10: 3f61e153eb86
   ui.astrodice.house.11: 3907fa7f8072
-  ui.astrodice.planet.0: db18f17fe532
   ui.astrodice.planet.1: 5fc165254f4f
   ui.astrodice.planet.2: 6a7367ef7970
   ui.astrodice.planet.3: 4f1c63f9aba8
   ui.astrodice.planet.4: a0a6ca091c70
   ui.astrodice.planet.5: 27ce2df06855
   ui.astrodice.planet.6: e6e970bbe8ff
-  ui.astrodice.planet.7: e6b02134dcdd
   ui.astrodice.planet.8: d98d070c3968
   ui.astrodice.planet.9: a3500c337f26
   ui.astrodice.sign.0: 611aa421f617
@@ -37,8 +35,6 @@ stamps:
   ui.astrodice.sign.3: f2c28b5295d9
   ui.astrodice.sign.4: 5bc426e8d81e
   ui.astrodice.sign.5: a17905941e79
-  ui.astrodice.sign.6: 28fb1f3f9675
-  ui.astrodice.sign.7: 1dc262fefd7b
   ui.astrodice.sign.8: 96c3ee48c543
   ui.astrodice.sign.9: d15a3290f5f1
   ui.astrodice.sign.10: 192d78959bbe
@@ -194,6 +190,10 @@ stamps:
   ui.travel.facts: d6b8adeb972f
   ui.travel.intro_unknown: 6b472425874e
   ui.travel.title: 26377611f2ad
+  ui.astrodice.planet.0: db18f17fe532
+  ui.astrodice.planet.7: e6b02134dcdd
+  ui.astrodice.sign.6: 28fb1f3f9675
+  ui.astrodice.sign.7: 1dc262fefd7b
 ---
 
 ## ui.astrodice.house.0
@@ -244,9 +244,7 @@ stamps:
 
 相貌
 
-## ui.astrodice.planet.0
-
-日
+## ui.astrodice.planet.零日
 
 ## ui.astrodice.planet.1
 
@@ -272,9 +270,7 @@ stamps:
 
 土星
 
-## ui.astrodice.planet.7
-
-天王星
+## ui.astrodice.planet.七天王星
 
 ## ui.astrodice.planet.8
 
@@ -308,13 +304,9 @@ stamps:
 
 处女
 
-## ui.astrodice.sign.6
+## ui.astrodice.sign.六天秤
 
-天秤
-
-## ui.astrodice.sign.7
-
-天蝎
+## ui.astrodice.sign.七天蝎
 
 ## ui.astrodice.sign.8
 
@@ -935,3 +927,19 @@ The Book of Far Roads
 ## ui.travel.title
 
 前往 %s
+
+## ui.astrodice.planet.0
+
+日
+
+## ui.astrodice.planet.7
+
+天王星
+
+## ui.astrodice.sign.6
+
+天秤
+
+## ui.astrodice.sign.7
+
+天蝎

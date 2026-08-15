@@ -33,9 +33,9 @@ stamps:
   div.oracle.result.24: b7823beacaf0
   div.oracle.result.25: 7c384586eb20
   div.oracle.result.26: 22011e6c15dc
-  div.oracle.result.27: cac8c36f89be
   div.oracle.result.28: c7ba76772548
   div.oracle.result.29: 1b9559fd20a9
+  div.oracle.result.27: cac8c36f89be
 ---
 
 ## div.oracle.result.00
@@ -146,9 +146,7 @@ stamps:
 
 土：实在，平实的问，有平实的答。
 
-## div.oracle.result.27
-
-天：广阔的可能，别把行程限得太窄。
+## div.oracle.result.二十七天：广阔的可能，别把行程限得太窄。
 
 ## div.oracle.result.28
 
@@ -157,3 +155,7 @@ stamps:
 ## div.oracle.result.29
 
 声音：呼唤，这条路上一桩使命找上了你。
+
+## div.oracle.result.27
+
+天：广阔的可能，别把行程限得太窄。

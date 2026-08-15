@@ -2,7 +2,7 @@
 unit: taican
 lang: zh
 source: en
-source_rev: 3c82deae299b
+source_rev: fb30c580a493
 status: translated
 translator: 人工校译
 notes: >
@@ -43,7 +43,7 @@ stamps:
   ev.ev_taican_a_followup.choice_2: 15258ad9a90a
   ev.ev_taican_a_followup.choice_2_result: 169d8ba70349
   ev.ev_taican_a_followup.choice_3: 761a02f74618
-  ev.ev_taican_a_followup.choice_3_result: 064cd2426d2f
+  ev.ev_taican_a_followup.choice_3_result: ad8e3cd7610c
 ---
 
 ## city.taican.name
@@ -120,7 +120,7 @@ stamps:
 
 ## ev.ev_taican_entry.choice_2_result
 
-你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往塔里寒（塔卢坎）的路。
+你穿过 bāzār（集市），你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往塔里寒（塔卢坎）的路。
 
 ## ev.ev_taican_entry.choice_3_result
 
@@ -128,7 +128,7 @@ stamps:
 
 ## ev.ev_taican_a.choice_1_result
 
-你行于谷物市，听驼队出价，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往巴达哈伤的道路，就此展开在舆图上。
+你行于谷物市，听驼队出价，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。通往巴达哈伤的道路，就此展开在舆图上。
 
 ## ev.ev_taican_a.choice_2_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_taican_b.choice_2_result
 
-你看矿工凿硬盐，二日，为此费去你 2 日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
+你看矿工凿硬盐，二日，为此费去你 二日路程。不到一个时辰，这段记录已落笔成文。气运稍稍偏向于你。
 
 ## ev.ev_taican_b.choice_3_result
 
@@ -152,7 +152,7 @@ stamps:
 
 ## ev.ev_taican_a_followup.title
 
-塔伊坎：粮商的路册
+塔里寒：粮商的路册
 
 ## ev.ev_taican_a_followup.body
 
@@ -180,4 +180,4 @@ stamps:
 
 ## ev.ev_taican_a_followup.choice_3_result
 
-你等了一日张榜。等待耗费时日，市集的劝告，随你上了路。
+你等了一日张榜。等待耗费时日，市集的劝告却留在你身上。

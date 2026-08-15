@@ -9,21 +9,16 @@ stamps:
   div.ziwei.result.00: 828c5d3fcfd3
   div.ziwei.result.01: d3bd0b974c6a
   div.ziwei.result.02: 5133fcceeb4f
-  div.ziwei.result.03: d97c66ee188a
   div.ziwei.result.04: 8712ffad4201
   div.ziwei.result.05: f591c12d9025
   div.ziwei.result.06: 80d3b7fe14b5
   div.ziwei.result.07: 76f0026e97ae
-  div.ziwei.result.08: f3adfc7747f2
   div.ziwei.result.09: 967358a5b7b4
-  div.ziwei.result.10: a8c2820b3547
   div.ziwei.result.11: 47efcb905a78
   div.ziwei.result.12: 0a821c14a885
   div.ziwei.result.13: d5dfa99bb4a8
   div.ziwei.result.14: b086ddd4f5f2
   div.ziwei.result.15: 5907938cf9a1
-  div.ziwei.result.16: f6d8cf1309d7
-  div.ziwei.result.17: 5a4732bd2902
   div.ziwei.result.18: 2c6327737d63
   div.ziwei.result.19: 6d290173e0c1
   div.ziwei.result.20: e74c0572632a
@@ -36,6 +31,11 @@ stamps:
   div.ziwei.result.27: 860d9a28cb2e
   div.ziwei.result.28: d6239d380d54
   div.ziwei.result.29: 83c8e44a674a
+  div.ziwei.result.03: d97c66ee188a
+  div.ziwei.result.08: f3adfc7747f2
+  div.ziwei.result.10: a8c2820b3547
+  div.ziwei.result.16: f6d8cf1309d7
+  div.ziwei.result.17: 5a4732bd2902
 ---
 
 ## div.ziwei.result.00
@@ -50,9 +50,7 @@ stamps:
 
 太阴掩迁移宫：非不得已，不要在夜里赶路。
 
-## div.ziwei.result.03
-
-天相同行：有智者相伴指路，接受他的指点。
+## div.ziwei.result.三天相同行：有智者相伴指路，接受他的指点。
 
 ## div.ziwei.result.04
 
@@ -70,17 +68,13 @@ stamps:
 
 迁移宫有煞星：会有点小麻烦，留些银钱修车。
 
-## div.ziwei.result.08
-
-天空入命：你要寻的东西此地没有，往前走吧。
+## div.ziwei.result.八天空入命：你要寻的东西此地没有，往前走吧。
 
 ## div.ziwei.result.09
 
 孤辰坐迁移宫：这个时节，独行正合你意。
 
-## div.ziwei.result.10
-
-天相守渡口：货物要防潮，言语要收着些。
+## div.ziwei.result.十天相守渡口：货物要防潮，言语要收着些。
 
 ## div.ziwei.result.11
 
@@ -102,13 +96,9 @@ stamps:
 
 火星灼财帛宫：这个集市，少花些钱。
 
-## div.ziwei.result.16
+## div.ziwei.result.十六天同水星安行程：水浅时渡河，平安无碍。
 
-天同水星安行程：水浅时渡河，平安无碍。
-
-## div.ziwei.result.17
-
-天医照随从：有病的同伴，到下一座城便痊愈。
+## div.ziwei.result.十七天医照随从：有病的同伴，到下一座城便痊愈。
 
 ## div.ziwei.result.18
 
@@ -157,3 +147,23 @@ stamps:
 ## div.ziwei.result.29
 
 老人星守终途：路的尽头，有一份安静的酬报。
+
+## div.ziwei.result.03
+
+天相同行：有智者相伴指路，接受他的指点。
+
+## div.ziwei.result.08
+
+天空入命：你要寻的东西此地没有，往前走吧。
+
+## div.ziwei.result.10
+
+天相守渡口：货物要防潮，言语要收着些。
+
+## div.ziwei.result.16
+
+天同水星安行程：水浅时渡河，平安无碍。
+
+## div.ziwei.result.17
+
+天医照随从：有病的同伴，到下一座城便痊愈。

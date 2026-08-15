@@ -78,7 +78,7 @@ Ask what men say of the desert crossing
 
 ## ev.lop.entry.choice.rest
 
-Rest half a day by the road
+Rest a day by the road
 
 ## ev.lop.entry.title
 

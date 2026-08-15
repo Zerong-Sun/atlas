@@ -2,7 +2,7 @@
 unit: lop
 lang: zh
 source: en
-source_rev: e987659a0f33
+source_rev: 4a02bd88dfdd
 status: translated
 translator: 人工校译
 notes: >
@@ -13,7 +13,7 @@ notes: >
 stamps:
   city.lop.name: 7d248d33358b
   ev.lop.entry.choice.ask: 384ef49af533
-  ev.lop.entry.choice.rest: cc453f19a435
+  ev.lop.entry.choice.rest: 99cc9386e2da
   ev.lop.entry.title: 147de5f8d9b6
   ev.lop.bazaar.body: 2e44378eff95
   ev.lop.bazaar.choice.ask_prices: d01750e1e10a
@@ -117,7 +117,7 @@ stamps:
 
 ## ev.lop.entry.choice.rest
 
-在路边歇半日
+在路边歇一日
 
 ## ev.lop.entry.title
 

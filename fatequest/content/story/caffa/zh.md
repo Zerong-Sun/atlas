@@ -2,7 +2,7 @@
 unit: caffa
 lang: zh
 source: en
-source_rev: 139ecc141b5d
+source_rev: 700861edc215
 status: translated
 proofed: true
 translator: 人工校译
@@ -15,11 +15,11 @@ notes: >
 stamps:
   city.caffa.name: 04d2ee455e2b
   ev.caffa.entry.choice.pass: d9ca0c28a951
-  ev.caffa.entry.choice.rest: cc453f19a435
+  ev.caffa.entry.choice.rest: 99cc9386e2da
   ev.caffa.entry.body: 7a0ba30104e7
   ev.caffa.entry.title: 1c1fd0ee2d6d
   ev.ev_caffa_entry.choice_1_result: 53030817de53
-  ev.ev_caffa_entry.choice_2_result: e650848fe28a
+  ev.ev_caffa_entry.choice_2_result: 42c398ba464b
 ---
 
 ## city.caffa.name
@@ -32,7 +32,7 @@ stamps:
 
 ## ev.caffa.entry.choice.rest
 
-在路边歇半日
+在路边歇一日
 
 ## ev.caffa.entry.body
 
@@ -40,7 +40,7 @@ stamps:
 
 ## ev.caffa.entry.title
 
-卡法
+喀法
 
 ## ev.ev_caffa_entry.choice_1_result
 
@@ -48,4 +48,4 @@ stamps:
 
 ## ev.ev_caffa_entry.choice_2_result
 
-你在路边歇半日，为此费去你 1 日路程。通往喀法（费奥多西亚）的道路，就此展开在舆图上。
+你在路边歇一日，为此费去你 一日路程。通往喀法（费奥多西亚）的道路，就此展开在舆图上。

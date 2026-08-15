@@ -144,7 +144,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-pentam-entry",
-      "sites": [],
+      "sites": [
+        "ev-pentam-a"
+      ],
       "exits": [
         "rt-chamba-pentam",
         "rt-pentam-java-major",

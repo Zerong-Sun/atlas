@@ -218,7 +218,7 @@ stamps:
 
 ## ev.caffa.mentor_runes.title
 
-卡法卢恩
+喀法卢恩
 
 ## ev.caffa.mentor_runes.body
 
@@ -378,7 +378,7 @@ stamps:
 
 ## ev.ev_alexandria_mentor_geomancy.choice_1_result
 
-你付资学沙盘，银钱易手，囊中为之或增或减。你在路上用去 10 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学沙盘，银钱易手，囊中为之或增或减。你在路上用去 十日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_alexandria_mentor_geomancy.choice_2_result
 
@@ -386,7 +386,7 @@ stamps:
 
 ## ev.ev_kiovia_mentor_runes.choice_1_result
 
-你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 七日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_kiovia_mentor_runes.choice_2_result
 
@@ -394,7 +394,7 @@ stamps:
 
 ## ev.ev_caffa_mentor_runes.choice_1_result
 
-你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 七日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_caffa_mentor_runes.choice_2_result
 
@@ -454,7 +454,7 @@ stamps:
 
 ## codex.cx-runes.body
 
-于基辅学得卢恩。刻手在桦杖上刻二十四符，教渡口与冬路；每逢渡口，他先在桦木上落刀。Fehu落出便是大吉，Hagalaz则是大凶。及至卡法，码头上的北方商人为内陆草原路掷卢恩——我曾问此埠Raidho之意。
+于基辅学得卢恩。刻手在桦杖上刻二十四符，教渡口与冬路；每逢渡口，他先在桦木上落刀。Fehu落出便是大吉，Hagalaz则是大凶。及至喀法，码头上的北方商人为内陆草原路掷卢恩——我曾问此埠Raidho之意。
 
 ## codex.cx-four-pillars.body
 

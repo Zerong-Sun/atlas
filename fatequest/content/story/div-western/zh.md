@@ -31,11 +31,11 @@ stamps:
   div.western.result.22: fcebd516de45
   div.western.result.23: a2dd3e1d78c4
   div.western.result.24: 011e6ac8b8d6
-  div.western.result.25: 71513d2e6722
   div.western.result.26: c927fee82180
   div.western.result.27: 5c5d917aac1a
   div.western.result.28: 9d8a12e8c980
   div.western.result.29: 447090e9cb2d
+  div.western.result.25: 71513d2e6722
 ---
 
 ## div.western.result.00
@@ -138,9 +138,7 @@ stamps:
 
 木星高升：每过一程，运气就添一分，分些给人。
 
-## div.western.result.25
-
-日月相刑：两个念头争执不下，让长者来定。
+## div.western.result.二十五日月相刑：两个念头争执不下，让长者来定。
 
 ## div.western.result.26
 
@@ -157,3 +155,7 @@ stamps:
 ## div.western.result.29
 
 命盘大十字：眼下诸路皆阻，先歇，群星会转的。
+
+## div.western.result.25
+
+日月相刑：两个念头争执不下，让长者来定。

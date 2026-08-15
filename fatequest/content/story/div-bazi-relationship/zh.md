@@ -30,12 +30,12 @@ stamps:
   div.bazi-relationship.result.21: d042cd21044a
   div.bazi-relationship.result.22: 9a6b09b5b130
   div.bazi-relationship.result.23: e3c390b5e08c
-  div.bazi-relationship.result.24: c022103945ae
   div.bazi-relationship.result.25: 3b72d376b8ef
   div.bazi-relationship.result.26: 9d0859b7b87d
   div.bazi-relationship.result.27: 8f1370e5031d
   div.bazi-relationship.result.28: 2db1dcd59032
   div.bazi-relationship.result.29: b969a92c0d72
+  div.bazi-relationship.result.24: c022103945ae
 ---
 
 ## div.bazi-relationship.result.00
@@ -134,9 +134,7 @@ stamps:
 
 带刑星：一场意志的角力，仗要挑着打。
 
-## div.bazi-relationship.result.24
-
-日支相合：天成的相合，同行的路走得省力。
+## div.bazi-relationship.result.二十四日支相合：天成的相合，同行的路走得省力。
 
 ## div.bazi-relationship.result.25
 
@@ -157,3 +155,7 @@ stamps:
 ## div.bazi-relationship.result.29
 
 两盘平匀：一条平等的路，并肩走完它。
+
+## div.bazi-relationship.result.24
+
+日支相合：天成的相合，同行的路走得省力。

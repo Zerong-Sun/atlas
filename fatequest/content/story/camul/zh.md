@@ -118,7 +118,7 @@ stamps:
 
 ## ev.ev_camul_entry.choice_2_result
 
-你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往哈密力（哈密）的路。
+你穿过 bāzār（集市），你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往哈密力（哈密）的路。
 
 ## ev.ev_camul_entry.choice_3_result
 
@@ -126,7 +126,7 @@ stamps:
 
 ## ev.ev_camul_a.choice_1_result
 
-你行于瓜垄，尝农人所献，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+你行于瓜垄，尝农人所献，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_camul_a.choice_2_result
 
@@ -138,7 +138,7 @@ stamps:
 
 ## ev.ev_camul_b.choice_1_result
 
-你与长老同坐，听其述旧俗，你在路上用去 1 日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
+你与长老同坐，听其述旧俗，你在路上用去 一日光阴。你把这番见闻记入行纪。时运待你，比先前好了几分。
 
 ## ev.ev_camul_b.choice_2_result
 
@@ -146,7 +146,7 @@ stamps:
 
 ## ev.ev_camul_b.choice_3_result
 
-你问僧人何路通东漠，你标出了通往亦集乃（黑水城）的路。你在路上用去 1 日光阴。
+你问僧人何路通东漠，你标出了通往亦集乃（黑水城）的路。你在路上用去 一日光阴。
 
 ## ev.ev_camul_a_followup.title
 

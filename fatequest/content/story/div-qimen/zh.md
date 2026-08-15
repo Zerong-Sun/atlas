@@ -8,7 +8,6 @@ voice: yule
 stamps:
   div.qimen.result.00: 6ac7e730a3fe
   div.qimen.result.01: 133dd77312f9
-  div.qimen.result.02: c6de7f8bbca6
   div.qimen.result.03: 8fc2efac86cd
   div.qimen.result.04: 92cabffc5389
   div.qimen.result.05: 6d56435af0e7
@@ -18,14 +17,12 @@ stamps:
   div.qimen.result.09: 15867b1b4763
   div.qimen.result.10: d7e7af55ca3e
   div.qimen.result.11: 96e4bb5c067c
-  div.qimen.result.12: 5c6987909fed
   div.qimen.result.13: e5c94d4c7e02
   div.qimen.result.14: 8aeddc9154eb
   div.qimen.result.15: af9f183309ef
   div.qimen.result.16: 9d22134363bf
   div.qimen.result.17: 0ca5a787f2c5
   div.qimen.result.18: dcfb54fae4e3
-  div.qimen.result.19: 69ecd086e4cd
   div.qimen.result.20: 0f677e35ae9c
   div.qimen.result.21: 5ab002d251fb
   div.qimen.result.22: 5bf6d8d39d77
@@ -36,6 +33,9 @@ stamps:
   div.qimen.result.27: 20db1549c3d4
   div.qimen.result.28: db188f84d4e2
   div.qimen.result.29: afcad9b029a1
+  div.qimen.result.02: c6de7f8bbca6
+  div.qimen.result.12: 5c6987909fed
+  div.qimen.result.19: 69ecd086e4cd
 ---
 
 ## div.qimen.result.00
@@ -46,9 +46,7 @@ stamps:
 
 休门把守第二日：且逗留一日，修整行装。
 
-## div.qimen.result.02
-
-天干临门：将有长者开口说话，记下他的话。
+## div.qimen.result.二天干临门：将有长者开口说话，记下他的话。
 
 ## div.qimen.result.03
 
@@ -86,9 +84,7 @@ stamps:
 
 午时出现神门：失落之物将失而复得。
 
-## div.qimen.result.12
-
-天机显现：过了关哨之前，你的路线不必对人说起。
+## div.qimen.result.十二天机显现：过了关哨之前，你的路线不必对人说起。
 
 ## div.qimen.result.13
 
@@ -114,9 +110,7 @@ stamps:
 
 东边有门虚掩：一位商伴正等着你，去把价钱谈定。
 
-## div.qimen.result.19
-
-天剑指归：从来路折返吧，那条路最安全。
+## div.qimen.result.十九天剑指归：从来路折返吧，那条路最安全。
 
 ## div.qimen.result.20
 
@@ -157,3 +151,15 @@ stamps:
 ## div.qimen.result.29
 
 午夜门开：有一桩机密差事，可趁人不觉办成。
+
+## div.qimen.result.02
+
+天干临门：将有长者开口说话，记下他的话。
+
+## div.qimen.result.12
+
+天机显现：过了关哨之前，你的路线不必对人说起。
+
+## div.qimen.result.19
+
+天剑指归：从来路折返吧，那条路最安全。

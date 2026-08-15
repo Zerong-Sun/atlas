@@ -27,14 +27,14 @@ P6  能收尾          图鉴、贴纸、结语生成、结局判定        ✅ 
 | 维度 | 数字 |
 |---|---|
 | 玩法系统 | 交易 · 随从 · 结局 · 图鉴 · 存档 · 占卜八法 —— **全部闭环** |
-| 世界 | 102 城（12 metropolis · 21 city · 44 town · 25 station）· 204 路线 |
-| 事件 | 415 条（含 12 主城后果链、site/mentor 多轮、21 city 深化 24） |
-| 语料背书 | 83/102 城有 `origin: "source"`，19 城 `authored` |
-| 文本 | en/zh 各 5118 条，缺 0 · stamps 3619 current · 0 stale |
+| 世界 | 103 城（12 metropolis · 21 city · 45 town · 25 station）· 206 路线 |
+| 事件 | 551 条（含 12 主城后果链、site/mentor 多轮、21 city 深化 24、town/station 深化 61——P6） |
+| 语料背书 | 84/103 城有 `origin: "source"`，19 城 `authored` |
+| 文本 | en/zh 各 6469 条，缺 0 · stamps 3619 current · 0 stale |
 | 美术 | 674 张 WebP · Godot 接线 **674** · 未接线 0 · **S1c 已完成** 2026-07-30 |
 | 动画 | N0–N3 ✅ · N4–N6 待做 |
 | 音频 | 37 OGG · CC0 场景床 + 5 文化 stem · A1–A8 ✅ |
-| 测试 | 16 单测 + smoke（含 `smoke_21city_followups`）· 门禁含 G31 全绿（G27 steppe WARN 预期） |
+| 测试 | 16 单测 + smoke（含 `smoke_21city_followups`、`smoke_town_station_followups`）· 门禁 G31/G34 全绿（G27 steppe WARN 预期） |
 
 ---
 
@@ -128,7 +128,7 @@ S6  十二主城剧情闭环   24 条重要分支 + 即时反馈 + G28 内容门
 |---|---|
 | iOS 构建 | 按指示先做桌面端 |
 | 新系统 | P0–P6 已闭环，不再加系统 |
-| `town` / `station` 级探索点 | 分级投入是 `DATA_MODEL.md` §6 的设计 |
+| ~~`town` / `station` 级探索点~~ | **P6 已完成（2026-08-15）**：61 城各得 1 个 standing 探索点 + followup（G34），见 `61_CITY_DEEPENING_MATRIX.md`。原「分级投入」决策被推翻，`DATA_MODEL.md` §6 已更新 |
 | 美术生成管线修复 | 现有素材够用；生成后仍需手动复查 |
 | 用劣质机译覆盖城市主引证 | 远游记等保持 `desk_only`；瀛涯作 `altRefs`／书案声部 |
 

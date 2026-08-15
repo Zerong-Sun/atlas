@@ -263,6 +263,12 @@
               "op": "reveal_map",
               "value": "axuma",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -430,9 +436,12 @@
               "op": "reveal_map",
               "value": "balc",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-a",
+              "reason": "balc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-a", "reason": "balc-entry-consequence-a" }
           ]
         },
         {
@@ -453,9 +462,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-b",
+              "reason": "balc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-b", "reason": "balc-entry-consequence-b" }
           ]
         },
         {
@@ -520,9 +532,12 @@
               "op": "reveal_map",
               "value": "baldacum",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-a",
+              "reason": "baldacum-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-a", "reason": "baldacum-entry-consequence-a" }
           ]
         },
         {
@@ -543,9 +558,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-b",
+              "reason": "baldacum-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-b", "reason": "baldacum-entry-consequence-b" }
           ]
         },
         {
@@ -616,6 +634,12 @@
               "op": "reveal_map",
               "value": "basora",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -712,6 +736,12 @@
               "op": "reveal_map",
               "value": "bethleem",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -760,6 +790,12 @@
               "op": "reveal_map",
               "value": "bochara",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -808,6 +844,12 @@
               "op": "reveal_map",
               "value": "cabul",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -964,6 +1006,12 @@
               "op": "reveal_map",
               "value": "caffa",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -1097,11 +1145,17 @@
             }
           ]
         },
-      {
-        "label": "ev.cail.entry.choice.battuta",
-        "resultText": "ev.ev_cail_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-cail-battuta-a", "reason": "heard-of-adams-peak" } ]
-      }
+        {
+          "label": "ev.cail.entry.choice.battuta",
+          "resultText": "ev.ev_cail_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cail-battuta-a",
+              "reason": "heard-of-adams-peak"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "cail",
@@ -1355,9 +1409,12 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-a",
+              "reason": "cambaluc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-a", "reason": "cambaluc-entry-consequence-a" }
           ]
         },
         {
@@ -1383,9 +1440,12 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-b",
+              "reason": "cambaluc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-b", "reason": "cambaluc-entry-consequence-b" }
           ]
         },
         {
@@ -1663,9 +1723,12 @@
               "op": "reveal_map",
               "value": "cascar",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-a",
+              "reason": "cascar-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-a", "reason": "cascar-entry-consequence-a" }
           ]
         },
         {
@@ -1686,9 +1749,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-b",
+              "reason": "cascar-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-b", "reason": "cascar-entry-consequence-b" }
           ]
         },
         {
@@ -1830,9 +1896,12 @@
               "op": "reveal_map",
               "value": "chandu",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-a",
+              "reason": "chandu-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-a", "reason": "chandu-entry-consequence-a" }
           ]
         },
         {
@@ -1853,9 +1922,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-b",
+              "reason": "chandu-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-b", "reason": "chandu-entry-consequence-b" }
           ]
         },
         {
@@ -2219,6 +2291,12 @@
               "op": "reveal_map",
               "value": "coigangiu",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -2417,9 +2495,12 @@
               "op": "reveal_map",
               "value": "cotan",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-a",
+              "reason": "cotan-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-a", "reason": "cotan-entry-consequence-a" }
           ]
         },
         {
@@ -2440,9 +2521,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-b",
+              "reason": "cotan-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-b", "reason": "cotan-entry-consequence-b" }
           ]
         },
         {
@@ -2513,6 +2597,12 @@
               "op": "reveal_map",
               "value": "ctesiphon",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -2657,6 +2747,12 @@
               "op": "reveal_map",
               "value": "dongola",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -2759,6 +2855,12 @@
               "op": "reveal_map",
               "value": "edessa",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -2861,6 +2963,12 @@
               "op": "reveal_map",
               "value": "ephesus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -3142,6 +3250,12 @@
               "op": "reveal_map",
               "value": "ispahan",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -3463,9 +3577,12 @@
               "op": "reveal_map",
               "value": "kinsay",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-a",
+              "reason": "kinsay-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-a", "reason": "kinsay-entry-consequence-a" }
           ]
         },
         {
@@ -3486,9 +3603,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-b",
+              "reason": "kinsay-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-b", "reason": "kinsay-entry-consequence-b" }
           ]
         },
         {
@@ -3513,11 +3633,17 @@
             }
           ]
         },
-      {
-        "label": "ev.kinsay.entry.choice.battuta",
-        "resultText": "ev.ev_kinsay_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-kinsay-battuta-a", "reason": "heard-of-the-homeward-voyage" } ]
-      }
+        {
+          "label": "ev.kinsay.entry.choice.battuta",
+          "resultText": "ev.ev_kinsay_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-battuta-a",
+              "reason": "heard-of-the-homeward-voyage"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
@@ -3655,9 +3781,18 @@
               "op": "reveal_map",
               "value": "rt-lop-sachiu",
               "reason": "innkeeper-mentions-the-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-a",
+              "reason": "lop-entry-consequence-a"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-a", "reason": "lop-entry-consequence-a" }
           ]
         },
         {
@@ -3682,9 +3817,12 @@
               "scope": "city",
               "id": "lop",
               "reason": "courteous-enquiry"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-b",
+              "reason": "lop-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-b", "reason": "lop-entry-consequence-b" }
           ]
         }
       ],
@@ -3839,6 +3977,12 @@
               "op": "reveal_map",
               "value": "medina",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -3918,11 +4062,17 @@
             }
           ]
         },
-      {
-        "label": "ev.melibar.entry.choice.battuta",
-        "resultText": "ev.ev_melibar_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-melibar-battuta-a", "reason": "heard-of-the-chinese-junks" } ]
-      }
+        {
+          "label": "ev.melibar.entry.choice.battuta",
+          "resultText": "ev.ev_melibar_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-melibar-battuta-a",
+              "reason": "heard-of-the-chinese-junks"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
@@ -3969,6 +4119,12 @@
               "op": "reveal_map",
               "value": "merva",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4071,6 +4227,12 @@
               "op": "reveal_map",
               "value": "moscovia",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4173,6 +4335,12 @@
               "op": "reveal_map",
               "value": "nicaea",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4221,6 +4389,12 @@
               "op": "reveal_map",
               "value": "ninive",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4269,6 +4443,12 @@
               "op": "reveal_map",
               "value": "novogardia",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4311,9 +4491,12 @@
               "op": "reveal_map",
               "value": "ormus",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-a",
+              "reason": "ormus-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-a", "reason": "ormus-entry-consequence-a" }
           ]
         },
         {
@@ -4334,9 +4517,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-b",
+              "reason": "ormus-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-b", "reason": "ormus-entry-consequence-b" }
           ]
         },
         {
@@ -4569,6 +4755,12 @@
               "op": "reveal_map",
               "value": "petra",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4736,6 +4928,12 @@
               "op": "reveal_map",
               "value": "samara",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -4778,9 +4976,12 @@
               "op": "reveal_map",
               "value": "samarcanda",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-a",
+              "reason": "samarcanda-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-a", "reason": "samarcanda-entry-consequence-a" }
           ]
         },
         {
@@ -4801,9 +5002,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-b",
+              "reason": "samarcanda-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-b", "reason": "samarcanda-entry-consequence-b" }
           ]
         },
         {
@@ -5244,6 +5448,12 @@
               "op": "reveal_map",
               "value": "smyrna",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -5446,6 +5656,12 @@
               "op": "reveal_map",
               "value": "tana-azov",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -5625,6 +5841,12 @@
               "op": "reveal_map",
               "value": "tarsus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -5667,9 +5889,12 @@
               "op": "reveal_map",
               "value": "tauris",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-a",
+              "reason": "tauris-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-a", "reason": "tauris-entry-consequence-a" }
           ]
         },
         {
@@ -5690,9 +5915,12 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-b",
+              "reason": "tauris-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-b", "reason": "tauris-entry-consequence-b" }
           ]
         },
         {
@@ -5942,6 +6170,12 @@
               "op": "reveal_map",
               "value": "tripolis",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -5990,6 +6224,12 @@
               "op": "reveal_map",
               "value": "tyrus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "rested-and-set-out-refreshed"
             }
           ]
         }
@@ -6125,7 +6365,15 @@
         {
           "label": "ev.maldive.entry.choice.arrive",
           "resultText": "ev.ev_maldive_entry.choice_1_result",
-          "effects": [ { "op": "reputation", "value": 1, "scope": "city", "id": "maldive", "reason": "arrived-at-the-coconut-isles" } ]
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "arrived-at-the-coconut-isles"
+            }
+          ]
         }
       ],
       "lore": {
@@ -6137,6 +6385,5 @@
         }
       }
     }
-
   ]
 }

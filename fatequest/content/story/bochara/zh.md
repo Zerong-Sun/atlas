@@ -2,7 +2,7 @@
 unit: bochara
 lang: zh
 source: en
-source_rev: 602f5ebe0260
+source_rev: 8d4e4c2cc4af
 status: translated
 proofed: true
 translator: 人工校译
@@ -15,11 +15,11 @@ notes: >
 stamps:
   city.bochara.name: 61d048de58ec
   ev.bochara.entry.choice.pass: d9ca0c28a951
-  ev.bochara.entry.choice.rest: cc453f19a435
+  ev.bochara.entry.choice.rest: 99cc9386e2da
   ev.bochara.entry.body: 7c61315496f1
   ev.bochara.entry.title: dde08e0d3245
   ev.ev_bochara_entry.choice_1_result: f1016c5b4fdd
-  ev.ev_bochara_entry.choice_2_result: b98a1cc4472d
+  ev.ev_bochara_entry.choice_2_result: e8c5959e7c15
 ---
 
 ## city.bochara.name
@@ -32,7 +32,7 @@ stamps:
 
 ## ev.bochara.entry.choice.rest
 
-在路边歇半日
+在路边歇一日
 
 ## ev.bochara.entry.body
 
@@ -48,4 +48,4 @@ stamps:
 
 ## ev.ev_bochara_entry.choice_2_result
 
-你在路边歇半日，你在路上用去 1 日光阴。你标出了通往不花剌（布哈拉）的路。
+你在路边歇一日，你在路上用去 一日光阴。你标出了通往不花剌（布哈拉）的路。

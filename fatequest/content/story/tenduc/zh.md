@@ -122,7 +122,7 @@ stamps:
 
 ## ev.ev_tenduc_entry.choice_2_result
 
-你穿过集市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。通往天德军（丰州）的道路，就此展开在舆图上。
+你穿过集市，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。通往天德军（丰州）的道路，就此展开在舆图上。
 
 ## ev.ev_tenduc_entry.choice_3_result
 
@@ -130,7 +130,7 @@ stamps:
 
 ## ev.ev_tenduc_a.choice_1_result
 
-你赴景教礼拜，听叙利亚语圣歌，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+你赴景教礼拜，听叙利亚语圣歌，你在路上用去 一日光阴。你把这番见闻记入行纪。
 
 ## ev.ev_tenduc_a.choice_2_result
 
@@ -142,7 +142,7 @@ stamps:
 
 ## ev.ev_tenduc_b.choice_1_result
 
-你入市，三语侧耳，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+你入市，三语侧耳，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_tenduc_b.choice_2_result
 
@@ -154,7 +154,7 @@ stamps:
 
 ## ev.ev_tenduc_a_followup.title
 
-天德州：景教礼拜之后
+天德军：景教礼拜之后
 
 ## ev.ev_tenduc_a_followup.body
 

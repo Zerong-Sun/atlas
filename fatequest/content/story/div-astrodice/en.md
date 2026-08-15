@@ -130,4 +130,6 @@ The dice name choosing the road that still has shade at noon.
 
 ## div.astrodice.name
 
-Astrodice
+Astrodice## ui.astrodice.sign.6
+
+Libra

@@ -17,7 +17,6 @@ stamps:
   div.meihua.result.08: a5a8223b37aa
   div.meihua.result.09: 0639b87bec3a
   div.meihua.result.10: fd1b710d6440
-  div.meihua.result.11: 6c2643b255a4
   div.meihua.result.12: 39c64cf701e9
   div.meihua.result.13: eda554d66eac
   div.meihua.result.14: 0c63f3b327cc
@@ -36,6 +35,7 @@ stamps:
   div.meihua.result.27: 24791a296d15
   div.meihua.result.28: 809c95ab5887
   div.meihua.result.29: 8e91c9006a28
+  div.meihua.result.11: 6c2643b255a4
 ---
 
 ## div.meihua.result.00
@@ -82,9 +82,7 @@ stamps:
 
 辰数：钟声敲响时再动手，别抢在头里。
 
-## div.meihua.result.11
-
-日数：集市第三日的买卖最旺。
+## div.meihua.result.十一日数：集市第三日的买卖最旺。
 
 ## div.meihua.result.12
 
@@ -157,3 +155,7 @@ stamps:
 ## div.meihua.result.29
 
 收掌落花：卦象已合，接受这个答案吧。
+
+## div.meihua.result.11
+
+日数：集市第三日的买卖最旺。

@@ -192,7 +192,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-cabul-entry",
-      "sites": [],
+      "sites": [
+        "ev-cabul-a"
+      ],
       "exits": [
         "rt-badashan-cabul",
         "rt-cabul-balc",
@@ -354,7 +356,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-charchan-entry",
-      "sites": [],
+      "sites": [
+        "ev-charchan-a"
+      ],
       "exits": [
         "rt-charchan-cotan",
         "rt-charchan-lop",
@@ -654,7 +658,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-merva-entry",
-      "sites": [],
+      "sites": [
+        "ev-merva-a"
+      ],
       "exits": [
         "rt-bochara-merva",
         "rt-merva-balc",
@@ -686,7 +692,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-pein-entry",
-      "sites": [],
+      "sites": [
+        "ev-pein-a"
+      ],
       "exits": [
         "rt-charchan-pein",
         "rt-cotan-pein",
@@ -737,7 +745,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sachiu-entry",
-      "sites": [],
+      "sites": [
+        "ev-sachiu-a"
+      ],
       "exits": [
         "rt-camul-sachiu",
         "rt-lop-sachiu",
@@ -794,7 +804,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-samara-entry",
-      "sites": [],
+      "sites": [
+        "ev-samara-a"
+      ],
       "exits": [
         "rt-cail-samara",
         "rt-java-major-samara",
@@ -912,7 +924,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sapurgan-entry",
-      "sites": [],
+      "sites": [
+        "ev-sapurgan-a"
+      ],
       "exits": [
         "rt-balc-sapurgan",
         "rt-bochara-sapurgan",
@@ -1026,7 +1040,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-yarcan-entry",
-      "sites": [],
+      "sites": [
+        "ev-yarcan-a"
+      ],
       "exits": [
         "rt-cascar-yarcan",
         "rt-cotan-yarcan",

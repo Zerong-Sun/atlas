@@ -19,7 +19,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cacanfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-cacanfu-a"
+      ],
       "exits": [
         "rt-cacanfu-cambaluc",
         "rt-cacanfu-chinangli",
@@ -74,7 +76,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cachanfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-cachanfu-a"
+      ],
       "exits": [
         "rt-cachanfu-egrigaia",
         "rt-cachanfu-kenjanfu",
@@ -128,7 +132,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-caiju-entry",
-      "sites": [],
+      "sites": [
+        "ev-caiju-a"
+      ],
       "exits": [
         "rt-caiju-chinghianfu",
         "rt-caiju-sinju",
@@ -377,7 +383,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-chinghianfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-chinghianfu-a"
+      ],
       "exits": [
         "rt-caiju-chinghianfu",
         "rt-chinghianfu-nanghin",
@@ -432,7 +440,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-chinginju-entry",
-      "sites": [],
+      "sites": [
+        "ev-chinginju-a"
+      ],
       "exits": [
         "rt-chinginju-caiju",
         "rt-chinginju-chinghianfu",
@@ -487,7 +497,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-coigangiu-entry",
-      "sites": [],
+      "sites": [
+        "ev-coigangiu-a"
+      ],
       "exits": [
         "rt-coigangiu-coiganju",
         "rt-coigangiu-paukin",
@@ -521,7 +533,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-coiganju-entry",
-      "sites": [],
+      "sites": [
+        "ev-coiganju-a"
+      ],
       "exits": [
         "rt-coigangiu-coiganju",
         "rt-coiganju-paukin",
@@ -575,7 +589,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-etzina-entry",
-      "sites": [],
+      "sites": [
+        "ev-etzina-a"
+      ],
       "exits": [
         "rt-campichu-etzina",
         "rt-camul-etzina",
@@ -630,7 +646,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-fuju-entry",
-      "sites": [],
+      "sites": [
+        "ev-fuju-a"
+      ],
       "exits": [
         "rt-chamba-fuju",
         "rt-fuju-kinsay",
@@ -829,7 +847,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-linju-entry",
-      "sites": [],
+      "sites": [
+        "ev-linju-a"
+      ],
       "exits": [
         "rt-cacanfu-linju",
         "rt-chinangli-linju",
@@ -882,7 +902,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-mien-entry",
-      "sites": [],
+      "sites": [
+        "ev-mien-a"
+      ],
       "exits": [
         "rt-mien-chamba",
         "rt-mien-sindafu",
@@ -935,7 +957,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-nanghin-entry",
-      "sites": [],
+      "sites": [
+        "ev-nanghin-a"
+      ],
       "exits": [
         "rt-chinghianfu-nanghin",
         "rt-nanghin-caiju",
@@ -988,7 +1012,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-paukin-entry",
-      "sites": [],
+      "sites": [
+        "ev-paukin-a"
+      ],
       "exits": [
         "rt-coigangiu-paukin",
         "rt-coiganju-paukin",
@@ -1168,7 +1194,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sindafu-entry",
-      "sites": [],
+      "sites": [
+        "ev-sindafu-a"
+      ],
       "exits": [
         "rt-mien-sindafu",
         "rt-sindafu-cachanfu",
@@ -1285,7 +1313,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sinjumatu-entry",
-      "sites": [],
+      "sites": [
+        "ev-sinjumatu-a"
+      ],
       "exits": [
         "rt-linju-sinjumatu",
         "rt-saianfu-sinjumatu",
@@ -1466,7 +1496,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-tiju-entry",
-      "sites": [],
+      "sites": [
+        "ev-tiju-a"
+      ],
       "exits": [
         "rt-caiju-tiju",
         "rt-coigangiu-tiju",

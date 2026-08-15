@@ -2,7 +2,7 @@
 unit: badashan
 lang: zh
 source: en
-source_rev: a9cc7a701236
+source_rev: a404e69c24c3
 status: translated
 translator: 人工校译
 notes: >
@@ -43,7 +43,7 @@ stamps:
   ev.ev_badashan_a_followup.choice_2: 68c8606f4e86
   ev.ev_badashan_a_followup.choice_2_result: 38d97a5506fb
   ev.ev_badashan_a_followup.choice_3: 8bcfcfd6cf15
-  ev.ev_badashan_a_followup.choice_3_result: bbfbb3ae4aaf
+  ev.ev_badashan_a_followup.choice_3_result: 301bd716679c
   ev.ev_badashan_b_followup.title: 491f2d9b762c
   ev.ev_badashan_b_followup.body: 6a9d2c68d78a
   ev.ev_badashan_b_followup.choice_1: 2b240688f537
@@ -128,7 +128,7 @@ stamps:
 
 ## ev.ev_badashan_entry.choice_2_result
 
-你穿过 bāzār（集市），你在路上用去 1 日光阴。你把这番见闻记入行纪。你标出了通往巴达哈伤的路。
+你穿过 bāzār（集市），你在路上用去 一日光阴。你把这番见闻记入行纪。你标出了通往巴达哈伤的路。
 
 ## ev.ev_badashan_entry.choice_3_result
 
@@ -136,7 +136,7 @@ stamps:
 
 ## ev.ev_badashan_a.choice_1_result
 
-你行于石商间，听其议价，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。
+你行于石商间，听其议价，为此费去你 一日路程。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_badashan_a.choice_2_result
 
@@ -148,7 +148,7 @@ stamps:
 
 ## ev.ev_badashan_b.choice_1_result
 
-你听廷臣诵王族世系，你在路上用去 1 日光阴。你把这番见闻记入行纪。
+你听廷臣诵王族世系，你在路上用去 一日光阴。你把这番见闻记入行纪。
 
 ## ev.ev_badashan_b.choice_2_result
 
@@ -164,7 +164,7 @@ stamps:
 
 ## ev.ev_badashan_a_followup.body
 
-高地巴扎里，一位只做粗青金石买卖的经纪人把账本摊在毯子上，翻开你本不该看见的一页。上面写着矿口、通往巴里黑的关卡，以及到塔伊坎与克什米尔的日子。他可以卖你石头，也可以卖你道路——却不肯用同一枚钱两样都给。
+高地巴扎里，一位只做粗青金石买卖的经纪人把账本摊在毯子上，翻开你本不该看见的一页。上面写着矿口、通往巴里黑的关卡，以及到塔里寒与克什米尔的日子。他可以卖你石头，也可以卖你道路——却不肯用同一枚钱两样都给。
 
 ## ev.ev_badashan_a_followup.choice_1
 
@@ -188,7 +188,7 @@ stamps:
 
 ## ev.ev_badashan_a_followup.choice_3_result
 
-你等了一日，书记抄完当日报告。等待耗费时日，账本上的教训，你从此记在心里。
+你等了一日，书记抄完当日报告。等待耗费时日，账本上的教训却留在你身上。
 
 ## ev.ev_badashan_b_followup.title
 
@@ -212,7 +212,7 @@ stamps:
 
 ## ev.ev_badashan_b_followup.choice_2_result
 
-他点出塔伊坎、克什米尔与其间的日子。东去的山路已上你的舆图。
+他点出塔里寒、克什米尔与其间的日子。东去的山路已上你的舆图。
 
 ## ev.ev_badashan_b_followup.choice_3
 

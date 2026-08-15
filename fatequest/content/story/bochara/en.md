@@ -31,7 +31,7 @@ Ride on without delay
 
 ## ev.bochara.entry.choice.rest
 
-Rest half a day by the road
+Rest a day by the road
 
 ## ev.bochara.entry.title
 
@@ -43,4 +43,4 @@ You ride on without delay. The road to Bochara opens on your map.
 
 ## ev.ev_bochara_entry.choice_2_result
 
-You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Bochara on your map.
+You rest a day by the road. You spend 1 day before the way is clear again. You set the way to Bochara on your map.

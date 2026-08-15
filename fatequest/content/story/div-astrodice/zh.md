@@ -36,7 +36,7 @@ stamps:
   div.astrodice.result.27: 013e27c010b9
   div.astrodice.result.28: 96f60b1c9bbc
   div.astrodice.result.29: 891b4b1f45e8
-  div.astrodice.name: d1628aaf8aea
+  div.astrodice.name: 41c5adebeddc
 ---
 
 ## div.astrodice.result.00
@@ -161,4 +161,6 @@ stamps:
 
 ## div.astrodice.name
 
-星辰骰
+星辰骰## ui.astrodice.sign.6
+
+天秤

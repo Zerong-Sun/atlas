@@ -150,4 +150,4 @@ Wait a day while the grain prices are posted
 
 ## ev.ev_taican_a_followup.choice_3_result
 
-You wait a day for the posting. The waiting costs time, but the market's counsel goes with you down the road.
+You wait a day for the posting. The waiting costs time, but the market's counsel stays with you.

@@ -150,7 +150,7 @@ Wait a day for the brokers' report to be copied
 
 ## ev.ev_badashan_a_followup.choice_3_result
 
-You wait a day while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons go with you from now on.
+You wait a day while a scribe copies the day's reports. The waiting costs time, but the ledger's lessons stay with you.
 
 ## ev.ev_badashan_b_followup.title
 

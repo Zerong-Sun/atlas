@@ -30,12 +30,12 @@ stamps:
   div.numerology.result.21: 92eb1f996078
   div.numerology.result.22: 1cccb36396b7
   div.numerology.result.23: e9c0bfae450c
-  div.numerology.result.24: e84e4fce1db3
   div.numerology.result.25: f8ff44f44233
   div.numerology.result.26: b16af1aa5c1e
   div.numerology.result.27: e01c4dc76682
   div.numerology.result.28: 76d0f6edcddd
   div.numerology.result.29: dd2c6f074a96
+  div.numerology.result.24: e84e4fce1db3
 ---
 
 ## div.numerology.result.00
@@ -134,9 +134,7 @@ stamps:
 
 钱数：钱币成双，在集市上花得顺。
 
-## div.numerology.result.24
-
-日数：到山口的那个日子，正合吉数。
+## div.numerology.result.二十四日数：到山口的那个日子，正合吉数。
 
 ## div.numerology.result.25
 
@@ -157,3 +155,7 @@ stamps:
 ## div.numerology.result.29
 
 重复之数：来过一次的，还会再来，早作准备。
+
+## div.numerology.result.24
+
+日数：到山口的那个日子，正合吉数。
