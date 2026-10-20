@@ -13,8 +13,8 @@
 
 | 项 | 现状 |
 |---|---|
-| 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· CC0 场景床 + 混合 stem |
-| 运行时 | Autoload `AudioDirector` · 20个AudioStreamPlayer音乐槽 + 4个ambient槽；headless禁用文件播放 |
+| 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）+ 1 个开场 WAV · CC0 场景床 + 混合 stem |
+| 运行时 | Autoload `AudioDirector` · 20个AudioStreamPlayer音乐槽 + 1个开场主题槽 + 4个ambient槽；headless禁用文件播放 |
 | 旧版实现 | `archive/web-version/js/audio.js` — **作废** |
 | 包体压力 | 成品OGG共9,740,026字节（约9.74 MB）；分发目标尚待完整包体核验 |
 | 内核约束 | 音频**不得**写 `WorldState`；表现层只订阅信号 |
@@ -180,6 +180,11 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 
 钟 · 锣 · 磬 · 木鱼 · 硬币 · 翻页 · 骰子 · 签筒竹声 —— 这些用 Godot 内合成即可，且**每次略有不同**才自然。签筒竹声与占卜动效绑定（`archive/ATLAS_PORT.md` §1.3 的六式）。
 
+### 7.4 开场主题
+
+`assets/audio/intro/title_theme.wav` 是 18 秒、一次播放的中性世俗主题，由
+`tools/audio/generate_intro_theme.py` 稳定生成。它只在开局书桌出现时播放；玩家确认身份或读档后淡出，抵达城市再由文化 × 场景层接管。它不模拟具体历史乐器、地域录音或礼仪音乐，避免在玩家尚未选择身份时预设文化归属。
+
 ---
 
 ## 8. 实施顺序
@@ -188,6 +193,7 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 
 | 序 | 内容 | 验收 | 状态 |
 |---|---|---|---|
+| A0 | 开场/入场主题 | 进入书桌即播放；开始旅程时淡出；资源缺失时不阻塞玩法 | 已接线；独立资源与 headless 门禁通过，真实设备听审待做 |
 | A1 | 音频总线与静音／音量设置 | 有开关，默认可关 | 部分：总线、静音UI、音量API；缺音量UI/持久化，待设备验证 |
 | A2 | 程序化装饰音（§7.3） | 点选项有反馈声 | 部分：11类生成器，page/coin/click/wood/tick有调用；另6类未接线，未听审 |
 | A3 | 单文化单层drone | 进刺桐有持续声底 | 文件与播放器具备；循环与真实设备播放待验 |

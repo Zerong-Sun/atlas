@@ -12,6 +12,7 @@ const BUS_AMBIENT := "Ambient"
 const BUS_SFX := "SFX"
 const STEM_ROOT := "res://assets/audio/stems"
 const AMB_ROOT := "res://assets/audio/ambient"
+const INTRO_PATH := "res://assets/audio/intro/title_theme.wav"
 const LAYERS: PackedStringArray = ["drone", "pulse", "melody", "color"]
 const CULTURES: PackedStringArray = ["islamic", "east_asia", "steppe", "indian_ocean", "latin"]
 const CROSSFADE_SEC := 10.0
@@ -50,6 +51,9 @@ var _prev_route_risk: int = 0
 
 var _stem_players: Dictionary = {}
 var _amb_players: Array[AudioStreamPlayer] = []
+var _intro_player: AudioStreamPlayer
+var _intro_tween: Tween
+var _intro_active := false
 var _sfx: AudioSfx
 var _lp: AudioEffectLowPassFilter
 var _tweens: Array[Tween] = []
@@ -65,6 +69,12 @@ func _ready() -> void:
 	_cache_lowpass()
 	_sfx = preload("res://game/audio/sfx.gd").new()
 	add_child(_sfx)
+	_intro_player = AudioStreamPlayer.new()
+	_intro_player.name = "IntroThemePlayer"
+	_intro_player.bus = BUS_MUSIC
+	_intro_player.volume_db = -80.0
+	_intro_player.finished.connect(_on_intro_finished)
+	add_child(_intro_player)
 	for c in CULTURES:
 		for layer in LAYERS:
 			var key := "%s:%s" % [c, layer]
@@ -87,6 +97,11 @@ func _exit_tree() -> void:
 	# Short-lived smoke processes otherwise leave playback packet sequences
 	# referenced by the audio thread and report ObjectDB leaks on clean exit.
 	_kill_tweens()
+	_kill_intro_tween()
+	if _intro_player != null:
+		_intro_player.stop()
+		_intro_player.stream = null
+	_intro_active = false
 	for p in _stem_players.values():
 		if p is AudioStreamPlayer:
 			(p as AudioStreamPlayer).stop()
@@ -265,6 +280,10 @@ func _amb_path(name: String) -> String:
 
 
 func _load_loop(path: String) -> AudioStream:
+	return _load_stream(path, true)
+
+
+func _load_stream(path: String, loop: bool = false) -> AudioStream:
 	if _loop_cache.has(path):
 		return _loop_cache[path]
 	if not ResourceLoader.exists(path) and not FileAccess.file_exists(path):
@@ -278,10 +297,64 @@ func _load_loop(path: String) -> AudioStream:
 	if stream == null:
 		push_warning("AudioDirector: failed to load %s" % path)
 		return null
-	if stream is AudioStreamOggVorbis:
+	if loop and stream is AudioStreamOggVorbis:
 		(stream as AudioStreamOggVorbis).loop = true
 	_loop_cache[path] = stream
 	return stream
+
+
+func intro_available() -> bool:
+	return ResourceLoader.exists(INTRO_PATH) or FileAccess.file_exists(INTRO_PATH)
+
+
+func intro_active() -> bool:
+	return _intro_active
+
+
+func play_intro() -> void:
+	_intro_active = false
+	if not intro_available() or _intro_player == null:
+		push_warning("AudioDirector: intro theme is unavailable")
+		return
+	var stream := _load_stream(INTRO_PATH)
+	if stream == null:
+		return
+	_intro_player.stream = stream
+	_intro_active = true
+	_kill_intro_tween()
+	_intro_player.volume_db = -80.0
+	if not _playback_available:
+		return
+	_intro_player.play()
+	_intro_tween = create_tween()
+	_intro_tween.tween_property(_intro_player, "volume_db", -10.0, 0.8)
+
+
+func stop_intro(fade_sec: float = 0.8) -> void:
+	if _intro_player == null:
+		_intro_active = false
+		return
+	_intro_active = false
+	_kill_intro_tween()
+	if not _playback_available or not _intro_player.playing or fade_sec <= 0.0:
+		_intro_player.stop()
+		_intro_player.volume_db = -80.0
+		return
+	_intro_tween = create_tween()
+	_intro_tween.tween_property(_intro_player, "volume_db", -80.0, fade_sec)
+	_intro_tween.tween_callback(func() -> void:
+		if is_instance_valid(_intro_player):
+			_intro_player.stop())
+
+
+func _on_intro_finished() -> void:
+	_intro_active = false
+
+
+func _kill_intro_tween() -> void:
+	if _intro_tween != null and _intro_tween.is_valid():
+		_intro_tween.kill()
+	_intro_tween = null
 
 
 func _seek_stems(offset_sec: float) -> void:

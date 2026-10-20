@@ -3,6 +3,33 @@ extends SceneTree
 ## Button-driven zero-money opening, hospitality, save/resume, market and road.
 var failures := 0
 var elapsed := 0.0
+var _ui_cfg_path := ""
+var _had_ui_cfg := false
+var _ui_cfg_backup := PackedByteArray()
+
+
+func _isolate_ui_preferences() -> void:
+	_ui_cfg_path = ProjectSettings.globalize_path(UiScale.CFG)
+	if not FileAccess.file_exists(UiScale.CFG):
+		return
+	var f := FileAccess.open(UiScale.CFG, FileAccess.READ)
+	if f != null:
+		_ui_cfg_backup = f.get_buffer(f.get_length())
+		f.close()
+		_had_ui_cfg = true
+	DirAccess.remove_absolute(_ui_cfg_path)
+
+
+func _restore_ui_preferences() -> void:
+	if _ui_cfg_path.is_empty():
+		return
+	if _had_ui_cfg:
+		var f := FileAccess.open(UiScale.CFG, FileAccess.WRITE)
+		if f != null:
+			f.store_buffer(_ui_cfg_backup)
+			f.close()
+	else:
+		DirAccess.remove_absolute(_ui_cfg_path)
 
 
 func _process(delta: float) -> bool:
@@ -39,6 +66,11 @@ func press(node: Node, key: String) -> void:
 
 
 func _init() -> void:
+	# A complete smoke run executes many UI tests in one Godot process.  Those
+	# tests legitimately persist font preferences, so this journey must own a
+	# clean-install fixture and restore the player's real preference afterwards.
+	_isolate_ui_preferences()
+	root.tree_exiting.connect(_restore_ui_preferences)
 	var main = load("res://game/screens/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

@@ -33,6 +33,14 @@ Generated / composed per `docs/AUDIO_PLAN.md` §7.
 | `ambient/seabirds.ogg` | CC0 BigSoundBank → `compose_loops.py` |
 | `ambient/sacred_blur_*.ogg` (×5) | procedural formant blur (`generate_all.py`) — §1 allowed gesture |
 
+## Opening theme
+
+| File | Source and runtime role |
+|---|---|
+| `intro/title_theme.wav` | 18-second, mono 44.1 kHz PCM procedural secular motif from `tools/audio/generate_intro_theme.py`; plays once on the opening desk before a culture or city is known, then fades when a journey starts |
+
+The opening theme is intentionally separate from the culture × scene stems. It is a neutral game entrance, not a historical recording, cultural identification or liturgical gesture.
+
 Provenance for CC0 downloads: `tools/audio/_cc0_cache/SOURCES.json` (gitignored cache; regenerate via `fetch_cc0.py`).
 
 ## Notes
@@ -46,6 +54,6 @@ Provenance for CC0 downloads: `tools/audio/_cc0_cache/SOURCES.json` (gitignored 
 
 See [inventory CSV](../../docs/library_audit/audio_inventory.csv) and [audio audit](../../docs/library_audit/AUDIO_AUDIT_2026-10-20.md). All 37 OGG decode as 44.1 kHz mono; total size is 9,740,026 bytes. File availability and generator implementation do not mean listening, cultural suitability or seamless-loop acceptance: all listening reviews are pending, and 16 files have endpoint jumps above 0.1 full-scale requiring review.
 
-The 20 stems and 5 sacred_blur beds are synthetic candidates. No current city uses `latin`, and no prologue call selecting it was found. Several scene mappings are not reached on site-event changes; six SFX generator families have no runtime caller. A1–A8 are partially implemented, not uniformly accepted.
+The 20 stems and 5 sacred_blur beds are synthetic candidates. The opening WAV is a separate procedural one-shot. No current city uses `latin`, and no prologue call selecting it was found. Several scene mappings are not reached on site-event changes; six SFX generator families have no runtime caller. A1–A8 are partially implemented, not uniformly accepted.
 
 Local CC0 cache and metadata exist for 12 sources, but are gitignored; a versioned source-to-output hash/build chain is still missing. `camel_bells` uses a documented Santa/reindeer-bell substitute, and the market recording is from France. This supplements the provenance above; it does not redefine those recordings as historical location recordings. Two official detail pages (0585 and 2728) were checked for CC0 on 2026-10-20; the other ten were not revalidated online in this audit.

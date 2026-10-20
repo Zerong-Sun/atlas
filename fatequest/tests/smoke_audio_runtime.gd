@@ -12,6 +12,11 @@ func _initialize() -> void:
 
 func run() -> void:
 	var audio := root.get_node("AudioDirector")
+	check(audio.intro_available(), "separate opening theme resource exists")
+	audio.play_intro()
+	check(audio.intro_active(), "opening theme can be selected at boot")
+	audio.stop_intro(0.0)
+	check(not audio.intro_active(), "opening theme stops when the journey starts")
 	audio.set_place({"id": "latin-test", "culture": "latin"}, {"scene": {"bg": "monsoon-port"}})
 	check(audio._culture_mix == {"latin": 1.0}, "explicit latin remains selectable")
 	check("seabirds" in audio.ambient_plan() and not "rain" in audio.ambient_plan(), "dry sea port has birds, no invented rain")

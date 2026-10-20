@@ -185,6 +185,11 @@ func _ready() -> void:
 func _finish_boot() -> void:
 	_apply_projection()
 	_build_desk()
+	# The desk is the only phase before a traveller has a culture or city. Use a
+	# neutral one-shot theme here, then hand off to the culture/scene mix once a
+	# run actually starts.
+	if _audio_ready() and _audio.has_method("play_intro"):
+		_audio.play_intro()
 
 
 func _apply_projection() -> void:
@@ -631,6 +636,8 @@ func _confirm_character_draw() -> void:
 func _begin(archetype: Dictionary) -> void:
 	if state != null:
 		return
+	if _audio_ready() and _audio.has_method("stop_intro"):
+		_audio.stop_intro(0.8)
 	# Tear down the desk immediately. Animation must NOT await before WorldState
 	# exists — smoke tests call _begin and read state on the next frame.
 	var center := get_node_or_null("BootCenter")
@@ -755,6 +762,8 @@ func _begin_loaded(slot: String) -> bool:
 	var preflight := SaveGame.read(slot)
 	if preflight.is_empty():
 		return false
+	if _audio_ready() and _audio.has_method("stop_intro"):
+		_audio.stop_intro(0.8)
 	clock = WorldClock.new(GameDate.from_gregorian(START_JDN_Y, 4, 11).jdn)
 	executor = EffectExecutor.new()
 	conditions = ConditionEvaluator.new(db)
