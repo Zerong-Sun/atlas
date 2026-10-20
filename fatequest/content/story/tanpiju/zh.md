@@ -2,7 +2,7 @@
 unit: tanpiju
 lang: zh
 source: en
-source_rev: 02b4e5c60693
+source_rev: 8e476779e571
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_tanpiju_entry.choice_2_result: 72cc8c04f52a
   ev.ev_tanpiju_entry.choice_3_result: 77ac5c687027
   ev.ev_tanpiju_a.choice_1_result: 569fab400a9a
-  ev.ev_tanpiju_a.choice_2_result: 7c46f8b4257c
+  ev.ev_tanpiju_a.choice_2_result: 5e298d5ac5fc
   ev.ev_tanpiju_a.choice_3_result: 48b7924bcded
   ev.ev_tanpiju_b.choice_1_result: a2e60a4d66e7
   ev.ev_tanpiju_b.choice_2_result: e3bbf02d8870
-  ev.ev_tanpiju_b.choice_3_result: 804801f25e40
+  ev.ev_tanpiju_b.choice_3_result: 219d7d9160e1
   ev.ev_tanpiju_a_followup.title: 8278eb053a74
   ev.ev_tanpiju_a_followup.body: 1f2a48d2b632
   ev.ev_tanpiju_a_followup.choice_1: ec92e7b8600e
@@ -141,7 +141,7 @@ stamps:
 
 ## ev.ev_tanpiju_a.choice_2_result
 
-你于园户摊购茶，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往福州的道路，就此展开在舆图上。
+你于园户摊购茶，你付出 4000 钱币。你把 1 件货物收入行囊。通往福州的道路，就此展开在舆图上。
 
 ## ev.ev_tanpiju_a.choice_3_result
 
@@ -157,7 +157,7 @@ stamps:
 
 ## ev.ev_tanpiju_b.choice_3_result
 
-你于行在商贩摊购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往行在（杭州）的道路，就此展开在舆图上。
+你于行在商贩摊购漆器，你付出 5500 钱币。你把 1 件货物收入行囊。通往行在（杭州）的道路，就此展开在舆图上。
 
 ## ev.ev_tanpiju_a_followup.title
 

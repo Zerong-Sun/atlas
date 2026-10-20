@@ -101,7 +101,8 @@ You watch the silk weavers at their looms. You spend 1 day before the way is cle
 
 ## ev.ev_saianfu_a.choice_2_result
 
-You buy fine silken stuff from a weaver's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Cachanfu opens on your map.
+
+You buy fine silken stuff from a weaver's stall. You pay 9000 coins. You add 1 item to your stores. The road to Cachanfu opens on your map.
 
 ## ev.ev_saianfu_a.choice_3_result
 
@@ -113,7 +114,8 @@ You walk the hunters' market beside the workshops. It costs you 1 day on the roa
 
 ## ev.ev_saianfu_b.choice_2_result
 
-You buy ginger from a victualler's stall. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy ginger from a victualler's stall. You pay 2000 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_saianfu_b.choice_3_result
 

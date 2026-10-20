@@ -110,7 +110,8 @@ You ask which passes lead east toward Cabul. The road to Cabul opens on your map
 
 ## ev.ev_keshimur_b.choice_1_result
 
-You hire a mountain guide to teach you a little of their tongue. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. You set the way to Delli on your map. You set what you saw into your travel book.
+
+You hire a mountain guide to teach you a little of their tongue. You pay 600 coins. You spend 7 days before the way is clear again. You set the way to Delli on your map. You set what you saw into your travel book.
 
 ## ev.ev_keshimur_b.choice_2_result
 
@@ -118,7 +119,8 @@ You rest a week in the valley before the high passes. It costs you 7 days on the
 
 ## ev.ev_keshimur_b.choice_3_result
 
-You buy turquoise from the mountain traders. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy turquoise from the mountain traders. You pay 1200 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_keshimur_a_followup.title
 

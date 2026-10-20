@@ -2,7 +2,7 @@
 unit: camul
 lang: zh
 source: en
-source_rev: 6ec3ace4158b
+source_rev: 88c5200c021c
 status: translated
 translator: 人工校译
 notes: >
@@ -31,7 +31,7 @@ stamps:
   ev.ev_camul_entry.choice_2_result: 96ae9663ca9c
   ev.ev_camul_entry.choice_3_result: 951bc70a746e
   ev.ev_camul_a.choice_1_result: 446c9ff61829
-  ev.ev_camul_a.choice_2_result: 53cb6ac1bca4
+  ev.ev_camul_a.choice_2_result: 9c8fa8e3771f
   ev.ev_camul_a.choice_3_result: 0fb7e2d6dd29
   ev.ev_camul_b.choice_1_result: 1f3c886bfce4
   ev.ev_camul_b.choice_2_result: 4cba14b80b66
@@ -130,7 +130,7 @@ stamps:
 
 ## ev.ev_camul_a.choice_2_result
 
-你购瓜干螺旋备沙漠，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+你购瓜干螺旋备沙漠，你付出 60 钱币。你把 1 件货物收入行囊。时运待你，比先前好了几分。
 
 ## ev.ev_camul_a.choice_3_result
 

@@ -2456,6 +2456,22 @@ func _fill_settings(box: VBoxContainer) -> void:
 			_audio.toggle_mute()
 			mute.text = I18n.t("ui.sound") + "：" + (I18n.t("ui.mute") if _audio.muted else I18n.t("ui.high_contrast_on")))
 	box.add_child(mute)
+	var volume_row := HBoxContainer.new()
+	volume_row.add_theme_constant_override("separation", Metrics.sm())
+	var volume_label := Panels.label(I18n.t("ui.volume"), UiScale.body(), Palette.ink())
+	volume_label.custom_minimum_size.x = 72
+	volume_row.add_child(volume_label)
+	var volume := HSlider.new()
+	volume.min_value = -60.0
+	volume.max_value = 6.0
+	volume.step = 1.0
+	volume.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	volume.tooltip_text = I18n.t("ui.volume")
+	if _audio_ready():
+		volume.value = _audio.volume_db
+		volume.value_changed.connect(func(v: float): _audio.volume_db = v)
+	volume_row.add_child(volume)
+	box.add_child(volume_row)
 
 	var motion := Panels.styled_button(I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off")), Callable())
 	motion.pressed.connect(func():
@@ -2672,6 +2688,11 @@ func _show_event(ev: Dictionary) -> void:
 	var art: Texture2D = null
 	var c := db.get_record(state.city)
 	var culture := String(c.get("culture", "latin")) if not c.is_empty() else "latin"
+	# Site and consequence events can be opened without going through _arrive.
+	# Refresh the scene audio from the actual event so a shrine/court/market
+	# does not keep the previous city's generic bed.
+	if _audio_ready():
+		_audio.set_place(c, ev)
 	art = MapArt.event_portrait(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art, _pending_context())

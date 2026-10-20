@@ -2,7 +2,7 @@
 unit: calatu
 lang: zh
 source: en
-source_rev: be552e8e7919
+source_rev: 365a5df3f0b9
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_calatu_entry.choice_2_result: 7b13422a348e
   ev.ev_calatu_entry.choice_3_result: fc073e1c0ef1
   ev.ev_calatu_a.choice_1_result: 245f468b9773
-  ev.ev_calatu_a.choice_2_result: 6c58f117d268
+  ev.ev_calatu_a.choice_2_result: 4595cc2afc28
   ev.ev_calatu_a.choice_3_result: ac5676aa547c
   ev.ev_calatu_b.choice_1_result: 1cb3913a0b8a
-  ev.ev_calatu_b.choice_2_result: 71da337e7649
+  ev.ev_calatu_b.choice_2_result: ec108d5418c1
   ev.ev_calatu_b.choice_3_result: 4af5df6f88ad
   ev.ev_calatu_a_followup.title: 092638ab2a0d
   ev.ev_calatu_a_followup.body: f214b45803c0
@@ -132,7 +132,7 @@ Melic避战之所
 
 ## ev.ev_calatu_a.choice_2_result
 
-你向印度商人买一袋胡椒，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你向印度商人买一袋胡椒，你付出 12000 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_calatu_a.choice_3_result
 
@@ -144,7 +144,7 @@ Melic避战之所
 
 ## ev.ev_calatu_b.choice_2_result
 
-你向运粮之船买枣，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+你向运粮之船买枣，你付出 180 钱币。你把 1 件货物收入行囊。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_calatu_b.choice_3_result
 

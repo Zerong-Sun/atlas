@@ -2,7 +2,7 @@
 unit: chinangli
 lang: zh
 source: en
-source_rev: 233673a17a78
+source_rev: b4b59643d252
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_chinangli_entry.choice_2_result: 812959af1214
   ev.ev_chinangli_entry.choice_3_result: f963e415c15c
   ev.ev_chinangli_a.choice_1_result: a8081f6a0474
-  ev.ev_chinangli_a.choice_2_result: 4fe6ddd69fdb
+  ev.ev_chinangli_a.choice_2_result: e2c6ca308942
   ev.ev_chinangli_a.choice_3_result: e4b543baea07
   ev.ev_chinangli_b.choice_1_result: f68d865ffb6f
-  ev.ev_chinangli_b.choice_2_result: 1fd6d5e91a45
+  ev.ev_chinangli_b.choice_2_result: a2ffbaf0ce56
   ev.ev_chinangli_b.choice_3_result: 01c6ec1457be
   ev.ev_chinangli_a_followup.title: 3b4ce69b5150
   ev.ev_chinangli_a_followup.body: bf2ab3a2558a
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_chinangli_a.choice_2_result
 
-你购沿河贸易之丝一束，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往河间府的道路，就此展开在舆图上。
+你购沿河贸易之丝一束，你付出 10000 钱币。你把 1 件货物收入行囊。通往河间府的道路，就此展开在舆图上。
 
 ## ev.ev_chinangli_a.choice_3_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_chinangli_b.choice_2_result
 
-你以交钞购一小瓷碗，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你以交钞购一小瓷碗，你付出 4000 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_chinangli_b.choice_3_result
 

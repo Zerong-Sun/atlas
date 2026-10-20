@@ -83,7 +83,7 @@
 
 1. 分开登记 key 完整、显式 stamp 有效、人工校译三项状态；修正检查器漏读连字符/无章默认 current 的验收缺口。
 2. 逐单元建立记录：key、源文 hash、译文 hash、审阅人、日期、结论、问题编号与修复复核；不得用批量 stamp 或 status 改名代替审阅。
-3. 先复核已确认的 92 条模糊交易反馈，再按入城/探索/导师/后续/占法/物品/界面依次通读。
+3. 已按真实 effects 自动改写 92 条模糊交易反馈，并重编译中英文运行词典；当前先对这 92 条按 hash 逐条人工签署，再按入城/探索/导师/后续/占法/物品/界面依次通读。自动改写记录见 [`library_audit/TEXT_STYLE_PROMPTS.md`](library_audit/TEXT_STYLE_PROMPTS.md) 与 [`library_audit/TEXT_AUDIT_2026-10-20.md`](library_audit/TEXT_AUDIT_2026-10-20.md) §5。
 4. 人工记录未补齐前使用“入库与接线完成，人工质量待验收”的状态。
 
 ### 4.2 P1：21 座 city 的探索点深化 ✅ 2026-08-06

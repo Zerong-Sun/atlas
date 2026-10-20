@@ -2,7 +2,7 @@
 unit: aden
 lang: zh
 source: en
-source_rev: c819e46007d4
+source_rev: 0f91736dc24a
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_aden_entry.choice_2_result: 1aa0a73f3ba7
   ev.ev_aden_entry.choice_3_result: 3009a5c68940
   ev.ev_aden_a.choice_1_result: b2979a48ef72
-  ev.ev_aden_a.choice_2_result: 0cbb8e969257
+  ev.ev_aden_a.choice_2_result: 6f1f83fd3bcd
   ev.ev_aden_a.choice_3_result: 692ce6f0bdc2
   ev.ev_aden_b.choice_1_result: f8ebb105aeda
-  ev.ev_aden_b.choice_2_result: f6799312c84a
+  ev.ev_aden_b.choice_2_result: 83dc389ecdbc
   ev.ev_aden_b.choice_3_result: a00d61b2dc77
   ev.ev_aden_a_followup.title: 0b5a86ae4991
   ev.ev_aden_a_followup.body: 2cd1cd8d415d
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_aden_a.choice_2_result
 
-你购麻栏胡椒一袋备行，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你购麻栏胡椒一袋备行，你付出 900 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_aden_a.choice_3_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_aden_b.choice_2_result
 
-你纳港税，向索马里商人购乳香，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往呵舍儿（席赫尔）的道路，就此展开在舆图上。
+你纳港税，向索马里商人购乳香，你付出 350 钱币。你把 1 件货物收入行囊。通往呵舍儿（席赫尔）的道路，就此展开在舆图上。
 
 ## ev.ev_aden_b.choice_3_result
 

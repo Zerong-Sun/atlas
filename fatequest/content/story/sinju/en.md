@@ -99,7 +99,8 @@ You stand at the bank and count the moored vessels. You spend 1 day before the w
 
 ## ev.ev_sinju_a.choice_2_result
 
-You buy tea from a river bargeman. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Nanghin opens on your map.
+
+You buy tea from a river bargeman. You pay 5000 coins. You add 1 item to your stores. The road to Nanghin opens on your map.
 
 ## ev.ev_sinju_a.choice_3_result
 
@@ -111,7 +112,8 @@ You watch merchants pay tolls in paper-money. It costs you 1 day on the road. Th
 
 ## ev.ev_sinju_b.choice_2_result
 
-You buy porcelain from a river trader. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy porcelain from a river trader. You pay 6000 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_sinju_b.choice_3_result
 

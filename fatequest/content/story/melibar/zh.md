@@ -2,7 +2,7 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: 37629e02906b
+source_rev: 6d6ada3a0ab6
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_melibar_entry.choice_2_result: 7e5a1b444e79
   ev.ev_melibar_entry.choice_3_result: 10ba9409f5d4
   ev.ev_melibar_a.choice_1_result: a3cb62492ac6
-  ev.ev_melibar_a.choice_2_result: a9f049c6c164
+  ev.ev_melibar_a.choice_2_result: 05cad2334d4e
   ev.ev_melibar_a.choice_3_result: 51b46b004ce7
   ev.ev_melibar_b.choice_1_result: 3e6a379f2c88
   ev.ev_melibar_b.choice_2_result: e778893d4861
-  ev.ev_melibar_b.choice_3_result: 4f3bcc6db7b8
+  ev.ev_melibar_b.choice_3_result: fc0b4465640d
   ev.ev_melibar_a_followup.title: 21c8a50503cf
   ev.ev_melibar_a_followup.body: 347521ff43f3
   ev.ev_melibar_a_followup.choice_1: 2bd4e9474d42
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_melibar_a.choice_2_result
 
-你趁港警在，购麻栏胡椒，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往加异勒的路。
+你趁港警在，购麻栏胡椒，你付出 1100 钱币。你把 1 件货物收入行囊。你标出了通往加异勒的路。
 
 ## ev.ev_melibar_a.choice_3_result
 
@@ -148,7 +148,7 @@ stamps:
 
 ## ev.ev_melibar_b.choice_3_result
 
-你向祷毕之采珠人购珠，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+你向祷毕之采珠人购珠，你付出 950 钱币。你把 1 件货物收入行囊。时运待你，比先前好了几分。
 
 ## ev.ev_melibar_a_followup.title
 

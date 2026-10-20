@@ -100,7 +100,7 @@ You walk the sheds and watch the lighters load. It costs you 1 day on the road. 
 
 ## ev.ev_aden_a.choice_2_result
 
-You buy a sack of Malabar pepper for the onward road. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+You buy a sack of Malabar pepper for the onward road. You pay 900 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_aden_a.choice_3_result
 
@@ -112,7 +112,7 @@ You stand aside and observe the customs at the mole. You spend 1 day before the 
 
 ## ev.ev_aden_b.choice_2_result
 
-You pay the harbour fee and buy frankincense from a Somali trader. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Esher opens on your map.
+You pay the harbour fee and buy frankincense from a Somali trader. You pay 350 coins. You add 1 item to your stores. The road to Esher opens on your map.
 
 ## ev.ev_aden_b.choice_3_result
 

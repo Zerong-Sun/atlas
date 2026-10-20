@@ -104,7 +104,8 @@ You watch a day upon the harbour while tribute goods are tallied. You spend 1 da
 
 ## ev.ev_chamba_a.choice_3_result
 
-You buy sandalwood from the tribute quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. The tribute clerks set your name beside the ledger of gifts.
+
+You buy sandalwood from the tribute quarter. You pay 900 coins. You add 1 item to your stores. The tribute clerks set your name beside the ledger of gifts.
 
 ## ev.ev_chamba_b.choice_1_result
 
@@ -112,7 +113,8 @@ You wait two days upon the harbour to hear word of the King's court. You spend 2
 
 ## ev.ev_chamba_b.choice_2_result
 
-You buy pepper from the spice merchants. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+You buy pepper from the spice merchants. You pay 8000 coins. You add 1 item to your stores. The account is written down before the hour turns.
 
 ## ev.ev_chamba_b.choice_3_result
 

@@ -477,6 +477,91 @@ static func symbol_icon(sym_id: String) -> Texture2D:
 	return tex("sym-%s-full" % sym_id)
 
 
+const DECK_TAROT_DIR := "res://assets/decks/tarot/"
+const DECK_LENORMAND_DIR := "res://assets/decks/lenormand/"
+const DECK_ASTRO_DIR := "res://assets/astrodice/"
+
+const TAROT_MAJOR_STEMS := [
+	"fool", "magician", "high-priestess", "empress", "emperor", "hierophant",
+	"lovers", "chariot", "strength", "hermit", "wheel", "justice", "hanged-man",
+	"death", "temperance", "devil", "tower", "star", "moon", "sun", "judgement", "world",
+]
+const TAROT_MINOR_RANK_STEMS := ["ace", "02", "03", "04", "05", "06", "07", "08", "09", "10", "page", "knight", "queen", "king"]
+const LENORMAND_STEMS := [
+	"rider", "clover", "ship", "house", "tree", "cloud", "snake", "coffin", "bouquet", "scythe",
+	"whip", "birds", "child", "fox", "bear", "stars", "stork", "dog", "tower", "garden",
+	"mountain", "crossroads", "mice", "heart", "ring", "book", "letter", "man", "woman", "lily",
+	"sun", "moon", "key", "fish", "anchor", "cross",
+]
+const ASTRO_PLANETS := ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"]
+const ASTRO_SIGNS := ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
+static var _deck_cache: Dictionary = {}
+
+
+static func _deck_texture(path: String) -> Texture2D:
+	if path.is_empty() or path.contains("..") or path.contains("\\"):
+		return null
+	if _deck_cache.has(path):
+		return _deck_cache[path]
+	var image: Texture2D = null
+	if ResourceLoader.exists(path):
+		image = load(path) as Texture2D
+	_deck_cache[path] = image
+	return image
+
+
+## Resolves a content tarot id (e.g. `major-0`, `wands-13`) to its deck face.
+## Missing cards return null so an incomplete deck can never silently display a
+## different card.
+static func tarot_card(card_id: String) -> Texture2D:
+	var parts := card_id.to_lower().split("-")
+	if parts.size() != 2 or not parts[1].is_valid_int():
+		return null
+	var family := String(parts[0])
+	var rank := int(parts[1])
+	var stem := ""
+	if family == "major":
+		if rank < 0 or rank >= TAROT_MAJOR_STEMS.size():
+			return null
+		stem = "tarot-%s-full.webp" % TAROT_MAJOR_STEMS[rank]
+	elif family in ["wands", "cups", "swords", "pentacles"]:
+		if rank < 0 or rank >= TAROT_MINOR_RANK_STEMS.size():
+			return null
+		stem = "tarot-%s-%s-full.webp" % [family, TAROT_MINOR_RANK_STEMS[rank]]
+	else:
+		return null
+	return _deck_texture(DECK_TAROT_DIR + stem)
+
+
+## Resolves a zero-based Lenormand draw index to the numbered JPG face.
+static func lenormand_card(index: int) -> Texture2D:
+	if index < 0 or index >= 36:
+		return null
+	return _deck_texture(DECK_LENORMAND_DIR + "%02d-%s.jpg" % [index + 1, LENORMAND_STEMS[index]])
+
+
+## Resolves one of the three Astrodice SVG families. `kind` is planet, sign or
+## house; indices are the same indices emitted by AstrodiceMethod.
+static func astrodice_symbol(kind: String, index: int) -> Texture2D:
+	var path := ""
+	match kind:
+		"planet":
+			if index < 0 or index >= ASTRO_PLANETS.size():
+				return null
+			path = DECK_ASTRO_DIR + "planets/zodiac-planet-%s.svg" % ASTRO_PLANETS[index]
+		"sign":
+			if index < 0 or index >= ASTRO_SIGNS.size():
+				return null
+			path = DECK_ASTRO_DIR + "signs/%s.svg" % ASTRO_SIGNS[index]
+		"house":
+			if index < 0 or index >= 12:
+				return null
+			path = DECK_ASTRO_DIR + "houses/house-%02d.svg" % (index + 1)
+		_:
+			return null
+	return _deck_texture(path)
+
+
 const DECK_ICHING_MANIFEST := "res://assets/decks/iching/DECK_MANIFEST.json"
 const DECK_ICHING_DIR := "res://assets/decks/iching/"
 

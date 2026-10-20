@@ -15,6 +15,11 @@ const AMB_ROOT := "res://assets/audio/ambient"
 const LAYERS: PackedStringArray = ["drone", "pulse", "melody", "color"]
 const CULTURES: PackedStringArray = ["islamic", "east_asia", "steppe", "indian_ocean", "latin"]
 const CROSSFADE_SEC := 10.0
+const SETTINGS_PATH := "user://audio.cfg"
+var _settings_loaded := false
+var _context: Dictionary = {}
+var _loop_cache: Dictionary = {}
+var _start_offset := 0.0
 
 signal mute_changed(muted: bool)
 
@@ -25,6 +30,7 @@ var muted: bool = false:
 		if idx >= 0:
 			AudioServer.set_bus_mute(idx, v)
 		mute_changed.emit(v)
+		_save_settings()
 
 var volume_db: float = -6.0:
 	set(v):
@@ -32,6 +38,7 @@ var volume_db: float = -6.0:
 		var idx := AudioServer.get_bus_index(BUS_MASTER)
 		if idx >= 0:
 			AudioServer.set_bus_volume_db(idx, volume_db)
+		_save_settings()
 
 var _culture_mix: Dictionary = {}
 var _scene_class: String = SceneDensity.TOWN
@@ -54,8 +61,7 @@ func _ready() -> void:
 	# file-backed Ogg playback there only slows tests and leaves packet
 	# sequences pending when the short-lived process exits.
 	_playback_available = DisplayServer.get_name() != "headless"
-	volume_db = volume_db
-	muted = muted
+	load_settings()
 	_cache_lowpass()
 	_sfx = preload("res://game/audio/sfx.gd").new()
 	add_child(_sfx)
@@ -88,6 +94,7 @@ func _exit_tree() -> void:
 	for p in _amb_players:
 		p.stop()
 		p.stream = null
+	_loop_cache.clear()
 
 
 func _cache_lowpass() -> void:
@@ -99,6 +106,31 @@ func _cache_lowpass() -> void:
 		if fx is AudioEffectLowPassFilter:
 			_lp = fx
 			return
+
+
+func load_settings() -> void:
+	_settings_loaded = false
+	var cfg := ConfigFile.new()
+	if cfg.load(SETTINGS_PATH) == OK:
+		var saved_volume: Variant = cfg.get_value("audio", "volume_db", -6.0)
+		var saved_mute: Variant = cfg.get_value("audio", "muted", false)
+		volume_db = float(saved_volume) if (saved_volume is float or saved_volume is int) and is_finite(float(saved_volume)) else -6.0
+		muted = saved_mute if saved_mute is bool else false
+	else:
+		volume_db = -6.0
+		muted = false
+	_settings_loaded = true
+
+
+func _save_settings() -> void:
+	if not _settings_loaded:
+		return
+	var cfg := ConfigFile.new()
+	cfg.set_value("audio", "volume_db", volume_db)
+	cfg.set_value("audio", "muted", muted)
+	var err := cfg.save(SETTINGS_PATH)
+	if err != OK:
+		push_warning("Audio preferences could not be saved: %s" % err)
 
 
 func toggle_mute() -> bool:
@@ -121,7 +153,13 @@ func set_jdn(jdn: int) -> void:
 
 
 func set_place(city: Dictionary, event: Dictionary = {}, blend: Dictionary = {}) -> void:
-	_city_id = String(city.get("id", ""))
+	var next_city := str(city.get("id", ""))
+	var changed_city := next_city != _city_id
+	_city_id = next_city
+	_context = {}
+	for key in ["weather", "water"]:
+		if city.has(key): _context[key] = city[key]
+		if event.has(key): _context[key] = event[key]
 	var bg := ""
 	if event.has("scene"):
 		var sc: Variant = event["scene"]
@@ -138,7 +176,8 @@ func set_place(city: Dictionary, event: Dictionary = {}, blend: Dictionary = {})
 		_culture_mix = _cultures_for(city, event)
 
 	var rng := music_rng(_city_id if not _city_id.is_empty() else "void", _jdn)
-	_seek_stems(rng.next() * 50.0)
+	if changed_city:
+		_start_offset = rng.next() * 50.0
 
 	_mood = AudioMood.derive(null, {}, city, _scene_class, _prev_route_risk)
 	if not _playback_available:
@@ -187,6 +226,7 @@ func on_depart(route: Dictionary) -> void:
 ## caravan pulse, with the road ambients instead of the town's. `set_place`
 ## on arrival restores the destination city's own mix.
 func set_travel(route: Dictionary) -> void:
+	_context = route.duplicate(true)
 	_prev_route_risk = int(route.get("risk", 0))
 	var tense := _prev_route_risk >= 4
 	for h in route.get("hazards", []):
@@ -225,6 +265,8 @@ func _amb_path(name: String) -> String:
 
 
 func _load_loop(path: String) -> AudioStream:
+	if _loop_cache.has(path):
+		return _loop_cache[path]
 	if not ResourceLoader.exists(path) and not FileAccess.file_exists(path):
 		push_warning("AudioDirector: missing %s" % path)
 		return null
@@ -238,6 +280,7 @@ func _load_loop(path: String) -> AudioStream:
 		return null
 	if stream is AudioStreamOggVorbis:
 		(stream as AudioStreamOggVorbis).loop = true
+	_loop_cache[path] = stream
 	return stream
 
 
@@ -262,36 +305,46 @@ func _apply_mix(fade: float) -> void:
 				if p.stream == null:
 					p.stream = _load_loop(_stem_path(c, layer))
 				if p.stream and not p.playing:
-					p.play()
+					p.play(_start_offset)
 				p.pitch_scale = float(mood_p.get("pitch", 1.0))
 			_fade_player(p, target_db, fade)
 			if target_lin <= 0.001:
 				_stop_after(p, fade + 0.05)
 
 
-func _apply_ambients(fade: float) -> void:
-	var names := SceneDensity.ambients(_scene_class)
+func ambient_plan() -> PackedStringArray:
+	var names := SceneDensity.ambients(_scene_class, _context)
 	if _scene_class == SceneDensity.SHRINE or _mood == AudioMood.REVERENCE:
 		var sacred := "sacred_blur_%s" % _primary_culture()
-		if FileAccess.file_exists(_amb_path(sacred)) or ResourceLoader.exists(_amb_path(sacred)):
-			var copy := PackedStringArray()
-			for n in names:
-				copy.append(n)
-			copy.append(sacred)
-			names = copy
-	for i in _amb_players.size():
-		var p: AudioStreamPlayer = _amb_players[i]
-		if i < names.size():
-			var stream := _load_loop(_amb_path(names[i]))
-			if stream:
-				if p.stream != stream:
-					p.stream = stream
-				if not p.playing:
-					p.play()
-				var wet := SceneDensity.reverb(_scene_class)
-				_fade_player(p, -8.0 - wet * 4.0, fade)
-			else:
-				_fade_player(p, -80.0, fade)
+		if names.size() >= 4:
+			names.resize(3)
+		names.append(sacred)
+	return names
+
+
+func _apply_ambients(fade: float) -> void:
+	var names := ambient_plan()
+	# Keep a bed on its existing player even when its position in the plan
+	# changes; reopening the same site must not restart the recording.
+	var pending := Array(names)
+	var spare: Array[AudioStreamPlayer] = []
+	for p in _amb_players:
+		var current := str(p.get_meta("ambient_name", ""))
+		if current in pending:
+			pending.erase(current)
+			if not p.playing: p.play()
+			_fade_player(p, -8.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
+		else:
+			spare.append(p)
+	for p in spare:
+		if not pending.is_empty():
+			var name: String = pending.pop_front()
+			p.stop()
+			p.stream = _load_loop(_amb_path(name))
+			p.set_meta("ambient_name", name)
+			p.volume_db = -80.0
+			if p.stream != null: p.play()
+			_fade_player(p, -8.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
 		else:
 			_fade_player(p, -80.0, fade)
 			_stop_after(p, fade + 0.05)

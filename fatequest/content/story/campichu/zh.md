@@ -2,7 +2,7 @@
 unit: campichu
 lang: zh
 source: en
-source_rev: 1c0f99eaf390
+source_rev: 7eee96a7d699
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_campichu_entry.choice_2_result: 1eca6c9cd8bb
   ev.ev_campichu_entry.choice_3_result: 602dbd8f125a
   ev.ev_campichu_a.choice_1_result: b53240c63b87
-  ev.ev_campichu_a.choice_2_result: 1b717fe80dbe
+  ev.ev_campichu_a.choice_2_result: 459034005f25
   ev.ev_campichu_a.choice_3_result: 3f8d603c470f
   ev.ev_campichu_b.choice_1_result: 1b6318269cfc
   ev.ev_campichu_b.choice_2_result: bc7740be102b
-  ev.ev_campichu_b.choice_3_result: f17b995ce698
+  ev.ev_campichu_b.choice_3_result: 06832173909c
   ev.ev_campichu_a_followup.title: fd5e12d2f8f9
   ev.ev_campichu_a_followup.body: fbfdd85c83fa
   ev.ev_campichu_a_followup.choice_1: e511fe157574
@@ -131,7 +131,7 @@ stamps:
 
 ## ev.ev_campichu_a.choice_2_result
 
-你与沙漠商队议价购茶，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你与沙漠商队议价购茶，你付出 6000 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_campichu_a.choice_3_result
 
@@ -147,7 +147,7 @@ stamps:
 
 ## ev.ev_campichu_b.choice_3_result
 
-你于寺门略献薄礼，银钱易手，囊中为之或增或减。此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
+你于寺门略献薄礼，你付出 500 钱币。此地人谈起你，语气添了几分敬重。你把这番见闻记入行纪。
 
 ## ev.ev_campichu_a_followup.title
 

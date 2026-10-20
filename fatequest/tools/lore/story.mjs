@@ -65,7 +65,10 @@ function parseDoc(text) {
           nested = m[2] === "" && key === "stamps";
           meta[key] = nested ? {} : (m[2] === ">" ? "" : m[2].trim());
         } else if (key && line.trim()) {
-          const kv = line.trim().match(/^([\w.]+):\s*(.*)$/);
+          // Story keys may contain hyphens (city ids and event ids). The old
+          // parser silently skipped those stamp rows, which made stale prose
+          // appear current. Keep dots for namespaces and add hyphen support.
+          const kv = line.trim().match(/^([\w.-]+):\s*(.*)$/);
           if (nested && kv) meta[key][kv[1]] = kv[2].trim();
           else if (!nested) meta[key] = (meta[key] ? meta[key] + " " : "") + line.trim();
         }
@@ -151,8 +154,8 @@ function check() {
         const srcHash = hash(src.entries[key]);
         if (!(key in doc.entries)) { rows.push([key, "missing", srcHash]); missing++; continue; }
         const stamped = (doc.meta.stamps ?? {})[key];
-        if (doc.meta.source_rev === "PENDING") { rows.push([key, "unstamped", srcHash]); continue; }
-        if (stamped && stamped !== srcHash) { rows.push([key, "STALE", srcHash]); stale++; continue; }
+        if (!stamped) { rows.push([key, "missing", srcHash]); missing++; continue; }
+        if (stamped !== srcHash) { rows.push([key, "STALE", srcHash]); stale++; continue; }
         ok++;
       }
       const bad = rows.filter((r) => r[1] !== "unstamped");

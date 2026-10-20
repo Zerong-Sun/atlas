@@ -2,7 +2,7 @@
 unit: keshimur
 lang: zh
 source: en
-source_rev: a9d32b0abc1d
+source_rev: 78379bbddf64
 status: translated
 translator: 人工校译
 notes: >
@@ -33,9 +33,9 @@ stamps:
   ev.ev_keshimur_a.choice_1_result: a1dbaefa20de
   ev.ev_keshimur_a.choice_2_result: 890ac94eceba
   ev.ev_keshimur_a.choice_3_result: 02e604017d36
-  ev.ev_keshimur_b.choice_1_result: 5da4e07e316d
+  ev.ev_keshimur_b.choice_1_result: 37f37d7fe129
   ev.ev_keshimur_b.choice_2_result: f3ae6d8c12bd
-  ev.ev_keshimur_b.choice_3_result: d4a476bb76e4
+  ev.ev_keshimur_b.choice_3_result: 2e5b3a94b23e
   ev.ev_keshimur_a_followup.title: 25a6aa03ce5f
   ev.ev_keshimur_a_followup.body: f2a794ed7a73
   ev.ev_keshimur_a_followup.choice_1: e9688f0c19cd
@@ -139,7 +139,7 @@ stamps:
 
 ## ev.ev_keshimur_b.choice_1_result
 
-你雇山向导，学几句本族之语，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。你标出了通往德列（德里）的路。你把这番见闻记入行纪。
+你雇山向导，学几句本族之语，你付出 600 钱币。你在路上用去 7 日光阴。你标出了通往德列（德里）的路。你把这番见闻记入行纪。
 
 ## ev.ev_keshimur_b.choice_2_result
 
@@ -147,7 +147,7 @@ stamps:
 
 ## ev.ev_keshimur_b.choice_3_result
 
-你向山中商人买绿松石，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你向山中商人买绿松石，你付出 1200 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_keshimur_a_followup.title
 

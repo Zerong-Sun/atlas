@@ -103,7 +103,8 @@ You watch the smiths at their forges. It costs you 1 day on the road. The accoun
 
 ## ev.ev_kerman_a.choice_2_result
 
-You buy a rough turquoise from a mine broker. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+You buy a rough turquoise from a mine broker. You pay 650 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_kerman_a.choice_3_result
 
@@ -115,11 +116,13 @@ You browse the embroiderers' stalls in the covered lane. You spend 1 day before 
 
 ## ev.ev_kerman_b.choice_2_result
 
-You buy a length of embroidered silk for a gift. Money moves — a little the better or the worse for you. The trade fills your hold a little. Fortune bends a little your way.
+
+You buy a length of embroidered silk for a gift. You pay 450 coins. You add 1 item to your stores. Fortune bends a little your way.
 
 ## ev.ev_kerman_b.choice_3_result
 
-You climb to the mews and ask the price of a trained falcon. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Camadi on your map.
+
+You climb to the mews and ask the price of a trained falcon. You pay 3200 coins. You add 1 item to your stores. You set the way to Camadi on your map.
 
 ## ev.ev_kerman_a_followup.title
 

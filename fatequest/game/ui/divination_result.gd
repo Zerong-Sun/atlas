@@ -1,6 +1,8 @@
 class_name DivinationResultView
 extends RefCounted
 
+const ICHING_ORDER = preload("res://core/divination/iching_order.gd")
+
 ## Formats a Registry.cast() payload into three UI panels (symbol / reading / effects).
 ## Readings may include omen language (大吉 / 大凶); that is intentional.
 ##
@@ -117,9 +119,28 @@ static func symbol_texture(cast_result: Dictionary) -> Texture2D:
 	# I Ching casts carry the hexagram index; prefer the full card face when a
 	# face exists (01–30 finished, 31–64 placeholders), then fall through.
 	if method == "iching" and raw.has("primary"):
-		var face := MapArt.hexagram_face(int(raw.get("primary", 0)) % 64)
+		var number := ICHING_ORDER.king_wen_number(int(raw.get("primary", -1)))
+		var face := MapArt.hexagram_face(number)
 		if face != null:
 			return face
+	# Deck faces are resolved from authored ids/indices. A missing face falls
+	# through to the method icon; it must never borrow a neighbouring card.
+	if method == "tarot":
+		var cards: Array = raw.get("cards", [])
+		if not cards.is_empty() and cards[0] is Dictionary:
+			var tarot_face := MapArt.tarot_card(String(cards[0].get("id", "")))
+			if tarot_face != null:
+				return tarot_face
+	if method == "lenormand":
+		var draws: Array = raw.get("draws", [])
+		if not draws.is_empty():
+			var lenormand_face := MapArt.lenormand_card(int(draws[0]))
+			if lenormand_face != null:
+				return lenormand_face
+	if method == "astrodice" and raw.has("planet"):
+		var planet_face := MapArt.astrodice_symbol("planet", int(raw.get("planet", -1)))
+		if planet_face != null:
+			return planet_face
 	# Prefer a stem encoded in the cast payload when present.
 	for key in ["symbol", "sym", "cardId", "rune", "hexagram"]:
 		if raw.has(key):
@@ -176,14 +197,18 @@ static func symbol_lines_for(method: String, raw: Dictionary) -> PackedStringArr
 	var lines: PackedStringArray = []
 	match method:
 		"iching":
-			lines.append(I18n.t("ui.div.symbol.iching_primary") % int(raw.get("primary", 0)))
+			var primary_number := ICHING_ORDER.king_wen_number(int(raw.get("primary", -1)))
+			if primary_number > 0:
+				lines.append(I18n.t("ui.div.symbol.iching_primary") % primary_number)
 			var moving: Array = raw.get("moving", [])
 			if not moving.is_empty():
 				var nth: PackedStringArray = []
 				for m in moving:
-					nth.append(I18n.t("ui.div.symbol.iching_moving") % int(m))
-				lines.append(I18n.t("ui.div.symbol.iching_changed") % [
-					int(raw.get("derived", 0)), I18n.list(nth)])
+					nth.append(I18n.t("ui.div.symbol.iching_moving") % (int(m) + 1))
+				var derived_number := ICHING_ORDER.king_wen_number(int(raw.get("derived", -1)))
+				if derived_number > 0:
+					lines.append(I18n.t("ui.div.symbol.iching_changed") % [
+						derived_number, I18n.list(nth)])
 		"lot":
 			lines.append("%s · %s" % [
 				String(raw.get("grade", "")), String(raw.get("title", ""))])

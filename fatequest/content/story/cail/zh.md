@@ -2,7 +2,7 @@
 unit: cail
 lang: zh
 source: en
-source_rev: 29f0e38b6fc0
+source_rev: dedb5c5480c5
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_cail_entry.choice_2_result: cae81682ee80
   ev.ev_cail_entry.choice_3_result: afc54530576f
   ev.ev_cail_a.choice_1_result: ea4cf05216fd
-  ev.ev_cail_a.choice_2_result: 9cfcb17daf36
+  ev.ev_cail_a.choice_2_result: b791139eb9b9
   ev.ev_cail_a.choice_3_result: 1231df9d9707
   ev.ev_cail_b.choice_1_result: 8eb81bfebf51
   ev.ev_cail_b.choice_2_result: 82eef34c105b
-  ev.ev_cail_b.choice_3_result: d2515afdc127
+  ev.ev_cail_b.choice_3_result: 09401a2497db
   ev.ev_cail_a_followup.title: f2a94865eb94
   ev.ev_cail_a_followup.body: e68a441e9943
   ev.ev_cail_a_followup.choice_1: cb585bef0fac
@@ -133,7 +133,7 @@ stamps:
 
 ## ev.ev_cail_a.choice_2_result
 
-你向忽鲁谟斯商人买一匹阿拉伯战马，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+你向忽鲁谟斯商人买一匹阿拉伯战马，你付出 18000 钱币。你把 1 件货物收入行囊。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_cail_a.choice_3_result
 
@@ -149,7 +149,7 @@ stamps:
 
 ## ev.ev_cail_b.choice_3_result
 
-你在海滨集市买棉布，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。成交之后，布商在码头那头还唤你的名字。
+你在海滨集市买棉布，你付出 400 钱币。你把 1 件货物收入行囊。成交之后，布商在码头那头还唤你的名字。
 
 ## ev.ev_cail_a_followup.title
 

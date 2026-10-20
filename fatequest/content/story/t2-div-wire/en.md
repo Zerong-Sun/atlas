@@ -284,7 +284,8 @@ Walk on
 
 ## ev.ev_alexandria_mentor_geomancy.choice_1_result
 
-You pay and learn geomancy. Coin changes hands, and the purse settles. You spend 10 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+You pay and learn geomancy. You pay 8000 coins. You spend 10 days learning the art. You can now read it on any road. A mark is set on this affair.
 
 ## ev.ev_alexandria_mentor_geomancy.choice_2_result
 
@@ -292,7 +293,8 @@ You ask what Populus means for a voyage. The account is written down before the 
 
 ## ev.ev_kiovia_mentor_runes.choice_1_result
 
-You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+You pay and learn the runes. You pay 5000 coins. You spend 7 days learning the art. You can now read it on any road. A mark is set on this affair.
 
 ## ev.ev_kiovia_mentor_runes.choice_2_result
 
@@ -300,7 +302,8 @@ You hear how a single rune is drawn. The account is written down before the hour
 
 ## ev.ev_caffa_mentor_runes.choice_1_result
 
-You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.
+
+You pay and learn the runes. You pay 5000 coins. You spend 7 days learning the art. You can now read it on any road. A mark is set on this affair.
 
 ## ev.ev_caffa_mentor_runes.choice_2_result
 

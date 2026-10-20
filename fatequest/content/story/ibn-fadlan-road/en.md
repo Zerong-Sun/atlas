@@ -579,7 +579,8 @@ You wait three days at the ribāt until scouts report the ice sound. You spend 3
 
 ## ev.ev_road_fadlan_02.choice_1_result
 
-You pay the guide his fee and take him for the next march. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+You pay the guide his fee and take him for the next march. You pay 50 coins. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
 
 ## ev.ev_road_fadlan_02.choice_2_result
 
@@ -611,7 +612,8 @@ You withdraw quietly before the pyre is kindled. You spend 1 day before the way 
 
 ## ev.ev_road_fadlan_06.choice_1_result
 
-You pay a sailor for a rough chart of the island routes. Coin changes hands, and the purse settles. You set what you saw into your travel book.
+
+You pay a sailor for a rough chart of the island routes. You pay 40 coins. You set what you saw into your travel book.
 
 ## ev.ev_road_fadlan_06.choice_2_result
 
@@ -663,7 +665,8 @@ You share road news with the Radhaniya and the Rus and learn their onward routes
 
 ## ev.ev_road_fadlan_12.choice_2_result
 
-You pay for a written list of safe halts on the Rus road. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+You pay for a written list of safe halts on the Rus road. You pay 50 coins. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
 
 ## ev.ev_road_fadlan_13.choice_1_result
 
@@ -699,7 +702,8 @@ You buy only bread and press on before the market scatters. You spend 1 day befo
 
 ## ev.ev_road_fadlan_17.choice_1_result
 
-You pay for a dog sled relay to the next halting place. Coin changes hands, and the purse settles. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
+
+You pay for a dog sled relay to the next halting place. You pay 30 coins. The detour is shorter than feared; you save 1 day. You set what you saw into your travel book.
 
 ## ev.ev_road_fadlan_17.choice_2_result
 
@@ -739,7 +743,8 @@ You thank him and press on toward warmer latitudes. You spend 1 day before the w
 
 ## ev.ev_road_fadlan_22.choice_1_result
 
-You pay the boatmen to carry your pack across first. Coin changes hands, and the purse settles. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+
+You pay the boatmen to carry your pack across first. You pay 45 coins. You spend 1 day before the way is clear again. You set what you saw into your travel book.
 
 ## ev.ev_road_fadlan_22.choice_2_result
 
@@ -759,7 +764,8 @@ You accept the bowl, drink once, and ask his blessing on the road. The host spea
 
 ## ev.ev_road_fadlan_24.choice_2_result
 
-You bring raisins and pepper as a guest gift before you drink. Money moves — a little the better or the worse for you. The host speaks well of the giver to the whole tent. Fortune bends a little your way.
+
+You bring raisins and pepper as a guest gift before you drink. You pay 35 coins. The host speaks well of the giver to the whole tent. Fortune bends a little your way.
 
 ## ev.ev_road_fadlan_25.choice_1_result
 
@@ -819,7 +825,8 @@ You leave the dead to the wind and press on. It costs you 1 day on the road.
 
 ## ev.ev_road_fadlan_32.choice_1_result
 
-You pay the toll and cross with the sealed receipt. Money moves — a little the better or the worse for you. It costs you 1 day on the road, and the king's men at the ford remember the name on the receipt.
+
+You pay the toll and cross with the sealed receipt. You pay 60 coins. It costs you 1 day on the road, and the king's men at the ford remember the name on the receipt.
 
 ## ev.ev_road_fadlan_32.choice_2_result
 

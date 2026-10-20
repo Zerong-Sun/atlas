@@ -101,7 +101,8 @@ You walk among the broken walls and ask what the city once was. You spend 1 day 
 
 ## ev.ev_camadi_a.choice_2_result
 
-You buy dates from the orchards that still cling to the plain. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+You buy dates from the orchards that still cling to the plain. You pay 120 coins. You add 1 item to your stores. The account is written down before the hour turns.
 
 ## ev.ev_camadi_a.choice_3_result
 
@@ -117,7 +118,8 @@ You ask which road leads down to the Gulf of Calatu. You set the way to Calatu o
 
 ## ev.ev_camadi_b.choice_3_result
 
-You buy cotton cloth from the roadside sellers. Money moves — a little the better or the worse for you. The trade fills your hold a little. At the next stall they wave you past as a known customer.
+
+You buy cotton cloth from the roadside sellers. You pay 350 coins. You add 1 item to your stores. At the next stall they wave you past as a known customer.
 
 ## ev.ev_camadi_a_followup.title
 

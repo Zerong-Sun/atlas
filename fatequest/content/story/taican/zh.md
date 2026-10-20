@@ -2,7 +2,7 @@
 unit: taican
 lang: zh
 source: en
-source_rev: 3c82deae299b
+source_rev: fd3583ccba59
 status: translated
 translator: 人工校译
 notes: >
@@ -31,9 +31,9 @@ stamps:
   ev.ev_taican_entry.choice_2_result: c5ae24e14d72
   ev.ev_taican_entry.choice_3_result: 6b8a83a67325
   ev.ev_taican_a.choice_1_result: 4c2543ba7da6
-  ev.ev_taican_a.choice_2_result: 3aac962a756d
+  ev.ev_taican_a.choice_2_result: e9aa2f60c158
   ev.ev_taican_a.choice_3_result: 9ca63851a87b
-  ev.ev_taican_b.choice_1_result: 3fc16a3517b2
+  ev.ev_taican_b.choice_1_result: 01e57458aedb
   ev.ev_taican_b.choice_2_result: b5e308afcbcb
   ev.ev_taican_b.choice_3_result: ee4e6eb981ff
   ev.ev_taican_a_followup.title: 5eeee38a0d28
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_taican_a.choice_2_result
 
-你买棉布备前路，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你买棉布备前路，你付出 320 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_taican_a.choice_3_result
 
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_taican_b.choice_1_result
 
-你买塔里寒盐一块，备高隘之用，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你买塔里寒盐一块，备高隘之用，你付出 200 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_taican_b.choice_2_result
 

@@ -102,7 +102,8 @@ You tour the manufactures brought down from Piju. You spend 1 day before the way
 
 ## ev.ev_siju_a.choice_2_result
 
-You buy sugar from a refiner's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Coigangiu opens on your map.
+
+You buy sugar from a refiner's stall. You pay 4000 coins. You add 1 item to your stores. The road to Coigangiu opens on your map.
 
 ## ev.ev_siju_a.choice_3_result
 
@@ -114,7 +115,8 @@ You stand at a respectful distance and watch a funeral rite. It costs you 1 day 
 
 ## ev.ev_siju_b.choice_2_result
 
-You buy paper-money at a stall near the cremation ground. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+You buy paper-money at a stall near the cremation ground. You pay 3000 coins. You add 1 item to your stores. A small turn of fortune favours you.
 
 ## ev.ev_siju_b.choice_3_result
 

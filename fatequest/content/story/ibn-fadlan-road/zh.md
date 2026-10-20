@@ -2,7 +2,7 @@
 unit: ibn-fadlan-road
 lang: zh
 source: en
-source_rev: 74f774a40968
+source_rev: 83ca97909b1f
 status: translated
 translator: 人工校译
 notes: >
@@ -151,7 +151,7 @@ stamps:
   ev.road.fadlan_35.choice.press_on: 44d4adb6fc88
   ev.ev_road_fadlan_01.choice_1_result: 39e20677333b
   ev.ev_road_fadlan_01.choice_2_result: eae5e3a07cab
-  ev.ev_road_fadlan_02.choice_1_result: 245a7e505ac9
+  ev.ev_road_fadlan_02.choice_1_result: d2a9a861f55a
   ev.ev_road_fadlan_02.choice_2_result: 174c22cca1be
   ev.ev_road_fadlan_03.choice_1_result: fb79a1649cad
   ev.ev_road_fadlan_03.choice_2_result: 96f8be3e1189
@@ -159,7 +159,7 @@ stamps:
   ev.ev_road_fadlan_04.choice_2_result: 795dcc26c9c8
   ev.ev_road_fadlan_05.choice_1_result: 325efa11f4fe
   ev.ev_road_fadlan_05.choice_2_result: efbf71359e8b
-  ev.ev_road_fadlan_06.choice_1_result: e8bafcb44876
+  ev.ev_road_fadlan_06.choice_1_result: 7ccf7c5faa0b
   ev.ev_road_fadlan_06.choice_2_result: 22abd92904f8
   ev.ev_road_fadlan_07.choice_1_result: 6585d1a05811
   ev.ev_road_fadlan_07.choice_2_result: 7cb8c36990e7
@@ -172,7 +172,7 @@ stamps:
   ev.ev_road_fadlan_11.choice_1_result: 1ee84f763995
   ev.ev_road_fadlan_11.choice_2_result: d9f165001f11
   ev.ev_road_fadlan_12.choice_1_result: a72519545ec1
-  ev.ev_road_fadlan_12.choice_2_result: 489235540fee
+  ev.ev_road_fadlan_12.choice_2_result: 6dcf37ff496a
   ev.ev_road_fadlan_13.choice_1_result: 1eb48c742c08
   ev.ev_road_fadlan_13.choice_2_result: 9a8bf20823ba
   ev.ev_road_fadlan_14.choice_1_result: bb11d247fe2b
@@ -181,7 +181,7 @@ stamps:
   ev.ev_road_fadlan_15.choice_2_result: d75a7c4b9c18
   ev.ev_road_fadlan_16.choice_1_result: a093309314e1
   ev.ev_road_fadlan_16.choice_2_result: 0479a4e5a79e
-  ev.ev_road_fadlan_17.choice_1_result: 05e4de1a4539
+  ev.ev_road_fadlan_17.choice_1_result: 35eeaf8369f4
   ev.ev_road_fadlan_17.choice_2_result: c2c4581bf944
   ev.ev_road_fadlan_18.choice_1_result: 147039426526
   ev.ev_road_fadlan_18.choice_2_result: bd2536aea47f
@@ -191,12 +191,12 @@ stamps:
   ev.ev_road_fadlan_20.choice_2_result: 828a887ccb67
   ev.ev_road_fadlan_21.choice_1_result: 441cc64fc1c4
   ev.ev_road_fadlan_21.choice_2_result: 05c09c6dfc34
-  ev.ev_road_fadlan_22.choice_1_result: bc780b8c5462
+  ev.ev_road_fadlan_22.choice_1_result: 29a5053e55af
   ev.ev_road_fadlan_22.choice_2_result: c5ea1c6a9d62
   ev.ev_road_fadlan_23.choice_1_result: a45cb84f54c7
   ev.ev_road_fadlan_23.choice_2_result: de0c8d315519
   ev.ev_road_fadlan_24.choice_1_result: 1d2996c046fb
-  ev.ev_road_fadlan_24.choice_2_result: c93a3927e4ac
+  ev.ev_road_fadlan_24.choice_2_result: 721c19144f58
   ev.ev_road_fadlan_25.choice_1_result: 7bbca312934c
   ev.ev_road_fadlan_25.choice_2_result: cfe18b91ffcc
   ev.ev_road_fadlan_26.choice_1_result: 13a341a23808
@@ -211,7 +211,7 @@ stamps:
   ev.ev_road_fadlan_30.choice_2_result: 02daabfc12b0
   ev.ev_road_fadlan_31.choice_1_result: 92b6c29d729d
   ev.ev_road_fadlan_31.choice_2_result: cfe9c6bd8a4f
-  ev.ev_road_fadlan_32.choice_1_result: afba11d83fc3
+  ev.ev_road_fadlan_32.choice_1_result: 0b8cb25eb349
   ev.ev_road_fadlan_32.choice_2_result: bff33660cfd2
   ev.ev_road_fadlan_33.choice_1_result: b4e617243273
   ev.ev_road_fadlan_33.choice_2_result: d5f77f4e9a37
@@ -839,7 +839,7 @@ stamps:
 
 ## ev.ev_road_fadlan_02.choice_1_result
 
-你付向导酬金，携其同行，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+你付向导酬金，携其同行，你付出 50 钱币。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
 
 ## ev.ev_road_fadlan_02.choice_2_result
 
@@ -871,7 +871,7 @@ stamps:
 
 ## ev.ev_road_fadlan_06.choice_1_result
 
-你付水手薄资，求诸岛草图，银钱易手，囊中为之或增或减。你把这番见闻记入行纪。
+你付水手薄资，求诸岛草图，你付出 40 钱币。你把这番见闻记入行纪。
 
 ## ev.ev_road_fadlan_06.choice_2_result
 
@@ -923,7 +923,7 @@ stamps:
 
 ## ev.ev_road_fadlan_12.choice_2_result
 
-你付资求罗斯道安营清单，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+你付资求罗斯道安营清单，你付出 50 钱币。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
 
 ## ev.ev_road_fadlan_13.choice_1_result
 
@@ -959,7 +959,7 @@ stamps:
 
 ## ev.ev_road_fadlan_17.choice_1_result
 
-你付资乘犬橇至下一停，银钱易手，囊中为之或增或减。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
+你付资乘犬橇至下一停，你付出 30 钱币。绕路比预想的短，你省下 1 日。你把这番见闻记入行纪。
 
 ## ev.ev_road_fadlan_17.choice_2_result
 
@@ -999,7 +999,7 @@ stamps:
 
 ## ev.ev_road_fadlan_22.choice_1_result
 
-你付舟子先渡汝之行囊，银钱易手，囊中为之或增或减。你在路上用去 1 日光阴。你把这番见闻记入行纪。
+你付舟子先渡汝之行囊，你付出 45 钱币。你在路上用去 1 日光阴。你把这番见闻记入行纪。
 
 ## ev.ev_road_fadlan_22.choice_2_result
 
@@ -1019,7 +1019,7 @@ stamps:
 
 ## ev.ev_road_fadlan_24.choice_2_result
 
-你先献葡萄干、胡椒为客礼再饮，一注钱款进出，得失皆在掌中。主人当着全帐的人称赞送礼的客人。气运稍稍偏向于你。
+你先献葡萄干、胡椒为客礼再饮，你付出 35 钱币。主人当着全帐的人称赞送礼的客人。气运稍稍偏向于你。
 
 ## ev.ev_road_fadlan_25.choice_1_result
 
@@ -1079,7 +1079,7 @@ stamps:
 
 ## ev.ev_road_fadlan_32.choice_1_result
 
-你纳费，持印信收据渡河，一注钱款进出，得失皆在掌中。为此费去你 1 日路程；渡口的王家卫士记住了收据上的名字。
+你纳费，持印信收据渡河，你付出 60 钱币。为此费去你 1 日路程；渡口的王家卫士记住了收据上的名字。
 
 ## ev.ev_road_fadlan_32.choice_2_result
 

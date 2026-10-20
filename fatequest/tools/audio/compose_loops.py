@@ -23,6 +23,7 @@ import wave
 from pathlib import Path
 
 import numpy as np
+from audio_build_utils import close_loop_boundary, stable_seed
 from scipy import signal as sps
 from scipy.io import wavfile
 
@@ -96,18 +97,7 @@ def load_audio(path: Path) -> np.ndarray:
 
 
 def make_seamless(x: np.ndarray, fade: float = 0.5) -> np.ndarray:
-    n = len(x)
-    nf = max(1, min(int(fade * SR), n // 4))
-    out = x.astype(np.float64).copy()
-    w = np.linspace(0, math.pi / 2, nf)
-    fade_in = np.sin(w) ** 2
-    fade_out = np.cos(w) ** 2
-    mixed = out[-nf:] * fade_out + out[:nf] * fade_in
-    out[-nf:] = mixed
-    out[:nf] = mixed
-    out -= np.mean(out)
-    peak = np.max(np.abs(out)) or 1.0
-    return out / peak * 0.85
+    return close_loop_boundary(x, SR, fade, 0.85)
 
 
 def loop_to_duration(x: np.ndarray, dur: float) -> np.ndarray:
@@ -118,38 +108,12 @@ def loop_to_duration(x: np.ndarray, dur: float) -> np.ndarray:
             start = (len(x) - need) // 3
             return x[start : start + need]
         return x[:need]
-    reps = int(math.ceil(need / len(x))) + 1
-    tiled = np.tile(x, reps)
-    # crossfade each junction lightly
-    period = len(x)
-    out = tiled[:need].copy()
-    nf = min(int(0.15 * SR), period // 8)
-    for k in range(1, reps):
-        i = k * period
-        if i >= need:
-            break
-        a0 = max(0, i - nf)
-        a1 = min(need, i + nf)
-        if a1 <= a0:
-            continue
-        # already contiguous from tile; apply small equal-power blend around join
-        mid = i
-        left = out[max(0, mid - nf) : mid]
-        right = out[mid : min(need, mid + nf)]
-        n = min(len(left), len(right))
-        if n < 2:
-            continue
-        w = np.linspace(0, 1, n)
-        out[mid - n : mid] = left[-n:] * (1 - w) + right[:n][::-1][::-1] * 0  # noop safeguard
-        # simpler: equal-power at boundary using mirrored crossfade of neighbors
-        seg = out[mid - n : mid + n].copy() if mid + n <= len(out) else None
-        if seg is not None and len(seg) == 2 * n:
-            w2 = np.sin(np.linspace(0, math.pi / 2, n)) ** 2
-            left_n = out[mid - n : mid].copy()
-            right_n = out[mid : mid + n].copy()
-            out[mid - n : mid] = left_n * (1 - w2) + right_n * w2
-            out[mid : mid + n] = left_n * w2 + right_n * (1 - w2)
-    return out[:need]
+    if not len(x):
+        raise ValueError("empty source audio")
+    # Repair the source period once before tiling; no mirrored duplicate joins.
+    period = close_loop_boundary(x, SR, 0.15, 0.85)
+    reps = int(math.ceil(need / len(period)))
+    return np.tile(period, reps)[:need]
 
 
 def one_pole_lp(x: np.ndarray, cutoff: float) -> np.ndarray:

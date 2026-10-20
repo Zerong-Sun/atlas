@@ -75,11 +75,11 @@ stamps:
   ev.road.bazi_counsel.body: dc10379e7d4f
   ev.road.bazi_counsel.choice.cast: 3fa0ab2de832
   ev.road.bazi_counsel.choice.walk: e9f8f4c6239b
-  ev.ev_alexandria_mentor_geomancy.choice_1_result: ccd1c7338e1a
+  ev.ev_alexandria_mentor_geomancy.choice_1_result: 941aa393b143
   ev.ev_alexandria_mentor_geomancy.choice_2_result: 92f8f2fcf73c
-  ev.ev_kiovia_mentor_runes.choice_1_result: 2f0ddd51b15f
+  ev.ev_kiovia_mentor_runes.choice_1_result: 8fd01126f537
   ev.ev_kiovia_mentor_runes.choice_2_result: 0e0e05915e5c
-  ev.ev_caffa_mentor_runes.choice_1_result: 2f0ddd51b15f
+  ev.ev_caffa_mentor_runes.choice_1_result: 8fd01126f537
   ev.ev_caffa_mentor_runes.choice_2_result: 0977459d9644
   ev.ev_road_jiaobei_counsel.choice_2_result: cfd195ed21a9
   ev.ev_road_astrodice_counsel.choice_2_result: 43a2651fe4a5
@@ -378,7 +378,7 @@ stamps:
 
 ## ev.ev_alexandria_mentor_geomancy.choice_1_result
 
-你付资学沙盘，银钱易手，囊中为之或增或减。你在路上用去 10 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学沙盘，你付出 8000 钱币。你用 10 日向导师学习此法。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_alexandria_mentor_geomancy.choice_2_result
 
@@ -386,7 +386,7 @@ stamps:
 
 ## ev.ev_kiovia_mentor_runes.choice_1_result
 
-你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学卢恩，你付出 5000 钱币。你用 7 日向导师学习此法。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_kiovia_mentor_runes.choice_2_result
 
@@ -394,7 +394,7 @@ stamps:
 
 ## ev.ev_caffa_mentor_runes.choice_1_result
 
-你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
+你付资学卢恩，你付出 5000 钱币。你用 7 日向导师学习此法。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。
 
 ## ev.ev_caffa_mentor_runes.choice_2_result
 

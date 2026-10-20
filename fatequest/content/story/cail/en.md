@@ -102,7 +102,8 @@ You stand a day upon the quay and watch the horses come ashore. You spend 1 day 
 
 ## ev.ev_cail_a.choice_2_result
 
-You buy an Arabian charger from the Hormos merchants. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+You buy an Arabian charger from the Hormos merchants. You pay 18000 coins. You add 1 item to your stores. The account is written down before the hour turns.
 
 ## ev.ev_cail_a.choice_3_result
 
@@ -118,7 +119,8 @@ You listen while the brokers speak of the five brother-kings. You set the way to
 
 ## ev.ev_cail_b.choice_3_result
 
-You buy cotton cloth in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. After the bargain, the cloth merchants call your name across the wharf.
+
+You buy cotton cloth in the harbour market. You pay 400 coins. You add 1 item to your stores. After the bargain, the cloth merchants call your name across the wharf.
 
 ## ev.ev_cail_a_followup.title
 

@@ -102,7 +102,8 @@ You walk the garden road from Kinsay. You spend 1 day before the way is clear ag
 
 ## ev.ev_tanpiju_a.choice_2_result
 
-You buy tea from a gardener's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Fuju opens on your map.
+
+You buy tea from a gardener's stall. You pay 4000 coins. You add 1 item to your stores. The road to Fuju opens on your map.
 
 ## ev.ev_tanpiju_a.choice_3_result
 
@@ -118,7 +119,8 @@ You watch a funeral party pass toward the cremation ground. You set what you saw
 
 ## ev.ev_tanpiju_b.choice_3_result
 
-You buy lacquerware from a Kinsay trader's stall. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Kinsay opens on your map.
+
+You buy lacquerware from a Kinsay trader's stall. You pay 5500 coins. You add 1 item to your stores. The road to Kinsay opens on your map.
 
 ## ev.ev_tanpiju_a_followup.title
 

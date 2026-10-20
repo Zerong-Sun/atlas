@@ -1,6 +1,6 @@
 {
-  "files": 2111,
-  "rows": 2167,
+  "files": 2112,
+  "rows": 2168,
   "images": 1036,
   "image_counts_by_role": {
     "archive": 129,
@@ -17,7 +17,7 @@
   "art_root": 674,
   "registry": 674,
   "technical": {
-    "not_image": 1075,
+    "not_image": 1076,
     "decodes": 1002,
     "xml_parses_visual_unchecked": 34,
     "missing_file": 56

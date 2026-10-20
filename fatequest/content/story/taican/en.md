@@ -102,7 +102,8 @@ You walk the corn market and hear what the caravans pay. It costs you 1 day on t
 
 ## ev.ev_taican_a.choice_2_result
 
-You buy cotton cloth for the road ahead. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy cotton cloth for the road ahead. You pay 320 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_taican_a.choice_3_result
 
@@ -110,7 +111,8 @@ You ask the caravan masters which road leads toward Balc. The road to Balc opens
 
 ## ev.ev_taican_b.choice_1_result
 
-You buy a block of Taican salt for the high passes. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+You buy a block of Taican salt for the high passes. You pay 200 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_taican_b.choice_2_result
 

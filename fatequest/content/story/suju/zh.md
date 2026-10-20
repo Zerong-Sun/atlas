@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: c35d422cf6af
+source_rev: 7f4370315174
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_suju_entry.choice_2_result: 678c2c0a0513
   ev.ev_suju_entry.choice_3_result: 911f34e6ff85
   ev.ev_suju_a.choice_1_result: 362553e305e8
-  ev.ev_suju_a.choice_2_result: c70c91d17e42
+  ev.ev_suju_a.choice_2_result: 872be5d1af86
   ev.ev_suju_a.choice_3_result: d2cd771c4d58
   ev.ev_suju_b.choice_1_result: 3352b85f18b0
-  ev.ev_suju_b.choice_2_result: 54ddeeb352e8
+  ev.ev_suju_b.choice_2_result: 9fef9618f9fe
   ev.ev_suju_b.choice_3_result: d9337530849e
   ev.ev_suju_a_followup.title: 91f73cf33824
   ev.ev_suju_a_followup.body: 273aa48a235e
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_suju_a.choice_2_result
 
-你购金锦一段，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。织坊一带，传着那个按足价付钱的客人的名字。
+你购金锦一段，你付出 15000 钱币。你把 1 件货物收入行囊。织坊一带，传着那个按足价付钱的客人的名字。
 
 ## ev.ev_suju_a.choice_3_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_suju_b.choice_2_result
 
-你于园圃摊购大黄，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+你于园圃摊购大黄，你付出 1500 钱币。你把 1 件货物收入行囊。时运待你，比先前好了几分。
 
 ## ev.ev_suju_b.choice_3_result
 

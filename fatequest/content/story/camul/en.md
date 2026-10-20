@@ -95,7 +95,8 @@ You walk the melon rows and taste what the farmers offer. It costs you 1 day on 
 
 ## ev.ev_camul_a.choice_2_result
 
-You buy dried melon spirals for the desert crossing. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+You buy dried melon spirals for the desert crossing. You pay 60 coins. You add 1 item to your stores. A small turn of fortune favours you.
 
 ## ev.ev_camul_a.choice_3_result
 

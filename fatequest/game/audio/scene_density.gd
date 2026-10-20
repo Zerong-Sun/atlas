@@ -41,48 +41,52 @@ static func classify(scene_bg: String) -> String:
 static func layer_gains(scene_class: String) -> Dictionary:
 	match scene_class:
 		TOWN:
-			return {"drone": 1.0, "pulse": 1.0, "melody": 0.85, "color": 0.0}
+			return {"drone": 1.0, "pulse": 1.0, "melody": 0.85, "color": 0.2}
 		PORT:
-			return {"drone": 1.0, "pulse": 0.7, "melody": 0.9, "color": 0.0}
+			return {"drone": 1.0, "pulse": 0.7, "melody": 0.9, "color": 0.2}
 		WILD:
-			return {"drone": 1.0, "pulse": 0.0, "melody": 0.0, "color": 0.0}
+			return {"drone": 1.0, "pulse": 0.0, "melody": 0.0, "color": 0.2}
 		COURT:
 			return {"drone": 1.0, "pulse": 0.45, "melody": 0.75, "color": 0.15}
 		SHRINE:
 			# Space + occasional color (blurred sacred gesture). No pulse/melody.
 			return {"drone": 0.75, "pulse": 0.0, "melody": 0.0, "color": 0.35}
 		INN:
-			return {"drone": 1.0, "pulse": 0.4, "melody": 0.55, "color": 0.0}
+			return {"drone": 1.0, "pulse": 0.4, "melody": 0.55, "color": 0.2}
 		JOURNEY:
 			# A caravan keeps its rhythm: pulse leads, melody thins so the road
 			# ambients (wind, bells, hooves) can carry the scene.
-			return {"drone": 1.0, "pulse": 0.95, "melody": 0.55, "color": 0.0}
+			return {"drone": 1.0, "pulse": 0.95, "melody": 0.55, "color": 0.2}
 		_:
-			return {"drone": 1.0, "pulse": 0.6, "melody": 0.7, "color": 0.0}
+			return {"drone": 1.0, "pulse": 0.6, "melody": 0.7, "color": 0.2}
 
 
 ## Ambient stem filenames under assets/audio/ambient/ (no extension).
 ## Keep ≤4 names — AudioDirector allocates 4 ambient players.
-static func ambients(scene_class: String) -> PackedStringArray:
+static func ambients(scene_class: String, context: Dictionary = {}) -> PackedStringArray:
+	var names := PackedStringArray()
+	var kind := str(context.get("kind", "land"))
 	match scene_class:
-		TOWN:
-			return PackedStringArray(["market_crowd", "dishes"])
+		TOWN, INN: names = PackedStringArray(["market_crowd", "dishes"])
 		PORT:
-			# river + rain were on disk but unmapped
-			return PackedStringArray(["waves", "ropes_mast", "river", "rain"])
-		WILD:
-			# horse_hooves was on disk but unmapped; fire kept for camp colour
-			return PackedStringArray(["wind_sand", "camel_bells", "horse_hooves", "fire"])
-		COURT:
-			return PackedStringArray(["footsteps_echo"])
-		SHRINE:
-			return PackedStringArray([])  # space left to music drone + procedural bells
-		INN:
-			return PackedStringArray(["market_crowd", "dishes"])
+			if str(context.get("water", "sea")) == "river":
+				names = PackedStringArray(["river", "ropes_mast"])
+			else:
+				names = PackedStringArray(["waves", "ropes_mast", "seabirds"])
+		WILD: names = PackedStringArray(["wind_sand", "fire"])
+		COURT: names = PackedStringArray(["footsteps_echo"])
 		JOURNEY:
-			return PackedStringArray(["wind_sand", "camel_bells", "horse_hooves"])
-		_:
-			return PackedStringArray(["wind_sand"])
+			if kind == "sea":
+				names = PackedStringArray(["waves", "ropes_mast", "seabirds"])
+			elif kind == "river":
+				names = PackedStringArray(["river", "ropes_mast"])
+			else:
+				names = PackedStringArray(["wind_sand", "horse_hooves"])
+	# A possible storm hazard is not observed weather. Only explicit weather
+	# can introduce rain, and indoor beds remain dry.
+	if scene_class in [TOWN, PORT, WILD, JOURNEY] and str(context.get("weather", "")) in ["rain", "storm"]:
+		names.append("rain")
+	return names
 
 
 ## Wetness hint 0..1 for future reverb bus; used now as ambient ducking.

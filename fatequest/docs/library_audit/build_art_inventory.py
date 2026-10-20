@@ -93,11 +93,17 @@ def main():
             wiring = "runtime_manifest_resolver"
             references = ["game/map/map_art.gd:hexagram_face", "assets/decks/iching/DECK_MANIFEST.json"]
         if relative.startswith("assets/decks/tarot/") and extension == ".webp":
-            note = "No full tarot deck loader found in current Godot runtime; uses generic symbol fallback"
+            wiring = "runtime_resolver"
+            references = ["game/map/map_art.gd:tarot_card", "game/ui/divination_result.gd"]
+            note = "Authored Tarot IDs resolve through MapArt.tarot_card; 38 cards remain missing and full-deck review is pending"
         if relative.startswith("assets/decks/lenormand/") and extension == ".jpg":
-            note = "No lenormand JPG deck loader found in current Godot runtime; source attribution separate"
+            wiring = "runtime_resolver"
+            references = ["game/map/map_art.gd:lenormand_card", "game/ui/divination_result.gd"]
+            note = "JPG resolves through MapArt.lenormand_card; source attribution is separate and full-deck review is pending"
         if relative.startswith("assets/astrodice/") and is_image:
-            note = "No SVG dice-art loader found in current Godot runtime; text and generic star symbol used"
+            wiring = "runtime_resolver"
+            references = ["game/map/map_art.gd:astrodice_symbol", "game/ui/divination_result.gd"]
+            note = "SVG resolves through MapArt.astrodice_symbol; symbol-by-symbol visual review is pending"
         row = dict(path=relative, category=category, role=role, exists="yes", bytes=path.stat().st_size,
                    sha256=sha256, dimensions=dimensions, technical_status=technical,
                    registry_index="yes" if stem in registry else "no", wiring_evidence=wiring,

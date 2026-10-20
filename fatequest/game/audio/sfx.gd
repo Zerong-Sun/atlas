@@ -7,22 +7,25 @@ extends Node
 const BUS := "SFX"
 const SR := 22050
 
-var _player: AudioStreamPlayer
+var _players: Array[AudioStreamPlayer] = []
+var _next_voice := 0
 var _rng := RandomNumberGenerator.new()
 
 
 func _ready() -> void:
 	_rng.randomize()
-	_player = AudioStreamPlayer.new()
-	_player.bus = BUS
-	_player.volume_db = -4.0
-	add_child(_player)
+	for i in 6:
+		var voice := AudioStreamPlayer.new()
+		voice.bus = BUS
+		voice.volume_db = -10.0
+		add_child(voice)
+		_players.append(voice)
 
 
 func _exit_tree() -> void:
-	if _player != null:
-		_player.stop()
-		_player.stream = null
+	for voice in _players:
+		voice.stop()
+		voice.stream = null
 
 
 func play(kind: String) -> void:
@@ -52,13 +55,13 @@ func play(kind: String) -> void:
 		"dice":
 			var dparts: Array[PackedFloat32Array] = []
 			for i in 3:
-				dparts.append(_noise(0.05, 0.1, 1200.0))
-				dparts.append(_tone(320.0 + i * 40.0, 0.05, 0.06))
+				dparts.append(_delay(_noise(0.05, 0.1, 1200.0), i * 0.065))
+				dparts.append(_delay(_tone(320.0 + i * 40.0, 0.05, 0.06), i * 0.065))
 			samples = _mix(dparts)
 		"shake", "lot":
 			var sparts: Array[PackedFloat32Array] = []
 			for i in 5:
-				sparts.append(_noise(0.05, 0.08, 2800.0))
+				sparts.append(_delay(_noise(0.05, 0.08, 2800.0), i * 0.06))
 			samples = _mix(sparts)
 		"click", "ui":
 			samples = _tone(660.0 + _rng.randf_range(-30, 30), 0.05, 0.06)
@@ -84,8 +87,15 @@ func _play_samples(samples: PackedFloat32Array) -> void:
 	stream.mix_rate = SR
 	stream.stereo = false
 	stream.data = bytes
-	_player.stream = stream
-	_player.play()
+	if _players.is_empty(): return
+	var voice := _players[_next_voice]
+	for candidate in _players:
+		if not candidate.playing:
+			voice = candidate
+			break
+	_next_voice = (_players.find(voice) + 1) % _players.size()
+	voice.stream = stream
+	voice.play()
 
 
 func _tone(f0: float, dur: float, peak: float, f1: float = -1.0) -> PackedFloat32Array:
@@ -147,4 +157,11 @@ func _mix(parts: Array) -> PackedFloat32Array:
 	if peak > 1.0:
 		for i in out.size():
 			out[i] /= peak
+	return out
+
+
+func _delay(samples: PackedFloat32Array, seconds: float) -> PackedFloat32Array:
+	var out := PackedFloat32Array()
+	out.resize(int(seconds * SR))
+	out.append_array(samples)
 	return out

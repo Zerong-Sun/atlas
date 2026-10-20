@@ -4,6 +4,14 @@ lang: zh
 role: translation
 status: reviewed
 voice: hud
+stamps:
+  ui.city.card_ready: 207b750f9f0b
+  ui.city.card_repeat: 2299ea52c3d7
+  ui.city.card_done: df366566e759
+  ui.market.trade_hint: 0cae91203808
+  ui.market.bought: 753f56e223a8
+  ui.market.sold: 9d430d99dab6
+  ui.market.abandoned: 68850f2fc718
 ---
 
 ## ui.city.card_ready

@@ -23,6 +23,7 @@ import wave
 from pathlib import Path
 
 import numpy as np
+from audio_build_utils import close_loop_boundary, stable_seed
 from scipy import signal as sps
 
 # Reuse helpers from generate_all where practical by local copy (standalone).
@@ -82,18 +83,7 @@ def bandpass(x: np.ndarray, center: float, q: float) -> np.ndarray:
 
 
 def make_seamless(x: np.ndarray, fade: float = 0.1) -> np.ndarray:
-    n = len(x)
-    nf = max(1, min(int(fade * SR), n // 4))
-    out = x.astype(np.float64).copy()
-    w = np.linspace(0, math.pi / 2, nf)
-    fade_in = np.sin(w) ** 2
-    fade_out = np.cos(w) ** 2
-    mixed = out[-nf:] * fade_out + out[:nf] * fade_in
-    out[-nf:] = mixed
-    out[:nf] = mixed
-    out -= np.mean(out)
-    peak = np.max(np.abs(out)) or 1.0
-    return out / peak * 0.82
+    return close_loop_boundary(x, SR, fade, 0.82)
 
 
 def write_ogg(path: Path, samples: np.ndarray) -> None:
@@ -370,7 +360,7 @@ def main() -> int:
         if culture not in CULTURES:
             print(f"unknown culture {culture}", file=sys.stderr)
             return 1
-        seed = abs(hash(f"fq-mc-{culture}-v2")) % (2**32)
+        seed = stable_seed(f"fq-mc-{culture}-v2")
         rng = np.random.default_rng(seed)
         for layer, fn in (("melody", gen_melody), ("color", gen_color)):
             print(f"  {culture}/{layer} …", flush=True)

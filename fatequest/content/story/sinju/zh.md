@@ -2,7 +2,7 @@
 unit: sinju
 lang: zh
 source: en
-source_rev: e09472806b3a
+source_rev: 74d08b0b3be6
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_sinju_entry.choice_2_result: 75a64a6da9ed
   ev.ev_sinju_entry.choice_3_result: fb9e2acb13d4
   ev.ev_sinju_a.choice_1_result: 3bdd6f80d246
-  ev.ev_sinju_a.choice_2_result: 5e33eb32de5c
+  ev.ev_sinju_a.choice_2_result: 6650593356ef
   ev.ev_sinju_a.choice_3_result: 6c47fbb0a7f5
   ev.ev_sinju_b.choice_1_result: c856af921631
-  ev.ev_sinju_b.choice_2_result: 180a217d539f
+  ev.ev_sinju_b.choice_2_result: 3aba76455970
   ev.ev_sinju_b.choice_3_result: cc2bdbfa9cb1
   ev.ev_sinju_a_followup.title: 487bd9c343ca
   ev.ev_sinju_a_followup.body: 51c76f171d01
@@ -131,7 +131,7 @@ stamps:
 
 ## ev.ev_sinju_a.choice_2_result
 
-你向江船客购茶，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往扬州的道路，就此展开在舆图上。
+你向江船客购茶，你付出 5000 钱币。你把 1 件货物收入行囊。通往扬州的道路，就此展开在舆图上。
 
 ## ev.ev_sinju_a.choice_3_result
 
@@ -143,7 +143,7 @@ stamps:
 
 ## ev.ev_sinju_b.choice_2_result
 
-你向江商购瓷器，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你向江商购瓷器，你付出 6000 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_sinju_b.choice_3_result
 

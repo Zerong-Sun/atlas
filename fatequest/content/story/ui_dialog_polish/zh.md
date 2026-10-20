@@ -4,6 +4,9 @@ lang: zh
 role: translation
 status: reviewed
 voice: hud
+stamps:
+  ui.event.keyboard_hint: 142c3ff4019c
+  ui.event.pause_hint: 87a95f705f16
 ---
 
 ## ui.event.keyboard_hint

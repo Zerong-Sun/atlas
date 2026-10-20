@@ -102,7 +102,8 @@ You walk among the stone brokers and listen to their bargaining. It costs you 1 
 
 ## ev.ev_badashan_a.choice_2_result
 
-You buy a block of raw lapis lazuli. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Balc on your map.
+
+You buy a block of raw lapis lazuli. You pay 850 coins. You add 1 item to your stores. You set the way to Balc on your map.
 
 ## ev.ev_badashan_a.choice_3_result
 
@@ -114,11 +115,13 @@ You listen as the court herald recites the royal genealogy. You spend 1 day befo
 
 ## ev.ev_badashan_b.choice_2_result
 
-You pay a scribe to teach you a few words of the mountain tongue. Money moves — a little the better or the worse for you. The hill folk will greet you by name from now on. Fortune bends a little your way.
+
+You pay a scribe to teach you a few words of the mountain tongue. You pay 200 coins. The hill folk will greet you by name from now on. Fortune bends a little your way.
 
 ## ev.ev_badashan_b.choice_3_result
 
-You buy a small balas ruby from a licensed broker. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+You buy a small balas ruby from a licensed broker. You pay 2200 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_badashan_a_followup.title
 

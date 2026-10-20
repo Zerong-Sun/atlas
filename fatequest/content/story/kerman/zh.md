@@ -2,7 +2,7 @@
 unit: kerman
 lang: zh
 source: en
-source_rev: 62ebe2c168e7
+source_rev: 93370aa45ce2
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_kerman_entry.choice_2_result: 9d7e2d46a437
   ev.ev_kerman_entry.choice_3_result: ccd07a627d6f
   ev.ev_kerman_a.choice_1_result: c408260a020f
-  ev.ev_kerman_a.choice_2_result: 66258c7a53c2
+  ev.ev_kerman_a.choice_2_result: 6202e87b2014
   ev.ev_kerman_a.choice_3_result: 947bced41f27
   ev.ev_kerman_b.choice_1_result: 35f86cffd992
-  ev.ev_kerman_b.choice_2_result: 2662997d13e5
-  ev.ev_kerman_b.choice_3_result: 0ede05d472e1
+  ev.ev_kerman_b.choice_2_result: 4970b9b638a8
+  ev.ev_kerman_b.choice_3_result: 4230df42e53c
   ev.ev_kerman_a_followup.title: da4e7766ed5a
   ev.ev_kerman_a_followup.body: 8fbf87f91438
   ev.ev_kerman_a_followup.choice_1: f6ede5a03a5b
@@ -131,7 +131,7 @@ stamps:
 
 ## ev.ev_kerman_a.choice_2_result
 
-你向矿经纪购绿松石一块，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你向矿经纪购绿松石一块，你付出 650 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_kerman_a.choice_3_result
 
@@ -143,11 +143,11 @@ stamps:
 
 ## ev.ev_kerman_b.choice_2_result
 
-你购绣丝一段为礼，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。气运稍稍偏向于你。
+你购绣丝一段为礼，你付出 450 钱币。你把 1 件货物收入行囊。气运稍稍偏向于你。
 
 ## ev.ev_kerman_b.choice_3_result
 
-你登鹰房问驯鹰之价，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往可马底的路。
+你登鹰房问驯鹰之价，你付出 3200 钱币。你把 1 件货物收入行囊。你标出了通往可马底的路。
 
 ## ev.ev_kerman_a_followup.title
 

@@ -101,7 +101,8 @@ You walk the fort walls and look out upon the gulf. It costs you 1 day on the ro
 
 ## ev.ev_calatu_a.choice_2_result
 
-You buy a sack of pepper from the Indian merchants. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+You buy a sack of pepper from the Indian merchants. You pay 12000 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_calatu_a.choice_3_result
 
@@ -113,7 +114,8 @@ You hear how the Melic of Hormos uses this city as a refuge. You set what you sa
 
 ## ev.ev_calatu_b.choice_2_result
 
-You buy dates brought in with the grain ships. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+You buy dates brought in with the grain ships. You pay 180 coins. You add 1 item to your stores. The account is written down before the hour turns.
 
 ## ev.ev_calatu_b.choice_3_result
 

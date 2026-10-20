@@ -105,15 +105,18 @@ You stand upon the mole and watch the Indian ships unload. The road to Dufar ope
 
 ## ev.ev_esher_a.choice_3_result
 
-You buy an Arabian horse from the export pens. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set what you saw into your travel book.
+
+You buy an Arabian horse from the export pens. You pay 16000 coins. You add 1 item to your stores. You set what you saw into your travel book.
 
 ## ev.ev_esher_b.choice_1_result
 
-You buy frankincense at the Prince's price in the harbour market. Money moves — a little the better or the worse for you. The trade fills your hold a little. The account is written down before the hour turns.
+
+You buy frankincense at the Prince's price in the harbour market. You pay 2400 coins. You add 1 item to your stores. The account is written down before the hour turns.
 
 ## ev.ev_esher_b.choice_2_result
 
-You buy dates from the coastal orchards. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy dates from the coastal orchards. You pay 150 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_esher_b.choice_3_result
 

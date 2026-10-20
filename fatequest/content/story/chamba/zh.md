@@ -2,7 +2,7 @@
 unit: chamba
 lang: zh
 source: en
-source_rev: 760e4204713c
+source_rev: f969d8f81ae1
 status: translated
 translator: 人工校译
 notes: >
@@ -32,9 +32,9 @@ stamps:
   ev.ev_chamba_entry.choice_3_result: 5602223eeb68
   ev.ev_chamba_a.choice_1_result: 490a317e66d3
   ev.ev_chamba_a.choice_2_result: 62fb99bcf165
-  ev.ev_chamba_a.choice_3_result: 6ebc73870ec6
+  ev.ev_chamba_a.choice_3_result: 65fd4bd9a97b
   ev.ev_chamba_b.choice_1_result: 9a58ec57e790
-  ev.ev_chamba_b.choice_2_result: 13dabc16181e
+  ev.ev_chamba_b.choice_2_result: 1faabf47ce07
   ev.ev_chamba_b.choice_3_result: 5716069fa47f
   ev.ev_chamba_a_followup.title: 5ce7d1b05de9
   ev.ev_chamba_a_followup.body: adebcda2a6d9
@@ -143,7 +143,7 @@ stamps:
 
 ## ev.ev_chamba_a.choice_3_result
 
-你于贡物区买旃檀，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。贡物书吏把你的名字记在礼单旁边。
+你于贡物区买旃檀，你付出 900 钱币。你把 1 件货物收入行囊。贡物书吏把你的名字记在礼单旁边。
 
 ## ev.ev_chamba_b.choice_1_result
 
@@ -151,7 +151,7 @@ stamps:
 
 ## ev.ev_chamba_b.choice_2_result
 
-你向香料商买胡椒，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+你向香料商买胡椒，你付出 8000 钱币。你把 1 件货物收入行囊。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_chamba_b.choice_3_result
 

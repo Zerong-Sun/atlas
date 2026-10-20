@@ -2,7 +2,7 @@
 unit: esher
 lang: zh
 source: en
-source_rev: 119069974b3f
+source_rev: b5e5511a81b6
 status: translated
 translator: 人工校译
 notes: >
@@ -32,9 +32,9 @@ stamps:
   ev.ev_esher_entry.choice_3_result: a79574aa4106
   ev.ev_esher_a.choice_1_result: 8b858d76be51
   ev.ev_esher_a.choice_2_result: f0ca7c5f4f79
-  ev.ev_esher_a.choice_3_result: 695ef8a83d3a
-  ev.ev_esher_b.choice_1_result: 3d619d9a783f
-  ev.ev_esher_b.choice_2_result: 45441acd23b1
+  ev.ev_esher_a.choice_3_result: 036e116b76b3
+  ev.ev_esher_b.choice_1_result: beb354d7fcd2
+  ev.ev_esher_b.choice_2_result: af235bb4068d
   ev.ev_esher_b.choice_3_result: 03628260cd19
   ev.ev_esher_a_followup.title: 77c2bb3600cf
   ev.ev_esher_a_followup.body: 3bf9d4fa9379
@@ -136,15 +136,15 @@ Soldan属港
 
 ## ev.ev_esher_a.choice_3_result
 
-你向出口马厩买一匹阿拉伯马，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你向出口马厩买一匹阿拉伯马，你付出 16000 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_esher_b.choice_1_result
 
-你于港市按王价买乳香，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。不到一个时辰，这段记录已落笔成文。
+你于港市按王价买乳香，你付出 2400 钱币。你把 1 件货物收入行囊。不到一个时辰，这段记录已落笔成文。
 
 ## ev.ev_esher_b.choice_2_result
 
-你向海岸果园买枣，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你向海岸果园买枣，你付出 150 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_esher_b.choice_3_result
 

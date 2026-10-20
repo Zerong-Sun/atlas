@@ -102,7 +102,8 @@ You watch the harbour and ask how the merchants avoid the corsairs. It costs you
 
 ## ev.ev_melibar_a.choice_2_result
 
-You buy Malabar pepper while the harbour watch holds. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Cail on your map.
+
+You buy Malabar pepper while the harbour watch holds. You pay 1100 coins. You add 1 item to your stores. You set the way to Cail on your map.
 
 ## ev.ev_melibar_a.choice_3_result
 
@@ -118,7 +119,8 @@ You measure the North Star against the mast and record what you see. The account
 
 ## ev.ev_melibar_b.choice_3_result
 
-You buy pearls from a diver who prayed at the shrine. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+You buy pearls from a diver who prayed at the shrine. You pay 950 coins. You add 1 item to your stores. A small turn of fortune favours you.
 
 ## ev.ev_melibar_a_followup.title
 

@@ -102,7 +102,8 @@ You walk the quay and count the upstream boats. You spend 1 day before the way i
 
 ## ev.ev_chinangli_a.choice_2_result
 
-You buy a bolt of river-traded silk. Money moves — a little the better or the worse for you. The trade fills your hold a little. The road to Cacanfu opens on your map.
+
+You buy a bolt of river-traded silk. You pay 10000 coins. You add 1 item to your stores. The road to Cacanfu opens on your map.
 
 ## ev.ev_chinangli_a.choice_3_result
 
@@ -114,7 +115,8 @@ You watch the paper-money exchange at a stall. It costs you 1 day on the road. T
 
 ## ev.ev_chinangli_b.choice_2_result
 
-You buy a small porcelain bowl with paper-money. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. Your name carries a little more weight here now.
+
+You buy a small porcelain bowl with paper-money. You pay 4000 coins. You add 1 item to your stores. Your name carries a little more weight here now.
 
 ## ev.ev_chinangli_b.choice_3_result
 

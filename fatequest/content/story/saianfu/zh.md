@@ -2,7 +2,7 @@
 unit: saianfu
 lang: zh
 source: en
-source_rev: e5f80d8f361a
+source_rev: d58e07d966f6
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_saianfu_entry.choice_2_result: d553bd7f774d
   ev.ev_saianfu_entry.choice_3_result: 352f06c09c84
   ev.ev_saianfu_a.choice_1_result: f08a6618c94d
-  ev.ev_saianfu_a.choice_2_result: d1113787ed4e
+  ev.ev_saianfu_a.choice_2_result: 295428ab2350
   ev.ev_saianfu_a.choice_3_result: e7615a5f7c24
   ev.ev_saianfu_b.choice_1_result: ab0f94ef6ec9
-  ev.ev_saianfu_b.choice_2_result: 60e102559b5d
+  ev.ev_saianfu_b.choice_2_result: 8f64a8b52356
   ev.ev_saianfu_b.choice_3_result: 9dee9dab3340
   ev.ev_saianfu_a_followup.title: 779c9e27588b
   ev.ev_saianfu_a_followup.body: 6f75662805a5
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_saianfu_a.choice_2_result
 
-你于织户摊购细绢，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往河中府（蒲州）的道路，就此展开在舆图上。
+你于织户摊购细绢，你付出 9000 钱币。你把 1 件货物收入行囊。通往河中府（蒲州）的道路，就此展开在舆图上。
 
 ## ev.ev_saianfu_a.choice_3_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_saianfu_b.choice_2_result
 
-你于粮商摊购生姜，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。此地人谈起你，语气添了几分敬重。
+你于粮商摊购生姜，你付出 2000 钱币。你把 1 件货物收入行囊。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_saianfu_b.choice_3_result
 

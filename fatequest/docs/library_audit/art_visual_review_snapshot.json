@@ -625,7 +625,7 @@
       "reviewed_on": "2026-10-20",
       "visual_review": "agent_visual_representative_sample",
       "content_status": "unknown_requires_review",
-      "observation": "No lenormand JPG deck loader found in current Godot runtime; source attribution separate"
+      "observation": "JPG now resolves through MapArt.lenormand_card; source attribution and full-deck content review remain pending"
     },
     "assets/decks/tarot/tarot-cups-04-full.webp": {
       "sha256": "9f8d744eac404e39b36437fe5ef9bded7abc70a2ca3c287c02110239d918cc8e",
@@ -633,7 +633,7 @@
       "reviewed_on": "2026-10-20",
       "visual_review": "agent_visual_representative_sample",
       "content_status": "illustrated_face_not_fully_reviewed",
-      "observation": "No full tarot deck loader found in current Godot runtime; uses generic symbol fallback"
+      "observation": "Authored Tarot ID now resolves through MapArt.tarot_card; full-deck content review remains pending"
     },
     "assets/decks/tarot/tarot-fool-full.webp": {
       "sha256": "bc7c1ac78c69aab9d3d65cce03f045a56384ea175ec22b54480fcae3e2a15c63",
@@ -641,7 +641,7 @@
       "reviewed_on": "2026-10-20",
       "visual_review": "agent_visual_representative_sample",
       "content_status": "illustrated_face_not_fully_reviewed",
-      "observation": "No full tarot deck loader found in current Godot runtime; uses generic symbol fallback"
+      "observation": "Authored Tarot ID now resolves through MapArt.tarot_card; full-deck content review remains pending"
     },
     "assets/decks/tarot/test.jpg": {
       "sha256": "f7f4b182d2566cfcc4fb1a8087d987d1d5ba29d41902cd03356adcdadbb2620c",

@@ -1,6 +1,8 @@
 class_name IChingMethod
 extends DivinationMethod
 
+const ICHING_ORDER = preload("res://core/divination/iching_order.gd")
+
 ## 易占 — three-coin method, six throws, moving lines.
 ## Port of atlas/packages/engines/src/iching.ts (the 64-hexagram table itself
 ## belongs in content, not here — this file is only the casting logic).
@@ -74,24 +76,29 @@ func to_effects(raw: Dictionary, ctx: DivinationContext) -> Array:
 		})
 
 	# The hexagram itself becomes a codex entry, so casting builds the almanac.
-	effects.append({
-		"op": "codex", "value": "cx-hex-%d" % int(raw.get("primary", 0)),
-		"reason": "iching-recorded-the-hexagram",
-	})
+	var primary_index := ICHING_ORDER.content_index(int(raw.get("primary", -1)))
+	if primary_index >= 0:
+		effects.append({
+			"op": "codex", "value": "cx-hex-%d" % primary_index,
+			"reason": "iching-recorded-the-hexagram",
+		})
 	return effects
 
 
 func reading_keys(raw: Dictionary, _ctx: DivinationContext) -> Array:
-	var primary: int = int(raw.get("primary", 0)) % 64
-	var hex: Dictionary = DivinationData.hexagram(primary)
+	var primary_mask := int(raw.get("primary", -1))
+	var primary := ICHING_ORDER.content_index(primary_mask)
+	var hex: Dictionary = DivinationData.hexagram(primary) if primary >= 0 else {}
 	var keys: Array = []
 	if not hex.is_empty():
 		keys.append(String(hex.get("nameKey", "div.iching.hex.%d" % primary)))
 		keys.append(String(hex.get("adviceKey", "")))
-	else:
+	elif primary >= 0:
 		keys.append("div.iching.hex.%d" % primary)
-	keys.append(DivinationData.result_text_key("iching", primary % 30))
+	if primary >= 0:
+		keys.append(DivinationData.result_text_key("iching", primary % 30))
 	if not (raw.get("moving", []) as Array).is_empty():
-		var derived: int = int(raw.get("derived", 0)) % 64
-		keys.append("div.iching.hex.%d" % derived)
+		var derived := ICHING_ORDER.content_index(int(raw.get("derived", -1)))
+		if derived >= 0:
+			keys.append("div.iching.hex.%d" % derived)
 	return keys.filter(func(k): return String(k) != "")

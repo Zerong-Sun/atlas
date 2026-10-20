@@ -2,7 +2,7 @@
 unit: kenjanfu
 lang: zh
 source: en
-source_rev: 361047aa9df8
+source_rev: 9ce51969a72a
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_kenjanfu_entry.choice_2_result: e32dc4c90511
   ev.ev_kenjanfu_entry.choice_3_result: 048a15a22064
   ev.ev_kenjanfu_a.choice_1_result: 0d83297130b2
-  ev.ev_kenjanfu_a.choice_2_result: 59da4fbc148e
+  ev.ev_kenjanfu_a.choice_2_result: 26a39db63138
   ev.ev_kenjanfu_a.choice_3_result: 22f0fef633bb
   ev.ev_kenjanfu_b.choice_1_result: 63fb6bf187dc
-  ev.ev_kenjanfu_b.choice_2_result: c139f6b1c0b2
+  ev.ev_kenjanfu_b.choice_2_result: e3b8fed29605
   ev.ev_kenjanfu_b.choice_3_result: c75254c68c28
   ev.ev_kenjanfu_a_followup.title: d44e281e1959
   ev.ev_kenjanfu_a_followup.body: 5c36822de598
@@ -131,7 +131,7 @@ stamps:
 
 ## ev.ev_kenjanfu_a.choice_2_result
 
-你于茧市购生丝，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往额里合牙（宁夏）的路。
+你于茧市购生丝，你付出 8000 钱币。你把 1 件货物收入行囊。你标出了通往额里合牙（宁夏）的路。
 
 ## ev.ev_kenjanfu_a.choice_3_result
 
@@ -143,7 +143,7 @@ stamps:
 
 ## ev.ev_kenjanfu_b.choice_2_result
 
-你于军器坊区购漆器，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。军器坊的人提起那位从西路来的买主。
+你于军器坊区购漆器，你付出 7000 钱币。你把 1 件货物收入行囊。军器坊的人提起那位从西路来的买主。
 
 ## ev.ev_kenjanfu_b.choice_3_result
 

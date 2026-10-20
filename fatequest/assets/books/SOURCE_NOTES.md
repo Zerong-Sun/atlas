@@ -9,6 +9,8 @@ clearance record.
 
 Full inventory, missing originals, OCR defects and review tasks:
 [`BOOK_SOURCE_AUDIT_2026-10-20.md`](../../docs/library_audit/BOOK_SOURCE_AUDIT_2026-10-20.md).
+统一的游记卡片、来源标签和翻译提示词见
+[`TEXT_STYLE_PROMPTS.md`](../../docs/library_audit/TEXT_STYLE_PROMPTS.md)。
 
 | Corpus file | Edition | Status |
 |---|---|---|

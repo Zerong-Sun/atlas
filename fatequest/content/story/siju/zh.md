@@ -2,7 +2,7 @@
 unit: siju
 lang: zh
 source: en
-source_rev: 4a4320932b00
+source_rev: b4d9503a503e
 status: translated
 translator: 人工校译
 notes: >
@@ -31,10 +31,10 @@ stamps:
   ev.ev_siju_entry.choice_2_result: 1ae61cfc2e43
   ev.ev_siju_entry.choice_3_result: c08c78563112
   ev.ev_siju_a.choice_1_result: 4fabd42db446
-  ev.ev_siju_a.choice_2_result: 1679c78da4d5
+  ev.ev_siju_a.choice_2_result: aff38de37fa7
   ev.ev_siju_a.choice_3_result: 5913632b2455
   ev.ev_siju_b.choice_1_result: 364aa5258421
-  ev.ev_siju_b.choice_2_result: 8c079194a58a
+  ev.ev_siju_b.choice_2_result: af135dbd533c
   ev.ev_siju_b.choice_3_result: b2514e556e4a
   ev.ev_siju_a_followup.title: 25f724234c99
   ev.ev_siju_a_followup.body: 491d00be5550
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.ev_siju_a.choice_2_result
 
-你于炼糖摊购糖，一注钱款进出，得失皆在掌中。这笔买卖，让你的货舱又添了几分。通往淮阴的道路，就此展开在舆图上。
+你于炼糖摊购糖，你付出 4000 钱币。你把 1 件货物收入行囊。通往淮阴的道路，就此展开在舆图上。
 
 ## ev.ev_siju_a.choice_3_result
 
@@ -144,7 +144,7 @@ stamps:
 
 ## ev.ev_siju_b.choice_2_result
 
-你于火化地旁摊购交钞，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+你于火化地旁摊购交钞，你付出 3000 钱币。你把 1 件货物收入行囊。时运待你，比先前好了几分。
 
 ## ev.ev_siju_b.choice_3_result
 

@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: bff0c047f60d
+source_rev: 6f9ab9f856ed
 status: translated
 translator: 人工校译
 notes: >
@@ -32,9 +32,9 @@ stamps:
   ev.ev_tenduc_entry.choice_3_result: 13820984012f
   ev.ev_tenduc_a.choice_1_result: 82c9bbae84e3
   ev.ev_tenduc_a.choice_2_result: 8681cc799341
-  ev.ev_tenduc_a.choice_3_result: d7d1eda71b71
+  ev.ev_tenduc_a.choice_3_result: 8ae21b255640
   ev.ev_tenduc_b.choice_1_result: 1d1412748f59
-  ev.ev_tenduc_b.choice_2_result: 032f6eee1b38
+  ev.ev_tenduc_b.choice_2_result: 6a943157ac4d
   ev.ev_tenduc_b.choice_3_result: d310296ea62a
   ev.ev_tenduc_a_followup.title: 30719bcaba73
   ev.ev_tenduc_a_followup.body: 9fd87e572e02
@@ -138,7 +138,7 @@ stamps:
 
 ## ev.ev_tenduc_a.choice_3_result
 
-你于教堂门献银钱，银钱易手，囊中为之或增或减。此地人谈起你，语气添了几分敬重。
+你于教堂门献银钱，你付出 120 钱币。此地人谈起你，语气添了几分敬重。
 
 ## ev.ev_tenduc_b.choice_1_result
 
@@ -146,7 +146,7 @@ stamps:
 
 ## ev.ev_tenduc_b.choice_2_result
 
-你向景教织工购色棉布一匹，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。时运待你，比先前好了几分。
+你向景教织工购色棉布一匹，你付出 280 钱币。你把 1 件货物收入行囊。时运待你，比先前好了几分。
 
 ## ev.ev_tenduc_b.choice_3_result
 

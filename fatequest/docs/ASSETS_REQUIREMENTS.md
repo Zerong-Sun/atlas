@@ -22,12 +22,13 @@
 | 音频 | [报告](library_audit/AUDIO_AUDIT_2026-10-20.md) · [逐音频CSV](library_audit/audio_inventory.csv) | [AUDIO_PLAN](AUDIO_PLAN.md) · [MANIFEST](../assets/audio/MANIFEST.md) |
 | 文本 | [报告](library_audit/TEXT_AUDIT_2026-10-20.md) · [140单元队列](library_audit/text_review_inventory.csv) · [92条改写项](library_audit/text_confirmed_rewrite_items.csv) | [TEXT_REQUIREMENTS](TEXT_REQUIREMENTS.md) · [L10N_PLAN](L10N_PLAN.md) |
 | 书籍 | [报告](library_audit/BOOK_SOURCE_AUDIT_2026-10-20.md) · [16库清单](library_audit/book_inventory.csv) · [462段队列](library_audit/book_passage_review.csv) | [来源记录](../assets/books/SOURCE_NOTES.md) · [LORE_PIPELINE](LORE_PIPELINE.md) |
+| 统一风格 | [风格圣经与生产 Prompt](library_audit/STYLE_BIBLE_2026-10-20.md) | 新产物必须记录 prompt、来源、hash 和审阅范围 |
 
 ## 验收口径
 
 每项分别记录：文件存在、技术可读、实际触发、语义/形象对应、质量审阅、来源依据。任一状态不能替代其他状态。“未审”不是“低质量”；“候选疑点”不是“确定错误”。换版后旧审阅仅对旧hash有效。
 
-美术索引674条仅证明注册数量。文本检查器当前成功退出仍会漏检stamp。音频解码、静音启动不证明真实播放或听感。本轮完成核对、清单和文档修正；生产代码、故事正文、音画资产未修改，P0/P1问题仍待处理。
+美术索引674条仅证明注册数量。音频解码、静音启动不证明真实播放或听感。本轮完成清单、统一风格和可安全接入的生产修复：易经编号链、牌组 resolver、92条双语反馈、音频场景调度与音量持久化均已修改并有回归。正式缺图/占位、人类视觉签署、48项听审、书籍底本核验和人工通读仍待处理；不能把自动回归写成内容签署。
 
 ## 复核入口
 

@@ -102,7 +102,8 @@ You watch the gold brocade looms at work. You spend 2 days before the way is cle
 
 ## ev.ev_suju_a.choice_2_result
 
-You buy a length of gold brocade. Money moves — a little the better or the worse for you. The trade fills your hold a little. The weavers' quarter knows the name of the man who paid full price.
+
+You buy a length of gold brocade. You pay 15000 coins. You add 1 item to your stores. The weavers' quarter knows the name of the man who paid full price.
 
 ## ev.ev_suju_a.choice_3_result
 
@@ -114,7 +115,8 @@ You walk the canal gardens with a merchant's clerk. It costs you 1 day on the ro
 
 ## ev.ev_suju_b.choice_2_result
 
-You buy rhubarb from a garden stall. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+You buy rhubarb from a garden stall. You pay 1500 coins. You add 1 item to your stores. A small turn of fortune favours you.
 
 ## ev.ev_suju_b.choice_3_result
 

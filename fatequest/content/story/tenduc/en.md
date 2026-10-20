@@ -106,7 +106,8 @@ You ask the priests what road leads to the Great Kaan's city. The road to Cambal
 
 ## ev.ev_tenduc_a.choice_3_result
 
-You leave a coin offering at the church door. Coin changes hands, and the purse settles. Your name carries a little more weight here now.
+
+You leave a coin offering at the church door. You pay 120 coins. Your name carries a little more weight here now.
 
 ## ev.ev_tenduc_b.choice_1_result
 
@@ -114,7 +115,8 @@ You walk the market and listen in three tongues. It costs you 1 day on the road.
 
 ## ev.ev_tenduc_b.choice_2_result
 
-You buy a roll of coloured cotton cloth from a Nestorian weaver. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. A small turn of fortune favours you.
+
+You buy a roll of coloured cotton cloth from a Nestorian weaver. You pay 280 coins. You add 1 item to your stores. A small turn of fortune favours you.
 
 ## ev.ev_tenduc_b.choice_3_result
 

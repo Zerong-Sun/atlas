@@ -101,7 +101,8 @@ You walk the mulberry gardens with a silkworm keeper. It costs you 1 day on the 
 
 ## ev.ev_kenjanfu_a.choice_2_result
 
-You buy raw silk from a cocoon market. Coin changes hands, and the purse settles. Goods change hands, and your store is the fuller for it. You set the way to Egrigaia on your map.
+
+You buy raw silk from a cocoon market. You pay 8000 coins. You add 1 item to your stores. You set the way to Egrigaia on your map.
 
 ## ev.ev_kenjanfu_a.choice_3_result
 
@@ -113,7 +114,8 @@ You tour the silk-and-gold workshops. You spend 2 days before the way is clear a
 
 ## ev.ev_kenjanfu_b.choice_2_result
 
-You buy lacquerware from an armourer's quarter. Money moves — a little the better or the worse for you. The trade fills your hold a little. The armourers speak of the buyer come from the western road.
+
+You buy lacquerware from an armourer's quarter. You pay 7000 coins. You add 1 item to your stores. The armourers speak of the buyer come from the western road.
 
 ## ev.ev_kenjanfu_b.choice_3_result
 

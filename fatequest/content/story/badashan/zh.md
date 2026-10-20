@@ -2,7 +2,7 @@
 unit: badashan
 lang: zh
 source: en
-source_rev: a9cc7a701236
+source_rev: 6c057b6e1334
 status: translated
 translator: 人工校译
 notes: >
@@ -31,11 +31,11 @@ stamps:
   ev.ev_badashan_entry.choice_2_result: 6ffd0e1d5fff
   ev.ev_badashan_entry.choice_3_result: 9a5359488648
   ev.ev_badashan_a.choice_1_result: 793fd74d1d4c
-  ev.ev_badashan_a.choice_2_result: 60c93144f4e8
+  ev.ev_badashan_a.choice_2_result: 900f888518ee
   ev.ev_badashan_a.choice_3_result: 12b36e6c9b46
   ev.ev_badashan_b.choice_1_result: 32615f8986b8
-  ev.ev_badashan_b.choice_2_result: 2a77858f36d2
-  ev.ev_badashan_b.choice_3_result: b62fc6bbe15a
+  ev.ev_badashan_b.choice_2_result: 3bc1dc669b10
+  ev.ev_badashan_b.choice_3_result: 993fabd1d140
   ev.ev_badashan_a_followup.title: 79d634adcb2a
   ev.ev_badashan_a_followup.body: 30a35899294f
   ev.ev_badashan_a_followup.choice_1: b2231f566a98
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_badashan_a.choice_2_result
 
-你购青金石原块一方，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你标出了通往巴里黑的路。
+你购青金石原块一方，你付出 850 钱币。你把 1 件货物收入行囊。你标出了通往巴里黑的路。
 
 ## ev.ev_badashan_a.choice_3_result
 
@@ -152,11 +152,11 @@ stamps:
 
 ## ev.ev_badashan_b.choice_2_result
 
-你付金请书吏教山中语数言，一注钱款进出，得失皆在掌中。从此山民见了你，会直呼你的名字。气运稍稍偏向于你。
+你付金请书吏教山中语数言，你付出 200 钱币。从此山民见了你，会直呼你的名字。气运稍稍偏向于你。
 
 ## ev.ev_badashan_b.choice_3_result
 
-你向有照经纪购巴剌斯红宝石一枚，银钱易手，囊中为之或增或减。货物易手，你的仓廪因之更满。你把这番见闻记入行纪。
+你向有照经纪购巴剌斯红宝石一枚，你付出 2200 钱币。你把 1 件货物收入行囊。你把这番见闻记入行纪。
 
 ## ev.ev_badashan_a_followup.title
 
