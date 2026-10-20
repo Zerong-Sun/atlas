@@ -642,14 +642,6 @@
       "visual_review": "agent_visual_representative_sample",
       "content_status": "illustrated_face_not_fully_reviewed",
       "observation": "Authored Tarot ID now resolves through MapArt.tarot_card; full-deck content review remains pending"
-    },
-    "assets/decks/tarot/test.jpg": {
-      "sha256": "f7f4b182d2566cfcc4fb1a8087d987d1d5ba29d41902cd03356adcdadbb2620c",
-      "reviewer": "Codex agent visual inspection",
-      "reviewed_on": "2026-10-20",
-      "visual_review": "agent_visual_representative_sample",
-      "content_status": "unknown_requires_review",
-      "observation": ""
     }
   }
 }

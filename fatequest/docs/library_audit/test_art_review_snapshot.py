@@ -17,7 +17,7 @@ class SnapshotTests(unittest.TestCase):
         cls.records = json.loads((HERE / "art_visual_review_snapshot.json").read_text())["records"]
 
     def test_historical_observations_match_or_require_re_review(self):
-        self.assertEqual(len(self.records), 81)
+        self.assertEqual(len(self.records), 80)
         for path, record in self.records.items():
             with self.subTest(path=path):
                 sha = hashlib.sha256((inventory.ROOT / path).read_bytes()).hexdigest()

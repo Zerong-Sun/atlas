@@ -1,18 +1,18 @@
 {
-  "files": 2356,
-  "rows": 2374,
-  "images": 1192,
+  "files": 2354,
+  "rows": 2372,
+  "images": 1191,
   "image_counts_by_role": {
     "archive": 169,
     "source_sheet": 58,
-    "production_candidate": 887,
+    "production_candidate": 886,
     "source_reference": 78
   },
   "visual_review_counts": {
     "not_visually_reviewed": 1107,
     "agent_visual_defect_sample": 15,
     "agent_visual_single_figure_review": 23,
-    "agent_visual_representative_sample": 7,
+    "agent_visual_representative_sample": 6,
     "agent_visual_placeholder_sheet_review": 34,
     "agent_visual_source_sample": 4,
     "needs_re_review": 2
@@ -20,8 +20,8 @@
   "art_root": 674,
   "registry": 674,
   "technical": {
-    "not_image": 1164,
-    "decodes": 1158,
+    "not_image": 1163,
+    "decodes": 1157,
     "xml_parses_visual_unchecked": 34,
     "missing_file": 18
   },
