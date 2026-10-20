@@ -29,6 +29,9 @@
 六个方面的复核、追加修复与验证证据见
 [`docs/SIX_DIMENSION_REVIEW_2026-10-20.md`](docs/SIX_DIMENSION_REVIEW_2026-10-20.md)。
 
+资料库库存、缺失/占位、确定需改写及未审阅项目见
+[资料库整改总表](docs/library_audit/README.md)。当前素材接线与译文检查存在已记录缺口，机器门禁通过不代表全库质量审阅通过。
+
 **编辑器**：用 Godot 4.7.1 打开本目录（存在 `project.godot`），F5 运行。
 
 **无头测试**（不需要图形界面）：

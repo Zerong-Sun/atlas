@@ -1,0 +1,8 @@
+language,key,path,repeat_count,text,review_state
+en,ev.ev_kiovia_mentor_runes.choice_1_result,content/story/t2-div-wire/en.md,2,"You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.",候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+en,ev.ev_caffa_mentor_runes.choice_1_result,content/story/t2-div-wire/en.md,2,"You pay and learn the runes. Coin changes hands, and the purse settles. You spend 7 days before the way is clear again. The art is yours now, to read on any road. A mark is set on this affair.",候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+en,ev.ev_road_jiaobei_counsel.choice_2_result,content/story/t2-div-wire/en.md,3,You walk on. The matter is marked and will not be forgotten.,候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+en,ev.ev_road_geomancy_counsel.choice_2_result,content/story/t2-div-wire/en.md,3,You walk on. The matter is marked and will not be forgotten.,候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+en,ev.ev_road_runes_counsel.choice_2_result,content/story/t2-div-wire/en.md,3,You walk on. The matter is marked and will not be forgotten.,候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+zh,ev.ev_kiovia_mentor_runes.choice_1_result,content/story/t2-div-wire/zh.md,2,你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。,候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质
+zh,ev.ev_caffa_mentor_runes.choice_1_result,content/story/t2-div-wire/zh.md,2,你付资学卢恩，银钱易手，囊中为之或增或减。你在路上用去 7 日光阴。从今往后，无论行至何处，你都可读此法。这件公案，就此有了着落。,候选复核：共享系统/反馈可合理复用；不能单凭重复判劣质

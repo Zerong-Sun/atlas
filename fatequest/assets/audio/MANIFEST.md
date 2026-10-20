@@ -22,7 +22,7 @@ Generated / composed per `docs/AUDIO_PLAN.md` §7.
 | `ambient/wind_sand.ogg` | CC0 BigSoundBank → `compose_loops.py` |
 | `ambient/waves.ogg` | CC0 BigSoundBank → `compose_loops.py` |
 | `ambient/ropes_mast.ogg` | CC0 BigSoundBank → `compose_loops.py` |
-| `ambient/market_crowd.ogg` | CC0 BigSoundBank → `compose_loops.py` (low-passed; no intelligible speech) |
+| `ambient/market_crowd.ogg` | CC0 BigSoundBank → `compose_loops.py` (low-passed; intelligibility not yet listening-reviewed) |
 | `ambient/camel_bells.ogg` | CC0 BigSoundBank → `compose_loops.py` |
 | `ambient/horse_hooves.ogg` | CC0 BigSoundBank → `compose_loops.py` |
 | `ambient/river.ogg` | CC0 BigSoundBank → `compose_loops.py` |
@@ -40,4 +40,12 @@ Provenance for CC0 downloads: `tools/audio/_cc0_cache/SOURCES.json` (gitignored 
 - Scales are **secular gestures** (AUDIO_PLAN §1), not faithful maqām/rāga/chant.
 - No adhān, Qur'ān, liturgical chant, or sacred recitation.
 - Procedural UI SFX (bell, coin, dice, …) stay in `game/audio/` at runtime (§7.3).
-- Unmapped ambient wiring: `horse_hooves` · `rain` · `river` → `SceneDensity.ambients()`.
+- Wiring audit 2026-10-20: `horse_hooves`, `rain`, `river` are mapped in `SceneDensity.ambients()`; `seabirds` remains unmapped.
+
+## Audit status 2026-10-20
+
+See [inventory CSV](../../docs/library_audit/audio_inventory.csv) and [audio audit](../../docs/library_audit/AUDIO_AUDIT_2026-10-20.md). All 37 OGG decode as 44.1 kHz mono; total size is 9,740,026 bytes. File availability and generator implementation do not mean listening, cultural suitability or seamless-loop acceptance: all listening reviews are pending, and 16 files have endpoint jumps above 0.1 full-scale requiring review.
+
+The 20 stems and 5 sacred_blur beds are synthetic candidates. No current city uses `latin`, and no prologue call selecting it was found. Several scene mappings are not reached on site-event changes; six SFX generator families have no runtime caller. A1–A8 are partially implemented, not uniformly accepted.
+
+Local CC0 cache and metadata exist for 12 sources, but are gitignored; a versioned source-to-output hash/build chain is still missing. `camel_bells` uses a documented Santa/reindeer-bell substitute, and the market recording is from France. This supplements the provenance above; it does not redefine those recordings as historical location recordings. Two official detail pages (0585 and 2728) were checked for CC0 on 2026-10-20; the other ten were not revalidated online in this audit.

@@ -1,0 +1,17 @@
+{
+  "corpora": 16,
+  "passages": 462,
+  "places": 276,
+  "stories": 186,
+  "with_raw_and_chapters": 6,
+  "desk_books": 8,
+  "reading_cards": 5,
+  "reading_card_statuses": {
+    "wired": 2,
+    "playable_sample": 1,
+    "source_needed": 1,
+    "source_verified_not_wired": 1
+  },
+  "replacement_character_passages": 8,
+  "caution": "Declared references and source labels are inventory facts, not approval or legal conclusions."
+}

@@ -1,0 +1,24 @@
+{
+  "units": 140,
+  "story_en": 3955,
+  "story_zh": 3955,
+  "runtime_en": 5555,
+  "runtime_zh": 5555,
+  "stamp_current": 3946,
+  "stamp_stale": 0,
+  "stamp_absent": 9,
+  "tool_unparsed_hyphen_stamps": 254,
+  "status_counts": {
+    "translated": 112,
+    "reviewed": 28
+  },
+  "proofed_true": 20,
+  "human_translator_claim": 108,
+  "duplicate_rows": 7,
+  "events": 431,
+  "cities": 103,
+  "empty_sites": 62,
+  "empty_sites_market": 38,
+  "runtime_only_distinct_keys": 1600,
+  "runtime_only_language_rows": 3200
+}

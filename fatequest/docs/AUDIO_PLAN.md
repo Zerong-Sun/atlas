@@ -9,25 +9,20 @@
 
 ## 0. 现状与约束
 
+**2026-10-20事实复核**：[音频审计](library_audit/AUDIO_AUDIT_2026-10-20.md)与[逐文件清单](library_audit/audio_inventory.csv)是当前验收依据。37个OGG均存在且可解码，但本轮未听审；下文调式、混响、无缝循环与音质描述属于设计目标，不能作为已完成证明。A1–A8状态已在§8改为分项事实。
+
 | 项 | 现状 |
 |---|---|
 | 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）· CC0 场景床 + 混合 stem |
-| 运行时 | `game/audio/audio_director.gd`（A1–A6）· Autoload `AudioDirector` · 4 ambient 槽 |
+| 运行时 | Autoload `AudioDirector` · 20个AudioStreamPlayer音乐槽 + 4个ambient槽；headless禁用文件播放 |
 | 旧版实现 | `archive/web-version/js/audio.js` — **作废** |
-| 包体压力 | ~8–10 MB 量级；iOS/Steam 分发可接受 |
+| 包体压力 | 成品OGG共9,740,026字节（约9.74 MB）；分发目标尚待完整包体核验 |
 | 内核约束 | 音频**不得**写 `WorldState`；表现层只订阅信号 |
 | 管线 | `tools/audio/fetch_cc0.py` · `compose_loops.py` · `generate_melody_color.py` |
 
-**实测的三条轴取值**（来自 `content/tables/`，不是设想）：
+**2026-10-20内容统计**：103座城市；431条事件。城市culture为islamic34、east_asia27、steppe23、indian_ocean19、latin0；未发现序章选择latin声床的调用。事件kind为entry103、road81、site107、consequence134、mentor6。
 
-```
-文化 culture   islamic 34 · east_asia 27 · steppe 23 · indian_ocean 18   （+ latin：序章用）
-地带 band      china 55 · west_asia 47 · central_asia 34 · india 20 · steppe 19 · maritime 4
-场景 scene.bg  caravan-city 51 · canal-city 32 · desert-town 30 · monsoon-port 15
-               desert-night 15 · palace-gate 9 · steppe-camp 7 · oasis-town 7
-               spice-harbour 3 · temple-interior 2 · cave-shrine 1 · caravanserai 1
-事件 kind      entry 102 · road 40 · site 37
-```
+当前事件scene.bg：caravan-city63、canal-city49、desert-town41、steppe-camp28、monsoon-port27、desert-night23、oasis-town10、palace-gate9、spice-harbour8、scene-quanzhou-harbor6、temple-interior3、desert-market1、caravanserai1、cave-shrine1。统计是内容覆盖，**不是声景触发覆盖**；`set_place`目前只由到达流程调用。
 
 ---
 
@@ -62,7 +57,7 @@ GDD 写「程序化合成」。**纯 GDScript 做 DSP 是错的选择**——逐
 ```
 构建期（tools/audio/）          运行时（game/audio/）
 ──────────────────────         ─────────────────────────────
-每文化 4 层 stem 循环     →    AudioStreamInteractive 切换
+每文化 4 层 stem 循环     →    AudioStreamPlayer × 20 + Tween
 （drone/pulse/melody/color）    + 总线滤波与音量包络做情绪
                           →    程序化只做小装饰音
                                （钟、锣、风、驼铃、浪）
@@ -70,12 +65,12 @@ GDD 写「程序化合成」。**纯 GDScript 做 DSP 是错的选择**——逐
 
 | | 分层 stem | 纯程序化 |
 |---|---|---|
-| 音质 | 好 | 单薄 |
-| 体积 | 约 17 MB（见 §5） | ~0 |
+| 音质 | 需素材与混音听审 | 需合成与混音听审 |
+| 体积 | 目前全部OGG约9.74 MB | 无离线文件；仍有运行时PCM缓冲 |
 | 变化性 | 靠组合 | 无限 |
 | GDScript 开销 | 低 | 高 |
 
-**这仍然符合 GDD 的本意**：变化来自**组合**而非一首首曲子，不需要庞大曲库，也不会在 400 天旅程里听腻同一段旋律。Godot 4.3+ 的 `AudioStreamInteractive` 正是为此设计，本项目锁 4.7.1，可直接用。
+**设计意图**：变化来自**组合**而非一首首曲子，控制曲库规模。当前实现采用多个`AudioStreamPlayer`与Tween，并未使用`AudioStreamInteractive`。多日循环是否疲劳、层间连续性是否自然仍需听审。
 
 ---
 
@@ -91,7 +86,7 @@ GDD 写「程序化合成」。**纯 GDScript 做 DSP 是错的选择**——逐
 | `indian_ocean` | 持续音上的旋律移动（rāga 之**结构**思路，不引用具体 rāga） | 持续音（tanpura 类）· 拨弦 · 手鼓 | 80–96 | 循环渐密 |
 | `latin` | 中世纪教会调式（多利亚 / 混合利底亚） | 拨弦（诗琴类）· 擦弦（维埃尔类）· 管风琴远景 · **模糊圣咏轮廓** | 64–72 | 二部 organum 式平行 |
 
-**跨文化过渡**：玩家跨 band 时不硬切。用 8–15 秒交叉淡入，且**两套 stem 短暂并存**——这是 GDD P3 在听觉上的落点：文化边界是渐变的，不是墙。
+**跨文化过渡目标**：玩家跨文化地区时不硬切。当前代码按city.culture切换，不直接按band切换；用 8–15 秒交叉淡入，且**两套 stem 短暂并存**——这是 GDD P3 在听觉上的落点：文化边界是渐变的，不是墙。
 
 > 番坊（`ev-zayton-fanfang`）是最好的例子：波斯语、阿拉伯语与本地话在同一屋檐下讨价还价。那里应当**同时**听见 `islamic` 与 `east_asia` 的层，各 50%。
 
@@ -149,7 +144,7 @@ static func derive(res: EffectExecutor.EffectResult, route: Dictionary, city: Di
 
 内核已保证 `(种子, 输入) → 同一世界`（`ARCHITECTURE.md` §2.3）。把音乐的变奏也**从世界状态取种**，会得到一个免费的好性质：
 
-> **同一座城在同一天，永远是同一段声音。**
+> **目标：同一座城在同一天具有可复现的听觉片段。当前仅独立RNG种子成立，播放定位仍受已播放层历史影响，不能视为完整验收。**
 
 玩家会记得「刺桐的声音」。这不是技术炫耀——它让地方产生记忆锚点，正是一部旅行游戏最需要的东西。
 
@@ -172,8 +167,8 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 | `melody` | 旋律动机 | 紧张时撤除 |
 | `color` | 装饰音色 | 惊叹时加入 |
 
-**规格**：单声道 OGG Vorbis ~96 kbps，60 秒无缝循环。
-**体积估算**：5 × 4 × 60s × 96kbps ≈ **17 MB**。相对 179 MB 现状可接受。
+**规格目标**：单声道 OGG Vorbis ~96 kbps，60 秒无缝循环。当前20条stem均为44.1 kHz/mono/60秒；端点连续性与实际循环听审未通过验收。
+**体积估算**：5 × 4 × 60s × 96kbps ÷ 8 ≈ **14.4 MB**（理论固定码率，不是实际包体）。相对 179 MB 现状可接受。
 
 ### 7.2 环境音 — 约 12 段
 
@@ -193,14 +188,22 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 
 | 序 | 内容 | 验收 | 状态 |
 |---|---|---|---|
-| A1 | 音频总线与静音／音量设置 | 有开关，默认可关 | ✅ `default_bus_layout.tres` + 静音钮 |
-| A2 | 程序化装饰音（§7.3） | 点选项有反馈声 | ✅ `game/audio/sfx.gd` |
-| A3 | 单文化单层 drone（先做 `east_asia`） | 进刺桐有持续声底 | ✅ stem 播放 |
-| A4 | 场景类密度切换（§4 的 6 类） | 沙漠夜明显更空 | ✅ `scene_density.gd` |
-| A5 | 五文化全层 + 跨文化交叉淡入 | 跨 band 听得出变化 | ✅ 10s 交叉；番坊双床 |
-| A6 | 情绪调制（§5） | 高风险路段听感变紧 | ✅ `mood.gd` + Music 低通 |
-| A7 | CC0 场景床 + 未映射 ambient 接线 | 港口有河/雨，旷野有马蹄 | ✅ BigSoundBank CC0 + `SceneDensity` |
-| A8 | melody/color 加厚（保留 drone/pulse） | 旋律层不再单薄 | ✅ `generate_melody_color.py` |
+| A1 | 音频总线与静音／音量设置 | 有开关，默认可关 | 部分：总线、静音UI、音量API；缺音量UI/持久化，待设备验证 |
+| A2 | 程序化装饰音（§7.3） | 点选项有反馈声 | 部分：11类生成器，page/coin/click/wood/tick有调用；另6类未接线，未听审 |
+| A3 | 单文化单层drone | 进刺桐有持续声底 | 文件与播放器具备；循环与真实设备播放待验 |
+| A4 | 场景类密度切换 | 沙漠夜明显更空 | 配置7类含journey；站点切换接线不全，无真实混响效果 |
+| A5 | 五文化全层 + 跨文化交叉淡入 | 跨文化听得出变化 | 20文件、10秒Tween具备；latin未触发、番坊站点未接入，待听审 |
+| A6 | 情绪调制 | 高风险路段听感变紧 | 推导/低通/增益具备；color零乘数、sacred槽溢出、切换连续性待修 |
+| A7 | CC0场景床与ambient接线 | 环境符合地点与路线 | 12文件、11名称映射；seabirds未接线，海路马蹄/港口固定雨河声待修；来源链待补 |
+| A8 | melody/color加厚 | 旋律层达到审听标准 | 10条合成候选文件存在；构建seed稳定性和实际听感未验收 |
+
+### 当前优先待办
+
+1. 补事件/站点、番坊的`set_place`接线；按陆海路线、港口类型与天气选环境音。
+2. 复核16条端点差值大于0.1的循环；修color开启、sacred槽位、ambient重启和SFX序列问题。
+3. 确定latin与未调用SFX的使用范围；实现音量UI及设置持久化。
+4. 固定构建seed、保存原始/成品hash与稳定来源许可证据；保留替代录音标签。
+5. 逐文件、循环、五文化组合、圣所场景做真实设备听审与敏感读者审阅；通过后再签署A1–A8。
 
 **A1 先做**：可访问性不是收尾工作。有人对持续音敏感，必须能一键静音。
 
@@ -211,7 +214,7 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 音频层遵守 `ARCHITECTURE.md` 的分层铁律：
 
 - `game/audio/` 属 L2 表现层，**不得**被 `core/` 引用
-- 只订阅 `GameContext` 的 `state_changed` / `day_advanced` / `event_fired` 信号
+- 当前由`main.gd`显式调用`set_place`、`set_travel`、`on_effect_result`等；并未实现原计划所述GameContext音频信号订阅
 - **不得**写 `WorldState`；情绪是渲染派生量，不是世界状态
 - 音乐 RNG 独立 fork（§6）
 

@@ -1,107 +1,46 @@
 # 素材总索引 · ASSETS REQUIREMENTS
 
-**2026-08-07 · Godot v3.0 唯一维护线。** 本文汇总美术、音频、文本三类素材的**实测库存、接线状态、缺口与文档入口**。原则：**已有尽量接线使用，不丢文件；重复副本归档并注明 canonical 路径。**
+**当前核对：2026-10-20 · Godot 维护线。** 本页是美术、音频、游戏文本和书籍资料的统一入口。逐项优先级与验收出口见[资料库整改总表](library_audit/README.md)。旧文档的“全部接入”“全部完成”不能代替当前内容质量验收。
 
----
+## 当前库存与真实缺口
 
-## 文档地图
-
-| 类型 | 需求/现状 | 执行计划 | 资产目录 |
+| 资料 | 已有 | 确认缺口/问题 | 尚待审阅 |
 |---|---|---|---|
-| **美术** | [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) | [`ART_TODO.md`](../assets/art/ART_TODO.md) | `assets/art/` · `assets/decks/` |
-| **音频** | [`AUDIO_PLAN.md`](AUDIO_PLAN.md) | A1–A8 ✅ | [`assets/audio/MANIFEST.md`](../assets/audio/MANIFEST.md) |
-| **文本** | [`TEXT_REQUIREMENTS.md`](TEXT_REQUIREMENTS.md) | [`PLAN.md`](PLAN.md) · [`L10N_PLAN.md`](L10N_PLAN.md) | `content/story/` · `content/i18n/` |
-| **多语言** | [`L10N_PLAN.md`](L10N_PLAN.md) | B1–B4 ✅ | `content/story/<unit>/{en,zh}.md` |
-| **动画** | [`ANIMATION_PLAN.md`](ANIMATION_PLAN.md) | N0–N3 ✅ | `game/fx/` · `game/shaders/` |
-| **现状 hub** | [`STATUS.md`](STATUS.md) | — | — |
+| 美术 | 849个生产候选图像文件，含1张塔罗测试图；另129归档、58源组图 | 塔罗缺38文件；旧con/mazu随从矩阵缺18文件；易经34占位；多人肖像、未拆场景和人物错配；易经结果按错误编号选图 | 81项有代理视觉观察，其余768生产候选未目检；人类美术/史实签署另待补 |
+| 音乐/环境音 | 37 OGG：20 stem+12环境床+5 sacred_blur；11类程序SFX | 清单内OGG无缺失；场所切换、海路环境、color/sacred调度有缺口；6类SFX未找到调用；16文件循环端点需排查 | 全部48清单项未实际听审；合成音色不能冒称真实传统器乐录音 |
+| 游戏文本 | 140 story单元，中英各3955键；运行词典各5555键 | 92条交易反馈需重写；9缺stamp；254现有stamp被解析器漏读；103城缺独立短简介，76市集缺专属介绍 | 140单元需补当前版本审校证据；另1600运行键需定位维护来源 |
+| 书籍资料 | 16语料库、462段（276 places+186 stories）；8册入书案 | 仅6库同时有本地原文及拆章；平托机译/OCR问题；两种现代译本版本声明待核；法德兰选集作者归属待拆 | 462段原文、年代、翻译、演绎边界与编辑签署未闭合；精读卡仅5张 |
 
----
+计数不能直接相加为制作预算。18个旧随从文件缺口、44个当前无肖像随从和已隔离错配图有重叠；通用职业图也可能覆盖多名匿名人物。34张易经占位是缺正式图，不是缺文件。62座无sites城市仍有入城正文，其中38座有市集。
 
-## 1. 美术（2026-08-07 实测 · 人物矩阵补查）
+## 逐项列表与系统需求
 
-```
-assets/art/*.webp（根目录）     674 张
-  _archive/（抓图归档）         128 张   ← 生产图之外的 Chat 变体，勿删
-  _sheets/（组图原片）            58 张
-assets/decks/iching/             64 文件（30 真图 + 34 占位 <30KB 线描）
-assets/decks/tarot/              40/78 张（22 大阿卡纳 + 权杖全组 + 圣杯 2–4）
-assets/astrodice/                34 张 SVG 线稿（24 宫 + 20 行星 + 24 星座，非 webp 画作）
-人物立绘（npc/npc-job/retainer/mentor）  96 张 · 矩阵见 ART_REQUIREMENTS.md §7
-```
-
-| 接线 | 数量 | 说明 |
+| 类别 | 审计/完整清单 | 需求与生产规范 |
 |---|---|---|
-| Godot 运行时（`MapArt` + `art_wire_index.json`） | **674** | 全量可解析 |
-| **未接线** | **0** | S1c ✅ 2026-07-30 |
+| 总清单 | [整改总表](library_audit/README.md) | [引擎总需求](FATEQUEST_ENGINE_REQUIREMENTS.md) §0.5 |
+| 美术 | [报告](library_audit/ART_AUDIT_2026-10-20.md) · [逐文件CSV](library_audit/art_inventory.csv) | [ART_REQUIREMENTS](ART_REQUIREMENTS.md) · [ART_TODO](../assets/art/ART_TODO.md) |
+| 音频 | [报告](library_audit/AUDIO_AUDIT_2026-10-20.md) · [逐音频CSV](library_audit/audio_inventory.csv) | [AUDIO_PLAN](AUDIO_PLAN.md) · [MANIFEST](../assets/audio/MANIFEST.md) |
+| 文本 | [报告](library_audit/TEXT_AUDIT_2026-10-20.md) · [140单元队列](library_audit/text_review_inventory.csv) · [92条改写项](library_audit/text_confirmed_rewrite_items.csv) | [TEXT_REQUIREMENTS](TEXT_REQUIREMENTS.md) · [L10N_PLAN](L10N_PLAN.md) |
+| 书籍 | [报告](library_audit/BOOK_SOURCE_AUDIT_2026-10-20.md) · [16库清单](library_audit/book_inventory.csv) · [462段队列](library_audit/book_passage_review.csv) | [来源记录](../assets/books/SOURCE_NOTES.md) · [LORE_PIPELINE](LORE_PIPELINE.md) |
 
-**仍缺出图**（规格见 [`ART_REQUIREMENTS.md`](ART_REQUIREMENTS.md) §2 / §7）：易经 31–64（34 张占位）、塔罗小阿卡纳（38 张）、**随从立绘 con/mazu 两套（18 张）**、`mentor-tarot` 内容错配重绘（1 张）。P3 chr 重绘与白图泰 6+18 已交付；货币／贴纸／契约已交付；雇佣签契屏见 `game/ui/hire_contract.gd`。
+## 验收口径
 
-**归档策略**：
+每项分别记录：文件存在、技术可读、实际触发、语义/形象对应、质量审阅、来源依据。任一状态不能替代其他状态。“未审”不是“低质量”；“候选疑点”不是“确定错误”。换版后旧审阅仅对旧hash有效。
 
-| 路径 | 用途 |
-|---|---|
-| `assets/art/_archive/chats/` | ChatGPT 对话全量变体 + `index.json` |
-| `assets/art/_archive/scene-region-*-wrong-content.webp` | 已替换的错误底板备份 |
-| `assets/art/_sheets/` | contact sheet 原图，裁切源 |
-| `docs/archive/art-prompts/` | 与 `assets/art/ART_PROMPTS_*.md` 重复的 docs 副本（已归档） |
+美术索引674条仅证明注册数量。文本检查器当前成功退出仍会漏检stamp。音频解码、静音启动不证明真实播放或听感。本轮完成核对、清单和文档修正；生产代码、故事正文、音画资产未修改，P0/P1问题仍待处理。
 
-**Prompt 权威路径**：`assets/art/ART_PROMPTS*.md`。
+## 复核入口
 
----
-
-## 2. 音频（2026-07-26 实测）
-
-```
-assets/audio/          37 个 .ogg
-  stems/               20   （5 文化 × 4 层）
-  ambient/             17   （12 CC0 场景床 + 5 sacred_blur_*）
-  sfx/                 —    （程序化，见 game/audio/sfx.gd）
-```
-
-| 里程碑 | 状态 |
-|---|---|
-| A1–A8 | ✅ |
-| 三轴：文化 × 场景 × 情绪 | ✅ |
-
-详见 [`AUDIO_PLAN.md`](AUDIO_PLAN.md)。
-
----
-
-## 3. 文本（2026-07-31 · 当前文本生产基线）
-
-```
-content/story/         109 单元 · {en,zh}.md
-content/i18n/          en/zh 各 3179 条 · 缺 0
-content/tables/events/ 332 条（entry 102 · site 93 · mentor 12 · road 81 · consequence 50）
-glossary               97 条
-stamps                 1838 current · 0 stale
-```
-
-| 任务 | 量 | 状态 |
-|---|---|---|
-| T3–T6 | — | ✅ |
-| P5 入城加长 | 5 城 | ✅ axuma/merva/ctesiphon/bethleem/ephesus |
-
----
-
-## 4. 验收命令
+在 `fatequest/` 下执行：
 
 ```bash
-cd fatequest
-python3 tools/art/audit.py              # 美术完整性（需 pillow+numpy）
-node tools/validate/validate.mjs        # 28 道内容门禁
-node tools/lore/story.mjs check         # 译文时效
-godot --headless --path . --script tests/run_tests.gd
+python3 tools/lore/audit_library_sources.py
+python3 tools/lore/audit_reading_cards.py
+python3 docs/library_audit/build_art_inventory.py  # 需Pillow
+python3 docs/library_audit/test_art_review_snapshot.py
+node tools/lore/l10n.mjs report --lang zh
+node tools/lore/story.mjs check                   # 已知漏检见文本审计
+node tests/test_i18n_lines.mjs
 ```
 
----
-
-## 5. Steam 上架素材优先级
-
-1. ~~接线现有素材~~ ✅ 674/674
-2. ~~动画 N2–N3~~ ✅
-3. ~~chr 底板重绘 + 白图泰专图~~ ✅ 2026-07-30
-4. **随从立绘 con/mazu 两套（18 张）** — 人物矩阵补齐，`retainers.json` 已覆盖 east_asia / indian_ocean 文化
-5. **易经下半（34 张占位）** — 牌组完整度 polish
-6. **塔罗小阿卡纳（38 张）** — 牌组完整度 polish
-7. **文本多轮互动与正式文案** — `TEXT_REQUIREMENTS.md` §4–§10
+音频解码方法、版本和听审边界见音频报告。这些检查不代替全库美术内容、人类双语通读或听审。归档和源组图保留，不计作生产完成；Prompt权威路径仍为 `assets/art/ART_PROMPTS*.md`。

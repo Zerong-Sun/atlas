@@ -1,0 +1,32 @@
+{
+  "files": 2111,
+  "rows": 2167,
+  "images": 1036,
+  "image_counts_by_role": {
+    "archive": 129,
+    "source_sheet": 58,
+    "production_candidate": 849
+  },
+  "visual_review_counts": {
+    "not_visually_reviewed": 955,
+    "agent_visual_defect_sample": 15,
+    "agent_visual_single_figure_review": 23,
+    "agent_visual_representative_sample": 9,
+    "agent_visual_placeholder_sheet_review": 34
+  },
+  "art_root": 674,
+  "registry": 674,
+  "technical": {
+    "not_image": 1075,
+    "decodes": 1002,
+    "xml_parses_visual_unchecked": 34,
+    "missing_file": 56
+  },
+  "missing": {
+    "decks/tarot": 38,
+    "art/retainer": 18
+  },
+  "tarot_expected": 78,
+  "tarot_actual": 40,
+  "iching_actual": 64
+}

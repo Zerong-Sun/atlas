@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "scope": "Agent visual observations only; not human art or historical approval. Labels apply only to the exact SHA256 recorded.",
+  "art_and_history_signoff": "pending human review",
+  "records": {
+    "assets/art/mentor-astrodice.webp": {
+      "sha256": "c951272feb12dd60b7fbc8ebe50574babdd112314689f2cfdfd1aa3a51f82dd0",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-bazi.webp": {
+      "sha256": "451ea36e8059f5414df3ab8ee1ffa9bf2bf4077fc415165c95075eaf6294a126",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/mentor-dream.webp": {
+      "sha256": "c77bf0885f1eae8b4a31de7222e8cbd563652cf91deebf7aa638e756ef944094",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-iching.webp": {
+      "sha256": "34198d126636409c70277720abce4b82755b1b1e5548a0595372c5a5d94d3ef2",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-jiaobei.webp": {
+      "sha256": "513d60e0971172170fa3c08ed7e67de76a8cbc171f5141f8e7c1725d1ea715bf",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-lenormand.webp": {
+      "sha256": "ada3107b27bf650f65ca12629d47219d4c58c2b6de290e74c1adac3c92187fa6",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-meihua.webp": {
+      "sha256": "8af63e209696735924e3d5b4c192afb9e188160f9581fb56fe462888de0ccdf8",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-runes.webp": {
+      "sha256": "e94906c1bcc1b26e1d36d151ce803c5f9b903b26022bb0ddc51785dddc7cc1b3",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-tarot.webp": {
+      "sha256": "5a5fc5eb5f4777d8a954386943855121e49dd90b1a6ce51174815d9a47f73d59",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures; dress does not match Frankish widow brief; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/mentor-western.webp": {
+      "sha256": "f2e8bf596a79c0abb70b11805e4ae60ffcc11d432b9728ebd90c5dde44b626d6",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "single_scene_or_figure_reviewed",
+      "observation": "Visual subject inspected 2026-10-20; not a blanket historical accuracy approval"
+    },
+    "assets/art/npc-healer-isl.webp": {
+      "sha256": "368119474a6aec2a404f9fe539e8c91adfd4d11675e53a0da9efeb51589e3850",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-inn-isl.webp": {
+      "sha256": "a6df2ee4d6d5a6589b1fa07be15e6175bee14d884c35e30f685e21810475fcf3",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-job-guard-isl.webp": {
+      "sha256": "8375cdc70b6d2acf4e4d4d0c0745be6705018815c12cbc92ac7c9d60892d9ea8",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-job-guide-con.webp": {
+      "sha256": "31396b422d46117a3b2bed36316cd4cb7a0601dd93f15c5a51633c41802f46c0",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "same illustration as chr guide; does not establish east_asia identity; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/npc-job-guide-isl.webp": {
+      "sha256": "573cef3b8cfab8f2d93d583c3a26ce025922998a78487cb94a1b9a155d0dea0b",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-job-guide-mazu.webp": {
+      "sha256": "573cef3b8cfab8f2d93d583c3a26ce025922998a78487cb94a1b9a155d0dea0b",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "same illustration as isl guide; does not establish indian_ocean identity; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/npc-job-scribe-isl.webp": {
+      "sha256": "4520b56b4df9673889f85055ee0c2144cf208c4a576c67bba72b155779b46dd9",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-market-chr.webp": {
+      "sha256": "71ee9ad07fb55c5675bc976e3f67ce2ffb4f705b0b715bcada0c2e6fa808246f",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-market-con.webp": {
+      "sha256": "f9e6a02b5294420744df720e0847ef4d28e39a39b70509a50346eb2210df5d8f",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/npc-market-isl.webp": {
+      "sha256": "a3f7ede18a795827f00264f2a0b260688170cf9185d8f9a12164e7b23f8b6b73",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-guard-chr.webp": {
+      "sha256": "288e507490ec54ccd59e64f325fb1b5214de5f04a2523eb08fc337a19422278f",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/retainer-guard-isl.webp": {
+      "sha256": "445351a9eb5077f59038ce1c8d6a9cc9269779de286ad345b7a93f722f19a571",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-guide-chr.webp": {
+      "sha256": "b9b8bd88698162ce7aebc503dd6bfb3420ddbe7b4a537a11a0b335efece7f96a",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-guide-isl.webp": {
+      "sha256": "dccbce25aac6fae6e5d1be9079c213a3d9b1224ad5fb16aed52bd38619192d46",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-heal-chr.webp": {
+      "sha256": "881185f4fc1f34f23b1a5a2bd8b5171fbd3c449ad93dee3f570326bcffd38393",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-heal-isl.webp": {
+      "sha256": "81573758260d0d7f1d0457dc9595b0b8320e9a5a6bb89bba3f7199da02b742ee",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-lang-chr.webp": {
+      "sha256": "0f2ea1e715627cf90c870240a10f464ae0bbeeae03602a606c10956e59a358a7",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-lang-isl.webp": {
+      "sha256": "7a161f75b79c4d5d4707edbe65e5ccb6cd8e531573e1536bdb0daae01151afc4",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-monk-chr.webp": {
+      "sha256": "67172e4ac6c74baed8069dfd3de5242cec051a34ab46ea1420f65e8168570841",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-porter-chr.webp": {
+      "sha256": "d3315bc7cf33758d1818e8ddafeb7b37964b03cd776280c2c102c3befaa3ee67",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/retainer-porter-isl.webp": {
+      "sha256": "164fd3a0514e9fdb317e0b70bcc9d6ca67158596f83dfa3080a425e11f6d19c0",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "multiple figures in single portrait file; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/retainer-sail-chr.webp": {
+      "sha256": "41a8c89c1accbe336d6cca4e05de71883a3f31b1d60f41f0836d5ba482bbe51b",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-sail-isl.webp": {
+      "sha256": "9b31bcef87c9dfd0a39876dde568b5240c0cc069d57c5020cb47cb2fedd888a7",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-scribe-chr.webp": {
+      "sha256": "106f0da47d26ce583ce7f9f20b270ee5b7769b743a62d6b03c4b495cf0bb4eba",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-scribe-isl.webp": {
+      "sha256": "da5aebaacf6bdfe5649c643670625ae8eeb632c62e2562607879524945813f49",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-seer-chr.webp": {
+      "sha256": "6f6a1e4787c686cb84cd0444d5f5798375d21a6be8a50d26ce1611e5db2b1375",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/retainer-seer-isl.webp": {
+      "sha256": "10e22b93b9e016f4e2c408f00afa46ffb8b4631eb2cc5b86536c9d3760153829",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_single_figure_review",
+      "content_status": "audited_generic_portrait",
+      "observation": "game/map/portrait_art_map.json; not a named historical likeness"
+    },
+    "assets/art/scene-band-india-port.webp": {
+      "sha256": "915b0937a39869294fae891cfe7e3189f73c2208ad0bf090e2cfa4b0fe94edc9",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "three horizontal scenes; not a single background; excluded from automatic portrait binding where applicable"
+    },
+    "assets/art/scene-region-chr.webp": {
+      "sha256": "c879c9f8cf373677fa1d503ac1b0f868f9adf0e2348f4abdd8442fc7730c6aba",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "single_scene_or_figure_reviewed",
+      "observation": "Visual subject inspected 2026-10-20; not a blanket historical accuracy approval"
+    },
+    "assets/art/scene-region-isl.webp": {
+      "sha256": "206b2c8c60c6fca9b7be9d7fee04a03fd68f6c4851afff83cc830dae0fbbde9e",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "single_scene_or_figure_reviewed",
+      "observation": "Visual subject inspected 2026-10-20; not a blanket historical accuracy approval"
+    },
+    "assets/art/site-balc-1.webp": {
+      "sha256": "621c6c3824362d211b329e126146bb3fd7088d9f5f5281f7ecee3f70625379fa",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_defect_sample",
+      "content_status": "known_mismatch_or_unsplit",
+      "observation": "three horizontal scenes; not a single background; excluded from automatic portrait binding where applicable"
+    },
+    "assets/decks/iching/iching-01-the-creative-full.webp": {
+      "sha256": "8af30b8bd4cf1075a1af64ea985b20b98ed0859afd23ca096e9f19a01bc234b9",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "illustrated_face_not_fully_reviewed",
+      "observation": ""
+    },
+    "assets/decks/iching/iching-30-the-clinging-full.webp": {
+      "sha256": "a95984e5f3208d998f24e1784643008361ab388bdf26242c085fcee852c8d910",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "illustrated_face_not_fully_reviewed",
+      "observation": ""
+    },
+    "assets/decks/iching/iching-31-influence-full.webp": {
+      "sha256": "9be758073d800d91ba5733713dd599097849a66e219d05196fc54a867a3b4ddb",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-32-duration-full.webp": {
+      "sha256": "53ed328eabc218d76a6405a798061bda6a59d20f74f64d0dc1b44acb4521dba6",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-33-retreat-full.webp": {
+      "sha256": "c73147ff71bb51699e5793274c9cb8ceed2e526ead62c1597a092987b183541a",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-34-great-power-full.webp": {
+      "sha256": "fbf4bdcb5f8e01697ecfada396037a3c23d10e5856cec133ddbaca0558f8ec26",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-35-progress-full.webp": {
+      "sha256": "6aeb7b5a1b5488fbb1aa25796c902e1a6613977ba0c3271e4661fe2d76f129ec",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-36-darkening-of-the-light-full.webp": {
+      "sha256": "8202777c2d35f8d754959f64a980fad67af72088260268538d4f46aac767cad4",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-37-the-family-full.webp": {
+      "sha256": "95ef229850f7073284caf694b8de3ff9c98b99903a4f0dea9685da42ffc0dc96",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-38-opposition-full.webp": {
+      "sha256": "a78bd57e43fb30007b1d1b7622f0d5e9b6e719610f3b209af96dd68a6b91e192",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-39-obstruction-full.webp": {
+      "sha256": "bf5c65b10684700a9d4e3fc8e2a5df1580241c201196e4272629f20903808329",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-40-deliverance-full.webp": {
+      "sha256": "a74cf901d97212d4e18a8c9b03f3f8ac5a3a3c9dc1f931012502d4de2c9f1ac0",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-41-decrease-full.webp": {
+      "sha256": "7b2410b44041fc85f7ce554706c7370dc284a8847daba69391ecd65c68b586c7",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-42-increase-full.webp": {
+      "sha256": "8341596ac4d3a1d7e7aa3a2c91bf6890ddd3fa37eca4fc5e080514bf08bf4119",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-43-breakthrough-full.webp": {
+      "sha256": "f0e6c42c89be53ecccdef452988cd75424c7c27f63bc55e411c0ab4d593d5ae4",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "placeholder_missing_chinese_name",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip; Chinese hexagram name is absent on face"
+    },
+    "assets/decks/iching/iching-44-coming-to-meet-full.webp": {
+      "sha256": "aadada919174763b55df555f4de1232206515af09251e8989f6c40b3457acf68",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "placeholder_missing_chinese_name",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip; Chinese hexagram name is absent on face"
+    },
+    "assets/decks/iching/iching-45-gathering-full.webp": {
+      "sha256": "1f12986f87c66c073c290ecfc60d4aac2ed658485a2309509b230f72c400446b",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-46-pushing-upward-full.webp": {
+      "sha256": "ac5f5c54e3983085ab07e5a9870f1bc53e20ac7afde074905017b26ad26e6b8d",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-47-oppression-full.webp": {
+      "sha256": "6a57bcb13d607136fd35f35ac2a8d7e1e957a30725ae0584201b1860d48954e1",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-48-the-well-full.webp": {
+      "sha256": "b6477c8ee87376b9950a25d00d915002ebe0addccfed31b619ecb67890d34a78",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-49-revolution-full.webp": {
+      "sha256": "db89edb9ee0bb39276c272ef2713a20084e2cada6ec73b545f70739a02720959",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-50-the-cauldron-full.webp": {
+      "sha256": "b2503ea2ede243d5d52d3b42f9dcc00283f3325f8d655ab3f83c2faf6898589b",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-51-the-arousing-full.webp": {
+      "sha256": "1a4be154dac3fa047bf6f6912dae0257552494fcbd761b6794b43b7a29d9ff50",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-52-keeping-still-full.webp": {
+      "sha256": "07c4139bc00a1f5d89add684847f78ecd7b9e5fb6befd901472226cdbaced02f",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-53-gradual-progress-full.webp": {
+      "sha256": "f73156945ead652ea412d8e190c5c43149f667157f5032ccc4864837402abfaa",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-54-the-marrying-maiden-full.webp": {
+      "sha256": "d29e59315b810a7ae83cde46f1b532ef6818e23a9bcaeaf3815d57463ee51218",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-55-abundance-full.webp": {
+      "sha256": "889f58b35690e32f2bf35a35cc98c0dfdede550fada17b456670377218abd637",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-56-the-wanderer-full.webp": {
+      "sha256": "ba46c83f3ce565722a1e61f2952dfad054f85150aca31554ebed78bbe0d608b9",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-57-the-gentle-full.webp": {
+      "sha256": "8ddf078f3f7ee3ffb779d6940df125cae35ec9cc94a96cb8d2439af75c3b103e",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-58-the-joyous-full.webp": {
+      "sha256": "b926c3e135a9e0c5b9de28cb4022367ee1b743b99893cce0aba61635bae8bbd6",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-59-dispersion-full.webp": {
+      "sha256": "24a0fd1716dd7ea86de46ba8caca1e0534d4f286b9d3e8cb95490030b0fbed33",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-60-limitation-full.webp": {
+      "sha256": "e7f33c589dd99ff37d24741bf13843e1ded8ee017b34ad8291eafcbdb1d9f191",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-61-inner-truth-full.webp": {
+      "sha256": "56fba8b8f0b8df1f2306fe574dde6e22be87989dcef672a1923e5182e8be1028",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-62-small-excess-full.webp": {
+      "sha256": "27776368ea1d2e83a7bfb6b1e3aa2cf31348ed86ab862bf953350a4ee8b51571",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-63-after-completion-full.webp": {
+      "sha256": "971637fd64b56ba041d9b689e17fdf22790bbee01a223cba36157132c72b9088",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/iching/iching-64-before-completion-full.webp": {
+      "sha256": "3a7475eafbdc9c25cc501eb3217536d014934577fea6fa7e90d5825ebba1ceaa",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_placeholder_sheet_review",
+      "content_status": "procedural_placeholder_provenance",
+      "observation": "scripts/gen_iching_placeholders.py range 31-64; all 34 viewed in contact sheet; side labels may clip"
+    },
+    "assets/decks/lenormand/01-rider.jpg": {
+      "sha256": "7653aaa9bd971682d6f795e46fcd9fe496a292db516147fb68bd883dd16f9b0d",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "unknown_requires_review",
+      "observation": "No lenormand JPG deck loader found in current Godot runtime; source attribution separate"
+    },
+    "assets/decks/tarot/tarot-cups-04-full.webp": {
+      "sha256": "9f8d744eac404e39b36437fe5ef9bded7abc70a2ca3c287c02110239d918cc8e",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "illustrated_face_not_fully_reviewed",
+      "observation": "No full tarot deck loader found in current Godot runtime; uses generic symbol fallback"
+    },
+    "assets/decks/tarot/tarot-fool-full.webp": {
+      "sha256": "bc7c1ac78c69aab9d3d65cce03f045a56384ea175ec22b54480fcae3e2a15c63",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "illustrated_face_not_fully_reviewed",
+      "observation": "No full tarot deck loader found in current Godot runtime; uses generic symbol fallback"
+    },
+    "assets/decks/tarot/test.jpg": {
+      "sha256": "f7f4b182d2566cfcc4fb1a8087d987d1d5ba29d41902cd03356adcdadbb2620c",
+      "reviewer": "Codex agent visual inspection",
+      "reviewed_on": "2026-10-20",
+      "visual_review": "agent_visual_representative_sample",
+      "content_status": "unknown_requires_review",
+      "observation": ""
+    }
+  }
+}
