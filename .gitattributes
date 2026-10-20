@@ -1,0 +1,2 @@
+fatequest/assets/decks/tarot/**/*.webp filter=lfs diff=lfs merge=lfs -text
+fatequest/assets/decks/tarot/**/*.jpg filter=lfs diff=lfs merge=lfs -text
