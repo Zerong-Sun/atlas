@@ -105,6 +105,7 @@ jobs:
           tests/smoke_city_market_boundaries.gd
           tests/smoke_character_draw.gd
           tests/smoke_review_edges.gd
+          tests/smoke_city_card_entry.gd
       - name: Story result continuation and lesson boundaries
         working-directory: fatequest
         run: >-

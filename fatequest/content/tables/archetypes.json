@@ -5,6 +5,7 @@
     {
       "id": "polo",
       "name": "arch.polo.name",
+      "description": "arch.polo.description",
       "obsession": "arch.polo.obsession",
       "start": "tauris",
       "goal": {
@@ -215,6 +216,7 @@
     {
       "id": "battuta",
       "name": "arch.battuta.name",
+      "description": "arch.battuta.description",
       "obsession": "arch.battuta.obsession",
       "start": "alexandria",
       "goal": { "type": "reach", "target": "mecha" },

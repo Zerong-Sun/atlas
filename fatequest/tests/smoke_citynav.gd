@@ -85,8 +85,51 @@ func _init():
             printerr("  FAIL: back from roads did not return to the town")
     print("CITYNAV: back-to-town=%s" % back_ok)
 
-    # Both regressions this test was written for.
-    var ok = exits > 0 and live_once == 0 and back_ok
+    # Cairo exposed a shared guard: towns without exploration sites were
+    # wrongly sent to the roads even when they had a market. Exercise every
+    # such real record, including stations without markets.
+    var empty_sites_ok := true
+    var empty_sites_count := 0
+    var starting_coins: int = n.state.coins
+    var starting_day: int = n.state.jdn
+    for city in n.db.get_table("cities"):
+        if not city.get("sites", []).is_empty():
+            continue
+        empty_sites_count += 1
+        n.state.city = city.id
+        n._open_city()
+        await process_frame
+        await process_frame
+        var expected_hint := "ui.city.no_sites_market" if city.has("market") else "ui.city.no_sites"
+        # Caffa has no sites but does have a mentor; that remains a live
+        # interaction and must not be mislabeled as an empty city.
+        var hint_ok: bool = n._city_view._hint.text == I18n.t(expected_hint) \
+            if n._city_view._figures.get_child_count() == 0 \
+            else not n._city_view._hint.text.is_empty() and n._city_view._hint.text != I18n.t(expected_hint)
+        var city_ok: bool = n._city_view.visible \
+            and n._city_view._market_btn.visible == city.has("market") \
+            and hint_ok
+        n._close_city()
+        await process_frame
+        await process_frame
+        var return_button: Button = null
+        for control in _walk(n._panel):
+            if control is Button and control.text == I18n.t("ui.back_to_city") and not control.disabled:
+                return_button = control
+                break
+        if return_button != null:
+            return_button.pressed.emit()
+            await process_frame
+        city_ok = city_ok and return_button != null and n._city_view.visible \
+            and n.state.coins == starting_coins and n.state.jdn == starting_day
+        if not city_ok:
+            printerr("  FAIL: empty-site city cannot be entered and revisited: " + String(city.id))
+        empty_sites_ok = empty_sites_ok and city_ok
+    empty_sites_ok = empty_sites_ok and empty_sites_count > 0
+    print("CITYNAV: empty-site cities=%d entry/market/return=%s" % [empty_sites_count, empty_sites_ok])
+
+    # All navigation paths must retain a usable way back and a way out.
+    var ok = exits > 0 and live_once == 0 and back_ok and empty_sites_ok
     if exits == 0: printerr("  FAIL: dead end — no way out of the city")
     if live_once != 0: printerr("  FAIL: %d once-only sites still offered after being explored" % live_once)
     if not back_ok: printerr("  FAIL: roads panel did not return to the town")

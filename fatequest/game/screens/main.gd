@@ -560,7 +560,15 @@ func _character_candidate_card(candidate: Dictionary) -> Control:
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", Metrics.xs())
 	panel.add_child(box)
-	box.add_child(Panels.heading(I18n.t(String(candidate.get("name", "")))))
+	var character_name := Panels.heading(I18n.t(String(candidate.get("name", ""))))
+	character_name.name = "CharacterName"
+	box.add_child(character_name)
+	var description_key := String(candidate.get("description", ""))
+	if not description_key.is_empty():
+		var description := Panels.label(I18n.t(description_key), UiScale.ui(), Palette.ink())
+		description.name = "CharacterDescription"
+		description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		box.add_child(description)
 	var culture := String(candidate.get("culture", "latin"))
 	var faith := String(candidate.get("faith", "latin"))
 	box.add_child(Panels.label(I18n.t("ui.boot.identity") % [
@@ -1247,6 +1255,7 @@ func _build_city_detail() -> void:
 	centre.add_child(_city_detail_card)
 	_city_detail_card.setup(db, travel)
 	_city_detail_card.closed.connect(func(): _city_detail_layer.visible = false)
+	_city_detail_card.enter_requested.connect(_enter_city_from_card)
 
 
 func _build_travel_confirm() -> void:
@@ -1784,7 +1793,7 @@ func _is_audit_slug(line: String) -> bool:
 	return head != "" and head == head.to_lower()
 
 
-## Arrival: fire the entry event if there is one, else offer the roads.
+## Arrival: fire the entry event if there is one, else enter the city.
 func _arrive() -> void:
 	# Stranding guard: however the player got here, a city with not one known
 	# road out of it is a dead end — every exit button stays greyed and the
@@ -1816,7 +1825,7 @@ func _arrive() -> void:
 	var ev := events.pick("entry", state, rng, ctx)
 	if _audio_ready(): _audio.set_place(city, ev if not ev.is_empty() else {})
 	if ev.is_empty():
-		_show_roads(RoadPanelOrigin.ARRIVAL)
+		_open_city()
 	else:
 		_show_event(ev)
 
@@ -2519,7 +2528,9 @@ func _open_market() -> void:
 
 func _open_city() -> void:
 	var c := db.get_record(state.city)
-	if c.is_empty() or (c.get("sites", []) as Array).is_empty():
+	# Market-only towns (including Cairo) still have a usable city interior.
+	# An empty exploration list must not send the traveller back to the map.
+	if c.is_empty():
 		_show_roads(RoadPanelOrigin.CITY)
 		return
 	_city_view.visible = true
@@ -2572,6 +2583,8 @@ func _restore_document(doc: Dictionary) -> bool:
 	_map.center_on(state.city)
 	_dialog_layer.visible = false
 	_market_layer.visible = false
+	if _city_detail_layer != null:
+		_city_detail_layer.visible = false
 	_codex_layer.visible = false
 	if _book_layer != null:
 		_book_layer.visible = false
@@ -2627,6 +2640,8 @@ func _restyle_all() -> void:
 		_city_view.restyle()
 	if _market_view and _market_view.has_method("restyle"):
 		_market_view.restyle()
+	if _city_detail_card and _city_detail_card.has_method("restyle"):
+		_city_detail_card.restyle()
 	if _codex_view and _codex_view.has_method("restyle"):
 		_codex_view.restyle()
 	if _book_view and _book_view.has_method("restyle"):
@@ -3123,7 +3138,6 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 		# returning to a bare map would strand them outside their own city.
 		var origin_rec := db.get_record(origin_id)
 		_show_roads(RoadPanelOrigin.CITY if not origin_rec.is_empty()
-			and not (origin_rec.get("sites", []) as Array).is_empty()
 			else RoadPanelOrigin.MAP)
 		return
 	var life_fx := MortalityCore.exposure_effects(state, int(trip.get("days", 0)),
@@ -3260,6 +3274,28 @@ func _shed_overflow(units: int) -> void:
 			], {"rng": rng, "event_id": "shed"})
 			left -= bulk
 	_refresh_hud()
+
+
+## Map cards are information about any known place, never a teleport action.
+## Re-check the live state here: the card may have survived a load, or a
+## pending story/journey may have appeared since its buttons were rendered.
+func _enter_city_from_card(city_id: String) -> void:
+	if state == null or city_id != state.city or bool(state.life.get("deceased", false)):
+		return
+	if _city_detail_layer == null or not _city_detail_layer.visible or _top_modal() != _city_detail_layer:
+		return
+	if not state.active_journey.is_empty():
+		_city_detail_card.show_city(db.get_record(state.city), state)
+		return
+	_city_detail_layer.visible = false
+	# Resuming a committed event uses the same FIFO/recovery path as loading
+	# and the existing Continue control. Opening the city must not skip it.
+	if _show_next_pending_event():
+		return
+	if not state.pending_events.is_empty():
+		_show_pending_pause()
+		return
+	_open_city()
 
 
 func _on_city_clicked(c: Dictionary) -> void:

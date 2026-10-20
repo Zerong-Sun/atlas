@@ -413,7 +413,7 @@ map.
 
 ## arch.battuta.name
 
-A traveler in Battuta's manner
+A Traveller from Tangier
 
 ## arch.battuta.obsession
 

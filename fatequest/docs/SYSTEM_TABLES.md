@@ -72,6 +72,7 @@
 |---|---|---|
 | `id` | string | `marco` |
 | `name` | {zh,en} | 原型名 |
+| `description` | text key（运行时，可选） | 人物卡的第二人称开篇，交代出发处境；当前运行时 `name`、`obsession` 也使用 i18n key，下方内联双语仅为设计示例 |
 | `start` | cityId | 起点城市 |
 | `obsession` | {zh,en} | 旅行执念一句话 |
 | `goal` | {type, target} | `reach｜pilgrimage_loop｜network｜free`，及目标城市／条件 |
@@ -87,7 +88,7 @@
 ```json
 {
   "id": "battuta",
-  "name": { "zh": "白图泰式旅人", "en": "A Traveler in Ibn Battuta's Manner" },
+  "name": { "zh": "丹吉尔式旅人", "en": "A Traveller from Tangier" },
   "start": "tangier",
   "obsession": { "zh": "完成朝觐，并从不同方向一再回到麦加。", "en": "Complete the hajj — and return to Mecca from every direction." },
   "goal": { "type": "pilgrimage_loop", "target": "mecca", "times": 3 },

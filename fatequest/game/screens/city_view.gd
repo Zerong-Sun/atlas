@@ -139,7 +139,10 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator, ct
 		if not done:
 			offered += 1
 	_bg.texture = MapArt.city_explore_bg(city, 0)
-	_hint.text = (I18n.t("ui.city.tap_hint") % offered) if offered > 0 else I18n.t("ui.seen_everything")
+	if _figures.get_child_count() == 0:
+		_hint.text = I18n.t("ui.city.no_sites_market" if city.has("market") else "ui.city.no_sites")
+	else:
+		_hint.text = (I18n.t("ui.city.tap_hint") % offered) if offered > 0 else I18n.t("ui.seen_everything")
 	_market_btn.visible = city.has("market")
 	_layout_cards.call_deferred()
 

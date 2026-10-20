@@ -78,7 +78,7 @@ stamps:
   ev.ev_maldive_battuta_a.choice_1_result: 70f9b27f6a37
   ev.ev_maldive_battuta_a.choice_2_result: b5ce112a6bb1
   ev.ev_maldive_battuta_a.choice_3_result: be221923353a
-  arch.battuta.name: c7f7e5ec560d
+  arch.battuta.name: 39a6401ac763
   arch.battuta.obsession: 58b4c7f41c69
   ev.melibar.battuta_a.title: 9665de2beaa8
   ev.melibar.battuta_a.body: 9d2c93b043e8
@@ -410,7 +410,7 @@ stamps:
 
 ## arch.battuta.name
 
-白图泰式旅人
+丹吉尔式旅人
 
 ## arch.battuta.obsession
 
