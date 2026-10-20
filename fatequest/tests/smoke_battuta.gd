@@ -27,10 +27,16 @@ func _choose_first_dialog(n, tag: String) -> void:
 
 
 func _dismiss(n, tag: String) -> void:
-	await process_frame
-	# Same path as the dialog's continue/walk-away button.
-	n._on_event_dismissed()
-	await process_frame
+	# Result pages may open authored consequences. Finish the visible chain
+	# before looking for another city's buttons.
+	for step in 12:
+		await process_frame
+		await process_frame
+		if not n._dialog_layer.visible:
+			return
+		_choose_first_dialog(n, tag)
+	printerr("[%s] event chain did not finish" % tag)
+	quit(1)
 
 
 func _enter_city(n, city_id: String, tag: String) -> void:
@@ -45,20 +51,20 @@ func _enter_city(n, city_id: String, tag: String) -> void:
 	await _dismiss(n, tag)
 
 
-func _find_site_button(node) -> Button:
+func _find_site_button(node, event_id: String) -> Button:
 	# City sites render as figure buttons carrying an event_id meta.
 	for ch in node.get_children():
-		if ch is Button and not ch.disabled and ch.has_meta("event_id"):
+		if ch is Button and not ch.disabled and ch.get_meta("event_id", "") == event_id:
 			return ch
-		var hit := _find_site_button(ch)
+		var hit := _find_site_button(ch, event_id)
 		if hit != null:
 			return hit
 	return null
 
 
-func _visit_one_site(n, tag: String) -> int:
+func _visit_one_site(n, tag: String, event_id: String) -> int:
 	var found := 0
-	var btn := _find_site_button(n._city_view)
+	var btn := _find_site_button(n._city_view, event_id)
 	if btn == null:
 		return 0
 	print("  [%s] site: %s" % [tag, btn.tooltip_text])
@@ -84,13 +90,13 @@ func _init():
 	# 1. Alexandria: entry, then the two Rihla site events.
 	await _enter_city(n, "alexandria", "alexandria")
 	var sites_a := 0
-	sites_a += await _visit_one_site(n, "alexandria")
-	sites_a += await _visit_one_site(n, "alexandria")
+	sites_a += await _visit_one_site(n, "alexandria", "ev-alexandria-battuta-a")
+	sites_a += await _visit_one_site(n, "alexandria", "ev-alexandria-battuta-b")
 	print("  alexandria sites entered: %d" % sites_a)
 
 	# 2. Maldives: new city — entry event and judge site.
 	await _enter_city(n, "maldive", "maldive")
-	var sites_m := await _visit_one_site(n, "maldive")
+	var sites_m := await _visit_one_site(n, "maldive", "ev-maldive-battuta-a")
 	print("  maldive sites entered: %d" % sites_m)
 
 	# 3. Nothing under the battuta keys may render as a raw key.

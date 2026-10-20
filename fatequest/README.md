@@ -18,18 +18,29 @@
 
 ## 运行
 
+**本机 macOS**：Godot 已安装到 `/Applications/Godot.app`；双击
+[`Play FateQuest.command`](<Play FateQuest.command>) 可运行游戏。
+若本机音频设备初始化卡住，可双击无声备用入口
+[`Play FateQuest (Silent).command`](<Play FateQuest (Silent).command>)。
+2026-10-20 的问题清单、目标体验、首批修复与试玩路径见
+[`docs/PLAYABILITY_REBUILD_2026-10-20.md`](docs/PLAYABILITY_REBUILD_2026-10-20.md)。
+随后完成的界面、交互动效与人物图整改见
+[`docs/UI_POLISH_2026-10-20.md`](docs/UI_POLISH_2026-10-20.md)。
+六个方面的复核、追加修复与验证证据见
+[`docs/SIX_DIMENSION_REVIEW_2026-10-20.md`](docs/SIX_DIMENSION_REVIEW_2026-10-20.md)。
+
 **编辑器**：用 Godot 4.7.1 打开本目录（存在 `project.godot`），F5 运行。
 
 **无头测试**（不需要图形界面）：
 
 ```bash
-godot --headless --path . --script tests/run_tests.gd    # 16 个内核单测
+godot --headless --path . --script tests/run_tests.gd    # 23 个内核测试模块
 godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
 godot --headless --path . --script tests/benchmark_systems.gd  # 系统性能门禁
 godot --headless --path . --script tests/benchmark_map.gd      # 地图 CPU 帧耗门禁
 godot --path . --script tests/benchmark_map_fps.gd             # 窗口 GPU 帧耗（1280×720，30 次缩放/平移）
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PCK 导出结构门禁
-node tools/validate/validate.mjs                         # 28 道内容门禁
+node tools/validate/validate.mjs                         # 内容门禁
 node tools/lore/story.mjs check                          # 译文时效
 ```
 
@@ -53,7 +64,7 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 16 单测 + 26 界面 smoke + 3 基准
+├── tests/                   # 23 内核模块 + 42 界面 smoke + 审计／基准
 ├── export_presets.cfg       # Linux / macOS / Windows 桌面导出
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
@@ -89,9 +100,11 @@ fatequest/
 
 ## 现状一览
 
-玩法已闭环：世界能走、城市能逛、文字能读、货能贩、人能带、书能合上。
-102 城 · 204 路线 · 415 事件 · 60 商品 · 54 随从 · 24 种占法注册（8 法已用真实引擎接入玩法）。
-en/zh 各 5118 条文本。**28 道门禁、16 单测、26 smoke、3 基准、PCK 结构验证全绿。** 详见
+旅行、探索、交易、同行及存档已有可运行流程；剧情、美术和拆书仍有待办。
+103 城 · 206 路线 · 431 事件 · 61 商品 · 54 随从 · 24 种占法注册。
+en/zh 各 5545 条文本，其中 3944 条叙事译文时效受门禁检查。
+联网地图测试需要图形模式；故意损坏存档的测试需要区分预期错误诊断。
+本轮实测范围和结果详见六维验收记录，不沿用历史版本的“全部全绿”结论。更多状态见
 [`docs/STATUS.md`](docs/STATUS.md)。
 
 ## 红线

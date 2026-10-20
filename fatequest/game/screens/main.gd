@@ -78,6 +78,8 @@ var _city_view: Control
 var _dialog: PanelContainer
 var _dialog_layer: Control
 var _current_event: Dictionary = {}
+var _last_modal: Control
+var _modal_focus_history: Dictionary = {}
 var _controls: HFlowContainer
 ## The right spine: the bag and party buttons, kept apart from the top bar so
 ## the map art and the top-right city labels stay visible.
@@ -158,12 +160,12 @@ var _result_then_chain := false  ## a result page is up; dismissing it fires the
 func _ready() -> void:
 	_resolve_audio()
 	_resolve_game_context()
+	# A new installation has no ui.cfg. The language identifier defaults to
+	# "zh" even while its dictionaries are empty, so checking lang() alone
+	# skipped loading every string on the player's first launch.
+	I18n.load_lang("zh")
 	UiScale.load_prefs()
 	_load_dock_heights()
-	# Default to Chinese when the config holds no saved language; load_prefs()
-	# has already switched I18n to the persisted language if one exists.
-	if I18n.lang() != "zh" and I18n.lang() != "en":
-		I18n.load_lang("zh")
 	var n := db.load_all()
 	divination_catalog.configure(db.get_table("divination_catalog"))
 	DivinationData.bind(db)
@@ -245,12 +247,18 @@ func _build_desk() -> void:
 	center.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(center)
 
+	var scroll := ScrollContainer.new()
+	scroll.name = "BootScroll"
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.follow_focus = true
+	center.add_child(scroll)
+
 	_desk = VBoxContainer.new()
 	_desk.name = "BootDesk"
 	_desk.alignment = BoxContainer.ALIGNMENT_CENTER
-	_desk.custom_minimum_size = Vector2(600, 0)
+	_desk.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_desk.add_theme_constant_override("separation", Metrics.sm())
-	center.add_child(_desk)
+	scroll.add_child(_desk)
 
 	# The first view is deliberately one quiet leaf: what this game is, a short
 	# epigraph, and one way forward. Campaign controls live on the next leaf so
@@ -287,7 +295,7 @@ func _build_desk() -> void:
 	introduction.name = "GameIntroduction"
 	introduction.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	introduction.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	introduction.custom_minimum_size.x = 600
+	introduction.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	opening_leaf.add_child(introduction)
 
 	opening_leaf.add_child(_opening_epigraph())
@@ -324,8 +332,8 @@ func _build_desk() -> void:
 		UiScale.body(), Palette.ink_soft())
 	era_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	journey_setup.add_child(era_label)
-	var eras := HBoxContainer.new()
-	eras.alignment = BoxContainer.ALIGNMENT_CENTER
+	var eras := HFlowContainer.new()
+	eras.alignment = FlowContainer.ALIGNMENT_CENTER
 	eras.add_theme_constant_override("separation", Metrics.xs())
 	for era in db.get_table("campaign_eras"):
 		var era_id := String(era.get("id", ""))
@@ -354,6 +362,7 @@ func _build_desk() -> void:
 		if cover == null:
 			continue
 		var btn := Button.new()
+		Panels.style_button(btn)
 		btn.custom_minimum_size = Vector2(40, 54)
 		btn.flat = true
 		btn.tooltip_text = I18n.t("book.%s.title" % bid)
@@ -374,6 +383,23 @@ func _build_desk() -> void:
 	_draw_card.name = "CharacterDrawCard"
 	_draw_card.add_theme_constant_override("separation", Metrics.xs())
 	_desk.add_child(_draw_card)
+	if not get_viewport().size_changed.is_connected(_sync_boot_layout):
+		get_viewport().size_changed.connect(_sync_boot_layout)
+	_sync_boot_layout()
+
+
+## The desk has a finite reading viewport; oversized type can scroll, and
+## candidate cards reflow instead of pushing the accept action off-screen.
+func _sync_boot_layout() -> void:
+	var scroll := get_node_or_null("BootCenter/BootScroll") as ScrollContainer
+	if scroll == null or _desk == null or not is_instance_valid(_desk):
+		return
+	var viewport := get_viewport_rect().size
+	scroll.custom_minimum_size = Vector2(minf(1120.0, maxf(280.0, viewport.x - 48.0)),
+		maxf(200.0, viewport.y - 48.0))
+	var cards := _draw_card.get_node_or_null("CharacterCandidates") as GridContainer
+	if cards != null:
+		cards.columns = clampi(int((scroll.custom_minimum_size.x - 20.0) / 350.0), 1, 3)
 
 
 func _show_journey_setup() -> void:
@@ -436,6 +462,7 @@ func _archetype_button(a: Dictionary) -> Control:
 		row.add_child(tr2)
 
 	var btn := Button.new()
+	Panels.style_button(btn)
 	btn.text = "%s  →  %s" % [I18n.t(a.get("name", "")), _city_name(a.get("start", ""))]
 	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	btn.pressed.connect(_begin.bind(a))
@@ -456,29 +483,45 @@ func _draw_character() -> void:
 		if is_instance_valid(intro):
 			intro.visible = false
 	for child in _draw_card.get_children():
+		_draw_card.remove_child(child)
 		child.queue_free()
+	var title_panel := PanelContainer.new()
+	title_panel.name = "CharacterDrawHeading"
+	title_panel.add_theme_stylebox_override("panel", Palette.panel_style())
 	var title := Panels.heading(I18n.t("ui.boot.choose_traveller"))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_draw_card.add_child(title)
-	var cards := HBoxContainer.new()
-	cards.alignment = BoxContainer.ALIGNMENT_CENTER
-	cards.add_theme_constant_override("separation", Metrics.sm())
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	if I18n.lang() == "zh":
+		title.add_theme_font_override("font", _boot_cjk_font())
+	title_panel.add_child(title)
+	_draw_card.add_child(title_panel)
+	var cards := GridContainer.new()
+	cards.name = "CharacterCandidates"
+	cards.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	cards.add_theme_constant_override("h_separation", Metrics.sm())
+	cards.add_theme_constant_override("v_separation", Metrics.sm())
 	for candidate in _draw_candidates:
 		cards.add_child(_character_candidate_card(candidate))
 	_draw_card.add_child(cards)
-	var actions := HBoxContainer.new()
-	actions.alignment = BoxContainer.ALIGNMENT_CENTER
+	var actions := HFlowContainer.new()
+	actions.name = "CharacterDrawActions"
+	actions.alignment = FlowContainer.ALIGNMENT_CENTER
 	actions.add_theme_constant_override("separation", Metrics.sm())
 	actions.add_child(Panels.styled_button(I18n.t("ui.boot.draw_again"), _draw_character))
 	actions.add_child(Panels.styled_button(I18n.t("ui.boot.change_era"),
 		_return_to_era_selection))
 	_draw_card.add_child(actions)
+	_sync_boot_layout()
+	var scroll := get_node_or_null("BootCenter/BootScroll") as ScrollContainer
+	if scroll != null:
+		scroll.scroll_vertical = 0
 
 
 func _return_to_era_selection() -> void:
 	_draw_candidates.clear()
 	_drawn_archetype.clear()
 	for child in _draw_card.get_children():
+		_draw_card.remove_child(child)
 		child.queue_free()
 	_show_journey_setup()
 
@@ -489,15 +532,30 @@ func _select_campaign_era(era_id: String) -> void:
 	_draw_candidates.clear()
 	_drawn_archetype.clear()
 	for child in _draw_card.get_children():
+		_draw_card.remove_child(child)
 		child.queue_free()
 	var era := db.get_record(era_id)
-	_draw_card.add_child(Panels.label(I18n.t(String(era.get("description", ""))),
-		UiScale.ui(), Palette.ink_soft()))
+	var description := Panels.label(I18n.t(String(era.get("description", ""))),
+		UiScale.ui(), Palette.ink_soft())
+	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_draw_card.add_child(description)
+
+
+## Mixed Latin numbers and Han text can select an incomplete default fallback
+## on macOS. Use the same explicit CJK family chain as the opening title.
+func _boot_cjk_font() -> Font:
+	var font := SystemFont.new()
+	font.font_names = PackedStringArray([
+		"Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong",
+		"SimSun", "Microsoft YaHei",
+	])
+	return font
 
 
 func _character_candidate_card(candidate: Dictionary) -> Control:
 	var panel := PanelContainer.new()
-	panel.custom_minimum_size = Vector2(330, 0)
+	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	panel.set_meta("candidate_id", String(candidate.get("candidate_id", "")))
 	panel.add_theme_stylebox_override("panel", Palette.panel_style())
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", Metrics.xs())
@@ -531,13 +589,25 @@ func _character_candidate_card(candidate: Dictionary) -> Control:
 		PackedStringArray(known_names)), UiScale.ui(), Palette.ink_soft())
 	known.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(known)
-	box.add_child(Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
-		String(candidate.get("start", ""))), _choose_character.bind(candidate)))
+	for child in box.get_children():
+		if child is Label:
+			child.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			if I18n.lang() == "zh":
+				child.add_theme_font_override("font", _boot_cjk_font())
+	var spacer := Control.new()
+	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	box.add_child(spacer)
+	var accept := Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
+		String(candidate.get("start", ""))), _choose_character.bind(candidate))
+	accept.name = "AcceptCharacterButton"
+	accept.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(accept)
 	return panel
 
 
 func _choose_character(candidate: Dictionary) -> void:
-	if _character_confirmed:
+	if _character_confirmed or not _draw_candidates.any(func(current: Dictionary):
+		return current.get("candidate_id", "") == candidate.get("candidate_id", "")):
 		return
 	_drawn_archetype = candidate
 	_confirm_character_draw()
@@ -833,6 +903,7 @@ func _build_map() -> void:
 	_city_view.market_requested.connect(_open_market)
 	_city_view.bag_requested.connect(_open_bag)
 	_city_view.party_requested.connect(_open_party)
+	_city_view.settings_requested.connect(func(): Motion.crossfade_in(_settings["layer"], 0.18))
 
 	# --- event dialogue -----------------------------------------------------
 	# A full-rect CenterContainer keeps the dialog centred at any window size and
@@ -923,6 +994,8 @@ func _build_map() -> void:
 
 
 func _on_map_gui_input(event: InputEvent) -> void:
+	if _top_modal() != null or (_city_view != null and _city_view.visible):
+		return
 	if _map == null or not is_instance_valid(_map):
 		return
 	var position := Vector2(-1, -1)
@@ -980,14 +1053,8 @@ func _wire_dismissal() -> void:
 		Panels.make_dismissable(_lesson_layer, _lesson_ui, _cancel_lesson)
 
 
-## Escape closes the topmost overlay. Ordered innermost-last, so a bag opened
-## over the city closes the bag and leaves the city standing.
-func _unhandled_key_input(event: InputEvent) -> void:
-	if not (event is InputEventKey):
-		return
-	var k := event as InputEventKey
-	if not k.pressed or k.echo or k.keycode != KEY_ESCAPE:
-		return
+## The same modal ordering drives Escape, keyboard focus and background controls.
+func _modal_entries() -> Dictionary:
 	var layers: Array = []
 	var closers: Array = []
 	for ui in [_settings, _ending_ui, _party, _bag]:
@@ -1023,7 +1090,78 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if pair[0] != null and is_instance_valid(pair[0]):
 			layers.append(pair[0])
 			closers.append(pair[1])
-	if Panels.close_topmost(layers, closers):
+	if _dialog_layer != null and is_instance_valid(_dialog_layer):
+		layers.append(_dialog_layer)
+		closers.append(func() -> void: _dialog.request_dismiss())
+	if _hire_ui != null and is_instance_valid(_hire_ui) and _hire_ui._layer != null:
+		layers.append(_hire_ui._layer)
+		closers.append(_hire_ui._on_cancel)
+	return {"layers": layers, "closers": closers}
+
+
+func _top_modal() -> Control:
+	var entries := _modal_entries()
+	var index := Panels.topmost_index(entries.layers)
+	return entries.layers[index] if index >= 0 else null
+
+
+func _modal_focusables(node: Node, out: Array[Control]) -> void:
+	if node.is_queued_for_deletion():
+		return
+	if node is Control:
+		if not node.is_visible_in_tree():
+			return
+		if node.focus_mode == Control.FOCUS_ALL and not (node is BaseButton and node.disabled):
+			out.append(node)
+	for child in node.get_children():
+		_modal_focusables(child, out)
+
+
+func _process(_delta: float) -> void:
+	var modal := _top_modal()
+	var in_city := _city_view != null and _city_view.visible
+	if _controls != null:
+		_controls.visible = modal == null and not in_city
+	if _right_spine != null:
+		_right_spine.visible = modal == null and not in_city
+	var mute := get_node_or_null("MuteBtn")
+	if mute != null:
+		mute.visible = modal == null and not in_city
+	var focus := get_viewport().gui_get_focus_owner()
+	if modal != _last_modal:
+		if modal != null and not _modal_focus_history.has(modal.get_instance_id()):
+			_modal_focus_history[modal.get_instance_id()] = weakref(focus) if focus != null else null
+		if is_instance_valid(_last_modal) and not _last_modal.is_visible_in_tree():
+			var id := _last_modal.get_instance_id()
+			var ref = _modal_focus_history.get(id)
+			var previous = ref.get_ref() if ref != null else null
+			_modal_focus_history.erase(id)
+			if is_instance_valid(previous) and previous.is_visible_in_tree() \
+					and (modal == null or modal.is_ancestor_of(previous)):
+				previous.grab_focus()
+				focus = previous
+		_last_modal = modal
+	if modal != null and (focus == null or not focus.is_visible_in_tree() \
+			or not modal.is_ancestor_of(focus) or (focus is BaseButton and focus.disabled)):
+		var targets: Array[Control] = []
+		_modal_focusables(modal, targets)
+		if not targets.is_empty():
+			var first: Control = targets[0]
+			for target in targets:
+				if target is BaseButton:
+					first = target
+					break
+			first.grab_focus()
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if not (event is InputEventKey) or not event.pressed or event.echo or event.keycode != KEY_ESCAPE:
+		return
+	var entries := _modal_entries()
+	var index := Panels.topmost_index(entries.layers)
+	if index >= 0:
+		Motion.cancel(entries.layers[index])
+		entries.closers[index].call()
 		get_viewport().set_input_as_handled()
 
 
@@ -1464,7 +1602,21 @@ func _on_dock_handle_input(event: InputEvent, key: String) -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and _transit_layer != null \
+	var modal := _top_modal()
+	if modal != null and event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_ESCAPE:
+			_unhandled_key_input(event)
+			return
+		if event.keycode == KEY_TAB:
+			var targets: Array[Control] = []
+			_modal_focusables(modal, targets)
+			if not targets.is_empty():
+				var at := targets.find(get_viewport().gui_get_focus_owner())
+				var next := posmod(at + (-1 if event.shift_pressed else 1), targets.size())
+				targets[next].grab_focus()
+			get_viewport().set_input_as_handled()
+			return
+	if event is InputEventKey and modal == null and _transit_layer != null \
 			and _transit_layer.visible and not _dialog_layer.visible:
 		var key := event as InputEventKey
 		if key.pressed and not key.echo and key.keycode in [KEY_SPACE, KEY_ENTER, KEY_KP_ENTER]:
@@ -2040,7 +2192,7 @@ func _party_row(m: Dictionary) -> Control:
 		carries = I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(I18n.t("ui.party.wage_line") % [
-		int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN),
+		Panels.money(int(rec.get("wage", {}).get("amount", 0))),
 		carries, int(m.get("mood", 16)), I18n.fmt(_roster.birth_known(state, rid))],
 		UiScale.ui() - 3, Palette.ink_soft()))
 
@@ -2087,7 +2239,7 @@ func _hire_row(rec: Dictionary) -> Control:
 	row.add_child(col)
 	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
 	var cargo: Dictionary = rec.get("cargo", {})
-	var note := I18n.t("ui.party.wage") % int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
+	var note := I18n.t("ui.party.wage") % Panels.money(int(rec.get("wage", {}).get("amount", 0)))
 	if not cargo.is_empty():
 		note += I18n.gap() + I18n.t("ui.party.carry_fmt") % [
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
@@ -2299,6 +2451,7 @@ func _fill_settings(box: VBoxContainer) -> void:
 	var motion := Panels.styled_button(I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off")), Callable())
 	motion.pressed.connect(func():
 		Motion.reduce_motion = not Motion.reduce_motion
+		UiScale.save()
 		motion.text = I18n.t("ui.reduce_motion") + (I18n.t("ui.high_contrast_on") if Motion.reduce_motion else I18n.t("ui.high_contrast_off"))
 	)
 	box.add_child(motion)
@@ -2468,6 +2621,7 @@ func _restyle_all() -> void:
 	if _hud and _hud.has_method("restyle"):
 		_hud.restyle()
 	if _dialog and _dialog.has_method("restyle"):
+		_dialog.set_chain_context(_pending_context())
 		_dialog.restyle()
 	if _city_view and _city_view.has_method("restyle"):
 		_city_view.restyle()
@@ -2487,6 +2641,8 @@ func _restyle_all() -> void:
 	if _hire_ui != null and _hire_ui.has_method("restyle"):
 		_hire_ui.restyle()
 	_refresh_controls()
+	if state != null:
+		_sync_city_status()
 	# The docks grew or shrank, so the map has more or less room than it did.
 	_resize_docks()
 	_apply_projection()
@@ -2501,14 +2657,7 @@ func _show_event(ev: Dictionary) -> void:
 	var art: Texture2D = null
 	var c := db.get_record(state.city)
 	var culture := String(c.get("culture", "latin")) if not c.is_empty() else "latin"
-	# Mentor / method portraits take priority over generic venue plates.
-	var eid := String(ev.get("id", "")).to_lower()
-	for method in MapArt.MENTOR_METHOD:
-		if eid.contains("mentor") and eid.contains(method):
-			art = MapArt.mentor_portrait(method)
-			break
-	if art == null and not c.is_empty():
-		art = _city_view._portrait_for(ev, culture)
+	art = MapArt.event_portrait(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art, _pending_context())
 	# N3 — panel expands in place (rise fights CenterContainer layout).
@@ -2527,11 +2676,8 @@ func _pending_context() -> String:
 
 ## GDD §19: the player must always be able to tell source from invention.
 func _origin_tag(rec: Dictionary) -> String:
-	match rec.get("lore", {}).get("origin", ""):
-		"source":  return "[color=#7a6a4a](" + I18n.t("ui.source_polo") + ")[/color]"
-		"hybrid":  return "[color=#7a6a4a](" + I18n.t("ui.source_hybrid") + ")[/color]"
-		"authored": return "[color=#7a6a4a](" + I18n.t("ui.source_authored") + ")[/color]"
-	return ""
+	var note: String = _dialog._origin_note(rec)
+	return "[color=#7a6a4a](%s)[/color]" % note if not note.is_empty() else ""
 
 
 func _on_choice(ev: Dictionary, index: int) -> void:
@@ -2762,12 +2908,15 @@ func _resolve_choice(ev: Dictionary, index: int, lesson_passed: String = "") -> 
 func _show_next_pending_event() -> bool:
 	if state != null and not state.active_event.is_empty():
 		var resumed := db.get_record(state.active_event)
-		if not resumed.is_empty():
+		if not resumed.is_empty() and _consequence_completed(resumed):
+			_skip_completed_consequence(state.active_event, true)
+		elif not resumed.is_empty():
 			_city_view.visible = false
 			_pending_pages_in_sequence += 1
 			_show_event(resumed)
 			return true
-		executor.execute(state, [
+		else:
+			executor.execute(state, [
 			{
 				"op": "dequeue_event",
 				"value": state.active_event,
@@ -2784,10 +2933,13 @@ func _show_next_pending_event() -> bool:
 				"value": "",
 				"reason": "cleared-missing-active-event",
 			},
-		], {"rng": rng, "event_id": "active-event-recovery"})
+			], {"rng": rng, "event_id": "active-event-recovery"})
 	while state != null and not state.pending_events.is_empty():
 		var event_id := String(state.pending_events[0])
 		var next := db.get_record(event_id)
+		if not next.is_empty() and _consequence_completed(next):
+			_skip_completed_consequence(event_id, false)
+			continue
 		if next.is_empty():
 			push_error("Missing queued consequence event: %s" % event_id)
 			executor.execute(state, [
@@ -2816,6 +2968,24 @@ func _show_next_pending_event() -> bool:
 		return true
 	_pending_pages_in_sequence = 0
 	return false
+
+
+func _consequence_completed(ev: Dictionary) -> bool:
+	return bool(ev.get("once", false)) and bool(state.once_fired.get(ev.get("id", ""), false))
+
+
+## Old saves and two branches can queue the same once-only consequence.
+## EventMachine correctly refuses to reward it twice; advance past it here
+## instead of opening an event whose every click is permanently rejected.
+func _skip_completed_consequence(event_id: String, clear_active: bool) -> void:
+	var fx: Array = []
+	if not state.pending_events.is_empty() and String(state.pending_events[0]) == event_id:
+		fx.append({"op": "dequeue_event", "value": event_id,
+			"reason": "already-resolved-consequence"})
+	if clear_active:
+		fx.append({"op": "active_event", "value": "", "reason": "already-resolved-consequence"})
+	executor.execute(state, fx, {"rng": rng, "event_id": "completed-consequence-recovery"})
+	_autosave()
 
 
 func _show_pending_pause() -> void:
@@ -2854,7 +3024,6 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 			func() -> void: _clear_panel()))
 
 	_panel.add_child(Panels.heading(I18n.t("ui.routes_from") % _city_name(state.city)))
-	_panel.add_child(Panels.label(I18n.t("ui.routes_hint"), UiScale.ui(), Palette.ink_soft()))
 
 	var any := false
 	for r in travel.routes_from(state.city):
@@ -2889,6 +3058,7 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 	# Secondary city actions remain available below the primary route area.
 	# They are intentionally not duplicated above the route list.
 	_panel.add_child(Panels.rule())
+	_panel.add_child(Panels.label(I18n.t("ui.routes_hint"), UiScale.ui(), Palette.ink_soft()))
 	_panel.add_child(Panels.heading(I18n.t("ui.city.explore_more")))
 	var life_stage := String(state.life.get("stage", MortalityCore.STABLE))
 	if life_stage != MortalityCore.STABLE:
@@ -3116,6 +3286,7 @@ func _city_name(cid: String) -> String:
 func _build_audio_controls() -> void:
 	# A1: mute must be reachable before any sustained drone settles in.
 	var btn := Button.new()
+	Panels.style_button(btn)
 	btn.name = "MuteBtn"
 	btn.text = I18n.t("ui.mute")
 	btn.set_anchors_preset(Control.PRESET_TOP_RIGHT)

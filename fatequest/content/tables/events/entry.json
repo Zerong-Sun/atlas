@@ -169,6 +169,16 @@
               "reason": "spent-a-day-looking-about"
             }
           ]
+        },
+        {
+          "label": "ev.alexandria.welcome.entry",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-alexandria-welcome-gate",
+              "reason": "looked-for-a-welcome"
+            }
+          ]
         }
       ],
       "lore": {

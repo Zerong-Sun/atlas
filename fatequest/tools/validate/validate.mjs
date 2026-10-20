@@ -605,7 +605,9 @@ const LINES = {
     const want = new Map();
     for (const e of byTable.events ?? []) {
       for (const k of [e.title, e.body]) if (k) want.set(k, e.id);
-      for (const c of e.choices ?? []) if (c.label) want.set(c.label, e.id);
+      for (const c of e.choices ?? []) {
+        for (const k of [c.label, c.resultText]) if (k) want.set(k, e.id);
+      }
     }
     for (const c of byTable.cities ?? []) if (c.name) want.set(c.name, c.id);
     let missing = 0;

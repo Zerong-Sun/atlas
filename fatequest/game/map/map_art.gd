@@ -77,39 +77,11 @@ const BAND_SCENE := {
 	"steppe": "scene-region-isl",
 }
 
-## Venue keywords → portrait stem (npc-<venue>-<set>).
-const VENUE_STEMS := ["market", "temple", "inn", "tea", "dock", "healer",
-		"scribe", "official"]
-
-## Retainer / event id fragments → job portrait stem.
-const JOB_FROM_ID := {
-	"guide": "guide",
-	"porter": "porter",
-	"interpreter": "translator",
-	"translator": "translator",
-	"sailor": "sailor",
-	"guard": "guard",
-	"healer": "healer",
-	"scribe": "scribe",
-	"acolyte": "acolyte",
-	"diviner": "diviner",
-	"mentor": "diviner",
-	"dock": "porter",
-	"official": "scribe",
-}
-
-## retainer-* filenames use shorter stems than npc-job-* ids.
-const RETAINER_ART_SHORT := {
-	"guide": "guide",
-	"porter": "porter",
-	"guard": "guard",
-	"scribe": "scribe",
-	"translator": "lang",
-	"healer": "heal",
-	"sailor": "sail",
-	"acolyte": "monk",
-	"diviner": "seer",
-}
+## Portraits are audited separately from map icons. Geography is not enough to
+## infer a person's dress, gender or occupation, and several source images are
+## still multi-figure sheets despite having single-character filenames.
+const PORTRAIT_MAP_PATH := "res://game/map/portrait_art_map.json"
+const RETAINERS_PATH := "res://content/tables/retainers.json"
 
 ## Currency id → art stem (files may be absent; callers fall back to emoji).
 const CURRENCY_ART := {
@@ -161,10 +133,14 @@ static var _cache: Dictionary = {}
 static var _goods_map: Dictionary = {}
 static var _goods_index: Dictionary = {}
 static var _goods_loaded := false
+static var _portrait_map: Dictionary = {}
+static var _retainers: Dictionary = {}
+static var _portraits_loaded := false
 
 
 static func tex(name: String) -> Texture2D:
-	if name.is_empty():
+	if name.is_empty() or name.contains("/") or name.contains("\\") \
+			or name.contains(".") or name.contains(":"):
 		return null
 	if _cache.has(name):
 		return _cache[name]
@@ -199,7 +175,7 @@ static func has_city_icon(tier: String) -> bool:
 
 
 static func city_scene(city: Dictionary) -> Texture2D:
-	var cid := String(city.get("id", ""))
+	var cid := _art_text(city.get("id", ""))
 	var art_id := art_city_id(cid)
 
 	# Named painted scenes first.
@@ -213,12 +189,12 @@ static func city_scene(city: Dictionary) -> Texture2D:
 	if entry != null:
 		return entry
 
-	var explicit := String(city.get("scene", ""))
-	if explicit != "":
-		var t2 := tex(explicit)
+	var scene_value: Variant = city.get("scene", "")
+	if scene_value is String and not _art_text(scene_value).is_empty():
+		var t2 := tex(_art_text(scene_value))
 		if t2 != null:
 			return t2
-	return tex(BAND_SCENE.get(String(city.get("band", "")), "scene-region-chr"))
+	return tex(_art_text(BAND_SCENE.get(_art_text(city.get("band", "")), "")))
 
 
 ## Site / explore plate for a city interior figure slot (0-based).
@@ -230,24 +206,31 @@ static func site_scene(city_id: String, slot: int = 0) -> Texture2D:
 		return site
 	# explore-* exists for inn/market/temple × 12 cities.
 	var venues := ["market", "inn", "temple"]
-	var explore := tex("explore-%s-%s" % [venues[slot % venues.size()], art_id])
+	var explore := tex("explore-%s-%s" % [venues[n - 1], art_id])
 	if explore != null:
 		return explore
 	return null
 
 
-## City-view background: prefer a site plate, then explore market, then city_scene.
-static func city_explore_bg(city: Dictionary, slot: int = 0) -> Texture2D:
-	var cid := String(city.get("id", ""))
-	var site := site_scene(cid, slot)
-	if site != null:
-		return site
-	var art_id := art_city_id(cid)
-	for venue in ["market", "inn", "temple"]:
-		var t := tex("explore-%s-%s" % [venue, art_id])
-		if t != null:
-			return t
+## The city background is stable: availability/order of site cards must not
+## silently swap its location. site-* files include unfinished contact sheets.
+static func city_explore_bg(city: Dictionary, _slot: int = 0) -> Texture2D:
 	return city_scene(city)
+
+
+## Only explicit scene bindings override the city establishing shot.
+static func event_scene(ev: Dictionary, city: Dictionary) -> Texture2D:
+	_ensure_portrait_map()
+	var binding := _portrait_entry("events", _art_text(ev.get("id", "")))
+	var art: Variant = ev.get("art", {})
+	var stem := _art_text(binding.get("scene", ""))
+	if art is Dictionary:
+		stem = _art_text(art.get("scene", stem))
+	var scene: Variant = ev.get("scene", {})
+	if scene is Dictionary:
+		stem = _art_text(scene.get("art", stem))
+	var image := tex(stem)
+	return image if image != null else city_scene(city)
 
 
 static func city_entry(city_id: String) -> Texture2D:
@@ -256,97 +239,104 @@ static func city_entry(city_id: String) -> Texture2D:
 
 # --------------------------------------------------------------------------- portraits
 
+static func _art_text(value: Variant) -> String:
+	return String(value) if value is String or value is StringName else ""
+
+
+static func _art_dict(value: Variant) -> Dictionary:
+	return value if value is Dictionary else {}
+
+
+static func _portrait_entry(section: String, key: String) -> Dictionary:
+	return _art_dict(_art_dict(_portrait_map.get(section, {})).get(key, {}))
+
+
+static func _ensure_portrait_map() -> void:
+	if _portraits_loaded:
+		return
+	_portraits_loaded = true
+	var file := FileAccess.open(PORTRAIT_MAP_PATH, FileAccess.READ)
+	if file != null:
+		var doc: Variant = JSON.parse_string(file.get_as_text())
+		if doc is Dictionary:
+			_portrait_map = doc
+	file = FileAccess.open(RETAINERS_PATH, FileAccess.READ)
+	if file != null:
+		var doc: Variant = JSON.parse_string(file.get_as_text())
+		if doc is Dictionary and doc.get("records", []) is Array:
+			for rec in doc.get("records", []):
+				if rec is Dictionary and not _art_text(rec.get("id", "")).is_empty():
+					_retainers[_art_text(rec.get("id", ""))] = rec
+
+
+static func _audited_portrait(stem: String, gender: String = "") -> Texture2D:
+	_ensure_portrait_map()
+	var rec := _portrait_entry("portraits", stem)
+	if rec.is_empty():
+		return null
+	# A declared female character cannot fall back to a generic male portrait.
+	if not gender.is_empty() and _art_text(rec.get("gender", "")) != gender:
+		return null
+	return tex(stem)
+
+
 static func venue_portrait(venue: String, culture: String) -> Texture2D:
-	return tex("npc-%s-%s" % [venue, culture_set(culture)])
+	_ensure_portrait_map()
+	var venues := _portrait_entry("venues", culture)
+	return _audited_portrait(_art_text(venues.get(venue, "")))
 
 
 static func job_portrait(job_id: String, culture: String) -> Texture2D:
-	if job_id.is_empty():
+	_ensure_portrait_map()
+	var jobs := _portrait_entry("jobs", culture)
+	return _audited_portrait(_art_text(jobs.get(job_id, "")))
+
+
+## An event describes an encounter, not necessarily a person. Stable ids or
+## explicit authored bindings decide its face; localized title/slot never do.
+static func event_portrait(ev: Dictionary, culture: String, _slot: int = -1) -> Texture2D:
+	_ensure_portrait_map()
+	var binding := _portrait_entry("events", _art_text(ev.get("id", "")))
+	var art: Variant = ev.get("art", {})
+	var character_id := _art_text(ev.get("characterId", ev.get("retainerId", "")))
+	var character := _art_dict(_retainers.get(character_id, {}))
+	var gender := _art_text(character.get("gender", ev.get("gender", "")))
+	if art is Dictionary and art.has("portrait"):
+		return _audited_portrait(_art_text(art["portrait"]), gender)
+	if ev.has("portrait"):
+		return _audited_portrait(_art_text(ev["portrait"]), gender)
+	if binding.has("portrait"):
+		return _audited_portrait(_art_text(binding["portrait"]), gender if not gender.is_empty() else _art_text(binding.get("gender", "")))
+	if not character_id.is_empty():
+		return retainer_portrait(character_id, culture, _art_text(ev.get("gender", "")))
+	var job := _art_text(ev.get("job", ""))
+	if not job.is_empty():
+		var jobs := _portrait_entry("jobs", culture)
+		return _audited_portrait(_art_text(jobs.get(job, "")), _art_text(ev.get("gender", "")))
+	return null
+
+
+static func retainer_portrait(retainer_id: String, _culture: String, gender: String = "") -> Texture2D:
+	_ensure_portrait_map()
+	var rec := _art_dict(_retainers.get(retainer_id, {}))
+	if rec.is_empty():
 		return null
-	var set_name := culture_set(culture)
-	# Prefer npc-job-<job>-<set>, then npc-<job>-<set>.
-	var t := tex("npc-job-%s-%s" % [job_id, set_name])
-	if t != null:
-		return t
-	return tex("npc-%s-%s" % [job_id, set_name])
-
-
-## Resolve a portrait from an event (and optional retainer id fragment).
-static func event_portrait(ev: Dictionary, culture: String, slot: int = -1) -> Texture2D:
-	var id := String(ev.get("id", "")).to_lower()
-	var title := String(ev.get("title", "")).to_lower()
-	var hay := id + " " + title
-
-	# Explicit job / mentor fields on the record.
-	var job := String(ev.get("job", ""))
-	if job != "":
-		var jp := job_portrait(job, culture)
-		if jp != null:
-			return jp
-
-	# Mentor events → mentor-<method> when the id encodes the method.
-	if hay.contains("mentor"):
-		for method in MENTOR_METHOD:
-			if hay.contains(method):
-				var mp := mentor_portrait(method)
-				if mp != null:
-					return mp
-		var tea := venue_portrait("tea", culture)
-		if tea != null:
-			return tea
-
-	# Retainer-style job fragments in the id.
-	for frag in JOB_FROM_ID:
-		if hay.contains(frag):
-			var jp2 := job_portrait(String(JOB_FROM_ID[frag]), culture)
-			if jp2 != null:
-				return jp2
-
-	# Venue keywords.
-	var venue := "market"
-	if hay.contains("shrine") or hay.contains("temple") or hay.contains("mazu") \
-			or hay.contains("mosque") or hay.contains("church"):
-		venue = "temple"
-	elif hay.contains("serai") or hay.contains("inn") or hay.contains("caravan"):
-		venue = "inn"
-	elif hay.contains("tea") or hay.contains("school"):
-		venue = "tea"
-	elif hay.contains("dock") or hay.contains("port") or hay.contains("harbor") \
-			or hay.contains("harbour") or hay.contains("quay"):
-		venue = "dock"
-	elif hay.contains("heal") or hay.contains("physician") or hay.contains("doctor"):
-		venue = "healer"
-	elif hay.contains("scribe") or hay.contains("clerk") or hay.contains("official"):
-		venue = "official" if hay.contains("official") else "scribe"
-	elif slot >= 0:
-		venue = VENUE_STEMS[slot % VENUE_STEMS.size()]
-
-	var vp := venue_portrait(venue, culture)
-	if vp != null:
-		return vp
-	return venue_portrait("market", culture)
-
-
-static func retainer_portrait(retainer_id: String, culture: String, gender: String = "") -> Texture2D:
-	var id := retainer_id.to_lower()
-	var set_name := culture_set(culture)
-	for frag in JOB_FROM_ID:
-		if id.contains(frag):
-			var job := String(JOB_FROM_ID[frag])
-			var short := String(RETAINER_ART_SHORT.get(job, job))
-			# Prefer gender-specific `retainer-<short>-<set>-<gender>`, then the
-			# shared `retainer-<short>-<set>` legacy set, then the generic job set.
-			if gender != "":
-				var gendered := tex("retainer-%s-%s-%s" % [short, set_name, gender])
-				if gendered != null:
-					return gendered
-			var dedicated := tex("retainer-%s-%s" % [short, set_name])
-			if dedicated != null:
-				return dedicated
-			var t := job_portrait(job, culture)
-			if t != null:
-				return t
-	return venue_portrait("market", culture)
+	var actual_gender := _art_text(rec.get("gender", gender))
+	# Use the retainer's recorded origin, so travelling cannot change their face.
+	var origin := _art_dict(rec.get("origin", {}))
+	var culture := _art_text(origin.get("culture", ""))
+	var binding := _portrait_entry("characters", retainer_id)
+	if binding.has("portrait"):
+		return _audited_portrait(_art_text(binding["portrait"]), actual_gender)
+	var jobs := _portrait_entry("jobs", culture)
+	var roles: Variant = rec.get("roles", [])
+	if not roles is Array:
+		return null
+	for role in roles:
+		var image := _audited_portrait(_art_text(jobs.get(_art_text(role), "")), actual_gender)
+		if image != null:
+			return image
+	return null
 
 
 static func contract_art(mode: String) -> Texture2D:
@@ -364,8 +354,10 @@ static func seal_wax() -> Texture2D:
 
 
 static func mentor_portrait(method_id: String) -> Texture2D:
-	var stem := String(MENTOR_METHOD.get(method_id, method_id))
-	return tex("mentor-%s" % stem)
+	_ensure_portrait_map()
+	# A method alone identifies neither a person nor their culture. Only
+	# inspected single-person plates can be used by generic lesson surfaces.
+	return _audited_portrait(_art_text(_art_dict(_portrait_map.get("mentors", {})).get(method_id, "")))
 
 
 # --------------------------------------------------------------------------- goods / items / stickers / currency

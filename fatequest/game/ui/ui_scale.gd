@@ -69,9 +69,11 @@ static func label() -> String:
 
 static func save() -> void:
 	var f := ConfigFile.new()
+	f.load(CFG)
 	f.set_value("ui", "text_step", step)
 	f.set_value("ui", "high_contrast", high_contrast)
 	f.set_value("ui", "lang", I18n.lang())
+	f.set_value("ui", "reduce_motion", Motion.reduce_motion)
 	f.save(CFG)
 
 
@@ -79,7 +81,8 @@ static func load_prefs() -> void:
 	var f := ConfigFile.new()
 	if f.load(CFG) != OK:
 		return
-	step = int(f.get_value("ui", "text_step", Size.NORMAL))
+	step = clampi(int(f.get_value("ui", "text_step", Size.NORMAL)), Size.SMALL, Size.LARGE)
+	Motion.reduce_motion = bool(f.get_value("ui", "reduce_motion", false))
 	high_contrast = bool(f.get_value("ui", "high_contrast", false))
 	var lang := String(f.get_value("ui", "lang", "zh"))
 	if lang in ["zh", "en"]:

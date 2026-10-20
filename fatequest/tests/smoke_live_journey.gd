@@ -43,10 +43,12 @@ func _init() -> void:
         and main.state.pending_events == ["ev-road-fadlan-25"]
         and main._dialog_layer.visible)
 
-    # Resolve the encounter. The follow-up should open immediately, without a
-    # hidden three-page cap or a blank intermediate panel.
+    # Resolve the encounter and read its result; continuing opens the follow-up.
     main._resolve_choice(main._current_event, 0)
     await process_frame
+    if main._result_then_chain:
+        main._dialog.dismissed.emit()
+        await process_frame
     var followup_id := String(main._current_event.get("id", ""))
     var followup_open: bool = (main._dialog_layer.visible
         and followup_id == "ev-road-fadlan-25-followup"

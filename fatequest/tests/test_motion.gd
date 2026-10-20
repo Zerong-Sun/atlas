@@ -28,7 +28,10 @@ func run() -> bool:
 	Motion.reduce_motion = false
 	Motion.duration_scale = 0.5
 	_ok(is_equal_approx(Motion.dur(0.4), 0.2), "global scale applies")
+	Motion.duration_scale = -1.0
+	_ok(is_zero_approx(Motion.dur(0.4)), "invalid negative duration scale is clamped")
 	Motion.duration_scale = 1.0
+	_ok(is_zero_approx(Motion.dur(-0.4)), "negative duration is clamped")
 
 	print("test_motion: %s" % ("PASS" if _f == 0 else "FAIL (%d)" % _f))
 	return _f == 0

@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "description": "Audited illustrative portraits. Missing binding means no portrait; never infer identity from ordering or title substrings. Jobs are generic role illustrations, not unique likenesses.",
+  "portraits": {
+    "retainer-guide-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-lang-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-sail-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-scribe-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-seer-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-monk-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-guide-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-lang-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-sail-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-scribe-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-seer-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-guard-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-heal-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-market-chr": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-market-con": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-market-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-inn-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-job-scribe-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-job-guide-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-healer-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "npc-job-guard-isl": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "mentor-bazi": {
+      "gender": "m",
+      "review": "2026-10-20: inspected single figure; filename is not identity evidence"
+    },
+    "retainer-heal-chr": {
+      "gender": "f",
+      "review": "2026-10-20: inspected single figure"
+    }
+  },
+  "jobs": {
+    "latin": {
+      "guide": "retainer-guide-chr",
+      "interpreter": "retainer-lang-chr",
+      "translator": "retainer-lang-chr",
+      "sailor": "retainer-sail-chr",
+      "scribe": "retainer-scribe-chr",
+      "diviner": "retainer-seer-chr",
+      "acolyte": "retainer-monk-chr"
+    },
+    "islamic": {
+      "guide": "retainer-guide-isl",
+      "interpreter": "retainer-lang-isl",
+      "translator": "retainer-lang-isl",
+      "sailor": "retainer-sail-isl",
+      "scribe": "retainer-scribe-isl",
+      "diviner": "retainer-seer-isl",
+      "guard": "retainer-guard-isl",
+      "healer": "retainer-heal-isl"
+    }
+  },
+  "venues": {
+    "latin": {
+      "market": "npc-market-chr"
+    },
+    "east_asia": {
+      "market": "npc-market-con"
+    },
+    "islamic": {
+      "market": "npc-market-isl",
+      "inn": "npc-inn-isl",
+      "healer": "npc-healer-isl",
+      "scribe": "npc-job-scribe-isl"
+    }
+  },
+  "events": {
+    "ev-alexandria-welcome-gate": {
+      "portrait": "",
+      "reason": "The porter assets are mixed or paired source sheets; do not present a merchant as the porter."
+    },
+    "ev-alexandria-welcome-meal": {
+      "portrait": "npc-inn-isl",
+      "reason": "Anonymous host holding a serving pot; reviewed against the meal text."
+    },
+    "ev-baldacum-mentor-geomancy": {
+      "portrait": "retainer-seer-isl",
+      "reason": "Single figure holding a divination diagram."
+    },
+    "ev-alexandria-mentor-geomancy": {
+      "portrait": "retainer-seer-isl",
+      "reason": "Generic sand divination teacher illustration, not a named historical likeness."
+    }
+  },
+  "characters": {
+    "npc-kiovia-mentor": {
+      "portrait": "",
+      "reason": "Runic teacher needs a reviewed Nordic/orthodox illustration; generic western star-chart seer is not his role."
+    }
+  },
+  "mentors": {
+    "bazi": "mentor-bazi"
+  },
+  "unresolved": [
+    "Steppe and Indian Ocean characters need culturally reviewed portraits rather than borrowing Islamic/Mazu sets.",
+    "npc-zayton-mentor is explicitly an elderly woman; existing diviner-con and jiaobei files contain multiple figures.",
+    "Guide-con and guide-mazu duplicate unrelated cultural sets.",
+    "Several retainer-porter, mentor and site files are unfinished contact sheets."
+  ]
+}

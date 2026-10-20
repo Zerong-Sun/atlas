@@ -44,8 +44,14 @@ func _init() -> void:
         # The caption is intentionally a passive child inside the Button.
         # This proves the visible label cannot intercept the click or become a
         # dead-looking button of its own.
-        caption_ok = (_find_caption_panel(figure) != null
-            and figure.mouse_filter != Control.MOUSE_FILTER_IGNORE)
+        var event: Dictionary = main.db.get_record(String(figure.get_meta("event_id", "")))
+        var caption := _find_caption(figure, I18n.t(String(event.get("title", ""))))
+        caption_ok = caption != null and figure.mouse_filter != Control.MOUSE_FILTER_IGNORE
+        var ancestor: Node = caption
+        while ancestor != null and ancestor != figure:
+            if ancestor is Control and ancestor.mouse_filter != Control.MOUSE_FILTER_IGNORE:
+                caption_ok = false
+            ancestor = ancestor.get_parent()
         figure.pressed.emit()
         await process_frame
     var dialog_ok: bool = bool(main._dialog_layer.visible)
@@ -79,6 +85,8 @@ func _init() -> void:
     var route_visible: bool = route != null \
         and route.get_global_rect().position.y >= fold.position.y \
         and route.get_global_rect().end.y <= fold.end.y
+    if not route_visible and route != null:
+        print("PLAYER_SURFACE geometry: route=%s panel=%s" % [route.get_global_rect(), fold])
     # “Explore more” is secondary content.  It may not precede route choices.
     var route_primary: bool = route != null and (explore_index < 0 or route_index < explore_index)
     var panel_at_top: bool = main._panel_scroll.scroll_vertical == 0
@@ -102,11 +110,11 @@ func _init() -> void:
     quit(0 if ok else 1)
 
 
-func _find_caption_panel(node: Node) -> PanelContainer:
+func _find_caption(node: Node, expected: String) -> Label:
     for child in node.get_children():
-        if child is PanelContainer:
+        if child is Label and child.text == expected:
             return child
-        var nested := _find_caption_panel(child)
+        var nested := _find_caption(child, expected)
         if nested != null:
             return nested
     return null

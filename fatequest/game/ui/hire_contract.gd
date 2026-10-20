@@ -1,7 +1,7 @@
 class_name HireContract
 extends RefCounted
 
-## Parchment hire ritual — open / divined → seal → confirmed.
+## A readable contract: choosing confirms immediately and exactly once.
 ## Parent owns WorldState mutation after `confirmed`.
 
 signal confirmed(rec: Dictionary)
@@ -16,7 +16,9 @@ var _name_l: Label
 var _origin_l: Label
 var _detail_l: Label
 var _verdict_l: Label
-var _seal: TextureRect
+var _scroll: ScrollContainer
+var _head: BoxContainer
+var _actions: BoxContainer
 var _btn_ok: Button
 var _btn_cancel: Button
 var _rec: Dictionary = {}
@@ -25,7 +27,7 @@ var _busy := false
 
 
 func build(parent: Node) -> void:
-	var ui := Panels.overlay(parent, Vector2(640, 480))
+	var ui := Panels.overlay(parent, Vector2.ZERO)
 	_layer = ui["layer"]
 	_panel = ui["panel"]
 	_box = ui["box"]
@@ -36,71 +38,69 @@ func build(parent: Node) -> void:
 	_bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_bg.modulate = Color(1, 1, 1, 0.92)
+	_bg.set_meta("decorative_panel_art", true)
 	_panel.add_child(_bg)
 	_panel.move_child(_bg, 0)
 
-	var head := HBoxContainer.new()
-	head.add_theme_constant_override("separation", 12)
-	_box.add_child(head)
+	_scroll = ScrollContainer.new()
+	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_scroll.follow_focus = true
+	_box.add_child(_scroll)
+	_head = BoxContainer.new()
+	_head.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_head.add_theme_constant_override("separation", 12)
+	_scroll.add_child(_head)
 
 	_portrait = TextureRect.new()
 	_portrait.custom_minimum_size = Vector2(140, 180)
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	head.add_child(_portrait)
+	_head.add_child(_portrait)
 
 	var col := VBoxContainer.new()
 	col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	head.add_child(col)
+	_head.add_child(col)
 	_name_l = Panels.label("", UiScale.title(), Palette.ink())
+	_name_l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	col.add_child(_name_l)
 	_origin_l = Panels.label("", UiScale.ui() - 2, Palette.ink_soft())
 	_origin_l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	col.add_child(_origin_l)
 	_detail_l = Panels.label("", UiScale.ui(), Palette.ink())
+	_detail_l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	col.add_child(_detail_l)
 	_verdict_l = Panels.label("", UiScale.body(), Palette.ink())
 	_verdict_l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	col.add_child(_verdict_l)
 
-	var spacer := Control.new()
-	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_box.add_child(spacer)
-
-	_seal = TextureRect.new()
-	_seal.visible = false
-	_seal.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_seal.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	_seal.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	_seal.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	_seal.offset_left = -100.0
-	_seal.offset_top = -100.0
-	_seal.offset_right = -20.0
-	_seal.offset_bottom = -20.0
-	_panel.add_child(_seal)
-
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 10)
-	_box.add_child(row)
-	_btn_ok = Panels.styled_button(I18n.t("ui.forge_contract"), _run_confirm)
+	_actions = BoxContainer.new()
+	_actions.add_theme_constant_override("separation", 10)
+	_box.add_child(_actions)
+	_btn_ok = Panels.primary_button(I18n.t("ui.forge_contract"), _run_confirm)
 	_btn_cancel = Panels.styled_button(I18n.t("ui.pass"), _on_cancel)
-	row.add_child(_btn_ok)
-	row.add_child(_btn_cancel)
+	for button in [_btn_ok, _btn_cancel]:
+		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		_actions.add_child(button)
+	Panels.make_dismissable(_layer, _panel, _on_cancel)
+	_layer.resized.connect(_fit_window)
+	_fit_window()
 
 
 func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = "") -> void:
-	_rec = rec
+	_rec = rec.duplicate(true)
 	_mode = mode
 	_busy = false
+	_refresh_action_labels()
 	_btn_ok.disabled = false
 	_btn_cancel.disabled = false
-	_seal.visible = false
-	_seal.modulate.a = 1.0
-	_seal.scale = Vector2.ONE
+	_scroll.scroll_vertical = 0
 
 	var parchment := MapArt.contract_art(mode)
 	_bg.texture = parchment
-	_bg.visible = parchment != null
+	_bg.visible = parchment != null and not UiScale.high_contrast
 
 	var portrait := MapArt.retainer_portrait(String(rec.get("id", "")), culture, String(rec.get("gender", "")))
 	_portrait.texture = portrait
@@ -121,8 +121,8 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 		origin_line = I18n.t(origin_v)
 	_origin_l.text = origin_line
 	var months := int(rec.get("contract", {}).get("months", 12))
-	var wage := int(int(rec.get("wage", {}).get("amount", 0)) / Market.FEN)
-	_detail_l.text = I18n.t("ui.hire_wage_fmt") % [wage, months]
+	var wage := Panels.money(int(rec.get("wage", {}).get("amount", 0)))
+	_detail_l.text = I18n.t("ui.hire_wage_exact_fmt") % [wage, months]
 	if mode == "divined" and verdict_key != "":
 		_verdict_l.text = I18n.fmt(verdict_key)
 		_verdict_l.visible = true
@@ -131,50 +131,50 @@ func open(rec: Dictionary, culture: String, mode: String, verdict_key: String = 
 		_verdict_l.visible = false
 
 	_layer.visible = true
-	_panel.scale = Vector2.ONE
-	Motion.parchment_expand(_panel, 0.40)
+	_fit_window()
+	Motion.parchment_expand(_panel, 0.20)
+	_btn_ok.grab_focus()
+
+
+func _refresh_action_labels() -> void:
+	_btn_ok.text = I18n.t("ui.forge_contract")
+	_btn_cancel.text = I18n.t("ui.pass")
 
 
 func _on_cancel() -> void:
-	if _busy:
+	if _busy or not is_instance_valid(_layer) or not _layer.visible:
 		return
-	_layer.visible = false
+	Motion.cancel(_panel)
+	_layer.hide()
 	cancelled.emit()
 
 
 func _run_confirm() -> void:
-	if _busy:
+	if _busy or not is_instance_valid(_layer) or not _layer.visible:
 		return
 	_busy = true
 	_btn_ok.disabled = true
 	_btn_cancel.disabled = true
-	await _play_seal()
-	_layer.visible = false
-	confirmed.emit(_rec)
+	Motion.cancel(_panel)
+	_layer.hide()
+	# All local UI cleanup happens before the signal. The receiver can free
+	# this screen or open another contract synchronously without stale work
+	# resuming after an animation and mutating the new interaction.
+	confirmed.emit(_rec.duplicate(true))
 
 
-func _play_seal() -> void:
-	var seal_tex := MapArt.seal_wax()
-	var sealed := MapArt.contract_art("sealed")
-	if seal_tex != null:
-		_seal.texture = seal_tex
-		_seal.visible = true
-		if Motion.allows(Motion.Kind.SCALE):
-			_seal.scale = Vector2(0.01, 0.01)
-			_seal.modulate.a = 0.0
-			var t := _panel.create_tween()
-			t.set_parallel(true)
-			t.tween_property(_seal, "scale", Vector2.ONE, Motion.dur(0.35, Motion.Kind.SCALE)) \
-				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-			t.tween_property(_seal, "modulate:a", 1.0, Motion.dur(0.35, Motion.Kind.FADE))
-			await t.finished
-		else:
-			_seal.modulate.a = 0.0
-			await Motion.fade(_seal, 1.0, 0.25).finished
-	if sealed != null:
-		_bg.texture = sealed
-		_bg.visible = true
-	await _panel.get_tree().create_timer(Motion.dur(0.25, Motion.Kind.FADE)).timeout
+func _fit_window() -> void:
+	if not is_instance_valid(_layer) or not _layer.is_inside_tree():
+		return
+	var viewport_size := _layer.get_viewport_rect().size
+	var available := viewport_size - Vector2(32, 32)
+	_panel.custom_minimum_size = Vector2(minf(640.0, available.x), minf(480.0, available.y))
+	var compact := available.x < 560.0 or UiScale.step == UiScale.Size.LARGE
+	_head.vertical = compact
+	_actions.vertical = compact
+	_portrait.custom_minimum_size = Vector2(100, 125) if compact else Vector2(140, 180)
+	_portrait.size_flags_horizontal = Control.SIZE_SHRINK_CENTER if compact else Control.SIZE_FILL
+	_panel.reset_size()
 
 
 ## Re-dresses the contract panel for the current type size and contrast mode.
@@ -183,6 +183,7 @@ func _play_seal() -> void:
 func restyle() -> void:
 	if _layer == null or not is_instance_valid(_layer):
 		return
+	_refresh_action_labels()
 	Panels.restyle_tree(_layer)
 	if _name_l != null and is_instance_valid(_name_l):
 		_name_l.add_theme_font_size_override("font_size", UiScale.title())
@@ -195,5 +196,4 @@ func restyle() -> void:
 			l.add_theme_font_size_override("font_size", UiScale.ui())
 			l.add_theme_color_override("font_color", Palette.ink())
 	if _portrait != null and is_instance_valid(_portrait):
-		var w := 140.0 * Metrics.factor()
-		_portrait.custom_minimum_size = Vector2(w, w * 1.29)
+		_fit_window()

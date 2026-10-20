@@ -1,0 +1,148 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-alexandria-welcome-gate",
+      "kind": "site",
+      "title": "ev.alexandria.welcome.gate.title",
+      "body": "ev.alexandria.welcome.gate.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.welcome.gate.faith",
+          "resultText": "ev.alexandria.welcome.gate.faith_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-alexandria-welcome-meal",
+              "reason": "introduced-to-host"
+            }
+          ],
+          "showWhen": {
+            "faiths": [
+              "islam"
+            ]
+          }
+        },
+        {
+          "label": "ev.alexandria.welcome.gate.tears",
+          "resultText": "ev.alexandria.welcome.gate.tears_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-alexandria-welcome-meal",
+              "reason": "introduced-to-host"
+            }
+          ],
+          "showWhen": {
+            "coins": {
+              "max": 2000
+            }
+          }
+        },
+        {
+          "label": "ev.alexandria.welcome.gate.leave",
+          "resultText": "ev.alexandria.welcome.gate.leave_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "ev-alexandria-welcome-gate-declined",
+              "reason": "chose-independent-exploration"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      },
+      "when": {
+        "cities": [
+          "alexandria"
+        ]
+      }
+    },
+    {
+      "id": "ev-alexandria-welcome-meal",
+      "kind": "consequence",
+      "title": "ev.alexandria.welcome.meal.title",
+      "body": "ev.alexandria.welcome.meal.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.alexandria.welcome.meal.aid",
+          "resultText": "ev.alexandria.welcome.meal.aid_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 1200,
+              "reason": "one-time-host-gift"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "shared-a-meal"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "host-named-cairo-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "babylonia-cairus",
+              "reason": "host-named-cairo"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "max": 2000
+            }
+          }
+        },
+        {
+          "label": "ev.alexandria.welcome.meal.food",
+          "resultText": "ev.alexandria.welcome.meal.food_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "shared-a-meal"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "declined-money-gracefully",
+              "scope": "city",
+              "id": "alexandria"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "host-named-cairo-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "babylonia-cairus",
+              "reason": "host-named-cairo"
+            }
+          ]
+        },
+        {
+          "label": "ev.alexandria.welcome.meal.decline",
+          "resultText": "ev.alexandria.welcome.meal.decline_result",
+          "effects": [
+            {
+              "op": "flag",
+              "value": "ev-alexandria-welcome-meal-declined",
+              "reason": "chose-independent-exploration"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

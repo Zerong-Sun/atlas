@@ -11,6 +11,7 @@ extends SceneTree
 ##     5. resolving the followup lets the journey complete into the city.
 ## Same fixtures as smoke_journey_resume.gd (tauris → tenduc).
 
+const Driver = preload("res://tests/story_ui_driver.gd")
 const WATCHDOG := 60.0
 var elapsed := 0.0
 
@@ -68,7 +69,9 @@ func _init() -> void:
 		and String(main._current_event.get("id", "")) == "ev-road-fadlan-25"
 
 	# 3. The "keep the fires high" choice queues the followup, which opens next.
-	main._resolve_choice(main._current_event, 0)
+	var encounter_clicked := Driver.choice(main, 0)
+	await process_frame
+	var encounter_result := Driver.continue_result(main)
 	await process_frame
 	var followup_ok: bool = main._dialog_layer.visible \
 		and String(main._current_event.get("id", "")) == "ev-road-fadlan-25-followup" \
@@ -101,16 +104,16 @@ func _init() -> void:
 	I18n.load_lang("zh")
 
 	# 5. Resolving the followup lets the journey complete into the city.
-	main._resolve_choice(main._current_event, 0)
+	var followup_clicked := Driver.choice(main, 0)
 	await process_frame
-	main._on_event_dismissed()
+	var followup_continued := Driver.continue_result(main)
 	await process_frame
 	var arrived_ok: bool = main.state.city == "tenduc" \
 		and main.state.active_journey.is_empty() \
 		and main.state.active_event.is_empty() \
 		and main.state.pending_events.is_empty()
 
-	var ok := checkpoint_ok and enc_ok and followup_ok and text_ok and arrived_ok
+	var ok := encounter_clicked and encounter_result and followup_clicked and followup_continued and checkpoint_ok and enc_ok and followup_ok and text_ok and arrived_ok
 	print("ROAD_FOLLOWUP: checkpoint=%s encounter=%s followup=%s text=%s arrived=%s" % [
 		checkpoint_ok, enc_ok, followup_ok, text_ok, arrived_ok])
 	print("ROAD_FOLLOWUP: %s" % ("OK" if ok else "FAIL"))

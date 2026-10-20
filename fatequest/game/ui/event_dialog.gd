@@ -1,19 +1,7 @@
 extends PanelContainer
 
-## The event popup: title, prose, choices, source card.
-##
-## Replaces a fixed-pixel panel that overflowed its own bounds as soon as the
-## text ran long or the font grew. Everything here is container-driven and
-## scrolls, so no amount of prose or font size can push content off screen —
-## that was the actual defect, not the size of any one number.
-
 signal choice_taken(index: int)
 signal dismissed()
-
-## Kept for anything still reading it. The live measure now comes from
-## Metrics.measure(), which grows the column with the type rather than pinning
-## large print to the same 760 px as small.
-const MAX_W := 760.0
 
 var _title: Label
 var _origin: Label
@@ -21,212 +9,255 @@ var _context: Label
 var _body: RichTextLabel
 var _scroll: ScrollContainer
 var _choices: VBoxContainer
+var _choice_scroll: ScrollContainer
 var _portrait: TextureRect
 var _root: VBoxContainer
+var _footer: HBoxContainer
+var _leave: Button
+var _keyboard_hint: Label
+var _generation := 0
+var _submitted := false
+var _event: Dictionary = {}
+var _states: Array = []
+var _result_key := ""
+var _chain_context := ""
 
 
 func _ready() -> void:
-	add_theme_stylebox_override("panel", Palette.panel_style())
-	custom_minimum_size = Vector2(560, 260)
-
+	clip_contents = true
 	_root = VBoxContainer.new()
 	_root.add_theme_constant_override("separation", Metrics.md())
 	add_child(_root)
-
 	var head := HBoxContainer.new()
-	head.add_theme_constant_override("separation", Metrics.md() + Metrics.xs())
+	head.add_theme_constant_override("separation", Metrics.lg())
 	_root.add_child(head)
-
 	_portrait = TextureRect.new()
 	_portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-	_portrait.custom_minimum_size = Vector2(120, 150)
+	_portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_portrait.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_portrait.visible = false
 	head.add_child(_portrait)
-
-	var head_col := VBoxContainer.new()
-	head_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	head.add_child(head_col)
-
+	var titles := VBoxContainer.new()
+	titles.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	head.add_child(titles)
 	_title = Label.new()
 	_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	head_col.add_child(_title)
-
+	titles.add_child(_title)
 	_origin = Label.new()
 	_origin.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	head_col.add_child(_origin)
-
+	titles.add_child(_origin)
 	_context = Label.new()
 	_context.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_context.visible = false
-	head_col.add_child(_context)
-
-	# A hairline between the heading and the prose. Title, provenance note and
-	# first paragraph used to run together as one block of text with only a
-	# size difference to separate them.
+	titles.add_child(_context)
 	_root.add_child(Panels.rule())
-
-	# The body scrolls. Long chapters must never push the choices off screen.
 	_scroll = ScrollContainer.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_root.add_child(_scroll)
-
 	_body = RichTextLabel.new()
 	_body.bbcode_enabled = true
 	_body.fit_content = true
+	_body.selection_enabled = true
 	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_scroll.add_child(_body)
-
-	# And another above the choices, so the moment of deciding is visibly
-	# separate from the moment of reading.
+	_body.resized.connect(func(): _fit_scroll.call_deferred())
 	_root.add_child(Panels.rule())
-
+	_choice_scroll = ScrollContainer.new()
+	_choice_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_choice_scroll.follow_focus = true
+	_root.add_child(_choice_scroll)
 	_choices = VBoxContainer.new()
+	_choices.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_choices.add_theme_constant_override("separation", Metrics.sm())
-	_root.add_child(_choices)
-
+	_choice_scroll.add_child(_choices)
+	_footer = HBoxContainer.new()
+	_footer.add_theme_constant_override("separation", Metrics.md())
+	_root.add_child(_footer)
+	_keyboard_hint = Panels.label("", maxi(UiScale.ui() - 2, 10), Palette.ink_faint())
+	_keyboard_hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_keyboard_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_footer.add_child(_keyboard_hint)
+	_leave = Panels.styled_button("", request_dismiss)
+	_leave.tooltip_text = I18n.t("ui.event.pause_hint")
+	_footer.add_child(_leave)
+	get_viewport().size_changed.connect(_fit_scroll)
 	restyle()
 
 
 func restyle() -> void:
+	if _root == null:
+		return
 	add_theme_stylebox_override("panel", Palette.panel_style())
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
-	_origin.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
-	# A provenance note is a footnote, not a subtitle — it should read as an
-	# aside under the title rather than competing with it.
-	_origin.add_theme_color_override("font_color", Palette.ink_faint())
-	_context.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
+	for label in [_origin, _context, _keyboard_hint]:
+		label.add_theme_font_size_override("font_size", maxi(UiScale.ui() - 2, 10))
+		label.add_theme_color_override("font_color", Palette.ink_faint())
 	_context.add_theme_color_override("font_color", Palette.accent())
 	_body.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_body.add_theme_color_override("default_color", Palette.ink())
-	# Leading. Set solid, long medieval prose in a narrow column is a wall;
-	# roughly a third of the type size between lines is what makes it a page.
-	_body.add_theme_constant_override("line_separation",
-		int(round(float(UiScale.body()) * 0.34)))
+	_body.add_theme_constant_override("line_separation", int(round(UiScale.body() * 0.25)))
 	_body.add_theme_constant_override("paragraph_separation", Metrics.sm())
+	_keyboard_hint.text = I18n.t("ui.event.keyboard_hint")
+	_leave.tooltip_text = I18n.t("ui.event.pause_hint")
+	if not _event.is_empty() or not _result_key.is_empty():
+		_render_page()
+	_fit_scroll()
 
-	# Portrait scales with the type, or a 120 px figure beside 26 pt text reads
-	# as a stamp rather than a person. Capped to a third of the window height so
-	# a 200%-step portrait cannot push the panel past the viewport by itself.
-	var vp := get_viewport_rect().size
-	var pw := minf(120.0 * Metrics.factor(), vp.y * 0.34)
-	_portrait.custom_minimum_size = Vector2(pw, pw * 1.25)
 
-	# The prose window is at least four lines tall whatever the step, so the
-	# reader is never handed a two-line slit to scroll a chapter through. The
-	# 200%-step ceiling is enforced in _fit_scroll once the choices are in.
-	_scroll.custom_minimum_size = Vector2(0, float(UiScale.body()) * 6.0)
-
-	# Width follows the window but never grows past a comfortable measure:
-	# prose set across 1400px is unreadable however large the type.
-	custom_minimum_size = Vector2(
-		Metrics.measure(vp.x),
-		minf(vp.y - float(Metrics.xl()) * 4.0, 560.0))
+func _clear_choices() -> void:
+	for child in _choices.get_children():
+		_choices.remove_child(child)
+		child.queue_free()
 
 
 func show_event(ev: Dictionary, choice_states: Array, portrait: Texture2D = null,
 		chain_context: String = "") -> void:
-	restyle()
-	_title.text = I18n.t(ev.get("title", ""))
-	_origin.text = _origin_note(ev)
-	_context.text = chain_context
-	_context.visible = not chain_context.is_empty()
-
-	var body_key := String(ev.get("body", ""))
-	var text := I18n.t(body_key)
-	if text == body_key:
-		text = ""
-	_body.text = _auto_paragraphs(text)
-	if I18n.is_untranslated(body_key):
-		_body.text += "\n[i][color=#6b5a3c]%s[/color][/i]" % I18n.t("ui.i18n.pending")
-
+	_submitted = false
+	_event = ev
+	_states = choice_states
+	_result_key = ""
+	_chain_context = chain_context
 	_portrait.texture = portrait
 	_portrait.visible = portrait != null
-
-	for c in _choices.get_children():
-		c.queue_free()
-	var any_open := false
-	for i in choice_states.size():
-		if not choice_states[i].get("visible", true):
-			continue
-		if choice_states[i]["enabled"]:
-			any_open = true
-		_choices.add_child(_make_choice(choice_states[i], i))
-
-	# An event whose every choice is barred — no coin, no language, no art —
-	# must still be leavable. Without this the player is trapped reading the
-	# same page: the same defect the city screen had, one level down.
-	var leave := Panels.styled_button(
-		I18n.t("ui.walk_away") if not any_open else I18n.t("ui.hold_for_now"),
-		func(): dismissed.emit())
-	leave.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	# Walking away is always available but never the point of the panel, so it
-	# stays visibly quieter than the choices it sits under.
-	leave.add_theme_color_override("font_color", Palette.ink_faint())
-	_choices.add_child(leave)
-
-	_scroll.scroll_vertical = 0
-	_fit_scroll()
-	visible = true
-
-
-## A result is a page in the conversation, not a line that disappears into the
-## journal. Site choices often resolve immediately, so give their authored
-## feedback the same readable surface as the event body and an explicit way
-## to continue.
-func show_result(result_key: String) -> void:
 	restyle()
-	_title.text = I18n.t("ui.choice_result_title")
-	_origin.text = I18n.t("ui.source_authored")
-	_context.text = ""
-	_context.visible = false
+	_scroll.scroll_vertical = 0
+	_choice_scroll.scroll_vertical = 0
+	visible = true
+	call_deferred("_fit_scroll")
+
+
+func show_result(result_key: String) -> void:
+	_submitted = false
+	_result_key = result_key
+	_event = {}
+	_states = []
+	_chain_context = ""
 	_portrait.texture = null
 	_portrait.visible = false
-
-	var text := I18n.t(result_key)
-	_body.text = _auto_paragraphs(text)
-	if I18n.is_untranslated(result_key):
-		_body.text += "\n[i][color=#6b5a3c]%s[/color][/i]" % I18n.t("ui.i18n.pending")
-
-	for c in _choices.get_children():
-		c.queue_free()
-	var continue_btn := Panels.primary_button(I18n.t("ui.continue_pending"), func(): dismissed.emit())
-	continue_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	_choices.add_child(continue_btn)
-
+	restyle()
 	_scroll.scroll_vertical = 0
-	_fit_scroll()
+	_choice_scroll.scroll_vertical = 0
 	visible = true
+	animate_choices()
+	call_deferred("_fit_scroll")
 
 
-## N3 — stagger choice buttons (ANIMATION_PLAN §2.1 · 40 ms offset).
-func animate_choices() -> void:
-	var kids: Array = []
-	for c in _choices.get_children():
-		kids.append(c)
-	Motion.stagger_in(kids, 0.04, 0.18)
+func _render_page() -> void:
+	_generation += 1
+	_clear_choices()
+	var is_result := not _result_key.is_empty()
+	_title.text = I18n.t("ui.choice_result_title") if is_result else I18n.t(_event.get("title", ""))
+	_origin.text = I18n.t("ui.source_authored") if is_result else _origin_note(_event)
+	_origin.visible = not _origin.text.is_empty()
+	_context.text = _chain_context
+	_context.visible = not _chain_context.is_empty() and not is_result
+	var body_key := _result_key if is_result else String(_event.get("body", ""))
+	var text := I18n.t(body_key)
+	_body.text = _auto_paragraphs(text if text != body_key else "")
+	_footer.visible = not is_result
+	if is_result:
+		var token := _generation
+		var next := Panels.primary_button(I18n.t("ui.continue_pending"),
+			func(): _dismiss_page(token))
+		_choices.add_child(next)
+	else:
+		var any_open := false
+		for i in _states.size():
+			if not _states[i].get("visible", true):
+				continue
+			any_open = any_open or bool(_states[i]["enabled"])
+			_choices.add_child(_make_choice(_states[i], i))
+		# Retire the old control as well as its callback. An already queued click
+		# must never dismiss the next page synchronously opened by this signal.
+		_footer.remove_child(_leave)
+		_leave.queue_free()
+		var token := _generation
+		_leave = Panels.styled_button(
+			I18n.t("ui.hold_for_now") if any_open else I18n.t("ui.walk_away"),
+			func(): _dismiss_page(token))
+		_leave.tooltip_text = I18n.t("ui.event.pause_hint")
+		_footer.add_child(_leave)
+	if _submitted:
+		_disable_actions()
+
+
+func set_chain_context(text: String) -> void:
+	_chain_context = text
+
+
+func _disable_actions() -> void:
+	for child in _choices.get_children():
+		if child is BaseButton:
+			child.disabled = true
+	_leave.disabled = true
 
 
 func _make_choice(s: Dictionary, index: int) -> Button:
 	var btn := Panels.styled_button(I18n.t(s["choice"].get("label", "")), Callable())
 	btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-
-	if not s["enabled"]:
-		btn.disabled = true
-		# GDD §7.1: say WHY. A bare grey button teaches the player nothing.
+	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn.set_meta("choice_index", index)
+	btn.disabled = not s["enabled"]
+	if btn.disabled:
 		var why: Array[String] = []
-		for r in s["reasons"]:
-			why.append(I18n.fmt(String(r)))
+		for reason in s["reasons"]:
+			why.append(I18n.fmt(String(reason)))
 		var joined := I18n.list(PackedStringArray(why))
 		btn.text += I18n.gap() + I18n.t("ui.why_fmt") % joined
 		btn.tooltip_text = joined
 	else:
-		btn.pressed.connect(func(): choice_taken.emit(index))
+		var token := _generation
+		btn.pressed.connect(func(): _submit_choice(index, token))
 	return btn
+
+
+func _lock_page(token: int) -> bool:
+	if token != _generation or _submitted or not is_visible_in_tree():
+		return false
+	_submitted = true
+	_disable_actions()
+	return true
+
+
+func _submit_choice(index: int, token: int) -> void:
+	if _lock_page(token):
+		choice_taken.emit(index)
+
+
+func _dismiss_page(token: int) -> void:
+	if _lock_page(token):
+		dismissed.emit()
+
+
+func request_dismiss() -> void:
+	_dismiss_page(_generation)
+
+
+func animate_choices() -> void:
+	Motion.stagger_in(_choices.get_children(), 0.035, 0.14)
+
+
+func _fit_scroll() -> void:
+	if _root == null:
+		return
+	var vp := get_viewport_rect().size
+	var width := maxf(280.0, minf(Metrics.measure(vp.x), vp.x - 24.0))
+	var height := minf(620.0, vp.y - 32.0)
+	custom_minimum_size.x = width
+	# A portrait introduces a speaker; it must not take half the reading area.
+	var portrait_h := minf(96.0 * Metrics.factor(), height * 0.18)
+	_portrait.custom_minimum_size = Vector2(portrait_h * 0.8, portrait_h)
+	_scroll.custom_minimum_size = Vector2(0,
+		minf(maxf(_body.get_content_height(), float(UiScale.body()) * 3.0), height * 0.32))
+	var choices_h := _choices.get_combined_minimum_size().y
+	_choice_scroll.custom_minimum_size = Vector2(0,
+		minf(maxf(choices_h, Metrics.tap_target()), height * 0.38))
+	_keyboard_hint.visible = width >= 540.0
+	var padding := get_theme_stylebox("panel").get_minimum_size().y
+	custom_minimum_size.y = minf(height, maxf(300.0, _root.get_combined_minimum_size().y + padding))
 
 
 ## GDD §19: the player must always be able to tell record from invention.
@@ -236,28 +267,18 @@ func _origin_note(ev: Dictionary) -> String:
 		"source":
 			var ref: Dictionary = lore.get("ref", {})
 			var ch := String(ref.get("chapterId", ""))
-			return I18n.t("ui.source_polo") + " %s" % ch if ch != "" else I18n.t("ui.source_record")
+			var book := String(ref.get("book", ""))
+			var source_key := "source.book.%s" % book
+			var source := I18n.t(source_key) if book in [
+				"marco-polo", "ibn-battuta", "ibn-fadlan", "ibn-jubayr",
+				"rubruck", "odoric", "conti", "tafur", "yingya-shenglan",
+			] else I18n.t("ui.source_record")
+			return source + " %s" % ch if ch != "" else source
 		"hybrid":
 			return I18n.t("ui.source_hybrid")
 		"authored":
 			return I18n.t("ui.source_authored")
 	return ""
-
-
-## The prose window has a floor (restyle) but the panel has a ceiling: at the
-## 200% type step the fixed head + choices can already reach 500–600 px, and the
-## six-line floor would push the whole dialog past the window. Once the choices
-## are in, measure what the head and buttons actually need and compress the
-## scroll to fit, keeping at least two readable lines.
-func _fit_scroll() -> void:
-	var vp := get_viewport_rect().size
-	var cap := minf(vp.y - float(Metrics.xl()) * 4.0, 560.0)
-	var scroll_min := float(_scroll.custom_minimum_size.y)
-	var fixed := _root.get_minimum_size().y - scroll_min
-	var floor_h := float(UiScale.body()) * 2.0
-	var want := clampf(scroll_min, floor_h, maxf(floor_h, cap - fixed))
-	if absf(want - scroll_min) > 0.5:
-		_scroll.custom_minimum_size = Vector2(0, want)
 
 
 ## A wall of unbroken prose is hard to track however wide the column, and the

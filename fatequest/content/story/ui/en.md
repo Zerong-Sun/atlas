@@ -684,11 +684,11 @@ Can hire here:
 
 ## ui.party.wage
 
-%d silver a month
+%s silver a month
 
 ## ui.party.wage_line
 
-%d silver/month · %s · bond %d/31 · %s
+%s silver/month · %s · bond %d/31 · %s
 
 ## ui.route.cannot
 

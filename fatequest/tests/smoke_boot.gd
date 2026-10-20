@@ -27,10 +27,10 @@ func _init():
     root.add_child(n)
     await process_frame
 
-    var opening = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf")
-    var intro = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf/GameIntroduction")
-    var verse = n.get_node_or_null("BootCenter/BootDesk/OpeningLeaf/OpeningVerse/OpeningVerseLines")
-    var setup = n.get_node_or_null("BootCenter/BootDesk/JourneySetup")
+    var opening = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf")
+    var intro = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf/GameIntroduction")
+    var verse = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf/OpeningVerse/OpeningVerseLines")
+    var setup = n.get_node_or_null("BootCenter/BootScroll/BootDesk/JourneySetup")
     if opening == null or intro == null or verse == null or setup == null:
         print("BOOT: FAIL (opening leaf incomplete)")
         quit(1)

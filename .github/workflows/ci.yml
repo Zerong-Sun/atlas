@@ -90,6 +90,43 @@ jobs:
       - name: Battuta corpus (entry + site events, raw-key guard)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_battuta.gd
+      - name: Fresh-install hospitality, market and departure
+        working-directory: fatequest
+        run: python3 tools/validate/playtest_local.py tests/smoke_welcome_journey.gd
+      - name: UI interaction, portraits and responsive layout regressions
+        working-directory: fatequest
+        run: >-
+          python3 tools/validate/playtest_local.py
+          tests/smoke_button_motion.gd
+          tests/smoke_portrait_mapping.gd
+          tests/smoke_hire_contract.gd
+          tests/smoke_dialog_usability.gd
+          tests/smoke_city_market_usability.gd
+          tests/smoke_city_market_boundaries.gd
+          tests/smoke_character_draw.gd
+          tests/smoke_review_edges.gd
+      - name: Story result continuation and lesson boundaries
+        working-directory: fatequest
+        run: >-
+          python3 tools/validate/playtest_local.py
+          tests/smoke_balc_followup.gd
+          tests/smoke_baldacum_mentor.gd
+          tests/smoke_zayton_mentor.gd
+          tests/smoke_tauris_merchant.gd
+          tests/smoke_road_followup.gd
+          tests/smoke_tauris_mentor.gd
+      - name: Upload UI playtest logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fatequest-ui-playtest-logs
+          path: fatequest/build/playtest/*.log
+          if-no-files-found: ignore
+      - name: Curated reading-card source anchors
+        working-directory: fatequest
+        run: |
+          python3 tools/lore/audit_reading_cards.py
+          python3 tests/test_reading_cards_audit.py
       - name: Zayton battuta content contract (GDLC ratchet)
         working-directory: fatequest
         run: godot --headless --script tests/audit_zayton_battuta.gd

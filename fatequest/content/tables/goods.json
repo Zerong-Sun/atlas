@@ -2067,6 +2067,30 @@
         "cool"
       ],
       "events": []
+    },
+    {
+      "id": "glass-bead",
+      "name": "good.glass-bead.name",
+      "tier": "regional",
+      "origin": [
+        "west_asia"
+      ],
+      "base": [
+        400,
+        600
+      ],
+      "far": [
+        600,
+        800
+      ],
+      "bulk": 1,
+      "risk": {
+        "spoil": 0,
+        "theft": 0.02,
+        "seizure": 0.02
+      },
+      "needs": [],
+      "events": []
     }
   ]
 }

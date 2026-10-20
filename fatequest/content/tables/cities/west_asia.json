@@ -73,6 +73,7 @@
       "tier": "town",
       "entryEvent": "ev-alexandria-entry",
       "sites": [
+        "ev-alexandria-welcome-gate",
         "ev-alexandria-battuta-a",
         "ev-alexandria-battuta-b"
       ],
@@ -91,6 +92,7 @@
       },
       "market": {
         "goods": [
+          "glass-bead",
           "frankincense",
           "myrrh",
           "damascus-steel",

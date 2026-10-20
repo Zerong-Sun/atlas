@@ -34,10 +34,17 @@ func _init() -> void:
 	var entry: Dictionary = n.db.get_record("ev-zayton-entry")
 	n._resolve_choice(entry, 2)
 	await process_frame
+	# Read the immediate result before expecting its queued consequence.
+	if n._result_then_chain:
+		n._dialog.dismissed.emit()
+		await process_frame
 	var chain_open: bool = n._dialog_layer.visible \
 		and String(n._current_event.get("id", "")) == "ev-zayton-pilot-consequence"
 	n._resolve_choice(n._current_event, 0)
 	await process_frame
+	if n._result_then_chain:
+		n._dialog.dismissed.emit()
+		await process_frame
 	var chain_ok: bool = int(n.state.revealed.get("chamba", 0)) > 0 \
 		and int(n.state.revealed.get("rt-chamba-zayton", 0)) > 0
 
@@ -60,6 +67,9 @@ func _init() -> void:
 		and String(n._current_event.get("id", "")) == "ev-zayton-ledger-consequence"
 	n._resolve_choice(n._current_event, 0)
 	await process_frame
+	if n._result_then_chain:
+		n._dialog.dismissed.emit()
+		await process_frame
 	var consequence_continued: bool = n._dialog_layer.visible \
 		and String(n._current_event.get("id", "")) == "ev-zayton-ledger-consequence-resolution"
 	if consequence_continued:

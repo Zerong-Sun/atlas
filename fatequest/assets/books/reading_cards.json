@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "purpose": "人工核对的见闻卡；素材核实不等于可玩验收",
+  "cards": [
+    {
+      "id": "battuta-alexandria-judge",
+      "status": "wired",
+      "source": {
+        "book": "ibn-battuta",
+        "edition": "Samuel Lee 1829 abridgement",
+        "rawFile": "assets/books/03_The_Travels_of_Ibn_Battuta.txt",
+        "chapterFile": "assets/books/_ibn_battuta_chapters_raw.json",
+        "chapterId": "battuta-c001",
+        "anchor": "enter Mr. Judge.",
+        "paragraphIndex": 22,
+        "chapterSha256": "3493ba3427ed9a8e6f286f64e2195b26db0eb31aa4b731e32e49ca15d342c02c",
+        "rawAnchor": "enter Mr. Judge."
+      },
+      "place": "alexandria",
+      "period": "白图泰旅行记述，人物回忆的具体年份未标明",
+      "people": [
+        "Fakhr Oddīn El Rīki",
+        "守门人"
+      ],
+      "facts": [
+        "法官早年贫寒，到亚历山大港城门外等待吉兆",
+        "守门人以法官称呼他；后来他求学并获任法官"
+      ],
+      "notSupported": [
+        "这位贫寒者是白图泰本人",
+        "发生在突尼斯",
+        "因落泪获得宴请"
+      ],
+      "adaptation": "玩家旁观或听取学者经历，选择询问、观察或记住征兆。",
+      "conditions": {
+        "cities": [
+          "alexandria"
+        ]
+      },
+      "actions": [
+        "观察",
+        "询问",
+        "记住征兆"
+      ],
+      "consequences": [
+        "时间",
+        "声望",
+        "开罗道路消息"
+      ],
+      "eventIds": [
+        "ev-alexandria-battuta-a"
+      ],
+      "tests": [
+        "tests/smoke_battuta.gd",
+        "tests/smoke_welcome_journey.gd"
+      ]
+    },
+    {
+      "id": "battuta-alexandria-greetings",
+      "status": "wired",
+      "source": {
+        "book": "ibn-battuta",
+        "edition": "Samuel Lee 1829 abridgement",
+        "rawFile": "assets/books/03_The_Travels_of_Ibn_Battuta.txt",
+        "chapterFile": "assets/books/_ibn_battuta_chapters_raw.json",
+        "chapterId": "battuta-c002",
+        "anchor": "you must visit my brother Farīd Oddīn in India",
+        "paragraphIndex": 0,
+        "chapterSha256": "7a1aa4ff6c1d07d8269e38cb0a4d0ec4ded38ede1bbd9a92f7b3234cc6286b20",
+        "rawAnchor": "you must visit my brother bFarīd Oddīn in India",
+        "normalizationNote": "拆章时移除了人名 Farīd 前的脚注标记 b；原书锚点保留该标记。"
+      },
+      "place": "alexandria",
+      "period": "白图泰首次东行途中",
+      "people": [
+        "Borhāna Oddīn El Aaraj",
+        "伊本·白图泰"
+      ],
+      "facts": [
+        "访客被托付向印度、信德和中国的三位人物致意",
+        "叙述者说此后完成了这些拜访"
+      ],
+      "notSupported": [
+        "当前游戏已经实现跨三地送信的完整人物关系链"
+      ],
+      "adaptation": "现有事件只提供当场选择，后续人物网络待扩展。",
+      "conditions": {
+        "cities": [
+          "alexandria"
+        ]
+      },
+      "actions": [
+        "答应",
+        "询问",
+        "告辞"
+      ],
+      "consequences": [
+        "时间",
+        "声望",
+        "路线消息"
+      ],
+      "eventIds": [
+        "ev-alexandria-battuta-b"
+      ],
+      "tests": [
+        "tests/smoke_battuta.gd"
+      ]
+    },
+    {
+      "id": "alexandria-welcome-authored",
+      "status": "playable_sample",
+      "source": null,
+      "place": "alexandria",
+      "period": "随玩家选定年代",
+      "people": [
+        "玩家",
+        "搬运工",
+        "接待旅人的主人"
+      ],
+      "facts": [],
+      "notSupported": [
+        "Lee 节译本逐字记载这一席饭或十二银赠款",
+        "所有穆斯林或所有当地居民都会这样接待旅人"
+      ],
+      "adaptation": "按用户希望的困顿、接待、市场、自由离城体验创作；界面标明创作。",
+      "conditions": {
+        "cities": [
+          "alexandria"
+        ],
+        "povertyMaxCoins": 2000,
+        "greetingFaith": "islam"
+      },
+      "actions": [
+        "自我介绍",
+        "落泪求助",
+        "独自进城",
+        "接受路资",
+        "只接受饭食",
+        "婉谢"
+      ],
+      "consequences": [
+        "一次性十二银资助",
+        "可选择停留一日",
+        "开罗路线",
+        "购买玻璃珠纪念品",
+        "自主离城"
+      ],
+      "eventIds": [
+        "ev-alexandria-welcome-gate",
+        "ev-alexandria-welcome-meal"
+      ],
+      "tests": [
+        "tests/smoke_welcome_journey.gd"
+      ]
+    },
+    {
+      "id": "battuta-tunis-tears",
+      "status": "source_needed",
+      "source": null,
+      "place": "tunis",
+      "period": "白图泰出行初期，待完整版本核对",
+      "people": [
+        "伊本·白图泰",
+        "待核实的接待者"
+      ],
+      "facts": [],
+      "notSupported": [
+        "本地 Lee 第一章的经过突尼斯地名列表足以证明落泪与接待细节"
+      ],
+      "adaptation": "保留用户指定的体验目标；待补版本后决定迁移到突尼斯或保留亚历山大港演绎。",
+      "conditions": {},
+      "actions": [
+        "待拆解"
+      ],
+      "consequences": [],
+      "eventIds": [],
+      "tests": []
+    },
+    {
+      "id": "battuta-sumatra-wedding",
+      "status": "source_verified_not_wired",
+      "source": {
+        "book": "ibn-battuta",
+        "edition": "Samuel Lee 1829 abridgement",
+        "rawFile": "assets/books/03_The_Travels_of_Ibn_Battuta.txt",
+        "chapterFile": "assets/books/_ibn_battuta_chapters_raw.json",
+        "chapterId": "battuta-c024",
+        "anchor": "musicians and singers, male and female, who danced and sang",
+        "paragraphIndex": 1,
+        "chapterSha256": "377d872346f8288df655d89697e14318008343aa2ce41e2fa6bb099bceed771c",
+        "rawAnchor": "musicians and singers, male and female, who danced and sang"
+      },
+      "place": "Sumatra（苏门答腊，尚未绑定地图节点）",
+      "period": "从中国返航后，具体日期待核",
+      "people": [
+        "王子",
+        "新娘",
+        "乐人与歌者"
+      ],
+      "facts": [
+        "婚礼仪式中乐人与歌者在新娘前歌舞",
+        "王子骑象前来",
+        "文中描述丝织铺设的高台及婚礼服饰"
+      ],
+      "notSupported": [
+        "舞蹈的专有名称",
+        "具体动作序列与乐器名称",
+        "此场景发生在亚历山大港",
+        "可直接绑定当前 java-major 的女王故事"
+      ],
+      "adaptation": "计划让玩家观看入场、询问仪式、离开；舞名以原文未记名称呈现，动作待更多证据。",
+      "conditions": {},
+      "actions": [
+        "观看仪式",
+        "询问服饰与场合",
+        "离开"
+      ],
+      "consequences": [
+        "计划写入旅行见闻",
+        "计划提供港口去向"
+      ],
+      "eventIds": [],
+      "tests": []
+    }
+  ]
+}

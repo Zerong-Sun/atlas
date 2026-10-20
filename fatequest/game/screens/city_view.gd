@@ -1,36 +1,34 @@
 extends Control
 
-## The inside of a city: a place you look at, not a menu you read.
-##
-## Until now "exploring" a city meant a list of buttons. GDD §6 gives every city
-## six things — entry, three sites, a mentor, a market, a shrine, a road out —
-## and §5.2 makes doing at least one of them the precondition for learning where
-## the next road goes. That reads much better as a scene you can point at than
-## as a list, so the sites become figures standing in the place itself.
-##
-## Art is optional throughout: a missing portrait falls back to a labelled
-## plaque, so a city is always explorable even before its art exists.
-
+## City exploration keeps every place and the road out within reach. Cards
+## wrap with the window; only the places scroll, while navigation stays put.
 signal site_chosen(event_id: String)
 signal leave_requested()
 signal market_requested()
 signal bag_requested()
 signal party_requested()
+signal settings_requested()
 
-const PORTRAIT_H := 300.0
-
+const PORTRAIT_H := 190.0
 var db: ContentDb
 var _city: Dictionary = {}
+var _state: WorldState
+var _cond: ConditionEvaluator
+var _ctx: Dictionary = {}
+var _status_values: Array = []
 var _bg: TextureRect
-var _figures: HBoxContainer
+var _figures: GridContainer
+var _figure_scroll: ScrollContainer
 var _title: Label
 var _hint: Label
 var _market_btn: Button
+var _settings_btn: Button
 var _status: Label
 var _head: PanelContainer
 var _foot: PanelContainer
-var _foot_row: HBoxContainer
+var _foot_row: HFlowContainer
 var _scrim: ColorRect
+var _choice_pending := false
 
 
 func setup(p_db: ContentDb) -> void:
@@ -40,109 +38,95 @@ func setup(p_db: ContentDb) -> void:
 
 func _build() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
-
 	_bg = TextureRect.new()
 	_bg.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_bg)
-
-	# The scene photograph is busy; text needs its own ground to sit on.
 	_scrim = ColorRect.new()
 	_scrim.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_scrim.color = _scrim_color()
 	_scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_scrim)
-
 	var col := VBoxContainer.new()
 	col.set_anchors_preset(Control.PRESET_FULL_RECT)
-	col.offset_left = 28
-	col.offset_right = -28
-	col.offset_top = 20
-	col.offset_bottom = -20
-	col.add_theme_constant_override("separation", 10)
+	col.offset_left = 24
+	col.offset_right = -24
+	col.offset_top = 18
+	col.offset_bottom = -18
+	col.add_theme_constant_override("separation", 12)
 	add_child(col)
-
 	_head = PanelContainer.new()
 	_head.add_theme_stylebox_override("panel", Palette.panel_style())
-	_head.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	col.add_child(_head)
 	var head_row := VBoxContainer.new()
-	head_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	head_row.add_theme_constant_override("separation", 4)
 	_head.add_child(head_row)
-	_title = Label.new()
-	_title.add_theme_font_size_override("font_size", UiScale.title())
-	_title.add_theme_color_override("font_color", Palette.ink())
-	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_title = Panels.label("", UiScale.title(), Palette.ink())
+	_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	head_row.add_child(_title)
-
-	# This screen hides the HUD behind it, so it repeats the numbers a player
-	# needs in order to decide anything here.
-	_status = Label.new()
-	_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_status.add_theme_font_size_override("font_size", UiScale.ui())
-	_status.add_theme_color_override("font_color", Palette.ink_soft())
+	_status = Panels.label("", UiScale.ui(), Palette.ink_soft())
+	_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	head_row.add_child(_status)
-
-	col.add_child(_spacer())
-
-	_figures = HBoxContainer.new()
-	_figures.alignment = BoxContainer.ALIGNMENT_CENTER
-	_figures.add_theme_constant_override("separation", 26)
-	_figures.size_flags_vertical = Control.SIZE_SHRINK_END
-	col.add_child(_figures)
-
-	# --- foot: hint + the ways out --------------------------------------
+	_figure_scroll = ScrollContainer.new()
+	_figure_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_figure_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_figure_scroll.follow_focus = true
+	col.add_child(_figure_scroll)
+	_figures = GridContainer.new()
+	_figures.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_figures.add_theme_constant_override("h_separation", 16)
+	_figures.add_theme_constant_override("v_separation", 16)
+	_figure_scroll.add_child(_figures)
 	_foot = PanelContainer.new()
 	_foot.add_theme_stylebox_override("panel", Palette.panel_style())
-	_foot.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	col.add_child(_foot)
-
-	var foot_row := HBoxContainer.new()
-	foot_row.add_theme_constant_override("separation", Metrics.md() + Metrics.xs())
-	_foot.add_child(foot_row)
-	_foot_row = foot_row
-
-	_hint = Label.new()
-	_hint.add_theme_font_size_override("font_size", UiScale.ui())
-	_hint.add_theme_color_override("font_color", Palette.ink_soft())
-	foot_row.add_child(_hint)
-
-	_market_btn = Panels.styled_button(I18n.t("ui.market"), func(): market_requested.emit())
-	foot_row.add_child(_market_btn)
-	foot_row.add_child(Panels.styled_button(I18n.t("ui.bag"), func(): bag_requested.emit()))
-	foot_row.add_child(Panels.styled_button(I18n.t("ui.party"), func(): party_requested.emit()))
-	# Without this the city is a dead end. It is the single most important
-	# control on the screen — so it carries the primary styling rather than
-	# sitting fourth in a row of four identical buttons.
-	foot_row.add_child(Panels.primary_button(I18n.t("ui.set_out"), func(): leave_requested.emit()))
-
-
-func _spacer() -> Control:
-	var s := Control.new()
-	s.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	return s
+	var foot_col := VBoxContainer.new()
+	foot_col.add_theme_constant_override("separation", 8)
+	_foot.add_child(foot_col)
+	_hint = Panels.label("", UiScale.ui(), Palette.ink_soft())
+	_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	foot_col.add_child(_hint)
+	_foot_row = HFlowContainer.new()
+	_foot_row.add_theme_constant_override("h_separation", 10)
+	_foot_row.add_theme_constant_override("v_separation", 8)
+	foot_col.add_child(_foot_row)
+	_market_btn = _nav_button("ui.market", func(): market_requested.emit())
+	_foot_row.add_child(_market_btn)
+	_foot_row.add_child(_nav_button("ui.bag", func(): bag_requested.emit()))
+	_foot_row.add_child(_nav_button("ui.party", func(): party_requested.emit()))
+	_settings_btn = _nav_button("ui.settings", func(): settings_requested.emit())
+	_foot_row.add_child(_settings_btn)
+	_foot_row.add_child(_nav_button("ui.set_out", func(): leave_requested.emit(), true))
+	resized.connect(_layout_cards)
+	_figure_scroll.resized.connect(_layout_cards)
 
 
-## Which portrait stands in for a site. Prefers job / mentor art, then venue
-## plates keyed by culture set (npc-<venue>-<set>).
+func _nav_button(key: String, callback: Callable, primary := false) -> Button:
+	var b := Panels.primary_button(I18n.t(key), callback) if primary else Panels.styled_button(I18n.t(key), callback)
+	b.set_meta("i18n_key", key)
+	b.set_meta("primary", primary)
+	return b
+
+
 func _portrait_for(ev: Dictionary, culture: String, slot: int = -1) -> Texture2D:
 	return MapArt.event_portrait(ev, culture, slot)
 
 
-func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
-		ctx: Dictionary) -> void:
+func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator, ctx: Dictionary) -> void:
 	_city = city
+	_state = state
+	_cond = cond
+	_ctx = ctx
+	_choice_pending = false
 	_title.text = I18n.t(city.get("name", ""))
-
 	for c in _figures.get_children():
+		_figures.remove_child(c)
 		c.queue_free()
-
 	var ids: Array = (city.get("sites", []) as Array).duplicate()
 	if city.has("mentorEvent"):
 		ids.append(city["mentorEvent"])
-
 	var offered := 0
 	for sid in ids:
 		var ev := db.get_record(String(sid))
@@ -151,138 +135,108 @@ func show_city(city: Dictionary, state: WorldState, cond: ConditionEvaluator,
 		var done: bool = ev.get("once", false) and state.once_fired.get(ev["id"], false)
 		if not cond.evaluate(ev.get("when", {}), state, ctx):
 			continue
-		_figures.add_child(_make_figure(ev, String(city.get("culture", "")), done, offered))
-		offered += 1
-
-	# Prefer a named site plate; otherwise explore/city scene cascade.
-	var site0 := MapArt.site_scene(String(city.get("id", "")), 0)
-	_bg.texture = site0 if site0 != null else MapArt.city_explore_bg(city, 0)
-
-	_hint.text = (I18n.t("ui.city.tap_hint") % offered) if offered > 0 \
-		else I18n.t("ui.seen_everything")
+		_figures.add_child(_make_figure(ev, String(city.get("culture", "")), done, _figures.get_child_count()))
+		if not done:
+			offered += 1
+	_bg.texture = MapArt.city_explore_bg(city, 0)
+	_hint.text = (I18n.t("ui.city.tap_hint") % offered) if offered > 0 else I18n.t("ui.seen_everything")
 	_market_btn.visible = city.has("market")
+	_layout_cards.call_deferred()
 
 
-## Money, hold and day, repeated here because the HUD is behind this screen.
 func set_status(coins: int, cargo_used: int, cargo_max: int, day: int, date: String) -> void:
-	_status.text = I18n.t("ui.city.status") % [coins, cargo_used, cargo_max, day, date]
+	_status_values = [coins, cargo_used, cargo_max, day, date]
+	_status.text = I18n.t("ui.city.status") % _status_values
 
 
 func _make_figure(ev: Dictionary, culture: String, done: bool, slot: int) -> Control:
-	# The portrait and its plaque are one interaction. Previously only the
-	# portrait was a Button while the plaque looked like a button but was a
-	# PanelContainer, so clicking the name — the most obvious target — did
-	# nothing. Make the whole tile the hit target and let its presentation
-	# children ignore mouse input.
 	var btn := Button.new()
 	btn.set_meta("event_id", String(ev.get("id", "")))
 	btn.set_meta("once", bool(ev.get("once", false)))
-	btn.flat = true
-	btn.focus_mode = Control.FOCUS_ALL
-	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	btn.custom_minimum_size = Vector2(180, PORTRAIT_H + 42)
-	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	btn.clip_contents = false
+	btn.set_meta("done", done)
+	Panels.style_button(btn)
+	btn.custom_minimum_size = Vector2(220, 300)
+	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	var content := VBoxContainer.new()
 	content.set_anchors_preset(Control.PRESET_FULL_RECT)
+	content.offset_left = 12
+	content.offset_right = -12
+	content.offset_top = 12
+	content.offset_bottom = -12
 	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	content.alignment = BoxContainer.ALIGNMENT_END
-	content.add_theme_constant_override("separation", 6)
+	content.add_theme_constant_override("separation", 8)
 	btn.add_child(content)
-
-	# Reachable from the keyboard like everything else, but without the plate:
-	# a figure standing in a square should not acquire a parchment frame just
-	# because it happens to be clickable.
 	var art := _portrait_for(ev, culture, slot)
+	var is_portrait := art != null
+	if art == null:
+		art = MapArt.event_scene(ev, _city)
 	if art != null:
 		var tr := TextureRect.new()
 		tr.texture = art
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-		var h := PORTRAIT_H * (0.78 if done else 1.0)
-		tr.custom_minimum_size = Vector2(h * 0.72, h)
+		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT if is_portrait else TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		tr.custom_minimum_size = Vector2(0, PORTRAIT_H)
 		tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		# A place already explored stays visible but recedes, so the player can
-		# see what they have done without it competing for attention.
-		tr.modulate = Color(0.72, 0.68, 0.62, 0.62) if done else Color(1, 1, 1, 1)
-		btn.custom_minimum_size = Vector2(tr.custom_minimum_size.x, tr.custom_minimum_size.y + 42)
+		tr.modulate = Color(0.82, 0.80, 0.76, 1) if done else Color.WHITE
 		content.add_child(tr)
-	else:
-		var spacer := Control.new()
-		spacer.custom_minimum_size = Vector2(180, 90)
-		content.add_child(spacer)
+	var title := Panels.label(("✓ " if done else "") + I18n.t(ev.get("title", "")), UiScale.ui(), Palette.ink())
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	content.add_child(title)
+	var status_key := "ui.city.card_done" if done else ("ui.city.card_repeat" if not bool(ev.get("once", false)) else "ui.city.card_ready")
+	var status := Panels.label(I18n.t(status_key), maxi(UiScale.ui() - 2, 12), Palette.ink_soft())
+	status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	status.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	content.add_child(status)
+	btn.tooltip_text = I18n.t(ev.get("title", "")) + "\n" + I18n.t(status_key)
+	btn.disabled = done
 	if done:
-		# Still readable — you can look at a place you have been — but it no
-		# longer offers choices, so it must not look like an open action.
-		btn.disabled = true
 		btn.focus_mode = Control.FOCUS_NONE
 		btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
-		btn.tooltip_text = I18n.t("ui.seen")
 	else:
-		btn.pressed.connect(func(): site_chosen.emit(String(ev.get("id", ""))))
-		btn.tooltip_text = I18n.t(ev.get("title", ""))
-		# The figures had no hover state at all: a portrait you can walk up to
-		# looked exactly the same whether the pointer was on it or not, so the
-		# only way to find the clickable region was to click around. Brightening
-		# on hover is a colour change, not motion, so it is safe under
-		# reduce-motion and needs no tween.
-		btn.mouse_entered.connect(func() -> void:
-			if is_instance_valid(btn):
-				btn.modulate = Color(1.10, 1.06, 0.98, 1.0))
-		btn.mouse_exited.connect(func() -> void:
-			if is_instance_valid(btn):
-				btn.modulate = Color(1, 1, 1, 1))
-
-	var plate := PanelContainer.new()
-	plate.add_theme_stylebox_override("panel", Palette.panel_style())
-	plate.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	plate.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var lbl := Label.new()
-	lbl.text = ("✓ " if done else "") + I18n.t(ev.get("title", ""))
-	lbl.add_theme_font_size_override("font_size", UiScale.ui())
-	lbl.add_theme_color_override("font_color", Palette.ink_soft() if done else Palette.ink())
-	lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	plate.add_child(lbl)
-	content.add_child(plate)
+		btn.pressed.connect(func():
+			if _choice_pending:
+				return
+			_choice_pending = true
+			site_chosen.emit(String(ev.get("id", ""))))
+	content.minimum_size_changed.connect(func():
+		if is_instance_valid(btn):
+			btn.custom_minimum_size.y = maxf(300, content.get_combined_minimum_size().y + 24))
 	return btn
 
 
-## Re-dresses the whole screen for the current type size and contrast mode.
-##
-## This used to stop after the title and the hint, so switching to high
-## contrast left the status line, all four foot buttons and every site plaque
-## on the old parchment styling — the city is the screen the player spends the
-## most time on, and it was the one that changed least.
+func _layout_cards() -> void:
+	if _figures == null or _figure_scroll.size.x < 1:
+		return
+	var available := maxf(180, _figure_scroll.size.x - 16)
+	var desired_width := 240.0 * Metrics.factor()
+	_figures.columns = maxi(1, mini(_figures.get_child_count(), int(available / desired_width)))
+	var card_width := floorf((available - 16 * (_figures.columns - 1)) / _figures.columns)
+	for c in _figures.get_children():
+		c.custom_minimum_size.x = card_width
+
+
 func restyle() -> void:
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
-	_status.add_theme_font_size_override("font_size", UiScale.ui())
-	_status.add_theme_color_override("font_color", Palette.ink_soft())
-	_hint.add_theme_font_size_override("font_size", UiScale.ui())
-	_hint.add_theme_color_override("font_color", Palette.ink_soft())
-
+	for label in [_status, _hint]:
+		label.add_theme_font_size_override("font_size", UiScale.ui())
+		label.add_theme_color_override("font_color", Palette.ink_soft())
 	for p in [_head, _foot]:
-		if p != null and is_instance_valid(p):
-			p.add_theme_stylebox_override("panel", Palette.panel_style())
-	if _foot_row != null and is_instance_valid(_foot_row):
-		_foot_row.add_theme_constant_override(
-			"separation", Metrics.md() + Metrics.xs())
-		for c in _foot_row.get_children():
-			if c is Button:
-				Panels.style_button(c as Button)
-
-	# The scene photograph behind the text has to darken further under high
-	# contrast, or white-on-illustration is no more legible than it was.
-	if _scrim != null and is_instance_valid(_scrim):
-		_scrim.color = _scrim_color()
-
-	# The site plaques are rebuilt by show_city() on every entry, so they only
-	# need catching up if the player changed the setting while standing here.
-	if _figures != null and is_instance_valid(_figures):
-		_figures.add_theme_constant_override("separation", Metrics.xl())
-		Panels.restyle_tree(_figures)
+		p.add_theme_stylebox_override("panel", Palette.panel_style())
+	for b in _foot_row.get_children():
+		if b is Button:
+			b.text = I18n.t(b.get_meta("i18n_key", ""))
+			Panels.style_button(b)
+			if b.get_meta("primary", false):
+				b.add_theme_stylebox_override("normal", Palette.button_style(Palette.State.HOVER))
+	_scrim.color = _scrim_color()
+	if not _status_values.is_empty():
+		_status.text = I18n.t("ui.city.status") % _status_values
+	if _state != null and _cond != null:
+		show_city(_city, _state, _cond, _ctx)
 
 
 func _scrim_color() -> Color:
-	return Color(0, 0, 0, 0.62) if UiScale.high_contrast \
-		else Color(0.09, 0.07, 0.04, 0.42)
+	return Color(0, 0, 0, 0.62) if UiScale.high_contrast else Color(0.09, 0.07, 0.04, 0.42)

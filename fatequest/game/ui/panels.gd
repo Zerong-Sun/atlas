@@ -24,19 +24,35 @@ static func style_button(b: Button, focusable: bool = true) -> Button:
 	b.focus_mode = Control.FOCUS_ALL if focusable else Control.FOCUS_NONE
 	b.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	b.add_theme_font_size_override("font_size", UiScale.ui())
-	b.add_theme_stylebox_override("normal", Palette.button_style(Palette.State.NORMAL))
+	b.add_theme_stylebox_override("normal", Palette.button_style(
+		Palette.State.HOVER if b.get_meta("primary_action", false) else Palette.State.NORMAL))
 	b.add_theme_stylebox_override("hover", Palette.button_style(Palette.State.HOVER))
 	b.add_theme_stylebox_override("pressed", Palette.button_style(Palette.State.PRESSED))
-	b.add_theme_stylebox_override("focus", Palette.button_style(Palette.State.FOCUS_RING))
+	var focus_ring := Palette.button_style(Palette.State.FOCUS_RING)
+	focus_ring.draw_center = false
+	b.add_theme_stylebox_override("focus", focus_ring)
 	b.add_theme_stylebox_override("disabled", Palette.button_style(Palette.State.NORMAL))
 	b.add_theme_color_override("font_color", Palette.ink())
 	b.add_theme_color_override("font_hover_color", Palette.ink())
 	b.add_theme_color_override("font_pressed_color", Palette.ink())
+	b.add_theme_color_override("font_hover_pressed_color", Palette.ink())
 	b.add_theme_color_override("font_focus_color", Palette.ink())
 	b.add_theme_color_override("font_disabled_color", Palette.ink_faint())
 	# A control smaller than a fingertip is a control the player misses.
 	b.custom_minimum_size.y = maxf(b.custom_minimum_size.y, Metrics.tap_target())
+	Motion.button_feedback(b)
 	return b
+
+
+## Currency stays exact at the point of choice: 350 fen is 3.5 silver, not 3.
+static func money(fen: int) -> String:
+	var amount := absi(fen)
+	var whole := amount / Market.FEN
+	var cents := amount % Market.FEN
+	var sign_prefix := "-" if fen < 0 else ""
+	if cents == 0:
+		return "%s%d" % [sign_prefix, whole]
+	return ("%s%d.%02d" % [sign_prefix, whole, cents]).trim_suffix("0")
 
 
 static func styled_button(text: String, cb: Callable) -> Button:
@@ -53,6 +69,7 @@ static func styled_button(text: String, cb: Callable) -> Button:
 ## label on the panel first.
 static func primary_button(text: String, cb: Callable) -> Button:
 	var b := styled_button(text, cb)
+	b.set_meta("primary_action", true)
 	b.add_theme_stylebox_override("normal", Palette.button_style(Palette.State.HOVER))
 	return b
 
@@ -159,6 +176,8 @@ static func overlay(parent: Node, min_size: Vector2,
 		bg.stretch_mode = TextureRect.STRETCH_SCALE
 		bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		bg.modulate = Color(1, 1, 1, 0.35)
+		bg.set_meta("decorative_panel_art", true)
+		bg.visible = not UiScale.high_contrast
 		panel.add_child(bg)
 	centre.add_child(panel)
 
@@ -212,18 +231,57 @@ static func _is_outside_click(ev: InputEvent, panel: Control) -> bool:
 ## only — pressing Escape with the bag open over the city should close the bag,
 ## not the city too. Returns true if something was closed.
 static func close_topmost(layers: Array, closers: Array) -> bool:
-	for i in range(layers.size() - 1, -1, -1):
-		var l = layers[i]
-		if l == null or not is_instance_valid(l) or not (l is Control):
+	var i := topmost_index(layers)
+	if i < 0:
+		return false
+	if i < closers.size():
+		var cb: Callable = closers[i]
+		if cb.is_valid():
+			cb.call()
+	return true
+
+
+## Mirrors CanvasLayer, inherited z-index and scene-tree drawing order instead
+## of relying on the caller to keep a fixed array in the current visual order.
+static func topmost_index(layers: Array) -> int:
+	var best := -1
+	var best_key: Array = []
+	for i in layers.size():
+		var item = layers[i]
+		if not is_instance_valid(item) or not item is Control:
 			continue
-		if not (l as Control).visible:
+		if not item.is_visible_in_tree():
 			continue
-		if i < closers.size():
-			var cb: Callable = closers[i]
-			if cb.is_valid():
-				cb.call()
-		return true
-	return false
+		var key := _draw_order_key(item)
+		if best < 0 or _key_is_above(key, best_key):
+			best = i
+			best_key = key
+	return best
+
+
+static func _draw_order_key(item: Control) -> Array:
+	var canvas_layer := 0
+	var effective_z := 0
+	var inherit_z := true
+	var ancestry: Array = []
+	var current: Node = item
+	while current != null:
+		ancestry.push_front(current.get_index())
+		if current is CanvasLayer:
+			canvas_layer = current.layer
+			break
+		if current is CanvasItem and inherit_z:
+			effective_z += current.z_index
+			inherit_z = current.z_as_relative
+		current = current.get_parent()
+	return [canvas_layer, effective_z] + ancestry
+
+
+static func _key_is_above(a: Array, b: Array) -> bool:
+	for i in mini(a.size(), b.size()):
+		if a[i] != b[i]:
+			return a[i] > b[i]
+	return a.size() > b.size()
 
 
 ## Re-applies the current palette to every button and panel under `root`.
@@ -246,6 +304,8 @@ static func restyle_tree(root: Node) -> void:
 		# parchment would box every figure in the scene.
 		if not b.flat:
 			style_button(b, b.focus_mode != Control.FOCUS_NONE)
+	elif root is TextureRect and root.get_meta("decorative_panel_art", false):
+		(root as TextureRect).visible = not UiScale.high_contrast and root.texture != null
 	elif root is PanelContainer:
 		(root as PanelContainer).add_theme_stylebox_override(
 			"panel", Palette.panel_style())

@@ -41,6 +41,12 @@ static func _load(lang: String) -> Dictionary:
 	return doc if typeof(doc) == TYPE_DICTIONARY else {}
 
 
+## Optional authored details may be absent by design. Check availability
+## without recording a missing required translation or changing t() fallback.
+static func has(key: String) -> bool:
+	return _strings.has(key) or _fallback.has(key)
+
+
 static func t(key: String) -> String:
 	if key == null or key == "":
 		return ""

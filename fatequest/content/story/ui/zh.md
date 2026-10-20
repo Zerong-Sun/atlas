@@ -177,8 +177,8 @@ stamps:
   ui.party.dismiss_tip: 0b8f711a450b
   ui.party.divined_pick: da0f2e04104a
   ui.party.hire_here: 1e0639d3ca22
-  ui.party.wage: 0f3fa3870d86
-  ui.party.wage_line: 9fe7b5da1d67
+  ui.party.wage: c53f17ceb681
+  ui.party.wage_line: 67457723f97e
   ui.route.cannot: 1eb3329351f0
   ui.route.departed: bd8a235de209
   ui.route.tooltip: 5a09c2e009e5
@@ -870,11 +870,11 @@ The Book of Far Roads
 
 ## ui.party.wage
 
-月俸 %d 银
+月俸 %s 银
 
 ## ui.party.wage_line
 
-月俸 %d 银　%s　情谊 %d/31　%s
+月俸 %s 银　%s　情谊 %d/31　%s
 
 ## ui.route.cannot
 
