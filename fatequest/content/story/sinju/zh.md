@@ -2,7 +2,7 @@
 unit: sinju
 lang: zh
 source: en
-source_rev: 74d08b0b3be6
+source_rev: a5f19f2c9025
 status: translated
 translator: 人工校译
 notes: >
@@ -33,7 +33,7 @@ stamps:
   ev.ev_sinju_a.choice_1_result: 3bdd6f80d246
   ev.ev_sinju_a.choice_2_result: 6650593356ef
   ev.ev_sinju_a.choice_3_result: 6c47fbb0a7f5
-  ev.ev_sinju_b.choice_1_result: c856af921631
+  ev.ev_sinju_b.choice_1_result: 5d7a8cca8996
   ev.ev_sinju_b.choice_2_result: 3aba76455970
   ev.ev_sinju_b.choice_3_result: cc2bdbfa9cb1
   ev.ev_sinju_a_followup.title: 487bd9c343ca
@@ -139,7 +139,7 @@ stamps:
 
 ## ev.ev_sinju_b.choice_1_result
 
-你看商人以交钞纳埠头税，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+你看商人以交钞纳埠头税，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。埠头吏送你一张港口纸钞，作为这番见闻的样品。
 
 ## ev.ev_sinju_b.choice_2_result
 

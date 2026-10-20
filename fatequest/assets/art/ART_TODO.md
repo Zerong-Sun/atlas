@@ -1,5 +1,18 @@
 # 美术待办 当前基线 2026 10 20
 
+## 2026-10-20 后续生产更新：完整公开塔罗牌库
+
+当前运行塔罗采用完整 **78 张 RWS 原版同源 profile**（`rws_commons_public_domain`），逐牌来源、Public domain 原声明、Commons SHA-1、原始/输出 SHA256、尺寸及转换参数保存在 `assets/decks/tarot/DECK_MANIFEST.json`。下载的来源 JPG 字节保存在 `_sources_rws/`（74张原尺寸图、4张依Commons限速建议使用的标准960px缩略图，逐项记录variant及原尺寸参考hash）；输出只是无损 WebP 转换，没有裁切、改色或重绘。旧“云岭暮光”40张移到 `_legacy_cloud_ridge/`，不会与RWS混用。完整同源牌组保持原版线描语言；扫描纸色/印刷差异仍需逐张复核，不宣称人类美术终审。
+
+因此，下文初次审计“当前塔罗缺38文件”已过期：当前运行时缺口为0；云岭暮光替代profile仍缺38张，保留原 `ART_PROMPTS_TAROT_DECK.md` 制作队列，只有整套78张统一审核后才可切换。旧图/来源图分别列archive/source_reference，不能合并计入运行时完成数量。其他旧随从矩阵18条仍缺。
+
+这套1909–1910牌面是现代占法参考，不能当作14世纪旅行的历史证物。Commons对原版与忠实复制的Public domain声明不扩展为后世商业重着色或商标授权。详情与来源页见 `assets/decks/tarot/SOURCES.md`。机器检查与代理视觉抽检均不是人类艺术、历史或法律签署。
+
+验收文件：`tests/test_tarot_provenance.py`核对78独立ID、许可元数据、源/成品hash及无损转换；`tests/smoke_divination_decks.gd`逐张验证78纹理、非法ID与其他牌组；`tools/art/import_public_tarot.py`保存可重复获取流程。动态文件计数以 `docs/library_audit/art_inventory_summary.json` 为准。
+
+
+## 以下为此前审计基线（塔罗数量按上方更新覆盖）
+
 本轮核对以 [ART_AUDIT_2026-10-20.md](../../docs/library_audit/ART_AUDIT_2026-10-20.md) 和 [art_inventory.csv](../../docs/library_audit/art_inventory.csv) 为准。没有生成新美术，以下是待执行任务。现有看图结论为代理视觉抽检，以SHA256绑定；换图须复查，另需人类美术与史实审阅签署。
 
 出图和重绘统一使用 [ART_STYLE_GUIDE_2026-10-20.md](ART_STYLE_GUIDE_2026-10-20.md)。每个缺口先绑定资产 ID、角色/城市/牌号和验收条件，再生成单张文件；未通过 manifest、运行时和人类审阅的素材不能标为完成。
@@ -11,7 +24,7 @@
 | P1 | 关键人物专属图 | 城门搬运工、解签老妇、法兰克遗孀优先；44/54随从目前无肖像 | 正文身份、性别、年龄、服饰/道具一致，单人且跨事件稳定 |
 | P1 | 多人/多场景组图拆分或重做 | 具体已确认文件见审计；`mentor-tarot`仍错配 | 不把组图直接当单人头像或单场景背景；重新逐项绑定 |
 | P1 | 易经31–64正式图 | 34占位文件已齐；43/44中文名缺失、侧注裁切 | 六爻与中文名正确，缩略图可读，无占位字样 |
-| P1 | 塔罗完整牌面 | 40/78正式WebP，仍缺38；test.jpg不计数 | 补齐ID、专用加载器和正逆位/缺图回归 |
+| P1 | 塔罗完整牌面 | 78/78 RWS运行WebP；旧云岭40张归档，后者另缺38张 | 补齐ID、专用加载器和正逆位/缺图回归 |
 | P1 | 雷诺曼和占星骰接入决策 | 36JPG与34SVG已存在，现运行页未加载 | 实际牌/符号逐项对应；若只留资料库须明确标注 |
 | P1 | 逐城市场景绑定与审阅 | 18入城、54site、36explore、48scene需按语义核对 | 无未拆组图；明确eventId→场景；通用回退不冒充专属场景 |
 | P2 | 其他图标/UI/卡框/来源审阅 | CSV未视觉抽检项 | 实际显示尺寸检查，来源核对，无裁切、错误符号或误导身份 |

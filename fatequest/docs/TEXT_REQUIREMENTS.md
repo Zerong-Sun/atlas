@@ -32,10 +32,10 @@
 
 | 层次 | 2026-10-20 实测 | 能证明什么 |
 |---|---|---|
-| 编译词典键存在 | en/zh 各 5555，双语差集 0 | 有对应字符串；不证明翻译准确、行文自然或人工读过 |
-| story 作者源 | 140 单元，各 3955 键；运行词典另有 1600 键/语言未在 story 中 | 需要区分 story 与其他生成器/历史词典来源 |
-| 显式源文 hash | 3946 匹配、0 过期、9 未盖章 | 仅证明译文记录所指英文源未变化；不是校译证明 |
-| 检查器可解析范围 | 上述 3946 中 254 个含连字符 stamp 被现有 parser 忽略，3692 可解析 | `story check` 的 3955 current 把未解析/缺章也计入，不能直接当严密证据 |
+| 编译词典键存在 | en/zh 各 5556，双语差集 0 | 有对应字符串；不证明翻译准确、行文自然或人工读过 |
+| story 作者源 | 140 单元，各 3955 键；运行词典另有 1601 键/语言未在 story 中 | 需要区分 story 与其他生成器/历史词典来源 |
+| 显式源文 hash | 3955 匹配、0 过期、0 缺章 | 仅证明译文记录所指英文源未变化；不是校译证明 |
+| 检查器可解析范围 | 3955 条 stamp 均可解析 | `story check` 的 3955 current 只证明版本对应，不能直接当人工质量证据 |
 | 人工审阅记录 | 28 单元自标 reviewed，20 自标 proofed，108 自述人工校译；未找到绑定当前 key/hash、审阅人、日期、结论的逐条记录 | 元数据声明保留，人工验收状态记“证据待补”，不能反推没有人读过 |
 
 ## 2. 当前实测基线与待审范围
@@ -83,7 +83,7 @@
 
 1. 分开登记 key 完整、显式 stamp 有效、人工校译三项状态；修正检查器漏读连字符/无章默认 current 的验收缺口。
 2. 逐单元建立记录：key、源文 hash、译文 hash、审阅人、日期、结论、问题编号与修复复核；不得用批量 stamp 或 status 改名代替审阅。
-3. 已按真实 effects 自动改写 92 条模糊交易反馈，并重编译中英文运行词典；当前先对这 92 条按 hash 逐条人工签署，再按入城/探索/导师/后续/占法/物品/界面依次通读。自动改写记录见 [`library_audit/TEXT_STYLE_PROMPTS.md`](library_audit/TEXT_STYLE_PROMPTS.md) 与 [`library_audit/TEXT_AUDIT_2026-10-20.md`](library_audit/TEXT_AUDIT_2026-10-20.md) §5。
+3. 已按真实 effects 自动改写 92 条模糊交易反馈，并补齐 4 条同类城市互动，重编译中英文运行词典；当前先对这 96 条按 hash 逐条人工签署，再按入城/探索/导师/后续/占法/物品/界面依次通读。逐 key 审阅库见 [`library_audit/text_quality_review_inventory.csv`](library_audit/text_quality_review_inventory.csv)，统一规则见 [`library_audit/TEXT_STYLE_PROMPTS.md`](library_audit/TEXT_STYLE_PROMPTS.md) 与 [`library_audit/TEXT_AUDIT_2026-10-20.md`](library_audit/TEXT_AUDIT_2026-10-20.md) §5。
 4. 人工记录未补齐前使用“入库与接线完成，人工质量待验收”的状态。
 
 ### 4.2 P1：21 座 city 的探索点深化 ✅ 2026-08-06
@@ -232,7 +232,7 @@ site 数量与多轮覆盖沿用各接线矩阵，不再使用早期“只有大
 
 ## 7. 文本 authoring 与接线规范
 
-新撰叙事文本的 authoring 源文件（运行词典另有 1600 个非 story 键，须按审计清单定位其生成器/历史维护源，不能宣称全词典都由此目录生成）：
+新撰叙事文本的 authoring 源文件（运行词典另有 1601 个非 story 键，须按审计清单定位其生成器/历史维护源，不能宣称全词典都由此目录生成）：
 
 ```text
 content/story/<unit>/en.md  ← 英文源文

@@ -458,8 +458,8 @@ at El Zaitun and Sin Kilan, and they enter no harbour but Hili, Kalikut, and Kaw
 
 At Kalikut the Muslim merchants are so wealthy that a single one of them could buy
 the whole freightage of the vessels in the port and fit out others like them. You
-bargain for pepper with one of the great merchants, pay in coin, and carry away the
-sacks to your own vessel.
+bargain for pepper with one of the great merchants, pay 1500 coins, and carry one
+sack back to your own vessel.
 
 ## ev.ev_melibar_battuta_a.choice_3_result
 

@@ -61,7 +61,10 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     registry = set(json.loads((ROOT / "game/map/art_wire_index.json").read_text())["stems"])
     snapshot = json.loads((OUT / "art_visual_review_snapshot.json").read_text())
-    records = snapshot["records"]
+    records = dict(snapshot["records"])
+    tarot_review = ROOT / "assets/decks/tarot/RWS_VISUAL_REVIEW.json"
+    if tarot_review.exists():
+        records.update(json.loads(tarot_review.read_text())["records"])
     for record in records.values():
         assert re.fullmatch(r"[a-f0-9]{64}", record["sha256"]), "invalid review hash"
         assert record["visual_review"].startswith("agent_visual_"), "non-agent review label"
@@ -75,8 +78,9 @@ def main():
         relative = path.relative_to(ROOT).as_posix()
         extension, stem = path.suffix.lower(), path.stem
         is_image = extension in IMAGE_EXTENSIONS
-        role = "archive" if "/_archive/" in relative else (
-            "source_sheet" if "/_sheets/" in relative else "production_candidate")
+        role = "archive" if "/_archive/" in relative or "/_legacy_cloud_ridge/" in relative else (
+            "source_reference" if "/_sources_rws/" in relative else (
+            "source_sheet" if "/_sheets/" in relative else "production_candidate"))
         category = "metadata"
         if is_image:
             category = "art/" + stem.split("-")[0] if path.parent == ROOT / "assets/art" else \
@@ -85,17 +89,17 @@ def main():
         dimensions, technical, note = image_metadata(path) if is_image else ("", "not_image", "")
         references = [filename for filename, text in texts.items()
                       if relative in text or '"' + stem + '"' in text or "'" + stem + "'" in text] if is_image else []
-        wiring = "archive_not_runtime" if role != "production_candidate" else (
+        wiring = role + "_not_runtime" if role != "production_candidate" else (
             "literal_reference_not_runtime_proof" if references else (
                 "registry_only_not_runtime_proof" if stem in registry else "no_literal_reference_found"))
         content = "unknown_requires_review" if is_image else "not_applicable"
         if relative.startswith("assets/decks/iching/") and extension == ".webp":
             wiring = "runtime_manifest_resolver"
             references = ["game/map/map_art.gd:hexagram_face", "assets/decks/iching/DECK_MANIFEST.json"]
-        if relative.startswith("assets/decks/tarot/") and extension == ".webp":
+        if path.parent == ROOT / "assets/decks/tarot" and extension == ".webp":
             wiring = "runtime_resolver"
             references = ["game/map/map_art.gd:tarot_card", "game/ui/divination_result.gd"]
-            note = "Authored Tarot IDs resolve through MapArt.tarot_card; 38 cards remain missing and full-deck review is pending"
+            note = "Complete RWS profile resolves through hash-traced DECK_MANIFEST.json; lossless conversion only; human art/history signoff pending"
         if relative.startswith("assets/decks/lenormand/") and extension == ".jpg":
             wiring = "runtime_resolver"
             references = ["game/map/map_art.gd:lenormand_card", "game/ui/divination_result.gd"]

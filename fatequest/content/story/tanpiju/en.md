@@ -111,7 +111,7 @@ You ask which gardens feed the silkworms. You set what you saw into your travel 
 
 ## ev.ev_tanpiju_b.choice_1_result
 
-You walk the market where Kinsay goods are sold. It costs you 1 day on the road. The account is written down before the hour turns. The trade fills your hold a little.
+You walk the market where Kinsay goods are sold. It costs you 1 day on the road. The account is written down before the hour turns. You take a Hangzhou fan with you and record what Kinsay's traders carry.
 
 ## ev.ev_tanpiju_b.choice_2_result
 

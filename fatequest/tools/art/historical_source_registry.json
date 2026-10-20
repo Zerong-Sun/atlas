@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "description": "Curated, stable source candidates for historical/cultural review. A candidate is an evidence lead, not an approval of the matching game line.",
+  "checked_at": "2026-10-20",
+  "policy": {
+    "candidate_status": "candidate_needs_expert",
+    "approval_rule": "A reviewer must check the exact claim, period, place and wording against the source before changing a queue row to reviewed.",
+    "no_external_source_rule": "Fictional UI, divination output and connective prose are marked no_external_source rather than being given a misleading historical citation."
+  },
+  "sources": [
+    {
+      "id": "loc_ibn_battuta_rihla",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07470/?st=gallery",
+      "title": "Ibn Battuta's Rihla",
+      "publisher": "Library of Congress / Bibliotheca Alexandrina",
+      "kind": "primary_digital_copy",
+      "scope": "Ibn Battuta travel account, pilgrimage route and medieval cities",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "uw_silkroad_historical_texts",
+      "url": "https://depts.washington.edu/silkroad/texts/texts.html",
+      "title": "Silk Road Narratives: A Collection of Historical Texts",
+      "publisher": "University of Washington Silk Road Seattle",
+      "kind": "academic_primary_source_index",
+      "scope": "Marco Polo, Rubruck, Chinese accounts and medieval Eurasian travel sources",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_ich_music_dance_lists",
+      "url": "https://ich.unesco.org/en/lists?type=00002",
+      "title": "UNESCO Intangible Cultural Heritage lists",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Named music, dance, performance and living heritage elements; use only when the game line names a matching element or as a lead for expert review",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_guqin_music",
+      "url": "https://ich.unesco.org/en/RL/guqin-and-its-music-00061?RL=00061",
+      "title": "Guqin and its music",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Guqin history, practice and social context in China",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_nanyin",
+      "url": "https://ich.unesco.org/en/RL/nanyin-00199?RL=00199",
+      "title": "Nanyin",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Quanzhou/Minnan music, pipa, singing, ceremonies and social settings",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_shashmaqom",
+      "url": "https://ich.unesco.org/en/RL/shashmaqom-music-00089",
+      "title": "Shashmaqom music",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Central Asian music, Bukhara/Samarkand context, vocal and instrumental practice",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_tahteeb",
+      "url": "https://ich.unesco.org/en/RL/tahtib-01189",
+      "title": "Tahteeb, stick game",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Egyptian public performance and folk music context; not a generic dance citation",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_mazu",
+      "url": "https://ich.unesco.org/en/RL/mazu-belief-and-customs-00227",
+      "title": "Mazu belief and customs",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Mazu temples, incense, offerings, processions and coastal Chinese community practice",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_mongolian_sacred_sites",
+      "url": "https://ich.unesco.org/en/state/mongolia-MN",
+      "title": "Mongolia: elements on the UNESCO Intangible Cultural Heritage lists",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Mongolian sacred-site worship, ovoo practice, music and dance elements",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "met_birth_of_islam",
+      "url": "https://www.metmuseum.org/essays/the-birth-of-islam",
+      "title": "The Birth of Islam",
+      "publisher": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History",
+      "kind": "museum_scholarly_essay",
+      "scope": "Mosque elements, mihrab, minbar, Friday sermon and early Islamic visual context",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "smithsonian_buddhist_incense",
+      "url": "https://asia.si.edu/education/educator-resources/teaching-china-with-the-smithsonian/lesson-plans/symbolism-in-cloisonne/",
+      "title": "Symbolism in Cloisonne",
+      "publisher": "Smithsonian National Museum of Asian Art",
+      "kind": "museum_educational_source",
+      "scope": "Chinese incense burners, offerings and Buddhist temple/monastery context",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "iranica_zoroastrian_rituals",
+      "url": "https://www.iranicaonline.org/articles/zoroastrian-rituals/",
+      "title": "Zoroastrian Rituals",
+      "publisher": "Encyclopaedia Iranica, Columbia University",
+      "kind": "academic_reference",
+      "scope": "Zoroastrian fire, temple ritual, priesthood and pilgrimage context",
+      "accessed_at": "2026-10-20"
+    },
+    {
+      "id": "unesco_ich_craftsmanship",
+      "url": "https://ich.unesco.org/en/traditional-craftsmanship-00057",
+      "title": "Traditional craftsmanship",
+      "publisher": "UNESCO",
+      "kind": "official_cultural_registry",
+      "scope": "Craft knowledge, community transmission and limits of product-origin claims",
+      "accessed_at": "2026-10-20"
+    }
+  ]
+}

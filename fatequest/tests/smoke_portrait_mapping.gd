@@ -1,5 +1,7 @@
 extends SceneTree
 
+const PORTRAIT_TAGS_PATH := "res://assets/art/PORTRAIT_TAGS.json"
+
 var failures: Array[String] = []
 var checks := 0
 
@@ -40,13 +42,29 @@ func _init() -> void:
 	_check(MapArt.event_portrait({"portrait": "npc-job-guide-con"}, "east_asia") == null,
 		"Explicit authored portrait still requires the audited allowlist")
 	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(MapArt.PORTRAIT_MAP_PATH))
+	var tags: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(PORTRAIT_TAGS_PATH))
+	var tag_rows: Dictionary = tags.get("portraits", {})
+	_check(not tag_rows.is_empty(), "Portrait tag database is present")
 	for stem in manifest.get("portraits", {}):
 		_check(MapArt.tex(String(stem)) != null, "Every audited portrait resolves: " + String(stem))
+		_check(tag_rows.has(stem), "Every audited portrait has a label: " + String(stem))
+		if tag_rows.has(stem):
+			var tag: Dictionary = tag_rows[stem]
+			for field in ["gender", "culture_background", "age_range", "attire_props", "source_basis", "review_status"]:
+				_check(tag.has(field) and not String(tag.get(field, "")).is_empty(),
+					"Portrait label has %s: %s" % [field, String(stem)])
+			var expected_culture := _culture_from_stem(String(stem))
+			_check(expected_culture == "unknown" or String(tag.get("culture_background", "")) == expected_culture,
+				"Portrait label culture matches asset set: " + String(stem))
 	for section in ["jobs", "venues"]:
 		for culture in manifest.get(section, {}):
 			for role in manifest[section][culture]:
-				_check(manifest["portraits"].has(manifest[section][culture][role]),
-					"Every role references audited art: " + String(role))
+				var stem := String(manifest[section][culture][role])
+				_check(manifest["portraits"].has(stem), "Every role references audited art: " + String(role))
+				_check(tag_rows.has(stem), "Every role references labeled art: " + String(role))
+				if tag_rows.has(stem):
+					_check(String(tag_rows[stem].get("culture_background", "")) == String(culture),
+						"Role culture cannot borrow another set: %s/%s" % [String(culture), String(role)])
 	var db := ContentDb.new()
 	db.load_all()
 	for section in ["events", "characters"]:
@@ -56,6 +74,39 @@ func _init() -> void:
 			_check(stem.is_empty() or manifest["portraits"].has(stem), "Explicit binding references audited art: " + String(record_id))
 	for method in manifest.get("mentors", {}):
 		_check(manifest["portraits"].has(manifest["mentors"][method]), "Method illustration references audited art: " + String(method))
+	for section in ["events", "characters"]:
+		for record_id in manifest.get(section, {}):
+			var binding: Dictionary = manifest[section][record_id]
+			var stem := String(binding.get("portrait", ""))
+			if stem.is_empty():
+				continue
+			_check(tag_rows.has(stem), "Explicit binding references labeled art: " + String(record_id))
+			if tag_rows.has(stem) and binding.has("gender"):
+				_check(String(tag_rows[stem].get("gender", "")) == String(binding.get("gender", "")),
+					"Explicit binding gender matches labeled art: " + String(record_id))
+	# Dynamic retainer resolution must preserve the authored origin culture and
+	# any explicitly declared gender. Unknown/unsupported cultures may return no
+	# portrait, but they may never borrow a different culture's image.
+	for rec in db.get_table("retainers"):
+		var rec_id := String(rec.get("id", ""))
+		var origin: Dictionary = rec.get("origin", {})
+		var origin_culture := String(origin.get("culture", ""))
+		var requested_gender := String(rec.get("gender", ""))
+		var resolved := MapArt.retainer_portrait(rec_id, origin_culture, requested_gender)
+		if resolved == null:
+			continue
+		var resolved_stem := ""
+		for stem in tag_rows:
+			if MapArt.tex(String(stem)) == resolved:
+				resolved_stem = String(stem)
+				break
+		_check(not resolved_stem.is_empty(), "Resolved retainer image has a label: " + rec_id)
+		if not resolved_stem.is_empty():
+			_check(String(tag_rows[resolved_stem].get("culture_background", "")) == origin_culture,
+				"Retainer origin culture cannot change portrait: " + rec_id)
+			if not requested_gender.is_empty():
+				_check(String(tag_rows[resolved_stem].get("gender", "")) == requested_gender,
+					"Retainer gender cannot change portrait: " + rec_id)
 	var snapshot := MapArt._portrait_map.duplicate(true)
 	MapArt._portrait_map["events"] = null
 	MapArt._portrait_map["jobs"] = []
@@ -72,3 +123,17 @@ func _check(condition: bool, message: String) -> void:
 	checks += 1
 	if not condition:
 		failures.append(message)
+
+
+func _culture_from_stem(stem: String) -> String:
+	if stem.ends_with("-chr"):
+		return "latin"
+	if stem.ends_with("-isl"):
+		return "islamic"
+	if stem.ends_with("-con"):
+		return "east_asia"
+	if stem.ends_with("-mazu"):
+		return "indian_ocean"
+	if stem == "mentor-bazi":
+		return "east_asia"
+	return "unknown"

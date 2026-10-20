@@ -11,7 +11,18 @@ func _init() -> void:
 	_check(MapArt.tarot_card("major-0") != null, "Tarot major-0 resolves Fool")
 	_check(MapArt.tarot_card("wands-0") != null, "Tarot wands-0 resolves Ace")
 	_check(MapArt.tarot_card("wands-13") != null, "Tarot wands-13 resolves King")
-	_check(MapArt.tarot_card("swords-0") == null, "Missing sword card fails closed")
+	var faces: Array[Texture2D] = []
+	for rank in 22:
+		var face := MapArt.tarot_card("major-%d" % rank)
+		_check(face != null and not faces.has(face), "Unique major %d" % rank)
+		faces.append(face)
+	for suit in ["wands", "cups", "swords", "pentacles"]:
+		for rank in 14:
+			var face := MapArt.tarot_card("%s-%d" % [suit, rank])
+			_check(face != null and not faces.has(face), "Unique %s-%d" % [suit, rank])
+			faces.append(face)
+	_check(MapArt.tarot_card("swords-14") == null, "Out-of-range sword card fails closed")
+	_check(MapArt.tarot_card("../../test") == null, "Traversal fails closed")
 	_check(MapArt.tarot_card("major-99") == null, "Invalid tarot id fails closed")
 
 	var lenormand_ok := true

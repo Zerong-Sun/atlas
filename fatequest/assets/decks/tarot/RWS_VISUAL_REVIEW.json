@@ -1,0 +1,37 @@
+{
+  "scope": "Four source samples; does not approve the other 74 or any human signoff",
+  "records": {
+    "assets/decks/tarot/_sources_rws/tarot-fool-full.jpg": {
+      "sha256": "557c6592b73107508eac65ef140d090d2ccd657ac5a2d5d4fe31c6c2ceacbcb5",
+      "visual_review": "agent_visual_source_sample",
+      "content_status": "source_identity_sample_checked",
+      "observation": "Cliff-edge figure, bundle and small dog; The Fool title visible. Contact-sheet sample only; no historical or full-resolution print approval.",
+      "reviewer": "Codex agent",
+      "date": "2026-10-20"
+    },
+    "assets/decks/tarot/_sources_rws/tarot-strength-full.jpg": {
+      "sha256": "b222f1799b8dc46944d28f6079b1551011691dc439740371126e874fcf0c768f",
+      "visual_review": "agent_visual_source_sample",
+      "content_status": "source_identity_sample_checked",
+      "observation": "Figure gently holding lion; VIII and Strength title visible. Contact-sheet sample only; no historical or full-resolution print approval.",
+      "reviewer": "Codex agent",
+      "date": "2026-10-20"
+    },
+    "assets/decks/tarot/_sources_rws/tarot-cups-05-full.jpg": {
+      "sha256": "07d2354d331f8a9397c407cea0b2bcc1544b134eab526b9262ececb3d0a57166",
+      "visual_review": "agent_visual_source_sample",
+      "content_status": "source_identity_sample_checked",
+      "observation": "Cloaked figure with three overturned cups and two standing cups; V visible. Contact-sheet sample only; no historical or full-resolution print approval.",
+      "reviewer": "Codex agent",
+      "date": "2026-10-20"
+    },
+    "assets/decks/tarot/_sources_rws/tarot-swords-ace-full.jpg": {
+      "sha256": "32f0f932346a25b6ec3753ff95d3e4a7481cb5c3582205ba76c53356a496f15a",
+      "visual_review": "agent_visual_source_sample",
+      "content_status": "source_identity_sample_checked",
+      "observation": "One upright sword in hand through crown; Ace of Swords title visible. Contact-sheet sample only; no historical or full-resolution print approval.",
+      "reviewer": "Codex agent",
+      "date": "2026-10-20"
+    }
+  }
+}

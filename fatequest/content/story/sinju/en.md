@@ -108,7 +108,7 @@ You ask the toll clerks how many vessels pass in a year. You set what you saw in
 
 ## ev.ev_sinju_b.choice_1_result
 
-You watch merchants pay tolls in paper-money. It costs you 1 day on the road. The account is written down before the hour turns. The trade fills your hold a little.
+You watch merchants pay tolls in paper-money. It costs you 1 day on the road. The account is written down before the hour turns. A quay clerk gives you one port note as a sample of what you saw.
 
 ## ev.ev_sinju_b.choice_2_result
 

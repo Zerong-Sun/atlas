@@ -3201,3 +3201,5 @@ zh,verdict.good_road_poor_company,content/i18n/zh.json,善行路，不善处众,
 zh,verdict.short_term_only,content/i18n/zh.json,短途尚可,无story单元/逐条source stamp；需定位维护来源与双语复核
 zh,verdict.trade_not_travel,content/i18n/zh.json,宜贸易，不宜远行,无story单元/逐条source stamp；需定位维护来源与双语复核
 zh,verdict.unremarkable,content/i18n/zh.json,无甚可言,无story单元/逐条source stamp；需定位维护来源与双语复核
+en,ui.volume,content/i18n/en.json,Volume,新增UI运行键；需定位维护来源并补逐条审阅记录
+zh,ui.volume,content/i18n/zh.json,音量,新增UI运行键；需定位维护来源并补逐条审阅记录

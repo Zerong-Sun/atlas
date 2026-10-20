@@ -1,0 +1,20 @@
+{
+  "queue_rows": 585,
+  "source_requested_rows": 367,
+  "candidate_rows_with_url": 333,
+  "explicit_no_external_source_rows": 34,
+  "resolution_counts": {
+    "已附来源": 103,
+    "待专家": 448,
+    "明确无来源": 34
+  },
+  "status_counts": {
+    "attached_local_lore": 103,
+    "candidate_needs_expert": 333,
+    "local_record_only": 115,
+    "no_external_source": 34
+  },
+  "registry_source_count": 13,
+  "network_check": "not_run; URL reachability and claim-level fit require human review",
+  "errors": []
+}

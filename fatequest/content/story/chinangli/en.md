@@ -111,7 +111,7 @@ You ask which spices the downstream boats carry. You set what you saw into your 
 
 ## ev.ev_chinangli_b.choice_1_result
 
-You watch the paper-money exchange at a stall. It costs you 1 day on the road. The account is written down before the hour turns. The trade fills your hold a little.
+You watch the paper-money exchange at a stall. It costs you 1 day on the road. The account is written down before the hour turns. The clerk gives you one sample paper note as a record of what you saw.
 
 ## ev.ev_chinangli_b.choice_2_result
 

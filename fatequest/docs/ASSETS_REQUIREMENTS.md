@@ -6,9 +6,9 @@
 
 | 资料 | 已有 | 确认缺口/问题 | 尚待审阅 |
 |---|---|---|---|
-| 美术 | 849个生产候选图像文件，含1张塔罗测试图；另129归档、58源组图 | 塔罗缺38文件；旧con/mazu随从矩阵缺18文件；易经34占位；多人肖像、未拆场景和人物错配；易经结果按错误编号选图 | 81项有代理视觉观察，其余768生产候选未目检；人类美术/史实签署另待补 |
+| 美术 | 887个生产候选图像文件，含1张塔罗测试图；另129归档、58源组图；RWS来源JPG与旧云岭40张分开归档 | 当前运行塔罗78张同源RWS缺口为0；云岭暮光替代profile仍缺38张；旧con/mazu随从矩阵缺18文件；易经34占位；多人肖像、未拆场景和人物错配；易经结果按错误编号选图 | 81项有代理视觉观察，其余生产候选及78张RWS仍待逐张人类视觉/历史签署 |
 | 音乐/环境音 | 37 OGG：20 stem+12环境床+5 sacred_blur；11类程序SFX | 清单内OGG无缺失；场所切换、海路环境、color/sacred调度有缺口；6类SFX未找到调用；16文件循环端点需排查 | 全部48清单项未实际听审；合成音色不能冒称真实传统器乐录音 |
-| 游戏文本 | 140 story单元，中英各3955键；运行词典各5555键 | 92条交易反馈需重写；9缺stamp；254现有stamp被解析器漏读；103城缺独立短简介，76市集缺专属介绍 | 140单元需补当前版本审校证据；另1600运行键需定位维护来源 |
+| 游戏文本 | 140 story单元，中英各3955键；运行词典各5556键；96条效果反馈已自动修复 | 103城缺独立短简介，76市集缺专属介绍；1601个非story运行键需定位维护来源 | 140单元需补当前版本审校证据；key级风格库已列17个编辑复核项 |
 | 书籍资料 | 16语料库、462段（276 places+186 stories）；8册入书案 | 仅6库同时有本地原文及拆章；平托机译/OCR问题；两种现代译本版本声明待核；法德兰选集作者归属待拆 | 462段原文、年代、翻译、演绎边界与编辑签署未闭合；精读卡仅5张 |
 
 计数不能直接相加为制作预算。18个旧随从文件缺口、44个当前无肖像随从和已隔离错配图有重叠；通用职业图也可能覆盖多名匿名人物。34张易经占位是缺正式图，不是缺文件。62座无sites城市仍有入城正文，其中38座有市集。
@@ -20,7 +20,7 @@
 | 总清单 | [整改总表](library_audit/README.md) | [引擎总需求](FATEQUEST_ENGINE_REQUIREMENTS.md) §0.5 |
 | 美术 | [报告](library_audit/ART_AUDIT_2026-10-20.md) · [逐文件CSV](library_audit/art_inventory.csv) | [ART_REQUIREMENTS](ART_REQUIREMENTS.md) · [ART_TODO](../assets/art/ART_TODO.md) |
 | 音频 | [报告](library_audit/AUDIO_AUDIT_2026-10-20.md) · [逐音频CSV](library_audit/audio_inventory.csv) | [AUDIO_PLAN](AUDIO_PLAN.md) · [MANIFEST](../assets/audio/MANIFEST.md) |
-| 文本 | [报告](library_audit/TEXT_AUDIT_2026-10-20.md) · [140单元队列](library_audit/text_review_inventory.csv) · [92条改写项](library_audit/text_confirmed_rewrite_items.csv) | [TEXT_REQUIREMENTS](TEXT_REQUIREMENTS.md) · [L10N_PLAN](L10N_PLAN.md) |
+| 文本 | [报告](library_audit/TEXT_AUDIT_2026-10-20.md) · [140单元队列](library_audit/text_review_inventory.csv) · [逐key风格库](library_audit/text_quality_review_inventory.csv) · [92条改写项](library_audit/text_confirmed_rewrite_items.csv) | [TEXT_REQUIREMENTS](TEXT_REQUIREMENTS.md) · [L10N_PLAN](L10N_PLAN.md) · [统一Prompt](library_audit/TEXT_STYLE_PROMPTS.md) |
 | 书籍 | [报告](library_audit/BOOK_SOURCE_AUDIT_2026-10-20.md) · [16库清单](library_audit/book_inventory.csv) · [462段队列](library_audit/book_passage_review.csv) | [来源记录](../assets/books/SOURCE_NOTES.md) · [LORE_PIPELINE](LORE_PIPELINE.md) |
 | 统一风格 | [风格圣经与生产 Prompt](library_audit/STYLE_BIBLE_2026-10-20.md) | 新产物必须记录 prompt、来源、hash 和审阅范围 |
 
@@ -28,7 +28,7 @@
 
 每项分别记录：文件存在、技术可读、实际触发、语义/形象对应、质量审阅、来源依据。任一状态不能替代其他状态。“未审”不是“低质量”；“候选疑点”不是“确定错误”。换版后旧审阅仅对旧hash有效。
 
-美术索引674条仅证明注册数量。音频解码、静音启动不证明真实播放或听感。本轮完成清单、统一风格和可安全接入的生产修复：易经编号链、牌组 resolver、92条双语反馈、音频场景调度与音量持久化均已修改并有回归。正式缺图/占位、人类视觉签署、48项听审、书籍底本核验和人工通读仍待处理；不能把自动回归写成内容签署。
+美术索引与运行时牌组清单分别证明注册和文件存在，不能代替逐张视觉验收。音频解码、静音启动不证明真实播放或听感。本轮完成清单、统一风格和可安全接入的生产修复：易经编号链、完整RWS牌组 resolver、96条双语效果反馈、音频场景调度与音量持久化均已修改并有回归。正式易经占位、人类视觉签署、48项听审、书籍底本核验和人工通读仍待处理；不能把自动回归写成内容签署。
 
 ## 复核入口
 

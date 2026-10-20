@@ -16,15 +16,18 @@ class SnapshotTests(unittest.TestCase):
     def setUpClass(cls):
         cls.records = json.loads((HERE / "art_visual_review_snapshot.json").read_text())["records"]
 
-    def test_all_eighty_one_observations_have_exact_current_hashes(self):
+    def test_historical_observations_match_or_require_re_review(self):
         self.assertEqual(len(self.records), 81)
         for path, record in self.records.items():
             with self.subTest(path=path):
                 sha = hashlib.sha256((inventory.ROOT / path).read_bytes()).hexdigest()
-                self.assertEqual(sha, record["sha256"])
                 result = inventory.visual_observation(path, sha, self.records)
-                self.assertTrue(result["visual_review"].startswith("agent_visual_"))
-                self.assertIn("human art/history signoff pending", result["note"])
+                if sha == record["sha256"]:
+                    self.assertTrue(result["visual_review"].startswith("agent_visual_"))
+                    self.assertIn("human art/history signoff pending", result["note"])
+                else:
+                    self.assertEqual(result["visual_review"], "needs_re_review")
+                    self.assertEqual(result["content_status"], "changed_asset_unreviewed")
 
     def test_same_filename_new_hash_requires_review(self):
         for path in self.records:

@@ -1,0 +1,32 @@
+{
+  "portrait_rows": 23,
+  "portrait_errors": [],
+  "portrait_missing_sha256": [],
+  "portrait_validation_errors": [],
+  "cultural_rows": 585,
+  "cultural_by_category": {
+    "city": 103,
+    "dance_music": 60,
+    "good": 61,
+    "person": 54,
+    "religion_ritual": 307
+  },
+  "queued_rows": 585,
+  "source_requested_rows": 367,
+  "source_resolution": {
+    "已附来源": 103,
+    "待专家": 448,
+    "明确无来源": 34
+  },
+  "source_candidate_rows_with_url": 333,
+  "source_validation_errors": [],
+  "generated_from": [
+    "game/map/portrait_art_map.json",
+    "assets/art/PORTRAIT_TAGS.json",
+    "content/tables/retainers.json",
+    "content/tables/goods.json",
+    "content/i18n/zh.json",
+    "content/i18n/en.json",
+    "tools/art/historical_source_registry.json"
+  ]
+}

@@ -1,32 +1,34 @@
 {
-  "files": 2112,
-  "rows": 2168,
-  "images": 1036,
+  "files": 2356,
+  "rows": 2374,
+  "images": 1192,
   "image_counts_by_role": {
-    "archive": 129,
+    "archive": 169,
     "source_sheet": 58,
-    "production_candidate": 849
+    "production_candidate": 887,
+    "source_reference": 78
   },
   "visual_review_counts": {
-    "not_visually_reviewed": 955,
+    "not_visually_reviewed": 1107,
     "agent_visual_defect_sample": 15,
     "agent_visual_single_figure_review": 23,
-    "agent_visual_representative_sample": 9,
-    "agent_visual_placeholder_sheet_review": 34
+    "agent_visual_representative_sample": 7,
+    "agent_visual_placeholder_sheet_review": 34,
+    "agent_visual_source_sample": 4,
+    "needs_re_review": 2
   },
   "art_root": 674,
   "registry": 674,
   "technical": {
-    "not_image": 1076,
-    "decodes": 1002,
+    "not_image": 1164,
+    "decodes": 1158,
     "xml_parses_visual_unchecked": 34,
-    "missing_file": 56
+    "missing_file": 18
   },
   "missing": {
-    "decks/tarot": 38,
     "art/retainer": 18
   },
   "tarot_expected": 78,
-  "tarot_actual": 40,
+  "tarot_actual": 78,
   "iching_actual": 64
 }

@@ -2,7 +2,7 @@
 unit: tanpiju
 lang: zh
 source: en
-source_rev: 8e476779e571
+source_rev: 1be21cb2343a
 status: translated
 translator: 人工校译
 notes: >
@@ -33,7 +33,7 @@ stamps:
   ev.ev_tanpiju_a.choice_1_result: 569fab400a9a
   ev.ev_tanpiju_a.choice_2_result: 5e298d5ac5fc
   ev.ev_tanpiju_a.choice_3_result: 48b7924bcded
-  ev.ev_tanpiju_b.choice_1_result: a2e60a4d66e7
+  ev.ev_tanpiju_b.choice_1_result: 7cacb019a4fb
   ev.ev_tanpiju_b.choice_2_result: e3bbf02d8870
   ev.ev_tanpiju_b.choice_3_result: 219d7d9160e1
   ev.ev_tanpiju_a_followup.title: 8278eb053a74
@@ -149,7 +149,7 @@ stamps:
 
 ## ev.ev_tanpiju_b.choice_1_result
 
-你巡行在货于市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+你巡行在货于市，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。你带走一把杭州扇，也把行在商货的见闻记入行纪。
 
 ## ev.ev_tanpiju_b.choice_2_result
 

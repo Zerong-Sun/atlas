@@ -15,7 +15,7 @@
 - **旅伴立绘 2 张** `comp-*.webp` —— `comp-tebrizi` / `comp-lin`（旧 PWA 旅伴，归档）
 - **地图贴图 12 张** `map-*.webp` —— 羊皮纸底、海面、四文明纹样、岩山/雪山/沙丘/森林/河道/礁石
 - **UI 表面 10 张** `ui-bg-*.webp` + 按钮 10 张 `ui-btn-*` + 图标 `ui-icon-*` / 角饰 `ui-orn-*`
-- **塔罗全副 22 张** `decks/tarot/tarot-*-full.webp` —— 抽牌与图鉴直接用画作（小阿卡纳 38 张未出，见 §2.4 扩展）
+- **塔罗全副 78 张** `decks/tarot/tarot-*-full.webp` —— 当前运行使用同源RWS牌组；旧云岭替代profile另行归档，不作运行时回退
 - **易经卦牌 30 张** `decks/iching/iching-01..30-*-full.webp` —— 起卦结果显示对应卦牌
 - **塔符号 18 + 卡背 + 流派徽记 3** `sym-*`, `card-back-full`, `arch-*`
 - 雷诺曼 36 张（`decks/lenormand/`）、星盘 34 张（`assets/astrodice/`）
@@ -28,7 +28,7 @@
 | `retainer-{guide,porter,guard,scribe,lang,heal,sail,monk,seer}-{con,mazu}.webp`（18 张） | 随从立绘（儒道/妈祖两境） | `east_asia`/`indian_ocean` 文化随从当前回退到通用职业立绘；按 `ART_PROMPTS_F2_RETAINERS.md` 出图 | 900×1300 透明 |
 | `realm-tarot/western/astrodice/jiaobei/meihua/lenormand.webp`（6 张） | 星图秘境图标 | `ART_EMOJI_MAP.json` 已指向这些名字但文件未出；现由近似纹章顶替 | 512×512 透明 |
 | `decks/iching/iching-31..64-*-full.webp`（34 张） | 易经卦牌下半部 | 命名沿用现有规则；缺的卦目前退回线描卦象 | 同现有卦牌 |
-| `decks/tarot/` 小阿卡纳（38 张） | 塔罗牌面 | `ART_PROMPTS_TAROT_DECK.md` 已备好全部 78 张 prompt；现有 40/78（22 大阿卡纳 + 权杖/圣杯前段），缺宝剑/星币全组与圣杯 5–10、人物牌 | 512×768 |
+| `decks/tarot/` 云岭替代profile小阿卡纳（38 张） | 塔罗牌面 | 当前运行RWS牌组已完整；若继续制作云岭替代profile，必须整套78张统一风格后才可切换，不能与RWS混用 | 512×768 |
 | `item-beads.webp` | 行脚念珠（占具） | 现由符袋纹章顶替 | 256×256 透明 |
 | `map-city-chr/isl/con/mazu.webp`、`map-court-con.webp`、`map-shrine.webp` | 地图城塞小像 | 现由 SVG 立面顶替（见下表 C） | 256×220 透明 |
 | `map-beast-serpent/whale/roc/griffin.webp`、`map-rose.webp`、`map-wind-head.webp`、`map-cartouche.webp`、`map-border.webp` | 地图异兽与装饰 | 现由 SVG 顶替（见下表 D） | 见下表 |

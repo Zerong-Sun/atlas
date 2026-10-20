@@ -125,6 +125,17 @@ function syncChangedStamps(rows) {
     if (!byUnit.has(unit)) byUnit.set(unit, new Set());
     byUnit.get(unit).add(row.key);
   }
+  // Four additional effect-clarity fixes live outside the original 92-row
+  // audit queue. Keep their source stamps in the same reproducible path.
+  for (const [unit, key] of [
+    ["battuta", "ev.ev_melibar_battuta_a.choice_2_result"],
+    ["chinangli", "ev.ev_chinangli_b.choice_1_result"],
+    ["sinju", "ev.ev_sinju_b.choice_1_result"],
+    ["tanpiju", "ev.ev_tanpiju_b.choice_1_result"],
+  ]) {
+    if (!byUnit.has(unit)) byUnit.set(unit, new Set());
+    byUnit.get(unit).add(key);
+  }
   for (const [unit, keys] of byUnit) {
     const enPath = join(ROOT, "content/story", unit, "en.md");
     const zhPath = join(ROOT, "content/story", unit, "zh.md");

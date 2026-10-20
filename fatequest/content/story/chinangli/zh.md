@@ -2,7 +2,7 @@
 unit: chinangli
 lang: zh
 source: en
-source_rev: b4b59643d252
+source_rev: d30fd6bb01d7
 status: translated
 translator: 人工校译
 notes: >
@@ -33,7 +33,7 @@ stamps:
   ev.ev_chinangli_a.choice_1_result: a8081f6a0474
   ev.ev_chinangli_a.choice_2_result: e2c6ca308942
   ev.ev_chinangli_a.choice_3_result: e4b543baea07
-  ev.ev_chinangli_b.choice_1_result: f68d865ffb6f
+  ev.ev_chinangli_b.choice_1_result: cc750383a1ab
   ev.ev_chinangli_b.choice_2_result: a2ffbaf0ce56
   ev.ev_chinangli_b.choice_3_result: 01c6ec1457be
   ev.ev_chinangli_a_followup.title: 3b4ce69b5150
@@ -140,7 +140,7 @@ stamps:
 
 ## ev.ev_chinangli_b.choice_1_result
 
-你于摊前看钞币兑换，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。这笔买卖，让你的货舱又添了几分。
+你于摊前看钞币兑换，为此费去你 1 日路程。不到一个时辰，这段记录已落笔成文。兑换吏送你一张纸钞样品，作为这番见闻的凭证。
 
 ## ev.ev_chinangli_b.choice_2_result
 

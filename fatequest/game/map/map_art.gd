@@ -478,6 +478,9 @@ static func symbol_icon(sym_id: String) -> Texture2D:
 
 
 const DECK_TAROT_DIR := "res://assets/decks/tarot/"
+const TAROT_PROFILE := "rws_commons_public_domain"
+static var _tarot_paths: Dictionary = {}
+static var _tarot_manifest_loaded := false
 const DECK_LENORMAND_DIR := "res://assets/decks/lenormand/"
 const DECK_ASTRO_DIR := "res://assets/astrodice/"
 
@@ -510,27 +513,43 @@ static func _deck_texture(path: String) -> Texture2D:
 	return image
 
 
-## Resolves a content tarot id (e.g. `major-0`, `wands-13`) to its deck face.
-## Missing cards return null so an incomplete deck can never silently display a
-## different card.
+## Only the manifest's complete RWS profile is playable. Legacy Cloud-ridge
+## artwork is archived separately and must never fill gaps in this deck.
 static func tarot_card(card_id: String) -> Texture2D:
-	var parts := card_id.to_lower().split("-")
-	if parts.size() != 2 or not parts[1].is_valid_int():
-		return null
-	var family := String(parts[0])
-	var rank := int(parts[1])
-	var stem := ""
-	if family == "major":
-		if rank < 0 or rank >= TAROT_MAJOR_STEMS.size():
+	if not _tarot_manifest_loaded:
+		_tarot_manifest_loaded = true
+		var file := FileAccess.open(DECK_TAROT_DIR + "DECK_MANIFEST.json", FileAccess.READ)
+		if file == null:
 			return null
-		stem = "tarot-%s-full.webp" % TAROT_MAJOR_STEMS[rank]
-	elif family in ["wands", "cups", "swords", "pentacles"]:
-		if rank < 0 or rank >= TAROT_MINOR_RANK_STEMS.size():
+		var manifest: Variant = JSON.parse_string(file.get_as_text())
+		if not manifest is Dictionary or manifest.get("deck_id") != TAROT_PROFILE:
 			return null
-		stem = "tarot-%s-%s-full.webp" % [family, TAROT_MINOR_RANK_STEMS[rank]]
-	else:
-		return null
-	return _deck_texture(DECK_TAROT_DIR + stem)
+		var cards: Variant = manifest.get("cards", [])
+		if not cards is Array or cards.size() != 78:
+			return null
+		for entry in cards:
+			if not entry is Dictionary or not entry.get("id") is String or not entry.get("path") is String:
+				_tarot_paths.clear()
+				return null
+			var id: String = entry["id"]
+			var parts := id.split("-")
+			if parts.size() != 2 or not parts[1].is_valid_int():
+				_tarot_paths.clear()
+				return null
+			var rank := int(parts[1])
+			if id != "%s-%d" % [parts[0], rank]:
+				_tarot_paths.clear()
+				return null
+			var stem := ""
+			if parts[0] == "major" and rank >= 0 and rank < TAROT_MAJOR_STEMS.size():
+				stem = "tarot-%s-full.webp" % TAROT_MAJOR_STEMS[rank]
+			elif parts[0] in ["wands", "cups", "swords", "pentacles"] and rank >= 0 and rank < 14:
+				stem = "tarot-%s-%s-full.webp" % [parts[0], TAROT_MINOR_RANK_STEMS[rank]]
+			if stem.is_empty() or entry["path"] != "assets/decks/tarot/" + stem or _tarot_paths.has(id):
+				_tarot_paths.clear()
+				return null
+			_tarot_paths[id] = DECK_TAROT_DIR + stem
+	return _deck_texture(str(_tarot_paths.get(card_id, "")))
 
 
 ## Resolves a zero-based Lenormand draw index to the numbered JPG face.

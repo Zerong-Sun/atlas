@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: 4b26a94cd71b
+source_rev: aa47bf58eaca
 status: translated
 translator: 人工校译
 notes: >
@@ -86,7 +86,7 @@ stamps:
   ev.melibar.battuta_a.choice.trade: 4fcfbd2c8f29
   ev.melibar.battuta_a.choice.prayer: 01127580cedf
   ev.ev_melibar_battuta_a.choice_1_result: f6ec9f09942c
-  ev.ev_melibar_battuta_a.choice_2_result: e0ffc9a0de4f
+  ev.ev_melibar_battuta_a.choice_2_result: 3ab90a220a5e
   ev.ev_melibar_battuta_a.choice_3_result: cf5896751967
   ev.cail.battuta_a.title: 1a5f7c93c323
   ev.cail.battuta_a.body: 7e568aef132f
@@ -442,7 +442,7 @@ stamps:
 
 ## ev.ev_melibar_battuta_a.choice_2_result
 
-古里穆斯林商人之富，一人可尽买港中诸船之货，更治新船如之。你与巨贾议胡椒之价，银钱易手，负麻袋归己舟，舟中为之更满。
+古里穆斯林商人之富，一人可尽买港中诸船之货，更治新船如之。你与巨贾议胡椒之价，付出 1500 钱币，带一袋胡椒回到自己的船上。
 
 ## ev.ev_melibar_battuta_a.choice_3_result
 
