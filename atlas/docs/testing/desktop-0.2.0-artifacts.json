@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "zipIntegrity": true,
+  "macArchitectures": "x86_64 arm64",
+  "windowsMachine": "AMD64",
+  "results": [
+    {
+      "platform": "macOS-universal",
+      "bytes": 269047991,
+      "sha256": "28c5d2534fb5bae9ec6e5ed49f861023c86d39c34cfd65bda4176d69e086595e",
+      "files": 287,
+      "mainSha256": "48bee3b5e1e6a0fa41a908ff3b2f212506e671ae4237299a2df595f11a083f22"
+    },
+    {
+      "platform": "Windows-x64",
+      "bytes": 202084550,
+      "sha256": "557bbf68e512f479a9fbb3cd12aa5c9edb982d353946002b05e9671b48821d83",
+      "files": 287,
+      "mainSha256": "48bee3b5e1e6a0fa41a908ff3b2f212506e671ae4237299a2df595f11a083f22"
+    }
+  ]
+}

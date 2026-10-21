@@ -1,6 +1,8 @@
 # 诸象 Atlas v0.2.0 桌面发布记录
 
-状态：双平台包构建与本机验收通过，准备上传 GitHub Release。
+状态：2026-10-21 已公开发布 [诸象 Atlas v0.2.0 桌面体验版](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.0)。
+
+标签 `atlas-v0.2.0` 对应源码提交 `5efab47aed1c2f5bfaeffb21c5005405a194f6ce`。GitHub 三个附件（双 ZIP 与 SHA256SUMS.txt）均为 uploaded；远端返回的文件大小与 SHA-256 已逐项匹配本地。此记录只代表桌面发行，不代表原网页或手机应用已上架。
 
 ## 本次交付
 
@@ -22,6 +24,7 @@
 - 打包后的 ASAR 再次通过 24 页离线检查；macOS 原生应用成功创建渲染进程并保持运行。
 - 双 ZIP 完整性验证通过，两个包均含 287 个资源条目，主进程文件 SHA-256 一致。
 - Windows EXE 为 AMD64 PE；macOS 为 x86_64 + arm64，最低 macOS 13，ad-hoc 签名校验通过。
+- 结构与哈希证据：[desktop-0.2.0-artifacts.json](desktop-0.2.0-artifacts.json)；离线交互证据：[desktop-0.2.0-smoke.json](desktop-0.2.0-smoke.json)。
 
 | 附件 | 字节 | SHA-256 |
 | --- | ---: | --- |
