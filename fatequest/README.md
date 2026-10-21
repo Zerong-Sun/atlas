@@ -1,4 +1,4 @@
-# 远行之书 · The Book of Far Roads · v3.1.0
+# 远行之书 · The Book of Far Roads · v3.1.1
 
 **一款中世纪欧亚旅行开放世界（1253–1453）。** 占卜不是查看结果的按钮，而是你的
 移动方式、资源系统与叙事之笔。计划上架 Steam 与 App Store。
