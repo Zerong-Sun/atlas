@@ -61,6 +61,7 @@ export function AstrodiceScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="astrodice"
         kicker="ASTRO DICE"
         title="占星骰子"

@@ -17,6 +17,9 @@ export function WesternScreen() {
   const { profile } = useApp();
   const [birthDate, setBirthDate] = useState(profile?.birthDate ?? "");
   const [birthTime, setBirthTime] = useState(profile?.birthTime ?? "12:00");
+  const [birthLat,setBirthLat]=useState(String(profile?.birthLat ?? 39.9042));
+  const [birthLng,setBirthLng]=useState(String(profile?.birthLng ?? 116.4074));
+  const [timezone,setTimezone]=useState("8");
   const [showTransits, setShowTransits] = useState(false);
   const [computed, setComputed] = useState(false);
   const [entryId, setEntryId] = useState<string | null>(null);
@@ -26,12 +29,12 @@ export function WesternScreen() {
     if (!birthDate || !computed) return null;
     const r = computeWestern({
       birthDate,
-      birthTime,
+      birthTime, birthLat:Number(birthLat),birthLng:Number(birthLng),timezone,
       timestamp: showTransits ? new Date().toISOString() : undefined,
     });
     if ("error" in r) return null;
     return r as WesternResult;
-  }, [birthDate, birthTime, computed, showTransits]);
+  }, [birthDate,birthTime,birthLat,birthLng,timezone,computed,showTransits]);
 
   const copilotReport = useMemo(
     () => (result ? buildWesternReportSnapshot(result) : null),
@@ -41,10 +44,10 @@ export function WesternScreen() {
     if (!result) return null;
     return {
       methodId: "western" as const,
-      inputs: { birthDate, birthTime, showTransits },
+      inputs: { birthDate,birthTime,birthLat,birthLng,timezone,showTransits },
       result,
     };
-  }, [result, birthDate, birthTime, showTransits]);
+  }, [result,birthDate,birthTime,birthLat,birthLng,timezone,showTransits]);
 
   usePersistMethodReading({
     snapshot: copilotReport,
@@ -58,11 +61,11 @@ export function WesternScreen() {
     setError(null);
     const r = computeWestern({
       birthDate,
-      birthTime,
+      birthTime, birthLat:Number(birthLat),birthLng:Number(birthLng),timezone,
       timestamp: showTransits ? new Date().toISOString() : undefined,
     });
     if ("error" in r) {
-      setError("请填写有效的出生日期后再生成星盘。");
+      setError(String(r.message??"请填写有效的出生日期后再生成星盘。"));
       setComputed(false);
       return;
     }
@@ -73,6 +76,7 @@ export function WesternScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="western"
         kicker="WESTERN ASTROLOGY"
         title="西洋占星"
@@ -82,6 +86,10 @@ export function WesternScreen() {
       <View style={styles.workbench}>
         <Field label="出生日期 (YYYY-MM-DD)" value={birthDate} onChangeText={(v) => { setBirthDate(v); setComputed(false); }} />
         <Field label="出生时间 (HH:mm)" value={birthTime} onChangeText={(v) => { setBirthTime(v); setComputed(false); }} />
+        <Text variant="caption">整宫制 · 默认北京坐标与 UTC+8。地点改变时请填写实际经纬度及出生当天时差。</Text>
+        <Field label="纬度（北正南负）" value={birthLat} onChangeText={v=>{setBirthLat(v);setComputed(false);}}/>
+        <Field label="经度（东正西负）" value={birthLng} onChangeText={v=>{setBirthLng(v);setComputed(false);}}/>
+        <Field label="UTC 时差（含夏令时）" value={timezone} onChangeText={v=>{setTimezone(v);setComputed(false);}}/>
         <Pressable
           style={styles.toggleRow}
           onPress={() => { setShowTransits((v) => !v); setComputed(false); }}

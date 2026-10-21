@@ -20,7 +20,7 @@ import {
   type PalmistryResult,
   type XiangmianResult,
 } from "@atlas/engines";
-import { buildVedicChart, type VedicEphemerisData, type VedicGrahaKey, type VedicResult } from "@atlas/engines/vedic";
+import { computeMobileVedic, type VedicResult } from "@atlas/engines/vedic";
 import {
   buildCoffeeReportSnapshot,
   buildGeomancyReportSnapshot,
@@ -60,6 +60,9 @@ type GenericMethodId =
   | "scrying";
 
 type Draft = {
+  birthLat: string;
+  birthLng: string;
+  timezone: string;
   question: string;
   name: string;
   birthDate: string;
@@ -86,6 +89,7 @@ type GenericResult =
   | ScryingResult;
 
 const DEFAULT_DRAFT: Draft = {
+  birthLat: "39.9042", birthLng: "116.4074", timezone: "8",
   question: "",
   name: "",
   birthDate: "1990-06-15",
@@ -128,41 +132,15 @@ function isGenericMethodId(value: string): value is GenericMethodId {
   return ["meihua", "vedic", "numerology", "geomancy", "xiangmian", "palmistry", "oracle", "coffee", "scrying"].includes(value);
 }
 
-function hashSeed(seed: string): number {
-  let hash = 2166136261;
-  for (let i = 0; i < seed.length; i += 1) {
-    hash ^= seed.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
-}
-
-function approxVedicEphemeris(seed: string): VedicEphemerisData {
-  const base = hashSeed(seed);
-  const grahaLongitudes = {} as Record<VedicGrahaKey, number>;
-  const keys: VedicGrahaKey[] = ["Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus", "Saturn", "Rahu", "Ketu"];
-  keys.forEach((key, index) => {
-    grahaLongitudes[key] = ((base / (index + 3)) + index * 37.7) % 360;
-  });
-  grahaLongitudes.Ketu = (grahaLongitudes.Rahu + 180) % 360;
-  return {
-    julianDay: base,
-    ayanamsa: 24,
-    ascendantLongitude: (base / 11) % 360,
-    midheavenLongitude: (base / 17) % 360,
-    grahaLongitudes,
-  };
-}
-
 function primaryActionLabel(methodId: GenericMethodId, hasResult: boolean) {
   if (methodId === "numerology") return hasResult ? "重新计算" : "计算";
-  if (methodId === "vedic") return hasResult ? "重新生成" : "生成基础盘";
+  if (methodId === "vedic") return hasResult ? "重新生成" : "计算星盘";
   return hasResult ? "重新推演" : "开始";
 }
 
 function guideSteps(methodId: GenericMethodId): string[] {
   if (methodId === "numerology") return ["输入生日与姓名，生成生命路径、命运数与个人年。", "输入会自动保存，下次打开会恢复。", "结果可归档并交给解读助手继续追问。"];
-  if (methodId === "vedic") return ["Mobile 当前生成基础移动版星盘，不替代 Web 端精密星历。", "出生档案会自动带入，可在此页临时调整。", "结果会保存到档案记忆，方便后续追问。"];
+  if (methodId === "vedic") return ["离线天文计算；近似 Lahiri 岁差、平均交点、整宫制。", "出生档案会自动带入，可在此页临时调整。", "结果会保存到档案记忆，方便后续追问。"];
   if (methodId === "xiangmian" || methodId === "palmistry") return ["选择你自己观察到的部位特征。", "本功能不做照片识别、医疗判断或外貌价值判断。", "可用撤回回到上一轮观察组合。"];
   return ["先写下问题或主题，再选择必要参数。", "点击开始后会生成结果并保存到档案。", "误操作可以撤回上一轮结果，输入草稿会自动恢复。"];
 }
@@ -185,9 +163,11 @@ function buildResult(methodId: GenericMethodId, draft: Draft): GenericResult {
     case "geomancy":
       return castGeomancy({ seed, question, questionType: draft.geomancyQuestionType });
     case "xiangmian":
-      return readXiangmian({ question, observations: draft.observations.length ? draft.observations : OBSERVATIONS.xiangmian.slice(0, 2) });
+      if(!draft.observations.length)throw new Error("请先选择你实际观察到的特征");
+      return readXiangmian({ question, observations: draft.observations });
     case "palmistry":
-      return readPalmistry({ question, hand: draft.hand, observations: draft.observations.length ? draft.observations : OBSERVATIONS.palmistry.slice(0, 2) });
+      if(!draft.observations.length)throw new Error("请先选择你实际观察到的特征");
+      return readPalmistry({ question, hand: draft.hand, observations: draft.observations });
     case "oracle":
       return drawOracle({ seed, question, theme: draft.question, spread: draft.mode === "single" ? "single" : "three" });
     case "coffee":
@@ -195,11 +175,13 @@ function buildResult(methodId: GenericMethodId, draft: Draft): GenericResult {
     case "scrying":
       return castScryingVision({ seed, question, crystalId: draft.crystalId });
     case "vedic":
-      return buildVedicChart(approxVedicEphemeris(`${draft.birthDate}-${draft.birthTime}-${draft.birthPlace}`), {
+      return computeMobileVedic({
         birthDate: draft.birthDate,
         birthTime: draft.birthTime,
         birthPlace: draft.birthPlace,
-        timezone: 8,
+        timezone: Number(draft.timezone),
+        birthLat: Number(draft.birthLat),
+        birthLng: Number(draft.birthLng),
       });
   }
 }
@@ -314,6 +296,7 @@ export function GenericMethodScreen() {
   );
   const [draft, updateDraft] = useMethodDraft<Draft>(methodId, initial);
   const [result, setResult] = useState<GenericResult | null>(null);
+  const [runError,setRunError]=useState<string|null>(null);
   const [previous, setPrevious] = useState<GenericResult | null>(null);
   const [entryId, setEntryId] = useState<string | null>(null);
 
@@ -337,9 +320,10 @@ export function GenericMethodScreen() {
   });
 
   const run = () => {
-    setPrevious(result);
-    setResult(buildResult(methodId, draft));
-    setEntryId(buildMethodReadingEntryId(methodId));
+    try {
+      const next=buildResult(methodId,draft);
+      setPrevious(result);setResult(next);setRunError(null);setEntryId(buildMethodReadingEntryId(methodId));
+    } catch(error) {setRunError(error instanceof Error?error.message:"计算失败，请检查输入");}
   };
 
   const undo = () => {
@@ -359,6 +343,7 @@ export function GenericMethodScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId={methodId}
         kicker={method?.tradition ?? "METHOD"}
         title={localizedTitle ?? method?.title ?? methodId}
@@ -477,6 +462,11 @@ export function GenericMethodScreen() {
         ) : null}
 
         <View style={styles.actionRow}>
+          {runError?<Text style={{color:"#ffb4a4"}} accessibilityRole="alert">{runError}</Text>:null}
+          {methodId==="vedic"&&<View style={{gap:10}}>
+            <Text variant="caption">默认北京坐标，请改成出生地。UTC 时差按出生当天填写。</Text>
+            {([['birthLat','纬度（北正南负）'],['birthLng','经度（东正西负）'],['timezone','UTC 时差（含夏令时）']] as const).map(([key,label])=><View key={key}><Text>{label}</Text><TextInput style={styles.input} value={draft[key]} onChangeText={value=>updateDraft({[key]:value})} keyboardType="numbers-and-punctuation" accessibilityLabel={label}/></View>)}
+          </View>}
           <Button title={primaryActionLabel(methodId, Boolean(result))} onPress={run} />
           <Button title="撤回" variant="secondary" onPress={undo} disabled={!previous} />
         </View>
@@ -504,7 +494,7 @@ export function GenericMethodScreen() {
           </View>
           {methodId === "vedic" ? (
             <Text variant="caption" muted style={styles.note}>
-              Mobile 端当前为基础盘归档版；精密 Swiss Ephemeris 计算仍建议使用 Web 端。
+              离线天文计算，近似 Lahiri 岁差与平均交点。请核对出生经纬度和当时 UTC 时差（含夏令时）；地点名称不会自动定位。
             </Text>
           ) : null}
           {methodId === "geomancy" ? (

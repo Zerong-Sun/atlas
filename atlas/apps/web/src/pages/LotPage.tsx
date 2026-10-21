@@ -52,7 +52,7 @@ export function LotPage() {
         methodId="lot"
         kicker="TEMPLE LOTS"
         title="抽签签诗"
-        description="观音、关帝、妈祖三庙签诗，摇签得号，读诗反思。签文为倾向提示，非必然预言。"
+        description="90 条 Atlas 原创主题签，借文化意象读诗反思；不是具体庙宇的传统签本。"
       />
 
       <section className="method-workbench">

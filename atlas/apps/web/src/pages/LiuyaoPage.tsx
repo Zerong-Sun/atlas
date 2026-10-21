@@ -1,3 +1,4 @@
+import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
 import { HexagramLines } from "@/components/charts/HexagramLines";
@@ -14,16 +15,15 @@ type CastStep = number;
 export function LiuyaoPage() {
   const [question, setQuestion] = useState("");
   const [subjectType, setSubjectType] = useState("事业申请");
+  const [castEpoch,setCastEpoch]=useState(0);
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<LiuyaoResult | null>(null);
 
   const castStep = coinLines.length as CastStep;
 
-  const throwCoins = () => {
+  const throwCoins = (sum: number) => {
     if (castStep >= 6) return;
     playMethodSound("liuyao", "action");
-    const rng = Math.random();
-    const sum = Math.floor(rng * 4) + 6;
     const next = [...coinLines, sum];
     setCoinLines(next);
     if (next.length === 6) {
@@ -42,6 +42,7 @@ export function LiuyaoPage() {
   };
 
   const reset = () => {
+    setCastEpoch(v=>v+1);
     setCoinLines([]);
     setResult(null);
   };
@@ -90,12 +91,10 @@ export function LiuyaoPage() {
           <p>第 {Math.min(castStep + 1, 6)} 爻 / 6（点击铜钱起卦）</p>
           {coinLines.length > 0 && (
             <p className="muted coin-cast__progress">
-              已得：{coinLines.map((v) => (v === 6 ? "老阳" : v === 7 ? "少阳" : v === 8 ? "少阴" : "老阴")).join(" · ")}
+              已得：{coinLines.map((v) => (v === 6 ? "老阴" : v === 7 ? "少阳" : v === 8 ? "少阴" : "老阳")).join(" · ")}
             </p>
           )}
-          <button type="button" className="primary-btn" onClick={throwCoins} disabled={castStep >= 6}>
-            🪙 掷铜钱
-          </button>
+          <CoinCastPanel key={castEpoch} lines={coinLines} onCast={throwCoins} />
           {castStep > 0 && (
             <button type="button" className="chip" onClick={reset}>重置</button>
           )}

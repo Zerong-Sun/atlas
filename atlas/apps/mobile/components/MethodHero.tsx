@@ -1,3 +1,5 @@
+import { MethodActivity } from "./culture/MethodActivity";
+import { CultureExperience } from "./culture/CultureExperience";
 import { StyleSheet, View } from "react-native";
 import type { ReactNode } from "react";
 import { getMethodExperience } from "@atlas/method-data";
@@ -6,15 +8,17 @@ import { colors, radius, spacing } from "@/constants/theme";
 
 type Props = {
   methodId: string;
+  activityKey?: string | number | null;
   kicker?: string;
   title: string;
   description?: ReactNode;
 };
 
-export function MethodHero({ methodId, kicker, title, description }: Props) {
+export function MethodHero({ methodId, kicker, title, description, activityKey }: Props) {
   const experience = getMethodExperience(methodId);
 
   return (
+    <>
     <View style={[styles.wrap, { borderColor: experience.accentColor }]}>
       <Text style={[styles.glyph, { color: experience.accentColor }]}>{experience.glyph}</Text>
       <View style={styles.content}>
@@ -31,6 +35,9 @@ export function MethodHero({ methodId, kicker, title, description }: Props) {
         ) : null}
       </View>
     </View>
+    <CultureExperience methodId={methodId} />
+    <MethodActivity methodId={methodId} activityKey={activityKey} />
+    </>
   );
 }
 

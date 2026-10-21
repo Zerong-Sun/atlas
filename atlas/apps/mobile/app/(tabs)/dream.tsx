@@ -1,3 +1,4 @@
+import { CultureExperience } from "@/components/culture/CultureExperience";
 import { useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, View } from "react-native";
@@ -55,6 +56,7 @@ export default function DreamScreen() {
   const listHeader = useMemo(
     () => (
       <View>
+        <CultureExperience methodId="dream" />
         <DreamCapture onSubmit={handleSubmit} loading={loading} result={result} />
         {result ? <MethodResultActions methodId="dream" /> : null}
         {history.length > 0 && (

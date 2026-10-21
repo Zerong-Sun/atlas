@@ -80,6 +80,7 @@ export function QimenScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="qimen"
         kicker="QIMEN DUNJIA"
         title="奇门遁甲"

@@ -1,0 +1,24 @@
+{
+  "name": "atlas-desktop",
+  "productName": "诸象 Atlas",
+  "version": "0.2.0",
+  "private": true,
+  "author": "Atlas contributors",
+  "description": "诸象 Atlas — 跨文化占卜与文化探索桌面版",
+  "main": "build/main.cjs",
+  "scripts": {
+    "prepare:app": "node scripts/prepare.mjs",
+    "test": "node --test test/*.test.cjs",
+    "test:app": "electron test/smoke.cjs",
+    "install:runtime": "install-electron",
+    "verify": "node scripts/verify.mjs",
+    "start": "electron .",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "@electron/asar": "4.3.1",
+    "@electron/packager": "20.3.0",
+    "electron": "45.0.0",
+    "resedit": "2.0.3"
+  }
+}

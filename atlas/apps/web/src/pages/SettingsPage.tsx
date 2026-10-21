@@ -23,6 +23,8 @@ import {
 } from "@atlas/method-data";
 import { getCulturalPrefs, saveCulturalPrefs } from "@/lib/culturalPrefs";
 
+import { getMotionEnabled, applyMotionPreference } from "@/lib/motionPrefs";
+
 const MODEL_RULES = [
   "不把占卜输出包装成确定事实。",
   "涉及健康、法律、投资时必须提示寻求专业意见。",
@@ -35,7 +37,7 @@ type LlmTestState = "idle" | "testing" | "success" | "error";
 export function SettingsPage() {
   const supabaseNotConfigured = useMockApi();
   const [cloudSessionReady, setCloudSessionReady] = useState<boolean | null>(null);
-  const [mysticMotion, setMysticMotion] = useState(true);
+  const [mysticMotion, setMysticMotion] = useState(getMotionEnabled);
   const [classicMode, setClassicMode] = useState(true);
   const [safeMode, setSafeMode] = useState(true);
   const [ritualSounds, setRitualSounds] = useState(() => isRitualSoundsEnabled());
@@ -50,6 +52,8 @@ export function SettingsPage() {
   const [llmConfigured, setLlmConfigured] = useState(() => isLlmConfigured());
   const [llmTestState, setLlmTestState] = useState<LlmTestState>("idle");
   const [llmTestMessage, setLlmTestMessage] = useState("");
+
+  useEffect(() => { applyMotionPreference(mysticMotion); }, [mysticMotion]);
 
   useEffect(() => {
     setRitualSoundsEnabled(ritualSounds);

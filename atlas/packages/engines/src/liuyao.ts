@@ -1,8 +1,9 @@
+import { hexagramNumber, validateYaoLines } from "./iching.ts";
 import { Solar } from "lunar-javascript";
 import type { LiuyaoInput } from "@atlas/shared-types";
 import { createRng } from "./seed.ts";
 
-/** 6=老阳(动), 7=少阳, 8=少阴, 9=老阴(动) */
+/** 6=老阴(动), 7=少阳, 8=少阴, 9=老阳(动) */
 export type YaoValue = 6 | 7 | 8 | 9;
 
 export interface LiuyaoLine {
@@ -20,6 +21,7 @@ export interface LiuyaoLine {
 }
 
 export interface LiuyaoResult {
+  algorithmVersion: string;
   seed: string;
   timestamp: string;
   primaryHex: number;
@@ -64,61 +66,24 @@ const TRIGRAM_BITS: Record<number, number> = {
   0: 0b000, 1: 0b001, 2: 0b010, 3: 0b011, 4: 0b100, 5: 0b101, 6: 0b110, 7: 0b111,
 };
 
+// 京房纳甲：每个数组只含该三爻卦位的三支，初爻 → 上爻。
 const NAJIA_LOWER: Record<number, string[]> = {
-  0: ["未", "巳", "卯", "丑", "亥", "酉"],
-  1: ["丑", "亥", "酉", "未", "巳", "卯"],
-  2: ["寅", "辰", "午", "申", "戌", "子"],
-  3: ["巳", "卯", "丑", "亥", "酉", "未"],
-  4: ["辰", "午", "申", "戌", "子", "寅"],
-  5: ["卯", "丑", "亥", "酉", "未", "巳"],
-  6: ["午", "申", "戌", "子", "寅", "辰"],
-  7: ["子", "寅", "辰", "午", "申", "戌"],
+  0: ["未","巳","卯"], 1: ["子","寅","辰"], 2: ["寅","辰","午"], 3: ["巳","卯","丑"],
+  4: ["辰","午","申"], 5: ["卯","丑","亥"], 6: ["丑","亥","酉"], 7: ["子","寅","辰"],
 };
-
 const NAJIA_UPPER: Record<number, string[]> = {
-  0: ["丑", "亥", "酉", "未", "巳", "卯"],
-  1: ["戌", "子", "寅", "辰", "午", "申"],
-  2: ["申", "戌", "子", "寅", "辰", "午"],
-  3: ["未", "巳", "卯", "丑", "亥", "酉"],
-  4: ["午", "申", "戌", "子", "寅", "辰"],
-  5: ["酉", "未", "巳", "卯", "丑", "亥"],
-  6: ["亥", "酉", "未", "巳", "卯", "丑"],
-  7: ["申", "戌", "子", "寅", "辰", "午"],
+  0: ["丑","亥","酉"], 1: ["午","申","戌"], 2: ["申","戌","子"], 3: ["亥","酉","未"],
+  4: ["戌","子","寅"], 5: ["酉","未","巳"], 6: ["未","巳","卯"], 7: ["午","申","戌"],
 };
-
-const STEM_FOR_BRANCH: Record<string, string> = {
-  子: "癸", 丑: "己", 寅: "甲", 卯: "乙", 辰: "戊", 巳: "丙",
-  午: "丁", 未: "己", 申: "庚", 酉: "辛", 戌: "戊", 亥: "壬",
+const NAJIA_STEMS = [["乙","癸"],["庚","庚"],["戊","戊"],["丁","丁"],["丙","丙"],["己","己"],["辛","辛"],["甲","壬"]];
+const PALACES: Record<string, number[]> = {
+  乾: [1,44,33,12,20,23,35,14], 坤: [2,24,19,11,34,43,5,8],
+  震: [51,16,40,32,46,48,28,17], 巽: [57,9,37,42,25,21,27,18],
+  坎: [29,60,3,63,49,55,36,7], 離: [30,56,50,64,4,59,6,13],
+  艮: [52,22,26,41,38,10,61,53], 兑: [58,47,45,31,39,15,62,54],
 };
-
-/** 八宫卦序: hex -> { palace, worldLine (1-6) } simplified 京房 */
-const PALACE_MAP: Array<{ hex: number; palace: string; world: number }> = [
-  { hex: 1, palace: "乾", world: 6 }, { hex: 44, palace: "乾", world: 1 },
-  { hex: 33, palace: "乾", world: 2 }, { hex: 12, palace: "乾", world: 3 },
-  { hex: 20, palace: "乾", world: 4 }, { hex: 23, palace: "乾", world: 5 },
-  { hex: 35, palace: "乾", world: 4 }, { hex: 14, palace: "乾", world: 3 },
-  { hex: 2, palace: "坤", world: 6 }, { hex: 24, palace: "坤", world: 1 },
-  { hex: 19, palace: "坤", world: 2 }, { hex: 11, palace: "坤", world: 3 },
-  { hex: 34, palace: "坤", world: 4 }, { hex: 43, palace: "坤", world: 5 },
-  { hex: 51, palace: "震", world: 6 }, { hex: 17, palace: "震", world: 1 },
-  { hex: 21, palace: "震", world: 2 }, { hex: 42, palace: "震", world: 3 },
-  { hex: 3, palace: "震", world: 4 }, { hex: 27, palace: "震", world: 5 },
-  { hex: 57, palace: "巽", world: 6 }, { hex: 9, palace: "巽", world: 1 },
-  { hex: 37, palace: "巽", world: 2 }, { hex: 48, palace: "巽", world: 3 },
-  { hex: 18, palace: "巽", world: 4 }, { hex: 25, palace: "巽", world: 5 },
-  { hex: 29, palace: "坎", world: 6 }, { hex: 60, palace: "坎", world: 1 },
-  { hex: 63, palace: "坎", world: 2 }, { hex: 49, palace: "坎", world: 3 },
-  { hex: 6, palace: "坎", world: 4 }, { hex: 5, palace: "坎", world: 5 },
-  { hex: 30, palace: "离", world: 6 }, { hex: 56, palace: "离", world: 1 },
-  { hex: 64, palace: "离", world: 2 }, { hex: 50, palace: "离", world: 3 },
-  { hex: 13, palace: "离", world: 4 }, { hex: 22, palace: "离", world: 5 },
-  { hex: 52, palace: "艮", world: 6 }, { hex: 53, palace: "艮", world: 1 },
-  { hex: 39, palace: "艮", world: 2 }, { hex: 15, palace: "艮", world: 3 },
-  { hex: 62, palace: "艮", world: 4 }, { hex: 4, palace: "艮", world: 5 },
-  { hex: 58, palace: "兑", world: 6 }, { hex: 47, palace: "兑", world: 1 },
-  { hex: 45, palace: "兑", world: 2 }, { hex: 31, palace: "兑", world: 3 },
-  { hex: 28, palace: "兑", world: 4 }, { hex: 41, palace: "兑", world: 5 },
-];
+const PALACE_MAP = Object.entries(PALACES).flatMap(([palace, hexes]) =>
+  hexes.map((hex, i) => ({ hex, palace: palace === "離" ? "离" : palace, world: [6,1,2,3,4,5,4,3][i]! })));
 
 const USEFUL_GOD: Record<string, string> = {
   career: "官鬼",
@@ -128,27 +93,7 @@ const USEFUL_GOD: Record<string, string> = {
   general: "世爻",
 };
 
-function linesToHex(lines: boolean[]): number {
-  let lower = 0;
-  let upper = 0;
-  for (let i = 0; i < 3; i++) {
-    if (lines[i]) lower |= 1 << i;
-    if (lines[i + 3]) upper |= 1 << i;
-  }
-  const hexTable: Record<string, number> = {
-    "0-0": 2, "0-1": 24, "0-2": 19, "0-3": 11, "0-4": 34, "0-5": 43, "0-6": 35, "0-7": 14,
-    "1-0": 51, "1-1": 17, "1-2": 21, "1-3": 42, "1-4": 3, "1-5": 27, "1-6": 25, "1-7": 9,
-    "2-0": 29, "2-1": 60, "2-2": 63, "2-3": 49, "2-4": 6, "2-5": 5, "2-6": 64, "2-7": 56,
-    "3-0": 58, "3-1": 47, "3-2": 45, "3-3": 31, "3-4": 28, "3-5": 41, "3-6": 61, "3-7": 46,
-    "4-0": 52, "4-1": 53, "4-2": 39, "4-3": 15, "4-4": 62, "4-5": 4, "4-6": 7, "4-7": 8,
-    "5-0": 30, "5-1": 56, "5-2": 64, "5-3": 50, "5-4": 13, "5-5": 22, "5-6": 36, "5-7": 37,
-    "6-0": 57, "6-1": 9, "6-2": 37, "6-3": 48, "6-4": 18, "6-5": 25, "6-6": 33, "6-7": 44,
-    "7-0": 1, "7-1": 44, "7-2": 33, "7-3": 12, "7-4": 20, "7-5": 23, "7-6": 10, "7-7": 16,
-  };
-  const lowerTri = Object.entries(TRIGRAM_BITS).find(([, v]) => v === lower)?.[0] ?? "0";
-  const upperTri = Object.entries(TRIGRAM_BITS).find(([, v]) => v === upper)?.[0] ?? "0";
-  return hexTable[`${lowerTri}-${upperTri}`] ?? 1;
-}
+const linesToHex = hexagramNumber;
 
 function castLines(seed: string): YaoValue[] {
   const rng = createRng(seed);
@@ -179,8 +124,8 @@ function getStrength(lineElement: string, monthBranch: string): LiuyaoLine["stre
   if (lineElement === monthEl) return "旺";
   if (gen[monthEl] === lineElement) return "相";
   if (gen[lineElement] === monthEl) return "休";
-  if (ctrl[monthEl] === lineElement) return "囚";
-  if (ctrl[lineElement] === monthEl) return "死";
+  if (ctrl[monthEl] === lineElement) return "死";
+  if (ctrl[lineElement] === monthEl) return "囚";
   return "休";
 }
 
@@ -208,21 +153,20 @@ export function castLiuyao(input: LiuyaoInput = {}): LiuyaoResult {
   const dayStem = dayPillar[0]!;
   const monthBranch = monthPillar[1]!;
 
-  const yaoValues = input.lines?.length === 6
-    ? (input.lines as YaoValue[])
-    : castLines(seed);
+  const yaoValues = input.lines ?? castLines(seed);
+  validateYaoLines(yaoValues);
 
-  const yangLines = yaoValues.map((v) => v === 6 || v === 7);
+  const yangLines = yaoValues.map((v) => v === 7 || v === 9);
   const changedLines = yaoValues.map((v) => {
-    if (v === 6) return false;
-    if (v === 9) return true;
+    if (v === 6) return true;
+    if (v === 9) return false;
     return v === 7;
   });
 
   const primaryHex = linesToHex(yangLines);
   const changedHex = linesToHex(changedLines);
   const { palace, world: worldLine } = findPalace(primaryHex);
-  const responseLine = ((worldLine + 2) % 6) || 6;
+  const responseLine = ((worldLine + 2) % 6) + 1;
 
   const lowerBits = yangLines.slice(0, 3).reduce((acc, y, i) => acc | (y ? 1 << i : 0), 0);
   const upperBits = yangLines.slice(3, 6).reduce((acc, y, i) => acc | (y ? 1 << i : 0), 0);
@@ -243,11 +187,11 @@ export function castLiuyao(input: LiuyaoInput = {}): LiuyaoResult {
     const relative = getRelative(palaceElement, element);
     return {
       position: pos,
-      value,
-      isYang: value === 6 || value === 7,
+      value: value as YaoValue,
+      isYang: value === 7 || value === 9,
       isMoving: value === 6 || value === 9,
       branch,
-      stem: STEM_FOR_BRANCH[branch] ?? "甲",
+      stem: NAJIA_STEMS[i < 3 ? lowerBits : upperBits]![i < 3 ? 0 : 1]!,
       element,
       relative,
       isWorld: pos === worldLine,
@@ -261,6 +205,7 @@ export function castLiuyao(input: LiuyaoInput = {}): LiuyaoResult {
   )?.position;
 
   return {
+    algorithmVersion: "liuyao-jingfang-v2",
     seed,
     timestamp,
     primaryHex,

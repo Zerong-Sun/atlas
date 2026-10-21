@@ -52,8 +52,8 @@ export function VedicPage() {
       });
       setResult(next);
       playMethodSound("vedic", "complete");
-    } catch {
-      setError("星历计算失败，请检查出生日期、时间与地点后重试。");
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "星历计算失败，请检查出生日期、时间与地点后重试。");
     } finally {
       setLoading(false);
     }

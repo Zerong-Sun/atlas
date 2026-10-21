@@ -1,0 +1,165 @@
+{
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "artType": "AI-created cultural illustration; not historical evidence",
+  "tiles": [
+    {
+      "id": "study",
+      "width": 362,
+      "height": 362,
+      "bytes": 49724,
+      "crop": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "earth",
+      "width": 362,
+      "height": 362,
+      "bytes": 52966,
+      "crop": [
+        362,
+        0,
+        724,
+        362
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "courtyard",
+      "width": 362,
+      "height": 362,
+      "bytes": 58594,
+      "crop": [
+        724,
+        0,
+        1086,
+        362
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "western",
+      "width": 362,
+      "height": 362,
+      "bytes": 47812,
+      "crop": [
+        1086,
+        0,
+        1448,
+        362
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "vedic",
+      "width": 362,
+      "height": 362,
+      "bytes": 41612,
+      "crop": [
+        0,
+        362,
+        362,
+        724
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "cards",
+      "width": 362,
+      "height": 362,
+      "bytes": 51118,
+      "crop": [
+        362,
+        362,
+        724,
+        724
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "runes",
+      "width": 362,
+      "height": 362,
+      "bytes": 64506,
+      "crop": [
+        724,
+        362,
+        1086,
+        724
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "sand",
+      "width": 362,
+      "height": 362,
+      "bytes": 51788,
+      "crop": [
+        1086,
+        362,
+        1448,
+        724
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "ritual",
+      "width": 362,
+      "height": 362,
+      "bytes": 44350,
+      "crop": [
+        0,
+        724,
+        362,
+        1086
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "coffee",
+      "width": 362,
+      "height": 362,
+      "bytes": 56340,
+      "crop": [
+        362,
+        724,
+        724,
+        1086
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "reflection",
+      "width": 362,
+      "height": 362,
+      "bytes": 35906,
+      "crop": [
+        724,
+        724,
+        1086,
+        1086
+      ],
+      "maxDisplayWidthAt2x": 181
+    },
+    {
+      "id": "spain",
+      "width": 362,
+      "height": 362,
+      "bytes": 49880,
+      "crop": [
+        1086,
+        724,
+        1448,
+        1086
+      ],
+      "maxDisplayWidthAt2x": 181
+    }
+  ]
+}

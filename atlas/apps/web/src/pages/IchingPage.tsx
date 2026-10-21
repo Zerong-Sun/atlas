@@ -1,6 +1,7 @@
+import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { castIChing } from "@atlas/engines";
+import { castIChingFromLines } from "@atlas/engines/iching";
 import { HexagramLines } from "@/components/charts/HexagramLines";
 import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
@@ -15,6 +16,10 @@ type IChingHex = {
   judgment: string;
   image: string;
   lines: Array<"yang" | "yin">;
+  yaoTexts: readonly string[];
+  sourceUrl: string;
+  sourceTitle: string;
+  useText?: string;
 };
 
 type IChingResult = {
@@ -22,30 +27,33 @@ type IChingResult = {
   changing: IChingHex;
   summary: string;
   method: string;
+  movingLines: number[];
+  coinLines: number[];
+  textNote: string;
 };
 
 export function IchingPage() {
   const [question, setQuestion] = useState("");
+  const [castEpoch,setCastEpoch]=useState(0);
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<IChingResult | null>(null);
 
   const castStep = coinLines.length;
 
-  const throwCoins = () => {
+  const throwCoins = (sum: number) => {
     if (castStep >= 6) return;
     playMethodSound("iching", "action");
-    const sum = Math.floor(Math.random() * 4) + 6;
     const next = [...coinLines, sum];
     setCoinLines(next);
     if (next.length === 6) {
-      const seed = `${Date.now()}-${question}-${next.join("")}`;
-      const raw = castIChing(seed) as unknown as IChingResult;
+      const raw = castIChingFromLines(next) as unknown as IChingResult;
       setResult(raw);
       playMethodSound("iching", "complete");
     }
   };
 
   const reset = () => {
+    setCastEpoch(v=>v+1);
     setCoinLines([]);
     setResult(null);
   };
@@ -61,7 +69,7 @@ export function IchingPage() {
     return result.primary.lines.map((line, index) => ({
       position: index + 1,
       isYang: line === "yang",
-      label: result.primary.name,
+      label: result.movingLines.includes(index + 1) ? "动爻" : "静爻",
     }));
   }, [result]);
 
@@ -84,7 +92,7 @@ export function IchingPage() {
       />
 
       <aside className="method-preview-banner iching-workbench-link" role="note">
-        本页为真实铜钱演卦。事件占断、纳甲世应六亲请用
+        本页采用三钱法，按实际六次投掷从下向上成卦，6 老阴、9 老阳。事件占断、纳甲世应六亲请用
         {" "}
         <Link to="/methods/liuyao">纳甲六爻</Link>
         。
@@ -103,12 +111,10 @@ export function IchingPage() {
           <p>第 {Math.min(castStep + 1, 6)} 爻 / 6</p>
           {coinLines.length > 0 && (
             <p className="muted coin-cast__progress">
-              已得：{coinLines.map((v) => (v === 6 ? "老阳" : v === 7 ? "少阳" : v === 8 ? "少阴" : "老阴")).join(" · ")}
+              已得：{coinLines.map((v) => (v === 6 ? "老阴" : v === 7 ? "少阳" : v === 8 ? "少阴" : "老阳")).join(" · ")}
             </p>
           )}
-          <button type="button" className="primary-btn" onClick={throwCoins} disabled={castStep >= 6}>
-            🪙 掷铜钱
-          </button>
+          <CoinCastPanel key={castEpoch} lines={coinLines} onCast={throwCoins} />
           {castStep > 0 && (
             <button type="button" className="chip" onClick={reset}>
               重置
@@ -130,19 +136,22 @@ export function IchingPage() {
             <HexagramLines lines={primaryLines} title={`本卦 · ${result.primary.name}`} />
             <HexagramLines lines={changingLines} title={`变卦 · ${result.changing.name}`} />
           </div>
+          <p>投掷记录（初爻 → 上爻）：{result.coinLines.join(" · ")}。{result.textNote}</p>
+          <a href={result.primary.sourceUrl} target="_blank" rel="noreferrer">核对原典版本 · {result.primary.sourceTitle} ↗</a>
           <div className="reading-grid">
             <article>
-              <span>卦辞</span>
-              <p>{result.primary.judgment}</p>
+              <span>卦辞 · 原典</span>
+              <p>{result.primary.judgment}</p>{result.primary.useText&&<p>{result.primary.useText}（附原文，取用遵循所选流派）</p>}
             </article>
             <article>
-              <span>象辞</span>
+              <span>大象 · 原典</span>
               <p>{result.primary.image}</p>
             </article>
             <article>
               <span>变卦卦辞</span>
               <p>{result.changing.judgment}</p>
             </article>
+            <article><span>爻辞 · 原典（初爻至上爻）</span>{result.primary.yaoTexts.map((text,i)=><p key={i}>{result.movingLines.includes(i+1)?"● 动爻 · ":""}{text}</p>)}</article>
           </div>
         </section>
       )}

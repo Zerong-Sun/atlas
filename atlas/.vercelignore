@@ -1,0 +1,16 @@
+.git
+**/node_modules
+**/dist
+**/.expo
+**/.env
+**/.env.*
+.env
+.env.*
+**/*.log
+**/*.tsbuildinfo
+supabase/.temp
+supabase/.branches
+corpus/.cache
+corpus/raw
+packages/corpus-scripts/.cache
+docs/testing/expo-lan-qr.png

@@ -4,13 +4,13 @@ import { fileURLToPath } from "url";
 import { makeChunk } from "../lib/chunk-schema.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = join(__dirname, "../../data/open-iching-yijing.json");
+const DATA_PATH = new URL("../../../engines/src/data/iching-classics.json",import.meta.url);
 
 const SOURCE = {
   source_id: "yijing_yaoci",
   source_type: "public_domain",
   license_note:
-    "公版《周易》爻辞原文；结构化整理参考 open-iching（github.com/john-walks-slow/open-iching），白话为自研译意",
+    "公版《周易》爻辞；与应用共用维基文库版本固定转录，原文保留原字形",
   source_url: "https://ctext.org/book-of-changes",
   verbatim_allowed: true,
 };
@@ -19,7 +19,7 @@ const SOURCE = {
 
 export function buildYijingYaoChunks() {
   /** @type {Hexagram[]} */
-  const hexagrams = JSON.parse(readFileSync(DATA_PATH, "utf8"));
+  const hexagrams = Object.entries(JSON.parse(readFileSync(DATA_PATH, "utf8"))).map(([id,h])=>({id:Number(id),name:h.name,sourceUrl:h.sourceUrl,lines:h.yaoTexts.map((text,i)=>({id:i+1,name:text.match(/^(初[九六]|[九六][二三四五]|上[九六])/)?.[0]??`第${i+1}爻`,scripture:text,original:text}))}));
   const chunks = [];
 
   for (const h of hexagrams) {
@@ -31,11 +31,12 @@ export function buildYijingYaoChunks() {
         makeChunk({
           id: lineId,
           ...SOURCE,
+          source_url:h.sourceUrl,
           tradition: "iching",
           chapter,
           section: line.name,
-          original_text: `${line.name}：${line.scripture}`,
-          translation_zh: `【${h.name}·${line.name}】${line.scripture}（自研白话：此爻提示与该卦整体气势相合的具体阶段与行事分寸。）`,
+          original_text: line.original,
+          translation_zh: `【${h.name}·${line.name}】${line.scripture}（原典对照，尚未提供逐句白话翻译。）`,
           annotation_zh: `爻辞检索：${h.name}、${line.name}、变爻。引用须匹配 chunk_id，不可编造出处。`,
           keywords: [h.name, line.name, "爻辞", "周易", `第${h.id}卦`],
         }),

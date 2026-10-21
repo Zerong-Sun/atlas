@@ -93,6 +93,7 @@ export function JiaobeiScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="jiaobei"
         kicker="JIAOBEI"
         title="掷筊问卦"

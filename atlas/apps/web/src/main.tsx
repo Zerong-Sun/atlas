@@ -4,6 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
+import { getMotionEnabled, applyMotionPreference } from "./lib/motionPrefs";
+applyMotionPreference(getMotionEnabled());
+const syncAnimationVisibility=()=>{document.documentElement.dataset.atlasPaused=String(document.hidden);};
+syncAnimationVisibility();
+document.addEventListener("visibilitychange",syncAnimationVisibility);
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

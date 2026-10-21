@@ -11,6 +11,9 @@ import { getAspectReading, getHouseReading, WESTERN_PLANET_IN_SIGN } from "@/dat
 export function WesternPage() {
   const [birthDate, setBirthDate] = useState("");
   const [birthTime, setBirthTime] = useState("12:00");
+  const [latitude,setLatitude]=useState("39.9042");
+  const [longitude,setLongitude]=useState("116.4074");
+  const [timezone,setTimezone]=useState("8");
   const [showTransits, setShowTransits] = useState(false);
   const [computed, setComputed] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -20,11 +23,12 @@ export function WesternPage() {
     const r = computeWestern({
       birthDate,
       birthTime,
+      birthLat:parseFloat(latitude),birthLng:parseFloat(longitude),timezone,
       timestamp: showTransits ? new Date().toISOString() : undefined,
     });
     if ("error" in r) return null;
     return r as WesternResult;
-  }, [birthDate, birthTime, computed, showTransits]);
+  }, [birthDate, birthTime, latitude, longitude, timezone, computed, showTransits]);
 
   const copilotReport = useMemo(() => (result ? buildWesternReportSnapshot(result) : null), [result]);
   useRegisterMethodCopilotReport(copilotReport);
@@ -35,10 +39,11 @@ export function WesternPage() {
     const r = computeWestern({
       birthDate,
       birthTime,
+      birthLat:parseFloat(latitude),birthLng:parseFloat(longitude),timezone,
       timestamp: showTransits ? new Date().toISOString() : undefined,
     });
     if ("error" in r) {
-      setError("请填写有效的出生日期后再生成星盘。");
+      setError("message" in r ? String(r.message) : "请填写有效的出生日期后再生成星盘。");
       setComputed(false);
       return;
     }
@@ -77,6 +82,10 @@ export function WesternPage() {
             }}
           />
         </label>
+        <label><span>出生地纬度</span><input type="number" min="-66" max="66" step="0.0001" value={latitude} onChange={e=>{setLatitude(e.target.value);setComputed(false);}}/></label>
+        <label><span>出生地经度</span><input type="number" min="-180" max="180" step="0.0001" value={longitude} onChange={e=>{setLongitude(e.target.value);setComputed(false);}}/></label>
+        <label><span>出生当时 UTC 时差（小时）</span><input type="number" min="-12" max="14" step="0.25" value={timezone} onChange={e=>{setTimezone(e.target.value);setComputed(false);}}/></label>
+        <p className="muted">默认北京、UTC+8。其他地点请填写出生当时的经纬度与时差，夏令时需计入。</p>
         <label className="checkbox-row">
           <input
             type="checkbox"

@@ -1,1 +1,1 @@
-export { castIChing } from "../iching.ts";
+export * from "../iching.ts";

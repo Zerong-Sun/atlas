@@ -110,6 +110,7 @@ export function RunesScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="runes"
         kicker="RUNE CAST"
         title="卢恩符文占卜"

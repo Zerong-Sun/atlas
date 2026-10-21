@@ -79,10 +79,11 @@ export function LotScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="lot"
         kicker="TEMPLE LOTS"
         title="抽签签诗"
-        description="观音、关帝、妈祖三庙签诗，摇签得号，读诗反思。签文为倾向提示，非必然预言。"
+        description="90 条 Atlas 原创主题签，借文化意象读诗反思；不是具体庙宇的传统签本。"
       />
 
       <View style={styles.workbench}>
@@ -112,6 +113,7 @@ export function LotScreen() {
             </Text>
             <Text variant="serif">{result.sign.title}</Text>
           </View>
+          <Text variant="caption" muted>来源：{result.sign.sourceReference}。原创编写，非庙宇原签。</Text>
           <View style={styles.poem}>
             {result.sign.poem.map((line, i) => (
               <Text key={i} variant="serif" style={styles.poemLine}>

@@ -1,3 +1,4 @@
+import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { Pressable, StyleSheet, TextInput, View } from "react-native";
 import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
@@ -75,24 +76,24 @@ function HexagramDisplay({ lines, title }: { lines: HexLine[]; title: string }) 
 }
 
 function coinLabel(value: number) {
-  if (value === 6) return "老阳";
+  if (value === 6) return "老阴";
   if (value === 7) return "少阳";
   if (value === 8) return "少阴";
-  return "老阴";
+  return "老阳";
 }
 
 export function LiuyaoScreen() {
   const [question, setQuestion] = useState("");
   const [subjectType, setSubjectType] = useState("事业申请");
+  const [castEpoch,setCastEpoch]=useState(0);
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<LiuyaoResult | null>(null);
   const [entryId, setEntryId] = useState<string | null>(null);
 
   const castStep = coinLines.length;
 
-  const throwCoins = () => {
+  const throwCoins = (sum: number) => {
     if (castStep >= 6) return;
-    const sum = Math.floor(Math.random() * 4) + 6;
     const next = [...coinLines, sum];
     setCoinLines(next);
     if (next.length === 6) {
@@ -115,6 +116,7 @@ export function LiuyaoScreen() {
   };
 
   const reset = () => {
+    setCastEpoch(v=>v+1);
     setCoinLines([]);
     setResult(null);
     setEntryId(null);
@@ -202,7 +204,7 @@ export function LiuyaoScreen() {
               已得：{coinLines.map(coinLabel).join(" · ")}
             </Text>
           )}
-          <Button title="🪙 掷铜钱" onPress={throwCoins} disabled={castStep >= 6} />
+          <CoinCastPanel key={castEpoch} lines={coinLines} onCast={throwCoins} />
           {castStep > 0 && (
             <Button title="重置" variant="secondary" onPress={reset} />
           )}

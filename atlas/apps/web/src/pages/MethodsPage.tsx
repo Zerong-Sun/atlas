@@ -1,3 +1,4 @@
+import { SpainCultureCard } from "@/components/culture/CultureExperience";
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -71,6 +72,7 @@ export function MethodsPage() {
         </p>
       </section>
 
+      <SpainCultureCard />
       <section className="method-control-panel" aria-label="象征系统筛选">
         <div className="method-stats" aria-label="象征系统开发状态">
           <Stat label="可用" value={readyCount} />

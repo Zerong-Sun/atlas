@@ -49,6 +49,7 @@ export function ZiweiScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="ziwei"
         kicker="ZI WEI DOU SHU"
         title="紫微斗数"

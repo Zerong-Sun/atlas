@@ -1,10 +1,6 @@
-import * as AstronomyModule from "astronomy-engine";
+import { Astronomy, planetLongitude, ascendantMidheaven, validateBirthInput } from "./astronomy.ts";
 import type { Body } from "astronomy-engine";
 import type { EngineInput } from "./engine-input.ts";
-
-const Astronomy = (
-  "MakeTime" in AstronomyModule ? AstronomyModule : Object.values(AstronomyModule)[0]
-) as typeof AstronomyModule;
 
 const SIGNS = [
   "白羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座",
@@ -76,6 +72,7 @@ export interface WesternTransit {
 }
 
 export interface WesternResult {
+  algorithmVersion: string;
   planets: Record<string, { sign: string; degree: number; longitude: number }>;
   planetList: WesternPlanet[];
   houses: WesternHouse[];
@@ -89,38 +86,10 @@ export interface WesternResult {
   summary: string;
 }
 
-function toJulianDate(y: number, m: number, d: number, hour: number, minute: number): Date {
-  return new Date(Date.UTC(y, m - 1, d, hour - 8, minute));
-}
-
 type AstroTime = ReturnType<typeof Astronomy.MakeTime>;
 type AstroObserver = InstanceType<typeof Astronomy.Observer>;
-
-function eclipticLongitude(body: Body, time: AstroTime, observer: AstroObserver): number {
-  const eq = Astronomy.Equator(body, time, observer, true, true);
-  const lon = eq.ra * 15;
-  return ((lon % 360) + 360) % 360;
-}
-
-function computeAscMc(
-  time: AstroTime,
-  observer: AstroObserver
-): { asc: number; mc: number } {
-  const gst = Astronomy.SiderealTime(time);
-  const lst = (gst + observer.longitude / 15) % 24;
-  const ramc = lst * 15;
-  const latRad = (observer.latitude * Math.PI) / 180;
-  const ramcRad = (ramc * Math.PI) / 180;
-  const obliquity = 23.4393 * (Math.PI / 180);
-  const ascRad = Math.atan2(
-    Math.cos(ramcRad),
-    -(Math.sin(ramcRad) * Math.cos(obliquity) + Math.tan(latRad) * Math.sin(obliquity))
-  );
-  const asc = ((ascRad * 180) / Math.PI + 360) % 360;
-  const mcRad = Math.atan2(Math.sin(ramcRad), Math.cos(ramcRad) * Math.cos(obliquity));
-  const mc = ((mcRad * 180) / Math.PI + 360) % 360;
-  return { asc, mc: mc };
-}
+function eclipticLongitude(body:Body,time:AstroTime,_observer:AstroObserver) {return planetLongitude(body,time.date);}
+function computeAscMc(time:AstroTime,observer:AstroObserver) {return ascendantMidheaven(time.date,observer.latitude,observer.longitude);}
 
 function signFromLongitude(lon: number): { sign: string; degree: number; index: number } {
   const signIndex = Math.floor(lon / 30) % 12;
@@ -222,14 +191,14 @@ export function computeWestern(input: EngineInput): WesternResult | Record<strin
   if (!input.birthDate) {
     return { error: "birth_date_required", planets: null };
   }
-  const [y, m, d] = input.birthDate.split("-").map(Number);
-  const timeParts = (input.birthTime ?? "12:00").split(":");
-  const hour = Number(timeParts[0] ?? 12);
-  const minute = Number(timeParts[1] ?? 0);
   const lat = input.birthLat ?? 39.9;
   const lng = input.birthLng ?? 116.4;
 
-  const natalDate = toJulianDate(y, m, d, hour, minute);
+  const rawTz = input.timezone?.trim() || (input.timezone === undefined ? "8" : "invalid");
+  const timezone = /^UTC[+-]/i.test(rawTz) ? Number(rawTz.slice(3)) : rawTz === "Asia/Shanghai" ? 8 : Number(rawTz);
+  let natalDate:Date;
+  try {natalDate=validateBirthInput(input.birthDate,input.birthTime??"12:00",lat,lng,timezone);}
+  catch(error) {return {error:"invalid_birth_input",message:error instanceof Error?error.message:"出生资料无效",planets:null};}
   const natalTime = Astronomy.MakeTime(natalDate);
   const observer = new Astronomy.Observer(lat, lng, 0);
 
@@ -307,6 +276,7 @@ export function computeWestern(input: EngineInput): WesternResult | Record<strin
   }
 
   return {
+    algorithmVersion: "western-ecliptic-v2",
     planets: positions,
     planetList,
     houses,

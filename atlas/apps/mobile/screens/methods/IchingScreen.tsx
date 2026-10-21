@@ -1,6 +1,7 @@
+import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
-import { castIChing } from "@atlas/engines";
+import { StyleSheet, TextInput, View, Linking, Pressable } from "react-native";
+import { castIChingFromLines } from "@atlas/engines/iching";
 import { buildIchingReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
@@ -17,6 +18,10 @@ type IChingHex = {
   judgment: string;
   image: string;
   lines: Array<"yang" | "yin">;
+  yaoTexts: readonly string[];
+  sourceUrl: string;
+  sourceTitle: string;
+  useText?: string;
 };
 
 type IChingResult = {
@@ -24,6 +29,9 @@ type IChingResult = {
   changing: IChingHex;
   summary: string;
   method: string;
+  movingLines: number[];
+  coinLines: number[];
+  textNote: string;
 };
 
 type HexLine = {
@@ -57,34 +65,34 @@ function HexagramDisplay({ lines, title }: { lines: HexLine[]; title: string }) 
 }
 
 function coinLabel(value: number) {
-  if (value === 6) return "老阳";
+  if (value === 6) return "老阴";
   if (value === 7) return "少阳";
   if (value === 8) return "少阴";
-  return "老阴";
+  return "老阳";
 }
 
 export function IchingScreen() {
   const [question, setQuestion] = useState("");
+  const [castEpoch,setCastEpoch]=useState(0);
   const [coinLines, setCoinLines] = useState<number[]>([]);
   const [result, setResult] = useState<IChingResult | null>(null);
   const [entryId, setEntryId] = useState<string | null>(null);
 
   const castStep = coinLines.length;
 
-  const throwCoins = () => {
+  const throwCoins = (sum: number) => {
     if (castStep >= 6) return;
-    const sum = Math.floor(Math.random() * 4) + 6;
     const next = [...coinLines, sum];
     setCoinLines(next);
     if (next.length === 6) {
-      const seed = `${Date.now()}-${question}-${next.join("")}`;
-      const raw = castIChing(seed) as unknown as IChingResult;
+      const raw = castIChingFromLines(next) as unknown as IChingResult;
       setEntryId(buildMethodReadingEntryId("iching"));
       setResult(raw);
     }
   };
 
   const reset = () => {
+    setCastEpoch(v=>v+1);
     setCoinLines([]);
     setResult(null);
     setEntryId(null);
@@ -112,7 +120,7 @@ export function IchingScreen() {
     return result.primary.lines.map((line, index) => ({
       position: index + 1,
       isYang: line === "yang",
-      label: result.primary.name,
+      label: result.movingLines.includes(index + 1) ? "动爻" : "静爻",
     }));
   }, [result]);
 
@@ -154,7 +162,7 @@ export function IchingScreen() {
               已得：{coinLines.map(coinLabel).join(" · ")}
             </Text>
           )}
-          <Button title="🪙 掷铜钱" onPress={throwCoins} disabled={castStep >= 6} />
+          <CoinCastPanel key={castEpoch} lines={coinLines} onCast={throwCoins} />
           {castStep > 0 && (
             <Button title="重置" variant="secondary" onPress={reset} />
           )}
@@ -177,19 +185,22 @@ export function IchingScreen() {
             <HexagramDisplay lines={primaryLines} title={`本卦 · ${result.primary.name}`} />
             <HexagramDisplay lines={changingLines} title={`变卦 · ${result.changing.name}`} />
           </View>
+          <Text variant="caption" muted>投掷记录（初爻 → 上爻）：{result.coinLines.join(" · ")}。{result.textNote}</Text>
+          <Pressable accessibilityRole="link" onPress={()=>void Linking.openURL(result.primary.sourceUrl).catch(()=>{})}><Text variant="caption" gold>核对原典版本 · {result.primary.sourceTitle} ↗</Text></Pressable>
           <View style={styles.readingGrid}>
             <View style={styles.readingCard}>
-              <Text variant="label">卦辞</Text>
-              <Text variant="body">{result.primary.judgment}</Text>
+              <Text variant="label">卦辞 · 原典</Text>
+              <Text variant="body">{result.primary.judgment}</Text>{result.primary.useText&&<Text variant="caption">{result.primary.useText}（附原文，取用遵循所选流派）</Text>}
             </View>
             <View style={styles.readingCard}>
-              <Text variant="label">象辞</Text>
+              <Text variant="label">大象 · 原典</Text>
               <Text variant="body">{result.primary.image}</Text>
             </View>
             <View style={styles.readingCard}>
               <Text variant="label">变卦卦辞</Text>
               <Text variant="body">{result.changing.judgment}</Text>
             </View>
+            <View style={styles.readingCard}><Text variant="label">爻辞 · 原典（初爻至上爻）</Text>{result.primary.yaoTexts.map((text,i)=><Text key={i} gold={result.movingLines.includes(i+1)}>{result.movingLines.includes(i+1)?"● 动爻 · ":""}{text}</Text>)}</View>
           </View>
         </View>
       )}

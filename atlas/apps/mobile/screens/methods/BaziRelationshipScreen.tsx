@@ -109,6 +109,7 @@ export function BaziRelationshipScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="bazi-relationship"
         kicker="BAZI SYNASTRY"
         title="八字缘合"

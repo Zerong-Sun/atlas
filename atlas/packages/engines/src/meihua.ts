@@ -1,3 +1,4 @@
+import { Solar } from "lunar-javascript";
 import type { MeihuaInput } from "@atlas/shared-types";
 import { createRng } from "./seed.ts";
 
@@ -42,6 +43,10 @@ function relation(body: string, use: string): string {
 
 export interface MeihuaResult {
   mode: string;
+  movingLine: number;
+  changedUpper: (typeof TRIGRAMS)[number];
+  changedLower: (typeof TRIGRAMS)[number];
+  algorithmVersion: string;
   upper: (typeof TRIGRAMS)[number];
   lower: (typeof TRIGRAMS)[number];
   body: (typeof TRIGRAMS)[number];
@@ -62,31 +67,49 @@ export function castMeihua(input: MeihuaInput = {}): MeihuaResult {
 
   let upperNum: number;
   let lowerNum: number;
+  let movingNumber: number;
 
   if (mode === "time" && input.timestamp) {
     const d = new Date(input.timestamp);
-    upperNum = (d.getHours() + d.getMinutes()) % 8 || 8;
-    lowerNum = (d.getDate() + d.getMonth() + 1) % 8 || 8;
+    if(!Number.isFinite(d.getTime()))throw new Error("时间格式无效");
+    const lunar=Solar.fromYmdHms(d.getFullYear(),d.getMonth()+1,d.getDate(),d.getHours(),d.getMinutes(),d.getSeconds()).getLunar();
+    const branches="子丑寅卯辰巳午未申酉戌亥";
+    const year=branches.indexOf(lunar.getYearInGanZhi().slice(-1))+1;
+    const hour=branches.indexOf(lunar.getTimeInGanZhi().slice(-1))+1;
+    upperNum=year+Math.abs(lunar.getMonth())+lunar.getDay();
+    lowerNum=upperNum+hour;
+    movingNumber=lowerNum;
   } else if (input.numbers?.length) {
-    upperNum = input.numbers[0]! % 8 || 8;
-    lowerNum = (input.numbers[1] ?? input.numbers[0]!) % 8 || 8;
+    if(input.numbers.some(v=>!Number.isSafeInteger(v)||v<1))throw new Error("取数请使用正整数");
+    upperNum=input.numbers[0]!;
+    lowerNum=input.numbers[1]??upperNum;
+    movingNumber=input.numbers[2]??(upperNum+lowerNum);
   } else {
     upperNum = Math.floor(rng() * 8) + 1;
     lowerNum = Math.floor(rng() * 8) + 1;
+    movingNumber=upperNum+lowerNum;
   }
 
   const upper = trigramFromNumber(upperNum);
   const lower = trigramFromNumber(lowerNum);
-  const body = lower;
-  const use = upper;
-  const mutualLower = trigramFromNumber(lowerNum + upperNum);
-  const mutualUpper = trigramFromNumber(upperNum + lowerNum);
-  const changing = trigramFromNumber(upperNum + lowerNum + 1);
+  const movingLine=((movingNumber-1)%6)+1;
+  const body=movingLine<=3?upper:lower;
+  const use=movingLine<=3?lower:upper;
+  const lines=[...lower.lines,...upper.lines];
+  const fromLines=(bits:boolean[])=>TRIGRAMS.find(t=>t.lines.every((v,i)=>v===bits[i]))!;
+  const mutualLower=fromLines(lines.slice(1,4));
+  const mutualUpper=fromLines(lines.slice(2,5));
+  const changed=[...lines];changed[movingLine-1]=!changed[movingLine-1];
+  const changedLower=fromLines(changed.slice(0,3));
+  const changedUpper=fromLines(changed.slice(3,6));
+  const changing=movingLine<=3?changedLower:changedUpper;
   const rel = relation(body.element, use.element);
 
-  const summary = `上${upper.name}下${lower.name}，体${body.name}用${use.name}，${rel}。互卦${mutualLower.name}${mutualUpper.name}，变卦${changing.name}。`;
+  const summary = `上${upper.name}下${lower.name}，体${body.name}用${use.name}，${rel}。互卦上${mutualUpper.name}下${mutualLower.name}，第${movingLine}爻动，变卦上${changedUpper.name}下${changedLower.name}。`;
 
   return {
+    algorithmVersion: "meihua-structural-v2",
+    movingLine, changedLower, changedUpper,
     mode,
     upper,
     lower,

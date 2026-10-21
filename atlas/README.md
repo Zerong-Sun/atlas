@@ -1,8 +1,8 @@
-# Atlas（诸象）— 归档参考
+# Atlas（诸象）— 文化体验与多体系对照
 
-> **状态：短期冻结。** 本目录是完整的诸象 monorepo，供同仓库 [`fatequest/`](../fatequest/) 人工对照引擎、方法元数据与 UI；**不与 FateQuest 共享构建或运行时依赖。**  
+> **状态：2026-10-21 桌面 v0.2.0 发布准备，Web / 手机继续独立维护。** 本目录是诸象 monorepo，与同仓库 [`fatequest/`](../fatequest/) 相互独立；**不与 FateQuest 共享构建或运行时依赖。**
 > 仓库主入口见根目录 [`README.md`](../README.md)。  
-> **Vercel 暂关：** `vercel.json` 已设 `git.deploymentEnabled: false`；线上站点如需下线，在 [Vercel Dashboard](https://vercel.com/dashboard) 对该项目执行 Pause。项目完成后再重新接入。
+> **网页发布状态：** Git 自动部署关闭，原 Vercel 站点暂停；新网页版本仍待原账号登录后手动部署。桌面离线包不依赖该站点。
 
 **面向全球文明的命理、占卜、占梦与预测方法对照应用。**
 
@@ -10,7 +10,9 @@
 
 > 核心不是「告诉你命运是什么」，而是把不同文明的象征系统放在同一张桌上，让用户体会每种文化如何提问、如何理解因果、如何处理不确定性。
 
-**在线体验（无需自行部署）：** [https://zhuxiang.vercel.app](https://zhuxiang.vercel.app)
+**既有线上地址（不包含本次未部署的修改）：** [https://zhuxiang.vercel.app](https://zhuxiang.vercel.app)
+
+**桌面版：** Windows x64 与 macOS Universal 的构建、安装和发布状态见 [`desktop/README.md`](desktop/README.md) 与 [`v0.2.0 发布记录`](docs/testing/release-desktop-0.2.0.md)。
 
 ## 特性
 
@@ -31,6 +33,7 @@
 | [架构说明](docs/architecture.md) | 运行时边界、API 形态与数据一致性 |
 | [访问策略](docs/access.md) | MVP 无付费墙、无额度限制 |
 | [实施计划](docs/plan.md) | 里程碑与任务拆解 |
+| [手机测试与修复记录](docs/testing/atlas-2026-10-20.md) | 本次修复、资料来源、验证边界与手机入口 |
 | [占法完整度审阅](docs/method-completeness.md) | Web / Mobile 占法完成度、缺口与下一批方法 |
 | [合规说明](docs/compliance.md) | 内容与表达边界 |
 | [Web 客户端](apps/web/README.md) | 部署、路由、Edge Functions 映射 |
@@ -61,7 +64,7 @@ atlas/
 
 ## 快速开始
 
-直接使用 [在线版](https://zhuxiang.vercel.app) 即可体验；以下为本地开发与贡献者指引。
+本次新版请按以下方式本地启动；手机测试记录见 [测试入口与修复记录](docs/testing/atlas-2026-10-20.md)。
 
 ### 1. 安装依赖
 

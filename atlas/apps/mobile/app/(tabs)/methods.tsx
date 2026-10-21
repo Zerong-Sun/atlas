@@ -1,3 +1,4 @@
+import { SpainCultureCard } from "@/components/culture/CultureExperience";
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, TextInput, View } from "react-native";
@@ -21,7 +22,7 @@ export default function MethodsScreen() {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return methods.filter((method) => {
-      const searchable = [method.title, method.subtitle, method.tradition, ...method.tags]
+      const searchable = [method.title, method.subtitle, method.tradition, method.civilization, method.culturalNote, ...method.tags]
         .join(" ")
         .toLowerCase();
       return !q || searchable.includes(q);
@@ -42,9 +43,10 @@ export default function MethodsScreen() {
             <Text variant="caption" muted>
               {methods.length} 种可用占法 · 八字、塔罗、易经与更多
             </Text>
+            <SpainCultureCard />
             <TextInput
               style={styles.search}
-              placeholder="搜索占法…"
+              placeholder="搜索占法、文明、文化主题…"
               placeholderTextColor={colors.textMuted}
               value={query}
               onChangeText={setQuery}

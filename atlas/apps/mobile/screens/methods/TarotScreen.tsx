@@ -135,6 +135,7 @@ export function TarotScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={drawId}
         methodId="tarot"
         kicker="TAROT"
         title="塔罗抽卡"

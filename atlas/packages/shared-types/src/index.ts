@@ -150,7 +150,7 @@ export type LenormandSpread = "three" | "five" | "nine" | "grand";
 export interface LiuyaoInput {
   seed?: string;
   timestamp?: string;
-  /** Pre-cast lines: 6=老阳, 7=少阳, 8=少阴, 9=老阴 */
+  /** Pre-cast lines: 6=老阴, 7=少阳, 8=少阴, 9=老阳 */
   lines?: number[];
   questionCategory?: "career" | "love" | "finance" | "health" | "general";
 }

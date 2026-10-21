@@ -60,6 +60,7 @@ export function FengshuiScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="fengshui"
         kicker="FENG SHUI"
         title="风水罗盘"

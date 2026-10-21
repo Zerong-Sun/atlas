@@ -15,7 +15,8 @@ describe("computeWestern", () => {
     assert.ok(planets.Moon);
     assert.equal(planets.Sun.sign, "金牛座");
     assert.equal(planets.Moon.sign, "摩羯座");
-    assert.equal(planets.Sun.degree, 21.6);
+    // Tropical ecliptic longitude, checked independently against Swiss Ephemeris.
+    assert.equal(planets.Sun.degree, 23.9);
     const asc = r.ascendant as { sign: string };
     assert.ok(asc.sign);
   });

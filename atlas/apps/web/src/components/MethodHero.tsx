@@ -1,3 +1,4 @@
+import { CultureExperience } from "./culture/CultureExperience";
 import { useEffect, type CSSProperties, type ReactNode } from "react";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
@@ -24,6 +25,7 @@ export function MethodHero({ methodId, kicker, title, description, className = "
   } as CSSProperties;
 
   return (
+    <>
     <section
       className={`method-experience-hero method-motion--${experience.motion} ${className}`.trim()}
       style={style}
@@ -39,5 +41,7 @@ export function MethodHero({ methodId, kicker, title, description, className = "
         {description && <p>{description}</p>}
       </div>
     </section>
+    <CultureExperience methodId={methodId} />
+    </>
   );
 }

@@ -77,6 +77,7 @@ export function BaziScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="bazi"
         kicker="BAZI CHART"
         title="八字命盘"

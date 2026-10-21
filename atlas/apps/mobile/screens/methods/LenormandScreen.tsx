@@ -98,6 +98,7 @@ export function LenormandScreen() {
   return (
     <Screen scroll>
       <MethodHero
+        activityKey={entryId}
         methodId="lenormand"
         kicker="LENORMAND"
         title="雷诺曼牌"

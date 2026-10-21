@@ -91,3 +91,4 @@ export const READY_METHOD_IDS = [
 export function getReadyMethods() {
   return DIVINATION_METHODS.filter((m) => m.status === "ready" && m.id !== "dream");
 }
+export { CULTURE_LESSONS, getCultureLesson, SPAIN_CULTURE, type CultureLesson, type RitualKind } from "./cultureLessons.ts";

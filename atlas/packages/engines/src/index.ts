@@ -145,3 +145,5 @@ export function runEngines(
     .filter((t) => t !== "dream")
     .map((t) => runEngine(t, input));
 }
+
+export { castIChingFromLines, tossThreeCoins, YAO_LABELS, HEXAGRAMS, hexagramNumber } from "./iching.ts";

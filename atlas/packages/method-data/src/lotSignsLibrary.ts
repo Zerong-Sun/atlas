@@ -73,10 +73,10 @@ export const LOT_SIGNS: LotSign[] = [
 ];
 
 export const LOT_TEMPLE_LABELS: Record<LotSign["temple"] | "mixed", string> = {
-  guanyin: "观音签",
-  guandi: "关帝签",
-  mazu: "妈祖签",
-  mixed: "混合摇签",
+  guanyin: "观音主题 · 原创签",
+  guandi: "关帝主题 · 原创签",
+  mazu: "妈祖主题 · 原创签",
+  mixed: "原创主题混合",
 };
 
 export function getLotSignById(id: string): LotSign | undefined {

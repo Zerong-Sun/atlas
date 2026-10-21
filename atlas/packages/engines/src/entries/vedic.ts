@@ -8,3 +8,4 @@ export {
   type VedicGrahaKey,
   type VedicHouse,
 } from "../vedic.ts";
+export { computeMobileVedic, mobileVedicEphemeris } from "../vedic/ephemeris.mobile.ts";

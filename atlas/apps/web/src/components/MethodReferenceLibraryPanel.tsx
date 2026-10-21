@@ -20,6 +20,8 @@ export function MethodReferenceLibraryPanel({ library }: Props) {
         <h2>{library.title}</h2>
       </div>
 
+      <p className="muted">以下是 Atlas 整理的术语与学习摘要；“典籍拆解”不是古籍逐字引文。高级技法的资料介绍不代表本页均已计算，具体以结果中列出的项目为准。</p>
+
       {library.symbolGroups.length > 0 && currentGroup && (
         <div className="qimen-reference-layout">
           <div className="qimen-reference-panel qimen-reference-panel--wide">
