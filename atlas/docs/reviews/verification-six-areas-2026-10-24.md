@@ -56,3 +56,10 @@ R1–R8：修复已实施并通过下列本地门禁。R9：兼容修补与 Vite
 | `git diff --check` | 通过 |
 
 相对首轮，本轮 Web 从 45 项增加到 77 项（新增 32 项）。包含真实 React 组合回归，不只用模拟 hook 或状态机替代 UI。测试总计 **169 项**，没有把同一测试的重复运行累加。
+
+
+## 提交与远端验证
+
+实现与修复提交：`f1d3358`，已推送到 `origin/main`。[Atlas CI 首次运行](https://github.com/Zerong-Sun/atlas/actions/runs/40108874615) 全部步骤成功，包含最终锁文件安装、169 项测试、类型检查、构建、预算与语料门禁。
+
+远端日志提示旧 Actions 的 Node 20 运行时弃用，以及 `ubuntu-latest` 将迁移镜像。后续收尾提交将 Atlas 独立 workflow 固定到 Ubuntu 24.04，并使用已核对 `action.yml` 为 Node 24 运行时的官方 checkout v7.0.1、setup-node v7.1.0。项目测试本身仍使用 Node 22。FateQuest workflow 的并行修改不在本次提交中。
