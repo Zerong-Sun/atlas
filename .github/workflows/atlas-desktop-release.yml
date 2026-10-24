@@ -1,0 +1,71 @@
+name: Atlas desktop release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing Atlas tag with a draft GitHub release
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: atlas-desktop-release-${{ inputs.tag }}
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      RELEASE_TAG: ${{ inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+      VITE_LLM_API_KEY: ''
+      VITE_LLM_API_BASE_URL: ''
+      VITE_LLM_MODEL: ''
+      VITE_SUPABASE_URL: ''
+      VITE_SUPABASE_ANON_KEY: ''
+    steps:
+      - name: Validate tag input
+        run: '[[ "$RELEASE_TAG" =~ ^atlas-v[0-9]+\.[0-9]+\.[0-9]+$ ]]'
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ inputs.tag }}
+          persist-credentials: false
+      - name: Require matching version and draft release
+        run: |
+          test "$RELEASE_TAG" = "atlas-v$(node -p 'require("./atlas/desktop/package.json").version')"
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            atlas/package-lock.json
+            atlas/desktop/package-lock.json
+      - name: Install workspace and desktop dependencies
+        run: |
+          npm ci --prefix atlas
+          npm ci --prefix atlas/desktop
+          npm run install:runtime --prefix atlas/desktop
+      - name: Validate and build
+        run: |
+          npm run lint --prefix atlas
+          npm test --prefix atlas
+          npm test --prefix atlas/desktop
+          npm run build:web --prefix atlas
+          npm run check:web-budget --prefix atlas
+          npm run prepare:app --prefix atlas/desktop
+          npm run test:app --prefix atlas/desktop
+      - name: Package and verify
+        run: |
+          npm run package --prefix atlas/desktop
+          npm run verify --prefix atlas/desktop
+          ATLAS_SMOKE_APP="$GITHUB_WORKSPACE/atlas/desktop/release/ZhuxiangAtlas-darwin-universal/ZhuxiangAtlas.app/Contents/Resources/app.asar/main.cjs" npm run test:app --prefix atlas/desktop
+      - name: Upload verified packages to draft
+        run: |
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+          gh release upload "$RELEASE_TAG" \
+            "atlas/desktop/release/Atlas-${RELEASE_TAG#atlas-}-macOS-universal.zip" \
+            "atlas/desktop/release/Atlas-${RELEASE_TAG#atlas-}-Windows-x64.zip" \
+            atlas/desktop/release/SHA256SUMS.txt \
+            atlas/desktop/release/verification.json \
+            atlas/desktop/release/smoke-results.json --clobber
