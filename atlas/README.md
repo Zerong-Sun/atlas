@@ -29,6 +29,8 @@
 | 文档 | 说明 |
 |------|------|
 | [产品 PRD](docs/prd/诸象.md) | 定位、用户、功能与体验原则 |
+| [六维验证与修复清单](docs/reviews/verification-six-areas-2026-10-24.md) | 需求、逻辑、边界、质量、测试、运行验证及未解决限制 |
+| [技能仓库对照审阅与实施](docs/reviews/gamedev-skills-2026-10-24.md) | 14 项可靠性、交互、性能与 CI 改进及验证证据 |
 | [主体验重构](docs/main-experience-refactor.md) | 从“占法工具箱”转向“文明象征系统对照台”的产品与实施蓝图 |
 | [架构说明](docs/architecture.md) | 运行时边界、API 形态与数据一致性 |
 | [访问策略](docs/access.md) | MVP 无付费墙、无额度限制 |
@@ -59,7 +61,7 @@ atlas/
 
 ## 前置要求
 
-- **Node.js** ≥ 20
+- **Node.js** 22.12+（22 LTS / 24 LTS / 26+；Vitest 5 测试工具链要求）
 - **npm**（workspace monorepo）
 
 ## 快速开始
@@ -131,6 +133,7 @@ VITE_LLM_MODEL=deepseek-v4-flash
 | `npm run dev:web` | 启动 Web 开发服务器 |
 | `npm run dev:mobile` | 启动 Expo |
 | `npm run build:web` | Web 生产构建 |
+| `npm run check:web-budget` | 构建后检查入口、单块 JS 与静态资源预算 |
 | `npm run lint` | 各 workspace 类型检查 |
 | `npm run test` | 各 workspace 单元测试 |
 | `npm run corpus:generate` | 从 seed-builders 生成 `corpus/seeds/*.json` |
@@ -158,11 +161,14 @@ Edge Functions 对外返回 camelCase DTO（`@atlas/shared-types`）；数据库
 
 ## CI
 
-`main` 分支 push / PR 触发 [`.github/workflows/ci.yml`](../.github/workflows/ci.yml)（在本目录 `atlas/` 下执行 `npm install` 与脚本）：
+Atlas 路径或 workflow 变更的 `main` push / PR 触发 [`.github/workflows/atlas.yml`](../.github/workflows/atlas.yml)，也支持手动运行。使用 Node.js 22 和 `npm ci`：
 
-- 语料 generate + validate + ingest dry-run + embed dry-run
-- Web lint、build、test
-- `engines`、`orchestrator` 与 `api-core` 单元测试
+- 所有提供 lint / test 脚本的 workspace 类型检查与单元测试（含 Web、Mobile、共享计算与编排）
+- 桌面壳协议与文件访问边界测试（`node --test desktop/test/*.test.cjs`）
+- Web 生产构建及 `check:web-budget`：入口静态依赖合计 gzip ≤ 200 KiB，单 JS chunk gzip ≤ 180 KiB，public ≤ 48 MiB
+- 语料 validate、ingest dry-run、embed dry-run；不向数据库写入，不自动部署
+
+Web 本地资料按版本保存，兼容旧版裸 JSON，并保留上一份有效快照。损坏数据优先从备份恢复；存储不可用或满额时显示提示，新数据暂留本次会话。存储方案与验证边界见[审阅记录](docs/reviews/gamedev-skills-2026-10-24.md)。
 
 ## 部署
 

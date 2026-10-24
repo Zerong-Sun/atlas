@@ -72,9 +72,11 @@ export function LenormandPage() {
     : positions.map((position) => ({ position, placeholder: true as const }));
 
   const draw = () => {
-    playMethodSound("lenormand", "action");
-    setResult(null);
     runDraw({
+      onStarted: () => {
+        playMethodSound("lenormand", "action");
+        setResult(null);
+      },
       onShuffleComplete: () => {
         setResult(
           drawLenormand({

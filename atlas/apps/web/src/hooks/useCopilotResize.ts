@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from "react";
 import {
   COPILOT_WIDTH_DEFAULT,
   COPILOT_WIDTH_MAX,
@@ -7,7 +7,7 @@ import {
 } from "@/context/MethodCopilotContext";
 
 function maxCopilotWidth(): number {
-  return Math.min(COPILOT_WIDTH_MAX, Math.floor(window.innerWidth * 0.55));
+  return Math.max(COPILOT_WIDTH_MIN, Math.min(COPILOT_WIDTH_MAX, Math.floor(window.innerWidth * 0.55)));
 }
 
 function widthFromPointer(clientX: number): number {
@@ -71,5 +71,15 @@ export function useCopilotResize(enabled: boolean) {
     setWidth(COPILOT_WIDTH_DEFAULT);
   }, [enabled, setWidth]);
 
-  return { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset };
+  const onResizeKeyDown = useCallback((event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (!enabled) return;
+    const values: Record<string, number> = {
+      ArrowLeft: width + 20, ArrowRight: width - 20,
+      Home: COPILOT_WIDTH_MIN, End: maxCopilotWidth(),
+    };
+    if (!(event.key in values)) return;
+    event.preventDefault();
+    setWidth(Math.max(COPILOT_WIDTH_MIN, Math.min(maxCopilotWidth(), values[event.key])));
+  }, [enabled, width, setWidth]);
+  return { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset, onResizeKeyDown };
 }

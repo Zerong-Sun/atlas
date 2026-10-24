@@ -46,7 +46,7 @@ export function CardDrawTable({
   const spreadClass = ["tarot-spread", spreadClassName].filter(Boolean).join(" ");
 
   return (
-    <div className={rootClass} aria-live="polite">
+    <div className={rootClass} aria-live="polite" aria-busy={phase === "shuffling" || phase === "drawing"}>
       <DeckAnimation phase={phase} labels={deckLabels} />
       <div className={spreadClass} style={{ "--spread-count": spreadCount } as CSSProperties}>
         {children}

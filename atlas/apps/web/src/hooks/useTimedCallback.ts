@@ -12,7 +12,10 @@ export function useTimedCallback() {
   useEffect(() => () => clearTimers(), [clearTimers]);
 
   const schedule = useCallback((fn: () => void, delayMs: number) => {
-    const id = window.setTimeout(fn, delayMs);
+    const id = window.setTimeout(() => {
+      timersRef.current = timersRef.current.filter((timer) => timer !== id);
+      fn();
+    }, delayMs);
     timersRef.current.push(id);
     return id;
   }, []);

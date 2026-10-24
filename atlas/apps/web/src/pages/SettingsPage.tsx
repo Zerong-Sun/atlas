@@ -38,10 +38,7 @@ export function SettingsPage() {
   const supabaseNotConfigured = useMockApi();
   const [cloudSessionReady, setCloudSessionReady] = useState<boolean | null>(null);
   const [mysticMotion, setMysticMotion] = useState(getMotionEnabled);
-  const [classicMode, setClassicMode] = useState(true);
-  const [safeMode, setSafeMode] = useState(true);
   const [ritualSounds, setRitualSounds] = useState(() => isRitualSoundsEnabled());
-  const [defaultMethod, setDefaultMethod] = useState("bazi");
   const [locale, setLocale] = useState<AtlasLocale>(() => getCulturalPrefs().locale);
   const [culturalLens, setCulturalLens] = useState<CulturalLens>(() => getCulturalPrefs().culturalLens);
   const [terminology, setTerminology] = useState<TerminologyMode>(() => getCulturalPrefs().terminology);
@@ -167,7 +164,7 @@ export function SettingsPage() {
       <section className="method-detail-hero">
         <p className="method-kicker">SETTINGS</p>
         <h1>设置</h1>
-        <p>产品偏好：默认占法、仪式动效与音效、古文解释深度，以及输出边界。</p>
+        <p>调整仪式动效、音效、文化语境与 LLM 连接。</p>
       </section>
 
       <section className="settings-layout">
@@ -176,19 +173,9 @@ export function SettingsPage() {
             <p>PREFERENCES</p>
             <h2>体验偏好</h2>
           </div>
-          <label className="settings-field">
-            <span>默认占法</span>
-            <select value={defaultMethod} onChange={(event) => setDefaultMethod(event.target.value)}>
-              <option value="bazi">八字命盘</option>
-              <option value="tarot">塔罗抽卡</option>
-              <option value="dream">占梦</option>
-              <option value="iching">周易六爻</option>
-            </select>
-          </label>
           <Toggle label="神秘动效" checked={mysticMotion} onChange={setMysticMotion} />
           <Toggle label="仪式音效" checked={ritualSounds} onChange={setRitualSounds} />
-          <Toggle label="优先显示古文解释" checked={classicMode} onChange={setClassicMode} />
-          <Toggle label="启用安全边界提示" checked={safeMode} onChange={setSafeMode} />
+          <p className="settings-sync-status">动效同时遵循系统的「减少动态效果」设置。原典依据与现代解读在报告中分别呈现，相关边界提示始终保留。</p>
         </div>
 
         <div className="settings-panel settings-panel--stacked">

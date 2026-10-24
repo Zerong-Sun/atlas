@@ -84,10 +84,12 @@ export function TarotPage() {
     : spread.positions.map((position) => ({ position, placeholder: true }));
 
   const draw = () => {
-    playMethodSound("tarot", "action");
-    setCards([]);
-    setInterpretation(null);
     runDraw({
+      onStarted: () => {
+        playMethodSound("tarot", "action");
+        setCards([]);
+        setInterpretation(null);
+      },
       onShuffleComplete: () => {
         const seed = `${Date.now()}-${question}-${spreadId}`;
         const result = drawTarotSpread({

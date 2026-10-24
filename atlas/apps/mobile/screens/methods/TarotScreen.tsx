@@ -51,11 +51,13 @@ export function TarotScreen() {
 
   const draw = () => {
     if (isBusy) return;
-    setCards([]);
-    setSpreadResult(null);
-    setInterpretation(null);
-    setDrawId(null);
     runDraw({
+      onStarted: () => {
+        setCards([]);
+        setSpreadResult(null);
+        setInterpretation(null);
+        setDrawId(null);
+      },
       shuffleMs: prefs.mysticMotion ? 1000 : 0,
       revealMs: prefs.mysticMotion ? 400 : 0,
       onShuffleComplete: () => {

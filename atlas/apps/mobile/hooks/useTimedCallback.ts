@@ -9,7 +9,10 @@ export function useTimedCallback() {
   }, []);
 
   const schedule = useCallback((fn: () => void, delayMs: number) => {
-    const id = setTimeout(fn, delayMs);
+    const id = setTimeout(() => {
+      timers.current = timers.current.filter((timer) => timer !== id);
+      fn();
+    }, delayMs);
     timers.current.push(id);
     return id;
   }, []);

@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { createRequestGate } from "@/lib/requestGate";
+import { shouldReduceMotion } from "@/lib/motionPrefs";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useMethodCopilot } from "@/context/MethodCopilotContext";
 import { getMethodCopilotConfig, getMethodCopilotPromptsWithReport } from "@/data/methodCopilotPrompts";
@@ -17,7 +19,7 @@ import { isMethodCopilotRoute, isMethodWorkbenchRoute, methodIdFromPathname } fr
 export function MethodCopilot() {
   const { pathname } = useLocation();
   const { open, setOpen, report, pendingAction, clearPendingAction } = useMethodCopilot();
-  const { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset } =
+  const { width, resizing, onResizeStart, onResizeMove, onResizeEnd, onResizeReset, onResizeKeyDown } =
     useCopilotResize(open);
   const methodId = report?.methodId ?? methodIdFromPathname(pathname);
   const copilotContext = {
@@ -29,12 +31,30 @@ export function MethodCopilot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [turns, setTurns] = useState<MethodCopilotTurn[]>([]);
+  const requestGate = useRef(createRequestGate());
+  const asideRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const prevMethodRef = useRef(methodId);
   const pendingHandledRef = useRef(false);
   const loadedEntryIdRef = useRef<string | null>(null);
 
   const visible = isMethodCopilotRoute(pathname);
+  const contextKey = `${pathname}:${report ? resolveArchiveEntryId(report) : "none"}`;
+  useLayoutEffect(() => {
+    requestGate.current.reset();
+    setLoading(false);
+    return () => requestGate.current.reset();
+  }, [contextKey]);
+  useEffect(() => {
+    if (!open || !visible) return;
+    const trigger = document.activeElement as HTMLElement | null;
+    asideRef.current?.querySelector<HTMLButtonElement>(".method-copilot__toggle")?.focus();
+    return () => {
+      if (trigger?.isConnected) trigger.focus({ preventScroll: true });
+      else document.querySelector<HTMLButtonElement>(".method-copilot-topbar-btn")?.focus({ preventScroll: true });
+    };
+  }, [open, visible]);
+
 
   useEffect(() => {
     if (prevMethodRef.current !== methodId) {
@@ -59,7 +79,7 @@ export function MethodCopilot() {
   }, [report]);
 
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
+    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: shouldReduceMotion() ? "auto" : "smooth" });
   }, [turns, loading]);
 
   const persistInterpretation = useCallback(
@@ -73,18 +93,22 @@ export function MethodCopilot() {
   const submit = useCallback(
     async (text: string) => {
       const question = text.trim();
-      if (!question || loading) return;
+      if (!question) return;
+      const ticket = requestGate.current.begin();
+      if (ticket === null) return;
       setInput("");
       setLoading(true);
       const userTurn: MethodCopilotTurn = { role: "user", content: question };
       const turnsWithUser = [...turns, userTurn];
       setTurns(turnsWithUser);
-      persistInterpretation(turnsWithUser);
+
       const useAnalysis = report && isAnalysisQuestion(question, true);
       try {
+        persistInterpretation(turnsWithUser);
         const reply = useAnalysis
           ? await askMethodCopilotAnalysis(methodId, question, turns, report, copilotContext)
           : await askMethodCopilot(methodId, question, turns, copilotContext);
+        if (!requestGate.current.isCurrent(ticket)) return;
         const turnsWithReply = [
           ...turnsWithUser,
           {
@@ -100,6 +124,7 @@ export function MethodCopilot() {
         setTurns(turnsWithReply);
         persistInterpretation(turnsWithReply);
       } catch {
+        if (!requestGate.current.isCurrent(ticket)) return;
         const turnsWithError = [
           ...turnsWithUser,
           {
@@ -111,7 +136,10 @@ export function MethodCopilot() {
         setTurns(turnsWithError);
         persistInterpretation(turnsWithError);
       } finally {
-        setLoading(false);
+        if (requestGate.current.isCurrent(ticket)) {
+          requestGate.current.finish(ticket);
+          setLoading(false);
+        }
       }
     },
     [copilotContext, loading, methodId, persistInterpretation, report, turns],
@@ -157,6 +185,9 @@ export function MethodCopilot() {
       )}
 
       <aside
+        ref={asideRef}
+        hidden={!open}
+        onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); setOpen(false); } }}
         className={[
           "method-copilot",
           open ? "is-open" : "",
@@ -170,6 +201,8 @@ export function MethodCopilot() {
         <div
           className="method-copilot__resize-handle"
           role="separator"
+          tabIndex={0}
+          onKeyDown={onResizeKeyDown}
           aria-orientation="vertical"
           aria-label="调整侧栏宽度"
           aria-valuemin={280}
@@ -180,7 +213,7 @@ export function MethodCopilot() {
           onPointerUp={onResizeEnd}
           onPointerCancel={onResizeEnd}
           onDoubleClick={onResizeReset}
-          title="拖拽调整宽度，双击恢复默认"
+          title="拖拽或方向键调整宽度，Home / End 设置最小 / 最大宽度，双击恢复默认"
         />
 
         <header className="method-copilot__head">

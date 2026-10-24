@@ -17,6 +17,7 @@ export function Button({ title, children, onClick, disabled, loading, type = "bu
       type={type}
       className="atlas-btn"
       onClick={onClick}
+      aria-busy={loading || undefined}
       disabled={disabled || loading}
     >
       {loading ? "请稍候…" : label}

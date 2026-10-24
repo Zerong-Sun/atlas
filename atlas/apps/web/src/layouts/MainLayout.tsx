@@ -98,7 +98,7 @@ function MainLayoutShell() {
         .skip-link:focus { left: 8px; top: 8px; }
         .shell {
           min-height: 100vh;
-          padding-bottom: 72px;
+          padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
           position: relative;
         }
         .shell--mist {
@@ -136,7 +136,7 @@ function MainLayoutShell() {
           align-items: center;
           justify-content: space-between;
           gap: ${spacing.md}px;
-          padding: ${spacing.md}px ${spacing.lg}px;
+          padding: calc(${spacing.md}px + env(safe-area-inset-top, 0px)) max(${spacing.lg}px, env(safe-area-inset-right, 0px)) ${spacing.md}px max(${spacing.lg}px, env(safe-area-inset-left, 0px));
           border-bottom: 1px solid var(--glass-border, rgba(42, 53, 72, 0.8));
           position: sticky;
           top: 0;

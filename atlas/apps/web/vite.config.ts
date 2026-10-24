@@ -6,6 +6,8 @@ import { resolveLlmBaseUrl } from "../../lib/llm-defaults";
 export default defineConfig({
   plugins: [react()],
   resolve: {
+    // Web uses React 18; hoisted router dependencies must not bind Expo's React 19.
+    dedupe: ["react", "react-dom"],
     alias: {
       "@": path.resolve(__dirname, "src"),
       "@atlas/llm-defaults": path.resolve(__dirname, "../../lib/llm-defaults.ts"),
@@ -29,6 +31,7 @@ export default defineConfig({
     },
   },
   build: {
+    manifest: true,
     rollupOptions: {
       output: {
         manualChunks: {

@@ -425,3 +425,6 @@ html.copilot-resizing * {
     box-shadow: -12px 0 40px rgba(0, 0, 0, 0.45);
   }
 }
+
+.method-copilot[hidden] { display: none; }
+.method-copilot__resize-handle:focus-visible::after { background: var(--color-gold); }

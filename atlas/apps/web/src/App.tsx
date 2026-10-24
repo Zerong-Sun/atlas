@@ -1,3 +1,5 @@
+import { AppErrorBoundary } from "@/components/AppErrorBoundary";
+import { StorageNotice } from "@/components/StorageNotice";
 import { lazy, Suspense, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AppProvider, useApp } from "@/context/AppContext";
@@ -159,8 +161,11 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <AppProvider>
-      <AppRoutes />
-    </AppProvider>
+    <AppErrorBoundary>
+      <StorageNotice />
+      <AppProvider>
+        <AppRoutes />
+      </AppProvider>
+    </AppErrorBoundary>
   );
 }

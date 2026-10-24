@@ -1,0 +1,37 @@
+name: Atlas
+on:
+  push:
+    branches: [main]
+    paths: ['atlas/**', '.github/workflows/atlas.yml']
+  pull_request:
+    branches: [main]
+    paths: ['atlas/**', '.github/workflows/atlas.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: atlas-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate-atlas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: atlas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: atlas/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: node --test desktop/test/*.test.cjs
+      - run: npm run build:web
+      - run: npm run check:web-budget
+      - run: npm run corpus:validate
+      - run: npm run corpus:ingest:dry-run
+      - run: npm run corpus:embed:dry-run

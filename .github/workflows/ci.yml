@@ -5,10 +5,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  # NOTE: the validate-atlas job is intentionally removed (2026-07). Atlas is
-  # frozen — front end, back end and Vercel deploys are all paused, and it is
-  # kept under atlas/ for reference only (docs/ATLAS_PORT.md). Restore this job
-  # from git history if Atlas is ever unfrozen.
+  # Atlas is validated independently in atlas.yml.
 
   validate-fatequest:
     runs-on: ubuntu-latest

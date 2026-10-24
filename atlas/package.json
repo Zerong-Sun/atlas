@@ -22,9 +22,10 @@
     "corpus:ingest:dry-run": "npm run ingest:dry-run -w @atlas/corpus-scripts",
     "corpus:publish": "npm run publish -w @atlas/corpus-scripts",
     "corpus:embed": "npm run embed -w @atlas/corpus-scripts",
-    "corpus:embed:dry-run": "npm run embed:dry-run -w @atlas/corpus-scripts"
+    "corpus:embed:dry-run": "npm run embed:dry-run -w @atlas/corpus-scripts",
+    "check:web-budget": "node scripts/check-web-budget.mjs"
   },
-  "engines": { "node": ">=20.19.4" },
+  "engines": { "node": "^22.12.0 || ^24.0.0 || >=26.0.0" },
   "overrides": {
     "@atlas/web": {
       "react": "18.3.1",
@@ -38,6 +39,7 @@
     "@expo/vector-icons": {
       "react-native": "0.81.5",
       "@types/react": "~19.1.2"
-    }
+    },
+    "react-dom": "19.1.0"
   }
 }

@@ -367,3 +367,12 @@ a {
     flex: 1;
   }
 }
+
+/* Essential controls and status remain usable at small sizes and with motion disabled. */
+button, select, .nav-link { min-height: 44px; }
+.storage-notice { position: relative; z-index: 50; padding: 12px 20px; background: #322916; color: #ffe3aa; }
+.recovery-page { max-width: 640px; margin: 10vh auto; padding: 24px; }
+.recovery-page button, .recovery-page a { display: inline-flex; align-items: center; margin: 8px; padding: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: 0s !important; scroll-behavior: auto !important; }
+}

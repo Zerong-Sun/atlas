@@ -59,13 +59,13 @@ export function FlipCard({
       style={{ "--i": index } as CSSProperties}
     >
       <div className="spread-card__inner">
-        <div className="spread-card__back">
+        <div className="spread-card__back" aria-hidden={revealed}>
           <span>{position}</span>
           <strong>{backLabel}</strong>
         </div>
-        <div className="spread-card__face">{face}</div>
+        <div className="spread-card__face" aria-hidden={!revealed}>{face}</div>
       </div>
-      {meta && <div className="spread-card__meta">{meta}</div>}
+      {meta && <div className="spread-card__meta" aria-hidden={!revealed}>{meta}</div>}
     </article>
   );
 }

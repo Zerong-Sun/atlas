@@ -1,8 +1,9 @@
+import { arrayOf, isRecord, isString, readSnapshot, writeSnapshot } from "./persistentStore";
 import type { ReadingReport } from "@atlas/shared-types";
 import type { MethodCopilotTurn } from "@/lib/api/methodCopilot";
 import type { MethodCopilotReportSnapshot } from "@/lib/methodReportSnapshot";
 import { getMethod } from "@/data/divinationMethods";
-import { getReadingHistory } from "@/lib/storage";
+import { getReadingHistory, isReadingReport } from "@/lib/storage";
 
 export type ArchiveEntry = {
   id: string;
@@ -19,18 +20,24 @@ export type ArchiveEntry = {
 const ARCHIVE_KEY = "atlas:archive";
 const MAX_ENTRIES = 200;
 
+const isArchiveEntry = (v: unknown): v is ArchiveEntry => isRecord(v)
+  && isString(v.id) && ["method", "reading", "module"].includes(String(v.source)) && isString(v.title) && isString(v.body)
+  && (v.summary === undefined || isString(v.summary))
+  && isString(v.createdAt) && (v.methodId === null || isString(v.methodId))
+  && (v.readingReport === undefined || isReadingReport(v.readingReport))
+  && (v.interpretation === undefined || (Array.isArray(v.interpretation)
+    && v.interpretation.every((t) => isRecord(t) && (t.role === "user" || t.role === "assistant") && isString(t.content)
+      && (t.diagram === undefined || isString(t.diagram))
+      && (t.relatedTerms === undefined || arrayOf(isString)(t.relatedTerms))
+      && (t.highlights === undefined || arrayOf(isString)(t.highlights))
+      && (t.degraded === undefined || typeof t.degraded === "boolean")
+      && (t.sections === undefined || (Array.isArray(t.sections) && t.sections.every((section) =>
+        isRecord(section) && isString(section.title) && isString(section.content)))))));
 function readArchiveStore(): ArchiveEntry[] {
-  const raw = localStorage.getItem(ARCHIVE_KEY);
-  if (!raw) return [];
-  try {
-    return JSON.parse(raw) as ArchiveEntry[];
-  } catch {
-    return [];
-  }
+  return readSnapshot(ARCHIVE_KEY, [], arrayOf(isArchiveEntry));
 }
-
 function writeArchiveStore(entries: ArchiveEntry[]): void {
-  localStorage.setItem(ARCHIVE_KEY, JSON.stringify(entries.slice(0, MAX_ENTRIES)));
+  writeSnapshot(ARCHIVE_KEY, entries.slice(0, MAX_ENTRIES), arrayOf(isArchiveEntry));
 }
 
 export function resolveArchiveEntryId(snapshot: MethodCopilotReportSnapshot): string {
@@ -43,7 +50,8 @@ export function upsertArchiveFromSnapshot(
   extras?: { readingReport?: ReadingReport },
 ): ArchiveEntry {
   const id = resolveArchiveEntryId(snapshot);
-  const existing = readArchiveStore().find((entry) => entry.id === id);
+  const entries = readArchiveStore();
+  const existing = entries.find((entry) => entry.id === id);
   const entry: ArchiveEntry = {
     id,
     source: snapshot.source,
@@ -55,7 +63,7 @@ export function upsertArchiveFromSnapshot(
     readingReport: extras?.readingReport ?? existing?.readingReport,
     interpretation: existing?.interpretation,
   };
-  const next = [entry, ...readArchiveStore().filter((item) => item.id !== id)];
+  const next = [entry, ...entries.filter((item) => item.id !== id)];
   writeArchiveStore(next);
   return entry;
 }
@@ -91,8 +99,7 @@ export function getArchiveEntry(id: string): ArchiveEntry | null {
   };
 }
 
-function readingToArchiveEntry(report: ReadingReport): ArchiveEntry {
-  const stored = readArchiveStore().find((entry) => entry.id === report.readingId);
+function readingToArchiveEntry(report: ReadingReport, stored?: ArchiveEntry): ArchiveEntry {
   const summary = report.sections.find((section) => section.type === "summary")?.content;
   const question = report.sections.find((section) => section.type === "question_restate")?.content;
 
@@ -110,13 +117,15 @@ function readingToArchiveEntry(report: ReadingReport): ArchiveEntry {
 }
 
 function mergeArchiveMaps(readings: ReadingReport[]): ArchiveEntry[] {
+  const entries = readArchiveStore();
+  const storedById = new Map(entries.map((entry) => [entry.id, entry]));
   const byId = new Map<string, ArchiveEntry>();
 
   for (const report of readings) {
-    byId.set(report.readingId, readingToArchiveEntry(report));
+    byId.set(report.readingId, readingToArchiveEntry(report, storedById.get(report.readingId)));
   }
 
-  for (const entry of readArchiveStore()) {
+  for (const entry of entries) {
     const existing = byId.get(entry.id);
     if (existing) {
       byId.set(entry.id, {
@@ -140,8 +149,9 @@ export function listArchiveEntries(): ArchiveEntry[] {
 }
 
 export function listArchiveEntriesWithReadings(readings: ReadingReport[]): ArchiveEntry[] {
-  const localIds = new Set(getReadingHistory().map((report) => report.readingId));
-  const merged = [...getReadingHistory()];
+  const local = getReadingHistory();
+  const localIds = new Set(local.map((report) => report.readingId));
+  const merged = [...local];
   for (const report of readings) {
     if (!localIds.has(report.readingId)) merged.push(report);
   }

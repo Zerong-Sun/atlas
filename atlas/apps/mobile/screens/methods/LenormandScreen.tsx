@@ -65,9 +65,11 @@ export function LenormandScreen() {
 
   const draw = () => {
     if (isBusy) return;
-    setResult(null);
-    setEntryId(null);
     runDraw({
+      onStarted: () => {
+        setResult(null);
+        setEntryId(null);
+      },
       shuffleMs: prefs.mysticMotion ? 1000 : 0,
       revealMs: prefs.mysticMotion ? 400 : 0,
       onShuffleComplete: () => {

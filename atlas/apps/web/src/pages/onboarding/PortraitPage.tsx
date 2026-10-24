@@ -12,6 +12,7 @@ export function PortraitPage() {
   const { completeOnboarding, profile, saveProfile } = useApp();
   const [portrait, setPortrait] = useState<PortraitSummary | null>(null);
   const [loading, setLoading] = useState(true);
+  const [retry, setRetry] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -20,32 +21,31 @@ export function PortraitPage() {
       setLoading(false);
       return;
     }
+    if (profile.portraitSummary) {
+      setPortrait(profile.portraitSummary);
+      setError(null);
+      setLoading(false);
+      return;
+    }
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
     fetchPortraitSummary(profile)
       .then(async (summary) => {
+        if (cancelled) return;
         setPortrait(summary);
         await saveProfile({ portraitSummary: summary });
       })
-      .catch(() => setError("画像生成失败，请稍后重试。"))
-      .finally(() => setLoading(false));
-  }, [profile, saveProfile]);
+      .catch(() => { if (!cancelled) setError("画像生成失败，请稍后重试。"); })
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [profile, saveProfile, retry]);
 
   const finish = async () => {
     await completeOnboarding();
     navigate("/ask", { replace: true });
   };
-
-  const retryPortrait = () => {
-    if (!profile?.birthDate) return;
-    setLoading(true);
-    setError(null);
-    fetchPortraitSummary(profile)
-      .then(async (summary) => {
-        setPortrait(summary);
-        await saveProfile({ portraitSummary: summary });
-      })
-      .catch(() => setError("画像生成失败，请稍后重试。"))
-      .finally(() => setLoading(false));
-  };
+  const retryPortrait = () => setRetry((value) => value + 1);
 
   if (loading) {
     return (

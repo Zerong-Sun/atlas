@@ -1,3 +1,4 @@
+import { shouldReduceMotion, subscribeMotionPreference } from "@/lib/motionPrefs";
 import { useEffect, useRef } from "react";
 
 type Particle = {
@@ -17,11 +18,13 @@ export function CosmicBackdrop() {
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let reducedMotion = shouldReduceMotion();
     let width = 0;
     let height = 0;
     let frame = 0;
     let raf = 0;
+    let lastTime = 0;
+    let glow: CanvasGradient;
     let particles: Particle[] = [];
 
     const resize = () => {
@@ -33,6 +36,10 @@ export function CosmicBackdrop() {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      glow = ctx.createRadialGradient(width * 0.5, height * 0.2, 0, width * 0.5, height * 0.2, width * 0.8);
+      glow.addColorStop(0, "rgba(126, 178, 183, 0.12)");
+      glow.addColorStop(0.45, "rgba(196, 165, 116, 0.06)");
+      glow.addColorStop(1, "rgba(11, 16, 32, 0)");
       particles = Array.from({ length: Math.min(90, Math.floor(width / 14)) }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -43,13 +50,12 @@ export function CosmicBackdrop() {
       }));
     };
 
-    const draw = () => {
-      frame += 1;
+    const draw = (time: number) => {
+      raf = 0;
+      const step = lastTime ? Math.min((time - lastTime) / (1000 / 60), 3) : 1;
+      lastTime = time;
+      frame += reducedMotion ? 0 : step;
       ctx.clearRect(0, 0, width, height);
-      const glow = ctx.createRadialGradient(width * 0.5, height * 0.2, 0, width * 0.5, height * 0.2, width * 0.8);
-      glow.addColorStop(0, "rgba(126, 178, 183, 0.12)");
-      glow.addColorStop(0.45, "rgba(196, 165, 116, 0.06)");
-      glow.addColorStop(1, "rgba(11, 16, 32, 0)");
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, width, height);
 
@@ -61,23 +67,36 @@ export function CosmicBackdrop() {
         ctx.fill();
 
         if (!reducedMotion) {
-          particle.x += particle.vx;
-          particle.y += particle.vy;
+          particle.x += particle.vx * step;
+          particle.y += particle.vy * step;
           if (particle.y < -10) particle.y = height + 10;
           if (particle.x < -10) particle.x = width + 10;
           if (particle.x > width + 10) particle.x = -10;
         }
       }
 
-      if (!reducedMotion) raf = window.requestAnimationFrame(draw);
+      if (!reducedMotion && !document.hidden) raf = window.requestAnimationFrame(draw);
     };
 
+    const refresh = () => {
+      window.cancelAnimationFrame(raf);
+      raf = 0;
+      lastTime = 0;
+      reducedMotion = shouldReduceMotion();
+      canvas.dataset.animation = reducedMotion || document.hidden ? "paused" : "running";
+      if (!document.hidden) draw(performance.now());
+    };
+    const onResize = () => { resize(); refresh(); };
     resize();
-    draw();
-    window.addEventListener("resize", resize);
+    refresh();
+    const unsubscribe = subscribeMotionPreference(refresh);
+    document.addEventListener("visibilitychange", refresh);
+    window.addEventListener("resize", onResize);
 
     return () => {
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", onResize);
+      document.removeEventListener("visibilitychange", refresh);
+      unsubscribe();
       window.cancelAnimationFrame(raf);
     };
   }, []);

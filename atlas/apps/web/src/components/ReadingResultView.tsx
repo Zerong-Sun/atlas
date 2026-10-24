@@ -820,9 +820,10 @@ function HexagramCard({ title, hexagram }: { title: string; hexagram: Record<str
 }
 
 function getArray(value: unknown): Record<string, unknown>[] {
-  return Array.isArray(value) ? (value as Record<string, unknown>[]) : [];
+  return Array.isArray(value) ? value.filter((item): item is Record<string, unknown> =>
+    item !== null && typeof item === "object" && !Array.isArray(item)) : [];
 }
 
 function getRecord(value: unknown): Record<string, unknown> {
-  return value && typeof value === "object" ? (value as Record<string, unknown>) : {};
+  return value && typeof value === "object" && !Array.isArray(value) ? (value as Record<string, unknown>) : {};
 }
