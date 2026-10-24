@@ -9,7 +9,7 @@
 | [`fatequest/archive/`](fatequest/archive/) | 旧版本归档索引与初代网页快照（已冻结、不进 CI） |
 | [`atlas/`](atlas/) | 诸象 Atlas — Web / Expo 移动端 / Electron 桌面版，共享占卜引擎与文化内容 |
 
-下载与发布说明：[FateQuest v3.1.1](https://github.com/Zerong-Sun/atlas/releases/tag/v3.1.1) · [诸象 Atlas v0.2.0](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.0)。请下载发布页的运行包；Source code 是源码归档。
+下载与发布说明：[FateQuest v3.1.1](https://github.com/Zerong-Sun/atlas/releases/tag/v3.1.1) · [诸象 Atlas v0.2.1](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.1)。请下载发布页的运行包；Source code 是源码归档。
 
 ## FateQuest（主 · Godot）
 

@@ -1,0 +1,13 @@
+{
+  "filesScanned": 92,
+  "privateValuesChecked": 1,
+  "matches": [],
+  "packagedAssets": {
+    "passed": true,
+    "archives": 2,
+    "filesPerArchive": 286,
+    "allRuntimeAssetsMatchScannedBuild": true,
+    "packageJsonSemanticallyEqual": true
+  },
+  "scope": "Local preflight build on macOS 13 Intel; published artifacts were rebuilt from the same tag by GitHub Actions."
+}

@@ -1,0 +1,107 @@
+{
+  "offline": true,
+  "routes": [
+    {
+      "route": "/methods/bazi",
+      "title": "八字命盘"
+    },
+    {
+      "route": "/methods/bazi-relationship",
+      "title": "八字缘合"
+    },
+    {
+      "route": "/methods/tarot",
+      "title": "塔罗抽卡"
+    },
+    {
+      "route": "/dream",
+      "title": "占梦"
+    },
+    {
+      "route": "/methods/iching",
+      "title": "周易六十四卦"
+    },
+    {
+      "route": "/methods/qimen",
+      "title": "奇门遁甲"
+    },
+    {
+      "route": "/methods/ziwei",
+      "title": "紫微斗数"
+    },
+    {
+      "route": "/methods/liuyao",
+      "title": "纳甲六爻"
+    },
+    {
+      "route": "/methods/meihua",
+      "title": "梅花易数"
+    },
+    {
+      "route": "/methods/western",
+      "title": "西洋占星"
+    },
+    {
+      "route": "/methods/vedic",
+      "title": "印度占星"
+    },
+    {
+      "route": "/methods/numerology",
+      "title": "数字命理"
+    },
+    {
+      "route": "/methods/runes",
+      "title": "卢恩符文占卜"
+    },
+    {
+      "route": "/methods/geomancy",
+      "title": "土占 Geomancy"
+    },
+    {
+      "route": "/methods/lot",
+      "title": "抽签签诗"
+    },
+    {
+      "route": "/methods/jiaobei",
+      "title": "掷筊问卦"
+    },
+    {
+      "route": "/methods/xiangmian",
+      "title": "面相"
+    },
+    {
+      "route": "/methods/palmistry",
+      "title": "手相"
+    },
+    {
+      "route": "/methods/fengshui",
+      "title": "风水罗盘"
+    },
+    {
+      "route": "/methods/astrodice",
+      "title": "占星骰子"
+    },
+    {
+      "route": "/methods/lenormand",
+      "title": "雷诺曼牌"
+    },
+    {
+      "route": "/methods/oracle",
+      "title": "神谕卡"
+    },
+    {
+      "route": "/methods/coffee",
+      "title": "咖啡渣占卜"
+    },
+    {
+      "route": "/methods/scrying",
+      "title": "水晶凝视"
+    }
+  ],
+  "qian": "本卦 乾（1）→ 变卦 乾（1）",
+  "cultureNotePersists": true,
+  "proxyWithoutKey": 401,
+  "isolatedRenderer": true,
+  "narrowWidth": 390,
+  "errors": []
+}
