@@ -1,4 +1,4 @@
-诸象 Atlas 0.2.0 桌面体验版
+诸象 Atlas 0.2.1 桌面体验版
 
 Windows 10/11（64 位）：完整解压 Windows-x64.zip 到一个文件夹，双击 ZhuxiangAtlas.exe。不要只取出 exe，其他文件也需要保留。无需安装 Node.js。
 
@@ -8,5 +8,5 @@ macOS 13 或更新版本：完整解压 macOS-universal.zip，将 ZhuxiangAtlas.
 
 记录保存在本机用户目录，不会写回安装文件夹；更新应用时保留。Windows 位于 %APPDATA%\ZhuxiangAtlas，macOS 位于 ~/Library/Application Support/ZhuxiangAtlas。不要删除此目录，除非要清空自己的数据。
 
-版本与下载：https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.0
+版本与下载：https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.1
 Windows 构建需要 Windows 实机进一步验收。文化解释与数据库的已知范围见发布说明。

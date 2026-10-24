@@ -1,6 +1,7 @@
 import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { build } from '../../node_modules/esbuild/lib/main.js';
 
 const desktop = fileURLToPath(new URL('..', import.meta.url));
@@ -17,4 +18,6 @@ await cp(path.join(desktop, 'src/protocol.cjs'), path.join(out, 'protocol.cjs'))
 await build({ entryPoints: [path.join(desktop, '../lib/llm-proxy-handler.ts')], outfile: path.join(out, 'llm-proxy.cjs'), platform: 'node', format: 'cjs', bundle: true, target: 'node22' });
 const pkg = JSON.parse(await readFile(path.join(desktop, 'package.json'), 'utf8'));
 await writeFile(path.join(out, 'package.json'), JSON.stringify({ name: pkg.name, productName: pkg.productName, version: pkg.version, author: pkg.author, main: 'main.cjs', description: pkg.description }, null, 2));
+const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: desktop, encoding: 'utf8' }).trim();
+await writeFile(path.join(out, 'web/release.json'), JSON.stringify({ release: `atlas-v${pkg.version}`, version: pkg.version, sourceCommit, builtAt: new Date().toISOString() }, null, 2) + '\n');
 console.log('Desktop resources prepared. Only compiled web assets and the runtime are included.');

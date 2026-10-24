@@ -57,7 +57,7 @@ if (!app.requestSingleInstanceLock()) {
       ...(process.platform === 'darwin' ? [{ label: '诸象 Atlas', submenu: [{ role: 'about' }, { type: 'separator' }, { role: 'hide' }, { role: 'quit' }] }] : []),
       { label: '编辑', submenu: [{ role: 'undo' }, { role: 'redo' }, { type: 'separator' }, { role: 'cut' }, { role: 'copy' }, { role: 'paste' }, { role: 'selectAll' }] },
       { label: '显示', submenu: [{ role: 'reload' }, { role: 'resetZoom' }, { role: 'zoomIn' }, { role: 'zoomOut' }, { role: 'togglefullscreen' }] },
-      { label: '帮助', submenu: [{ label: '下载与版本说明', click: () => openExternal('https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.0') }] },
+      { label: '帮助', submenu: [{ label: '下载与版本说明', click: () => openExternal('https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.1') }] },
     ];
     Menu.setApplicationMenu(Menu.buildFromTemplate(menu));
     createWindow();
