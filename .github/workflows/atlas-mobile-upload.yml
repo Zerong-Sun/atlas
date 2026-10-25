@@ -1,0 +1,44 @@
+name: Atlas mobile release upload
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing mobile tag with a draft release
+        required: true
+        type: string
+      build_run_id:
+        description: Successful Android build run ID
+        required: true
+        type: string
+permissions:
+  actions: read
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ inputs.tag }}
+      BUILD_RUN_ID: ${{ inputs.build_run_id }}
+    steps:
+      - name: Validate draft and source build
+        run: |
+          set -euo pipefail
+          test "$RELEASE_TAG" = atlas-mobile-v0.1.1
+          test "$BUILD_RUN_ID" = 40213546065
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+          test "$(gh run view "$BUILD_RUN_ID" --json conclusion --jq .conclusion)" = success
+      - name: Download and verify signed APK
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/atlas-mobile-package"
+          gh run download "$BUILD_RUN_ID" --name Atlas-mobile-v0.1.1-Android --dir "$RUNNER_TEMP/atlas-mobile-package"
+          cd "$RUNNER_TEMP/atlas-mobile-package"
+          test "$(gh run view "$BUILD_RUN_ID" --json headSha --jq .headSha)" = "$(jq -r .sourceCommit mobile-android-verification.json)"
+          test "$(jq -r .sha256 mobile-android-verification.json)" = "$(sha256sum Atlas-mobile-v0.1.1-Android.apk | cut -d ' ' -f 1)"
+          test "$(jq -r .bytes mobile-android-verification.json)" = "$(stat -c %s Atlas-mobile-v0.1.1-Android.apk)"
+          test "$(jq -r .onboardingVisible emulator-smoke.json)" = true
+      - name: Upload APK to draft release
+        run: gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/atlas-mobile-package/Atlas-mobile-v0.1.1-Android.apk" --clobber
