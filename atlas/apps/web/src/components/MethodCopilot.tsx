@@ -1,3 +1,4 @@
+import { getCultureSources } from "@atlas/method-data";
 import { createRequestGate } from "@/lib/requestGate";
 import { shouldReduceMotion } from "@/lib/motionPrefs";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -306,6 +307,7 @@ export function MethodCopilot() {
               )}
             </article>
           ))}
+          {getCultureSources(methodId).length > 0 && <details className="method-copilot__sources"><summary>解说参考文库与来源</summary><p>提供给 AI 的历史材料；回答中的 [资料id] 可在这里核查。</p><ul>{getCultureSources(methodId).map(source => <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">[{source.id}] {source.title} ↗</a></li>)}</ul></details>}
           {loading && <p className="method-copilot__loading">{loadingText}</p>}
         </div>
 

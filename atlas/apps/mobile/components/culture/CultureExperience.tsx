@@ -1,3 +1,4 @@
+import { CultureResearchPanel } from "./CultureResearchPanel";
 import { PrincipleScene } from "./PrincipleScene";
 import { useEffect, useRef, useState } from "react";
 import { AccessibilityInfo, Animated, AppState, Easing, Image, Linking, Pressable, StyleSheet, TextInput, View, type ImageSourcePropType } from "react-native";
@@ -83,7 +84,7 @@ export function CultureExperience({methodId}:{methodId:string}) {
   const [saved,setSaved]=useState(false);
   const [message,setMessage]=useState("");
   useEffect(()=>{
-    let alive=true;setExpanded(false);setStep(0);setNote("");setSaved(false);
+    let alive=true;setExpanded(false);setStep(0);setNote("");setSaved(false);setMessage("");
     void AsyncStorage.getItem(`atlas.culture.v1.${methodId}`).then(raw=>{
       if(!alive||!raw)return;
       try{const p=JSON.parse(raw);setNote(typeof p.note==="string"?p.note:"");setSaved(p.completed===true);}catch{}
@@ -98,7 +99,7 @@ export function CultureExperience({methodId}:{methodId:string}) {
   return <View style={styles.card}>
     <Pressable onPress={()=>setExpanded(v=>!v)} accessibilityRole="button" accessibilityState={{expanded}} style={styles.header}>
       <Image source={ART[lesson.scene]} style={styles.thumb} resizeMode="cover" accessibilityLabel={`${lesson.concept}文化主题插画`} />
-      <View style={styles.heading}><Text variant="caption" gold>文明小课 · {saved?"已学习":"约 1 分钟"}</Text><Text variant="body">{lesson.title}</Text><Text variant="caption" muted>{expanded?"收起课程 −":"看见 · 读懂 · 带走 ＋"}</Text></View>
+      <View style={styles.heading}><Text variant="caption" gold>文明小课 · {saved?"已学习":"约 3 分钟"}</Text><Text variant="body">{lesson.title}</Text><Text variant="caption" muted>{expanded?"收起课程 −":"看见 · 读懂 · 带走 ＋"}</Text></View>
     </Pressable>
     {expanded&&<View style={styles.body}>
       <View style={styles.tabs}>{TABS.map((title,i)=><Pressable key={title} accessibilityRole="tab" accessibilityState={{selected:step===i}} onPress={()=>setStep(i)} style={[styles.tab,step===i&&styles.selected]}><Text gold={step===i}>{i+1} {title}</Text></Pressable>)}</View>
@@ -111,6 +112,7 @@ export function CultureExperience({methodId}:{methodId:string}) {
       {lesson.sourceUrl?<Pressable accessibilityRole="link" onPress={()=>void Linking.openURL(lesson.sourceUrl!).catch(()=>setMessage("暂时无法打开来源，请检查网络。"))}><Text variant="caption" gold>查看资料 · {lesson.sourceTitle} ↗</Text></Pressable>:<Text variant="caption" muted>{lesson.sourceTitle}</Text>}
       {message?<Text variant="caption" accessibilityLiveRegion="polite">{message}</Text>:null}
     </View>}
+    <CultureResearchPanel methodId={methodId}/>
   </View>;
 }
 

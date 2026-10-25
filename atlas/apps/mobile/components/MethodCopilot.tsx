@@ -1,6 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "expo-router";
+import { getCultureSources, getMethod } from "@atlas/method-data";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
+  Linking,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -13,6 +16,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   DEFAULT_ANALYSIS_PROMPT,
+  createRequestGate,
   getMethodCopilotConfig,
   getMethodCopilotPromptsWithReport,
 } from "@atlas/method-core";
@@ -32,14 +36,24 @@ import { colors, radius, spacing } from "@/constants/theme";
 export function MethodCopilot() {
   const { open, setOpen, report, pendingAction, clearPendingAction } = useMethodCopilot();
   const { prefs } = useUiPrefs();
-  const methodId = report?.methodId ?? null;
+  const pathname = usePathname();
+  const routeMethod = pathname.startsWith("/methods/") ? pathname.split("/")[2] : pathname === "/dream" ? "dream" : null;
+  const methodId = report?.methodId ?? (routeMethod && getMethod(routeMethod) ? routeMethod : null);
   const config = getMethodCopilotConfig(methodId);
   const quickPrompts = getMethodCopilotPromptsWithReport(methodId, Boolean(report));
+  const [sourceError, setSourceError] = useState("");
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [turns, setTurns] = useState<MethodCopilotTurn[]>([]);
   const scrollRef = useRef<ScrollView>(null);
   const loadedEntryIdRef = useRef<string | null>(null);
+  const requestGate = useRef(createRequestGate());
+  const contextKey = `${pathname}:${report ? resolveArchiveEntryId(report) : "none"}`;
+  useLayoutEffect(() => {
+    requestGate.current.reset(); setLoading(false); setSourceError("");
+    return () => requestGate.current.reset();
+  }, [contextKey]);
+  useEffect(() => { setTurns([]); setInput(""); }, [methodId]);
 
   useEffect(() => {
     if (!report) {
@@ -50,7 +64,9 @@ export function MethodCopilot() {
     const entryId = resolveArchiveEntryId(report);
     if (loadedEntryIdRef.current === entryId) return;
     loadedEntryIdRef.current = entryId;
-    void getArchiveEntry(entryId).then((entry) => setTurns(entry?.interpretation ?? []));
+    let alive = true;
+    void getArchiveEntry(entryId).then((entry) => { if (alive) setTurns(entry?.interpretation ?? []); }).catch(() => {});
+    return () => { alive = false; };
   }, [report]);
 
   useEffect(() => {
@@ -70,7 +86,9 @@ export function MethodCopilot() {
   const submit = useCallback(
     async (text: string) => {
       const question = text.trim();
-      if (!question || loading) return;
+      if (!question) return;
+      const ticket = requestGate.current.begin();
+      if (ticket === null) return;
       setInput("");
       setLoading(true);
       const userTurn: MethodCopilotTurn = { role: "user", content: question };
@@ -82,6 +100,7 @@ export function MethodCopilot() {
         const reply = useAnalysis
           ? await askMethodCopilotAnalysis(methodId, question, turns, report)
           : await askMethodCopilot(methodId, question, turns);
+        if (!requestGate.current.isCurrent(ticket)) return;
         const turnsWithReply = [
           ...turnsWithUser,
           {
@@ -95,12 +114,16 @@ export function MethodCopilot() {
         ];
         setTurns(turnsWithReply);
         persistInterpretation(turnsWithReply);
+      } catch {
+        if (requestGate.current.isCurrent(ticket)) setTurns([...turnsWithUser, {role:"assistant",content:"解说暂不可用，请阅读页面文化文库或稍后重试。",degraded:true}]);
       } finally {
-        setLoading(false);
-        scrollRef.current?.scrollToEnd({ animated: true });
+        if (requestGate.current.isCurrent(ticket)) {
+          requestGate.current.finish(ticket); setLoading(false);
+          scrollRef.current?.scrollToEnd({ animated: true });
+        }
       }
     },
-    [loading, turns, report, methodId, persistInterpretation],
+    [turns, report, methodId, persistInterpretation],
   );
 
   return (
@@ -147,6 +170,7 @@ export function MethodCopilot() {
                 ))}
               </View>
             ))}
+            {getCultureSources(methodId).length > 0 && <View style={styles.section}><Text variant="label">解说参考文库与来源</Text><Text variant="caption" muted>回答中的 [资料id] 可在这里核查。</Text>{getCultureSources(methodId).map(source => <Pressable key={source.id} accessibilityRole="link" style={{minHeight:44,justifyContent:"center"}} onPress={() => { setSourceError(""); void Linking.openURL(source.url).catch(() => setSourceError("无法打开来源，请检查网络。")); }}><Text variant="caption" gold>[{source.id}] {source.title} ↗</Text></Pressable>)}{sourceError ? <Text accessibilityLiveRegion="polite">{sourceError}</Text> : null}</View>}
             {loading ? <ActivityIndicator color={colors.gold} style={styles.loader} /> : null}
           </ScrollView>
 

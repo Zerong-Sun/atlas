@@ -42,3 +42,5 @@ export {
   type MethodCopilotConfig,
   type MethodCopilotContext,
 } from "./methodCopilotPrompts.ts";
+
+export { createRequestGate } from "./requestGate.ts";

@@ -1,165 +1,152 @@
 {
-  "sourceSize": [
-    1448,
-    1086
-  ],
-  "artType": "AI-created cultural illustration; not historical evidence",
+  "version": 2,
+  "createdAt": "2026-10-25",
+  "artType": "AI-created watercolor/gouache-style cultural illustration; not human-painted or historical evidence",
+  "sourceSheet": "Preview assembled from 12 independently generated images; not a source for cropping.",
   "tiles": [
     {
       "id": "study",
-      "width": 362,
-      "height": 362,
-      "bytes": 49724,
-      "crop": [
-        0,
-        0,
-        362,
-        362
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 57028,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-f3951eb8-e443-40aa-a007-5cb5bd07b519.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "earth",
-      "width": 362,
-      "height": 362,
-      "bytes": 52966,
-      "crop": [
-        362,
-        0,
-        724,
-        362
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 56616,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-b993c5e3-f2b0-48da-909e-222cbf9f8f69.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "courtyard",
-      "width": 362,
-      "height": 362,
-      "bytes": 58594,
-      "crop": [
-        724,
-        0,
-        1086,
-        362
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 60020,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-6c854611-661a-442a-8b42-96b79b9c5f55.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "western",
-      "width": 362,
-      "height": 362,
-      "bytes": 47812,
-      "crop": [
-        1086,
-        0,
-        1448,
-        362
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 49584,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-a3ad595c-7715-4320-8b76-52f3d009f2f8.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "vedic",
-      "width": 362,
-      "height": 362,
-      "bytes": 41612,
-      "crop": [
-        0,
-        362,
-        362,
-        724
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 42886,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-e061f385-1a75-4d91-b425-604a8c9bcff3.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "cards",
-      "width": 362,
-      "height": 362,
-      "bytes": 51118,
-      "crop": [
-        362,
-        362,
-        724,
-        724
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 52886,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-54bef9bf-5298-46dd-a202-6060052ec803.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "runes",
-      "width": 362,
-      "height": 362,
-      "bytes": 64506,
-      "crop": [
-        724,
-        362,
-        1086,
-        724
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 74522,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-7ae6ae55-4431-4446-9381-7c1ee08cf22c.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "sand",
-      "width": 362,
-      "height": 362,
-      "bytes": 51788,
-      "crop": [
-        1086,
-        362,
-        1448,
-        724
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 44170,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-6886715d-5d23-4817-9699-d9daec3e8715.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "ritual",
-      "width": 362,
-      "height": 362,
-      "bytes": 44350,
-      "crop": [
-        0,
-        724,
-        362,
-        1086
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 52788,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-cdb29d55-b876-47a6-963e-dda8679189f7.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "coffee",
-      "width": 362,
-      "height": 362,
-      "bytes": 56340,
-      "crop": [
-        362,
-        724,
-        724,
-        1086
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 60964,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-f6c7a39d-c795-4003-aba7-31b70ac431b0.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "reflection",
-      "width": 362,
-      "height": 362,
-      "bytes": 35906,
-      "crop": [
-        724,
-        724,
-        1086,
-        1086
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 54056,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-4ab336e1-2d87-4daa-8a4e-24d76582a293.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     },
     {
       "id": "spain",
-      "width": 362,
-      "height": 362,
-      "bytes": 49880,
-      "crop": [
-        1086,
-        724,
-        1448,
-        1086
-      ],
-      "maxDisplayWidthAt2x": 181
+      "width": 512,
+      "height": 512,
+      "bytes": 61578,
+      "maxDisplayWidthAt2x": 256,
+      "sourceFile": "exec-3afca49b-a757-4dd4-9079-91bd309bf100.png",
+      "sourceSize": [
+        1254,
+        1254
+      ]
     }
   ]
 }

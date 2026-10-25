@@ -11,6 +11,7 @@ export default defineConfig({
     dedupe: ["react", "react-dom"],
     alias: {
       "@": path.resolve(__dirname, "src"),
+      "@atlas/llm-defaults": path.resolve(__dirname, "../../lib/llm-defaults.ts"),
       // The CJS entry bypasses Vite resolution via require(); use ESM so dedupe
       // applies to Router's hooks too in this React 18 / React 19 monorepo.
       "react-router": routerModule("react-router"),

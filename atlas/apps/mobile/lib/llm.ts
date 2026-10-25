@@ -85,7 +85,7 @@ async function resolveLlmConfig(overrides?: Partial<LlmSettings>): Promise<{
 function extractChoiceContent(choice?: LlmChoice): string {
   const message = choice?.message;
   if (!message) return "";
-  return message.content?.trim() || message.reasoning_content?.trim() || "";
+  return message.content?.trim() || "";
 }
 
 /** DeepSeek V4 defaults to thinking mode; disable for short probes and structured output. */
@@ -160,7 +160,8 @@ export async function llmComplete(
     }
 
     const data = (await res.json()) as LlmCompletionResponse;
-    const content = extractChoiceContent(data.choices?.[0]);
+    const choice = data.choices?.[0];
+    const content = choice?.finish_reason === "length" ? "" : extractChoiceContent(choice);
     return { content, degraded: !content };
   } catch (e) {
     console.warn("[llm] request error:", e);
@@ -194,7 +195,7 @@ export async function testLlmConnection(
 
     const data = (await res.json()) as LlmCompletionResponse;
     const choice = data.choices?.[0];
-    const content = extractChoiceContent(choice);
+    const content = choice?.finish_reason === "length" ? "" : extractChoiceContent(choice);
     if (!content) {
       const finishReason = choice?.finish_reason;
       if (finishReason === "length") {

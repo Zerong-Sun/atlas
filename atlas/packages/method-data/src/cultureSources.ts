@@ -1,0 +1,33 @@
+export type CultureSource = { id: string; title: string; url: string; institution: string; scope: string };
+const sourceRows: Array<[string, string, string, string, string]> = [
+  ["han-yu", "韩愈《殿中侍御史李君墓志铭》", "https://zh.wikisource.org/zh/殿中侍御史李君墓誌銘", "维基文库 · 古籍转录", "唐代对李虚中生辰术的记述，赞誉不等于准确率实验。"],
+  ["marriage", "《礼记·昏义》", "https://ja.wikisource.org/wiki/禮記/昏義", "维基文库 · 古籍转录", "婚礼与宗族关系，不证明周代已有现代四柱合婚。"],
+  ["tarot-morgan", "Tarot! Renaissance Symbols, Modern Visions", "https://www.themorgan.org/exhibitions/tarot", "Morgan Library & Museum", "15世纪宫廷牌戏与后世占卜用途的区别。"],
+  ["tarot-folger", "Fortune’s Fools: early tarot cards", "https://www.folger.edu/blogs/collation/fortunes-fools-early-tarot-cards/", "Folger Shakespeare Library", "18世纪后期的占卜关联，不支持古埃及起源说。"],
+  ["dream-bm", "The Dream Book · 1930,0710.2.3", "https://artsandculture.google.com/asset/the-dream-book/MwFiHsBS2T_Qug?hl=en", "British Museum · 馆方条目", "代尔麦地那梦书与书吏家庭传承，不是所有文化共享的梦义。"],
+  ["zuozhuan", "《左传·襄公九年》穆姜筮例", "https://zh.wikisource.org/wiki/春秋左氏傳/襄公#襄公九年", "维基文库 · 古籍转录", "文本中的占筮与伦理解释，不是独立验证的预测。"],
+  ["qimen-siku", "《遁甲演义》四库提要", "https://zh.wikisource.org/zh/遁甲演義_(四庫全書本)/全覽", "维基文库 · 古籍转录", "作者、官方编纂与清代对神授起源的质疑。"],
+  ["ziwei-catalog", "紫微斗数三卷 · rarecatx0428879", "https://rbook.ncl.edu.tw/NCLSearch/Search/SearchDetail?HasImage=&SourceID=1&item=1b36e75d6cb348bcafa51089508d41ccfDI3ODUxNA2.T5_fvtPg0BL_gp0oecUpf3kBMYmGj_Zu9aAWwhejGlk_&page=3538&sourceWhereString=&whereString=IChOVUxMSUYoQ3JlYXRlcl9OYW1lLCAnICcpIGlzIE5VTEwgYW5kIE5VTExJRihEb2N1bWVudF9Xcml0ZXIsICcgJykgaXMgTlVMTCBhbmQgTlVMTElGKEpvdXJuYWxfV3JpdGVyLCAnICcpIGlzIE5VTEwgKSA1.cHNKVlDaZLqmac_B_QboEZhR4vv4gJ8MEx7vCx6fK8U_", "国家图书馆 · 中文古籍联合目录", "《正统道藏》同名书的1923—1926年影印本记录；同名不保证算法相同。"],
+  ["liuyao-snu", "增删卜易 · 奎中2365-v.1-11", "https://kyudb.snu.ac.kr/book/view.do?book_cd=GC02365_00", "首尔大学奎章阁", "野鹤老人著、李文辉增删及1690年序的目录记录。"],
+  ["meihua-dalian", "梅花易数 · 清刻本五卷", "https://www.dl-library.net.cn/book/520/meihuayi--519020.html", "大连市图书馆", "目录注明“题（宋）邵雍撰”；题署不证明亲撰。"],
+  ["meihua-memory", "测字秘诀梅花易数", "https://tcmb.culture.tw/zh-tw/detail?id=26000237250&indexCode=MOCCOLLECTIONS", "文化部 · 国家文化记忆库", "国立台湾文学馆藏刊本与邵康节题署，不证实占验传说。"],
+  ["astrology-met", "Astronomy and Astrology in the Medieval Islamic World", "https://www.metmuseum.org/essays/astronomy-and-astrology-in-the-medieval-islamic-world", "The Metropolitan Museum of Art", "宫廷、集市占星与反对意见，不代表所有社群一致信仰。"],
+  ["astrology-morgan", "Astrological treatises · MS M.785", "https://www.themorgan.org/collection/astrological-treatises/144038", "Morgan Library & Museum", "阿布·马沙尔著作的拉丁改编与跨语言传播。"],
+  ["jaipur", "The Jantar Mantar, Jaipur", "https://whc.unesco.org/en/list/1338/", "UNESCO World Heritage Centre", "18世纪观测设施、王权与宇宙观；不证明应用的具体星盘解释。"],
+  ["number-sep", "Pythagoras", "https://plato.stanford.edu/entries/pythagoras/", "Stanford Encyclopedia of Philosophy · Carl Huffman", "早期数象征与后世归托的区别，不证明现代生日化简法的古代起源。"],
+  ["runes-nm", "Runes", "https://en.natmus.dk/historical-knowledge/historical-themes/runes/", "National Museum of Denmark", "日耳曼文字与日常铭文。"],
+  ["rune-magic", "Runic magic", "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/religion-magic-death-and-rituals/runic-magic/", "National Museum of Denmark", "萨迦故事与铭文证据须分开；不是现代抽符阵的考古证明。"],
+  ["geomancy-bm", "Divination equipment · 1888,0526.1", "https://islamicworld.britishmuseum.org/collection/RRM10451", "British Museum", "带图形与转盘的地占仪器实物。"],
+  ["geomancy-ox", "Power and Protection · Geomantic Tablet", "https://ashmolean.web.ox.ac.uk/sites/default/files/ashmolean/documents/media/ashmolean_press_release_-_power_and_protection_30.09.2016.pdf", "Ashmolean Museum · University of Oxford", "1241—1242年的地占仪和制作者署名，不验证占验。"],
+  ["temple", "抽签须知", "https://www.tiangong.org.tw/?act=menuinfo&ml_id=20241105015", "高雄市凤山天公庙", "该庙现行求签、筊杯规则，只代表这一社区，不是古代起源证据。"],
+  ["xunzi", "《荀子·非相》", "https://ctext.org/xunzi/fei-xiang/zh", "中国哲学书电子化计划 · 古籍转录", "先秦相术批评；依据中文原文，不采用页面AI英译。"],
+  ["palm-wellcome", "Palmistry · 1656年Indagine／Withers译本目录", "https://wellcomecollection.org/concepts/f59p25h8", "Wellcome Collection", "手相、相术与占星的出版传播，不证明身体决定命运。"],
+  ["fengshui-unesco", "Imperial Tombs of the Ming and Qing Dynasties", "https://whc.unesco.org/en/list/1004/", "UNESCO World Heritage Centre", "陵寝选址、礼制与权力，不是居家改运功效的证据。"],
+  ["lenormand-horniman", "Divination cards · 1970.18", "https://www.horniman.ac.uk/object/1970.18/", "Horniman Museum and Gardens", "36张雷诺曼牌与约1799年Hechtel《希望游戏》的联系。"],
+  ["oracle-publisher", "Ask Your Guides Oracle Cards · 56 cards", "https://penguinrandomhouselibrary.com/book/?isbn=9781401972943", "Penguin Random House／Hay House", "Sonia Choquette牌组2024版出版信息，营销文字不作为有效性证据。"],
+  ["coffee-unesco", "Turkish coffee culture and tradition · 00645", "https://ich.unesco.org/en/RL/turkish-coffee-culture-and-tradition-00645", "UNESCO Intangible Cultural Heritage", "待客、交谈、杯渣占卜及2013年入选名录；不是起源年份。"],
+  ["dee-study", "John Dee’s spirit mirror: provenance and context", "https://doi.org/10.15184/aqy.2021.132", "Antiquity · Campbell等（2021）", "黑曜石镜的墨西哥来源与Dee关联，材质溯源不证明超自然作用。"],
+];
+export const CULTURE_SOURCES: Record<string, CultureSource> = Object.fromEntries(
+  sourceRows.map(([id, title, url, institution, scope]) => [id, { id, title, url, institution, scope }]),
+);

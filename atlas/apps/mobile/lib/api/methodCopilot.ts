@@ -1,3 +1,4 @@
+import { getCultureLibraryReply } from "@atlas/method-data";
 import {
   getMethodCopilotAnalysisSkill,
   getMethodCopilotConfig,
@@ -29,10 +30,13 @@ function fallbackReply(
   methodId: string | null,
   question: string,
   context?: MethodCopilotContext,
+  reason: "missing-key" | "unavailable" = "unavailable",
 ): MethodCopilotReply {
+  const library = getCultureLibraryReply(methodId, reason);
+  if (library) return library;
   const config = getMethodCopilotConfig(methodId, context);
   return {
-    answer: "侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」。",
+    answer: reason === "missing-key" ? "侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」。" : "AI 解说暂不可用，请稍后重试或在设置中测试连接。",
     diagram: "",
     relatedTerms: config.quickPrompts.slice(0, 2),
     degraded: true,
@@ -67,6 +71,7 @@ function parseReply(
           )
           .slice(0, 8)
       : undefined;
+    if (!(typeof parsed.answer === "string" && parsed.answer.trim()) && !sections?.length) return fallbackReply(methodId, question, context);
     const answer = sanitizeText(
       parsed.answer,
       sections?.map((s) => `${s.title}\n${s.content}`).join("\n\n") ?? "暂时无法生成解释。",
@@ -80,12 +85,7 @@ function parseReply(
       degraded: false,
     };
   } catch {
-    return {
-      answer: sanitizeText(content, fallbackReply(methodId, question, context).answer, maxAnswerLen),
-      diagram: "",
-      relatedTerms: [],
-      degraded: false,
-    };
+    return fallbackReply(methodId, question, context);
   }
 }
 
@@ -99,7 +99,7 @@ export async function askMethodCopilot(
   if (!trimmed) return { answer: "请输入你想了解的内容。", diagram: "", relatedTerms: [] };
 
   const configured = await isLlmConfigured();
-  if (!configured) return fallbackReply(methodId, trimmed, context);
+  if (!configured) return fallbackReply(methodId, trimmed, context, "missing-key");
 
   const config = getMethodCopilotConfig(methodId, context);
   const messages: LlmMessage[] = [
@@ -128,7 +128,7 @@ export async function askMethodCopilotAnalysis(
   const analysisContext: MethodCopilotContext = {
     workbench: context?.workbench ?? report.source === "module",
   };
-  if (!configured) return fallbackReply(effectiveMethodId, trimmed, analysisContext);
+  if (!configured) return fallbackReply(effectiveMethodId, trimmed, analysisContext, "missing-key");
 
   const systemSkill = getMethodCopilotAnalysisSkill(effectiveMethodId, analysisContext);
   const reportBlock = `【当前页面报告】\n标题：${report.title}\n${report.summary ? `摘要：${report.summary}\n` : ""}---\n${report.body}\n---`;

@@ -4,6 +4,9 @@ from pathlib import Path
 import sys, json, shutil
 root=Path(__file__).resolve().parents[1]
 source=Path(sys.argv[1]);dest=root/'packages/method-data/assets/culture';dest.mkdir(parents=True,exist_ok=True)
+existing=dest/'manifest.json'
+if existing.exists() and json.loads(existing.read_text()).get('version',1)>=2:
+ raise SystemExit('Version 2 uses independent images. The source sheet is only a preview; do not slice it over final assets.')
 im=Image.open(source).convert('RGB');w,h=im.size
 names=['study','earth','courtyard','western','vedic','cards','runes','sand','ritual','coffee','reflection','spain']
 manifest=[]

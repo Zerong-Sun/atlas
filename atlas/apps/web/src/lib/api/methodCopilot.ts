@@ -1,3 +1,4 @@
+import { getCultureLibraryReply } from "@atlas/method-data";
 import {
   getMethodCopilotAnalysisSkill,
   getMethodCopilotConfig,
@@ -37,6 +38,8 @@ function fallbackReply(
   question: string,
   context?: MethodCopilotContext,
 ): MethodCopilotReply {
+  const library = getCultureLibraryReply(methodId, isLlmConfigured() ? "unavailable" : "missing-key");
+  if (library) return library;
   const config = getMethodCopilotConfig(methodId, context);
   const answer = isLlmConfigured()
     ? `解说请求失败，暂时无法针对「${question.slice(0, 40)}」生成 ${config.title} 回复。请稍后重试，或在设置中重新测试 LLM 连接。`
@@ -91,6 +94,7 @@ function parseReply(
       ? parsed.highlights.filter((t): t is string => typeof t === "string").slice(0, 5)
       : undefined;
     const sections = parseSections(parsed.sections);
+    if (!(typeof parsed.answer === "string" && parsed.answer.trim()) && !sections?.length) return fallbackReply(methodId, question, context);
     const answer = sanitizeText(
       parsed.answer,
       sections?.map((s) => `${s.title}\n${s.content}`).join("\n\n") ?? "暂时无法生成解释，请换个问法或查阅页面参考库。",
@@ -105,12 +109,7 @@ function parseReply(
       degraded: false,
     };
   } catch {
-    return {
-      answer: sanitizeText(content, fallbackReply(methodId, question, context).answer, maxAnswerLen),
-      diagram: "",
-      relatedTerms: [],
-      degraded: false,
-    };
+    return fallbackReply(methodId, question, context);
   }
 }
 
@@ -189,10 +188,7 @@ ${report.body}
   });
 
   if (res.degraded || !res.content) {
-    const answer = isLlmConfigured()
-      ? `解说请求失败，暂时无法解析「${report.title}」。请稍后重试，或在设置中重新测试 LLM 连接。`
-      : `侧栏解说尚未配置：请打开设置，填写 API Key 后点击「测试连接」（会自动保存）。`;
-    return { ...fallbackReply(effectiveMethodId, trimmed, analysisContext), answer };
+    return fallbackReply(effectiveMethodId, trimmed, analysisContext);
   }
 
   return parseReply(res.content, effectiveMethodId, trimmed, 4000, analysisContext);

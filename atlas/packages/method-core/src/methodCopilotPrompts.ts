@@ -1,4 +1,4 @@
-import { getMethod } from "@atlas/method-data";
+import { getMethod, getCultureContext } from "@atlas/method-data";
 
 export type MethodCopilotConfig = {
   title: string;
@@ -14,7 +14,7 @@ export type MethodCopilotContext = {
 const WORKBENCH_BOUNDARY =
   "边界：本页为参考文库 + 模板化 draft，按输入 hash 选象征填句，非真实演算或投掷。";
 
-const BASE_RULES = `你是「诸象 Atlas」侧栏解说助手，只回答与当前占卜体系相关的术语、结构与断法问题。
+const BASE_RULES = `你是「诸象 Atlas」侧栏解说助手，只回答与当前占卜体系相关的术语、结构、断法及历史文化问题。
 
 回复原则：
 1. 用该体系的专业语言解释，但让初学者能听懂；必要时对比常见误解。
@@ -178,7 +178,9 @@ const ANALYSIS_RULES = `你是「诸象 Atlas」报告解析助手。用户已�
 1. 必须基于报告中的具体数据（四柱、牌面、卦爻、星盘等）作答，引用关键要素，不可泛泛而谈。
 2. 用该体系专业语言解释，同时让初学者能跟上；必要时点出常见误读。
 3. 不做医疗、法律、投资之确定性结论；涉及重大决策时提醒「仅供参考」。
-4. 输出详尽但有条理，通常 5–7 个小节。
+4. 输出清楚且有条理，通常 5–7 个小节，每节最多 120 字；answer 只作短摘要，不重复全部小节。完整 JSON 优先，不要耗尽输出额度。
+5. 严格区分报告数据、传统象征、历史事实和现实建议。不得从卦象、牌面或星曜推断现实环境已经稳定、外部变量较少、未来必然怎样；这类符号只用于反思，不是现实证据。
+6. 无动爻只说明本次符号未变；若页面列出相同的本卦与变卦，应解释为本变相同，不否认页面数据。不得把无动爻说成现实没有变化。
 
 返回 JSON：
 {
@@ -186,7 +188,7 @@ const ANALYSIS_RULES = `你是「诸象 Atlas」报告解析助手。用户已�
   "sections": [
     { "title": "总览", "content": "…" },
     { "title": "核心依据", "content": "…" },
-    { "title": "趋势判断", "content": "…" },
+    { "title": "文化背景与象征", "content": "…" },
     { "title": "风险与矛盾", "content": "…" },
     { "title": "行动建议", "content": "…" },
     { "title": "可追问点", "content": "…" }
@@ -245,7 +247,7 @@ export function getMethodCopilotAnalysisSkill(
     skillKey && METHOD_SKILLS[skillKey]?.systemSkill
       ? METHOD_SKILLS[skillKey].systemSkill
       : `当前体系：${title}。按报告中的符号与结构进行深度解读。`;
-  return `${base}\n\n${focus}\n\n${ANALYSIS_RULES}`;
+  return `${base}\n\n${focus}\n\n${ANALYSIS_RULES}\n\n${getCultureContext(methodId)}`;
 }
 
 export function getMethodCopilotPromptsWithReport(
@@ -274,8 +276,8 @@ export function getMethodCopilotConfig(
     return {
       title,
       subtitle,
-      quickPrompts: skill.quickPrompts,
-      systemSkill: skill.systemSkill + "\n\n" + BASE_RULES,
+      quickPrompts: ["人们为什么使用这种方法？", "有哪些历史人物与证据？", ...skill.quickPrompts.slice(0, 2)],
+      systemSkill: skill.systemSkill + "\n\n" + BASE_RULES + "\n\n" + getCultureContext(methodId),
     };
   }
 
@@ -285,6 +287,6 @@ export function getMethodCopilotConfig(
     quickPrompts: [`${title}的基本流程`, "这个体系的核心符号", "初学者常犯的错误", "如何理解本次结果？"],
     systemSkill: `当前体系：${title}（${method?.tradition ?? "占卜"}）。
 ${method?.subtitle ?? ""}
-按该体系传统术语与结构回答，不确定处标明「各家说法不一」。\n\n${BASE_RULES}`,
+按该体系传统术语与结构回答，不确定处标明「各家说法不一」。\n\n${BASE_RULES}\n\n${getCultureContext(methodId)}`,
   };
 }
