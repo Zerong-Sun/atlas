@@ -9,7 +9,7 @@
 | [`fatequest/archive/`](fatequest/archive/) | 旧版本归档索引与初代网页快照（已冻结、不进 CI） |
 | [`atlas/`](atlas/) | 诸象 Atlas — Web / Expo 移动端 / Electron 桌面版，共享占卜引擎与文化内容 |
 
-下载与发布说明：[FateQuest v3.1.1](https://github.com/Zerong-Sun/atlas/releases/tag/v3.1.1) · [诸象 Atlas v0.2.1](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.1)。请下载发布页的运行包；Source code 是源码归档。
+下载与发布说明：[FateQuest v3.1.1](https://github.com/Zerong-Sun/atlas/releases/tag/v3.1.1) · [诸象 Atlas 桌面 v0.2.2](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.2) · [诸象 Atlas Android v0.1.1](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-mobile-v0.1.1)。请下载发布页的运行包；Source code 是源码归档。
 
 ## FateQuest（主 · Godot）
 
@@ -29,7 +29,7 @@ node tools/validate/validate.mjs                        # 内容门禁
 
 Windows x64 与 macOS 13+（Intel / Apple Silicon）桌面体验版可独立运行，离线打开方法页面与文化小课；AI 功能需要联网与用户自己的 API Key。安装和构建见 [`atlas/desktop/README.md`](atlas/desktop/README.md)，项目结构与手机开发见 [`atlas/README.md`](atlas/README.md)。
 
-网页与原生手机应用独立发布。原 Vercel 站点仍待登录后恢复，远程数据库未随桌面包迁移。
+Android 手机版体验包已发布；iOS TestFlight 尚未发布。原 Vercel 站点仍待登录后恢复，远程数据库未随桌面包迁移。
 
 ## 归档
 

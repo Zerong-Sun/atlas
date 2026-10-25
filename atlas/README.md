@@ -3,6 +3,7 @@
 > **状态：2026-10-25 桌面 v0.2.2 体验版已发布，Web / 手机继续独立维护。** 本目录是诸象 monorepo，与同仓库 [`fatequest/`](../fatequest/) 相互独立；**不与 FateQuest 共享构建或运行时依赖。**
 > 仓库主入口见根目录 [`README.md`](../README.md)。  
 > **网页发布状态：** Git 自动部署关闭，原 Vercel 站点暂停；新网页版本仍待原账号登录后手动部署。桌面离线包不依赖该站点。
+> **手机版发布状态：** [Android v0.1.1 APK 已发布](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-mobile-v0.1.1)；iOS 尚未发布 TestFlight。
 
 **面向全球文明的命理、占卜、占梦与预测方法对照应用。**
 
@@ -13,6 +14,8 @@
 **既有线上地址（不包含本次未部署的修改）：** [https://zhuxiang.vercel.app](https://zhuxiang.vercel.app)
 
 **桌面下载：** [Windows x64](https://github.com/Zerong-Sun/atlas/releases/download/atlas-v0.2.2/Atlas-v0.2.2-Windows-x64.zip) · [macOS 13+ Universal](https://github.com/Zerong-Sun/atlas/releases/download/atlas-v0.2.2/Atlas-v0.2.2-macOS-universal.zip) · [发布页与校验值](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-v0.2.2)。构建、安装和验证见 [`desktop/README.md`](desktop/README.md) 与 [`v0.2.2 发布记录`](docs/testing/release-desktop-0.2.2.md)。
+
+**手机版下载：** [Android v0.1.1 APK](https://github.com/Zerong-Sun/atlas/releases/download/atlas-mobile-v0.1.1/Atlas-mobile-v0.1.1-Android.apk) · [发布页与校验值](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-mobile-v0.1.1) · [验证记录](docs/testing/release-mobile-0.1.1.md)。iOS 仍需 Apple Developer 与 Expo 项目配置后才能发布可安装版本。
 
 ## 特性
 

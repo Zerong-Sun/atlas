@@ -1,5 +1,7 @@
 # 诸象 Atlas — Mobile (Expo)
 
+**Android v0.1.1 体验版已发布：** [下载安装 APK](https://github.com/Zerong-Sun/atlas/releases/download/atlas-mobile-v0.1.1/Atlas-mobile-v0.1.1-Android.apk) · [发布页和 SHA-256](https://github.com/Zerong-Sun/atlas/releases/tag/atlas-mobile-v0.1.1)。iOS 尚未发布 TestFlight；现有 iOS 构建与提交脚本需要 Expo 项目登录和 Apple 签名资料。
+
 Expo + React Native app with **expo-router** and six tabs: 今日 / 提问 / 占法 / 梦境 / 档案 / 设置。Mobile 端用于随手提问、抽取、记录和复盘，并与 Web 共享占法文化元数据和语言 / 文化偏好。
 
 ## Prerequisites
@@ -53,6 +55,8 @@ Then press `i` (iOS simulator), `a` (Android), or scan the QR code with **Expo G
 | `npm run build:mobile:ios` | EAS 云端打 iOS 包（TestFlight / App Store） |
 | `npm run submit:mobile:ios` | 提交最新 iOS 包到 App Store Connect |
 
+Android 已发布的 APK 由 [GitHub Actions](../../../.github/workflows/atlas-mobile-android.yml) 从本仓库源码构建、使用持久签名密钥签名并在 Android 虚拟机启动验证；它不依赖本机 EAS 登录。`npm run build:mobile:android` 仍是需要 Expo 登录与 EAS 项目关联的云构建命令。
+
 ## TestFlight 内测（iOS）
 
 前置：**Apple Developer 会员（中国区 ¥688/年）**、**Expo 账号**（免费）。
@@ -99,7 +103,8 @@ npm run submit:mobile:ios
 ### 图标
 
 App 图标：`assets/icon.png`（1024×1024）。修改后重新 `build:mobile:ios` 即可。
-| `npm test` (in `apps/mobile`) | Unit tests (`storage`, `uiPrefs`, `lenormandDeck`) |
+
+在本目录运行 `npm test` 可执行手机端单元测试。
 
 ## Screen map
 
