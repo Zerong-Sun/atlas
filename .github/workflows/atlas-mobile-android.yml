@@ -1,0 +1,93 @@
+name: Atlas mobile Android
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      EXPO_PUBLIC_SUPABASE_URL: ''
+      EXPO_PUBLIC_SUPABASE_ANON_KEY: ''
+      EXPO_PUBLIC_LLM_API_KEY: ''
+      EXPO_PUBLIC_MIMO_API_KEY: ''
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: atlas/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install dependencies and validate
+        run: |
+          npm ci --prefix atlas
+          npm run lint --prefix atlas
+          npm test --prefix atlas
+      - name: Generate Android project
+        working-directory: atlas/apps/mobile
+        run: npx expo prebuild --platform android --no-install
+      - name: Restore release signing key
+        env:
+          ATLAS_ANDROID_KEYSTORE_BASE64: ${{ secrets.ATLAS_ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          test -n "$ATLAS_ANDROID_KEYSTORE_BASE64"
+          printf '%s' "$ATLAS_ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/atlas-mobile-upload.p12"
+          chmod 600 "$RUNNER_TEMP/atlas-mobile-upload.p12"
+      - name: Configure signing and build APK
+        working-directory: atlas/apps/mobile
+        env:
+          ATLAS_ANDROID_KEYSTORE_FILE: ${{ runner.temp }}/atlas-mobile-upload.p12
+          ATLAS_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ATLAS_ANDROID_KEYSTORE_PASSWORD }}
+          ATLAS_ANDROID_KEY_ALIAS: atlas-mobile
+          ATLAS_ANDROID_KEY_PASSWORD: ${{ secrets.ATLAS_ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          node scripts/configure-android-signing.mjs
+          chmod +x android/gradlew
+          cd android
+          ./gradlew :app:assembleRelease --no-daemon
+      - name: Verify signed APK
+        working-directory: atlas/apps/mobile
+        run: |
+          set -euo pipefail
+          apk=android/app/build/outputs/apk/release/app-release.apk
+          test -s "$apk"
+          unzip -tq "$apk"
+          apksigner=$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -name apksigner | sort -V | tail -1)
+          aapt=$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -name aapt | sort -V | tail -1)
+          "$apksigner" verify --verbose --print-certs "$apk" > "$RUNNER_TEMP/atlas-apk-signature.txt"
+          "$aapt" dump badging "$apk" > "$RUNNER_TEMP/atlas-apk-badging.txt"
+          head -1 "$RUNNER_TEMP/atlas-apk-badging.txt" | grep "name='com.atlas.app' versionCode='2' versionName='0.1.1'"
+          mkdir -p release
+          cp "$apk" release/Atlas-mobile-v0.1.1-Android.apk
+          sha256sum release/Atlas-mobile-v0.1.1-Android.apk > release/SHA256SUMS-mobile.txt
+          node -e 'const fs=require("fs"),cp=require("child_process"); const pkg=require("./package.json"); const apk="release/Atlas-mobile-v"+pkg.version+"-Android.apk"; const hash=cp.execFileSync("sha256sum",[apk],{encoding:"utf8"}).split(" ")[0]; const sig=fs.readFileSync(process.env.RUNNER_TEMP+"/atlas-apk-signature.txt","utf8"); fs.writeFileSync("release/mobile-android-verification.json",JSON.stringify({version:pkg.version,versionCode:2,packageName:"com.atlas.app",sourceCommit:process.env.GITHUB_SHA,bytes:fs.statSync(apk).size,sha256:hash,signature:sig},null,2)+"\n")'
+      - name: Enable KVM for Android emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install and launch APK in Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          script: bash atlas/apps/mobile/scripts/smoke-android-emulator.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Atlas-mobile-v0.1.1-Android
+          path: |
+            atlas/apps/mobile/release/Atlas-mobile-v0.1.1-Android.apk
+            atlas/apps/mobile/release/SHA256SUMS-mobile.txt
+            atlas/apps/mobile/release/mobile-android-verification.json
+            atlas/apps/mobile/release/emulator-smoke.json
+            atlas/apps/mobile/release/atlas-mobile-onboarding.png
+          if-no-files-found: error
+          retention-days: 14

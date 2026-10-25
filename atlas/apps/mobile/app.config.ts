@@ -7,7 +7,7 @@ dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 const config: ExpoConfig = {
   name: "诸象 Atlas",
   slug: "atlas",
-  version: "0.1.0",
+  version: "0.1.1",
   orientation: "portrait",
   scheme: "atlas",
   userInterfaceStyle: "dark",
@@ -20,6 +20,7 @@ const config: ExpoConfig = {
   ios: {
     supportsTablet: true,
     bundleIdentifier: "com.atlas.app",
+    buildNumber: "2",
     infoPlist: {
       ITSAppUsesNonExemptEncryption: false,
     },
@@ -30,6 +31,7 @@ const config: ExpoConfig = {
       backgroundColor: "#0D0D0F",
     },
     package: "com.atlas.app",
+    versionCode: 2,
   },
   plugins: ["expo-router", ["expo-location", { locationWhenInUsePermission: "仅在你使用罗盘测朝向时读取设备方位；不上传位置。" }]],
   experiments: { typedRoutes: true },
