@@ -2,7 +2,7 @@ import { MethodActivity } from "./culture/MethodActivity";
 import { CultureExperience } from "./culture/CultureExperience";
 import { StyleSheet, View } from "react-native";
 import type { ReactNode } from "react";
-import { getMethodExperience } from "@atlas/method-data";
+import { getMethodExperience, METHOD_STORIES } from "@atlas/method-data";
 import { Text } from "@/components/ui/Text";
 import { colors, radius, spacing } from "@/constants/theme";
 
@@ -35,6 +35,7 @@ export function MethodHero({ methodId, kicker, title, description, activityKey }
         ) : null}
       </View>
     </View>
+    {METHOD_STORIES[methodId] ? <View style={styles.story}><Text variant="label" gold>先听一个小故事</Text><Text variant="body">{METHOD_STORIES[methodId]}</Text></View> : null}
     <CultureExperience methodId={methodId} />
     <MethodActivity methodId={methodId} activityKey={activityKey} />
     </>
@@ -55,4 +56,5 @@ const styles = StyleSheet.create({
   content: { flex: 1, gap: spacing.xs },
   kicker: { letterSpacing: 1 },
   desc: { marginTop: spacing.xs },
+  story: { padding: spacing.md, marginBottom: spacing.md, gap: spacing.xs, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
 });

@@ -2,6 +2,7 @@ import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { StyleSheet, TextInput, View, Linking, Pressable } from "react-native";
 import { castIChingFromLines } from "@atlas/engines/iching";
+import { getHexagramStory } from "@atlas/method-data";
 import { buildIchingReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
@@ -186,6 +187,7 @@ export function IchingScreen() {
             <HexagramDisplay lines={changingLines} title={`变卦 · ${result.changing.name}`} />
           </View>
           <Text variant="caption" muted>投掷记录（初爻 → 上爻）：{result.coinLines.join(" · ")}。{result.textNote}</Text>
+          <View style={styles.readingCard}><Text variant="label" gold>本卦故事 · {result.primary.name}</Text><Text variant="body">{getHexagramStory(result.primary.number, result.primary.name)}</Text><Text variant="body">{result.movingLines.length ? `这次第 ${result.movingLines.join("、")} 爻动。请先读这些爻辞，再把变卦${result.changing.name}当作下一幕，而非必然结局。` : "这次没有动爻。先以本卦的处境和卦辞为主，不需要虚构转折。"}</Text>{result.changing.number !== result.primary.number && <Text variant="body">下一幕：{getHexagramStory(result.changing.number, result.changing.name)}</Text>}</View>
           <Pressable accessibilityRole="link" onPress={()=>void Linking.openURL(result.primary.sourceUrl).catch(()=>{})}><Text variant="caption" gold>核对原典版本 · {result.primary.sourceTitle} ↗</Text></Pressable>
           <View style={styles.readingGrid}>
             <View style={styles.readingCard}>

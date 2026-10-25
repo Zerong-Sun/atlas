@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import { castMeihua, type MeihuaResult } from "@atlas/engines/meihua";
+import { hexagramNumber } from "@atlas/engines/iching";
+import { getHexagramStory } from "@atlas/method-data";
 import type { MeihuaMode } from "@atlas/shared-types";
 import { HexagramLines, type HexLine } from "@/components/charts/HexagramLines";
 import { MethodHistoryPanel } from "@/components/MethodHistoryPanel";
@@ -112,6 +114,7 @@ export function MeihuaPage() {
             </div>
           </div>
           <p className="meihua-summary">{result.summary}</p>
+          <article className="method-teaching-story"><strong>卦象小故事</strong><p>{getHexagramStory(hexagramNumber([...result.lower.lines, ...result.upper.lines]), `${result.upper.name}${result.lower.name}`)}</p><p>这里的上卦{result.upper.name}、下卦{result.lower.name}先组成当前处境。第 {result.movingLine} 爻变化后，再比较体卦{result.body.name}与用卦{result.use.name}的关系：{result.relation}。请把这个关系对应到你问的具体人和事。</p></article>
         </section>
       )}
 

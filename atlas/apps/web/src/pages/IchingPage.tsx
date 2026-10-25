@@ -2,6 +2,7 @@ import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { castIChingFromLines } from "@atlas/engines/iching";
+import { getHexagramStory } from "@atlas/method-data";
 import { HexagramLines } from "@/components/charts/HexagramLines";
 import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
@@ -137,6 +138,7 @@ export function IchingPage() {
             <HexagramLines lines={changingLines} title={`变卦 · ${result.changing.name}`} />
           </div>
           <p>投掷记录（初爻 → 上爻）：{result.coinLines.join(" · ")}。{result.textNote}</p>
+          <article className="method-teaching-story"><strong>本卦故事 · {result.primary.name}</strong><p>{getHexagramStory(result.primary.number, result.primary.name)}</p><p>{result.movingLines.length ? `这次第 ${result.movingLines.join("、")} 爻动。请先读这些爻辞，再把变卦${result.changing.name}当作下一幕，而非必然结局。` : "这次没有动爻。先以本卦的处境和卦辞为主，不需要虚构转折。"}</p>{result.changing.number !== result.primary.number && <p>下一幕：{getHexagramStory(result.changing.number, result.changing.name)}</p>}</article>
           <a href={result.primary.sourceUrl} target="_blank" rel="noreferrer">核对原典版本 · {result.primary.sourceTitle} ↗</a>
           <div className="reading-grid">
             <article>

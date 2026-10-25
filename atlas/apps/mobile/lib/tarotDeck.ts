@@ -10,7 +10,6 @@ export type TarotCard = {
   rank: string;
   name: string;
   nameEn: string;
-  image: string;
   keywords: string[];
   reversedKeywords: string[];
   upright: string;
@@ -18,8 +17,6 @@ export type TarotCard = {
   advice: string;
   element: string;
 };
-
-const COMMONS_FILE = "https://commons.wikimedia.org/wiki/Special:Redirect/file/";
 
 const MAJOR_DATA = [
   ["fool", "愚者", "The Fool", "RWS_Tarot_00_Fool.jpg", "0", ["开始", "自由", "信任"], ["鲁莽", "逃避", "缺乏准备"], "新的道路已经出现，真正的问题不是能不能开始，而是你是否愿意带着开放心态进入未知。", "逆位提示天真正在变成冒失，先确认边界、资源和后果。", "保留好奇，但给冒险加一个最低限度的安全绳。"],
@@ -71,14 +68,13 @@ const RANKS = [
 ] as const;
 
 export const TAROT_DECK: TarotCard[] = [
-  ...MAJOR_DATA.map(([id, name, nameEn, file, rank, keywords, reversedKeywords, upright, reversed, advice]) => ({
+  ...MAJOR_DATA.map(([id, name, nameEn, , rank, keywords, reversedKeywords, upright, reversed, advice]) => ({
     id,
     arcana: "major" as const,
     suit: "major" as const,
     rank,
     name,
     nameEn,
-    image: `${COMMONS_FILE}${file}`,
     keywords: [...keywords],
     reversedKeywords: [...reversedKeywords],
     upright,
@@ -87,7 +83,7 @@ export const TAROT_DECK: TarotCard[] = [
     element: "灵魂",
   })),
   ...Object.entries(SUITS).flatMap(([suitKey, suit]) =>
-    RANKS.map(([rankId, rankZh, rankEn, fileNo, rankTheme, uprightRank, reversedRank]) => {
+    RANKS.map(([rankId, rankZh, rankEn, , rankTheme, uprightRank, reversedRank]) => {
       const name = `${suit.label}${rankZh}`;
       return {
         id: `${suitKey}-${rankId}`,
@@ -96,7 +92,6 @@ export const TAROT_DECK: TarotCard[] = [
         rank: rankZh,
         name,
         nameEn: `${rankEn} of ${suit.en}`,
-        image: `${COMMONS_FILE}${suit.file}${fileNo}.jpg`,
         keywords: [rankTheme, ...suit.theme.split("、").slice(0, 2)],
         reversedKeywords: [suit.shadow.split("、")[0], "阻滞", "失衡"],
         upright: `${name}把「${rankTheme}」放进${suit.theme}之中：${uprightRank}`,
@@ -114,8 +109,9 @@ export function resolveTarotCard(name: string): TarotCard {
   return deckByName.get(normalizeTarotCardName(name)) ?? TAROT_DECK[0]!;
 }
 
-export function getTarotCardImageUri(name: string): string {
-  return resolveTarotCard(name).image;
+/** Key into TAROT_IMAGES; Expo bundles each mapped WebP with the app. */
+export function getTarotCardAssetId(name: string): string {
+  return resolveTarotCard(name).id;
 }
 
 export function getTarotDeck(mode: "major" | "full") {

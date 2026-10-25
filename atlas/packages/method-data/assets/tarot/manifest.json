@@ -1,0 +1,632 @@
+{
+  "artist": "Pamela Colman Smith",
+  "designer": "Arthur Edward Waite",
+  "edition": "1909–1910",
+  "conversion": "420px wide WebP quality 82; no crop or recoloring",
+  "cards": [
+    {
+      "id": "fool",
+      "file": "fool.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+      "sourceSha256": "81ef48e0f720e1515abe4b8d0a7e0b5e1d74e04de002c76fef150bb8889c7d02",
+      "license": "Public domain",
+      "bytes": 81194
+    },
+    {
+      "id": "magician",
+      "file": "magician.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_01_Magician.jpg",
+      "sourceSha256": "dc81e0e5c97b0ce24d152b89b5a79f350e0622248c5b90f002376c1f032de565",
+      "license": "Public domain",
+      "bytes": 82604
+    },
+    {
+      "id": "high-priestess",
+      "file": "high-priestess.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_02_High_Priestess.jpg",
+      "sourceSha256": "b31cdc36d4f79a1d54dac2bb4a86be07740e6640b1a70021b0143bae464b1c12",
+      "license": "Public domain",
+      "bytes": 90684
+    },
+    {
+      "id": "empress",
+      "file": "empress.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_03_Empress.jpg",
+      "sourceSha256": "d931753cd8833c85e630345fe15f81ce252b23d6c0d7cfb16ca93692ea80029a",
+      "license": "Public domain",
+      "bytes": 103890
+    },
+    {
+      "id": "emperor",
+      "file": "emperor.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_04_Emperor.jpg",
+      "sourceSha256": "bdee8f63626780e9996010ac3a56ea57e7ded2b5663b32235758852ea69c8fa1",
+      "license": "Public domain",
+      "bytes": 100032
+    },
+    {
+      "id": "hierophant",
+      "file": "hierophant.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_05_Hierophant.jpg",
+      "sourceSha256": "f46402eb82964c7150582fcb422a6a1983a287a981d3543d6e29a15ece7d0810",
+      "license": "Public domain",
+      "bytes": 98232
+    },
+    {
+      "id": "lovers",
+      "file": "lovers.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_06_Lovers.jpg",
+      "sourceSha256": "4b54791f43a4922139b8e21b0121ba65bc713d05542464177920ea8bfbf1d15b",
+      "license": "Public domain",
+      "bytes": 108026
+    },
+    {
+      "id": "chariot",
+      "file": "chariot.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_07_Chariot.jpg",
+      "sourceSha256": "3421a1c1d3b3318b3971cdf203400b7039b1ec4cc63b9d41fa4ac69524aeecbf",
+      "license": "Public domain",
+      "bytes": 91018
+    },
+    {
+      "id": "strength",
+      "file": "strength.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_08_Strength.jpg",
+      "sourceSha256": "b752f2a5fb22ae267cb7e17e52eb76a15dccdc41c30833967240ed059ad1314e",
+      "license": "Public domain",
+      "bytes": 79996
+    },
+    {
+      "id": "hermit",
+      "file": "hermit.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_09_Hermit.jpg",
+      "sourceSha256": "c1392e141ab0d90b45f7e2b4aca71a197f1632e3d7dee8d72a1aa00640ec3eca",
+      "license": "Public domain",
+      "bytes": 58714
+    },
+    {
+      "id": "wheel",
+      "file": "wheel.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_10_Wheel_of_Fortune.jpg",
+      "sourceSha256": "aec10b3ec095a64cc0d7ad9088235ae8e8238f3767b7e18453935de8c367e6cf",
+      "license": "Public domain",
+      "bytes": 97682
+    },
+    {
+      "id": "justice",
+      "file": "justice.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "sourceSha256": "60fa4d28e503fae6fcdb41659e81d67644ee7ffcb2a10c687eb9151e56ee3760",
+      "license": "Public domain",
+      "bytes": 96102
+    },
+    {
+      "id": "hanged-man",
+      "file": "hanged-man.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_12_Hanged_Man.jpg",
+      "sourceSha256": "f332d1f37dcd525a4f8235defc8a770a20b5ac98c02a064793fa13fb1b927681",
+      "license": "Public domain",
+      "bytes": 96244
+    },
+    {
+      "id": "death",
+      "file": "death.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_13_Death.jpg",
+      "sourceSha256": "34abc6c03bb89b9f8dab70072e00fb1fe7cd98c9169d6f8940ed1abdc05d8c80",
+      "license": "Public domain",
+      "bytes": 101796
+    },
+    {
+      "id": "temperance",
+      "file": "temperance.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_14_Temperance.jpg",
+      "sourceSha256": "0cf0e70eed707ebe6cc05c0c2a29a6feca1562d5c52756667ce9125864e69f54",
+      "license": "Public domain",
+      "bytes": 106526
+    },
+    {
+      "id": "devil",
+      "file": "devil.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_15_Devil.jpg",
+      "sourceSha256": "ecda1927d708e5b58d927d99b838907fc25aa456ed5aba00a66b829792994ea5",
+      "license": "Public domain",
+      "bytes": 80090
+    },
+    {
+      "id": "tower",
+      "file": "tower.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_16_Tower.jpg",
+      "sourceSha256": "2458b33bdc434cafa9c7b31eb2eb48254c34e8b5af3b809ede8caedc42698ce3",
+      "license": "Public domain",
+      "bytes": 75282
+    },
+    {
+      "id": "star",
+      "file": "star.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_17_Star.jpg",
+      "sourceSha256": "6883025883a3befcc151c916ab3e93f8131c59318958cc20a16d4af6bc56d3f3",
+      "license": "Public domain",
+      "bytes": 84038
+    },
+    {
+      "id": "moon",
+      "file": "moon.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_18_Moon.jpg",
+      "sourceSha256": "4fd680fff8c482806a214b9044d0d22ecef7738066e7905fa013ca3b39f18bba",
+      "license": "Public domain",
+      "bytes": 86558
+    },
+    {
+      "id": "sun",
+      "file": "sun.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
+      "sourceSha256": "343bfa7a8b63f58172d77f2538d747adde042446c710191242bdcfbfc8b13dd4",
+      "license": "Public domain",
+      "bytes": 103112
+    },
+    {
+      "id": "judgement",
+      "file": "judgement.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_20_Judgement.jpg",
+      "sourceSha256": "5a830d1fcc410dfca2add1790dc5e3063e369e81ac852f1c92ee3074c7d98322",
+      "license": "Public domain",
+      "bytes": 100218
+    },
+    {
+      "id": "world",
+      "file": "world.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_21_World.jpg",
+      "sourceSha256": "053d14d007c88979bfcbe9557ebda52257fe5151b8d7309babe33bcc2a8cc51c",
+      "license": "Public domain",
+      "bytes": 98362
+    },
+    {
+      "id": "wands-ace",
+      "file": "wands-ace.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands01.jpg",
+      "sourceSha256": "1fa60392add910fab7724a774ffe408a109db203d8e63bd0d13bca8fd9e0d66d",
+      "license": "Public domain",
+      "bytes": 87142
+    },
+    {
+      "id": "wands-two",
+      "file": "wands-two.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands02.jpg",
+      "sourceSha256": "83739da7593193081abea905f0f31b41ebdefb2fb6fa0e3707c7dcafbf1e5882",
+      "license": "Public domain",
+      "bytes": 84798
+    },
+    {
+      "id": "wands-three",
+      "file": "wands-three.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands03.jpg",
+      "sourceSha256": "b516eef08d7296740798eaddb15c815e118a392e419a6be195d42f2f30fe8ada",
+      "license": "Public domain",
+      "bytes": 94366
+    },
+    {
+      "id": "wands-four",
+      "file": "wands-four.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands04.jpg",
+      "sourceSha256": "9a39c595acd213c9179d41612499b1d7b15259cef1a291e7389753efff5173b9",
+      "license": "Public domain",
+      "bytes": 80262
+    },
+    {
+      "id": "wands-five",
+      "file": "wands-five.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands05.jpg",
+      "sourceSha256": "a4797267f1231d76c85f208e3df19e583cfba142aeac43169df81f308a4bc65f",
+      "license": "Public domain",
+      "bytes": 82954
+    },
+    {
+      "id": "wands-six",
+      "file": "wands-six.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands06.jpg",
+      "sourceSha256": "55cd0384642db6f837fc9caaf0f202b4bba72287ce9090b20835ca06b0cd1b9c",
+      "license": "Public domain",
+      "bytes": 89060
+    },
+    {
+      "id": "wands-seven",
+      "file": "wands-seven.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands07.jpg",
+      "sourceSha256": "4781db1bf523287a7bd8eb3218cc9dad7fb6e13cae1c6603f099f75339b936a5",
+      "license": "Public domain",
+      "bytes": 68136
+    },
+    {
+      "id": "wands-eight",
+      "file": "wands-eight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands08.jpg",
+      "sourceSha256": "15b09c8a556e2e18d64baa84f5f5b364ec3e92a7c0920e274190e3f98286f07e",
+      "license": "Public domain",
+      "bytes": 67280
+    },
+    {
+      "id": "wands-nine",
+      "file": "wands-nine.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands09.jpg",
+      "sourceSha256": "97f44787044bc4b14318d9ede943261965f07acd259d7e573b7645ba1263795a",
+      "license": "Public domain",
+      "bytes": 88608
+    },
+    {
+      "id": "wands-ten",
+      "file": "wands-ten.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands10.jpg",
+      "sourceSha256": "78bc70a7f09b55fe570bcbb3c147dde8e7c50a796447443279cbc0de1c607c11",
+      "license": "Public domain",
+      "bytes": 79292
+    },
+    {
+      "id": "wands-page",
+      "file": "wands-page.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands11.jpg",
+      "sourceSha256": "76338cd7b366d70eb49ec5d23fe841c0e551a44c8691f1d556feacdd20099204",
+      "license": "Public domain",
+      "bytes": 95980
+    },
+    {
+      "id": "wands-knight",
+      "file": "wands-knight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands12.jpg",
+      "sourceSha256": "ccd5e21f20eb6043d37b44cddfd0c63130aa3c2334418fe9a8bfff86eee47ed9",
+      "license": "Public domain",
+      "bytes": 103082
+    },
+    {
+      "id": "wands-queen",
+      "file": "wands-queen.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands13.jpg",
+      "sourceSha256": "b682f80a598b12ed400168a01ce1a28b535a845572f34935636cca6ad5c3b069",
+      "license": "Public domain",
+      "bytes": 105266
+    },
+    {
+      "id": "wands-king",
+      "file": "wands-king.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands14.jpg",
+      "sourceSha256": "c1dd2dfa1f3b28ce3b2a839d26753195ebe7a22e01bb6abcf410193b253dfd28",
+      "license": "Public domain",
+      "bytes": 108602
+    },
+    {
+      "id": "cups-ace",
+      "file": "cups-ace.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups01.jpg",
+      "sourceSha256": "196fe83b0629c949173c0d1e85bee7a0534cdaaa89b07a0e1a54f7f99692665f",
+      "license": "Public domain",
+      "bytes": 96058
+    },
+    {
+      "id": "cups-two",
+      "file": "cups-two.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+      "sourceSha256": "fae0bf47ec66e52a357b6355beef2f61d77a6ca512f2b56ef0be1b68e9e8167c",
+      "license": "Public domain",
+      "bytes": 93496
+    },
+    {
+      "id": "cups-three",
+      "file": "cups-three.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups03.jpg",
+      "sourceSha256": "73c9dc1d843290594556243e2243006e80fe481d012cf0ffbd0f4b1ac748dc3d",
+      "license": "Public domain",
+      "bytes": 94596
+    },
+    {
+      "id": "cups-four",
+      "file": "cups-four.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
+      "sourceSha256": "112aa2185b7e5e76a65c2a88e980be837d4c388863c8aeefe6a105aa40ae82cb",
+      "license": "Public domain",
+      "bytes": 77214
+    },
+    {
+      "id": "cups-five",
+      "file": "cups-five.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
+      "sourceSha256": "f053654e95144aa2884af165dd6836726c2ce34a015efe876ac812bece109384",
+      "license": "Public domain",
+      "bytes": 55694
+    },
+    {
+      "id": "cups-six",
+      "file": "cups-six.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups06.jpg",
+      "sourceSha256": "6a475f362bccb417021cfb4afc7cc9d1b8611c3e5813437d694c4946fc9c662c",
+      "license": "Public domain",
+      "bytes": 107932
+    },
+    {
+      "id": "cups-seven",
+      "file": "cups-seven.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
+      "sourceSha256": "8dfa1fc202235caca7874d124c9a08df7696667277d87ce164fffb7f10c1bd5e",
+      "license": "Public domain",
+      "bytes": 82808
+    },
+    {
+      "id": "cups-eight",
+      "file": "cups-eight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
+      "sourceSha256": "8f453a4e331fecaa8b36de3079371e959b7cf69b1d369d272ac7c8573dd1d1cc",
+      "license": "Public domain",
+      "bytes": 79310
+    },
+    {
+      "id": "cups-nine",
+      "file": "cups-nine.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
+      "sourceSha256": "b6529809e0983fda81ed6e7e8416183b9980d8b594f2070fa187e2b119122af4",
+      "license": "Public domain",
+      "bytes": 86358
+    },
+    {
+      "id": "cups-ten",
+      "file": "cups-ten.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups10.jpg",
+      "sourceSha256": "9eedc34a3ac484574a53453d3ce43cabc2825446229e463fe7af2499d0f3c408",
+      "license": "Public domain",
+      "bytes": 97982
+    },
+    {
+      "id": "cups-page",
+      "file": "cups-page.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups11.jpg",
+      "sourceSha256": "52eff668c9d69d9f46d3b57888bd249e68c787f42163ec29c29c767f8fe3785d",
+      "license": "Public domain",
+      "bytes": 97184
+    },
+    {
+      "id": "cups-knight",
+      "file": "cups-knight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
+      "sourceSha256": "6ca1fc2421a261731b817f416b9ef705857910398eae679b0ac195b0e7a4a423",
+      "license": "Public domain",
+      "bytes": 94552
+    },
+    {
+      "id": "cups-queen",
+      "file": "cups-queen.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups13.jpg",
+      "sourceSha256": "344edded16a925fe6cba6c7a6a67274b58387ac6422d4169a1f16ac29eac8dfc",
+      "license": "Public domain",
+      "bytes": 90182
+    },
+    {
+      "id": "cups-king",
+      "file": "cups-king.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups14.jpg",
+      "sourceSha256": "4b819f5e4779b778fc3d5b357c806b3ae88b930c2e4d4f6db3f53007cebbe92f",
+      "license": "Public domain",
+      "bytes": 94196
+    },
+    {
+      "id": "swords-ace",
+      "file": "swords-ace.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+      "sourceSha256": "12b55986924c015088d8dfb928d7162bb8c98540d969cfd0c88e2611a0c233d1",
+      "license": "Public domain",
+      "bytes": 85492
+    },
+    {
+      "id": "swords-two",
+      "file": "swords-two.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords02.jpg",
+      "sourceSha256": "83739c82c16edada50879800b3796a4f312519f201162db02c22c52cb814205d",
+      "license": "Public domain",
+      "bytes": 74844
+    },
+    {
+      "id": "swords-three",
+      "file": "swords-three.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords03.jpg",
+      "sourceSha256": "9709119a56ffd77bcb6f5762641c8f6dd4fdd83c8e3a4e2bf6b5d9aa4b2a66f6",
+      "license": "Public domain",
+      "bytes": 65168
+    },
+    {
+      "id": "swords-four",
+      "file": "swords-four.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
+      "sourceSha256": "92ab8c8ff411986b97d7bf4b2867bc2b40b003bdd6ecde692cc7d9c7d9975d54",
+      "license": "Public domain",
+      "bytes": 84302
+    },
+    {
+      "id": "swords-five",
+      "file": "swords-five.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+      "sourceSha256": "7db5b5eb71f96d05a9392ed62963a770f12fc7d54a947952dfa7d9b3352bfa1b",
+      "license": "Public domain",
+      "bytes": 91398
+    },
+    {
+      "id": "swords-six",
+      "file": "swords-six.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords06.jpg",
+      "sourceSha256": "59737dbc64587c3a9ad3d15a233e7031fa75be6af14ed6d5fdf0e8cd1c98ba46",
+      "license": "Public domain",
+      "bytes": 91544
+    },
+    {
+      "id": "swords-seven",
+      "file": "swords-seven.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
+      "sourceSha256": "d181662f02af515559fc17833866d0e413867004e45aa176659d50628743ff41",
+      "license": "Public domain",
+      "bytes": 74026
+    },
+    {
+      "id": "swords-eight",
+      "file": "swords-eight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
+      "sourceSha256": "de8a5460b8df6ffa1ae7390bcd0c430ad0ff86318b2eb3b4795d7f16e4891c06",
+      "license": "Public domain",
+      "bytes": 92342
+    },
+    {
+      "id": "swords-nine",
+      "file": "swords-nine.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
+      "sourceSha256": "05119d97443827981d2007acd8f006babe3f164a332ff84a1097a34f8f8f00c6",
+      "license": "Public domain",
+      "bytes": 74920
+    },
+    {
+      "id": "swords-ten",
+      "file": "swords-ten.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+      "sourceSha256": "1deb74dbf7c6fd6342608e1ea61076a92dc09149c02a8ac660d5ad1d990e6df7",
+      "license": "Public domain",
+      "bytes": 69884
+    },
+    {
+      "id": "swords-page",
+      "file": "swords-page.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+      "sourceSha256": "d127253f3a151b33b6cbbaee122f5b7bab4d18794f49224995c29eaec8862486",
+      "license": "Public domain",
+      "bytes": 88696
+    },
+    {
+      "id": "swords-knight",
+      "file": "swords-knight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+      "sourceSha256": "29689002357513e52b32b3dd283ce536d1df793b22ea55bdaa16faaa451045b4",
+      "license": "Public domain",
+      "bytes": 88894
+    },
+    {
+      "id": "swords-queen",
+      "file": "swords-queen.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords13.jpg",
+      "sourceSha256": "5863c37400de75d9acbbc8a457787d8b7df6bda465d33ca8646ad039a444c3a4",
+      "license": "Public domain",
+      "bytes": 81868
+    },
+    {
+      "id": "swords-king",
+      "file": "swords-king.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
+      "sourceSha256": "8eb8ef65bffad301300637ba73cf95b310eb4d51bbb863c9a9048a2c04f0935e",
+      "license": "Public domain",
+      "bytes": 94396
+    },
+    {
+      "id": "pentacles-ace",
+      "file": "pentacles-ace.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents01.jpg",
+      "sourceSha256": "70fbc0c82e18f4649e09c2d73d2218c5612b143c8067c4d0e4e73f7bfa6e6fbc",
+      "license": "Public domain",
+      "bytes": 88632
+    },
+    {
+      "id": "pentacles-two",
+      "file": "pentacles-two.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents02.jpg",
+      "sourceSha256": "6177b7da6d6c6c16679b6dc553064bc3d459cae2fdc968821b596525f74a5439",
+      "license": "Public domain",
+      "bytes": 88282
+    },
+    {
+      "id": "pentacles-three",
+      "file": "pentacles-three.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
+      "sourceSha256": "4f69140e974e46d2bfc856c9389679fba70d5078bc2dea38f0a8582b70bcd24a",
+      "license": "Public domain",
+      "bytes": 91188
+    },
+    {
+      "id": "pentacles-four",
+      "file": "pentacles-four.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents04.jpg",
+      "sourceSha256": "47cc5572df239f3d8e4b60d558fc422a224a3c77110b4632db03bd9b8ec8f93d",
+      "license": "Public domain",
+      "bytes": 80392
+    },
+    {
+      "id": "pentacles-five",
+      "file": "pentacles-five.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
+      "sourceSha256": "939a665f193b21bd2310b1c899374a876b7e4456a7c3d41f4450d54477456620",
+      "license": "Public domain",
+      "bytes": 99822
+    },
+    {
+      "id": "pentacles-six",
+      "file": "pentacles-six.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
+      "sourceSha256": "7bc6caa7bb57fabd939c92ecdc2705335266107b151d89a9f52e2014748f6958",
+      "license": "Public domain",
+      "bytes": 89116
+    },
+    {
+      "id": "pentacles-seven",
+      "file": "pentacles-seven.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents07.jpg",
+      "sourceSha256": "08a3d6246e3bf5549db3a87a6ec534ea031df581c565b96781ca25def8c712a3",
+      "license": "Public domain",
+      "bytes": 97782
+    },
+    {
+      "id": "pentacles-eight",
+      "file": "pentacles-eight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
+      "sourceSha256": "f6d7fc0d5525408452461f3aead914f015495e7ce647fe7d0f2b793d1aa7aa95",
+      "license": "Public domain",
+      "bytes": 88608
+    },
+    {
+      "id": "pentacles-nine",
+      "file": "pentacles-nine.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents09.jpg",
+      "sourceSha256": "8d7c13ff65ed894d47474b9b792da2b0eb4c5302bc4fada27e5248bbf0918c0d",
+      "license": "Public domain",
+      "bytes": 88174
+    },
+    {
+      "id": "pentacles-ten",
+      "file": "pentacles-ten.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents10.jpg",
+      "sourceSha256": "1fad26694b4ac98e7f50d5119212e4790cf16608a22492791e6d9a9d33cd69ca",
+      "license": "Public domain",
+      "bytes": 104424
+    },
+    {
+      "id": "pentacles-page",
+      "file": "pentacles-page.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents11.jpg",
+      "sourceSha256": "d2f350036fb239b660587c11f9aa607d851909b8f8ed4d559740ef2820ca8d5d",
+      "license": "Public domain",
+      "bytes": 72516
+    },
+    {
+      "id": "pentacles-knight",
+      "file": "pentacles-knight.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents12.jpg",
+      "sourceSha256": "52cf89227652976167455e4f7970772a9a026d3f5d844674df486830c008d067",
+      "license": "Public domain",
+      "bytes": 64430
+    },
+    {
+      "id": "pentacles-queen",
+      "file": "pentacles-queen.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents13.jpg",
+      "sourceSha256": "754e70ad0bb372b66647b7bd5824100cc3504f06cb2d9e1c819efacb4936c345",
+      "license": "Public domain",
+      "bytes": 107968
+    },
+    {
+      "id": "pentacles-king",
+      "file": "pentacles-king.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
+      "sourceSha256": "1e5bb46a6eba35e085cc01fc08bed142753b22af3f6fb5d95d49352c158a29c9",
+      "license": "Public domain",
+      "bytes": 89032
+    }
+  ]
+}

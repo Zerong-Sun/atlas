@@ -44,3 +44,4 @@ export {
 } from "./methodCopilotPrompts.ts";
 
 export { createRequestGate } from "./requestGate.ts";
+export { COMPASS_MOUNTAINS, normalizeBearing, sittingFromFacing, bearingFromPoint, bearingDetails, absoluteHeading, luopanSvg, coinSvg } from './instruments.ts';

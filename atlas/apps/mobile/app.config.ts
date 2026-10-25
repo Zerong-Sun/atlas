@@ -31,7 +31,7 @@ const config: ExpoConfig = {
     },
     package: "com.atlas.app",
   },
-  plugins: ["expo-router"],
+  plugins: ["expo-router", ["expo-location", { locationWhenInUsePermission: "仅在你使用罗盘测朝向时读取设备方位；不上传位置。" }]],
   experiments: { typedRoutes: true },
   extra: {
     supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,

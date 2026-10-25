@@ -1,3 +1,4 @@
+import { TAROT_DECK } from "@/data/tarotDeck";
 import { useMemo, useState } from "react";
 import { drawTarotSpread } from "@atlas/engines/tarot";
 import { Button } from "@/components/ui/Button";
@@ -72,7 +73,7 @@ export function TarotDrawPanel({ onUseSpread, loading }: Props) {
             <span className="position">{item.position}</span>
             {isDrawnCard(item) ? (
               <>
-                <strong>{item.card.name}</strong>
+                <img src={TAROT_DECK.find(card=>card.name===item.card.name)?.image} alt={item.card.name} style={{width:"100%",maxHeight:240,objectFit:"contain"}}/><strong>{item.card.name}</strong>
                 <span className="orientation">{item.reversed ? "逆位" : "正位"}</span>
                 <p>{item.card.keywords.join(" / ")}</p>
               </>

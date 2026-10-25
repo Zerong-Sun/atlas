@@ -1,10 +1,11 @@
+import { TAROT_IMAGES } from "@/lib/tarotAssets";
+import { buildTarotSpreadStory, getTarotCardStory } from "@atlas/method-data";
 import { useMemo, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, View } from "react-native";
 import {
   drawTarotSpread,
   interpretTarot,
   TAROT_SPREADS,
-  toInterpretTarotCards,
   type TarotSpreadResult,
 } from "@atlas/engines/tarot";
 import { buildTarotReportSnapshot } from "@atlas/method-core";
@@ -71,7 +72,7 @@ export function TarotScreen() {
           const full = resolveTarotCard(drawn.name);
           return { ...full, position: drawn.position, reversed: drawn.reversed };
         });
-        const interp = interpretTarot(toInterpretTarotCards(result.cards), { question });
+        const interp = interpretTarot(next, { question });
         const id = buildMethodReadingEntryId("tarot");
         setCards(next);
         setSpreadResult(result);
@@ -141,7 +142,7 @@ export function TarotScreen() {
         methodId="tarot"
         kicker="TAROT"
         title="塔罗抽卡"
-        description="三张牌阵（过去·现在·未来），大阿卡那牌组。问题宜具体，一事一占。"
+        description="可选一牌、三牌与多种主题牌阵，使用大阿卡那或完整 78 张牌。先明确问题，再看牌面与位置，最后核对现实线索。"
       />
 
       <View style={styles.workbench}>
@@ -217,7 +218,7 @@ export function TarotScreen() {
                 reversed={card.reversed}
                 index={index}
                 compact={compactCards}
-                imageUri={card.image}
+                imageSource={TAROT_IMAGES[card.id]}
                 cardName={card.name}
                 meta={
                   <View style={styles.cardMeta}>
@@ -260,6 +261,7 @@ export function TarotScreen() {
           <Text variant="body" muted>
             {combo}
           </Text>
+          <View style={styles.section}><Text variant="label" gold>本次牌阵的小故事</Text><Text variant="body">{buildTarotSpreadStory(cards)}</Text></View>
 
           <View style={styles.section}>
             <Text variant="label">单牌释义</Text>
@@ -268,6 +270,9 @@ export function TarotScreen() {
                 <Text variant="body">
                   {card.position}：{card.name}
                   {card.reversed ? "（逆位）" : "（正位）"}
+                </Text>
+                <Text variant="caption" muted>
+                  {getTarotCardStory(card.id, card.name, card.reversed)}
                 </Text>
                 <Text variant="caption" muted>
                   {card.reversed ? card.reversedMeaning : card.upright}

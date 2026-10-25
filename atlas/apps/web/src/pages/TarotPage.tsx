@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { drawTarotSpread, interpretTarot, normalizeTarotCardName, toInterpretTarotCards } from "@atlas/engines/tarot";
+import { buildTarotSpreadStory, getTarotCardStory } from "@atlas/method-data";
+import { drawTarotSpread, interpretTarot, normalizeTarotCardName } from "@atlas/engines/tarot";
 import {
   TAROT_DECK,
   buildTarotCombination,
@@ -60,6 +61,7 @@ export function TarotPage() {
   const [lastDraw, setLastDraw] = useState("");
   const [lastDrawId, setLastDrawId] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryItem[]>(() => getTarotDrawHistory());
+  const [selectedHistoryId, setSelectedHistoryId] = useState<string | null>(null);
   const [senseCardId, setSenseCardId] = useState("");
   const [senseFields, setSenseFields] = useState<Record<string, string>>({});
   const [copyState, setCopyState] = useState("");
@@ -77,8 +79,17 @@ export function TarotPage() {
       const matchesSuit = suitFilter === "all" || card.suit === suitFilter;
       const text = [card.name, card.nameEn, card.rank, card.element, ...card.keywords, ...card.reversedKeywords].join(" ").toLowerCase();
       return matchesSuit && (!q || text.includes(q));
-    }).slice(0, 16);
+    });
   }, [libraryQuery, suitFilter]);
+  const selectedHistory = history.find((item) => item.id === selectedHistoryId);
+  const selectedHistoryCards = useMemo(() => {
+    if (!selectedHistory) return null;
+    const restored = selectedHistory.cards.map((saved) => {
+      const card = TAROT_DECK.find((candidate) => normalizeTarotCardName(candidate.name) === normalizeTarotCardName(saved.name));
+      return card ? { ...card, position: saved.position, reversed: saved.reversed } : null;
+    });
+    return restored.every((card): card is DrawnCard => card !== null) ? restored : null;
+  }, [selectedHistory]);
   const visibleCards: Array<DrawnCard | PlaceholderCard> = cards.length
     ? cards
     : spread.positions.map((position) => ({ position, placeholder: true }));
@@ -86,6 +97,7 @@ export function TarotPage() {
   const draw = () => {
     runDraw({
       onStarted: () => {
+        setSelectedHistoryId(null);
         playMethodSound("tarot", "action");
         setCards([]);
         setInterpretation(null);
@@ -101,7 +113,7 @@ export function TarotPage() {
           const full = resolveTarotCard(drawn.name);
           return { ...full, position: drawn.position, reversed: drawn.reversed };
         });
-        const interp = interpretTarot(toInterpretTarotCards(result.cards), { question });
+        const interp = interpretTarot(next, { question });
         setCards(next);
         setInterpretation(interp);
         const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
@@ -183,7 +195,7 @@ export function TarotPage() {
           ) : (
             <div className="tarot-history-list">
               {history.map((item) => (
-                <button key={item.id} type="button">
+                <button key={item.id} type="button" aria-pressed={selectedHistoryId === item.id} onClick={() => setSelectedHistoryId(item.id)}>
                   <span>{item.time} · {item.spread}</span>
                   <strong>{item.question}</strong>
                   <em>{item.cards.map((c) => `${c.position}:${c.name}${c.reversed ? "逆" : "正"}`).join(" / ")}</em>
@@ -193,6 +205,21 @@ export function TarotPage() {
           )}
         </article>
       </section>
+
+      {selectedHistory && (
+        <section className="tarot-card-library" aria-label="塔罗历史回放">
+          <div className="section-heading"><p>READING REPLAY</p><h2>{selectedHistory.time} · {selectedHistory.spread}</h2></div>
+          <p>所问：{selectedHistory.question}</p>
+          <button type="button" onClick={() => setSelectedHistoryId(null)}>收起回放</button>
+          {selectedHistoryCards ? <>
+            <p>{buildTarotSpreadStory(selectedHistoryCards)}</p>
+            {selectedHistoryCards.map((card) => <article key={`${card.position}-${card.id}`} className={card.reversed ? "is-reversed" : ""}>
+              <img src={card.image} alt={card.name} loading="lazy" />
+              <div><span>{card.position} · {card.reversed ? "逆位" : "正位"}</span><h3>{card.name}</h3><p>{getTarotCardStory(card.id, card.name, card.reversed)}</p><p>{getCardMeaning(card, card.reversed)}</p></div>
+            </article>)}
+          </> : <p>记录中的牌名无法识别，暂时不能完整回放。</p>}
+        </section>
+      )}
 
       <section className="tarot-console">
         <div className="tarot-controls">
@@ -297,6 +324,7 @@ export function TarotPage() {
             <span>组合语义</span>
             <p>{interpretation?.summary ?? combo}</p>
           </article>
+          {cards.length > 0 && <article><span>本次牌阵的小故事</span><p>{buildTarotSpreadStory(cards)}</p></article>}
           {interpretation && interpretation.pairMatches.length > 0 && (
             <article>
               <span>组合规则命中</span>
@@ -324,6 +352,7 @@ export function TarotPage() {
               <div>
                 <span>{card.position} · {card.reversed ? "逆位" : "正位"}</span>
                 <h3>{card.name}</h3>
+                <p>{getTarotCardStory(card.id, card.name, card.reversed)}</p>
                 <p>{getCardMeaning(card, card.reversed)}</p>
                 {card.reversed && interpretation?.cardReadings.find((r: { name: string; reversalDetail?: string }) => r.name === card.name)?.reversalDetail && (
                   <small>{interpretation.cardReadings.find((r: { name: string; reversalDetail?: string }) => r.name === card.name)?.reversalDetail}</small>
@@ -362,6 +391,7 @@ export function TarotPage() {
                 <span>{card.nameEn}</span>
                 <strong>{card.name}</strong>
                 <p>{card.keywords.join(" / ")}</p>
+                <details><summary>看这张牌怎么读</summary><p>{getTarotCardStory(card.id, card.name)}</p><p>正位：{card.upright}</p><p>逆位：{card.reversedMeaning}</p><p>可尝试：{card.advice}</p></details>
               </div>
             </article>
           ))}

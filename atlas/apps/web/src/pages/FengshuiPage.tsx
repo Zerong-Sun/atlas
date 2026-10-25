@@ -72,13 +72,14 @@ export function FengshuiPage() {
           />
         </label>
         <button type="button" className="primary-btn" onClick={() => setComputed(true)}>
-          排飞星盘
+          查看飞星教学示意
         </button>
       </section>
 
       {result && (
         <section className="fengshui-result">
           <MethodResultActions />
+          <p>下方为简化飞星教学模型，不是住宅勘测结论；上方罗盘按角度准确换算坐向与二十四山。</p>
           <p className="summary-line">{result.summary}</p>
           <p className="muted">坐向 {result.sittingMountain} · 向 {result.facingMountain} · 第 {result.period} 运</p>
           {result.mingGua && (

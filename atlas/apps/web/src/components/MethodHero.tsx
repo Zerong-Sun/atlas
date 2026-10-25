@@ -1,6 +1,7 @@
 import { CultureExperience } from "./culture/CultureExperience";
 import { useEffect, type CSSProperties, type ReactNode } from "react";
 import { getMethodExperience, methodExperienceStyle } from "@/data/methodExperiences";
+import { METHOD_STORIES } from "@atlas/method-data";
 import { playMethodSound, unlockAudio } from "@/lib/methodSounds";
 
 type Props = {
@@ -41,6 +42,7 @@ export function MethodHero({ methodId, kicker, title, description, className = "
         {description && <p>{description}</p>}
       </div>
     </section>
+    {METHOD_STORIES[methodId] && <aside className="method-teaching-story" aria-label={`${title}的小故事`}><strong>先听一个小故事</strong><p>{METHOD_STORIES[methodId]}</p></aside>}
     <CultureExperience methodId={methodId} />
     </>
   );

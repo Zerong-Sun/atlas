@@ -2,6 +2,7 @@ import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { Pressable, StyleSheet, TextInput, View } from "react-native";
 import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
+import { getHexagramStory } from "@atlas/method-data";
 import { buildLiuyaoReportSnapshot } from "@atlas/method-core";
 import { MethodHero } from "@/components/MethodHero";
 import { MethodResultActions } from "@/components/MethodResultActions";
@@ -229,6 +230,7 @@ export function LiuyaoScreen() {
           </View>
 
           <HexagramDisplay lines={hexLines} title="六爻排盘" />
+          <View style={styles.readingCard}><Text variant="label" gold>这次的卦象故事 · {result.primaryName}</Text><Text variant="body">{getHexagramStory(result.primaryHex, result.primaryName)}</Text><Text variant="body">把故事里的“我”和“对方”对照世、应，找出用神{result.usefulGod}落在哪一爻，再核对旺衰与动变。故事用于理解卦画，判断仍依六爻排盘口径。</Text>{result.changedHex !== result.primaryHex && <Text variant="body">变化的一幕：{getHexagramStory(result.changedHex, result.changedName)}</Text>}</View>
 
           <View style={styles.readingGrid}>
             {result.lines.map((l) => (

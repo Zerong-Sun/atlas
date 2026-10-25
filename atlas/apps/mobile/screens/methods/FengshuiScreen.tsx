@@ -1,3 +1,4 @@
+import { Luopan } from "@/components/charts/Luopan";
 import { useMemo, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { computeFengshui, type FengshuiResult } from "@atlas/engines/fengshui";
@@ -22,6 +23,7 @@ function birthYearFromProfile(birthDate?: string): string {
 export function FengshuiScreen() {
   const { profile } = useApp();
   const [sittingDegree, setSittingDegree] = useState("0");
+  const [manualRevision,setManualRevision]=useState(0);
   const [birthYear, setBirthYear] = useState(birthYearFromProfile(profile?.birthDate));
   const [computed, setComputed] = useState(false);
   const [entryId, setEntryId] = useState<string | null>(null);
@@ -68,11 +70,12 @@ export function FengshuiScreen() {
       />
 
       <View style={styles.workbench}>
+        <Luopan degree={validDegree} manualRevision={manualRevision} onChange={d=>{setSittingDegree(String(d));setComputed(false);}}/>
         <View style={styles.field}>
           <Text variant="label">坐向度数 (0–359)</Text>
           <TextInput
             value={sittingDegree}
-            onChangeText={(v) => { setSittingDegree(v); setComputed(false); }}
+            onChangeText={(v) => { setManualRevision(n=>n+1); setSittingDegree(v); setComputed(false); }}
             keyboardType="numeric"
           />
           <Text variant="caption" muted>
@@ -89,7 +92,7 @@ export function FengshuiScreen() {
           />
         </View>
         <Button
-          title="排飞星盘"
+          title="查看飞星教学示意"
           onPress={() => {
             setEntryId(buildMethodReadingEntryId("fengshui"));
             setComputed(true);
@@ -111,7 +114,7 @@ export function FengshuiScreen() {
           )}
 
           <View style={styles.section}>
-            <Text variant="label">九宫飞星</Text>
+            <Text variant="label">九宫飞星 · 简化教学示意，非完整玄空排盘</Text>
             {result.palaces.map((p) => (
               <Text key={p.position} variant="body">
                 {p.direction}：山星 {p.mountainStar} / 向星 {p.facingStar}（流年 {p.annualStar}）— {p.combined}

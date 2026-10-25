@@ -1,3 +1,5 @@
+import { TAROT_IMAGES } from "@/lib/tarotAssets";
+import { buildTarotSpreadStory, getTarotCardStory } from "@atlas/method-data";
 import { useMemo } from "react";
 import { StyleSheet, View } from "react-native";
 import { CardDrawTable, FlipCard } from "@/components/charts/FlipCard";
@@ -46,6 +48,7 @@ export function TarotReplay({ payload }: { payload: MethodReadingPayload }) {
           {data.interpretation.summary}
         </Text>
       ) : null}
+      <Text variant="body">{buildTarotSpreadStory(cards)}</Text>
 
       <CardDrawTable>
         {cards.map((card, index) => (
@@ -56,7 +59,7 @@ export function TarotReplay({ payload }: { payload: MethodReadingPayload }) {
             reversed={card.reversed}
             index={index}
             compact={compact}
-            imageUri={card.image}
+            imageSource={TAROT_IMAGES[card.id]}
             cardName={card.name}
             meta={
               <View style={styles.meta}>
@@ -80,7 +83,7 @@ export function TarotReplay({ payload }: { payload: MethodReadingPayload }) {
         {cards.map((card) => (
           <Text key={card.position} variant="body" muted>
             {card.position}：{card.name}
-            {card.reversed ? "（逆位）" : "（正位）"} — {card.reversed ? card.reversedMeaning : card.upright}
+            {card.reversed ? "（逆位）" : "（正位）"} — {getTarotCardStory(card.id, card.name, card.reversed)} {card.reversed ? card.reversedMeaning : card.upright}
           </Text>
         ))}
       </View>

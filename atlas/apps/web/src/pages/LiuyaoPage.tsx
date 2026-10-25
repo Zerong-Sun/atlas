@@ -1,6 +1,7 @@
 import { CoinCastPanel } from "@/components/charts/CoinCastPanel";
 import { useMemo, useState } from "react";
 import { castLiuyao, type LiuyaoResult } from "@atlas/engines/liuyao";
+import { getHexagramStory } from "@atlas/method-data";
 import { HexagramLines } from "@/components/charts/HexagramLines";
 import { MethodResultActions } from "@/components/MethodResultActions";
 import { MethodHero } from "@/components/MethodHero";
@@ -110,6 +111,7 @@ export function LiuyaoPage() {
             <p className="muted">日柱 {result.dayStem}{result.dayBranch} · 月建 {result.monthBranch}</p>
           </header>
           <HexagramLines lines={hexLines} title="六爻排盘" />
+          <article className="method-teaching-story"><strong>这次的卦象故事 · {result.primaryName}</strong><p>{getHexagramStory(result.primaryHex, result.primaryName)}</p><p>读六爻时，再把故事里的“我”和“对方”对照世、应，找出用神{result.usefulGod}落在哪一爻，并核对它的旺衰与动变。故事用于理解卦画，判断仍依六爻排盘口径。</p>{result.changedHex !== result.primaryHex && <p>变化的一幕：{getHexagramStory(result.changedHex, result.changedName)}</p>}</article>
           <div className="reading-grid">
             {result.lines.map((l) => (
               <article key={l.position} className={l.position === result.usefulGodLine ? "hi" : ""}>
