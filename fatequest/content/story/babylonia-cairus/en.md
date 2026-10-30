@@ -24,6 +24,8 @@ At the Nile, a water carrier and his daughter are arguing over a lunch basket. S
 
 Seeing you search for the road, the carrier sets down a jar and points to the landing. "Go through Fustat by the river, then on into Cairo. If you want the island, wait for that small boat to come back." The girl asks the boatman when he is leaving. He promises to wait a little longer.
 
+The boatman asks the girl whose hands will carry the basket once the boat lands. "My uncle's," she says. "He always waits by the water marks." Her father adjusts the cloth over the food and tells her to sit where he can see her until the boat leaves. A second water carrier comes for his jars and offers to take one of the father's deliveries. The father hesitates, checks the address on the jar, and asks the girl to tell the boatman her uncle's name once more.
+
 ## ev.babylonia-cairus.entry.choice.pass
 
 Ask for the road into town and continue
@@ -56,6 +58,8 @@ She tells him the other is the loaf he promised her little brother this morning.
 
 Amin puts the loaves back on his board and draws a circle in charcoal at the corner. "I'll know your mark when he comes." Then he turns to you. "Where are you going? Someone passing through here will know the road."
 
+A customer asks whether the fresh bread will be ready before the crossing boat leaves. Amin lifts one edge to check the colour and tells her to wait a little. The young woman watches the canal; her brother's school is on the far bank, and she worries that he will run here before she has finished carrying grain. Amin says he can keep one bread warm under a cloth. He asks her to write the boy's name on the board so he does not hand it to the wrong child.
+
 ## ev.gap.babylonia-cairus.scene.choice.talk
 
 Help Amin remember the boy's name
@@ -84,9 +88,9 @@ Date Baskets in the Caravan Yard
 
 In the eastern caravan yard, two sisters sort dates into small baskets. The older one picks out the softest fruit; her sister slips a few back in. The older girl sees her and rolls up her sleeve. "You have your own share for the road."
 
-Their mother is travelling with a caravan to visit family in Petra. The younger girl wants a few good dates in every basket. Their mother is indoors sewing a waterskin and has no idea what the girls are debating.
+Their mother is travelling to Petra to visit her sister, whom she has not seen since the last flood. The younger girl wants good dates in every basket so her aunt's children can taste them too. Their mother is indoors sewing a waterskin. She comes out to test the seam, blows air into it, and asks why the girls have filled three baskets when she meant to carry two. The younger one admits she packed a third for the relatives. Mother smiles and asks them to make it small enough for the mule.
 
-Another group in the yard is preparing for Bethlehem. Both groups draw from the same well, their buckets lined up beside it. The younger sister holds a basket out to you. "What if they take ours by mistake? I haven't put our names on them."
+Another group in the yard is preparing for Bethlehem. Both groups draw from the same well, their buckets lined up beside it. A driver walks past with a bundle of blankets and nearly takes the wrong water jar. The younger sister calls him back, then looks at her unmarked baskets. "What if they take ours by mistake?" she asks you. The older one has a piece of charcoal but her hands are sticky from the dates. Their mother is still holding the waterskin open, waiting to know which basket to tie to the mule.
 
 ## ev.cairo.caravan.choice.baskets
 

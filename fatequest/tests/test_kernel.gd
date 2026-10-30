@@ -20,12 +20,8 @@ func _load_table(path: String) -> Array:
 
 func run() -> bool:
 	var cities := _load_table("res://content/tables/cities/central_asia.json")
-	var sites := _load_table("res://content/tables/events/site.json")
-	var entries := _load_table("res://content/tables/events/entry.json")
-
-	var by_id := {}
-	for r in sites + entries:
-		by_id[r["id"]] = r
+	var db := ContentDb.new()
+	db.load_all()
 
 	# ---------------------------------------------------------------- setup
 	var state := WorldState.new()
@@ -54,7 +50,13 @@ func run() -> bool:
 	_ok(why.size() == 1 and why[0].begins_with("explain.need_coins"), "explain names the shortfall")
 
 	# ------------------------------------------------- preview isolation
-	var buy: Array = by_id["ev-lop-bazaar"]["choices"][0]["effects"]
+	state.coins = 100000
+	var buy: Array = db.get_record("ev-lop-bazaar")["choices"][0]["effects"]
+	var jade_price := 0
+	for effect in buy:
+		if String(effect.get("op", "")) == "coins" and int(effect.get("value", 0)) < 0:
+			jade_price = -int(effect["value"])
+	_ok(jade_price > 0, "Lop jade keeps a real price")
 	var before := state.coins
 	var pv := ex.preview(state, buy, {"event_id": "preview-test"})
 	_ok(state.coins == before, "preview does NOT mutate the real state")
@@ -62,7 +64,7 @@ func run() -> bool:
 
 	# ------------------------------------------------- execute
 	var res := ex.execute(state, buy, {"event_id": "ev-lop-bazaar"})
-	_ok(state.coins == before - 400, "coins deducted")
+	_ok(state.coins == before - jade_price, "coins deducted")
 	_ok(state.goods.get("jade", 0) == 1, "jade acquired")
 	_ok("st-lop-jade" in state.stickers, "sticker recorded")
 	_ok(res.applied.size() == 4 and res.rejected.is_empty(), "all four effects applied")
@@ -112,9 +114,11 @@ func run() -> bool:
 		if c2["id"] == "lop":
 			lop = c2
 	_ok(lop.get("tier") == "metropolis", "lop is a metropolis")
-	_ok((lop.get("sites") as Array).size() == 3, "lop has exactly 3 sites")
+	_ok((lop.get("sites") as Array).size() >= 3
+		and "ev-lop-stopper" in lop["sites"], "lop has its new local encounter")
 	for s in lop["sites"]:
-		_ok(by_id.has(s), "site %s exists in the event tables" % s)
+		_ok(not db.get_record(String(s)).is_empty(),
+			"site %s exists in the event tables" % s)
 
 	print("test_kernel: %s" % ("PASS" if _fails == 0 else "FAIL (%d)" % _fails))
 	return _fails == 0

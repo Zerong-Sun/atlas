@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: da292d3b3922
+source_rev: b62231a84748
 status: translated
 translator: 人工校译
 notes: >
@@ -13,34 +13,34 @@ notes: >
 
 stamps:
   city.maldive.name: a99ff8fcf111
-  ev.maldive.entry.title: 9b45e69c9962
-  ev.maldive.entry.body: bbdd85ef7f57
-  ev.maldive.entry.choice.arrive: aebd1b10afb3
-  ev.ev_maldive_entry.choice_1_result: 647a575c6e86
-  ev.maldive.battuta_a.title: 9da0e08cf4ac
-  ev.maldive.battuta_a.body: 8823b25b0595
-  ev.maldive.battuta_a.choice.judge: d99fef82f64a
-  ev.maldive.battuta_a.choice.marry: c0e3cbb71d40
-  ev.maldive.battuta_a.choice.flight: b6b18884a6b1
-  ev.ev_maldive_battuta_a.choice_1_result: 70f9b27f6a37
-  ev.ev_maldive_battuta_a.choice_2_result: b5ce112a6bb1
-  ev.ev_maldive_battuta_a.choice_3_result: be221923353a
-  ev.alexandria.battuta_a.title: 1531fda570cb
-  ev.alexandria.battuta_a.body: 759ef8478a9a
-  ev.alexandria.battuta_a.choice.observe: 5346b0ea881f
-  ev.alexandria.battuta_a.choice.speak: 06758eab113f
-  ev.alexandria.battuta_a.choice.omen: b7d6068c07cb
-  ev.ev_alexandria_battuta_a.choice_1_result: 79bdf1a71da8
-  ev.ev_alexandria_battuta_a.choice_2_result: e77d0c2f90bd
-  ev.ev_alexandria_battuta_a.choice_3_result: b1fe307cf0e1
-  ev.alexandria.battuta_b.title: 48f4d7beed3a
-  ev.alexandria.battuta_b.body: d3f495e2f098
-  ev.alexandria.battuta_b.choice.promise: 81b432236097
-  ev.alexandria.battuta_b.choice.ask: b297e3865ea0
-  ev.alexandria.battuta_b.choice.depart: d6aeeae2428c
-  ev.ev_alexandria_battuta_b.choice_1_result: af37c8f1923a
-  ev.ev_alexandria_battuta_b.choice_2_result: f15b55c74da2
-  ev.ev_alexandria_battuta_b.choice_3_result: c79e099bed9d
+  ev.maldive.entry.title: ab37191c36cd
+  ev.maldive.entry.body: 6063b7530198
+  ev.maldive.entry.choice.arrive: bab805879772
+  ev.ev_maldive_entry.choice_1_result: 15606217c3ac
+  ev.maldive.battuta_a.title: 9c530855832c
+  ev.maldive.battuta_a.body: 80814d843461
+  ev.maldive.battuta_a.choice.judge: bc7f38cd628e
+  ev.maldive.battuta_a.choice.marry: 4cfc1d7b52a8
+  ev.maldive.battuta_a.choice.flight: d8f8a0743924
+  ev.ev_maldive_battuta_a.choice_1_result: df883843b5e4
+  ev.ev_maldive_battuta_a.choice_2_result: 8e31ea545796
+  ev.ev_maldive_battuta_a.choice_3_result: a5e47b2730e3
+  ev.alexandria.battuta_a.title: ec50deb0af4c
+  ev.alexandria.battuta_a.body: f23d79613135
+  ev.alexandria.battuta_a.choice.observe: 5319cdb543e0
+  ev.alexandria.battuta_a.choice.speak: d65739b234ab
+  ev.alexandria.battuta_a.choice.omen: e1744545e7ea
+  ev.ev_alexandria_battuta_a.choice_1_result: 0986899f4a2c
+  ev.ev_alexandria_battuta_a.choice_2_result: a12397b18413
+  ev.ev_alexandria_battuta_a.choice_3_result: 77f3675c3c47
+  ev.alexandria.battuta_b.title: 7f7e6e3d6b9e
+  ev.alexandria.battuta_b.body: 62a3401ab054
+  ev.alexandria.battuta_b.choice.promise: da668f33e769
+  ev.alexandria.battuta_b.choice.ask: a7ae2bd8811a
+  ev.alexandria.battuta_b.choice.depart: 7adf2f5a623c
+  ev.ev_alexandria_battuta_b.choice_1_result: bda3fa06a294
+  ev.ev_alexandria_battuta_b.choice_2_result: 4c9c6d316d10
+  ev.ev_alexandria_battuta_b.choice_3_result: f14157a4067e
   ev.accon.battuta_a.title: 7915e6bdd16d
   ev.accon.battuta_a.body: 7c4816eae4c5
   ev.accon.battuta_a.choice.tomb: ee527fea76db
@@ -83,14 +83,14 @@ stamps:
   ev.ev_delli_battuta_b.choice_3_result: dede0323be9e
   arch.battuta.name: 39a6401ac763
   arch.battuta.obsession: 58b4c7f41c69
-  ev.melibar.battuta_a.title: 9665de2beaa8
-  ev.melibar.battuta_a.body: 9d2c93b043e8
-  ev.melibar.battuta_a.choice.junks: 5b832bff3a92
-  ev.melibar.battuta_a.choice.trade: 4fcfbd2c8f29
-  ev.melibar.battuta_a.choice.prayer: 01127580cedf
-  ev.ev_melibar_battuta_a.choice_1_result: f6ec9f09942c
-  ev.ev_melibar_battuta_a.choice_2_result: 3ab90a220a5e
-  ev.ev_melibar_battuta_a.choice_3_result: cf5896751967
+  ev.melibar.battuta_a.title: 08c259c6f60e
+  ev.melibar.battuta_a.body: 72920d813edc
+  ev.melibar.battuta_a.choice.junks: 1f34d22fc1be
+  ev.melibar.battuta_a.choice.trade: 07614ca1e000
+  ev.melibar.battuta_a.choice.prayer: 1a52e47e42cb
+  ev.ev_melibar_battuta_a.choice_1_result: 52953dae4dcf
+  ev.ev_melibar_battuta_a.choice_2_result: 2deb9fda7be7
+  ev.ev_melibar_battuta_a.choice_3_result: 34565aaa0bc6
   ev.cail.battuta_a.title: 0daf85e0c805
   ev.cail.battuta_a.body: 97f61bbf8f21
   ev.cail.battuta_a.choice.baba: 16459cdb857d
@@ -99,14 +99,14 @@ stamps:
   ev.ev_cail_battuta_a.choice_1_result: 2f90f05fe4d9
   ev.ev_cail_battuta_a.choice_2_result: 1c4fdf1a8a7e
   ev.ev_cail_battuta_a.choice_3_result: 54adde12a031
-  ev.java-major.battuta_a.title: 8128ad07aab0
-  ev.java-major.battuta_a.body: ebca015580b2
-  ev.java-major.battuta_a.choice.audience: fd4b275ac1ac
-  ev.java-major.battuta_a.choice.aloes: 087d13166a5b
-  ev.java-major.battuta_a.choice.army: 4bff82be6318
-  ev.ev_java_major_battuta_a.choice_1_result: 8d52fabebd24
-  ev.ev_java_major_battuta_a.choice_2_result: 4964b744b127
-  ev.ev_java_major_battuta_a.choice_3_result: 0b7b8772b4ad
+  ev.java-major.battuta_a.title: 8dcd11808843
+  ev.java-major.battuta_a.body: 640c1919e015
+  ev.java-major.battuta_a.choice.audience: 53944a0734a9
+  ev.java-major.battuta_a.choice.aloes: 2466fb3eb300
+  ev.java-major.battuta_a.choice.army: eca2372133c4
+  ev.ev_java_major_battuta_a.choice_1_result: f0e120bb9e98
+  ev.ev_java_major_battuta_a.choice_2_result: 25d620b9666f
+  ev.ev_java_major_battuta_a.choice_3_result: fc52785c0925
   ev.zayton.battuta_a.title: 3b583a25bb01
   ev.zayton.battuta_a.body: 3729483c8c15
   ev.zayton.battuta_a.choice.change: 87c4287dc2b8
@@ -127,8 +127,8 @@ stamps:
   ev.ev_kinsay_battuta_a.choice_3_result: 60a112342d41
   ev.cail.entry.choice.battuta: 932406953883
   ev.ev_cail_entry.choice_4_result: f69039ddbd05
-  ev.melibar.entry.choice.battuta: 00ebf2c05d3c
-  ev.ev_melibar_entry.choice_4_result: e12c954097fd
+  ev.melibar.entry.choice.battuta: 3be445379264
+  ev.ev_melibar_entry.choice_4_result: eb625dcc5ce6
   ev.kinsay.entry.choice.battuta: b784f22bea2f
   ev.ev_kinsay_entry.choice_4_result: a7086c5dbbc2
   ev.zayton.entry.choice.battuta: de9bc6f6327b
@@ -137,63 +137,63 @@ stamps:
 
 ## ev.alexandria.battuta_a.title
 
-门口等吉兆的年轻法官
+城门口丢失的借书纸
 
 ## ev.alexandria.battuta_a.body
 
-伊本·白图泰记过一位穷学者的故事：亚历山大城门快关了，他却坐在门边不肯进去，说要等个吉兆。守门人催烦了，笑他：“法官先生，还不进城吗？”学者顺口答：“真主若愿意，我就做法官。”他进城后住进学舍，埋头读书。后来，亚历山大法官空缺，城里不少学者都想争这个位置，他却没去求；苏丹反而选中了他。他当得清廉，名声也传开了。
+亚历山大一处城门旁，来自希贾兹的女学生停在行李堆边，找不到准她从学舍借书的纸条。守门人见过那张纸，原本夹在最小一包行李的绳结里，如今绳松了。“车经过时，脚夫挪过那包。”他说。学生去问脚夫，脚夫记得把它放在卖水人的水罐边。你帮她看了车底，没有找到。卖水人把裹水罐的布抖开，小纸条这才落出来。“学舍关门前还赶得上。”守门人说。学生又问日后去开罗的路怎么走，家里有位亲人读完书后要去那儿。守门人认识常走那条路的搬运人，愿意带你去问。学生眼下还得把书和行李送进城；纸条被水洇掉一角，她打算明天到学舍补抄一份。卖水人替她把纸压在干木板下，等墨迹彻底不湿了才交回手里。
 
 ## ev.alexandria.battuta_a.choice.observe
 
-在旁边听守门人打趣那位学者
+留一天帮守门人照看进城行李
 
 ## ev.alexandria.battuta_a.choice.speak
 
-上前问问他为什么不进城
+花一天问搬运人去开罗的路
 
 ## ev.alexandria.battuta_a.choice.omen
 
-和他一起进城，追问这件怪事
+帮学生把书送到学舍
 
 ## ev.ev_alexandria_battuta_a.choice_1_result
 
-守门人笑着催他：“法官先生，还不进城吗？”学者答：“真主若愿意，我就做法官。”你在门边听到天黑。
+你留到第二天，帮守门人给过门的行李分出位置。学生带着补好的借书纸回来，也学会把它放在不易掉出的衣袋里。守门人当着脚夫的面叫出你的名字，谢你帮忙。
 
 ## ev.ev_alexandria_battuta_a.choice_2_result
 
-学者告诉你，他在等一个吉兆。后来你听说，他进城后住进学舍读书，竟真成了亚历山大的法官。讲到这里，守门人笑道：“这回他总算等着了。”
+第二天你跟守门人介绍的搬运人走了一段。他指给你看去开罗的路从哪里接上，也讲了第一处能补水的地方。学生把方向抄在新借书纸旁，打算留给那位亲人。
 
 ## ev.alexandria.battuta_b.title
 
-圣者托付的三封问候
+从亚历山大寄出的三封信
 
 ## ev.alexandria.battuta_b.body
 
-亚历山大的圣者博尔罕·奥丁·艾阿拉吉把你叫到跟前：“我看你是个爱走远路的人。”你答是——其实那时你还没打算远行。他接着说：“我有三个兄弟。一个在印度，一个在信地，一个在中国。你要是见到他们，替我问声好。”当时你只当是句托付。后来真正踏上远路，每到一座城，你都会想起这三位兄弟。
+亚历山大集市旁，一位代人写信的父亲摊开三张折好的信纸。他有亲戚分住在信地、印度一处港口和中国一户商人家。女儿帮忙抄地址，第二张纸却只写了商号。“表亲去年搬走了。”她提醒父亲。父亲说码头上有个旅人知道新地址，先别封这封。你问一家人隔这么远怎样保持音信。女儿打开小木盒，给你看已经收到的短回信：有新生孩子的消息，有新开的铺子，也有人想念家里的香料。信都走了很久，家里仍一封封回。送信人过来说他明早去开罗，第一封可以交给那里的熟商，再托人往东带。父亲请你帮女儿把三个地址抄清，也想让你问问送信人第一段路怎么走；若你现在就要走，可以把已封好的那封先带到城门。女儿蘸好墨，等父亲说出最后一个地名。
 
 ## ev.alexandria.battuta_b.choice.promise
 
-答应他：三位兄弟我都会去找
+留一天帮女儿抄清三个地址
 
 ## ev.alexandria.battuta_b.choice.ask
 
-问清三位兄弟的名字和去处
+问送信人开罗那一程怎么走
 
 ## ev.alexandria.battuta_b.choice.depart
 
-向圣者告辞，继续追问墓主人的旧事
+把已封好的信送到城门
 
 ## ev.ev_alexandria_battuta_b.choice_1_result
 
-你答应替他问候。后来你果真在信地、印度和中国找到三位兄弟，把圣者的话一一带到。你把这段旅程。
+你又留了一天，与女儿逐个核对地址。码头旅人说出印度商号的新住处，父亲等她写清才封那封信。他当着送信人的面谢过你，还说收到回信时会托人给你带个消息。
 
 ## ev.ev_alexandria_battuta_b.choice_2_result
 
-圣者说清了三位兄弟的名字和去处：印度、信地、中国。你问他从哪儿打听消息，他笑道：“到了地方，多问问常来往的商人，总会有人认得他们。”
+你再留一天，问送信人从这里到开罗的路，以及在那里收信的商人姓名。女儿把方向写在备用纸上，父亲也知道若第一封信迟迟没回，该去找谁打听。
 
 ## ev.ev_alexandria_battuta_b.choice_3_result
 
-你向圣者告辞。后来每到一座新城，你都会留心打听有没有他那三位兄弟的消息；这趟路，也渐渐有了一个要完成的约定。
+你把封好的信带到城门，父女留在摊前收拾另外两封。送信人核了商人的名字，把信妥帖放进包里。你带回他的收据，女儿向你道谢，又坐下去抄剩下的地址。
 
 ## ev.accon.battuta_a.title
 
@@ -389,51 +389,51 @@ stamps:
 
 ## ev.maldive.entry.title
 
-椰树、贝币与岛屿生活
+椰林里的登岸处
 
 ## ev.maldive.entry.body
 
-伊本·白图泰说，这片海上有近两千座岛，其中近百座连成环状。船靠近一座岛时，得先报上船员人数，不然不让通行。椰树一年结十二次果，青果、熟果和干果常挂在同一棵树上；岛民用椰子酿酒、榨油，也搓成坚韧的船绳。这里用一种叫瓦达的贝壳当钱，埋在沙里等肉腐尽，再把壳拿去交易。记载还提到，主岛由女王呼迪加统治，判案的法官说话很有分量；岛上女性通常留在自己的岛区生活。
+一处岛上的登岸口，妇人正把一卷椰纤维绳从哥哥的船上搬下来，怕潮水涨到船舷。女儿拉住较轻的一头，问舅舅怎么把绳留得这么靠水。“我以为船动之前能赶回来。”他跳上岸说。你帮他们在一处小摊旁腾地方，摊主正数用来做小买卖的贝壳钱。她问你的船从哪儿来，也愿意指给你看穿过村子的路。姑娘想知道上一座港口的人用不用贝壳买东西。你说了见闻，她举起两枚干净贝壳，问一颗果子要花几枚。母亲笑着叫她先问摊主，别自己猜价。几户人家来接船，哥哥总算把干燥的绳圈扛上小路。
 
 ## ev.maldive.entry.choice.arrive
 
-把船停好，上岛看看
+上岸，向等船的人打招呼
 
 ## ev.ev_maldive_entry.choice_1_result
 
-你在女王统治的莫勒岛登岸。寄宿人家的女主人给你做饭、照料起居，只收很少的钱；瓦达贝壳在岛间也能当钱用。
+你上岸帮忙腾出地方，向等船的人打招呼。摊主告诉你去客舍该走哪条路，姑娘把两枚贝壳还给母亲收好。岛上的人见你来得周到，也欢迎你进村。
 
 ## ev.maldive.battuta_a.title
 
-做法官、成家与离岛
+岛上院子的三件事
 
 ## ev.maldive.battuta_a.body
 
-宰相贾马鲁丁是女王的丈夫，他热情接待了伊本·白图泰：给他一座带花园的房子、一件礼服，还特许他骑马。岛上只有宰相能骑马，贵族通常乘轿或步行。宰相请他担任法官，说法官的判决几乎和王令一样，还能收取三座岛的税。伊本·白图泰接受了。当地习俗允许旅人付少量聘礼成婚，但妻子通常不会离开自己的岛区，旅人离开时便会分开。他按习俗娶了三位妻子，姻亲渐多、势力渐大，宰相开始担心，暗中打听他的动向。伊本·白图泰察觉后，决定离岛。
+岛上一处院子里，村里的文书把纸铺在两个捕鱼人家旁。这两家共用一张网多年，前几次修补却没记清花费。“上回的绳是我兄弟买的。”一个妇人说。另一位接道：“我女儿还花两早上把它缝好了。”文书请她们慢慢讲，外甥女在旁边记名字。两天后家里有婚礼，姑娘担心自己一直记账，没空帮家人做饭。舅舅说两家人不必急，他愿付工钱，请人花三天把旧账誊清。门口等着的一位引水员婚礼后要去没来：“想问海路，明天潮水合适时来码头找我。”外甥女问你，是愿意留在文书身边帮忙，去她家搭手办婚礼，还是等引水员带你看出岛的方向。
 
 ## ev.maldive.battuta_a.choice.judge
 
-接受法官的职位
+帮文书记清两家人的旧账
 
 ## ev.maldive.battuta_a.choice.marry
 
-按当地习俗成家
+分担婚礼饭钱，留下帮两天
 
 ## ev.maldive.battuta_a.choice.flight
 
-收拾行李，找船离岛
+花一天跟引水员问离岛的路
 
 ## ev.ev_maldive_battuta_a.choice_1_result
 
-你接下法官的职位，判决在三座岛上都很有分量，也能收取当地税赋。接下来几天你忙着听案子，岛民对你评价不错。
+你花三天帮文书听两家人讲清共用渔网的经过，逐项记下谁买绳、谁缝补。妇人们看过并排写好的旧账，商量好下一回怎样分担修网。文书付你一份工钱，两家人也谢你让她们都把话说完。
 
 ## ev.ev_maldive_battuta_a.choice_2_result
 
-你付了少量聘礼，按当地习俗成家。这里的女性通常不会离开自己的岛区；你准备启程时，也按约定和妻子分开。岛民认可你尊重他们的习俗。
+你出钱分担婚礼的饭食，留下帮了两天。文书的外甥女赶在婚礼前整理好纸张，也能回家备饭。你帮他们把菜从屋里送到院中，亲友们谢你一起出钱出力。
 
 ## ev.ev_maldive_battuta_a.choice_3_result
 
-你结束了婚事，只留下有幼儿的那一房。趁宰相还在暗中留意你，你开始打听船期。一位引水人摊开海图：“去没来要等南风稳下来，船过外海后沿岸走，别追着快船跑。”
+你花一天在码头跟引水员看船。他指出船在哪儿等潮，又在木板上画出往没来的海路。文书的外甥女来问他，出发前赶不赶得上婚礼，他答应会回来吃那顿饭。
 
 ## arch.battuta.name
 
@@ -445,35 +445,35 @@ stamps:
 
 ## ev.melibar.battuta_a.title
 
-古里海难：一夜之间船队尽毁
+港边旅舍的一天
 
 ## ev.melibar.battuta_a.body
 
-伊本·白图泰称古里是没来的大港，商人云集，港里停着十三艘中国戎克船。天竺皇帝派使团去中国，安排其中一艘船装贡品；他自己因为星期五聚礼留在岸上。半夜风浪突然变大，几艘戎克船撞上岸礁，船员大半遇难。载着贡品的船撑到天亮也沉了，货物全没入海。他只剩祈祷毯和十枚金币，侥幸逃过一劫。
+没来港口旁的一间旅舍里，女主人正给卸货后上岸的水手摆杯子。外甥说大船上的人一来，院子都要坐满。“那就把第二条长凳搬来。”她说。少年问放在礼拜室边上行不行。“那条路留着，有些客人吃饭前还要进去。”一位等水喝的引水员说，那条船此前靠过俱蓝，今天要在港里待一天核货。你问他沿岸航路怎样认。他拿出磨旧的木板指了几个转弯，见水杯快碰到，又赶紧收起。卖胡椒的商人抱着整袋货来，问有没有买主。妇人给他在棚下让了地方，叫外甥铺块干净席子。第一批水手到了，肚子饿，也庆幸总算有地方坐。
 
 ## ev.melibar.battuta_a.choice.junks
 
-在岸边看看中国戎克船怎么停泊
+留一天听引水员讲俱蓝航路
 
 ## ev.melibar.battuta_a.choice.trade
 
-找港里的大商人谈胡椒生意
+向商人买一整袋胡椒
 
 ## ev.melibar.battuta_a.choice.prayer
 
-留在岸上参加星期五聚礼
+留一天帮旅舍招呼客人
 
 ## ev.ev_melibar_battuta_a.choice_1_result
 
-你在岸边看中国戎克船停泊，等着中国海的航季。最大的一艘有六百名水手、四百名士兵，甲板上盖着木屋，船桨长得像桅杆，每支桨由二十五人合力划动。水手说，这种船只有刺桐和辛克兰造得出来，只停希里、古里和俱蓝几个港口。
+你待了一天，引水员其间忙着核船货，回旅舍歇脚时便在木板上指给你看俱蓝与没来之间的航路，请你自己找出第一个沿岸转弯。天黑前，他把木板还给女主人，外甥正好腾出长凳摆晚饭。
 
 ## ev.ev_melibar_battuta_a.choice_2_result
 
-古里的穆斯林商人富得惊人，有人买得下港里所有船货，还能再造一艘新船。你和一位大商人谈妥胡椒价，付了 1500 钱币，带着一袋胡椒回到船上。
+你付钱向商人买下一整袋胡椒。外甥同他核过货记，把袋子先放在干席上，等你能带走。女主人招呼两人喝水，商人才回码头。
 
 ## ev.ev_melibar_battuta_a.choice_3_result
 
-你留在岸上参加聚礼，身边只有祈祷毯和十枚金币——伊本·白图泰说，那是圣人送给他的吉祥物。半夜风浪大作，载着贡品的船撞礁沉没；你的小船趁黑离港，仆从和行李都平安无事。
+你在旅舍帮了一天，给水手摆水，也给要去礼拜室的客人留出路。外甥学会把长凳挪到合适的地方，傍晚人人都有座。邻近港口的人听见水手当面向你道谢。
 
 ## ev.cail.battuta_a.title
 
@@ -509,35 +509,35 @@ stamps:
 
 ## ev.java-major.battuta_a.title
 
-塔瓦利西：女王与她的军队
+管事丢了封印
 
 ## ev.java-major.battuta_a.body
 
-伊本·白图泰用国王的名字称呼塔瓦利西。这里有许多戎克船，国王敢和大汗交战，直到双方谈和才停手。当地女性骑马、投标枪都很拿手，女王亲自处理政事。她的侍女拿着文书站在台阶下，女王则亲笔写下“奉至仁至慈的真主之名”，再问旅人各地的见闻。听说天竺富庶，她感叹：“这份富贵，我也想亲眼看看。”伊本·白图泰还记下一支女兵：一次战局溃散时，女王带她们拼死反击，斩下敌王首级献给父亲，因此获封一方。邻国国王若想娶她，必须先在演武场胜过她；至今没人敢应战。
+查验港口货物的女管事找不到一件香木的封印，翻了两遍点货桌。“商人会以为我拆开过他的包。”她对助手说。助手记得在水罐旁见过一个裹布的小东西，便去找。等在隔壁棚下的商人说，可以先拆开一角让你看香木，但得等管事找回封印：“我也想弄清这件货送来时原本是封好的。”你问如果封印真的丢了，账该怎么核。管事让你看自己那份货单上留下的蜡印，还说能拿它和包绳上的痕迹比对。这时一名水手进来问去苏门答腊的船路。助手正好回来，手里拿着用干布裹好的封印。他怕水罐漏水，先把它挪开，却忘了告诉管事。管事让他去向卖水人道声谢，又问你愿不愿意帮她核完清单，或去看看那件香木、找水手问下一程的路。
 
 ## ev.java-major.battuta_a.choice.audience
 
-去见女王，聊聊你走过的地方
+帮管事核对港口货单
 
 ## ev.java-major.battuta_a.choice.aloes
 
-像当地商人一样买一象载的沉香
+买一整件封好的香木
 
 ## ev.java-major.battuta_a.choice.army
 
-问问女王的军队和女兵
+问水手去苏门答腊的船路
 
 ## ev.ev_java_major_battuta_a.choice_1_result
 
-女王坐在议事厅里，侍女捧着文书站在一旁。她用突厥语向你问好，让人拿来纸笔，亲手写下“奉至仁至慈的真主之名”，又细问你一路见闻。听你说到天竺的富庶，她笑道：“有机会我也想去看看。”临别时，她送你衣物、金钱和路上粮食。
+你在这里帮了一天，管事和助手拿封印与货单逐项核对。商人确认自己的货没有被拆，便在改好的那一行签名。女管事当着脚夫的面向你道谢，傍晚那些人也认得你了。
 
 ## ev.ev_java_major_battuta_a.choice_2_result
 
-卡库拉港的沉香堆得像柴火。商人掂着你带来的棉衣说：“这儿沉香比柴还便宜，棉布倒比丝绸贵。你拿这件换沉香，算是碰上好价了。”他收下棉衣，给了你一头象载的沉香。
+封印找回后，商人拆开香木包的一角给你验货。你付了整件货款，助手重新绑牢，女管事把你的名字写在港口货单的新主人一栏。
 
 ## ev.ev_java_major_battuta_a.choice_3_result
 
-水手说，女王手下有一支女兵，平时和男兵一起操练。一次战场上军队溃散，女王带着她们顶住阵脚、斩下敌王首级，因此获封领地。邻国国王都得先在演武场赢过她，谁也不愿冒这个险。
+你在水边问了水手们一天，弄清去苏门答腊中途会靠哪些地方。一人在木板上画路，另一人讲哪里能补淡水。管事的助手抄下港名，又请水手帮他看看有没有写错。
 
 ## ev.zayton.battuta_a.title
 
@@ -621,11 +621,11 @@ stamps:
 
 ## ev.melibar.entry.choice.battuta
 
-问旅人中国大船和海难的事
+去见港边旅舍的一家人
 
 ## ev.ev_melibar_entry.choice_4_result
 
-港里一位旅人朝泊着的大船努努嘴：“刺桐和辛克兰造的戎克船大得很。我还听说有条贡船夜里撞上礁石沉了。你想听的话，我从头给你讲。”
+港边旅舍的一家人正给晚到的客人腾地方。女儿抱着折好的席子往里走，说末班船带来的人比预想的多。她请你进屋帮忙看看，怎样让大家都有地方睡。
 
 ## ev.kinsay.entry.choice.battuta
 
@@ -645,4 +645,4 @@ stamps:
 
 ## ev.ev_alexandria_battuta_a.choice_3_result
 
-你看出他为人清廉，便随他穿过城门。数月后再见，他已是亚历山大的法官。他邀你去学舍坐坐：“你也在路上求学？这几处有藏书，得空可以去看看。”
+你把学生的书带过城门，第二天又陪她把新借书纸送到学舍。管书人拿旧记录核对过，收下了纸。学生当着老师的面向你道谢，还说你下次来，她愿意带你看看读书的房间。

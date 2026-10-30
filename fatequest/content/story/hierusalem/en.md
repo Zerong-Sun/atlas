@@ -50,11 +50,11 @@ What Kind of Incense Grandmother Likes
 
 ## ev.gap.hierusalem.scene.body
 
-At the spice stall, a boy grips a few coins and points to two packets of frankincense. "Which one does my grandmother like?" The seller asks who she is.
+At the incense stall, a boy holds a few coins and points to two packets of frankincense. "Which one does my grandmother like?" The seller looks up. "Which grandmother?"
 
-The boy says she lives in the south of town and always asks him to open the window a little when she burns incense. The seller opens both packets. The boy smells them for a long time, then turns towards the sound of cumin being ground next door.
+The boy says she lives south of the city and always tells him to leave the window open a little when she burns incense. The seller opens both packets for him to smell. He bends close, hesitates, and is distracted by a neighbour grinding cumin. His grandmother sent him out after breakfast with an old cloth pouch and enough money for a small packet. She was baking bread when he left and promised to tell him a story while the incense burned. He would rather bring home the right scent than return with the coins.
 
-The seller puts a little resin on charcoal and covers it with a copper hood. "Wait a moment. Does she like a light scent, or one that lingers?" The boy looks at you. "Can you help me remember? She's waiting for me at home."
+The seller puts a grain on a charcoal chip and covers it with a little copper hood. A woman waiting for spices recognises the grandmother's name and says she buys incense here before winter, but cannot remember which packet she chose last time. The boy fans the smoke towards her; she laughs and asks him to let it settle first. He turns to you. "Could you smell them with me? She'll be waiting for me at home."
 
 ## ev.gap.hierusalem.scene.choice.talk
 

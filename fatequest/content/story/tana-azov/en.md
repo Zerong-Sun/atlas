@@ -27,6 +27,8 @@ The Don spreads out before it meets the Sea of Azov. Near a landing place, Zoya 
 
 Zoya welcomes travellers when they stop beside the river. She points out where the bank is firm enough to approach the water. Murad wants to know the name of the place you came from; he is collecting names his father might recognize when he returns.
 
+Murad asks whether his father will bring more reeds when he returns. Zoya lifts the lid of the little pot and says the order is already filled; today he is carrying the finished bundles to a family farther upriver. "Will they send him back with anything?" the boy asks. "Probably news, and perhaps the basket I lent them." She asks him to stir the pot while she shows you the firm part of the bank. Murad agrees only after she promises he can ask where you came from when she gets back.
+
 ## ev.tana-azov.entry.title
 
 The River Landing at Tana

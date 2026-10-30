@@ -259,7 +259,7 @@
       ],
       "lore": {
         "placeId": "tenduc",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c059"
@@ -709,7 +709,7 @@
       ],
       "lore": {
         "placeId": "taican",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c028"
@@ -734,7 +734,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -751,7 +751,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -821,7 +821,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -838,7 +838,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -871,7 +871,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -6700,
+              "value": -13500,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -888,7 +888,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 6700
+              "min": 13500
             }
           }
         }
@@ -936,7 +936,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -953,7 +953,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -1007,7 +1007,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10000,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1024,7 +1024,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10000
             }
           }
         },
@@ -1094,7 +1094,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10000,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1111,7 +1111,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10000
             }
           }
         },
@@ -1181,7 +1181,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10000,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1198,7 +1198,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10000
             }
           }
         },
@@ -1273,7 +1273,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1290,7 +1290,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -1360,7 +1360,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1377,7 +1377,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -1452,7 +1452,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10000,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1469,7 +1469,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10000
             }
           }
         },
@@ -1539,24 +1539,24 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
-              "reason": "paid-for-the-bargain"
+              "value": -10800,
+              "reason": "paid-for-one-full-lot-of-goods"
             },
             {
               "op": "goods",
               "id": "sandalwood",
               "value": 1,
-              "reason": "bought-sandalwood-at-chamba-tribute-harbour"
+              "reason": "bought-sandalwood-at-chamba-harbour"
             },
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "bought-sandalwood-after-the-elephant-tribute"
+              "reason": "checked-the-sandalwood-in-the-ledger"
             }
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -1572,7 +1572,7 @@
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "learned-the-tribute-sea-road"
+              "reason": "learned-the-pilots-sea-road"
             }
           ]
         },
@@ -1583,7 +1583,7 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "watched-tribute-harbour"
+              "reason": "watched-the-harbour-load-ships"
             },
             {
               "op": "reveal_map",
@@ -1594,18 +1594,14 @@
               "op": "fate",
               "id": "rapport",
               "value": 1,
-              "reason": "heard-the-kings-embassy-talk"
+              "reason": "helped-check-the-sailing-list"
             }
           ]
         }
       ],
       "lore": {
-        "placeId": "great-country-called-chamba",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "v2-b3-c005"
-        }
+        "placeId": "chamba",
+        "origin": "authored"
       }
     },
     {
@@ -1626,24 +1622,24 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
-              "reason": "paid-for-the-bargain"
+              "value": -10800,
+              "reason": "paid-for-one-full-lot-of-goods"
             },
             {
               "op": "goods",
               "id": "pepper",
               "value": 1,
-              "reason": "bought-pepper-at-chamba-court-price"
+              "reason": "bought-pepper-at-chamba-harbour"
             },
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "bought-pepper-at-the-idolater-court"
+              "reason": "checked-the-pepper-shipping-record"
             }
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -1670,31 +1666,27 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "visited-chamba-court"
+              "reason": "helped-at-the-chamba-port-office"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "city",
               "id": "chamba",
-              "reason": "heard-at-the-idolater-court"
+              "reason": "helped-the-broker-correct-the-list"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "the-kings-sea-counsel"
+              "reason": "learned-from-the-harbour-clerks"
             }
           ]
         }
       ],
       "lore": {
-        "placeId": "great-country-called-chamba",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "v2-b3-c005"
-        }
+        "placeId": "chamba",
+        "origin": "authored"
       }
     },
     {
@@ -2053,7 +2045,7 @@
       ],
       "lore": {
         "placeId": "esher",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c037"
@@ -2078,7 +2070,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5400,
+              "value": -10800,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -2095,7 +2087,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5400
+              "min": 10800
             }
           }
         },
@@ -2145,7 +2137,7 @@
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c025"

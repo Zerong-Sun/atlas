@@ -361,8 +361,7 @@
       ],
       "exits": [
         "rt-axuma-dongola",
-        "rt-dongola-mecha",
-        "rt-dongola-medina"
+        "rt-dongola-babylonia-cairus"
       ],
       "lore": {
         "origin": "authored",
@@ -437,8 +436,8 @@
       "band": "india",
       "culture": "indian_ocean",
       "faiths": [
-        "hindu",
         "islam",
+        "hindu",
         "folk"
       ],
       "coord": [
@@ -449,7 +448,8 @@
       "entryEvent": "ev-esher-entry",
       "sites": [
         "ev-esher-a",
-        "ev-esher-b"
+        "ev-esher-b",
+        "ev-esher-cat"
       ],
       "exits": [
         "rt-dufar-esher",
@@ -479,7 +479,7 @@
         "spread": 0.22
       },
       "shrine": {
-        "faith": "hindu",
+        "faith": "islam",
         "services": [
           "bless"
         ]
@@ -505,7 +505,8 @@
       "tier": "town",
       "entryEvent": "ev-maabar-entry",
       "sites": [
-        "ev-maabar-site-gap"
+        "ev-maabar-site-gap",
+        "ev-maabar-courtyard"
       ],
       "exits": [
         "rt-coilum-maabar",
@@ -567,7 +568,6 @@
       ],
       "exits": [
         "rt-axuma-mecha",
-        "rt-dongola-mecha",
         "rt-mecha-medina"
       ],
       "lore": {
@@ -620,10 +620,10 @@
       "tier": "station",
       "entryEvent": "ev-medina-entry",
       "sites": [
-        "ev-medina-site-gap"
+        "ev-medina-site-gap",
+        "ev-medina-lantern"
       ],
       "exits": [
-        "rt-dongola-medina",
         "rt-mecha-medina",
         "rt-medina-bethleem",
         "rt-medina-petra"
@@ -659,7 +659,8 @@
       "sites": [
         "ev-melibar-a",
         "ev-melibar-b",
-        "ev-melibar-battuta-a"
+        "ev-melibar-battuta-a",
+        "ev-melibar-seedlings"
       ],
       "exits": [
         "rt-cail-melibar",
@@ -728,7 +729,8 @@
       "tier": "town",
       "entryEvent": "ev-semenat-entry",
       "sites": [
-        "ev-semenat-site-gap"
+        "ev-semenat-site-gap",
+        "ev-semenat-lamps"
       ],
       "exits": [
         "rt-cambaet-semenat",
@@ -778,7 +780,8 @@
       "tier": "town",
       "entryEvent": "ev-tana-entry",
       "sites": [
-        "ev-tana-site-gap"
+        "ev-tana-site-gap",
+        "ev-tana-receipt"
       ],
       "exits": [
         "rt-cambaet-tana",
@@ -826,7 +829,8 @@
       "tier": "town",
       "entryEvent": "ev-maldive-entry",
       "sites": [
-        "ev-maldive-battuta-a"
+        "ev-maldive-battuta-a",
+        "ev-maldive-mat"
       ],
       "exits": [
         "rt-cail-maldive",

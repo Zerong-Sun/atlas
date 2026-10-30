@@ -2,40 +2,40 @@
 unit: unique-site-caiju
 lang: zh
 source: en
-source_rev: deedfa232ffb
+source_rev: de5309e4cc52
 status: translated
 translator: 人工校译
 notes: >
   场景据原文地理与物产演绎；具体人物与行动为新撰。保留费用、耗时和实际效果。
 stamps:
-  ev.ev_unique_caiju.title: 3d102e861ab1
-  ev.ev_unique_caiju.body: f4beea675d9f
-  ev.ev_unique_caiju.choice_a: 0143f370262a
-  ev.ev_unique_caiju.choice_a_result: 6a4c3a99cb71
-  ev.ev_unique_caiju.choice_b: 12b3cfe10486
-  ev.ev_unique_caiju.choice_b_result: 1e35df386006
+  ev.ev_unique_caiju.title: 2d415f2be387
+  ev.ev_unique_caiju.body: c18dbf55c623
+  ev.ev_unique_caiju.choice_a: ca1e6a96e0f9
+  ev.ev_unique_caiju.choice_a_result: 942f6fc09b94
+  ev.ev_unique_caiju.choice_b: 23ff9b86d5e3
+  ev.ev_unique_caiju.choice_b_result: 54eed64bd9ea
 ---
 
 ## ev.ev_unique_caiju.title
 
-漕粮簿
+仓房的记粮板
 
 ## ev.ev_unique_caiju.body
 
-在瓜州，送往大汗宫廷的米麦从河船运进有记号的仓房。管账人要人核对每个记号；船主则愿意收一笔小钱，抄给你开船单。
+瓜州水路边的仓房里，书吏发现两袋粮画着相同的记号。船主说它们来自两户人家，长子也记得先搬来的是哪一袋，可雨水把墨印晕开了。“先称重，再问送粮的人。”书吏说。儿子问这样会不会耽误开船，父亲叫他点清数再向船长报时。你帮着把粮袋翻过来，众人看见一袋用黑线缝口，另一袋用浅麻线。书吏把这处区别写在各自账行旁，请船主念出两家的姓名。等在门口的车夫手里有去镇江府的车队行程，愿意收一点抄写钱，把歇脚点另抄一份给你。船主的儿子还想学点货，请你留一天，帮他把余下的袋子逐个核完。他先拿起写着黑线的那张纸，问你这样记够不够清楚。
 
 ## ev.ev_unique_caiju.choice_a
 
-亲自核对漕粮簿
+留一天核对粮仓的账
 
 ## ev.ev_unique_caiju.choice_a_result
 
-你花一天逐袋核对记号。管账人把最后的总数交你记下，你也看懂漕粮买卖的规模。
+你又留了一天，和书吏、船主的儿子逐袋查看封口，再念出记号。到最后一批，儿子已能分清两户人家的货。书吏当着等候的货主谢你，你也看懂了这间仓房怎样记账。
 
 ## ev.ev_unique_caiju.choice_b
 
-买一份开船单
+付钱抄一份车夫的行程单
 
 ## ev.ev_unique_caiju.choice_b_result
 
-你付了150银币。开船单列出通往镇江府的下一段水路，也让你看懂粮船如何排期。
+你付给车夫一笔抄写费。他在单上标出往镇江府的陆路和车队的歇脚处。你离开时，船主的儿子正拿着改好的粮单从仓房出来。

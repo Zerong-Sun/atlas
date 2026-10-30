@@ -1538,7 +1538,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -7200,
+              "value": -14580,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -1565,7 +1565,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 7200
+              "min": 14580
             }
           }
         }
@@ -1989,17 +1989,12 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "waited-at-the-customs"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "declared-goods-and-heard-the-law"
+              "reason": "spent-two-days-registering-goods"
             },
             {
               "op": "reveal_map",
               "value": "chandu",
-              "reason": "clerks-named-the-quarters"
+              "reason": "clerk-marked-the-local-grounds"
             },
             {
               "op": "queue_event",
@@ -2013,19 +2008,9 @@
           "resultText": "ev.ev_chandu_entry.choice_2_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "learned-the-citys-story"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-palace",
-              "reason": "heard-the-tale"
-            },
-            {
               "op": "days",
               "value": 1,
-              "reason": "listened-to-the-tales"
+              "reason": "listened-to-the-familys-stories"
             },
             {
               "op": "queue_event",
@@ -2040,29 +2025,24 @@
           "effects": [
             {
               "op": "coins",
-              "value": -7200,
-              "reason": "paid-for-the-bargain"
+              "value": -14600,
+              "reason": "paid-for-a-full-lot-of-camlet"
             },
             {
               "op": "days",
               "value": 1,
-              "reason": "walked-the-great-market"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "bargained-with-the-merchants"
+              "reason": "spent-a-day-at-the-camp-market"
             },
             {
               "op": "goods",
               "id": "camlet",
               "value": 1,
-              "reason": "bought-local-specialty"
+              "reason": "bought-one-lot-of-camlet"
             }
           ],
           "needs": {
             "coins": {
-              "min": 7200
+              "min": 14600
             }
           }
         }
@@ -3795,7 +3775,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -7200,
+              "value": -14580,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -3817,7 +3797,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 7200
+              "min": 14580
             }
           }
         },
@@ -4274,7 +4254,7 @@
             {
               "op": "queue_event",
               "value": "ev-melibar-battuta-a",
-              "reason": "heard-of-the-chinese-junks"
+              "reason": "heard-about-the-harbour-guesthouse"
             }
           ]
         }
@@ -6144,7 +6124,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -7200,
+              "value": -14580,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -6166,7 +6146,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 7200
+              "min": 14580
             }
           }
         }
@@ -6606,18 +6586,14 @@
               "value": 1,
               "scope": "city",
               "id": "maldive",
-              "reason": "arrived-at-the-coconut-isles"
+              "reason": "greeted-the-island-rope-makers"
             }
           ]
         }
       ],
       "lore": {
-        "placeId": "ibn-battuta:battuta-c019",
-        "origin": "source",
-        "ref": {
-          "book": "ibn-battuta",
-          "chapterId": "battuta-c019"
-        }
+        "placeId": "maldive",
+        "origin": "authored"
       }
     }
   ]

@@ -15,171 +15,184 @@ Chamba
 
 ## ev.chamba.entry.body
 
-You must know that on leaving the port of Zayton you sail west-south-west for 1500
-miles, and then you come to a country called CHAMBA, a very rich region, having a king
-of its own. The people are Idolaters and pay a yearly tribute to the Great Kaan, which
-consists of elephants and nothing but elephants. And I will tell you how they came to
-pay this tribute. It happened in the year of Christ 1278 that the Great Kaan sent a
-Baron of his called Sagatu with a great force of horse and foot against this King of
-Chamba, and this Baron opened the war on a great scale against the King and his country.
-Now the King was a very aged man, nor had he such a force as the Baron had. And when he
-saw what havoc the Baron was making with his kingdom he was grieved to the heart. So he
-bade messengers get ready and despatched them to the Great Kaan.
+A boy at the harbour is trying to keep a bundle of elephant grass out of the wet sand. Each time he lifts one end, the other slides toward the water. His aunt, who keeps a stall by the quay, calls you over to hold the bundle while she finds a length of rope. ‘Whose elephant eats all this?’ you ask. ‘The one waiting in the yard behind the storehouse. He has refused the dry stalks since morning.’ The boy says the elephant accepted a pear from his hand but pushed the old grass aside. His aunt laughs. ‘Then bring him the fresh bundle before he starts pulling at the gate.’ A sailor waiting for his cargo asks where to buy a meal while he is in town. The aunt points across the market and tells him which cook serves rice before noon. Farther up the street, people are gathering at the mosque. She asks the boy to carry a smaller bundle to the yard, then tells you how to reach the market and the prayer house from the quay.
 
 ## ev.chamba.entry.choice.market
 
-Walk through the harbour market
+Spend a day among the harbour stalls
 
 ## ev.chamba.entry.choice.pass
 
-Pass through the gate without delay
+Take the street through town
 
 ## ev.chamba.entry.choice.shrine
 
-Visit the masjid (mosque)
+Visit the mosque above the quay
 
 ## ev.chamba.entry.title
 
-Of the Great Country Called Chamba
+The Elephant Grass at the Wharf
 
 ## ev.chamba.a.title
 
-The Elephant Tribute
+A Clerk and the Elephant Feed
 
 ## ev.chamba.a.body
 
-The King of Chamba pays a yearly tribute to the Great Kaan, which consists of elephants and nothing but elephants. It was settled in the year 1278, when the Kaan sent Baron Sagatu against this kingdom and the aged King sought peace by offering this tribute alone.
+A clerk at the harbour has two lists in front of him. One names bundles of grass for an elephant waiting in the store yard; the other names timber and sandalwood for ships. His young assistant has put a feed bundle on the cargo list. ‘The men will load it if I leave it there,’ she says, embarrassed. The clerk asks her to follow the porter who brought it and find out where the elephant is kept. You go with her. At the yard, the keeper says the animal has eaten poorly since arriving, and asks that the green grass be brought before the heat rises. The assistant returns, crosses out the wrong line, and asks the clerk why an old ledger mentions elephants sent overseas. ‘That ledger tells you what people shipped years ago,’ he says. ‘Today we have one hungry animal in our care.’ A pilot sorting mooring ropes nearby offers to show you which ships sail north and which continue toward Pentam. The assistant stays to finish the new list and asks you to tell her if the keeper needs another bundle.
 
 ## ev.chamba.a.choice.hear_tribute
 
-Hear the full tale of how the elephant tribute was settled
+Ask the clerk about the older elephant records
 
 ## ev.chamba.a.choice.watch_harbour
 
-Watch a day upon the harbour while tribute goods are tallied
+Stay a day to help check harbour loads
 
 ## ev.chamba.a.choice.buy_sandalwood
 
-Buy sandalwood from the tribute quarter
+Buy a packed load of sandalwood
 
 ## ev.chamba.b.title
 
-The Idolater Kingdom
+The Pepper Merchant’s Sealed Bags
 
 ## ev.chamba.b.body
 
-Chamba is a very rich region lying west-south-west of Zayton, having a king of its own. The people are Idolaters, and the kingdom is wealthy with aloewood, spices, and the traffic of the southern seas.
+A pepper merchant is sealing bags under the harbour roof. His niece holds the wax, but keeps turning each bag to hide a small stain near the seam. ‘That one rode through rain yesterday,’ she tells him. The merchant asks her to cut it open rather than send damp pepper aboard. A broker carrying papers from the town office arrives for the shipment list. He notices the opened bag and waits while they count it again. You ask whether the northbound ships are already taking cargo. ‘The one for Zayton has room if the wind holds,’ the broker says. ‘The crew going on to Fuju will ask about the sacks before they name a day.’ The niece wants to know why a ship cannot simply leave whenever the buyer is ready. The broker brings her to the quay and points to two crews mending sails while they wait for a steady wind. Her uncle offers you a dry bag to smell and asks whether you want goods, the sailors’ directions, or time to meet the people who approve each load.
 
 ## ev.chamba.b.choice.visit_court
 
-Wait two days upon the harbour to hear word of the King's court
+Spend two days with the town clerks and brokers
 
 ## ev.chamba.b.choice.buy_pepper
 
-Buy pepper from the spice merchants
+Buy a sealed load of pepper
 
 ## ev.chamba.b.choice.ask_sea_road
 
-Ask the mariners how many days' sail lie to Zayton and Fuzhou
+Ask the crews about Zayton and Fuju
 
 ## ev.ev_chamba_entry.choice_1_result
 
-You pass through the gate without delay. The road to Chamba opens on your map.
+The boy gets the fresh grass to the yard before the animal has shaken its gate loose. His aunt points you down the street past the rice cook. You follow her directions across town and learn where the quay, market, and inland gate meet.
 
 ## ev.ev_chamba_entry.choice_2_result
 
-You walk through the harbour market. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Chamba on your map.
+You stay through the next day’s market. The aunt introduces you to a sailmaker whose mother sells rice by the mosque, and he walks you through the alleys instead of waving from his stall. By evening you can find the waterside stores and the town gate without asking again.
 
 ## ev.ev_chamba_entry.choice_3_result
 
-You climb to the masjid above the roofs. The elders take your greeting and give their names in turn, and their blessing rides down the hill with you. The road to Chamba is now drawn on your map.
+At the mosque, a caretaker is carrying water to the entrance. You help move the jars clear of the steps before greeting the elders inside. One of them introduces you to his nephew, who knows the path back to the quay. He thanks you by name when you leave.
 
 ## ev.ev_chamba_a.choice_1_result
 
-You hear the full tale of how the elephant tribute was settled. The account is written down before the hour turns. The road to Zayton opens on your map. Fortune bends a little your way.
+The clerk takes the old ledger into the shade and lets his assistant read the entries aloud. She asks why the destination changes from year to year; he shows her the pilots’ notes attached to each shipment. You learn what the port once sent and hear the name of Zayton from the men who made the northern crossing. The pilot comes over while they are still talking.
 
 ## ev.ev_chamba_a.choice_2_result
 
-You watch a day upon the harbour while tribute goods are tallied. You spend 1 day before the way is clear again. You set the way to Pentam on your map. You set what you saw into your travel book.
+For another day you work beside the assistant, calling out each bundle before the porters lift it. The elephant keeper gets his feed, and a pilot tells you which southbound ships stop near Pentam. When the clerk closes the list, he asks the same pilot to speak with you about the sea roads.
 
 ## ev.ev_chamba_a.choice_3_result
 
-
-You buy sandalwood from the tribute quarter. You pay 900 coins. You add 1 item to your stores. The tribute clerks set your name beside the ledger of gifts.
+A timber seller opens one sandalwood pack so you can see the wood before it is tied shut again. You pay for the full load, and the clerk adds your name beside the porter who will bring it to your ship. The seller stays until you have checked that the pack is dry.
 
 ## ev.ev_chamba_b.choice_1_result
 
-You wait two days upon the harbour to hear word of the King's court. You spend 2 days before the way is clear again. You set what you saw into your travel book. Your name carries a little more weight here now.
+You spend two days following the broker between the harbour and the town office. The niece brings each corrected bag number to the clerk, who explains why the office keeps one copy of the load list ashore. By the second day she can check it herself. The broker introduces you to another pilot before you leave.
 
 ## ev.ev_chamba_b.choice_2_result
 
-
-You buy pepper from the spice merchants. You pay 8000 coins. You add 1 item to your stores. The account is written down before the hour turns.
+You pay for a dry load of pepper. The niece opens the top bag at your request, lets you smell the grain, and seals it again in front of you. Her uncle writes your name on the load list. The broker asks you to wait a moment while he finishes the sailing notice.
 
 ## ev.ev_chamba_b.choice_3_result
 
-You ask the mariners how many days' sail lie to Zayton and Fuzhou. You set the way to Zayton on your map. You set the way to Fuju on your map. You set what you saw into your travel book.
+Two sailors compare their next ports with you on a board laid across the mooring posts. One names Zayton; the other describes the onward connection to Fuju and where to ask for water. The niece listens, then moves the dry bags beneath the roof before the evening rain.
 
 ## ev.ev_chamba_a_followup.title
 
-Chamba: After the Elephant Tribute
+The Pilot after the Loading List
 
 ## ev.ev_chamba_a_followup.body
 
-When the clerks have finished counting the elephant tribute, a harbour pilot who has sailed the tribute ships to Zayton draws you onto the mole. He says Chamba's wealth is not only ivory — it is the sea road west-south-west of Zayton, and the names of Pentam and Fuju if you mean to follow the Kaan's ships home.
+The pilot finds you by the storehouse as the clerk closes the harbour list. He has a chalked board under one arm and a rope still looped around the other. ‘The assistant says you asked where our ships go,’ he says. He sets the board down and marks Zayton to the north and Pentam farther south. A porter interrupts to ask whether the sandalwood now belongs on your load or the next ship’s. The pilot waits while the clerk checks the name. ‘This is why I keep my own list,’ he tells you. ‘At sea I cannot run back to the storehouse for a missing pack.’ His younger deckhand asks whether a ship for Pentam can use the same pilot all the way. ‘Only until the next crew knows the shallows better than I do,’ the pilot answers. He invites you to inspect the sealed sandalwood, mark the northern route, or stay for the next day’s departure preparations.
 
 ## ev.ev_chamba_a_followup.choice_1
 
-Buy sandalwood at the tribute harbour price
+Buy a sealed sandalwood load
 
 ## ev.ev_chamba_a_followup.choice_1_result
 
-He sells you sandalwood sealed for the next monsoon. The scent stays in the hold.
+The seller brings out the packed sandalwood and opens a corner for inspection. You pay for it and watch the clerk move your name to the correct load list. The pilot has his deckhand carry the marked pack beneath a dry awning.
 
 ## ev.ev_chamba_a_followup.choice_2
 
-Ask him to mark the sea road toward Zayton
+Have the pilot mark the sea road to Zayton
 
 ## ev.ev_chamba_a_followup.choice_2_result
 
-Zayton is marked on your map with the monsoon days between. The tribute road is clear.
+The pilot marks Zayton on your chart and talks through the water stops with his deckhand present. The younger man repeats the order back to him, then corrects one cramped mark at the edge of the board. You leave with a usable route and the story behind the port’s old elephant entries.
 
 ## ev.ev_chamba_a_followup.choice_3
 
-Watch the tribute harbour a day and hear the pilots' talk
+Spend another day watching the departure
 
 ## ev.ev_chamba_a_followup.choice_3_result
 
-You spend a day on the mole. Pentam is named in the talk, and fortune bends a little your way.
+You return for another day as the deckhand checks ropes and counts water jars. He points out the craft bound near Pentam and asks you to test his list against the loads already aboard. When he finds his own missing jar, the pilot lets him call the final count.
 
 ## ev.ev_chamba_b_followup.title
 
-Chamba: The Idolater Court and the Pepper Quay
+The Broker’s Sailing Notice
 
 ## ev.ev_chamba_b_followup.body
 
-At the court in Chamba, a pepper broker leads you from the audience into the shade of the quay sheds. “Elephants go to the Great Khan as tribute,” he says, “but pepper goes to the passing ships.” He opens his monsoon book and points to a ship leaving soon for Fuju. If you mean to send goods with it, he advises you to decide before it sails.
+The broker brings a new sailing notice to the pepper merchant’s stall. His niece looks first for the name of the ship that will take their dry bags. ‘It is there,’ he says, ‘but the crew has asked for fresh water before they take another load.’ The merchant sends her to a waterseller with two jars. You help her hold the notice flat while she compares the bag numbers. She finds one that has been copied twice and takes the page back to the broker. He strikes out the extra line in front of the merchant. A sailor arrives from the northbound ship and asks if the pepper is ready. ‘Ready once you carry the water,’ the niece tells him. He laughs and takes one jar. The broker now has a moment to show you Fuju on his route sheet. He asks whether you want to purchase a separate pepper load, take down the route, or spend a day learning how the harbour office checks departing cargo.
 
 ## ev.ev_chamba_b_followup.choice_1
 
-Buy pepper at the court broker's price
+Buy a separate load of pepper
 
 ## ev.ev_chamba_b_followup.choice_1_result
 
-He sells you pepper sealed for the monsoon. The price is the court's own list.
+The merchant sells you a sealed load of pepper. His niece checks its number against the corrected notice before the sailor carries it away. You pay the agreed cargo price and receive a copy of the entry for your own records.
 
 ## ev.ev_chamba_b_followup.choice_2
 
-Ask which sea road leads toward Fuju
+Ask the broker to mark the route to Fuju
 
 ## ev.ev_chamba_b_followup.choice_2_result
 
-Fuju is marked on your map. The sea road north is clear.
+The broker marks Fuju on the route sheet and has the sailor name the harbours where a ship can take on water. The niece holds the notice away from the wet jars while you copy the ports, then gives the sailor his own dry copy.
 
 ## ev.ev_chamba_b_followup.choice_3
 
-Visit the court a day and hear the king's sea talk
+Spend a day with the harbour office
 
 ## ev.ev_chamba_b_followup.choice_3_result
 
-You spend a day at court. The king's talk names the islands, and fortune bends a little your way.
+For another day you help the niece carry corrected numbers between the merchant and the office. A clerk checks each against the bags in the storehouse and learns your name in the process. By evening the niece catches a new copying error before a sailor takes the notice aboard.
+
+## ev.chamba.net.title
+
+The Net with a Missing Weight
+
+## ev.chamba.net.body
+
+A fisher and her daughter are spreading a net across a dry patch beside the harbour. One edge keeps lifting in the breeze. ‘There should be a stone weight here,’ the mother says, holding up a loose loop. Her daughter searches the basket and finds only a broken cord. ‘I tied it after the last catch.’ The mother asks her to show where she made the knot. It came loose against a sharp shell, and the stone must have fallen on the way home. You ask whether they can use another. ‘Yes, if we find one smooth enough not to cut the net again.’ The daughter runs to the beach and returns with two stones. One is heavy but rough; the smaller one fits the loop. A neighbour arrives to ask when they will set out. The mother looks at the tide line on the quay wall and says they have time to mend one more tear. The daughter offers you the spare cord, then asks her mother why the boat always leaves when the water reaches that mark. She wants to watch the tide rise herself before their next trip.
+
+## ev.chamba.net.choice.mend
+
+Help mend the net before they sail
+
+## ev.chamba.net.result.mend
+
+You hold the edge taut while the daughter ties the smooth stone into place. Her mother tests the weight by dragging the net across the sand. It stays flat. The neighbour helps carry it to the boat, and the family thanks you before they push off.
+
+## ev.chamba.net.choice.listen
+
+Stay a day and watch the tide with them
+
+## ev.chamba.net.result.listen
+
+You spend the next day beside the daughter at the quay wall. The water reaches the mark later than she expected. Her mother explains how she checks the wind as well as the tide before putting out. The daughter chooses the moment to call the neighbour, and you leave knowing how the harbour fishers time a departure.

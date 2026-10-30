@@ -2,7 +2,7 @@
 unit: tripolis
 lang: zh
 source: en
-source_rev: 452ad4b1fc73
+source_rev: b77fd010cb8b
 status: draft
 translator: 人工校译
 notes: >
@@ -15,7 +15,7 @@ stamps:
   city.tripolis.name: 978730c8898c
   ev.ev_tripolis_entry.choice_1_result: 8bcf77e7cb0d
   ev.ev_tripolis_entry.choice_2_result: a876239ed21a
-  ev.gap.tripolis.scene.body: a00b2d4c7909
+  ev.gap.tripolis.scene.body: 0d8640f00777
   ev.gap.tripolis.scene.choice.route: f8df593937a1
   ev.gap.tripolis.scene.choice.talk: 7de14b8ba1cf
   ev.gap.tripolis.scene.result.route: 0708b1d94aae
@@ -25,13 +25,13 @@ stamps:
   ev.tripolis.entry.choice.pass: 0bf2ea1cee3d
   ev.tripolis.entry.choice.rest: d69192355ba2
   ev.tripolis.entry.title: d8d69348c4be
-  ev.tripolis.oven.body: 7c4c551f7cd1
+  ev.tripolis.oven.body: c53582acf0b4
   ev.tripolis.oven.choice.bake: 446b05580315
   ev.tripolis.oven.choice.damascus: 1c61fc67d33c
   ev.tripolis.oven.result.bake: 731ac6e803a2
   ev.tripolis.oven.result.damascus: 05f76815f63d
   ev.tripolis.oven.title: ff8e17e8c524
-  ev.tripolis.quay.body: 9cfa49909c19
+  ev.tripolis.quay.body: e609700fdbf5
   ev.tripolis.quay.choice.help: 55a38008ba83
   ev.tripolis.quay.choice.road: 01eef5885f62
   ev.tripolis.quay.result.help: 55947e525069
@@ -87,6 +87,8 @@ stamps:
 
 萨米娅把盐水倒进去，笑着拍了一下他的后背：“今年写上他的名字，船鼠认字就算它本事大。”孩子去拿炭笔，又停下来问你：“海路走得快，还是从这里翻山快？”
 
+孩子又问舅舅会不会知道是他装的。“看见你的字就知道了。”萨米娅把炭笔递给他。他先在碎瓦片上练，写歪一个字，用拇指擦了重来。邻居来借盐，看他写得认真，说自己明天走山路，船要是早靠岸，说不定还能在下个歇脚处遇见舅舅。孩子听得疑惑，转头问你：“海路和山路还能遇到一块儿呀？”
+
 ## ev.gap.tripolis.scene.choice.talk
 
 帮孩子写好罐上的名字，听萨米娅讲舅舅的事
@@ -119,6 +121,8 @@ stamps:
 
 卸货的人听见了，在一旁插嘴：“你爹早上还去城里买新桨呢。你先问他一句，省得把人家船翻个底朝天。”姑娘红了脸，还是想把事情弄明白。
 
+姑娘把蓝绳举给卸货的人看：“要真是我家的桨，中间这个结一定最紧，我爹每回都拉两下。”卸货人说自己没看绳子，劝她先问隔壁船的人。一个抱绳圈的男孩跑过，说早上在木匠摊见过她父亲。她追着问是买木料还是取新桨，男孩已经跳上船。姑娘只好回头看那两条还在卸货的船。
+
 ## ev.tripolis.quay.choice.help
 
 陪她把两条船上的桨问清楚
@@ -150,6 +154,8 @@ stamps:
 炉师傅看了一眼排队的人：“船什么时候开？”老人说自己也不知道，船上那孩子只让他中午前送到。排在前头的两个妇人商量了一下，各自把木板往旁边挪了挪。
 
 老人忙着道谢，芝麻从袖口落到地上。他小声说，外孙第一次跟船去亚历山大港，出门前还嫌他的饼太硬。这回想起来要带三块，倒催得比谁都急。
+
+炉师傅问外孙会不会把饼收干燥些。“他在这院里长大的，布包怎么用总该记得。”老人说。炉旁一个妇人递来一块多余的包布，老人谢过才想起自己袖里也带了。炉师傅按先后收好木板，说撒芝麻的饼可以赶下一炉。老人透过门口往港口望，算着烤好后还来不来得及送下去。
 
 ## ev.tripolis.oven.choice.bake
 

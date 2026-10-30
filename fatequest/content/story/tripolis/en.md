@@ -58,6 +58,8 @@ Samia packs olives into clay jars in a courtyard behind the harbour. Her ten-yea
 
 Samia pours in brine and laughs. "This year we'll write his name on it. If the rats can read, I'll let them have it." The boy reaches for a piece of charcoal, then asks you whether a ship or the road through the mountains is faster.
 
+Samia's son asks whether his uncle will know who packed this jar. "He'll know when he finds your handwriting," she says, handing him the charcoal. He tries the letters on a broken tile first and rubs one out with his thumb. A neighbour has come to borrow salt and watches him practise. She says she is taking the hill road tomorrow and may see the boy's uncle at the next stop if his ship has already come in. The boy asks you whether those two ways can really meet.
+
 ## ev.gap.tripolis.scene.choice.talk
 
 Help the boy write the name and hear about his uncle
@@ -90,6 +92,8 @@ At the quay, a young woman looks from one boat to another. She holds a short len
 
 A porter overhears her. "Your father went to buy a new oar this morning. Ask him before you search every boat in the harbour." She blushes but still wants to know what happened.
 
+The girl holds up the knotted end for the loader to see. "If it is our oar, the middle knot will be tight. Father always pulls that one twice." He admits he did not look at the rope and tells her to ask the other crew before accusing anyone. A younger boy runs past with a coil of line and says he saw her father at the carpenter's stall. She calls after him to ask whether he was buying wood or fetching a finished oar, but he is already aboard a boat. She turns back to the two crews.
+
 ## ev.tripolis.quay.choice.help
 
 Help her ask about the oar on both boats
@@ -121,6 +125,8 @@ The communal oven is hot. People wait with dough on wooden boards as the baker l
 The baker asks when it sails. The man only knows that his grandson asked him to come before noon. Two women ahead of him move their boards aside to make room.
 
 The man thanks them, scattering sesame seeds from his sleeve. His grandson is sailing to Alexandria for the first time. Before leaving he complained that the bread was too hard; now he has asked for three rounds and seems to be in a hurry for them.
+
+The baker asks whether the grandson can keep the loaves dry. "He grew up in this yard," the old man says. "He knows what a cloth is for." A woman near the oven offers a spare wrapper, and the old man thanks her before remembering he brought one of his own. The baker takes the little boards in order and says the sesame loaves can go into the next batch. The old man peers towards the port through the doorway, hoping there is still time to carry them down.
 
 ## ev.tripolis.oven.choice.bake
 

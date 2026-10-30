@@ -43,15 +43,15 @@ The Ferry Rope
 
 ## ev.dongola.site_gap.body
 
-At the river ferry, a boatman is replacing the worn end of a reed rope. His daughter holds the coil while he tests each strand. “The old part caught under the hull yesterday,” she says. He asks her to show you the frayed place, then explains why the rope must give a little as the water rises. A traveller arrives with a crate and tries to set it by the rail. The boatman asks him to move it toward the middle of the boat. “When everyone stands on one side to see the far bank, I still have to keep her level.” You ask where the road continues after the crossing. His daughter points to the turn toward the road marked for Mecha and then notices the cut marks on the pole he uses to read the water. She asks whether today's line is high enough to change the loading order. He checks it before he answers.
+At the river ferry, a boatman is replacing the worn end of a reed rope. His daughter holds the coil while he tests each strand. ‘The old part caught under the hull yesterday,’ she says. He asks her to show you the frayed place, then explains why the rope must give a little as the water rises. A traveller arrives with a crate and tries to set it by the rail. The boatman asks him to move it toward the middle of the boat. ‘When everyone stands on one side to see the far bank, I still have to keep her level.’ You ask how to reach the Arabian towns from here. His daughter says the road first follows the Nile north toward Cairo; from there travellers cross Sinai before continuing into Arabia. ‘My aunt went that way,’ she says. ‘She sent word from Cairo before she crossed the desert.’ The boatman points to the marks on his pole, which he uses to read the water. His daughter asks whether today's level changes the loading order. He checks it before answering, then lets her place the traveller's crate at the centre of the boat.
 
 ## ev.dongola.site_gap.choice.route
 
-Ask about the road to Mecha
+Ask about the Nile road toward Cairo
 
 ## ev.ev_dongola_site_gap.choice_1_result
 
-The daughter points out the road toward Mecha from the far bank and makes you repeat the turn where the ferry path ends. Her father checks the water mark once more before carrying your route note back to the boat.
+From the far bank, the daughter points out the northbound Nile road. She makes you repeat the turn where the ferry path ends and names the next place to find water. ‘When you reach Cairo, ask again before crossing Sinai,’ she says. Her father checks the river mark once more before returning to the boat.
 
 ## ev.dongola.site_gap.choice.interact
 

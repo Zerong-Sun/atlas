@@ -407,6 +407,449 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-esher-cat",
+      "kind": "site",
+      "title": "ev.esher.cat.title",
+      "body": "ev.esher.cat.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "esher"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.esher.cat.choice.cat",
+          "resultText": "ev.esher.cat.result.cat",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "esher",
+              "reason": "helped-find-market-cat"
+            }
+          ]
+        },
+        {
+          "label": "ev.esher.cat.choice.awning",
+          "resultText": "ev.esher.cat.result.awning",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 25,
+              "reason": "paid-for-awning-repair"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-maabar-courtyard",
+      "kind": "site",
+      "title": "ev.maabar.courtyard.title",
+      "body": "ev.maabar.courtyard.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "maabar"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.maabar.courtyard.choice.hook",
+          "resultText": "ev.maabar.courtyard.result.hook",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "received-share-of-hook-repair"
+            }
+          ]
+        },
+        {
+          "label": "ev.maabar.courtyard.choice.seat",
+          "resultText": "ev.maabar.courtyard.result.seat",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maabar",
+              "reason": "helped-family-shade-fig-tree"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-medina-lantern",
+      "kind": "site",
+      "title": "ev.medina.lantern.title",
+      "body": "ev.medina.lantern.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "medina"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.medina.lantern.choice.tools",
+          "resultText": "ev.medina.lantern.result.tools",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "medina",
+              "reason": "helped-repair-guesthouse-lantern"
+            }
+          ]
+        },
+        {
+          "label": "ev.medina.lantern.choice.evening",
+          "resultText": "ev.medina.lantern.result.evening",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-test-guesthouse-lantern"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "rested-at-guesthouse"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-semenat-lamps",
+      "kind": "site",
+      "title": "ev.semenat.lamps.title",
+      "body": "ev.semenat.lamps.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "semenat"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.semenat.lamps.choice.shelf",
+          "resultText": "ev.semenat.lamps.result.shelf",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "semenat",
+              "reason": "helped-level-shrine-lamp-shelf"
+            }
+          ]
+        },
+        {
+          "label": "ev.semenat.lamps.choice.stay",
+          "resultText": "ev.semenat.lamps.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-shrine-gathering"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "shared-shrine-supper"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tana-receipt",
+      "kind": "site",
+      "title": "ev.tana.receipt.title",
+      "body": "ev.tana.receipt.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tana"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tana.receipt.choice.count",
+          "resultText": "ev.tana.receipt.result.count",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 25,
+              "reason": "paid-for-market-counting"
+            }
+          ]
+        },
+        {
+          "label": "ev.tana.receipt.choice.carry",
+          "resultText": "ev.tana.receipt.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tana",
+              "reason": "delivered-corrected-cotton-receipt"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-melibar-seedlings",
+      "kind": "site",
+      "title": "ev.melibar.seedlings.title",
+      "body": "ev.melibar.seedlings.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "melibar"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.melibar.seedlings.choice.plant",
+          "resultText": "ev.melibar.seedlings.result.plant",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "melibar",
+              "reason": "helped-plant-pepper-vines"
+            }
+          ]
+        },
+        {
+          "label": "ev.melibar.seedlings.choice.stay",
+          "resultText": "ev.melibar.seedlings.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-at-pepper-garden"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "shared-growers-meal"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-maldive-mat",
+      "kind": "site",
+      "title": "ev.maldive.mat.title",
+      "body": "ev.maldive.mat.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "maldive"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.maldive.mat.choice.weave",
+          "resultText": "ev.maldive.mat.result.weave",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 25,
+              "reason": "paid-for-finishing-family-mat"
+            }
+          ]
+        },
+        {
+          "label": "ev.maldive.mat.choice.carry",
+          "resultText": "ev.maldive.mat.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "welcomed-returning-island-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chamba-net",
+      "kind": "site",
+      "title": "ev.chamba.net.title",
+      "body": "ev.chamba.net.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "chamba"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.chamba.net.choice.mend",
+          "resultText": "ev.chamba.net.result.mend",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chamba",
+              "reason": "helped-fishing-family-mend-net"
+            }
+          ]
+        },
+        {
+          "label": "ev.chamba.net.choice.listen",
+          "resultText": "ev.chamba.net.result.listen",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-learn-coastal-tides"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-tide-timing-from-fishers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-java-major-reed-case",
+      "kind": "site",
+      "title": "ev.java-major.reed-case.title",
+      "body": "ev.java-major.reed-case.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "java-major"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.java-major.reed-case.choice.repair",
+          "resultText": "ev.java-major.reed-case.result.repair",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "java-major",
+              "reason": "repaired-sailmakers-reed-case"
+            }
+          ]
+        },
+        {
+          "label": "ev.java-major.reed-case.choice.stay",
+          "resultText": "ev.java-major.reed-case.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-sailmaker-lesson"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-sail-repair-timing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-pentam-well",
+      "kind": "site",
+      "title": "ev.pentam.well.title",
+      "body": "ev.pentam.well.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "pentam"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.pentam.well.choice.carry",
+          "resultText": "ev.pentam.well.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "pentam",
+              "reason": "helped-well-keeper-deliver-water"
+            }
+          ]
+        },
+        {
+          "label": "ev.pentam.well.choice.rest",
+          "resultText": "ev.pentam.well.result.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-learn-island-wells"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "listened-to-well-keepers-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

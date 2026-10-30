@@ -115,6 +115,11 @@
         {
           "label": "ev.ev_lop_caravanserai_followup.choice_2",
           "resultText": "ev.ev_lop_caravanserai_followup.choice_2_result",
+          "showWhen": {
+            "lacks_item": [
+              "it-desert-provisions"
+            ]
+          },
           "effects": [
             {
               "op": "coins",
@@ -158,7 +163,7 @@
       ],
       "lore": {
         "placeId": "lop",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c39"

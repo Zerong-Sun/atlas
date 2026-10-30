@@ -27,6 +27,8 @@ The wind smells of wet rope. A porter edges past you with
 a crate on his shoulder. Seeing you linger, he nods towards the city gate:
 "That way in. This pepper will be hanging here a while."
 
+A young porter offers to run to Hasan's storehouse. The clerk tells him to check the name on the door before calling anyone back. "I know the door," the boy says, "but his nephew works beside it. Which one do you want?" The clerk finally looks up from the account sheet and gives him Hasan's full name. The boy repeats it, then darts between two stacks of baskets. The cargo handler keeps one hand on the sack while he waits.
+
 ## ev.alexandria.entry.choice.look
 
 Stay at the quay and find out why the sack is held up

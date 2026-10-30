@@ -2,7 +2,7 @@
 unit: lop
 lang: zh
 source: en
-source_rev: 2ca6ec527c5e
+source_rev: c6f62325de8d
 status: translated
 translator: 人工校译
 notes: >
@@ -28,7 +28,7 @@ stamps:
   ev.lop.caravanserai.body: 367acc50a8ce
   ev.lop.caravanserai.choice.hire_guide: 27c1aa0c1bd4
   ev.lop.caravanserai.choice.provision: 9ab405aeea96
-  ev.lop.caravanserai.choice.wait_caravan: 01f61298eb5c
+  ev.lop.caravanserai.choice.wait_caravan: ebecf5fba979
   ev.lop.caravanserai.title: 93929b33a5ef
   ev.lop.entry.body: 470d823b6b03
   ev.lop.shrine.body: 829c3c941e92
@@ -40,18 +40,18 @@ stamps:
   ev.ev_lop_bazaar.choice_1_result: 8920cb65121c
   ev.ev_lop_bazaar.choice_2_result: 07bb57088063
   ev.ev_lop_caravanserai.choice_1_result: 7755c31fd01f
-  ev.ev_lop_caravanserai.choice_2_result: 83113ec5864f
+  ev.ev_lop_caravanserai.choice_2_result: a18323f3ae07
   ev.ev_lop_caravanserai.choice_3_result: 32f761a6e349
   ev.ev_lop_shrine.choice_1_result: 216ddbaa3260
   ev.ev_lop_shrine.choice_2_result: e9617d6da91a
   ev.ev_lop_consequence_a.title: f0d257e765b9
-  ev.ev_lop_consequence_a.body: 895def1868c1
+  ev.ev_lop_consequence_a.body: 3ffa4df644d9
   ev.ev_lop_consequence_a.choice_1: 59fa51a6040b
   ev.ev_lop_consequence_a.choice_1_result: 1e8b5f63e14c
   ev.ev_lop_consequence_a.choice_2: 7497bf345ea2
   ev.ev_lop_consequence_a.choice_2_result: bc44e8b0e4b3
   ev.ev_lop_consequence_a_resolution.title: 0d16da25095b
-  ev.ev_lop_consequence_a_resolution.body: 8f37cd586f66
+  ev.ev_lop_consequence_a_resolution.body: 4a0ec0cf2d02
   ev.ev_lop_consequence_a_resolution.choice_1: 3ce65298769e
   ev.ev_lop_consequence_a_resolution.choice_1_result: 83d158086ec0
   ev.ev_lop_consequence_a_resolution.choice_2: 9a98632c0dd0
@@ -86,8 +86,8 @@ stamps:
   ev.ev_lop_bazaar_followup.choice_3_result: 061ccf9366f8
   ev.ev_lop_caravanserai_followup.title: 90c120eedf87
   ev.ev_lop_caravanserai_followup.body: 9430b0176dcb
-  ev.ev_lop_caravanserai_followup.choice_1: ba124679f820
-  ev.ev_lop_caravanserai_followup.choice_1_result: 3ea2c248ba09
+  ev.ev_lop_caravanserai_followup.choice_1: b46dc44c54d0
+  ev.ev_lop_caravanserai_followup.choice_1_result: a60063ff34da
   ev.ev_lop_caravanserai_followup.choice_2: c0bf48390228
   ev.ev_lop_caravanserai_followup.choice_2_result: 2f22bdcf130d
   ev.ev_lop_caravanserai_followup.choice_3: f2bb2204150c
@@ -127,11 +127,11 @@ stamps:
 
 ## ev.lop.entry.title
 
-罗布客栈的一夜
+罗卜客栈的一夜
 
 ## ev.lop.bazaar.body
 
-罗布集市上，卖玉的米拉摊开两包货。女儿在每包旁边放一颗小石子，记住它们跟哪支商队来的。孩子拿起一块和田来的白石，突然停住了：签上写着几个月没见的表兄名字。米拉叫她先把纸条读完，再管价钱。
+罗卜集市上，卖玉的米拉摊开两包货。女儿在每包旁边放一颗小石子，记住它们跟哪支商队来的。孩子拿起一块于阗来的白石，突然停住了：签上写着几个月没见的表兄名字。米拉叫她先把纸条读完，再管价钱。
 
 你问石头是不是表兄自己捡的。女儿念道，表兄从河边拣石人手里买下，再交给秋天的商队；他还问孩子那双破凉鞋补好了没有。“他什么都记得，就是总忘了自己的靴子。”孩子说。米拉笑着替货包系上新布条，免得和别家的货混了。
 
@@ -167,7 +167,7 @@ stamps:
 
 ## ev.lop.caravanserai.choice.wait_caravan
 
-等八天，花 1.2 银随商队走
+等八天，花 1.2 银预留商队位置
 
 ## ev.lop.caravanserai.title
 
@@ -175,7 +175,7 @@ stamps:
 
 ## ev.lop.entry.body
 
-罗布的客栈里，艾森正检查水囊接缝，外甥在旁边数一支商队要带的粮袋。孩子数出多一袋，怎么也找不到错处。艾森放下水囊，让他从已经绑好的货开始重数。你帮他把空袋和满袋分开。
+罗卜的客栈里，艾森正检查水囊接缝，外甥在旁边数一支商队要带的粮袋。孩子数出多一袋，怎么也找不到错处。艾森放下水囊，让他从已经绑好的货开始重数。你帮他把空袋和满袋分开。
 
 你问过沙地前一般要准备多久。艾森说，有的人会住几天，让牲口歇足，也重新问清哪些井还能用；每队都得按自己带得动的水来算。守井人这时进门，说有口井的水变苦了。外甥问商队是不是得等。艾森说：“先和带路的人谈，再决定。”
 
@@ -183,7 +183,7 @@ stamps:
 
 ## ev.lop.shrine.body
 
-罗布城外的浅石窟里，守灯的图玛正剪一盏小灯的灯芯。孙子在门口扫沙，风一吹又铺回来。“先扫墙角，再扫门口。”她说。孩子问墙上为何留了这么多人的名字。图玛说，有人想让家里知道自己到了这里，也有人只盼后来者看见。
+罗卜城外的浅石窟里，守灯的图玛正剪一盏小灯的灯芯。孙子在门口扫沙，风一吹又铺回来。“先扫墙角，再扫门口。”她说。孩子问墙上为何留了这么多人的名字。图玛说，有人想让家里知道自己到了这里，也有人只盼后来者看见。
 
 你问她还能读清哪些字。图玛指给你看一段旧祈词，又指向后来有人写的井水记号。经过的商人说那口井去年涨水后变了。图玛让他把新情况和日期写在旧字旁，免得下个旅人只看见一半。商人找来炭，蹲到墙边。
 
@@ -215,7 +215,7 @@ stamps:
 
 ## ev.ev_lop_bazaar.choice_2_result
 
-米拉的女儿在地图上指给你看河边城镇，又说出去沙州的路。你记下表兄那包石头如何从和田拣石人手里来，她很高兴有人认真问了他的行程。
+米拉的女儿在地图上指给你看河边城镇，又说出去沙州的路。你记下表兄那包石头如何从于阗拣石人手里来，她很高兴有人认真问了他的行程。
 
 ## ev.ev_lop_caravanserai.choice_1_result
 
@@ -223,7 +223,7 @@ stamps:
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-你付 1.2 银，等了八天才同商队走。那户人家趁空修好货绳，你也跟着检查自己的。队伍出发时，去沙州的路已认清。
+你付 1.2 银，等了八天让拼队的人到齐。那户人家趁空修好货绳，你也跟着检查自己的。阿尔斯兰标出去沙州的路；你决定启程时，商队已有你的位置。
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
@@ -248,6 +248,8 @@ stamps:
 你问那口井如今还有没有人用。孙女说上一季有商队停过。祖父问她听谁讲的，她想起是阿尔斯兰，还指出井名旁有他留下的记号。老人答应傍晚去问他。老人有一份可给你带着走的副本，只请你把未核的地方先留白。
 
 孩子把纸铺平，在那一行旁边留出空处，等祖父把阿尔斯兰找来。
+
+孙女问那口变苦的井还要不要留在单上。“留着，”老人说，“以后水再变，也有人知道先前是什么样。”她在井名旁点了个小点，等下回旅人带消息来再添日期。
 
 ## ev.ev_lop_consequence_a.choice_1
 
@@ -276,6 +278,8 @@ stamps:
 你问井水甜不甜。阿尔斯兰说上回去时还能喝，守井人便把日期补在旁边。孙女在名字边画了只小杯，又问这记号会不会太像小孩画的。祖父说自己累了时一眼就能认出来。
 
 纸已经晾干，屋里也摆好了晚饭。你现在能带着核过的记录走，也可再留一天，亲手把整份井单抄一遍。
+
+孙女只把亲眼见过那口井的人写在这一页。祖父查完那一行，又让她把日期写大些，好让走累了的旅人也看得清。
 
 ## ev.ev_lop_consequence_a_resolution.choice_1
 
@@ -351,11 +355,11 @@ stamps:
 
 ## ev.lop.mentor_closure.title
 
-罗布的看风人
+罗卜的看风人
 
 ## ev.lop.mentor_closure.body
 
-罗布城边，看风的老向导梅尔根正收紧一面小挡风帘的绳子。侄女扶着一头，抱怨他总让她看沙子，不先看天。他问刚才的风从哪里来。孩子指着挡风帘旁留下的沙纹，答对了。
+罗卜城边，看风的老向导梅尔根正收紧一面小挡风帘的绳子。侄女扶着一头，抱怨他总让她看沙子，不先看天。他问刚才的风从哪里来。孩子指着挡风帘旁留下的沙纹，答对了。
 
 你问他怎么教她。梅尔根说两人常在不同的早晨走同一段地，比较地上变了什么。侄女补充，他还让她先找商队厨子问水，再谈走哪条路。“那是因为你有一回说对了。”梅尔根说。侄女说不止一回，老人才笑着让她把结打完。
 
@@ -387,11 +391,11 @@ stamps:
 
 ## ev.ev_lop_bazaar_followup.title
 
-和田来的另一包玉
+于阗来的另一包玉
 
 ## ev.ev_lop_bazaar_followup.body
 
-米拉的女儿读完表兄的信。信上说他离开和田时河水还高，拣石人得等水退。米拉叫女儿把日期记在表兄名字旁：“下季再来，才好知道他讲的是哪一批石头。”孩子写得很仔细，低头看见自己凉鞋松开的带子，又想起表兄信里的提醒。
+米拉的女儿读完表兄的信。信上说他离开于阗时河水还高，拣石人得等水退。米拉叫女儿把日期记在表兄名字旁：“下季再来，才好知道他讲的是哪一批石头。”孩子写得很仔细，低头看见自己凉鞋松开的带子，又想起表兄信里的提醒。
 
 你问米拉还有没有玉货。她拿出另一整包，开价 135 银。女儿指给你看包上的记号：这包跟另一支商队来，账数也另记。孩子问你想不想听水退后拣石人在哪里做工，米拉说下位客人来前还有空。
 
@@ -411,7 +415,7 @@ stamps:
 
 ## ev.ev_lop_bazaar_followup.choice_2_result
 
-女儿说了和田附近拣石人何时能下到河滩，又指出向东走可到沙州。你在地图上记下城名，她把表兄的信收进账本。
+女儿说了于阗附近拣石人何时能下到河滩，又指出向东走可到沙州。你在地图上记下城名，她把表兄的信收进账本。
 
 ## ev.ev_lop_bazaar_followup.choice_3
 
@@ -435,11 +439,11 @@ stamps:
 
 ## ev.ev_lop_caravanserai_followup.choice_1
 
-照阿尔斯兰标出的路线出发
+向阿尔斯兰确认位置，抄下路线
 
 ## ev.ev_lop_caravanserai_followup.choice_1_result
 
-你从阿尔斯兰的木板上抄下去沙州各段路。他确认你认得盐地后头是哪口井，便同意你随队出发。
+你从阿尔斯兰的木板上抄下去沙州各段路。他确认你认得盐地后头是哪口井，也给你留好了队伍中的位置。东西收拾妥当后，你就能自己决定何时上路。
 
 ## ev.ev_lop_caravanserai_followup.choice_2
 

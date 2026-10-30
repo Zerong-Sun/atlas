@@ -20,7 +20,8 @@
       "entryEvent": "ev-chamba-entry",
       "sites": [
         "ev-chamba-a",
-        "ev-chamba-b"
+        "ev-chamba-b",
+        "ev-chamba-net"
       ],
       "exits": [
         "rt-chamba-fuju",
@@ -87,7 +88,8 @@
       "tier": "town",
       "entryEvent": "ev-java-major-entry",
       "sites": [
-        "ev-java-major-battuta-a"
+        "ev-java-major-battuta-a",
+        "ev-java-major-reed-case"
       ],
       "exits": [
         "rt-java-major-chamba",
@@ -146,7 +148,8 @@
       "entryEvent": "ev-pentam-entry",
       "sites": [
         "ev-gap-pentam",
-        "ev-unique-pentam"
+        "ev-unique-pentam",
+        "ev-pentam-well"
       ],
       "exits": [
         "rt-chamba-pentam",

@@ -2,7 +2,7 @@
 unit: alexandria
 lang: zh
 source: en
-source_rev: 71a36ea65b13
+source_rev: 9de67c7cd5fd
 status: draft
 translator: 人工校译
 notes: >
@@ -13,7 +13,7 @@ notes: >
 
 stamps:
   city.alexandria.name: 39ae78ec341c
-  ev.alexandria.entry.body: 5bb47e322c75
+  ev.alexandria.entry.body: 548eb48960ac
   ev.alexandria.entry.choice.look: 4c2d9246af55
   ev.alexandria.entry.choice.pass: 60627dfa45c0
   ev.alexandria.entry.title: 802852e8bceb
@@ -39,6 +39,9 @@ stamps:
 书吏问：“他的木签呢？”押货的人摸遍腰带，拍出一片灰。码头上另一边已经有人喊书吏过去看货，他还是守着这杆秤：“把哈桑叫来。没他的木签，我这儿没法记账。”
 
 海风吹来一股潮湿的绳索味。一个扛箱子的搬运工从你身旁挤过，见你停下看热闹，朝城门扬了扬下巴：“要进城就从那边走。这包胡椒还得在这儿吊一阵。”
+
+一个年轻脚夫说可以去仓房叫哈桑。书吏让他先认清门上的名字，别带错人。“门我知道，”小伙子说，“他侄子就在隔壁做事。你找哪一个？”书吏这才从账页上抬头，把哈桑的全名告诉他。小伙子重复一遍，从两堆篮子间钻了过去。押货的人仍扶着袋口，等他回来。
+
 ## ev.alexandria.entry.title
 
 亚历山大

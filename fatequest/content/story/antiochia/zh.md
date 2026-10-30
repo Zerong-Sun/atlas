@@ -2,7 +2,7 @@
 unit: antiochia
 lang: zh
 source: en
-source_rev: 0a4797471313
+source_rev: 1964d21bf7ff
 status: draft
 translator: 人工校译
 notes: >
@@ -13,11 +13,11 @@ notes: >
 
 stamps:
   city.antiochia.name: f3f214bfbe77
-  ev.antiochia.entry.body: 98f8b5107bfe
+  ev.antiochia.entry.body: 694531135cb4
   ev.antiochia.entry.choice.look: 00afaa08ae0c
   ev.antiochia.entry.choice.pass: 9507331ee004
   ev.antiochia.entry.title: f3741b89eafd
-  ev.antiochia.two_names.body: 67485fd79e4a
+  ev.antiochia.two_names.body: 41f93e4c5816
   ev.antiochia.two_names.choice.guard: 2e26894fac71
   ev.antiochia.two_names.choice.maps: c99f0f930734
   ev.antiochia.two_names.result.guard: 3c742b7b8f53
@@ -25,7 +25,7 @@ stamps:
   ev.antiochia.two_names.title: adecfdfe5bbe
   ev.ev_antiochia_entry.choice_1_result: 5ebbf7be4a61
   ev.ev_antiochia_entry.choice_2_result: 6619f5e7da11
-  ev.gap.antiochia.scene.body: 1e40c5ee73ea
+  ev.gap.antiochia.scene.body: 6f484c920547
   ev.gap.antiochia.scene.choice.route: 82f6a526fb4c
   ev.gap.antiochia.scene.choice.talk: cd7e4f8de3c3
   ev.gap.antiochia.scene.result.route: 894eace501b2
@@ -51,6 +51,9 @@ stamps:
 守桥人拿一块石头压住翘起的木板，催车夫往前挪半步。摆渡人在岸边把钩子伸进水里，似乎还有自己的麻烦。排队的人伸着脖子等，山影已经落到城墙上。
 
 守桥人抬头看见你：“要过桥就等这辆车走完。赶路的先来问我，省得在桥上停下来找方向。”
+
+排队的妇人挎着菜篮，问守桥人木匠来不来。“我儿子已经去叫了，”他说，“那块松板他认得。”车夫想把骡子往后牵，骡子却已经找了块稳当的地方站住。妇人把篮子挪开，转头对你说：“你要留下帮忙，就先问守桥人备用木板放在哪儿。”
+
 ## ev.antiochia.entry.title
 
 安条克
@@ -69,9 +72,11 @@ stamps:
 
 ## ev.gap.antiochia.scene.body
 
-桥边的摆渡人伸长钩子，从水里捞起一只木勺。勺柄上刻着三道短线，他在袖子上擦了擦，举给岸上的孩子看：“瞧，河把我的勺子送回来了。”
+摆渡人伸长钩子，从水里捞起一只木勺。勺柄上刻着三道短线，他在袖子上擦了擦，举给岸上的孩子看：“瞧，河把我的勺子送回来了。”
 
-孩子把鞋跟往石阶上磕：“您今早还拿它舀豆汤呢。”摆渡人咳了一声，低头去收钩。桥上的货车慢慢挪动，孩子还在等他解释那三道刻痕。
+孩子把鞋跟往石阶上磕：“您今早还拿它舀豆汤呢。”摆渡人咳了一声，低头去收钩。桥上有车夫喊人让路，他牵着孩子退到石阶边。孩子又指了指那三道刻痕：“是您刻的吗？”
+
+一个端着汤锅的妇人走下台阶，问摆渡人这勺子洗净了没有，中午还要用。她让孩子回去拿布。孩子找来一块带着薄荷味的旧布，把勺柄擦得很仔细。妇人说这把勺子在摊上用了许多年。孩子每回问起刻痕，摆渡人就讲一个不同的版本，转头又忙别的去了。她把擦净的勺子交给孩子，叫她今天一定问清楚。那辆盖着蓝布的车还在桥上慢慢挪，孩子也想知道，它究竟要去哪里。
 
 ## ev.gap.antiochia.scene.choice.talk
 
@@ -102,6 +107,8 @@ stamps:
 守门人听到河名，愣了一下：“我们管它叫阿西河。桥倒确实只有前头那一座。你看看纸上还写了什么。”
 
 商人把折皱的纸摊在石凳上。上面画着一座桥、一个卖汤的摊子，河名写得很大，收货人的名字却让水洇开了。他怕把豆子送错，正打算抱着包裹再去问一圈。
+
+守门人问包裹是谁托的。商人说是卖汤人的弟弟，在上一个车队歇脚处亲手画了图：“昨天遇上雨，纸才湿了，豆子我一直抱着。”他顺着旧折痕把纸合上，又忍不住打开，想找找摊棚的样子。守门人指得出桥，却说自己从没逐家认过桥边的摊子。你刚从那边经过。
 
 ## ev.antiochia.two_names.choice.maps
 

@@ -2,7 +2,7 @@
 unit: chamba
 lang: zh
 source: en
-source_rev: eeaeda1529a1
+source_rev: 63aa2111599d
 status: translated
 translator: 人工校译
 notes: >
@@ -12,46 +12,52 @@ notes: >
 
 stamps:
   city.chamba.name: 8332a4c9f42f
-  ev.chamba.entry.choice.market: 83f7f2f68772
-  ev.chamba.entry.choice.pass: dc7f77ef08d8
-  ev.chamba.entry.choice.shrine: 32b9d6e49020
-  ev.chamba.entry.body: 9ae5c8b3591e
-  ev.chamba.entry.title: 9b4bc4f5d970
-  ev.chamba.a.title: 066d3d494516
-  ev.chamba.a.body: 384ad08bc111
-  ev.chamba.a.choice.hear_tribute: d4edd8cff076
-  ev.chamba.a.choice.watch_harbour: f6ec4d9b0f88
-  ev.chamba.a.choice.buy_sandalwood: ff0e7d94d45c
-  ev.chamba.b.title: fec1afc20e00
-  ev.chamba.b.body: c0d643604603
-  ev.chamba.b.choice.visit_court: 7b31e4574072
-  ev.chamba.b.choice.buy_pepper: a66d1e755786
-  ev.chamba.b.choice.ask_sea_road: 1830deda347f
-  ev.ev_chamba_entry.choice_1_result: 286fc0de1f9e
-  ev.ev_chamba_entry.choice_2_result: 24a87e8c27d0
-  ev.ev_chamba_entry.choice_3_result: 5602223eeb68
-  ev.ev_chamba_a.choice_1_result: 490a317e66d3
-  ev.ev_chamba_a.choice_2_result: 62fb99bcf165
-  ev.ev_chamba_a.choice_3_result: 65fd4bd9a97b
-  ev.ev_chamba_b.choice_1_result: 9a58ec57e790
-  ev.ev_chamba_b.choice_2_result: 1faabf47ce07
-  ev.ev_chamba_a_followup.title: 5ce7d1b05de9
-  ev.ev_chamba_a_followup.body: adebcda2a6d9
-  ev.ev_chamba_a_followup.choice_1: a31fc8f156cb
-  ev.ev_chamba_a_followup.choice_1_result: 82d0c3f77b97
-  ev.ev_chamba_a_followup.choice_2: 2d263bb0ea5d
-  ev.ev_chamba_a_followup.choice_2_result: 42482fb7e9be
-  ev.ev_chamba_a_followup.choice_3: 7f5fc20a219b
-  ev.ev_chamba_a_followup.choice_3_result: 67597250c22f
-  ev.ev_chamba_b_followup.title: 4b8123da79f4
-  ev.ev_chamba_b_followup.body: 78bff8b9e3c6
-  ev.ev_chamba_b_followup.choice_1: 3ae8ce92525a
-  ev.ev_chamba_b_followup.choice_1_result: a22310621c56
-  ev.ev_chamba_b_followup.choice_2: 878e9920ad3e
-  ev.ev_chamba_b_followup.choice_2_result: bb36249c0987
-  ev.ev_chamba_b_followup.choice_3: 22f62642b7a1
-  ev.ev_chamba_b_followup.choice_3_result: 071be0fc75a2
-  ev.ev_chamba_b.choice_3_result: 5716069fa47f
+  ev.chamba.entry.body: 2df7183f17d9
+  ev.chamba.entry.choice.market: 880db5879b67
+  ev.chamba.entry.choice.pass: 380801a894fd
+  ev.chamba.entry.choice.shrine: 2122e5a1a8d8
+  ev.chamba.entry.title: 7ef6484d61cf
+  ev.chamba.a.title: 993ae8a992a7
+  ev.chamba.a.body: cad1423c6bbb
+  ev.chamba.a.choice.hear_tribute: 5fb27018c85c
+  ev.chamba.a.choice.watch_harbour: fe602aeedda7
+  ev.chamba.a.choice.buy_sandalwood: 79bd8be73d3a
+  ev.chamba.b.title: eb0e06b0d7a5
+  ev.chamba.b.body: e3e5ed48467d
+  ev.chamba.b.choice.visit_court: b337ef897c40
+  ev.chamba.b.choice.buy_pepper: 7b8e0f08b966
+  ev.chamba.b.choice.ask_sea_road: d634e9940307
+  ev.ev_chamba_entry.choice_1_result: a2c311dd3af0
+  ev.ev_chamba_entry.choice_2_result: d445b9f242c1
+  ev.ev_chamba_entry.choice_3_result: 96133bc2bc7f
+  ev.ev_chamba_a.choice_1_result: c2fd674e9d62
+  ev.ev_chamba_a.choice_2_result: ef023c742a11
+  ev.ev_chamba_a.choice_3_result: 88d861b59dfa
+  ev.ev_chamba_b.choice_1_result: da9043a85657
+  ev.ev_chamba_b.choice_2_result: 26b6e0164b61
+  ev.ev_chamba_b.choice_3_result: 6b4f33f0a960
+  ev.ev_chamba_a_followup.title: 6bf31d1810c8
+  ev.ev_chamba_a_followup.body: 8afa767b5446
+  ev.ev_chamba_a_followup.choice_1: b8f39cc57114
+  ev.ev_chamba_a_followup.choice_1_result: 8e28b30ec392
+  ev.ev_chamba_a_followup.choice_2: 43f85fcf9d6e
+  ev.ev_chamba_a_followup.choice_2_result: 5decf048662b
+  ev.ev_chamba_a_followup.choice_3: 7843985b08de
+  ev.ev_chamba_a_followup.choice_3_result: 7eaa0b31b332
+  ev.ev_chamba_b_followup.title: d36fe834624f
+  ev.ev_chamba_b_followup.body: 8a710e7b272a
+  ev.ev_chamba_b_followup.choice_1: ec7b9e749c0e
+  ev.ev_chamba_b_followup.choice_1_result: ea0f44f2cc87
+  ev.ev_chamba_b_followup.choice_2: f62abebfe5ad
+  ev.ev_chamba_b_followup.choice_2_result: 5f2f741199be
+  ev.ev_chamba_b_followup.choice_3: 87dc948abd9b
+  ev.ev_chamba_b_followup.choice_3_result: be3a337eb392
+  ev.chamba.net.title: aef65d603b12
+  ev.chamba.net.body: 0d80b5c8b77a
+  ev.chamba.net.choice.mend: 517abfcd2c93
+  ev.chamba.net.result.mend: 0aaa8677c329
+  ev.chamba.net.choice.listen: 4314d58732ea
+  ev.chamba.net.result.listen: 8ce63f4f88fa
 ---
 
 ## city.chamba.name
@@ -60,152 +66,184 @@ stamps:
 
 ## ev.chamba.entry.choice.market
 
-穿过港口集市
+在港口集市逛一天
 
 ## ev.chamba.entry.choice.pass
 
-匆匆穿过城门
+穿过城里的街道
 
 ## ev.chamba.entry.choice.shrine
 
-去清真寺看看
+去码头上方的清真寺
 
 ## ev.chamba.entry.body
 
-从刺桐向西南偏西航行约一千五百英里，就到占城。这里物产丰饶，有自己的国王；每年还要向大汗进贡大象。船上的老水手说，1278年萨格都率军来攻，年迈的国王便派使者求和，最后答应送象。
+港边一个少年正想把一捆象草从湿沙上搬开。他抬起这头，另一头又滑向水边。守摊的姑母叫你帮忙扶一会儿，自己去找绳子。你问：“哪头象要吃这么多？”她说象在仓房后面的院子里，早上一直不肯碰旧草。少年接话：“我给它一个梨，它倒吃了，还用鼻子把干草推开。”姑母笑起来：“那就快把鲜草送去，别让它扯院门。”一名等着卸货的水手过来问哪里能吃饭。姑母指向集市那头，告诉他哪个饭摊午前还有热米饭。街上又有几个人往清真寺走。她分出一小捆草交给少年，等他抱稳，才把去集市、寺院和城门的路逐一指给你。少年走出几步又回头问：“姑母，象要是还不吃呢？”“先让它闻闻鲜草，”她说，“回来再告诉我。”
 
-港边的说书人声称，占城海岸有条龙住在旧船锚里，只有船长说谎时它才会打喷嚏。一个船长当场对着锚说：“我从不撒谎。”锚没动。说书人叹气：“看来这条龙今天也晕船。”
 ## ev.chamba.entry.title
 
-占城与象贡
+码头上的象草
+
 ## ev.chamba.a.title
 
-象贡
+书吏与象的草料
 
 ## ev.chamba.a.body
 
-贡物清点到一半，一头大象忽然甩了甩耳朵，把旁边的小吏吓得退了两步。管账的人笑着说：“占城每年都向大汗送象。1278年打过一仗后，老国王派使者谈和，最后定下了这份贡约。”
-
-管账人清点完贡象，象夫牵着头象缓缓走过。领队唱： “前头听铃，后头看脚； 树荫歇肩，河边饮水； 进城留出宽路， 象步稳，队伍就稳。” 象夫摸摸头象的耳朵：“歌里先听铃、再看脚，树荫下歇一歇，河边补足水。队伍照这个节奏走，大象就能平稳进城。”“大象一天要几次喝水和休息，路窄处让它们慢慢过。贡象抵达港口后还要登记、喂养，再安排下一程。”
+港口书吏面前摊着两张单子，一张记仓房后面那头象的草料，一张记船上的木材和檀香。年轻助手把一捆鲜草写进了船货里。“再不改，搬运的人就会把它装船。”她有些着急。书吏让她先找到送草的脚夫，问清象养在哪里。你跟着她去了院子，象夫说那头象刚到不久，连着两顿没好好吃，想在天热之前拿到鲜草。助手回到桌前，把写错的一行划掉，又问书吏为什么旧账本里记着运出海的象。书吏把旧账翻给她看：“那是往年的事。今天先把这一头喂好。”旁边的引水员正在收缆绳，听见你问船路，说北行的船和去宾坦的船都在此装货。助手忙着重写单子，请你若再见到象夫，就替她问问还缺不缺草。
 
 ## ev.chamba.a.choice.hear_tribute
 
-听管账人说说象贡的来历
+问书吏旧账里的象去了哪里
+
 ## ev.chamba.a.choice.watch_harbour
 
-在港口看一天清点贡物
+留下帮忙清点一天港口货物
+
 ## ev.chamba.a.choice.buy_sandalwood
 
-到贡物区买些檀香
+买一整件包好的檀香
+
 ## ev.chamba.b.title
 
-占城的香料与海船
+胡椒商的封包
+
 ## ev.chamba.b.body
 
-香料商在摊上切开一块沉香，浓香立刻散开。“占城不缺好东西，沉香、胡椒都有。大汗的船也来这里；你要是想去刺桐或福州，码头上总有人知道下一班船什么时候走。”
-
-沉香商人切下一小片试香，码头工人跟着秤砣唱： “木香入匣，胡椒入袋； 先称一份，再记两行； 船往刺桐，船往福州； 风到时，整船启航。” 商人解释，沉香和胡椒气味相近却是不同货类，包裹和账目要分开。占城的港口连接北方海路，问清下一班船，货物便能继续向东。
+胡椒商在港棚下给袋口封蜡，侄女扶着袋子，却总把靠近缝线的一小块水印转到背面。“昨天这袋淋了雨。”她终于告诉叔父。商人叫她拆开，先看看里面潮没潮，不急着装船。镇上办事处的经纪人带着清单来了，见袋口开着，便站在旁边等他们重新点数。你问北去的船是否还收货。经纪人说，往刺桐的那艘若风稳就能多带几包；去福州的船员还得看过货，才能报出港日子。侄女问：“买主都等着了，船为什么还不开？”经纪人带她走到码头，指给她看正在补帆等风的两班船员。她回来后把潮袋单独摆开，叔父取一小撮干胡椒请你闻，又问你是要买货，还是找水手问路。
 
 ## ev.chamba.b.choice.visit_court
 
-在港口等两天，打听王宫消息
+花两天跟着镇上书吏与经纪人
+
 ## ev.chamba.b.choice.buy_pepper
 
-向香料商买胡椒
+买一整件封好的胡椒
 
 ## ev.chamba.b.choice.ask_sea_road
 
-问水手去刺桐和福州要走几天
+问船员刺桐与福州的航路
+
 ## ev.ev_chamba_entry.choice_1_result
 
-港边船工抬着象草经过，朝你喊：“别挡路，给贡象的草今天就得送上船。”
+少年赶在象扯坏院门前把草送到。姑母指了指米饭摊，你沿着她说的街道穿过城里，走过仓房、集市，最后找到通往内陆的城门。
+
 ## ev.ev_chamba_entry.choice_2_result
 
-你在港口看老水手清点象草。他说：“象上船前先备草和水，不然到了海上，想补一捆都难。”
+你留到第二天的集市。姑母把你介绍给补帆匠，补帆匠的母亲在清真寺旁卖米饭。他带你走了几条小巷，傍晚时你已能自己找到沿水的仓房和城门。
+
 ## ev.ev_chamba_entry.choice_3_result
 
-你登上清真寺屋顶。几位长者回应了你的问候，还报上自己的名字；下山时，其中一位邀你改日去港口尝尝占城人爱吃的酸鱼汤。
+清真寺的看守正把水罐搬到门前，你帮他把罐子挪开台阶才进门问候长者。其中一人把认路的侄子介绍给你。离开时，他记住你的名字，邀你改天再来。
 
 ## ev.ev_chamba_a.choice_1_result
 
-管账人讲明了象贡的来历。你把象贡的来历记下，通往刺桐的路也标在地图上；这番打听让你多了几分把握。
+书吏把旧账搬到阴凉处，请助手念出几年的去向。她发现目的港年年不尽相同，他便把附在账页后的船工记录给她看。你从旧账知道这座港曾运出什么，也从北行水手口中听到刺桐的名字。引水员见你们还在聊，便走了过来。
 
 ## ev.ev_chamba_a.choice_2_result
 
-你在港口看人清点贡物，顺便问了几句货物的来路。
+你又留了一天，站在助手旁边，脚夫每抬一捆你们就核一行。象夫拿到了草料，引水员也告诉你哪艘南行船会靠近宾坦。书吏合上清单时，请那位引水员再与你谈谈海路。
 
 ## ev.ev_chamba_a.choice_3_result
 
-你在贡物区买下檀香，付了 900 钱币。管账人在礼单旁记下了你的名字。
+木商拆开一角，让你看清檀香再重新封包。你付了整件货款，书吏把你的名字写在负责送货的脚夫旁边。木商等你确认外包没有受潮，才回去照看别的货。
 
 ## ev.ev_chamba_b.choice_1_result
 
-等船时，老水手腾出半张席子招呼你吃饭：“王宫收沉香和胡椒，朝贡船来时先在码头清点，装船前还得再点一次。少了一包，最后来找的总是我们这些搬货的。”
+你跟经纪人在码头与镇上办事处之间走了两天。侄女送去每一袋改过的编号，书吏告诉她为什么岸上也要留一份清单。第二天她已经能自己核对。临走前，经纪人又带来一位熟悉北行航路的引水员。
 
 ## ev.ev_chamba_b.choice_2_result
 
-你向香料商买下胡椒，付了 8000 钱币。
+你付了整件胡椒的货款。侄女按你的意思拆开最上面一袋，让你闻过颗粒，再当面重新封好。叔父把你的名字写进货单。经纪人请你稍等，他还有一张开船告示要送来。
 
 ## ev.ev_chamba_a_followup.title
 
-占城：象贡之后
+清完货后的引水员
 
 ## ev.ev_chamba_a_followup.body
 
-贡船的引水员把你带上防波堤，指着海面说：“刺桐在那边，顺着季风走就行。宾童龙和福州的船也会经过这条路。要不要我把航程和停靠点给你标出来？”
+书吏收起港口清单时，引水员带着一块画了航路的板子来到仓房。肩上还搭着刚收下的缆绳。“助手说你问过我们的船往哪里去。”他把板子放平，指给你看北面的刺桐和南面的宾坦。一个脚夫跑来问，新封的檀香该记在你的货单里，还是下一艘船的单里。引水员让他稍等，书吏核清名字后才答复。“我自己也留一份。”引水员说，“出了海，总不能为一件漏记的货跑回仓房。”他手下的年轻水手问，去宾坦能不能一路让同一个人引船。引水员摇头，说到了浅水处，应让熟悉那片水的人接手。年轻人点点头，把港口名字写在板边，想请你帮他核一遍。
+
 ## ev.ev_chamba_a_followup.choice_1
 
-按贡港价买下檀香
+再买一整件封好的檀香
 
 ## ev.ev_chamba_a_followup.choice_1_result
 
-他卖给你封好等季风的檀香。香气留在货舱里。
+木商搬出包好的檀香，拆开一角给你验货。你付清货款，看书吏把你的名字移到正确的货单里。引水员叫年轻水手把有记号的货搬到干燥的棚下。
 
 ## ev.ev_chamba_a_followup.choice_2
 
-请他标出海路前往刺桐
+请引水员标出前往刺桐的海路
 
 ## ev.ev_chamba_a_followup.choice_2_result
 
-船主说：“刺桐的朝贡船得等季风合适才走。你要赶路的话，先问清下一班船什么时候起锚。”
+引水员在你的图上标出刺桐和沿途补水处，又让年轻水手当面复述一遍。年轻人改正木板角落一处挤在一起的标记。你带走了可用的航路，也听懂了旧账中的象为何曾从这里出海。
 
 ## ev.ev_chamba_a_followup.choice_3
 
-在贡港看一日，听引水员的话
+再留一天看船队准备出港
 
 ## ev.ev_chamba_a_followup.choice_3_result
 
-你在防波堤上问引水员怎么去宾童龙。他朝一艘吃水浅的船抬了抬下巴：“这种船能靠那边的浅港。出港前先问风，顺着风走，省得在海上兜圈子。”
+你次日回来时，年轻水手正在核缆绳与水罐。他指给你看哪只船会靠近宾坦，又请你按已装的货核他的清单。找到漏算的一罐水后，引水员让他自己报出最后的数目。
 
 ## ev.ev_chamba_b_followup.title
 
-占城王廷与胡椒码头
+经纪人的开船告示
+
 ## ev.ev_chamba_b_followup.body
 
-胡椒经纪人从王廷把你领到码头棚下，翻开季风册说：“占城的象作为贡物送给大汗，胡椒卖给过路的船。往福州的船快开了，你要带货一起走，最好现在就定。”
+经纪人把新写的开船告示带到胡椒商的摊前。侄女先找自家干胡椒那一栏。“在这里，”经纪人说，“只是船员要先补好淡水，才肯再收一件货。”叔父让她带两罐水给卖水人，你替她按住告示，好让她核对袋上的编号。她发现同一编号抄了两次，立刻把纸交回经纪人。经纪人当着叔父的面划掉重写。一名北行船上的水手来问胡椒备好了没有，侄女说：“你先把水搬上船，我们就把袋子交给你。”水手笑着接过一罐。经纪人这才腾出空，把航路纸上的福州指给你看。他问你要不要再买一件货，或把船员常停靠补水的港口抄下来。
+
 ## ev.ev_chamba_b_followup.choice_1
 
-按宫廷经纪人价买下胡椒
+另外买一整件胡椒
 
 ## ev.ev_chamba_b_followup.choice_1_result
 
-他卖给你封好等季风的胡椒。价钱是宫廷本价。
+胡椒商又卖你一整件封好的货。侄女先把编号和改好的告示对上，才让水手搬走。你付清货款，拿到自己那一份收货记录。
 
 ## ev.ev_chamba_b_followup.choice_2
 
-追问前往福州的海路
+请经纪人标明去福州的航路
 
 ## ev.ev_chamba_b_followup.choice_2_result
 
-船主摊开一张潮湿的海图：“去福州就往北走。那边的船常把瓷器、茶叶带下来；等西南风稳了再出港，省得在海上跟风较劲。”
+经纪人在航路纸上标出福州，让水手说出沿途能补水的港口。侄女把告示举到水罐溅不到的地方，你抄好港名，她才把干净的一份交给水手。
 
 ## ev.ev_chamba_b_followup.choice_3
 
-在王廷待一天，听听国王谈海路
+在港口办事处再待一天
+
 ## ev.ev_chamba_b_followup.choice_3_result
 
-国王用指节敲了敲海图：“这些岛上的港口各有脾气。有的只在季风前后开市，有的全年都能靠船。你若往北去，记住先问船主哪天出港，别光看地图估日子。”宫人又补了几处能补水的港口名。
+你又留了一天，帮侄女把改好的编号往返送给商人和书吏。书吏在仓房逐包核对，也因此记住了你的名字。傍晚，侄女在船员拿走告示前，自己发现了一处新抄错的编号。
 
 ## ev.ev_chamba_b.choice_3_result
 
-你问水手到刺桐和福州各要走几天。他答道：“刺桐顺风约二十日，福州再往北些，得看季风转得早不早。眼下这阵风适合北上；误了风期，就得在港里等。”
+两名水手把木板搭在系船柱上，与你核对下一程的港口。一人说出刺桐，另一人讲了往福州接船以及补水的地方。侄女在一旁听着，随后赶在傍晚落雨前把干袋搬进棚里。
+
+## ev.chamba.net.title
+
+少了一块坠石的渔网
+
+## ev.chamba.net.body
+
+渔妇和女儿在码头旁的干地上摊开渔网，有一边总被风掀起来。“这里原该系着一块坠石。”母亲提起空了的绳圈。女儿翻遍篮子，只找到一截断绳：“上一回收网时，我还打过结。”母亲让她找出打结的位置。那里蹭着尖贝壳，石头大概在回家路上掉了。你问能不能换一块。渔妇说可以，但新石头得够光滑，免得再割破网。女儿跑到沙滩捡回两块，一块重却粗糙，另一块小些，刚好能穿过绳圈。邻居过来问她们什么时候出船，渔妇看了看码头墙上的水痕，说还够时间补另一处破口。女儿递给你一截备用绳，又问母亲为什么总等水涨到那道痕迹才开船。母亲叫她这次自己守着看潮水上来。
+
+## ev.chamba.net.choice.mend
+
+帮她们在出船前补好渔网
+
+## ev.chamba.net.result.mend
+
+你替女儿绷住网边，她把光滑的石头绑回绳圈。母亲拖着网在沙上试了试，那一边终于贴平了。邻居来帮忙把网抬上船，母女下水推船前都向你道了谢。
+
+## ev.chamba.net.choice.listen
+
+留一天和她们看潮水涨落
+
+## ev.chamba.net.result.listen
+
+第二天你和女儿守在码头墙边，水比她预想的晚些才涨到那道痕迹。母亲告诉她，出船前还得看风往哪边吹。女儿自己选了叫邻居来的时刻，你也弄明白这里的渔人怎样定开船时间。

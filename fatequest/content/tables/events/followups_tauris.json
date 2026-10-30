@@ -20,7 +20,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -6700,
+              "value": -13500,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -37,7 +37,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 6700
+              "min": 13500
             }
           }
         },
@@ -121,6 +121,11 @@
             "coins": {
               "min": 500
             }
+          },
+          "showWhen": {
+            "lacks_item": [
+              "it-dried-fruit"
+            ]
           }
         },
         {

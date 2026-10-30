@@ -20,6 +20,8 @@ The bridge keeper pins the loose board with a stone and asks the driver to move 
 
 The keeper notices you. "Wait until this cart is clear if you're crossing. If you need directions, ask me here. We don't need another person stopping on the bridge to work out where to go."
 
+A woman waiting with a basket asks the keeper if the carpenter is coming. "My son went for him," he says. "He knows which board is loose." The driver offers to move the mule back, but the animal has already found a steady place to stand. The woman shifts her basket out of its way and looks at you. "If you're staying to help, ask the keeper where he wants the spare boards."
+
 ## ev.antiochia.entry.choice.look
 
 Stay and find out what has stopped the carts
@@ -48,9 +50,11 @@ A Ladle Caught at the Bridge
 
 ## ev.gap.antiochia.scene.body
 
-At the bridge, a ferryman reaches into the Orontes with his hook and pulls out a wooden ladle. Three short marks are cut into its handle. He wipes it on his sleeve and holds it up to a child on the bank. "Look, the river gave my ladle back."
+The ferryman reaches into the water with a long hook and fishes out a wooden ladle. Three short lines are cut into its handle. He wipes it on his sleeve and shows it to a child on the bank. "Look, the river brought my ladle back."
 
-The child knocks a heel against the stone step. "You used that to serve me bean soup this morning." The ferryman clears his throat and puts away the hook. Carts move slowly across the bridge. The child is still waiting to hear about those three marks.
+The child knocks a heel against the stone step. "You used that to serve me bean soup this morning." The ferryman clears his throat and puts away the hook. A driver on the bridge calls for space to turn his cart, so the ferryman takes the child's hand and moves her away from the wheels. She points at the marks again. "Did you carve them?"
+
+A woman carrying soup pots comes down the steps. She asks the ferryman whether the ladle is clean enough for the noon meal and sends the child to fetch a cloth. The child comes back with one that smells of mint and rubs the handle carefully. The woman says the ladle has served soup here for years. Each time the child asks about the marks, the ferryman tells a different story and then goes back to work. She gives the clean ladle to the child and asks her to get the whole story this time. The covered cart is still easing across the bridge, and the child also wants to know where it is going.
 
 ## ev.gap.antiochia.scene.choice.talk
 
@@ -83,6 +87,8 @@ Inside the gate, a merchant from the coast holds a small packet of dried beans. 
 The gatekeeper pauses at the river's name. "We call it the Asi. The bridge ahead is the one you're after. What's written on your paper?"
 
 The merchant spreads a creased sheet on a stone bench. It shows a bridge and a row of food stalls. The river's name is written large, but water has blurred the recipient's name. The merchant would rather ask again than hand the beans to the wrong person.
+
+The gatekeeper asks who gave him the packet. "The soup seller's brother, at the last caravan stop," the merchant says. "He drew this for me himself. I kept it dry until the rain caught us yesterday." He folds the paper along its old crease, then opens it again to see whether the seller's roof is marked. The gatekeeper points to the bridge but admits he has never needed to know which stall belongs to which family. You have just come that way.
 
 ## ev.antiochia.two_names.choice.maps
 

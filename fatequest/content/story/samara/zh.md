@@ -2,7 +2,7 @@
 unit: samara
 lang: zh
 source: en
-source_rev: bddf3183c709
+source_rev: 156689cb0412
 status: translated
 translator: 人工校译
 notes: >
@@ -11,19 +11,25 @@ notes: >
   对话直接回应眼前的问题，少解释、少重复；专名首次出现时用常见中文名。
 
 stamps:
+  ev.samara.ropebasket.result.learn: 295ce0304d48
+  ev.samara.ropebasket.choice.learn: 52ff5e6ed349
+  ev.samara.ropebasket.result.deliver: 3a8a1a58a417
+  ev.samara.ropebasket.choice.deliver: f536edfdd793
+  ev.samara.ropebasket.body: f20d895d43e6
+  ev.samara.ropebasket.title: 741b9fa79929
   city.samara.name: 51c82b683cdb
-  ev.samara.entry.choice.pass: d9ca0c28a951
-  ev.samara.entry.choice.rest: cc453f19a435
-  ev.samara.entry.body: 3ac15456f51e
-  ev.samara.entry.title: dbd2838a99fd
-  ev.ev_samara_entry.choice_1_result: e51fcc43216b
-  ev.ev_samara_entry.choice_2_result: 5c52291a17b4
-  ev.samara.site_gap.title: cfbb065c78c3
-  ev.samara.site_gap.body: a077277be558
-  ev.samara.site_gap.choice.route: 800fbf8d1323
-  ev.ev_samara_site_gap.choice_1_result: fd43284b7498
-  ev.samara.site_gap.choice.interact: c2b922e0a5b2
-  ev.ev_samara_site_gap.choice_2_result: e8e3e65bc6d1
+  ev.samara.entry.choice.pass: de6e5814763e
+  ev.samara.entry.choice.rest: 63d43c97a37a
+  ev.samara.entry.body: 87077bcedd3a
+  ev.samara.entry.title: 6978b56292be
+  ev.ev_samara_entry.choice_1_result: 1fe61d5315fd
+  ev.ev_samara_entry.choice_2_result: ac1bea834005
+  ev.samara.site_gap.title: 1cc04d952178
+  ev.samara.site_gap.body: 53c45e3b47c1
+  ev.samara.site_gap.choice.route: dc618241dc31
+  ev.ev_samara_site_gap.choice_1_result: f9733b9235df
+  ev.samara.site_gap.choice.interact: 0ce6a5ceb5d1
+  ev.ev_samara_site_gap.choice_2_result: a35eee1a295c
 ---
 
 ## city.samara.name
@@ -32,47 +38,84 @@ stamps:
 
 ## ev.samara.entry.choice.pass
 
-继续赶路，不作停留
+问伊斯梅尔码头怎样走，然后继续
 
 ## ev.samara.entry.choice.rest
 
-在路边歇半日
+在码头边跟这一家歇一天
 
 ## ev.samara.entry.body
 
-苏门答腊北岸的港口一早就忙起来了。船夫把淡水桶搬上船，水果摊主则盯着刚靠岸的中国商船。你问国王是不是亚历山大的后代，卖椰子的老人笑出声：“宫里这么说，宫里当然有宫里的理由。”他把椰子递给你，又指向柚木宫殿：“瓷器倒是真的，去看一眼就知道。”
+苏门答腊北岸的撒麻剌码头，船夫伊斯梅尔正在装淡水桶，母亲在棕叶棚下卖水果。小女儿想给每只满桶系一截红布，好让船员认。伊斯梅尔说空桶得先送回井边，孩子便给空桶的绳子打了另一种结。
 
-卖椰子的老人又补了一句：“港里有枚铜钱，谁把它扔进海里，第二天就会在自己鞋里找到。”你问他见没见过，他低头看了看鞋：“我当然见过——所以我不再扔钱了。”
+你问船何时走。伊斯梅尔说船长还在等风，得和领航人商量后才定。母亲叫他趁热吃饭，桌上有米饭和鱼：“水桶能等你吃完这一碗。”他查好最后一只塞子，才坐下来。别船的商人来买两枚果子，又问井在哪里。孩子说午饭后可以领他去。
+
+这一家留了个干爽的角落，能让你歇一天。若现在继续走，伊斯梅尔也来得及指给你看潮水漫上台阶前该走哪边。
+
 ## ev.samara.entry.title
 
-撒麻剌
+撒麻剌码头的淡水桶
 
 ## ev.ev_samara_entry.choice_1_result
 
-搬水桶的船夫说：“往宾坦要先过浅水。大船到那儿得抬舵，今天先把淡水装够。”
+伊斯梅尔指给你看码头边地势较高的路。你经过时，女儿正按红布记号数满桶。你在地图上标下撒麻剌，继续走。
+
 ## ev.ev_samara_entry.choice_2_result
 
-你在椰子摊旁歇脚。老人指着港里的商船：“去宾坦，问船主过浅水海峡的日子；潮退时大船可走不了。”
+你在这一家的棚下歇了一天。伊斯梅尔母亲分给你米饭和鱼，女儿给水桶做完记号又领你看了井。离开时你歇足了，也把码头记上地图。
+
 ## ev.samara.site_gap.title
 
-船匠的季风绳标
+船匠的看风布条
 
 ## ev.samara.site_gap.body
 
-船匠把一根麻绳挂在桅杆旁，绳上系着三块不同颜色的布。你问这是什么，他说：“风向换了，布标会指给水手看。出港前还要看云和浪，绳标只是帮人记住今天的风。”海面上几只小船正收帆靠岸。船匠把湿绳挂到通风处，说麻绳若一直泡着盐水，纤维会变脆，出海前要重新检查。
+船匠莱拉在桅杆旁一根绳上系了三色布条。儿子见蓝布朝岸边飘，说船可以走了。莱拉让他再看看礁外的浪。孩子跑到码头，回来时就没那么肯定了。等在一旁的领航人说，潮水转向前，风还可能变。
+
+你问既然仍要靠人看水，为何还留布条。莱拉说让年轻船员看清一天里风怎样变。哥哥抱来湿帆，问挂哪里。莱拉指向通风的棚子：带着水叠起来，布和线都容易坏。儿子帮着抬，又问下一趟能不能到占城。
+
+领航人讲起这段海路沿岸泊船的地方，告诉孩子船在哪里等风、怎样认占城的港口。莱拉擦干手，等风稳些，正好请你看看那面旧帆的针脚。
 
 ## ev.samara.site_gap.choice.route
 
-问去棉的海路
+问领航人去占城的海路
 
 ## ev.ev_samara_site_gap.choice_1_result
 
-船匠说：“乘船向东去棉，走这条海路。先问船什么时候启程，季风不合时，船主宁可等两天。”
+领航人讲清去占城的海路，指了几处能停船等风的港口。莱拉儿子在你的地图上标出第一段，领航人再补上进占城港前的走法。
 
 ## ev.samara.site_gap.choice.interact
 
-帮他收一面旧帆
+帮莱拉挂起旧帆查针脚
 
 ## ev.ev_samara_site_gap.choice_2_result
 
-你和他把帆布卷好，他指给你看磨损处：“针脚沿着旧孔走，布才不容易再裂。帆收干后再叠，盐水留在布里会伤线。”
+你帮莱拉把旧帆摊挂在通风处。她指着一段磨旧的接缝，教儿子沿旧针孔补线。你记下这一家人在风转前怎样备船。
+
+## ev.samara.ropebasket.title
+
+退潮时的绳篮
+
+## ev.samara.ropebasket.body
+
+码头旁，搓绳的妮拉正在解妹妹渔船用的一篮缆绳。妹妹说昨晚明明盘整齐了。妮拉抽出一圈，里头塞着沙，便问篮子原先放在哪儿。“下面那级台阶。”妹妹说，潮水眼看又要漫上来。姐妹俩赶紧把篮子搬到干墙边。
+
+你问船还没回来，为何先理绳。妮拉说妹夫一卸鱼就要用，最旧那根的结边已经磨毛。母亲带来一束棕榈纤维，愿帮忙搓新绳。妹妹说想自己试，问妮拉该取多少。妮拉递给她一小段，先练练手。
+
+邻船船长说今天若有人把做好的绳送到他船上，会付 0.8 银。妮拉也可花第二天教你跟她们一起检查旧绳。母亲坐在篮边，已经开始搓第一股。
+
+## ev.samara.ropebasket.choice.deliver
+
+把做好的绳送去邻船
+
+## ev.samara.ropebasket.result.deliver
+
+你把新绳送到邻船。船长在系船桩上试了结，付你 0.8 银。妮拉妹妹从岸上挥手，自家渔船也刚好靠回来。
+
+## ev.samara.ropebasket.choice.learn
+
+留到明天，跟一家人学查缆绳
+
+## ev.samara.ropebasket.result.learn
+
+你第二天跟妮拉一家查旧绳，自己也搓了一小段。渔船带鱼回来时，妹妹用上你们备好的结实绳子。你往后看缆绳是否磨坏，也更有眼力了。

@@ -67,7 +67,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"
@@ -148,7 +148,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"
@@ -221,7 +221,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"

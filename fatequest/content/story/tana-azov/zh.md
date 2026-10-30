@@ -11,7 +11,7 @@ stamps:
   city.tana-azov.name: 0de9593360c0
   ev.tana-azov.entry.choice.pass: f11db0258f38
   ev.tana-azov.entry.choice.rest: f56471f8fb98
-  ev.tana-azov.entry.body: 88598bac54e2
+  ev.tana-azov.entry.body: b4a295e31ff3
   ev.tana-azov.entry.title: c7a919781c64
   ev.ev_tana_azov_entry.choice_1_result: f26256afeccf
   ev.ev_tana_azov_entry.choice_2_result: 5ed75b9bd09c
@@ -48,6 +48,8 @@ stamps:
 “坐到上面。”卓娅说。穆拉德照做，芦苇终于不动了。她说，父亲头一回沿河运芦苇，也遇见过这事。穆拉德问父亲是不是真丢过整捆。卓娅说只丢了一半，回去还得向订货的人解释。
 
 旅人沿河经过，卓娅常让他们在棚边歇歇。她指给你看哪段岸坡结实，方便下去取水。穆拉德则想知道你从哪座城来，打算等父亲回来，拿这些地名考考他。
+
+穆拉德问父亲回来时会不会再带芦苇。卓娅掀开锅盖，说这回订的已经够了，他今天是把扎好的芦苇送往上游一家人那里。“那家人会回送什么吗？”孩子问。“多半带回消息，说不定还带回我借给他们的篮子。”她让孩子帮忙搅锅，自己带你去认那段结实的岸坡。穆拉德答应了，但叫祖母回来后让他问你从哪儿来。
 
 ## ev.tana-azov.entry.title
 

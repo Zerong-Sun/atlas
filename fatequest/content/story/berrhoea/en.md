@@ -81,6 +81,8 @@ Harun's grandmother used to cook here. She now sits at home with a sore knee and
 
 Nadwa offers you a bowl for the road. If you stay to help prepare tomorrow's pot, she can feed you and let you sleep indoors. Harun says his grandmother will inspect the soup either way.
 
+Harun asks whether his grandmother will come down when she smells the fresh bread. "Her knees will decide that," Nadwa says. A neighbour arriving for soup offers to carry the bowl up to her. Harun puts the wooden spoon beside it and asks the neighbour to bring it back; his grandmother likes that small spoon. Nadwa tastes the broth after her son and adds a pinch of salt. She offers you a clean bowl while Harun goes to fetch another loaf from the oven.
+
 ## ev.berrhoea.lentilpot.choice.buy
 
 Buy soup and bread for 0.8 silver

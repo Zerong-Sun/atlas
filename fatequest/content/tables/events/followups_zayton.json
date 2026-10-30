@@ -100,13 +100,13 @@
           "resultText": "ev.ev_zayton_fanfang_followup.choice_1_result",
           "needs": {
             "coins": {
-              "min": 8000
+              "min": 10000
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -8000,
+              "value": -10000,
               "reason": "paid-the-weavers-price-for-the-bolt"
             },
             {

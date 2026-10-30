@@ -18,167 +18,115 @@ The Maldives
 
 ## ev.maldive.entry.title
 
-The Coconut Isles
+A Landing among the Coconut Palms
 
 ## ev.maldive.entry.body
 
-These isles are a wonder of the world — some two thousand of them, near a hundred
-ringed so close together that the people of one isle know the people of the next.
-The cocoa-nut palm is the greatest tree, bearing twelve crops in the year, so that
-fruit green, ripe, and dry hang together on the same bough; from the nut men make
-palm-wine, oil, and a strong thread with which the ships of India and Yemen are
-sewn, yielding against a rock where iron nails would break. The coin of the land is
-the wada, a sea-shell buried in the earth till the flesh wastes away. A woman, the
-Queen Khodīja, rules the chief isle; the women keep their own company at table and
-never leave their districts; and the judge's word is obeyed like a king's.
+At an island landing, a woman is trying to lift a coil of coconut-fibre rope out of her brother's boat before the tide reaches it. Her daughter takes the lighter end and asks why he left it so close to the water. “I thought I would be back before the boat moved,” the brother says, climbing ashore. You help make space beside a stall where cowrie shells are being counted for small purchases. The stallkeeper asks where your vessel has come from and offers to show you the path through the village. The daughter wants to know whether people at your last port use shells as money. You tell her what you saw there; she holds out two clean shells and asks how much a piece of fruit might cost. Her mother laughs and says to ask the stallkeeper before spending them. A few households gather to meet the arriving boat, and the brother carries the dry rope up the path at last.
 
 ## ev.maldive.entry.choice.arrive
 
-Disembark
+Step ashore and greet the island households
 
 ## ev.ev_maldive_entry.choice_1_result
 
-You step ashore at the isle of Mohl, where the Queen rules. The people are gentle
-toward guests: the woman in whose house you lodge will cook for you and attend you
-for a very small consideration, and the wada shells pay your way among the islands.
+You step ashore, help clear the landing and greet the people waiting for the boat. The stallkeeper tells you which path reaches the guesthouse, while the daughter returns her two shells to her mother for safekeeping. Your careful arrival earns a warm welcome in the village.
 
 ## ev.maldive.battuta_a.title
 
-Judge, Three Wives, and Flight
+Three Plans in the Island Courtyard
 
 ## ev.maldive.battuta_a.body
 
-The vizier Jamāl Oddīn, husband of the Queen, receives you with honour: a house with
-a garden, a dress of honour, and a horse, though none but the vizier rides, the
-nobles going in palanquins or afoot. He asks you to take the office of judge, whose
-word is obeyed like a king's, and whose right is the revenue of three islands. You
-accept. Under the island custom a traveller may marry for a very small dowry, on
-condition of divorce at his departure, for the women never leave their districts; so
-you marry three wives. Your kin become numerous and powerful, and the vizier, weak
-in troops and unused to war, begins to fear you, inquiring into your affairs and
-watching your steps in secret. You take thought to leave the islands.
+In an island courtyard, a village clerk has papers spread beside two fishing families. They have shared a net for years, but its repair costs were never written down. “My brother paid for the last rope,” one woman says. The other replies, “And my daughter spent two mornings sewing it.” The clerk asks both to speak slowly while his niece records their names. She is also preparing for a family wedding in two days and worries that the work will keep her from helping with the meal. Her uncle says the families can take their time; he will pay an assistant to copy the account over the next three days. A pilot waiting at the gate is bound for Melibar after the celebration. “If you need the sea road, come down to the landing tomorrow,” he tells you. The niece asks whether you would rather stay with the clerk, help her household at the wedding, or meet the pilot once the tide is right.
 
 ## ev.maldive.battuta_a.choice.judge
 
-Take the office of judge
+Help the clerk record the families’ accounts
 
 ## ev.maldive.battuta_a.choice.marry
 
-Wed under the island custom
+Contribute to the wedding meal and stay
 
 ## ev.maldive.battuta_a.choice.flight
 
-Divorce your wives and seek a ship
+Spend a day with the pilot before departure
 
 ## ev.ev_maldive_battuta_a.choice_1_result
 
-You take the office of judge. Your word is obeyed through the islands like a king's,
-and the revenue of three islands fills your purse; the days pass in judgments, and
-the people of Maldive speak well of you.
+You spend three days helping the clerk take down each family's account of the net. The two women agree how to share the next repair after seeing the work written side by side. The clerk pays you a small fee, and the households thank you for giving both a chance to be heard.
 
 ## ev.ev_maldive_battuta_a.choice_2_result
 
-You pay the small dowry and wed after the island custom. The women never leave their
-districts, and when you depart you will put her away; for the season the custom is
-kept, and the isle holds you in honour.
+You contribute to the wedding meal and stay for two days. The clerk's niece finishes her list in time to help her family, and you carry dishes between the house and the courtyard. Her relatives thank you for sharing the work and the cost.
 
 ## ev.ev_maldive_battuta_a.choice_3_result
 
-You put away all your wives save one, and while the vizier watches you take thought
-for the sea. A pilot names the road to Melibar, and the route settles on your map.
+You spend a day at the landing with the pilot. He shows you where his boat waits for the tide and traces the sea passage toward Melibar on a board. The clerk's niece comes to ask whether he will attend the wedding before sailing; he promises to return for the meal.
 
 ## ev.alexandria.battuta_a.title
 
-A Judge Named at the Gate
+A Missing Book Slip at the Gate
 
 ## ev.alexandria.battuta_a.body
 
-At evening the keeper of Alexandria's gate is impatient to close it, for a poor
-scholar sits near the gate and will not enter until he has seen some favourable
-omen. He came from the Hejaz poor, and as all the travellers go in and it is nearly
-time to close, the keeper cries to him in irony: Enter, Mr Judge. He answers: Yes,
-judge, if that be God's will. He enters one of the colleges, and attends to reading
-so diligently that his name and modesty reach the king of Egypt. When the judge of
-Alexandria dies, many learned men of the city expect the appointment — the scholar
-expects nothing, and the sultan sends it to him.
+Near an Alexandria gate, a student from the Hejaz has stopped beside a stack of travel bundles. She is looking for the slip that proves she may borrow a book from a city school. The gatekeeper has seen it once, tucked into the cord on her smallest bag, but the cord is loose now. ‘The porter moved that bag when the cart came through,’ he says. The student asks the porter, who remembers setting it by a water seller’s jar. You help her look beneath the cart; the slip is not there. The water seller offers to empty the cloth around his jars, and the little paper falls out. ‘You can still reach the school before they close,’ the gatekeeper tells her. She asks how to find the Cairo road later, since a relative will travel on after their studies. The gatekeeper knows a carrier who makes that journey and is willing to introduce you. Meanwhile the student needs someone to take her bundles through the gate. She says she will spend tomorrow copying the damaged part of the borrowing slip so the school has a clean record.
 
 ## ev.alexandria.battuta_a.choice.observe
 
-Stand by the gate as the keeper jests
+Spend a day helping the gatekeeper with arrivals
 
 ## ev.alexandria.battuta_a.choice.speak
 
-Ask the scholar why he will not enter
+Spend a day asking carriers about the Cairo road
 
 ## ev.alexandria.battuta_a.choice.omen
 
-Mark the omen and enter as he did
+Carry the student’s books to the school
 
 ## ev.ev_alexandria_battuta_a.choice_1_result
 
-You stand by the gate while the keeper cries in irony: Enter, Mr Judge. The poor
-scholar answers: Yes, judge, if that be God's will. The evening passes in waiting,
-and the tale of the gate stays with you; your name is spoken well of in Alexandria.
+You stay through the next day, helping the gatekeeper sort bundles while the student returns with her corrected slip. She recognizes the water seller’s cloth and keeps her paper in a safer pocket. The gatekeeper thanks you by name in front of the porters who come through his gate.
 
 ## ev.ev_alexandria_battuta_a.choice_2_result
 
-The scholar tells you he will not enter until he has seen a favourable omen; he has
-come from the Hejaz, poor. You learn how he took up reading in a college until his
-name reached the king of Egypt, and the road he travelled from the Hejaz settles on
-your map.
+You spend the next day with the carrier the gatekeeper named. He shows you where travellers join the road to Cairo and points out the first place to find water. The student copies the directions beside the clean borrowing slip so her relative can use them later.
 
 ## ev.ev_alexandria_battuta_a.choice_3_result
 
-You answer as he does — judge, if that be God's will — and pass through the gate
-behind him. In the months to come you will hear how the office of judge of
-Alexandria came to the poor scholar who expected nothing, and your name is spoken
-well of in the city.
+You carry the student’s books through the gate and stay the following day while she brings a clean slip to the school. The keeper checks it against the borrowed volume. She thanks you before the teachers and offers to show you the reading room next time you come.
 
 ## ev.alexandria.battuta_b.title
 
-The Saint's Prophecy of Three Brothers
+Three Letters from Alexandria
 
 ## ev.alexandria.battuta_b.body
 
-One of the greatest saints of Alexandria is the learned and pious Imam Borhāna
-Oddīn El Aaraj, a worker of miracles. You go in to him, and he says: I perceive that
-you are fond of travelling into various countries. You say yes, though you have no
-intention of travelling into very distant parts. He replies: You must visit my
-brother Farīd Oddīn in India, my brother Rokn Oddīn Ibn Zakaryā in Sind, and my
-brother Borhān Oddīn in China, and when you see them, present my compliments to
-them. You are astonished at his words, and determine to visit those countries; nor
-do you give up the purpose till you have met all the three and presented his
-compliments.
+A letter writer near the Alexandria market has laid out three folded sheets. He has relatives living far apart: one in Sind, one in an Indian port, and one with a merchant household in China. His daughter is copying the addresses, but the second sheet has only a trading house name. ‘Your cousin moved last year,’ she tells him. He says a traveller at the harbour knows the new address and asks her to wait before sealing it. You ask how one family keeps in touch over such long roads. The daughter shows you the short replies tucked in a box: a birth, a new shop, a request for a familiar spice. None arrived quickly, but each was answered. A courier comes by to say he will leave for Cairo in the morning. He can carry the first letter to another merchant there, who will find its onward caravan. The father asks whether you can help copy the addresses today, ask the courier about the first leg tomorrow, or carry the finished letter to the gate before he leaves.
 
 ## ev.alexandria.battuta_b.choice.promise
 
-Swear to carry the saint's greetings east
+Spend a day copying the three addresses
 
 ## ev.alexandria.battuta_b.choice.ask
 
-Ask the names of the three brothers
+Ask the courier about the Cairo connection
 
 ## ev.alexandria.battuta_b.choice.depart
 
-Take leave with the prophecy in your journal
+Carry the finished letter to the gate
 
 ## ev.ev_alexandria_battuta_b.choice_1_result
 
-You swear it. The saint's words run before you like a thread to the east — India,
-Sind, China, and in each a brother to be greeted. The oath is written in your
-journal, and Alexandria speaks well of the promise you carry.
+You spend the next day checking the three addresses with the daughter. A harbour traveller supplies the new Indian trading house, and the father seals that letter only after she writes it clearly. He thanks you in front of the courier and promises to send word when a reply arrives.
 
 ## ev.ev_alexandria_battuta_b.choice_2_result
 
-He tells them off one by one: Farīd Oddīn in India, Rokn Oddīn Ibn Zakaryā in Sind,
-Borhān Oddīn in China. The far countries take names and bearings, and the first road
-east settles on your map.
+You stay another day to speak with the courier. He points out the road to Cairo and the merchant who receives letters there. The daughter writes his directions on a spare sheet; her father is relieved to know whom to ask if the first letter is delayed.
 
 ## ev.ev_alexandria_battuta_b.choice_3_result
 
-You take your leave, the prophecy folded in your mind. In the years to come you will
-meet all three brothers and present the saint's compliments, as he said you would;
-Alexandria speaks well of the promise you keep.
+You take the sealed letter to the gate while the family finishes the other two. The courier checks the merchant’s name and tucks the letter safely into his bag. The daughter sees you return with his receipt and thanks you before going back to the address she is copying.
 
 ## ev.accon.battuta_a.title
 
@@ -378,53 +326,35 @@ Cross the sea roads; come to Mecca from every direction.
 
 ## ev.melibar.battuta_a.title
 
-The Chinese Junks and the Wreck in the Night
+A Day at the Harbour Lodging House
 
 ## ev.melibar.battuta_a.body
 
-You reach Kalikut, one of the great ports of Malabar, and wait three months for the
-season when the sea of China is navigable. In the harbour ride the great junks, each
-like an independent city: six hundred sailors and four hundred soldiers aboard the
-largest, with houses of wood built on deck, and oars like masts, twenty-five men
-working standing. They are built nowhere but at El Zaitun and Sin Kilan. One night
-the sea rises; the junk bearing the Emperor's present strikes the shore, and all on
-board perish with the wealth. You have stayed on land for the Friday prayer, and are
-saved.
+At a lodging house near Melibar's harbour, a woman is setting out cups for sailors who will come ashore when their boat finishes unloading. Her nephew says the people from the large vessel will fill the whole yard. “Then fetch the second bench,” she tells him. He asks whether to put it by the prayer room. “Leave that path open. Some guests will go there before they eat.” A pilot waiting for water tells you the boat has called at Coilum and will need a day in harbour for its cargo to be checked. You ask how people find the coastal passage. He shows you the turns on a worn board, then puts it away before the cups can spill over it. A pepper trader comes to the door with a full sack for sale. The woman makes room for him under the awning and asks her nephew to set out the dry mat. The first sailors arrive, hungry and grateful for a place to sit.
 
 ## ev.melibar.battuta_a.choice.junks
 
-Watch the great junks at anchor
+Spend a day learning the Coilum passage from the pilot
 
 ## ev.melibar.battuta_a.choice.trade
 
-Trade with the richest merchants of the port
+Buy the trader’s full sack of pepper
 
 ## ev.melibar.battuta_a.choice.prayer
 
-Keep the Friday prayer on shore
+Stay a day helping guests at the lodging house
 
 ## ev.ev_melibar_battuta_a.choice_1_result
 
-You stand on the shore and watch the junks ride at anchor, waiting for the season of
-the China sea. Six hundred sailors and four hundred soldiers serve on the greatest
-of them; houses of wood stand on her deck, and her oars are like masts, each with
-twenty-five men working standing. The merchants say such ships are built nowhere but
-at El Zaitun and Sin Kilan, and they enter no harbour but Hili, Kalikut, and Kawlam.
+You spend the day while the pilot checks the boat's cargo. Between visits to the quay he points out the passage between Coilum and Melibar and makes you trace its first coastal turn on his board. At dusk he returns the board to the woman so her nephew can use the bench for supper.
 
 ## ev.ev_melibar_battuta_a.choice_2_result
 
-At Kalikut the Muslim merchants are so wealthy that a single one of them could buy
-the whole freightage of the vessels in the port and fit out others like them. You
-bargain for pepper with one of the great merchants, pay 1500 coins, and carry one
-sack back to your own vessel.
+You pay the trader for his full sack of pepper. He and the nephew check its mark together, then lay it on the dry mat until you are ready to carry it. The woman calls them in for water before the trader returns to the quay.
 
 ## ev.ev_melibar_battuta_a.choice_3_result
 
-You stay on shore for the Friday prayer, keeping your prostration carpet and ten
-dinars given you by holy men, which you treasure as a blessing. In the night the sea
-rises; the junk carrying the Emperor's present strikes upon the shore, and all on
-board perish with the wealth. Your own small vessel has sailed off into the dark,
-with your servants and everything you owned.
+You spend a day helping the woman set out water and clear a path to the prayer room for guests who use it. Her nephew learns to keep the benches out of the way, and by evening everyone has a seat. The sailors thank you in front of the neighbouring port families.
 
 ## ev.cail.battuta_a.title
 
@@ -460,56 +390,35 @@ You pay the gem trader for the ruby. He shows you its weight and wraps it while 
 
 ## ev.java-major.battuta_a.title
 
-The Warlike Queen of Tawalisi
+The Harbour Steward’s Missing Seal
 
 ## ev.java-major.battuta_a.body
 
-The people of Tawalisi are handsome and strong; their land, named after its king, is
-so great that he will oppose the Emperor of China with his junks. Their women ride
-on horseback, excel in throwing the javelin, and fight like men in battle. In the
-port of Kailuka the governor is the king's daughter: she sits on the throne of
-government, her women before her with the papers of state, greets you in Turkish,
-and writes the Bismilla with her own hand. She wonders at the wealth of India and
-says she must conquer it for herself. She keeps a regiment of women in her army, and
-no suitor has dared to overcome her in the tournament.
+The steward who checks harbour cargo has lost the seal for a load of fragrant wood. She has searched the counting table twice. ‘The merchant will think I opened his pack,’ she says to her assistant. He remembers seeing a small wrapped object beside the water jars and goes to look. The merchant, waiting under the next roof, offers to open one pack so you can judge the wood before buying it. ‘Wait until she finds her seal,’ he says. ‘I want both of us to know the bag was closed when it arrived.’ You ask the steward how she will settle the account if the seal is gone. She shows you the mark left in the wax on her copy of the list; the assistant can compare it with the cord still tied around the pack. Just then a sailor comes in asking for the route toward Samara. The assistant returns with the seal tucked inside a dry cloth. He had moved it away from a leaking jar and forgotten to tell her. The steward sends him to thank the waterseller, then asks you whether you want to help check the list, inspect the wood, or speak with the sailors about the next crossing.
 
 ## ev.java-major.battuta_a.choice.audience
 
-Present yourself before the Queen
+Help the steward check the cargo list
 
 ## ev.java-major.battuta_a.choice.aloes
 
-Buy aloeswood as the merchants do
+Buy a sealed load of fragrant wood
 
 ## ev.java-major.battuta_a.choice.army
 
-Ask about the Queen's army
+Ask the sailors about the Samara crossing
 
 ## ev.ev_java_major_battuta_a.choice_1_result
 
-You are brought before the Queen where she sits on the throne of government, her
-women before her holding the papers of the state. She greets you in Turkish, calls
-for ink and paper, and writes the Bismilla with her own hand to show you. She asks
-of the countries you have seen, wonders at the great wealth of India, and says she
-must conquer it for herself. Then she orders you dresses, money, and provisions for
-your journey, and treats you with great politeness.
+You stay for the day while the steward and her assistant compare the seal marks with the cargo list. The merchant sees that his pack has remained closed and signs the corrected line. She thanks you in front of the waiting porters; by evening they greet you as someone who helped them finish the work.
 
 ## ev.ev_java_major_battuta_a.choice_2_result
 
-In the port of Kakula you see the wood of the Indian aloe heaped upon the backs of
-elephants and laid up in the houses like firewood, for it is cheaper among these
-people than wood. A merchant sells you a whole elephant-load for a single cotton
-dress, which is more precious with them than silk, and you carry away the
-sweet-scented aloes for less than it would cost in the west.
+After the seal is found, the merchant opens a corner of the fragrant wood for you to inspect. You pay for the full load. His assistant reties it, and the steward marks your name beside the new owner on the harbour list.
 
 ## ev.ev_java_major_battuta_a.choice_3_result
 
-The sailors tell you of the Queen's army, in which there is a regiment of women who
-fight beside her like men. Once, when her force was near being put to the rout, she
-made so furious an onset with her regiment that she slew the enemy king and routed
-his whole army, and carried his head to her father. The neighbouring princes have
-offered her marriage, but she will take none who cannot overcome her in the
-tournament, and they fear the reproach of being vanquished by a woman.
+You spend a day by the water asking sailors where they stop on the way toward Samara. One draws the route across a board while another explains which landing has fresh water. The steward’s assistant copies the port names for his own list and asks the sailors to check his spelling.
 
 ## ev.zayton.battuta_a.title
 
@@ -642,11 +551,11 @@ A traveller who came this way tells of the mountain of Serendib, of chains and i
 
 ## ev.melibar.entry.choice.battuta
 
-Ask of the traveller and the Chinese junks
+Meet the harbour lodging house family
 
 ## ev.ev_melibar_entry.choice_4_result
 
-A traveller at the port tells of the great junks built at El Zaitun and Sin Kilan, and of the night the sea rose and the Emperor's present struck the shore; he will say more, if you will hear him out.
+A family at the harbour lodging house is making room for late arrivals. Their daughter carries a folded mat inside and says the last boat has brought more guests than they expected. She asks you to come in and help them decide where everyone can sleep.
 
 ## ev.kinsay.entry.choice.battuta
 

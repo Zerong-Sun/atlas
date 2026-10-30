@@ -2,7 +2,7 @@
 unit: dongola
 lang: zh
 source: en
-source_rev: b990a39c4d73
+source_rev: acebeaefec23
 status: translated
 translator: 人工校译
 notes: >
@@ -19,9 +19,9 @@ stamps:
   ev.ev_dongola_entry.choice_1_result: 4064eac1e326
   ev.ev_dongola_entry.choice_2_result: 68832331eed2
   ev.dongola.site_gap.title: df083c22e5b3
-  ev.dongola.site_gap.body: 513749c3f979
-  ev.dongola.site_gap.choice.route: 338da7142c90
-  ev.ev_dongola_site_gap.choice_1_result: 2c05a8c4b645
+  ev.dongola.site_gap.body: 4c826b706208
+  ev.dongola.site_gap.choice.route: f97c99b9bc1e
+  ev.ev_dongola_site_gap.choice_1_result: e01dd12741dd
   ev.dongola.site_gap.choice.interact: dedf1d299219
   ev.ev_dongola_site_gap.choice_2_result: 3bf5cbba2457
   ev.dongola.garden.title: 74345a4aaaa0
@@ -66,15 +66,15 @@ stamps:
 
 ## ev.dongola.site_gap.body
 
-渡口上，船夫正在换一段磨薄的芦苇绳。女儿替他抱着绳圈：“昨天旧绳差点卷到船底。”他请她把破损的地方指给你看，又解释河水涨时，绳子得稍稍让力。一位旅人带着木箱来，想把箱子放在船边。船夫请他移到船心：“大家都挤到一边看对岸时，我还得让船平稳。”你问过河后怎样继续走。女儿指向通往默伽的岔路，又看见船篙上刻着读水位的线。她问，今天水高了，是不是要先让人上船、后搬货。父亲看了刻痕，才给她答复。
+渡口上，船夫正在换一段磨薄的芦苇绳。女儿替他抱着绳圈：“昨天旧绳差点卷到船底。”他请她把破损的地方指给你看，又解释河水涨时，绳子得稍稍让力。一位旅人带着木箱来，想把箱子放在船边。船夫请他移到船心：“大家都挤到一边看对岸时，我还得让船平稳。”你问从这里去阿拉伯半岛上的城市怎么走。女儿说，先沿尼罗河往北到开罗，再从那里穿过西奈。她的姑姑走过这条路，过沙漠前还从开罗托人带来一封信。船夫指着船篙上的水位刻痕，问女儿今天水高了，该先让人上船还是先搬货。女儿看了刻痕，说先把木箱放稳。父亲点点头，让她给旅人腾出船心的位置。
 
 ## ev.dongola.site_gap.choice.route
 
-问清去默伽的路
+问清沿尼罗河北上去开罗的路
 
 ## ev.ev_dongola_site_gap.choice_1_result
 
-女儿从对岸指给你看通往默伽的路，叫你再说一遍渡口小路走到头该在哪儿转弯。父亲又看了眼水位线，把你的路线纸带回船上。
+女儿从对岸指给你看沿尼罗河北上的路，叫你再说一遍渡口小路走到头该在哪儿转弯，也告诉你下处哪里能补水。“到了开罗，再问清穿西奈的路。”她说。父亲又看了眼水位线，便转身回船上继续搬货。
 
 ## ev.dongola.site_gap.choice.interact
 

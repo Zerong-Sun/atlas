@@ -15,141 +15,172 @@ Tenduc
 
 ## ev.tenduc.entry.body
 
-Tenduc is a province which lies towards the east, and contains numerous towns and
-villages; among which is the chief city, also called TENDUC. The king of the province is
-of the lineage of Prester John, George by name, and he holds the land under the Great
-Kaan; not that he holds anything like the whole of what Prester John possessed. It is a
-custom, I may tell you, that these kings of the lineage of Prester John always obtain to
-wife either daughters of the Great Kaan or other princesses of his family. In this
-province is found the stone from which Azure is made. It is obtained from a kind of vein
-in the earth, and is of very fine quality. There is also a great manufacture of fine
-camlets of different colours from camel’s hair. The people get their living by their
-cattle and tillage, as well as by trade and handicraft. The rule of the province is in
-the hands of the Christians, as I have told you; but there are also plenty of Idolaters
-and worshippers of Mahommet.
+At the Fengzhou posting yard, clerk Miriam is drying a sheet with yesterday’s rain still on its edges. Her father keeps the water jars there and worries the ink will run again. ‘Put it on the shelf away from the door,’ he tells her. She lifts it, then asks him to move the shelf; he has placed it directly under a leak. They both laugh as they find a dry spot together.
+
+You ask where a traveller should register. Miriam points to the desk and then toward the market, where a cloth seller has just found that one of her bundles is marked for the wrong caravan. The seller’s young cousin insists he copied the mark correctly. Miriam says the posting books can settle it if they spend the day checking. At a stone heap beside the road, another family is replacing a wind-torn ribbon; they invite passersby to help hold it while they tie the knot.
+
+Miriam’s father brings you water. ‘Take a cup before you choose where to go,’ he says. The cousin appears at the yard gate with the disputed bundle under his arm.
 
 ## ev.tenduc.entry.choice.market
 
-Walk through the market
+Spend a day checking the cloth bundle at the market
 
 ## ev.tenduc.entry.choice.pass
 
-Pass through the gate without delay
+Register and continue through the posting yard
 
 ## ev.tenduc.entry.choice.shrine
 
-Visit the ovoo (sacred cairn)
+Help the family tie a new ribbon at the roadside stones
 
 ## ev.tenduc.entry.title
 
-Concerning the Province of Tenduc, and the Descendants of Prester John
+At the Fengzhou Posting Yard
 
 ## ev.tenduc.a.title
 
-The Nestorian Church and Prester John's Line
+The Reader’s Lamp
 
 ## ev.tenduc.a.body
 
-Tenduc is governed by Christians of the Nestorian faith, and its king George claims descent from Prester John, whom the Great Kaan confirmed in this province though his realm is less than the priest-king once held. You enter the church where the cross stands beside tablets in Syriac script, and the priests tell you how the kings of this line have long taken the Kaan's daughters to wife — a custom older than any living man remembers.
+At a small church, reader Yuhanna is trimming a lamp while his daughter copies a Syriac word from an old page. She has written the final letter twice and asks which form he meant. ‘The one I said slowly,’ he replies. She says he said both slowly. You laugh, and Yuhanna reads the word aloud again, this time pointing to each letter.
+
+You ask what the page records. He says it keeps the names of families who cared for travellers here before his time. A visitor has brought a separate story connecting local Christians with the old tale of Priest John; Yuhanna treats it as the visitor’s account and asks his daughter to mark it as such. She asks why. ‘Then someone who reads it later can still ask who told us,’ he says.
+
+A woman comes to borrow lamp oil for the evening gathering. Yuhanna shows her what remains and asks his daughter to note the amount. There is room to sit and listen through the day, and he can also tell you which post roads lead toward Cambaluc and Cacanfu.
 
 ## ev.tenduc.a.choice.attend
 
-Attend the Nestorian service and listen to the Syriac psalms
+Spend a day at the church gathering and listen to the reader
 
 ## ev.tenduc.a.choice.ask-cambaluc
 
-Ask the priests what road leads to the Great Kaan's city
+Ask Yuhanna about the roads to Cambaluc and Cacanfu
 
 ## ev.tenduc.a.choice.offer
 
-Leave a coin offering at the church door
+Give 1.2 silver for the gathering’s lamp oil
 
 ## ev.tenduc.b.title
 
-The Mixed Market of Three Faiths
+The Cloth Marker’s Stall
 
 ## ev.tenduc.b.body
 
-The market of Tenduc brings together Christians, idolaters, and Saracens who worship Mahommet — all under the eye of the Kaan's darughachi, who takes his tenth and keeps the peace. Camel-hair cloth of many colours hangs beside blocks of azure stone and sacks of grain from the pasture lands. You hear three tongues in a single alley, and no quarrel breaks out before the overseer's staff.
+At the cloth market, seller Sira is cutting a fresh label for a full cotton-cloth bale. Her cousin wants to use the old label after the mistake at the posting yard. ‘There is nothing wrong with the string,’ he says. Sira asks him to read the mark aloud. He stops halfway, sees why she wants a clean tag, and starts writing.
+
+Beside them a Muslim grain trader and a Christian weaver are comparing how their families count bundles. You ask whether either method is easier on a busy day. The weaver says the best one is the one the next person can read. A Buddhist neighbour comes to collect a length of cloth for her household and jokes that she can read neither man’s hurried hand. They make the cousin show her his new mark before she leaves.
+
+Sira’s full trade bale costs 108 silver. The grain trader knows the northern way toward Egrigaia; he stays until the cousin has made one last label that everyone can read.
+
+The cousin asks the neighbour to read the tag once more. She points to the last stroke and says it looks like another seller’s mark. Sira hands him a fresh reed pen. ‘This time write slowly enough for her,’ she says. He does, and the neighbour nods.
 
 ## ev.tenduc.b.choice.walk
 
-Walk the market and listen in three tongues
+Spend a day hearing how the market keeps its accounts
 
 ## ev.tenduc.b.choice.buy-cloth
 
-Buy a roll of coloured cotton cloth from a Nestorian weaver
+Buy Sira’s full cotton-cloth bale for 108 silver
 
 ## ev.tenduc.b.choice.ask-north
 
-Ask the Saracen merchants which road leads north to the steppe
+Ask the grain trader about the northern road to Egrigaia
 
 ## ev.ev_tenduc_entry.choice_1_result
 
-You pass through the gate without delay. You set the way to Tenduc on your map.
+Miriam records your name and lets you pass. Her father refills your cup, and the young cousin waits his turn with the bundle. You know where to return if you need the posting books.
 
 ## ev.ev_tenduc_entry.choice_2_result
 
-You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Tenduc opens on your map.
+You spend the day with Miriam and the seller comparing the market mark with the posting book. The cousin had copied the right sign onto the wrong bundle. He redraws it, the seller gets her cloth back, and you learn how the yard keeps track of travellers and goods.
 
 ## ev.ev_tenduc_entry.choice_3_result
 
-You visit the ovoo (sacred cairn). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Tenduc on your map.
+You hold the ribbon while the family ties it securely to the roadside stones. The grandmother thanks you and tells her grandson to leave space for the next traveller’s strip. They remember your help.
 
 ## ev.ev_tenduc_a.choice_1_result
 
-You attend the Nestorian service and listen to the Syriac psalms. You spend 1 day before the way is clear again. You set what you saw into your travel book.
+You stay for the day. Yuhanna’s daughter reads the page herself by evening, and her father lets her tell the visitor’s tale in her own words. You remember the families named in the church record.
 
 ## ev.ev_tenduc_a.choice_2_result
 
-You ask the priests what road leads to the Great Kaan's city. The road to Cambaluc opens on your map. The road to Cacanfu opens on your map. Fortune bends a little your way.
+Yuhanna and his daughter show you where the roads divide toward Cambaluc and Cacanfu. She checks the spelling of both place names before you mark them on your map.
 
 ## ev.ev_tenduc_a.choice_3_result
 
-
-You leave a coin offering at the church door. You pay 120 coins. Your name carries a little more weight here now.
+You give 1.2 silver for lamp oil. Yuhanna’s daughter enters the gift in her book and the woman who came to borrow oil thanks you. The church family treats you as a welcome visitor.
 
 ## ev.ev_tenduc_b.choice_1_result
 
-You walk the market and listen in three tongues. It costs you 1 day on the road. The account is written down before the hour turns.
+You spend a day watching the sellers settle their marks and counts. Sira’s cousin makes fewer corrections by evening, and the neighbour finally recognizes his new hand. You record how the market works.
 
 ## ev.ev_tenduc_b.choice_2_result
 
-
-You buy a roll of coloured cotton cloth from a Nestorian weaver. You pay 280 coins. You add 1 item to your stores. A small turn of fortune favours you.
+You pay 108 silver for the full bale. Sira and her cousin check the fresh label with you before tying it to the cloth. The weaver offers to help you balance the load, glad the mark is right this time.
 
 ## ev.ev_tenduc_b.choice_3_result
 
-You ask the Saracen merchants which road leads north to the steppe. The road to Egrigaia opens on your map. They tell their fellows of the stranger who means to ride the steppe road.
+The grain trader tells you where to take water on the northern road and points out Egrigaia on your map. Sira adds the name of a household there that receives cloth from this market.
 
 ## ev.ev_tenduc_a_followup.title
 
-Tenduc: After the Nestorian Service
+After the Evening Reading
 
 ## ev.ev_tenduc_a_followup.body
 
-When the Nestorian service ends, a priest of King George's line draws you aside beside the wooden screen. He says the road east to Cambaluc is not only a yam of horses — it is a chain of churches and post-houses that still remember Prester John's name. He will open one door for you if you choose carefully.
+After the evening gathering, Yuhanna’s daughter is copying a list of households that lend water or shelter to travellers. The woman who borrowed oil comes back with the empty bottle and says one name on the list is missing. Her sister has taken in a family whose wagon broke beyond the west well. Yuhanna asks his daughter to add the sister’s house, but she first wants to hear the name from the woman herself.
+
+You ask how the list is used. Yuhanna says a stranger can carry it from post to post and know whom to ask when the weather turns. His daughter asks whether the roads to Cambaluc and Cacanfu should be shown on the same page. The woman says the water stops matter as much as the towns. They set out another sheet, and Yuhanna lets you look over the names while his daughter sharpens her pen.
+
+The daughter asks whether the missing house has a well. The woman says the well is shallow but her sister keeps a full jar by the door. ‘Then I’ll mark the jar,’ the daughter says. Yuhanna reminds her to ask whether it is there through winter too; the woman says she will confirm before the page travels farther.
 
 ## ev.ev_tenduc_a_followup.choice_1
 
-Ask him to mark the yam road toward Cambaluc
+Copy the roads and water stops on the list
 
 ## ev.ev_tenduc_a_followup.choice_1_result
 
-He marks Cambaluc and the southern post-road on a scrap of parchment. The yam eastward is no longer blind.
+You copy the roads toward Cambaluc and Cacanfu, including the water stops named by the woman. Yuhanna’s daughter checks the house names with you before you fold the sheet.
 
 ## ev.ev_tenduc_a_followup.choice_2
 
-Offer a small gift for the church and ask a blessing for the road
+Give 1.2 silver for lamp oil and travel supplies
 
 ## ev.ev_tenduc_a_followup.choice_2_result
 
-Your gift is accepted without ceremony. The church remembers your name, and a little favour goes with you on the steppe road.
+You give 1.2 silver for oil and supplies kept for visitors. The woman offers to carry part of it to her sister’s house; Yuhanna’s daughter enters both gifts in the book. People here remember your care.
 
 ## ev.ev_tenduc_a_followup.choice_3
 
-Wait a day to copy the priests' list of post-houses
+Stay a day to copy the household list
 
 ## ev.ev_tenduc_a_followup.choice_3_result
 
-You wait a day while a scribe copies the post-house list. The waiting costs time, but the next departure is measured.
+You spend a day copying the list. The daughter reads each name back to its speaker, and the woman corrects her sister’s doorway mark. By evening the page is ready for another traveller.
+
+## ev.tenduc.ribbons.title
+
+The Wind at the Roadside Stones
+
+## ev.tenduc.ribbons.body
+
+At the roadside stones, the grandmother you met earlier is showing her grandson how to cut a ribbon from a damaged coat. A neighbour says the coat still has a good sleeve and offers to mend it instead. The boy holds up the torn hem. ‘This part is too short to wear,’ he says. His grandmother agrees and asks him to leave the sleeve alone.
+
+You ask why they tie cloth here. She says her family stops to remember people returning by the road, and the strips help children notice when the wind has changed. The neighbour’s daughter arrives with water and asks if her father’s ribbon is still there. The grandmother finds a faded green strip and lets the girl replace it herself. A gust sends the boy’s new strip across the ground. He chases it, then returns with a question: should it go beside the green one or where the wind will catch it first? The two children wait while the grandmother considers.
+
+## ev.tenduc.ribbons.choice.sew
+
+Help the neighbour mend the remaining coat sleeve
+
+## ev.tenduc.ribbons.choice.wind
+
+Spend a day teaching the children to read the wind
+
+## ev.tenduc.ribbons.result.sew
+
+You help sew the good sleeve back onto the coat. The neighbour’s daughter ties the green ribbon herself, and the boy sets his new strip beside it. The grandmother thanks you and takes the repaired coat home.
+
+## ev.tenduc.ribbons.result.wind
+
+You stay the day, returning to the stones whenever the wind shifts. By evening the children can tell which strip faces the road and which has turned toward the market. Their grandmother lets them choose the place for the new ribbon.

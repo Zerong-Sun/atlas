@@ -21,7 +21,8 @@
       "entryEvent": "ev-cacanfu-entry",
       "sites": [
         "ev-gap-cacanfu",
-        "ev-unique-cacanfu"
+        "ev-unique-cacanfu",
+        "ev-cacanfu-noodle"
       ],
       "exits": [
         "rt-cacanfu-cambaluc",
@@ -79,7 +80,8 @@
       "entryEvent": "ev-cachanfu-entry",
       "sites": [
         "ev-gap-cachanfu",
-        "ev-unique-cachanfu"
+        "ev-unique-cachanfu",
+        "ev-cachanfu-rope"
       ],
       "exits": [
         "rt-cachanfu-egrigaia",
@@ -136,7 +138,8 @@
       "entryEvent": "ev-caiju-entry",
       "sites": [
         "ev-gap-caiju",
-        "ev-unique-caiju"
+        "ev-unique-caiju",
+        "ev-caiju-umbrella"
       ],
       "exits": [
         "rt-caiju-chinghianfu",
@@ -388,7 +391,8 @@
       "entryEvent": "ev-chinghianfu-entry",
       "sites": [
         "ev-gap-chinghianfu",
-        "ev-unique-chinghianfu"
+        "ev-unique-chinghianfu",
+        "ev-chinghianfu-binder"
       ],
       "exits": [
         "rt-caiju-chinghianfu",
@@ -918,8 +922,7 @@
       ],
       "exits": [
         "rt-mien-chamba",
-        "rt-mien-sindafu",
-        "rt-samara-mien"
+        "rt-mien-sindafu"
       ],
       "lore": {
         "placeId": "mien",

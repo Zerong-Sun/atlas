@@ -11,18 +11,38 @@ func run() -> bool:
 
 	var trader := WorldState.new()
 	trader.city = "tauris"
-	trader.coins = 7200
 	var market_event := db.get_record("ev-tauris-entry")
-	_check(bool(machine.choice_states(market_event, trader)[2].enabled),
-		"a funded market bargain is available")
-	trader.coins = 7199
-	_check(not bool(machine.choice_states(market_event, trader)[2].enabled),
-		"a bargain is disabled below its full cost")
-	trader.coins = 7200
-	var trade_result := machine.choose(market_event, 2, trader, rng)
-	_check(trade_result.resolved and trader.coins == 0
-		and int(trader.goods.get("damascus-steel", 0)) == 1,
-		"the bargain pays before granting the good")
+	var bargain_index := -1
+	var bargain_price := 0
+	var market_choices: Array = market_event.get("choices", [])
+	for i in market_choices.size():
+		var has_steel := false
+		var price := 0
+		for effect in market_choices[i].get("effects", []):
+			if String(effect.get("op", "")) == "goods" \
+					and String(effect.get("id", "")) == "damascus-steel":
+				has_steel = true
+			if String(effect.get("op", "")) == "coins" \
+					and int(effect.get("value", 0)) < 0:
+				price = -int(effect["value"])
+		if has_steel:
+			bargain_index = i
+			bargain_price = price
+			break
+	_check(bargain_index >= 0 and bargain_price > 0,
+		"Tauris steel bargain retains a real price")
+	if bargain_index >= 0 and bargain_price > 0:
+		trader.coins = bargain_price
+		_check(bool(machine.choice_states(market_event, trader)[bargain_index].enabled),
+			"a funded market bargain is available")
+		trader.coins = bargain_price - 1
+		_check(not bool(machine.choice_states(market_event, trader)[bargain_index].enabled),
+			"a bargain is disabled below its full cost")
+		trader.coins = bargain_price
+		var trade_result := machine.choose(market_event, bargain_index, trader, rng)
+		_check(trade_result.resolved and trader.coins == 0
+			and int(trader.goods.get("damascus-steel", 0)) == 1,
+			"the bargain pays before granting the good")
 
 	var traveler := WorldState.new()
 	traveler.city = "axuma"

@@ -805,12 +805,12 @@
     {
       "id": "samara",
       "name": "city.samara.name",
-      "band": "central_asia",
-      "culture": "steppe",
+      "band": "maritime_asia",
+      "culture": "indian_ocean",
       "faiths": [
+        "folk",
         "islam",
-        "buddhism",
-        "folk"
+        "hindu"
       ],
       "coord": [
         95.324,
@@ -819,13 +819,13 @@
       "tier": "station",
       "entryEvent": "ev-samara-entry",
       "sites": [
-        "ev-samara-site-gap"
+        "ev-samara-site-gap",
+        "ev-samara-ropebasket"
       ],
       "exits": [
         "rt-cail-samara",
         "rt-java-major-samara",
         "rt-samara-chamba",
-        "rt-samara-mien",
         "rt-samara-pentam"
       ],
       "lore": {
@@ -834,8 +834,8 @@
         "note": "已查：弱证据（单次提及）；维持 authored。"
       },
       "calendars": [
-        "islamic",
-        "turkic"
+        "indian",
+        "islamic"
       ],
       "altRefs": [
         {
@@ -864,7 +864,8 @@
       "sites": [
         "ev-samarcanda-a",
         "ev-samarcanda-b",
-        "ev-samarcanda-c"
+        "ev-samarcanda-c",
+        "ev-samarcanda-bluetile"
       ],
       "exits": [
         "rt-balc-samarcanda",
@@ -939,7 +940,8 @@
       "tier": "town",
       "entryEvent": "ev-sapurgan-entry",
       "sites": [
-        "ev-sapurgan-site-gap"
+        "ev-sapurgan-site-gap",
+        "ev-sapurgan-cupseal"
       ],
       "exits": [
         "rt-balc-sapurgan",
@@ -995,7 +997,8 @@
       "entryEvent": "ev-taican-entry",
       "sites": [
         "ev-taican-a",
-        "ev-taican-b"
+        "ev-taican-b",
+        "ev-taican-sackmark"
       ],
       "exits": [
         "rt-badashan-taican",
@@ -1055,7 +1058,8 @@
       "tier": "town",
       "entryEvent": "ev-yarcan-entry",
       "sites": [
-        "ev-yarcan-site-gap"
+        "ev-yarcan-site-gap",
+        "ev-yarcan-loomreed"
       ],
       "exits": [
         "rt-cascar-yarcan",

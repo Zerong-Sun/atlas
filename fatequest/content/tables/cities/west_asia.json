@@ -192,7 +192,8 @@
       "exits": [
         "rt-alexandria-babylonia-cairus",
         "rt-babylonia-cairus-bethleem",
-        "rt-babylonia-cairus-petra"
+        "rt-babylonia-cairus-petra",
+        "rt-dongola-babylonia-cairus"
       ],
       "lore": {
         "placeId": "ibn-jubayr:jubayr-m001",

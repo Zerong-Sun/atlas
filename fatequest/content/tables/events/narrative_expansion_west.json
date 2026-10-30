@@ -2027,6 +2027,450 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-taican-sackmark",
+      "kind": "site",
+      "title": "ev.taican.sackmark.title",
+      "body": "ev.taican.sackmark.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "taican"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.taican.sackmark.choice.deliver",
+          "resultText": "ev.taican.sackmark.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "delivered-laylas-grain-sack"
+            }
+          ]
+        },
+        {
+          "label": "ev.taican.sackmark.choice.stay",
+          "resultText": "ev.taican.sackmark.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-laylas-children-check-sack-marks"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "taican",
+              "reason": "helped-laylas-households-divide-the-grain"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samarcanda-bluetile",
+      "kind": "site",
+      "title": "ev.samarcanda.bluetile.title",
+      "body": "ev.samarcanda.bluetile.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "samarcanda"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.samarcanda.bluetile.choice.set",
+          "resultText": "ev.samarcanda.bluetile.result.set",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-safiya-set-the-blue-bench-tiles"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "samarcanda",
+              "reason": "helped-safiyas-family-finish-the-bench"
+            }
+          ]
+        },
+        {
+          "label": "ev.samarcanda.bluetile.choice.listen",
+          "resultText": "ev.samarcanda.bluetile.result.listen",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "heard-grandmothers-bench-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-yarcan-loomreed",
+      "kind": "site",
+      "title": "ev.yarcan.loomreed.title",
+      "body": "ev.yarcan.loomreed.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "yarcan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.yarcan.loomreed.choice.buy",
+          "resultText": "ev.yarcan.loomreed.result.buy",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bought-a-replacement-loom-reed"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "yarcan",
+              "reason": "helped-dilara-finish-the-family-border"
+            }
+          ]
+        },
+        {
+          "label": "ev.yarcan.loomreed.choice.letter",
+          "resultText": "ev.yarcan.loomreed.result.letter",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "helped-sisters-explain-the-cloth-delay"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sapurgan-cupseal",
+      "kind": "site",
+      "title": "ev.sapurgan.cupseal.title",
+      "body": "ev.sapurgan.cupseal.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "sapurgan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.sapurgan.cupseal.choice.cord",
+          "resultText": "ev.sapurgan.cupseal.result.cord",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bought-leather-cord-for-shared-cup"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sapurgan",
+              "reason": "helped-keep-the-shared-well-cup"
+            }
+          ]
+        },
+        {
+          "label": "ev.sapurgan.cupseal.choice.stay",
+          "resultText": "ev.sapurgan.cupseal.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "tended-sapurgan-well-shelf"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-towns-well-routine"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-samara-ropebasket",
+      "kind": "site",
+      "title": "ev.samara.ropebasket.title",
+      "body": "ev.samara.ropebasket.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "samara"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.samara.ropebasket.choice.deliver",
+          "resultText": "ev.samara.ropebasket.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "delivered-nilas-new-mooring-line"
+            }
+          ]
+        },
+        {
+          "label": "ev.samara.ropebasket.choice.learn",
+          "resultText": "ev.samara.ropebasket.result.learn",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-test-samara-mooring-lines"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-inspect-worn-lines"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caracoron-teapot",
+      "kind": "site",
+      "title": "ev.caracoron.teapot.title",
+      "body": "ev.caracoron.teapot.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "caracoron"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.caracoron.teapot.choice.pin",
+          "resultText": "ev.caracoron.teapot.result.pin",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bought-a-kettle-handle-pin"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "caracoron",
+              "reason": "helped-bayans-family-repair-the-kettle"
+            }
+          ]
+        },
+        {
+          "label": "ev.caracoron.teapot.choice.wagon",
+          "resultText": "ev.caracoron.teapot.result.wagon",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-repair-bayans-aunts-wagon"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "shared-the-family-wagon-work"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-egrigaia-whiteedge",
+      "kind": "site",
+      "title": "ev.egrigaia.whiteedge.title",
+      "body": "ev.egrigaia.whiteedge.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "egrigaia"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.egrigaia.whiteedge.choice.deliver",
+          "resultText": "ev.egrigaia.whiteedge.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "delivered-grandmothers-camel-wool-shawl"
+            }
+          ]
+        },
+        {
+          "label": "ev.egrigaia.whiteedge.choice.weave",
+          "resultText": "ev.egrigaia.whiteedge.result.weave",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-sisters-border-weave"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "egrigaia",
+              "reason": "spent-time-with-the-weavers-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chandu-mareblanket",
+      "kind": "site",
+      "title": "ev.chandu.mareblanket.title",
+      "body": "ev.chandu.mareblanket.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "chandu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.chandu.mareblanket.choice.mark",
+          "resultText": "ev.chandu.mareblanket.result.mark",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "shared-sarans-mare-story"
+            }
+          ]
+        },
+        {
+          "label": "ev.chandu.mareblanket.choice.felt",
+          "resultText": "ev.chandu.mareblanket.result.felt",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "made-a-new-horse-blanket-with-sarans-family"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chandu",
+              "reason": "worked-with-sarans-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tenduc-ribbons",
+      "kind": "site",
+      "title": "ev.tenduc.ribbons.title",
+      "body": "ev.tenduc.ribbons.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tenduc"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tenduc.ribbons.choice.sew",
+          "resultText": "ev.tenduc.ribbons.result.sew",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tenduc",
+              "reason": "mended-the-neighbours-coat"
+            }
+          ]
+        },
+        {
+          "label": "ev.tenduc.ribbons.choice.wind",
+          "resultText": "ev.tenduc.ribbons.result.wind",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-a-day-watching-wind-with-the-children"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-read-the-roadside-wind"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

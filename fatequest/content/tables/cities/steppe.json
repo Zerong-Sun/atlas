@@ -19,7 +19,8 @@
       "tier": "town",
       "entryEvent": "ev-caracoron-entry",
       "sites": [
-        "ev-caracoron-site-gap"
+        "ev-caracoron-site-gap",
+        "ev-caracoron-teapot"
       ],
       "exits": [
         "rt-caracoron-campichu",
@@ -77,7 +78,8 @@
       "sites": [
         "ev-chandu-a",
         "ev-chandu-b",
-        "ev-chandu-c"
+        "ev-chandu-c",
+        "ev-chandu-mareblanket"
       ],
       "exits": [
         "rt-chandu-cacanfu",
@@ -136,7 +138,8 @@
       "tier": "town",
       "entryEvent": "ev-egrigaia-entry",
       "sites": [
-        "ev-egrigaia-site-gap"
+        "ev-egrigaia-site-gap",
+        "ev-egrigaia-whiteedge"
       ],
       "exits": [
         "rt-cachanfu-egrigaia",
@@ -188,7 +191,8 @@
       "entryEvent": "ev-tenduc-entry",
       "sites": [
         "ev-tenduc-a",
-        "ev-tenduc-b"
+        "ev-tenduc-b",
+        "ev-tenduc-ribbons"
       ],
       "exits": [
         "rt-egrigaia-tenduc",

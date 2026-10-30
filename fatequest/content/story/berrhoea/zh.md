@@ -22,7 +22,7 @@ stamps:
   ev.gap.berrhoea.scene.result.talk: 93966e9097b3
   ev.gap.berrhoea.scene.result.route: cfae664447b7
   ev.berrhoea.lentilpot.title: 50e372f89d73
-  ev.berrhoea.lentilpot.body: dbc3653b18e6
+  ev.berrhoea.lentilpot.body: 065cc1e9993c
   ev.berrhoea.lentilpot.choice.buy: fc8c66b47758
   ev.berrhoea.lentilpot.choice.stay: 8a77fa8dd70e
   ev.berrhoea.lentilpot.result.buy: f49b7c87b005
@@ -102,6 +102,8 @@ stamps:
 祖母以前就在这里煮汤，如今膝盖疼，待在家里休息。汤要是淡了，她会让哈伦回来叫母亲添盐。“隔着一条巷子她都尝得出来。”娜德瓦说。哈伦坚持自己也能辨味，认真喝了一小口，告诉母亲还要再添一点。
 
 娜德瓦说，你可以买碗热汤带着吃。若愿意留下来帮她备明天那锅，她会留你吃饭，夜里也能在屋里睡。哈伦说，无论哪种，祖母都会检查汤的味道。
+
+哈伦问祖母闻到新烤的饼会不会自己下楼。“得看她的膝盖愿不愿意。”娜德瓦说。一位来买汤的邻居答应替他们把那碗端上去。哈伦把小木勺也放到碗边，托她吃完送回来；祖母总爱用这把勺。娜德瓦照儿子说的尝了尝，往汤里添一小撮盐，又取出干净的碗给你看。哈伦跑到隔壁炉边取新饼，问你要不要趁热吃一张。
 
 ## ev.berrhoea.lentilpot.choice.buy
 

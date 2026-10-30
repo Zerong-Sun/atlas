@@ -2,7 +2,7 @@
 unit: mecha
 lang: zh
 source: en
-source_rev: ae2e7c4cdc9e
+source_rev: 7ff4210134fb
 status: translated
 translator: 人工校译
 notes: >
@@ -20,13 +20,13 @@ stamps:
   ev.ev_mecha_entry.choice_1_result: 267267ef2696
   ev.ev_mecha_entry.choice_2_result: 15a4f3836183
   ev.mecha.site_gap.title: 973c3b46fe0f
-  ev.mecha.site_gap.body: 06070dc908d3
+  ev.mecha.site_gap.body: 823d6cb771d4
   ev.mecha.site_gap.choice.route: 4daaa70b60e8
   ev.ev_mecha_site_gap.choice_1_result: 03ff54a686c2
   ev.mecha.site_gap.choice.interact: fb9b8b407b22
   ev.ev_mecha_site_gap.choice_2_result: 7afd8cb1487e
   ev.mecha.cloak.title: 62cab298cc39
-  ev.mecha.cloak.body: a69499873a0c
+  ev.mecha.cloak.body: 1bddbb303f8d
   ev.mecha.cloak.choice.find: 96760d5e685a
   ev.mecha.cloak.result.find: f3254d0c7bbf
   ev.mecha.cloak.choice.stitch: a4e24e1d9a00
@@ -67,7 +67,7 @@ stamps:
 
 ## ev.mecha.site_gap.body
 
-水棚旁的陶匠把两只罐放在阴凉处。一只厚而沉，另一只轻得女儿能独自提起。女儿想把轻的卖给一位北行旅人：“他有车。”父亲敲敲罐沿，问她怎样防着它同别的货碰撞。她拿来一卷布。你问厚的会不会更牢。父亲说：“兴许会，不过他每到一处水站都得把它搬上搬下。”女儿把布垫在轻罐旁，又指给你看罐口够宽，方便清洗。来取罐的旅人问麦地那从哪边走。她指着水棚的人常走的北路，叫他回来时说说这只罐一路上是否安稳。旅人答应，等它平安到了下一站，就托人带口信。
+水棚旁的陶匠把两只罐放在阴凉处。一只厚而沉，另一只轻得女儿能独自提起。女儿想把轻的卖给一位北行旅人：“他有车。”父亲敲敲罐沿，问她怎样防着它同别的货碰撞。她拿来一卷布。你问厚的会不会更牢。父亲说：“兴许会，不过他每到一处水站都得把它搬上搬下。”女儿把布垫在轻罐旁，又指给你看罐口够宽，方便清洗。来取罐的旅人问麦地那从哪边走。她指着水棚的人常走的北路，叫他回来时说说这只罐一路上是否安稳。旅人答应，等它平安到了下一站，就托人带口信。陶匠又提醒女儿，把多出的布留给旅人回程时用。
 
 ## ev.mecha.site_gap.choice.route
 
@@ -91,7 +91,7 @@ stamps:
 
 ## ev.mecha.cloak.body
 
-路边水棚里，裁缝把一件旧外衣摊在膝上。她答应替清早出门的旅人补好，却在衣领里看见两个人的名字。儿子猜衣服是兄弟俩轮着穿的。“是呀，”她说，“可我得知道如今谁来取。”一个来灌水的妇人认出兄长写得整齐的字，说弟弟现在穿这件衣服。裁缝叫儿子在衣领内补块新布，旧名字仍留着。“他会想记着先前是谁穿的。”少年请你按住布，自己落下第一针。他想赶在北行的队伍出发前找到旅人。母亲说，可以一起去水棚门口等，叫过名字就认得了。
+路边水棚里，裁缝把一件旧外衣摊在膝上。她答应替清早出门的旅人补好，却在衣领里看见两个人的名字。儿子猜衣服是兄弟俩轮着穿的。“是呀，”她说，“可我得知道如今谁来取。”一个来灌水的妇人认出兄长写得整齐的字，说弟弟现在穿这件衣服。裁缝叫儿子在衣领内补块新布，旧名字仍留着。“他会想记着先前是谁穿的。”少年请你按住布，自己落下第一针。他想赶在北行的队伍出发前找到旅人。母亲说，可以一起去水棚门口等，叫过名字就认得了。少年问弟弟会不会认出新针脚，母亲说第一针歪得很有他的样子，一看就知道。
 
 ## ev.mecha.cloak.choice.find
 

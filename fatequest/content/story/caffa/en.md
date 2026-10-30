@@ -27,6 +27,8 @@ At Caffa, the road reaches the Black Sea. Arslan has stopped his cart near the s
 
 They have travelled from the open country beyond the shore. Arslan knows where the carts gather before setting out again and shows you a path between the houses and the water. He offers you a place beneath his shelter if you need to recover from the road.
 
+Sada asks whether the horses can smell the sea before they see it. Arslan says this one started pulling towards the shore before the road turned. "It smelled the water trough," she says, and points to the bucket he has just filled. A woman from the nearby shelter calls that her own cart will join the caravan at dawn. Arslan asks if she still has room for a traveller; she says she can ask the driver when he returns. Sada looks at you to see whether you want to wait.
+
 ## ev.caffa.entry.title
 
 The Road Reaches Caffa

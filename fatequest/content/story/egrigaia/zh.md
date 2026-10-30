@@ -2,7 +2,7 @@
 unit: egrigaia
 lang: zh
 source: en
-source_rev: 8faf2f3a0b4e
+source_rev: b43e7df837c4
 status: translated
 translator: 人工校译
 notes: >
@@ -11,19 +11,25 @@ notes: >
   对话直接回应眼前的问题，少解释、少重复；专名首次出现时用常见中文名。
 
 stamps:
+  ev.egrigaia.whiteedge.result.weave: a45e54abd0b6
+  ev.egrigaia.whiteedge.choice.weave: c84416b429aa
+  ev.egrigaia.whiteedge.result.deliver: ca5ba0026be0
+  ev.egrigaia.whiteedge.choice.deliver: 9ad9df9c4691
+  ev.egrigaia.whiteedge.body: f2e8961aae06
+  ev.egrigaia.whiteedge.title: 48f7cae853f3
   city.egrigaia.name: 57f818573ddc
-  ev.egrigaia.entry.choice.look: a1e5276c886b
-  ev.egrigaia.entry.choice.pass: 96d145abaf05
-  ev.egrigaia.entry.body: 034d259baa28
-  ev.egrigaia.entry.title: a6255350e8ee
-  ev.ev_egrigaia_entry.choice_1_result: 64c329746573
-  ev.ev_egrigaia_entry.choice_2_result: 1e5a9d3423a7
-  ev.egrigaia.site_gap.title: 30c3a1806b33
-  ev.egrigaia.site_gap.body: eb2961fd5f02
-  ev.egrigaia.site_gap.choice.route: 733f6a4c27d0
-  ev.ev_egrigaia_site_gap.choice_1_result: a0ce62c9e3c7
-  ev.egrigaia.site_gap.choice.interact: 6357ae8fe8b8
-  ev.ev_egrigaia_site_gap.choice_2_result: 670a7d2f81fe
+  ev.egrigaia.entry.choice.look: aca8aed4b80c
+  ev.egrigaia.entry.choice.pass: 47ba109423b3
+  ev.egrigaia.entry.body: 11fb7898a56b
+  ev.egrigaia.entry.title: 76ef539e54d3
+  ev.ev_egrigaia_entry.choice_1_result: 51638f39382d
+  ev.ev_egrigaia_entry.choice_2_result: f857b8510a4c
+  ev.egrigaia.site_gap.title: afa7259d12e5
+  ev.egrigaia.site_gap.body: a4ede1514661
+  ev.egrigaia.site_gap.choice.route: 554bdd07a46b
+  ev.ev_egrigaia_site_gap.choice_1_result: 0b48e9ea74d9
+  ev.egrigaia.site_gap.choice.interact: 2a8659be56a0
+  ev.ev_egrigaia_site_gap.choice_2_result: 3fbb9ac0c58e
 ---
 
 ## city.egrigaia.name
@@ -32,47 +38,84 @@ stamps:
 
 ## ev.egrigaia.entry.choice.look
 
-歇会儿，问问当地有什么故事
+留一天看一家人怎样把布交出去
 
 ## ev.egrigaia.entry.choice.pass
 
-穿城而过，不加停留
+问清出城的路后继续走
 
 ## ev.egrigaia.entry.body
 
-额里合牙有景教徒的教堂。城中的织坊里，骆驼毛布一匹匹挂在梁上。一个染匠把白布递给你摸：“白色最难留住，沾一点灰就得重洗。”旁边的商人笑他讲究，转头却把几匹白布全买了：“运到远处，这种白布能卖上价。”你问去哈剌章怎么走，染匠拿布边在桌上划了条近道：“顺这条河谷走，别跟着大车道绕远。”
+额里合牙的织坊里，萨兰正挂一匹浅色驼毛布，母亲在旁边查有没有落灰。弟弟抱布过院时，擦到了装炭的篮子，还说自己没碰着。母亲指给他看布边的灰印，叫他端清水来。萨兰说只洗这一角就行，不必整匹打湿。
 
-城外的牧人说，黄河边有面看不见的镜子，能照出人最想回去的地方。你问他照见了什么，他望向南边：“一张没收拾的床。”同伴笑他想家，牧人说：“那镜子倒挺准。”
+你问布干后交给谁。萨兰说附近商路上的买主约好了来取，沾灰的边合不合要求，还得让母亲看过。弟弟端水回来，担心买主生气。母亲说：“他会问怎么回事。洗好后给他看布边就是。”
+
+买主来早了些，萨兰请他在阴处等等。她愿告诉你哪几家织白驼毛布；若留一天，弟弟也认得能歇脚的地方。
+
 ## ev.egrigaia.entry.title
 
-额里合牙省
+额里合牙的白驼毛
 
 ## ev.ev_egrigaia_entry.choice_1_result
 
-染匠朝河谷一指：“去哈剌章顺水走，别跟大车道绕远。白布我替你收好，免得路上落灰。”
+萨兰弟弟指给你看织坊外的路。你动身时，母亲正查洗好的布边。你在图上记下额里合牙，继续赶路。
+
 ## ev.ev_egrigaia_entry.choice_2_result
 
-你在染坊停下。染匠把白驼毛布摊开：“看，边上沾了灰就得重洗；买白布先检查这一圈。”
+你留一天，看萨兰洗净那一角、晾干，再拿给买主查。他看过布纹，收下了。弟弟领你找到歇脚处，你把额里合牙的见闻写进本子。
+
 ## ev.egrigaia.site_gap.title
 
-牧地边的毡帐烟孔
+毡帐顶的烟孔
 
 ## ev.egrigaia.site_gap.body
 
-毡帐顶留着一圈可调的烟孔，主人抬手示意你看：“风小就收窄，炉烟走得慢；风大时开宽，火才不倒灌进帐里。”他把门帘掀起一点，冷风从低处进，烟便从高处出去。帐顶的烟孔边缝着补片，主人说毡布要定期补牢，风雪天才不会从针眼里灌进来。
+牧地边的毡帐里，奥林正松开顶上的绳，让做饭的烟出去。妻子说开口还窄，他调大了些，风却转向，烟又往锅边扑。女儿把门帘掀起一角，凉风从低处进，烟便向上走。奥林谢她看见自己漏掉的地方。
+
+你问烟孔边补过的毡能否撑住。妻子指给你看上一场雪后缝的新针脚。女儿说有一处还得补一针，跑去拿针。今晚有客人来吃饭，锅得尽快放回火上。奥林扶好毡边，让妻子动手。
+
+来打水的牧人认得去汪古部营地的路，也叫得出沿途住处。奥林把绳留松一点，让你试着调烟孔，女儿在旁边看烟往哪儿走。
 
 ## ev.egrigaia.site_gap.choice.route
 
-问去汪古部营地的路
+问牧人去汪古部营地怎么走
 
 ## ev.ev_egrigaia_site_gap.choice_1_result
 
-帐主说：“往南走这条路去汪古部营地。跟牧群走的道认得出来，遇上分岔就问放牧的人，别追着车辙乱走。”
+牧人说了去汪古部营地沿途能歇的地方，指出牲口常走的河谷。奥林女儿帮你把路标在图上，才回火边照看锅。
 
 ## ev.egrigaia.site_gap.choice.interact
 
-帮他调烟孔
+帮奥林调帐顶烟孔
 
 ## ev.ev_egrigaia_site_gap.choice_2_result
 
-你拉住帐顶的绳环，帐主让你一点点放松：“开太大，热气全跑了；收太紧，烟会呛人。看炉火和风向一起调。”
+你拉住绳子，让奥林妻子补完那针。女儿从帐里看烟有没有倒灌，这一家才把锅放回火上。你记住了他们按风向调烟孔的办法。
+
+## ev.egrigaia.whiteedge.title
+
+给祖母织的布边
+
+## ev.egrigaia.whiteedge.body
+
+小织帐里，两姐妹正商量给祖母的白驼毛披肩织什么边。妹妹喜欢鲜红线，姐姐说祖母要的是一道细蓝边。“她也许照样喜欢红的。”妹妹说。帮她们理经线的父亲问，祖母平时来做客戴什么。姐妹几乎同时答：那条旧蓝巾。
+
+你问披肩何时送。她们明天要到附近营地见祖母。妹妹已织好一只红穗子，舍不得拆。姐姐说可以系在包布上。父亲让她们拿到日光里再看。白驼毛一照，两种颜色都鲜明。
+
+邻居有车，今天就能把织好的披肩送到祖母营地，也愿付帮忙送的人 0.8 银。姐妹若再留一天，也肯让你看布边怎样织完。妹妹把红穗子搁在蓝线旁，自己先笑了。
+
+## ev.egrigaia.whiteedge.choice.deliver
+
+今天帮忙把披肩送给祖母
+
+## ev.egrigaia.whiteedge.result.deliver
+
+你随邻居的车把披肩送到营地。祖母先看见包布上的红穗子，再看见蓝色布边，一下知道是两姐妹一起织的。邻居按约付你 0.8 银。
+
+## ev.egrigaia.whiteedge.choice.weave
+
+多留一天跟姐妹学织那道布边
+
+## ev.egrigaia.whiteedge.result.weave
+
+你第二天留下来看姐妹把细蓝边织完。妹妹把红穗系在包布上。父亲谢你愿意花时间听她们商量、看她们做工。

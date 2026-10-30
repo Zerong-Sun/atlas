@@ -4321,86 +4321,6 @@
       }
     },
     {
-      "id": "rt-dongola-mecha",
-      "from": "dongola",
-      "to": "mecha",
-      "reverse": true,
-      "kind": "land",
-      "modes": [
-        "caravan",
-        "camel",
-        "foot"
-      ],
-      "days": 34,
-      "distanceKm": 1006,
-      "cost": 1020,
-      "risk": 2,
-      "season": {
-        "open": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        ],
-        "bonus": []
-      },
-      "hazards": [
-        "bandits"
-      ],
-      "encounters": [],
-      "lore": {
-        "origin": "authored"
-      }
-    },
-    {
-      "id": "rt-dongola-medina",
-      "from": "dongola",
-      "to": "medina",
-      "reverse": true,
-      "kind": "land",
-      "modes": [
-        "caravan",
-        "camel",
-        "foot"
-      ],
-      "days": 37,
-      "distanceKm": 1111,
-      "cost": 1110,
-      "risk": 2,
-      "season": {
-        "open": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        ],
-        "bonus": []
-      },
-      "hazards": [
-        "bandits"
-      ],
-      "encounters": [],
-      "lore": {
-        "origin": "authored"
-      }
-    },
-    {
       "id": "rt-dufar-esher",
       "from": "dufar",
       "to": "esher",
@@ -5129,13 +5049,11 @@
       "from": "java-major",
       "to": "samara",
       "reverse": true,
-      "kind": "land",
+      "kind": "sea",
       "modes": [
-        "caravan",
-        "camel",
-        "foot"
+        "ship"
       ],
-      "days": 61,
+      "days": 16,
       "distanceKm": 1826,
       "cost": 1830,
       "risk": 3,
@@ -5157,7 +5075,8 @@
         "bonus": []
       },
       "hazards": [
-        "bandits"
+        "storm",
+        "pirates"
       ],
       "encounters": [],
       "lore": {
@@ -6904,53 +6823,13 @@
       "from": "samara",
       "to": "chamba",
       "reverse": true,
-      "kind": "coastal",
-      "modes": [
-        "caravan",
-        "foot",
-        "ship"
-      ],
-      "days": 59,
-      "distanceKm": 1776,
-      "cost": 1770,
-      "risk": 3,
-      "season": {
-        "open": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        ],
-        "bonus": []
-      },
-      "hazards": [
-        "bandits"
-      ],
-      "encounters": [],
-      "lore": {
-        "origin": "authored"
-      }
-    },
-    {
-      "id": "rt-samara-mien",
-      "from": "samara",
-      "to": "mien",
-      "reverse": true,
       "kind": "sea",
       "modes": [
         "ship"
       ],
-      "days": 58,
-      "distanceKm": 1738,
-      "cost": 1740,
+      "days": 15,
+      "distanceKm": 1776,
+      "cost": 1770,
       "risk": 3,
       "season": {
         "open": [
@@ -6983,15 +6862,13 @@
       "from": "samara",
       "to": "pentam",
       "reverse": true,
-      "kind": "coastal",
+      "kind": "sea",
       "trunk": true,
       "lane": true,
       "modes": [
-        "caravan",
-        "foot",
         "ship"
       ],
-      "days": 38,
+      "days": 10,
       "distanceKm": 1128,
       "cost": 1140,
       "risk": 2,
@@ -7013,7 +6890,8 @@
         "bonus": []
       },
       "hazards": [
-        "bandits"
+        "storm",
+        "pirates"
       ],
       "encounters": [],
       "lore": {
@@ -8275,6 +8153,46 @@
           "book": "ibn-battuta",
           "chapterId": "battuta-c019"
         }
+      }
+    },
+    {
+      "id": "rt-dongola-babylonia-cairus",
+      "from": "dongola",
+      "to": "babylonia-cairus",
+      "reverse": true,
+      "kind": "land",
+      "modes": [
+        "caravan",
+        "camel",
+        "foot"
+      ],
+      "days": 50,
+      "distanceKm": 1500,
+      "cost": 1500,
+      "risk": 2,
+      "season": {
+        "open": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "bonus": []
+      },
+      "hazards": [
+        "bandits"
+      ],
+      "encounters": [],
+      "lore": {
+        "origin": "authored"
       }
     }
   ]

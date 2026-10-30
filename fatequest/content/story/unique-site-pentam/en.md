@@ -11,24 +11,24 @@ notes: >
 
 ## ev.ev_unique_pentam.title
 
-The Rudder at the Shallows
+The Pilot’s Sounding Line
 
 ## ev.ev_unique_pentam.body
 
-Beside Pentam, a larger vessel waits above the shoal. Its rudder nearly touches the bottom. A pilot says he can sound a passage now, or the crew can wait for the water to rise.
+A larger vessel waits beyond the shallow water. Its pilot has borrowed a small boat to test the channel, but the sounding line is knotted where two lengths were joined. His daughter says the old knots have swollen and the marks are now hard to read. ‘If we call the depth wrong, the captain will send the big ship too early,’ she says. The pilot asks her to take the end of the line while he loosens the worst knot. You offer to hold the little boat against the quay. A deckhand from the large ship arrives with a message: their cargo is ready, and the captain wants a departure time. The pilot refuses to guess. He points to a pale rock that will disappear beneath the rising tide. His daughter has been watching it all morning and can tell the deckhand how quickly the water is coming in. The pilot offers to wait until she has checked the channel through a full tide, or to take you in the little boat now for a paid sounding of the route toward Java Major.
 
 ## ev.ev_unique_pentam.choice_a
 
-Wait for the tide and mark the shallow passage
+Stay a day and check the channel with them
 
 ## ev.ev_unique_pentam.choice_a_result
 
-You spend one day watching the water rise and record where the reef breaks. Your travel sense grows.
+You spend another day with the pilot and his daughter, comparing the line’s marks with the water over the pale rock. She records where the boat can turn without touching bottom. When the captain returns, she gives him the depth she measured herself, and you carry away a steadier sense of how the channel changes.
 
 ## ev.ev_unique_pentam.choice_b
 
-Hire the pilot to sound the channel
+Pay for a sounding trip with the pilot
 
 ## ev.ev_unique_pentam.choice_b_result
 
-You pay 200 silver. The pilot takes the lead boat across and shows you the passage toward Java Major.
+You pay the pilot for a place in the small boat. He takes the sounding line, calls each depth to his daughter, and points out the passage toward Java Major while she writes the turns down. At the quay she gives you a copy, with the dangerous shallow marked clearly.

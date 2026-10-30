@@ -297,12 +297,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "waited-at-the-gate-until-dusk"
+              "reason": "helped-the-gatekeeper-for-a-day"
             },
             {
               "op": "reputation",
               "value": 1,
-              "reason": "heard-the-gatekeepers-jest",
+              "reason": "gatekeeper-thanked-the-helper",
               "scope": "city",
               "id": "alexandria"
             }
@@ -315,12 +315,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "spoke-with-the-scholar-at-the-gate"
+              "reason": "asked-the-porter-about-cairo-road"
             },
             {
               "op": "reveal_map",
               "value": "rt-alexandria-babylonia-cairus",
-              "reason": "named-the-road-from-the-hejaz"
+              "reason": "porter-marked-the-road-to-cairo"
             }
           ]
         },
@@ -331,12 +331,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "entered-the-city-at-dusk"
+              "reason": "delivered-the-students-book-slip"
             },
             {
               "op": "reputation",
               "value": 1,
-              "reason": "kept-the-scholars-omen",
+              "reason": "student-thanked-the-helper",
               "scope": "city",
               "id": "alexandria"
             }
@@ -375,12 +375,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "swore-the-oath-to-the-saint"
+              "reason": "helped-copy-three-addresses"
             },
             {
               "op": "reputation",
               "value": 1,
-              "reason": "pledged-the-greetings-to-the-east",
+              "reason": "letter-writer-thanked-the-helper",
               "scope": "city",
               "id": "alexandria"
             }
@@ -393,12 +393,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "learned-of-the-three-brothers"
+              "reason": "asked-how-the-cairo-letter-route-works"
             },
             {
               "op": "reveal_map",
               "value": "rt-alexandria-babylonia-cairus",
-              "reason": "the-saint-named-india-and-china"
+              "reason": "messenger-marked-the-cairo-letter-route"
             }
           ]
         },
@@ -409,7 +409,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "kept-the-saints-prophecy",
+              "reason": "delivered-the-sealed-letter-to-the-gate",
               "scope": "city",
               "id": "alexandria"
             }
@@ -2341,13 +2341,13 @@
           "resultText": "ev.ev_cambaluc_b.choice_1_result",
           "needs": {
             "coins": {
-              "min": 2000
+              "min": 10000
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -2000,
+              "value": -10000,
               "reason": "bought-silk-at-cambaluc-price"
             },
             {
@@ -2555,7 +2555,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -6000,
+              "value": -10800,
               "reason": "bought-tea-from-desert-traders"
             },
             {
@@ -2577,7 +2577,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 6000
+              "min": 10800
             }
           }
         },
@@ -3224,7 +3224,7 @@
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "learned-the-elephant-tribute"
+              "reason": "read-old-elephant-shipping-accounts"
             },
             {
               "op": "reveal_map",
@@ -3235,7 +3235,7 @@
               "op": "fate",
               "id": "rapport",
               "value": 1,
-              "reason": "heard-the-kings-embassy"
+              "reason": "listened-to-the-warehouse-clerk"
             },
             {
               "op": "queue_event",
@@ -3251,7 +3251,7 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "watched-the-tribute-harbour"
+              "reason": "checked-the-port-ledger-for-a-day"
             },
             {
               "op": "reveal_map",
@@ -3261,7 +3261,7 @@
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "noted-the-kaans-revenue"
+              "reason": "learned-how-the-port-ledger-is-kept"
             },
             {
               "op": "queue_event",
@@ -3276,8 +3276,8 @@
           "effects": [
             {
               "op": "coins",
-              "value": -900,
-              "reason": "bought-sandalwood-at-chamba"
+              "value": -10800,
+              "reason": "paid-for-one-full-lot-of-goods"
             },
             {
               "op": "goods",
@@ -3290,19 +3290,19 @@
               "value": 1,
               "scope": "band",
               "id": "maritime_asia",
-              "reason": "traded-in-the-tribute-port"
+              "reason": "traded-at-the-chamba-harbour"
             }
           ],
           "needs": {
             "coins": {
-              "min": 900
+              "min": 10800
             }
           }
         }
       ],
       "lore": {
         "placeId": "great-country-called-chamba",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c005"
@@ -3332,19 +3332,19 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "waited-at-chamba-court"
+              "reason": "helped-the-broker-and-clerk-for-two-days"
             },
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "learned-chambas-royal-state"
+              "reason": "learned-how-the-broker-checks-shipments"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "city",
               "id": "chamba",
-              "reason": "showed-respect-to-the-kingdom"
+              "reason": "helped-the-chamba-merchants"
             },
             {
               "op": "queue_event",
@@ -3359,8 +3359,8 @@
           "effects": [
             {
               "op": "coins",
-              "value": -8000,
-              "reason": "bought-pepper-at-chamba"
+              "value": -10800,
+              "reason": "paid-for-one-full-lot-of-goods"
             },
             {
               "op": "goods",
@@ -3371,7 +3371,7 @@
             {
               "op": "codex",
               "value": "cx-chamba",
-              "reason": "noted-chambas-spice-wealth"
+              "reason": "checked-the-pepper-bag-before-buying"
             },
             {
               "op": "queue_event",
@@ -3381,7 +3381,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 8000
+              "min": 10800
             }
           }
         },
@@ -3408,12 +3408,8 @@
         }
       ],
       "lore": {
-        "placeId": "great-country-called-chamba",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "v2-b3-c005"
-        }
+        "placeId": "chamba",
+        "origin": "authored"
       }
     },
     {
@@ -3444,17 +3440,7 @@
             {
               "op": "coins",
               "value": -500,
-              "reason": "bribed-for-entry-to-the-palace"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "stood-inside-the-cane-palace"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-palace",
-              "reason": "entered-the-kaans-summer-palace"
+              "reason": "paid-the-craft-yard-visit-fee"
             },
             {
               "op": "queue_event",
@@ -3468,14 +3454,9 @@
           "resultText": "ev.ev_chandu_a.choice_2_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-chandu-palace",
-              "reason": "saw-the-gilded-cane-palace"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "studied-the-cane-construction"
+              "op": "flag",
+              "value": "fl-ev-chandu-a-choice-2-seen",
+              "reason": "spent-time-with-local-family"
             }
           ]
         },
@@ -3486,24 +3467,14 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "sketched-the-palace"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-palace",
-              "reason": "sketched-the-cane-palace"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "recorded-the-palace-in-detail"
+              "reason": "sketched-the-reed-house"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "chandu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c061"
@@ -3533,17 +3504,7 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "walked-the-park-edge"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-park",
-              "reason": "saw-the-kaans-game-park"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "walked-the-sixteen-mile-wall"
+              "reason": "walked-the-grassland-edge"
             }
           ]
         },
@@ -3552,14 +3513,9 @@
           "resultText": "ev.ev_chandu_b.choice_2_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-chandu-mares",
-              "reason": "saw-the-white-mares"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "saw-the-sacred-herd"
+              "op": "flag",
+              "value": "fl-ev-chandu-b-choice-2-seen",
+              "reason": "spent-time-with-local-family"
             }
           ]
         },
@@ -3575,17 +3531,7 @@
             {
               "op": "coins",
               "value": -800,
-              "reason": "hired-a-falconer-for-a-day"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-park",
-              "reason": "hunted-with-the-kaans-falconers"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "learned-the-kaans-hunting-grounds"
+              "reason": "paid-for-a-falconry-lesson"
             },
             {
               "op": "queue_event",
@@ -3597,7 +3543,7 @@
       ],
       "lore": {
         "placeId": "chandu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c061"
@@ -3625,14 +3571,9 @@
           "resultText": "ev.ev_chandu_c.choice_1_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-chandu-mares",
-              "reason": "watched-the-sacred-mares"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "saw-the-milking-of-the-white-mares"
+              "op": "flag",
+              "value": "fl-ev-chandu-c-choice-1-seen",
+              "reason": "spent-time-with-local-family"
             }
           ]
         },
@@ -3648,13 +3589,13 @@
             {
               "op": "coins",
               "value": -100,
-              "reason": "offering-to-the-eternal-blue-sky"
+              "reason": "contributed-to-the-family-gathering"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "honoured-the-mongol-spirits"
+              "reason": "joined-the-family-in-thanks"
             }
           ]
         },
@@ -3662,16 +3603,6 @@
           "label": "ev.chandu.c.choice.listen",
           "resultText": "ev.ev_chandu_c.choice_3_result",
           "effects": [
-            {
-              "op": "codex",
-              "value": "cx-chandu",
-              "reason": "heard-the-tale-of-genghis-khan"
-            },
-            {
-              "op": "sticker",
-              "value": "st-chandu-mares",
-              "reason": "heard-the-old-mongol-rites"
-            },
             {
               "op": "queue_event",
               "value": "ev-chandu-c-followup",
@@ -3682,7 +3613,7 @@
       ],
       "lore": {
         "placeId": "chandu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c061"
@@ -3884,7 +3815,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -4000,
+              "value": -10800,
               "reason": "bought-porcelain-with-paper-money"
             },
             {
@@ -3903,7 +3834,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 4000
+              "min": 10800
             }
           }
         },
@@ -4414,8 +4345,8 @@
           "effects": [
             {
               "op": "reveal_map",
-              "value": "rt-dongola-mecha",
-              "reason": "asked-about-road-to-mecha"
+              "value": "rt-dongola-babylonia-cairus",
+              "reason": "asked-about-nile-road-to-cairo"
             }
           ]
         },
@@ -4611,7 +4542,7 @@
       ],
       "lore": {
         "placeId": "esher",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c037"
@@ -4713,7 +4644,7 @@
       ],
       "lore": {
         "placeId": "esher",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c037"
@@ -6724,14 +6655,14 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "sat-before-the-queen-of-tawalisi"
+              "reason": "helped-the-harbour-keeper-for-a-day"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "band",
               "id": "maritime_asia",
-              "reason": "presented-himself-to-the-queen-of-tawalisi"
+              "reason": "helped-the-java-major-harbour-workers"
             }
           ]
         },
@@ -6740,20 +6671,20 @@
           "resultText": "ev.ev_java_major_battuta_a.choice_2_result",
           "needs": {
             "coins": {
-              "min": 200
+              "min": 10000
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -200,
-              "reason": "bought-an-elephant-load-of-aloeswood"
+              "value": -10000,
+              "reason": "paid-for-one-lot-of-aloeswood"
             },
             {
               "op": "goods",
               "id": "aloeswood",
               "value": 1,
-              "reason": "bought-an-elephant-load-of-aloeswood"
+              "reason": "bought-one-lot-of-aloeswood"
             }
           ]
         },
@@ -6764,23 +6695,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "asked-the-sailors-of-the-queens-army"
+              "reason": "asked-the-local-sailors-about-the-route"
             },
             {
               "op": "reveal_map",
               "value": "rt-java-major-samara",
-              "reason": "the-sailors-described-the-eastward-sea-road"
+              "reason": "sailors-marked-the-eastward-sea-road"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "tawalisi-queen",
-        "origin": "source",
-        "ref": {
-          "book": "ibn-battuta",
-          "chapterId": "battuta-c022"
-        }
+        "placeId": "java-major",
+        "origin": "authored"
       }
     },
     {
@@ -6831,7 +6758,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -8000,
+              "value": -10000,
               "reason": "bought-raw-silk-at-the-cocoon-market"
             },
             {
@@ -6853,7 +6780,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 8000
+              "min": 10000
             }
           }
         },
@@ -6927,7 +6854,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -7000,
+              "value": -10800,
               "reason": "bought-lacquerware-in-the-industrial-quarter"
             },
             {
@@ -6946,7 +6873,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 7000
+              "min": 10800
             }
           }
         },
@@ -7511,13 +7438,13 @@
           "resultText": "ev.ev_kinsay_b.choice_1_result",
           "needs": {
             "coins": {
-              "min": 20000
+              "min": 21600
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -20000,
+              "value": -21600,
               "reason": "bought-pepper-at-kinsay"
             },
             {
@@ -7946,6 +7873,11 @@
         {
           "label": "ev.lop.caravanserai.choice.provision",
           "resultText": "ev.ev_lop_caravanserai.choice_3_result",
+          "showWhen": {
+            "lacks_item": [
+              "it-desert-provisions"
+            ]
+          },
           "effects": [
             {
               "op": "coins",
@@ -7972,7 +7904,7 @@
       ],
       "lore": {
         "placeId": "lop",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c39"
@@ -8109,19 +8041,19 @@
             {
               "op": "days",
               "value": 3,
-              "reason": "held-the-office-of-judge"
+              "reason": "helped-the-scribe-for-three-days"
             },
             {
               "op": "coins",
               "value": 150,
-              "reason": "revenue-of-three-islands"
+              "reason": "paid-for-copying-the-net-accounts"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "city",
               "id": "maldive",
-              "reason": "the-judges-word-runs-like-a-kings"
+              "reason": "helped-two-fishing-families-settle-their-ledger"
             }
           ]
         },
@@ -8132,19 +8064,19 @@
             {
               "op": "coins",
               "value": -100,
-              "reason": "paid-a-small-dowry"
+              "reason": "shared-the-wedding-meal-cost"
             },
             {
               "op": "days",
               "value": 2,
-              "reason": "kept-the-marriage-custom"
+              "reason": "helped-prepare-the-family-wedding"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "city",
               "id": "maldive",
-              "reason": "honoured-the-island-custom"
+              "reason": "helped-the-neighbours-celebrate"
             }
           ],
           "needs": {
@@ -8160,23 +8092,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "watched-the-harbour-for-a-ship"
+              "reason": "asked-the-pilot-about-departing-ships"
             },
             {
               "op": "reveal_map",
               "value": "rt-maldive-melibar",
-              "reason": "pilots-named-the-sea-road-to-melibar"
+              "reason": "pilot-drew-the-route-to-melibar"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "maldives-judge-marriages",
-        "origin": "source",
-        "ref": {
-          "book": "ibn-battuta",
-          "chapterId": "battuta-c019"
-        }
+        "placeId": "maldive",
+        "origin": "authored"
       }
     },
     {
@@ -8302,7 +8230,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -1100,
+              "value": -10800,
               "reason": "bought-pepper-at-melibar"
             },
             {
@@ -8324,7 +8252,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 1100
+              "min": 10800
             }
           }
         },
@@ -8353,7 +8281,7 @@
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c025"
@@ -8422,7 +8350,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -950,
+              "value": -10000,
               "reason": "bought-pearls-at-melibar"
             },
             {
@@ -8440,14 +8368,14 @@
           ],
           "needs": {
             "coins": {
-              "min": 950
+              "min": 10000
             }
           }
         }
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c025"
@@ -8482,17 +8410,17 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "watched-the-great-junks-waiting-for-the-china-season"
+              "reason": "heard-the-pilot-at-the-guesthouse"
             },
             {
               "op": "reveal_map",
               "value": "rt-coilum-melibar",
-              "reason": "the-ships-of-china-put-in-at-hili-kalikut-and-kawlam-alone"
+              "reason": "pilot-showed-the-coilum-coast-route"
             },
             {
               "op": "flag",
               "value": "fl-melibar-battuta-told",
-              "reason": "heard-the-travellers-tale"
+              "reason": "heard-the-pilots-route"
             }
           ]
         },
@@ -8501,25 +8429,25 @@
           "resultText": "ev.ev_melibar_battuta_a.choice_2_result",
           "needs": {
             "coins": {
-              "min": 1500
+              "min": 10800
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -1500,
-              "reason": "paid-a-kalikut-merchant-for-pepper"
+              "value": -10800,
+              "reason": "paid-the-harbour-merchant-for-pepper"
             },
             {
               "op": "goods",
               "id": "pepper",
               "value": 1,
-              "reason": "bought-pepper-at-kalikut"
+              "reason": "bought-a-full-sack-of-pepper"
             },
             {
               "op": "flag",
               "value": "fl-melibar-battuta-told",
-              "reason": "heard-the-travellers-tale"
+              "reason": "met-the-harbour-merchant"
             }
           ]
         },
@@ -8530,30 +8458,26 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "kept-the-friday-prayer-on-shore"
+              "reason": "helped-the-guesthouse-for-a-day"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "band",
               "id": "india",
-              "reason": "held-to-the-prayer-while-the-sea-rose"
+              "reason": "helped-the-guesthouse-neighbours"
             },
             {
               "op": "flag",
               "value": "fl-melibar-battuta-told",
-              "reason": "heard-the-travellers-tale"
+              "reason": "helped-at-the-guesthouse"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "chinese-junks-wreck",
-        "origin": "source",
-        "ref": {
-          "book": "ibn-battuta",
-          "chapterId": "battuta-c018"
-        }
+        "placeId": "melibar",
+        "origin": "authored"
       }
     },
     {
@@ -9015,7 +8939,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -9000,
+              "value": -10000,
               "reason": "bought-fine-silk-at-saianfu"
             },
             {
@@ -9037,7 +8961,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 9000
+              "min": 10000
             }
           }
         },
@@ -9111,7 +9035,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -2000,
+              "value": -10000,
               "reason": "bought-ginger-at-saianfu"
             },
             {
@@ -9130,7 +9054,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 2000
+              "min": 10000
             }
           }
         },
@@ -9183,8 +9107,8 @@
           "effects": [
             {
               "op": "reveal_map",
-              "value": "rt-samara-mien",
-              "reason": "asked-about-road-to-mien"
+              "value": "rt-samara-chamba",
+              "reason": "pilot-named-sea-road-to-chamba"
             }
           ]
         },
@@ -9286,7 +9210,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"
@@ -9381,7 +9305,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"
@@ -9462,7 +9386,7 @@
       ],
       "lore": {
         "placeId": "samarcan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c034"
@@ -9597,7 +9521,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -4000,
+              "value": -10800,
               "reason": "bought-sugar-at-siju"
             },
             {
@@ -9619,7 +9543,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 4000
+              "min": 10800
             }
           }
         },
@@ -9700,7 +9624,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -3000,
+              "value": -13500,
               "reason": "bought-paper-money-near-the-cremation-ground"
             },
             {
@@ -9718,7 +9642,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 3000
+              "min": 13500
             }
           }
         },
@@ -9797,7 +9721,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10800,
               "reason": "bought-tea-from-a-river-bargeman"
             },
             {
@@ -9819,7 +9743,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10800
             }
           }
         },
@@ -9899,7 +9823,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -6000,
+              "value": -10800,
               "reason": "bought-porcelain-at-sinju"
             },
             {
@@ -9918,7 +9842,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 6000
+              "min": 10800
             }
           }
         },
@@ -10100,7 +10024,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -1500,
+              "value": -10000,
               "reason": "bought-rhubarb-in-the-canal-gardens"
             },
             {
@@ -10118,7 +10042,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 1500
+              "min": 10000
             }
           }
         },
@@ -10250,7 +10174,7 @@
       ],
       "lore": {
         "placeId": "taican",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c028"
@@ -10346,7 +10270,7 @@
       ],
       "lore": {
         "placeId": "taican",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c028"
@@ -10441,7 +10365,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -4000,
+              "value": -10800,
               "reason": "bought-tea-in-the-garden-country"
             },
             {
@@ -10463,7 +10387,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 4000
+              "min": 10800
             }
           }
         },
@@ -10521,7 +10445,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -6700,
+              "value": -13500,
               "reason": "paid-for-the-fan"
             },
             {
@@ -10548,7 +10472,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 6700
+              "min": 13500
             }
           }
         },
@@ -10587,7 +10511,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5500,
+              "value": -10800,
               "reason": "bought-lacquerware-from-kinsay-stock"
             },
             {
@@ -10604,7 +10528,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5500
+              "min": 10800
             }
           }
         }
@@ -10665,13 +10589,13 @@
           "resultText": "ev.ev_tauris_a.choice_2_result",
           "needs": {
             "coins": {
-              "min": 800
+              "min": 13500
             }
           },
           "effects": [
             {
               "op": "coins",
-              "value": -800,
+              "value": -13500,
               "reason": "bought-a-tabriz-pearl"
             },
             {
@@ -10879,7 +10803,12 @@
               "value": "it-dried-fruit",
               "reason": "provisioned-from-the-orchards"
             }
-          ]
+          ],
+          "showWhen": {
+            "lacks_item": [
+              "it-dried-fruit"
+            ]
+          }
         },
         {
           "label": "ev.tauris.c.choice.wander",
@@ -10997,7 +10926,7 @@
       ],
       "lore": {
         "placeId": "tenduc",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c059"
@@ -11042,7 +10971,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -280,
+              "value": -10800,
               "reason": "bought-coloured-cotton-cloth"
             },
             {
@@ -11060,7 +10989,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 280
+              "min": 10800
             }
           }
         },
@@ -11085,7 +11014,7 @@
       ],
       "lore": {
         "placeId": "tenduc",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c059"

@@ -2,7 +2,7 @@
 unit: dufar
 lang: zh
 source: en
-source_rev: 732f6e7bcd06
+source_rev: d148e79546d0
 status: translated
 translator: 人工校译
 notes: >
@@ -19,13 +19,13 @@ stamps:
   ev.ev_dufar_entry.choice_1_result: 8beda65038c1
   ev.ev_dufar_entry.choice_2_result: 8d7a5e9ebd15
   ev.dufar.site_gap.title: f535344e9777
-  ev.dufar.site_gap.body: 429d89ea4077
+  ev.dufar.site_gap.body: 4b2886530290
   ev.dufar.site_gap.choice.route: bfa2f006761a
   ev.ev_dufar_site_gap.choice_1_result: ae9cda57d919
   ev.dufar.site_gap.choice.interact: dfab1750beb8
   ev.ev_dufar_site_gap.choice_2_result: 9339d7745b12
   ev.dufar.sail.title: 85578bd94c3a
-  ev.dufar.sail.body: 78f4ce54362b
+  ev.dufar.sail.body: f949a2c89415
   ev.dufar.sail.choice.sew: 096ec874c02f
   ev.dufar.sail.result.sew: 6e1ba378b478
   ev.dufar.sail.choice.tide: dc08a1ab4ffa
@@ -66,7 +66,7 @@ stamps:
 
 ## ev.dufar.site_gap.body
 
-卖乳香的人用厚纸裹树脂，外甥在旁边试两只陶罐的盖子。“这只一股鱼干味。”少年把一只罐推开。舅舅笑道：“那就装水，别装香。”他给你一粒颜色浅的乳香，问你闻到什么。还没捏碎，气味已经从纸边透出来。他教外甥保持纸面干净，再系绳时别把树脂压坏。一位客人来问，能否把一包香捎去埃舍尔。卖香人说得先问承运人有没有地方，也请客人交代清楚收货的门牌。外甥愿意带你去街角指路。舅舅叫他稍等：最后一只干净陶罐还要垫纸，少年手小，放得整齐。
+卖乳香的人用厚纸裹树脂，外甥在旁边试两只陶罐的盖子。“这只一股鱼干味。”少年把一只罐推开。舅舅笑道：“那就装水，别装香。”他给你一粒颜色浅的乳香，问你闻到什么。还没捏碎，气味已经从纸边透出来。他教外甥保持纸面干净，再系绳时别把树脂压坏。一位客人来问，能否把一包香捎去埃舍尔。卖香人说得先问承运人有没有地方，也请客人交代清楚收货的门牌。外甥愿意带你去街角指路。舅舅叫他稍等：最后一只干净陶罐还要垫纸，少年手小，放得整齐。客人说，明天确认哪位表亲在家，再把收货人的名字送来。
 
 ## ev.dufar.site_gap.choice.route
 
@@ -90,7 +90,7 @@ stamps:
 
 ## ev.dufar.sail.body
 
-佐法尔岸边，一个修帆的妇人正补小船帆上的长裂口。哥哥天没亮就送来了帆，答应替另一条船卸完货便来取。“他昨天也这么说。”儿子向你抱怨。妇人笑着把裂边合拢，叫他多拿些线。少年把线绕错了轴，只好坐下来慢慢解。你问帆补好还能不能吃住风。她指给你看旧布被拉长的地方：“补片压平了就行。”哥哥带着一篮椰枣来了，说可以一起吃午饭。他见帆快好了，愿出工钱请人赶在潮水转向前补完。儿子想亲自把帆送上船。母亲叫他先把线解开，待会儿他们一起去。
+佐法尔岸边，一个修帆的妇人正补小船帆上的长裂口。哥哥天没亮就送来了帆，答应替另一条船卸完货便来取。“他昨天也这么说。”儿子向你抱怨。妇人笑着把裂边合拢，叫他多拿些线。少年把线绕错了轴，只好坐下来慢慢解。你问帆补好还能不能吃住风。她指给你看旧布被拉长的地方：“补片压平了就行。”哥哥带着一篮椰枣来了，说可以一起吃午饭。他见帆快好了，愿出工钱请人赶在潮水转向前补完。儿子想亲自把帆送上船。母亲叫他先把线解开，待会儿他们一起去。少年问椰枣能不能等帆挂好再吃，舅舅答应把最甜的留给他。
 
 ## ev.dufar.sail.choice.sew
 

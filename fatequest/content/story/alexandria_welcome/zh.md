@@ -2,7 +2,7 @@
 status: draft
 
 stamps:
-  ev.alexandria.water_seller.body: 6aab7a83a5c5
+  ev.alexandria.water_seller.body: c73719be1984
   ev.alexandria.water_seller.choice.cairo: 1dacc87e20ff
   ev.alexandria.water_seller.choice.help: 7b0429756612
   ev.alexandria.water_seller.choice.jerusalem: ab8ec18a952d
@@ -11,7 +11,7 @@ stamps:
   ev.alexandria.water_seller.result.jerusalem: eb781cb4f2b5
   ev.alexandria.water_seller.title: 26f3a8f8cf31
   ev.alexandria.welcome.entry: e60c12aa5ad7
-  ev.alexandria.welcome.gate.body: cdd33457ca87
+  ev.alexandria.welcome.gate.body: 7fba31540ec5
   ev.alexandria.welcome.gate.faith: 935c3dfcca0b
   ev.alexandria.welcome.gate.faith_result: 319930405393
   ev.alexandria.welcome.gate.leave: 4b34df9e2fc0
@@ -43,7 +43,7 @@ stamps:
 
 你问哪里能打听去开罗的路。萨米尔想了想：“我知道一户人家，常有走路的人进去吃饭。主人去过开罗，问他比问我管用。我把箱子送完，带你认门。”
 
-巷子里有人正在掰面饼，焦香顺着门缝飘出来。萨米尔放慢脚步，敲了两下门。主人在里头问：“谁啊？”萨米尔侧过身，让你自己回答。
+巷子里有人正在掰面饼，焦香顺着门缝飘出来。萨米尔放慢脚步，敲了两下门。等人开门时，他朝码头那边指了指：“哈桑总算找到了那袋胡椒的木签。书吏趁天亮把账办完，大家都能回家了。”一个抱饼经过的妇人认出萨米尔，问他是不是又带来一个饿肚子的旅人。“这位还想问开罗的路。”萨米尔说。妇人笑着从院门进去了。主人在里头问：“谁啊？”萨米尔侧过身，让你自己回答。
 
 ## ev.alexandria.welcome.gate.faith
 “我想问开罗的路。若方便，也想坐下吃饭。”
@@ -125,7 +125,7 @@ stamps:
 
 “你打的结？”阿里问。少年点头，手里的绳头已经湿透了。“昨晚扎得好好的，今天一装满就松。”
 
-阿里把袋子倒过来，让你看缝在袋口的两道皮边：“绳得从这里穿过去。光在外头绕，车一颠，整袋水都要喂给路上的土。”旁边赶驼的人催着出发，阿里叫他们再等一会儿，自己伸手去找干绳。
+阿里把袋子倒过来，让你看缝在袋口的两道皮边：“绳得从这里穿过去。光在外头绕，车一颠，整袋水都要喂给路上的土。”旁边赶驼的人催着出发，阿里叫他们再等一会儿，自己伸手去找干绳。徒弟把刚用过的那段递过去，阿里捏了捏，水顺着手腕流下来：“这根先晒着。箱里还有没有？”少年翻出两截短绳，赶驼人也下来看，问能不能接在一起。阿里让他把水袋先放在槽边，等结打牢再驮走；骆驼这会儿还没喝够呢。
 
 ## ev.alexandria.water_seller.choice.help
 

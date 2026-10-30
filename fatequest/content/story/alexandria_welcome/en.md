@@ -18,7 +18,7 @@ By the city gate, a porter sets a crate against the wall and shakes out his achi
 
 You ask where to find the road to Cairo. Samir thinks for a moment. "I know a house where travellers often get a meal. The host has been to Cairo. Ask him; he'll know more than I do. I'll take you after I deliver this crate."
 
-Someone is breaking bread inside the house. Its warm smell comes through the door. Samir slows down and knocks twice. "Who is it?" the host calls. Samir steps aside so that you can answer for yourself.
+Someone is breaking bread inside the house. Its warm smell comes through the door. Samir slows down and knocks twice. While they wait, he points back towards the quay. "Hasan finally found the tag for that pepper sack," he says. "The clerk sent everyone home before the light went." A woman passing with bread recognises Samir and asks if he is bringing another hungry traveller. "One who needs the Cairo road," he answers. She smiles and goes inside through the courtyard gate. "Who is it?" the host calls. Samir steps aside so that you can answer for yourself.
 
 ## ev.alexandria.welcome.gate.faith
 
@@ -104,7 +104,7 @@ Several camels crowd the water seller's shelter beyond the gate, stretching thei
 
 "Did you tie this?" Ali asks. The boy nods, holding the wet end of the rope. "It was tight last night. It came loose when we filled it."
 
-Ali turns the skin over and shows you two strips of leather stitched around the mouth. "The rope goes through these. Wrap it round the outside and a jolt of the cart will empty it." A camel driver calls that he is ready to leave. Ali asks him to wait and reaches for dry rope.
+Ali turns the skin over and shows you two strips of leather stitched around the mouth. "The rope goes through these. Wrap it round the outside and a jolt of the cart will empty it." A camel driver calls that he is ready to leave. Ali asks him to wait and reaches for dry rope. The apprentice offers the strip he has been using, but Ali squeezes it and water runs down his wrist. "Put that one in the sun. Is there another in the box?" The boy looks and finds two short pieces. The driver climbs down to see whether they can be joined. Ali asks him to leave the waterskin by the trough until the knot is sound; the animals are still drinking anyway.
 
 ## ev.alexandria.water_seller.choice.help
 

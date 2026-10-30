@@ -15,34 +15,27 @@ Cachanfu
 
 ## ev.cachanfu.entry.body
 
-When you leave the castle, and travel about 20 miles westward, you come to a river
-called CARAMORAN, so big that no bridge can be thrown across it; for it is of immense
-width and depth, and reaches to the Great Ocean that encircles the Universe,—I mean the
-whole earth. On this river there are many cities and walled towns, and many merchants
-too therein, for much traffic takes place upon the river, there being a great deal of
-ginger and a great deal of silk produced in the country. Game birds here are in
-wonderful abundance, insomuch that you may buy at least three pheasants for a Venice
-groat of silver.
+At the river landing, a boat worker is splicing a long hauling rope from strips of bamboo. His sister keeps the loose strips in order while he twists them. One strip snaps and she looks toward the ferry waiting to leave. ‘The old rope still has a crossing in it,’ he says. ‘We are making this one for the next load.’ You ask why they haul from the bank instead of rowing against the current. He points to the men pulling a heavy craft upstream. His sister says they have to walk where the bank is clear, and asks whether their brother has checked the stretch beyond the bend. He has; there is enough room to pull without catching the rope on a tree root. A trader with sacks of ginger comes to ask when his goods can cross. The worker tells him to wait for the ferryman’s signal. His sister offers to show you the landing and market tomorrow, when she will be delivering the finished rope. If you are leaving today, she gives you the lane that goes from the quay through town.
 
 ## ev.cachanfu.entry.choice.look
 
-Rest and ask what men say of this place
+Stay a day to know the ferry and market
 
 ## ev.cachanfu.entry.choice.pass
 
-Pass through without stopping
+Cross the town today
 
 ## ev.cachanfu.entry.title
 
-Concerning the Great River Caramoran and the City of Cachanfu
+The Ferry Rope at the River
 
 ## ev.ev_cachanfu_entry.choice_1_result
 
-You pass through without stopping. You set the way to Cachanfu on your map.
+The sister points out the lane through town while her brother finishes a sound knot in the bamboo rope. The ginger trader waits for the ferryman rather than stepping onto a full boat. You follow the lane and remember where the river landing lies.
 
 ## ev.ev_cachanfu_entry.choice_2_result
 
-You rest and ask what men say of this place. The road to Cachanfu opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+You stay another day. The sister takes the finished rope to the river and introduces you to the ferryman, who shows where people wait while cargo is loaded. She then walks you past the ginger stalls and back through the town gate.
 
 ## ev.ev_gap_cachanfu.title
 
@@ -50,20 +43,44 @@ Two Boards at the Ferry
 
 ## ev.ev_gap_cachanfu.body
 
-Two wooden boards hang at the riverside ferry: one records the depth, the other the wind. Having replaced a rope, the ferryman wants to recut the old marks. Which should he record first? A mistaken reading when the water rises could be dangerous. He hangs the boards high enough to see from the bank during a flood.
+At the ferry landing, a ferryman has taken down two weathered boards. One records the river level; the other marks the wind that makes the crossing rough. His nephew wants to paint them both at once, but the old writing is almost gone. ‘Ask the people who use them what they need to see first,’ the ferryman tells him. A woman carrying a basket says she watches the water mark before bringing her mule to the bank. A boat worker says the wind board matters when his craft is empty and catches the gusts. The boy asks you to hold a board upright so he can see how high it will hang. You notice that the lower hook is still within reach of floodwater. He moves the hook up a handspan and asks his uncle whether people can still read it. The ferryman checks from the path used by travellers and nods. He knows the road toward Sindafu and can draw its turn for you after the boards are hung.
 
 ## ev.ev_gap_cachanfu.choice.route
 
-Ask the way to Kenjanfu
+Ask about the road toward Sindafu
 
 ## ev.ev_gap_cachanfu.choice.route_result
 
-“Take the main road southwest to Kenjanfu.”
+The ferryman draws the turn toward Sindafu on your route board, then asks his nephew to read it back while he holds the water marker. The boy has not lost the new hook position. You leave with directions and a clear view of both signs.
 
 ## ev.ev_gap_cachanfu.choice.scene
 
-Ask about the water level
+Help them set the boards above floodwater
 
 ## ev.ev_gap_cachanfu.choice.scene_result
 
-He points to a muddy mark on the bank. “When the water falls to that line, the shoal emerges. Stay on the bank instead of cutting across.”
+You hold each board while the nephew fixes its higher hook. The woman with the mule checks it from the path, and the boat worker confirms he can read the wind mark from the water. The ferryman thanks you when the two boards are secure.
+
+## ev.cachanfu.rope.title
+
+The Boat Worker’s Short Rope
+
+## ev.cachanfu.rope.body
+
+A family is repairing a tow rope in a yard above the river. The eldest daughter has measured a new section, but her younger brother cut it before allowing for the knot. ‘Now it will be too short,’ she says. He wants to hide the mistake beneath the coil. Their father asks him to stretch the rope along the wall and look at it properly. You hold one end while he does. The missing length is small, but enough to matter when the boat turns at the bank. The father brings out a spare strip and shows the boy how to splice it in without making a thick lump. The daughter tests the joint with both hands. ‘Will it pass through the guide ring?’ she asks. Their father takes them to the empty boat to try. It catches once, so the boy patiently trims the loose fibres. The family invites you to help finish the repair now, or come back tomorrow when they will test the rope against the river current.
+
+## ev.cachanfu.rope.choice.splice
+
+Help finish the rope repair
+
+## ev.cachanfu.rope.result.splice
+
+You hold the rope taut while the boy tightens the final splice. The daughter pulls it through the guide ring without a snag. Their father tells the boat owner that you helped them save the day’s work, and the family thanks you before carrying the coil inside.
+
+## ev.cachanfu.rope.choice.learn
+
+Return for a day of river testing
+
+## ev.cachanfu.rope.result.learn
+
+You return the next day. The family lets you feel how the tow rope tightens when the current catches the boat. The daughter names each place along the bank where the pullers change their footing, and her brother checks his repaired joint after every turn. You leave with a better sense of the river’s force.

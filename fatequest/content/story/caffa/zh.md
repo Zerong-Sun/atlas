@@ -11,7 +11,7 @@ stamps:
   city.caffa.name: 04d2ee455e2b
   ev.caffa.entry.choice.pass: c242e7ca08d5
   ev.caffa.entry.choice.rest: 50370589ac64
-  ev.caffa.entry.body: 7a152e3ae3e1
+  ev.caffa.entry.body: 5aba35c26de0
   ev.caffa.entry.title: 6ab61c335bf4
   ev.ev_caffa_entry.choice_1_result: ea60c3fec478
   ev.ev_caffa_entry.choice_2_result: a6d5d171defa
@@ -48,6 +48,8 @@ stamps:
 “还有八个。”萨达告诉他。阿尔斯兰问早上有几个。萨达先看了看你，才说十个。阿尔斯兰把一个苹果掰成两半，分给她一块，说这块算一个还是算两个，随她高兴。
 
 他们从海岸外的草地上过来。阿尔斯兰知道车队重新上路前常在哪里聚着，也指给你看房屋和海水之间的小路。你若要歇脚，他愿意让你在棚下待着。
+
+萨达问马是不是在看见海之前就闻到了。阿尔斯兰说，它走到岔路就一个劲往岸边拐。“它闻到的是水槽吧。”萨达指着他刚打满的桶。一位住在近旁棚子里的妇人喊话，说自家的车明早也要跟车队走。阿尔斯兰问她还能不能带一个旅人；妇人说等车夫回来会替你问。萨达看着你，想知道你要不要留下等答复。
 
 ## ev.caffa.entry.title
 

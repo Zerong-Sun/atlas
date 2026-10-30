@@ -2,7 +2,7 @@
 unit: samarcanda
 lang: zh
 source: en
-source_rev: 16537099fe6d
+source_rev: 7488486118e6
 status: translated
 translator: 人工校译
 notes: >
@@ -11,103 +11,109 @@ notes: >
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.samarcanda.bluetile.result.listen: 9750d8617961
+  ev.samarcanda.bluetile.choice.listen: 10ac70b8d3f3
+  ev.samarcanda.bluetile.result.set: 3e296f89ef81
+  ev.samarcanda.bluetile.choice.set: a0604dfe4353
+  ev.samarcanda.bluetile.body: b1e9ed7ac786
+  ev.samarcanda.bluetile.title: 2c7cbb379583
   city.samarcanda.name: 8d853391574f
-  ev.samarcanda.a.choice.dome: ec3475b118bd
-  ev.samarcanda.a.choice.gardens: ac3024872928
-  ev.samarcanda.a.choice.madrasa: 27777b545939
-  ev.samarcanda.b.choice.learn: f2da89169808
-  ev.samarcanda.b.choice.manuscript: c91e70c23fa1
-  ev.samarcanda.b.choice.paper: 610e7b267dc5
-  ev.samarcanda.c.choice.pray: d649686e610e
-  ev.samarcanda.c.choice.touch: fcda69975159
-  ev.samarcanda.c.choice.watch_pilgrims: f55ad6b74909
-  ev.samarcanda.entry.choice.customs: 5f67b1abbf38
-  ev.samarcanda.entry.choice.lore: 5800603dbcaf
-  ev.samarcanda.entry.choice.market: b23d98ceae5c
-  ev.samarcanda.a.body: f2bab52946bb
-  ev.samarcanda.a.title: c2d7022a95ea
-  ev.samarcanda.b.body: 45f1f4c6cf18
-  ev.samarcanda.b.title: c30e16c8f628
-  ev.samarcanda.c.body: 8349db21e906
-  ev.samarcanda.c.title: cb8401993af6
-  ev.samarcanda.entry.body: c6deec0502d7
-  ev.samarcanda.entry.title: 549d9a825266
-  ev.ev_samarcanda_entry.choice_1_result: 4a878f84ec7c
-  ev.ev_samarcanda_entry.choice_2_result: 659438c67ece
-  ev.ev_samarcanda_entry.choice_3_result: 71726d23c373
-  ev.ev_samarcanda_a.choice_1_result: 3d547f2781d6
-  ev.ev_samarcanda_a.choice_2_result: e02d40008129
-  ev.ev_samarcanda_a.choice_3_result: 56167f1b65dd
-  ev.ev_samarcanda_b.choice_1_result: 59d87004f05b
-  ev.ev_samarcanda_b.choice_2_result: 61e4dc34720b
-  ev.ev_samarcanda_b.choice_3_result: 16b3209603ca
-  ev.ev_samarcanda_c.choice_1_result: bd81ddeab87b
-  ev.ev_samarcanda_c.choice_2_result: 9214c8142030
-  ev.ev_samarcanda_c.choice_3_result: a5cc20025e64
-  ev.ev_samarcanda_consequence_a.title: e9e72b928a44
-  ev.ev_samarcanda_consequence_a.body: 0f55c0754367
-  ev.ev_samarcanda_consequence_a.choice_1: bbdfdb4e3b01
-  ev.ev_samarcanda_consequence_a.choice_1_result: 1a1598ed1965
-  ev.ev_samarcanda_consequence_a.choice_2: 6f704c0825af
-  ev.ev_samarcanda_consequence_a.choice_2_result: 696abc33d201
-  ev.ev_samarcanda_consequence_a_resolution.title: 4446b7806646
-  ev.ev_samarcanda_consequence_a_resolution.body: bfad8cd28581
-  ev.ev_samarcanda_consequence_a_resolution.choice_1: b9f059d26917
-  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: dac99cfbb6f5
-  ev.ev_samarcanda_consequence_a_resolution.choice_2: 8ed7d605a371
-  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: d0e1306cfcc6
-  ev.ev_samarcanda_consequence_b.title: 3e1c3889cb14
-  ev.ev_samarcanda_consequence_b.body: aa54caa3b08b
-  ev.ev_samarcanda_consequence_b.choice_1: 06c9a396bbbb
-  ev.ev_samarcanda_consequence_b.choice_1_result: 82bd0b4d35c6
-  ev.ev_samarcanda_consequence_b.choice_2: bcba0c66a191
-  ev.ev_samarcanda_consequence_b.choice_2_result: 41e3d4882c3a
-  ev.ev_samarcanda_consequence_b_resolution.title: 4ff492e6d9e9
-  ev.ev_samarcanda_consequence_b_resolution.body: bd9dfd526eb0
-  ev.ev_samarcanda_consequence_b_resolution.choice_1: 1d1ba8ea280e
-  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: d57d5731e11d
-  ev.ev_samarcanda_consequence_b_resolution.choice_2: 288f55f7065a
-  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: e07065af3c84
-  ev.samarcanda.mentor_closure.title: f58da55750f6
-  ev.samarcanda.mentor_closure.body: 5b4e9d1962af
-  ev.samarcanda.mentor_closure.choice_1: da8d611ab3c7
-  ev.samarcanda.mentor_closure.choice_1_result: 87dacd9c34cf
-  ev.samarcanda.mentor_closure.choice_2: 59a447ce21bf
-  ev.samarcanda.mentor_closure.choice_2_result: 3b58f30a1e8d
-  ev.samarcanda.mentor_closure.choice_3: 630a8fcfe069
-  ev.samarcanda.mentor_closure.choice_3_result: 3273f4078083
-  ev.ev_samarcanda_a_followup.title: abec22872467
-  ev.ev_samarcanda_a_followup.body: ff57397e7c92
-  ev.ev_samarcanda_a_followup.choice_1: e2a00c5b0c6d
-  ev.ev_samarcanda_a_followup.choice_1_result: 0b13dfa9dd0c
-  ev.ev_samarcanda_a_followup.choice_2: 880b0569d37e
-  ev.ev_samarcanda_a_followup.choice_2_result: 19ab1e090d2d
-  ev.ev_samarcanda_a_followup.choice_3: 5ccc5a838207
-  ev.ev_samarcanda_a_followup.choice_3_result: 2b89b736d838
-  ev.ev_samarcanda_b_followup.title: cf0ae42e5976
-  ev.ev_samarcanda_b_followup.body: ccbb75162dac
-  ev.ev_samarcanda_b_followup.choice_1: e28425df2d3d
-  ev.ev_samarcanda_b_followup.choice_1_result: ff1f502a05a1
-  ev.ev_samarcanda_b_followup.choice_2: 10e2a2752f98
-  ev.ev_samarcanda_b_followup.choice_2_result: bdcedc7cb144
-  ev.ev_samarcanda_b_followup.choice_3: e925f5d9e5a2
-  ev.ev_samarcanda_b_followup.choice_3_result: 998dba32a072
-  ev.ev_samarcanda_c_followup.title: c71f5d891007
-  ev.ev_samarcanda_c_followup.body: fbb0f33023af
-  ev.ev_samarcanda_c_followup.choice_1: 49e861d987ad
-  ev.ev_samarcanda_c_followup.choice_1_result: f2a412058fc0
-  ev.ev_samarcanda_c_followup.choice_2: beaa0bb2b2c8
-  ev.ev_samarcanda_c_followup.choice_2_result: aff13315b9db
-  ev.ev_samarcanda_c_followup.choice_3: 3e09d3d23956
-  ev.ev_samarcanda_c_followup.choice_3_result: 2fa7ff009828
-  ev.ev_samarcanda_mentor_followup.title: 9c0bd2335ed8
-  ev.ev_samarcanda_mentor_followup.body: 524dcd18a566
-  ev.ev_samarcanda_mentor_followup.choice_1: 6528d2af166a
-  ev.ev_samarcanda_mentor_followup.choice_1_result: 45ba97ab219c
-  ev.ev_samarcanda_mentor_followup.choice_2: 39e75a46b79c
-  ev.ev_samarcanda_mentor_followup.choice_2_result: bf6935770552
-  ev.ev_samarcanda_mentor_followup.choice_3: 1a800e2203a1
-  ev.ev_samarcanda_mentor_followup.choice_3_result: c9a9f00ae279
+  ev.samarcanda.a.choice.dome: a268713f97d2
+  ev.samarcanda.a.choice.gardens: 584918599256
+  ev.samarcanda.a.choice.madrasa: fee1ba022432
+  ev.samarcanda.b.choice.learn: 7abf286873c8
+  ev.samarcanda.b.choice.manuscript: eab3511f5e66
+  ev.samarcanda.b.choice.paper: 7e64dc64ccce
+  ev.samarcanda.c.choice.pray: 57cc43463fd7
+  ev.samarcanda.c.choice.touch: 48f5c1a8dd1d
+  ev.samarcanda.c.choice.watch_pilgrims: a64d760d2928
+  ev.samarcanda.entry.choice.customs: deae2f675d79
+  ev.samarcanda.entry.choice.lore: 5ebf6b361d88
+  ev.samarcanda.entry.choice.market: 6b1292ea5456
+  ev.samarcanda.a.body: 9c2748f64ddb
+  ev.samarcanda.a.title: d73330bf1960
+  ev.samarcanda.b.body: b641ded26c95
+  ev.samarcanda.b.title: d5c2da983120
+  ev.samarcanda.c.body: cb57787c7568
+  ev.samarcanda.c.title: 72b1f546fb5b
+  ev.samarcanda.entry.body: f6fe9d97d48f
+  ev.samarcanda.entry.title: 19997d27ca09
+  ev.ev_samarcanda_entry.choice_1_result: 799fb8aa8fd3
+  ev.ev_samarcanda_entry.choice_2_result: 0da69d7ec54a
+  ev.ev_samarcanda_entry.choice_3_result: 77dcda51e043
+  ev.ev_samarcanda_a.choice_1_result: 06aec6a2e089
+  ev.ev_samarcanda_a.choice_2_result: f052f1a7c7b1
+  ev.ev_samarcanda_a.choice_3_result: 909f4bb8b979
+  ev.ev_samarcanda_b.choice_1_result: 24d38736cd36
+  ev.ev_samarcanda_b.choice_2_result: 3265db620bdf
+  ev.ev_samarcanda_b.choice_3_result: d0907ebab101
+  ev.ev_samarcanda_c.choice_1_result: 481f70293d2a
+  ev.ev_samarcanda_c.choice_2_result: c98c11ce7efd
+  ev.ev_samarcanda_c.choice_3_result: e7e89d74bd81
+  ev.ev_samarcanda_consequence_a.title: 0f6a6f396d43
+  ev.ev_samarcanda_consequence_a.body: 4f3464afd17b
+  ev.ev_samarcanda_consequence_a.choice_1: 151f4045b84a
+  ev.ev_samarcanda_consequence_a.choice_1_result: 947fc98e0986
+  ev.ev_samarcanda_consequence_a.choice_2: 03cd6a87f479
+  ev.ev_samarcanda_consequence_a.choice_2_result: 1ec6863cfcbb
+  ev.ev_samarcanda_consequence_a_resolution.title: f63bf9569fab
+  ev.ev_samarcanda_consequence_a_resolution.body: 724fd1c3c136
+  ev.ev_samarcanda_consequence_a_resolution.choice_1: 46bd037adfb4
+  ev.ev_samarcanda_consequence_a_resolution.choice_1_result: 0e714318097a
+  ev.ev_samarcanda_consequence_a_resolution.choice_2: 899ab561c4b6
+  ev.ev_samarcanda_consequence_a_resolution.choice_2_result: df96e748eeec
+  ev.ev_samarcanda_consequence_b.title: 72920ecab316
+  ev.ev_samarcanda_consequence_b.body: 1f53837dc751
+  ev.ev_samarcanda_consequence_b.choice_1: eb17f0471a00
+  ev.ev_samarcanda_consequence_b.choice_1_result: a4f84d7e505c
+  ev.ev_samarcanda_consequence_b.choice_2: b1eab0b657b8
+  ev.ev_samarcanda_consequence_b.choice_2_result: 5f9cf39ad82e
+  ev.ev_samarcanda_consequence_b_resolution.title: 1605003d1a9a
+  ev.ev_samarcanda_consequence_b_resolution.body: a5243e4ac9f9
+  ev.ev_samarcanda_consequence_b_resolution.choice_1: 7b29263684cb
+  ev.ev_samarcanda_consequence_b_resolution.choice_1_result: 630bd6720e6a
+  ev.ev_samarcanda_consequence_b_resolution.choice_2: 3d2f48f67c0a
+  ev.ev_samarcanda_consequence_b_resolution.choice_2_result: cbbfe996c4fd
+  ev.samarcanda.mentor_closure.title: 4d0c6afb596f
+  ev.samarcanda.mentor_closure.body: 788bd0a175cc
+  ev.samarcanda.mentor_closure.choice_1: b3e29c06df1c
+  ev.samarcanda.mentor_closure.choice_1_result: 29b90b8d4642
+  ev.samarcanda.mentor_closure.choice_2: bb8925d706e8
+  ev.samarcanda.mentor_closure.choice_2_result: 11546c66b7ab
+  ev.samarcanda.mentor_closure.choice_3: 761545ffd999
+  ev.samarcanda.mentor_closure.choice_3_result: c503359adb53
+  ev.ev_samarcanda_a_followup.title: 3c8ab194ba2b
+  ev.ev_samarcanda_a_followup.body: 0452af64277a
+  ev.ev_samarcanda_a_followup.choice_1: 042be53b9490
+  ev.ev_samarcanda_a_followup.choice_1_result: 0bfbcea43975
+  ev.ev_samarcanda_a_followup.choice_2: 043aaf6418ba
+  ev.ev_samarcanda_a_followup.choice_2_result: 800d75f0b0c6
+  ev.ev_samarcanda_a_followup.choice_3: 98ee36e7cfff
+  ev.ev_samarcanda_a_followup.choice_3_result: 0328bbd9fb60
+  ev.ev_samarcanda_b_followup.title: d187cece314a
+  ev.ev_samarcanda_b_followup.body: b6384e24d215
+  ev.ev_samarcanda_b_followup.choice_1: 2110a438f7b0
+  ev.ev_samarcanda_b_followup.choice_1_result: 2a9120abe9f6
+  ev.ev_samarcanda_b_followup.choice_2: a7da3b0613d4
+  ev.ev_samarcanda_b_followup.choice_2_result: b585c64a9f21
+  ev.ev_samarcanda_b_followup.choice_3: e9d172ba29d5
+  ev.ev_samarcanda_b_followup.choice_3_result: 37d57b63888d
+  ev.ev_samarcanda_c_followup.title: 1cd17391bdf8
+  ev.ev_samarcanda_c_followup.body: 8990ee98b81b
+  ev.ev_samarcanda_c_followup.choice_1: cb1974d05a92
+  ev.ev_samarcanda_c_followup.choice_1_result: 481744e62ffe
+  ev.ev_samarcanda_c_followup.choice_2: a0bbe76e6751
+  ev.ev_samarcanda_c_followup.choice_2_result: 886766880645
+  ev.ev_samarcanda_c_followup.choice_3: 257a54910777
+  ev.ev_samarcanda_c_followup.choice_3_result: d52263ca5ea9
+  ev.ev_samarcanda_mentor_followup.title: 5e38a487bf4d
+  ev.ev_samarcanda_mentor_followup.body: 82b1910e8291
+  ev.ev_samarcanda_mentor_followup.choice_1: 35bc46a33265
+  ev.ev_samarcanda_mentor_followup.choice_1_result: 5a1f5993cb9d
+  ev.ev_samarcanda_mentor_followup.choice_2: 2c6fcc4b4734
+  ev.ev_samarcanda_mentor_followup.choice_2_result: f26415199c0f
+  ev.ev_samarcanda_mentor_followup.choice_3: 2c07c4359936
+  ev.ev_samarcanda_mentor_followup.choice_3_result: e17f84ea48dc
 ---
 
 ## city.samarcanda.name
@@ -116,388 +122,464 @@ stamps:
 
 ## ev.samarcanda.a.choice.dome
 
-去看古尔-埃米尔的绿松石穹顶
+到廊下看蓝瓦小圆顶
 
 ## ev.samarcanda.a.choice.gardens
 
-沿着水渠走走，找学者聊几句
+跟园丁沿水渠走一段
 
 ## ev.samarcanda.a.choice.madrasa
 
-去列吉斯坦看看经学院
+花两天听哈米德讲课
 
 ## ev.samarcanda.b.choice.learn
 
-看造纸匠的工艺
+花一天看优素福造纸
 
 ## ev.samarcanda.b.choice.manuscript
 
-买一本书法家手抄的彩绘经卷
+花 10 银买那本彩饰手稿
 
 ## ev.samarcanda.b.choice.paper
 
-买一叠撒马尔罕纸
+花 100 银买下一整包纸货
 
 ## ev.samarcanda.c.choice.pray
 
-在大清真寺为前路祈祷
+留下参加晚祷
 
 ## ev.samarcanda.c.choice.touch
 
-用额头碰一碰那块据说会流泪的石头
+摸摸石头，听这一家讲旧事
 
 ## ev.samarcanda.c.choice.watch_pilgrims
 
-问毛拉这块石头上次什么时候“流泪”
+问拉希德母亲旧笔记里的日期
 
 ## ev.samarcanda.entry.choice.customs
 
-去税卡登记货物
+花两天跟希琳核货登记
 
 ## ev.samarcanda.entry.choice.lore
 
-打听这座城的来历
+留一天听街坊讲城里的事
 
 ## ev.samarcanda.entry.choice.market
 
-逛逛大集市
+花 135 银买整包玉石商货
 
 ## ev.samarcanda.a.body
 
-撒马尔罕的绿松石穹顶在阳光下亮得晃眼。你抬头看时，一位学者从廊下走来，问你：“是来看穹顶，还是想进经学院听一课？”他指给你看广场边的经学院，又说沿水渠走一段，附近还有安静的花园。
+撒马尔罕一条水渠旁，教师哈米德等侄女把书带来。孩子膝盖以下全湿，说路上帮园丁把落进渠里的树枝往外拉。哈米德先问书湿了没有，她解开包布给他看。蓝瓦廊下的学生愿意先念下一段，让她晾干鞋。
 
-廊下的学生弹着弦，唱一段问答诗： “穹顶借来天的蓝，水渠引下山上的雪。 学者拨弦唱道：问星要记时，问路要看水，翻过一页书，笔尖就能走向远方。” 学者望向穹顶：“诗里把天文课、蓝色屋顶和城外水渠放在一处。读书人看星象，也会查水从哪来、商路往哪走。”
+你问他们学什么。哈米德说，大家在拿日影与旅人的说法对照，算一天能走多少路。侄女说园丁比书上更清楚水渠拐弯处，哈米德便邀他一起讲。园丁说：“先把树枝从岸上搬开，行吗？”女孩已经卷起袖子。
+
+廊后有一间覆着蓝瓦小圆顶的屋子，沿渠再走便到一处园地。哈米德的课要讲两天；树枝搬好，园丁也愿意带来客看看水往哪里流。
 
 ## ev.samarcanda.a.title
 
-撒马尔罕的蓝色穹顶
+水渠旁的一堂课
 
 ## ev.samarcanda.b.body
 
-撒马尔罕的纸坊里，匠人把刚压好的纸贴到磨石上，一遍遍打磨。“别急着碰，等它干透。”他说这纸不容易洇墨，书院和商人都爱买。书法家正好带来一本彩饰手稿，你可以看他写字、买纸，或挑一册手稿带走。
+造纸院里，优素福正压一张新纸，女儿玛丽亚姆数晾干的纸页。书写匠带来一本有彩饰的书，说要先替妹妹誊完家信，再把书装订。玛丽亚姆说妹妹等回信，怕是比买书的人着急。优素福听了，抽出一张干净纸给她。
 
-纸匠把纸浆滤上竹帘，徒弟合着动作唱：“布泡软，槌成絮；浆入水，帘轻举；压出水，晾成页；磨得匀，墨落住。”纸匠对你说：“先把纤维打散、兑水，再用帘子捞出薄层；压去水分，晾干后磨平，墨落上去才稳。”他把半干的纸递到你手边：“摸摸这张，看看厚薄匀不匀。”
+你问纸为何这么平滑。优素福拿石头给你看纸干后怎样磨。玛丽亚姆拦住他碰另一张，边角还潮着：“那张留给写信。”书写匠问她准备说些什么。她说要告诉妹妹，新学徒总把凉鞋搁在晾纸院。孩子在旁听见，忙去挪鞋。
+
+优素福有一整包纸货，开价 100 银。书写匠另有一本装订好的彩饰手稿，卖 10 银。玛丽亚姆问你想不想先看看他们怎么造纸，待会儿她再落笔写信。
 
 ## ev.samarcanda.b.title
 
-纸坊
+造纸院里的家书
 
 ## ev.samarcanda.c.body
 
-撒马尔罕的清真寺里有人说那块石头会在灾祸前凝出水珠。毛拉说：“旧册上记了几次‘流泪’的年份，你自己看看，是否都赶上了灾年。”他没有断言这是预兆，只问你想怎么做。你可以祈祷、摸一摸石头，或问他最近一次是什么时候。
+清真寺院里，照料庭院的拉希德正擦墙边一块深色石头上的雨水。女儿想留一滴给祖母看。“她下过那么多场雨都见过。”父亲说。孩子答：“她还是会问这块石头有没有接到水。”拉希德便留下一小块湿痕，等老人来。
+
+你问人们为何总看它。拉希德说邻居讲过不少石头的旧事，有人记得某些多雨年份，也有人路过时在这里说家里的消息。母亲带着折好的布来了，孩子忙指给她看那滴水。老人摸摸石头，转而问儿子屋顶漏处补好没。“这件我能答。”拉希德指着新抹的灰泥。
+
+一家人准备参加晚祷。拉希德收着一本旧笔记，记雨天和修屋的日期；母亲却记得其中一年的雨下得不一样。他们在长凳上给你腾出地方。
 
 ## ev.samarcanda.c.title
 
-会流泪的石头
+雨后的石头
 
 ## ev.samarcanda.entry.body
 
-撒马尔罕的基督徒和穆斯林围在教堂门口，一边要把石柱取回清真寺，一边说柱子一动，整座教堂都要塌。海都给了他们三天时间解决。一个教堂管事认出你是旅人，急着请你替他作证；旁边的石匠却说：“先别替谁说话，来看看这根柱子到底怎么立的。”你能听到双方各自的理由，也可以先去找海都的书记问清期限。
+撒马尔罕城门边，书记希琳在理旅人的货单，弟弟抱着一卷纸，要送去父亲的铺子。孩子问能不能留一张给家里写信。希琳说父亲早替他留了，只要他别把货送错门。弟弟指着巷子尽头的蓝瓦屋顶，说自己认得路。
+
+你问货物在哪儿登记。希琳指向桌子：排队核完要两天。弟弟说市里有一家人熟悉不同的街坊，也爱讲上一辈的城里旧事。“你自己去问，”希琳说，“他讲路时总漏掉走错桥那段。”孩子忙说只错过一回。
+
+旁边商人拆开一整包玉石商货，开价 135 银。希琳先记下卖家的名字，又转向你；弟弟终于抱好纸卷，等人替他在图上指出那座桥。
 
 ## ev.samarcanda.entry.title
 
-撒马尔罕大城
+撒马尔罕门边的书记
 
 ## ev.ev_samarcanda_entry.choice_1_result
 
-你在撒马尔罕的税关报明货物。书办看到你从蓝顶书院来，便朝一旁的学生招手：“正好，你带这位旅人去见见学者。”
+你花两天把货物与账页逐项对齐。希琳登记时指给你看几条市巷；队尾一位学生说，他认得会讲旧街名的人。
 
 ## ev.ev_samarcanda_entry.choice_2_result
 
-你向学者和商队打听消息。谈到书院时，几个人都抢着补充；谈起商队，他们却各有各的说法。傍晚，一个学生拦住你：“听说你在打听路？我知道哪几支队伍肯带新人。”
+你花一天听街坊讲故事，也陪希琳弟弟找到那座桥。父亲给了孩子答应留的纸，你把一家人说的城中见闻记下。后来一位造纸人来问你听到了什么。
 
 ## ev.ev_samarcanda_entry.choice_3_result
 
-纸商把两张纸迎光举起：“这张纤维匀，写账不洇墨；那张便宜，包染料倒合适。”隔壁染匠立刻问起价钱。你在撒马尔罕的大集市花了一天，记下纸张、染料和货价。
+你付 135 银买下整包玉石商货。希琳把买卖双方记在货签旁，商人替你绑好上路的包绳。你也把市里的见闻写进笔记。
 
 ## ev.ev_samarcanda_a.choice_1_result
 
-你走过列基斯坦广场三座宏伟的神学院之间，一个穿着灰旧长袍的瘦削男子从柱廊下走出，与你并肩：“我在这儿等了好一阵，总算有人肯问点正经问题了。”
+你跟哈米德和学生们过了两天。侄女把园丁讲的渠路带进课里，大家拿实地的说法对照旅人的笔记。你学到新的核路办法，哈米德约你下次再来。
 
 ## ev.ev_samarcanda_a.choice_2_result
 
-你站在青绿色穹顶下，抬头望去，整座陵墓都映在蓝色琉璃砖的光里。
+你在小圆顶下看阳光慢慢移过蓝瓦。哈米德侄女讲起一场冬季风雨后，谁来修过这片屋顶。你记住了这间屋子和修瓦的人。
 
 ## ev.ev_samarcanda_a.choice_3_result
 
-你沿夹岸的沟渠街道而行，与学者们互相致意。在撒马尔罕，每三人中便有一人是教书先生，你的名字如今已被人称许。
+你跟园丁搬开树枝，沿渠走到他的园地。他把轮流取水的邻居介绍给你。你按名字向大家打招呼，他们也亲热地应了。
 
 ## ev.ev_samarcanda_b.choice_1_result
 
-你买下一札撒马尔罕纸，纸质细腻，落墨不洇。它卷进你的货物，造纸人的手艺就此随你同行。
+你付 100 银买下整包纸货。优素福和玛丽亚姆查过纸边是否干透，替你绑好。玛丽亚姆仍留了一张单独的纸给妹妹写信。
 
 ## ev.ev_samarcanda_b.choice_2_result
 
-你看着造纸匠捶打麻布、把纸面磨得如波纹绸般发亮。店里的师傅看着你看得入神，终于抽出一张并非出自他纸浆槽的纸来。
+你花一天看优素福压纸、晾纸、磨纸。学徒终于记得把鞋放到院外。优素福约你再来，看玛丽亚姆怎样写完给妹妹的信。
 
 ## ev.ev_samarcanda_b.choice_3_result
 
-你花一千银，从一位书法家手中买下一卷插金绘彩的手稿。金箔与墨迹订在木版之间，纸面在灯下泛着细光。
+你付 10 银买下装订好的手稿。书写匠指给你看其中一页边饰是妹妹画的，再替你包好防尘。你谢过这一家，把书稳妥收进包里。
 
 ## ev.ev_samarcanda_c.choice_1_result
 
-你把额头抵在那块泣石上，感受它的寒意贴上皮肤。圣祠接纳了你的虔诚，那一分眷顾轻轻落在你身上。
+你摸了摸雨后微凉的石头，听拉希德母亲讲她记得的那年雨季。女儿又追问一句，你也留下来听。
 
 ## ev.ev_samarcanda_c.choice_2_result
 
-你在清真寺中为前路祈祷。庭院的寂静回应了你，圣祠的眷顾随你走进日光之中。
+你和这一家人一起参加晚祷。拉希德女儿把自己的布叠在祖母身边。离开院子时，他们祝你一路平安。
 
 ## ev.ev_samarcanda_c.choice_3_result
 
-你问毛拉们，那块黑石上一次流泪是什么时候。最年轻的先开了口，最年长的把他止住；但问题已经问出，而这里恰好有一个一直记着次数的人。
+拉希德母亲念出笔记上一行日期，又说了其中哪些是她亲眼见过的。孙女想接着看下一页，拉希德便约你下次来再听。
 
 ## ev.ev_samarcanda_consequence_a.title
 
-撒马尔罕：书院引荐
+希琳账页上的住址
 
 ## ev.ev_samarcanda_consequence_a.body
 
-书院里的学生把你领到一位学者门前：“他肯见外地人，但最好先报我的名字。”他愿意替你写封引荐，也问你这趟想打听什么。这位撒马尔罕学者肯见外地人。
+城门边等候的学生追到巷里，告诉你他叫纳迪尔。他替人送一张便条给老教师；水渠改道后，有些街名换了，纸上的住址又写得淡。“希琳说你刚抄过市里的路，”他问，“能帮我看看这座桥是哪一座吗？”
+
+你问他为何不直接去找教师。纳迪尔说已经跑错过一家，主人请他喝了茶，却根本不认得那位先生。他妹妹在家等着，盼他把教师答应借的书带回去。纳迪尔给你看名字，承认有一个字母是自己抄错的。
+
+邻居出门抖席子。纳迪尔问她还记不记得旧桥名，她说记得，但得先看看便条，才敢叫你们往城那头走。纳迪尔举起纸，等她辨认。
 
 ## ev.ev_samarcanda_consequence_a.choice_1
 
-收下这个名字，追问这位学生谁能作保
+陪纳迪尔核旧桥名
 
 ## ev.ev_samarcanda_consequence_a.choice_1_result
 
-“这个名字能让学者愿意见我吗？”你问。学生报出书院里两位先生：“你提他们的名字就行，他们知道我是谁。”
+你陪纳迪尔请邻居读淡掉的住址。她指出该走的桥，纳迪尔请你同行，好当面核清教师的名字。
 
 ## ev.ev_samarcanda_consequence_a.choice_2
 
-谢过这位学生，暂时不说自己的打算
+让纳迪尔自己去送便条
 
 ## ev.ev_samarcanda_consequence_a.choice_2_result
 
-你谢过学生，暂时没说自己的打算。他也不追问，只说：“想好要问什么，再来书院找我。”你在撒马尔罕暂且不再追问。
+你谢过邻居，把便条还给纳迪尔。他连念两遍改正后的桥名，沿她指的巷路赶回去。
 
 ## ev.ev_samarcanda_consequence_a_resolution.title
 
-撒马尔罕：学者的引荐信
+老教师的门
 
 ## ev.ev_samarcanda_consequence_a_resolution.body
 
-学生替你写了引荐信。学者是否有空还说不准，不过你去敲门时，至少有人知道你不是来闹事的。
+纳迪尔还没敲完门，老教师就打开了。他妹妹先一步到了，正坐在桌边翻那本答应借的书。女孩说自己按母亲常用的旧桥名找到的。纳迪尔给她看褪色的便条，问为何没告诉他桥有两个名字。“你早饭都没吃就跑了。”妹妹说。
+
+你问绕渠的路还能否走。教师摊开一张小街图，写上最近修路的日期。纳迪尔妹妹又补了一条今早走过的小径，教师让她自己标进去，再请纳迪尔把新路线念一遍，免得下回又找错门。
+
+这一家人愿你现在就带走改好的图。若再留一天，教师也能陪你把旧街名和新叫法一同抄进本子。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1
 
-在天黑前把这本书送到学者手中
+今天带走核好的街图
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1_result
 
-你在天黑前把书送到学者手里。学生也兑现了承诺，替你向书院的人作了引荐。
+你收下改好的街图。纳迪尔和妹妹最后核了一遍桥名，教师谢你帮着把便条送到对的门口。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2
 
-答应替学者问一问
+留一天誊写旧街名和新叫法
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2_result
 
-“好，我帮你问问。”你答应下来。学者点头：“那我等你的消息。”
+你花一天抄教师记的街名。早饭后，纳迪尔妹妹还陪你走了一遍，指出那条小径。你的本子里留下新旧两种走法。
 
 ## ev.ev_samarcanda_consequence_b.title
 
-撒马尔罕：商队口碑
+造纸人的两张单子
 
 ## ev.ev_samarcanda_consequence_b.body
 
-纸坊的匠人把账本推到你面前：“有几支商队按时付账，也肯带新人上路。好买卖得看人，也看你赶不赶时间；你要是想走，我可以把沿途的水源和落脚处给你标出来。”
+你在市里听完街坊故事，造纸人优素福带着两张单子来找你。一张记送他妹妹家书往西走的商队，一张记给造纸院运旧麻布的队伍。两张都有同一位车夫，日期却对不上。“玛丽亚姆说我抄错一张，”他告诉你，“大概是她看得准。”
+
+你问日期为何急。优素福说妹妹答应带来母亲的消息，玛丽亚姆天天问什么时候能收到回信。他不想让女儿白等错一队。旁边老搬运工记得车夫，却记不清哪天出发。优素福问他第一次带的是纸还是布，对方倒答得出来。
+
+优素福坐下比对两张单子。等他们核清先后，他愿给你一份抄本；你也可以让这一家人自己慢慢对。
 
 ## ev.ev_samarcanda_consequence_b.choice_1
 
-按纸匠的建议准备
+帮优素福理清两趟车的先后
 
 ## ev.ev_samarcanda_consequence_b.choice_1_result
 
-你请纸匠把沿途的水源和住宿点写下来。他把商队常走的路程逐段标清，又提醒你：“井站之间别只按地图上的直线算，驮队走得慢，水也得留够。”
+你问搬运工当时载了什么，又与两张单子相对。优素福把改过的顺序写给玛丽亚姆看，说等她核好就带一份有日期的抄本来。
 
 ## ev.ev_samarcanda_consequence_b.choice_2
 
-先不拿走这份记录
+把两张单子留给优素福一家
 
 ## ev.ev_samarcanda_consequence_b.choice_2_result
 
-你把笔记推回去。纸匠收起账本：“没关系，等你真要上路了，再来问也不迟。”撒马尔罕的纸坊还会等你回去。
+你把两张单子留给优素福。他谢过老搬运工，带纸回去请玛丽亚姆查造纸院自己的记录，打算晚饭前对完。
 
 ## ev.ev_samarcanda_consequence_b_resolution.title
 
-撒马尔罕：商队记录
+等回信的日子
 
 ## ev.ev_samarcanda_consequence_b_resolution.body
 
-纸匠把商队的口碑记给你。下次谈价前先看看对方的名声，能少踩几个坑。
+玛丽亚姆找到了父亲的错处：他把运布商队回来的日子，写到了送信商队出发那一栏。优素福念出改好的日期，问她这下能不能别天天早晨追问回信。“该问的早晨我还是要问。”她说。老搬运工回来取纸，笑得差点把货包掉了。
+
+你问送信商队从西门哪处院子走。搬运工讲给你听，优素福把院名补上。玛丽亚姆又叫他写车夫的名字，那人答应过照看姑母的回信。她亲手把整行誊了一遍，字比父亲写得还稳。
+
+一家人愿把改好的日期告诉下一位往西走的学生。你现在能替他们转告，也可花一天为自己的行路笔记细抄一份。
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1
 
-在天黑前把这话告诉下一位学生
+今天把日期告诉下一位西行学生
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1_result
 
-你赶在天黑前把商队的消息告诉另一名学生。他听完点头：“这几支队伍我也听说过。下次有人问，我就把你说的也告诉他。”
+你把两个日期和车夫的名字告诉西行学生。玛丽亚姆让他复述一遍，他照做了，还答应若遇见姑母的商队就捎消息回来。
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2
 
-收好这份商队笔记
+留一天誊写核过的两趟车账
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2_result
 
-笔记里写着沿途的水源和住宿点。纸匠提醒你，商队走的路程会随水量和天气变化，出发前最好再问一遍。
+你花一天抄下日期、货物和人名。优素福拿玛丽亚姆誊好的那页陪你核对。到傍晚，你有了一份实用的行路记录，她也知道该何时等姑母回信。
 
 ## ev.samarcanda.mentor_closure.title
 
-撒马尔罕书院的学生
+老学生的地图
 
 ## ev.samarcanda.mentor_closure.body
 
-书院里的学生问你在撒马尔罕学到什么。听完你的回答，他把星表收起来：“书能教人看天，路还是得自己走。”
+纳迪尔的师兄巴希尔正在给一位年轻泥瓦匠画街图。泥瓦匠一家搬到了渠对岸。巴希尔标出几座桥，请他用手指从旧家走到新家。年轻人漏了一处岔路，巴希尔擦掉那段，画得更宽些：“图是给走路的人看的。”
+
+你问他怎样学会画得清楚。巴希尔说，早年常给教师送书，每走一条街都问住户怎么叫它。卖纸的姐姐路过，提醒一座桥最近修过。巴希尔问明日期，写在线旁。泥瓦匠这回顺着图找到了新住处。
+
+巴希尔愿当面讲讲画图的办法，也能花一天带你实走一回。姐姐留下一张干净纸，给下个要问路的人用。
 
 ## ev.samarcanda.mentor_closure.choice_1
 
-问这条路将要求你付出什么
+问巴希尔如何核一条路
 
 ## ev.samarcanda.mentor_closure.choice_1_result
 
-老学生把星表收进袋里：“路上最费人的，是等水、等同伴，还有走错路后再绕回来。你想先听哪一件？”
+巴希尔让你画泥瓦匠那条路，再请姐姐说今早过的是哪座桥。你改了一笔，也懂得他怎样拿人的脚程来核图。
 
 ## ev.samarcanda.mentor_closure.choice_2
 
-留一天，听完这段完整的讲述
+花一天跟巴希尔实走一回
 
 ## ev.samarcanda.mentor_closure.choice_2_result
 
-你听老学生讲星表的用法。他把一册空白书递给你：“拿去吧。路上看到什么，自己写进去。”
+你花一天跟巴希尔走街过桥。他姐姐在修过的桥边遇上你们，叫你凭记忆画下刚走的路。巴希尔约你再来，和他的图对一对。
 
 ## ev.samarcanda.mentor_closure.choice_3
 
-谢过引路人，继续上路
+谢过巴希尔，继续逛城
 
 ## ev.samarcanda.mentor_closure.choice_3_result
 
-你谢过蓝顶书院的老学生，踏上了路。他放你前行，为你祝福；撒马尔罕的这番功课，便没有落笔。
+你谢过巴希尔和姐姐。泥瓦匠折好新图，往家走去。你也继续走，记着他们怎样让他亲自读一遍图。
 
 ## ev.ev_samarcanda_a_followup.title
 
-撒马尔罕：列吉斯坦的观星人
+哈米德水渠上的星
 
 ## ev.ev_samarcanda_a_followup.body
 
-撒马尔罕的经学院露台上摆着星盘。学者点着几道刻度说：“商队夜里赶路，常靠这几颗星认方向。你想学着读星盘、抄一份星表，还是留下听我讲完？”
+哈米德把星盘带到蓝瓦廊下。侄女转着它接住一束阳光，又问夜里该怎样用同一圈刻度。昨天听课的旅人指着星表上一颗熟悉的星，哈米德问他路上在哪儿看见它升起。旅人一时想不起，园丁提起他们宿营的渠湾，他才记起方位。
+
+你问园丁为何又来听。园丁说学生答应帮忙清渠叶，他也想听他们算的时辰和自己平日记的是否一样。哈米德让他在星表旁画出渠路。侄女把两种说法都写下，两个大人差出一个多时辰时，她笑出了声。
+
+哈米德可花一天陪你看星表。那位旅人午饭后要往东去，认得去喀什噶尔的路。侄女则等着听你说自己走过哪一段。
 
 ## ev.ev_samarcanda_a_followup.choice_1
 
-坐下听讲，研习星表
+花一天跟哈米德看星表
 
 ## ev.ev_samarcanda_a_followup.choice_1_result
 
-你坐到灯盏燃起，跟着学者逐一辨认星表上的星宿和方位。
+你花一天跟哈米德和侄女对星表，白天看日影，入夜再看星位。园丁傍晚又来核渠水的时辰。你把他们教的办法记下。
 
 ## ev.ev_samarcanda_a_followup.choice_2
 
-问学者，去往可失合儿之天的是哪条路
+问东行旅人去喀什噶尔的路
 
 ## ev.ev_samarcanda_a_followup.choice_2_result
 
-观星人沿河谷向东给你画出通往可失合儿的路：“顺着河谷往东走就对了。那边天更清，做学问的人也多，夜里认星也容易。”
+旅人逐处说出去喀什噶尔的落脚地。哈米德侄女拿家里的旧路记核了几个名字，你把目的地标在地图上。
 
 ## ev.ev_samarcanda_a_followup.choice_3
 
-以你行路的见闻，换他观星的见闻
+把自己走过的路讲给学生听
 
 ## ev.ev_samarcanda_a_followup.choice_3_result
 
-你把路上见过的地形和星象讲给学者听。他听得认真：“这趟换我长见识了。以后你来书院，直接来找我。”
+你把自己走过的路讲给学生听。侄女追问沿途的水，你报出一个园丁也认得的地名。众人约你下次还到瓦廊下讲。
 
 ## ev.ev_samarcanda_b_followup.title
 
-撒马尔罕：纸匠之秘
+玛丽亚姆的信与磨纸石
 
 ## ev.ev_samarcanda_b_followup.body
 
-磨纸的小屋里放着一盆泡软的旧麻布。纸匠说：“先捶成细浆，兑进水里，再用细筛捞起薄薄一层纤维。压过、晾干，最后拿磨石磨平。”他把半干的纸递到你手边：“摸摸这面，磨平后滑得像丝绸。磨得匀，墨落上去才不容易散开。你想买一叠，还是亲手试试？”
+玛丽亚姆快写完给妹妹的信，优素福在一旁磨另一批纸。她请父亲留一张未磨的给小徒弟摸摸。孩子两张都摸过，说光滑那张墨一定跑得更快。玛丽亚姆蘸墨试给他看：磨好的纸，笔画反倒收得住边。
+
+你问造纸用的干净麻布从哪儿来。优素福说有商人经布哈拉来，也有人从附近人家收旧布。玛丽亚姆补充，妹妹总替他们留穿旧的衣服，每回信来都捎一小包。学徒问能不能替她写地址。“先把鞋从晾纸院挪走。”她说。孩子马上跑去搬。
+
+优素福另有一整包纸货，与先前那包分开，开价 100 银。你若留一天，他也肯让你拿磨石试手。玛丽亚姆先把信搁到一边，等墨全干。
 
 ## ev.ev_samarcanda_b_followup.choice_1
 
-买一叠纸匠磨成的纸
+花 100 银买另一整包纸货
 
 ## ev.ev_samarcanda_b_followup.choice_1_result
 
-你按纸匠的价买下一叠磨得发亮的纸。纸坊的人夸它落墨不洇，放上三百年也能看清字迹。
+你付 100 银买下第二包纸货。优素福给你看它单独记的数目，玛丽亚姆查过纸边才打包。学徒把写地址的纸稳妥放到工作台外。
 
 ## ev.ev_samarcanda_b_followup.choice_2
 
-求纸匠教你磨纸之法
+留一天学磨纸
 
 ## ev.ev_samarcanda_b_followup.choice_2_result
 
-你在磨石前练了一天，试着把纸面磨匀。纸匠看了看你的作品：“还不够亮，不过再多磨一会儿，墨就不会渗开了。”
+你在磨纸石旁过了一天。优素福带着你磨到纸面能稳稳收墨，玛丽亚姆用其中一张誊清家信。你把做法记进笔记。
 
 ## ev.ev_samarcanda_b_followup.choice_3
 
-问最白的麻布从何而来
+问优素福布哈拉来麻布的路
 
 ## ev.ev_samarcanda_b_followup.choice_3_result
 
-纸匠点着西边说：“最白的旧麻布从不花剌运来，那里的亚麻长，纤维也干净。走西路去不花剌，沿途记得问清水井的位置。”
+优素福说出西行商人的名字与布哈拉这座城。玛丽亚姆又指给你看妹妹上回包裹的记号，你便知道它走的是哪队。你把布哈拉标到地图上。
 
 ## ev.ev_samarcanda_c_followup.title
 
-撒马尔罕：灵石志
+庭院里的雨天笔记
 
 ## ev.ev_samarcanda_c_followup.body
 
-撒马尔罕清真寺的毛拉翻开旧册：“这几次石头凝水，都赶上了城里的灾年。”看守旧册的毛拉说，“也有人觉得它是在为离乡的人流泪。你信哪一种？”
+拉希德把院子的旧笔记拿到长凳上。母亲叫他找第一次漏雨是哪年。拉希德报了一个日子，老人却记得补梁是在女儿婚礼后，那又晚了一年。拉希德让自己女儿去找修屋的旧收据。孩子从一本祈祷书里翻出来，得意地念出泥瓦匠的名字。
+
+你问笔记里有没有这块石头。拉希德翻出几条雨水积在石上的记录，写的人各不相同。母亲叫他把每个人的名字留在日期旁。从撒普尔干来的一家人进门，说亲戚曾讲过这个院子，他们想亲眼看看。拉希德给他们腾了凳子，女儿讲起今早见到的水滴。
+
+石头已经干了。你若留一天，拉希德能把整本旧记念给你；新来的客人也能讲去撒马尔罕走过的路。母亲仍拿着收据，等儿子把日期改对。
 
 ## ev.ev_samarcanda_c_followup.choice_1
 
-以额抵石，等一个征兆
+摸摸石头，听拉希德母亲讲那年雨
 
 ## ev.ev_samarcanda_c_followup.choice_1_result
 
-你把额头贴上黑色玄武岩，石面凉得像井水。它意味着什么，你还说不准；身后排队的人却都安静下来，等着看你是否会开口。
+你摸过已经干了的石头，听拉希德母亲把婚礼与修屋的先后讲清。孙女记下改正后的日期。你带着一家人的讲法离开。
 
 ## ev.ev_samarcanda_c_followup.choice_2
 
-请毛拉把整部寺志读给你听
+留一天陪拉希德读雨天笔记
 
 ## ev.ev_samarcanda_c_followup.choice_2_result
 
-你在灯下请毛拉读寺志。他翻到记着石头“流泪”的几页：“这几次都记了年份。有人把它当灾祸的预兆，也有人说是石面渗水。册子只记下了发生的事，信哪种说法，你自己判断。”听到最后，窗外已经传来清晨的声音。
+你花一天读笔记。拉希德和母亲用收据对日期，女儿抄下曾来院里的人名。你把这一家人的记录补进自己的城中见闻。
 
 ## ev.ev_samarcanda_c_followup.choice_3
 
-问朝圣者自何处而来
+问客人从撒普尔干怎么来
 
 ## ev.ev_samarcanda_c_followup.choice_3_result
 
-你问朝圣者从哪里来。一人把包袱往肩上提了提：“我们从撒普儿干翻山来的，专程来向这块石头祈祷。回去也走山路，先跟着河谷，再找驮队问路。”
+客人逐处说了从撒普尔干来的落脚地。拉希德女儿在你的地图上标城名，祖母给来客倒茶。他们也谢你关心这一路。
 
 ## ev.ev_samarcanda_mentor_followup.title
 
-撒马尔罕：学子的临别之赠
+巴希尔的第二张图
 
 ## ev.ev_samarcanda_mentor_followup.body
 
-学生把三样东西摆到你面前：“一张撒马尔罕纸、一册旧星表，或者我陪你讲解一天。书院里能教的都在这儿了，你挑一样带走吧。”
+巴希尔姐姐带来一张干净纸，想请他画给运蓝色矿料的商队看。旧图上一座桥还标着封路，巴希尔问上周车夫实际走哪边。姐姐说了，反问他既然不能过，为何还画那座桥。“让后来的人知道路为什么绕。”巴希尔答。
+
+你问蓝色矿料从哪里来。姐姐说商人从巴达哈伤带青金石来，画师会用；烧瓦的作坊则自己配蓝釉。抱着瓦片路过的陶工也说，各家烧出的蓝色都有些不同。巴希尔画绕路时，两人把几片瓦拿到日光下对颜色。
+
+巴希尔可以现在给你一份改过的街图，也能把巴达哈伤标在地图上；若留一天，他还能陪你实走。姐姐扶着纸，他把桥修好的日期写在旁边。
 
 ## ev.ev_samarcanda_mentor_followup.choice_1
 
-收下学生对前路的笔记
+收下巴希尔改过的街图
 
 ## ev.ev_samarcanda_mentor_followup.choice_1_result
 
-学生在纸上写下两列星位，指着天亮前最后还能看见的一颗说：“别只背名字。明早到院里，先找到它，再看看它和屋顶的相对位置。”
+巴希尔把桥和绕路画进你的本子。姐姐核过修桥日期，你带走这份改好的记录。
 
 ## ev.ev_samarcanda_mentor_followup.choice_2
 
-问穹顶之蓝是如何烧成的
+问姐姐去巴达哈伤买青金石的路
 
 ## ev.ev_samarcanda_mentor_followup.choice_2_result
 
-“穹顶这层蓝，是把巴达哈伤的青金石磨成粉，再烧进釉料里。”学生指着釉面说，“那边的矿山在东边，走山路过去得备足水。”
+姐姐说出从巴达哈伤运青金石的商队，把城标在你的图上。陶工又让你看两片蓝釉的区别，才抱着瓦回作坊。
 
 ## ev.ev_samarcanda_mentor_followup.choice_3
 
-留一天，亲手抄录学生的书
+花一天实走改过的路线
 
 ## ev.ev_samarcanda_mentor_followup.choice_3_result
 
-你在学生的书案前抄了一天星表。他替你磨好墨，临走时把抄本合上：“带去路上看吧。夜里认星，比白天问路省事。”
+你花一天和巴希尔姐弟走过修好的桥，又记下旧绕路。回到纸铺，姐姐给你一张干净纸，正好誊成新图。
+
+## ev.samarcanda.bluetile.title
+
+找不到的那片蓝瓦
+
+## ev.samarcanda.bluetile.body
+
+烧瓦院里，萨菲娅正把几片蓝瓦安到父亲做的院中长凳上，堆里却少了一片。表兄猜是买主顺手拿错了。萨菲娅问今天谁来买，他只记得卖纸人，对方根本没进院。父亲让他们先看阴处的晾架，免得冤枉人。
+
+你问这长凳为何非按这花样做。萨菲娅说祖母挑的：一条细蓝线，记着几个孩子小时候等烤饼时各坐哪里。祖母端着午饭出来，见他们找瓦便笑了。原来她怕雨打湿未烧透的背面，替他们把那片移到架下。表兄拿回来，承认自己该先找过再说。
+
+瓦找到了，长凳还得花一天细细铺好。祖母请你先坐下，听她讲那条蓝线，待会儿再和湿灰打交道。
+
+## ev.samarcanda.bluetile.choice.set
+
+花一天帮萨菲娅铺好蓝瓦
+
+## ev.samarcanda.bluetile.result.set
+
+你花一天陪萨菲娅和表兄铺好那条蓝线。父亲查了最后一处接缝，祖母第一个坐上新凳。邻居来看的时候，一家人也向你道谢。
+
+## ev.samarcanda.bluetile.choice.listen
+
+陪祖母吃午饭，听她讲那张长凳
+
+## ev.samarcanda.bluetile.result.listen
+
+你陪祖母吃饭，听她逐个说孩子们过去坐哪里。萨菲娅在一旁听着，把两片瓦的次序换了。你把这一家人的旧事写进笔记。

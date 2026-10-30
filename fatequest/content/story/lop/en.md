@@ -51,7 +51,7 @@ Buy the prepared provisions for 0.8 silver
 
 ## ev.lop.caravanserai.choice.wait_caravan
 
-Wait eight days and pay 1.2 silver to join a caravan
+Wait eight days and reserve a caravan place for 1.2 silver
 
 ## ev.lop.caravanserai.title
 
@@ -119,7 +119,7 @@ You pay Arslan 2 silver. He checks your water skins with you and marks the cross
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-You pay 1.2 silver and wait eight days for the shared caravan. The family uses the time to mend its load straps; you check yours alongside them. When the party finally leaves, the road toward Sachiu is open.
+You pay 1.2 silver and spend eight days waiting for the shared caravan to assemble. The family uses the time to mend its load straps; you check yours alongside them. Arslan marks the road to Sachiu, and a place in the party is ready when you choose to leave.
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
@@ -144,6 +144,8 @@ The well keeper from Aysen’s inn finds you while his granddaughter is drying a
 You ask whether the damaged name belongs to a well still in use. The granddaughter says a caravan stopped there last season. Her grandfather asks which guide she heard it from. She recalls Arslan and points out his mark beside the name. The old man agrees to ask him that evening. He has another copy of the list for you if you want to carry it, though he asks you to keep the uncertain name marked as uncertain.
 
 The girl smooths the paper on the table. She has saved a blank strip for the answer, and she waits for her grandfather to fetch Arslan.
+
+The granddaughter asks him if the bitter well should stay on the list. ‘Yes,’ he says. ‘A warning is useful even when the water changes again.’ She puts a dot beside it, ready to add a new date after the next traveller reports back.
 
 ## ev.ev_lop_consequence_a.choice_1
 
@@ -172,6 +174,8 @@ By evening, the granddaughter has found Arslan. He remembers stopping at the wel
 You ask whether the well is sweet. Arslan says it was when he last used it, and the keeper adds the date to the note. The granddaughter draws a small cup beside the name, then asks whether that mark is too childish. Her grandfather says it will help him find the line when he is tired.
 
 The paper has dried. The family has supper waiting, and there is time either to take the checked account now or to stay one more day and copy the full list in your own hand.
+
+The granddaughter writes only the names of those who saw the well themselves. Her grandfather checks the line and asks her to make the date large enough for tired eyes.
 
 ## ev.ev_lop_consequence_a_resolution.choice_1
 
@@ -331,11 +335,11 @@ The innkeeper has an extra provision bundle for 12 silver. Arslan can also spend
 
 ## ev.ev_lop_caravanserai_followup.choice_1
 
-Agree to follow Arslan’s marked route
+Confirm your place with Arslan and copy the route
 
 ## ev.ev_lop_caravanserai_followup.choice_1_result
 
-You copy the stages toward Sachiu from Arslan’s board. He checks that you know which well follows the salt flat, then confirms you can travel with the party.
+You copy the stages toward Sachiu from Arslan’s board. He checks that you know which well follows the salt flat and confirms your place in the party. You can choose your departure when you have finished preparing.
 
 ## ev.ev_lop_caravanserai_followup.choice_2
 

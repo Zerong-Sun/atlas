@@ -1,0 +1,191 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-cacanfu-noodle",
+      "kind": "site",
+      "title": "ev.cacanfu.noodle.title",
+      "body": "ev.cacanfu.noodle.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cacanfu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cacanfu.noodle.choice.serve",
+          "resultText": "ev.cacanfu.noodle.result.serve",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cacanfu",
+              "reason": "helped-stall-owner-serve-workers"
+            }
+          ]
+        },
+        {
+          "label": "ev.cacanfu.noodle.choice.rest",
+          "resultText": "ev.cacanfu.noodle.result.rest",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-with-noodle-stall-family"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-and-ate-at-canal-stall"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cachanfu-rope",
+      "kind": "site",
+      "title": "ev.cachanfu.rope.title",
+      "body": "ev.cachanfu.rope.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cachanfu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cachanfu.rope.choice.splice",
+          "resultText": "ev.cachanfu.rope.result.splice",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cachanfu",
+              "reason": "helped-boat-family-splice-rope"
+            }
+          ]
+        },
+        {
+          "label": "ev.cachanfu.rope.choice.learn",
+          "resultText": "ev.cachanfu.rope.result.learn",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-learn-rope-work"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-river-current-from-boatworkers"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caiju-umbrella",
+      "kind": "site",
+      "title": "ev.caiju.umbrella.title",
+      "body": "ev.caiju.umbrella.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "caiju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.caiju.umbrella.choice.sew",
+          "resultText": "ev.caiju.umbrella.result.sew",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "helped-umbrella-maker-and-grandfather"
+            }
+          ]
+        },
+        {
+          "label": "ev.caiju.umbrella.choice.stay",
+          "resultText": "ev.caiju.umbrella.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-through-rain-at-umbrella-stall"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-and-ate-with-umbrella-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chinghianfu-binder",
+      "kind": "site",
+      "title": "ev.chinghianfu.binder.title",
+      "body": "ev.chinghianfu.binder.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "chinghianfu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.chinghianfu.binder.choice.sort",
+          "resultText": "ev.chinghianfu.binder.result.sort",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinghianfu",
+              "reason": "helped-binder-sort-book-pages"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinghianfu.binder.choice.listen",
+          "resultText": "ev.chinghianfu.binder.result.listen",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-with-binder-family"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "learned-reader-family-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 unit: hierusalem
 lang: zh
 source: en
-source_rev: defb5cf5c0b3
+source_rev: cf9cbaa321a3
 status: draft
 translator: 人工校译
 notes: >
@@ -15,7 +15,7 @@ stamps:
   city.hierusalem.name: 451ebbe3f766
   ev.ev_hierusalem_entry.choice_1_result: e7ca5b93f92a
   ev.ev_hierusalem_entry.choice_2_result: 75b82a72d290
-  ev.gap.hierusalem.scene.body: de6452ced957
+  ev.gap.hierusalem.scene.body: 3416d36ec462
   ev.gap.hierusalem.scene.choice.route: 2420a57c780f
   ev.gap.hierusalem.scene.choice.talk: 43550d3f063c
   ev.gap.hierusalem.scene.result.route: de2133d0fd5c
@@ -74,9 +74,9 @@ stamps:
 
 香料摊前，一个小男孩攥着几枚钱，指着两包乳香问摊主：“哪包是我外婆喜欢的？”摊主抬头：“你外婆是谁？”
 
-男孩说她住在城南，烧香时总让他把窗开小一点。摊主把两包都打开，让他先闻。男孩凑上去，闻了半天还在犹豫，隔壁研孜然的声音又把他引过去。
+男孩说她住在城南，烧香时总让他把窗开小一点。摊主把两包都打开，让他先闻。男孩凑上去，闻了半天还在犹豫，隔壁研孜然的声音又把他引过去。他早上出门时，外婆给了他一个旧布袋，钱只够买一小包。她正在烤饼，说等他回来点上香，就给他讲一段小时候的事。他想把她喜欢的味道带回去。
 
-摊主把一小粒乳香放到炭片上，扣上铜罩：“先等一会儿。她平时喜欢的是闻起来清清淡淡的，还是香味留得很久的？”男孩转头看你：“你能陪我想想吗？外婆今天会等我回家。”
+摊主把一小粒乳香放到炭片上，扣上铜罩。一位等着买香料的妇人听见外婆的名字，说她每年入冬前也来这儿买香，只是记不起上次拿的哪包。男孩忙把烟往她面前扇，她笑着叫他等一等，香味还没散开呢。男孩转头看你：“你能陪我闻闻吗？外婆今天会等我回家。”
 
 ## ev.gap.hierusalem.scene.choice.talk
 

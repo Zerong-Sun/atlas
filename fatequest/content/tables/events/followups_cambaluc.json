@@ -92,7 +92,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -5000,
+              "value": -10000,
               "reason": "paid-for-the-bargain"
             },
             {
@@ -109,7 +109,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 5000
+              "min": 10000
             }
           }
         },
