@@ -69,14 +69,7 @@ The Game Park
 
 ## ev.chandu.c.body
 
-In a meadow at the northern end of the park, the monks of the Palace of the Spring tend
-the sacred white mares. These animals are not ridden or worked. They are milked twice a
-day, and the milk is carried in golden vessels to the Kaan's table. No one of lesser
-rank may taste it. Once a year, on the day of the great Mongol festival, the Kaan
-himself rides to the meadow and pours the milk on the ground as an offering to the
-spirits of the Eternal Blue Sky and the Golden Earth — a rite that goes back to the days
-when the Mongols were a tribe of wandering herdsmen on the northern steppe, long before
-they ruled the world. No foreigner has ever been permitted to witness this ceremony.
+In the meadow, a groom brushes a white horse. You ask about Mongol rites. He first makes sure you are not mocking them, then tells you that people have offered milk to Eternal Heaven and prayed for abundant pasture. At the mention of white mares, he lowers his voice. “Outsiders do not often hear that part.”
 
 ## ev.chandu.c.choice.listen
 
@@ -161,7 +154,7 @@ You spend a day sketching the palace in detail. The lines of the roof and the ga
 
 ## ev.ev_chandu_b.choice_1_result
 
-You walk the edge of the sixteen-mile wall until the sun moves. The park of Chandu is now marked in your book, with its game and its herds.
+You spend much of the day walking along the park's sixteen-mile wall. Deer, peacocks and hunting dogs have their own enclosures. A keeper guides you and warns, “Stay on the path; do not startle the hawks.”
 
 ## ev.ev_chandu_b.choice_2_result
 
@@ -189,7 +182,7 @@ Chandu: The Mark at the Gate
 
 ## ev.ev_chandu_consequence_a.body
 
-The first answer does not end at the gate. A stable-hand of the Kaan's meadow draws you aside and asks what you intend to carry away from Chandu. Beyond the question lies the summer palace and the meadow; he offers to set a name to your name, the name of the horse-master who keeps the sacred mares. Choose what you will make of the sign.
+A groom in the meadow stops you. The court horse trainer is willing to choose a mount for your journey, but first asks how far you will travel and how much baggage you carry. He does not wish to give a good horse to the wrong traveller.
 
 ## ev.ev_chandu_consequence_a.choice_1
 
@@ -253,7 +246,7 @@ Leave the account with the falconer
 
 ## ev.ev_chandu_consequence_b.choice_2_result
 
-You leave the account with the falconer and keep your own counsel. It goes back to the meadow, and Chandu asks nothing more of you.
+You thank the falconer but decline the paper. He folds it into his sleeve and reminds you not to speak of the white-horse meadow near the palace gate.
 
 ## ev.ev_chandu_consequence_b_resolution.title
 
@@ -281,11 +274,11 @@ You spend a day copying the meadow-notes into your travel book. The record is yo
 
 ## ev.chandu.mentor_closure.title
 
-The Guide of Chandu
+The Horse Trainer by the Meadow
 
 ## ev.chandu.mentor_closure.body
 
-Before you leave Chandu, the court horse-master by the meadow asks what you have learned from Chandu. The lesson is not a spell or a bargain; it is a way of noticing which detail will matter after the road turns.
+Beside the meadow, a horse trainer asks which mount you like. He glances at your baggage. “First decide how far you must travel, then choose a horse that can carry you there.”
 
 ## ev.chandu.mentor_closure.choice_1
 
@@ -381,7 +374,7 @@ Chandu: The Rite of the White Mares
 
 ## ev.ev_chandu_c_followup.body
 
-At the northern end of the park, the monk of the Palace of the Spring keeps the tale of the white mares and of the rite that no foreigner has ever witnessed. He tells you that the Mongols were once a tribe of wandering herdsmen on the northern steppe, long before they ruled the world, and that the great Kaan Chinghiz rose from those herds to bind all nations under one sky. Once a year, on the day of the great festival, the Kaan rides to the meadow and pours the milk of the thousand white mares upon the ground as an offering to the spirits of the Eternal Blue Sky and the Golden Earth. The monk explains what the rite asks: that the sky keep the grass green and the earth keep the waters sweet, and that the Kaan hold the two in balance as his ancestors did when they had nothing but felt tents and mares. He speaks of Chinghiz's own oath, taken on the steppe, to the spirits of sky and earth, and of how the Mongols mark that oath still, in milk poured from golden vessels. The rite, he says, is older than any palace, and it will outlast them all.
+A monk in the meadow says, “Each year the palace offers milk to Eternal Heaven, praying for good pasture and healthy animals. I do not enter the palace every year; this is what the people there have told me.” You may ask what the rite means, hear a story of Chinggis Khan, or remain to watch the morning milking.
 
 ## ev.ev_chandu_c_followup.choice_1
 
@@ -413,7 +406,7 @@ Chandu: The Horse-Master's Parting Gift
 
 ## ev.ev_chandu_mentor_followup.body
 
-The court horse-master who taught you by the meadow does not let you leave Chandu with only his account. He reaches into his saddlebag and lays out what remains of his working life: a page of notes on the imperial stud, a worn tracing of the courier roads, and a day's patience. He tells you to choose what will serve you best on the road ahead, because the steppe is wide and a traveller is only as good as what he carries. His notes set down the points of the white mares — the breadth of chest, the slope of the shoulder, the temper of the eye — and the order of the stud as it is kept for the Kaan. The courier road he traces runs south to Chinangli, where the posts change horses at every stage. Or you may take the day of patience, and learn at his side how a horse is read at a glance, how a mount is chosen for a long journey, and how a rider's weight is carried without harm to the beast. You choose, and the horse-master watches you choose without comment, as a man who has spent his life reading men as he reads horses.
+The trainer takes stable notes and an old relay map from his saddlebag. “The notes show what to look for in a horse's ears, hooves and breathing. The map marks changes of horse on the southern road to Changlu. If you wish to choose a mount yourself, stay with me for a day. Which first?”
 
 ## ev.ev_chandu_mentor_followup.choice_1
 

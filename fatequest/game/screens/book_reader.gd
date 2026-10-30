@@ -11,6 +11,21 @@ var _list: VBoxContainer
 var _detail: VBoxContainer
 var _books: Array = []
 var _current: String = ""
+var _left: ScrollContainer
+var _right: ScrollContainer
+var _heading: Label
+var _close: Button
+
+
+func _ready() -> void:
+	get_viewport().size_changed.connect(_fit_window)
+	_fit_window()
+
+
+func _fit_window() -> void:
+	Panels.fit_panel(self, Vector2(1020, 620))
+	if _left != null:
+		_left.custom_minimum_size.x = minf(280, custom_minimum_size.x * 0.29)
 
 
 func setup(p_db: ContentDb) -> void:
@@ -20,8 +35,7 @@ func setup(p_db: ContentDb) -> void:
 
 
 func _build() -> void:
-	add_theme_stylebox_override("panel", Palette.panel_style())
-	custom_minimum_size = Vector2(880, 540)
+	add_theme_stylebox_override("panel", Panels.card_style("book"))
 
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", 10)
@@ -30,11 +44,17 @@ func _build() -> void:
 	var head := HBoxContainer.new()
 	head.add_theme_constant_override("separation", 10)
 	root.add_child(head)
-	head.add_child(Panels.label(I18n.t("ui.books_desk"), UiScale.title(), Palette.ink()))
+	_heading = Panels.label(I18n.t("ui.books_desk"), UiScale.title(), Palette.ink())
+	_heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_heading.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	head.add_child(_heading)
 	var spacer := Control.new()
-	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	spacer.custom_minimum_size.x = Metrics.md()
 	head.add_child(spacer)
-	head.add_child(Panels.styled_button(I18n.t("ui.close"), func(): closed.emit()))
+	_close = Panels.styled_button(I18n.t("ui.close"), func(): closed.emit())
+	_close.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	head.add_child(_close)
+	root.add_child(Panels.rule())
 
 	var cols := HBoxContainer.new()
 	cols.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -42,6 +62,8 @@ func _build() -> void:
 	root.add_child(cols)
 
 	var left := ScrollContainer.new()
+	_left = left
+	left.follow_focus = true
 	left.custom_minimum_size = Vector2(260, 0)
 	left.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	cols.add_child(left)
@@ -51,6 +73,7 @@ func _build() -> void:
 	left.add_child(_list)
 
 	var right := ScrollContainer.new()
+	_right = right
 	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	right.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	cols.add_child(right)
@@ -58,11 +81,13 @@ func _build() -> void:
 	_detail.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_detail.add_theme_constant_override("separation", 8)
 	right.add_child(_detail)
+	root.add_child(Panels.reading_hint(right))
+	Panels.decorate(self, "book")
 
 
 func open(book_id: String = "") -> void:
 	visible = true
-	_refresh_list()
+	restyle()
 	var want := book_id
 	if want.is_empty() and not _books.is_empty():
 		want = String(_books[0].get("id", ""))
@@ -72,14 +97,18 @@ func open(book_id: String = "") -> void:
 
 func _refresh_list() -> void:
 	for c in _list.get_children():
+		_list.remove_child(c)
 		c.queue_free()
 	for rec in _books:
 		var id := String(rec.get("id", ""))
 		var title := I18n.t(String(rec.get("title", "")))
 		var b := Panels.styled_button(title, Callable())
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		b.set_meta("book_id", id)
 		b.pressed.connect(_show.bind(id))
 		_list.add_child(b)
+		Panels.select_button(b, id == _current)
 
 
 func _resolve_book(book_id: String) -> Dictionary:
@@ -94,7 +123,9 @@ func _resolve_book(book_id: String) -> Dictionary:
 
 func _show(book_id: String) -> void:
 	for c in _detail.get_children():
+		_detail.remove_child(c)
 		c.queue_free()
+	_right.scroll_vertical = 0
 
 	var rec: Dictionary = _resolve_book(book_id)
 	if rec.is_empty():
@@ -102,6 +133,8 @@ func _show(book_id: String) -> void:
 		_detail.add_child(Panels.label(I18n.t("ui.book_missing"), UiScale.body(), Palette.ink_soft()))
 		return
 	_current = String(rec.get("id", book_id))
+	for button in _list.get_children():
+		Panels.select_button(button, button.get_meta("book_id", "") == _current)
 
 	var head := HBoxContainer.new()
 	head.add_theme_constant_override("separation", 12)
@@ -120,6 +153,7 @@ func _show(book_id: String) -> void:
 		head.add_child(tr)
 
 	var titles := VBoxContainer.new()
+	titles.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	titles.add_theme_constant_override("separation", 4)
 	head.add_child(titles)
 	titles.add_child(Panels.label(I18n.t(String(rec.get("title", ""))),
@@ -144,6 +178,15 @@ func _show(book_id: String) -> void:
 	if origin_note.begins_with("ui.book_origin_"):
 		origin_note = origin
 	_detail.add_child(Panels.label(origin_note, UiScale.ui() - 2, Palette.ink_soft()))
+	_wrap_labels(_detail)
+
+
+func _wrap_labels(node: Node) -> void:
+	if node is Label:
+		node.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		node.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	for child in node.get_children():
+		_wrap_labels(child)
 
 
 func _add_section(heading: String, key: String) -> void:
@@ -154,10 +197,13 @@ func _add_section(heading: String, key: String) -> void:
 	var rt := RichTextLabel.new()
 	rt.bbcode_enabled = true
 	rt.fit_content = true
+	rt.scroll_active = false
+	rt.selection_enabled = true
 	rt.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	rt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	rt.add_theme_font_size_override("normal_font_size", UiScale.body())
 	rt.add_theme_color_override("default_color", Palette.ink())
+	rt.add_theme_constant_override("line_separation", Metrics.xs())
 	rt.text = body if body != key else I18n.t("ui.book_passage_pending")
 	_detail.add_child(rt)
 	if body != key and I18n.is_untranslated(key):
@@ -166,8 +212,14 @@ func _add_section(heading: String, key: String) -> void:
 
 
 func restyle() -> void:
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	add_theme_stylebox_override("panel", Panels.card_style("book"))
+	_heading.text = I18n.t("ui.books_desk")
+	_heading.add_theme_font_size_override("font_size", UiScale.title())
+	_heading.add_theme_color_override("font_color", Palette.ink())
+	_close.text = I18n.t("ui.close")
+	Panels.style_button(_close)
+	Panels.decorate(self, "book")
+	_fit_window()
+	_refresh_list()
 	if not _current.is_empty():
 		_show(_current)
-	else:
-		_refresh_list()

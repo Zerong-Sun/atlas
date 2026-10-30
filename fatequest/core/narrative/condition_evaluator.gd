@@ -9,7 +9,7 @@ extends RefCounted
 ## library and make both validation and search harder.
 
 const _LEAF_KEYS := [
-	"cities", "bands", "faiths", "season", "years",
+	"cities", "bands", "modes", "routes", "faiths", "season", "years",
 	"flags", "not_flags", "has_item", "lacks_item",
 	"learned_divination", "language", "min_reputation", "fate", "coins",
 	"etiquette", "has_retainer",
@@ -70,6 +70,10 @@ func _leaf(key: String, val: Variant, state: WorldState, ctx: Dictionary) -> boo
 			return state.city in val
 		"bands":
 			return ctx.get("band", "") in val
+		"modes":
+			return ctx.get("mode", "") in val
+		"routes":
+			return ctx.get("route", "") in val
 		"faiths":
 			return state.faith in val
 		"season":

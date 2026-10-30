@@ -1,5 +1,6 @@
 ---
 status: reviewed
+
 stamps:
   ui.hire_wage_exact_fmt: 8d53a7ff3835
 ---

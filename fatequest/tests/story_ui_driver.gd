@@ -28,6 +28,8 @@ static func finish_lesson(main: Node, method: String) -> bool:
 	if not main._lesson_layer.visible or main._lesson_ui._method != method:
 		return false
 	var ui = main._lesson_ui
+	if is_instance_valid(ui._challenge_view):
+		return await finish_challenge(main, ui._challenge_view)
 	var lesson: Dictionary = ui._lesson
 	match String(lesson.get("type", "")):
 		"arrange", "form":
@@ -87,3 +89,29 @@ static func followup_branch(main: Node, event_id: String, choice_index: int,
 	return not main._dialog_layer.visible and main._city_view.visible \
 		and main.state.active_event.is_empty() and main.state.pending_events.is_empty() \
 		and (method.is_empty() or method in main.state.learned_divinations)
+
+
+static func finish_challenge(main: Node, view: Node) -> bool:
+	var steps := 0
+	while view.engine.status == "active" and steps < 180:
+		steps += 1
+		var move: Dictionary = view.engine.suggestion()
+		if view.engine.kind == "timing":
+			var deadline := Time.get_ticks_msec() + 6000
+			while Time.get_ticks_msec() < deadline:
+				var value: float = view.engine.needle()
+				if value >= float(view.engine.state.low) + 0.02 and value <= float(view.engine.state.high) - 0.02:
+					break
+				await main.get_tree().process_frame
+			move = {"action": "submit"}
+		var button: Button = view._find_button(view, String(move.action), int(move.get("index", 0)))
+		if button == null or not button.is_visible_in_tree() or button.disabled:
+			return false
+		button.pressed.emit()
+		await main.get_tree().process_frame
+	if view.engine.status != "passed": return false
+	var confirm: Button = view._find_button(view, "continue", 0)
+	if confirm == null or confirm.disabled: return false
+	confirm.pressed.emit()
+	await main.get_tree().process_frame
+	return main._lesson_ui._finished and not main._lesson_layer.visible

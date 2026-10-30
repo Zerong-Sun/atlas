@@ -14,25 +14,45 @@
           "resultText": "ev.alexandria.welcome.gate.faith_result",
           "effects": [
             {
-              "op": "queue_event",
-              "value": "ev-alexandria-welcome-meal",
-              "reason": "introduced-to-host"
+              "op": "days",
+              "value": 1,
+              "reason": "shared-a-meal"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "host-named-cairo-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "babylonia-cairus",
+              "reason": "host-named-cairo"
             }
-          ],
-          "showWhen": {
-            "faiths": [
-              "islam"
-            ]
-          }
+          ]
         },
         {
           "label": "ev.alexandria.welcome.gate.tears",
           "resultText": "ev.alexandria.welcome.gate.tears_result",
           "effects": [
             {
-              "op": "queue_event",
-              "value": "ev-alexandria-welcome-meal",
-              "reason": "introduced-to-host"
+              "op": "coins",
+              "value": 1200,
+              "reason": "one-time-host-gift"
+            },
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "shared-a-meal"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-alexandria-babylonia-cairus",
+              "reason": "host-named-cairo-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "babylonia-cairus",
+              "reason": "host-named-cairo"
             }
           ],
           "showWhen": {
@@ -143,6 +163,44 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-alexandria-water-seller",
+      "kind": "site",
+      "title": "ev.alexandria.water_seller.title",
+      "body": "ev.alexandria.water_seller.body",
+      "once": true,
+      "when": {
+        "cities": ["alexandria"]
+      },
+      "choices": [
+        {
+          "label": "ev.alexandria.water_seller.choice.help",
+          "resultText": "ev.alexandria.water_seller.result.help",
+          "effects": [
+            {"op": "reputation", "value": 1, "scope": "city", "id": "alexandria", "reason": "helped-water-seller"},
+            {"op": "reveal_route", "value": "rt-alexandria-babylonia-cairus", "reason": "water-seller-named-cairo-road"},
+            {"op": "reveal_city", "value": "babylonia-cairus", "reason": "water-seller-named-cairo"}
+          ]
+        },
+        {
+          "label": "ev.alexandria.water_seller.choice.cairo",
+          "resultText": "ev.alexandria.water_seller.result.cairo",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-alexandria-babylonia-cairus", "reason": "water-seller-named-cairo-road"},
+            {"op": "reveal_city", "value": "babylonia-cairus", "reason": "water-seller-named-cairo"}
+          ]
+        },
+        {
+          "label": "ev.alexandria.water_seller.choice.jerusalem",
+          "resultText": "ev.alexandria.water_seller.result.jerusalem",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-alexandria-hierusalem", "reason": "water-seller-named-jerusalem-road"},
+            {"op": "reveal_city", "value": "hierusalem", "reason": "water-seller-named-jerusalem"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
     }
   ]
 }

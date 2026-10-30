@@ -1,0 +1,2032 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-damascus-dyework",
+      "kind": "site",
+      "title": "ev.damascus.dyework.title",
+      "body": "ev.damascus.dyework.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "damascus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.damascus.dyework.choice.help",
+          "resultText": "ev.damascus.dyework.result.help",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "damascus",
+              "reason": "helped-dyework-apprentice"
+            }
+          ]
+        },
+        {
+          "label": "ev.damascus.dyework.choice.route",
+          "resultText": "ev.damascus.dyework.result.route",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-damascus-tyrus",
+              "reason": "samiya-described-tyre-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "tyrus",
+              "reason": "samiya-named-tyre"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-accon-netmaker",
+      "kind": "site",
+      "title": "ev.accon.netmaker.title",
+      "body": "ev.accon.netmaker.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "accon"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.accon.netmaker.choice.help",
+          "resultText": "ev.accon.netmaker.result.help",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "accon",
+              "reason": "helped-ilya-mend-net"
+            }
+          ]
+        },
+        {
+          "label": "ev.accon.netmaker.choice.visit",
+          "resultText": "ev.accon.netmaker.result.visit",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "visited-netmakers-grandfather"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "ate-with-netmakers-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-petra-goatbell",
+      "kind": "site",
+      "title": "ev.petra.goatbell.title",
+      "body": "ev.petra.goatbell.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "petra"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.petra.goatbell.choice.tracks",
+          "resultText": "ev.petra.goatbell.result.tracks",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "petra",
+              "reason": "found-inans-grey-goat"
+            }
+          ]
+        },
+        {
+          "label": "ev.petra.goatbell.choice.wait",
+          "resultText": "ev.petra.goatbell.result.wait",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-overnight-for-grey-goat"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "rested-with-inans-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-bethleem-stool",
+      "kind": "site",
+      "title": "ev.bethleem.stool.title",
+      "body": "ev.bethleem.stool.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "bethleem"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.bethleem.stool.choice.sand",
+          "resultText": "ev.bethleem.stool.result.sand",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "bethleem",
+              "reason": "finished-hannas-stool"
+            }
+          ]
+        },
+        {
+          "label": "ev.bethleem.stool.choice.deliver",
+          "resultText": "ev.bethleem.stool.result.deliver",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-bethleem-hierusalem",
+              "reason": "ishaq-showed-jerusalem-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "hierusalem",
+              "reason": "ishaq-named-jerusalem"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tyrus-fishrack",
+      "kind": "site",
+      "title": "ev.tyrus.fishrack.title",
+      "body": "ev.tyrus.fishrack.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tyrus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tyrus.fishrack.choice.buy",
+          "resultText": "ev.tyrus.fishrack.result.buy",
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "bought-faridas-salted-fish"
+            },
+            {
+              "op": "vitality",
+              "value": 6,
+              "reason": "ate-faridas-salted-fish"
+            }
+          ]
+        },
+        {
+          "label": "ev.tyrus.fishrack.choice.stay",
+          "resultText": "ev.tyrus.fishrack.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-build-fish-rack"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tyrus",
+              "reason": "helped-faridas-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-edessa-clayletter",
+      "kind": "site",
+      "title": "ev.edessa.clayletter.title",
+      "body": "ev.edessa.clayletter.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "edessa"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.edessa.clayletter.choice.copy",
+          "resultText": "ev.edessa.clayletter.result.copy",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-edessa-tarsus",
+              "reason": "copied-safas-fathers-route"
+            },
+            {
+              "op": "reveal_city",
+              "value": "tarsus",
+              "reason": "safas-father-wrote-from-tarsus"
+            }
+          ]
+        },
+        {
+          "label": "ev.edessa.clayletter.choice.work",
+          "resultText": "ev.edessa.clayletter.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "moved-safas-pottery-for-a-day"
+            },
+            {
+              "op": "coins",
+              "value": 120,
+              "reason": "safa-paid-for-pottery-work"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tarsus-reedbasket",
+      "kind": "site",
+      "title": "ev.tarsus.reedbasket.title",
+      "body": "ev.tarsus.reedbasket.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tarsus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tarsus.reedbasket.choice.work",
+          "resultText": "ev.tarsus.reedbasket.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "worked-a-day-at-hibas-basket-shop"
+            },
+            {
+              "op": "coins",
+              "value": 120,
+              "reason": "hiba-paid-for-basket-work"
+            }
+          ]
+        },
+        {
+          "label": "ev.tarsus.reedbasket.choice.meal",
+          "resultText": "ev.tarsus.reedbasket.result.meal",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 6,
+              "reason": "ate-with-hibas-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-berrhoea-lentilpot",
+      "kind": "site",
+      "title": "ev.berrhoea.lentilpot.title",
+      "body": "ev.berrhoea.lentilpot.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "berrhoea"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.berrhoea.lentilpot.choice.buy",
+          "resultText": "ev.berrhoea.lentilpot.result.buy",
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "bought-nadwas-soup-and-bread"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "ate-nadwas-soup-and-bread"
+            }
+          ]
+        },
+        {
+          "label": "ev.berrhoea.lentilpot.choice.stay",
+          "resultText": "ev.berrhoea.lentilpot.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-prepare-nadwas-soup"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-at-nadwas-home"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-nicaea-figpath",
+      "kind": "site",
+      "title": "ev.nicaea.figpath.title",
+      "body": "ev.nicaea.figpath.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "nicaea"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.nicaea.figpath.choice.walk",
+          "resultText": "ev.nicaea.figpath.result.walk",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-a-day-with-irem"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-nicaea-smyrna",
+              "reason": "irem-described-smyrna-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "smyrna",
+              "reason": "irem-named-smyrna"
+            }
+          ]
+        },
+        {
+          "label": "ev.nicaea.figpath.choice.meal",
+          "resultText": "ev.nicaea.figpath.result.meal",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "ate-figs-with-irem"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ephesus-olivejar",
+      "kind": "site",
+      "title": "ev.ephesus.olivejar.title",
+      "body": "ev.ephesus.olivejar.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "ephesus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.ephesus.olivejar.choice.buy",
+          "resultText": "ev.ephesus.olivejar.result.buy",
+          "needs": {
+            "coins": {
+              "min": 12000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -12000,
+              "reason": "bought-marikas-olive-oil"
+            },
+            {
+              "op": "goods",
+              "id": "olive-oil",
+              "value": 1,
+              "reason": "bought-marikas-olive-oil"
+            }
+          ]
+        },
+        {
+          "label": "ev.ephesus.olivejar.choice.walk",
+          "resultText": "ev.ephesus.olivejar.result.walk",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-a-day-with-petros"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-ephesus-smyrna",
+              "reason": "petros-described-smyrna-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "smyrna",
+              "reason": "petros-named-smyrna"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-smyrna-grapes",
+      "kind": "site",
+      "title": "ev.smyrna.grapes.title",
+      "body": "ev.smyrna.grapes.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "smyrna"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.smyrna.grapes.choice.buy",
+          "resultText": "ev.smyrna.grapes.result.buy",
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "bought-esmas-dried-grapes"
+            },
+            {
+              "op": "vitality",
+              "value": 6,
+              "reason": "ate-esmas-dried-grapes"
+            }
+          ]
+        },
+        {
+          "label": "ev.smyrna.grapes.choice.stay",
+          "resultText": "ev.smyrna.grapes.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-turn-smyrna-grapes"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "smyrna",
+              "reason": "helped-esmas-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-caffa-leathercut",
+      "kind": "site",
+      "title": "ev.caffa.leathercut.title",
+      "body": "ev.caffa.leathercut.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "caffa"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.caffa.leathercut.choice.buy",
+          "resultText": "ev.caffa.leathercut.result.buy",
+          "needs": {
+            "coins": {
+              "min": 12000
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -12000,
+              "reason": "bought-arslans-leather"
+            },
+            {
+              "op": "goods",
+              "id": "leather",
+              "value": 1,
+              "reason": "bought-arslans-leather"
+            }
+          ]
+        },
+        {
+          "label": "ev.caffa.leathercut.choice.work",
+          "resultText": "ev.caffa.leathercut.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "worked-a-day-sorting-leather"
+            },
+            {
+              "op": "coins",
+              "value": 150,
+              "reason": "arslan-paid-for-leather-work"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tana-porridge",
+      "kind": "site",
+      "title": "ev.tana.porridge.title",
+      "body": "ev.tana.porridge.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tana-azov"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tana.porridge.choice.meal",
+          "resultText": "ev.tana.porridge.result.meal",
+          "needs": {
+            "coins": {
+              "min": 80
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -80,
+              "reason": "bought-zoyas-porridge"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "ate-zoyas-porridge"
+            }
+          ]
+        },
+        {
+          "label": "ev.tana.porridge.choice.road",
+          "resultText": "ev.tana.porridge.result.road",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-kiovia-tana-azov",
+              "reason": "karim-recounted-kiovia-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "kiovia",
+              "reason": "karim-named-kiovia"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-trapezus-tworoads",
+      "kind": "site",
+      "title": "ev.trapezus.tworoads.title",
+      "body": "ev.trapezus.tworoads.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "trapezus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.trapezus.tworoads.choice.ana",
+          "resultText": "ev.trapezus.tworoads.result.ana",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-a-day-with-ana"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-trapezus-berrhoea",
+              "reason": "ana-described-aleppo-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "berrhoea",
+              "reason": "ana-named-aleppo"
+            }
+          ]
+        },
+        {
+          "label": "ev.trapezus.tworoads.choice.davit",
+          "resultText": "ev.trapezus.tworoads.result.davit",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "walked-a-day-with-davit"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-trapezus-edessa",
+              "reason": "davit-described-edessa-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "edessa",
+              "reason": "davit-named-edessa"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-basora-dateboat",
+      "kind": "site",
+      "title": "ev.basora.dateboat.title",
+      "body": "ev.basora.dateboat.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "basora"
+        ],
+        "flags": [
+          "fl-basora-aunt-basket-safe"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.basora.dateboat.choice.count",
+          "resultText": "ev.basora.dateboat.result.count",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "counted-baskets-for-boat"
+            },
+            {
+              "op": "coins",
+              "value": 60,
+              "reason": "boatman-paid-for-count"
+            }
+          ]
+        },
+        {
+          "label": "ev.basora.dateboat.choice.eat",
+          "resultText": "ev.basora.dateboat.result.eat",
+          "needs": {
+            "coins": {
+              "min": 60
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -60,
+              "reason": "bought-dates-and-water"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-with-dates-and-water"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ctesiphon-shelter",
+      "kind": "site",
+      "title": "ev.ctesiphon.shelter.title",
+      "body": "ev.ctesiphon.shelter.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "ctesiphon"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.ctesiphon.shelter.choice.fit",
+          "resultText": "ev.ctesiphon.shelter.result.fit",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-fit-doorstep"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "farid-family-thanked-you",
+              "scope": "city",
+              "id": "ctesiphon"
+            }
+          ]
+        },
+        {
+          "label": "ev.ctesiphon.shelter.choice.listen",
+          "resultText": "ev.ctesiphon.shelter.result.listen",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-with-farid-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ninive-ferrybowl",
+      "kind": "site",
+      "title": "ev.ninive.ferrybowl.title",
+      "body": "ev.ninive.ferrybowl.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "ninive"
+        ],
+        "flags": [
+          "fl-ninive-bowl-sent"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.ninive.ferrybowl.choice.path",
+          "resultText": "ev.ninive.ferrybowl.result.path",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-ninive-tauris",
+              "reason": "learned-tabriz-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "tauris",
+              "reason": "learned-of-tabriz"
+            }
+          ]
+        },
+        {
+          "label": "ev.ninive.ferrybowl.choice.eat",
+          "resultText": "ev.ninive.ferrybowl.result.eat",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-with-mariam"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ispahan-clothnote",
+      "kind": "site",
+      "title": "ev.ispahan.clothnote.title",
+      "body": "ev.ispahan.clothnote.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "ispahan"
+        ],
+        "flags": [
+          "fl-ispahan-blue-cloth-ready"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.ispahan.clothnote.choice.carry",
+          "resultText": "ev.ispahan.clothnote.result.carry",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-basora-ispahan",
+              "reason": "carried-letter-to-basra-caravan"
+            },
+            {
+              "op": "reveal_city",
+              "value": "basora",
+              "reason": "heard-basra-destination"
+            }
+          ]
+        },
+        {
+          "label": "ev.ispahan.clothnote.choice.stitch",
+          "resultText": "ev.ispahan.clothnote.result.stitch",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-parvin-mark-letter",
+              "scope": "city",
+              "id": "ispahan"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-yasdi-threadwell",
+      "kind": "site",
+      "title": "ev.yasdi.threadwell.title",
+      "body": "ev.yasdi.threadwell.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "yasdi"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.yasdi.threadwell.choice.repair",
+          "resultText": "ev.yasdi.threadwell.result.repair",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "repaired-weavers-water-jar"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "well-keeper-thanked-you",
+              "scope": "city",
+              "id": "yasdi"
+            }
+          ]
+        },
+        {
+          "label": "ev.yasdi.threadwell.choice.carry",
+          "resultText": "ev.yasdi.threadwell.result.carry",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "drank-water-at-roya-workshop"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kiovia-waxcandle",
+      "kind": "site",
+      "title": "ev.kiovia.waxcandle.title",
+      "body": "ev.kiovia.waxcandle.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "kiovia"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.kiovia.waxcandle.choice.return",
+          "resultText": "ev.kiovia.waxcandle.result.return",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-kiovia-moscovia",
+              "reason": "uncle-showed-moscow-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "moscovia",
+              "reason": "uncle-named-moscow"
+            }
+          ]
+        },
+        {
+          "label": "ev.kiovia.waxcandle.choice.pour",
+          "resultText": "ev.kiovia.waxcandle.result.pour",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-olena-make-candle",
+              "scope": "city",
+              "id": "kiovia"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-constantinopolis-waterjar",
+      "kind": "site",
+      "title": "ev.constantinopolis.waterjar.title",
+      "body": "ev.constantinopolis.waterjar.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "constantinopolis"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.constantinopolis.waterjar.choice.carry",
+          "resultText": "ev.constantinopolis.waterjar.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-anna-carry-water",
+              "scope": "city",
+              "id": "constantinopolis"
+            }
+          ]
+        },
+        {
+          "label": "ev.constantinopolis.waterjar.choice.drink",
+          "resultText": "ev.constantinopolis.waterjar.result.drink",
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -40,
+              "reason": "bought-water-by-cistern"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-by-cistern"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-moscovia-birchletter",
+      "kind": "site",
+      "title": "ev.moscovia.birchletter.title",
+      "body": "ev.moscovia.birchletter.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "moscovia"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.moscovia.birchletter.choice.read",
+          "resultText": "ev.moscovia.birchletter.result.read",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "read-birchletter-with-child",
+              "scope": "city",
+              "id": "moscovia"
+            }
+          ]
+        },
+        {
+          "label": "ev.moscovia.birchletter.choice.deliver",
+          "resultText": "ev.moscovia.birchletter.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 40,
+              "reason": "delivered-birchletter"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-novogardia-barknote",
+      "kind": "site",
+      "title": "ev.novogardia.barknote.title",
+      "body": "ev.novogardia.barknote.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "novogardia"
+        ],
+        "flags": [
+          "fl-novogardia-scale-ready"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.novogardia.barknote.choice.walk",
+          "resultText": "ev.novogardia.barknote.result.walk",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "rested-after-walking-town"
+            }
+          ]
+        },
+        {
+          "label": "ev.novogardia.barknote.choice.weigh",
+          "resultText": "ev.novogardia.barknote.result.weigh",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "weighed-wax-bundles"
+            },
+            {
+              "op": "coins",
+              "value": 50,
+              "reason": "anfisa-paid-for-weighing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kerman-patternbook",
+      "kind": "site",
+      "title": "ev.kerman.patternbook.title",
+      "body": "ev.kerman.patternbook.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "kerman"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.kerman.patternbook.choice.copy",
+          "resultText": "ev.kerman.patternbook.result.copy",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-copy-soraya-pattern",
+              "scope": "city",
+              "id": "kerman"
+            }
+          ]
+        },
+        {
+          "label": "ev.kerman.patternbook.choice.thread",
+          "resultText": "ev.kerman.patternbook.result.thread",
+          "effects": [
+            {
+              "op": "reveal_route",
+              "value": "rt-kerman-yasdi",
+              "reason": "thread-seller-named-yazd-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "yasdi",
+              "reason": "thread-seller-named-yazd"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-camadi-oldwell",
+      "kind": "site",
+      "title": "ev.camadi.oldwell.title",
+      "body": "ev.camadi.oldwell.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "camadi"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.camadi.oldwell.choice.clear",
+          "resultText": "ev.camadi.oldwell.result.clear",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "cleared-camadi-well"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "drank-from-cleared-well"
+            }
+          ]
+        },
+        {
+          "label": "ev.camadi.oldwell.choice.tell",
+          "resultText": "ev.camadi.oldwell.result.tell",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "told-carriers-about-well",
+              "scope": "city",
+              "id": "camadi"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cobinan-mirrorcase",
+      "kind": "site",
+      "title": "ev.cobinan.mirrorcase.title",
+      "body": "ev.cobinan.mirrorcase.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cobinan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cobinan.mirrorcase.choice.deliver",
+          "resultText": "ev.cobinan.mirrorcase.result.deliver",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "delivered-steel-mirror"
+            },
+            {
+              "op": "coins",
+              "value": 50,
+              "reason": "paid-to-deliver-steel-mirror"
+            }
+          ]
+        },
+        {
+          "label": "ev.cobinan.mirrorcase.choice.learn",
+          "resultText": "ev.cobinan.mirrorcase.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cobinan",
+              "reason": "learned-mirror-finishing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-bochara-recipe",
+      "kind": "site",
+      "title": "ev.bochara.recipe.title",
+      "body": "ev.bochara.recipe.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "bochara"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.bochara.recipe.choice.work",
+          "resultText": "ev.bochara.recipe.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-baker-for-afternoon"
+            },
+            {
+              "op": "coins",
+              "value": 100,
+              "reason": "paid-for-baking-help"
+            }
+          ]
+        },
+        {
+          "label": "ev.bochara.recipe.choice.eat",
+          "resultText": "ev.bochara.recipe.result.eat",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -40,
+              "reason": "bought-warm-bread"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "ate-warm-bread"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 40
+            }
+          }
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-charchan-stonebag",
+      "kind": "site",
+      "title": "ev.charchan.stonebag.title",
+      "body": "ev.charchan.stonebag.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "charchan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.charchan.stonebag.choice.search",
+          "resultText": "ev.charchan.stonebag.result.search",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "searched-reeds-with-family"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "found-stone-pouch",
+              "scope": "city",
+              "id": "charchan"
+            }
+          ]
+        },
+        {
+          "label": "ev.charchan.stonebag.choice.cargo",
+          "resultText": "ev.charchan.stonebag.result.cargo",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "paid-for-sorting-cargo"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-camul-waterboard",
+      "kind": "site",
+      "title": "ev.camul.waterboard.title",
+      "body": "ev.camul.waterboard.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "camul"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.camul.waterboard.choice.restore",
+          "resultText": "ev.camul.waterboard.result.restore",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "restored-water-board"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-channel-neighbours",
+              "scope": "city",
+              "id": "camul"
+            }
+          ]
+        },
+        {
+          "label": "ev.camul.waterboard.choice.learn",
+          "resultText": "ev.camul.waterboard.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-camul",
+              "reason": "learned-water-turn-marks"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-badashan-bluepigment",
+      "kind": "site",
+      "title": "ev.badashan.bluepigment.title",
+      "body": "ev.badashan.bluepigment.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "badashan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.badashan.bluepigment.choice.finish",
+          "resultText": "ev.badashan.bluepigment.result.finish",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "finished-grandmothers-panel"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "badashan",
+              "reason": "delivered-painted-panel"
+            }
+          ]
+        },
+        {
+          "label": "ev.badashan.bluepigment.choice.learn",
+          "resultText": "ev.badashan.bluepigment.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-badashan",
+              "reason": "learned-blue-pigment-mixing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-baldacum-boatplug",
+      "kind": "site",
+      "title": "ev.baldacum.boatplug.title",
+      "body": "ev.baldacum.boatplug.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "baldacum"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.baldacum.boatplug.choice.test",
+          "resultText": "ev.baldacum.boatplug.result.test",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "tested-baghdad-boat"
+            },
+            {
+              "op": "coins",
+              "value": 100,
+              "reason": "paid-for-hull-test"
+            }
+          ]
+        },
+        {
+          "label": "ev.baldacum.boatplug.choice.learn",
+          "resultText": "ev.baldacum.boatplug.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-baldacum",
+              "reason": "learned-boat-plug-repair"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-ormus-netweight",
+      "kind": "site",
+      "title": "ev.ormus.netweight.title",
+      "body": "ev.ormus.netweight.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "ormus"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.ormus.netweight.choice.finish",
+          "resultText": "ev.ormus.netweight.result.finish",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "finished-fishing-net"
+            },
+            {
+              "op": "coins",
+              "value": 50,
+              "reason": "paid-for-net-repair"
+            }
+          ]
+        },
+        {
+          "label": "ev.ormus.netweight.choice.learn",
+          "resultText": "ev.ormus.netweight.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-ormus",
+              "reason": "learned-net-weight-spacing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cabul-bellstrap",
+      "kind": "site",
+      "title": "ev.cabul.bellstrap.title",
+      "body": "ev.cabul.bellstrap.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cabul"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cabul.bellstrap.choice.test",
+          "resultText": "ev.cabul.bellstrap.result.test",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "tested-caravan-bells"
+            },
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "paid-for-bell-test"
+            }
+          ]
+        },
+        {
+          "label": "ev.cabul.bellstrap.choice.learn",
+          "resultText": "ev.cabul.bellstrap.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cabul",
+              "reason": "learned-bell-strap-check"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-delli-jarbands",
+      "kind": "site",
+      "title": "ev.delli.jarbands.title",
+      "body": "ev.delli.jarbands.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "delli"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.delli.jarbands.choice.finish",
+          "resultText": "ev.delli.jarbands.result.finish",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "finished-water-jars"
+            },
+            {
+              "op": "coins",
+              "value": 60,
+              "reason": "paid-for-jar-work"
+            }
+          ]
+        },
+        {
+          "label": "ev.delli.jarbands.choice.learn",
+          "resultText": "ev.delli.jarbands.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-delli",
+              "reason": "learned-jar-marking"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-keshimur-bridgeplank",
+      "kind": "site",
+      "title": "ev.keshimur.bridgeplank.title",
+      "body": "ev.keshimur.bridgeplank.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "keshimur"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.keshimur.bridgeplank.choice.fit",
+          "resultText": "ev.keshimur.bridgeplank.result.fit",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "fit-valley-bridge-plank"
+            },
+            {
+              "op": "coins",
+              "value": 70,
+              "reason": "paid-for-bridge-work"
+            }
+          ]
+        },
+        {
+          "label": "ev.keshimur.bridgeplank.choice.learn",
+          "resultText": "ev.keshimur.bridgeplank.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-keshimur",
+              "reason": "learned-footbridge-support"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-balc-threadspool",
+      "kind": "site",
+      "title": "ev.balc.threadspool.title",
+      "body": "ev.balc.threadspool.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "balc"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.balc.threadspool.choice.work",
+          "resultText": "ev.balc.threadspool.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "worked-on-hanas-spools"
+            },
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "hana-paid-for-rope-work"
+            }
+          ]
+        },
+        {
+          "label": "ev.balc.threadspool.choice.watch",
+          "resultText": "ev.balc.threadspool.result.watch",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-balc",
+              "reason": "learned-rope-knot-at-well"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cascar-redthread",
+      "kind": "site",
+      "title": "ev.cascar.redthread.title",
+      "body": "ev.cascar.redthread.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cascar"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cascar.redthread.choice.sew",
+          "resultText": "ev.cascar.redthread.result.sew",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "mended-nuras-shawl"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cascar",
+              "reason": "nuras-family-thanked-traveller"
+            }
+          ]
+        },
+        {
+          "label": "ev.cascar.redthread.choice.learn",
+          "resultText": "ev.cascar.redthread.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cascar",
+              "reason": "learned-family-shawl-mending"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cotan-twoscripts",
+      "kind": "site",
+      "title": "ev.cotan.twoscripts.title",
+      "body": "ev.cotan.twoscripts.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cotan"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cotan.twoscripts.choice.work",
+          "resultText": "ev.cotan.twoscripts.result.work",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "checked-dilaras-cargo-labels"
+            },
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "dilara-paid-for-label-work"
+            }
+          ]
+        },
+        {
+          "label": "ev.cotan.twoscripts.choice.learn",
+          "resultText": "ev.cotan.twoscripts.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-cotan",
+              "reason": "learned-two-script-cargo-mark"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-merva-waterturn",
+      "kind": "site",
+      "title": "ev.merva.waterturn.title",
+      "body": "ev.merva.waterturn.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "merva"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.merva.waterturn.choice.board",
+          "resultText": "ev.merva.waterturn.result.board",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "shared-the-cost-of-a-sluice-board"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "merva",
+              "reason": "helped-neighbours-repair-the-sluice"
+            }
+          ]
+        },
+        {
+          "label": "ev.merva.waterturn.choice.wait",
+          "resultText": "ev.merva.waterturn.result.wait",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-through-the-afternoon-water-turn"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-the-canal-water-timing"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-pein-jarnames",
+      "kind": "site",
+      "title": "ev.pein.jarnames.title",
+      "body": "ev.pein.jarnames.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "pein"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.pein.jarnames.choice.deliver",
+          "resultText": "ev.pein.jarnames.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "delivered-aminas-water-jar"
+            }
+          ]
+        },
+        {
+          "label": "ev.pein.jarnames.choice.stay",
+          "resultText": "ev.pein.jarnames.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-amina-mark-household-cups"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "shared-the-sisters-household-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sachiu-trough",
+      "kind": "site",
+      "title": "ev.sachiu.trough.title",
+      "body": "ev.sachiu.trough.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "sachiu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.sachiu.trough.choice.stay",
+          "resultText": "ev.sachiu.trough.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "prepared-soft-feed-for-the-injured-mare"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-tend-a-horse-on-the-road"
+            }
+          ]
+        },
+        {
+          "label": "ev.sachiu.trough.choice.tell",
+          "resultText": "ev.sachiu.trough.result.tell",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sachiu",
+              "reason": "explained-the-mares-rest-to-the-next-rider"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-lop-stopper",
+      "kind": "site",
+      "title": "ev.lop.stopper.title",
+      "body": "ev.lop.stopper.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "lop"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.lop.stopper.choice.deliver",
+          "resultText": "ev.lop.stopper.result.deliver",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 80,
+              "reason": "delivered-sarans-repaired-water-skin"
+            }
+          ]
+        },
+        {
+          "label": "ev.lop.stopper.choice.learn",
+          "resultText": "ev.lop.stopper.result.learn",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-test-water-skin-seams"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-water-skin-leak-test"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

@@ -258,13 +258,7 @@ stays with you, and with it the memory of a great river busy with silk and spice
 
 ## sticker.st-cotan-buddha.body
 
-You keep the dust of the buried city on the old river terrace beyond Cotan, where
-the water no longer flows. The sand has buried an older city — a thousand
-monasteries, a hundred stupas, and painted caves beyond counting. The wind uncovers
-fragments each day: a painted face of a bodhisattva with kohl-rimmed eyes, a hand
-raised in blessing, lotus petals in gold and vermilion. The old people drink this
-dust as medicine, and the desert reclaims whatever the expeditions of Cambaluc
-uncover. You keep the dust, and the names of the buried monasteries.
+You keep dust from a buried settlement beyond Cotan, where the river once ran. Sand covers old monasteries, stupas, and painted caves. After three days of searching you found fragments of a bodhisattva’s face, a raised hand, and a few golden lotus petals. An elder says that sand conceals the broken walls again whenever the wind changes. You keep a little of that dust as a reminder of what remains hidden.
 
 ## sticker.st-cotan-jade.body
 
@@ -328,13 +322,7 @@ conduct ran ahead of you. The little mark stays with you.
 
 ## sticker.st-keshimur-shrine.body
 
-You keep the mark of the masjid of Keshimur, the province men say is the very
-source from which Idolatry spread abroad. The people are Idolaters, with a language
-of their own, and they have an astonishing acquaintance with enchantment: they make
-their idols to speak, and by their sorceries bring changes of weather and darkness.
-The clime is finely tempered, neither very hot nor very cold, and the strong passes
-let the country keep its independence. You visited the mosque, and word of your
-conduct ran ahead of you. The mark stays with you.
+You keep the mark of a shrine in Keshimur, a province of gentle weather and difficult passes. At the shrine, someone says the idol speaks after the priest’s incantation; another claims the priests can darken the sky. A cloud passes over the courtyard while they talk. You watch it without deciding whether their stories explain the change in weather.
 
 ## sticker.st-kinsay-canals.body
 
@@ -449,13 +437,7 @@ city whose name carries more weight with the caravans.
 
 ## sticker.st-samarcanda-gardens.body
 
-You keep the walk of the canals of Samarcand, the city they call the garden of the
-world. Its streets are lined with canals shaded by plane trees, and every courtyard
-has a fountain, every mosque a turquoise dome. The Registan square, with its three
-great madrasas, is the heart of learning in Central Asia; scholars come from every
-country of Islam to study law, theology, astronomy, and medicine under the
-blue-tiled arches. Between Baghdad and Cambaluc there is no city richer, no city
-more beautiful. You walked its canals, and you keep the green of them.
+You keep the walk along the canals of Samarcand. Plane trees shade the water, fountains sound in the courtyards, and turquoise domes rise above the mosques. At the square, students come to the madrasas from across Central Asia to study law, medicine, and astronomy. A scholar greets you beside the canal and says that the streets themselves can teach a traveller where the water comes from and where the roads lead.
 
 ## sticker.st-samarcanda-paper.body
 

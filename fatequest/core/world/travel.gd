@@ -41,6 +41,8 @@ func is_route_known(route: Dictionary, state: WorldState) -> bool:
 ## than the player being told a flat "no".
 func availability(route: Dictionary, state: WorldState, month: int, mode: String) -> Dictionary:
 	var reasons: Array[String] = []
+	if not state.city_life.get("ending", {}).is_empty():
+		reasons.append("ui.stay.ended")
 	var rid := String(route.get("id", ""))
 	if bool(state.life.get("deceased", false)):
 		reasons.append("travel.deceased")
@@ -169,6 +171,7 @@ func encounter_ids(route: Dictionary, state: WorldState, mode: String,
 		"month": clock.month(),
 		"year": clock.year(),
 		"band": city.get("band", ""),
+		"mode": mode,
 		"route": route.get("id", ""),
 		"hazards": route.get("hazards", []),
 	}

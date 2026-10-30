@@ -36,19 +36,23 @@ Ask only how the cups are read
 
 ## ev.ormus.mentor_astrodice.title
 
-Dice of the Haven
+The Pilot’s Three Dice
 
 ## ev.ormus.mentor_astrodice.body
 
-A pilot who keeps planet, sign, and house dice in a leather cup will teach you to cast for the timing of a voyage — not for luck, though sailors still call a bright throw great fortune.
+A pilot at the Hormuz landing has three marked dice in a leather cup. His niece is making a tide list for the crews while her father answers a sailor who wants to know whether to cast before departure. ‘First tell me whether the water jars are aboard,’ the pilot says. The sailor admits one is still at the well and goes to fetch it.
+
+The niece shows you the marks on the dice and asks what you would want to know before crossing. You mention wind. She writes it beside the tide, then asks her father whether she has forgotten anything. ‘The boat itself,’ he says, pointing to a frayed rope laid across the table. You ask whether the dice can settle that. He smiles and gives you the rope to inspect.
+
+He teaches the dice over seven days for 70 silver, beginning with the names of their faces. If you only want an explanation now, he will read one example while his niece finishes the tide list. The sailor returns with the last water jar, breathing hard but pleased to have remembered it.
 
 ## ev.ormus.mentor_astrodice.choice.learn
 
-Pay and learn the star-dice
+Pay 70 silver for seven days of star-dice lessons
 
 ## ev.ormus.mentor_astrodice.choice.ask
 
-Hear how the three dice are named
+Ask the pilot to explain one cast
 
 ## ev.tauris.mentor_astrodice.title
 
@@ -72,23 +76,27 @@ Pay and learn the star-dice as well
 
 ## ev.baldacum.mentor_geomancy.title
 
-Sand in Baldacum
+The Sand Reader’s Covered Tray
 
 ## ev.baldacum.mentor_geomancy.body
 
-A sand-reader marks sixteen figures in the dust and teaches which open a road, which stop it, and which hold you a day. He will speak of great fortune and great ill omen without shame — the sand does.
+A sand-reader works in a courtyard near the river market. His daughter is pressing the corner of a cloth over the tray while he marks a row of dots in fine sand. A gust gets beneath the cloth and erases one line. ‘I told you to move indoors,’ she says. Her father replies that the light is better here, then accepts her help in finding a sheltered corner.
+
+You ask what the figures mean. He draws one set again and has his daughter count the marks before he names it. She corrects him when he misses a dot; he laughs and gives her the stylus. A boatman comes to ask about his southbound trip, and the reader first asks when the vessel is ready. ‘After the rope is mended,’ the man answers.
+
+The reader offers a ten-day course for 80 silver, beginning with how the figures are made. His daughter leaves room at the edge of the tray for you to try one before deciding. The boatman waits nearby for his own turn.
 
 ## ev.baldacum.mentor_geomancy.choice.learn
 
-Pay and learn the sand
+Pay 80 silver for the ten-day sand-reading course
 
 ## ev.baldacum.mentor_geomancy.choice.ask
 
-Watch one figure cast
+Ask to see one figure made
 
 ## ev.baldacum.mentor_bazi.choice.learn_geomancy
 
-Pay and learn the sand figures as well
+Pay 80 silver and study sand-reading for ten days
 
 ## ev.alexandria.mentor_geomancy.title
 
@@ -108,11 +116,15 @@ Ask what Populus means for a voyage
 
 ## ev.kiovia.mentor_runes.title
 
-Runes at Kiovia
+The Northern Traveller’s Runes
 
 ## ev.kiovia.mentor_runes.body
 
-A carver of birch staves teaches twenty-four marks for the fords and the winter roads. He names great fortune when Fehu falls, and great ill omen when Hagalaz does.
+A traveller from the northern road shows you rune marks cut into a birch stave. He says his sister taught him to draw one when he could not decide which ferry to take. He turns the stave so you can see each cut and offers to explain his method.
+
+You ask whether his sister carved the marks herself. ‘Some of them,’ he says, turning the staff. ‘She learnt the older forms from a book and changed the handle so I could tell them apart by touch.’ A ferryman calls for passengers while the traveller is still showing you a worn line. He says he once drew that sign before choosing a boat, then stayed to ask the ferryman about the weather anyway. His sister laughed when he told her: the piece of wood had made him stop and think long enough to ask.
+
+He lays the staff across his knees and demonstrates how he selects a marked piece without seeing it first. You ask what he charges for instruction. Fifty silver for seven days, he says; there is time to practise and to hear how his sister taught him. If you are only passing through, he will show you a single draw now, before the next ferry calls.
 
 ## ev.kiovia.mentor_runes.choice.learn
 
@@ -220,51 +232,61 @@ Leave without asking
 
 ## ev.ormus.astrodice_tide.title
 
-Tide and Dice
+Before the Tide Turns
 
 ## ev.ormus.astrodice_tide.body
 
-Before the ships cast off, the pilot offers the three dice for the hour.
+At the landing, a captain has set his cargo by the boat but has not given the order to load. The pilot checks the tide mark on the wall, and his niece counts the water jars. One of the crew asks whether you will cast the three dice you learned or simply ask the captain when he is ready.
+
+You ask what has delayed them. The captain holds up a wet rope. It slipped during loading, and he wants a new knot before anyone carries another bundle aboard. The pilot says the water is still favourable, then kneels to help the sailor tie it. His niece writes the time beside the tide mark.
+
+A porter arrives with the last cargo bundle. He asks whether to put it down or wait. The captain points to dry stones until the rope is secure. The pilot’s niece moves the leather dice cup away from the splash and leaves it beside you while the knot is tested.
 
 ## ev.ormus.astrodice_tide.choice.cast
 
-Cast the star-dice
+Cast the three dice for this departure
 
 ## ev.ormus.astrodice_tide.choice.sail
 
-Sail without casting
+Ask the captain and prepare to sail
 
 ## ev.baldacum.geomancy_court.title
 
-Sand before the Court Gate
+A Question at the Courtyard Gate
 
 ## ev.baldacum.geomancy_court.body
 
-Dust is drawn into a figure for the road you mean to take today.
+You find the sand-reader and his daughter at the courtyard gate. She has set the tray on a low stool, where the wall protects it from the river wind. A neighbour is waiting with a question about a missing parcel. The reader asks which shop last saw it, and the neighbour names two; his daughter writes both down.
+
+‘Should we make a figure first?’ the girl asks. ‘After we know what he is asking,’ her father says. The neighbour checks his own delivery slip and realises one shop was closed that day. You ask whether he wants to go there now. He says he will ask the open shop first, then come back if the parcel still cannot be found.
+
+The tray is ready for your own question. The reader remembers the figures you learned and offers you the stylus. His daughter smooths the sand at the edge, leaving a clean place for you to begin.
 
 ## ev.baldacum.geomancy_court.choice.cast
 
-Cast the sand
+Lay out the sand figures for your question
 
 ## ev.baldacum.geomancy_court.choice.leave
 
-Walk on
+Thank them and continue
 
 ## ev.kiovia.runes_ford.title
 
-Runes at the Ford
+A Rune at the Kyiv Ferry
 
 ## ev.kiovia.runes_ford.body
 
-Before the ferry ropes tighten, a single rune is drawn for the crossing.
+At the Kyiv ferry, a traveller from the northern road holds a carved rune token between his fingers. He says his sister gave it to him when he left home. Now he offers to draw one for you before the crossing.
+
+The ferryman is still loading sacks. ‘Ask him if you like,’ she says, ‘but keep your bag in your hands when you board.’ The traveller laughs and puts his sister’s token safely away while you decide.
 
 ## ev.kiovia.runes_ford.choice.cast
 
-Draw a rune
+Draw a rune before boarding
 
 ## ev.kiovia.runes_ford.choice.ford
 
-Cross without a mark
+Board the ferry now
 
 ## ev.road.bazi_counsel.title
 
@@ -293,12 +315,11 @@ You ask what Populus means for a voyage. The account is written down before the 
 
 ## ev.ev_kiovia_mentor_runes.choice_1_result
 
-
-You pay and learn the runes. You pay 5000 coins. You spend 7 days learning the art. You can now read it on any road. A mark is set on this affair.
+You pay the traveller 50 silver and spend seven days learning how he draws and reads the runes. At the end he lets you cast them yourself, then packs away his sister’s stave.
 
 ## ev.ev_kiovia_mentor_runes.choice_2_result
 
-You hear how a single rune is drawn. The account is written down before the hour turns.
+He draws one mark and tells you how he reads it. You write down his account in your travel book, then return the stave to him.
 
 ## ev.ev_caffa_mentor_runes.choice_1_result
 
@@ -327,7 +348,7 @@ You walk on. The matter is marked and will not be forgotten.
 
 ## ev.ev_kiovia_runes_ford.choice_2_result
 
-You cross without a mark. The matter is marked and will not be forgotten.
+You carry your bag aboard and cross with the other travellers. On the far bank, the ferryman hands back a strap that slipped from your pack. You thank her and continue.
 
 ## ev.ev_road_bazi_counsel.choice_2_result
 

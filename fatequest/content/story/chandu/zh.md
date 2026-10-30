@@ -6,7 +6,7 @@ source_rev: 6d1c46f5e8a6
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
@@ -28,7 +28,7 @@ stamps:
   ev.chandu.a.title: d4ecbc6f2eac
   ev.chandu.b.body: 4b58f4a9b2dc
   ev.chandu.b.title: f79f38df1d4a
-  ev.chandu.c.body: 2b54130cd550
+  ev.chandu.c.body: 53817f0aa677
   ev.chandu.c.title: 5246e39d0536
   ev.chandu.entry.body: 6a6e197bd362
   ev.chandu.entry.title: 71280f0b9041
@@ -38,14 +38,14 @@ stamps:
   ev.ev_chandu_a.choice_1_result: 5e6691b10b01
   ev.ev_chandu_a.choice_2_result: b252462e7406
   ev.ev_chandu_a.choice_3_result: e59d63dca14b
-  ev.ev_chandu_b.choice_1_result: 752833f1001f
+  ev.ev_chandu_b.choice_1_result: 13a9ff0c519c
   ev.ev_chandu_b.choice_2_result: c3f0b863d390
   ev.ev_chandu_b.choice_3_result: ee6a065a2f63
   ev.ev_chandu_c.choice_1_result: eed519e12c28
   ev.ev_chandu_c.choice_2_result: 952b47a7943c
   ev.ev_chandu_c.choice_3_result: b0efdd35e4de
   ev.ev_chandu_consequence_a.title: 5a1fc0b89f37
-  ev.ev_chandu_consequence_a.body: 8fd0431b830c
+  ev.ev_chandu_consequence_a.body: f7bc00d59192
   ev.ev_chandu_consequence_a.choice_1: da3b44b04fed
   ev.ev_chandu_consequence_a.choice_1_result: 61600f49e311
   ev.ev_chandu_consequence_a.choice_2: 4872fa7aaf22
@@ -61,15 +61,15 @@ stamps:
   ev.ev_chandu_consequence_b.choice_1: 21bde693925f
   ev.ev_chandu_consequence_b.choice_1_result: c2565087a921
   ev.ev_chandu_consequence_b.choice_2: 65cb193c0692
-  ev.ev_chandu_consequence_b.choice_2_result: 170e90b33003
+  ev.ev_chandu_consequence_b.choice_2_result: ff726c86e36e
   ev.ev_chandu_consequence_b_resolution.title: d46b0cef8941
   ev.ev_chandu_consequence_b_resolution.body: 7a2024e79aa2
   ev.ev_chandu_consequence_b_resolution.choice_1: d51eb49f8d7e
   ev.ev_chandu_consequence_b_resolution.choice_1_result: fa35284517b4
   ev.ev_chandu_consequence_b_resolution.choice_2: fb951fb173bd
   ev.ev_chandu_consequence_b_resolution.choice_2_result: 6ad8c7a3d919
-  ev.chandu.mentor_closure.title: 34de8345e68d
-  ev.chandu.mentor_closure.body: ed1bbafdd7e8
+  ev.chandu.mentor_closure.title: b844c5edffea
+  ev.chandu.mentor_closure.body: 2bf3951a3592
   ev.chandu.mentor_closure.choice_1: da8d611ab3c7
   ev.chandu.mentor_closure.choice_1_result: 289bd0dd5b17
   ev.chandu.mentor_closure.choice_2: 59a447ce21bf
@@ -93,7 +93,7 @@ stamps:
   ev.ev_chandu_b_followup.choice_3: db65fc5e896f
   ev.ev_chandu_b_followup.choice_3_result: 3d08cd751272
   ev.ev_chandu_c_followup.title: 17e981360450
-  ev.ev_chandu_c_followup.body: 7c6700e473b3
+  ev.ev_chandu_c_followup.body: 4aa7445da30c
   ev.ev_chandu_c_followup.choice_1: b21b7676c0a8
   ev.ev_chandu_c_followup.choice_1_result: 3c1ce9002e8f
   ev.ev_chandu_c_followup.choice_2: d62aaea36f23
@@ -101,7 +101,7 @@ stamps:
   ev.ev_chandu_c_followup.choice_3: fd4e6ef75bfc
   ev.ev_chandu_c_followup.choice_3_result: 3702f06c92f9
   ev.ev_chandu_mentor_followup.title: b3e91010beed
-  ev.ev_chandu_mentor_followup.body: 5368be3c2387
+  ev.ev_chandu_mentor_followup.body: dbd509bff018
   ev.ev_chandu_mentor_followup.choice_1: 3adc89e37ed1
   ev.ev_chandu_mentor_followup.choice_1_result: 45adda4141a1
   ev.ev_chandu_mentor_followup.choice_2: 3e48cdb68909
@@ -116,39 +116,39 @@ stamps:
 
 ## ev.chandu.a.choice.admire
 
-在宫外草地上欣赏这座竹宫
+在宫外草地上看看竹宫
 
 ## ev.chandu.a.choice.enter
 
-贿赂守卫踏入金竹宫殿
+给守卫些钱，进去看看竹宫
 
 ## ev.chandu.a.choice.sketch
 
-花一天把这宫殿细细画下来
+花一天把宫殿画下来
 
 ## ev.chandu.b.choice.falcon
 
-雇一名鹰师借大汗的猎鹰打一次猎
+请鹰师带你体验一次猎鹰
 
 ## ev.chandu.b.choice.horses
 
-在墙缝间窥看那千匹神白马
+从墙边看看草场上的白马
 
 ## ev.chandu.b.choice.walk
 
-沿十六里宫墙走一走
+沿着宫墙走走
 
 ## ev.chandu.c.choice.listen
 
-问一个僧人这仪式是什么意思
+问僧人这场仪式是怎么回事
 
 ## ev.chandu.c.choice.offering
 
-斟一杯献给永恒蓝天
+斟一杯奶，按当地礼俗献给长生天
 
 ## ev.chandu.c.choice.watch_mares
 
-黎明看僧人给白马挤奶
+天亮时看人们给白马挤奶
 
 ## ev.chandu.entry.choice.customs
 
@@ -164,10 +164,9 @@ stamps:
 
 ## ev.chandu.a.body
 
-大汗在上都有一座夏宫，全用镀金之竹建成——柱、墙、梁，无一例外。竹取自蛮子南方的林中，
-剖开、髹漆、贴金箔，再用丝绳缚合。此宫可拆可移，随大汗出行，因它只靠丝绳维系。绿、
-青、朱、金四色的龙盘上每一根柱。殿内铺着磨到能映出镀金天花的大理石板。天下再没有一座建筑，
-既如此轻，又如此华。
+上都的宫殿里，大理石、金饰和彩绘挤满视线。守宫人看出你在找竹宫，立刻来了兴致：“那座才有意思，能拆开带走。”他领你看金龙柱、漆过的竹梁和绑梁的丝绳，还特意提醒别摸——漆面是刚补好的。
+
+守宫人沿着竹梁轻敲，哼起一支修缮小调： “竹节相接，梁影成行； 漆面薄薄，朱色照窗； 拆下记号，装回依样； 宫里一程，草原一望。” 他解释竹宫可拆装的结构：“每根梁的位置都做了记号，搬到夏都仍能照原样搭起。漆层要薄薄补匀，干透后再上新的装饰。”
 
 ## ev.chandu.a.title
 
@@ -175,10 +174,9 @@ stamps:
 
 ## ev.chandu.b.body
 
-宫后有墙，周十六里，圈出大汗的猎苑——林深且广，骑马一日亦不能穿过。苑中蓄鹿、野猪、
-野驴、熊与豹，供大汗游猎。中央有湖，一溪入之，湖上水禽凡人所知者皆备。大汗携鹰师、
-猎手与养豹人骑行于此。苑之一隅，蓄白牝马千匹——其乳专供皇族，马亦至圣，凡下位者不得骑、
-不得触，甚至不得踏入其牧场。
+猎鹰架旁，驯鹰人正给海东青喂肉。园里养着许多鹰，守园人说大汗常带猎豹出行，猎物会分给鹰吃。他说得眉飞色舞，还把一只鹰托到你面前：“别怕，它戴着眼罩，看不见你。”
+
+驯鹰人把肉块放在手套上，孩子们围着唱： “眼罩轻，脚绳松； 肉一递，鹰落腕； 听见主人换口令， 展翅沿着风回转。” 他示范摘下眼罩、喂鹰，再让它认熟悉的手势：“鹰先安静下来，再练听口令。孩子把步骤编成歌，记得住，也知道什么时候该给它一点空间。”
 
 ## ev.chandu.b.title
 
@@ -186,28 +184,20 @@ stamps:
 
 ## ev.chandu.c.body
 
-苑北端草甸上，春宫的僧人照料着圣白牝马。这些马不骑不役，一日挤乳两次，乳盛于金器送上大汗之案。
-凡下位者不得尝。一年一度，蒙古大节之日，大汗亲自骑到甸上，把乳泼在地上，献与长生天与金土之灵——此礼可溯至蒙古尚为北方草原游牧部落、
-远未君临天下之时。从未有外人获准目睹此仪。
+草场上，负责照看白马的侍从正给马梳鬃。你问起蒙古人的祭仪，他先确认你不是来取笑的，才讲起人们向长生天献乳、祈求草场丰足的旧俗。说到白牝马时，他把声音放轻：“这个细节，外人通常听不到。”
 
 ## ev.chandu.c.title
 
-白牝之甸
+白马草场
 
 ## ev.chandu.entry.body
 
-从先前所说的那座城，向东北与正北之间骑行三日，便到上都——这是当今在位的大汗所建。此处有一座极美的大理石宫殿，
-室内全都镀金，画着人物、走兽、飞鸟与种种树木花草，笔法精妙，令人看了又惊又喜。宫外筑墙，周长十六里；
-苑中有泉水、河流、溪涧与芳草甸，养着种种野兽（猛兽除外），供大汗蓄养的海东青与诸鹰作食。
-单是海东青就有两百多只，其它鹰尚不计。大汗每周都亲自去看笼中的鸟；有时骑马穿苑，鞍后带着一只豹——见中意的猎物，
-便放豹去捉，捉到的猎物就喂给笼中的鹰。这是他的消遣。另外，[苑中有一处可爱的树林，]他另建了一座竹宫，
-我须细细说给你听。全宫镀金，内部装修极精。[立于镀金髹漆的柱上，每柱有一条通体鎏金的龙，
-尾贴柱身，头承楣梁，爪亦左右伸开托住楣梁。]屋顶也用竹子做成，涂一种极坚极好的漆，
-任雨淋多少也不朽。这些竹子粗约三掌，长约十至十五步。
+上都的宫墙外，侍从正把猎鹰送回鹰架。你抬头看见宫殿的彩绘和金饰，守园人却先提醒你别靠近猎场：“鹰认得主人，不认得你。”他领你看竹宫，讲起竹竿怎样上漆、怎样架在金龙柱上。说到一半，他忍不住夸：“别处宫殿再大，也没有我们这座夏宫凉快。”
 
+猎苑的守人压低声音，说大汗有只鹰能听懂每一种语言，只是装作听不懂，好偷听商人谈价。鹰正叼走他手里的肉。守人瞪着它：“看吧，我刚说它听不懂，它就拿走了。”
 ## ev.chandu.entry.title
 
-记上都城与大汗之宫
+上都和大汗的夏宫
 
 ## ev.ev_chandu_entry.choice_1_result
 
@@ -219,7 +209,7 @@ stamps:
 
 ## ev.ev_chandu_entry.choice_3_result
 
-你在上都的市集里走了一日，带出来一驮货物。夏都的贸易，如今写进了你的行纪。
+上都的集市从早忙到晚，摊前堆着牲畜、粮食和布匹。你挑了几样路上用得着的货。
 
 ## ev.ev_chandu_a.choice_1_result
 
@@ -227,19 +217,19 @@ stamps:
 
 ## ev.ev_chandu_a.choice_2_result
 
-你站在宫外草地上，仰望那金顶衬着天空。大汗的游乐宫殿，如今记在你的行纪里。
+你站在宫外草地上，看金顶映着天边的晚霞。守门人说：“白天从城里看，金顶亮得刺眼；傍晚在这里看，才像是压在草原尽头。”
 
 ## ev.ev_chandu_a.choice_3_result
 
-你花了一日，仔细描画这座宫殿。屋顶与园林的线条，如今落在你的行纪里，是别的旅人拿不到的。
+你仔细画下宫殿的屋顶和园林。画稿上，飞檐的线条被你描了好几遍。
 
 ## ev.ev_chandu_b.choice_1_result
 
-你沿着十六里长的围墙走了大半天。上都御苑如今记在你的行纪里，连同其中的禽兽与畜群。
+你沿着长达十六里的围墙走了大半天。苑里的鹿、孔雀和猎犬各有各的围栏，守园人边领路边提醒你：“离开这条道，可别去惊了猎鹰。”
 
 ## ev.ev_chandu_b.choice_2_result
 
-你在围墙的缺口处望见那神圣的白马，它们的乳汁唯有大汗与宗亲可饮。这一幕，如今记在你的行纪里。
+你从围墙缺口看见一群白马。守园人压低声音说：“这些马的乳只送进宫里，大汗和宗亲才能喝。”
 
 ## ev.ev_chandu_b.choice_3_result
 
@@ -247,7 +237,7 @@ stamps:
 
 ## ev.ev_chandu_c.choice_1_result
 
-你在黎明看僧侣为白马挤奶，并按礼数把乳汁洒在地上。向天献祭的仪轨，如今写进了你的行纪。
+黎明时，你看僧侣按仪式给白马挤奶，再把乳汁洒在地上。向天献祭的过程就在你眼前展开。
 
 ## ev.ev_chandu_c.choice_2_result
 
@@ -259,11 +249,11 @@ stamps:
 
 ## ev.ev_chandu_consequence_a.title
 
-上都：门上的印记
+上都：驯马人的引荐
 
 ## ev.ev_chandu_consequence_a.body
 
-第一个回答并没有在城门处结束。草场上一位马夫把你引到一旁，问你打算从上都带走什么。问题背后正是行宫与草场；他提出把你的名字与一位马师的名字系在一起，这位马师照看着神圣的白马。你须决定如何对待这道征兆。
+草场上的马夫把你叫住，说宫廷驯马人愿意替你挑一匹坐骑。他先问你要走多远、带多少行李，免得把好马交给不合适的旅人。
 
 ## ev.ev_chandu_consequence_a.choice_1
 
@@ -271,23 +261,23 @@ stamps:
 
 ## ev.ev_chandu_consequence_a.choice_1_result
 
-你收下马夫递来的名字，追问谁能为它作保。他报出草场上两位饲马的汉子，此事又打开了。
+你收下马夫递来的名字，追问谁能为它作保。他报出草场上两位饲马的汉子：“找他们就行，俩人都认得我。”
 
 ## ev.ev_chandu_consequence_a.choice_2
 
-谢过这位马夫，把自己的打算收在心里
+谢过这位马夫，暂时不说自己的打算
 
 ## ev.ev_chandu_consequence_a.choice_2_result
 
-你谢过这位马夫，把自己的打算收在心里。此事在草场就此了结，上都不再有人向你多问一句。
+你谢过这位马夫，暂时不说自己的打算。此事在草场就此了结，上都不再有人向你多问一句。
 
 ## ev.ev_chandu_consequence_a_resolution.title
 
-上都：马师的承诺
+上都：驯马人的承诺
 
 ## ev.ev_chandu_consequence_a_resolution.body
 
-你已答应把马师的承诺带在身上——马夫说，这承诺在北边草场上会被兑现。它不会替你决定整段旅程，但在草场的路上，这句话或许能为你换得一匹坐骑。
+驯马人答应替你留意一匹合适的马。到了草场上报他的名字，或许能少花些时间挑坐骑。
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1
 
@@ -299,43 +289,43 @@ stamps:
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2
 
-把马师的承诺收进自己的行纪
+记下马师的承诺
 
 ## ev.ev_chandu_consequence_a_resolution.choice_2_result
 
-你把马师的承诺收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
+马师说，只要你到了草场报他的名字，他就替你挑一匹合适的马。说完，他拍了拍你的肩：“一路顺风，别让好马等太久。”
 
 ## ev.ev_chandu_consequence_b.title
 
-上都：回答之后的路
+上都：驯鹰人的消息
 
 ## ev.ev_chandu_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，宫中一位驯鹰人找到你，讲起行宫与草场的另一番说法——白马在哪片草场吃草，以及大汗真正走的是哪座门。这说法不如游记宏大，却更适合带在身上。
+宫里的驯鹰人把你拉到一旁，低声说：“白马常在北边那片草场放养，大汗进出猎苑多走东门。这些事别到处讲，守门的人会问。”
 
 ## ev.ev_chandu_consequence_b.choice_1
 
-照着这位驯鹰人的实用建议走
+按驯鹰人的建议准备
 
 ## ev.ev_chandu_consequence_b.choice_1_result
 
-你照着这位驯鹰人的实用建议走，请他把它写下来。他为你把这段叙述抄出，草场的真正尺度便落进你手里。
+你请驯鹰人把草场和猎苑入口的位置写给你。他压低声音提醒：“这张纸别给不认识的人看，宫门那边查得严。”
 
 ## ev.ev_chandu_consequence_b.choice_2
 
-把这段叙述留给那位驯鹰人
+先不拿走这份记录
 
 ## ev.ev_chandu_consequence_b.choice_2_result
 
-你把这段叙述留给那位驯鹰人，自己收住了口。它回到了草场，上都不再向你索取什么。
+你谢过驯鹰人，没有收下那张纸。他把纸折好放回袖中，又叮嘱你别在宫门附近谈起白马草场。
 
 ## ev.ev_chandu_consequence_b_resolution.title
 
-上都：草场的账目
+上都：草场和宫门的消息
 
 ## ev.ev_chandu_consequence_b_resolution.body
 
-你已选择带着这位驯鹰人的账目上路——白马在哪片草场吃草，以及大汗真正走的是哪座门。它不会替你决定整段旅程，但它指出的那条路，不会白白耗掉你一日。
+马夫把白马草场和猎苑入口的位置说给你听：“到了上都附近，找守苑的人问路。他们熟这片地，外人光看围墙容易走错。”
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1
 
@@ -343,23 +333,23 @@ stamps:
 
 ## ev.ev_chandu_consequence_b_resolution.choice_1_result
 
-你在天黑前给下一位骑手提了醒。草场的尺度从此走在你前头，它落在何处，你的名字便随到何处。
+你在天黑前把草场的消息告诉下一位骑手。他听完立刻改了行程：“我先去找守苑人问路，省得绕着围墙乱转。”
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2
 
-把这份草场札记收进自己的行纪
+收好这份草场笔记
 
 ## ev.ev_chandu_consequence_b_resolution.choice_2_result
 
-你花了一日，把这份草场札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
+你学会了辨认草场上的几处标记，以后再来，就知道该往哪条路走。
 
 ## ev.chandu.mentor_closure.title
 
-上都的引路人
+草场边的驯马人
 
 ## ev.chandu.mentor_closure.body
 
-离开上都之前，草场边的宫廷驯马人问你从这里看出了什么。这个教诲不是法术，也不是交易；它只是教你留意道路转弯之后真正有用的细节。
+草场边的驯马人问你喜欢哪匹马。他看了看你的行李：“先想好要走多远，再挑能陪你走到那里的。”
 
 ## ev.chandu.mentor_closure.choice_1
 
@@ -367,15 +357,15 @@ stamps:
 
 ## ev.chandu.mentor_closure.choice_1_result
 
-宫廷马师并不回避：读地与观风之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
+驯马人捻了捻马鬃：“草场上的风能先告诉你雨什么时候来。看云压在哪座山头，再决定今晚扎营；马淋透了，第二天就跑不动。”
 
 ## ev.chandu.mentor_closure.choice_2
 
-留下 一日，听完这段完整的讲述
+留一天，听完这段完整的讲述
 
 ## ev.chandu.mentor_closure.choice_2_result
 
-你在草场陪着马师留了一日，他把大汗的饲养之道从容地讲给你。临别时他摆在你面前的，是一个北边草场会兑现的承诺。
+你在草场陪马师看马饮水、喂草。他说：“北边草场的人认得我。你到了就报我的名字，他们会替你挑坐骑。”
 
 ## ev.chandu.mentor_closure.choice_3
 
@@ -391,7 +381,7 @@ stamps:
 
 ## ev.ev_chandu_a_followup.body
 
-你终于踏进大汗那座通体镀金的竹宫，宫中的守宫人，一名宫家执事，走到你身边。他对你说，整座宫殿只靠丝绳维系——每一根柱、每一道梁，皆以染成大汗之色的丝绳缚合。你问他，一位能令半亚洲的云石都听命于他的君主，为何把夏宫建在空竹之上。执事答道：当初营建此宫时，宫廷的星者仰观天象，断言园中的树木将在大汗有生之年枯死，任何固定的宫殿都难久立于死林之间。于是大汗下令造一座可以解开、可以随他所愿搬往任何驻跸之处的宫室；他出行时，丝绳解下，鎏金之柱放倒，整座宫殿由骆驼驮着随驾而行，到下营之地再重新缚合。他指给你看髹漆的龙柱、鎏金的屋顶、映出天花的大理石地面，又说此宫不会空置太久，因为大汗随夏天一起归来。你再看那些丝绳，目光已然不同：一座不用钉榫的屋子，是一座永不被弃的屋子。
+守宫人把你带到竹宫的接缝旁：“看这根梁，靠丝绳打的绳结扣住柱头。要迁宫，先卸顶上的竹片，再松梁上的绳；金龙柱得几个人合力抬。”他笑了笑：“宫里人都说整座宫能搬走，真搬过几回，各人说法却不同。你想问为什么这么造，还是看看工匠怎么拆？”
 
 ## ev.ev_chandu_a_followup.choice_1
 
@@ -399,7 +389,7 @@ stamps:
 
 ## ev.ev_chandu_a_followup.choice_1_result
 
-执事告诉你，营建此宫时宫廷星者读天，断言注定枯死的林木之间立不起固定的宫室。丝绳与金柱，便是大汗的回答：一座能移动的宫殿，便不会被弃于死林之中。
+执事摸着金柱说：“宫廷星者当年看过天象，说这片林子里的树迟早要枯，固定的宫殿留不住。大汗便造了座能拆能搬的宫室，连金柱和丝绳也都能带走。”
 
 ## ev.ev_chandu_a_followup.choice_2
 
@@ -407,15 +397,15 @@ stamps:
 
 ## ev.ev_chandu_a_followup.choice_2_result
 
-执事说出南边那条路，穿过蛮子的竹林，镀金之竹与丝绳便由此运到上都。通往河间府的路如今上了你的舆图，你也知道世上最轻的宫殿从何而来。
+执事说：“南边竹林的竹子先镀金，再用丝绳运到上都。河间府也有竹材，想看工匠怎么处理，可以从那边打听。”
 
 ## ev.ev_chandu_a_followup.choice_3
 
-留下 一日，看宫殿为大汗出行重新缚合
+留一天，看宫殿为大汗出行重新缚合
 
 ## ev.ev_chandu_a_followup.choice_3_result
 
-你在宫中留下一日，看丝绳解下、金柱放倒，仿佛整座鎏金宫室是一座毡帐。执事容你在旁观看缚合之法，你带走的这份见识，是任何书本都不曾写给你的。
+你站在宫中看工匠解下丝绳、放倒金柱，再把整座宫室像毡帐一样重新缚合。执事边做边讲每处绳结的用法；他笑说，书上写得再细，也不如亲手拉一次。
 
 ## ev.ev_chandu_b_followup.title
 
@@ -423,7 +413,7 @@ stamps:
 
 ## ev.ev_chandu_b_followup.body
 
-你在十六里宫墙的内侧找到鹰师的栖所，大汗的猎鸟便养在此处。单是海东青便有两百余只，其余诸鹰尚不计入，皆蒙着眼罩栖于架上；鹰师以大汗在园中所猎之肉喂之。领头的鹰师见你是生客，把一只蒙眼的海东青搁在腕上，说起大汗行猎的光景：他骑苑而行，鞍后伏着一只豹，看见中意的野兽，便放豹去扑，猎得之物则转给栖中之鹰为食。鹰师又教你眼罩与诱饵的用法，说一只鸟须先受驯于诱饵，才肯放它扑猎。他还说起向东的那条路，通向大汗冬居的大城汗八里——当草甸之草食尽，大汗便循此路南下。他在空中描画那路的形状：宫墙、河流、平野。你听着，那座原只作游园看的猎苑，渐渐显出整个帝国的骨架。
+鹰师让你站在鹰架旁看喂食。他讲大汗出猎时会带着猎豹，猎获也会分给鹰群；讲到鹰的训练，他才认真起来：“眼罩一摘，它得先认准诱饵。”你可以问行猎、问去汗八里的路，或多留一天看鹰。
 
 ## ev.ev_chandu_b_followup.choice_1
 
@@ -431,7 +421,7 @@ stamps:
 
 ## ev.ev_chandu_b_followup.choice_1_result
 
-鹰师告诉你，大汗见中意的野兽，便从鞍后放豹去扑，猎得之物则转给栖中之鹰。你如今明白猎苑为何蓄养得如此丰盛——每一只兔与鹿，都是大汗鹰群的口粮。
+鹰师指指猎豹：“大汗看中哪只野兽，就从鞍后放豹去扑。猎下来的肉也会分给鹰群——你看这几架鹰笼，光靠兔子可养不饱。”
 
 ## ev.ev_chandu_b_followup.choice_2
 
@@ -439,15 +429,15 @@ stamps:
 
 ## ev.ev_chandu_b_followup.choice_2_result
 
-鹰师在空中画出东路：过宫墙、渡河、穿平野，直达大城汗八里。这条路如今清楚印在你的舆图上，你也知道大汗在草尽之时正是循此路南下。
+鹰师朝东边一比：“出宫墙，过河，再穿过平原就到汗八里。草长到头时，大汗也会沿这条路南下。”
 
 ## ev.ev_chandu_b_followup.choice_3
 
-留下 一日，看栖中的海东青就食
+留一天，看栖中的海东青就食
 
 ## ev.ev_chandu_b_followup.choice_3_result
 
-你在栖所留下一日，看鹰师以清晨猎获之肉喂食海东青。你见一只蒙眼之鸟扑向诱饵，这一日有所花费——但你亲眼看过了大汗自家鹰师的营生。
+你跟着鹰师看他用清晨猎来的肉喂海东青。一只蒙眼的鸟扑向诱饵，鹰师说：“这样能让它习惯听声扑食，出猎时才不会乱追。”
 
 ## ev.ev_chandu_c_followup.title
 
@@ -455,7 +445,7 @@ stamps:
 
 ## ev.ev_chandu_c_followup.body
 
-在猎苑北端的草甸上，春宫的僧人守着白牝马，也守着那场从未有外人获准目睹的祭仪。他对你说，蒙古原是一支北方草原上的游牧部族，远在君临天下之前，大宪宗成吉思便是从那样的畜群之间崛起，以一片青天把万邦缚合为一。一年一度大节之日，大汗骑到草甸，把千匹白牝马的乳汁泼在地上，献与长生天与金土之灵。僧人解说道：此祭所求，是天令草青、地令水甜，是大汗如先祖一般——那时他们除毡帐与牝马外一无所有——使天地各守其位。他又说起成吉思当年在草原上向天地之灵所立的誓言，以及蒙古人至今仍以金器所盛之乳相酬此誓。他说，这祭礼比任何宫殿都要古老，也必将比它们存得更久。
+草场的僧人说：“宫里每年向长生天献乳，求草场丰茂、牲畜平安。我不是每年都能进宫，只听宫里人讲过。”你可以问仪式的用意、听成吉思汗的故事，或留下看清晨挤奶。
 
 ## ev.ev_chandu_c_followup.choice_1
 
@@ -463,7 +453,7 @@ stamps:
 
 ## ev.ev_chandu_c_followup.choice_1_result
 
-僧人讲起成吉思汗的故事——那位以一片青天缚合万邦的牧人，以及他在草原上向天地之灵所立的誓言。初汗的故事，如今随你走出草甸。
+僧人望着草场说：“铁木真年轻时立过誓，要让草原上的部族不再各自为战。后来他成了成吉思汗，把各部拢到了一起。”
 
 ## ev.ev_chandu_c_followup.choice_2
 
@@ -475,19 +465,19 @@ stamps:
 
 ## ev.ev_chandu_c_followup.choice_3
 
-留下 至天明，看初光中为牝马挤乳
+等到天亮，看初光中为牝马挤乳
 
 ## ev.ev_chandu_c_followup.choice_3_result
 
-你留到天明，看白牝马在初光中挤乳，金器盛乳送往大汗之案。这花去你一日路程，但你见到了那场从未有外人获准目睹的祭仪。
+你等到天明，看白牝马在初光中挤乳，金器盛乳送往大汗之案。驯马人低声说：“这祭礼平时不让外人看，你今夜赶上了。”
 
 ## ev.ev_chandu_mentor_followup.title
 
-上都：驯马人的临别之赠
+上都：驯马人的临别礼
 
 ## ev.ev_chandu_mentor_followup.body
 
-在草甸边教过你的宫廷驯马人，不让你只带着他的讲述离开上都。他探手入鞍囊，把谋生之余的物事铺开：一页御厩的笔记、一幅驿路旧图、一日的耐心。他让你挑哪一件于前路最合用，因为草原辽阔，旅人只带着随身之物上路。他的笔记记着白牝马的相法——胸的广狭、肩的斜正、眼的性情——以及为大汗所养御厩的次序。他画的那条驿路向南通往长芦，每站皆换马。或者你取那一日的耐心，在他身侧学如何一眼相马、如何为远途择骑、如何使骑者的重量不伤其畜。你挑了，驯马人看着你挑而不置一词，仿佛一个以一生相人如相马的人。
+驯马人从鞍囊里拿出御厩笔记和一张驿路旧图：“笔记里写了怎么看耳朵、蹄子和鼻息；图上是南去长芦的换马站。想亲手挑一匹，也可以跟我待一天。你先选哪样？”
 
 ## ev.ev_chandu_mentor_followup.choice_1
 
@@ -495,7 +485,7 @@ stamps:
 
 ## ev.ev_chandu_mentor_followup.choice_1_result
 
-你收下驯马人关于御厩的笔记，字迹紧密而素朴。你从白牝马与相马之学中所获的一切，如今可以在路上随时翻阅。
+驯马人把一本御厩笔记递给你：“白牝马性子急，先看耳朵和鼻息，别急着上鞍。挑马的诀窍都在这里，路上慢慢看。”
 
 ## ev.ev_chandu_mentor_followup.choice_2
 
@@ -503,12 +493,12 @@ stamps:
 
 ## ev.ev_chandu_mentor_followup.choice_2_result
 
-驯马人画出南去长芦的驿路，每一站皆换马。这条路如今上了你的舆图，你知道了大汗自家信使所骑的路。
+驯马人给你画出南去长芦的驿路，每一站都能换马。
 
 ## ev.ev_chandu_mentor_followup.choice_3
 
-留下 一日，学驯马人的手艺
+留一天，学驯马人的手艺
 
 ## ev.ev_chandu_mentor_followup.choice_3_result
 
-你在驯马人身旁留下一日，学如何择骑、如何负重。这花费了时日，但相马之术如今有一分已属于你。
+你跟着驯马人辨马的步态、蹄子和负重习惯。他拍拍马颈说：“挑得合适，能少走不少冤枉路。”

@@ -15,446 +15,415 @@ Lop
 
 ## ev.lop.bazaar.body
 
-The bazaar of Lop spills out of the town walls onto the gravel plain where the caravans
-assemble. Merchants from Khotan and Sachiu spread their goods on carpets laid on the
-ground: bolts of silk, sacks of dried melon, blocks of pressed tea, and — rarest of all
-— river jade from the streams above Cotan. The jade merchants sit apart, their stones
-displayed on black velvet to show the color. A piece of mutton-fat white jade the size
-of a man's fist costs more than a camel. The trader smiles and holds it up to the sun;
-the light passes through it like water.
+At the Lop market, a jade dealer named Mira has two cloth parcels open on her mat. Her daughter places a pebble beside each to remember which caravan brought it. The girl reaches for a white stone from Cotan, then stops: its tag bears the name of a cousin she has not seen in months. Mira asks her to read the whole note before asking about the price.
+
+You ask whether the cousin found the stone. The daughter reads that he bought it from a river picker and sent it with the autumn caravan. He also asks if her broken sandal has been mended. ‘He remembers everything except his own boots,’ she says. Mira laughs and ties a fresh strip of cloth around the parcel so it will not be mixed with another buyer’s goods.
+
+Mira has a full trading lot of jade for 135 silver. Her daughter knows the river towns named on the tags, though she is still reading the cousin’s note when a customer arrives. She folds it carefully and asks you to wait a moment.
 
 ## ev.lop.bazaar.choice.ask_prices
 
-Ask where the jade comes from
+Ask Mira’s daughter about the river towns
 
 ## ev.lop.bazaar.choice.buy_jade
 
-Buy the mutton-fat jade (400 coins)
+Buy the full jade trading lot for 135 silver
 
 ## ev.lop.bazaar.title
 
-The Jade Market
+The Jade Dealer’s Ledger
 
 ## ev.lop.caravanserai.body
 
-The caravanserai of Lop is the last way-station before the Great Desert — a vast
-courtyard surrounded by stables and sleeping-platforms, filled with the smell of camel,
-dust, and cooking-fires. Travelers who have just crossed the desert sit stunned in the
-shade, drinking water mixed with a little salt to restore what the sand has taken. Those
-about to cross listen to their stories with mounting dread. The innkeeper offers guides,
-provisions, and advice, taking payment in silver and giving change in dried meat. The
-walls are covered with graffiti in a dozen scripts: names of travelers who made it, and
-prayers for those who did not.
+At the caravan inn, a guide named Arslan is counting water skins with a family bound for Sachiu. The father says there are six; his daughter points to a seventh beneath the bench. Arslan lifts it and finds the stopper cracked. ‘We count the water that stays inside,’ he tells her. The innkeeper brings a new stopper and asks who will fit it.
+
+You ask how the party will cross. Arslan lays out the wells he expects to use and shows where the road crosses a salt flat. A cook who travelled with him last season interrupts to correct the name of one stopping place. Arslan checks her memory against his marks and changes the line. The family watches them work through it instead of rushing to load the animals.
+
+Arslan charges 2 silver to guide a party; a shared place with a later caravan costs 1.2 silver and means waiting eight days. The innkeeper also keeps a prepared provisions bundle for 0.8 silver. The daughter stays beside the repaired skin until she sees that it holds water.
 
 ## ev.lop.caravanserai.choice.hire_guide
 
-Hire a desert guide (200 coins)
+Hire Arslan to guide you for 2 silver
 
 ## ev.lop.caravanserai.choice.provision
 
-Stock up on provisions (80 coins)
+Buy the prepared provisions for 0.8 silver
 
 ## ev.lop.caravanserai.choice.wait_caravan
 
-Wait for a caravan (8 days, 120 coins)
+Wait eight days and pay 1.2 silver to join a caravan
 
 ## ev.lop.caravanserai.title
 
-The Caravanserai
+The Guide at the Caravan Inn
 
 ## ev.lop.entry.body
 
-Lop is a large town at the edge of the Desert of Lop, and travellers who mean to cross
-rest here a week to refresh themselves and their beasts. Then they load provision for a
-month for man and beast, and go forward. You must know that the desert is said to be so
-long that no one could ride across it in a year; and where it is narrowest it still
-takes a month. It is all sand and barren mountains, with nothing at all to eat, but in a
-day and a night you find sweet water, enough for fifty or a hundred persons with their
-beasts.
+At the inn in Lop, Aysen is checking the seams of a water skin while her nephew counts the sacks for a departing caravan. He counts a sack twice and cannot understand why the list has one too many. Aysen sets the skin down and asks him to start with the loads already tied. You help him separate the empty bags from the full ones.
+
+You ask how long they prepare for the crossing. Aysen says some families stay several days to rest their animals and learn which wells are usable; every party makes its own plan from the water it can actually carry. A well keeper comes in with a new report about a bitter well. The nephew asks whether that means their caravan must wait. ‘It means we talk to the guide before we choose,’ Aysen tells him.
+
+She offers you a place to sleep for the day. The well keeper is staying until evening and will answer questions once he has eaten. The nephew finally gets the sacks to match the list and calls his aunt over to check them.
 
 ## ev.lop.entry.choice.ask
 
-Ask what men say of the desert crossing
+Ask the well keeper about the crossing
 
 ## ev.lop.entry.choice.rest
 
-Rest half a day by the road
+Rest a day at Aysen’s inn
 
 ## ev.lop.entry.title
 
-The Town of Lop
+A Night at the Lop Inn
 
 ## ev.lop.shrine.body
 
-In the low cliffs east of the town, the wind has carved a labyrinth of shallow caves.
-The walls are covered with charcoal drawings left by travelers over centuries: camels,
-horsemen, prayers in Arabic and Sanskrit, names and dates. A small Buddhist shrine
-occupies the largest cave — a clay Buddha painted with cheap gold leaf, surrounded by
-burnt-out incense sticks and offerings of dried fruit. The monks are gone, but the
-shrine-keeper, an old Tangut woman with a leathery face, tends the lamps and accepts
-whatever coins the travelers leave.
+In a shallow cave outside Lop, an elderly keeper named Tuma trims the wick of a small lamp. Her grandson sweeps sand from the threshold, stopping every time the wind blows it back. ‘Sweep the corner first,’ she tells him. ‘Then the door.’ He asks why the travellers have left so many names on the wall. Tuma says some wanted their families to know they reached this place; others simply wanted someone to read them.
+
+You ask which marks Tuma can still read. She points to an old prayer, then to a more recent note about a well. A passing merchant says that well changed after last year’s flood. Tuma asks him to add the new account beside the older one, with the date, so the next travellers understand both. He finds a piece of charcoal and kneels near the wall.
+
+Tuma accepts half a silver for lamp oil from those who wish to give. Her grandson finally clears the doorway and sits down to listen as the merchant tells her what happened at the well.
 
 ## ev.lop.shrine.choice.offer
 
-Leave an offering (50 coins)
+Give 0.5 silver toward lamp oil
 
 ## ev.lop.shrine.choice.watch
 
-Watch the pilgrims
+Stay and hear the travellers’ accounts
 
 ## ev.lop.shrine.title
 
-The Caves of Lop
+The Keeper of the Cave Lamps
 
 ## ev.ev_lop_entry.choice_1_result
 
-You rest half a day by the road at the edge of the desert, watering your beasts. An old well-keeper who knows every water on the Lop road watches you, and comes over to speak.
+You rest for a day, check your water skin and talk with Aysen’s nephew while the caravan sorts its loads. The route toward Sachiu is marked for you; the old well keeper comes back after supper.
 
 ## ev.ev_lop_entry.choice_2_result
 
-The men of the last town before the waste answer your questions gravely. They do not agree about the crossing, and one of them says he will bring you the truth of it before nightfall.
+The well keeper tells you which water has turned bitter and which is still used. You listen to Aysen and her nephew check the sacks, then record what you learned about the desert before the caravan leaves.
 
 ## ev.ev_lop_bazaar.choice_1_result
 
-The dealer weighs the mutton-fat jade in his palm before he lets it go, and the price is settled. But the stone is not the whole bargain; the dealer keeps your hand a moment and leans close.
+You pay 135 silver for the full lot. Mira and her daughter check every tag before wrapping it for you; the cousin’s parcel stays on their own mat. The girl promises to tell you more of his road when she is free.
 
 ## ev.ev_lop_bazaar.choice_2_result
 
-The traders tell you the jade comes down from the rivers to the east. The name of Sachiu is now on your map, and the jade-river's course is written in your book.
+Mira’s daughter traces the river towns on your map and names the road toward Sachiu. You note how her cousin’s parcel came from a picker near Cotan; she is glad someone asked about his journey.
 
 ## ev.ev_lop_caravanserai.choice_1_result
 
-The guide takes your two hundred coins and counts them twice, then nods once. He says little, but he looks at your beasts the way a man looks at his own horses.
+You pay Arslan 2 silver. He checks your water skins with you and marks the crossing toward Sachiu; the family’s daughter comes over to show how she fixed the stopper. He asks you back before departure to go over the stages.
 
 ## ev.ev_lop_caravanserai.choice_2_result
 
-You wait eight days in the caravanserai and pay the inn-keeper for the lodging. When the caravan finally moves, the road to Sachiu is open before it.
+You pay 1.2 silver and wait eight days for the shared caravan. The family uses the time to mend its load straps; you check yours alongside them. When the party finally leaves, the road toward Sachiu is open.
 
 ## ev.ev_lop_caravanserai.choice_3_result
 
-You lay in provisions for the dry road and note the desert's law in your book: no food, no water, and no dwelling for a day's ride. What the desert can take, it will.
+You pay 0.8 silver for the provision bundle. The innkeeper checks the seal on each water skin and wraps the dry food against dust. You take the supplies and remember what Arslan said about counting usable water.
 
 ## ev.ev_lop_shrine.choice_1_result
 
-You leave your offering in the niche of the little shrine and step back. The monk who keeps the cave draws near, not for the coin, but to speak of what the travellers before you left behind.
+You give Tuma 0.5 silver for lamp oil. Her grandson fills the little dish and sets it beside the wall. Tuma thanks you before asking the merchant to finish his dated note.
 
 ## ev.ev_lop_shrine.choice_2_result
 
-You watch the pilgrims make their offerings in silence. The way of the desert shrine is now written in your book.
+You listen as the merchant explains how the well changed. Tuma reads an older name on the wall and remembers the family who left it. You take their accounts into your travel notes.
 
 ## ev.ev_lop_consequence_a.title
 
-Lop: The Mark at the Gate
+A Note from the Well Keeper
 
 ## ev.ev_lop_consequence_a.body
 
-The first answer does not end at the gate. An old well-keeper who knows every water on the Lop road draws you aside and asks what you intend to carry away from Lop. Beyond the question lies the sand sea and its old wells; he offers to name a well on the far side that he swears still runs sweet. Choose what you will make of the sign.
+The well keeper from Aysen’s inn finds you while his granddaughter is drying a stained map against the wall. She has copied a list of wells, but the ink ran across one name when she spilled tea. ‘I can remember the place,’ the old man says. ‘I want her to see how I check it before she writes it again.’ He asks you to hold the map in the light.
+
+You ask whether the damaged name belongs to a well still in use. The granddaughter says a caravan stopped there last season. Her grandfather asks which guide she heard it from. She recalls Arslan and points out his mark beside the name. The old man agrees to ask him that evening. He has another copy of the list for you if you want to carry it, though he asks you to keep the uncertain name marked as uncertain.
+
+The girl smooths the paper on the table. She has saved a blank strip for the answer, and she waits for her grandfather to fetch Arslan.
 
 ## ev.ev_lop_consequence_a.choice_1
 
-Take the name and ask what proof he holds
+Take the copy and ask how they check the well
 
 ## ev.ev_lop_consequence_a.choice_1_result
 
-You take the name the well-keeper offers and ask what proof he holds. He shows you a chip of stone from the well's coping, and the matter opens again.
+You take the copy with the uncertain place left blank. The granddaughter writes Arslan’s name beside it so you know whom to ask. The well keeper says he will meet you again once they have checked the report.
 
 ## ev.ev_lop_consequence_a.choice_2
 
-Thank the well-keeper and keep your own counsel
+Thank them and leave the list at the inn
 
 ## ev.ev_lop_consequence_a.choice_2_result
 
-You thank the well-keeper and keep your own counsel. The matter closes at the well, and nothing more is asked of you in Lop.
+You thank the family and leave the list with the granddaughter. She weighs the corners with pebbles so it will dry flat. The well keeper wishes you a careful crossing.
 
 ## ev.ev_lop_consequence_a_resolution.title
 
-Lop: The Well-Keeper's Mark
+The Name of the Well
 
 ## ev.ev_lop_consequence_a_resolution.body
 
-You have agreed to carry the well-keeper's mark with you — a name that, he swears, opens a well on the far side of the sand sea. It will not decide the whole journey, but in the waterless days it may be the difference between salt and sweet.
+By evening, the granddaughter has found Arslan. He remembers stopping at the well, but says its name changed when a nearby caravan camp moved. The well keeper repeats both names to you while his granddaughter writes them side by side. ‘If someone asks with the older name, they should still find the water,’ she says.
+
+You ask whether the well is sweet. Arslan says it was when he last used it, and the keeper adds the date to the note. The granddaughter draws a small cup beside the name, then asks whether that mark is too childish. Her grandfather says it will help him find the line when he is tired.
+
+The paper has dried. The family has supper waiting, and there is time either to take the checked account now or to stay one more day and copy the full list in your own hand.
 
 ## ev.ev_lop_consequence_a_resolution.choice_1
 
-Seal the name before nightfall
+Take the checked account tonight
 
 ## ev.ev_lop_consequence_a_resolution.choice_1_result
 
-You seal the name before nightfall. The well-keeper's word now travels with your name, and the desert folk have a reason to receive you.
+You take the checked account before supper. The granddaughter reads the two well names back to you, and you repeat them once so she knows the writing is clear.
 
 ## ev.ev_lop_consequence_a_resolution.choice_2
 
-Keep the well-keeper's name in your travel book
+Spend another day copying the full list
 
 ## ev.ev_lop_consequence_a_resolution.choice_2_result
 
-You keep the well-keeper's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
+You spend the next day copying the wells. The granddaughter checks your lines while her grandfather mends a water-skin stopper. By evening your book carries the full account, including the date of Arslan’s report.
 
 ## ev.ev_lop_consequence_b.title
 
-Lop: The Road Behind the Answer
+The Cook’s Water List
 
 ## ev.ev_lop_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, a caravan cook finds you at the well with a second account of the sand sea and its old wells — which wells still run, and which have turned salt. It is less grand than a traveller's tale, and more useful.
+The caravan cook from Aysen’s inn comes to find you with a list of water stops. She has put a mark beside every well where her party was able to cook. Her younger brother reads the list aloud and stops at one name. ‘We did not use that well last time,’ he says. She agrees: the water was too bitter, and they brought enough from the previous stop.
+
+You ask whether another party might have a different report. The cook says Arslan did last season, before the late floods. She wants to date her own list so travellers can compare the accounts. Her brother says he will copy it once she has finished. He was with her on the crossing but still remembers the taste of each camp’s stew better than the well names.
+
+The cook has a clean page ready for your book. She asks whether you want to keep a copy or let her take it back to the inn wall where more people can read it.
 
 ## ev.ev_lop_consequence_b.choice_1
 
-Follow the cook's practical advice
+Keep a dated copy of the cook’s list
 
 ## ev.ev_lop_consequence_b.choice_1_result
 
-You follow the cook's practical advice and ask him to set it down. He writes the account out for you, and the desert's true measures come into your hand.
+You keep the dated copy. Her brother checks the spelling of the last well, then promises to bring another page if Arslan adds a new report.
 
 ## ev.ev_lop_consequence_b.choice_2
 
-Leave the account with the cook
+Let the cook post the list at the inn
 
 ## ev.ev_lop_consequence_b.choice_2_result
 
-You leave the account with the cook and keep your own counsel. It goes back to the well, and Lop asks nothing more of you.
+The cook takes the sheet back to the inn. Her brother holds it while she pins the top corners. A traveller already waiting there reads the date before asking about the bitter well.
 
 ## ev.ev_lop_consequence_b_resolution.title
 
-Lop: The Sweet-Well Account
+A Second Note on the Wall
 
 ## ev.ev_lop_consequence_b_resolution.body
 
-You have chosen to carry the cook's account with you — which wells still run, and which are salt. It will not decide the whole journey, but in the waterless days it is a map no chart can hold.
+The cook’s brother returns with Arslan’s newer account. A well on her list has a repaired lining, and a caravan used it last week. The cook does not cross out the older warning. She writes the new date beneath it and asks her brother to read both lines aloud. He does, then asks if everyone will understand why the reports differ.
+
+You suggest writing who made each report. The cook adds her name to the first and Arslan’s to the second. Her brother grins; he can now tell the travellers which person to ask. A man waiting to leave the inn listens and checks the water in his own skins before speaking.
+
+The cook offers you the updated copy. If you stay the day, she can show you the inn’s full wall of dated notes and how often it changes.
 
 ## ev.ev_lop_consequence_b_resolution.choice_1
 
-Mark the sweet wells before nightfall
+Share the updated list with the next party
 
 ## ev.ev_lop_consequence_b_resolution.choice_1_result
 
-You mark the sweet wells on your map before nightfall. The desert's measures now travel ahead of you, and where they land, your name follows.
+You read both dated reports to the next party. Its cook notes the repaired well, then checks how much water they carry. Aysen hears you name both witnesses and thanks you for passing the account on clearly.
 
 ## ev.ev_lop_consequence_b_resolution.choice_2
 
-Keep the well-map in your travel book
+Spend a day copying the full wall of notes
 
 ## ev.ev_lop_consequence_b_resolution.choice_2_result
 
-You spend a day copying the well-map into your travel book. The record is yours now, though it cost you a day of the road.
+You spend a day copying the dated notes. The cook’s brother checks the names with you and points out where an older warning still helps. Your book now holds a record that can be updated on the road.
 
 ## ev.lop.mentor_closure.title
 
-The Guide of Lop
+The Wind Reader at Lop
 
 ## ev.lop.mentor_closure.body
 
-Before you leave Lop, the listener who reads the desert wind asks what you have learned from Lop. The lesson is not a spell or a bargain; it is a way of noticing which detail will matter after the road turns.
+At the edge of Lop, an older guide named Mergen is tightening the cords on a small wind screen. His niece holds one end and complains that he always asks her to watch the sand rather than the sky. He asks where the last gust came from. She points to the marks it left against the screen and gives him the right answer.
+
+You ask how he taught her. Mergen says they walk the same ground on different mornings and compare what has changed. His niece adds that he also makes her ask the caravan cook about water before she names a route. ‘I did that because you were right once,’ he says. She reminds him it was more than once, and he lets her finish the knot.
+
+Mergen has time for a short answer now or a full day of practice. He folds the screen and asks his niece to show you the dust that has gathered along its lower edge.
 
 ## ev.lop.mentor_closure.choice_1
 
-Ask what the road will demand
+Ask Mergen how he reads the wind
 
 ## ev.lop.mentor_closure.choice_1_result
 
-The listener of the desert wind answers without evasion: water, and the reading of the sky, will be asked of you. His lesson is offered, and what you make of it lies with you.
+Mergen lets his niece explain the sand marks first, then shows you which gust made them. You repeat the method with another patch of ground. He says you can come back with more questions.
 
 ## ev.lop.mentor_closure.choice_2
 
-Stay for a day and listen to the whole account
+Spend a day practising with Mergen and his niece
 
 ## ev.lop.mentor_closure.choice_2_result
 
-You stay a day with the listener who reads the desert wind, and he gives you his whole counsel at length. It is not a map, but it will read the sand for you.
+You spend a day walking with the two of them, comparing the ground in morning and afternoon light. His niece insists you ask the cook about water as well. At the end Mergen invites you back for one more account.
 
 ## ev.lop.mentor_closure.choice_3
 
-Thank the guide and keep moving
+Thank them and return to your caravan
 
 ## ev.lop.mentor_closure.choice_3_result
 
-You thank the listener of the desert wind and take the road. He lets you go with a blessing, and the lesson of the desert remains unwritten.
+You thank Mergen and his niece. She waves with the loose end of the cord before her uncle tells her to tie it down. You go back to your caravan with their demonstration in mind.
 
 ## ev.ev_lop_bazaar_followup.title
 
-Lop: The Dealer's Word on the Salt
+The Parcel from Cotan
 
 ## ev.ev_lop_bazaar_followup.body
 
-When the market of Lop has thinned and the last camel is led away, the jade dealer folds his
-black velvet and beckons you to the end of his carpet. He has watched you weigh his stones,
-and he does not think you a buyer who will be cheated twice. In a low voice he tells you
-where the jade truly comes from: the riverbeds above Cotan, where the streams run down from
-the snow mountains and lay their gravel bare when the autumn waters fall. The best stones,
-he says, are gathered in the weeks when the rivers are low, and a man who knows the season
-can buy at the source for a tenth of the bazaar price. Then he speaks of the salt wastes
-that lie beyond the Desert of Lop — a white country where the ground crunches underfoot like
-frozen snow, where nothing grows, and where the old wells stand far apart, some sweet and
-some so bitter that a beast will not drink. He says the road to Sachiu runs through the
-narrowest place, and that caravans fear the salt wastes more than the sand itself, for a man
-can be parched a hundred paces from water that would kill him. He has told this to no other
-buyer this season. He waits to see what you will make of it.
+Mira’s daughter has finished reading her cousin’s note. He wrote that the river was high when he left Cotan and that the pickers would have to wait for lower water. Mira asks her to put the date beside his name in the ledger. ‘If he returns next season, we should know which stones he meant,’ she says. The daughter writes it carefully, then looks at the loose strip on her sandal and laughs at his reminder.
+
+You ask whether the dealer has more jade to sell. Mira brings out another full trading parcel, priced at 135 silver. She lets her daughter show the marks on its wrapping; this one came with a different caravan and has its own tally. The girl asks if you want to hear where the river pickers work when the water falls. Mira says there is time before the next customer.
+
+A porter comes to collect the cousin’s parcel. The daughter gives him the note to return with it, then asks him to tell her cousin that the sandal has finally been repaired.
 
 ## ev.ev_lop_bazaar_followup.choice_1
 
-Buy the dealer's private reserve of white jade
+Buy the other full jade parcel for 135 silver
 
 ## ev.ev_lop_bazaar_followup.choice_1_result
 
-The dealer lifts a smaller stone from a pouch at his belt and names a price below the market,
-holding it to the light so you can see the oil of the grain. You leave the market carrying
-jade that none of the other buyers have seen.
+You pay 135 silver for the separate lot. Mira’s daughter reads its tally aloud and helps you seal the wrapping. The cousin’s parcel goes with the porter; your own lot is ready for the road.
 
 ## ev.ev_lop_bazaar_followup.choice_2
 
-Ask where the rivers give up their jade
+Ask the daughter about the rivers and Sachiu road
 
 ## ev.ev_lop_bazaar_followup.choice_2_result
 
-The dealer draws the rivers above Cotan for you in the dust, and marks the road that runs
-east toward Sachiu. The name is on your map now, and you know the season when the stones
-appear.
+The daughter tells you when the pickers can work the riverbanks near Cotan. She also names Sachiu as a town on the road east. You mark it on your map while she folds the cousin’s letter.
 
 ## ev.ev_lop_bazaar_followup.choice_3
 
-Stay a while and hear the tale of the salt wastes
+Stay a day and hear how the salt flats change
 
 ## ev.ev_lop_bazaar_followup.choice_3_result
 
-You sit on the carpet while the sun falls, and the dealer tells of the white salt wastes and
-the wells that stand between the sand and the road. A day is spent, but the account stays
-with you.
+You stay a day. Mira tells you which salt flats caravans used last season and which wells had to be checked again. Her daughter compares the dates in the ledger, and you add their account to your travel book.
 
 ## ev.ev_lop_caravanserai_followup.title
 
-Lop: The Guide's Stages
+Arslan’s Route Board
 
 ## ev.ev_lop_caravanserai_followup.body
 
-The desert guide finds you in the caravanserai before the last fire has been banked. He has
-crossed the Desert of Lop nineteen days to Sachiu more times than he can count, and he has
-brought a stick with which to draw the road in the dust. He does not begin with water. He
-begins with the salt. The crossing, he says, is not one desert but two: sand for the first
-days, then the salt wastes, where the ground is white and cracked and the air tastes of
-metal. You must march by night in the summer months and lie up by day, for the sand grows so
-hot that it will burn through a camel's hoof by noon. The wells are set a day and a night
-apart, as the old rule says; some are sweet, some are brackish, and one, he says, you will
-smell before you see it. He speaks of the tower of dry stones where the caravans leave marks
-and prayers, and of the wind that makes the dunes sing so that a man walks toward the sound
-expecting voices. When he has finished, he scrapes the dust smooth with his heel and looks at
-you, waiting for your answer.
+Arslan has redrawn the route on a wooden board because the inn floor was swept before the family could copy it. The father holds the board while his daughter reads the well names back. She stops at a mark that looks like a grain sack. ‘That is where the cook found dry fuel,’ Arslan says. ‘I should have drawn a fire.’ The cook laughs and says a sack is closer to what she carried.
+
+You ask how the party will know when to move. Arslan explains the hour he expects to leave and asks each traveller to show him a full water skin. The daughter raises hers with its new stopper. Her father asks if they must buy another bundle of food. Arslan gives him a list but says to count what the family already has first.
+
+The innkeeper has an extra provision bundle for 12 silver. Arslan can also spend the next day explaining the stages in detail. He leaves the board against the wall so everyone can check the marks again.
 
 ## ev.ev_lop_caravanserai_followup.choice_1
 
-Agree to cross with the guide when the wind turns
+Agree to follow Arslan’s marked route
 
 ## ev.ev_lop_caravanserai_followup.choice_1_result
 
-The guide marks the day on his thumb and tells you to be ready before dawn. The road to
-Sachiu is open to you now, drawn in the dust and in your mind.
+You copy the stages toward Sachiu from Arslan’s board. He checks that you know which well follows the salt flat, then confirms you can travel with the party.
 
 ## ev.ev_lop_caravanserai_followup.choice_2
 
-Take the guide's list and buy provisions for the crossing
+Buy the extra provision bundle for 12 silver
 
 ## ev.ev_lop_caravanserai_followup.choice_2_result
 
-You follow his list: dried meat, hard biscuit, salt, and a water-skin for each beast. The
-provision is set by, and you know the rule that will carry you across.
+You pay 12 silver for the extra bundle. The innkeeper checks the dried food and water skins against Arslan’s list, then ties them where you can reach them easily on the road.
 
 ## ev.ev_lop_caravanserai_followup.choice_3
 
-Rest a day and learn the rule of the crossing
+Spend another day learning the stages
 
 ## ev.ev_lop_caravanserai_followup.choice_3_result
 
-You stay a day in the caravanserai while the guide rehearses the stages: the wells, the bare
-hills, the singing dunes. The waiting costs a day, and the crossing is the clearer for it.
+You stay another day. Arslan takes you through the board one stage at a time, and the cook corrects the fuel marks. You leave knowing what to check before each move.
 
 ## ev.ev_lop_shrine_followup.title
 
-Lop: The Monks' Account
+A New Mark Beside the Old
 
 ## ev.ev_lop_shrine_followup.body
 
-At dusk the shrine-keeper of the caves at Lop comes to sit beside you where the lamps throw
-their small light on the clay Buddha. She is the one who tends the lamps and takes the coins;
-the monks, you have been told, are gone. She does not deny it. But she tells you where they
-went and what they left: they were monks of the desert road, who kept the wells between Lop
-and Sachiu and marked the stages for the caravans. When the wells began to fail and the salt
-crept over the old pastures, the monks went east, carrying the account of the crossing with
-them. What they could not carry they scratched on the cave walls — not prayers only, but the
-days between wells, the shape of the bare hills, and the warnings of the bad water. She
-points to a corner of the cave where the charcoal has faded to the colour of the rock. She
-says the old account is still true, though the hand that wrote it is gone, and that a
-traveller who copies it will not be lost in the salt wastes. Then she feeds the lamps and
-leaves you with the Buddha and the quiet.
+The merchant who spoke with Tuma has returned with two other travellers. One used the old well name, the other a newer one. Tuma places them before the cave wall and asks each to describe the same place. Her grandson draws a small cup beside both names. ‘Will people know these mean one well?’ he asks. Tuma tells him to write the distance from the next camp as well.
+
+You ask how she keeps old reports from misleading people. Tuma says she lets later travellers add dates and names, then reads the reports together. The merchant points to a charcoal line left by monks who once stayed in the cave. He wants to copy it before the wind wears it away. Tuma brings him a lamp so he can see.
+
+The grandson holds the light while the merchant writes. Tuma says she can read the older account aloud, or give you room to copy it yourself. There is also an empty oil dish for those who wish to help keep the lamp burning.
 
 ## ev.ev_lop_shrine_followup.choice_1
 
-Ask the keeper to read the monks' account
+Ask Tuma to read the older account
 
 ## ev.ev_lop_shrine_followup.choice_1_result
 
-The keeper reads the cave wall like a letter, naming each well and each warning. The monks'
-account is yours now, and the salt wastes hold no more secrets for you.
+Tuma reads the older marks aloud, stopping when the merchant explains a newer well name. Her grandson copies both names. You leave knowing which parts of the cave account still help travellers.
 
 ## ev.ev_lop_shrine_followup.choice_2
 
-Give silver for the monks' lamps
+Give 0.3 silver for the cave lamps
 
 ## ev.ev_lop_shrine_followup.choice_2_result
 
-You lay silver among the offerings, and the keeper nods without speaking. The lamps will burn
-a little longer, and the blessing of the road rests on you.
+You give Tuma 0.3 silver. Her grandson fills the lamp and returns it to the merchant, who can now finish copying the worn line. Tuma thanks you as the light steadies.
 
 ## ev.ev_lop_shrine_followup.choice_3
 
-Stay a day and copy the account from the cave wall
+Spend a day copying the cave wall
 
 ## ev.ev_lop_shrine_followup.choice_3_result
 
-You spend a day at the wall, copying the faded charcoal into your travel book. It costs you a
-day, but the account is now written where you can read it on the road.
+You spend a day copying the wall. Tuma reads names you cannot make out, and her grandson holds the lamp when the light fades. Your notes preserve both the old account and the new dates.
 
 ## ev.ev_lop_mentor_followup.title
 
-Lop: The Listener's Counsel
+Mergen’s Second Look
 
 ## ev.ev_lop_mentor_followup.body
 
-The listener who reads the desert wind comes to you at the edge of town, where the gravel
-plain begins, and stands with you looking east. He has read the wind all his life, and he
-does not speak of the desert as a thing to be feared; he speaks of it as a thing to be read.
-He tells you that the sand writes its own account: the ripple of the dunes tells which wind
-has blown, and the dry salt crust tells how far the old sea has receded, and the smell of the
-air tells whether water lies ahead or only the memory of water. He shows you how to read the
-stars of the night crossing, and how to listen for the singing dunes, which are not voices
-but the sand speaking to itself. His counsel is not a charm; it is a way of paying attention,
-and he gives it to you because you asked the right question at the wrong time, which is the
-best time to learn. Then he steps back and waits, leaving the road to you.
+Mergen and his niece find you outside the inn, where yesterday’s wind has left a fresh ridge of sand against the stones. He asks her to say what changed. She points out a narrow gap that had been clear in the morning. You ask whether a caravan could still pass through it. ‘After we check the ground beneath,’ Mergen says. His niece takes a stick and feels for firm gravel.
+
+The cook walks by with a water list and asks whether their lesson has reached the wells yet. The niece laughs and shows her the old and new names on the page. Mergen says he learned to listen to the cook after once taking a dry path without enough water. His niece teases him for telling that story again; he says repeating a useful mistake costs less than making it.
+
+He offers to copy his notes for you, spend a day answering questions about this crossing, or mark the road toward Sachiu on your map. His niece tests the gap one more time before anyone puts a foot on it.
 
 ## ev.ev_lop_mentor_followup.choice_1
 
-Take the listener's counsel for the road
+Take Mergen’s checked notes
 
 ## ev.ev_lop_mentor_followup.choice_1_result
 
-The listener's counsel is written into your travel book, and the desert reads differently
-now. What he taught you will not fail you where the sand begins.
+Mergen copies the wind marks and the two well names into your book. His niece checks the last line and adds the date. You take their account onto the road.
 
 ## ev.ev_lop_mentor_followup.choice_2
 
-Ask what the desert will demand of you
+Stay a day and ask how to judge this crossing
 
 ## ev.ev_lop_mentor_followup.choice_2_result
 
-The listener reads the omens for the crossing and tells you what the road will cost: water,
-patience, and the will to march by night. The warning stays with you.
+You stay a day with Mergen and his niece. They compare the ground, the wind and the cook’s water list with you before suggesting a departure hour. You leave better prepared for the crossing.
 
 ## ev.ev_lop_mentor_followup.choice_3
 
-Thank the listener and mark the road he has shown
+Ask the niece to mark the road toward Sachiu
 
 ## ev.ev_lop_mentor_followup.choice_3_result
 
-You thank the listener and walk east along the road he has marked. The way to Sachiu is drawn
-before you, and you carry his counsel unspoken.
+The niece marks the road toward Sachiu on your map, asking Mergen to check the last well. He agrees with her line. She rolls up the map and makes you name the first stop before handing it back.
 
 ## codex.cx-desert-of-lop.body
 
@@ -467,3 +436,31 @@ The jade of Lop's market comes down from the streams above Cotan, where the wate
 ## codex.cx-desert-voices.body
 
 If you cross the Desert of Lop by night and chance to lag behind your company or fall asleep, when you try to rejoin it you hear spirits talking in the air, and the voices seem to be those of your companions. Sometimes they call you by name; a traveller may be led away so that he never finds his party again, and many have perished in this way. Even by daylight you may hear these spirit-voices, and now and then the sound of instruments — drums, fifes — playing in the air. Such are the perils of the Desert of Lop.
+
+## ev.lop.stopper.title
+
+The Stopper That Would Not Hold
+
+## ev.lop.stopper.body
+
+At the inn’s outer bench, a leatherworker named Saran is testing a water-skin stopper for her brother’s next caravan. He pours in a cup of water, turns the skin and waits. A drop appears along the seam. Her brother says the leather looked sound yesterday. ‘It did when it was dry,’ Saran answers, and loosens the stitching to see where it pulls.
+
+You ask whether she has time to mend it before the caravan leaves. Saran says her brother can take another skin, but she wants this one returned to its owner without a leak. A girl from the next table says the owner is her mother, who needs it for the small orchard behind the inn. She has come every morning to ask if it is ready. Saran promises to bring it herself when it holds water.
+
+Her brother offers to pay a helper 0.8 silver to carry the repaired skin across town today. Saran can also show you how she tests the seam if you stay until the following day. She fills the skin again and watches the stopper closely.
+
+## ev.lop.stopper.choice.deliver
+
+Deliver the repaired skin to the orchard
+
+## ev.lop.stopper.result.deliver
+
+You carry the repaired skin to the girl’s mother. She fills it at the orchard well and finds the seam dry. Saran’s brother pays you 0.8 silver as promised, and the girl runs back to tell her the good news.
+
+## ev.lop.stopper.choice.learn
+
+Stay until tomorrow and learn Saran’s leak test
+
+## ev.lop.stopper.result.learn
+
+You stay another day while Saran wets and tests several seams. She lets you find the weak stitch on an old practice skin. Her brother leaves with another water skin, and you carry the method into your next crossing.

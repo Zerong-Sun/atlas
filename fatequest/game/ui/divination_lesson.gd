@@ -1,8 +1,8 @@
 class_name DivinationLesson
 extends PanelContainer
 
-## Presentation for the eight data-driven lesson families. Formal
-## art can replace these controls; DivinationLessonEngine remains authoritative.
+## Lesson shell: cultural challenges own live play; legacy lesson families
+## remain available for older content. Success is emitted only on confirmation.
 
 signal passed(method: String)
 signal failed(method: String)
@@ -11,6 +11,8 @@ signal skipped(method: String)
 const LessonEngine = preload("res://core/divination/lesson_engine.gd")
 const DivinationResultView = preload("res://game/ui/divination_result.gd")
 
+var _frame: Control
+var _challenge_view: VBoxContainer
 var _method := ""
 var _lesson: Dictionary = {}
 var _title: Label
@@ -31,7 +33,14 @@ var _ritual_tween: Tween
 func _ready() -> void:
 	set_process(false)
 	custom_minimum_size = Vector2(620, 430)
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	var paper := Palette.panel_style()
+	paper.content_margin_left = 30
+	paper.content_margin_right = 30
+	paper.content_margin_top = 26
+	paper.content_margin_bottom = 26
+	add_theme_stylebox_override("panel", paper)
+	_frame = preload("res://game/ui/lesson_frame.gd").new()
+	add_child(_frame)
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", Metrics.sm())
 	add_child(root)
@@ -56,13 +65,28 @@ func _ready() -> void:
 	_stage.add_theme_constant_override("separation", Metrics.xs())
 	root.add_child(_stage)
 	_status = Panels.label("", UiScale.ui(), Palette.ink_soft())
+	_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(_status)
 	_actions = HBoxContainer.new()
 	_actions.add_theme_constant_override("separation", Metrics.sm())
 	root.add_child(_actions)
+	get_viewport().size_changed.connect(_fit_window)
+
+
+func _fit_window() -> void:
+	if is_instance_valid(_challenge_view):
+		Panels.fit_panel(self, Vector2(1080, 660))
 
 
 func start(method: String, lesson: Dictionary, rng: Rng) -> void:
+	if is_instance_valid(_challenge_view):
+		_stage.remove_child(_challenge_view)
+		_challenge_view.queue_free()
+		_challenge_view = null
+	_frame.scene = null
+	_frame.queue_redraw()
+	_title.remove_theme_font_size_override("font_size")
+	_prompt.remove_theme_font_size_override("normal_font_size")
 	_method = method
 	_lesson = lesson
 	_rng = rng
@@ -78,6 +102,13 @@ func start(method: String, lesson: Dictionary, rng: Rng) -> void:
 		_finished = false
 		_rebuild_actions(false)
 		return
+	if lesson.has("challenge"):
+		_start_challenge(lesson.challenge)
+		return
+	_ritual_icon.show()
+	_status.show()
+	_actions.show()
+	custom_minimum_size = Vector2(620, 430)
 	_build_round()
 	_animate_ritual(String(lesson.get("ritual", {}).get("motion", "reveal")))
 
@@ -341,6 +372,47 @@ func _leave() -> void:
 	_finished = true
 	set_process(false)
 	if _engine.attempts > 0:
+		failed.emit(_method)
+	else:
+		skipped.emit(_method)
+
+
+func _start_challenge(config: Dictionary) -> void:
+	for child in _stage.get_children():
+		_stage.remove_child(child)
+		child.queue_free()
+	_ritual_icon.hide()
+	_status.hide()
+	_actions.hide()
+	Panels.fit_panel(self, Vector2(1080, 660))
+	var art = preload("res://game/ui/lesson_art.gd")
+	_frame.scene = art.scene(config)
+	_frame.region = art.CAST[art.teacher(config)][1]
+	_frame.queue_redraw()
+	_title.add_theme_font_size_override("font_size", 25)
+	_title.text = I18n.t(String(config.title))
+	_prompt.add_theme_font_size_override("normal_font_size", 14)
+	_prompt.text = I18n.t(String(config.culture))
+	_challenge_view = preload("res://game/ui/divination_challenge.gd").new()
+	_challenge_view.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_stage.add_child(_challenge_view)
+	_challenge_view.completed.connect(_challenge_completed)
+	_challenge_view.abandoned.connect(_challenge_abandoned)
+	_challenge_view.setup(config, _rng.fork("cultural-challenge:" + _method))
+
+
+func _challenge_completed() -> void:
+	if _finished:
+		return
+	_finished = true
+	passed.emit(_method)
+
+
+func _challenge_abandoned(had_mistakes: bool) -> void:
+	if _finished:
+		return
+	_finished = true
+	if had_mistakes:
 		failed.emit(_method)
 	else:
 		skipped.emit(_method)

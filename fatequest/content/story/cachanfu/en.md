@@ -43,3 +43,27 @@ You pass through without stopping. You set the way to Cachanfu on your map.
 ## ev.ev_cachanfu_entry.choice_2_result
 
 You rest and ask what men say of this place. The road to Cachanfu opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+
+## ev.ev_gap_cachanfu.title
+
+Two Boards at the Ferry
+
+## ev.ev_gap_cachanfu.body
+
+Two wooden boards hang at the riverside ferry: one records the depth, the other the wind. Having replaced a rope, the ferryman wants to recut the old marks. Which should he record first? A mistaken reading when the water rises could be dangerous. He hangs the boards high enough to see from the bank during a flood.
+
+## ev.ev_gap_cachanfu.choice.route
+
+Ask the way to Kenjanfu
+
+## ev.ev_gap_cachanfu.choice.route_result
+
+“Take the main road southwest to Kenjanfu.”
+
+## ev.ev_gap_cachanfu.choice.scene
+
+Ask about the water level
+
+## ev.ev_gap_cachanfu.choice.scene_result
+
+He points to a muddy mark on the bank. “When the water falls to that line, the shoal emerges. Stay on the bank instead of cutting across.”

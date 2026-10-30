@@ -4,6 +4,7 @@ lang: zh
 role: translation
 status: reviewed
 voice: hud
+
 stamps:
   ui.city.enter: bf484317f609
   ui.city.enter_here: aa96c53ed2ec

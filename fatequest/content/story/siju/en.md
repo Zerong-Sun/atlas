@@ -140,11 +140,11 @@ He sells you sugar sealed for the canal. The price is fair, and Siju's name goes
 
 ## ev.ev_siju_a_followup.choice_2
 
-Ask which canal road leads toward Coigangiu
+Ask which canal road leads toward Paukin
 
 ## ev.ev_siju_a_followup.choice_2_result
 
-Coigangiu and Paukin are marked on your map. The canal south is clear.
+Paukin is marked on your map. The canal road through Coiganju is clear.
 
 ## ev.ev_siju_a_followup.choice_3
 

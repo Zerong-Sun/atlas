@@ -1,0 +1,1278 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-unique-pentam",
+      "kind": "site",
+      "title": "ev.ev_unique_pentam.title",
+      "when": {
+        "cities": [
+          "pentam"
+        ]
+      },
+      "scene": {
+        "bg": "island-port",
+        "region": "maritime_asia"
+      },
+      "body": "ev.ev_unique_pentam.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_pentam.choice_a",
+          "resultText": "ev.ev_unique_pentam.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-pentam"
+            },
+            {
+              "op": "fate",
+              "value": 2,
+              "id": "travel",
+              "reason": "unique-site-pentam"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_pentam.choice_b",
+          "resultText": "ev.ev_unique_pentam.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "unique-site-pentam"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-pentam-java-major",
+              "reason": "unique-site-pentam"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-pentam"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "island-called-pentam",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b3-c008"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-cacanfu",
+      "kind": "site",
+      "title": "ev.ev_unique_cacanfu.title",
+      "when": {
+        "cities": [
+          "cacanfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_cacanfu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_cacanfu.choice_a",
+          "resultText": "ev.ev_unique_cacanfu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-cacanfu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "cacanfu",
+              "scope": "city",
+              "reason": "unique-site-cacanfu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "wealth",
+              "reason": "unique-site-cacanfu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_cacanfu.choice_b",
+          "resultText": "ev.ev_unique_cacanfu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -9000,
+              "reason": "unique-site-cacanfu"
+            },
+            {
+              "op": "goods",
+              "id": "silk",
+              "value": 1,
+              "reason": "unique-site-cacanfu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 9000
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-cacanfu",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c060"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-cachanfu",
+      "kind": "site",
+      "title": "ev.ev_unique_cachanfu.title",
+      "when": {
+        "cities": [
+          "cachanfu"
+        ]
+      },
+      "scene": {
+        "bg": "island-port",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_cachanfu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_cachanfu.choice_a",
+          "resultText": "ev.ev_unique_cachanfu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-cachanfu"
+            },
+            {
+              "op": "coins",
+              "value": 150,
+              "reason": "unique-site-cachanfu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "cachanfu",
+              "scope": "city",
+              "reason": "unique-site-cachanfu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_cachanfu.choice_b",
+          "resultText": "ev.ev_unique_cachanfu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -190,
+              "reason": "unique-site-cachanfu"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-sindafu-cachanfu",
+              "reason": "unique-site-cachanfu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-cachanfu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 190
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "great-river-caramoran-and-the-city-of-cachanfu",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c040"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-caiju",
+      "kind": "site",
+      "title": "ev.ev_unique_caiju.title",
+      "when": {
+        "cities": [
+          "caiju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_caiju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_caiju.choice_a",
+          "resultText": "ev.ev_unique_caiju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-caiju"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "caiju",
+              "scope": "city",
+              "reason": "unique-site-caiju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "wealth",
+              "reason": "unique-site-caiju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_caiju.choice_b",
+          "resultText": "ev.ev_unique_caiju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "unique-site-caiju"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-caiju-chinghianfu",
+              "reason": "unique-site-caiju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-caiju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 150
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "caiju",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c072"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-chinghianfu",
+      "kind": "site",
+      "title": "ev.ev_unique_chinghianfu.title",
+      "when": {
+        "cities": [
+          "chinghianfu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_chinghianfu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_chinghianfu.choice_a",
+          "resultText": "ev.ev_unique_chinghianfu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-chinghianfu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "chinghianfu",
+              "scope": "city",
+              "reason": "unique-site-chinghianfu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "rapport",
+              "reason": "unique-site-chinghianfu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_chinghianfu.choice_b",
+          "resultText": "ev.ev_unique_chinghianfu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -180,
+              "reason": "unique-site-chinghianfu"
+            },
+            {
+              "op": "fate",
+              "value": 2,
+              "id": "wealth",
+              "reason": "unique-site-chinghianfu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 180
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "chinghianfu",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c073"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-chinginju",
+      "kind": "site",
+      "title": "ev.ev_unique_chinginju.title",
+      "when": {
+        "cities": [
+          "chinginju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_chinginju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_chinginju.choice_a",
+          "resultText": "ev.ev_unique_chinginju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-chinginju"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "chinginju",
+              "scope": "city",
+              "reason": "unique-site-chinginju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "rapport",
+              "reason": "unique-site-chinginju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_chinginju.choice_b",
+          "resultText": "ev.ev_unique_chinginju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -240,
+              "reason": "unique-site-chinginju"
+            },
+            {
+              "op": "vitality",
+              "value": 12,
+              "reason": "unique-site-chinginju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-chinginju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 240
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "chinginju-and-the-slaughter-of-certain-alans-there",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c074"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-coigangiu",
+      "kind": "site",
+      "title": "ev.ev_unique_coigangiu.title",
+      "when": {
+        "cities": [
+          "coigangiu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_coigangiu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_coigangiu.choice_a",
+          "resultText": "ev.ev_unique_coigangiu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-coigangiu"
+            },
+            {
+              "op": "coins",
+              "value": 200,
+              "reason": "unique-site-coigangiu"
+            },
+            {
+              "op": "vitality",
+              "value": -5,
+              "reason": "unique-site-coigangiu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "coigangiu",
+              "scope": "city",
+              "reason": "unique-site-coigangiu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_coigangiu.choice_b",
+          "resultText": "ev.ev_unique_coigangiu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -180,
+              "reason": "unique-site-coigangiu"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-coigangiu-paukin",
+              "reason": "unique-site-coigangiu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-coigangiu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 180
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "coigangiu",
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-unique-coiganju",
+      "kind": "site",
+      "title": "ev.ev_unique_coiganju.title",
+      "when": {
+        "cities": [
+          "coiganju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_coiganju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_coiganju.choice_a",
+          "resultText": "ev.ev_unique_coiganju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-coiganju"
+            },
+            {
+              "op": "coins",
+              "value": 150,
+              "reason": "unique-site-coiganju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "coiganju",
+              "scope": "city",
+              "reason": "unique-site-coiganju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_coiganju.choice_b",
+          "resultText": "ev.ev_unique_coiganju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -260,
+              "reason": "unique-site-coiganju"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "coiganju",
+              "scope": "city",
+              "reason": "unique-site-coiganju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "wealth",
+              "reason": "unique-site-coiganju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 260
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "coiganju",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c066"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-etzina",
+      "kind": "site",
+      "title": "ev.ev_unique_etzina.title",
+      "when": {
+        "cities": [
+          "etzina"
+        ]
+      },
+      "scene": {
+        "bg": "desert-town",
+        "region": "central_asia"
+      },
+      "body": "ev.ev_unique_etzina.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_etzina.choice_a",
+          "resultText": "ev.ev_unique_etzina.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-etzina"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "unique-site-etzina"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-etzina"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_etzina.choice_b",
+          "resultText": "ev.ev_unique_etzina.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -160,
+              "reason": "unique-site-etzina"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-etzina-egrigaia",
+              "reason": "unique-site-etzina"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-etzina"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 160
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "etzina",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v1-b1-c045"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-fuju",
+      "kind": "site",
+      "title": "ev.ev_unique_fuju.title",
+      "when": {
+        "cities": [
+          "fuju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_fuju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_fuju.choice_a",
+          "resultText": "ev.ev_unique_fuju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-fuju"
+            },
+            {
+              "op": "coins",
+              "value": 220,
+              "reason": "unique-site-fuju"
+            },
+            {
+              "op": "vitality",
+              "value": -6,
+              "reason": "unique-site-fuju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "fuju",
+              "scope": "city",
+              "reason": "unique-site-fuju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_fuju.choice_b",
+          "resultText": "ev.ev_unique_fuju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "unique-site-fuju"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-fuju-zayton",
+              "reason": "unique-site-fuju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-fuju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "greatness-of-the-city-of-fuju",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c081"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-linju",
+      "kind": "site",
+      "title": "ev.ev_unique_linju.title",
+      "when": {
+        "cities": [
+          "linju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_linju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_linju.choice_a",
+          "resultText": "ev.ev_unique_linju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-linju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "linju",
+              "scope": "city",
+              "reason": "unique-site-linju"
+            },
+            {
+              "op": "fate",
+              "value": 2,
+              "id": "travel",
+              "reason": "unique-site-linju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_linju.choice_b",
+          "resultText": "ev.ev_unique_linju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -190,
+              "reason": "unique-site-linju"
+            },
+            {
+              "op": "vitality",
+              "value": 15,
+              "reason": "unique-site-linju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 190
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-linju",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c063"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-mien",
+      "kind": "site",
+      "title": "ev.ev_unique_mien.title",
+      "when": {
+        "cities": [
+          "mien"
+        ]
+      },
+      "scene": {
+        "bg": "mountain-town",
+        "region": "south_asia"
+      },
+      "body": "ev.ev_unique_mien.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_mien.choice_a",
+          "resultText": "ev.ev_unique_mien.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-mien"
+            },
+            {
+              "op": "fate",
+              "value": 2,
+              "id": "rapport",
+              "reason": "unique-site-mien"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_mien.choice_b",
+          "resultText": "ev.ev_unique_mien.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "unique-site-mien"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-mien-sindafu",
+              "reason": "unique-site-mien"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-mien"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "mien",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c054"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-nanghin",
+      "kind": "site",
+      "title": "ev.ev_unique_nanghin.title",
+      "when": {
+        "cities": [
+          "nanghin"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_nanghin.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_nanghin.choice_a",
+          "resultText": "ev.ev_unique_nanghin.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-nanghin"
+            },
+            {
+              "op": "fate",
+              "value": 2,
+              "id": "wealth",
+              "reason": "unique-site-nanghin"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_nanghin.choice_b",
+          "resultText": "ev.ev_unique_nanghin.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -230,
+              "reason": "unique-site-nanghin"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "nanghin",
+              "scope": "city",
+              "reason": "unique-site-nanghin"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 230
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "nanghin",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c069"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-paukin",
+      "kind": "site",
+      "title": "ev.ev_unique_paukin.title",
+      "when": {
+        "cities": [
+          "paukin"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_paukin.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_paukin.choice_a",
+          "resultText": "ev.ev_unique_paukin.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-paukin"
+            },
+            {
+              "op": "vitality",
+              "value": -5,
+              "reason": "unique-site-paukin"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "paukin",
+              "scope": "city",
+              "reason": "unique-site-paukin"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_paukin.choice_b",
+          "resultText": "ev.ev_unique_paukin.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -150,
+              "reason": "unique-site-paukin"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-paukin-tiju",
+              "reason": "unique-site-paukin"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-paukin"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 150
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-paukin",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c067"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-sindafu",
+      "kind": "site",
+      "title": "ev.ev_unique_sindafu.title",
+      "when": {
+        "cities": [
+          "sindafu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_sindafu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_sindafu.choice_a",
+          "resultText": "ev.ev_unique_sindafu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-sindafu"
+            },
+            {
+              "op": "coins",
+              "value": 150,
+              "reason": "unique-site-sindafu"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "sindafu",
+              "scope": "city",
+              "reason": "unique-site-sindafu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_sindafu.choice_b",
+          "resultText": "ev.ev_unique_sindafu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -190,
+              "reason": "unique-site-sindafu"
+            },
+            {
+              "op": "vitality",
+              "value": 12,
+              "reason": "unique-site-sindafu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-sindafu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 190
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "city-of-sindafu",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c044"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-sinjumatu",
+      "kind": "site",
+      "title": "ev.ev_unique_sinjumatu.title",
+      "when": {
+        "cities": [
+          "sinjumatu"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_sinjumatu.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_sinjumatu.choice_a",
+          "resultText": "ev.ev_unique_sinjumatu.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-sinjumatu"
+            },
+            {
+              "op": "reputation",
+              "value": 2,
+              "id": "sinjumatu",
+              "scope": "city",
+              "reason": "unique-site-sinjumatu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "rapport",
+              "reason": "unique-site-sinjumatu"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_sinjumatu.choice_b",
+          "resultText": "ev.ev_unique_sinjumatu.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -200,
+              "reason": "unique-site-sinjumatu"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-sinjumatu-coigangiu",
+              "reason": "unique-site-sinjumatu"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "travel",
+              "reason": "unique-site-sinjumatu"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "noble-city-of-sinjumatu",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c062"
+        }
+      }
+    },
+    {
+      "id": "ev-unique-tiju",
+      "kind": "site",
+      "title": "ev.ev_unique_tiju.title",
+      "when": {
+        "cities": [
+          "tiju"
+        ]
+      },
+      "scene": {
+        "bg": "canal-city",
+        "region": "china"
+      },
+      "body": "ev.ev_unique_tiju.body",
+      "once": true,
+      "choices": [
+        {
+          "label": "ev.ev_unique_tiju.choice_a",
+          "resultText": "ev.ev_unique_tiju.choice_a_result",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "unique-site-tiju"
+            },
+            {
+              "op": "coins",
+              "value": 190,
+              "reason": "unique-site-tiju"
+            },
+            {
+              "op": "vitality",
+              "value": -5,
+              "reason": "unique-site-tiju"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "id": "tiju",
+              "scope": "city",
+              "reason": "unique-site-tiju"
+            }
+          ]
+        },
+        {
+          "label": "ev.ev_unique_tiju.choice_b",
+          "resultText": "ev.ev_unique_tiju.choice_b_result",
+          "effects": [
+            {
+              "op": "coins",
+              "value": -180,
+              "reason": "unique-site-tiju"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-tiju-sinju",
+              "reason": "unique-site-tiju"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "id": "wealth",
+              "reason": "unique-site-tiju"
+            }
+          ],
+          "needs": {
+            "coins": {
+              "min": 180
+            }
+          }
+        }
+      ],
+      "lore": {
+        "placeId": "cities-of-tiju",
+        "origin": "hybrid",
+        "ref": {
+          "book": "marco-polo",
+          "chapterId": "v2-b2-c068"
+        }
+      }
+    }
+  ]
+}

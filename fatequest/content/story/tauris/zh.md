@@ -6,7 +6,7 @@ source_rev: 72b11093cf6b
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
@@ -63,8 +63,6 @@ stamps:
   ev.ev_tauris_consequence_a_resolution.body: 337e3a2c133c
   ev.ev_tauris_consequence_a_resolution.choice_1: e8bd87deeb4b
   ev.ev_tauris_consequence_a_resolution.choice_1_result: 48da92053331
-  ev.ev_tauris_consequence_a_resolution.choice_2: 78ed5421f174
-  ev.ev_tauris_consequence_a_resolution.choice_2_result: c4b6413cd94d
   ev.ev_tauris_consequence_b.title: 87ca51a3b222
   ev.ev_tauris_consequence_b.body: 32d225db7d7f
   ev.ev_tauris_consequence_b.choice_1: b3b39d4e8cce
@@ -75,8 +73,6 @@ stamps:
   ev.ev_tauris_consequence_b_resolution.body: 5f5740fe2094
   ev.ev_tauris_consequence_b_resolution.choice_1: 20aa536aa25d
   ev.ev_tauris_consequence_b_resolution.choice_1_result: d97a0cf1b4c7
-  ev.ev_tauris_consequence_b_resolution.choice_2: 03f93978c6ff
-  ev.ev_tauris_consequence_b_resolution.choice_2_result: 4a13c356842d
   ev.ev_tauris_a_merchants_followup.title: fdaecaa050f1
   ev.ev_tauris_a_merchants_followup.body: 199d52a728ca
   ev.ev_tauris_a_merchants_followup.choice_1: 248d28e09a24
@@ -117,6 +113,10 @@ stamps:
   ev.ev_tauris_mentor_astrodice_followup.choice_2_result: 808feee1de9b
   ev.ev_tauris_mentor_astrodice_followup.choice_3: 969a23bee853
   ev.ev_tauris_mentor_astrodice_followup.choice_3_result: 82f658a717a5
+  ev.ev_tauris_consequence_a_resolution.choice_2: 78ed5421f174
+  ev.ev_tauris_consequence_a_resolution.choice_2_result: c4b6413cd94d
+  ev.ev_tauris_consequence_b_resolution.choice_2: 03f93978c6ff
+  ev.ev_tauris_consequence_b_resolution.choice_2_result: 4a13c356842d
 ---
 
 ## city.tauris.name
@@ -125,43 +125,43 @@ stamps:
 
 ## ev.tauris.a.choice.merchants
 
-向外国商人打听前路
+问问外地商人前面怎么走
 
 ## ev.tauris.a.choice.pearls
 
-在大巴扎买一颗大不里士珍珠
+在大巴扎挑颗大不里士珍珠
 
 ## ev.tauris.a.choice.view
 
-爬上山顶瞰全城
+上山看看全城
 
 ## ev.tauris.b.choice.browse
 
-漫步室内市场侧耳细听
+逛逛有顶的市场，听听商人闲聊
 
 ## ev.tauris.b.choice.dragoman
 
-雇一名通译学波斯语
+请个通译教你几句波斯语
 
 ## ev.tauris.b.choice.latin
 
-与热那亚商人交谈
+找热那亚商人聊聊
 
 ## ev.tauris.c.choice.fruit
 
-买些杏脯和开心果备路上吃
+买点杏脯和开心果带上路
 
 ## ev.tauris.c.choice.rest
 
-在花园里休憩半月
+在花园歇上半个月
 
 ## ev.tauris.c.choice.wander
 
-沿坎儿井走看水从何来
+沿着坎儿井走走，看水从哪儿来
 
 ## ev.tauris.entry.choice.customs
 
-到 tamghā-khāna（税署）报关
+去 tamghā-khāna（税署）报关
 
 ## ev.tauris.entry.choice.lore
 
@@ -169,19 +169,19 @@ stamps:
 
 ## ev.tauris.entry.choice.market
 
-穿过大 bāzār（集市）
+逛逛大 bāzār（集市）
 
 ## ev.tauris.mentor_tarot.body
 
-一位法兰克商人的遗孀以牌阵教人看岔路：收益、代价与选择原则。
+住在商栈附近的法兰克商人遗孀摆了几张牌，正给来客讲怎么权衡岔路的得失。她抬眼看你：“要不要也试一把？”
 
 ## ev.tauris.mentor_tarot.choice.ask
 
-先看她演示双选门
+先看她怎么摆“双选门”
 
 ## ev.tauris.mentor_tarot.choice.learn
 
-奉银，学塔罗
+付些学费，跟她学塔罗牌
 
 ## ev.tauris.mentor_tarot.title
 
@@ -189,10 +189,9 @@ stamps:
 
 ## ev.tauris.a.body
 
-大不里士是伊利汗国最大的商业城——波斯、突厥、亚美尼亚、格鲁吉亚与法兰克商人在此交汇，
-买卖两洲之货。城已胀出历代所筑的每一道城墙，近郊沿平原绵延数里，果园、作坊、花园与商队驿栈交错如补丁。
-伊利汗的夏宫立于南面小丘上，柏树与玫瑰园环绕，坎儿井自山中引来雪融之水。自宫顶望去，
-整片大不里士平原尽收眼底——褐色波斯高原上的一座绿岛，千家炊烟点缀其间。
+大不里士的城墙早装不下这座城了。新街一路铺向平原，果园、作坊和商队驿站挨在一起。你刚拐进集市，就听见波斯语、突厥语、亚美尼亚语和意大利语混成一片。南边小丘上是伊利汗的夏宫，园丁正从坎儿井引水浇玫瑰。一个挑水的孩子冲你喊：“别挡路呀，宫里的人等着用水呢！”高处望下去，褐色高原上铺开一大片屋顶和绿园，远远近近都是烟火气。
+
+挑水的孩子走在坎儿井出口旁，轻轻唱： “山腹藏水，暗渠同行； 井口一盏灯，园里一片青； 玫瑰喝够，菜畦接上； 轮到下一家，木闸轻轻响。” 园丁解释歌词里的水路：“坎儿井从山地把水引到城边，井口方便清理和通气。水进花园后按支渠分配，玫瑰园与菜地轮着用，大家都能照料好作物。”
 
 ## ev.tauris.a.title
 
@@ -200,10 +199,7 @@ stamps:
 
 ## ev.tauris.b.body
 
-大不里士城中，各国各有坊区，外国商号几乎都在此设代理人。热那亚人的fondaco近大巴扎，
-如堡垒一般，拉丁商人在此存货、歇宿、祈祷。东门旁的亚美尼亚驿栈，接待自特拉布宗与黑海来的陆路商队。
-穆斯林商人据室内市场，卖中国与契丹的丝、海湾的珍珠、报达的金线织锦。通四门语言——波斯语、
-突厥语、阿拉伯语与意大利语——的商人，一季商队即可在大不里士发迹。凡过境之货，皆向伊利汗纳税。
+大巴扎旁的热那亚商栈像座小堡垒，门口的伙计一边记货一边招呼你：“住店、存货、祈祷都在里面，别把箱子搁过道上。”东门边的亚美尼亚商队客栈刚迎来一队从特拉布宗来的骡队，驮包上还挂着海盐。市场里有人卖中国丝、海湾珍珠和报达来的金线锦缎。摊主们换语言比换算盘还快；你听见一个商人用波斯语谈价，转头就用意大利语叫伙计搬货。货物过门要向伊利汗缴税，税吏把账本摊在门边，谁也别想装没看见。这便是大不里士商人寄存货物的规矩。
 
 ## ev.tauris.b.title
 
@@ -211,10 +207,7 @@ stamps:
 
 ## ev.tauris.c.body
 
-城外，大不里士的园囿沿坎儿井绵延数里，水自山中而来。伊利汗国的贵人——波斯维齐尔、
-蒙古那颜、亚美尼亚商贾与突厥amir（埃米尔）——在此筑夏日凉亭：敞厅有瓷砖喷泉，
-悬铃木与柏树遮荫，四周是杏、石榴、杏仁与开心果园。空气里有茉莉、玫瑰与浇湿泥土的气息。
-果为波斯最上，园丁有言：「饮大不里士之水、食其杏者，永不欲去。」许多外国商人果然如此。
+城外的园子顺着坎儿井一直铺开，水从山里来，分进一条条小渠。园丁正把水引向杏树，见你盯着渠看，便笑道：“水可不能多给哪一家，轮到谁就浇谁的地。”凉亭里，几位大人物躲着暑气喝茶，瓷砖喷泉哗哗响，旁边的石榴和开心果树压低了枝。园丁摘下一颗杏递给你：“尝尝。吃完再走，别怪我没劝你多留两天。”你在大不里士城外记下了分水的办法。
 
 ## ev.tauris.c.title
 
@@ -222,13 +215,7 @@ stamps:
 
 ## ev.tauris.entry.body
 
-大不里士是一座又大又尊贵的城，坐落在一个名叫YRAC的大省里；省内还有许多市镇村落。不过大不里士最为尊贵，
-所以我特意为你讲讲它。城中人靠贸易和手艺为生，能织出种种美丽贵重的金丝锦缎。这地方地势极好，
-印度、报达、CREMESOR以及许多地方的货物都运到这里；拉丁商人，尤其是热那亚人，纷纷前来买货、办理别的事务；
-这里同时又是珍宝的大集市。商人们在此获利甚厚。可本城的居民却相当贫弱，人众混杂：有亚美尼亚人、
-景教徒、雅各派人、格鲁吉亚人、波斯人，还有本城的土著——他们礼拜摩诃末（Mahommet），人称TAURIZI，品性很坏。
-城外四周全是美好的园囿，果实种类繁多，又大又好。如今我们离开大不里士，去说波斯大邦。
-[自大不里士至波斯，路程约十二日。]
+“大不里士归伊利汗管，城里城外都热闹。”一个织金线锦缎的师傅把布料往你面前一展：“摸摸看，丝线和金线交织，花纹得在织机上排好，经纬一错就得拆重来。报达和印度来的商人都爱这个。”各地货物在这儿汇拢；热那亚人、亚美尼亚人和格鲁吉亚商人都在街上做买卖。师傅收起布，朝街上努努嘴：“你听，几种话都在谈同一件事——货价、税钱，还有谁来接下一批货。”从大不里士到波斯腹地，约十二天路程。
 
 ## ev.tauris.entry.title
 
@@ -236,15 +223,15 @@ stamps:
 
 ## ev.ev_tauris_entry.choice_1_result
 
-你在大不里士的税关报明了货物，税官把货单读了两遍——这座巴扎里多的是花招。他盖印时，大集市里一位占着长凳的掮客向你招了招手。
+你在税关报了货。税吏核过货单，盖好印章。大集市里，一个占着长凳的掮客朝你招手：“旅人，想找路还是找货？我两样都能打听。”你在大不里士的集市里坐下来听他说。
 
 ## ev.ev_tauris_entry.choice_2_result
 
-大不里士的人用十来种语言回答你的问题，因为半个世界的商人都在这里营生。说法对不上，其中一位看管坎儿井的水夫答应，在集市收市前把真话带给你。
+你问了几个人，答案各有各的说法。一位看坎儿井的水夫听得直摇头：“他们把路说得太远了。收市后我带你去看水渠，路在哪儿，跟着水就明白。”大不里士集市散了以后，他才得空领路。
 
 ## ev.ev_tauris_entry.choice_3_result
 
-你在大不里士的大集市里走了一日，带出来一驮货物。此城的珍珠、香料与马匹贸易，如今写进了你的行纪。
+珍珠商把一串珠子摊在黑布上：“先看大小和光泽是不是一串都匀，别光盯着最大那颗。”隔壁皮货经纪人听见，笑说：“买皮也一样，翻到背面看补丁。”你在大不里士大集市逛了一天，把货价记进旅途笔记。
 
 ## ev.ev_tauris_mentor_tarot.choice_1_result
 
@@ -256,7 +243,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_tarot.choice_3_result
 
-你看读牌师摆出抉择之门，演示每一条路如何各成其解。牌艺如今写进了你的行纪，只是布牌仍在她手里。
+读牌师摆出几种牌阵，讲每种选择会通向什么结果。你听明白了她的说法，真正怎么布牌，她还是不外传。
 
 ## ev.ev_tauris_mentor_astrodice.choice_1_result
 
@@ -264,7 +251,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_astrodice.choice_2_result
 
-骰师演示天盘各宫如何为路途的每一段命名。观宫之法如今写进了你的行纪，只是掷骰仍在他手里。
+骰师用天盘上的各宫位给旅途分段起名。你听懂了这套观宫说法，可怎么掷骰，还是只有他会。
 
 ## ev.ev_tauris_a.choice_1_result
 
@@ -272,11 +259,11 @@ stamps:
 
 ## ev.ev_tauris_a.choice_2_result
 
-你从大不里士的大集市买下一颗珍珠，包好放进行囊。集市的珠工之艺，如今随你同行，成了一宗值钱的货物。
+你从大不里士的大集市买下一颗珍珠，包好。集市的珠工之艺，如今随你同行，成了一宗值钱的货物。
 
 ## ev.ev_tauris_a.choice_3_result
 
-你登上小山，望见整座城铺在脚下——集市、驿栈，道路如掌纹般四散开去。这幅景色，如今记在你的行纪里。
+你爬上小山，看见驿栈挨着城门，去集市的驮队沿着同一条路排队。赶骡人朝南指了指：“那边出城先找水井；走错路，下一处井可要多赶半天。”
 
 ## ev.ev_tauris_b.choice_1_result
 
@@ -288,7 +275,7 @@ stamps:
 
 ## ev.ev_tauris_b.choice_3_result
 
-你走过有顶的市场，听商队之间的话语。有人说起北通卡法的路，那里便是草原的起点；其名如今上了你的舆图。
+你逛过有顶的市场，听商队闲聊。有人提起北边通往卡法的路，那也是进入草原的起点。你把卡法。
 
 ## ev.ev_tauris_c.choice_1_result
 
@@ -300,7 +287,7 @@ stamps:
 
 ## ev.ev_tauris_c.choice_3_result
 
-你沿着坎儿井行走，学会水如何从山中来，途中不损失一滴给太阳。大不里士的水利之术，如今写进了你的行纪。
+你沿着坎儿井走了一段，弄明白水是怎么从山里引来的，路上几乎不会白白蒸发。你把大不里士的这套水利办法。
 
 ## ev.ev_tauris_consequence_a.title
 
@@ -308,23 +295,22 @@ stamps:
 
 ## ev.ev_tauris_consequence_a.body
 
-第一个回答并没有在城门处结束。大集市里一位占着长凳的掮客把你引到一旁，问你打算从大不里士带走什么。问题背后正是市集与雪山水道；他提出把你的名字与一位商人的名字系在一起，这位商人的信能比任何商队先到。你须决定如何对待这道征兆。
-
+大集市里替商队牵线的掮客把你叫到长凳边：“你从大不里士带什么走？我认识个商人，写封信过去，下一座城的人可能愿意先听你说两句。要不要试试？”
 ## ev.ev_tauris_consequence_a.choice_1
 
-收下这个名字，追问这位掮客谁能作保
+收下名字，接着问这位掮客谁能作保
 
 ## ev.ev_tauris_consequence_a.choice_1_result
 
-你收下掮客递来的名字，追问谁能为它作保。他报出集市里两位管赊账的人，此事又打开了。
+你收下掮客递来的名字，追问谁能为它作保。他报出集市里两位管赊账的人，这事还没完。
 
 ## ev.ev_tauris_consequence_a.choice_2
 
-谢过这位掮客，把自己的打算收在心里
+谢过这位掮客，暂时不说自己的打算
 
 ## ev.ev_tauris_consequence_a.choice_2_result
 
-你谢过这位掮客，把自己的打算收在心里。此事在集市的长凳上就此了结，大不里士不再有人向你多问一句。
+你谢过掮客，暂时没说自己的打算。他耸耸肩：“想好了再来找我，长凳就在这儿。”大不里士的集市仍在，日后还可以再问。
 
 ## ev.ev_tauris_consequence_a_resolution.title
 
@@ -332,23 +318,14 @@ stamps:
 
 ## ev.ev_tauris_consequence_a_resolution.body
 
-你已答应把掮客的信带在身上——一封能比任何商队先到的信。它不会替你决定整段旅程，但在下一座集市，这封信或许能为你打开钱庄的门。
-
+掮客塞给你一封比商队跑得快的介绍信：“带去下一座集市，先找钱庄问问。人家认不认这封信，我可不敢打包票。”
 ## ev.ev_tauris_consequence_a_resolution.choice_1
 
 在天黑前把这封信送出
 
 ## ev.ev_tauris_consequence_a_resolution.choice_1_result
 
-你在天黑前把这封信送出了。掮客的承诺如今随你的名字而行，集市的人从此有理由接待你。
-
-## ev.ev_tauris_consequence_a_resolution.choice_2
-
-把这封信收进自己的行纪
-
-## ev.ev_tauris_consequence_a_resolution.choice_2_result
-
-你把信收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
+你赶在天黑前把信送到。掮客拍拍你的肩：“这事我记下了。下回你来集市，直接报我的名字。”
 
 ## ev.ev_tauris_consequence_b.title
 
@@ -356,7 +333,7 @@ stamps:
 
 ## ev.ev_tauris_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一位看管坎儿井的水夫在集市里找到你，讲起市集与雪山水道的另一番说法——哪里的水全年不断，以及哪家宅院有马可雇。这说法不如游记宏大，却更适合带在身上。
+收市前，坎儿井的水夫来找你。他用木棍在地上画了几道线：“这几口井常年有水，东边那家院子还能租到马。你要往东走，先去那儿问问；价钱我可做不了主。”他让你在大不里士集市东边找那处院子。
 
 ## ev.ev_tauris_consequence_b.choice_1
 
@@ -364,15 +341,15 @@ stamps:
 
 ## ev.ev_tauris_consequence_b.choice_1_result
 
-你照着这位水夫的实用建议走，请他把它写下来。他为你把这段叙述抄出，此城真正的尺度便落进你手里。
+水夫用木棍点了点地上的记号：“北边这口井离集市近，东边那几口水更稳。要租马就去东边的院子，先问清几天的价，别只听头一天便宜。”
 
 ## ev.ev_tauris_consequence_b.choice_2
 
-把这段叙述留给那位水夫
+把这话留给那位水夫
 
 ## ev.ev_tauris_consequence_b.choice_2_result
 
-你把这段叙述留给那位水夫，自己收住了口。它回到了坎儿井边，大不里士不再向你索取什么。
+你把这话告诉水夫。他收起木棍：“听见了。东边那口井水好，租马前记得先问价。”你决定留在大不里士，过几天再谈这条路。
 
 ## ev.ev_tauris_consequence_b_resolution.title
 
@@ -380,23 +357,14 @@ stamps:
 
 ## ev.ev_tauris_consequence_b_resolution.body
 
-你已选择带着这位水夫的账目上路——哪里的水全年不断，以及哪家宅院有马可雇。它不会替你决定整段旅程，但会让你的钱袋与坐骑都保持在妥帖的状态。
-
+水夫在纸上标了几口常年有水的井，又写下能租到马的宅院。他把纸递给你：“先照着问问，马价每天都变，别嫌我没提醒你。”
 ## ev.ev_tauris_consequence_b_resolution.choice_1
 
 在天黑前把这话告诉下一位掮客
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1_result
 
-你在天黑前把这话告诉了下一名掮客。此城的尺度从此走在你前头，它落在何处，你的名字便随到何处。
-
-## ev.ev_tauris_consequence_b_resolution.choice_2
-
-把这份水源札记收进自己的行纪
-
-## ev.ev_tauris_consequence_b_resolution.choice_2_result
-
-你花了一日，把这份水源札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
+天黑前，你把这消息告诉了下一位掮客。以后有人问起城里的路程，可能也会先听到你的名字。
 
 ## ev.ev_tauris_a_merchants_followup.title
 
@@ -404,7 +372,7 @@ stamps:
 
 ## ev.ev_tauris_a_merchants_followup.body
 
-外国商人并不只是报出几个地名。有人指向南方的泰西封，有人提醒说，通往报达的道路有另一套关卡与水源节奏。只有追问与你自己的旅程有关的细节，这些回答才真正有用。
+一位从南边回来的商人听你问泰西封，把驮袋往脚边一放：“先问清下一道关卡查什么，货单别压在最底下。去报达那条路还要多留意井站，别只看地图上的距离。”旁边有人正翻找通行凭据，你可以追问哪条路好走，也可以把这个提醒告诉经纪人。
 
 ## ev.ev_tauris_a_merchants_followup.choice_1
 
@@ -412,7 +380,7 @@ stamps:
 
 ## ev.ev_tauris_a_merchants_followup.choice_1_result
 
-商人用炭笔标出了南行道路：泰西封不再只是远地图上的一个名字。
+商人用炭笔画出南路：“到泰西封前先过这道关卡，守卡的人查货单；再往南，沿河找驿站。别从干地抄近路，水袋在那一段比你省下的脚程值钱。”
 
 ## ev.ev_tauris_a_merchants_followup.choice_2
 
@@ -420,7 +388,7 @@ stamps:
 
 ## ev.ev_tauris_a_merchants_followup.choice_2_result
 
-经纪人压低声音，把你的警告添进当天的路上传闻；一个有用的名字如今随你同行。
+经纪人听完你的提醒，立刻拦住要出城的驮队：“南边那道关卡查得紧，先把货单和通行凭据备齐。”他转向你：“多谢。路上若有人问起，我会说是你先提醒的。”
 
 ## ev.ev_tauris_a_merchants_followup.choice_3
 
@@ -428,7 +396,7 @@ stamps:
 
 ## ev.ev_tauris_a_merchants_followup.choice_3_result
 
-水源账本让你多得到一日井站之间的尺度。你付出了时间，却不再盲目启程。
+记水源的商人回来，把账本翻到南路那页：“过关卡后，第一口井一天能到；第二口井得再走大半天。驮畜的水按两天备，别只算人的。”
 
 ## ev.ev_tauris_b_followup.title
 
@@ -436,7 +404,7 @@ stamps:
 
 ## ev.ev_tauris_b_followup.body
 
-大不里士的税署设于东门之内，守署之人掌着那份无人敢争的账册。见你与热那亚人谈过话，他便将你引到一旁，摊开书卷：凡过境之货，皆向伊利汗纳税；每一条账目之侧，他都注着货自何路而来——自契丹来的丝路、自海湾来的珠路、自报达来的金缎之路。你若肯听，他愿把这账册所知的道路，细细讲给你听。
+东门税署的人看见你和热那亚商人说过话，便把账簿摊开：“这批丝从哪来，那批珍珠又走哪条路，都记在这儿。货过门就得向伊利汗缴税，别问我能不能通融。”他见你盯着页边的路线看，敲了敲桌面：“想问路就问，别把我的账弄乱了。”这是大不里士的税册，货有的来自报达，有的要往更远处去。
 
 ## ev.ev_tauris_b_followup.choice_1
 
@@ -444,7 +412,7 @@ stamps:
 
 ## ev.ev_tauris_b_followup.choice_1_result
 
-守署之人按书中所记的价钱报出，正是他给商栈自己的价。珍珠是真珠，串线均匀，税署容你携着它过门。
+税署的人报出账册上的价钱，果然和热那亚商栈的一样。他捻起珍珠给你看：“串线均匀，是真货。带它过税门，这笔税已经算在价里。”
 
 ## ev.ev_tauris_b_followup.choice_2
 
@@ -452,7 +420,7 @@ stamps:
 
 ## ev.ev_tauris_b_followup.choice_2_result
 
-他在账册页边勾出那条路，一井一卡，历历分明。尼尼微不再只是远方舆图上的一个名字；这条路要你付出什么，你如今一清二楚。
+税吏在账页空白处画出往尼尼微的路，边画边报沿途井站和水程：“井与井之间别走岔。按这段路程带够水，到了驿站再补。”
 
 ## ev.ev_tauris_b_followup.choice_3
 
@@ -460,7 +428,7 @@ stamps:
 
 ## ev.ev_tauris_b_followup.choice_3_result
 
-你在秤与盖印的货包之间留了一日，听税目逐一读毕。时日是花了，可税署的人从此认得你的面容，说起你来也公道。
+你在税署待了一天，听书吏逐项念税目，也看清丝、珍珠和香料各按什么标准收税。临走时，书吏指指账册：“下回带货来，先报品名和来路，省得两边都费时间。”
 
 ## ev.ev_tauris_c_followup.title
 
@@ -468,7 +436,7 @@ stamps:
 
 ## ev.ev_tauris_c_followup.body
 
-大不里士的园囿饮着坎儿井之水，守闸之人除水之外别无主人。他在水渠分岔处迎上你，指给你看每一座果园取走自己的一份，不多，也不少。他说，同一股令杏树发绿的水，从平原底下淌过去，正流向东方的道路。
+守闸人正站在水渠分岔处，挨家查看水量。你问他水从哪儿来，他用木棍点了点渠边：“山里引下来的。哪块地什么时候用水，都排好了；要是有人多开一道闸，后面几家就得干等。”他又指向东边：“水往那头去，你的路也能往那头找。”大不里士的园子就靠这些水渠。
 
 ## ev.ev_tauris_c_followup.choice_1
 
@@ -484,7 +452,7 @@ stamps:
 
 ## ev.ev_tauris_c_followup.choice_2_result
 
-分水人顺着水渠的走向指去，直到它们在干地间枯尽，再报出循水而行的路名。伊斯帕罕如今写上了你的舆图，你也知道了那条路尽头之城。
+“东边这条渠会断在干地边上，”分水人说，“你要去伊斯帕罕，就沿着水渠走到头，再问村里人接下来的路。”
 
 ## ev.ev_tauris_c_followup.choice_3
 
@@ -492,7 +460,7 @@ stamps:
 
 ## ev.ev_tauris_c_followup.choice_3_result
 
-你在闸口留了一日，学园囿如何分取各自的水。时日是花了，但坎儿井的法度随你留下，园囿也养好了你的精神。
+你在闸口看了一天分水。守闸人按时开渠，各家轮流取水，谁也不能多放一刻。他收起木闸，对你说：“轮到谁，就给谁；水要是乱分，整片园子都得遭殃。”
 
 ## ev.ev_tauris_mentor_followup.title
 
@@ -500,15 +468,14 @@ stamps:
 
 ## ev.ev_tauris_mentor_followup.body
 
-教你牌阵的那位寡妇，不肯让你空手离开她的牌桌。她摆下最后一局，为前路占了一回「择门之局」，读罢，把一张牌按入你掌心。临别的一局，她说，应当分文不取、了无所系；你只须从中取走道路应答你的那一部分。
-
+教你牌阵的寡妇把牌重新洗了一遍：“临走前再看一次吧，这把不收钱。”她翻开几张牌，讲了讲每条路可能要付出的代价，最后把一张牌塞到你手里：“别当成保证，遇上岔路时拿出来想想就好。”
 ## ev.ev_tauris_mentor_followup.choice_1
 
 收下她递给你的临别之牌
 
 ## ev.ev_tauris_mentor_followup.choice_1_result
 
-她递牌给你，不报牌名，只嘱你在第一处岔口再读它。占者的赠礼如今随你而行，牌阵的功课也一并带上。
+她把牌放到你手里：“不必问它叫什么。到了第一个岔口，再拿出来看看。”
 
 ## ev.ev_tauris_mentor_followup.choice_2
 
@@ -516,7 +483,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_followup.choice_2_result
 
-她翻过牌面，报出南方那条路——尽头通海之路。忽鲁谟斯如今上了你的舆图，你也知道了行此路当择何季。
+她翻开牌面，点了点南边：“这条路通往忽鲁谟斯，最后到海边。走不走，还是你自己拿主意。”
 
 ## ev.ev_tauris_mentor_followup.choice_3
 
@@ -524,7 +491,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_followup.choice_3_result
 
-你在她家中留了一日，看她为海路起卦，听她讲每张牌的含义。时日是花了，可占者之家从此记得你；在大不里士，一个被人记住的名字，会替你打开门扉。
+你在她家中听了一天牌。她逐张解释牌面，又把几条海路画在桌上：“占卜只帮你把顾虑摆出来。哪条路真要走，还得你自己定。”你在大不里士多待了一日，才把她的告诫记牢。
 
 ## ev.ev_tauris_mentor_astrodice_followup.title
 
@@ -532,8 +499,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_astrodice_followup.body
 
-教你掷十二面骰的骰师，在城门边又唤住了你。他把骰子拢进双掌，呵了一口气，在路边石上掷出：为前路做的最后一局。掷便是掷，他说；你已付过学费，这一掷便是你的，如何花用由你。你自择从中取走什么。
-
+教你骰术的师傅在城门边叫住你。他把骰子放在掌心搓了搓，往路边一掷：“最后再帮你看一次，不收钱。骰面摆在这儿了，怎么走还得你自己定。”
 ## ev.ev_tauris_mentor_astrodice_followup.choice_1
 
 把这一掷收作一路的护符
@@ -548,7 +514,7 @@ stamps:
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_2_result
 
-他又掷了一次，读出骰面：南方那条路——尽头是忽鲁谟斯与海。这条路画上了你的舆图，这一掷也收进了你的行纪。
+他又掷了一次，念出骰面：“南边那条路，通往忽鲁谟斯和海。”
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3
 
@@ -556,5 +522,20 @@ stamps:
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
 
-你与这副骰子坐了一日，学会了它们的落势，黄昏时把它们还了回去。骰师记下你的沉静，坊间也对你有了好话。
+你跟骰师学了一天，终于能看懂几种常见的落势。黄昏时，他收起骰子：“下次走到岔路，先掷一回，再想想自己到底想去哪儿。”
 
+## ev.ev_tauris_consequence_a_resolution.choice_2
+
+收下这封信
+
+## ev.ev_tauris_consequence_a_resolution.choice_2_result
+
+你把信交到收信人手上。掮客答应帮忙的事，也就有了着落。
+
+## ev.ev_tauris_consequence_b_resolution.choice_2
+
+收下这份水源札记
+
+## ev.ev_tauris_consequence_b_resolution.choice_2_result
+
+你翻看水源札记，沿途水井的位置和季节水量都写得明白。

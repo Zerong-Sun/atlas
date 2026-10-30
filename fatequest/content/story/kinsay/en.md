@@ -135,7 +135,7 @@ Walk the great market
 
 ## ev.kinsay.entry.title
 
-Arriving at GREAT CITY OF KINSAY
+The City of Heaven
 
 ## ev.ev_kinsay_entry.choice_1_result
 
@@ -143,7 +143,7 @@ The clerks of the shìbó sī weigh your cargo on the wharf scales and write you
 
 ## ev.ev_kinsay_entry.choice_2_result
 
-The men of Kinsay answer your questions by pointing across the water, for the city is too great to describe standing still. Their answers travel from bridge to bridge, and before nightfall a fuller account has crossed the canal to find you.
+You ask several people and hear different answers. Near dusk an old boatman selling fish beckons. “Want to know how this city lives? Look at the river. Boats bring goods in, bridges carry people across, and the tax officer counts what each boat holds.”
 
 ## ev.ev_kinsay_entry.choice_3_result
 
@@ -163,7 +163,7 @@ You hire a boat and spend the day on the canals under the twelve thousand bridge
 
 ## ev.ev_kinsay_a.choice_2_result
 
-You walk the bridges of Kinsay and lose the count before midday. The canals of the city of Heaven are now marked in your book.
+You cross Kinsay's bridges until you lose count before noon. A boatman laughs. “Stop counting bridges and look at the boats beneath them. More than a hundred may pass this channel in a day.”
 
 ## ev.ev_kinsay_a.choice_3_result
 
@@ -187,7 +187,7 @@ You hire a pleasure boat with musicians and wine and push out onto the West Lake
 
 ## ev.ev_kinsay_c.choice_2_result
 
-You stand on the shore and watch the floating palaces move across the lake. The pleasure lake of Kinsay is now marked in your book.
+You stand on the bank and watch painted pleasure boats pass slowly across the lake.
 
 ## ev.ev_kinsay_c.choice_3_result
 
@@ -263,7 +263,7 @@ Leave the account with the porter
 
 ## ev.ev_kinsay_consequence_b.choice_2_result
 
-You leave the account with the porter and keep your own counsel. It goes back to the wharf, and Kinsay asks nothing more of you.
+You thank the porter but decline his explanation. He takes back the paper. “I must return to work. You can find me at the quay if you change your mind.”
 
 ## ev.ev_kinsay_consequence_b_resolution.title
 
@@ -295,7 +295,7 @@ Kinsay: The Water-Keeper of the Twelve Thousand Bridges
 
 ## ev.ev_kinsay_a_followup.body
 
-The canal keeper who poled your boat through the city finds you again at the landing, his pole still dripping. He has spent his life among the twelve thousand bridges of Kinsay, and he tells you how the city is built like a net: the hundred canals are the meshes, the stone bridges the knots, and the streets are paved with stone so that no rain-mud ever holds back a cart. Every arch, he says, is counted and kept, and a broken bridge is a broken word to the men who govern the water. He shows you a block of toll marks cut into the quay, by which the keepers reckon what each boat owes for the day. The city of heaven, he says, does not float — it is held up by good accounting. You look at the water running beneath the twelve thousand bridges and see the order that the travellers' tales leave out.
+The water officer who poled you through the city calls you back at the quay, his long pole still dripping. He points beneath the bridges. More than a hundred canals cross the city, he says, and stone-paved streets keep carts from sinking after heavy rain. Each bridge must be checked and repaired or ships and cargo will stop. He shows you the tax marks cut into the quay stones: every boat pays by the rule written there. “The City of Heaven does not run by itself.”
 
 ## ev.ev_kinsay_a_followup.choice_1
 
@@ -303,7 +303,7 @@ Ask the keeper how the tolls are reckoned on the water
 
 ## ev.ev_kinsay_a_followup.choice_1_result
 
-The keeper reads the block of toll marks for you — so much for a grain boat, so much for a passenger skiff, nothing for a funeral barge. The water-law of Kinsay is now written in your travel book.
+Reading the tax marks, the officer explains that grain boats pay according to cargo, passenger boats according to the people aboard. Funeral boats pay nothing. “Do not tell the keeper of the accounts,” he jokes. “He would count every boat.”
 
 ## ev.ev_kinsay_a_followup.choice_2
 
@@ -383,7 +383,7 @@ Stay until the moon rises to hear the boats' music
 
 ## ev.ev_kinsay_c_followup.choice_3_result
 
-You stay by the shore until the moon is up and the lantern boats drift out to the middle of the lake. It costs you a day, but you have heard the city of heaven at its most beautiful, and the people of Kinsay will remember that you listened.
+You remain until moonrise. Lantern boats glide past one after another. A boatman's work song mingles with the pipa. After her last song, a woman asks, “Do people sing like this on the water where you come from?”
 
 ## ev.ev_kinsay_mentor_followup.title
 

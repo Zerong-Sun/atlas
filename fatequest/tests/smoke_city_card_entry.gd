@@ -113,8 +113,12 @@ func _init() -> void:
 	await drain(main)
 	check(main.state.city == cairo.id and main.state.active_journey.is_empty()
 		and main._city_view.visible, "actual Alexandria to Cairo arrival enters the city")
-	check(main._city_view._market_btn.visible and cairo.sites.is_empty(),
-		"Cairo market remains available without exploration sites")
+	# Keep this a market-only layout fixture even as authored city sites expand.
+	var market_only := cairo.duplicate(true)
+	market_only["sites"] = []
+	main._city_view.show_city(market_only, main.state, main.conditions, main._ctx())
+	check(main._city_view._market_btn.visible and main._city_view._figures.get_child_count() == 0,
+		"market remains available without exploration sites")
 	await press(main._city_view, "ui.market")
 	check(main._market_layer.visible, "Cairo market opens")
 	await press(main._market_view, "ui.leave_market")
@@ -176,6 +180,7 @@ func _init() -> void:
 	check(main._city_detail_card._enter_btn.disabled, "terminal life cannot re-enter")
 	main._city_detail_card.enter_requested.emit(cairo.id)
 	check(not main._city_view.visible, "terminal signal cannot re-enter")
+	if not I18n.missing_keys().is_empty(): printerr("Missing translations: ", I18n.missing_keys())
 	check(I18n.missing_keys().is_empty(), "no missing translations")
 	print("CITY_CARD: %s" % ("PASS" if failures == 0 else "FAIL"))
 	quit(0 if failures == 0 else 1)

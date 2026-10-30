@@ -40,43 +40,43 @@ stamps:
 
 ## div.bazi-relationship.result.00
 
-两盘日主相同：两个强硬的性子，在十字路口总有一个要先让。
+两盘日主相同：你们都很有主见。遇到分岔时，先商量好由谁拿主意。
 
 ## div.bazi-relationship.result.01
 
-火见木：长者暖着幼者，一份有照拂的情分。
+火见木：一方愿意照顾另一方，这段关系里有温暖，也有成长。
 
 ## div.bazi-relationship.result.02
 
-水见木：树喝得深，幼者渐渐长成。
+水见木：彼此的支持能让关系慢慢长稳。
 
 ## div.bazi-relationship.result.03
 
-木见土：枝干破土，一对犟脾气的伴侣。
+木见土：你们都不轻易改主意。多听一句，争执就容易化开。
 
 ## div.bazi-relationship.result.04
 
-土见金：矿在火里炼得精，一份稳当的情谊。
+土见金：相处踏实，遇到难题时可以一起想办法。
 
 ## div.bazi-relationship.result.05
 
-金见水：刀刃冷下来，一份从容的结盟。
+金见水：你们能冷静地谈事情，适合把合作约定说清楚。
 
 ## div.bazi-relationship.result.06
 
-合多：有福的相配，同行的路平坦。
+合多：两盘有不少相合之处，相处容易找到共同点。
 
 ## div.bazi-relationship.result.07
 
-冲多：火花四溅，和气得小心维持。
+冲多：彼此容易有分歧，也有推动对方改变的力量。重要的话别憋着，及时谈开。
 
 ## div.bazi-relationship.result.08
 
-两盘日主皆旺：两个领头的人，掌舵要轮流来。
+两盘日主皆旺：你们都适合做主，遇到大事轮流拿主意更省心。
 
 ## div.bazi-relationship.result.09
 
-一弱一旺：一个靠着另一个，担子两下分。
+一弱一旺：一方更愿意带头，另一方能补上细节。把分工说清楚，彼此都轻松。
 
 ## div.bazi-relationship.result.10
 
@@ -88,7 +88,7 @@ stamps:
 
 ## div.bazi-relationship.result.12
 
-盘中带驿马：变动，这份情谊在生长变化。
+盘中带驿马：旅途或生活的变化会影响这段关系，提前商量安排会更稳妥。
 
 ## div.bazi-relationship.result.13
 
@@ -96,11 +96,11 @@ stamps:
 
 ## div.bazi-relationship.result.14
 
-火无木：焰头不稳，要靠耐心添柴。
+火无木：相处需要多些主动关心，小小的问候能让关系暖起来。
 
 ## div.bazi-relationship.result.15
 
-金无火：刀是冷的，暖话要常说。
+金无火：你们可能不常表达心意，不妨把感谢和在意直接说出来。
 
 ## div.bazi-relationship.result.16
 
@@ -124,36 +124,36 @@ stamps:
 
 ## div.bazi-relationship.result.21
 
-一方带孤辰：相遇之前曾有孤寂，耐心等。
+一方带孤辰：有人更习惯独处，给彼此一点空间，再慢慢靠近。
 
 ## div.bazi-relationship.result.22
 
-两盘皆带贵人：有福的相配，路上的运气也好。
+两盘皆带贵人：遇到难处时容易得到旁人支持，也适合一起结交朋友。
 
 ## div.bazi-relationship.result.23
 
-带刑星：一场意志的角力，仗要挑着打。
+带刑星：意见相左时容易较真，先挑最重要的事谈，别让小事耗光耐心。
 
 ## div.bazi-relationship.result.24
 
-日支相合：天成的相合，同行的路走得省力。
+日支相合：日常相处合拍，合作起来也更顺手。
 
 ## div.bazi-relationship.result.25
 
-时支相合：静下来的时辰，两下里分着过。
+时支相合：你们在安静相处和分担日常上容易找到默契。
 
 ## div.bazi-relationship.result.26
 
-一盘带空亡：一处空缺，缺了什么要开口说。
+一盘带空亡：心里若有没说出口的期待，坦白讲出来更容易得到回应。
 
 ## div.bazi-relationship.result.27
 
-一盘带墓：一个了结，让旧的一年过去。
+一盘带墓：这段关系适合放下旧事，给接下来的相处留个新起点。
 
 ## div.bazi-relationship.result.28
 
-带子女星：一桩新营生，或一个孩子，福了这份情谊。
+带子女星：共同照顾孩子或经营一件新事，会让你们更有牵挂。
 
 ## div.bazi-relationship.result.29
 
-两盘平匀：一条平等的路，并肩走完它。
+两盘平匀：彼此能平等商量，也能并肩分担日常。

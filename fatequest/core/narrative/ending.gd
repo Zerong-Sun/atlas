@@ -135,7 +135,7 @@ func _net_worth(state: WorldState) -> int:
 	for gid in state.goods.keys():
 		var basis: Dictionary = state.purchases.get(gid, {})
 		w += int(basis.get("unit", 0)) * int(state.goods[gid])
-	return w
+	return w - preload("res://core/city/city_life.gd").debt_due(state)
 
 
 # --------------------------------------------------------------- epilogue

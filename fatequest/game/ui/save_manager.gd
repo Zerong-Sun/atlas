@@ -23,9 +23,9 @@ func _ready() -> void:
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", Metrics.sm())
 	add_child(root)
-	root.add_child(Panels.heading(I18n.t("ui.save_heading")))
-	root.add_child(Panels.label(
-		I18n.t("ui.save_desc"),
+	root.add_child(Panels.translated_label("ui.save_heading", UiScale.title(), Palette.ink()))
+	root.add_child(Panels.translated_label(
+		"ui.save_desc",
 		UiScale.ui(), Palette.ink_soft()))
 	root.add_child(Panels.rule())
 	var scroll := ScrollContainer.new()
@@ -36,7 +36,7 @@ func _ready() -> void:
 	_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_list.add_theme_constant_override("separation", Metrics.xs())
 	scroll.add_child(_list)
-	root.add_child(Panels.styled_button(I18n.t("ui.close"), func(): closed.emit()))
+	root.add_child(Panels.translated_button("ui.close", func(): closed.emit()))
 	_overwrite_dialog = ConfirmationDialog.new()
 	_overwrite_dialog.title = I18n.t("ui.overwrite_manual")
 	_overwrite_dialog.confirmed.connect(_confirm_overwrite)
@@ -46,6 +46,22 @@ func _ready() -> void:
 	_restore_dialog.dialog_text = I18n.t("ui.restore_confirm")
 	_restore_dialog.confirmed.connect(_confirm_restore)
 	add_child(_restore_dialog)
+	get_viewport().size_changed.connect(_fit_window)
+	_fit_window()
+
+
+func _fit_window() -> void:
+	Panels.fit_panel(self, Vector2(760, 580))
+
+
+func restyle() -> void:
+	Panels.restyle_tree(self)
+	_overwrite_dialog.title = I18n.t("ui.overwrite_manual")
+	_restore_dialog.title = I18n.t("ui.restore_backup")
+	_restore_dialog.dialog_text = I18n.t("ui.restore_confirm")
+	_fit_window()
+	if db != null:
+		refresh()
 
 
 func setup(p_db: ContentDb) -> void:
@@ -92,7 +108,7 @@ func _slot_row(slot: String, label: String, writable: bool) -> Control:
 			city_name, int(h.get("days", 0)), String(h.get("saved_at", ""))],
 			maxi(UiScale.ui() - 2, 10), Palette.ink_soft()))
 	elif status == "empty":
-		text.add_child(Panels.label(I18n.t("ui.empty_slot"), maxi(UiScale.ui() - 2, 10), Palette.ink_faint()))
+		text.add_child(Panels.translated_label("ui.empty_slot", maxi(UiScale.ui() - 2, 10), Palette.ink_faint()))
 	else:
 		var message := I18n.t("ui.save_corrupted") if status == "corrupt" else I18n.t("ui.version_mismatch")
 		text.add_child(Panels.label("%s · %s" % [

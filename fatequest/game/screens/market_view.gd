@@ -40,7 +40,7 @@ func setup(p_db: ContentDb, p_market: Market) -> void:
 
 
 func _build() -> void:
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	Panels.apply_card(self, "ledger")
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", 12)
 	add_child(root)
@@ -75,6 +75,9 @@ func _build() -> void:
 	root.add_child(_tabs)
 	_tabs.add_child(_column(true))
 	_tabs.add_child(_column(false))
+	_tabs.tab_alignment = TabBar.ALIGNMENT_LEFT
+	root.add_child(Panels.reading_hint(_stock_box.get_parent()))
+	root.add_child(Panels.reading_hint(_hold_box.get_parent()))
 	_feedback = Panels.label("", UiScale.ui(), Palette.ink_soft())
 	_feedback.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(_feedback)
@@ -171,6 +174,8 @@ func _relabel() -> void:
 	_close.text = I18n.t("ui.leave_market")
 	_tabs.set_tab_title(0, I18n.t("ui.local_goods"))
 	_tabs.set_tab_title(1, I18n.t("ui.your_bag"))
+	_tabs.set_tab_tooltip(0, I18n.t("ui.tab.buy"))
+	_tabs.set_tab_tooltip(1, I18n.t("ui.tab.sell"))
 	_feedback.text = I18n.t("ui.market.trade_hint") if _feedback_key.is_empty() else I18n.t(_feedback_key) % I18n.t(_feedback_name_key)
 
 
@@ -238,7 +243,11 @@ func _demand_note(good: Dictionary) -> String:
 
 func _row_panel() -> PanelContainer:
 	var p := PanelContainer.new()
-	p.add_theme_stylebox_override("panel", Palette.panel_style(true))
+	var style := Palette.panel_style()
+	style.draw_center = UiScale.high_contrast
+	style.set_border_width_all(0)
+	style.border_width_bottom = 1
+	p.add_theme_stylebox_override("panel", style)
 	return p
 
 
@@ -494,7 +503,7 @@ func _begin_trade(good: Dictionary, feedback_key: String) -> bool:
 
 
 func restyle() -> void:
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	Panels.apply_card(self, "ledger")
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
 	for label in [_purse, _hold_label]:
@@ -506,9 +515,16 @@ func restyle() -> void:
 	_tabs.add_theme_font_size_override("font_size", UiScale.ui())
 	_tabs.add_theme_color_override("font_selected_color", Palette.ink())
 	_tabs.add_theme_color_override("font_unselected_color", Palette.ink_soft())
-	_tabs.add_theme_stylebox_override("tab_selected", Palette.button_style(Palette.State.HOVER))
-	_tabs.add_theme_stylebox_override("tab_unselected", Palette.button_style())
-	_tabs.add_theme_stylebox_override("panel", Palette.panel_style())
+	var selected := Palette.button_style(Palette.State.HOVER)
+	selected.border_color = Palette.edge()
+	selected.border_width_top = 4
+	selected.border_width_bottom = 0
+	selected.bg_color = Palette.panel()
+	var unselected := Palette.button_style()
+	unselected.bg_color = Palette.PANEL_SUNK if not UiScale.high_contrast else Palette.panel()
+	_tabs.add_theme_stylebox_override("tab_selected", selected)
+	_tabs.add_theme_stylebox_override("tab_unselected", unselected)
+	_tabs.add_theme_stylebox_override("panel", Panels.card_style("ledger"))
 	Panels.style_button(_close)
 	_relabel()
 	_fit_window()

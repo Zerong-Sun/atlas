@@ -42,3 +42,27 @@ You pass through without stopping. You set the way to Sapurgan on your map.
 ## ev.ev_sapurgan_entry.choice_2_result
 
 You rest and ask what men say of this place. The road to Sapurgan opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+
+## ev.sapurgan.site_gap.title
+
+Copper Weights at the Market
+
+## ev.sapurgan.site_gap.body
+
+A coppersmith sets two weights on a wooden tray. For valuable goods, he says, a stamped mark is not enough: compare a weight with a standard one first. Copper wears, and rounded corners may change its measure. They feel almost identical in your hands. He wipes away verdigris and hangs them beside the scale.
+
+## ev.sapurgan.site_gap.choice.route
+
+Ask about the road to Taykan
+
+## ev.ev_sapurgan_site_gap.choice_1_result
+
+“Go east on this mountain road to Taykan. Villages along the way can tell you about pack trains. Wrap copper goods well so they do not knock against one another.”
+
+## ev.sapurgan.site_gap.choice.interact
+
+Help calibrate the scale
+
+## ev.ev_sapurgan_site_gap.choice_2_result
+
+You set a weight on the pan. He moves the beam until it balances: zero an empty scale before weighing goods. A slight tilt makes a large difference across many sacks.

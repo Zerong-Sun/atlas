@@ -1,5 +1,8 @@
 # 美术素材需求 · ART REQUIREMENTS
 
+
+2026-10-25 中文剧情生产补充：103 座城市专属入城背景、缺图状态和人物肖像需求见 [`CHINESE_NARRATIVE_ART_PRODUCTION.md`](CHINESE_NARRATIVE_ART_PRODUCTION.md)。城市图按 `MapArt.city_entry()` 资源接线核算；总索引数不能代表逐城覆盖。
+
 ## 2026-10-20 后续生产更新：完整公开塔罗牌库
 
 当前运行塔罗采用完整 **78 张 RWS 原版同源 profile**（`rws_commons_public_domain`），逐牌来源、Public domain 原声明、Commons SHA-1、原始/输出 SHA256、尺寸及转换参数保存在 `assets/decks/tarot/DECK_MANIFEST.json`。下载的来源 JPG 字节保存在 `_sources_rws/`（74张原尺寸图、4张依Commons限速建议使用的标准960px缩略图，逐项记录variant及原尺寸参考hash）；输出只是无损 WebP 转换，没有裁切、改色或重绘。旧“云岭暮光”40张移到 `_legacy_cloud_ridge/`，不会与RWS混用。完整同源牌组保持原版线描语言；扫描纸色/印刷差异仍需逐张复核，不宣称人类美术终审。

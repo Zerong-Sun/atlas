@@ -16,7 +16,10 @@ func run() -> bool:
 	_ok(SceneDensity.classify("temple-interior") == SceneDensity.SHRINE, "temple → shrine")
 	_ok(SceneDensity.classify("monsoon-port") == SceneDensity.PORT, "port class")
 	_ok(SceneDensity.layer_gains(SceneDensity.WILD)["pulse"] == 0.0, "wild has no pulse")
-	_ok(SceneDensity.layer_gains(SceneDensity.SHRINE)["melody"] == 0.0, "shrine has no melody")
+	_ok(SceneDensity.layer_gains(SceneDensity.SHRINE)["melody"] > 0.0
+		and SceneDensity.layer_gains(SceneDensity.SHRINE)["melody"]
+		< SceneDensity.layer_gains(SceneDensity.TOWN)["melody"],
+		"shrine keeps a quieter melody than town")
 
 	var empty_res := EffectExecutor.EffectResult.new()
 	_ok(AudioMood.derive(null, {}, {"tier": "metropolis"}) == AudioMood.WONDER, "metropolis wonder")
@@ -34,7 +37,10 @@ func run() -> bool:
 	_ok(AudioMood.derive(null, {}, {"tier": "city"}, "", 5) == AudioMood.RELIEF, "relief after hard road into city")
 
 	var p := AudioMood.params(AudioMood.TENSION)
-	_ok(float(p["melody"]) == 0.0 and float(p["cutoff"]) < 2000.0, "tension darkens + drops melody")
+	var calm := AudioMood.params(AudioMood.NEUTRAL)
+	_ok(float(p["melody"]) > 0.0 and float(p["melody"]) < float(calm["melody"])
+		and float(p["cutoff"]) < float(calm["cutoff"]),
+		"tension darkens and quiets the melody")
 
 	print("test_audio: %s" % ("PASS" if _fails == 0 else "FAIL (%d)" % _fails))
 	return _fails == 0

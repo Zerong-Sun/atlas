@@ -8,8 +8,8 @@
       "band": "india",
       "culture": "indian_ocean",
       "faiths": [
-        "hindu",
         "islam",
+        "hindu",
         "folk"
       ],
       "coord": [
@@ -20,7 +20,8 @@
       "entryEvent": "ev-aden-entry",
       "sites": [
         "ev-aden-a",
-        "ev-aden-b"
+        "ev-aden-b",
+        "ev-aden-letter"
       ],
       "exits": [
         "rt-aden-axuma",
@@ -51,7 +52,7 @@
         "spread": 0.22
       },
       "shrine": {
-        "faith": "hindu",
+        "faith": "islam",
         "services": [
           "bless"
         ]
@@ -92,7 +93,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-axuma-entry",
-      "sites": [],
+      "sites": [
+        "ev-axuma-site-gap",
+        "ev-axuma-parchment"
+      ],
       "exits": [
         "rt-aden-axuma",
         "rt-axuma-dongola",
@@ -127,7 +131,8 @@
       "sites": [
         "ev-cail-a",
         "ev-cail-b",
-        "ev-cail-battuta-a"
+        "ev-cail-battuta-a",
+        "ev-cail-drum"
       ],
       "exits": [
         "rt-cail-coilum",
@@ -173,8 +178,8 @@
       "band": "india",
       "culture": "indian_ocean",
       "faiths": [
-        "hindu",
         "islam",
+        "hindu",
         "folk"
       ],
       "coord": [
@@ -185,10 +190,10 @@
       "entryEvent": "ev-calatu-entry",
       "sites": [
         "ev-calatu-a",
-        "ev-calatu-b"
+        "ev-calatu-b",
+        "ev-calatu-shoemaker"
       ],
       "exits": [
-        "rt-calatu-camadi",
         "rt-calatu-dufar",
         "rt-ormus-calatu"
       ],
@@ -215,7 +220,7 @@
         "spread": 0.22
       },
       "shrine": {
-        "faith": "hindu",
+        "faith": "islam",
         "services": [
           "bless"
         ]
@@ -240,7 +245,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cambaet-entry",
-      "sites": [],
+      "sites": [
+        "ev-cambaet-site-gap",
+        "ev-cambaet-tidemark"
+      ],
       "exits": [
         "rt-aden-cambaet",
         "rt-cambaet-semenat",
@@ -289,7 +297,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-coilum-entry",
-      "sites": [],
+      "sites": [
+        "ev-coilum-site-gap",
+        "ev-coilum-baker"
+      ],
       "exits": [
         "rt-cail-coilum",
         "rt-coilum-maabar",
@@ -344,7 +355,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-dongola-entry",
-      "sites": [],
+      "sites": [
+        "ev-dongola-site-gap",
+        "ev-dongola-garden"
+      ],
       "exits": [
         "rt-axuma-dongola",
         "rt-dongola-mecha",
@@ -375,7 +389,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-dufar-entry",
-      "sites": [],
+      "sites": [
+        "ev-dufar-site-gap",
+        "ev-dufar-sail"
+      ],
       "exits": [
         "rt-aden-dufar",
         "rt-calatu-dufar",
@@ -487,7 +504,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-maabar-entry",
-      "sites": [],
+      "sites": [
+        "ev-maabar-site-gap"
+      ],
       "exits": [
         "rt-coilum-maabar",
         "rt-maabar-cail",
@@ -542,7 +561,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-mecha-entry",
-      "sites": [],
+      "sites": [
+        "ev-mecha-site-gap",
+        "ev-mecha-cloak"
+      ],
       "exits": [
         "rt-axuma-mecha",
         "rt-dongola-mecha",
@@ -597,7 +619,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-medina-entry",
-      "sites": [],
+      "sites": [
+        "ev-medina-site-gap"
+      ],
       "exits": [
         "rt-dongola-medina",
         "rt-mecha-medina",
@@ -703,7 +727,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-semenat-entry",
-      "sites": [],
+      "sites": [
+        "ev-semenat-site-gap"
+      ],
       "exits": [
         "rt-cambaet-semenat",
         "rt-semenat-delli",
@@ -751,7 +777,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-tana-entry",
-      "sites": [],
+      "sites": [
+        "ev-tana-site-gap"
+      ],
       "exits": [
         "rt-cambaet-tana",
         "rt-semenat-tana",

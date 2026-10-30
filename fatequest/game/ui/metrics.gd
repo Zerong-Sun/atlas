@@ -78,15 +78,9 @@ static func measure(viewport_w: float) -> float:
 	return minf(MEASURE * factor(), viewport_w - float(xl()) * 2.0)
 
 
-## Height a bottom-docked prose panel needs: seven lines of the current body
-## type plus the panel's own padding.
-##
-## The map screen previously fixed this at 150 px, which is seven lines at the
-## NORMAL step but barely four at HUGE — so the journal shrank to a slot exactly
-## for the readers who had just asked for larger words. Tuned to land on ~150 at
-## NORMAL, so nothing moves for a player who never touches the setting.
+## A default reading dock holds twelve body lines plus breathing room.
 static func dock_height() -> float:
-	return float(UiScale.body()) * 7.0 + float(md()) * 2.0 + 12.0
+	return float(UiScale.body()) * 12.0 + float(md()) * 2.0 + 24.0
 
 
 ## Minimum hit target. Below roughly this, a control is fiddly with a trackpad

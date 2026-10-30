@@ -37,7 +37,7 @@ func build(parent: Node) -> void:
 	_bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_bg.modulate = Color(1, 1, 1, 0.92)
+	_bg.modulate = Color(1, 1, 1, 0.16)
 	_bg.set_meta("decorative_panel_art", true)
 	_panel.add_child(_bg)
 	_panel.move_child(_bg, 0)

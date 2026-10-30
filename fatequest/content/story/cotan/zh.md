@@ -2,112 +2,118 @@
 unit: cotan
 lang: zh
 source: en
-source_rev: 251935c87eed
+source_rev: 3d860b7a1cd7
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.cotan.twoscripts.result.learn: e7457a8a9412
+  ev.cotan.twoscripts.choice.learn: 59431a69473b
+  ev.cotan.twoscripts.result.work: 7e756ae0fbc9
+  ev.cotan.twoscripts.choice.work: a5ba4d16e08c
+  ev.cotan.twoscripts.body: f83d64faa6d3
+  ev.cotan.twoscripts.title: 84e43761265c
   city.cotan.name: 453bcf60be62
-  ev.cotan.a.choice.jade: 4c31cbad564f
-  ev.cotan.a.choice.wade: 002f1c6bc2f4
-  ev.cotan.a.choice.watch: 5433bc324f0b
-  ev.cotan.b.choice.dyes: 29d7258d801b
-  ev.cotan.b.choice.silk: 15f6061343bc
-  ev.cotan.b.choice.weave: 70a512517158
-  ev.cotan.c.choice.explore: ee5e6a782d70
-  ev.cotan.c.choice.fragment: e2154f92603b
-  ev.cotan.c.choice.listen_elder: 2d8b54f45668
-  ev.cotan.entry.choice.customs: 5f67b1abbf38
-  ev.cotan.entry.choice.lore: 5800603dbcaf
-  ev.cotan.entry.choice.market: b23d98ceae5c
-  ev.cotan.a.body: 1808e030c02f
-  ev.cotan.a.title: 0b59c365ce32
-  ev.cotan.b.body: d35abca524b4
-  ev.cotan.b.title: c7c48ec8a057
-  ev.cotan.c.body: 1e3b57f73424
-  ev.cotan.c.title: b9524767021d
-  ev.cotan.entry.body: 87b436f01b1a
-  ev.cotan.entry.title: d750868faec6
-  ev.ev_cotan_entry.choice_1_result: 7c9b643637e3
-  ev.ev_cotan_entry.choice_2_result: 1d0d1a88a4ab
-  ev.ev_cotan_entry.choice_3_result: 4915924aa8eb
-  ev.ev_cotan_a.choice_1_result: 91e8595e6287
-  ev.ev_cotan_a.choice_2_result: 1303a640ba39
-  ev.ev_cotan_a.choice_3_result: 5cb18c158a5a
-  ev.ev_cotan_b.choice_1_result: 60ba47c6f2b3
-  ev.ev_cotan_b.choice_2_result: c8b20b3e98d8
-  ev.ev_cotan_b.choice_3_result: 5ad749de3931
-  ev.ev_cotan_c.choice_1_result: 532a55a9c3cc
-  ev.ev_cotan_c.choice_2_result: 503b3b765500
-  ev.ev_cotan_c.choice_3_result: 68f76c14447a
-  ev.ev_cotan_consequence_a.title: 0a189a9de00d
-  ev.ev_cotan_consequence_a.body: 33b87e3d32ef
-  ev.ev_cotan_consequence_a.choice_1: f66b3e8cdcec
-  ev.ev_cotan_consequence_a.choice_1_result: a562b9c9eaa9
-  ev.ev_cotan_consequence_a.choice_2: 2cd7a2907d14
-  ev.ev_cotan_consequence_a.choice_2_result: a8b0ca9b404b
-  ev.ev_cotan_consequence_a_resolution.title: 397f9f76c13b
-  ev.ev_cotan_consequence_a_resolution.body: 5b6c14ff83a0
-  ev.ev_cotan_consequence_a_resolution.choice_1: 2cb9a5275ee5
-  ev.ev_cotan_consequence_a_resolution.choice_1_result: edabbab86ac8
-  ev.ev_cotan_consequence_a_resolution.choice_2: da45666f4966
-  ev.ev_cotan_consequence_a_resolution.choice_2_result: 0264747381a3
-  ev.ev_cotan_consequence_b.title: 407b734dd715
-  ev.ev_cotan_consequence_b.body: 05f1326e1d29
-  ev.ev_cotan_consequence_b.choice_1: 11e5086d6ff2
-  ev.ev_cotan_consequence_b.choice_1_result: 5130430498bf
-  ev.ev_cotan_consequence_b.choice_2: 35feccad45a6
-  ev.ev_cotan_consequence_b.choice_2_result: 5404b612e641
-  ev.ev_cotan_consequence_b_resolution.title: 8ae5ace3e36c
-  ev.ev_cotan_consequence_b_resolution.body: b847cdf2a2c8
-  ev.ev_cotan_consequence_b_resolution.choice_1: 01690b5ec567
-  ev.ev_cotan_consequence_b_resolution.choice_1_result: 3d9b94569ff9
-  ev.ev_cotan_consequence_b_resolution.choice_2: e178f7261dc3
-  ev.ev_cotan_consequence_b_resolution.choice_2_result: 537f699c2366
-  ev.cotan.mentor_closure.title: da75a7423ad9
-  ev.cotan.mentor_closure.body: d5f692b5c670
-  ev.cotan.mentor_closure.choice_1: da8d611ab3c7
-  ev.cotan.mentor_closure.choice_1_result: d8f002ceecab
-  ev.cotan.mentor_closure.choice_2: 59a447ce21bf
-  ev.cotan.mentor_closure.choice_2_result: fc1d07827c51
-  ev.cotan.mentor_closure.choice_3: 630a8fcfe069
-  ev.cotan.mentor_closure.choice_3_result: ac5256d81408
-  ev.ev_cotan_a_followup.title: 337d29f258ba
-  ev.ev_cotan_a_followup.body: 9e267d9a3b43
-  ev.ev_cotan_a_followup.choice_1: f6dfbb0bfee3
-  ev.ev_cotan_a_followup.choice_1_result: 3f497a15fcc4
-  ev.ev_cotan_a_followup.choice_2: 8c4f2665ff2d
-  ev.ev_cotan_a_followup.choice_2_result: 7570c2e4b6c8
-  ev.ev_cotan_a_followup.choice_3: 70445aa8e353
-  ev.ev_cotan_a_followup.choice_3_result: 598404b89f39
-  ev.ev_cotan_b_followup.title: a13fc6139a87
-  ev.ev_cotan_b_followup.body: d030d0342910
-  ev.ev_cotan_b_followup.choice_1: 6d8accc902fe
-  ev.ev_cotan_b_followup.choice_1_result: 8f86f0fd53b2
-  ev.ev_cotan_b_followup.choice_2: 07072559721d
-  ev.ev_cotan_b_followup.choice_2_result: bcc89c4b3f24
-  ev.ev_cotan_b_followup.choice_3: 4528c8406bd0
-  ev.ev_cotan_b_followup.choice_3_result: 76838a5527ce
-  ev.ev_cotan_c_followup.title: ffa785fd6170
-  ev.ev_cotan_c_followup.body: b58a669390fc
-  ev.ev_cotan_c_followup.choice_1: 53ccc60addd3
-  ev.ev_cotan_c_followup.choice_1_result: 59440b8b03b1
-  ev.ev_cotan_c_followup.choice_2: dacd7941ad43
-  ev.ev_cotan_c_followup.choice_2_result: b024adcb8814
-  ev.ev_cotan_c_followup.choice_3: b16c8df6a207
-  ev.ev_cotan_c_followup.choice_3_result: 85971a399fb6
-  ev.ev_cotan_mentor_followup.title: f783b21d647e
-  ev.ev_cotan_mentor_followup.body: 36cd6aef8c99
-  ev.ev_cotan_mentor_followup.choice_1: 570265583575
-  ev.ev_cotan_mentor_followup.choice_1_result: 4decdb990650
-  ev.ev_cotan_mentor_followup.choice_2: 154ce6710bf5
-  ev.ev_cotan_mentor_followup.choice_2_result: 9ffdad740338
-  ev.ev_cotan_mentor_followup.choice_3: 22db267dc3fb
-  ev.ev_cotan_mentor_followup.choice_3_result: d0dd6130b3aa
+  ev.cotan.a.choice.jade: 2a719ac450df
+  ev.cotan.a.choice.wade: 08052ae88369
+  ev.cotan.a.choice.watch: 72d8c0ccfbcb
+  ev.cotan.b.choice.dyes: f89918c6f88f
+  ev.cotan.b.choice.silk: e1111176081c
+  ev.cotan.b.choice.weave: 20145014adf4
+  ev.cotan.c.choice.explore: e0d89c7c6f39
+  ev.cotan.c.choice.fragment: 9b41b6d6538b
+  ev.cotan.c.choice.listen_elder: baf8460c8a62
+  ev.cotan.entry.choice.customs: c9b3649e4958
+  ev.cotan.entry.choice.lore: e932908e789f
+  ev.cotan.entry.choice.market: dfc489c4b742
+  ev.cotan.a.body: 33eda1fd686b
+  ev.cotan.a.title: a0dfaf30a556
+  ev.cotan.b.body: 2dc61f57dde9
+  ev.cotan.b.title: 66b4fc9a32f7
+  ev.cotan.c.body: 51e86a4d1e7a
+  ev.cotan.c.title: 562530a06726
+  ev.cotan.entry.body: abd5b2bf3094
+  ev.cotan.entry.title: 9d2a14b647d8
+  ev.ev_cotan_entry.choice_1_result: 64b5d96a317f
+  ev.ev_cotan_entry.choice_2_result: 5e8e1b9dc0ad
+  ev.ev_cotan_entry.choice_3_result: 00b812af7342
+  ev.ev_cotan_a.choice_1_result: 9eab3b1abc14
+  ev.ev_cotan_a.choice_2_result: 0ae697bc2e4f
+  ev.ev_cotan_a.choice_3_result: b890d9717881
+  ev.ev_cotan_b.choice_1_result: 102040db2943
+  ev.ev_cotan_b.choice_2_result: b8da3c42a6d9
+  ev.ev_cotan_b.choice_3_result: 4d97517c4ab1
+  ev.ev_cotan_c.choice_1_result: 91d46a87906e
+  ev.ev_cotan_c.choice_2_result: a2daf414c8b2
+  ev.ev_cotan_c.choice_3_result: 45985028bcd3
+  ev.ev_cotan_consequence_a.title: ce9bb7a665da
+  ev.ev_cotan_consequence_a.body: ba33b22beffd
+  ev.ev_cotan_consequence_a.choice_1: 2e805b603677
+  ev.ev_cotan_consequence_a.choice_1_result: 340a89995a88
+  ev.ev_cotan_consequence_a.choice_2: bda6d425317e
+  ev.ev_cotan_consequence_a.choice_2_result: 53d5a10b424f
+  ev.ev_cotan_consequence_a_resolution.title: ecd30a3f0b3a
+  ev.ev_cotan_consequence_a_resolution.body: 6548938753e4
+  ev.ev_cotan_consequence_a_resolution.choice_1: 0f8c85f0528b
+  ev.ev_cotan_consequence_a_resolution.choice_1_result: 2238889b7c6e
+  ev.ev_cotan_consequence_a_resolution.choice_2: 948c3dff43a7
+  ev.ev_cotan_consequence_a_resolution.choice_2_result: fe5c4a4b747a
+  ev.ev_cotan_consequence_b.title: e354aee0ad56
+  ev.ev_cotan_consequence_b.body: 8c2b9f45aeb4
+  ev.ev_cotan_consequence_b.choice_1: 6c770c6c7d73
+  ev.ev_cotan_consequence_b.choice_1_result: 7cce9deef5b2
+  ev.ev_cotan_consequence_b.choice_2: aeed32cbefbf
+  ev.ev_cotan_consequence_b.choice_2_result: 90162b6d7c41
+  ev.ev_cotan_consequence_b_resolution.title: bd2495e3bcc1
+  ev.ev_cotan_consequence_b_resolution.body: ad29d3f02d15
+  ev.ev_cotan_consequence_b_resolution.choice_1: 43d3c0dcf262
+  ev.ev_cotan_consequence_b_resolution.choice_1_result: 3f88e2602019
+  ev.ev_cotan_consequence_b_resolution.choice_2: 702953726f65
+  ev.ev_cotan_consequence_b_resolution.choice_2_result: a9c4b5b3454b
+  ev.cotan.mentor_closure.title: 83c63c0ba14e
+  ev.cotan.mentor_closure.body: 27643a7b72dc
+  ev.cotan.mentor_closure.choice_1: e910046d5dbd
+  ev.cotan.mentor_closure.choice_1_result: 298d75b6defd
+  ev.cotan.mentor_closure.choice_2: c308f3ce7b85
+  ev.cotan.mentor_closure.choice_2_result: fb8fbde7973d
+  ev.cotan.mentor_closure.choice_3: 8e18851e8bb8
+  ev.cotan.mentor_closure.choice_3_result: 768b25c721ac
+  ev.ev_cotan_a_followup.title: abe45c10d53c
+  ev.ev_cotan_a_followup.body: 212be1e4c717
+  ev.ev_cotan_a_followup.choice_1: 013e31a3fac1
+  ev.ev_cotan_a_followup.choice_1_result: 2b8866f49158
+  ev.ev_cotan_a_followup.choice_2: 9d003616545a
+  ev.ev_cotan_a_followup.choice_2_result: 827f9cecf904
+  ev.ev_cotan_a_followup.choice_3: 5c222aaca55c
+  ev.ev_cotan_a_followup.choice_3_result: 6814b38cc8c3
+  ev.ev_cotan_b_followup.title: abf82c6b0483
+  ev.ev_cotan_b_followup.body: 3a6b64ca2112
+  ev.ev_cotan_b_followup.choice_1: 1574cb754af6
+  ev.ev_cotan_b_followup.choice_1_result: 3e8b9ccaedb8
+  ev.ev_cotan_b_followup.choice_2: a0e77d4a1a85
+  ev.ev_cotan_b_followup.choice_2_result: 15e4863973d8
+  ev.ev_cotan_b_followup.choice_3: c324c9fac7dc
+  ev.ev_cotan_b_followup.choice_3_result: 44eeb1ddf036
+  ev.ev_cotan_c_followup.title: a5369ff5b470
+  ev.ev_cotan_c_followup.body: 0b57a7999d20
+  ev.ev_cotan_c_followup.choice_1: 3b1aaf859dba
+  ev.ev_cotan_c_followup.choice_1_result: 0993b51f8f8e
+  ev.ev_cotan_c_followup.choice_2: 32942bf51e64
+  ev.ev_cotan_c_followup.choice_2_result: 69fb2562f61c
+  ev.ev_cotan_c_followup.choice_3: d4139c80ea30
+  ev.ev_cotan_c_followup.choice_3_result: 2dd230497a8e
+  ev.ev_cotan_mentor_followup.title: 33f416d7f208
+  ev.ev_cotan_mentor_followup.body: dd14dc1aa732
+  ev.ev_cotan_mentor_followup.choice_1: e8eacefd450c
+  ev.ev_cotan_mentor_followup.choice_1_result: 010c67bd7395
+  ev.ev_cotan_mentor_followup.choice_2: f4521c1d69a1
+  ev.ev_cotan_mentor_followup.choice_2_result: 335614b715a4
+  ev.ev_cotan_mentor_followup.choice_3: 7ba5be056572
+  ev.ev_cotan_mentor_followup.choice_3_result: 537df29fee1b
 ---
 
 ## city.cotan.name
@@ -116,395 +122,466 @@ stamps:
 
 ## ev.cotan.a.choice.jade
 
-买一块羊脂白玉——价比黄金
+花一百三十五银买优素福封好的玉货
 
 ## ev.cotan.a.choice.wade
 
-踏入冰冷的河水用脚探玉
+留一天学着看这段浅河
 
 ## ev.cotan.a.choice.watch
 
-在岸边看采玉人学他们的技艺
+在岸上听年长洗石人讲
 
 ## ev.cotan.b.choice.dyes
 
-买染料样本——番红花靛蓝茜草胭脂虫
+花一点二银买染色样料
 
 ## ev.cotan.b.choice.silk
 
-买一匹于阗丝——细过人发
+花一百银买织好的整匹丝绸
 
 ## ev.cotan.b.choice.weave
 
-坐在织机旁与女工一起学她们的歌
+留一天看姐妹俩怎样织
 
 ## ev.cotan.c.choice.explore
 
-在千寺之城的废墟中挖掘
+留三天修渠边旧墙
 
 ## ev.cotan.c.choice.fragment
 
-拾一片彩绘残片——菩萨的手
+收下家人留下的彩陶小片
 
 ## ev.cotan.c.choice.listen_elder
 
-问老人为何以尘土入药
+听拉赫曼母亲讲田边旧事
 
 ## ev.cotan.entry.choice.customs
 
-到 bājgāh（税卡）报关
+留两天学着核河道货单
 
 ## ev.cotan.entry.choice.lore
 
-打听这座城的来历
+花一天看萨米拉家收的河石
 
 ## ev.cotan.entry.choice.market
 
-穿过大 bāzār（集市）
+花一百三十五银买整包玉货
 
 ## ev.cotan.a.body
 
-于阗上方群山中，有两河挟玉石而下——白者如凝结之羊脂，绿者如沙漠长冬过后初展之春叶。
-于阗人于秋日河水低落时，赤足踏入寒水，以足探石；得之则潜入水中捞起。最大之石售与大汗之使者，
-送往汗八里，琢为杯盏、手镯与带扣，供宫廷之用。一块上好的羊脂玉，价胜等重之金。凡达大汗汗八里朝廷之玉——以及凡达波斯、
-天竺与西土之玉——皆出此二河。
+于阗附近的浅河湾，洗石人优素福把一盘河卵石倒在日光下。女儿阿米娜按表面记号分石，把一块有裂纹的放进光滑那堆。“再转过来看看。”父亲说。她淋了点水，才看见那道细缝。岸边等货的商人问还有没有整件玉货，优素福说封好的一包要一百三十五银。
+
+你问他们在哪里找石。优素福指着变动的水流，又问阿米娜今天那盘是从哪一处捞的。她记得沙洲，不记得确切位置。父亲带她走到高一点的岸上，先看明白水怎样绕过石堆，再决定要不要下去。另一位年长洗石人说，你若留到光线变了，他还能指给你看手上怎么认石。
+
+阿米娜拿来干布。优素福等商人核完封口，年长的洗石人则在你身边放下一只空木盘。
 
 ## ev.cotan.a.title
 
-玉河
+洗石人的木盘
 
 ## ev.cotan.b.body
 
-于阗四野尽植桑树，一望无际。城中女子所纺之丝，细过汉地所出——一缕细过人发，可引千步而不绝。
-丝以番红花染黄，靛蓝染青，茜草染红，胭脂虫染绛。织机由二女对坐而作，递梭往来，口中唱节奏之歌。
-一匹可裁袍之于阗丝，在汗八里集市上可易等重之银。大汗之税吏征丝为贡，织户乐于输纳，
-因大汗使者所出之价，胜于任何商贾。
+于阗一间织坊里，法拉和祖莱卡姐妹正赶一段要送市场的丝。法拉伸手找镶边的蓝线，摸到的却是空线轴。祖莱卡说早饭后绕过一轴，姑母把它挪到阴处，免得颜色晒淡。“我说过的。”姑母道。法拉答：“听见了，数经线时又忘了。”
+
+你问有没有已经织好能卖的货。姑母指向另一整匹商货丝绸，价一百银，和姐妹手上这段分开放。她还有一小包染色样料，卖一点二银，靛蓝、茜草、红花、核桃壳都标了名。祖莱卡问样料要不要再包一层。姑母说先防潮，再怕晒。
+
+法拉找回蓝线轴，问你有空要不要坐一天，看她们怎样分着织完这道边。祖莱卡把凳子挪开，给你留了位置。
 
 ## ev.cotan.b.title
 
-于阗丝机
+找不到的蓝线
 
 ## ev.cotan.c.body
 
-活城之外，旧日河阶、水流已绝之处，沙埋着更古的于阗——千寺之城，百座窣堵波，彩绘石窟多到人一生游不尽。
-风日复一日揭开残片：一尊眼涂灯烟的菩萨面，一只举手作福的手，金与朱砂的莲瓣，靛蓝的光轮焰。
-老人说这些墙的尘土是圣的——他们和水饮之作药。汗八里朝廷的考古人派队来编录废墟，
-然一季之内，凡所揭开者，沙漠又夺了回去。佛尘随风东去，越过塔克拉玛干。
+于阗城外一块浇过水的田边，农夫拉赫曼正清走压在低墙上的沙。这道墙护着水渠。母亲拿来上一场风后在自家田里捡到的彩陶片：“给孩子留着看看颜色。”拉赫曼想在下一轮水来前给墙加支撑。母亲提醒他，别把重石压在已经松动的旧砖上。
+
+你问这片地从前是什么。母亲听邻居讲过绿洲里更早的宗教建筑，自己只认得家人在田里找到的零碎东西。小孩指着陶片上的弯线问是不是一只手。她说也许是，碎片太小，看不准。拉赫曼请你帮忙量一处结实的地基，好安新的支撑。
+
+拉赫曼把量绳贴到结实的地面上。母亲递给孩子们一只陶杯，叫他们取水时绕开还湿着的墙根。
 
 ## ev.cotan.c.title
 
-佛尘
+田边露出的旧墙
 
 ## ev.cotan.entry.body
 
-于阗是一个省，介于东北与正东之间，方圆约八日路程。这里的人民臣服于大汗，都信奉摩诃末的宗教。境内城镇村落很多，
-而以于阗为都城，最为华贵，省的名字也因它而来。各种物产都很丰饶，棉花尤其多，此外还有麻、麦、酒之类。
-这里的人民有葡萄园、园圃与田庄，靠商人与工匠为生，不习兵事。
+于阗的入城院里，书记萨米拉正压着一册被水洇湿的货单。弟弟把它抱进屋，洗玉石的人却跟了进来，掌心还有两块河卵石。“你把我的名字写到商人的货包下面了。”他对萨米拉说。她核过记号：整包玉货归商人，河边搬运时洗石人搭过手。她请两人都在改正的那一行签名。
+
+你问旅人在哪里歇脚。萨米拉指向水渠旁的人家，说今天去哪里打水最好，洗石人也能带你看。商人掀开包角，整件玉货要一百三十五银。弟弟问这些石头是否都出自同一条河。“收石的人不止一个，”商人说，“所以名字得记清。”
+
+萨米拉请你留两天看她核货单。弟弟想明天带你看母亲收着的旧河石。洗石人举起一罐刚打来的清水。萨米拉弟弟尝了一口，接着问去水渠该走哪边。
 
 ## ev.cotan.entry.title
 
-记于阗一省
+于阗的河道登记册
 
 ## ev.ev_cotan_entry.choice_1_result
 
-于阗的税关把你的货物记入河关簿，书办特意注明你是沿着玉路来的。你刚转身离开案台，一位自少年时便站在玉河里的淘玉人便叫住了你。
+你留两天跟萨米拉核驮包姓名。弟弟学会把搬运人和货主的记号分开写。你把于阗记进地图和旅途笔记。后来那位洗石人又来找你，手上还有个记号想问。
 
 ## ev.ev_cotan_entry.choice_2_result
 
-于阗人回答你的问题时，带着买卖贵重物事之人特有的谨慎。他们的回答并不完全一致，其中一人答应，等河水告诉他更多时，再来寻你。
+萨米拉的弟弟带你看母亲架上收的河石。母亲记得每块是谁带来的，还让你摸水磨平的面和粗糙的背面。你花一天听一家人讲这些石头，记下于阗。后来，一位认得同一条水渠的织工也来问你问题。
 
 ## ev.ev_cotan_entry.choice_3_result
 
-你在于阗的集市里走了一日，带出来一驮货物。此城的玉石与丝绸，如今都记入了你的行纪。
+你验过封好的玉货，付一百三十五银，又花一天安排装运。萨米拉把商人与你的名字分行写好，整包玉货才装进你的行囊。洗石人的搬运记号也仍留在册上。
 
 ## ev.ev_cotan_a.choice_1_result
 
-你花两千银买下一块羊脂白玉，色白如乳，收进货物。一块按金论价的石头，从此随你而行。
+你付一百三十五银买下整包商货。阿米娜又垫好包角，优素福签上交接记号，等候的商人才让开。玉货随你上路；那块有裂的卵石仍留在盘里，给女儿再练眼力。
 
 ## ev.ev_cotan_a.choice_2_result
 
-你趟进冰凉的河水，用赤足去探水里磨圆了的石头。一日就这样过去，寻玉的手艺如今写进了你的行纪。
+你留一天陪优素福和阿米娜看浅滩。他们让你看水流一变，砂石怎样重新堆起；阿米娜还在另一块石头上找到相似的细纹。你脚暖过来时，已把河边的活计记进笔记。
 
 ## ev.ev_cotan_a.choice_3_result
 
-你在岸上看玉工们一次次潜入冰冷的河水，其中最长者把你唤到身边，把他一生在那条河里用手学会的东西展示给你看。
+年长的洗石人坐在你旁边，逐块把样石转向日光。他等优素福验完那包货，才谈石头怎样分；先把这段河湾看石的办法讲给你。过一阵，他又请你回来，帮他看另一只木盘。
 
 ## ev.ev_cotan_b.choice_1_result
 
-你买下一匹细过发丝的于阗丝，卷进货物。此城的织造技艺，就此随你同行，成了一宗值钱的货物。
+你付一百银买下织好的整匹丝绸。姑母验过布卷，系上写有你名字的小牌。法拉继续织未完的边，祖莱卡帮你把买下的货装好。
 
 ## ev.ev_cotan_b.choice_2_result
 
-你坐在织机旁的妇人中间，她们唱起了那支歌。你问它唱的是什么，其中一人笑着答应，把属于旅人的那一段教给你。
+你在姐妹俩身边待了一天。法拉给你看镶边花纹，祖莱卡叫你数梭子走过的次数，数到后来你也看出蓝线该落在哪里。姑母说你若再来，可以带你看染布院。
 
 ## ev.ev_cotan_b.choice_3_result
 
-你买下染匠的色样——藏红花、靛蓝、茜草、胭脂虫。四色各一，每一种都道出于阗的贸易通向何方。
+你付一点二银买下标好的小样。姑母把靛蓝单独包好，交给你前还让你逐个念一遍名字。法拉笑说，自己那些线轴若也标得这么清，就不会找上半天。
 
 ## ev.ev_cotan_c.choice_1_result
 
-你在千寺之城的地下挖掘了三日。没有找到窖藏，但黄沙交出了它古老的旧事，如今写进了你的行纪。
+你留三天帮拉赫曼在旧砖旁安好支撑。母亲带孩子们绕开新修的渠边。水终于平稳流过时，你把这家人的田和露出的旧墙写进笔记。
 
 ## ev.ev_cotan_c.choice_2_result
 
-你从地下古城取下一块彩绘残片——一只菩萨的手，历经多年仍带着颜色。它从此随你而行。
+孩子们先照着画了小图，拉赫曼母亲才把自家篮里的彩陶片交给你。她说那道弯线也许是手，也许是叶。你小心包好，墙上结实的砖仍留在原处。
 
 ## ev.ev_cotan_c.choice_3_result
 
-你问一位长者，人们为何把尘土当药来喝。他久久地打量着你，然后领你走到旧河台地的边缘，讲起一座千寺之城的故事。
+拉赫曼母亲讲这道旧墙如何在她这些年里被沙埋住、又露出来。最小的孩子拿来另一块请她比一比。你记下她亲眼见过的事；她说改天还可以陪你沿高处田埂走一段。
 
 ## ev.ev_cotan_consequence_a.title
 
-于阗：门上的印记
+洗石人的搬运记号
 
 ## ev.ev_cotan_consequence_a.body
 
-第一个回答并没有在城门处结束。一位自少年时便站在玉河里的淘玉人把你引到一旁，问你打算从于阗带走什么。问题背后正是玉河与绿洲；他提出教给你一个河水尚未交出的名字。你须决定如何对待这道征兆。
+你在萨米拉的货单旁待了两天后，先前那位洗石人叫住你。他叫哈伦，是优素福的表亲，发现雨后两批搬运货都沾上相同的粉笔记号。“一批是我们抬的，另一批归渠对岸的人家，”他说，“若丢了箱子，别叫人找错门。”
+
+你问两批货还能不能分开。哈伦拿出一条系在箱把上的窄布。萨米拉弟弟记得车刚到时见过这布条。另一家女儿也来了，带着自家收据，指向纸上一处小裂口。哈伦说车轮当时擦过墙，这口子便留下了。几人的记忆对得上，萨米拉仍请他们把两张收据留着，等下一站也改好名字。
+
+哈伦愿意写封信给前头接货的搬运人。那家女儿问你能不能帮她把母亲名字清楚写在信外。
 
 ## ev.ev_cotan_consequence_a.choice_1
 
-收下这个名字，追问这位淘玉人谁能作保
+核好姓名，带上哈伦的信
 
 ## ev.ev_cotan_consequence_a.choice_1_result
 
-你收下淘玉人递来的名字，追问谁能为它作保。他报出河上的几位长者，此事又打开了。
+你拿布条对过两张收据，又问哈伦下一处河道院由谁接信。他说出两位搬运人的名字，那家女儿把母亲姓名也写在旁边。萨米拉说，你出发前她会把誊清的一份送来。
 
 ## ev.ev_cotan_consequence_a.choice_2
 
-谢过淘玉人，把自己的打算收在心里
+让萨米拉收好两张收据
 
 ## ev.ev_cotan_consequence_a.choice_2_result
 
-你谢过淘玉人，把自己的打算收在心里。此事在河边就此了结，于阗不再有人向你多问一句。
+你把更正留给萨米拉。哈伦和那家女儿等她把两种记号分行抄好。墨干后，两家各拿回自己的收据；你接着赶路。
 
 ## ev.ev_cotan_consequence_a_resolution.title
 
-于阗：淘玉人的印记
+河道信上的姓名
 
 ## ev.ev_cotan_consequence_a_resolution.body
 
-你已答应把淘玉人的印记带在身上——那是深知玉河真水道之人的名字。它不会替你决定整段旅程，但在下一处涉水之地，这个名字或许能为你换来一位向导。
+萨米拉把写好的信送到河道院。哈伦在搬运记号下签了名，那家女儿补上母亲全名。“我差点写了大家平日叫她的小名。”女孩说。萨米拉答：“下一站也许有另一个人叫这个。”弟弟念信外的字，发现折痕遮住一个字母。哈伦打开信，又补写一次。
+
+你问前头的搬运人能否自己验箱。哈伦把窄布条重新系在对的把手上，还在信里画了另一家收据的裂口。女孩说，这样两批货都能对上，不必靠猜。母亲也来了，看过名字，谢大家在出发前把事理清。
+
+萨米拉请你带信先走。你若要花一天把记号抄进自己的本里，弟弟已经摆好一张干桌。
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1
 
-在天黑前把这个名字带到
+带上萨米拉改好的信
 
 ## ev.ev_cotan_consequence_a_resolution.choice_1_result
 
-你在天黑前把这个名字带到了。淘玉人的承诺如今随你的名字而行，河上的人从此有理由接待你。
+你收下改好的信。哈伦指给你看窄布条系在哪个把手上，女孩又让你认了一遍收据的裂口。到了下一站，你能把两家姓名和货物都交代清楚。
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2
 
-把淘玉人的名字收进自己的行纪
+花一天誊下两批货的记号
 
 ## ev.ev_cotan_consequence_a_resolution.choice_2_result
 
-你把淘玉人的名字收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
+你花一天誊两张收据和信上的姓名。萨米拉弟弟拿原件核你的字，哈伦则把窄布条系回该系的箱把。改好的记录也留在你的本里。
 
 ## ev.ev_cotan_consequence_b.title
 
-于阗：回答之后的路
+织工来问水渠
 
 ## ev.ev_cotan_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一位织丝人找到你，讲起玉河与绿洲的另一番说法——玉石如何分等，以及哪一段水最深。这说法不如游记宏大，却更适合带在身上。
+你看过萨米拉家收的河石后，织工法拉来问，你见没见过她们屋旁的水渠。姑母听人说浅水处容易卷进砂，怕漂丝时留痕。“洗石人说昨天还挺清，”法拉举起一段新织白布，“这道淡线却在这里。”妹妹祖莱卡猜也许是旧染缸留下的。
+
+你问能不能先试水，再洗下一段布。法拉从水渠打一罐，祖莱卡从院里的井打一罐，各放进一根素线。萨米拉过来帮她们看罐上的字；她自己刚把两批货的记号分清，不愿姐妹俩又把样水认反。丝线晾着，姑母叫她们把时辰写在每只罐旁，明天再取水，还能照着核一遍。
+
+法拉问你想不想带走她们的试水记录。祖莱卡说，先记清时辰和罐子来自哪里，往后别的织工也能对着看。
 
 ## ev.ev_cotan_consequence_b.choice_1
 
-照着这位织丝人的实用建议走
+带走姐妹俩核过的试水记录
 
 ## ev.ev_cotan_consequence_b.choice_1_result
 
-你照着这位织丝人的实用建议走，请她把写下来。她为你把这段叙述抄出，河水真正的尺度便落进你手里。
+你请姐妹俩先给两只罐写明来处，再誊试水记录。法拉记水渠取水时辰，祖莱卡记井水时辰，萨米拉核过名字。姑母说丝线干透后，会把最后结果送来。
 
 ## ev.ev_cotan_consequence_b.choice_2
 
-把这段叙述留给那位织丝人
+把试水记录留在法拉织坊
 
 ## ev.ev_cotan_consequence_b.choice_2_result
 
-你把这段叙述留给那位织丝人，自己收住了口。它回到了织机旁，于阗不再向你索取什么。
+你把纸留给法拉。姑母把两根丝线挂在写好名字的罐旁，明早姐妹俩能在同一处光里再比。萨米拉回去记货单，知道她们不会认反水源了。
 
 ## ev.ev_cotan_consequence_b_resolution.title
 
-于阗：河上的账目
+晾干的两根丝线
 
 ## ev.ev_cotan_consequence_b_resolution.body
 
-你已选择带着这位织丝人的账目上路——玉石如何分等，以及哪一段水最深。它不会替你决定整段旅程，但在河边的路上，它会让你免于一场糊涂的交易。
+法拉的姑母带来晾干的两根丝线。放进旧染缸的丝线留下淡线；用渠水洗的那根干了之后很干净。祖莱卡笑自己猜对了；法拉叫她先帮着刷缸，晚点再得意。萨米拉念出两只罐的标签，姐妹俩把结果写进织坊的本子。
+
+你问带线的布是不是得丢掉。姑母说布还结实，可以做衣服内衬；给客人的另有干净的一匹。法拉决定把缘由讲给买主听，不悄悄换过去。祖莱卡已经把旧缸抬到院外去刷。
+
+姑母给你一份试水记录。祖莱卡把干净丝线放在旧线旁，问法拉要不要赶在买主到来前再试一次刷过的染缸。
+
+法拉把另一段丝举向日光，让祖莱卡拿洗净的罐来，别再拿旧的。姑母点点头；姐妹俩下回做活，已经知道先查哪一步。
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1
 
-在天黑前把这分等之法说出去
+把姐妹俩的试水办法带给别人
 
 ## ev.ev_cotan_consequence_b_resolution.choice_1_result
 
-你在天黑前把分等之法告诉了下一位买主。河上的尺度从此走在你前头，它落在何处，你的名字便随到何处。
+你收下写清来处的记录。法拉在末尾写上织坊名字，往后有人不明白还能来问。祖莱卡举着干净的那根丝线，让你再看一眼；你把纸折好带上路。
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2
 
-把这份分等之规收进自己的行纪
+花一天再查一段丝
 
 ## ev.ev_cotan_consequence_b_resolution.choice_2_result
 
-你花了一日，把这份分等之规抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
+你留一天陪姐妹俩洗、晾另一段丝。刷过的旧缸这回没留下淡线。祖莱卡记下结果，法拉把两段布都拿给买主看，才定好交货。
 
 ## ev.cotan.mentor_closure.title
 
-于阗的引路人
+看井人的小桌
 
 ## ev.cotan.mentor_closure.body
 
-离开于阗之前，玉河边的守井人问你从这里看出了什么。这个教诲不是法术，也不是交易；它只是教你留意道路转弯之后真正有用的细节。
+于阗河道旁的一口井边，看井人马哈茂德摆出三只陶杯。女儿说，旅人老把洗手的杯和喝水的认反。“那就在杯把上做记号。”他说。女儿指着杯子：“它们哪有把？”他笑起来，叫她找根有颜色的绳。洗石人抱罐来打水，站在一旁等他们分好。
+
+你问洗石人打过水后井里还剩多少。马哈茂德指着井壁上的水位记号，说每天早晨由谁先来看。女儿说昨天阴影里看不清，便在旁边放了一盏小灯。父亲请她挪远点，别让打水绳碰进井里。洗石人找来一块石头，把灯压稳。
+
+马哈茂德说你若留一天，可以看看几户人家怎样轮着用井。女儿已拿蓝绳系好喝水的杯，正问你这记号是不是够显眼。
 
 ## ev.cotan.mentor_closure.choice_1
 
-问这条路将要求你付出什么
+问马哈茂德下一处怎样备水
 
 ## ev.cotan.mentor_closure.choice_1_result
 
-玉井的看守并不回避：辨石与识人之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
+马哈茂德先问你同行几人、带几头牲口，再指出走到下一段干路前该在哪里添水。女儿递来系蓝绳的杯子。你听明白了，也认得以后回来该问谁。
 
 ## ev.cotan.mentor_closure.choice_2
 
-留下 一日，听完这段完整的讲述
+花一天记各户用井时辰
 
 ## ev.cotan.mentor_closure.choice_2_result
 
-你在守井人的井边留了一日，他把玉河全部的教诲都给了你。你带走的东西比一课更长，比一块石头更轻。
+你留一天，记下洗石人、附近住户和路过商队各在何时用井。傍晚女儿查看水位，灯移过之后，记号倒更容易看清。马哈茂德说你若愿意，明早还可以来看第一次读数。
 
 ## ev.cotan.mentor_closure.choice_3
 
-谢过引路人，继续上路
+谢过看井人，继续赶路
 
 ## ev.cotan.mentor_closure.choice_3_result
 
-你谢过玉井的看守，踏上了路。他放你前行，为你祝福；于阗的这番功课，便没有落笔。
+你谢过马哈茂德，继续上路。女儿先把系蓝绳的杯子递给洗石人，自己又反应过来，换成洗手用的那只。“还好记号看得见。”她说。父亲笑了。
 
 ## ev.ev_cotan_a_followup.title
 
-于阗：采玉人之献
+阿米娜的第二只木盘
 
 ## ev.ev_cotan_a_followup.body
 
-先前与你一同踏入寒水的采玉人，爬上岸边卵石滩，不让你只带眼看之物离去。他便是赤足在奔流之下探得白玉之人，一身技艺，正如别人携带货物。如今他教你看河须如何读：白玉聚于水流迟回之处，绿玉藏于砾石深陷之处；识河底，如牧人识山面。他讲采玉人的誓约——河不曾予之石，人不取；河只应静默相求之人。他把自己的求取摆在你面前：自其所得中取一石，或记下玉石离水之后所行之路，或留下，学他那双足所知的耐心。
+年长的洗石人把你叫回河边，阿米娜正抱来第二只木盘。每块石头旁她都放了小芦苇条，记着从哪段水里捡来。父亲优素福说芦苇干后会卷，让她先把地点抄下。“我记得住。”她说，手停在一块浅色石头上，才承认这块不确定是哪个河湾的。老人递给她一块干净木板。
+
+你问分完石头以后怎么办。优素福说商人会验石，若合订单，就买封好的整包商货。另一位河工要把货往西送，认得去叶尔羌路上几处换手的地方。阿米娜问车上能不能替她带封信给姨妈。河工说能，只要她把地址写清。
+
+阿米娜一边抄芦苇条上的记号，老人一边在你身旁坐下。他愿意等下一轮水位变化后，花一天教你看浅滩；河工则等着讲西行路。
 
 ## ev.ev_cotan_a_followup.choice_1
 
-收下采玉人自其所得中相赠的白石
+花一百三十五银买另一整包玉货
 
 ## ev.ev_cotan_a_followup.choice_1_result
 
-采玉人以布条裹起一枚白石，按入你掌中。这是两条河的一分，如今随你而去。
+商人打开另一包封好的玉货，阿米娜照芦苇记号念出货签。你验过石头，付一百三十五银买下整包商货。优素福签好交接，河工帮你装稳，再带着阿米娜给姨妈的信往西走。
 
 ## ev.ev_cotan_a_followup.choice_2
 
-问采玉人，玉石离河之后运往何处
+问河工去叶尔羌的路
 
 ## ev.ev_cotan_a_followup.choice_2_result
 
-他沿谷指西，指向玉石运往鸦儿看所经之路。去鸦儿看的路，如今已刻在你心里，你不会再盲目踏上。
+河工讲去叶尔羌时，河边货物在哪些地方换手。阿米娜把姨妈地址写好，交父亲核过，再塞进他的信捆。车走前，你把叶尔羌记进地图。
 
 ## ev.ev_cotan_a_followup.choice_3
 
-留一日，学采玉人以足读河
+留一天学洗石人怎样记浅滩
 
 ## ev.ev_cotan_a_followup.choice_3_result
 
-你在卵石滩留了一日，采玉人教你的双足识得河底。寒水教你耐心，河边之人也记下你曾开口相问。
+你留一天陪老人和阿米娜拿芦苇记号对着变化的河岸看。她终于在木板上改正那块浅色石头的来处。优素福谢你陪着学，河边一家人也记住了你。
 
 ## ev.ev_cotan_b_followup.title
 
-于阗：织女之歌
+姑母的染色架
 
 ## ev.ev_cotan_b_followup.body
 
-在织机前唱过歌的那女子，不曾忘记你。她在染缸院里寻到你，空气里尽是番红花与靛蓝的气味；她把织女的歌又唱一遍，唱得慢，好让你明白歌里载着什么。这歌不为取乐：它数经线的数目，记织机的时辰，又守梭子的节拍，使二女如一人而作。织女死时，其歌传予对坐之女，使无一张织机失其时。她指给你看诸缸——番红花染黄，靛蓝染青，茜草染红，胭脂虫染绛——又告诉你一匹丝须按何序受色，因为那次序便是这歌的第二段。你如何处置这支歌，是你自己的事。
+法拉和祖莱卡的姑母邀你再进染布院，新织的第一道蓝边刚从架上取下。她把四块染色布头放在架上。祖莱卡说红花染出的红，挨着靛蓝显得太淡。姑母请她挪到远离窗子的地方再看：“现在呢？”祖莱卡承认，阳光透过薄布，刚才看错了。法拉还坐在织架前，喊她们比明白再决定下一根线。
+
+你问染料从哪儿来。来自喀什噶尔的商人送来核桃壳，收了钱就北行。他对法拉说，上次那匹布一路完好，只是外面的捆布松了。姑母说这回结得宽些。她还留一包标了名字的染色小样，若你想自己试，可以带走。
+
+祖莱卡请你把四块布一同举着，她去在包布上写商人名字。法拉说你若再留一天，她可以教你听织这道边时的节奏。
 
 ## ev.ev_cotan_b_followup.choice_1
 
-收下染料样本与一尺丝
+收下标好名字的染色小样
 
 ## ev.ev_cotan_b_followup.choice_1_result
 
-织女把一包染线按入你手——番红花、靛蓝、茜草、胭脂虫——并配以可对色的丝一尺。于阗的颜色，如今随你而行。
+姑母把小包染色样料给你，靛蓝仍单独包着。祖莱卡逐个念过标签，才放进你的行囊。法拉叫她也给织坊的架子写同样清楚的名字。
 
 ## ev.ev_cotan_b_followup.choice_2
 
-问于阗丝离了织机之后送往何处
+问商人去喀什噶尔的路
 
 ## ev.ev_cotan_b_followup.choice_2_result
 
-她指向北，指向丝运往可失合儿之路，大汗的税吏在那里称量以为贡。去可失合儿的路，如今已刻在你心里，你不会再盲目踏上。
+商人讲去喀什噶尔的北行路，还指出上次货包在哪一站重新扎过。法拉把地名写下，下回好提前包紧。你也将喀什噶尔记进地图，祖莱卡随后写好了新标签。
 
 ## ev.ev_cotan_b_followup.choice_3
 
-留一日，学这支织女之歌
+留一天练织架上的节奏
 
 ## ev.ev_cotan_b_followup.choice_3_result
 
-你在织机前留了一日，一句一句学这支歌，直到双手合上它的节拍。织女们见你用功而笑；于阗的一分韵律，从此活在你身上。
+你在织架旁待了一天。法拉放慢速度数边角花纹，祖莱卡送梭子时，你照着她的节奏念。姑母拿染色小样核过完工的蓝边，你把姐妹俩的做法写进笔记。
 
 ## ev.ev_cotan_c_followup.title
 
-于阗：千寺之谈
+拉赫曼家的高田埂
 
 ## ev.ev_cotan_c_followup.body
 
-向你讲过佛尘的那位老人，在黄昏唤你回到旧河阶上；风已把埋城的一角揭开。他讲父传子的话：旧于阗曾有千座寺院，每座寺院一口钟，是以整城于祈祷之时，如一件乐器般齐鸣。他与你走过沙地，一一指点僧人的路所经之处——东去的朝圣路、往彩绘石窟的路、舍利运来的路。他说这些墙的尘土所以为圣，正因它盛着千座寺院的祈祷；饮此尘者，饮的是城的记忆。他把旧城的馈赠献于你：一片彩绘残片，或朝圣之路，或这传说本身。
+拉赫曼母亲带你走上先前提到的高田埂。小路旁露出一截旧墙。孙子抱着一块彩陶片跑在前面，说昨天刮风后找到的。她叫孩子先放到自己掌心，免得绊在灌渠边上。孩子问上面的弯线是否和家里那块一样。“像，得把两块都画下来。”她说。
+
+你问旧路通向哪里。她记得父亲讲过往东去且末的人，只是自那时起田墙挪过几回。拉赫曼拿铲来清一段堵住的水渠，说可以指给你看哪条田埂现在还引水。墙根的土还湿，他不许大家在露出的旧砖旁乱挖。母亲也把孩子领回干燥处。
+
+她家篮里有一片松出来的彩陶，可以等画过图再交给你。拉赫曼愿意讲东行路；你若留一天，母亲还能说说这些年田埂怎样变。
 
 ## ev.ev_cotan_c_followup.choice_1
 
-收下老人自沙中拾起的彩绘残片
+收下家里画过图的彩陶片
 
 ## ev.ev_cotan_c_followup.choice_1_result
 
-老人自沙中拾起一片彩绘残片，裹好交与你——这是那城记忆的一分。它很小，却是旧于阗。
+孩子们先画下弯线，拉赫曼母亲才把那片松出来的彩陶交给你。她把新图和先前的图放在一起。你小心包好碎片，墙上结实的石砖没有动。
 
 ## ev.ev_cotan_c_followup.choice_2
 
-问老人，朝圣之路通往何处
+问拉赫曼去且末的路
 
 ## ev.ev_cotan_c_followup.choice_2_result
 
-他沿旧朝圣路指向东，指向车尔臣，僧人的路由此出谷。去车尔臣的路，如今已刻在你心里，你不会在沙中迷失。
+拉赫曼讲自家听东行旅人说过去且末的转弯处。母亲补充哪条旧田路如今让新水渠盖住了。你把且末记进地图，随后扶孩子稳稳跨过田埂。
 
 ## ev.ev_cotan_c_followup.choice_3
 
-留至入夜，听千寺的传说讲完
+留一天听高田埂的旧事
 
 ## ev.ev_cotan_c_followup.choice_3_result
 
-你留至入夜，听老人把千寺的传说讲到尽头。传说随你而去，旧城从此不再只是沙。
+你留了一天。拉赫曼清渠，母亲讲这些年高田埂怎样变，孩子们坐在她旁边比两张图。水重新通时，你把一家人讲的田边旧事记进笔记。
 
 ## ev.ev_cotan_mentor_followup.title
 
-于阗：守井人之临别之赠
+清早井壁的记号
 
 ## ev.ev_cotan_mentor_followup.body
 
-玉河边的守井人不肯让你只带着他的劝诫离去。他从腰间取出一枚被河磨圆的石头，递给你——这是存于井边的好运之石。他说，井不为自己留一物；不肯受赠的旅人，也得不到见识。他自蒙古骑手到来之前便守着这口井，凡来饮者皆曾见过；有人留下赠物，有人一物不留，井两者都记得。他问你要从于阗带走什么：这枚石，玉真正所经的路，或留一日听他讲河的故事。无论你选什么，他说，都当如采玉人携石一般携带——静默，而无贪心。
+你在第一支商队到来前回到马哈茂德的井边。女儿把小坠子系在绳上，慢慢探水位；今天坠子比昨天早碰到水。“上游下雨了吗？”她问。马哈茂德说有可能，但还想再看一天，才告诉大家水会更多。洗石人来了，说昨天高处的一道渠清得晚，水流也许因此变了。
+
+你问他们会不会把两种说法都记下。女儿先写自己量到的水位，再把洗石人见到的写在下面。父亲说，等下次降雨再对照。洗石人拿来一块光滑河石，压住被风吹起的纸角。
+
+马哈茂德愿意给你一块备用的做过记号的石子，也能细讲往东去培因的路。你若留到傍晚，女儿还会带你再量一次，看看井水一天怎样变。
 
 ## ev.ev_cotan_mentor_followup.choice_1
 
-收下守井人相赠的圆石
+收下马哈茂德做记号的河石
 
 ## ev.ev_cotan_mentor_followup.choice_1_result
 
-守井人把河磨圆的石按入你掌中，合上你的手指。它很小，却是河自己的好运；井的记忆，也随它而去。
+女儿把石上的记号抄进本子，马哈茂德才将备用河石交给你。你带着它，记得这家人先量井水，再决定明天该怎样告诉来客。
 
 ## ev.ev_cotan_mentor_followup.choice_2
 
-问守井人，玉真正经哪条路而来
+问马哈茂德去培因的路
 
 ## ev.ev_cotan_mentor_followup.choice_2_result
 
-他在沙上画出东去的路，玉真正所经之途，过髣城与旧河阶。去髣城的路，如今已刻在你心里，你不会在沙中迷失。
+马哈茂德讲去培因的路，也指出离开河谷前哪里能添水。女儿把地名写在井账边。你将培因记进地图，洗石人也检查了自己的空罐。
 
 ## ev.ev_cotan_mentor_followup.choice_3
 
-留一日，听河的故事
+留一天比早晚水位
 
 ## ev.ev_cotan_mentor_followup.choice_3_result
 
-你在井边留了一日，守井人自山雪讲到沙海，把河的故事讲与你。这一日花得值，河与守井人于你不再陌生。
+你留到傍晚，和马哈茂德女儿一起再量水位。变化不大，她把数字写在清早那行旁边。父亲谢你陪她核过，下一支商队来问时，他们说得更稳妥。
+
+## ev.cotan.twoscripts.title
+
+木箱上的两个名字
+
+## ev.cotan.twoscripts.body
+
+集市旁的小院里，迪拉拉婆婆正在教孙子抄棉布箱上的姓名。卖货人用家里惯用的字写了一行，又用下一站搬运人看得懂的字写了一行。孙子以为是两个货主。“看驮包号。”迪拉拉说。他找到两行下面相同的记号，又问名字为何长得这么不一样。
+
+你问第二种字是谁教她的。迪拉拉说，从前邻居常往东送信，教她怎样把地址写得让别人认得。孙子想给搬走的姨妈写纸条，嫌自己的字歪。迪拉拉递他一张空标签，叫他先写姨妈姓名。取布的搬运人来了，说可以等孩子练完这一行。
+
+迪拉拉说你若留一天替她核别的货签，付你零点八银。孙子也邀你坐一会儿，看他怎样把姨妈名字写清。
+
+## ev.cotan.twoscripts.choice.work
+
+留一天核院里的货签
+
+## ev.cotan.twoscripts.result.work
+
+你留一天跟迪拉拉核姓名和驮包号。每只箱子由孙子念清标签，搬运人才接走。迪拉拉付你零点八银，孩子也把写给姨妈的纸条放进了对的那捆信。
+
+## ev.cotan.twoscripts.choice.learn
+
+坐下看祖孙俩怎样对两种字
+
+## ev.cotan.twoscripts.result.learn
+
+迪拉拉指给你看两种写法怎样靠同一个驮包号对起来。孩子又抄一遍姨妈的名字，问你哪行更容易读。你记下他们的办法；搬运人等他写完，才接过改好的箱子。

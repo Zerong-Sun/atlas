@@ -1,0 +1,298 @@
+{
+  "style": "FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark.",
+  "created": "2026-10-25",
+  "status": "complete",
+  "assets": [
+    {
+      "id": "instruments",
+      "kind": "atlas",
+      "prompt": "Use case: stylized-concept. Game-ready square 4 by 4 sprite atlas. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Exactly 16 objects centered in EXACT equal grid cells, left-to-right then top-to-bottom. Each object stays within the middle 64 percent of its cell, with very generous transparent gutters and no overlap. All 16 have the SAME painterly sophistication and visual weight. No visible grid, no tile backgrounds, no labels, genuinely transparent surrounding background. Objects in exact row order: ROW ONE: a round Chinese bronze coin obverse with square hole and decorative floral relief without lettering; matching coin reverse with plain worn patina; red wooden crescent divination block with flat pale wooden face UP; matching red crescent block with curved lacquered face UP. ROW TWO: shallow square wooden tray filled with fine sand, top view; circular brass astrolabe face with three concentric annular tracks but no needles, no readable numbers; unfolded terrain map on parchment; palm diagram on a parchment sheet. ROW THREE: face diagram on matching parchment; white porcelain coffee cup top view with dark grounds and small handle; round bronze bowl filled with blue water top view; bamboo fortune-stick tube containing red-tipped sticks. ROW FOUR: blank ivory counting tile with no marking; ornate burgundy and gold playing-card back with a sun rosette; blank dark wooden rune stave, no glyphs; blank parchment playing-card face with a subtle thin gold border. All objects fully visible. Make silhouettes distinguishable when shrunk to 50 pixels.",
+      "file": "assets/art/lessons/unified/instruments.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-96663172-6a1c-46d6-a717-b048edc0b071.png",
+      "sha256": "44729b44661d23f288ba53f1ea8ad92360aaf3eaf4cafd7dec7047fa24058897",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "symbols",
+      "kind": "atlas",
+      "prompt": "Use case: stylized-concept. Game-ready square 4 by 4 sprite atlas. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Exactly 16 objects centered in EXACT equal grid cells, left-to-right then top-to-bottom. Each object stays within the middle 64 percent of its cell, with very generous transparent gutters and no overlap. All 16 have the SAME painterly sophistication and visual weight. No visible grid, no tile backgrounds, no labels, genuinely transparent surrounding background. Objects in exact row order: ROW ONE: engraved European golden chalice; elaborate steel sword with engraved brass crossguard; richly textured living wooden baton with bark, knots and several small green leaves; ornate European round gold pentacle disc with a star relief, no square hole. ROW TWO: miniature wooden sailing ship with cream sail and rigging; ornate antique brass key; folded cream letter with red wax seal; lush small oak tree with visible roots and detailed leaves. ROW THREE: sculpted crescent moon ornament in pale silver; sculpted golden sun with delicate rays; ornate brass oil lamp with a small painted flame; miniature carved stone archway gate. ROW FOUR: open seed pod holding golden seeds with one sprouting leaf; engraved brass Mercury glyph (circle, horns above, cross below) as a physical metal ornament; engraved brass Venus glyph (circle and cross below) as a matching physical metal ornament; white dove with folded wings. Each is a full painted object, no simplistic pictogram. All objects fully visible. Make silhouettes distinguishable when shrunk to 50 pixels.",
+      "file": "assets/art/lessons/unified/symbols.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-90d70d94-9b7b-488d-af54-af73fb887809.png",
+      "sha256": "24403d0a7f715e43f0ddb1bff12cd529404ea718bf6e491b5f44dadf983b110d",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "tokens",
+      "kind": "atlas",
+      "prompt": "Use case: stylized-concept. Game-ready square 4 by 4 sprite atlas. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Exactly 16 objects centered in EXACT equal grid cells, left-to-right then top-to-bottom. Each object stays within the middle 64 percent of its cell, with very generous transparent gutters and no overlap. All 16 have the SAME painterly sophistication and visual weight. No visible grid, no tile backgrounds, no labels, genuinely transparent surrounding background. Objects in exact row order: ROW ONE: circular green jade element token engraved with a leafy branch; matching cinnabar token engraved with flames; matching ochre stone token engraved with mountains; matching pale silver token engraved with crossed metal ingots. ROW TWO: matching deep blue token engraved with flowing water; miniature craggy mountain terrain piece with shrubs; small cairn with a pennant used as a map waypoint; miniature ornate gate used as map destination. ROW THREE: carved wooden traveler pawn with cloak, full body; single polished amber bead viewed from above; narrow horizontal lacquer tablet bearing one unbroken raised gold horizontal bar, the bar centered; matching tablet bearing one broken gold horizontal bar in two equal segments with a wide gap. ROW FOUR: dark wooden rune stave with deeply carved gold Fehu rune (vertical trunk and two upward right branches); matching Uruz rune stave (two verticals joined by a sloping top); matching Thurisaz rune stave (vertical trunk with right triangular thorn at center); matching Ansuz rune stave (vertical trunk with two downward right branches). Rune carvings must be clearly distinguishable, accurate simple strokes rendered as richly textured actual carvings. All objects fully visible. Make silhouettes distinguishable when shrunk to 50 pixels.",
+      "file": "assets/art/lessons/unified/tokens.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-2ea71526-a62a-4e66-b461-b0888df3daa7.png",
+      "sha256": "811de6467c5333cecde592135468217643cc106bc4c804b24f280b8e4c36057e",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "mentor-zhou",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: Chinese scholar in his fifties, dark scholar cap, slate-blue linen robe, a small bundle of yarrow in his hand, neat short beard, amused patient smile, one eyebrow slightly raised. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-zhou.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-1ef6fd55-bcf9-49f9-9d47-56e99c183c3e.png",
+      "sha256": "6ff10fb37b5e48f4912dd58094486e0d3fd3bb66d7e00f629693362ed94d5b4f",
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "mentor-lin",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: Chinese calendar scholar in his fifties, black winged scholar hat, dark olive robe, holds a paper chart and brush, precise stern expression with kind eyes, neat beard. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-lin.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-494656c9-a024-4145-994a-471e652af5b2.png",
+      "sha256": "dfa61f1f784d80d1a0603beca2d378d6c8a7902e5b9e58d61e14fbcbccb27f8e",
+      "dimensions": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "mentor-jin",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: elderly Chinese coastal temple teacher, silver hair in a bun, indigo robe with cinnabar cuffs, holds red wooden crescent blocks and bamboo fortune-stick tube, shrewd warm smile. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-jin.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-f6155087-154b-4eb4-9a6a-b322b1c2be62.png",
+      "sha256": "0f54b0b2392a232f6f1ec8d48fa892bb79000a6cc433682dcb5f7621501329c5",
+      "dimensions": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "mentor-sahl",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: middle-aged Arabic-speaking sand-diagram teacher, ivory turban, muted terracotta and teal robe, holds small sand tray and wooden stylus, dry knowing smile, short dark beard. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-sahl.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-45106f12-4156-42aa-a8da-1a92d2752c74.png",
+      "sha256": "76ef9fd901c96b27388c8b65c95ffc712858566bb6a59187b8740df0c8feb798",
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "mentor-mira",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: female traveling astronomer about forty, cream wrapped headscarf and muted teal cloak over ochre sleeves, holds a brass astrolabe and rolled star chart, alert thoughtful eyes, calm confident smile. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-mira.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-5b2ab5e0-f0ba-4dc9-bbf7-9f76a0a199c5.png",
+      "sha256": "9ee6ee8eb3ab25e578678bba4ec43fdc6c972befeb8eabe400f491d8662d60a3",
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "mentor-bjorn",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: older northern European woodcarver with gray beard, simple wool cap, muted gray-green tunic and modest fur-edged cloak, holds a wooden rune stave and carving tool, weathered face, restrained warm smile. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-bjorn.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-8ffde082-56e0-479e-862f-2f714018f801.png",
+      "sha256": "bda573c0e1766c3c94b5c7cbdfab643e0735ecb1c30e090bfceeea16df7f078a",
+      "dimensions": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "mentor-nadir",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: middle-aged Persian storyteller, soft cream turban, faded teal and ochre robe, holds small glowing brass oil lamp and closed book, gentle reflective eyes, slight smile. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-nadir.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-54376f7f-ce0d-43ce-88a9-8e58de675e9e.png",
+      "sha256": "7ae6798e67a6d2f3bbd8821f883c122ab2edf966a53e9165bad6f65934257b6d",
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "mentor-beatrice",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: European merchant widow about forty-five, auburn hair beneath ivory linen veil, burgundy and moss-green Renaissance gown, holds a fan of three decorated cards, playful confident half-smile, raised eyebrow. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-beatrice.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-857c6d1e-97b0-4a1c-89bf-575d518f6b11.png",
+      "sha256": "bdc22779711ba9e0d7e36dc220334e3e696b749b771d8437e74b9cdd073b6e09",
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "mentor-selma",
+      "kind": "portrait",
+      "prompt": "Use case: illustration-story. ONE single game mentor portrait. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Subject: Ottoman coffeehouse hostess about fifty, patterned soft teal headscarf, ochre blouse with teal vest, holds white porcelain coffee cup and copper saucer, friendly expressive amused eyes, open conversational gesture. Exactly one person, head and shoulders through waist, BOTH hands and held props fully inside frame, complete top of head and hair. Consistent centered three-quarter portrait at eye level, face occupies upper central quarter, same scale as a character select portrait. Generous 10 percent margins on all sides. Quiet flat warm ivory parchment background, no scenery, no text, no other people, no decorative frame. Painted facial anatomy, delicate but clearly illustrated watercolor shading, avoid photographic skin. Warm ivory, sepia, muted teal and burgundy limited palette.",
+      "file": "assets/art/lessons/unified/mentor-selma.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-b51248d8-0e2a-4cb6-82f8-63a32f450ef0.png",
+      "sha256": "b36fce6e790662a783140bc8ef16e3fcc974aa8429465f9e7f13fb196557c55b",
+      "dimensions": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "scene-china",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Chinese coastal scholar's open wooden studio overlooking a tiled-roof temple courtyard, bamboo blinds, carved wooden lattice, quiet potted pine and distant harbor. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-china.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-a2c527b9-65ab-4c6e-832c-136a1c189f86.png",
+      "sha256": "a26b8098f3699ea1474ecf7743a256e1751164179add1b28e66c994627601951",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "scene-courtyard",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. scholar's study opening onto an Islamic courtyard, carved geometric screen, muted blue ceramic tiles, brass lamps, small fountain and date palms. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-courtyard.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-df82bf9e-ea99-48e1-8ed7-63eadd644700.png",
+      "sha256": "234ceacd3e2dadf434489901e4872402bea9be6d633377d2184820823b80a61f",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "scene-europe",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. European card merchant's workshop, carved wooden shutters, shelves of bound books and painted cards, stone arcade and small Italian town garden through window. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-europe.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-b4bf07c2-a163-4cf3-afe2-f3d4fc2d8ea0.png",
+      "sha256": "b0494d553605b48b611f85b11568c730b94b1ed67e7bbb47c970326218231436",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "scene-india",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. South Asian astronomical teaching terrace beside carved stone temple architecture, low stone parapet, lotus pond, palm trees, warm late-afternoon sky. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-india.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-22df4651-3c56-48c2-a39a-dc1695188bac.png",
+      "sha256": "5c248473108c654a4f54bdb25bcb87fd748c824825698207b26de07feded935a",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "scene-north",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. northern woodcarver's timber workshop overlooking a quiet fjord, carved wooden beams, wool wall hanging with knot motifs, pine trees and distant snowy slopes. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-north.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-ff7726e7-1d69-45ab-b360-bd7fac642ba6.png",
+      "sha256": "0d34ea42a3ab54297755806186c0594f1567fff1749ff7cc1e707f9e783b4184",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "scene-observatory",
+      "kind": "scene",
+      "prompt": "Use case: illustration-story. Landscape background illustration 3:2. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. open-roof historical observatory at blue twilight, brass astronomical instruments, carved stone parapets, distant mountains, stars appearing in indigo sky, gentle lamplight. No people. Wide atmospheric composition for a game teaching screen, architecture concentrated at the sides, softly painted quiet center, harmonious warm parchment undertones, fine ink contours, softly layered pigments, readable scene depth. No foreground table, no user interface, no lettering, no border. Same restrained watercolor detail as illustrated game props, not photoreal.",
+      "file": "assets/art/lessons/unified/scene-observatory.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-575dff9c-0624-47d0-a038-7afaf7060bce.png",
+      "sha256": "6fc7dba20b2b6d3aa88c02b2ee316d3ee544f6958a355bf94a3b98ff79aa75a0",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "table",
+      "kind": "surface",
+      "prompt": "Use case: stylized-concept. Square game tabletop surface, full bleed, top-down flat camera. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Rich dark teal woven cloth laid on an antique wooden writing desk, faint botanical brocade thread pattern, worn ochre embroidery only near outer edges, broad quiet evenly dark center for illustrated objects and legible ivory labels. Highly tactile painted fibers and subtle mottling, no objects, no text, no lighting glare, no perspective tilt. A single continuous background texture, not a mockup.",
+      "file": "assets/art/lessons/unified/table.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-745fa806-8789-441a-b0a3-ec4055840db7.png",
+      "sha256": "5118af4adafd47fe4b68001db66c520fca555a6c55ce291ff9a2d34bd1c4f42d",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "frame",
+      "kind": "surface",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 full game panel parchment frame texture. FateQuest unified art direction, antique illuminated travel journal painted in rich restrained watercolor and fine sepia ink crosshatching. Detailed handcrafted materials, tactile aged wood, parchment, oxidized brass, muted jade, ochre and cinnabar. Warm soft upper-left lighting, matte pigment, gentle painted shadows. Consistent medium-fine detail and substantial dimensional forms. No flat vector icons, no stick figures, no low-poly forms, no glossy 3D render, no photoreal photograph, no modern objects, no text or watermark. Very pale ivory old parchment, delicate double engraved gold ruled border only within outer 3 percent, elaborate but restrained painted acanthus-and-vine floral corner ornaments within outer 5 percent, tiny muted teal and cinnabar accents. Thin finely painted edge, vast perfectly quiet blank light ivory center spanning 90 percent of canvas. NO symbols or text in center, no objects, no title, no UI controls. All four sides and corners fully visible, centered symmetrical frame.",
+      "file": "assets/art/lessons/unified/frame.png",
+      "status": "generated-integrated-verified",
+      "source": "/Users/kongde/.codex/generated_images/01a16e5c-76ca-7b52-b1cc-bc01810ab3a2/exec-1bbe5eb8-7ca9-4deb-9d93-2987c5599bf7.png",
+      "sha256": "74f5e1d7a0769426ea66132f316b9ea54fb3a8b5ef7493930473da541cc2d300",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "crop_policy": "Generated PNG pixels are unchanged. AtlasTexture uses alpha-component crop metadata in regions.json; sprites keep aspect ratio. Frame uses nine-slice rendering; table uses a quiet central texture region.",
+  "validation": {
+    "date": "2026-10-25",
+    "engine": "Godot 4.7.1",
+    "viewport": [
+      1280,
+      720
+    ],
+    "methods": 24,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "generated_originals_hash_match": 20,
+    "atlas_regions_reviewed": 48,
+    "screenshots": 39,
+    "atlas_review_pages": 3,
+    "screenshots_directory": "build/playtest/unified",
+    "passed_scripts": [
+      "smoke_divination_challenges.gd",
+      "smoke_lesson_presentation.gd",
+      "smoke_lesson_art.gd",
+      "smoke_zayton_mentor.gd",
+      "smoke_baldacum_mentor.gd",
+      "smoke_tauris_mentor.gd",
+      "smoke_fatequest_flow.gd",
+      "smoke_divination_annex.gd"
+    ],
+    "translation_check": "4250 current, 0 stale, 0 missing",
+    "external_validation_issue": "Global content validation G7 fails on place-term mismatches in city/codex translations outside this art replacement. See build/playtest/unified-content.log. Lesson content validation G32/G33 passes."
+  }
+}

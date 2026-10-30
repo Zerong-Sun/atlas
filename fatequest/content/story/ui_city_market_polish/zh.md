@@ -4,6 +4,7 @@ lang: zh
 role: translation
 status: reviewed
 voice: hud
+
 stamps:
   ui.city.card_ready: 207b750f9f0b
   ui.city.card_repeat: 2299ea52c3d7

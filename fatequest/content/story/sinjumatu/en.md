@@ -43,3 +43,27 @@ You pass through without stopping. The road to Sinjumatu opens on your map.
 ## ev.ev_sinjumatu_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Sinjumatu on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_sinjumatu.title
+
+A Horse’s Bit at the Posting Station
+
+## ev.ev_gap_sinjumatu.body
+
+At the Sinjumatu station, a groom checks the stitching on a leather bit. Loose seams rub the horse’s mouth; a whitening edge needs replacement. He leaves one finger’s width at the buckle, neither too tight nor too loose. Before harnessing the horse again, he lets it drink.
+
+## ev.ev_gap_sinjumatu.choice.route
+
+Ask the way to Coigangiu
+
+## ev.ev_gap_sinjumatu.choice.route_result
+
+“Go southeast along the watercourse to Coigangiu.”
+
+## ev.ev_gap_sinjumatu.choice.scene
+
+Ask him to show you the inspection
+
+## ev.ev_gap_sinjumatu.choice.scene_result
+
+He turns the bit over, checking from both sides towards the middle. Cracked leather must be replaced and a stiff buckle oiled. If a horse refuses to move, first see whether its tack hurts.

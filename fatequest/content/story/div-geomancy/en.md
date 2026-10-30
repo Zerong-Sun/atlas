@@ -118,7 +118,7 @@ The figure warns: leave heavy cargo and send a light scout first.
 
 ## div.geomancy.result.27
 
-The figure warns: do not sleep in the ruined caravanserai.
+The figure warns: do not sleep in the ruined posting station.
 
 ## div.geomancy.result.28
 

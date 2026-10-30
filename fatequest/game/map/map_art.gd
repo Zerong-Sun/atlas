@@ -20,6 +20,7 @@ const GOODS_MAP_PATH := "res://assets/art/GOODS_ART_MAP.json"
 ## read as an anachronism) and indian_ocean borrows Mazu, the sea-folk set.
 const CULTURE_SET := {
 	"latin": "chr",
+	"orthodox": "chr",
 	"islamic": "isl",
 	"east_asia": "con",
 	"steppe": "isl",
@@ -29,6 +30,7 @@ const CULTURE_SET := {
 ## culture-* filenames use a flatter spelling than the data `culture` field.
 const CULTURE_ART := {
 	"latin": "latin",
+	"orthodox": "latin",
 	"islamic": "islamic",
 	"east_asia": "eastasia",
 	"steppe": "steppe",
@@ -644,12 +646,12 @@ static func transit_scene(ctx: Dictionary = {}) -> Texture2D:
 		var desert := tex("load-desert")
 		if desert != null:
 			return desert
-	if band == "west_asia" or culture == "islamic":
+	if culture == "islamic" or (band == "west_asia" and culture != "orthodox"):
 		var bazaar := tex("load-bazaar")
 		if bazaar != null:
 			return bazaar
 		return tex("load-mosque")
-	if culture == "latin" or band == "europe":
+	if culture in ["latin", "orthodox"] or band == "europe":
 		var church := tex("load-church")
 		if church != null:
 			return church

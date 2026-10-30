@@ -14,7 +14,7 @@
 | 项 | 现状 |
 |---|---|
 | 音频资产 | `assets/audio/`：**37** OGG（20 stem + 17 ambient 含 5 sacred_blur）+ 1 个开场 WAV · CC0 场景床 + 混合 stem |
-| 运行时 | Autoload `AudioDirector` · 20个AudioStreamPlayer音乐槽 + 1个开场主题槽 + 4个ambient槽；headless禁用文件播放 |
+| 运行时 | Autoload `AudioDirector` · 当前旅途民谣使用15个AudioStreamPlayer音乐槽 + 1个开场主题槽 + 4个ambient槽；headless禁用文件播放 |
 | 旧版实现 | `archive/web-version/js/audio.js` — **作废** |
 | 包体压力 | 成品OGG共9,740,026字节（约9.74 MB）；分发目标尚待完整包体核验 |
 | 内核约束 | 音频**不得**写 `WorldState`；表现层只订阅信号 |
@@ -85,6 +85,8 @@ GDD 写「程序化合成」。**纯 GDScript 做 DSP 是错的选择**——逐
 | `steppe` | 五声 + 泛音列 | 马头琴类弓弦 · 泛音人声（器乐化 / 模糊远景） · 低鼓 | 60–76 | 长音铺底 + 马蹄型节奏 |
 | `indian_ocean` | 持续音上的旋律移动（rāga 之**结构**思路，不引用具体 rāga） | 持续音（tanpura 类）· 拨弦 · 手鼓 | 80–96 | 循环渐密 |
 | `latin` | 中世纪教会调式（多利亚 / 混合利底亚） | 拨弦（诗琴类）· 擦弦（维埃尔类）· 管风琴远景 · **模糊圣咏轮廓** | 64–72 | 二部 organum 式平行 |
+
+上表是原设计意向，并非目前素材或节拍清单。当前可听的 30 段循环以 §7.5、`docs/MUSIC_REWORK_SPEC.md` 和 `assets/audio/MANIFEST.md` 为准；部分是实录演奏片段，不强行套上表的拍速。旧合成 stem 不再参与游戏混音。
 
 **跨文化过渡目标**：玩家跨文化地区时不硬切。当前代码按city.culture切换，不直接按band切换；用 8–15 秒交叉淡入，且**两套 stem 短暂并存**——这是 GDD P3 在听觉上的落点：文化边界是渐变的，不是墙。
 
@@ -182,8 +184,12 @@ var music_rng := Rng.new("music:%s:%d" % [city_id, jdn])
 
 ### 7.4 开场主题
 
-`assets/audio/intro/title_theme.wav` 是 18 秒、一次播放的中性世俗主题，由
-`tools/audio/generate_intro_theme.py` 稳定生成。它只在开局书桌出现时播放；玩家确认身份或读档后淡出，抵达城市再由文化 × 场景层接管。它不模拟具体历史乐器、地域录音或礼仪音乐，避免在玩家尚未选择身份时预设文化归属。
+`assets/audio/intro/title_theme.wav` 是约 40 秒、循环播放的中性世俗主题，由
+`tools/audio/generate_intro_theme.py` 稳定生成。它在开局书桌出现时播放；玩家确认身份或读档后淡出，抵达城市再由文化 × 场景音乐接管。现版用 VCSL 的实录竖笛、拨弦萨泰里琴和极轻的框鼓，录为 44.1 kHz 立体声 PCM；不用持续低音铺底。它是原创旋律，不代表玩家尚未选择的某个地域或宗教。
+
+### 7.5 旅途民谣主题
+
+`tools/audio/compose_folk_themes.py` 现调用 `compose_regional_songbook.py`：五文化 × 城镇／道路／静处 × A／B 两版，共 30 段 44.1 kHz 立体声 Vorbis。中原 A／B 用琵琶或古筝单独主奏两套原创八小节旋律，同一 cue 不叠不同品质的琴录音；旧低码率古琴保留在素材库，不参与当前渲染。印度洋用无损西塔琴与少量无损塔布拉鼓点写两套旋律；MP3 坦布拉不参与当前渲染。西亚、草原、拉丁三组保留演奏者的连续乐句，A／B 取不重叠的段落，不叠额外鼓和未知和声音符。这三组是同一录音的不同段落，不声称为两首新作品。草原主奏是托布秀尔／冬不拉弹拨乐，**不是马头琴**。拉丁主奏为 1578 年作品，晚于游戏主要时代。来源、许可证及哈希见 `assets/audio/THIRD_PARTY_CREDITS.md` 和 `tools/audio/samples/`。运行时按城市确定初始版本，在同一地点每版播放两个循环后轮换 A／B。五组可用各自完整的 `folk/{culture}/town.ogg` 单独试听；不再提供交错截短合集。旧 drone／pulse／color 不参与运行时混音。重编决策见 `docs/MUSIC_REWORK_SPEC.md`。
 
 ---
 

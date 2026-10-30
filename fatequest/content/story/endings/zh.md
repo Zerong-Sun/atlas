@@ -2,55 +2,52 @@
 unit: endings
 lang: zh
 role: translation
-status: translated
-voice: yule
+status: draft
+voice: authored
 notes: >
-  结语。语体同路途文本：第二人称，不写心理活动，不用现代词汇；但允许一件
-  路途文本不允许的事——回望。每条只陈述这趟旅程成了什么样子，不指示玩家
-  该有什么感受。变量插的是这一局真实记录下来的事实，因此不可写出「只有当
-  变量很大才通顺」的句子。参见 LORE_PIPELINE §4、GDD §14。
+  结语保留真实变量，用具体动作收束各类旅程。第二人称，现代自然中文。
 
 stamps:
-  epilogue.nowhere: 755e9b0583f8
-  epilogue.no_long_road: a71b8f85ee3c
-  epilogue.no_great_trade: 6da37f81242c
-  faith.latin: 0f38bf29aed0
-  faith.orthodox: fb88ab17fac8
-  faith.islam: 7a31915951dd
-  faith.buddhism: f1196e718e78
+  end.cartographer.epilogue: 20f0986c4f2a
+  end.cartographer.name: a1688fe51891
+  end.diviner.epilogue: 854834bc2679
+  end.diviner.name: ab61fc3a3abf
+  end.lay_down.epilogue: b0fc833ae6cf
+  end.lay_down.name: b957da663012
+  end.markets.epilogue: 17316c903b80
+  end.markets.name: 7ea4a468427a
+  end.no_return.epilogue: 63a21606d85d
+  end.no_return.name: 89a415f987aa
+  end.returned.epilogue: 4c6ade03bc7b
+  end.returned.name: 3d1f88dbf97f
+  end.stayed.epilogue: 17c2d09c7747
+  end.stayed.name: f07622947390
+  end.witness.epilogue: a5fa4fb2dbac
+  end.witness.name: 1fd80e2f4aff
+  epilogue.no_great_trade: 48f2ce8c29b2
+  epilogue.no_long_road: 4b98f4571633
+  epilogue.nowhere: a6a74437bc0e
+  faith.buddhism: a7236272bf8f
   faith.daoism: 6363bebf18b4
-  faith.nestorian: 19051a020ef2
-  faith.hindu: c81d24d4a84b
   faith.folk: 80dfe568b4c4
-  end.returned.name: 8dbbd03825c0
-  end.returned.epilogue: e547211fb345
-  end.stayed.name: fb35efda3be8
-  end.stayed.epilogue: 8512133a30c2
-  end.witness.name: 074ea24c5ab5
-  end.witness.epilogue: cd80d8b9c5da
-  end.markets.name: 5cbb74d56ced
-  end.markets.epilogue: 0818e897bd4b
-  end.no_return.name: 647f961c9c15
-  end.no_return.epilogue: 000c9d9161b2
-  end.cartographer.name: 4e0417293059
-  end.cartographer.epilogue: 3b188f94b0a6
-  end.diviner.name: 1f15c6c7e8e5
-  end.diviner.epilogue: e44c94e69b22
-  end.lay_down.name: 66bee7be071b
-  end.lay_down.epilogue: 36a153d3de8b
+  faith.hindu: 9fabb449f636
+  faith.islam: 7a31915951dd
+  faith.latin: 0f38bf29aed0
+  faith.nestorian: 19051a020ef2
+  faith.orthodox: fb88ab17fac8
 ---
 
 ## epilogue.nowhere
 
-不知何处
+还没定下来的地方
 
 ## epilogue.no_long_road
 
-不值一提的路
+暂无长途行程
 
 ## epilogue.no_great_trade
 
-没有哪一样
+还没赚到钱
 
 ## faith.latin
 
@@ -86,79 +83,80 @@ stamps:
 
 ## end.returned.name
 
-归来者
+回到出发地的人
 
 ## end.returned.epilogue
 
-{years} 年，{cities} 座城，你回到了{start}，才发现最难的是讲。没出过教区的人跟你争
-一条河有多宽。你带回来的东西里，真正让你发家的是{richestTrade}，这件事没人追问第二
-遍。其余的他们不信，你还是写了下来。
+你回到{start}，把一路带回的纸张铺在桌上。你经过的 {cities} 座城都写在纸上，旁边挤着帮你指过路的人名。字越来越小，连你自己也要凑近才认得出。
+
+大家围着地图问路。问到一处时，你从行囊里翻出当地人给你的旧纸条。纸上的井和城门还看得清，你把它压平，让桌边的人接着看。
 
 ## end.stayed.name
 
-留下的人
+留在这座城的人
 
 ## end.stayed.epilogue
 
-你本打算走一季，留了 {years} 年。身后是 {cities} 座城，而你仍在{lastCity}——你早已
-不再用当初学到的那个名字称呼它。你照旧持{faith}，此地对这类事另有一套办法，并不
-逼你。威尼斯这个词，你还拼得出来。
+有人敲门，问你能不能帮新来的旅人找一处住处。你披上外衣，带他穿过{lastCity}熟悉的街巷。店主隔着柜台向你招手，还记得你第一次进门问房价的样子。如今你已经走过 {cities} 座城。
+
+旅人问你从哪里来，你说起最初上路的那天。店主端来热水，让你们坐着慢慢聊。天黑前，你带旅人认清了明早出城的门。
 
 ## end.witness.name
 
-世界的见证者
+记得路的人
 
 ## end.witness.epilogue
 
-{years} 年，{cities} 座城，其中最长的一段是{longestRoute}。你不是奉使去的，也不是
-为买卖去的；你是去看的，你看到了。你能讲出来的，比实际有过的少得多：某条河某个
-时辰的潮水，某个任何书上都没有名字的镇子里盐的价钱。见证者所有的，就是这些。
+有人请你讲路，你把路簿摊开。长途行程那一栏写着：{longestRoute}。你说起坐过的车、借宿的院子和路边卖水人的名字，讲到天色暗下去。这些见闻是在经过 {cities} 座城时慢慢记下的。
+
+后来同桌的人也拿出自己的见闻。有人补上一处你没见过的渡口，有人说那座桥修好了。你让他们在地图边写下日期和姓名，下次有人问路，能知道每句话是谁在什么时候听来的。
 
 ## end.markets.name
 
-百市之主
+做买卖的人
 
 ## end.markets.epilogue
 
-{years} 年，{cities} 座城，一本平得上的账。你学会了行路指南教不了的那件事：同一包
-货在两个地方是两样东西，而两地之间的距离就是全部的利。{richestTrade}成全了你。你
-说得出自己是哪一天想明白的，而你从没告诉过任何人。
+账本已经换过几次封皮。你翻到记开销的那一页，让身边的年轻人看。你还记下途中哪座桥收了钱，哪天因为下雨多雇了一辆车。这样的记录陪你走过 {cities} 座城。
+
+年轻人问，为什么这页写得比别页细。你让他自己从头算一遍。他算到过桥的钱时停住，抬头问你那天有没有担心路费不够。你把当时记下的雨天补给他看，他又埋头算下去了。
 
 ## end.no_return.name
 
-无归之人
+继续走的人
 
 ## end.no_return.epilogue
 
-你走过 {cities} 座城，用了 {years} 年，却始终没有回到{start}。有人说在{lastCity}见过
-你，有人说你死在路上。两种说法都对：远行者的归宿，就是被人一再提起。
+离开{start}之后，你经过 {cities} 座城。到{lastCity}那天，旅舍老板替你把湿行囊放在炉边晾干。你付清房钱，问他下一队旅人几时出发。
+
+老板在账簿里记下你的名字，还替你画了从旅舍出去该走的方向。隔天早上，他看见你跟着同行的人上了路。几个月后，别的旅人来问同一条路，他又把那页账簿翻出来，把路口画给他们看。
 
 ## end.cartographer.name
 
-制图者
+画路的人
 
 ## end.cartographer.epilogue
 
-{years} 年，{cities} 座城，拿得出手的是纸。{longestRoute}这一段按日程画到了里，水源
-标了，山口有了名字。后来的人会用它，而不知道你。图本来就是做这个用的，你动笔时
-就知道。
+纸不够长，你把两张接在一起，在接缝旁补上水井和岔路的记号。路簿上长途行程那一栏写着：{longestRoute}。这张图随着你走过 {cities} 座城，陆续添了许多新记号。
+
+一位车夫来看图，说其中一处水井已经封了。他带你去看新挖的井，你在原来的记号旁添了日期。下一支车队出发前借走这张图，约好回来把路上的变化写在背面。
 
 ## end.diviner.name
 
-识兆者
+占卜者
 
 ## end.diviner.epilogue
 
-{years} 年，{cities} 座城，你在每一座城里用不同的语言问同一个问题。蓍草、签条、纸牌
-与星辰彼此不合，而你后来认为：不合本身就是答案。你持{faith}，也一并留着别人的法子
-——每座城的有学问的人都告诉过你，这是办不到的。
+旅舍里有人为明早的行程发愁，请你坐下来陪他看一看。你把桌面收拾干净，问他想知道的究竟是哪件事。你走过 {cities} 座城，路上学过的几种占卜方法，此刻恰好派得上用场。
+
+他说完，你照着学来的步骤做，边做边讲你是从谁那里学会的。窗外有人在收马具，旅人记下你说的话，起身去找车夫商量明天的出发时辰。
 
 ## end.lay_down.name
 
-停笔
+暂时停下
 
 ## end.lay_down.epilogue
 
-你从{start}动身，停在{lastCity}：{cities} 座城，{years} 年，仍持{faith}，这一路做过
-最好的一笔是{richestTrade}。这本书结束，是因为你把它合上了，不是因为路到了头。路
-还有。本来就一直会有。
+你合上旅记。最后一页留着一小块空白，等你哪天想去别的地方，再把地名写上。
+
+你看了看手边的账本，想起这一路的买卖：{richestTrade}。窗外的车夫正在喂马，你起身把没收好的地图卷起来，放回行囊。今天先到这里。

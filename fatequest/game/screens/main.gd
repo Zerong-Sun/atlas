@@ -1,9 +1,11 @@
 extends Control
 
+const CityLifeCore = preload("res://core/city/city_life.gd")
 const CharacterGeneratorCore = preload("res://core/character/character_generator.gd")
 const MortalityCore = preload("res://core/life/mortality.gd")
 const LegacyBookCore = preload("res://core/life/legacy_book.gd")
 const DivinationCatalogCore = preload("res://core/divination/catalog.gd")
+const JourneyGuideCore = preload("res://core/world/journey_guide.gd")
 
 ## P1 shell: desk -> map -> travel + events. Deliberately plain; art lands in
 ## P2 (docs/ART_REQUIREMENTS.md). What matters here is that the kernel loop is
@@ -74,6 +76,8 @@ var _desk: Control
 var _hud: Hud
 var _log: RichTextLabel
 var _panel: VBoxContainer
+var _city_life_layer: Control
+var _city_life_view: PanelContainer
 var _city_view: Control
 var _dialog: PanelContainer
 var _dialog_layer: Control
@@ -158,6 +162,7 @@ var _result_then_chain := false  ## a result page is up; dismissing it fires the
 
 
 func _ready() -> void:
+	theme = Panels.ui_theme()
 	_resolve_audio()
 	_resolve_game_context()
 	# A new installation has no ui.cfg. The language identifier defaults to
@@ -196,17 +201,21 @@ func _apply_projection() -> void:
 	# Inset the drawable area. Zayton and Kinsay sit at ~120E, within a degree
 	# of the bbox edge, so a flush-to-edge projection clips the corridor's
 	# terminus and its labels straight off the screen.
-	var w := maxf(size.x, 1280.0)
-	var h := maxf(size.y, 720.0)
+	var w := maxf(size.x, 640.0)
+	var h := maxf(size.y, 480.0)
 	# Reserve exactly as much as the bottom docks actually occupy. This was
 	# hard-coded to 150, the same guess the docks themselves used to make, so
 	# raising the type size buried the southern cities under the journal.
 	# A player who drags the docks taller gets the same map courtesy.
+	var camera_geo := Vector2.ZERO
+	if _map != null:
+		camera_geo = projection.to_geo(_map.to_map(_map_centre()))
 	projection.set_viewport(w - MARGIN * 2.0, h - _dock_floor() - MARGIN)
 	projection.origin = Vector2(MARGIN, MARGIN)
 	_sync_map_input_surface()
 	if _map != null and is_instance_valid(_map) and _map.has_method("on_projection_changed"):
 		_map.on_projection_changed()
+		_map.center_at(camera_geo)
 
 
 func _sync_map_input_surface() -> void:
@@ -264,6 +273,12 @@ func _build_desk() -> void:
 	_desk.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_desk.add_theme_constant_override("separation", Metrics.sm())
 	scroll.add_child(_desk)
+	var desk_paper := Palette.panel_style()
+	desk_paper.content_margin_left = 24
+	desk_paper.content_margin_right = 24
+	desk_paper.content_margin_top = 20
+	desk_paper.content_margin_bottom = 20
+	scroll.add_theme_stylebox_override("panel", desk_paper)
 
 	# The first view is deliberately one quiet leaf: what this game is, a short
 	# epigraph, and one way forward. Campaign controls live on the next leaf so
@@ -295,7 +310,7 @@ func _build_desk() -> void:
 		title.add_child(title_label)
 	opening_leaf.add_child(title)
 
-	var introduction := Panels.label(I18n.t("ui.boot.introduction"),
+	var introduction := Panels.translated_label("ui.boot.introduction",
 		UiScale.body(), Palette.ink_soft())
 	introduction.name = "GameIntroduction"
 	introduction.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -333,7 +348,7 @@ func _build_desk() -> void:
 
 	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
 	draw_btn.name = "CharacterDrawButton"
-	var era_label := Panels.label(I18n.t("ui.boot.choose_era"),
+	var era_label := Panels.translated_label("ui.boot.choose_era",
 		UiScale.body(), Palette.ink_soft())
 	era_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	journey_setup.add_child(era_label)
@@ -344,6 +359,8 @@ func _build_desk() -> void:
 		var era_id := String(era.get("id", ""))
 		var era_btn := Panels.styled_button(I18n.t(String(era.get("name", era_id))),
 			_select_campaign_era.bind(era_id))
+		era_btn.set_meta("era_id", era_id)
+		Panels.select_button(era_btn, era_id == _selected_era_id)
 		era_btn.tooltip_text = I18n.t(String(era.get("description", "")))
 		eras.add_child(era_btn)
 	journey_setup.add_child(eras)
@@ -353,7 +370,7 @@ func _build_desk() -> void:
 	# actual way into the game. Their seven illustrated covers used to compete
 	# with the title, statistics, era picker and fate wheel all at once.
 	journey_setup.add_child(Panels.rule())
-	var books_label := Panels.label(I18n.t("ui.books_desk"),
+	var books_label := Panels.translated_label("ui.books_desk",
 		UiScale.ui(), Palette.ink_faint())
 	books_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	journey_setup.add_child(books_label)
@@ -362,6 +379,7 @@ func _build_desk() -> void:
 	books.alignment = BoxContainer.ALIGNMENT_CENTER
 	books.add_theme_constant_override("separation", 6)
 	journey_setup.add_child(books)
+	journey_setup.add_child(Panels.styled_button(I18n.t("ui.books_desk") + " →", func(): _open_book()))
 	for bid in MapArt.BOOKS:
 		var cover := MapArt.book_cover(bid)
 		if cover == null:
@@ -400,8 +418,9 @@ func _sync_boot_layout() -> void:
 	if scroll == null or _desk == null or not is_instance_valid(_desk):
 		return
 	var viewport := get_viewport_rect().size
-	scroll.custom_minimum_size = Vector2(minf(1120.0, maxf(280.0, viewport.x - 48.0)),
-		maxf(200.0, viewport.y - 48.0))
+	var drawing := _draw_card.get_child_count() > 0
+	scroll.custom_minimum_size = Vector2(minf(1120.0 if drawing else 780.0, maxf(280.0, viewport.x - 48.0)),
+		minf(560.0 if not drawing else 720.0, maxf(200.0, viewport.y - 48.0)))
 	var cards := _draw_card.get_node_or_null("CharacterCandidates") as GridContainer
 	if cards != null:
 		cards.columns = clampi(int((scroll.custom_minimum_size.x - 20.0) / 350.0), 1, 3)
@@ -512,8 +531,8 @@ func _draw_character() -> void:
 	actions.name = "CharacterDrawActions"
 	actions.alignment = FlowContainer.ALIGNMENT_CENTER
 	actions.add_theme_constant_override("separation", Metrics.sm())
-	actions.add_child(Panels.styled_button(I18n.t("ui.boot.draw_again"), _draw_character))
-	actions.add_child(Panels.styled_button(I18n.t("ui.boot.change_era"),
+	actions.add_child(Panels.translated_button("ui.boot.draw_again", _draw_character))
+	actions.add_child(Panels.translated_button("ui.boot.change_era",
 		_return_to_era_selection))
 	_draw_card.add_child(actions)
 	_sync_boot_layout()
@@ -532,6 +551,9 @@ func _return_to_era_selection() -> void:
 
 
 func _select_campaign_era(era_id: String) -> void:
+	for button in _desk.find_children("*", "Button", true, false):
+		if button.has_meta("era_id"):
+			Panels.select_button(button, button.get_meta("era_id") == era_id)
 	_selected_era_id = era_id
 	_draw_count = 0
 	_draw_candidates.clear()
@@ -723,6 +745,19 @@ func _begin(archetype: Dictionary) -> void:
 		})
 	executor.execute(state, opening_effects, {
 		"rng": rng, "event_id": "character-opening-knowledge"})
+	# Every origin needs one real road out. Revealing a neighbouring city alone
+	# does not reveal its route, and some backgrounds start with no known route.
+	var has_exit := false
+	for route in travel.routes_from(state.city):
+		if travel.is_route_known(route, state):
+			has_exit = true
+			break
+	if not has_exit:
+		var first_road := _opening_road_toward(String(archetype.get("goal", {}).get("target", "")))
+		if not first_road.is_empty():
+			executor.execute(state, [{"op": "reveal_route", "value": first_road,
+				"level": 1, "reason": "character-knows-way-out"}], {
+				"rng": rng, "event_id": "character-opening-way-out"})
 	# A successor receives only the predecessor's written record, a copied map
 	# and the one heirloom chosen on the death screen. The new background still
 	# supplies their own money, skills, faith and living relationships.
@@ -752,6 +787,45 @@ func _begin(archetype: Dictionary) -> void:
 	if _map != null:
 		Motion.parchment_expand(_map, 0.40)
 	_arrive()
+
+
+func _opening_road_toward(target: String) -> String:
+	var best_id := ""
+	var best_distance := 1000000
+	var best_cost := 1000000
+	for route in travel.routes_from(state.city):
+		var destination := travel.other_end(route, state.city)
+		var distance := _road_hops_to(destination, target)
+		var cost := int(route.get("cost", 0))
+		var id := String(route.get("id", ""))
+		if distance < best_distance or (distance == best_distance and cost < best_cost) \
+				or (distance == best_distance and cost == best_cost and id < best_id):
+			best_id = id
+			best_distance = distance
+			best_cost = cost
+	return best_id
+
+
+func _road_hops_to(start: String, target: String) -> int:
+	if start.is_empty() or target.is_empty():
+		return 1000000
+	var frontier: Array[String] = [start]
+	var seen: Dictionary = {}
+	seen[start] = true
+	var hops := 0
+	while not frontier.is_empty():
+		var next: Array[String] = []
+		for city_id in frontier:
+			if city_id == target:
+				return hops
+			for route in travel.routes_from(city_id):
+				var destination := travel.other_end(route, city_id)
+				if not destination.is_empty() and not seen.has(destination):
+					seen[destination] = true
+					next.append(destination)
+		frontier = next
+		hops += 1
+	return 1000000
 
 
 ## Resume: build the same machinery a new run does, then restore the world into
@@ -861,6 +935,7 @@ func _build_map() -> void:
 	_hud.offset_top = 10
 	add_child(_hud)
 	_hud.build()
+	_hud.resized.connect(_resize_controls)
 
 	# --- journal: bottom-left, scrolls, never overlaps the panel ------------
 	# Height is measured from the current body size rather than fixed at 150 px.
@@ -868,7 +943,7 @@ func _build_map() -> void:
 	# the type up used to shrink the journal to a slot — the readers who most
 	# needed the words larger got the fewest of them on screen.
 	_log_wrap = PanelContainer.new()
-	_log_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	Panels.apply_card(_log_wrap, "book")
 	_log_wrap.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
 	_log_wrap.anchor_right = 0.46
 	_log_wrap.offset_left = 12
@@ -890,7 +965,7 @@ func _build_map() -> void:
 
 	# --- action panel: bottom-right, scrolls -------------------------------
 	_panel_wrap = PanelContainer.new()
-	_panel_wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+	Panels.apply_card(_panel_wrap, "atlas")
 	_panel_wrap.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
 	_panel_wrap.anchor_left = 0.48
 	_panel_wrap.offset_left = 6
@@ -921,6 +996,9 @@ func _build_map() -> void:
 	_city_view.bag_requested.connect(_open_bag)
 	_city_view.party_requested.connect(_open_party)
 	_city_view.settings_requested.connect(func(): Motion.crossfade_in(_settings["layer"], 0.18))
+	_city_view.books_requested.connect(func(): _open_book())
+	_city_view.saves_requested.connect(_open_save_manager)
+	_city_view.livelihood_requested.connect(_open_city_life)
 
 	# --- event dialogue -----------------------------------------------------
 	# A full-rect CenterContainer keeps the dialog centred at any window size and
@@ -1006,6 +1084,7 @@ func _build_map() -> void:
 	_build_save_manager()
 	_build_divination_lesson()
 	_build_divination_annex()
+	_build_city_life()
 	_wire_dismissal()
 	_restyle_all()
 
@@ -1099,6 +1178,7 @@ func _modal_entries() -> Dictionary:
 			_market_layer.visible = false
 			_open_city())
 	for pair in [
+		[_city_life_layer, _close_city_life],
 		[_lesson_layer, _cancel_lesson],
 		[_save_layer, func() -> void: _save_layer.visible = false],
 		[_travel_confirm_layer, func() -> void: _travel_confirm_layer.visible = false],
@@ -1487,13 +1567,7 @@ func _hide_transit() -> void:
 ## Reader controls. Text size and contrast are not preferences to bury in a
 ## menu on a game made of prose — they decide whether it can be read at all.
 func _build_controls() -> void:
-	# The top bar used to carry eight buttons crammed into a hard slot; at the
-	# LARGE step it overflowed, and at HUGE it covered the map art and pushed
-	# the 缩小 button unreachable. All those commands live in the settings panel
-	# now. The top-right corner keeps only 设置 — the one thing a player may
-	# need with the map still open — and the two panels you open while on the
-	# road (行囊, 同行) sit on a slim right spine instead, so neither the bar
-	# nor the spine hides the map.
+	# Camera navigation stays visible on the map; inventory uses the right edge.
 	var bar := HFlowContainer.new()
 	bar.set_anchors_preset(Control.PRESET_TOP_RIGHT)
 	bar.grow_horizontal = Control.GROW_DIRECTION_BEGIN
@@ -1504,8 +1578,12 @@ func _build_controls() -> void:
 	bar.add_theme_constant_override("v_separation", Metrics.xs())
 	add_child(bar)
 
+	bar.add_child(_ctl_key("ui.map.nearby", func(): _map.reset_local_view()))
+	bar.add_child(_ctl_key("ui.zoom_out", func(): _map.set_zoom(_map._zoom_target / 1.35, _map_centre())))
+	bar.add_child(_ctl_key("ui.zoom_in", func(): _map.set_zoom(_map._zoom_target * 1.35, _map_centre())))
 	bar.add_child(_ctl_key("ui.settings", func(): Motion.crossfade_in(_settings["layer"], 0.18)))
 	_controls = bar
+	bar.resized.connect(_update_map_exclusions)
 
 	var spine := VBoxContainer.new()
 	spine.set_anchors_preset(Control.PRESET_CENTER_RIGHT)
@@ -1516,7 +1594,10 @@ func _build_controls() -> void:
 	add_child(spine)
 	spine.add_child(_ctl_key("ui.bag", _open_bag))
 	spine.add_child(_ctl_key("ui.party", _open_party))
+	spine.add_child(_ctl_key("ui.city.enter", func(): _enter_city_from_card(state.city)))
+	spine.add_child(_ctl_key("ui.books_desk", func(): _open_book()))
 	_right_spine = spine
+	spine.resized.connect(_update_map_exclusions)
 	_resize_controls()
 
 
@@ -1526,22 +1607,46 @@ func _build_controls() -> void:
 func _resize_controls() -> void:
 	if _controls == null or not is_instance_valid(_controls):
 		return
+	if _hud != null:
+		_controls.offset_top = maxf(58, _hud.get_global_rect().end.y + 8)
+	if _map != null:
+		_map.chrome_top = _controls.offset_top
+		_map.queue_redraw()
 	var w := 0.0
 	for k in _controls.get_children():
 		if k is Control:
 			w += (k as Control).get_combined_minimum_size().x + float(Metrics.sm())
-	var avail := maxf(size.x, 1280.0) * 0.55
+	var avail := size.x * 0.75
 	_controls.custom_minimum_size.x = minf(w, avail)
 	_controls.offset_left = -minf(w, avail) - 12.0
+	if _right_spine != null:
+		var spine_size := _right_spine.get_combined_minimum_size()
+		_right_spine.anchor_top = 0
+		_right_spine.anchor_bottom = 0
+		_right_spine.offset_left = -spine_size.x - 12
+		_right_spine.offset_top = maxf(_controls.offset_top + _controls.get_combined_minimum_size().y + 10, (get_viewport_rect().size.y - _dock_floor() - spine_size.y) * 0.5)
+		_right_spine.offset_bottom = _right_spine.offset_top + spine_size.y
+	_update_map_exclusions()
 
 
-## Bottom docks are as tall as six lines of the current body type.
+func _update_map_exclusions() -> void:
+	if _map == null:
+		return
+	_map.label_exclusions.clear()
+	for control in [_hud, _controls, _right_spine]:
+		if control != null:
+			_map.label_exclusions.append(control.get_global_rect().grow(6))
+	_map.queue_redraw()
+
+
+## Bottom docks use the reading height for the current body type.
 func _resize_docks() -> void:
 	if _log_wrap != null and is_instance_valid(_log_wrap):
 		_log_wrap.offset_top = -_dock_height("log")
 	if _panel_wrap != null and is_instance_valid(_panel_wrap):
 		_panel_wrap.offset_top = -_dock_height("panel")
 	_sync_dock_handles()
+	_resize_controls()
 
 
 ## Saved height in px for a dock key, falling back to the metrics default and
@@ -1555,9 +1660,9 @@ func _dock_height(key: String) -> float:
 	return clampf(h, min_h, max_h)
 
 
-## Shortest dock that stays readable: three lines of body type plus padding.
+## Shortest dock that stays readable: eight lines of body type plus padding.
 func _min_dock_height() -> float:
-	return maxf(56.0, float(UiScale.body()) * 3.0 + float(Metrics.md()) * 2.0 + 8.0)
+	return maxf(56.0, float(UiScale.body()) * 8.0 + float(Metrics.md()) * 2.0 + 20.0)
 
 
 ## The tallest panel decides how much of the window the map must give up.
@@ -1737,6 +1842,7 @@ func _refresh_hud() -> void:
 	_hud.refresh(state, clock, _city_name(state.city), used,
 		String(here.get("culture", "latin")), currency)
 	_map.set_current(state.city, state.revealed)
+	_map.set_journey(state.journey_legs)
 
 
 func _open_save_manager() -> void:
@@ -1894,6 +2000,8 @@ func _on_event_dismissed() -> void:
 	elif state != null and not state.active_journey.is_empty():
 		_complete_journey()
 	elif _city_view.visible:
+		if _audio_ready():
+			_audio.set_place(db.get_record(state.city))
 		_city_view.show_city(db.get_record(state.city), state, conditions, _ctx())
 		_sync_city_status()
 	else:
@@ -1907,7 +2015,7 @@ func _on_event_dismissed() -> void:
 func _build_bag() -> void:
 	_bag = Panels.overlay(self, Vector2(560, 420))
 	var box: VBoxContainer = _bag["box"]
-	var title := Panels.label(I18n.t("ui.bag"), UiScale.title(), Palette.ink())
+	var title := Panels.translated_label("ui.bag", UiScale.title(), Palette.ink())
 	box.add_child(title)
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -1920,10 +2028,10 @@ func _build_bag() -> void:
 	_bag["list"] = list
 	var bag_row := HBoxContainer.new()
 	bag_row.add_theme_constant_override("separation", 8)
-	bag_row.add_child(Panels.styled_button(I18n.t("ui.codex"), func():
+	bag_row.add_child(Panels.translated_button("ui.codex", func():
 		_bag["layer"].visible = false
 		_open_codex()))
-	var close_btn := Panels.styled_button(I18n.t("ui.close"), func(): _bag["layer"].visible = false)
+	var close_btn := Panels.translated_button("ui.close", func(): _bag["layer"].visible = false)
 	close_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bag_row.add_child(close_btn)
 	box.add_child(bag_row)
@@ -1939,7 +2047,7 @@ func _build_bag() -> void:
 func _build_ending() -> void:
 	_ending_ui = Panels.overlay(self, Vector2(660, 480))
 	var box: VBoxContainer = _ending_ui["box"]
-	var title := Panels.label(I18n.t("ui.ending"), UiScale.title(), Palette.ink())
+	var title := Panels.translated_label("ui.ending", UiScale.title(), Palette.ink())
 	box.add_child(title)
 	_ending_ui["title"] = title
 
@@ -1958,10 +2066,10 @@ func _build_ending() -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	box.add_child(row)
-	var confirm := Panels.styled_button(I18n.t("ui.end_now"), _confirm_ending)
+	var confirm := Panels.translated_button("ui.end_now", _confirm_ending)
 	row.add_child(confirm)
 	_ending_ui["confirm"] = confirm
-	var keep := Panels.styled_button(I18n.t("ui.keep_going"), func(): _ending_ui["layer"].visible = false)
+	var keep := Panels.translated_button("ui.keep_going", func(): _ending_ui["layer"].visible = false)
 	row.add_child(keep)
 	_ending_ui["keep"] = keep
 	var heirloom := OptionButton.new()
@@ -2113,7 +2221,7 @@ func _continue_lineage() -> void:
 func _build_party() -> void:
 	_party = Panels.overlay(self, Vector2(640, 460))
 	var box: VBoxContainer = _party["box"]
-	box.add_child(Panels.label(I18n.t("ui.party"), UiScale.title(), Palette.ink()))
+	box.add_child(Panels.translated_label("ui.party", UiScale.title(), Palette.ink()))
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -2123,7 +2231,7 @@ func _build_party() -> void:
 	list.add_theme_constant_override("separation", 5)
 	scroll.add_child(list)
 	_party["list"] = list
-	box.add_child(Panels.styled_button(I18n.t("ui.close"), func(): _party["layer"].visible = false))
+	box.add_child(Panels.translated_button("ui.close", func(): _party["layer"].visible = false))
 
 
 func _open_party() -> void:
@@ -2138,7 +2246,7 @@ func _open_party() -> void:
 		UiScale.ui(), Palette.ink_soft()))
 
 	if state.retainers.is_empty():
-		list.add_child(Panels.label(I18n.t("ui.party.alone"), UiScale.body(), Palette.ink_soft()))
+		list.add_child(Panels.translated_label("ui.party.alone", UiScale.body(), Palette.ink_soft()))
 	for m in state.retainers:
 		list.add_child(_party_row(m))
 
@@ -2146,14 +2254,14 @@ func _open_party() -> void:
 	var pool := _roster.candidates(state, state.city, "open")
 	if not pool.is_empty():
 		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
-		list.add_child(Panels.label(I18n.t("ui.party.hire_here"), UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.translated_label("ui.party.hire_here", UiScale.ui(), Palette.ink()))
 		for r in pool:
 			list.add_child(_hire_row(r))
 
 	var short := _roster.divined_shortlist(state, state.city, rng)
 	if not short.is_empty():
 		list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
-		list.add_child(Panels.label(I18n.t("ui.party.divined_pick"), UiScale.ui(), Palette.ink()))
+		list.add_child(Panels.translated_label("ui.party.divined_pick", UiScale.ui(), Palette.ink()))
 		for entry in short:
 			list.add_child(_divined_hire_row(entry))
 	_party["layer"].visible = true
@@ -2216,7 +2324,7 @@ func _party_row(m: Dictionary) -> Control:
 
 	# Dismissal must state the cost before it happens (GDD §11.7).
 	var of := _roster.overflow_if_leaving(state, _market, rid, "land")
-	var btn := Panels.styled_button(I18n.t("ui.dismiss"), Callable())
+	var btn := Panels.translated_button("ui.dismiss", Callable())
 	btn.pressed.connect(func():
 		var over := int(of["over"])
 		if over > 0:
@@ -2263,7 +2371,7 @@ func _hire_row(rec: Dictionary) -> Control:
 			I18n.fmt("cargo.%s" % cargo.get("condition", "always")), int(cargo.get("slots", 0))]
 	col.add_child(Panels.label(note, UiScale.ui() - 3, Palette.ink_soft()))
 
-	var btn := Panels.styled_button(I18n.t("ui.hire"), Callable())
+	var btn := Panels.translated_button("ui.hire", Callable())
 	btn.set_meta("retainer_cargo_slots", int(cargo.get("slots", 0)))
 	btn.pressed.connect(func():
 		_hire_ui.open(rec, culture, "open"))
@@ -2297,7 +2405,7 @@ func _divined_hire_row(entry: Dictionary) -> Control:
 	col.add_child(Panels.label(I18n.t(rec.get("name", "")), UiScale.ui(), Palette.ink()))
 	col.add_child(Panels.label(I18n.fmt(verdict), UiScale.ui() - 3, Palette.ink_soft()))
 
-	var btn := Panels.styled_button(I18n.t("ui.hire"), Callable())
+	var btn := Panels.translated_button("ui.hire", Callable())
 	btn.pressed.connect(func():
 		_hire_ui.open(rec, culture, "divined", verdict))
 	row.add_child(btn)
@@ -2373,7 +2481,7 @@ func _open_bag() -> void:
 		rows += 1
 
 	if rows == 0:
-		list.add_child(Panels.label(I18n.t("ui.cargo.empty_hands"), UiScale.ui(), Palette.ink_soft()))
+		list.add_child(Panels.translated_label("ui.cargo.empty_hands", UiScale.ui(), Palette.ink_soft()))
 
 	list.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 	list.add_child(Panels.label(I18n.t("ui.cargo.purse_line") % [
@@ -2420,7 +2528,23 @@ func _icon_line(icon: Texture2D, text: String) -> Control:
 ## All map-and-journal commands that used to crowd the top-right bar live here
 ## now, so the top of the screen stays clear of the map art.
 func _build_settings() -> void:
-	_settings = Panels.overlay(self, Vector2(460, 420), true)
+	_settings = Panels.overlay(self, Vector2(560, 560))
+	var shell: VBoxContainer = _settings["box"]
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.follow_focus = true
+	shell.add_child(scroll)
+	var content := VBoxContainer.new()
+	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	content.add_theme_constant_override("separation", Metrics.md())
+	scroll.add_child(content)
+	_settings["box"] = content
+	_settings["scroll"] = scroll
+	var close := Panels.translated_button("ui.close", func(): _settings.layer.visible = false)
+	close.set_meta("i18n_key", "ui.close")
+	shell.add_child(close)
+	_settings.layer.resized.connect(func(): Panels.fit_panel(_settings.panel, Vector2(560, 560)))
 	_fill_settings(_settings["box"])
 
 
@@ -2428,7 +2552,7 @@ func _build_settings() -> void:
 ## panel text in place: every button label is authored against the current
 ## I18n, so switching zh/en must re-read them rather than restyle stale ones.
 func _fill_settings(box: VBoxContainer) -> void:
-	box.add_child(Panels.label(I18n.t("ui.settings"), UiScale.title(), Palette.ink()))
+	box.add_child(Panels.translated_label("ui.settings", UiScale.title(), Palette.ink()))
 
 	# --- appearance -------------------------------------------------------
 	var size_btn := Panels.styled_button(I18n.t("ui.font_size_fmt") + UiScale.label(), Callable())
@@ -2459,7 +2583,7 @@ func _fill_settings(box: VBoxContainer) -> void:
 	box.add_child(lang_btn)
 
 	# --- sound & motion ---------------------------------------------------
-	var mute := Panels.styled_button(I18n.t("ui.sound"), Callable())
+	var mute := Panels.translated_button("ui.sound", Callable())
 	mute.pressed.connect(func():
 		if _audio_ready():
 			_audio.toggle_mute()
@@ -2467,7 +2591,7 @@ func _fill_settings(box: VBoxContainer) -> void:
 	box.add_child(mute)
 	var volume_row := HBoxContainer.new()
 	volume_row.add_theme_constant_override("separation", Metrics.sm())
-	var volume_label := Panels.label(I18n.t("ui.volume"), UiScale.body(), Palette.ink())
+	var volume_label := Panels.translated_label("ui.volume", UiScale.body(), Palette.ink())
 	volume_label.custom_minimum_size.x = 72
 	volume_row.add_child(volume_label)
 	var volume := HSlider.new()
@@ -2494,29 +2618,31 @@ func _fill_settings(box: VBoxContainer) -> void:
 	var map_row := HBoxContainer.new()
 	map_row.add_theme_constant_override("separation", Metrics.xs())
 	box.add_child(map_row)
-	map_row.add_child(Panels.styled_button(I18n.t("ui.reset_view"), func(): _map.center_on(state.city)))
-	map_row.add_child(Panels.styled_button(I18n.t("ui.zoom_in"), func(): _map.set_zoom(_map.zoom * 1.35, _map_centre())))
-	map_row.add_child(Panels.styled_button(I18n.t("ui.zoom_out"), func(): _map.set_zoom(_map.zoom / 1.35, _map_centre())))
+	map_row.add_child(Panels.translated_button("ui.reset_view", func(): _map.reset_local_view()))
+	map_row.add_child(Panels.translated_button("ui.zoom_in", func(): _map.set_zoom(_map._zoom_target * 1.35, _map_centre())))
+	map_row.add_child(Panels.translated_button("ui.zoom_out", func(): _map.set_zoom(_map._zoom_target / 1.35, _map_centre())))
 
 	# --- books & journal --------------------------------------------------
-	var open_btn := Panels.styled_button(I18n.t("ui.codex"), func():
+	var open_btn := Panels.translated_button("ui.codex", func():
 		_settings["layer"].visible = false
 		_open_codex())
 	box.add_child(open_btn)
-	box.add_child(Panels.styled_button(I18n.t("annex.open"), func():
+	box.add_child(Panels.translated_button("ui.books_desk", func():
+		_settings.layer.visible = false
+		_open_book()))
+	box.add_child(Panels.translated_button("annex.open", func():
 		_settings["layer"].visible = false
 		_open_divination_annex()))
-	box.add_child(Panels.styled_button(I18n.t("ui.ending"), func():
+	box.add_child(Panels.translated_button("ui.ending", func():
 		_settings["layer"].visible = false
 		_open_ending()))
 
 	box.add_child(Panels.label("", UiScale.ui(), Palette.ink()))
 
-	box.add_child(Panels.styled_button(I18n.t("ui.manage_saves"), func():
+	box.add_child(Panels.translated_button("ui.manage_saves", func():
 		_settings["layer"].visible = false
 		_open_save_manager()))
 
-	box.add_child(Panels.styled_button(I18n.t("ui.close"), func(): _settings["layer"].visible = false))
 
 
 ## Language switch rebuilds the settings column so every label re-reads the
@@ -2552,15 +2678,53 @@ func _open_market() -> void:
 
 
 func _open_city() -> void:
+	if CityLifeCore.retired(state):
+		_open_city_life()
+		return
 	var c := db.get_record(state.city)
 	# Market-only towns (including Cairo) still have a usable city interior.
 	# An empty exploration list must not send the traveller back to the map.
 	if c.is_empty():
 		_show_roads(RoadPanelOrigin.CITY)
 		return
+	if _audio_ready():
+		_audio.set_place(c)
 	_city_view.visible = true
 	_city_view.show_city(c, state, conditions, _ctx())
+	_city_view.set_journey_guide(_journey_guide_text(c))
 	_sync_city_status()
+
+
+func _journey_guide_text(city: Dictionary, include_goal: bool = true) -> String:
+	var archetype := db.get_record(String(state.character.get("archetype_id", _archetype_id)))
+	var goal: Dictionary = archetype.get("goal", {})
+	var target := String(goal.get("target", ""))
+	var long_goal := ""
+	if not target.is_empty():
+		var network_goal := String(goal.get("type", "")) == "network"
+		var goal_key := "ui.guide.goal_network" if network_goal \
+			else "ui.guide.goal_reach"
+		long_goal = I18n.t(goal_key) % _city_name(target)
+		# A network asks for a relationship, not just a visit. No relationship
+		# completion state exists yet, so keep its objective visible on arrival.
+		if not network_goal and target in state.visited:
+			long_goal = I18n.t("ui.guide.goal_arrived") % _city_name(target)
+	var step: Dictionary = JourneyGuideCore.next_step(state, city, db, conditions,
+		travel, _ctx(), clock.month())
+	var next_text := ""
+	match String(step.get("kind", "")):
+		"explore":
+			var event := db.get_record(String(step.get("site", "")))
+			next_text = I18n.t("ui.guide.explore") % I18n.t(String(event.get("title", "")))
+		"depart":
+			next_text = I18n.t("ui.guide.depart") % _city_name(String(step.get("destination", "")))
+		"prepare":
+			next_text = I18n.t("ui.guide.prepare") % _city_name(String(step.get("destination", "")))
+		_:
+			next_text = I18n.t("ui.guide.explore_more")
+	if long_goal.is_empty() or not include_goal:
+		return I18n.t("ui.guide.next_only") % next_text
+	return I18n.t("ui.guide.line") % [long_goal, next_text]
 
 
 ## Autosave on arrival. GDD's journeys run to four hundred days; losing one to
@@ -2595,6 +2759,23 @@ func _restore_document(doc: Dictionary) -> bool:
 	# The RNG is reseeded from the saved seed, so a loaded world continues
 	# deterministically rather than diverging from the run that produced it.
 	rng = Rng.new(state.seed)
+	# Older saves recorded these visits before their follow-on stories gained
+	# flags. Restore the prerequisites from the once-only visit history.
+	var legacy_site_flags := {
+		"ev-gap-basora-scene": "fl-basora-aunt-basket-safe",
+		"ev-gap-ninive-scene": "fl-ninive-bowl-sent",
+		"ev-gap-ispahan-scene": "fl-ispahan-blue-cloth-ready",
+		"ev-gap-novogardia-scene": "fl-novogardia-scale-ready",
+	}
+	var site_flag_effects: Array = []
+	for event_id in legacy_site_flags:
+		var flag_id := String(legacy_site_flags[event_id])
+		if state.once_fired.get(event_id, false) and not state.flags.get(flag_id, false):
+			site_flag_effects.append({"op": "flag", "value": flag_id,
+				"reason": "restored-completed-city-visit"})
+	if not site_flag_effects.is_empty():
+		executor.execute(state, site_flag_effects, {"rng": rng,
+			"event_id": "legacy-city-site-flags"})
 	_say("[color=#4a6a4a]%s[/color]" % I18n.t("ui.load.banner") % [_city_name(state.city), state.days_elapsed])
 	# Restored numbers are not news. Without this the HUD would light up the
 	# whole bar green on load, as though the player had just earned three
@@ -2606,6 +2787,15 @@ func _restore_document(doc: Dictionary) -> bool:
 	travel.ensure_way_out(state, clock.month())
 	_refresh_hud()
 	_map.center_on(state.city)
+	if _audio_ready():
+		_audio.set_jdn(state.jdn)
+		if not state.active_journey.is_empty():
+			var origin := db.get_record(String(state.active_journey.get("origin", state.city)))
+			_audio.set_place(origin)
+			var journey_route := db.get_record(String(state.active_journey.get("route", "")))
+			_audio.set_travel(journey_route if not journey_route.is_empty() else state.active_journey)
+		else:
+			_audio.set_place(db.get_record(state.city))
 	_dialog_layer.visible = false
 	_market_layer.visible = false
 	if _city_detail_layer != null:
@@ -2615,6 +2805,11 @@ func _restore_document(doc: Dictionary) -> bool:
 		_book_layer.visible = false
 	_bag["layer"].visible = false
 	_pending_pages_in_sequence = 0
+	if _city_life_layer != null:
+		_city_life_layer.hide()
+	if CityLifeCore.retired(state):
+		_open_city_life()
+		return true
 	# A terminal save resumes at its closing page.  It must never reopen the
 	# city beneath the ending or archive the same life twice on repeated loads.
 	if bool(state.life.get("deceased", false)):
@@ -2650,12 +2845,16 @@ func _close_city() -> void:
 
 
 func _restyle_all() -> void:
+	theme = Panels.ui_theme()
+	_relang_controls()
+	if _audio_ready():
+		_on_mute_changed(_audio.muted)
 	if _log:
 		_log.add_theme_font_size_override("normal_font_size", UiScale.body())
 		_log.add_theme_color_override("default_color", Palette.ink())
 	for wrap in [_log_wrap, _panel_wrap]:
 		if wrap != null and is_instance_valid(wrap):
-			wrap.add_theme_stylebox_override("panel", Palette.panel_style())
+			Panels.apply_card(wrap, "book" if wrap == _log_wrap else "atlas")
 	if _hud and _hud.has_method("restyle"):
 		_hud.restyle()
 	if _dialog and _dialog.has_method("restyle"):
@@ -2663,6 +2862,8 @@ func _restyle_all() -> void:
 		_dialog.restyle()
 	if _city_view and _city_view.has_method("restyle"):
 		_city_view.restyle()
+		if state != null:
+			_city_view.set_journey_guide(_journey_guide_text(db.get_record(state.city)))
 	if _market_view and _market_view.has_method("restyle"):
 		_market_view.restyle()
 	if _city_detail_card and _city_detail_card.has_method("restyle"):
@@ -2671,6 +2872,12 @@ func _restyle_all() -> void:
 		_codex_view.restyle()
 	if _book_view and _book_view.has_method("restyle"):
 		_book_view.restyle()
+	if _save_manager != null:
+		_save_manager.restyle()
+	if _annex_view != null:
+		_annex_view.restyle()
+	if _city_life_view != null:
+		_city_life_view.restyle()
 	# The overlays have no restyle() of their own, and used to be skipped
 	# entirely — switching to high contrast left the bag, party, ending,
 	# settings and hire panels on the old parchment. Those are exactly the
@@ -2683,6 +2890,10 @@ func _restyle_all() -> void:
 	_refresh_controls()
 	if state != null:
 		_sync_city_status()
+		if _panel != null:
+			for child in _panel.get_children():
+				if child is Label and child.has_meta("journey_guide"):
+					child.text = _journey_guide_text(db.get_record(state.city), false)
 	# The docks grew or shrank, so the map has more or less room than it did.
 	_resize_docks()
 	_apply_projection()
@@ -2699,9 +2910,14 @@ func _show_event(ev: Dictionary) -> void:
 	var culture := String(c.get("culture", "latin")) if not c.is_empty() else "latin"
 	# Site and consequence events can be opened without going through _arrive.
 	# Refresh the scene audio from the actual event so a shrine/court/market
-	# does not keep the previous city's generic bed.
+	# does not keep the previous city's generic bed. Road encounters keep the
+	# journey arrangement even though WorldState already points at the destination.
 	if _audio_ready():
-		_audio.set_place(c, ev)
+		if not state.active_journey.is_empty():
+			var route := db.get_record(String(state.active_journey.get("route", "")))
+			_audio.set_travel(route if not route.is_empty() else state.active_journey)
+		else:
+			_audio.set_place(c, ev)
 	art = MapArt.event_portrait(ev, culture)
 	_dialog_layer.visible = true
 	_dialog.show_event(ev, states, art, _pending_context())
@@ -3059,51 +3275,79 @@ func _continue_pending() -> void:
 ## Routes are deliberately rendered before optional city actions: the player
 ## asking "where can I go?" must see a destination without scrolling.
 func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
+	if CityLifeCore.retired(state):
+		_open_city_life()
+		return
 	_city_view.visible = false
 	_clear_panel()
 	var here := db.get_record(state.city)
 	if origin == RoadPanelOrigin.CITY:
-		_panel.add_child(Panels.styled_button(I18n.t("ui.back_to_city"), _open_city))
+		_panel.add_child(Panels.translated_button("ui.back_to_city", _open_city))
 	else:
-		_panel.add_child(Panels.styled_button(I18n.t("ui.back_to_map"),
+		_panel.add_child(Panels.translated_button("ui.back_to_map",
 			func() -> void: _clear_panel()))
 
+	_panel.add_child(Panels.primary_button(I18n.t("ui.stay.entry"), _open_city_life))
 	_panel.add_child(Panels.heading(I18n.t("ui.routes_from") % _city_name(state.city)))
+	var guide_step: Dictionary = JourneyGuideCore.next_step(state, here, db,
+		conditions, travel, _ctx(), clock.month())
+	var guide_label := Panels.label(_journey_guide_text(here, false), UiScale.ui(), Palette.ink_soft())
+	guide_label.set_meta("journey_guide", true)
+	guide_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_panel.add_child(guide_label)
 
 	var any := false
-	for r in travel.routes_from(state.city):
-		if not travel.is_route_known(r, state):
-			continue
+	var known_routes: Array = []
+	for route in travel.routes_from(state.city):
+		if travel.is_route_known(route, state):
+			known_routes.append(route)
+	# Put unfamiliar destinations first so the route list suggests a clear way on.
+	known_routes.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
+		var a_dest := travel.other_end(a, state.city)
+		var b_dest := travel.other_end(b, state.city)
+		var suggested := String(guide_step.get("destination", ""))
+		if not suggested.is_empty() and (a_dest == suggested) != (b_dest == suggested):
+			return a_dest == suggested
+		var a_unvisited := a_dest not in state.visited and a_dest != state.start_city
+		var b_unvisited := b_dest not in state.visited and b_dest != state.start_city
+		if a_unvisited != b_unvisited:
+			return a_unvisited
+		return _city_name(a_dest).naturalcasecmp_to(_city_name(b_dest)) < 0
+	)
+	for r in known_routes:
 		var dest := travel.other_end(r, state.city)
 		for mode in r.get("modes", []):
 			var av := travel.availability(r, state, clock.month(), String(mode))
 			var days := travel.total_days(r, String(mode))
-			var cost := int(travel.total_cost(r, String(mode)) / 100)
+			var cost := Panels.money(travel.total_cost(r, String(mode)))
+			var dest_label := _city_name(dest)
 			var btn := Panels.styled_button(I18n.t("ui.route_button_fmt") % [
-				_city_name(dest), I18n.t("transport.%s.name" % mode), days, cost],
+				dest_label, I18n.t("transport.%s.name" % mode), days, cost],
 				Callable())
 			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			btn.disabled = not av["ok"]
 			if not av["ok"]:
 				var rr: Array[String] = []
 				for reason in av["reasons"]:
-					rr.append(I18n.fmt(String(reason)))
+					rr.append(Panels.explain_reason(String(reason)))
 				var why := I18n.list(PackedStringArray(rr))
 				btn.text += I18n.gap() + I18n.t("ui.why_fmt") % why
 				btn.tooltip_text = why
 			else:
 				btn.tooltip_text = I18n.t("ui.route.tooltip") % [_city_name(dest), days, cost]
 				btn.pressed.connect(_on_depart.bind(r, String(mode)))
+			if dest not in state.visited and dest != state.start_city:
+				Panels.tag_button(btn, I18n.t("ui.route.new_badge"))
 			_panel.add_child(btn)
 			any = true
 	if not any:
-		_panel.add_child(Panels.label(I18n.t("ui.no_routes"), UiScale.ui(), Palette.ink_faint()))
-		_panel.add_child(Panels.label(I18n.t("ui.no_routes_hint"), UiScale.ui(), Palette.ink_soft()))
+		_panel.add_child(Panels.translated_label("ui.no_routes", UiScale.ui(), Palette.ink_faint()))
+		_panel.add_child(Panels.translated_label("ui.no_routes_hint", UiScale.ui(), Palette.ink_soft()))
 
 	# Secondary city actions remain available below the primary route area.
 	# They are intentionally not duplicated above the route list.
 	_panel.add_child(Panels.rule())
-	_panel.add_child(Panels.label(I18n.t("ui.routes_hint"), UiScale.ui(), Palette.ink_soft()))
 	_panel.add_child(Panels.heading(I18n.t("ui.city.explore_more")))
 	var life_stage := String(state.life.get("stage", MortalityCore.STABLE))
 	if life_stage != MortalityCore.STABLE:
@@ -3113,11 +3357,14 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 		_panel.add_child(care)
 		if life_stage in [MortalityCore.GRAVE, MortalityCore.DYING] \
 				and not bool(state.life.get("legacy_prepared", false)):
-			_panel.add_child(Panels.styled_button(I18n.t("ui.life.prepare_legacy"),
+			_panel.add_child(Panels.translated_button("ui.life.prepare_legacy",
 				_prepare_legacy))
 
-	var here_sites: Array = here.get("sites", []).duplicate()
-	if here.has("mentorEvent"):
+	var here_sites: Array = []
+	for site_id in here.get("sites", []):
+		if site_id not in here_sites:
+			here_sites.append(site_id)
+	if here.has("mentorEvent") and here["mentorEvent"] not in here_sites:
 		here_sites.append(here["mentorEvent"])
 	for sid in here_sites:
 		var sev := db.get_record(String(sid))
@@ -3131,7 +3378,7 @@ func _show_roads(origin: RoadPanelOrigin = RoadPanelOrigin.MAP) -> void:
 		_panel.add_child(sbtn)
 
 	if here.has("market"):
-		var mbtn := Panels.styled_button(I18n.t("ui.open_market"), _open_market)
+		var mbtn := Panels.translated_button("ui.open_market", _open_market)
 		mbtn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		_panel.add_child(mbtn)
 
@@ -3161,7 +3408,7 @@ func _perform_depart(route: Dictionary, mode: String) -> void:
 	if not bool(trip.get("ok", false)):
 		var reasons: Array[String] = []
 		for reason in trip.get("reasons", []):
-			reasons.append(I18n.fmt(String(reason)))
+			reasons.append(Panels.explain_reason(String(reason)))
 		_say("[color=#8a4a3a]%s[/color]" % I18n.t("ui.route.cannot") % I18n.list(
 			PackedStringArray(reasons)))
 		# A road the player is standing in may still be a town interior —
@@ -3374,3 +3621,61 @@ func _on_mute_changed(is_muted: bool) -> void:
 	var btn := get_node_or_null("MuteBtn") as Button
 	if btn:
 		btn.text = I18n.t("ui.unmute") if is_muted else I18n.t("ui.mute")
+
+
+func _build_city_life() -> void:
+	_city_life_layer = Control.new()
+	_city_life_layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_city_life_layer.hide()
+	add_child(_city_life_layer)
+	var scrim := ColorRect.new()
+	scrim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	scrim.color = Palette.scrim_color()
+	scrim.mouse_filter = Control.MOUSE_FILTER_PASS
+	_city_life_layer.add_child(scrim)
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_city_life_layer.add_child(center)
+	_city_life_view = preload("res://game/screens/city_life_view.gd").new()
+	center.add_child(_city_life_view)
+	_city_life_view.closed.connect(_close_city_life)
+	_city_life_view.action_requested.connect(_on_city_life_action)
+	_city_life_view.new_journey_requested.connect(func(): get_tree().reload_current_scene())
+	Panels.make_dismissable(_city_life_layer, _city_life_view, _close_city_life)
+
+
+func _open_city_life() -> void:
+	if state == null or bool(state.life.get("deceased", false)): return
+	var c := db.get_record(state.city)
+	if c.is_empty(): return
+	_city_life_view.open(c, state)
+	_city_life_layer.show()
+
+
+func _close_city_life() -> void:
+	if state != null and CityLifeCore.retired(state): return
+	_city_life_layer.hide()
+	_open_city()
+
+
+func _on_city_life_action(op: String, value: Variant) -> void:
+	if op not in ["city_work", "city_borrow", "city_repay", "retire_journey"]: return
+	var result := executor.execute(state, [{"op": op, "value": value, "reason": "city-livelihood"}], _ctx())
+	if result.applied.is_empty():
+		_city_life_view.show_result(I18n.t("ui.stay.rejected"))
+		return
+	clock = WorldClock.new(state.jdn)
+	var message := ""
+	match op:
+		"city_work":
+			var record: Dictionary = CityLifeCore.work_history(state).back()
+			message = I18n.t("ui.stay.work_result") % [I18n.t("ui.stay.job." + record.job), record.months, Panels.money(record.income)]
+		"city_borrow": message = I18n.t("ui.stay.borrowed")
+		"city_repay": message = I18n.t("ui.stay.repaid")
+	_refresh_hud()
+	_sync_city_status()
+	if _audio_ready(): _audio.set_jdn(state.jdn)
+	if not message.is_empty(): _say(message)
+	_city_life_view.show_result(message)
+	_autosave()

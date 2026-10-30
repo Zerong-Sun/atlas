@@ -42,3 +42,27 @@ You pass through without stopping. The road to Fuju opens on your map.
 ## ev.ev_fuju_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Fuju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_fuju.title
+
+The Tide Rope at the Harbour
+
+## ev.ev_gap_fuju.body
+
+At Fuju harbour, a pilot lowers a knotted rope straight into the water. Each knot marks about a foot of depth beneath the hull. As the tide falls, shoals appear and ships must wait for it to rise. A reading taken while the ship is moving is unreliable.
+
+## ev.ev_gap_fuju.choice.route
+
+Ask the way to Zayton
+
+## ev.ev_gap_fuju.choice.route_result
+
+“Follow the coast southwest from here to Zayton.”
+
+## ev.ev_gap_fuju.choice.scene
+
+Help measure the water depth
+
+## ev.ev_gap_fuju.choice.scene_result
+
+You count six knots. “This ship can pass,” says the pilot. “Looking at the surface is not enough; you must know when the tide will turn.”

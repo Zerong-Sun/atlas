@@ -1,0 +1,130 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-antiochia-two-names",
+      "kind": "site",
+      "title": "ev.antiochia.two_names.title",
+      "body": "ev.antiochia.two_names.body",
+      "once": true,
+      "when": {"cities": ["antiochia"]},
+      "choices": [
+        {
+          "label": "ev.antiochia.two_names.choice.maps",
+          "resultText": "ev.antiochia.two_names.result.maps",
+          "effects": [
+            {"op": "reputation", "value": 1, "scope": "city", "id": "antiochia", "reason": "matched-river-names"},
+            {"op": "reveal_route", "value": "rt-antiochia-tripolis", "reason": "merchant-named-tripolis-road"},
+            {"op": "reveal_city", "value": "tripolis", "reason": "merchant-named-tripolis"}
+          ]
+        },
+        {
+          "label": "ev.antiochia.two_names.choice.guard",
+          "resultText": "ev.antiochia.two_names.result.guard",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-antiochia-tarsus", "reason": "gatekeeper-named-tarsus-road"},
+            {"op": "reveal_city", "value": "tarsus", "reason": "gatekeeper-named-tarsus"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    },
+    {
+      "id": "ev-tripolis-quay",
+      "kind": "site",
+      "title": "ev.tripolis.quay.title",
+      "body": "ev.tripolis.quay.body",
+      "once": true,
+      "when": {"cities": ["tripolis"]},
+      "choices": [
+        {
+          "label": "ev.tripolis.quay.choice.help",
+          "resultText": "ev.tripolis.quay.result.help",
+          "effects": [{"op": "reputation", "value": 1, "scope": "city", "id": "tripolis", "reason": "helped-find-borrowed-oar"}]
+        },
+        {
+          "label": "ev.tripolis.quay.choice.road",
+          "resultText": "ev.tripolis.quay.result.road",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-tripolis-tyrus", "reason": "porter-named-tyre-road"},
+            {"op": "reveal_city", "value": "tyrus", "reason": "porter-named-tyre"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    },
+    {
+      "id": "ev-tripolis-oven",
+      "kind": "site",
+      "title": "ev.tripolis.oven.title",
+      "body": "ev.tripolis.oven.body",
+      "once": true,
+      "when": {"cities": ["tripolis"]},
+      "choices": [
+        {
+          "label": "ev.tripolis.oven.choice.bake",
+          "resultText": "ev.tripolis.oven.result.bake",
+          "effects": [{"op": "reputation", "value": 1, "scope": "city", "id": "tripolis", "reason": "carried-bread-to-ship"}]
+        },
+        {
+          "label": "ev.tripolis.oven.choice.damascus",
+          "resultText": "ev.tripolis.oven.result.damascus",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-damascus-tripolis", "reason": "baker-named-damascus-road"},
+            {"op": "reveal_city", "value": "damascus", "reason": "baker-named-damascus"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    },
+    {
+      "id": "ev-cairo-caravan",
+      "kind": "site",
+      "title": "ev.cairo.caravan.title",
+      "body": "ev.cairo.caravan.body",
+      "once": true,
+      "when": {"cities": ["babylonia-cairus"]},
+      "choices": [
+        {
+          "label": "ev.cairo.caravan.choice.baskets",
+          "resultText": "ev.cairo.caravan.result.baskets",
+          "effects": [{"op": "reputation", "value": 1, "scope": "city", "id": "babylonia-cairus", "reason": "marked-date-baskets"}]
+        },
+        {
+          "label": "ev.cairo.caravan.choice.bethlehem",
+          "resultText": "ev.cairo.caravan.result.bethlehem",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-babylonia-cairus-bethleem", "reason": "driver-named-bethlehem-road"},
+            {"op": "reveal_city", "value": "bethleem", "reason": "driver-named-bethlehem"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    },
+    {
+      "id": "ev-jerusalem-sandals",
+      "kind": "site",
+      "title": "ev.jerusalem.sandals.title",
+      "body": "ev.jerusalem.sandals.body",
+      "once": true,
+      "when": {"cities": ["hierusalem"]},
+      "choices": [
+        {
+          "label": "ev.jerusalem.sandals.choice.sort",
+          "resultText": "ev.jerusalem.sandals.result.sort",
+          "effects": [{"op": "reputation", "value": 1, "scope": "city", "id": "hierusalem", "reason": "helped-cobbler-sort-sandals"}]
+        },
+        {
+          "label": "ev.jerusalem.sandals.choice.road",
+          "resultText": "ev.jerusalem.sandals.result.road",
+          "effects": [
+            {"op": "reveal_route", "value": "rt-bethleem-hierusalem", "reason": "traveller-named-bethlehem-road"},
+            {"op": "reveal_city", "value": "bethleem", "reason": "traveller-named-bethlehem"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    }
+  ]
+}

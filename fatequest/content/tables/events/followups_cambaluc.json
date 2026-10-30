@@ -91,6 +91,11 @@
           "resultText": "ev.ev_cambaluc_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "silk",
               "value": 1,
@@ -101,7 +106,12 @@
               "value": "st-cambaluc-suburbs",
               "reason": "bought-silk-at-the-counting-house-price"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          }
         },
         {
           "label": "ev.ev_cambaluc_b_followup.choice_2",

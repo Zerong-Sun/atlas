@@ -199,7 +199,7 @@ CITIES = [
     ("Sindafu", "Chengdu", 30.659, 104.065, "Asia", 2, "City divided by a river of bridges"),
     ("Saianfu", "Xiangyang", 32.009, 112.122, "Asia", 2, "Held out three years until the mangonels came"),
     ("Coiganju", "Huai'an", 33.502, 119.150, "Asia", 3, "Entry to Manzi, great store of salt"),
-    ("Nanghin", "Nanjing", 32.060, 118.797, "Asia", 2, "Noble province of great wealth"),
+    ("Nanghin", "Anqing", 30.530, 117.050, "Asia", 2, "Noble province of great wealth"),
     ("Sinjumatu", "Jining", 35.415, 116.587, "Asia", 3, "River-city of vast shipping"),
 
     # --- Manzi: the southern kingdom --------------------------------------
@@ -219,7 +219,7 @@ CITIES = [
     ("Siju", "Pizhou", 34.311, 117.954, "Asia", 3, "City of great game and hunting"),
     ("Coigangiu", "Huaiyin", 33.583, 119.028, "Asia", 3, "Salt city at the river mouth"),
     ("Paukin", "Baoying", 33.234, 119.311, "Asia", 3, "City of silk and of the canal"),
-    ("Tiju", "Gaoyou", 32.785, 119.443, "Asia", 3, "Canal city of fish and fowl"),
+    ("Tiju", "Taizhou", 32.480, 119.920, "Asia", 3, "Trade town east of the Grand Canal, near the salt fields"),
     ("Caiju", "Guazhou", 32.253, 119.400, "Asia", 3, "Where the grain fleet enters the great river"),
     ("Sinju", "Yizheng", 32.272, 119.182, "Asia", 3, "River port of vast shipping"),
     ("Chinghianfu", "Zhenjiang", 32.188, 119.425, "Asia", 3, "City with two Nestorian churches"),

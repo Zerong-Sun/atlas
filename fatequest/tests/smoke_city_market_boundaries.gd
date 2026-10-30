@@ -156,12 +156,7 @@ func _init() -> void:
 	city._figures.add_child(card)
 	city._layout_cards()
 	await frames(8)
-	var card_labels: Array[Label] = []
-	for child in card.get_children():
-		if child is VBoxContainer:
-			for descendant in child.get_children():
-				if descendant is Label:
-					card_labels.append(descendant)
+	var card_labels: Array[Node] = card.find_children("*", "Label", true, false)
 	check(card_labels.size() >= 2, "long title audit finds both real card labels")
 	for label in card_labels:
 		check(label.get_global_rect().end.y <= card.get_global_rect().end.y, "long city title/status stays inside the card")

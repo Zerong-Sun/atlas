@@ -91,6 +91,11 @@
           "resultText": "ev.ev_ormus_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -101,7 +106,12 @@
               "value": "st-ormus-spice",
               "reason": "bought-pepper-while-the-dhow-lay-at-anchor"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_ormus_b_followup.choice_2",

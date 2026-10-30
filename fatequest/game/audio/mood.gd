@@ -82,20 +82,20 @@ static func derive_with_coins(
 static func params(mood: String) -> Dictionary:
 	match mood:
 		WONDER:
-			return {"cutoff": 12000.0, "music_db": 1.0, "pitch": 1.0,
+			return {"cutoff": 20000.0, "music_db": 1.0, "pitch": 1.0,
 				"drone": 1.0, "pulse": 1.0, "melody": 1.0, "color": 1.0}
 		TENSION:
-			return {"cutoff": 900.0, "music_db": 0.0, "pitch": 1.0,
-				"drone": 1.15, "pulse": 1.1, "melody": 0.0, "color": 0.0}
+			return {"cutoff": 14500.0, "music_db": 0.0, "pitch": 1.0,
+				"drone": 1.0, "pulse": 1.1, "melody": 0.65, "color": 0.0}
 		LOSS:
-			return {"cutoff": 700.0, "music_db": -4.0, "pitch": 0.92,
-				"drone": 0.85, "pulse": 0.0, "melody": 0.35, "color": 0.0}
+			return {"cutoff": 15000.0, "music_db": -3.0, "pitch": 1.0,
+				"drone": 0.75, "pulse": 0.0, "melody": 0.6, "color": 0.0}
 		RELIEF:
-			return {"cutoff": 10000.0, "music_db": 1.5, "pitch": 1.0,
+			return {"cutoff": 20000.0, "music_db": 1.5, "pitch": 1.0,
 				"drone": 1.0, "pulse": 1.0, "melody": 1.0, "color": 0.6}
 		REVERENCE:
-			return {"cutoff": 6000.0, "music_db": -3.0, "pitch": 0.98,
-				"drone": 0.7, "pulse": 0.0, "melody": 0.0, "color": 0.25}
+			return {"cutoff": 17000.0, "music_db": -2.0, "pitch": 1.0,
+				"drone": 0.7, "pulse": 0.0, "melody": 0.7, "color": 0.25}
 		_:
-			return {"cutoff": 8000.0, "music_db": 0.0, "pitch": 1.0,
+			return {"cutoff": 20000.0, "music_db": 0.0, "pitch": 1.0,
 				"drone": 1.0, "pulse": 1.0, "melody": 1.0, "color": 0.0}

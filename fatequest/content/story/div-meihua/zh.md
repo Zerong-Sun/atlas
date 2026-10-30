@@ -152,7 +152,7 @@ stamps:
 
 ## div.meihua.result.28
 
-账本上落花：记下了一笔债，还清它。
+账本上落花：旧债该还了。
 
 ## div.meihua.result.29
 

@@ -41,3 +41,27 @@ You pass through without stopping. The road to Chinghianfu opens on your map.
 ## ev.ev_chinghianfu_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Chinghianfu on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_chinghianfu.title
+
+Water Buckets on the Stone Steps
+
+## ev.ev_gap_chinghianfu.body
+
+Stone steps lead down to the water in Chinghianfu. A water carrier sets down his buckets to catch his breath. The lowest steps grow slick with moss. He asks whether you can help lift the buckets or would rather know which street has a clean well; he has no wish to fall again.
+
+## ev.ev_gap_chinghianfu.choice.route
+
+Ask the way to Nanghin
+
+## ev.ev_gap_chinghianfu.choice.route_result
+
+“Follow the Yangtze west for many days to Nanghin.”
+
+## ev.ev_gap_chinghianfu.choice.scene
+
+Ask where to find well water
+
+## ev.ev_gap_chinghianfu.choice.scene_result
+
+“Walk along the street by the west gate. A well beside a courtyard wall is watched in turns, and people draw from it even in hot weather. Rinse your bucket first.”

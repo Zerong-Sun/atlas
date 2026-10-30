@@ -70,7 +70,7 @@
             {
               "op": "codex",
               "value": "cx-fadlan-darkness",
-              "reason": "remembered-the-smell-of-the-mist"
+              "reason": "learned-the-rope-and-knot-method"
             }
           ]
         }
@@ -241,14 +241,19 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "camped-before-crossing-openly"
+              "reason": "stayed-two-days-repairing-tack"
             },
             {
               "op": "coins",
               "value": -20,
-              "reason": "paid-the-passage-with-the-ledger"
+              "reason": "paid-inn-and-fodder"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
         },
         {
           "label": "ev.ev_road_fadlan_32_followup.choice_2",
@@ -257,13 +262,13 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "hurried-while-the-road-was-clear"
+              "reason": "reached-next-stop-in-day"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "emptied-the-watched-road-before-me"
+              "reason": "made-do-with-spare-cloth"
             }
           ]
         }

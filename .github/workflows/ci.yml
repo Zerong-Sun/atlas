@@ -15,6 +15,8 @@ jobs:
         working-directory: fatequest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -26,6 +28,9 @@ jobs:
       # Story text must be compiled from its authoring format, and no
       # translation may be older than the source it was made from.
       - run: node tools/lore/story.mjs check
+      - run: node tests/test_story_cli.mjs
+      - run: node tools/lore/story.mjs build && git diff --exit-code -- content/i18n/en.json content/i18n/zh.json
+      - run: node tests/test_i18n_lines.mjs
       - run: node tools/validate/validate.mjs
       # Rng parity: the GDScript port must reproduce Atlas seed.ts bit-for-bit
       - run: node tools/parity/gen_rng_fixture.mjs && git diff --exit-code tools/parity/rng_fixture.json
@@ -43,6 +48,8 @@ jobs:
       GODOT_VERSION: "4.7.1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
       - name: Install Godot (headless)
         run: |
           curl -fsSL -o godot.zip \
@@ -113,6 +120,12 @@ jobs:
           tests/smoke_tauris_merchant.gd
           tests/smoke_road_followup.gd
           tests/smoke_tauris_mentor.gd
+      - name: All 24 cultural lesson games (Chinese and English)
+        working-directory: fatequest
+        run: python3 tools/validate/playtest_local.py --timeout 180 tests/smoke_divination_challenges.gd tests/smoke_lesson_presentation.gd tests/smoke_lesson_art.gd
+      - name: Audio resource and culture mapping smoke
+        working-directory: fatequest
+        run: python3 tools/validate/playtest_local.py tests/smoke_audio_runtime.gd
       - name: Upload UI playtest logs
         if: always()
         uses: actions/upload-artifact@v4

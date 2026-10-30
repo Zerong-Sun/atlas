@@ -3,24 +3,28 @@ extends Node
 ## FateQuest audio director — AUDIO_PLAN.md §8 A1–A6.
 ##
 ## Autoload. L2 presentation only: never writes WorldState; music RNG is an
-## independent fork (CODE_PLAN.md §2.1). Distinguishes places by
-## culture × scene × mood — NOT one track per city (§10).
+## independent fork (CODE_PLAN.md §2.1). East Asia, West Asia and Steppe
+## share one neutral theme; Indian Ocean and Latin retain scene arrangements.
 
 const BUS_MASTER := "Master"
 const BUS_MUSIC := "Music"
 const BUS_AMBIENT := "Ambient"
 const BUS_SFX := "SFX"
-const STEM_ROOT := "res://assets/audio/stems"
+const FOLK_ROOT := "res://assets/audio/folk"
 const AMB_ROOT := "res://assets/audio/ambient"
 const INTRO_PATH := "res://assets/audio/intro/title_theme.wav"
-const LAYERS: PackedStringArray = ["drone", "pulse", "melody", "color"]
-const CULTURES: PackedStringArray = ["islamic", "east_asia", "steppe", "indian_ocean", "latin"]
+const FOLK_LAYERS: PackedStringArray = ["melody", "melody_road", "melody_quiet"]
+const LAYERS: PackedStringArray = ["melody", "melody_road", "melody_quiet"]
+const CULTURES: PackedStringArray = ["islamic", "east_asia", "steppe", "indian_ocean", "latin", "orthodox"]
+const SHARED_CULTURES: PackedStringArray = ["islamic", "east_asia", "steppe"]
+const MUSIC_CULTURES: PackedStringArray = ["shared", "indian_ocean", "latin"]
 const CROSSFADE_SEC := 10.0
 const SETTINGS_PATH := "user://audio.cfg"
 var _settings_loaded := false
 var _context: Dictionary = {}
 var _loop_cache: Dictionary = {}
 var _start_offset := 0.0
+var _music_variant := 0
 
 signal mute_changed(muted: bool)
 
@@ -54,6 +58,7 @@ var _amb_players: Array[AudioStreamPlayer] = []
 var _intro_player: AudioStreamPlayer
 var _intro_tween: Tween
 var _intro_active := false
+var _song_timer: Timer
 var _sfx: AudioSfx
 var _lp: AudioEffectLowPassFilter
 var _tweens: Array[Tween] = []
@@ -75,14 +80,19 @@ func _ready() -> void:
 	_intro_player.volume_db = -80.0
 	_intro_player.finished.connect(_on_intro_finished)
 	add_child(_intro_player)
-	for c in CULTURES:
+	_song_timer = Timer.new()
+	_song_timer.one_shot = true
+	_song_timer.timeout.connect(_on_song_turn)
+	add_child(_song_timer)
+	for c in MUSIC_CULTURES:
 		for layer in LAYERS:
-			var key := "%s:%s" % [c, layer]
-			var p := AudioStreamPlayer.new()
-			p.bus = BUS_MUSIC
-			p.volume_db = -80.0
-			add_child(p)
-			_stem_players[key] = p
+			for variant in 2:
+				var key := "%s:%s:%d" % [c, layer, variant]
+				var p := AudioStreamPlayer.new()
+				p.bus = BUS_MUSIC
+				p.volume_db = -80.0
+				add_child(p)
+				_stem_players[key] = p
 	# 4 slots: scene beds (≤4) + sacred_blur may displace the last when shrine/reverence
 	for i in 4:
 		var a := AudioStreamPlayer.new()
@@ -98,6 +108,8 @@ func _exit_tree() -> void:
 	# referenced by the audio thread and report ObjectDB leaks on clean exit.
 	_kill_tweens()
 	_kill_intro_tween()
+	if _song_timer != null:
+		_song_timer.stop()
 	if _intro_player != null:
 		_intro_player.stop()
 		_intro_player.stream = null
@@ -193,6 +205,7 @@ func set_place(city: Dictionary, event: Dictionary = {}, blend: Dictionary = {})
 	var rng := music_rng(_city_id if not _city_id.is_empty() else "void", _jdn)
 	if changed_city:
 		_start_offset = rng.next() * 50.0
+		_music_variant = 1 if rng.next() >= 0.5 else 0
 
 	_mood = AudioMood.derive(null, {}, city, _scene_class, _prev_route_risk)
 	if not _playback_available:
@@ -201,6 +214,7 @@ func set_place(city: Dictionary, event: Dictionary = {}, blend: Dictionary = {})
 	_apply_mix(CROSSFADE_SEC)
 	_apply_ambients(CROSSFADE_SEC * 0.6)
 	_apply_mood_bus(CROSSFADE_SEC * 0.5)
+	_schedule_song_turn()
 
 
 func set_route_context(route: Dictionary) -> void:
@@ -237,8 +251,8 @@ func on_depart(route: Dictionary) -> void:
 	sfx("wood")
 
 
-## Journey mix for the transit plate: keeps the origin culture's stems under a
-## caravan pulse, with the road ambients instead of the town's. `set_place`
+## Journey mix for the transit plate: keeps the origin culture's road arrangement
+## with road ambients instead of the town's. `set_place`
 ## on arrival restores the destination city's own mix.
 func set_travel(route: Dictionary) -> void:
 	_context = route.duplicate(true)
@@ -255,6 +269,33 @@ func set_travel(route: Dictionary) -> void:
 	_apply_mix(2.5)
 	_apply_ambients(2.0)
 	_apply_mood_bus(2.5)
+	_schedule_song_turn()
+
+
+func _schedule_song_turn() -> void:
+	if not _playback_available or _song_timer == null:
+		return
+	_song_timer.stop()
+	var c := _music_culture(_primary_culture())
+	if c == "shared":
+		return
+	var layer := folk_layer(_scene_class)
+	var p: AudioStreamPlayer = _stem_players["%s:%s:%d" % [c, layer, _music_variant]]
+	if p.stream != null:
+		# Let a phrase settle before rotating. The previous 15–20 second
+		# changes made the soundscape feel restless even in quiet scenes.
+		_song_timer.start(maxf(p.stream.get_length() * 2.0 - 0.75, 18.0))
+
+
+func _on_song_turn() -> void:
+	if _music_culture(_primary_culture()) == "shared":
+		return
+	_music_variant = 1 - _music_variant
+	if not _playback_available:
+		return
+	_kill_tweens()
+	_apply_mix(0.75)
+	_schedule_song_turn()
 
 
 static func blend_fanfang() -> Dictionary:
@@ -265,14 +306,48 @@ func _cultures_for(city: Dictionary, event: Dictionary) -> Dictionary:
 	var eid := String(event.get("id", ""))
 	if eid == "ev-zayton-fanfang" or eid.ends_with("-fanfang"):
 		return blend_fanfang()
+	# Caffa's Genoese port gives the western theme an actual route-side home;
+	# the steppe voice keeps the Crimean hinterland in the mix.
+	if String(city.get("id", "")) == "caffa":
+		return {"latin": 0.7, "steppe": 0.3}
 	var c := String(city.get("culture", "east_asia"))
 	if c.is_empty() or not (c in CULTURES):
 		c = "east_asia"
 	return {c: 1.0}
 
 
-func _stem_path(culture: String, layer: String) -> String:
-	return "%s/%s/%s.ogg" % [STEM_ROOT, culture, layer]
+static func _music_culture(culture: String) -> String:
+	if culture == "orthodox":
+		return "latin"
+	return "shared" if culture in SHARED_CULTURES else culture
+
+
+func _music_mix() -> Dictionary:
+	var weights: Dictionary = {}
+	for culture in _culture_mix:
+		var music_culture := _music_culture(String(culture))
+		weights[music_culture] = float(weights.get(music_culture, 0.0)) + float(_culture_mix[culture])
+	return weights
+
+
+func _stem_path(culture: String, layer: String, variant: int = 0) -> String:
+	var music_culture := _music_culture(culture)
+	if music_culture == "shared":
+		return INTRO_PATH
+	if layer in FOLK_LAYERS:
+		var arrangement := "town" if layer == "melody" else ("road" if layer == "melody_road" else "quiet")
+		return "%s/%s/%s%s.ogg" % [FOLK_ROOT, music_culture, arrangement, "_b" if variant == 1 else ""]
+	return ""
+
+
+static func folk_layer(scene_class: String) -> String:
+	match scene_class:
+		SceneDensity.PORT, SceneDensity.JOURNEY:
+			return "melody_road"
+		SceneDensity.WILD, SceneDensity.SHRINE, SceneDensity.COURT, SceneDensity.INN:
+			return "melody_quiet"
+		_:
+			return "melody"
 
 
 func _amb_path(name: String) -> String:
@@ -299,6 +374,8 @@ func _load_stream(path: String, loop: bool = false) -> AudioStream:
 		return null
 	if loop and stream is AudioStreamOggVorbis:
 		(stream as AudioStreamOggVorbis).loop = true
+	if loop and stream is AudioStreamWAV:
+		(stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	_loop_cache[path] = stream
 	return stream
 
@@ -319,6 +396,10 @@ func play_intro() -> void:
 	var stream := _load_stream(INTRO_PATH)
 	if stream == null:
 		return
+	# The opening desk can stay up indefinitely while the player reads.
+	# Repeating the composed theme keeps a melody present until New Game/Load.
+	if stream is AudioStreamWAV:
+		(stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	_intro_player.stream = stream
 	_intro_active = true
 	_kill_intro_tween()
@@ -327,7 +408,7 @@ func play_intro() -> void:
 		return
 	_intro_player.play()
 	_intro_tween = create_tween()
-	_intro_tween.tween_property(_intro_player, "volume_db", -10.0, 0.8)
+	_intro_tween.tween_property(_intro_player, "volume_db", 0.0, 0.8)
 
 
 func stop_intro(fade_sec: float = 0.8) -> void:
@@ -367,28 +448,36 @@ func _seek_stems(offset_sec: float) -> void:
 func _apply_mix(fade: float) -> void:
 	var scene_gains := SceneDensity.layer_gains(_scene_class)
 	var mood_p := AudioMood.params(_mood)
-	for c in CULTURES:
-		var weight := float(_culture_mix.get(c, 0.0))
+	var chosen_folk := folk_layer(_scene_class)
+	var music_weights := _music_mix()
+	for c in MUSIC_CULTURES:
+		var weight := float(music_weights.get(c, 0.0))
 		for layer in LAYERS:
-			var key := "%s:%s" % [c, layer]
-			var p: AudioStreamPlayer = _stem_players[key]
-			var target_lin := weight * float(scene_gains.get(layer, 0.0)) * float(mood_p.get(layer, 1.0))
-			var target_db := linear_to_db(maxf(target_lin, 0.0001)) if target_lin > 0.001 else -80.0
-			if weight > 0.0 and target_lin > 0.001:
-				if p.stream == null:
-					p.stream = _load_loop(_stem_path(c, layer))
-				if p.stream and not p.playing:
-					p.play(_start_offset)
-				p.pitch_scale = float(mood_p.get("pitch", 1.0))
-			_fade_player(p, target_db, fade)
-			if target_lin <= 0.001:
-				_stop_after(p, fade + 0.05)
+			for variant in 2:
+				var key := "%s:%s:%d" % [c, layer, variant]
+				var p: AudioStreamPlayer = _stem_players[key]
+				var target_lin := weight * float(scene_gains.get("melody", 0.0)) * float(mood_p.get("melody", 1.0))
+				if (c == "shared" and (layer != "melody" or variant != 0)) or (c != "shared" and (layer != chosen_folk or variant != _music_variant)):
+					target_lin = 0.0
+				var target_db := linear_to_db(maxf(target_lin, 0.0001)) if target_lin > 0.001 else -80.0
+				if weight > 0.0 and target_lin > 0.001:
+					if p.stream == null:
+						p.stream = _load_loop(_stem_path(c, layer, variant))
+					if p.stream and not p.playing:
+						p.play(0.0)
+					p.pitch_scale = float(mood_p.get("pitch", 1.0))
+				_fade_player(p, target_db, fade)
+				if target_lin <= 0.001:
+					_stop_after(p, fade + 0.05)
 
 
 func ambient_plan() -> PackedStringArray:
 	var names := SceneDensity.ambients(_scene_class, _context)
 	if _scene_class == SceneDensity.SHRINE or _mood == AudioMood.REVERENCE:
-		var sacred := "sacred_blur_%s" % _primary_culture()
+		var sacred_culture := _primary_culture()
+		if sacred_culture == "orthodox":
+			sacred_culture = "latin"
+		var sacred := "sacred_blur_%s" % sacred_culture
 		if names.size() >= 4:
 			names.resize(3)
 		names.append(sacred)
@@ -406,7 +495,7 @@ func _apply_ambients(fade: float) -> void:
 		if current in pending:
 			pending.erase(current)
 			if not p.playing: p.play()
-			_fade_player(p, -8.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
+			_fade_player(p, -15.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
 		else:
 			spare.append(p)
 	for p in spare:
@@ -417,7 +506,7 @@ func _apply_ambients(fade: float) -> void:
 			p.set_meta("ambient_name", name)
 			p.volume_db = -80.0
 			if p.stream != null: p.play()
-			_fade_player(p, -8.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
+			_fade_player(p, -15.0 - SceneDensity.reverb(_scene_class) * 4.0, fade)
 		else:
 			_fade_player(p, -80.0, fade)
 			_stop_after(p, fade + 0.05)

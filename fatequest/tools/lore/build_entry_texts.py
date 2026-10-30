@@ -80,7 +80,7 @@ ID_TO_LORE = {
     "campichu": "campichu",
     "cambaluc": "cambaluc-2",
     "kinsay": "great-city-of-kinsay",
-    "nanghin": "yangiu",
+    "nanghin": "nanghin",
     "zayton": "great-haven-of-zayton",
     "caracoron": "caracoron",  # steppe
     "etzina": "etzina",
@@ -190,7 +190,7 @@ STATION_TEXTS = {
     "sinjumatu": "Jining — a canal town in the northern plain, where the grain boats ride low in the water. The innkeeper boasts that his noodle soup has traveled further than any Khan.",
     "suju": "Suzhou — the city of gardens and silk-looms, where every street follows a canal. The bridges are so numerous that a boat can pass under a different arch every hundred paces.",
     "tanpiju": "Tonglu — a river-town in the hills of Manzi, where the bamboo rafts tie up alongside the stone wharves. The hills are terraced with tea; the river runs clear and fast.",
-    "tiju": "Gaoyou — a post-station on the Grand Canal. The lake to the west is full of fish; the road east leads to the salt fields and the sea.",
+    "tiju": "Taizhou — a town east of the Grand Canal, busy with river trade. Salt is made in the country toward the sea.",
     "chamba": "Champa — a kingdom on the coast of Annam, rich in aloewood and elephant tusks. The king pays tribute to the Great Khan; his ships sail to China every year with tribute elephants.",
     "java-major": "Java the Great — an island kingdom of immense wealth, where pepper, nutmeg, and cloves grow in the volcanic soil. The Shahbandar of the port-taxes every ship that enters; no man has ever sailed around the island.",
     "pentam": "Bintan — an island in the straits south of the Malay Peninsula. Wood, water, and fresh fruit are the only trade; the sea-people who live here build their houses on stilts above the tide.",

@@ -92,7 +92,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -500,
+              "value": -10000,
               "reason": "bought-the-masters-finest-paper"
             },
             {
@@ -109,7 +109,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 500
+              "min": 10000
             }
           }
         },

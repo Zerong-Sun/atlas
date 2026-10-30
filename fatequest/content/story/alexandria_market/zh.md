@@ -1,7 +1,7 @@
 ---
 status: translated
+
 stamps:
-  ui.market.regional_supply: d3ce84b01791
   city.alexandria.market.name: b6aaee3a6272
   city.alexandria.market.desc: fdf9f56de476
   market.alexandria.item.frankincense: 5c817d6d2bc0
@@ -16,6 +16,7 @@ stamps:
   market.alexandria.item.paper: 1db2b578fefb
   market.alexandria.item.tabriz-pearls: fc16be938106
   market.alexandria.item.glass-bead: 5b93649288ed
+  ui.market.regional_supply: d3ce84b01791
 ---
 
 ## city.alexandria.market.name
@@ -72,7 +73,7 @@ stamps:
 
 ## market.alexandria.item.glass-bead
 
-一颗可以穿绳的玻璃珠，作为小件单独出售，收入行囊占一格。它不贵，适合作为这一站的纪念。
+一颗可以穿绳的玻璃珠，作为小件单独出售。它不贵，适合作为这一站的纪念。
 
 ## ui.market.regional_supply
 

@@ -25,8 +25,8 @@
  "rendering": {
   "projection": "web-mercator",
   "orientation": "north-up",
-  "style": "real-tiles-with-medieval-overlay",
-  "reason": "Align the live XYZ basemap with historical cities, routes, vectors and fog while preserving the period-inspired overlay."
+  "style": "local-vector-atlas",
+  "reason": "Render local land and coastline vectors without modern labels; keep historical places and directed journeys readable at every zoom."
  },
  "source_url": "https://www.naturalearthdata.com/"
 }

@@ -89,6 +89,11 @@
           "resultText": "ev.ev_kinsay_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -99,7 +104,12 @@
               "value": "st-kinsay-markets",
               "reason": "bought-pepper-in-the-ten-great-squares"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_kinsay_b_followup.choice_2",

@@ -15,413 +15,444 @@ Ormus
 
 ## ev.ormus.a.body
 
-The fortress of Hormos guards the narrow strait where the Persian Gulf opens into the
-Sea of India. Its walls of sun-baked brick and coral stone are thick enough to turn any
-mangonel, and its cisterns hold enough water to withstand a siege of a year. The ruler
-pays tribute to the King of Kerman but governs in his own name; his soldiers are
-dark-skinned men from the African coast, armed with spears and round shields. Every ship
-that enters the harbor must pay its toll in pepper and silk; the customs officer sits in
-a shaded alcove by the quay, weighing every bale on a brass scale. The city lives on the
-sea — every man is a sailor, a pearl-diver, or a merchant.
+At the harbour customs table, a clerk is weighing a sealed bundle while a pearl sorter waits with a shallow basket. Her son has written the shell count on a scrap, but the ink ran when he set it beside the water jar. ‘The shells have not changed,’ he says. His mother asks him to count them again anyway.
+
+You ask whether the basket came from the near shore. She points across the water and names Calatu, where she knows people who handle boats and divers. The clerk says this basket of pearl shells needs a separate 3 silver yard entry. The pearl sorter asks whether you have paid for this basket before she lets you through the working yard; the boy rolls his eyes but carries the basket back into the shade.
+
+A watchman on the wall calls down the names of the boats coming in. The clerk checks the next bundle, while the boy makes fresh marks for the shells. His mother hands him a dry board to write on this time.
 
 ## ev.ormus.a.choice.pearl_diver
 
-Talk to the pearl-divers on the quay
+Ask the pearl sorter about Calatu
 
 ## ev.ormus.a.choice.toll
 
-Pay the harbor toll and pass through properly
+Pay 3 silver to register the pearl basket
 
 ## ev.ormus.a.choice.watch_ships
 
-Stand on the fort wall and count the ships
+Spend a day watching the boats from the wall
 
 ## ev.ormus.a.title
 
-The Harbor Fort
+The Customs Scale and Pearl Basket
 
 ## ev.ormus.b.body
 
-Pepper, cinnamon, ginger, nutmeg, cloves, and cardamom from every island of the Indies
-arrive at Hormos on Arab dhows and Chinese junks. The warehouses along the quay are
-stacked with sacks marked in seven scripts. The heat in the port is unbearable — men
-work at dawn and sleep through the midday, when the temperature inside the warehouses
-rises to the point where a candle left standing will melt. Yet the profits are worth a
-hundred fevers to a merchant who times the monsoon correctly. A cargo of pepper bought
-in Hormos for ten thousand bezants sells for sixty thousand in Venice. The merchant
-princes of the city live in houses with wind-towers that funnel the sea breeze into cool
-underground chambers, and their wives wear pearls worth a kingdom.
+In a spice warehouse, an Indian trader is trying to read the labels his son tied on the sacks. The boy has written the ship’s name where the buyer’s name should go. ‘Both names matter,’ his father says, and makes room on a clean tag. An older porter brings the sack back from the doorway before it can be loaded onto the wrong caravan.
+
+The trader offers a full pepper lot for 150 silver. At a nearby stall, his wife has a small dish of dried ginger for 3 silver; she warms a piece over the brazier and lets you smell it. You ask how the goods move onward. The porter explains which boats cross toward Calatu and which inland caravans take goods toward Cobinan.
+
+The son copies the two names in the right places. His mother calls from the stall, asking whether the ginger is ready for the traveller. He glances at you, then at his father, waiting to see which tag needs the next knot.
 
 ## ev.ormus.b.choice.ginger
 
-Buy dried ginger from an Indian dhow
+Buy and eat a small ginger portion for 3 silver
 
 ## ev.ormus.b.choice.pepper
 
-Buy pepper at the monsoon price
+Buy the full pepper lot for 150 silver
 
 ## ev.ormus.b.choice.trade_routes
 
-Learn the spice routes from the Indian merchants
+Ask about Calatu and Cobinan trade routes
 
 ## ev.ormus.b.title
 
-The Spice Market
+The Spice Warehouse Tags
 
 ## ev.ormus.c.body
 
-When the summer wind blows from the northern desert across the plain of Hormos, it is so
-hot that men caught in the open drop dead where they stand. The people call it the Wind
-of Death. They have learned to build their houses with tall towers that catch the
-slightest breeze and funnel it down into underground chambers, where the temperature is
-bearable. During the worst days, the entire population sits in the irrigation channels
-up to their chins — men, women, animals, all together, waiting for the wind to pass. The
-dead are buried at night. A merchant who plans his arrival for the summer months will
-find the city half-deserted, the warehouses shuttered, and the harbor empty of ships.
+A hot wind reaches the port lane while a dates seller is tying down his awning. His sister is bringing water jars inside; her little son insists he can carry one alone. She gives him the smallest and asks you to help with the heavy pair. The seller looks up at the dust rising beyond the roofs and calls to a guide who knows when the gusts usually ease.
+
+‘Will it pass before supper?’ the boy asks. The guide says he will watch the sky for a while before promising anything. You ask where the family keeps cool when the shutters are closed. The sister shows you a lower room where the jars stand out of the heat. A neighbour is already there, sewing a torn shade cloth.
+
+The guide offers two days of help reading the weather for 1.5 silver. The family can also give you space to wait out several windy days. The seller pulls the last knot tight and asks his sister whether all the jars are safely inside.
 
 ## ev.ormus.c.choice.guide
 
-Pay a guide who knows the wind patterns
+Pay the guide 1.5 silver for two days
 
 ## ev.ormus.c.choice.observe
 
-Watch how the people of Hormos survive the wind
+Watch how the neighbours prepare for the wind
 
 ## ev.ormus.c.choice.wait
 
-Wait out the wind in an underground chamber
+Wait out the wind for three days
 
 ## ev.ormus.c.title
 
-The Wind of Death
+When the Hot Wind Reaches the Lane
 
 ## ev.ormus.entry.body
 
-The Plain of which we have spoken extends in a southerly direction for five days’
-journey, and then you come to another descent some twenty miles in length, where the
-road is very bad and full of peril, for there are many robbers and bad characters about.
-When you have got to the foot of this descent you find another beautiful plain called
-the PLAIN OF FORMOSA. This extends for two days’ journey; and you find in it fine
-streams of water with plenty of date-palms and other fruit-trees. There are also many
-beautiful birds, francolins, popinjays, and other kinds such as we have none of in our
-country. When you have ridden these two days you come to the Ocean Sea, and on the shore
-you find a city with a harbour which is called HORMOS. Merchants come thither from
-India, with ships loaded with spicery and precious stones, pearls, cloths of silk and
-gold, elephants’ teeth, and many other wares, which they sell to the merchants of
-Hormos, and which these in turn carry all over the world to dispose of again. In fact,
-’tis a city of immense trade. There are plenty of towns and villages under it, but it is
-the capital. The King is called RUOMEDAM AHOMET. It is a very sickly place, and the heat
-of the sun is tremendous. If any foreign merchant dies there, the King takes all his
-property. In this country they make a wine of dates mixt with spices, which is very
-good. When any one not used to it first drinks this wine, it causes repeated and violent
-purging, but afterwards he is all the better for it, and gets fat upon it. The people
-never eat meat and wheaten bread except when they are ill, and if they take such food
-when they are in health it makes them ill. Their food when in health consists of dates
-and salt-fish (tunny, to wit) and onions, and this kind of diet they maintain in order
-to preserve their health. Their ships are wretched affairs, and many of them get lost;
-for they have no iron fastenings, and are only stitched together with twine made from
-the husk of the Indian nut.
+At the Hormuz landing, a trader’s daughter is checking the cords on a steel shipment before it goes from a boat to a pack animal. Her father has written the count on a wooden tag, but she finds one bundle with no tag at all. ‘If it goes inland unnamed, someone will count it twice,’ she says. He asks the porter to put it back on dry ground.
+
+A pilot nearby is explaining the tide to a young sailor who wants to leave before his mother arrives with food. ‘She knows this landing better than you,’ the pilot says. The mother appears with a covered bowl and asks whether the boat has water for the crossing. You help the porter keep the steel bundle away from the spray while the trader and his daughter agree on its mark.
+
+The trader offers the full Damascus steel lot for 146 silver. The customs desk will need two days to clear other cargo, and the pilot has time later to talk about the port. His daughter ties the tag firmly, then checks it once more before letting the porter lift the bundle.
 
 ## ev.ormus.entry.choice.customs
 
-Declare your goods at the tamghā-khāna (tax-house)
+Spend two days clearing cargo at the customs desk
 
 ## ev.ormus.entry.choice.lore
 
-Ask what men say of this city
+Spend a day talking with the pilot
 
 ## ev.ormus.entry.choice.market
 
-Walk the great bāzār
+Buy the Damascus steel lot for 146 silver
 
 ## ev.ormus.entry.title
 
-Of the Descent to the City of Hormos
+At the Hormuz Landing
 
 ## ev.ev_ormus_entry.choice_1_result
 
-You declare your goods at the tamghā-khāna of Ormus, and the tax-master checks the pepper against his list twice. As he stamps your page, a pearl-cleaner working the quay lifts her head and calls your name.
+You spend two days helping the customs clerk match marks to bundles. The trader’s daughter shows you which cargo is bound inland, and you mark Hormuz on your map. A pearl sorter comes to ask about the newly cleared shipment.
 
 ## ev.ev_ormus_entry.choice_2_result
 
-The men of Ormus answer your questions between breaths of the sea wind, and their answers smell of the harbour. One of them, a pilot's mate, breaks off mid-sentence and promises to find you before the tide turns.
+You spend a day with the pilot and sailor, writing down how they watch the tide and pack water for a crossing. The sailor’s mother brings a second bowl of food; as you finish your notes, the pilot’s mate arrives with news of the wind.
 
 ## ev.ev_ormus_entry.choice_3_result
 
-You spend a day in the great bāzār of Ormus and carry away a load of goods. The city's trade in spice and pearls is now written in your book.
+You spend the day checking the full Damascus steel lot and pay 146 silver. The trader’s daughter writes you a clean tally and has the porter move the goods inland. You record the trade and what you saw at the landing.
 
 ## ev.ev_ormus_mentor_astrodice.choice_1_result
 
-The pilot takes your fee and shakes the dice in his leather cup. The teaching is all about the timing of departures, and when you leave he makes a last cast for you that he does not explain.
+You pay 70 silver and spend seven days learning how the pilot names and reads the three dice. His niece makes you put them away in the same order every evening; her father asks about the tide before every exercise. When you finish, he promises one last meeting at the landing.
 
 ## ev.ev_ormus_mentor_astrodice.choice_2_result
 
-The pilot shows how the three dice are named for the wandering stars. The art of the star-dice is now in your book, though the throw stays with him.
+The pilot lets you examine the marks on the dice while his niece reads them aloud. He explains how he frames a question, then turns to check the boat’s actual water and wind. You write down the method.
 
 ## ev.ev_ormus_astrodice_tide.choice_1_result
 
-You cast the star-dice on the quay while the tide turns. The throw is read against the water, and the answer stands.
+You cast the three dice beside the pilot. His niece reads the figures, then asks what you will check before sailing. You give your answer and finish the reading together.
 
 ## ev.ev_ormus_astrodice_tide.choice_2_result
 
-You set out with the tide and leave the star-dice unthrown. What the water decides, it decides on its own.
+You ask the captain about the tide instead. He checks the waterline, calls his crew to secure the cargo, and tells you the boat can leave when they finish. You mark this departure in your notes.
 
 ## ev.ev_ormus_a.choice_1_result
 
-You pay the harbor toll and pass through the fortress gate in proper form, and the ledger-keeper marks you down without comment. But he writes something more beside your name, in a line you cannot read.
+You pay 3 silver and the clerk registers the pearl basket separately from the cargo you cleared on arrival. The pearl sorter’s son shows you the dry side of the yard, and his mother introduces you to the people working there. You record what you learned; the clerk asks you back to see the harbour ledger.
 
 ## ev.ev_ormus_a.choice_2_result
 
-The pearl-divers speak of the banks where the shells lie, and of Calatu across the water where the boats put in. The name is now on your map.
+The pearl sorter tells you which boats cross toward Calatu and who can name the divers’ working grounds. You mark Calatu on your map and note the route she described.
 
 ## ev.ev_ormus_a.choice_3_result
 
-You spend a day on the fort wall counting the ships below — dhows, galleys, and coasters under every flag of the sea. The harbour of Ormus is now marked in your book.
+You spend the day with the watchman, learning which boats enter at different tides. Below, the boy finally finishes counting the shells. You write down what the harbour workers taught you and keep a reminder of the wall.
 
 ## ev.ev_ormus_b.choice_1_result
 
-You buy pepper at the monsoon price, and the merchant weighs it with his own scales and lets the weight stand. When the sack is tied, he motions you to the back of the warehouse, where the better cargo waits.
+You pay 150 silver for the full pepper lot. The trader and porter check the ship and buyer names on its tag, then carry it into your share of the warehouse. The trader invites you to see the deeper storage rooms later.
 
 ## ev.ev_ormus_b.choice_2_result
 
-You buy dried ginger from an Indian dhow and stow it in your cargo. The spice of India now rides with you.
+You pay 3 silver for the small ginger portion and eat it while it is warm. The trader’s wife pours you water, and the boy brings her the corrected tags. You feel ready to continue and remember the busy spice stall.
 
 ## ev.ev_ormus_b.choice_3_result
 
-The Indian merchants draw the spice routes from the sea: pepper by the strait to Calatu, cloves and mace from Cobinan by the eastern road. Both names are now on your map.
+The porter names the boats toward Calatu and the caravan yards used for Cobinan. You mark both places on your map and write down how pepper changes hands at the warehouse.
 
 ## ev.ev_ormus_c.choice_1_result
 
-You pay the guide who knows the wind patterns, and he does not count the coins twice. He has watched the sky all morning, and what he has seen makes him speak to you more urgently than the fee requires.
+You pay 1.5 silver and spend two days with the guide. He has you compare the sky with the water at the landing and asks the dates seller’s sister what she sees before opening the shutters. You record the signs and agree to meet him again.
 
 ## ev.ev_ormus_c.choice_2_result
 
-You wait three days in an underground chamber while the wind tears at the rooftops. The city endures it, and so do you; a small favour settles on your undertaking.
+You wait three days with the family. The boy carries the small jar to the lower room each morning; when the wind settles, his mother lets him take it back up. You are better prepared for the next stretch of travel.
 
 ## ev.ev_ormus_c.choice_3_result
 
-You watch how the people of Ormus endure the wind — low roofs, sealed chambers, and silence at the hour it blows. Their way of the wind is now in your book.
+You watch the neighbours tie cloth, close shutters, and move water out of the heat. The seller shows you where the first gust slipped under his awning; you record their habits and remember the day the port lane went quiet.
 
 ## ev.ev_ormus_consequence_a.title
 
-Ormus: The Mark at the Gate
+The Pearl Sorter’s Boat Name
 
 ## ev.ev_ormus_consequence_a.body
 
-The first answer does not end at the gate. A pearl-cleaner who works the harbour quay draws you aside and asks what you intend to carry away from Ormus. Beyond the question lies the strait and the pearl boats; she offers to set a name to your name, the name of a pilot who reads the tide. Choose what you will make of the sign.
+The pearl sorter finds you after the customs work is done. Her son is carrying a basket of counted shells and keeps asking whether the pilot has a space on his next crossing. She says the diver who owns the basket is her cousin; the family needs the shells moved before the next market opens. ‘I know a pilot who may take them,’ she tells you, ‘but I cannot promise his boat is free.’
+
+You ask why she has come to you. She says the clerk saw you help match the cargo marks, and she wants someone who will copy the boat name correctly when the pilot answers. Her son puts down the basket and reads the name from a damp scrap. The first letter has run. His mother asks him to tell it from memory; he can, but insists the pilot may spell it differently.
+
+She writes down two pilots who know that boat and hands you the paper. The son waits to see whether you will take it. His mother reminds him to keep the shells in the shade until they have a confirmed place.
 
 ## ev.ev_ormus_consequence_a.choice_1
 
-Take the name and ask the pearl-cleaner who can vouch for it
+Take the pilots’ names and ask about the boat
 
 ## ev.ev_ormus_consequence_a.choice_1_result
 
-You take the name the pearl-cleaner offers and ask who can vouch for it. She names two pilots of the harbour, and the matter opens again.
+You take the paper and ask at the pilots’ bench. One man recognises the boat name but wants to inspect the shell basket before agreeing. The sorter’s son returns to fetch it, and you follow him toward the shade.
 
 ## ev.ev_ormus_consequence_a.choice_2
 
-Thank the pearl-cleaner and keep your own counsel
+Thank her and let the family ask the pilot
 
 ## ev.ev_ormus_consequence_a.choice_2_result
 
-You thank the pearl-cleaner and keep your own counsel. The matter closes at the quay, and nothing more is asked of you in Ormus.
+You thank her and return the paper. She folds it into her son’s hand and says they will speak to the pilot together. He takes the basket carefully, already practising the boat name aloud.
 
 ## ev.ev_ormus_consequence_a_resolution.title
 
-Ormus: The Pilot's Passage
+A Place for the Shell Basket
 
 ## ev.ev_ormus_consequence_a_resolution.body
 
-You have agreed to carry the pilot's passage with you — the name of a man who reads the tide. It will not decide the whole journey, but at the next harbour his name may find you a berth.
+The pilot inspects the shell basket and asks the boy to show its mark. The boy reads the boat name from memory, then points to the clean label his mother wrote. ‘Good,’ the pilot says. ‘Now tell me who will receive it on the other side.’ The sorter names her cousin’s brother and the stall where he works.
+
+A porter calls that the boat already has two water jars near the stern. The pilot checks the space between them and says the basket can travel there if it is tied down. You ask whether he will put the arrangement in writing. He nods and asks for the customs clerk’s copy so the recipient will know which cargo arrived. The boy runs to fetch it.
+
+His mother keeps hold of the basket until the paper comes back. If you have time, she would also like you to spend a day learning how her family sorts and records the shells; the pilot is ready to confirm the boat now.
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1
 
-Take the passage before nightfall
+Confirm the basket’s place on the boat
 
 ## ev.ev_ormus_consequence_a_resolution.choice_1_result
 
-You take the passage before nightfall. The pilot's word now travels with your name, and the harbour folk have a reason to receive you.
+You and the pilot check the label and receipt together. The basket is tied between the water jars; the boy tells his mother he will remember where it went. You keep a copy of the arrangement.
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2
 
-Keep the passage in your travel book
+Stay a day to learn how the family sorts shells
 
 ## ev.ev_ormus_consequence_a_resolution.choice_2_result
 
-You keep the passage in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
+You spend the day at their shaded table. The boy teaches you the marks he uses for each basket, and his mother makes him check the last count before supper. By then the boat and recipient are both written down.
 
 ## ev.ev_ormus_consequence_b.title
 
-Ormus: The Road Behind the Answer
+The Pilot’s Mate and the Reef
 
 ## ev.ev_ormus_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, a pilot's mate finds you on the quay with a second account of the strait and the pearl boats — when the wind turns, and where the reef lies hidden. It is less grand than a traveller's tale, and more useful.
+The pilot’s mate comes to the landing with a damp piece of sailcloth. He and his sister have been marking a reef on it, but each drew the shape from a different tide. ‘If we leave both lines, the new crew will think there are two reefs,’ she says. He says the outer line was what he saw at low water.
+
+You ask which mark a boat should follow now. The sister calls over an older helmsman who passed the channel this morning. He points to the deeper side and tells the mate where the current pushed him. The mate redraws the line while she holds the cloth flat. He asks whether you can copy it onto dry paper; the sailcloth is already fading at the edges.
+
+The young sailor from the landing brings his mother’s empty bowl back. His mother asks whether their own boat will pass that reef today. The mate checks the wind before answering, then holds out the new drawing for you to inspect.
 
 ## ev.ev_ormus_consequence_b.choice_1
 
-Follow the mate's practical advice
+Help copy the reef and tide marks
 
 ## ev.ev_ormus_consequence_b.choice_1_result
 
-You follow the mate's practical advice and ask him to set it down. He writes the account out for you, and the sea's true measures come into your hand.
+You copy the deeper channel and the tide at which the reef shows. The sister checks your page against the helmsman’s account, and the mate asks you to keep it until they make another copy.
 
 ## ev.ev_ormus_consequence_b.choice_2
 
-Leave the account with the mate
+Thank them and ask again nearer departure
 
 ## ev.ev_ormus_consequence_b.choice_2_result
 
-You leave the account with the mate and keep your own counsel. It goes back to the quay, and Ormus asks nothing more of you.
+You thank them and leave the cloth on the pilots’ bench. The mate says to return when your captain fixes a departure time; his sister folds the paper away from the damp sailcloth.
 
 ## ev.ev_ormus_consequence_b_resolution.title
 
-Ormus: The Wind Account
+The Dry Copy of the Channel
 
 ## ev.ev_ormus_consequence_b_resolution.body
 
-You have chosen to carry the mate's account with you — when the wind turns, and where the reef lies hidden. It will not decide the whole journey, but at sea it is worth a week of any chart.
+The mate’s sister has made two clean copies of the channel drawing. She puts one on the pilots’ bench and asks the young sailor to carry the other to his captain. He stops at the reef mark. ‘Is this the place we passed yesterday?’ she asks. He says yes but cannot remember the tide.
+
+The older helmsman arrives and names the hour from his log. You add it beside the line. The mate asks whether anyone has checked the reef since the wind changed; the helmsman says a small fishing boat came through at dawn and can be asked. The sailor’s mother arrives to collect her bowl and reminds him to eat before he runs off with the chart.
+
+The mate can let you carry the warning to crews waiting at the harbour. His sister is staying a day to compare the paper with the next boat’s report and offers you a place at the bench if you want to help. She sets the two copies beneath a bowl so the wind will not lift them.
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1
 
-Pass the wind's warning before nightfall
+Carry the channel warning to the waiting crews
 
 ## ev.ev_ormus_consequence_b_resolution.choice_1_result
 
-You pass the wind's warning before nightfall. The sea's measures now travel ahead of you, and where they land, your name follows.
+You take the dated drawing to the waiting crews. A captain compares it with his own marks and thanks you for naming the tide; the young sailor finally sits down to eat. You keep a copy for the next crossing.
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2
 
-Keep the wind-notes in your travel book
+Stay a day and compare the next boat’s report
 
 ## ev.ev_ormus_consequence_b_resolution.choice_2_result
 
-You spend a day copying the wind-notes into your travel book. The record is yours now, though it cost you a day of the road.
+You stay a day at the pilots’ bench. The small fishing boat’s crew confirms where the reef appeared at dawn, and the mate’s sister corrects one line on both copies before they are sent out.
 
 ## ev.ev_ormus_a_followup.title
 
-Ormus: The Harbor Ledger
+The Clerk’s Dry Ledger
 
 ## ev.ev_ormus_a_followup.body
 
-The customs officer who weighed your bales on the brass scale calls you back from the quay. He has seen you count the ships from the fort wall, and the pearl divers have told him how you listened at the water's edge. He does not ask you to pay again; he only asks what you intend to carry away from the strait. The harbor keeps its own account, he says — every vessel that enters is weighed and remembered, and a man who leaves his name honestly is never turned from the gate twice.
+The customs clerk has moved his ledger away from the spray. The pearl sorter’s son is helping him copy the shell count onto a dry page, sounding out every number before he writes. His mother checks the baskets below the watch wall and calls back when he skips a line. The clerk slides the book toward you so you can see how cargo marks and boat names fit together.
+
+‘Do you put every traveller in here?’ you ask. ‘Only when I can read the name tomorrow,’ he says. The boy laughs because his own first attempt is still blotched. The pearl sorter comes up the steps and asks whether the clerk has entered the boat bound across toward Calatu. She knows its pilot and the working water beyond the harbour.
+
+The watchman calls a new ship from the wall. The clerk gives his pen to the boy, who has to finish the shell line without losing his place. You can ask to be entered in the harbour book, hear the pearl sorter describe Calatu, or spend the day watching the arriving boats with the watchman.
 
 ## ev.ev_ormus_a_followup.choice_1
 
-Let the officer write your name in the harbor ledger
+Ask to enter your name in the harbour ledger
 
 ## ev.ev_ormus_a_followup.choice_1_result
 
-The officer dips his quill and sets your name beside the day's toll. The clerks of the quay will speak for you now, and the fort keeps your mark among its own.
+The clerk writes your name beside the cargo mark and asks the boy to read it back. The pearl sorter recognises you from the working yard; people at the harbour know whom to ask about your goods. You keep a reminder of this place.
 
 ## ev.ev_ormus_a_followup.choice_2
 
-Ask the divers to draw the crossing to Calatu
+Ask the pearl sorter where Calatu lies
 
 ## ev.ev_ormus_a_followup.choice_2_result
 
-The divers draw the crossing on a scrap of sailcloth — the banks where the oysters lie, the turn of the tide, the port of Calatu beyond. The sea road is now on your map, and you know why the divers call the strait their field.
+She points across the water and names Calatu, then tells you which pilot has recently made the crossing. You mark the port on your map and record the pearl workers’ account.
 
 ## ev.ev_ormus_a_followup.choice_3
 
-Spend the day on the fort wall learning the harbor
+Spend a day with the harbour watchman
 
 ## ev.ev_ormus_a_followup.choice_3_result
 
-You spend the day on the fort wall, learning to read the harbor — which sails come in with the spice, which with the toll, which run before the wind. The waiting costs a day, but no vessel on the strait will take you by surprise again.
+You stay the day with the watchman, matching each arriving boat to its entry in the dry ledger. Below, the boy learns to write the counts without the clerk’s help. You record what the port taught you.
 
 ## ev.ev_ormus_b_followup.title
 
-Ormus: The Merchant's Warehouse
+The Second Pepper Sacks
 
 ## ev.ev_ormus_b_followup.body
 
-The merchant who sold you pepper at the monsoon price sends a porter to fetch you to his warehouse, where the sacks stand stacked in seven scripts. He has seen you buy his ginger and study the routes, and he spreads his own ledger before you. The warehouses of Hormos, he says, are the stomach of the sea: everything that enters the strait passes through them, and a man who knows their order knows the price of the world.
+The spice trader’s son has redone the labels in the inner warehouse. His father asks him to read the buyer’s name on a new pepper sack; he gets it right, then notices the ship name is missing. The porter returns with the boat record and waits while they add it. ‘Now I know where this sack came from and where it goes,’ the boy says.
+
+The trader’s wife checks a second group of sacks. This full pepper lot is available for 108 silver, and she wants every seam checked before the new buyer takes it. You ask why the price differs from the first lot. She shows you a page with the cost of storing it and the time at which this ship arrived. The figures, not a promise about tomorrow’s price, explain her offer.
+
+The porter also knows an inland caravan road toward Cobinan. The boy has been learning to keep the labels facing out so each sack can be checked; he offers you a place at the table if you want to spend a day watching the warehouse work.
 
 ## ev.ev_ormus_b_followup.choice_1
 
-Buy a sack of pepper while the dhow still lies at anchor
+Buy the full pepper lot for 108 silver
 
 ## ev.ev_ormus_b_followup.choice_1_result
 
-You buy the pepper at the monsoon price before the next ship raises it. The sack is honest and the price fair, and the first spice of the Indies is now yours to carry.
+You pay 108 silver for the full pepper lot. The trader’s wife checks the seams one last time and the boy reads the new label aloud. You keep the cargo and a reminder of the spice warehouse.
 
 ## ev.ev_ormus_b_followup.choice_2
 
-Ask the merchant to draw the inland road to Cobinan
+Ask the porter to show the Cobinan caravan road
 
 ## ev.ev_ormus_b_followup.choice_2_result
 
-The merchant draws the road by which the spice climbs inland to Cobinan, marking the toll-houses and the watering places. The route is now open on your map, and you know how the sea's cargo reaches the desert.
+The porter walks you to the yard where caravans set out toward Cobinan and names the water stops he uses. You can now take that inland route; you record his directions with the warehouse notes.
 
 ## ev.ev_ormus_b_followup.choice_3
 
-Stay a day and learn how the warehouse keeps its store
+Stay a day and learn their warehouse routine
 
 ## ev.ev_ormus_b_followup.choice_3_result
 
-You spend a day among the sacks, learning how the heat is turned aside and the spice kept whole. It costs you time, but the ledger's order stays with you when you go.
+You spend the day checking labels, seams, and storage spaces with the family. By evening the boy has written every ship name in the right place, and his mother lets him close the ledger. You keep a reminder of the visit.
 
 ## ev.ev_ormus_c_followup.title
 
-Ormus: The Wind of Death
+The Guide’s Weather Notes
 
 ## ev.ev_ormus_c_followup.body
 
-The guide who knows the wind meets you again at the door of the underground chamber, where the people sat in the channels with the water at their chins. He has watched the summer wind from the north desert burn the plain, and he does not pretend it can be mastered. He only offers what he knows: the signs by which the wind is read, the road by which it may be outridden, or a day of patience spent waiting it out as the city waits.
+After two days with the guide, you find him comparing yesterday’s sky with a fresh line of clouds. The dates seller’s sister brings a jar of water up from the cooler room and asks whether she can open her shutters now. He does not answer immediately; he looks at the cloth on the roof and asks her whether its loose end still moves.
+
+‘A little,’ she says. Her son wants to run outside, but she gives him the job of holding the jar while she checks the lane. You ask what the guide watches first on a day like this. He shows you where the dust hangs low, then points inland toward the road to Kerman. The seller has heard that caravans are moving there and asks when they plan to leave.
+
+The guide sets his notes between you and the family. He can show you the signs he uses, walk you to the inland caravan yard, or let you spend another day in the cool room until the wind truly eases.
 
 ## ev.ev_ormus_c_followup.choice_1
 
-Learn the sign that foretells the deadly wind
+Learn the guide’s signs of hot wind
 
 ## ev.ev_ormus_c_followup.choice_1_result
 
-The guide shows you the whitened sky, the still air, the birds gone to ground — the signs that the Wind of Death is gathering. The reading is now in your travel book, and you will not be caught in the open.
+The guide shows you the dust line and the way the roof cloth moves before a stronger gust. The seller’s son repeats the signs back to him; you record the lesson and remember this windy day.
 
 ## ev.ev_ormus_c_followup.choice_2
 
-Ask which road leads inland where the wind loses its edge
+Ask for the inland road toward Kerman
 
 ## ev.ev_ormus_c_followup.choice_2_result
 
-The guide points to the road that climbs inland toward Kerman, where the mountains break the desert wind. The route is now open on your map, and you know where the heat ends.
+The guide takes you to the caravan yard and points out the road toward Kerman, including where travellers can refill water. You can use that inland route now and record his directions.
 
 ## ev.ev_ormus_c_followup.choice_3
 
-Wait out the wind in the underground chamber
+Stay another day until the wind eases
 
 ## ev.ev_ormus_c_followup.choice_3_result
 
-You wait a day in the chamber with the city, water to the chin, while the wind scorches the plain above. The waiting costs time, but you have endured the Wind of Death as the people of Hormos do.
+You spend another day with the family in the cool lower room. The boy brings the small water jar down himself; when the wind settles, he carries it up again. You are better prepared for the next leg.
 
 ## ev.ev_ormus_mentor_followup.title
 
-Ormus: The Pilot's Parting Cast
+The Pilot’s Three Dice
 
 ## ev.ev_ormus_mentor_followup.body
 
-The pilot who taught you the star-dice does not let you leave the harbor with only his lessons. He shakes the leather cup once more and lays the three dice on the mat between you. The dice, he says, are for the timing of a voyage — not for luck, though the sailors still call a bright throw good fortune. He asks what you intend to carry out of the strait, and offers to cast for your road, or to name the sea route the dice favor, or to teach you how the three dice are weighed together.
+At the landing, the pilot is packing the three dice into a leather cup. His niece has been making copies of the tide notes from your seven days of lessons. She asks why the page for the third day has no wind mark. The pilot remembers that the boat stayed tied up then because a rope had frayed; he has her write that beside the empty space.
+
+You ask whether the dice told him to wait. ‘The rope did,’ he says, showing the old fibres. His niece asks him to cast once more for your journey, and he agrees after the crew’s water jars are counted. A sailor from across the strait has arrived with news of Calatu and is willing to describe the passage.
+
+The pilot leaves the cup on the table while he checks the jars. His niece offers you a seat by the tide notes; she would like a full day to compare the three dice with the observations she copied.
 
 ## ev.ev_ormus_mentor_followup.choice_1
 
-Take the pilot's parting cast for your road
+Accept one last reading with the pilot
 
 ## ev.ev_ormus_mentor_followup.choice_1_result
 
-The pilot casts the three dice and reads the hour for your departure. He presses the reading into your hand as his parting gift, and the harbor's counsel goes with you.
+The pilot casts the dice after the jars are counted. His niece copies the figures and the question you asked, then gives you the page as a parting gift. You record what he taught you at Hormuz.
 
 ## ev.ev_ormus_mentor_followup.choice_2
 
-Ask the dice to name the sea road to Calatu
+Ask the sailor how to sail toward Calatu
 
 ## ev.ev_ormus_mentor_followup.choice_2_result
 
-The dice name the sea road the pilot already knew, and he draws it for you — the run across the strait to Calatu and the harbors beyond. The route is now open on your map, and the stars have spoken for it.
+The sailor walks you along the quay, names the crossing toward Calatu, and shows which pilot is taking a boat that way. You can use that sea route now; you record his directions with the tide notes.
 
 ## ev.ev_ormus_mentor_followup.choice_3
 
-Stay a day to learn how the three dice are weighed
+Stay a day and compare the dice with tide notes
 
 ## ev.ev_ormus_mentor_followup.choice_3_result
 
-You spend a day at the pilot's mat, learning how the planet, the sign, and the house dice are weighed against each other. It costs you time, but the reading of the dice is now partly your own.
+You spend the day with the niece, matching each question to what the crew actually observed. The pilot returns with a corrected water count, and she adds it to the page. You leave more confident in planning the next passage.
+
+## ev.ormus.netweight.title
+
+A Weight for the Fishing Net
+
+## ev.ormus.netweight.body
+
+At a fishing boat, a woman is repairing a net while her brother searches a basket for one missing weight. Their father made the weights from small pieces of fired clay; the last one broke when the net caught on a stone. The brother says they can sail with a gap. She shakes the net and shows him how one corner lifts without the weight.
+
+You ask whether the boat must leave today. ‘When the tide is right,’ she says, ‘after this corner stays down.’ A boy from the neighbouring boat offers a spare weight, but it is too heavy. The brother chooses a smaller clay weight from the basket and asks you to hold the mesh while he ties it on. The woman tests the net in shallow water and calls him back to shorten the cord.
+
+She can pay you 0.5 silver if you stay and help them finish the net, or show you how she sets the weights if you have little time. Her brother passes you the loose corner and waits for your hand.
+
+## ev.ormus.netweight.choice.finish
+
+Stay a day and finish the net
+
+## ev.ormus.netweight.result.finish
+
+You spend the day helping fit the weights. In shallow water the net settles evenly, and the siblings take it aboard before the tide changes. The woman pays you 0.5 silver; their father will find his work in use again.
+
+## ev.ormus.netweight.choice.learn
+
+Ask how the weights are set
+
+## ev.ormus.netweight.result.learn
+
+She shows you why the corner rose and how she spaces each weight. You write it down while her brother adjusts the last cord; the boy from the next boat retrieves his heavy spare.

@@ -39,3 +39,27 @@ You ride on without delay. The road to Coigangiu opens on your map.
 ## ev.ev_coigangiu_entry.choice_2_result
 
 You rest half a day by the road. You spend 1 day before the way is clear again. You set the way to Coigangiu on your map.
+
+## ev.ev_gap_coigangiu.title
+
+Fish Baskets at the Bow
+
+## ev.ev_gap_coigangiu.body
+
+By the Huai River, a boatman moves his fish baskets into the shade. Sun spoils fish quickly; dry grass under the catch absorbs water and keeps scales from sticking. He changes the grass as soon as it grows damp. For a northbound crossing, he advises reaching the ferry early: the afternoon wind blows against the boat.
+
+## ev.ev_gap_coigangiu.choice.route
+
+Ask the way to Paukin
+
+## ev.ev_gap_coigangiu.choice.route_result
+
+“Go southeast on the broad road along the river to Paukin.”
+
+## ev.ev_gap_coigangiu.choice.scene
+
+Ask how to line the fish baskets
+
+## ev.ev_gap_coigangiu.choice.scene_result
+
+“Lay dry grass at the bottom, then put the fish above it. Leave room at the top, and do not seal the basket: heat needs a way out.”

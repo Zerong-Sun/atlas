@@ -40,6 +40,7 @@ var pending_events: Array[String] = [] ## durable consequence chain, FIFO
 var active_event: String = ""          ## queued event currently shown; survives saving mid-dialog
 var active_journey: Dictionary = {}    ## resumable journey checkpoint; empty while in a city
 var recovery: Dictionary = {}          ## non-fatal load/content recovery facts for bug reports
+var city_life: Dictionary = {"work_history": [], "debt": {}, "ending": {}}
 var life: Dictionary = {                  ## vitality, warning stage, conditions and death
 	"vitality": 100,
 	"stage": "stable",
@@ -64,6 +65,7 @@ var legacy: Dictionary = {             ## lineage volumes inherited across finis
 ## its author only heard about.
 var start_city: String = ""           ## set on the first departure, never after
 var visited: Array[String] = []       ## every city stood in, in arrival order
+var journey_legs: Array = []          ## {from, to, jdn}, includes return visits
 var longest_leg: Dictionary = {}      ## {route, km, days} — the hardest single road
 var best_trade: Dictionary = {}       ## {good, profit} — the most profitable sale
 
@@ -109,10 +111,12 @@ func duplicate_state() -> WorldState:
 	s.active_event = active_event
 	s.active_journey = active_journey.duplicate(true)
 	s.recovery = recovery.duplicate(true)
+	s.city_life = city_life.duplicate(true)
 	s.life = life.duplicate(true)
 	s.legacy = legacy.duplicate(true)
 	s.start_city = start_city
 	s.visited = visited.duplicate()
+	s.journey_legs = journey_legs.duplicate(true)
 	s.longest_leg = longest_leg.duplicate(true)
 	s.best_trade = best_trade.duplicate(true)
 	s.purchases = purchases.duplicate(true)

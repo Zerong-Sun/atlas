@@ -232,7 +232,7 @@ You know of this city, but no reliable road to it has been learned.
 
 ## ui.city.tap_hint
 
-Tap a spot to look closer · %d spots
+%d places to explore
 
 ## ui.codex.name_only
 
@@ -253,6 +253,10 @@ Indian Ocean
 ## ui.culture.latin
 
 Latin
+
+## ui.culture.orthodox
+
+Eastern Orthodox
 
 ## ui.culture.steppe
 
@@ -749,3 +753,363 @@ Of this city you know only a name and a direction.
 ## ui.travel.title
 
 Travel to %s
+
+## ui.reading.complete
+
+Full text shown
+
+## ui.reading.progress
+
+Reading %d%% · Scroll or drag the bar to read more
+
+## ui.nav.library
+
+Books & Codex
+
+## ui.tab.buy
+
+Buy goods
+
+## ui.tab.sell
+
+Sell / Manage cargo
+
+## npc.npc-zayton-guide.name
+
+Guide of Zayton
+
+## npc.npc-zayton-interpreter.name
+
+Interpreter of Zayton
+
+## npc.npc-zayton-porter.name
+
+Porter of Zayton
+
+## npc.npc-zayton-sailor.name
+
+Sailor of Zayton
+
+## ui.city.you_are_here
+
+You are here
+
+## ui.map.nearby
+
+Current city
+
+## ui.map.legend
+
+Red arrows: travelled · Dashes: known routes
+
+## ui.route.unvisited
+
+New city: %s
+
+## ui.reading.once
+
+Scroll or drag the right-hand scrollbar to continue reading.
+
+## ui.route.new_badge
+
+NEW
+
+## ui.stay.entry
+
+Stay & earn
+
+## ui.stay.title
+
+Life in %s
+
+## ui.stay.facts
+
+Purse: %s silver · Age %d
+
+## ui.stay.tab.work
+
+Find work
+
+## ui.stay.tab.credit
+
+Borrow & repay
+
+## ui.stay.tab.ending
+
+Close this journey
+
+## ui.stay.work_intro
+
+Employers provide food and lodging, with no advance payment. Companions find their own work while you stay, so travel wages are paused. Use your trade, or take ordinary local work.
+
+## ui.stay.monthly
+
+%s silver / month
+
+## ui.stay.months
+
+%d months
+
+## ui.stay.years
+
+%d years
+
+## ui.stay.quote
+
+Stay %s (%d days) · Take home %s silver · Local reputation +%d
+
+## ui.stay.until
+
+Work until %s; the calendar and your age advance.
+
+## ui.stay.accept
+
+Accept this work
+
+## ui.stay.history
+
+Time spent here
+
+## ui.stay.work_result
+
+You worked here as %s for %d months and saved %s silver.
+
+## ui.stay.credit_intro
+
+Ask a local trader for travel money. Carry the note with you; traders in any city can settle it.
+
+## ui.stay.loan_terms
+
+Receive %s silver; repay %s within one year, including the fixed fee. A single %s late fee applies after that, with no compounding. No city will extend another loan until this one is repaid.
+
+## ui.stay.borrow
+
+Borrow 100 silver
+
+## ui.stay.debt
+
+Amount due: %s silver · Due date: %s
+
+## ui.stay.outstanding
+
+OUTSTANDING
+
+## ui.stay.overdue
+
+OVERDUE
+
+## ui.stay.repay_anywhere
+
+Repay in full in any city. An overdue note carries only one extra fee, regardless of how long it remains unpaid.
+
+## ui.stay.repay_short
+
+You cannot cover this yet. Find work to save enough.
+
+## ui.stay.repay
+
+Repay %s silver
+
+## ui.stay.borrowed
+
+You receive 100 silver and keep the note.
+
+## ui.stay.repaid
+
+The debt is settled.
+
+## ui.stay.end_intro
+
+You do not have to finish every road. Settle here, or accept that this expedition has failed. Either choice closes this run. Return to the city if you still wish to travel.
+
+## ui.stay.end.settled
+
+Settle in this city
+
+## ui.stay.end.failed
+
+Accept failure and end this run
+
+## ui.stay.end.confirm
+
+You chose “%s”. Confirming stops play in this run and saves its ending. Any outstanding debt remains in the record.
+
+## ui.stay.end.commit
+
+Confirm this ending
+
+## ui.stay.epilogue.settled
+
+In %s, you put away your travelling pack. Neighbours learn your name. Laundry, market calls and evening meals become the shape of your days. The map remains unfinished; your life goes on.
+
+## ui.stay.epilogue.failed
+
+In %s, you close the travel journal. This expedition did not reach the place you hoped for. You record the remaining money and debts alongside the roads you walked. This journey ends here.
+
+## ui.stay.summary
+
+This run: %d days · %d cities visited · Remaining: %s silver · Debt: %s silver
+
+## ui.stay.new_journey
+
+Begin a new journey
+
+## ui.stay.pending
+
+Resolve the current encounter before arranging a stay.
+
+## ui.stay.ended
+
+This journey has ended.
+
+## ui.stay.invalid
+
+This job or duration is unavailable.
+
+## ui.stay.rejected
+
+Circumstances changed. No money or time was spent. Please choose again.
+
+## ui.stay.job.laundry
+
+Laundry work
+
+## ui.stay.job.laundry.body
+
+Draw water, wash and hang clothes with the neighbours. First you learn the patches; in time, you learn the people who come to collect them.
+
+## ui.stay.job.inn
+
+Inn work
+
+## ui.stay.job.inn.body
+
+Chop wood, sweep the yard and prepare beds for late arrivals. Listen to travellers speak of new roads while making a home here for a while.
+
+## ui.stay.job.ledger
+
+Shop bookkeeping
+
+## ui.stay.job.ledger.body
+
+Use your trading background to count stock and reconcile accounts. A familiar trade earns your keep far from home.
+
+## ui.stay.job.horses
+
+Stable work
+
+## ui.stay.job.horses.body
+
+Feed and water the horses and tend their tack. Your steppe background makes you useful to caravans preparing to leave.
+
+## ui.stay.job.maps
+
+Map copying
+
+## ui.stay.job.maps.body
+
+Arrange route notes and copy maps for traders. They tell you the place names; you set them carefully on paper.
+
+## ui.stay.job.teaching
+
+Teaching letters
+
+## ui.stay.job.teaching.body
+
+Draw on your studies to teach reading and explain letters. After lessons, there is time to learn the city yourself.
+
+## ui.stay.job.interpreting
+
+Interpreting
+
+## ui.stay.job.interpreting.body
+
+Use your languages to help traders discuss prices, lodging and departures. Once both sides understand, you receive the agreed fee.
+
+## ui.stay.job.healing
+
+Clinic work
+
+## ui.stay.job.healing.body
+
+Sort medicines and assist at a local clinic. Your medical training earns wages as you come to know the neighbourhood.
+
+## ui.stay.job.copying
+
+Scribal work
+
+## ui.stay.job.copying.body
+
+Copy manuscripts and write letters at a bookshop. Grind ink, spread paper and check the words, season after season.
+
+## ui.stay.one_month
+
+1 month
+
+## ui.stay.one_year
+
+1 year
+
+## ui.route.need_fare
+
+Insufficient funds: need %s silver
+
+## ui.route_button_fmt
+
+%s · %s · %dd · %s silver
+
+## ui.route.tooltip
+
+%s: %d days · %s silver fare
+
+## ui.travel.facts
+
+%s · %d days · %s silver · risk %d/5
+
+## ui.guide.goal_reach
+
+Far road: reach %s.
+
+## ui.guide.goal_network
+
+Far road: find companions in %s.
+
+## ui.guide.goal_arrived
+
+You reached %s. The road remains yours to choose.
+
+## ui.guide.explore
+
+Begin here: %s.
+
+## ui.guide.depart
+
+Next, set out for %s.
+
+## ui.guide.prepare
+
+Check the conditions for reaching %s, then prepare in town.
+
+## ui.guide.explore_more
+
+Seek another story here, or choose a road onward.
+
+## ui.guide.line
+
+%s  ·  Next step: %s
+
+## ui.guide.next_only
+
+Next step: %s
+
+## ui.choice.cost_coins
+
+%s silver
+
+## ui.choice.cost_days
+
+%d days
+
+## ui.choice.cost_hint
+
+Cost: %s

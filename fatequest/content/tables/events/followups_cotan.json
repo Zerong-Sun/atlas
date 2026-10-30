@@ -17,12 +17,22 @@
         {
           "label": "ev.ev_cotan_a_followup.choice_1",
           "resultText": "ev.ev_cotan_a_followup.choice_1_result",
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          },
           "effects": [
+            {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-a-full-jade-parcel"
+            },
             {
               "op": "goods",
               "id": "jade",
               "value": 1,
-              "reason": "took-a-stone-the-diver-offered"
+              "reason": "bought-the-divers-jade-parcel"
             },
             {
               "op": "sticker",
@@ -73,7 +83,7 @@
       ],
       "lore": {
         "placeId": "a-province-called-cotan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c036"
@@ -143,7 +153,7 @@
       ],
       "lore": {
         "placeId": "a-province-called-cotan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c036"
@@ -213,7 +223,7 @@
       ],
       "lore": {
         "placeId": "a-province-called-cotan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c036"

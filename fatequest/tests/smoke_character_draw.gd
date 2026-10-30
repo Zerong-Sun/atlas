@@ -66,8 +66,8 @@ func _init() -> void:
 		draw.pressed.emit()
 		await _settle()
 		var expected_names := {
-			"battuta": "丹吉尔式旅人" if language == "zh" else "A Traveller from Tangier",
-			"polo": "威尼斯商旅" if language == "zh" else "A Venetian Merchant",
+			"battuta": I18n.t("arch.battuta.name"),
+			"polo": I18n.t("arch.polo.name"),
 		}
 		var opening_cards := main._draw_card.get_node("CharacterCandidates") as GridContainer
 		for index in main._draw_candidates.size():
@@ -77,7 +77,7 @@ func _init() -> void:
 			var card: Control = opening_cards.get_child(index)
 			var identity := card.find_child("CharacterName", true, false) as Label
 			_check(identity != null and identity.text == expected_names[candidate.id],
-				language + ": authored identity replaces historian-style label")
+				language + ": current authored identity appears on its card")
 			var description := card.find_child("CharacterDescription", true, false) as Label
 			_check(description != null and description.text == I18n.t(candidate.description)
 				and not description.text.begins_with("arch."),

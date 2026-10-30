@@ -7,7 +7,9 @@ voice: yule
 notes: >
   Ibn Battuta (Rihla) city entry and site events: Maldives, Alexandria,
   Acre, Yazd, Bokhara, Delhi, Calicut, Ceylon, Sumatra, Zaitun, Kinsay.
-  Second person, observational, derived strictly from the corpus.
+  Acre's inn scene, Hamid and the dialogue are authored. The account of the
+  Kark Nuh tomb and the attributed orchard and copper stories derive from the Rihla.
+  Other entries remain as previously sourced.
 ---
 
 ## city.maldive.name
@@ -180,236 +182,191 @@ Alexandria speaks well of the promise you keep.
 
 ## ev.accon.battuta_a.title
 
-Copper Turned to Gold
+A Traveller's Pomegranate Story
 
 ## ev.accon.battuta_a.body
 
-From Acre you ride to Tyre, ringed on three sides by the sea. At Kark Nuh lies the
-tomb of Abu Yaakūb Yusūf, said to have been a king of the west, with a cell endowed
-by Salāh Oddīn. They say he lived by weaving mats and kept orchards in Damascus for
-the sultan Nūr Oddīn; asked for pomegranates, he brought one after another seeming
-sour, answering: I was hired to keep the orchard, not to eat the pomegranates. And
-this is the wonder told of him: he gathered the copper furniture of a maiden's
-dower, fused it in a fire, touched it with elixir, and the whole became pure gold,
-with which Nūr Oddīn built the infirmary of Damascus.
+Under a piece of shade cloth beside the sea at Acre, Hamid is rolling up an old mat. He says he has come from Kark Nuh inland, where he once stayed a night at a lodge. Adil, who sells water to travellers, fills his cup and asks him to finish his tale. His daughter Safa sits nearby.
+
+“People there tell stories about Abu Yaakub Yusuf,” Hamid says. “They say he was once a king, then made his living weaving mats. They also say he kept an orchard in Damascus for Nur al-Din.”
+
+Safa asks whether the pomegranates were sweet.
+
+“The ones he brought were sour, so the story goes,” Hamid says. “When someone asked why he hadn't chosen sweet ones, he said he had been hired to guard the orchard and had never eaten its fruit.”
+
+Safa puts a pomegranate on a wooden board and asks Hamid to guess whether it is sweet. He weighs it in his hand and puts it down again. “When we borrow a knife, we can all try some.” You listen as they discuss whom to ask.
 
 ## ev.accon.battuta_a.choice.tomb
 
-Visit the tomb of Abu Yaakūb at Kark Nuh
+Ask Hamid about the lodge at Kark Nuh and walk along the shore with him
 
 ## ev.accon.battuta_a.choice.harbor
 
-Walk the harbour of Tyre
+Walk the old harbour steps with Hamid and ask about the road to Tyre
 
 ## ev.accon.battuta_a.choice.mat
 
-Ask the tomb-keeper for the tale of the mat-weaver
+Ask Hamid to finish the mat-weaver's story
 
 ## ev.ev_accon_battuta_a.choice_1_result
 
-You ride out to Kark Nuh and visit the tomb of Abu Yaakūb Yusūf, said to have been a
-king of the west, with a cell endowed by Salāh Oddīn. You pray there, and your name
-is spoken well of in Acre.
+You spend a day with Hamid at the resting places along the shore, helping him find a companion who knows the hill roads. At Kark Nuh, he says, travellers can drink at the lodge, and someone will show them where the tomb stands. It lies inland, and he hopes to go with someone who knows the way.
+
+Back beneath the shade cloth, Safa has cut open the pomegranate. She offers Hamid a piece. He tastes it and laughs that she chose a good one. Adil gives you a piece too and thanks you for helping Hamid find a companion. The travellers who rest at Acre come to know you.
 
 ## ev.ev_accon_battuta_a.choice_2_result
 
-You walk the harbour of Tyre, ringed on three sides by the sea, and mark the
-strength of the walls. The road from Acre to Tyre settles on your map.
+You walk with Hamid along the old harbour steps. He points north along the coast and describes the road towards Tyre. He once watched people mending boat nets there and borrowed a small knife from one of them.
+
+You spend the day asking people along the shore. At dusk a netmender lends you a small knife. When Safa hears, she brings out the pomegranate at once. You mark the direction of Tyre on your map.
 
 ## ev.ev_accon_battuta_a.choice_3_result
 
-The tomb-keeper tells how the saint kept orchards in Damascus and, asked for
-pomegranates, brought one after another seeming sour: I was hired to keep the
-orchard, not to eat the pomegranates. You set the saying down in your journal, and
-your name is spoken well of in Acre.
+Hamid sets the mat aside. Travellers, he says, tell another story about Abu Yaakub Yusuf: that he once turned the copper vessels of a young woman's dowry into gold. Safa stares and asks whether Hamid saw it himself.
+
+“I saw the lodge and his tomb,” Hamid says. He tells you how he lost the road inland until a man with a donkey led him to the door. You listen through the day and record the marvel as a story alongside the road Hamid actually travelled. At dusk, Adil borrows a knife and Safa cuts the pomegranate for everyone. Then he invites you to tell the story to newly arrived travellers, who are glad to listen.
 
 ## ev.yasdi.battuta_a.title
 
-The Saints of Fars
+A Lodging Keeper’s Tale
 
 ## ev.yasdi.battuta_a.body
 
-You travel over high mountains, roads cut in the rock, and in every stage there is a
-cell with bread and sweetmeats for every traveller. At the small town of Yezd Khās
-you halt. Men say the road runs on to Shīrāz, a handsome city, where the Sheikh Majd
-Oddīn, the paragon of saints and worker of miracles, sits judge in the college El
-Majdīa he founded. The emirs hold their ears before him, the ceremony of respect
-paid only to the king; and it is told how the king's great dogs wagged their tails
-before him and would not harm him, so the king stripped off his robes and put them
-upon him, and gave him a hundred villages.
+In a Yazd lodging house, the keeper, Hamid, is mending a torn mat. His daughter brings bread to two travellers who came from Isfahan and had earlier crossed the Fars hills. They tell her how small lodgings along that mountain road keep food ready for people who arrive late.
+
+‘Do they know who is coming?’ she asks. ‘Usually not,’ one traveller says. ‘That’s why your father keeps an extra loaf, isn’t it?’ Hamid smiles and asks her to set the bread beside the guests. The travellers also pass on a story they heard in Shiraz about a religious elder who welcomed strangers. You can stay overnight, join the evening prayers, or ask them about the road they took from Isfahan to Yazd.
 
 ## ev.yasdi.battuta_a.choice.cell
 
-Lodge at the road-cell and take what is laid out
+Stay overnight at the lodging house
 
 ## ev.yasdi.battuta_a.choice.pray
 
-Pray with the religious of the road
+Join the evening prayers
 
 ## ev.yasdi.battuta_a.choice.shiraz
 
-Ask of Majd Oddīn and the road to Shīrāz
+Ask how they travelled from Isfahan to Yazd
 
 ## ev.ev_yasdi_battuta_a.choice_1_result
 
-The cell has bread and sweetmeats for every traveller, and you are received as the
-custom of the country provides. The night passes quietly among the mountains, and
-your name is spoken well of at Yazd.
+You stay the night. Hamid’s daughter finds a clean place for your bedding, and in the morning you help her put out bread for the next travellers. Hamid thanks you and speaks warmly of you to his neighbours.
 
 ## ev.ev_yasdi_battuta_a.choice_2_result
 
-You pray with the religious who travel the same road — a priest, a caller to prayer,
-and two readers of the Koran among them — and the cells of the road are praised as
-houses of God. Your name is spoken well of at Yazd.
+You join the prayers and remain afterward as the travellers share bread. One of them asks where you have come from; soon the room is full of directions and names of old friends. By the time you leave, people here know you well enough to greet you again.
 
 ## ev.ev_yasdi_battuta_a.choice_3_result
 
-They tell you of the Sheikh Majd Oddīn, paragon of saints, whose college El Majdīa
-stands at Shīrāz, and of the king's great dogs that wagged their tails before him
-and would not harm him. The road toward Shīrāz settles on your map.
+You spend the day listening as the travellers trace their journey from Isfahan to Yazd. Hamid’s daughter brings out a scrap of paper so you can note the turns and stopping places they remember. You add that stretch of road to your map before you leave.
 
 ## ev.bochara.battuta_a.title
 
-The Origin of Jengiz Khan
+The Old School Wall in Bukhara
 
 ## ev.bochara.battuta_a.body
 
-Bokhāra, the principal city of the country beyond the Gihon, was ravaged by the
-Tartars until it almost entirely disappeared; no one there knows anything of
-science. It is said that Jengiz Khān, who came with the Tartars and destroyed the
-countries of Islam, began as a blacksmith in the country of Khotā — liberal-minded,
-powerful, and corpulent. He assembled and feasted the people, who joined him and
-made him their leader. He conquered his district, then all Khotā, then China, then
-Khashak, Kāshgar, and Mālik. For an affair among merchants, in which property had
-been taken, he invaded the lands of Jalāl Oddīn Sanjar, king of Khavārezm, and put
-his army to the rout.
+Near an old school wall in Bukhara, a melon seller is helping her father patch the shade over his stall. Some of the nearby buildings were damaged in earlier wars and rebuilt in stages; this wall remains, and local children use it to measure how tall they have grown. Her father recalls a family story of these lanes after an earlier war, when some houses needed rebuilding. The seller asks whether this wall stood then too. He says older neighbours remember it standing.
+
+An older neighbour joins them with a story he heard as a boy: the conqueror, he says, began as a blacksmith in Khotan. The melon seller interrupts. ‘My father heard another version. Tell it as a story, not as his life.’ The neighbour laughs and admits he cannot name the first teller. He does know the caravan road to Samarkand; he has sent fruit that way.
+
+You ask about the wall, the road, and the melon slices drying beneath the shade. The seller offers to show you where the old school stood, the neighbour can spend the day tracing the Samarkand road with you, or you can pay a little for a piece of melon and eat it while they finish the roof.
 
 ## ev.bochara.battuta_a.choice.ruins
 
-Search the ruined streets for any remnant of learning
+Spend a day with the seller by the old school wall
 
 ## ev.bochara.battuta_a.choice.tale
 
-Hear how the blacksmith of Khotā became khan
+Hear the neighbour’s tale and the Samarkand road
 
 ## ev.bochara.battuta_a.choice.melon
 
-Buy dried Bokhāra melons for the road
+Buy a piece of melon for 0.4 silver
 
 ## ev.ev_bochara_battuta_a.choice_1_result
 
-You walk the empty streets of what was the chief city beyond the Gihon. The colleges
-are silent; no one there knows anything of science. Your name is spoken well of in
-Bokhāra for remembering what was lost.
+The seller takes you along the surviving wall and shows you which rooms people remember as part of the school. You spend the day listening to her family and neighbours; they remember that you took an interest in their quarter.
 
 ## ev.ev_bochara_battuta_a.choice_2_result
 
-They tell you how the blacksmith of Khotā feasted the people and was made their
-leader, conquered his own district, then China, and came at last against the king of
-Khavārezm. The road he took east settles on your map.
+The neighbour tells the blacksmith story as a tale he cannot verify. He then spends the day describing the caravan stops toward Samarkand, where he once sent melons. You mark that city and its road on your map.
 
 ## ev.ev_bochara_battuta_a.choice_3_result
 
-The melon of Bokhāra is green of peel and red within, perfectly sweet and rather
-hard; it may be cut in pieces, dried, and carried to India or China as a present to
-their kings. You buy a box of it for the road.
+You pay 0.4 silver for a fresh piece of melon and eat it beneath the shade. The seller fixes the last corner of the cloth while her father cuts another slice for himself. You leave with more strength for the road.
 
 ## ev.delli.battuta_a.title
 
-The Governance of the Sultan of Delhi
+The Courtyard Register
 
 ## ev.delli.battuta_a.body
 
-On the road to Delhi you see a woman burn herself. She is adorned, and a cavalcade
-follows with drums and trumpets; the fire is kindled, the dead husband thrown in,
-the wife throws herself upon him, and both are burnt. It is not held necessary, but
-encouraged: the family of such a woman is ennobled and held worthy of trust, while
-she who will not burn is ever after clothed coarsely and kept in constraint. At
-Delhi the Emperor Mohammed governs: the most bountiful of men, yet impetuous and
-inexorable; pardon seldom follows anger. A courtier fell into debt of
-fifty-five thousand dinars; the emperor discharged it from his treasury, and warned
-him to keep expenses within his income.
+At a grain courtyard in Delhi, Shirin has laid a damp register beneath a cloth weight. Rain blurred several household marks before the morning distribution. Her daughter Safiya brings an empty sack and asks, ‘Did Uncle Rahim get his share?’ Shirin holds the page toward the light. ‘I can see his name. I cannot tell whether I wrote one measure or two.’ The old clerk at the next table says he still has the wooden tally from yesterday, but his hands are busy weighing the next family’s grain.
+
+You ask why everyone is waiting in the yard. ‘If I guess at a number, somebody will go home short,’ Shirin says. Safiya offers to carry the register to her uncle; her mother stops her because the wet ink may smear again. A trader waiting with the other families says his pack animals leave for Cambay after noon. He has used these grain yards on the westward road and can name the places where travellers find water.
+
+Shirin asks you to hold down the page while she brings the tally over. Safiya points to the mark beside her uncle’s name, and the clerk squints at it before he answers.
 
 ## ev.delli.battuta_a.choice.pyre
 
-Stand by the pyre as the drums sound
+Help compare the tally and the register for a day
 
 ## ev.delli.battuta_a.choice.court
 
-Hear how the sultan's court gives and punishes
+Spend a day asking the trader about the road to Cambay
 
 ## ev.delli.battuta_a.choice.ask
 
-Ask the mourners why the burning is honoured
+Help Shirin explain the corrected shares to the families
 
 ## ev.ev_delli_battuta_a.choice_1_result
 
-The fire is kindled, the drums sound, and the woman throws herself upon her dead
-husband; both are burnt. It is not held necessary among them, but it is encouraged,
-and the family of such a woman is ennobled. Your name is spoken well of in Delhi for
-bearing witness.
+You stay until evening, matching the wooden tallies against the register. Rahim had received one measure; Shirin adds the missing one to his sack when he comes by. Safiya carries the now-dry page inside. The families in the courtyard thank you for staying with the work.
 
 ## ev.ev_delli_battuta_a.choice_2_result
 
-They tell you of the Emperor Mohammed, the most bountiful of men and the most
-inexorable: a courtier's debt of fifty-five thousand dinars, discharged from the
-treasury, and a warning to keep expenses within income. The road of the sultan's
-campaigns settles on your map.
+The trader waits while his animals are fed, then spends the day showing you the westward road toward Cambay. He names the watering places and draws a bend around a stretch that floods in heavy rain. You add the Delhi–Cambay route to your map; before leaving, you help Safiya keep the wet register away from the sacks.
 
 ## ev.ev_delli_battuta_a.choice_3_result
 
-The mourners tell you that a woman who burns herself with her husband ennobles her
-family, while she who will not is ever after clothed coarsely and kept in constraint
-among her relations. You write the custom down, and your name is spoken well of in
-Delhi.
+After the clerk confirms the tallies, you help Shirin call each family forward and explain the corrected measures. One neighbour grumbles until Safiya shows her his old mark on the wood. By the end of the day everyone has collected their grain, and Shirin asks you to come by if you need a place to sit in the shade.
 
 ## ev.delli.battuta_b.title
 
-The Judgeship and the Embassy
+The Two Road Bundles
 
 ## ev.delli.battuta_b.body
 
-The Vizier meets you at the gate of Delhi, and you come before his mother El
-Makhdūma Jahān at the door of the haram; your presents are registered and a house
-prepared with carpet, vessel, couch, and fuel. The allowance is a thousand
-Delhi-ritls of flour, each ritl twenty-five of Egypt, with a thousand of flesh. The
-Vizier announces the Emperor's pleasure: you are appointed judge of Delhi, with a
-dress of honour, a saddled horse, twelve thousand dinars, and a yearly salary with
-lands in the villages. Do not suppose, says the emperor, that our office of judge
-will cost you little trouble. He has it in mind to send you as ambassador to the
-Emperor of China.
+At a travellers’ house in Delhi, keeper Bibi Hina is sorting two bundles of letters before their carriers leave. Her nephew marked one bundle for the westward caravan and the other for the long eastern road, then set both beneath a leaking roof tile. ‘I know which cloth I used,’ he says, ‘but the ink on the tags has run.’ Hina has him open the outer wraps and read the names aloud before anyone takes a letter away.
+
+You ask who will carry the westward bundle. A driver bound toward Cambay raises his hand from the doorway; his sister lives near a stopping place on that road. The eastern carrier says the route toward Khotan takes many changes of hands, so each address must be clear. Hina asks whether he has enough dry cloth to rewrap it. He shows her a single piece and admits he had saved the rest for his own bedding. She sends her nephew to fetch another piece from the storeroom.
+
+A family has arrived looking for a room, and Hina must settle them before dark. She asks you to hold the letters in order while her nephew brings back the dry wrapping.
 
 ## ev.delli.battuta_b.choice.house
 
-Take stock of the granted house and allowance
+Stay a day helping Hina settle the guests
 
 ## ev.delli.battuta_b.choice.gwalior
 
-Ask of the fortress of Gwalior
+Spend a day with the westward driver and learn the Cambay road
 
 ## ev.delli.battuta_b.choice.embassy
 
-Accept the embassy to China
+Spend a day preparing the eastern letters and road list
 
 ## ev.ev_delli_battuta_b.choice_1_result
 
-The house is prepared with carpet, vessel, couch, and fuel, and the allowance is a
-thousand Delhi-ritls of flour — each ritl twenty-five of Egypt — with a thousand of
-flesh, from the mother of the Emperor. Your name is spoken well of at Delhi.
+You stay through the next day, helping Hina give each family a dry place to sleep. Her nephew finishes sorting the letters while you carry bedding upstairs. When the last guest has a room, Hina thanks you in front of the neighbours and keeps a seat for you at supper.
 
 ## ev.ev_delli_battuta_b.choice_2_result
 
-They tell you of Kālyūr, a large city with a fortress on the top of a high mountain,
-in which the Emperor imprisons those of whom he entertains any fear. The road south
-past the fortress settles on your map.
+The westward driver spends the day checking addresses with you and naming the stages toward Cambay. He points out the stop near his sister’s home, then draws the road onward. You add the Delhi–Cambay route to your map before he takes the bundle.
 
 ## ev.ev_delli_battuta_b.choice_3_result
 
-You accept the embassy to the Emperor of China, and receive dresses of honour,
-horses, and money for the journey. The Emperor of China has sent a hundred Mamlūks,
-fifty slave-girls, five hundred dresses of kamkha, and five hundred maunds of musk;
-a silken dress is packed for the court, and the road toward China settles on your
-map.
+You spend the day sorting the eastern letters by their next carrier and copying the long road list toward Khotan. Hina pays you 0.8 silver for the work. Her nephew reads the addressees aloud once more before the bundles leave; you mark the Delhi–Khotan route on your map.
 
 ## arch.battuta.name
 
@@ -471,53 +428,35 @@ with your servants and everything you owned.
 
 ## ev.cail.battuta_a.title
 
-The Pilgrimage to Adam's Peak
+Pilgrims at the Cail Landing
 
 ## ev.cail.battuta_a.body
 
-From the sea you first see the mountain of Serendib standing like a pillar of smoke,
-nine days before you make the land. The king of Ceylon grants you leave to visit the
-blessed foot of Adam, and sends you with four Jogees, who make the pilgrimage every
-year, four Brahmins, and fifteen men carrying provisions. Two roads climb the peak:
-the easy way of Mama, and the rough way of Baba, by which alone the pilgrimage is
-counted made. On the hard road, iron pins hold ten chains in the rock; the last is
-called the chain of witness. At the summit, in a hollow of the stone, lies the
-foot-mark, eleven spans long.
+At Cail's landing, a family is packing for a crossing toward the island where pilgrims speak of Adam's Peak. A young woman has tied the water skins too tightly to the same pole as her mother's bedding. “If you leave them there, I will have to lift your whole bed whenever I want a drink,” her mother says. The daughter loosens the knot and asks an older pilgrim which road people take after landing. He says travellers tell different stories about the mountain and its sacred footprint; he has not yet seen it himself. “Then tell us what you do know,” the mother says. He points out where their boat will take on water and which people in the harbour know the crossing from Maabar. A gem trader listening nearby opens his box and offers you a ruby brought by overland merchants. The boatman says the water and food will take three days to load. The daughter closes her pack and asks you to help her check the provisions before departure.
 
 ## ev.cail.battuta_a.choice.baba
 
-Climb by the way of Baba
+Spend three days helping the pilgrims prepare
 
 ## ev.cail.battuta_a.choice.foot
 
-Watch the pilgrims at the foot-mark
+Spend a day hearing about the Maabar crossing
 
 ## ev.cail.battuta_a.choice.ruby
 
-Buy a ruby the islanders sell
+Buy the trader’s ruby
 
 ## ev.ev_cail_battuta_a.choice_1_result
 
-You take the rough way of Baba, holding to the iron pins and the ten chains fixed in
-the rock. At the last chain, the chain of witness, you look down, and the frightful
-notion seizes you that you shall fall. Beyond it lies the cave of Khizr, and above
-that, two miles higher, the hollow in the stone where the foot of Adam rests, eleven
-spans long; you touch the blessed foot-mark and make your pilgrimage.
+You spend the three days before the boat is ready helping the family sort food, water and bedding. The daughter marks each skin so her mother can find it without lifting the packs. When the boat is ready, the older pilgrim thanks you in front of the harbour families and invites you to hear their account if you meet again.
 
 ## ev.ev_cail_battuta_a.choice_2_result
 
-The Jogees, who walk to the foot-mark every year, show you the nine excavations cut
-in the rock about the impression, where pilgrims press gold, rubies, and jewels, and
-race to be first at the hollows. They tell you the Chinese once cut out the place of
-the great toe with the stone about it and carried it to a temple in El Zaitun, where
-pilgrimages are made to it from the most distant parts of China.
+You stay for a day at the landing. A boatman who has made the crossing from Maabar shows the daughter where the water is loaded and traces the route for you on a board. Her mother checks the pole once more; this time she can reach her skin without shifting the bedding.
 
 ## ev.ev_cail_battuta_a.choice_3_result
 
-The rubies of Serendib are found all over the island and sold by the inhabitants as
-property. You buy a stone cut from the white fissured rock in which the rubies lie,
-and pay the islander his price; the merchants of Malabar and the Maabar carry away
-the wood of the coast for a few articles of clothing, but the ruby keeps its worth.
+You pay the gem trader for the ruby. He shows you its weight and wraps it while the pilgrims finish loading. The daughter asks whether you bought it for a traveller; you say you will decide where to take it later. She wishes you a safe journey before joining her mother on the boat.
 
 ## ev.java-major.battuta_a.title
 
@@ -692,9 +631,10 @@ They look upon it with the utmost perturbation and take leave of one another, sa
 it is a Rokh, and that if he sees you, you shall assuredly perish. But a good wind
 comes, and you steer away, and see no more of him, nor ever know the particulars of
 his shape.
+
 ## ev.cail.entry.choice.battuta
 
-Ask of the traveller who climbed Adam's Peak
+Hear the pilgrims gathering for Adam’s Peak
 
 ## ev.ev_cail_entry.choice_4_result
 

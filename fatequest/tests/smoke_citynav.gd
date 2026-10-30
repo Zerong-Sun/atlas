@@ -23,6 +23,7 @@ func _init():
     # the first choice; the smoke must follow the player-facing FIFO path
     # instead of mistaking an open consequence dialog for a city dead end.
     await _drain_to_city(n)
+    var first_guide := String(n._city_view._guide.text)
 
     var visited := 0
     for pass_i in 12:
@@ -43,6 +44,9 @@ func _init():
 
     await process_frame
     var figures = n._city_view._figures.get_child_count() if n._city_view.visible else -1
+    var guide_advanced: bool = n._city_view.visible and not first_guide.is_empty() \
+        and String(n._city_view._guide.text) != first_guide
+    print("CITYNAV: guide_advanced=%s" % guide_advanced)
     print("CITYNAV: visited=%d  city_view=%s  figures_left=%d" % [visited, n._city_view.visible, figures])
     # Every once-only site must now be marked done. Repeatable mentors are
     # intentionally still live and do not indicate an exploration loop.
@@ -85,54 +89,24 @@ func _init():
             printerr("  FAIL: back from roads did not return to the town")
     print("CITYNAV: back-to-town=%s" % back_ok)
 
-    # Cairo exposed a shared guard: towns without exploration sites were
-    # wrongly sent to the roads even when they had a market. Exercise every
-    # such real record, including stations without markets.
-    var empty_sites_ok := true
+    # Every city must offer a permanent site or a mentor interaction.
+    var city_points_ok := true
     var empty_sites_count := 0
-    var starting_coins: int = n.state.coins
-    var starting_day: int = n.state.jdn
     for city in n.db.get_table("cities"):
-        if not city.get("sites", []).is_empty():
-            continue
-        empty_sites_count += 1
-        n.state.city = city.id
-        n._open_city()
-        await process_frame
-        await process_frame
-        var expected_hint := "ui.city.no_sites_market" if city.has("market") else "ui.city.no_sites"
-        # Caffa has no sites but does have a mentor; that remains a live
-        # interaction and must not be mislabeled as an empty city.
-        var hint_ok: bool = n._city_view._hint.text == I18n.t(expected_hint) \
-            if n._city_view._figures.get_child_count() == 0 \
-            else not n._city_view._hint.text.is_empty() and n._city_view._hint.text != I18n.t(expected_hint)
-        var city_ok: bool = n._city_view.visible \
-            and n._city_view._market_btn.visible == city.has("market") \
-            and hint_ok
-        n._close_city()
-        await process_frame
-        await process_frame
-        var return_button: Button = null
-        for control in _walk(n._panel):
-            if control is Button and control.text == I18n.t("ui.back_to_city") and not control.disabled:
-                return_button = control
-                break
-        if return_button != null:
-            return_button.pressed.emit()
-            await process_frame
-        city_ok = city_ok and return_button != null and n._city_view.visible \
-            and n.state.coins == starting_coins and n.state.jdn == starting_day
-        if not city_ok:
-            printerr("  FAIL: empty-site city cannot be entered and revisited: " + String(city.id))
-        empty_sites_ok = empty_sites_ok and city_ok
-    empty_sites_ok = empty_sites_ok and empty_sites_count > 0
-    print("CITYNAV: empty-site cities=%d entry/market/return=%s" % [empty_sites_count, empty_sites_ok])
+        var has_sites: bool = not city.get("sites", []).is_empty()
+        var has_mentor: bool = not String(city.get("mentorEvent", "")).is_empty()
+        if not has_sites and not has_mentor:
+            empty_sites_count += 1
+            city_points_ok = false
+            printerr("  FAIL: city has neither a story site nor a mentor: " + String(city.id))
+    print("CITYNAV: cities_without_story_points=%d" % empty_sites_count)
 
     # All navigation paths must retain a usable way back and a way out.
-    var ok = exits > 0 and live_once == 0 and back_ok and empty_sites_ok
+    var ok = exits > 0 and live_once == 0 and back_ok and city_points_ok and guide_advanced
     if exits == 0: printerr("  FAIL: dead end — no way out of the city")
     if live_once != 0: printerr("  FAIL: %d once-only sites still offered after being explored" % live_once)
     if not back_ok: printerr("  FAIL: roads panel did not return to the town")
+    if not guide_advanced: printerr("  FAIL: next step did not change after exploring the city")
     print("CITYNAV: %s" % ("OK" if ok else "FAIL"))
     quit(0 if ok else 1)
 

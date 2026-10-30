@@ -1,0 +1,412 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-axuma-parchment",
+      "kind": "site",
+      "title": "ev.axuma.parchment.title",
+      "body": "ev.axuma.parchment.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "axuma"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.axuma.parchment.choice.help",
+          "resultText": "ev.axuma.parchment.result.help",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "axuma",
+              "reason": "helped-return-church-leaves"
+            }
+          ]
+        },
+        {
+          "label": "ev.axuma.parchment.choice.stay",
+          "resultText": "ev.axuma.parchment.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "spent-day-with-copyist"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "shared-supper-with-copyist"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaet-tidemark",
+      "kind": "site",
+      "title": "ev.cambaet.tidemark.title",
+      "body": "ev.cambaet.tidemark.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cambaet"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cambaet.tidemark.choice.help",
+          "resultText": "ev.cambaet.tidemark.result.help",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaet",
+              "reason": "helped-reset-landing-stake"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaet.tidemark.choice.route",
+          "resultText": "ev.cambaet.tidemark.result.route",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "tana",
+              "reason": "boatman-described-tana-road"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-current-tana-fork"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-coilum-baker",
+      "kind": "site",
+      "title": "ev.coilum.baker.title",
+      "body": "ev.coilum.baker.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "coilum"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.coilum.baker.choice.fetch",
+          "resultText": "ev.coilum.baker.result.fetch",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coilum",
+              "reason": "brought-neighbour-to-bakery"
+            }
+          ]
+        },
+        {
+          "label": "ev.coilum.baker.choice.table",
+          "resultText": "ev.coilum.baker.result.table",
+          "effects": [
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "shared-bakery-supper"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-porters-coast-road"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-aden-letter",
+      "kind": "site",
+      "title": "ev.aden.letter.title",
+      "body": "ev.aden.letter.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "aden"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.aden.letter.choice.copy",
+          "resultText": "ev.aden.letter.result.copy",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 20,
+              "reason": "paid-for-copying-family-letter"
+            }
+          ]
+        },
+        {
+          "label": "ev.aden.letter.choice.carry",
+          "resultText": "ev.aden.letter.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "aden",
+              "reason": "delivered-family-letter-to-boat"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-calatu-shoemaker",
+      "kind": "site",
+      "title": "ev.calatu.shoemaker.title",
+      "body": "ev.calatu.shoemaker.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "calatu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.calatu.shoemaker.choice.mend",
+          "resultText": "ev.calatu.shoemaker.result.mend",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 30,
+              "reason": "shoemaker-shared-repair-fee"
+            }
+          ]
+        },
+        {
+          "label": "ev.calatu.shoemaker.choice.walk",
+          "resultText": "ev.calatu.shoemaker.result.walk",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "calatu",
+              "reason": "accompanied-guards-daughter"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cail-drum",
+      "kind": "site",
+      "title": "ev.cail.drum.title",
+      "body": "ev.cail.drum.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cail"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cail.drum.choice.carry",
+          "resultText": "ev.cail.drum.result.carry",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cail",
+              "reason": "carried-family-drum-to-gathering"
+            }
+          ]
+        },
+        {
+          "label": "ev.cail.drum.choice.listen",
+          "resultText": "ev.cail.drum.result.listen",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-drum-rehearsal"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "rested-at-drummer-house"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-dongola-garden",
+      "kind": "site",
+      "title": "ev.dongola.garden.title",
+      "body": "ev.dongola.garden.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "dongola"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.dongola.garden.choice.channel",
+          "resultText": "ev.dongola.garden.result.channel",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "dongola",
+              "reason": "cleared-shared-garden-channel"
+            }
+          ]
+        },
+        {
+          "label": "ev.dongola.garden.choice.wait",
+          "resultText": "ev.dongola.garden.result.wait",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "helped-sort-garden-seeds"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "shared-garden-supper"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-dufar-sail",
+      "kind": "site",
+      "title": "ev.dufar.sail.title",
+      "body": "ev.dufar.sail.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "dufar"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.dufar.sail.choice.sew",
+          "resultText": "ev.dufar.sail.result.sew",
+          "effects": [
+            {
+              "op": "coins",
+              "value": 25,
+              "reason": "paid-for-sail-repair"
+            }
+          ]
+        },
+        {
+          "label": "ev.dufar.sail.choice.tide",
+          "resultText": "ev.dufar.sail.result.tide",
+          "effects": [
+            {
+              "op": "reveal_map",
+              "value": "aden",
+              "reason": "sailor-described-aden-coast"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-tide-waiting-place"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-mecha-cloak",
+      "kind": "site",
+      "title": "ev.mecha.cloak.title",
+      "body": "ev.mecha.cloak.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "mecha"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.mecha.cloak.choice.find",
+          "resultText": "ev.mecha.cloak.result.find",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "mecha",
+              "reason": "returned-travelers-coat"
+            }
+          ]
+        },
+        {
+          "label": "ev.mecha.cloak.choice.stitch",
+          "resultText": "ev.mecha.cloak.result.stitch",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-mend-travelers-coat"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "shared-family-coat-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    }
+  ]
+}

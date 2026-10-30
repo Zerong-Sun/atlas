@@ -258,6 +258,8 @@ var log_lines: Array[String]       # 玩家可见的变动说明，由 reason �
 | 键 | 类型 | 语义 |
 |---|---|---|
 | `cities` / `bands` / `faiths` | string[] | 当前所在／当前信仰 ∈ 集合 |
+| `modes` | string[] | 当前道路行程方式 ∈ 集合（如 `ship`、`foot`、`caravan`、`camel`） |
+| `routes` | string[] | 当前道路行程的路线 ID ∈ 集合；仅在道路遭遇的出发上下文中使用 |
 | `min_reputation` | `{scope, id, value}` | 声望阈值 |
 | `language` / `etiquette` | string / `{id,value}` | 语言习得／礼仪阈值 |
 | `season` | int[] | 当前月份 ∈ 集合 |

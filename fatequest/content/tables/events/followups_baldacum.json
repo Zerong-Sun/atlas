@@ -17,6 +17,11 @@
         {
           "label": "ev.ev_baldacum_a_followup.choice_1",
           "resultText": "ev.ev_baldacum_a_followup.choice_1_result",
+          "showWhen": {
+            "lacks_item": [
+              "it-old-coin"
+            ]
+          },
           "effects": [
             {
               "op": "coins",
@@ -28,7 +33,12 @@
               "value": "it-old-coin",
               "reason": "took-a-coin-from-before-the-fall"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 300
+            }
+          }
         },
         {
           "label": "ev.ev_baldacum_a_followup.choice_2",
@@ -90,7 +100,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -2000,
+              "value": -13500,
               "reason": "bought-silk-at-the-weavers-price"
             },
             {
@@ -102,7 +112,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 2000
+              "min": 13500
             }
           }
         },
@@ -165,9 +175,11 @@
           "resultText": "ev.ev_baldacum_c_followup.choice_1_result",
           "effects": [
             {
-              "op": "item",
-              "value": "it-old-coin",
-              "reason": "took-the-coin-from-the-ashes"
+              "op": "reputation",
+              "scope": "city",
+              "id": "baldacum",
+              "value": 1,
+              "reason": "helped-record-the-family-names"
             },
             {
               "op": "sticker",

@@ -40,3 +40,27 @@ You pass through without stopping. You set the way to Etzina on your map.
 ## ev.ev_etzina_entry.choice_2_result
 
 You rest and ask what men say of this place. The road to Etzina opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+
+## ev.ev_gap_etzina.title
+
+An Old Waterskin at the Well
+
+## ev.ev_gap_etzina.body
+
+At Etzina’s well, a traveller hangs a waterskin upside down to dry. Water left inside turns foul in the sun. He rinses it, swirls a little wine inside, pours that away, and lets the skin dry. Before setting out, he squeezes each skin to hear whether air escapes through a leak.
+
+## ev.ev_gap_etzina.choice.route
+
+Ask the way to Egrigaia
+
+## ev.ev_gap_etzina.choice.route_result
+
+“Go southeast to Egrigaia. Do not miss the wells along the road.”
+
+## ev.ev_gap_etzina.choice.scene
+
+Ask about the westward route
+
+## ev.ev_gap_etzina.choice.scene_result
+
+He points west towards the next posting stop near Etzina. “The wells are far apart. Check each waterskin before leaving, and repair any leak first.”

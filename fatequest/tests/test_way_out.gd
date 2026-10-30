@@ -46,11 +46,9 @@ func run() -> bool:
 		_ok(again.is_empty(), "%s: guard is a no-op once a way out exists" % cid)
 
 	# ------------------------------------------- winter: season waits are design
-	# The Levant coast closes most roads Jan-Mar by design. Where a sea lane
-	# stays open (tarsus/tripolis share a year-round ship run) the guard must
-	# hand that one over — it is passable today. Where every road is shut
-	# (antiochia/damascus/tyrus) it hands out a known road instead, direction
-	# on the map, the wait explicit.
+	# The Levant closes most roads Jan-Mar, but each small cluster now keeps at
+	# least one year-round connection so the player can continue to a new city.
+	# The guard must reveal a passable exit wherever one is open.
 	var winter_jdn := GameDate.from_gregorian(1293, 1, 15).jdn
 	var winter := WorldClock.new(winter_jdn).month()
 	for cid in ["antiochia", "damascus", "tarsus", "tripolis", "tyrus"]:

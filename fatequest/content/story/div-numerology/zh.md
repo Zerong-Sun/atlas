@@ -40,7 +40,7 @@ stamps:
 
 ## div.numerology.result.00
 
-数一：开端，一周的第一天动身。
+数一：新的开端，选一周第一天启程。
 
 ## div.numerology.result.01
 
@@ -48,15 +48,15 @@ stamps:
 
 ## div.numerology.result.02
 
-数三：三日之数，走一小程，再歇一歇。
+数三：先走三天，再找地方休整。
 
 ## div.numerology.result.03
 
-数四：四方的根基，路坚实，只是走得慢。
+数四：基础稳，行程可以放慢些，别漏掉准备。
 
 ## div.numerology.result.04
 
-数五：十字路口，抉择吧，路不会等你。
+数五：到了岔路口，尽快选定方向。
 
 ## div.numerology.result.05
 
@@ -64,27 +64,27 @@ stamps:
 
 ## div.numerology.result.06
 
-数七：玄秘，第七个时辰会开一条暗路。
+数七：第七个时辰留意附近的小路，或许能避开拥堵。
 
 ## div.numerology.result.07
 
-数八：无尽，此程会绕回原处，走完它。
+数八：这段路可能绕回原点，先查清楚再决定是否走完。
 
 ## div.numerology.result.08
 
-数九：圆满，在这里做成的事，会福佑下一程。
+数九：手头的事快有结果了，办妥之后再安排下一程。
 
 ## div.numerology.result.09
 
-成双之数：急切会把错处翻倍，慢下来。
+成双之数：别赶时间，核对好货物和路引再走。
 
 ## div.numerology.result.10
 
-和数十一：精熟，你学过的一门手艺此刻用得上了。
+和数十一：你学过的手艺正好派上用场，留意身边的机会。
 
 ## div.numerology.result.11
 
-和数十二：年轮，等时令转过一圈。
+和数十二：时令尚未合适，等季节转过再安排。
 
 ## div.numerology.result.12
 
@@ -100,7 +100,7 @@ stamps:
 
 ## div.numerology.result.15
 
-和数十六：高塔，旧构倒塌，好让新构立起。
+和数十六：旧计划需要调整，腾出位置才能开始新的安排。
 
 ## div.numerology.result.16
 
@@ -108,7 +108,7 @@ stamps:
 
 ## div.numerology.result.17
 
-和数十八：月暗，今夜守口如瓶。
+和数十八：今晚少谈自己的计划，先听听旁人的消息。
 
 ## div.numerology.result.18
 
@@ -116,11 +116,11 @@ stamps:
 
 ## div.numerology.result.19
 
-名中之数：你自家的名字，能叫开城门。
+名中之数：报上自己的名字，可能有人认得你或你的家族。
 
 ## div.numerology.result.20
 
-城之数：这座城的运道，与你同行。
+城之数：这座城的风向对你有利，可以借机办事。
 
 ## div.numerology.result.21
 
@@ -148,12 +148,12 @@ stamps:
 
 ## div.numerology.result.27
 
-神祠之数：诸神肯收的那份供献。
+神祠之数：若要祈愿，带上合适的供品，再向庙祝问清规矩。
 
 ## div.numerology.result.28
 
-梦中之数：梦里的数，指引着清晨的选择。
+梦中之数：醒来后想想梦里的数字，再决定清晨先做哪件事。
 
 ## div.numerology.result.29
 
-重复之数：来过一次的，还会再来，早作准备。
+重复之数：相似的情况可能重演，提前把上次漏掉的准备补上。

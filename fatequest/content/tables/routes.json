@@ -379,13 +379,18 @@
       "risk": 3,
       "season": {
         "open": [
+          1,
+          2,
+          3,
           4,
           5,
           6,
           7,
           8,
           9,
-          10
+          10,
+          11,
+          12
         ],
         "bonus": [
           5,
@@ -1985,7 +1990,7 @@
         "foot"
       ],
       "days": 2,
-      "distanceKm": 59,
+      "distanceKm": 55,
       "cost": 60,
       "risk": 2,
       "season": {
@@ -2127,46 +2132,6 @@
       "hazards": [
         "storm",
         "pirates"
-      ],
-      "encounters": [],
-      "lore": {
-        "origin": "authored"
-      }
-    },
-    {
-      "id": "rt-calatu-camadi",
-      "from": "calatu",
-      "to": "camadi",
-      "reverse": true,
-      "kind": "coastal",
-      "modes": [
-        "caravan",
-        "foot",
-        "ship"
-      ],
-      "days": 23,
-      "distanceKm": 684,
-      "cost": 690,
-      "risk": 2,
-      "season": {
-        "open": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        ],
-        "bonus": []
-      },
-      "hazards": [
-        "bandits"
       ],
       "encounters": [],
       "lore": {
@@ -3315,9 +3280,9 @@
         "camel",
         "foot"
       ],
-      "days": 2,
-      "distanceKm": 61,
-      "cost": 60,
+      "days": 10,
+      "distanceKm": 291,
+      "cost": 300,
       "risk": 2,
       "season": {
         "open": [
@@ -3675,9 +3640,9 @@
         "camel",
         "foot"
       ],
-      "days": 3,
-      "distanceKm": 97,
-      "cost": 90,
+      "days": 5,
+      "distanceKm": 148,
+      "cost": 150,
       "risk": 2,
       "season": {
         "open": [
@@ -3755,9 +3720,9 @@
         "camel",
         "foot"
       ],
-      "days": 3,
-      "distanceKm": 84,
-      "cost": 90,
+      "days": 4,
+      "distanceKm": 134,
+      "cost": 120,
       "risk": 2,
       "season": {
         "open": [
@@ -4205,13 +4170,18 @@
       "risk": 3,
       "season": {
         "open": [
+          1,
+          2,
+          3,
           4,
           5,
           6,
           7,
           8,
           9,
-          10
+          10,
+          11,
+          12
         ],
         "bonus": [
           5,
@@ -6217,9 +6187,9 @@
         "camel",
         "foot"
       ],
-      "days": 2,
-      "distanceKm": 61,
-      "cost": 60,
+      "days": 10,
+      "distanceKm": 294,
+      "cost": 300,
       "risk": 2,
       "season": {
         "open": [
@@ -6257,9 +6227,9 @@
         "camel",
         "foot"
       ],
-      "days": 1,
-      "distanceKm": 43,
-      "cost": 30,
+      "days": 9,
+      "distanceKm": 280,
+      "cost": 270,
       "risk": 2,
       "season": {
         "open": [
@@ -6618,9 +6588,9 @@
         "camel",
         "foot"
       ],
-      "days": 2,
-      "distanceKm": 51,
-      "cost": 60,
+      "days": 3,
+      "distanceKm": 101,
+      "cost": 90,
       "risk": 2,
       "season": {
         "open": [
@@ -6974,10 +6944,8 @@
       "from": "samara",
       "to": "mien",
       "reverse": true,
-      "kind": "coastal",
+      "kind": "sea",
       "modes": [
-        "caravan",
-        "foot",
         "ship"
       ],
       "days": 58,
@@ -7002,7 +6970,8 @@
         "bonus": []
       },
       "hazards": [
-        "bandits"
+        "storm",
+        "pirates"
       ],
       "encounters": [],
       "lore": {
@@ -7987,7 +7956,7 @@
         "foot"
       ],
       "days": 2,
-      "distanceKm": 62,
+      "distanceKm": 73,
       "cost": 60,
       "risk": 2,
       "season": {
@@ -8276,13 +8245,18 @@
       "risk": 3,
       "season": {
         "open": [
-          10,
-          11,
-          12,
           1,
           2,
           3,
-          4
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
         ],
         "bonus": [
           11,

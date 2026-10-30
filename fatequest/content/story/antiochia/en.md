@@ -2,11 +2,10 @@
 unit: antiochia
 lang: en
 role: source
-status: reviewed
-voice: yule
+status: draft
+voice: authored
 notes: >
-  Observational register after the Yule-Cordier translation: second person,
-  present tense, no modern vocabulary, no interiority. See LORE_PIPELINE §4.
+  Original bridge scenes in plain modern language.
 ---
 
 ## city.antiochia.name
@@ -15,24 +14,19 @@ Antiochia
 
 ## ev.antiochia.entry.body
 
-You come down to Antioch upon the river El Aāsī, which the
-men of Hamah call the Rebel. The town sits under the mountains of the
-frontier, between Muslim lands and the castles of the Franks that once held
-this coast. Within the walls is the tomb of Habīb El Najār, which pilgrims
-visit; beyond, toward the high places, lie the fortresses of the Ismāīlīah —
-Bugrās, El Shaghar, Masyāf, El Kahf — and no stranger walks freely among
-them. Caravans still pass the Orontes bridge with silk and steel; the Sultan's
-watch holds the gates. You must know that this was once among the great
-cities of the Romans, and men still speak of it as they speak of old
-Damascus.
+The cart ahead of you stops on the bridge into Antioch. Its driver calls back, "Give me room! One of the boards has lifted." A mule holds up a hoof, unsure where to put it. The silk on its back brushes the rail; below runs the Orontes.
+
+The bridge keeper pins the loose board with a stone and asks the driver to move half a step. A ferryman at the bank has put his hook into the water; he seems to have a problem of his own. People in the queue crane their necks as the mountain shadows reach the city wall.
+
+The keeper notices you. "Wait until this cart is clear if you're crossing. If you need directions, ask me here. We don't need another person stopping on the bridge to work out where to go."
 
 ## ev.antiochia.entry.choice.look
 
-Rest and ask what men say of this place
+Stay and find out what has stopped the carts
 
 ## ev.antiochia.entry.choice.pass
 
-Pass through without stopping
+Ask the bridge keeper for the way out of town
 
 ## ev.antiochia.entry.title
 
@@ -40,8 +34,72 @@ Arriving at Antiochia
 
 ## ev.ev_antiochia_entry.choice_1_result
 
-You pass through without stopping. The road to Antiochia opens on your map.
+The keeper pins the board with his foot until the last mule crosses. He points towards the city gate. "Eastwards? Go out that way. More carts are coming; don't stand on the bridge looking for signs." You cross with the queue while the river moves beneath your feet.
 
 ## ev.ev_antiochia_entry.choice_2_result
 
-You rest and ask what men say of this place. You set the way to Antiochia on your map. You spend 1 day before the way is clear again.
+A carpenter arrives with his tools and prises up the loose board. A nail has broken underneath it; each wheel has pushed the end a little higher. The driver who had shouted the loudest now holds the new board steady for him.
+
+By the time the carpenter drives in the last nail, it is growing dark. You stay in town that night and return to the bridge in the morning. The keeper recognises you and points east. "For Edessa, go out that way. There are guarded roads in the hills. Follow the one the other travellers use." Carts are crossing the bridge again.
+
+## ev.gap.antiochia.scene.title
+
+A Ladle Caught at the Bridge
+
+## ev.gap.antiochia.scene.body
+
+At the bridge, a ferryman reaches into the Orontes with his hook and pulls out a wooden ladle. Three short marks are cut into its handle. He wipes it on his sleeve and holds it up to a child on the bank. "Look, the river gave my ladle back."
+
+The child knocks a heel against the stone step. "You used that to serve me bean soup this morning." The ferryman clears his throat and puts away the hook. Carts move slowly across the bridge. The child is still waiting to hear about those three marks.
+
+## ev.gap.antiochia.scene.choice.talk
+
+"Who cut those three marks?"
+
+## ev.gap.antiochia.scene.choice.route
+
+"Is the cart for Berrhoea waiting on the bridge too?"
+
+## ev.gap.antiochia.scene.result.talk
+
+The ferryman gives the ladle to the child. "Your father made them. One mark for each bowl of soup. He says I serve too much, so he keeps count." The child traces the marks and asks why he threw it in the river today.
+
+"Slipped out of my hand." The child laughs and runs up the steps with it. The ferryman calls after him, "Tell your father he still owes me those three bowls!"
+
+## ev.gap.antiochia.scene.result.route
+
+The ferryman nods towards the far end of the bridge. "The cart with the blue cover is going to Berrhoea. Wait until it gets across, then ask the driver whether he'll take someone along."
+
+The child returns the ladle. "Did you drop it in again?" The ferryman winks at you. "I pulled it out myself this time. The river hasn't learned to do my work yet."
+
+## ev.antiochia.two_names.title
+
+Two Names for the River
+
+## ev.antiochia.two_names.body
+
+Inside the gate, a merchant from the coast holds a small packet of dried beans. He stops the gatekeeper. "The bridge over the Orontes—is that the one here? Somebody asked me to bring these to a soup stall beside it."
+
+The gatekeeper pauses at the river's name. "We call it the Asi. The bridge ahead is the one you're after. What's written on your paper?"
+
+The merchant spreads a creased sheet on a stone bench. It shows a bridge and a row of food stalls. The river's name is written large, but water has blurred the recipient's name. The merchant would rather ask again than hand the beans to the wrong person.
+
+## ev.antiochia.two_names.choice.maps
+
+"I've just crossed that bridge. Let me see the map."
+
+## ev.antiochia.two_names.choice.guard
+
+"Could you show us the bridge? I also need the road to Tarsus."
+
+## ev.antiochia.two_names.result.maps
+
+You turn the paper towards the river and recognise the low row of food stalls by the bridge. The merchant comes with you. The soup seller smiles as soon as he sees the beans. "My brother remembered at last. Last time he promised loudly enough and came back with nothing."
+
+The merchant hands over the packet with relief. On the way back he says he came from Tripolis and tells you which caravan takes travellers that way. The gatekeeper has learned the river's other name too.
+
+## ev.antiochia.two_names.result.guard
+
+The gatekeeper asks a companion to watch the gate and takes you to the bridge. The soup seller lifts the lid of his pot. As steam rises, the merchant recognises the stall drawn on his paper. He passes over the beans. The seller tests a handful in his palm. "That will last me a few days."
+
+Back at the gate, the keeper shows you where travellers for Tarsus gather. The merchant folds his paper and mutters that he will write down the river's other name before he loses another morning to the same search.

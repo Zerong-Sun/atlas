@@ -80,6 +80,9 @@ func _init() -> void:
 	arch["startKit"]["coins"] = 0
 	main._begin(arch)
 	await process_frame
+	check(main._audio_ready() and main._audio._culture_mix == {"islamic": 1.0}
+		and main._audio._scene_class == SceneDensity.TOWN,
+		"new journey hands opening music to Alexandria theme")
 	await press(main._dialog, "ev.alexandria.welcome.entry")
 	check(main._current_event.get("id") == "ev-alexandria-welcome-gate", "entry reaches gate")
 	if DisplayServer.get_name() != "headless":
@@ -88,16 +91,37 @@ func _init() -> void:
 		root.get_texture().get_image().save_png("res://build/playtest/welcome-gate.png")
 	await press(main._dialog, "ev.alexandria.welcome.gate.tears")
 	await press(main._dialog, "ui.continue_pending")
-	check(main.state.active_event == "ev-alexandria-welcome-meal", "tears reach host")
+	# The current authored opening resolves the host's gift at the gate page;
+	# it no longer enqueues a second meal page for new journeys.
+	check(main.state.coins == 1200 and main.state.active_event.is_empty()
+		and main.state.pending_events.is_empty()
+		and bool(main.state.once_fired.get("ev-alexandria-welcome-gate", false)),
+		"gate choice gives one gift and resolves")
+	check(main._city_view.visible and not main._dialog_layer.visible,
+		"gate result returns to city")
+	check(main._load("auto"), "reload resolved opening checkpoint")
+	await process_frame
+	check(main.state.coins == 1200 and main.state.active_event.is_empty(),
+		"resolved opening survives reload")
+	check(main._audio._city_id == "alexandria" and main._audio._culture_mix == {"islamic": 1.0},
+		"loading a city restores its music context")
 
+	# A save from the earlier two-page version may still hold the meal as a
+	# committed consequence. Its pause/resume UI must remain usable, but taking
+	# the free meal must not grant a second purse.
+	main.executor.execute(main.state, [{"op": "queue_event",
+		"value": "ev-alexandria-welcome-meal", "reason": "legacy-save-test"}], {})
+	check(main._show_next_pending_event(), "legacy meal opens as a committed page")
 	await press(main._dialog, "ui.hold_for_now")
-	check(not main._dialog_layer.visible, "pause leaves a resume action")
+	check(not main._dialog_layer.visible and main.state.active_event == "ev-alexandria-welcome-meal"
+		and button(main._panel, I18n.t("ui.continue_pending")) != null,
+		"pause leaves a resume action")
 	check(main._load("auto"), "reload hospitality checkpoint")
 	await process_frame
 	await process_frame
 	check(main.state.active_event == "ev-alexandria-welcome-meal", "host survives reload")
-	await press(main._dialog, "ev.alexandria.welcome.meal.aid")
-	check(main.state.coins == 1200, "one gift of twelve silver")
+	await press(main._dialog, "ev.alexandria.welcome.meal.food")
+	check(main.state.coins == 1200, "legacy meal does not duplicate the gift")
 	await press(main._dialog, "ui.continue_pending")
 	check(main._city_view.visible and not main._dialog_layer.visible, "result returns to city")
 
@@ -119,8 +143,8 @@ func _init() -> void:
 	var original_faith: String = main.state.faith
 	main.state.faith = "latin"
 	var choices: Array = main.events.choice_states(gate, main.state, main._ctx())
-	check(not choices[0]["visible"] and choices[1]["enabled"] and choices[2]["enabled"],
-		"identity changes greeting but never blocks help or leaving")
+	check(choices[0]["enabled"] and choices[1]["enabled"] and choices[2]["enabled"],
+		"identity does not block host, help or leaving")
 	main.state.faith = original_faith
 	main.state.coins = 3000
 	choices = main.events.choice_states(gate, main.state, main._ctx())
@@ -172,6 +196,8 @@ func _init() -> void:
 		main._travel_confirm._confirm.pressed.emit()
 		await process_frame
 		check(main.state.city == "babylonia-cairus", "confirmed road reaches Cairo")
+		check(main._audio._scene_class == SceneDensity.JOURNEY,
+			"departure switches to road arrangement")
 		for step in 25:
 			if main._dialog_layer.visible:
 				for child in main._dialog._choices.get_children():

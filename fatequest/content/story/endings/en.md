@@ -2,29 +2,23 @@
 unit: endings
 lang: en
 role: authored
-status: reviewed
-voice: yule
+status: draft
+voice: authored
 notes: >
-  Closing paragraphs. Written to the same observational register as the road
-  text — second person, present or simple past, no interiority, no modern
-  vocabulary — but permitted the one thing the road text is not: a backward
-  look. Each epilogue states what the journey came to without telling the
-  player how to feel about it. Variables interpolate facts the run actually
-  recorded; never write a sentence that only reads well when a variable is
-  large. See LORE_PIPELINE §4 and GDD §14.
+  Closing scenes use recorded journey facts and concrete actions.
 ---
 
 ## epilogue.nowhere
 
-nowhere in particular
+a place not yet chosen
 
 ## epilogue.no_long_road
 
-no road worth the name
+no long journey recorded
 
 ## epilogue.no_great_trade
 
-nothing in particular
+none has earned you a profit yet
 
 ## faith.latin
 
@@ -40,7 +34,7 @@ Islam
 
 ## faith.buddhism
 
-the Buddha's law
+the Buddha's teaching
 
 ## faith.daoism
 
@@ -52,7 +46,7 @@ the Nestorian rite
 
 ## faith.hindu
 
-the Indian rite
+the Indian faith
 
 ## faith.folk
 
@@ -60,88 +54,80 @@ the local gods
 
 ## end.returned.name
 
-The One Who Came Back
+The Traveller Who Returned to the Starting City
 
 ## end.returned.epilogue
 
-You came home to {start} after {years} years and {cities} cities, and found that the
-hardest part was the telling. Men who had never left the parish argued with you about
-the width of rivers. Of everything you carried back, it was {richestTrade} that made
-your fortune, and no one asked about it twice. The rest they did not believe, and you
-wrote it down anyway.
+You return to {start} and spread the papers you carried back across a table. The names of the {cities} cities you passed through fill the paper. Beside them are the names of people who showed you the way. The writing grows so small that even you must lean close to read it.
+
+Everyone gathers around the map and starts asking for directions. At one place you pull out an old note a local gave you. The well and city gate are still clear in the drawing. You flatten the sheet so the people at the table can see it.
 
 ## end.stayed.name
 
-The One Who Stayed
+The Traveller Who Stayed
 
 ## end.stayed.epilogue
 
-You went out for a season and remained {years} years. {cities} cities are behind you
-and you are still at {lastCity}, which you no longer call by the name you learned it
-under. You keep {faith} as you always did, in a place that has its own arrangements
-about such things and does not press you. Venice is a word you can still spell.
+Someone knocks on your door and asks whether you can help a new traveller find a room. You put on your coat and take him through the familiar streets of {lastCity}. The innkeeper waves from behind the counter. He still remembers when you first came in to ask the price of a room. By now you have passed through {cities} cities.
+
+The traveller asks where you came from. You tell him about the day you first set out. The innkeeper brings hot water, and you sit and talk. Before dark, you show the traveller which gate he needs in the morning.
 
 ## end.witness.name
 
-Witness of the World
+The Traveller Who Remembers the Roads
 
 ## end.witness.epilogue
 
-{cities} cities in {years} years, and the road from {longestRoute} the longest of them.
-You did not go as an envoy, and you did not go to trade; you went to see, and you saw.
-What you can report is small beside what there was: the tide of a river at a particular
-hour, the price of salt in a town with no name in any book. It is what a witness has.
+Someone asks you about the roads. You open your travel book. The column for long journeys reads: {longestRoute}. You remember the carts you rode in, the courtyards where you stayed, and the names of the people who sold water by the road. You are still talking when the light fades. These are the notes you gathered while passing through {cities} cities.
+
+Others at the table bring out their own notes. One adds a crossing you never saw; another says a bridge has been repaired. You ask them to put their names and dates by their marks on the map. The next traveller who asks can see when each piece of news was heard.
 
 ## end.markets.name
 
-Master of a Hundred Markets
+The Trader
 
 ## end.markets.epilogue
 
-{years} years, {cities} cities, and a ledger that balances. You learned the thing the
-guidebooks cannot teach: that the same bale is two different goods in two places, and
-the distance between them is the whole of the profit. {richestTrade} was the making of
-you. You could name the day you understood it, and you never told anyone.
+Your ledger has needed more than one new cover. You turn to the page for expenses and show it to a young person beside you. You also recorded the bridge toll and the extra cart hired after a day of rain. Those notes accompanied you through {cities} cities.
+
+They ask why this page has so much detail. You ask them to add up the costs. They stop at the bridge toll and ask whether you worried about running short of travel money. You show them the note you made about the rain, and they return to the figures.
 
 ## end.no_return.name
 
-The One Who Did Not Return
+The Traveller Who Kept Going
 
 ## end.no_return.epilogue
 
-You crossed {cities} cities in {years} years and never came back to {start}. Some say
-you were last seen at {lastCity}; some say you died on the road. Both are true: a
-traveller's home is being spoken of, again and again.
+After leaving {start}, you pass through {cities} cities. When you reach {lastCity}, an innkeeper puts your wet bag beside the fire to dry. You pay for your room and ask when the next group of travellers leaves.
+
+The innkeeper writes your name in his book and draws the way out from the inn. In the morning he sees you set out with the others. Months later another traveller asks about the same road. The innkeeper opens the book to that page and draws the turning again.
 
 ## end.cartographer.name
 
-The Chart-Maker
+The Mapmaker
 
 ## end.cartographer.epilogue
 
-{years} years and {cities} cities, and what you have to show is paper. The road from
-{longestRoute} is drawn to the day's march, with the water marked and the passes
-named. Others will use it and not know you. That is what a chart is for, and you knew
-it when you began.
+The paper proves too short. You join two sheets and mark a well and a fork beside the seam. The column for long journeys in your travel book reads: {longestRoute}. You have carried this map through {cities} cities, adding new marks as you went.
+
+A driver who comes to see the map says one of the wells has been sealed. He shows you a new one, and you put the date beside your correction. Before the next caravan leaves, its driver borrows the map and promises to write any changes he finds on the back.
 
 ## end.diviner.name
 
-Reader of the Signs
+The Diviner
 
 ## end.diviner.epilogue
 
-{cities} cities in {years} years, and in each of them you asked the same question in a
-different language. The stalks, the sticks, the cards and the stars do not agree, and
-you came to think that the disagreement is the answer. You keep {faith}, and you keep
-the others' methods too, which the learned of every city told you was impossible.
+At an inn, a traveller is worried about tomorrow's journey and asks you to sit with him. You clear the table and ask what he wants to know. As you passed through {cities} cities, you learned several ways of divining; one may help him think through this journey.
+
+As you work through the method you learned, you tell him who taught it to you. Outside, a driver is putting away the harness. The traveller writes down your words, then goes to speak to him about their departure time.
 
 ## end.lay_down.name
 
-Laying Down the Pen
+A Rest from the Road
 
 ## end.lay_down.epilogue
 
-You set out from {start} and you are stopping at {lastCity}: {cities} cities, {years}
-years, {faith} still, and {richestTrade} the best bargain you ever struck. The book
-ends because you have closed it, not because the road did. There is more of it. There
-was always going to be more of it.
+You close your travel book. There is a little space on the last page. One day, if another place calls to you, you can write its name there.
+
+You glance at the ledger beside you and think of the trades along the way: {richestTrade}. A driver outside is feeding his horse. You roll up the map on your desk and put it back in your bag. That is enough for today.

@@ -42,3 +42,27 @@ You pass through without stopping. The road to Linju opens on your map.
 ## ev.ev_linju_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Linju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_linju.title
+
+Paper Umbrellas at the Market
+
+## ev.ev_gap_linju.body
+
+At the Linju market, an umbrella maker opens a frame of bamboo ribs. He coats its paper with tung oil, especially the edge, to keep rain out. A rib too soft collapses; one too stiff breaks. He offers you the umbrella to test and warns you to keep the paper clear of mud.
+
+## ev.ev_gap_linju.choice.route
+
+Ask the way to Cacanfu
+
+## ev.ev_gap_linju.choice.route_result
+
+“Go northwest to Cacanfu, then ask for the ferry.”
+
+## ev.ev_gap_linju.choice.scene
+
+Try opening the umbrella
+
+## ev.ev_gap_linju.choice.scene_result
+
+You slowly open and close it. The maker says to fold along the ribs without crushing the paper. After rain, leave the canopy out to dry instead of holding it near a fire.

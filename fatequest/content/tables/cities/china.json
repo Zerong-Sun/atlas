@@ -19,7 +19,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cacanfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-cacanfu",
+        "ev-unique-cacanfu"
+      ],
       "exits": [
         "rt-cacanfu-cambaluc",
         "rt-cacanfu-chinangli",
@@ -74,7 +77,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cachanfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-cachanfu",
+        "ev-unique-cachanfu"
+      ],
       "exits": [
         "rt-cachanfu-egrigaia",
         "rt-cachanfu-kenjanfu",
@@ -128,7 +134,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-caiju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-caiju",
+        "ev-unique-caiju"
+      ],
       "exits": [
         "rt-caiju-chinghianfu",
         "rt-caiju-sinju",
@@ -377,7 +386,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-chinghianfu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-chinghianfu",
+        "ev-unique-chinghianfu"
+      ],
       "exits": [
         "rt-caiju-chinghianfu",
         "rt-chinghianfu-nanghin",
@@ -432,7 +444,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-chinginju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-chinginju",
+        "ev-unique-chinginju"
+      ],
       "exits": [
         "rt-chinginju-caiju",
         "rt-chinginju-chinghianfu",
@@ -487,7 +502,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-coigangiu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-coigangiu",
+        "ev-unique-coigangiu"
+      ],
       "exits": [
         "rt-coigangiu-coiganju",
         "rt-coigangiu-paukin",
@@ -521,7 +539,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-coiganju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-coiganju",
+        "ev-unique-coiganju"
+      ],
       "exits": [
         "rt-coigangiu-coiganju",
         "rt-coiganju-paukin",
@@ -575,7 +596,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-etzina-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-etzina",
+        "ev-unique-etzina"
+      ],
       "exits": [
         "rt-campichu-etzina",
         "rt-camul-etzina",
@@ -630,7 +654,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-fuju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-fuju",
+        "ev-unique-fuju"
+      ],
       "exits": [
         "rt-chamba-fuju",
         "rt-fuju-kinsay",
@@ -829,7 +856,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-linju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-linju",
+        "ev-unique-linju"
+      ],
       "exits": [
         "rt-cacanfu-linju",
         "rt-chinangli-linju",
@@ -882,7 +912,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-mien-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-mien",
+        "ev-unique-mien"
+      ],
       "exits": [
         "rt-mien-chamba",
         "rt-mien-sindafu",
@@ -930,12 +963,15 @@
         "nestorian"
       ],
       "coord": [
-        118.797,
-        32.06
+        117.05,
+        30.53
       ],
       "tier": "town",
       "entryEvent": "ev-nanghin-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-nanghin",
+        "ev-unique-nanghin"
+      ],
       "exits": [
         "rt-chinghianfu-nanghin",
         "rt-nanghin-caiju",
@@ -988,7 +1024,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-paukin-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-paukin",
+        "ev-unique-paukin"
+      ],
       "exits": [
         "rt-coigangiu-paukin",
         "rt-coiganju-paukin",
@@ -1168,7 +1207,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sindafu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-sindafu",
+        "ev-unique-sindafu"
+      ],
       "exits": [
         "rt-mien-sindafu",
         "rt-sindafu-cachanfu",
@@ -1285,7 +1327,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sinjumatu-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-sinjumatu",
+        "ev-unique-sinjumatu"
+      ],
       "exits": [
         "rt-linju-sinjumatu",
         "rt-saianfu-sinjumatu",
@@ -1461,12 +1506,15 @@
         "nestorian"
       ],
       "coord": [
-        119.443,
-        32.785
+        119.92,
+        32.48
       ],
       "tier": "town",
       "entryEvent": "ev-tiju-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-tiju",
+        "ev-unique-tiju"
+      ],
       "exits": [
         "rt-caiju-tiju",
         "rt-coigangiu-tiju",

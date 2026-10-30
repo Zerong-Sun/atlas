@@ -67,7 +67,7 @@
       ],
       "lore": {
         "placeId": "balc",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c027"
@@ -91,6 +91,11 @@
           "resultText": "ev.ev_balc_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "lapis",
               "value": 1,
@@ -101,7 +106,12 @@
               "value": "st-balc-lapis",
               "reason": "bought-lapis-at-the-caravan-masters-price"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         },
         {
           "label": "ev.ev_balc_b_followup.choice_2",
@@ -138,7 +148,7 @@
       ],
       "lore": {
         "placeId": "balc",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c027"
@@ -162,9 +172,11 @@
           "resultText": "ev.ev_balc_c_followup.choice_1_result",
           "effects": [
             {
-              "op": "item",
-              "value": "it-bactrian-fragment",
-              "reason": "took-a-slip-of-incense-for-the-road"
+              "op": "reputation",
+              "scope": "city",
+              "id": "balc",
+              "value": 1,
+              "reason": "helped-the-shrine-keeper"
             },
             {
               "op": "sticker",
@@ -203,7 +215,7 @@
       ],
       "lore": {
         "placeId": "balc",
-        "origin": "source",
+        "origin": "authored",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c027"

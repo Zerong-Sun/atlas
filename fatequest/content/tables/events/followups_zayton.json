@@ -206,7 +206,12 @@
               "value": 2,
               "reason": "blessed-for-the-sea-road"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 800
+            }
+          }
         },
         {
           "label": "ev.ev_zayton_mazu_followup.choice_2",
@@ -305,7 +310,12 @@
               "value": "st-zayton-mazu",
               "reason": "carried-the-temples-blessing"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          }
         }
       ],
       "lore": {

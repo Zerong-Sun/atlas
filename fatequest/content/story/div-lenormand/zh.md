@@ -40,11 +40,11 @@ stamps:
 
 ## div.lenormand.result.00
 
-骑士：消息奔你而来，今日便有口信到。
+骑士：今天留意口信，可能有人带来消息。
 
 ## div.lenormand.result.01
 
-三叶草：一点小运，收下别人让的价。
+三叶草：眼下有个小便宜，谈价时不妨试着问问。
 
 ## div.lenormand.result.02
 
@@ -68,7 +68,7 @@ stamps:
 
 ## div.lenormand.result.07
 
-棺材：一个了结，开新账之前先结旧账。
+棺材：一件旧事将告一段落，先把欠账和未完的约定处理好。
 
 ## div.lenormand.result.08
 
@@ -76,7 +76,7 @@ stamps:
 
 ## div.lenormand.result.09
 
-镰刀：一刀斩断，把拖延干脆地了结。
+镰刀：该做的决定别再拖，先把利弊算清楚。
 
 ## div.lenormand.result.10
 
@@ -96,7 +96,7 @@ stamps:
 
 ## div.lenormand.result.14
 
-熊：气力与靠山，去求长者的支持。
+熊：长者或有力的伙伴能帮上忙，找可信的人商量。
 
 ## div.lenormand.result.15
 
@@ -104,7 +104,7 @@ stamps:
 
 ## div.lenormand.result.16
 
-鹳：变动，一桩挪动会改善你的境况。
+鹳：换个住处或调整路线，可能让行程更顺。
 
 ## div.lenormand.result.17
 
@@ -120,11 +120,11 @@ stamps:
 
 ## div.lenormand.result.20
 
-山：阻碍，一道难关，但过得去。
+山：前面有一道难关，耐心找路，总能绕过去。
 
 ## div.lenormand.result.21
 
-十字路口：抉择，两条路都通向好处。
+十字路口：两条路各有好处，选更适合你眼下目标的一条。
 
 ## div.lenormand.result.22
 
@@ -140,11 +140,11 @@ stamps:
 
 ## div.lenormand.result.25
 
-书：秘密，一份文书里藏着真相。
+书：答案可能写在文书里，检查印记和附注。
 
 ## div.lenormand.result.26
 
-信：笔墨之约，这封书函带着你的运势。
+信：一封书信会带来消息，读清楚再回信。
 
 ## div.lenormand.result.27
 
@@ -156,4 +156,4 @@ stamps:
 
 ## div.lenormand.result.29
 
-百合：安宁与德行，路在安然的荣耀中收尾。
+百合：这段行程会平稳收尾，守信待人便是好名声。

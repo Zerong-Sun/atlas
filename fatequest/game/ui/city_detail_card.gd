@@ -95,17 +95,30 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 	for child in _routes.get_children():
 		_routes.remove_child(child)
 		child.queue_free()
+	var known_routes: Array = []
 	for route in travel.routes_from(cid):
-		if not travel.is_route_known(route, state):
-			continue
+		if travel.is_route_known(route, state):
+			known_routes.append(route)
+	known_routes.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
+		var a_dest := travel.other_end(a, cid)
+		var b_dest := travel.other_end(b, cid)
+		var a_unvisited := a_dest not in state.visited and a_dest != state.start_city
+		var b_unvisited := b_dest not in state.visited and b_dest != state.start_city
+		if a_unvisited != b_unvisited:
+			return a_unvisited
+		return I18n.t(db.get_record(a_dest).get("name", a_dest)).naturalcasecmp_to(
+			I18n.t(db.get_record(b_dest).get("name", b_dest))) < 0
+	)
+	for route in known_routes:
 		var other := travel.other_end(route, cid)
 		var other_city := db.get_record(other)
 		var mode_names: Array[String] = []
 		for mode in route.get("modes", []):
 			mode_names.append(I18n.t("transport.%s.name" % String(mode)))
+		var other_name := I18n.t(other_city.get("name", other))
 		var line := I18n.t("ui.city.route_line") % [
-			I18n.t(other_city.get("name", other)), "／".join(PackedStringArray(mode_names))]
-		_add_route_label(line, Palette.ink())
+			other_name, "／".join(PackedStringArray(mode_names))]
+		_add_route_label(line, Palette.ink(), other not in state.visited and other != state.start_city)
 	if _routes.get_child_count() == 0:
 		_add_route_label(I18n.t("ui.city.road_unknown"), Palette.ink_soft())
 	var travelling := not state.active_journey.is_empty()
@@ -128,10 +141,15 @@ func show_city(city: Dictionary, state: WorldState) -> void:
 	_fit_scroll()
 
 
-func _add_route_label(text: String, color: Color) -> void:
+func _add_route_label(text: String, color: Color, is_new := false) -> void:
 	var label := Panels.label(text, UiScale.ui(), color)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_routes.add_child(label)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", Metrics.sm())
+	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(label)
+	if is_new: row.add_child(Panels.badge(I18n.t("ui.route.new_badge")))
+	_routes.add_child(row)
 
 
 ## Keep the action row fixed while the authored intro and routes scroll.
@@ -147,7 +165,7 @@ func _fit_scroll() -> void:
 func restyle() -> void:
 	if _scroll == null:
 		return
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	Panels.apply_card(self, "atlas")
 	_title.add_theme_color_override("font_color", Palette.ink())
 	for label in [_intel, _entry_hint, _routes_heading]:
 		label.add_theme_font_size_override("font_size", UiScale.ui())

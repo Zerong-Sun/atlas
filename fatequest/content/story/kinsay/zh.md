@@ -6,7 +6,7 @@ source_rev: 78e06adc1910
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
@@ -30,21 +30,20 @@ stamps:
   ev.kinsay.b.title: a44911d01156
   ev.kinsay.c.body: 2b740c19748d
   ev.kinsay.c.title: 4df4bc077831
+  ev.kinsay.entry.title: 334d59043acc
   ev.kinsay.entry.body: 74b5e172b3d8
-  ev.kinsay.entry.title: 4ff36535d29a
   ev.ev_kinsay_entry.choice_1_result: 84ed22a89c36
-  ev.ev_kinsay_entry.choice_2_result: f2e615aabcb6
-  ev.ev_kinsay_entry.choice_3_result: e2b62e9257e0
+  ev.ev_kinsay_entry.choice_2_result: 8687b9d75181
   ev.ev_kinsay_mentor_jiaobei.choice_1_result: ee2798320dcd
   ev.ev_kinsay_mentor_jiaobei.choice_2_result: f3ecea5ed883
   ev.ev_kinsay_a.choice_1_result: f0c085f6f869
-  ev.ev_kinsay_a.choice_2_result: 7f3a748a3a85
+  ev.ev_kinsay_a.choice_2_result: 4d3e0bdfd584
   ev.ev_kinsay_a.choice_3_result: 263d80b4a930
   ev.ev_kinsay_b.choice_1_result: 70d66d6c7237
   ev.ev_kinsay_b.choice_2_result: 81f4256b410e
   ev.ev_kinsay_b.choice_3_result: c989e394c7ef
   ev.ev_kinsay_c.choice_1_result: 3d4aa7d7f8db
-  ev.ev_kinsay_c.choice_2_result: f5f2909f44a6
+  ev.ev_kinsay_c.choice_2_result: 015c253b5d21
   ev.ev_kinsay_c.choice_3_result: 9626258cc51f
   ev.ev_kinsay_consequence_a.title: 0ec5f1c48602
   ev.ev_kinsay_consequence_a.body: 2ea0ccf7c8cf
@@ -63,17 +62,15 @@ stamps:
   ev.ev_kinsay_consequence_b.choice_1: c8cb2422f0d5
   ev.ev_kinsay_consequence_b.choice_1_result: ebfa3ca8dfb2
   ev.ev_kinsay_consequence_b.choice_2: 2cc4ace743a8
-  ev.ev_kinsay_consequence_b.choice_2_result: 25ecd7ac96e7
+  ev.ev_kinsay_consequence_b.choice_2_result: 32b4995c1a1d
   ev.ev_kinsay_consequence_b_resolution.title: cc23a3262714
   ev.ev_kinsay_consequence_b_resolution.body: 1c4511a37f25
   ev.ev_kinsay_consequence_b_resolution.choice_1: 4ca9d3830acc
   ev.ev_kinsay_consequence_b_resolution.choice_1_result: 3178a720b77e
-  ev.ev_kinsay_consequence_b_resolution.choice_2: 70d0c899c44b
-  ev.ev_kinsay_consequence_b_resolution.choice_2_result: 59f788629323
   ev.ev_kinsay_a_followup.title: aa04e443a837
-  ev.ev_kinsay_a_followup.body: e543ff163f1e
+  ev.ev_kinsay_a_followup.body: c13989bb7f56
   ev.ev_kinsay_a_followup.choice_1: c25263604fbd
-  ev.ev_kinsay_a_followup.choice_1_result: a9537cdedc9e
+  ev.ev_kinsay_a_followup.choice_1_result: b9dfc10ed8c8
   ev.ev_kinsay_a_followup.choice_2: 913c41fbdca7
   ev.ev_kinsay_a_followup.choice_2_result: 8d345a206dfb
   ev.ev_kinsay_a_followup.choice_3: b3ac1fecc0fb
@@ -93,7 +90,7 @@ stamps:
   ev.ev_kinsay_c_followup.choice_2: 06f21c8798b2
   ev.ev_kinsay_c_followup.choice_2_result: 03df86a77736
   ev.ev_kinsay_c_followup.choice_3: 20b584917aeb
-  ev.ev_kinsay_c_followup.choice_3_result: c2b2fcf8e82d
+  ev.ev_kinsay_c_followup.choice_3_result: 3995f948cba6
   ev.ev_kinsay_mentor_followup.title: a967f3f08fa5
   ev.ev_kinsay_mentor_followup.body: 8ee427347b4b
   ev.ev_kinsay_mentor_followup.choice_1: bdf69c9c04ab
@@ -102,6 +99,9 @@ stamps:
   ev.ev_kinsay_mentor_followup.choice_2_result: 1f3b5af8846d
   ev.ev_kinsay_mentor_followup.choice_3: 75495db8b567
   ev.ev_kinsay_mentor_followup.choice_3_result: d9d99d4a2424
+  ev.ev_kinsay_consequence_b_resolution.choice_2: 70d0c899c44b
+  ev.ev_kinsay_consequence_b_resolution.choice_2_result: 59f788629323
+  ev.ev_kinsay_entry.choice_3_result: e2b62e9257e0
 ---
 
 ## city.kinsay.name
@@ -110,376 +110,364 @@ stamps:
 
 ## ev.kinsay.a.choice.boat
 
-雇一条船在运河上待一天
+租条船，沿运河逛一天
 
 ## ev.kinsay.a.choice.tower
 
-登上鼓楼看脚下百条水巷
+登上鼓楼，俯瞰百条运河
 
 ## ev.kinsay.a.choice.walk
 
-走过桥看能不能数清
+沿桥走走，试试看能数多少座
 
 ## ev.kinsay.b.choice.bath
 
-在香汤中沐浴享用十道菜
+泡花香热水，再吃一顿十道菜
 
 ## ev.kinsay.b.choice.count_pepper
 
-数一日经过海关的四十车胡椒
+数数一天有多少车胡椒过税关
 
 ## ev.kinsay.b.choice.pepper
 
-从海关买两袋胡椒
+到税关买两袋胡椒
 
 ## ev.kinsay.c.choice.boat
 
-雇一艘有乐师和酒的画舫
+租一艘有乐师和酒的画舫
 
 ## ev.kinsay.c.choice.moonlight
 
-等到月出——帝国最美的景象
+等月亮升起，看看湖上夜景
 
 ## ev.kinsay.c.choice.watch
 
-站在岸边看那些浮在水上的宫殿
+站在岸边，看画舫从湖面经过
 
 ## ev.kinsay.entry.choice.customs
 
-到市舶司报关
+去市舶司申报货物
 
 ## ev.kinsay.entry.choice.lore
 
-打听这座城的来历
+问问当地人这座城的故事
 
 ## ev.kinsay.entry.choice.market
 
-穿过大市
+去大集市走走
 
 ## ev.kinsay.a.body
 
-行在是一座建在水上的城——据说有一万二千座石桥，皆高到船桅竖起亦可从桥下通过而不必落帆。
-有些桥上还开着店铺。街道便是运河；船便是车轿。人可以在行在过一辈子，干地上走的路不过百步。
-城中鼓楼顶上望去，百条水巷向四面辐射，两岸石堤笔直如刀斩。此城无墙——水便是墙，
-大汗以巡船舰队维持治安。
+行在像是建在水面上。据说城里有一万二千座石桥，大多高到船只不必降下桅杆就能从桥下通过，有些桥上甚至开着店。运河就是街道，船就像马车；有人一辈子住在这里，走过的陆路加起来不到百步。站上城中央的鼓楼，百条运河向四面延伸，两岸的石堤笔直得像刀切出来的一样。城里没有城墙，水道就是屏障，大汗派巡船维持治安。
+
+鼓楼下的孩子踩着桥阶数数： 孩子们边跳边接唱：“高桥让船帆过去，缓坡让挑担的人上桥；桥边开着热食铺，走路、乘船都能进城。” 桥工看着孩子们跨过石阶：“高拱给船留出水面，缓坡接住车马。桥面连着街道，走路和乘船都能到集市。”“高拱给船留出水面，缓坡让车马过桥。行在的桥多，桥面也成了街巷，走路和乘船都能到集市。”
 
 ## ev.kinsay.a.title
 
-一万二千桥
+行在的一万二千座桥
 
 ## ev.kinsay.b.body
 
-行在的集市是十座大方场，每边各半里，环以两层库房——下为店铺，上为账房。海与湖的每一种鱼、
-地上的每一种果、人所知的每一种织物、每一种香料、药材与香膏，都在这十座方场中出售。
-每日有四十车胡椒经过海关。连接各市的大街以砖石细密铺就，即使最大的雨亦无积水。两旁是浴堂与食肆：
-人可在花香的热水中沐浴，再以数枚铜钱吃上十道菜。
+行在有十座大集市，每座都是边长半英里的广场，周围是两层楼的库房：楼下做买卖，楼上记账。海鱼、湖鱼、各地水果、织物、香料、药材和香膏，在这些集市都能买到。每天有四十车胡椒经过税关。连接集市的主街用砖石铺得严丝合缝，暴雨天也不积水。街边有浴堂和食肆，花香热水洗浴后，只需几枚铜钱就能吃上十道菜。
+
+清早，鱼贩和果贩轮流唱招徕小调： “湖鱼晨起，海鱼午前； 香料过税，果子进篮； 一市看鲜，一巷看价； 十座大市，客人慢慢逛。” 老账房把集市的次序说给你听：“海鱼和湖鱼到货时间不同，香料经过税关后再摆摊。行在有多处大市场，逛一圈就能看出货从哪条水路来。”
 
 ## ev.kinsay.b.title
 
-十大市
+行在的十座大集市
 
 ## ev.kinsay.c.body
 
-城墙外的西湖上，行在的画舫昼夜漂浮——绘金、青与朱砂，张着丝绸凉棚，铺着垫座。每艘船都是一座浮在水上的亭阁。
-乐师在敞甲板上弹琵琶与古琴。舞者穿着绣着凤凰的衣装起舞。酒自瓷杯中流，灯笼挂在棚杆上，
-倒影在黑水上跳舞。湖之大，环行需整整一日。湖中岛上有游乐之宫，富人以三日之宴集于此。
-未见月下西湖的人，便未见过大汗帝国里最美的物事。
+行在的城墙外就是西湖，画舫昼夜漂在湖面上。船身漆成金色、蓝色和朱红色，搭着丝绸凉棚，铺着软垫，像一座座水上亭阁。乐师在甲板上弹琵琶和古琴，舞者穿着绣有凤凰的衣裳起舞；酒倒进瓷杯，灯笼的倒影在黑色湖面上摇曳。绕湖一圈要走整整一天，湖中岛上还有供游玩的宫殿，富人常在那里连办三天宴席。有人说，没在月光下看过西湖，就还没见过大汗帝国最美的景色。
 
 ## ev.kinsay.c.title
 
-西湖画舫
-
-## ev.kinsay.entry.body
-
-离开长安城，在美丽的乡野间走了三天，穿过一座又一座城镇村落，便到了最尊贵的行在——这个地名用我们的话说，
-差不多就是「天上之城」，我以前就告诉过你。既然已经到了这里，我就细细讲讲它的华美；这些都值得一说，
-因为这座城毫无疑问是天下最美、最尊贵的。下面要说的，是此国皇后交给征服此地的大将伯颜、请他转呈大汗的
-一份文书，好让大汗知道这座城多么超凡壮丽，从而保住它，不让它受到毁伤。文书里记下的实情，我一一讲给你听。
-那确是真的，马可波罗先生后来亲眼得见。且听细目。首先，文书上说，行在城周围有一百里。城里有石桥一万二千座，
-大半高得连庞大的船队都能从桥下通过。不必为桥多而吃惊——你看，整座城仿佛立在水中，又被水环绕，
-所以需要许多桥来通行。[桥虽高，引道却造得极好，车马皆可过。]文书又说，此城有十二个行会，
-每个行会住着一万二千户工匠。每户至少十二人，有的二十人，有的四十人——不全是师傅，也把在师傅手下干活的帮工算在内。
+西湖上的画舫
 
 ## ev.kinsay.entry.title
 
-至大城行在
+天上之城
+
+## ev.kinsay.entry.body
+
+离开长安后，你走了三天来到行在。当地人把它叫作“天上之城”。相传，城被攻下后，王后请将领伯颜把一份城中见闻转交大汗，希望他看过之后不要下令毁城。文书里说，行在周长约一百里，有一万二千座石桥，许多桥都高得能让大船通过；桥面坡度平缓，车马也能上下。城里还有十二个手工业行会，每个行会据说有一万二千户工匠人家，每家至少十二口，多的有二三十人。马可·波罗也说自己见过这座城。你站在河边，看着船从桥下一艘艘穿过去，终于明白这些数字从何而来。
 
 ## ev.ev_kinsay_entry.choice_1_result
 
-市舶司的书办在码头大秤上称过你的货物，把你的名字写进水道簿册。你转身要走，粮船水道上一位舟子在岸边唤住了你。
+市舶司的书吏在码头称过你的货物。你刚转身，一名负责运粮水道的船夫便在岸边叫住你。
 
 ## ev.ev_kinsay_entry.choice_2_result
 
-行在的人回答你的问题时，只是伸手指向水面——这座城太大，站着不动是说不清的。回答从一座桥传到另一座桥，日落前，一段更完整的叙述已经渡水而来，找到了你。
-
-## ev.ev_kinsay_entry.choice_3_result
-
-你在行在的大市集里走了一日，带出来一驮货物。天堂之城的市集，如今写进了你的行纪。
+你问了几个人，大家说法都不太一样。天快黑时，一个卖鱼的老船夫终于朝你招手：“想知道这城怎么活起来的？先看河。船把货送进来，桥把人接过去，税官再按船上的货收钱。”
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_1_result
 
-你付了钱，在庙中读签人矮桌前坐下，她把三只筊杯摆开。教诲简短而准确；最后她把手覆在杯上，为你投了最后一筊。
+祝师让你把两枚筊杯合在手里，先把问题说清，再掷在席上。“一正一反，我会按答应来解；两面一样，你换个问法再试。”临了她让你自己掷一次，问的是下一段路该先打听谁。
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_2_result
 
-庙中的读筊人演示两枚杯筊如何以落势作答。杯筊之法如今写进了你的行纪，只是施行之艺仍留在她手里。
+读筊的女子示范两只筊杯落地后如何作答。
 
 ## ev.ev_kinsay_a.choice_1_result
 
-你雇了一条船，在行在诸桥之下沿水道行了一日。舟子读水如读书；午后转过一个弯时，他收了桨，要告诉你这些桥藏着的秘密。
+你租船沿运河穿城。船夫熟悉每一道水流，下午转过一个弯，他收起船桨：“数桥先别急，听我说说这些河道是怎么修的。”
 
 ## ev.ev_kinsay_a.choice_2_result
 
-你在行在诸桥之间行走，未到正午便已数不清数目。天堂之城的运河，如今记在你的行纪里。
+你沿着行在的桥一路走，没到中午就数乱了。船夫笑着说：“别数桥了，先看看桥下的船——光这一条河，一天就能过上百艘。”
 
 ## ev.ev_kinsay_a.choice_3_result
 
-你登上鼓楼，望见下方百条运河，条条舟楫往来。南通苏州的路如今上了你的舆图，这幅景色也写进了行纪。
+你登上鼓楼，看见运河纵横、船只来往。守楼人指着南边：“往苏州走，先顺着这条水道，别在分岔口跟错船。”
 
 ## ev.ev_kinsay_b.choice_1_result
 
-你在税关花了二万银，买下两袋胡椒。一笔商人的身家化作香料，如今驮在你的货物里，运费也记入了行纪。
+商人把两袋胡椒交给你：“行在的税关这几天收得紧，货趁早买还划算。”
 
 ## ev.ev_kinsay_b.choice_2_result
 
-你在俯瞰集市广场的宅院里沐浴香汤、享用十道菜的筵席。侍奉的执事撤去最后一道菜却不肯就走，仿佛这座城的故事还没有结账。
+你在俯瞰集市的宅院里泡了香汤、吃完十道菜。管事撤下最后一道菜后没有马上离开，像是还有话想说。
 
 ## ev.ev_kinsay_b.choice_3_result
 
-你数出一天之内有四十车胡椒经过税关。运它而来的海路通向刺桐，如今这条水路上了你的舆图。
+你在税关看胡椒进出，一天就有四十车货经过。商人抹去秤盘上的胡椒粉：“这些货从刺桐坐船来，进了行在再分给各家铺子。”
 
 ## ev.ev_kinsay_c.choice_1_result
 
-你雇了一条带着乐师和酒的花船，荡入西湖。暮色渐浓、水上亮起灯笼时，船家侧过身，贴着乐声向你低声说话。
+暮色落在西湖上，船夫把船慢慢划进灯影里，侧过身问你：“先绕堤边，还是去对岸听曲？现在风小，琵琶声隔着水也听得清。”
 
 ## ev.ev_kinsay_c.choice_2_result
 
-你站在岸边，看水上宫阙在湖面缓缓移动。行在的游乐之湖，如今记在你的行纪里。
+你站在岸边，看着一艘艘画舫在湖面上缓缓驶过。
 
 ## ev.ev_kinsay_c.choice_3_result
 
-你等月亮升起在湖上。月光让你看见的东西，举国无人能够反驳；它在你心里沉淀下来，像一件确凿之事。
+你等到月亮升上湖面。灯船从桥下慢慢划过，琴声被水面送到岸边。撑船的女子问你：“这样的夜色，你还想去哪儿看？”
 
 ## ev.ev_kinsay_consequence_a.title
 
-行在：门上的印记
+行在：码头上的记号
 
 ## ev.ev_kinsay_consequence_a.body
 
-第一个回答并没有在城门处结束。一位在粮船水道上撑船的舟子，在码头把你引到一旁，问你打算从行在带走什么。问题背后正是水巷与粮船；他提出把你的名字与一个税关会记住的名字系在一起。你须决定如何对待这道征兆。
+码头上，一名负责运粮水道的船夫叫住你：“你要从行在带走什么消息？我能给你一个税关熟人的名字，不过得先知道你打算怎么用。”
 
 ## ev.ev_kinsay_consequence_a.choice_1
 
-收下这个名字，追问这位舟子谁能作保
+收下这个名字，问船夫谁能作保
 
 ## ev.ev_kinsay_consequence_a.choice_1_result
 
-你收下舟子递来的名字，追问谁能为它作保。他报出码头上两位书办的名字，此事又打开了。
+你收下船夫递来的名字，追问谁能替你作保。他指向码头边两位书吏：“先去找他们，提我的名字就行。”
 
 ## ev.ev_kinsay_consequence_a.choice_2
 
-谢过这位舟子，把自己的打算收在心里
+谢过船夫，暂时不透露打算
 
 ## ev.ev_kinsay_consequence_a.choice_2_result
 
-你谢过这位舟子，把自己的打算收在心里。此事在码头就此了结，行在不再有人向你多问一句。
+你谢过船夫，没有透露自己的打算。谈话到码头就结束了，行在的人也不再追问。
 
 ## ev.ev_kinsay_consequence_a_resolution.title
 
-行在：舟子的名字
+行在：船夫的名字
 
 ## ev.ev_kinsay_consequence_a_resolution.body
 
-你已答应把舟子的名字带在身上——那是一个税关会记住的名字。它不会替你决定整段旅程，但在下一处水关，这个名字或许能让你的等待缩短一半。
+你答应带着船夫的名字上路。税关认得这个名字；到了下一处运河税卡，或许能让你少等一半时间。
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1
 
-在天黑前把这个名字送到
+天黑前把名字送到
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1_result
 
-你在天黑前把这个名字送到了。舟子的承诺如今随你的名字而行，码头的人从此有理由接待你。
+你赶在天黑前把名字送到了。船夫的话现在和你的名字连在一起，码头上的人也愿意接待你。
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2
 
-把舟子的名字收进自己的行纪
+问问船夫的名字
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2_result
 
-你把舟子的名字收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
+你谢过船夫，没有透露自己的打算。船夫点点头：“也好，等你想好了再来找我。”
 
 ## ev.ev_kinsay_consequence_b.title
 
-行在：回答之后的路
+行在：码头的通行规矩
 
 ## ev.ev_kinsay_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一位粮包脚夫在码头上找到你，讲起水巷与粮船的另一番说法——水关如何收税，以及哪座桥为满载的船开闸。这说法不如游记宏大，却更适合带在身上。
+你打听运河的消息传到了码头。一名运粮脚夫擦着汗走来：“想坐满载的粮船，得先过税卡；走南边那道闸时叫一声守闸的，桥会抬起来。别赶错时辰，闸一落就得等下一班。”
 
 ## ev.ev_kinsay_consequence_b.choice_1
 
-照着这位脚夫的实用建议走
+请脚夫把税卡和运河通行规矩写清楚
 
 ## ev.ev_kinsay_consequence_b.choice_1_result
 
-你照着这位脚夫的实用建议走，请他把它写下来。他为你把这段叙述抄出，水道的真正尺度便落进你手里。
+脚夫把南边税卡和守闸的时辰写在纸上：“粮船满载，先让税吏看货单；到了抬桥那处，喊守闸人放行。错过这一班，桥落下来就得等。”
 
 ## ev.ev_kinsay_consequence_b.choice_2
 
-把这段叙述留给那位脚夫
+谢过脚夫，不要这份说明
 
 ## ev.ev_kinsay_consequence_b.choice_2_result
 
-你把这段叙述留给那位脚夫，自己收住了口。它回到了码头，行在不再向你索取什么。
+你谢过脚夫，没有要那份说明。他把纸收回去：“好，那我先去忙了。你要是改变主意，码头上还能找到我。”
 
 ## ev.ev_kinsay_consequence_b_resolution.title
 
-行在：水关的账目
+行在：运河税卡的账目
 
 ## ev.ev_kinsay_consequence_b_resolution.body
 
-你已选择带着这位脚夫的账目上路——水关如何收税，以及哪座桥为满载的船开闸。它不会替你决定整段旅程，但为你省下的，会多过你学它所花去的。
+脚夫把纸铺在码头石阶上，指着几处关卡：“这些地方要交税，满载的船从这座桥下过。记住这几处，下一程就不容易走错。”
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1
 
-在天黑前把这话告诉下一位舟子
+天黑前把消息告诉下一位船夫
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1_result
 
-你在天黑前把这话告诉了下一名舟子。水道的尺度从此走在你前头，它落在何处，你的名字便随到何处。
-
-## ev.ev_kinsay_consequence_b_resolution.choice_2
-
-把这份税关程表收进自己的行纪
-
-## ev.ev_kinsay_consequence_b_resolution.choice_2_result
-
-你花了一日，把这份税关程表抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
+你让脚夫当面把税卡和通行规矩写清楚。他边写边说：“这处收粮船税，那处查货。满载的船从这道桥下过，别走西边那条窄水道，搁浅了没人替你抬船。”
 
 ## ev.ev_kinsay_a_followup.title
 
-行在：一万二千桥的守水人
+行在：熟悉万桥的水夫
 
 ## ev.ev_kinsay_a_followup.body
 
-曾用船篙载你穿行全城的水务官，在码头又寻到你，篙上犹自滴水。他一生都在行在诸桥之间度过。他告诉你，这座城织得如同一张网：一百条水巷是网眼，石桥是网结，街道皆以石板铺就，任是大雨，泥泞也拦不住车马。他说，每座桥拱都有人计数看管，桥断一处，便如同执掌水政的人失信一句。他指给你看码头石上凿刻的税牌，水务官们便凭它算出每艘船当日该缴几何。他说，天堂之城并不漂浮——它是被一册好账目托住的。你望着这一万二千座桥下奔流的水，看见了旅人的传说里略去的那份秩序。
+撑船带你穿城的水务官在码头又叫住你，手里的长篙还滴着水。他指着桥下纵横的水道：“城里有上百条运河，街道铺着石头，下大雨也不容易陷车。每座桥都有人检查，坏了不修，船和货就都得堵在这儿。”他又指给你看刻在码头石上的税牌：“每艘船交多少，照牌子上的规矩算。天上之城可不是自己转起来的。”
 
 ## ev.ev_kinsay_a_followup.choice_1
 
-问水务官，水上的税如何估定
+问问水务官，船税是怎么算的
 
 ## ev.ev_kinsay_a_followup.choice_1_result
 
-水务官为你读那块税牌——粮船几何，客舟几何，丧舟分文不取。行在的水上法令，如今写进了你的行纪。
+水务官照着税牌给你讲：“粮船按货收，客船看载了多少人。送葬的船不收钱——这条可别跟掌柜说，他总想把每条船都算进账里。”
 
 ## ev.ev_kinsay_a_followup.choice_2
 
-问哪一条水路向南通苏州
+问哪条水路可以南下苏州
 
 ## ev.ev_kinsay_a_followup.choice_2_result
 
-水务官在掌心里画出向南的水路：沿水巷下大湖，再循载丝之舟所走的河道而去。去苏州的路，如今在你的舆图上清清楚楚。
+水务官在掌心画出南下路线：沿运河驶进大湖，再转上丝船常走的河道。“照这个方向走，苏州就在南边。”
 
 ## ev.ev_kinsay_a_followup.choice_3
 
-留下 一日，随水务官走过群桥
+留一天，跟水务官走走这些桥
 
 ## ev.ev_kinsay_a_followup.choice_3_result
 
-你花了一日与水务官过桥，学认税牌，学看每座桥拱的好坏。它耗去你路上的一日，但一万二千座桥对你而言，不再是一个数目。
+你把说明交给脚夫，没再多说。他回到码头，你也继续赶路。
 
 ## ev.ev_kinsay_b_followup.title
 
-行在：十大市场之账
+行在：十座大集市的账
 
 ## ev.ev_kinsay_b_followup.body
 
-行在十大市场中的一位商贾把你当作买家，留你在胡椒摊前。他告诉你，他卖的胡椒自海路到刺桐港，再沿河上行至行在；这座城一日所耗，西域一国一年也用不完。他说起十二行会的手艺，各行会各有门户与街坊，又说起十座市场，每旬三日，摊上尽是猎户与渔人的收获。他说，你若打算老实交易，他便教你看当日如何记账——胡椒过秤、定价、车脚钱如何折算。如何处置这桩提议，全在你。
+十座大集市里，一位商人把你当成买家，留你在胡椒摊边聊了起来。“胡椒从刺桐坐船来，再沿河送到行在。一天的用量，西边一个王国一年都未必赶得上。”他把秤砣往秤杆上一挂，“城里十二个手工业行会各有街坊。每周三天，十座集市都摆满猎物和鲜鱼。你想学看账吗？我教你算胡椒的重量、价钱，还有车费。”
 
 ## ev.ev_kinsay_b_followup.choice_1
 
-按商贾自己的价钱买胡椒
+按商人的价钱买些胡椒
 
 ## ev.ev_kinsay_b_followup.choice_1_result
 
-商贾按他账上所列的价目为你称出一份胡椒，这是他对先问行情再行交易的旅人的礼遇。胡椒入了你的货囊，十大市场的账则入了你的行纪。
+商人按账本上的标价称给你一份胡椒：“你先问清行情再买，这价钱就公道。”
 
 ## ev.ev_kinsay_b_followup.choice_2
 
-问胡椒自哪一座海港而来
+问胡椒是从哪个海港运来的
 
 ## ev.ev_kinsay_b_followup.choice_2_result
 
-商贾说出刺桐港之名——南来的海舶在那里泊岸——又说出胡椒溯河上行在的水路。海港如今上了你的舆图。
+商人把河道画在桌面上：“南边的船多从刺桐港进来，胡椒再沿河运到行在。你要找下一程的船，就去码头问问。”
 
 ## ev.ev_kinsay_b_followup.choice_3
 
-留下 一日，看十二行会如何结算
+看看十二个行会的作坊怎样称货、定价和记账
 
 ## ev.ev_kinsay_b_followup.choice_3_result
 
-你在行会各坊间留了一日，看他们定秤、记账、登价于大册。它耗去你一日，但你已见过一座有百万门户的城，如何把账目理得分毫不差。
+你在各行会的作坊里看他们称货、定价和记账。一个掌柜把账簿推过来：“你看看这几笔，哪种货的税最重？”
 
 ## ev.ev_kinsay_c_followup.title
 
-行在：西湖灯夜
+行在：西湖的灯火
 
 ## ev.ev_kinsay_c_followup.body
 
-曾在灯船间唱琵琶的歌者，次日傍晚在湖岸又寻到你，琴已裹布，酬金却坚辞不受。她说，水上听来的歌，一半是湖自己的，不能收钱。她告诉你，西湖是天堂之城的游乐之地：船在黄昏时载酒点灯而去，测量官曾数过湖上的船屋，千艘有余，无一艘靠营生过活。城在陆上劳作，在水上作乐；只见过市场的旅人，见到的只是行在的一半。她问你要从湖上带走什么——一道祝福、一则信念，还是整整一夜的音乐。
+昨晚在灯船上弹琵琶的女子第二天傍晚又来找你。她把琴包好，却不肯收你的钱：“水上听来的歌，有一半是湖自己的，不能收钱。”黄昏时，画舫载着酒和灯笼从岸边出发，湖上船屋有一千多艘，却很少有人靠做买卖维持生计。她朝远处的灯火扬扬下巴：“白天看集市，晚上来西湖。这样才算见过行在。你想听歌，还是坐船去湖心转一圈？”
 
 ## ev.ev_kinsay_c_followup.choice_1
 
-请歌者赐一道湖上的祝福，带上路去
+请她给你一句祝福，带在路上
 
 ## ev.ev_kinsay_c_followup.choice_1_result
 
-歌者把一茎芦管穿进你的衣领，又对着它唱了一句湖上自己的歌。你在水边的这段时日里，这座城的门仿佛为你开得稍宽了些。
+她把一截芦苇穿进你的衣领，唱了一句湖上的歌：“风过西湖，灯替归人照岸。”岸边有人听见，笑着邀你改天再来听曲。
 
 ## ev.ev_kinsay_c_followup.choice_2
 
-问湖上人家，灯是为何而点
+问问湖上的人为什么要放灯
 
 ## ev.ev_kinsay_c_followup.choice_2_result
 
-她说，灯是为溺者放在水上的，好叫没有一个魂魄在黑暗里找不到归路；画舫则为生者而张灯，让活人享受亡者所记得的东西。湖上的信念，如今写进了你的行纪。
+“湖上放灯，是给落水的人照路，也盼着他们的魂魄别迷路。”她望着远处一盏灯，“画舫上的灯是给活人看的。大家白天做工，晚上就来这里听曲、看水。”
 
 ## ev.ev_kinsay_c_followup.choice_3
 
-留到月上，听船上的乐声
+留到月亮升起，听一晚船上的音乐
 
 ## ev.ev_kinsay_c_followup.choice_3_result
 
-你在湖岸留到月升，看灯船漂向湖心。它耗去你一日，但你已听见天堂之城最美的时分，行在的人们也会记得你曾静静听过。
+你留到月亮升起，灯船一艘接一艘从岸边划过。琵琶声里夹着船夫的号子，女子唱完最后一曲，问你：“你们那边的水上，也会唱这样的歌吗？”
 
 ## ev.ev_kinsay_mentor_followup.title
 
-行在：庙祝的赠杯
+行在：读筊人的临别赠礼
 
 ## ev.ev_kinsay_mentor_followup.body
 
-教过你筊杯的庙祝，在门槛边又与你相见，两枚木杯以布裹着。她不问你拿占法做了什么；她说，杯子不记账。她只把一生余下的物件摆出来任你挑选：一套为她答了二十年问的雕花杯，一卦已经得杯首肯的南行水路，或是留下 一日，在身侧学会杯子的第三种回答——那声笑——如何听。她说，取对你有用的罢，因为一门手艺，好坏全看带着它的那双手。
+教过你掷筊的女子在庙门边又遇见你，两只木筊还用布包着。她笑了笑：“筊杯不记账。你想要它陪你走，还是替你问一条南下的水路？也可以留下来学学第三种回答——那声笑。”她把选择留给你。
 
 ## ev.ev_kinsay_mentor_followup.choice_1
 
-收下庙祝的雕花杯，作为别赠
+收下她送你的雕花筊杯
 
 ## ev.ev_kinsay_mentor_followup.choice_1_result
 
-庙祝把杯子裹进布里，不事铺张地交给你。她在门槛边教你的东西，如今写在你路上随时可查的地方。
+她把雕花筊杯用布包好，交到你手里：“拿着吧。我在庙门边教你的那些，路上慢慢练。”
 
 ## ev.ev_kinsay_mentor_followup.choice_2
 
-问哪一条水路，杯子肯为它赐准
+问问筊杯认可哪条南下水路
 
 ## ev.ev_kinsay_mentor_followup.choice_2_result
 
-庙祝再掷一次杯，杯子准了南行的水路：过湖，向苏州去。这条路如今画在你的舆图上，杯子的答复也随之同行。
+她再次掷筊，笑着指向南边：“这条水路穿过湖，能一路通到苏州。顺风顺水时，船家最爱走这里。”
 
 ## ev.ev_kinsay_mentor_followup.choice_3
 
-留下 一日，学听杯子那声笑
+跟她学一天，听懂筊杯的笑声
 
 ## ev.ev_kinsay_mentor_followup.choice_3_result
 
-你在庙槛边留了一日，学听杯子那声笑——那是手艺自认尚无话可答的一掷。它耗去你时日，但庙祝的耳力，如今也有一分是你的了；此地的寺观之间，亦已传开你的名。
+你留在庙门边跟她学了一阵。她让你掷筊、听落地的声音，再对照问题判断答案：“有时筊杯没说行，也没说不行，只是在笑你问得太急。”
+
+## ev.ev_kinsay_consequence_b_resolution.choice_2
+
+收下这份税关程表
+
+## ev.ev_kinsay_consequence_b_resolution.choice_2_result
+
+你翻看程表，弄清税额、船型和上缴期限。
+
+## ev.ev_kinsay_entry.choice_3_result
+
+你在行在的大市集走了一圈，摊位挨着摊位，叫卖声从一头传到另一头。

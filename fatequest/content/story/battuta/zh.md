@@ -2,13 +2,29 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: aa47bf58eaca
+source_rev: da292d3b3922
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔。白图泰《里哈拉》入城与探索事件文本。
+  现代白话、玩家视角；以伊本·白图泰《里哈拉》的见闻为史料来源。
+  传闻、信仰和作者判断须明确归属，不冒充客观事实；风俗从人物行动与对话中自然带出。
+  保留地名、数字、史料重点和机制结果，不仿古，不写成资料摘录。
+  阿卡旅店、哈米德与对白是创作；卡尔克努赫陵墓及果园、铜器传说来自《里哈拉》，按传闻讲述。
 
 stamps:
+  city.maldive.name: a99ff8fcf111
+  ev.maldive.entry.title: 9b45e69c9962
+  ev.maldive.entry.body: bbdd85ef7f57
+  ev.maldive.entry.choice.arrive: aebd1b10afb3
+  ev.ev_maldive_entry.choice_1_result: 647a575c6e86
+  ev.maldive.battuta_a.title: 9da0e08cf4ac
+  ev.maldive.battuta_a.body: 8823b25b0595
+  ev.maldive.battuta_a.choice.judge: d99fef82f64a
+  ev.maldive.battuta_a.choice.marry: c0e3cbb71d40
+  ev.maldive.battuta_a.choice.flight: b6b18884a6b1
+  ev.ev_maldive_battuta_a.choice_1_result: 70f9b27f6a37
+  ev.ev_maldive_battuta_a.choice_2_result: b5ce112a6bb1
+  ev.ev_maldive_battuta_a.choice_3_result: be221923353a
   ev.alexandria.battuta_a.title: 1531fda570cb
   ev.alexandria.battuta_a.body: 759ef8478a9a
   ev.alexandria.battuta_a.choice.observe: 5346b0ea881f
@@ -25,59 +41,46 @@ stamps:
   ev.ev_alexandria_battuta_b.choice_1_result: af37c8f1923a
   ev.ev_alexandria_battuta_b.choice_2_result: f15b55c74da2
   ev.ev_alexandria_battuta_b.choice_3_result: c79e099bed9d
-  ev.accon.battuta_a.title: fbd2707c5ba8
-  ev.accon.battuta_a.body: a09b0e9e7fa2
-  ev.accon.battuta_a.choice.tomb: 7f41c11ae880
-  ev.accon.battuta_a.choice.harbor: 456e0fc0732f
-  ev.accon.battuta_a.choice.mat: 2d133469db40
-  ev.ev_accon_battuta_a.choice_1_result: 5459480445b6
-  ev.ev_accon_battuta_a.choice_2_result: 1ea067dfa237
-  ev.ev_accon_battuta_a.choice_3_result: 76cdff3c1ccd
-  ev.yasdi.battuta_a.title: 7c4053664740
-  ev.yasdi.battuta_a.body: 7954aa691874
-  ev.yasdi.battuta_a.choice.cell: e7f0d9185ff7
-  ev.yasdi.battuta_a.choice.pray: 8857e67b4577
-  ev.yasdi.battuta_a.choice.shiraz: 1848e4336685
-  ev.ev_yasdi_battuta_a.choice_1_result: 323fb2c4c931
-  ev.ev_yasdi_battuta_a.choice_2_result: aeca53239c69
-  ev.ev_yasdi_battuta_a.choice_3_result: ab7616c062e3
-  ev.bochara.battuta_a.title: 620dbdb16be0
-  ev.bochara.battuta_a.body: 745de7405cb9
-  ev.bochara.battuta_a.choice.ruins: 6f020d204c6c
-  ev.bochara.battuta_a.choice.tale: 9ffeef096530
-  ev.bochara.battuta_a.choice.melon: 85ce60cc3c17
-  ev.ev_bochara_battuta_a.choice_1_result: 957af6a66c0a
-  ev.ev_bochara_battuta_a.choice_2_result: f1b4073e33ab
-  ev.ev_bochara_battuta_a.choice_3_result: d0753175ae1e
-  ev.delli.battuta_a.title: 294d8f0d49d4
-  ev.delli.battuta_a.body: 2291207d3b2b
-  ev.delli.battuta_a.choice.pyre: bd2c37cb0797
-  ev.delli.battuta_a.choice.court: 28026114c8f9
-  ev.delli.battuta_a.choice.ask: a4f867179461
-  ev.ev_delli_battuta_a.choice_1_result: 543119712559
-  ev.ev_delli_battuta_a.choice_2_result: afed2a26813f
-  ev.ev_delli_battuta_a.choice_3_result: e3ca683048b9
-  ev.delli.battuta_b.title: 8069d5fcd4f5
-  ev.delli.battuta_b.body: 21eef19d6f1e
-  ev.delli.battuta_b.choice.house: 09e706d6cd1a
-  ev.delli.battuta_b.choice.gwalior: b46536eceae0
-  ev.delli.battuta_b.choice.embassy: 5171c1dedad8
-  ev.ev_delli_battuta_b.choice_1_result: ae771928d9e5
-  ev.ev_delli_battuta_b.choice_2_result: b690f1a7919f
-  ev.ev_delli_battuta_b.choice_3_result: 4955f5af9074
-  city.maldive.name: a99ff8fcf111
-  ev.maldive.entry.title: 9b45e69c9962
-  ev.maldive.entry.body: bbdd85ef7f57
-  ev.maldive.entry.choice.arrive: aebd1b10afb3
-  ev.ev_maldive_entry.choice_1_result: 647a575c6e86
-  ev.maldive.battuta_a.title: 9da0e08cf4ac
-  ev.maldive.battuta_a.body: 8823b25b0595
-  ev.maldive.battuta_a.choice.judge: d99fef82f64a
-  ev.maldive.battuta_a.choice.marry: c0e3cbb71d40
-  ev.maldive.battuta_a.choice.flight: b6b18884a6b1
-  ev.ev_maldive_battuta_a.choice_1_result: 70f9b27f6a37
-  ev.ev_maldive_battuta_a.choice_2_result: b5ce112a6bb1
-  ev.ev_maldive_battuta_a.choice_3_result: be221923353a
+  ev.accon.battuta_a.title: 7915e6bdd16d
+  ev.accon.battuta_a.body: 7c4816eae4c5
+  ev.accon.battuta_a.choice.tomb: ee527fea76db
+  ev.accon.battuta_a.choice.harbor: c68d2b197fa8
+  ev.accon.battuta_a.choice.mat: afc036b39a20
+  ev.ev_accon_battuta_a.choice_1_result: eca546180510
+  ev.ev_accon_battuta_a.choice_2_result: 6f32243bd80a
+  ev.ev_accon_battuta_a.choice_3_result: 5715b55c6bc7
+  ev.yasdi.battuta_a.title: 0a7fdf83cc14
+  ev.yasdi.battuta_a.body: 1ce9c7d70372
+  ev.yasdi.battuta_a.choice.cell: e095cf1e7a1b
+  ev.yasdi.battuta_a.choice.pray: c2b548ad07f9
+  ev.yasdi.battuta_a.choice.shiraz: 581556947c00
+  ev.ev_yasdi_battuta_a.choice_1_result: 9537a0b0ed65
+  ev.ev_yasdi_battuta_a.choice_2_result: 95d86bb30434
+  ev.ev_yasdi_battuta_a.choice_3_result: 464d43992cf1
+  ev.bochara.battuta_a.title: 844bbb748e64
+  ev.bochara.battuta_a.body: dcc206741613
+  ev.bochara.battuta_a.choice.ruins: 57ce8135aeed
+  ev.bochara.battuta_a.choice.tale: ff60a6baa4e4
+  ev.bochara.battuta_a.choice.melon: dd31fb756cb3
+  ev.ev_bochara_battuta_a.choice_1_result: dc9801d249e0
+  ev.ev_bochara_battuta_a.choice_2_result: 5d50928edf0f
+  ev.ev_bochara_battuta_a.choice_3_result: 4adb25477976
+  ev.delli.battuta_a.title: 26f557bf1549
+  ev.delli.battuta_a.body: 2c719d70600d
+  ev.delli.battuta_a.choice.pyre: a5849269e8f8
+  ev.delli.battuta_a.choice.court: d236a252cba8
+  ev.delli.battuta_a.choice.ask: 25524edeed32
+  ev.ev_delli_battuta_a.choice_1_result: 936b037172af
+  ev.ev_delli_battuta_a.choice_2_result: 2ba671f5cfb7
+  ev.ev_delli_battuta_a.choice_3_result: 46df3eccf89f
+  ev.delli.battuta_b.title: 64b6daac4573
+  ev.delli.battuta_b.body: 159440e9564c
+  ev.delli.battuta_b.choice.house: 4a788f8769c2
+  ev.delli.battuta_b.choice.gwalior: fcd6ebe5ede0
+  ev.delli.battuta_b.choice.embassy: 431338d02420
+  ev.ev_delli_battuta_b.choice_1_result: e01e37bfb938
+  ev.ev_delli_battuta_b.choice_2_result: b9ebe8002926
+  ev.ev_delli_battuta_b.choice_3_result: dede0323be9e
   arch.battuta.name: 39a6401ac763
   arch.battuta.obsession: 58b4c7f41c69
   ev.melibar.battuta_a.title: 9665de2beaa8
@@ -88,14 +91,14 @@ stamps:
   ev.ev_melibar_battuta_a.choice_1_result: f6ec9f09942c
   ev.ev_melibar_battuta_a.choice_2_result: 3ab90a220a5e
   ev.ev_melibar_battuta_a.choice_3_result: cf5896751967
-  ev.cail.battuta_a.title: 1a5f7c93c323
-  ev.cail.battuta_a.body: 7e568aef132f
-  ev.cail.battuta_a.choice.baba: b662084d26e1
-  ev.cail.battuta_a.choice.foot: 9d621f423ef6
-  ev.cail.battuta_a.choice.ruby: fc19688be671
-  ev.ev_cail_battuta_a.choice_1_result: 62761fab9f06
-  ev.ev_cail_battuta_a.choice_2_result: e2b8172b12ca
-  ev.ev_cail_battuta_a.choice_3_result: 369338ae6084
+  ev.cail.battuta_a.title: 0daf85e0c805
+  ev.cail.battuta_a.body: 97f61bbf8f21
+  ev.cail.battuta_a.choice.baba: 16459cdb857d
+  ev.cail.battuta_a.choice.foot: bafd30c9b3c1
+  ev.cail.battuta_a.choice.ruby: 83d6110e6996
+  ev.ev_cail_battuta_a.choice_1_result: 2f90f05fe4d9
+  ev.ev_cail_battuta_a.choice_2_result: 1c4fdf1a8a7e
+  ev.ev_cail_battuta_a.choice_3_result: 54adde12a031
   ev.java-major.battuta_a.title: 8128ad07aab0
   ev.java-major.battuta_a.body: ebca015580b2
   ev.java-major.battuta_a.choice.audience: fd4b275ac1ac
@@ -122,7 +125,7 @@ stamps:
   ev.ev_kinsay_battuta_a.choice_1_result: 1fe3d3b4c61d
   ev.ev_kinsay_battuta_a.choice_2_result: fd113717a724
   ev.ev_kinsay_battuta_a.choice_3_result: 60a112342d41
-  ev.cail.entry.choice.battuta: 76d987fd959c
+  ev.cail.entry.choice.battuta: 932406953883
   ev.ev_cail_entry.choice_4_result: f69039ddbd05
   ev.melibar.entry.choice.battuta: 00ebf2c05d3c
   ev.ev_melibar_entry.choice_4_result: e12c954097fd
@@ -134,483 +137,512 @@ stamps:
 
 ## ev.alexandria.battuta_a.title
 
-城门前的「法官」
+门口等吉兆的年轻法官
 
 ## ev.alexandria.battuta_a.body
 
-日落时分，亚历山大的城门将闭。一位贫苦的学者仍坐在门侧，不肯入城，说要等一个吉兆。守门人恼他迟延，讥讽道：「法官先生，请进罢。」他应声答道：「若真主意欲，便做法官。」遂入城，投宿学舍，埋头攻读。其后声名与谦德达于埃及王廷；恰逢亚历山大法官亡故，城内饱学之士争任此职者甚众，他却不存一念——苏丹偏偏把这职位授给了他。他任职清廉，名声大振。
+伊本·白图泰记过一位穷学者的故事：亚历山大城门快关了，他却坐在门边不肯进去，说要等个吉兆。守门人催烦了，笑他：“法官先生，还不进城吗？”学者顺口答：“真主若愿意，我就做法官。”他进城后住进学舍，埋头读书。后来，亚历山大法官空缺，城里不少学者都想争这个位置，他却没去求；苏丹反而选中了他。他当得清廉，名声也传开了。
 
 ## ev.alexandria.battuta_a.choice.observe
 
-立于门侧，看守门人讥那贫士
+在旁边听守门人打趣那位学者
 
 ## ev.alexandria.battuta_a.choice.speak
 
-上前问那贫士，何故候门不入
+上前问问他为什么不进城
 
 ## ev.alexandria.battuta_a.choice.omen
 
-记下此兆，随他一同入城
+和他一起进城，追问这件怪事
 
 ## ev.ev_alexandria_battuta_a.choice_1_result
 
-你立于门侧，守门人讥那贫士：「法官先生，请进罢。」他应声答道：「若真主意欲，便做法官。」黄昏便在门边过去，为此费去你 1 日光阴。你把这番见闻记入行纪。
+守门人笑着催他：“法官先生，还不进城吗？”学者答：“真主若愿意，我就做法官。”你在门边听到天黑。
 
 ## ev.ev_alexandria_battuta_a.choice_2_result
 
-那贫士答你：非见吉兆，不敢入城。后来你听说他投宿学舍，埋头攻读，名达王廷；亚历山大的法官之位，竟落在这位候门贫士身上。你的行事之名先你一步传开。
-
-## ev.ev_alexandria_battuta_a.choice_3_result
-
-你记下此兆，随他穿过城门。数月之后你再见他，他已是亚历山大的法官，清廉公正，名闻四方。你把这番见闻记入行纪。气运稍稍偏向于你。
+学者告诉你，他在等一个吉兆。后来你听说，他进城后住进学舍读书，竟真成了亚历山大的法官。讲到这里，守门人笑道：“这回他总算等着了。”
 
 ## ev.alexandria.battuta_b.title
 
-圣者预言三兄弟
+圣者托付的三封问候
 
 ## ev.alexandria.battuta_b.body
 
-亚历山大有位大圣者，名博尔罕·奥丁·艾阿拉吉，学问渊博，能行奇迹。一日他唤你入见，说道：「我见你生性爱游历四方。」你答：「正是。」——其实你当时并无远行之志。他说：「你须往印度访我兄弟法里德·奥丁，往信地访我兄弟罗克恩·奥丁·伊本·宰凯里雅，往中国访我兄弟博尔罕·奥丁；见着他们，替我致意。」你听罢大为惊异，自此立下志愿，不一一访到，决不罢休。
+亚历山大的圣者博尔罕·奥丁·艾阿拉吉把你叫到跟前：“我看你是个爱走远路的人。”你答是——其实那时你还没打算远行。他接着说：“我有三个兄弟。一个在印度，一个在信地，一个在中国。你要是见到他们，替我问声好。”当时你只当是句托付。后来真正踏上远路，每到一座城，你都会想起这三位兄弟。
 
 ## ev.alexandria.battuta_b.choice.promise
 
-向圣者立誓，三处兄弟必一一访到
+答应他：三位兄弟我都会去找
 
 ## ev.alexandria.battuta_b.choice.ask
 
-细问三位兄弟的名姓与所在
+问清三位兄弟的名字和去处
 
 ## ev.alexandria.battuta_b.choice.depart
 
-辞别圣者，把此约记入行纪
+向圣者告辞，继续追问墓主人的旧事
 
 ## ev.ev_alexandria_battuta_b.choice_1_result
 
-你应下此约。圣者之言如线引你东行——此后你果在信地、印度与中国寻见三人，一一转达了问候。你把这番见闻记入行纪。
+你答应替他问候。后来你果真在信地、印度和中国找到三位兄弟，把圣者的话一一带到。你把这段旅程。
 
 ## ev.ev_alexandria_battuta_b.choice_2_result
 
-圣者一一说来：印度、信地与中国，三人皆其兄弟，名姓俱在。远方之名自此有了着落。气运稍稍偏向于你。
+圣者说清了三位兄弟的名字和去处：印度、信地、中国。你问他从哪儿打听消息，他笑道：“到了地方，多问问常来往的商人，总会有人认得他们。”
 
 ## ev.ev_alexandria_battuta_b.choice_3_result
 
-你辞出圣者之门，此约记入行纪。万里之外，三人等你问候——此事你终身没有放下。你的行事之名先你一步传开。
+你向圣者告辞。后来每到一座新城，你都会留心打听有没有他那三位兄弟的消息；这趟路，也渐渐有了一个要完成的约定。
 
 ## ev.accon.battuta_a.title
 
-推罗城侧，织席者的陵墓
+旅人的石榴故事
 
 ## ev.accon.battuta_a.body
 
-你自阿卡往推罗。推罗三面环海，城极险固，港口素负盛名。城侧有一陵，葬阿布·雅库布·优素福，人传他曾是西方某位君王；陵上有道堂，为萨拉丁·伊本·阿尤布所建。相传此人生前以织席为生，曾在太马士革为苏丹努尔·奥丁看守果园。一日主人入园要石榴，他一连捧出数枚，枚枚似酸；主人问他久在园中何以不辨酸甜，他答道：「我受雇看园，不是来吃石榴的。」时人传为佳话。
+阿卡海边的一块遮阳布下，哈米德正把一张旧席子卷起来。他说自己从内陆的卡尔克努赫过来，曾在那里的道堂住过一晚。卖水的阿迪勒给他添了水。他的女儿萨法也坐在旁边，叫他把路上的故事讲完。
+
+“那里有人讲阿布·雅库布·优素福，”哈米德说，“说他做过君王，后来靠织席过日子。还有人说，他在大马士革替努尔·奥丁看过果园。”
+
+萨法问：“园里的石榴甜吗？”
+
+“讲故事的人说，他摘来的几颗都酸。”哈米德笑了，“有人问他为什么不挑甜的。他说自己受雇看园子，从没摘过果子尝。”
+
+萨法把一颗石榴放在木板上，要哈米德当场猜猜甜不甜。哈米德拿起来掂了掂，又放回去：“等借到刀，咱们一起尝。”你坐在旁边，听他们商量去哪里借一把好刀。
 
 ## ev.accon.battuta_a.choice.tomb
 
-拜谒阿布·雅库布之陵
+请哈米德讲讲卡尔克努赫的道堂，陪他沿海边走走
 
 ## ev.accon.battuta_a.choice.harbor
 
-绕城看推罗三面环海的形势
+跟哈米德沿旧港石阶走走，问去推罗的路
 
 ## ev.accon.battuta_a.choice.mat
 
-向守陵人打听织席者的旧事
+请哈米德把织席人的故事讲完
 
 ## ev.ev_accon_battuta_a.choice_1_result
 
-你于道堂中礼拜祝祷。相传此陵葬的是西方某位君王，生前却以织席为生——名与实如此相去，令人默然良久。你把这番见闻记入行纪，在阿卡，你的行事之名先你一步传开。
+你陪哈米德沿海边的歇脚处寻找熟悉山路的同行人，走了一天。他说起卡尔克努赫的道堂，旅人到了那里能喝到水，有人会指给他们看陵墓的位置。路在内陆，他想带上一个认识山道的伙伴。
+
+回到遮阳布下，萨法已经把石榴切开。她先递给哈米德一瓣，他咬了一口，笑着说这回买对了。阿迪勒把一瓣递给你，感谢你陪哈米德找人；在阿卡歇脚的旅人也渐渐认得你了。
 
 ## ev.ev_accon_battuta_a.choice_2_result
 
-你绕城半匝：三面海涛拍岸，港中樯桅如林，果然是险固有名的港口。通往推罗（提尔）的道路，就此展开在舆图上。为此费去你 1 日光阴——出阿卡至此，路不算远。
+你和哈米德沿旧港石阶走到水边。他指着海岸说，往北的路会接上去推罗的方向。他以前在那里见过人补船网，还向一位修网人借过小刀。
+
+这一天你陪他沿海边问人，傍晚一位修网人借给你们一把小刀。萨法听说找到了，立刻把那颗石榴拿出来。你把哈米德指的推罗方向记在地图上。
 
 ## ev.ev_accon_battuta_a.choice_3_result
 
-守陵人讲起那段公案：看园人一连捧出数枚酸石榴，只说「我受雇看园，不是来吃石榴的」。时人传为佳话，你听罢不禁失笑；阿卡的市井间，你的行事之名先你一步传开。
+哈米德把席子放到一边，说故事还没讲到头。旅人们传说，阿布·雅库布·优素福后来曾把一位姑娘嫁妆里的铜器熔成金子。萨法睁大了眼，问他亲眼见过没有。
+
+“我只见过那间道堂和他的墓。”哈米德说。他讲起自己怎样在内陆迷了路，又怎样被一位赶驴的人领到门前。你听了一天，把这个传闻和真正走过的路分别记下。傍晚，阿迪勒借来一把刀，萨法切开石榴分给大家。随后他请你给新来的旅人讲了一遍故事，大家都愿意听。
 
 ## ev.yasdi.battuta_a.title
 
-法尔斯山道上的道堂
+旅舍主人讲的山路故事
 
 ## ev.yasdi.battuta_a.body
 
-你在法尔斯的高山间行了三日，每至一站，都有道堂备下饭食，供修行者、问学者与行旅歇宿。此地称卢尔，山高路险，道路凿于岩间，长十七日行程，宽十日。你与十位修行人同行，内中一位司铎、一位宣礼员、两位诵经师。途经小城耶兹德，你在此歇脚。人说此去设拉子尚有二十程，那里住着圣徒马吉德·奥丁——圣者之冠，能行奇迹；法尔斯的居民诚信笃实，妇女尤其贤淑。
+耶兹德一处旅舍里，主人哈米德在补破草席。女儿端面包给两位从伊斯法罕来的旅人；他们前些日子还走过法尔斯山地。他们说，山路上的小旅舍常备着饭，走晚的人也能吃上一口。
+
+“他们知道谁会来吗？”女儿问。“多半不知道，”一个旅人说，“所以你父亲不是也多备一块面包吗？”哈米德笑着让她把面包放到客人面前。旅人还转述了在设拉子听来的故事：当地有位宗教长者，常招待远来的客人。你可以在这里住一晚，参加晚间礼拜，或请他们讲讲从伊斯法罕来耶兹德的路。
 
 ## ev.yasdi.battuta_a.choice.cell
 
-入道堂歇宿，食其备下的饭食
+在旅舍住一晚
 
 ## ev.yasdi.battuta_a.choice.pray
 
-与同行的修行人一同礼拜
+参加晚间礼拜
 
 ## ev.yasdi.battuta_a.choice.shiraz
 
-打听圣徒马吉德·奥丁之名
+问他们从伊斯法罕到耶兹德怎么走
 
 ## ev.ev_yasdi_battuta_a.choice_1_result
 
-道堂中备有面包、肉食与甜食，随到随取。你饱餐一顿，歇了一夜，为此费去你 1 日光阴。你把这番见闻记入行纪。
+你在旅舍住了一晚。哈米德的女儿帮你找了块干净地方铺被褥。第二天早上，你又帮她给新到的旅人摆面包。哈米德向你道谢，也把你的好意讲给邻居听。
 
 ## ev.ev_yasdi_battuta_a.choice_2_result
 
-宣礼员唤拜，诵经师朗声诵读《古兰经》，你与同行者一同礼拜。同行的修行人说：此路道堂，专为过客备下。气运稍稍偏向于你。
+你跟他们一起礼拜，随后留下来吃面包。一位旅人问你从哪儿来，屋里的人便聊起各地的路和熟人。离开时，他们已经记住了你，下次见面也会打招呼。
 
 ## ev.ev_yasdi_battuta_a.choice_3_result
 
-人说马吉德·奥丁是圣者之冠、能行奇迹，坐镇设拉子。你把这番见闻记入行纪。通往伊斯帕罕（伊斯法罕）的道路，就此展开在舆图上。
+你花了一天听旅人讲他们从伊斯法罕到耶兹德的路。哈米德的女儿找来一张纸，让你记下他们说的岔路和歇脚处。离开前，你把这段路记在地图上。
 
 ## ev.bochara.battuta_a.title
 
-不花剌的废墟与铁匠之王
+布哈拉旧学舍的墙
 
 ## ev.bochara.battuta_a.body
 
-你自花剌子模行十八日，穿过无人烟的沙地，方抵不花剌——乌浒水外的大城。蒙古人来过后，此城几乎夷平，城中已无一人懂得学问。人说成吉思汗当年随蒙古人踏入伊斯兰诸国，尽行毁坏；他起初本是忽炭地方的铁匠，慷慨有力，身材魁梧，惯常聚人宴饮，来附者渐众，便推他为首。他先平本境，次收忽炭，再取中国，又降喀什噶尔诸地；后因商旅间一桩财货纷争，兴兵西征，王师迎战，一战而溃。
+布哈拉一处旧学舍的墙边，卖瓜的女人正帮父亲补摊上的遮阳布。附近有些房屋早年遭过战火，后来陆续修起来；这段墙还留着，孩子们拿它比谁长高了。父亲说，家里一直讲这片街在早年的战事后怎样修葺。女儿问：“那时候这段墙也在吗？”父亲说，老邻居记得墙一直没倒，只是屋子换过几回。
+
+隔壁老人也凑过来，讲自己小时候听的故事：成吉思汗原是忽炭的铁匠。卖瓜的女人打断他：“我爹听来的又是另一种。你说是故事，可别讲得像亲眼见过。”老人笑了，承认记不清是谁先这么说的。他倒认得去撒马尔罕的商路，曾托车队把瓜运过去。
+
+你问起旧墙、那条路和摊下晾着的瓜片。卖瓜人愿意带你看看旧学舍的位置；老人可以花一天说清去撒马尔罕怎么走；你也能花一点钱尝块瓜，边吃边等他们补好棚顶。
 
 ## ev.bochara.battuta_a.choice.ruins
 
-在残垣间寻访昔日学问的遗迹
+跟卖瓜人去看旧学舍，留一天
 
 ## ev.bochara.battuta_a.choice.tale
 
-听人讲铁匠成吉思汗的旧事
+听老人讲旧故事和去撒马尔罕的路
 
 ## ev.bochara.battuta_a.choice.melon
 
-尝不花剌有名的甜瓜
+花 0.4 银买块瓜吃
 
 ## ev.ev_bochara_battuta_a.choice_1_result
 
-城中残垣断壁，不见一卷书。人说蒙古人来后，此地学问尽绝——你默然立于瓦砾之间。你把这番见闻记入行纪。你的行事之名先你一步传开。
+卖瓜人沿着留下的墙带你走了一圈，指给你看大家记得的旧学舍位置。你听她家和邻居谈了整整一天；他们也记住了你愿意花时间了解这片街区。
 
 ## ev.ev_bochara_battuta_a.choice_2_result
 
-人说成吉思汗本是忽炭的铁匠，慷慨有力，惯常聚人宴饮，来附者渐众，遂推为首；先平本境，再取中国，后因商旅财货之争兴兵西征。你把这番见闻记入行纪。
+老人把铁匠的故事讲完，又说自己没法查证。接着，他花一天讲那些送瓜的车队怎样去撒马尔罕、在哪儿歇脚。你把那座城和路都记在地图上。
 
 ## ev.ev_bochara_battuta_a.choice_3_result
 
-此瓜皮绿瓤红，味甜而略硬；切成条晒干，可装匣运往印度与中国，干果之中无出其右，人常以此献于国王。你把这番见闻记入行纪。气运稍稍偏向于你。
+你付了 0.4 银，在棚下把那块瓜吃完。卖瓜人系好遮阳布最后一角，父亲也给自己切了一片。你歇过这一阵，走路又有了精神。
 
 ## ev.delli.battuta_a.title
 
-德里郊外的火堆
+院子里的粮册
 
 ## ev.delli.battuta_a.body
 
-往德里的路上，你亲见此俗：丈夫死了，妻子盛装而出，印度教徒与婆罗门击鼓吹箫相送。火已燃起，先投死夫，其妻纵身扑上，同烬。此俗不强制，却受人鼓励——殉夫之妇，其家以为荣、可托以信；不肯殉者，终身粗衣，困居亲族，视同不忠。入德里后，又闻苏丹治政严急：赐金动以万计，伴驾征讨耗费无算，臣下负债五万五千第纳尔，须献颂诗，苏丹方命国库偿清，戒曰：「用度毋得过所入。」
+德里一处发粮的院子里，希琳把受潮的册子摊在木块下压着。昨夜的雨把几户人家的记号洇开了。女儿萨菲娅拎着空袋来问：“拉希姆舅舅领过了吗？”希琳把纸举到光里：“名字还能认，领了一份还是两份，偏偏看不清。”邻桌的老记账人说，昨天的木筹还留着，可他正忙着给下一户称粮。
+
+你问院子里的人为何都等着。希琳说：“我随手填个数，总有人要少拿。”萨菲娅想把册子送去舅舅家核对，被母亲叫住：纸还湿，路上再蹭几下就更难看了。排队的一位商人说，他的驮队午后去坎贝，沿西行商路也见过这样的粮院，认得几处能打水的地方。
+
+希琳请你替她压住纸角，好把木筹拿来。萨菲娅指着舅舅名字旁那一小团墨，老记账人凑近看了看，正要开口。
 
 ## ev.delli.battuta_a.choice.pyre
 
-立在火堆旁，看送葬的鼓吹
+留下帮忙核对木筹与粮册
 
 ## ev.delli.battuta_a.choice.court
 
-听人讲苏丹宫中的赏罚
+花一天问商人去坎贝的路
 
 ## ev.delli.battuta_a.choice.ask
 
-问送葬者，殉夫之俗缘何而荣
+帮希琳向各家说明改过的份额
 
 ## ev.ev_delli_battuta_a.choice_1_result
 
-火起烟浓，鼓声未歇。殉夫之妇，其家以为荣、可托以信；不肯殉者，终身粗衣受制——你见此俗，良久无言。你把这番见闻记入行纪。
+你留到傍晚，一枚枚对木筹和粮册。拉希姆确实只领过一份；他来时，希琳把欠的那份添进袋子。萨菲娅将晾干的册子收进屋里。院子里的人记得你陪他们把账核清。
 
 ## ev.ev_delli_battuta_a.choice_2_result
 
-人说苏丹赏赐动以万计，用度却苛：臣下负债五万五千第纳尔，须献颂诗一首，苏丹方命国库偿清，并戒「毋得过所入」。你把这番见闻记入行纪。气运稍稍偏向于你。
+商人给牲口喂过料，花一天把往西去坎贝的走法讲给你听。他说出能打水的地方，又提醒你雨大时哪段路会积水。你在地图上记下德里到坎贝的路线。临走前，你还替萨菲娅把潮湿的册子挪到远离粮袋的地方。
 
 ## ev.ev_delli_battuta_a.choice_3_result
 
-送葬者说：殉夫之妇，其家以为荣、可托以信；不肯殉者，终身粗衣，困居亲族。鼓声火影里，你不作一言。你把这番见闻记入行纪。
+老记账人对好木筹后，你帮希琳逐户叫人，解释改过的份额。一位邻居起初不服，萨菲娅让他看木头上自己留下的旧记号，他才点头。忙到天晚，各家都领了粮。希琳说你以后路过，尽管来院里乘凉。
 
 ## ev.delli.battuta_b.title
 
-苏丹的厚赐与中国之聘
+驿舍里的两捆信
 
 ## ev.delli.battuta_b.body
 
-你入德里，先至苏丹太后宫门献礼，受赐锦袍；居舍毡毯器用卧具柴薪无不备，米面与肉皆出宫中。苏丹每日赐面粉一千德里斤——每斤当埃及二十五斤——肉千斤，油、橄榄油与槟榔无数。未几苏丹召见，欲遣你为使节往中国皇帝之朝。中国皇帝先有厚礼来聘：马木路克百人、女奴五十、织锦五百段、麝香五百担；又请于科拉山重建偶像庙——山当吐蕃之界，有金矿，雨后溪水染毒草汁，饮之立毙。
+德里一间接待旅人的屋里，主人希娜阿姨正在给两支商队分信。外甥给西行和东行的信各扎一捆，又把它们放在漏雨的瓦片下。“我记得用了哪块布，”他说，“可标签的墨全洇了。”希娜叫他先解开外层，逐个念出收信人的名字，再交给赶路的人。
+
+你问西边那捆由谁带。一位往坎贝方向走的车夫从门边举手，说妹妹住在沿途一处歇脚地。东行的带信人说，去遥远的于阗要经过好几次转交，地址更得写清。希娜问他有没有干布重新包信。他拿出一块，承认其余的留着铺自己睡的地方。希娜叫外甥去储藏间再找。
+
+又有一家人来问住处，希娜得赶在天黑前安顿好。她请你先按名字把信排着，等外甥抱回干布。
 
 ## ev.delli.battuta_b.choice.house
 
-检视苏丹所赐的居舍与给养
+留一天帮希娜安顿来客
 
 ## ev.delli.battuta_b.choice.gwalior
 
-出城看瓜廖尔堡的奇观
+花一天问西行车夫去坎贝的路
 
 ## ev.delli.battuta_b.choice.embassy
 
-应下使节之任，收下锦袍与盘缠
+花一天整理东行的信和路单
 
 ## ev.ev_delli_battuta_b.choice_1_result
 
-毡毯、器皿、卧具、柴薪一应俱全；每日面粉一千德里斤、肉一千斤，油与槟榔无数，皆出宫中。果如人所言，太后之赐不虚。你把这番见闻记入行纪。
+你留到第二天，帮希娜让每家都住进干燥的屋里。外甥分好信，你把铺盖搬上楼。最后一位客人有了住处，希娜当着邻居的面谢你，晚饭还给你留了座。
 
 ## ev.ev_delli_battuta_b.choice_2_result
 
-瓜廖尔堡雄踞山顶，本是一座名唤古马塔的山，荒兽出没；修士高瓦利·帕居此，地主苏拉杰·辛来乞水，饮之而愈，遂扩井建堡；修士为他改名苏拉杰·帕尔，说子孙守此名者即守此堡，其后八十四位后嗣相继为王。你把这番见闻记入行纪。你的行事之名先你一步传开。
+西行车夫花一天陪你核地址，也按顺序讲去坎贝的歇脚地。他指出妹妹住处附近的驿站，再把后面的路画清。车夫抱走信之前，你把德里到坎贝的路线记进地图。
 
 ## ev.ev_delli_battuta_b.choice_3_result
 
-你应下此任，受赐锦袍、马匹与盘缠。中国皇帝的厚礼——马木路克百人、女奴五十、织锦五百段、麝香五百担——已在宫中候着；那山间的偶像庙，尚待重建。你把这番见闻记入行纪。
+你花一天按下一位带信人分好东行的信，又誊了那份通往于阗的长路清单。希娜付你零点八银工钱。外甥在信捆装车前再念一遍收信人，你把德里到于阗的路线记进地图。
 
 ## city.maldive.name
 
-马儿代夫
+马尔代夫
 
 ## ev.maldive.entry.title
 
-记椰岛
+椰树、贝币与岛屿生活
 
 ## ev.maldive.entry.body
 
-此群岛乃世间一奇，岛数约二千，近百岛环列如环。舟近一岛，必报船上之人，不报者不得通行。岛上椰树为最，一年十二熟，每月一熟，大者、小者、干者、青者并见树上；以椰造酒，煎蜜为饴。民不铸钱，以贝为币，名曰瓦达，埋沙候肉尽壳存，此贝行于孟加拉。其民好洁谨祷，不习战事，以祈祷为兵械。女子治产，不随夫离岛；主岛女王呼迪加临朝，法令出于法官，法官之令如王，食三岛之赋。
+伊本·白图泰说，这片海上有近两千座岛，其中近百座连成环状。船靠近一座岛时，得先报上船员人数，不然不让通行。椰树一年结十二次果，青果、熟果和干果常挂在同一棵树上；岛民用椰子酿酒、榨油，也搓成坚韧的船绳。这里用一种叫瓦达的贝壳当钱，埋在沙里等肉腐尽，再把壳拿去交易。记载还提到，主岛由女王呼迪加统治，判案的法官说话很有分量；岛上女性通常留在自己的岛区生活。
 
 ## ev.maldive.entry.choice.arrive
 
-泊船登岸
+把船停好，上岛看看
 
 ## ev.ev_maldive_entry.choice_1_result
 
-你泊船登岸于莫勒岛，女王所治之地。岛人待客宽厚：寄宿之家，主妇为你炊饭照应，所费甚微；瓦达贝为钱，足供盘桓。
+你在女王统治的莫勒岛登岸。寄宿人家的女主人给你做饭、照料起居，只收很少的钱；瓦达贝壳在岛间也能当钱用。
 
 ## ev.maldive.battuta_a.title
 
-法官、三娶与逃亡
+做法官、成家与离岛
 
 ## ev.maldive.battuta_a.body
 
-宰相贾马鲁丁——女王之夫——延你为上宾：赐宅第园圃，赠礼服，又命你骑马，国中唯宰相一人可乘，其余贵人乘舆或步行。他劝你受法官之任，谓法官之令如王，食三岛之赋。你应之。岛俗：旅人出微薄聘礼即可娶妻，临行须休妻——盖女子永不离开本岛。你依俗娶了三房妻室。自此姻亲渐多，势渐盛；宰相兵寡，不习战事，遂生猜忌，暗察你的行止。你知其意，决意离岛。
+宰相贾马鲁丁是女王的丈夫，他热情接待了伊本·白图泰：给他一座带花园的房子、一件礼服，还特许他骑马。岛上只有宰相能骑马，贵族通常乘轿或步行。宰相请他担任法官，说法官的判决几乎和王令一样，还能收取三座岛的税。伊本·白图泰接受了。当地习俗允许旅人付少量聘礼成婚，但妻子通常不会离开自己的岛区，旅人离开时便会分开。他按习俗娶了三位妻子，姻亲渐多、势力渐大，宰相开始担心，暗中打听他的动向。伊本·白图泰察觉后，决定离岛。
 
 ## ev.maldive.battuta_a.choice.judge
 
-受法官之任
+接受法官的职位
 
 ## ev.maldive.battuta_a.choice.marry
 
-依岛俗聘娶妻室
+按当地习俗成家
 
 ## ev.maldive.battuta_a.choice.flight
 
-休妻寻船，离岛而去
+收拾行李，找船离岛
 
 ## ev.ev_maldive_battuta_a.choice_1_result
 
-你受法官之任。自此所言如王令，三岛之赋入你囊中；日以听讼为事，岛民皆称道你。
+你接下法官的职位，判决在三座岛上都很有分量，也能收取当地税赋。接下来几天你忙着听案子，岛民对你评价不错。
 
 ## ev.ev_maldive_battuta_a.choice_2_result
 
-你出微薄聘礼，依岛俗娶妻。岛中女子不随夫离岛，待你启程，便须依约休妻；此俗既行，岛人亦以此敬你。
+你付了少量聘礼，按当地习俗成家。这里的女性通常不会离开自己的岛区；你准备启程时，也按约定和妻子分开。岛民认可你尊重他们的习俗。
 
 ## ev.ev_maldive_battuta_a.choice_3_result
 
-你休了诸妻，只留一房有幼儿的；趁宰相注目之际，你为海路作打算。引水人指点通往没来（马拉巴尔）之路，这条航线便落在你的舆图上。
+你结束了婚事，只留下有幼儿的那一房。趁宰相还在暗中留意你，你开始打听船期。一位引水人摊开海图：“去没来要等南风稳下来，船过外海后沿岸走，别追着快船跑。”
 
 ## arch.battuta.name
 
-丹吉尔式旅人
+伊本·白图泰
 
 ## arch.battuta.obsession
 
-走遍海路，从每个方向回到麦加。
+走遍海路，从四面八方回到麦加。
 
 ## ev.melibar.battuta_a.title
 
-古里海难，使团覆舟
+古里海难：一夜之间船队尽毁
 
 ## ev.melibar.battuta_a.body
 
-古里乃没来大埠，商贾毕集，港中泊中国戎克十三艘。天竺皇帝遣使赍贡物赴中国，拨一舟载之；你因礼拜五聚礼留岸。夜半海涛骤起，诸戎克触岸而碎，舟人大半溺死；载贡物之舟迟至天明亦覆，财物尽没。你仅余拜毯与十枚金币，得免于难。
+伊本·白图泰称古里是没来的大港，商人云集，港里停着十三艘中国戎克船。天竺皇帝派使团去中国，安排其中一艘船装贡品；他自己因为星期五聚礼留在岸上。半夜风浪突然变大，几艘戎克船撞上岸礁，船员大半遇难。载着贡品的船撑到天亮也沉了，货物全没入海。他只剩祈祷毯和十枚金币，侥幸逃过一劫。
 
 ## ev.melibar.battuta_a.choice.junks
 
-立岸上，看那戎克如何锚泊
+在岸边看看中国戎克船怎么停泊
 
 ## ev.melibar.battuta_a.choice.trade
 
-与港中巨贾市易胡椒
+找港里的大商人谈胡椒生意
 
 ## ev.melibar.battuta_a.choice.prayer
 
-留岸守礼拜五聚礼
+留在岸上参加星期五聚礼
 
 ## ev.ev_melibar_battuta_a.choice_1_result
 
-你立岸上看那戎克锚泊，候中国海之航季。最大者舟上水手六百、兵四百，甲板起木屋，桨如桅杆，每桨二十五人立而操之。人言此舟唯刺桐与辛克兰能造，不入他港，唯希里、古里与俱蓝三港而已。
+你在岸边看中国戎克船停泊，等着中国海的航季。最大的一艘有六百名水手、四百名士兵，甲板上盖着木屋，船桨长得像桅杆，每支桨由二十五人合力划动。水手说，这种船只有刺桐和辛克兰造得出来，只停希里、古里和俱蓝几个港口。
 
 ## ev.ev_melibar_battuta_a.choice_2_result
 
-古里穆斯林商人之富，一人可尽买港中诸船之货，更治新船如之。你与巨贾议胡椒之价，付出 1500 钱币，带一袋胡椒回到自己的船上。
+古里的穆斯林商人富得惊人，有人买得下港里所有船货，还能再造一艘新船。你和一位大商人谈妥胡椒价，付了 1500 钱币，带着一袋胡椒回到船上。
 
 ## ev.ev_melibar_battuta_a.choice_3_result
 
-你留岸守礼拜五聚礼，身畔只有拜毯与十枚金币——乃圣人相赠，视为吉庆珍藏。夜半海涛骤起，载贡物之舟触岸而碎，全舟与财俱没；你自己的小舟已趁黑开走，载着仆从与你所有的一切。
+你留在岸上参加聚礼，身边只有祈祷毯和十枚金币——伊本·白图泰说，那是圣人送给他的吉祥物。半夜风浪大作，载着贡品的船撞礁沉没；你的小船趁黑离港，仆从和行李都平安无事。
 
 ## ev.cail.battuta_a.title
 
-亚当峰朝圣，足印与宝石
+加异勒码头的朝圣者
 
 ## ev.cail.battuta_a.body
 
-风暴改向，舟几覆没，终抵锡兰；锡兰山九日程外望之已如烟柱。王许你朝拜人祖亚当之圣迹：四名每年朝山的乔吉（苦行僧）、四名婆罗门与十五名负粮秣的随从同行。足迹印于石上，长十一拃，石上凿九窍，朝圣者投金与红宝石于内；华人曾凿去大趾之处，奉入刺桐寺中，中国远地之人亦来朝。锡兰全岛产红宝石，山麓大河之口，水色奇蓝。
+加异勒码头上，一家人正收拾行囊，要坐船去人们谈论亚当峰的那座岛。姑娘把水囊和母亲的铺盖紧紧绑在同一根扁担上。母亲说：“这么捆，我每回想喝水，都得先把铺盖举起来。”姑娘解开绳结，问一位年长的朝圣者，上岛后要走哪条路。老人说自己听过几种关于圣山和足印的说法，却还没亲眼去看。“那就讲你确实知道的。”母亲说。老人指出船在哪儿补水，又说港里谁真正走过从马八儿来的航路。旁边的珠商听见他们聊天，打开匣子，向你出售一颗由陆路商人带来的红宝石。船夫说补水、装粮还要三天。姑娘重新扎好包袱，请你帮她看看开船前的食水是否备齐。
 
 ## ev.cail.battuta_a.choice.baba
 
-循巴巴之径，攀峰顶谒足迹
+花三天帮朝圣者整理行囊
 
 ## ev.cail.battuta_a.choice.foot
 
-在足迹旁，看朝圣者献礼
+留一天听他们讲马八儿的航路
 
 ## ev.cail.battuta_a.choice.ruby
 
-向岛人购红宝石一枚
+向珠商买一颗红宝石
 
 ## ev.ev_cail_battuta_a.choice_1_result
 
-你循巴巴之径而上——岩中钉铁钉，系十道铁链，最后一链名「见证之链」，到此俯视，心悸欲坠。过赫兹尔之穴，再上二里，圣石凹陷处即人祖足迹，长十一拃；你抚迹行礼，此行方算朝过山。
+船还在补水、装粮，你花了三天帮这家人把吃的、喝的和铺盖分开装好。姑娘给每只水囊做了记号，母亲不用掀起大包就能找到。船要开时，年长的朝圣者当着港口人向你道谢，说将来若再遇见，愿把亲眼所见讲给你听。
 
 ## ev.ev_cail_battuta_a.choice_2_result
 
-瑜伽行者每岁来此朝足迹，指你看足迹旁石上凿的九窍——朝圣者投金、红宝石与诸宝于内，争先取之。又说华人曾凿去大趾连同其石，奉入刺桐寺中，中国最远之地亦有人来此朝拜。
+你在码头待了一天。一位走过马八儿航路的船夫告诉姑娘，水在哪个码头上船，又在木板上给你画了那段航路。母亲试了试行囊，这次不用挪开铺盖，就能拿到自己的水囊。
 
 ## ev.ev_cail_battuta_a.choice_3_result
 
-锡兰红宝石遍于全岛，岛人售之如售家产；你购得一枚，付其所索之价。没来与马八儿商人以数件衣裳即运走岸边木料，而宝石之价，终不稍减。
+你付钱向珠商买下红宝石。他当面让你看过分量，仔细包好。朝圣者还在往船上搬行李，姑娘问你是不是为旅伴买的。你说以后再决定带去哪里。她上船前祝你一路平安。
 
 ## ev.java-major.battuta_a.title
 
-塔瓦利西，善战女王之国
+塔瓦利西：女王与她的军队
 
 ## ev.java-major.battuta_a.body
 
-塔瓦利西以王号为国名，其王拥戎克无数，敢与大汗相抗，战必至和议方休。国中女子骑马如飞，善投标枪，临阵不亚男子。女王以女身临朝，侍女持国政文书立于阶前；她亲书「奉至仁至慈真主之名」示客，闻天竺之富，叹曰：此富吾当自取之。军中一旅女兵，尝于阵溃之际力战，斩敌王首以献其父，遂统其地。邻王求婚，皆须胜她于演武场，至今无敢应者。
+伊本·白图泰用国王的名字称呼塔瓦利西。这里有许多戎克船，国王敢和大汗交战，直到双方谈和才停手。当地女性骑马、投标枪都很拿手，女王亲自处理政事。她的侍女拿着文书站在台阶下，女王则亲笔写下“奉至仁至慈的真主之名”，再问旅人各地的见闻。听说天竺富庶，她感叹：“这份富贵，我也想亲眼看看。”伊本·白图泰还记下一支女兵：一次战局溃散时，女王带她们拼死反击，斩下敌王首级献给父亲，因此获封一方。邻国国王若想娶她，必须先在演武场胜过她；至今没人敢应战。
 
 ## ev.java-major.battuta_a.choice.audience
 
-入觐女王，陈说所见诸国
+去见女王，聊聊你走过的地方
 
 ## ev.java-major.battuta_a.choice.aloes
 
-如商贾般，购一象之载的沉香
+像当地商人一样买一象载的沉香
 
 ## ev.java-major.battuta_a.choice.army
 
-问女王军中之事
+问问女王的军队和女兵
 
 ## ev.ev_java_major_battuta_a.choice_1_result
 
-女王坐于政府之座，侍女持国政文书立于阶前；她以突厥语相迎，唤人取纸笔，亲手书「奉至仁至慈真主之名」示你，细问所历诸国；闻天竺之富，叹曰：此富吾当自取之。赐你衣裳、金与路上粮草，礼遇甚厚。
+女王坐在议事厅里，侍女捧着文书站在一旁。她用突厥语向你问好，让人拿来纸笔，亲手写下“奉至仁至慈的真主之名”，又细问你一路见闻。听你说到天竺的富庶，她笑道：“有机会我也想去看看。”临别时，她送你衣物、金钱和路上粮食。
 
 ## ev.ev_java_major_battuta_a.choice_2_result
 
-卡库拉港中，沉香木堆于象背，如人家积薪——此间其价贱于柴。商人以一袭棉衣售你一象之载；此间棉贵于丝，你遂以贱值得香，携之而去。
+卡库拉港的沉香堆得像柴火。商人掂着你带来的棉衣说：“这儿沉香比柴还便宜，棉布倒比丝绸贵。你拿这件换沉香，算是碰上好价了。”他收下棉衣，给了你一头象载的沉香。
 
 ## ev.ev_java_major_battuta_a.choice_3_result
 
-舟人言女王军中有一旅女兵，临阵与男同列；尝当阵溃之际，女王率此旅力战，斩敌王，取其首献于父，遂得领此一方。邻王求婚，皆须胜她于演武场，然皆惮为女子所败，无敢应者。
+水手说，女王手下有一支女兵，平时和男兵一起操练。一次战场上军队溃散，女王带着她们顶住阵脚、斩下敌王首级，因此获封领地。邻国国王都得先在演武场赢过她，谁也不愿冒这个险。
 
 ## ev.zayton.battuta_a.title
 
-刺桐纸钞、画师与船籍册
+刺桐的纸钞、画像和船册
 
 ## ev.zayton.battuta_a.body
 
-那旅人所说，件件都在码头上应验——此国交易不用金银，只用纸钞：掌大，盖王印，二十五张当一第纳尔，破旧者官中照换新钞，不取利息。画师之技天下无对：凡过客入其城，壁上与街头贴纸皆画其形貌；客若犯事逃匿，画像传之诸省，所在必获。舟离港时，官录舟人名姓形貌为册，归时按册稽核，缺一人则执船主；货不登册者，船货俱没于王。此种苛察，为他国所未见。
+伊本·白图泰说，刺桐交易不用金银，大家用盖着王印的纸钞：一张约手掌大，二十五张抵一第纳尔。纸钞破了，官府会免费换新。画师的本事也让他惊讶：过客进城后，画师会把人像贴在墙上和街头；若有人犯事逃跑，画像会送往各省追查。船离港时，官员把船员的名字和长相登记成册，回来再逐一核对，少一个人就追究船主，没登记的货物则会被没收。
 
 ## ev.zayton.battuta_a.choice.change
 
-以金银兑王印纸钞
+拿金银去官署换纸钞
 
 ## ev.zayton.battuta_a.choice.painters
 
-坐下，让画师写真
+坐下来，让画师给你画像
 
 ## ev.zayton.battuta_a.choice.registry
 
-看官人点验戎克船籍
+看看官员怎么登记船员
 
 ## ev.ev_zayton_battuta_a.choice_1_result
 
-你持金银入市，竟无人肯收；至官署兑为王印纸钞，方得市易。钞破旧者，官中照换新钞，不取分文利息。
+你拿着金银进集市，摊主都不肯收。到官署换成盖王印的纸钞后，买卖才做得成。旧钞也能免费换新，不用付利息。
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-你坐下让画师写真，一日光阴便在这支笔下过去——画师之技天下无对，你与同伴的形貌便上了墙，又印在街头贴纸上。人言凡过客皆如此画，客若犯事须逃，画像传之诸省，所在必获。
+你坐下来让画师画像，一晃就过了一天。画好后，你和同伴的模样被贴上墙，也印在街头告示上。当地人说，过客都要画像；若有人犯事逃跑，各省都会收到画像追查。
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-你在码头边站了一日，看官人持册登舟，录舟人名姓形貌；归时按册比形，缺一人则执船主，匿一物则船货俱没。此种苛察，为你平生所未见。你又闻得一条河路，自辛克兰行二十七日而来——辛克兰与刺桐皆出陶器；此河复前行，通往行在。生命之水即在刺桐入海，故此地又号两海之交。
+你在码头看官员拿着名册上船，核对每个人的名字和长相。船回来时，他们逐个查验；少一人就追究船主，漏报货物则整船没收。这种查验让你大开眼界。你还听说有条河路从辛克兰走二十七天可到刺桐，再往前便是行在；生命之水也在刺桐入海，所以有人称这里为“两海交会处”。
 
 ## codex.cx-paper-money.name
 
-王印纸钞
+盖王印的纸钞
 
 ## codex.cx-paper-money.body
 
-此国交易不用金银，只用纸钞——掌大，盖王印，二十五张当一第纳尔。钞破旧者，官中照换新钞，不取分文利息；不以金银兑成纸钞，无人肯与你市易。
+刺桐买卖用的是盖着王印的纸钞，不用金银。二十五张抵一第纳尔，破旧了官府还会免费换新；手里没有纸钞，商贩就不肯卖东西给你。
 
 ## ev.kinsay.battuta_a.title
 
-自杭州登舟，海路归非斯
+从杭州上船，踏上海路归程
 
 ## ev.kinsay.battuta_a.body
 
-你思归心切，自杭州下江，过建阳府，至刺桐，登苏门答腊王扎希尔马利克之戎克——舟中仆从皆奉回教——欲循海路归非斯。顺风十日，天色骤晦，风暴大作，舟入水手不识之海，欲返不得。破晓见海中二十里外有山，风催舟直向其去；舟人相拥诀别，言此非山，乃大鹏罗赫，为其所见，万无生理。俄而风转，舟得避之。二月光景，抵爪哇，旋至苏门答腊。
+伊本·白图泰想家了，决定从杭州顺江而下，经建阳府到刺桐，搭上苏门答腊王扎希尔·马利克的戎克船，走海路回非斯。顺风航行十天后，天色忽然变暗，风暴把船卷进水手也不熟悉的海域，想掉头都做不到。天亮时，大家看见二十里外像有一座山，船却正被风推向它。水手抱在一起告别，说那不是山，是大鹏罗赫，谁被它看见都活不了。没过多久风向转了，船终于避开。两个月后，他们到了爪哇，又继续前往苏门答腊。
 
 ## ev.kinsay.battuta_a.choice.passage
 
-搭苏门答腊王的戎克
+搭上苏门答腊王的戎克船
 
 ## ev.kinsay.battuta_a.choice.prayer
 
-与商贾在风暴中同祷
+风暴中和船上人一起祈祷
 
 ## ev.kinsay.battuta_a.choice.rokh
 
-问水手那海中之山
+问水手：海上的“山”到底是什么？
 
 ## ev.ev_kinsay_battuta_a.choice_1_result
 
-你自杭州下江，过建阳府，至刺桐，见港中戎克欲往印度，遂搭苏门答腊王扎希尔马利克的舟——舟中仆从皆奉回教——顺风鼓帆，向大海与归途而去。
+你从杭州顺江而下，经建阳府抵达刺桐。港里正好有艘戎克船要去印度，你便搭上苏门答腊王扎希尔·马利克的船。船上的仆从都信奉伊斯兰教，顺风一吹，船朝大海和归途驶去。
 
 ## ev.ev_kinsay_battuta_a.choice_2_result
 
-天色骤晦，风暴大作，舟入水手不识之海，欲返不得；你与全舟之人悔过祈祷，各许心愿。日出处风势渐缓，真主赐予顺风，舟遂得避险而前。
+天色暗下来，风暴把船卷进陌生海域，掉头也来不及。你和船上人一起祈祷、许愿。日出后风势渐缓，船终于转向，避开了险境。
 
 ## ev.ev_kinsay_battuta_a.choice_3_result
 
-破晓时水手指海中二十里外有山——此地远离陆岸，素无山峦——皆大惧，相拥诀别，言此非山，乃大鹏罗赫，若为其所见，必无生理。俄而顺风起，舟避之而去，终不见其形。
+天亮时，水手指着二十里外的“山”——四周离陆地很远，根本不该有山。大家抱在一起告别，有人说那是大鹏罗赫，看见它就没命。后来风向转了，船避开那座“山”，再也没见到它。
+
 ## ev.cail.entry.choice.battuta
 
-问丹吉尔旅人登亚当峰之事
+听听前往亚当峰的朝圣者怎么说
 
 ## ev.ev_cail_entry.choice_4_result
 
-有旅人经此，讲起锡兰山上的铁链与铁钉，讲起那十一拃长的足迹；他的话把你引上朝圣之路，余下的故事，他说愿在港中讲与你听。
+一位旅人指着远处海面说：“锡兰山上有铁钉和铁链，石上还有一道十一拃长的足印。我走过那条朝圣路，你想去的话，咱们在港口慢慢说怎么走。”
 
 ## ev.melibar.entry.choice.battuta
 
-问那旅人与中国巨船之事
+问旅人中国大船和海难的事
 
 ## ev.ev_melibar_entry.choice_4_result
 
-港中有旅人讲起刺桐与辛克兰所造的巨大戎克，讲起那一夜海起、贡舟触岸而没；你若愿听，他说可把全事讲来。
+港里一位旅人朝泊着的大船努努嘴：“刺桐和辛克兰造的戎克船大得很。我还听说有条贡船夜里撞上礁石沉了。你想听的话，我从头给你讲。”
 
 ## ev.kinsay.entry.choice.battuta
 
-问那自杭州归航的旅人
+问那位从杭州出发的旅人
 
 ## ev.ev_kinsay_entry.choice_4_result
 
-有旅人讲他如何顺江而下、自杭州登舟，经群岛而返故国；你若问起，他说愿把整段海程讲与你听。
+一位旅人说：“我从杭州顺江而下，在刺桐登船，穿过群岛才回到故乡。你想知道这一路怎么走？我可以慢慢讲给你听。”
 
 ## ev.zayton.entry.choice.battuta
 
-问那惊叹纸钞的旅人
+问那位对纸钞惊叹的旅人
 
 ## ev.ev_zayton_entry.choice_4_result
 
-有西方旅人求看此国的纸钞，又讲起船籍册与为每位过客画像的画师；你若愿听，他说还有更多要讲。
+一位西方旅人想看刺桐的纸钞，也对船员名册和街头画像很惊讶。你要是有兴趣，他还知道不少当地见闻。
+
+## ev.ev_alexandria_battuta_a.choice_3_result
+
+你看出他为人清廉，便随他穿过城门。数月后再见，他已是亚历山大的法官。他邀你去学舍坐坐：“你也在路上求学？这几处有藏书，得空可以去看看。”

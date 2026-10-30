@@ -23,8 +23,8 @@ const cfg = {
   rendering: {
     projection: "web-mercator",
     orientation: "north-up",
-    style: "real-tiles-with-medieval-overlay",
-    reason: "Align the live XYZ basemap with historical cities, routes, vectors and fog while preserving the period-inspired overlay.",
+    style: "local-vector-atlas",
+    reason: "Render local land and coastline vectors without modern labels; keep historical places and directed journeys readable at every zoom.",
   },
   data_license: "Curated content CC0 / public-domain facts. Coastlines and physical geography derived from Natural Earth public-domain data; see scripts/build_real_terrain.py.",
   source_url: "https://www.naturalearthdata.com/",
@@ -64,10 +64,15 @@ const geometryLines = (feature, stride = 1) => {
 const coast = JSON.parse(readFileSync(join(ROOT, "worldmap/data/coastline.geojson"), "utf8"));
 const rivers = JSON.parse(readFileSync(join(ROOT, "worldmap/data/rivers.geojson"), "utf8"));
 const seas = JSON.parse(readFileSync(join(ROOT, "worldmap/data/seas.geojson"), "utf8"));
+const land = JSON.parse(readFileSync(join(ROOT, "worldmap/data/land.geojson"), "utf8"));
 const vectors = {
   contentVersion: 1,
   source: "fatequest-worldmap",
-  coastlines: coast.features.flatMap((f) => geometryLines(f, 4)),
+  coastlines: coast.features.flatMap((f) => geometryLines(f, 2)),
+  land: land.features.flatMap((f) => {
+    const polygons = f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : [f.geometry.coordinates];
+    return polygons.map((rings) => rings[0]);
+  }),
   rivers: rivers.features.map((f) => ({
     name: f.properties?.name_medieval ?? "",
     lines: geometryLines(f),

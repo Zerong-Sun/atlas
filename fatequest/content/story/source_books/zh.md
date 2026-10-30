@@ -1,5 +1,6 @@
 ---
 status: translated
+
 stamps:
   source.book.marco-polo: 36b4c5e0dc65
   source.book.ibn-battuta: 2cee61fa8ed5

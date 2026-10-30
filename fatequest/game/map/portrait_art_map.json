@@ -132,8 +132,8 @@
   },
   "events": {
     "ev-alexandria-welcome-gate": {
-      "portrait": "",
-      "reason": "The porter assets are mixed or paired source sheets; do not present a merchant as the porter."
+      "portrait": "npc-alexandria-porter",
+      "reason": "Single-character portrait generated for the porter who guides the player in the rewritten Alexandria welcome scene."
     },
     "ev-alexandria-welcome-meal": {
       "portrait": "npc-inn-isl",

@@ -109,8 +109,7 @@ func _init() -> void:
 	await process_frame
 	var lesson_open: bool = n._lesson_layer.visible and not learned_before \
 		and "jiaobei" not in n.state.learned_divinations
-	n._lesson_ui._throw_tool()
-	n._lesson_ui._pick_interpret(0)
+	await preload("res://tests/story_ui_driver.gd").finish_lesson(n, "jiaobei")
 	await process_frame
 	var lesson_ok: bool = "jiaobei" in n.state.learned_divinations
 

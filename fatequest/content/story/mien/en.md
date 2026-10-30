@@ -41,3 +41,27 @@ You pass through without stopping. You set the way to Mien on your map.
 ## ev.ev_mien_entry.choice_2_result
 
 You rest and ask what men say of this place. The road to Mien opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+
+## ev.ev_gap_mien.title
+
+A Tea Stall on the Mountain Road
+
+## ev.ev_gap_mien.body
+
+On the mountain road near Mien, a porter offers to show you the next fork before darkness makes it hard to see. His bamboo flask holds water boiled and cooled before filling; a clear stream can still carry silt. To recognise the road, he says, follow the bend of the river rather than a distant peak.
+
+## ev.ev_gap_mien.choice.route
+
+Ask the way to Kenjanfu
+
+## ev.ev_gap_mien.choice.route_result
+
+“Go northeast along the main road to Kenjanfu.”
+
+## ev.ev_gap_mien.choice.scene
+
+Ask him to show you the fork
+
+## ev.ev_gap_mien.choice.scene_result
+
+He points out two small paths: one follows the river to the main road northeast, and the other climbs to a village. Stay near the river; do not follow the herb gatherers uphill.

@@ -20,7 +20,8 @@
       "entryEvent": "ev-badashan-entry",
       "sites": [
         "ev-badashan-a",
-        "ev-badashan-b"
+        "ev-badashan-b",
+        "ev-badashan-bluepigment"
       ],
       "exits": [
         "rt-badashan-balc",
@@ -83,7 +84,8 @@
       "sites": [
         "ev-balc-a",
         "ev-balc-b",
-        "ev-balc-c"
+        "ev-balc-c",
+        "ev-balc-threadspool"
       ],
       "exits": [
         "rt-badashan-balc",
@@ -149,7 +151,8 @@
       "tier": "station",
       "entryEvent": "ev-bochara-entry",
       "sites": [
-        "ev-bochara-battuta-a"
+        "ev-bochara-battuta-a",
+        "ev-bochara-recipe"
       ],
       "exits": [
         "rt-bochara-merva",
@@ -192,7 +195,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-cabul-entry",
-      "sites": [],
+      "sites": [
+        "ev-cabul-site-gap",
+        "ev-cabul-bellstrap"
+      ],
       "exits": [
         "rt-badashan-cabul",
         "rt-cabul-balc",
@@ -230,7 +236,8 @@
       "entryEvent": "ev-camul-entry",
       "sites": [
         "ev-camul-a",
-        "ev-camul-b"
+        "ev-camul-b",
+        "ev-camul-waterboard"
       ],
       "exits": [
         "rt-camul-etzina",
@@ -292,7 +299,8 @@
       "sites": [
         "ev-cascar-a",
         "ev-cascar-b",
-        "ev-cascar-c"
+        "ev-cascar-c",
+        "ev-cascar-redthread"
       ],
       "exits": [
         "rt-cascar-badashan",
@@ -354,7 +362,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-charchan-entry",
-      "sites": [],
+      "sites": [
+        "ev-charchan-site-gap",
+        "ev-charchan-stonebag"
+      ],
       "exits": [
         "rt-charchan-cotan",
         "rt-charchan-lop",
@@ -408,7 +419,8 @@
       "sites": [
         "ev-cotan-a",
         "ev-cotan-b",
-        "ev-cotan-c"
+        "ev-cotan-c",
+        "ev-cotan-twoscripts"
       ],
       "exits": [
         "rt-cascar-cotan",
@@ -474,7 +486,8 @@
       "entryEvent": "ev-delli-entry",
       "sites": [
         "ev-delli-battuta-a",
-        "ev-delli-battuta-b"
+        "ev-delli-battuta-b",
+        "ev-delli-jarbands"
       ],
       "exits": [
         "rt-delli-cambaet",
@@ -529,7 +542,8 @@
       "entryEvent": "ev-keshimur-entry",
       "sites": [
         "ev-keshimur-a",
-        "ev-keshimur-b"
+        "ev-keshimur-b",
+        "ev-keshimur-bridgeplank"
       ],
       "exits": [
         "rt-delli-keshimur",
@@ -591,7 +605,8 @@
       "sites": [
         "ev-lop-bazaar",
         "ev-lop-shrine",
-        "ev-lop-caravanserai"
+        "ev-lop-caravanserai",
+        "ev-lop-stopper"
       ],
       "exits": [
         "rt-camul-lop",
@@ -654,7 +669,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-merva-entry",
-      "sites": [],
+      "sites": [
+        "ev-merva-site-gap",
+        "ev-merva-waterturn"
+      ],
       "exits": [
         "rt-bochara-merva",
         "rt-merva-balc",
@@ -686,7 +704,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-pein-entry",
-      "sites": [],
+      "sites": [
+        "ev-pein-site-gap",
+        "ev-pein-jarnames"
+      ],
       "exits": [
         "rt-charchan-pein",
         "rt-cotan-pein",
@@ -737,7 +758,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sachiu-entry",
-      "sites": [],
+      "sites": [
+        "ev-sachiu-site-gap",
+        "ev-sachiu-trough"
+      ],
       "exits": [
         "rt-camul-sachiu",
         "rt-lop-sachiu",
@@ -794,7 +818,9 @@
       ],
       "tier": "station",
       "entryEvent": "ev-samara-entry",
-      "sites": [],
+      "sites": [
+        "ev-samara-site-gap"
+      ],
       "exits": [
         "rt-cail-samara",
         "rt-java-major-samara",
@@ -912,7 +938,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-sapurgan-entry",
-      "sites": [],
+      "sites": [
+        "ev-sapurgan-site-gap"
+      ],
       "exits": [
         "rt-balc-sapurgan",
         "rt-bochara-sapurgan",
@@ -1026,7 +1054,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-yarcan-entry",
-      "sites": [],
+      "sites": [
+        "ev-yarcan-site-gap"
+      ],
       "exits": [
         "rt-cascar-yarcan",
         "rt-cotan-yarcan",

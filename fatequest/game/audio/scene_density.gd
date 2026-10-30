@@ -37,20 +37,21 @@ static func classify(scene_bg: String) -> String:
 	return String(_BG_TO_CLASS.get(scene_bg, TOWN))
 
 
-## Per-layer base gains before mood modulation. Shrine & wild strip melody/pulse.
+## Per-layer base gains before mood modulation. Keep a quiet melodic thread
+## everywhere so exploration does not collapse into continuous drone.
 static func layer_gains(scene_class: String) -> Dictionary:
 	match scene_class:
 		TOWN:
-			return {"drone": 1.0, "pulse": 1.0, "melody": 0.85, "color": 0.2}
+			return {"drone": 1.0, "pulse": 0.7, "melody": 1.0, "color": 0.2}
 		PORT:
-			return {"drone": 1.0, "pulse": 0.7, "melody": 0.9, "color": 0.2}
+			return {"drone": 1.0, "pulse": 0.6, "melody": 1.0, "color": 0.2}
 		WILD:
-			return {"drone": 1.0, "pulse": 0.0, "melody": 0.0, "color": 0.2}
+			return {"drone": 0.8, "pulse": 0.0, "melody": 0.6, "color": 0.2}
 		COURT:
 			return {"drone": 1.0, "pulse": 0.45, "melody": 0.75, "color": 0.15}
 		SHRINE:
-			# Space + occasional color (blurred sacred gesture). No pulse/melody.
-			return {"drone": 0.75, "pulse": 0.0, "melody": 0.0, "color": 0.35}
+			# Sparse, quiet notes preserve contemplation without a wall of hum.
+			return {"drone": 0.75, "pulse": 0.0, "melody": 0.45, "color": 0.25}
 		INN:
 			return {"drone": 1.0, "pulse": 0.4, "melody": 0.55, "color": 0.2}
 		JOURNEY:

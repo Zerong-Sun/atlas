@@ -19,6 +19,11 @@
           "resultText": "ev.ev_tauris_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -6700,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "tabriz-pearls",
               "value": 1,
@@ -29,7 +34,12 @@
               "value": "st-tauris-pearl",
               "reason": "bought-pearls-at-the-toll-masters-price"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 6700
+            }
+          }
         },
         {
           "label": "ev.ev_tauris_b_followup.choice_2",
@@ -92,6 +102,11 @@
           "resultText": "ev.ev_tauris_c_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -500,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "item",
               "value": "it-dried-fruit",
               "reason": "bought-fruit-from-the-orchard-keeper"
@@ -101,7 +116,12 @@
               "value": "st-tauris-gardens",
               "reason": "bought-fruit-from-the-orchard-keeper"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 500
+            }
+          }
         },
         {
           "label": "ev.ev_tauris_c_followup.choice_2",

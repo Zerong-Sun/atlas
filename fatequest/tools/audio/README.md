@@ -32,6 +32,16 @@ tools/audio/.venv/bin/python tools/audio/generate_all.py
 # Hybrid: regenerate only richer melody + color (keeps drone/pulse)
 tools/audio/.venv/bin/python tools/audio/generate_melody_color.py
 tools/audio/.venv/bin/python tools/audio/generate_melody_color.py --culture east_asia
+
+# Build the regional songbook: 5 cultures × 3 scenes × 2 tunes. The new
+# pipeline uses recorded instruments, FFT band-limited transposition, gentle
+# high-pass cleaning, stereo placement, and high-quality Vorbis output.
+# See samples/songbook/SOURCE.json and assets/audio/THIRD_PARTY_CREDITS.md.
+tools/audio/.venv/bin/python tools/audio/compose_folk_themes.py
+tools/audio/.venv/bin/python tools/audio/compose_folk_themes.py --validate-only
+
+# Opening desk cue, from recorded recorder/psaltery/frame-drum samples.
+tools/audio/.venv/bin/python tools/audio/generate_intro_theme.py
 ```
 
 Outputs land in `assets/audio/` (see `MANIFEST.md`).

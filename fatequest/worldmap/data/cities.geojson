@@ -2368,7 +2368,7 @@
    "id": "city-124",
    "properties": {
     "name_medieval": "Nanghin",
-    "name_modern": "Nanjing",
+    "name_modern": "Anqing",
     "part": "Asia",
     "tier": 2,
     "note": "Noble province of great wealth",
@@ -2377,8 +2377,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     118.797,
-     32.06
+     117.05,
+     30.53
     ]
    }
   },
@@ -2615,17 +2615,17 @@
    "id": "city-137",
    "properties": {
     "name_medieval": "Tiju",
-    "name_modern": "Gaoyou",
+    "name_modern": "Taizhou",
     "part": "Asia",
     "tier": 3,
-    "note": "Canal city of fish and fowl",
+    "note": "Trade town east of the Grand Canal, near the salt fields",
     "is_center": false
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     119.443,
-     32.785
+     119.92,
+     32.48
     ]
    }
   },

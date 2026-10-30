@@ -41,3 +41,27 @@ You pass through without stopping. The road to Coiganju opens on your map.
 ## ev.ev_coiganju_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Coiganju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_coiganju.title
+
+The Umbrella Mender’s Bamboo Rib
+
+## ev.ev_gap_coiganju.body
+
+At a street corner, an umbrella mender removes a split rib. Bamboo splits along its grain, he says, so it can be joined without shattering. A canopy pulled too tight turns inside out in the wind; a little slack makes it last longer. He hides the joint inside so rain does not follow the stitching through.
+
+## ev.ev_gap_coiganju.choice.route
+
+Ask the way to Tiju
+
+## ev.ev_gap_coiganju.choice.route_result
+
+“Follow the canal south, then turn east toward Tiju. Allow several days.”
+
+## ev.ev_gap_coiganju.choice.scene
+
+Hold the umbrella rib steady
+
+## ev.ev_gap_coiganju.choice.scene_result
+
+You hold the handle while he binds the joint with fine thread. “Test it first in light rain. If something can be mended, there is no need to throw it away.”

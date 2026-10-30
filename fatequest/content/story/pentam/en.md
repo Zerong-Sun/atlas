@@ -42,3 +42,27 @@ You pass through without stopping. You set the way to Pentam on your map.
 ## ev.ev_pentam_entry.choice_2_result
 
 You rest and ask what men say of this place. The road to Pentam opens on your map. The account is written down before the hour turns. It costs you 1 day on the road.
+
+## ev.ev_gap_pentam.title
+
+A Coconut Shell by the Reef
+
+## ev.ev_gap_pentam.body
+
+On the shallows near Pentam, a sailor bails water with a light coconut shell. Reefs emerge at low tide, so he watches for pale water and turns the rudder before the boat strays too close. He replaces a cracked shell because it slowly leaks after mending.
+
+## ev.ev_gap_pentam.choice.route
+
+Ask the way to Java Major
+
+## ev.ev_gap_pentam.choice.route_result
+
+“Sail south along the coast to Java Major. Wait for the tide to rise before crossing the shallows.”
+
+## ev.ev_gap_pentam.choice.scene
+
+Ask how to cross the strait
+
+## ev.ev_gap_pentam.choice.scene_result
+
+He points seaward. “Wait for the rising tide and follow the pilot’s small boat. A large ship should not rush ahead. Repairing a hull after it strikes a reef costs more than waiting one tide.”

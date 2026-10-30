@@ -158,7 +158,7 @@ Chamba: The Idolater Court and the Pepper Quay
 
 ## ev.ev_chamba_b_followup.body
 
-At the idolater court a pepper broker who serves both the king and the foreign ships draws you from the audience into the shade of the quay sheds. He says Chamba pays tribute in elephants but trades in pepper — and that Fuju and the islands are written in his monsoon book if you mean to sail west-south-west of Zayton with more than a story.
+At the court in Chamba, a pepper broker leads you from the audience into the shade of the quay sheds. “Elephants go to the Great Khan as tribute,” he says, “but pepper goes to the passing ships.” He opens his monsoon book and points to a ship leaving soon for Fuju. If you mean to send goods with it, he advises you to decide before it sails.
 
 ## ev.ev_chamba_b_followup.choice_1
 

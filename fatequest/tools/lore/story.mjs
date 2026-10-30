@@ -145,7 +145,12 @@ function check() {
     const src = langs[SOURCE_LANG];
     if (!src) {
       console.log(`  ${unit}: no ${SOURCE_LANG}.md — cannot judge translations`);
+      missing++;
       continue;
+    }
+    if (!langs.zh) {
+      console.log(`  ${unit}/zh: missing translation document`);
+      missing += Math.max(1, Object.keys(src.entries).length);
     }
     for (const [lang, doc] of Object.entries(langs)) {
       if (lang === SOURCE_LANG) continue;
@@ -228,5 +233,5 @@ function stamp(lang) {
 switch (cmd) {
   case "build": process.exit(build() >= 0 ? 0 : 1);
   case "stamp": stamp(argLang); break;
-  default: process.exit(check() > 0 ? 0 : 0);
+  default: process.exit(check() > 0 ? 1 : 0);
 }

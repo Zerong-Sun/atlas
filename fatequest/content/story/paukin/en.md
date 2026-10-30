@@ -42,3 +42,27 @@ You pass through without stopping. The road to Paukin opens on your map.
 ## ev.ev_paukin_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Paukin on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_paukin.title
+
+Grain on the Drying Ground
+
+## ev.ev_gap_paukin.body
+
+On a drying ground in Paukin, a farmer spreads grain thinly with a wooden rake. When the afternoon wind comes, thick patches stay damp after the rest has dried. He asks you to turn one side or test a handful. Grain that cracks under the teeth is ready for storage.
+
+## ev.ev_gap_paukin.choice.route
+
+Ask the way to Tiju
+
+## ev.ev_gap_paukin.choice.route_result
+
+“Go south toward Cayu, then turn east for Tiju. Allow three days.”
+
+## ev.ev_gap_paukin.choice.scene
+
+Test the grain
+
+## ev.ev_gap_paukin.choice.scene_result
+
+You roll a handful between your fingers. Dry husks are crisp and do not cling to the hand, the farmer says. Even then, check the weather before storing it: night dew can make it damp again.

@@ -2,24 +2,23 @@
 unit: alexandria
 lang: zh
 source: en
-source_rev: 7952f458647c
-status: translated
-proofed: true
+source_rev: 71a36ea65b13
+status: draft
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
   # 文化校订：地名/信仰/物产/建筑/制度/时间锚点已逐条复核
 
 stamps:
   city.alexandria.name: 39ae78ec341c
-  ev.alexandria.entry.choice.look: a1e5276c886b
-  ev.alexandria.entry.choice.pass: 96d145abaf05
-  ev.alexandria.entry.body: 0c4eb5717d15
+  ev.alexandria.entry.body: 5bb47e322c75
+  ev.alexandria.entry.choice.look: 4c2d9246af55
+  ev.alexandria.entry.choice.pass: 60627dfa45c0
   ev.alexandria.entry.title: 802852e8bceb
-  ev.ev_alexandria_entry.choice_1_result: 4bc71980dd21
-  ev.ev_alexandria_entry.choice_2_result: 53c936244d20
+  ev.ev_alexandria_entry.choice_1_result: 4383f7720cf6
+  ev.ev_alexandria_entry.choice_2_result: d08b83e13f80
 ---
 
 ## city.alexandria.name
@@ -27,25 +26,29 @@ stamps:
 阿历山德里亚
 
 ## ev.alexandria.entry.choice.look
-
-歇脚打听此地有何说头
+留在港口看看，也问问书吏这包货怎么了
 
 ## ev.alexandria.entry.choice.pass
 
-穿城而过，不加停留
+今天继续赶路，问清出城的方向
 
 ## ev.alexandria.entry.body
 
-你自米昔尔的海门进入阿历山德里亚，最先看见的是称量货包。苏丹的书吏对每一包离岸的货物征收tamghā（商税）——天竺胡椒、叙利亚玻璃、埃及谷物与法兰克呢绒，皆在其列。昔日指引万国船舶的古灯塔已成废墟，石料已入城墙。然港中仍船帆如林，城中亦多有学问之士——其名自信德传到中国的伊玛目与谢赫。你须知道：无船入此港而不过书吏之笔，亦无旅人离此而不闻本地圣者论前路之言。
+一粒胡椒从麻袋口滚出来，落在你脚边的石缝里。麻袋还吊在秤上，押货的人攥着袋口，书吏攥着账页，两人都在等一个叫哈桑的货主。
 
+书吏问：“他的木签呢？”押货的人摸遍腰带，拍出一片灰。码头上另一边已经有人喊书吏过去看货，他还是守着这杆秤：“把哈桑叫来。没他的木签，我这儿没法记账。”
+
+海风吹来一股潮湿的绳索味。一个扛箱子的搬运工从你身旁挤过，见你停下看热闹，朝城门扬了扬下巴：“要进城就从那边走。这包胡椒还得在这儿吊一阵。”
 ## ev.alexandria.entry.title
 
 亚历山大
 
 ## ev.ev_alexandria_entry.choice_1_result
 
-你穿城而过，不加停留，你标出了通往阿历山德里亚的路。
+你问搬运工哪里能出城。他把箱子换到另一边肩上：“贴着城墙走。看见卖水的棚子，再问那儿的人，他天天瞧着驮队出门。”箱子在他肩上晃了一下，他扶稳它，继续往码头去。
 
 ## ev.ev_alexandria_entry.choice_2_result
 
-你歇脚打听此地有何说头，通往阿历山德里亚的道路，就此展开在舆图上。为此费去你 1 日路程。
+哈桑终于来了。他先骂押货的人忘了木签，又朝书吏赔笑。书吏把木签和账页挨在一起核对，才让麻袋落秤。
+
+刚才的搬运工指给你看廊下等候的货主：“以后替人押货，记着带这个。省得一袋胡椒在秤上吊到天黑。”你在港边待了一天，跟几位货主聊起出城的路。其中一人第二天要去伯利恒，便在纸上画出车队走的路口，告诉你明早可以到城门外找他们。

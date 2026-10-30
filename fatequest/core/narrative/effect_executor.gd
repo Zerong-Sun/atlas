@@ -1,6 +1,7 @@
 class_name EffectExecutor
 extends RefCounted
 
+const CityLifeCore = preload("res://core/city/city_life.gd")
 const MortalityCore = preload("res://core/life/mortality.gd")
 
 ## The ONLY writer of WorldState. See docs/ARCHITECTURE.md §2.1, CODE_PLAN.md §3.
@@ -45,6 +46,9 @@ func _run(state: WorldState, effects: Array, ctx: Dictionary) -> EffectResult:
 	var res := EffectResult.new()
 	var rng: Rng = ctx.get("rng", Rng.new(state.seed))
 	var event_id: String = ctx.get("event_id", "anon")
+	if CityLifeCore.retired(state):
+		for effect in effects: res.rejected.append(effect)
+		return res
 
 	for i in effects.size():
 		var e: Dictionary = effects[i]
@@ -78,7 +82,45 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 	var val: Variant = e.get("value", null)
 	var id := String(e.get("id", ""))
 
+	if CityLifeCore.retired(state):
+		return false
 	match op:
+		"city_work":
+			if typeof(val) != TYPE_DICTIONARY or String(val.get("city", "")) != state.city:
+				return false
+			var quote := CityLifeCore.work_quote(state, String(val.get("job", "")), int(val.get("months", 0)))
+			if not quote.get("ok", false): return false
+			var record := quote.duplicate(true)
+			record.erase("ok")
+			record["city"] = state.city
+			record["start_jdn"] = state.jdn
+			state.jdn += int(quote.days)
+			state.days_elapsed += int(quote.days)
+			res.queued_days += int(quote.days)
+			record["end_jdn"] = state.jdn
+			state.coins = mini(COIN_MAX, state.coins + int(quote.income))
+			state.city_reputation[state.city] = state.reputation("city", state.city) + int(quote.reputation)
+			var history: Array = state.city_life.get("work_history", [])
+			history.append(record)
+			state.city_life["work_history"] = history
+		"city_borrow":
+			if not CityLifeCore.blocked_reason(state).is_empty() or CityLifeCore.debt_due(state) > 0:
+				return false
+			if state.coins > COIN_MAX - CityLifeCore.PRINCIPAL: return false
+			state.coins += CityLifeCore.PRINCIPAL
+			state.city_life["debt"] = {"city": state.city, "borrowed_jdn": state.jdn,
+				"due_jdn": state.jdn + CityLifeCore.days_for_months(state.jdn, 12),
+				"principal": CityLifeCore.PRINCIPAL, "repayment": CityLifeCore.PRINCIPAL + CityLifeCore.LOAN_FEE}
+		"city_repay":
+			var due := CityLifeCore.debt_due(state)
+			if not CityLifeCore.blocked_reason(state).is_empty() or due <= 0 or state.coins < due:
+				return false
+			state.coins -= due
+			state.city_life["debt"] = {}
+		"retire_journey":
+			if not CityLifeCore.blocked_reason(state).is_empty() or String(val) not in ["failed", "settled"]:
+				return false
+			state.city_life["ending"] = {"kind": String(val), "city": state.city, "jdn": state.jdn}
 		"coins":
 			var delta := int(val)
 			if delta < 0 and state.coins + delta < 0:
@@ -266,6 +308,8 @@ func _apply(state: WorldState, e: Dictionary, res: EffectResult) -> bool:
 			# the player already standing somewhere, and that first city belongs
 			# in the book too.
 			var dest := String(val)
+			if not state.city.is_empty() and dest != state.city:
+				state.journey_legs.append({"from": state.city, "to": dest, "jdn": state.jdn})
 			if state.start_city.is_empty() and not state.city.is_empty():
 				state.start_city = state.city
 				state.visited.append(state.city)

@@ -80,6 +80,15 @@ func _run() -> void:
 	viewport.add_child(center)
 	var dialog = load("res://game/ui/event_dialog.gd").new()
 	center.add_child(dialog)
+	var cost_hint: String = dialog._choice_cost_hint({"effects": [
+		{"op": "coins", "value": -800}, {"op": "days", "value": 2}]})
+	check(cost_hint.contains("8") and cost_hint.contains("2"),
+		"immediate silver and time costs are visible before choosing")
+	check(dialog._choice_cost_hint({"effects": [{"op": "coins", "value": 800}]}) == "",
+		"rewards are not mislabeled as costs")
+	check(dialog._choice_cost_hint({"effects": [
+		{"op": "coins", "value": -800}, {"op": "coins", "value": 1200}]}).contains("8"),
+		"a later reward does not hide an upfront expense")
 	var states: Array = []
 	for i in 12:
 		states.append({"choice": {"label": "ev.alexandria.welcome.gate.tears"},

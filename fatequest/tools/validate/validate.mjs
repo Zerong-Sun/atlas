@@ -87,7 +87,7 @@ for (const c of byTable.cities ?? []) {
 }
 
 // ------------------------------------------------ G26: tier-graded site counts
-// metropolis → exactly 3; city → exactly 2; town/station not forced (DATA_MODEL §6).
+// metropolis → at least 3; city → at least 2; town/station not forced (DATA_MODEL §6).
 // A site whose event gates itself behind `when.flags` (e.g. a usage site that
 // only appears after learning the matching divination) is a dynamic unlock,
 // not one of the city's standing exploration sites, so it does not count
@@ -103,11 +103,13 @@ const isStandingSite = (id) => {
 for (const c of byTable.cities ?? []) {
   const f = recordFile.get(c.id);
   const all = c.sites ?? [];
+  if (new Set(all).size !== all.length)
+    err("G26", f, `${c.id}: sites contains duplicate event IDs`);
   const standing = all.filter((s) => isStandingSite(s));
-  if (c.tier === "metropolis" && standing.length !== 3)
-    err("G26", f, `${c.id}: metropolis needs exactly 3 standing sites, has ${standing.length} (${all.length} total)`);
-  if (c.tier === "city" && standing.length !== 2)
-    err("G26", f, `${c.id}: city needs exactly 2 standing sites, has ${standing.length} (${all.length} total)`);
+  if (c.tier === "metropolis" && standing.length < 3)
+    err("G26", f, `${c.id}: metropolis needs at least 3 standing sites, has ${standing.length} (${all.length} total)`);
+  if (c.tier === "city" && standing.length < 2)
+    err("G26", f, `${c.id}: city needs at least 2 standing sites, has ${standing.length} (${all.length} total)`);
   for (const s of all) {
     const ev = siteById.get(s);
     if (!ev) continue;
@@ -252,7 +254,7 @@ for (const g of byTable.goods ?? []) {
 }
 
 // --------------------------------- G10: every effect carries a reason
-const CONDITION_KEYS = new Set(["any","all","not","cities","bands","faiths","season","years",
+const CONDITION_KEYS = new Set(["any","all","not","cities","bands","modes","routes","faiths","season","years",
   "flags","not_flags","has_item","lacks_item","learned_divination","language",
   "min_reputation","fate","coins","etiquette","has_retainer"]);
 const OPS = new Set(["coins","days","goods","item","remove_item","cargo_slots","reputation",
@@ -277,6 +279,12 @@ function checkCondition(cond, f, where) {
   if (!cond || typeof cond !== "object") return;
   for (const k of Object.keys(cond)) {
     if (!CONDITION_KEYS.has(k)) err("G1", f, `${where}: unknown condition key "${k}"`);
+    if (k === "routes") {
+      if (!Array.isArray(cond[k]) || cond[k].length === 0)
+        err("G1", f, `${where}.routes: expected a non-empty route ID list`);
+      else for (const routeId of cond[k])
+        ref(routeIds.has(routeId), "G2", f, `${where}.routes -> "${routeId}" not found`);
+    }
     if (k === "any" || k === "all") for (const [i, c] of cond[k].entries()) checkCondition(c, f, `${where}.${k}[${i}]`);
     if (k === "not") checkCondition(cond[k], f, `${where}.not`);
   }
@@ -437,8 +445,22 @@ for (const route of byTable.routes ?? [])
   const zhPath = join(ROOT, "content/i18n/zh.json");
   const en = existsSync(enPath) ? JSON.parse(readFileSync(enPath, "utf8")) : {};
   const zh = existsSync(zhPath) ? JSON.parse(readFileSync(zhPath, "utf8")) : {};
+  const challengeKinds = new Set(["cast", "parity", "rings", "route", "memory", "trace", "draft", "cycle", "numbers", "timing"]);
   for (const l of lessons) {
     const f = recordFile.get(l.id);
+    const game = l.challenge;
+    if (!game || !challengeKinds.has(game.kind)) {
+      err("G3", f, `${l.id}: cultural challenge configuration is required`);
+    } else {
+      if (!Number.isInteger(game.rounds) || game.rounds < 1 || game.rounds > 8)
+        err("G3", f, `${l.id}: challenge rounds must be in 1..8`);
+      if (!Number.isInteger(game.lives) || game.lives < 1 || game.lives > 9)
+        err("G3", f, `${l.id}: challenge lives must be in 1..9`);
+      for (const field of ["title", "culture", "note"])
+        if (typeof game[field] !== "string" || !game[field].startsWith("challenge.") ||
+            en[game[field]] === undefined || zh[game[field]] === undefined)
+          err("G3", f, `${l.id}: challenge ${field} requires an en/zh authoring key`);
+    }
     for (const field of ["steps", "clues", "options", "directions"]) {
       for (const v of l[field] ?? []) {
         if (typeof v !== "string" || !v.startsWith("lesson."))
@@ -646,8 +668,9 @@ const LINES = {
     }
     if (missing2 > 8) err("G17", "content/i18n/en.json", `...and ${missing2 - 8} more missing keys`);
     // G17 (continued): literal keys referenced from game code must exist.
-    // Format strings (I18n.t("city.%s.name" % id)) are resolved at runtime and
-    // covered by the event/city loops above; only plain literals are checked.
+    // Format strings (I18n.t("city.%s.name" % id)) and concatenated prefixes
+    // (I18n.t("ui.stay.job." + id)) are resolved at runtime; only complete
+    // literal keys can be checked against the flat English map here.
     const walkGd = (dir) => {
       if (!existsSync(dir)) return [];
       return readdirSync(dir).flatMap((n) => {
@@ -658,7 +681,7 @@ const LINES = {
     let codeMissing = 0;
     for (const f of walkGd(join(ROOT, "game"))) {
       const src = readFileSync(f, "utf8");
-      for (const m of src.matchAll(/I18n\.t\(\s*"([^"%]+)"/g)) {
+      for (const m of src.matchAll(/I18n\.t\(\s*"([^"%]+)"(?!\s*\+)/g)) {
         if (en[m[1]] === undefined) {
           codeMissing++;
           if (codeMissing <= 8) err("G17", f.slice(f.indexOf("game/")), `"${m[1]}" — no English text`);
@@ -722,7 +745,7 @@ const LINES = {
         const stamps = {};
         if (stampBlock) {
           for (const line of stampBlock[1].split("\n")) {
-            const kv = line.trim().match(/^([\w.]+):\s*(\S+)$/);
+            const kv = line.trim().match(/^([\w.-]+):\s*(\S+)$/);
             if (kv) stamps[kv[1]] = kv[2];
           }
         }
@@ -783,11 +806,20 @@ const LINES = {
 // ------------------------------------------------- G12: map alignment
 if (existsSync(MAP)) {
   const geo = JSON.parse(readFileSync(MAP, "utf8"));
-  const medieval = new Set(geo.features.map((x) =>
-    String(x.properties.name_medieval).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")));
-  for (const c of byTable.cities ?? [])
-    if (!medieval.has(c.id))
+  const medieval = new Map(geo.features.map((x) => [
+    String(x.properties.name_medieval).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+    x.geometry?.coordinates,
+  ]));
+  for (const c of byTable.cities ?? []) {
+    if (!medieval.has(c.id)) {
       err("G12", recordFile.get(c.id), `${c.id}: no matching name_medieval in worldmap/data/cities.geojson`);
+      continue;
+    }
+    const coord = medieval.get(c.id);
+    if (!Array.isArray(c.coord) || !Array.isArray(coord) || coord.length !== 2 ||
+        coord.some((v, i) => !Number.isFinite(v) || Math.abs(v - c.coord[i]) > 0.01))
+      err("G12", recordFile.get(c.id), `${c.id}: coord differs from worldmap/data/cities.geojson`);
+  }
 } else {
   warn("G12", "worldmap", "cities.geojson not found — map alignment skipped");
 }
@@ -1310,8 +1342,8 @@ for (const e of byTable.events ?? [])
       const notFlagged = w.not && Array.isArray(w.not.flags) && w.not.flags.length > 0;
       return !flagged && !notFlagged;
     });
-    if (standing.length !== 2) {
-      err("G31", `cities:${c.id}`, `city needs exactly 2 standing sites, has ${standing.length} (${sites.length} total)`);
+    if (standing.length < 2) {
+      err("G31", `cities:${c.id}`, `city needs at least 2 standing sites, has ${standing.length} (${sites.length} total)`);
       continue;
     }
     const deepened = [];
@@ -1447,7 +1479,14 @@ for (const e of byTable.events ?? [])
   if ((vectors.coastlines ?? []).length < 100) err("G33", "content/world/vector_map.json", "coastline geometry is unexpectedly sparse");
   if ((vectors.rivers ?? []).length < 20) err("G33", "content/world/vector_map.json", "river geometry is unexpectedly sparse");
   if ((vectors.seas ?? []).length < 10) err("G33", "content/world/vector_map.json", "sea labels are unexpectedly sparse");
-  if (tiles.enabled !== true) err("G33", "content/world/map_tiles.json", "real map tile provider must be enabled by default");
+  if (config.rendering?.style === "local-vector-atlas") {
+    if (tiles.enabled !== false) err("G33", "content/world/map_tiles.json", "local atlas must not overlay modern raster labels");
+    if ((vectors.land ?? []).length < 100) err("G33", "content/world/vector_map.json", "local atlas requires complete land polygons");
+    for (const ring of vectors.land ?? []) {
+      if (!Array.isArray(ring) || ring.length < 4 || !ring.every((p) => Array.isArray(p) && p.length === 2 && p.every(Number.isFinite)))
+        err("G33", "content/world/vector_map.json", "land polygon contains invalid coordinates");
+    }
+  } else if (tiles.enabled !== true) err("G33", "content/world/map_tiles.json", "raster atlas must enable its provider");
   const tileUrl = String(tiles.urlTemplate ?? "");
   if (!tileUrl.startsWith("https://") || !["{z}", "{x}", "{y}"].every((token) => tileUrl.includes(token)))
     err("G33", "content/world/map_tiles.json", "tile URL must be HTTPS and contain {z}/{x}/{y}");

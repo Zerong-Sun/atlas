@@ -26,8 +26,10 @@ func _ready() -> void:
 	root.add_theme_constant_override("separation", Metrics.sm())
 	add_child(root)
 	_title = Panels.heading("")
+	_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(_title)
 	_facts = Panels.label("", UiScale.ui(), Palette.ink_soft())
+	_facts.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(_facts)
 	root.add_child(Panels.rule())
 	_scroll = ScrollContainer.new()
@@ -37,17 +39,23 @@ func _ready() -> void:
 	_intro = RichTextLabel.new()
 	_intro.bbcode_enabled = true
 	_intro.fit_content = true
+	_intro.scroll_active = false
+	_intro.selection_enabled = true
+	_intro.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_intro.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_intro.add_theme_font_size_override("normal_font_size", UiScale.body())
 	_intro.add_theme_color_override("default_color", Palette.ink())
 	_scroll.add_child(_intro)
+	root.add_child(Panels.reading_hint(_scroll))
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", Metrics.sm())
 	root.add_child(row)
-	row.add_child(Panels.styled_button(I18n.t("ui.think_again"), func(): cancelled.emit()))
+	row.add_child(Panels.translated_button("ui.think_again", func(): cancelled.emit()))
 	_confirm = Panels.primary_button(I18n.t("ui.depart_confirm"), _emit_confirmed)
 	_confirm.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(_confirm)
+	get_viewport().size_changed.connect(_fit_scroll)
+	Panels.decorate(self, "atlas")
 
 
 func setup(p_db: ContentDb, p_travel: Travel) -> void:
@@ -56,6 +64,9 @@ func setup(p_db: ContentDb, p_travel: Travel) -> void:
 
 
 func open(route: Dictionary, mode: String, origin: String, state: WorldState) -> void:
+	Panels.restyle_tree(self)
+	_intro.add_theme_font_size_override("normal_font_size", UiScale.body())
+	_intro.add_theme_constant_override("line_separation", Metrics.xs())
 	_route = route
 	_mode = mode
 	_confirm.disabled = false
@@ -66,7 +77,7 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 	_facts.text = I18n.t("ui.travel.facts") % [
 		transport,
 		travel.total_days(route, mode),
-		int(travel.total_cost(route, mode) / Market.FEN),
+		Panels.money(travel.total_cost(route, mode)),
 		travel.total_risk(route, mode),
 	]
 	var entry := db.get_record(String(city.get("entryEvent", "")))
@@ -87,6 +98,8 @@ func open(route: Dictionary, mode: String, origin: String, state: WorldState) ->
 func _fit_scroll() -> void:
 	if _scroll == null:
 		return
+	add_theme_stylebox_override("panel", Panels.card_style("atlas"))
+	Panels.fit_panel(self, Vector2(760, 520))
 	var vp := get_viewport_rect().size
 	var cap := minf(vp.y - float(Metrics.xl()) * 3.0, 520.0)
 	var scroll_min := float(_scroll.custom_minimum_size.y)

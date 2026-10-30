@@ -15,14 +15,7 @@ Samarcanda
 
 ## ev.samarcanda.a.body
 
-Samarcand is called the garden of the world, and no one who has seen it can deny the
-name. Its streets are lined with canals shaded by plane trees; every courtyard has a
-fountain, every mosque a turquoise dome. The Registan square, with its three great
-madrasas, is the heart of learning in Central Asia — scholars come from every country of
-Islam to study law, theology, astronomy, and medicine under the blue-tiled arches. The
-dome of the Gur-i-Mir rises above the old city like a second sky. Between Baghdad and
-Cambaluc, there is no city richer, no city more beautiful, and no city whose name
-carries more weight with the caravans that cross the Roof of the World.
+In Samarcand, the turquoise dome glows in the sun. A scholar steps from the arcade and asks whether you came to see it or to hear a lesson at the madrasa. He points out the school by the square and a quiet garden reached along the canal. Students under the arcade sing a question-and-answer poem about blue roofs, mountain water, and watching the stars for the hour. The scholar says that reading the sky, tracing the canals, and learning the roads all belong to a traveller’s education.
 
 ## ev.samarcanda.a.choice.dome
 
@@ -42,14 +35,7 @@ The Blue City
 
 ## ev.samarcanda.b.body
 
-The best paper in the world is made in Samarcand, beaten from linen rags and polished
-smooth with stone until it shines like watered silk. The secret was learned from Chinese
-prisoners taken in battle generations ago, when the armies of Islam first crossed the
-Oxus. But the paper-makers of Samarcand have surpassed their teachers — their paper is
-whiter, smoother, and more durable than any made in Cathay. Scholars from every madrasa
-in Islam buy Samarcand paper for their manuscripts. A single sheet can cost as much as a
-day's wages for a skilled worker, but the calligraphers say it is worth it: ink never
-bleeds on Samarcand paper, and a book written on it will last three hundred years.
+At a Samarcand paper workshop, a maker polishes a pressed sheet against a smooth stone. “Let it dry before you touch it,” he says. Scholars and merchants buy this paper because ink holds its line on the polished surface. His apprentice sings the steps as he works: soften and beat the linen, mix the pulp with water, lift a thin layer on a screen, press, dry, and polish it. The maker asks you to feel a half-dry sheet and judge whether its fibres are even. A calligrapher has brought an illuminated manuscript; you may watch him write, buy paper, or choose a book.
 
 ## ev.samarcanda.b.choice.learn
 
@@ -69,14 +55,7 @@ The Paper-Makers' Quarter
 
 ## ev.samarcanda.c.body
 
-In the courtyard of the great mosque of Samarcand stands a stone pillar that the people
-say was brought here by the Prophet himself. It is black basalt, polished by centuries
-of hands touching it for blessing. The faithful press their foreheads against it; the
-sick rub their clothing on its surface; women who wish for children embrace it and pray.
-They say the stone weeps before disaster — drops of water appear on its surface like
-tears, and within a year, war, plague, or earthquake strikes the city. The mullahs
-record every weeping in the mosque chronicle. The last time the stone wept was the year
-before the Mongol rider first appeared on the northern horizon.
+At a mosque in Samarcand, people speak of a stone that gathers drops of water before disaster. The mullah opens an old chronicle and points to the years when it was said to have wept. “Look for yourself whether those years brought trouble,” he says. He offers no certain reading of the stone. You may pray, touch it, or ask when it last gathered water.
 
 ## ev.samarcanda.c.choice.pray
 
@@ -318,15 +297,7 @@ Samarcanda: The Astronomer of the Registan
 
 ## ev.ev_samarcanda_a_followup.body
 
-The astronomer of the third madrasa has not finished with you. He calls you up the stair to
-the room above the eastern arcade, where the Registan keeps its instruments of brass and its
-tables of the stars. On the table lies a sheet of the world's whitest paper, ruled with
-circles and the names of the fixed stars, marked in the hand of a hundred scholars. He shows
-you how the caravan masters carry a copy of these tables when they cross the Roof of the
-World, and how the year itself is measured here — not by the sun alone, but by the rising of
-certain stars before dawn. He sets an astrolabe in your hands and lets you turn its rings
-until you understand that the sky above Samarcand is a clock that never stops. The lesson is
-not magic; it is patience, and it is the pride of the college.
+On a madrasa terrace in Samarcand, an astrolabe lies beside a table of stars. The scholar points to several marks: caravan travellers use these stars to find their way at night. He asks whether you would rather learn to read the instrument, copy a star table, or stay to hear the rest of the lesson.
 
 ## ev.ev_samarcanda_a_followup.choice_1
 
@@ -404,15 +375,7 @@ Samarcanda: The Chronicler of the Stone
 
 ## ev.ev_samarcanda_c_followup.body
 
-The mullah who keeps the mosque chronicle has seen you touch the weeping stone, and he does
-not forget. He brings out the iron-bound book in which every weeping of the stone is written,
-with the year and the month set down beside it. The last entry, he shows you, is the year
-before the horsemen came down from the north, and the entry before that is the year of the
-great plague. Then he closes the book and tells you that the pilgrims who come up from the
-south bring another reading of the stone: they say it weeps for those who leave Samarcand and
-never return, and they press their children's faces against the basalt so the stone will
-remember them. He asks what you make of the stone's tears, and whether you will carry an
-answer away with you.
+The mullah who keeps the mosque chronicle in Samarcand shows you the years when the stone gathered water. “These entries coincide with troubled years,” he says, “but some believe it weeps for people who leave home.” He asks which reading you find persuasive.
 
 ## ev.ev_samarcanda_c_followup.choice_1
 

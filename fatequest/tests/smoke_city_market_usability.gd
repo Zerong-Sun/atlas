@@ -46,19 +46,15 @@ func _init() -> void:
 	n._input(escape)
 	await _frames()
 	_check(not n._settings.layer.visible and n._city_view.visible, "closing settings returns to city")
-	_check(n._city_view._figures.columns >= 2, "city has responsive columns")
+	_check(n._city_view._figures is Control and not n._city_view._figures is Container, "city uses a free-positioned scene")
 	_check(not n._city_view._status.text.contains("年"), "language change refreshes calendar formatting")
 	for card in n._city_view._figures.get_children():
 		_check(card.size.x <= n._city_view._figure_scroll.size.x, "city card fits viewport")
-		var labels_checked := 0
-		for content in card.get_children():
-			if not content is VBoxContainer:
-				continue
-			for child in content.get_children():
-				if child is Label:
-					labels_checked += 1
-					_check(child.size.x <= card.size.x, "city title/status fit card")
-		_check(labels_checked >= 2, "city layout audit checks actual title and status labels")
+		var labels: Array[Node] = card.find_children("*", "Label", true, false)
+		_check(labels.size() >= 2, "scene landmark includes title and availability")
+		for child in labels:
+			_check(child.size.x <= card.size.x, "city title/status fit landmark")
+
 	_check(n._city_view._foot.get_global_rect().end.y <= n._city_view.size.y + 1, "city navigation remains visible")
 	if DisplayServer.get_name() != "headless":
 		await RenderingServer.frame_post_draw
@@ -121,7 +117,7 @@ func _init() -> void:
 	await _frames(10)
 	_check(view.get_global_rect().end.x <= root.get_visible_rect().size.x + 1, "narrow market fits horizontally")
 	_check(view.get_global_rect().end.y <= root.get_visible_rect().size.y + 1, "narrow market fits vertically")
-	_check(n._city_view._figures.columns <= 3, "narrow city reduces columns")
+	_check(n._city_view._figures.custom_minimum_size.y > 0, "narrow city preserves scrollable scene")
 	if DisplayServer.get_name() != "headless":
 		await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png("res://build/playtest/market-polish-narrow-zh.png")

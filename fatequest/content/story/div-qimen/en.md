@@ -62,7 +62,7 @@ The Heavenly Secret is visible: keep your route quiet until you pass the custom 
 
 ## div.qimen.result.13
 
-A red cloud covers the gate: a storm delays you; shelter in the caravanserai.
+A storm may delay you. Find shelter at a posting station on the road.
 
 ## div.qimen.result.14
 

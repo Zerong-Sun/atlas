@@ -18,7 +18,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-caracoron-entry",
-      "sites": [],
+      "sites": [
+        "ev-caracoron-site-gap"
+      ],
       "exits": [
         "rt-caracoron-campichu",
         "rt-caracoron-camul",
@@ -133,7 +135,9 @@
       ],
       "tier": "town",
       "entryEvent": "ev-egrigaia-entry",
-      "sites": [],
+      "sites": [
+        "ev-egrigaia-site-gap"
+      ],
       "exits": [
         "rt-cachanfu-egrigaia",
         "rt-egrigaia-campichu",

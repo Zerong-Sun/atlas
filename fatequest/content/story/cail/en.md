@@ -15,141 +15,152 @@ Cail
 
 ## ev.cail.entry.body
 
-Cail is a great and noble city, and belongs to ASHAR, the eldest of the five brother
-Kings. It is at this city that all the ships touch that come from the west, as from
-Hormos and from Kis and from Aden, and all Arabia, laden with horses and with other
-things for sale. And this brings a great concourse of people from the country round
-about, and so there is great business done in this city of Cail. The King possesses vast
-treasures, and wears upon his person great store of rich jewels. He maintains great
-state and administers his kingdom with great equity, and extends great favour to
-merchants and foreigners, so that they are very glad to visit his city. This King has
-some 300 wives; for in those parts the man who has most wives is most thought of. As I
-told you before, there are in this great province of Maabar five crowned Kings, who are
-all own brothers born of one father and of one mother, and this king is one of them.
-Their mother is still living.
+A groom is leading a horse through Cail's market when the animal stops at a patch of shade and refuses to move. “He thinks that stall still sells fodder,” the groom says. The stall now belongs to a cotton seller, who brings out a handful of leaves. “Your father fed him here last season. He remembers better than you.” The groom laughs and lets the horse take them. You ask where the road through town runs. The cotton seller points past the horse yards and the shrine, then asks whether you will stay to see the vessels unloading animals from across the sea. A porter passing with a bale of cloth says the landing is busy enough to last all day. The groom checks the horse's shoes before leading it on and tells you to watch your step near the water: men carrying wet planks seldom see who is standing behind them. The cotton seller gathers her cloth out of the horse’s reach and tells the groom to return after the market closes.
 
 ## ev.cail.entry.choice.market
 
-Walk through the bāzār
+Spend a day at the horse market
 
 ## ev.cail.entry.choice.pass
 
-Pass through the darvāzā without delay
+Ask the road through town and continue
 
 ## ev.cail.entry.choice.shrine
 
-Visit the mandir (temple)
+Visit the town shrine
 
 ## ev.cail.entry.title
 
-Concerning the City of Cail
+A Horse Remembers a Stall
 
 ## ev.cail.a.title
 
-The Horse Quay
+A Horse Comes Ashore
 
 ## ev.cail.a.body
 
-You stand upon the quay where all the ships from the west make land — from Hormos and Kis, from Aden and all Arabia — their decks heavy with chargers and with other wares for sale. Grooms and brokers press close about the gangways, and the smell of salt, tar, and horseflesh hangs upon the air.
+At the landing, a groom waits while a horse is led down a plank from a western ship. The animal pauses halfway. “Don't pull against his neck,” the groom tells an impatient broker. “Give him time to see the ground.” They move a bundle of cloth away from the end of the plank. The horse steps down and shakes seawater from its mane. You ask the broker whether all horses arrive here by ship. “Many do, from harbours such as Ormus and Aden. Buyers meet them here, but a horse needs a look and a walk before anyone names a price.” The groom checks its legs and asks the broker to let it drink. A boatman nearby offers to name the ports farther along the coast; the groom promises to return after he has put the horse in shade. The broker holds the animal's tag for you to read and says he will introduce you to the stablekeeper when the next load is ashore.
 
 ## ev.cail.a.choice.watch_landing
 
-Stand a day upon the quay and watch the horses come ashore
+Spend a day at the horse landing
 
 ## ev.cail.a.choice.buy_charger
 
-Buy an Arabian charger from the Hormos merchants
+Buy a horse from the western merchant
 
 ## ev.cail.a.choice.ask_routes
 
-Ask the shipmasters where their vessels touch next
+Ask the boatmen about the southern ports
 
 ## ev.cail.b.title
 
-Ashar's Harbour Concourse
+The Cloth Seller’s Royal Tale
 
 ## ev.cail.b.body
 
-King Ashar, the eldest of the five brother-kings of Maabar, keeps great state upon the harbour concourse. He favours merchants and foreigners, and wears upon his person a great store of rich jewels; the crowds that gather for the horse-fairs bring immense business to his city.
+In the square, a cloth seller is laying out a bolt for a visitor from the royal household. His niece asks why he has brought his finest cotton instead of the cheaper cloth people buy for work. “Because the steward asked to see this weave,” he says. She has heard stories of brothers from a ruling family who once divided their harbours and asks whether the steward belongs to one of them. He says the stories change with the teller and the year; today he only needs the right name on his receipt. A broker waiting beside them names the coastal markets toward Melibar and Coilum, where different buyers ask for different cloth. You ask whether the steward will come soon. “If he does, he'll want the dye to hold in water,” the seller replies. His niece brings a bowl, ready to show him. Other buyers are already looking at the cotton, and the seller asks her to keep their orders separate from the household's.
 
 ## ev.cail.b.choice.wait_audience
 
-Wait two days upon the concourse in hope of seeing the King pass
+Wait two days to meet the royal steward
 
 ## ev.cail.b.choice.hear_brothers
 
-Listen while the brokers speak of the five brother-kings
+Hear the seller’s story of the royal brothers
 
 ## ev.cail.b.choice.buy_cotton
 
-Buy cotton cloth in the harbour market
+Buy a length of cotton cloth
 
 ## ev.ev_cail_entry.choice_1_result
 
-You pass through the darvāzā without delay. You set the way to Cail on your map.
+The cotton seller points you past the horse yard to the road onward. The groom thanks her for the leaves and leads the animal away from the crowded stall. You leave with the turns through Cail clear in mind.
 
 ## ev.ev_cail_entry.choice_2_result
 
-You walk through the bāzār. It costs you 1 day on the road. The account is written down before the hour turns. The road to Cail opens on your map.
+You spend a day at the market. The groom shows you where newly landed horses are watered; the cotton seller introduces a buyer who brings cloth down to the ships. Their talk gives you a feel for the goods and streets of Cail before you leave.
 
 ## ev.ev_cail_entry.choice_3_result
 
-You visit the mandir (temple). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Cail on your map.
+You leave your shoes at the shrine entrance and follow the attendant's directions around a family carrying offerings. Afterwards she points out the lane back toward the horse market. She thanks you for giving the family room and remembers you when you pass again.
 
 ## ev.ev_cail_a.choice_1_result
 
-You stand a day upon the quay and watch the horses come ashore. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Melibar on your map.
+You spend a day at the landing. The groom asks you to keep a clear space while each horse comes down, then shows you how he checks its legs on dry ground. He names the road toward Melibar when he hears where you may travel next. As the last horse settles, the broker invites you to the stable for another talk.
 
 ## ev.ev_cail_a.choice_2_result
 
-
-You buy an Arabian charger from the Hormos merchants. You pay 18000 coins. You add 1 item to your stores. The account is written down before the hour turns.
+You pay the western merchant for a horse after the groom has walked it in front of you. He checks the tag and hands you the lead rope. The broker explains why horses arriving from across the sea command such a price and offers to introduce you to the stablekeeper.
 
 ## ev.ev_cail_a.choice_3_result
 
-You ask the shipmasters where their vessels touch next. You set the way to Coilum on your map. You set the way to Samara on your map. You set what you saw into your travel book.
+The boatman points out the coast toward Coilum and the longer passage toward Samara. He asks which ship you came on, then shows how departure depends on wind and cargo. You leave with a better idea of the harbours named by sailors here.
 
 ## ev.ev_cail_b.choice_1_result
 
-You wait two days upon the concourse in hope of seeing the King pass. It costs you 2 days on the road. Your patient waiting is spoken of at the gate. The account is written down before the hour turns.
+You wait two days while the steward finishes his rounds. When he comes, the niece demonstrates that the cloth's colour holds in water. He signs the seller's receipt and thanks the people who kept the order ready. The seller introduces you, and the steward remembers your patience.
 
 ## ev.ev_cail_b.choice_2_result
 
-You listen while the brokers speak of the five brother-kings. You set the way to Melibar on your map. You set the way to Coilum on your map. You set what you saw into your travel book.
+The seller tells you how people in the market speak of brothers of a royal household and the harbours associated with their family. The broker adds the roads toward Melibar and Coilum, correcting a turn in the older man's account. You leave with the story as the merchants tell it, and with both ports in mind.
 
 ## ev.ev_cail_b.choice_3_result
 
-
-You buy cotton cloth in the harbour market. You pay 400 coins. You add 1 item to your stores. After the bargain, the cloth merchants call your name across the wharf.
+You pay for a full bolt of fine cotton cloth. The niece folds it with the finished side inside and ties it for travel. Her uncle introduces you to the next buyer in line, who thanks you for leaving the display clear, and the market's cloth sellers remember the exchange.
 
 ## ev.ev_cail_a_followup.title
 
-Cail: The Horse Quay's Second Page
+Cail: At the Stable after Landing
 
 ## ev.ev_cail_a_followup.body
 
-On the quay where western ships land horses, a charger broker who serves King Ashar's harbour draws you into the shade of the landing sheds. He says Cail is where Hormos horses meet Maabar cotton — and that Melibar, Coilum, and Samara are written in his landing book if you mean to ride or sail onward.
+The broker calls you to the stable after the landed horses have had water. A groom is showing a younger animal how to walk between the stalls. “He needs a little space,” the groom says when a buyer crowds its shoulder. The broker asks you to move the folded cloth that blocks the passage. Once the path is clear, he turns to a younger horse, recently landed and not yet trained for a long road and lets you inspect its lead rope and hooves. Another merchant is waiting with a route sheet. “If you're leaving without a horse,” he says, “I can still show you the roads toward Melibar and Coilum.” A sailor at the door joins in, naming Samara as a port farther across the water. The groom asks them all to lower their voices until the young animal finishes its turn; only then does the broker resume his offers. The sailor points to a worn place on the route sheet where many hands have traced the same crossing.
 
 ## ev.ev_cail_a_followup.choice_1
 
-Buy a charger at the harbour's measured price
+Buy the broker’s horse
 
 ## ev.ev_cail_a_followup.choice_1_result
 
-He sells you a charger fit for the Maabar road. The price is steep, and the horse is sound.
+You pay the broker for the horse after the groom walks it before you. The groom checks the lead rope and asks you to let the animal drink once more before travel. The broker hands you its tag and explains how to care for it on the next stretch.
 
 ## ev.ev_cail_a_followup.choice_2
 
-Ask which sea road leads toward Melibar and Coilum
+Ask about Melibar and Coilum
 
 ## ev.ev_cail_a_followup.choice_2_result
 
-Melibar and Coilum are marked on your map. The pepper coast is clear.
+The merchant marks Melibar and Coilum on the route sheet and tells you which road the land carriers use. The groom looks over his shoulder and confirms the first turn outside town. You leave with the coast and both ports clearer in mind.
 
 ## ev.ev_cail_a_followup.choice_3
 
-Watch the landing a day and hear the brother-kings named
+Spend a day helping at the stable
 
 ## ev.ev_cail_a_followup.choice_3_result
 
-You spend a day at the landing. Samara is named in the talk, and fortune bends a little your way.
+You spend a day carrying water and keeping the passage clear while the horses settle. A sailor waiting for his cargo tells the groom about Samara beyond the sea. The groom repeats the name to you and shows how he judges whether a newly landed horse is ready for a longer road.
+
+## ev.cail.drum.title
+
+The Drummer’s Missing Cloth
+
+## ev.cail.drum.body
+
+A drummer in a Cail courtyard is preparing to play for a household gathering. His daughter has brought the drum but cannot find the cloth that keeps dust from its skin. “You left it with the cotton seller,” she says. “I used that one to wrap the smaller drum,” he answers. She opens a basket and finds a piece of plain cloth the right size. Her father asks her to try it. She ties it too tightly, and the drum gives a dull sound. “Loosen this side,” he says. She does, strikes it again, and grins when the note carries across the yard. A neighbour comes to the gate to ask whether they have started without her. “Not yet,” the daughter says. “Father wanted to blame a missing cloth first.” The drummer laughs and offers you a place under the shade. He needs someone to carry the larger drum to the household, and his daughter would welcome another ear while she practises the new rhythm.
+
+## ev.cail.drum.choice.carry
+
+Carry the drum to the gathering
+
+## ev.cail.drum.result.carry
+
+You carry the larger drum while father and daughter walk ahead. At the gathering the neighbour clears a place for them, and the daughter begins with the rhythm she practised. The household thanks you for bringing the instrument safely through the crowded lane.
+
+## ev.cail.drum.choice.listen
+
+Stay for the afternoon rehearsal
+
+## ev.cail.drum.result.listen
+
+You stay for the afternoon and listen as the daughter learns where to leave a pause for the singers. Her father brings water and a plate of rice when they stop. By the time the gathering begins, you have rested and the daughter can play the new rhythm without looking to him.

@@ -42,6 +42,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "hierusalem",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-accon-hierusalem",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -167,6 +179,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "bethleem",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-alexandria-bethleem",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         },
@@ -225,6 +249,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "edessa",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-edessa-antiochia",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -273,6 +309,11 @@
               "op": "reveal_map",
               "value": "axuma",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -321,6 +362,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "petra",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-babylonia-cairus-petra",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -440,9 +493,12 @@
               "op": "reveal_map",
               "value": "balc",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-a",
+              "reason": "balc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-a", "reason": "balc-entry-consequence-a" }
           ]
         },
         {
@@ -463,15 +519,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-balc-consequence-b",
+              "reason": "balc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-balc-consequence-b", "reason": "balc-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.balc.entry.choice.market",
           "resultText": "ev.ev_balc_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -488,7 +552,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         }
       ],
       "lore": {
@@ -530,9 +599,12 @@
               "op": "reveal_map",
               "value": "baldacum",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-a",
+              "reason": "baldacum-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-a", "reason": "baldacum-entry-consequence-a" }
           ]
         },
         {
@@ -553,15 +625,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-baldacum-consequence-b",
+              "reason": "baldacum-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-baldacum-consequence-b", "reason": "baldacum-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.baldacum.entry.choice.market",
           "resultText": "ev.ev_baldacum_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -14600,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -578,7 +658,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 14600
+            }
+          }
         }
       ],
       "lore": {
@@ -626,6 +711,11 @@
               "op": "reveal_map",
               "value": "basora",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -674,6 +764,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "trapezus",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-trapezus-berrhoea",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -722,6 +824,11 @@
               "op": "reveal_map",
               "value": "bethleem",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -770,6 +877,11 @@
               "op": "reveal_map",
               "value": "bochara",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -818,12 +930,17 @@
               "op": "reveal_map",
               "value": "cabul",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
       ],
       "lore": {
-        "origin": "authored"
+        "origin": "hybrid"
       }
     },
     {
@@ -974,6 +1091,11 @@
               "op": "reveal_map",
               "value": "caffa",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -1107,11 +1229,17 @@
             }
           ]
         },
-      {
-        "label": "ev.cail.entry.choice.battuta",
-        "resultText": "ev.ev_cail_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-cail-battuta-a", "reason": "heard-of-adams-peak" } ]
-      }
+        {
+          "label": "ev.cail.entry.choice.battuta",
+          "resultText": "ev.ev_cail_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-cail-battuta-a",
+              "reason": "heard-of-adams-peak"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "cail",
@@ -1365,9 +1493,12 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-a",
+              "reason": "cambaluc-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-a", "reason": "cambaluc-entry-consequence-a" }
           ]
         },
         {
@@ -1393,15 +1524,23 @@
               "op": "flag",
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cambaluc-consequence-b",
+              "reason": "cambaluc-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cambaluc-consequence-b", "reason": "cambaluc-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cambaluc.entry.choice.market",
           "resultText": "ev.ev_cambaluc_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -7200,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -1423,7 +1562,12 @@
               "value": "fl-reached-cambaluc",
               "reason": "stood-in-the-great-khans-city"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 7200
+            }
+          }
         }
       ],
       "lore": {
@@ -1673,9 +1817,12 @@
               "op": "reveal_map",
               "value": "cascar",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-a",
+              "reason": "cascar-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-a", "reason": "cascar-entry-consequence-a" }
           ]
         },
         {
@@ -1696,15 +1843,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cascar-consequence-b",
+              "reason": "cascar-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cascar-consequence-b", "reason": "cascar-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cascar.entry.choice.market",
           "resultText": "ev.ev_cascar_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -1721,7 +1876,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         }
       ],
       "lore": {
@@ -1840,9 +2000,12 @@
               "op": "reveal_map",
               "value": "chandu",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-a",
+              "reason": "chandu-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-a", "reason": "chandu-entry-consequence-a" }
           ]
         },
         {
@@ -1863,15 +2026,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-chandu-consequence-b",
+              "reason": "chandu-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-chandu-consequence-b", "reason": "chandu-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.chandu.entry.choice.market",
           "resultText": "ev.ev_chandu_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -7200,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -1888,7 +2059,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 7200
+            }
+          }
         }
       ],
       "lore": {
@@ -2229,6 +2405,11 @@
               "op": "reveal_map",
               "value": "coigangiu",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -2385,6 +2566,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "smyrna",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-constantinopolis-smyrna",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -2427,9 +2620,12 @@
               "op": "reveal_map",
               "value": "cotan",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-a",
+              "reason": "cotan-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-a", "reason": "cotan-entry-consequence-a" }
           ]
         },
         {
@@ -2450,15 +2646,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-cotan-consequence-b",
+              "reason": "cotan-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-cotan-consequence-b", "reason": "cotan-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.cotan.entry.choice.market",
           "resultText": "ev.ev_cotan_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -2475,7 +2679,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         }
       ],
       "lore": {
@@ -2523,6 +2732,11 @@
               "op": "reveal_map",
               "value": "ctesiphon",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -2571,6 +2785,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "tripolis",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-damascus-tripolis",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -2619,6 +2845,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "cotan",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-delli-cotan",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -2667,6 +2905,11 @@
               "op": "reveal_map",
               "value": "dongola",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -2769,6 +3012,11 @@
               "op": "reveal_map",
               "value": "edessa",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -2871,6 +3119,11 @@
               "op": "reveal_map",
               "value": "ephesus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -3104,6 +3357,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "petra",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-hierusalem-petra",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -3152,6 +3417,11 @@
               "op": "reveal_map",
               "value": "ispahan",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -3200,6 +3470,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "chamba",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-java-major-chamba",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -3473,9 +3755,12 @@
               "op": "reveal_map",
               "value": "kinsay",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-a",
+              "reason": "kinsay-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-a", "reason": "kinsay-entry-consequence-a" }
           ]
         },
         {
@@ -3496,15 +3781,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-consequence-b",
+              "reason": "kinsay-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-kinsay-consequence-b", "reason": "kinsay-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.kinsay.entry.choice.market",
           "resultText": "ev.ev_kinsay_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -7200,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -3521,13 +3814,24 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 7200
+            }
+          }
         },
-      {
-        "label": "ev.kinsay.entry.choice.battuta",
-        "resultText": "ev.ev_kinsay_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-kinsay-battuta-a", "reason": "heard-of-the-homeward-voyage" } ]
-      }
+        {
+          "label": "ev.kinsay.entry.choice.battuta",
+          "resultText": "ev.ev_kinsay_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-kinsay-battuta-a",
+              "reason": "heard-of-the-homeward-voyage"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
@@ -3574,6 +3878,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "moscovia",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-kiovia-moscovia",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -3665,9 +3981,12 @@
               "op": "reveal_map",
               "value": "rt-lop-sachiu",
               "reason": "innkeeper-mentions-the-road"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-a",
+              "reason": "lop-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-a", "reason": "lop-entry-consequence-a" }
           ]
         },
         {
@@ -3692,9 +4011,12 @@
               "scope": "city",
               "id": "lop",
               "reason": "courteous-enquiry"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-lop-consequence-b",
+              "reason": "lop-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-lop-consequence-b", "reason": "lop-entry-consequence-b" }
           ]
         }
       ],
@@ -3801,6 +4123,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "medina",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-mecha-medina",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -3849,6 +4183,11 @@
               "op": "reveal_map",
               "value": "medina",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -3928,11 +4267,17 @@
             }
           ]
         },
-      {
-        "label": "ev.melibar.entry.choice.battuta",
-        "resultText": "ev.ev_melibar_entry.choice_4_result",
-        "effects": [ { "op": "queue_event", "value": "ev-melibar-battuta-a", "reason": "heard-of-the-chinese-junks" } ]
-      }
+        {
+          "label": "ev.melibar.entry.choice.battuta",
+          "resultText": "ev.ev_melibar_entry.choice_4_result",
+          "effects": [
+            {
+              "op": "queue_event",
+              "value": "ev-melibar-battuta-a",
+              "reason": "heard-of-the-chinese-junks"
+            }
+          ]
+        }
       ],
       "lore": {
         "placeId": "kingdom-of-melibar",
@@ -3979,6 +4324,11 @@
               "op": "reveal_map",
               "value": "merva",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4081,6 +4431,11 @@
               "op": "reveal_map",
               "value": "moscovia",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4183,6 +4538,11 @@
               "op": "reveal_map",
               "value": "nicaea",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4231,6 +4591,11 @@
               "op": "reveal_map",
               "value": "ninive",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4279,6 +4644,11 @@
               "op": "reveal_map",
               "value": "novogardia",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4321,9 +4691,12 @@
               "op": "reveal_map",
               "value": "ormus",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-a",
+              "reason": "ormus-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-a", "reason": "ormus-entry-consequence-a" }
           ]
         },
         {
@@ -4344,15 +4717,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-ormus-consequence-b",
+              "reason": "ormus-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-ormus-consequence-b", "reason": "ormus-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.ormus.entry.choice.market",
           "resultText": "ev.ev_ormus_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -14600,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -4369,7 +4750,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 14600
+            }
+          }
         }
       ],
       "lore": {
@@ -4579,6 +4965,11 @@
               "op": "reveal_map",
               "value": "petra",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4622,7 +5013,7 @@
       ],
       "lore": {
         "placeId": "sachiu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c40"
@@ -4746,6 +5137,11 @@
               "op": "reveal_map",
               "value": "samara",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -4788,9 +5184,12 @@
               "op": "reveal_map",
               "value": "samarcanda",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-a",
+              "reason": "samarcanda-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-a", "reason": "samarcanda-entry-consequence-a" }
           ]
         },
         {
@@ -4811,15 +5210,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-samarcanda-consequence-b",
+              "reason": "samarcanda-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-samarcanda-consequence-b", "reason": "samarcanda-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.samarcanda.entry.choice.market",
           "resultText": "ev.ev_samarcanda_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -4836,7 +5243,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         }
       ],
       "lore": {
@@ -5254,6 +5666,11 @@
               "op": "reveal_map",
               "value": "smyrna",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -5456,6 +5873,11 @@
               "op": "reveal_map",
               "value": "tana-azov",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -5635,6 +6057,11 @@
               "op": "reveal_map",
               "value": "tarsus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -5677,9 +6104,12 @@
               "op": "reveal_map",
               "value": "tauris",
               "reason": "clerks-named-the-quarters"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-a",
+              "reason": "tauris-entry-consequence-a"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-a", "reason": "tauris-entry-consequence-a" }
           ]
         },
         {
@@ -5700,15 +6130,23 @@
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
+            },
+            {
+              "op": "queue_event",
+              "value": "ev-tauris-consequence-b",
+              "reason": "tauris-entry-consequence-b"
             }
-          ,
-            { "op": "queue_event", "value": "ev-tauris-consequence-b", "reason": "tauris-entry-consequence-b" }
           ]
         },
         {
           "label": "ev.tauris.entry.choice.market",
           "resultText": "ev.ev_tauris_entry.choice_3_result",
           "effects": [
+            {
+              "op": "coins",
+              "value": -7200,
+              "reason": "paid-for-the-bargain"
+            },
             {
               "op": "days",
               "value": 1,
@@ -5725,7 +6163,12 @@
               "value": 1,
               "reason": "bought-local-specialty"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 7200
+            }
+          }
         }
       ],
       "lore": {
@@ -5904,6 +6347,18 @@
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
+            },
+            {
+              "op": "reveal_city",
+              "value": "caffa",
+              "level": 1,
+              "reason": "locals-named-the-onward-town"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-caffa-trapezus",
+              "level": 1,
+              "reason": "locals-described-the-road"
             }
           ]
         }
@@ -5952,6 +6407,11 @@
               "op": "reveal_map",
               "value": "tripolis",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -6000,6 +6460,11 @@
               "op": "reveal_map",
               "value": "tyrus",
               "reason": "rested-and-noted-the-place"
+            },
+            {
+              "op": "vitality",
+              "value": 10,
+              "reason": "rested-after-the-road"
             }
           ]
         }
@@ -6135,7 +6600,15 @@
         {
           "label": "ev.maldive.entry.choice.arrive",
           "resultText": "ev.ev_maldive_entry.choice_1_result",
-          "effects": [ { "op": "reputation", "value": 1, "scope": "city", "id": "maldive", "reason": "arrived-at-the-coconut-isles" } ]
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "maldive",
+              "reason": "arrived-at-the-coconut-isles"
+            }
+          ]
         }
       ],
       "lore": {
@@ -6147,6 +6620,5 @@
         }
       }
     }
-
   ]
 }

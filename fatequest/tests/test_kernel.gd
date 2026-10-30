@@ -38,6 +38,8 @@ func run() -> bool:
 	# ------------------------------------------------- conditions
 	_ok(ce.evaluate({"cities": ["lop"]}, state), "cities matches current city")
 	_ok(not ce.evaluate({"cities": ["sachiu"]}, state), "cities rejects other city")
+	_ok(ce.evaluate({"modes": ["ship"]}, state, {"mode": "ship"}), "mode matches current travel")
+	_ok(not ce.evaluate({"modes": ["ship"]}, state, {"mode": "foot"}), "mode rejects other travel")
 	_ok(ce.evaluate({}, state), "empty condition is true")
 	_ok(ce.evaluate(null, state), "null condition is true")
 	_ok(ce.evaluate({"coins": {"min": 400}}, state), "coins min passes")

@@ -28,7 +28,7 @@ let terms = [];
 try {
   terms = JSON.parse(readFileSync(join(ROOT, "assets/data/glossary.json"), "utf8")).terms ?? [];
 } catch { /* optional */ }
-const GLOSS_ALIAS = { ormus: "hormos", samarcanda: "samarcand", nanghin: "yangiu" };
+const GLOSS_ALIAS = { ormus: "hormos", samarcanda: "samarcand" };
 const glossById = new Map(terms.filter((t) => t.kind === "place").map((t) => [t.id, t]));
 const lookupGloss = (cityId) => glossById.get(cityId) ?? glossById.get(GLOSS_ALIAS[cityId] ?? "");
 

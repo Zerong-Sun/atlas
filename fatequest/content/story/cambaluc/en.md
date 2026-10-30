@@ -43,14 +43,7 @@ The Palace of the Great Khan
 
 ## ev.cambaluc.b.body
 
-Each of Cambaluc's twelve gates opens onto a suburb larger than most cities of
-Christendom or Islam. In these suburbs, the merchants from every province of the Kaan's
-empire — Cathay, Manzi, Tangut, Tibet, the lands of the Golden Horde, Persia, and India
-— have their warehouses and counting-houses. A thousand cart-loads of silk enter the
-city every day. Forty cart-loads of pepper, spice, and precious goods are consumed
-daily. No poor person goes hungry in Cambaluc; the Kaan maintains public granaries that
-distribute rice and millet to anyone who asks. Outside every gate, there is a
-caravanserai for travelers who arrive after the curfew.
+Cambaluc has twelve gates, and beyond each lies a suburb larger than many cities of Christendom or Islam. Merchants from across the empire—Cathay, Manzi, Tangut, Tibet, the Golden Horde, Persia and India—keep warehouses and counting houses there. A thousand carts of silk enter the city each day; forty more carts of pepper, spices and rare goods are consumed. The Great Khan keeps public granaries where those who ask receive rice and millet. Beyond every gate an inn receives travellers who reach the city after curfew. An innkeeper hangs a lantern outside while the staff sing of a bed and grain for the weary traveller, silk from Cathay and scent from Persia, and trading again in the morning. “After the gates shut, we still take people in,” he says. “The granary distributes food by its rules. First let them rest; business can wait until dawn.”
 
 ## ev.cambaluc.b.choice.count
 

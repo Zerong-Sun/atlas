@@ -67,7 +67,7 @@
       ],
       "lore": {
         "placeId": "cascar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c033"
@@ -91,6 +91,11 @@
           "resultText": "ev.ev_cascar_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -11600,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "persian-carpet",
               "value": 1,
@@ -101,7 +106,12 @@
               "value": "st-cascar-carpet",
               "reason": "bought-a-carpet-at-the-dyers-price"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 11600
+            }
+          }
         },
         {
           "label": "ev.ev_cascar_b_followup.choice_2",
@@ -138,7 +148,7 @@
       ],
       "lore": {
         "placeId": "cascar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c033"
@@ -210,7 +220,7 @@
       ],
       "lore": {
         "placeId": "cascar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c033"

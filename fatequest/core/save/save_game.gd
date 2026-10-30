@@ -124,9 +124,11 @@ static func serialize(state: WorldState, _clock: WorldClock, extra: Dictionary =
 			"recovery": state.recovery.duplicate(true),
 			"start_city": state.start_city,
 			"visited": Array(state.visited),
+			"journey_legs": state.journey_legs.duplicate(true),
 			"longest_leg": state.longest_leg.duplicate(true),
 			"best_trade": state.best_trade.duplicate(true),
 			"purchases": state.purchases.duplicate(true),
+			"city_life": state.city_life.duplicate(true),
 			"life": state.life.duplicate(true),
 			"legacy": state.legacy.duplicate(true),
 		},
@@ -302,6 +304,10 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.cargo_slots = int(src.get("cargo_slots", 4))
 	st.birthdate_jdn = int(src.get("birthdate_jdn", -1))
 	st.start_city = String(src.get("start_city", ""))
+	if src.get("journey_legs", []) is Array:
+		for leg in src.get("journey_legs", []):
+			if leg is Dictionary and leg.get("from") is String and leg.get("to") is String:
+				st.journey_legs.append(leg.duplicate(true))
 
 	# Typed arrays will not accept an untyped literal from JSON, so each is
 	# filled element by element rather than assigned wholesale.
@@ -341,6 +347,8 @@ static func deserialize(doc: Dictionary) -> Dictionary:
 	st.etiquette = (src.get("etiquette", {}) as Dictionary).duplicate(true)
 	st.active_journey = (src.get("active_journey", {}) as Dictionary).duplicate(true)
 	st.recovery = (src.get("recovery", {}) as Dictionary).duplicate(true)
+	if src.get("city_life", {}) is Dictionary:
+		st.city_life = src.get("city_life", {}).duplicate(true)
 	st.life = (src.get("life", MortalityCore.default_life()) as Dictionary).duplicate(true)
 	st.legacy = (src.get("legacy", {
 		"generation": 1, "lineage_id": "", "volumes": [], "pending_heirloom": ""}) \
@@ -502,11 +510,11 @@ static func write(slot: String, state: WorldState, clock: WorldClock,
 	if FileAccess.file_exists(p):
 		var existing_status := _document_status(_read_path(p))
 		if existing_status.get("status", "") != "ok":
-			push_error("SaveGame: refusing to overwrite invalid slot %s (%s)" % [
+			push_warning("SaveGame: refusing to overwrite invalid slot %s (%s)" % [
 				slot, existing_status.get("code", "SAVE_INVALID")])
 			return false
 	elif FileAccess.file_exists(bak):
-		push_error("SaveGame: refusing to overwrite backup-only slot %s" % slot)
+		push_warning("SaveGame: refusing to overwrite backup-only slot %s" % slot)
 		return false
 	var doc := serialize(state, clock, extra, saved_at)
 	var header: Dictionary = doc.get("header", {})

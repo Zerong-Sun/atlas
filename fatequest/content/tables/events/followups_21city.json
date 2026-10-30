@@ -19,6 +19,11 @@
           "resultText": "ev.ev_kerman_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -14600,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "damascus-steel",
               "value": 1,
@@ -29,7 +34,12 @@
               "value": "cx-kerman",
               "reason": "learned-the-forge-craft"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 14600
+            }
+          }
         },
         {
           "label": "ev.ev_kerman_a_followup.choice_2",
@@ -92,6 +102,11 @@
           "resultText": "ev.ev_camadi_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "dates",
               "value": 1,
@@ -102,7 +117,12 @@
               "value": "cx-camadi",
               "reason": "provisioned-at-the-ruined-plain"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_camadi_a_followup.choice_2",
@@ -117,6 +137,21 @@
               "op": "codex",
               "value": "cx-camadi",
               "reason": "learned-the-inland-gulf-road"
+            },
+            {
+              "op": "reveal_city",
+              "value": "ormus",
+              "reason": "learned-ormus-crossing-to-calatu"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-camadi-ormus",
+              "reason": "learned-ormus-crossing-to-calatu"
+            },
+            {
+              "op": "reveal_route",
+              "value": "rt-ormus-calatu",
+              "reason": "learned-ormus-crossing-to-calatu"
             }
           ]
         },
@@ -197,7 +232,12 @@
               "id": "tenduc",
               "reason": "gift-to-the-nestorian-church"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 120
+            }
+          }
         },
         {
           "label": "ev.ev_tenduc_a_followup.choice_3",
@@ -243,6 +283,11 @@
           "resultText": "ev.ev_badashan_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -13500,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "lapis",
               "value": 1,
@@ -253,7 +298,12 @@
               "value": "cx-badashan",
               "reason": "bought-at-the-highland-ledger"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 13500
+            }
+          }
         },
         {
           "label": "ev.ev_badashan_a_followup.choice_2",
@@ -332,7 +382,12 @@
               "value": 1,
               "reason": "spoke-the-princes-tongue"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 200
+            }
+          }
         },
         {
           "label": "ev.ev_badashan_b_followup.choice_2",
@@ -361,7 +416,7 @@
           "effects": [
             {
               "op": "coins",
-              "value": -2200,
+              "value": -13500,
               "reason": "bought-balas-ruby-at-court-price"
             },
             {
@@ -378,7 +433,7 @@
           ],
           "needs": {
             "coins": {
-              "min": 2200
+              "min": 13500
             }
           }
         }
@@ -409,6 +464,11 @@
           "resultText": "ev.ev_camul_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "melons",
               "value": 1,
@@ -420,7 +480,12 @@
               "value": 1,
               "reason": "provisioned-for-the-desert"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_camul_a_followup.choice_2",
@@ -462,7 +527,7 @@
       ],
       "lore": {
         "placeId": "camul",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c041"
@@ -546,7 +611,12 @@
               "value": 1,
               "reason": "guided-through-mountain-weather"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 400
+            }
+          }
         }
       ],
       "lore": {
@@ -575,6 +645,11 @@
           "resultText": "ev.ev_taican_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "cotton-cloth",
               "value": 1,
@@ -587,7 +662,12 @@
               "id": "taican",
               "reason": "provisioned-at-the-corn-market"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_taican_a_followup.choice_2",
@@ -653,6 +733,11 @@
           "resultText": "ev.ev_tanpiju_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "tea",
               "value": 1,
@@ -663,7 +748,12 @@
               "value": "cx-tanpiju",
               "reason": "bought-garden-tea-near-kinsay"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_tanpiju_a_followup.choice_2",
@@ -730,6 +820,11 @@
           "resultText": "ev.ev_tanpiju_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "lacquerware",
               "value": 1,
@@ -740,16 +835,21 @@
               "value": "cx-tanpiju",
               "reason": "bought-lacquer-under-kinsay"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_tanpiju_b_followup.choice_2",
           "resultText": "ev.ev_tanpiju_b_followup.choice_2_result",
           "effects": [
             {
-              "op": "coins",
-              "value": -200,
-              "reason": "funeral-offering-at-tanpiju"
+              "op": "days",
+              "value": 1,
+              "reason": "helped-prepare-the-funeral-rite"
             },
             {
               "op": "reputation",
@@ -770,6 +870,11 @@
           "resultText": "ev.ev_tanpiju_b_followup.choice_3_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -6700,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "hangzhou-fan",
               "value": 1,
@@ -780,7 +885,12 @@
               "value": "kinsay",
               "reason": "merchant-named-the-day-to-kinsay"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 6700
+            }
+          }
         }
       ],
       "lore": {
@@ -825,6 +935,11 @@
           "resultText": "ev.ev_campichu_a_followup.choice_2_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "tea",
               "value": 1,
@@ -835,7 +950,12 @@
               "value": "cx-campichu",
               "reason": "provisioned-at-the-tangut-seat"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_campichu_a_followup.choice_3",
@@ -886,6 +1006,11 @@
           "resultText": "ev.ev_chinangli_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "silk",
               "value": 1,
@@ -896,7 +1021,12 @@
               "value": "cacanfu",
               "reason": "broker-named-cacanfu"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          }
         },
         {
           "label": "ev.ev_chinangli_a_followup.choice_2",
@@ -963,6 +1093,11 @@
           "resultText": "ev.ev_kenjanfu_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "silk",
               "value": 1,
@@ -973,7 +1108,12 @@
               "value": "cx-kenjanfu",
               "reason": "bought-silk-on-the-mulberry-plain"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          }
         },
         {
           "label": "ev.ev_kenjanfu_a_followup.choice_2",
@@ -1040,6 +1180,11 @@
           "resultText": "ev.ev_saianfu_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "silk",
               "value": 1,
@@ -1050,7 +1195,12 @@
               "value": "cx-saianfu",
               "reason": "bought-silk-in-the-twelve-city-seat"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          }
         },
         {
           "label": "ev.ev_saianfu_a_followup.choice_2",
@@ -1122,6 +1272,11 @@
           "resultText": "ev.ev_siju_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "sugar",
               "value": 1,
@@ -1132,7 +1287,12 @@
               "value": "coigangiu",
               "reason": "master-named-coigangiu"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_siju_a_followup.choice_2",
@@ -1199,6 +1359,11 @@
           "resultText": "ev.ev_sinju_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "tea",
               "value": 1,
@@ -1209,7 +1374,12 @@
               "value": "cx-sinju",
               "reason": "bought-tea-on-the-kian"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_sinju_a_followup.choice_2",
@@ -1281,6 +1451,11 @@
           "resultText": "ev.ev_suju_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "silk",
               "value": 1,
@@ -1291,7 +1466,12 @@
               "value": "cx-suju",
               "reason": "bought-brocade-in-the-sixty-mile-city"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5000
+            }
+          }
         },
         {
           "label": "ev.ev_suju_a_followup.choice_2",
@@ -1358,6 +1538,11 @@
           "resultText": "ev.ev_chamba_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "sandalwood",
               "value": 1,
@@ -1368,7 +1553,12 @@
               "value": "cx-chamba",
               "reason": "bought-sandalwood-after-the-elephant-tribute"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_chamba_a_followup.choice_2",
@@ -1435,6 +1625,11 @@
           "resultText": "ev.ev_chamba_b_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -1445,7 +1640,12 @@
               "value": "cx-chamba",
               "reason": "bought-pepper-at-the-idolater-court"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_chamba_b_followup.choice_2",
@@ -1514,6 +1714,11 @@
           "resultText": "ev.ev_aden_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -1524,7 +1729,12 @@
               "value": "cx-aden",
               "reason": "bought-pepper-for-the-alexandria-road"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_aden_a_followup.choice_2",
@@ -1567,7 +1777,7 @@
       ],
       "lore": {
         "placeId": "aden",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c036"
@@ -1591,6 +1801,11 @@
           "resultText": "ev.ev_cail_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -12400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "arabian-horse",
               "value": 1,
@@ -1601,7 +1816,12 @@
               "value": "cx-cail",
               "reason": "bought-a-charger-on-the-horse-quay"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 12400
+            }
+          }
         },
         {
           "label": "ev.ev_cail_a_followup.choice_2",
@@ -1649,7 +1869,7 @@
       ],
       "lore": {
         "placeId": "cail",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c021"
@@ -1673,6 +1893,11 @@
           "resultText": "ev.ev_calatu_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10800,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -1683,7 +1908,12 @@
               "value": "cx-calatu",
               "reason": "bought-pepper-at-the-gulf-fortress"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10800
+            }
+          }
         },
         {
           "label": "ev.ev_calatu_a_followup.choice_2",
@@ -1731,7 +1961,7 @@
       ],
       "lore": {
         "placeId": "gulf-of-calatu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b3-c039"
@@ -1755,6 +1985,11 @@
           "resultText": "ev.ev_esher_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10000,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "frankincense",
               "value": 1,
@@ -1765,7 +2000,12 @@
               "value": "cx-esher",
               "reason": "bought-frankincense-at-the-soldans-haven"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10000
+            }
+          }
         },
         {
           "label": "ev.ev_esher_a_followup.choice_2",
@@ -1837,6 +2077,11 @@
           "resultText": "ev.ev_melibar_a_followup.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -5400,
+              "reason": "paid-for-the-bargain"
+            },
+            {
               "op": "goods",
               "id": "pepper",
               "value": 1,
@@ -1847,7 +2092,12 @@
               "value": "cail",
               "reason": "watchman-named-cail"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 5400
+            }
+          }
         },
         {
           "label": "ev.ev_melibar_a_followup.choice_2",

@@ -41,3 +41,27 @@ You pass through without stopping. The road to Maabar opens on your map.
 ## ev.ev_maabar_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Maabar on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.maabar.site_gap.title
+
+A Weaver’s Cotton Knot
+
+## ev.maabar.site_gap.body
+
+Cotton threads hang in rows inside the weaving shed. A weaver stretches threads of different thickness over a wooden frame. The warp must be strong; the weft can vary for the pattern. She lets you pull a length to see whether it breaks easily. Years of handling have polished one corner of the frame, and she trusts her fingers as much as her eyes.
+
+## ev.maabar.site_gap.choice.route
+
+Ask about the road to Coilum
+
+## ev.ev_maabar_site_gap.choice_1_result
+
+“Follow this coastal road northwest back to Coilum,” she says. “Merchant ships and land caravans both meet there, so it is a good place to ask for news.”
+
+## ev.maabar.site_gap.choice.interact
+
+Try joining a broken thread
+
+## ev.ev_maabar_site_gap.choice_2_result
+
+She shows you how to overlap and twist the ends, then hide the join at the cloth’s edge. A knot left outside will wear open; a little moisture helps cotton fibres join.

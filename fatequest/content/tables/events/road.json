@@ -8,6 +8,14 @@
       "title": "ev.road.desert_voices.title",
       "body": "ev.road.desert_voices.body",
       "when": {
+        "routes": [
+          "rt-lop-sachiu"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
+        ],
         "not_flags": [
           "fl-heard-the-voices"
         ]
@@ -16,7 +24,7 @@
         "bg": "desert-night",
         "region": "central_asia"
       },
-      "once": false,
+      "once": true,
       "choices": [
         {
           "label": "ev.road.desert_voices.choice.follow",
@@ -67,9 +75,15 @@
           "pass": {
             "effects": [
               {
-                "op": "reveal_map",
-                "value": "rt-lop-sachiu",
-                "reason": "hexagram-showed"
+                "op": "fate",
+                "id": "travel",
+                "value": 1,
+                "reason": "kept-the-camp-together"
+              },
+              {
+                "op": "codex",
+                "value": "cx-desert-voices",
+                "reason": "recorded-the-desert-voices"
               },
               {
                 "op": "flag",
@@ -96,7 +110,7 @@
       ],
       "lore": {
         "storyId": "a-certain-desert",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c39"
@@ -107,10 +121,15 @@
       "id": "ev-road-00",
       "kind": "road",
       "title": "ev.road.00.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -126,7 +145,13 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "took-rutted-steppe-track"
+            },
+            {
+              "op": "fate",
+              "value": -1,
+              "reason": "risked-stuck-wagon",
+              "id": "travel"
             }
           ]
         },
@@ -135,21 +160,26 @@
           "resultText": "ev.ev_road_00.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -25,
+              "reason": "paid-well-guide"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 4,
+              "reason": "followed-guide-around-steppe"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 25
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "of-certain-battles-that-were-fought-by-king-caidu-against-the-armies-of-",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF CERTAIN BATTLES THAT WERE FOUGHT BY KING CAIDU AGAINST THE ARMIES OF HIS UNCLE THE GREAT KAAN"
@@ -160,10 +190,15 @@
       "id": "ev-road-01",
       "kind": "road",
       "title": "ev.road.01.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -177,32 +212,54 @@
           "resultText": "ev.ev_road_01.choice_1_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -10,
+              "reason": "paid-small-boat"
+            },
+            {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "crossed-upper-ferry"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 10
+            }
+          }
         },
         {
           "label": "ev.road.01.choice.choice_1",
           "resultText": "ev.ev_road_01.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -35,
+              "reason": "paid-guarded-ferry"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 3,
+              "reason": "queued-at-guarded-ferry"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "kept-ferry-receipt",
+              "scope": "band",
+              "id": "china"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 35
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "concerning-the-revolt-of-nayan-who-was-uncle-to-the-great-kaan-cublay",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "CONCERNING THE REVOLT OF NAYAN, WHO WAS UNCLE TO THE GREAT KAAN CUBLAY"
@@ -213,10 +270,15 @@
       "id": "ev-road-02",
       "kind": "road",
       "title": "ev.road.02.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "west_asia"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -232,7 +294,14 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "repaired-orchard-path"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-mark-mountain-path",
+              "scope": "band",
+              "id": "west_asia"
             }
           ]
         },
@@ -241,21 +310,26 @@
           "resultText": "ev.ev_road_02.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
-            },
-            {
               "op": "coins",
               "value": -30,
-              "reason": "detour"
+              "reason": "hired-mountain-escort"
+            },
+            {
+              "op": "days",
+              "value": 4,
+              "reason": "followed-escorted-road"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 30
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "the-old-man-used-to-train-his-assassins",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE OLD MAN USED TO TRAIN HIS ASSASSINS"
@@ -266,10 +340,13 @@
       "id": "ev-road-03",
       "kind": "road",
       "title": "ev.road.03.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "maritime_asia"
+        ],
+        "modes": [
+          "ship"
         ]
       },
       "scene": {
@@ -285,7 +362,13 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "took-shallow-island-channel"
+            },
+            {
+              "op": "fate",
+              "value": -1,
+              "reason": "risked-shallow-water",
+              "id": "travel"
             }
           ]
         },
@@ -294,21 +377,26 @@
           "resultText": "ev.ev_road_03.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -35,
+              "reason": "paid-island-pilot"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 4,
+              "reason": "sailed-via-sheltered-harbour"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 35
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "what-further-came-of-the-great-kaans-expedition-against-chipangu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "WHAT FURTHER CAME OF THE GREAT KAAN’S EXPEDITION AGAINST CHIPANGU"
@@ -319,10 +407,15 @@
       "id": "ev-road-04",
       "kind": "road",
       "title": "ev.road.04.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -338,7 +431,14 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "searched-riverbed-for-horse"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-family-find-horse",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         },
@@ -347,21 +447,26 @@
           "resultText": "ev.ev_road_04.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -20,
+              "reason": "paid-pasture-guide"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 4,
+              "reason": "followed-pasture-road"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "the-valiant-feats-and-victory-of-king-nogai",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "THE VALIANT FEATS AND VICTORY OF KING NOGAI"
@@ -372,10 +477,15 @@
       "id": "ev-road-05",
       "kind": "road",
       "title": "ev.road.05.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "india"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -391,7 +501,13 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "tested-repaired-chain-steps"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "helped-family-check-stone-steps",
+              "id": "travel"
             }
           ]
         },
@@ -400,21 +516,26 @@
           "resultText": "ev.ev_road_05.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
-            },
-            {
               "op": "coins",
               "value": -30,
-              "reason": "detour"
+              "reason": "paid-hill-porters"
+            },
+            {
+              "op": "days",
+              "value": 5,
+              "reason": "followed-hill-porters"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 30
+            }
+          }
         }
       ],
       "lore": {
         "storyId": "the-same-continued-the-history-of-sagamoni-borcan-and-the-beginning-of-i",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "THE SAME CONTINUED. THE HISTORY OF SAGAMONI BORCAN AND THE BEGINNING OF IDOLATRY"
@@ -425,8 +546,9 @@
       "id": "ev-road-06",
       "kind": "road",
       "title": "ev.road.06.title",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "china"
         ]
@@ -444,12 +566,12 @@
             {
               "op": "coins",
               "value": -80,
-              "reason": "paid-fee"
+              "reason": "paid-post-horse"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 1,
+              "reason": "rode-to-next-post"
             }
           ],
           "needs": {
@@ -465,14 +587,26 @@
             {
               "op": "coins",
               "value": 30,
-              "reason": "deal"
+              "reason": "sold-potters-bowls"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "carried-bowls-two-days"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "delivered-potters-bowls",
+              "scope": "band",
+              "id": "china"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "of-the-battle-that-the-great-kaan-fought-with-nayan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF THE BATTLE THAT THE GREAT KAAN FOUGHT WITH NAYAN"
@@ -483,10 +617,15 @@
       "id": "ev-road-07",
       "kind": "road",
       "title": "ev.road.07.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "india"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -501,18 +640,18 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -60,
+              "reason": "paid-riding-party"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 2,
+              "reason": "rode-with-riding-party"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 60
             }
           }
         },
@@ -522,15 +661,20 @@
           "effects": [
             {
               "op": "coins",
-              "value": 30,
-              "reason": "deal"
+              "value": 35,
+              "reason": "sold-spare-tack"
+            },
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "traveled-to-tack-buyer"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "treating-of-the-great-province-of-abash-which-is-middle-india-and-is-on-",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "TREATING OF THE GREAT PROVINCE OF ABASH WHICH IS MIDDLE INDIA, AND IS ON THE MAINLAND"
@@ -541,8 +685,9 @@
       "id": "ev-road-08",
       "kind": "road",
       "title": "ev.road.08.title",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "china"
         ]
@@ -559,18 +704,18 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -70,
+              "reason": "paid-fast-cart"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 1,
+              "reason": "rode-fast-cart"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 70
             }
           }
         },
@@ -581,14 +726,25 @@
             {
               "op": "coins",
               "value": 30,
-              "reason": "deal"
+              "reason": "delivered-teacups"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "carried-teacups-two-days"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "delivered-cups-with-receipt",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "the-kingdom-of-taianfu",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "THE KINGDOM OF TAIANFU"
@@ -599,8 +755,9 @@
       "id": "ev-road-09",
       "kind": "road",
       "title": "ev.road.09.title",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "china"
         ]
@@ -618,12 +775,12 @@
             {
               "op": "coins",
               "value": -80,
-              "reason": "paid-fee"
+              "reason": "paid-cloth-caravan"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 2,
+              "reason": "rode-with-cloth-caravan"
             }
           ],
           "needs": {
@@ -638,15 +795,27 @@
           "effects": [
             {
               "op": "coins",
-              "value": 30,
-              "reason": "deal"
+              "value": 40,
+              "reason": "sold-wedding-cloth"
+            },
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "carried-wedding-cloth"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "delivered-wedding-cloth",
+              "scope": "band",
+              "id": "china"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "of-the-great-festival-which-the-kaan-holds-on-new-years-day",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF THE GREAT FESTIVAL WHICH THE KAAN HOLDS ON NEW YEAR’S DAY"
@@ -657,10 +826,15 @@
       "id": "ev-road-10",
       "kind": "road",
       "title": "ev.road.10.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "india"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -675,18 +849,18 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -90,
+              "reason": "paid-guarded-caravan"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 1,
+              "reason": "rode-guarded-caravan"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 90
             }
           }
         },
@@ -696,15 +870,20 @@
           "effects": [
             {
               "op": "coins",
-              "value": 30,
-              "reason": "deal"
+              "value": 25,
+              "reason": "sold-shell-beads"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "carried-shell-beads"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "continues-to-speak-of-the-province-of-maabar",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "CONTINUES TO SPEAK OF THE PROVINCE OF MAABAR"
@@ -715,8 +894,9 @@
       "id": "ev-road-11",
       "kind": "road",
       "title": "ev.road.11.title",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -733,18 +913,18 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -75,
+              "reason": "paid-steppe-post-horse"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 2,
+              "reason": "rode-steppe-post-horse"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 75
             }
           }
         },
@@ -755,14 +935,25 @@
             {
               "op": "coins",
               "value": 30,
-              "reason": "deal"
+              "reason": "sold-spare-leather-tack"
+            },
+            {
+              "op": "days",
+              "value": 3,
+              "reason": "traveled-to-tack-market"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "delivered-spare-tack",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "chinghis-mustered-his-people-to-march-against-prester-john",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW CHINGHIS MUSTERED HIS PEOPLE TO MARCH AGAINST PRESTER JOHN"
@@ -773,8 +964,9 @@
       "id": "ev-road-12",
       "kind": "road",
       "title": "ev.road.12.title",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "china"
         ]
@@ -791,18 +983,18 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -65,
+              "reason": "paid-document-courier"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 1,
+              "reason": "traveled-with-courier"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 65
             }
           }
         },
@@ -812,15 +1004,27 @@
           "effects": [
             {
               "op": "coins",
-              "value": 30,
-              "reason": "deal"
+              "value": 20,
+              "reason": "delivered-school-paper"
+            },
+            {
+              "op": "days",
+              "value": 2,
+              "reason": "carried-school-paper"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "delivered-school-paper",
+              "scope": "band",
+              "id": "china"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "concerning-the-twelve-barons-who-are-set-over-all-the-affairs-of-the-gre",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "CONCERNING THE TWELVE BARONS WHO ARE SET OVER ALL THE AFFAIRS OF THE GREAT KAAN"
@@ -831,10 +1035,13 @@
       "id": "ev-road-13",
       "kind": "road",
       "title": "ev.road.13.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "india"
+        ],
+        "modes": [
+          "ship"
         ]
       },
       "scene": {
@@ -849,18 +1056,24 @@
           "effects": [
             {
               "op": "coins",
-              "value": -80,
-              "reason": "paid-fee"
+              "value": -35,
+              "reason": "paid-coastal-boat-fare"
             },
             {
               "op": "days",
-              "value": -3,
-              "reason": "faster"
+              "value": 1,
+              "reason": "sailed-with-tidewise-crew"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-coastal-tides",
+              "id": "travel"
             }
           ],
           "needs": {
             "coins": {
-              "min": 80
+              "min": 35
             }
           }
         },
@@ -869,16 +1082,22 @@
           "resultText": "ev.ev_road_13.choice_2_result",
           "effects": [
             {
-              "op": "coins",
-              "value": 30,
-              "reason": "deal"
+              "op": "days",
+              "value": 2,
+              "reason": "helped-dry-and-load-fish"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-fishing-family",
+              "scope": "city"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "discourseth-of-the-two-islands-called-male-and-female-and-why-they-are-s",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "DISCOURSETH OF THE TWO ISLANDS CALLED MALE AND FEMALE, AND WHY THEY ARE SO CALLED"
@@ -889,10 +1108,15 @@
       "id": "ev-road-14",
       "kind": "road",
       "title": "ev.road.14.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -906,9 +1130,14 @@
           "resultText": "ev.ev_road_14.choice_1_result",
           "effects": [
             {
+              "op": "days",
+              "value": 2,
+              "reason": "checked-seasonal-route-list"
+            },
+            {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "corrected-posting-for-travellers",
               "scope": "band",
               "id": "china"
             }
@@ -919,21 +1148,26 @@
           "resultText": "ev.ev_road_14.choice_2_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -20,
+              "reason": "paid-confirmed-caravan-fare"
+            },
+            {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "travelled-with-confirmed-caravan"
             }
           ],
           "needs": {
             "coins": {
-              "min": 40
+              "min": 20
             }
           }
         }
       ],
       "lore": {
         "storyId": "rehearsal-of-the-way-the-year-of-the-great-kaan-is-distributed",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "REHEARSAL OF THE WAY THE YEAR OF THE GREAT KAAN IS DISTRIBUTED"
@@ -944,10 +1178,15 @@
       "id": "ev-road-15",
       "kind": "road",
       "title": "ev.road.15.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -963,7 +1202,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "helped-complete-courier-record",
               "scope": "band",
               "id": "china"
             }
@@ -976,19 +1215,20 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "checked-old-bridge-on-foot"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-bridge-route",
+              "id": "travel"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "mark-returned-from-the-mission-whereon-he-had-been-sent",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW MARK RETURNED FROM THE MISSION WHEREON HE HAD BEEN SENT"
@@ -999,10 +1239,15 @@
       "id": "ev-road-16",
       "kind": "road",
       "title": "ev.road.16.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1016,9 +1261,14 @@
           "resultText": "ev.ev_road_16.choice_1_result",
           "effects": [
             {
+              "op": "days",
+              "value": 1,
+              "reason": "reset-shared-well-marker"
+            },
+            {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "settled-well-route-with-herders",
               "scope": "band",
               "id": "steppe"
             }
@@ -1031,19 +1281,20 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "searched-stone-marker-waterway"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "found-waterway-by-old-marker",
+              "id": "travel"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "prester-john-marched-to-meet-chinghis",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW PRESTER JOHN MARCHED TO MEET CHINGHIS"
@@ -1054,10 +1305,15 @@
       "id": "ev-road-17",
       "kind": "road",
       "title": "ev.road.17.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1073,7 +1329,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "reconciled-saddlery-list",
               "scope": "band",
               "id": "china"
             }
@@ -1086,19 +1342,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "delivered-repaired-tack"
+            },
+            {
+              "op": "coins",
+              "value": 20,
+              "reason": "saddler-paid-delivery-wage"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "the-great-kaan-marched-against-nayan",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE GREAT KAAN MARCHED AGAINST NAYAN"
@@ -1109,10 +1365,15 @@
       "id": "ev-road-18",
       "kind": "road",
       "title": "ev.road.18.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1126,9 +1387,14 @@
           "resultText": "ev.ev_road_18.choice_1_result",
           "effects": [
             {
+              "op": "days",
+              "value": 1,
+              "reason": "checked-grain-register"
+            },
+            {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "helped-restore-family-ration",
               "scope": "band",
               "id": "china"
             }
@@ -1141,19 +1407,20 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "rode-with-grain-cart"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-passable-streets",
+              "id": "travel"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "of-the-charity-of-the-emperor-to-the-poor",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF THE CHARITY OF THE EMPEROR TO THE POOR"
@@ -1164,10 +1431,15 @@
       "id": "ev-road-19",
       "kind": "road",
       "title": "ev.road.19.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1183,7 +1455,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "matched-place-name-on-letter",
               "scope": "band",
               "id": "china"
             }
@@ -1196,19 +1468,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "carried-letter-to-next-post"
+            },
+            {
+              "op": "coins",
+              "value": 20,
+              "reason": "merchant-paid-letter-wage"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "the-great-kaan-sent-the-two-brothers-as-his-envoys-to-the-pope",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE GREAT KAAN SENT THE TWO BROTHERS AS HIS ENVOYS TO THE POPE"
@@ -1219,10 +1491,15 @@
       "id": "ev-road-20",
       "kind": "road",
       "title": "ev.road.20.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1238,7 +1515,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "helped-falconer-repair-jess",
               "scope": "band",
               "id": "china"
             }
@@ -1250,20 +1527,21 @@
           "effects": [
             {
               "op": "days",
+              "value": 2,
+              "reason": "followed-apprentice-around-marsh"
+            },
+            {
+              "op": "fate",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "learned-waymarkers-by-marsh",
+              "id": "travel"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "the-emperor-goes-on-a-hunting-expedition",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE EMPEROR GOES ON A HUNTING EXPEDITION"
@@ -1274,10 +1552,15 @@
       "id": "ev-road-21",
       "kind": "road",
       "title": "ev.road.21.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1291,9 +1574,14 @@
           "resultText": "ev.ev_road_21.choice_1_result",
           "effects": [
             {
+              "op": "days",
+              "value": 2,
+              "reason": "checked-lost-caravan-tag"
+            },
+            {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "helped-release-delayed-driver",
               "scope": "band",
               "id": "steppe"
             }
@@ -1304,21 +1592,26 @@
           "resultText": "ev.ev_road_21.choice_2_result",
           "effects": [
             {
+              "op": "coins",
+              "value": -15,
+              "reason": "paid-camp-driver-fare"
+            },
+            {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "travelled-with-camp-driver"
             }
           ],
           "needs": {
             "coins": {
-              "min": 40
+              "min": 15
             }
           }
         }
       ],
       "lore": {
         "storyId": "argon-was-delivered-from-prison",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW ARGON WAS DELIVERED FROM PRISON"
@@ -1329,10 +1622,15 @@
       "id": "ev-road-22",
       "kind": "road",
       "title": "ev.road.22.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "west_asia"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1348,7 +1646,7 @@
             {
               "op": "reputation",
               "value": 1,
-              "reason": "official-favour",
+              "reason": "checked-family-journey-list",
               "scope": "band",
               "id": "west_asia"
             }
@@ -1361,19 +1659,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "avoided-official"
+              "reason": "carried-merchant-goods-to-next-post"
+            },
+            {
+              "op": "coins",
+              "value": 20,
+              "reason": "merchant-paid-carrying-wage"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 40
-            }
-          }
+          ]
         }
       ],
       "lore": {
         "storyId": "the-two-brothers-again-departed-from-venice-on-their-way-back-to-the",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE TWO BROTHERS AGAIN DEPARTED FROM VENICE, ON THEIR WAY BACK TO THE GREAT KAAN, AND TOOK WITH THEM MARK, THE SON OF MESSER NICOLAS"
@@ -1384,10 +1682,15 @@
       "id": "ev-road-23",
       "kind": "road",
       "title": "ev.road.23.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1401,15 +1704,15 @@
           "resultText": "ev.ev_road_23.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-23",
-              "reason": "recorded-marvel"
+              "op": "days",
+              "value": 1,
+              "reason": "checked-water-channel"
             },
             {
               "op": "fate",
-              "id": "travel",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "found-camp-water",
+              "id": "travel"
             }
           ]
         },
@@ -1420,14 +1723,14 @@
             {
               "op": "coins",
               "value": 15,
-              "reason": "told-tale"
+              "reason": "sold-verified-well-map"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "barca-and-his-army-advanced-to-meet-alau",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW BARCA AND HIS ARMY ADVANCED TO MEET ALAU"
@@ -1438,10 +1741,15 @@
       "id": "ev-road-24",
       "kind": "road",
       "title": "ev.road.24.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1455,15 +1763,11 @@
           "resultText": "ev.ev_road_24.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-24",
-              "reason": "recorded-marvel"
-            },
-            {
-              "op": "fate",
-              "id": "travel",
+              "op": "reputation",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "agreed-horse-grazing-boundary",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         },
@@ -1472,16 +1776,22 @@
           "resultText": "ev.ev_road_24.choice_2_result",
           "effects": [
             {
-              "op": "coins",
-              "value": 15,
-              "reason": "told-tale"
+              "op": "days",
+              "value": 1,
+              "reason": "searched-for-lost-packhorse"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-herders-path",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "toctai-marched-against-nogai",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW TOCTAI MARCHED AGAINST NOGAI"
@@ -1492,10 +1802,15 @@
       "id": "ev-road-25",
       "kind": "road",
       "title": "ev.road.25.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1509,15 +1824,11 @@
           "resultText": "ev.ev_road_25.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-25",
-              "reason": "recorded-marvel"
-            },
-            {
-              "op": "fate",
-              "id": "travel",
+              "op": "reputation",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "settled-borrowed-bucket-return",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         },
@@ -1526,16 +1837,21 @@
           "resultText": "ev.ev_road_25.choice_2_result",
           "effects": [
             {
+              "op": "days",
+              "value": 1,
+              "reason": "carried-reply-to-next-camp"
+            },
+            {
               "op": "coins",
               "value": 15,
-              "reason": "told-tale"
+              "reason": "messenger-paid-reply-wage"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "of-the-second-message-that-toctai-sent-to-nogai-and-his-reply",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF THE SECOND MESSAGE THAT TOCTAI SENT TO NOGAI, AND HIS REPLY"
@@ -1546,10 +1862,15 @@
       "id": "ev-road-26",
       "kind": "road",
       "title": "ev.road.26.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1563,15 +1884,16 @@
           "resultText": "ev.ev_road_26.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-26",
-              "reason": "recorded-marvel"
+              "op": "days",
+              "value": 1,
+              "reason": "counted-caravan-water-skins"
             },
             {
-              "op": "fate",
-              "id": "travel",
+              "op": "reputation",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "settled-water-allocation",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         },
@@ -1580,16 +1902,22 @@
           "resultText": "ev.ev_road_26.choice_2_result",
           "effects": [
             {
-              "op": "coins",
-              "value": 15,
-              "reason": "told-tale"
+              "op": "days",
+              "value": 2,
+              "reason": "scouted-alternate-crossing"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-alternate-crossing",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "toctai-and-nogai-address-their-people-and-the-next-day-join-battle",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW TOCTAI AND NOGAI ADDRESS THEIR PEOPLE, AND THE NEXT DAY JOIN BATTLE"
@@ -1600,10 +1928,15 @@
       "id": "ev-road-27",
       "kind": "road",
       "title": "ev.road.27.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1617,15 +1950,11 @@
           "resultText": "ev.ev_road_27.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-27",
-              "reason": "recorded-marvel"
-            },
-            {
-              "op": "fate",
-              "id": "travel",
+              "op": "reputation",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "corrected-camp-road-list",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         },
@@ -1634,16 +1963,21 @@
           "resultText": "ev.ev_road_27.choice_2_result",
           "effects": [
             {
+              "op": "days",
+              "value": 1,
+              "reason": "copied-well-route-map"
+            },
+            {
               "op": "coins",
               "value": 15,
-              "reason": "told-tale"
+              "reason": "caravan-paid-map-copy"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "alau-addressed-his-followers",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW ALAU ADDRESSED HIS FOLLOWERS"
@@ -1654,10 +1988,15 @@
       "id": "ev-road-28",
       "kind": "road",
       "title": "ev.road.28.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1671,15 +2010,15 @@
           "resultText": "ev.ev_road_28.choice_1_result",
           "effects": [
             {
-              "op": "codex",
-              "value": "cx-road-28",
-              "reason": "recorded-marvel"
+              "op": "days",
+              "value": 1,
+              "reason": "helped-recover-shoal-cargo"
             },
             {
               "op": "fate",
-              "id": "travel",
               "value": 1,
-              "reason": "witnessed-wonder"
+              "reason": "marked-shallow-crossing",
+              "id": "travel"
             }
           ]
         },
@@ -1688,16 +2027,21 @@
           "resultText": "ev.ev_road_28.choice_2_result",
           "effects": [
             {
+              "op": "days",
+              "value": 2,
+              "reason": "carried-salvaged-cargo"
+            },
+            {
               "op": "coins",
-              "value": 15,
-              "reason": "told-tale"
+              "value": 20,
+              "reason": "merchant-paid-salvage-delivery"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "of-the-great-battle-between-alau-and-barca",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "OF THE GREAT BATTLE BETWEEN ALAU AND BARCA"
@@ -1708,10 +2052,15 @@
       "id": "ev-road-29",
       "kind": "road",
       "title": "ev.road.29.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "west_asia"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1725,15 +2074,15 @@
           "resultText": "ev.ev_road_29.choice_1_result",
           "effects": [
             {
-              "op": "fate",
-              "id": "travel",
-              "value": 1,
-              "reason": "blessed"
-            },
-            {
               "op": "coins",
               "value": -20,
-              "reason": "offering"
+              "reason": "contributed-to-evening-meal"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "joined-evening-prayer",
+              "id": "travel"
             }
           ],
           "needs": {
@@ -1749,14 +2098,14 @@
             {
               "op": "codex",
               "value": "cx-road-29",
-              "reason": "observed-rite"
+              "reason": "heard-caliph-tale"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "the-christians-were-in-great-dismay-because-of-what-the-calif-had-sa",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE CHRISTIANS WERE IN GREAT DISMAY BECAUSE OF WHAT THE CALIF HAD SAID"
@@ -1767,10 +2116,15 @@
       "id": "ev-road-30",
       "kind": "road",
       "title": "ev.road.30.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "west_asia"
+        ],
+        "modes": [
+          "foot",
+          "caravan",
+          "camel"
         ]
       },
       "scene": {
@@ -1784,22 +2138,18 @@
           "resultText": "ev.ev_road_30.choice_1_result",
           "effects": [
             {
-              "op": "fate",
-              "id": "travel",
+              "op": "days",
               "value": 1,
-              "reason": "blessed"
+              "reason": "helped-cobbler-return-shoes"
             },
             {
-              "op": "coins",
-              "value": -20,
-              "reason": "offering"
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-cobbler-families",
+              "scope": "band",
+              "id": "west_asia"
             }
-          ],
-          "needs": {
-            "coins": {
-              "min": 20
-            }
-          }
+          ]
         },
         {
           "label": "ev.road.30.choice.choice_1",
@@ -1808,14 +2158,20 @@
             {
               "op": "codex",
               "value": "cx-road-30",
-              "reason": "observed-rite"
+              "reason": "heard-cobblers-tale"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "listened-to-roadside-story",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "the-one-eyed-cobler-was-desired-to-pray-for-the-christians",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "HOW THE ONE-EYED COBLER WAS DESIRED TO PRAY FOR THE CHRISTIANS"
@@ -1826,14 +2182,19 @@
       "id": "ev-road-32",
       "kind": "road",
       "title": "ev.road.32.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "caravan-city",
         "region": "china"
       },
       "body": "ev.road.32.body",
@@ -1845,7 +2206,13 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "faced-danger"
+              "reason": "measured-old-bridge"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-bridge-repair",
+              "scope": "city"
             }
           ]
         },
@@ -1854,35 +2221,43 @@
           "resultText": "ev.ev_road_32.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -20,
+              "reason": "paid-local-driver"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 1,
+              "reason": "detoured-around-broken-bridge"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
         }
       ],
       "lore": {
-        "storyId": "the-great-kaan-conquered-the-province-of-manzi",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "HOW THE GREAT KAAN CONQUERED THE PROVINCE OF MANZI"
-        }
+        "origin": "authored"
       }
     },
     {
       "id": "ev-road-33",
       "kind": "road",
       "title": "ev.road.33.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
+        ],
+        "cities": [
+          "mien"
         ]
       },
       "scene": {
@@ -1897,8 +2272,15 @@
           "effects": [
             {
               "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "value": 1,
+              "reason": "helped-pack-animals-cross"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-herders-cross",
+              "scope": "city",
+              "id": "mien"
             }
           ]
         },
@@ -1908,38 +2290,39 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 2,
+              "reason": "followed-mountain-guide"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-safe-pass",
+              "id": "travel"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "wherein-is-related-how-the-king-of-mien-and-bangala-vowed-vengeance-agai",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "WHEREIN IS RELATED HOW THE KING OF MIEN AND BANGALA VOWED VENGEANCE AGAINST THE GREAT KAAN"
-        }
+        "origin": "authored"
       }
     },
     {
       "id": "ev-road-34",
       "kind": "road",
       "title": "ev.road.34.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "caravan-city",
         "region": "china"
       },
       "body": "ev.road.34.body",
@@ -1949,9 +2332,10 @@
           "resultText": "ev.ev_road_34.choice_1_result",
           "effects": [
             {
-              "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "op": "reputation",
+              "value": 1,
+              "reason": "checked-guard-roster",
+              "scope": "city"
             }
           ]
         },
@@ -1961,38 +2345,38 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 1,
+              "reason": "carried-roster-to-next-post"
             },
             {
               "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "value": 15,
+              "reason": "earned-roster-delivery-fee"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "the-kaan-rewarded-the-valour-of-his-captains",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "HOW THE KAAN REWARDED THE VALOUR OF HIS CAPTAINS"
-        }
+        "origin": "authored"
       }
     },
     {
       "id": "ev-road-35",
       "kind": "road",
       "title": "ev.road.35.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "steppe"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "steppe-camp",
         "region": "steppe"
       },
       "body": "ev.road.35.body",
@@ -2003,8 +2387,14 @@
           "effects": [
             {
               "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "value": 1,
+              "reason": "searched-for-old-boundary-stone"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-winter-pasture-marks",
+              "id": "travel"
             }
           ]
         },
@@ -2014,20 +2404,22 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 2,
+              "reason": "measured-winter-grazing"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-pasture-families",
+              "scope": "band",
+              "id": "steppe"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "sundry-particulars-of-the-plain-beyond-caracoron",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "SUNDRY PARTICULARS OF THE PLAIN BEYOND CARACORON"
@@ -2038,14 +2430,19 @@
       "id": "ev-road-36",
       "kind": "road",
       "title": "ev.road.36.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "caravan-city",
         "region": "china"
       },
       "body": "ev.road.36.body",
@@ -2055,9 +2452,10 @@
           "resultText": "ev.ev_road_36.choice_1_result",
           "effects": [
             {
-              "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "op": "reputation",
+              "value": 1,
+              "reason": "returned-family-parcel",
+              "scope": "city"
             }
           ]
         },
@@ -2067,38 +2465,38 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 1,
+              "reason": "delivered-parcel-to-side-village"
             },
             {
               "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "value": 15,
+              "reason": "earned-parcel-delivery-fee"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "the-two-brothers-and-messer-marco-took-leave-of-the-great-kaan-and-r",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "HOW THE TWO BROTHERS AND MESSER MARCO TOOK LEAVE OF THE GREAT KAAN, AND RETURNED TO THEIR OWN COUNTRY"
-        }
+        "origin": "authored"
       }
     },
     {
       "id": "ev-road-37",
       "kind": "road",
       "title": "ev.road.37.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "caravan-city",
         "region": "china"
       },
       "body": "ev.road.37.body",
@@ -2109,8 +2507,14 @@
           "effects": [
             {
               "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "value": 1,
+              "reason": "checked-grain-ledger"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "reason": "settled-grain-ownership",
+              "scope": "city"
             }
           ]
         },
@@ -2119,35 +2523,55 @@
           "resultText": "ev.ev_road_37.choice_2_result",
           "effects": [
             {
-              "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "op": "coins",
+              "value": -20,
+              "reason": "paid-detour-cart"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "days",
+              "value": 1,
+              "reason": "detoured-with-other-cart"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "learned-another-road",
+              "id": "travel"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
         }
       ],
       "lore": {
-        "storyId": "the-great-kaan-caused-nayan-to-be-put-to-death",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "HOW THE GREAT KAAN CAUSED NAYAN TO BE PUT TO DEATH"
-        }
+        "origin": "authored"
       }
     },
     {
       "id": "ev-road-38",
       "kind": "road",
       "title": "ev.road.38.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "india"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
+        ],
+        "cities": [
+          "cail",
+          "cambaet",
+          "coilum",
+          "maabar",
+          "melibar",
+          "semenat",
+          "tana"
         ]
       },
       "scene": {
@@ -2161,11 +2585,22 @@
           "resultText": "ev.ev_road_38.choice_1_result",
           "effects": [
             {
-              "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "op": "coins",
+              "value": -20,
+              "reason": "bought-water-for-sick-child"
+            },
+            {
+              "op": "fate",
+              "value": 1,
+              "reason": "helped-traveling-family",
+              "id": "travel"
             }
-          ]
+          ],
+          "needs": {
+            "coins": {
+              "min": 20
+            }
+          }
         },
         {
           "label": "ev.road.38.choice.choice_1",
@@ -2173,20 +2608,21 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 1,
+              "reason": "found-medicine-for-child"
             },
             {
-              "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "op": "reputation",
+              "value": 1,
+              "reason": "helped-traveling-family",
+              "scope": "city"
             }
           ]
         }
       ],
       "lore": {
         "storyId": "discoursing-of-the-place-where-lieth-the-body-of-st-thomas-the-apostle-a",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "DISCOURSING OF THE PLACE WHERE LIETH THE BODY OF ST. THOMAS THE APOSTLE; AND OF THE MIRACLES THEREOF"
@@ -2197,14 +2633,19 @@
       "id": "ev-road-39",
       "kind": "road",
       "title": "ev.road.39.title",
-      "once": false,
+      "once": true,
       "when": {
         "bands": [
           "china"
+        ],
+        "modes": [
+          "caravan",
+          "camel",
+          "foot"
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "caravan-city",
         "region": "china"
       },
       "body": "ev.road.39.body",
@@ -2214,9 +2655,10 @@
           "resultText": "ev.ev_road_39.choice_1_result",
           "effects": [
             {
-              "op": "days",
-              "value": 2,
-              "reason": "faced-danger"
+              "op": "reputation",
+              "value": 1,
+              "reason": "checked-tax-ledger",
+              "scope": "city"
             }
           ]
         },
@@ -2226,24 +2668,19 @@
           "effects": [
             {
               "op": "days",
-              "value": 5,
-              "reason": "safer-road"
+              "value": 1,
+              "reason": "delivered-merchant-goods"
             },
             {
               "op": "coins",
-              "value": -30,
-              "reason": "detour"
+              "value": 20,
+              "reason": "earned-delivery-fee"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "treating-of-the-great-yearly-revenue-that-the-great-kaan-hath-from-kinsa",
-        "origin": "source",
-        "ref": {
-          "book": "marco-polo",
-          "chapterId": "TREATING OF THE GREAT YEARLY REVENUE THAT THE GREAT KAAN HATH FROM KINSAY"
-        }
+        "origin": "authored"
       }
     },
     {
@@ -2251,14 +2688,22 @@
       "kind": "road",
       "title": "ev.road.fadlan_01.title",
       "body": "ev.road.fadlan_01.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {
-        "bg": "desert-night",
+        "bg": "steppe-camp",
         "region": "steppe"
       },
       "choices": [
@@ -2269,7 +2714,7 @@
             {
               "op": "days",
               "value": 2,
-              "reason": "crossed-the-frozen-jayhun"
+              "reason": "crossed-frozen-steppe-river"
             },
             {
               "op": "codex",
@@ -2296,7 +2741,7 @@
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "chose-caution-on-the-jayhun"
+              "reason": "chose-caution-at-frozen-river"
             },
             {
               "op": "queue_event",
@@ -2320,10 +2765,18 @@
       "kind": "road",
       "title": "ev.road.fadlan_02.title",
       "body": "ev.road.fadlan_02.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {
@@ -2342,8 +2795,8 @@
             },
             {
               "op": "days",
-              "value": -1,
-              "reason": "guide-shortened-the-march"
+              "value": 1,
+              "reason": "reached-shelter-in-one-day"
             },
             {
               "op": "codex",
@@ -2389,8 +2842,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_03.title",
       "body": "ev.road.fadlan_03.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2448,8 +2902,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_04.title",
       "body": "ev.road.fadlan_04.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2503,8 +2958,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_05.title",
       "body": "ev.road.fadlan_05.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2521,7 +2977,7 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "observed-the-ship-burial"
+              "reason": "spent-day-reading-old-burial-account"
             },
             {
               "op": "codex",
@@ -2537,13 +2993,13 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "withdrew-from-the-shore-rite"
+              "reason": "spent-day-sorting-grandfathers-things"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "showed-respect-at-a-distance"
+              "reason": "helped-siblings-sort-grandfathers-tools"
             }
           ]
         }
@@ -2562,8 +3018,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_06.title",
       "body": "ev.road.fadlan_06.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2626,8 +3083,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_07.title",
       "body": "ev.road.fadlan_07.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2681,10 +3139,18 @@
       "kind": "road",
       "title": "ev.road.fadlan_08.title",
       "body": "ev.road.fadlan_08.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {
@@ -2740,8 +3206,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_09.title",
       "body": "ev.road.fadlan_09.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2799,8 +3266,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_10.title",
       "body": "ev.road.fadlan_10.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2859,8 +3327,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_11.title",
       "body": "ev.road.fadlan_11.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2913,8 +3382,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_12.title",
       "body": "ev.road.fadlan_12.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -2953,8 +3423,8 @@
             },
             {
               "op": "days",
-              "value": -1,
-              "reason": "used-merchant-routes"
+              "value": 1,
+              "reason": "followed-new-road-for-one-day"
             },
             {
               "op": "codex",
@@ -2983,8 +3453,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_13.title",
       "body": "ev.road.fadlan_13.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3037,8 +3508,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_14.title",
       "body": "ev.road.fadlan_14.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3096,8 +3568,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_15.title",
       "body": "ev.road.fadlan_15.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3151,8 +3624,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_16.title",
       "body": "ev.road.fadlan_16.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3210,10 +3684,18 @@
       "kind": "road",
       "title": "ev.road.fadlan_17.title",
       "body": "ev.road.fadlan_17.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {
@@ -3232,8 +3714,8 @@
             },
             {
               "op": "days",
-              "value": -1,
-              "reason": "sled-shortened-the-march"
+              "value": 1,
+              "reason": "reached-next-stop-by-sled-in-one-day"
             },
             {
               "op": "codex",
@@ -3279,8 +3761,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_18.title",
       "body": "ev.road.fadlan_18.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3333,8 +3816,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_19.title",
       "body": "ev.road.fadlan_19.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3397,10 +3881,18 @@
       "kind": "road",
       "title": "ev.road.fadlan_20.title",
       "body": "ev.road.fadlan_20.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {
@@ -3456,8 +3948,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_21.title",
       "body": "ev.road.fadlan_21.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3510,8 +4003,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_22.title",
       "body": "ev.road.fadlan_22.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3579,8 +4073,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_23.title",
       "body": "ev.road.fadlan_23.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3645,8 +4140,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_24.title",
       "body": "ev.road.fadlan_24.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3718,8 +4214,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_25.title",
       "body": "ev.road.fadlan_25.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3788,8 +4285,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_26.title",
       "body": "ev.road.fadlan_26.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3848,8 +4346,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_27.title",
       "body": "ev.road.fadlan_27.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3902,8 +4401,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_28.title",
       "body": "ev.road.fadlan_28.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -3920,12 +4420,12 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "waited-out-the-eclipse"
+              "reason": "spent-day-comparing-eclipse-records"
             },
             {
               "op": "codex",
               "value": "cx-fadlan-omen",
-              "reason": "recorded-the-eclipse-omen"
+              "reason": "compared-old-eclipse-records"
             }
           ]
         },
@@ -3936,13 +4436,13 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "marched-after-the-eclipse"
+              "reason": "traveled-day-after-reading-old-eclipse-account"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "endured-a-heavenly-sign"
+              "reason": "kept-to-the-days-road"
             }
           ]
         }
@@ -3961,8 +4461,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_29.title",
       "body": "ev.road.fadlan_29.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4025,8 +4526,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_30.title",
       "body": "ev.road.fadlan_30.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4095,8 +4597,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_31.title",
       "body": "ev.road.fadlan_31.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4148,8 +4651,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_32.title",
       "body": "ev.road.fadlan_32.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4166,19 +4670,19 @@
             {
               "op": "coins",
               "value": -60,
-              "reason": "paid-the-bulghar-toll"
+              "reason": "paid-local-ferry-toll"
             },
             {
               "op": "days",
               "value": 1,
-              "reason": "crossed-with-the-kings-leave"
+              "reason": "spent-day-crossing-guarded-ferry"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "band",
               "id": "steppe",
-              "reason": "paid-the-royal-toll"
+              "reason": "recovered-misplaced-bag"
             },
             {
               "op": "queue_event",
@@ -4199,13 +4703,13 @@
             {
               "op": "days",
               "value": 3,
-              "reason": "detoured-the-royal-toll"
+              "reason": "took-three-day-upstream-ford"
             },
             {
               "op": "fate",
               "id": "travel",
               "value": -1,
-              "reason": "avoided-the-kings-messenger"
+              "reason": "risked-unwatched-ford"
             },
             {
               "op": "queue_event",
@@ -4229,8 +4733,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_33.title",
       "body": "ev.road.fadlan_33.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4288,8 +4793,9 @@
       "kind": "road",
       "title": "ev.road.fadlan_34.title",
       "body": "ev.road.fadlan_34.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
         ]
@@ -4347,10 +4853,18 @@
       "kind": "road",
       "title": "ev.road.fadlan_35.title",
       "body": "ev.road.fadlan_35.body",
-      "once": false,
+      "once": true,
       "when": {
+        "modes": ["foot", "caravan", "camel"],
         "bands": [
           "steppe"
+        ],
+        "season": [
+          11,
+          12,
+          1,
+          2,
+          3
         ]
       },
       "scene": {

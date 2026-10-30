@@ -46,7 +46,7 @@ The dice name paying the toll in full and asking no favours.
 
 ## div.astrodice.result.09
 
-The dice name sending a scout ahead to the next caravanserai.
+Send a scout ahead to the next posting station.
 
 ## div.astrodice.result.10
 

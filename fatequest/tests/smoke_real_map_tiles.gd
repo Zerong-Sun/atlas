@@ -45,6 +45,11 @@ func _init() -> void:
 		print("REAL_MAP_TILES: SKIP (requires graphical window and tile network)")
 		quit(0)
 		return
+	var config = JSON.parse_string(FileAccess.get_file_as_string(SlippyMapTiles.CONFIG_PATH))
+	if config is Dictionary and not config.get("enabled", false):
+		print("REAL_MAP_TILES: SKIP (authored vector map enabled; raster underlay disabled)")
+		quit(0)
+		return
 	var scene = load("res://game/screens/main.tscn")
 	_main = scene.instantiate()
 	root.add_child(_main)

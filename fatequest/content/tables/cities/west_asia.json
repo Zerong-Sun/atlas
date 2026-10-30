@@ -18,7 +18,8 @@
       "tier": "town",
       "entryEvent": "ev-accon-entry",
       "sites": [
-        "ev-accon-battuta-a"
+        "ev-accon-battuta-a",
+        "ev-accon-netmaker"
       ],
       "exits": [
         "rt-accon-damascus",
@@ -74,6 +75,7 @@
       "entryEvent": "ev-alexandria-entry",
       "sites": [
         "ev-alexandria-welcome-gate",
+        "ev-alexandria-water-seller",
         "ev-alexandria-battuta-a",
         "ev-alexandria-battuta-b"
       ],
@@ -129,7 +131,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-antiochia-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-antiochia-scene",
+        "ev-antiochia-two-names"
+      ],
       "exits": [
         "rt-antiochia-berrhoea",
         "rt-antiochia-tarsus",
@@ -180,7 +185,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-babylonia-cairus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-babylonia-cairus-scene",
+        "ev-cairo-caravan"
+      ],
       "exits": [
         "rt-alexandria-babylonia-cairus",
         "rt-babylonia-cairus-bethleem",
@@ -246,7 +254,8 @@
         "ev-baldacum-a",
         "ev-baldacum-b",
         "ev-baldacum-c",
-        "ev-baldacum-geomancy-court"
+        "ev-baldacum-geomancy-court",
+        "ev-baldacum-boatplug"
       ],
       "exits": [
         "rt-baldacum-basora",
@@ -315,7 +324,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-basora-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-basora-scene",
+        "ev-basora-dateboat"
+      ],
       "exits": [
         "rt-baldacum-basora",
         "rt-basora-ctesiphon",
@@ -348,7 +360,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-berrhoea-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-berrhoea-scene",
+        "ev-berrhoea-lentilpot"
+      ],
       "exits": [
         "rt-antiochia-berrhoea",
         "rt-berrhoea-edessa",
@@ -406,7 +421,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-bethleem-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-bethleem-scene",
+        "ev-bethleem-stool"
+      ],
       "exits": [
         "rt-alexandria-bethleem",
         "rt-babylonia-cairus-bethleem",
@@ -439,7 +457,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-caffa-entry",
-      "sites": [],
+      "sites": [
+        "ev-caffa-site-gap",
+        "ev-caffa-leathercut"
+      ],
       "exits": [
         "rt-caffa-constantinopolis",
         "rt-caffa-tana-azov",
@@ -477,10 +498,10 @@
       "entryEvent": "ev-camadi-entry",
       "sites": [
         "ev-camadi-a",
-        "ev-camadi-b"
+        "ev-camadi-b",
+        "ev-camadi-oldwell"
       ],
       "exits": [
-        "rt-calatu-camadi",
         "rt-camadi-cobinan",
         "rt-camadi-kerman",
         "rt-camadi-ormus"
@@ -535,7 +556,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-cobinan-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-cobinan-scene",
+        "ev-cobinan-mirrorcase"
+      ],
       "exits": [
         "rt-camadi-cobinan",
         "rt-cobinan-kerman",
@@ -576,10 +600,10 @@
       "id": "constantinopolis",
       "name": "city.constantinopolis.name",
       "band": "west_asia",
-      "culture": "islamic",
+      "culture": "orthodox",
       "faiths": [
-        "islam",
-        "nestorian"
+        "orthodox",
+        "latin"
       ],
       "coord": [
         28.978,
@@ -587,7 +611,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-constantinopolis-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-constantinopolis-scene",
+        "ev-constantinopolis-waterjar"
+      ],
       "exits": [
         "rt-caffa-constantinopolis",
         "rt-constantinopolis-ephesus",
@@ -620,7 +647,7 @@
         "spread": 0.22
       },
       "calendars": [
-        "islamic"
+        "julian"
       ],
       "altRefs": [
         {
@@ -650,7 +677,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-ctesiphon-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-ctesiphon-scene",
+        "ev-ctesiphon-shelter"
+      ],
       "exits": [
         "rt-baldacum-ctesiphon",
         "rt-basora-ctesiphon",
@@ -681,7 +711,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-damascus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-damascus-scene",
+        "ev-damascus-dyework"
+      ],
       "exits": [
         "rt-accon-damascus",
         "rt-damascus-tripolis",
@@ -738,7 +771,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-edessa-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-edessa-scene",
+        "ev-edessa-clayletter"
+      ],
       "exits": [
         "rt-berrhoea-edessa",
         "rt-edessa-antiochia",
@@ -769,7 +805,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-ephesus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-ephesus-scene",
+        "ev-ephesus-olivejar"
+      ],
       "exits": [
         "rt-constantinopolis-ephesus",
         "rt-ephesus-nicaea",
@@ -799,7 +838,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-hierusalem-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-hierusalem-scene",
+        "ev-jerusalem-sandals"
+      ],
       "exits": [
         "rt-accon-hierusalem",
         "rt-alexandria-hierusalem",
@@ -857,7 +899,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-ispahan-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-ispahan-scene",
+        "ev-ispahan-clothnote"
+      ],
       "exits": [
         "rt-basora-ispahan",
         "rt-ispahan-cobinan",
@@ -889,7 +934,8 @@
       "entryEvent": "ev-kerman-entry",
       "sites": [
         "ev-kerman-a",
-        "ev-kerman-b"
+        "ev-kerman-b",
+        "ev-kerman-patternbook"
       ],
       "exits": [
         "rt-camadi-kerman",
@@ -936,10 +982,9 @@
       "id": "kiovia",
       "name": "city.kiovia.name",
       "band": "west_asia",
-      "culture": "islamic",
+      "culture": "orthodox",
       "faiths": [
-        "islam",
-        "nestorian"
+        "orthodox"
       ],
       "coord": [
         30.523,
@@ -948,7 +993,8 @@
       "tier": "town",
       "entryEvent": "ev-kiovia-entry",
       "sites": [
-        "ev-kiovia-runes-ford"
+        "ev-kiovia-runes-ford",
+        "ev-kiovia-waxcandle"
       ],
       "exits": [
         "rt-kiovia-caffa",
@@ -979,7 +1025,7 @@
         "spread": 0.22
       },
       "calendars": [
-        "islamic"
+        "julian"
       ],
       "mentorEvent": "ev-kiovia-mentor-runes",
       "mentor": "npc-kiovia-mentor"
@@ -988,10 +1034,9 @@
       "id": "moscovia",
       "name": "city.moscovia.name",
       "band": "west_asia",
-      "culture": "islamic",
+      "culture": "orthodox",
       "faiths": [
-        "islam",
-        "nestorian"
+        "orthodox"
       ],
       "coord": [
         37.618,
@@ -999,7 +1044,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-moscovia-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-moscovia-scene",
+        "ev-moscovia-birchletter"
+      ],
       "exits": [
         "rt-kiovia-moscovia",
         "rt-moscovia-novogardia",
@@ -1011,7 +1059,7 @@
         "note": "已查：三书无可靠段落；维持 authored。"
       },
       "calendars": [
-        "islamic"
+        "julian"
       ]
     },
     {
@@ -1029,7 +1077,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-nicaea-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-nicaea-scene",
+        "ev-nicaea-figpath"
+      ],
       "exits": [
         "rt-constantinopolis-nicaea",
         "rt-ephesus-nicaea",
@@ -1059,7 +1110,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-ninive-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-ninive-scene",
+        "ev-ninive-ferrybowl"
+      ],
       "exits": [
         "rt-baldacum-ninive",
         "rt-ctesiphon-ninive",
@@ -1088,10 +1142,9 @@
       "id": "novogardia",
       "name": "city.novogardia.name",
       "band": "west_asia",
-      "culture": "islamic",
+      "culture": "orthodox",
       "faiths": [
-        "islam",
-        "nestorian"
+        "orthodox"
       ],
       "coord": [
         31.271,
@@ -1099,7 +1152,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-novogardia-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-novogardia-scene",
+        "ev-novogardia-barknote"
+      ],
       "exits": [
         "rt-moscovia-novogardia",
         "rt-novogardia-kiovia",
@@ -1111,7 +1167,7 @@
         "note": "已查：弱证据；维持 authored。"
       },
       "calendars": [
-        "islamic"
+        "julian"
       ]
     },
     {
@@ -1133,7 +1189,8 @@
         "ev-ormus-a",
         "ev-ormus-b",
         "ev-ormus-c",
-        "ev-ormus-astrodice-tide"
+        "ev-ormus-astrodice-tide",
+        "ev-ormus-netweight"
       ],
       "exits": [
         "rt-baldacum-ormus",
@@ -1208,7 +1265,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-petra-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-petra-scene",
+        "ev-petra-goatbell"
+      ],
       "exits": [
         "rt-babylonia-cairus-petra",
         "rt-bethleem-petra",
@@ -1240,7 +1300,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-smyrna-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-smyrna-scene",
+        "ev-smyrna-grapes"
+      ],
       "exits": [
         "rt-constantinopolis-smyrna",
         "rt-ephesus-smyrna",
@@ -1273,7 +1336,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-tana-azov-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-tana-azov-scene",
+        "ev-tana-porridge"
+      ],
       "exits": [
         "rt-caffa-tana-azov",
         "rt-kiovia-tana-azov",
@@ -1305,7 +1371,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-tarsus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-tarsus-scene",
+        "ev-tarsus-reedbasket"
+      ],
       "exits": [
         "rt-antiochia-tarsus",
         "rt-berrhoea-tarsus",
@@ -1388,10 +1457,9 @@
       "id": "trapezus",
       "name": "city.trapezus.name",
       "band": "west_asia",
-      "culture": "islamic",
+      "culture": "orthodox",
       "faiths": [
-        "islam",
-        "nestorian"
+        "orthodox"
       ],
       "coord": [
         39.723,
@@ -1399,7 +1467,10 @@
       ],
       "tier": "town",
       "entryEvent": "ev-trapezus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-trapezus-scene",
+        "ev-trapezus-tworoads"
+      ],
       "exits": [
         "rt-caffa-trapezus",
         "rt-tana-azov-trapezus",
@@ -1429,7 +1500,7 @@
         "spread": 0.22
       },
       "calendars": [
-        "islamic"
+        "julian"
       ]
     },
     {
@@ -1447,7 +1518,11 @@
       ],
       "tier": "station",
       "entryEvent": "ev-tripolis-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-tripolis-scene",
+        "ev-tripolis-quay",
+        "ev-tripolis-oven"
+      ],
       "exits": [
         "rt-antiochia-tripolis",
         "rt-damascus-tripolis",
@@ -1482,7 +1557,10 @@
       ],
       "tier": "station",
       "entryEvent": "ev-tyrus-entry",
-      "sites": [],
+      "sites": [
+        "ev-gap-tyrus-scene",
+        "ev-tyrus-fishrack"
+      ],
       "exits": [
         "rt-accon-tyrus",
         "rt-damascus-tyrus",
@@ -1516,7 +1594,8 @@
       "tier": "town",
       "entryEvent": "ev-yasdi-entry",
       "sites": [
-        "ev-yasdi-battuta-a"
+        "ev-yasdi-battuta-a",
+        "ev-yasdi-threadwell"
       ],
       "exits": [
         "rt-cobinan-yasdi",

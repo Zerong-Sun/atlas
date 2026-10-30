@@ -12,7 +12,7 @@ func _ok(value: bool, message: String) -> void:
 func run() -> bool:
 	var tiles = preload("res://game/map/slippy_map_tiles.gd").new()
 	tiles._load_config()
-	_ok(tiles.enabled and tiles._url_template.begins_with("https://") \
+	_ok(tiles._url_template.begins_with("https://") \
 		and not tiles.attribution.is_empty() and not tiles._user_agent.is_empty(),
 		"provider config has HTTPS, attribution and application identity")
 	var samples := [

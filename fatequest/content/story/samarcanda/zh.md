@@ -2,11 +2,11 @@
 unit: samarcanda
 lang: zh
 source: en
-source_rev: febfb511b5d5
+source_rev: 16537099fe6d
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
@@ -24,11 +24,11 @@ stamps:
   ev.samarcanda.entry.choice.customs: 5f67b1abbf38
   ev.samarcanda.entry.choice.lore: 5800603dbcaf
   ev.samarcanda.entry.choice.market: b23d98ceae5c
-  ev.samarcanda.a.body: d7e5065ef82f
+  ev.samarcanda.a.body: f2bab52946bb
   ev.samarcanda.a.title: c2d7022a95ea
-  ev.samarcanda.b.body: 882638ab6041
+  ev.samarcanda.b.body: 45f1f4c6cf18
   ev.samarcanda.b.title: c30e16c8f628
-  ev.samarcanda.c.body: 2e2f86122cd9
+  ev.samarcanda.c.body: 8349db21e906
   ev.samarcanda.c.title: cb8401993af6
   ev.samarcanda.entry.body: c6deec0502d7
   ev.samarcanda.entry.title: 549d9a825266
@@ -77,7 +77,7 @@ stamps:
   ev.samarcanda.mentor_closure.choice_3: 630a8fcfe069
   ev.samarcanda.mentor_closure.choice_3_result: 3273f4078083
   ev.ev_samarcanda_a_followup.title: abec22872467
-  ev.ev_samarcanda_a_followup.body: 0e4455fc14c8
+  ev.ev_samarcanda_a_followup.body: ff57397e7c92
   ev.ev_samarcanda_a_followup.choice_1: e2a00c5b0c6d
   ev.ev_samarcanda_a_followup.choice_1_result: 0b13dfa9dd0c
   ev.ev_samarcanda_a_followup.choice_2: 880b0569d37e
@@ -93,7 +93,7 @@ stamps:
   ev.ev_samarcanda_b_followup.choice_3: e925f5d9e5a2
   ev.ev_samarcanda_b_followup.choice_3_result: 998dba32a072
   ev.ev_samarcanda_c_followup.title: c71f5d891007
-  ev.ev_samarcanda_c_followup.body: 1033c540fd78
+  ev.ev_samarcanda_c_followup.body: fbb0f33023af
   ev.ev_samarcanda_c_followup.choice_1: 49e861d987ad
   ev.ev_samarcanda_c_followup.choice_1_result: f2a412058fc0
   ev.ev_samarcanda_c_followup.choice_2: beaa0bb2b2c8
@@ -116,15 +116,15 @@ stamps:
 
 ## ev.samarcanda.a.choice.dome
 
-站在古尔-埃米尔绿松石穹顶下
+去看古尔-埃米尔的绿松石穹顶
 
 ## ev.samarcanda.a.choice.gardens
 
-沿水渠漫步向学者致意
+沿着水渠走走，找学者聊几句
 
 ## ev.samarcanda.a.choice.madrasa
 
-参观列吉斯坦的经学院
+去列吉斯坦看看经学院
 
 ## ev.samarcanda.b.choice.learn
 
@@ -132,7 +132,7 @@ stamps:
 
 ## ev.samarcanda.b.choice.manuscript
 
-买一本书法家手抄的彩饰经卷
+买一本书法家手抄的彩绘经卷
 
 ## ev.samarcanda.b.choice.paper
 
@@ -144,15 +144,15 @@ stamps:
 
 ## ev.samarcanda.c.choice.touch
 
-以额触那会流泪的石头
+用额头碰一碰那块据说会流泪的石头
 
 ## ev.samarcanda.c.choice.watch_pilgrims
 
-问毛拉这石头上次几时流泪
+问毛拉这块石头上次什么时候“流泪”
 
 ## ev.samarcanda.entry.choice.customs
 
-到 bājgāh（税卡）报关
+去税卡登记货物
 
 ## ev.samarcanda.entry.choice.lore
 
@@ -160,24 +160,23 @@ stamps:
 
 ## ev.samarcanda.entry.choice.market
 
-穿过大 bāzār（集市）
+逛逛大集市
 
 ## ev.samarcanda.a.body
 
-撒马尔罕号称世界之园，凡见过者皆不能否认此名。街巷旁有水渠，悬铃木遮荫；院院有喷泉，
-座座masjid（清真寺）有绿松石穹顶。列吉斯坦广场及其三大经学院，乃中亚学问之心——伊斯兰各国学者来此，
-在蓝瓷砖拱下习律法、神学、天文与医道。古尔-埃米尔的穹顶升起于旧城之上，如第二重天。
-自报达至汗八里，无城更富、更美，亦无名更能令越过世界屋脊的商队敬重者。
+撒马尔罕的绿松石穹顶在阳光下亮得晃眼。你抬头看时，一位学者从廊下走来，问你：“是来看穹顶，还是想进经学院听一课？”他指给你看广场边的经学院，又说沿水渠走一段，附近还有安静的花园。
+
+廊下的学生弹着弦，唱一段问答诗： “穹顶借来天的蓝，水渠引下山上的雪。 学者拨弦唱道：问星要记时，问路要看水，翻过一页书，笔尖就能走向远方。” 学者望向穹顶：“诗里把天文课、蓝色屋顶和城外水渠放在一处。读书人看星象，也会查水从哪来、商路往哪走。”
 
 ## ev.samarcanda.a.title
 
-青城
+撒马尔罕的蓝色穹顶
 
 ## ev.samarcanda.b.body
 
-天下最好的纸产于撒马尔罕，以亚麻破布捶制，再用石打磨至光如水纹绸。其秘得自世代之前伊斯兰军初渡乌浒河时所俘的中国人。
-然撒马尔罕纸匠已超越其师——纸更白、更滑、更耐久，胜过契丹所制。伊斯兰各经学院的学者皆购撒马尔罕纸抄经。
-一叶之价可抵巧手工匠一日工钱，然书法家言其值得：墨在撒马尔罕纸上永不洇，书于此者可存三百年。
+撒马尔罕的纸坊里，匠人把刚压好的纸贴到磨石上，一遍遍打磨。“别急着碰，等它干透。”他说这纸不容易洇墨，书院和商人都爱买。书法家正好带来一本彩饰手稿，你可以看他写字、买纸，或挑一册手稿带走。
+
+纸匠把纸浆滤上竹帘，徒弟合着动作唱：“布泡软，槌成絮；浆入水，帘轻举；压出水，晾成页；磨得匀，墨落住。”纸匠对你说：“先把纤维打散、兑水，再用帘子捞出薄层；压去水分，晾干后磨平，墨落上去才稳。”他把半干的纸递到你手边：“摸摸这张，看看厚薄匀不匀。”
 
 ## ev.samarcanda.b.title
 
@@ -185,26 +184,15 @@ stamps:
 
 ## ev.samarcanda.c.body
 
-撒马尔罕大清真寺院中，立一石柱，人言乃先知亲携至此。黑玄武岩，经数百年人手触摸以求福而光润。
-虔信者以额抵之；病者以衣擦其面；望子的妇人抱而祈祷。人言此石于灾前流泪——表面现出水珠如泪，
-一年之内，战、疫或地震必降临此城。毛拉将每一次流泪记入寺志。上次流泪，正是蒙古骑手初现于北方天际的前一年。
+撒马尔罕的清真寺里有人说那块石头会在灾祸前凝出水珠。毛拉说：“旧册上记了几次‘流泪’的年份，你自己看看，是否都赶上了灾年。”他没有断言这是预兆，只问你想怎么做。你可以祈祷、摸一摸石头，或问他最近一次是什么时候。
 
 ## ev.samarcanda.c.title
 
-灵石
+会流泪的石头
 
 ## ev.samarcanda.entry.body
 
-撒马尔罕是西北方向一座又大又尊贵的城，基督徒与撒拉逊人杂居其间，都臣服于大汗的侄子CAIDOU；不过CAIDOU与
-大汗仇隙极深。我要告诉你城中发生过的一件奇事。就在不久之前，大汗的亲弟弟SIGATAY——此邦以及许多地方的主人——
-皈依了基督教。基督徒为此大为欢喜，在城中建起一座大教堂，供奉施洗约翰，并以约翰的名字为教堂命名。他们还取了
-撒拉逊人的一块极美的石头，立在教堂中央作柱子的基石，用来撑住屋顶。后来SIGATAY死了。撒拉逊人因为这块石头被夺走、
-如今又立在基督徒的教堂里，早已积怨在心；眼见亲王已死，他们彼此商量说：现在正是取回这块石头的时候，
-不管是讲道理还是动强，都该把它要回来。他们人数是基督徒的十倍，完全做得到。于是众人聚到教堂，说这块石头非要不可。
-基督徒承认石头确实本是他们的，愿意出一大笔钱来了结此事。可对方回答说：世上无论拿什么来换，都不肯把石头留下。
-双方言语越来越激烈，亲王听说了，便命令基督徒：要么出银子满足撒拉逊人，要么交出石头，限三日之内选一样办。
-我怎么对你说呢？撒拉逊人就是死活不同意让石头留在原处，纯粹是故意跟基督徒作对——他们心里清楚得很：
-石头一动，教堂马上就会塌下来。
+撒马尔罕的基督徒和穆斯林围在教堂门口，一边要把石柱取回清真寺，一边说柱子一动，整座教堂都要塌。海都给了他们三天时间解决。一个教堂管事认出你是旅人，急着请你替他作证；旁边的石匠却说：“先别替谁说话，来看看这根柱子到底怎么立的。”你能听到双方各自的理由，也可以先去找海都的书记问清期限。
 
 ## ev.samarcanda.entry.title
 
@@ -212,23 +200,23 @@ stamps:
 
 ## ev.ev_samarcanda_entry.choice_1_result
 
-你在撒马尔罕的税关报明了货物，书办在单据上记下你途经蓝顶书院。他落印时，一位书院的学生凑近前来搭话。
+你在撒马尔罕的税关报明货物。书办看到你从蓝顶书院来，便朝一旁的学生招手：“正好，你带这位旅人去见见学者。”
 
 ## ev.ev_samarcanda_entry.choice_2_result
 
-你收集到的回答都带着自豪谈起学舍与商队，但每个人讲的都不一样。这说法在口耳之间传开，到了傍晚又传回你耳边，比先前更完整了。
+你向学者和商队打听消息。谈到书院时，几个人都抢着补充；谈起商队，他们却各有各的说法。傍晚，一个学生拦住你：“听说你在打听路？我知道哪几支队伍肯带新人。”
 
 ## ev.ev_samarcanda_entry.choice_3_result
 
-你在撒马尔罕的集市里走了一日，带出来一驮货物。此城的纸张、染料与商道，如今都记入了你的行纪。
+纸商把两张纸迎光举起：“这张纤维匀，写账不洇墨；那张便宜，包染料倒合适。”隔壁染匠立刻问起价钱。你在撒马尔罕的大集市花了一天，记下纸张、染料和货价。
 
 ## ev.ev_samarcanda_a.choice_1_result
 
-你走过列基斯坦广场三座宏伟的神学院之间，一个穿着灰旧长袍的瘦削男子从柱廊下走出，与你并肩。他说，他一直在等一个会问出正确问题的人。
+你走过列基斯坦广场三座宏伟的神学院之间，一个穿着灰旧长袍的瘦削男子从柱廊下走出，与你并肩：“我在这儿等了好一阵，总算有人肯问点正经问题了。”
 
 ## ev.ev_samarcanda_a.choice_2_result
 
-你站在青绿色穹顶之下，仰头望到那一片蓝充满视野。那座陵墓与它的琉璃砖，如今记在你的行纪里。
+你站在青绿色穹顶下，抬头望去，整座陵墓都映在蓝色琉璃砖的光里。
 
 ## ev.ev_samarcanda_a.choice_3_result
 
@@ -244,7 +232,7 @@ stamps:
 
 ## ev.ev_samarcanda_b.choice_3_result
 
-你花一千银，从一位书法家手中买下一卷插金绘彩的手稿。金箔与墨迹订在木版之间，如今随你行囊同行。
+你花一千银，从一位书法家手中买下一卷插金绘彩的手稿。金箔与墨迹订在木版之间，纸面在灯下泛着细光。
 
 ## ev.ev_samarcanda_c.choice_1_result
 
@@ -260,11 +248,11 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_a.title
 
-撒马尔罕：门上的印记
+撒马尔罕：书院引荐
 
 ## ev.ev_samarcanda_consequence_a.body
 
-第一个回答并没有在城门处结束。蓝顶书院里一位学生把你引到一旁，问你打算从撒马尔罕带走什么。问题背后正是学舍与商队；他提出把你的名字与一位学者的名字系在一起，这位学者乐于接待旅人。你须决定如何对待这道征兆。
+书院里的学生把你领到一位学者门前：“他肯见外地人，但最好先报我的名字。”他愿意替你写封引荐，也问你这趟想打听什么。这位撒马尔罕学者肯见外地人。
 
 ## ev.ev_samarcanda_consequence_a.choice_1
 
@@ -272,23 +260,23 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_a.choice_1_result
 
-你收下学生递来的名字，追问谁能为它作保。他报出书院的两位先生，此事又打开了。
+“这个名字能让学者愿意见我吗？”你问。学生报出书院里两位先生：“你提他们的名字就行，他们知道我是谁。”
 
 ## ev.ev_samarcanda_consequence_a.choice_2
 
-谢过这位学生，把自己的打算收在心里
+谢过这位学生，暂时不说自己的打算
 
 ## ev.ev_samarcanda_consequence_a.choice_2_result
 
-你谢过这位学生，把自己的打算收在心里。此事在书院门前就此了结，撒马尔罕不再有人向你多问一句。
+你谢过学生，暂时没说自己的打算。他也不追问，只说：“想好要问什么，再来书院找我。”你在撒马尔罕暂且不再追问。
 
 ## ev.ev_samarcanda_consequence_a_resolution.title
 
-撒马尔罕：未写成的书
+撒马尔罕：学者的引荐信
 
 ## ev.ev_samarcanda_consequence_a_resolution.body
 
-你已答应把这位学生的印记带在身上——一本尚未有抄写员写成的书，答应送往前路一位学者手中。它不会替你决定整段旅程，但这位学者的门或许会在别处门都紧闭时为你敞开。
+学生替你写了引荐信。学者是否有空还说不准，不过你去敲门时，至少有人知道你不是来闹事的。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1
 
@@ -296,47 +284,47 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_1_result
 
-你在天黑前把这本书送到了学者手中。这位学生的承诺如今随你的名字而行，书院的人从此有理由接待你。
+你在天黑前把书送到学者手里。学生也兑现了承诺，替你向书院的人作了引荐。
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2
 
-把学者的承诺收进自己的行纪
+答应替学者问一问
 
 ## ev.ev_samarcanda_consequence_a_resolution.choice_2_result
 
-你把学者的承诺收进行纪，花了一日把它工工整整记下。记录已成；那分人情便等着一条或许永远不会叫它的路。
+“好，我帮你问问。”你答应下来。学者点头：“那我等你的消息。”
 
 ## ev.ev_samarcanda_consequence_b.title
 
-撒马尔罕：回答之后的路
+撒马尔罕：商队口碑
 
 ## ev.ev_samarcanda_consequence_b.body
 
-回答把一条传闻送上了道路。日落之前，一位造纸匠在书院里找到你，讲起学舍与商队的另一番说法——哪支商队付的是好钱，哪支能教你些有用的道理。这说法不如游记宏大，却更适合带在身上。
+纸坊的匠人把账本推到你面前：“有几支商队按时付账，也肯带新人上路。好买卖得看人，也看你赶不赶时间；你要是想走，我可以把沿途的水源和落脚处给你标出来。”
 
 ## ev.ev_samarcanda_consequence_b.choice_1
 
-照着这位造纸匠的实用建议走
+按纸匠的建议准备
 
 ## ev.ev_samarcanda_consequence_b.choice_1_result
 
-你照着这位造纸匠的实用建议走，请他把它写下来。他为你把这段叙述抄出，路途真正的尺度便落进你手里。
+你请纸匠把沿途的水源和住宿点写下来。他把商队常走的路程逐段标清，又提醒你：“井站之间别只按地图上的直线算，驮队走得慢，水也得留够。”
 
 ## ev.ev_samarcanda_consequence_b.choice_2
 
-把这段叙述留给那位造纸匠
+先不拿走这份记录
 
 ## ev.ev_samarcanda_consequence_b.choice_2_result
 
-你把这段叙述留给那位造纸匠，自己收住了口。它回到了纸铺，撒马尔罕不再向你索取什么。
+你把笔记推回去。纸匠收起账本：“没关系，等你真要上路了，再来问也不迟。”撒马尔罕的纸坊还会等你回去。
 
 ## ev.ev_samarcanda_consequence_b_resolution.title
 
-撒马尔罕：商队的账目
+撒马尔罕：商队记录
 
 ## ev.ev_samarcanda_consequence_b_resolution.body
 
-你已选择带着这位造纸匠的账目上路——哪支商队付的是好钱，哪支能教你些道理。它不会替你决定整段旅程，但在路上遇到一笔亏本买卖时，它会稳住你的手。
+纸匠把商队的口碑记给你。下次谈价前先看看对方的名声，能少踩几个坑。
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1
 
@@ -344,23 +332,23 @@ stamps:
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_1_result
 
-你在天黑前把这话告诉了下一名学生。路途的尺度从此走在你前头，它落在何处，你的名字便随到何处。
+你赶在天黑前把商队的消息告诉另一名学生。他听完点头：“这几支队伍我也听说过。下次有人问，我就把你说的也告诉他。”
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2
 
-把这份商队札记收进自己的行纪
+收好这份商队笔记
 
 ## ev.ev_samarcanda_consequence_b_resolution.choice_2_result
 
-你花了一日，把这份商队札记抄进行纪。这份记录从此是你的了，只是为此在路上耗去一日。
+笔记里写着沿途的水源和住宿点。纸匠提醒你，商队走的路程会随水量和天气变化，出发前最好再问一遍。
 
 ## ev.samarcanda.mentor_closure.title
 
-撒马尔罕的引路人
+撒马尔罕书院的学生
 
 ## ev.samarcanda.mentor_closure.body
 
-离开撒马尔罕之前，蓝砖学舍的老学生问你从这里看出了什么。这个教诲不是法术，也不是交易；它只是教你留意道路转弯之后真正有用的细节。
+书院里的学生问你在撒马尔罕学到什么。听完你的回答，他把星表收起来：“书能教人看天，路还是得自己走。”
 
 ## ev.samarcanda.mentor_closure.choice_1
 
@@ -368,15 +356,15 @@ stamps:
 
 ## ev.samarcanda.mentor_closure.choice_1_result
 
-蓝顶书院的老学生并不回避：耐心与衡文之明，都会在路上向你索取。他把这番功课递到你面前，如何处置全在于你。
+老学生把星表收进袋里：“路上最费人的，是等水、等同伴，还有走错路后再绕回来。你想先听哪一件？”
 
 ## ev.samarcanda.mentor_closure.choice_2
 
-留下 一日，听完这段完整的讲述
+留一天，听完这段完整的讲述
 
 ## ev.samarcanda.mentor_closure.choice_2_result
 
-你在书院陪着这位老学生留了一日，他把毕生所学从容地讲给你。你带走的东西，是一本还没有任何抄写员写过的书。
+你听老学生讲星表的用法。他把一册空白书递给你：“拿去吧。路上看到什么，自己写进去。”
 
 ## ev.samarcanda.mentor_closure.choice_3
 
@@ -392,7 +380,7 @@ stamps:
 
 ## ev.ev_samarcanda_a_followup.body
 
-第三座经学院的观星人并未与你作别。他唤你登上东侧拱廊之上的小室，列吉斯坦的黄铜仪器与星表俱收于此。案上摊着一张天下最白的纸，画满圆圈与恒星之名，出自百位学者之手。他指给你看：商队横越世界屋脊之时，人人随身带着一份抄本；而此地的岁，不以日晷计，以黎明前某星之升计。他把星盘放入你掌，任你转动其环，直到你明白：撒马尔罕上方的天，是一座永不停摆的钟。这一课不是法术，是耐心，也是学舍的骄傲。
+撒马尔罕的经学院露台上摆着星盘。学者点着几道刻度说：“商队夜里赶路，常靠这几颗星认方向。你想学着读星盘、抄一份星表，还是留下听我讲完？”
 
 ## ev.ev_samarcanda_a_followup.choice_1
 
@@ -400,7 +388,7 @@ stamps:
 
 ## ev.ev_samarcanda_a_followup.choice_1_result
 
-你坐到灯盏燃起，把能抄的星表尽数抄进自己的书里。这门功课随你而去，列吉斯坦的耐心也随你而去。
+你坐到灯盏燃起，跟着学者逐一辨认星表上的星宿和方位。
 
 ## ev.ev_samarcanda_a_followup.choice_2
 
@@ -408,7 +396,7 @@ stamps:
 
 ## ev.ev_samarcanda_a_followup.choice_2_result
 
-观星人沿河谷向东画出通往可失合儿的路，说那里的天更清，学者更勤。通往可失合儿的路，如今上了你的舆图。
+观星人沿河谷向东给你画出通往可失合儿的路：“顺着河谷往东走就对了。那边天更清，做学问的人也多，夜里认星也容易。”
 
 ## ev.ev_samarcanda_a_followup.choice_3
 
@@ -416,7 +404,7 @@ stamps:
 
 ## ev.ev_samarcanda_a_followup.choice_3_result
 
-你以行路见闻换取观星见闻。列吉斯坦的学者记住了你的名字，在这座青城里，你的言语从此有了分量。
+你把路上见过的地形和星象讲给学者听。他听得认真：“这趟换我长见识了。以后你来书院，直接来找我。”
 
 ## ev.ev_samarcanda_b_followup.title
 
@@ -424,7 +412,7 @@ stamps:
 
 ## ev.ev_samarcanda_b_followup.body
 
-让你看过纸坊的纸匠，有一桩秘法只留给问过两遍的人。他领你穿过晾纸的院子，进一间矮屋，成品成叠堆着；他指给你看那块磨石——一块巨大光润的石头，中央被几代人的手磨出凹痕。捶好的纸贴于其上，以一掌可握的小石反复研磨，直到纸面亮如水纹绸。他说这光泽不为好看，正是不洇墨的缘故；如此磨成的纸，可载一部书三百年。说罢他蘸笔，当着你在一张纸上写下一行，墨停在纸面如活物，并不渗入纸理。
+磨纸的小屋里放着一盆泡软的旧麻布。纸匠说：“先捶成细浆，兑进水里，再用细筛捞起薄薄一层纤维。压过、晾干，最后拿磨石磨平。”他把半干的纸递到你手边：“摸摸这面，磨平后滑得像丝绸。磨得匀，墨落上去才不容易散开。你想买一叠，还是亲手试试？”
 
 ## ev.ev_samarcanda_b_followup.choice_1
 
@@ -432,7 +420,7 @@ stamps:
 
 ## ev.ev_samarcanda_b_followup.choice_1_result
 
-你按纸匠的价付钱，带走一叠磨至发亮的纸。墨在其上三百年不洇，纸坊的人也记下了这笔买卖。
+你按纸匠的价买下一叠磨得发亮的纸。纸坊的人夸它落墨不洇，放上三百年也能看清字迹。
 
 ## ev.ev_samarcanda_b_followup.choice_2
 
@@ -440,7 +428,7 @@ stamps:
 
 ## ev.ev_samarcanda_b_followup.choice_2_result
 
-你在磨石前耗了一日，学一张纸要如何磨至发亮。纸坊的手艺，从此有一分是你自己的。
+你在磨石前练了一天，试着把纸面磨匀。纸匠看了看你的作品：“还不够亮，不过再多磨一会儿，墨就不会渗开了。”
 
 ## ev.ev_samarcanda_b_followup.choice_3
 
@@ -448,7 +436,7 @@ stamps:
 
 ## ev.ev_samarcanda_b_followup.choice_3_result
 
-纸匠告诉你，最白的破布自不花剌西边的路上来，那里的亚麻长而净。通往不花剌的路，如今上了你的舆图。
+纸匠点着西边说：“最白的旧麻布从不花剌运来，那里的亚麻长，纤维也干净。走西路去不花剌，沿途记得问清水井的位置。”
 
 ## ev.ev_samarcanda_c_followup.title
 
@@ -456,7 +444,7 @@ stamps:
 
 ## ev.ev_samarcanda_c_followup.body
 
-看守清真寺寺志的毛拉见你触过那流泪的石头，并不忘记。他捧出铁角包边的册子，石的每一次流泪都记于其上，年月并列。他指给你看最后一条——正是蒙古骑手自北方而下之前的一年；再前一条，是大疫之年。他合上书，告诉你：自南方上来的朝圣者另有一种说法——石是为离开撒马尔罕而不再归来的人流泪；他们把孩子的小脸贴向玄武岩，好让石记得他们。他问你如何看这石之泪，又是否要带一个答案离开。
+撒马尔罕清真寺的毛拉翻开旧册：“这几次石头凝水，都赶上了城里的灾年。”看守旧册的毛拉说，“也有人觉得它是在为离乡的人流泪。你信哪一种？”
 
 ## ev.ev_samarcanda_c_followup.choice_1
 
@@ -464,7 +452,7 @@ stamps:
 
 ## ev.ev_samarcanda_c_followup.choice_1_result
 
-你以额抵黑色玄武岩，感到石面的凉意贴上皮肤。无论这石意味着什么，你已与它当面相对，这征兆从此由你携带。
+你把额头贴上黑色玄武岩，石面凉得像井水。它意味着什么，你还说不准；身后排队的人却都安静下来，等着看你是否会开口。
 
 ## ev.ev_samarcanda_c_followup.choice_2
 
@@ -472,7 +460,7 @@ stamps:
 
 ## ev.ev_samarcanda_c_followup.choice_2_result
 
-你在灯下坐定，听毛拉读完整个寺志，每一次流泪、每一个年份。石之泪的脉络，从此写进你对这座城的理解。
+你在灯下请毛拉读寺志。他翻到记着石头“流泪”的几页：“这几次都记了年份。有人把它当灾祸的预兆，也有人说是石面渗水。册子只记下了发生的事，信哪种说法，你自己判断。”听到最后，窗外已经传来清晨的声音。
 
 ## ev.ev_samarcanda_c_followup.choice_3
 
@@ -480,7 +468,7 @@ stamps:
 
 ## ev.ev_samarcanda_c_followup.choice_3_result
 
-朝圣者告诉你，他们自撒普儿干翻山而来，为触石而祷。你问那路在何方，通往撒普儿干的路，如今上了你的舆图。
+你问朝圣者从哪里来。一人把包袱往肩上提了提：“我们从撒普儿干翻山来的，专程来向这块石头祈祷。回去也走山路，先跟着河谷，再找驮队问路。”
 
 ## ev.ev_samarcanda_mentor_followup.title
 
@@ -488,7 +476,7 @@ stamps:
 
 ## ev.ev_samarcanda_mentor_followup.body
 
-蓝砖学舍的老学生，不让你只带走他的讲述。他探手入行囊，把学子生涯所余之物尽数摆出：一张他亲手画着舆图的撒马尔罕纸，一册磨旧的星表，一日的耐心。他让你自择哪一件最合用，因为行路人只靠带在身上的东西，而撒马尔罕的学舍，再没有别的可赠。
+学生把三样东西摆到你面前：“一张撒马尔罕纸、一册旧星表，或者我陪你讲解一天。书院里能教的都在这儿了，你挑一样带走吧。”
 
 ## ev.ev_samarcanda_mentor_followup.choice_1
 
@@ -496,7 +484,7 @@ stamps:
 
 ## ev.ev_samarcanda_mentor_followup.choice_1_result
 
-这笔记如其人，素朴而准确。你在蓝砖学舍所学，如今已写成文字，可在路上随时查阅。
+学生在纸上写下两列星位，指着天亮前最后还能看见的一颗说：“别只背名字。明早到院里，先找到它，再看看它和屋顶的相对位置。”
 
 ## ev.ev_samarcanda_mentor_followup.choice_2
 
@@ -504,12 +492,12 @@ stamps:
 
 ## ev.ev_samarcanda_mentor_followup.choice_2_result
 
-学生告诉你，穹顶之蓝来自巴达哈伤山中磨碎的青金石，烧入釉中。通往巴达哈伤的路，如今上了你的舆图。
+“穹顶这层蓝，是把巴达哈伤的青金石磨成粉，再烧进釉料里。”学生指着釉面说，“那边的矿山在东边，走山路过去得备足水。”
 
 ## ev.ev_samarcanda_mentor_followup.choice_3
 
-留一日，亲手抄录学生的书
+留一天，亲手抄录学生的书
 
 ## ev.ev_samarcanda_mentor_followup.choice_3_result
 
-你在学生的书案前耗了一日，学他的手笔与他的书。这花费了时日，但这本书从此有一半是你的。
+你在学生的书案前抄了一天星表。他替你磨好墨，临走时把抄本合上：“带去路上看吧。夜里认星，比白天问路省事。”

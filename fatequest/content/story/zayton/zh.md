@@ -6,7 +6,7 @@ source_rev: 9ba57526853d
 status: translated
 translator: 人工校译
 notes: >
-  行纪腔，非现代白话。「你须知道」是 Yule 的招牌句式，中译须保留；
+  使用自然、清楚的现代中文；正文分段，人物对白口语自然，风土细节从人物当下目的和行动中带出。保留英文源文事实、数字、专名和实际玩法效果；传闻、转述与亲历要分清。
   Christendom 作「基督教国」不作「西方」；数字关系照搬不改写。
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
@@ -74,7 +74,6 @@ stamps:
   ev.ev_zayton_pilot_consequence.choice_2_result: 0e6437a75703
   ev.ev_zayton_harbour.choice_1_result: f7141106bce4
   ev.ev_zayton_harbour.choice_2_result: f81178ffa971
-  ev.ev_zayton_harbour.choice_3_result: 52873b7596e1
   ev.ev_zayton_fanfang.choice_1_result: 346280f8ee74
   ev.ev_zayton_fanfang.choice_2_result: c54b87c81636
   ev.ev_zayton_fanfang.choice_3_result: 1bf772565fad
@@ -85,9 +84,7 @@ stamps:
   ev.ev_zayton_mentor.choice_2_result: f3b568d7a058
   ev.ev_zayton_mentor.choice_3_result: 757761d33fc4
   ev.ev_zayton_ledger_consequence_resolution.choice_1_result: f77518ff30b0
-  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 522dfcce4109
   ev.ev_zayton_watch_consequence_resolution.choice_1_result: 6f681441cd08
-  ev.ev_zayton_watch_consequence_resolution.choice_2_result: 0e9e31c56a89
   ev.ev_zayton_ledger_consequence.choice_1_result: f0a405e9114a
   ev.ev_zayton_ledger_consequence.choice_2_result: 58e3adfab038
   ev.ev_zayton_watch_consequence.choice_1_result: de43fac3a45a
@@ -124,8 +121,6 @@ stamps:
   ev.ev_zayton_mazu_followup.choice_1_result: 0b262b695a28
   ev.ev_zayton_mazu_followup.choice_2: 4886f739c8e6
   ev.ev_zayton_mazu_followup.choice_2_result: 4bbb9e8d3db8
-  ev.ev_zayton_mazu_followup.choice_3: d2dfe2876c2c
-  ev.ev_zayton_mazu_followup.choice_3_result: 4e250bba3d36
   ev.ev_zayton_mentor_followup.title: 0437372a459f
   ev.ev_zayton_mentor_followup.body: 1894364ead4c
   ev.ev_zayton_mentor_followup.choice_1: 108dfd86a376
@@ -144,6 +139,11 @@ stamps:
   ev.ev_zayton_mentor_jiaobei_followup.choice_3_result: 9eb67c3e2995
   codex.cx-zayton-watch.name: 95bac79e64a2
   codex.cx-zayton-watch.body: e703b0336670
+  ev.ev_zayton_harbour.choice_3_result: 52873b7596e1
+  ev.ev_zayton_ledger_consequence_resolution.choice_2_result: 522dfcce4109
+  ev.ev_zayton_mazu_followup.choice_3: d2dfe2876c2c
+  ev.ev_zayton_mazu_followup.choice_3_result: 4e250bba3d36
+  ev.ev_zayton_watch_consequence_resolution.choice_2_result: 0e9e31c56a89
 ---
 
 ## city.zayton.name
@@ -152,547 +152,503 @@ stamps:
 
 ## city.zayton.wonder
 
-你听人说过亚历山大港和它百座尖塔的仓库吧。你要知道：凡有一船胡椒运到亚历山大
-送往基督教世界，就有一百船——不止——来到这刺桐港。天竺的船挤满了水面，桅杆密如
-焚过的树林。不仅是胡椒。宝石、珍珠、天下所有香料、够一个帝国穿的丝绸——全从这
-码头经过，而大汗的税吏还没点完上一季的账，下一季的船队已经出现在海平线上。
+你听过亚历山大港有许多高塔仓库吧？刺桐的港口更忙。运往基督教世界的胡椒，每有一船到亚历山大，就有百船甚至更多来到这里。印度船挤满海面，桅杆远看像一片烧焦的树林。宝石、珍珠、香料和丝绸也都从这儿装卸。大汗的税吏还没算完上一季的货，下一季的船已经到了。
 
 ## ev.zayton.entry.title
 
-刺桐港
+抵达刺桐港
 
 ## ev.zayton.entry.body
 
-自福州向东南行五日，穿过樟树夹道的山谷、经过一个接一个的城镇，道路将你带到水边
-——你便明白人们为何这般说起此地了。刺桐是个大港，天竺的船都聚到这里，载着香料与各色贵重货物
-而来。你须知道：往亚历山大港去、供基督教各国用的胡椒，每有一船装运，来到这个港的就有百船，
-还不止百船。桅杆沿水而立，密得像烧过的林子。码头尽头，大汗的书吏摆着他们的桌子，
-凡是带货上岸的人，没有一个不从他们笔下经过的。
+从福州向东南走五天，穿过樟树生长的山谷和一座接一座的城镇，路就到了海边。刺桐港停满了从印度洋来的船，船上装着香料和贵重货物。运往亚历山大、再销往基督教世界的胡椒，每有一船，刺桐就有百船以上。桅杆密密地立在水边，远看像一片烧过的树林。码头尽头，大汗的税吏正等着查验每一批上岸的货。一个跑福州线的船主正把货从海船转到河船上，见你看着账册，便说：“印度来的货到刺桐还没算运完。我们接手后沿闽江送去福州，海船和河船各算一段运费，账得分开记。”
 
 ## ev.zayton.entry.choice.customs
 
-向大汗的税吏报关
+向大汗的税吏申报货物
 
 ## ev.zayton.entry.choice.slip
 
-改从渔人石阶上岸
+从渔人的石阶悄悄上岸
 
 ## ev.zayton.entry.choice.ask_ships
 
-问船夫这些船都是哪里来的
+问船夫这些船从哪儿来
 
 ## ev.zayton.ledger_consequence.title
 
-税册上的去路
+税册上的路线
 
 ## ev.zayton.ledger_consequence.body
 
-第二日，税吏抱来誊清的副册。册页不只列你的货物，也写着货从何处来、下一程可往何处去。
-杭州与刺桐之间的沿海道路被细细记在页边；他问你是否要留一份盖过印的副本。
+第二天，税吏拿来一份誊清的税册。上面记着你的货物、货物的来处，以及可能的下一站。杭州和刺桐之间的沿海路线也写在页边。他问你要不要留一份盖过印的副本。
 
 ## ev.zayton.ledger_consequence.choice.copy
 
-收下副本，抄记杭州与沿海道路
+收下副本，问清杭州和沿海路线
 
 ## ev.zayton.ledger_consequence.choice.refuse
 
-不留副本，只让货物入册
+不留副本，只申报货物
 
 ## ev.zayton.watch_consequence.title
 
-夜巡的灯
+夜巡提灯来查
 
 ## ev.zayton.watch_consequence.body
 
-入夜后，巡夜人的灯停在你住处门前。他们在码头名册里找不到你的记号。领头人没有拔刀，
-只把一块迟报木牌放在桌上：现在补交费用，或让货物留仓查验。
+天黑后，巡夜人提灯来到你的住处。他们在码头税册里找不到你的申报记录。领头人没拔刀，只把一块迟报牌放在桌上：“现在补交费用，或者把货留在仓里查两天。”
 
 ## ev.zayton.watch_consequence.choice.pay
 
-补交迟报费用
+现在补交迟报费用
 
 ## ev.zayton.watch_consequence.choice.submit
 
-让货物留仓查验两日
+把货物留仓查验两天
 
 ## ev.zayton.pilot_consequence.title
 
-领航人的两种说法
+领航员画出两条路
 
 ## ev.zayton.pilot_consequence.body
 
-船夫把酒喝完，领航人用指尖蘸水，在桌上划出两条线。一条向南，须等季风，通往占婆；
-一条向北入内陆，先到福州。你只能来得及把其中一条问清。
+船夫喝完酒，领航员用手指蘸了点水，在桌上画出两条路。一条向南，等季风时可以去占婆；另一条往内陆北上，通往福州。你有时间问清其中一条。
 
 ## ev.zayton.pilot_consequence.choice.chamba
 
-追问南下占婆的季风海路
+问清南下占婆的季风航线
 
 ## ev.zayton.pilot_consequence.choice.local
 
-追问北上福州的陆路
+问清北上福州的陆路
 
 ## city.zayton.market.name
 
-刺桐码头
+刺桐码头市场
 
 ## city.zayton.shrine.name
 
-天妃宫
+天妃庙
 
 ## city.zayton.shrine.desc
 
-锚地上方的山丘上，迎着海上第一道光，立着海神天妃的庙。她贴着金的身像面南望海；
-脚下是船主们的供献——烧过的纸、摆开的米、一杯酒。这一带的船主出海前没有不先上去
-的，而他们谁也不把这叫作占卜。他们叫作「问」。
+锚地上方的山丘上有座天妃庙，面朝海面。船主出海前常来这里烧纸、供米，再斟上一杯酒。有人摇签筒，请庙里的人读签。水手们不把这叫占卜，只说是出海前来问一问。
 
 ## city.zayton.market.desc
 
-刺桐的码头沿着水岸伸展，从无片刻安静。胡椒装进齐人高的麻袋上岸；珍珠在小小的黄铜天平上过秤；
-檀香木与沉香木像劈柴一样码着。你得知道，在这里做买卖可不便宜：大汗征收tamghā（商税）
-，十取其一；船运费再加一层——细货三十取百，粗货四十取百，胡椒四十四取百。运费加汗税，
-商人得交出货值的一半。然而剩下那一半的利润就够他高高兴兴地再来一趟。
+刺桐的码头整天忙个不停。胡椒装在齐人高的麻袋里上岸，珍珠放上黄铜小秤称重，檀香木和沉香木则成堆码放。这里的税费不低：大汗收一成商税，船运费另算，小件收三成、大件四成，胡椒则收四成四。算上运费和商税，货价的一大半都要先交出去。商人仍愿意再来，因为剩下的利润足够可观。
 
 ## ev.zayton.fanfang.body
 
-天竺、波斯和大食诸地的商人，在此各有自己的街巷、自己的礼拜之所，住得久了，连孙辈都已埋在这片土里。
-波斯语、阿拉伯语与本地话在同一屋檐下讨价还价，三门语言一门不通的人，会发现钱袋比头脑更轻。
-坊中无人觉得这有什么稀奇——而这，正是最稀奇之处。
+印度、波斯和阿拉伯商人各有自己的街区和礼拜场所。许多人在这里住了一辈子，连孙辈也出生、长大在此。街巷里能听见波斯语、阿拉伯语和本地话，人们就在这些语言之间谈价、做买卖。对街坊来说，这早已是日常；刚到的旅人反而会觉得新鲜。
 
 ## ev.zayton.fanfang.choice.interpreter
 
-雇坊里少年做一季通译
+雇个少年做一季通译
 
 ## ev.zayton.fanfang.choice.persian
 
-向波斯商人打听海路
+问波斯商人海路怎么走
 
 ## ev.zayton.fanfang.choice.silk
 
-向蛮子织工买一匹绢
+向本地织工买一匹丝绸
 
 ## ev.zayton.fanfang.title
 
-番坊
+番坊街区
 
 ## ev.zayton.harbour.body
 
-刺桐的码头沿水排开，终夜不静。胡椒以齐人高的麻袋上岸，珍珠在黄铜小秤上过秤，檀香木与沉香木如劈柴般码着。
-你要知道，商人在此处花费甚巨：大汗征收tamghā（商税），十取其一；船费另计——细货取三十于百，
-粗货取四十于百，胡椒则取四十四于百。运费加上汗税，商人到手之前已交出货物所值的大半。
-然而剩下的那一半，利厚得很，他总乐意再来一趟。
+刺桐码头从早到晚都很热闹。胡椒装在齐人高的麻袋里，珍珠在黄铜秤上过秤，檀香木和沉香木一堆堆码在岸边。大汗收一成商税，船运费另算：小件三成，大件四成，胡椒四成四。两笔费用加起来，商人要先付出货值的一大半；可只要行情合适，他们还是愿意再跑一趟。
 
 ## ev.zayton.harbour.choice.monsoon
 
-请领航们喝一杯，打听风信
+请领航员喝一杯，打听风向
 
 ## ev.zayton.harbour.choice.pepper
 
-按码头价买一袋胡椒
+跟码头商人买一袋胡椒
 
 ## ev.zayton.harbour.choice.watch
 
-整日看船进港
+花一天看看船只进港
 
 ## ev.zayton.harbour.title
 
-码头
+刺桐码头
 
 ## ev.zayton.mazu.body
 
-锚地上方立着一座海神娘娘的庙，此岸的船主，没有一个不是先上山、后出海。他们在那里烧纸，
-摆一碗米饭、斟一杯酒，摇一只装着号签的竹筒，直到一根签落下来；签被送到门口一位老妇人手中，
-她照着号码读出所写的文字。水手们不把这叫作卜卦。他们管这叫问一问。
+锚地上方的山丘上有座海神庙。这一带的船主出海前，常先上山烧纸、供米、斟酒，再摇签筒求签。掉出来的签会交给庙门边的老妇人，她按号码读出签文。水手们说，他们不是在算命，只是在出海前问一问。
 
 ## ev.zayton.mazu.choice.lots
 
-摇筒求一签
+摇签筒求一支签
 
 ## ev.zayton.mazu.choice.offer
 
-出海前上一炷香
+出海前到庙里上香
 
 ## ev.zayton.mazu.choice.watch
 
-站在后面看
+站在一旁看看别人怎么做
 
 ## ev.zayton.mazu.title
 
-天妃宫
+天妃庙里的求签
 
 ## ev.zayton.mentor.body
 
-庙门口的老妇人解签已有四十年，能告诉你每一个轻视签文的船主叫什么名字。凡肯随她久坐、
-量力捐庙的人，她都愿意教他读签；但她把话说得直白：签不是告诉一个人将要发生什么。
-签告诉他的，是他尚未想过的事。
+庙门边的老妇人解签已有四十年，很多船主都来找她。她愿意教肯坐下来认真学的人，也接受对方量力捐给庙里的香火钱。她先把话说清楚：“签不会告诉你将来一定会怎样。它能提醒你的，是你还没想到的事。”
 
 ## ev.zayton.mentor.choice.ask
 
-只问签是怎么解的
+先问她解签的方法
 
 ## ev.zayton.mentor.choice.learn
 
-随她坐下，学解签
+坐下来跟她学解签
 
 ## ev.zayton.mentor.title
 
-解签的老妇
+庙门边的解签老妇
 
 ## market.zayton.item.cinnabar
 
-朱砂，产自南方山矿，既有原石也卖磨好的粉。
+南方山矿开采的朱砂，有原矿也有磨好的粉。朱砂粉装在带塞的小瓶里，免得港口的海风把它吹散。
 
 ## market.zayton.item.dehua-porcelain
 
-德化白瓷——阿拉伯商人管它叫「地之脂」，付四成四的运费也不皱眉。
+德化窑烧制的白瓷，表面不上釉，颜色温润，像象牙一样。阿拉伯商人称它为“土之脂”，即使运费高达四成四，也愿意购买。
 
 ## market.zayton.item.ginger
 
-糖姜，封在蜡罐里，准备上船往忽鲁谟斯和亚丁。香料商说：船上无姜，半数水手会败于痢疾。
+用蜡封口、装在陶罐里的糖渍姜，准备运往忽鲁谟斯和亚丁的船上。香料商人说，船上带姜能减少水手闹肚子的情况。
 
 ## market.zayton.item.hangzhou-fan
 
-行在折扇，檀香木为骨，扇面写满行书。一箱扇子在刺桐上船，到大马士革值十倍。
+杭州来的折扇，扇骨是檀香木，扇面写着字。商人从刺桐整箱买下，再运往大马士革出售。
 
 ## market.zayton.item.lacquerware
 
-黑红双色漆器，福州坊间所出，在南方沿海的湿气中晾干。
+福州作坊制作的黑漆和朱红漆器。印度商人喜欢漆面在烛光下泛出的光泽。
 
 ## market.zayton.item.musk
 
-麝香，来自藏地高原的麝鹿，经山口由商队驮到刺桐。一枚麝香，不过核桃大小，可使一船丝绸熏香一月。
+来自西藏边地麝鹿的麝香囊，由商队翻山运到刺桐。小小一枚，便能让一整批丝绸带上香气。
 
 ## market.zayton.item.paper-money
 
-大汗的交钞，印在楮皮纸上，盖着朱红御玺。
+大汗发行的纸币，以桑树皮制成，盖有朱红色印章。码头附近的兑换商会用银子换纸币，汇率时有变化。
 
 ## market.zayton.item.porcelain
 
-景德镇白瓷，裹着稻草与锯末，从内陆走平底船运来。
+景德镇烧制的白瓷，用稻草和锯末包好，再由平底船沿河运来。途中总有一些会碎，商人已把损耗算进售价。
 
 ## market.zayton.item.rhubarb
 
-唐古忒大黄的干根——论斤卖，价比威尼斯药铺里的肉桂还贵。
+唐古忒产的干大黄根。在威尼斯的药铺里，它按重量算价，能卖得比肉桂还贵。仓库伙计用称珍珠的黄铜秤称它。
 
 ## market.zayton.item.silk
 
-蛮子生丝，捆成八层高堆在海关棚里，等着过秤抽税。
+蛮子地区出产的生丝，成捆堆在海关仓库里等待称重、缴税。税吏会从每捆剪下一角查看品质；当地丝绸比波斯出产的更细。
 
 ## market.zayton.item.sugar
 
-蔗糖，福州蔗园所产，压成圆锥裹以棕叶。码头上没有不带糖送出手的买卖。
+福州种植的甘蔗制成的糖，做成锥形糖块，用棕榈叶包好后沿海运来。码头上常拿糖作礼物，谈成买卖前总要送上一块。
 
 ## market.zayton.item.tea
 
-茶饼，压成砖，盖着产区印戳。码头上茶砖换胡椒，一比一。
+压成砖状、盖有产地印记的茶。码头商人有时用一块茶砖换一袋胡椒，双方都觉得划算。
 
 ## ev.ev_zayton_entry.choice_1_result
 
-你向大汗的吏员报明货物，他们的笔毫不停歇，把你的货物记入海贸册。百船之货排在前面，点验足足费了你两日光阴。税单落定时，一名书办另抽出一张纸，问你的路下一程往哪里去。
+你向税吏申报货物。书吏逐项核对海贸册，前面还有许多船要查。手续办完后，他抽出另一张纸，问你下一程要往哪儿去。
 
 ## ev.ev_zayton_entry.choice_2_result
 
-你用渔人的乡音打过招呼，从他们的石阶悄悄上了岸，没有笔记录你的到来。但税吏会记得那个未曾报关的商人，码头上的闲话里，你的名字少了三分热络。瞭望所亮着一盏灯，夜间的巡守自有一本账，记下每一道影子。
+你用渔人的方言打了招呼，从他们的石阶上岸，没有向税吏申报。码头上没人当面拦你，但巡夜人仍会查税册；街坊对你的态度也冷淡了些。
 
 ## ev.ev_zayton_entry.choice_3_result
 
-你问一个船夫这些船都是些什么，他用只有读懂大海的人才有的方式回答。他能叫出一百条船、一百条路的名字，而他把其中两条要紧的指给了你。
+你问船夫这些船从哪儿来。他指着一排桅杆说：“那几艘从印度洋来，卸了货还要换小船进江。你要打听航线，南边问领航员，北上福州就去找跑陆路的商队。”
 
 ## ev.ev_zayton_jiaobei_ask.choice_1_result
 
-你在神祠前掷下两枚杯筊，等它们以落势作答。卜辞已示，祠中的人记住了你的名字。
+你在庙前掷下两枚杯筊，等它们落定。庙祝替你解读完，笑道：“下回有事，再来问就是。”
 
 ## ev.ev_zayton_jiaobei_ask.choice_2_result
 
-你未掷杯筊，便走过神祠。女神的回答未被问及，签枝仍留在签筒里。
+你没有掷杯，直接离开了神祠。你没有求问，签筒里的签也没有动。
 
 ## ev.ev_zayton_pilot_consequence.choice_1_result
 
-你追问季风航道，领航人又把那条南行的线描深了一遍。他说出这条航道通行的时节；占婆便在你的舆图上落定，像一艘船缓缓下了锚。
+你问南下的季风航线。领航员蘸水在桌上画了几道风向：“等风稳稳地往南吹，再去占婆。风向乱时先留在港里，别为了赶日子硬出海。”
 
 ## ev.ev_zayton_pilot_consequence.choice_2_result
 
-你问起内陆之路，领航人放下酒盏，像讲一条他在黑夜里也认得的路那样讲起来。北往福州的路如今写进了你的行纪，你的名字也落进了他的记性。
+你问北上的陆路。领航员放下酒杯：“去福州走内陆路，沿途镇子能歇脚。别在码头等船了，这趟走陆路更省事。”
 
 ## ev.ev_zayton_harbour.choice_1_result
 
-你以码头价买下一袋胡椒，商人在过秤时拍了拍麻袋。但他报出的价并不是交易的全部——他留你片刻，要谈谈那本货运账。
+你按码头价买下一袋胡椒。商人称好货后拦住你：“货钱算清了，运费还没算。胡椒走船价高，先把这笔也谈妥再封袋。”
 
 ## ev.ev_zayton_harbour.choice_2_result
 
-你请领港人喝了一杯，向他们打听风向。一日在畅谈中过去；季风的规律，连同通往占婆的海路，如今都上了你的舆图。
-
-## ev.ev_zayton_harbour.choice_3_result
-
-你花了一日，看船一艘接一艘地进港——他们说，旺季之时，一次可入一百艘。刺桐的避风港，如今记在你的行纪里。
+你请领航员喝酒，向他们打听风向。一人把酒杯放到一边：“等季风稳稳地往南吹，就能顺风去占婆。风向乱的时候别出港，水手再能耐也拧不过风。”
 
 ## ev.ev_zayton_fanfang.choice_1_result
 
-你向波斯商人打听海路，他们用一种你正在学的语言回答。其中一位老商人叫了茶，把外坊留给诚信陌生人的那桩买卖端到你面前。
+你向波斯商人打听海路。他们用你正在学的语言回答。一位老商人叫人端来茶，提出一笔专为守信旅人准备的买卖。
 
 ## ev.ev_zayton_fanfang.choice_2_result
 
-你雇下番坊里一个少年当一季通事，与他相处了二十日。阿拉伯语如今挂在你的嘴边，钱袋则轻了三千银。
+你雇了番坊的一名少年做一季通译，和他一起生活了二十天。你学会了阿拉伯语，花费三千银。
 
 ## ev.ev_zayton_fanfang.choice_3_result
 
-你花一万二千银，从蛮子地织工手中买下一匹丝，卷进货物。南方最好的丝绸，如今随你而行。
+你花一万二千银，向本地织工买下一匹丝绸。
 
 ## ev.ev_zayton_mazu.choice_1_result
 
-你在海神娘娘面前献上供物，纸灰的烟在无风的空气里笔直升起。庙祝看着你那支签的解读，直到你起身离去也没有移开目光。
+你向天妃献上供物。纸灰升起时，庙祝一直看着你抽出的签，直到你离开。
 
 ## ev.ev_zayton_mazu.choice_2_result
 
-你在海上女神的祠前摇动签筒，抽出一支签。卜辞被念了出来，水手们都看着你如何领受。
+你在天妃庙前摇签筒，抽出一支签。庙里的人念出签文，水手们都在留意你怎么回应。
 
 ## ev.ev_zayton_mazu.choice_3_result
 
-你站在后排，看水手们在海上女神像前祈祷。海民敬神的礼俗，如今写进了你的行纪。
+你站在后面看水手向天妃祈祷。
 
 ## ev.ev_zayton_mentor.choice_1_result
 
-你在庙门口的老妇人身边坐下，把能给的都给了庙里。你拿起签筒时，她看着你的手，开始像教了四十年读签人那样教你。
+你坐到老妇人身边。她先让你报出想问的事，再指着签页说：“别把一句吉话硬套在所有路上。问出海，就看风和船期；问找人，就看人有没有留下地址。”你照着签筒上的编号找到了对应一页。
 
 ## ev.ev_zayton_mentor.choice_2_result
 
-你在老妇人身边坐下，说要学掷筊。她久久望着你，然后把两枚杯筊摆在门槛上，从三个答案各自的次序开始讲起。
+你坐下来，请老妇人教你掷筊。她把两枚杯筊放在门槛上：“两枚一正一反，叫圣筊；两面都朝上，是笑筊；两面都朝下，是阴筊。先把问题说清楚，再掷，别见一个结果就急着往下猜。”
 
 ## ev.ev_zayton_mentor.choice_3_result
 
-读签的老妇人演示签枝如何按次序与印痕判读。解签之术如今写进了你的行纪，只是摇签仍在她手里。
+老妇人把签枝排在桌上：“先看枝上的记号，再按号找签文。抽签时把问题想清楚，解签才知道该往哪件事上留意。”
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1_result
 
-港务就着灯光验看了封印，在他自己的册上把你记作已清。副本尽到了职分；刺桐的港口不会再来拦你。
-
-## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
-
-你花了一日，把副本工整地抄进行纪。封印的效力为前路保存下来，只是这笔誊写耗去你一日。
+你在天黑前把副本交给港务官。他核对印记后，在自己的册子上登记了你的货物。刺桐港的手续至此办妥。
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1_result
 
-码头书办把凭据划销，把你的名字写入「已纳」一栏。夜里那桩事故就此了结，账簿上不再记着你的阴影。
-
-## ev.ev_zayton_watch_consequence_resolution.choice_2_result
-
-你花了一日，把凭据与它的缘由抄进行纪。这份结算为前路记录下来，只是耗去你一日。
+码头书吏核对凭据后划掉了罚金记录。
 
 ## ev.ev_zayton_ledger_consequence.choice_1_result
 
-你收下书办抄清的税册副本，手落在边注上——那里写着行在与沿海道路。这本册子给了你一条值得思量的路。
+你收下税册副本，页边留着杭州和沿海路线。旁边的商人瞥了一眼：“沿岸有港口可以停船，走这条线之前先问清船期。”
 
 ## ev.ev_zayton_ledger_consequence.choice_2_result
 
-你只让货物入册，不取副本。书办又蘸了一回笔，合上了簿子；一重与墨无关的凉意落在案上。
+你只申报货物，没有留下副本。书吏合上税册，交易到此结束。
 
 ## ev.ev_zayton_watch_consequence.choice_1_result
 
-你在巡守的桌边付清了迟报罚金，税单上盖了「已纳」。巡守把你的货物留给你照管，却把你的名字写了两遍。
+你在巡夜人的桌边补交罚金，书吏在税单上盖了“已缴”。巡夜人把货还给你。
 
 ## ev.ev_zayton_watch_consequence.choice_2_result
 
-你留下货物供两日查验。巡守不慌不忙地翻检每一包，逐包记入册中；在等待里，你把码头巡行的规矩记进了心里。
+你把货物留在仓里查验两天。巡夜人逐包检查、登记；等待时，你也看明白了码头夜巡的规矩。
 
 ## ev.ev_zayton_ledger_consequence_resolution.title
 
-刺桐：封缄的副本
+刺桐：盖印的税册副本
 
 ## ev.ev_zayton_ledger_consequence_resolution.body
 
-带着这份封缄的税册副本，你便把刺桐自己的印记带在了货物上。它不会替你决定整段旅程，但只要是汗廷书办设案之处，这方封印都会先于你开口。
+你带着盖印的税册副本，货物也有了刺桐官方的记录。这份凭证不能替你决定下一程，但遇到大汗的书吏时，可以证明你的货已经申报。
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_1
 
-在天黑前把副本呈给港务
+天黑前把副本交给港务官
 
 ## ev.ev_zayton_ledger_consequence_resolution.choice_2
 
-把副本妥帖收进自己的行纪
+把副本收进旅行笔记
 
 ## ev.ev_zayton_watch_consequence_resolution.title
 
-刺桐：巡守的凭据
+刺桐：巡夜人开的凭据
 
 ## ev.ev_zayton_watch_consequence_resolution.body
 
-带着巡守的凭据，你便带着一份在黑夜里清偿了债务的收据。它不会替你决定整段旅程，但在下一座码头，这份凭据会说明你在刺桐的账已经结清。
+你带着巡夜人开的凭据，证明迟报的费用已经结清。它不能替你决定下一程，但下个码头若查问此事，你可以拿出凭据说明刺桐的账已结清。
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_1
 
-在天黑前把凭据交进码头官署
+天黑前把凭据交到码头官署
 
 ## ev.ev_zayton_watch_consequence_resolution.choice_2
 
-把凭据收进自己的行纪
+把凭据收进旅行笔记
 
 ## ev.ev_zayton_harbour_followup.title
 
-刺桐：运费之算
+刺桐：运费怎么算
 
 ## ev.ev_zayton_harbour_followup.body
 
-码头给你称胡椒的那位栈房掌柜，又在税关边上寻见了你。他见你数过船艘，便以他这等人待可信之人的方式行事：把自己的账册摊开。他说，运费是这座港口的第二种语言。细货三十取百，粗货四十取百，胡椒四十四取百——此外还有大汗的tamghā（商税）加在上面。他愿意让你按商人们彼此交易的价格取走一袋。他说，过了这一潮，他便不再留着这桩买卖了。
+给你称过胡椒的掌柜又在税关边找到你，把自己的运费账册摊开给你看。“运费也得算进买卖里，”他说，“小件三成，大件四成，胡椒四成四，再加大汗的一成商税。”他愿意按商人之间的价格卖你一袋胡椒。
 
 ## ev.ev_zayton_harbour_followup.choice_1
 
-按商人自定的价买下这袋胡椒
+按商人之间的价格买这袋胡椒
 
 ## ev.ev_zayton_harbour_followup.choice_1_result
 
-掌柜称出一袋，按商人彼此交易的价格卖给你，tamghā已在其中。胡椒到手，你便如商人一般懂得运费之算——也懂得那将随你走遍天竺海每一座码头的税率。
+掌柜称好一袋胡椒，按商人之间的价格卖给你，商税也算在价钱里。你带着胡椒离开，也弄清了刺桐的运费算法。
 
 ## ev.ev_zayton_harbour_followup.choice_2
 
-问季风何时转向占婆
+问季风什么时候转向占婆
 
 ## ev.ev_zayton_harbour_followup.choice_2_result
 
-掌柜向南指过水面，指向停船等待之处。他说，季风一转，通往占婆的海路便开；误了这一季的船，就要再等一季。如今这条海路已上了你的舆图，连同当用的时令。
+掌柜朝南边的锚地一指：“等季风转了，去占婆的船就能走。错过这一季，就得等下一季；出海前先打听船期，别光看风向。”
 
 ## ev.ev_zayton_harbour_followup.choice_3
 
-再在桅林之间站一日
+再在码头看一天船
 
 ## ev.ev_zayton_harbour_followup.choice_3_result
 
-你又在码头站了一日，立于密如焚林的桅杆之间，看天竺的船一艘艘进港。最后一艘尚未泊定，一日已尽。离开之后，再看海时，这座港口总在你眼前。
+你在码头看了一天，印度洋来的船一艘接一艘靠岸。船工们忙着卸货，桅杆把港口上空都遮住了。
 
 ## ev.ev_zayton_fanfang_followup.title
 
-刺桐：番坊的交易
+刺桐：番坊里的买卖
 
 ## ev.ev_zayton_fanfang_followup.body
 
-番坊中，听过你讨价还价的那位商人遣人送话到你住处：一匹绢已从织工自家的织机下来，先尽着你。他把绢摊在三种语言交会的井边。他说，价钱是织工的价钱，买卖由你定——你也可以不问此价，改问海商们不肯在码头上说起的那条路。
+番坊的商人托人捎话给你：织工刚织好一匹丝，愿意先给你看。商人把丝铺在井边，周围能听见几种语言。他说这是织工开的价，你可以买，也可以不买；想打听海路的话，他也认识愿意开口的人。
 
 ## ev.ev_zayton_fanfang_followup.choice_1
 
-按织工的价钱买下这匹绢
+按织工的价钱买下这匹丝
 
 ## ev.ev_zayton_fanfang_followup.choice_1_result
 
-这匹绢是上好的蛮子丝，入手比看着还沉；你以油布裹了，带出番坊。按织工的价，这是桩值得说与人听的便宜买卖；番坊看着你离去，记下了它的评断。
+你按织工开的价钱买下丝绸，用油布包好。商人朝你点点头：“爽快。下回想看新织的料子，来番坊找我。”
 
 ## ev.ev_zayton_fanfang_followup.choice_2
 
-向海商打听通往占婆的海路
+问海商通往占婆的航线
 
 ## ev.ev_zayton_fanfang_followup.choice_2_result
 
-一位天竺海的商人用手指在尘土里画出这条海路，一段一段——季风之转、海上之日、尽头的港口。占婆如今已上了你的舆图，连同那通向它的路。
+“先等东北季风转，再沿这几处岛港走，最后就到占婆。”天竺海商人在尘土上画出航线，又补了一句：“每一段都得看风，别急着一次走到底。”
 
 ## ev.ev_zayton_fanfang_followup.choice_3
 
-让番坊记下你的名姓
+请番坊记下你的名字
 
 ## ev.ev_zayton_fanfang_followup.choice_3_result
 
-你谈价坦直，说话也坦直，番坊便把你认作一个诚实的人。在海上诸国的商人之间，你的名字会先于你被再次提起。
+你把价钱和来意都说清楚。商人收好丝绸：“跟你做买卖省心。下回有货，我先给你留个消息。”
 
 ## ev.ev_zayton_fanfang_followup.choice_4
 
-抄录奇闻与行纪
+抄下这些商人的见闻
 
 ## ev.ev_zayton_fanfang_followup.choice_4_result
 
-学者们把纸卷借给你。灯下你抄录了普雷斯特·约翰与汪大渊、天堂与真腊、两位西行者的山程——一本比你出发时所带更厚的行路之书。
+学者把几卷纸借给你。你在灯下读到普雷斯特·约翰、汪大渊、天堂和真腊的不同说法。
 
 ## ev.ev_zayton_mazu_followup.title
 
-刺桐：天妃再问
+刺桐：出海前再问一次
 
 ## ev.ev_zayton_mazu_followup.body
 
-庙门口的解签老妇在石阶上唤住你。她说，天妃不把一份供献当作一次便了；每逢出海之前，她都要再问一回，而此刻山下正有一支船队在备航。水手们已经上了山，烧纸、摆米、斟酒。门口还留得下一个人的空，给又一个存心要问的人。
+庙门边的老妇人叫住你：“出海前，船主们都会再来问一次。山下正有一队船准备出港，你要不要也问问？”水手已经上山烧纸、供米、斟酒，庙门前还留着位置。
 
 ## ev.ev_zayton_mazu_followup.choice_1
 
-在船队出海之前上供
+在船队出海前上供
 
 ## ev.ev_zayton_mazu_followup.choice_1_result
 
-你像船主们那样，在天妃脚下烧了纸，摆上一碗米、一杯酒。她望着南面的水面，没有拒绝你；因这一问，海路待你更和善些。
+你像其他船主一样，在天妃像前烧纸、供米、斟酒。庙里没有拒绝你的供奉，你离开时心里踏实了些。
 
 ## ev.ev_zayton_mazu_followup.choice_2
 
-求一签问出海之事
+求一支签，问出海的事
 
 ## ev.ev_zayton_mazu_followup.choice_2_result
 
-你摇动竹筒，直到一签落下；解签者照着签诗之书读它。签上写着风将相助的一日——连同通往占婆的海路一同写出。你记下这一日，走下山去。
-
-## ev.ev_zayton_mazu_followup.choice_3
-
-留下，看水手们发问
-
-## ev.ev_zayton_mazu_followup.choice_3_result
-
-你在庙里站了一日，看水手们来来去去，各以各的方式问。你离去时，天妃宫的香烟随你而行，你也带走了「问」是怎样一回事的记忆。
+老妇人看过你抽的签，说：“这页写着候潮。港里去占城的船正等风，你先去问船长何时装满水，别听见‘明日开’就急着上船。”她指给你看刺桐通往占城的海路。
 
 ## ev.ev_zayton_mentor_followup.title
 
-刺桐：解签者的临别之语
+刺桐：老妇人的临别提醒
 
 ## ev.ev_zayton_mentor_followup.body
 
-解签的老妇不让你只带走你已学会的东西。她伸手取过竹筒，为你的行程抽出一签，却不读出声来。她说，签是告诉一个人他尚未权衡之事；你已随她坐得够久，该学会自己读了。她把这签递到你面前，由你自择如何带走。
+教你解签的老妇人又为你的行程抽了一支签，却没有马上念出来。“签能提醒你没考虑到的事，”她说，“你跟我学了这么久，该试着自己读了。”她把签递给你，让你决定怎么带走这份指点。
 
 ## ev.ev_zayton_mentor_followup.choice_1
 
-收下她为你行程抽的签
+收下她替你抽的签
 
 ## ev.ev_zayton_mentor_followup.choice_1_result
 
-她把签读了一遍，随即按入你掌中：宜出行的一日，以及你如今已会自己读的告诫。这份解读是你的了，连同那一日。
+老妇人读完签文，把签交给你：“这签说近几日适合启程。路上还有件你没想到的事，多留心身边人的提醒。”
 
 ## ev.ev_zayton_mentor_followup.choice_2
 
-问她，签文偏向哪一条路
+问她哪条路更合适
 
 ## ev.ev_zayton_mentor_followup.choice_2_result
 
-她摇动竹筒，直到有了应答，再读出落下的一签：签文指点通往占婆的季风海路，连同天妃的庇佑。这条路画上了你的舆图，这句告诫收进了你的行纪。
+她摇动竹筒，直到有了应答，再读出落下的一签：签文指点通往占婆的季风海路，连同天妃的庇佑。
 
 ## ev.ev_zayton_mentor_followup.choice_3
 
-为庙中灯烛留下银钱
+给庙里的灯烛添些香火钱
 
 ## ev.ev_zayton_mentor_followup.choice_3_result
 
-你为天妃脚边长明的灯烛留下银钱，与解签者作别。庙中的福泽随你下山，它的香烟又追着你直到水边。
+你给庙里的长明灯添了香火钱，向老妇人道别。你带着她的提醒下山，回到海边。
 
 ## ev.ev_zayton_mentor_jiaobei_followup.title
 
-刺桐：临别的三只掷杯
+刺桐：临别前掷一回杯
 
 ## ev.ev_zayton_mentor_jiaobei_followup.body
 
-庙中教你掷杯的侍者在门口拦住了你。他把一对半月形的木杯放在你面前，要你为即将成行的航程掷上一掷。杯落定了，他不笑也不皱眉：掷便是掷，他说道，判词便是判词。如何带走它，由你自择。
+教你掷杯的庙祝在门口叫住你，把一对半月形木杯放到你手上，请你为接下来的航程掷一次。杯子落定后，他只说：“结果就是结果。你打算怎么带着它上路？”
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1
 
-把判词收作一路的护符
+收下判词，当作路上的护符
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_1_result
 
-他把两枚杯筊裹进布巾，按进你手里。无论那一掷应了什么，这随身的一裹本身就是庇佑，往后的任何营火边，你都懂得如何读它。
+庙祝把两枚杯筊用布包好交给你。以后在路上，你可以照着他教的方法自己解读杯筊。
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_2
 
-问杯，出港该走哪一条路
+问掷杯该走哪条航线
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_2_result
 
-他又掷了一次，读出落定的杯相：往爪哇的海路得吉，天妃的水道正开。这条航线画上了你的舆图，判词也收进了你的行纪。
+他又掷了一次，读出落定的杯相：往爪哇的海路得吉，天妃的水道正开。
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3
 
-留一日，让杯在你自己手中落定
+留下来练一天掷杯
 
 ## ev.ev_zayton_mentor_jiaobei_followup.choice_3_result
 
-你与这对杯筊坐过整个下午，记住了它们的轻重，黄昏时把它们留还庙中。侍者记下你的耐心，坊间也对你有了好话。
+你练了一下午掷杯，黄昏时把木杯还给庙祝。他笑着说：“手稳多了。下次替船队问事，我就让你先掷。”
 
 ## codex.cx-zayton-watch.name
 
@@ -700,6 +656,24 @@ stamps:
 
 ## codex.cx-zayton-watch.body
 
-入夜，刺桐港便交给巡夜人。瞭望所彻夜亮着一盏灯，码头的名册就着灯核验每一笔上岸的货物；
-凡找不到记号者，领头人并不拔刀，只把一块迟报木牌放在桌上——补交费用，或让货物留仓查验两日。
-夜间的巡守自有一本账，记下每一道影子。刺桐的夜自有它的规矩，规矩认得每个人的名字。
+入夜，刺桐港便交给巡夜人。瞭望所彻夜亮着一盏灯，码头的名册就着灯核验每一笔上岸的货物； 凡找不到记号者，领头人并不拔刀，只把一块迟报木牌放在桌上——补交费用，或让货物留仓查验两日。 夜间的巡守自有一本账，记下每一道影子。刺桐的夜自有它的规矩，规矩认得每个人的名字。
+
+## ev.ev_zayton_harbour.choice_3_result
+
+你站在码头看船一艘接一艘地进港。水手说，旺季时一次能进上百艘。你把刺桐港的船影记进旅途笔记。
+
+## ev.ev_zayton_ledger_consequence_resolution.choice_2_result
+
+你把副本抄清，港务官指着印记逐项说明：“这枚封印认货主和货数，过关时让税吏看清楚，别拆开弄丢了。”
+
+## ev.ev_zayton_mazu_followup.choice_3
+
+留下来陪水手们听签问路
+
+## ev.ev_zayton_mazu_followup.choice_3_result
+
+你留在庙里听水手们问签。一个年轻船主抽到签，老妇人替他念完，他皱着眉又问了两句出海的日子。
+
+## ev.ev_zayton_watch_consequence_resolution.choice_2_result
+
+巡夜人核对完凭据，把迟报牌收了回去：“这回账清了。下次货一靠岸，记得先来报。”

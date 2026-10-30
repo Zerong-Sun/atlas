@@ -57,10 +57,12 @@ func _ready() -> void:
 	_body = RichTextLabel.new()
 	_body.bbcode_enabled = true
 	_body.fit_content = true
+	_body.scroll_active = false
 	_body.selection_enabled = true
 	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_scroll.add_child(_body)
+	_root.add_child(Panels.reading_hint(_scroll))
 	_body.resized.connect(func(): _fit_scroll.call_deferred())
 	_root.add_child(Panels.rule())
 	_choice_scroll = ScrollContainer.new()
@@ -88,7 +90,8 @@ func _ready() -> void:
 func restyle() -> void:
 	if _root == null:
 		return
-	add_theme_stylebox_override("panel", Palette.panel_style())
+	add_theme_stylebox_override("panel", Panels.reading_style())
+	Panels.decorate(self)
 	_title.add_theme_font_size_override("font_size", UiScale.title())
 	_title.add_theme_color_override("font_color", Palette.ink())
 	for label in [_origin, _context, _keyboard_hint]:
@@ -99,7 +102,7 @@ func restyle() -> void:
 	_body.add_theme_color_override("default_color", Palette.ink())
 	_body.add_theme_constant_override("line_separation", int(round(UiScale.body() * 0.25)))
 	_body.add_theme_constant_override("paragraph_separation", Metrics.sm())
-	_keyboard_hint.text = I18n.t("ui.event.keyboard_hint")
+	_keyboard_hint.text = ""
 	_leave.tooltip_text = I18n.t("ui.event.pause_hint")
 	if not _event.is_empty() or not _result_key.is_empty():
 		_render_page()
@@ -169,6 +172,12 @@ func _render_page() -> void:
 				continue
 			any_open = any_open or bool(_states[i]["enabled"])
 			_choices.add_child(_make_choice(_states[i], i))
+			var cost := _choice_cost_hint(_states[i]["choice"])
+			if not cost.is_empty():
+				var cost_label := Panels.label(cost, maxi(UiScale.ui() - 2, 11), Palette.ink_soft())
+				cost_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+				cost_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+				_choices.add_child(cost_label)
 		# Retire the old control as well as its callback. An already queued click
 		# must never dismiss the next page synchronously opened by this signal.
 		_footer.remove_child(_leave)
@@ -214,6 +223,26 @@ func _make_choice(s: Dictionary, index: int) -> Button:
 	return btn
 
 
+## Only immediate, unconditional costs are shown. Branch outcomes and gains
+## remain discoveries; a player should still know the silver and days they
+## commit before pressing a choice.
+func _choice_cost_hint(choice: Dictionary) -> String:
+	var coins_spent := 0
+	var days := 0
+	for effect in choice.get("effects", []):
+		match String(effect.get("op", "")):
+			"coins": coins_spent += maxi(0, -int(effect.get("value", 0)))
+			"days": days += maxi(0, int(effect.get("value", 0)))
+	var parts: Array[String] = []
+	if coins_spent > 0:
+		parts.append(I18n.t("ui.choice.cost_coins") % Panels.money(coins_spent))
+	if days > 0:
+		parts.append(I18n.t("ui.choice.cost_days") % days)
+	if parts.is_empty():
+		return ""
+	return I18n.t("ui.choice.cost_hint") % I18n.list(PackedStringArray(parts))
+
+
 func _lock_page(token: int) -> bool:
 	if token != _generation or _submitted or not is_visible_in_tree():
 		return false
@@ -251,13 +280,18 @@ func _fit_scroll() -> void:
 	var portrait_h := minf(96.0 * Metrics.factor(), height * 0.18)
 	_portrait.custom_minimum_size = Vector2(portrait_h * 0.8, portrait_h)
 	_scroll.custom_minimum_size = Vector2(0,
-		minf(maxf(_body.get_content_height(), float(UiScale.body()) * 3.0), height * 0.32))
+		minf(maxf(_body.get_content_height() + 12, float(UiScale.body()) * 3.0), height * 0.42))
 	var choices_h := _choices.get_combined_minimum_size().y
 	_choice_scroll.custom_minimum_size = Vector2(0,
-		minf(maxf(choices_h, Metrics.tap_target()), height * 0.38))
-	_keyboard_hint.visible = width >= 540.0
+		minf(maxf(choices_h, Metrics.tap_target()), height * 0.28))
+	_keyboard_hint.visible = false
 	var padding := get_theme_stylebox("panel").get_minimum_size().y
+	var fixed := _root.get_combined_minimum_size().y - _scroll.get_combined_minimum_size().y - _choice_scroll.get_combined_minimum_size().y
+	var available := maxf(80, height - padding - fixed)
+	_choice_scroll.custom_minimum_size.y = minf(maxf(choices_h, Metrics.tap_target()), available * 0.42)
+	_scroll.custom_minimum_size.y = minf(maxf(_body.get_content_height() + 12, UiScale.body() * 3.0), available - _choice_scroll.custom_minimum_size.y)
 	custom_minimum_size.y = minf(height, maxf(300.0, _root.get_combined_minimum_size().y + padding))
+	size = custom_minimum_size
 
 
 ## GDD §19: the player must always be able to tell record from invention.

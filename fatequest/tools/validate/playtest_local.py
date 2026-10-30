@@ -3,6 +3,7 @@
 import argparse
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -63,8 +64,9 @@ def main():
                 result = subprocess.run(command, capture_output=True, text=True, timeout=args.timeout)
                 output = result.stdout + result.stderr
                 # UI smoke tests must not report PASS while runtime errors occur.
-                failed = result.returncode != 0 or any(
-                    marker in output for marker in ("SCRIPT ERROR", "ERROR:", "FAIL"))
+                failed = (result.returncode != 0 or
+                          "SCRIPT ERROR" in output or "ERROR:" in output or
+                          re.search(r"\bFAIL\b", output) is not None)
             except subprocess.TimeoutExpired as exc:
                 output = (_text(exc.stdout) + _text(exc.stderr) +
                           f"\nTIMEOUT after {args.timeout}s while running {script}\n")

@@ -41,3 +41,27 @@ You pass through without stopping. The road to Sindafu opens on your map.
 ## ev.ev_sindafu_entry.choice_2_result
 
 You rest and ask what men say of this place. You set the way to Sindafu on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+
+## ev.ev_gap_sindafu.title
+
+Bamboo Tallies in the Tea House
+
+## ev.ev_gap_sindafu.body
+
+In a Chengdu tea house, a server sets bamboo tallies on the table. They record orders and refills so none is missed in the rush. He asks you to count how many rounds this table has had. When he first started, he confused them too, until the keeper taught him to sort them by colour.
+
+## ev.ev_gap_sindafu.choice.route
+
+Ask the way to Cachanfu
+
+## ev.ev_gap_sindafu.choice.route_result
+
+“Go northeast; beyond the river lies Cachanfu.”
+
+## ev.ev_gap_sindafu.choice.scene
+
+Help count the bamboo tallies
+
+## ev.ev_gap_sindafu.choice.scene_result
+
+You separate long tallies from short ones. The long mark refills, the short new tea. Each table needs its own bundle, or the count becomes confused.

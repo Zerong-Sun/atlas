@@ -425,23 +425,23 @@ const PACKS = [
     ],
   },
   {
-    city: "siju", site: "a", zhName: "徐州", enName: "Siju",
+    city: "siju", site: "a", zhName: "邳州", enName: "Siju",
     lore: { placeId: "siju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c064" } },
     texts: {
       title: ["Siju: The Sugar Workshops' Second Page", "徐州：糖坊的第二页"],
       body: [
         "In the workshops south of Piju a sugar master who has shipped chests to Coigangiu and Coiganju draws you beside the boiling pans. He says Siju's manufactures are nothing without the canal days written on his wall — and that a traveller who buys sugar without hearing those days rides half-blind toward the grain towns.",
-        "邳州以南的作坊里，一位把糖箱运到淮安与高邮的糖坊主人把你拉到煮锅旁。他说徐州的工艺若没有墙上写着的运河日子便一文不值——买糖却不问那些日子的旅人，去粮镇时只睁半只眼。",
+        "邳州以南的作坊里，一位把糖箱运到淮阴与淮安的糖坊主人把你拉到煮锅旁。他说邳州的工艺若没有墙上写着的运河日子便一文不值——买糖却不问那些日子的旅人，去粮镇时只睁半只眼。",
       ],
       choices: [
         ["Buy sugar at the workshop's measured price", "按作坊公道价买下糖"],
-        ["Ask which canal road leads toward Coigangiu", "追问通往淮安的运河路"],
+        ["Ask which canal road leads toward Paukin", "追问通往宝应的运河路"],
         ["Spend a day counting grain sacks with the clerks", "与书吏一起清点一日粮袋"],
       ],
       results: [
         ["He sells you sugar sealed for the canal. The price is fair, and Siju's name goes with the chest.", "他卖给你封好走运河的糖。价钱公道，徐州之名随箱子同行。"],
-        ["Coigangiu and Paukin are marked on your map. The canal south is clear.", "淮安与宝应已标上舆图。南去的运河清晰。"],
-        ["You spend a day among the sacks. Coiganju is named in the talk, and fortune bends a little your way.", "你在粮袋间过了一日。闲话里点到高邮，时运也稍稍偏向你。"],
+        ["Paukin is marked on your map. The canal road through Coiganju is clear.", "宝应已标上舆图，途经淮安的运河水路也清楚了。"],
+        ["You spend a day among the sacks. Coiganju is named in the talk, and fortune bends a little your way.", "你在粮袋间过了一日。闲话里点到淮安，时运也稍稍偏向你。"],
       ],
     },
     effects: [
@@ -451,13 +451,13 @@ const PACKS = [
     ],
   },
   {
-    city: "sinju", site: "a", zhName: "镇江", enName: "Sinju",
+    city: "sinju", site: "a", zhName: "真州", enName: "Sinju",
     lore: { placeId: "sinju", origin: "source", ref: { book: "marco-polo", chapterId: "v2-b2-c071" } },
     texts: {
-      title: ["Sinju: On the Greatest River", "镇江：在最大的河上"],
+      title: ["Sinju: On the Greatest River", "真州：大江边上的消息"],
       body: [
         "On the quay of the Kian a toll clerk who has counted tea chests for the Great Kaan's ports draws you under a shed. He says Sinju stands where the greatest river in the world turns trade into paper-money — and that Caiju, Nanghin, and Chinghianfu are written in his toll book if you care to ask.",
-        "在江边码头，一位为可汗港口清点茶箱的税吏把你引到棚下。他说镇江正站在世界最大河流把贸易换成交钞的地方——瓜洲、南京与镇江府都写在他的税册上，只要你肯问。",
+        "在江边码头，一位为大汗清点茶箱的税吏把你引到棚下。他说真州的船运兴旺——瓜州、安庆与镇江府都写在他的税册上；安庆在上游，路远得多。",
       ],
       choices: [
         ["Buy tea at the river toll price", "按河税价买下茶叶"],
@@ -466,7 +466,7 @@ const PACKS = [
       ],
       results: [
         ["He sells you tea sealed for the river. The price includes the toll you would have paid anyway.", "他卖给你封好走水路的茶。价钱里已含你本来要付的税。"],
-        ["Caiju and Nanghin are marked on your map. The river road is clear.", "瓜洲与南京已标上舆图。水路清晰。"],
+        ["Caiju and Nanghin are marked on your map. The river road is clear.", "瓜州与安庆已标上舆图；安庆在长江上游，路程远得多。"],
         ["You spend a day at the toll house. Chinghianfu is named, and fortune bends a little your way.", "你在税房过了一日。镇江府被点名，时运也稍稍偏向你。"],
       ],
     },
