@@ -1,4 +1,4 @@
-# 远行之书 · The Book of Far Roads · v3.1.1
+# 远行之书 · The Book of Far Roads · v3.2.0
 
 **一款中世纪欧亚旅行开放世界（1253–1453）。** 占卜不是查看结果的按钮，而是你的
 移动方式、资源系统与叙事之笔。计划上架 Steam 与 App Store。
@@ -67,7 +67,7 @@ fatequest/
 │   └── i18n/                #   回退链 zh → en → key
 ├── game/                    # 表现层：地图、城市、市集、图鉴、同行、结局界面
 ├── tools/                   # Node/Python 管线：建表、语料匹配、译文编译、门禁
-├── tests/                   # 23 内核模块 + 43 界面 smoke + 审计／基准
+├── tests/                   # 26 内核模块 + 56 界面 smoke + 审计／基准
 ├── export_presets.cfg       # Linux / macOS / Windows 桌面导出
 ├── assets/                  # 共享素材（art/books/data/audio/ephemeris）
 ├── worldmap/                # 地图源数据（.gdignore，同步进 content/world/）
@@ -106,11 +106,12 @@ fatequest/
 占法学习已升级为 **24 个文化主题小游戏、10 类玩法**，覆盖投掷成卦、点阵推演、联动星轮、择路、记忆、图谱复原、手牌组合、五行联动、数石与稳手挑战。玩法、入口与验证见[小游戏实现记录](docs/DIVINATION_MINIGAMES_2026-10-24.md)。
 
 旅行、探索、交易、同行及存档已有可运行流程；剧情、美术和拆书仍有待办。
-103 城 · 206 路线 · 431 事件 · 61 商品 · 54 随从 · 24 种占法注册。
-en/zh 各 5555 条文本，其中 3955 条叙事译文时效受门禁检查。
+103 城 · 203 路线 · 614 事件 · 24 种占法注册。
+叙事文本有 5762 个当前双语键，运行时有 7069 个双语键。
 联网地图测试需要图形模式；故意损坏存档的测试需要区分预期错误诊断。
 本轮实测范围和结果详见六维验收记录，不沿用历史版本的“全部全绿”结论。更多状态见
-[`docs/STATUS.md`](docs/STATUS.md)。
+[`docs/STATUS.md`](docs/STATUS.md)。本轮剧情更新与实际运行结果见
+[`docs/QA_REPAIR_2026-10-31.md`](docs/QA_REPAIR_2026-10-31.md)。
 
 ## 红线
 

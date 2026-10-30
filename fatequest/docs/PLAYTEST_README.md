@@ -1,5 +1,7 @@
 # 外部试玩交接包 · PLAYTEST
 
+> 本文的交接包清单记录 2026-08-08 的旧构建；v3.2.0 的下载、测试结果与已知边界见[本版发行说明](RELEASE_NOTES_v3.2.0.md)。
+
 **commit `42eef9f` · 2026-08-08 · 需求书 §13.2 步骤 / §13.5 记录口径 / §13.6 出口。**
 本文是给外部试玩者的运行与记录说明；全分支人工通读清单见 [`R1_READTHROUGH.md`](R1_READTHROUGH.md)。
 
@@ -56,7 +58,7 @@ godot --headless --path . --export-release macOS build/export/FateQuest_macOS.zi
 godot --headless --path . --export-release Linux build/export/FateQuest_Linux.x86_64
 
 # Windows
-godot --headless --path . --export-release "Windows Desktop" build/export/FateQuest_Windows.exe
+godot --headless --path . --export-release Windows build/export/FateQuest_Windows.exe
 ```
 
 产物连同 `build/audit/FateQuest.pck` 一起分发；三平台均需实机验收（启动、中文/英文显示、存档、地图 60 FPS）。
