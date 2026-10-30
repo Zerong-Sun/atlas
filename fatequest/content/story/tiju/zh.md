@@ -2,7 +2,7 @@
 unit: tiju
 lang: zh
 source: en
-source_rev: a9656a0a7c55
+source_rev: ec2d10239bc6
 status: translated
 translator: 人工校译
 notes: >
@@ -11,21 +11,27 @@ notes: >
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.tiju.saltbasket.result.day: e6e1938ebcac
+  ev.tiju.saltbasket.result.labels: f4043ffb7758
+  ev.tiju.saltbasket.choice.day: 966eed402893
+  ev.tiju.saltbasket.choice.labels: 67ce2473d867
+  ev.tiju.saltbasket.body: 5a4c9b0d2be0
+  ev.tiju.saltbasket.title: 8187f5c6933a
   city.tiju.name: ec6f1b90314f
   codex.cx-tiju.name: ec6f1b90314f
   codex.cx-tiju.body: f8149f75e63a
-  ev.tiju.entry.choice.look: a1e5276c886b
-  ev.tiju.entry.choice.pass: 96d145abaf05
-  ev.tiju.entry.body: 54f21022fe72
-  ev.tiju.entry.title: 19d712b1a614
-  ev.ev_tiju_entry.choice_1_result: 4274db021842
-  ev.ev_tiju_entry.choice_2_result: c9dc9c8bbc96
-  ev.ev_gap_tiju.title: 5409212c0a3a
-  ev.ev_gap_tiju.body: 5b02d4eb0a74
-  ev.ev_gap_tiju.choice.route: 4ee4a0e14bc0
-  ev.ev_gap_tiju.choice.route_result: 02d0c1697f9c
-  ev.ev_gap_tiju.choice.scene: 0ebf5ef7c36d
-  ev.ev_gap_tiju.choice.scene_result: fbf4e1b2a7e8
+  ev.tiju.entry.choice.look: d4122089a9d5
+  ev.tiju.entry.choice.pass: 7fa06171b4bf
+  ev.tiju.entry.body: 3349aba3d9c9
+  ev.tiju.entry.title: 597a8d9f1a1f
+  ev.ev_tiju_entry.choice_1_result: 3570499845a3
+  ev.ev_tiju_entry.choice_2_result: 80d1b4efa15a
+  ev.ev_gap_tiju.title: fdc05fe0dbc2
+  ev.ev_gap_tiju.body: a88d188cd6a8
+  ev.ev_gap_tiju.choice.route: f5528ae55ddb
+  ev.ev_gap_tiju.choice.route_result: 3a8723f4588b
+  ev.ev_gap_tiju.choice.scene: 2a5a05498ceb
+  ev.ev_gap_tiju.choice.scene_result: 93eac394df67
 ---
 
 ## city.tiju.name
@@ -42,47 +48,84 @@ stamps:
 
 ## ev.tiju.entry.choice.look
 
-歇一歇，找人打听这座城
+留一天看阿敏一家在盐田干活
 
 ## ev.tiju.entry.choice.pass
 
-不停留，直接穿城而过
+继续往泰州镇里走
 
 ## ev.tiju.entry.body
 
-从高邮再往东南走一天，沿途都是村庄、田地和农庄，就到了泰州。城不算大，物产却很丰富，贸易兴旺，河上船只很多。再往东走三天就是大海；从海边到城里，沿途都有人晒盐，空气里也带着咸味。
+泰州城外的盐田边，阿敏正量晒池，弟弟拎来饭篮，把饭碗放在盐样上。他试了一下碗盖，说如今连盖都带海味。阿敏叫他把饭挪到干净木板上，又问有没有给姑母带一份。带了。姑母提着筛子来，还让孩子指给自己看碗放在哪儿。
 
-晒盐人捏起一撮盐：“盐田里有一粒永远晒不干的盐，传说是海底旧王的眼泪。”你问是哪一粒，他拍拍你的手：“就是这粒——不过你一碰，它又变回普通盐了。”
+你问入城该走哪条路。阿敏指向屋舍，说车把盐运进去，小商贩又把工具和吃食带出来。姑母说想认识这里，可以留一天看盐田与市集。弟弟问那你是不是会留下吃饭。阿敏说先点完晒池，再开饭篮。
+
+邻居喊一口池已可刮盐。阿敏叫弟弟把饭放好，先拿干净筛子来。
+
 ## ev.tiju.entry.title
 
-泰州与沿海盐场
+盐田边的饭篮
 
 ## ev.ev_tiju_entry.choice_1_result
 
-你没有停留，穿过泰州，在地图上标下这座城。
+你沿路走进泰州。身后，阿敏弟弟把筛子送到晒池，姑母已把饭篮好好搁在干净木板上。
+
 ## ev.ev_tiju_entry.choice_2_result
 
-你在泰州盐田旁停下。晒盐人捏起一撮盐：“海水铺得太厚，晒一整天也收不干。薄薄一层，太阳才帮得上忙。”你花了一天把见闻记进游记，并在地图上标下泰州。
+你留一天看盐田的活。阿敏教你认哪口池可以刮，饭后姑母也让你试了筛子。弟弟终于记得让饭篮离盐样远些。
+
 ## ev.ev_gap_tiju.title
 
-路口的磨刀石
+磨刀人的石头
 
 ## ev.ev_gap_tiju.body
 
-泰州城外的磨刀人把刀刃贴在石面上，来回推了几下：“磨刀要顺着刃走，刀尖抬一点，不然会卷口。你是想学着磨一把，还是问问哪条路能到真州？赶水路的人多从那边走。”他笑了笑：“刀磨好先擦净，石粉留在刃上容易锈。”
+盐田旁，磨刀人正替阿敏磨刮盐用的刀。女儿往石头上倒多了水，问刀刃会不会坏。父亲叫她擦净细看。刀刃还好，只是地上湿了。她去拿布巾，又问下回是不是少倒点。“一点一点来。”父亲说。
+
+你问去真州的陆路。他妹妹上月带刀去那边市集，下午该回来。磨刀人能指出第一处转弯，女儿说后面的路姑母更熟。阿敏来取刀，问赶下一口盐池来不来得及。磨刀人在一截苇杆上试刃，才把刀柄朝她递过去。
+
+女儿把布巾干的一边给你擦手。她还留着一把练手的小刀，想在磨石上再稳稳推一回。
 
 ## ev.ev_gap_tiju.choice.route
 
-问路，去真州（仪征）
+问磨刀人的妹妹去真州的陆路
 
 ## ev.ev_gap_tiju.choice.route_result
 
-“向西南走，穿过运河水网去真州（仪征），得走两天。”
+磨刀人的妹妹回来，讲清去真州的路，连过了第一处市集后怎么拐也说了。女儿照着你的图逐道核，你把路标下。
 
 ## ev.ev_gap_tiju.choice.scene
 
-问问磨刀的手法
+陪女儿用小刀练稳磨石上的手
 
 ## ev.ev_gap_tiju.choice.scene_result
 
-他让你先用旧刀练：“轻轻推，听声音。刺耳就是压重了，刃口发热也得停一停，别把钢磨软。”
+你扶着练手的小刀，女儿每次只添一点水。父亲查过刃口，点了头。阿敏带着自己的刮刀回盐田，向你道谢。
+
+## ev.tiju.saltbasket.title
+
+装盐样的小篮
+
+## ev.tiju.saltbasket.body
+
+盐田里，阿敏姑母把三份盐样分开，等饭后给买主看。弟弟却在两只小篮上写了同样记号，说盐看起来都一样。姑母叫他摸一摸：一份颗粒粗，一份细，还有一份仍带潮。孩子搓搓手指，承认如今能分清了。
+
+你问潮的为何要另放。阿敏说它还得在晒池里待一阵，今天拿走，买主回家就要接着晒。姑母叫弟弟改好记号，再对买主把话讲明白。邻居送来托篮木板，板却窄，放不下三只。孩子说只摆已经干的两篮。阿敏点头，接着问他记不记得饭前洗手。孩子看看满手盐，往水罐边去了。
+
+姑母问干盐篮谁送进屋。孩子洗完手自己答应了，阿敏递给他一块干净布垫篮把。
+
+## ev.tiju.saltbasket.choice.labels
+
+陪弟弟把两份干盐样讲给买主
+
+## ev.tiju.saltbasket.choice.day
+
+留一天看第三份盐样怎样晒干
+
+## ev.tiju.saltbasket.result.labels
+
+你陪孩子把改准的两张签念给买主。姑母确认一篮粗、一篮细，潮的那份仍留在晒场。买主谢这一家把盐的情况说清。
+
+## ev.tiju.saltbasket.result.day
+
+你留一天随日头挪动，跟阿敏反复查第三份盐样。傍晚，盐粒不再黏手。弟弟写好新签，高高兴兴把篮放上木板。

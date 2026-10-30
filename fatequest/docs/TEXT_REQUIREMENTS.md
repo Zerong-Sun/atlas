@@ -338,8 +338,8 @@ node tools/validate/validate.mjs --quiet
 node tools/validate/validate.mjs --quiet
 node tools/lore/story.mjs check
 node tests/test_i18n_lines.mjs
-godot --headless --path . --script tests/run_tests.gd
-for test in tests/smoke_*.gd; do godot --headless --path . --script "$test" || exit 1; done
+node tools/test/run_isolated_godot.mjs tests/run_tests.gd
+node tools/test/run_smokes_isolated.mjs
 ```
 
 ## 10. 交付顺序

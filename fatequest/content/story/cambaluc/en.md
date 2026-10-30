@@ -11,421 +11,404 @@ notes: >
 
 ## city.cambaluc.name
 
-Cambaluc
+Yanjing / Dadu (Beijing)
 
 ## ev.cambaluc.a.body
 
-The palace of Cambaluc is the largest roofed building in the world. The great hall,
-where the Kaan holds his feasts and receives ambassadors, can hold six thousand men
-seated at table. The roof is painted vermilion, blue, green, and gold — dragons coil
-around the beams, and phoenixes spread their wings across the ceiling. The floors are of
-polished marble so clear that a man can see his reflection. The walls are hung with silk
-embroidered with scenes of hunts on horseback, battles between elephants and tigers, and
-the celestial palace where the gods feast. The Kaan sits on a raised dais at the
-northern end of the hall, on a throne of carved jade, so that his gaze falls on every
-guest.
+Beside the office gate, an office receives travellers who have business with the office. A steward is sorting written petitions from gifts carried in person. A young messenger has put a village petition in the gift basket by mistake. ‘Its owner cannot pay for a fresh journey,’ he says as he pulls it out. The steward checks the village name and asks him to bring the paper to the correct desk. You ask whether visitors can enter the hall. ‘The desks are open today. The hall is used by people called there,’ she says. She points to the roof visible beyond the gate, then asks what you came to learn. A guard says a rider recently asked him how to reach Kinsay; he knows which carrier takes messages south and can show you the road list. The messenger returns with a receipt for the petition and shows it to the steward. She looks up at you while she signs it. If you have a formal greeting to present, she can receive it here and explain how the office answers travellers.
 
 ## ev.cambaluc.a.choice.admire
 
-Stand before the great hall and marvel at its size
+Look at the buildings from the public courtyard
 
 ## ev.cambaluc.a.choice.audience
 
-Present yourself at the Kaan's court with gifts
+Present a formal gift at the palace office
 
 ## ev.cambaluc.a.choice.talk_guards
 
-Talk to the Kaan's guards about the empire
+Ask the guard about the road to Kinsay
 
 ## ev.cambaluc.a.title
 
-The Palace of the Great Khan
+The Office Beside the Office Gate
 
 ## ev.cambaluc.b.body
 
-Cambaluc has twelve gates, and beyond each lies a suburb larger than many cities of Christendom or Islam. Merchants from across the empire—Cathay, Manzi, Tangut, Tibet, the Golden Horde, Persia and India—keep warehouses and counting houses there. A thousand carts of silk enter the city each day; forty more carts of pepper, spices and rare goods are consumed. The Great Khan keeps public granaries where those who ask receive rice and millet. Beyond every gate an inn receives travellers who reach the city after curfew. An innkeeper hangs a lantern outside while the staff sing of a bed and grain for the weary traveller, silk from Cathay and scent from Persia, and trading again in the morning. “After the gates shut, we still take people in,” he says. “The granary distributes food by its rules. First let them rest; business can wait until dawn.”
+Outside a city gate, a storehouse owner is counting silk bundles as they come off a cart. His daughter reads each bundle’s mark while an elderly weaver checks a sample by the window. ‘This one is mine,’ the weaver says, ‘but the cord belongs to my neighbour. She tied it while my hand was sore.’ The owner moves her name to the right line. You ask why they keep separate marks. His daughter says buyers need to know whom to find if a bundle is short or damaged. She opens a finished load of silk for sale and lets you inspect the edge. A porter asks whether they need more help with the day’s carts; the owner says someone could stay through tomorrow to finish the tally. At the next door, a grain-store worker is looking for two families whose allowances are ready. She asks the daughter whether the weaver knows their lane. The weaver does, and offers to point it out after her bundle is tied again.
 
 ## ev.cambaluc.b.choice.count
 
-Count the cart-loads of silk entering the city in a day
+Stay an extra day to count the carts
 
 ## ev.cambaluc.b.choice.granary
 
-Visit the public granaries — no one goes hungry here
+Help the grain-store worker find the families
 
 ## ev.cambaluc.b.choice.silk
 
-Buy silk at the Cambaluc price
+Buy the inspected load of silk
 
 ## ev.cambaluc.b.title
 
-The Twelve Suburbs
+The Storehouse Outside the Gate
 
 ## ev.cambaluc.c.body
 
-In the great park behind the palace, the Kaan has caused a mountain to be raised — a
-hill of green jade, of jasper, and of lapis lazuli, brought block by block from the
-quarries of Badakhshan and Cotan. It is covered with evergreens: cedars, pines, and
-cypresses, each one dug up by the roots in distant forests, wrapped in silk and wet
-earth, and carried here on the backs of elephants. The trees do not know they have been
-moved; they grow as green as in their native soil. A thousand gardeners water them daily
-by hand, climbing the artificial mountain with buckets hung from shoulder-poles. The
-Kaan comes here in the evenings, when the shadows are long, and walks alone among the
-transplanted trees. No one may disturb him.
+A small hill rises above a garden on the edge of the city. The gardener’s granddaughter is carrying water up a path where young trees were planted in different years. One trunk has loosened from its support. ‘Grandfather tied it last spring,’ she says, ‘but the post has shifted.’ The gardener tests the knot and asks her to bring a new stake. You hold the trunk while he presses the stake into firm soil. He tells you that these trees came from different growers nearby; each needs a slightly different place to take root. You ask whether travellers may walk the hill. He points to the public path and asks you to keep clear of the newly watered beds. From the top you can see the market roofs and the roads leaving the gates. The granddaughter wants to watch the evening light from there after she finishes her water round. Her grandfather knows a northern cart driver who travels toward the northern grasslands and can tell you where to find him.
 
 ## ev.cambaluc.c.choice.evening
 
-Climb the hill at sunset and see the whole city
+Sit on the hill with the gardener at sunset
 
 ## ev.cambaluc.c.choice.gardener
 
-Talk to the gardeners who water the trees by hand
+Ask the gardener about the northern road
 
 ## ev.cambaluc.c.choice.walk
 
-Walk among the transplanted trees on the green hill
+Walk the garden path for another day
 
 ## ev.cambaluc.c.title
 
-The Mountain of Green Jade
+The Garden Hill
 
 ## ev.cambaluc.entry.body
 
-You must know that the city of Cambaluc hath such a multitude of houses, and such a vast
-population inside the walls and outside, that it seems quite past all possibility. There
-is a suburb outside each of the gates, which are twelve in number; and these suburbs are
-so great that they contain more people than the city itself [for the suburb of one gate
-spreads in width till it meets the suburb of the next, whilst they extend in length some
-three or four miles]. In those suburbs lodge the foreign merchants and travellers, of
-whom there are always great numbers who have come to bring presents to the Emperor, or
-to sell articles at Court, or because the city affords so good a mart to attract
-traders. [There are in each of the suburbs, to a distance of a mile from the city,
-numerous fine hostelries for the lodgment of merchants from different parts of the
-world, and a special hostelry is assigned to each description of people, as if we should
-say there is one for the Lombards, another for the Germans, and a third for the
-Frenchmen.] And thus there are as many good houses outside of the city as inside,
-without counting those that belong to the great lords and barons, which are very
-numerous. You must know that it is forbidden to bury any dead body inside the city. If
-the body be that of an Idolater it is carried out beyond the city and suburbs to a
-remote place assigned for the purpose, to be burnt. And if it be of one belonging to a
-religion the custom of which is to bury, such as the Christian, the Saracen, or what
-not, it is also carried out beyond the suburbs to a distant place assigned for the
-purpose. And thus the city is preserved in a better and more healthy state. Moreover, no
-public woman resides inside the city, but all such abide outside in the suburbs. And
-’tis wonderful what a vast number of these there are for the foreigners; it is a certain
-fact that there are more than 20,000 of them living by prostitution.
+A clerk at the city gate has spread three registers on a low desk. A young carter gives his family name; the clerk points to the part of the page where the carter should state what is under the cloth on his wagon. ‘My uncle packed it,’ the young man says. ‘I can open it for you.’ He lifts one corner and shows a load of pottery. His aunt, waiting behind him, corrects the count before the clerk writes it down. You ask where a traveller can learn the way through the city. She points out the street toward the market and the house where carriers leave messages. ‘Come with me when my nephew is done. I need to find a buyer for these bowls.’ The clerk says declarations made today can take two further days to check; the nephew decides to stay by the wagon. A woman carrying a market basket tells you that the stalls farther in sell pottery made many days south of here. The clerk calls the next name, and the aunt folds back the wagon cloth so he can inspect the last stack.
 
 ## ev.cambaluc.entry.choice.customs
 
-Declare your goods at the shìbó sī (市舶司)
+Declare your belongings at the gate
 
 ## ev.cambaluc.entry.choice.lore
 
-Ask what men say of this city
+Spend a day walking with the carter’s aunt
 
 ## ev.cambaluc.entry.choice.market
 
-Walk the great market
+Spend a day at the market and buy porcelain
 
 ## ev.cambaluc.entry.title
 
-Concerning the City of Cambaluc, and Its Great Traffic and Population
+A Register at the City Gate
 
 ## ev.cambaluc.mentor_iching.body
 
-A chronologer of the Astronomical Bureau will sit with you fourteen days and teach
-the casting of hexagrams for the road. He does not ask after fortune. He asks after
-time and position — which season a road is open, and where a man stands when he
-chooses it.
+A scholar who keeps seasonal records has laid out six sticks and a worn copy of the Changes. A young courier has come to ask when the road south will open after rain. ‘The bridge keeper will answer that better than I can,’ the scholar says. ‘But sit down and tell me what you have already learned.’ The courier knows the river is high and the next carrier has not arrived. The scholar makes him write both facts beside the date. You ask why he has brought out the sticks. ‘They help my students practise asking a clear question,’ he says. He reads a short passage and asks the courier what action it suggests. The boy answers that he should wait for a report from the bridge. The scholar nods and gives him a dry sheet on which to copy the date. He has room for another student over fourteen days, with a fee for the course and the paper. If you have only a moment, he will still explain what a hexagram is and why people consult one.
 
 ## ev.cambaluc.mentor_iching.choice.ask
 
-Hear how hexagrams speak of roads
+Ask how the scholar reads a hexagram
 
 ## ev.cambaluc.mentor_iching.choice.learn
 
-Pay the fee and learn I Ching
+Pay for fourteen days of lessons in the Changes
 
 ## ev.cambaluc.mentor_iching.title
 
-I Ching at Khanbaliq
+A Teacher’s Fourteen Lessons
 
 ## ev.ev_cambaluc_entry.choice_1_result
 
-The clerks of the shìbó sī write your cargo into the great register and hand you the tally. As you turn from the table, a clerk of the relay stations rises to ask a word with you.
+The clerk checks your declaration against the packages and asks you to return after two more days. When he gives you the signed slip, he shows you which streets lead to the carriers’ house. An official waiting there notices the name on your slip and asks whether you have a moment to discuss a delivery.
 
 ## ev.ev_cambaluc_entry.choice_2_result
 
-The men of Cambaluc answer you freely, for the city is proud of its size and its roads. Their answers are many and different, and one of them follows you out of the gate to give you the truer account.
+You spend the day with the aunt as she visits a potter, a carrier and the market stalls. She shows you how to find the gate again from each street. By evening she has sold several bowls and the city feels less difficult to cross. Outside the carriers’ house, a grain-store guard hears you asking about the roads.
 
 ## ev.ev_cambaluc_entry.choice_3_result
 
-You spend a day walking the great market of Cambaluc and carry away a load of goods. The market of the Great Kaan's city is now written in your book.
+You spend a day among the stalls, inspect a full load of Dehua porcelain and pay for it. The seller wraps each piece and asks a porter to show you the dry place where buyers collect their goods. You carry away both the load and a clearer sense of the market’s streets.
 
 ## ev.ev_cambaluc_mentor_iching.choice_1_result
 
-The chronologer of the Astronomical Bureau takes your fee and opens his hand. The fourteen days' teaching begins with the first cast, and before you leave he has a parting hexagram to lay before you.
+You pay the fee and spend fourteen days with the scholar. He teaches you to form a question, cast and read the lines, and compare a reading with what you can learn from people on the road. The courier returns with the bridge keeper’s report and joins two of the lessons. At the end, the scholar asks you to come back for his parting notes.
 
 ## ev.ev_cambaluc_mentor_iching.choice_2_result
 
-The chronologer shows how each hexagram names a turn in the road. The six-and-forty signs are now written in your book, though their reading stays with him.
+The scholar lays the six sticks in order and shows you how each line contributes to the hexagram. He asks what you would need to know before setting out tomorrow. You name the road and the weather; he adds the people who keep the next bridge and hands the courier his dated note.
 
 ## ev.ev_cambaluc_a.choice_1_result
 
-You present yourself at the Kaan's court with your gifts, and the chamberlain receives them with practiced courtesy. He measures you as he speaks, and when the audience ends he makes you a small sign to stay.
+You pay for a formal greeting gift and present it at the steward’s desk. She asks your name, records your business and introduces you to the officials who receive travellers here. They remember how you helped the messenger find the petition’s proper desk. The steward asks you to remain a moment as she finishes the receipt.
 
 ## ev.ev_cambaluc_a.choice_2_result
 
-You stand before the great hall and measure its size with your eyes until it overwhelms you. The palace of the Kaan is now marked in your book.
+You cross the public courtyard with the messenger, who points out which building holds the registers and which gate is used for deliveries. The roof of the inner hall rises beyond them. He heads back to his desk carrying the village receipt; you leave with a clearer picture of the offices around the gate.
 
 ## ev.ev_cambaluc_a.choice_3_result
 
-The Kaan's guards speak of the empire's breadth: a road runs from this gate to the city of Kinsay, where the Kaan's granaries never empty. Its name is now on your map.
+The guard finds the southern road list and names Kinsay and the carrier who knows the route. He draws its first turns on your map, then asks the messenger to copy the name of the next office for you. You leave the gate with a place to ask for later stages.
 
 ## ev.ev_cambaluc_b.choice_1_result
 
-You buy silk in the suburb at the Cambaluc price, and the counting-house keeper watches the transaction with sharp eyes. When the bolt is wrapped, he motions you inside to a quieter chamber.
+You inspect the full silk load, pay the owner and see the weaver’s name written beside its mark. His daughter wraps it again for travel. She invites you into the quieter counting room so the owner can show you the final bill.
 
 ## ev.ev_cambaluc_b.choice_2_result
 
-You spend a day counting the cart-loads of silk that enter the city. By evening the tally is beyond counting, and the city's hunger for silk is in your book.
+You stay another day while the daughter calls out each mark and you help move checked bundles to a dry shelf. The owner shows you how the tally changes when a cart returns with undelivered cloth. At dusk the elderly weaver comes by to check her line once more.
 
 ## ev.ev_cambaluc_b.choice_3_result
 
-You visit the public granaries and find them full in a year when no one goes hungry. The men who keep them remember your interest.
+You go with the grain-store worker and the weaver to the correct lane. They find both families, read each allowance aloud and help carry the sacks inside. The worker thanks you at the storehouse door; the families know whom to ask if the next delivery is late.
 
 ## ev.ev_cambaluc_c.choice_1_result
 
-You walk among the transplanted trees of the green hill, where cedars brought from the south shade the jade terraces. A gardener tending the roots looks up at your footsteps and sets down his spade.
+You spend another day on the public path, stopping to help the gardener and his granddaughter set the loose tree upright. He comes down the hill with you to show where water collects after rain and asks whether you can return to look at one older planting.
 
 ## ev.ev_cambaluc_c.choice_2_result
 
-You climb the hill at sunset and see the whole city at once — the palace, the market, the relay stations, all below one roof of light. The sight settles in you.
+You sit with the gardener and his granddaughter as the light moves across the city roofs. She points out the market where her mother works; he finds the lane from their house to the gate. Their small arguments over which roof is which make you feel at ease with them.
 
 ## ev.ev_cambaluc_c.choice_3_result
 
-The gardeners who water the trees by hand speak of the summer palace at Chandu, a day's ride north. Its name is now on your map, and their craft is in your book.
+The gardener finds the cart driver’s address and draws the first turns toward the northern grasslands on your map. His granddaughter repeats the street name so you will recognise the correct gate. He goes back to tying the young tree while she takes the water bucket uphill.
 
 ## ev.ev_cambaluc_consequence_a.title
 
-Cambaluc: The Mark at the Gate
+The Carrier’s Name
 
 ## ev.ev_cambaluc_consequence_a.body
 
-The first answer does not end at the gate. A clerk of the relay stations draws you aside and asks what you intend to carry away from Cambaluc. Beyond the question lies the palace gate and the relay stations; he offers to set a name to your name, the name of a courier who reads the roads of the empire. Choose what you will make of the sign.
+The official who saw your gate slip carries a message for a rider who has hurt his ankle. He has already found another rider for the journey, but the first man’s name remains written on the handover list. ‘I need to tell the next house whose letter this really is,’ he says. You ask whether the injured man has been told. ‘His sister is with him. She will bring his seal here.’ The sister arrives while he is speaking and opens her palm to show the seal. She wants to see the name corrected before it leaves town. You hold the register open while the official crosses out the old entry and writes the replacement rider’s name. The sister asks you to witness the handover. The official can show you where the next carrier will collect the letter; if you are leaving at once, he can finish the paperwork himself. The sister waits for his ink to dry before putting away the seal.
 
 ## ev.ev_cambaluc_consequence_a.choice_1
 
-Take the name and ask the relay clerk who can vouch for it
+Stay for the handover and check the names
 
 ## ev.ev_cambaluc_consequence_a.choice_1_result
 
-You take the name the clerk offers and ask who can vouch for it. He names two relay masters, and the matter opens again.
+You stay while the sister compares the letter and the corrected list. The official asks the replacement rider to say his name aloud, and the three of you agree which name belongs on the handover copy. He takes it to the next desk for the final mark.
 
 ## ev.ev_cambaluc_consequence_a.choice_2
 
-Thank the relay clerk and keep your own counsel
+Leave the handover to the official
 
 ## ev.ev_cambaluc_consequence_a.choice_2_result
 
-You thank the clerk and keep your own counsel. The matter closes at the relay station, and nothing more is asked of you in Cambaluc.
+You thank the sister and leave the matter with the official. He reads the corrected name back to her and takes responsibility for the letter. She puts the injured rider’s seal away to return to him.
 
 ## ev.ev_cambaluc_consequence_a_resolution.title
 
-Cambaluc: The Relay's Seal
+The Corrected Handover
 
 ## ev.ev_cambaluc_consequence_a_resolution.body
 
-You have agreed to carry the relay's seal with you — the name of a courier who reads the roads of the empire. It will not decide the whole journey, but at the next relay station his name may win you a fresh horse.
+At the next desk, the official finds that the replacement rider’s family name has been copied with the wrong character. The injured rider’s sister knows the replacement man but cannot read the clerk’s hand. She asks you to read both lines aloud. ‘That is my brother’s name,’ she says when you point to the old entry. ‘The new rider lives by the west gate.’ You ask whether anyone at this desk has met him. The official calls a porter who knows the rider, and the porter confirms the correct character. ‘Write it as he writes it on his receipts,’ the porter says. The official makes a clean copy while the sister watches. She compares it with the seal and thanks him for asking before sending the letter on. You can carry the copy across the courtyard now, or remain an extra day to see the receiving desk check its seal and register. The porter waits by the door with the letter.
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1
 
-Send the seal on before nightfall
+Take the clean copy to the next desk now
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_1_result
 
-You send the seal on before nightfall. The courier's word now travels with your name, and the relay stations have a reason to receive you.
+You carry the corrected copy across the courtyard and hand it directly to the receiving clerk. She reads the replacement rider’s name to the porter and adds it to her register. The sister sees the letter pass into the right hands before she goes home.
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2
 
-Keep the seal in your travel book
+Stay one more day to see the seal checked
 
 ## ev.ev_cambaluc_consequence_a_resolution.choice_2_result
 
-You keep the seal in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
+You remain an extra day while the receiving clerk compares the seal, letter and register. The sister returns with the injured rider’s earlier note, and the clerk records the correction beside it. By the time you leave, both desks have the same names.
 
 ## ev.ev_cambaluc_consequence_b.title
 
-Cambaluc: The Road Behind the Answer
+The Grain Store’s Street
 
 ## ev.ev_cambaluc_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, a guard of the granaries finds you at the gate with a second account of the palace gate and the relay stations — how the couriers count their days, and who reads the road ahead. It is less grand than a traveller's tale, and more useful.
+A guard at a grain store has heard you asking how to cross the city. He needs to take a notice to a family whose grain allowance was sent to the wrong street. ‘The mother came here twice,’ he says. ‘She knows her house. The writer copied the lane badly.’ He shows you two similar names on his board. You ask whether someone from the neighbourhood can settle it. A woman unloading sacks points to the narrower lane and says the family’s youngest son carries water there every morning. The guard asks her to come with him, but her cart cannot wait. You offer to walk as far as the corner and help find the boy. He is there with two pails and recognises his mother’s name on the notice. The guard can write the address again while you wait; he can also take it on himself if you have your own road to follow. The boy sets down his pails to hear what his mother should do next.
 
 ## ev.ev_cambaluc_consequence_b.choice_1
 
-Follow the guard's practical advice
+Help the guard rewrite the address
 
 ## ev.ev_cambaluc_consequence_b.choice_1_result
 
-You follow the guard's practical advice and ask him to set it down. He writes the account out for you, and the road's true measures come into your hand.
+You and the boy check the house number while the guard writes a fresh notice. The boy takes it home to his mother; the guard still needs the store clerk to sign a matching copy, so he asks you to come back to the desk with him.
 
 ## ev.ev_cambaluc_consequence_b.choice_2
 
-Leave the account with the guard
+Let the guard deliver the notice
 
 ## ev.ev_cambaluc_consequence_b.choice_2_result
 
-You leave the account with the guard and keep your own counsel. It goes back to the granary gate, and Cambaluc asks nothing more of you.
+You leave the notice with the guard. He walks the boy home with the correct address written on the board. The woman unloading sacks waves to them from the corner and confirms they have taken the right lane.
 
 ## ev.ev_cambaluc_consequence_b_resolution.title
 
-Cambaluc: The Couriers' Account
+Two Copies of an Address
 
 ## ev.ev_cambaluc_consequence_b_resolution.body
 
-You have chosen to carry the guard's account with you — how the couriers count their days, and who reads the road. It will not decide the whole journey, but it will keep you on the swift road among the slow ones.
+At the store desk, the clerk compares the corrected address with yesterday’s distribution list. ‘I sent the sacks to the longer street,’ she says. She asks the guard where the family actually lives, and he lets you and the boy answer. ‘Past the bakery,’ the boy says, drawing the turn with his finger. The clerk asks whether the door has a blue board; he says his mother painted it last month. She writes two copies, one for the family and one for the porters who move the grain. A porter arrives and asks whether the cart should turn at the well or the bakery. The boy repeats his answer and offers to walk ahead. You can take the porter’s copy across the yard immediately; if you remain another day, you can see the loads redirected and make sure the family receives its share. The clerk hands the boy his copy and asks him to show it to his mother before the cart sets out.
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1
 
-Pass the couriers' count before nightfall
+Pass the porter’s copy across the yard
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_1_result
 
-You pass the couriers' count to the next rider before nightfall. The road's measures now travel ahead of you, and where they land, your name follows.
+You give the porter the corrected address. He calls the bakery turn to his driver, and the boy leads the cart toward his family’s lane. The clerk files her matching copy where the next shift can find it.
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2
 
-Keep the couriers' schedule in your travel book
+Stay another day to watch the delivery
 
 ## ev.ev_cambaluc_consequence_b_resolution.choice_2_result
 
-You spend a day copying the couriers' schedule into your travel book. The record is yours now, though it cost you a day of the road.
+You stay an extra day and walk with the boy when the cart comes. His mother checks the number of sacks against her notice; the porter carries them into her yard. Back at the store, the clerk marks the delivery complete.
 
 ## ev.ev_cambaluc_a_followup.title
 
-Cambaluc: The Chamberlain's Token
+A Receipt for the Greeting
 
 ## ev.ev_cambaluc_a_followup.body
 
-A chamberlain of the Kaan's household finds you as you leave the shadow of the great hall. He has served at three feasts beneath those painted beams and can read a guest's worth by the way he stands. He does not ask what you saw; he asks what you mean to carry away from the hall. The court, he says, keeps tokens for travellers it intends to remember.
+The steward returns with your gift receipt and finds the young messenger checking the village petition again. He asks whether the family who sent it can learn when an answer is ready. ‘They can leave a return address with the carriers,’ the steward says. You ask if the same office sends replies beyond the city. She shows you a board with the names of southern carriers and the desks that receive their bags. The messenger points to a place toward Kinsay and asks if the village reply will follow that way. ‘Only as far as its own village,’ she says, tracing the shorter line with her finger. He offers to take the family’s address to the right desk before sunset. The steward puts your gift receipt beside the board and checks whether your name is written correctly. Travellers at the door are also waiting to learn where their papers belong. She keeps her finger on the line until you have read it.
 
 ## ev.ev_cambaluc_a_followup.choice_1
 
-Take the cord of the hall's own silk the chamberlain offers
+Take the receipt from the steward
 
 ## ev.ev_cambaluc_a_followup.choice_1_result
 
-The chamberlain knots a cord of vermilion silk about your wrist, the same silk that hangs in the great hall. In Cambaluc the knot is known; those who see it will know you stood where the Kaan holds his feasts.
+The steward hands you the receipt and explains which desk to show it to if the office needs your name again. The messenger reads the line aloud to make sure the name is written correctly. You fold the paper where the ink has dried.
 
 ## ev.ev_cambaluc_a_followup.choice_2
 
-Ask which road the envoys take when they leave for the south
+Ask how messages travel toward Kinsay
 
 ## ev.ev_cambaluc_a_followup.choice_2_result
 
-The chamberlain draws the road the envoys ride southward, past Kinsay, marking the post-stations where horses are changed. The way to Kinsay is now clear on your map, and you know how the Kaan's word travels.
+The steward brings out the carrier list. She and the messenger mark the route toward Kinsay on your map and name the offices where a letter changes hands. The village family’s return address goes onto the same outgoing board.
 
 ## ev.ev_cambaluc_a_followup.choice_3
 
-Promise to speak well of the great hall in the cities ahead
+Help waiting travellers find the right desk
 
 ## ev.ev_cambaluc_a_followup.choice_3_result
 
-The chamberlain accepts your promise and asks nothing else. In Cambaluc your word now carries weight among those who heard you give it.
+You stay by the board and help a woman carrying a petition find the desk the steward named. She calls back to her brother outside that they may come in. The steward thanks you in front of the other workers and records your name among the visitors who helped that day.
 
 ## ev.ev_cambaluc_b_followup.title
 
-Cambaluc: The Counting-House Keeper
+A Second Look at the Tally
 
 ## ev.ev_cambaluc_b_followup.body
 
-The keeper of a counting-house in the suburbs calls you over from his abacus, where the day's carts are being tallied. He has seen your face among the thousand cart-loads of silk, and he knows which travellers understand the city's measure. He does not sell you his silence; he offers what the suburbs sell to those who ask the right questions.
+In the counting room, the storehouse owner sets your bill beside a second full load of silk. His daughter has found a smudged mark on its wrapper and wants the weaver to verify it before anyone pays. ‘It was wrapped at my bench,’ the elderly woman says after examining the edge. The owner asks her to make a fresh mark while his daughter copies the name into the ledger. You ask where their northern carts come from. The porter has a route board with turns toward the northern grasslands, and he lays it on the table without moving the silk. The daughter says they can open the second load for you once the mark is settled; tomorrow she and the porter must count the remaining carts. The weaver brings a clean cord and tells the daughter to tie the bundle only after she has read the copied name back to her. The owner waits for that answer before he closes your first bill.
 
 ## ev.ev_cambaluc_b_followup.choice_1
 
-Buy a bolt of silk at the price written in his ledger
+Buy the second load after its mark is checked
 
 ## ev.ev_cambaluc_b_followup.choice_1_result
 
-The keeper sells you a bolt of silk at his own list price, no bargaining and no tricks. The cloth is real, the price fair, and the suburb lets you leave with it.
+The weaver confirms the mark; you inspect the second full load and pay the owner. His daughter writes your name beside the correct maker and ties on the clean cord. The porter helps carry the purchase to the collection shelf.
 
 ## ev.ev_cambaluc_b_followup.choice_2
 
-Ask him to draw the road the northern carts come by
+Ask the porter to show the northern road
 
 ## ev.ev_cambaluc_b_followup.choice_2_result
 
-The keeper draws the road the northern carts take to the twelve suburbs, marking the watering places and the toll-houses. The way to Chandu is now on your map, and you know what the north sends south.
+The porter draws the road toward the northern grasslands on your map. His daughter names the place where their carts take on water and writes the first storehouse where you can ask for directions. The weaver keeps checking the silk while you talk.
 
 ## ev.ev_cambaluc_b_followup.choice_3
 
-Stay a day and count cart-loads with the tally-men
+Stay another day to finish the cart count
 
 ## ev.ev_cambaluc_b_followup.choice_3_result
 
-You spend a day at the counting-house, learning how the suburbs are numbered in silk and pepper and grain. It costs you time, but the measure of Cambaluc stays with you when you go.
+You stay another day. When one cart returns with two unclaimed bundles, you and the daughter find their marks in the ledger and set them aside. The owner finishes the tally with the porter and thanks you for helping his workers sort the load.
 
 ## ev.ev_cambaluc_c_followup.title
 
-Cambaluc: The Gardener of the Green Hill
+The Older Planting
 
 ## ev.ev_cambaluc_c_followup.body
 
-On the lower slope of the mountain of green jade, the oldest of the thousand gardeners sets down his buckets and waves you over. He watered these trees when they were carried in on the backs of elephants, and he has climbed this hill every day since. He does not forbid you the mountain; he asks only that you understand what it cost to raise it.
+When you return to the garden, the older tree the gardener wanted to show you has roots pressing against a stone border. His granddaughter thinks the stones should all be moved. ‘First see which root needs room,’ he says. She clears soil with her fingers and finds only one side cramped. You ask how long the tree has stood there; the gardener remembers planting it with his daughter, who now sells herbs at the market. ‘Was the border here then?’ you ask. ‘Half of it,’ he says, pointing to the two stones added later. He sends the granddaughter to fetch her mother’s small spade and asks you to hold the loose stones. While she is away, a cart driver comes to collect garden cuttings. He travels north toward the northern grasslands and can show you the road after loading. The granddaughter returns with her mother, who remembers the direction of the oldest root. They settle on moving two stones and leave the rest of the border in place.
 
 ## ev.ev_cambaluc_c_followup.choice_1
 
-Ask him how a tree can be moved without knowing it
+Help the family make room for the roots
 
 ## ev.ev_cambaluc_c_followup.choice_1_result
 
-The gardener shows you the wet earth bound in silk about the roots, and the way the diggers take a tree whole in winter. The art of the green hill is now written in your travel book.
+You hold the stones while the gardener and his daughter free the cramped root. His granddaughter fills the gap with soil and waters it. They show you how they check a transplanted tree before deciding what work it needs.
 
 ## ev.ev_cambaluc_c_followup.choice_2
 
-Ask him to draw the road the trees came by from the north
+Ask the cart driver about the northern grasslands
 
 ## ev.ev_cambaluc_c_followup.choice_2_result
 
-The gardener draws the road the trees came by from the forests of the north, past Chandu, marking the passes and the places where the elephants rested. The way to Chandu is now on your map, and you know what a mountain is made of.
+The driver draws his route toward the northern grasslands on your map. The gardener’s daughter checks the gate name because she sends herbs that way. You thank them and leave the family finishing the tree border together.
 
 ## ev.ev_cambaluc_c_followup.choice_3
 
-Take up a bucket and help water the trees for a day
+Stay another day to water the garden
 
 ## ev.ev_cambaluc_c_followup.choice_3_result
 
-You climb the hill with a shoulder-pole and buckets, learning the gardeners' pace and their water. The gardeners of Cambaluc remember that you helped, and the hill keeps a part of you.
+You stay another day and carry water with the granddaughter. By evening she can tell which trees need more and which ground is already damp. Her grandfather thanks you before the family closes the garden path.
 
 ## ev.ev_cambaluc_mentor_followup.title
 
-Cambaluc: The Chronologer's Parting Hexagram
+The Scholar’s Parting Notes
 
 ## ev.ev_cambaluc_mentor_followup.body
 
-The chronologer of the Astronomical Bureau does not let you leave with only his lessons. He draws the yarrow-stalks once more, this time for the road ahead of you, and reads what season it will be open and where a man must stand when he chooses it. Then he sets the reading down between you and leaves the rest to your choosing.
+At the end of your lessons, the scholar brings out your first practice sheet. You had written a question about a journey without naming a destination. ‘You know more about the road now,’ he says. He asks you to try again. You write down where you may go, what news you still need, and when the next carrier is expected. The courier arrives with a report that the bridge has reopened, then notices his own first sheet beside yours. ‘I wrote that the river would surely fall by morning,’ he says. The scholar lets him correct the date. You ask about the road toward Kinsay, and he shows where to find the carrier lists for its later stages. His niece comes to take the records to the cupboard and asks whether you will leave with a copy of your notes or stay another day to help sort the season sheets. The scholar sets clean paper beside your old page and lets you choose what to finish.
 
 ## ev.ev_cambaluc_mentor_followup.choice_1
 
-Take his parting notes on reading a road by time and position
+Take a copy of your lesson notes
 
 ## ev.ev_cambaluc_mentor_followup.choice_1_result
 
-The notes are plain and exact, like the man himself. What you learned at the Bureau is now written where you can consult it on the road.
+You copy the scholar’s explanation beside your first question. He checks that the lines and dates are legible, then hands you the sheet. The courier carries his corrected bridge report to the next carrier.
 
 ## ev.ev_cambaluc_mentor_followup.choice_2
 
-Ask which road the hexagrams show to be open in the season ahead
+Ask how to find the road toward Kinsay
 
 ## ev.ev_cambaluc_mentor_followup.choice_2_result
 
-The chronologer reads the hexagrams and names the road south, the road by which the Kaan's envoys ride to Kinsay. The way is now clear in your mind, and you know the season in which to take it.
+The scholar shows you the carrier lists and marks Kinsay on your map. His niece knows the desk that keeps the newest southern reports and writes its address beside the route. You leave with a place to ask when you reach the next stage.
 
 ## ev.ev_cambaluc_mentor_followup.choice_3
 
-Linger a day at the Bureau to learn the reading of the seasons
+Stay another day with the seasonal records
 
 ## ev.ev_cambaluc_mentor_followup.choice_3_result
 
-You spend a day among the Bureau's instruments, learning how the year is read and the roads ordered. It costs you time, but the hexagrams now have a reader who knows where he stands.
+You stay one more day and help his niece put the season sheets in date order. The courier brings a second bridge report, and the scholar has you compare its date with the earlier one. When the cupboard is closed, his niece thanks you for making the records easier to find.
+
+## ev.cambaluc.oil-lamp.title
+
+Lamps for the Narrow Stair
+
+## ev.cambaluc.oil-lamp.body
+
+At a market workshop, a lamp maker is fitting lids to several oil lamps. Her brother has promised to take them to an upstairs room where a family works after dusk, but the stair is so narrow that a full tray may tilt. ‘Carry two at a time,’ she says. He says the family needs them before their daughter begins sewing. You ask whether the lamps can be closed for the walk. The maker shows you a small vent that must remain clear; a lid placed the wrong way will smoke. Her apprentice tries each lid and finds one that sits loose. The brother goes to ask the family whether they can begin with fewer lamps. He returns saying the daughter is ready to help carry them up. The maker asks you to hold the tray while she changes the loose lid. She can deliver the lamps with your help now, or you may return tomorrow when the apprentice tests a new way of packing them for longer journeys. The brother sets the stair key beside the finished lamps so no one leaves it behind.
+
+## ev.cambaluc.oil-lamp.choice.repair
+
+Help fit the lids and carry the lamps upstairs
+
+## ev.cambaluc.oil-lamp.result.repair
+
+You steady the tray while the maker fits a sound lid. Her brother and the family’s daughter carry the lamps up two at a time, and you follow with the last pair. The daughter lights one at her sewing table; it burns without smoke. The family thanks you all before the workshop closes.
+
+## ev.cambaluc.oil-lamp.choice.stay
+
+Return tomorrow for the packing test
+
+## ev.cambaluc.oil-lamp.result.stay
+
+You return the next day. The apprentice has padded a small crate so the lids stay upright on a moving cart. You help carry it across the yard and check every vent after the test. The maker lets you practise packing a lamp yourself, and the brother takes the crate to the waiting family.

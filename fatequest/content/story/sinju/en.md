@@ -15,138 +15,174 @@ Sinju
 
 ## ev.sinju.entry.body
 
-You must know that when you leave the city of Yanju, after going 15 miles south-east,
-you come to a city called SINJU, of no great size, but possessing a very great amount of
-shipping and trade. The people are Idolaters and subject to the Great Kaan, and use
-paper-money. And you must know that this city stands on the greatest river in the world,
-the name of which is KIAN. It is in some places ten miles wide, in others eight, in
-others six, and it is more than 100 days’ journey in length from one end to the other.
-This it is that brings so much trade to the city we are speaking of; for on the waters
-of that river merchandize is perpetually coming and going, from and to the various parts
-of the world, enriching the city, and bringing a great revenue to the Great Kaan.
+At a landing in Sinju, boatman Qian is helping his mother sort parcels under an awning. His son has tied two identical red strings to different bundles and cannot remember which belongs to the tea seller. Qian asks the boy to read the written tags. One is for tea, the other for a household across town. The boy unties one red string and replaces it with blue, so he can tell them apart even in the rain.
+
+You ask where the town street begins. Qian points behind the landing, where a path leads past the market and a small family shrine. His mother says the shrine keeper has been looking for someone to carry a clean lamp bowl. The boy wants to do it after the parcels are loaded. Qian says there is time, but asks him first to check whether the tea bundle is still dry.
+
+His mother offers you a place under the awning for a day. Boats, carts and market porters pass within view; the boy has already begun asking each one where they came from.
+
+‘Is the blue one mine?’ the boy asks his grandmother. She reads the name aloud and lets him check the tag himself.
 
 ## ev.sinju.entry.choice.market
 
-Walk through the market
+Spend a day at the landing and market
 
 ## ev.sinju.entry.choice.pass
 
-Pass through the gate without delay
+Take the street behind the landing
 
 ## ev.sinju.entry.choice.shrine
 
-Visit the sì (Buddhist monastery)
+Carry the clean lamp bowl to the family shrine
 
 ## ev.sinju.entry.title
 
-Concerning the City of Sinju and the Great River Kian
+The Boatman’s Family at Sinju
 
 ## ev.sinju.a.title
 
-The Greatest River
+The Tea Parcel at the Quay
 
 ## ev.sinju.a.body
 
-Sinju stands on the greatest river in the world, which men call Kian. Though the city is of no great size, the waters before it are black with vessels, and boatmen swear that more wealth passes here than on all the rivers and seas of Christendom together.
+At the quay, tea trader Xu is counting full bales while her daughter checks the rope knots. One bale is marked for a household in Caiju, another for a customer from Nanghin. Xu’s daughter asks why the two tags are written in different hands. Her mother says the customers sent their own marks; they will match them against the receipts before the goods leave.
+
+You ask whether every load goes by boat. Xu says some parcels cross water and some go onward by road; the important thing is to know who takes responsibility at each handoff. A cart driver has news from Chinghianfu and offers to show you where that city lies. Xu has a full tea trade bale for 108 silver. She asks her daughter to keep it apart from the customer’s two orders.
+
+The daughter finds a loose knot and calls her mother over. Xu lets her retie it herself, then asks you to check the tag while the driver makes room at the quay.
 
 ## ev.sinju.a.choice.count
 
-Stand at the bank and count the moored vessels
+Spend a day checking the tea bales and ask about Caiju
 
 ## ev.sinju.a.choice.tea
 
-Buy tea from a river bargeman
+Buy the full tea bale for 108 silver and ask about Nanghin
 
 ## ev.sinju.a.choice.toll
 
-Ask the toll clerks how many vessels pass in a year
+Ask the driver about Chinghianfu
 
 ## ev.sinju.b.title
 
-Paper-Money Port
+The Paper Notes and Porcelain Crate
 
 ## ev.sinju.b.body
 
-The people are idolaters subject to the Great Kaan, and they use paper-money in every transaction on the quay. For all its modest walls, Sinju sees a very great amount of shipping and trade, and the revenue the Khan draws here is something marvellous.
+At a warehouse near the quay, clerk Mei is sorting paper receipts while her sister packs porcelain into a wooden crate. Mei’s young nephew picks up a printed note and asks whether he may take it home. She says it is a sample used to check the marks and must stay in the book. He asks to copy the pattern. Mei gives him scrap paper and reminds him to write ‘sample’ across it, so nobody mistakes it for a real payment.
+
+You ask how the porcelain is protected on the road. Mei’s sister places straw between bowls and asks the boy to shake the empty side of the crate. It rattles; she adds one more pad. A full porcelain trade crate costs 108 silver. Mei says a day at the warehouse will show you how they count payments and goods, and a porter waiting outside can tell you about travellers at the harbour.
+
+Her nephew holds up his copied pattern. Mei checks the word ‘sample’ first, then praises the careful lines.
 
 ## ev.sinju.b.choice.quay
 
-Watch merchants pay tolls in paper-money
+Spend a day checking the warehouse receipts
 
 ## ev.sinju.b.choice.porcelain
 
-Buy porcelain from a river trader
+Buy the full porcelain crate for 108 silver
 
 ## ev.sinju.b.choice.harbour
 
-Walk the harbour and note how small the city is for such traffic
+Ask the porter about travellers at the harbour
 
 ## ev.ev_sinju_entry.choice_1_result
 
-You pass through the gate without delay. You set the way to Sinju on your map.
+You take the street into Sinju. Qian’s son sets the blue-stringed bundle beside its correct cart, and his grandmother checks the tea packet one last time.
 
 ## ev.ev_sinju_entry.choice_2_result
 
-You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Sinju opens on your map.
+You spend a day at the landing, watching Qian’s family hand parcels from boat to cart. His son stops mixing the red and blue strings. You record the town’s busy work by the water.
 
 ## ev.ev_sinju_entry.choice_3_result
 
-You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Sinju on your map.
+You carry the clean lamp bowl to the family shrine with Qian’s son. The keeper thanks you both and shows the boy where it belongs. Qian’s mother recognizes you when you return to the landing.
 
 ## ev.ev_sinju_a.choice_1_result
 
-You stand at the bank and count the moored vessels. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Caiju on your map.
+You spend a day checking Xu’s bales. Her daughter points out Caiju on your map and matches the customer’s tag to the receipt. You record the different ways goods change hands at the quay.
 
 ## ev.ev_sinju_a.choice_2_result
 
-
-You buy tea from a river bargeman. You pay 5000 coins. You add 1 item to your stores. The road to Nanghin opens on your map.
+You pay 108 silver for the full tea bale. Xu’s daughter sets its tag apart and shows you Nanghin on the map before the driver loads it. The other two orders remain with their named customers.
 
 ## ev.ev_sinju_a.choice_3_result
 
-You ask the toll clerks how many vessels pass in a year. You set what you saw into your travel book. A small turn of fortune favours you. You set the way to Chinghianfu on your map.
+The driver shows you Chinghianfu on your map and explains which handoff he watched there. Xu’s daughter writes the name beside the loose knot she has now fixed. You keep the record.
 
 ## ev.ev_sinju_b.choice_1_result
 
-You watch merchants pay tolls in paper-money. It costs you 1 day on the road. The account is written down before the hour turns. A quay clerk gives you one port note as a sample of what you saw.
+You spend a day with Mei checking receipts and watching her sister pack. Her nephew copies one more sample mark, but the real printed note stays in the ledger. You record the work of the quay.
 
 ## ev.ev_sinju_b.choice_2_result
 
-
-You buy porcelain from a river trader. You pay 6000 coins. You add 1 item to your stores. Your name carries a little more weight here now.
+You pay 108 silver for the full porcelain crate. Mei’s sister checks the padding and seals it before the porter helps you lift it. The warehouse household recognizes you as a careful buyer.
 
 ## ev.ev_sinju_b.choice_3_result
 
-You walk the harbour and note how small the city is for such traffic. The account is written down before the hour turns. Fortune bends a little your way.
+The porter tells you who came through the harbour today and which families carried goods onward. Mei’s nephew asks whether the copied note may go in his own notebook. She agrees after checking the ‘sample’ mark.
 
 ## ev.ev_sinju_a_followup.title
 
-Sinju: On the Greatest River
+A Second Tea Bale at the Quay
 
 ## ev.ev_sinju_a_followup.body
 
-On the quay of the Kian a toll clerk who has counted tea chests for the Great Kaan's ports draws you under a shed. He says Sinju stands where the greatest river in the world turns trade into paper-money — and that Caiju, Nanghin, and Chinghianfu are written in his toll book if you care to ask.
+Xu’s daughter has drawn a line across her ledger so a second sale will not mix with the customer orders. She asks her mother if the spare tea bale can be sold now. Xu checks the rope and says yes; its full trade price is 108 silver. A driver brings a letter from Nanghin asking after the earlier parcel, and the daughter reads the date before she answers. The letter was written before that parcel left.
+
+You ask which road the next load will take. Xu points to Caiju and Nanghin on separate pages. The driver adds news of Chinghianfu and says he can stay a day to compare routes with the people at the landing. Xu’s daughter wants to ask him why he always dates his notes twice. ‘Once when I hear it, once when I see it,’ he says. She copies both dates beside the letter.
+
+Xu lets her daughter handle the reply while she checks the bale’s seal for whoever buys it.
 
 ## ev.ev_sinju_a_followup.choice_1
 
-Buy tea at the river toll price
+Buy the spare full tea bale for 108 silver
 
 ## ev.ev_sinju_a_followup.choice_1_result
 
-He sells you tea sealed for the river. The price includes the toll you would have paid anyway.
+You pay 108 silver for the second bale. Xu and her daughter check the new tag against the separate ledger line before releasing it. The reply to Nanghin is left with the driver.
 
 ## ev.ev_sinju_a_followup.choice_2
 
-Ask which water road leads toward Caiju
+Ask Xu’s family about Caiju and Nanghin
 
 ## ev.ev_sinju_a_followup.choice_2_result
 
-Caiju and Nanghin are marked on your map. The river road is clear.
+Xu and her daughter compare their pages and point out Caiju and Nanghin on your map. The driver adds which date belongs to his own journey. You keep both cities marked.
 
 ## ev.ev_sinju_a_followup.choice_3
 
-Spend a day at the toll house and hear the port names
+Spend a day comparing the Chinghianfu road accounts
 
 ## ev.ev_sinju_a_followup.choice_3_result
 
-You spend a day at the toll house. Chinghianfu is named, and fortune bends a little your way.
+You spend a day hearing the driver and quay workers compare their accounts of Chinghianfu. Xu’s daughter writes who saw each stopping place. You leave with a clearer sense of the goods and people on that route.
+
+## ev.sinju.bluecord.title
+
+The Blue Cord on the Tea Parcel
+
+## ev.sinju.bluecord.body
+
+Qian’s son has brought a blue cord to Xu’s tea stall because the knot on one customer parcel has started to loosen. Xu’s daughter says she can retie it herself. The boy asks whether she knows the knot that will release without cutting the cord. She tries once, pulls too hard, and the rope tightens. Her mother laughs and asks him to show the first loop slowly.
+
+You ask when the parcel must leave. The named customer’s cart comes at dusk, but the tea must remain dry until then. Qian’s mother sends over a small clay dish so the knot can be tied above the damp quay boards. Xu’s daughter makes the loop again, this time with the boy watching. She is nearly done when the cart driver arrives early and asks to take the parcel. Xu tells him to wait while they check the seal and written name; the driver sits on the bench and asks if someone can show him the knot too.
+
+‘I can wait for a good knot,’ the driver says. Qian’s son gives him the loose end to hold while Xu’s daughter begins again.
+
+## ev.sinju.bluecord.choice.knot
+
+Help teach the cart driver the release knot
+
+## ev.sinju.bluecord.choice.day
+
+Stay a day helping check the quay’s parcel cords
+
+## ev.sinju.bluecord.result.knot
+
+You hold the parcel while Xu’s daughter teaches the driver. He ties the blue cord himself and releases it once without cutting. Xu checks the tag, then lets him load the correct tea parcel.
+
+## ev.sinju.bluecord.result.day
+
+You stay a day helping the two families check cords on parcels arriving from the river. By evening Qian’s son has learned which knots hold in rain and which open easily at the next stop. Xu’s daughter thanks you for working beside them.

@@ -33,11 +33,6 @@
               "id": "jade",
               "value": 1,
               "reason": "bought-the-divers-jade-parcel"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-jade",
-              "reason": "carried-a-piece-of-the-two-rivers"
             }
           ]
         },
@@ -66,11 +61,7 @@
               "value": 1,
               "reason": "learned-the-divers-reading-of-the-water"
             },
-            {
-              "op": "sticker",
-              "value": "st-cotan-rivers",
-              "reason": "learned-the-divers-reading-of-the-water"
-            },
+
             {
               "op": "reputation",
               "value": 1,
@@ -110,11 +101,6 @@
               "op": "item",
               "value": "it-dye-sample",
               "reason": "took-the-dye-samples-and-the-measure-of-silk"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-silk",
-              "reason": "took-the-dye-samples-and-the-measure-of-silk"
             }
           ]
         },
@@ -141,11 +127,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "learned-the-weavers-song"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-silk",
               "reason": "learned-the-weavers-song"
             }
           ]
@@ -180,11 +161,6 @@
               "op": "item",
               "value": "it-buddha-fragment",
               "reason": "took-the-fragment-of-the-monks-procession"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-buddha",
-              "reason": "took-the-fragment-of-the-monks-procession"
             }
           ]
         },
@@ -211,11 +187,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "heard-the-names-of-the-buried-monasteries"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-buddha",
               "reason": "heard-the-names-of-the-buried-monasteries"
             }
           ]
@@ -281,11 +252,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "lingered-for-the-rivers-story"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-jade",
               "reason": "lingered-for-the-rivers-story"
             }
           ]

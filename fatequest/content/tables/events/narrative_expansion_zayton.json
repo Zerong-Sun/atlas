@@ -1,0 +1,35 @@
+{
+  "contentVersion": 1,
+  "table": "events",
+  "records": [
+    {
+      "id": "ev-zayton-bowl",
+      "kind": "site",
+      "title": "ev.zayton.bowl.title",
+      "body": "ev.zayton.bowl.body",
+      "once": true,
+      "when": {
+        "cities": ["zayton"]
+      },
+      "choices": [
+        {
+          "label": "ev.zayton.bowl.choice.help",
+          "resultText": "ev.zayton.bowl.result.help",
+          "effects": [
+            {"op": "days", "value": 1, "reason": "helped-ahe-repair-the-bowl"},
+            {"op": "reputation", "value": 1, "scope": "city", "id": "zayton", "reason": "helped-ahe-repair-the-bowl"}
+          ]
+        },
+        {
+          "label": "ev.zayton.bowl.choice.route",
+          "resultText": "ev.zayton.bowl.result.route",
+          "effects": [
+            {"op": "reveal_city", "value": "chamba", "reason": "uncle-named-chamba"},
+            {"op": "reveal_route", "value": "rt-chamba-zayton", "reason": "uncle-drew-sea-road"}
+          ]
+        }
+      ],
+      "lore": {"origin": "authored"}
+    }
+  ]
+}

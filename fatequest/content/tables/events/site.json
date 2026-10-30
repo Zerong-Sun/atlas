@@ -725,11 +725,7 @@
               "value": "it-bactrian-fragment",
               "reason": "picked-up-a-carved-stone"
             },
-            {
-              "op": "sticker",
-              "value": "st-balc-ruins",
-              "reason": "held-a-stone-from-bactra"
-            },
+
             {
               "op": "codex",
               "value": "cx-balc",
@@ -746,11 +742,7 @@
               "value": "cx-balc",
               "reason": "heard-the-tale-of-alexander"
             },
-            {
-              "op": "sticker",
-              "value": "st-balc-ruins",
-              "reason": "heard-the-story-of-bactras-height"
-            },
+
             {
               "op": "queue_event",
               "value": "ev-balc-a-followup",
@@ -803,11 +795,6 @@
               "id": "lapis",
               "value": 1,
               "reason": "bought-raw-lapis-lazuli"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-lapis",
-              "reason": "first-lapis-from-badakhshan"
             }
           ]
         },
@@ -830,11 +817,6 @@
               "id": "balas-ruby",
               "value": 1,
               "reason": "bought-a-balas-ruby"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-ruby",
-              "reason": "a-stone-worth-a-ship-in-venice"
             }
           ]
         },
@@ -931,11 +913,7 @@
               "value": "cx-balc",
               "reason": "dreamed-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-balc-magi",
-              "reason": "slept-where-the-magi-sleep"
-            },
+
             {
               "op": "queue_event",
               "value": "ev-balc-c-followup",
@@ -947,11 +925,7 @@
           "label": "ev.balc.c.choice.chant",
           "resultText": "ev.ev_balc_c.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-balc-magi",
-              "reason": "heard-the-ancient-hymns"
-            },
+
             {
               "op": "codex",
               "value": "cx-balc",
@@ -1043,11 +1017,7 @@
               "value": 1,
               "reason": "heard-the-guards-tale"
             },
-            {
-              "op": "sticker",
-              "value": "st-baldacum-palace",
-              "reason": "stood-where-the-caliph-stood"
-            },
+
             {
               "op": "codex",
               "value": "cx-baldacum",
@@ -1101,11 +1071,7 @@
               "value": 1,
               "reason": "bought-baghdad-brocade"
             },
-            {
-              "op": "sticker",
-              "value": "st-baldacum-brocade",
-              "reason": "first-silk-of-baudas"
-            },
+
             {
               "op": "queue_event",
               "value": "ev-baldacum-b-followup",
@@ -2262,11 +2228,6 @@
               "reason": "presented-at-the-kaans-court"
             },
             {
-              "op": "sticker",
-              "value": "st-cambaluc-court",
-              "reason": "stood-in-the-great-hall"
-            },
-            {
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "saw-the-jade-throne"
@@ -2282,11 +2243,6 @@
           "label": "ev.cambaluc.a.choice.admire",
           "resultText": "ev.ev_cambaluc_a.choice_2_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-court",
-              "reason": "saw-the-palace-from-outside"
-            },
             {
               "op": "codex",
               "value": "cx-cambaluc",
@@ -2377,11 +2333,7 @@
               "value": 1,
               "reason": "counted-the-carts-entering-the-city"
             },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-suburbs",
-              "reason": "counted-a-thousand-cartloads"
-            },
+
             {
               "op": "codex",
               "value": "cx-cambaluc",
@@ -2443,11 +2395,6 @@
               "reason": "walked-the-green-hill"
             },
             {
-              "op": "sticker",
-              "value": "st-cambaluc-hill",
-              "reason": "climbed-the-mountain-of-green-jade"
-            },
-            {
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "walked-among-the-transplanted-trees"
@@ -2469,11 +2416,7 @@
               "value": 1,
               "reason": "sat-alone-at-sunset"
             },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-hill",
-              "reason": "stood-where-the-kaan-stands-alone"
-            },
+
             {
               "op": "codex",
               "value": "cx-cambaluc",
@@ -2970,11 +2913,7 @@
               "value": 1,
               "reason": "walked-the-orchards-of-cascar"
             },
-            {
-              "op": "sticker",
-              "value": "st-cascar-garden",
-              "reason": "tasted-the-garden-of-the-tarim"
-            },
+
             {
               "op": "codex",
               "value": "cx-cascar",
@@ -3174,11 +3113,7 @@
               "value": 1,
               "reason": "stayed-overnight-in-the-cave"
             },
-            {
-              "op": "sticker",
-              "value": "st-cascar-sleepers",
-              "reason": "heard-the-sleepers-breathe"
-            },
+
             {
               "op": "codex",
               "value": "cx-cascar",
@@ -3752,12 +3687,12 @@
               "op": "fate",
               "id": "travel",
               "value": 1,
-              "reason": "noted-the-river-routes"
+              "reason": "noted-the-northern-road"
             },
             {
               "op": "reveal_map",
               "value": "chandu",
-              "reason": "pilots-named-the-grand-canal"
+              "reason": "carters-named-the-road-to-chandu"
             }
           ]
         }
@@ -3800,12 +3735,6 @@
               "op": "codex",
               "value": "cx-chinangli",
               "reason": "learned-cathay-paper-money"
-            },
-            {
-              "op": "goods",
-              "id": "paper-money",
-              "value": 1,
-              "reason": "received-a-sample-note"
             }
           ]
         },
@@ -3940,11 +3869,6 @@
               "id": "jade",
               "value": 1,
               "reason": "bought-mutton-fat-jade"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-jade",
-              "reason": "first-piece-of-cotan-jade"
             }
           ]
         },
@@ -3968,11 +3892,7 @@
           "label": "ev.cotan.a.choice.watch",
           "resultText": "ev.ev_cotan_a.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-cotan-rivers",
-              "reason": "watched-the-jade-divers"
-            },
+
             {
               "op": "codex",
               "value": "cx-cotan",
@@ -4030,11 +3950,6 @@
               "id": "silk",
               "value": 1,
               "reason": "bought-a-bolt-of-cotan-silk"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-silk",
-              "reason": "silk-finer-than-human-hair"
             }
           ]
         },
@@ -4119,11 +4034,6 @@
               "op": "codex",
               "value": "cx-cotan",
               "reason": "saw-the-buried-monasteries"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cotan-buddha",
-              "reason": "touched-the-buddha-dust"
             }
           ]
         },
@@ -4152,11 +4062,7 @@
               "value": "cx-cotan",
               "reason": "heard-the-elders-tales"
             },
-            {
-              "op": "sticker",
-              "value": "st-cotan-buddha",
-              "reason": "heard-of-the-thousand-monasteries"
-            },
+
             {
               "op": "queue_event",
               "value": "ev-cotan-c-followup",
@@ -7375,11 +7281,6 @@
               "reason": "walked-the-bridges"
             },
             {
-              "op": "sticker",
-              "value": "st-kinsay-canals",
-              "reason": "counted-the-bridges"
-            },
-            {
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "measured-the-city-built-on-water"
@@ -7390,11 +7291,6 @@
           "label": "ev.kinsay.a.choice.tower",
           "resultText": "ev.ev_kinsay_a.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-kinsay-canals",
-              "reason": "saw-the-hundred-canals"
-            },
             {
               "op": "reveal_map",
               "value": "suju",
@@ -7410,7 +7306,7 @@
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b2-c076"
@@ -7479,11 +7375,7 @@
               "value": 1,
               "reason": "bathed-and-dined-at-the-market"
             },
-            {
-              "op": "sticker",
-              "value": "st-kinsay-markets",
-              "reason": "bathed-in-the-ten-markets"
-            },
+
             {
               "op": "codex",
               "value": "cx-kinsay",
@@ -7501,11 +7393,6 @@
           "resultText": "ev.ev_kinsay_b.choice_3_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-kinsay-markets",
-              "reason": "counted-the-pepper-carts"
-            },
-            {
               "op": "reveal_map",
               "value": "zayton",
               "reason": "merchants-named-the-sea-ports"
@@ -7520,7 +7407,7 @@
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b2-c076"
@@ -7616,7 +7503,7 @@
       ],
       "lore": {
         "storyId": "homeward-voyage",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "ibn-battuta",
           "chapterId": "battuta-c024"
@@ -7658,11 +7545,7 @@
               "value": 1,
               "reason": "sailed-the-west-lake"
             },
-            {
-              "op": "sticker",
-              "value": "st-kinsay-lake",
-              "reason": "floated-on-the-west-lake"
-            },
+
             {
               "op": "codex",
               "value": "cx-kinsay",
@@ -7679,11 +7562,6 @@
           "label": "ev.kinsay.c.choice.watch",
           "resultText": "ev.ev_kinsay_c.choice_2_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-kinsay-lake",
-              "reason": "watched-the-pleasure-boats"
-            },
             {
               "op": "codex",
               "value": "cx-kinsay",
@@ -7702,11 +7580,6 @@
               "reason": "saw-the-lake-by-moonlight"
             },
             {
-              "op": "sticker",
-              "value": "st-kinsay-lake",
-              "reason": "watched-the-moon-on-the-west-lake"
-            },
-            {
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "saw-the-most-beautiful-thing-in-the-empire"
@@ -7716,7 +7589,7 @@
       ],
       "lore": {
         "placeId": "great-city-of-kinsay",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b2-c076"
@@ -8594,11 +8467,7 @@
               "value": 1,
               "reason": "watched-the-ships-from-the-fort"
             },
-            {
-              "op": "sticker",
-              "value": "st-ormus-fort",
-              "reason": "stood-in-the-harbor-fort"
-            },
+
             {
               "op": "codex",
               "value": "cx-ormus",
@@ -8678,11 +8547,7 @@
               "value": -300,
               "reason": "bought-dried-ginger"
             },
-            {
-              "op": "sticker",
-              "value": "st-ormus-spice",
-              "reason": "first-spice-from-the-indies"
-            },
+
             {
               "op": "vitality",
               "value": 5,
@@ -8793,11 +8658,6 @@
               "op": "codex",
               "value": "cx-ormus",
               "reason": "watched-how-the-people-survive"
-            },
-            {
-              "op": "sticker",
-              "value": "st-ormus-wind",
-              "reason": "felt-the-wind-of-death"
             }
           ]
         }
@@ -9172,11 +9032,7 @@
           "label": "ev.samarcanda.a.choice.dome",
           "resultText": "ev.ev_samarcanda_a.choice_2_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-dome",
-              "reason": "stood-beneath-the-gur-i-mir"
-            },
+
             {
               "op": "codex",
               "value": "cx-samarcanda",
@@ -9188,11 +9044,7 @@
           "label": "ev.samarcanda.a.choice.gardens",
           "resultText": "ev.ev_samarcanda_a.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-gardens",
-              "reason": "walked-the-canals"
-            },
+
             {
               "op": "reputation",
               "value": 1,
@@ -9366,11 +9218,7 @@
           "label": "ev.samarcanda.c.choice.watch_pilgrims",
           "resultText": "ev.ev_samarcanda_c.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-stone",
-              "reason": "saw-the-pilgrims-touch-the-stone"
-            },
+
             {
               "op": "codex",
               "value": "cx-samarcanda",
@@ -9808,12 +9656,6 @@
               "op": "codex",
               "value": "cx-sinju",
               "reason": "learned-the-paper-money-port"
-            },
-            {
-              "op": "goods",
-              "id": "paper-money",
-              "value": 1,
-              "reason": "received-a-port-note"
             }
           ]
         },
@@ -10596,18 +10438,13 @@
             {
               "op": "coins",
               "value": -13500,
-              "reason": "bought-a-tabriz-pearl"
+              "reason": "bought-one-full-lot-of-tabriz-pearls"
             },
             {
               "op": "goods",
               "id": "tabriz-pearls",
               "value": 1,
-              "reason": "bought-a-tabriz-pearl"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tauris-pearl",
-              "reason": "first-persian-pearl"
+              "reason": "bought-one-full-lot-of-tabriz-pearls"
             }
           ]
         },
@@ -10621,21 +10458,16 @@
               "reason": "climbed-the-hill-over-tauris"
             },
             {
-              "op": "sticker",
-              "value": "st-tauris-view",
-              "reason": "saw-the-plain-from-the-hill"
-            },
-            {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "looked-out-from-the-ilkhan-palace"
+              "reason": "looked-out-over-the-market-from-the-hill"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "tauris",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c011"
@@ -10675,7 +10507,7 @@
             {
               "op": "reveal_map",
               "value": "constantinopolis",
-              "reason": "genoese-described-the-west-road"
+              "reason": "westbound-merchant-described-the-road"
             },
             {
               "op": "codex",
@@ -10706,17 +10538,17 @@
             {
               "op": "language",
               "value": "persian",
-              "reason": "a-season-in-the-bazaars"
+              "reason": "studied-with-miriam-for-twenty-days"
             },
             {
               "op": "days",
               "value": 20,
-              "reason": "a-season-in-the-bazaars"
+              "reason": "studied-with-miriam-for-twenty-days"
             },
             {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "the-dragoman-named-every-quarter"
+              "reason": "miriam-taught-the-bazaar-language"
             }
           ]
         },
@@ -10732,14 +10564,14 @@
             {
               "op": "reveal_map",
               "value": "caffa",
-              "reason": "armenian-traders-named-the-north-road"
+              "reason": "northern-traveller-named-the-caffa-road"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "tauris",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c011"
@@ -10815,11 +10647,6 @@
           "resultText": "ev.ev_tauris_c.choice_3_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-tauris-gardens",
-              "reason": "walked-the-qanats"
-            },
-            {
               "op": "codex",
               "value": "cx-tauris",
               "reason": "learned-how-the-water-comes"
@@ -10829,7 +10656,7 @@
       ],
       "lore": {
         "placeId": "tauris",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c011"
@@ -11158,26 +10985,22 @@
         {
           "label": "ev.zayton.battuta_a.choice.change",
           "resultText": "ev.ev_zayton_battuta_a.choice_1_result",
-          "needs": {
-            "coins": {
-              "min": 500
-            }
-          },
           "effects": [
             {
-              "op": "coins",
-              "value": -500,
-              "reason": "changed-coins-for-the-kings-stamped-notes"
+              "op": "days",
+              "value": 1,
+              "reason": "checked-an-old-exchange-ticket"
             },
             {
-              "op": "codex",
-              "value": "cx-paper-money",
-              "reason": "changed-coins-for-the-kings-stamped-notes"
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "learned-to-check-an-exchange-ticket"
             },
             {
               "op": "flag",
               "value": "fl-zayton-battuta-told",
-              "reason": "heard-the-travellers-tale-of-paper-money"
+              "reason": "visited-the-ticket-shop"
             }
           ]
         },
@@ -11188,19 +11011,19 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "sat-for-the-chinese-painters"
+              "reason": "helped-paint-the-soup-shop-sign"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "band",
               "id": "china",
-              "reason": "sat-for-the-painters-as-the-strangers-do"
+              "reason": "helped-the-painter-and-soup-shop"
             },
             {
               "op": "flag",
               "value": "fl-zayton-battuta-told",
-              "reason": "heard-the-travellers-tale-of-the-painters"
+              "reason": "visited-the-painters-shop"
             }
           ]
         },
@@ -11211,28 +11034,23 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "watched-the-registry-of-the-junks-crews"
+              "reason": "checked-the-returning-crew-register"
             },
             {
               "op": "reveal_map",
               "value": "rt-kinsay-zayton",
-              "reason": "learned-the-river-road-toward-kinsay"
+              "reason": "learned-the-coastwise-road-toward-kinsay"
             },
             {
               "op": "flag",
               "value": "fl-zayton-battuta-told",
-              "reason": "heard-the-travellers-tale-of-the-registry"
+              "reason": "visited-the-port-register"
             }
           ]
         }
       ],
       "lore": {
-        "storyId": "paper-money-china",
-        "origin": "source",
-        "ref": {
-          "book": "ibn-battuta",
-          "chapterId": "battuta-c023"
-        }
+        "origin": "authored"
       }
     }
   ]

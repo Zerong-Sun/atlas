@@ -11,24 +11,24 @@ notes: >
 
 ## ev.ev_unique_fuju.title
 
-A Hull on the Great River
+The New Hull at the River
 
 ## ev.ev_unique_fuju.body
 
-At Fuju, shipwrights lower a new hull toward the broad river. The ropes strain under its weight. One worker asks for help with the hard launch; another offers to show how ships leave the river for the coast.
+A new hull is ready to be lowered into Fuju’s river. The boatbuilder’s crew has ropes around it, but one roller will not turn under the weight. His eldest daughter crawls beside the frame and finds a wooden chip wedged against the roller. ‘Pull the hull back a little,’ she calls. The crew waits until she is clear before easing the ropes. You help her lift the chip out. The builder asks whether anyone can stay for the hard work of lowering the hull over the next day; he will pay for the labour, though it will leave hands and shoulders sore. A carter waiting beside the yard has goods bound overland toward Zayton. He offers to take a small guiding fee and show you the road when his cart leaves. His daughter asks whether the newly cleared roller is straight. He lets her check it with a spare plank before the crew pulls again.
 
 ## ev.ev_unique_fuju.choice_a
 
-Take a rope at the launch
+Work a day helping lower the hull
 
 ## ev.ev_unique_fuju.choice_a_result
 
-You spend a hard day steadying the hull and earn 220 silver. Your strength is spent, but the yard workers respect your help.
+You spend another day hauling with the crew until the new hull reaches the water. The builder pays you for the heavy work and introduces you to the families watching from the bank. Your shoulders ache by evening, but his daughter sees the boat floating evenly after the roller was cleared.
 
 ## ev.ev_unique_fuju.choice_b
 
-Pay to study the river exit
+Pay the carter for the Zayton road
 
 ## ev.ev_unique_fuju.choice_b_result
 
-You pay 200 silver. A shipwright points out the passage toward Zayton and explains where the deep water begins.
+You pay the carter for his guidance. He walks you from the river yard to the road used by his carts, then marks the turns toward Zayton on your board. Behind you the builder’s daughter calls for the next roller to be checked.

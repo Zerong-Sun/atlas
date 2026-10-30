@@ -18,11 +18,7 @@
           "label": "ev.ev_ormus_a_followup.choice_1",
           "resultText": "ev.ev_ormus_a_followup.choice_1_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-ormus-fort",
-              "reason": "entered-the-harbor-ledger"
-            },
+
             {
               "op": "reputation",
               "value": 1,
@@ -100,11 +96,6 @@
               "id": "pepper",
               "value": 1,
               "reason": "bought-pepper-while-the-dhow-lay-at-anchor"
-            },
-            {
-              "op": "sticker",
-              "value": "st-ormus-spice",
-              "reason": "bought-pepper-while-the-dhow-lay-at-anchor"
             }
           ],
           "needs": {
@@ -137,11 +128,6 @@
               "op": "days",
               "value": 1,
               "reason": "learned-how-the-warehouse-keeps-the-spice"
-            },
-            {
-              "op": "sticker",
-              "value": "st-ormus-spice",
-              "reason": "learned-how-the-warehouse-keeps-the-spice"
             }
           ]
         }
@@ -171,11 +157,7 @@
           "label": "ev.ev_ormus_c_followup.choice_1",
           "resultText": "ev.ev_ormus_c_followup.choice_1_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-ormus-wind",
-              "reason": "learned-the-sign-of-the-deadly-wind"
-            },
+
             {
               "op": "codex",
               "value": "cx-ormus",

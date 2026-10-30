@@ -2,7 +2,7 @@
 unit: campichu
 lang: zh
 source: en
-source_rev: 7eee96a7d699
+source_rev: 33394e106af4
 status: translated
 translator: 人工校译
 notes: >
@@ -12,38 +12,44 @@ notes: >
 
 stamps:
   city.campichu.name: 373d38c1246c
-  ev.campichu.entry.choice.market: e4eee3409b41
-  ev.campichu.entry.choice.pass: dc7f77ef08d8
-  ev.campichu.entry.choice.shrine: 98e20d47c9a5
-  ev.campichu.entry.body: 189b40d8a431
-  ev.campichu.entry.title: 0d06456200fe
-  ev.campichu.a.title: 9e17755a1e1a
-  ev.campichu.a.body: 6b1fb6a9f0fa
-  ev.campichu.a.choice.clerks: 95eca4bb9eb6
-  ev.campichu.a.choice.caravan: 92662dff7548
-  ev.campichu.a.choice.pass: b536d083fc75
-  ev.campichu.b.title: 61bda7ff3462
-  ev.campichu.b.body: bc9711957cd0
-  ev.campichu.b.choice.churches: 98164af1d9fc
-  ev.campichu.b.choice.abbey: 35d55f8ae20b
-  ev.campichu.b.choice.offering: 1b8decf17a2c
-  ev.ev_campichu_entry.choice_1_result: 6d7c7fb12422
-  ev.ev_campichu_entry.choice_2_result: 1eca6c9cd8bb
-  ev.ev_campichu_entry.choice_3_result: 602dbd8f125a
-  ev.ev_campichu_a.choice_1_result: b53240c63b87
-  ev.ev_campichu_a.choice_2_result: 459034005f25
-  ev.ev_campichu_a.choice_3_result: 3f8d603c470f
-  ev.ev_campichu_b.choice_1_result: 1b6318269cfc
-  ev.ev_campichu_b.choice_2_result: bc7740be102b
-  ev.ev_campichu_b.choice_3_result: 06832173909c
-  ev.ev_campichu_a_followup.title: fd5e12d2f8f9
-  ev.ev_campichu_a_followup.body: fbfdd85c83fa
-  ev.ev_campichu_a_followup.choice_1: e511fe157574
-  ev.ev_campichu_a_followup.choice_1_result: 2de261194d94
-  ev.ev_campichu_a_followup.choice_2: aaaf13994751
-  ev.ev_campichu_a_followup.choice_2_result: 3b2d1d1c6722
-  ev.ev_campichu_a_followup.choice_3: 0f2d4e64f437
-  ev.ev_campichu_a_followup.choice_3_result: 957b1e5dca88
+  ev.campichu.entry.body: 77ce235a89a6
+  ev.campichu.entry.choice.market: 6ff684f7379c
+  ev.campichu.entry.choice.pass: e82c31175882
+  ev.campichu.entry.choice.shrine: ca675f33fc34
+  ev.campichu.entry.title: 0e3ed5d57f7f
+  ev.campichu.a.title: 2ae71e43bfaf
+  ev.campichu.a.body: d43a26fc209a
+  ev.campichu.a.choice.clerks: e9a235732545
+  ev.campichu.a.choice.caravan: b01a886115ba
+  ev.campichu.a.choice.pass: 1d78f083edb2
+  ev.campichu.b.title: 27af98b8aaea
+  ev.campichu.b.body: 060f0e3e16ab
+  ev.campichu.b.choice.churches: dc2d5ad0d163
+  ev.campichu.b.choice.abbey: 32bda6aded15
+  ev.campichu.b.choice.offering: a6254704fbf3
+  ev.ev_campichu_entry.choice_1_result: 0d9c60af40b8
+  ev.ev_campichu_entry.choice_2_result: fc964a127dfe
+  ev.ev_campichu_entry.choice_3_result: 9d6346cc6122
+  ev.ev_campichu_a.choice_1_result: 2511426371f8
+  ev.ev_campichu_a.choice_2_result: 207c2a36fb9b
+  ev.ev_campichu_a.choice_3_result: b6b1cc32c178
+  ev.ev_campichu_b.choice_1_result: 88065ba354a8
+  ev.ev_campichu_b.choice_2_result: 4fe2ec2adb08
+  ev.ev_campichu_b.choice_3_result: 66dc6781b724
+  ev.ev_campichu_a_followup.title: 68270a0378c6
+  ev.ev_campichu_a_followup.body: 9be51bdf2c59
+  ev.ev_campichu_a_followup.choice_1: ad526eb3239e
+  ev.ev_campichu_a_followup.choice_1_result: 9d4ba946703d
+  ev.ev_campichu_a_followup.choice_2: 9a683e63b39b
+  ev.ev_campichu_a_followup.choice_2_result: 991c9dbe5222
+  ev.ev_campichu_a_followup.choice_3: 5d71af1875e0
+  ev.ev_campichu_a_followup.choice_3_result: 1142f6e63086
+  ev.campichu.cart-axle.title: 3a4e753ae484
+  ev.campichu.cart-axle.body: bb27467bb1d6
+  ev.campichu.cart-axle.choice.repair: b7a252a0ad4e
+  ev.campichu.cart-axle.result.repair: a97c5cd222ea
+  ev.campichu.cart-axle.choice.stay: 99ce478ad3f2
+  ev.campichu.cart-axle.result.stay: 92e25eebe819
 ---
 
 ## city.campichu.name
@@ -52,133 +58,152 @@ stamps:
 
 ## ev.campichu.entry.choice.market
 
-去集市逛逛
+留一天逛甘州集市
 
 ## ev.campichu.entry.choice.pass
 
-不耽搁，直接进城
+今天从城门穿过去
 
 ## ev.campichu.entry.choice.shrine
 
-去佛寺看看
+带着花去寺里看看
 
 ## ev.campichu.entry.body
 
-甘州是唐古忒地区的大城，也是全省的治所。城里住着佛教徒、穆斯林和基督徒。基督徒有三座漂亮的教堂，佛教徒则有许多寺院，里面供着大大小小的佛像。有些佛像足有十步高，用木头、泥土或石头塑成，表面打磨光亮，再贴上金箔。大佛横卧在殿中，周围还有较小的像，像是在向它们礼拜。你在寺院门口停下脚步，僧人朝殿内一指：“进去看看吧，最大的那尊就在里面。”这里也有些修行者，日子过得比常人清苦。
+甘州城门边，卖花妇人正在给附近佛寺串花。儿子把寺里的花和答应送给姑母的那束混在一起。“白的留给姑母。”她把两个篮子摆在地上。一位商队车夫停下来问哪里买茶，驮兽能不能走寺门那条巷。妇人指他去集市：“驮兽绕摊位走，寺门那边有人挑水。”你问那条巷通向哪里。儿子送过花，知道转弯，却不愿把还没分好的花放下。正要去寺里的妇人说，等卖花人验好，她可以把花带进去。儿子把最后几枝白花放进姑母的篮子，问母亲现在能不能先带你认路。“两束各系好再去。”母亲说。车夫牵着驮兽转身去集市，卖花妇人也把寺里的那束举起来，看看有没有混进白花。
 
-一个年轻僧人告诉你，殿里那尊卧佛每逢大风夜就会打呼噜，连守夜人都听见过。旁边的香客笑他：“昨晚明明是你睡着了。”他挠挠头：“那就更奇怪了，我睡着时怎么会梦见自己在打呼噜？”
 ## ev.campichu.entry.title
 
-甘州见闻
+城门口的两束花
 
 ## ev.campichu.a.title
 
-唐古忒的治所
+书吏面前的两张单子
 
 ## ev.campichu.a.body
 
-这里是唐古忒全省的治所。总督手下的文书在衙门里核对盐引、清点西部边地的贡赋。北方沙漠来的商队在外城卸下骆驼上的货，集市从天亮一直热闹到深夜。
-
-衙门文书把盐引摊开，边核数字边念： “哪处井，哪条路， 几车盐，几道印； 北来驼队卸在外城， 账合上再开城门。” 他把一张盐引递给你看：“这几句是我教新人记的。每批盐有产地、车数和批印，到了治所先核对，再发往各处集市。”
+镇上书吏桌前摆着两张单子，一张记带茶进城的商队，一张记到公井取水的人。新助手看错了姓，把一个卖茶人写进两处。“我只是来问哪里补水。”卖茶人说。书吏把收据递给助手，请她按记号找对那一行。你替她压住纸，她一项项核。外面等着的车夫想知道北去哈剌和林的路还有没有商队在走，书吏说最近刚有一队经过，问他们最稳妥。卖茶人说，你若想买货，他可以拿封好的一件给你验；别人的包他不会擅自拆。助手改正水单，问：“这回对了吗？”卖茶人看过记号，点点头：“对。今天我只来打水，茶还在我车上。”书吏让助手自己合上册子。书吏请你留一天看他们点表，或先和卖茶人谈价；他也知道门外哪位车夫走过往亦集乃的路。
 
 ## ev.campichu.a.choice.clerks
 
-看看总督的属吏怎么清点账目
+留一天帮书吏核清单
 
 ## ev.campichu.a.choice.caravan
 
-和沙漠商队谈谈茶叶的价钱
+买一整件封好的茶
 
 ## ev.campichu.a.choice.pass
 
-从官署区穿过去
+问车夫往亦集乃的路
 
 ## ev.campichu.b.title
 
-教堂和佛寺挨在一起
+读经人与看寺人
 
 ## ev.campichu.b.body
 
-甘州有三座很漂亮的基督教堂，附近还有许多佛寺。佛寺里有贴着金箔的卧佛，最大的约有十步长，周围的小佛像像是在礼拜它。穆斯林也有自己的礼拜场所。几种信仰就在同一条街上各自生活。
-
-巷口的孩子一边拍手一边唱： “晨钟响过，街灯亮起。 集市把瓜和面摆出来，邻家灶上的热汤也端到门口。” 卖瓜人听着也跟着拍手：“附近有佛寺、教堂和清真寺，街坊各有礼拜的日子，转过街角又会一起买菜吃饭。孩子唱得最多的，还是谁家肯分汤。”“附近有佛寺、教堂和清真寺，邻居各自做礼拜，转身又在同一条街买菜吃饭。孩子先记住的是谁家肯分汤。”
+一位基督教社群的读经人来到佛寺，归还从这里借走的矮凳。他先前给腿脚不便的老妇人读书时用过。看寺人试了试松动的凳脚：“已经紧好了？”“我兄弟早上修过。”读经人说。她再坐一下，才把凳子放回门边。你问不同人家常来借东西吗。看寺人拿出一块小木板：“有人问清用处，我们就记着借给谁。”路过寺门的穆斯林布商来问，想给寺里常供人喝水的罐子添一点东西，该放哪里。他自己赶集时用过，也把借去的空罐带回来了。看寺人指给他看架子。读经人明天有空，愿意带你看看自家人聚会的地方；看寺人还认识一位走过额里吉亚的旅人。眼下门口飘进雨，她先请你把修好的凳子搬进屋。
 
 ## ev.campichu.b.choice.churches
 
-进一座基督教堂看看
+留一天跟读经人认识他的社群
 
 ## ev.campichu.b.choice.abbey
 
-逛逛佛寺，看看贴金的佛像
+问看寺人额里吉亚的路
 
 ## ev.campichu.b.choice.offering
 
-在寺门口留一份小礼
+给寺里的水罐留一份小礼
 
 ## ev.ev_campichu_entry.choice_1_result
 
-你没耽搁，直接进了城。守门人指着西边说：“甘州在那头，过了这处关口就接上河西走廊的驿路。”
+儿子分开系好两束花，指给你看穿城的街。商队车夫牵着驮兽绕过集市摊位，你继续前行，也记住了甘州城门与几条小巷。
 
 ## ev.ev_campichu_entry.choice_2_result
 
-你在集市看人买金箔。卖箔的指着寺院：“殿里那尊大佛也贴了金，先把泥面磨光，箔才贴得平。”你在甘州逛了一天，把见闻记下，也把通往甘州的路标到地图上。
+你又留了一天。卖花妇人把你介绍给供商队买茶的人，儿子也带你认了回城门的小巷。市场上的几户人家怎样共用水处，你都听他们说清了。
 
 ## ev.ev_campichu_entry.choice_3_result
 
-你走进佛寺，在壁画前合十行礼。僧人领你到廊下坐了片刻，递来一碗水：“城里住的客人多，累了就在这儿歇歇。”你把这座佛寺和通往甘州的路记在旅途笔记里。
+你与那位妇人把验好的花送进佛寺。看守给花找了地方，向你们道谢，也指给你看寺旁供人喝水的地方。卖花人的儿子在回路上遇见你们，知道花送对了。
 
 ## ev.ev_campichu_a.choice_1_result
 
-你花了一天看总督的属吏清点账目，记下他们的办法，也把通往哈剌和林的路标到地图上。
+你又留了一天，和书吏、助手一起核姓名与收据。助手自己找出第二处抄错的记号。车夫讲了最近往哈剌和林去的商队怎样补水。书吏想请你再等一会儿，他还有一张路条要交给过路人。
 
 ## ev.ev_campichu_a.choice_2_result
 
-你和沙漠商队谈妥茶价，付了 6000 钱币。
+卖茶人拆开封包的一角，让你先验茶。你付清整件货款，助手把这笔买卖写在正确的姓名下。书吏请卖茶人稍等，他要给旅人写完一张路条。
 
 ## ev.ev_campichu_a.choice_3_result
 
-你从官署区穿了过去。书吏正念着各支商队的到达时刻，一听你要往西走，便提醒你下一个驿站有换马的地方。
+一位车夫从城门起，在地上画出往亦集乃的路，说了第一处能问水的地方。书吏的助手在旁听，顺手把转弯抄到自己的路条里。你带着更清楚的方向继续走。
 
 ## ev.ev_campichu_b.choice_1_result
 
-你进了一座基督教堂看看。
+你又留了一天，跟读经人去见常来听他读书的邻居。他示范修好的矮凳怎样让老妇人坐得舒服。你们经过佛寺时，看寺人见凳子归位，也谢你们爱惜大家借用的物件。
 
 ## ev.ev_campichu_b.choice_2_result
 
-你逛了佛寺，仔细看过贴金的佛像。僧人请你在廊下歇脚：“附近有处客院，外地旅人也能进去喝水。”
+那位旅人回来后，看寺人请他为你画出往额里吉亚的路。旅人画图时，她又指给你看寺里的旧水罐，说清谁轮流添水。读经人也来喝了一杯，你离开时连人和路都熟悉些了。
 
 ## ev.ev_campichu_b.choice_3_result
 
-你在寺门口留了一份小礼，付出 500 钱币。僧人向你合十道谢，又指给你附近一处能歇脚的客院。
+你付了一份给寺里水罐添水的小礼。看寺人把这笔写在矮凳旁的记录里，又请布商搬一只满罐进屋。你走时，她当面谢你；读经人指给你看回集市的小巷。
 
 ## ev.ev_campichu_a_followup.title
 
-甘州：治所里的文书
+书吏写的路条
 
 ## ev.ev_campichu_a_followup.body
 
-在唐古忒治所，一位替商队盖了二十年路引的文书把你带到旁边的小屋。他说：“哈剌和林、亦集乃可不是地图上随便写的两个名字。拿着唐古忒的路引，往沙漠里走之前能到哪儿，得先问清楚。”
+书吏写路条时，助手又核了一遍卖茶人的收据。“车夫说了两条出城的道，”他告诉你，“我想把他真正走过的补水处写进去。”助手念出第一处，车夫改了地名的写法，又拿出磨旧的路板指给她看第二处。你问这张路条能不能一路用到哈剌和林。“只写我们从最近商队问到的这一段。”书吏说，“到了下一处营地，你还得接着问。”卖茶人问买家验过的茶何时可以搬，助手给她看改正的货单。她还有一整件封好的茶想卖。车夫说去亦集乃的商队要等最后一头牲口，明天才开走；若你留下，正好能听他们出发前怎样查水囊。书吏在纸角留了一处空白，等车夫把最后的地名说准。
 
 ## ev.ev_campichu_a_followup.choice_1
 
-请他把通往哈剌和林的路写在路引上
+请书吏标明往哈剌和林的方向
 
 ## ev.ev_campichu_a_followup.choice_1_result
 
-文书在路引背面画出北行路线，告诉你沿河过两处驿站后再转向沙漠：“进沙地前先补足水，亦集乃离这里还远着呢。”你把哈剌和林标在地图上，北行的路不再只是传闻。
+书吏在你的路板上标出北去哈剌和林的方向，写进车夫核过的补水处。助手抄好改正的地名，也给车夫一份自己的路条。你知道到更远的营地还要继续问路。
 
 ## ev.ev_campichu_a_followup.choice_2
 
-按官府商队的价钱买一箱茶
+另外买一整件封好的茶
 
 ## ev.ev_campichu_a_followup.choice_2_result
 
-你按沙漠商队认可的价钱买下茶叶。箱子封好了，随时可以上路。
+卖茶人拿来另一件封好的茶，拆开一角让你验。你付清整件货款，助手把它另写一行。茶先搬进干燥棚下，等你准备上路再取。
 
 ## ev.ev_campichu_a_followup.choice_3
 
-等一天，等路引房再开门
+留一天看去亦集乃的商队出发
 
 ## ev.ev_campichu_a_followup.choice_3_result
 
-你在路引房等了一会儿。文书把路引递给你：“往北去亦集乃，到了沙漠边上再问下一段路。”
+你又留了一天，看车夫们出发前查水囊和背带。最后一头牲口的绳结有些松，一人重新系好，又告诉你他们先在哪里歇脚。助手把这处新消息添到路条旁。
+
+## ev.campichu.cart-axle.title
+
+总往左偏的货车
+
+## ev.campichu.cart-axle.body
+
+集市后面的院子里，一家人的货车空着也往左倾。母亲觉得是车轴挪了，儿子说上一趟只是装货不匀，想再试一次。“那先推空车。”母亲说。他推了一圈，车仍旧偏。你替他们扶住车身，母亲去看轴上的插销，发现它松了。邻居拿来一根结实的新销。儿子问是不是得把整辆车都抬起，邻居用木杠示范怎样只顶起一边，母亲把木块垫在下面。来取车运茶的商人到了，站在门边等他们试轮子，问这趟谁坐在货旁看着。儿子说自己去。“先推一圈，看看还偏不偏。”母亲说。邻居把旧销放到他掌心，让他摸磨薄的地方。“上一趟我就觉得车歪。”儿子承认，“那时该告诉你们。”
+
+## ev.campichu.cart-axle.choice.repair
+
+帮他们换好车轴插销
+
+## ev.campichu.cart-axle.result.repair
+
+你扶着顶起的车，母亲安好新销，邻居才抽出垫木。儿子推车绕院一圈，两轮终于转得一样顺。等着的商人谢过一家人，也记住你帮他们准时交车。
+
+## ev.campichu.cart-axle.choice.stay
+
+留一天看满载的车怎样试走
+
+## ev.campichu.cart-axle.result.stay
+
+你又留了一天，一家人把茶包放上修好的车。儿子推车走了较长一段路，发现一包重茶得换个位置。母亲让他自己讲出原因，你也看懂了货重稍一偏，车拉起来就会不同。

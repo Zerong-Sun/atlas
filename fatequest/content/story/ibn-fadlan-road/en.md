@@ -592,7 +592,7 @@ The Road Beyond the Ice Crossing
 
 ## ev.ev_road_fadlan_01_followup.body
 
-The river is behind you now. At a roadside camp, a driver spreads his map on a folded blanket and tries to place the crossing. He remembers the waystation and a clump of trees on the far bank, then stops. “If I come back when the ice has gone, I'll need to find the ferry instead,” he says. His companions are packing for the next market. The driver offers you his charcoal pencil for a moment; you can mark the crossing with him or join the departing group.
+The river is behind you. At a roadside halt, a hired driver spreads his map on a folded blanket. He can place the waystation, but his charcoal stops where he tries to draw the far bank. ‘When I return after the ice breaks, I will need the ferry,’ he says. His older companion asks which clump of trees he means. He points to one they passed before the crossing; she reminds him that another stood beside the track on this bank. You describe the bank where the oil seller’s carts waited, and the driver moves his finger to the right bend. ‘That is the place,’ he says. He draws the ice route lightly, leaving room for the summer ferry landing he used last year. His companion is folding the blankets while the rest of the party prepares to leave for the next market. She asks whether the map should travel with them. The driver would like to finish it while the ground is still familiar, but the loaded carts are already moving toward the road. He offers you the charcoal and asks you to look once more at the bend before he folds the sheet.
 
 ## ev.ev_road_fadlan_01_followup.choice_1
 
@@ -611,7 +611,6 @@ Travel on to the next market
 You leave the driver with his map and travel with the group to the next market. The pack animals crowd around the water trough before anyone thinks of selling. One of the drivers buys bread and brings you a piece while you wait your turn. It is evening when you arrive, and a few stalls are still open.
 
 ## ev.ev_road_fadlan_02.choice_1_result
-
 
 The guide takes his fee and walks beside the young driver. At each stone marker he asks the driver to choose the next one, then shows him the mark under the snow. After a day's travel the animals are eating beside the shelter he promised. “You can find this place next time,” he tells the driver, who has been counting the turns aloud all afternoon. You write down how the road is marked for later journeys.
 
@@ -644,7 +643,6 @@ You stay for the day and read the old account with the young man. He stops at th
 You accompany the young man to the well where his sister is waiting. She takes their grandfather's cloak and notices the old book under his arm. He tells her he found it in the work ledger; she remembers their grandfather reading aloud from it on winter evenings. The three of you spend the rest of the day sorting his tools and folding the cloth he left behind. When your party departs, brother and sister are still deciding which pages they will copy together.
 
 ## ev.ev_road_fadlan_06.choice_1_result
-
 
 You pay the sailor for the chart. His daughter waits until the ink dries, then rolls the chart around a wooden rod. She shows you the harbour they drew from memory and the notes her father copied from travellers' accounts. At the blank inlet she leaves space for a name. The sailor asks you to tell him what the coast is like if your journey takes you there; you copy the island stories into your book before packing the chart.
 
@@ -698,7 +696,6 @@ You tell the map seller which shelter was open when you passed it and where the 
 
 ## ev.ev_road_fadlan_12.choice_2_result
 
-
 You pay for the current list. The seller circles a recently opened well and a short track that rejoins the main road beyond it. He reads the distances aloud while you copy the halt names into your book. Your party follows his notes over one extra day and reaches the next stop before sunset. At the fire, the drivers pass the list around and check where they will water the animals next.
 
 ## ev.ev_road_fadlan_13.choice_1_result
@@ -734,7 +731,6 @@ You spend an extra day going from seller to seller with the broker's daughter. S
 You buy provisions and let the broker's daughter return to her work. The market keeps you an extra day as it empties, and your party leaves with the last carts as the sellers pack away their awnings. One of them shares the track to the next camp and points out where the ground stays firm after rain.
 
 ## ev.ev_road_fadlan_17.choice_1_result
-
 
 You pay the keeper for the ride. He stows your bag low on the sled, gives the lead dog a strip of dried food, and shows you where to hold on. After the extra day you reach the far post, while the walkers are still on the ice road. The keeper checks every dog's paws before he unhitches them. You write down how the team and sled were prepared, with Biruni's older northern account noted separately.
 
@@ -772,7 +768,7 @@ The Rope Team Returns
 
 ## ev.ev_road_fadlan_19_followup.body
 
-At the next halt, you meet the fur merchant and his companions coming off the fog road. Everyone is present. The woman whose wrist hurt has wrapped a strip of cloth beneath the rope, and she shows you how the knot held without rubbing her skin. The merchant spreads out a damp route sketch. One marker had fallen, so they stood together until the lead walker found the dry rise. His father is long gone, but the merchant still tells the northern story while they dry their packs.
+At the next halt, the fur merchant and his companions come in from the fog road. The merchant counts his people aloud; everyone answers. The woman whose wrist was rubbed by the rope has put a strip of cloth under it. ‘Show me the knot,’ a young carrier asks. She loosens it, lets him feel where the rope crosses the cloth and ties it again without pulling against her skin. The merchant spreads a damp route sketch beside the fire. One marker had fallen over, and the lead walker found dry ground only after the party waited together. You ask how they knew they were looking at the same marker. The lead walker points to a forked branch he had laid beside it that morning. ‘I should have driven the post deeper,’ he says. The merchant asks him to mark the dry rise as well, so the next group does not stop at the wrong patch of ground. As their packs dry, someone asks the merchant for the northern tale his father used to tell. He tells it as a memory of his father, then lets the woman correct where the older journey took place. The party will carry the damaged marker to the next road keeper when they leave.
 
 ## ev.ev_road_fadlan_19_followup.choice_1
 
@@ -800,7 +796,6 @@ You let the courier roll up the map and travel an extra day's road with your par
 
 ## ev.ev_road_fadlan_22.choice_1_result
 
-
 You pay the boatman after his daughter finishes the seam. She tests the patch with a scoop of water, then loads your pack low in the boat. The animals cross separately, and the work adds a day to your journey. On the far bank you ask the daughter how she keeps the hide taut around its frame; she shows you the spare lacing she carries. You add her explanation to your notes on steppe crossings.
 
 ## ev.ev_road_fadlan_22.choice_2_result
@@ -820,7 +815,6 @@ You wait until the family has brought its remaining horses inside the camp, then
 You take the offered bowl and sit by the fire. The host's son finishes the saddle strap, then draws the next stretch of road in the dust. His mother gives you the well's name and asks you to repeat it so she knows you heard it correctly. The family remembers your name, and you keep their directions with your notes on the welcome you received.
 
 ## ev.ev_road_fadlan_24.choice_2_result
-
 
 You buy raisins and pepper at a nearby stall and bring them to the tent. The host thanks you and divides the raisins among the children after everyone has eaten. Her son repairs your loose saddle strap while he talks through the route to the next well. When you leave, the family calls after you to use the firmer track around the low ground.
 
@@ -862,7 +856,7 @@ The Family Finds Its Horses
 
 ## ev.ev_road_fadlan_23_followup.body
 
-Back at the camp, the daughter and her brother return with two of the missing horses. A young man from another tent admits he took all three and traded the last one to a passing buyer. His father offers a replacement from his own herd, and the two families sit with the camp's elders to agree on its value. The daughter gives the recovered horses water before she joins them. Her father thanks you for watching the others and asks whether you will stay to hear the agreement.
+The daughter and her brother return to camp leading two of their family’s missing horses. Their father checks the animals’ legs while the daughter fetches water. A young man from the next tent comes over and admits he led away all three horses; he traded the last to a passing buyer before the family found its tracks. ‘I cannot bring that one back tonight,’ he says. His father offers a horse from his own herd, and the two families ask the camp elders to examine it and agree on its value. The daughter asks whether the replacement is used to a pack saddle. The young man’s father says they can see it walk and carry a light load before anyone accepts it. Her brother wants to tell the elders where he found the hoofprints; his father asks him to let the horses drink first. You have kept an eye on the family’s other animals while they searched, and he thanks you for it. One elder lays out a place beside the fire where both families can talk. The daughter comes over after she has tied the recovered horses and asks whether you will listen with them until the matter is settled.
 
 ## ev.ev_road_fadlan_23_followup.choice_1
 
@@ -886,7 +880,7 @@ Tracks Beyond the Camp
 
 ## ev.ev_road_fadlan_25_followup.body
 
-At the next halt, the shepherd's sister catches up with news of the herd. She and her brother counted every goat that morning; the wolves had crossed the road farther out and left fresh tracks beside the old ones. She has brought a twig marked with the place where they turned. "I want to know whether they are still following the carts," she says. The drivers offer to keep a watch for another day. You can help with that watch or walk out with her to look at the tracks.
+At the next halt, the shepherd’s sister catches up with news of the herd. She and her brother counted the goats again that morning and found none missing. A line of wolf tracks crosses the road farther from the carts. She has brought a twig marked at the point where the prints turned away. ‘I want to know whether they followed us after that,’ she says. A driver who watched the outer tether asks whether the marks were made that morning. She shows him the crisp edge of one print on the twig’s sketch. He says he can keep another watch while the others repair harness. You ask whether the goats were nervous at first light. ‘Only until we moved their feed away from the path,’ she says. Her brother has stayed with them, so she can walk out to the tracks without leaving the herd alone. The driver checks the tether knots and finds one that will need tying again before night. The sister asks you to look at her marked turn with her; the driver asks if you can take a watch instead. They agree to compare what each of you sees when everyone returns to the fire.
 
 ## ev.ev_road_fadlan_25_followup.choice_1
 
@@ -930,7 +924,6 @@ You leave the elder and her grandson to finish the mound and travel an extra day
 
 ## ev.ev_road_fadlan_32.choice_1_result
 
-
 You pay the toll after the clerk writes your load on a stamped receipt. The ferryman's daughter calls your animals forward when the queue thins, and the crossing adds a day to your journey. On the far bank, the clerk's assistant reads the receipt and helps find the sack that had been set with another party's goods. He hands it back and remembers your name when you thank him.
 
 ## ev.ev_road_fadlan_32.choice_2_result
@@ -967,7 +960,7 @@ A Copy of Their Names
 
 ## ev.ev_road_fadlan_29_followup.body
 
-At the evening fire, the traveller who knows the woman's village asks for the names you heard. He is taking a road that passes her mother, and he wants to carry an accurate account. You read your page aloud. He repeats the siblings' names and the well where you met them, then asks which road the guarded group took. The woman had asked him to remember; he holds out a clean piece of paper for your answer.
+At the evening fire, the traveller who knows the woman’s home village asks you to repeat the names you heard. His road passes her mother’s house, and he does not want to bring a message that sends her looking for the wrong people. You read your page aloud. He says the siblings’ names back to you, but pauses at the well where you met them. ‘Was it the one with the low stone wall?’ he asks. You describe the water trough and the track the guarded group took. He has used that well and now knows which road you mean. The woman comes over to listen. She corrects how he says her brother’s name and tells him which door her mother uses in the village. He repeats both details to her until she is satisfied. A second traveller offers him a clean page, though he says he can also remember the message if rain makes the paper useless. He holds the sheet where you can write and asks the woman once more whether she wants anything added. She asks him to tell her mother that both children were seen together.
 
 ## ev.ev_road_fadlan_29_followup.choice_1
 
@@ -991,7 +984,7 @@ The Road After the Rain
 
 ## ev.ev_road_fadlan_30_followup.body
 
-At a sheltered stop after the storm, a driver from your party spreads a torn cart cover on the ground. One corner caught on a peg when the wind rose. He and his daughter can stitch it before moving on, and the horses need time to recover from the storm. She suggests resting until the ground firms. He asks whether you will stay near them or go ahead with the other carts.
+At a sheltered halt after the storm, a driver from your party spreads his torn cart cover on dry ground. A corner caught on a peg when the wind rose. His daughter finds the tear by pushing her fingers through it. ‘If we sew only the edge, it will open again when we pull it tight,’ she says. He finds a spare piece of cloth for a patch. You hold the cover against the cart while they decide where the patch should sit. The horses have stopped shivering, but their coats are still wet, and the daughter wants them to feed and rest before the next stretch. Another driver has already harnessed his animals; he asks whether the wet road beyond the halt has a firm side. The father says he has not walked it yet. The other driver offers to go ahead on foot and call back from the first bend. The daughter lays out needle, thread and the patch, then asks you to hold its corners level. Her father checks the sky and says the shelter has room for those who need to stay while the cover and the road dry.
 
 ## ev.ev_road_fadlan_30_followup.choice_1
 
@@ -1015,7 +1008,7 @@ The Waystation Beyond the Ford
 
 ## ev.ev_road_fadlan_32_followup.body
 
-The two river routes meet at a small waystation. Its keeper has a fenced place for animals and a dry room where travellers can sort their loads. A driver from your party has a chafed harness strap, and the keeper offers a repair kit with the room. He asks a fee for two days' lodging and feed. The open road continues past the station; if you move on, your party can reach the next halt in a day.
+The two routes from the river meet at a small waystation. Its keeper opens a fenced pen for tired animals and shows your party a dry room where loads can be sorted. A driver notices that one harness strap has rubbed thin near the buckle. ‘It held across the ford,’ he says, ‘but I do not want to test it under a full load again.’ The keeper brings out needles, spare leather and a bench. His daughter asks whether the torn part can be trimmed; the driver shows her the place where the strap must still reach the buckle. You help set the load down so he can work without the harness pulling. The keeper explains the fee for two days in the room and feed for the animals; he asks for payment only if your party decides to stay. A carter who is leaving says the next halt is a day farther along the open road. The keeper points out where the driver can wrap the strap for that journey, then lets him decide whether to repair it here or at the next stop. His daughter lays the needle beside the bench and waits for an answer.
 
 ## ev.ev_road_fadlan_32_followup.choice_1
 
@@ -1039,7 +1032,7 @@ The Branches on the Far Bank
 
 ## ev.ev_road_fadlan_35_followup.body
 
-The last sled is off the ice. On the far bank, the guide counts his marking branches and finds two missing from the thinner bend. The driver's daughter volunteers to bring them back, but he asks her to wait until he has checked the bank. He wants a small drawing of the safe line for the next party. You can help him make it while the route is fresh, or continue toward the next halt with your own companions.
+The last sled is clear of the ice. On the far bank, the guide counts the branches he used to mark the crossing and finds two missing near the thinner bend. The driver’s daughter says she can fetch them. ‘Wait until I check the bank,’ the guide tells her. He presses his pole into the snow where the ice meets the shore; the crust gives way beside the old track. You ask whether the branches could have gone into the water. He says the wind may have taken them, but he will not send anyone back until he knows where the edge holds. The daughter remembers which sled passed between the two marks and points to its tracks. Her father asks for a drawing to leave with the next party, since the same bend will be hard to judge from this bank. The guide takes out a dry sheet and asks the daughter to name the entry point while you look at the safe line you all followed. The rest of your companions are tying their loads for the next halt. He sets a branch in firm snow and keeps the drawing sheet open beside it.
 
 ## ev.ev_road_fadlan_35_followup.choice_1
 
@@ -1055,7 +1048,7 @@ Travel one more day to the next halt
 
 ## ev.ev_road_fadlan_35_followup.choice_2_result
 
-You leave the guide and the driver's daughter to finish the markers and travel with your companions. A day's march brings you to a sheltered halt. The driver of the first sled checks the lashings before he unloads; his daughter has tied the loose end neatly. They will ask the guide for his drawing when they return this way.
+You leave the guide and the driver's daughter to finish the markers and travel with your companions. A day's march brings you to a sheltered halt. Before unloading, the driver of the first sled finds a loose end in the cargo lashings and ties it himself. He asks where his daughter and the guide will store the crossing sketch, so he can collect a copy when he returns by the river.
 
 ## codex.cx-fadlan-cold.name
 

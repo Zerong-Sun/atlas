@@ -29,19 +29,16 @@ func _run() -> void:
 	for fixture in [[0, "0"], [300, "3"], [350, "3.5"], [305, "3.05"], [-305, "-3.05"]]:
 		_ok(Panels.money(fixture[0]) == fixture[1], "money preserves exact fen for %d" % fixture[0])
 	var decorated := Panels.overlay(host, Vector2(100, 100))
-	var decorative_count := 0
+	_ok(decorated["panel"].has_node("ReadingOrnament"),
+		"real panel has the current margin ornament")
 	UiScale.high_contrast = true
 	Panels.restyle_tree(decorated["layer"])
-	for child in decorated["panel"].get_children():
-		if child.get_meta("decorative_panel_art", false):
-			decorative_count += 1
-			_ok(not child.visible, "high contrast removes decorative panel art")
-	_ok(decorative_count > 0, "real illustrated panel exercises contrast regression")
+	_ok(decorated["panel"].get_theme_stylebox("panel") is StyleBoxFlat,
+		"high contrast uses a plain card surface")
 	UiScale.high_contrast = false
 	Panels.restyle_tree(decorated["layer"])
-	for child in decorated["panel"].get_children():
-		if child.get_meta("decorative_panel_art", false):
-			_ok(child.visible, "turning contrast off restores decorative art")
+	_ok(decorated["panel"].get_theme_stylebox("panel") is StyleBoxTexture,
+		"turning contrast off restores the vellum card")
 	# A portrait can be added after style_button. Its feedback must remain
 	# above that portrait but below a later modal, using ordinary tree order.
 	var portrait_plate := TextureRect.new()

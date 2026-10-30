@@ -16,8 +16,8 @@
           "label": "ev.zayton.entry.choice.customs",
           "resultText": "ev.ev_zayton_entry.choice_1_result",
           "effects": [
-            { "op": "days", "value": 2, "reason": "waited-out-the-tithe-clerks" },
-            { "op": "codex", "value": "cx-zayton-tithe", "reason": "learned-the-kaans-duties" },
+            { "op": "days", "value": 2, "reason": "waited-two-days-for-cargo-registration" },
+
             { "op": "reveal_map", "value": "zayton", "reason": "the-clerks-named-the-quarters" },
             { "op": "queue_event", "value": "ev-zayton-ledger-consequence", "reason": "the-clerk-returned-with-a-ledger" }
           ]
@@ -27,9 +27,9 @@
           "resultText": "ev.ev_zayton_entry.choice_2_result",
           "needs": { "language": "chinese" },
           "effects": [
-            { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "avoided-the-tithe-clerks" },
+            { "op": "reputation", "value": -2, "scope": "city", "id": "zayton", "reason": "entered-through-the-side-gate" },
             { "op": "flag", "value": "fl-zayton-undeclared", "reason": "entered-without-declaring" },
-            { "op": "codex", "value": "cx-zayton-tithe", "reason": "saw-what-the-tithe-costs-others" },
+
             { "op": "queue_event", "value": "ev-zayton-watch-consequence", "reason": "the-night-watch-found-the-missing-mark" }
           ]
         },
@@ -38,7 +38,7 @@
           "resultText": "ev.ev_zayton_entry.choice_3_result",
           "effects": [
             { "op": "days", "value": 1, "reason": "counted-the-shipping" },
-            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "counted-the-shipping" },
+
             { "op": "reveal_map", "value": "zayton", "reason": "sailors-described-the-port" },
             { "op": "queue_event", "value": "ev-zayton-pilot-consequence", "reason": "a-pilot-offered-a-road-rumour" }
           ]
@@ -46,12 +46,12 @@
         {
           "label": "ev.zayton.entry.choice.battuta",
           "resultText": "ev.ev_zayton_entry.choice_4_result",
-          "effects": [ { "op": "queue_event", "value": "ev-zayton-battuta-a", "reason": "heard-of-paper-money-and-ship-registry" } ]
+          "effects": [ { "op": "queue_event", "value": "ev-zayton-battuta-a", "reason": "ahe-invited-you-to-check-the-ticket-shop" } ]
         }
       ],
       "lore": {
         "placeId": "great-haven-of-zayton",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
       }
     },
@@ -70,7 +70,7 @@
           "effects": [
             { "op": "item", "value": "it-zayton-duty-copy", "reason": "received-a-duty-copy" },
             { "op": "reveal_city", "value": "kinsay", "level": 1, "reason": "the-ledger-named-kinsay" },
-            { "op": "reveal_route", "value": "rt-kinsay-zayton", "level": 1, "reason": "the-ledger-listed-the-coastal-road" },
+            { "op": "reveal_route", "value": "rt-kinsay-zayton", "level": 1, "reason": "the-ledger-listed-the-land-road" },
             { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-in-the-ledger" }
           ,
             { "op": "queue_event", "value": "ev-zayton-ledger-consequence-resolution", "reason": "zayton-a-resolution" }
@@ -80,7 +80,6 @@
           "label": "ev.zayton.ledger_consequence.choice.refuse",
           "resultText": "ev.ev_zayton_ledger_consequence.choice_2_result",
           "effects": [
-            { "op": "reputation", "value": -1, "scope": "city", "id": "zayton", "reason": "refused-the-ledger-copy" },
             { "op": "flag", "value": "fl-zayton-declared", "reason": "cargo-was-entered-without-a-copy" }
           ]
         }
@@ -184,15 +183,15 @@
           "label": "ev.zayton.harbour.choice.watch",
           "resultText": "ev.ev_zayton_harbour.choice_3_result",
           "effects": [
-            { "op": "sticker", "value": "st-zayton-haven", "reason": "stood-a-day-at-the-haven" },
-            { "op": "codex", "value": "cx-hundred-shiploads", "reason": "stood-a-day-at-the-haven" },
+
+
             { "op": "days", "value": 1, "reason": "stood-a-day-at-the-haven" }
           ]
         }
       ],
       "lore": {
         "placeId": "great-haven-of-zayton",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": { "book": "marco-polo", "chapterId": "v2-b2-c082" }
       }
     },
@@ -223,8 +222,8 @@
           "needs": { "coins": { "min": 3000 } },
           "effects": [
             { "op": "coins", "value": -3000, "reason": "paid-a-lad-to-interpret" },
-            { "op": "language", "value": "arabic", "reason": "a-season-of-listening-in-the-quarter" },
-            { "op": "days", "value": 20, "reason": "a-season-of-listening-in-the-quarter" },
+            { "op": "language", "value": "arabic", "reason": "twenty-days-of-arabic-lessons-in-the-quarter" },
+            { "op": "days", "value": 20, "reason": "twenty-days-of-arabic-lessons-in-the-quarter" },
             { "op": "codex", "value": "cx-fanfang", "reason": "walked-the-foreign-quarter" }
           ]
         },
@@ -234,8 +233,7 @@
           "needs": { "coins": { "min": 12000 } },
           "effects": [
             { "op": "coins", "value": -12000, "reason": "bought-a-bolt-of-silk" },
-            { "op": "goods", "id": "silk", "value": 1, "reason": "bought-a-bolt-of-silk" },
-            { "op": "sticker", "value": "st-zayton-silk", "reason": "bought-a-bolt-of-silk" }
+            { "op": "goods", "id": "silk", "value": 1, "reason": "bought-a-bolt-of-silk" }
           ]
         }
       ],
@@ -290,8 +288,7 @@
           "label": "ev.zayton.mazu.choice.watch",
           "resultText": "ev.ev_zayton_mazu.choice_3_result",
           "effects": [
-            { "op": "codex", "value": "cx-sea-goddess", "reason": "watched-the-sailors-at-prayer" },
-            { "op": "sticker", "value": "st-zayton-mazu", "reason": "watched-the-sailors-at-prayer" }
+            { "op": "codex", "value": "cx-sea-goddess", "reason": "watched-the-sailors-at-prayer" }
           ]
         }
       ],

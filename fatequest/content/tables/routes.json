@@ -1903,11 +1903,9 @@
       "from": "caiju",
       "to": "chinghianfu",
       "reverse": true,
-      "kind": "land",
+      "kind": "sea",
       "modes": [
-        "caravan",
-        "camel",
-        "foot"
+        "ship"
       ],
       "days": 1,
       "distanceKm": 8,
@@ -1931,7 +1929,7 @@
         "bonus": []
       },
       "hazards": [
-        "bandits"
+        "storm"
       ],
       "encounters": [],
       "lore": {

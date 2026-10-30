@@ -64,11 +64,6 @@
               "op": "days",
               "value": 1,
               "reason": "lingered-in-the-empty-hall"
-            },
-            {
-              "op": "sticker",
-              "value": "st-baldacum-palace",
-              "reason": "carried-the-emptiness-of-the-hall"
             }
           ]
         }
@@ -140,11 +135,6 @@
               "op": "days",
               "value": 1,
               "reason": "watched-the-gold-thread-woven"
-            },
-            {
-              "op": "sticker",
-              "value": "st-baldacum-brocade",
-              "reason": "learned-the-pattern-of-the-gold-thread"
             }
           ]
         }

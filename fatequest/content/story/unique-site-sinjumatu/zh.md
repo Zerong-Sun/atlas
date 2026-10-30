@@ -2,40 +2,44 @@
 unit: unique-site-sinjumatu
 lang: zh
 source: en
-source_rev: 9a0cd321184c
+source_rev: 52d7fbbee991
 status: translated
 translator: 人工校译
 notes: >
   场景据原文地理与物产演绎；具体人物与行动为新撰。保留费用、耗时和实际效果。
 stamps:
-  ev.ev_unique_sinjumatu.title: 2fd648eb393b
-  ev.ev_unique_sinjumatu.body: a751bd639f9e
-  ev.ev_unique_sinjumatu.choice_a: fd83c8f38d97
-  ev.ev_unique_sinjumatu.choice_a_result: 9741feacc157
-  ev.ev_unique_sinjumatu.choice_b: e1b346d132fd
-  ev.ev_unique_sinjumatu.choice_b_result: 784ddbd03ed1
+  ev.ev_unique_sinjumatu.title: e1daf1dbc2f6
+  ev.ev_unique_sinjumatu.body: f736f86294b1
+  ev.ev_unique_sinjumatu.choice_a: 88e69d0f6d94
+  ev.ev_unique_sinjumatu.choice_a_result: 2a044792b608
+  ev.ev_unique_sinjumatu.choice_b: fbd42dc2aafd
+  ev.ev_unique_sinjumatu.choice_b_result: 1eb38900d45c
 ---
 
 ## ev.ev_unique_sinjumatu.title
 
-河流分水处
+两班装货的船工
 
 ## ev.ev_unique_sinjumatu.body
 
-济宁城的南来河水在此分流，运货船各走不同支道。领工请你花一天调解两班船工争装货顺序；引水人则出售标好的水道图。
+济宁渡口，两班船工等着同一段码头。一班粮袋已装上车，另一班陶器怕雨，不能久放。领工宋伯请两班人说清船什么时候真能靠岸。粮班指远处一面帆；陶班的船还系在另一只后面。
+
+你问为何不轮流。宋伯说当然能，得趁天没变先讲好次序。陶班年轻人说碗是姑母烧的，磕坏一只都要被念叨。粮车夫说自家今晚也等着粮袋进棚。宋伯请两边各算装货要多久。等他们老实估过，争执也没刚才那么大。
+
+一位往淮阴走的车夫带着陆路纸，开价 2 银。宋伯让他先等，转头问你愿不愿帮两班人把靠埠次序说定。
 
 ## ev.ev_unique_sinjumatu.choice_a
 
-花一天调解两班船工
+花一天陪两班人排装货次序
 
 ## ev.ev_unique_sinjumatu.choice_a_result
 
-你听过双方说法，让两班人按次序靠埠。码头工人因此信任你，你也更懂得与陌生人交涉。
+你花一天听两班人把时间讲明白，再对着到岸的船排次序。陶器先入棚，粮车随后倒进埠头。宋伯当着两班人谢你，你也与码头的人熟了。
 
 ## ev.ev_unique_sinjumatu.choice_b
 
-付钱买引水人的水道图
+花 2 银买车夫的淮阴陆路纸
 
 ## ev.ev_unique_sinjumatu.choice_b_result
 
-你付了200银币。引水人指出通往淮阴的支道，也让你看清分流处的水势。
+你花 2 银买下路纸。车夫指出往淮阴的陆路与他上次核过的车站。宋伯又添一笔码头最忙的时辰，你把这段路记入图中。

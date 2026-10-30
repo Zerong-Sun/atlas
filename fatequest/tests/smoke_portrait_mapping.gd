@@ -13,7 +13,7 @@ func _init() -> void:
 	var host := MapArt.event_portrait(meal, "islamic", 0)
 	_check(host != null, "Reviewed meal host must resolve")
 	_check(host == MapArt.event_portrait(meal, "latin", 4), "Explicit character stays the same across slots/cultures")
-	_check(MapArt.event_portrait({"id": "ev-alexandria-welcome-gate"}, "islamic") == null, "Gate porter must not be a merchant")
+	_check(MapArt.event_portrait({"id": "ev-alexandria-welcome-gate"}, "islamic") == MapArt.tex("npc-alexandria-porter"), "Gate porter uses the reviewed single-person portrait")
 	_check(MapArt.event_portrait({"job": "guide", "gender": "f"}, "islamic") == null, "Female job must not borrow male portrait")
 	_check(MapArt.event_portrait({"portrait": "missing-art"}, "islamic") == null, "Missing explicit portrait must fail safely")
 	var guide := MapArt.retainer_portrait("npc-baldacum-mentor", "islamic")

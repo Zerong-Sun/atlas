@@ -2,7 +2,7 @@
 unit: cambaet
 lang: zh
 source: en
-source_rev: c04996be065f
+source_rev: cec0fe9c9579
 status: translated
 translator: 人工校译
 notes: >
@@ -19,13 +19,13 @@ stamps:
   ev.ev_cambaet_entry.choice_1_result: 53675a222fc9
   ev.ev_cambaet_entry.choice_2_result: ebc24828732b
   ev.cambaet.site_gap.title: 3b7df0664b69
-  ev.cambaet.site_gap.body: ae13525de33c
+  ev.cambaet.site_gap.body: d8ecab9beaec
   ev.cambaet.site_gap.choice.route: b1a4433d38fe
   ev.ev_cambaet_site_gap.choice_1_result: ee3a04a67777
   ev.cambaet.site_gap.choice.interact: 7d2b2e59b8ab
   ev.ev_cambaet_site_gap.choice_2_result: 516e69934c24
   ev.cambaet.tidemark.title: 25b5c827b4a7
-  ev.cambaet.tidemark.body: 8c0775ccef61
+  ev.cambaet.tidemark.body: 541e50470cec
   ev.cambaet.tidemark.choice.help: a0bbb706880a
   ev.cambaet.tidemark.result.help: 077ed4a82f50
   ev.cambaet.tidemark.choice.route: a2f29ab66abf
@@ -66,7 +66,7 @@ stamps:
 
 ## ev.cambaet.site_gap.body
 
-染坊里，学徒把两匹布并排摊开。一匹蓝得均匀，另一匹在折边附近露出浅浅的条纹。“客人说原本应该一样。”他对姑母说。姑母问他，第二匹布下缸前有没有展开。他盯着折痕：“我以为颜色能透进去。”姑母没训他，只倒来一盆水，让他先把两匹布的边角洗一洗，看颜色究竟落得多深。你问，布在染缸里要待多久。她拎起湿布的一角：“看布料，也看晾干后的边。要是颜色只浮在外面，先洗干净，再染一回才有用。”学徒去提清水。姑母顺手把去塞梅纳特的路牌摆正，免得来取布的客人走错门。
+染坊里，学徒把两匹布并排摊开。一匹蓝得均匀，另一匹在折边附近露出浅浅的条纹。“客人说原本应该一样。”他对姑母说。姑母问他，第二匹布下缸前有没有展开。他盯着折痕：“我以为颜色能透进去。”姑母没训他，只倒来一盆水，让他先把两匹布的边角洗一洗，看颜色究竟落得多深。你问，布在染缸里要待多久。她拎起湿布的一角：“看布料，也看晾干后的边。要是颜色只浮在外面，先洗干净，再染一回才有用。”学徒去提清水。姑母顺手把去塞梅纳特的路牌摆正，免得来取布的客人走错门。学徒问今天要不要告诉客人。姑母说得说清楚，等布晾干后，客人才好决定要不要再染一次。
 
 ## ev.cambaet.site_gap.choice.route
 
@@ -90,7 +90,7 @@ stamps:
 
 ## ev.cambaet.tidemark.body
 
-泥滩边，船夫的女儿站在一排木桩旁。一根桩松了，滚到货篮边。“爹一定会说是潮水冲的，”她嘀咕，“可绳子是我昨天系的。”父亲拎着绳圈走来，看了看结：“你把短的那头留在外面，滑开了。”女儿问，能不能赶在下一条船到来前把桩立回去。他说能，又发现木桩上的红漆已经磨光。搬货人靠那道颜色辨认浅船该在哪儿靠岸。女儿要去母亲摊上拿颜料。父亲说：“拿红的。”她看了他一眼：“渡口就剩那一罐，其他的都让您刷门了。”父亲笑了，把绳圈递给她。你可以扶住木桩，等他们重新打牢；也可以听船夫讲讲货物往塔纳走的水边路。
+泥滩边，船夫的女儿站在一排木桩旁。一根桩松了，滚到货篮边。“爹一定会说是潮水冲的，”她嘀咕，“可绳子是我昨天系的。”父亲拎着绳圈走来，看了看结：“你把短的那头留在外面，滑开了。”女儿问，能不能赶在下一条船到来前把桩立回去。他说能，又发现木桩上的红漆已经磨光。搬货人靠那道颜色辨认浅船该在哪儿靠岸。女儿要去母亲摊上拿颜料。父亲说：“拿红的。”她看了他一眼：“渡口就剩那一罐，其他的都让您刷门了。”父亲笑了，把绳圈递给她。你可以扶住木桩，等他们重新打牢；也可以听船夫讲讲货物往塔纳走的水边路。女儿顺着木桩又看了一遍，发现还有一根红记快磨没了。她把颜料罐放在那边，打算先立好眼前这根再去补。
 
 ## ev.cambaet.tidemark.choice.help
 

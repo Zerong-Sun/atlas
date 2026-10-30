@@ -2,7 +2,7 @@
 unit: chinangli
 lang: zh
 source: en
-source_rev: d30fd6bb01d7
+source_rev: c0e2b9ab126d
 status: translated
 translator: 人工校译
 notes: >
@@ -12,38 +12,44 @@ notes: >
 
 stamps:
   city.chinangli.name: 21805a31272b
-  ev.chinangli.entry.choice.market: e4eee3409b41
-  ev.chinangli.entry.choice.pass: dc7f77ef08d8
-  ev.chinangli.entry.choice.shrine: 98e20d47c9a5
-  ev.chinangli.entry.body: f2aeb40599eb
-  ev.chinangli.entry.title: 8988a83bcd24
-  ev.chinangli.a.title: 59ba92fc8bba
-  ev.chinangli.a.body: 51beec3c8509
-  ev.chinangli.a.choice.quay: 4d4f9f05d6ed
-  ev.chinangli.a.choice.silk: 3c6f40a87cf1
-  ev.chinangli.a.choice.spice: 0a56b128a768
-  ev.chinangli.b.title: 59fa1279cfd5
-  ev.chinangli.b.body: 712550c2613a
-  ev.chinangli.b.choice.exchange: de38ff0ada95
-  ev.chinangli.b.choice.porcelain: a922f76c07a9
-  ev.chinangli.b.choice.clerks: ae1d97a38fa0
-  ev.ev_chinangli_entry.choice_1_result: 18f616f700db
-  ev.ev_chinangli_entry.choice_2_result: 812959af1214
-  ev.ev_chinangli_entry.choice_3_result: f963e415c15c
-  ev.ev_chinangli_a.choice_1_result: a8081f6a0474
-  ev.ev_chinangli_a.choice_2_result: e2c6ca308942
-  ev.ev_chinangli_a.choice_3_result: e4b543baea07
-  ev.ev_chinangli_b.choice_1_result: cc750383a1ab
-  ev.ev_chinangli_b.choice_2_result: a2ffbaf0ce56
-  ev.ev_chinangli_b.choice_3_result: 01c6ec1457be
-  ev.ev_chinangli_a_followup.title: 3b4ce69b5150
-  ev.ev_chinangli_a_followup.body: bf2ab3a2558a
-  ev.ev_chinangli_a_followup.choice_1: 073c237d39b4
-  ev.ev_chinangli_a_followup.choice_1_result: adc182774d28
-  ev.ev_chinangli_a_followup.choice_2: db60506e8d5e
-  ev.ev_chinangli_a_followup.choice_2_result: 0fa6cedd7a98
-  ev.ev_chinangli_a_followup.choice_3: 92eca1e43923
-  ev.ev_chinangli_a_followup.choice_3_result: 293f5f04be80
+  ev.chinangli.entry.body: cd98eca2438c
+  ev.chinangli.entry.choice.market: bbb606c513c3
+  ev.chinangli.entry.choice.pass: 79122b8f1eda
+  ev.chinangli.entry.choice.shrine: 117bb0a04707
+  ev.chinangli.entry.title: 16707cfc1577
+  ev.chinangli.a.title: fe3d009f2367
+  ev.chinangli.a.body: 067ba8df8af1
+  ev.chinangli.a.choice.quay: b50a1452bbf4
+  ev.chinangli.a.choice.silk: ca835b6df382
+  ev.chinangli.a.choice.spice: e99ee2dc9271
+  ev.chinangli.b.title: cf16f450876f
+  ev.chinangli.b.body: 8bcfba8ca550
+  ev.chinangli.b.choice.exchange: 9d7761cfea7f
+  ev.chinangli.b.choice.porcelain: 3fe0d3178fbb
+  ev.chinangli.b.choice.clerks: e49d391cd80f
+  ev.ev_chinangli_entry.choice_1_result: 7848fafc9a67
+  ev.ev_chinangli_entry.choice_2_result: 7d4da751c098
+  ev.ev_chinangli_entry.choice_3_result: ec2f3e649d8c
+  ev.ev_chinangli_a.choice_1_result: 91282a63c203
+  ev.ev_chinangli_a.choice_2_result: feff7404fa46
+  ev.ev_chinangli_a.choice_3_result: a7ac0e1c8025
+  ev.ev_chinangli_b.choice_1_result: 65349b46293d
+  ev.ev_chinangli_b.choice_2_result: 57ed24c9bded
+  ev.ev_chinangli_b.choice_3_result: f790424dcbd7
+  ev.ev_chinangli_a_followup.title: e0f532fdf345
+  ev.ev_chinangli_a_followup.body: 3155f804fe94
+  ev.ev_chinangli_a_followup.choice_1: 881ed7e695e2
+  ev.ev_chinangli_a_followup.choice_1_result: 01806febbc1c
+  ev.ev_chinangli_a_followup.choice_2: fcb267f1cde5
+  ev.ev_chinangli_a_followup.choice_2_result: 150b3cc383ed
+  ev.ev_chinangli_a_followup.choice_3: 0c9d0a58e14e
+  ev.ev_chinangli_a_followup.choice_3_result: 3bcff03518cc
+  ev.chinangli.rope-mark.title: 430834b5554d
+  ev.chinangli.rope-mark.body: 3a9f0e19c974
+  ev.chinangli.rope-mark.choice.check: da923d211a4d
+  ev.chinangli.rope-mark.result.check: addb659237c9
+  ev.chinangli.rope-mark.choice.stay: 33a1c38daeda
+  ev.chinangli.rope-mark.result.stay: ada27bb5fe6a
 ---
 
 ## city.chinangli.name
@@ -52,131 +58,152 @@ stamps:
 
 ## ev.chinangli.entry.choice.market
 
-去集市逛逛
+留一天逛河边集市
 
 ## ev.chinangli.entry.choice.pass
 
-不耽搁，直接出城
+穿过长芦继续走
 
 ## ev.chinangli.entry.choice.shrine
 
-去佛寺看看
+去看守所在的寺院
 
 ## ev.chinangli.entry.body
 
-长芦是南行路上的一座大城，归大汗统治，当地人使用纸币。城里有条宽阔的大河，丝绸、香料和其他贵重货物都沿河运来运去。再往南走五天，沿途会经过许多城镇和村庄，最后抵达济宁。济宁过去曾是强盛王国的都城，后来被大汗征服，如今仍是这一带最繁荣的城市之一，商人云集，丝绸多得惊人。
+长芦的河边集市上，商人把账本挂在棚下，脚夫正在卸布。他的儿子端来一小碗细沙，要撒在刚写的墨上。一阵风掀起棚布，男孩抢在账本掉进湿货前扶住。“拿绳提，别抓纸页。”父亲说。脚夫搬来几罐香料，问该放哪里。商人核过罐上姓名，把货送往对街另一家铺子。你问陆路去汗八里从哪个门出，脚夫刚从那边来，报了城门的名字。男孩问父亲，河船的货和陆车的货为什么记在同一本里。“同一个买家两种都会收，分栏就行。”商人指给他看。路过的寺院看守来取订好的布，说待会儿还在寺里，若想认路可以去问。男孩明天忙完点货，也愿意带你走遍摊位。他把账本往高处再挂了一些，免得风又卷到纸角。
 
 ## ev.chinangli.entry.title
 
-抵达长芦
+河市里的干账本
 
 ## ev.chinangli.a.title
 
-大河上的货运
+河埠头的两批丝
 
 ## ev.chinangli.a.body
 
-长芦的大河上，丝绸、香料和贵重货物来来往往，几乎没有停过。码头堆着一捆捆货物，船工把船系在岸边，高声喊着南北各城的名字。你站在河边看了一会儿，便能听出哪条船正要上行，哪条船准备顺流而下。
-
-船工把缆绳绕过木桩，唱起长芦水上的行歌： “旗朝北，船上行； 帆收半，等渡口； 丝绸压舱，香料靠里； 过一处闸，货单添一行。” 他解释，河面上认船要看旗向、帆和货位：“重货放低，怕潮的货往里收。沿大河往来，经过每个渡口都记一笔，下一站就能照账接货。”
+河埠头的经纪人有两批丝，一批刚从船上卸下，一批由车送来。学徒把两批都写在船货主人的名下。“赶车的主人等会儿会来要收据。”经纪人说。学徒跑到车边查漆记，回来指给经纪人看：“船货的记号是圆的，这个有个角。”经纪人说：“那就给赶车人单列一行。”她才改好账。你问为什么两批丝的价不同。经纪人各拆开一角，让你摸摸织纹，一批更厚，也在干燥处放了更久。旁边等着的香料商问北去汗八里的车队何时走。经纪人认识刚从那边来的车夫，让学徒去请。学徒想留一天点清埠头的货，免得再与陆车记混。经纪人答应，条件是每个姓名都得对过记号。香料商说他知道往上都和河间府的陆路，等车夫来时可以指给你看。
 
 ## ev.chinangli.a.choice.quay
 
-沿码头走走，数数上行的船
+留一天帮他们核河埠头货单
 
 ## ev.chinangli.a.choice.silk
 
-买一匹河运来的丝绸
+买一整件丝绸
 
 ## ev.chinangli.a.choice.spice
 
-问问下行的船运什么香料
+问香料商内陆的路
 
 ## ev.chinangli.b.title
 
-长芦的纸币买卖
+账摊上的一张纸票
 
 ## ev.chinangli.b.body
 
-长芦码头边，摊主收的都是盖着大汗印记的纸钞。书吏正替商人换一张磨旧的钞票，账房一边清点丝绸一边提醒你：“这里按货收税，不是每个客人一口价。货价、数量和税额要分开算，先问清再决定往南运不运。”
-
-货栈女掌柜领伙计唱起点货小调：“丝卷靠里，香料朝上；来船写一栏，去处写一栏。”她把货单推到你面前：“丝绸放里层，香料封紧。货单写清从哪条船来、送到哪里，下一家货栈才知道该腾哪间仓。”
+铺子书吏带来一张纸票，边角磨旧了，开票商人的印记还清楚。书吏的女儿问铺子要不要收。“得先对上印和姓名。”父亲说。开票的商人在两条街外，他们派人去核。你问旅人怎么知道哪张纸票在这家能用，书吏指给你看印旁的商号和开票日期，也说并非每个摊都收每家的票。隔壁卖瓷器的人等着，手里有一整件包好的货，谁愿付双方都接受的价钱就能买。核票的人回来：“开票商认这笔数。”女儿又看一遍旧票：“那我能记在他的名下了。”她问过父亲，才小心写进账。书吏问你要不要留一天看他们怎样对票，或先看看那件瓷器。你还可以问他几处票面磨损时怎样辨认，他便把旧票和登记册摊在桌上。
 
 ## ev.chinangli.b.choice.exchange
 
-看看摊位上的纸币兑换
+留一天看他们怎样核纸票
 
 ## ev.chinangli.b.choice.porcelain
 
-用纸币买只小瓷碗
+买一整件包好的瓷器
 
 ## ev.chinangli.b.choice.clerks
 
-问书吏旧钞怎么换新钞
+问磨损的纸票怎样验
 
 ## ev.ev_chinangli_entry.choice_1_result
 
-你没耽搁，直接出了城。
+男孩把账本挂高，远离湿货。脚夫指给你看往汗八里去的陆路城门，你穿过长芦时，商人还在核布与香料罐的数。
 
 ## ev.ev_chinangli_entry.choice_2_result
 
-你在河埠头看人卸香料。船工说：“长芦往南五天到济宁，沿途镇子多；要搭船，先问这批货何时卸完。”
+你又留了一天。商人的儿子带你看哪些货从河上来，哪些从车上来，还认识几位给市场记账的人。下一批香料罐到时，他不用父亲提醒就找对了账栏。
+
 ## ev.ev_chinangli_entry.choice_3_result
 
-你去佛寺看了看。僧人送你一枚小印记：“拿着吧，留作这趟来寺里的纪念。”门口的摊主见你出来，招呼道：“要换纸钞就去街口那家，掌柜认得外地钱。”
+寺院里，看守正给来客摆水。你帮她把门前的东西挪开，才进去问候。她指给你看附近人家聚集的地方，又送你一个纪念来访的小印记。商人订的布也正好送到。
 
 ## ev.ev_chinangli_a.choice_1_result
 
-你沿码头数了数上行的船。船工说，有些货会一路送到汗八里。
+你又留了一天，学徒每看清一批货的记号，才写货主姓名。来自汗八里的车夫到了，说清那边走的陆路。傍晚学徒已经不会把车货和船货混写，经纪人请你再看看他的路账。
 
 ## ev.ev_chinangli_a.choice_2_result
 
-你买下一匹河运来的丝绸，付了 10000 钱币。
+你验过丝绸，付清整件货款。学徒把你的名字系在正确的包布上。送隔壁货的车主提起去河间府的路，经纪人请你稍等，他要拿自己的路账来核。
 
 ## ev.ev_chinangli_a.choice_3_result
 
-你问清下行船运的香料。船夫指着舱口说：“往北接上都得换一条水路。香料装靠上的舱位，水汽不容易沾进去。”
+香料商指给你看哪些罐从南北陆路的车上来，还提起自己和兄弟曾走过上都。学徒把城名抄进自己的表，请他再核一遍写法。
 
 ## ev.ev_chinangli_b.choice_1_result
 
-你看商人用纸币交埠头税。书吏还送你一张纸钞样品，留作纪念。
+你又留了一天，看书吏照开票商的印和姓名一张张核。女儿给你看一张停用的旧样票，看完便收回登记册旁。你离开时，已知道这家铺子会接哪种票。
 
 ## ev.ev_chinangli_b.choice_2_result
 
-你用纸币买下小瓷碗，付了 4000 钱币。摊主把碗包好，又问：“认得钞上的印记吧？街角那家客栈也收外地钱，今晚可以去问问。”
+你验过包好的瓷器，用卖家肯收的方式付清整件货款。他请书吏核过收款，再系牢包布，也把附近能替你搬货的商人介绍给你。
 
 ## ev.ev_chinangli_b.choice_3_result
 
-你问书吏如何换新钞。他拿一张磨损的旧钞给你看：“带到官柜来，核过印记就能换。街上的钱庄不收旧钞，别拿错地方。”
+书吏把一张磨旧的纸票和新盖的商号印记放在一起。女儿指出必须与登记册对上的姓名和日期。你再问两处细节，他们都拿亲手办过的票给你看。
 
 ## ev.ev_chinangli_a_followup.title
 
-长芦：河商的账本
+经纪人的两栏路账
 
 ## ev.ev_chinangli_a_followup.body
 
-大河码头边，一位经纪人正替开往汗八里的船估算丝绸和香料的价钱。他翻开账本，指着沿河的关卡说：“这条河把每一道关都记得清清楚楚。买了丝绸却不问到河间、上都要走几天，逆流走起来可就两眼一抹黑了。”
+经纪人把路账放在改好的货单旁，一栏记河船把货送到埠头，另一栏记货车继续往哪里走。学徒指着你刚才验过的丝绸：“这批在车货这一行，有漆记。”经纪人点头：“讲讲你怎么找着的。”她把账本转给你看，指着赶车人的名字：“我先去车上核了漆记。”卖丝人带来另一整件货，等她合上账再谈买卖。你问往汗八里的陆路，刚从那边来的车夫画出自己上回歇脚的地方；经纪人又补上去河间府的岔口。门边的香料商说另有车队明天点完货后去上都。学徒想亲自核那批货，请你若有空就留下。经纪人把粉笔板交给她，账本仍摊开，免得算错时没处查。
 
 ## ev.ev_chinangli_a_followup.choice_1
 
-按账本上的河运价买匹丝
+再买一整件丝绸
 
 ## ev.ev_chinangli_a_followup.choice_1_result
 
-他按上游市集认可的价格卖给你一匹丝绸，还替你封好，方便装船。
+卖丝人拆开第二件的一角给你验。你付清整件货款，学徒把你的姓名写在正确的车货记号旁。经纪人趁重新封包时，指给你看去河间府的岔口。
 
 ## ev.ev_chinangli_a_followup.choice_2
 
-问清去汗八里的水路
+问车夫去汗八里的陆路
 
 ## ev.ev_chinangli_a_followup.choice_2_result
 
-老船夫把北上的水路讲得很清楚：沿河可到汗八里，也能转往河间。
+车夫把汗八里标到你的图上，说了上回进城走哪个陆路城门。学徒拿他的歇脚点与路账比，补上一处漏掉的地名。你带着更清楚的货路离开。
 
 ## ev.ev_chinangli_a_followup.choice_3
 
-跟书吏清点一天香料箱
+留一天帮学徒点香料箱
 
 ## ev.ev_chinangli_a_followup.choice_3_result
 
-你和书吏在货箱间清点香料。他顺口说：“上都最近来了几支南方商队，往北的船舱很快就会腾出来。你要走的话，趁这两天去问船主。”
+你又留了一天，与学徒逐箱核香料。她把河上来的和陆车来的分栏写好，最后的数也与经纪人对上。去上都的车夫来取货时，把那座城的名字告诉了你。
+
+## ev.chinangli.rope-mark.title
+
+系给正确买家的绳结
+
+## ev.chinangli.rope-mark.body
+
+河市外，一名脚夫弄丢了客人包裹上的彩绳。学徒想随便找根备用的系回去，师傅拦住：“颜色是认买家的。”眼下有两件包裹长得相似，只有一件今天要送到布铺。你帮他们拆开一点外布，看见下面还留着铺子自己的印。学徒照送货板找到对应姓名。布铺的姑娘来了，说母亲等着那件货收完订单。她认得自家的印，却请脚夫把原本的彩绳也系回去，下一位搬货人才不会送错。老脚夫让学徒自己从备用绳里挑。“另一件呢？”他问。学徒照记号报了街名。“好，那件的绳别动。”老脚夫说。姑娘抱着空布袋站在旁边，等他答对才伸手收货。学徒请你现在陪他送一趟；师傅说你若明天再来，也能学这几条街用的绳记。
+
+## ev.chinangli.rope-mark.choice.check
+
+陪学徒送对这件包裹
+
+## ev.chinangli.rope-mark.result.check
+
+你和学徒把包裹送到布铺。姑娘的母亲核过自家的印，谢你们没把货送错。回到河市，老脚夫听了经过，把你的名字和学徒一起写在送货板上。
+
+## ev.chinangli.rope-mark.choice.stay
+
+明天再来学几条街的绳记
+
+## ev.chinangli.rope-mark.result.stay
+
+你第二天回来，老脚夫摆出几色绳，让学徒按街道分好新包裹，你照送货板替他核。到午间，学徒已能自己讲清每种记号，你也看懂一根细绳怎样帮人把账和货对上。

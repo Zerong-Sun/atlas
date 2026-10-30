@@ -2,7 +2,7 @@
 unit: calatu
 lang: zh
 source: en
-source_rev: 1678709d3eb3
+source_rev: 384f243f1a5d
 status: translated
 translator: 人工校译
 notes: >
@@ -23,7 +23,7 @@ stamps:
   ev.calatu.a.choice.buy_pepper: a00feb2c2c4d
   ev.calatu.a.choice.count_ships: b581d9ca221f
   ev.calatu.b.title: 7952b2579206
-  ev.calatu.b.body: 6151495444b5
+  ev.calatu.b.body: 699d12e2281f
   ev.calatu.b.choice.hear_refuge: c5b9ac4df197
   ev.calatu.b.choice.buy_dates: 09662b492b66
   ev.calatu.b.choice.ask_inland: dbfdeb094efe
@@ -37,7 +37,7 @@ stamps:
   ev.ev_calatu_b.choice_2_result: 67e0b6c0a881
   ev.ev_calatu_b.choice_3_result: fc33203818da
   ev.ev_calatu_a_followup.title: 339954ab9c35
-  ev.ev_calatu_a_followup.body: da17b63e7479
+  ev.ev_calatu_a_followup.body: 3cb1bc5607e7
   ev.ev_calatu_a_followup.choice_1: 79be6a410417
   ev.ev_calatu_a_followup.choice_1_result: f123fb84193b
   ev.ev_calatu_a_followup.choice_2: a7d70d202319
@@ -45,7 +45,7 @@ stamps:
   ev.ev_calatu_a_followup.choice_3: c0b963514ecc
   ev.ev_calatu_a_followup.choice_3_result: aa4b1d93fcfe
   ev.calatu.shoemaker.title: 67b7f82840a4
-  ev.calatu.shoemaker.body: db0a42ebf4e0
+  ev.calatu.shoemaker.body: e749a5bf4ae2
   ev.calatu.shoemaker.choice.mend: 11fd4a2fc365
   ev.calatu.shoemaker.result.mend: 85dc2ff36d11
   ev.calatu.shoemaker.choice.walk: 34ad758823ec
@@ -102,7 +102,7 @@ stamps:
 
 ## ev.calatu.b.body
 
-粮仓门口，守卫在核对留给城墙上值守人的粮。年轻搬货人拿错了袋子大小，想悄悄换回去。守卫叫他：“把两袋的重量都写上，我们一起改。”他这才承认，自己急着去码头接妹妹。你问守卫，为何要留得这么仔细。他指着城墙和港口：“海湾有事时，忽鲁谟斯的人会来这儿避一避。墙能挡住人，也得有饭给墙后的人吃。”一位卖椰枣的妇人说，她的小船今早才带货到港，问该卸在哪里。守卫写好新账，叫搬货人去帮她。出门前，他愿把海岸路和内陆驼队常去的地方指给你看。搬货人把改好的账板抱在胸前，怕走到码头又弄丢了。
+粮仓门口，守卫在核对留给城墙上值守人的粮。年轻搬货人拿错了袋子大小，想悄悄换回去。守卫叫他：“把两袋的重量都写上，我们一起改。”他这才承认，自己急着去码头接妹妹。你问守卫，为何要留得这么仔细。他指着城墙和港口：“海湾有事时，忽鲁谟斯的人会来这儿避一避。墙能挡住人，也得有饭给墙后的人吃。”一位卖椰枣的妇人说，她的小船今早才带货到港，问该卸在哪里。守卫写好新账，叫搬货人去帮她。出门前，他愿把海岸路和内陆驼队常去的地方指给你看。搬货人把改好的账板抱在胸前，怕走到码头又弄丢了。搬货人说要让妹妹到粮仓门口等，免得在忙乱的码头走散。守卫又把地点念给他听，叫他别说错门。
 
 ## ev.calatu.b.choice.hear_refuge
 
@@ -158,7 +158,7 @@ stamps:
 
 ## ev.ev_calatu_a_followup.body
 
-下一条船系稳时，守城人又叫你到墙边来。他的助手写了一张新船单，卖胡椒的女商人正等着看货到了没有。“先看货记。”守城人提醒。少年眯眼瞧码头上涂过记号的木板，终于找到了对应的船。女商人冲他笑，问这星期去卡玛迪的路忙不忙。守城人说：“这个问下面那位驼队主人。我知道船什么时候来，他知道内陆的井。”驼队主人上来，带着一包愿意出售的胡椒。他和女商人说话时，守城人顺手给你指了海湾对面的忽鲁谟斯和沿海的佐法尔。助手各放一颗小石子压住图上的字，免得风把纸折起来。
+下一条船系稳时，守城人又叫你到墙边来。他的助手写了一张新船单，卖胡椒的女商人正等着看货到了没有。“先看货记。”守城人提醒。少年眯眼瞧码头上涂过记号的木板，终于找到了对应的船。女商人冲他笑，问这星期去卡玛迪的路忙不忙。守城人说：“这个问下面那位驼队主人。我知道船什么时候来，他知道内陆的井。”驼队主人上来，带着一包愿意出售的胡椒。他和女商人说话时，守城人顺手给你指了海湾对面的忽鲁谟斯和沿海的佐法尔。助手各放一颗小石子压住图上的字，免得风把纸折起来。少年助手请女商人再说一遍胡椒袋上的记号。他念出来，在货板上找到同样的画痕，才让人把袋子搬过去。
 
 ## ev.ev_calatu_a_followup.choice_1
 
@@ -190,7 +190,7 @@ stamps:
 
 ## ev.calatu.shoemaker.body
 
-城墙旁的鞋匠答应给守卫的女儿补凉鞋，好让她走去祖母家。姑娘拿来鞋，一根带子已经松出来。“你又把它自己系上了？”鞋匠问。她答：“我以为能撑到这儿。”父亲守着港口闸门，走不开，托她带来一点修鞋钱。鞋匠拉了拉旧皮，说能换一段新带子。姑娘问能不能还用旧的：那是母亲留下的鞋。鞋匠迎着光检查，找出搭扣旁一截还结实的皮。“这段能用。坐下说说，你要走多远？”姑娘说了要过的街巷和祖母家的门。你可以帮鞋匠裁下、装好那截皮，也可以等鞋补完，陪姑娘走到祖母家。
+城墙旁的鞋匠答应给守卫的女儿补凉鞋，好让她走去祖母家。姑娘拿来鞋，一根带子已经松出来。“你又把它自己系上了？”鞋匠问。她答：“我以为能撑到这儿。”父亲守着港口闸门，走不开，托她带来一点修鞋钱。鞋匠拉了拉旧皮，说能换一段新带子。姑娘问能不能还用旧的：那是母亲留下的鞋。鞋匠迎着光检查，找出搭扣旁一截还结实的皮。“这段能用。坐下说说，你要走多远？”姑娘说了要过的街巷和祖母家的门。你可以帮鞋匠裁下、装好那截皮，也可以等鞋补完，陪姑娘走到祖母家。姑娘把凉鞋放到另一只脚旁量了量。鞋匠请她先在院子里走几步，再决定从旧带上裁下多长的一段。
 
 ## ev.calatu.shoemaker.choice.mend
 

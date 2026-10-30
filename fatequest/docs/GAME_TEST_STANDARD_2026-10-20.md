@@ -47,9 +47,9 @@
 ```bash
 cd fatequest
 node tools/validate/validate.mjs --quiet
-godot --headless --path . --script tests/run_tests.gd
-for t in tests/smoke_*.gd; do godot --headless --path . --script "$t" || exit 1; done
-godot --headless --path . --script tests/smoke_gameplay_contracts.gd
+node tools/test/run_isolated_godot.mjs tests/run_tests.gd
+node tools/test/run_smokes_isolated.mjs
+node tools/test/run_isolated_godot.mjs tests/smoke_gameplay_contracts.gd
 ```
 
 自动测试通过不等于声音历史适切性或全城市人工试玩签署；这两项仍需保留人工记录。

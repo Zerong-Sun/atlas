@@ -233,6 +233,380 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-coigangiu-tablet",
+      "kind": "site",
+      "title": "ev.coigangiu.tablet.title",
+      "body": "ev.coigangiu.tablet.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "coigangiu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.coigangiu.tablet.choice.return",
+          "resultText": "ev.coigangiu.tablet.result.return",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coigangiu",
+              "reason": "returned-childs-writing-tablet"
+            }
+          ]
+        },
+        {
+          "label": "ev.coigangiu.tablet.choice.wait",
+          "resultText": "ev.coigangiu.tablet.result.wait",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-childs-lessons"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "learned-family-school-story"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-coiganju-lantern",
+      "kind": "site",
+      "title": "ev.coiganju.lantern.title",
+      "body": "ev.coiganju.lantern.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "coiganju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.coiganju.lantern.choice.return",
+          "resultText": "ev.coiganju.lantern.result.return",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "coiganju",
+              "reason": "returned-borrowed-lantern"
+            }
+          ]
+        },
+        {
+          "label": "ev.coiganju.lantern.choice.learn",
+          "resultText": "ev.coiganju.lantern.result.learn",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-lantern-repair"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "shared-work-with-lantern-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-etzina-falcon-hood",
+      "kind": "site",
+      "title": "ev.etzina.falcon-hood.title",
+      "body": "ev.etzina.falcon-hood.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "etzina"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.etzina.falcon-hood.choice.stitch",
+          "resultText": "ev.etzina.falcon-hood.result.stitch",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "etzina",
+              "reason": "helped-falconer-stitch-hood"
+            }
+          ]
+        },
+        {
+          "label": "ev.etzina.falcon-hood.choice.watch",
+          "resultText": "ev.etzina.falcon-hood.result.watch",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-falcon-training"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "learned-falconers-patience"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-fuju-sugar-jar",
+      "kind": "site",
+      "title": "ev.fuju.sugar-jar.title",
+      "body": "ev.fuju.sugar-jar.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "fuju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.fuju.sugar-jar.choice.taste",
+          "resultText": "ev.fuju.sugar-jar.result.taste",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "learned-to-judge-sugar-batches"
+            }
+          ]
+        },
+        {
+          "label": "ev.fuju.sugar-jar.choice.stir",
+          "resultText": "ev.fuju.sugar-jar.result.stir",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-sugar-cooking"
+            },
+            {
+              "op": "vitality",
+              "value": 8,
+              "reason": "ate-and-rested-with-sugar-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-campichu-cart-axle",
+      "kind": "site",
+      "title": "ev.campichu.cart-axle.title",
+      "body": "ev.campichu.cart-axle.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "campichu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.campichu.cart-axle.choice.repair",
+          "resultText": "ev.campichu.cart-axle.result.repair",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "campichu",
+              "reason": "helped-family-repair-cart-axle"
+            }
+          ]
+        },
+        {
+          "label": "ev.campichu.cart-axle.choice.stay",
+          "resultText": "ev.campichu.cart-axle.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-cart-trial"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-cart-load-balance"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-chinangli-rope-mark",
+      "kind": "site",
+      "title": "ev.chinangli.rope-mark.title",
+      "body": "ev.chinangli.rope-mark.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "chinangli"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.chinangli.rope-mark.choice.check",
+          "resultText": "ev.chinangli.rope-mark.result.check",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinangli",
+              "reason": "helped-porter-restore-rope-mark"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinangli.rope-mark.choice.stay",
+          "resultText": "ev.chinangli.rope-mark.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-learn-rope-marks"
+            },
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "learned-cargo-marking-system"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kenjanfu-oilcloth",
+      "kind": "site",
+      "title": "ev.kenjanfu.oilcloth.title",
+      "body": "ev.kenjanfu.oilcloth.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "kenjanfu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.kenjanfu.oilcloth.choice.sew",
+          "resultText": "ev.kenjanfu.oilcloth.result.sew",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "kenjanfu",
+              "reason": "helped-oilcloth-maker-prepare-cover"
+            }
+          ]
+        },
+        {
+          "label": "ev.kenjanfu.oilcloth.choice.stay",
+          "resultText": "ev.kenjanfu.oilcloth.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-for-oilcloth-test"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-pack-goods-against-rain"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-cambaluc-oil-lamp",
+      "kind": "site",
+      "title": "ev.cambaluc.oil-lamp.title",
+      "body": "ev.cambaluc.oil-lamp.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "cambaluc"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.cambaluc.oil-lamp.choice.repair",
+          "resultText": "ev.cambaluc.oil-lamp.result.repair",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "cambaluc",
+              "reason": "helped-lamp-maker-deliver-safe-lamps"
+            }
+          ]
+        },
+        {
+          "label": "ev.cambaluc.oil-lamp.choice.stay",
+          "resultText": "ev.cambaluc.oil-lamp.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-to-test-lamp-wicks"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-carry-oil-lamps-without-spilling"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

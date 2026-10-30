@@ -2,7 +2,7 @@
 unit: cachanfu
 lang: zh
 source: en
-source_rev: f5a8dd09ccec
+source_rev: ecbade83452d
 status: translated
 translator: 人工校译
 notes: >
@@ -19,7 +19,7 @@ stamps:
   ev.ev_cachanfu_entry.choice_1_result: 53775fc742ff
   ev.ev_cachanfu_entry.choice_2_result: d19405800d74
   ev.ev_gap_cachanfu.title: 619b87a65ef3
-  ev.ev_gap_cachanfu.body: 099824423216
+  ev.ev_gap_cachanfu.body: 86c2e799f226
   ev.ev_gap_cachanfu.choice.route: 2c6de1b1e3d3
   ev.ev_gap_cachanfu.choice.route_result: f6f707bb604c
   ev.ev_gap_cachanfu.choice.scene: 620690ac2ce7
@@ -66,7 +66,7 @@ stamps:
 
 ## ev.ev_gap_cachanfu.body
 
-渡口的船夫摘下两块旧木牌，一块记水位，一块记什么风向会让渡船难走。侄子想把两块一起重描，可旧字磨得快看不清了。“先问用牌的人最想看什么。”船夫说。提篮的妇人说，带骡子下河滩前，她会先找水位线。船工说，空船受风时更要看风牌。孩子请你扶起一块牌，好量量挂在那儿能不能看见。你发现低处的挂钩还在涨水能碰到的地方，他便把钩往上挪了一掌，问叔父路过的人还能不能读。船夫站到旅人走的小路上看过，点点头。妇人也试着从骡子旁边望了一眼，说字得再描粗些。船夫熟悉往成都府去的路，答应牌子挂好就给你画转弯的地方。
+渡口的船夫摘下两块旧木牌，一块记水位，一块记什么风向会让渡船难走。侄子想把两块一起重描，可旧字磨得快看不清了。“先问用牌的人最想看什么。”船夫说。提篮的妇人说，带骡子下河滩前，她会先找水位线。船工说，空船受风时更要看风牌。孩子请你扶起一块牌，好量量挂在那儿能不能看见。你发现低处的挂钩还在涨水能碰到的地方，他便把钩往上挪了一掌，问叔父路过的人还能不能读。船夫站到旅人走的小路上：“水位线在这里看得见。”妇人也从骡子旁边望了一眼：“字再描粗些吧，我站得比你们远。”侄子便拿笔回到牌前。船夫熟悉往成都府去的路，答应牌子挂好就给你画转弯的地方。
 
 ## ev.ev_gap_cachanfu.choice.route
 

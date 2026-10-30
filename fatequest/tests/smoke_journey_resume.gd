@@ -29,14 +29,14 @@ func _init() -> void:
 	route["id"] = "rt-smoke-resumable-journey"
 	route["risk"] = 5
 	route["season"] = {}
-	route["encounters"] = ["ev-road-desert-voices"]
+	route["encounters"] = ["ev-road-22"]
 	main.state.revealed[route["id"]] = 1
 
 	main._perform_depart(route, "foot")
 	await process_frame
 	var checkpoint_ok: bool = main.state.city == "baldacum" \
 		and not main.state.active_journey.is_empty() \
-		and main.state.pending_events == ["ev-road-desert-voices"] \
+		and main.state.pending_events == ["ev-road-22"] \
 		and main._dialog_layer.visible
 
 	# The checkpoint was written before the event became active. Reloading it
@@ -53,7 +53,7 @@ func _init() -> void:
 			journey_disabled = true
 			break
 	var resumed_ok: bool = load_ok and main._dialog_layer.visible \
-		and String(main._current_event.get("id", "")) == "ev-road-desert-voices" \
+		and String(main._current_event.get("id", "")) == "ev-road-22" \
 		and not main.state.active_journey.is_empty() \
 		and panel_filled and journey_disabled
 	main._resolve_choice(main._current_event, 1)

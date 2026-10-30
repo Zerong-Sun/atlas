@@ -26,8 +26,11 @@ func _run() -> void:
 	for city_id in ["nanghin", "tiju"]:
 		var city: Dictionary = main.db.get_record(city_id)
 		var site_ids: Array = city.get("sites", [])
-		_check(site_ids.size() == 2 and site_ids[0] != site_ids[1],
-			"%s has two distinct site ids" % city_id)
+		var distinct: Dictionary = {}
+		for event_id in site_ids:
+			distinct[event_id] = true
+		_check(site_ids.size() >= 2 and distinct.size() == site_ids.size(),
+			"%s has at least two distinct site ids" % city_id)
 		main.state.city = city_id
 		main._open_city()
 		await process_frame

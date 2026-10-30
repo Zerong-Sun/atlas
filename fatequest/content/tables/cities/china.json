@@ -198,7 +198,8 @@
       "sites": [
         "ev-cambaluc-a",
         "ev-cambaluc-b",
-        "ev-cambaluc-c"
+        "ev-cambaluc-c",
+        "ev-cambaluc-oil-lamp"
       ],
       "exits": [
         "rt-cacanfu-cambaluc",
@@ -265,7 +266,8 @@
       "entryEvent": "ev-campichu-entry",
       "sites": [
         "ev-campichu-a",
-        "ev-campichu-b"
+        "ev-campichu-b",
+        "ev-campichu-cart-axle"
       ],
       "exits": [
         "rt-campichu-etzina",
@@ -328,7 +330,8 @@
       "entryEvent": "ev-chinangli-entry",
       "sites": [
         "ev-chinangli-a",
-        "ev-chinangli-b"
+        "ev-chinangli-b",
+        "ev-chinangli-rope-mark"
       ],
       "exits": [
         "rt-cacanfu-chinangli",
@@ -509,7 +512,8 @@
       "entryEvent": "ev-coigangiu-entry",
       "sites": [
         "ev-gap-coigangiu",
-        "ev-unique-coigangiu"
+        "ev-unique-coigangiu",
+        "ev-coigangiu-tablet"
       ],
       "exits": [
         "rt-coigangiu-coiganju",
@@ -546,7 +550,8 @@
       "entryEvent": "ev-coiganju-entry",
       "sites": [
         "ev-gap-coiganju",
-        "ev-unique-coiganju"
+        "ev-unique-coiganju",
+        "ev-coiganju-lantern"
       ],
       "exits": [
         "rt-coigangiu-coiganju",
@@ -603,7 +608,8 @@
       "entryEvent": "ev-etzina-entry",
       "sites": [
         "ev-gap-etzina",
-        "ev-unique-etzina"
+        "ev-unique-etzina",
+        "ev-etzina-falcon-hood"
       ],
       "exits": [
         "rt-campichu-etzina",
@@ -661,7 +667,8 @@
       "entryEvent": "ev-fuju-entry",
       "sites": [
         "ev-gap-fuju",
-        "ev-unique-fuju"
+        "ev-unique-fuju",
+        "ev-fuju-sugar-jar"
       ],
       "exits": [
         "rt-chamba-fuju",
@@ -718,7 +725,8 @@
       "entryEvent": "ev-kenjanfu-entry",
       "sites": [
         "ev-kenjanfu-a",
-        "ev-kenjanfu-b"
+        "ev-kenjanfu-b",
+        "ev-kenjanfu-oilcloth"
       ],
       "exits": [
         "rt-cachanfu-kenjanfu",
@@ -783,7 +791,8 @@
         "ev-kinsay-a",
         "ev-kinsay-b",
         "ev-kinsay-c",
-        "ev-kinsay-battuta-a"
+        "ev-kinsay-battuta-a",
+        "ev-kinsay-umbrellastall"
       ],
       "exits": [
         "rt-cambaluc-kinsay",
@@ -863,7 +872,8 @@
       "entryEvent": "ev-linju-entry",
       "sites": [
         "ev-gap-linju",
-        "ev-unique-linju"
+        "ev-unique-linju",
+        "ev-linju-basketlid"
       ],
       "exits": [
         "rt-cacanfu-linju",
@@ -919,7 +929,8 @@
       "entryEvent": "ev-mien-entry",
       "sites": [
         "ev-gap-mien",
-        "ev-unique-mien"
+        "ev-unique-mien",
+        "ev-mien-gatelatch"
       ],
       "exits": [
         "rt-mien-chamba",
@@ -974,7 +985,8 @@
       "entryEvent": "ev-nanghin-entry",
       "sites": [
         "ev-gap-nanghin",
-        "ev-unique-nanghin"
+        "ev-unique-nanghin",
+        "ev-nanghin-bluehem"
       ],
       "exits": [
         "rt-chinghianfu-nanghin",
@@ -1030,7 +1042,8 @@
       "entryEvent": "ev-paukin-entry",
       "sites": [
         "ev-gap-paukin",
-        "ev-unique-paukin"
+        "ev-unique-paukin",
+        "ev-paukin-threadcover"
       ],
       "exits": [
         "rt-coigangiu-paukin",
@@ -1087,7 +1100,8 @@
       "entryEvent": "ev-saianfu-entry",
       "sites": [
         "ev-saianfu-a",
-        "ev-saianfu-b"
+        "ev-saianfu-b",
+        "ev-saianfu-shutter"
       ],
       "exits": [
         "rt-cachanfu-saianfu",
@@ -1150,7 +1164,8 @@
       "entryEvent": "ev-siju-entry",
       "sites": [
         "ev-siju-a",
-        "ev-siju-b"
+        "ev-siju-b",
+        "ev-siju-millstone"
       ],
       "exits": [
         "rt-siju-coigangiu",
@@ -1213,7 +1228,8 @@
       "entryEvent": "ev-sindafu-entry",
       "sites": [
         "ev-gap-sindafu",
-        "ev-unique-sindafu"
+        "ev-unique-sindafu",
+        "ev-sindafu-stoolleg"
       ],
       "exits": [
         "rt-mien-sindafu",
@@ -1270,7 +1286,8 @@
       "entryEvent": "ev-sinju-entry",
       "sites": [
         "ev-sinju-a",
-        "ev-sinju-b"
+        "ev-sinju-b",
+        "ev-sinju-bluecord"
       ],
       "exits": [
         "rt-caiju-sinju",
@@ -1333,7 +1350,8 @@
       "entryEvent": "ev-sinjumatu-entry",
       "sites": [
         "ev-gap-sinjumatu",
-        "ev-unique-sinjumatu"
+        "ev-unique-sinjumatu",
+        "ev-sinjumatu-lampdish"
       ],
       "exits": [
         "rt-linju-sinjumatu",
@@ -1390,7 +1408,8 @@
       "entryEvent": "ev-suju-entry",
       "sites": [
         "ev-suju-a",
-        "ev-suju-b"
+        "ev-suju-b",
+        "ev-suju-bridgeplank"
       ],
       "exits": [
         "rt-chinginju-suju",
@@ -1453,7 +1472,8 @@
       "entryEvent": "ev-tanpiju-entry",
       "sites": [
         "ev-tanpiju-a",
-        "ev-tanpiju-b"
+        "ev-tanpiju-b",
+        "ev-tanpiju-mulberrybasket"
       ],
       "exits": [
         "rt-fuju-tanpiju",
@@ -1517,7 +1537,8 @@
       "entryEvent": "ev-tiju-entry",
       "sites": [
         "ev-gap-tiju",
-        "ev-unique-tiju"
+        "ev-unique-tiju",
+        "ev-tiju-saltbasket"
       ],
       "exits": [
         "rt-caiju-tiju",
@@ -1578,7 +1599,8 @@
         "ev-zayton-fanfang",
         "ev-zayton-mazu",
         "ev-zayton-jiaobei-ask",
-        "ev-zayton-battuta-a"
+        "ev-zayton-battuta-a",
+        "ev-zayton-bowl"
       ],
       "exits": [
         "rt-chamba-zayton",

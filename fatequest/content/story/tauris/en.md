@@ -115,6 +115,8 @@ Near the caravan lodgings, a widow named Lucia is sorting a set of painted cards
 
 You ask what she does with the cards. Lucia says she uses them to teach visitors to tell a choice clearly: what they hope for, what they can afford, and whom the choice will affect. Her nephew says some travellers come back only to tell her what happened next. ‘And you always listen?’ you ask. ‘When they bring supper,’ she says, and the nephew groans because he has been carrying the bowls himself. She puts the repaired box beside her and asks what you want to know.
 
+At the next table a teacher sets marked star dice beside a small diagram. Lucia’s nephew asks him to roll quietly while they finish talking; the teacher grins and catches the dice in his palm.
+
 ## ev.tauris.mentor_tarot.choice.ask
 
 Ask Lucia to explain how she uses the cards

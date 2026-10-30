@@ -21,18 +21,13 @@
             {
               "op": "coins",
               "value": -13500,
-              "reason": "paid-for-the-bargain"
+              "reason": "paid-for-the-full-lot-of-goods"
             },
             {
               "op": "goods",
               "id": "tabriz-pearls",
               "value": 1,
-              "reason": "bought-pearls-at-the-toll-masters-price"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tauris-pearl",
-              "reason": "bought-pearls-at-the-toll-masters-price"
+              "reason": "bought-one-full-lot-of-pearls-from-the-merchant"
             }
           ],
           "needs": {
@@ -48,7 +43,7 @@
             {
               "op": "reveal_map",
               "value": "ninive",
-              "reason": "toll-master-drew-the-road-to-niniveh"
+              "reason": "market-clerk-drew-the-road-to-niniveh"
             },
             {
               "op": "codex",
@@ -64,21 +59,21 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "waited-for-the-southbound-caravan"
+              "reason": "helped-check-the-market-ledger-for-a-day"
             },
             {
               "op": "reputation",
               "value": 1,
               "scope": "city",
               "id": "tauris",
-              "reason": "kept-the-toll-masters-counsel"
+              "reason": "helped-miriam-and-her-daughter-check-the-ledger"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "tauris",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c011"
@@ -104,17 +99,12 @@
             {
               "op": "coins",
               "value": -500,
-              "reason": "paid-for-the-bargain"
+              "reason": "paid-for-the-full-lot-of-goods"
             },
             {
               "op": "item",
               "value": "it-dried-fruit",
-              "reason": "bought-fruit-from-the-orchard-keeper"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tauris-gardens",
-              "reason": "bought-fruit-from-the-orchard-keeper"
+              "reason": "bought-fruit-from-shirins-nephew"
             }
           ],
           "needs": {
@@ -135,7 +125,7 @@
             {
               "op": "reveal_map",
               "value": "ispahan",
-              "reason": "water-master-named-the-road-east"
+              "reason": "shirins-neighbour-named-the-road-east"
             },
             {
               "op": "codex",
@@ -157,14 +147,14 @@
               "op": "fate",
               "id": "rapport",
               "value": 1,
-              "reason": "the-water-masters-measure"
+              "reason": "helped-shirin-check-the-water-turns"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "tauris",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v1-b1-c011"

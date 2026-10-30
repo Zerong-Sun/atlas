@@ -2,7 +2,7 @@
 unit: axuma
 lang: zh
 source: en
-source_rev: a16bc8fc9d96
+source_rev: 8a411e5b1f5c
 status: translated
 translator: 人工校译
 notes: >
@@ -19,13 +19,13 @@ stamps:
   ev.ev_axuma_entry.choice_1_result: 3fecaedb0d8f
   ev.ev_axuma_entry.choice_2_result: a2ddc5be0a2e
   ev.axuma.site_gap.title: 3b802333381d
-  ev.axuma.site_gap.body: 38cca36ead18
+  ev.axuma.site_gap.body: 6945708c2e2e
   ev.axuma.site_gap.choice.route: 3d3f366ce012
   ev.ev_axuma_site_gap.choice_1_result: 4fdc6ea0a760
   ev.axuma.site_gap.choice.interact: f2f6a3a8fded
   ev.ev_axuma_site_gap.choice_2_result: e0ec3dc0cb50
   ev.axuma.parchment.title: b781b29063dd
-  ev.axuma.parchment.body: 485b6015da60
+  ev.axuma.parchment.body: 024047bd12d9
   ev.axuma.parchment.choice.help: c9509931b6a6
   ev.axuma.parchment.result.help: d7363b8143c4
   ev.axuma.parchment.choice.stay: a80467e5ac55
@@ -66,7 +66,7 @@ stamps:
 
 ## ev.axuma.site_gap.body
 
-古石碑旁，卖水人把一只大陶罐举起来，对着光找裂缝。罐口有一条细纹，他的外甥女已经和好泥，准备补上。“今天灌满它，走到路口就漏光了。”他说。姑娘把小罐搬过来：“先用这个招待客人，大的等收摊再补。”舅舅担心小罐不够下一支商队喝。你问他们在哪里取水。姑娘指了指南面的坡地：“泉水在那边。不过去栋戈拉的路还要往西走，旅人常把两个岔口认错。”她拿炭在一块破瓦上画出两条路。舅舅湿着手想拿瓦片，她叫他先把手擦干，又请你扶稳陶罐，好让她把裂口缠紧。舅舅答应补泥干透后，下一罐满水由他自己来搬。
+古石碑旁，卖水人把一只大陶罐举起来，对着光找裂缝。罐口有一条细纹，他的外甥女已经和好泥，准备补上。“今天灌满它，走到路口就漏光了。”他说。姑娘把小罐搬过来：“先用这个招待客人，大的等收摊再补。”舅舅担心小罐不够下一支商队喝。你问他们在哪里取水。姑娘指了指南面的坡地：“泉水在那边。不过去栋戈拉的路还要往西走，旅人常把两个岔口认错。”她拿炭在一块破瓦上画出两条路。舅舅湿着手想拿瓦片，她叫他先把手擦干，又请你扶稳陶罐，好让她把裂口缠紧。舅舅答应补泥干透后，下一罐满水由他自己来搬。姑娘请舅舅把往西的转弯描清些。他在瓦片旁又画了一口井，那是行人路上能问到的地方。
 
 ## ev.axuma.site_gap.choice.route
 
@@ -90,7 +90,7 @@ stamps:
 
 ## ev.axuma.parchment.body
 
-教堂门口，读经人把两页散开的抄本摊在净布上。风一来，其中一页就要翻过去。他的外甥用石子压着纸角，嘟囔道：“您叫我分开拿，我分开拿了，现在又说它们原来连着。”读经人指着第一页末尾和第二页开头的一句话：“怪我走之前没指给你看。”他们要把纸送回年纪很大的抄写人家里；她眼睛不太好，读经人希望外甥先学会认顺序。少年请你按住布，自己沿着接上的那句话往下读。遇到不认识的词，他停下来听舅舅念了一遍，又从头读通。“到了她那儿，她会问你哪页在前。”读经人说。少年抬头看你，想知道自己答得对不对。
+教堂门口，读经人把两页散开的抄本摊在净布上。风一来，其中一页就要翻过去。他的外甥用石子压着纸角，嘟囔道：“您叫我分开拿，我分开拿了，现在又说它们原来连着。”读经人指着第一页末尾和第二页开头的一句话：“怪我走之前没指给你看。”他们要把纸送回年纪很大的抄写人家里；她眼睛不太好，读经人希望外甥先学会认顺序。少年请你按住布，自己沿着接上的那句话往下读。遇到不认识的词，他停下来听舅舅念了一遍，又从头读通。“到了她那儿，她会问你哪页在前。”读经人说。少年抬头看你，想知道自己答得对不对。外甥指着两页接上的那行，读经人让他别看自己，再读一遍。这一回，少年知道第二页为什么从那里起。
 
 ## ev.axuma.parchment.choice.help
 

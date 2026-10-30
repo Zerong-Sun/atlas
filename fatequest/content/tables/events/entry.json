@@ -121,11 +121,7 @@
               "id": "aden",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-aden-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "aden",
@@ -441,11 +437,7 @@
               "id": "badashan",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-badashan-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "badashan",
@@ -510,11 +502,7 @@
               "value": "cx-balc",
               "reason": "learned-the-citys-story"
             },
-            {
-              "op": "sticker",
-              "value": "st-balc-ruins",
-              "reason": "heard-the-tale"
-            },
+
             {
               "op": "days",
               "value": 1,
@@ -616,11 +604,7 @@
               "value": "cx-baldacum",
               "reason": "learned-the-citys-story"
             },
-            {
-              "op": "sticker",
-              "value": "st-baldacum-palace",
-              "reason": "heard-the-tale"
-            },
+
             {
               "op": "days",
               "value": 1,
@@ -980,11 +964,6 @@
               "reason": "looked-about-the-town"
             },
             {
-              "op": "codex",
-              "value": "cx-cacanfu",
-              "reason": "heard-what-men-say-of-this-place"
-            },
-            {
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
@@ -1032,11 +1011,6 @@
               "op": "reveal_map",
               "value": "cachanfu",
               "reason": "looked-about-the-town"
-            },
-            {
-              "op": "codex",
-              "value": "cx-cachanfu",
-              "reason": "heard-what-men-say-of-this-place"
             },
             {
               "op": "days",
@@ -1141,11 +1115,6 @@
               "reason": "looked-about-the-town"
             },
             {
-              "op": "codex",
-              "value": "cx-caiju",
-              "reason": "heard-what-men-say-of-this-place"
-            },
-            {
               "op": "days",
               "value": 1,
               "reason": "spent-a-day-looking-about"
@@ -1217,11 +1186,7 @@
               "id": "cail",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-cail-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "cail",
@@ -1305,11 +1270,7 @@
               "id": "calatu",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-calatu-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "calatu",
@@ -1382,11 +1343,7 @@
               "id": "camadi",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-camadi-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "camadi",
@@ -1511,11 +1468,6 @@
               "reason": "learned-the-citys-story"
             },
             {
-              "op": "sticker",
-              "value": "st-cambaluc-hill",
-              "reason": "heard-the-tale"
-            },
-            {
               "op": "days",
               "value": 1,
               "reason": "listened-to-the-tales"
@@ -1634,11 +1586,7 @@
               "id": "campichu",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-campichu-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "campichu",
@@ -1711,11 +1659,7 @@
               "id": "camul",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-camul-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "camul",
@@ -1834,11 +1778,7 @@
               "value": "cx-cascar",
               "reason": "learned-the-citys-story"
             },
-            {
-              "op": "sticker",
-              "value": "st-cascar-garden",
-              "reason": "heard-the-tale"
-            },
+
             {
               "op": "days",
               "value": 1,
@@ -1948,11 +1888,7 @@
               "id": "chamba",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-chamba-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "chamba",
@@ -2165,11 +2101,7 @@
               "id": "chinangli",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-chinangli-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "chinangli",
@@ -2272,11 +2204,6 @@
               "op": "reveal_map",
               "value": "chinginju",
               "reason": "looked-about-the-town"
-            },
-            {
-              "op": "codex",
-              "value": "cx-chinginju",
-              "reason": "heard-what-men-say-of-this-place"
             },
             {
               "op": "days",
@@ -2433,11 +2360,6 @@
               "op": "reveal_map",
               "value": "coiganju",
               "reason": "looked-about-the-town"
-            },
-            {
-              "op": "codex",
-              "value": "cx-coiganju",
-              "reason": "heard-what-men-say-of-this-place"
             },
             {
               "op": "days",
@@ -2617,11 +2539,7 @@
               "value": "cx-cotan",
               "reason": "learned-the-citys-story"
             },
-            {
-              "op": "sticker",
-              "value": "st-cotan-jade",
-              "reason": "heard-the-tale"
-            },
+
             {
               "op": "days",
               "value": 1,
@@ -3171,11 +3089,7 @@
               "id": "esher",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-esher-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "esher",
@@ -3529,11 +3443,7 @@
               "id": "kenjanfu",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-kenjanfu-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "kenjanfu",
@@ -3606,11 +3516,7 @@
               "id": "kerman",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-kerman-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "kerman",
@@ -3683,11 +3589,7 @@
               "id": "keshimur",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-keshimur-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "keshimur",
@@ -3751,11 +3653,6 @@
               "op": "codex",
               "value": "cx-kinsay",
               "reason": "learned-the-citys-story"
-            },
-            {
-              "op": "sticker",
-              "value": "st-kinsay-lake",
-              "reason": "heard-the-tale"
             },
             {
               "op": "days",
@@ -3913,11 +3810,6 @@
               "op": "reveal_map",
               "value": "linju",
               "reason": "looked-about-the-town"
-            },
-            {
-              "op": "codex",
-              "value": "cx-linju",
-              "reason": "heard-what-men-say-of-this-place"
             },
             {
               "op": "days",
@@ -4235,11 +4127,7 @@
               "id": "melibar",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-melibar-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "melibar",
@@ -4688,11 +4576,7 @@
               "value": "cx-ormus",
               "reason": "learned-the-citys-story"
             },
-            {
-              "op": "sticker",
-              "value": "st-ormus-wind",
-              "reason": "heard-the-tale"
-            },
+
             {
               "op": "days",
               "value": 1,
@@ -4978,11 +4862,7 @@
           "label": "ev.sachiu.entry.choice.arrive",
           "resultText": "ev.ev_sachiu_entry.choice_1_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-sachiu",
-              "reason": "first-arrival-at-sachiu"
-            },
+
             {
               "op": "codex",
               "value": "cx-tangut-rites",
@@ -5059,11 +4939,7 @@
               "id": "saianfu",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-saianfu-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "saianfu",
@@ -5176,16 +5052,8 @@
           "label": "ev.samarcanda.entry.choice.lore",
           "resultText": "ev.ev_samarcanda_entry.choice_2_result",
           "effects": [
-            {
-              "op": "codex",
-              "value": "cx-samarcanda",
-              "reason": "learned-the-citys-story"
-            },
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-dome",
-              "reason": "heard-the-tale"
-            },
+
+
             {
               "op": "days",
               "value": 1,
@@ -5403,11 +5271,7 @@
               "id": "siju",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-siju-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "siju",
@@ -5534,11 +5398,7 @@
               "id": "sinju",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-sinju-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "sinju",
@@ -5718,11 +5578,7 @@
               "id": "suju",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-suju-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "suju",
@@ -5795,11 +5651,7 @@
               "id": "taican",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-taican-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "taican",
@@ -5979,11 +5831,7 @@
               "id": "tanpiju",
               "reason": "paid-respect-at-the-shrine"
             },
-            {
-              "op": "sticker",
-              "value": "st-tanpiju-shrine",
-              "reason": "visited-the-shrine"
-            },
+
             {
               "op": "reveal_map",
               "value": "tanpiju",
@@ -6099,17 +5947,12 @@
             {
               "op": "codex",
               "value": "cx-tauris",
-              "reason": "learned-the-citys-story"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tauris-view",
-              "reason": "heard-the-tale"
+              "reason": "heard-the-grandmothers-street-story"
             },
             {
               "op": "days",
               "value": 1,
-              "reason": "listened-to-the-tales"
+              "reason": "listened-to-the-old-street-stories"
             },
             {
               "op": "queue_event",
@@ -6125,7 +5968,7 @@
             {
               "op": "coins",
               "value": -14580,
-              "reason": "paid-for-the-bargain"
+              "reason": "paid-for-the-full-lot-of-goods"
             },
             {
               "op": "days",
@@ -6141,7 +5984,7 @@
               "op": "goods",
               "id": "damascus-steel",
               "value": 1,
-              "reason": "bought-local-specialty"
+              "reason": "bought-one-lot-of-damascus-steel"
             }
           ],
           "needs": {
@@ -6193,11 +6036,6 @@
               "reason": "walked-the-market"
             },
             {
-              "op": "codex",
-              "value": "cx-tenduc",
-              "reason": "heard-the-market-talk"
-            },
-            {
               "op": "reveal_map",
               "value": "tenduc",
               "reason": "merchants-named-the-quarters"
@@ -6213,12 +6051,7 @@
               "value": 1,
               "scope": "city",
               "id": "tenduc",
-              "reason": "paid-respect-at-the-shrine"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tenduc-shrine",
-              "reason": "visited-the-shrine"
+              "reason": "helped-secure-the-cloth-bands"
             },
             {
               "op": "reveal_map",

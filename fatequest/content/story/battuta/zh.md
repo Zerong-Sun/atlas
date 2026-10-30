@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: b62231a84748
+source_rev: 039324b251d8
 status: translated
 translator: 人工校译
 notes: >
@@ -12,19 +12,6 @@ notes: >
   阿卡旅店、哈米德与对白是创作；卡尔克努赫陵墓及果园、铜器传说来自《里哈拉》，按传闻讲述。
 
 stamps:
-  city.maldive.name: a99ff8fcf111
-  ev.maldive.entry.title: ab37191c36cd
-  ev.maldive.entry.body: 6063b7530198
-  ev.maldive.entry.choice.arrive: bab805879772
-  ev.ev_maldive_entry.choice_1_result: 15606217c3ac
-  ev.maldive.battuta_a.title: 9c530855832c
-  ev.maldive.battuta_a.body: 80814d843461
-  ev.maldive.battuta_a.choice.judge: bc7f38cd628e
-  ev.maldive.battuta_a.choice.marry: 4cfc1d7b52a8
-  ev.maldive.battuta_a.choice.flight: d8f8a0743924
-  ev.ev_maldive_battuta_a.choice_1_result: df883843b5e4
-  ev.ev_maldive_battuta_a.choice_2_result: 8e31ea545796
-  ev.ev_maldive_battuta_a.choice_3_result: a5e47b2730e3
   ev.alexandria.battuta_a.title: ec50deb0af4c
   ev.alexandria.battuta_a.body: f23d79613135
   ev.alexandria.battuta_a.choice.observe: 5319cdb543e0
@@ -32,7 +19,6 @@ stamps:
   ev.alexandria.battuta_a.choice.omen: e1744545e7ea
   ev.ev_alexandria_battuta_a.choice_1_result: 0986899f4a2c
   ev.ev_alexandria_battuta_a.choice_2_result: a12397b18413
-  ev.ev_alexandria_battuta_a.choice_3_result: 77f3675c3c47
   ev.alexandria.battuta_b.title: 7f7e6e3d6b9e
   ev.alexandria.battuta_b.body: 62a3401ab054
   ev.alexandria.battuta_b.choice.promise: da668f33e769
@@ -81,6 +67,19 @@ stamps:
   ev.ev_delli_battuta_b.choice_1_result: e01e37bfb938
   ev.ev_delli_battuta_b.choice_2_result: b9ebe8002926
   ev.ev_delli_battuta_b.choice_3_result: dede0323be9e
+  city.maldive.name: a99ff8fcf111
+  ev.maldive.entry.title: ab37191c36cd
+  ev.maldive.entry.body: 6063b7530198
+  ev.maldive.entry.choice.arrive: bab805879772
+  ev.ev_maldive_entry.choice_1_result: 15606217c3ac
+  ev.maldive.battuta_a.title: 9c530855832c
+  ev.maldive.battuta_a.body: 80814d843461
+  ev.maldive.battuta_a.choice.judge: bc7f38cd628e
+  ev.maldive.battuta_a.choice.marry: 4cfc1d7b52a8
+  ev.maldive.battuta_a.choice.flight: d8f8a0743924
+  ev.ev_maldive_battuta_a.choice_1_result: df883843b5e4
+  ev.ev_maldive_battuta_a.choice_2_result: 8e31ea545796
+  ev.ev_maldive_battuta_a.choice_3_result: a5e47b2730e3
   arch.battuta.name: 39a6401ac763
   arch.battuta.obsession: 58b4c7f41c69
   ev.melibar.battuta_a.title: 08c259c6f60e
@@ -107,32 +106,33 @@ stamps:
   ev.ev_java_major_battuta_a.choice_1_result: f0e120bb9e98
   ev.ev_java_major_battuta_a.choice_2_result: 25d620b9666f
   ev.ev_java_major_battuta_a.choice_3_result: fc52785c0925
-  ev.zayton.battuta_a.title: 3b583a25bb01
-  ev.zayton.battuta_a.body: 3729483c8c15
-  ev.zayton.battuta_a.choice.change: 87c4287dc2b8
-  ev.zayton.battuta_a.choice.painters: 04135536a658
-  ev.zayton.battuta_a.choice.registry: c478903bfc33
-  ev.ev_zayton_battuta_a.choice_1_result: 82246bd31e29
-  ev.ev_zayton_battuta_a.choice_2_result: 28eec0b63854
-  ev.ev_zayton_battuta_a.choice_3_result: a16806af3e8a
+  ev.zayton.battuta_a.title: 87d6fce4473c
+  ev.zayton.battuta_a.body: f1d301c3cfaf
+  ev.zayton.battuta_a.choice.change: a552fd61b629
+  ev.zayton.battuta_a.choice.painters: 7dada2c1eff5
+  ev.zayton.battuta_a.choice.registry: 91970a497f11
+  ev.ev_zayton_battuta_a.choice_1_result: f51cfe3ecd08
+  ev.ev_zayton_battuta_a.choice_2_result: c79b2500885d
+  ev.ev_zayton_battuta_a.choice_3_result: b099a5a59993
   codex.cx-paper-money.name: 9ca3fc568eeb
   codex.cx-paper-money.body: 4499af1d24d5
-  ev.kinsay.battuta_a.title: 0d7d1c27bf30
-  ev.kinsay.battuta_a.body: 93c7090d0786
-  ev.kinsay.battuta_a.choice.passage: 24bf1e4c6348
-  ev.kinsay.battuta_a.choice.prayer: 0ebd3d4b1669
-  ev.kinsay.battuta_a.choice.rokh: 3a18d30bf65b
-  ev.ev_kinsay_battuta_a.choice_1_result: 1fe3d3b4c61d
-  ev.ev_kinsay_battuta_a.choice_2_result: fd113717a724
-  ev.ev_kinsay_battuta_a.choice_3_result: 60a112342d41
+  ev.kinsay.battuta_a.title: 59411f7c3212
+  ev.kinsay.battuta_a.body: 5adc6581a89b
+  ev.kinsay.battuta_a.choice.passage: acab853630c8
+  ev.kinsay.battuta_a.choice.prayer: 060859aa2e67
+  ev.kinsay.battuta_a.choice.rokh: de740e7c649e
+  ev.ev_kinsay_battuta_a.choice_1_result: 1c73f995344f
+  ev.ev_kinsay_battuta_a.choice_2_result: 5f0c278aeda6
+  ev.ev_kinsay_battuta_a.choice_3_result: 3dd553edd002
   ev.cail.entry.choice.battuta: 932406953883
   ev.ev_cail_entry.choice_4_result: f69039ddbd05
   ev.melibar.entry.choice.battuta: 3be445379264
   ev.ev_melibar_entry.choice_4_result: eb625dcc5ce6
-  ev.kinsay.entry.choice.battuta: b784f22bea2f
-  ev.ev_kinsay_entry.choice_4_result: a7086c5dbbc2
-  ev.zayton.entry.choice.battuta: de9bc6f6327b
-  ev.ev_zayton_entry.choice_4_result: 4051a91402c7
+  ev.kinsay.entry.choice.battuta: f95508844948
+  ev.ev_kinsay_entry.choice_4_result: 1defd1777448
+  ev.zayton.entry.choice.battuta: 606bb7729ee8
+  ev.ev_zayton_entry.choice_4_result: 071fc4e94f2d
+  ev.ev_alexandria_battuta_a.choice_3_result: 77f3675c3c47
 ---
 
 ## ev.alexandria.battuta_a.title
@@ -541,35 +541,39 @@ stamps:
 
 ## ev.zayton.battuta_a.title
 
-刺桐的纸钞、画像和船册
+票铺、画像和船册
 
 ## ev.zayton.battuta_a.body
 
-伊本·白图泰说，刺桐交易不用金银，大家用盖着王印的纸钞：一张约手掌大，二十五张抵一第纳尔。纸钞破了，官府会免费换新。画师的本事也让他惊讶：过客进城后，画师会把人像贴在墙上和街头；若有人犯事逃跑，画像会送往各省追查。船离港时，官员把船员的名字和长相登记成册，回来再逐一核对，少一个人就追究船主，没登记的货物则会被没收。
+阿禾领你走进港边一条窄街。票铺门前，一个账房正在替船工查旧兑票，隔壁画匠给汤铺画新招牌，码头书吏抱着船册从两人中间挤过。三个人都认识阿禾，见她来，先问舅舅那船的药材送到了没有。
+
+“送到了。”阿禾说，顺手替账房扶住被风掀起的纸角。船工那张旧票沾过海水，印记只剩一半。账房请他把出票的人叫来核对。船工说人正在对岸卸货，愿意等他回来。画匠把一张小像举起来给阿禾看，问她母亲会不会介意招牌上画成这样的汤碗。阿禾说碗沿太宽，街上的人会以为卖的是粥。
+
+书吏也停下翻船册。昨晚归港的一名船工没在原来的船上，他要核清那人是换了船，还是在岸上留下帮亲戚做活。阿禾认得那人的弟弟，愿意去桥头问问。你可以留下帮账房核旧票，陪画匠把汤铺的招牌画好，或者跟书吏去码头把归港名册对上一遍。
 
 ## ev.zayton.battuta_a.choice.change
 
-拿金银去官署换纸钞
+留一天，帮账房核对旧兑票
 
 ## ev.zayton.battuta_a.choice.painters
 
-坐下来，让画师给你画像
+留一天，帮画匠画汤铺招牌
 
 ## ev.zayton.battuta_a.choice.registry
 
-看看官员怎么登记船员
+留一天，跟书吏核船员名册
 
 ## ev.ev_zayton_battuta_a.choice_1_result
 
-你拿着金银进集市，摊主都不肯收。到官署换成盖王印的纸钞后，买卖才做得成。旧钞也能免费换新，不用付利息。
+你和账房等到出票的人，从旧簿里找到了那笔兑付。船工把新写的号码抄在干纸上。阿禾问清票铺核印记的方法，也替你记了一份。
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-你坐下来让画师画像，一晃就过了一天。画好后，你和同伴的模样被贴上墙，也印在街头告示上。当地人说，过客都要画像；若有人犯事逃跑，各省都会收到画像追查。
+你陪画匠在汤铺待了一天。阿禾母亲把木碗放到桌上给他照着画，画好后她请你们尝新煮的汤。桥头的人看见招牌，都知道该到哪里找这家铺子。
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-你在码头看官员拿着名册上船，核对每个人的名字和长相。船回来时，他们逐个查验；少一人就追究船主，漏报货物则整船没收。这种查验让你大开眼界。你还听说有条河路从辛克兰走二十七天可到刺桐，再往前便是行在；生命之水也在刺桐入海，所以有人称这里为“两海交会处”。
+你跟书吏把船册核了一天。缺的那位船工确实换到另一艘船，阿禾从他弟弟那里带回了新船名。书吏在册上补好，也把去杭州的陆路指给你看。
 
 ## codex.cx-paper-money.name
 
@@ -581,35 +585,37 @@ stamps:
 
 ## ev.kinsay.battuta_a.title
 
-从杭州上船，踏上海路归程
+寄往刺桐的信
 
 ## ev.kinsay.battuta_a.body
 
-伊本·白图泰想家了，决定从杭州顺江而下，经建阳府到刺桐，搭上苏门答腊王扎希尔·马利克的戎克船，走海路回非斯。顺风航行十天后，天色忽然变暗，风暴把船卷进水手也不熟悉的海域，想掉头都做不到。天亮时，大家看见二十里外像有一座山，船却正被风推向它。水手抱在一起告别，说那不是山，是大鹏罗赫，谁被它看见都活不了。没过多久风向转了，船终于避开。两个月后，他们到了爪哇，又继续前往苏门答腊。
+埠头上，一家商人把信纸、细绳和小账本摆了一桌。父亲想给刺桐的妹妹报平安，儿子却把封皮写成了在坦皮州的表亲。孩子说昨天听父亲提过那个名字。姐姐把笔从他手里接过来，又递还给他：“你自己改。先问爹，究竟是哪位姑母等信。”孩子照做了，父亲也承认早晨装船时说得太快，没把两位亲戚分清。
+
+你问信什么时候能走。家里熟识的船夫说下一趟沿水路往刺桐去，那里也有人等着换海船。来访的商人提醒，坦皮州是自己日后另一段路上的城，表亲可以另写一封。母亲端来茶，问他们从早上到现在谁吃过饭。儿子拿起改好的封皮，说先要当着大家把收信人的名字念对，再去找船夫。姐姐听完，又让他把城名也读一遍。
 
 ## ev.kinsay.battuta_a.choice.passage
 
-搭上苏门答腊王的戎克船
+花一天把信托给去刺桐的船夫
 
 ## ev.kinsay.battuta_a.choice.prayer
 
-风暴中和船上人一起祈祷
+留一天陪这家商人，并与他们一起祈祷
 
 ## ev.kinsay.battuta_a.choice.rokh
 
-问水手：海上的“山”到底是什么？
+花一天向来访商人问刺桐到坦皮州的路
 
 ## ev.ev_kinsay_battuta_a.choice_1_result
 
-你从杭州顺江而下，经建阳府抵达刺桐。港里正好有艘戎克船要去印度，你便搭上苏门答腊王扎希尔·马利克的船。船上的仆从都信奉伊斯兰教，顺风一吹，船朝大海和归途驶去。
+你花一天和那家人核对封皮，找到合适的船夫。他把收信人念了一遍，也说清往刺桐走的水路。全家看着他把信放进防潮木箱，你在埠头记下路线，并没有随船离城。
 
 ## ev.ev_kinsay_battuta_a.choice_2_result
 
-天色暗下来，风暴把船卷进陌生海域，掉头也来不及。你和船上人一起祈祷、许愿。日出后风势渐缓，船终于转向，避开了险境。
+你陪这家人留了一天，准备信件和给船夫带的饭食。他们按自己的习惯一起祈祷时，你也加入。祈祷后，母亲谢谢你陪儿子把名字核清，请你留下吃晚饭。
 
 ## ev.ev_kinsay_battuta_a.choice_3_result
 
-天亮时，水手指着二十里外的“山”——四周离陆地很远，根本不该有山。大家抱在一起告别，有人说那是大鹏罗赫，看见它就没命。后来风向转了，船避开那座“山”，再也没见到它。
+你花一天听来访商人整理路上的笔记。他先指出刺桐，再讲从那里往坦皮州去的后续路段。孩子把两个地名分写在不同封皮上。商人离开前，见你按顺序记好了下一程，才把笔记卷起。
 
 ## ev.cail.entry.choice.battuta
 
@@ -629,19 +635,19 @@ stamps:
 
 ## ev.kinsay.entry.choice.battuta
 
-问那位从杭州出发的旅人
+去见准备往海港送信的一家人
 
 ## ev.ev_kinsay_entry.choice_4_result
 
-一位旅人说：“我从杭州顺江而下，在刺桐登船，穿过群岛才回到故乡。你想知道这一路怎么走？我可以慢慢讲给你听。”
+埠头有一家人正商量把信托哪只船送去刺桐。大女儿请你听听：父亲说清了港口，弟弟却把收信人的名字写错在封皮上。他们还在为这封信商量。
 
 ## ev.zayton.entry.choice.battuta
 
-问那位对纸钞惊叹的旅人
+跟阿禾去看票铺、画匠和船册
 
 ## ev.ev_zayton_entry.choice_4_result
 
-一位西方旅人想看刺桐的纸钞，也对船员名册和街头画像很惊讶。你要是有兴趣，他还知道不少当地见闻。
+阿禾说票铺旁边还有画匠和船册房，她要去替舅舅核一件旧事。你跟着她走进窄街，先听见有人在问一张被海水浸坏的兑票。
 
 ## ev.ev_alexandria_battuta_a.choice_3_result
 

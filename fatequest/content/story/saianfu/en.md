@@ -15,140 +15,170 @@ Saianfu
 
 ## ev.saianfu.entry.body
 
-Saianfu is a very great and noble city, and it rules over twelve other large and rich
-cities, and is itself a seat of great trade and manufacture. The people are Idolaters
-(and so forth). They have much silk, from which they weave fine silken stuffs; they have
-also a quantity of game, and in short the city abounds in all that it behoves a noble
-city to possess. Now you must know that this city held out against the Great Kaan for
-three years after the rest of Manzi had surrendered. The Great Kaan’s troops made
-incessant attempts to take it, but they could not succeed because of the great and deep
-waters that were round about it, so that they could approach from one side only, which
-was the north. And I tell you they never would have taken it, but for a circumstance
-that I am going to relate. You must know that when the Great Kaan’s host had lain three
-years before the city without being able to take it, they were greatly chafed thereat.
+At an inn by Saianfu’s wall, keeper Lin is trying to hang a repaired window shutter. His daughter holds the hinge, but the lower pin will not fit. ‘You turned the board over,’ she says. Lin looks at the grain of the wood and admits she is right. He asks you to hold the shutter while he changes it around.
+
+You ask which street leads through town. Lin points toward the silk market and says the road bends around the water before it reaches the workshops. His daughter wants to take you to a family shrine near the street; her grandmother tends it and has asked for help carrying fresh water. Lin says they can go after the shutter is up. A guest waiting for supper asks whether the wall has been repaired before. Lin says many hands have worked on it and asks his daughter which mason she met last week. She remembers the woman’s name and the patch she finished.
+
+The lower pin finally slides into place. Lin opens and closes the shutter once, then asks his daughter to check it from inside.
 
 ## ev.saianfu.entry.choice.market
 
-Walk through the market
+Spend a day seeing the wall and silk market
 
 ## ev.saianfu.entry.choice.pass
 
-Pass through the gate without delay
+Follow the street past Lin’s inn
 
 ## ev.saianfu.entry.choice.shrine
 
-Visit the sì (Buddhist monastery)
+Carry water with Lin’s daughter to the family shrine
 
 ## ev.saianfu.entry.title
 
-Concerning the Very Noble City of Saianfu, and How Its Capture Was Effected
+The Inn by the City Wall
 
 ## ev.saianfu.a.title
 
-Twelve Rich Cities
+The Clerk’s List of Towns
 
 ## ev.saianfu.a.body
 
-Saianfu is a very great and noble city that rules over twelve other large and rich cities, and is itself a seat of great trade and manufacture. In the weaving quarters you hear shuttles clacking from dawn until lamp-light, and the magistrates' lists name every subject town upon the plain.
+In a hall beside the silk market, clerk Wei is copying a list of towns from which cloth and grain reach Saianfu. His apprentice has written the same town twice because one driver used an older name. Wei asks her to call the driver back and check rather than erase either entry. The driver returns with his daughter, who knows both names and which market uses each. The apprentice writes a small note beside the line.
+
+You ask where the different caravans travel. The driver has come by a road toward Sinjumatu, and a silk dealer at the next table has another load marked for Cachanfu. She offers a full silk trade bale for 100 silver. Wei asks his apprentice to copy the destinations clearly so no one sends it to the wrong yard.
+
+A messenger arrives asking about a third town, Kenjanfu. Wei sets a blank sheet beside his work and asks the driver’s daughter to tell the first road sign she remembers.
 
 ## ev.saianfu.a.choice.weavers
 
-Watch the silk weavers at their looms
+Spend a day with Wei’s town list and ask about Sinjumatu
 
 ## ev.saianfu.a.choice.silk
 
-Buy fine silken stuff from a weaver's stall
+Buy the full silk bale for 100 silver and ask about Cachanfu
 
 ## ev.saianfu.a.choice.magistrates
 
-Ask the magistrates which towns owe tribute
+Listen to the driver’s daughter describe the road signs
 
 ## ev.saianfu.b.title
 
-Game and Manufacture
+The Hunter’s Ginger Stall
 
 ## ev.saianfu.b.body
 
-They have much silk here, and also a quantity of game, for the woods and marshes round Saianfu abound in beasts and birds. Hunters bring pelts to the market beside the armourers, and the city holds all that behoves a noble seat — workshops, granaries, and deep waters on three sides.
+At the edge of the market, hunter Mei is cleaning a pair of boots while her sister sells ginger from a full trade bale. Mei’s son asks why the roots must be kept dry when they grew in wet earth. His aunt says they will spoil in a closed damp sack. She lets him open one corner to smell it, then tells him to tie it again before the market dust gets in.
+
+You ask where Mei walks when she goes beyond town. She points toward the road to Kenjanfu and says she spends a day checking the weather before taking a long path. A neighbour arrives with a torn pack strap; Mei sets down the boots to help him judge whether it will carry weight. Her sister says she can sell the ginger bale for 100 silver, but will not weigh it while her hands are full of the neighbour’s load.
+
+Mei’s son fetches a clean cloth for the roots. His mother asks him to bring the boot brush too, and he returns with both, pleased to have understood.
 
 ## ev.saianfu.b.choice.market
 
-Walk the hunters' market beside the workshops
+Spend a day walking with Mei and note the road to Kenjanfu
 
 ## ev.saianfu.b.choice.ginger
 
-Buy ginger from a victualler's stall
+Buy the full ginger bale for 100 silver
 
 ## ev.saianfu.b.choice.walls
 
-Walk the northern approach where the host once lay siege
+Listen to Mei’s family discuss weather and packing
 
 ## ev.ev_saianfu_entry.choice_1_result
 
-You pass through the gate without delay. You set the way to Saianfu on your map.
+You follow the street into Saianfu. Lin’s daughter checks the shutter from inside and calls that it closes properly. Her father turns back to the waiting supper guest.
 
 ## ev.ev_saianfu_entry.choice_2_result
 
-You walk through the market. It costs you 1 day on the road. The account is written down before the hour turns. The road to Saianfu opens on your map.
+You spend a day walking between the repaired wall and the silk market. The mason Lin’s daughter named shows you where new stone joins old. You record how the town’s streets and workshops meet the water.
 
 ## ev.ev_saianfu_entry.choice_3_result
 
-You visit the sì (Buddhist monastery). Your name carries a little more weight here now. You carry away a small sign of the place. You set the way to Saianfu on your map.
+You carry fresh water with Lin’s daughter to the shrine. Her grandmother thanks you, then asks the girl to pour a little into the lamp bowl before setting down the heavy jar. The family remembers your visit.
 
 ## ev.ev_saianfu_a.choice_1_result
 
-You watch the silk weavers at their looms. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Sinjumatu on your map.
+You spend a day comparing the towns in Wei’s list. The driver and his daughter show you Sinjumatu on the map; the apprentice writes down both forms of its name. You keep a careful record of the road.
 
 ## ev.ev_saianfu_a.choice_2_result
 
-
-You buy fine silken stuff from a weaver's stall. You pay 9000 coins. You add 1 item to your stores. The road to Cachanfu opens on your map.
+You pay 100 silver for the full silk bale. The dealer checks the weight and shows you Cachanfu on the map before she ties the load. Wei’s apprentice writes the destination on a fresh tag.
 
 ## ev.ev_saianfu_a.choice_3_result
 
-You ask the magistrates which towns owe tribute. You set what you saw into your travel book. A small turn of fortune favours you.
+The daughter names the road markers in the order she saw them. Wei asks her to distinguish the painted post from a tree that looks similar at dusk. You record her explanation and feel better prepared to travel.
 
 ## ev.ev_saianfu_b.choice_1_result
 
-You walk the hunters' market beside the workshops. It costs you 1 day on the road. The account is written down before the hour turns. The road to Kenjanfu opens on your map.
+You spend a day with Mei checking the paths and the sky. She points out Kenjanfu on your map and shows her son how a pack strap should sit. You record what you learned.
 
 ## ev.ev_saianfu_b.choice_2_result
 
-
-You buy ginger from a victualler's stall. You pay 2000 coins. You add 1 item to your stores. Your name carries a little more weight here now.
+You pay 100 silver for the full ginger bale. Mei’s sister weighs it after the neighbour’s pack is secure, and her nephew folds the clean cloth beneath the knot. The family thanks you for waiting.
 
 ## ev.ev_saianfu_b.choice_3_result
 
-You walk the northern approach where the host once lay siege. The account is written down before the hour turns. Fortune bends a little your way.
+Mei tells you which signs she checks before leaving, and her sister explains how she keeps the ginger dry. The son asks why both of them look at the same cloud; you help answer him.
 
 ## ev.ev_saianfu_a_followup.title
 
-Saianfu: The Twelve Cities' Clerk
+One More Page in Wei’s Book
 
 ## ev.ev_saianfu_a_followup.body
 
-In the noble city that rules twelve others a clerk who keeps the tribute lists of the subordinate towns draws you into the magistrate's outer court. He says Saianfu's silk and ginger roads are the same roads that feed those twelve — and that a traveller who buys without hearing the list rides half-blind toward Sinjumatu and Cachanfu.
+Wei has begun a new page after the driver’s daughter showed him the two names for one town. The apprentice has put the older name in a smaller hand, but she worries a reader will overlook it. The driver’s daughter suggests a mark in the margin. Wei asks her to draw one that will not look like a price. She tries a small circle; the silk dealer says it looks like a grain measure. They settle on a short line and a note.
+
+You ask where the next loads are headed. The dealer has another full silk bale for 100 silver. Wei’s road list includes Sinjumatu, Cachanfu and Kenjanfu, each on a different line. The apprentice asks you to read the three names aloud so she can tell whether the columns are clear. The driver’s daughter interrupts when she hears a familiar town and adds a water stop.
+
+Wei turns the page toward you, leaving room for anything you can confirm from your own travels.
 
 ## ev.ev_saianfu_a_followup.choice_1
 
-Buy silk at the magistrate's measured price
+Buy the second full silk bale for 100 silver
 
 ## ev.ev_saianfu_a_followup.choice_1_result
 
-You leave with silk sealed for the circuit road. The price is fair, and Saianfu's name goes with the bolt.
+You pay 100 silver for the second full bale. The dealer and apprentice check its tag against the fresh page before loading it. Wei reads the destination aloud one last time.
 
 ## ev.ev_saianfu_a_followup.choice_2
 
-Ask which of the twelve roads leads toward Sinjumatu
+Compare the roads to Sinjumatu and Cachanfu
 
 ## ev.ev_saianfu_a_followup.choice_2_result
 
-Sinjumatu and Cachanfu are marked on your map. The rich circuit is no longer a blank.
+The driver’s daughter and silk dealer describe their roads to Sinjumatu and Cachanfu. Wei’s apprentice keeps the older town names in the margins. You mark both cities on your map.
 
 ## ev.ev_saianfu_a_followup.choice_3
 
-Spend a day with the weavers and hear the circuit names
+Spend a day checking Wei’s page for the Kenjanfu road
 
 ## ev.ev_saianfu_a_followup.choice_3_result
 
-You spend a day among the looms. Kenjanfu is named in the talk, and fortune bends a little your way.
+You spend a day checking the Kenjanfu line with travellers who used it in different seasons. Wei keeps the date beside each account. You leave with a clearer sense of which goods and stops matter on that road.
+
+## ev.saianfu.shutter.title
+
+The Window Shutter at Supper
+
+## ev.saianfu.shutter.body
+
+At Lin’s inn, the repaired shutter closes well but knocks against a clay water jar when it swings inward. Lin’s daughter says they should move the jar. Her grandmother says the jar stands there so guests coming in late can drink without waking anyone. ‘Then the shutter must stop earlier,’ the girl replies. Lin brings a small wooden peg; he wants to test it before hammering it into the frame.
+
+You ask whether the window must open wide in hot weather. Grandmother says yes, and shows where she sits to catch the evening air. The supper guest from your first visit offers to hold the jar while they try different positions. The daughter measures with her palm and asks you to mark the one that clears both jar and stool. Lin admits the peg he cut is a little long. His mother laughs and hands him the knife. At the far table, a traveller waits for his water, listening to the family argue kindly over one handspan of space.
+
+## ev.saianfu.shutter.choice.peg
+
+Help set the wooden stop for the shutter
+
+## ev.saianfu.shutter.choice.day
+
+Stay a day repairing the inn’s second window
+
+## ev.saianfu.shutter.result.peg
+
+You mark the right place and hold the shutter while Lin fixes the peg. His daughter opens it to check the breeze; the jar remains safe. Grandmother pours the waiting traveller a cup of water.
+
+## ev.saianfu.shutter.result.day
+
+You spend a day with Lin repairing the second window. His daughter measures before anyone cuts the wood this time, and the supper guest helps carry the old frame away. By evening both windows open without troubling the water jar.

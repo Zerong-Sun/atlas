@@ -15,7 +15,7 @@ Caiju
 
 ## ev.caiju.entry.body
 
-At Caiju’s landing, a clerk has counted one grain sack twice. The boat owner catches it when his daughter calls the marks from the deck. ‘I put that bag by the wrong post,’ she says. Her father asks her to bring the sack back where everyone can see its mark. The clerk crosses out the extra line. ‘Read the last three marks once more,’ he tells her. She does, and asks, ‘Is that the count you have?’ He nods and writes the new total. A carter beside you wants to know when the embankment road will be clear; porters have spread sacks across one end of it. The clerk says they will finish the count before the next cart arrives. You ask how to go overland toward Chinghianfu. ‘Follow the raised road past the last storehouse,’ the owner says. ‘The carters know the next stopping place.’ His daughter has brought a spare sheet to copy the corrected list. ‘Let me do this one myself,’ she tells the clerk. He gives her the board and promises to check it after she has finished. If you stay tomorrow, she can show you the warehouses and the high road along the water.
+At Caiju’s landing, a clerk has counted one grain sack twice. The boat owner catches it when his daughter calls the marks from the deck. ‘I put that bag by the wrong post,’ she says. Her father asks her to bring the sack back where everyone can see its mark. The clerk crosses out the extra line. ‘Read the last three marks once more,’ he tells her. She does, and asks, ‘Is that the count you have?’ He nods and writes the new total. A carter beside you wants to know when the embankment road will be clear; porters have spread sacks across one end of it. The clerk says they will finish the count before the next cart arrives. You ask where to board a boat across the great river toward Chinghianfu. ‘Past the last storehouse,’ the owner says. ‘The ferryman waits for the current to ease before he crosses.’ His daughter has brought a spare sheet to copy the corrected list. ‘Let me do this one myself,’ she tells the clerk. He gives her the board and promises to check it after she has finished. If you stay tomorrow, she can show you the warehouses and the high road along the water.
 
 ## ev.caiju.entry.choice.look
 
@@ -43,15 +43,15 @@ The Vegetable Seller’s Two Baskets
 
 ## ev.ev_gap_caiju.body
 
-A vegetable seller by the bridge has put tender leaves and hard roots into separate baskets. Her younger brother has tied the leaf basket too tightly, and the greens at the bottom are already bending. ‘They will wilt before the buyer sees them,’ she says. He loosens the cord, but now the basket tips when he lifts it. You help him set the bundle upright while she moves the heavy roots to the other side of the carrying pole. A traveller asks if there are vegetables that will last on his cart journey toward Chinghianfu. The seller offers him the dry roots first; the leaves will go to a family cooking nearby. The boy asks why they cannot send everything on the cart. ‘Because their supper is today,’ she says, pointing to the family’s fire. The traveller knows the road onward. ‘After the bridge, where does the cart turn?’ you ask. ‘Past the grain store,’ he says, waiting while the boy reties the lighter basket. The seller asks you to listen to his directions, or help her finish sorting the produce before he goes.
+A vegetable seller by the bridge has put tender leaves and hard roots into separate baskets. Her younger brother has tied the leaf basket too tightly, and the greens at the bottom are already bending. ‘They will wilt before the buyer sees them,’ she says. He loosens the cord, but now the basket tips when he lifts it. You help him set the bundle upright while she moves the heavy roots to the other side of the carrying pole. A traveller asks if there are vegetables that will last on the ferry crossing toward Chinghianfu. The seller offers him the dry roots first; the leaves will go to a family cooking nearby. The boy asks why they cannot send everything across the river. ‘Because their supper is today,’ she says, pointing to the family’s fire. The traveller knows the river crossing. ‘Which landing takes us over?’ you ask. ‘Past the grain store,’ he says, pointing to the ferry while the boy reties the lighter basket. The seller asks you to listen to his directions, or help her finish sorting the produce before he goes.
 
 ## ev.ev_gap_caiju.choice.route
 
-Ask the traveller about Chinghianfu
+Ask the traveller about the Chinghianfu ferry
 
 ## ev.ev_gap_caiju.choice.route_result
 
-The traveller marks the route to Chinghianfu on your board, including the grain store where the cart road turns. The seller hands him a small packet of roots for the trip. Her brother can now carry both baskets without crushing the leaves.
+The traveller marks the route to Chinghianfu on your board, including the grain store before the ferry landing. The seller hands him a small packet of roots for the trip. Her brother can now carry both baskets without crushing the leaves.
 
 ## ev.ev_gap_caiju.choice.scene
 

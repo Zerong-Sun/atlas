@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: 5662d8b72e83
+source_rev: e1d1027e74e0
 status: translated
 translator: 人工校译
 notes: >
@@ -30,7 +30,7 @@ stamps:
   ev.tauris.entry.choice.customs: 88ef04d4b0e9
   ev.tauris.entry.choice.lore: 711481aabdbf
   ev.tauris.entry.choice.market: ebdd7e4cfebe
-  ev.tauris.mentor_tarot.body: 23404ae723b6
+  ev.tauris.mentor_tarot.body: d8d003c14c45
   ev.tauris.mentor_tarot.choice.ask: 7e60272a748e
   ev.tauris.mentor_tarot.choice.learn: f5cd530a4e40
   ev.tauris.mentor_tarot.title: 2e2eb9638aed
@@ -182,6 +182,8 @@ stamps:
 商队旅舍旁，露琪娅寡妇正整理一副画了图的纸牌，外甥在修牌盒。他问为何两张牌各画一条不同的出城路。“画师没法把两条路都放进一张。”她说。外甥说这理由可不高明，她便叫他自己画一张试试。
 
 你问她用牌做什么。露琪娅说她常拿它们让旅人把眼前的选择讲清楚：想得到什么，付得起什么，同行人又会怎样。外甥说有些客人后来还会回来，把路上的结果讲给她听。“您每回都听？”你问。“带着晚饭来，我就听。”她说。外甥抱怨饭碗都是自己端的，露琪娅把修好的盒子放在桌边，问你想知道什么。
+
+隔桌一位老师把画了星象记号的骰子与小图摆好。露琪娅外甥请他先别掷，等这边把话说完。那人笑着把骰子握回掌心。
 
 ## ev.tauris.mentor_tarot.choice.ask
 

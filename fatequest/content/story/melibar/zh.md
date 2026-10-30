@@ -2,7 +2,7 @@
 unit: melibar
 lang: zh
 source: en
-source_rev: 5e117095a474
+source_rev: 526182dc48e1
 status: translated
 translator: 人工校译
 notes: >
@@ -18,7 +18,7 @@ stamps:
   ev.melibar.entry.choice.shrine: e73b94e057dc
   ev.melibar.entry.title: bf537f6546aa
   ev.melibar.a.title: 81380a2a4f96
-  ev.melibar.a.body: 05dfbac42c7c
+  ev.melibar.a.body: 5a87ece89ee5
   ev.melibar.a.choice.watch: 105c2a22816e
   ev.melibar.a.choice.buy-pepper: 6ea201508309
   ev.melibar.a.choice.ask-south: e5ffe4244251
@@ -37,7 +37,7 @@ stamps:
   ev.ev_melibar_b.choice_2_result: 88c925deee2e
   ev.ev_melibar_b.choice_3_result: c0c4b9b2d275
   ev.ev_melibar_a_followup.title: 67590cb471ac
-  ev.ev_melibar_a_followup.body: 65ecbf149ee8
+  ev.ev_melibar_a_followup.body: 9d3429b7314b
   ev.ev_melibar_a_followup.choice_1: 33e3131bc2a4
   ev.ev_melibar_a_followup.choice_1_result: 70af0f10fa05
   ev.ev_melibar_a_followup.choice_2: 0153c3abf24f
@@ -82,7 +82,7 @@ stamps:
 
 ## ev.melibar.a.body
 
-没来港的守望人把一袋胡椒从潮湿石面搬到棚下木板上。年轻搬货人问，船就要装货了，干吗多挪一回。“它在船上待的时间，比在这里长得多。”守望人答。卖胡椒的妇人来检查袋缝。你问哪条船往加异勒去，她指着一艘停在渔船外侧的货船，又问守望人港口入口是否通畅。他说大船还在转向，大家得给码头让地方。搬货人提起另一袋，没挡住人走路。妇人问，你若想知道干袋怎样上船，愿不愿在旁边看一天。引水员正带船入港，忙完后也愿把南面的几条沿岸路说给你听。妇人还叫搬货人念一遍袋上的记号，免得和旁边那批混了。他这回认对了。
+没来港的守望人把一袋胡椒从潮湿石面搬到棚下木板上。年轻搬货人问，船就要装货了，干吗多挪一回。“它在船上待的时间，比在这里长得多。”守望人答。卖胡椒的妇人来检查袋缝。你问哪条船往加异勒去，她指着一艘停在渔船外侧的货船，又问守望人港口入口是否通畅。他说大船还在转向，大家得给码头让地方。搬货人提起另一袋，没挡住人走路。妇人问，你若想知道干袋怎样上船，愿不愿在旁边看一天。引水员正带船入港，忙完后也愿把南面的几条沿岸路说给你听。妇人还叫搬货人念袋上的记号。“加异勒。”他答。她看过货板：“对，和那条船的货放在一起。”他绕开码头的人，把袋子放进干货堆。
 
 ## ev.melibar.a.choice.watch
 
@@ -158,7 +158,7 @@ stamps:
 
 ## ev.ev_melibar_a_followup.body
 
-胡椒商叫你回到货棚，她熟悉的承运人正核对出港的船。儿子抄下了货记，可木板上一袋写往加异勒，另一袋要去近些的港口。“别因为袋子长得像，就替人换了船。”她说。少年念出两个记号，把袋子分开。承运人愿按市价卖你一整袋胡椒。你问剩余的货往哪儿走。他在木板上画出往俱蓝和马八儿的海岸，又叫少年自己指出第一个转弯。一个提着湿绳进来的船工在码头喊，下一条船还得看风才能定。妇人点头，叫儿子把袋子先收在棚下。儿子问袋子能不能在棚里放到明早。母亲先抬头看屋顶漏不漏雨，才点头。
+胡椒商叫你回到货棚，她熟悉的承运人正核对出港的船。儿子抄下了货记，可木板上一袋写往加异勒，另一袋要去近些的港口。“别因为袋子长得像，就替人换了船。”她说。少年念了两处货记。“该往哪边放？”母亲问。他把袋子分开，先指给她看货板，才去系第一只袋口。承运人愿按市价卖你一整袋胡椒。你问剩余的货往哪儿走。他在木板上画出往俱蓝和马八儿的海岸，又叫少年自己指出第一个转弯。一个提着湿绳进来的船工在码头喊，下一条船还得看风才能定。妇人点头，叫儿子把袋子先收在棚下。儿子问袋子能不能在棚里放到明早。母亲先抬头看屋顶漏不漏雨，才点头。
 
 ## ev.ev_melibar_a_followup.choice_1
 

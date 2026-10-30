@@ -11,24 +11,24 @@ notes: >
 
 ## ev.ev_unique_coiganju.title
 
-At the River Office
+The Cargo Office’s Mixed Marks
 
 ## ev.ev_unique_coiganju.body
 
-Merchandise arriving by the Caramoran is checked at Coiganju before it is sent onward. A river clerk needs help sorting crate marks. The office also issues a sealed trade note for a fee.
+At a small cargo office, a clerk is comparing crate marks with the loads coming off a river boat. Two owners use nearly the same sign. The clerk’s son has placed both crates under one name and now cannot tell which receipt to give the porter. ‘Read the smaller mark beside it,’ his father says. The boy kneels by the wood; one sign has a short stroke at its base. You hold the receipt board while he corrects the entries. A merchant waiting for his goods asks how a stamped trade form works if he sends the crates onward by road. The clerk shows him the blank form, the place for an owner’s name, and the line that records what is actually shipped. You ask whether travellers may request their own stamped form. He says yes for a modest fee, even before they have goods to enter; the owner fills the cargo line when it is used. For now the office needs another pair of eyes to finish checking today’s crates.
 
 ## ev.ev_unique_coiganju.choice_a
 
-Sort the incoming crates
+Spend a day checking cargo marks
 
 ## ev.ev_unique_coiganju.choice_a_result
 
-You spend a day matching marks to the river ledger. The clerk pays 150 silver and remembers your careful work.
+You stay another day, reading the small marks while the clerk’s son corrects his list. He catches the final mixed crate without help. The clerk pays you for the work and tells the waiting merchants whom to thank for the accurate count.
 
 ## ev.ev_unique_coiganju.choice_b
 
-Pay for a sealed trade note
+Pay for a stamped trade form
 
 ## ev.ev_unique_coiganju.choice_b_result
 
-You pay 260 silver. The clerk enters your name in the office book; local merchants accept your seal and you understand their accounts better.
+You pay the office fee. The clerk writes your name on a blank trade form, stamps it, and explains where to enter any goods you later send. Merchants waiting nearby see you take care with the paperwork and offer practical advice about filling its lines.

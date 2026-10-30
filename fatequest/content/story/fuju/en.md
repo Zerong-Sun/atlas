@@ -15,54 +15,72 @@ Fuju
 
 ## ev.fuju.entry.body
 
-Now this city of Fuju is the key of the kingdom which is called CHONKA, and which is one
-of the nine great divisions of Manzi. The city is a seat of great trade and great
-manufactures. The people are Idolaters and subject to the Great Kaan. And a large
-garrison is maintained there by that prince to keep the kingdom in peace and subjection.
-For the city is one which is apt to revolt on very slight provocation. There flows
-through the middle of this city a great river, which is about a mile in width, and many
-ships are built at the city which are launched upon this river.
+A boatbuilder near Fuju’s river is turning a plank over to keep its wet side clear of the sun. His niece has stacked the new wood beside boards that were soaked yesterday. ‘Will these dry together?’ she asks. ‘The older ones need air beneath them,’ he says, placing two short blocks under a plank. You help lift its far end. A sugar seller passing the yard calls out that his jars are ready for the workers who will launch a hull later in the week. The niece wants to know whether the jars can sit on the warm timber. ‘Bring them under the roof,’ her uncle says, ‘and keep the lids clean.’ You ask how to get from the river yard into town. He points to a lane past the sugar stall, while the niece offers to show you the wider market tomorrow. The seller opens one jar for the workers to taste, and the niece asks why this batch is darker than the last. He promises to explain when his fire is free in the afternoon.
 
 ## ev.fuju.entry.choice.look
 
-Rest and ask what men say of this place
+Stay a day to learn the river yard
 
 ## ev.fuju.entry.choice.pass
 
-Pass through without stopping
+Take the lane across Fuju
 
 ## ev.fuju.entry.title
 
-Concerning the Greatness of the City of Fuju
+The Boatbuilder’s Dry Timber
 
 ## ev.ev_fuju_entry.choice_1_result
 
-You pass through without stopping. The road to Fuju opens on your map.
+The builder props the damp planks with blocks, and his niece carries the sugar jars beneath the roof. He points you down the lane past the stall. You cross town knowing where the river yard lies if you return.
 
 ## ev.ev_fuju_entry.choice_2_result
 
-You rest and ask what men say of this place. You set the way to Fuju on your map. You set what you saw into your travel book. You spend 1 day before the way is clear again.
+You stay another day. The niece shows you how the yard sets wood to dry and leads you through the market to the river landing. The sugar seller explains what happened to his darker batch; by evening you know both families and the town’s waterside streets.
 
 ## ev.ev_gap_fuju.title
 
-The Tide Rope at the Harbour
+The Sounding Line at the Landing
 
 ## ev.ev_gap_fuju.body
 
-At Fuju harbour, a pilot lowers a knotted rope straight into the water. Each knot marks about a foot of depth beneath the hull. As the tide falls, shoals appear and ships must wait for it to rise. A reading taken while the ship is moving is unreliable.
+At Fuju’s landing, a pilot lowers a knotted line from a small boat to measure the water near the quay. His apprentice counts aloud but misses a knot when the line twists. ‘Lift it clear and try again,’ the pilot says. You hold the loose end while the apprentice straightens it. A carter waiting on shore asks whether the quay will be deep enough for his timber to be unloaded this afternoon. The pilot says he will know after one more measure. The carter has travelled the overland route toward Zayton and asks if you need its first turn. You ask why he uses the road when the river is here. ‘My cart goes to a family inland before it reaches the port,’ he says. The apprentice calls the corrected depth. ‘Is the bank clear enough now?’ the carter asks. The pilot checks the line again. ‘For the timber boat, once this tide settles.’ He tells the carter when to bring the unloading crew. The carter draws the road’s first bend on a piece of scrap wood while they haul the line aboard.
 
 ## ev.ev_gap_fuju.choice.route
 
-Ask the way to Zayton
+Ask the carter about the Zayton road
 
 ## ev.ev_gap_fuju.choice.route_result
 
-“Follow the coast southwest from here to Zayton.”
+The carter marks the overland route toward Zayton on your board, beginning at the inland turn beyond the quay. The pilot confirms the timber boat can unload later, and his apprentice coils the line without tangling its knots.
 
 ## ev.ev_gap_fuju.choice.scene
 
-Help measure the water depth
+Help the apprentice count the depth marks
 
 ## ev.ev_gap_fuju.choice.scene_result
 
-You count six knots. “This ship can pass,” says the pilot. “Looking at the surface is not enough; you must know when the tide will turn.”
+You hold the sounding line straight while the apprentice counts every knot. The pilot repeats the depth to the waiting carter and lets the apprentice make the final note. He thanks you as he pulls the clean line back into the boat.
+
+## ev.fuju.sugar-jar.title
+
+The Sugar Seller’s Dark Jar
+
+## ev.fuju.sugar-jar.body
+
+A sugar seller has set three jars beside her stove. The newest syrup is darker than the others, and her nephew worries that a buyer will think it burned. She gives him a clean spoon. ‘Taste the edge of the jar before you say that,’ she tells him. He does and finds it sweet, though a little thicker. You ask why this batch changed. She says she let it cook longer when the fire fell low, and she shows the charcoal still red beneath the pot. A buyer from the boat yard arrives with a list of workers to feed. He wants a syrup that will mix into warm water without lumps. The nephew pours a little from each jar and watches how it moves. The seller asks him which he would choose. ‘The light one for the workers,’ he says. ‘Why that one?’ she asks. ‘It pours into warm water faster. The dark syrup can go on rice.’ She lets the buyer test his choice. You may compare the jars with him now, or return tomorrow while the family prepares another batch and shares a meal after the stove is cleaned.
+
+## ev.fuju.sugar-jar.choice.taste
+
+Compare the three jars with the nephew
+
+## ev.fuju.sugar-jar.result.taste
+
+You taste a little from each clean spoon and help the nephew explain the difference to the buyer. The buyer takes the lighter syrup for the workers, while another customer chooses the dark jar for rice. You leave better able to judge a batch before paying for it.
+
+## ev.fuju.sugar-jar.choice.stir
+
+Return a day later for the next cooking
+
+## ev.fuju.sugar-jar.result.stir
+
+You return the next day and help the nephew keep the stove steady while his aunt cooks another pot. When the jars are filled, she serves rice and vegetables to everyone who worked. You rest in the yard after the meal before setting off.

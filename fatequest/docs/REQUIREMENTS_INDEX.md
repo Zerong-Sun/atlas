@@ -38,10 +38,10 @@ node tools/validate/validate.mjs --quiet
 node tools/lore/story.mjs check
 node tests/test_i18n_lines.mjs
 python3 tools/art/audit.py --unused
-godot --headless --path . --script tests/run_tests.gd
+node tools/test/run_isolated_godot.mjs tests/run_tests.gd
 ```
 
-`story.mjs check` 当前3955 current/0 stale/0 missing；结果只证明源文版本对应，质量限制见[文本审计](library_audit/TEXT_AUDIT_2026-10-20.md)。旧美术审计 USED 包含注册引用，不能等同实际使用。
+`story.mjs check` 当前 5762 current/0 stale/0 missing；结果只证明源文版本对应，质量限制见[文本审计](library_audit/TEXT_AUDIT_2026-10-20.md)。旧美术审计 USED 包含注册引用，不能等同实际使用。
 
 `validate.mjs` 的 G28 会检查 12 主城的无反馈选择、队列断链、双语 key 和至少两页的后果链。
 

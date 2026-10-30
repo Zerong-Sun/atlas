@@ -2518,6 +2518,637 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-linju-basketlid",
+      "kind": "site",
+      "title": "ev.linju.basketlid.title",
+      "body": "ev.linju.basketlid.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "linju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.linju.basketlid.choice.deliver",
+          "resultText": "ev.linju.basketlid.result.deliver",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "linju",
+              "reason": "delivered-vegetables-to-the-neighbour"
+            }
+          ]
+        },
+        {
+          "label": "ev.linju.basketlid.choice.mend",
+          "resultText": "ev.linju.basketlid.result.mend",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-weave-flexible-basket-lids"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-river-basket-repairs"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-mien-gatelatch",
+      "kind": "site",
+      "title": "ev.mien.gatelatch.title",
+      "body": "ev.mien.gatelatch.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "mien"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.mien.gatelatch.choice.test",
+          "resultText": "ev.mien.gatelatch.result.test",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "mien",
+              "reason": "helped-test-the-elephant-yard-gate"
+            }
+          ]
+        },
+        {
+          "label": "ev.mien.gatelatch.choice.carve",
+          "resultText": "ev.mien.gatelatch.result.carve",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-shape-the-elephant-yard-latch"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "worked-with-nandas-household"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-nanghin-bluehem",
+      "kind": "site",
+      "title": "ev.nanghin.bluehem.title",
+      "body": "ev.nanghin.bluehem.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "nanghin"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.nanghin.bluehem.choice.hold",
+          "resultText": "ev.nanghin.bluehem.result.hold",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "nanghin",
+              "reason": "helped-the-dye-yard-finish-the-hem"
+            }
+          ]
+        },
+        {
+          "label": "ev.nanghin.bluehem.choice.day",
+          "resultText": "ev.nanghin.bluehem.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "finished-the-blue-silk-hem"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "worked-with-the-dye-yard-sisters"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-paukin-threadcover",
+      "kind": "site",
+      "title": "ev.paukin.threadcover.title",
+      "body": "ev.paukin.threadcover.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "paukin"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.paukin.threadcover.choice.measure",
+          "resultText": "ev.paukin.threadcover.result.measure",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "paukin",
+              "reason": "helped-cover-the-thread-stall"
+            }
+          ]
+        },
+        {
+          "label": "ev.paukin.threadcover.choice.sew",
+          "resultText": "ev.paukin.threadcover.result.sew",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-patch-a-rain-cover"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-keep-market-goods-dry"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sindafu-stoolleg",
+      "kind": "site",
+      "title": "ev.sindafu.stoolleg.title",
+      "body": "ev.sindafu.stoolleg.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "sindafu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.sindafu.stoolleg.choice.test",
+          "resultText": "ev.sindafu.stoolleg.result.test",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sindafu",
+              "reason": "helped-repair-yus-family-stool"
+            }
+          ]
+        },
+        {
+          "label": "ev.sindafu.stoolleg.choice.day",
+          "resultText": "ev.sindafu.stoolleg.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-the-carpenters-stool-repair"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "spent-a-day-with-yus-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sinjumatu-lampdish",
+      "kind": "site",
+      "title": "ev.sinjumatu.lampdish.title",
+      "body": "ev.sinjumatu.lampdish.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "sinjumatu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.sinjumatu.lampdish.choice.fit",
+          "resultText": "ev.sinjumatu.lampdish.result.fit",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sinjumatu",
+              "reason": "fitted-the-boatmans-lamp-shelf"
+            }
+          ]
+        },
+        {
+          "label": "ev.sinjumatu.lampdish.choice.day",
+          "resultText": "ev.sinjumatu.lampdish.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "made-a-stable-river-lamp-shelf"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-secure-lamps-on-boats"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tiju-saltbasket",
+      "kind": "site",
+      "title": "ev.tiju.saltbasket.title",
+      "body": "ev.tiju.saltbasket.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tiju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tiju.saltbasket.choice.labels",
+          "resultText": "ev.tiju.saltbasket.result.labels",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tiju",
+              "reason": "helped-explain-the-salt-samples"
+            }
+          ]
+        },
+        {
+          "label": "ev.tiju.saltbasket.choice.day",
+          "resultText": "ev.tiju.saltbasket.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "watched-the-last-salt-sample-dry"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-test-drying-salt"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-saianfu-shutter",
+      "kind": "site",
+      "title": "ev.saianfu.shutter.title",
+      "body": "ev.saianfu.shutter.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "saianfu"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.saianfu.shutter.choice.peg",
+          "resultText": "ev.saianfu.shutter.result.peg",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "saianfu",
+              "reason": "helped-lins-family-fit-the-shutter"
+            }
+          ]
+        },
+        {
+          "label": "ev.saianfu.shutter.choice.day",
+          "resultText": "ev.saianfu.shutter.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "repaired-lins-second-window"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "spent-a-day-at-lins-inn"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-siju-millstone",
+      "kind": "site",
+      "title": "ev.siju.millstone.title",
+      "body": "ev.siju.millstone.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "siju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.siju.millstone.choice.test",
+          "resultText": "ev.siju.millstone.result.test",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "siju",
+              "reason": "helped-chen-test-the-millstone"
+            }
+          ]
+        },
+        {
+          "label": "ev.siju.millstone.choice.day",
+          "resultText": "ev.siju.millstone.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-to-fit-a-millstone-wedge"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-check-mill-gears"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-sinju-bluecord",
+      "kind": "site",
+      "title": "ev.sinju.bluecord.title",
+      "body": "ev.sinju.bluecord.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "sinju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.sinju.bluecord.choice.knot",
+          "resultText": "ev.sinju.bluecord.result.knot",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "sinju",
+              "reason": "helped-teach-the-quay-driver-a-knot"
+            }
+          ]
+        },
+        {
+          "label": "ev.sinju.bluecord.choice.day",
+          "resultText": "ev.sinju.bluecord.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "checked-the-quay-parcel-cords"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-rain-safe-cargo-knots"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-suju-bridgeplank",
+      "kind": "site",
+      "title": "ev.suju.bridgeplank.title",
+      "body": "ev.suju.bridgeplank.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "suju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.suju.bridgeplank.choice.fix",
+          "resultText": "ev.suju.bridgeplank.result.fix",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "suju",
+              "reason": "helped-repair-the-bridge-plank"
+            }
+          ]
+        },
+        {
+          "label": "ev.suju.bridgeplank.choice.day",
+          "resultText": "ev.suju.bridgeplank.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "checked-suju-bridge-repairs"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-spot-loose-bridge-planks"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-tanpiju-mulberrybasket",
+      "kind": "site",
+      "title": "ev.tanpiju.mulberrybasket.title",
+      "body": "ev.tanpiju.mulberrybasket.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tanpiju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tanpiju.mulberrybasket.choice.bind",
+          "resultText": "ev.tanpiju.mulberrybasket.result.bind",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tanpiju",
+              "reason": "helped-bind-lins-mulberry-basket"
+            }
+          ]
+        },
+        {
+          "label": "ev.tanpiju.mulberrybasket.choice.day",
+          "resultText": "ev.tanpiju.mulberrybasket.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "checked-the-garden-baskets"
+            },
+            {
+              "op": "fate",
+              "id": "travel",
+              "value": 1,
+              "reason": "learned-to-check-basket-handles"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
+    },
+    {
+      "id": "ev-kinsay-umbrellastall",
+      "kind": "site",
+      "title": "ev.kinsay.umbrellastall.title",
+      "body": "ev.kinsay.umbrellastall.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "kinsay"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.kinsay.umbrellastall.choice.deliver",
+          "resultText": "ev.kinsay.umbrellastall.result.deliver",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "waited-for-fangs-umbrella-to-dry"
+            },
+            {
+              "op": "reputation",
+              "scope": "city",
+              "id": "kinsay",
+              "value": 1,
+              "reason": "delivered-chens-repaired-umbrella"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.umbrellastall.choice.learn",
+          "resultText": "ev.kinsay.umbrellastall.result.learn",
+          "effects": [
+            {
+              "op": "codex",
+              "value": "cx-kinsay",
+              "reason": "learned-the-umbrella-makers-repair"
+            }
+          ]
+        },
+        {
+          "label": "ev.kinsay.umbrellastall.choice.noodles",
+          "resultText": "ev.kinsay.umbrellastall.result.noodles",
+          "needs": {
+            "coins": {
+              "min": 100
+            }
+          },
+          "effects": [
+            {
+              "op": "coins",
+              "value": -100,
+              "reason": "bought-noodles-at-fangs-stall"
+            },
+            {
+              "op": "vitality",
+              "value": 5,
+              "reason": "ate-warm-noodles-in-the-rain"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

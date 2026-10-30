@@ -50,11 +50,7 @@
           "label": "ev.ev_balc_a_followup.choice_3",
           "resultText": "ev.ev_balc_a_followup.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-balc-ruins",
-              "reason": "kept-the-promise-to-the-ruins"
-            },
+
             {
               "op": "reputation",
               "value": 1,
@@ -100,11 +96,6 @@
               "id": "lapis",
               "value": 1,
               "reason": "bought-lapis-at-the-caravan-masters-price"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-lapis",
-              "reason": "bought-lapis-at-the-caravan-masters-price"
             }
           ],
           "needs": {
@@ -136,11 +127,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "waited-for-the-traders-ledger"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-lapis",
               "reason": "waited-for-the-traders-ledger"
             }
           ]
@@ -177,11 +163,6 @@
               "id": "balc",
               "value": 1,
               "reason": "helped-the-shrine-keeper"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-magi",
-              "reason": "carried-the-magi-fire-blessing"
             }
           ]
         },
@@ -206,9 +187,9 @@
           "resultText": "ev.ev_balc_c_followup.choice_3_result",
           "effects": [
             {
-              "op": "sticker",
-              "value": "st-balc-magi",
-              "reason": "kept-the-dream-secret"
+              "op": "flag",
+              "value": "fl-balc-c-followup-remembered-story",
+              "reason": "remembered-the-neighbours-story"
             }
           ]
         }
@@ -273,11 +254,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "lingered-to-copy-the-road-book"
-            },
-            {
-              "op": "sticker",
-              "value": "st-balc-ruins",
               "reason": "lingered-to-copy-the-road-book"
             }
           ]

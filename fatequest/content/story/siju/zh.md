@@ -2,7 +2,7 @@
 unit: siju
 lang: zh
 source: en
-source_rev: a010d4022e7c
+source_rev: 3ea99d1a3921
 status: translated
 translator: 人工校译
 notes: >
@@ -11,39 +11,45 @@ notes: >
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.siju.millstone.result.day: ac0b28285f31
+  ev.siju.millstone.result.test: e6ba6861edde
+  ev.siju.millstone.choice.day: a08e4cae473f
+  ev.siju.millstone.choice.test: d754823381f1
+  ev.siju.millstone.body: 4fc8ede40e8b
+  ev.siju.millstone.title: 83aa073a850a
   city.siju.name: fcf45d5090cc
-  ev.siju.entry.choice.market: e4eee3409b41
-  ev.siju.entry.choice.pass: dc7f77ef08d8
-  ev.siju.entry.choice.shrine: 98e20d47c9a5
-  ev.siju.entry.body: d92dd0efab35
-  ev.siju.entry.title: c53a3fad4966
-  ev.siju.a.title: c2132f9bc06d
-  ev.siju.a.body: 0b9a3bdfcb9c
-  ev.siju.a.choice.workshops: 87ef935f797f
-  ev.siju.a.choice.sugar: 0504a07cdd83
-  ev.siju.a.choice.grain: d8deba6f0662
-  ev.siju.b.title: 866100a274fb
-  ev.siju.b.body: fba8f6ce3192
-  ev.siju.b.choice.observe: da4f65ea6a79
-  ev.siju.b.choice.paper-money: 67a66662dc9e
-  ev.siju.b.choice.ask: 0ec8a82d6a0a
-  ev.ev_siju_entry.choice_1_result: 5dc06eab4b69
-  ev.ev_siju_entry.choice_2_result: 1ae61cfc2e43
-  ev.ev_siju_entry.choice_3_result: c08c78563112
-  ev.ev_siju_a.choice_1_result: 4fabd42db446
-  ev.ev_siju_a.choice_2_result: aff38de37fa7
-  ev.ev_siju_a.choice_3_result: 5913632b2455
-  ev.ev_siju_b.choice_1_result: 364aa5258421
-  ev.ev_siju_b.choice_2_result: af135dbd533c
-  ev.ev_siju_b.choice_3_result: b2514e556e4a
-  ev.ev_siju_a_followup.title: 25f724234c99
-  ev.ev_siju_a_followup.body: 491d00be5550
-  ev.ev_siju_a_followup.choice_1: 08494c193b51
-  ev.ev_siju_a_followup.choice_1_result: 904de4f249ce
-  ev.ev_siju_a_followup.choice_2: 9182972c4d43
-  ev.ev_siju_a_followup.choice_2_result: d3f31d49b0e5
-  ev.ev_siju_a_followup.choice_3: 7530a4374db8
-  ev.ev_siju_a_followup.choice_3_result: b9aaebc2daa1
+  ev.siju.entry.choice.market: 4693af013678
+  ev.siju.entry.choice.pass: 7aae2a65820f
+  ev.siju.entry.choice.shrine: 3a1c8a53f546
+  ev.siju.entry.body: 9c5b33ed4dfc
+  ev.siju.entry.title: 37029140f215
+  ev.siju.a.title: 101b3a8644de
+  ev.siju.a.body: 711ed0994fce
+  ev.siju.a.choice.workshops: 35c0ecf35661
+  ev.siju.a.choice.sugar: 89f3dca2ed7b
+  ev.siju.a.choice.grain: ad1732ddaa65
+  ev.siju.b.title: 2209a4248473
+  ev.siju.b.body: facdb53e038f
+  ev.siju.b.choice.observe: aa57c9114781
+  ev.siju.b.choice.paper-money: 38867979f499
+  ev.siju.b.choice.ask: 5d2ce31a8966
+  ev.ev_siju_entry.choice_1_result: 0b6f970ec611
+  ev.ev_siju_entry.choice_2_result: dcb6a91580bf
+  ev.ev_siju_entry.choice_3_result: 80507e987c93
+  ev.ev_siju_a.choice_1_result: a1dfbe4665e6
+  ev.ev_siju_a.choice_2_result: 3e52031bbcf8
+  ev.ev_siju_a.choice_3_result: f9e762ee4713
+  ev.ev_siju_b.choice_1_result: 3bc341abbfcb
+  ev.ev_siju_b.choice_2_result: 40f3c5d5e4d5
+  ev.ev_siju_b.choice_3_result: 74313db699e5
+  ev.ev_siju_a_followup.title: 4a991d29ec7c
+  ev.ev_siju_a_followup.body: 613641bea4d5
+  ev.ev_siju_a_followup.choice_1: d29456ab7c89
+  ev.ev_siju_a_followup.choice_1_result: 33ab31e44ecc
+  ev.ev_siju_a_followup.choice_2: 252d67f17ed8
+  ev.ev_siju_a_followup.choice_2_result: 6c0c5c821ece
+  ev.ev_siju_a_followup.choice_3: 521004af6295
+  ev.ev_siju_a_followup.choice_3_result: d2a247b0cfae
 ---
 
 ## city.siju.name
@@ -52,130 +58,174 @@ stamps:
 
 ## ev.siju.entry.choice.market
 
-去集市逛逛
+留一天跟陈家看粮市
 
 ## ev.siju.entry.choice.pass
 
-不耽搁，直接进城
+往邳州粮市走
 
 ## ev.siju.entry.choice.shrine
 
-去佛寺看看
+帮陈叔妹妹给路边小祠添灯
 
 ## ev.siju.entry.body
 
-从邳州前一站往南走两天，穿过物产丰饶的地方，就到了邳州。这是一座富裕的大城，周围的平原土壤肥沃，盛产小麦和其他谷物。当地贸易和手工业都很兴旺，人们使用纸币，受大汗统治。从这里再往南走三天，会经过一连串城镇、村庄和农庄，最后抵达黄河。河水从西边流来。你在粮市打听南路，摊主指了指南边：“沿着这条路走，村镇多，不愁找不到落脚处。三天到黄河，河宽得能走大船。河对岸是两座相望的城，过河就进蛮子地区。”他又用木棍在地上划出河道：“别把它当地图上的一条细线。《行纪》说大汗在这里留着许多官船，需要时能运士兵、马匹和军需。”
+邳州边，磨坊主陈叔守着侧板坏了的车。妹妹拿来新木板，板比车厢长一点。“你量的是外面。”哥哥说。妹妹回他，旧板弯了，自己量的是该装进去的空处。两人把新板贴上车厢，果然是妹妹量得准，只需削掉一个角。
+
+你问从哪边进镇。陈叔指向粮市，说妹妹认得各家粮仓，也知道雨季怎样保持干爽。妹妹问你能不能留一天，正赶上他们给新粮复秤。邻居送水来，顺口问路边小祠的灯点上没有。陈叔妹妹说车修好就去看看。
+
+邻居帮忙扶板，陈叔修掉多出来的角。妹妹试着把板嵌进去，见它平平整整，笑了。
 
 ## ev.siju.entry.title
 
-邳州与黄河之路
+邳州磨坊的车
 
 ## ev.siju.a.title
 
-南来的货物与作坊
+糖锅与粮路
 
 ## ev.siju.a.body
 
-从邳州前一站往南走两天，穿过野味丰富的地方，就到了这座富裕繁华的城市。南边的商路运来粮食和马具，本地作坊再接着加工北方城镇送来的货物。
+粮市外的糖坊里，罗师傅正把锅下的火压小。外甥把盘子放得太近，见糖浆一角颜色深了，问怎么回事。罗师傅叫他先把盘挪开，再从不那么热的一边尝一滴。“颜色会告诉你该往哪儿搅。”他说。孩子问自己能不能试，罗师傅把长柄搅棒交给他，看他慢慢转第一圈。
 
-粮车和马具车在邳州城外并队，车夫打着拍子唱： “粮袋压底，木鞍靠边； 一车慢走，两人看轮； 北路带来新货， 南市接住旧账。” 领队把绳结勒紧：“粮袋放低，车就稳；马具分开垫好，轮子过沟时留个人看着。到邳州换车补货，再上南北商路。”“粮袋放低让车稳，马具分开垫好，轮子过沟时有人照看。邳州接着南北商路，货队在这里换车、补货再上路。”
+你问做好的糖往哪里送。等在外面的车夫提到宝应、淮阴，另一位记路的书记知道往淮安的路。罗师傅有一整件糖商货，开价 108 银。他请车夫等糖罐封好再装。外甥看到一只松盖，说若刚才搬出门半锅糖都要洒。
+
+隔院妇人来取一小份订货。罗师傅让外甥替她称，自己继续给你说几条路。
 
 ## ev.siju.a.choice.workshops
 
-看看从北方运来的货物如何加工
+留一天看罗师傅做糖，问去宝应的路
 
 ## ev.siju.a.choice.sugar
 
-在糖坊摊上买些糖
+花 108 银买整件糖商货，问去淮阴的路
 
 ## ev.siju.a.choice.grain
 
-逛逛平原上的粮食市场
+问书记去淮安的粮路
 
 ## ev.siju.b.title
 
-城外的火葬场
+书记的一捆纸券
 
 ## ev.siju.b.body
 
-当地人信奉佛教，使用纸币，也会火葬。你看见送葬队伍往城外的火葬场走，火堆旁放着纸制祭品，烟雾整天飘向南边的道路。
+市集办事屋旁，书记阿芬正理一捆等着兑换的纸券。弟弟把张数点过，却没挑出破的。“字还在嘛。”他争辩。阿芬问收券的人会不会收印记缺了一半的纸。他想了想，承认得逐张举到亮处查。
+
+你问她平日还记什么。阿芬收着铺户收据，也记过路人来问的地方习俗。门边一位妇人想知道家里何时能去小祠添供。阿芬说管祠的人傍晚在。弟弟愿替妇人送收据，阿芬叫他先把手里这捆数完。
+
+一整件可交易纸券货开价 135 银。阿芬把它同破券分开放，愿你留一天看他们怎样细点。弟弟每翻一张，都把印记转到你看得见的地方。
 
 ## ev.siju.b.choice.observe
 
-在不打扰别人的地方看一场葬礼
+留一天看阿芬核这一捆纸券
 
 ## ev.siju.b.choice.paper-money
 
-在火葬场附近的摊位买些纸钱
+花 135 银买下整捆纸券商货
 
 ## ev.siju.b.choice.ask
 
-问问长者，为什么这里火葬而不土葬
+问阿芬弟弟纸券记号有什么用
 
 ## ev.ev_siju_entry.choice_1_result
 
-你没耽搁，直接进了城。
+你往邳州粮市走。陈叔妹妹装好新侧板，哥哥告诉邻居，这车终于能搬粮了。
 
 ## ev.ev_siju_entry.choice_2_result
 
-你在粮市逛了逛，打听邳州的货物流向。
+你花一天随陈家在粮市走动。妹妹教你入仓前怎样查粮袋潮不潮，邻居也讲了几个摊用的秤。你记下这里人家的做法。
 
 ## ev.ev_siju_entry.choice_3_result
 
-你走进佛寺，门口的僧人正把粮食分给过路人：“拿一小把，前面到黄河还有三天。过河的船要等水稳了才开。”
+你跟陈叔妹妹带干净的油去小祠，帮她点灯。邻居拿布挡风，火苗很快稳了。陈家谢过你，也记得你来过。
 
 ## ev.ev_siju_a.choice_1_result
 
-你看了从北方运来的货物如何加工。
+你留一天看罗师傅和外甥把糖做好。等罐盖晾凉时，车夫在图上指给你看宝应。罗师傅约你下回做新糖时再来。
 
 ## ev.ev_siju_a.choice_2_result
 
-你在糖坊摊上买了些糖，付出 4000 钱币。伙计用油纸包好，又提醒你：“别放在潮处，糖一返潮就结块。”
+你付 108 银买下整件糖商货。罗师傅查过封口，车夫在图上标出淮阴，才把货系上车。外甥念了一遍货签，核准去处。
 
 ## ev.ev_siju_a.choice_3_result
 
-你在粮市转了一圈，摊主正忙着给南下的车队称麦子：“今年收成不错，往黄河边走的粮车天天都有。”
+书记讲出通淮安的粮路，也说车夫为何要给水粮留地方。你把那座城标在图上，记下她亲眼走过的地方。
 
 ## ev.ev_siju_b.choice_1_result
 
-你在不打扰别人的地方看了一场葬礼。
+你花一天陪阿芬和弟弟查纸券。弟弟学会先挑出破的，再点能收的数。你记下这套办法，市集人家也谢你耐心帮忙。
 
 ## ev.ev_siju_b.choice_2_result
 
-你在火葬场附近的摊位买了些纸钱，付出 3000 钱币。摊主把纸钱叠整齐：“祭礼用的，别跟你自己的银钱混在一处。”
+你付 135 银买下这一整捆纸券商货。阿芬和弟弟逐张核印，用干净纸包好，才交进你的货物。门边妇人看着他们做完。
 
 ## ev.ev_siju_b.choice_3_result
 
-你问长者为什么这里火葬而不土葬。他说：“按家里的规矩送走亲人，骨灰再安放好。各家做法不尽相同，你遇上葬礼就跟着家人指引走。”
+阿芬弟弟给你看完好纸券与破券的记号差别。他一迟疑，姐姐就叫他自己举到亮处找。你对旅人带的这些纸文书也更明白了。
 
 ## ev.ev_siju_a_followup.title
 
-邳州：糖坊里的消息
+第二批糖货
 
 ## ev.ev_siju_a_followup.body
 
-邳州以南的作坊里，一位糖坊主人把你带到煮糖锅旁。他常把糖运到淮阴和淮安，说：“做糖的手艺再好，也得赶上运河通船的日子。你要买糖、去南边的粮镇，就先问问船什么时候开。”
+你再到罗师傅糖坊，外甥正在给第二批货写签。一罐去淮阴，另一罐留给邳州的买主上门取。罗师傅叫他封口前都念一遍。孩子念错第二位客人的名字，便把人请来问，没硬猜。买主说准名字，还谢他肯核。
+
+你问车何时走。一位车夫要去宝应，懂淮安路的书记也带来路簿。罗师傅还有另一整件糖商货，开价 108 银，留城那罐则单独放着。外甥问糖包怎样码，封口才不会被压。罗师傅让车夫示范。
+
+来取货的客人又看一遍改好的签。罗师傅请你帮孩子与订货单对上，才让人搬走。
+
+“她这回认得了吧？”外甥问。买主念出自己的名字，笑着指向对的糖罐。
 
 ## ev.ev_siju_a_followup.choice_1
 
-按作坊的公道价买糖
+花 108 银买下第二整件糖商货
 
 ## ev.ev_siju_a_followup.choice_1_result
 
-他按公道价卖给你一箱糖，包装妥当，可以装船走运河。邳州的名字也会跟着货物传开。
+你付 108 银买下第二整件糖货。罗师傅外甥把你的货签念准，车夫绑货时也没压到封口。留城客人的罐仍单放一架。
 
 ## ev.ev_siju_a_followup.choice_2
 
-问问坐船怎么去宝应
+向车夫问去宝应的路
 
 ## ev.ev_siju_a_followup.choice_2_result
 
-“顺运河南下，先经淮安，再到宝应；高邮还在更南边。”摊主又报了几个沿途渡口，你知道该在哪儿换船。
+车夫在图上指出宝应与路上第一处干爽的歇脚地。罗师傅外甥照你的图把地名抄到车签上。
 
 ## ev.ev_siju_a_followup.choice_3
 
-跟账房伙计一起清点一天粮袋
+留一天核书记的淮安路簿
 
 ## ev.ev_siju_a_followup.choice_3_result
 
-你在粮袋堆旁帮了一天。歇脚时，账房伙计指着南边说：“淮安的粮车这两天就到，想搭船的话，明早去码头问。”
+你花一天把书记去淮安的记录与车夫们的说法对照。她在不同日期的水站旁留下注。罗师傅谢你帮外甥把路签写明白。
+
+## ev.siju.millstone.title
+
+磨盘下的小木楔
+
+## ev.siju.millstone.body
+
+陈家磨坊里，新粮到了，磨盘底石每转一圈却会轻轻挪一点。陈叔妹妹猜下面的小木楔磨薄了。外甥说自己能削一根，她叫他拿刀前先量旧的。孩子取出木楔，发现两边长短差得不少。陈叔说上季磨盘落位后，自己又修短过一边。
+
+你问今天还能不能磨。陈叔说先拿小勺粮试，石头放平前不敢倒整车。帮过修车的邻居带来一截硬木，问孩子哪一面该朝轮。孩子用手试好位置，再请姑母慢慢转轮。第一圈磨盘没晃，陈叔叫大家再看第二圈，别急着说修好了。
+
+“我能再转一次吗？”孩子问。姑母说行，手仍放在粮勺旁，若石头再晃就停。
+
+## ev.siju.millstone.choice.test
+
+帮陈家把磨盘试稳
+
+## ev.siju.millstone.choice.day
+
+留一天学着削合适的木楔
+
+## ev.siju.millstone.result.test
+
+你盯着磨盘再转一圈，指出木楔仍会挪的地方。外甥调过，下一小勺粮磨得匀。整车卸粮前，陈叔妹妹向你道谢。
+
+## ev.siju.millstone.result.day
+
+你留一天陪陈家削、试了两根木楔，磨盘终于平稳。外甥记下最后修的是哪一面。傍晚磨坊能接下一车粮。

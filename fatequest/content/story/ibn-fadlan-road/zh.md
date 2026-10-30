@@ -2,7 +2,7 @@
 unit: ibn-fadlan-road
 lang: zh
 source: en
-source_rev: 217abf8b495d
+source_rev: cfdbd94954db
 status: draft
 translator: 人工校译
 notes: >
@@ -152,6 +152,12 @@ stamps:
   ev.road.fadlan_35.choice.press_on: 2ef9a5ba629f
   ev.ev_road_fadlan_01.choice_1_result: 619b592eacf6
   ev.ev_road_fadlan_01.choice_2_result: 1882088645fa
+  ev.ev_road_fadlan_01_followup.title: 7d2038b200aa
+  ev.ev_road_fadlan_01_followup.body: 68da1f905822
+  ev.ev_road_fadlan_01_followup.choice_1: abcb66e8c002
+  ev.ev_road_fadlan_01_followup.choice_1_result: 7bf67d1027e1
+  ev.ev_road_fadlan_01_followup.choice_2: ae1baa594777
+  ev.ev_road_fadlan_01_followup.choice_2_result: 107967d2fa9d
   ev.ev_road_fadlan_02.choice_1_result: fd2217756c98
   ev.ev_road_fadlan_02.choice_2_result: fded80b618bd
   ev.ev_road_fadlan_03.choice_1_result: 710f627ed833
@@ -190,12 +196,12 @@ stamps:
   ev.ev_road_fadlan_19.choice_2_result: 3a09044b7975
   ev.ev_road_fadlan_20.choice_1_result: 656dce535c17
   ev.ev_road_fadlan_20.choice_2_result: 05d408c9907e
-  ev.ev_road_fadlan_19_followup.choice_2_result: c53eb39852ed
-  ev.ev_road_fadlan_19_followup.choice_2: a1e8fe3b2976
-  ev.ev_road_fadlan_19_followup.choice_1_result: a373653a7c2f
-  ev.ev_road_fadlan_19_followup.choice_1: 050013f063c6
-  ev.ev_road_fadlan_19_followup.body: bcb0473b9054
   ev.ev_road_fadlan_19_followup.title: 6faea35fcf9d
+  ev.ev_road_fadlan_19_followup.body: 177b440bcccb
+  ev.ev_road_fadlan_19_followup.choice_1: 050013f063c6
+  ev.ev_road_fadlan_19_followup.choice_1_result: a373653a7c2f
+  ev.ev_road_fadlan_19_followup.choice_2: a1e8fe3b2976
+  ev.ev_road_fadlan_19_followup.choice_2_result: c53eb39852ed
   ev.ev_road_fadlan_21.choice_1_result: 6a69d406fb19
   ev.ev_road_fadlan_21.choice_2_result: 81397f402059
   ev.ev_road_fadlan_22.choice_1_result: f5333240fa72
@@ -212,18 +218,18 @@ stamps:
   ev.ev_road_fadlan_27.choice_2_result: 99b69bb8fe26
   ev.ev_road_fadlan_28.choice_1_result: 426e3273dfbe
   ev.ev_road_fadlan_28.choice_2_result: 1805e4b92bb9
-  ev.ev_road_fadlan_25_followup.choice_2_result: e4f1e1153574
-  ev.ev_road_fadlan_25_followup.choice_2: 991f530bad7a
-  ev.ev_road_fadlan_25_followup.choice_1_result: dacaef2568fb
-  ev.ev_road_fadlan_25_followup.choice_1: 3aed20092efa
-  ev.ev_road_fadlan_25_followup.body: 21b0ad6f3061
-  ev.ev_road_fadlan_25_followup.title: 66ef24d426a0
-  ev.ev_road_fadlan_23_followup.choice_2_result: 2eee97d126dc
-  ev.ev_road_fadlan_23_followup.choice_2: 898b1215d481
-  ev.ev_road_fadlan_23_followup.choice_1_result: b8843473ae17
-  ev.ev_road_fadlan_23_followup.choice_1: 66731adca50e
-  ev.ev_road_fadlan_23_followup.body: edf17a46fee4
   ev.ev_road_fadlan_23_followup.title: e51fdb9dd35d
+  ev.ev_road_fadlan_23_followup.body: 1c4ebb5c442b
+  ev.ev_road_fadlan_23_followup.choice_1: 66731adca50e
+  ev.ev_road_fadlan_23_followup.choice_1_result: b8843473ae17
+  ev.ev_road_fadlan_23_followup.choice_2: 898b1215d481
+  ev.ev_road_fadlan_23_followup.choice_2_result: 2eee97d126dc
+  ev.ev_road_fadlan_25_followup.title: 66ef24d426a0
+  ev.ev_road_fadlan_25_followup.body: 3fe2ee172c0e
+  ev.ev_road_fadlan_25_followup.choice_1: 3aed20092efa
+  ev.ev_road_fadlan_25_followup.choice_1_result: dacaef2568fb
+  ev.ev_road_fadlan_25_followup.choice_2: 991f530bad7a
+  ev.ev_road_fadlan_25_followup.choice_2_result: e4f1e1153574
   ev.ev_road_fadlan_29.choice_1_result: ce3aa0f14cb4
   ev.ev_road_fadlan_29.choice_2_result: 989469d9fcd1
   ev.ev_road_fadlan_30.choice_1_result: 2d9997214963
@@ -238,30 +244,30 @@ stamps:
   ev.ev_road_fadlan_34.choice_2_result: 60f41cb12491
   ev.ev_road_fadlan_35.choice_1_result: 256d36efb8df
   ev.ev_road_fadlan_35.choice_2_result: 4632d1e9da36
-  ev.ev_road_fadlan_35_followup.choice_2_result: ccdfdfd0c490
-  ev.ev_road_fadlan_35_followup.choice_2: dc71ca638a74
-  ev.ev_road_fadlan_35_followup.choice_1_result: 76d178d1ca76
-  ev.ev_road_fadlan_35_followup.choice_1: c15e2815b2e5
-  ev.ev_road_fadlan_35_followup.body: d320b8478a99
-  ev.ev_road_fadlan_35_followup.title: 9281dc3d65c0
-  ev.ev_road_fadlan_32_followup.choice_2_result: d179e9014562
-  ev.ev_road_fadlan_32_followup.choice_2: 9a5ca79b53e1
-  ev.ev_road_fadlan_32_followup.choice_1_result: ddd3a3ceb38c
-  ev.ev_road_fadlan_32_followup.choice_1: b38beb4ecca9
-  ev.ev_road_fadlan_32_followup.body: 1d09bd0dce94
-  ev.ev_road_fadlan_32_followup.title: 16a6df3268d3
-  ev.ev_road_fadlan_30_followup.choice_2_result: 2ca92214e1f9
-  ev.ev_road_fadlan_30_followup.choice_2: 538b52ca518e
-  ev.ev_road_fadlan_30_followup.choice_1_result: 56c13ca1eade
-  ev.ev_road_fadlan_30_followup.choice_1: 1dc1f754628f
-  ev.ev_road_fadlan_30_followup.body: 352df08b792f
-  ev.ev_road_fadlan_30_followup.title: c75483a8dfc4
-  ev.ev_road_fadlan_29_followup.choice_2_result: 48e45f26dd4c
-  ev.ev_road_fadlan_29_followup.choice_2: 3db42e57d2ab
-  ev.ev_road_fadlan_29_followup.choice_1_result: 8d1534587163
-  ev.ev_road_fadlan_29_followup.choice_1: 723a5d3a732f
-  ev.ev_road_fadlan_29_followup.body: 36c3da046336
   ev.ev_road_fadlan_29_followup.title: 0eaf7d1c9803
+  ev.ev_road_fadlan_29_followup.body: 8f4340c3e3dd
+  ev.ev_road_fadlan_29_followup.choice_1: 723a5d3a732f
+  ev.ev_road_fadlan_29_followup.choice_1_result: 8d1534587163
+  ev.ev_road_fadlan_29_followup.choice_2: 3db42e57d2ab
+  ev.ev_road_fadlan_29_followup.choice_2_result: 48e45f26dd4c
+  ev.ev_road_fadlan_30_followup.title: c75483a8dfc4
+  ev.ev_road_fadlan_30_followup.body: 1f0b36ba3c84
+  ev.ev_road_fadlan_30_followup.choice_1: 1dc1f754628f
+  ev.ev_road_fadlan_30_followup.choice_1_result: 56c13ca1eade
+  ev.ev_road_fadlan_30_followup.choice_2: 538b52ca518e
+  ev.ev_road_fadlan_30_followup.choice_2_result: 2ca92214e1f9
+  ev.ev_road_fadlan_32_followup.title: 16a6df3268d3
+  ev.ev_road_fadlan_32_followup.body: 9874deb938e4
+  ev.ev_road_fadlan_32_followup.choice_1: b38beb4ecca9
+  ev.ev_road_fadlan_32_followup.choice_1_result: ddd3a3ceb38c
+  ev.ev_road_fadlan_32_followup.choice_2: 9a5ca79b53e1
+  ev.ev_road_fadlan_32_followup.choice_2_result: d179e9014562
+  ev.ev_road_fadlan_35_followup.title: 9281dc3d65c0
+  ev.ev_road_fadlan_35_followup.body: c355088c1c40
+  ev.ev_road_fadlan_35_followup.choice_1: c15e2815b2e5
+  ev.ev_road_fadlan_35_followup.choice_1_result: 76d178d1ca76
+  ev.ev_road_fadlan_35_followup.choice_2: dc71ca638a74
+  ev.ev_road_fadlan_35_followup.choice_2_result: fbf7975c47d5
   codex.cx-fadlan-cold.name: 271457138b39
   codex.cx-fadlan-cold.body: 65415a8c76b8
   codex.cx-fadlan-darkness.name: 1e9b8479eace
@@ -310,12 +316,6 @@ stamps:
   codex.cx-fadlan-kurgan.body: 6d62c3f8638e
   codex.cx-steppe-road.name: 4fa0b4f013fd
   codex.cx-steppe-road.body: 23df42ec9698
-  ev.ev_road_fadlan_01_followup.title: 7d2038b200aa
-  ev.ev_road_fadlan_01_followup.body: 9ea69998fea1
-  ev.ev_road_fadlan_01_followup.choice_1: abcb66e8c002
-  ev.ev_road_fadlan_01_followup.choice_1_result: 7bf67d1027e1
-  ev.ev_road_fadlan_01_followup.choice_2: ae1baa594777
-  ev.ev_road_fadlan_01_followup.choice_2_result: 107967d2fa9d
 ---
 
 ## ev.road.fadlan_01.title
@@ -900,7 +900,7 @@ stamps:
 
 ## ev.ev_road_fadlan_01_followup.body
 
-那条河已经在身后。路边歇脚时，一个车夫把地图铺在叠好的毯子上，试着找出刚走过的渡口。他记得驿站，也记得对岸的那丛树，画到这里就停了。“等我下次回来，冰化了，还得去找渡船。”同伴们正收拾行李，准备赶往下一处集市。车夫把画图的炭笔递给你。你可以同他把路画完，也可以跟着出发的人继续走。
+河已在身后。路边歇脚时，雇来的车夫把地图铺在叠好的毯子上。他能找到驿站，炭笔画到对岸时却停了。“等我回来，冰化了还得找渡船。”年长的同伴问他记的是哪丛树。他指着过河前看见的那丛；她提醒他，这一岸的车辙旁也有一丛。你说出卖油商人的车在哪里等过，车夫把手指挪到正确的河弯。“对，就是这里。”他把冰路画得很轻，又空出去年夏天坐过的渡船码头。同伴收着毯子，其他人已经给驮畜装好货，准备去下一处集市。她问这张图是不是要随车带走。车夫想趁地形还记得清楚时画完，可前面的车已经动了。他把炭笔递给你，请你再看一眼河弯，才好把纸折起来。
 
 ## ev.ev_road_fadlan_01_followup.choice_1
 
@@ -945,6 +945,7 @@ stamps:
 ## ev.ev_road_fadlan_05.choice_1_result
 
 你陪年轻人读了一天旧文。读到给死者缝衣服那一段，他想起祖父也在这本工账里记过船帆的尺寸。你帮他认出法德兰亲眼见到的事，也分清哪些是他听别人说的。妹妹来了以后，年轻人把船葬那一页念给她听，再把工账和斗篷一起交给她。妹妹说，想把这页纸抄一份留在家里。
+
 ## ev.ev_road_fadlan_05.choice_2_result
 
 你陪年轻人走到井边，妹妹正在那里等。他把祖父的斗篷交给她，她看见他怀里的旧书，也想起祖父冬天常念书给大家听。你们三人用了这一天，整理祖父留下的工具，把布料叠好。你的队伍出发时，兄妹俩还在商量要一起抄下书里的哪几页。
@@ -960,6 +961,7 @@ stamps:
 ## ev.ev_road_fadlan_07.choice_1_result
 
 你帮经纪人拉着绳子，让他把长牙捆牢。接着，他让学徒重新摆开海狸皮和白鼬皮，一样一摞，讲起河边商人怎么把皮货送来，花剌子模的买主又为什么要分开装。你把货物和往南的路线记下来。另一位买主问是谁帮着整理货包，经纪人报了你的名字，还请你下回再到他摊上坐坐。
+
 ## ev.ev_road_fadlan_07.choice_2_result
 
 商队首领招呼最后几头牲口上路，你把绳子还给学徒。他已经把两种皮货分别捆好了。经纪人把长牙搬上车，说等你下次经过，再把这个东西的故事讲完。你跟着商队额外走了一整天，回头时，集市早已隐在尘土里。
@@ -1074,7 +1076,7 @@ stamps:
 
 ## ev.ev_road_fadlan_19_followup.body
 
-到下一处歇脚点，你遇见皮货商一行从雾路出来，人数一个不少。先前手腕被绳子勒疼的女人垫了一条布，给你看她重新打的结：绳子还牵得住人，皮肤也不会被磨破。皮货商摊开一张潮湿的路图，说有根路标倒了，他们便站在一起，等领路的人找到干地。他的父亲早已去世，晚上烘干行囊时，他还是把父亲讲的北方旧闻说给同伴听。
+到下一处歇脚点，皮货商带着同伴从雾路出来。他挨个报名字，大家都应了。先前手腕被绳子磨疼的女人在绳下垫了布。“让我看看这个结。”年轻搬货人说。她解开给他摸绳从布上经过的地方，再系好，手腕也不被扯住。皮货商在火边摊开潮湿的路图。有根路标倒了，领路的人是在大家停下来等候后才找到干地的。你问他们怎么认定那是同一根路标。领路人说早晨在旁边放过一截分叉树枝：“我该把木桩插得深些。”皮货商请他连那块干地也标上，免得后来的队伍停错。烘行囊时，有人请皮货商讲他父亲说过的北方旧闻。他讲的是父亲的记忆，女人还替他改正了旧旅程发生的地方。走时，他们会把坏路标交给下一处的看路人。
 
 ## ev.ev_road_fadlan_19_followup.choice_1
 
@@ -1162,7 +1164,7 @@ stamps:
 
 ## ev.ev_road_fadlan_23_followup.body
 
-姐弟俩回到营地时，牵回两匹失马。另一顶帐篷里的年轻人承认三匹马都是他牵走的，第三匹已经卖给路过的买主。他的父亲愿意从自家马群里牵一匹来补，两家人便请营地长者一起商量该怎样折价。大女儿先给找回的马饮水，才过去坐下。她父亲谢你帮忙看住其余的马，问你愿不愿意留下听听商量的结果。
+姐弟俩牵着两匹失马回到营地。父亲先看马腿，大女儿去打水。隔壁帐篷的年轻人过来承认，三匹马都是他牵走的，第三匹在他们找到蹄印前已卖给路过的买主。“今晚我带不回那匹了。”他说。他父亲愿从自家马群里牵一匹来补，两家便请营地长者看马，商量该怎样折价。大女儿问顶赔的马习不习惯驮鞍，年轻人的父亲说，先让它走几步，背一点轻货，大家看过再定。弟弟急着给长者讲芦苇地的蹄印，父亲叫他先等马喝完水。你替这家看住其余的牲口，父亲过来谢你。长者在火边腾出地方，让两家坐下说。大女儿拴好找回的马，也走过来，问你要不要听他们把事情谈妥。
 
 ## ev.ev_road_fadlan_23_followup.choice_1
 
@@ -1186,7 +1188,7 @@ stamps:
 
 ## ev.ev_road_fadlan_25_followup.body
 
-到下一处歇脚点，牧人的妹妹带来羊群的消息。清晨她和哥哥又点了一遍，一只都没少；狼从更远的地方横穿道路，留下一串新脚印。她拿着一根做过记号的树枝，记的是狼转向的地方。“我想看看它们还跟不跟车，”她说。赶车的人说愿意再看守一天。你可以帮忙守，也可以和她去看看脚印。
+到了下一处歇脚点，牧人的妹妹赶来报羊群的消息。她和哥哥清晨又点了一遍，一只都没少。更远处有一串狼脚印横穿道路，她拿的树枝上标着脚印转向的地方。“我想看看它们后来还跟不跟车。”一名守外圈牲口的车夫问，这些脚印是不是今早才留下的。她在枝上画了其中一个清楚的边，说刚才看时轮廓还很新。车夫愿意在大家修绳具时再守一班。你问羊在天亮时有没有受惊。“起初有一点，把草料挪离小路就安静了。”她说。哥哥留在羊圈，妹妹可以离开一会儿。车夫检查拴牲口的绳，发现有个结要在夜里前重绑。妹妹请你陪她看脚印，车夫问你能否接一班守候。他们说好，回到火边再互相讲看见了什么。
 
 ## ev.ev_road_fadlan_25_followup.choice_1
 
@@ -1266,7 +1268,7 @@ stamps:
 
 ## ev.ev_road_fadlan_29_followup.body
 
-傍晚在火边，那个认得女子家乡的旅人来问你刚才听见的名字。他要走的路经过女子母亲住的地方，想把话传准确。你把纸上的内容念给他，他跟着重复姐弟俩的姓名和相遇的那口井，又问守卫带人走了哪条路。女子托他记住，他便拿出一张干净的纸等你说。
+傍晚在火边，那个认得女子家乡的旅人请你再说一遍刚听到的姓名。他要走的路经过女子母亲家，不想把消息传错，让她找错人。你照纸念出姐弟俩的名字，他跟着重复，说到相遇的井却停了：“是不是有道矮石墙的那口？”你说了水槽和守卫带人走的路。他去过那儿，这才认清是哪一处。女子走过来听，纠正他念弟弟名字时的一个音，又告诉他母亲平日从村里哪扇门出入。旅人反复念给她听，直到她点头。另一个旅人递来干净的纸，他说若下雨打湿，口里也会记着。他把纸摊开等你写，最后又问女子还要不要添话。女子想了想，请他告诉母亲：有人看见姐弟俩在一起。
 
 ## ev.ev_road_fadlan_29_followup.choice_1
 
@@ -1290,7 +1292,7 @@ stamps:
 
 ## ev.ev_road_fadlan_30_followup.body
 
-风雨过后，在一处能避风的歇脚点，你们队里的车夫把破了的车棚布铺在地上。起风时，一角被木桩钩住了。他和女儿能先补布再走，马也该从这场风雨里缓一缓。女儿想等地面干硬些再出发。车夫问你，是要在附近一起歇着，还是跟别的车先走。
+风雨后，在避风的歇脚点，车夫把破了的车棚布铺在干地上。起风时一角被木桩钩住了。女儿把手指伸过破口：“只缝边，拉紧时还会裂。”父亲找来一块备用布，准备垫在下面。你替他们把棚布搭回车上，好看补丁该放在哪边。马不再发抖，毛却还湿着，女儿想让它们吃草歇过再走。另一位车夫已经套好牲口，来问前面的湿路哪边结实。父亲说还没走过，车夫便说自己先步行探到第一个弯，再回来招呼。女儿摆好针线和补布，请你把两角拉平。父亲抬头看天，说棚下还有地方，想等布和路干些的人都能歇着。他先把马牵到背风处，让女儿别急着在湿布上落针。
 
 ## ev.ev_road_fadlan_30_followup.choice_1
 
@@ -1314,7 +1316,7 @@ stamps:
 
 ## ev.ev_road_fadlan_32_followup.body
 
-渡河的两条路在一处小驿站接上。驿站主人有围起来的牲口棚，也有间干燥屋子，可让旅人整理货物。你们队里一个车夫的缰带磨破了，驿站主人说，住下就能用屋里的针线修。住两天要付住宿和草料费。驿站外的大路通着；今天继续走，下一处歇脚点一天能到。
+渡河的两条路在小驿站接上。驿站主人打开围起来的牲口棚，又让你们看一间能理货的干燥屋。队里一个车夫发现缰带在扣环旁磨薄了。“过河时还能用，”他说，“装满货我可不想再试。”主人拿出针、备用皮和长凳。她女儿问能不能把破处剪掉，车夫让她看缰带还得够得着扣环。你帮他把货放下，免得修的时候绳一直受力。主人说清住两天的屋钱和草料费，若队伍决定留下再付。一个要走的赶车人说，沿大路再行一天便是下一处歇脚点。主人又指给车夫看，若现在走，该怎样先用布裹住磨薄处，到下一站再修。她女儿把针放在凳边，等车夫与队伍商量好。
 
 ## ev.ev_road_fadlan_32_followup.choice_1
 
@@ -1338,7 +1340,7 @@ stamps:
 
 ## ev.ev_road_fadlan_35_followup.body
 
-最后一架雪橇也离开冰面了。对岸，向导清点标路的树枝，发现薄冰弯道那里少了两根。赶车人的女儿说可以回去捡，向导请她先等他探过岸边。他还想画一张小图，留给下一队过河的人。你可以趁记得清楚时帮他画，也可以跟自己的同伴继续去下一处歇脚点。
+最后一架雪橇离开冰面。对岸，向导数了数标路的树枝，发现薄冰弯道那里少了两根。赶车人的女儿说可以回去找。“先等我探过岸边。”向导拿杆戳了戳冰与岸相接处，旧车辙旁的雪壳塌下去一块。你问树枝会不会掉进水里。他说也可能被风带走，但没摸清岸边前谁都别回去。女儿记得哪架雪橇是从两根树枝之间走过，指给他看车痕。她父亲说最好画张小图留给下一队，从这一岸看，弯道不容易认。向导取出干纸，请女儿说上冰的地方，你则帮忙回想大家真正走过的冰路。同伴们正在为下一处歇脚点捆货。向导先在结实的雪地插下一根枝，图纸摊在旁边，等你们把那道弯核清。
 
 ## ev.ev_road_fadlan_35_followup.choice_1
 
@@ -1354,7 +1356,7 @@ stamps:
 
 ## ev.ev_road_fadlan_35_followup.choice_2_result
 
-你让向导和车夫的女儿整理路标，随同伴赶路。走了一天，你们到了能避风的歇脚点。第一架雪橇的车夫卸货前又查了一遍货绳；女儿已把松掉的一端扎紧。他们打算回程时再找向导要那张过冰河的小图。
+你让向导和车夫的女儿留在岸边整理路标，自己随同伴赶路。走了一天，你们到了能避风的歇脚点。第一架雪橇的车夫卸货前发现货绳松了一端，自己重新扎紧。他问女儿与向导会把过河的小图放在哪里，打算回程时到河边取一份。
 
 ## codex.cx-fadlan-cold.name
 

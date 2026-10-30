@@ -56,11 +56,6 @@
               "scope": "city",
               "id": "samarcanda",
               "reason": "spoke-in-the-registan-debate"
-            },
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-dome",
-              "reason": "earned-a-place-beneath-the-dome"
             }
           ]
         }
@@ -176,11 +171,6 @@
               "id": "rapport",
               "value": 1,
               "reason": "trusted-the-sign-of-the-stone"
-            },
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-stone",
-              "reason": "marked-by-the-weeping-stone"
             }
           ]
         },
@@ -280,11 +270,6 @@
               "op": "days",
               "value": 1,
               "reason": "lingered-to-copy-the-star-table"
-            },
-            {
-              "op": "sticker",
-              "value": "st-samarcanda-paper",
-              "reason": "copied-the-star-table-on-samarcand-paper"
             }
           ]
         }

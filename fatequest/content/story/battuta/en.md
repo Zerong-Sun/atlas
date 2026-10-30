@@ -422,62 +422,39 @@ You spend a day by the water asking sailors where they stop on the way toward Sa
 
 ## ev.zayton.battuta_a.title
 
-Paper Money, Painters, and the Registry of Ships
+The ticket shop, the painter, and the ship register
 
 ## ev.zayton.battuta_a.body
 
-The traveller's tale is borne out as you walk the quay: in China you buy and sell
-with paper. A palm-sized sheet, stamped with the king's stamp, is money:
-twenty-five such notes make a nashhat, a dinar of the place, and torn notes are
-exchanged at the mint for new ones, without interest. No one will take a dinar or
-a dirhem until it is changed for these notes. The painters are the most skilful
-in the world: every stranger who passes through their towns finds his likeness
-upon the walls and on papers stuck up in the streets. When a vessel leaves China,
-the names and forms of the men aboard are written down, and when it returns the
-magistrates' servants board it and compare; if a man is missing, the commander of
-the vessel is seized, and goods not entered in the register forfeit ship and cargo
-to the king — an oppression seen nowhere else.
+A-He leads you into a narrow street beside the harbour. A clerk at the ticket shop is checking an old exchange slip for a sailor. Next door, a painter is working on a new sign for her mother's soup shop. A port clerk comes between them carrying a ship register. All three know A-He and first ask whether her uncle's medicine reached the apothecary.
+
+"It did," she says, holding down a sheet of paper the wind has lifted. Salt water has blurred half the sailor's ticket seal. The clerk asks him to bring the person who issued it so they can check the old book together. The sailor says that man is unloading across the water and will return soon. The painter shows A-He a sketch of a soup bowl for the sign. She tells him its rim is too wide: neighbours will think the shop sells porridge.
+
+The port clerk opens his register. One crewman from last night's returning ship was absent from its old list. He wants to know whether the man changed ships or stayed ashore with family. A-He knows his brother and can ask at the bridge. You may help check the faded ticket, help the painter finish the sign, or join the clerk in checking the returning crew.
 
 ## ev.zayton.battuta_a.choice.change
 
-Change your coin for the king's paper
+Spend a day helping the clerk check the old ticket
 
 ## ev.zayton.battuta_a.choice.painters
 
-Sit for the painters
+Spend a day helping paint the soup-shop sign
 
 ## ev.zayton.battuta_a.choice.registry
 
-Watch the registry of the junks
+Spend a day checking the crew register
 
 ## ev.ev_zayton_battuta_a.choice_1_result
 
-You take your dinars and dirhems to the changers, for no one in China will deal with
-you until your coin is changed into the king's notes. Each note is a palm-sized
-sheet stamped with the king's stamp; twenty-five make a nashhat, a dinar of the
-place. When the paper grows torn or worn you may carry it to the mint, and receive
-new notes in its place without interest.
+You wait with the clerk for the man who issued the ticket and find the old entry. The sailor copies its new number onto dry paper. A-He asks how to check a damaged seal and notes the answer for you too.
 
 ## ev.ev_zayton_battuta_a.choice_2_result
 
-You sit for the painters, and a day passes under their brushes — none in the world
-come near to them in painting, and your likeness and the likenesses of your
-companions go up on the walls and on papers stuck about the streets. It is the
-custom with every stranger who passes through their towns: should any such a one
-make flight necessary, his picture is sent out to the other provinces, and
-wherever he is, he is taken.
+You spend a day at the soup shop with the painter. A-He’s mother puts the wooden bowl on the table for him to copy, and offers you both the new soup. People at the bridge can now recognize her shop.
 
 ## ev.ev_zayton_battuta_a.choice_3_result
 
-You spend a day watching the clerks of the harbour take down the names and forms
-of the men aboard each junk before it sails, and when a vessel returns, the
-servants of the
-magistrates board her and compare the men with the descriptions; a missing man
-costs the commander his ship, and goods not entered in the register forfeit ship
-and cargo to the king — an oppression seen nowhere else. You learn of the river
-road, twenty-seven days from Sin Kilan, where earthenware is made as here at
-Zayton, and that the same river runs on toward Kinsay; here the river called the
-water of life enters the sea, and the place is called the meeting of two seas.
+You spend a day checking the register. The missing sailor moved to another ship; A-He returns from his brother with its name. The clerk adds it to the book and shows you the land road to Kinsay.
 
 ## codex.cx-paper-money.name
 
@@ -492,54 +469,37 @@ notes.
 
 ## ev.kinsay.battuta_a.title
 
-The Homeward Voyage to the West
+The Letter Bound for Zayton
 
 ## ev.kinsay.battuta_a.body
 
-You go down the river from El Khansa, past Kanjanfur, to El Zaitun, where you find
-junks bound for India, and take passage in a junk of El Malik El Zahir, the King of
-Sumatra, whose servants are Muslims. For ten days a good wind holds; then the sky
-grows dark, and a storm drives the junk into a sea unknown to the sailors. At
-daybreak a mountain stands twenty miles away, and the sailors take leave of one
-another, saying it is a Rokh, and if he sees us we are lost. You betake yourselves
-to prayer, and God gives a good wind; after two months you reach Java, and shortly
-after, Sumatra.
+At the landing, a merchant family has set out a letter, a roll of cord, and a small account book. The father wants to send news to his sister in Zayton. His son has addressed the cover to their cousin in Tanpiju instead. “I heard you say her name yesterday,” the boy explains. His elder sister takes the pen from him, then gives it back. “You can correct it yourself. First ask Father which aunt is waiting for the news.” The boy does, and the father admits he had spoken too quickly while loading the boat.
+
+You ask when the letter can leave. The family’s boatman says his next river journey will lead toward Zayton, where merchants gather for the sea crossing. A visiting trader points out that Tanpiju belongs to a later stretch of his own journey, so the cousin’s name can go on a separate cover. The mother brings tea and asks whether anyone has eaten since morning. Her son says he will take the corrected letter to the boatman, but first wants to check the name aloud with everyone at the table.
 
 ## ev.kinsay.battuta_a.choice.passage
 
-Take passage on the King of Sumatra's junk
+Spend a day helping send the letter toward Zayton
 
 ## ev.kinsay.battuta_a.choice.prayer
 
-Pray with the merchants in the storm
+Spend a day with the merchant family and join their prayers
 
 ## ev.kinsay.battuta_a.choice.rokh
 
-Ask the sailors about the mountain in the sea
+Spend a day asking the visiting trader about Zayton and Tanpiju
 
 ## ev.ev_kinsay_battuta_a.choice_1_result
 
-You find junks bound for India in the port of El Zaitun and take passage in one
-belonging to El Malik El Zahir, the King of Sumatra, whose servants are Muslims.
-You go down the river from El Khansa, past Kanjanfur, to the sea, and set your
-course with a good wind for the open ocean and the long road home.
+You spend the day checking the cover with the family and finding the right boatman. He reads back the recipient and names the water route toward Zayton. The family watches him place the letter inside his dry chest; you record the route while remaining at the landing.
 
 ## ev.ev_kinsay_battuta_a.choice_2_result
 
-The sky grows dark and the storm drives the junk into a sea unknown to the sailors;
-they are terribly afraid and wish to put back, but it is impossible. You betake
-yourselves to repentance and prayer with all your hearts, and the merchants make
-many vows. After sunrise the wind calms in some degree, and God gives you a good
-wind to steer your course away from peril.
+You remain with the family for a day as they prepare the letter and food for the boatman. When they gather for prayer, you join them. Afterward the mother thanks you for staying with her son while he checked the names and invites you to share their evening meal.
 
 ## ev.ev_kinsay_battuta_a.choice_3_result
 
-At daybreak the sailors point to a mountain in the sea, about twenty miles away,
-though you are far from land and no mountain was ever seen in that part of the sea.
-They look upon it with the utmost perturbation and take leave of one another, saying
-it is a Rokh, and that if he sees you, you shall assuredly perish. But a good wind
-comes, and you steer away, and see no more of him, nor ever know the particulars of
-his shape.
+You spend the day with the visiting trader as he sorts his travel notes. He points out Zayton first, then the later journey toward Tanpiju; the boy writes the two names on separate covers. Before leaving, the trader checks that you have marked the onward route in the right order.
 
 ## ev.cail.entry.choice.battuta
 
@@ -559,16 +519,16 @@ A family at the harbour lodging house is making room for late arrivals. Their da
 
 ## ev.kinsay.entry.choice.battuta
 
-Ask of the traveller who sailed home from here
+Meet the family preparing a letter for the seaport
 
 ## ev.ev_kinsay_entry.choice_4_result
 
-A traveller tells how he came down the river from Kinsay and took ship for the sea roads, and how the way back to his own land ran through the islands; he will tell the whole voyage, if you ask.
+At the landing, a family is debating which boat can carry a letter to Zayton. Their eldest daughter asks you to listen: her father has named the port, but her younger brother has written the wrong recipient on the cover. They have more of the story to tell.
 
 ## ev.zayton.entry.choice.battuta
 
-Ask of the traveller who marvelled at the king's paper money
+Go with A-He to the ticket shop, painter, and register
 
 ## ev.ev_zayton_entry.choice_4_result
 
-A traveller from the West asks leave to handle the king's paper money, and tells of the registry of ships and the painters who draw every stranger's face; he would tell you more of it, if you will listen.
+A-He says the painter and the ship register are beside the ticket shop. She is going there to check an old matter for her uncle. You follow her into the lane and hear someone asking about a sea-damaged exchange slip.

@@ -37,11 +37,11 @@
 **无头测试**（不需要图形界面）：
 
 ```bash
-godot --headless --path . --script tests/run_tests.gd    # 23 个内核测试模块
-godot --headless --path . --script tests/smoke_boot.gd   # 启动冒烟
-godot --headless --path . --script tests/benchmark_systems.gd  # 系统性能门禁
-godot --headless --path . --script tests/benchmark_map.gd      # 地图 CPU 帧耗门禁
-godot --path . --script tests/benchmark_map_fps.gd             # 窗口 GPU 帧耗（1280×720，30 次缩放/平移）
+node tools/test/run_isolated_godot.mjs tests/run_tests.gd       # 独立 user://，26 个内核测试模块
+node tools/test/run_smokes_isolated.mjs                         # 每个冒烟测试独立 user://
+node tools/test/run_isolated_godot.mjs tests/benchmark_systems.gd  # 系统性能门禁
+node tools/test/run_isolated_godot.mjs tests/benchmark_map.gd      # 地图 CPU 帧耗门禁
+node tools/test/run_isolated_godot.mjs --gui tests/benchmark_map_fps.gd  # 窗口 GPU 帧耗
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PCK 导出结构门禁
 node tools/validate/validate.mjs                         # 内容门禁
 node tools/lore/story.mjs check                          # 译文时效

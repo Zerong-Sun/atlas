@@ -15,7 +15,7 @@ Chinghianfu
 
 ## ev.chinghianfu.entry.body
 
-A reader from a small Christian congregation has come to the bookbinder with a loose page. It slipped from a volume used at their gathering, and the children have handled it so often that the corner is soft. The binder’s daughter holds it beside the book. ‘This page belongs after the story about the traveller,’ she says. The reader checks the first words of the next leaf and agrees. ‘Can it be stitched in before the meeting?’ you ask. ‘It has to dry flat first,’ the binder says. The reader looks at the damp corner. ‘Then we will read another passage today,’ he replies. Someone had tried to paste it with too much glue. The reader offers to leave it overnight and asks his daughter to tell the other children they will use a different passage today. At the doorway, a boatman wants directions to the landing toward Chinginju. The binder points him down the street and asks his daughter to guide him past the crowded market. She invites you to follow now, or return tomorrow when the repaired book is ready and she can show you more of the town.
+A reader from a small Christian congregation has come to the bookbinder with a loose page. It slipped from a volume used at their gathering, and the children have handled it so often that the corner is soft. The binder’s daughter holds it beside the book. ‘This page belongs after the story about the traveller,’ she says. The reader checks the first words of the next leaf and agrees. ‘Can it be stitched in before the meeting?’ you ask. ‘It has to dry flat first,’ the binder says. The reader looks at the damp corner. ‘Then we will read another passage today,’ he replies. Someone had tried to paste it with too much glue. The reader offers to leave it overnight and asks his daughter to tell the other children they will use a different passage today. At the doorway, a carter wants directions to the road toward Chinginju. The binder points him down the street and asks his daughter to guide him past the crowded market. She invites you to follow now, or return tomorrow when the repaired book is ready and she can show you more of the town.
 
 ## ev.chinghianfu.entry.choice.look
 
@@ -31,7 +31,7 @@ The Reader’s Missing Page
 
 ## ev.ev_chinghianfu_entry.choice_1_result
 
-The binder’s daughter points out the street to the landing before taking the boatman through the market. The reader carries the rest of his books back to the meeting house. You follow the same turn across town and know where to find the waterside path.
+The binder’s daughter points out the street to the landing before taking the carter through the market. The reader carries the rest of his books back to the meeting house. You follow the same turn across town and know where to find the waterside path.
 
 ## ev.ev_chinghianfu_entry.choice_2_result
 

@@ -2,7 +2,7 @@
 unit: cacanfu
 lang: zh
 source: en
-source_rev: 085a5da6f07d
+source_rev: 51d190224f1b
 status: translated
 translator: 人工校译
 notes: >
@@ -19,8 +19,8 @@ stamps:
   ev.ev_cacanfu_entry.choice_1_result: cacfb9828708
   ev.ev_cacanfu_entry.choice_2_result: 48fff1e4d224
   ev.ev_gap_cacanfu.title: 5a4649839b49
-  ev.ev_gap_cacanfu.body: 2ac46ba0a763
-  ev.ev_gap_cacanfu.choice.route: 6d1e740e00ac
+  ev.ev_gap_cacanfu.body: e668dbc403ac
+  ev.ev_gap_cacanfu.choice.route: b5969645e177
   ev.ev_gap_cacanfu.choice.route_result: 5f1ef16e2978
   ev.ev_gap_cacanfu.choice.scene: fd579bc77a60
   ev.ev_gap_cacanfu.choice.scene_result: ad6a38506365
@@ -66,11 +66,11 @@ stamps:
 
 ## ev.ev_gap_cacanfu.body
 
-运河埠头上，秤手正在替一袋豆子定重量。卖家用了旧厚麻袋，买家只想按豆子付钱。“薄袋子一提就破，我才换了这个。”卖家说。秤手请他们倒出一袋豆，单独称空袋。卖家的儿子怕豆子撒在木板缝里，你找来一只干净的浅盘，买家也帮忙扶住盘边。他们慢慢倒出豆子，空袋竟比几人猜的都重。秤手把袋重另写一行，让孩子照着念出数字。男孩先前一直看运河上的船，又问去陵州那艘会在哪里转弯。买家常从陵州走陆路来这里，趁秤手重新装豆时在地上画出转弯：“过最后一户农家，车辙就往那边去了。”男孩把重量和转弯都复述给父亲听，还请父亲下回卖货时，把袋重也写在单子上。
+运河埠头上，秤手正在替一袋豆子定重量。卖家用了旧厚麻袋，买家只想按豆子付钱。“薄袋子一提就破，我才换了这个。”卖家说。秤手请他们倒出一袋豆，单独称空袋。卖家的儿子怕豆子撒在木板缝里，你找来一只干净的浅盘，买家也帮忙扶住盘边。他们慢慢倒出豆子，空袋竟比几人猜的都重。秤手把袋重另写一行，让孩子照着念出数字。男孩先前一直看车从陆路进镇，又问去陵州的车该在哪儿转弯。买家常从陵州走陆路来这里，趁秤手重新装豆时在地上画出转弯：“过最后一户农家，车辙就往那边去了。”男孩把重量和转弯都复述给父亲听，还请父亲下回卖货时，把袋重也写在单子上。
 
 ## ev.ev_gap_cacanfu.choice.route
 
-问买家去陵州的水路
+问买家去陵州的陆路
 
 ## ev.ev_gap_cacanfu.choice.route_result
 

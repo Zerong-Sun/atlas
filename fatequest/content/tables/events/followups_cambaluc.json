@@ -22,11 +22,6 @@
               "op": "codex",
               "value": "cx-cambaluc",
               "reason": "carried-the-chamberlains-token"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-court",
-              "reason": "carried-the-chamberlains-token"
             }
           ]
         },
@@ -55,11 +50,6 @@
               "value": 1,
               "scope": "city",
               "id": "cambaluc",
-              "reason": "promised-to-speak-of-the-great-hall"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-court",
               "reason": "promised-to-speak-of-the-great-hall"
             }
           ]
@@ -100,11 +90,6 @@
               "id": "silk",
               "value": 1,
               "reason": "bought-silk-at-the-counting-house-price"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-suburbs",
-              "reason": "bought-silk-at-the-counting-house-price"
             }
           ],
           "needs": {
@@ -136,11 +121,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "counted-the-cart-loads-with-the-tally-men"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-suburbs",
               "reason": "counted-the-cart-loads-with-the-tally-men"
             }
           ]
@@ -174,11 +154,6 @@
             {
               "op": "codex",
               "value": "cx-cambaluc",
-              "reason": "learned-the-art-of-the-green-hill"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-hill",
               "reason": "learned-the-art-of-the-green-hill"
             }
           ]
@@ -278,11 +253,6 @@
             {
               "op": "days",
               "value": 1,
-              "reason": "lingered-at-the-bureau-reading-the-seasons"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cambaluc-court",
               "reason": "lingered-at-the-bureau-reading-the-seasons"
             }
           ]

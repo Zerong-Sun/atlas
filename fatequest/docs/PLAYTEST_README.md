@@ -64,16 +64,16 @@ godot --headless --path . --export-release "Windows Desktop" build/export/FateQu
 ## 4. 自动门禁（每次候选前复跑）
 
 ```bash
-node tools/validate/validate.mjs --quiet                  # 28 道内容门禁 → all gates pass
-node tools/lore/story.mjs check                           # 3619 current · 0 stale · 0 missing
+node tools/validate/validate.mjs --quiet                  # 内容门禁 → all gates pass
+node tools/lore/story.mjs check                           # 5762 current · 0 stale · 0 missing
 node tests/test_i18n_lines.mjs                            # ALL CHECKS PASSED
-godot --headless --path . --script tests/run_tests.gd     # 16 单测 PASS
-godot --headless --path . --script tests/audit_logic.gd   # 0 项问题
-godot --headless --path . --script tests/audit_divination_readings.gd  # 24 法阅读双语全覆盖
-for t in tests/smoke_*.gd; do godot --headless --path . --script "$t" || exit 1; done  # 26 smoke
-godot --headless --path . --script tests/benchmark_systems.gd  # serialize P95 1.24ms · save P95 6.06ms
-godot --headless --path . --script tests/benchmark_map.gd      # mask P95 8.01ms · travel 7.15ms
-godot --path . --script tests/benchmark_map_fps.gd             # 窗口 1280×720：zoom 0.03ms · pan 0.02ms · ≈145 FPS
+node tools/test/run_isolated_godot.mjs tests/run_tests.gd
+node tools/test/run_isolated_godot.mjs tests/audit_logic.gd
+node tools/test/run_isolated_godot.mjs tests/audit_divination_readings.gd
+node tools/test/run_smokes_isolated.mjs                    # 每项独立 user://，日志在 build/test-audit/smoke/
+node tools/test/run_isolated_godot.mjs tests/benchmark_systems.gd
+node tools/test/run_isolated_godot.mjs tests/benchmark_map.gd
+node tools/test/run_isolated_godot.mjs --gui tests/benchmark_map_fps.gd  # 窗口 GPU 帧耗
 node tools/validate/verify_pck.mjs build/audit/FateQuest.pck   # PASS
 ```
 

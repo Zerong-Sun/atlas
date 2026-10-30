@@ -2,7 +2,7 @@
 unit: suju
 lang: zh
 source: en
-source_rev: 7f4370315174
+source_rev: 31104e190e9d
 status: translated
 translator: 人工校译
 notes: >
@@ -11,39 +11,45 @@ notes: >
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.suju.bridgeplank.result.day: ad0bab55c376
+  ev.suju.bridgeplank.result.fix: 195846af8df2
+  ev.suju.bridgeplank.choice.day: 9ba1b7075bc3
+  ev.suju.bridgeplank.choice.fix: 5ab4849e9ef9
+  ev.suju.bridgeplank.body: 3fb08006efa8
+  ev.suju.bridgeplank.title: 21373d175615
   city.suju.name: 2610161de8fd
-  ev.suju.entry.choice.market: e4eee3409b41
-  ev.suju.entry.choice.pass: dc7f77ef08d8
-  ev.suju.entry.choice.shrine: 98e20d47c9a5
-  ev.suju.entry.body: 0150dea5f366
-  ev.suju.entry.title: 669056ec8146
-  ev.suju.a.title: 9a50925e5ee7
-  ev.suju.a.body: 9131968f4965
-  ev.suju.a.choice.brocade: 9005ae0d0318
-  ev.suju.a.choice.silk: fbcebadd0509
-  ev.suju.a.choice.circuit: 45c2d1ede68d
-  ev.suju.b.title: 078add7ab0c2
-  ev.suju.b.body: 3992f6d0eb08
-  ev.suju.b.choice.gardens: 611876e73b57
-  ev.suju.b.choice.rhubarb: 8a17365a884e
-  ev.suju.b.choice.bridges: 19c67f61be89
-  ev.ev_suju_entry.choice_1_result: a889fb420b1d
-  ev.ev_suju_entry.choice_2_result: 678c2c0a0513
-  ev.ev_suju_entry.choice_3_result: 911f34e6ff85
-  ev.ev_suju_a.choice_1_result: 362553e305e8
-  ev.ev_suju_a.choice_2_result: 872be5d1af86
-  ev.ev_suju_a.choice_3_result: d2cd771c4d58
-  ev.ev_suju_b.choice_1_result: 3352b85f18b0
-  ev.ev_suju_b.choice_2_result: 9fef9618f9fe
-  ev.ev_suju_b.choice_3_result: d9337530849e
-  ev.ev_suju_a_followup.title: 91f73cf33824
-  ev.ev_suju_a_followup.body: 273aa48a235e
-  ev.ev_suju_a_followup.choice_1: 58eba79601e6
-  ev.ev_suju_a_followup.choice_1_result: 6353b72d6011
-  ev.ev_suju_a_followup.choice_2: a3375e80c2a4
-  ev.ev_suju_a_followup.choice_2_result: 025dbea34a5a
-  ev.ev_suju_a_followup.choice_3: aa6cd68f6861
-  ev.ev_suju_a_followup.choice_3_result: b47e20370552
+  ev.suju.entry.choice.market: 42b63ff6c99a
+  ev.suju.entry.choice.pass: 341365651d7d
+  ev.suju.entry.choice.shrine: 84c8ba1e7971
+  ev.suju.entry.body: ef23c2afb930
+  ev.suju.entry.title: 10c6666aa750
+  ev.suju.a.title: 20c5c6426f4e
+  ev.suju.a.body: a90fca85a9e5
+  ev.suju.a.choice.brocade: f4b57c950441
+  ev.suju.a.choice.silk: 83d97b3dc1bc
+  ev.suju.a.choice.circuit: dd03faaedcb4
+  ev.suju.b.title: 11fbd39e531f
+  ev.suju.b.body: 82afd5c017e1
+  ev.suju.b.choice.gardens: 75fe4c788a4c
+  ev.suju.b.choice.rhubarb: 615e1c4bd4fb
+  ev.suju.b.choice.bridges: 748de4faf338
+  ev.ev_suju_entry.choice_1_result: c69d0c0835a4
+  ev.ev_suju_entry.choice_2_result: 707b59578cb1
+  ev.ev_suju_entry.choice_3_result: e2125bca475f
+  ev.ev_suju_a.choice_1_result: 4df076c5adf1
+  ev.ev_suju_a.choice_2_result: c1c0d07d71fa
+  ev.ev_suju_a.choice_3_result: d0ba776c0e5c
+  ev.ev_suju_b.choice_1_result: ae4ddf4a8096
+  ev.ev_suju_b.choice_2_result: a91610d5086c
+  ev.ev_suju_b.choice_3_result: fd3a091cb3d4
+  ev.ev_suju_a_followup.title: cdecc155bcc8
+  ev.ev_suju_a_followup.body: 4688b0983b46
+  ev.ev_suju_a_followup.choice_1: eee8a2a858c9
+  ev.ev_suju_a_followup.choice_1_result: 9685f7eee2ad
+  ev.ev_suju_a_followup.choice_2: 65995f453f29
+  ev.ev_suju_a_followup.choice_2_result: 3e19345c113f
+  ev.ev_suju_a_followup.choice_3: 06994e5f511e
+  ev.ev_suju_a_followup.choice_3_result: 3717fd1966ee
 ---
 
 ## city.suju.name
@@ -52,130 +58,174 @@ stamps:
 
 ## ev.suju.entry.choice.market
 
-去集市逛逛
+留一天看看丝作坊
 
 ## ev.suju.entry.choice.pass
 
-不耽搁，直接进城
+继续走向作坊街
 
 ## ev.suju.entry.choice.shrine
 
-去佛寺看看
+帮忙把新席抬进桥街小祠
 
 ## ev.suju.entry.body
 
-苏州是一座繁华的大城，城周约六十英里。当地人很会做生意，也擅长手工业，尤其盛产丝绸；城里还有不少哲学家和医生。相传这里有六千座石桥，桥洞高得能让大船通过。附近山区盛产大黄和生姜，据说一枚威尼斯银币就能买到约四十磅上好的鲜姜。你站在桥边看船穿过桥洞，织坊里的师傅招呼你：“要看金锦怎么织？进来，我给你瞧瞧。”
+苏州一座运河桥上，织工阿雯抱着折好的丝布，怕它蹭到潮湿栏杆。儿子想拿短的一头，长边却拖下去。“靠中间扶。”她说。孩子换了手，两人把布干干净净抬过桥。
+
+你问作坊街从哪儿起。阿雯指向桥后。母亲在近旁园子里卖药根，早请孩子送完布带午饭去。孩子问祖母还会不会领他看鱼池。阿雯说若他在关水闸前到，祖母多半有空。邻居请母子路过桥街小祠时顺手帮忙，管祠人正等人抬新席进去。
+
+阿雯把布放上干凳，查过两边。她愿花一天带你看市集和作坊；儿子在旁数刚才过桥时有几道布折没沾湿。
 
 ## ev.suju.entry.title
 
-苏州见闻
+桥边的织工
 
 ## ev.suju.a.title
 
-金锦与六十英里城周
+阿雯织机上的金线
 
 ## ev.suju.a.body
 
-苏州规模宏大，城周约六十英里。这里丝绸产量很大，人们用丝织成金锦和其他布料。你走过织坊区，织机声响个不停。作坊主人笑着说：“苏州在我们的话里就是‘地’。你看这段纹样，金线不用横穿整匹布。织到花纹，再换一梭金线；过了这朵花就收住，换回普通丝线。金子只用在该亮的地方，布也不会重得拖不动。”
+阿雯作坊里，妹妹正在丝布花纹上添金线。织过三道，她停下来问亮的地方够不够大。阿雯把布举向窗：“再加一片花瓣。”妹妹问为何不把金线织满整匹。阿雯指给她看布会变得多重，又算了要用多少线。妹妹自己试着添那一瓣。
 
-织工踩着踏板，顺口哼道：“丝线走遍整匹布，金线落在花心住；织完收梭轻轻带，穿在身上不压肩。” “听出来了吗？金线只织在要亮的花纹上，花心一织好我就收梭。省下来的金线，还能织下一朵花呢。”
+你问织好的丝货往哪儿走。商人有一整包商货，开价 150 银，要往杭州送。另一位等着看样布的客人熟悉去镇江府的路。阿雯叫他等妹妹把末尾那道金线收住再碰。客人答应，顺手拿出路簿给你看。
+
+妹妹把织物举到臂长处，问新花瓣在光里亮不亮。阿雯又把它挪到窗边，叫她自己看。
 
 ## ev.suju.a.choice.brocade
 
-看看织机怎样织出金锦
+留两天看阿雯织锦，问去杭州的路
 
 ## ev.suju.a.choice.silk
 
-买一段金锦
+花 150 银买整包丝货
 
 ## ev.suju.a.choice.circuit
 
-骑马走一段城外环路
+问等样布的客人去镇江府的路
 
 ## ev.suju.b.title
 
-富商和运河边的园子
+织坊后面的园子
 
 ## ev.suju.b.body
 
-城里富商很多，人口更是数也数不清。这里的人擅长经商和做手艺，却不以打仗见长。运河之间有不少园子，富人挖池养鱼，还在树荫下种生姜和大黄。
+织坊街后，阿雯母亲陆婶正清园渠里的叶。阿雯儿子带午饭来，问今天还能不能看鱼池。“清完这道闸就去。”陆婶说。孩子捞叶，却把一尾小鱼也舀进篮。陆婶叫他把篮浸回池里，鱼自己游出去了。孩子问鱼还会不会认得他。陆婶笑说鱼更认得水。
 
-河边园子里，一位管园人念给你听： “桥影落池，姜叶沾露； 鱼翻水面，石阶留步； 买布的人从桥上过， 带一身水气回织坊。” 管园人指向池塘：“鱼在水里翻身，姜叶沾着露；织工收工后来园子歇脚，商人也顺路来这里看布。”“池塘养鱼，树下种姜和大黄，运河边的园子离作坊也近。织工散工后来这里歇脚，商人顺路看布、谈价。”
+你问池边种什么。陆婶留些姜供家里吃，另有一整包大黄根商货，开价 100 银。邻居要去常州，正在核园里的记事。陆婶请她指出沿河道哪儿转陆路，自己先教孩子挪水闸。
+
+鱼从篮里游走了。孩子叫祖母来看，陆婶让他把闸先开一掌宽。
 
 ## ev.suju.b.choice.gardens
 
-跟着商人的伙计逛逛运河边的园子
+留一天陪陆婶理园子，问去常州的路
 
 ## ev.suju.b.choice.rhubarb
 
-在园子旁的摊位买些大黄
+花 100 银买陆婶整包大黄根商货
 
 ## ev.suju.b.choice.bridges
 
-站在石桥上看船来船往
+问陆婶桥与水渠的事
 
 ## ev.ev_suju_entry.choice_1_result
 
-你没耽搁，直接进了城。
+你过桥走进苏州作坊街。阿雯和儿子从干凳上抬起丝布，送去给买主。
 
 ## ev.ev_suju_entry.choice_2_result
 
-织坊师傅把金线从丝中挑出来：“正面看纹样，背面看线头；买锦缎，两边都得看。”
+你留一天在作坊间走。阿雯给你看精细布料怎样在各家之间保持干爽；儿子也学会收好长边，不让它拖地。你把城里的手艺记下。
+
 ## ev.ev_suju_entry.choice_3_result
 
-你在佛寺廊下坐了片刻，僧人指着桥外说：“隔着那座石桥便是织坊街，早上还能听见机杼响。”
+你帮邻居把新席抬进小祠。管祠人谢过你，阿雯儿子把饭篮放在门边，也帮着铺平。桥街的人记住了你。
+
 ## ev.ev_suju_a.choice_1_result
 
-你看织机织出金锦。你为此待了两天，又将通往行在的路标到地图上。
+你留两天看阿雯姐妹织完花纹，又备下一段布。商人在图上指出杭州。阿雯说新线来了还可再来看。
 
 ## ev.ev_suju_a.choice_2_result
 
-你买了一段金锦，付出 15000 钱币。织坊附近的人都在谈那个照价付钱的客人。
+你花 150 银买下整包丝货。阿雯查过织面，妹妹捆好货，商人在重量旁写下你的名字。这家人谢你等金线收妥才接货。
 
 ## ev.ev_suju_a.choice_3_result
 
-你骑马走了一段城外环路，沿途遇见两支刚从行在来的商队。他们说南边的桥路通畅，最近水位也适合走船。
+客人在路簿上指出镇江府，讲上次运布在哪儿歇过。阿雯妹妹请他核一遍样布货签上的地名。
 
 ## ev.ev_suju_b.choice_1_result
 
-你跟着商人的伙计逛运河边的园子。
+你花一天帮陆婶清园渠。邻居在图上指出常州，阿雯儿子也学会开闸时别再捞进小鱼。你记下园子里的日常。
 
 ## ev.ev_suju_b.choice_2_result
 
-你在园子旁的摊位买了些大黄，付出 1500 钱币。摊主提醒你把根和叶分开包，路上别让它受潮。
+你付 100 银买下整包大黄根。陆婶查过根已晒干，让孙子系上干净货签。邻居去常州前帮你把包放稳。
 
 ## ev.ev_suju_b.choice_3_result
 
-你站在石桥上看船来船往。船夫经过桥下时，朝桥上的你点了点头。
+陆婶带你看桥怎样接着作坊街和园子，水闸又从哪条渠引水。孙子问池里的鱼会走哪座桥，她说鱼要的是水，可不用踩石板。
 
 ## ev.ev_suju_a_followup.title
 
-苏州：金锦和城里的桥
+运河边的新丝单
 
 ## ev.ev_suju_a_followup.body
 
-在这座城周约六十英里的大城里，一位把金线锦卖到行在的商人把你带进运河边的账房。他说：“做丝绸生意的路，也就是过桥走运河的路。镇江府和常州都记在我的账上。你要是除了布匹还想带走点别的，尽管问。”
+阿雯妹妹又织完一朵花，这回金线在边上收得轻些。她问你看不看得出差别。陆婶从园里来了，带一位要为家人挑礼布的邻居。阿雯先请邻居讲收礼人喜欢什么，再谈价。邻居说姐姐爱素色，只要一点亮处。妹妹指着新花纹，问这样行不行。
+
+你问阿雯整包布往哪儿卖。她另有整包丝货，开价 100 银。往杭州的商人在查车，镇江府来的客人则希望样布签上的路名写准。阿雯让妹妹自己写，再请你念给她核。
+
+陆婶在凳上放一碗水。邻居把花纹拿到日光里，看过才答织工。
+
+“亮的地方只在这里。”妹妹指给邻居看。邻居点头，请她从素边把布递过来。
 
 ## ev.ev_suju_a_followup.choice_1
 
-按公道价买下一段金锦
+花 100 银买新整包丝货
 
 ## ev.ev_suju_a_followup.choice_1_result
 
-他把金锦卖给你，包好后可以走运河运走。金线在光下闪动，像行在的集市一样耀眼。
+你付 100 银买下新整包丝货。阿雯姐妹查织面、核货签，才把货绑好。邻居选中的小段礼布仍留给她。
 
 ## ev.ev_suju_a_followup.choice_2
 
-问问走哪条桥路可以去行在
+问去杭州的商人路怎么走
 
 ## ev.ev_suju_a_followup.choice_2_result
 
-“往南走，过了镇江府再沿桥路前行，就能到行在。沿途桥多，跟着运河走，不容易岔开。”
+商人在图上指出杭州，也讲他常在哪儿查车。阿雯妹妹把城名抄到新丝单旁。
 
 ## ev.ev_suju_a_followup.choice_3
 
-沿着城里的桥走一天，听听运河边的闲聊
+留一天核镇江府方向的布单
 
 ## ev.ev_suju_a_followup.choice_3_result
 
-你在桥边听船夫聊了一天水路。一个撑船的说：“去镇江府就顺着运河走，遇上桥低的地方，船桅要先放倒。”
+你花一天把布单与镇江府客人的路簿逐页核。阿雯妹妹找出一个写重的地名，谢你陪她从头读完。
+
+## ev.suju.bridgeplank.title
+
+桥上松动的木板
+
+## ev.suju.bridgeplank.body
+
+阿雯作坊旁那座桥上，一处修补口的木板松了。木匠阿宝放只篮子提醒路人，阿雯儿子仍想跨过去，赶紧到祖母园里。“那边就三步。”孩子说。阿宝问若抱着整段丝布，脚下板子一晃会怎样。孩子想起刚才同母亲抬布，改走安全的另一边。
+
+你问何时能修。阿宝有合适木料，缺人帮着扶住再钉。等过桥的卖鱼妇人说送完鱼能帮，可鱼不能在日头下久放。阿雯儿子愿陪她把篮送到阴处摊位。阿宝又量了一次缝，发现一块小石顶在旧板底下。他请你守住示警的篮，自己抬板去取石。
+
+“您还会来鱼池边吗？”阿雯儿子问卖鱼人。妇人说鱼先送出日头，随后就来。
+
+## ev.suju.bridgeplank.choice.fix
+
+帮阿宝扶着修好桥板
+
+## ev.suju.bridgeplank.choice.day
+
+留一天陪阿宝查桥上别的松板
+
+## ev.suju.bridgeplank.result.fix
+
+你扶住木板，阿宝取石、钉牢。卖鱼妇人送完货，拿空篮回来走过试了一回。阿雯儿子仍从安全一侧过桥，向你谢了修板的事。
+
+## ev.suju.bridgeplank.result.day
+
+你花一天跟阿宝查桥，又标出两处以后要修的地方。卖鱼妇人送完货给你们带水。阿雯儿子也学会踩上去前先看木板松不松。

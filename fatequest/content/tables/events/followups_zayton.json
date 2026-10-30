@@ -65,18 +65,13 @@
               "op": "days",
               "value": 1,
               "reason": "stood-another-day-at-the-haven"
-            },
-            {
-              "op": "sticker",
-              "value": "st-zayton-haven",
-              "reason": "stood-another-day-at-the-haven"
             }
           ]
         }
       ],
       "lore": {
         "placeId": "zayton",
-        "origin": "source",
+        "origin": "hybrid",
         "ref": {
           "book": "marco-polo",
           "chapterId": "v2-b2-c082"
@@ -113,11 +108,6 @@
               "op": "goods",
               "id": "silk",
               "value": 1,
-              "reason": "bought-the-bolt-at-the-weavers-price"
-            },
-            {
-              "op": "sticker",
-              "value": "st-zayton-silk",
               "reason": "bought-the-bolt-at-the-weavers-price"
             }
           ]
@@ -163,9 +153,9 @@
           "resultText": "ev.ev_zayton_fanfang_followup.choice_4_result",
           "effects": [
             {
-              "op": "queue_event",
-              "value": "ev-codex-legend-seed",
-              "reason": "copied-the-wonder-leaves-and-chronicles"
+              "op": "days",
+              "value": 1,
+              "reason": "copied-travel-notes-with-the-scholar"
             }
           ]
         }
@@ -237,11 +227,6 @@
               "op": "days",
               "value": 1,
               "reason": "stayed-a-day-at-the-temple"
-            },
-            {
-              "op": "sticker",
-              "value": "st-zayton-mazu",
-              "reason": "stayed-a-day-at-the-temple"
             }
           ]
         }
@@ -304,11 +289,6 @@
               "op": "coins",
               "value": -500,
               "reason": "silver-for-the-temple-lamps"
-            },
-            {
-              "op": "sticker",
-              "value": "st-zayton-mazu",
-              "reason": "carried-the-temples-blessing"
             }
           ],
           "needs": {

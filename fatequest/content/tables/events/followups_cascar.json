@@ -50,11 +50,7 @@
           "label": "ev.ev_cascar_a_followup.choice_3",
           "resultText": "ev.ev_cascar_a_followup.choice_3_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-cascar-garden",
-              "reason": "promised-to-plant-a-seed-of-cascar"
-            },
+
             {
               "op": "reputation",
               "value": 1,
@@ -171,11 +167,7 @@
           "label": "ev.ev_cascar_c_followup.choice_1",
           "resultText": "ev.ev_cascar_c_followup.choice_1_result",
           "effects": [
-            {
-              "op": "sticker",
-              "value": "st-cascar-sleepers",
-              "reason": "carried-both-names-of-the-sleepers"
-            },
+
             {
               "op": "codex",
               "value": "cx-cascar",
@@ -279,11 +271,6 @@
               "op": "days",
               "value": 1,
               "reason": "lingered-at-the-mountain-relay"
-            },
-            {
-              "op": "sticker",
-              "value": "st-cascar-garden",
-              "reason": "learned-the-signals-of-the-relay"
             }
           ]
         }

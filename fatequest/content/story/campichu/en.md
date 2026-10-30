@@ -15,141 +15,152 @@ Campichu
 
 ## ev.campichu.entry.body
 
-Campichu is also a city of Tangut, and a very great and noble one. Indeed it is the
-capital and place of government of the whole province of Tangut. The people are
-Idolaters, Saracens, and Christians, and the latter have three very fine churches in the
-city, whilst the Idolaters have many minsters and abbeys after their fashion. In these
-they have an enormous number of idols, both small and great, certain of the latter being
-a good ten paces in stature; some of them being of wood, others of clay, and others yet
-of stone. They are all highly polished, and then covered with gold. The great idols of
-which I speak lie at length. And round about them there are other figures of
-considerable size, as if adoring and paying homage before them. Now, as I have not yet
-given you particulars about the customs of these Idolaters, I will proceed to tell you
-about them. You must know that there are among them certain religious recluses who lead
-a more virtuous life than the rest.
+At a gate in Campichu, a flower seller is threading a garland for a nearby Buddhist temple. Her son has mixed the temple flowers with a bundle promised to a household across town. ‘The white ones go to Auntie,’ she says, setting two baskets between them. A caravan driver stops to ask where he can buy tea and whether the temple lane is wide enough for his pack animals. The seller points him toward the market instead. ‘Walk the animals around the stalls,’ she says. ‘The temple lane is for people carrying water.’ You ask where the lane leads. Her son knows the turn because he has delivered garlands there before, but today he is reluctant to leave the flowers unsorted. A woman going to the temple offers to carry the finished garland after the seller has checked it. The son puts the last white flowers into his aunt’s basket and asks his mother to let him show you the street now. She says he can, once he has tied both bundles separately.
 
 ## ev.campichu.entry.choice.market
 
-Walk through the market
+Spend a day in the market
 
 ## ev.campichu.entry.choice.pass
 
-Pass through the gate without delay
+Continue through the gate today
 
 ## ev.campichu.entry.choice.shrine
 
-Visit the sì (Buddhist monastery)
+Visit the temple with the garland
 
 ## ev.campichu.entry.title
 
-Of the City of Campichu
+The Garland at the Market Gate
 
 ## ev.campichu.a.title
 
-The Seat of Tangut
+The Clerk’s Two Lists
 
 ## ev.campichu.a.body
 
-You stand in the capital of the whole province of Tangut, where the governor's clerks weigh out salt certificates and tally the tribute of the western marches. Caravans from the sandy desert to the north unload camels in the outer wards, and the market runs from dawn until the third watch without ceasing.
+A town clerk has two lists on his table: one for caravans arriving with tea, the other for people taking water from a public well. His new assistant has put a tea seller on both lists because she misread the family name. ‘I only came to ask where to refill,’ the seller says. The clerk gives his assistant the receipt and asks her to match its mark to the correct line. You hold the paper flat while she checks. A driver waiting outside wants to know whether the northern road toward Caracoron is still used by caravans. The clerk says a group came through recently and can speak from experience. The tea seller offers to show you a sealed load if you are looking to buy; she will not open a customer’s pack without asking first. The assistant fixes the water entry. ‘Is this the right line now?’ she asks. The seller checks the mark and nods. ‘Yes. I only need the well today; the tea is already on my cart.’ The clerk lets his assistant close the list herself. The clerk invites you to spend the day learning the lists, speak with the tea merchant, or ask the drivers about the road toward Etzina.
 
 ## ev.campichu.a.choice.clerks
 
-Watch the governor's clerks at their tally
+Spend a day checking the clerk’s lists
 
 ## ev.campichu.a.choice.caravan
 
-Bargain with desert caravans for tea
+Buy a sealed load of tea
 
 ## ev.campichu.a.choice.pass
 
-Pass through the government quarter without delay
+Ask the drivers about the Etzina road
 
 ## ev.campichu.b.title
 
-Churches and Abbeys
+A Reader and a Temple Keeper
 
 ## ev.campichu.b.body
 
-In Campichu you find three very fine Christian churches standing near many idol abbeys after the local fashion. Within the latter lie enormous gilded figures, some ten paces in length, with lesser images adoring before them. Saracens also keep their mosques here, so that four faiths share one street without quarrel.
+A Christian reader has brought a borrowed stool back to a Buddhist temple. He used it while reading to an older neighbour whose legs are weak. The temple keeper checks that its loose joint has been tightened. ‘My brother fixed it this morning,’ the reader says. She tests it before setting it beside the door. You ask whether visitors from different households often borrow from the temple. ‘They ask, and we write down what leaves,’ she says, showing you a small board. A Muslim cloth seller passing the gate asks where to leave a small gift for the temple’s water jars; he has used them on his way to market. The keeper shows him the shelf and thanks him for bringing back the empty jar as well. The reader is free tomorrow and can show you the gathering place his family uses. The keeper also knows a traveller who has gone toward Egrigaia and can share that road when he returns. For now she asks you to help carry the repaired stool out of the rain.
 
 ## ev.campichu.b.choice.churches
 
-Enter one of the three Christian churches
+Spend a day with the Christian reader
 
 ## ev.campichu.b.choice.abbey
 
-Walk the idol abbeys and note their gilded figures
+Ask the temple keeper about Egrigaia
 
 ## ev.campichu.b.choice.offering
 
-Leave a small offering at an abbey gate
+Leave a gift for the temple water jars
 
 ## ev.ev_campichu_entry.choice_1_result
 
-You pass through the gate without delay. The road to Campichu opens on your map.
+The son ties the two bundles apart and points you down the street through town. The caravan driver takes his animals around the market stalls. You continue with Campichu’s gate and lanes clear in mind.
 
 ## ev.ev_campichu_entry.choice_2_result
 
-You walk through the market. You spend 1 day before the way is clear again. You set what you saw into your travel book. You set the way to Campichu on your map.
+You spend another day among the market stalls. The flower seller introduces the tea merchants who supply the caravans, and her son shows you which lane returns to the gate. You hear how the town’s different households share the market and its water stops.
 
 ## ev.ev_campichu_entry.choice_3_result
 
-You enter the sì and bow before the painted scrolls. The monks remember your courtesy, and the scent of incense lingers in your sleeves. You set the road to Campichu on your map.
+You carry the checked garland with the woman to the temple. A caretaker finds space for it and thanks both of you, then shows you the nearby drinking water. The flower seller’s son meets you on the way back and learns that the delivery reached the right place.
 
 ## ev.ev_campichu_a.choice_1_result
 
-You watch the governor's clerks at their tally. It costs you 1 day on the road. The account is written down before the hour turns. The road to Caracoron opens on your map.
+You spend another day with the clerk and his assistant, checking names against receipts. The assistant spots a second copied mark before it causes trouble. A driver tells you which caravans have recently gone toward Caracoron. The clerk asks you to stay a moment for a further conversation about the roads.
 
 ## ev.ev_campichu_a.choice_2_result
 
-
-You bargain with desert caravans for tea. You pay 6000 coins. You add 1 item to your stores. You set what you saw into your travel book.
+The tea seller opens one corner of a sealed load so you can inspect it. You pay the full cargo price, and the assistant records the sale under the right name. The clerk asks the seller to wait while he finishes a short note for travellers.
 
 ## ev.ev_campichu_a.choice_3_result
 
-You pass through the government quarter without delay. The road to Etzina opens on your map. Fortune bends a little your way.
+A driver draws the road toward Etzina from the town gate and names the first place to seek water. The clerk’s assistant listens and adds the turn to her own list of directions. You leave with a clearer sense of the track ahead.
 
 ## ev.ev_campichu_b.choice_1_result
 
-You enter one of the three Christian churches. You spend 1 day before the way is clear again. You set what you saw into your travel book. Your name carries a little more weight here now.
+You spend another day with the reader. He introduces you to the neighbours who gather to listen and shows how the repaired stool helps the older woman sit comfortably. The temple keeper sees it back in place when you pass and thanks you for treating their shared things with care.
 
 ## ev.ev_campichu_b.choice_2_result
 
-You walk the idol abbeys and note their gilded figures. The account is written down before the hour turns. The road to Egrigaia opens on your map. Fortune bends a little your way.
+The traveller returns, and the keeper asks him to mark the way toward Egrigaia for you. While he draws, she shows the temple’s old water jars and tells you who refills them. The reader joins you for a cup, and you leave knowing more about both the road and the people here.
 
 ## ev.ev_campichu_b.choice_3_result
 
-
-You leave a small offering at an abbey gate. You pay 500 coins. Your name carries a little more weight here now. You set what you saw into your travel book.
+You pay for a small gift to replenish the temple’s water jars. The keeper records it beside the repaired stool and asks the cloth seller to help carry one full jar inside. She thanks you by name when you leave, and the reader shows you the lane back to market.
 
 ## ev.ev_campichu_a_followup.title
 
-Campichu: The Tangut Seat's Second Counsel
+The Clerk’s Road Note
 
 ## ev.ev_campichu_a_followup.body
 
-In the capital of Tangut a clerk of the governor's court who has sealed caravan papers for twenty years draws you from the market into a side room. He says Caracoron and Etzina are not merely names on a map — they are the measure of how far a Tangut passport will carry you before the desert takes over.
+The clerk finishes a road note while his assistant checks the tea seller’s receipt one last time. ‘The driver named two ways out of town,’ he tells you. ‘I want the one on this paper to match the water stops he actually used.’ The assistant reads the first stop aloud. The driver corrects its spelling and points to the second on a worn board he carries in his pack. You ask whether the note reaches as far as Caracoron. ‘Only the part we know from recent caravans,’ the clerk answers. ‘Ask again when you reach another camp.’ The tea seller asks when she may move the load you bought or inspected; the assistant gives her the corrected cargo line. She still has another sealed load for sale. The driver says a caravan toward Etzina is waiting until tomorrow for its last animal, and the clerk invites you to hear their departure plans if you stay.
 
 ## ev.ev_campichu_a_followup.choice_1
 
-Ask him to seal a note naming the road to Caracoron
+Ask him to mark the way toward Caracoron
 
 ## ev.ev_campichu_a_followup.choice_1_result
 
-Caracoron is marked on your map with the clerk's seal beside it. The northern road is no longer a rumour.
+The clerk marks the northern road toward Caracoron on your board, including the water stops the driver checked. His assistant copies the corrected spellings and gives the driver his own note. You leave knowing which part still needs to be asked about farther on.
 
 ## ev.ev_campichu_a_followup.choice_2
 
-Buy a chest of tea at the court caravan price
+Buy a separate sealed load of tea
 
 ## ev.ev_campichu_a_followup.choice_2_result
 
-You leave with tea at a price the desert caravans accept. The chest is sealed for the next march.
+The tea seller shows you another sealed load and opens a corner for inspection. You pay its full price, and the assistant adds a separate line to the sale list. The seller has it moved under a dry roof until you are ready to carry it away.
 
 ## ev.ev_campichu_a_followup.choice_3
 
-Wait a day for the passport office to open again
+Stay a day for the Etzina caravan’s departure
 
 ## ev.ev_campichu_a_followup.choice_3_result
 
-You wait a day for the office. The waiting costs time, but Etzina is named before you go.
+You stay another day and watch the drivers check water and pack straps before they leave toward Etzina. One corrects a loose knot on the last animal and tells you where they expect to rest first. The clerk’s assistant writes the new detail beside her road note.
+
+## ev.campichu.cart-axle.title
+
+The Cart That Leaned Left
+
+## ev.campichu.cart-axle.body
+
+At a yard behind the market, a family’s cart leans toward one wheel even when it is empty. The mother thinks the axle has shifted. Her son says he packed the last load unevenly and wants to try again before anyone takes it apart. ‘Then roll it without a load,’ she says. He does; it still leans. You hold the cart steady while she checks the axle pin. It has worked loose, and a neighbour brings a sound replacement. The son asks whether they need to lift the whole cart. The neighbour shows him how to raise one side with a wooden lever while the mother sets a block beneath it. A merchant comes to collect the cart for tea bales and waits while they test the wheel. He asks who will ride beside the load to watch it. The son volunteers. ‘After I see it roll straight,’ his mother says. He looks at the worn pin the neighbour has placed in his palm. ‘I felt it lean on the last trip,’ he admits. ‘I should have told you then.’
+
+## ev.campichu.cart-axle.choice.repair
+
+Help set the new axle pin
+
+## ev.campichu.cart-axle.result.repair
+
+You hold the raised cart while the mother fits the pin and the neighbour removes the block. The son walks it around the yard; both wheels now turn evenly. The waiting merchant thanks the family and remembers that you helped them deliver the cart on time.
+
+## ev.campichu.cart-axle.choice.stay
+
+Stay a day to see the loaded cart tested
+
+## ev.campichu.cart-axle.result.stay
+
+You stay another day as the family balances tea bales on the repaired cart. The son checks how it rolls on a longer stretch of road, then changes the position of one heavy bale. His mother lets him explain what he found, and you leave knowing how a small shift in a load changes a cart’s pull.

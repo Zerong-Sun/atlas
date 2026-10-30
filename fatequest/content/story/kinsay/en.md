@@ -15,404 +15,418 @@ Kinsay
 
 ## ev.kinsay.a.body
 
-Kinsay is a city built on water — it is said there are twelve thousand bridges of stone,
-and all of them are so tall that a ship with its mast raised can pass beneath without
-lowering the yard. Some have shops built on them. The streets are canals; the boats are
-the carriages. A man could spend his whole life in Kinsay and never walk more than a
-hundred paces on dry land. From the top of the drum-tower in the center of the city, a
-hundred canals radiate in every direction, each one lined with stone embankments as
-straight as a sword-cut. The city has no walls — the water is its wall, and the Kaan
-maintains a fleet of patrol boats to keep the peace.
+At a bridge near the landing, the repairer Ming pulls a worn wooden wedge from beneath a railing. His daughter puts down a basket of replacement wedges and asks why the boatmen complained again. “They hear the railing rattle when they pass underneath,” he says. “I promised I would fix it before a child puts a hand through the gap.” She hands him a wedge and checks the fit while he taps it in. The bridge carries people to a market on one bank and boats pass below it all morning.
+
+You ask why he has left one plank unfastened. Ming says a barge carrying tall crates is due after noon. “I need to make sure its load clears the bridge before I close that side.” His daughter points out that a cart driver is already waiting to cross. Ming calls across to the driver and explains the delay. The man says he can take the next bridge if Ming tells him which slope is easier for a laden cart. Ming turns to you: “You have time to look around. Tell me what the crossing is like from the water or the road.”
 
 ## ev.kinsay.a.choice.boat
 
-Hire a boat and spend the day on the canals
+Pay 2 silver and spend a day seeing the bridge from a hired boat
 
 ## ev.kinsay.a.choice.tower
 
-Climb the drum-tower and see the hundred canals below
+Climb the drum tower and ask about the way to Suju
 
 ## ev.kinsay.a.choice.walk
 
-Walk the bridges and see if you can count them all
+Spend a day crossing the bridges on foot
 
 ## ev.kinsay.a.title
 
-The Twelve Thousand Bridges
+The Bridge Repairer
 
 ## ev.kinsay.b.body
 
-The markets of Kinsay are ten great squares, each one half a mile on a side, surrounded
-by double-storied warehouses with shops below and counting-houses above. Every fish of
-the sea and lake, every fruit of the earth, every fabric known to man, every spice and
-drug and perfume is sold in one of these ten squares. Forty cart-loads of pepper pass
-through the customs house every day. The main street that connects the markets is paved
-with stone and brick so finely joined that no water stands on it even in the heaviest
-rain. On either side are bathhouses and restaurants where a man can bathe in hot water
-perfumed with flowers and then dine on ten courses for a few copper coins.
+In the market, a pepper merchant named Qiao has two ledgers open beside the scales. His nephew carries a damp sack in from the landing and wants to put it with the dry stock. “Feel the seam,” Qiao tells him. “If it is wet, we open it first.” The boy thinks the boat took on water. Qiao asks him to find the boatman before he decides what happened. The boatman comes over and explains that rain ran under the awning while the cargo was being unloaded.
+
+You ask why the merchant keeps two books. One records what came by boat; the other records what he has actually dried and sold. “A buyer needs to know which lot he is taking,” Qiao says. The nephew spreads the wet pepper on a mat and asks if it can still be sold. “After it dries, we will check it again. Until then, keep the bags apart.” A bathhouse worker stops by to ask whether the boy is joining the family meal later. Qiao points across the lane: “There is hot water there if you want to rest after the market.”
 
 ## ev.kinsay.b.choice.bath
 
-Bathe in perfumed water and dine on ten courses
+Pay 1 silver for a bath and meal; stay a day
 
 ## ev.kinsay.b.choice.count_pepper
 
-Count the forty cart-loads of pepper passing the customs
+Check the incoming ledger and ask about the port of Zayton
 
 ## ev.kinsay.b.choice.pepper
 
-Buy two sacks of pepper from the customs house
+Pay 216 silver for two merchant lots of pepper
 
 ## ev.kinsay.b.title
 
-The Ten Great Markets
+A Pepper Merchant’s Ledger
 
 ## ev.kinsay.c.body
 
-On the West Lake, just outside the city walls, the pleasure boats of Kinsay float day
-and night — painted in gold, blue, and vermilion, with silk awnings and cushioned seats.
-Each boat is a floating pavilion. Musicians play the pipa and the guqin on the open
-deck. Dancers perform in costumes embroidered with phoenixes. Wine flows from porcelain
-cups, and lanterns hang from the awning poles, their reflections dancing on the black
-water. The lake is so large that a circuit takes a whole day. The islands in the lake
-have pleasure-palaces where the wealthy hold banquets that last three days. A man who
-has not seen the West Lake by moonlight has not seen the most beautiful thing in the
-empire of the Kaan.
+At the West Lake, a boatwoman named Lan is washing cups at the shore. Her younger brother has promised a family a boat for an evening gathering, but he has tied the awning so low that their elderly aunt cannot sit upright. “You were thinking of the wind,” Lan says, lifting one corner. “She was thinking of her back.” He reties it higher and asks you to hold the pole while he works. Their aunt arrives carrying a small packet of snacks and tests the seat before approving it.
+
+You ask whether the family is going far. “Only as far as the lanterns,” the aunt says. “I want to hear my niece play before everyone goes back to work.” Lan takes a pipa from its cloth cover and checks a string. Her brother offers to take you around the lake on another boat if you want to spend the day afloat. The aunt suggests a seat on the bank if you would rather listen from shore. As they speak, the first lantern is lit, and Lan's brother calls out to the family waiting by the steps.
 
 ## ev.kinsay.c.choice.boat
 
-Hire a pleasure boat with musicians and wine
+Pay 5 silver and spend a day on the lake by boat
 
 ## ev.kinsay.c.choice.moonlight
 
-Wait for moonlight — the most beautiful thing in the empire
+Wait on shore for the moon to rise
 
 ## ev.kinsay.c.choice.watch
 
-Stand on the shore and watch the floating palaces
+Stay on shore and listen to Lan play
 
 ## ev.kinsay.c.title
 
-The Pleasure Boats of the West Lake
+A Boat by the Lake
 
 ## ev.kinsay.entry.body
 
-When you have left the city of Changan and have travelled for three days through a
-splendid country, passing a number of towns and villages, you arrive at the most noble
-city of KINSAY, a name which is as much as to say in our tongue “The City of Heaven,” as
-I told you before. And since we have got thither I will enter into particulars about its
-magnificence; and these are well worth the telling, for the city is beyond dispute the
-finest and the noblest in the world. In this we shall speak according to the written
-statement which the Queen of this Realm sent to Bayan the conqueror of the country for
-transmission to the Great Kaan, in order that he might be aware of the surpassing
-grandeur of the city and might be moved to save it from destruction or injury. I will
-tell you all the truth as it was set down in that document. For truth it was, as the
-said Messer Marco Polo at a later date was able to witness with his own eyes. And now we
-shall rehearse those particulars. First and foremost, then, the document stated the city
-of Kinsay to be so great that it hath an hundred miles of compass. And there are in it
-twelve thousand bridges of stone, for the most part so lofty that a great fleet could
-pass beneath them. And let no man marvel that there are so many bridges, for you see the
-whole city stands as it were in the water and surrounded by water, so that a great many
-bridges are required to give free passage about it. [And though the bridges be so high
-the approaches are so well contrived that carts and horses do cross them.] The document
-aforesaid also went on to state that there were in this city twelve guilds of the
-different crafts, and that each guild had 12,000 houses in the occupation of its
-workmen. Each of these houses contains at least 12 men, whilst some contain 20 and some
-40,—not that these are all masters, but inclusive of the journeymen who work under the
-masters.
+At a canal landing, a woman lifts two baskets of porcelain from a small boat. Her son has tied the cords tightly, but the upper basket rocks each time someone steps across the gangplank. “Hold the rail for me,” she says. “The bowls are for my sister's shop. She has already promised them to a wedding family.” Her son protests that he checked the knot twice. She sets the basket down and asks him to show her where the cord crosses the rim. He finds the loose part himself and pulls it through again.
+
+You ask where a newcomer should go first. “If you have goods, the clerks are beside the next landing,” she says. “If you want to know how the city works, ask the boatmen; they hear every household's news.” Her son points toward a lane where a market awning is being raised. “And if you need a bowl for supper, Mother will tell you which ones you can actually afford.” She laughs, then tells him to carry the lighter basket to his aunt. He waits while she checks the knot one last time.
 
 ## ev.kinsay.entry.choice.customs
 
-Declare your goods at the shìbó sī (市舶司)
+Spend two days with the landing clerks and declare your goods
 
 ## ev.kinsay.entry.choice.lore
 
-Ask what men say of this city
+Stay a day and ask the boatmen about the city
 
 ## ev.kinsay.entry.choice.market
 
-Walk the great market
+Spend a day at the market and buy a Dehua porcelain lot for 145.8 silver
 
 ## ev.kinsay.entry.title
 
-The City of Heaven
+At the Canal Landing
 
 ## ev.ev_kinsay_entry.choice_1_result
 
-The clerks of the shìbó sī weigh your cargo on the wharf scales and write your name into the canal register. As you turn away, a boatman who works the grain canal calls to you from the water's edge.
+The clerk weighs your load and has you check the name written against it. The queue and inspection take two days. The woman from the landing returns with her sister, who needs help finding a missing carrier. A grain boatman overhears and calls you over with a useful name.
 
 ## ev.ev_kinsay_entry.choice_2_result
 
-You ask several people and hear different answers. Near dusk an old boatman selling fish beckons. “Want to know how this city lives? Look at the river. Boats bring goods in, bridges carry people across, and the tax officer counts what each boat holds.”
+You spend a day listening to the boatmen as they mend rope and unload baskets. One tells you which bridge floods after heavy rain; another remembers when the market moved its fish stalls. A porter hears your questions and offers to show you how the landing keeps track of incoming boats.
 
 ## ev.ev_kinsay_entry.choice_3_result
 
-You spend a day walking the great market of Kinsay and carry away a load of goods. The market of the city of Heaven is now written in your book.
+You spend the day moving between stalls with the woman and her son. She lets you inspect a merchant lot of Dehua porcelain, checks each piece against its packing list, and watches you pay 145.8 silver for the full lot. Her son helps tie the load so the bowls will travel safely.
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_1_result
 
-You pay the temple reader and sit at her low table while she lays out the three cups. The teaching is quick and exact, and at the end she closes her hand over the cups and gives you a parting throw.
+You pay thirty silver and spend three days with the temple reader. She has you say each question clearly before casting the paired wooden pieces, then asks what you understood from their fall. On the last day she lets you answer a visitor while she listens. She invites you back before you leave the city.
 
 ## ev.ev_kinsay_mentor_jiaobei.choice_2_result
 
-The temple reader shows how the two cups answer by their fall. The art of the cups is now written in your book, though its practice stays with her.
+The temple reader shows you the paired wooden cups and explains what visitors ask of them. A child waiting with his mother asks why the pieces sometimes land alike; she asks him what he would do if his own question were unclear. You leave knowing where to find her if you want to learn more.
 
 ## ev.ev_kinsay_a.choice_1_result
 
-You hire a boat and spend the day on the canals under the twelve thousand bridges. The boatman reads the water like a book, and at the turning of the afternoon he ships his oars to tell you what the bridges keep.
+You pay two silver for a boat and spend the day passing under the bridges. Ming and his daughter call down whenever the railing sounds loose. By afternoon you can tell him which crossing rattles in the current, and he asks you to return when the repair is finished.
 
 ## ev.ev_kinsay_a.choice_2_result
 
-You cross Kinsay's bridges until you lose count before noon. A boatman laughs. “Stop counting bridges and look at the boats beneath them. More than a hundred may pass this channel in a day.”
+You walk the crossings for a day, carrying a note from Ming to the cart driver at the gentler slope. When you return, the daughter has marked two loose planks in charcoal. Ming promises to replace them before the next market morning.
 
 ## ev.ev_kinsay_a.choice_3_result
 
-You climb the drum-tower and see a hundred canals below, all alive with boats. The road south to Suju is now on your map, and the view is in your book.
+From the drum tower you see the bridge repair and the landing in one glance. A watchman points out the district where travellers ask about Suju. He names the city and tells you which landing can arrange the next leg.
 
 ## ev.ev_kinsay_b.choice_1_result
 
-You pay twenty thousand pieces for two sacks of pepper at the customs house. A merchant's fortune in spice now rides in your cargo, and the freight is written in your book.
+Qiao checks two dry merchant lots against his ledger, then has his nephew tie them separately. You pay 216 silver and take both lots. The nephew writes your mark beside the sale so he can find the proper entry if you return.
 
 ## ev.ev_kinsay_b.choice_2_result
 
-You bathe in perfumed water and dine on ten courses in a house overlooking the market squares. The steward who served you clears the last dish and lingers, as if the account of the city is not yet closed.
+You pay one silver and spend the day between the bathhouse and the market meal. The nephew comes in after putting the pepper under cover. He admits he judged the boatman too quickly, and Qiao asks him to carry the dry ledger home before the evening rain.
 
 ## ev.ev_kinsay_b.choice_3_result
 
-You count forty cart-loads of pepper pass the customs in a single day. The sea-road to Zayton, where the ships bring it, is now on your map.
+Qiao shows you the incoming entries and names Zayton as the seaport used by one of his suppliers. His nephew finds the matching seal on a sack. You note the port so you can ask about it when choosing your next journey.
 
 ## ev.ev_kinsay_c.choice_1_result
 
-You hire a pleasure boat with musicians and wine and push out onto the West Lake. As dusk falls and the lanterns are lit on the water, the boatmaster leans close to speak against the music.
+You pay five silver for the boat and spend the day on the lake. Lan’s brother learns to leave the awning high enough for every passenger; by evening he can retie it without being reminded. Lan invites you back when she next plays by the shore.
 
 ## ev.ev_kinsay_c.choice_2_result
 
-You stand on the bank and watch painted pleasure boats pass slowly across the lake.
+You stay on the bank while Lan plays for her aunt’s family. When the song ends, her brother brings the washed cups ashore and asks whether the sound carried clearly across the water. You tell him it did.
 
 ## ev.ev_kinsay_c.choice_3_result
 
-You wait for the moon to rise over the lake. What the moonlight shows you, no one in the empire can argue with; it settles in you like a certainty.
+You wait on shore as the moon rises. The aunt shares a little of her snack and asks about the water near your home. You tell her what you remember; Lan listens as she wraps the pipa. When they leave, her brother keeps a lantern lit on the steps until the last passenger is ashore.
 
 ## ev.ev_kinsay_consequence_a.title
 
-Kinsay: The Mark at the Gate
+The Carrier on the Landing
 
 ## ev.ev_kinsay_consequence_a.body
 
-The first answer does not end at the gate. A boatman who works the grain canal draws you aside by the wharf and asks what you intend to carry away from Kinsay. Beyond the question lies the canals and the grain boats; he offers to set a name to your name, a name the customs house will remember. Choose what you will make of the sign.
+When you finish at the clerks’ table, the woman with the porcelain baskets is still looking for her sister’s carrier. A grain boatman named Wu puts down his pole and calls to her son: “Did he say which bridge he would cross?” The boy remembers a noodle stall with a red sign, but not its name. Wu knows the stall and says the carrier may be waiting at the wrong landing. You ask why he is helping when his own boat is due to leave. “His father helped me once when the current took my rope,” Wu says. “I can spare a few words.”
+
+Wu has a clerk’s name written on the back of an old delivery slip. The clerk can tell them which baskets were registered at the other landing. The woman asks you to carry the note or keep the name until she has checked the noodle stall. Her son offers to run, and she tells him to take the bridge with the gentler steps: one basket has already been damaged today. Wu waits for your answer with the slip in his open hand.
 
 ## ev.ev_kinsay_consequence_a.choice_1
 
-Take the name and ask the boatman who can vouch for it
+Take Wu’s note and ask who can verify the delivery
 
 ## ev.ev_kinsay_consequence_a.choice_1_result
 
-You take the name the boatman offers and ask who can vouch for it. He names two clerks of the wharf, and the matter opens again.
+Wu names the clerk at the other landing and explains where his desk stands. The woman sends her son to the noodle stall while you hold the note. Wu asks you to bring back any answer before his grain boat leaves.
 
 ## ev.ev_kinsay_consequence_a.choice_2
 
-Thank the boatman and keep your own counsel
+Let the family check the noodle stall first
 
 ## ev.ev_kinsay_consequence_a.choice_2_result
 
-You thank the boatman and keep your own counsel. The matter closes at the wharf, and nothing more is asked of you in Kinsay.
+The woman folds the note and takes her son across the bridge. Wu returns to his boat, but he promises to stay at the landing until she has called back. You part with them while the search is still under way.
 
 ## ev.ev_kinsay_consequence_a_resolution.title
 
-Kinsay: The Boatman's Name
+A Name on the Delivery Slip
 
 ## ev.ev_kinsay_consequence_a_resolution.body
 
-You have agreed to carry the boatman's name with you — a name the customs house will remember. It will not decide the whole journey, but at the next canal toll his name may halve your wait.
+The clerk at the second landing finds the entry: the carrier brought the sister’s empty baskets here, then went to the noodle stall to wait for the full ones. The woman had assumed he would be waiting at the first landing. You return with the explanation just as her son comes back from the stall. “He is there,” the boy says, out of breath. “And he has not eaten.” The woman sends him back with a bowl of noodles while she checks the porcelain once more.
+
+Wu wants the clerk’s name returned to the delivery slip so the family can use it next time. He also says you can take the afternoon to learn how the two landings divide the work. The woman hears this and says, “You have already spent enough time on our bowls. If you stay, at least eat with us.” Her son is already trying to carry both baskets, so she takes one from him and waits while you decide what to do next.
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1
 
-Deliver the name before nightfall
+Return the clerk’s name to the family’s delivery slip
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_1_result
 
-You deliver the name before nightfall. The boatman's word now travels with your name, and the wharf folk have a reason to receive you.
+You write the name and landing clearly on the slip. The woman checks it with Wu, then folds it into her basket cover. Next time her carrier crosses to the wrong side, she knows whom to ask.
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2
 
-Keep the boatman's name in your travel book
+Stay another day to learn both landings’ routine
 
 ## ev.ev_kinsay_consequence_a_resolution.choice_2_result
 
-You keep the boatman's name in your travel book and spend a day setting it down plainly. The record is made; the favour waits for a road that may never call on it.
+You stay through the next day’s arrivals. Wu shows you which boats unload grain first and where fragile bowls are carried ashore. At supper the woman’s sister thanks you and gives her son the task of keeping tomorrow’s delivery slip.
 
 ## ev.ev_kinsay_consequence_b.title
 
-Kinsay: The Road Behind the Answer
+The Porter’s Boat List
 
 ## ev.ev_kinsay_consequence_b.body
 
-The answer sends a rumour along the road. Before the day is out, a grain porter finds you on the wharf with a second account of the canals and the grain boats — how the canal tolls run, and which bridge opens for a loaded boat. It is less grand than a traveller's tale, and more useful.
+The porter who heard you questioning the boatmen is called A-sheng. He keeps a board of arriving boats under the landing awning. This morning his younger sister has copied one boat name twice and left another blank. She says the two boatmen both called out at once. A-sheng asks her to read each mark back to him before the boats leave. You wait while they compare the names with the ropes tied along the bank.
+
+“Do strangers ever need this list?” you ask. “All the time,” he says. “Someone’s uncle is arriving with rice; someone else has sent a parcel downriver. If I guess, the wrong family goes home empty-handed.” His sister points at a boat with blue paint on its bow and remembers the missing name. A-sheng offers to write down how the landing checks cargo and timing, since you have been asking about the city. She holds out the board and asks whether you want her careful copy or only a spoken explanation.
 
 ## ev.ev_kinsay_consequence_b.choice_1
 
-Follow the porter's practical advice
+Ask A-sheng and his sister for a written copy
 
 ## ev.ev_kinsay_consequence_b.choice_1_result
 
-You follow the porter's practical advice and ask him to set it down. He writes the account out for you, and the canal's true measures come into your hand.
+His sister writes each step while A-sheng checks her wording against the board. She leaves space beside the boat names so later arrivals can be added. They invite you to return when the evening boats come in.
 
 ## ev.ev_kinsay_consequence_b.choice_2
 
-Leave the account with the porter
+Thank them and leave the list with the family
 
 ## ev.ev_kinsay_consequence_b.choice_2_result
 
-You thank the porter but decline his explanation. He takes back the paper. “I must return to work. You can find me at the quay if you change your mind.”
+You thank them and leave the board where the next family can consult it. A-sheng’s sister taps the corrected boat name with her finger and says she will read it twice before closing tonight.
 
 ## ev.ev_kinsay_consequence_b_resolution.title
 
-Kinsay: The Canal-Toll Account
+The Evening Arrivals
 
 ## ev.ev_kinsay_consequence_b_resolution.body
 
-You have chosen to carry the porter's account with you — how the canal tolls run, and which bridge opens for a loaded boat. It will not decide the whole journey, but it will save you more than it cost to learn.
+At dusk a woman comes to the landing asking for a boat carrying her brother’s rice. The boat’s paint has faded, so she cannot recognize it by the bow. A-sheng checks the board and calls to the crew; his sister reads back the name and the number of sacks. One sack was left at the previous landing, the crewman says, and will arrive tomorrow. The woman sighs, then asks whether she should wait or send someone for it.
+
+A-sheng shows you where the new arrival is added to the list. His sister asks you to pass the corrected notice to the next porter, who will be on duty after dark. You can do that now, or stay another day to see the missing sack arrive and learn how they correct a boat entry. “Either way,” she says, “please tell her what we actually found, so she does not sit here all night for one sack.” The woman is still waiting beside her empty cart.
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1
 
-Tell the next boatman before nightfall
+Pass the corrected boat notice to the night porter
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_1_result
 
-You tell the next boatman before nightfall. The canal's measures now travel ahead of you, and where they land, your name follows.
+You tell the woman one sack will arrive tomorrow, then hand the corrected notice to the next porter. He reads it back before taking over. A-sheng’s sister smiles when she hears her careful count repeated without a mistake.
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2
 
-Keep the toll-schedule in your travel book
+Stay a day for the missing sack and the corrected entry
 
 ## ev.ev_kinsay_consequence_b_resolution.choice_2_result
 
-You spend a day copying the toll-schedule into your travel book. The record is yours now, though it cost you a day of the road.
+You stay another day. When the missing sack comes in, A-sheng’s sister marks its arrival and sends word to the woman. She asks you to check that the new number agrees with the cart before she closes the board.
 
 ## ev.ev_kinsay_a_followup.title
 
-Kinsay: The Water-Keeper of the Twelve Thousand Bridges
+Ming Checks the Bridge
 
 ## ev.ev_kinsay_a_followup.body
 
-The water officer who poled you through the city calls you back at the quay, his long pole still dripping. He points beneath the bridges. More than a hundred canals cross the city, he says, and stone-paved streets keep carts from sinking after heavy rain. Each bridge must be checked and repaired or ships and cargo will stop. He shows you the tax marks cut into the quay stones: every boat pays by the rule written there. “The City of Heaven does not run by itself.”
+When you return, Ming has replaced the loose plank. His daughter is standing below with a boatman, waiting for a barge carrying tall crates. “I told Father the railing was tight,” she says, “but we have not tested it with this load.” Ming calls down to ask whether the crate clears the beam. The boatman answers that it does, though one rope is catching on a nail. Ming makes a charcoal mark, then walks down to see it himself.
+
+You ask who keeps track of repairs after the two of them leave. The daughter shows you a small board with the bridge name, the date, and the boatman’s complaint. “He thought I would forget,” she says, pointing at her father. Ming protests that he only asked her to write larger. She hands the board to you so you can read the marks. A traveller beside you asks which crossing leads toward Suju; Ming knows whom to ask at the south landing. He waits for the barge to clear before putting the last wedge in place.
 
 ## ev.ev_kinsay_a_followup.choice_1
 
-Ask the keeper how the tolls are reckoned on the water
+Read the repair board and ask how bridge traffic is recorded
 
 ## ev.ev_kinsay_a_followup.choice_1_result
 
-Reading the tax marks, the officer explains that grain boats pay according to cargo, passenger boats according to the people aboard. Funeral boats pay nothing. “Do not tell the keeper of the accounts,” he jokes. “He would count every boat.”
+Ming’s daughter reads the repair marks with you and adds the snagged rope to the board. You remember the bridge by its work and the people who use it. The boatman later calls up to say the next barge passed cleanly.
 
 ## ev.ev_kinsay_a_followup.choice_2
 
-Ask which water-road leads south to Suju
+Ask Ming’s daughter which landing knows the way to Suju
 
 ## ev.ev_kinsay_a_followup.choice_2_result
 
-The keeper draws the water-road south on the flat of his hand: down the canal to the great lake, then by the river where the silk boats pass. The road to Suju is now clear on your map.
+She walks you to the south landing and introduces the traveller who was also asking. Together they name Suju and show you where to gather news of the onward journey. Ming calls from the bridge that the cart can cross now.
 
 ## ev.ev_kinsay_a_followup.choice_3
 
-Stay a day to walk the bridges with the keeper
+Spend another day checking the crossings with Ming
 
 ## ev.ev_kinsay_a_followup.choice_3_result
 
-You spend a day crossing bridges with the keeper, learning to read the toll marks and the state of each arch. It costs you a day of the road, but the twelve thousand bridges are no longer a number to you.
+You spend the next day walking the crossings with Ming. His daughter meets you at noon with food and a fresh charcoal stick. By dusk the repair board has three new notes, including one about a step that is too steep for the cloth cart.
 
 ## ev.ev_kinsay_b_followup.title
 
-Kinsay: The Account of the Ten Great Squares
+The Dry Pepper Ledger
 
 ## ev.ev_kinsay_b_followup.body
 
-A merchant of the ten great squares of Kinsay takes you for a buyer and keeps you by the pepper stalls. He tells you that the pepper he sells comes by sea to the port of Zayton and up the river to Kinsay, and that the city consumes in a single day a quantity of it that a kingdom of the West would not use in a year. He speaks of the twelve guilds of the handicrafts, each with its twelve thousand houses and its own gate, and of the ten markets where, three days in every week, every stall is filled with the hunters' and the fishers' catch. If you mean to deal honestly, he says, he will show you how the day's accounts are kept — the pepper weighed, the price set, the cartage reckoned. What you do with the offer is your own.
+The next time you pass Qiao’s stall, his nephew has moved the pepper mats into a strip of sunlight. A buyer is asking for a single dry merchant lot. The nephew reaches for the damp ledger, then stops and opens the other book. “This one,” he says. Qiao asks him to weigh it again because yesterday’s rain may have changed the load. The boy complains that he has already done the work twice, but puts the sack on the scale.
+
+You ask whether the wet shipment has recovered. “Some of it,” Qiao says. “We will keep the spoiled handful for our own cooking; I will not send it across the river as a full lot.” The nephew points to a seal from Zayton on the sack and says he wants to see that seaport one day. Qiao reminds him that a trader first has to know the stock in front of him. A woman from the bathhouse brings them warm food, and the boy asks you to hold the book while he clears a place to eat.
 
 ## ev.ev_kinsay_b_followup.choice_1
 
-Buy pepper at the merchant's own price
+Pay 108 silver for one dry merchant lot of pepper
 
 ## ev.ev_kinsay_b_followup.choice_1_result
 
-The merchant weighs out a load of pepper for you at his list price, a courtesy he shows to travellers who ask the truth of the markets before they trade. The pepper goes into your goods, and the account of the ten great squares goes into your book.
+The nephew weighs one dry lot while you watch and writes 108 silver beside it. You pay, take the full lot, and wait as he seals it for travel. Qiao makes him read the entry aloud before he closes the book.
 
 ## ev.ev_kinsay_b_followup.choice_2
 
-Ask which sea-port the pepper comes from
+Ask which route brought the pepper from Zayton
 
 ## ev.ev_kinsay_b_followup.choice_2_result
 
-The merchant names the port of Zayton, where the junks put in from the southern seas, and the river-road by which the pepper comes up to Kinsay. The sea-port is now on your map.
+The nephew traces the supplier’s mark to Zayton and asks Qiao to check the name. Qiao confirms the seaport and tells you where local boatmen hear news of its arrivals. The boy repeats the name so he will remember it too.
 
 ## ev.ev_kinsay_b_followup.choice_3
 
-Stay a day to watch the twelve guilds at their accounting
+Spend a day learning how Qiao checks the market books
 
 ## ev.ev_kinsay_b_followup.choice_3_result
 
-You spend a day among the guild halls, watching the weights set and the prices entered in the great books. It costs you a day, but you have seen how a city with a million doors keeps its accounts straight.
+You spend the day checking weights and delivery marks with Qiao’s nephew. When the bathhouse woman returns at dusk, he can explain which pepper is ready for sale without asking his uncle. Qiao lets him write that day’s final line himself.
 
 ## ev.ev_kinsay_c_followup.title
 
-Kinsay: The Lanterns of the West Lake
+Lan’s Evening Song
 
 ## ev.ev_kinsay_c_followup.body
 
-The pipa player who sang among the lantern boats finds you on the lake shore the next evening, her instrument wrapped and her fee refused. She will not take payment, she says, for a song heard on the water is half the lake's own. She tells you that the lake is the pleasure-ground of the city of heaven: the boats go out at dusk with wine and lanterns, and the surveyors once counted the houseboats at more than a thousand, not one of them earning its keep by trade. The city works on the land and plays on the water, and a traveller who has seen only the markets has seen half of Kinsay. She asks what you mean to carry away from the lake — a blessing, a belief, or an evening's music.
+Lan is on the shore again, mending the cloth around her pipa. Her brother has brought their aunt a stool so she need not sit low in the boat. “You remembered my back,” the aunt says. “Now remember to eat before the guests come.” He says there will be time after he has checked the lamps. Lan asks him to bring the stool into the dry patch of ground first; the lake has risen since morning.
+
+You ask what she is playing tonight. “The tune my aunt taught me,” Lan says. The aunt corrects her: she taught only the first half; Lan made up the rest while waiting for boats to return. “She leaves out that part whenever she tells the story,” the aunt adds. Lan laughs and asks you to listen for the new phrase. Nearby, a child is setting little lamps in a bowl of water to see which will float. Lan’s brother tells him to keep the real lamps away from the awning. As the family finds its places, Lan holds the pipa across her knees and looks toward you.
 
 ## ev.ev_kinsay_c_followup.choice_1
 
-Ask the singer for a blessing of the lake to carry on the road
+Share a song from home with Lan’s family
 
 ## ev.ev_kinsay_c_followup.choice_1_result
 
-The singer threads a reed into your collar and sings a line of the lake's own song over it. For the length of your stay by the water, the doors of the city seem to open a little wider for you.
+You share a few lines you remember. Lan tries them on the pipa while her aunt taps the beat on the stool. The brother says the next boatload will ask where the new tune came from.
 
 ## ev.ev_kinsay_c_followup.choice_2
 
-Ask what the lake folk believe about the lanterns
+Ask the child and aunt about the lamps on the water
 
 ## ev.ev_kinsay_c_followup.choice_2_result
 
-She tells you that the lanterns are set on the water for the drowned, so that no soul is left to find its way in the dark, and that the pleasure boats are decked for the living to enjoy what the dead remember. The belief of the lake is now written in your travel book.
+The child says his lamps are only a floating game. The aunt tells you how families set real lamps out for gatherings and for people returning after dark. Lan’s brother makes sure the last step stays lit until everyone is ashore.
 
 ## ev.ev_kinsay_c_followup.choice_3
 
-Stay until the moon rises to hear the boats' music
+Stay another day to help with the evening boats
 
 ## ev.ev_kinsay_c_followup.choice_3_result
 
-You remain until moonrise. Lantern boats glide past one after another. A boatman's work song mingles with the pipa. After her last song, a woman asks, “Do people sing like this on the water where you come from?”
+You stay through the next evening, carrying stools and guiding late passengers to the steps. Lan’s brother introduces you to the regular boat families. When the last lamp goes out, the aunt thanks you for making room for her at every stop.
 
 ## ev.ev_kinsay_mentor_followup.title
 
-Kinsay: The Temple Reader's Parting Cups
+The Temple Reader’s Cups
 
 ## ev.ev_kinsay_mentor_followup.body
 
-The temple reader who taught you the cups meets you once more by the threshold, her two wooden cups wrapped in cloth. She does not ask what you have done with the divination; the cups, she says, do not keep accounts. Instead she lays out what remains of her working life: a set of carved cups that have answered for her these twenty years, a casting of the water-road south that the cups have blessed, or a day at her side to learn the cups' third answer — the laugh — by ear. Take what will serve you, she says, for a craft is only as good as the hand that carries it.
+You find the temple reader at a low table, repairing a cloth pouch for her wooden cups. Her niece holds the needle and asks why she keeps mending a bag that could be replaced. “Your grandmother made it,” the reader says. “Also, the new cloth is rough against the carved edges.” The niece runs a finger over a cup and agrees. When she sees you, she asks whether you are the traveller who spent three days learning with her aunt.
+
+You ask how the reader decides when to let a visitor ask again. She says she first asks what the person means, then lets the cups rest while they talk. The niece admits that yesterday she had asked whether she should travel south without telling anyone why. Her aunt made her explain that she wanted to visit a friend in Suju. “Once she said the name, we could talk about the road,” the reader says. She closes the pouch and sets it between you. Her niece is still holding the thread, waiting to hear what you make of the story.
 
 ## ev.ev_kinsay_mentor_followup.choice_1
 
-Take the reader's carved cups as a parting gift
+Accept the reader’s carved cups as a parting gift
 
 ## ev.ev_kinsay_mentor_followup.choice_1_result
 
-The reader wraps the cups in cloth and gives them to you without ceremony. What she taught you by the threshold is now written where you can consult it on the road.
+The reader gives you the carved pair in its repaired pouch. Her niece ties the last stitch and asks you to keep the cloth dry on the road. You remember the questions they discussed at the table.
 
 ## ev.ev_kinsay_mentor_followup.choice_2
 
-Ask which water-road the cups would bless
+Ask the niece how she plans to reach Suju
 
 ## ev.ev_kinsay_mentor_followup.choice_2_result
 
-The reader casts the cups once more, and they grant leave for the water-road south, past the lake, toward Suju. The road is now drawn on your map, and the cups' answer goes with it.
+The niece unfolds a note from her friend in Suju and shows you the names of the places she will ask about on the way. Her aunt corrects one crossing. You note Suju and where to gather reliable travel news.
 
 ## ev.ev_kinsay_mentor_followup.choice_3
 
-Linger a day to learn the laugh of the cups
+Spend another day helping the niece practise clear questions
 
 ## ev.ev_kinsay_mentor_followup.choice_3_result
 
-You spend a day at the temple threshold learning how to hear the laugh of the cups — the cast that means the craft has no counsel yet. It costs you time, but the reader's ear is now partly your own, and the temples of the land have heard of it.
+You stay another day at the table. The niece asks visitors what they need before reaching for the cups, and you help her write down the questions. By evening she can explain her own journey to Suju without hiding her friend’s name.
+
+## ev.kinsay.umbrellastall.title
+
+The Umbrella That Would Not Close
+
+## ev.kinsay.umbrellastall.body
+
+In a lane behind the market, the umbrella maker Fang is trying to close a paper umbrella. One rib catches on the frame. His daughter says the umbrella belongs to Uncle Chen, who left it here before going to look after his sick mother. “He needs it by evening,” she says. Fang asks her to bring the knife, but she asks him to find the bent rib first; if they cut the paper now, the painted flower will tear. He pauses, then opens the umbrella over a bowl of water so they can see where it bends.
+
+You ask whether Chen can come back for it. The daughter says he has been staying across town and may not be able to leave his mother. “I can carry it,” she says, “but Father says the glue must dry before we close it again.” Fang takes a little glue on a reed and shows her where to spread it. Rain begins tapping the roof tiles, and a noodle seller across the lane calls to ask whether anyone wants a warm bowl. The daughter looks at the umbrella, then at the rain, trying to work out when she can leave.
+
+## ev.kinsay.umbrellastall.choice.deliver
+
+Stay a day and help deliver Chen’s umbrella after it dries
+
+## ev.kinsay.umbrellastall.result.deliver
+
+You wait until the next day for the glue to dry, then carry the umbrella across town with Fang’s daughter. Chen opens it by his mother’s doorway and checks the repaired rib. His mother asks the daughter to tell Fang that the painted flower is still intact. Back at the stall, she repeats the message to her father before he can ask.
+
+## ev.kinsay.umbrellastall.choice.learn
+
+Watch Fang repair the rib and ask how he keeps the paper intact
+
+## ev.kinsay.umbrellastall.result.learn
+
+Fang lets you hold the umbrella while he resets the rib. His daughter shows you how she tests the frame in the reflection before touching the paper. You leave knowing why the maker waits for glue to dry, and she has a clearer way to explain the repair to Chen.
+
+## ev.kinsay.umbrellastall.choice.noodles
+
+Pay 1 silver for noodles and eat with the umbrella makers
+
+## ev.kinsay.umbrellastall.result.noodles
+
+You pay one silver for a bowl and eat it while the rain passes. Fang’s daughter finally sits down too. She asks the noodle seller to keep an eye on the drying umbrella if she has to step outside. Warmed and fed, you leave her and Fang discussing the safest hour to make the delivery.

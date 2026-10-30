@@ -2,7 +2,7 @@
 unit: coilum
 lang: zh
 source: en
-source_rev: 92428cdbbd5b
+source_rev: d49d5ad1087e
 status: translated
 translator: 人工校译
 notes: >
@@ -19,7 +19,7 @@ stamps:
   ev.ev_coilum_entry.choice_1_result: d2a49ed665c9
   ev.ev_coilum_entry.choice_2_result: 417270be728d
   ev.coilum.site_gap.title: b6265dac4b49
-  ev.coilum.site_gap.body: 59d535fbb4d4
+  ev.coilum.site_gap.body: 58ef89fa40df
   ev.coilum.site_gap.choice.route: 136edd5dda6a
   ev.ev_coilum_site_gap.choice_1_result: 6327fa881979
   ev.coilum.site_gap.choice.interact: 42522a860262
@@ -66,7 +66,7 @@ stamps:
 
 ## ev.coilum.site_gap.body
 
-称胡椒的妇人面前放着两袋打开的货。一袋又干又冲鼻，另一袋的缝线旁有块湿痕。儿子见买主在等，催她快些过秤。她说：“两袋记在同一张账上，人家买到湿的还会回来找。”她让儿子从地上提起两只袋子，自己感觉差别。你问秤上怎么分出胡椒的重量和潮气。她先称空袋，又捏起几粒胡椒在指间搓开。少年发现湿的结了小块。“这袋垫木板摊开，干了再称。”妇人说。门外有搬货人问去马巴尔的路。她指向沿海走的陆路，特意让他别拐到码头；儿子跟着念了一遍，也把岔口记住了。临走前，儿子还递给你一粒干胡椒，让你和结块的那袋比一比。
+称胡椒的妇人面前放着两袋打开的货。一袋又干又冲鼻，另一袋的缝线旁有块湿痕。儿子见买主在等，催她快些过秤。她说：“两袋记在同一张账上，人家买到湿的还会回来找。”她让儿子从地上提起两只袋子，自己感觉差别。你问秤上怎么分出胡椒的重量和潮气。她先称空袋，又捏起几粒胡椒在指间搓开。少年发现湿的结了小块。“这袋垫木板摊开，干了再称。”妇人说。门外有搬货人问去马巴尔的路。她指向沿海走的陆路，特意让他别拐到码头；儿子跟着念了一遍，也把岔口记住了。临走前，儿子还递给你一粒干胡椒，让你和结块的那袋比一比。儿子问湿的那袋晒干后还能不能照原价卖。母亲叫他等重新称过再说，买主来了也能讲清当时的重量。
 
 ## ev.coilum.site_gap.choice.route
 

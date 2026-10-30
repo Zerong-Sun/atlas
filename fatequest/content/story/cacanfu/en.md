@@ -43,11 +43,11 @@ The Bean Sack on the Scale
 
 ## ev.ev_gap_cacanfu.body
 
-At the canal quay, a weigher is trying to settle the weight of a bean sack. The seller has brought an old heavy sack; the buyer has only counted the beans. ‘I used this cloth because the thin bags split,’ the seller says. The weigher asks them to empty one sack and weigh the cloth separately. The seller’s son says that will spill the beans onto the boards. You offer a clean tray, and the buyer helps hold its edge. They tip the beans out carefully. The empty cloth is heavier than anyone expected. The weigher writes its weight on a separate line and asks the son to read the figure back. The boy has been watching boats on the canal and asks where the one bound toward Linju turns. The buyer comes by road from Linju. ‘The cart track turns past the last farm,’ he says, drawing the bend in the dust while the weigher puts the beans back. The son repeats both the weight and the turn, then asks his father to keep the two figures on the next sales note.
+At the canal quay, a weigher is trying to settle the weight of a bean sack. The seller has brought an old heavy sack; the buyer has only counted the beans. ‘I used this cloth because the thin bags split,’ the seller says. The weigher asks them to empty one sack and weigh the cloth separately. The seller’s son says that will spill the beans onto the boards. You offer a clean tray, and the buyer helps hold its edge. They tip the beans out carefully. The empty cloth is heavier than anyone expected. The weigher writes its weight on a separate line and asks the son to read the figure back. The boy has been watching the carts come off the road and asks where the road toward Linju turns. The buyer comes by road from Linju. ‘The cart track turns past the last farm,’ he says, drawing the bend in the dust while the weigher puts the beans back. The son repeats both the weight and the turn, then asks his father to keep the two figures on the next sales note.
 
 ## ev.ev_gap_cacanfu.choice.route
 
-Ask the buyer about the Linju route
+Ask the buyer about the land road to Linju
 
 ## ev.ev_gap_cacanfu.choice.route_result
 

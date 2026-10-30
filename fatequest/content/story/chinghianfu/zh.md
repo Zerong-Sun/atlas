@@ -2,7 +2,7 @@
 unit: chinghianfu
 lang: zh
 source: en
-source_rev: 0ee50652f36e
+source_rev: d73d73591be4
 status: translated
 translator: 人工校译
 notes: >
@@ -12,11 +12,11 @@ notes: >
 
 stamps:
   city.chinghianfu.name: 01cb0548ff02
-  ev.chinghianfu.entry.body: c9efef6a2e90
+  ev.chinghianfu.entry.body: d1ccd57125f4
   ev.chinghianfu.entry.choice.look: 7ecf2e03d320
   ev.chinghianfu.entry.choice.pass: 380801a894fd
   ev.chinghianfu.entry.title: 38065b0cca2d
-  ev.ev_chinghianfu_entry.choice_1_result: a78df1e04acb
+  ev.ev_chinghianfu_entry.choice_1_result: e929f88c7751
   ev.ev_chinghianfu_entry.choice_2_result: e19574d72e4d
   ev.ev_gap_chinghianfu.title: 20f37cf35348
   ev.ev_gap_chinghianfu.body: 09fb177797b1
@@ -46,7 +46,7 @@ stamps:
 
 ## ev.chinghianfu.entry.body
 
-一位基督教社群的读经人拿着散开的一页书来到装订匠铺。那页常被孩子翻，纸角磨软了，终于从书脊脱出。装订匠的女儿把它放在书旁比对：“应当接在那段旅人故事后面。”读经人看了下一页的开头，点头说是。“聚会前能缝回去吗？”你问。“先压平晾干。”装订匠说。读经人摸了摸潮湿的纸角：“那今天换一段来读。”先前有人抹了太多浆糊。读经人愿意把书放一夜，让女儿去告诉孩子们今天换一段来读。门边有船夫来问往常州去的码头在哪儿，装订匠指了街口，又请女儿带他避开拥挤的集市。她说你现在跟着走，能认清镇江府的街；若明天回来，还可以看这页怎样装回书里。读经人抱起其余书，临走叮嘱女儿别用湿手碰那张纸。
+一位基督教社群的读经人拿着散开的一页书来到装订匠铺。那页常被孩子翻，纸角磨软了，终于从书脊脱出。装订匠的女儿把它放在书旁比对：“应当接在那段旅人故事后面。”读经人看了下一页的开头，点头说是。“聚会前能缝回去吗？”你问。“先压平晾干。”装订匠说。读经人摸了摸潮湿的纸角：“那今天换一段来读。”先前有人抹了太多浆糊。读经人愿意把书放一夜，让女儿去告诉孩子们今天换一段来读。门边有车夫来问往常州去的陆路从哪里出城，装订匠指了街口，又请女儿带他避开拥挤的集市。她说你现在跟着走，能认清镇江府的街；若明天回来，还可以看这页怎样装回书里。读经人抱起其余书，临走叮嘱女儿别用湿手碰那张纸。
 
 ## ev.chinghianfu.entry.title
 
@@ -54,7 +54,7 @@ stamps:
 
 ## ev.ev_chinghianfu_entry.choice_1_result
 
-装订匠的女儿先指给你看去码头的街，再领船夫绕开集市。读经人抱着其余书回聚会处。你沿同一处转弯穿过城，也记住了水边小路的位置。
+装订匠的女儿先指给你看去码头的街，再领车夫绕开集市。读经人抱着其余书回聚会处。你沿同一处转弯穿过城，也记住了水边小路的位置。
 
 ## ev.ev_chinghianfu_entry.choice_2_result
 

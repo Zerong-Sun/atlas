@@ -2,7 +2,7 @@
 unit: medina
 lang: zh
 source: en
-source_rev: eb1aac961ee8
+source_rev: e9a39d338616
 status: translated
 translator: 人工校译
 notes: >
@@ -20,7 +20,7 @@ stamps:
   ev.ev_medina_entry.choice_1_result: 8a1573985925
   ev.ev_medina_entry.choice_2_result: 228d83c35d27
   ev.medina.site_gap.title: 9c487d44606a
-  ev.medina.site_gap.body: 4ce8f7c775a5
+  ev.medina.site_gap.body: de6f5c21ea92
   ev.medina.site_gap.choice.route: c48c26f7c6f4
   ev.ev_medina_site_gap.choice_1_result: 7ea00c8af0a1
   ev.medina.site_gap.choice.interact: ddb328dbb347
@@ -67,7 +67,7 @@ stamps:
 
 ## ev.medina.site_gap.body
 
-旅舍门前，店主把公用水缸放在阴凉里。女儿给每位客人舀过水，就把铜勺倒扣在净布上。一个牵牲口的人问，能不能给牲口也喝缸里的水。“墙后面有水槽，先牵它过去，再回来给您倒。”姑娘说。他谢过，牵着牲口绕到墙后。你问她为何不把勺子放在缸沿。她指给你看风吹在墙上的灰，说净布洗起来更方便。一个要去佩特拉的旅人来问北路。店主提着满桶出来，从门口指路。女儿叫他先等：有片叶子落进了缸里。她捞出叶子，父亲便让她自己给下一位客人倒水。她还请父亲把净布留在缸旁，晚来的人也能把勺子放好。
+旅舍门前，店主把公用水缸放在阴凉里。女儿给每位客人舀过水，就把铜勺倒扣在净布上。一个牵牲口的人问，能不能给牲口也喝缸里的水。“墙后面有水槽，先牵它过去，再回来给您倒。”姑娘说。他谢过，牵着牲口绕到墙后。你问她为何不把勺子放在缸沿。她指给你看风吹在墙上的灰，说净布洗起来更方便。一个要去佩特拉的旅人来问北路。店主提着满桶出来，从门口指路。女儿叫他先等：有片叶子落进了缸里。“换一缸？”父亲问。“不用，这缸水还好。”她捞出叶子，看过水面，父亲才让她给下一位客人倒水。她还请父亲把净布留在缸旁，晚来的人也能把勺子放好。
 
 ## ev.medina.site_gap.choice.route
 

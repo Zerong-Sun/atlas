@@ -2,7 +2,7 @@
 unit: fuju
 lang: zh
 source: en
-source_rev: d081199a2125
+source_rev: d65e0466e470
 status: translated
 translator: 人工校译
 notes: >
@@ -12,18 +12,24 @@ notes: >
 
 stamps:
   city.fuju.name: d277e9a9669e
-  ev.fuju.entry.choice.look: a1e5276c886b
-  ev.fuju.entry.choice.pass: 96d145abaf05
-  ev.fuju.entry.body: 83c36fb6b97c
-  ev.fuju.entry.title: b06510aed441
-  ev.ev_fuju_entry.choice_1_result: f6efd1c9c7fc
-  ev.ev_fuju_entry.choice_2_result: 6d6f41c49bad
-  ev.ev_gap_fuju.title: 45e8dae650c6
-  ev.ev_gap_fuju.body: 9828ec968590
-  ev.ev_gap_fuju.choice.route: af9e7e30cbac
-  ev.ev_gap_fuju.choice.route_result: da6c6edfc84a
-  ev.ev_gap_fuju.choice.scene: 31ed218945b9
-  ev.ev_gap_fuju.choice.scene_result: d2c316f390c2
+  ev.fuju.entry.body: 2792a3961124
+  ev.fuju.entry.choice.look: 92e205148896
+  ev.fuju.entry.choice.pass: 976523a356ec
+  ev.fuju.entry.title: dc966b5ae5f9
+  ev.ev_fuju_entry.choice_1_result: b4c7dfd6e2b2
+  ev.ev_fuju_entry.choice_2_result: a87810ebda41
+  ev.ev_gap_fuju.title: 45211b6aa7de
+  ev.ev_gap_fuju.body: 1924f771a7cd
+  ev.ev_gap_fuju.choice.route: 48482b624b06
+  ev.ev_gap_fuju.choice.route_result: bc5a7a0c3a69
+  ev.ev_gap_fuju.choice.scene: 35074d03f22f
+  ev.ev_gap_fuju.choice.scene_result: f0a0ce998f54
+  ev.fuju.sugar-jar.title: ca14b90d2058
+  ev.fuju.sugar-jar.body: 291dfac8a891
+  ev.fuju.sugar-jar.choice.taste: d1665d67370d
+  ev.fuju.sugar-jar.result.taste: 3dbe7de622aa
+  ev.fuju.sugar-jar.choice.stir: 239e50263e3f
+  ev.fuju.sugar-jar.result.stir: acff62077188
 ---
 
 ## city.fuju.name
@@ -32,46 +38,72 @@ stamps:
 
 ## ev.fuju.entry.choice.look
 
-歇一歇，找人打听这座城
+留一天认识船匠院和码头
 
 ## ev.fuju.entry.choice.pass
 
-不停留，直接穿城而过
+沿小巷穿过福州
 
 ## ev.fuju.entry.body
 
-福州是泉州王国的重要门户，也是蛮子地区九大行政区之一的中心。这里商贸兴旺，手工业发达，河道从城中穿过，宽约一英里。城里常年驻着大汗的军队，维持当地秩序。造船业也很发达，许多船就在城里建好，再下水驶入河道。船工把你带到闽江边，指给你看：大海来的货船可以沿江进到福州附近，较小的本地船则继续往上游走。印度货能进城，靠的正是海船换河船这一程。糖坊师傅正把一锅蔗汁煮到浓稠，顺口说：“老行商常讲，先人只会把蔗汁熬浓，冷下来成黑膏；后来有巴比伦来的师傅教他们用树灰精炼，才做得出白糖。是真是假我不敢替他们担保，压汁、熬煮、滤净，一步都省不了。”
+福州河边的船匠把一块木板翻过来，免得刚沾水的那一面被日头直晒。侄女把新木料堆在昨天泡湿的板旁：“放一起也能晾干吗？”“旧板下面得透风。”叔父拿两块短木垫到板底，你替他抬起另一头。路过的糖贩喊，过几天帮忙下船的工人要喝的糖水，他都装好罐了。侄女问罐子能不能放在温热木板上。“拿进棚里，盖子也洗净。”叔父说。你问从船匠院怎样进城，他指向糖摊旁的小巷；侄女明天要去大集市，愿意顺道带你走。糖贩打开一罐请工人尝，侄女又问这一批怎么比上一回颜色深。糖贩说等午后炉火空下来，给她讲这锅怎样熬的。工人喝完，把杯子交回侄女手里。
 
 ## ev.fuju.entry.title
 
-福州与大河船厂
+船匠院里晾着的木板
 
 ## ev.ev_fuju_entry.choice_1_result
 
-茶摊老板见你要走，叫你带上水：“出城沿河走，下一处歇脚的棚子离这儿还有一段。”
+船匠把湿板垫起来，侄女把糖罐搬进棚下。他指给你看糖摊旁的小巷，你沿它穿城，也记住了回来找河边船匠院的路。
+
 ## ev.ev_fuju_entry.choice_2_result
 
-你在茶摊坐下，老板问：“想看城里什么？南边是运货的码头，东边才是住人的街。”
+你又留了一天。侄女带你看木板怎样晾干，又领你穿过集市到河边。糖贩讲清这一锅糖水为什么颜色较深，傍晚时你认得两家人，也熟悉了水边街巷。
+
 ## ev.ev_gap_fuju.title
 
-港口的潮汐绳
+码头边的测深绳
 
 ## ev.ev_gap_fuju.body
 
-福州港边，领航人把一根打结的绳放进水里：“每个结大约一尺，量船底下的水。潮退时浅滩会露，船得等涨潮。你愿意帮我数结，还是想看看水手怎样收帆？”领航人说：“这绳要垂直放，船往前走时量不准。”
+福州码头上，引水人从小船里放下打结的绳，量靠岸处的水有多深。学徒跟着数，却在绳子打转时漏了一结。“提起来拉直，再量一次。”引水人说。你替他们扶住松开的绳头，学徒把结逐个理平。岸上等着卸木料的车夫问，下午船能不能靠这处码头。引水人说还得再量一次才敢答。车夫常走往刺桐的陆路，问你要不要听第一处怎么转弯。你问河就在眼前，为什么他还赶车。车夫说先要把一批木板送到内陆亲戚家，之后才去港口。学徒报出改正的水深。车夫问：“现在能靠了吗？”引水人又看一眼绳：“等这一阵水稳些，木料船就能进。”他告诉车夫几时叫卸货的人来。车夫捡起一块废木，在上面画出陆路第一道弯，学徒这才把测深绳收上船。
 
 ## ev.ev_gap_fuju.choice.route
 
-问路，去刺桐（泉州）
+问车夫去刺桐的陆路
 
 ## ev.ev_gap_fuju.choice.route_result
 
-“从这里往西南走，循海岸就到刺桐（泉州）。”
+车夫从码头背后那处往内陆转的地方起，在你的木板上画出去刺桐的陆路。引水人确认下午可以卸木料，学徒也把测深绳收好，没再缠住那些结。
 
 ## ev.ev_gap_fuju.choice.scene
 
-跟他量水深
+帮学徒数清测深绳的结
 
 ## ev.ev_gap_fuju.choice.scene_result
 
-你跟着数到六码，领航人说：“这艘船能过。记住看水面不够，还要问潮什么时候转。”
+你把测深绳拉直，学徒一个结也没漏，重新报出水深。引水人把结果告诉等候的车夫，让学徒自己记下最后的数。收绳时他也谢你帮忙。
+
+## ev.fuju.sugar-jar.title
+
+糖贩那只颜色深的罐
+
+## ev.fuju.sugar-jar.body
+
+糖贩在灶旁摆了三只罐，新熬的一罐颜色比前两只深，外甥怕买家以为熬焦了。她递给他一把干净小匙：“先尝尝罐边，再说焦没焦。”他尝过，觉得甜，只是比平时稠。你问这一锅怎么变了颜色，她说火稍弱时多熬了一阵，还指给你看锅底没灭的红炭。船匠院的买家拿着工人名单来，要一罐兑进热水不结块的糖浆。外甥从每罐倒出一点，慢慢看它们流下来的样子。糖贩问他挑哪罐。“浅的给工人。”外甥说。她问缘故，外甥说：“兑热水流得快些。深的留给拌米饭的人。”她让买家也尝了他挑的那罐。她请你也比一比，明天还要开灶熬新的一锅，等收拾完灶台，一家人会坐下吃饭。外甥把每把小匙分开洗净，才让买家试味。
+
+## ev.fuju.sugar-jar.choice.taste
+
+和外甥一起比三罐糖浆
+
+## ev.fuju.sugar-jar.result.taste
+
+你各用干净小匙尝过一点，帮外甥向买家说出差别。买家拿走较稀的一罐给工人，另一位客人挑了浓的配饭。下次买糖，你知道该先看什么、尝什么。
+
+## ev.fuju.sugar-jar.choice.stir
+
+明天再来帮他们熬新的一锅
+
+## ev.fuju.sugar-jar.result.stir
+
+你第二天回来，帮外甥守着灶火，让火势稳住。装好新糖后，姨母请所有帮过工的人吃菜饭。你在院里歇过午后，才有力气接着赶路。

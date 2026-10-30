@@ -1850,11 +1850,6 @@
               "op": "days",
               "value": 1,
               "reason": "waited-for-the-merchants-ledger"
-            },
-            {
-              "op": "sticker",
-              "value": "st-tauris-road-sense",
-              "reason": "waited-for-the-merchants-ledger"
             }
           ]
         }
