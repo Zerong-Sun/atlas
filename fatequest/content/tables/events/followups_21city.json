@@ -141,7 +141,7 @@
             {
               "op": "reveal_city",
               "value": "ormus",
-              "reason": "learned-ormus-crossing-to-calatu"
+              "reason": "learned-route-to-ormus"
             },
             {
               "op": "reveal_route",

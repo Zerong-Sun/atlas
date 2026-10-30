@@ -41,6 +41,8 @@ const REVEAL_ALIASES := {
 	"the-green-pit": ["yarcan"],   # poetic descriptor for Yarkand
 	"the-sea": ["basora"],         # descriptor for the river road to Basora
 	"the-river": ["basora"],       # descriptor for the river road to Basora
+	# Cairo is the displayed name of babylonia-cairus.
+	"cairo": ["babylonia-cairus", "rt-alexandria-babylonia-cairus", "rt-dongola-babylonia-cairus"],
 }
 
 
