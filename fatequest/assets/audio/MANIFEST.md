@@ -2,18 +2,44 @@
 
 Generated / composed per `docs/AUDIO_PLAN.md` §7.
 
-## Stems (5 cultures × 4 layers × 60s mono OGG ~96 kbps)
+## Current music routing
+
+East Asia (`east_asia`), West Asia (`islamic`) and Steppe (`steppe`) all use the
+same neutral `intro/title_theme.wav` during gameplay. It also remains the
+opening theme. The three sets of separate folk loops and their older stems
+were removed after listening review. Mixed locations that contain two of
+these cultures route to one shared player, so the same recording is never
+layered twice.
+
+Indian Ocean and Latin retain their own `folk/{culture}/{town,road,quiet}{,_b}.ogg`
+songbooks: 12 stereo 44.1 kHz Vorbis loops. Each has A/B melodies and town,
+road and quiet arrangements. `AudioDirector` rotates their A/B melodies after
+two loops and crossfades between scenes.
+
+| Culture | Main instruments | Writing / arrangement |
+|---|---|---|
+| `east_asia`, `islamic`, `steppe` | shared recorder, psaltery and light frame drum | one neutral 40-second loop, identical in these three regions |
+| `indian_ocean` | lossless sitar and tabla strikes | two original Bhairav-inspired melodies; the MP3 tanpura is absent |
+| `latin` | lossless VCSL recorder, plucked psaltery and quiet frame drum | two original D-Dorian-inspired melodies with a light dance pulse |
+
+The active regional generator is `tools/audio/compose_modal_regional.py`; it
+renders only Indian Ocean and Latin by default and rejects the three removed
+cultures. Scores for the withdrawn cues remain in the script and
+`docs/REGIONAL_MUSIC_SCORE.md` as design history. Source URLs and licenses are
+in `assets/audio/THIRD_PARTY_CREDITS.md` and `tools/audio/samples/`.
+
+For listening to the three shared regions, open `intro/title_theme.wav`.
+
+## Unused supporting stems (2 cultures × 4 layers × 60s mono OGG)
 
 | Culture | drone | pulse | melody | color |
 |---|---|---|---|---|
-| `islamic` | `stems/islamic/drone.ogg` | `stems/islamic/pulse.ogg` | `stems/islamic/melody.ogg` | `stems/islamic/color.ogg` |
-| `east_asia` | `stems/east_asia/drone.ogg` | `stems/east_asia/pulse.ogg` | `stems/east_asia/melody.ogg` | `stems/east_asia/color.ogg` |
-| `steppe` | `stems/steppe/drone.ogg` | `stems/steppe/pulse.ogg` | `stems/steppe/melody.ogg` | `stems/steppe/color.ogg` |
 | `indian_ocean` | `stems/indian_ocean/drone.ogg` | `stems/indian_ocean/pulse.ogg` | `stems/indian_ocean/melody.ogg` | `stems/indian_ocean/color.ogg` |
 | `latin` | `stems/latin/drone.ogg` | `stems/latin/pulse.ogg` | `stems/latin/melody.ogg` | `stems/latin/color.ogg` |
 
 - **drone / pulse**: procedural synth (`tools/audio/generate_all.py`)
-- **melody / color**: richer hybrid synth (`tools/audio/generate_melody_color.py`)
+- **melody / color**: older hybrid synth (`tools/audio/generate_melody_color.py`).
+  These two sets remain as build history; the runtime does not play them.
 
 ## Ambient (12 scene beds + 5 sacred_blur)
 
@@ -37,9 +63,10 @@ Generated / composed per `docs/AUDIO_PLAN.md` §7.
 
 | File | Source and runtime role |
 |---|---|
-| `intro/title_theme.wav` | 18-second, mono 44.1 kHz PCM procedural secular motif from `tools/audio/generate_intro_theme.py`; plays once on the opening desk before a culture or city is known, then fades when a journey starts |
+| `intro/title_theme.wav` | 40-second stereo 44.1 kHz PCM original melody rendered from recorded VCSL recorder, plucked psaltery and light frame drum by `tools/audio/generate_intro_theme.py`; loops on the opening desk and serves as the shared gameplay theme in East Asia, West Asia and Steppe. The repeating high D5 psaltery accent at beat 2.75 was removed; the remaining low answers fall on beats 1 and 3. |
 
-The opening theme is intentionally separate from the culture × scene stems. It is a neutral game entrance, not a historical recording, cultural identification or liturgical gesture.
+The shared theme has no liturgical or regional identity. Indian Ocean and
+Latin keep separate melody cues. No continuous drone plays under either path.
 
 Provenance for CC0 downloads: `tools/audio/_cc0_cache/SOURCES.json` (gitignored cache; regenerate via `fetch_cc0.py`).
 
@@ -50,7 +77,7 @@ Provenance for CC0 downloads: `tools/audio/_cc0_cache/SOURCES.json` (gitignored 
 - Procedural UI SFX (bell, coin, dice, …) stay in `game/audio/` at runtime (§7.3).
 - Wiring audit 2026-10-20: `horse_hooves`, `rain`, `river` are mapped in `SceneDensity.ambients()`; `seabirds` remains unmapped.
 
-## Audit status 2026-10-20
+## Historical audit status 2026-10-20 (superseded for regional music)
 
 See [inventory CSV](../../docs/library_audit/audio_inventory.csv) and [audio audit](../../docs/library_audit/AUDIO_AUDIT_2026-10-20.md). All 37 OGG decode as 44.1 kHz mono; total size is 9,740,026 bytes. File availability and generator implementation do not mean listening, cultural suitability or seamless-loop acceptance: all listening reviews are pending, and 16 files have endpoint jumps above 0.1 full-scale requiring review.
 
