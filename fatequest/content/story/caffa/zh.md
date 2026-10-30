@@ -2,7 +2,7 @@
 unit: caffa
 lang: zh
 source: en
-source_rev: c2093ba48158
+source_rev: 0d4331353cae
 status: draft
 translator: 人工校译
 notes: >

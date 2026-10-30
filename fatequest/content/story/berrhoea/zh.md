@@ -2,7 +2,7 @@
 unit: berrhoea
 lang: zh
 source: en
-source_rev: de6cc5d006c0
+source_rev: 124caefdefab
 status: draft
 translator: 人工校译
 notes: >

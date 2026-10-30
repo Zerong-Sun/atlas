@@ -2,7 +2,7 @@
 unit: tana-azov
 lang: zh
 source: en
-source_rev: 60cb75cfe429
+source_rev: 73c7c94d1d91
 status: draft
 translator: 人工校译
 notes: >
