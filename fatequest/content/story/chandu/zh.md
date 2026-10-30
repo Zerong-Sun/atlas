@@ -2,7 +2,7 @@
 unit: chandu
 lang: zh
 source: en
-source_rev: b32c4a2cad39
+source_rev: 18fa329a7735
 status: translated
 translator: 人工校译
 notes: >
@@ -51,31 +51,31 @@ stamps:
   ev.ev_chandu_c.choice_2_result: 4806921ed908
   ev.ev_chandu_c.choice_3_result: a9b9d72b2651
   ev.ev_chandu_consequence_a.title: 10a986e5794e
-  ev.ev_chandu_consequence_a.body: 1cae1d2ab111
+  ev.ev_chandu_consequence_a.body: 47e5d8796375
   ev.ev_chandu_consequence_a.choice_1: f0e0489ccd57
   ev.ev_chandu_consequence_a.choice_1_result: eed7a5fa643b
   ev.ev_chandu_consequence_a.choice_2: 1f5bad848d06
   ev.ev_chandu_consequence_a.choice_2_result: a5dd0e6400da
   ev.ev_chandu_consequence_a_resolution.title: 98406becdd82
-  ev.ev_chandu_consequence_a_resolution.body: 83a6e85ce6d9
+  ev.ev_chandu_consequence_a_resolution.body: 169a6100c452
   ev.ev_chandu_consequence_a_resolution.choice_1: 9bf45265e558
   ev.ev_chandu_consequence_a_resolution.choice_1_result: e7d6b5c3acaf
   ev.ev_chandu_consequence_a_resolution.choice_2: 249bb2b8d429
   ev.ev_chandu_consequence_a_resolution.choice_2_result: a05e7ffb4921
   ev.ev_chandu_consequence_b.title: 67f868f10be6
-  ev.ev_chandu_consequence_b.body: f0d048208478
+  ev.ev_chandu_consequence_b.body: 18d3b1f26569
   ev.ev_chandu_consequence_b.choice_1: 7fef6223acd7
   ev.ev_chandu_consequence_b.choice_1_result: e583fe4d9079
   ev.ev_chandu_consequence_b.choice_2: 23b32d25f6f8
   ev.ev_chandu_consequence_b.choice_2_result: 6df1ef848330
   ev.ev_chandu_consequence_b_resolution.title: b7160612395f
-  ev.ev_chandu_consequence_b_resolution.body: 085fcce06b81
+  ev.ev_chandu_consequence_b_resolution.body: 2b7ebb8014fe
   ev.ev_chandu_consequence_b_resolution.choice_1: 77ec608c4b26
   ev.ev_chandu_consequence_b_resolution.choice_1_result: e7021e6dc306
   ev.ev_chandu_consequence_b_resolution.choice_2: e331acaef1cf
   ev.ev_chandu_consequence_b_resolution.choice_2_result: a68e06e1c3b4
   ev.chandu.mentor_closure.title: 195cf37f4a16
-  ev.chandu.mentor_closure.body: 1c5b6907925f
+  ev.chandu.mentor_closure.body: 03d0699ff32f
   ev.chandu.mentor_closure.choice_1: 06425a9a1488
   ev.chandu.mentor_closure.choice_1_result: 8cd86a8ea1e2
   ev.chandu.mentor_closure.choice_2: 829cef9ad067
@@ -83,7 +83,7 @@ stamps:
   ev.chandu.mentor_closure.choice_3: 94f6d8b32092
   ev.chandu.mentor_closure.choice_3_result: 9307c91e3c95
   ev.ev_chandu_a_followup.title: 75dcf1637bc6
-  ev.ev_chandu_a_followup.body: ddca610bb79d
+  ev.ev_chandu_a_followup.body: fb439f1b3d0f
   ev.ev_chandu_a_followup.choice_1: ffc9b000d047
   ev.ev_chandu_a_followup.choice_1_result: 0526ab7adea5
   ev.ev_chandu_a_followup.choice_2: 611d098b879d
@@ -91,7 +91,7 @@ stamps:
   ev.ev_chandu_a_followup.choice_3: b569ebded8d9
   ev.ev_chandu_a_followup.choice_3_result: 6343108f6d24
   ev.ev_chandu_b_followup.title: 56b2c4635618
-  ev.ev_chandu_b_followup.body: 26bc4da5b2b9
+  ev.ev_chandu_b_followup.body: 328c00bf7f3f
   ev.ev_chandu_b_followup.choice_1: d22ca047d0e0
   ev.ev_chandu_b_followup.choice_1_result: 3e7135933d07
   ev.ev_chandu_b_followup.choice_2: cec8b25bc9aa
@@ -107,7 +107,7 @@ stamps:
   ev.ev_chandu_c_followup.choice_3: 803cb845ea2f
   ev.ev_chandu_c_followup.choice_3_result: 729be0d54db6
   ev.ev_chandu_mentor_followup.title: c7aeba18afab
-  ev.ev_chandu_mentor_followup.body: 5813cb01642a
+  ev.ev_chandu_mentor_followup.body: 31af7d211d6d
   ev.ev_chandu_mentor_followup.choice_1: 66e0c6009b08
   ev.ev_chandu_mentor_followup.choice_1_result: 3307d52a2649
   ev.ev_chandu_mentor_followup.choice_2: 5bf2e461a3fc
@@ -274,6 +274,8 @@ stamps:
 
 马夫问你打算走多远。你说了去处，他提起草场另一边一位熟悉长途坐骑的养马人。弟弟问：“空口叫人过去，他会记得是谁介绍的？”马夫从干净的货单边撕下一角，写上名字，又叫弟弟作个见证。“这下他知道你怎么找来的了。”纸递到你面前，马已经低头吃草。
 
+弟弟还捏着那根鞍带，来回摸了几次，看它会不会再滑。
+
 ## ev.ev_chandu_consequence_a.choice_1
 
 收下写了名字的介绍纸
@@ -299,6 +301,8 @@ stamps:
 养马人读完马夫的纸，听你说起偏在一边的陶罐，笑了：“那弟弟要是没人看着，能把一间厨房全装马左边。”她身旁一匹马鞍下磨出红印，正在等新垫子，暂时不让人骑。
 
 你问长途该挑什么马。她牵来一匹性子稳的，讲一路喂多少草、何时让它饮水。年轻帮手进来说垫子缝好了。养马人叫他拿来，顺手让你看怎样试尺寸。帮手一使劲，她便松开带子，让他重来。院外有位骑手也等着熟人介绍；养马人问你愿不愿替她把纸带过去，或者留一天帮忙把几匹马的鞍垫试完。
+
+帮手问你会挑哪副鞍，养马人等你把两副都看过才接话。
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1
 
@@ -326,6 +330,8 @@ stamps:
 
 你问旅人站哪儿看鸟，才不会妨碍马群。养鹰人拿树枝在土上画草场边缘，点出溪水和鹰回来的小坡。侄女又补了忽兰给小马饮水的地方。她说有位外来的骑手问了两户人家，还是把路听混；这张图正好给他看。养鹰人把树枝递给你，问你愿不愿带图去找那位骑手。
 
+侄女把画图的纸角按平，见溪水和小坡都收在一张纸上，心里很满意。
+
 ## ev.ev_chandu_consequence_b.choice_1
 
 拿草场图去找那位骑手
@@ -352,6 +358,8 @@ stamps:
 
 他的马也渴了。你陪他走外侧小路到溪边，没有惊动马群。忽兰的儿子又在数小马，叫骑手先等最小那匹过水，再挥手放他走。骑手说晚些还有人来取第二个鸟架，怕那人也问错路。他请你替他转告方位；若你有空，也想留一天和你画张更清楚的图。
 
+孩子又转身叫着小马的名字，逐匹点过，这次数目对上了。
+
 ## ev.ev_chandu_consequence_b_resolution.choice_1
 
 把过草场的路告诉下一位骑手
@@ -377,6 +385,8 @@ stamps:
 奥日娜认识的养马人正在刷一匹安静的母马，年轻帮手蹲在泥边认蹄印。“这是灰马踩的。”帮手说。养马人叫他再看那道缺口。他找到真正那匹马，抬头笑了。
 
 你问她怎样给旅人挑坐骑。她看看你的行李，又看你画的路：“驮多重？两处水源隔几天？”帮手搬来两副鞍，让你摸一摸重心的差别。你觉得其中一副更合适，她追问为什么。你讲出看见的地方，她又补了一处你没留意的磨痕。她可以先与你聊几句，也愿花一整天带你看马院里的活；你若还没定下路，她说下次再来也行。
+
+帮手问自己能不能也试着挑一副。她点头，让他先说出看见的磨痕。
 
 ## ev.chandu.mentor_closure.choice_1
 
@@ -412,6 +422,8 @@ stamps:
 
 你问芦杆从哪儿来。巴塔尔说起往河间府方向几户割芦、晾芦的人家，女儿接着讲哪一束最容易弯。她留着一处松绳，想让你亲手试试。祖父今天都在这儿帮着竖框，也给你腾了工作台的一角。巴塔尔把绳递给女儿，看她这回从哪道结开始。
 
+女儿请祖父扶稳木板。祖父嘴上嫌她画得太细，手却照她说的扶住了。
+
 ## ev.ev_chandu_a_followup.choice_1
 
 跟女儿试扎那处松绳
@@ -445,6 +457,8 @@ stamps:
 你到养鸟院时，养鹰人让侄女给一只训熟的鹰喂食，自己修鸟架。侄女问鸟为何不碰第一块肉。他说肉太凉，叫她握一会儿。你问他学手艺时是不是也这样教。“我叔叔当年喊得多。”侄女抢着答。养鹰人笑了，说自己师父喊得更响。
 
 一位往汗八里走的传信人来问路。养鹰人请侄女说第一处过河点；她记得桥，却漏了桥后的岔道。他替她补上，让她接着讲完。旁边一只年轻的鸟正等着练一次短飞，侄女问你愿不愿留下看。养鹰人放下工具，把地方让开。
+
+侄女问传信人听清没有。那人把岔道复述对了，她才笑起来。
 
 ## ev.ev_chandu_b_followup.choice_1
 
@@ -513,6 +527,8 @@ stamps:
 你再到马院，养马人摆好两副鞍，旁边还有一条记蹄围的皮带。帮手画了张往南去长芦的路图，请你看他标的水站；他自己没走过。养马人说表亲走过，便念出表亲来信里的一句。两人把记号往溪边挪了些。
 
 你问那匹安静的母马为何单独站着。养马人说磨伤已好，还得走最后一圈，才好驮旅人。帮手牵它出来，先让你看了几步。他打算把改好的图留给下一位客人。养马人则问你想抄她的养马笔记，细听南路的走法，还是留一整天和帮手一起查马。
+
+养马人叫帮手牵稳母马，自己查鞍带。这回孩子先记得把勒紧的地方松开。
 
 ## ev.ev_chandu_mentor_followup.choice_1
 

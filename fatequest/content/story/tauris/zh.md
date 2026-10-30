@@ -2,7 +2,7 @@
 unit: tauris
 lang: zh
 source: en
-source_rev: ed66bd5e66cc
+source_rev: 5662d8b72e83
 status: translated
 translator: 人工校译
 notes: >
@@ -11,6 +11,12 @@ notes: >
   地域名词用音译+源语对照（tamghā、bājgāh、masjid 等）。
 
 stamps:
+  ev.tauris.inkstone.result.day: 688b2626edf9
+  ev.tauris.inkstone.result.names: bf79b9b6ea90
+  ev.tauris.inkstone.choice.day: d39ceebdb631
+  ev.tauris.inkstone.choice.names: 256380d9c858
+  ev.tauris.inkstone.body: 5e5e9431d9af
+  ev.tauris.inkstone.title: ff7005cd4407
   city.tauris.name: 0d76dc9ff8f7
   ev.tauris.a.choice.merchants: 82b85745c54b
   ev.tauris.a.choice.pearls: a8af23420e99
@@ -24,7 +30,7 @@ stamps:
   ev.tauris.entry.choice.customs: 88ef04d4b0e9
   ev.tauris.entry.choice.lore: 711481aabdbf
   ev.tauris.entry.choice.market: ebdd7e4cfebe
-  ev.tauris.mentor_tarot.body: e0dbbb8a27d3
+  ev.tauris.mentor_tarot.body: 23404ae723b6
   ev.tauris.mentor_tarot.choice.ask: 7e60272a748e
   ev.tauris.mentor_tarot.choice.learn: f5cd530a4e40
   ev.tauris.mentor_tarot.title: 2e2eb9638aed
@@ -60,17 +66,17 @@ stamps:
   ev.ev_tauris_consequence_a.choice_2: a952da41c125
   ev.ev_tauris_consequence_a.choice_2_result: 842e7ba1faf6
   ev.ev_tauris_consequence_a_resolution.title: 65afe630818e
-  ev.ev_tauris_consequence_a_resolution.body: e7dfd3f9e467
+  ev.ev_tauris_consequence_a_resolution.body: a8f38235dea1
   ev.ev_tauris_consequence_a_resolution.choice_1: 5195775dd904
   ev.ev_tauris_consequence_a_resolution.choice_1_result: 42c9f8109dd5
   ev.ev_tauris_consequence_b.title: 48cb34b72ad8
-  ev.ev_tauris_consequence_b.body: f9d71cb3baee
+  ev.ev_tauris_consequence_b.body: 7e5578e2abcb
   ev.ev_tauris_consequence_b.choice_1: 1396e5cb4f0b
   ev.ev_tauris_consequence_b.choice_1_result: 8c74d2cf2677
   ev.ev_tauris_consequence_b.choice_2: 88c5b8b380f4
   ev.ev_tauris_consequence_b.choice_2_result: 7e9996539ead
   ev.ev_tauris_consequence_b_resolution.title: a4515f92a4e1
-  ev.ev_tauris_consequence_b_resolution.body: 12f0fa8ef0e8
+  ev.ev_tauris_consequence_b_resolution.body: a7185a4c00da
   ev.ev_tauris_consequence_b_resolution.choice_1: f5b4ea299aa5
   ev.ev_tauris_consequence_b_resolution.choice_1_result: 7e9d0b89ab98
   ev.ev_tauris_a_merchants_followup.title: 417a0e4d00b1
@@ -97,22 +103,22 @@ stamps:
   ev.ev_tauris_c_followup.choice_2_result: 8ef7eb6b101a
   ev.ev_tauris_c_followup.choice_3: 839baa517745
   ev.ev_tauris_c_followup.choice_3_result: cbda84a37202
-  ev.ev_tauris_mentor_followup.title: 1b7e66999f4e
-  ev.ev_tauris_mentor_followup.body: a4844f669382
-  ev.ev_tauris_mentor_followup.choice_1: 3a84092345d3
-  ev.ev_tauris_mentor_followup.choice_1_result: 82ecc8da8d31
-  ev.ev_tauris_mentor_followup.choice_2: 2e75570179b8
-  ev.ev_tauris_mentor_followup.choice_2_result: bff50aecf959
-  ev.ev_tauris_mentor_followup.choice_3: 5179f9453af2
-  ev.ev_tauris_mentor_followup.choice_3_result: 52d4009e19af
-  ev.ev_tauris_mentor_astrodice_followup.title: 6c8dd3b28aeb
-  ev.ev_tauris_mentor_astrodice_followup.body: ae90e18c83fe
-  ev.ev_tauris_mentor_astrodice_followup.choice_1: 48c74daf964b
-  ev.ev_tauris_mentor_astrodice_followup.choice_1_result: 32dfb6c163db
-  ev.ev_tauris_mentor_astrodice_followup.choice_2: 48e8e8d87caa
-  ev.ev_tauris_mentor_astrodice_followup.choice_2_result: 808feee1de9b
-  ev.ev_tauris_mentor_astrodice_followup.choice_3: 969a23bee853
-  ev.ev_tauris_mentor_astrodice_followup.choice_3_result: 82f658a717a5
+  ev.ev_tauris_mentor_followup.title: ff9d67cdca2d
+  ev.ev_tauris_mentor_followup.body: 8f692f45f70b
+  ev.ev_tauris_mentor_followup.choice_1: f6761c3c3bbe
+  ev.ev_tauris_mentor_followup.choice_1_result: 1f4c1bdcbb47
+  ev.ev_tauris_mentor_followup.choice_2: 4de9266a81c1
+  ev.ev_tauris_mentor_followup.choice_2_result: 9de9fe0698cd
+  ev.ev_tauris_mentor_followup.choice_3: 204ef81cd376
+  ev.ev_tauris_mentor_followup.choice_3_result: 9f983873ceb6
+  ev.ev_tauris_mentor_astrodice_followup.title: a1d7ed5f7e13
+  ev.ev_tauris_mentor_astrodice_followup.body: b55ff9f9a849
+  ev.ev_tauris_mentor_astrodice_followup.choice_1: 676043ea2eb3
+  ev.ev_tauris_mentor_astrodice_followup.choice_1_result: 81bc5034d9a0
+  ev.ev_tauris_mentor_astrodice_followup.choice_2: 8a216e373e1b
+  ev.ev_tauris_mentor_astrodice_followup.choice_2_result: b1dd89295ad9
+  ev.ev_tauris_mentor_astrodice_followup.choice_3: 15aa3c0d1749
+  ev.ev_tauris_mentor_astrodice_followup.choice_3_result: c546ea588236
   ev.ev_tauris_consequence_a_resolution.choice_2: 277dbb9be3fc
   ev.ev_tauris_consequence_a_resolution.choice_2_result: 3f59031b0792
   ev.ev_tauris_consequence_b_resolution.choice_2: 86ff0a76501e
@@ -173,7 +179,9 @@ stamps:
 
 ## ev.tauris.mentor_tarot.body
 
-商队旅舍旁，露琪娅寡妇正整理一副画了图的纸牌，外甥在修牌盒。他问为何两张牌各画一条不同的出城路。“画师没法把两条路都放进一张。”她说。外甥说这理由可不高明，她便叫他自己画一张试试。你问她用牌做什么。露琪娅说她常拿它们让旅人把眼前的选择讲清楚：想得到什么，付得起什么，同行人又会怎样。外甥把修好的盒子放在桌边，等你接着问。
+商队旅舍旁，露琪娅寡妇正整理一副画了图的纸牌，外甥在修牌盒。他问为何两张牌各画一条不同的出城路。“画师没法把两条路都放进一张。”她说。外甥说这理由可不高明，她便叫他自己画一张试试。
+
+你问她用牌做什么。露琪娅说她常拿它们让旅人把眼前的选择讲清楚：想得到什么，付得起什么，同行人又会怎样。外甥说有些客人后来还会回来，把路上的结果讲给她听。“您每回都听？”你问。“带着晚饭来，我就听。”她说。外甥抱怨饭碗都是自己端的，露琪娅把修好的盒子放在桌边，问你想知道什么。
 
 ## ev.tauris.mentor_tarot.choice.ask
 
@@ -343,6 +351,8 @@ stamps:
 
 达乌德问你愿现在把核准的信送到传信人手上，还是留一天帮学徒处理其余市集告示。学徒用指背轻碰封印，等它干。
 
+寄信人又叫学徒核一遍城名。他照做，才终于把纸放回桌上。
+
 ## ev.ev_tauris_consequence_a_resolution.choice_1
 
 把封好的信送到商队传信人手里
@@ -362,6 +372,8 @@ stamps:
 你问石上写什么。莱拉认出一户人家的姓，第二行磨得厉害。邻居记得那家从前住在东边巷口。孙子问能否把石头放回原处。莱拉说得先问现在住在那里的人；旧石搬走后，那段墙又修过。
 
 她愿画给你看公井与东巷的位置。孙子扶稳湿石，邻居又凑近辨认最后一个字母。
+
+排队取水的妇人问那只盆用完会不会放回去。孙子说先洗净，再还给大家。
 
 ## ev.ev_tauris_consequence_b.choice_1
 
@@ -390,6 +402,8 @@ stamps:
 你同他们走过去。祖母讲自己小时候街道怎样拐弯，孙子拿她的话和你的图对照。儿子提议把石头留在公井旁，让邻居都看得见。莱拉先问这一家愿不愿意。
 
 祖母点头，接着问：“下回有人见到，谁来告诉他们这石头的事？”莱拉孙子看向你。他已经听明白，却还想把话再说准一些。
+
+孙子用干手指沿刻字轻轻摸过，到了磨薄的边沿便放轻了力。
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1
 
@@ -505,65 +519,75 @@ stamps:
 
 ## ev.ev_tauris_mentor_followup.title
 
-大不里士：占者的临别之赠
+露琪娅留下的一张牌
 
 ## ev.ev_tauris_mentor_followup.body
 
-教你牌阵的寡妇把牌重新洗了一遍：“临走前再看一次吧，这把不收钱。”她翻开几张牌，讲了讲每条路可能要付出的代价，最后把一张牌塞到你手里：“别当成保证，遇上岔路时拿出来想想就好。”
+你回露琪娅的桌边，外甥终于在同一张牌上画出两条路。它们在一口井边交会，又各自分开。他问这样是否更明白。露琪娅说故事讲得清楚多了，走哪边仍得旅人自己定。外甥指着井说画得太大，真井还没拇指宽。
+
+你问南去忽鲁谟斯的路。露琪娅认识走过那边的商队人家，说他们能在图上指出港口。她还照外甥的画法清描了一张牌，愿作为学完之后的纪念给你。隔桌有位客人想听人怎样准备海路，她邀你留一天，讲讲自己见过的事。外甥把牌转向你，等你评价画上的岔口。
+
+露琪娅说他自己那张牌上的井可以画大些，方便记住。外甥听了笑起来。
+
 ## ev.ev_tauris_mentor_followup.choice_1
 
-收下她递给你的临别之牌
+收下露琪娅画的纪念牌
 
 ## ev.ev_tauris_mentor_followup.choice_1_result
 
-她把牌放到你手里：“不必问它叫什么。到了第一个岔口，再拿出来看看。”
+你收下露琪娅描的牌。外甥在小井旁的背面签了名字，她说下回回城，记得带个路上的故事来。
 
 ## ev.ev_tauris_mentor_followup.choice_2
 
-请她占一占，哪条路最利于你
+向商队人家问去忽鲁谟斯的路
 
 ## ev.ev_tauris_mentor_followup.choice_2_result
 
-她翻开牌面，点了点南边：“这条路通往忽鲁谟斯，最后到海边。走不走，还是你自己拿主意。”
+露琪娅把你介绍给那户商队人家。他们在图上指出忽鲁谟斯，也标出内陆最后的水站。外甥照着他们的话，把画上的井挪到了更准的地方。
 
 ## ev.ev_tauris_mentor_followup.choice_3
 
-留一日，看她为海路起卦
+留一天在露琪娅桌边听旅人讲路
 
 ## ev.ev_tauris_mentor_followup.choice_3_result
 
-你在她家中听了一天牌。她逐张解释牌面，又把几条海路画在桌上：“占卜只帮你把顾虑摆出来。哪条路真要走，还得你自己定。”你在大不里士多待了一日，才把她的告诫记牢。
+你留一天在露琪娅桌边对照旅人讲的路。一位妇人说起海路怎样打包，儿子接着补了她漏掉的事。露琪娅谢你肯让每个人都讲完。
 
 ## ev.ev_tauris_mentor_astrodice_followup.title
 
-大不里士：骰师的最后一掷
+再看一次骰面
 
 ## ev.ev_tauris_mentor_astrodice_followup.body
 
-教你骰术的师傅在城门边叫住你。他把骰子放在掌心搓了搓，往路边一掷：“最后再帮你看一次，不收钱。骰面摆在这儿了，怎么走还得你自己定。”
+骰术老师把记号盘铺在长凳上，露琪娅的外甥也来修牌盒。孩子问骰子能不能解决去南路的争论。老师说骰子能让大家把问题说清，反问他究竟知道多少去忽鲁谟斯的路。“只听商队人家讲过。”孩子承认。
+
+你想亲自核方向。老师叫来一位往南运过货的妇人，请她指出最后一口井。她把外甥在图上的记号挪了一格。孩子问为何自己画错，她说有座山正挡着从路上看井的视线。老师放下骰子，问你想记住这次掷出的记号、记下那段路，还是再留一天练着辨认骰面。妇人也站着等你答。
+
+外甥请妇人自己把山画上。她画完，把炭笔递还给他，让他接着画路。
+
 ## ev.ev_tauris_mentor_astrodice_followup.choice_1
 
-把这一掷收作一路的护符
+把这次掷出的记号写进笔记
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_1_result
 
-他把骰子交给你随身携带，这几面已被岁月的行旅磨圆了。无论它们掷出了什么，这一掷本身就是护佑，而到了任何转弯处，你都懂得如何再掷它。
+你画下骰子落定时的样子，把老师的解释写在旁边。外甥照盘核了记号。这份记录留给你日后练习。
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_2
 
-问骰，出城走哪条路最好
+问南路旅人去忽鲁谟斯的走法
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_2_result
 
-他又掷了一次，念出骰面：“南边那条路，通往忽鲁谟斯和海。”
+旅人在你的图上指出忽鲁谟斯，改准最后一口井的位置。她走前，老师还让外甥问清那座挡住视线的山。
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3
 
-留一日，让骰在你自己手中落定
+留一天练习辨认骰面
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
 
-你跟骰师学了一天，终于能看懂几种常见的落势。黄昏时，他收起骰子：“下次走到岔路，先掷一回，再想想自己到底想去哪儿。”
+你花一天跟老师练习。黄昏时，外甥也认全了每个记号，只是画井仍画得太大。老师谢你肯陪他认真学。
 
 ## ev.ev_tauris_consequence_a_resolution.choice_2
 
@@ -580,3 +604,29 @@ stamps:
 ## ev.ev_tauris_consequence_b_resolution.choice_2_result
 
 你花一天核这一家的说法，写了张清楚的说明留在井边。莱拉孙子念给祖母听，她点头认可。旧石也放在来往人看得到的地方。
+
+## ev.tauris.inkstone.title
+
+陶工写在碗底的名字
+
+## ev.tauris.inkstone.body
+
+市集后面的陶院里，萨米拉把碗摆上晾架，父亲在旁磨一点蓝颜料。弟弟在自己捏的每只碗底都写了名字，连预备交给姑母卖的也写。“给姑母留个地方写她的记号。”萨米拉说。弟弟问买主难道不该知道是谁捏的。父亲说只要碗底还没干透，两个人的名字都能留下。
+
+你问她们怎样分清各家订的碗。萨米拉有账，可最后两只样子太像。弟弟把碗举到亮处，在一只碗沿下找到小小的指印，想起那只确实是自己做的。姑母来了，说另一只要给等了一个星期的邻居。萨米拉请弟弟趁泥未干写上邻居的名字。孩子犹豫：手上还有灰，怕把碗沿蹭脏。父亲放下颜料，递来干净布巾。
+
+## ev.tauris.inkstone.choice.names
+
+帮一家人把两只碗的名字核准
+
+## ev.tauris.inkstone.choice.day
+
+留一天跟萨米拉学晾碗的活
+
+## ev.tauris.inkstone.result.names
+
+你念出两张订货，萨米拉弟弟洗净手，把名字写到对的碗底。姑母把邻居那只带去，邻居看了小记号，向一家人道谢。萨米拉把改准的名单折好，放在晾架旁。
+
+## ev.tauris.inkstone.result.day
+
+你留一天，随风与阴影挪动晾架上的碗。萨米拉让你看哪些碗沿还得等，才好落字。黄昏，弟弟已能把姑母的记号写在自己名字旁，泥面没有蹭花。

@@ -169,6 +169,8 @@ At the roadside stones, the grandmother you met earlier is showing her grandson 
 
 You ask why they tie cloth here. She says her family stops to remember people returning by the road, and the strips help children notice when the wind has changed. The neighbour’s daughter arrives with water and asks if her father’s ribbon is still there. The grandmother finds a faded green strip and lets the girl replace it herself. A gust sends the boy’s new strip across the ground. He chases it, then returns with a question: should it go beside the green one or where the wind will catch it first? The two children wait while the grandmother considers.
 
+The boy still has the good sleeve folded over his arm.
+
 ## ev.tenduc.ribbons.choice.sew
 
 Help the neighbour mend the remaining coat sleeve

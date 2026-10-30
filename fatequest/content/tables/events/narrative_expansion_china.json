@@ -186,6 +186,53 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-chinginju-printer",
+      "kind": "site",
+      "title": "ev.chinginju.printer.title",
+      "body": "ev.chinginju.printer.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "chinginju"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.chinginju.printer.choice.help",
+          "resultText": "ev.chinginju.printer.result.help",
+          "effects": [
+            {
+              "op": "fate",
+              "id": "wealth",
+              "value": 1,
+              "reason": "helped-printer-correct-labels"
+            }
+          ]
+        },
+        {
+          "label": "ev.chinginju.printer.choice.stay",
+          "resultText": "ev.chinginju.printer.result.stay",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "stayed-through-print-run"
+            },
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "chinginju",
+              "reason": "earned-printers-trust"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

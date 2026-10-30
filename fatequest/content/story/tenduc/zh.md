@@ -2,7 +2,7 @@
 unit: tenduc
 lang: zh
 source: en
-source_rev: 7721806f7cd0
+source_rev: eb94235e8955
 status: translated
 translator: 人工校译
 notes: >
@@ -15,7 +15,7 @@ stamps:
   ev.tenduc.ribbons.result.sew: 84df8f2e32d1
   ev.tenduc.ribbons.choice.wind: 07cef946368b
   ev.tenduc.ribbons.choice.sew: 5a0fb5e1695f
-  ev.tenduc.ribbons.body: 079253e9fa90
+  ev.tenduc.ribbons.body: 39eb24388ee6
   ev.tenduc.ribbons.title: 2baa55b01d25
   city.tenduc.name: 08a4375ae043
   ev.tenduc.entry.choice.market: e2c949bc478f
@@ -211,6 +211,8 @@ stamps:
 路边石堆旁，你又见到那位祖母。她教孙子从一件坏外衣上裁布条，邻居说衣袖还好，愿拿去补。孩子提起破了的衣摆：“这截太短，穿不上了。”祖母点头，叫他把好袖子留下。
 
 你问他们为何在这里系布。祖母说一家人路过会念念从远路回来的人，孩子们也能从布条看风向。邻居的女儿提水来，问父亲以前系的那条还在不在。祖母找到一条褪色的绿布，让女孩自己换。忽然一阵风把孙子的新布条吹到地上。他追回来，又问该系在绿布旁，还是系在先迎着风的位置。两个孩子等祖母开口。
+
+男孩手臂上还搭着那只好衣袖。
 
 ## ev.tenduc.ribbons.choice.sew
 

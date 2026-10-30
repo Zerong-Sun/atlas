@@ -111,7 +111,9 @@ The Steel Seller’s Ledger
 
 ## ev.tauris.mentor_tarot.body
 
-Near the caravan lodgings, a widow named Lucia is sorting a set of painted cards while her nephew repairs the box. He asks why two cards show travellers leaving by different roads. ‘Because the painter could not fit both roads on one card,’ she says. He calls that a poor excuse, and she asks him to draw a better one. You ask what she does with the cards. Lucia says she uses them to teach visitors to tell a choice clearly: what they hope for, what they can afford, and whom the choice will affect. Her nephew places the repaired box beside her and waits to see what you ask next.
+Near the caravan lodgings, a widow named Lucia is sorting a set of painted cards while her nephew repairs the box. He asks why two cards show travellers leaving by different roads. ‘Because the painter could not fit both roads on one card,’ she says. He calls that a poor excuse, and she asks him to draw a better one.
+
+You ask what she does with the cards. Lucia says she uses them to teach visitors to tell a choice clearly: what they hope for, what they can afford, and whom the choice will affect. Her nephew says some travellers come back only to tell her what happened next. ‘And you always listen?’ you ask. ‘When they bring supper,’ she says, and the nephew groans because he has been carrying the bowls himself. She puts the repaired box beside her and asks what you want to know.
 
 ## ev.tauris.mentor_tarot.choice.ask
 
@@ -233,6 +235,8 @@ You ask who will carry the letter. A caravan messenger is expected before dusk, 
 
 Davud asks whether you would carry the verified letter to the messenger now, or stay a day to help his apprentice with the remaining market notices. The apprentice tests the seal with the back of one finger and waits.
 
+The sender asks the apprentice to check the town name as well. He does, then finally lets the page rest.
+
 ## ev.ev_tauris_consequence_a_resolution.choice_1
 
 Take the sealed letter to the caravan messenger
@@ -261,6 +265,8 @@ You ask what the marker says. Leyla recognizes a family name but cannot read the
 
 She offers to show you the well and the east lane on a drawing. The grandson holds the wet marker steady while the neighbour tries to make out one more letter.
 
+A woman waiting for water asks whether the basin will be put back for everyone. The grandson says he will wash it first.
+
 ## ev.ev_tauris_consequence_b.choice_1
 
 Keep Leyla’s drawing and ask the east-lane household
@@ -288,6 +294,8 @@ The household at the east lane has come to the well to see the marker. Its grand
 You walk with them to the site. The grandmother remembers how the street turned when she was small, and the grandson compares her account with your drawing. Her son suggests keeping the stone by the well, where all the neighbours can see it. Leyla wants the family’s consent before setting it there.
 
 The grandmother nods and asks who will tell the next visitor why the stone matters. Leyla’s grandson looks at you; he has heard the story but wants to be sure he can repeat it.
+
+The grandson traces the carved name with a dry finger, careful not to press too hard on the worn edge.
 
 ## ev.ev_tauris_consequence_b_resolution.choice_1
 
@@ -411,64 +419,98 @@ You spend a day going from household to household with Shirin’s nephew, readin
 
 ## ev.ev_tauris_mentor_followup.title
 
-Tauris: The Reader's Parting Gift
+Lucia’s Last Card
 
 ## ev.ev_tauris_mentor_followup.body
 
-The widow who taught you the cards does not let you leave her table empty-handed. She lays out one last spread and reads it for you — a choice-gate cast for the road ahead — then presses a single card into your palm. A parting spread should cost nothing and bind nothing, she says; take from it only what the road will answer for.
+When you return to Lucia’s table, her nephew has finally drawn both roads on one card. The lines meet at a well and separate again. He asks whether that makes the drawing clearer. Lucia says it tells a better story, though the traveller still has to decide where to go. The nephew points out that his well is too large; the real one is no bigger than a thumb.
+
+You ask about the southern road toward Ormus. Lucia knows a caravan family who carried goods that way and says they can show you the port on a map. She has also made a clean copy of the nephew’s card and offers it as a keepsake from your lessons. A visitor at the next table wants to hear how people plan a sea journey; Lucia invites you to stay for the day and explain what you have seen. The nephew turns his card around and waits for your opinion of the two roads.
+
+Lucia tells the boy the well can stay large on his own card if that helps him remember it. He grins.
 
 ## ev.ev_tauris_mentor_followup.choice_1
 
-Take the parting card she offers you
+Take Lucia’s painted keepsake
 
 ## ev.ev_tauris_mentor_followup.choice_1_result
 
-She gives you the card without naming it, and tells you to read it at the first fork. The reader's gift travels with you now, and the lesson of the spreads with it.
+You take the card Lucia copied. Her nephew signs the back beside the little well, and she asks you to bring a story when you return to town.
 
 ## ev.ev_tauris_mentor_followup.choice_2
 
-Ask her to read which road will serve you best
+Ask the caravan family about the road to Ormus
 
 ## ev.ev_tauris_mentor_followup.choice_2_result
 
-She turns the cards and names the southern road, the one that ends at the sea. Ormus is now on your map, and you know the season in which it is best ridden.
+Lucia introduces you to the caravan family. They point out Ormus and the last inland water stop on your map. Her nephew moves his painted well to match the real one more closely.
 
 ## ev.ev_tauris_mentor_followup.choice_3
 
-Stay a day and watch her cast for the sea road
+Spend a day talking with travellers at Lucia’s table
 
 ## ev.ev_tauris_mentor_followup.choice_3_result
 
-You stay a day in her house, watching her cast for the sea road and hearing the meaning of each card. It costs time, but the reader's house remembers you, and in Tauris a remembered name opens doors.
+You spend a day comparing travellers’ accounts at Lucia’s table. One woman explains how she packed for the sea, and her son adds what she forgot. Lucia thanks you for letting everyone finish their story.
 
 ## ev.ev_tauris_mentor_astrodice_followup.title
 
-Tauris: The Dice Master's Last Cast
+A Second Look at the Dice
 
 ## ev.ev_tauris_mentor_astrodice_followup.body
 
-The dice master who taught you the throwing of the twelve faces calls you back at the city gate. He cups the dice in both hands, blows on them once, and casts them on the curbstone: a final reading for the road. A cast is a cast, he says; you have paid your fee and it is yours to spend. Choose what to take from it.
+The dice teacher has laid his marked board on the same bench where Lucia’s nephew repairs card boxes. The nephew asks whether the dice can settle an argument about the southern road. The teacher says the dice can give them a way to talk about it, and asks him what he actually knows of the road to Ormus. ‘Only what the caravan family said,’ the boy admits.
+
+You ask to check those directions yourself. The teacher calls over a traveller who has carried a load south and asks her to point out the last well. She moves the nephew’s mark one space on the map. He wants to know why his sketch was wrong; she explains which hill hides the well from the road. The teacher sets the dice down and asks whether you want to keep a record of this cast, note the road, or spend another day practicing how to read the signs. The traveller stays to hear your answer.
+
+The nephew asks the traveller to draw the hill herself. She does, and gives him the charcoal to finish the road.
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_1
 
-Take the cast as a talisman for the journey
+Record this cast in your own notes
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_1_result
 
-He gives you the dice to carry, their faces worn with years of travel. Whatever they showed, the cast itself is a guard, and you will know how to throw it at any turning.
+You draw the dice as they landed and write the teacher’s explanation beside them. The nephew checks the marks against the board. The record is yours to use when you practice again.
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_2
 
-Ask the dice which road runs best from the city
+Ask the southbound traveller about Ormus
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_2_result
 
-He casts again and reads the faces: the southern road, the one that ends at Ormus and the sea. The course is drawn on your map and the cast kept in your book.
+The traveller shows you Ormus on your map and corrects the last well’s position. The teacher lets his nephew ask one more question about the hidden hill before she goes.
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3
 
-Stay a day and let the dice settle in your own hand
+Spend a day practicing with the marked dice
 
 ## ev.ev_tauris_mentor_astrodice_followup.choice_3_result
 
-You sit with the dice through a day, learning their fall, and return them at dusk. The dice master remembers your calm, and the quarter speaks well of you.
+You spend a day practicing with the teacher. At dusk the nephew can name every mark too, though he still draws the well too large. The teacher thanks you for helping him take the lesson seriously.
+
+## ev.tauris.inkstone.title
+
+The Potter’s Name on the Bowl
+
+## ev.tauris.inkstone.body
+
+In a potter’s yard behind the market, Samira is setting bowls on a drying shelf while her father grinds a little blue pigment. Her younger brother has written his name beneath every bowl he made, even the ones meant to be sold by their aunt. ‘She needs room for her own mark,’ Samira tells him. He asks why a buyer should not know who shaped the clay. Their father says they can keep both names if the underside is dry enough for another stroke.
+
+You ask how they tell which bowls belong to which order. Samira has a list, but the aunt’s last two bowls look nearly alike. The brother holds them to the light and finds a tiny thumbprint under one rim. He remembers making that one. The aunt arrives and says the other bowl is for a neighbour who has been waiting a week. Samira asks her brother to write the neighbour’s name before the clay dries. He hesitates: his hand is still dusty, and he is afraid of smearing the rim. Their father puts down the pigment and offers him a clean cloth.
+
+## ev.tauris.inkstone.choice.names
+
+Help the family match both names to the orders
+
+## ev.tauris.inkstone.choice.day
+
+Stay a day and learn the potter’s drying work
+
+## ev.tauris.inkstone.result.names
+
+You read the orders back while Samira’s brother writes the names with clean hands. The aunt takes the correct bowl to her neighbour, who checks the small mark and thanks the family. Samira folds the corrected list beside the drying shelf.
+
+## ev.tauris.inkstone.result.day
+
+You stay the day shifting the bowls as air and shade change. Samira shows you which rims need more time before anyone writes on them. By dusk her brother can place the aunt’s mark beside his own without smearing the clay.

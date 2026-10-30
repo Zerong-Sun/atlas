@@ -167,6 +167,8 @@ After your goods are checked, the groom at Orina’s yard asks you to look at a 
 
 The groom asks how far you intend to travel. You tell him, and he names a horse keeper across the meadow who knows which animals can take a long road. His brother asks whether that keeper will remember a traveller sent over without a note. The groom tears a corner from the clean tally sheet, writes his own name, and asks the brother to witness it. ‘There,’ he says, ‘now he’ll know why you came.’ He lets you decide whether to take the introduction.
 
+The brother keeps rubbing the same strap between his fingers, testing whether it will slip again.
+
 ## ev.ev_chandu_consequence_a.choice_1
 
 Take the signed introduction
@@ -192,6 +194,8 @@ At the Stream Paddock
 The horse keeper reads the groom’s note, then looks up when you mention the lopsided pots. ‘That brother will put a whole kitchen on one flank if you let him,’ she laughs. A mare beside her has a rubbed patch under the saddle, and she is waiting for a new pad before letting anyone ride her.
 
 You ask whether she keeps another animal for a longer journey. She shows you a quieter horse and explains what it eats during a march. A young helper interrupts to say the saddle pad is ready. The keeper asks him to bring it over and lets you watch how she checks the fit. When the helper pulls too hard, she loosens the strap and makes him try again. She gives you a choice: carry the groom’s introduction onward to a rider who needs it, or stay a day to help finish fitting the horses.
+
+The helper asks which saddle you would choose, and the keeper waits until you have looked at both.
 
 ## ev.ev_chandu_consequence_a_resolution.choice_1
 
@@ -219,6 +223,8 @@ The falconer who asked Orina about the meadow families is putting fresh padding 
 
 You ask where a traveller can watch birds without troubling the herd. He draws the edge of the meadow in dust with a stick, marking the stream and the low rise where the bird returns. His niece adds the place where Hulan takes the foal to water. She says the drawing would help a visiting rider who keeps asking the wrong family for directions. The falconer offers to send the drawing along with you, or to keep it here for the next visitor.
 
+His niece rubs the edge of the drawing flat, pleased that the stream and slope now fit on one sheet.
+
 ## ev.ev_chandu_consequence_b.choice_1
 
 Take the drawing to the visiting rider
@@ -245,6 +251,8 @@ The rider at the far yard has been sent to collect a bird perch, but the path he
 
 His own horse is thirsty. You walk with him to the stream and show the outer path that keeps the mares undisturbed. Hulan’s son is there counting the foals again. He tells the rider to wait until the smallest one has crossed, then waves him through. The rider says another person is expected later with a second perch. He asks whether you can pass on the directions, or whether you would rather stay and make a clearer copy with him.
 
+The boy turns back to the herd, calling the foals one by one so his count will be right this time.
+
 ## ev.ev_chandu_consequence_b_resolution.choice_1
 
 Tell the next rider how to cross the meadow
@@ -270,6 +278,8 @@ Orina’s Horse Keeper
 Orina’s horse keeper is brushing a quiet mare while a young helper tries to read a worn hoof print in the mud. ‘This one belongs to the grey horse,’ the helper says. The keeper asks him to look at the chipped edge and try again. He finds the right animal and grins.
 
 You ask how she decides which horse should carry a traveller. She looks at your pack, then at the roads you have marked. ‘How much weight? How many days between water?’ she asks. Her helper fetches two saddles so you can feel their different balance. When you say one sits better, she asks why. You explain what you noticed, and she adds the point you missed. She is willing to talk now, spend a whole day showing you her work, or let you return when your route is settled.
+
+The helper asks if he may try the saddle test too. She nods and lets him explain what he sees first.
 
 ## ev.chandu.mentor_closure.choice_1
 
@@ -305,6 +315,8 @@ Batar has begun a second frame, and his daughter has copied his demonstration on
 
 You ask where the reeds come from. Batar names households farther along the road toward Cacanfu that cut and dry them, and his daughter adds which bundles bend best. She has kept one loose knot for you to try. The grandfather is going to stay all day to help raise the frame and offers you a place at the workbench. Batar hands his daughter the cord and waits for her to choose the next knot.
 
+The daughter asks her grandfather to hold the board steady; he complains about her fussy lines but does exactly as she asks.
+
 ## ev.ev_chandu_a_followup.choice_1
 
 Try the daughter’s reed lashing
@@ -338,6 +350,8 @@ At the Bird Yard
 At the bird yard, the falconer lets his niece feed a trained hawk while he repairs a perch. She asks why the bird refuses the first piece. He says the meat is too cold and tells her to warm it in her hand. You ask whether he taught her the same way he learned. ‘My uncle shouted more,’ she says before he can answer. He laughs and admits that his own teacher shouted still louder.
 
 A messenger from the road to Cambaluc comes for directions. The falconer asks his niece to describe the first river crossing; she remembers the bridge but forgets the fork beyond it. He corrects her and lets her finish. A younger bird is ready for a short feeding exercise, and she asks whether you would watch. He puts down his tools so both of you can see the bird clearly.
+
+The niece asks whether he is listening to her directions. The messenger repeats the fork correctly, and she smiles.
 
 ## ev.ev_chandu_b_followup.choice_1
 
@@ -406,6 +420,8 @@ One More Morning at the Horse Yard
 When you return, the horse keeper has set out two saddles and a strip of leather she uses to record hoof measurements. Her helper has drawn a map of the road south toward Chinangli. He asks you to check the water stop he marked; he has never taken that road himself. The keeper says her cousin did and reads a line from his letter aloud. They move the mark nearer the stream.
 
 You ask why the quiet mare is standing apart. The keeper says she has recovered from the rubbed saddle but needs one last walk before carrying a traveller. The helper brings her out and lets you watch the first few steps. He wants to keep the corrected map for the next visitor. The keeper offers you a copy of her notes, a closer account of the southern road, or a whole day helping the helper check the horses.
+
+The keeper asks the helper to hold the mare still while she checks the strap. This time he remembers to loosen it first.
 
 ## ev.ev_chandu_mentor_followup.choice_1
 

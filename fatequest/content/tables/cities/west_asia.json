@@ -1409,7 +1409,8 @@
       "sites": [
         "ev-tauris-a",
         "ev-tauris-b",
-        "ev-tauris-c"
+        "ev-tauris-c",
+        "ev-tauris-inkstone"
       ],
       "exits": [
         "rt-ninive-tauris",

@@ -2471,6 +2471,53 @@
       "lore": {
         "origin": "authored"
       }
+    },
+    {
+      "id": "ev-tauris-inkstone",
+      "kind": "site",
+      "title": "ev.tauris.inkstone.title",
+      "body": "ev.tauris.inkstone.body",
+      "once": true,
+      "when": {
+        "cities": [
+          "tauris"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ev.tauris.inkstone.choice.names",
+          "resultText": "ev.tauris.inkstone.result.names",
+          "effects": [
+            {
+              "op": "reputation",
+              "value": 1,
+              "scope": "city",
+              "id": "tauris",
+              "reason": "helped-the-potters-match-their-orders"
+            }
+          ]
+        },
+        {
+          "label": "ev.tauris.inkstone.choice.day",
+          "resultText": "ev.tauris.inkstone.result.day",
+          "effects": [
+            {
+              "op": "days",
+              "value": 1,
+              "reason": "learned-samiras-drying-work"
+            },
+            {
+              "op": "fate",
+              "id": "rapport",
+              "value": 1,
+              "reason": "spent-a-day-with-samiras-family"
+            }
+          ]
+        }
+      ],
+      "lore": {
+        "origin": "authored"
+      }
     }
   ]
 }

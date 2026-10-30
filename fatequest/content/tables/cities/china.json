@@ -450,7 +450,8 @@
       "entryEvent": "ev-chinginju-entry",
       "sites": [
         "ev-gap-chinginju",
-        "ev-unique-chinginju"
+        "ev-unique-chinginju",
+        "ev-chinginju-printer"
       ],
       "exits": [
         "rt-chinginju-caiju",
