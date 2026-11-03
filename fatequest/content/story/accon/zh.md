@@ -29,7 +29,7 @@ stamps:
 
 ## ev.accon.entry.choice.look
 
-陪萨法找那只篮子，在海边歇一晚
+陪萨法找盖黄布的车，在海边歇一晚
 
 ## ev.accon.entry.choice.pass
 

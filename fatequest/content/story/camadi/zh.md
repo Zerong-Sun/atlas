@@ -79,7 +79,7 @@ stamps:
 
 ## ev.ev_camadi_entry.choice_1_result
 
-巴努的外孙指明出城的路。地图上添了卡马迪，行程继续向前。
+巴努的外孙指明出城的路。来客把卡马迪记进地图，继续赶路。
 
 ## ev.ev_camadi_entry.choice_2_result
 

@@ -49,7 +49,7 @@ stamps:
 
 ## ev.ev_kiovia_entry.choice_1_result
 
-沿河边走，基辅渐渐留在身后。城名记进地图后，行路人继续赶路。
+行路人沿河边走，把基辅记进地图，随后继续赶路。
 
 ## ev.ev_kiovia_entry.choice_2_result
 

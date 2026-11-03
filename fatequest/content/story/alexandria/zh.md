@@ -26,7 +26,7 @@ stamps:
 阿历山德里亚
 
 ## ev.alexandria.entry.choice.look
-留在港口看看，也问问书吏这包货怎么了
+留港一天，等哈桑来核货，再问去伯利恒的路
 
 ## ev.alexandria.entry.choice.pass
 

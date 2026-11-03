@@ -30,11 +30,22 @@ for (const unit of readdirSync(story)) {
     units.add(unit);
   }
 }
-for (const unit of ["alexandria_welcome", "alexandria_market", "zayton-bowl", "endings"]) {
+for (const unit of ["alexandria_welcome", "alexandria_market", "zayton-bowl", "endings", "character_opening"]) {
   units.add(unit);
 }
 
 const failures = [];
+// Some older journey events and endings live only in the runtime dictionary.
+// Include them so a source-only check cannot miss player-facing narration.
+const runtime = JSON.parse(readFileSync(join(root, "content/i18n/zh.json"), "utf8"));
+for (const [key, value] of Object.entries(runtime)) {
+  const isNarrative = key.startsWith("ev.") || key.startsWith("end.")
+    || key.startsWith("ending.") || /^arch\.[^.]+\.description$/.test(key);
+  if (!isNarrative || typeof value !== "string") continue;
+  const bare = outsideDialogue(value);
+  if (bare.includes("你")) failures.push(`runtime/${key}: ${bare.match(/[^。！？\n]*你[^。！？\n]*/)?.[0]?.trim()}`);
+}
+
 for (const unit of [...units].sort()) {
   const path = join(story, unit, "zh.md");
   if (!existsSync(path)) {

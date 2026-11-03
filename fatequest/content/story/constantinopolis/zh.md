@@ -55,7 +55,7 @@ stamps:
 
 ## ev.ev_constantinopolis_entry.choice_1_result
 
-安娜追弟弟前，回头喊了一声去市集该在哪儿转弯。君士坦丁堡也记进地图，继续往前走。
+安娜追弟弟前，回头喊了一声去市集该在哪儿转弯。来客把君士坦丁堡记进地图，继续往前走。
 
 ## ev.ev_constantinopolis_entry.choice_2_result
 

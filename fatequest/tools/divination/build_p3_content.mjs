@@ -782,9 +782,9 @@ function patchI18n(tarot) {
     "ui.divination.reading": "解读",
     "ui.divination.effects": "所得",
     "ev.road.fork_tarot.title": "岔路口的牌",
-    "ev.road.fork_tarot.body": "两条驿路分向未知。你可在此铺开双选门，比较收益与代价。",
-    "ev.road.fork_tarot.choice.cast": "以塔罗双选门观路",
-    "ev.road.fork_tarot.choice.walk": "凭经验径直择路",
+    "ev.road.fork_tarot.body": "两条驿路在坡下分开。领队停下车队，问熟悉这片地方的人哪条路更容易找到水。有人摊开牌，有人沿着旧车辙看路况；大家等着定下去向。",
+    "ev.road.fork_tarot.choice.cast": "用塔罗牌看看两条路",
+    "ev.road.fork_tarot.choice.walk": "沿旧车辙择路",
   });
   Object.assign(en, {
     "ev.cambaluc.mentor_iching.title": "I Ching at Khanbaliq",

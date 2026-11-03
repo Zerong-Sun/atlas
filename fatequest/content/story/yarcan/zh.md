@@ -58,7 +58,7 @@ stamps:
 
 ## ev.ev_yarcan_entry.choice_1_result
 
-纳西尔说了出鸦儿看沿途可用的井。行路人动身时，修鞋匠也把靴子还给他。鸦儿看也记进了地图。
+纳西尔说了出鸦儿看沿途可用的井。行路人动身时，修鞋匠把补好的靴子还给纳西尔。行路人把鸦儿看记进地图，继续赶路。
 
 ## ev.ev_yarcan_entry.choice_2_result
 

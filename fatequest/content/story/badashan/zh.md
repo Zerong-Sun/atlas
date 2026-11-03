@@ -138,7 +138,7 @@ stamps:
 
 ## ev.ev_badashan_entry.choice_1_result
 
-行路人离开时，孩子举起账本挥了挥。巴达哈伤记进地图后，石市外的路还通向前方。
+行路人离开时，孩子举起账本挥了挥。行路人把巴达哈伤记进地图，沿石市外的驮道继续走。
 
 ## ev.ev_badashan_entry.choice_2_result
 

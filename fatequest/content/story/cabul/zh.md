@@ -58,7 +58,7 @@ stamps:
 
 ## ev.ev_cabul_entry.choice_1_result
 
-鞋匠女儿指出从院里出去的路，又回去帮父亲穿针。喀布尔随即记进地图，继续赶路。
+鞋匠女儿指出从院里出去的路，又回去收好针线。来客把喀布尔记进地图，继续赶路。
 
 ## ev.ev_cabul_entry.choice_2_result
 
