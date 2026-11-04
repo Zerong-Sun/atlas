@@ -37,19 +37,19 @@ stamps:
 
 ## market.alexandria.item.damascus-steel
 
-刀身在光下显出纹理。摊上挂着“大马士革钢”的名号，你仍要分辨货色，不能只信招牌。
+刀身在光下显出纹理。摊主将几把刀并排放好，等买主逐件验看。
 
 ## market.alexandria.item.baghdad-brocade
 
-折起的织锦占地方。付款之前，你先比了比行囊里剩余的空间。
+织锦折成厚厚一卷，摊主量好尺寸，再把包布铺在桌上。
 
 ## market.alexandria.item.persian-carpet
 
-摊主展开毯角，让你看织纹。它适合有运输打算的买主，不是轻便的纪念品。
+摊主展开毯角，织纹铺满了柜前的木台。旁边备着捆毯用的粗绳。
 
 ## market.alexandria.item.rosewater
 
-带塞的小瓶摆在柜上，摊主邀你闻闻气味。你想了想该怎样把瓶子与纸张、布料分开放好。
+带塞的小瓶摆在柜上，摊主拔开瓶塞，玫瑰香从瓶口散出来。柜下放着包瓶用的干草。
 
 ## market.alexandria.item.dates
 
@@ -65,7 +65,7 @@ stamps:
 
 ## market.alexandria.item.paper
 
-纸张叠成一包。空白的纸页可以写信、抄路程，也可以记商账；眼下，它是你可以买下带走的货物。
+纸张叠成一包，边角裁得整齐。写信、抄路程、记商账，都用得上。
 
 ## market.alexandria.item.tabriz-pearls
 

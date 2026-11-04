@@ -1,0 +1,26 @@
+{
+  "contentVersion": 1,
+  "table": "character_names",
+  "records": [
+    {"id":"person-matteo","name":"person.matteo","culture":"latin","faith":"latin"},
+    {"id":"person-lucia","name":"person.lucia","culture":"latin","faith":"latin"},
+    {"id":"person-niccolo","name":"person.niccolo","culture":"latin","faith":"latin"},
+    {"id":"person-yaqub","name":"person.yaqub","culture":"steppe","faith":"nestorian"},
+    {"id":"person-yuhannan","name":"person.yuhannan","culture":"steppe","faith":"nestorian"},
+    {"id":"person-mariam","name":"person.mariam","culture":"steppe","faith":"nestorian"},
+    {"id":"person-yusuf","name":"person.yusuf","culture":"indian_ocean","faith":"islam"},
+    {"id":"person-fatima","name":"person.fatima","culture":"indian_ocean","faith":"islam"},
+    {"id":"person-hamid","name":"person.hamid","culture":"indian_ocean","faith":"islam"},
+    {"id":"person-lin-an","name":"person.lin_an","culture":"east_asia","faith":"daoism"},
+    {"id":"person-chen-yuan","name":"person.chen_yuan","culture":"east_asia","faith":"daoism"},
+    {"id":"person-shen-qing","name":"person.shen_qing","culture":"east_asia","faith":"daoism"},
+    {"id":"person-ahmad","name":"person.ahmad","culture":"islamic","faith":"islam"},
+    {"id":"person-zaynab","name":"person.zaynab","culture":"islamic","faith":"islam"},
+    {"id":"person-hasan","name":"person.hasan","culture":"islamic","faith":"islam"},
+    {"id":"person-bodhi","name":"person.bodhi","culture":"steppe","faith":"buddhism"},
+    {"id":"person-tashi","name":"person.tashi","culture":"steppe","faith":"buddhism"},
+    {"id":"person-dorje","name":"person.dorje","culture":"steppe","faith":"buddhism"},
+    {"id":"person-li-ming","name":"person.li_ming","culture":"east_asia","faith":"nestorian"},
+    {"id":"person-wang-de","name":"person.wang_de","culture":"east_asia","faith":"nestorian"}
+  ]
+}

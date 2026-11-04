@@ -28,7 +28,10 @@ func _run() -> void:
 	main._draw_character()
 	var old_card: Node = main._draw_card.get_node("CharacterCandidates").get_child(0)
 	var old_button: Button = old_card.find_child("AcceptCharacterButton", true, false)
+	var old_id := String(main._draw_candidates[0].candidate_id)
 	main._draw_character()
+	# Even an accidental ID collision must not revive a button from a prior draw.
+	main._draw_candidates[0].candidate_id = old_id
 	old_button.pressed.emit()
 	check(main.state == null, "a retired candidate cannot start a rerolled journey")
 	main._begin(main.db.get_record("battuta"))

@@ -491,11 +491,11 @@ The Book of Far Roads
 
 ## ui.city.intro_unknown
 
-你只知道这座城的名字和大致位置，还没打听到可靠消息。
+目前只知道这座城的名字和大致位置，可靠的消息还没打听到。
 
 ## ui.city.road_unknown
 
-你听说过这座城，但还不知道哪条路能安全抵达。
+这座城已有传闻，通往那里的可靠路线还没打听到。
 
 ## ui.city.route_line
 
@@ -935,7 +935,7 @@ The Book of Far Roads
 
 ## ui.party.alone
 
-你独自上路。
+独自上路。
 
 ## ui.party.cargo_slots
 
@@ -977,13 +977,9 @@ The Book of Far Roads
 
 启程 → %s（%d 日，%d 银）
 
-## ui.route.tooltip
-
-%s：%d 日 · 船脚 %d 银
-
 ## ui.route.unknown
 
-那里你还一无所知。
+那里的消息还没打听到。
 
 ## ui.save.load_failed
 
@@ -1017,13 +1013,9 @@ The Book of Far Roads
 
 启程 · %s →
 
-## ui.travel.facts
-
-%s · %d 日 · %d 银 · 凶险 %d/5
-
 ## ui.travel.intro_unknown
 
-你只知道这座城的名字和位置。
+目前只知道这座城的名字和位置。
 
 ## ui.travel.title
 
@@ -1067,7 +1059,7 @@ The Book of Far Roads
 
 ## ui.city.you_are_here
 
-你在这里
+当前所在
 
 ## ui.map.nearby
 
@@ -1147,7 +1139,7 @@ The Book of Far Roads
 
 ## ui.stay.work_result
 
-你在这里做%s，度过%d个月，攒下%s银。
+在这里做%s，度过%d个月，攒下%s银。
 
 ## ui.stay.credit_intro
 
@@ -1195,7 +1187,7 @@ The Book of Far Roads
 
 ## ui.stay.end_intro
 
-路不一定非要走到底。你可以在这里安家，也可以承认这次远行未竟。两种选择都会结束本局；若还想继续，随时回到城里。
+这段旅程可以在这里结束：留城安家，或记下未走完的路。两种选择都会保存结局。若想继续赶路，返回城内即可。
 
 ## ui.stay.end.settled
 
@@ -1207,7 +1199,7 @@ The Book of Far Roads
 
 ## ui.stay.end.confirm
 
-你选择了「%s」。确认后本局停止行动，并保存结局；未偿债务会如实写在结尾。
+已选择「%s」。确认后本局停止行动并保存结局；未偿债务会写在结尾。
 
 ## ui.stay.end.commit
 
@@ -1215,11 +1207,11 @@ The Book of Far Roads
 
 ## ui.stay.epilogue.settled
 
-你在%s收起了行囊。街坊渐渐记住了你的名字，洗衣声、叫卖声与晚饭的烟火，成了日子本身。地图没有画完，生活还在继续。
+行囊在%s收起，街坊渐渐记住了这位留下的旅人。洗衣声、叫卖声与晚饭的烟火，成了日子本身。地图没有画完，生活还在继续。
 
 ## ui.stay.epilogue.failed
 
-你在%s合上旅程簿。这次远行没能走到原先想去的地方。你记下最后的盘缠与欠账，把走过的路留在书里；这趟旅程到此为止。
+旅程簿在%s合上。这次远行没能走到原先想去的地方。最后的盘缠与欠账、已经走过的路，都留在书里；这趟旅程到此为止。
 
 ## ui.stay.summary
 
@@ -1259,7 +1251,7 @@ The Book of Far Roads
 
 ## ui.stay.job.inn.body
 
-劈柴、扫院、铺床，替掌柜照看晚到的客人。你听来往旅人说新路，也可以先在这里过一阵安稳日子。
+劈柴、扫院、铺床，替掌柜照看晚到的客人。来往旅人说起新路，客栈也渐渐成了熟悉的地方。
 
 ## ui.stay.job.ledger
 
@@ -1267,7 +1259,7 @@ The Book of Far Roads
 
 ## ui.stay.job.ledger.body
 
-凭商旅经验替店家清点货物、核对账目。熟悉的买卖手艺，让你在异乡也能挣一份工钱。
+凭商旅经验替店家清点货物、核对账目。买卖手艺在异乡也能换来一份工钱。
 
 ## ui.stay.job.horses
 
@@ -1275,7 +1267,7 @@ The Book of Far Roads
 
 ## ui.stay.job.horses.body
 
-替马房添草、饮马、修整鞍具。你熟悉草原牲口的脾性，商队出发前总愿找你搭把手。
+替马房添草、饮马、修整鞍具。熟悉草原牲口的脾性，商队出发前也常有人来请帮忙。
 
 ## ui.stay.job.maps
 
@@ -1283,7 +1275,7 @@ The Book of Far Roads
 
 ## ui.stay.job.maps.body
 
-替行商整理路程、抄绘舆图。别人把地名说给你听，你把它们端端正正落在纸上。
+替行商整理路程、抄绘舆图。行商说出地名，绘图的人将它们端端正正落在纸上。
 
 ## ui.stay.job.teaching
 
@@ -1291,7 +1283,7 @@ The Book of Far Roads
 
 ## ui.stay.job.teaching.body
 
-凭求学经历替人教读、讲解书信。课散以后，你也有自己的时间看看这座城。
+凭求学经历替人教读、讲解书信。课散以后，还能沿街看看这座城。
 
 ## ui.stay.job.interpreting
 
@@ -1299,7 +1291,7 @@ The Book of Far Roads
 
 ## ui.stay.job.interpreting.body
 
-用熟悉的语言替过往行商沟通货价、住处与行期。两边听明白了，便付你约好的酬劳。
+用熟悉的语言替过往行商沟通货价、住处与行期。两边听明白了，便付约好的酬劳。
 
 ## ui.stay.job.healing
 
@@ -1351,7 +1343,7 @@ The Book of Far Roads
 
 ## ui.guide.goal_arrived
 
-你已抵达%s。此后的路仍由你决定。
+已经抵达%s。下一段路可以从这里出发。
 
 ## ui.guide.explore
 

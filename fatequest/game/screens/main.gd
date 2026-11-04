@@ -138,7 +138,6 @@ var _transit_generation := 0
 var _draw_rng: Rng
 var _drawn_archetype: Dictionary = {}
 var _draw_candidates: Array = []
-var _selected_era_id := "era-1292"
 var _draw_count := 0
 var _character_confirmed := false
 var _draw_card: VBoxContainer
@@ -280,9 +279,7 @@ func _build_desk() -> void:
 	desk_paper.content_margin_bottom = 20
 	scroll.add_theme_stylebox_override("panel", desk_paper)
 
-	# The first view is deliberately one quiet leaf: what this game is, a short
-	# epigraph, and one way forward. Campaign controls live on the next leaf so
-	# the opening never reads like a settings panel.
+	# The first leaf leads straight to three complete traveller candidates.
 	var opening_leaf := VBoxContainer.new()
 	opening_leaf.name = "OpeningLeaf"
 	opening_leaf.add_theme_constant_override("separation", Metrics.sm())
@@ -336,50 +333,24 @@ func _build_desk() -> void:
 		opening_leaf.add_child(cont)
 
 	var begin_new := Panels.primary_button(I18n.t("ui.boot.begin_new"),
-		_show_journey_setup)
+		_draw_character)
 	begin_new.name = "BeginNewJourneyButton"
 	opening_leaf.add_child(begin_new)
-
-	var journey_setup := VBoxContainer.new()
-	journey_setup.name = "JourneySetup"
-	journey_setup.visible = false
-	journey_setup.add_theme_constant_override("separation", Metrics.sm())
-	_desk.add_child(journey_setup)
-
-	var draw_btn := Panels.primary_button(I18n.t("ui.draw_character"), _draw_character)
-	draw_btn.name = "CharacterDrawButton"
-	var era_label := Panels.translated_label("ui.boot.choose_era",
-		UiScale.body(), Palette.ink_soft())
-	era_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	journey_setup.add_child(era_label)
-	var eras := HFlowContainer.new()
-	eras.alignment = FlowContainer.ALIGNMENT_CENTER
-	eras.add_theme_constant_override("separation", Metrics.xs())
-	for era in db.get_table("campaign_eras"):
-		var era_id := String(era.get("id", ""))
-		var era_btn := Panels.styled_button(I18n.t(String(era.get("name", era_id))),
-			_select_campaign_era.bind(era_id))
-		era_btn.set_meta("era_id", era_id)
-		Panels.select_button(era_btn, era_id == _selected_era_id)
-		era_btn.tooltip_text = I18n.t(String(era.get("description", "")))
-		eras.add_child(era_btn)
-	journey_setup.add_child(eras)
-	journey_setup.add_child(draw_btn)
 
 	# The travel books remain available, but as a secondary shelf below the
 	# actual way into the game. Their seven illustrated covers used to compete
 	# with the title, statistics, era picker and fate wheel all at once.
-	journey_setup.add_child(Panels.rule())
+	opening_leaf.add_child(Panels.rule())
 	var books_label := Panels.translated_label("ui.books_desk",
 		UiScale.ui(), Palette.ink_faint())
 	books_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	journey_setup.add_child(books_label)
+	opening_leaf.add_child(books_label)
 	var books := HBoxContainer.new()
 	books.name = "TravellerBooks"
 	books.alignment = BoxContainer.ALIGNMENT_CENTER
 	books.add_theme_constant_override("separation", 6)
-	journey_setup.add_child(books)
-	journey_setup.add_child(Panels.styled_button(I18n.t("ui.books_desk") + " →", func(): _open_book()))
+	opening_leaf.add_child(books)
+	opening_leaf.add_child(Panels.styled_button(I18n.t("ui.books_desk") + " →", func(): _open_book()))
 	for bid in MapArt.BOOKS:
 		var cover := MapArt.book_cover(bid)
 		if cover == null:
@@ -401,7 +372,7 @@ func _build_desk() -> void:
 		btn.pressed.connect(func(): _open_book(open_id))
 		books.add_child(btn)
 
-	_desk_intro_nodes.assign([opening_leaf, journey_setup])
+	_desk_intro_nodes.assign([opening_leaf])
 	_draw_card = VBoxContainer.new()
 	_draw_card.name = "CharacterDrawCard"
 	_draw_card.add_theme_constant_override("separation", Metrics.xs())
@@ -424,17 +395,6 @@ func _sync_boot_layout() -> void:
 	var cards := _draw_card.get_node_or_null("CharacterCandidates") as GridContainer
 	if cards != null:
 		cards.columns = clampi(int((scroll.custom_minimum_size.x - 20.0) / 350.0), 1, 3)
-
-
-func _show_journey_setup() -> void:
-	if _desk == null:
-		return
-	var opening_leaf := _desk.get_node_or_null("OpeningLeaf") as Control
-	var journey_setup := _desk.get_node_or_null("JourneySetup") as Control
-	if opening_leaf != null:
-		opening_leaf.visible = false
-	if journey_setup != null:
-		journey_setup.visible = true
 
 
 func _opening_epigraph() -> Control:
@@ -461,48 +421,20 @@ func _opening_epigraph() -> Control:
 	return box
 
 
-func _archetype_button(a: Dictionary) -> Control:
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 8)
-	row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-
-	var culture := String(a.get("culture", "latin"))
-	var faith := String(a.get("faith", "latin"))
-	var c_icon := MapArt.culture_icon(culture)
-	if c_icon != null:
-		var tr := TextureRect.new()
-		tr.texture = c_icon
-		tr.custom_minimum_size = Vector2(36, 36)
-		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		row.add_child(tr)
-	var f_icon := MapArt.faith_icon(faith)
-	if f_icon != null:
-		var tr2 := TextureRect.new()
-		tr2.texture = f_icon
-		tr2.custom_minimum_size = Vector2(28, 28)
-		tr2.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		tr2.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		row.add_child(tr2)
-
-	var btn := Button.new()
-	Panels.style_button(btn)
-	btn.text = "%s  →  %s" % [I18n.t(a.get("name", "")), _city_name(a.get("start", ""))]
-	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	btn.pressed.connect(_begin.bind(a))
-	row.add_child(btn)
-	return row
-
-
 func _draw_character() -> void:
-	var pool := db.get_table("archetypes")
-	var era := db.get_record(_selected_era_id)
-	if pool.is_empty() or era.is_empty():
+	if state != null or _desk == null:
 		return
-	_draw_candidates = CharacterGeneratorCore.generate_slate(pool, era,
-		_draw_rng.fork("slate:%s:%d" % [_selected_era_id, _draw_count]), 3)
+	var pool := db.get_table("archetypes")
+	var eras := db.get_table("campaign_eras")
+	var names := db.get_table("character_names")
+	if pool.is_empty() or eras.is_empty() or names.is_empty():
+		return
+	_draw_candidates = CharacterGeneratorCore.generate_slate(pool, eras, names,
+		_draw_rng.fork("slate:%d" % _draw_count), 3)
+	if _draw_candidates.size() != 3:
+		return
 	_draw_count += 1
-	_drawn_archetype = _draw_candidates[0] if not _draw_candidates.is_empty() else {}
+	_drawn_archetype = _draw_candidates[0]
 	for intro in _desk_intro_nodes:
 		if is_instance_valid(intro):
 			intro.visible = false
@@ -512,12 +444,24 @@ func _draw_character() -> void:
 	var title_panel := PanelContainer.new()
 	title_panel.name = "CharacterDrawHeading"
 	title_panel.add_theme_stylebox_override("panel", Palette.panel_style())
+	var heading_box := VBoxContainer.new()
+	heading_box.add_theme_constant_override("separation", Metrics.xs())
+	title_panel.add_child(heading_box)
 	var title := Panels.heading(I18n.t("ui.boot.choose_traveller"))
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	if I18n.lang() == "zh":
 		title.add_theme_font_override("font", _boot_cjk_font())
-	title_panel.add_child(title)
+	heading_box.add_child(title)
+	var era := db.get_record(String(_draw_candidates[0].get("era_id", "")))
+	var era_context := Panels.label("%s · %s" % [
+		I18n.t(String(era.get("name", ""))),
+		I18n.t(String(era.get("description", "")))],
+		UiScale.ui(), Palette.ink_soft())
+	era_context.name = "EraContext"
+	era_context.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	era_context.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	heading_box.add_child(era_context)
 	_draw_card.add_child(title_panel)
 	var cards := GridContainer.new()
 	cards.name = "CharacterCandidates"
@@ -532,40 +476,42 @@ func _draw_character() -> void:
 	actions.alignment = FlowContainer.ALIGNMENT_CENTER
 	actions.add_theme_constant_override("separation", Metrics.sm())
 	actions.add_child(Panels.translated_button("ui.boot.draw_again", _draw_character))
-	actions.add_child(Panels.translated_button("ui.boot.change_era",
-		_return_to_era_selection))
+	actions.add_child(Panels.translated_button("ui.boot.back_to_desk",
+		_return_to_opening))
 	_draw_card.add_child(actions)
 	_sync_boot_layout()
 	var scroll := get_node_or_null("BootCenter/BootScroll") as ScrollContainer
 	if scroll != null:
 		scroll.scroll_vertical = 0
+	call_deferred("_focus_first_character_choice")
 
 
-func _return_to_era_selection() -> void:
+func _focus_first_character_choice() -> void:
+	if _desk == null or _draw_card == null or _draw_candidates.is_empty():
+		return
+	var cards := _draw_card.get_node_or_null("CharacterCandidates") as GridContainer
+	if cards == null or cards.get_child_count() == 0:
+		return
+	var accept := cards.get_child(0).find_child("AcceptCharacterButton", true, false) as Button
+	if accept != null:
+		accept.grab_focus()
+
+
+func _return_to_opening() -> void:
+	if _desk == null or state != null:
+		return
 	_draw_candidates.clear()
 	_drawn_archetype.clear()
 	for child in _draw_card.get_children():
 		_draw_card.remove_child(child)
 		child.queue_free()
-	_show_journey_setup()
-
-
-func _select_campaign_era(era_id: String) -> void:
-	for button in _desk.find_children("*", "Button", true, false):
-		if button.has_meta("era_id"):
-			Panels.select_button(button, button.get_meta("era_id") == era_id)
-	_selected_era_id = era_id
-	_draw_count = 0
-	_draw_candidates.clear()
-	_drawn_archetype.clear()
-	for child in _draw_card.get_children():
-		_draw_card.remove_child(child)
-		child.queue_free()
-	var era := db.get_record(era_id)
-	var description := Panels.label(I18n.t(String(era.get("description", ""))),
-		UiScale.ui(), Palette.ink_soft())
-	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_draw_card.add_child(description)
+	var opening_leaf := _desk.get_node_or_null("OpeningLeaf") as Control
+	if opening_leaf != null:
+		opening_leaf.visible = true
+		var begin := opening_leaf.get_node_or_null("BeginNewJourneyButton") as Button
+		if begin != null:
+			begin.grab_focus()
+	_sync_boot_layout()
 
 
 ## Mixed Latin numbers and Han text can select an incomplete default fallback
@@ -587,9 +533,13 @@ func _character_candidate_card(candidate: Dictionary) -> Control:
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", Metrics.xs())
 	panel.add_child(box)
-	var character_name := Panels.heading(I18n.t(String(candidate.get("name", ""))))
+	var character_name := Panels.heading(I18n.t(String(candidate.get("person_name", ""))))
 	character_name.name = "CharacterName"
 	box.add_child(character_name)
+	var role := Panels.label(I18n.t(String(candidate.get("name", ""))),
+		UiScale.body(), Palette.ink())
+	role.name = "CharacterRole"
+	box.add_child(role)
 	var description_key := String(candidate.get("description", ""))
 	if not description_key.is_empty():
 		var description := Panels.label(I18n.t(description_key), UiScale.ui(), Palette.ink())
@@ -608,6 +558,30 @@ func _character_candidate_card(candidate: Dictionary) -> Control:
 		UiScale.ui(), Palette.ink_soft()))
 	box.add_child(Panels.label(I18n.t("ui.boot.start_city") % _city_name(
 		String(candidate.get("start", ""))), UiScale.body(), Palette.ink()))
+	var goal: Dictionary = candidate.get("goal", {})
+	var goal_key := "ui.guide.goal_network" if goal.get("type", "") == "network" \
+		else "ui.guide.goal_reach"
+	var goal_label := Panels.label(I18n.t(goal_key) % _city_name(
+		String(goal.get("target", ""))), UiScale.ui(), Palette.ink_soft())
+	goal_label.name = "CharacterGoal"
+	box.add_child(goal_label)
+	var languages: Array[String] = []
+	for language in candidate.get("startKit", {}).get("languages", []):
+		languages.append(I18n.t("lang.%s" % String(language)))
+	var kit := Panels.label(I18n.t("ui.boot.kit") % [
+		int(candidate.get("startKit", {}).get("coins", 0)) / Market.FEN,
+		I18n.list(PackedStringArray(languages))], UiScale.ui(), Palette.ink_soft())
+	kit.name = "CharacterKit"
+	kit.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(kit)
+	var items: Array[String] = []
+	for item in candidate.get("startKit", {}).get("items", []):
+		items.append(I18n.t("item.%s" % String(item)))
+	if not items.is_empty():
+		var item_label := Panels.label(I18n.t("ui.boot.items") % I18n.list(
+			PackedStringArray(items)), UiScale.ui(), Palette.ink_soft())
+		item_label.name = "CharacterItems"
+		box.add_child(item_label)
 	var fate: Dictionary = candidate.get("fate", {})
 	box.add_child(Panels.label(I18n.t("ui.boot.fate") % [
 		int(fate.get("travel", 15)), int(fate.get("rapport", 15)),
@@ -633,15 +607,16 @@ func _character_candidate_card(candidate: Dictionary) -> Control:
 	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	box.add_child(spacer)
 	var accept := Panels.primary_button(I18n.t("ui.accept_destiny") % _city_name(
-		String(candidate.get("start", ""))), _choose_character.bind(candidate))
+		String(candidate.get("start", ""))), _choose_character.bind(candidate, _draw_count))
 	accept.name = "AcceptCharacterButton"
 	accept.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(accept)
 	return panel
 
 
-func _choose_character(candidate: Dictionary) -> void:
-	if _character_confirmed or not _draw_candidates.any(func(current: Dictionary):
+func _choose_character(candidate: Dictionary, draw_number: int) -> void:
+	if _character_confirmed or state != null or draw_number != _draw_count \
+		or not _draw_candidates.any(func(current: Dictionary):
 		return current.get("candidate_id", "") == candidate.get("candidate_id", "")):
 		return
 	_drawn_archetype = candidate
@@ -704,6 +679,7 @@ func _begin(archetype: Dictionary) -> void:
 		birth_year, birth_month, birth_day).jdn
 	state.character = {
 		"archetype_id": _archetype_id,
+		"person_name": String(archetype.get("person_name", "")),
 		"background": String(archetype.get("culture", "latin")),
 		"faith": String(archetype.get("faith", "latin")),
 		"start_city": String(state.city),
@@ -2460,6 +2436,12 @@ func _open_bag() -> void:
 	var list: VBoxContainer = _bag["list"]
 	for c in list.get_children():
 		c.queue_free()
+	var person_name := String(state.character.get("person_name", ""))
+	if not person_name.is_empty():
+		var role := db.get_record(String(state.character.get("archetype_id", "")))
+		list.add_child(Panels.label(I18n.t("ui.bag.traveller") % [
+			I18n.t(person_name), I18n.t(String(role.get("name", "")))],
+			UiScale.body(), Palette.ink()))
 
 	var here := db.get_record(state.city)
 	var rows := 0

@@ -22,11 +22,11 @@ stamps:
 
 ## ui.city.enter_here
 
-你已在此地。进入城内，继续探索与拜访。
+已经到达此地。进入城内，继续探索与拜访。
 
 ## ui.city.enter_remote
 
-你还没有抵达这里。请沿已知路线前往这座城市。
+尚未抵达此地。请沿已知路线前往这座城市。
 
 ## ui.city.enter_travelling
 
@@ -34,7 +34,7 @@ stamps:
 
 ## ui.city.enter_pending
 
-你还有尚未处理的剧情。先继续这段见闻，再回到城内探索。
+当前剧情尚未结束。读完这段见闻，再回到城内探索。
 
 ## ui.city.enter_ended
 

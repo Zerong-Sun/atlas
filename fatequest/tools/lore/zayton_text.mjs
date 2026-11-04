@@ -8,17 +8,30 @@
  * carries origin:"source"; the sea-goddess temple is authored, because Polo
  * does not describe it, and it is labelled as such in the data.
  *
- * Chinese: only the short strings (titles, choice labels) are set here.
- * Long-form Chinese arrives through the review-translation pass; until then
- * I18n falls back to English rather than showing raw keys.
+ * This is a legacy seeding script. Story-authored keys in either language are
+ * left to content/story, including titles and choice labels.
  *
  * Usage: node tools/lore/zayton_text.mjs
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../..", import.meta.url));
+const STORY = join(ROOT, "content/story");
+
+function authoredKeys(lang) {
+  const keys = new Set();
+  for (const unit of readdirSync(STORY, { withFileTypes: true })) {
+    if (!unit.isDirectory()) continue;
+    const source = join(STORY, unit.name, `${lang}.md`);
+    if (!existsSync(source)) continue;
+    for (const match of readFileSync(source, "utf8").matchAll(/^##\s+(\S+)\s*$/gm)) {
+      keys.add(match[1]);
+    }
+  }
+  return keys;
+}
 
 // ---------------------------------------------------------------- English
 const EN = {
@@ -144,8 +157,7 @@ const EN = {
 };
 
 // ------------------------------------------------------------------ Chinese
-// Short strings only. Long-form prose waits for the review-translation pass
-// (LORE_PIPELINE.md §4); until it lands, I18n falls back to the English above.
+// These seed values apply only where content/story has no authored entry.
 const ZH = {
   "ev.zayton.entry.title": "刺桐港",
   "ev.zayton.entry.choice.customs": "向大汗的税吏报关",
@@ -191,8 +203,10 @@ const ZH = {
 function merge(file, add) {
   const p = join(ROOT, "content/i18n", file);
   const cur = JSON.parse(readFileSync(p, "utf8"));
+  const owned = authoredKeys(file.replace(/\.json$/, ""));
   let n = 0;
   for (const [k, v] of Object.entries(add)) {
+    if (owned.has(k)) continue;
     if (cur[k] !== v) { cur[k] = v; n++; }
   }
   const sorted = Object.fromEntries(Object.keys(cur).sort().map((k) => [k, cur[k]]));
@@ -201,5 +215,4 @@ function merge(file, add) {
 }
 
 console.log(`en: ${merge("en.json", EN)} strings written`);
-console.log(`zh: ${merge("zh.json", ZH)} strings written (short only; long-form pending translation)`);
-console.log(`   ${Object.keys(EN).length - Object.keys(ZH).length} keys await Chinese long-form`);
+console.log(`zh: ${merge("zh.json", ZH)} generator-owned strings written`);

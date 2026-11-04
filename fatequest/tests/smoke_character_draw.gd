@@ -23,21 +23,11 @@ func _settle() -> void:
 	for frame in range(5):
 		await process_frame
 
-func _named_draw_seed(main: Node) -> Rng:
-	# Exercise both authored introductions through the actual three-card draw,
-	# without replacing the UI's candidates after it has rendered them.
-	var era: Dictionary = main.db.get_record(main._selected_era_id)
-	for index in 100:
-		var seed_rng := Rng.new("named-opening:%d" % index)
-		var slate: Array = CharacterGenerator.generate_slate(main.db.get_table("archetypes"),
-			era, seed_rng.fork("slate:%s:0" % main._selected_era_id), 3)
-		var ids: Array = slate.map(func(candidate: Dictionary): return candidate.id)
-		if "battuta" in ids and "polo" in ids:
-			return seed_rng
-	_check(false, "fixture offers Tangier and Venice on the same actual draw")
-	return Rng.new("named-opening:fallback")
-
 func _init() -> void:
+	if not OS.get_user_data_dir().ends_with("FateQuest-UI-Audit"):
+		printerr("CHARACTER_DRAW: use tools/test/run_isolated_godot.mjs")
+		quit(1)
+		return
 	# Let the native window/render surface initialize before the first resize.
 	await process_frame
 	for language in ["zh", "en"]:
@@ -55,33 +45,46 @@ func _init() -> void:
 		scroll.ensure_control_visible(begin)
 		await _settle()
 		_check(_inside(begin.get_global_rect(), viewport), language + ": beginning button reachable")
+		main._draw_rng = Rng.new("character-smoke")
 		begin.pressed.emit()
 		await _settle()
-		var setup := main._desk.get_node("JourneySetup") as Control
-		var draw := setup.get_node("CharacterDrawButton") as Button
-		scroll.ensure_control_visible(draw)
-		await _settle()
-		_check(_inside(draw.get_global_rect(), viewport), language + ": draw button reachable")
-		main._draw_rng = _named_draw_seed(main)
-		draw.pressed.emit()
-		await _settle()
-		var expected_names := {
-			"battuta": I18n.t("arch.battuta.name"),
-			"polo": I18n.t("arch.polo.name"),
-		}
 		var opening_cards := main._draw_card.get_node("CharacterCandidates") as GridContainer
+		var first_accept := opening_cards.get_child(0).find_child(
+			"AcceptCharacterButton", true, false) as Button
+		_check(main.get_viewport().gui_get_focus_owner() == first_accept,
+			language + ": keyboard focus enters the character choices")
+		var era_context := main._draw_card.find_child("EraContext", true, false) as Label
+		var shared_era: Dictionary = main.db.get_record(String(main._draw_candidates[0].era_id))
+		_check(era_context != null and era_context.text.contains(I18n.t(shared_era.name)),
+			language + ": the shared historical setting appears above all choices")
 		for index in main._draw_candidates.size():
 			var candidate: Dictionary = main._draw_candidates[index]
-			if not expected_names.has(candidate.id):
-				continue
+			_check(candidate.era_id == shared_era.id,
+				language + ": candidate belongs to the displayed era")
 			var card: Control = opening_cards.get_child(index)
 			var identity := card.find_child("CharacterName", true, false) as Label
-			_check(identity != null and identity.text == expected_names[candidate.id],
-				language + ": current authored identity appears on its card")
+			_check(identity != null and identity.text == I18n.t(candidate.person_name),
+				language + ": generated person's name appears on the card")
+			var role := card.find_child("CharacterRole", true, false) as Label
+			_check(role != null and role.text == I18n.t(candidate.name),
+				language + ": occupational identity appears on the card")
 			var description := card.find_child("CharacterDescription", true, false) as Label
 			_check(description != null and description.text == I18n.t(candidate.description)
 				and not description.text.begins_with("arch."),
-				language + ": opening circumstances appear on the actual candidate card")
+				language + ": identity background appears on the actual candidate card")
+			var kit := card.find_child("CharacterKit", true, false) as Label
+			_check(kit != null and kit.text.contains(str(int(candidate.startKit.coins) / Market.FEN))
+				and kit.text.contains(I18n.t("lang.%s" % candidate.startKit.languages[0])),
+				language + ": funds and language appear before the choice")
+			var goal := card.find_child("CharacterGoal", true, false) as Label
+			_check(goal != null and goal.text.contains(
+				main._city_name(String(candidate.goal.target))),
+				language + ": the role's goal appears before the choice")
+			if not candidate.startKit.items.is_empty():
+				var items := card.find_child("CharacterItems", true, false) as Label
+				_check(items != null and items.text.contains(I18n.t(
+					"item.%s" % candidate.startKit.items[0])),
+					language + ": starting items appear before the choice")
 		for size_value in [Vector2i(960, 640), Vector2i(1280, 720), Vector2i(960, 640)]:
 			root.content_scale_size = size_value
 			root.size = size_value
@@ -108,15 +111,20 @@ func _init() -> void:
 		await _settle()
 		_check(_inside(actions.get_global_rect(), viewport), language + ": reroll and return reachable")
 		if DisplayServer.get_name() != "headless":
+			root.content_scale_size = Vector2i(1280, 720)
+			root.size = Vector2i(1280, 720)
+			await _settle()
 			scroll.scroll_vertical = 0
 			await _settle()
 			await RenderingServer.frame_post_draw
 			main.get_viewport().get_texture().get_image().save_png(
 				"res://build/playtest/character-draw-large-%s.png" % language)
-		main._return_to_era_selection()
+		main._return_to_opening()
 		await _settle()
-		_check(setup.visible and not main._desk.get_node("OpeningLeaf").visible,
-			language + ": change era returns to actionable setup")
+		_check(main._desk.get_node("OpeningLeaf").visible,
+			language + ": return opens the reading desk")
+		_check(main.get_viewport().gui_get_focus_owner() == begin,
+			language + ": return restores focus to the new journey action")
 		main._draw_character()
 		main._draw_character()
 		_check(main._draw_card.get_child_count() == 3,
@@ -131,6 +139,46 @@ func _init() -> void:
 		await _settle()
 		_check(main.state != null and main.state.city == chosen.get("start", ""),
 			language + ": third candidate enters their own starting city")
+		_check(main.state != null and main.state.character.get("person_name", "") == chosen.person_name
+			and main.state.character.get("era_id", "") == chosen.era_id,
+			language + ": chosen name and era enter the persistent character state")
+		_check(main.state.coins == int(chosen.startKit.coins)
+			and main.state.faith == chosen.faith and main.state.fate == chosen.fate,
+			language + ": displayed funds, faith and fate become gameplay values")
+		for spoken in chosen.startKit.languages:
+			_check(String(spoken) in main.state.languages,
+				language + ": displayed language becomes a gameplay language")
+		_check(main.state.jdn == GameDate.from_gregorian(int(chosen.start_date.year),
+			int(chosen.start_date.month), int(chosen.start_date.day)).jdn
+			and main.state.birthdate_jdn == GameDate.from_gregorian(int(chosen.birth.year),
+				int(chosen.birth.month), int(chosen.birth.day)).jdn,
+			language + ": displayed era and birth date set the actual clocks")
+		var saved := SaveGame.serialize(main.state, main.clock)
+		var restored := SaveGame.deserialize(saved)
+		_check(not restored.is_empty() and restored["state"].character.get("person_name", "")
+			== chosen.person_name and restored["state"].character.get("era_id", "") == chosen.era_id,
+			language + ": save and load preserve the chosen name and era")
+		main.queue_free()
+		await _settle()
+	# The third card was chosen above; verify the other two button bindings too.
+	for chosen_index in [0, 1]:
+		var main = load("res://game/screens/main.tscn").instantiate()
+		root.add_child(main)
+		await _settle()
+		main._draw_rng = Rng.new("position:%d" % chosen_index)
+		var begin := main._desk.get_node("OpeningLeaf/BeginNewJourneyButton") as Button
+		begin.pressed.emit()
+		await _settle()
+		var chosen: Dictionary = main._draw_candidates[chosen_index]
+		var cards := main._draw_card.get_node("CharacterCandidates") as GridContainer
+		var accept := cards.get_child(chosen_index).find_child(
+			"AcceptCharacterButton", true, false) as Button
+		accept.pressed.emit()
+		await _settle()
+		_check(main.state != null and main.state.city == chosen.start
+			and main.state.character.get("archetype_id", "") == chosen.id
+			and main.state.character.get("person_name", "") == chosen.person_name,
+			"candidate button %d starts its own person and city" % chosen_index)
 		main.queue_free()
 		await _settle()
 	for failure in failures:

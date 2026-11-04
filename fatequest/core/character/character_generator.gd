@@ -13,19 +13,67 @@ const DEFAULT_AGE_MAX := 60
 const FATE_KEYS := ["travel", "rapport", "wealth"]
 
 
-static func generate_slate(archetypes: Array, era: Dictionary, rng: Rng,
+static func generate_slate(archetypes: Array, eras: Array, names: Array, rng: Rng,
 		count: int = 3) -> Array:
-	if archetypes.is_empty() or era.is_empty() or count <= 0:
+	if archetypes.is_empty() or eras.is_empty() or names.is_empty() or count <= 0:
 		return []
+	# One draw is one historical moment. Its three choices must be comparable
+	# contemporaries, rather than travellers from different centuries.
+	var viable_eras: Array = []
+	for era in eras:
+		var cultures := {}
+		for archetype in archetypes:
+			var available_eras: Array = archetype.get("availableEras", [])
+			if not available_eras.is_empty() and era.get("id", "") not in available_eras:
+				continue
+			var culture := String(archetype.get("culture", ""))
+			if culture.is_empty() or String(archetype.get("id", "")).is_empty():
+				continue
+			for person in names:
+				if person.get("culture", "") == culture \
+					and person.get("faith", "") == archetype.get("faith", "") \
+					and not String(person.get("name", "")).is_empty():
+					cultures[culture] = true
+					break
+		if cultures.size() >= count:
+			viable_eras.append(era)
+	if viable_eras.is_empty():
+		return []
+	var era: Dictionary = rng.fork("era").pick(viable_eras)
 	var pool := rng.fork("archetype-order").shuffle(archetypes)
 	var out: Array = []
-	for i in mini(count, pool.size()):
-		out.append(generate_candidate(pool[i], era, rng.fork("candidate:%d" % i), i))
-	return out
+	var used_cultures := {}
+	var used_names := {}
+	for archetype in pool:
+		if out.size() >= count:
+			break
+		var available_eras: Array = archetype.get("availableEras", [])
+		if not available_eras.is_empty() and era.get("id", "") not in available_eras:
+			continue
+		var culture := String(archetype.get("culture", ""))
+		if culture.is_empty() or String(archetype.get("id", "")).is_empty() \
+			or used_cultures.has(culture):
+			continue
+		var available_names: Array = []
+		for person in names:
+			if person.get("culture", "") == culture \
+				and person.get("faith", "") == archetype.get("faith", "") \
+				and not String(person.get("name", "")).is_empty() \
+				and not used_names.has(String(person.get("name", ""))):
+				available_names.append(person)
+		if available_names.is_empty():
+			continue
+		var index := out.size()
+		var person: Dictionary = rng.fork("name:%d" % index).pick(available_names)
+		out.append(generate_candidate(archetype, era,
+			rng.fork("candidate:%d" % index), index, person))
+		used_cultures[culture] = true
+		used_names[String(person.get("name", ""))] = true
+	return out if out.size() == count else []
 
 
 static func generate_candidate(archetype: Dictionary, era: Dictionary, rng: Rng,
-		index: int = 0) -> Dictionary:
+		index: int, person: Dictionary) -> Dictionary:
 	var start: Dictionary = era.get("startDate", {})
 	var start_year := int(start.get("year", 1292))
 	var age_range: Array = era.get("ageRange", [DEFAULT_AGE_MIN, DEFAULT_AGE_MAX])
@@ -55,12 +103,14 @@ static func generate_candidate(archetype: Dictionary, era: Dictionary, rng: Rng,
 		fate[key] = clampi(15 + jitter + authored, 0, 31)
 
 	var candidate := archetype.duplicate(true)
-	var fingerprint := "%s:%s:%d:%d-%02d-%02d:%d-%d-%d" % [
-		String(era.get("id", "era")), String(archetype.get("id", "traveller")), index,
-		birth_year, birth_month, birth_day, fate.travel, fate.rapport, fate.wealth]
+	var fingerprint := "%s:%s:%s:%d:%d-%02d-%02d:%d-%d-%d" % [
+		String(era.get("id", "era")), String(archetype.get("id", "traveller")),
+		String(person.get("id", "")), index, birth_year, birth_month, birth_day,
+		fate.travel, fate.rapport, fate.wealth]
 	candidate["candidate_id"] = "%s:%s:%08x" % [String(era.get("id", "era")),
 		String(archetype.get("id", "traveller")), Rng.hash_seed(fingerprint)]
 	candidate["era_id"] = String(era.get("id", ""))
+	candidate["person_name"] = String(person.get("name", ""))
 	candidate["start_date"] = {
 		"year": start_year,
 		"month": int(start.get("month", 4)),
@@ -86,9 +136,11 @@ static func age_on_date(birth: Dictionary, date: Dictionary) -> int:
 
 static func validate_candidate(candidate: Dictionary) -> Array[String]:
 	var errors: Array[String] = []
-	for field in ["id", "candidate_id", "era_id", "start", "birth", "start_date", "fate"]:
+	for field in ["id", "candidate_id", "era_id", "person_name", "start", "birth", "start_date", "fate"]:
 		if not candidate.has(field):
 			errors.append("CHARACTER_FIELD_MISSING:%s" % field)
+	if String(candidate.get("person_name", "")).is_empty():
+		errors.append("CHARACTER_NAME_MISSING")
 	var birth: Dictionary = candidate.get("birth", {})
 	var start: Dictionary = candidate.get("start_date", {})
 	if int(birth.get("age", -1)) < DEFAULT_AGE_MIN:

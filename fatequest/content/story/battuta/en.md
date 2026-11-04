@@ -318,7 +318,7 @@ You spend the day sorting the eastern letters by their next carrier and copying 
 
 ## arch.battuta.name
 
-A Traveller from Tangier
+Pilgrim Traveller
 
 ## arch.battuta.obsession
 

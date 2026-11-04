@@ -29,6 +29,8 @@ jobs:
       # translation may be older than the source it was made from.
       - run: node tools/lore/story.mjs check
       - run: node tests/test_story_cli.mjs
+      - run: node tests/test_story_viewpoint.mjs
+      - run: node tests/test_story_generator_ownership.mjs
       - run: node tools/lore/story.mjs build && git diff --exit-code -- content/i18n/en.json content/i18n/zh.json
       - run: node tests/test_i18n_lines.mjs
       - run: node tools/validate/validate.mjs
@@ -46,6 +48,7 @@ jobs:
     timeout-minutes: 15
     env:
       GODOT_VERSION: "4.7.1"
+      GODOT_BIN: /usr/local/bin/godot
     steps:
       - uses: actions/checkout@v4
         with:
@@ -66,13 +69,16 @@ jobs:
         run: godot --headless --script tests/run_tests.gd
       - name: Boot smoke (real main scene)
         working-directory: fatequest
-        run: godot --headless --script tests/smoke_boot.gd
+        run: node tools/test/run_isolated_godot.mjs tests/smoke_boot.gd
       - name: Play smoke (drive the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_play.gd
       - name: Zayton vertical slice
         working-directory: fatequest
         run: godot --headless --script tests/smoke_zayton.gd
+      - name: Zayton scholar pages
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_zayton_legend.gd
       - name: Market smoke (buy through the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_market.gd
@@ -107,9 +113,11 @@ jobs:
           tests/smoke_dialog_usability.gd
           tests/smoke_city_market_usability.gd
           tests/smoke_city_market_boundaries.gd
-          tests/smoke_character_draw.gd
           tests/smoke_review_edges.gd
           tests/smoke_city_card_entry.gd
+      - name: Character draw (isolated preferences and saves)
+        working-directory: fatequest
+        run: node tools/test/run_isolated_godot.mjs tests/smoke_character_draw.gd
       - name: Story result continuation and lesson boundaries
         working-directory: fatequest
         run: >-
