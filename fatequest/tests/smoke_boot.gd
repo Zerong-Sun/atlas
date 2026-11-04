@@ -18,6 +18,10 @@ func _process(_d: float) -> bool:
 ## boot regression is distinguishable from a gameplay one.
 
 func _init():
+    if not OS.get_user_data_dir().ends_with("FateQuest-UI-Audit"):
+        printerr("BOOT: use tools/test/run_isolated_godot.mjs")
+        quit(1)
+        return
     var scn = load("res://game/screens/main.tscn")
     if scn == null:
         print("BOOT: FAIL (scene did not load)")
@@ -30,18 +34,27 @@ func _init():
     var opening = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf")
     var intro = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf/GameIntroduction")
     var verse = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf/OpeningVerse/OpeningVerseLines")
-    var setup = n.get_node_or_null("BootCenter/BootScroll/BootDesk/JourneySetup")
-    if opening == null or intro == null or verse == null or setup == null:
+    var begin = n.get_node_or_null("BootCenter/BootScroll/BootDesk/OpeningLeaf/BeginNewJourneyButton")
+    if opening == null or intro == null or verse == null or begin == null:
         print("BOOT: FAIL (opening leaf incomplete)")
         quit(1)
         return
-    if not opening.visible or setup.visible or String(verse.text).count("\n") != 1:
+    if not opening.visible or String(verse.text).count("\n") != 1:
         print("BOOT: FAIL (opening leaf state or verse pair invalid)")
         quit(1)
         return
-    n._show_journey_setup()
-    if opening.visible or not setup.visible:
-        print("BOOT: FAIL (journey setup transition failed)")
+    if n._desk.get_node_or_null("JourneySetup") != null:
+        print("BOOT: FAIL (obsolete era selection is still present)")
+        quit(1)
+        return
+    begin.pressed.emit()
+    if opening.visible or n._draw_candidates.size() != 3:
+        print("BOOT: FAIL (direct character draw failed)")
+        quit(1)
+        return
+    var actions = n._draw_card.get_node_or_null("CharacterDrawActions")
+    if actions == null or actions.get_child_count() != 2:
+        print("BOOT: FAIL (reroll and return decisions are missing)")
         quit(1)
         return
 

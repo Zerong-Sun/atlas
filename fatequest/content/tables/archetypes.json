@@ -5,6 +5,7 @@
     {
       "id": "polo",
       "name": "arch.polo.name",
+      "availableEras": ["era-1292", "era-1325"],
       "description": "arch.polo.description",
       "obsession": "arch.polo.obsession",
       "start": "tauris",
@@ -42,6 +43,8 @@
     {
       "id": "steppe",
       "name": "arch.steppe.name",
+      "availableEras": ["era-1253", "era-1292", "era-1325"],
+      "description": "arch.steppe.description",
       "obsession": "arch.steppe.obsession",
       "start": "tauris",
       "goal": {
@@ -76,6 +79,7 @@
     {
       "id": "merchant",
       "name": "arch.merchant.name",
+      "description": "arch.merchant.description",
       "obsession": "arch.merchant.obsession",
       "start": "ormus",
       "goal": {
@@ -110,6 +114,7 @@
     {
       "id": "cartographer",
       "name": "arch.cartographer.name",
+      "description": "arch.cartographer.description",
       "obsession": "arch.cartographer.obsession",
       "start": "kinsay",
       "goal": { "type": "network", "target": "samarcanda" },
@@ -131,6 +136,7 @@
     {
       "id": "pilgrim-scholar",
       "name": "arch.pilgrim.name",
+      "description": "arch.pilgrim.description",
       "obsession": "arch.pilgrim.obsession",
       "start": "baldacum",
       "goal": { "type": "reach", "target": "zayton" },
@@ -152,6 +158,7 @@
     {
       "id": "translator",
       "name": "arch.translator.name",
+      "description": "arch.translator.description",
       "obsession": "arch.translator.obsession",
       "start": "samarcanda",
       "goal": { "type": "reach", "target": "cambaluc" },
@@ -173,6 +180,7 @@
     {
       "id": "healer",
       "name": "arch.healer.name",
+      "description": "arch.healer.description",
       "obsession": "arch.healer.obsession",
       "start": "balc",
       "goal": { "type": "network", "target": "ormus" },
@@ -194,6 +202,8 @@
     {
       "id": "scribe",
       "name": "arch.scribe.name",
+      "availableEras": ["era-1292", "era-1325", "era-1405"],
+      "description": "arch.scribe.description",
       "obsession": "arch.scribe.obsession",
       "start": "cambaluc",
       "goal": { "type": "network", "target": "tauris" },

@@ -67,10 +67,8 @@ func _run() -> void:
 	Motion.reduce_motion = true
 	I18n.load_lang("zh")
 	await capture("01-desk")
-	main._show_journey_setup()
-	await capture("02-journey-setup")
 	main._draw_character()
-	await capture("03-character")
+	await capture("02-character")
 	main._begin(main.db.get_record("merchant"))
 	await settle()
 	main.state.coins = 100000
