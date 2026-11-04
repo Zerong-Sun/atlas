@@ -48,6 +48,7 @@ jobs:
     timeout-minutes: 15
     env:
       GODOT_VERSION: "4.7.1"
+      GODOT_BIN: /usr/local/bin/godot
     steps:
       - uses: actions/checkout@v4
         with:
@@ -68,7 +69,7 @@ jobs:
         run: godot --headless --script tests/run_tests.gd
       - name: Boot smoke (real main scene)
         working-directory: fatequest
-        run: godot --headless --script tests/smoke_boot.gd
+        run: node tools/test/run_isolated_godot.mjs tests/smoke_boot.gd
       - name: Play smoke (drive the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_play.gd
@@ -112,9 +113,11 @@ jobs:
           tests/smoke_dialog_usability.gd
           tests/smoke_city_market_usability.gd
           tests/smoke_city_market_boundaries.gd
-          tests/smoke_character_draw.gd
           tests/smoke_review_edges.gd
           tests/smoke_city_card_entry.gd
+      - name: Character draw (isolated preferences and saves)
+        working-directory: fatequest
+        run: node tools/test/run_isolated_godot.mjs tests/smoke_character_draw.gd
       - name: Story result continuation and lesson boundaries
         working-directory: fatequest
         run: >-
