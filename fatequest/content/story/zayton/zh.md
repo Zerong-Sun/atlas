@@ -608,7 +608,7 @@ stamps:
 
 ## ev.ev_zayton_fanfang_followup.choice_4_result
 
-学者把几页旧旅行笔记借给旅人。旅人在灯下抄下船工讲过的港名、取水处和季风转向的日子，第二天把纸还给他。
+学者把几页旧旅行笔记借给旅人。旅人在灯下抄下船工讲过的港名、取水处和季风转向的日子，第二天把纸还给他。学者收好笔记，又拿出一叠别的旧抄本，请旅人看看。
 
 ## ev.ev_zayton_mazu_followup.title
 

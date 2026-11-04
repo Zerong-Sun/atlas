@@ -30,7 +30,7 @@ for (const unit of readdirSync(story)) {
     units.add(unit);
   }
 }
-for (const unit of ["alexandria_welcome", "alexandria_market", "zayton-bowl", "endings", "character_opening"]) {
+for (const unit of ["alexandria_welcome", "alexandria_market", "zayton-bowl", "endings", "character_opening", "codex_legends"]) {
   units.add(unit);
 }
 

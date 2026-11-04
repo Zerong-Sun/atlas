@@ -764,20 +764,8 @@ function patchI18n(tarot) {
     en[c.reversedKey] = `${c.nameEn} reversed: blockage; slow the decision.`;
   }
 
-  // Mentor / UI strings
+  // Mentor prose and choices live in content/story; keep only generator-owned UI and road text here.
   Object.assign(zh, {
-    "ev.cambaluc.mentor_iching.title": "大都太史学易",
-    "ev.cambaluc.mentor_iching.body": "太史署的先生愿以十四日教你起卦观路，不问吉凶，只问时位。",
-    "ev.cambaluc.mentor_iching.choice.learn": "奉束脩，学易占",
-    "ev.cambaluc.mentor_iching.choice.ask": "先听他讲卦与道路",
-    "ev.baldacum.mentor_bazi.title": "报达推命",
-    "ev.baldacum.mentor_bazi.body": "精通历算的先生愿据生辰排四柱，教你看三年内的行路窗口。",
-    "ev.baldacum.mentor_bazi.choice.learn": "奉礼金，学八字",
-    "ev.baldacum.mentor_bazi.choice.ask": "先问历法如何服务于行路",
-    "ev.tauris.mentor_tarot.title": "大不里士牌阵",
-    "ev.tauris.mentor_tarot.body": "一位法兰克商人的遗孀以牌阵教人看岔路：收益、代价与选择原则。",
-    "ev.tauris.mentor_tarot.choice.learn": "奉银，学塔罗",
-    "ev.tauris.mentor_tarot.choice.ask": "先看她演示双选门",
     "ui.divination.symbol": "象",
     "ui.divination.reading": "解读",
     "ui.divination.effects": "所得",
@@ -787,18 +775,6 @@ function patchI18n(tarot) {
     "ev.road.fork_tarot.choice.walk": "沿旧车辙择路",
   });
   Object.assign(en, {
-    "ev.cambaluc.mentor_iching.title": "I Ching at Khanbaliq",
-    "ev.cambaluc.mentor_iching.body": "A court chronologer will teach hexagram casting for roads — timing and position, not luck.",
-    "ev.cambaluc.mentor_iching.choice.learn": "Pay the fee and learn I Ching",
-    "ev.cambaluc.mentor_iching.choice.ask": "Hear how hexagrams speak of roads",
-    "ev.baldacum.mentor_bazi.title": "Pillars at Baghdad",
-    "ev.baldacum.mentor_bazi.body": "A calendar master will teach four pillars to read three-year travel windows.",
-    "ev.baldacum.mentor_bazi.choice.learn": "Pay and learn Ba Zi",
-    "ev.baldacum.mentor_bazi.choice.ask": "Ask how calendars serve the road",
-    "ev.tauris.mentor_tarot.title": "Cards at Tabriz",
-    "ev.tauris.mentor_tarot.body": "A Frankish widow teaches spreads that weigh gain, cost, and the rule of choice at forks.",
-    "ev.tauris.mentor_tarot.choice.learn": "Pay silver and learn Tarot",
-    "ev.tauris.mentor_tarot.choice.ask": "Watch a choice-gate demonstration",
     "ui.divination.symbol": "Symbol",
     "ui.divination.reading": "Reading",
     "ui.divination.effects": "What changed",

@@ -2,13 +2,19 @@
 unit: codex_legends
 lang: zh
 source: en
-source_rev: 3092a40f6761
+source_rev: edcb084ff6c2
 status: translated
 translator: 人工校译
 notes: >
   传说与中文行纪图鉴。曼德维尔标为演绎；中文古籍据公有领域原文意译。
 
 stamps:
+  ev.codex_legend_seed.title: 6b55a059f3a7
+  ev.codex_legend_seed.body: 6c78d5fb6cb4
+  ev.codex_legend_seed.choice_1: 5472a6e39a43
+  ev.codex_legend_seed.choice_1_result: 99f720f682f6
+  ev.codex_legend_seed.choice_2: ad06236d1745
+  ev.codex_legend_seed.choice_2_result: 14e6dafe3f93
   codex.leg-prester-john.name: 549405da54e1
   codex.leg-prester-john.body: d000fa797c38
   codex.leg-earthly-paradise.name: 33c5996a755c
@@ -79,3 +85,27 @@ stamps:
 ## codex.chr-yelu-xiyou.body
 
 耶律楚材从太祖西征，恐后世无闻，作录记城郭物产。文笔简奥，可与《长春真人西游记》参看。
+
+## ev.codex_legend_seed.title
+
+传说与行纪残叶
+
+## ev.codex_legend_seed.body
+
+学者把一叠旧抄本摆在案上。有祭司王约翰与地上乐园的传说，也有真腊、古里、满剌加的行纪和两篇西行见闻。他请来访的旅人翻看，桌上备着纸笔。
+
+## ev.codex_legend_seed.choice_1
+
+抄下传说与行纪
+
+## ev.codex_legend_seed.choice_1_result
+
+学者把书匣里的几页都摊开。旅人逐页抄下两篇传说、真腊和海路的行纪，以及两篇西行见闻，在页边写明出处。墨干后，学者收好原稿，旅人把抄本装进行囊。
+
+## ev.codex_legend_seed.choice_2
+
+放下不取
+
+## ev.codex_legend_seed.choice_2_result
+
+旅人把抄本放回桌上。学者收起书匣，留着下次再讲。

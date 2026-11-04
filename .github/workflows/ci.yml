@@ -30,6 +30,7 @@ jobs:
       - run: node tools/lore/story.mjs check
       - run: node tests/test_story_cli.mjs
       - run: node tests/test_story_viewpoint.mjs
+      - run: node tests/test_story_generator_ownership.mjs
       - run: node tools/lore/story.mjs build && git diff --exit-code -- content/i18n/en.json content/i18n/zh.json
       - run: node tests/test_i18n_lines.mjs
       - run: node tools/validate/validate.mjs
@@ -74,6 +75,9 @@ jobs:
       - name: Zayton vertical slice
         working-directory: fatequest
         run: godot --headless --script tests/smoke_zayton.gd
+      - name: Zayton scholar pages
+        working-directory: fatequest
+        run: godot --headless --script tests/smoke_zayton_legend.gd
       - name: Market smoke (buy through the UI)
         working-directory: fatequest
         run: godot --headless --script tests/smoke_market.gd

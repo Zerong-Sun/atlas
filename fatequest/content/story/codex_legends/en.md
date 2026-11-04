@@ -80,3 +80,34 @@ Yelü Chucai · Record of a Journey West
 Yelü Chucai followed the Khan into the lands beyond the Altai and wrote a short
 geography of cities and products, fearing later ages would forget what the
 campaign had seen. His prose is spare; it pairs with Changchun's longer road.
+
+## ev.codex_legend_seed.title
+
+Leaves of Wonder and Chronicle
+
+## ev.codex_legend_seed.body
+
+A scholar lays a stack of old copies on the desk. There are tales of Prester
+John and the Earthly Paradise, accounts of Zhenla, Guli, and Malacca, and two
+records of journeys west. He invites the visiting traveller to read them;
+paper and a pen are ready.
+
+## ev.codex_legend_seed.choice_1
+
+Copy the legends and travel accounts
+
+## ev.codex_legend_seed.choice_1_result
+
+The scholar spreads the pages from his box across the desk. The traveller
+copies the two legends, the accounts of Zhenla and the sea routes, and the two
+records of journeys west, noting the source beside each one. When the ink is
+dry, the scholar puts away the originals and the traveller packs the copies.
+
+## ev.codex_legend_seed.choice_2
+
+Leave the papers
+
+## ev.codex_legend_seed.choice_2_result
+
+The traveller returns the copies to the desk. The scholar puts away the box
+and leaves them for another visit.
