@@ -80,7 +80,10 @@ function parseDoc(text) {
   let current = null;
   const buf = [];
   const flush = () => {
-    if (current) entries[current] = buf.join("\n").trim();
+    if (current) {
+      if (Object.hasOwn(entries, current)) throw new Error(`Duplicate story key in document: ${current}`);
+      entries[current] = buf.join("\n").trim();
+    }
     buf.length = 0;
   };
   for (const line of body.split("\n")) {
@@ -178,11 +181,17 @@ function check() {
 
 function build() {
   const byLang = {};
+  const owner = {};
   for (const unit of units()) {
     for (const [lang, doc] of Object.entries(loadUnit(unit))) {
       byLang[lang] ??= {};
+      owner[lang] ??= {};
       for (const [k, v] of Object.entries(doc.entries)) {
+        if (Object.hasOwn(byLang[lang], k)) {
+          throw new Error(`Duplicate story key across units (${lang}): ${k} in ${owner[lang][k]} and ${unit}`);
+        }
         byLang[lang][k] = unwrap(v);
+        owner[lang][k] = unit;
       }
     }
   }

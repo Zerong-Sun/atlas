@@ -2,7 +2,7 @@
 unit: battuta
 lang: zh
 source: en
-source_rev: 039324b251d8
+source_rev: b7b1b5ad61b8
 status: translated
 translator: 人工校译
 notes: >
@@ -80,7 +80,7 @@ stamps:
   ev.ev_maldive_battuta_a.choice_1_result: df883843b5e4
   ev.ev_maldive_battuta_a.choice_2_result: 8e31ea545796
   ev.ev_maldive_battuta_a.choice_3_result: a5e47b2730e3
-  arch.battuta.name: 39a6401ac763
+  arch.battuta.name: 8cd454af9cee
   arch.battuta.obsession: 58b4c7f41c69
   ev.melibar.battuta_a.title: 08c259c6f60e
   ev.melibar.battuta_a.body: 72920d813edc
@@ -437,7 +437,7 @@ stamps:
 
 ## arch.battuta.name
 
-伊本·白图泰
+朝觐旅人
 
 ## arch.battuta.obsession
 

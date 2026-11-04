@@ -3,14 +3,14 @@ status: draft
 voice: authored
 
 stamps:
-  arch.battuta.description: 865f0e46d0b3
-  arch.polo.description: ba66bd302f9b
-  arch.polo.name: ddcaa31cb905
+  arch.polo.name: 87431c7263c2
+  arch.polo.description: 871d34d16036
+  arch.battuta.description: 26062809fee6
 ---
 
 ## arch.polo.name
 
-威尼斯商旅
+东行商旅
 
 ## arch.polo.description
 
@@ -18,4 +18,4 @@ stamps:
 
 ## arch.battuta.description
 
-从亚历山大港启程，随朝觐队伍寻找前往麦加的路。
+从亚历山大港启程，随朝觐商队前往麦加。

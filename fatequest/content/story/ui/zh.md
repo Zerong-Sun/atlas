@@ -977,10 +977,6 @@ The Book of Far Roads
 
 启程 → %s（%d 日，%d 银）
 
-## ui.route.tooltip
-
-%s：%d 日 · 船脚 %d 银
-
 ## ui.route.unknown
 
 那里的消息还没打听到。
@@ -1016,10 +1012,6 @@ The Book of Far Roads
 ## ui.travel.confirm
 
 启程 · %s →
-
-## ui.travel.facts
-
-%s · %d 日 · %d 银 · 凶险 %d/5
 
 ## ui.travel.intro_unknown
 

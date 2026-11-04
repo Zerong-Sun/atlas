@@ -40,6 +40,20 @@ try {
   writeFileSync(join(unitPath, "zh.md"), translation(hash("Hello traveller")));
   expectExit(0, "current translation");
 
+  writeFileSync(join(unitPath, "en.md"), source + "\n## key\n\nDuplicate\n");
+  expectExit(1, "duplicate key in one document");
+  writeFileSync(join(unitPath, "en.md"), source);
+
+  const secondUnit = join(tempRoot, "content/story/second");
+  mkdirSync(secondUnit, { recursive: true });
+  writeFileSync(join(secondUnit, "en.md"), source);
+  writeFileSync(join(secondUnit, "zh.md"), translation(hash("Hello traveller")));
+  const duplicateBuild = spawnSync(process.execPath, [toolPath, "build"], { cwd: tempRoot, encoding: "utf8" });
+  if (duplicateBuild.status !== 1 || !duplicateBuild.stderr.includes("Duplicate story key across units")) {
+    throw new Error(`cross-unit duplicate: ${duplicateBuild.status}\n${duplicateBuild.stdout}${duplicateBuild.stderr}`);
+  }
+  rmSync(secondUnit, { recursive: true, force: true });
+
   writeFileSync(join(unitPath, "zh.md"), translation("000000000000"));
   expectExit(1, "stale translation");
 

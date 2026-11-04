@@ -702,10 +702,6 @@ Can hire here:
 
 Departing → %s (%d days, %d coins)
 
-## ui.route.tooltip
-
-%s: %d days · %d silver fare
-
 ## ui.route.unknown
 
 Of that place you still know nothing.
@@ -741,10 +737,6 @@ From the records
 ## ui.travel.confirm
 
 Set out · %s →
-
-## ui.travel.facts
-
-%s · %d days · %d silver · risk %d/5
 
 ## ui.travel.intro_unknown
 
